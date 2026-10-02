@@ -52,11 +52,15 @@ export const mcatPsychBehavPart2Data = {
 $$\\text{Long-term} \\to \\begin{cases} \\textbf{Explicit (declarative)} & \\text{episodic, semantic — hippocampus} \\\\ \\textbf{Implicit (nondeclarative)} & \\text{procedural, conditioning — cerebellum/basal ganglia} \\end{cases}$$
 
 - **Encoding effects:** spacing effect (distributed > massed practice), serial position (primacy from LTM rehearsal + recency from STM), depth of processing (semantic > acoustic > visual), and state/context-dependent retrieval.
-- **Memory failures:** proactive interference (old disrupts new) vs. retroactive interference (new disrupts old); source monitoring errors; misinformation effect (Loftus).
+- **Memory failures:** proactive interference (old disrupts new) vs. retroactive interference (new disrupts old); source monitoring errors; misinformation effect (Loftus) — misleading information received after an event (e.g., asking how fast cars were going when they "smashed" vs. "hit") distorts the memory of the event itself.
 
 ### Biological Basis: Long-Term Potentiation (LTP)
 
-LTP — the cellular model of learning — is strengthening of synaptic transmission via the **NMDA receptor**, which requires *both* presynaptic glutamate release AND postsynaptic depolarization to expel its $Mg^{2+}$ block, allowing $Ca^{2+}$ influx. The hippocampus is essential for *forming* new explicit memories (cf. patient H.M., who lost his hippocampi and could form no new declarative memories but could still learn motor skills).`
+LTP — the cellular model of learning — is a lasting strengthening of synaptic transmission after repeated, coincident stimulation of the pre- and postsynaptic neurons ("neurons that fire together wire together"); it is a form of **neural plasticity**.
+
+- Receptor mechanism: LTP depends on the glutamate **NMDA receptor**, which opens only with *both* presynaptic glutamate release AND postsynaptic depolarization (which expels its $Mg^{2+}$ block), allowing $Ca^{2+}$ influx.
+
+The hippocampus is essential for *forming* new explicit memories (cf. patient H.M., who lost his hippocampi and could form no new declarative memories but could still learn motor skills).`
     },
     {
       id: 'pb2-quiz1',
@@ -68,18 +72,21 @@ LTP — the cellular model of learning — is strengthening of synaptic transmis
             question: `A child stops throwing tantrums when parents consistently ignore the behavior. This is:`,
             options: [`Extinction of an operant response`, `Negative reinforcement of an operant response`, `Positive punishment of an operant response`, `Spontaneous recovery of an operant response`],
             correctAnswer: 0,
+            yield: 'ULTRA_HIGH',
             explanation: `The tantrums were maintained by attention (positive reinforcement). When attention is consistently withheld, the behavior extinguishes — removing the reinforcer that maintained an operant behavior makes it decrease. Negative reinforcement would INCREASE a behavior, positive punishment requires adding an aversive consequence, and spontaneous recovery is the later RETURN of an extinguished response. This is a common MCAT scenario in behavioral psychology.`
           },
           {
             question: `A researcher finds that gamblers at slot machines show the most persistent behavior and the greatest resistance to extinction. Which reinforcement schedule explains this?`,
             options: [`Variable ratio`, `Fixed ratio`, `Fixed interval`, `Variable interval`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Slot machines pay out after an unpredictable number of pulls — a variable-ratio schedule, which produces the highest response rate and the strongest resistance to extinction precisely because the player can never predict when the next reward arrives.`
           },
           {
             question: `Patient H.M. had his hippocampi removed and could no longer form new declarative memories, yet he improved at a mirror-tracing task across days without remembering having done it. This dissociation demonstrates that:`,
             options: [`Implicit memory is stored separately from explicit memory`, `The hippocampus is the permanent store for all long-term memories`, `Procedural skills, like declarative memories, require the hippocampus`, `Short-term memory depends on the cerebellum`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `The hippocampus is required to consolidate new EXPLICIT (declarative) memories, but PROCEDURAL/implicit learning relies on the cerebellum and basal ganglia. H.M.'s improving motor skill with no conscious recall is the classic evidence these systems are anatomically distinct.`
           }
         ]
@@ -111,7 +118,7 @@ LTP — the cellular model of learning — is strengthening of synaptic transmis
 1. The immediate curve shows **primacy** (early items rehearsed into long-term memory) and **recency** (last items still in short-term/working memory).
 2. The 30-second distractor task fills working memory and prevents rehearsal → the **recency effect disappears** while primacy remains. ✓
 
-**Why it matters:** This double dissociation is classic evidence for SEPARATE short-term and long-term memory stores — a favorite experimental-reasoning question.
+**Why it matters:** This dissociation (the delay erases recency but spares primacy, while faster presentation does the reverse by cutting rehearsal; together, a double dissociation) is classic evidence for SEPARATE short-term and long-term memory stores — a favorite experimental-reasoning question.
 </details>
 
 <details>
@@ -136,7 +143,8 @@ LTP — the cellular model of learning — is strengthening of synaptic transmis
 - Classical conditioning: association between stimuli (involuntary responses)
 - Operant conditioning: consequences shape behavior (voluntary responses)
 - Reinforcement increases behavior; punishment decreases behavior
-- Memory: sensory → short-term (7$\\pm$2 items) → long-term`
+- Memory: sensory → short-term (7$\\pm$2 items) → long-term
+- LTP (lasting synaptic strengthening) is the cellular basis of learning; the hippocampus forms new explicit memories, while procedural learning survives its loss (H.M.)`
     }
   ]
 };

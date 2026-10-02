@@ -78,6 +78,21 @@ export const LESSON_BUILT_EXIT_TOPICS = [
   'mcat-microbiology-mcat',
   'mcat-microbiology-antimicrobials-mcat',
   'mcat-microbiology-viruses-mcat',
+  'mcat-psychology-behavior-learning-memory-mcat',
+  'mcat-psychology-behavior-cognition-language-mcat',
+  'mcat-psychology-behavior-sensation-perception-mcat',
+  'mcat-psychology-behavior-development-mcat',
+  'mcat-psychology-behavior-disorders-mcat',
+  'mcat-psychology-behavior-mcat',
+  'mcat-sociology-culture-socialization-mcat',
+  'mcat-sociology-structure-stratification-mcat',
+  'mcat-sociology-groups-interaction-mcat',
+  'mcat-sociology-health-disparities-mcat',
+  'mcat-sociology-mcat',
+  'mcat-social-psychology-mcat',
+  'mcat-biological-basis-behavior-mcat',
+  'mcat-research-methods-mcat',
+  'mcat-biostatistics-mcat',
 ] as const
 
 function shuffle<T>(items: T[]): T[] {

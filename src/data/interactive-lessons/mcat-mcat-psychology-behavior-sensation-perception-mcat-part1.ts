@@ -24,8 +24,11 @@ Psychophysics — founded by **Gustav Fechner** (building on **Ernst Weber**) �
 | **Difference threshold (JND)** | Minimum *change* in intensity detected 50% of the time |
 | **Weber's Law** | $\\Delta I / I = k$ — the JND is a constant *proportion* of the baseline stimulus |
 | **Fechner's Law** | Subjective sensation grows with the *logarithm* of intensity: $S = k \\log I$ |
-| **Stevens' Power Law** | $S = k I^n$ — handles modalities Fechner's law fits poorly (e.g., pain grows *faster* than intensity, $n > 1$) |
 | **Subliminal stimulus** | Below the absolute threshold — can prime responses but does not produce conscious detection |
+
+<!-- yield:low -->
+- **Stevens' Power Law**: $S = k I^n$ — handles modalities Fechner's law fits poorly (e.g., the sensation of electric shock grows *faster* than intensity, $n > 1$).
+<!-- /yield -->
 
 **Why Weber's Law matters:** a 1-lb change is obvious when lifting 5 lbs but invisible when lifting 100 lbs. Detectability depends on the *ratio*, not the absolute difference.
 
@@ -65,18 +68,21 @@ Every sense converts a physical stimulus into a receptor potential, then into ac
             question: `A participant can just barely distinguish 100 g from 102 g. According to Weber's Law, the smallest increase she should reliably detect from a 400 g standard is:`,
             options: [`8 g`, `2 g`, `4 g`, `102 g`],
             correctAnswer: 0,
+            yield: 'ULTRA_HIGH',
             explanation: `Weber fraction: $k = \\Delta I / I = 2/100 = 0.02$. At 400 g: $\\Delta I = 0.02 \\times 400 = 8$ g. The JND is a constant proportion (2%) of the baseline, not a constant 2 g. Distractor "2 g" is the classic error of treating the JND as an absolute amount.`
           },
           {
             question: `After a hospital adds a large penalty for missed tumors, radiologists' hit rate rises — but so does their false-alarm rate, and computed $d'$ values are unchanged. The best interpretation is that the policy changed the radiologists':`,
             options: [`Response criterion, making them more liberal`, `Perceptual sensitivity, improving discrimination`, `Absolute threshold for detecting tumors`, `Rate of sensory adaptation to the images`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Hits and false alarms rising together with constant $d'$ is the signature of a criterion shift (more willingness to say "tumor"), not improved discrimination. Signal detection theory exists precisely to separate this decision bias from true sensitivity — a favorite MCAT data-interpretation move.`
           },
           {
             question: `An infant initially turns toward a repeated tone, stops responding after many presentations, then responds again after a flash of light precedes the next tone. Because the response recovered after a novel stimulus, the initial decline is best classified as:`,
-            options: [`Habituation of the orienting response`, `Sensory adaptation of the hair cells`, `A rise in the absolute threshold`, `A conservative shift in response criterion`],
+            options: [`Habituation of the orienting response`, `Sensory adaptation of the cochlear hair cells`, `A rise in the infant's absolute auditory threshold`, `A conservative shift in response criterion`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Recovery of the response after an intervening novel stimulus is dishabituation — the defining evidence for habituation (a simple form of learning). Receptor-level sensory adaptation would not be reversed by an unrelated light flash. The stem deliberately supplies the disambiguating cue (dishabituation) because "adaptation vs. habituation" is a classic P/S trap.`
           }
         ]
@@ -131,7 +137,11 @@ $$\\Delta I = 0.05 \\times 300 = 15 \\text{ cd/m}^2 \\checkmark$$
 - Sensation = bottom-up transduction; perception = top-down interpretation.
 - Absolute threshold and JND are both defined at 50% detection; Weber's Law: $\\Delta I / I = k$.
 - SDT splits detection into sensitivity ($d'$) and criterion (bias); payoffs move the criterion, not $d'$.
-- Sensory adaptation is receptor-level and stimulus-bound; habituation is learned and shows dishabituation.`
+- Sensory adaptation is receptor-level and stimulus-bound; habituation is learned and shows dishabituation.
+
+<!-- yield:low -->
+- Low-yield extras: Stevens' power law ($S = k I^n$, with $n > 1$ for electric shock) as the alternative to Fechner's logarithmic law
+<!-- /yield -->`
     }
   ]
 };

@@ -192,27 +192,27 @@ const quizLoaders: Record<string, QuizLoader> = {
   'mcat-genetics-evolution-immunology-mcat': () => import('./lesson-built/mcat-genetics-evolution-immunology-mcat'),
   // Psych/Soc
   'mcat-psychology-sociology': () => import('./mcat-psychology-sociology'),
-  'mcat-psychology-behavior-mcat': () => import('./mcat-psychology-sociology'), // alias
-  'mcat-sociology-mcat': () => import('./mcat-psychology-sociology'), // alias
-  'mcat-psychology-behavior-sensation-perception-mcat': () => import('./mcat-psychology-sociology'),
-  'mcat-psychology-behavior-learning-memory-mcat': () => import('./mcat-psychology-sociology'),
-  'mcat-psychology-behavior-cognition-language-mcat': () => import('./mcat-psychology-sociology'),
-  'mcat-psychology-behavior-development-mcat': () => import('./mcat-psychology-sociology'),
-  'mcat-psychology-behavior-disorders-mcat': () => import('./mcat-psychology-sociology'),
-  'mcat-sociology-structure-stratification-mcat': () => import('./mcat-psychology-sociology'),
-  'mcat-sociology-culture-socialization-mcat': () => import('./mcat-psychology-sociology'),
-  'mcat-sociology-groups-interaction-mcat': () => import('./mcat-psychology-sociology'),
-  'mcat-sociology-health-disparities-mcat': () => import('./mcat-psychology-sociology'),
+  'mcat-psychology-behavior-mcat': () => import('./lesson-built/mcat-psychology-behavior-mcat'),
+  'mcat-sociology-mcat': () => import('./lesson-built/mcat-sociology-mcat'),
+  'mcat-psychology-behavior-sensation-perception-mcat': () => import('./lesson-built/mcat-psychology-behavior-sensation-perception-mcat'),
+  'mcat-psychology-behavior-learning-memory-mcat': () => import('./lesson-built/mcat-psychology-behavior-learning-memory-mcat'),
+  'mcat-psychology-behavior-cognition-language-mcat': () => import('./lesson-built/mcat-psychology-behavior-cognition-language-mcat'),
+  'mcat-psychology-behavior-development-mcat': () => import('./lesson-built/mcat-psychology-behavior-development-mcat'),
+  'mcat-psychology-behavior-disorders-mcat': () => import('./lesson-built/mcat-psychology-behavior-disorders-mcat'),
+  'mcat-sociology-structure-stratification-mcat': () => import('./lesson-built/mcat-sociology-structure-stratification-mcat'),
+  'mcat-sociology-culture-socialization-mcat': () => import('./lesson-built/mcat-sociology-culture-socialization-mcat'),
+  'mcat-sociology-groups-interaction-mcat': () => import('./lesson-built/mcat-sociology-groups-interaction-mcat'),
+  'mcat-sociology-health-disparities-mcat': () => import('./lesson-built/mcat-sociology-health-disparities-mcat'),
   'mcat-science-passage-strategy-mcat': () => import('./mcat-psychology-sociology'), // alias
   'mcat-test-day-strategy-mcat': () => import('./mcat-psychology-sociology'), // alias
   // Remaining MCAT topics with full lessons + card decks that previously had
   // no quiz mapping at all (flashcards were permanently locked self-paced).
   // The psych pool also carries the research-methods/biostats authored
   // questions, which is why the stats/methods topics route here.
-  'mcat-social-psychology-mcat': () => import('./mcat-psychology-sociology'),
-  'mcat-biological-basis-behavior-mcat': () => import('./mcat-psychology-sociology'),
-  'mcat-biostatistics-mcat': () => import('./mcat-psychology-sociology'),
-  'mcat-research-methods-mcat': () => import('./mcat-psychology-sociology'),
+  'mcat-social-psychology-mcat': () => import('./lesson-built/mcat-social-psychology-mcat'),
+  'mcat-biological-basis-behavior-mcat': () => import('./lesson-built/mcat-biological-basis-behavior-mcat'),
+  'mcat-biostatistics-mcat': () => import('./lesson-built/mcat-biostatistics-mcat'),
+  'mcat-research-methods-mcat': () => import('./lesson-built/mcat-research-methods-mcat'),
   'mcat-quantitative-skills-mcat': () => import('./mcat-psychology-sociology'),
   'mcat-science-passage-strategy-reading-mcat': () => import('./mcat-psychology-sociology'),
   'mcat-science-passage-strategy-figures-mcat': () => import('./mcat-psychology-sociology'),

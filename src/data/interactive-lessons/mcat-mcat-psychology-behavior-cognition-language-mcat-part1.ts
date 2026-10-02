@@ -36,7 +36,7 @@ Three classic accounts, ordered by where the filter sits:
 - **Automatic processing**: fast, parallel, nearly effortless — built by extensive practice (reading, for literate adults)
 - Dual-task performance succeeds when tasks differ in modality/resources or when one is automatic; it collapses when two controlled tasks compete (why phone conversations impair driving even hands-free — the interference is *central*, not manual)
 - **Stroop effect**: naming the ink color of the word RED printed in blue is slow because automatic word-reading delivers a competing response that must be suppressed. Stroop interference is the standard laboratory index that a process has become automatic and involuntary.
-- **Shadowing cost & task switching**: switching attention carries a measurable time cost; "multitasking" is rapid alternation, with a per-switch penalty
+- **Task switching**: switching attention carries a measurable time cost; "multitasking" is rapid alternation, with a per-switch penalty
 
 ### Processing Speed Signatures in Data
 
@@ -68,30 +68,35 @@ Three classic accounts, ordered by where the filter sits:
             question: `At a loud reception, a physician is absorbed in one conversation yet immediately turns when her name is spoken across the room. Among classic attention theories, this breakthrough is BEST accommodated by:`,
             options: [`Broadbent's early filter model, with strict channel blocking`, `Treisman's attenuation model, with a leaky early filter`, `Baddeley's visuospatial sketchpad in working memory`, `Sensory adaptation within the auditory nerve`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `A strict early filter cannot explain how an unattended word's MEANING (her name) was recognized. Attenuation theory keeps the filter early but leaky: unattended channels are turned down, and items with permanently low thresholds — one's name, danger words — break through. The sketchpad is a working-memory component, and adaptation would reduce, not enable, detection.`
           },
           {
             question: `Radiologists searching CT images for lung nodules were shown scans with a small gorilla image embedded; a large majority failed to notice it despite eye-tracking showing many looked directly at it. This is a demonstration of:`,
-            options: [`Visual change blindness`, `Stroop-type interference`, `Retroactive memory interference`, `Inattentional blindness`],
+            options: [`Change blindness across a visual disruption`,`Stroop-type interference`, `Retroactive memory interference`, `Inattentional blindness`],
             correctAnswer: 3,
+            yield: 'HIGH',
             explanation: `The stimulus was continuously present and fixated, yet unattended because the observers' attention was consumed by nodule search — inattentional blindness, the proof that fixation without attention does not produce awareness. Change blindness requires a change across a disruption; nothing changed here.`
           },
           {
             question: `Fluent readers are slow to say "blue" when the word RED appears in blue ink. The theoretical significance of this interference is that it:`,
             options: [`Shows color perception is slower than reading in all humans`, `Demonstrates rapid decay of iconic memory`, `Indexes the automaticity of practiced reading`, `Shows word meaning is filtered out early`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `Stroop interference exists BECAUSE reading has become automatic: it cannot be switched off even when it hurts performance, so its output (the word name) competes with the controlled task (ink-color naming). Preliterate children show little Stroop interference, confirming it tracks practice, not innate processing speeds. If word meaning were filtered early, there would be no conflict at all.`
           },
           {
             question: `Two tasks are performed together with almost no cost: an experienced driver holds a conversation on an empty highway. Which change would the controlled-vs-automatic framework predict MOST degrades the pairing?`,
             options: [`Entering a construction zone with unpredictable merges`, `Turning off the radio to reduce background noise`, `The passenger speaking slightly more quietly`, `Continuing on the same empty highway for another hour`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `Practiced highway driving runs largely automatically, leaving capacity for talk. Novel, unpredictable demands revert driving to controlled processing, and two controlled tasks exceed central capacity — conversation performance and hazard response both suffer. The other options leave the demand structure unchanged or reduce load.`
           },
           {
             question: `In a visual search study, time to find a target increases by roughly 40 ms for every added distractor in one condition, but stays flat regardless of distractor count in another. The most defensible interpretation is that search was:`,
             options: [`Parallel in both conditions, differing only in speed`, `Serial in the flat condition and parallel in the rising one`, `Abandoned partway through in the linear condition`, `Serial when RT rose; parallel pop-out when RT was flat`],
             correctAnswer: 3,
+            yield: 'MEDIUM',
             explanation: `A linear RT-by-set-size slope is the signature of serial, attention-demanding comparison; a flat function means all items were processed simultaneously — the target pops out via a basic feature difference. Swapping the labels inverts that signature; slopes that differ between conditions rule out one parallel mechanism in both, and nothing in the data indicates search was abandoned. This RT-slope logic is the standard way cognition passages quantify whether processing is controlled or automatic, so read the axes before the conclusions.`
           }
         ]

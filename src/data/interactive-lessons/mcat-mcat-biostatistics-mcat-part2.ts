@@ -16,8 +16,8 @@ export const mcatBiostatisticsPart2Data = {
 | Alternative $(H_{1})$ | There is an effect | The drug lowers blood pressure |
 
 **One-tailed vs Two-tailed:**
-- **One-tailed**: Predicts direction (Drug **lowers** BP) → p-value not split
-- **Two-tailed**: No direction (Drug **changes** BP) → p-value split between tails
+- **One-tailed**: Predicts direction (Drug **lowers** BP) → all of α sits in one tail
+- **Two-tailed**: No direction (Drug **changes** BP) → α is split between the two tails (0.025 each at α = 0.05)
 
 ### Type I & II Errors
 
@@ -30,10 +30,8 @@ export const mcatBiostatisticsPart2Data = {
 
 ### p-value Interpretation
 
-\`\`\`
-p < 0.05 → Reject $H_{0}$ (statistically significant)
-p ≥ 0.05 → Fail to reject $H_{0}$ (not significant)
-\`\`\`
+- p < 0.05 → Reject $H_{0}$ (statistically significant)
+- p ≥ 0.05 → Fail to reject $H_{0}$ (not significant)
 
 **Example:** A study finds p = 0.03 for a new antibiotic efficacy.
 - Interpretation: **3% probability** of obtaining results at least as extreme as those observed, assuming the null hypothesis (no real antibiotic effect) is true
@@ -60,17 +58,19 @@ p ≥ 0.05 → Fail to reject $H_{0}$ (not significant)
               `The trial proves that the vaccine has no effect`
             ],
             correctAnswer: 2,
+            yield: 'ULTRA_HIGH',
             explanation: `p = 0.08 > 0.05, so we fail to reject $H_{0}$. The study did not find sufficient evidence of vaccine efficacy at the 0.05 significance level, but failing to find evidence does not prove the vaccine has no effect. A p-value is not the probability that the null is true, and it does not measure vaccine efficacy.`
           },
           {
             question: `Researchers test if caffeine affects exam scores. They use a **two-tailed** test with α=0.05. What does α represent here?`,
             options: [
               `The probability that caffeine truly has an effect`,
-              `The significance cutoff and the Type I error rate`,
+              `The significance cutoff and Type I error rate`,
               `The Type II error rate, or chance of missing an effect`,
               `The p-value that this particular study obtained`
             ],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `α is both the significance level (the p-value threshold for rejecting $H_{0}$) and the maximum acceptable Type I error rate, the probability of incorrectly rejecting a true $H_{0}$. If p < 0.05, we reject $H_{0}$. α is set before the study, so it is not the obtained p-value; the Type II error rate is β; and neither gives the probability that caffeine has an effect.`
           },
           {
@@ -82,6 +82,7 @@ p ≥ 0.05 → Fail to reject $H_{0}$ (not significant)
               `The drug's true effect grows larger in the bigger trial`
             ],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `The only design difference is sample size (50 vs 500), and a larger sample increases **statistical power** (the ability to detect a real effect). More patients give more precise estimates (a smaller standard error), so a true effect of a given size is more likely to reach significance. Power is a property of the design, fixed before any data come in, so an obtained p-value cannot be what gives a trial its power, and the two p-values alone do not show which trial had more. More power makes Type II error less likely, not more, and it is the same drug, so there is no reason its true effect changed.`
           },
           {
@@ -93,6 +94,7 @@ p ≥ 0.05 → Fail to reject $H_{0}$ (not significant)
               `Neither; p=0.10 is conclusive`
             ],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Failing to reject $H_{0}$ when there might be a real effect = Type II error (false negative). p=0.10 means insufficient evidence, not proof of no effect.`
           }
         ]

@@ -14,16 +14,16 @@ export const mcatResearchMethodsPart1Data = {
 |--------------|-----------|---------|
 | **Independent Variable (IV)** | What the researcher manipulates | Drug dose, light exposure, temperature |
 | **Dependent Variable (DV)** | What the researcher measures as an outcome | Patient recovery time, test score, enzyme activity |
-| **Confound Variable** | Unmeasured/uncontrolled variable affecting DV | Age, baseline health status, observer bias |
+| **Confound Variable** | Uncontrolled variable related to BOTH the IV and the DV | Age, baseline health status, socioeconomic status |
 
 ### Sampling Methods
 
 | Method | Description | Bias Risk |
 |--------|------------|-----------|
-| **Random Sampling** | Every participant has equal chance | Low bias; representative |
+| **Random Sampling** | Every member of the population has an equal chance of selection | Low bias; representative |
 | **Convenience Sampling** | Easiest to access (first n patients) | High bias; may not represent population |
-| **Stratified Sampling** | Divide population into groups, sample proportionally | Lower bias than convenience |
-| **Matched Sampling** | Match participants on key variables | Controls specific confounds; less effective than randomization |
+| **Stratified Sampling** | Divide population into groups, randomly sample each in proportion | Lower bias than convenience |
+| **Matching (matched pairs)** | A design control, not a true sampling method: pair participants on key variables, then compare or assign within pairs | Controls specific confounds; less effective than randomization |
 
 ### Study Types (by Causation Inference)
 
@@ -32,7 +32,7 @@ export const mcatResearchMethodsPart1Data = {
 | **Experimental (RCT)** | Researcher manipulates IV, randomly assigns | **Strongest** |
 | **Quasi-Experimental** | Researcher manipulates IV, no randomization | Moderate |
 | **Correlational** | Researcher measures variables, finds association | Weak |
-| **Observational** | Passive observation; no manipulation | Weak |
+| **Observational** | Passive observation; no manipulation | Weak to moderate (cohort > case-control > cross-sectional) |
 
 **Key:** Only **random assignment** (RCT) can establish causation by balancing confounds.`
     },
@@ -46,24 +46,28 @@ export const mcatResearchMethodsPart1Data = {
             question: `A researcher tests: "Does caffeine improve memory?" Subjects consume caffeine or placebo, then complete a memory test. What is the IV?`,
             options: [`Memory performance`, `Caffeine vs Placebo`, `Baseline memory`, `Test difficulty`],
             correctAnswer: 1,
+            yield: 'ULTRA_HIGH',
             explanation: `The IV is what the researcher **manipulates** (caffeine vs placebo). The DV is the outcome measured (memory performance).`
           },
           {
             question: `A public health survey samples first 100 people entering a clinic. Which sampling bias is most likely?`,
             options: [`Recall bias, since patients misremember their health history`, `Selection bias, since clinic visitors tend to be sicker`, `Observer bias, since staff may misrate the patients`, `No bias, since a sample of 100 is large enough`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Convenience sampling (first 100 people) doesn't represent the population—sicker people seek clinics more. Systematic bias affects generalizability, and a larger sample does not fix it. Nothing involves staff rating patients or asking people to remember past health, and the problem is who gets sampled.`
           },
           {
             question: `An RCT randomly assigns patients to drug vs placebo. Randomization **most importantly** controls for:`,
             options: [`Only measured confounders`, `Only unmeasured confounders`, `Known and unknown confounders`, `Outcome measurement error`],
             correctAnswer: 2,
+            yield: 'ULTRA_HIGH',
             explanation: `Random assignment balances **all** variables (known and unknown) across groups, preventing confounding. It does not make the outcome measurement itself more accurate.`
           },
           {
             question: `A behavioral study observes teenagers' social media use and depression without intervention. This is which study type?`,
             options: [`Randomized experiment`, `Quasi-experiment`, `Correlational study`, `Single-subject case study`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `The researcher observes naturally occurring variables without manipulation (no random assignment). This is a correlational (observational) study—causation cannot be inferred. A quasi-experiment still involves a manipulation or intervention without random assignment, and a case study examines one individual in depth.`
           }
         ]
@@ -75,10 +79,11 @@ export const mcatResearchMethodsPart1Data = {
       content: `### Key Takeaways — Part 1
 
 - **IV** = Independent Variable (what's manipulated); **DV** = Outcome (what's measured)
-- **Confound** = Unmeasured variable that could influence DV
-- **Random Assignment** ⟹ RCT ⟹ Strongest causation inference
-- **Convenience/Stratified Sampling** ⟹ Observational ⟹ Weaker causation inference
-- **Matched Sampling** controls specific confounds but not unknown ones (inferior to randomization)`
+- **Confound** = Uncontrolled variable related to both the IV and the DV
+- **Random Assignment** ⟹ RCT ⟹ Strongest causation inference (internal validity)
+- **Random Sampling** ⟹ Representative sample ⟹ Generalizability (external validity); convenience sampling weakens it
+- Sampling decides WHO is studied; assignment decides WHICH GROUP they join — only assignment supports causation
+- **Matching (matched pairs)** is a design control: it controls specific confounds but not unknown ones (inferior to randomization)`
     },
     {
       id: 'rm1-worked-examples',

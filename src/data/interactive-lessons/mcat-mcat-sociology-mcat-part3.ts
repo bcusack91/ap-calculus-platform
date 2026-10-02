@@ -39,10 +39,14 @@ export const mcatSociologyPart3Data = {
 
 | Phenomenon | Source of pressure | Classic study | Key variable |
 |------------|--------------------|---------------|--------------|
-| **Conformity** | Implicit group norm | Asch (line judgments) | ~35% conform; drops sharply with one ally |
-| **Obedience** | Explicit authority | Milgram (shock study) | 65% to max shock; falls with distance/proximity changes |
+| **Conformity** | Implicit group norm | Asch (line judgments) | Many conform to an obviously wrong answer; drops sharply with one ally |
+| **Obedience** | Explicit authority | Milgram (shock study) | Most obeyed to the maximum shock; falls when the authority is remote or the victim is close |
 | **Compliance** | Direct request | Foot-in-the-door, door-in-the-face | Reciprocity & consistency |
 | **Internalization** | Genuine belief change | — | Most durable form |
+
+<!-- yield:low -->
+- The classic figures: Asch's participants conformed on about a third of the critical trials (about 75% conformed at least once); in Milgram's baseline study, 65% continued to the maximum 450-volt shock.
+<!-- /yield -->
 
 - **Normative** conformity = to be liked/accepted; **informational** conformity = to be correct (look to others when uncertain).
 - Milgram's obedience FELL when the authority was remote, the victim was closer, or peers rebelled — situational, not just dispositional.
@@ -51,7 +55,7 @@ export const mcatSociologyPart3Data = {
 
 $$\\text{Audience/co-actors} \\to \\text{arousal} \\to \\begin{cases} \\uparrow \\text{ performance on SIMPLE/well-learned tasks} \\\\ \\downarrow \\text{ performance on COMPLEX/novel tasks} \\end{cases}$$
 
-- **Social facilitation** applies when the individual is **evaluated** (identifiable).
+- **Social facilitation** applies when others are present (audience or co-actors) and individual performance is **identifiable**; evaluation strengthens it.
 - **Social loafing** appears when individual effort is **pooled and anonymous** in a group product → people slack. Make contributions identifiable and loafing disappears.
 
 ### Emergent Interaction Concepts
@@ -70,18 +74,21 @@ $$\\text{Audience/co-actors} \\to \\text{arousal} \\to \\begin{cases} \\uparrow 
             question: `A medical team makes a poor treatment decision because no one wants to disagree with the attending physician. This is:`,
             options: [`Groupthink — the drive for consensus suppresses dissenting views`, `Social loafing — members exert less effort within a group`, `Deindividuation — anonymity in a group weakens self-restraint`, `Bystander effect — others' presence diffuses the duty to help`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Groupthink occurs when the desire for conformity/harmony overrides realistic appraisal. In medical settings, this is particularly dangerous — it can be combated by explicitly encouraging dissent and assigning a "devil's advocate" role.`
           },
           {
             question: `In Milgram's obedience studies, the proportion of participants delivering the maximum shock DROPPED most when:`,
-            options: [`The experimenter issued orders by phone`, `Participants were paid a larger fee`, `The learner was in a separate room`, `Participants were told the study was about memory`],
+            options: [`The experimenter gave orders by phone`, `Participants were paid twice the usual fee`, `The learner protested from a separate room`, `Participants were told the study was about memory`],
             correctAnswer: 0,
-            explanation: `Obedience is highly situational. When the authority figure was physically remote (e.g., issuing commands by telephone), obedience fell sharply. Increasing the VICTIM's proximity also reduced obedience, whereas the separate-room arrangement was the standard baseline setup. The memory-study cover story was used in every variation, and payment was never varied as a condition, so neither explains a drop. This is the central lesson: situation, not just personality, drives obedience.`
+            yield: 'HIGH',
+            explanation: `Obedience is highly situational. When the authority figure was physically remote (e.g., issuing commands by telephone), obedience fell sharply. Increasing the VICTIM's proximity also reduced obedience, whereas a learner protesting from a separate room was the standard baseline setup. The memory-study cover story was used in every variation, and payment was never varied as a condition, so neither explains a drop. This is the central lesson: situation, not just personality, drives obedience.`
           },
           {
             question: `An experienced pianist plays a well-rehearsed piece better in front of an audience but a beginner plays a difficult new piece worse. This pattern is explained by:`,
             options: [`Social facilitation`, `Social loafing`, `Stereotype threat`, `Diffusion of responsibility`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Social facilitation: the presence of others raises arousal, which enhances performance on simple/well-learned tasks (the expert's rehearsed piece) but impairs it on complex/novel tasks (the beginner's hard new piece). It is strongest when individual performance is identifiable — contrast with social loafing, which occurs when effort is pooled and anonymous. Stereotype threat requires a salient negative stereotype about one's group, and diffusion of responsibility concerns shared obligation to act (e.g., helping in an emergency), not skill-dependent performance.`
           }
         ]
@@ -139,7 +146,12 @@ $$\\text{Audience/co-actors} \\to \\text{arousal} \\to \\begin{cases} \\uparrow 
 - Primary groups = close/emotional. Secondary groups = formal/task-oriented.
 - Groupthink: conformity suppresses critical thinking (dangerous in medicine!)
 - Role conflict = between roles. Role strain = within one role.
-- Goffman: front stage (public performance) vs. backstage (private self)`
+- Goffman: front stage (public performance) vs. backstage (private self)
+- Conformity (group norm, Asch) vs. obedience (authority, Milgram) vs. compliance (direct request) — both conformity and obedience are highly situational.
+
+<!-- yield:low -->
+- Low-yield extras: the exact Asch and Milgram percentages (about a third of critical trials; 65% to the maximum shock)
+<!-- /yield -->`
     }
   ]
 };

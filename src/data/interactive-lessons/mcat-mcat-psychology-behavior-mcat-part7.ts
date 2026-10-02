@@ -42,7 +42,12 @@ export const mcatPsychBehavPart7Data = {
 
 Ainsworth's **Strange Situation** is a structured observation in which a 12–18-month-old experiences a series of separations from and reunions with the caregiver, plus the presence of a stranger. **Reunion behavior**, NOT separation distress alone, is the key marker:
 
-- **Secure** (~60–65% of infants): uses parent as a **secure base** to explore; upset at departure; readily comforted on reunion.
+- **Secure** (the most common pattern): uses parent as a **secure base** to explore; upset at departure; readily comforted on reunion.
+
+<!-- yield:low -->
+- Prevalence: roughly 60–65% of infants in typical samples are classified as secure.
+<!-- /yield -->
+
 - **Avoidant:** explores indifferently; minimal reaction to departure OR reunion.
 - **Anxious-ambivalent (resistant):** little exploration; intense distress; on reunion seeks contact yet resists comfort (clingy + angry).
 - Harlow's monkey studies (cloth vs. wire "mothers") earlier established that **contact comfort**, not feeding, drives attachment — undermining the behaviorist "cupboard love" view.
@@ -73,18 +78,21 @@ Ainsworth's **Strange Situation** is a structured observation in which a 12–18
             question: `An adolescent struggling to define their values, career goals, and identity is in which Erikson stage?`,
             options: [`Identity vs. Role Confusion`, `Intimacy vs. Isolation`, `Industry vs. Inferiority`, `Initiative vs. Guilt`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Erikson's fifth stage (Identity vs. Role Confusion) occurs during adolescence (roughly ages 12-18). Successfully navigating this stage produces a strong sense of identity; failure leads to role confusion. The trap is **Intimacy vs. Isolation**, the NEXT stage (young adulthood) — but Erikson held that a coherent identity must form FIRST before one can fuse it with another in intimate relationships. Industry vs. Inferiority belongs to school age and Initiative vs. Guilt to the preschool years.`
           },
           {
             question: `In the Strange Situation, a 14-month-old explores the room only minimally, becomes extremely distressed when the caregiver leaves, and on reunion simultaneously reaches for the caregiver yet arches away and resists being soothed. This pattern is classified as:`,
             options: [`Ambivalent attachment`, `Secure attachment`, `Avoidant attachment`, `Disorganized attachment`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `The combination of intense distress plus the contradictory "seek-yet-resist" reunion behavior defines **anxious-ambivalent (resistant)** attachment. The trap is **avoidant** attachment, which is nearly the opposite at reunion — the avoidant infant shows LITTLE distress and actively IGNORES the returning caregiver, rather than clinging-while-resisting. Disorganized infants can also mix approach and avoidance, but alongside freezing, dazed, or fearful behavior and no coherent strategy; this infant's clear, consistent pattern of seeking contact yet resisting comfort is the organized ambivalent strategy.`
           },
           {
             question: `Two children both decide not to cheat on a test. Child A says "I'd get caught and punished," while Child B says "Cheating violates fairness, a principle everyone should uphold." According to Kohlberg, what is the key difference?`,
             options: [`They are at different levels of moral reasoning`, `Child A is more morally developed than Child B`, `Both reason at the conventional level of morality`, `The identical decision means they are at the same stage`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Kohlberg classified moral development by the REASONING, not the decision. Child A's punishment-avoidance logic is **pre-conventional**, whereas Child B's appeal to universal ethical principles is **post-conventional**. The trap that treats the identical decision as proof of the same stage fails because identical behavior can stem from very different levels of moral reasoning.`
           }
         ]
@@ -136,7 +144,11 @@ Ainsworth's **Strange Situation** is a structured observation in which a 12–18
       type: 'text' as const,
       content: `### Psychology & Behavior — Complete! ✅
 
-The Psych/Soc section tests your understanding of how psychological, social, and biological factors influence behavior and health. Master the major theories (Piaget, Erikson, Kohlberg, Freud), neurotransmitters, brain regions, and learning principles.`
+The Psych/Soc section tests your understanding of how psychological, social, and biological factors influence behavior and health. Master the major theories (Piaget, Erikson, Kohlberg, Freud), neurotransmitters, brain regions, and learning principles.
+
+<!-- yield:low -->
+- Low-yield extras: the ~60–65% prevalence of secure attachment
+<!-- /yield -->`
     }
   ]
 };

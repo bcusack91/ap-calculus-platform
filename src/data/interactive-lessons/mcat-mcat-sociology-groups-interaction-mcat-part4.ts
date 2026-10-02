@@ -22,7 +22,10 @@ They dissociate, and the dissociations are the questions: a landlord who private
 
 - **Individual discrimination**: one actor treating people unequally.
 - **Institutional discrimination**: unequal outcomes produced by an institution's ordinary rules and procedures — no bigoted individual required. Seniority systems layered on historically exclusionary hiring, school funding via local property taxes, medical algorithms calibrated on unrepresentative samples. The tell: replace every employee with unprejudiced people and the disparity PERSISTS, because it lives in the rules.
+
+<!-- yield:low -->
 - **Side-effect discrimination**: one institution's disparity feeding another's (biased arrest records used in hiring). **Past-in-present discrimination**: neutral rules amplifying historical exclusion (legacy admissions).
+<!-- /yield -->
 
 ### Where Prejudice Comes From — The Group Machinery
 
@@ -33,7 +36,7 @@ Parts 1-3 built the mechanisms; here they assemble:
 - **Contact hypothesis**, properly stated: intergroup contact reduces prejudice ONLY under conditions — equal status within the situation, common goals, cooperation, and institutional support. Unstructured contact can backfire; the conditions are the answer, not "contact" alone.
 - **Scapegoating**: frustration displaced onto low-power out-groups; prejudice rises with economic stress.
 - **Stereotype threat**: awareness that one's group is negatively stereotyped creates performance-impairing anxiety on evaluative tasks — a situational effect, reversible by changing the framing, and a standard experimental passage.
-- **Self-fulfilling prophecy** (Parts 2-3 of the culture lesson): expectations alter treatment, which elicits the expected behavior — the micro engine converting stereotype into "confirming" data.
+- **Self-fulfilling prophecy** (the labeling-theory material in Part 3 of the culture lesson): expectations alter treatment, which elicits the expected behavior — the micro engine converting stereotype into "confirming" data.
 
 ### Reading Interaction Experiments — The Design Checklist
 
@@ -76,30 +79,35 @@ The design trades surface realism for INTERNAL validity (random assignment, matc
             question: `A rental algorithm, built with no attitudinal input, systematically rejects applicants from historically segregated zip codes, producing group-differential outcomes. A sociologist would classify this as:`,
             options: [`Institutional discrimination absent individual prejudice`, `Prejudice without discrimination, since no one intends harm`, `A stereotype, because the algorithm holds beliefs`, `Scapegoating of residents from segregated areas`],
             correctAnswer: 0,
-            explanation: `The differential treatment (behavioral layer) is real and group-patterned, yet no actor holds an attitude — the pattern lives in rules and inherited geography, the defining mark of institutional discrimination compounded by past-in-present dynamics. Prejudice without discrimination reverses the dissociation (this is discrimination WITHOUT prejudice), and algorithms hold no beliefs or displaced frustrations.`
+            yield: 'HIGH',
+            explanation: `The differential treatment (behavioral layer) is real and group-patterned, yet no actor holds an attitude — the pattern lives in rules and inherited geography, the defining mark of institutional discrimination, here carrying historical segregation forward through neutral-looking criteria. Prejudice without discrimination reverses the dissociation (this is discrimination WITHOUT prejudice), and algorithms hold no beliefs or displaced frustrations.`
           },
           {
             question: `At a summer camp, two boys' groups became hostile after competitive tournaments; joint pizza parties did nothing, but hostility fell sharply after the groups had to cooperate to fix the camp's failed water supply. The variable that reduced prejudice was:`,
             options: [`Repeated contact at shared meals and parties`, `Adult sanctions that punished hostile behavior`, `A shared superordinate goal requiring cooperation`, `Separating the groups to let hostility cool`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `The field experiment's sequence is the lesson: competition manufactured hostility, unstructured contact (parties) failed and even sparked food fights, and only superordinate goals — the broken water supply, the stuck truck — dissolved group lines by making the out-group instrumental to in-group success. Neither punishment nor separation produced the drop; cooperation did. This is also why the contact hypothesis requires cooperation and common goals, not proximity.`
           },
           {
             question: `Students from a negatively stereotyped group score worse on a test described as "diagnostic of intellectual ability" but equal to controls when the SAME test is described as a "problem-solving exercise." This pattern demonstrates:`,
             options: [`That the ability difference is real but small`, `Stereotype threat triggered by the task's framing`, `Institutional discrimination by the test-makers`, `General test anxiety unrelated to group identity`],
             correctAnswer: 1,
+            yield: 'ULTRA_HIGH',
             explanation: `Identical test, different framing, different scores: the deficit cannot be ability (ability did not change between conditions) — it is produced by the evaluative situation activating the stereotype, and it vanishes when the diagnostic frame is lifted. That reversibility is the finding's signature and its practical hope. No test content or institutional rule differed between conditions, and generic test anxiety would not single out the stereotyped group.`
           },
           {
             question: `In an audit study, why does RANDOMLY ASSIGNING group-signaling names to otherwise identical resumes license a causal conclusion that observational hiring data cannot support?`,
             options: [`Because large samples rule out chance and therefore confounding`, `Because recruiters were unaware of being studied and acted naturally`, `Because fictitious resumes eliminate survey social desirability bias`, `Because randomization makes the name the only systematic difference`],
             correctAnswer: 3,
+            yield: 'HIGH',
             explanation: `Observational disparities are always vulnerable to the rejoinder that groups differed in qualifications; random assignment severs any link between the group signal and every other resume property, known or unknown, making the signal the only systematic difference. Recruiter unawareness helps validity but does not create the causal license — randomization does; sample size addresses chance, never confounding.`
           },
           {
             question: `A teacher told that certain randomly selected students are "about to bloom intellectually" gives those students more attention and richer feedback; months later those students show real achievement gains. The mechanism converting the (false) expectation into real performance is:`,
             options: [`The self-fulfilling prophecy`, `Stereotype threat`, `Confirmation bias in grading`, `The fundamental attribution error`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `The students were selected at RANDOM, so the gains cannot reflect detected talent; the expectation changed the teacher's behavior (attention, feedback), which changed learning — the definitional loop of a self-fulfilling prophecy, and the micro engine that lets stereotypes manufacture their own supporting evidence. Stereotype threat runs the opposite direction, impairing performance under negative expectations; confirmation bias in grading could not produce REAL achievement gains; and the fundamental attribution error is a bias in explaining behavior, not a mechanism that changes it.`
           }
         ]
@@ -111,10 +119,14 @@ The design trades surface realism for INTERNAL validity (random assignment, matc
       content: `### Key Takeaways — Part 4
 
 - Keep the three layers straight: stereotype = belief (cognitive), prejudice = attitude (affective), discrimination = treatment (behavioral); they dissociate in every direction (Merton's grid)
-- Institutional discrimination lives in rules and procedures — it persists with unprejudiced personnel; watch for side-effect and past-in-present variants
+- Institutional discrimination lives in rules and procedures — it persists with unprejudiced personnel, often carrying historical exclusion forward through neutral-looking rules
 - Prejudice reduction has conditions: contact works only with equal status, common goals, cooperation, institutional support; superordinate goals are the strongest lever; competition and scarcity run it backwards
 - Stereotype threat is situational and reversible (framing manipulations); self-fulfilling prophecies convert expectations into confirming data via differential treatment
-- Experimental reading: random assignment licenses causation; behavior outranks self-report (social desirability); match every conclusion to the operationalized variable — and diagnose answer choices by which of the three layers they live on`
+- Experimental reading: random assignment licenses causation; behavior outranks self-report (social desirability); match every conclusion to the operationalized variable — and diagnose answer choices by which of the three layers they live on
+
+<!-- yield:low -->
+- Low-yield extras: the named subtypes of institutional discrimination — side-effect discrimination (one institution's disparity feeding another's) and past-in-present discrimination (neutral rules amplifying historical exclusion)
+<!-- /yield -->`
     }
   ]
 };

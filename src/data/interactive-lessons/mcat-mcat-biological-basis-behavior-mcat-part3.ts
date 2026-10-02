@@ -12,7 +12,8 @@ export const mcatBioBasisBehaviorPart3Data = {
 
 | Division | Structures | Functions |
 |----------|------------|-----------|
-| **Hindbrain** | Medulla, pons, cerebellum | Vital reflexes (HR, breathing), coordination, balance |
+| **Hindbrain** | Medulla, pons | Vital reflexes (heart rate, breathing); pons relays signals to the cerebellum |
+| **Hindbrain** | Cerebellum | Coordination, balance, fine-tuning of movement |
 | **Midbrain** | Tectum, tegmentum | Sensorimotor reflexes, arousal (reticular formation) |
 | **Forebrain** | Cortex, thalamus, hypothalamus, limbic system | Cognition, emotion, homeostasis |
 
@@ -55,18 +56,21 @@ export const mcatBioBasisBehaviorPart3Data = {
             question: `A stroke patient speaks fluently but produces grammatically jumbled, meaningless sentences and cannot understand speech. The damaged area is most likely:`,
             options: [`Wernicke's area (temporal lobe)`, `Broca's area (frontal lobe)`, `Cerebellum (hindbrain)`, `Primary motor cortex (frontal lobe)`],
             correctAnswer: 0,
+            yield: 'ULTRA_HIGH',
             explanation: `Wernicke's aphasia features FLUENT but meaningless ("word salad") speech and IMPAIRED comprehension, localizing to Wernicke's area in the temporal lobe. Broca's aphasia is the opposite: halting, effortful speech with relatively preserved comprehension.`
           },
           {
             question: `Bilateral damage to the hippocampus would most directly impair the ability to:`,
             options: [`Form new long-term explicit memories`, `Coordinate balance and movement`, `Regulate body temperature`, `Learn new motor skills`],
             correctAnswer: 0,
-            explanation: `The hippocampus is essential for CONSOLIDATING new explicit (declarative) memories. Bilateral damage (as in patient H.M.) produces anterograde amnesia — an inability to form new conscious memories — while older memories and procedural learning are spared.`
+            yield: 'ULTRA_HIGH',
+            explanation: `The hippocampus is essential for CONSOLIDATING new explicit (declarative) memories. Bilateral damage (as in patient H.M.) produces anterograde amnesia — an inability to form new conscious memories — while remote memories and procedural learning are largely spared.`
           },
           {
             question: `A researcher wants to track the precise TIMING of cortical electrical responses to a stimulus, millisecond by millisecond. The best tool is:`,
             options: [`EEG`, `fMRI`, `CT scan`, `PET`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `EEG records electrical activity directly with excellent TEMPORAL resolution (milliseconds), ideal for timing of neural responses. fMRI and PET have good spatial but poor temporal resolution (they track slower blood-flow/metabolic signals), and CT shows structure, not activity.`
           }
         ]

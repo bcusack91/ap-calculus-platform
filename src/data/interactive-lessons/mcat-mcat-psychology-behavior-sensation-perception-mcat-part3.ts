@@ -21,21 +21,35 @@ export const mcatPsychSensPercPart3Data = {
 - Signals ascend to the **somatosensory cortex (parietal lobe)**, mapped as a distorted homunculus — cortical area tracks receptor *density* (fingers, lips), not body-part size.
 - **Two-point threshold**: minimum separation felt as two touches; smallest where receptor density is highest.
 
-### Gate Control Theory of Pain (Melzack & Wall, 1965)
+### Gate Control Theory of Pain (Melzack & Wall)
 
 - A spinal-cord "gate" modulates whether nociceptive signals reach the brain.
-- Activity in **large-diameter touch fibers (A-beta)** closes the gate on **small-diameter pain fibers (A-delta, C)** — why rubbing a stubbed toe helps.
+- Activity in **large-diameter touch fibers** closes the gate on **small-diameter pain fibers** — why rubbing a stubbed toe helps.
+
+<!-- yield:low -->
+- Fiber classes: the large touch fibers are A-beta; the small pain fibers are A-delta (fast, sharp pain) and C (slow, dull or burning pain). Melzack and Wall proposed the theory in 1965.
+<!-- /yield -->
+
 - Descending signals from the brain (attention, expectation, endorphins) also gate pain — the mechanism behind placebo analgesia and athletes not noticing injuries mid-game.
 
 ### Smell & Taste (the chemical senses)
 
 - **Olfaction**: odorants bind olfactory receptor neurons → **olfactory bulb** → piriform cortex/limbic system, **bypassing the thalamus** (unique) — one reason odors evoke vivid emotional memories.
-- **Gustation**: taste buds (papillae) detect five basic tastes — sweet, sour, salty, bitter, **umami**; signals travel via cranial nerves VII/IX/X → brainstem → **thalamus** → gustatory cortex (insula).
+- **Gustation**: taste buds (housed in the tongue's papillae) detect five basic tastes — sweet, sour, salty, bitter, **umami**; signals travel via cranial nerves → brainstem → **thalamus** → gustatory cortex (insula).
+
+<!-- yield:low -->
+- The taste nerves: CN VII (anterior two-thirds of the tongue), CN IX (posterior third), CN X (epiglottis).
+<!-- /yield -->
+
 - **Kinesthesia/proprioception**: muscle-spindle and joint receptors report limb position — distinct from vestibular balance.
 
 ### Gestalt Principles ("the whole is other than the sum of its parts")
 
-Founded by **Wertheimer, Köhler, and Koffka**; the umbrella law of **Prägnanz** — we perceive the simplest organization.
+The umbrella law is **Prägnanz** — we perceive the simplest organization.
+
+<!-- yield:low -->
+- The Gestalt school was founded by Max Wertheimer, Wolfgang Köhler, and Kurt Koffka.
+<!-- /yield -->
 
 | Principle | We group elements that are… |
 |-----------|------------------------------|
@@ -67,18 +81,21 @@ Founded by **Wertheimer, Köhler, and Koffka**; the umbrella law of **Prägnanz*
             question: `A nurse rubs the skin around an injection site before inserting the needle, and the patient reports less pain. According to gate control theory, this works because:`,
             options: [`Large touch fibers inhibit pain-fiber transmission at a spinal gate`, `Rubbing causes sensory adaptation of the nociceptors themselves`, `Touch input raises the absolute threshold of pain receptors in the skin`, `The somatosensory cortex reassigns the pain signal to the touch homunculus`],
             correctAnswer: 0,
-            explanation: `Melzack and Wall's gate control theory: A-beta (touch) fiber activity closes a spinal-cord gate on A-delta/C (pain) fiber transmission, so less nociceptive signal ascends. The modulation is central (spinal), not a change in the nociceptors — which distinguishes it from receptor adaptation.`
+            yield: 'MEDIUM',
+            explanation: `Melzack and Wall's gate control theory: activity in large-diameter touch fibers closes a spinal-cord gate on small-diameter pain-fiber transmission, so less nociceptive signal ascends. The modulation is central (spinal), not a change in the nociceptors — which distinguishes it from receptor adaptation.`
           },
           {
             question: `Odors are famously effective at triggering sudden, emotion-laden memories. The anatomical feature that best explains this is:`,
             options: [`Olfactory signals reach limbic structures without a thalamic relay`, `Olfactory receptors are the most numerous receptors in the body`, `The olfactory bulb lies within the hippocampal formation`, `Smell is processed bilaterally while other senses are lateralized`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Olfaction is the only sense that bypasses the thalamic relay, projecting directly toward the piriform cortex, amygdala, and entorhinal/hippocampal region — an intimate limbic connection linking odors with emotion and memory. The olfactory bulb lies beneath the frontal lobe, well outside the hippocampal formation.`
           },
           {
             question: `Looking out a moving train's window, fence posts near the track streak past while distant mountains barely move. Because the passenger is using only one eye, this depth cue is best identified as:`,
             options: [`Motion parallax, a monocular cue`, `Retinal disparity, a binocular cue`, `Convergence, an oculomotor binocular cue`, `Closure, a Gestalt grouping principle`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Differential apparent speed of near vs. far objects during observer motion is motion parallax — available to a single eye, hence monocular. Retinal disparity and convergence both require two eyes; the stem's "only one eye" clause removes that ambiguity.`
           }
         ]
@@ -134,7 +151,11 @@ Founded by **Wertheimer, Köhler, and Koffka**; the umbrella law of **Prägnanz*
 - Gate control: touch-fiber and descending activity close a spinal gate on pain.
 - Smell bypasses the thalamus → strong emotion/memory links; taste does not.
 - Binocular cues = retinal disparity + convergence; everything else (including motion parallax) is monocular.
-- Constancies stabilize perception — and generate illusions when their assumptions are violated.`
+- Constancies stabilize perception — and generate illusions when their assumptions are violated.
+
+<!-- yield:low -->
+- Low-yield extras: gate-control fiber classes (A-beta touch; A-delta and C pain) and the 1965 date; the Gestalt founders Wertheimer, Köhler, and Koffka; the taste cranial nerves CN VII (anterior two-thirds), IX (posterior third), X (epiglottis)
+<!-- /yield -->`
     }
   ]
 };

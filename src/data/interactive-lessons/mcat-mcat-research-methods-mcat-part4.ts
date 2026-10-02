@@ -19,18 +19,18 @@ Larger sample → More power to detect true effects (↓β, Type II error)
 | Lower variability | ↑ Power |
 | Higher α (0.05 vs 0.01) | ↑ Power |
 
-**Rule of thumb:** Aim for 80%+ power (allow 20% ≤β).
+**Rule of thumb:** Aim for 80%+ power (β ≤ 20%).
 
-### Research Ethics (MCAT focus: Informed Consent, IRB)
+### Research Ethics (MCAT focus: Belmont Principles, Informed Consent, IRB)
 
-| Principle | Requirement |
+| Principle / Safeguard | Requirement |
 |-----------|------------|
-| **Informed Consent** | Subjects understand risks/benefits; voluntary participation |
-| **Beneficence** | Maximize benefits; minimize harms |
+| **Respect for Persons (Autonomy)** | Informed consent: subjects understand risks/benefits; participation is voluntary |
+| **Beneficence** | Maximize benefits; minimize harms (nonmaleficence: do no harm) |
 | **Justice** | Fair distribution of risks/benefits; equitable access |
 | **IRB (Institutional Review Board)** | Ethical review before study starts |
 
-**Special Populations:** Extra protections for children, prisoners, cognitively impaired (cannot give true consent)
+**Special Populations:** Extra protections for children, prisoners, and the cognitively impaired (consent may be limited or open to coercion; children give assent alongside parental permission)
 
 **Vulnerable Populations:** Cannot be excluded from research solely for "protection"; must justify any exclusion
 
@@ -40,7 +40,7 @@ Combines data from multiple studies to increase statistical power.
 
 \`\`\`
 Advantage: Large sample → more generalizable conclusions
-Risk: Publication bias (only positive findings published)
+Risk: Publication bias (positive findings more likely to be published)
 \`\`\`
 
 | Issue | Impact |
@@ -49,7 +49,7 @@ Risk: Publication bias (only positive findings published)
 | **Publication Bias** | Null findings ↓ published; overestimates effect |
 | **Quality Variation** | Poor-quality studies can bias pooled analysis |
 
-**Forest Plot Interpretation:** Vertical line at 1.0 (OR) means no effect; if confidence intervals cross it, effect not significant overall.`
+**Forest Plot Interpretation:** Vertical line at 1.0 (OR) means no effect; if the pooled confidence interval crosses it, the effect is not significant overall.`
     },
     {
       id: 'rm4-quiz',
@@ -61,11 +61,12 @@ Risk: Publication bias (only positive findings published)
             question: `A medication trial finds no significant difference with 50 participants (p=0.10). What might improve the conclusion?`,
             options: [
               `Repeat the trial with a larger sample size`,
-              `Lower the alpha threshold to 0.01`,
+              `Lower the alpha threshold from 0.05 to 0.01`,
               `Switch to a one-tailed test after seeing the data`,
-              `Report that the drug has no effect at all`
+              `Report that the trial proved the drug has no effect`
             ],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `With only 50 participants, a non-significant result may be a Type II error (false negative). A larger sample increases power to detect a real effect if one exists. Lowering α to 0.01 makes significance harder to reach, switching to a one-tailed test after seeing the data is p-hacking that inflates Type I error, and a non-significant p-value is not evidence of no effect.`
           },
           {
@@ -77,6 +78,7 @@ Risk: Publication bias (only positive findings published)
               `Efficiency: recruitment is faster in these groups`
             ],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Justice requires fair distribution of research benefits, so vulnerable groups should not be excluded without justification. Blanket exclusion "protects" a group but denies it access to potential treatments and to evidence about how they work for its members; inclusion still requires added safeguards. Avoiding all risk would argue for exclusion, and convenience of consent or recruitment is never an ethical justification for enrolling vulnerable people.`
           },
           {
@@ -88,7 +90,8 @@ Risk: Publication bias (only positive findings published)
               `Different study designs can never be combined`
             ],
             correctAnswer: 1,
-            explanation: `Publication bias is a major meta-analysis limitation: negative studies are less likely to be published, so the drug effect is overestimated. If 80% of published studies show a drug works (but 40% of unpublished studies don't), the pooled effect is overestimated. Pooling increases power rather than lowering it, meta-analyses use study results rather than participant memory, and different designs can be combined with appropriate methods.`
+            yield: 'MEDIUM',
+            explanation: `Publication bias is a major meta-analysis limitation: negative studies are less likely to be published, so the drug effect is overestimated. When null results stay in file drawers, the published set over-represents positive findings and inflates the pooled effect. Pooling increases power rather than lowering it, meta-analyses use study results rather than participant memory, and different designs can be combined with appropriate methods.`
           },
           {
             question: `Which list best summarizes what informed consent requires subjects to know?`,
@@ -99,6 +102,7 @@ Risk: Publication bias (only positive findings published)
               `Purpose, main benefits only, that signing is final, and confidentiality`
             ],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Informed consent requires disclosure of the study's purpose and procedures, its risks and benefits, the right to withdraw at any time without penalty, and how confidentiality will be protected. Every other list includes at least one element that violates the standard: participants must hear the risks as well as the benefits, signing is never final because participants may withdraw at any time, and identifiable data must be kept confidential rather than made public.`
           }
         ]
@@ -110,7 +114,8 @@ Risk: Publication bias (only positive findings published)
       content: `### Key Takeaways — Part 4
 
 - **Sample Size**: Larger N → More power (can detect small true effects)
-- **Power Goal**: 80%+ (give ≤20% Type II error allowance)
+- **Power Goal**: 80%+ (Type II error rate β ≤ 20%)
+- **Belmont Principles**: Respect for persons (informed consent), beneficence, justice
 - **Informed Consent**: Disclosure of risks/benefits; voluntary; ability to withdraw
 - **Vulnerable Populations**: Include with extra protections, don't exclude
 - **Meta-Analysis**: Combines studies for power, but publication bias can overestimate effects

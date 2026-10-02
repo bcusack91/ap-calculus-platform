@@ -23,11 +23,20 @@ These three are distinguished by the SOURCE of social influence.
 | **Normative** | To be LIKED/accepted | Public compliance (may not believe it) |
 | **Informational** | To be CORRECT (uncertainty) | Private acceptance (genuine belief) |
 
-**Asch findings:** ~33–37% conformity to an obviously wrong majority; conformity DROPS sharply with even ONE dissenting ally and rises with group size (up to ~3–5 members).
+**Asch findings:** a substantial share of responses conformed to an obviously wrong unanimous majority; conformity DROPS sharply with even ONE dissenting ally and rises with group size (plateauing at about 3–4 confederates).
+
+<!-- yield:low -->
+- The exact figure: conformity on about a third of critical trials (roughly 37%), and about 75% of participants conformed at least once.
+<!-- /yield -->
 
 ### Milgram's Obedience Study
 
-- ~65% delivered the maximum (450 V) "shock."
+- A majority of ordinary participants continued to the maximum "shock" when the experimenter insisted.
+
+<!-- yield:low -->
+- The exact figure: 65% in the baseline study went all the way to the 450-volt maximum.
+<!-- /yield -->
+
 - Obedience FELL when: the authority was remote/absent, the victim was closer/visible, the experiment lacked institutional prestige, or peers rebelled.
 - Lesson: obedience is **situational**, not merely a personality flaw.
 
@@ -50,18 +59,21 @@ These three are distinguished by the SOURCE of social influence.
             question: `In Asch's line-judgment experiments, conformity to the incorrect majority dropped most dramatically when:`,
             options: [`A single confederate gave the correct answer`, `The group size increased beyond five`, `Participants answered out loud`, `The lines were made more similar`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `The presence of even ONE ally who dissents shatters the unanimity of the majority and frees the participant to give the correct answer — conformity plummets. Unanimity is the critical ingredient; break it and normative pressure collapses.`
           },
           {
             question: `A fundraiser first asks you to donate \\$500 (you refuse), then asks for \\$20 (you agree). This compliance technique is:`,
             options: [`Door-in-the-face`, `Foot-in-the-door`, `Lowball`, `That's-not-all`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Door-in-the-face starts with a large request that is expected to be refused, then follows with a smaller one. The concession triggers reciprocity (they "compromised," so you should too). Foot-in-the-door is the reverse: small request first, then larger.`
           },
           {
             question: `A student looks to classmates to figure out the right answer on an ambiguous question and genuinely comes to believe their answer. This is:`,
             options: [`Informational conformity`, `Normative conformity`, `Public compliance`, `Obedience to authority`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Informational conformity occurs under UNCERTAINTY: the person uses others as a source of information to be CORRECT, and it produces genuine private acceptance. Normative conformity, by contrast, is driven by the desire to be liked and often yields only public compliance.`
           }
         ]
@@ -88,7 +100,7 @@ These three are distinguished by the SOURCE of social influence.
 <details>
 <summary><b>Example 2: Predict the effect of a situational manipulation in Milgram's paradigm</b></summary>
 
-**Question:** Milgram's baseline obedience was ~65%. Predict the effect of (a) moving the experimenter to another room giving orders by phone and (b) placing the participant's hand on the victim's "shock plate."
+**Question:** In Milgram's baseline condition, most participants obeyed to the maximum shock. Predict the effect of (a) moving the experimenter to another room giving orders by phone and (b) placing the participant's hand on the victim's "shock plate."
 
 **Solution:**
 1. (a) Remote authority weakens the legitimacy/pressure of the command → obedience DROPS markedly. ✓
@@ -116,8 +128,12 @@ These three are distinguished by the SOURCE of social influence.
 
 - Conformity = group norms (Asch); compliance = direct request; obedience = authority (Milgram).
 - Normative conformity = to be liked (public); informational = to be correct (private acceptance).
-- Asch: ~⅓ conform; one ally collapses conformity. Milgram: ~65% max shock; obedience is situational.
-- Compliance tricks: foot-in-the-door (small→large), door-in-the-face (large→small), lowball, that's-not-all.`
+- Asch: many conform even on an obvious task; one ally collapses conformity. Milgram: a majority obeyed to the maximum shock; obedience is situational.
+- Compliance tricks: foot-in-the-door (small→large), door-in-the-face (large→small), lowball, that's-not-all.
+
+<!-- yield:low -->
+- Low-yield extras: the exact Asch and Milgram percentages (conformity on about a third of critical trials, about 75% conforming at least once; 65% to the 450-volt maximum)
+<!-- /yield -->`
     }
   ]
 };

@@ -12,11 +12,15 @@ export const mcatPsychCogLangPart3Data = {
 
 | Level | Unit | Example |
 |-------|------|---------|
-| **Phonemes** | Smallest sound units that distinguish meaning | /b/ vs /p/ in bat/pat (English has ~40) |
+| **Phonemes** | Smallest sound units that distinguish meaning | /b/ vs /p/ in bat/pat |
 | **Morphemes** | Smallest MEANING-bearing units | "un-break-able" = 3 morphemes; the plural -s is one |
-| **Semantics** | Meaning of words and sentences | Why "colorless green ideas" feels empty |
 | **Syntax** | Rules ordering words into sentences | Grammatical but meaningless sentences prove syntax ≠ semantics |
+| **Semantics** | Meaning of words and sentences | Why "colorless green ideas" feels empty |
 | **Pragmatics** | Use in context — tone, implication, register | "Can you pass the salt?" is a request, not a question |
+
+<!-- yield:low -->
+- English uses roughly 40 phonemes.
+<!-- /yield -->
 
 ### The Acquisition Timeline (order is what gets tested)
 
@@ -44,7 +48,11 @@ export const mcatPsychCogLangPart3Data = {
 | **Wernicke's area** (left superior temporal) | Wernicke's (receptive, fluent) aphasia | Fluent but empty/nonsensical, neologisms | Poor; often unaware of deficit | Impaired |
 | **Arcuate fasciculus** (connects the two) | Conduction aphasia | Fluent | Good | **Selectively impaired** |
 
-Global aphasia = both regions; reading/writing analogs are alexia/agraphia.`
+Global aphasia = both regions.
+
+<!-- yield:low -->
+- The reading and writing analogs of aphasia are alexia and agraphia.
+<!-- /yield -->`
     },
     {
       id: 'cog3-worked',
@@ -71,30 +79,35 @@ Global aphasia = both regions; reading/writing analogs are alexia/agraphia.`
             question: `A three-year-old who previously said "went" correctly begins saying "goed" and "runned." Developmental psycholinguists treat these NEW errors as important because they:`,
             options: [`Indicate a language delay requiring intervention`, `Show the child is imitating adult speech more closely`, `Reflect extinction of previously reinforced forms`, `Show the child is overapplying an extracted rule`],
             correctAnswer: 3,
+            yield: 'HIGH',
             explanation: `No adult says "goed," so the form cannot be imitated; it appears precisely when the child induces the add -ed rule and overapplies it, temporarily displacing memorized irregulars. This U-shaped curve is normal development and the textbook evidence FOR internal rule learning and AGAINST Skinner's imitation-reinforcement account.`
           },
           {
             question: `A stroke patient speaks in rapid, grammatical-sounding streams filled with invented words, cannot follow simple spoken instructions, and appears unaware anything is wrong. The lesion is most likely in the:`,
             options: [`Left inferior frontal lobe (Broca's area)`, `Left superior temporal lobe (Wernicke's area)`, `Arcuate fasciculus between language areas`, `Right occipital lobe (primary visual cortex)`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Fluent-but-empty output, neologisms, failed comprehension, and lack of insight compose Wernicke's (receptive) aphasia, localizing to left superior temporal cortex. Broca's lesions (left frontal) produce the opposite: effortful, telegraphic speech with preserved comprehension and marked frustration. Arcuate damage selectively spares both fluency and comprehension while breaking repetition.`
           },
           {
             question: `Deaf individuals who are first exposed to sign language in adulthood typically achieve large vocabularies but persistently nonnative grammar, whereas those exposed from infancy sign with native syntax. This pattern most strongly supports:`,
             options: [`A critical period for grammar, as nativists predict`, `The behaviorist view that adult reinforcement was lacking`, `The strong Whorfian view that language determines thought`, `The view that sign languages lack true syntax`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Vocabulary (learnable at any age) dissociating from syntax (native only with early exposure) is the fingerprint of a maturationally limited window for grammar — Chomsky's nativist prediction, echoed in cases like Genie. Reinforcement is available to adult learners too, so behaviorism cannot explain the age effect; linguistic determinism concerns language shaping thought, not when grammar can be acquired; and sign languages are fully syntactic natural languages.`
           },
           {
             question: `A 20-month-old says "more milk," "daddy go," and "want cookie," omitting articles and verb endings but preserving word order. This stage is called:`,
-            options: [`The canonical babbling stage`, `The holophrastic (one-word) stage`, `The telegraphic (two-word) stage`, `The overregularization stage`],
+            options: [`The canonical babbling stage`, `The holophrastic (one-word) stage`, `The telegraphic stage`, `The overregularization stage`],
             correctAnswer: 2,
+            yield: 'MEDIUM',
             explanation: `Two-word combinations that keep syntactic ORDER while dropping grammatical function words (articles, inflections) define telegraphic speech, typical at 18-24 months. Babbling is prelinguistic sound play; holophrastic speech is the earlier one-word stage; overregularization comes later, once inflectional rules are being extracted.`
           },
           {
             question: `A patient converses fluently and follows complex instructions without difficulty, yet reliably fails when asked to repeat sentences verbatim. The most likely site of damage, and why, is the:`,
             options: [`Broca's area, because production is impaired`, `Hippocampus, because new memories cannot form`, `Wernicke's area, as input cannot be decoded`, `Arcuate fasciculus, as the relay to Broca's is cut`],
             correctAnswer: 3,
+            yield: 'MEDIUM',
             explanation: `Selective repetition failure with fluent output and good comprehension is conduction aphasia: both cortical language centers work, but the arcuate fasciculus connecting them is cut, breaking the direct perception-to-production route. Broca's or Wernicke's lesions would impair fluency or comprehension respectively, and hippocampal damage impairs new episodic learning, not immediate repetition.`
           }
         ]
@@ -109,7 +122,11 @@ Global aphasia = both regions; reading/writing analogs are alexia/agraphia.`
 - Timeline: cooing → universal babbling that narrows by 10 months → one-word (12 mo) → telegraphic (18-24 mo) → overregularization (~3 yr, the anti-imitation evidence)
 - Theories: Skinner (reinforcement — fails on overregularization and poverty of stimulus), Chomsky (LAD, universal grammar, critical period — Genie, late sign learners), interactionist synthesis; Whorf survives only in weak form
 - Aphasia grid: score fluency and comprehension first — Broca's = nonfluent/comprehends/frustrated (frontal, watch for right-side weakness); Wernicke's = fluent nonsense/poor comprehension/unaware (temporal); conduction = only repetition broken (arcuate fasciculus)
-- Left hemisphere dominates language in nearly all right-handers and most left-handers`
+- Left hemisphere dominates language in nearly all right-handers and most left-handers
+
+<!-- yield:low -->
+- Low-yield extras: English has roughly 40 phonemes; alexia and agraphia are the reading and writing analogs of aphasia
+<!-- /yield -->`
     }
   ]
 };

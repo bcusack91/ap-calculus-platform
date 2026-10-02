@@ -13,7 +13,7 @@ export const mcatSocioGroupsPart2Data = {
 - **Normative social influence**: conforming to be LIKED/accepted — you know the group is wrong and comply anyway (public compliance, private disagreement).
 - **Informational social influence**: conforming because you believe the group KNOWS better — in ambiguous situations others become your data (private acceptance, genuine belief change).
 
-The classic line-judgment experiments (Asch) demonstrate the normative kind at full strength: with an UNAMBIGUOUS perceptual task, a substantial fraction of subjects publicly agreed with a unanimous wrong majority. The tested moderators: conformity rises with group size (up to a plateau around 4-5), unanimity is critical — a single dissenter, even an incorrect one, collapses conformity — and private (written) responding nearly eliminates it, proving the influence was normative.
+The classic line-judgment experiments (Asch) demonstrate the normative kind at full strength: with an UNAMBIGUOUS perceptual task, a substantial fraction of subjects publicly agreed with a unanimous wrong majority. The tested moderators: conformity rises with group size (up to a plateau at about 3-4 confederates), unanimity is critical — a single dissenter, even an incorrect one, collapses conformity — and private (written) responding nearly eliminates it, proving the influence was normative.
 
 ### Obedience — Authority as the Variable
 
@@ -27,7 +27,7 @@ Between conformity and obedience sit compliance techniques: **foot-in-the-door**
 
 - **Social facilitation**: the mere presence of others improves performance on EASY/well-learned tasks and worsens it on HARD/novel tasks — arousal strengthens the dominant response, which is correct for practiced skills and wrong for unmastered ones. One principle, two directions: that asymmetry IS the exam question.
 - **Social loafing**: individuals exert less effort when contributions are pooled and unidentifiable (rope-pulling teams). Antidotes follow from the mechanism: make individual output identifiable, raise task meaning, shrink the group.
-- Facilitation vs. loafing discriminator: is the individual being EVALUATED (facilitation conditions) or SUBMERGED (loafing conditions)?
+- Facilitation vs. loafing discriminator: is the individual IDENTIFIABLE in front of others (facilitation conditions) or SUBMERGED in a pooled product (loafing conditions)?
 
 ### Deindividuation — The Self Dissolved
 
@@ -74,30 +74,35 @@ In crowds, anonymity + arousal + diffused responsibility can suspend self-awaren
             question: `In a line-judgment task with an obviously correct answer, a subject conforms to a unanimous wrong majority on public trials but answers correctly when responding in writing. Her public conformity reflected:`,
             options: [`Informational influence: she doubted her eyes`, `Deindividuation within the anonymous majority`, `Obedience to the experimenter's authority`, `Normative social influence, to avoid disapproval`],
             correctAnswer: 3,
+            yield: 'ULTRA_HIGH',
             explanation: `The task was unambiguous and her private (written) answers stayed correct, so the group never changed her belief — she changed only her public behavior to avoid standing alone. That is normative influence's definition. Informational influence requires ambiguity and produces private acceptance; no authority figure issued orders, and her self-awareness was fully intact.`
           },
           {
             question: `In the obedience experiments, which modification produced the LARGEST drop in subjects' willingness to continue?`,
             options: [`Moving the experiment to a prestigious university`, `Seeing two peer participants defy the experimenter`, `Increasing the payment offered to subjects`, `Having the experimenter emphasize that he bore full responsibility`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Defiant peers collapsed obedience more than almost any other variation — rebellion, like conformity, is socially licensed; models of refusal break the authority's monopoly on defining the situation. Prestige and explicit responsibility-taking INCREASE obedience (they strengthen legitimacy and the agentic state), and payment was never a meaningful lever.`
           },
           {
             question: `A charity first asks homeowners to display a small window sticker supporting a cause; two weeks later it asks the same homeowners to install a large lawn sign, and they agree at far higher rates than controls. The technique and its usual mechanism are:`,
-            options: [`Foot-in-the-door, working through self-perception`, `Door-in-the-face, working through reciprocal concessions`, `Lowballing, working through prior commitment`, `Normative influence, working through group pressure`],
+            options: [`Foot-in-the-door, working through self-perception`, `Door-in-the-face, working through reciprocal concessions`, `Lowballing, working through commitment to an initial deal`, `Normative influence, working through group pressure`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `Small-request-first-then-large is foot-in-the-door; the standard mechanism is self-perception and consistency — the first compliance updates identity ("I'm someone who supports this"), and the larger request cashes in on that identity. Door-in-the-face runs in the opposite order (large refused, then moderate), and lowballing reveals hidden costs after commitment.`
           },
           {
             question: `A jury whose members individually favored moderately high damages awards, after deliberating together, unanimously awards damages far above ANY member's initial figure — with no evidence of suppressed disagreement. This outcome exemplifies:`,
             options: [`Groupthink, because the verdict was unanimous`, `Social loafing, as members deferred to the loudest juror`, `Group polarization, amplifying the shared initial lean`, `The bystander effect, as responsibility was diffused`],
             correctAnswer: 2,
+            yield: 'ULTRA_HIGH',
             explanation: `Everyone leaned the same way beforehand, and deliberation amplified that lean via new same-side arguments and normative one-upping — polarization's exact signature. Groupthink requires suppressed private dissent producing a defective consensus, which the stem explicitly rules out; unanimity alone never diagnoses groupthink. No effort-pooling or helping situation is involved.`
           },
           {
             question: `A choir member sings noticeably quieter in a 60-person ensemble where microphones cannot isolate voices, but at full effort during solo auditions. The intervention MOST directly targeted at this mechanism would be:`,
-            options: [`Adding more singers to diffuse the workload further`, `Recording and reviewing each singer's individual channel`, `Having an audience watch rehearsals to increase arousal`, `Encouraging the group to bond so members like each other more`],
+            options: [`Adding more singers to diffuse the workload further`, `Recording and reviewing each singer's own channel`, `Having an audience watch rehearsals to increase arousal`, `Encouraging the group to bond so members like each other more`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Quieter effort when output is pooled and anonymous is social loafing, and its mechanism is unidentifiability of individual contribution — so the direct fix is making each contribution traceable. Adding singers worsens loafing; audiences engage facilitation (a different presence effect that would help only well-learned singing); cohesion helps somewhat but does not target the identifiability mechanism.`
           }
         ]

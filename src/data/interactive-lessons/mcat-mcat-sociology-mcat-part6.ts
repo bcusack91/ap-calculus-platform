@@ -75,18 +75,21 @@ export const mcatSociologyPart6Data = {
             question: `A patient from a different culture refuses a blood transfusion for religious reasons. A physician who first seeks to understand the belief within its cultural context rather than dismissing it is practicing:`,
             options: [`Cultural relativism`, `Ethnocentrism`, `Cultural assimilation`, `Cultural diffusion`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Cultural relativism evaluates beliefs within their cultural context rather than by the observer's own standards (ethnocentrism). It underlies cultural competence in medicine. Cultural assimilation is a minority group's absorption into the dominant culture, and cultural diffusion is the spread of cultural traits between societies — neither describes the physician's interpretive stance here.`
           },
           {
             question: `A pre-medical student spends years adopting the language, dress, and demeanor of physicians before ever entering medical school. This rehearsal of a not-yet-occupied role is BEST termed:`,
-            options: [`Anticipatory socialization`, `Resocialization in a total institution`, `Primary socialization`, `The hidden curriculum`],
+            options: [`Anticipatory socialization`, `Resocialization in a total institution`, `Primary socialization in the family`, `The hidden curriculum taught in schools`],
             correctAnswer: 0,
-            explanation: `Anticipatory socialization is learning the norms of a role one expects to occupy in the future. Resocialization involves shedding an old identity for a new one, typically inside a total institution such as the military or a prison — not merely preparing for a future role. Primary socialization is early childhood learning. The hidden curriculum is the implicit lessons schools teach, not role rehearsal.`
+            yield: 'HIGH',
+            explanation: `Anticipatory socialization is learning the norms of a role one expects to occupy in the future. Resocialization involves shedding an old identity for a new one, typically inside a total institution such as the military or a prison — not merely preparing for a future role. Primary socialization is early childhood learning, mainly within the family. The hidden curriculum is the implicit lessons schools teach (punctuality, obedience), not self-directed rehearsal of a future role.`
           },
           {
             question: `A passage argues that the values of the dominant class are presented as universal "common sense," so the disadvantaged accept arrangements that disadvantage them. This analysis of culture reflects:`,
             options: [`Conflict theory — Gramsci's cultural hegemony serving the powerful`, `Functionalism — culture as value consensus that promotes cohesion`, `Symbolic interactionism — meaning built through interaction`, `Cultural relativism — judging practices in their own context`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `Cultural hegemony — dominant-class values becoming taken-for-granted "common sense" that legitimizes inequality — is a conflict-theory concept (Gramsci). The functionalist trap reads shared culture positively, as cohesion-producing value consensus, rather than as elite domination. Symbolic interactionism operates at the micro level of meaning, and cultural relativism is a methodological stance, not an account of power.`
           }
         ]

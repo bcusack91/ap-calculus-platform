@@ -24,9 +24,13 @@ export const mcatSociologyPart2Data = {
 ### Social Class Indicators (SES)
 
 - **Income**: flow — what you earn (wages, salary) per period.
-- **Wealth**: stock — what you own (assets minus debts). Far more unequally distributed than income; the top decile owns the majority of national wealth.
-- **Education**: level of formal schooling; the strongest single predictor of long-run SES.
+- **Wealth**: stock — what you own (assets minus debts). Far more unequally distributed than income.
+- **Education**: level of formal schooling; a strong predictor of later income and health.
 - **Occupation / occupational prestige**: type of work and its social standing.
+
+<!-- yield:low -->
+- In the U.S., the wealthiest 10% of households hold roughly two-thirds of all household wealth.
+<!-- /yield -->
 
 ### Social Mobility
 
@@ -65,15 +69,17 @@ Social determinants of health (SDOH) — the conditions in which people are born
 - **Race/ethnicity**: disparities in access, treatment intensity, and outcomes, partly independent of SES.
 - **Geography**: rural underservice; urban environmental exposures.
 
-### Demographic Snapshot — U.S. Life Expectancy by Group (illustrative)
+### Demographic Snapshot — U.S. Life Expectancy by Group (illustrative, pre-pandemic)
 
 | Group | Approx. life expectancy (yrs) | Interpretation |
 |-------|-------------------------------|----------------|
 | Highest income quintile | ~87 | Largest gap is by income, not just race |
 | Lowest income quintile | ~78 | ~9-yr gap tracks the SES gradient |
-| Non-Hispanic White | ~78 | |
+| Non-Hispanic White | ~79 | |
 | Non-Hispanic Black | ~75 | Reflects structural + access disparities |
-| Hispanic | ~80 | "Hispanic paradox" — better than SES predicts |
+| Hispanic | ~82 | "Hispanic paradox" — better than SES predicts |
+
+Income rows: expected age at death for 40-year-olds; race rows: life expectancy at birth (illustrative).
 
 ### Intersectionality (Crenshaw)
 
@@ -89,18 +95,21 @@ Multiple social identities (race, class, gender, sexuality) **intersect** to cre
             question: `A sociologist argues that paying surgeons far more than orderlies is necessary because it motivates talented people to endure years of difficult training for a role society critically needs. This argument reflects:`,
             options: [`Davis–Moore thesis — unequal rewards draw talent to vital roles`, `Conflict theory — inequality reflects exploitation by the powerful`, `Symbolic interactionism — class shapes everyday meaning`, `Intersectionality — overlapping identities create unique disadvantage`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `The Davis–Moore thesis is the functionalist justification of inequality: unequal rewards are a functional mechanism to ensure the most qualified people fill the most demanding, socially important positions. The conflict-theory trap makes the opposite claim — that inequality is exploitation that benefits the powerful, NOT a beneficial motivator. Tumin's critique of Davis–Moore is itself essentially a conflict-theory rebuttal.`
           },
           {
-            question: `Using the life-expectancy table, the LARGEST gap shown is between the highest- and lowest-income quintiles (~9 years), exceeding the Black–White gap (~3 years). The best interpretation is:`,
+            question: `Using the life-expectancy table, the LARGEST gap shown is between the highest- and lowest-income quintiles (~9 years), exceeding the Black–White gap (~4 years). The best interpretation is:`,
             options: [`SES is a powerful health determinant, capturing variation beyond race alone`, `Race has no effect on health outcomes, since the racial gap is smaller`, `Genetic differences between income groups explain the life-expectancy gap`, `The data prove that poor health causes low income, not the reverse`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `The table shows a graded relationship: health improves at every step up the SES ladder, and the income gap here is larger than the racial gap — illustrating the SES gradient. Claiming race has no effect overreaches: a smaller gap is still a gap, and race intersects with SES. The genetics claim is rejected by SDOH research as the primary driver of income-group differences. Claiming the data prove poor health causes low income reverses causation; the data show association, and the dominant causal story runs from social conditions to health.`
           },
           {
             question: `A study finds that children of college-educated parents are themselves far more likely to attend college, partly because they absorb academic vocabulary, study habits, and "how school works" at home. Bourdieu would label these inherited, non-financial advantages:`,
             options: [`Cultural capital`, `Social capital`, `Structural mobility`, `Achieved status`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Cultural capital is non-financial assets — knowledge, linguistic style, dispositions, credentials — that advantage their holders within institutions like schools. Their transmission across generations is a mechanism of social reproduction. Social capital, in Bourdieu's scheme, is the value of one's social networks and connections, not absorbed knowledge and habits. Structural mobility refers to movement driven by society-wide changes (e.g., new industries), not inherited household advantage. Achieved status is a position earned through one's own effort, not an inherited advantage.`
           }
         ]
@@ -158,7 +167,11 @@ Multiple social identities (race, class, gender, sexuality) **intersect** to cre
 - Functionalism (Davis–Moore) defends inequality; conflict theory (Marx) sees exploitation; Weber adds status & party.
 - Income (flow) vs. wealth (stock); wealth is far more unequal.
 - SES gradient: health improves at every step up the ladder. Intersectionality: overlapping identities create unique, non-additive disadvantage.
-- Cultural capital + social reproduction (Bourdieu) explain how advantage is inherited.`
+- Cultural capital + social reproduction (Bourdieu) explain how advantage is inherited.
+
+<!-- yield:low -->
+- Low-yield extras: the exact U.S. wealth concentration figure (top 10% of households hold roughly two-thirds of household wealth)
+<!-- /yield -->`
     }
   ]
 };

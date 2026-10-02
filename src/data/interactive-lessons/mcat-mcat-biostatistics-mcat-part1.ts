@@ -34,8 +34,12 @@ export const mcatBiostatisticsPart1Data = {
 | Measure | Formula | Interpretation |
 |---------|---------|-----------------|
 | Range | Max − Min | Spread across all data |
-| Variance | $\\sigma^2 = \\frac{\\sum(x - \\bar{x})^2}{n}$ | Squared deviation from mean |
+| Variance | $\\sigma^2 = \\frac{\\sum(x - \\mu)^2}{N}$ | Average squared deviation from the mean |
 | Standard Deviation | $\\sigma = \\sqrt{\\text{variance}}$ | **Most important**: units match data |
+
+<!-- yield:low -->
+- A **sample** variance divides by $n - 1$ instead of $N$ (Bessel's correction), which slightly enlarges it for small samples.
+<!-- /yield -->
 
 **68-95-99.7 Rule (Normal Distribution):**
 - 68% of data within 1 SD of mean
@@ -57,6 +61,7 @@ export const mcatBiostatisticsPart1Data = {
               `Range (300), since it spans all the values`
             ],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `The values sum to 1685, so the mean is 1685 ÷ 7 ≈ 241. The single extreme value (480) pulls the mean above six of the seven patients, so it does not describe a typical patient. The median is the 4th of the 7 ordered values, 205, and it would stay 205 no matter how extreme the top value became—this is why median is preferred for skewed distributions. There is no repeated value, so there is no mode, and the range measures spread rather than central tendency.`
           },
           {
@@ -68,6 +73,7 @@ export const mcatBiostatisticsPart1Data = {
               `34%`
             ],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `6–14 μg/mL spans from (mean − 2SD) to (mean + 2SD). The 68-95-99.7 rule states 95% falls within 2 SD.`
           },
           {
@@ -76,10 +82,11 @@ export const mcatBiostatisticsPart1Data = {
               `Variance requires at least 30 values to be meaningful`,
               `Variance cannot be computed for data with units`,
               `They span powers of ten, so the largest value dominates it`,
-              `Variance is undefined for numbers written in powers of ten`
+              `Variance is undefined for numbers in scientific notation`
             ],
             correctAnswer: 2,
-            explanation: `Values spanning $10^{3}$ to $10^{7}$ are multiplicative (log-scale) data, so log-scale data require different statistical treatment. On the raw scale the SD (about 4.4 million) is dominated by the single largest value and describes none of the values well. Log-transform first: $\\log_{10}$ gives 3, 4, 5, 6, 7, with SD ≈ 1.6, which is interpretable. Variance can be computed for any sample size, for data with units, and for numbers in any notation.`
+            yield: 'MEDIUM',
+            explanation: `Values spanning $10^{3}$ to $10^{7}$ are multiplicative (log-scale) data. On the raw scale the sample SD (about 4.4 million) is dominated by the single largest value and describes none of the values well. Log-transform first: $\\log_{10}$ gives 3, 4, 5, 6, 7, with SD ≈ 1.6, which is interpretable. Variance can be computed for any sample size, for data with units, and for numbers in any notation.`
           },
           {
             question: `Which statement about the normal distribution is FALSE?`,
@@ -90,6 +97,7 @@ export const mcatBiostatisticsPart1Data = {
               `Its tails never touch the horizontal axis`
             ],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `By the 68-95-99.7 rule, about 68% of values lie within 1 SD of the mean and about 95% lie within 2 SD, so the 95%-within-1-SD claim is false. A normal distribution is symmetric and unimodal, its mean, median, and mode are equal, and its tails approach but never reach the horizontal axis. Real biological data only approximate this shape and are often slightly skewed.`
           }
         ]
@@ -103,7 +111,11 @@ export const mcatBiostatisticsPart1Data = {
 - **Central Tendency**: Use median for skewed data; mean for symmetric distributions
 - **Spread**: SD is most useful on MCAT; interpret via 68-95-99.7 rule
 - **Outliers**: Robust stats (median, IQR) better than mean ± SD when outliers present
-- **Log scales**: Many biomedical values are log-normally distributed (viral loads, enzyme concentrations—use log-transform)`
+- **Log scales**: Many biomedical values are log-normally distributed (viral loads, enzyme concentrations—use log-transform)
+
+<!-- yield:low -->
+- Low-yield extras: a sample variance divides by n − 1 (Bessel's correction) rather than N
+<!-- /yield -->`
     },
     {
       id: 'biostats1-worked-examples',

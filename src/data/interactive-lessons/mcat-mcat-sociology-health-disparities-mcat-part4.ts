@@ -53,7 +53,7 @@ This lesson is the sociology section's hub: stratification supplies SES and capi
 
 **Passage.** A state introduces automatic (opt-out) colorectal screening mailers for all residents aged 45 or more, replacing the previous physician-referral system. Researchers report:
 
-- Study 1 (before/after ecological): statewide screening completion rises from 55 to 74 percent; the rise is 12 points in the top income quartile and 27 points in the bottom quartile, narrowing the screening gap by more than half.
+- Study 1 (before/after ecological): statewide screening completion rises from 55 to 74 percent; the rise is 12 points in the top income quartile (70 to 82 percent) and 27 points in the bottom quartile (42 to 69 percent), narrowing the screening gap from 28 to 13 points — by more than half.
 - Study 2 (cohort): among screened patients, time-to-treatment after a positive result remains 2.5 times longer for uninsured patients.
 - Study 3 (interviews): low-income patients describe the mailed kit as "the first time the system came to me," while several report discarding kits due to instructions written at college reading level.
 - A commentator objects: "Screening gaps closed because poor residents finally took responsibility."
@@ -83,30 +83,35 @@ Study 1 is ecological and uncontrolled — secular trends could contribute. Stro
             question: `A theorist argues that pharmaceutical firms shape which conditions get researched, that care is rationed by ability to pay, and that the resulting disparities are predictable outputs of a profit-organized system rather than correctable accidents. This account of medicine is:`,
             options: [`Functionalism`, `Interactionism`, `Conflict theory`, `Fundamental cause theory`],
             correctAnswer: 2,
+            yield: 'ULTRA_HIGH',
             explanation: `Power, profit, gatekeeping, and disparities-as-structure are conflict theory's signature reading of medicine. A functionalist would foreground medicine's system-maintaining role and treat disparities as dysfunctions; an interactionist would analyze encounter-level meaning-making. Fundamental cause theory, though compatible, is specifically about flexible resources tracking new health technologies, which this account does not invoke.`
           },
           {
             question: `A city finds that ITS opt-in diabetes-prevention workshops enrolled mostly college-educated residents, widening the participation gap. Which redesign follows most directly from fundamental cause reasoning?`,
             options: [`More sessions with better advertising`, `Automatic enrollment with an easy opt-out`, `A small enrollment fee to boost commitment`, `Enrollment limited to likely completers`],
             correctAnswer: 1,
+            yield: 'MEDIUM',
             explanation: `Fundamental cause theory locates the widening in resource dependence: opt-in designs reward information, time, and confidence — flexible resources concentrated up the SES ladder. The corrective is architectural: defaults that require no resources to enter. More advertising is more information (same failure mode, larger), fees add a resource barrier, and limiting enrollment to likely completers abandons the disadvantaged entirely.`
           },
           {
             question: `An ecological study shows counties with more fast-food outlets have higher cardiovascular mortality. Which additional finding would MOST strengthen a causal interpretation at the individual level?`,
             options: [`A larger sample of counties showing the same correlation`, `A county time series showing mortality rose after outlets opened`, `A cross-sectional survey linking individuals' intake to heart disease`, `An SES-controlled cohort linking individuals' intake to later events`],
             correctAnswer: 3,
+            yield: 'HIGH',
             explanation: `The ecological design's two fatal gaps are level (county correlations cannot transfer to individuals — the ecological fallacy) and temporality/confounding. Only the SES-controlled individual cohort repairs both: individual-level exposure and outcome, temporal ordering (consumption BEFORE events), and control of the SES confounding that plagues neighborhood food environments. More counties replicate the same limitation at larger scale; a county time series adds timing but remains ecological; an individual cross-sectional survey fixes the level but not temporal order or confounding.`
           },
           {
             question: `Hospital data show minority patients rated as "noncompliant" with follow-up at higher rates; chart review reveals their follow-up clinics average three bus transfers away and offer no evening hours. A sociologist's principal objection to the "noncompliance" framing is that it:`,
             options: [`Relabels a structural access barrier as individual failing`, `Relies on too small a sample to support group comparisons`, `Ignores genetic differences in treatment response`, `Understates patients' personal responsibility for attendance`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `The chart review localizes the mechanism in institutional geography and scheduling — structural facts patients cannot choose their way around — while the "noncompliant" label moralizes the outcome as individual failing (the interactionist critique of compliance language, and the individual-choice trap in disparities reading). The framing error matters practically: it points interventions at lectures for patients instead of clinic hours and locations. Objecting that the label understates personal responsibility repeats the very trait attribution the chart review undercuts.`
           },
           {
             question: `Researchers propose studying stress biomarkers in a historically exploited community. Which approach best reflects the research-ethics standard the MCAT's sociology section rewards?`,
             options: [`Minimize community contact to keep the collected data objective`, `Offer large payments to guarantee enrollment and retention`, `Co-design with community partners, sharing data use and benefits`, `Inform the community only after publication to avoid bias`],
             correctAnswer: 2,
+            yield: 'MEDIUM',
             explanation: `For communities with documented histories of research exploitation, the recognized standard is community-based partnership: shared design authority, transparency about data use, and reciprocal benefit — rebuilding the trust whose absence both harms health and undermines research validity. Distance masquerading as objectivity repeats the exploitative pattern; oversized payments raise undue-inducement concerns; informing after publication forecloses consent.`
           }
         ]

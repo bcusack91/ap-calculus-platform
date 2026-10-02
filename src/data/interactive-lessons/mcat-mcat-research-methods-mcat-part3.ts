@@ -12,11 +12,15 @@ export const mcatResearchMethodsPart3Data = {
 
 | Type | Who is Blinded? | Effect |
 |------|----------------|--------|
-| **No Blinding** | Participants & researchers know treatment | Maximum placebo effect + researcher bias |
-| **Single-Blind** | Participants don't know (researcher knows) | Reduces placebo effect; researcher may bias |
+| **No Blinding** | Participants & researchers know treatment | Expectations differ between groups + researcher bias |
+| **Single-Blind** | Participants don't know (researcher knows) | Equalizes placebo effect across groups; researcher may bias |
 | **Double-Blind** | Both participants & researchers don't know | Gold standard; minimizes bias |
 
-**Mechanism of Placebo Effect:** Brain expectation → neurotransmitter release → real physiological changes (30-40% of patients benefit from placebo alone)
+**Mechanism of Placebo Effect:** Brain expectation → neurotransmitter release → real physiological changes. Blinding does not abolish the placebo effect; it makes it equal in both arms so a placebo control can subtract it.
+
+<!-- yield:low -->
+- Typical placebo response rates are often quoted at roughly 30-40% of patients, though the figure varies widely by condition and outcome.
+<!-- /yield -->
 
 ### Placebo & Control Groups
 
@@ -28,7 +32,7 @@ export const mcatResearchMethodsPart3Data = {
 | **Waitlist Control** | Ethical alternative for beneficial treatments |
 
 **Example:** Depression RCT
-- Placebo group: 30% improve (placebo effect alone)
+- Placebo group: 30% improve (placebo effect + natural recovery)
 - Antidepressant group: 60% improve
 - **True drug effect** = 60% − 30% = 30%
 
@@ -41,7 +45,7 @@ export const mcatResearchMethodsPart3Data = {
 | **Factorial** | Multiple IVs tested simultaneously | Efficiency; can detect interactions |
 | **Longitudinal** | Follow subjects over time | Tracks development, long-term effects |
 
-**Carryover Effect:** Practice in Condition A affects performance in Condition B. Randomize order or use between-subjects design.`
+**Carryover Effect:** Practice in Condition A affects performance in Condition B. Counterbalance (or randomize) the order, or use a between-subjects design.`
     },
     {
       id: 'rm3-quiz',
@@ -58,23 +62,26 @@ export const mcatResearchMethodsPart3Data = {
               `Assignments are concealed twice, at enrollment and analysis`
             ],
             correctAnswer: 0,
-            explanation: `Double-blind means both participants and researchers don't know who received drug vs placebo, minimizing bias and placebo effect. Blinding only the subjects is single-blind; "double" refers to the two parties kept unaware, not to blinding done twice.`
+            yield: 'ULTRA_HIGH',
+            explanation: `Double-blind means both participants and researchers don't know who received drug vs placebo, so expectancy (placebo) effects are equal across groups and researcher bias is minimized. Blinding only the subjects is single-blind; "double" refers to the two parties kept unaware, not to blinding done twice.`
           },
           {
             question: `A sleep deprivation study tests whether lack of sleep impairs memory. What is the best control group?`,
             options: [
               `Participants who sleep a normal amount`,
               `Participants who are partially sleep-deprived`,
-              `Participants who get no sleep at all`,
+              `Participants kept awake for the entire night`,
               `Participants given extra sleep beforehand`
             ],
             correctAnswer: 0,
-            explanation: `A control group should match the experimental group except for the manipulation, so participants with normal sleep provide the baseline that isolates the effect of deprivation. Partial deprivation is a second experimental level (useful for dose-response), not a control; no sleep at all is the deprivation condition itself; and extra sleep is a different manipulation, not a normal baseline.`
+            yield: 'HIGH',
+            explanation: `A control group should match the experimental group except for the manipulation, so participants with normal sleep provide the baseline that isolates the effect of deprivation. Partial deprivation is a second experimental level (useful for dose-response), not a control; a full night awake is the deprivation condition itself; and extra sleep is a different manipulation, not a normal baseline.`
           },
           {
             question: `A study measures student exam performance under quiet vs loud conditions (same students, both conditions). What design is this?`,
             options: [`Between-subjects`, `Within-subjects`, `Factorial design`, `Longitudinal`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Within-subjects: same students tested in both conditions. Power is high because individual differences are controlled (students serve as their own control).`
           },
           {
@@ -86,7 +93,8 @@ export const mcatResearchMethodsPart3Data = {
               `The sample is too small to show any drug effect`
             ],
             correctAnswer: 1,
-            explanation: `Placebo response (and natural recovery/maturation) explain baseline improvement. If medication group shows >40% improvement, the drug has added benefit beyond placebo, so the placebo rate alone cannot show the drug is ineffective. Nothing in the result points to biased assignment or an inadequate sample.`
+            yield: 'MEDIUM',
+            explanation: `Placebo response (and natural recovery/maturation) explain baseline improvement. If the medication group improves significantly more than 40%, the drug has added benefit beyond placebo, so the placebo rate alone cannot show the drug is ineffective. Nothing in the result points to biased assignment or an inadequate sample.`
           }
         ]
       }
@@ -96,7 +104,7 @@ export const mcatResearchMethodsPart3Data = {
       type: 'text' as const,
       content: `### Key Takeaways — Part 3
 
-- **Double-Blind** > Single-Blind > No Blinding (minimizes placebo effect + researcher bias)
+- **Double-Blind** > Single-Blind > No Blinding (equalizes expectancy effects across groups + minimizes researcher bias)
 - **Placebo Control** isolates IV effect by subtracting baseline placebo response
 - **Within-Subjects** design increases power (subjects are own controls); risk of carryover effects
 - **Between-Subjects** design avoids carryover; requires larger N

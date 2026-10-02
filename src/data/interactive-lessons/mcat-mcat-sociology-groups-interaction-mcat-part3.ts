@@ -20,7 +20,11 @@ Goffman analyzed everyday interaction with theater's vocabulary. People perform 
 
 ### Emotion as Managed Labor
 
-**Feeling rules** specify what one SHOULD feel (grief at funerals, joy at weddings); **emotional labor** (Hochschild) is managing feelings as part of paid work — flight attendants manufacturing warmth, medical staff manufacturing calm. Surface acting (faking the display) vs. deep acting (inducing the feeling); chronic mismatch between felt and required emotion predicts burnout — a favorite bridge to health passages.
+**Feeling rules** specify what one SHOULD feel (grief at funerals, joy at weddings); **emotional labor** is managing feelings as part of paid work — flight attendants manufacturing warmth, medical staff manufacturing calm. Chronic mismatch between felt and required emotion predicts burnout — a favorite bridge to health passages.
+
+<!-- yield:low -->
+- Hochschild, who coined "emotional labor," split it into **surface acting** (faking the outward display) and **deep acting** (inducing the required feeling itself); years of deep acting can estrange workers from their own emotional signals.
+<!-- /yield -->
 
 ### Social Networks — The Architecture Between Groups
 
@@ -28,7 +32,12 @@ A **network** is the web of ties linking actors; its structure carries consequen
 
 - **Strong ties** (close friends/family): dense, redundant — everyone knows everyone and the same information circulates.
 - **Weak ties** (acquaintances): sparse BRIDGES between clusters. Granovetter's "strength of weak ties": novel information — job leads especially — flows disproportionately through weak ties, because strong-tie clusters already share what they know.
-- Network position is capital: brokers who span **structural holes** between clusters control information flow (this is social capital's plumbing, connecting to the stratification lesson).
+- Network position is capital: brokers who bridge otherwise separate clusters control information flow (this is social capital's plumbing, connecting to the stratification lesson).
+
+<!-- yield:low -->
+- The gaps such brokers span are called **structural holes** (Burt).
+<!-- /yield -->
+
 - Networks also transmit health behaviors, norms, and even emotions across multiple degrees of separation — the empirical base of social contagion studies.
 
 ### Formal Organizations & Weber's Bureaucracy
@@ -72,7 +81,7 @@ The two halves of this part are one story: bureaucracies script front-stage perf
 
 **Note 4 — the strength of weak ties.** Close friends share a redundant information pool; acquaintances bridge to OTHER clusters where unknown openings live. Granovetter's finding, reproduced in miniature.
 
-**Integration question to expect:** "Which observation best illustrates that bureaucratic dysfunction is structural rather than attitudinal?" Answer: Note 3 — staff AGREED the scan was needed and still could not act; the block lay in the rule system. Distractors will point to Note 1 (that is dramaturgy, not dysfunction) or Note 2 (that is informal adaptation — evidence the formal structure is inadequate, but the note documents a work-around, not a rule defeating its own goal)."`
+**Integration question to expect:** "Which observation best illustrates that bureaucratic dysfunction is structural rather than attitudinal?" Answer: Note 3 — staff AGREED the scan was needed and still could not act; the block lay in the rule system. Distractors will point to Note 1 (that is dramaturgy, not dysfunction) or Note 2 (that is informal adaptation — evidence the formal structure is inadequate, but the note documents a work-around, not a rule defeating its own goal).`
     },
     {
       id: 'grp3-quiz1',
@@ -84,30 +93,35 @@ The two halves of this part are one story: bureaucracies script front-stage perf
             question: `A funeral director maintains solemn composure with grieving families, then jokes casually with colleagues in the preparation room, where families never enter. Goffman would describe the preparation room as:`,
             options: [`A total institution`, `The back stage`, `An out-group`, `A reference group`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Regions are defined by audience access: with families (the audience) present, the director performs the solemn front-stage role; the preparation room excludes that audience, permitting out-of-character behavior and performance maintenance. Note the relativity — if the boss visited the preparation room, it would become front stage for THAT audience. The other terms belong to different frameworks entirely.`
           },
           {
             question: `A flight attendant reports that she no longer merely fakes warmth toward difficult passengers but actively conjures sympathetic thoughts until she genuinely feels warm — yet after years of this she feels estranged from her own emotions. Hochschild would classify her technique and her risk as:`,
             options: [`Surface acting; self-estrangement and burnout`, `Impression management; role exit`, `Informational influence; deindividuation`, `Deep acting; self-estrangement and burnout`],
             correctAnswer: 3,
+            yield: 'LOW',
             explanation: `Inducing the required feeling itself — rather than just arranging the outward display — is deep acting, the more thorough form of emotional labor. Hochschild's central warning is exactly the reported outcome: chronically manufacturing feelings for an employer can estrange workers from their own emotional signals and feed burnout. Surface acting is the display-only strategy she moved beyond.`
           },
           {
             question: `In job-search studies, new positions are disproportionately found through acquaintances rather than close friends. The structural explanation is that:`,
             options: [`Weak ties bridge clusters, carrying non-redundant job information`, `Acquaintances feel more obligation to help than friends do`, `Close friends actively withhold job information as competition`, `Strong ties transmit information more slowly per interaction`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `Granovetter's argument is structural, not motivational: strong-tie clusters are dense and redundant, so their information pool is shared and stale; weak ties are the bridges into other clusters where different information circulates. Friends are typically MORE willing to help — they simply know the same openings you do. Speed per interaction is not the operative variable; novelty of the reachable information is.`
           },
           {
             question: `A benefits clerk denies an application because one signature sits in the wrong box, although the applicant is present, indisputably eligible, and could sign correctly on the spot. The clerk agrees it is absurd but says rules forbid on-site corrections. This scenario BEST illustrates:`,
-            options: [`Charismatic authority overriding written procedure`, `The iron law of oligarchy within the agency`, `Goal displacement, with rules treated as ends`, `Social loafing, withholding effort behind the rules`],
+            options: [`Charismatic authority overriding written procedure`, `The iron law of oligarchy concentrating agency power`, `Goal displacement, with rules treated as ends`, `Social loafing, withholding effort behind the rules`],
             correctAnswer: 2,
+            yield: 'MEDIUM',
             explanation: `The rule (correct signatures ensure valid applications) exists to serve a goal (benefits to the eligible); enforcing it here defeats that goal while the clerk complies faithfully — the definition of goal displacement, a structural pathology of rule-governed impersonality. No elite capture (oligarchy), personal magnetism, or effort-withholding is involved; the clerk is working exactly as the system directs.`
           },
           {
             question: `A grassroots organization founded on radical internal democracy grows to 200,000 members; a decade later, a small permanent staff sets the agenda, controls information, and runs uncontested elections. Michels would say this outcome:`,
-            options: [`Proves the founders secretly wanted power`, `Resulted from groupthink among ordinary members`, `Could have been avoided by stronger shared values`, `Illustrates the iron law of oligarchy at scale`],
+            options: [`Proves the founders secretly wanted power`, `Resulted from groupthink among ordinary members`, `Could have been avoided by stronger shared values`, `Illustrates the iron law of oligarchy`],
             correctAnswer: 3,
+            yield: 'HIGH',
             explanation: `Michels's claim is structural inevitability, not hidden motive: coordinating a mass organization requires full-time delegation, which concentrates expertise, information, and agenda control in the delegates — who then entrench. Because the mechanism is organizational scale itself, ideals and values do not immunize; that is what makes the "law" iron. Member psychology such as groupthink is not the engine.`
           }
         ]
@@ -119,10 +133,14 @@ The two halves of this part are one story: bureaucracies script front-stage perf
       content: `### Key Takeaways — Part 3
 
 - Dramaturgy: interaction is teamed performance — impression management on the front stage, script-dropping and rehearsal on the (audience-relative) back stage; face-work and tact keep shared definitions of reality intact
-- Feeling rules script what to feel; emotional labor sells it — surface acting fakes the display, deep acting manufactures the feeling, and chronic mismatch predicts burnout
-- Networks: strong ties give redundant support, weak ties bridge clusters and carry novel information (jobs!); spanning structural holes is social capital in action
+- Feeling rules script what to feel; emotional labor sells it, and chronic mismatch between felt and required emotion predicts burnout
+- Networks: strong ties give redundant support, weak ties bridge clusters and carry novel information (jobs!); brokering between separate clusters is social capital in action
 - Weber's bureaucracy (division of labor, hierarchy, written rules, impersonality, technical qualification) buys predictability at the price of goal displacement, the iron cage, and McDonaldization's dehumanizing rationality
-- Michels: scale itself breeds oligarchy; and in every organizational vignette, read BOTH layers — the formal chart and the informal network doing the real coordination`
+- Michels: scale itself breeds oligarchy; and in every organizational vignette, read BOTH layers — the formal chart and the informal network doing the real coordination
+
+<!-- yield:low -->
+- Low-yield extras: Hochschild's split of emotional labor into surface acting (faking the display) and deep acting (inducing the feeling), with deep acting's risk of self-estrangement; Burt's term "structural holes" for the gaps network brokers span
+<!-- /yield -->`
     }
   ]
 };

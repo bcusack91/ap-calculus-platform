@@ -37,7 +37,12 @@ export const mcatPsychDevPart4Data = {
 - **Cross-sectional** design: different ages tested once — fast, but **confounds age with cohort** (a 70-year-old and a 20-year-old differ in generation, schooling, tech exposure — not just age)
 - **Longitudinal**: same people over time — isolates true change, but suffers **attrition** (selective dropout biases late waves toward the healthy/motivated), **practice effects**, cost
 - **Sequential** designs mix both to separate age, cohort, and time-of-measurement
-- Infant dependent measures: **habituation/dishabituation** looking time, preferential looking, violation-of-expectation, high-amplitude sucking — all infer cognition from attention recovery
+- Infant dependent measures: **habituation/dishabituation** looking time, preferential looking, violation-of-expectation — all infer cognition from attention recovery
+
+<!-- yield:low -->
+- **High-amplitude sucking** applies the same habituation logic to newborns: sucking rate on a sensor-fitted pacifier drops as a stimulus grows familiar and rebounds when a new one is detected.
+<!-- /yield -->
+
 - Standard causal traps: parenting-outcome correlations (child effects, passive rGE), "critical period" claims needing deprivation evidence, and cohort-driven "decline" findings`
     },
     {
@@ -65,31 +70,36 @@ export const mcatPsychDevPart4Data = {
             question: `For a given disorder, concordance is 48% in monozygotic twins and 17% in dizygotic twins raised in the same homes. The most defensible conclusion is that the disorder:`,
             options: [`Is purely genetic, since MZ concordance exceeds DZ concordance`, `Has substantial genetic and substantial nongenetic influences`, `Is caused entirely by the shared parenting environment`, `Cannot be studied with twin designs when twins share homes`],
             correctAnswer: 1,
-            explanation: `Read both numbers: tripled concordance with doubled genetic sharing implicates genes, but a 48% MZ rate means the co-twin of an affected individual — genetically near-identical, same home — usually does NOT develop the disorder, so environment and chance carry real weight. Options claiming purity in either direction ignore half the data; this both-components reading is the modal correct answer for twin items.`
+            yield: 'HIGH',
+            explanation: `Read both numbers: nearly tripled concordance with doubled genetic sharing implicates genes, but a 48% MZ rate means the co-twin of an affected individual — genetically near-identical, same home — about half the time does NOT develop the disorder, so environment and chance carry real weight. Options claiming purity in either direction ignore half the data; this both-components reading is the modal correct answer for twin items.`
           },
           {
             question: `A cross-sectional study finds 70-year-olds score far below 25-year-olds on a computerized reasoning test and concludes reasoning collapses with age. Longitudinal data on the same test show much smaller declines. The cross-sectional gap was most likely inflated by:`,
             options: [`Attrition of low scorers from the older age group over time`, `Practice effects from repeated testing in the older group`, `Cohort effects, such as generational differences in education`, `Failure of random assignment to the two age groups`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `Cross-sectional designs confound age with birth cohort: today's 70-year-olds had different schooling and far less computer exposure, both depressing scores for non-aging reasons. Longitudinal tracking of the same people removes the cohort confound (while introducing attrition and practice effects, which if anything UNDERSTATE decline — attrition retains healthier participants). Random assignment to age is impossible in any design.`
           },
           {
             question: `Children adopted at birth are studied at age 18. Their scores on a personality trait correlate 0.31 with their biological mothers, whom they have never met, and 0.05 with the adoptive mothers who raised them. This pattern most strongly indicates that family resemblance on this trait is driven by:`,
-            options: [`Shared genes rather than shared rearing environment`, `The adoptive family's parenting style and home climate`, `Prenatal teratogen exposure in the biological mother`, `The children's peer groups during adolescence`],
+            options: [`Shared genes rather than shared rearing environment`, `The adoptive family's parenting style and home climate`, `Prenatal teratogen exposure in the biological mother`, `Peer-group socialization during the children's adolescence`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Adoption severs the usual gene-environment bundle: biological parents supplied only genes (plus prenatal environment), adoptive parents only rearing. Resemblance tracking the never-met biological parent is the signature of genetic transmission. A rearing-driven trait would show the reverse pattern. Prenatal effects cannot be fully excluded but would not by themselves produce a specific trait correlation of this kind, and peers are unmeasured here.`
           },
           {
             question: `A pregnant patient asks when alcohol exposure poses the greatest risk of major structural malformations. The embryological answer is:`,
             options: [`Only after the seventh month, during rapid fetal growth`, `During the germinal period, before implantation`, `Uniformly across all of pregnancy for every organ system`, `Weeks 3 through 8, the embryonic period of organogenesis`],
             correctAnswer: 3,
+            yield: 'MEDIUM',
             explanation: `Teratogen impact follows developmental timing: organs are most disruptable while being BUILT, and organogenesis spans the embryonic period (weeks 3-8). The germinal period tends toward all-or-none loss rather than malformation. The essential clinical caveat: CNS development continues across all trimesters, so no stage is safe for alcohol — which is why no safe dose is recognized.`
           },
           {
             question: `A trait's heritability within a well-nourished population is estimated at 0.80. Which conclusion is actually licensed by this number?`,
             options: [`80% of the trait in each individual person is caused by their genes`, `About 80% of variance among people here is associated with genetic differences`, `Environmental interventions cannot meaningfully change the trait's level`, `Differences between this population and a malnourished one must be mostly genetic`],
             correctAnswer: 1,
-            explanation: `Heritability partitions VARIANCE ACROSS PEOPLE in a specific population-environment context. It cannot be applied to an individual, it can change when environments change, and novel interventions can shift the whole distribution regardless (high heritability of height coexists with large secular gains from nutrition). And within-group heritability never licenses between-group inferences — the two-soils trap in option four is the exam's most reliable wrong answer.`
+            yield: 'HIGH',
+            explanation: `Heritability partitions VARIANCE ACROSS PEOPLE in a specific population-environment context. It cannot be applied to an individual, it can change when environments change, and novel interventions can shift the whole distribution regardless (high heritability of height coexists with large secular gains from nutrition). And within-group heritability never licenses between-group inferences — the two-soils trap (blaming the gap with a malnourished population on genes) is the exam's most reliable wrong answer.`
           }
         ]
       }
@@ -103,7 +113,11 @@ export const mcatPsychDevPart4Data = {
 - Heritability is a population variance statistic: not individual, not fixed, not intervention-proof, and never a bridge from within-group to between-group differences
 - Gene-environment: interaction (allele effect depends on exposure) vs correlation (passive, evocative, active/niche-picking — the reason heritability rises with age)
 - Teratogens strike by timing: embryonic weeks 3-8 = organogenesis peak; brain vulnerable all pregnancy; FAS = leading preventable intellectual disability
-- Methods: cross-sectional confounds age with cohort; longitudinal fights attrition and practice effects; sequential separates them; infant cognition is read from looking-time recovery`
+- Methods: cross-sectional confounds age with cohort; longitudinal fights attrition and practice effects; sequential separates them; infant cognition is read from looking-time recovery
+
+<!-- yield:low -->
+- Low-yield extras: high-amplitude sucking, the newborn version of habituation-dishabituation (sucking rate rebounds when a new stimulus is detected)
+<!-- /yield -->`
     }
   ]
 };

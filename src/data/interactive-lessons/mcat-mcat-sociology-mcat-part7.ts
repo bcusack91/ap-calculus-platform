@@ -72,18 +72,21 @@ export const mcatSociologyPart7Data = {
             question: `A competent, fully informed adult refuses a life-saving blood transfusion. The bioethical principle that most directly supports honoring this refusal is:`,
             options: [`Autonomy — respecting a competent patient's own choices`, `Beneficence — acting in the patient's best medical interest`, `Justice — distributing care fairly across patients`, `Non-maleficence — avoiding harm to the patient`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Autonomy is respect for a competent, informed patient's right to decide about their own body, and it generally overrides beneficence, the physician's drive to do medical good. Justice concerns fair resource distribution across people, not one patient's self-determination. Non-maleficence is "do no harm," which the physician might invoke to push treatment — the opposite of honoring the refusal.`
           },
           {
             question: `During a mass-casualty event, physicians allocate scarce ventilators to patients most likely to survive rather than first-come-first-served. The bioethical principle most directly guiding this triage is:`,
-            options: [`Justice — fairly distributing limited medical resources`, `Autonomy — honoring each patient's treatment wishes`, `Non-maleficence — avoiding harm to each patient`, `Beneficence — maximal good for the patient in front of you`],
+            options: [`Justice — fairly distributing limited care across many patients`, `Autonomy — honoring each patient's treatment wishes`, `Non-maleficence — avoiding harm to each patient`, `Beneficence — maximal good for the patient in front of you`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `Allocating scarce resources across a population fairly is the domain of justice. Autonomy concerns an individual's own decisions, not allocation among many. Non-maleficence is avoiding harm to a given patient. Beneficence focused on the patient in front of you names the very tension triage overrides: maximizing good for the whole group can require not doing everything possible for each individual.`
           },
           {
             question: `A sociologist notes that defining normal childbirth and aging as conditions requiring physician management has expanded the authority and revenue of the medical profession. This observation is BEST framed as:`,
             options: [`The conflict critique of medicalization`, `Parsons's sick role (functionalism)`, `The biopsychosocial model of care`, `The epidemiological transition`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `Medicalization — reframing ordinary life processes as medical problems — is most pointedly critiqued by conflict theory, which highlights how it concentrates power and resources in the medical profession (social control over more of life). The sick role is the functionalist account of how illness is managed to restore function — not a critique of professional power. The biopsychosocial model is a clinical framework integrating biological, psychological, and social factors, and the epidemiological transition describes shifting disease patterns; neither analyzes professional power.`
           }
         ]

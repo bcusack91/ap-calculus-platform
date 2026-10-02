@@ -36,7 +36,7 @@ export const mcatPsychBehavPart5Data = {
 | Major Depressive Disorder | Persistent sadness, anhedonia, sleep/appetite changes |
 | Bipolar Disorder | Manic and depressive episodes |
 | Schizophrenia | Positive symptoms (hallucinations, delusions) + negative (flat affect, social withdrawal) |
-| Anxiety Disorders | GAD, panic, phobias, OCD, PTSD |
+| Anxiety Disorders | GAD, panic disorder, phobias (DSM-5 places OCD and PTSD in their own separate categories) |
 
 ### DSM-5 Categories & Biological Correlates (High Yield)
 
@@ -45,8 +45,10 @@ export const mcatPsychBehavPart5Data = {
 | **Major depressive disorder** | $\\geq 2$ weeks of depressed mood OR anhedonia + somatic symptoms | Low serotonin/norepinephrine; targeted by SSRIs |
 | **Bipolar I** | At least one full **manic** episode (grandiosity, decreased need for sleep, flight of ideas) | Treated with lithium and mood stabilizers |
 | **Schizophrenia** | **Positive** symptoms (added: hallucinations, delusions) + **negative** (removed: avolition, flat affect, alogia) for $\\geq 6$ months | **Dopamine hypothesis** — excess dopamine activity in mesolimbic pathway |
-| **OCD** | Obsessions (intrusive thoughts) + compulsions (ritualized acts that reduce anxiety) | Now classed separately from anxiety disorders in DSM-5 |
+| **OCD** | Obsessions (intrusive thoughts) + compulsions (ritualized acts that reduce anxiety) | Overactive orbitofrontal cortex–basal ganglia circuit; treated with SSRIs |
 | **PTSD** | Re-experiencing, avoidance, hyperarousal after trauma | Hyperactive amygdala, hippocampal changes |
+
+**DSM-5 note:** OCD and PTSD are now classed separately from the anxiety disorders, in their own categories.
 
 **Positive vs. negative symptoms trap:** "Positive" means a behavior is ADDED (hallucination), NOT that it is desirable; "negative" means a normal function is LOST (flat affect). Positive symptoms respond better to typical antipsychotics (D2 blockers).
 
@@ -67,18 +69,21 @@ export const mcatPsychBehavPart5Data = {
             question: `A person who is extremely hostile unconsciously but acts overly friendly to everyone is demonstrating:`,
             options: [`Reaction formation`, `Projection`, `Sublimation`, `Rationalization`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Reaction formation involves behaving in the OPPOSITE way of one's true (threatening) feelings. Being overly kind when harboring hostility is the classic example. The trap is **projection**, where one would instead attribute the hostility to OTHERS ("everyone is so hostile to me"). Sublimation channels the impulse into an acceptable activity rather than masking it with its opposite, and rationalization offers acceptable-sounding excuses for a behavior rather than acting against the feeling.`
           },
           {
             question: `A clinician evaluates a patient who, for the past 8 months, has reported hearing voices commenting on his actions (a positive symptom) alongside markedly diminished emotional expression and near-total loss of motivation. Which diagnosis and which biological model best fit?`,
             options: [`Schizophrenia, explained by the dopamine hypothesis`, `Major depressive disorder, explained by the monoamine hypothesis`, `Bipolar I disorder, treated with lithium`, `Generalized anxiety disorder, linked to low GABA`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Hallucinations (positive symptom) PLUS flat affect and avolition (negative symptoms) persisting $\\geq 6$ months indicate **schizophrenia**, classically tied to the **dopamine hypothesis** (excess mesolimbic dopamine). The depression trap fails because anhedonia alone does not produce hallucinations; bipolar requires a manic episode, which is not described here.`
           },
           {
             question: `In a study, participants high in an internal locus of control were more likely than those with an external locus to persist on a difficult task after early failures, attributing outcomes to their own effort. This construct is most central to which theoretical tradition?`,
             options: [`Social-cognitive theory (Rotter)`, `Psychodynamic theory (Freud/Adler)`, `Humanistic theory (Rogers/Maslow)`, `Biological/trait temperament theory`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `**Locus of control** (and the related concept of **self-efficacy**) belongs to the **social-cognitive** tradition, which emphasizes how cognition and beliefs about one's control interact with behavior and environment (reciprocal determinism). The psychodynamic trap centers on unconscious drives, not conscious attributions about personal control, so it does not fit this attribution-based finding.`
           }
         ]

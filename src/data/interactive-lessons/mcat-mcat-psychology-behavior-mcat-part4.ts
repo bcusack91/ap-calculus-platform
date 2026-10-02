@@ -26,6 +26,13 @@ export const mcatPsychBehavPart4Data = {
 | Two-word (telegraphic) | 18-24 months | "want cookie" |
 | Grammar explosion | 2-5 years | Complex sentences |
 
+**Theories of language development:**
+
+- **Nativist** (Chomsky): an innate **language acquisition device** lets children extract grammar from limited input, with a critical period for acquisition.
+- **Learning / behaviorist** (Skinner): language is learned through operant conditioning, as caregivers reinforce sounds and words that approximate adult speech.
+- **Interactionist**: biology and social interaction work together; children learn language because they want to communicate with others.
+- **Sapir–Whorf hypothesis (linguistic relativity)**: the language we speak shapes how we perceive and think about the world (the strong form, that language determines thought, is not supported).
+
 ### Consciousness & Sleep
 
 **Sleep Stages**:
@@ -35,7 +42,7 @@ export const mcatPsychBehavPart4Data = {
 | NREM 1 | Light sleep, hypnagogic hallucinations | Theta |
 | NREM 2 | Sleep spindles, K-complexes | Theta |
 | NREM 3 | Deep/slow-wave sleep, hard to wake | Delta |
-| REM | Dreams, muscle atonia, rapid eye movement | Beta (like awake!) |
+| REM | Dreams, muscle atonia, rapid eye movement | Beta-like (like awake!) |
 
 ### Problem Solving
 
@@ -81,18 +88,21 @@ Piaget argued that children build **schemas** (mental frameworks) and update the
             question: `A 4-year-old child watches liquid poured from a short wide glass into a tall narrow glass and says there is now "more." This demonstrates:`,
             options: [`Preoperational lack of conservation`, `Object permanence failure`, `Concrete operational decentration`, `Formal operational thinking`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Preoperational children (ages 2-7) lack conservation — they can't understand that quantity stays the same when appearance changes. They focus on ONE dimension (height) and ignore another (width — this perceptual tunnel vision is called *centration*). Object permanence (knowing a hidden object still exists) is mastered earlier, in the sensorimotor stage, so it is not the answer here. Decentration — attending to several dimensions at once — is a concrete-operational achievement this child has not yet reached, and formal operations (abstract reasoning) come later still.`
           },
           {
             question: `A toddler who has a "bird" schema (small flying animal) sees a butterfly for the first time and excitedly points and shouts "bird!" The child has NOT yet revised the schema to include insects. According to Piaget, this is an example of:`,
             options: [`Assimilation`, `Accommodation`, `Equilibration`, `Object permanence`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `**Assimilation** means forcing new information into an EXISTING schema without changing it — the butterfly is jammed into the "bird" category. The trap answer is **accommodation**, which is the OPPOSITE: it would require the child to MODIFY the schema (create a new "insect" category). Because the schema was unchanged here, the process is assimilation. Equilibration is the broader drive to balance the two.`
           },
           {
             question: `Researchers ask participants which causes more deaths in the U.S. each year: tornadoes or asthma. Most say tornadoes, even though asthma kills far more people. Tornadoes are simply more memorable and heavily covered by media. This error is best explained by the:`,
             options: [`Availability heuristic`, `Representativeness heuristic`, `Anchoring bias`, `Confirmation bias`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `The **availability heuristic** estimates frequency by how EASILY instances come to mind; vivid, media-covered tornadoes are more cognitively "available," inflating their perceived frequency. The trap is the **representativeness heuristic**, which judges probability by resemblance to a prototype (as in the Linda conjunction problem) — that is not what is happening here, since the judgment is about retrieval ease, not similarity to a stereotype.`
           }
         ]

@@ -59,19 +59,22 @@ Prolonged stress depletes resources, increasing disease vulnerability.`
             question: `In the HPA axis, the correct order of signaling molecules is:`,
             options: [`CRH → ACTH → cortisol`, `ACTH → CRH → cortisol`, `Cortisol → ACTH → CRH`, `Epinephrine → ACTH → cortisol`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `The hypothalamus releases CRH (corticotropin-releasing hormone), which stimulates the anterior pituitary to release ACTH (adrenocorticotropic hormone), which stimulates the adrenal CORTEX to release cortisol. Cortisol then feeds back negatively to suppress CRH and ACTH.`
           },
           {
             question: `The immediate, rapid "fight-or-flight" surge (↑ heart rate, pupil dilation within seconds) is driven by:`,
             options: [`Sympathetic activation of the adrenal medulla`, `HPA axis activation of the adrenal cortex`, `Posterior pituitary release of oxytocin`, `Parasympathetic activation of the vagus`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `The fast stress response is the SAM axis: sympathetic activation triggers the adrenal MEDULLA to release epinephrine/norepinephrine within seconds, producing the acute fight-or-flight changes. The HPA axis (cortisol) is the slower, longer-lasting arm of the stress response.`
           },
           {
             question: `Chronically elevated cortisol from prolonged stress is associated with damage to which structure, impairing memory?`,
             options: [`The hippocampus`, `The medulla oblongata`, `The occipital cortex`, `The adrenal medulla`],
             correctAnswer: 0,
-            explanation: `The hippocampus is rich in cortisol (glucocorticoid) receptors and is vulnerable to prolonged high cortisol, which can damage neurons and impair the formation of new explicit memories. This links chronic stress to memory deficits and is a frequently tested connection.`
+            yield: 'MEDIUM',
+            explanation: `The hippocampus is rich in cortisol (glucocorticoid) receptors and is vulnerable to prolonged high cortisol, which can damage neurons and impair the formation of new explicit memories. This links chronic stress to memory deficits and is a common integration point.`
           }
         ]
       }
@@ -82,14 +85,14 @@ Prolonged stress depletes resources, increasing disease vulnerability.`
       content: `### Worked Examples — Endocrine & Stress
 
 <details>
-<summary><b>Example 1: Apply negative feedback to a lab result</b></summary>
+<summary><b>Example 1: Apply negative feedback to long-term steroid use</b></summary>
 
 **Question:** A patient takes high-dose synthetic glucocorticoids for months. What happens to their endogenous CRH, ACTH, and adrenal output, and why is abrupt withdrawal dangerous?
 
 **Solution:**
 1. Exogenous glucocorticoids mimic cortisol → strong NEGATIVE feedback on hypothalamus (CRH↓) and pituitary (ACTH↓). ✓
 2. Low ACTH → the adrenal cortex atrophies (less stimulation). ✓
-3. Abrupt withdrawal removes the drug before the suppressed axis recovers → adrenal insufficiency (no cortisol) → crisis. Hence steroids are TAPERED. ✓
+3. Abrupt withdrawal removes the drug before the suppressed axis recovers → adrenal insufficiency (too little cortisol) → crisis. Hence steroids are TAPERED. ✓
 
 **MCAT key:** Negative feedback means giving the end product downregulates the whole upstream axis.
 </details>
@@ -114,7 +117,7 @@ Prolonged stress depletes resources, increasing disease vulnerability.`
 **Solution:**
 1. Chronic stress → sustained HPA activation → persistently elevated cortisol. ✓
 2. Cortisol SUPPRESSES immune function (reduces inflammation and lymphocyte activity), so chronic elevation impairs immune defense and wound healing. ✓
-3. This cumulative wear is "allostatic load" — Selye's exhaustion stage. ✓
+3. This cumulative physiological wear is called "allostatic load"; at its extreme it parallels the exhaustion stage of Selye's General Adaptation Syndrome. ✓
 
 **Why it matters:** This links the biological stress axis to real health outcomes — a favorite Psych/Soc integration.
 </details>`

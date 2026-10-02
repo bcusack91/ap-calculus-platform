@@ -16,18 +16,26 @@ export const mcatPsychDevPart2Data = {
 
 ### Ainsworth's Strange Situation (classify by the REUNION, not the separation)
 
-| Style (~%) | Exploration with caregiver | At reunion |
-|------------|---------------------------|------------|
-| **Secure** (~60-65%) | Uses caregiver as secure base | Distress resolves quickly; greets warmly |
-| **Insecure-avoidant** (~20%) | Explores, seems indifferent | Ignores or avoids the returning caregiver |
-| **Insecure-ambivalent/resistant** (~10-15%) | Clings, little exploration | Inconsolable; seeks contact yet angrily resists it |
-| **Disorganized** (small %) | — | Contradictory, frozen, disoriented behavior; associated with frightening or maltreating care |
+| Style | Exploration with caregiver | At reunion |
+|-------|---------------------------|------------|
+| **Secure** (the majority) | Uses caregiver as secure base | Distress resolves quickly; greets warmly |
+| **Insecure-avoidant** | Explores, seems indifferent | Ignores or avoids the returning caregiver |
+| **Insecure-ambivalent/resistant** | Clings, little exploration | Inconsolable; seeks contact yet angrily resists it |
+| **Disorganized** | — | Contradictory, frozen, disoriented behavior; associated with frightening or maltreating care |
+
+<!-- yield:low -->
+- Typical base rates in middle-class U.S. samples: secure ~60-65%, avoidant ~20%, ambivalent/resistant ~10-15%, disorganized a small remainder.
+<!-- /yield -->
 
 Secure attachment tracks **sensitive, responsive caregiving** and predicts later social competence — as a probabilistic correlate, not destiny.
 
 ### Temperament: The Child's Own Contribution
 
-Thomas & Chess: **easy** (~40%), **difficult** (~10%), **slow-to-warm-up** (~15%) profiles, visible in infancy, biologically based, moderately stable (Kagan's behaviorally inhibited infants show lasting reactivity differences). Development runs on **goodness of fit** between temperament and caregiving — and the child's temperament also *evokes* particular parenting (bidirectionality: correlations between parenting and child outcome are not automatically parent-caused).
+Thomas & Chess: **easy**, **difficult**, and **slow-to-warm-up** profiles, visible in infancy, biologically based, moderately stable (Kagan's behaviorally inhibited infants show lasting reactivity differences). Development runs on **goodness of fit** between temperament and caregiving — and the child's temperament also *evokes* particular parenting (bidirectionality: correlations between parenting and child outcome are not automatically parent-caused).
+
+<!-- yield:low -->
+- In Thomas & Chess's sample, roughly 40% of infants were easy, 10% difficult, and 15% slow-to-warm-up; the rest fit no single profile.
+<!-- /yield -->
 
 ### Parenting Styles (Baumrind: two axes — demandingness × responsiveness)
 
@@ -48,7 +56,7 @@ Outcomes vary somewhat by culture and are correlational — the same caution as 
       type: 'text' as const,
       content: `### Worked Example — An Attachment-Methods Passage, Fully Read
 
-**Passage.** In a longitudinal study, 200 infants complete the Strange Situation at 12 months. At reunion, Infant J ignores his returning mother and continues playing with his back turned; Infant K alternates between reaching to be held and arching away in anger, and cannot be soothed. At age 5, teachers blind to classification rate former secure infants higher in peer competence (d = 0.4). A second sample studied in a culture emphasizing early independence training shows nearly double the avoidant rate, and a third sample with routine full-day alloparenting shows elevated resistant classifications. Finally, temperament assessed at 3 months (irritability) predicts later resistant classification even after controlling for maternal sensitivity.
+**Passage.** In a longitudinal study, 200 infants complete the Strange Situation at 12 months. At reunion, Infant J ignores his returning mother and continues playing with his back turned; Infant K alternates between reaching to be held and arching away in anger, and cannot be soothed. At age 5, teachers blind to classification rate former secure infants higher in peer competence (d = 0.4). A second sample studied in a culture emphasizing early independence training shows nearly double the avoidant rate, and a third sample in which infants are almost never apart from their mothers shows elevated resistant classifications. Finally, temperament assessed at 3 months (irritability) predicts later resistant classification even after controlling for maternal sensitivity.
 
 **Step 1 — classify from the reunion.** J: exploration plus reunion avoidance = insecure-avoidant. K: clingy-angry, comfort-resistant distress = insecure-ambivalent/resistant. The separations themselves are not diagnostic — many secure infants cry at separation; the REUNION response carries the classification.
 
@@ -66,32 +74,37 @@ Outcomes vary somewhat by culture and are correlational — the same caution as 
         questions: [
           {
             question: `Harlow's infant monkeys spent nearly all their time clinging to a terrycloth surrogate and visited a wire surrogate only to feed, and ran to the cloth figure when frightened. These findings were decisive against which prior claim?`,
-            options: [`That attachment derives mainly from being fed`, `That monkeys cannot form attachments to any caregiver`, `That imprinting occurs only in birds, not mammals`, `That infant temperament is biologically based`],
+            options: [`That attachment derives mainly from being fed`, `That monkeys cannot form attachments to any caregiver`, `That imprinting occurs only in birds, not mammals`, `That infant temperament is biologically based rather than learned`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `The behaviorist/psychoanalytic consensus held that infants attach to whoever satisfies hunger. Feeding was assigned to the wire mother, yet attachment behaviors — clinging, fear-time refuge, secure-base exploration — all organized around the cloth mother, isolating contact comfort as the operative variable. The design's power is exactly that it unconfounded food from touch.`
           },
           {
             question: `In the Strange Situation, an infant plays with toys while her father is present, shows little reaction when he leaves, and turns away, avoiding eye contact, when he returns. Her classification is:`,
             options: [`Secure, given her calm play and low separation distress`, `Disorganized, given her contradictory behavior at reunion`, `Insecure-resistant, given her rejection of him at reunion`, `Insecure-avoidant, given her low distress and avoidance at reunion`],
             correctAnswer: 3,
+            yield: 'HIGH',
             explanation: `Reunion behavior is the diagnostic window: turning away from the returning caregiver defines avoidant attachment. A secure infant may or may not cry at separation but greets and settles at reunion; a resistant infant is inconsolable and angrily clings; disorganized infants show contradictory or frozen behavior, which is absent here.`
           },
           {
             question: `A tutoring program succeeds by giving each child problems slightly beyond independent ability while a tutor supplies hints that are progressively withdrawn as skill grows. The program is a direct application of:`,
             options: [`Piaget's stage-readiness principle, since children work alone`, `Baumrind's authoritative parenting applied to tutoring`, `Vygotsky's zone of proximal development with scaffolding`, `Harlow's contact comfort as a basis for secure learning`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `Targeting the band between solo and assisted competence IS the ZPD, and calibrated, fading assistance IS scaffolding — Vygotsky's model of development as social-to-individual internalization. A strict Piagetian would wait for stage readiness and favor independent discovery, making the guided-interaction design the discriminating detail.`
           },
           {
             question: `Two families enforce a strict homework policy. Family A explains the reasons, invites discussion, and remains warm; Family B demands unquestioning compliance and punishes dissent coldly. Baumrind's framework classifies A and B respectively as:`,
             options: [`Permissive and neglectful`, `Authoritative and authoritarian`, `Authoritarian and permissive`, `Authoritarian and authoritative`],
             correctAnswer: 1,
+            yield: 'MEDIUM',
             explanation: `Both families are high in demandingness; the axis separating them is responsiveness. Warmth plus explanation with firm limits = authoritative (best average outcomes); coercive, low-warmth obedience-focus = authoritarian. Permissive parents impose few demands, and neglectful parents are low on both axes — neither matches these vignettes.`
           },
           {
             question: `Infants classified at 4 months as highly reactive to novel stimuli disproportionately become behaviorally inhibited toddlers and, at 7, shyer children — across differing family environments. This continuity primarily supports the claim that:`,
-            options: [`Temperament is an early, biologically grounded disposition`, `Parenting style fully determines a child's eventual personality`, `Attachment classification is meaningless for predicting outcomes`, `Shyness is learned through modeling of anxious parents`],
+            options: [`Temperament is an early, biologically grounded disposition`, `Parenting style fully determines a child's eventual personality`, `Attachment classification is meaningless for predicting outcomes`, `Shyness is learned mainly through observational modeling of anxious parents`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `Kagan's high-reactive infants illustrate temperament: individual differences present before extensive socialization, persisting across settings and years — evidence for a constitutional contribution the child brings to every interaction (and one reason parenting-outcome correlations are bidirectional). Stability is moderate, not absolute, so environment still moderates outcomes; and continuity across differing family environments argues against shyness being simply learned from anxious parents.`
           }
         ]
@@ -106,7 +119,11 @@ Outcomes vary somewhat by culture and are correlational — the same caution as 
 - Strange Situation classifies by REUNION: secure (settles, greets), avoidant (ignores), resistant (clings and rages, inconsolable), disorganized (contradictory/frozen); cross-cultural rate shifts question the measure, not the children
 - Temperament (easy/difficult/slow-to-warm) is early, biological, moderately stable; goodness of fit and child-to-parent effects make parenting correlations bidirectional
 - Baumrind grid: demandingness x responsiveness — authoritative (high/high) best on average; authoritarian, permissive, neglectful each miss one or both
-- Vygotsky vs Piaget: guided interaction, ZPD, scaffolding, private speech = Vygotsky; solo construction gated by stage readiness = Piaget — pick by the vignette's mechanism of gain`
+- Vygotsky vs Piaget: guided interaction, ZPD, scaffolding, private speech = Vygotsky; solo construction gated by stage readiness = Piaget — pick by the vignette's mechanism of gain
+
+<!-- yield:low -->
+- Low-yield extras: Strange Situation base rates (secure ~60-65%, avoidant ~20%, resistant ~10-15%, disorganized a small remainder); Thomas & Chess temperament percentages (easy ~40%, difficult ~10%, slow-to-warm-up ~15%)
+<!-- /yield -->`
     }
   ]
 };

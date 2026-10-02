@@ -12,7 +12,7 @@ export const mcatSocialPsychPart5Data = {
 
 | Phenomenon | Description | Condition |
 |------------|-------------|-----------|
-| **Social facilitation** | Arousal improves SIMPLE/dominant tasks, impairs COMPLEX ones | When evaluated |
+| **Social facilitation** | Arousal improves SIMPLE/dominant tasks, impairs COMPLEX ones | Others present (stronger when evaluated) |
 | **Social loafing** | Less individual effort in a pooled group product | Anonymous contribution |
 | **Deindividuation** | Loss of self-awareness in a group → impulsive acts | Anonymity, arousal |
 | **Group polarization** | Group discussion AMPLIFIES the members' initial leaning | Like-minded group |
@@ -53,18 +53,21 @@ The 5-step decision model: **notice → interpret as emergency → assume respon
             question: `A person collapses on a crowded subway, but no one helps because each rider assumes someone else will. This is best explained by:`,
             options: [`Diffusion of responsibility`, `Social facilitation`, `Group polarization`, `Fundamental attribution error`],
             correctAnswer: 0,
+            yield: 'ULTRA_HIGH',
             explanation: `As the number of bystanders increases, responsibility to act is diffused across the group, so each individual feels less personally obligated — lowering the chance anyone helps. This diffusion of responsibility is the core of the bystander effect.`
           },
           {
-            question: `A group of moderately pro-policy members discusses the issue together and emerges far MORE strongly in favor than any began. This is:`,
+            question: `A group of moderately pro-policy members discusses the issue together and emerges far MORE strongly in favor than it began. This is:`,
             options: [`Group polarization`, `Groupthink`, `Social facilitation`, `Deindividuation`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Group polarization is the tendency for group discussion to STRENGTHEN the members' pre-existing average attitude — moderate views become more extreme in the same direction. Groupthink specifically concerns flawed decision-making driven by a desire for consensus, which is related but distinct.`
           },
           {
             question: `Hamilton's rule and kin selection predict that altruistic helping is MOST likely directed toward:`,
             options: [`Close relatives`, `Reciprocating non-relatives`, `Out-group members`, `Anyone, regardless of relatedness`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `Kin selection (inclusive fitness) explains altruism toward genetic relatives: helping relatives propagates shared genes. Hamilton's rule states a behavior is favored when the benefit to the recipient, weighted by relatedness, exceeds the cost to the helper — predicting more help for closer kin. Help toward reciprocating non-relatives is explained by reciprocal altruism, a separate theory from kin selection.`
           }
         ]
@@ -81,11 +84,11 @@ The 5-step decision model: **notice → interpret as emergency → assume respon
 **Question:** (a) An expert sprinter runs faster with a crowd watching. (b) Workers on an anonymous group task each slack off. (c) A masked crowd at night vandalizes property. Classify each.
 
 **Solution:**
-- (a) Arousal from being evaluated boosts a well-learned task → **social facilitation.** ✓
+- (a) Arousal from the watching crowd (presence of others) boosts a well-learned task → **social facilitation.** ✓
 - (b) Reduced effort when contributions are pooled/anonymous → **social loafing.** ✓
 - (c) Anonymity + arousal → loss of self-awareness and restraint → **deindividuation.** ✓
 
-**MCAT key:** Facilitation requires evaluation; loafing requires anonymity in a SHARED product; deindividuation is loss of individual identity in a group.
+**MCAT key:** Facilitation requires the presence of others (an audience or co-actors; evaluation strengthens it); loafing requires anonymity in a SHARED product; deindividuation is loss of individual identity in a group.
 </details>
 
 <details>
@@ -119,7 +122,7 @@ The 5-step decision model: **notice → interpret as emergency → assume respon
       type: 'text' as const,
       content: `### Key Takeaways — Part 5 (and Suite Review)
 
-- Social facilitation (evaluated, simple task ↑), social loafing (anonymous pooled effort ↓), deindividuation (anonymity → impulsivity).
+- Social facilitation (others present: simple task ↑, complex task ↓), social loafing (anonymous pooled effort ↓), deindividuation (anonymity → impulsivity).
 - Group polarization amplifies the initial leaning; groupthink sacrifices good decisions for harmony (use a devil's advocate).
 - Bystander effect = diffusion of responsibility; helping requires notice → interpret → take responsibility → know how → act.
 - Altruism explained by kin selection (Hamilton's rule), reciprocal altruism, empathy–altruism, and social exchange; aggression by frustration–aggression and social learning (Bandura).`

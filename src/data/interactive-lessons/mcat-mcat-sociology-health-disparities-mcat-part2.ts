@@ -40,7 +40,11 @@ Access is not one barrier but a cascade; disparities compound at each step:
 ### The System Level
 
 - **Second sickness**: the aggravation of illness produced by social injustice and by the healthcare system itself — medical debt, iatrogenic harm concentrated where care is thinnest, discharge to conditions that caused the disease.
-- Safety-net institutions (community health centers, emergency departments as care of last resort) absorb the uninsured; EMTALA-style emergency mandates guarantee stabilization, not treatment or follow-up — why ED reliance is both a symptom of access failure and a costlier, discontinuous substitute for primary care.`
+- Safety-net institutions (community health centers, emergency departments as care of last resort) absorb the uninsured; federal emergency mandates guarantee stabilization, not treatment or follow-up — why ED reliance is both a symptom of access failure and a costlier, discontinuous substitute for primary care.
+
+<!-- yield:low -->
+- The US emergency mandate is EMTALA (1986): emergency departments must screen and stabilize every patient regardless of ability to pay.
+<!-- /yield -->`
     },
     {
       id: 'hdis2-worked',
@@ -74,30 +78,35 @@ Access is not one barrier but a cascade; disparities compound at each step:
             question: `A patient with well-controlled diabetes describes feeling "completely fine" and skips medications, while a patient with medically unexplained fatigue feels profoundly unwell but is told "nothing is wrong with you." The disease/illness distinction clarifies these cases as:`,
             options: [`Disease and illness are synonyms used differently by specialty`, `Illness without disease in the first; disease without illness in the second`, `Disease without illness in the first; illness without disease in the second`, `Both have disease, but only the second has illness experience`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `Disease is the biological pathology; illness is the lived experience of being unwell — and they dissociate in both directions, exactly as these cases show. The social consequences differ too: contested, disease-less illness struggles for sick-role legitimacy (being believed and excused), a core disparity in whose suffering institutions validate. The first patient has documented disease but feels fine (no illness), while the second feels unwell with no identified disease, so any reading that swaps or merges the two cases misclassifies them.`
           },
           {
             question: `A landmark insurance experiment found that higher cost-sharing reduced patients' use of BOTH ineffective care and clearly needed care, with health harms concentrated among low-income patients with chronic conditions. The sociological lesson is that:`,
             options: [`Cost barriers cut needed care too, hurting the poor and sick most`, `Cost-sharing improves care quality by making patients choosier`, `Insurance design affects spending but has no measurable health effects`, `Low-income patients underuse care mainly because they value health less`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `The finding's force is the NON-selectivity: deterrence worked, but indiscriminately, because judging medical necessity requires exactly the expertise patients lack. Harms therefore landed where necessary care was most needed and budgets tightest — underinsurance functioning as an access barrier. The choosier-patients reading assumes the selective discrimination between care types that the data specifically refuted, the documented harms rule out no health effect, and attributing underuse to low-income patients valuing health less converts a cost barrier into a trait explanation.`
           },
           {
             question: `In recorded consultations, a physician asks a patient's goals, explains two guideline-supported options with their tradeoffs, elicits the patient's values about side effects versus convenience, and they select a treatment together. This encounter exemplifies:`,
-            options: [`The paternalistic (physician-decides) model`, `The informative (consumer-choice) model`, `The sick role's patient obligations`, `The shared decision-making model of care`],
+            options: [`The paternalistic (physician-decides) model`, `The informative (consumer-choice) model`, `The sick role's patient obligations`, `The shared decision-making model`],
             correctAnswer: 3,
+            yield: 'MEDIUM',
             explanation: `The defining features are all present: information flows both ways, the physician actively elicits values rather than just dispensing facts, and the decision is joint. Paternalism would decide FOR the patient; the informative model would hand over facts and leave the choosing entirely to the patient. The sick role's obligations (seek help, cooperate) describe patient duties, not a model of how a decision is reached. Classifying encounter models from dialogue is a standard discrete-question format.`
           },
           {
             question: `Physicians given identical case vignettes recommend strong analgesia less often when the file shows a minority patient, yet these same physicians score as explicitly egalitarian and are unaware of any differential judgment. The construct best explaining the gap is:`,
             options: [`Explicit prejudice concealed from researchers`, `Implicit bias operating on clinical judgment`, `Institutional discrimination in hospital policy`, `The sick role's obligation to seek help`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `The dissociation — egalitarian explicit attitudes, group-patterned behavior, no awareness — is the operational definition of implicit bias, and the randomized identical-vignette design rules out clinical differences between patients. Concealed explicit prejudice is contradicted by the unawareness and by the failure of explicit measures to predict behavior, and institutional policy cannot explain different recommendations for identical files judged by the same physicians. This is the clinic-level mechanism behind documented treatment disparities.`
           },
           {
             question: `An uninsured worker's leg infection is stabilized in an emergency department, but he cannot obtain the follow-up wound care or antibiotics course, re-presents septic, and accrues medical debt that costs him his apartment — worsening his health further. Which concept BEST captures the debt-and-housing spiral at the end?`,
-            options: [`The mortality-morbidity paradox`, `Medicalization of social problems`, `The sick role and its exemptions`, `The concept of a second sickness`],
+            options: [`The mortality-morbidity paradox`, `Medicalization of social problems`, `The sick role and its exemptions`, `The concept of second sickness`],
             correctAnswer: 3,
+            yield: 'MEDIUM',
             explanation: `Second sickness names the layer of suffering ADDED to biological disease by unjust social arrangements — here, an emergency-only mandate producing discontinuous care, then medical debt destroying the housing that health depends on. The system treats, then harms. The paradox concerns gendered mortality/morbidity patterns; medicalization concerns definitional expansion of medicine's jurisdiction, and the sick role concerns the exemptions and duties granted to the ill, none of which describes this spiral.`
           }
         ]
@@ -112,7 +121,11 @@ Access is not one barrier but a cascade; disparities compound at each step:
 - Access is a cascade (coverage → reach → afford → navigate → stay); underinsurance deters necessary and unnecessary care alike, harming the poor and chronically ill most
 - Encounter models: paternalistic / informative / shared decision-making — classify from dialogue; power asymmetries (time, interruptions, scripts) are patterned by patient class, race, gender
 - Vignette and audit designs localize part of the disparity inside clinical judgment: implicit bias operates despite egalitarian explicit attitudes; structural barriers (closures, distance) are institutional discrimination needing no biased individual
-- Second sickness: the system's own operation (emergency-only care, medical debt, discontinuity) can amplify the illness it treats — match every proposed remedy to the layer whose data implicate it`
+- Second sickness: the system's own operation (emergency-only care, medical debt, discontinuity) can amplify the illness it treats — match every proposed remedy to the layer whose data implicate it
+
+<!-- yield:low -->
+- Low-yield extras: the US emergency mandate's name and date (EMTALA, 1986)
+<!-- /yield -->`
     }
   ]
 };

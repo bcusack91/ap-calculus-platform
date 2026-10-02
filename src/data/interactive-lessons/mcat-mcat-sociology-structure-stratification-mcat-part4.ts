@@ -55,7 +55,7 @@ MCAT sociology passages are mostly STUDY REPORTS. Apply a fixed reading order:
 **Passage.** Researchers examine Country Z, where death rates fell steeply from 1950 to 1975 while birth rates stayed high until about 1990, then declined. A second dataset, cross-sectional in 2020, shows that Country Z's regions with higher average income have lower average fertility. The researchers conclude: "Rising individual income causes women to choose fewer children."
 
 **Question 1 — Where was Country Z in 1975, and what happened to population?**
-Deaths down, births still high = **stage 2** of the demographic transition; the widening birth-death gap means population was growing at its fastest. Note that neither rate alone answers this — the GAP is the growth engine, and the 15-plus-year lag between mortality decline and fertility decline is exactly the model's predicted sequence.
+Deaths down, births still high = **stage 2** of the demographic transition; the widening birth-death gap means population was growing at its fastest. Note that neither rate alone answers this — the GAP is the growth engine, and the roughly 40-year lag between the onset of mortality decline (1950) and the onset of fertility decline (1990) is exactly the model's predicted sequence.
 
 **Question 2 — Evaluate the researchers' causal conclusion.**
 Two independent flaws, each a named error:
@@ -78,30 +78,35 @@ Cost-benefit machinery at the household level: **rational choice/exchange** logi
             question: `A country's population pyramid shows a very wide base and a narrow top. Even if fertility instantly dropped to replacement level, the population would keep growing for decades because:`,
             options: [`Mortality always falls faster than fertility`, `Its large young cohorts carry population momentum`, `Net migration is always positive in young countries`, `A high dependency ratio forces families to have more children`],
             correctAnswer: 1,
+            yield: 'MEDIUM',
             explanation: `A wide-based pyramid means the largest cohorts are still children; as they enter reproductive years, the sheer NUMBER of childbearing adults keeps aggregate births above deaths even when each woman has only replacement-level children. This is population momentum. Mortality does not always fall faster than fertility, migration is not always positive, and a dependency ratio pushing families to have more children contradicts the stipulated replacement fertility; none explains continued growth under instant replacement fertility.`
           },
           {
             question: `Neighborhoods with more fast-food restaurants have higher average rates of diabetes. A commentator concludes that any individual who eats fast food will probably develop diabetes. The commentator's error is:`,
             options: [`The ecological fallacy, from group to individual`, `Confusing a cohort effect with an age effect`, `Treating cross-sectional data as longitudinal`, `Treating relative poverty as absolute poverty`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `The data live at the neighborhood level; the conclusion is about individuals. Group-level correlations cannot be transferred to members — the diabetic residents need not even be the fast-food eaters, and neighborhood-level confounders (income, walkability, clinic access) could generate the pattern entirely. That level-jump is the ecological fallacy, regardless of the study's timing or design.`
           },
           {
             question: `Between 1955 and 1980, Country Q's death rate fell from 25 to 8 per 1,000 while its birth rate stayed near 40 per 1,000. According to the demographic transition model, Country Q in 1980 was:`,
             options: [`In stage 4, with an aging, stable population`, `In stage 1, since birth rates remained high`, `In stage 2, with rapid population growth`, `In stage 3, since mortality was low`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `High and unchanged births combined with sharply fallen deaths is the stage-2 signature, and the wide birth-death gap means maximal growth. Stage 1 requires HIGH death rates too; stage 3 requires births to be visibly falling; stage 4 requires both rates low. The model's core sequence — mortality falls first, fertility follows after a lag — is exactly what the numbers show mid-lag.`
           },
           {
             question: `Researchers find that 70-year-olds score lower than 30-year-olds on internet-skills tests in a single 2024 survey and conclude that aging erodes internet skills. The most important rival explanation is:`,
-            options: [`Reverse causation, from skill loss to aging`, `A period effect specific to the 2024 survey`, `Random error, because the sample was large`, `A cohort effect of generational experience`],
+            options: [`Reverse causation, from skill loss to aging`, `A period effect specific to the 2024 survey`, `Random sampling error, because the sample was large`, `A cohort effect of generational experience`],
             correctAnswer: 3,
+            yield: 'HIGH',
             explanation: `A single-time-point comparison of different ages cannot separate growing old (age effect) from having been born into a particular era (cohort effect); the 70-year-olds' lower scores plausibly reflect learning history, not decline. A longitudinal design following the same people would distinguish the two. A period effect would shift every age group alike in 2024 and cannot create an age gap within one survey, reverse causation is absurd here, and large samples reduce random error while doing nothing about systematic confounding.`
           },
           {
             question: `A historically low-income urban district gains art galleries and rising rents; long-term residents relocate outward as higher-income professionals move in. The process described is:`,
             options: [`Suburbanization of the middle class`, `Gentrification with displacement`, `White flight from the city core`, `The demographic transition`],
             correctAnswer: 1,
+            yield: 'MEDIUM',
             explanation: `Gentrification is the reversal of a neighborhood's class composition through in-migration of higher-income residents and rising property costs, displacing established lower-income communities. Suburbanization and white flight describe the OUTWARD movement of affluent (historically white) residents from city cores — the opposite flow — and the demographic transition concerns national birth and death rates, not neighborhoods.`
           }
         ]

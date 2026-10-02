@@ -26,7 +26,7 @@ export const mcatPsychBehavPart1Data = {
 
 - Decreased sensitivity to constant stimuli over time
 - Example: You stop noticing the smell of your own house
-- Does NOT apply to pain (for survival reasons)
+- Pain adapts very little, if at all (it keeps signaling damage, for survival reasons)
 
 ### Gestalt Principles of Perception
 
@@ -80,18 +80,21 @@ SDT separates *sensitivity* (how well you discriminate signal from noise, $d'$) 
             question: `According to Weber's Law, if you can just barely notice the difference between 10 lbs and 11 lbs, the JND for a 50 lb weight would be:`,
             options: [`5 lbs`, `1 lb`, `10 lbs`, `11 lbs`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Weber's Law: $\\Delta I / I = k$. From the 10 lb example, $k = 1/10$. For 50 lbs: $\\Delta I = 50 \\times 1/10 = 5$ lbs. The JND scales with stimulus intensity — this is why you can notice a candle in a dark room but not in sunlight.`
           },
           {
             question: `In a detection experiment, radiologists are told they will be rewarded for catching tumors and lightly penalized for false alarms. Their hit rate AND false-alarm rate both rise, while $d'$ is unchanged. This is best explained as:`,
-            options: [`A more liberal response criterion`, `An increase in perceptual sensitivity`, `Sensory adaptation to the images`, `A change in the absolute threshold`],
+            options: [`A more liberal response criterion`, `An increase in perceptual sensitivity`, `Sensory adaptation from viewing many scans`, `A change in the absolute threshold`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `When hits and false alarms BOTH increase but $d'$ (sensitivity) is constant, the observer has not gotten better at discriminating — they have lowered their criterion (become more liberal), saying "yes" more often. Signal detection theory exists precisely to separate this response bias from true sensitivity.`
           },
           {
             question: `A patient reports a red afterimage after staring at a green object. Which theory best accounts for this?`,
             options: [`Opponent-process theory`, `Trichromatic theory`, `Gate control theory`, `Place theory`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Opponent-process theory posits paired channels (red–green, blue–yellow, black–white). Prolonged green stimulation fatigues the green side of the red–green channel, so when you look away the channel rebounds toward red → a red afterimage. Trichromatic theory explains cone-level color reception but not afterimages; gate control theory concerns pain, and place theory concerns how pitch is coded along the basilar membrane.`
           }
         ]
@@ -121,7 +124,7 @@ $$\\Delta I = k \\cdot I = 0.05 \\times 500 = 25 \\text{ mg/L} \\checkmark$$
 
 **Solution:**
 1. Observer A: hit rate 0.80, false-alarm rate 0.30. Observer B: hit rate 0.60, false-alarm rate 0.05.
-2. **Sensitivity ($d'$)** reflects the SEPARATION between hit and false-alarm rates. A: 0.80 − 0.30 = 0.50 gap; B: 0.60 − 0.05 = 0.55 gap → B is slightly more sensitive. ✓
+2. **Sensitivity ($d'$)** reflects the SEPARATION between hit and false-alarm rates. A raw gap is only a rough guide (A: 0.80 − 0.30 = 0.50; B: 0.60 − 0.05 = 0.55), because $d'$ is computed on z-scores: $d' = z(\\text{hit}) - z(\\text{FA})$. A: 0.84 − (−0.52) ≈ 1.4; B: 0.25 − (−1.64) ≈ 1.9 → B is clearly more sensitive. ✓
 3. **Criterion:** B says "yes" far less often (low false alarms) → B is the more **conservative** responder; A is more liberal. ✓
 
 **MCAT lesson:** You cannot judge ability from hit rate alone — a high hit rate paired with a high false-alarm rate just means a liberal criterion.
@@ -130,7 +133,7 @@ $$\\Delta I = k \\cdot I = 0.05 \\times 500 = 25 \\text{ mg/L} \\checkmark$$
 <details>
 <summary><b>Example 3: Bottom-up vs. top-down in an experiment</b></summary>
 
-**Question:** Subjects shown a degraded image of an animal identify it faster if they were first told "you'll see a farm animal." Naming this effect and the process involved.
+**Question:** Subjects shown a degraded image of an animal identify it faster if they were first told "you'll see a farm animal." Name this effect and the process involved.
 
 **Solution:**
 1. The verbal cue creates an expectation/schema that guides interpretation → **top-down processing** (specifically, **priming**). ✓

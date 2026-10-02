@@ -47,18 +47,21 @@ We weigh three kinds of information to decide internal vs. external:
             question: `A driver cuts you off and you immediately think "What a rude, reckless person!" without considering they might be rushing to an emergency. This illustrates the:`,
             options: [`Fundamental attribution error`, `Mere exposure effect`, `Just-world hypothesis`, `Illusory correlation`],
             correctAnswer: 0,
+            yield: 'ULTRA_HIGH',
             explanation: `The fundamental attribution error is the tendency to overattribute OTHERS' behavior to disposition (rude person) while underweighting situational causes (an emergency). It is the default error when explaining other people's actions.`
           },
           {
             question: `A student gets an A and says "I'm brilliant," then gets an F and says "the test was unfair." This is the:`,
             options: [`Self-serving bias`, `Fundamental attribution error`, `Consensus effect`, `Mere exposure effect`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `The self-serving bias protects self-esteem by attributing successes to internal factors (ability) and failures to external factors (unfair test). It is distinct from the FAE, which concerns how we explain OTHERS, not ourselves.`
           },
           {
             question: `Using Kelley's covariation model: a behavior shows HIGH consensus, HIGH distinctiveness, and HIGH consistency. The most likely attribution is:`,
             options: [`Situational (external)`, `Dispositional (internal)`, `Equally internal and external`, `Cannot be determined from the data`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `High consensus (others do it too) + high distinctiveness (only in this situation) + high consistency points to the SITUATION as the cause. In contrast, LOW consensus + LOW distinctiveness + high consistency points to disposition.`
           }
         ]

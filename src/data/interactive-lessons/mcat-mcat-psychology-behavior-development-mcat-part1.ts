@@ -33,7 +33,12 @@ Newborns arrive with diagnostic reflexes — **rooting** (turn toward cheek touc
 ### The Critiques (where modern items live)
 
 - **Underestimation**: violation-of-expectation looking-time studies show infants register object permanence months before Piaget's manual-search criterion — search tasks demand motor planning the infant lacks, not just the concept
-- **Continuity vs. stages**: abilities emerge gradually and unevenly across domains (**decalage** — conservation of number before volume), straining the idea of unified stage shifts
+- **Continuity vs. stages**: abilities emerge gradually and unevenly across domains (conservation of number before volume), straining the idea of unified stage shifts
+
+<!-- yield:low -->
+- Piaget's own term for this within-stage unevenness is **horizontal decalage**.
+<!-- /yield -->
+
 - **Culture and schooling** shift stage timing, and formal operations depend heavily on domain experience
 - Still, the SEQUENCE replicates broadly — the MCAT tests Piaget both as framework and as target of these critiques`
     },
@@ -60,32 +65,37 @@ Newborns arrive with diagnostic reflexes — **rooting** (turn toward cheek touc
         questions: [
           {
             question: `Two identical clay balls are shown to a 5-year-old, who agrees they are the same. One is rolled into a sausage shape, and she now insists the sausage has "more clay because it is longer." Her error reflects:`,
-            options: [`Failure of object permanence, a skill still emerging at her age`, `Centration on one dimension and failure of mental reversibility`, `Hypothetico-deductive reasoning misapplied to the change in shape`, `A lingering deficit in primitive reflexes such as rooting`],
+            options: [`Failure of object permanence, a sensorimotor skill still emerging at her age`, `Centration on one dimension and failure of mental reversibility`, `Hypothetico-deductive reasoning misapplied to the change in shape`, `A lingering deficit in primitive reflexes such as rooting and Moro`],
             correctAnswer: 1,
+            yield: 'ULTRA_HIGH',
             explanation: `She centers on length while ignoring the compensating decrease in width, and cannot mentally run the transformation backward — the two defining preoperational failures behind non-conservation. Object permanence was mastered years earlier in the sensorimotor stage, and hypothetico-deductive reasoning is the formal-operational ACHIEVEMENT, not an error.`
           },
           {
             question: `A 6-month-old delightedly plays with a rattle but makes no attempt to search when a cloth is draped over it, acting as though it ceased to exist. Piaget would say the infant has not yet developed:`,
             options: [`Object permanence`, `Conservation of mass`, `Egocentrism`, `Telegraphic speech`],
             correctAnswer: 0,
+            yield: 'ULTRA_HIGH',
             explanation: `Abandoning a desired object the moment it is hidden is Piaget's classic index that the infant does not yet represent unseen objects — object permanence, the central sensorimotor acquisition (though looking-time studies date the underlying concept earlier). Conservation belongs to the concrete-operational transition, and egocentrism is a limitation the child HAS, not lacks.`
           },
           {
             question: `A toddler who knows dogs calls the neighbor's cat "doggie." A week later, after corrections, he uses a new word, "kitty," for cats while keeping "doggie" for dogs. In Piaget's terms, the first behavior and the subsequent change are, respectively:`,
             options: [`Accommodation, then assimilation`, `Equilibration, then centration`, `Object permanence, then conservation`, `Assimilation, then accommodation`],
             correctAnswer: 3,
+            yield: 'HIGH',
             explanation: `Forcing the novel animal into the existing dog schema is assimilation; restructuring into separate dog and cat schemas after predictive failure is accommodation. The discomfort driving the change is equilibration, but the two behaviors themselves are the assimilation-accommodation pair — order matters, and the reversed option is the standard trap.`
           },
           {
             question: `Asked to determine what controls a pendulum's swing rate, a 14-year-old holds string length constant while varying weight, then holds weight constant while varying length, correctly isolating length. A 9-year-old varies both haphazardly. The teenager's approach marks which acquisition?`,
             options: [`Concrete operational reasoning about real objects`, `Conservation of number, mass, and volume`, `Formal operational hypothetico-deductive reasoning`, `Completion of the late sensorimotor substages`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `Generating hypotheses and testing them by controlling variables — abstract, systematic, ahead of the data — is Piaget's formal-operational signature, assessed with exactly this pendulum task. The concrete-operational child can operate on real objects (hence conservation) but cannot organize a systematic abstract search of possibilities.`
           },
           {
             question: `Five-month-olds look reliably longer when a rising drawbridge appears to rotate through the space occupied by a hidden box than when it stops at the box. Researchers cite this against Piaget primarily because it suggests that:`,
             options: [`Infants simply prefer watching motion over watching stillness`, `Infants of this age already reason hypothetico-deductively`, `The drawbridge display distressed the infants and disrupted their attention`, `Object permanence emerges earlier than manual-search tasks indicate`],
             correctAnswer: 3,
+            yield: 'MEDIUM',
             explanation: `Longer looking at the impossible event implies the infants represented the hidden box and registered a violation — object permanence in some form by 5 months. Piaget's reach-for-the-hidden-object criterion also demands means-end motor planning, so it dates the CONCEPT too late. The finding revises his timeline and method, not the existence of developmental change, and says nothing about formal reasoning.`
           }
         ]
@@ -100,7 +110,11 @@ Newborns arrive with diagnostic reflexes — **rooting** (turn toward cheek touc
 - Engine: assimilation fits input to a schema, accommodation rebuilds the schema, equilibration drives the alternation
 - Stage anchors: sensorimotor = object permanence; preoperational = egocentrism, centration, failed conservation; concrete = conservation and reversibility on real objects; formal = abstract hypothetico-deductive reasoning (pendulum task)
 - Conservation failure = centration + irreversibility; the pour never changes amount
-- Critiques: looking-time studies push competence earlier (methods confound concept with motor/pragmatic demands); development is more continuous and domain-uneven (decalage) than strict stages — but the sequence itself replicates`
+- Critiques: looking-time studies push competence earlier (methods confound concept with motor/pragmatic demands); development is more continuous and domain-uneven than strict stages — but the sequence itself replicates
+
+<!-- yield:low -->
+- Low-yield extras: Piaget called within-stage unevenness across domains (number conserved before volume) horizontal decalage
+<!-- /yield -->`
     }
   ]
 };

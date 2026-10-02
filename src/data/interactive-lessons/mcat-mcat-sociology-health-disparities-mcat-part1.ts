@@ -24,7 +24,11 @@ The **social determinants of health** are the conditions in which people are bor
 | Neighborhood | Food access (food deserts), walkability, pollution and toxin exposure, violence, clinic proximity |
 | Social connection | Networks deliver support, norms, and care; isolation predicts mortality at magnitudes rivaling smoking |
 
-**Fundamental cause theory** (Link & Phelan) explains a puzzle: specific diseases and risk factors change across history, yet the SES-health association persists. Because SES embodies flexible resources — money, knowledge, power, beneficial connections — advantaged groups redeploy those resources against WHATEVER the current health threat is (from cholera to cigarettes to novel screening technology). Prediction: disparities are LARGEST for diseases we know how to prevent or treat, and smallest where medicine is helpless — a signature the exam loves to test with data.
+**Fundamental cause theory** explains a puzzle: specific diseases and risk factors change across history, yet the SES-health association persists. Because SES embodies flexible resources — money, knowledge, power, beneficial connections — advantaged groups redeploy those resources against WHATEVER the current health threat is (from cholera to cigarettes to novel screening technology). Prediction: disparities are LARGEST for diseases we know how to prevent or treat, and smallest where medicine is helpless — a signature the exam loves to test with data.
+
+<!-- yield:low -->
+- Fundamental cause theory was proposed by the sociologists Bruce Link and Jo Phelan.
+<!-- /yield -->
 
 ### Stress Biology — Where Sociology Meets the Endocrine Lesson
 
@@ -52,7 +56,7 @@ Early environments program later health: childhood poverty predicts adult cardio
 **Passage-style problem.** Researchers assemble mortality data for Country X:
 
 1. In 1950, deaths from Disease A (no known prevention or treatment then or now) show almost no SES gradient. In 2020, Disease A mortality is still SES-flat.
-2. Disease B was untreatable in 1950, with SES-flat mortality. A cheap screening test and effective treatment arrived in 1980. By 2020, Disease B mortality has fallen 70 percent overall — but the decline is 85 percent in the top SES quintile and 35 percent in the bottom, opening a wide gradient where none existed.
+2. Disease B was untreatable in 1950, with SES-flat mortality. A cheap screening test and effective treatment arrived in 1980. By 2020, Disease B mortality has fallen 60 percent overall — but the decline is 85 percent in the top SES quintile and 35 percent in the bottom, opening a wide gradient where none existed.
 3. Disease C's major risk behavior was distributed EVENLY across classes in 1950; after mass publicity of the risk in 1970, the behavior declined fastest among the educated, and Disease C mortality now shows a steep gradient.
 
 **Reading finding 1.** Where medicine and prevention are powerless, flexible resources have nothing to purchase — no gradient forms. This is fundamental cause theory's negative control, and its presence in a passage is never decorative: expect a question contrasting it with Disease B.
@@ -75,30 +79,35 @@ Early environments program later health: childhood poverty predicts adult cardio
             question: `Within a single government agency where every employee has stable pay and identical health coverage, mortality still falls step-by-step with each increase in civil-service grade. This finding is most damaging to the claim that health disparities are primarily caused by:`,
             options: [`Chronic stress differences between ranks`, `Differential access to medical care`, `Work autonomy differences between ranks`, `Health behavior differences between ranks`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `The design holds healthcare access (and employment itself) essentially constant, yet the gradient persists across every grade — so unequal access to doctors cannot be the main engine. The gradient's fine-grained, every-step character instead implicates psychosocial factors that vary continuously with rank, such as control over work and chronic stress, which the other options name and the data leave standing.`
           },
           {
             question: `Which pattern of disease-specific data would BEST support fundamental cause theory?`,
             options: [`Equal SES gradients across all diseases regardless of treatability`, `Steep gradients for infectious diseases, flat ones for chronic diseases`, `Gradients that vanish once universal health coverage is introduced`, `Steep gradients for treatable diseases, flat ones for untreatable diseases`],
             correctAnswer: 3,
+            yield: 'MEDIUM',
             explanation: `The theory's mechanism is flexible resources (money, knowledge, power, connections) deployed against current threats — so advantage should show its largest health payoff exactly where something CAN be done, and no payoff where nothing can. That treatability-tracking pattern is the theory's unique fingerprint; uniform gradients would fit simpler material-deprivation accounts instead, an infectious-versus-chronic split tracks disease type rather than treatability, and gradients vanishing under universal coverage contradicts the theory's prediction that resources find new routes to advantage.`
           },
           {
             question: `A researcher measures blood pressure, cortisol regulation, inflammatory markers, and metabolic indicators in adults, combining them into a single index of cumulative physiological wear that rises with years of economic hardship. The construct being measured is:`,
             options: [`The socioeconomic gradient in health`, `Weathering, which applies only to elderly subjects`, `Allostatic load from chronic stress exposure`, `Health inequity between income groups`],
             correctAnswer: 2,
+            yield: 'MEDIUM',
             explanation: `Allostatic load is precisely this multi-system tally of wear from prolonged stress-axis engagement — the biological ledger where chronic social adversity is recorded. The social gradient is the population-level SES-health association the index helps EXPLAIN; weathering applies the same logic to discrimination-driven accelerated aging and requires no elderly sample; inequity is a normative classification of disparities, not a biomarker.`
           },
           {
             question: `Two findings: (a) men and women differ in autoimmune disease rates in ways tied to X-chromosome biology; (b) two neighborhoods differ five-fold in asthma hospitalizations because one sits beside a freight corridor that zoning decisions routed through low-income housing. In disparity/inequity terms:`,
             options: [`Both are disparities, but only (b) is also an inequity`, `Both are disparities, and both are also inequities`, `Both are disparities, but only (a) is also an inequity`, `Neither is a disparity because both have identifiable causes`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Disparity is the descriptive umbrella: any measured between-group difference, which covers both findings. Inequity adds the normative tests of avoidability and injustice — chromosome-linked disease biology fails those tests, while zoning-assigned pollution exposure passes both (it could be otherwise, and its burden was socially allocated). The distinction determines which differences health policy is obligated to target.`
           },
           {
             question: `Adults who escaped childhood poverty and achieved high incomes still show elevated cardiovascular risk decades later, compared with the always-affluent of identical adult SES. This pattern most directly supports:`,
-            options: [`The claim that adult SES fully determines health`, `A life-course latency effect of early-life conditions`, `Reverse causation from adult disease to childhood poverty`, `Health selection, in which illness drives downward mobility`],
+            options: [`The claim that adult income and education fully determine health`, `A life-course latency effect of early-life conditions`, `Reverse causation from adult disease to childhood poverty`, `Health selection, in which illness drives downward mobility`],
             correctAnswer: 1,
+            yield: 'MEDIUM',
             explanation: `Holding adult SES constant while childhood conditions still predict adult disease is the definitional evidence for latency (critical/sensitive-period) effects: early environments leave durable biological signatures — stress-axis calibration, developmental programming — that later mobility does not erase. Reverse causation is chronologically impossible here, and health selection (illness pushing people down the ladder) cannot explain people who rose into affluence.`
           }
         ]
@@ -113,7 +122,11 @@ Early environments program later health: childhood poverty predicts adult cardio
 - Social determinants — income, education, occupation, neighborhood, connection — are the upstream causes; isolation and low job control are mortality-grade exposures
 - Fundamental cause theory: flexible resources (money, knowledge, power, connections) get redeployed against each era's threats — so disparities concentrate where disease is preventable/treatable, and new technology widens gaps until deployment stops depending on personal resources
 - Chronic adversity becomes biology via stress axes: allostatic load tallies the wear; weathering extends it to discrimination-accelerated aging
-- Disparity = any group difference; inequity = the avoidable, socially produced subset; life-course effects (latency + accumulation) mean childhood conditions echo in adult disease`
+- Disparity = any group difference; inequity = the avoidable, socially produced subset; life-course effects (latency + accumulation) mean childhood conditions echo in adult disease
+
+<!-- yield:low -->
+- Low-yield extras: fundamental cause theory's authors (Link and Phelan)
+<!-- /yield -->`
     }
   ]
 };

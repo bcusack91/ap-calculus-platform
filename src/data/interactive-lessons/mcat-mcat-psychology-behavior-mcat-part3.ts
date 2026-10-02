@@ -17,7 +17,7 @@ export const mcatPsychBehavPart3Data = {
 | **Arousal (optimal-arousal)** | Organisms seek an optimal level of arousal (**Yerkes–Dodson**) | Inverted-U; not just need reduction |
 | **Incentive** | External rewards **pull** behavior (vs. drives that push) | Explains eating dessert when already full |
 | **Maslow's hierarchy** | Physiological → Safety → Love/belonging → Esteem → Self-actualization | Lower needs generally precede higher |
-| **Self-determination theory (SDT)** | Intrinsic motivation from **autonomy, competence, relatedness** | Distinguishes intrinsic vs. extrinsic |
+| **Self-determination theory** | Intrinsic motivation from **autonomy, competence, relatedness** | Distinguishes intrinsic vs. extrinsic |
 
 ### Yerkes–Dodson Law (Arousal vs. Performance)
 
@@ -43,8 +43,14 @@ export const mcatPsychBehavPart3Data = {
 
 ### Neurobiology of Emotion
 
-- **Amygdala**: rapid detection of threat/fear; "low road" (thalamus → amygdala) is fast and crude; "high road" (thalamus → cortex → amygdala) is slower and accurate.
-- **Limbic system** (amygdala, hippocampus, hypothalamus) + **prefrontal cortex** (regulation, especially left/right valence).
+- **Amygdala**: rapid detection of threat/fear and fear learning.
+- **Limbic system** (amygdala, hippocampus, hypothalamus) generates emotion; the **prefrontal cortex** regulates and moderates it.
+
+<!-- yield:low -->
+- Fear has two routes to the amygdala: a "low road" (thalamus → amygdala) that is fast and crude, and a "high road" (thalamus → cortex → amygdala) that is slower and accurate.
+- The prefrontal cortex is partly lateralized for valence (left more for approach/positive emotion, right more for withdrawal/negative emotion).
+<!-- /yield -->
+
 - **Autonomic signature**: sympathetic "fight-or-flight" → ↑HR, ↑BP, pupil dilation, ↓digestion (epinephrine from adrenal medulla).
 
 ### Stress — Appraisal and Response
@@ -70,18 +76,21 @@ $$\\text{Hypothalamus (CRH)} \\to \\text{Anterior pituitary (ACTH)} \\to \\text{
             question: `In a classic experiment, participants injected with epinephrine but told nothing about its effects were placed in a room with either a euphoric or an angry confederate; they reported emotions matching the confederate, whereas correctly-informed participants did not. These results most directly support:`,
             options: [`Schachter–Singer two-factor theory — arousal is labeled using situational cues`, `James–Lange theory — each distinct emotion has a unique, pre-determined physiological signature`, `Cannon–Bard theory — emotion and arousal arise simultaneously and independently of cognition`, `Drive-reduction theory — the injection created a biological need that behavior reduced`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `This is the Schachter–Singer (Schachter & Singer, 1962) paradigm. Uninformed participants had unexplained, undifferentiated arousal and used the social context (the confederate) as a COGNITIVE LABEL, producing different emotions from identical physiology — exactly two-factor theory. James–Lange predicts a UNIQUE bodily pattern per emotion, which is contradicted because the SAME injection yielded different emotions. Cannon–Bard denies a cognitive labeling step, but labeling is precisely what drove the result. Drive reduction is a motivation theory, not relevant to emotional labeling.`
           },
           {
             question: `A child who loves drawing for fun is then paid a cash reward each time she draws. After the rewards stop, she draws far less than before they began. This decline is best explained by:`,
             options: [`The overjustification effect — the reward undermined her intrinsic interest`, `The Yerkes–Dodson law — the reward raised arousal past the optimal point`, `Drive reduction — the reward met a biological need, removing the drive`, `Negative reinforcement — removing the reward strengthened the behavior`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `When an activity is already intrinsically rewarding and an EXTRINSIC reward is added, people may re-attribute their behavior to the reward; removing it then leaves less motivation than at baseline — the overjustification effect. Yerkes–Dodson concerns arousal-performance, not the source of motivation. Drive reduction applies to biological needs, not a hobby. Negative reinforcement would PREDICT more behavior, the opposite of what occurred, and is mis-defined here.`
           },
           {
             question: `A researcher measures salivary cortisol in participants two weeks into a month-long high-stakes stressor. Cortisol is elevated and sustained, and the participants are still coping and performing at their usual level. Which physiological pathway and General Adaptation Syndrome stage best describe this state?`,
             options: [`The HPA axis (adrenal cortex, cortisol) during the resistance stage`, `The sympathetic–adrenal-medullary pathway (epinephrine) during the alarm stage`, `The parasympathetic pathway during the exhaustion stage`, `The HPA axis during the alarm stage, mediated entirely by epinephrine`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `SUSTAINED cortisol elevation is the signature of the **HPA axis** (hypothalamus→CRH→pituitary→ACTH→adrenal CORTEX→cortisol), and sustained coping while the body still keeps up with the demand is the **resistance** stage of Selye's GAS. The alarm stage is the acute, epinephrine-driven sympathetic–adrenal-medullary burst, which is brief, not weeks long. Exhaustion is marked by depleted resources, illness and breakdown, not by participants still performing normally, and the parasympathetic pathway is "rest-and-digest," not the stress response. Attributing HPA output to epinephrine is also wrong — the HPA's product is cortisol.`
           }
         ]
@@ -142,7 +151,11 @@ $$\\text{Hypothalamus (CRH)} \\to \\text{Anterior pituitary (ACTH)} \\to \\text{
 - Yerkes–Dodson: moderate arousal is best, but the optimum is HIGHER for simple and LOWER for complex tasks.
 - Overjustification effect: extrinsic rewards can undermine intrinsic motivation.
 - GAS: Alarm (epinephrine, sympathetic) → Resistance (cortisol, HPA axis) → Exhaustion (immunosuppression, illness).
-- Amygdala drives rapid fear detection; cortisol is the chronic-stress hormone.`
+- Amygdala drives rapid fear detection; cortisol is the chronic-stress hormone.
+
+<!-- yield:low -->
+- Low-yield extras: the amygdala's "low road" (thalamus → amygdala, fast) vs "high road" (via cortex, slower, accurate); left/right prefrontal lateralization of emotional valence
+<!-- /yield -->`
     }
   ]
 };

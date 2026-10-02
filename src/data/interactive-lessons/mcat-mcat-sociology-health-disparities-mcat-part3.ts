@@ -51,13 +51,13 @@ Modern disparities research treats discrimination the way toxicology treats a to
 | Age-adjusted death rate (per 100,000/yr) | 110 | 45 |
 | Disease Z incidence (per 100,000/yr) | 150 | 140 |
 | Disease Z prevalence (per 100,000) | 400 | 900 |
-| Median survival after diagnosis | 2.1 yrs | 7.8 yrs |
+| Average survival after diagnosis | 2.7 yrs | 6.4 yrs |
 
 A columnist concludes: "South's higher prevalence proves the disease burden falls on the affluent, so resources should flow south."
 
 **Step 1 — reconcile the crude and adjusted rates.** Adjustment WIDENED the gap (90 vs. 60 became 110 vs. 45): South's population is older (older populations accumulate deaths, inflating its crude rate), so at any given age, North residents die of Disease Z at roughly 2.4 times South's rate. Crude rates understated the disparity; a question asking "why did adjustment increase North's relative rate?" is answered by age structure, not data error.
 
-**Step 2 — decode the incidence/prevalence inversion.** Incidence is nearly equal — people GET the disease at similar rates. Prevalence is 2.25x higher in the South because prevalence tracks incidence times DURATION: South's median survival is nearly four times longer, so its residents LIVE with the disease (raising prevalence), while North's residents die of it quickly (truncating prevalence). High prevalence here is a marker of BETTER outcomes — the columnist has read a survival advantage as a burden.
+**Step 2 — decode the incidence/prevalence inversion.** Incidence is nearly equal — people GET the disease at similar rates. Prevalence is 2.25x higher in the South because prevalence tracks incidence times DURATION: South's average survival is roughly 2.4 times longer, so its residents LIVE with the disease (raising prevalence), while North's residents die of it quickly (truncating prevalence). High prevalence here is a marker of BETTER outcomes — the columnist has read a survival advantage as a burden.
 
 **Step 3 — name the disparity correctly.** The injustice-relevant numbers are age-adjusted mortality and post-diagnosis survival: equal risk of getting sick, radically unequal survival once sick — pointing at detection timing and treatment access (Part 2's cascade), not at differential disease susceptibility. Fundamental cause logic (Part 1) predicts exactly this pattern for a treatable disease.
 
@@ -73,33 +73,38 @@ A columnist concludes: "South's higher prevalence proves the disease burden fall
         questions: [
           {
             question: `After an effective new therapy converts Disease K from rapidly fatal to a manageable chronic condition, surveillance shows the disease's prevalence tripling over a decade while incidence stays flat. The correct interpretation is:`,
-            options: [`An epidemic of new infections is now under way`, `The surveillance system is double-counting old cases`, `Prevention programs have failed, since prevalence rose`, `Longer survival enlarged the pool of living cases`],
+            options: [`An epidemic is now producing more new cases each year`, `The surveillance system is double-counting old cases`, `Prevention programs have failed, since prevalence rose`, `Longer survival enlarged the pool of living cases`],
             correctAnswer: 3,
+            yield: 'HIGH',
             explanation: `Prevalence approximates incidence times average duration; therapy that extends survival lengthens duration, multiplying prevalence with zero change in the rate of NEW cases (flat incidence rules out an epidemic and indicts nothing about prevention, and a known survival-extending therapy accounts for the rise without invoking counting error). Rising prevalence after treatment advances is a success signature, and misreading it as worsening burden is the classic trap this measure pair sets.`
           },
           {
             question: `District A's crude mortality rate is LOWER than District B's, but after age adjustment, District A's rate is substantially HIGHER. The best explanation is that District A:`,
             options: [`Has a younger population masking higher age-specific rates`, `Has an older population inflating its crude death rate`, `Recorded fewer deaths than actually occurred there`, `Has better healthcare and longer life expectancy than B`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `Crude rates blend age-specific rates with the population's age mix; a young population generates few deaths overall even when its residents die at higher rates AT EVERY AGE. Adjustment strips the age-mix advantage and reveals the underlying excess — the direction of the crude-to-adjusted flip diagnoses the age structure. An older population would push the crude rate UP, not down; underreporting would depress crude and adjusted rates alike; and better care or longer life expectancy is contradicted by the higher adjusted rate.`
           },
           {
             question: `A regression finds that a strong association between residential segregation and asthma disappears once the model controls for housing quality, air pollution exposure, and neighborhood poverty. The soundest conclusion is:`,
             options: [`Segregation has no causal effect on asthma`, `Segregation affects asthma only through air pollution`, `The controls are mediators through which segregation acts`, `Asthma drives families into segregated neighborhoods`],
             correctAnswer: 2,
+            yield: 'MEDIUM',
             explanation: `Segregation's causal role is precisely to ASSIGN housing quality, pollution exposure, and concentrated poverty to groups; those variables are mediators downstream of it, not confounders lurking behind it. Controlling for mediators shrinks the exposure's coefficient by construction — the analysis decomposes the mechanism rather than testing existence. Mistaking mediator adjustment for refutation is the over-adjustment fallacy, and because three pathways were controlled together, no single one (such as pollution alone) can be crowned the sole route.`
           },
           {
             question: `Which finding would MOST directly support the weathering hypothesis over an explanation based purely on current income differences?`,
             options: [`Preterm birth rates are equal across groups at all ages`, `The disparity widens with maternal age and persists at high income`, `The disparity is constant across ages and vanishes at high income`, `Disparities disappear after controlling for education and income`],
             correctAnswer: 1,
+            yield: 'MEDIUM',
             explanation: `Weathering posits cumulative physiological wear from chronic discrimination and disadvantage — so its unique predictions are dose-by-time (disparities growing with age as exposure accumulates) and persistence despite economic success (high SES does not eliminate the exposure). A pure current-income account predicts neither the age-widening nor the high-income residual. A gap that is flat across ages and vanishes at high income, or one erased by SES controls, is exactly what income-based accounts explain comfortably.`
           },
           {
             question: `First-generation immigrants from Country V show better health than their new country's native-born population despite lower incomes, but their grandchildren's health profiles converge downward toward those of similarly situated disadvantaged native groups. This pattern is strong evidence that:`,
             options: [`Health gaps reflect social exposure, not fixed group biology`, `The immigrants' genes deteriorated across generations`, `Healthcare in Country V is superior to the new country's`, `Selective migration of the healthiest fully explains the gap`],
             correctAnswer: 0,
-            explanation: `Genetic endowment is constant across the three generations; what changed is duration of exposure to the receiving society's diet, stressors, discrimination, and neighborhood conditions — and health changed with it. This immigrant-paradox trajectory is a natural experiment separating ancestry from environment, the standard rebuttal to biological readings of racialized health gaps. Neither superior origin-country healthcare nor selective migration of the healthiest can explain the grandchildren's decline, since both advantages would predict persistence rather than convergence.`
+            yield: 'HIGH',
+            explanation: `Genetic endowment is constant across the three generations; what changed is duration of exposure to the receiving society's diet, stressors, discrimination, and neighborhood conditions — and health changed with it. This immigrant-paradox trajectory is a natural experiment separating ancestry from environment, the standard rebuttal to biological readings of racialized health gaps. Selective migration can explain the first generation's advantage, but not why grandchildren converge specifically toward disadvantaged native profiles — that target tracks shared exposure, not ancestry; and origin-country healthcare cannot reach grandchildren raised in the new country at all.`
           }
         ]
       }

@@ -55,18 +55,21 @@ The **jigsaw classroom** is the canonical application (interdependent cooperatio
             question: `An employer believes older workers are less tech-savvy (a belief) but treats all applicants identically. The belief alone is best classified as:`,
             options: [`A stereotype (cognitive component)`, `Discrimination (behavioral component)`, `Prejudice (affective component)`, `Ethnocentrism`],
             correctAnswer: 0,
+            yield: 'ULTRA_HIGH',
             explanation: `A generalized belief about a group is a STEREOTYPE (cognitive). Because the employer does not act differentially, there is no discrimination (behavior), and a belief without negative feeling is not yet prejudice (affect). The MCAT tests this stereotype/prejudice/discrimination distinction directly.`
           },
           {
             question: `Capable students underperform on a math test after being reminded their group is "stereotypically bad at math." This is:`,
             options: [`Stereotype threat`, `In-group bias`, `The just-world hypothesis`, `Out-group homogeneity`],
             correctAnswer: 0,
-            explanation: `Stereotype threat is the performance drop caused by the anxiety and cognitive load of fearing one will confirm a negative stereotype about one's group. It impairs even well-prepared, motivated individuals and disappears when the stereotype is not made salient.`
+            yield: 'HIGH',
+            explanation: `Stereotype threat is the performance drop caused by the anxiety and cognitive load of fearing one will confirm a negative stereotype about one's group. It impairs even well-prepared, motivated individuals and shrinks or disappears when the stereotype is not made salient.`
           },
           {
             question: `According to Allport's contact hypothesis, intergroup contact reduces prejudice MOST effectively when groups have:`,
             options: [`Equal status and cooperative goals`, `Unequal status and competitive goals`, `Unequal status and cooperative goals`, `Equal status and competitive goals`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `Mere contact is not enough — and can worsen prejudice if competitive. Allport specified that contact reduces prejudice when groups have EQUAL status, pursue COMMON goals through COOPERATION, and have the SUPPORT of authorities. The jigsaw classroom operationalizes these conditions.`
           }
         ]

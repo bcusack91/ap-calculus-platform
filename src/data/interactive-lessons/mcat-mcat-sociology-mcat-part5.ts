@@ -65,7 +65,7 @@ In **Stage 2**, death rates fall first (sanitation, vaccines, food supply) while
 - **Urbanization** = growing share of population in cities. **Suburbanization** and **white flight** reshaped U.S. cities, concentrating poverty (cf. **residential segregation**).
 - **Gentrification:** wealthier residents move into a lower-income urban area, raising costs and displacing original residents.
 
-### Social Movements & Demographic Change (preview)
+### Demographic Change: Aging (preview)
 
 - Population aging (post-industrial, low fertility) shifts the **dependency ratio** — more retirees per worker — straining healthcare and pension systems, a high-yield MCAT context.`
     },
@@ -79,18 +79,21 @@ In **Stage 2**, death rates fall first (sanitation, vaccines, food supply) while
             question: `During Stage 2 of the demographic transition, population grows rapidly because:`,
             options: [`Death rates fall while birth rates remain high`, `Both birth and death rates rise together`, `Birth rates rise dramatically while death rates hold steady`, `Net immigration surges into the country`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Stage 2 is defined by falling death rates (sanitation, vaccines, food supply — public-health and nutrition gains) combined with persistently high birth rates → the "population explosion." Birth rates do not rise; they remain high but eventually fall in Stage 3 as children become costly and women's education/contraception expand. Rising death rates contradict the model, and migration is not the model's driver.`
           },
           {
             question: `A country's leading causes of death have shifted over 50 years from diarrheal disease and tuberculosis to heart disease and cancer, while its total fertility rate fell from 6.0 to 1.8. These two trends together illustrate:`,
-            options: [`Epidemiological and demographic transitions`, `A Malthusian crisis checking population growth`, `The Hispanic paradox and healthy-immigrant effect`, `Stage 2 of the demographic transition`],
+            options: [`Epidemiological and demographic transitions`, `A Malthusian crisis checking population growth`, `The Hispanic paradox and healthy-immigrant effect`, `Entry into Stage 2 of the demographic transition`],
             correctAnswer: 0,
-            explanation: `The disease shift from infectious to chronic/degenerative causes is the epidemiological transition (Omran); the fertility drop below replacement is late-stage demographic transition. They co-occur as societies develop. Malthus predicted famine and rising mortality from outpacing food supply — the opposite of this development pattern. The Hispanic paradox and healthy-immigrant effect concern immigrant health outcomes, not national trends. Stage 2 of the demographic transition pairs falling mortality with still-high fertility, so it cannot account for fertility falling to 1.8.`
+            yield: 'HIGH',
+            explanation: `The disease shift from infectious to chronic/degenerative causes is the epidemiological transition (Omran); the fertility drop below replacement is late-stage demographic transition. They co-occur as societies develop. Malthus predicted famine and rising mortality from outpacing food supply — the opposite of this development pattern. The Hispanic paradox and healthy-immigrant effect concern immigrant health outcomes, not national trends. Entering Stage 2 of the demographic transition would pair falling mortality with still-high fertility, so it cannot account for fertility falling to 1.8.`
           },
           {
             question: `A sociologist counters Malthus by arguing that world hunger persists not because there is too little food overall, but because political and economic power determines who can access it. This rebuttal is grounded in:`,
-            options: [`Conflict theory — the powerful control access to resources`, `Functionalism — emphasizing how famine restores equilibrium`, `Symbolic interactionism — emphasizing the meaning of food`, `Neo-Malthusianism — population outstrips food supply`],
+            options: [`Conflict theory — the powerful control who can access resources`, `Functionalism — emphasizing how famine restores equilibrium`, `Symbolic interactionism — emphasizing the meaning of food`, `Neo-Malthusianism — population outstrips food supply`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `The claim that scarcity is about distribution and who controls resources — not absolute supply — is a conflict-theory critique of Malthus. The functionalist trap would frame famine as a system "check" restoring balance, which is closer to Malthus himself. Symbolic interactionism would focus on micro-level meanings of food, not resource power. Neo-Malthusianism is the very position being rebutted: it blames hunger on population outstripping total food supply.`
           }
         ]

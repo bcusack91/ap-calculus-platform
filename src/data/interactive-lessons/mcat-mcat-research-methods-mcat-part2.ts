@@ -21,10 +21,10 @@ export const mcatResearchMethodsPart2Data = {
 
 | Threat | What it is | Example |
 |--------|-----------|---------|
-| **Confounding** | Unmeasured variable causes apparent effect | Older patients recover faster (age ← good health status) |
+| **Confounding** | Uncontrolled third variable, linked to both IV and DV, causes apparent effect | Treated patients recover faster, but they were also younger (age drives recovery) |
 | **Selection Bias** | Systematic differences in groups before study | Healthier patients self-select into treatment group |
 | **Attrition** | Differential dropout in groups | Sicker subjects quit drug trial early |
-| **History** | Environmental event affects all subjects | Epidemic changes disease prevalence during study |
+| **History** | Outside event during the study affects the outcome | A public-health campaign launches mid-study and changes participants' behavior |
 | **Maturation** | Subjects change naturally over time | Patients improve due to aging, not treatment |
 
 ### Threats to External Validity
@@ -36,7 +36,7 @@ export const mcatResearchMethodsPart2Data = {
 | **Volunteer Bias** | Volunteers differ from general population |
 | **Interaction with IV** | Effect depends on specific conditions (works in winter, not summer) |
 
-**Solution:** Randomization (internal validity) + Large diverse sample (external validity)`
+**Solution:** Random assignment (internal validity) + Representative (random) sample (external validity)`
     },
     {
       id: 'rm2-quiz',
@@ -45,15 +45,17 @@ export const mcatResearchMethodsPart2Data = {
       exercise: {
         questions: [
           {
-            question: `A study measures intelligence with a test correlated with wealth. This threatens which validity?`,
+            question: `A study uses an intelligence test whose scores mostly reflect familiarity with affluent-household vocabulary. This threatens which validity?`,
             options: [`Internal validity`, `External validity`, `Construct validity`, `Statistical validity`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `The test doesn't measure true intelligence (confounded by socioeconomic factors). This is a construct validity threat—the measurement doesn't measure what it claims.`
           },
           {
             question: `An RCT shows a medication is effective in a university hospital. Can we generalize to rural clinics?`,
             options: [`Yes, since randomization makes results apply everywhere`, `Questionable, since rural settings and patients may differ`, `No, since an RCT's results never generalize beyond its site`, `Only if the trial's p-value was well below 0.05`],
             correctAnswer: 1,
+            yield: 'ULTRA_HIGH',
             explanation: `External validity concerns generalization to different settings/populations. Rural patients may differ (age, comorbidities, medication access), limiting generalizability. Randomization protects internal validity, not generalizability; RCT results can extend to similar populations; and a smaller p-value says nothing about other settings.`
           },
           {
@@ -61,17 +63,19 @@ export const mcatResearchMethodsPart2Data = {
             options: [
               `Randomization balances confounds, but volunteers are atypical`,
               `External validity cannot be threatened once a study is randomized`,
-              `Self-selection biases the group comparison but not the sample`,
-              `Both are equally strong in any trial that uses randomization`
+              `Self-selection biases the diet-vs-control comparison but not the sample`,
+              `Both are equally strong in any trial that randomizes its participants`
             ],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Randomization balances confounds (strong internal validity), but volunteer samples aren't representative (weak external validity). Results may not generalize to non-motivated populations. Self-selection shaped who entered the sample; random assignment afterward still kept the diet and control groups comparable.`
           },
           {
             question: `A study on antacid effectiveness finds dropout rate 2× higher in placebo group. What threat is this?`,
             options: [`Selection bias`, `Attrition bias`, `Maturation`, `History`],
             correctAnswer: 1,
-            explanation: `Differential dropout (attrition) between groups biases results. Sicker placebo subjects quit → remaining placebo group appears healthier → drug looks better by comparison.`
+            yield: 'HIGH',
+            explanation: `Differential dropout (attrition) between groups biases results. If the sickest placebo subjects quit, the remaining placebo group appears healthier than it truly is, so the drug's benefit is UNDERESTIMATED. Differential dropout can bias the comparison in either direction, depending on who leaves which arm. Selection bias arises before the study, while maturation and history affect both groups over time.`
           }
         ]
       }
@@ -81,11 +85,11 @@ export const mcatResearchMethodsPart2Data = {
       type: 'text' as const,
       content: `### Key Takeaways — Part 2
 
-- **Internal Validity**: Random assignment controls confounds (high IV = good study)
+- **Internal Validity**: Random assignment controls confounds, so a change in the DV can be attributed to the IV
 - **External Validity**: Representative sampling + diverse conditions enable generalization
 - **Construct Validity**: Measurement must truly measure the construct intended
 - **Key Threats**: Confounding, selection bias, attrition (internal); volunteer bias, lab conditions (external)
-- **Ideal Study**: Randomized (strong internal) + Large diverse sample (strong external)`
+- **Ideal Study**: Random assignment (strong internal) + Representative (random) sample (strong external)`
     },
     {
       id: 'rm2-worked-examples',

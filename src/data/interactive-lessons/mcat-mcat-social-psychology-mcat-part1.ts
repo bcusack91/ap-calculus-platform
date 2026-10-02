@@ -47,18 +47,21 @@ People resolve dissonance by: **changing the attitude**, **changing the behavior
             question: `In Festinger & Carlsmith's study, participants paid only \\$1 to lie that a boring task was fun rated the task as MORE enjoyable than those paid \\$20. This is because:`,
             options: [`The $1 group shifted its attitude to reduce dissonance`, `The $1 group was paid enough to believe its own lie`, `The $20 group felt more dissonance about lying`, `The $20 group had too little justification to lie`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `The \\$20 group had a strong external justification ("I lied for the money"), so little dissonance and no attitude change. The \\$1 group couldn't justify lying externally, creating dissonance they resolved by genuinely deciding the task was fun. Less external justification → MORE internal attitude change.`
           },
           {
             question: `A consumer carefully weighs the technical specifications of two laptops before buying. According to the elaboration likelihood model, this person is using the:`,
             options: [`Central route to persuasion`, `Peripheral route to persuasion`, `Foot-in-the-door technique`, `Mere exposure effect`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `The central route involves high-effort, careful scrutiny of argument QUALITY (here, technical specs), and it produces durable, resistant attitudes. The peripheral route relies on surface cues like a celebrity endorsement or sheer number of arguments and yields temporary attitude change.`
           },
           {
             question: `Attitudes are MOST likely to predict behavior when the attitude is:`,
             options: [`Specific, strong, and from direct experience`, `Broad, general, and learned secondhand from others`, `Weak, recently formed, and held under social pressure`, `Purely cognitive, abstract, and lacking affect`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `The attitude–behavior link is strongest when the attitude is specific to the behavior, strong and accessible, and acquired through direct experience, AND when external situational pressures are weak. Broad, weak, or secondhand attitudes and strong situational pressure all weaken the link, and a purely cognitive attitude is not one of the recognized conditions that make attitudes predictive.`
           }
         ]
