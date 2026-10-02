@@ -80,7 +80,7 @@ Further detail: NAD$^+$ is the ADP-ribose donor; the modified residue is diphtha
         questions: [
           {
             question: `During initiation, the initiator tRNA is unique among all tRNAs because it:`,
-            options: [`Carries no amino acid until it binds the P site`, `Binds the A site with help from the delivery factor`, `Enters the P site directly, not via the A site`, `Pairs with stop codons instead of AUG`],
+            options: [`Carries no amino acid until it binds the P site`, `Binds the A site with help from an elongation factor`, `Enters the P site directly, not via the A site`, `Pairs with stop codons instead of the AUG start codon`],
             correctAnswer: 2,
             yield: 'HIGH',
             explanation: `Every elongator tRNA is delivered into the A site and reaches the P site only by translocation; the initiator (fMet-tRNA in prokaryotes, Met-tRNAi in eukaryotes) instead assembles with the SMALL subunit at the start codon and occupies the P site from the outset — so the first incoming elongator finds codon 2 waiting in the A site. This P-site-first geometry is why the first peptide bond can form immediately after the large subunit docks.`

@@ -69,7 +69,7 @@ export const mcatMolBioPart5Data = {
           },
           {
             question: `A patient with xeroderma pigmentosum (XP) has extreme UV sensitivity because they lack:`,
-            options: [`Nucleotide excision repair, which removes thymine dimers`, `Mismatch repair, which fixes errors missed by proofreading`, `Base excision repair, which removes single damaged bases`, `Proofreading by the 3' to 5' exonuclease of DNA polymerase`],
+            options: [`Nucleotide excision repair, which removes thymine dimers`, `Mismatch repair, which fixes errors missed by proofreading`, `Base excision repair, which removes single oxidized or deaminated bases`, `Proofreading by the 3' to 5' exonuclease of DNA polymerase`],
             correctAnswer: 0,
             yield: 'HIGH',
             explanation: `UV light causes cyclobutane thymine dimers (covalent links between adjacent thymines). NER normally excises a short patch around the dimer and resynthesizes the segment. Without NER, thymine dimers accumulate → replication errors → skin cancer at very young ages. XP patients must avoid all UV exposure.`
@@ -137,7 +137,7 @@ p53 is the central hub connecting DNA damage to cell fate:
           },
           {
             question: `Homologous recombination repair of double-strand breaks is more accurate than NHEJ because:`,
-            options: [`It copies the intact sister chromatid as a repair template`, `It directly rejoins the broken ends without trimming them`, `It works mainly in G$_1$, before replication can add errors`, `It uses reverse transcriptase to rebuild the missing sequence`],
+            options: [`It copies the intact sister chromatid as a repair template`, `It directly ligates the two broken ends without trimming them`, `It works mainly in G$_1$, before replication can add errors`, `It uses reverse transcriptase to rebuild the missing sequence`],
             correctAnswer: 0,
             yield: 'MEDIUM',
             explanation: `Homologous recombination (HR) uses the intact sister chromatid as a template to faithfully repair the break → high fidelity. NHEJ directly ligates the broken ends without a template → nucleotides may be lost or added → error-prone. HR is only available in S/G$_2$ phase (when a sister chromatid exists). BRCA1/BRCA2 are essential for HR — their loss forces reliance on error-prone NHEJ → genomic instability → cancer.`

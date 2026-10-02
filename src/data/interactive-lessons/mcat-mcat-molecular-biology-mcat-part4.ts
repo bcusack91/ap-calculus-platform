@@ -155,7 +155,7 @@ Every cell has the same DNA, but a neuron looks and acts nothing like a liver ce
           },
           {
             question: `Researchers find that a tumor suppressor gene has a normal DNA sequence but its promoter CpG island is heavily methylated. The gene is:`,
-            options: [`Epigenetically silenced, with its DNA sequence left unchanged`, `Mutated in its coding sequence, producing a truncated protein`, `Overexpressed, since promoter methylation recruits activators`, `Silenced by deletion of the promoter region from the genome`],
+            options: [`Epigenetically silenced; its DNA sequence is unchanged`, `Mutated in its coding sequence, producing a truncated protein`, `Overexpressed, since promoter methylation recruits activators`, `Silenced by deletion of the promoter region from the genome`],
             correctAnswer: 0,
             yield: 'HIGH',
             explanation: `This is epigenetic silencing: the DNA sequence is intact but methylation at the promoter prevents transcription factors from binding → gene is effectively "off." This is a common mechanism in cancer. Unlike mutations, epigenetic silencing is potentially reversible with demethylating drugs.`

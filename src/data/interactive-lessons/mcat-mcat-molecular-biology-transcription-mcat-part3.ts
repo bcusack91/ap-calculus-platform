@@ -85,7 +85,7 @@ And I$^s$, the super-repressor, = trans-dominant uninducible.
           },
           {
             question: `In the trp operon, tryptophan functions as a corepressor. This means high tryptophan levels:`,
-            options: [`Activate the repressor so it binds the operator`, `Bind the repressor and pull it off the operator`, `Directly inhibit RNA polymerase in all operons`, `Raise cAMP levels so CAP recruits polymerase`],
+            options: [`Enable the repressor to bind the operator`, `Bind the repressor and pull it off the operator`, `Directly inhibit RNA polymerase in all operons`, `Raise cAMP levels so CAP recruits polymerase`],
             correctAnswer: 0,
             yield: 'HIGH',
             explanation: `Anabolic logic runs opposite to catabolic: the trp repressor is born unable to bind DNA and needs its corepressor (the pathway's END PRODUCT) to fold into binding shape — so abundance of tryptophan shuts down its own production line. Compare lac: there the small molecule (allolactose, the substrate signal) INACTIVATES the repressor. One sentence to memorize: inducers disable repressors of catabolic operons; corepressors enable repressors of anabolic operons.`
@@ -106,7 +106,7 @@ And I$^s$, the super-repressor, = trans-dominant uninducible.
           },
           {
             question: `A female mammal silences one X chromosome in each cell (the Barr body), and daughter cells maintain the SAME silenced X through many divisions without any DNA sequence change. The property that best explains this stable inheritance is:`,
-            options: [`A mutation in the silenced X's promoters`, `Continuous action of the lac repressor`, `Epigenetic marks such as DNA methylation`, `Loss of the silenced chromosome during mitosis`],
+            options: [`A mutation in the silenced X's promoters`, `Sequence-specific repressors bound to X-linked promoters`, `Epigenetic marks like DNA methylation`, `Loss of the silenced chromosome during mitosis`],
             correctAnswer: 2,
             yield: 'HIGH',
             explanation: `Heritable-but-not-genetic is the definition of epigenetics: methylated CpGs are restored on new daughter strands by maintenance methyltransferases that recognize hemimethylated sites, so the silent state survives replication indefinitely — sequence untouched, chromosome retained (it is visible as the Barr body). The same machinery underlies genomic imprinting. Calico cat coat patterns are the standard phenotypic evidence: patches descend from single cells that fixed one X's inactivation early.`

@@ -70,7 +70,7 @@ Southern = DNA, Northern = RNA, Western = Protein → **S**NoW **DR**o**P**
           },
           {
             question: `A researcher wants to detect a specific mRNA in tissue samples. The appropriate technique is:`,
-            options: [`Northern blot, which probes size-separated RNA`, `Southern blot, which probes size-separated DNA`, `Western blot, which probes proteins with antibodies`, `Standard PCR with Taq polymerase directly on the RNA`],
+            options: [`Northern blot, which probes size-separated RNA`, `Southern blot, which probes size-separated genomic DNA`, `Western blot, which probes proteins with antibodies`, `Standard PCR with Taq polymerase directly on the RNA`],
             correctAnswer: 0,
             yield: 'HIGH',
             explanation: `Northern blot: extract total RNA → separate by gel electrophoresis → transfer to membrane → hybridize with labeled probe complementary to the target mRNA. Southern = DNA, Northern = RNA, Western = Protein (SNoW DRoP). Note: RT-PCR could also detect mRNA by first converting to cDNA.`
@@ -124,7 +124,7 @@ Southern = DNA, Northern = RNA, Western = Protein → **S**NoW **DR**o**P**
         questions: [
           {
             question: `Sanger DNA sequencing uses dideoxynucleotides (ddNTPs) because they:`,
-            options: [`Lack a 3'-OH, so each incorporation terminates the chain`, `Pair with any of the four bases, allowing universal reading`, `Are more stable than dNTPs at high sequencing temperatures`, `Cause polymerase to stall until a dNTP displaces them`],
+            options: [`Lack a 3'-OH, so each incorporation terminates the chain`, `Pair with any of the four bases, allowing universal reading`, `Are more stable than dNTPs at high sequencing temperatures`, `Cause polymerase to pause until a normal dNTP displaces them`],
             correctAnswer: 0,
             yield: 'MEDIUM',
             explanation: `ddNTPs lack the 3'-OH needed for the next phosphodiester bond → chain termination wherever a ddNTP is incorporated. By using all four ddNTPs (each labeled with a different fluorescent dye), you get fragments terminating at every position → gel electrophoresis separates by size → read the sequence from the gel pattern.`

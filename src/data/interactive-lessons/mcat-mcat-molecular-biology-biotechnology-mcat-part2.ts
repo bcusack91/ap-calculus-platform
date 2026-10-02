@@ -67,14 +67,14 @@ Mnemonic: SNoW DRoP (Southern-DNA, Northern-RNA, Western-Protein). A blot = elec
         questions: [
           {
             question: `On an agarose gel, DNA fragments migrate toward the positive electrode with the smallest fragments traveling farthest because:`,
-            options: [`Small fragments carry more negative charge per base`, `The gel matrix retards large fragments more`, `Large fragments carry a net positive charge`, `Small fragments are denatured into single strands`],
+            options: [`Small fragments carry more negative charge per base`, `The gel matrix retards large fragments more`, `Large fragments are held back by bound buffer cations`, `Small fragments are denatured into single strands`],
             correctAnswer: 1,
             yield: 'ULTRA_HIGH',
             explanation: `Charge-to-mass ratio is constant for DNA (one phosphate per nucleotide), so the field alone cannot separate sizes — the agarose mesh does, acting as a sieve that big molecules thread slowly. Migration distance falls roughly linearly as log(size) rises, hence ladders for calibration. The same principle transfers to SDS-PAGE, where SDS must first impose the uniform charge that DNA has naturally. If a question removes the gel (free solution), size separation disappears — a favorite conceptual twist.`
           },
           {
             question: `A researcher wants to know whether a specific gene is transcribed in cardiac tissue. The most direct technique is:`,
-            options: [`A Southern blot of cardiac genomic DNA`, `A western blot with an antibody to the gene's protein`, `A northern blot or RT-qPCR of cardiac RNA`, `A restriction digest of the cloned gene`],
+            options: [`A Southern blot of cardiac tissue genomic DNA`, `A western blot with an antibody to the gene's protein`, `A northern blot or RT-qPCR of cardiac RNA`, `A restriction digest of the gene cloned from heart tissue`],
             correctAnswer: 2,
             yield: 'ULTRA_HIGH',
             explanation: `Match the molecule to the question: transcription produces RNA, so measure RNA — northern blot or RT-qPCR. A Southern only reports the gene's presence in the genome (true of nearly every cell regardless of expression), and a western reports protein, which can diverge from transcription via translational control or protein turnover. The exam repeatedly tests whether you distinguish gene present / gene transcribed / protein made as three separate questions requiring three techniques (SNoW DRoP).`

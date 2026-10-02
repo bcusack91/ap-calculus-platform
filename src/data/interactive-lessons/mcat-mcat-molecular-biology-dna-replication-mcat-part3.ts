@@ -79,7 +79,7 @@ Replication is extraordinarily accurate because it stacks three filters:
           },
           {
             question: `In E. coli, mismatch repair excises the incorrect base from the newly synthesized strand rather than the template. The system identifies the new strand by:`,
-            options: [`Its transient lack of GATC adenine methylation`, `Its higher uracil content from dUTP misincorporation`, `RNA primers still attached to the template strand`, `Its association with translating ribosomes`],
+            options: [`Its transient lack of GATC adenine methylation`, `Its higher uracil content from dUTP misincorporation`, `RNA primers still attached to the template strand`, `Its association with actively translating ribosomes`],
             correctAnswer: 0,
             yield: 'MEDIUM',
             explanation: `Strand discrimination is the intellectual heart of MMR: a mismatch alone does not say which base is wrong. E. coli's Dam methylase marks GATC adenines, but methylation lags the fork — so for a few minutes the new strand is unmethylated, and the repair machinery nicks that strand for excision. Repairing the template instead would FIX the mutation into both strands. Human MMR uses strand nicks rather than methylation, but the logic is identical (Lynch syndrome when it fails).`

@@ -77,7 +77,7 @@ The blocking anti-insulin-receptor disease is a real, rare syndrome: type B insu
           },
           {
             question: `To determine what fraction of a patient's T cells express the surface protein CD4 — and to physically collect those cells alive for culture — the appropriate technique is:`,
-            options: [`Western blot of a T cell lysate`, `Flow cytometry with FACS sorting`, `ELISA of the patient's serum`, `Southern blot for the CD4 gene`],
+            options: [`Western blot of a whole T cell lysate`, `Flow cytometry with FACS sorting`, `ELISA for soluble CD4 in the patient's serum`, `Southern blot for the CD4 gene in T cell DNA`],
             correctAnswer: 1,
             yield: 'MEDIUM',
             explanation: `The question demands single-CELL resolution (a fraction of cells) plus live recovery — uniquely flow cytometry's territory: each cell files past a laser, its antibody-bound fluorescence is scored individually, and electrostatic sorting (FACS) deflects chosen cells into tubes, viable. A western or ELISA averages the population into one number and destroys or ignores the cells; a Southern reports a gene every T cell carries regardless of expression. Population-average vs per-cell readout is the discriminator to articulate.`

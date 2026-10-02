@@ -144,7 +144,7 @@ After translation, proteins must be properly modified and folded:
         questions: [
           {
             question: `Diphtheria toxin inactivates a eukaryotic elongation factor. In treated cells, ribosomes stall with the growing peptide attached to the tRNA in the A site and a deacylated tRNA in the P site. Which step is blocked?`,
-            options: [`Translocation of the ribosome by one codon`, `Aminoacyl-tRNA delivery into the open A site`, `Peptide-bond formation by large-subunit rRNA`, `Stop-codon recognition by a release factor`],
+            options: [`Translocation of the ribosome by one codon`, `Aminoacyl-tRNA delivery into the open A site`, `Peptide-bond formation by large-subunit rRNA`, `Stop-codon recognition by a eukaryotic release factor`],
             correctAnswer: 0,
             yield: 'MEDIUM',
             explanation: `Read the stalled state. The peptide already sits on the A-site tRNA, so the incoming tRNA was delivered AND the peptide bond was formed — those steps worked. The next step would shift the ribosome one codon: the peptidyl-tRNA moves from A to P and the empty tRNA from P to E, reopening the A site. That translocation step, driven by a GTP-using elongation factor, is what the toxin blocks, so translation halts and the cell dies. Release factors act only at stop codons, which a ribosome stalled mid-elongation never reaches. One toxin molecule can kill a cell because it modifies many factor molecules catalytically.`

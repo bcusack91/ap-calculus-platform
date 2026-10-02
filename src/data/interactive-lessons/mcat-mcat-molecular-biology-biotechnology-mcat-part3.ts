@@ -79,7 +79,7 @@ The standard inducible version is **CreER**: Cre fused to a modified estrogen-re
         questions: [
           {
             question: `CRISPR-Cas9 is retargeted to a new genomic site by:`,
-            options: [`Evolving a new Cas9 protein with different DNA-binding domains`, `Redesigning the ~20-nucleotide guide RNA sequence`, `Methylating the old target site to block binding`, `Swapping in a different restriction enzyme domain`],
+            options: [`Evolving a new Cas9 protein with different DNA-binding domains`, `Redesigning the ~20-nucleotide guide RNA sequence`, `Methylating the old target site to block Cas9 binding there`, `Swapping in the cutting domain of a different restriction enzyme`],
             correctAnswer: 1,
             yield: 'HIGH',
             explanation: `Specificity lives in the guide RNA's Watson-Crick pairing with the target; Cas9 is a constant cutting chassis. Reprogramming is therefore an oligonucleotide-design problem — cheap and fast — where earlier protein-engineering tools required engineering a new PROTEIN for every site. This protein-vs-RNA recognition distinction is the conceptual heart of every CRISPR question; restriction enzymes, with fixed recognition sites, cannot be retargeted at all.`

@@ -72,7 +72,7 @@ Because strands are antiparallel and the fork opens in one direction:
         questions: [
           {
             question: `DNA polymerases cannot initiate strand synthesis de novo because they strictly require:`,
-            options: [`A free 3'-hydroxyl on a base-paired primer strand`, `A free 5'-phosphate at the end of the template strand`, `Double-stranded DNA with no unwound regions`, `Simultaneous access to both the leading and lagging strands`],
+            options: [`A free 3'-hydroxyl on a base-paired primer strand`, `A free 5'-phosphate at the end of the template strand`, `Fully double-stranded template DNA with no unwound regions`, `Simultaneous access to both the leading and lagging strands`],
             correctAnswer: 0,
             yield: 'ULTRA_HIGH',
             explanation: `The polymerase mechanism is a single reaction repeated: the primer's 3'-OH attacks the alpha-phosphate of the incoming dNTP, releasing pyrophosphate. No 3'-OH, no chemistry — hence primase, an RNA polymerase that CAN start de novo, must lay an RNA primer first. This one mechanistic fact explains 5'-to-3'-only synthesis, the need for primers, Okazaki fragments, and (in Part 3) the telomere end-replication problem.`

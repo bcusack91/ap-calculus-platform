@@ -79,7 +79,7 @@ Two more results, for students going deeper:
         questions: [
           {
             question: `A treatment triples the steady-state level of an mRNA, but nuclear run-on assays show no change in its transcription rate. The best interpretation is that the treatment:`,
-            options: [`Slowed degradation of the existing mRNA`, `Activated the gene's enhancer elements`, `Recruited more RNA polymerase to the promoter`, `Amplified the gene's copy number in the genome`],
+            options: [`Slowed degradation of the existing mRNA`, `Activated the gene's distal enhancer elements`, `Recruited more RNA polymerase to the promoter`, `Amplified the gene's copy number in the genome`],
             correctAnswer: 0,
             yield: 'LOW',
             explanation: `Steady-state mRNA is a bathtub level set by faucet (synthesis) and drain (decay). Run-on measures the faucet directly and found it unchanged, so the drain must have narrowed: stabilization. Enhancer activation or polymerase recruitment would have raised the run-on signal. This synthesis-vs-stability dissection is the single most common analytical trap in transcription passages — never infer "transcriptional activation" from steady-state levels alone.`
@@ -107,7 +107,7 @@ Two more results, for students going deeper:
           },
           {
             question: `A reporter construct containing a gene's upstream region produces strong luciferase signal. Deleting a 200 bp internal segment INCREASES the signal fourfold. The deleted segment most likely contained:`,
-            options: [`The TATA box of the core promoter`, `A silencer bound by a repressor`, `The luciferase coding sequence`, `An enhancer bound by activators`],
+            options: [`The TATA box of the core promoter`, `A silencer bound by a repressor`, `The luciferase reporter coding sequence`, `An enhancer bound by an activator`],
             correctAnswer: 1,
             yield: 'MEDIUM',
             explanation: `Read deletions by their direction of effect: removing an ACTIVATING element (enhancer, core promoter) drops output — deleting the TATA box would nearly abolish it — while removing a REPRESSIVE element releases the brake and output rises. A fourfold gain means the segment was restraining transcription: a silencer. Deleting luciferase itself would kill all signal. This up-means-brake, down-means-gas rule solves reporter-dissection figures almost mechanically.`

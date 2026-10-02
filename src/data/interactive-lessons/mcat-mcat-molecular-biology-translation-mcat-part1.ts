@@ -77,7 +77,7 @@ However, a MUTANT tRNA with an altered anticodon can suppress stop codons (nonse
           },
           {
             question: `Wobble base pairing explains why:`,
-            options: [`Stop codons are decoded by tRNAs lacking amino acids`, `One codon can specify two different amino acids`, `Each codon requires its own tRNA, giving 61 tRNA species`, `Fewer than 61 tRNA species can read all sense codons`],
+            options: [`Stop codons are decoded by tRNAs lacking amino acids`, `One codon can specify two different amino acids`, `Each codon requires its own tRNA, giving 61 tRNA species`, `Fewer than 61 tRNA types read all sense codons`],
             correctAnswer: 3,
             yield: 'HIGH',
             explanation: `Relaxed pairing rules at the codon's third position (the anticodon's 5' base) — such as G-U pairs — let a single tRNA cover a family of synonymous codons, so far fewer than 61 tRNA species are needed. Note wobble NEVER creates ambiguity in the protein: synonymous codons already encode the same amino acid, so loose reading among them is safe. Stop codons remain tRNA-free, read by protein release factors.`

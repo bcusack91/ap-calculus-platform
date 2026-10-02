@@ -86,14 +86,14 @@ This exact class of mutation (in the related L-ferritin IRE) causes hereditary h
         questions: [
           {
             question: `During viral infection, a cellular kinase phosphorylates eIF2, the initiation factor that delivers initiator tRNA. The consequence for the infected cell is:`,
-            options: [`Selective destruction of viral ribosomes`, `Enhanced translation of all cellular mRNAs`, `A global shutdown of translation initiation`, `Increased transcription of viral genes`],
+            options: [`Selective destruction of viral mRNAs`, `Enhanced translation of all cellular mRNAs`, `Global shutdown of translation initiation`, `Increased transcription of viral genes`],
             correctAnswer: 2,
             yield: 'MEDIUM',
             explanation: `Viruses are obligate parasites of host ribosomes, so the cell's scorched-earth defense (via a kinase activated by double-stranded RNA) is to disable its OWN initiation: phosphorylated eIF2 cannot be recycled to deliver initiator tRNA, and bulk protein synthesis stops — viral synthesis included. It is the same eIF2 lever cells pull during starvation and unfolded-protein stress: one global brake, many hands on it. Note the specificity trade-off: the cell sacrifices its own translation too.`
           },
           {
             question: `When cellular iron is LOW, the iron regulatory protein (IRP) binds IREs on both ferritin and transferrin receptor mRNAs, yet ferritin production falls while TfR production rises. The opposite outcomes occur because:`,
-            options: [`IRE sits in ferritin's 5' UTR but in TfR's 3' UTR`, `Two different IRPs exist with opposite activities`, `Ferritin mRNA is transcribed less when iron is low`, `TfR protein is protected from proteasomal degradation by IRP`],
+            options: [`IRE sits in ferritin's 5' UTR but TfR's 3' UTR`, `Two different IRPs exist with opposite activities`, `Ferritin mRNA is transcribed less when iron is low`, `TfR protein is protected from proteasomal degradation by IRP`],
             correctAnswer: 0,
             yield: 'MEDIUM',
             explanation: `One sensor, one binding event, two mechanisms determined purely by geography: parked in the 5' UTR, IRP is a roadblock to scanning ribosomes; parked in the 3' UTR, it is a bodyguard against nucleases. The directions serve physiology — import more, store less, when iron is scarce. This is a classic example of position-dependent regulation; if you find yourself inventing extra proteins (like two IRPs with opposite activities) to explain opposite outcomes, look for a positional explanation first.`

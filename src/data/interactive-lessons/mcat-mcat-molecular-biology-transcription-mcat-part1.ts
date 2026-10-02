@@ -95,7 +95,7 @@ No primer requirement is why primase (an RNA polymerase) can start replication â
           },
           {
             question: `In eukaryotes, tRNA genes and protein-coding genes are transcribed by different enzymes. A toxin that selectively inactivates RNA polymerase II would directly halt synthesis of:`,
-            options: [`Both mRNA and tRNA equally`, `Large rRNAs in the nucleolus`, `tRNA and 5S rRNA only`, `mRNA but not rRNA or tRNA`],
+            options: [`Both mRNA and tRNA equally`, `Large rRNAs in the nucleolus`, `Small tRNAs and the 5S rRNA`, `mRNA but not rRNA or tRNA`],
             correctAnswer: 3,
             yield: 'HIGH',
             explanation: `Division of labor: Pol I makes the large rRNAs in the nucleolus, Pol II makes all mRNA (plus most regulatory RNAs), Pol III makes tRNA and 5S rRNA. Alpha-amanitin is the real toxin with this profile â€” mRNA production collapses while the other polymerases, far less sensitive, continue. A passage showing new protein synthesis decaying as existing mRNAs are degraded, with ribosome assembly initially intact, is describing exactly this selectivity.`

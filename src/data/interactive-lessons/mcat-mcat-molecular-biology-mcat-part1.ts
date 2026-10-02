@@ -142,7 +142,7 @@ Each new double helix has one old strand and one new strand (proven by the **Mes
           },
           {
             question: `AZT (azidothymidine) treats HIV by acting as a nucleoside analog. It terminates the growing DNA chain because:`,
-            options: [`It lacks a 3'-OH, so no further nucleotides can be added`, `It is incorporated faster than thymidine and crowds it out`, `It crosslinks the two DNA strands so they cannot separate`, `It inhibits helicase so the viral DNA cannot be unwound`],
+            options: [`It lacks a 3'-OH, so no further nucleotides can be added`, `It is incorporated faster than thymidine and crowds it out`, `It crosslinks the two DNA strands so they cannot separate`, `It inhibits helicase so the viral DNA template cannot be unwound`],
             correctAnswer: 0,
             yield: 'MEDIUM',
             explanation: `AZT is a thymidine analog with an azido group instead of 3'-OH. After incorporation by reverse transcriptase, there is no 3'-OH for the next nucleotide → chain termination. This preferentially targets reverse transcriptase (HIV) and not human DNA polymerases, though the mitochondrial DNA polymerase can be affected (side effects).`
