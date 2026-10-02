@@ -21,12 +21,25 @@ Bacteria must SYNTHESIZE tetrahydrofolate (THF), the one-carbon carrier required
 ### DNA and RNA Machines
 
 - **Fluoroquinolones** (ciprofloxacin) inhibit **DNA gyrase (topoisomerase II)** and **topoisomerase IV**. Gyrase introduces negative supercoils ahead of the replication fork; poisoning it traps the enzyme mid-cut, leaving double-strand breaks — **bactericidal**. Human type II topoisomerases are structurally distinct.
-- **Rifampin** binds the beta subunit of **bacterial RNA polymerase**, blocking initiation of transcription. Resistance arises fast from single point mutations in rpoB — hence rifampin is used in COMBINATION (classically for tuberculosis). Trivia with a mechanism: it turns secretions orange.
-- **Metronidazole** is a **prodrug**: only under the strongly reducing conditions inside anaerobes (ferredoxin-based metabolism) is its nitro group reduced to a radical that shreds DNA. Aerobes cannot activate it — selectivity via activation chemistry.
+- **Rifampin** binds **bacterial RNA polymerase**, blocking initiation of transcription. Resistance arises fast from single point mutations in the gene for its polymerase binding site — hence rifampin is used in COMBINATION (classically for tuberculosis).
 
-### Membrane Agents (Blunt Instruments)
+<!-- yield:low -->
+- Rifampin binds the polymerase's beta subunit, encoded by **rpoB** (the gene where the resistance mutations fall). Trivia: it turns secretions orange.
+<!-- /yield -->
 
-**Polymyxins** are cationic detergent-like peptides that bind gram-negative **LPS** and disrupt both membranes. Because all cell membranes are chemically similar, selectivity is poor — nephrotoxicity limits them to last-resort gram-negative infections. **Daptomycin** inserts into gram-positive membranes, collapsing the membrane potential (it is inactivated by pulmonary surfactant, so never used for pneumonia).
+- **Metronidazole** is a **prodrug**: only under the strongly reducing conditions inside anaerobes is its nitro group reduced to a radical that shreds DNA. Aerobes cannot activate it — selectivity via activation chemistry.
+
+<!-- yield:low -->
+- The electron donors that activate metronidazole are the low-potential ferredoxin/flavodoxin systems of anaerobic metabolism.
+<!-- /yield -->
+
+### Membrane Agent: Polymyxins
+
+**Polymyxins** are cationic detergent-like peptides that bind gram-negative **LPS** and disrupt both membranes. Because all cell membranes are chemically similar, selectivity is poor — nephrotoxicity limits them to last-resort gram-negative infections.
+
+<!-- yield:low -->
+- **Daptomycin** inserts into gram-positive membranes, collapsing the membrane potential (it is inactivated by pulmonary surfactant, so never used for pneumonia).
+<!-- /yield -->
 
 ### Beyond Bacteria: the Same Logic
 
@@ -42,30 +55,35 @@ Antifungals show the identical design principle with a different handle: fungal 
             question: `Sulfonamides do not affect human cells because humans:`,
             options: [`Express a sulfonamide-degrading esterase`, `Convert sulfonamides to inactive metabolites in the liver`, `Lack the enzyme pathway that synthesizes folate de novo`, `Have a mutated dihydropteroate synthase with low drug affinity`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `Sulfonamides mimic PABA and jam dihydropteroate synthase, an enzyme humans do not possess at all — we import dietary folate with transporters. Selectivity by target ABSENCE is the cleanest kind (compare trimethoprim, which relies on an affinity difference).`
           },
           {
             question: `Trimethoprim-sulfamethoxazole is synergistic primarily because the two drugs:`,
             options: [`Inhibit two sequential enzymes in the THF-synthesis pathway`, `Bind one enzyme at two separate allosteric sites`, `Have identical spectra but different half-lives`, `Prevent each other's efflux from the bacterial cell`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `Sulfamethoxazole blocks dihydropteroate synthase (upstream) and trimethoprim blocks dihydrofolate reductase (downstream). A sequential double blockade multiplies the reduction in THF flux and requires two independent resistance mutations to escape.`
           },
           {
             question: `Fluoroquinolones are bactericidal rather than merely halting replication because poisoned gyrase:`,
             options: [`Hydrolyzes ATP futilely until the cell's energy is depleted`, `Is trapped mid-cleavage, leaving double-strand DNA breaks`, `Overwinds DNA into positive supercoils that block only transcription`, `Releases endotoxin into the cytoplasm`],
             correctAnswer: 1,
+            yield: 'MEDIUM',
             explanation: `Quinolones stabilize the gyrase-DNA cleavage complex after the enzyme has cut both strands but before it reseals them. Colliding replication forks convert these frozen complexes into lethal chromosome fragmentation — the drug weaponizes the cell's own enzyme.`
           },
           {
             question: `Metronidazole kills anaerobes but spares aerobic bacteria and human cells because:`,
             options: [`Aerobic bacteria export it through multidrug efflux pumps`, `It inhibits a cell wall enzyme found only in anaerobes`, `Human mitochondria degrade the drug before it reaches DNA`, `Only anaerobes reduce it to its active DNA-damaging form`],
             correctAnswer: 3,
-            explanation: `Metronidazole is a prodrug whose activation demands electron donors at very negative redox potential (ferredoxin/flavodoxin systems of anaerobic metabolism). Cells living on oxygen never generate the radical, so the pharmacology recapitulates the microbe's ecology.`
+            yield: 'MEDIUM',
+            explanation: `Metronidazole is a prodrug whose activation demands electron donors at very negative redox potential, which only anaerobic metabolism supplies. Cells living on oxygen never generate the radical, so the pharmacology recapitulates the microbe's ecology.`
           },
           {
-            question: `Rifampin monotherapy for tuberculosis fails within weeks. The most likely reason is:`,
+            question: `Rifampin monotherapy for tuberculosis fails within weeks. (The gene rpoB encodes rifampin's binding site on RNA polymerase.) The most likely reason is:`,
             options: [`The drug cannot cross the waxy mycolic acid wall`, `Rifampin is bacteriostatic against all mycobacteria`, `Pre-existing rpoB point mutants are rapidly selected`, `Rifampin induces its own hepatic degradation to zero levels`],
             correctAnswer: 2,
+            yield: 'MEDIUM',
             explanation: `Rifampin's binding pocket on RNA polymerase is destroyed by any of several single amino acid substitutions in rpoB. In a large bacterial population such mutants pre-exist; monotherapy selects them within weeks, which is why TB regimens always combine drugs with independent targets.`
           }
         ]
@@ -78,10 +96,14 @@ Antifungals show the identical design principle with a different handle: fungal 
 
 - Folate: sulfonamides = PABA mimics (enzyme humans lack); trimethoprim = bacterial DHFR (affinity difference); TMP-SMX = sequential synergy
 - Fluoroquinolones trap gyrase/topo IV mid-cleavage → double-strand breaks → cidal
-- Rifampin blocks bacterial RNA-pol initiation; one rpoB point mutation = resistance → always combination therapy
-- Metronidazole = prodrug activated only by anaerobic (ferredoxin) reduction
-- Polymyxins/daptomycin attack membranes — effective but toxic (membranes are universal chemistry)
-- Antifungal parallel: ergosterol vs cholesterol = the fungal selectivity handle, with a thinner safety margin`
+- Rifampin blocks bacterial RNA-pol initiation; one point mutation in its target = resistance → always combination therapy
+- Metronidazole = prodrug activated only by anaerobic reduction
+- Polymyxins attack membranes — effective but toxic (membranes are universal chemistry)
+- Antifungal parallel: ergosterol vs cholesterol = the fungal selectivity handle, with a thinner safety margin
+
+<!-- yield:low -->
+- Low-yield extras: rifampin binds the beta subunit (gene rpoB) and turns secretions orange; metronidazole is activated by ferredoxin/flavodoxin electron donors; daptomycin depolarizes gram-positive membranes and is inactivated by lung surfactant
+<!-- /yield -->`
     },
     {
       id: 'abx3-worked-examples',

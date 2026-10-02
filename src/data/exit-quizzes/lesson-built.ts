@@ -74,6 +74,10 @@ export const LESSON_BUILT_EXIT_TOPICS = [
   'mcat-anatomy-physiology-sensory-mcat',
   'mcat-anatomy-physiology-embryology-mcat',
   'mcat-anatomy-physiology-mcat',
+  'mcat-microbiology-bacteria-mcat',
+  'mcat-microbiology-mcat',
+  'mcat-microbiology-antimicrobials-mcat',
+  'mcat-microbiology-viruses-mcat',
 ] as const
 
 function shuffle<T>(items: T[]): T[] {

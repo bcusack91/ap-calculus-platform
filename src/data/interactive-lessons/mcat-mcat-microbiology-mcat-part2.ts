@@ -70,36 +70,42 @@ $N = (5 \\times 10^3) \\times 2^6 = (5 \\times 10^3) \\times 64 = 3.2 \\times 10
             question: `Antibiotics are most effective during which growth phase?`,
             options: [`Log phase`, `Lag phase`, `Stationary phase`, `Death phase`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `During the log (exponential) phase, bacteria are actively dividing and most vulnerable. Many antibiotics target processes active during division (cell wall synthesis, DNA replication, translation), making this the most effective time to administer them.`
           },
           {
             question: `A culture of 1,000 cells with a 30-minute doubling time grows exponentially for 2 hours. Approximately how many cells result?`,
             options: [`16,000`, `4,000`, `8,000`, `2,000`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `2 hours = 120 minutes; with a 30-minute doubling time, $n = 4$ generations. $N = 1000 \\times 2^4 = 1000 \\times 16 = 16{,}000$ cells.`
           },
           {
             question: `During the stationary phase of the growth curve, the number of viable cells stays roughly constant because:`,
             options: [`Cell division is balanced by cell death`, `All cells have stopped metabolizing entirely`, `Binary fission has stopped in every cell`, `Oxygen in the medium has been fully consumed`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `In stationary phase, nutrient depletion and waste accumulation slow division until it just balances the death rate, so the net population plateaus. The rate of cell division equals the rate of cell death. Cells are still alive, metabolizing, and some are still dividing, just not net-growing; exhaustion of one nutrient such as oxygen is not the general cause.`
           },
           {
             question: `An organism that uses light for energy and CO$_2$ as its carbon source is best classified as a:`,
             options: [`Photoautotroph`, `Chemoautotroph`, `Photoheterotroph`, `Chemoheterotroph`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `"Photo-" = light energy; "-autotroph" = fixes CO$_2$ for carbon. Cyanobacteria are classic photoautotrophs. A photoheterotroph would use light for energy but organic molecules for carbon.`
           },
           {
             question: `A bacterium is killed by exposure to oxygen because it lacks superoxide dismutase and catalase. It is most likely a(n):`,
             options: [`Obligate anaerobe`, `Obligate aerobe`, `Facultative anaerobe`, `Aerotolerant anaerobe`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Obligate anaerobes (e.g., Clostridium) lack the enzymes to detoxify reactive oxygen species (superoxide, peroxide), so O$_2$ is lethal. Aerotolerant anaerobes have some of these enzymes and merely tolerate O$_2$ without using it.`
           },
           {
             question: `Which statement about the lag phase is correct?`,
             options: [`Cells are making enzymes but not yet dividing rapidly`, `Cells are dying faster than they are dividing`, `Cells are dividing at their maximum exponential rate`, `Cells are dormant, with no metabolic activity`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `In lag phase, the population size is roughly constant, but cells are metabolically active and far from dormant: they synthesize ribosomes, enzymes, and metabolites needed to adapt to the new medium before entering rapid (log-phase) division. Division at the maximum rate is the log phase, and deaths outpacing divisions is the death phase.`
           }
         ]

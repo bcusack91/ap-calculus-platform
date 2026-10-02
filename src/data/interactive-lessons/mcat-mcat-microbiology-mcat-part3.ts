@@ -64,36 +64,42 @@ Antibiotics DON'T work against viruses — viruses use host machinery!`
             question: `A bacterium acquires antibiotic resistance after being infected by a bacteriophage carrying resistance genes from another bacterium. This is:`,
             options: [`Transduction`, `Transformation`, `Conjugation`, `Mutation`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Transduction = phage-mediated DNA transfer between bacteria: a bacteriophage accidentally packages bacterial DNA and transfers it to a new host. Transformation is uptake of free DNA, and conjugation uses a pilus between two bacteria. Generalized transduction transfers random genes; specialized transduction transfers genes near the phage integration site.`
           },
           {
             question: `A non-pathogenic bacterium becomes virulent after taking up free DNA released by dead, lysed pathogenic cells in its environment. This process is:`,
             options: [`Transformation`, `Transduction`, `Conjugation`, `Transposition`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Transformation is the uptake of naked (free) DNA from the surroundings by a competent cell. This is exactly the Griffith experiment scenario, in which a harmless strain becomes virulent after absorbing DNA from killed virulent cells.`
           },
           {
             question: `A clinical strain of E. coli produces $\\beta$-lactamase. How does this enzyme confer resistance to penicillin?`,
             options: [`It hydrolyzes the $\\beta$-lactam ring`, `It pumps penicillin out through efflux channels`, `It alters the transpeptidase so penicillin cannot bind`, `It thickens the outer membrane to exclude the drug`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `$\\beta$-lactamases cleave the four-membered $\\beta$-lactam ring that defines penicillins and cephalosporins. Once the ring is opened, the drug can no longer inhibit the transpeptidases that build the cell wall. The drug is inactivated before it can block cell wall synthesis. This is enzymatic (degradative) resistance, distinct from efflux pumps and from altered penicillin-binding transpeptidases, which leave the drug intact.`
           },
           {
             question: `Which antibiotic class targets DNA gyrase (a topoisomerase), preventing the relief of supercoiling during DNA replication?`,
             options: [`Fluoroquinolones`, `Aminoglycosides`, `$\\beta$-lactams`, `Macrolides`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `Fluoroquinolones (e.g., ciprofloxacin) inhibit bacterial DNA gyrase/topoisomerase, blocking the supercoil management required for replication. Aminoglycosides and macrolides hit the ribosome (30S and 50S); $\\beta$-lactams hit the cell wall.`
           },
           {
             question: `Why are conventional antibiotics ineffective against viral infections such as influenza?`,
             options: [`Viruses lack the targets antibiotics act on`, `Viruses have a peptidoglycan coat that blocks the drugs`, `Viruses divide too slowly for antibiotics to act`, `Antibiotics are inactivated by the lipid viral envelope`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Antibiotics target bacterial structures and pathways (peptidoglycan synthesis, the 70S ribosome, DNA gyrase, folate synthesis). Viruses have none of these; they hijack host enzymes and ribosomes, so antibiotics have nothing to bind. Viruses have no peptidoglycan at all, and many viruses have no envelope, so neither explains the failure. Antivirals, not antibiotics, are required.`
           },
           {
             question: `Resistance to tetracycline frequently arises from a membrane protein that actively exports the drug, keeping its intracellular concentration below an effective level. This mechanism is a(n):`,
             options: [`Efflux pump`, `Target-site modification`, `Drug-degrading enzyme`, `Porin loss`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `Efflux pumps are transport proteins that expel antibiotics (commonly tetracyclines) faster than they enter, lowering the internal dose. This differs from enzymatic degradation and from mutating the drug's target, though bacteria can combine several mechanisms.`
           }
         ]

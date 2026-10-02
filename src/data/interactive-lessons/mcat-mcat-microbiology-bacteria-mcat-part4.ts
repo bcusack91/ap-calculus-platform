@@ -10,7 +10,11 @@ export const mcatBacteriaPart4Data = {
 
 ### From Colonization to Disease
 
-Infection proceeds through recognizable stages, each with a molecular tool: **adhesion** (pili, adhesins binding host receptors) → **colonization/invasion** (invasins, degradative enzymes like hyaluronidase and collagenase) → **immune evasion** (capsule, IgA proteases, antigenic variation, intracellular hiding) → **damage** (toxins, or the host's own inflammation). Not all colonists cause disease: **normal flora** occupy niches, compete for nutrients, and even prime immunity — broad-spectrum antibiotics that clear them open the door to opportunists (C. difficile colitis, Candida overgrowth).
+Infection proceeds through recognizable stages, each with a molecular tool: **adhesion** (pili, adhesins binding host receptors) → **colonization/invasion** (invasins, degradative enzymes that break down host tissue) → **immune evasion** (capsule, IgA proteases, antigenic variation, intracellular hiding) → **damage** (toxins, or the host's own inflammation). Not all colonists cause disease: **normal flora** occupy niches, compete for nutrients, and even prime immunity — broad-spectrum antibiotics that clear them open the door to opportunists (C. difficile colitis, Candida overgrowth).
+
+<!-- yield:low -->
+Named spreading enzymes: hyaluronidase and collagenase digest connective-tissue matrix.
+<!-- /yield -->
 
 ### Exotoxin vs Endotoxin — the Highest-Yield Table in Microbiology
 
@@ -46,30 +50,35 @@ Ask in order: (1) Which stage of infection is the experiment probing — adhesio
             question: `A vaccine is made by formalin-inactivating a purified bacterial product, and it elicits protective antibodies. The product must be:`,
             options: [`Lipopolysaccharide from the outer membrane`, `Peptidoglycan wall fragments`, `A secreted protein exotoxin`, `A capsular lipid anchor`],
             correctAnswer: 2,
+            yield: 'MEDIUM',
             explanation: `Toxoids are denatured protein exotoxins: antigenic enough to raise neutralizing antitoxin, but catalytically dead (tetanus and diphtheria vaccines). LPS is poorly antigenic, structurally required, and cannot be 'inactivated' into a useful protein-like immunogen.`
           },
           {
             question: `Cholera toxin causes profuse watery diarrhea WITHOUT destroying intestinal cells. Its A subunit acts by:`,
             options: [`ADP-ribosylating a stimulatory G protein`, `Cleaving SNARE proteins in enterocytes`, `Forming pores in the apical membrane`, `ADP-ribosylating elongation factor EF-2`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Cholera toxin's ADP-ribosylation freezes G-alpha-s in its GTP-bound (active) state; runaway cAMP drives CFTR-mediated chloride secretion, and water follows osmotically. The epithelium stays intact — pure signaling hijack. EF-2 ADP-ribosylation is DIPHTHERIA toxin's move.`
           },
           {
             question: `Botulinum and tetanus toxins both cleave SNARE proteins, yet botulism causes flaccid paralysis while tetanus causes spastic paralysis. The difference arises because the toxins:`,
             options: [`Use entirely different catalytic mechanisms`, `Act on different types of neurons`, `Differ in heat stability, not in target site`, `Are endotoxin vs exotoxin respectively`],
             correctAnswer: 1,
+            yield: 'MEDIUM',
             explanation: `Same enzymatic step — SNARE cleavage stops vesicle fusion — but location decides the sign: silencing motor-neuron ACh output relaxes muscle (flaccid); silencing inhibitory interneurons disinhibits motor neurons (spastic). A beautiful example of context determining phenotype.`
           },
           {
             question: `A patient on broad-spectrum antibiotics for pneumonia develops severe colitis caused by toxin-producing C. difficile. The predisposing event was:`,
             options: [`Direct stimulation of C. difficile growth by the antibiotic`, `Transfer of toxin genes from the pneumonia pathogen`, `Antibiotic-induced mutation of gut commensals into pathogens`, `Elimination of competing normal gut flora`],
             correctAnswer: 3,
+            yield: 'MEDIUM',
             explanation: `Normal flora suppress C. difficile by competition for nutrients and niches. Broad-spectrum therapy clears the competitors; ingested or resident C. difficile spores (intrinsically resistant to many drugs) germinate and expand. Antibiotics select and vacate — they neither feed, mutate, nor transfer.`
           },
           {
             question: `Toxic shock syndrome toxin activates about 20 percent of the body's T cells regardless of their antigen specificity. It accomplishes this by:`,
-            options: [`Being processed and presented on MHC I in every cell`, `Directly binding the CD8 coreceptor on T cells`, `Crosslinking MHC II on APCs to T-cell receptors outside the peptide groove`, `Mimicking interleukin-2 at its receptor`],
+            options: [`Being processed and presented on MHC I in every cell`, `Directly binding the CD8 coreceptor on T cells`, `Crosslinking MHC II to T-cell receptors outside the groove`, `Mimicking interleukin-2 at its receptor`],
             correctAnswer: 2,
+            yield: 'MEDIUM',
             explanation: `Superantigens clamp MHC II to the TCR's variable beta region externally, bypassing peptide specificity entirely — so entire TCR V-beta families fire at once. Normal antigens activate roughly 1 in 10,000 T cells; superantigens activate 1 in 5, releasing a systemic cytokine storm.`
           }
         ]
@@ -85,7 +94,11 @@ Ask in order: (1) Which stage of infection is the experiment probing — adhesio
 - Endotoxin = lipid A of LPS, gram-negative only, released on lysis, heat-stable, septic shock
 - A-B architecture: B binds, A acts — ADP-ribosylation (diphtheria: EF-2; cholera: G$_s$ → cAMP), SNARE proteases (tetanus spastic vs botulinum flaccid)
 - Superantigens crosslink MHC II-TCR nonspecifically → cytokine storm
-- Normal flora are a defense; clearing them invites C. difficile — antibiotics vacate niches, they do not create pathogens`
+- Normal flora are a defense; clearing them invites C. difficile — antibiotics vacate niches, they do not create pathogens
+
+<!-- yield:low -->
+- Low-yield extras: hyaluronidase and collagenase are the named tissue-spreading enzymes
+<!-- /yield -->`
     },
     {
       id: 'bac4-worked-examples',

@@ -44,30 +44,35 @@ The **plaque assay** counts infectious units: virus dilutions on a cell monolaye
             question: `During the eclipse period of a one-step growth experiment, no infectious virions can be recovered even from lysed cells because:`,
             options: [`The virions have all budded out of the cell already`, `Host restriction enzymes have destroyed the viral genome`, `The virus has integrated permanently into the host chromosome`, `The virion has uncoated and new parts are not yet assembled`],
             correctAnswer: 3,
+            yield: 'MEDIUM',
             explanation: `Uncoating destroys the original particle; genomes and proteins are then synthesized separately and only later self-assemble into complete particles. Between uncoating and first assembly, infectivity is literally zero — a pattern impossible for any organism that reproduces by division, and the classic proof that viruses replicate by synthesis-and-assembly.`
           },
           {
             question: `Norovirus (naked capsid) spreads efficiently by the fecal-oral route and persists on surfaces, while influenza (enveloped) transmits mainly by fresh respiratory droplets. The property that best explains this difference is:`,
             options: [`The lipid envelope's fragility to acid, bile, and drying`, `The larger, more stable genomes of naked viruses`, `Faster replication of enveloped viruses in airway cells`, `The ability of naked viruses to infect without receptors`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `An envelope is a fragile lipid bilayer: stomach acid, bile salts, desiccation, and soap destroy it — and with it, infectivity, since the fusion glycoproteins live there. Protein-only capsids withstand the GI tract and dry surfaces. Genome size and replication speed do not explain survival outside the host, and all viruses still need receptors.`
           },
           {
             question: `A virus infects human hepatocytes but not human neurons, and chimpanzee but not mouse hepatocytes. The most direct determinant of this tropism is:`,
-            options: [`Temperature differences between the tissues`, `Attachment protein fit to a host cell receptor`, `GC content matching the host cell's codon usage`, `Host cell size relative to the virion diameter`],
+            options: [`Temperature differences between the tissues`, `Attachment protein fit to a host receptor`, `GC content matching the host cell's codon usage`, `Host cell size relative to the virion diameter`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Attachment is a lock-and-key event between a virion surface protein and a specific host receptor; only cells displaying the receptor (in a compatible species version) can be entered. Downstream intracellular factors refine tropism, but receptor match is the gatekeeper and the standard MCAT answer — tissue temperature, genome GC content, and cell size do not decide which cells a virus can enter.`
           },
           {
             question: `Which feature would definitively establish that a novel infectious agent is a virus rather than a small bacterium?`,
             options: [`It passes through a 0.2 micron bacteriological filter`, `It can be seen only with an electron microscope`, `It replicates only inside cells and has no ribosomes`, `It is unaffected by penicillin and other beta-lactams`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `Filterability and small size are suggestive but some bacteria (Mycoplasma, which also lacks the cell wall penicillin targets) squeeze through, and intracellular life alone fits Rickettsia and Chlamydia too. The decisive combination is obligate intracellular replication PLUS absence of the machinery of life — no ribosomes, no energy metabolism, single nucleic acid type.`
           },
           {
             question: `In a plaque assay, 0.1 mL of a 10^-6 dilution yields 42 plaques. The titer of the original stock is closest to:`,
             options: [`4.2 x 10^7 PFU/mL`, `4.2 x 10^6 PFU/mL`, `4.2 x 10^9 PFU/mL`, `4.2 x 10^8 PFU/mL`],
             correctAnswer: 3,
+            yield: 'MEDIUM',
             explanation: `Titer = plaques / (dilution x volume) = 42 / (10^-6 x 0.1 mL) = 42 x 10^7 = 4.2 x 10^8 PFU/mL. The factor most often dropped is the 0.1 mL plating volume, which adds one more power of ten.`
           }
         ]

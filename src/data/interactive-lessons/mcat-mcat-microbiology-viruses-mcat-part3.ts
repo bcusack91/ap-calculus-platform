@@ -21,19 +21,29 @@ Host ribosomes only translate mRNA. Every genome type is a different distance fr
 | dsRNA (rota) | (−) strand transcribed by packaged RdRp | **Yes** | Cytoplasm |
 | Retrovirus (+) ssRNA (HIV) | RNA → DNA → integrate → host RNA pol | **Yes** — reverse transcriptase (+ integrase) | Both: RT in cytoplasm, integration/transcription in nucleus |
 
-Two corollaries worth deriving, not memorizing: purified (+)RNA genomes alone can launch an infection (ribosomes accept them directly); purified (−)RNA or dsRNA genomes CANNOT (the required RdRp was in the discarded virion). And host cells have NO RNA-dependent RNA polymerase — every RNA virus except retroviruses must encode one.
+Two corollaries worth deriving, not memorizing: purified (+)RNA genomes alone can launch an infection (ribosomes accept them directly); purified (−)RNA or dsRNA genomes CANNOT (the required RdRp was in the discarded virion). And host cells have NO RNA-dependent RNA polymerase — virtually every RNA virus except retroviruses must encode one.
 
 ### The Retrovirus Exception to the Central Dogma
 
-HIV carries two (+)RNA copies plus **reverse transcriptase (RT)**: RNA → dsDNA, which **integrase** inserts into the host genome as a **provirus** — permanent, replicated with every cell division (the molecular reason HIV cannot be cured by suppressing replication alone; compare lysogeny). Host RNA polymerase II then transcribes progeny genomes and mRNA; **protease** matures the budding particle. Each enzyme is a drug target: RT inhibitors (nucleoside chain terminators like AZT), integrase inhibitors, protease inhibitors. RT is **error-prone with no proofreading** → HIV's ferocious mutation rate → combination therapy (HAART) is mandatory, single drugs fail by the Luria-Delbruck logic.
+HIV carries two (+)RNA copies plus **reverse transcriptase (RT)**: RNA → dsDNA, which **integrase** inserts into the host genome as a **provirus** — permanent, replicated with every cell division (the molecular reason HIV cannot be cured by suppressing replication alone; compare lysogeny). Host RNA polymerase II then transcribes progeny genomes and mRNA; **protease** matures the budding particle. Each enzyme is a drug target: RT inhibitors (nucleoside chain terminators like AZT), integrase inhibitors, protease inhibitors. RT is **error-prone with no proofreading** → HIV's ferocious mutation rate → combination therapy (HAART) is mandatory: a single drug fails because resistant mutants already exist in the viral population before treatment begins.
+
+<!-- yield:low -->
+- That pre-existing-mutant argument is the Luria-Delbruck logic: resistance mutations arise at random, and the drug only selects them.
+<!-- /yield -->
 
 ### RNA Virus Sloppiness & Its Consequences
 
-Viral RdRps also lack proofreading: mutation rates ~10,000-fold above DNA-based genomes. Consequences: quasispecies swarms, rapid antigenic **drift** (point mutations in surface proteins — why flu vaccines update annually), and strict genome-size ceilings (error catastrophe). **Segmented** genomes (influenza's 8 RNA pieces) add **reassortment**: two strains co-infecting one cell shuffle whole segments — antigenic **shift**, the pandemic mechanism (covered further in Part 4).
+Most viral RdRps also lack proofreading (coronaviruses are a rare exception): mutation rates thousands of times or more above DNA-based genomes. Consequences: quasispecies swarms and rapid antigenic **drift** (point mutations in surface proteins — why flu vaccines update annually).
+
+<!-- yield:low -->
+- A third consequence: strict genome-size ceilings — past them, mutations accumulate faster than selection can purge them (error catastrophe).
+<!-- /yield -->
+
+**Segmented** genomes (influenza's 8 RNA pieces) add **reassortment**: two strains co-infecting one cell shuffle whole segments — antigenic **shift**, the pandemic mechanism (covered further in Part 4).
 
 ### Envelope Acquisition & Latency
 
-Enveloped animal viruses bud through a host membrane pre-studded with viral glycoproteins — plasma membrane (HIV, flu) or internal membranes (herpes buds from nuclear/ER membranes). Some DNA viruses establish **latency** without integration: herpesviruses persist as circular episomes in neurons, reactivating under stress — same strategic idea as lysogeny, different molecular bookkeeping (episome vs provirus vs prophage).`
+Enveloped animal viruses bud through a host membrane pre-studded with viral glycoproteins — plasma membrane (HIV, flu) or internal membranes (herpesviruses first bud through the nuclear envelope). Some DNA viruses establish **latency** without integration: herpesviruses persist as circular episomes in neurons, reactivating under stress — same strategic idea as lysogeny, different molecular bookkeeping (episome vs provirus vs prophage).`
     },
     {
       id: 'vir3-quiz1',
@@ -45,30 +55,35 @@ Enveloped animal viruses bud through a host membrane pre-studded with viral glyc
             question: `Purified genomic RNA from poliovirus initiates a full infection when transfected into cells, but purified rabies virus RNA does not. The difference exists because:`,
             options: [`Rabies RNA is degraded faster by cytoplasmic host nucleases`, `Poliovirus RNA is circular and so resists nucleases`, `Polio RNA is (+) sense; rabies RNA needs packaged RdRp`, `Rabies needs the host nucleus to transcribe its RNA`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `Ribosomes translate (+) sense RNA immediately — including making new RdRp — so the naked poliovirus genome suffices. A (−) sense genome like rabies is untranslatable; without the RdRp packaged in the virion, which is discarded when only RNA is transfected, there is no way to produce mRNA, and host cells possess no RNA-dependent RNA polymerase to help. Poliovirus RNA is linear, and rabies replicates in the cytoplasm, not the nucleus.`
           },
           {
             question: `Antiretroviral therapy fully suppresses HIV replication for years, yet stopping the drugs allows the virus to rebound from the patient's own cells. The reservoir exists because:`,
             options: [`Reverse transcriptase remains active in plasma`, `Extracellular virions persist in bone marrow`, `The envelope protects virions from drugs indefinitely`, `Integrated provirus persists in long-lived cells`],
             correctAnswer: 3,
+            yield: 'HIGH',
             explanation: `Integrase writes the viral genome permanently into host chromosomes; resting memory T cells carry this provirus for decades, invisible to drugs that only block NEW infection events. Cell division faithfully copies the provirus like any other gene through normal cellular DNA replication — the same persistence logic as a prophage.`
           },
           {
             question: `A novel virus replicates entirely in the cytoplasm and its virions contain an RNA-dependent RNA polymerase. Its genome CANNOT be:`,
             options: [`(+) single-stranded RNA`, `Double-stranded RNA`, `(−) single-stranded RNA`, `Segmented (−) RNA`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `A (+) RNA virus has no need to package a polymerase — its genome is translated on arrival, producing RdRp fresh. Packaged RdRp is the signature of genomes that ribosomes cannot read: (−) RNA and dsRNA (whose + strand is locked in the duplex). Watch for this 'what must the particle carry' inversion.`
           },
           {
             question: `Nucleoside analogs like AZT selectively inhibit HIV because, once phosphorylated, they are incorporated by reverse transcriptase and terminate the DNA chain. Selectivity over host DNA synthesis arises because:`,
             options: [`Host kinases cannot phosphorylate AZT to its active form`, `AZT is taken up only by HIV-infected T cells`, `RT incorporates it far more readily than host polymerases`, `Host replicative polymerases synthesize RNA, not DNA`],
             correctAnswer: 2,
-            explanation: `Selectivity is quantitative: RT's active site is sloppier — it binds and incorporates the 3'-azido analog far more readily than host DNA polymerases do and, lacking 3'-to-5' exonuclease proofreading, cannot remove it. High-fidelity host replicases discriminate against and excise such analogs far better. Host kinases do phosphorylate AZT, and it enters uninfected cells too, so the selectivity must come from the polymerase. (Mitochondrial polymerase gamma is the collateral target behind toxicity.)`
+            yield: 'MEDIUM',
+            explanation: `Selectivity is quantitative: RT's active site is sloppier — it binds and incorporates the 3'-azido analog far more readily than host DNA polymerases do and, lacking 3'-to-5' exonuclease proofreading, cannot remove it. High-fidelity host replicases discriminate against and excise such analogs far better. Host kinases do phosphorylate AZT, and it enters uninfected cells too, so the selectivity must come from the polymerase.`
           },
           {
             question: `Influenza virus, unusually for an RNA virus, replicates in the nucleus, and herpesvirus establishes lifelong latency in neurons WITHOUT integrating. Herpes latency is maintained as:`,
             options: [`A linear genome inserted by viral integrase`, `A circular episome persisting in the nucleus`, `Continuous low-level lytic replication`, `A dsRNA intermediate kept in the cytoplasm`],
             correctAnswer: 1,
+            yield: 'MEDIUM',
             explanation: `Herpesviral DNA circularizes and persists as a nonintegrated episome in the nucleus; latency-associated transcripts keep it quiet, expressing few genes, and stress reactivates full lytic gene expression. Contrast the three persistence bookkeeping systems: prophage (integrated, phage), provirus (integrated, retrovirus), episome (not integrated, herpes).`
           }
         ]
@@ -84,7 +99,11 @@ Enveloped animal viruses bud through a host membrane pre-studded with viral glyc
 - HIV: RT → dsDNA → integrase → provirus (permanent reservoir) → host RNA pol II; RT, integrase, protease = the drug targets
 - No proofreading in RdRp/RT → quasispecies, antigenic drift, mandatory combination therapy
 - Segmented genomes reassort in co-infected cells → antigenic shift (pandemics)
-- Persistence bookkeeping: prophage (phage, integrated), provirus (HIV, integrated), episome (herpes, not integrated)`
+- Persistence bookkeeping: prophage (phage, integrated), provirus (HIV, integrated), episome (herpes, not integrated)
+
+<!-- yield:low -->
+- Low-yield extras: the pre-existing-resistant-mutant argument is the Luria-Delbruck logic; error catastrophe caps RNA genome size; actinomycin D is the classic DNA-templated transcription blocker used to rule out DNA steps
+<!-- /yield -->`
     },
     {
       id: 'vir3-worked-examples',
@@ -94,7 +113,7 @@ Enveloped animal viruses bud through a host membrane pre-studded with viral glyc
 <details>
 <summary><b>Example 1: Deduce the genome from three experiments</b></summary>
 
-**Question:** Virus X: (a) replication is unaffected by actinomycin D (a DNA-templated transcription inhibitor); (b) its purified genome is NOT infectious; (c) virions contain a polymerase. Classify the genome.
+**Question:** Virus X: (a) replication is unaffected by a drug that blocks DNA-templated transcription; (b) its purified genome is NOT infectious; (c) virions contain a polymerase. Classify the genome.
 
 **Solution:**
 1. (a) No DNA step anywhere → rules out DNA viruses AND retroviruses (whose proviral transcription needs DNA templates).
@@ -102,8 +121,12 @@ Enveloped animal viruses bud through a host membrane pre-studded with viral glyc
 3. (c) Packaged polymerase confirms it: **(−) ssRNA or dsRNA** — an RdRp-carrying RNA virus.
 4. To split the final pair: check whether the genome is RNase-resistant when double-stranded (dsRNA) or sensitive (ss).
 
-**MCAT Strategy:** The three classic probes — actinomycin D sensitivity, naked-genome infectivity, virion polymerase — uniquely bin every genome class. Practice the flowchart.
+**MCAT Strategy:** The three classic probes — sensitivity to a DNA-templated transcription blocker, naked-genome infectivity, virion polymerase — uniquely bin every genome class. Practice the flowchart.
 </details>
+
+<!-- yield:low -->
+- The classic DNA-templated transcription inhibitor used in this test is actinomycin D.
+<!-- /yield -->
 
 <details>
 <summary><b>Example 2: Predict phenotypic mixing vs reassortment</b></summary>

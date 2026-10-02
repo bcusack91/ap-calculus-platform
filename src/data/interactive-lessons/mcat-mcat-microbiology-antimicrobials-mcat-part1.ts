@@ -23,7 +23,12 @@ An antibiotic must poison the microbe while sparing the host. Every drug class e
 ### Vocabulary the MCAT Expects
 
 - **Bactericidal** drugs kill bacteria (beta-lactams, vancomycin, aminoglycosides, fluoroquinolones); **bacteriostatic** drugs halt growth and let the immune system finish the job (tetracyclines, macrolides, sulfonamides). Static drugs can suffice in healthy hosts but not in immunocompromised ones.
-- **MIC (minimum inhibitory concentration):** lowest drug concentration preventing visible growth in vitro; **MBC** is the lowest that kills. A disk-diffusion (Kirby-Bauer) zone of inhibition sizes susceptibility.
+- **MIC (minimum inhibitory concentration):** lowest drug concentration preventing visible growth in vitro; **MBC** is the lowest that kills. In a disk-diffusion test, a larger zone of inhibition around the drug disk means a more susceptible organism.
+
+<!-- yield:low -->
+- The standardized disk-diffusion method is called the Kirby-Bauer test.
+<!-- /yield -->
+
 - **Broad vs narrow spectrum:** broad-spectrum drugs hit many species — and devastate normal flora (risk: C. difficile overgrowth).
 
 ### Beta-Lactams: Suicide Substrates for Transpeptidase
@@ -48,30 +53,35 @@ Vancomycin is a large glycopeptide that binds the **D-Ala-D-Ala terminus itself*
             question: `Beta-lactam antibiotics are selectively toxic to bacteria because human cells:`,
             options: [`Lack a peptidoglycan cell wall and the PBPs that build it`, `Pump the drug out with P-glycoprotein efflux`, `Use 80S rather than 70S ribosomes`, `Absorb preformed folate from the diet`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Beta-lactams inhibit transpeptidases that cross-link peptidoglycan. Human cells have no wall and no PBPs, so the target simply does not exist in the host. Ribosome and folate differences explain the selectivity of OTHER drug classes.`
           },
           {
             question: `Penicillin added to a culture of Mycoplasma pneumoniae has no effect because this organism:`,
             options: [`Produces a chromosomal beta-lactamase`, `Grows too rapidly for the drug to act`, `Lacks a cell wall entirely`, `Has an impermeable outer membrane`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `Mycoplasma has no peptidoglycan — its membrane is stabilized with sterols instead. No wall means no transpeptidase target, giving intrinsic resistance to every cell-wall agent (beta-lactams AND vancomycin).`
           },
           {
             question: `A neutropenic leukemia patient develops a bloodstream infection. Why is a bactericidal drug strongly preferred over a bacteriostatic one?`,
             options: [`Bactericidal drugs always cover a broader spectrum of organisms`, `Bacteriostatic drugs depend on neutrophils to clear halted bacteria`, `Bacteriostatic drugs cannot penetrate the bloodstream to reach bacteria`, `Bactericidal drugs are less toxic to human cells than static drugs`],
             correctAnswer: 1,
+            yield: 'MEDIUM',
             explanation: `A static drug freezes bacterial growth but leaves killing to phagocytes. With neutrophils absent, halted organisms survive and resume growth. The distinction is about the host's contribution, not spectrum, penetration, or toxicity.`
           },
           {
             question: `Vancomycin-resistant enterococci evade the drug by:`,
-            options: [`Hydrolyzing vancomycin with a modified beta-lactamase`, `Methylating the 23S rRNA of the 50S subunit`, `Thickening the outer membrane to exclude the drug`, `Swapping D-Ala-D-Ala termini for D-Ala-D-lactate`],
+            options: [`Hydrolyzing vancomycin with a modified beta-lactamase`, `Methylating 23S rRNA in the large ribosomal subunit`, `Thickening the outer membrane to exclude the drug`, `Swapping D-Ala-D-Ala termini for D-Ala-D-lactate`],
             correctAnswer: 3,
+            yield: 'MEDIUM',
             explanation: `Vancomycin binds the D-Ala-D-Ala substrate, not an enzyme. Swapping the terminal residue to D-lactate removes one hydrogen bond and drops binding roughly 1000-fold. Vancomycin has no beta-lactam ring to hydrolyze, and rRNA methylation is a macrolide-resistance mechanism.`
           },
           {
             question: `Beta-lactams kill only actively dividing bacteria because their lethal effect requires:`,
             options: [`Active DNA replication forks as a second target`, `Uptake through transporters expressed only in growing cells`, `Ongoing assembly of new peptidoglycan that is not yet cross-linked`, `Rapid protein turnover that depletes existing PBPs`],
             correctAnswer: 2,
+            yield: 'MEDIUM',
             explanation: `The drug blocks cross-linking of NEW wall. A dormant cell with intact wall is unharmed; a growing cell inserts weak, un-cross-linked material while autolysins keep remodeling, and osmotic pressure lyses it. This is also why combining a beta-lactam with a static drug can be antagonistic.`
           }
         ]
@@ -87,7 +97,11 @@ Vancomycin is a large glycopeptide that binds the **D-Ala-D-Ala terminus itself*
 - MIC = lowest concentration preventing growth; broad spectrum = collateral damage to flora (C. diff risk)
 - Beta-lactams mimic D-Ala-D-Ala and irreversibly acylate transpeptidases (PBPs); lysis requires ACTIVE growth
 - Vancomycin binds the D-Ala-D-Ala substrate itself; gram-positive only; VRE = D-Ala-D-lactate swap
-- No wall (Mycoplasma) = intrinsic resistance to all wall-targeting drugs`
+- No wall (Mycoplasma) = intrinsic resistance to all wall-targeting drugs
+
+<!-- yield:low -->
+- Low-yield extras: the standardized disk-diffusion test is the Kirby-Bauer method
+<!-- /yield -->`
     },
     {
       id: 'abx1-worked-examples',
@@ -110,12 +124,12 @@ Vancomycin is a large glycopeptide that binds the **D-Ala-D-Ala terminus itself*
 <details>
 <summary><b>Example 2: Interpret an MIC experiment</b></summary>
 
-**Question:** Serial two-fold dilutions of drug X (32 down to 0.25 micrograms/mL) are inoculated with equal bacterial suspensions. Tubes at 8 and above stay clear; subculturing the clear 8 and 16 tubes onto drug-free agar yields heavy growth, while the 32 tube yields none. Give the MIC and MBC.
+**Question:** Serial two-fold dilutions of drug X (32 down to 0.25 micrograms/mL) are inoculated with equal bacterial suspensions. Tubes at 4 and above stay clear; subculturing the clear 4, 8, and 16 tubes onto drug-free agar yields heavy growth, while the 32 tube yields none. Give the MIC and MBC.
 
 **Solution:**
-1. MIC = lowest concentration with no visible growth = **8 micrograms/mL**.
+1. MIC = lowest concentration with no visible growth = **4 micrograms/mL**.
 2. MBC = lowest concentration from which organisms cannot be revived = **32 micrograms/mL**.
-3. MBC far above MIC (here 4 tubes apart) indicates the drug is essentially bacteriostatic at achievable doses — it inhibited but did not kill at 8 and 16.
+3. MBC far above MIC (here eightfold, three tubes apart; a ratio above about 4 is the usual cutoff) indicates the drug is essentially bacteriostatic at achievable doses — it inhibited but did not kill at 4, 8, and 16.
 
 **MCAT Strategy:** Clear tube = inhibition; failure to regrow on fresh medium = killing. The MIC/MBC gap operationally defines static vs cidal.
 </details>

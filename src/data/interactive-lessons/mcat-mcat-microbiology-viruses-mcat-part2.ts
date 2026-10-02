@@ -14,7 +14,11 @@ export const mcatVirusesPart2Data = {
 
 ### The Lytic Cycle (Virulent Phages, e.g., T4)
 
-Injection → immediate takeover: host transcription is redirected, **early genes** (nucleases, replication enzymes) degrade host DNA and copy the phage genome; **late genes** build capsids and lysis proteins. Assembly, then **lysozyme-mediated wall rupture** releases 100-200 progeny per cell in ~25 minutes. Virulent phages have exactly one setting: kill.
+Injection → immediate takeover: host transcription is redirected, **early genes** (nucleases, replication enzymes) degrade host DNA and copy the phage genome; **late genes** build capsids and lysis proteins. Assembly, then **lysozyme-mediated wall rupture** releases a burst of progeny. Virulent phages have exactly one setting: kill.
+
+<!-- yield:low -->
+- For T4, the burst is ~100-200 progeny per cell, about 25 minutes after infection.
+<!-- /yield -->
 
 ### The Lysogenic Cycle (Temperate Phages, e.g., Lambda)
 
@@ -22,12 +26,17 @@ A temperate phage has a choice. Instead of replicating, its genome can integrate
 
 - The prophage is replicated PASSIVELY with the chromosome — every daughter cell inherits it. The carrier cell is a **lysogen**.
 - A phage-encoded **repressor** protein silences the lytic genes AND confers **superinfection immunity**: another phage of the same type injecting its DNA finds the repressor already waiting.
-- **Induction:** DNA damage (UV, mutagens) triggers the host SOS response; activated RecA promotes cleavage of the repressor → the prophage excises and enters the lytic cycle. Teleologically: the ship is sinking, launch the lifeboats.
+- **Induction:** DNA damage (UV, mutagens) leads to destruction of the repressor → the prophage excises and enters the lytic cycle. Teleologically: the ship is sinking, launch the lifeboats.
+
+<!-- yield:low -->
+- The damage sensor is the host SOS response: activated RecA promotes self-cleavage of the phage repressor.
+<!-- /yield -->
+
 - The lysis-lysogeny decision itself tilts with conditions: high multiplicity of infection and starved hosts favor lysogeny (poor prospects for a burst); rich, sparse conditions favor lysis.
 
 ### Why Lysogeny Matters Medically
 
-**Lysogenic conversion:** prophage genes change the host's phenotype. Diphtheria toxin, cholera toxin, botulinum toxin, and Shiga toxin are all encoded by prophages — the bacterium is only pathogenic while 'infected.' And **specialized transduction** is a lysogeny error: an imprecisely excising prophage carries flanking host genes to its next host (vs **generalized transduction**, a lytic packaging error that can move any gene — see the Bacteria lesson).
+**Lysogenic conversion:** prophage genes change the host's phenotype. Diphtheria toxin, cholera toxin, and the Shiga toxins of enterohemorrhagic E. coli are all encoded by prophages (as are some botulinum toxin types) — the bacterium is only pathogenic while 'infected.' And **specialized transduction** is a lysogeny error: an imprecisely excising prophage carries flanking host genes to its next host (vs **generalized transduction**, a lytic packaging error that can move any gene — see the Bacteria lesson).
 
 ### Phages as Tools
 
@@ -43,30 +52,35 @@ Plaque assays, transduction-based gene mapping, phage display, and modern **phag
             question: `In the Hershey-Chase experiment, only 32P (not 35S) appeared inside infected bacteria because tailed phages:`,
             options: [`Inject their nucleic acid, leaving the capsid outside`, `Contain protein that lacks any sulfur-containing residues`, `Degrade their own capsid proteins upon entry`, `Enter cells whole and export their sulfur atoms`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `The phage tail pierces the envelope and injects DNA (32P-labeled) like a syringe; the protein shell (35S-labeled through its sulfur-containing methionine and cysteine) never enters and can be sheared off in a blender. Since only the injected component programmed progeny production, DNA had to be the genetic material.`
           },
           {
             question: `A lysogen carrying prophage lambda is resistant to infection by additional lambda phage. The immunity is due to:`,
             options: [`Loss of the lambda receptor from the cell surface`, `CRISPR spacers the host acquired from the prophage`, `Prophage-made repressor silencing incoming lambda genes`, `Restriction enzymes that cut only superinfecting DNA`],
             correctAnswer: 2,
+            yield: 'MEDIUM',
             explanation: `The same diffusible repressor that keeps the resident prophage dormant is present in the cytoplasm and immediately binds the operators of any newly injected lambda genome, silencing its lytic genes — superinfection immunity. It is phage-specific (a different phage with different operators infects normally), which distinguishes it from receptor loss or restriction.`
           },
           {
             question: `UV irradiation of a lysogenic culture causes a burst of phage release. The mechanistic chain is:`,
-            options: [`UV activates photolyase, which cuts the prophage out of the chromosome`, `UV activates RecA, which triggers self-cleavage of the phage repressor`, `UV mutates tail-fiber genes, which lets assembled phages escape the host`, `UV damages the host envelope, which frees phage particles stored inside`],
+            options: [`UV activates photolyase, which cuts the prophage out of the chromosome`, `UV damages host DNA, which leads to destruction of the phage repressor`, `UV mutates tail-fiber genes, which lets assembled phages escape the host`, `UV damages the host envelope, which frees phage particles stored inside`],
             correctAnswer: 1,
-            explanation: `DNA damage activates RecA (the SOS sensor), which stimulates autocleavage of the phage repressor. With the repressor destroyed, lytic genes fire, the prophage loops out via excisionase/integrase, and progeny lyse the doomed host — the phage abandons a sinking ship. Photolyase repairs pyrimidine dimers and never excises prophage; a lysogen holds no assembled phages, only integrated prophage DNA, so there are no stored particles to free and no tail-fiber escape step to unlock.`
+            yield: 'MEDIUM',
+            explanation: `UV damages the host's DNA; the cell's DNA-damage response then triggers destruction of the phage repressor. With the repressor destroyed, lytic genes fire, the prophage loops out via excisionase/integrase, and progeny lyse the doomed host — the phage abandons a sinking ship. Photolyase repairs pyrimidine dimers and never excises prophage; a lysogen holds no assembled phages, only integrated prophage DNA, so there are no stored particles to free and no tail-fiber escape step to unlock.`
           },
           {
             question: `A previously harmless bacterial strain begins producing a potent exotoxin after becoming a lysogen. Curing the strain of its prophage abolishes toxin production. This is an example of:`,
-            options: [`Generalized transduction of host genes`, `Conjugative transfer of a toxin plasmid`, `Transformation by environmental DNA`, `Lysogenic conversion by the prophage`],
+            options: [`Generalized transduction of host genes`, `Conjugative transfer of a toxin plasmid`, `Transformation by free DNA from lysed cells`, `Lysogenic conversion by the prophage`],
             correctAnswer: 3,
-            explanation: `The toxin gene resides IN the prophage and is expressed from it; phenotype tracks perfectly with prophage presence. Diphtheria, cholera, Shiga, and botulinum toxins follow this pattern. Generalized transduction moves random HOST genes and does not require an ongoing prophage.`
+            yield: 'MEDIUM',
+            explanation: `The toxin gene resides IN the prophage and is expressed from it; phenotype tracks perfectly with prophage presence. Diphtheria, cholera, and Shiga toxins follow this pattern. Generalized transduction moves random HOST genes and does not require an ongoing prophage; transformation and conjugation import DNA that persists independently of any prophage, so curing the prophage would not remove the toxin.`
           },
           {
             question: `Conditions that favor a temperate phage choosing lysogeny over lysis include:`,
             options: [`A fast-growing host in rich medium at low phage density`, `A starved host and a high ratio of phage to bacteria`, `Loss of integrase activity in the infecting phage`, `Prior UV irradiation that damages host DNA`],
             correctAnswer: 1,
+            yield: 'MEDIUM',
             explanation: `Lysis pays off when a burst of progeny can find fresh hosts: rich conditions, plentiful bacteria. Starvation (poor burst prospects) and high multiplicity of infection (few uninfected hosts remain) both tip the decision circuitry toward quietly integrating and waiting. A phage without integrase cannot insert a prophage, so it cannot establish lysogeny, and UV-induced DNA damage pushes the OPPOSITE way — induction.`
           }
         ]
@@ -80,9 +94,13 @@ Plaque assays, transduction-based gene mapping, phage display, and modern **phag
 - Tailed phage = DNA-packed head + syringe tail; DNA injected, capsid stays out (Hershey-Chase: 32P in, 35S out)
 - Lytic (virulent, T4): early genes hijack and copy, late genes build and lyse — burst of progeny
 - Lysogenic (temperate, lambda): integrase inserts prophage; repressor silences lytic genes + grants superinfection immunity
-- Induction: DNA damage → SOS/RecA → repressor cleaved → excision → lysis; starvation + high phage density favor lysogeny instead
-- Lysogenic conversion arms bacteria with phage-encoded toxins (diphtheria, cholera, Shiga, botulinum)
-- Sloppy prophage excision = specialized transduction; lytic mispackaging = generalized; CRISPR = bacterial adaptive defense`
+- Induction: DNA damage → repressor destroyed → excision → lysis; starvation + high phage density favor lysogeny instead
+- Lysogenic conversion arms bacteria with phage-encoded toxins (diphtheria, cholera, Shiga)
+- Sloppy prophage excision = specialized transduction; lytic mispackaging = generalized; CRISPR = bacterial adaptive defense
+
+<!-- yield:low -->
+- Low-yield extras: T4 bursts ~100-200 progeny in ~25 minutes; the SOS sensor RecA triggers repressor self-cleavage during induction; the lambda repressor gene is cI (clear-plaque mutants are cI-minus)
+<!-- /yield -->`
     },
     {
       id: 'vir2-worked-examples',
@@ -96,11 +114,15 @@ Plaque assays, transduction-based gene mapping, phage display, and modern **phag
 
 **Solution:**
 1. Within a wild-type plaque, some infected cells choose LYSOGENY, survive (immune to superinfection), and keep growing — a haze of live lysogens clouds the cleared zone: turbid.
-2. Clear plaques mean NO survivors — the mutant cannot establish lysogeny. The classic lesion is a defective repressor (cI) gene.
-3. Corollary: cI-minus phage can still grow lytically (plaques form) but can never form stable lysogens.
+2. Clear plaques mean NO survivors — the mutant cannot establish lysogeny. The classic lesion is a defective repressor gene.
+3. Corollary: a repressor-defective phage can still grow lytically (plaques form) but can never form stable lysogens.
 
 **MCAT Strategy:** Plaque morphology is a phenotype readout of the lysis-lysogeny circuit; turbidity = lysogens = functional repressor.
 </details>
+
+<!-- yield:low -->
+- The lambda repressor gene is named cI; clear-plaque mutants are cI-minus.
+<!-- /yield -->
 
 <details>
 <summary><b>Example 2: Which genes can a specialized transducer carry?</b></summary>

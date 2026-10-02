@@ -19,8 +19,12 @@ export const mcatMicroPart6Data = {
 | **Neutrophils** | First responders, phagocytosis (most abundant WBC) |
 | **Macrophages** | Phagocytosis + antigen presentation (APC) |
 | **NK cells** | Kill virus-infected and tumor cells (no antigen specificity) |
-| **Complement** | Opsonization, membrane attack complex (MAC), inflammation |
+| **Complement** | Opsonization (C3b), membrane attack complex (MAC), inflammation (anaphylatoxins) |
 | **Inflammation** | Vasodilation, increased permeability, cell recruitment |
+
+<!-- yield:low -->
+- The complement anaphylatoxins that drive inflammation are C3a and C5a.
+<!-- /yield -->
 
 ### Third Line (Adaptive Immune Response)
 
@@ -67,37 +71,43 @@ export const mcatMicroPart6Data = {
             question: `A newborn has IgG antibodies acquired from its mother. This is an example of:`,
             options: [`Passive immunity`, `Active immunity`, `Innate immunity`, `Cell-mediated immunity`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Maternal IgG crosses the placenta, providing passive immunity. The antibodies were transferred rather than made by the baby's own immune system. This protection is immediate but temporary (it fades as maternal antibodies are degraded over months).`
           },
           {
             question: `A virus-infected cell displays viral peptides on MHC class I. Which cell is responsible for recognizing and killing it?`,
             options: [`CD8+ cytotoxic T cell`, `CD4+ helper T cell`, `B cell`, `Neutrophil`],
             correctAnswer: 0,
+            yield: 'ULTRA_HIGH',
             explanation: `MHC class I presents endogenous (intracellular) antigen to CD8+ cytotoxic T cells (rule of 8: I × 8). The CD8+ cell induces apoptosis of the infected cell via perforin and granzymes. CD4+ helper cells recognize MHC II.`
           },
           {
             question: `Which leukocyte is typically the FIRST responder to a bacterial infection and is the most abundant white blood cell?`,
             options: [`Neutrophil`, `Macrophage`, `NK cell`, `Plasma cell`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Neutrophils are the most abundant WBC and the earliest phagocytes recruited to a site of bacterial infection. Macrophages arrive somewhat later and double as antigen-presenting cells; plasma cells (from B cells) secrete antibody in the adaptive response.`
           },
           {
             question: `A natural killer (NK) cell destroys a tumor cell that has downregulated its MHC class I molecules. NK cells are notable because they:`,
             options: [`Kill without antigen-specific receptors`, `Require MHC class II presentation before killing`, `Produce antibodies against tumor antigens`, `Attack only extracellular bacteria and fungi`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `NK cells are innate lymphocytes that detect "missing self" — cells lacking normal MHC I (a trick viruses and tumors use to evade CD8+ T cells). As part of innate immunity, they kill abnormal cells without prior sensitization or antigen-specific recognition. They do not need MHC II presentation, they do not make antibodies (plasma cells do), and their targets are host cells such as infected or tumor cells.`
           },
           {
             question: `A patient receives a tetanus vaccine containing inactivated toxoid. The protection generated is best described as:`,
             options: [`Active immunity, as the patient forms memory cells`, `Passive immunity, as pre-formed antibodies are supplied`, `Innate immunity, as no memory cells form`, `No immunity, as the toxoid is inactivated`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `A vaccine exposes the immune system to antigen so it mounts its own response and forms memory B and T cells (active immunity) — delayed in onset but long-lasting. Receiving pre-made anti-tetanus antibodies (antiserum) would instead be passive immunity. An inactivated toxoid is still antigenic, which is exactly why it works as a vaccine.`
           },
           {
             question: `The complement protein cascade contributes to defense by all of the following EXCEPT:`,
             options: [`Producing antigen-specific antibodies`, `Opsonizing pathogens to enhance phagocytosis`, `Forming the membrane attack complex (MAC) to lyse cells`, `Promoting inflammation via anaphylatoxins`],
             correctAnswer: 0,
-            explanation: `Complement opsonizes (coats) pathogens, builds the MAC pore to lyse them, and amplifies inflammation through anaphylatoxins such as C3a and C5a. Antibodies, however, are produced by plasma cells (differentiated B cells) of the adaptive response, not by complement proteins.`
+            yield: 'MEDIUM',
+            explanation: `Complement opsonizes (coats) pathogens, builds the MAC pore to lyse them, and amplifies inflammation through anaphylatoxins (small complement fragments that trigger mast-cell degranulation). Antibodies, however, are produced by plasma cells (differentiated B cells) of the adaptive response, not by complement proteins.`
           }
         ]
       }
@@ -111,7 +121,11 @@ export const mcatMicroPart6Data = {
 - MHC I (endogenous antigen) → CD8+ cytotoxic T cells; MHC II (exogenous antigen) → CD4+ helper T cells (rule of 8)
 - Active immunity: long-lasting, requires time. Passive: immediate but temporary.
 - Neutrophils = first responders. Macrophages = APCs + phagocytes. NK cells = kill "missing self."
-- Vaccines = active immunity (memory cells formed)`
+- Vaccines = active immunity (memory cells formed)
+
+<!-- yield:low -->
+- Low-yield extras: the anaphylatoxin names C3a and C5a
+<!-- /yield -->`
     }
   ]
 };

@@ -153,7 +153,7 @@ const quizLoaders: Record<string, QuizLoader> = {
   'mcat-biology': () => import('./mcat-biology'),
   'mcat-cell-biology-mcat': () => import('./lesson-built/mcat-cell-biology-mcat'), // alias
   'mcat-molecular-biology-mcat': () => import('./lesson-built/mcat-molecular-biology-mcat'),
-  'mcat-microbiology-mcat': () => import('./mcat-biology'), // alias
+  'mcat-microbiology-mcat': () => import('./lesson-built/mcat-microbiology-mcat'), // alias
   // Subtopic aliases → the shared bio pool, so the diagnostic's specific
   // recommendations (see mcat-practice/subtopic-map.ts) have a working exit
   // quiz and the remediation credit loop can clear them — the same pattern
@@ -169,10 +169,10 @@ const quizLoaders: Record<string, QuizLoader> = {
   'mcat-molecular-biology-transcription-mcat': () => import('./lesson-built/mcat-molecular-biology-transcription-mcat'),
   'mcat-molecular-biology-translation-mcat': () => import('./lesson-built/mcat-molecular-biology-translation-mcat'),
   'mcat-molecular-biology-biotechnology-mcat': () => import('./lesson-built/mcat-molecular-biology-biotechnology-mcat'),
-  'mcat-microbiology-bacteria-mcat': () => import('./mcat-biology'),
-  'mcat-microbiology-viruses-mcat': () => import('./mcat-biology'),
+  'mcat-microbiology-bacteria-mcat': () => import('./lesson-built/mcat-microbiology-bacteria-mcat'),
+  'mcat-microbiology-viruses-mcat': () => import('./lesson-built/mcat-microbiology-viruses-mcat'),
   'mcat-microbiology-genetics-mcat': () => import('./mcat-biology'),
-  'mcat-microbiology-antimicrobials-mcat': () => import('./mcat-biology'),
+  'mcat-microbiology-antimicrobials-mcat': () => import('./lesson-built/mcat-microbiology-antimicrobials-mcat'),
   'mcat-organ-systems': () => import('./mcat-organ-systems'),
   'mcat-organ-systems-mcat': () => import('./lesson-built/mcat-organ-systems-mcat'), // alias
   'mcat-anatomy-physiology-mcat': () => import('./lesson-built/mcat-anatomy-physiology-mcat'), // alias

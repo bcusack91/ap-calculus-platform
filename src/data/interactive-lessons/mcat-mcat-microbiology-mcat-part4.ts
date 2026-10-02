@@ -27,15 +27,20 @@ export const mcatMicroPart4Data = {
 **Lytic cycle**: Attach → Inject DNA → Replicate → Assemble → Lyse → Release
 **Lysogenic cycle**: Viral DNA integrates into host genome (prophage) → replicates with host → can switch to lytic under stress
 
-### Baltimore Classification (Important for MCAT)
+### Grouping Viruses by Genome — the Baltimore Scheme
 
-| Class | Genome | Key Feature |
-|-------|--------|-------------|
-| I | dsDNA | Direct transcription (herpes, adenovirus) |
-| IV | (+)ssRNA | mRNA-ready → immediate translation (COVID-19, Zika) |
-| V | (-)ssRNA | Needs RNA-dependent RNA Pol (influenza, Ebola) |
-| VI | ssRNA-RT | Reverse transcriptase → DNA (HIV) |
-| VII | dsDNA-RT | Reverse transcriptase intermediate (Hepatitis B) |`
+What a virus must do to make mRNA depends on its genome:
+
+| Genome | Key Feature |
+|--------|-------------|
+| dsDNA | Direct transcription (herpes, adenovirus) |
+| (+)ssRNA | mRNA-ready → immediate translation (COVID-19, Zika) |
+| (-)ssRNA | Needs RNA-dependent RNA Pol (influenza, Ebola) |
+| ssRNA-RT (retrovirus) | Reverse transcriptase → DNA (HIV) |
+
+<!-- yield:low -->
+- The Baltimore scheme numbers these groups: I = dsDNA, II = ssDNA, III = dsRNA, IV = (+)ssRNA, V = (-)ssRNA, VI = ssRNA-RT (retroviruses), VII = dsDNA-RT (hepatitis B, which copies an RNA intermediate back into DNA with its own reverse transcriptase).
+<!-- /yield -->`
     },
     {
       id: 'mi4-worked',
@@ -52,7 +57,7 @@ export const mcatMicroPart4Data = {
 
 **Step 3 — Identify the required enzyme.** Host cells have **no enzyme** that makes RNA from an RNA template. So a (-)ssRNA virus must **package its own RNA-dependent RNA polymerase (RdRp)** inside the virion and bring it along; only then can it transcribe its genome into translatable mRNA.
 
-> **MCAT takeaway:** (+)ssRNA = "mRNA-ready," translated immediately. (-)ssRNA must carry its own RdRp into the cell first. Retroviruses (Class VI, e.g., HIV) are a separate case: they package **reverse transcriptase** to convert RNA → DNA before integrating into the host genome.`
+> **MCAT takeaway:** (+)ssRNA = "mRNA-ready," translated immediately. (-)ssRNA must carry its own RdRp into the cell first. Retroviruses (e.g., HIV) are a separate case: they package **reverse transcriptase** to convert RNA → DNA before integrating into the host genome.`
     },
     {
       id: 'mi4-quiz1',
@@ -64,36 +69,42 @@ export const mcatMicroPart4Data = {
             question: `Enveloped viruses are generally more susceptible to disinfection because:`,
             options: [`Their lipid envelope is easily disrupted`, `Their capsids are thinner than those of naked viruses`, `They carry RNA genomes that degrade quickly`, `Their capsid proteins denature at room temperature`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `The lipid envelope is fragile — destroyed by soap and other detergents, alcohol, heat, and drying. The capsid is not the weak point, and genome type is not the reason: enveloped viruses include DNA viruses such as herpesviruses. Without their envelope, these viruses cannot attach to host cells. Naked viruses (no envelope) are more resistant to environmental conditions.`
           },
           {
             question: `A (+)ssRNA virus can begin producing viral proteins immediately upon entering a host cell because its genome:`,
             options: [`Serves directly as mRNA for host ribosomes`, `Is double-stranded and replicates on its own`, `Integrates into the host genome before translation`, `Is transcribed first by host RNA polymerase II`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `A (+)ssRNA genome is already mRNA-sense, so host ribosomes can translate it directly. A (-)ssRNA virus must first transcribe its genome into (+) sense RNA using a packaged RNA-dependent RNA polymerase. Host RNA polymerase II transcribes DNA templates, not RNA, and integration is a retrovirus step.`
           },
           {
             question: `HIV must carry the enzyme reverse transcriptase within its virion because it needs to:`,
             options: [`Make DNA from its RNA genome for integration`, `Translate its RNA directly into protein`, `Replicate its RNA without a DNA intermediate`, `Degrade host DNA to free up nucleotides`],
             correctAnswer: 0,
-            explanation: `HIV is a retrovirus (Class VI). Host cells have no enzyme that can copy a viral RNA genome into DNA, so HIV brings its own reverse transcriptase to synthesize DNA from its (+)ssRNA genome; that DNA is then integrated into the host chromosome as a provirus by integrase. Reverse transcriptase does not degrade host DNA, and replicating RNA without a DNA intermediate is the strategy of other RNA viruses.`
+            yield: 'HIGH',
+            explanation: `HIV is a retrovirus. Host cells have no enzyme that can copy a viral RNA genome into DNA, so HIV brings its own reverse transcriptase to synthesize DNA from its (+)ssRNA genome; that DNA is then integrated into the host chromosome as a provirus by integrase. Reverse transcriptase does not degrade host DNA, and replicating RNA without a DNA intermediate is the strategy of other RNA viruses.`
           },
           {
             question: `A bacteriophage's DNA integrates into the host bacterial chromosome as a prophage and is copied each time the cell divides, without immediately destroying the cell. This describes the:`,
             options: [`Lysogenic cycle`, `Lytic cycle`, `Budding pathway`, `Transduction cycle`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `In the lysogenic cycle, the phage genome integrates as a prophage and replicates passively with the host. Under stress (e.g., UV, DNA damage), it can excise and switch to the lytic cycle, producing new phage and lysing the cell.`
           },
           {
             question: `A (-)ssRNA virus such as influenza must package which enzyme inside its virion to replicate?`,
             options: [`RNA-dependent RNA polymerase`, `Reverse transcriptase`, `DNA-dependent RNA polymerase`, `DNA-dependent DNA polymerase`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Because host cells lack any enzyme that copies RNA from an RNA template, a (-)ssRNA virus must bring its own RNA-dependent RNA polymerase (RdRp) to transcribe its antisense genome into translatable (+) mRNA. Reverse transcriptase is used by retroviruses, not by (-)ssRNA viruses, and DNA-dependent polymerases need a DNA template, which an RNA virus's genome does not provide.`
           },
           {
             question: `Which statement about viral structure is correct?`,
             options: [`Viruses have DNA or RNA, never both, in a protein capsid`, `All viruses wrap their capsid in a lipid envelope`, `Viruses contain both DNA and RNA simultaneously`, `Viruses possess 70S ribosomes for protein synthesis`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `A virion carries one type of nucleic acid (DNA or RNA) inside a protein capsid; some additionally have a host-derived lipid envelope. Viruses have no ribosomes of their own — they rely entirely on host ribosomes to translate viral proteins.`
           }
         ]
@@ -108,7 +119,11 @@ export const mcatMicroPart4Data = {
 - (+)ssRNA can be directly translated; (-)ssRNA needs a packaged RNA-dependent RNA polymerase
 - Retroviruses (HIV): RNA → DNA via reverse transcriptase, then integration
 - Lytic = immediate destruction; lysogenic = integration as a prophage, with later switch possible
-- Enveloped viruses = fragile; naked viruses = environmental survivors`
+- Enveloped viruses = fragile; naked viruses = environmental survivors
+
+<!-- yield:low -->
+- Low-yield extras: the Baltimore class numbers (I–VII), including the dsDNA-RT group (class VII, hepatitis B) that reverse-transcribes an RNA intermediate
+<!-- /yield -->`
     }
   ]
 };

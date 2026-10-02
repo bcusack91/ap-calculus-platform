@@ -18,9 +18,13 @@ export const mcatVirusesPart4Data = {
 
 | Agent | Composition | Replication logic | Disease examples |
 |-------|-------------|-------------------|------------------|
-| **Viroid** | Naked circular RNA, ~300 nt, NO protein coat, encodes NOTHING | Copied by host RNA polymerase; pathogenic via RNA structure/silencing effects | Plant diseases (potato spindle tuber) |
+| **Viroid** | Small naked circular RNA, NO protein coat, encodes NOTHING | Copied by host RNA polymerase; pathogenic via RNA structure/silencing effects | Plant diseases |
 | **Prion** | Misfolded PROTEIN only — no nucleic acid at all | PrP-Sc template converts normal alpha-helical PrP-C into beta-sheet-rich PrP-Sc: a conformational chain reaction | Creutzfeldt-Jakob, kuru, BSE; spongiform encephalopathies |
 | Defective/satellite viruses | Genome lacking essential genes | Replicate only with a **helper virus** co-infecting (hepatitis D needs hepatitis B's surface antigen) | Hepatitis D |
+
+<!-- yield:low -->
+- Viroid specifics: genomes of only ~250-400 nucleotides; the classic example is potato spindle tuber viroid.
+<!-- /yield -->
 
 Prions violate every nucleic-acid expectation: no genome to mutate, **no UV or nuclease sensitivity**, extreme resistance to heat and standard autoclaving, no immune response (PrP is a self protein), and inheritance of SHAPE rather than sequence. Protease resistance of the beta-sheet aggregate is the standard lab signature.
 
@@ -42,30 +46,35 @@ Any virus question yields to four sorted facts: **(1)** genome class → route t
             question: `Influenza pandemics (as opposed to seasonal epidemics) arise from antigenic shift because shift:`,
             options: [`Accumulates point mutations far faster than drift does`, `Introduces a novel HA or NA by segment reassortment`, `Occurs in non-segmented viruses by RNA recombination`, `Increases the virus's replication rate in host airways`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Drift erodes immunity gradually — most people retain partial protection, so outbreaks stay seasonal. Shift swaps in a wholly novel HA (or NA) segment from another host lineage in one step via reassortment; essentially nobody has even partial immunity, and the virus sweeps globally. Segmentation is the structural prerequisite.`
           },
           {
             question: `An infectious agent from brain tissue transmits disease after treatment with UV light, nucleases, and formaldehyde, but loses infectivity after harsh protein denaturation. The agent is most likely:`,
             options: [`A retrovirus`, `A viroid`, `A prion`, `A DNA virus`],
             correctAnswer: 2,
+            yield: 'HIGH',
             explanation: `Resistance to UV and nucleases means no essential nucleic acid — that excludes every virus and viroid. Sensitivity to protein denaturation identifies the infectious moiety as protein: a prion, propagating by templated misfolding of PrP-C into protease-resistant PrP-Sc.`
           },
           {
             question: `Hepatitis D virus causes disease only in patients simultaneously or previously infected with hepatitis B, because HDV:`,
-            options: [`Needs HBV surface antigen to envelop its particles`, `Can only enter hepatocytes already damaged by HBV`, `Uses HBV's reverse transcriptase to copy its genome`, `Is a prion whose misfolding is triggered by HBV`],
+            options: [`Needs HBV surface antigen for its envelope`, `Can only enter hepatocytes already damaged by HBV`, `Uses HBV's reverse transcriptase to copy its genome`, `Is a prion whose misfolding is triggered by HBV`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `HDV's tiny RNA genome encodes no envelope protein of its own; it parasitizes HBV's surface antigen (HBsAg) to build infectious particles — a satellite/defective agent needing a helper virus. Consequently, HBV vaccination also prevents hepatitis D.`
           },
           {
             question: `A live attenuated viral vaccine is contraindicated in a severely immunocompromised patient primarily because:`,
             options: [`Attenuated strains contain endotoxin that triggers shock`, `The vaccine cannot stimulate any immune response in such patients`, `Inactivated vaccines are always more immunogenic`, `The attenuated virus still replicates and can disseminate`],
             correctAnswer: 3,
+            yield: 'MEDIUM',
             explanation: `Attenuation reduces, but does not eliminate, replication; safety depends on the host winning an easy fight. With T-cell immunity absent, the attenuated strain can replicate unchecked (and potentially revert). Killed or subunit vaccines, which cannot replicate, are the safe substitutes — though responses may be weaker.`
           },
           {
             question: `Several herpesviruses downregulate MHC class I on the cells they infect. The host's compensating defense is:`,
             options: [`Increased antibody production against free virions`, `Natural killer cells, which kill cells low in MHC I`, `Interferon-induced MHC II display to CD8 T cells`, `Complement-mediated lysis of the latent episome`],
             correctAnswer: 1,
+            yield: 'HIGH',
             explanation: `Hiding peptides from cytotoxic T cells (which need MHC I) is a classic viral evasion — but NK cells are tuned oppositely: inhibitory receptors read normal MHC I as 'self,' so its ABSENCE ('missing self') releases NK killing. The paired surveillance closes the loophole. MHC II presents to CD4 helper cells, not CD8 cells, and complement cannot attack intracellular DNA.`
           }
         ]
@@ -80,7 +89,11 @@ Any virus question yields to four sorted facts: **(1)** genome class → route t
 - Vaccines: live attenuated (strong, replicates — avoid in immunocompromised), killed (safe, weaker), subunit (target the attachment protein), mRNA (deliver the message)
 - Viroid = naked noncoding circular RNA (plants); prion = protein-only conformational replicator (UV/nuclease-resistant, protease-resistant PrP-Sc); HDV = satellite needing HBV's HBsAg
 - Defense stack: interferon (warn), CTL via MHC I (kill infected), antibody (neutralize free), NK cells (missing self backup when viruses hide MHC I)
-- Capstone sort for any virus: genome → mRNA route; envelope → transmission; persistence mode → curability; polymerase fidelity + segments → evolution and therapy`
+- Capstone sort for any virus: genome → mRNA route; envelope → transmission; persistence mode → curability; polymerase fidelity + segments → evolution and therapy
+
+<!-- yield:low -->
+- Low-yield extras: viroid genomes are only ~250-400 nucleotides, and potato spindle tuber viroid is the classic example
+<!-- /yield -->`
     },
     {
       id: 'vir4-worked-examples',

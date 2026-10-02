@@ -17,6 +17,12 @@ export const mcatMicroPart7Data = {
 | **HIV/AIDS** | Immunodeficiency | Destroys CD4+ T cells → opportunistic infections |
 | **SCID** | Immunodeficiency | No functional T or B cells (severe combined) |
 
+- HIV enters a helper T cell through **CD4** plus the **CCR5** co-receptor; people homozygous for the CCR5Δ32 deletion lack a working co-receptor and resist infection.
+
+<!-- yield:low -->
+- Some HIV strains use the alternative co-receptor CXCR4 instead. AIDS is defined clinically by a CD4 count below 200 cells/μL or an AIDS-defining opportunistic infection.
+<!-- /yield -->
+
 ### Antibody Classes (HIGH YIELD)
 
 | Class | Function | Location |
@@ -69,36 +75,42 @@ export const mcatMicroPart7Data = {
             question: `HIV primarily targets:`,
             options: [`CD4+ helper T cells`, `CD8+ cytotoxic T cells`, `Antibody-producing B cells`, `Natural killer cells`],
             correctAnswer: 0,
-            explanation: `HIV binds the CD4 receptor (on helper T cells) plus CCR5/CXCR4 co-receptors. As CD4+ T cells are destroyed, the immune system progressively fails. A CD4 count below 200 cells per microliter, or an AIDS-defining opportunistic infection, defines AIDS.`
+            yield: 'HIGH',
+            explanation: `HIV binds the CD4 receptor on helper T cells, plus the CCR5 co-receptor. As CD4+ T cells are destroyed, helper signals to both B cells and CD8+ cells are lost and the immune system progressively fails, leaving the patient open to opportunistic infections (AIDS).`
           },
           {
             question: `Which antibody class is the FIRST to be produced during a primary immune response and exists as a pentamer?`,
             options: [`IgM`, `IgG`, `IgA`, `IgE`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `IgM appears first and circulates as a pentamer (10 antigen-binding sites), making it highly effective at agglutination and complement activation early in infection. IgG dominates later and provides long-term/memory protection.`
           },
           {
             question: `A patient with seasonal allergies experiences sneezing and itching after pollen exposure. This Type I hypersensitivity reaction is mediated by:`,
             options: [`IgE on mast cells, triggering histamine release`, `IgG immune complexes deposited in tissues`, `Sensitized T cells releasing cytokines`, `IgM and complement lysing host cells`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `In Type I hypersensitivity, allergen cross-links IgE bound to mast cells and basophils, triggering degranulation and histamine release — producing the classic allergic symptoms. IgE also defends against parasitic worms. Antibody and complement destroying host cells is Type II, immune-complex deposition is Type III, and cytokine-releasing sensitized T cells drive delayed Type IV reactions.`
           },
           {
             question: `Which antibody class is most responsible for mucosal immunity and is found in saliva, tears, and breast milk?`,
             options: [`IgA`, `IgG`, `IgM`, `IgD`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `IgA (often a dimer at mucosal surfaces) protects the gut, respiratory tract, and other mucosa, and is secreted in breast milk to protect the nursing infant. IgG is the main serum antibody; IgM is the first responder.`
           },
           {
             question: `A microbiologist wants to prove that a newly isolated bacterium causes a specific disease. Which framework should she apply?`,
             options: [`Koch's postulates`, `The central dogma`, `The Baltimore classification`, `The Gram stain protocol`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `Koch's postulates establish a causal link between a microbe and a disease: the organism is found in all cases, isolated in pure culture, reproduces disease in a healthy host, and is re-isolated from that host. The Baltimore system classifies viruses, not bacterial causation.`
           },
           {
             question: `An infant is born with no functional T cells OR B cells and suffers severe, recurrent infections from birth. This is characteristic of:`,
             options: [`Severe combined immunodeficiency`, `A Type I hypersensitivity`, `An autoimmune disease`, `DiGeorge syndrome`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `SCID is a primary immunodeficiency in which both T- and B-cell arms of adaptive immunity are absent or nonfunctional, leaving the infant unable to fight even normally trivial pathogens. DiGeorge syndrome (thymic aplasia) removes T-cell development but leaves B cells present. SCID also contrasts with autoimmunity (a loss of self-tolerance) and hypersensitivity (an over-reaction).`
           }
         ]
@@ -114,8 +126,12 @@ From bacteria to viruses to immune function, microbiology bridges molecular biol
 **Final high-yield recall:**
 - IgM = first responder (pentamer); IgG = most abundant + crosses placenta + memory; IgA = mucosal; IgE = allergies/parasites
 - Antibody specificity comes from the Fab (variable) region; class/effector function from Fc (constant)
-- HIV destroys CD4+ T cells; SCID lacks both T and B cells
-- Koch's postulates establish microbial causation of disease`
+- HIV enters via CD4 + CCR5 and destroys CD4+ T cells (CCR5Δ32 homozygotes resist infection); SCID lacks both T and B cells
+- Koch's postulates establish microbial causation of disease
+
+<!-- yield:low -->
+- Low-yield extras: HIV's alternative CXCR4 co-receptor; the CD4 < 200 cells/μL clinical definition of AIDS
+<!-- /yield -->`
     }
   ]
 };

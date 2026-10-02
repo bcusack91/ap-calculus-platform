@@ -13,9 +13,13 @@ export const mcatAntimicrobialsPart4Data = {
 | Strategy | Mechanism | Classic examples |
 |----------|-----------|------------------|
 | **Destroy the drug** | Enzymatic inactivation | Beta-lactamases hydrolyze the beta-lactam ring; aminoglycoside-modifying enzymes acetylate/phosphorylate the drug |
-| **Alter the target** | Mutation or enzymatic modification | MRSA's PBP2a (low-affinity transpeptidase from mecA); erm 23S methylation (macrolides); rpoB mutation (rifampin); VRE's D-Ala-D-lactate |
+| **Alter the target** | Mutation or enzymatic modification | MRSA's PBP2a (an acquired low-affinity transpeptidase); 23S rRNA methylation (macrolides); RNA polymerase mutation (rifampin); VRE's D-Ala-D-lactate |
 | **Keep the drug out** | Porin loss, thickened envelope | Gram-negative porin mutants; mycobacterial waxy wall |
-| **Throw the drug out** | Efflux pumps | Tetracycline tet pumps; multidrug efflux in Pseudomonas |
+| **Throw the drug out** | Efflux pumps | Tetracycline efflux pumps; multidrug efflux in Pseudomonas |
+
+<!-- yield:low -->
+- Gene names behind the table: PBP2a is encoded by **mecA** (carried on a mobile cassette); the 23S methylase is **erm**; rifampin resistance maps to **rpoB**; tetracycline pumps are encoded by **tet** genes.
+<!-- /yield -->
 
 Countermeasures mirror the mechanisms: **clavulanate** is a suicide inhibitor of beta-lactamase (co-formulated with amoxicillin); methicillin was engineered with a bulky side chain that beta-lactamase cannot attack — and staph answered with a NEW target (PBP2a): an evolutionary arms race in miniature.
 
@@ -26,9 +30,17 @@ Resistance can arise **vertically** (spontaneous chromosomal mutation, then sele
 - **Conjugation** — plasmid transfer through a pilus; **R plasmids** often carry SEVERAL resistance genes plus the transfer machinery, so one mating event can confer multidrug resistance, even ACROSS species.
 - **Transduction** — a phage mispackages host DNA and injects it elsewhere.
 - **Transformation** — competent cells import naked DNA from lysed neighbors.
-- **Transposons and integrons** shuttle resistance cassettes between plasmids and chromosomes, stacking genes into mobile arrays.
+- **Transposons** shuttle resistance genes between plasmids and chromosomes, stacking genes into mobile arrays.
 
-Key conceptual point for the exam: antibiotics do NOT cause the mutations. Resistance variants pre-exist at low frequency; the drug is a **selection pressure** that lets them take over (the Luria-Delbruck insight — the fluctuation test showed mutations arise before, and independently of, exposure).
+<!-- yield:low -->
+- **Integrons** are gene-capture platforms that collect resistance gene cassettes in tandem; carried on transposons and plasmids, they build multidrug arrays.
+<!-- /yield -->
+
+Key conceptual point for the exam: antibiotics do NOT cause the mutations. Resistance variants pre-exist at low frequency; the drug is a **selection pressure** that lets them take over (the fluctuation test showed mutations arise before, and independently of, exposure: parallel cultures gave wildly variable resistant counts, the "jackpots" of early random mutations).
+
+<!-- yield:low -->
+- The fluctuation test is the Luria-Delbruck experiment (1943), done with phage resistance in E. coli.
+<!-- /yield -->
 
 ### Ecology of Resistance
 
@@ -49,32 +61,37 @@ Every antimicrobial vignette reduces to three questions: (1) What is the drug's 
         questions: [
           {
             question: `MRSA resists essentially all classic beta-lactams because it:`,
-            options: [`Produces an extended-spectrum beta-lactamase that destroys them`, `Acquired mecA, encoding a low-affinity transpeptidase (PBP2a)`, `Lost the porins through which beta-lactams enter`, `Replaced its peptidoglycan terminus with D-Ala-D-lactate`],
+            options: [`Produces an extended-spectrum beta-lactamase that destroys them`, `Acquired a gene encoding a low-affinity transpeptidase (PBP2a)`, `Lost the porins through which beta-lactams enter`, `Replaced its peptidoglycan terminus with D-Ala-D-lactate`],
             correctAnswer: 1,
-            explanation: `Methicillin was designed to survive beta-lactamase, so staph escaped by target replacement: the horizontally acquired mecA gene supplies an alternative PBP that keeps cross-linking wall even when native PBPs are acylated. D-Ala-D-lactate is the VANCOMYCIN-resistance change in enterococci.`
+            yield: 'MEDIUM',
+            explanation: `Methicillin was designed to survive beta-lactamase, so staph escaped by target replacement: a horizontally acquired gene supplies an alternative PBP that keeps cross-linking wall even when native PBPs are acylated. D-Ala-D-lactate is the VANCOMYCIN-resistance change in enterococci.`
           },
           {
             question: `Clavulanate has almost no antibacterial activity by itself, yet dramatically extends amoxicillin's spectrum. Clavulanate acts by:`,
             options: [`Irreversibly inhibiting the bacterial beta-lactamase`, `Opening porins so amoxicillin enters faster`, `Blocking efflux pumps that export amoxicillin`, `Binding PBP2a in resistant staphylococci`],
             correctAnswer: 0,
+            yield: 'MEDIUM',
             explanation: `Clavulanate is a beta-lactam-ring 'decoy' that acylates and permanently disables beta-lactamase — a suicide inhibitor. With the destroying enzyme occupied, amoxicillin survives to reach its PBP targets. It does not touch PBP2a, which is why the combination still fails against MRSA.`
           },
           {
-            question: `In the Luria-Delbruck fluctuation experiment, parallel cultures plated on phage (or drug) showed wildly variable numbers of resistant colonies. This variability demonstrated that resistance mutations:`,
-            options: [`Are induced by the selective agent at a constant rate`, `Occur only during exposure to the agent`, `Arise spontaneously and randomly before any exposure`, `Are transferred between cultures by conjugation`],
+            question: `In the classic fluctuation experiment, parallel cultures plated on phage (or drug) showed wildly variable numbers of resistant colonies. This variability demonstrated that resistance mutations:`,
+            options: [`Are induced by the selective agent at a constant rate`, `Occur only during exposure to the agent`, `Arise randomly, before any exposure`, `Are transferred between cultures by conjugation`],
             correctAnswer: 2,
+            yield: 'MEDIUM',
             explanation: `If exposure induced mutations, every culture would yield similar counts (Poisson). Instead, cultures where a mutation happened to arise EARLY produced 'jackpots' of descendants — huge variance. Mutation is random and pre-adaptive; the drug only selects.`
           },
           {
             question: `A single conjugation event renders a previously susceptible E. coli resistant to four unrelated antibiotic classes simultaneously. The most likely vehicle is:`,
             options: [`Four independent chromosomal point mutations`, `A lysogenic phage carrying one resistance gene`, `Natural transformation with fragmented DNA`, `An R plasmid carrying stacked resistance genes`],
             correctAnswer: 3,
+            yield: 'HIGH',
             explanation: `Multidrug resistance appearing in one step is the signature of an R plasmid: a conjugative element loaded with stacked resistance genes. Independent mutations in four targets in one generation would be astronomically unlikely, and transformation/transduction move smaller pieces less reliably.`
           },
           {
             question: `Bacteria deep in a catheter biofilm survive antibiotic concentrations far above the MIC measured for the same strain in liquid culture, yet cells recovered from the biofilm test as fully susceptible. This is best described as:`,
-            options: [`Horizontal acquisition of resistance genes within the biofilm`, `Phenotypic tolerance, not genetic resistance`, `Selection of rpoB mutants by the antibiotic`, `Conversion to L-forms lacking cell walls`],
+            options: [`Horizontal acquisition of resistance genes within the biofilm`, `Phenotypic tolerance, not genetic resistance`, `Selection of target-site point mutants by the antibiotic`, `Loss of the cell wall so wall-active drugs have no target`],
             correctAnswer: 1,
+            yield: 'MEDIUM',
             explanation: `The recovered cells are genetically unchanged (susceptible when re-tested) — so survival came from their physiological state: dormancy defeats drugs that require growth, and the exopolysaccharide matrix slows penetration. This is why infected devices are removed rather than sterilized in place.`
           }
         ]
@@ -85,12 +102,16 @@ Every antimicrobial vignette reduces to three questions: (1) What is the drug's 
       type: 'text' as const,
       content: `### Key Takeaways — Part 4
 
-- Four resistance strategies: destroy (beta-lactamase), alter target (PBP2a, erm, rpoB, D-Ala-D-lactate), exclude (porins), efflux (tet pumps)
+- Four resistance strategies: destroy (beta-lactamase), alter target (PBP2a, 23S methylation, RNA polymerase mutation, D-Ala-D-lactate), exclude (porins), efflux (pumps)
 - Clavulanate = suicide inhibitor of beta-lactamase; MRSA escaped via a NEW target, not a better lactamase
-- Drugs select pre-existing mutants; they do not induce mutations (Luria-Delbruck fluctuation test)
-- Horizontal spread: conjugation (R plasmids = one-step multidrug resistance, cross-species), transduction, transformation, transposons/integrons
+- Drugs select pre-existing mutants; they do not induce mutations (fluctuation test)
+- Horizontal spread: conjugation (R plasmids = one-step multidrug resistance, cross-species), transduction, transformation, transposons
 - Biofilms and persisters = phenotypic TOLERANCE (no genetic change) — remove the device
-- Vignette algorithm: target & path → which of four strategies → vertical or horizontal origin`
+- Vignette algorithm: target & path → which of four strategies → vertical or horizontal origin
+
+<!-- yield:low -->
+- Low-yield extras: resistance gene names (mecA for PBP2a, erm, rpoB, tet); integrons capture and stack resistance cassettes; the fluctuation test is the Luria-Delbruck experiment
+<!-- /yield -->`
     },
     {
       id: 'abx4-worked-examples',
@@ -131,7 +152,7 @@ Every antimicrobial vignette reduces to three questions: (1) What is the drug's 
 
 **Solution:**
 1. Enterococci and staphylococci co-colonize skin and wounds, providing physical proximity.
-2. The vanA operon rides a transposon; during co-infection it can hop onto a conjugative plasmid in Enterococcus, which then transfers to S. aureus by conjugation.
+2. The resistance operon rides a transposon; during co-infection it can hop onto a conjugative plasmid in Enterococcus, which then transfers to S. aureus by conjugation.
 3. Result: VRSA — target alteration (D-Ala-D-lactate) now in a far more virulent host species.
 4. Ecologically, heavy vancomycin use (selecting VRE) plus MRSA prevalence set the stage; gene flow follows opportunity.
 

@@ -38,7 +38,7 @@ Example: 100 cells of an organism with g = 20 min, grown 2 hours → n = 6 doubl
 ### Nutritional Vocabulary
 
 - Energy source: **photo-** (light) vs **chemo-** (chemical oxidation). Carbon source: **auto-** (CO$_2$) vs **hetero-** (organic molecules). Most pathogens are **chemoheterotrophs**.
-- **Obligate intracellular** organisms (Rickettsia, Chlamydia) cannot make their own ATP pool sufficient for free living — they must be grown in host cells, never on agar alone.
+- **Obligate intracellular** organisms (e.g., Rickettsia, Chlamydia) depend on host cells for ATP or other essential metabolites they cannot make themselves — they must be grown in host cells, never on agar alone.
 - Media logic: **selective** media suppress competitors (grow only what you want); **differential** media make metabolic differences visible (e.g., lactose fermenters change an indicator's color); a medium can be both.
 - **Auxotrophs** are mutants that lost a biosynthetic pathway and grow only when the end product is supplied — the workhorse of replica-plating genetics.`
     },
@@ -52,30 +52,35 @@ Example: 100 cells of an organism with g = 20 min, grown 2 hours → n = 6 doubl
             question: `A culture starts at 500 cells; the species doubles every 30 minutes. How many cells after 3 hours of exponential growth?`,
             options: [`8000`, `16,000`, `3000`, `32,000`],
             correctAnswer: 3,
+            yield: 'HIGH',
             explanation: `n = 180 min / 30 min = 6 doublings; 500 times 2^6 = 500 times 64 = 32,000. The most common error is using 5 doublings (16,000) by miscounting the interval — always compute n = t/g first, then multiply.`
           },
           {
             question: `In a thioglycollate tube (oxygen gradient: high at top, zero at bottom), an organism grows evenly from top to bottom. It is best classified as:`,
             options: [`An obligate aerobe`, `An aerotolerant anaerobe`, `A facultative anaerobe`, `An obligate anaerobe`],
             correctAnswer: 1,
+            yield: 'MEDIUM',
             explanation: `Uniform growth means oxygen neither helps nor harms: the organism ferments regardless and possesses enough ROS defense to survive O2 — aerotolerant. A facultative organism would also grow throughout but DENSER at the top, where respiration yields more ATP.`
           },
           {
             question: `Obligate anaerobes die in room air primarily because they lack:`,
             options: [`Superoxide dismutase and catalase`, `An electron transport chain of any kind`, `A cell wall that is stable in oxygen`, `The ability to ferment glucose`],
             correctAnswer: 0,
+            yield: 'HIGH',
             explanation: `Contact with O2 spontaneously generates superoxide and H2O2 inside any cell. Aerobes disarm these with SOD and catalase/peroxidase; obligate anaerobes lack the enzymes, so ROS destroy their DNA, lipids, and Fe-S enzymes. Fermentation ability is irrelevant to the toxicity itself.`
           },
           {
             question: `Beta-lactam antibiotics kill a culture most efficiently during which growth phase?`,
             options: [`Lag phase, when enzymes are being synthesized`, `Stationary phase, when the population peaks`, `Log phase, when most cells are dividing`, `Death phase, when cells are already weakened`],
             correctAnswer: 2,
+            yield: 'MEDIUM',
             explanation: `Beta-lactams sabotage NEW peptidoglycan cross-linking; only dividing cells build wall. Log phase = maximal division = maximal kill. Stationary and lag cells are largely spared — clinically, this is why dormant persisters survive therapy.`
           },
           {
             question: `MacConkey agar contains bile salts and crystal violet (inhibiting gram-positive growth) plus lactose and a pH indicator that turns fermenter colonies pink. This medium is:`,
             options: [`Selective only, not differential`, `Differential only, not selective`, `Neither selective nor differential`, `Both selective and differential`],
             correctAnswer: 3,
+            yield: 'MEDIUM',
             explanation: `Bile salts/crystal violet SELECT against gram-positives; the lactose-indicator system DIFFERENTIATES lactose fermenters (pink, e.g., E. coli) from non-fermenters (colorless) among the survivors. One plate, two logical functions — the MCAT's favorite media example.`
           }
         ]
@@ -90,8 +95,8 @@ Example: 100 cells of an organism with g = 20 min, grown 2 hours → n = 6 doubl
 - Curve: lag (adapt) → log (double; beta-lactams bite here) → stationary (spores, toxins) → death
 - Oxygen classes by tube pattern: top only / everywhere-denser-top / even / bottom only / narrow subsurface band
 - O$_2$ toxicity = ROS; defense = superoxide dismutase + catalase — obligate anaerobes lack them
-- Chemoheterotrophs = most pathogens; obligate intracellular organisms never grow on cell-free agar
-- Selective suppresses, differential reveals; MacConkey is both; auxotrophs need a supplied end product`
+- Chemoheterotrophs = most pathogens; obligate intracellular organisms (e.g., Rickettsia, Chlamydia) never grow on cell-free agar
+- Selective suppresses, differential reveals; MacConkey is both (bile salts and crystal violet suppress gram-positives; lactose fermenters turn pink); auxotrophs need a supplied end product`
     },
     {
       id: 'bac2-worked-examples',
