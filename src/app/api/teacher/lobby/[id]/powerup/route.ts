@@ -10,7 +10,7 @@ import {
   resolveTargets,
   type LobbyPlayerChaos,
 } from '@/lib/lobby-chaos'
-import type { Prisma } from '@prisma/client'
+import { Prisma } from '@prisma/client'
 
 interface Ctx { params: Promise<{ id: string }> }
 
@@ -67,36 +67,44 @@ export async function POST(req: NextRequest, { params }: Ctx) {
 
   const me = await prisma.teacherLobbyParticipant.findUnique({
     where: { lobbyId_userId: { lobbyId: id, userId } },
-    select: { id: true, team: true, score: true, powerUps: true, user: { select: { name: true } } },
+    select: { id: true, team: true, powerUps: true, user: { select: { name: true } } },
   })
   if (!me) return NextResponse.json({ error: 'Not in lobby' }, { status: 403 })
 
   const now = Date.now()
-  const mine: LobbyPlayerChaos = { ...emptyLobbyChaos(), ...((me.powerUps as LobbyPlayerChaos | null) ?? {}) }
-  mine.effects = pruneEffects(mine.effects, now)
-
-  const slot = mine.inventory.findIndex((item) => item.id === powerUpId)
-  if (slot === -1) return NextResponse.json({ error: 'You do not have that item' }, { status: 400 })
-  const item = mine.inventory[slot]
-  mine.inventory.splice(slot, 1)
-
   const def = POWER_UPS[powerUpId as PowerUpId]
   const attackerName = publicDisplayName(me.user?.name, 'A classmate')
+  const readChaos = (raw: unknown): LobbyPlayerChaos => {
+    const c: LobbyPlayerChaos = { ...emptyLobbyChaos(), ...((raw as LobbyPlayerChaos | null) ?? {}) }
+    c.effects = pruneEffects(c.effects, now)
+    return c
+  }
+
+  // This first read only decides WHO an attack hits (its scope was fixed when
+  // it dropped). Every write below happens inside a transaction that locks the
+  // rows it changes and re-reads them, because the victims' own answers (and
+  // other attackers) write the same powerUps blobs concurrently. Before the
+  // lock, an answer submitted at the same moment as an attack erased it.
+  const preview = readChaos(me.powerUps).inventory.find((i) => i.id === powerUpId)
+  if (!preview) return NextResponse.json({ error: 'You do not have that item' }, { status: 400 })
+
+  /** Lock rows in one statement, in id order, so two players attacking each
+   *  other at the same moment cannot deadlock. */
+  const lockRows = (tx: Prisma.TransactionClient, ids: string[]) =>
+    tx.$queryRaw`SELECT id FROM "TeacherLobbyParticipant" WHERE id IN (${Prisma.join([...ids].sort())}) ORDER BY id FOR UPDATE`
+
+  /** Remove the item from a freshly locked inventory; null if it is gone
+   *  (a double tap already spent it). */
+  const spend = (mine: LobbyPlayerChaos) => {
+    const slot = mine.inventory.findIndex((item) => item.id === powerUpId)
+    if (slot === -1) return null
+    return mine.inventory.splice(slot, 1)[0]
+  }
+  const noItem = NextResponse.json({ error: 'You do not have that item' }, { status: 400 })
 
   // ---- Self items: resolve entirely on the caller's own row. ----
   if (def.kind === 'self') {
-    if (powerUpId === 'shield') mine.shield = true
-    if (powerUpId === 'reflect') mine.reflect = true
-    if (powerUpId === 'double-points') mine.doubleNext = true
-    if (powerUpId === 'time-warp') {
-      mine.effects.push({
-        id: `${now}-${Math.random().toString(36).slice(2, 8)}`,
-        type: 'time-warp',
-        from: attackerName,
-        startedAt: now,
-        durationMs: def.durationMs ?? 5000,
-      })
-    }
+    let fifty: LobbyPlayerChaos['fiftyFifty'] | undefined
     if (powerUpId === 'fifty-fifty' && typeof questionIndex === 'number') {
       const pool = await prisma.teacherLobby.findUnique({
         where: { id }, select: { questionPool: true },
@@ -111,32 +119,48 @@ export async function POST(req: NextRequest, { params }: Ctx) {
           const j = Math.floor(Math.random() * (i + 1))
           ;[wrong[i], wrong[j]] = [wrong[j], wrong[i]]
         }
-        mine.fiftyFifty = { questionIndex, eliminated: wrong.slice(0, 2) }
+        fifty = { questionIndex, eliminated: wrong.slice(0, 2) }
       }
     }
-    await prisma.teacherLobbyParticipant.update({
-      where: { id: me.id }, data: { powerUps: asJson(mine) },
+
+    const mine = await prisma.$transaction(async (tx) => {
+      await lockRows(tx, [me.id])
+      const row = await tx.teacherLobbyParticipant.findUnique({ where: { id: me.id }, select: { powerUps: true } })
+      const fresh = readChaos(row?.powerUps)
+      if (!spend(fresh)) return null
+      if (powerUpId === 'shield') fresh.shield = true
+      if (powerUpId === 'reflect') fresh.reflect = true
+      if (powerUpId === 'double-points') fresh.doubleNext = true
+      if (powerUpId === 'time-warp') {
+        fresh.effects.push({
+          id: `${now}-${Math.random().toString(36).slice(2, 8)}`,
+          type: 'time-warp',
+          from: attackerName,
+          startedAt: now,
+          durationMs: def.durationMs ?? 5000,
+        })
+      }
+      if (fifty) fresh.fiftyFifty = fifty
+      await tx.teacherLobbyParticipant.update({ where: { id: me.id }, data: { powerUps: asJson(fresh) } })
+      return fresh
     })
+    if (!mine) return noItem
     return NextResponse.json({ ok: true, used: powerUpId, scope: 'self', targets: 0, powerUps: mine })
   }
 
   // ---- Attacks: the server picks the victims. ----
   const roster = await prisma.teacherLobbyParticipant.findMany({
     where: { lobbyId: id },
-    select: { id: true, team: true, score: true, powerUps: true, user: { select: { name: true } } },
+    select: { id: true, team: true, score: true },
   })
   const targetIds = resolveTargets({
     attackerTeam: me.team,
-    scope: item.scope,
+    scope: preview.scope,
     participants: roster.map((p) => ({ id: p.id, team: p.team, score: p.score })),
   })
   if (targetIds.length === 0) {
-    // Nobody to hit (single-team lobby). Give the item back rather than eat it.
-    mine.inventory.splice(slot, 0, item)
-    await prisma.teacherLobbyParticipant.update({
-      where: { id: me.id }, data: { powerUps: asJson(mine) },
-    })
-    return NextResponse.json({ ok: false, error: 'No opponents to target', powerUps: mine })
+    // Nobody to hit (single-team lobby). Nothing was spent, so the item stays.
+    return NextResponse.json({ ok: false, error: 'No opponents to target', powerUps: readChaos(me.powerUps) })
   }
 
   const effectFor = (): ActiveEffect => ({
@@ -147,48 +171,48 @@ export async function POST(req: NextRequest, { params }: Ctx) {
     durationMs: def.durationMs ?? 3000,
   })
 
-  const writes: Prisma.PrismaPromise<unknown>[] = []
-  let blocked = 0
-  let reflected = 0
+  const outcome = await prisma.$transaction(async (tx) => {
+    await lockRows(tx, [me.id, ...targetIds])
+    const rows = await tx.teacherLobbyParticipant.findMany({
+      where: { id: { in: [me.id, ...targetIds] } },
+      select: { id: true, powerUps: true },
+    })
+    const byId = new Map(rows.map((r) => [r.id, r]))
+    const mine = readChaos(byId.get(me.id)?.powerUps)
+    if (!spend(mine)) return null
 
-  for (const targetId of targetIds) {
-    const target = roster.find((p) => p.id === targetId)
-    if (!target) continue
-    const theirs: LobbyPlayerChaos = {
-      ...emptyLobbyChaos(),
-      ...((target.powerUps as LobbyPlayerChaos | null) ?? {}),
+    let blocked = 0
+    let reflected = 0
+    for (const targetId of targetIds) {
+      const target = byId.get(targetId)
+      if (!target) continue // left the lobby since the roster read
+      const theirs = readChaos(target.powerUps)
+      // Shield and Reflect are checked per victim: a team-wide hit is absorbed
+      // only by the students who happen to be holding one.
+      if (theirs.shield) {
+        theirs.shield = false
+        blocked++
+      } else if (theirs.reflect) {
+        theirs.reflect = false
+        reflected++
+        mine.effects.push(effectFor())
+      } else {
+        theirs.effects.push(effectFor())
+      }
+      await tx.teacherLobbyParticipant.update({ where: { id: targetId }, data: { powerUps: asJson(theirs) } })
     }
-    theirs.effects = pruneEffects(theirs.effects, now)
-
-    // Shield and Reflect are checked per victim: a team-wide hit is absorbed
-    // only by the students who happen to be holding one.
-    if (theirs.shield) {
-      theirs.shield = false
-      blocked++
-    } else if (theirs.reflect) {
-      theirs.reflect = false
-      reflected++
-      mine.effects.push(effectFor())
-    } else {
-      theirs.effects.push(effectFor())
-    }
-    writes.push(prisma.teacherLobbyParticipant.update({
-      where: { id: target.id }, data: { powerUps: asJson(theirs) },
-    }))
-  }
-
-  writes.push(prisma.teacherLobbyParticipant.update({
-    where: { id: me.id }, data: { powerUps: asJson(mine) },
-  }))
-  await prisma.$transaction(writes)
+    await tx.teacherLobbyParticipant.update({ where: { id: me.id }, data: { powerUps: asJson(mine) } })
+    return { mine, blocked, reflected }
+  })
+  if (!outcome) return noItem
 
   return NextResponse.json({
     ok: true,
     used: powerUpId,
-    scope: item.scope,
+    scope: preview.scope,
     targets: targetIds.length,
-    blocked,
-    reflected,
-    powerUps: mine,
+    blocked: outcome.blocked,
+    reflected: outcome.reflected,
+    powerUps: outcome.mine,
   })
 }

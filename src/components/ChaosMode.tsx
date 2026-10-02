@@ -10,12 +10,24 @@
  * shown a placeholder instead of the real effect.
  */
 
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useLayoutEffect, useMemo, useState } from 'react';
 import { POWER_UPS, type ActiveEffect, type PowerUpId } from '@/lib/chaos-powerups';
+
+// useLayoutEffect warns during server rendering; the clock only matters in the browser.
+const useBrowserLayoutEffect = typeof window === 'undefined' ? useEffect : useLayoutEffect;
 
 /** Re-render ticker while any effect is live so overlays expire on time. */
 export function useChaosNow(effects: ActiveEffect[] | undefined): number {
   const [now, setNow] = useState(() => Date.now());
+  // The ticker below stops while nothing is live, so `now` can be minutes old
+  // when the next effect lands. That stale value made an attack that arrived
+  // already over look live, and it was drawn for one 250ms tick. Re-read the
+  // clock whenever the effect list changes, in a layout effect so the stale
+  // frame is never painted.
+  useBrowserLayoutEffect(() => {
+    if (!effects?.length) return;
+    setNow(Date.now());
+  }, [effects]);
   const anyActive = (effects || []).some((e) => e.startedAt + e.durationMs > now);
   useEffect(() => {
     if (!anyActive) return;

@@ -58,14 +58,93 @@ export async function POST(req: NextRequest, { params }: Ctx) {
     return NextResponse.json({ error: 'Out of questions' }, { status: 400 })
   }
 
-  const participant = await prisma.teacherLobbyParticipant.findUnique({
-    where: { lobbyId_userId: { lobbyId: id, userId } },
-  })
-  if (!participant) return NextResponse.json({ error: 'Not in lobby' }, { status: 403 })
+  const isChaos = lobby.gameMode === 'CHAOS'
 
-  // Idempotent guard: only credit if this is the next-or-greater index
-  // (prevents double-counting if the client retries the same submission).
-  if (questionIndex < participant.lastQuestionIndex) {
+  // Read-modify-write of this player's row under a row lock. The powerup route
+  // writes the same row when someone attacks this player (it appends to
+  // powerUps.effects); without the lock, an attack that landed between our
+  // read and our write was silently erased by this write, and an item we had
+  // just dropped could be erased by theirs. The lock also makes the duplicate-
+  // submission guard below race-safe.
+  const result = await prisma.$transaction(async (tx) => {
+    await tx.$queryRaw`SELECT id FROM "TeacherLobbyParticipant" WHERE "lobbyId" = ${id} AND "userId" = ${userId} FOR UPDATE`
+    const participant = await tx.teacherLobbyParticipant.findUnique({
+      where: { lobbyId_userId: { lobbyId: id, userId } },
+    })
+    if (!participant) return { kind: 'missing' as const }
+
+    // Idempotent guard: only credit if this is the next-or-greater index
+    // (prevents double-counting if the client retries the same submission).
+    if (questionIndex < participant.lastQuestionIndex) return { kind: 'duplicate' as const, participant }
+
+    const correct = selectedIndex === q.correctAnswer
+
+    // Chaos bookkeeping happens on this participant's own row, so simultaneous
+    // answers from 30 students never contend on a shared blob.
+    const chaos: LobbyPlayerChaos | null = isChaos
+      ? { ...emptyLobbyChaos(), ...((participant.powerUps as LobbyPlayerChaos | null) ?? {}) }
+      : null
+    if (chaos) chaos.effects = pruneEffects(chaos.effects, Date.now())
+
+    // Double Points (one-shot) and an active Time Warp both double a correct
+    // answer, mirroring the 1v1 rules at lobby scale (+200 instead of +100).
+    let doubled = false
+    if (chaos && correct) {
+      const timeWarpActive = chaos.effects.some(
+        (e) => e.type === 'time-warp' && e.startedAt + e.durationMs > Date.now()
+      )
+      if (chaos.doubleNext || timeWarpActive) {
+        doubled = true
+        chaos.doubleNext = false
+      }
+    }
+
+    // +100 for correct, -50 for wrong (discourages random guessing).
+    const scoreDelta = correct ? (doubled ? 200 : 100) : -50
+
+    // Rubber-banding needs the gap to the LEADING team, so tally team totals
+    // before writing. Scores are per-participant, so sum them per team.
+    let droppedPowerUp: string | null = null
+    if (chaos) {
+      const roster = await tx.teacherLobbyParticipant.findMany({
+        where: { lobbyId: id },
+        select: { team: true, score: true },
+      })
+      const totals = new Map<number, number>()
+      for (const r of roster) {
+        if (r.team === null) continue
+        totals.set(r.team, (totals.get(r.team) ?? 0) + r.score)
+      }
+      const myTeamScore = participant.team === null ? participant.score : (totals.get(participant.team) ?? 0)
+      const leading = Math.max(myTeamScore, ...totals.values())
+      if (chaos.inventory.length < LOBBY_MAX_INVENTORY) {
+        const drop = rollLobbyDrop({
+          pointDeficit: leading - myTeamScore,
+          intensity: (lobby.chaosIntensity as ChaosIntensity) ?? 'gentle',
+        })
+        if (drop) {
+          chaos.inventory.push(drop)
+          droppedPowerUp = drop.id
+        }
+      }
+    }
+
+    const updated = await tx.teacherLobbyParticipant.update({
+      where: { id: participant.id },
+      data: {
+        questionsAnswered: { increment: 1 },
+        questionsCorrect: correct ? { increment: 1 } : undefined,
+        score: { increment: scoreDelta },
+        lastQuestionIndex: questionIndex + 1,
+        ...(chaos ? { powerUps: chaos as unknown as Prisma.InputJsonValue } : {}),
+      },
+    })
+    return { kind: 'ok' as const, updated, correct, scoreDelta, droppedPowerUp, doubled, chaos }
+  })
+
+  if (result.kind === 'missing') return NextResponse.json({ error: 'Not in lobby' }, { status: 403 })
+  if (result.kind === 'duplicate') {
+    const { participant } = result
     return NextResponse.json({
       correct: false,
       correctAnswer: q.correctAnswer,
@@ -75,70 +154,7 @@ export async function POST(req: NextRequest, { params }: Ctx) {
       duplicate: true,
     })
   }
-
-  const correct = selectedIndex === q.correctAnswer
-  const isChaos = lobby.gameMode === 'CHAOS'
-
-  // Chaos bookkeeping happens on this participant's own row, so simultaneous
-  // answers from 30 students never contend on a shared blob.
-  const chaos: LobbyPlayerChaos | null = isChaos
-    ? { ...emptyLobbyChaos(), ...((participant.powerUps as LobbyPlayerChaos | null) ?? {}) }
-    : null
-  if (chaos) chaos.effects = pruneEffects(chaos.effects, Date.now())
-
-  // Double Points (one-shot) and an active Time Warp both double a correct
-  // answer, mirroring the 1v1 rules at lobby scale (+200 instead of +100).
-  let doubled = false
-  if (chaos && correct) {
-    const timeWarpActive = chaos.effects.some(
-      (e) => e.type === 'time-warp' && e.startedAt + e.durationMs > Date.now()
-    )
-    if (chaos.doubleNext || timeWarpActive) {
-      doubled = true
-      chaos.doubleNext = false
-    }
-  }
-
-  // +100 for correct, -50 for wrong (discourages random guessing).
-  const scoreDelta = correct ? (doubled ? 200 : 100) : -50
-
-  // Rubber-banding needs the gap to the LEADING team, so tally team totals
-  // before writing. Scores are per-participant, so sum them per team.
-  let droppedPowerUp: string | null = null
-  if (chaos) {
-    const roster = await prisma.teacherLobbyParticipant.findMany({
-      where: { lobbyId: id },
-      select: { team: true, score: true },
-    })
-    const totals = new Map<number, number>()
-    for (const r of roster) {
-      if (r.team === null) continue
-      totals.set(r.team, (totals.get(r.team) ?? 0) + r.score)
-    }
-    const myTeamScore = participant.team === null ? participant.score : (totals.get(participant.team) ?? 0)
-    const leading = Math.max(myTeamScore, ...totals.values())
-    if (chaos.inventory.length < LOBBY_MAX_INVENTORY) {
-      const drop = rollLobbyDrop({
-        pointDeficit: leading - myTeamScore,
-        intensity: (lobby.chaosIntensity as ChaosIntensity) ?? 'gentle',
-      })
-      if (drop) {
-        chaos.inventory.push(drop)
-        droppedPowerUp = drop.id
-      }
-    }
-  }
-
-  const updated = await prisma.teacherLobbyParticipant.update({
-    where: { id: participant.id },
-    data: {
-      questionsAnswered: { increment: 1 },
-      questionsCorrect: correct ? { increment: 1 } : undefined,
-      score: { increment: scoreDelta },
-      lastQuestionIndex: questionIndex + 1,
-      ...(chaos ? { powerUps: chaos as unknown as Prisma.InputJsonValue } : {}),
-    },
-  })
+  const { updated, correct, scoreDelta, droppedPowerUp, doubled, chaos } = result
 
   return NextResponse.json({
     correct,

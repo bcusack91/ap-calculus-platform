@@ -18,6 +18,7 @@ import {
   type ChaosToast,
 } from '@/components/ChaosMode'
 import { activeEffects, POWER_UPS, type ActiveEffect, type PowerUpId } from '@/lib/chaos-powerups'
+import { ingestEffects } from '@/lib/chaos-arrival'
 import type { LobbyInventoryItem } from '@/lib/lobby-chaos'
 import { isFreeForAll, resultHeadline, type RankedPlayer, type TeamTotal } from '@/lib/lobby-standings'
 
@@ -170,9 +171,33 @@ export default function ClassMatchPlayPage({ params }: { params: Promise<{ id: s
   // seconds should not re-download 200 questions each time.
   const haveQuestions = useRef(false)
   const pollTick = useRef(0)
-  // Effects already announced, so re-polling the same active attack does not
-  // re-toast it every two seconds.
+  // Every effect id ever received, so re-polling the same attack neither
+  // restarts it nor re-toasts it every two seconds.
   const seenEffects = useRef<Set<string>>(new Set())
+  // Effects as this screen runs them: attacks timed from when they ARRIVED
+  // here (see chaos-arrival.ts), and kept until that local window ends even
+  // after the server stops listing them. The ref is the source of truth for
+  // async callbacks; the state drives rendering.
+  const heldEffects = useRef<ActiveEffect[]>([])
+  const [liveEffects, setLiveEffects] = useState<ActiveEffect[]>([])
+  // Slippery Answers: the shuffled display order while it is active.
+  const [slipOrder, setSlipOrder] = useState<number[] | null>(null)
+
+  /** Take in a server snapshot of this player's effects (poll or response). */
+  const absorbEffects = useCallback((incoming: ActiveEffect[] | undefined) => {
+    const { effects, fresh } = ingestEffects(heldEffects.current, incoming, Date.now(), seenEffects.current)
+    heldEffects.current = effects
+    setLiveEffects(effects)
+    // Tell the victim who hit them — ActiveEffect.from carries the attacker's
+    // display name. Self items (Time Warp) are announced by the use handler.
+    const attacks = fresh.filter((e) => POWER_UPS[e.type].kind === 'attack')
+    if (attacks.length) {
+      setToasts((prev) => [
+        ...prev,
+        ...attacks.map((e) => ({ id: e.id, text: `${e.from} hit you with ${POWER_UPS[e.type].name}!` })),
+      ])
+    }
+  }, [])
 
   // Auth gate
   useEffect(() => {
@@ -198,21 +223,7 @@ export default function ClassMatchPlayPage({ params }: { params: Promise<{ id: s
       setState((prev) => ({ ...json, questions: json.questions ?? prev?.questions }))
       if (json.chaos) {
         setChaos(json.chaos)
-        // Tell the victim who hit them — ActiveEffect.from carries the
-        // attacker's display name.
-        const fresh = (json.chaos.effects as ActiveEffect[]).filter(
-          (e) => !seenEffects.current.has(e.id) && e.type !== 'time-warp'
-        )
-        if (fresh.length) {
-          for (const e of fresh) seenEffects.current.add(e.id)
-          setToasts((prev) => [
-            ...prev,
-            ...fresh.map((e) => ({
-              id: e.id,
-              text: `${e.from} hit you with ${POWER_UPS[e.type].name}!`,
-            })),
-          ])
-        }
+        absorbEffects(json.chaos.effects)
       }
       if (json.myProgress) {
         setScore(json.myProgress.score)
@@ -228,7 +239,7 @@ export default function ClassMatchPlayPage({ params }: { params: Promise<{ id: s
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Failed')
     }
-  }, [id])
+  }, [id, absorbEffects])
 
   useEffect(() => {
     if (authStatus !== 'authenticated') return
@@ -270,18 +281,42 @@ export default function ClassMatchPlayPage({ params }: { params: Promise<{ id: s
 
   // Ticks only while an effect is running, so overlays animate without
   // re-rendering the page the rest of the time.
-  const chaosNow = useChaosNow(chaos?.effects)
+  const chaosNow = useChaosNow(liveEffects)
+  const live = activeEffects(liveEffects, chaosNow)
+  const flipActive = live.some((e) => e.type === 'screen-flip')
+  // Earthquake and the Chaos Storm super both shake the game area (as in 1v1).
+  const shakeActive = live.some((e) => e.type === 'earthquake' || e.type === 'chaos-storm')
+  const slipperyActive = live.some((e) => e.type === 'slippery')
 
   const currentQuestion: PlayQuestion | null = useMemo(() => {
     const qs = state?.questions ?? []
     return qs[questionIndex] ?? null
   }, [state?.questions, questionIndex])
 
+  // Slippery Answers: re-shuffle the DISPLAYED option order every 800ms while
+  // active. Presentation only: answers are always sent by original index.
+  const optionCount = currentQuestion?.options.length ?? 0
+  useEffect(() => {
+    if (!slipperyActive || optionCount < 2) return
+    const shuffle = () => {
+      const order = Array.from({ length: optionCount }, (_, i) => i)
+      for (let i = order.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1))
+        ;[order[i], order[j]] = [order[j], order[i]]
+      }
+      setSlipOrder(order)
+    }
+    const first = setTimeout(shuffle, 0)
+    const t = setInterval(shuffle, 800)
+    return () => { clearTimeout(first); clearInterval(t) }
+  }, [slipperyActive, optionCount])
+  const displayOrder = slipperyActive && slipOrder?.length === optionCount ? slipOrder : null
+
   async function submitAnswer(chosen: number) {
     if (submitting || feedback || expired || !currentQuestion) return
     // Freeze blocks answering outright — dimming the buttons is not enough,
     // since a keyboard user can still reach them.
-    if (activeEffects(chaos?.effects, Date.now()).some(
+    if (activeEffects(heldEffects.current, Date.now()).some(
       (e) => e.type === 'freeze' || e.type === 'chaos-storm'
     )) return
     setSubmitting(true)
@@ -308,7 +343,10 @@ export default function ClassMatchPlayPage({ params }: { params: Promise<{ id: s
       setScore(json.score)
       setQuestionsAnswered(json.questionsAnswered)
       setQuestionsCorrect(json.questionsCorrect)
-      if (json.powerUps) setChaos((c) => (c ? { ...c, ...json.powerUps } : c))
+      if (json.powerUps) {
+        setChaos((c) => (c ? { ...c, ...json.powerUps } : c))
+        absorbEffects(json.powerUps.effects)
+      }
       if (json.droppedPowerUp) {
         const def = POWER_UPS[json.droppedPowerUp as PowerUpId]
         setToasts((prev) => [
@@ -340,7 +378,10 @@ export default function ClassMatchPlayPage({ params }: { params: Promise<{ id: s
         body: JSON.stringify({ powerUpId, questionIndex }),
       })
       const json = await res.json()
-      if (json.powerUps) setChaos((c) => (c ? { ...c, ...json.powerUps } : c))
+      if (json.powerUps) {
+        setChaos((c) => (c ? { ...c, ...json.powerUps } : c))
+        absorbEffects(json.powerUps.effects)
+      }
       if (!res.ok || json.ok === false) {
         setToasts((prev) => [
           ...prev,
@@ -462,9 +503,8 @@ export default function ClassMatchPlayPage({ params }: { params: Promise<{ id: s
   }
 
   // IN_PROGRESS — render the question
-  // Chaos: an attack is "live" only while its window is open, so drive the
-  // overlays off the server clock rather than off arrival time.
-  const live = activeEffects(chaos?.effects, chaosNow)
+  // Chaos: an attack is "live" while its window is open, timed from when it
+  // reached this screen (liveEffects), so polling delay cannot eat it.
   const frozen = live.some((e) => e.type === 'freeze' || e.type === 'chaos-storm')
   const eliminated =
     chaos?.fiftyFifty?.questionIndex === questionIndex ? chaos.fiftyFifty.eliminated : []
@@ -477,15 +517,6 @@ export default function ClassMatchPlayPage({ params }: { params: Promise<{ id: s
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-indigo-50 to-white p-4 sm:p-6 text-gray-900">
-      {live.map((e) =>
-        e.type === 'ink-splat' ? <InkSplatOverlay key={e.id} effect={e} now={chaosNow} /> :
-        e.type === 'blackout' ? <DarkOverlay key={e.id} effect={e} now={chaosNow} /> :
-        e.type === 'chaos-storm' ? <StormOverlay key={e.id} effect={e} now={chaosNow} /> :
-        e.type === 'freeze' ? <FrostOverlay key={e.id} effect={e} now={chaosNow} /> :
-        e.type === 'fog' ? <DarkOverlay key={e.id} effect={e} now={chaosNow} intensity={0.35} /> :
-        e.type === 'time-warp' ? <TimeWarpOverlay key={e.id} effect={e} now={chaosNow} /> :
-        null
-      )}
       <ChaosToasts toasts={toasts} />
       {chaos && (
         <PowerUpBar
@@ -498,7 +529,22 @@ export default function ClassMatchPlayPage({ params }: { params: Promise<{ id: s
           onUse={firePowerUp}
         />
       )}
-      <div className="max-w-2xl mx-auto">
+      {/* The game area is the overlays' positioning box (as in 1v1). They used
+          to sit on an unpositioned page and anchored to the top of the
+          document, so a scrolled-down player saw little of a Blackout. Flip
+          and shake move this box; the power-up bar and toasts are fixed. */}
+      <div
+        className={`relative max-w-2xl mx-auto transition-transform duration-500 motion-reduce:transition-none ${flipActive ? 'rotate-180' : ''} ${shakeActive ? 'chaos-shake' : ''}`}
+      >
+        {live.map((e) =>
+          e.type === 'ink-splat' ? <InkSplatOverlay key={e.id} effect={e} now={chaosNow} /> :
+          e.type === 'blackout' ? <DarkOverlay key={e.id} effect={e} now={chaosNow} /> :
+          e.type === 'chaos-storm' ? <StormOverlay key={e.id} effect={e} now={chaosNow} /> :
+          e.type === 'freeze' ? <FrostOverlay key={e.id} effect={e} now={chaosNow} /> :
+          e.type === 'fog' ? <DarkOverlay key={e.id} effect={e} now={chaosNow} intensity={0.35} /> :
+          e.type === 'time-warp' ? <TimeWarpOverlay key={e.id} effect={e} now={chaosNow} /> :
+          null
+        )}
         <div className="flex items-center justify-between mb-4">
           <div className="text-sm text-gray-600">
             Question <strong>{questionIndex + 1}</strong> · Score{' '}
@@ -539,7 +585,8 @@ export default function ClassMatchPlayPage({ params }: { params: Promise<{ id: s
               }}
             />
             <div className="grid gap-2">
-              {currentQuestion.options.map((opt, i) => {
+              {(displayOrder ?? currentQuestion.options.map((_, i) => i)).map((i) => {
+                const opt = currentQuestion.options[i]
                 const isSelected = selected === i
                 const isCorrect = feedback && i === feedback.correctAnswer
                 const isWrongPick = feedback && isSelected && !feedback.correct
