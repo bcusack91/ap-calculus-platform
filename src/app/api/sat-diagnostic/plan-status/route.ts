@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { buildSatPlan } from '@/lib/sat-plan'
+import { unitTestStatusFor } from '@/lib/mcat-unit-test-server'
 
 /**
  * The student's SAT study plan for their latest diagnostic cycle, routed to
@@ -13,7 +14,12 @@ export async function GET() {
     if (!session?.user?.id) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
-    return NextResponse.json(await buildSatPlan(session.user.id))
+    const plan = await buildSatPlan(session.user.id)
+    // The cycle's recommended last step (does not lock the diagnostic).
+    const unitTest = plan.hasDiagnostic && plan.recommendedTopics.length > 0
+      ? await unitTestStatusFor(session.user.id, plan.diagnosticId, plan.pendingTopics.length === 0, 'sat')
+      : null
+    return NextResponse.json({ ...plan, unitTest })
   } catch (error) {
     console.error('SAT plan status error:', error)
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 })

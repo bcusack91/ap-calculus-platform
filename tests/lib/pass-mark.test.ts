@@ -5,7 +5,7 @@
  * "Pending". Every surface now derives from EXIT_QUIZ_PASS_FRACTION.
  *
  * The one deliberate exception is the MCAT cycle's 25-question unit test,
- * which the owner set at 75% (2026-10-03): it measures a different thing (a
+ * (MCAT, and SAT as a recommended step), which the owner set at 75% (2026-10-03): it measures a different thing (a
  * mixed test across five cleared topics), not whether one topic is cleared.
  */
 import { describe, it, expect } from 'vitest'
@@ -32,7 +32,7 @@ describe('one pass mark', () => {
     for (const f of [
       'src/app/api/study-plan/plan-status/route.ts',
       'src/lib/mcat-plan.ts', // the MCAT plan-status route's logic
-      'src/app/api/act-diagnostic/plan-status/route.ts',
+      'src/lib/act-plan.ts', // the ACT plan-status route's logic
       'src/app/api/teacher/classrooms/[id]/class-plan/route.ts',
       'src/app/api/progress/module-status/route.ts',
       'src/lib/sat-plan.ts',

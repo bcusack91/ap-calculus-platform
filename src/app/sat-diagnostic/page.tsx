@@ -179,6 +179,8 @@ export default function SATDiagnosticPage() {
     nextModule: number | null
   } | null>(null)
   const [pendingLessons, setPendingLessons] = useState(0)
+  // The cycle's unit test (recommended last step; does not lock the diagnostic).
+  const [unitTest, setUnitTest] = useState<{ available: boolean; passed: boolean; attempts: number; bestPercent: number | null; passPercent: number; questionCount: number; path: string; inProgressId: string | null } | null>(null)
   const [challengeSubmitted, setChallengeSubmitted] = useState(false)
   // An unfinished sitting offered on the menu, and the one being resumed
   // (seeds the test component; null for a fresh sitting).
@@ -244,6 +246,7 @@ export default function SATDiagnosticPage() {
         .then(data => {
           if (typeof data?.summary?.pending === 'number') setPendingLessons(data.summary.pending)
           if (data?.coreSkills) setCoreSkills(data.coreSkills)
+          if (data?.unitTest) setUnitTest(data.unitTest)
         })
         .catch(() => {})
     }
@@ -643,6 +646,24 @@ export default function SATDiagnosticPage() {
                   </Link>
                 ))}
               </div>
+              {unitTest && !unitTest.passed && (
+                unitTest.available ? (
+                  <div className="mt-4 rounded-xl border border-green-400 bg-white p-4 dark:border-green-600 dark:bg-gray-800">
+                    <p className="text-sm font-semibold text-green-900 dark:text-green-200">📝 Every topic cleared — finish the cycle with your unit test</p>
+                    <p className="mt-1 text-xs text-gray-600 dark:text-gray-300">
+                      {unitTest.questionCount} questions on these topics ({unitTest.passPercent}% to pass). It shows what stuck before you retake the diagnostic.
+                      {unitTest.attempts > 0 && unitTest.bestPercent !== null ? ` Best so far: ${unitTest.bestPercent}%. Retakes use new questions.` : ''}
+                    </p>
+                    <Link href={unitTest.path} className="mt-3 inline-block rounded-lg bg-green-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-green-700">
+                      {unitTest.inProgressId ? 'Resume the unit test' : unitTest.attempts > 0 ? 'Retake the unit test' : 'Take the unit test'}
+                    </Link>
+                  </div>
+                ) : (
+                  <p className="mt-4 text-xs text-green-800 dark:text-green-300">
+                    📝 After you clear these, finish the cycle with a {unitTest.questionCount}-question unit test on them, then retake the diagnostic.
+                  </p>
+                )
+              )}
             </div>
           )}
 

@@ -6,6 +6,8 @@ import { hasExitQuiz } from '@/data/exit-quizzes'
 import { CLASS_PLAN_COURSES, diagnosticRouteForKey } from '@/lib/class-plan-config'
 import { buildSatPlan } from '@/lib/sat-plan'
 import { buildMcatPlanStatus } from '@/lib/mcat-plan'
+import { buildActPlanStatus } from '@/lib/act-plan'
+import { unitTestStatusFor } from '@/lib/mcat-unit-test-server'
 import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
 
 /**
@@ -108,8 +110,12 @@ export async function GET() {
               pending: satPlan.summary.pending,
             },
             canRetakeDiagnostic: satCourse.gated === true ? satPlan.canRetakeDiagnostic : true,
+            unitTest: null as Awaited<ReturnType<typeof unitTestStatusFor>> | null,
           }
         : null
+    if (satEntry && satPlan?.hasDiagnostic) {
+      satEntry.unitTest = await unitTestStatusFor(userId, satPlan.diagnosticId, satPlan.pendingTopics.length === 0, 'sat')
+    }
 
     // The MCAT plan comes from the MCAT page's own builder too: it swaps out
     // topics cleared in an earlier cycle and ends the cycle with the unit
@@ -136,7 +142,30 @@ export async function GET() {
         }
       }
     }
-    const extraEntries = [mcatEntry, satEntry].filter((e): e is NonNullable<typeof e> => e !== null)
+    // ACT: its own builder too (the cycle's unit test lives there).
+    const actCourse = CLASS_PLAN_COURSES.find((c) => c.key === 'act')
+    let actEntry = null
+    if (actCourse && perCourse.has('act')) {
+      perCourse.delete('act')
+      const act = await buildActPlanStatus(userId)
+      if (act.hasDiagnostic && act.recommendedTopics.length > 0) {
+        const pending = act.pendingTopics.length
+        actEntry = {
+          courseKey: actCourse.key,
+          label: actCourse.label,
+          courseSlug: actCourse.courseSlug ?? null,
+          diagnosticRoute: diagnosticRouteForKey(actCourse.key),
+          gated: actCourse.gated === true,
+          requiredScorePercent: act.requiredScorePercent,
+          takenAt: (act.diagnosticCreatedAt ?? new Date()).toISOString(),
+          topics: act.recommendedTopics,
+          summary: { total: act.recommendedTopics.length, completed: act.recommendedTopics.length - pending, pending },
+          canRetakeDiagnostic: true,
+          unitTest: act.unitTest,
+        }
+      }
+    }
+    const extraEntries = [mcatEntry, actEntry, satEntry].filter((e): e is NonNullable<typeof e> => e !== null)
 
     if (perCourse.size === 0) {
       return NextResponse.json({ plans: extraEntries })

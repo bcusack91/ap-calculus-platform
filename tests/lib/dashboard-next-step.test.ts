@@ -139,11 +139,27 @@ describe('resolveNextStep — plans and fallbacks', () => {
       unitTest: { available: true, passed: false, attempts: 1, path: '/mcat-unit-test', inProgressId: null },
     }
     const step = resolveNextStep({ ...base, plans: [mcat] })
-    expect(step).toEqual({ kind: 'unit-test', planLabel: 'MCAT', href: '/mcat-unit-test', attempts: 1, resume: false })
+    expect(step).toEqual({ kind: 'unit-test', planLabel: 'MCAT', href: '/mcat-unit-test', attempts: 1, resume: false, locks: true })
     expect(describeNextStep(step as Exclude<typeof step, { kind: 'loading' }>).cta).toBe('Retake the unit test')
     // Passed (or a teacher waiver opened the gate): the retake is next.
     expect(resolveNextStep({ ...base, plans: [{ ...mcat, unitTest: { ...mcat.unitTest, passed: true }, canRetakeDiagnostic: true }] }).kind).toBe('retake-diagnostic')
     expect(resolveNextStep({ ...base, plans: [{ ...mcat, canRetakeDiagnostic: true }] }).kind).toBe('retake-diagnostic')
+  })
+
+  it('SAT: the unit test is recommended next even though the diagnostic is open', () => {
+    const sat = {
+      ...calcPlan,
+      courseKey: 'sat',
+      label: 'SAT',
+      diagnosticRoute: '/sat-diagnostic',
+      canRetakeDiagnostic: true,
+      topics: calcPlan.topics.map((t) => ({ ...t, isSatisfied: true })),
+      unitTest: { available: true, passed: false, attempts: 0, path: '/sat-unit-test', inProgressId: null, locksDiagnostic: false },
+    }
+    const step = resolveNextStep({ ...base, plans: [sat] })
+    expect(step).toMatchObject({ kind: 'unit-test', href: '/sat-unit-test', locks: false })
+    expect(describeNextStep(step as Exclude<typeof step, { kind: 'loading' }>).reason).not.toMatch(/unlock/)
+    expect(resolveNextStep({ ...base, plans: [{ ...sat, unitTest: { ...sat.unitTest, passed: true } }] }).kind).toBe('retake-diagnostic')
   })
 
   it('a course with no diagnostic: keep going in that course', () => {

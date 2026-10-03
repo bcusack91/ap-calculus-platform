@@ -167,3 +167,34 @@ describe('POST /api/mcat-unit-test/submit', () => {
     expect(db.unitTestAttempt.create).not.toHaveBeenCalled()
   })
 })
+
+describe('SAT and ACT unit test routes', () => {
+  it('SAT: builds a test from the SAT plan once its topics are cleared', async () => {
+    vi.resetModules()
+    vi.doMock('@/lib/sat-plan', () => ({
+      buildSatPlan: async () => ({
+        hasDiagnostic: true,
+        diagnosticId: 'sat-diag',
+        recommendedTopics: ['sat-linear-equations-inequalities', 'sat-subject-verb-agreement', 'sat-vocabulary-context'].map((slug) => ({ slug, name: slug, isSatisfied: true })),
+        pendingTopics: [],
+      }),
+    }))
+    const { POST } = await import('@/app/api/sat-unit-test/start/route')
+    const res = await POST()
+    expect(res.status).toBe(200)
+    const body = await res.json()
+    expect(body.questions).toHaveLength(25)
+    expect(body.questions.map((q: { topicSlug: string }) => q.topicSlug).filter((s: string) => s === 'sat-linear-equations-inequalities')).toHaveLength(9)
+    expect(db.mcatUnitTest.create.mock.calls.at(-1)![0].data.diagnosticId).toBe('sat-diag')
+    vi.doUnmock('@/lib/sat-plan')
+  })
+
+  it('ACT: switched off — every endpoint 404s', async () => {
+    const status = await import('@/app/api/act-unit-test/route')
+    const start = await import('@/app/api/act-unit-test/start/route')
+    const submit = await import('@/app/api/act-unit-test/submit/route')
+    expect((await status.GET()).status).toBe(404)
+    expect((await start.POST()).status).toBe(404)
+    expect((await submit.POST(new Request('http://x', { method: 'POST', body: '{}' }))).status).toBe(404)
+  })
+})

@@ -7,8 +7,9 @@
  *   2. a pending class diagnostic
  *   3. flashcards due today
  *   4. the next uncleared topic in the student's diagnostic study plan
- *      (once every plan topic is cleared: the MCAT's unit test if it is
- *      still to pass, otherwise the diagnostic retake)
+ *      (once every plan topic is cleared: the cycle's unit test if it is
+ *      still to pass — MCAT requires it, SAT/ACT recommend it — otherwise
+ *      the diagnostic retake)
  *   5. no diagnostic yet: the free diagnostic for their course
  *      (a course without one: keep going in that course / the onboarding
  *      topic; nothing known: choose a course)
@@ -18,6 +19,7 @@
 
 import { pickNextPendingTopic, planTopicHref, type PlanTopic } from '@/components/StudyPlanNextUp'
 import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
+import { unitTestIsNextStep } from '@/lib/unit-test-courses'
 
 /** The rated review session — the one flashcard destination on the dashboard. */
 export const FLASHCARD_REVIEW_HREF = '/flashcards/review'
@@ -29,8 +31,8 @@ export interface NextStepPlan {
   gated?: boolean
   canRetakeDiagnostic?: boolean
   topics: PlanTopic[]
-  /** MCAT: the cycle's unit test (src/lib/mcat-unit-test.ts). */
-  unitTest?: { available: boolean; passed: boolean; attempts: number; path: string; inProgressId?: string | null } | null
+  /** The cycle's unit test (src/lib/unit-test-courses.ts); MCAT, SAT (and ACT once enabled). */
+  unitTest?: { available: boolean; passed: boolean; attempts: number; path: string; inProgressId?: string | null; locksDiagnostic?: boolean } | null
 }
 
 export interface NextStepClassDiagnostic {
@@ -68,7 +70,7 @@ export type NextStep =
   | { kind: 'class-diagnostic'; diagnostic: NextStepClassDiagnostic; count: number }
   | { kind: 'flashcards'; count: number }
   | { kind: 'plan-topic'; topic: PlanTopic; courseKey: string; planLabel: string; done: number; total: number }
-  | { kind: 'unit-test'; planLabel: string; href: string; attempts: number; resume: boolean }
+  | { kind: 'unit-test'; planLabel: string; href: string; attempts: number; resume: boolean; locks: boolean }
   | { kind: 'retake-diagnostic'; planLabel: string; href: string }
   | { kind: 'take-diagnostic'; courseLabel: string; href: string }
   | { kind: 'open-course'; courseLabel: string; href: string }
@@ -101,12 +103,19 @@ export function resolveNextStep(input: NextStepInput): NextStep {
         return { kind: 'plan-topic', topic: next, courseKey: plan.courseKey, planLabel: plan.label, done, total: plan.topics.length }
       }
     }
-    // Every recommended topic is cleared. The MCAT cycle ends with its unit
-    // test; only after a pass (or a teacher's waiver) is the retake next.
+    // Every recommended topic is cleared. The cycle ends with its unit test
+    // (MCAT: required unless a teacher waived it; SAT/ACT: recommended).
     const plan = ordered[0]
     const unitTest = plan.unitTest
-    if (unitTest && unitTest.available && !unitTest.passed && plan.canRetakeDiagnostic !== true) {
-      return { kind: 'unit-test', planLabel: plan.label, href: unitTest.path, attempts: unitTest.attempts, resume: !!unitTest.inProgressId }
+    if (unitTest && unitTestIsNextStep(unitTest, plan.canRetakeDiagnostic)) {
+      return {
+        kind: 'unit-test',
+        planLabel: plan.label,
+        href: unitTest.path,
+        attempts: unitTest.attempts,
+        resume: !!unitTest.inProgressId,
+        locks: unitTest.locksDiagnostic !== false,
+      }
     }
     return { kind: 'retake-diagnostic', planLabel: plan.label, href: plan.diagnosticRoute }
   }
@@ -176,10 +185,13 @@ export function describeNextStep(step: Exclude<NextStep, { kind: 'loading' }>): 
     case 'unit-test':
       return {
         title: `Pass your ${step.planLabel} unit test`,
-        reason:
-          step.attempts > 0
+        reason: step.locks
+          ? step.attempts > 0
             ? 'One step left: pass the unit test on your study-plan topics to unlock your next diagnostic. Retakes use new questions.'
-            : 'You cleared every topic in your study plan. Pass a 25-question test on them to unlock your next diagnostic.',
+            : 'You cleared every topic in your study plan. Pass a 25-question test on them to unlock your next diagnostic.'
+          : step.attempts > 0
+            ? 'Finish this study cycle: pass the unit test on your study-plan topics. Retakes use new questions.'
+            : 'You cleared every topic in your study plan. A 25-question test on them shows what stuck before your next diagnostic.',
         cta: step.resume ? 'Resume the unit test' : step.attempts > 0 ? 'Retake the unit test' : 'Take the unit test',
         href: step.href,
       }

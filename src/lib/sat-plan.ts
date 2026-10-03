@@ -2,7 +2,7 @@ import { prisma } from '@/lib/prisma'
 import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
 import { isEntranceMastery } from '@/lib/flashcard-unlock'
 import { hasExitQuiz } from '@/data/exit-quizzes'
-import { canonicalizeSlug, satPlanCandidatePool } from '@/data/sat-practice/diagnostic-generator'
+import { canonicalizeSlug, satPlanCandidatePool, slugToName } from '@/data/sat-practice/diagnostic-generator'
 import { HARD_MODULE_CATEGORY, hardTrackStatus } from '@/data/sat-practice/hard-modules'
 import {
   CORE_MODULE_CATEGORY,
@@ -72,7 +72,8 @@ function parseRecommended(results: unknown): RecommendedTopic[] {
     const real = canonicalizeSlug(slug)
     out.push({
       slug: real,
-      name: real === slug && typeof name === 'string' && name ? name : real,
+      // A remapped slug's stored name described the old pseudo topic.
+      name: real === slug && typeof name === 'string' && name ? name : slugToName(real),
       priority: priority === 'high' || priority === 'low' ? priority : 'medium',
     })
   }

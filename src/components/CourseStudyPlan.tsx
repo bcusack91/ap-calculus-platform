@@ -8,6 +8,7 @@ import { formatTimeUntil } from '@/lib/format-due-time'
 import { studyPlanTopicHref } from '@/lib/dashboard-next-step'
 import { courseDiagnosticForKey } from '@/lib/student-courses'
 import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
+import { unitTestIsNextStep } from '@/lib/unit-test-courses'
 import type { PlanTopic } from '@/components/StudyPlanNextUp'
 import HelpLink, { HELP_ARTICLES } from '@/components/HelpLink'
 
@@ -25,8 +26,8 @@ export type PlanStatus = {
   pendingTopics: PlanTopicStatus[]
   /** 'hard' when the plan comes from a hard-track module (SAT 700-800 path). */
   planSource?: 'regular' | 'hard' | 'core-skills'
-  /** MCAT: the cycle's unit test (src/lib/mcat-unit-test.ts). */
-  unitTest?: { passed: boolean; path: string; questionCount: number; passPercent: number; attempts: number; inProgressId?: string | null } | null
+  /** The cycle's unit test (src/lib/unit-test-courses.ts). */
+  unitTest?: { available?: boolean; passed: boolean; path: string; questionCount: number; passPercent: number; attempts: number; inProgressId?: string | null; locksDiagnostic?: boolean } | null
 }
 
 type FlashcardStats = {
@@ -74,6 +75,7 @@ const DEDICATED_PLAN: Record<string, { endpoint: string; accent: CourseStudyPlan
 interface GenericPlan {
   courseKey?: string
   canRetakeDiagnostic?: boolean
+  unitTest?: PlanStatus['unitTest']
   requiredScorePercent?: number
   topics?: PlanTopicStatus[]
 }
@@ -91,6 +93,7 @@ export function planFromGenericPayload(body: unknown, courseKey: string): PlanSt
     requiredScorePercent: plan.requiredScorePercent ?? TOPIC_CLEAR_PERCENT,
     recommendedTopics: topics,
     pendingTopics: topics.filter((t) => !t.isSatisfied),
+    unitTest: plan.unitTest ?? null,
   }
 }
 
@@ -197,11 +200,14 @@ export default function CourseStudyPlan({
                 Start this topic <ArrowRight className="h-4 w-4" aria-hidden />
               </Link>
             </>
-          ) : allDone && plan?.unitTest && !plan.unitTest.passed && !plan.canRetakeDiagnostic ? (
+          ) : allDone && plan?.unitTest && unitTestIsNextStep(plan.unitTest, plan.canRetakeDiagnostic, { requireAvailable: false }) ? (
             <>
-              <h2 className="mt-1 text-xl font-bold text-gray-900 dark:text-white">📝 Every topic cleared — pass your unit test</h2>
+              <h2 className="mt-1 text-xl font-bold text-gray-900 dark:text-white">📝 Every topic cleared — take your unit test</h2>
               <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
-                A {plan.unitTest.questionCount}-question test on your study-plan topics. Score {plan.unitTest.passPercent}% or better to unlock your next {label} diagnostic.
+                A {plan.unitTest.questionCount}-question test on your study-plan topics.{' '}
+                {plan.unitTest.locksDiagnostic !== false
+                  ? `Score ${plan.unitTest.passPercent}% or better to unlock your next ${label} diagnostic.`
+                  : `Score ${plan.unitTest.passPercent}% or better to finish this cycle, then retake the ${label} diagnostic to see your growth.`}
               </p>
               <Link
                 href={plan.unitTest.path}
@@ -323,6 +329,8 @@ export default function CourseStudyPlan({
                   ? plan?.unitTest
                     ? `Clear them all, then pass a ${plan.unitTest.questionCount}-question unit test on them, to unlock your next diagnostic.`
                     : 'Clear them all to unlock your next diagnostic.'
+                  : plan?.unitTest
+                  ? `When you've cleared them all, take a ${plan.unitTest.questionCount}-question unit test on them, then retake the diagnostic to see your growth and get a new plan.`
                   : "When you've cleared them all, retake the diagnostic to see your growth and get a new plan."}
               </p>
             )}

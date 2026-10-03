@@ -190,7 +190,7 @@ function shuffle<T>(arr: T[]): T[] {
   return a
 }
 
-function slugToName(slug: string): string {
+export function slugToName(slug: string): string {
   return slug
     .replace(/^sat-/, '')
     .replace(/-sat$/, '')

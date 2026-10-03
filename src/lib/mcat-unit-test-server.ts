@@ -1,14 +1,17 @@
 /**
- * Database side of the MCAT cycle unit test (see mcat-unit-test.ts).
+ * Database side of the cycle unit test (see mcat-unit-test.ts) for every
+ * course in unit-test-courses.ts (MCAT, SAT, ACT).
  *
  * A cycle is identified by the diagnostic attempt that produced its plan, so a
  * new diagnostic starts a new cycle with no unit test yet — nothing to clean up.
+ * Diagnostic ids are unique across courses, so one table (McatUnitTest, named
+ * for the first course) holds every course's sittings without a course column.
  */
 import { prisma } from '@/lib/prisma'
 import { generateExitQuiz, hasExitQuiz } from '@/data/exit-quizzes'
+import { UNIT_TEST_COURSES, type UnitTestCourse } from '@/lib/unit-test-courses'
 import {
   MCAT_UNIT_TEST_PASS_PERCENT,
-  MCAT_UNIT_TEST_PATH,
   MCAT_UNIT_TEST_QUESTIONS,
   assembleUnitTest,
   rankCandidates,
@@ -17,6 +20,9 @@ import {
 } from '@/lib/mcat-unit-test'
 
 export interface McatUnitTestStatus {
+  course: UnitTestCourse
+  /** Passing it is required before the next diagnostic (MCAT); otherwise it is the recommended last step. */
+  locksDiagnostic: boolean
   /** Every plan topic is cleared, so the test can be taken. */
   available: boolean
   passed: boolean
@@ -36,7 +42,9 @@ export async function unitTestStatusFor(
   userId: string,
   diagnosticId: string,
   topicsCleared: boolean,
+  course: UnitTestCourse = 'mcat',
 ): Promise<McatUnitTestStatus> {
+  const cfg = UNIT_TEST_COURSES[course]
   const rows = await prisma.mcatUnitTest.findMany({
     where: { userId, diagnosticId },
     orderBy: { startedAt: 'asc' },
@@ -45,6 +53,8 @@ export async function unitTestStatusFor(
   const done = rows.filter((r) => r.completedAt !== null)
   const inProgress = [...rows].reverse().find((r) => r.completedAt === null)
   return {
+    course,
+    locksDiagnostic: cfg.locksDiagnostic,
     available: topicsCleared,
     passed: done.some((r) => r.passed),
     attempts: done.length,
@@ -53,7 +63,7 @@ export async function unitTestStatusFor(
     inProgressId: inProgress?.id ?? null,
     passPercent: MCAT_UNIT_TEST_PASS_PERCENT,
     questionCount: MCAT_UNIT_TEST_QUESTIONS,
-    path: MCAT_UNIT_TEST_PATH,
+    path: cfg.path,
   }
 }
 
@@ -87,7 +97,7 @@ function exitQuestionIdsOf(json: unknown): string[] {
 async function candidatesFor(slug: string, includeLowYield: boolean): Promise<UnitTestCandidate[]> {
   if (!hasExitQuiz(slug)) return []
   try {
-    const qs = await generateExitQuiz(slug, 500, undefined, undefined, { includeLowYield })
+    const qs = await generateExitQuiz(slug, 150, undefined, undefined, { includeLowYield })
     return qs.map((q) => ({
       id: q.id,
       question: q.question,

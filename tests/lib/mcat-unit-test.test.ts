@@ -130,3 +130,46 @@ describe('retakes on the real exit pools', () => {
     expect(withLow.length).toBeGreaterThan(def.length)
   })
 })
+
+describe('unitTestIsNextStep (MCAT locks; SAT/ACT recommend)', () => {
+  it('MCAT: next until passed, unless a teacher waiver already opened the diagnostic', async () => {
+    const { unitTestIsNextStep } = await import('@/lib/unit-test-courses')
+    const mcat = { available: true, passed: false, locksDiagnostic: true }
+    expect(unitTestIsNextStep(mcat, false)).toBe(true)
+    expect(unitTestIsNextStep(mcat, true)).toBe(false) // waived
+    expect(unitTestIsNextStep({ ...mcat, passed: true }, false)).toBe(false)
+    expect(unitTestIsNextStep({ ...mcat, available: false }, false)).toBe(false)
+    expect(unitTestIsNextStep({ ...mcat, available: false }, false, { requireAvailable: false })).toBe(true)
+  })
+  it('SAT: next until passed even though the diagnostic is always open', async () => {
+    const { unitTestIsNextStep } = await import('@/lib/unit-test-courses')
+    expect(unitTestIsNextStep({ available: true, passed: false, locksDiagnostic: false }, true)).toBe(true)
+    expect(unitTestIsNextStep({ available: true, passed: true, locksDiagnostic: false }, true)).toBe(false)
+    expect(unitTestIsNextStep(null, true)).toBe(false)
+  })
+  it('course switches: MCAT locks, SAT on and open, ACT off until its pools grow', async () => {
+    const { UNIT_TEST_COURSES } = await import('@/lib/unit-test-courses')
+    expect(UNIT_TEST_COURSES.mcat).toMatchObject({ enabled: true, locksDiagnostic: true })
+    expect(UNIT_TEST_COURSES.sat).toMatchObject({ enabled: true, locksDiagnostic: false, path: '/sat-unit-test' })
+    expect(UNIT_TEST_COURSES.act.enabled).toBe(false)
+  })
+})
+
+describe('SAT pools support the unit test', () => {
+  it('a typical SAT plan gets 25 questions and fresh ones on a retake', async () => {
+    const plan = ['sat-linear-equations-inequalities', 'sat-subject-verb-agreement', 'sat-vocabulary-context', 'sat-geometry-trigonometry', 'sat-transitions-organization-advanced']
+    const pools = await Promise.all(plan.map(async (slug) => ({
+      slug,
+      items: (await generateExitQuiz(slug, 150)).map((q) => ({ id: q.id, question: q.question, options: q.options, correctIndex: q.correctIndex, explanation: q.explanation })),
+    })))
+    const seen = new Set<string>()
+    for (let sitting = 0; sitting < 3; sitting++) {
+      const qs = assembleUnitTest(pools.map((p) => ({ slug: p.slug, ranked: rankCandidates(p.items, seen, new Set()) })))
+      expect(qs).toHaveLength(25)
+      for (const q of qs) {
+        expect(seen.has(q.id)).toBe(false)
+        seen.add(q.id)
+      }
+    }
+  })
+})

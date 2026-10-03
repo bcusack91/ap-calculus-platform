@@ -34,6 +34,7 @@
 
 import { useEffect, useState, type ReactNode } from 'react'
 import Link from 'next/link'
+import { unitTestIsNextStep } from '@/lib/unit-test-courses'
 import { ArrowRight, BookOpen, ClipboardList, Layers } from 'lucide-react'
 import { topicFlashcardBrowseHref, topicFlashcardReviewHref } from '@/lib/flashcard-links'
 
@@ -62,7 +63,7 @@ interface PlanPayload {
   diagnosticRoute?: string
   gated?: boolean
   canRetakeDiagnostic?: boolean
-  unitTest?: { passed: boolean; path: string; questionCount: number; passPercent: number } | null
+  unitTest?: { passed: boolean; path: string; questionCount: number; passPercent: number; locksDiagnostic?: boolean } | null
 }
 
 interface PanelData {
@@ -70,8 +71,8 @@ interface PanelData {
   planLabel: string
   diagnosticRoute: string
   gated: boolean
-  /** MCAT: the unit test still to pass before the retake opens (null when none / passed / waived). */
-  unitTest: { path: string; questionCount: number; passPercent: number } | null
+  /** The cycle's unit test still to pass (null when none / passed / waived). */
+  unitTest: { path: string; questionCount: number; passPercent: number; locks: boolean } | null
 }
 
 /**
@@ -166,9 +167,16 @@ export default function StudyPlanNextUp({ topicSlug, completion, quizPassed, fal
               planLabel: typeof match.label === 'string' ? match.label : '',
               diagnosticRoute: typeof match.diagnosticRoute === 'string' ? match.diagnosticRoute : '/dashboard',
               gated: match.gated === true,
+              // Not gated on `available`: this panel may be reporting the very
+              // quiz that cleared the last topic, ahead of the server snapshot.
               unitTest:
-                match.unitTest && !match.unitTest.passed && match.canRetakeDiagnostic !== true
-                  ? { path: match.unitTest.path, questionCount: match.unitTest.questionCount, passPercent: match.unitTest.passPercent }
+                match.unitTest && unitTestIsNextStep(match.unitTest, match.canRetakeDiagnostic, { requireAvailable: false })
+                  ? {
+                      path: match.unitTest.path,
+                      questionCount: match.unitTest.questionCount,
+                      passPercent: match.unitTest.passPercent,
+                      locks: match.unitTest.locksDiagnostic !== false,
+                    }
                   : null,
             },
           }
@@ -387,7 +395,9 @@ export default function StudyPlanNextUp({ topicSlug, completion, quizPassed, fal
             All {total} sections cleared — one step left
           </p>
           <p className="mt-1 text-sm text-green-700 dark:text-green-400">
-            Pass the {data.unitTest.questionCount}-question unit test on these topics ({data.unitTest.passPercent}% or better) to unlock your next diagnostic.
+            {data.unitTest.locks
+              ? `Pass the ${data.unitTest.questionCount}-question unit test on these topics (${data.unitTest.passPercent}% or better) to unlock your next diagnostic.`
+              : `Finish the cycle with a ${data.unitTest.questionCount}-question unit test on these topics (${data.unitTest.passPercent}% to pass), then retake the diagnostic to see your growth.`}
           </p>
           <Link
             href={data.unitTest.path}
