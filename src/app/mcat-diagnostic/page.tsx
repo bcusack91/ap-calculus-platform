@@ -103,6 +103,17 @@ type PlanTopicStatus = {
 type PlanStatus = {
   hasDiagnostic: boolean
   canRetakeDiagnostic: boolean
+  /** The cycle's unit test (src/lib/mcat-unit-test.ts); null before any diagnostic. */
+  unitTest?: {
+    available: boolean
+    passed: boolean
+    attempts: number
+    bestPercent: number | null
+    passPercent: number
+    questionCount: number
+    path: string
+    inProgressId: string | null
+  } | null
   requiredScorePercent: number
   recommendedTopics: PlanTopicStatus[]
   pendingTopics: PlanTopicStatus[]
@@ -119,6 +130,34 @@ type PlanStatus = {
  * practice quiz that clears the requirement — instead of a bare topic link
  * (most MCAT subtopic pages have no written lesson to land on).
  */
+/** The cycle's last step: the unit test on the plan topics (src/lib/mcat-unit-test.ts). */
+function UnitTestCallout({ unitTest }: { unitTest: NonNullable<PlanStatus['unitTest']> }) {
+  if (!unitTest.available) {
+    return (
+      <p className="mt-4 text-xs text-emerald-800 dark:text-emerald-300">
+        📝 After you clear these, a {unitTest.questionCount}-question unit test on the same topics ({unitTest.passPercent}% to pass) unlocks your next diagnostic.
+      </p>
+    )
+  }
+  return (
+    <div className="mt-4 rounded-xl border border-emerald-400 bg-white p-4 dark:border-emerald-600 dark:bg-gray-800">
+      <p className="text-sm font-semibold text-emerald-900 dark:text-emerald-200">
+        📝 Every topic cleared — one step left
+      </p>
+      <p className="mt-1 text-xs text-gray-600 dark:text-gray-300">
+        Pass the {unitTest.questionCount}-question unit test on these topics ({unitTest.passPercent}% or better) to unlock your next diagnostic.
+        {unitTest.attempts > 0 && unitTest.bestPercent !== null ? ` Best so far: ${unitTest.bestPercent}%. Retakes use new questions.` : ''}
+      </p>
+      <Link
+        href={unitTest.path}
+        className="mt-3 inline-block rounded-lg bg-emerald-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-emerald-700"
+      >
+        {unitTest.inProgressId ? 'Resume the unit test' : unitTest.attempts > 0 ? 'Retake the unit test' : 'Take the unit test'}
+      </Link>
+    </div>
+  )
+}
+
 function RemediationTopicRow({ topic }: { topic: PlanTopicStatus }) {
   const flashcardCount = topic.flashcardCount ?? 0
   const hasActions = !!topic.hasLesson || flashcardCount > 0 || !!topic.hasExitQuiz
@@ -1023,8 +1062,8 @@ export default function MCATDiagnosticPage() {
                 )}
               </div>
               <p className="mb-3 text-sm text-emerald-700 dark:text-emerald-400">
-                From your last diagnostic — based on the questions you missed. Clear each module to
-                unlock your next diagnostic. Clear a module by scoring {TOPIC_CLEAR_PERCENT}% or better on its
+                From your last diagnostic — based on the questions you missed. Clear each module, then pass a
+                short unit test on them, to unlock your next diagnostic. Clear a module by scoring {TOPIC_CLEAR_PERCENT}% or better on its
                 exit quiz (or by testing out on its entrance quiz).
               </p>
               <div className="space-y-2">
@@ -1054,6 +1093,9 @@ export default function MCATDiagnosticPage() {
                   </Link>
                 ))}
               </div>
+              {planStatus.unitTest && !planStatus.unitTest.passed && !planStatus.canRetakeDiagnostic && (
+                <UnitTestCallout unitTest={planStatus.unitTest} />
+              )}
             </div>
           )}
 
@@ -1121,7 +1163,14 @@ export default function MCATDiagnosticPage() {
               </div>
             ) : null}
 
-            {gateBlocks(planStatus) ? (
+            {gateBlocks(planStatus) && planStatus?.unitTest?.available && !planStatus.unitTest.passed ? (
+              <Link
+                href={planStatus.unitTest.path}
+                className="block w-full rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 px-6 py-3 text-center font-semibold text-white shadow-lg transition hover:shadow-xl"
+              >
+                Pass the Unit Test to Unlock Your Next Diagnostic
+              </Link>
+            ) : gateBlocks(planStatus) ? (
               <button
                 disabled
                 className="w-full cursor-not-allowed rounded-xl bg-gray-300 px-6 py-3 font-semibold text-gray-700 dark:bg-gray-700 dark:text-gray-300"

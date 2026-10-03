@@ -61,6 +61,8 @@ interface PlanPayload {
   courseSlug?: string | null
   diagnosticRoute?: string
   gated?: boolean
+  canRetakeDiagnostic?: boolean
+  unitTest?: { passed: boolean; path: string; questionCount: number; passPercent: number } | null
 }
 
 interface PanelData {
@@ -68,6 +70,8 @@ interface PanelData {
   planLabel: string
   diagnosticRoute: string
   gated: boolean
+  /** MCAT: the unit test still to pass before the retake opens (null when none / passed / waived). */
+  unitTest: { path: string; questionCount: number; passPercent: number } | null
 }
 
 /**
@@ -162,6 +166,10 @@ export default function StudyPlanNextUp({ topicSlug, completion, quizPassed, fal
               planLabel: typeof match.label === 'string' ? match.label : '',
               diagnosticRoute: typeof match.diagnosticRoute === 'string' ? match.diagnosticRoute : '/dashboard',
               gated: match.gated === true,
+              unitTest:
+                match.unitTest && !match.unitTest.passed && match.canRetakeDiagnostic !== true
+                  ? { path: match.unitTest.path, questionCount: match.unitTest.questionCount, passPercent: match.unitTest.passPercent }
+                  : null,
             },
           }
         }
@@ -370,6 +378,24 @@ export default function StudyPlanNextUp({ topicSlug, completion, quizPassed, fal
               ? ' — a section clears when you pass its exit quiz, not when the lesson ends'
               : ''}
           </p>
+        </div>
+      ) : data.unitTest ? (
+        /* Every topic cleared — the MCAT cycle's unit test is the last step */
+        <div className="rounded-2xl border-2 border-green-200 dark:border-green-800 bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-6 text-center">
+          <div className="text-4xl mb-2">📝</div>
+          <p className="text-lg font-bold text-green-800 dark:text-green-300">
+            All {total} sections cleared — one step left
+          </p>
+          <p className="mt-1 text-sm text-green-700 dark:text-green-400">
+            Pass the {data.unitTest.questionCount}-question unit test on these topics ({data.unitTest.passPercent}% or better) to unlock your next diagnostic.
+          </p>
+          <Link
+            href={data.unitTest.path}
+            className="mt-4 inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold bg-gradient-to-r from-green-600 to-emerald-600 text-white hover:from-green-700 hover:to-emerald-700 shadow-lg transition-colors"
+          >
+            Take the unit test
+            <ArrowRight className="w-4 h-4" aria-hidden="true" />
+          </Link>
         </div>
       ) : (
         /* Plan finished — celebrate and route to the diagnostic retake */

@@ -5,7 +5,7 @@ import { useSession } from 'next-auth/react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
-import { ClipboardList, BookOpen, Zap, Trophy, Clock, TrendingUp, BarChart3, Bookmark, Play, Layers, NotebookPen, School, Mail, AlertTriangle, Gamepad2, CheckCircle2, Circle, Target, HelpCircle, ChevronDown, ChevronUp } from 'lucide-react'
+import { ClipboardCheck, ClipboardList, BookOpen, Zap, Trophy, Clock, TrendingUp, BarChart3, Bookmark, Play, Layers, NotebookPen, School, Mail, AlertTriangle, Gamepad2, CheckCircle2, Circle, Target, HelpCircle, ChevronDown, ChevronUp } from 'lucide-react'
 import AvatarDisplay from '@/components/AvatarDisplay'
 import { AvatarData } from '@/types/avatar'
 import ProgressRing from '@/components/ProgressRing'
@@ -185,6 +185,8 @@ function DashboardContent() {
       isSatisfied: boolean
     }[]
     summary: { total: number; completed: number; pending: number }
+    /** MCAT: the cycle's unit test. */
+    unitTest?: { available: boolean; passed: boolean; attempts: number; path: string; passPercent: number; questionCount: number; inProgressId?: string | null } | null
   }[]>([])
 
   useEffect(() => {
@@ -720,7 +722,9 @@ function DashboardContent() {
                     </div>
                     <p className="mb-3 text-xs text-gray-600 dark:text-gray-400">
                       Clear a topic by scoring {TOPIC_CLEAR_PERCENT}% or better on its exit quiz (or by testing out on its entrance quiz).{' '}
-                      {plan.gated
+                      {plan.unitTest
+                        ? `Clear every topic, then pass a ${plan.unitTest.questionCount}-question unit test on them (${plan.unitTest.passPercent}%), to unlock your diagnostic retake.`
+                        : plan.gated
                         ? 'Clear every topic to unlock your diagnostic retake.'
                         : 'When every topic is cleared, retake the diagnostic to see your growth and get a new plan.'}
                     </p>
@@ -742,6 +746,23 @@ function DashboardContent() {
                           <span className="text-accent group-hover:translate-x-1 transition-transform text-sm">→</span>
                         </Link>
                       ))}
+                      {plan.unitTest && (
+                        <Link
+                          href={plan.unitTest.available ? plan.unitTest.path : plan.diagnosticRoute}
+                          className={`flex items-center justify-between rounded-lg border border-dashed border-accent-muted px-3 py-2 hover:border-accent transition-colors group ${plan.unitTest.passed ? 'opacity-60' : ''}`}
+                        >
+                          <div className="flex flex-wrap items-center gap-2">
+                            <ClipboardCheck className="h-4 w-4 text-accent" aria-hidden />
+                            <span className="text-sm font-medium text-gray-800 dark:text-gray-200 group-hover:text-accent-hover">
+                              Unit test · {plan.unitTest.questionCount} questions on these topics
+                            </span>
+                            <span className={`text-[10px] px-1.5 py-0.5 rounded-full ${plan.unitTest.passed ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400' : plan.unitTest.available ? 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400' : 'bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-300'}`}>
+                              {plan.unitTest.passed ? '✓ Passed' : plan.unitTest.available ? `Ready · ${plan.unitTest.passPercent}% to pass` : 'After every topic'}
+                            </span>
+                          </div>
+                          <span className="text-accent group-hover:translate-x-1 transition-transform text-sm">→</span>
+                        </Link>
+                      )}
                     </div>
                   </div>
                 ))}

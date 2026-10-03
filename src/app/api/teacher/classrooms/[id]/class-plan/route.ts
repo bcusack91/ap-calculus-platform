@@ -5,6 +5,7 @@ import { classPlanCourse, courseForCategory, scoreLabelFromResults, CLASS_PLAN_C
 import { isEntranceMastery } from '@/lib/flashcard-unlock'
 import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
 import { hasExitQuiz } from '@/data/exit-quizzes'
+import { passedUnitTestCycles } from '@/lib/mcat-unit-test-server'
 import { buildSatPlan, satPlacementsFor, type SatPlacement, type SatPlan } from '@/lib/sat-plan'
 
 interface Ctx { params: Promise<{ id: string }> }
@@ -111,8 +112,12 @@ export async function GET(req: NextRequest, { params }: Ctx) {
     where: { userId: { in: userIds }, category: { startsWith: course.categoryPrefix } },
     orderBy: { createdAt: 'desc' },
     distinct: ['userId'],
-    select: { userId: true, createdAt: true, results: true },
+    select: { id: true, userId: true, createdAt: true, results: true },
   })
+  // MCAT: the cycle ends with the unit test; only a pass opens the next diagnostic.
+  const unitTestPassed = course.gated
+    ? await passedUnitTestCycles(attempts.map(a => ({ userId: a.userId, diagnosticId: a.id })))
+    : new Set<string>()
 
   const now = Date.now()
   const byUser = new Map(attempts.map(a => [a.userId, a]))
@@ -243,7 +248,8 @@ export async function GET(req: NextRequest, { params }: Ctx) {
       scoreLabel: attempt ? scoreLabelFromResults(attempt.results) : null,
       recommendedCount: recs.length,
       pendingCount: pending,
-      canRetake: recs.length === 0 || pending === 0,
+      ...(course.gated ? { unitTestPassed: !!attempt && unitTestPassed.has(`${m.userId}|${attempt.id}`) } : {}),
+      canRetake: recs.length === 0 || (pending === 0 && (!course.gated || (!!attempt && unitTestPassed.has(`${m.userId}|${attempt.id}`)))),
     }
   }).sort((a, b) => a.name.localeCompare(b.name))
 

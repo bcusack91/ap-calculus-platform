@@ -5,6 +5,7 @@ import { isEntranceMastery } from '@/lib/flashcard-unlock'
 import { hasExitQuiz } from '@/data/exit-quizzes'
 import { CLASS_PLAN_COURSES, diagnosticRouteForKey } from '@/lib/class-plan-config'
 import { buildSatPlan } from '@/lib/sat-plan'
+import { buildMcatPlanStatus } from '@/lib/mcat-plan'
 import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
 
 /**
@@ -110,8 +111,35 @@ export async function GET() {
           }
         : null
 
+    // The MCAT plan comes from the MCAT page's own builder too: it swaps out
+    // topics cleared in an earlier cycle and ends the cycle with the unit
+    // test, both of which a generic recomputation here would miss.
+    const mcatCourse = CLASS_PLAN_COURSES.find((c) => c.key === 'mcat')
+    let mcatEntry = null
+    if (mcatCourse && perCourse.has('mcat')) {
+      perCourse.delete('mcat')
+      const mcat = await buildMcatPlanStatus(userId)
+      if (mcat.hasDiagnostic && mcat.recommendedTopics.length > 0) {
+        const pending = mcat.pendingTopics.length
+        mcatEntry = {
+          courseKey: mcatCourse.key,
+          label: mcatCourse.label,
+          courseSlug: mcatCourse.courseSlug ?? null,
+          diagnosticRoute: diagnosticRouteForKey(mcatCourse.key),
+          gated: mcatCourse.gated === true,
+          requiredScorePercent: mcat.requiredScorePercent,
+          takenAt: (mcat.diagnosticCreatedAt ?? new Date()).toISOString(),
+          topics: mcat.recommendedTopics,
+          summary: { total: mcat.recommendedTopics.length, completed: mcat.recommendedTopics.length - pending, pending },
+          canRetakeDiagnostic: mcat.canRetakeDiagnostic,
+          unitTest: mcat.unitTest,
+        }
+      }
+    }
+    const extraEntries = [mcatEntry, satEntry].filter((e): e is NonNullable<typeof e> => e !== null)
+
     if (perCourse.size === 0) {
-      return NextResponse.json({ plans: satEntry ? [satEntry] : [] })
+      return NextResponse.json({ plans: extraEntries })
     }
 
     const allSlugs = Array.from(
@@ -177,7 +205,7 @@ export async function GET() {
       }]
     })
 
-    if (satEntry) plans.push(satEntry)
+    plans.push(...(extraEntries as typeof plans))
 
     // Most work outstanding first — that is the course that needs attention.
     plans.sort((a, b) => b.summary.pending - a.summary.pending)

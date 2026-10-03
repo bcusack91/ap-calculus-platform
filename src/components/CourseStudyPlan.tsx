@@ -25,6 +25,8 @@ export type PlanStatus = {
   pendingTopics: PlanTopicStatus[]
   /** 'hard' when the plan comes from a hard-track module (SAT 700-800 path). */
   planSource?: 'regular' | 'hard' | 'core-skills'
+  /** MCAT: the cycle's unit test (src/lib/mcat-unit-test.ts). */
+  unitTest?: { passed: boolean; path: string; questionCount: number; passPercent: number; attempts: number; inProgressId?: string | null } | null
 }
 
 type FlashcardStats = {
@@ -195,6 +197,19 @@ export default function CourseStudyPlan({
                 Start this topic <ArrowRight className="h-4 w-4" aria-hidden />
               </Link>
             </>
+          ) : allDone && plan?.unitTest && !plan.unitTest.passed && !plan.canRetakeDiagnostic ? (
+            <>
+              <h2 className="mt-1 text-xl font-bold text-gray-900 dark:text-white">📝 Every topic cleared — pass your unit test</h2>
+              <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
+                A {plan.unitTest.questionCount}-question test on your study-plan topics. Score {plan.unitTest.passPercent}% or better to unlock your next {label} diagnostic.
+              </p>
+              <Link
+                href={plan.unitTest.path}
+                className={`mt-4 inline-flex items-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold text-white transition ${a.cta}`}
+              >
+                {plan.unitTest.inProgressId ? 'Resume the unit test' : plan.unitTest.attempts > 0 ? 'Retake the unit test' : 'Take the unit test'} <ArrowRight className="h-4 w-4" aria-hidden />
+              </Link>
+            </>
           ) : allDone ? (
             <>
               <h2 className="mt-1 text-xl font-bold text-gray-900 dark:text-white">🎉 Every topic in your study plan is cleared</h2>
@@ -305,7 +320,9 @@ export default function CourseStudyPlan({
               <p className="mt-4 text-xs text-gray-500 dark:text-gray-400">
                 Clear a topic by scoring {clearPercent}% or better on its exit quiz (or by testing out on its entrance quiz).{' '}
                 {gated
-                  ? 'Clear them all to unlock your next diagnostic.'
+                  ? plan?.unitTest
+                    ? `Clear them all, then pass a ${plan.unitTest.questionCount}-question unit test on them, to unlock your next diagnostic.`
+                    : 'Clear them all to unlock your next diagnostic.'
                   : "When you've cleared them all, retake the diagnostic to see your growth and get a new plan."}
               </p>
             )}

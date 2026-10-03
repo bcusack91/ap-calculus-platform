@@ -44,6 +44,8 @@ interface StudentRow {
   recommendedCount: number
   pendingCount: number
   canRetake: boolean
+  /** MCAT only: passed this cycle's unit test. */
+  unitTestPassed?: boolean
   /** SAT only: the lane this student studies in, and any teacher override. */
   satLane?: 'core-skills' | 'regular' | 'advanced'
   satOverride?: 'core-skills' | 'regular' | 'advanced' | null
@@ -288,7 +290,7 @@ export default function ClassPlan({ classroomId }: { classroomId: string }) {
         <h2 className="mb-1 text-xl font-bold text-gray-900 dark:text-white">Students</h2>
         <p className="mb-4 text-sm text-gray-500 dark:text-gray-400">
           Homework = their personal recommended topics (an exit quiz score of {TOPIC_CLEAR_PERCENT}% or higher, or entrance-quiz mastery, clears one).
-          {gated && ' For the MCAT, clearing all of them unlocks their next weekly diagnostic.'}
+          {gated && ' For the MCAT, clearing all of them and then passing a 25-question unit test on those topics unlocks their next weekly diagnostic.'}
           {data.course.key === 'sat' &&
             ' Each SAT student studies in a track: Core Skills (short lessons, easy items), Standard, or 700-800. Automatic places them from their diagnostics; pick a track to pin it.'}
         </p>
@@ -346,6 +348,8 @@ export default function ClassPlan({ classroomId }: { classroomId: string }) {
                         <span className="text-xs text-gray-400">ready</span>
                       ) : s.canRetake ? (
                         <span className="text-xs font-medium text-green-600 dark:text-green-400">✓ unlocked</span>
+                      ) : s.pendingCount === 0 && s.unitTestPassed === false ? (
+                        <span className="text-xs font-medium text-amber-600 dark:text-amber-400">📝 unit test to pass</span>
                       ) : (
                         <span className="text-xs font-medium text-amber-600 dark:text-amber-400">🔒 {s.pendingCount} topic{s.pendingCount === 1 ? '' : 's'} left</span>
                       )}

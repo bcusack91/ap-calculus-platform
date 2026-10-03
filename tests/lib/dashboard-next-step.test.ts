@@ -127,6 +127,25 @@ describe('resolveNextStep — plans and fallbacks', () => {
     })
   })
 
+  it('MCAT: every topic cleared but the unit test not passed — take the unit test first', () => {
+    const mcat = {
+      ...calcPlan,
+      courseKey: 'mcat',
+      label: 'MCAT',
+      diagnosticRoute: '/mcat-diagnostic',
+      gated: true,
+      canRetakeDiagnostic: false,
+      topics: calcPlan.topics.map((t) => ({ ...t, isSatisfied: true })),
+      unitTest: { available: true, passed: false, attempts: 1, path: '/mcat-unit-test', inProgressId: null },
+    }
+    const step = resolveNextStep({ ...base, plans: [mcat] })
+    expect(step).toEqual({ kind: 'unit-test', planLabel: 'MCAT', href: '/mcat-unit-test', attempts: 1, resume: false })
+    expect(describeNextStep(step as Exclude<typeof step, { kind: 'loading' }>).cta).toBe('Retake the unit test')
+    // Passed (or a teacher waiver opened the gate): the retake is next.
+    expect(resolveNextStep({ ...base, plans: [{ ...mcat, unitTest: { ...mcat.unitTest, passed: true }, canRetakeDiagnostic: true }] }).kind).toBe('retake-diagnostic')
+    expect(resolveNextStep({ ...base, plans: [{ ...mcat, canRetakeDiagnostic: true }] }).kind).toBe('retake-diagnostic')
+  })
+
   it('a course with no diagnostic: keep going in that course', () => {
     const step = resolveNextStep({
       ...base,

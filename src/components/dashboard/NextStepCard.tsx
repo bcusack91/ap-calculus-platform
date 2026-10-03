@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
-import { ArrowRight, BookOpen, ClipboardList, Layers, NotebookPen, RotateCcw, Compass } from 'lucide-react'
+import { ArrowRight, BookOpen, ClipboardCheck, ClipboardList, Layers, NotebookPen, RotateCcw, Compass } from 'lucide-react'
 import { describeNextStep, type NextStep } from '@/lib/dashboard-next-step'
 import { dueDeadline, formatDueDate } from '@/components/ClassDiagnosticBanner'
 import HelpLink, { HELP_ARTICLES } from '@/components/HelpLink'
@@ -12,6 +12,7 @@ const ICONS: Record<Exclude<NextStep['kind'], 'loading'>, typeof ArrowRight> = {
   'class-diagnostic': NotebookPen,
   flashcards: Layers,
   'plan-topic': BookOpen,
+  'unit-test': ClipboardCheck,
   'retake-diagnostic': RotateCcw,
   'take-diagnostic': NotebookPen,
   'open-course': BookOpen,
@@ -24,6 +25,7 @@ const HELP: Partial<Record<NextStep['kind'], { article: (typeof HELP_ARTICLES)[k
   'class-diagnostic': { article: HELP_ARTICLES.classDiagnostics, label: 'About class diagnostics' },
   flashcards: { article: HELP_ARTICLES.reviewingFlashcards, label: 'How flashcard review works' },
   'plan-topic': { article: HELP_ARTICLES.whatClearedMeans, label: 'What does cleared mean?' },
+  'unit-test': { article: HELP_ARTICLES.diagnosticsAndStudyPlans, label: 'Diagnostics and study plans' },
   'retake-diagnostic': { article: HELP_ARTICLES.diagnosticsAndStudyPlans, label: 'Diagnostics and study plans' },
   'take-diagnostic': { article: HELP_ARTICLES.diagnosticsAndStudyPlans, label: 'Diagnostics and study plans' },
 }

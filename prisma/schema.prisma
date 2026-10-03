@@ -96,6 +96,7 @@ model User {
   satTestAttempts            SatTestAttempt[]
   mcatTestAttempts           McatTestAttempt[]
   unitTestAttempts           UnitTestAttempt[]
+  mcatUnitTests              McatUnitTest[]
   frqAttempts                FrqAttempt[]
   diagnosticChallenges       DiagnosticChallenge[]
   diagnosticChallengeEntries DiagnosticChallengeEntry[]
@@ -1686,6 +1687,30 @@ model UnitTestAttempt {
   @@index([userId])
   @@index([userId, courseSlug])
   @@index([completedAt])
+}
+
+// The MCAT cycle's customized unit test: after a student clears every topic a
+// diagnostic recommended, ~5 questions per topic (25 total) drawn from those
+// topics' exit-quiz pools. Passing (src/lib/mcat-unit-test.ts) unlocks the
+// next diagnostic. One row per sitting; the questions are frozen here, keys
+// included, so grading is server-side and a refresh resumes the same test.
+model McatUnitTest {
+  id           String    @id @default(cuid())
+  userId       String
+  diagnosticId String // the mcat-full-diagnostic attempt whose plan this tests
+  topicSlugs   Json // string[] — the plan topics, in plan order
+  questions    Json // [{ id, topicSlug, question, options, correctIndex, explanation }]
+  answers      Json? // (number | null)[] aligned with questions; set on submit
+  correct      Int?
+  total        Int
+  percentage   Int?
+  passed       Boolean   @default(false)
+  startedAt    DateTime  @default(now())
+  completedAt  DateTime?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, diagnosticId])
 }
 
 // Free-response practice sessions. Scored against the published rubric on the

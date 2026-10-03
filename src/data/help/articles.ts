@@ -14,6 +14,7 @@
  * the articles) when a tab moves.
  */
 import { TOPIC_CLEAR_PERCENT, EXIT_QUIZ_REDO_FRACTION } from '@/lib/mastery'
+import { MCAT_UNIT_TEST_PASS_PERCENT, MCAT_UNIT_TEST_QUESTIONS } from '@/lib/mcat-unit-test'
 import {
   DEFAULT_NEW_PER_DAY,
   DEFAULT_MAX_REVIEWS_PER_DAY,
@@ -152,7 +153,7 @@ export const HELP_ARTICLE_LIST: HelpArticle[] = [
       { type: 'p', text: `Open a topic, do its lesson, and take its exit quiz. Score ${PASS} or better to clear it. See [What does “cleared” mean?](/help/what-does-cleared-mean).` },
       { type: 'h2', id: 'retake', text: 'When to retake the diagnostic' },
       { type: 'p', text: 'Retake it after you clear every topic on your plan. The retake shows your growth. It also gives you a fresh plan.' },
-      { type: 'note', text: 'For the MCAT, the next diagnostic stays locked until every plan topic is cleared. Your teacher can allow an early retake. For other courses the retake is open anytime, but finishing your plan first gives you a truer picture.' },
+      { type: 'note', text: `For the MCAT, the next diagnostic stays locked until every plan topic is cleared AND you pass a ${MCAT_UNIT_TEST_QUESTIONS}-question unit test on those topics (${MCAT_UNIT_TEST_PASS_PERCENT}% or better; retakes use new questions). Your teacher can allow an early retake. For other courses the retake is open anytime, but finishing your plan first gives you a truer picture.` },
       { type: 'h2', id: 'faq', text: 'Questions' },
       {
         type: 'faq',
@@ -530,7 +531,7 @@ export const HELP_ARTICLE_LIST: HelpArticle[] = [
         ],
       },
       { type: 'h2', id: 'mcat-retake', text: 'The MCAT retake rule' },
-      { type: 'p', text: 'MCAT students cannot retake the diagnostic until they clear every topic on their plan. You can choose **Allow retake now** for one student. It opens one early retake.' },
+      { type: 'p', text: `MCAT students cannot retake the diagnostic until they clear every topic on their plan and then pass a ${MCAT_UNIT_TEST_QUESTIONS}-question unit test on those topics (${MCAT_UNIT_TEST_PASS_PERCENT}% or better; they can retake it, with new questions each time). The Class plan shows who still has the unit test to pass. You can choose **Allow retake now** for one student. It opens one early retake.` },
     ],
     related: [A.gettingStartedTeachers, A.diagnosticsAndStudyPlans, A.whatClearedMeans],
   },
