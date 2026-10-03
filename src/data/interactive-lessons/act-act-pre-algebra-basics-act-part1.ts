@@ -9,7 +9,7 @@ export const actPreAlgebraPart1Data = {
 
 **Part 1 of 7 — Factors, Multiples, Primes & Divisibility Rules**
 
-Pre-Algebra questions make up roughly **20–25 %** of the ACT Math section. Mastering basic number properties gives you quick, reliable points.
+The ACT Math section gives you **45 questions in 50 minutes**, each with **4 answer choices**. Its official reporting categories are *Preparing for Higher Math* and *Integrating Essential Skills* — there is no separate "Pre-Algebra" score — but number properties, fractions, percents, and ratios run through both. Mastering them gives you quick, reliable points.
 
 | Concept | Definition |
 |---------|-----------|
@@ -21,6 +21,11 @@ Pre-Algebra questions make up roughly **20–25 %** of the ACT Math section. Mas
 **First 10 primes:** $2, 3, 5, 7, 11, 13, 17, 19, 23, 29$
 
 > Remember: $1$ is **neither** prime nor composite, and $2$ is the only even prime.
+
+**Is $n$ prime? Test only the primes up to $\\sqrt{n}$.** If none of them divides $n$, then $n$ is prime (any factor larger than $\\sqrt{n}$ would have to pair with one smaller than $\\sqrt{n}$).
+
+- $91$: $\\sqrt{91} \\approx 9.5$, so test $2, 3, 5, 7$. Since $91 = 7 \\times 13$, it is **not** prime.
+- $97$: $\\sqrt{97} \\approx 9.8$, so test $2, 3, 5, 7$. None divides $97$, so it **is** prime.
       `
     },
     {
@@ -93,6 +98,8 @@ $$8 = 2^3 \\qquad 12 = 2^2 \\times 3$$
 Take the **higher** power of every prime: $2^3 \\times 3 = 24$.
 
 **Shortcut:** $\\text{LCM}(a,b) = \\frac{a \\times b}{\\text{GCF}(a,b)}$. So $\\text{LCM}(8,12) = \\frac{96}{4} = 24$ ✓
+
+**Every common multiple is a multiple of the LCM.** The common multiples of $8$ and $12$ are exactly $24, 48, 72, 96, \\ldots$ — the multiples of $24$. *Example:* two buses leave together at 9:00, one every $8$ minutes and one every $12$ minutes. They leave together again every $24$ minutes: at 9:24, 9:48, 10:12, …
       `
     },
     {

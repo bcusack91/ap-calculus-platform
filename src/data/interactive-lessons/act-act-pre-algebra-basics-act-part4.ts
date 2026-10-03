@@ -36,6 +36,12 @@ Total parts $= 3 + 5 = 8$. Each part $= \\frac{40}{8} = 5$.
 
 $$\\text{Boys} = 3 \\times 5 = 15$$
 
+**Use a variable for the ratio.** A ratio $a : b$ means the actual amounts are $ak$ and $bk$ for some multiplier $k$. *Example:* juice and water are mixed $4 : 7$, and there are $15$ more cups of water than juice. Write juice $= 4k$, water $= 7k$:
+
+$$7k - 4k = 15 \\implies 3k = 15 \\implies k = 5$$
+
+So juice $= 20$ cups and water $= 35$ cups. This handles differences, sums, and "after adding more" problems that a single proportion can't.
+
 **Example 3 — Scaling a recipe:** A recipe uses flour and sugar in a $4 : 1$ ratio. If you use $12$ cups of flour, how much sugar?
 
 $$\\frac{4}{1} = \\frac{12}{x} \\implies 4x = 12 \\implies x = 3 \\text{ cups}$$

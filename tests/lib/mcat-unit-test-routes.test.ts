@@ -189,12 +189,23 @@ describe('SAT and ACT unit test routes', () => {
     vi.doUnmock('@/lib/sat-plan')
   })
 
-  it('ACT: switched off — every endpoint 404s', async () => {
-    const status = await import('@/app/api/act-unit-test/route')
-    const start = await import('@/app/api/act-unit-test/start/route')
-    const submit = await import('@/app/api/act-unit-test/submit/route')
-    expect((await status.GET()).status).toBe(404)
-    expect((await start.POST()).status).toBe(404)
-    expect((await submit.POST(new Request('http://x', { method: 'POST', body: '{}' }))).status).toBe(404)
+  it('ACT: builds a test from the ACT plan once its topics are cleared', async () => {
+    vi.resetModules()
+    vi.doMock('@/lib/act-plan', () => ({
+      buildActPlanStatus: async () => ({
+        hasDiagnostic: true,
+        diagnosticId: 'act-diag',
+        recommendedTopics: ['act-english-grammar-act', 'act-algebra-equations-act', 'act-science-data-act', 'act-reading-strategy-act', 'act-trigonometry-act'].map((slug) => ({ slug, name: slug, isSatisfied: true })),
+        pendingTopics: [],
+        unitTest: { available: true, passed: false, attempts: 0, inProgressId: null, locksDiagnostic: false },
+      }),
+    }))
+    const { POST } = await import('@/app/api/act-unit-test/start/route')
+    const res = await POST()
+    expect(res.status).toBe(200)
+    const body = await res.json()
+    expect(body.questions).toHaveLength(25)
+    expect(db.mcatUnitTest.create.mock.calls.at(-1)![0].data.diagnosticId).toBe('act-diag')
+    vi.doUnmock('@/lib/act-plan')
   })
 })

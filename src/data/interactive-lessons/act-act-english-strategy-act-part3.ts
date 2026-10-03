@@ -29,7 +29,7 @@ Look at what's underlined. Does it contain a verb? A pronoun? Punctuation? This 
       content: `
 ## Subject-Verb Agreement
 
-The #1 grammar rule tested on the ACT. The subject and verb must match in number.
+One of the most frequently tested grammar rules on the ACT. The subject and verb must match in number.
 
 **Common traps:**
 - **Prepositional phrase between subject and verb:**
@@ -40,9 +40,13 @@ The #1 grammar rule tested on the ACT. The subject and verb must match in number
   "Near the lake ~~stands~~ → **stand** three old oak trees."
   (Subject = "trees," which is plural.)
 
-- **Compound subjects:**
+- **Compound subjects joined by "and":**
+  "The coach **and** her assistant ~~is~~ → **are** reviewing the film."
+  (Two subjects joined by "and" make a plural subject, so the verb is plural.)
+
+- **Compound subjects joined by "or"/"nor":**
   "Neither the teacher **nor the students** ~~was~~ → **were** ready."
-  (With "neither…nor," the verb agrees with the nearer subject: "students.")
+  (With "or" or "neither…nor," the verb agrees with the nearer subject: "students.")
 
 **ACT Strategy:** Cross out prepositional phrases mentally. Find the true subject, then check the verb.
       `
@@ -150,6 +154,15 @@ The #1 grammar rule tested on the ACT. The subject and verb must match in number
 **Misplaced modifiers:** A descriptive phrase placed next to the wrong noun.
 - ~~"Covered in chocolate, the children devoured the cake."~~
 - Fix: "The children devoured the cake, which was covered in chocolate."
+
+### Quick Usage Rules: Tense & Cause Words
+- **"Since" + a starting point → present perfect** ("has/have" + past participle), because the action began in the past and continues now:
+  "Since 2019, she ~~works~~ → **has worked** at the clinic."
+- **"Being that" is nonstandard** — replace it with "because" or "since":
+  "~~Being that~~ → **Because** it rained, the game was postponed."
+- **"Because" vs. "so" — watch the direction of cause.** "Because" introduces the **cause**; "so" introduces the **result**:
+  "The bus was late **because** the road was icy." = "The road was icy, **so** the bus was late."
+  Swapping the word without swapping the clauses reverses the logic: ~~"The bus was late, so the road was icy."~~
       `
     },
     {

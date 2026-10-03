@@ -27,7 +27,7 @@ Here is your complete **cheat sheet** of coordinate geometry formulas for the AC
 1. Identify what formula you need.
 2. Label known values clearly.
 3. Plug in and simplify.
-4. Watch for sign errors (they are the #1 mistake!).
+4. Watch for sign errors — they are one of the most common mistakes.
       `
     },
     {
@@ -57,7 +57,7 @@ Here is your complete **cheat sheet** of coordinate geometry formulas for the AC
 | Rotate $180°$ | $(-x, -y)$ |
 | Dilate by $k$ | $(kx, ky)$ |
 
-**ACT Tip:** You have about 60 seconds per question. Don't derive formulas — memorize them!
+**ACT Tip:** The Enhanced ACT Math section gives you 50 minutes for 45 questions (4 answer choices each), so you average just over a minute per question. Don't derive formulas — memorize them!
       `
     },
     {

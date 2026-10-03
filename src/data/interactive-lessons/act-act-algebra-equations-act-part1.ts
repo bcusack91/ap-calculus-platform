@@ -44,6 +44,21 @@ $$2x - 8 + 6 = 18 \\implies 2x - 2 = 18 \\implies 2x = 20 \\implies x = 10$$
 $$3x = 15 \\implies x = 5$$
 
 **ACT Tip:** Distribute first, combine like terms, then isolate $x$. Speed matters — practice until these steps are automatic.
+
+---
+
+## Special Cases — When the Variable Disappears
+
+Sometimes the $x$-terms cancel completely. Look at what is left:
+
+| What's left | Name | Number of solutions | Example |
+|-------------|------|---------------------|---------|
+| A **true** statement ($6 = 6$) | Identity | **Infinitely many** (every $x$ works) | $2(x + 3) = 2x + 6 \\implies 6 = 6$ |
+| A **false** statement ($5 = -1$) | Contradiction | **No solution** | $2x + 5 = 2x - 1 \\implies 5 = -1$ |
+
+**ACT Tip:** "For what value of $k$ does $kx + 4 = 3x + 9$ have **no solution**?" Make the $x$-coefficients match ($k = 3$) while the constants differ ($4 \\neq 9$). Same coefficients **and** same constants would give infinitely many solutions instead.
+
+**Looking ahead (quadratics):** For $ax^2 + bx + c = 0$, the **sum of the roots** is $-\\frac{b}{a}$ and the **product of the roots** is $\\frac{c}{a}$. Example: $2x^2 - 10x + 12 = 0$ has roots $2$ and $3$; sum $= -\\frac{-10}{2} = 5$, product $= \\frac{12}{2} = 6$. You get the sum without solving.
       `
     },
     {
@@ -124,7 +139,7 @@ $$3x = 15 \\implies x = 5$$
       content: `
 ## ACT-Style Practice
 
-On the ACT you have roughly **1 minute per question**. Try solving these without writing every step.
+The ACT Math test gives you **45 questions in 50 minutes** — a little over **1 minute per question**. Try solving these without writing every step.
 
 | # | Problem | Answer |
 |---|---------|--------|

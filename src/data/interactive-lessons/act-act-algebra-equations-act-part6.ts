@@ -43,7 +43,7 @@ $$4x^2 - 12x + 9 = (2x)^2 - 2(2x)(3) + 3^2 = (2x - 3)^2$$
 
 $$\\frac{(x+3)(x-3)}{x+3} = x - 3 \\quad (x \\neq -3)$$
 
-**ACT Tip:** Difference of squares appears *constantly* on the ACT. Be ready to recognize it instantly.
+**ACT Tip:** Difference of squares shows up often in ACT factoring and simplifying questions. Be ready to recognize it instantly.
       `
     },
     {
@@ -133,7 +133,7 @@ Give the numerical result.
 | $(2x + 1)(x - 3)$ | $2x^2 - 5x - 3$ |
 | $3x^2 + 7x - 2x^2 + x$ | $x^2 + 8x$ |
 
-**ACT Tip:** Don't skip sign distribution — the most common algebra mistake on the ACT is dropping a negative sign when distributing.
+**ACT Tip:** Don't skip sign distribution — dropping a negative sign when distributing is one of the most common algebra mistakes.
       `
     },
     {

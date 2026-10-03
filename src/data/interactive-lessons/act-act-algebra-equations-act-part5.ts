@@ -13,7 +13,11 @@ The absolute value $|A|$ is the distance from $A$ to 0 on the number line. Becau
 
 $$|A| = b \\implies A = b \\quad \\text{or} \\quad A = -b \\qquad (b \\geq 0)$$
 
-If $b < 0$, there is **no solution** — absolute value can never be negative.
+| Right side $b$ | Number of solutions | Example |
+|----------------|---------------------|---------|
+| $b > 0$ | **Two** | $\\lvert x \\rvert = 4 \\implies x = 4$ or $x = -4$ |
+| $b = 0$ | **Exactly one** (since $A = 0$ and $A = -0$ are the same equation) | $\\lvert x - 2 \\rvert = 0 \\implies x = 2$ |
+| $b < 0$ | **None** — absolute value can never be negative | $\\lvert x \\rvert = -4$ |
 
 **Key Insight:** Always isolate the absolute value expression *first*, then split into two cases.
       `
@@ -155,13 +159,19 @@ Case 2: $3x - 1 = -(2x + 5) \\implies 5x = -4 \\implies x = -\\frac{4}{5}$
 
 Check: $|3(-0.8) - 1| = |-3.4| = 3.4$ vs. $2(-0.8) + 5 = 3.4$ ✓
 
-Both work here, but consider $|x - 2| = 3x + 4$:
+Both work here, but now consider $|x - 2| = 3x + 4$:
 
-Case 2 gives $x - 2 = -3x - 4 \\implies 4x = -2 \\implies x = -0.5$
+Case 1: $x - 2 = 3x + 4 \\implies -2x = 6 \\implies x = -3$
 
-Check: $|-0.5 - 2| = 2.5$ but $3(-0.5) + 4 = 2.5$ ✓ — valid!
+Check: $|-3 - 2| = 5$ but $3(-3) + 4 = -5$ ✗ — **extraneous!** An absolute value can't equal $-5$.
 
-**ACT Tip:** If you only have time, solve Case 1 and check the answer choices — it's usually correct. Use Case 2 only if needed.
+Case 2: $x - 2 = -(3x + 4) \\implies x - 2 = -3x - 4 \\implies 4x = -2 \\implies x = -0.5$
+
+Check: $|-0.5 - 2| = 2.5$ and $3(-0.5) + 4 = 2.5$ ✓ — valid.
+
+**Solution:** $x = -0.5$ only.
+
+**ACT Tip:** Solve **both** cases and check **each** one in the original equation. Neither case is "usually" the right one — and an answer choice listing both values is a common trap when one of them is extraneous.
       `
     },
     {

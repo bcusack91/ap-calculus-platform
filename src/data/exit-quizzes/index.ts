@@ -804,30 +804,30 @@ const quizLoaders: Record<string, QuizLoader> = {
   // ACT Exit Quizzes
   // ═══════════════════════════════════════════════════
   // Math
-  'act-pre-algebra-basics-act': () => import('./act'),
-  'act-algebra-equations-act': () => import('./act'),
-  'act-intermediate-algebra-act': () => import('./act'),
-  'act-coordinate-geometry-act': () => import('./act'),
-  'act-plane-geometry-act': () => import('./act'),
-  'act-trigonometry-act': () => import('./act'),
-  'act-statistics-probability-act': () => import('./act'),
+  'act-pre-algebra-basics-act': () => import('./lesson-built/act-pre-algebra-basics-act'),
+  'act-algebra-equations-act': () => import('./lesson-built/act-algebra-equations-act'),
+  'act-intermediate-algebra-act': () => import('./lesson-built/act-intermediate-algebra-act'),
+  'act-coordinate-geometry-act': () => import('./lesson-built/act-coordinate-geometry-act'),
+  'act-plane-geometry-act': () => import('./lesson-built/act-plane-geometry-act'),
+  'act-trigonometry-act': () => import('./lesson-built/act-trigonometry-act'),
+  'act-statistics-probability-act': () => import('./lesson-built/act-statistics-probability-act'),
   // English
-  'act-english-grammar-act': () => import('./act'),
-  'act-english-rhetorical-act': () => import('./act'),
-  'act-english-punctuation-act': () => import('./act'),
-  'act-english-strategy-act': () => import('./act'),
+  'act-english-grammar-act': () => import('./lesson-built/act-english-grammar-act'),
+  'act-english-rhetorical-act': () => import('./lesson-built/act-english-rhetorical-act'),
+  'act-english-punctuation-act': () => import('./lesson-built/act-english-punctuation-act'),
+  'act-english-strategy-act': () => import('./lesson-built/act-english-strategy-act'),
   // Reading
-  'act-reading-main-ideas-act': () => import('./act'),
-  'act-reading-passage-types-act': () => import('./act'),
-  'act-reading-strategy-act': () => import('./act'),
-  'act-reading-science-tips-act': () => import('./act'),
+  'act-reading-main-ideas-act': () => import('./lesson-built/act-reading-main-ideas-act'),
+  'act-reading-passage-types-act': () => import('./lesson-built/act-reading-passage-types-act'),
+  'act-reading-strategy-act': () => import('./lesson-built/act-reading-strategy-act'),
+  'act-reading-science-tips-act': () => import('./lesson-built/act-reading-science-tips-act'),
   // Science
-  'act-science-data-act': () => import('./act'),
-  'act-science-experiments-act': () => import('./act'),
-  'act-science-reasoning-act': () => import('./act'),
+  'act-science-data-act': () => import('./lesson-built/act-science-data-act'),
+  'act-science-experiments-act': () => import('./lesson-built/act-science-experiments-act'),
+  'act-science-reasoning-act': () => import('./lesson-built/act-science-reasoning-act'),
   // Strategy
-  'act-math-strategy-act': () => import('./act'),
-  'act-test-day-strategy-act': () => import('./act'),
+  'act-math-strategy-act': () => import('./lesson-built/act-math-strategy-act'),
+  'act-test-day-strategy-act': () => import('./lesson-built/act-test-day-strategy-act'),
   // ═══════════════════════════════════════════════════
   // AP Human Geography Exit Quizzes
   // ═══════════════════════════════════════════════════

@@ -23,7 +23,7 @@ Organization questions test whether you can tell if sentences and paragraphs are
 | **Cause → Effect** | Because, as a result, consequently |
 | **General → Specific** | Topic sentence first, then supporting details |
 
-Approximately **4–6 questions per test** focus on organization and paragraph structure.
+Organization questions show up in most ACT English passages, often as the last question about a passage (where a numbered sentence or paragraph should go).
       `
     },
     {
@@ -152,6 +152,7 @@ The ACT tests whether the **first sentence of a new paragraph** smoothly connect
 | Continuation | "In addition," "Furthermore," "Similarly," |
 | Contrast | "However," "On the other hand," "Despite this," |
 | Cause/Effect | "As a result," "Consequently," "Therefore," |
+| Problem → solution (a cause-effect link: the problem prompts the fix) | "To address this issue," "In response," "To solve this problem," |
 | Example | "For instance," "To illustrate," |
 | Time shift | "Later that year," "By the 1990s," |
 
@@ -183,9 +184,9 @@ The ACT tests whether the **first sentence of a new paragraph** smoothly connect
         ],
         correctAnswers: ['after the general claim it illustrates', 'To address this issue', 'Chronological / sequential'],
         hint1: 'Examples support claims — they follow them, not precede them.',
-        hint2: 'Moving from problem to solution is neither contrast nor addition — it is addressing the issue.',
+        hint2: 'The problem is the reason the solution exists, so this is a cause-effect link, not a contrast or a simple addition. Which choice says the next idea responds to the problem?',
         hint3: '"First, then, finally" = time/sequence order.',
-        explanation: '"For example" introduces supporting evidence after a claim. Problem-to-solution transitions use phrases like "To address this issue." Sequential signal words like "first, then, finally" indicate chronological organization.'
+        explanation: '"For example" introduces supporting evidence after a claim. A problem leading to a solution is a cause-effect relationship (the problem prompts the response), and "To address this issue" signals exactly that. "Similarly" and "Furthermore" only add a parallel point, and "However" signals a contrast. Sequential signal words like "first, then, finally" indicate chronological organization.'
       }
     }
   ]

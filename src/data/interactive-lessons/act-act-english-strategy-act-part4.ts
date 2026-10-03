@@ -15,6 +15,18 @@ The three sub-categories:
 1. **Strategy** — Should a sentence be added or deleted? What is its purpose?
 2. **Organization** — Where should a sentence be placed? What transition fits?
 3. **Style** — Is the wording concise? Does the tone match?
+
+### The Most Common Format: "Which Choice Best Accomplishes the Writer's Goal?"
+
+*"The writer wants to emphasize/show X. Which choice most effectively accomplishes this goal?"*
+
+**Rule:** The question stem tells you the goal — so the right answer is the one that does **exactly that job**, even if every choice is grammatical and true. Underline the key words of the goal, then test each choice against them.
+
+**Example:** *The writer wants to emphasize how crowded the market was.*
+- "The market sold fruit, spices, and fabric." — describes goods, not crowding ✗
+- "The market opened early every Saturday." — describes timing ✗
+- "**Shoppers stood shoulder to shoulder in every aisle of the market.**" — shows crowding ✓
+- "The market had been in the town square for decades." — describes history ✗
       `
     },
     {
@@ -61,15 +73,15 @@ The three sub-categories:
             explanation: 'Free Wi-Fi and computer access directly support the claim that libraries are essential community resources. It\'s relevant and specific.'
           },
           {
-            question: 'A passage describes the process of photosynthesis. Which transition best connects "Plants absorb sunlight through their leaves" to "Carbon dioxide enters through small pores called stomata"?',
+            question: 'A passage describes what plants need for photosynthesis. Which transition best connects "A plant kept in a dark closet cannot absorb the sunlight it needs to make food" to "its leaves soon turn yellow and drop off"?',
             options: [
               'However,',
-              'In conclusion,',
-              'Meanwhile,',
-              'For example,'
+              'For example,',
+              'As a result,',
+              'In conclusion,'
             ],
             correctAnswer: 2,
-            explanation: '"Meanwhile" signals that another simultaneous process is occurring. Both absorption of sunlight and intake of $CO_{2}$ happen as part of the same process, making "Meanwhile" the best fit.'
+            explanation: 'The second sentence is the consequence of the first: lacking sunlight causes the leaves to yellow and drop, so a cause-effect transition ("As a result,") fits. "However" would signal a contrast, but the leaves dying is exactly what you would expect, not a surprise. "For example" would require the second sentence to illustrate the first, but it describes an outcome. "In conclusion" would introduce a summary of the passage, not the next step in a cause-and-effect chain.'
           }
         ]
       }
@@ -87,6 +99,7 @@ Transition questions ask you to pick the word or phrase that best connects two i
 | **Addition** | also, furthermore, moreover, in addition |
 | **Contrast** | however, nevertheless, on the other hand, despite this |
 | **Cause/Effect** | therefore, consequently, as a result, thus |
+| **Emphasis** (goes further than the previous claim) | in fact, indeed |
 | **Example** | for instance, for example, specifically |
 | **Sequence** | first, next, then, finally, meanwhile |
 | **Conclusion** | in conclusion, ultimately, in summary |
@@ -95,6 +108,8 @@ Transition questions ask you to pick the word or phrase that best connects two i
 1. Read the sentence BEFORE and AFTER the transition.
 2. Determine the relationship (addition? contrast? cause?).
 3. Pick the transition that matches.
+
+**Emphasis example:** "The new library is popular. **In fact,** it had to extend its hours to handle the crowds." — the second sentence doesn't contrast with the first; it backs it up with a stronger claim.
 
 **Common Trap:** "However" is the most over-selected transition. Students pick it whenever they're unsure. Only use "however" when there is a genuine **contrast** between the two ideas.
       `

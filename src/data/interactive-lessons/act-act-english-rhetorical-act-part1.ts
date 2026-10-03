@@ -17,7 +17,7 @@ Strategy questions ask you to think about **why** a writer makes certain choices
 | **Purpose of a phrase** | Why did the author include this specific detail? |
 | **Revision for effect** | Which revision best accomplishes a stated goal? |
 
-These make up roughly **12–15 questions** on every ACT English test — about one-fifth of the section!
+These questions appear throughout every ACT English test, mixed in with the grammar and punctuation questions. On the Enhanced ACT (2025 and later), English has **50 questions in 35 minutes** (about 42 seconds each), and every question has **4 answer choices**. Because strategy questions ask you to read the whole paragraph, they take a little longer than most grammar fixes, so plan for that.
 
 **Golden Rule:** Always consider the **main idea** of the paragraph. Any addition must *support* that main idea; any deletion should be justified by whether the sentence is *relevant* to the paragraph's focus.
       `
@@ -59,15 +59,15 @@ Should sentence [1] be kept or deleted?
       exercise: {
         questions: [
           {
-            question: 'A paragraph discusses how recycling reduces landfill waste. The writer wants to add: "Recycling aluminium cans saves 95% of the energy needed to make new ones." Should this sentence be added?',
+            question: 'A paragraph explains, in general terms, how recycling reduces the amount of trash sent to landfills. The writer is considering adding: "After one town began curbside recycling, the trash it sent to its landfill fell by a third within two years." Should this sentence be added?',
             options: [
-              'Yes — it provides a specific, relevant benefit of recycling.',
-              'Yes — it introduces an interesting historical detail.',
-              'No — it shifts the focus away from landfill reduction.',
-              'No — it repeats information already in the paragraph.'
+              'Yes — it gives a concrete example of recycling cutting landfill waste.',
+              'Yes — it adds an interesting detail about the town\'s local history.',
+              'No — it shifts the focus from landfills to the cost of recycling.',
+              'No — it repeats a general point the paragraph has already made.'
             ],
             correctAnswer: 0,
-            explanation: 'The sentence supports the paragraph\'s focus on recycling\'s benefits with a concrete statistic. Even though it highlights energy savings rather than landfill reduction, it still reinforces the overall pro-recycling argument.'
+            explanation: 'The paragraph\'s focus is landfill reduction, and the sentence is a specific example of exactly that: a town\'s landfill trash dropped after recycling began. It tells us nothing about the town\'s past beyond that one result, and it never mentions what recycling costs. Nor is it a repeat: the paragraph made only a general claim, and a concrete example supports that claim rather than restating it.'
           },
           {
             question: 'A passage about Marie Curie\'s scientific achievements includes: "Pierre Curie enjoyed cycling in his spare time." A question asks whether this sentence should be kept. What is the best reasoning for deleting it?',

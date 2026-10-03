@@ -30,10 +30,16 @@ A semicolon replaces a period between two closely related sentences.
 - ✅ *The experiment failed; the researchers adjusted their method.*
 - ❌ *The experiment failed; and the researchers adjusted their method.* (Don't use a semicolon + FANBOYS together.)
 
-**Rule 2 — Semicolon with Conjunctive Adverbs:**
-When you use words like *however, therefore, moreover, consequently, furthermore*, place a semicolon before and a comma after:
+**Rule 2 — Semicolon with Conjunctive Adverbs (Between Two Clauses):**
+When a word like *however, therefore, moreover, consequently, furthermore* sits **between two independent clauses**, place a semicolon before it and a comma after it:
 - ✅ *The data was inconclusive; however, the team continued.*
 - ❌ *The data was inconclusive, however, the team continued.* (This is a comma splice!)
+
+**But "however" doesn't always need a semicolon.** When it **interrupts a single clause**, it is just an aside, so set it off with a **pair of commas**:
+- ✅ *The team, however, continued the study.*
+- ❌ *The team; however, continued the study.* ("The team" can't stand alone, so no semicolon.)
+
+**Test:** Cover "however." If complete sentences remain on **both** sides, use semicolon + comma. If only one sentence remains, use a pair of commas.
 
 **Rule 3 — Semicolons in Complex Lists:**
 Use semicolons to separate items in a list when the items themselves contain commas:
@@ -59,9 +65,9 @@ Use semicolons to separate items in a list when the items themselves contain com
           },
           {
             question: '"The mayor promised to reduce taxes, however, funding for schools would remain unchanged." What is the error?',
-            options: ['No error', 'Comma splice — use a semicolon before "however"', 'Remove the comma after "however"', '"However" should be replaced with "but"'],
+            options: ['No error — the commas are correct', 'Comma splice — use a semicolon before "however"', 'Remove only the comma after "however"', 'Move "however" to the start of the sentence'],
             correctAnswer: 1,
-            explanation: 'This is a comma splice. "However" is a conjunctive adverb, not a FANBOYS conjunction. The correct punctuation is: "…taxes; however, funding…"'
+            explanation: 'Covering "however" leaves two complete sentences ("The mayor promised to reduce taxes" and "funding for schools would remain unchanged"), so the commas create a comma splice. "However" is a conjunctive adverb, not a FANBOYS conjunction, so it needs a semicolon before it: "…taxes; however, funding…" Removing only the second comma still leaves the two clauses joined by a comma, and moving "however" to the front still leaves those two clauses spliced together after "taxes."'
           }
         ]
       }
@@ -72,18 +78,22 @@ Use semicolons to separate items in a list when the items themselves contain com
       content: `
 ## The Colon
 
+**The One Colon Rule:** The words **before** a colon must be a complete sentence. That's why a colon can never come right after a verb or a preposition — the sentence isn't finished yet.
+
 **Rule 1 — Introduce a List (After a Complete Sentence):**
 - ✅ *The kit includes the following items: a wrench, pliers, and a screwdriver.*
-- ❌ *The kit includes: a wrench, pliers, and a screwdriver.* ("The kit includes" isn't a complete thought when used this way on the ACT — the colon often needs a complete clause.)
+- ❌ *The kit includes: a wrench, pliers, and a screwdriver.* ("The kit includes" is not a complete sentence — the verb "includes" still needs its object, so the colon cuts the sentence off mid-thought. Fix it by deleting the colon or by adding "the following items" so a complete sentence comes first.)
 
 **Rule 2 — Introduce an Explanation or Elaboration:**
 - ✅ *There was one problem: the bridge had collapsed.*
 - ✅ *She had a simple philosophy: work hard, stay humble.*
 
-**Rule 3 — What NOT to Put After a Colon:**
-Don't use a colon after a preposition or a verb that directly leads into its object:
-- ❌ *She enjoys: reading, hiking, and swimming.*
+**Rule 3 — No Colon Right After a Verb or Preposition:**
+This is the same complete-sentence rule in action. A verb or preposition still needs its object, so the words before the colon aren't a complete sentence:
+- ❌ *She enjoys: reading, hiking, and swimming.* (after the verb "enjoys")
 - ✅ *She enjoys reading, hiking, and swimming.*
+- ❌ *The box was filled with: books, papers, and photos.* (after the preposition "with")
+- ✅ *The box was filled with books, papers, and photos.*
 
 **Colon vs. Semicolon Quick Test:**
 - **Semicolon** → both sides must be independent clauses
@@ -159,9 +169,9 @@ Type "semicolon" or "colon" for each blank.
           },
           {
             question: '"The committee discussed the budget; and they voted to approve it." What is wrong with this sentence?',
-            options: ['Nothing — the sentence is correct', 'The semicolon should be a comma (FANBOYS needs a comma, not a semicolon)', 'The semicolon should be a colon', '"And" should be removed'],
+            options: ['Nothing — the sentence is correct as written', 'The semicolon should be a comma before "and"', 'The semicolon should be a colon before "and"', 'A comma should be added right after "and"'],
             correctAnswer: 1,
-            explanation: 'When joining independent clauses with a FANBOYS conjunction ("and"), use a comma — not a semicolon. Correct: "The committee discussed the budget, and they voted to approve it."'
+            explanation: 'When joining independent clauses with a FANBOYS conjunction ("and"), use a comma — not a semicolon. Correct: "The committee discussed the budget, and they voted to approve it." A semicolon plus "and" doubles up the connectors, so the sentence is not correct as written. A colon would introduce an explanation, but voting is a next step, not an explanation of the discussion. A comma after "and" would wrongly split the conjunction from the clause it introduces.'
           }
         ]
       }

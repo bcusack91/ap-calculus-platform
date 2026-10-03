@@ -153,7 +153,7 @@ export const HELP_ARTICLE_LIST: HelpArticle[] = [
       { type: 'p', text: `Open a topic, do its lesson, and take its exit quiz. Score ${PASS} or better to clear it. See [What does “cleared” mean?](/help/what-does-cleared-mean).` },
       { type: 'h2', id: 'retake', text: 'When to retake the diagnostic' },
       { type: 'p', text: 'Retake it after you clear every topic on your plan. The retake shows your growth. It also gives you a fresh plan.' },
-      { type: 'note', text: `For the MCAT, the next diagnostic stays locked until every plan topic is cleared AND you pass a ${MCAT_UNIT_TEST_QUESTIONS}-question unit test on those topics (${MCAT_UNIT_TEST_PASS_PERCENT}% or better; retakes use new questions). Your teacher can allow an early retake. For other courses the retake is open anytime, but finishing your plan first gives you a truer picture. The SAT also ends each cycle with the same kind of unit test, as a recommended last step that does not lock the diagnostic.` },
+      { type: 'note', text: `For the MCAT, the next diagnostic stays locked until every plan topic is cleared AND you pass a ${MCAT_UNIT_TEST_QUESTIONS}-question unit test on those topics (${MCAT_UNIT_TEST_PASS_PERCENT}% or better; retakes use new questions). Your teacher can allow an early retake. For other courses the retake is open anytime, but finishing your plan first gives you a truer picture. The SAT and ACT also end each cycle with the same kind of unit test, as a recommended last step that does not lock the diagnostic.` },
       { type: 'h2', id: 'faq', text: 'Questions' },
       {
         type: 'faq',

@@ -58,6 +58,8 @@ export default function ACTDiagnosticPage() {
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
   const [history, setHistory] = useState<HistoryEntry[]>([])
   const [challengeSubmitted, setChallengeSubmitted] = useState(false)
+  // The cycle's unit test (recommended last step; null while switched off).
+  const [unitTest, setUnitTest] = useState<{ available: boolean; passed: boolean; attempts: number; bestPercent: number | null; passPercent: number; questionCount: number; path: string; inProgressId: string | null } | null>(null)
 
   useEffect(() => {
     if (status === 'unauthenticated') router.push(signUpUrl({ callbackUrl: '/act-diagnostic', reason: 'diagnostic', label: 'ACT' }))
@@ -68,6 +70,10 @@ export default function ACTDiagnosticPage() {
       fetch('/api/act-diagnostic/history')
         .then(r => (r.ok ? r.json() : { attempts: [] }))
         .then(data => setHistory(data.attempts ?? []))
+        .catch(() => {})
+      fetch('/api/act-diagnostic/plan-status')
+        .then(r => (r.ok ? r.json() : null))
+        .then(data => { if (data?.unitTest) setUnitTest(data.unitTest) })
         .catch(() => {})
     }
   }, [status])
@@ -427,6 +433,24 @@ export default function ACTDiagnosticPage() {
                 </Link>
               ))}
             </div>
+            {unitTest && !unitTest.passed && (
+              unitTest.available ? (
+                <div className="mt-4 rounded-xl border border-red-300 bg-white p-4 dark:border-red-700 dark:bg-gray-800">
+                  <p className="text-sm font-semibold text-red-900 dark:text-red-200">📝 Every module cleared — finish the cycle with your unit test</p>
+                  <p className="mt-1 text-xs text-gray-600 dark:text-gray-300">
+                    {unitTest.questionCount} questions on these modules ({unitTest.passPercent}% to pass). It shows what stuck before you retake the diagnostic.
+                    {unitTest.attempts > 0 && unitTest.bestPercent !== null ? ` Best so far: ${unitTest.bestPercent}%. Retakes use new questions.` : ''}
+                  </p>
+                  <Link href={unitTest.path} className="mt-3 inline-block rounded-lg bg-red-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-red-700">
+                    {unitTest.inProgressId ? 'Resume the unit test' : unitTest.attempts > 0 ? 'Retake the unit test' : 'Take the unit test'}
+                  </Link>
+                </div>
+              ) : (
+                <p className="mt-4 text-xs text-red-800 dark:text-red-300">
+                  📝 After you clear these, finish the cycle with a {unitTest.questionCount}-question unit test on them, then retake the diagnostic.
+                </p>
+              )
+            )}
           </div>
         )}
 

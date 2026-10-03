@@ -14,10 +14,24 @@ The hardest part of word problems is **translation** — turning English into al
 | Phrase | Operation |
 |--------|-----------|
 | "sum of" / "more than" | $+$ |
-| "difference" / "less than" | $-$ |
+| "difference of $a$ and $b$" | $a - b$ |
+| "7 less than $3n$" (order **reverses**) | $3n - 7$, not $7 - 3n$ |
 | "product of" / "times" | $\\times$ |
 | "quotient" / "per" | $\\div$ |
 | "is" / "equals" | $=$ |
+| "at least" / "no less than" | $\\geq$ |
+| "at most" / "no more than" | $\\leq$ |
+
+**Watch the reversal:** "less than" names the starting quantity *second* in English but you write it *first* in algebra. "7 less than $3n$" means start at $3n$ and subtract 7. (Order doesn't matter for "more than," since $3n + 7 = 7 + 3n$.)
+
+**Consecutive integers:**
+- Consecutive integers: $n,\\ n + 1,\\ n + 2$
+- Consecutive **even** integers: $n,\\ n + 2,\\ n + 4$ ($n$ even)
+- Consecutive **odd** integers: $n,\\ n + 2,\\ n + 4$ ($n$ odd) — still $+2$, because odd numbers are also 2 apart
+
+Example: three consecutive odd integers sum to 57 → $3n + 6 = 57 \\implies n = 17$, so the integers are 17, 19, 21.
+
+**Geometry facts word problems assume:** a circle's **diameter = 2r** (the radius is half the diameter); circumference $= 2\\pi r = \\pi \\cdot$ diameter; area $= \\pi r^2$. If a problem gives the diameter, halve it before using $\\pi r^2$.
 
 **ACT Tip:** Underline what they're asking for *before* you set up the equation.
       `
@@ -45,6 +59,16 @@ Time there: $\\frac{40}{30} = \\frac{4}{3}$ hr. Time back: $\\frac{40}{50} = \\f
 $$\\text{Avg speed} = \\frac{\\text{total distance}}{\\text{total time}} = \\frac{80}{\\frac{4}{3} + \\frac{4}{5}} = \\frac{80}{\\frac{32}{15}} = \\frac{80 \\times 15}{32} = 37.5 \\text{ mph}$$
 
 **ACT Tip:** Average speed is NOT the average of the two speeds. Use total distance ÷ total time.
+
+**Example 4 — Head start / catch-up:** Car A leaves town at 40 mph. One hour later, Car B leaves the same place on the same road at 60 mph. How long after Car B leaves does it catch Car A?
+
+Let $t$ = hours Car B has been driving. Car A has been driving 1 hour longer: $t + 1$. When B catches A, they have gone the **same distance**:
+
+$$60t = 40(t + 1) \\implies 60t = 40t + 40 \\implies 20t = 40 \\implies t = 2 \\text{ hours}$$
+
+Check: B drives $60 \\times 2 = 120$ miles; A drives $40 \\times 3 = 120$ miles ✓
+
+**Shortcut:** Car A's head start is $40 \\times 1 = 40$ miles. Car B closes the gap at $60 - 40 = 20$ mph (the difference of the speeds), so it takes $\\frac{40}{20} = 2$ hours. Same direction → **subtract** speeds; opposite directions → **add** speeds.
       `
     },
     {

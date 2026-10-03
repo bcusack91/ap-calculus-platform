@@ -28,7 +28,9 @@ async function loadParts(slug: string): Promise<Sec[][]> {
   return parts
 }
 
-describe.each([...LESSON_BUILT_EXIT_TOPICS])('%s lesson', (slug) => {
+// Yield tagging covers the MCAT lessons. ACT topics also have lesson-built
+// exit pools (2026-10-03), but their lessons are untagged — every item default.
+describe.each([...LESSON_BUILT_EXIT_TOPICS].filter((s) => s.startsWith('mcat-')))('%s lesson', (slug) => {
   it('is fully and validly yield-tagged', async () => {
     const parts = await loadParts(slug)
     expect(parts.length, 'lesson part files').toBeGreaterThan(0)

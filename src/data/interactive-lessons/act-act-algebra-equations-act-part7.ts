@@ -18,7 +18,7 @@ This final part pulls together everything from Parts 1–6.
 | Linear equations | Isolate $x$: inverse operations |
 | Systems | Substitution or elimination |
 | Inequalities | Flip sign when × or ÷ by negative |
-| Absolute value | $|A|=b \\implies A = b$ or $A = -b$ |
+| Absolute value | $\\lvert A \\rvert = b \\implies A = b$ or $A = -b$ (check each) |
 | Factoring | $a^2 - b^2 = (a+b)(a-b)$ |
 | $d = rt$ | Distance = rate × time |
 | Mixtures | $\\sum (\\text{amount}_i \\times \\text{conc}_i) = \\text{total} \\times \\text{target}$ |
@@ -30,13 +30,15 @@ This final part pulls together everything from Parts 1–6.
       content: `
 ## ACT Math Time Strategy
 
-You have **60 minutes for 60 questions** — exactly 1 minute per question.
+The Enhanced ACT Math test gives you **50 minutes for 45 questions** — about 1 minute 6 seconds per question. Every question has **4 answer choices**, and there is no penalty for guessing, so never leave one blank.
 
-| Question # | Difficulty | Strategy |
+Questions generally get harder as you go, so bank time early:
+
+| Question # | Typical feel | Strategy |
 |-----------|-----------|----------|
-| 1–20 | Easy | Solve directly, aim for < 30 sec each |
-| 21–40 | Medium | Most algebra questions fall here |
-| 41–60 | Hard | Skip & return if stuck > 90 sec |
+| 1–15 | Easier | Solve directly and move quickly to bank time |
+| 16–30 | Medium | Multi-step equations and word problems; write the setup down |
+| 31–45 | Harder | Skip & return if stuck > 90 sec |
 
 **Top 5 Algebra Speed Tips:**
 
@@ -57,9 +59,9 @@ You have **60 minutes for 60 questions** — exactly 1 minute per question.
         questions: [
           {
             question: 'If $\\frac{3x-1}{2} = 7$, what is $x$?',
-            options: ['$3$', '$5$', '$\\frac{15}{3}$', '$\\frac{13}{3}$'],
+            options: ['$3$', '$5$', '$\\frac{8}{3}$', '$\\frac{13}{3}$'],
             correctAnswer: 1,
-            explanation: '$3x - 1 = 14 \\implies 3x = 15 \\implies x = 5$.'
+            explanation: 'Multiply both sides by 2: $3x - 1 = 14 \\implies 3x = 15 \\implies x = 5$. Forgetting to multiply by 2 ($3x - 1 = 7$) gives $\\frac{8}{3}$, and subtracting 1 instead of adding ($3x = 13$) gives $\\frac{13}{3}$.'
           },
           {
             question: 'If $|2x - 10| = 4$, what is the product of the two solutions?',
@@ -100,7 +102,7 @@ You have **60 minutes for 60 questions** — exactly 1 minute per question.
       exercise: {
         dropdowns: [
           {
-            label: 'You\'re on question 52 and stuck after 45 seconds. You should …',
+            label: 'You\'re on question 40 of 45, stuck after 90 seconds, with easier questions still unanswered. You should …',
             options: ['Keep working — you\'ll get it', 'Skip it and come back', 'Guess randomly', 'Erase all work and start over']
           },
           {
@@ -116,7 +118,7 @@ You have **60 minutes for 60 questions** — exactly 1 minute per question.
         hint1: 'Hard questions at the end are worth the same as easy ones at the beginning.',
         hint2: 'If $y = \\ldots$ is given, just plug it in.',
         hint3: '$x^2 - 25 = (x+5)(x-5)$ — a pattern you should recognize instantly.',
-        explanation: 'Time management is crucial: skip and return. Use substitution when a variable is isolated. Difference of squares is one of the most tested patterns.'
+        explanation: 'Time management is crucial: skip and return. Use substitution when a variable is isolated. Difference of squares is a pattern worth recognizing on sight.'
       }
     },
     {
@@ -131,13 +133,15 @@ Try these under timed conditions — **6 minutes for 6 questions**.
 |---|---------|--------|
 | 1 | Solve $5x - 3(x + 2) = 8$ | $x = 7$ |
 | 2 | Solve the system: $2x + y = 7$, $x - y = 2$ | $(3,\\, 1)$ |
-| 3 | Solve $|x + 3| = 2x - 1$ | $x = 4$ only |
+| 3 | Solve $\\lvert x + 3 \\rvert = 2x - 1$ | $x = 4$ only |
 | 4 | Factor $2x^2 - 8$ completely | $2(x+2)(x-2)$ |
 | 5 | A train at 80 mph and a car at 60 mph leave at the same time in the same direction. After how many hours is the train 50 miles ahead? | $2.5$ hr |
 | 6 | Solve $-5 < 3x + 1 \\leq 13$ | $-2 < x \\leq 4$ |
 
 **Check:** Problem 3 — Case 1: $x + 3 = 2x - 1 \\implies x = 4$. Case 2: $x + 3 = -(2x-1) \\implies 3x = -2 \\implies x = -\\frac{2}{3}$.
 Check Case 2: $|{-\\frac{2}{3}}+3| = \\frac{7}{3}$ but $2(-\\frac{2}{3})-1 = -\\frac{7}{3} < 0$ ✗ Extraneous!
+
+**Check:** Problem 5 — Both leave together, so the train's lead grows at the **difference** of the speeds: $80 - 60 = 20$ mph. Set lead = 50: $80t - 60t = 50 \\implies 20t = 50 \\implies t = 2.5$ hours. (Train: $80 \\times 2.5 = 200$ mi; car: $60 \\times 2.5 = 150$ mi; lead $= 50$ mi ✓.) If one vehicle had a head start, add the head-start distance to that vehicle's side of the equation, as in Part 4, Example 4.
       `
     },
     {

@@ -97,7 +97,7 @@ On some questions, one choice is **"DELETE the underlined portion."** Students o
 
 DELETE is correct here — "tall skyscraper" already conveys the idea. The underlined clause is redundant.
 
-**Real ACT data:** DELETE is the correct answer on roughly **30–40%** of the questions where it appears as an option. Don't ignore it!
+**Don't ignore it:** DELETE is a legitimate answer, and students who dismiss it as "too drastic" miss easy points.
 
 **Strategy:** Whenever you see DELETE as an option, ask: "Does removing this make the sentence better or worse?" If the sentence reads just as well (or better) without the underlined portion, DELETE is likely correct.
       `
@@ -110,17 +110,17 @@ DELETE is correct here — "tall skyscraper" already conveys the idea. The under
 
 1) "She returned back home" contains a __________ (the error type where words repeat the same meaning).
 
-2) When DELETE appears as an answer choice, it is correct roughly __________–40% of the time.
+2) "The coach __________ I admired retired last year." (who / whom)
 
-3) "Due to the fact that" should be replaced with the single word "__________.".
+3) "Due to the fact that" should be replaced with the single word "__________."
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['redundancy', '30', 'because'],
+        correctAnswers: ['redundancy', 'whom', 'because'],
         hint1: '"Returned" already means "went back" — the extra word repeats the meaning.',
-        hint2: 'It\'s correct more often than students expect — between 30 and 40 percent.',
+        hint2: 'Rephrase the clause: "I admired ___." Would you say "he" or "him"?',
         hint3: 'A one-word replacement for "due to the fact that."',
-        explanation: '"Returned back" is a redundancy. DELETE is correct 30–40% of the time when offered. "Due to the fact that" = "because."'
+        explanation: '"Returned back" is a redundancy. "I admired him" uses the object form, so the matching relative pronoun is "whom." "Due to the fact that" = "because."'
       }
     },
     {
@@ -135,14 +135,19 @@ Many students rely on their **ear** — "this sounds right to me." But spoken En
 
 - **"Me and my friend went…"** → "My friend and **I** went…" (subjective case for subjects)
 - **"Between you and I"** → "Between you and **me**" (objective case after prepositions)
-- **"Everyone should bring their book"** → "Everyone should bring **his or her** book" (singular antecedent — though the ACT has become more accepting of singular "they" in recent years)
-- **"The data shows"** → "The data **show**" ("data" is technically plural)
+- **"The coach who I admired"** → "The coach **whom** I admired" ("who" is the subject form like "he"; "whom" is the object form like "him" — "I admired **him**," so "whom")
+- **"The scientist which discovered the vaccine"** → "The scientist **who** discovered the vaccine" ("which" is for things only; use "who" for people)
+
+**Not errors on today's ACT:**
+- **"Everyone should bring their book"** — singular "they" with a generic antecedent ("everyone," "a student," "each person") is accepted. Don't "fix" it to "his or her."
+- **"The data shows a clear trend"** — "data" may take a singular verb. Don't treat it as an error.
 
 **Defence:** Don't trust your ear alone. Apply the grammar rule, then check if the answer sounds right as a final confirmation.
 
 **The "Cross-Out" Test:** For pronoun case, remove the other person from the sentence:
 - "Me went to the store" → clearly wrong → use "I"
 - "Give it to I" → clearly wrong → use "me"
+- For who/whom, answer the clause with he/him: "he" → **who**, "him" → **whom**
       `
     },
     {
@@ -158,19 +163,19 @@ Many students rely on their **ear** — "this sounds right to me." But spoken En
             options: ['"In today\'s world"', '"In the modern contemporary world"', '"In the world that exists in modern times"', '"In our current modern era of today"']
           },
           {
-            label: 'DELETE is the correct answer choice roughly …',
-            options: ['5% of the time — it\'s almost never right', '30–40% of the time when it appears', '75% of the time — always pick it', '50% of the time — it\'s a coin flip']
+            label: 'When "DELETE the underlined portion" is offered, you should …',
+            options: ['ignore it — deletion is almost never right', 'test it — pick it if the sentence works as well without the words', 'always pick it — the shortest option always wins', 'pick it only on the last question of a passage']
           },
           {
             label: '"Between you and I" is incorrect because …',
             options: ['"I" should be capitalised', 'prepositions require the objective case ("me")', '"between" is an informal word', 'the sentence needs a comma']
           }
         ],
-        correctAnswers: ['"In today\'s world"', '30–40% of the time when it appears', 'prepositions require the objective case ("me")'],
+        correctAnswers: ['"In today\'s world"', 'test it — pick it if the sentence works as well without the words', 'prepositions require the objective case ("me")'],
         hint1: 'Eliminate the redundant words: "modern" and "of today" say the same thing.',
-        hint2: 'It is more common than most students expect.',
+        hint2: 'DELETE is a real answer — but only when the sentence loses nothing by removing the words.',
         hint3: '"Between" is a preposition, so the pronoun must be in the objective form.',
-        explanation: '"In the modern world of today" is redundant — use "In today\'s world." DELETE is correct 30–40% when available. "Between" requires objective case: "between you and me."'
+        explanation: '"In the modern world of today" is redundant — use "In today\'s world." Evaluate DELETE honestly: choose it when the underlined words are redundant or irrelevant, not automatically. "Between" requires objective case: "between you and me."'
       }
     }
   ]

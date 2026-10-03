@@ -47,9 +47,9 @@ Some ACT questions zoom out and ask about the **big picture**: why a passage exi
 
 **Example Passage Clues:**
 
-*"Studies show that students who eat breakfast score 20% higher on standardised tests. Schools should therefore implement universal breakfast programmes."*
+*"Students who eat breakfast tend to concentrate better in morning classes. Schools should therefore implement universal breakfast programmes."*
 
-- Purpose: **Persuade** — the author uses data as evidence for a recommendation ("should implement").
+- Purpose: **Persuade** — the author uses a claimed benefit as evidence for a recommendation ("should implement").
 
 *"The monarch butterfly migrates up to 3,000 miles each autumn, travelling from Canada to central Mexico."*
 

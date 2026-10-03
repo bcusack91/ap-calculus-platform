@@ -111,7 +111,7 @@ $$120 \\times (1 - 0.35) = 120 \\times 0.65 = \\$78$$
         hint1: '$0.40 \\times 90$.',
         hint2: 'Discount $= 0.20 \\times 50 = 10$. Subtract from $50$.',
         hint3: '$\\frac{100 - 80}{80} \\times 100\\%$.',
-        explanation: '$0.40 \\times 90 = 36$. Sale price $= 50 - 10 = \\$40$. Percent increase $= \\frac{20}{80} \\times 100 = 25\\%$.'
+        explanation: '$0.40 \\times 90 = 36$. Sale price: $50 - 10 = 40$, so \\$40. Percent increase $= \\frac{20}{80} \\times 100 = 25\\%$.'
       }
     },
     {
@@ -151,10 +151,10 @@ $$120 \\times (1 - 0.35) = 120 \\times 0.65 = \\$78$$
       exercise: {
         questions: [
           {
-            question: 'A store marks up a wholesale price of $\\$25$ by $60\\%$. During a sale the marked price is then reduced by $25\\%$. What is the sale price?',
-            options: ['$\\$25$', '$\\$27$', '$\\$30$', '$\\$35$'],
+            question: 'A store marks up a wholesale price of \\$25 by $60\\%$. During a sale the marked price is then reduced by $25\\%$. What is the sale price?',
+            options: ['\\$25', '\\$27', '\\$30', '\\$35'],
             correctAnswer: 2,
-            explanation: 'Marked price $= 25 \\times 1.60 = \\$40$. Sale price $= 40 \\times 0.75 = \\$30$.'
+            explanation: 'Marked price: $25 \\times 1.60 = 40$, so \\$40. Sale price: $40 \\times 0.75 = 30$, so \\$30. The overall multiplier is $1.60 \\times 0.75 = 1.20$, a net $20\\%$ increase — so the price cannot end at the original \\$25, and the two percents cannot simply be netted to $+35\\%$.'
           },
           {
             question: 'If $12$ is $p\\%$ of $48$, what is $p$?',

@@ -147,11 +147,11 @@ describe('unitTestIsNextStep (MCAT locks; SAT/ACT recommend)', () => {
     expect(unitTestIsNextStep({ available: true, passed: true, locksDiagnostic: false }, true)).toBe(false)
     expect(unitTestIsNextStep(null, true)).toBe(false)
   })
-  it('course switches: MCAT locks, SAT on and open, ACT off until its pools grow', async () => {
+  it('course switches: MCAT locks; SAT and ACT on and open', async () => {
     const { UNIT_TEST_COURSES } = await import('@/lib/unit-test-courses')
     expect(UNIT_TEST_COURSES.mcat).toMatchObject({ enabled: true, locksDiagnostic: true })
     expect(UNIT_TEST_COURSES.sat).toMatchObject({ enabled: true, locksDiagnostic: false, path: '/sat-unit-test' })
-    expect(UNIT_TEST_COURSES.act.enabled).toBe(false)
+    expect(UNIT_TEST_COURSES.act).toMatchObject({ enabled: true, locksDiagnostic: false, path: '/act-unit-test' })
   })
 })
 
@@ -164,6 +164,39 @@ describe('SAT pools support the unit test', () => {
     })))
     const seen = new Set<string>()
     for (let sitting = 0; sitting < 3; sitting++) {
+      const qs = assembleUnitTest(pools.map((p) => ({ slug: p.slug, ranked: rankCandidates(p.items, seen, new Set()) })))
+      expect(qs).toHaveLength(25)
+      for (const q of qs) {
+        expect(seen.has(q.id)).toBe(false)
+        seen.add(q.id)
+      }
+    }
+  })
+})
+
+describe('ACT pools support the unit test', () => {
+  // Every topic the ACT diagnostic can recommend (the canonical *-act slugs).
+  const ACT_RECOMMENDABLE = [
+    'act-english-grammar-act', 'act-english-punctuation-act', 'act-english-strategy-act', 'act-english-rhetorical-act',
+    'act-pre-algebra-basics-act', 'act-algebra-equations-act', 'act-intermediate-algebra-act', 'act-coordinate-geometry-act',
+    'act-plane-geometry-act', 'act-trigonometry-act', 'act-statistics-probability-act',
+    'act-reading-main-ideas-act', 'act-reading-passage-types-act', 'act-reading-strategy-act', 'act-reading-science-tips-act',
+    'act-science-data-act', 'act-science-experiments-act', 'act-science-reasoning-act',
+  ]
+  it('every recommendable ACT topic has at least 30 distinct questions', async () => {
+    for (const slug of ACT_RECOMMENDABLE) {
+      const ids = new Set((await generateExitQuiz(slug, 150)).map((q) => q.id))
+      expect(ids.size, slug).toBeGreaterThanOrEqual(30)
+    }
+  })
+  it('a 5-topic ACT plan gets 25 questions and fresh ones on 5 retakes', async () => {
+    const plan = ['act-english-punctuation-act', 'act-algebra-equations-act', 'act-reading-main-ideas-act', 'act-science-data-act', 'act-trigonometry-act']
+    const pools = await Promise.all(plan.map(async (slug) => ({
+      slug,
+      items: (await generateExitQuiz(slug, 150)).map((q) => ({ id: q.id, question: q.question, options: q.options, correctIndex: q.correctIndex, explanation: q.explanation })),
+    })))
+    const seen = new Set<string>()
+    for (let sitting = 0; sitting < 6; sitting++) {
       const qs = assembleUnitTest(pools.map((p) => ({ slug: p.slug, ranked: rankCandidates(p.items, seen, new Set()) })))
       expect(qs).toHaveLength(25)
       for (const q of qs) {

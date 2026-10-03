@@ -51,7 +51,7 @@ Given $y = mx + b$:
 - Shade **above** the line for $y > mx + b$ or $y \\ge mx + b$.
 - Shade **below** the line for $y < mx + b$ or $y \\le mx + b$.
 
-**ACT Tip:** To check which side to shade, test the point $(0, 0)$. If it satisfies the inequality, shade the side containing the origin.
+**ACT Tip:** To check which side to shade, test the point $(0, 0)$. If it satisfies the inequality, shade the side containing the origin; if not, shade the other side. (If the line passes through the origin, test a different point such as $(1, 0)$.)
       `
     },
     {

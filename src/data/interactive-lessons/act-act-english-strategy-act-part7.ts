@@ -22,7 +22,7 @@ Read the passage and answer each question as you reach it, just like on test day
 
 [1] In recent years, urban farming has gained popularity in cities around the world. [2] Vacant lots, rooftops, and even abandoned buildings \[A\] **has been** transformed into productive gardens. [3] \[B\] **However,** these urban farms provide far more than fresh produce. [4] They create jobs, build community, and \[C\] **gives residents a sense of** pride and purpose.
 
-[5] One of the most successful examples is the Growing Power project in Milwaukee, Wisconsin. [6] Founded by Will Allen in 1993, the organisation \[D\] **turned a vacant two-acre lot into a thriving farm that produced vegetables, fish, and livestock year-round.** [7] \[E\] **[The writer is considering adding: "Will Allen was a former professional basketball player."]** [8] Allen's approach demonstrated that even small urban spaces could yield a surprising amount of food.
+[5] One of the most successful examples was the Growing Power project in Milwaukee, Wisconsin. [6] Founded by Will Allen in 1993, the organisation \[D\] **turned a vacant two-acre lot into a thriving farm that produced vegetables, fish, and livestock year-round.** [7] \[E\] **[The writer is considering adding: "Will Allen was a former professional basketball player."]** [8] Allen's approach demonstrated that even small urban spaces could yield a surprising amount of food.
 
 **Now answer the questions on the following slides.**
       `
@@ -49,13 +49,13 @@ Read the passage and answer each question as you reach it, just like on test day
           {
             question: '[B]: The sentence says "However, these urban farms provide far more than fresh produce." Is "However" the best transition here?',
             options: [
-              'Yes — NO CHANGE.',
-              'No — replace with "In fact," because the sentence expands on the previous idea.',
-              'No — replace with "Therefore," because it states a consequence.',
-              'No — replace with "For example," because it gives an illustration.'
+              'Yes — NO CHANGE, because the sentence contrasts with the one before.',
+              'No — replace with "In fact," because the sentence goes further than the one before.',
+              'No — replace with "Therefore," because the sentence states a consequence of the one before.',
+              'No — replace with "For example," because the sentence illustrates the one before.'
             ],
             correctAnswer: 1,
-            explanation: 'Sentence [3] doesn\'t contrast with sentence [2] — it EXPANDS on the idea that urban farms are valuable. "In fact," signals that what follows goes further than the previous claim.'
+            explanation: 'Sentence [3] doesn\'t contrast with sentence [2] — it goes further, claiming urban farms offer even more than the gardens just described. "In fact," signals that kind of emphasis. There is no contrast to justify "However." Farms providing jobs and community is not a result of lots being converted, so "Therefore" misstates the logic. And sentence [3] is a broader claim, not a specific instance of sentence [2], so "For example" does not fit.'
           }
         ]
       }
@@ -132,18 +132,18 @@ Should this sentence be added at point [E], between sentences [6] and [8]?
           },
           {
             label: 'When you see DELETE as an answer choice, you should …',
-            options: ['ignore it — deleting is too risky', 'seriously consider it — it\'s correct 30–40% of the time', 'always pick it — shorter is better', 'only pick it for the last question']
+            options: ['ignore it — deleting is too risky', 'seriously consider it — pick it if the sentence works without the words', 'always pick it — shorter is better', 'only pick it for the last question']
           },
           {
             label: 'The best reading strategy for ACT English is …',
             options: ['skim the whole passage, then answer questions', 'read as you go — answer each question when you reach the underline', 'read backwards to check grammar', 'only read the underlined portions']
           }
         ],
-        correctAnswers: ['identify the error type (verb, pronoun, punctuation, etc.)', 'seriously consider it — it\'s correct 30–40% of the time', 'read as you go — answer each question when you reach the underline'],
+        correctAnswers: ['identify the error type (verb, pronoun, punctuation, etc.)', 'seriously consider it — pick it if the sentence works without the words', 'read as you go — answer each question when you reach the underline'],
         hint1: 'Knowing the rule being tested tells you exactly what to check.',
         hint2: 'DELETE is more common than students think — evaluate it honestly.',
         hint3: 'ACT English questions are ordered by position in the passage.',
-        explanation: 'Step 1 for grammar: identify the error type. DELETE is correct 30–40% when offered. The Read-As-You-Go method is the most efficient approach for ACT English.'
+        explanation: 'Step 1 for grammar: identify the error type. DELETE is a real answer whenever the underlined words are redundant or irrelevant, so test it rather than ignoring or auto-picking it. The Read-As-You-Go method is the most efficient approach for ACT English.'
       }
     },
     {
@@ -159,17 +159,18 @@ Should this sentence be added at point [E], between sentences [6] and [8]?
 
 **Rhetorical Skills:**
 - Add sentences that support the main idea; delete those that are off-topic or redundant.
-- Match transitions to the relationship between ideas (addition, contrast, cause/effect).
+- Match transitions to the relationship between ideas (addition, contrast, cause/effect, emphasis).
+- For "writer's goal" questions, pick the choice that does exactly what the stem asks.
 - For sentence placement, look for logical links (pronouns, transitions).
 
 **Time Management:**
-- ~9 minutes per passage, 36 seconds per question.
+- 50 questions in 35 minutes: ~42 seconds per question, ~7 minutes per 10 questions.
 - Skip time-consuming questions (bubble a guess), return after the passage.
 - Never leave a bubble blank — no penalty for guessing.
 
 **Common Traps:**
 - Shorter is usually better (wordiness trap).
-- DELETE is often correct when offered.
+- DELETE is a real answer — test it whenever it's offered.
 - Don't trust your ear alone — apply the rule.
 
 You now have a complete toolkit for the ACT English section. Practice with real passages and apply these strategies consistently! 🎯

@@ -9,7 +9,7 @@ export const actEnglishGrammarPart2Data = {
 
 **Part 2 of 7 — Agreement, Case, Ambiguous Reference & Who/Whom**
 
-Pronoun questions appear on every ACT English test. The test checks three things:
+Pronoun questions are a staple of ACT English. The test checks three things:
 
 1. **Agreement** — Does the pronoun match its antecedent in number?
 2. **Case** — Is the pronoun in the right form (subject vs. object)?
@@ -31,10 +31,15 @@ Pronoun questions appear on every ACT English test. The test checks three things
 
 A pronoun must agree with its **antecedent** (the noun it replaces) in number and gender.
 
-**Example 1 — Singular Antecedent:**
-- ❌ *A student should always bring **their** textbook to class.*
+**Example 1 — Singular Antecedent (a thing):**
+- ❌ *The bridge was closed because **they** needed repairs.*
+- ✅ *The bridge was closed because **it** needed repairs.*
+- A single object takes a singular pronoun. This kind of clear number mismatch is what the ACT tests.
+
+**A note on singular "they":** When the antecedent is a generic person (*a student, someone, each driver*), both forms are acceptable in current standard English and ACT style:
 - ✅ *A student should always bring **his or her** textbook to class.*
-- (On the ACT, the singular form is preferred when the antecedent is clearly singular.)
+- ✅ *A student should always bring **their** textbook to class.*
+- Don't mark singular "they" wrong. If an answer choice rewrites the whole sentence in the plural (*Students should bring their textbooks*), that is fine too.
 
 **Example 2 — Plural Antecedent:**
 - ❌ *The musicians tuned **his** instruments before the concert.*
@@ -55,10 +60,10 @@ A pronoun must agree with its **antecedent** (the noun it replaces) in number an
       exercise: {
         questions: [
           {
-            question: '"When a driver approaches a red light, they should begin to brake." What is the pronoun issue?',
-            options: ['No error', '"they" should be "he or she" (singular antecedent)', '"they" should be "we"', '"driver" should be "drivers"'],
+            question: '"When the hikers reached the summit, he or she paused to rest." What is the pronoun issue?',
+            options: ['No error', '"he or she" should be "they"', '"he or she" should be "we"', '"reached" should be "reaches"'],
             correctAnswer: 1,
-            explanation: '"A driver" is singular, so the matching pronoun should be "he or she" (or the sentence should be rewritten with "drivers ... they"). On the ACT, singular agreement is tested frequently.'
+            explanation: 'The antecedent "hikers" is plural, so the pronoun must be plural: "they paused to rest." The singular "he or she" does not match, so the sentence is not error-free. "We" shifts to the first person, which the sentence never uses. Changing "reached" to "reaches" creates a tense shift and leaves the pronoun mismatch in place.'
           },
           {
             question: '"The committee announced that they had made their decision." On the ACT, which revision is best?',
@@ -91,6 +96,7 @@ Use **object pronouns** (me, him, her, us, them, whom) as objects of verbs or pr
 **Who vs. Whom:**
 - **Who** = subject (like "he"): *Who is calling?* → *He is calling.*
 - **Whom** = object (like "him"): *To whom did you speak?* → *You spoke to him.*
+- **Set aside inserted clauses first.** Phrases like *I think*, *we know*, or *the judges believe* don't change the pronoun's job. In *The singer (who / whom) the judges believe will win*, cross out "the judges believe": *who will win* → *she will win*, so **who** is correct. Running the he/him swap on "the judges believe ___" would wrongly point to "whom."
 
 **ACT Tip:** For compound pronoun questions, mentally remove the other person. "Give it to (she / her) and me" → "Give it to her" ✅.
       `
@@ -154,9 +160,9 @@ Use **object pronouns** (me, him, her, us, them, whom) as objects of verbs or pr
         questions: [
           {
             question: '"The scientist published her findings, and it received widespread attention." What should replace "it"?',
-            options: ['they', 'she', 'them', 'No change'],
+            options: ['they', 'he', 'them', 'No change'],
             correctAnswer: 0,
-            explanation: '"Findings" is plural, so the pronoun must be "they." "It" is singular and does not agree.'
+            explanation: '"Findings" is plural and is the subject of the second clause, so the pronoun must be the subject form "they." Keeping "it" leaves a singular pronoun for a plural antecedent. "He" has no antecedent, since the scientist is referred to as "her." "Them" is an object pronoun and cannot serve as the subject of "received."'
           },
           {
             question: '"For (whoever / whomever) is interested, the lecture begins at noon." Which is correct?',

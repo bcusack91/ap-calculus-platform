@@ -135,7 +135,7 @@ Zeros: $x = 2, 3, -1$.
           }
         ],
         correctAnswers: ['4', 'factor', '4'],
-        hint1: 'The Fundamental Theorem of Algebra: degree $n$ → at most $n$ real roots.',
+        hint1: 'A degree-$n$ polynomial has exactly $n$ complex roots counting multiplicity (Fundamental Theorem of Algebra), so it has at most $n$ real roots.',
         hint2: 'This is the Factor Theorem.',
         hint3: 'Sum of cubes: $a^3 + b^3 = (a+b)(a^2 - ab + b^2)$ with $a = x$, $b = 2$.',
         explanation: 'At most 4 real zeros. $P(c)=0$ means $(x-c)$ is a factor. $x^3+8 = (x+2)(x^2-2x+4)$.'

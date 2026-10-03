@@ -9,7 +9,7 @@ export const actIntermAlgPart1Data = {
 
 **Part 1 of 7 — Factoring, the Quadratic Formula & the Discriminant**
 
-Quadratics are one of the **most tested** topics in the ACT Intermediate Algebra strand. A quadratic equation has the standard form:
+Quadratics come up often on ACT Math, in both the Algebra and Functions questions. A quadratic equation has the standard form:
 
 $$ax^2 + bx + c = 0$$
 
@@ -26,6 +26,8 @@ Three core solving techniques:
 $$x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$$
 
 The expression under the radical, $\\Delta = b^2 - 4ac$, is the **discriminant** and tells you how many real solutions exist.
+
+**Sum & product shortcut:** For $ax^2 + bx + c = 0$, the two solutions add to $-\\frac{b}{a}$ and multiply to $\\frac{c}{a}$ — no solving needed. Example: for $x^2 - 5x + 6 = 0$ (roots $2$ and $3$), the sum is $-\\frac{-5}{1} = 5$ and the product is $\\frac{6}{1} = 6$.
       `
     },
     {

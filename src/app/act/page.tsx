@@ -253,22 +253,21 @@ export default function ACTLandingPage() {
             <div>
               <h4 className="mb-2 font-semibold text-gray-800 dark:text-gray-200">Format</h4>
               <ul className="space-y-1">
-                <li>• 4 sections: English, Math, Reading, Science</li>
-                <li>• Optional Writing (essay) section</li>
-                <li>• English: 75 questions in 45 minutes</li>
-                <li>• Math: 60 questions in 60 minutes</li>
-                <li>• Reading: 40 questions in 35 minutes</li>
-                <li>• Science: 40 questions in 35 minutes</li>
+                <li>• Core sections: English, Math, Reading (4 answer choices each)</li>
+                <li>• Science and Writing (essay) are optional</li>
+                <li>• English: 50 questions in 35 minutes</li>
+                <li>• Math: 45 questions in 50 minutes</li>
+                <li>• Reading: 36 questions in 40 minutes</li>
+                <li>• Science (optional): 40 questions in 40 minutes</li>
               </ul>
             </div>
             <div>
               <h4 className="mb-2 font-semibold text-gray-800 dark:text-gray-200">Scoring</h4>
               <ul className="space-y-1">
-                <li>• Composite: 1–36 (avg of section scores)</li>
+                <li>• Composite: 1–36 (average of English, Math and Reading)</li>
                 <li>• Each section: 1–36</li>
                 <li>• No penalty for guessing</li>
                 <li>• National average: ~21</li>
-                <li>• 30+ is top ~5%</li>
               </ul>
             </div>
           </div>

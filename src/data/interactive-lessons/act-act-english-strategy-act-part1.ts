@@ -9,19 +9,24 @@ export const actEnglishStratPart1Data = {
 
 **Part 1 of 7 — Format, Timing & Question Types**
 
-The ACT English section tests your ability to revise and edit passages. Here's the snapshot:
+The ACT English section tests your ability to revise and edit passages. Here's the snapshot of the enhanced ACT (2025 and later):
 
 | Detail | Value |
 |--------|-------|
-| Total questions | **75** |
-| Time limit | **45 minutes** |
-| Passages | **5** (15 questions each) |
-| Time per question | **36 seconds** |
+| Total questions | **50** |
+| Time limit | **35 minutes** |
+| Answer choices | **4** per question |
+| Average time per question | **~42 seconds** |
 
-Questions fall into two broad categories:
+The ACT reports your English performance in three official categories:
 
-1. **Usage / Mechanics** (~40 questions) — grammar, punctuation, sentence structure.
-2. **Rhetorical Skills** (~35 questions) — strategy, organization, style.
+1. **Production of Writing** — topic development, purpose, organization, and cohesion (adding/deleting, transitions, the writer's goal, sentence placement).
+2. **Knowledge of Language** — precise, concise word choice and a consistent style and tone.
+3. **Conventions of Standard English** — sentence structure, punctuation, and usage (agreement, pronouns, verb tense).
+
+In this lesson we group those into **two working approaches**:
+- **Usage / Mechanics** (= Conventions) — rule-based questions with a definite right answer.
+- **Rhetorical Skills** (= Production of Writing + Knowledge of Language, the ACT's older label for these skills) — judgment calls that depend on context and purpose.
 
 Every question is **passage-based**: an underlined portion in the text is followed by answer choices that offer revisions (or "NO CHANGE").
       `
@@ -32,17 +37,17 @@ Every question is **passage-based**: an underlined portion in the text is follow
       content: `
 ## Question-Type Breakdown
 
-### Usage / Mechanics
-- **Punctuation** (10–15 Qs) — commas, apostrophes, colons, semicolons, dashes.
-- **Grammar & Usage** (12–15 Qs) — subject-verb agreement, pronoun case, verb tense.
-- **Sentence Structure** (15–18 Qs) — fragments, run-ons, parallelism, modifiers.
+### Usage / Mechanics (Conventions of Standard English)
+- **Punctuation** — commas, apostrophes, colons, semicolons, dashes.
+- **Grammar & Usage** — subject-verb agreement, pronoun case, verb tense.
+- **Sentence Structure** — fragments, run-ons, parallelism, modifiers.
 
-### Rhetorical Skills
-- **Strategy** (10–12 Qs) — adding/deleting sentences, purpose of a detail.
-- **Organization** (10–12 Qs) — sentence/paragraph order, transitions.
-- **Style** (10–12 Qs) — wordiness, tone, word choice.
+### Rhetorical Skills (Production of Writing + Knowledge of Language)
+- **Strategy** — adding/deleting sentences, the purpose of a detail, "which choice best accomplishes the writer's goal?"
+- **Organization** — sentence/paragraph order, transitions, introductions and conclusions.
+- **Style** — wordiness, tone, precise word choice.
 
-**Key Insight:** About 55% of the section is mechanics (concrete rules you can learn) and 45% is rhetoric (judgment calls requiring context). Practicing both equally is critical.
+**Key Insight:** Mechanics questions reward concrete rules you can memorize; rhetoric questions reward reading for context and purpose. Both carry a large share of the score, so practice both.
       `
     },
     {
@@ -54,26 +59,26 @@ Every question is **passage-based**: an underlined portion in the text is follow
       exercise: {
         questions: [
           {
-            question: 'How many passages are on the ACT English section, and how many questions accompany each passage?',
+            question: 'On the enhanced ACT, how many questions are on the English section, and how much time do you get?',
             options: [
-              '4 passages, 18 questions each',
-              '5 passages, 15 questions each',
-              '6 passages, 12 questions each',
-              '5 passages, 20 questions each'
+              '75 questions in 45 minutes',
+              '50 questions in 35 minutes',
+              '45 questions in 50 minutes',
+              '36 questions in 40 minutes'
             ],
             correctAnswer: 1,
-            explanation: 'The ACT English section has 5 passages with 15 questions each, totalling 75 questions in 45 minutes.'
+            explanation: 'Enhanced ACT English is 50 questions in 35 minutes (about 42 seconds each). The 75-question, 45-minute section was the old format; 45 questions in 50 minutes is the Math section; 36 questions in 40 minutes is the Reading section.'
           },
           {
-            question: 'Which category contains MORE questions on the ACT English section?',
+            question: 'Which official ACT English reporting category covers comma, subject-verb agreement, and verb-tense questions?',
             options: [
-              'Rhetorical Skills (~35 Qs)',
-              'Usage / Mechanics (~40 Qs)',
-              'They are split evenly at 37–38 each',
-              'It varies from test to test with no pattern'
+              'Production of Writing',
+              'Knowledge of Language',
+              'Conventions of Standard English',
+              'Integration of Knowledge and Ideas'
             ],
-            correctAnswer: 1,
-            explanation: 'Usage / Mechanics accounts for roughly 40 of the 75 questions, slightly more than Rhetorical Skills (~35).'
+            correctAnswer: 2,
+            explanation: 'Punctuation, agreement, and tense are rule-based conventions, so they fall under Conventions of Standard English. Production of Writing covers development, organization, and transitions; Knowledge of Language covers concision, word choice, and tone; Integration of Knowledge and Ideas is a Reading category, not an English one.'
           }
         ]
       }
@@ -87,17 +92,17 @@ Every question is **passage-based**: an underlined portion in the text is follow
 - Your English score is reported on a **1–36 scale**.
 - There is **no penalty for guessing** — always fill in an answer.
 - English is often the **easiest section to improve** because the rules are finite and learnable.
-- A strong English score can **raise your composite** significantly since it's one of the four sections averaged.
+- Your **composite** is the average of **English, Math, and Reading**. Science is optional and reported separately, so English is a full **one-third** of your composite.
 
-**Pro Tip:** Because questions follow passage order, you can pace yourself by knowing where you should be after each passage:
+**Pro Tip:** Because questions follow passage order, you can pace yourself with checkpoints every 10 questions (~7 minutes each):
 
-| After Passage | Question # | Elapsed Time Target |
-|---------------|-----------|---------------------|
-| 1 | 15 | ~9 min |
-| 2 | 30 | ~18 min |
-| 3 | 45 | ~27 min |
-| 4 | 60 | ~36 min |
-| 5 | 75 | 45 min |
+| After Question # | Elapsed Time Target |
+|------------------|---------------------|
+| 10 | ~7 min |
+| 20 | ~14 min |
+| 30 | ~21 min |
+| 40 | ~28 min |
+| 50 | 35 min |
       `
     },
     {
@@ -106,19 +111,19 @@ Every question is **passage-based**: an underlined portion in the text is follow
       content: `
 **Quick Recall** 📝
 
-1) How many total questions are on the ACT English section? __________
+1) How many total questions are on the enhanced ACT English section? __________
 
-2) How many seconds per question does 75 Qs in 45 min give you? __________
+2) How many seconds per question does 50 Qs in 35 min give you? __________
 
-3) The two broad categories are Usage/Mechanics and __________ Skills.
+3) Your composite score is the average of English, Math, and __________.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['75', '36', 'Rhetorical'],
-        hint1: 'The total is the product of 5 passages × 15 questions each.',
-        hint2: '45 minutes = 2,700 seconds. Divide by 75.',
-        hint3: 'The "judgment-call" category that covers strategy, organization, and style.',
-        explanation: '75 questions in 45 minutes gives 36 seconds per question. The two categories are Usage/Mechanics and Rhetorical Skills.'
+        correctAnswers: ['50', '42', 'Reading'],
+        hint1: 'The enhanced ACT trimmed the English section to a round number of questions.',
+        hint2: '35 minutes = 2,100 seconds. Divide by 50.',
+        hint3: 'Science is optional and not part of the composite. Which other required section is there?',
+        explanation: '50 questions in 35 minutes gives 42 seconds per question. The composite averages English, Math, and Reading; Science is optional and reported separately.'
       }
     },
     {
@@ -127,11 +132,11 @@ Every question is **passage-based**: an underlined portion in the text is follow
       content: `
 ## The "NO CHANGE" Option
 
-Almost every question offers **"NO CHANGE"** as choice (A) or (F). Key facts:
+Most questions offer **"NO CHANGE"** as choice (A) or (F). Key facts:
 
-- "NO CHANGE" is correct about **25%** of the time — it's a real answer, not a trick.
+- "NO CHANGE" is a **real answer, not a trick** — sometimes the passage is already correct.
 - Don't pick it just because the original "sounds fine." Actively check for errors.
-- Don't avoid it out of suspicion either — sometimes the passage is already correct.
+- Don't avoid it out of suspicion either — assuming every underline is wrong leads you to "fix" correct text.
 
 **Strategy:** Treat "NO CHANGE" like any other option. Read all four choices before deciding.
       `
@@ -149,19 +154,19 @@ Almost every question offers **"NO CHANGE"** as choice (A) or (F). Key facts:
             options: ['Usage / Mechanics', 'Rhetorical Skills', 'Reading Comprehension', 'Science Reasoning']
           },
           {
-            label: '"NO CHANGE" is the correct answer approximately … of the time.',
-            options: ['10%', '25%', '50%', '75%']
+            label: 'Your ACT composite score is the average of English, Math, and …',
+            options: ['Reading', 'Science', 'Writing', 'all four sections']
           },
           {
-            label: 'The ACT English section gives you about … per question.',
-            options: ['15 seconds', '36 seconds', '1 minute', '2 minutes']
+            label: 'The enhanced ACT English section gives you about … per question.',
+            options: ['20 seconds', '42 seconds', '1 minute', '2 minutes']
           }
         ],
-        correctAnswers: ['Usage / Mechanics', '25%', '36 seconds'],
+        correctAnswers: ['Usage / Mechanics', 'Reading', '42 seconds'],
         hint1: 'Grammar and punctuation are concrete rules — that\'s the mechanics side.',
-        hint2: 'It\'s roughly one out of every four questions.',
-        hint3: '2,700 seconds ÷ 75 questions.',
-        explanation: 'Punctuation, grammar, and sentence structure are Usage/Mechanics. "NO CHANGE" is correct ~25% of the time. You have about 36 seconds per question.'
+        hint2: 'Science is now optional and reported separately.',
+        hint3: '2,100 seconds ÷ 50 questions.',
+        explanation: 'Punctuation, grammar, and sentence structure are Usage/Mechanics (the Conventions category). The composite averages English, Math, and Reading. You have about 42 seconds per question.'
       }
     }
   ]

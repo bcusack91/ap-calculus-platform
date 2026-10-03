@@ -50,7 +50,7 @@ $$y - 1 = -2(x - 4) \\implies y = -2x + 9$$
 
 **Example 4:** A line has slope $\\frac{3}{4}$. A perpendicular line has slope $-\\frac{4}{3}$.
 
-**ACT Tip:** If two answer choices have the same slope, neither can be perpendicular to a given line — eliminate both quickly.
+**ACT Tip:** Check a perpendicular slope by multiplying: the product must be $-1$. A choice with the *same* slope is parallel, and a choice with only the sign flipped (or only the fraction flipped) is a trap — eliminate them quickly.
       `
     },
     {
@@ -142,6 +142,10 @@ $$y - 1 = -\\frac{3}{2}(x - 6)$$
 $$y - 1 = -\\frac{3}{2}x + 9$$
 
 $$y = -\\frac{3}{2}x + 10$$
+
+**Perpendicular bisector:** the **perpendicular bisector** of a segment is the line that passes through the segment's **midpoint** and is **perpendicular** to it. Find the midpoint, then use the negative reciprocal of the segment's slope.
+
+*Example:* For the segment from $(1, 2)$ to $(5, 6)$: midpoint $= (3, 4)$, segment slope $= \\frac{6-2}{5-1} = 1$, so the bisector has slope $-1$: $y - 4 = -1(x - 3) \\implies y = -x + 7$.
 
 **ACT Tip:** Convert to slope-intercept form ($y = mx + b$) to match answer choices quickly.
       `

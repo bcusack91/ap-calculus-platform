@@ -9,7 +9,7 @@ export const actRhetoricalPart4Data = {
 
 **Part 4 of 7 — However, Moreover, Therefore — Picking the Right One**
 
-Transition questions are among the **most common** rhetorical skills questions on the ACT. You'll see 3–5 per test asking you to choose the word or phrase that best connects two ideas.
+Transition questions are among the **most common** rhetorical skills questions on the ACT. Expect to see several on every test, each asking you to choose the word or phrase that best connects two ideas.
 
 **The Big Three Categories:**
 
@@ -51,7 +51,7 @@ Use contrast transitions when the second idea **opposes, limits, or surprises** 
 - **On the other hand** — introduces the opposing viewpoint.
 - **Although / Even though** — used at the start of a dependent clause, not between two sentences.
 
-**ACT Trap:** "Although" and "however" both signal contrast, but they are **not interchangeable**. "Although" starts a dependent clause; "however" connects two independent sentences. The ACT tests this distinction.
+**ACT Trap:** "Although" and "however" both signal contrast, but they are **not interchangeable**. "Although" starts a dependent clause; "however" links two complete sentences, so it needs a period or semicolon before it, never just a comma. The ACT tests this distinction.
       `
     },
     {

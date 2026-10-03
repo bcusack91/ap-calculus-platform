@@ -6,9 +6,9 @@
  * is passed. SAT and ACT recommend it as the cycle's last step but leave the
  * diagnostic open (owner ruling 2026-10-03: "Recommend, don't lock").
  *
- * `enabled`: ACT is built but switched off — its exit-quiz pools hold only
- * 2-6 questions per recommended topic, too few for a 25-question test with
- * fresh retakes. Flip it on once those pools are written.
+ * `enabled`: a course's test switches on only once every topic its diagnostic
+ * recommends has a deep exit pool (ACT was held back until its lesson-built
+ * pools replaced the 2-6-question legacy bank, 2026-10-03).
  */
 export type UnitTestCourse = 'mcat' | 'sat' | 'act'
 
@@ -26,7 +26,7 @@ export interface UnitTestCourseConfig {
 export const UNIT_TEST_COURSES: Record<UnitTestCourse, UnitTestCourseConfig> = {
   mcat: { key: 'mcat', label: 'MCAT', courseSlug: 'mcat-prep', path: '/mcat-unit-test', diagnosticPath: '/mcat-diagnostic', locksDiagnostic: true, enabled: true },
   sat: { key: 'sat', label: 'SAT', courseSlug: 'sat-prep', path: '/sat-unit-test', diagnosticPath: '/sat-diagnostic', locksDiagnostic: false, enabled: true },
-  act: { key: 'act', label: 'ACT', courseSlug: 'act-prep', path: '/act-unit-test', diagnosticPath: '/act-diagnostic', locksDiagnostic: false, enabled: false },
+  act: { key: 'act', label: 'ACT', courseSlug: 'act-prep', path: '/act-unit-test', diagnosticPath: '/act-diagnostic', locksDiagnostic: false, enabled: true },
 }
 
 /** The UnitTestAttempt unit id for a cycle, so teachers see each sitting. */

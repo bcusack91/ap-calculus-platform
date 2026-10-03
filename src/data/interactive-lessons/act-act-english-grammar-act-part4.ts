@@ -17,6 +17,8 @@ The ACT tests your ability to recognize and fix **sentence-structure errors**. T
 | Run-on | Two independent clauses joined with no punctuation | *I studied hard I passed the test.* |
 | Comma splice | Two independent clauses joined with only a comma | *I studied hard, I passed the test.* |
 
+*(Some books call both of the last two errors "run-ons." This lesson uses "run-on" for the no-punctuation version and "comma splice" for the comma-only version. The fixes are the same.)*
+
 **ACT Tip:** If an answer choice creates a fragment or a run-on, eliminate it — the ACT never rewards incomplete or improperly joined sentences.
       `
     },
@@ -95,7 +97,10 @@ A **fragment** is a group of words that looks like a sentence but is missing a s
 **Fixing "however," "therefore," "moreover," etc.:**
 - ✅ *I studied hard; however, I still failed.*
 - ✅ *I studied hard. However, I still failed.*
-- These are **conjunctive adverbs**, not coordinating conjunctions. They need a semicolon or period before them.
+- These are **conjunctive adverbs**, not coordinating conjunctions. When they sit between two independent clauses, they need a semicolon or period before them.
+- In the middle of a single clause, a pair of commas is enough: ✅ *I studied hard; the test, **however,** was harder than expected.*
+
+**Colons and dashes:** A colon or a dash can also join two independent clauses, but only when the second clause explains or illustrates the first (*I knew I would pass: I had studied every night.*). The semicolon is the all-purpose fix for any two closely related clauses.
 
 **ACT Tip:** If you see two complete sentences joined by only a comma, look for an answer that adds a FANBOYS conjunction, a semicolon, or a period.
       `
@@ -140,15 +145,15 @@ Type "fragment," "run-on," or "comma splice" for each sentence.
             options: ['coordinating conjunction', 'conjunctive adverb', 'preposition', 'subordinating conjunction']
           },
           {
-            label: 'A comma splice can be fixed by replacing the comma with a …',
-            options: ['colon', 'semicolon', 'dash', 'All of these could work depending on context']
+            label: 'The all-purpose fix for any comma splice is to replace the comma with a …',
+            options: ['hyphen', 'semicolon', 'second comma', 'apostrophe']
           }
         ],
         correctAnswers: ['For, And, Nor, But, Or, Yet, So', 'conjunctive adverb', 'semicolon'],
         hint1: 'The seven coordinating conjunctions spell FANBOYS.',
         hint2: '"However" connects ideas but needs a semicolon before it at a clause boundary.',
-        hint3: 'A semicolon is the most standard fix for a comma splice on the ACT.',
-        explanation: 'FANBOYS = For, And, Nor, But, Or, Yet, So. "However" is a conjunctive adverb (not FANBOYS). A semicolon is the most common ACT-approved fix for a comma splice.'
+        hint3: 'Which mark can sit between ANY two closely related complete sentences?',
+        explanation: 'FANBOYS = For, And, Nor, But, Or, Yet, So. "However" is a conjunctive adverb (not FANBOYS). A semicolon can join any two closely related independent clauses, so it always fixes a comma splice. A hyphen joins parts of a word, a second comma still leaves the clauses spliced, and an apostrophe marks possession or contraction.'
       }
     },
     {
@@ -161,15 +166,15 @@ Type "fragment," "run-on," or "comma splice" for each sentence.
         questions: [
           {
             question: '"The museum was closed for renovations, therefore visitors were turned away at the entrance." How should this be corrected?',
-            options: ['No change needed', 'Change the comma to a semicolon: "…renovations; therefore, visitors…"', 'Remove "therefore"', 'Change "therefore" to "and"'],
+            options: ['No change needed', 'Replace the comma with a semicolon', 'Delete the word "therefore"', 'Add a comma after "therefore"'],
             correctAnswer: 1,
-            explanation: '"Therefore" is a conjunctive adverb, not a FANBOYS conjunction. A semicolon is needed before it: "renovations; therefore, visitors…"'
+            explanation: '"Therefore" is a conjunctive adverb, not a FANBOYS conjunction, so a comma alone cannot join the two clauses; the sentence is a comma splice as written. A semicolon fixes it: "renovations; therefore, visitors…" Deleting "therefore" leaves two clauses joined by only a comma, and adding a comma after "therefore" punctuates the adverb but still leaves the splice.'
           },
           {
             question: '"Although the hypothesis was well-supported by preliminary data." What is the best revision?',
-            options: ['No change needed', 'Remove "Although"', 'Add a comma after "data"', 'Change "Although" to "Moreover"'],
+            options: ['No change needed', 'Delete the word "Although"', 'Add a comma after "data"', 'Change "Although" to "Because"'],
             correctAnswer: 1,
-            explanation: '"Although" makes this a dependent clause (fragment). Removing "Although" turns it into a complete sentence: "The hypothesis was well-supported by preliminary data."'
+            explanation: '"Although" makes this a dependent clause standing alone, so it is a fragment as written. Deleting "Although" turns it into a complete sentence: "The hypothesis was well-supported by preliminary data." A comma after "data" adds nothing for the clause to attach to, and "Because" is another subordinating word, so the fragment remains.'
           }
         ]
       }

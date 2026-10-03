@@ -15,6 +15,9 @@ $$(x - h)^2 + (y - k)^2 = r^2$$
 
 - **Center:** $(h, k)$
 - **Radius:** $r$
+- **Diameter:** $2r$ (so the radius is half the diameter)
+
+If a problem gives the endpoints of a **diameter**, the center is their **midpoint** and the radius is **half the distance** between them.
 
 | Equation | Center | Radius |
 |----------|--------|--------|
@@ -175,9 +178,9 @@ No — $37 > 36$ means $(1,5)$ is **outside** the circle.
           },
           {
             question: 'Which point lies INSIDE the circle $x^2 + y^2 = 100$?',
-            options: ['$(6, 8)$', '$(10, 0)$', '$(7, 7)$', '$(5, 5)$'],
+            options: ['$(6, 8)$', '$(10, 0)$', '$(8, 7)$', '$(5, 5)$'],
             correctAnswer: 3,
-            explanation: 'Test $(5,5)$: $25 + 25 = 50 < 100$. Inside. $(6,8)$: $36+64=100$ (on). $(10,0)$: $100$ (on). $(7,7)$: $98 < 100$ also works, but $(5,5)$ is clearly inside.'
+            explanation: 'A point is inside when $x^2 + y^2 < 100$. $(5,5)$: $25 + 25 = 50 < 100$, so it is inside. $(6,8)$ gives $36 + 64 = 100$ and $(10,0)$ gives $100$, so both lie exactly on the circle. $(8,7)$ gives $64 + 49 = 113 > 100$, so it is outside.'
           }
         ]
       }

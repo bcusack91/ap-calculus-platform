@@ -16,7 +16,7 @@ This final lesson brings together everything from Parts 1–6. Use the cheat she
 | Category | What to Check |
 |----------|--------------|
 | **Subject-Verb Agreement** | Find the true subject — ignore prepositional phrases. Singular subject → singular verb. |
-| **Pronoun Usage** | Match pronouns to antecedents in number. Use subject case (I, who) for subjects and object case (me, whom) for objects. |
+| **Pronoun Usage** | Match pronouns to antecedents in number (singular "they" for a generic person is acceptable). Use subject case (I, who) for subjects and object case (me, whom) for objects. |
 | **Verb Tense** | Keep tenses consistent unless the time frame changes. Use past perfect for "earlier than another past event." |
 | **Sentence Structure** | No fragments, run-ons, or comma splices. Use FANBOYS + comma, semicolons, or periods to join clauses. |
 | **Modifiers** | The subject after an introductory phrase must be the one doing the action. |
@@ -30,9 +30,11 @@ This final lesson brings together everything from Parts 1–6. Use the cheat she
       content: `
 ## ACT English — Test-Day Strategy
 
-**Time Management:**
-- You have **45 minutes** for **75 questions** — that is **36 seconds per question**.
-- Don't spend more than 30–45 seconds on any single question. Mark it and move on.
+**Time Management (Enhanced ACT):**
+- You have **35 minutes** for **50 questions**, about **42 seconds per question**.
+- Every question has **4 answer choices**, and there is no penalty for guessing, so never leave a question blank.
+- If a question is taking much longer than a minute, make your best guess, mark it, and move on.
+- English counts toward your composite score, along with Math and Reading (Science is optional and reported separately).
 
 **The ACT English Process:**
 1. **Read the sentence** with the underlined portion.
@@ -41,8 +43,8 @@ This final lesson brings together everything from Parts 1–6. Use the cheat she
 4. **Choose the most concise correct option** — the ACT rewards clarity and brevity.
 
 **"NO CHANGE" Tips:**
-- "NO CHANGE" is correct about 25% of the time — don't be afraid to pick it.
-- But always check all four options before settling on NO CHANGE.
+- "NO CHANGE" is a real answer, not a trap. It is correct often enough that you shouldn't avoid it.
+- But always check the other three options before settling on NO CHANGE.
 
 **Common Traps:**
 - Answers that sound fancy but introduce grammatical errors.
@@ -157,16 +159,16 @@ Identify the error type in each sentence. Type your answer.
       exercise: {
         questions: [
           {
-            question: '"The orchestra, who had been rehearsing for months, performed they\'re best concert of the season; the affect on the audience was tremendous." How many errors are in this sentence?',
+            question: '"The library, who had been closed for repairs, reopened they\'re doors on Monday; the affect on the neighborhood was immediate." How many errors are in this sentence?',
             options: ['1', '2', '3', '4'],
             correctAnswer: 2,
-            explanation: 'Three errors: (1) "who" should be "which" or "that" — "orchestra" is a thing, not a person. (2) "they\'re" should be "their" — possessive, not "they are." (3) "affect" should be "effect" — a noun (the result). The semicolon usage is correct.'
+            explanation: 'Three errors: (1) "who" should be "which" because a library is a building, not a person. (2) "they\'re" should be "its" because the doors belong to one library, and "they\'re" means "they are." (3) "affect" should be "effect" because the sentence needs a noun (the result). The semicolon correctly joins two independent clauses, so there is no fourth error.'
           },
           {
             question: '"Each of the candidates have prepared their own speech, which they will present at the town hall." What needs to change?',
-            options: ['No change needed', '"have" should be "has" and "their" should be "his or her"', '"have" should be "has" only', '"their" should be "his or her" only'],
+            options: ['No change needed', '"have" should be "has"', '"their" should be "its"', '"which" should be "who"'],
             correctAnswer: 1,
-            explanation: '"Each" is singular → "has" (not "have"). The pronoun should match the singular antecedent → "his or her" (not "their") on the ACT.'
+            explanation: '"Each" is singular, so the verb must be "has," not "have." "Their" is fine here: singular "they" for a generic person like "each of the candidates" is accepted ("his or her" would also work). "Its" would treat the candidates as objects, and "which" correctly refers to the speech, a thing, so "who" would be wrong.'
           }
         ]
       }

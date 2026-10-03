@@ -2,19 +2,19 @@
  * ACT Practice Test Generator
  *
  * Composes full-length and mini practice tests from existing exit quiz pools.
- * Real ACT format:
- *   - English: 75 questions, 45 minutes
- *   - Math: 60 questions, 60 minutes
- *   - Reading: 40 questions, 35 minutes
- *   - Science: 40 questions, 35 minutes
- *   - Total: 215 questions, 175 minutes
+ * Enhanced ACT format (2025+), 4 answer choices per question:
+ *   - English: 50 questions, 35 minutes
+ *   - Math: 45 questions, 50 minutes
+ *   - Reading: 36 questions, 40 minutes
+ *   - Science (optional): 40 questions, 40 minutes
+ *   - Total: 171 questions, 165 minutes
  *
  * Mini test (half-length):
- *   - English: 38 questions, 23 min
- *   - Math: 30 questions, 30 min
- *   - Reading: 20 questions, 18 min
- *   - Science: 20 questions, 18 min
- *   - Total: 108 questions, 89 minutes
+ *   - English: 25 questions, 18 min
+ *   - Math: 23 questions, 25 min
+ *   - Reading: 18 questions, 20 min
+ *   - Science: 20 questions, 20 min
+ *   - Total: 86 questions, 83 minutes
  */
 
 import { generateExitQuiz, type ExitQuizQuestion } from '../exit-quizzes'
@@ -196,32 +196,32 @@ export async function generateFullTest(testNumber: number): Promise<ACTFullTest>
       id: 'english',
       name: 'English',
       section: 'english',
-      questionCount: 75,
-      timeLimitSeconds: 45 * 60,
-      questions: await generateSectionQuestions(ENGLISH_SLUGS, 75, 'english'),
+      questionCount: 50,
+      timeLimitSeconds: 35 * 60,
+      questions: await generateSectionQuestions(ENGLISH_SLUGS, 50, 'english'),
     },
     {
       id: 'math',
       name: 'Mathematics',
       section: 'math',
-      questionCount: 60,
-      timeLimitSeconds: 60 * 60,
-      questions: await generateSectionQuestions(MATH_SLUGS, 60, 'math'),
+      questionCount: 45,
+      timeLimitSeconds: 50 * 60,
+      questions: await generateSectionQuestions(MATH_SLUGS, 45, 'math'),
     },
     {
       id: 'reading',
       name: 'Reading',
       section: 'reading',
-      questionCount: 40,
-      timeLimitSeconds: 35 * 60,
-      questions: await generateSectionQuestions(READING_SLUGS, 40, 'reading'),
+      questionCount: 36,
+      timeLimitSeconds: 40 * 60,
+      questions: await generateSectionQuestions(READING_SLUGS, 36, 'reading'),
     },
     {
       id: 'science',
       name: 'Science',
       section: 'science',
       questionCount: 40,
-      timeLimitSeconds: 35 * 60,
+      timeLimitSeconds: 40 * 60,
       questions: await generateSectionQuestions(SCIENCE_SLUGS, 40, 'science'),
     },
   ]
@@ -241,32 +241,32 @@ export async function generateMiniTest(testNumber: number): Promise<ACTFullTest>
       id: 'english',
       name: 'English',
       section: 'english',
-      questionCount: 38,
-      timeLimitSeconds: 23 * 60,
-      questions: await generateSectionQuestions(ENGLISH_SLUGS, 38, 'english'),
+      questionCount: 25,
+      timeLimitSeconds: 18 * 60,
+      questions: await generateSectionQuestions(ENGLISH_SLUGS, 25, 'english'),
     },
     {
       id: 'math',
       name: 'Mathematics',
       section: 'math',
-      questionCount: 30,
-      timeLimitSeconds: 30 * 60,
-      questions: await generateSectionQuestions(MATH_SLUGS, 30, 'math'),
+      questionCount: 23,
+      timeLimitSeconds: 25 * 60,
+      questions: await generateSectionQuestions(MATH_SLUGS, 23, 'math'),
     },
     {
       id: 'reading',
       name: 'Reading',
       section: 'reading',
-      questionCount: 20,
-      timeLimitSeconds: 18 * 60,
-      questions: await generateSectionQuestions(READING_SLUGS, 20, 'reading'),
+      questionCount: 18,
+      timeLimitSeconds: 20 * 60,
+      questions: await generateSectionQuestions(READING_SLUGS, 18, 'reading'),
     },
     {
       id: 'science',
       name: 'Science',
       section: 'science',
       questionCount: 20,
-      timeLimitSeconds: 18 * 60,
+      timeLimitSeconds: 20 * 60,
       questions: await generateSectionQuestions(SCIENCE_SLUGS, 20, 'science'),
     },
   ]

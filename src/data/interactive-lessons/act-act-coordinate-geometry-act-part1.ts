@@ -44,7 +44,7 @@ $$d = \\sqrt{(4-1)^2 + (6-2)^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5$$
 
 $$d = \\sqrt{(5-(-3))^2 + (-5-1)^2} = \\sqrt{64 + 36} = \\sqrt{100} = 10$$
 
-**ACT Tip:** When answer choices are integers, check whether the sum under the radical is a perfect square — it usually is on the ACT.
+**ACT Tip:** When answer choices are integers, check whether the sum under the radical is a perfect square — on the ACT it often is.
       `
     },
     {

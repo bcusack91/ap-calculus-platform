@@ -360,11 +360,11 @@ export const humanitiesFlashcards: FlashcardsByTopic = {
 
   // ================= ACT PREP =================
   'act-timing-test-strategies': [
-    { front: 'What is the ACT section timing?', back: 'English 45 min/75 q, Math 60 min/60 q, Reading 35 min/40 q, Science 35 min/40 q.' },
+    { front: 'What is the ACT section timing?', back: 'Enhanced ACT: English 35 min/50 q, Math 50 min/45 q, Reading 40 min/36 q; Science (optional) 40 min/40 q. Every question has 4 choices.' },
     { front: 'Why should you never leave an ACT question blank?', back: 'There is no wrong-answer penalty, so guessing has strictly positive expected value.' },
-    { front: 'What is the biggest ACT challenge compared to the SAT?', back: 'Pacing — roughly 36 seconds per English question and under a minute per math question.' },
+    { front: 'What is the biggest ACT challenge compared to the SAT?', back: 'Pacing — about 42 seconds per English question and about 67 seconds per math question.' },
     { front: 'What is a good triage strategy?', back: 'Answer easy questions first, mark and skip hard ones, and return with remaining time.' },
-    { front: 'How is the ACT composite calculated?', back: 'The average of the four section scores (1–36), rounded to the nearest whole number.' },
+    { front: 'How is the ACT composite calculated?', back: 'The average of the English, Math and Reading scores (1–36), rounded to the nearest whole number; Science is optional and reported separately.' },
     { front: 'What should you do in the last minute of a section?', back: 'Fill in every remaining bubble — an unanswered question is a guaranteed zero.' },
   ],
   'act-algebra-functions': [

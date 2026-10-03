@@ -67,10 +67,10 @@ The ACT includes several questions that test whether you know the difference bet
             explanation: 'A verb is needed here ("did not ___"), and "affect" is the verb meaning "to influence." "Effect" is typically a noun.'
           },
           {
-            question: '"_____ going to submit _____ applications before _____ deadline." Fill in the blanks with the correct words.',
-            options: ['Their, they\'re, there', 'They\'re, their, the', 'There, their, they\'re', 'They\'re, there, their'],
+            question: '"_____ planning to leave _____ bikes over _____ by the fence." Fill in the blanks with the correct words.',
+            options: ['Their, they\'re, there', 'They\'re, their, there', 'There, their, they\'re', 'They\'re, there, their'],
             correctAnswer: 1,
-            explanation: '"They\'re" (they are) going to submit "their" (possessive) applications before "the" deadline. The sentence uses all forms correctly in the "They\'re, their, the" option.'
+            explanation: 'The first blank needs "they are," so "They\'re." The second shows ownership of the bikes, so the possessive "their." The third names a place ("over ___ by the fence"), so "there." Any order that starts with "Their" or "There" leaves the sentence without a subject and verb, and putting "there" before "bikes" drops the possessive the bikes need.'
           }
         ]
       }
@@ -93,6 +93,9 @@ The ACT includes several questions that test whether you know the difference bet
 **Then vs. Than:**
 - **Then** = time or sequence: *We ate dinner, **then** watched a movie.*
 - **Than** = comparison: *She is taller **than** her brother.*
+- "Then" is **not** a FANBOYS conjunction, so ", then" cannot join two complete sentences.
+  - ❌ *We ate dinner, then we watched a movie.* (comma splice)
+  - ✅ *We ate dinner, **and then** we watched a movie.* or *We ate dinner; **then** we watched a movie.*
 
 **Who's vs. Whose:**
 - **Who's** = "who is" or "who has": ***Who's** coming to the party?*
@@ -139,7 +142,7 @@ The ACT includes several questions that test whether you know the difference bet
             options: ['noun; verb', 'verb; noun', 'adjective; adverb', 'verb; verb']
           },
           {
-            label: '"We practiced, _____ we played the game." (then / than)',
+            label: '"We practiced first and _____ played the game." (then / than)',
             options: ['then', 'than']
           }
         ],

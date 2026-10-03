@@ -33,7 +33,7 @@ export const actPreAlgebraPart7Data = {
 2. **Estimate** — Eliminate clearly wrong answers before computing.
 3. **Watch units** — Especially in rate and percent problems.
 4. **Read carefully** — "Percent increase" is not the same as "new value."
-5. **Don't overthink** — Pre-algebra questions are meant to be quick; ~30 seconds each.
+5. **Bank time** — ACT Math gives you 50 minutes for 45 questions (about 67 seconds each, 4 answer choices per question). Pre-algebra items are usually quick, so finishing them fast leaves extra time for the harder problems.
 
 **Common traps:**
 - Confusing $-3^2 = -9$ with $(-3)^2 = 9$.
@@ -57,10 +57,10 @@ export const actPreAlgebraPart7Data = {
             explanation: '$\\frac{2}{3} \\times 45 = \\frac{90}{3} = 30$.'
           },
           {
-            question: 'A store charges $\\$18$ for an item after a $10\\%$ discount. What was the original price?',
-            options: ['$\\$16.20$', '$\\$19.80$', '$\\$20$', '$\\$28$'],
+            question: 'A store charges \\$18 for an item after a $10\\%$ discount. What was the original price?',
+            options: ['\\$16.20', '\\$19.80', '\\$20.00', '\\$28.00'],
             correctAnswer: 2,
-            explanation: 'After 10% off you pay 90%: $0.90 \\times P = 18 \\implies P = 20$.'
+            explanation: 'After 10% off you pay 90%: $0.90 \\times P = 18 \\implies P = 20$, so \\$20.00. Taking 10% off \\$18 (\\$16.20) or adding 10% of \\$18 (\\$19.80) uses the sale price as the base, but the discount was taken from the original price.'
           }
         ]
       }

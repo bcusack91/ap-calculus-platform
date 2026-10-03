@@ -9,11 +9,11 @@ export const actEnglishStratPart5Data = {
 
 **Part 5 of 7 — Pacing, Skipping & Guessing Strategy**
 
-With only **36 seconds per question**, the ACT English section rewards efficient test-takers. Good time management can be the difference between a 28 and a 32+.
+With **50 questions in 35 minutes** — about **42 seconds per question** — the ACT English section rewards efficient test-takers. Good time management can be the difference between a 28 and a 32+.
 
 **The Pacing Goal:**
-- Spend about **8–9 minutes per passage** (15 questions each).
-- Finish all 75 questions with **1–2 minutes** left for review.
+- Spend about **7 minutes per 10 questions**.
+- Aim to finish all 50 questions with **a minute or two** to spare for review.
 
 **Reality check:** Not every question takes the same amount of time.
 - Grammar fixes (punctuation, agreement) → ~15–20 seconds.
@@ -28,15 +28,15 @@ So you'll naturally move faster through mechanics questions and spend more time 
       content: `
 ## Pacing Checkpoints
 
-Use these benchmarks during the test:
+Use these benchmarks during the test (one every 10 questions):
 
 | Checkpoint | Target Time Remaining |
 |-----------|----------------------|
-| After Passage 1 (Q 15) | ~36 minutes left |
-| After Passage 2 (Q 30) | ~27 minutes left |
-| After Passage 3 (Q 45) | ~18 minutes left |
-| After Passage 4 (Q 60) | ~9 minutes left |
-| After Passage 5 (Q 75) | 0 minutes (done!) |
+| After Q 10 | ~28 minutes left |
+| After Q 20 | ~21 minutes left |
+| After Q 30 | ~14 minutes left |
+| After Q 40 | ~7 minutes left |
+| After Q 50 | 0 minutes (done!) |
 
 **What if you're behind?**
 - Don't panic. Speed up slightly on easy mechanics questions.
@@ -53,15 +53,15 @@ Use these benchmarks during the test:
       exercise: {
         questions: [
           {
-            question: 'If you finish Passage 2 with 30 minutes remaining, you are …',
+            question: 'If you finish question 20 with 24 minutes remaining, you are …',
             options: [
-              'Ahead of pace — target is ~27 min remaining after Passage 2.',
-              'Right on pace — 30 min remaining is exactly correct.',
-              'Behind pace — you should have 33 min remaining.',
+              'Ahead of pace — target is ~21 min remaining after Q 20.',
+              'Right on pace — 24 min remaining is exactly correct.',
+              'Behind pace — you should have 27 min remaining.',
               'Way behind — you need to skip the next passage.'
             ],
             correctAnswer: 0,
-            explanation: 'The target is ~27 minutes remaining after Passage 2. Having 30 minutes means you are about 3 minutes ahead — in good shape!'
+            explanation: 'At ~7 minutes per 10 questions, 20 questions should take about 14 minutes, leaving ~21 minutes. Having 24 minutes means you are about 3 minutes ahead — in good shape. Expecting 27 minutes would mean finishing 20 questions in 8 minutes, which is faster than the target, and nothing here calls for skipping a passage.'
           },
           {
             question: 'Which type of question typically takes the LEAST time?',
@@ -89,7 +89,7 @@ Use these benchmarks during the test:
 - Any question where you can't eliminate even one answer in 20 seconds.
 
 **How to skip effectively:**
-1. Mark the question in your test booklet (circle the number).
+1. Mark the question — circle the number in your test booklet, or use the flag tool on the online test.
 2. **Bubble in your best guess** — never leave it blank in case you run out of time.
 3. After finishing the passage, return to skipped questions.
 
@@ -102,19 +102,19 @@ Use these benchmarks during the test:
       content: `
 **Pacing Math** 📝
 
-1) 45 minutes ÷ 5 passages = __________ minutes per passage.
+1) 35 minutes ÷ 50 questions × 10 questions = __________ minutes per 10 questions.
 
-2) If you're at question 45 with 20 minutes left, you are __________ of pace (ahead/behind).
+2) If you're at question 30 with 17 minutes left, you are __________ of pace (ahead/behind).
 
 3) When skipping a question, you should still bubble in a __________ answer.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['9', 'ahead', 'guess'],
-        hint1: 'Simple division: 45 ÷ 5.',
-        hint2: 'Q 45 is after Passage 3. Target is ~18 min left. You have 20.',
+        correctAnswers: ['7', 'ahead', 'guess'],
+        hint1: '35 ÷ 50 = 0.7 minutes per question. Multiply by 10.',
+        hint2: 'After Q 30 the target is ~14 min left. You have 17.',
         hint3: 'Never leave a bubble blank — there\'s no penalty for wrong answers.',
-        explanation: '9 minutes per passage. At Q 45 with 20 min left you\'re ~2 min ahead of the 18 min target. Always bubble a guess when skipping.'
+        explanation: '7 minutes per 10 questions. At Q 30 with 17 min left you\'re ~3 min ahead of the 14 min target. Always bubble a guess when skipping.'
       }
     },
     {
@@ -131,7 +131,7 @@ Use these benchmarks during the test:
 - **Strategic:** Eliminate 1–2 answers, then guess from the remaining options. Going from 4 choices to 2 doubles your odds (25% → 50%).
 - **Random:** Pick any letter. Still gives you 25% — better than 0%.
 
-**"Shortest answer" heuristic:** When you must guess blindly on a Usage/Mechanics question, the **shortest answer** is correct more often than chance would predict. Why? Many errors involve wordiness, and the fix is the most concise option.
+**"Shortest answer" heuristic:** When you must guess blindly on a Usage/Mechanics question, the **shortest answer** is often a reasonable pick. Why? Many errors involve wordiness, and the fix is the most concise option.
 
 **Caution:** This is a last-resort heuristic, not a reliable rule. Always try to apply grammar knowledge first.
       `
@@ -158,7 +158,7 @@ Use these benchmarks during the test:
           }
         ],
         correctAnswers: ['pick your best guess and move on', 'bubble in your best guesses for all 8', 'wordiness and redundancy questions'],
-        hint1: '36 seconds is the target. 50 seconds is already over budget.',
+        hint1: 'About 42 seconds is the average budget. 50 seconds is already over it.',
         hint2: 'No penalty for guessing — never leave bubbles blank.',
         hint3: 'Wordiness questions often reward the most concise option.',
         explanation: 'At 50 seconds, make your best guess and move on. With 3 minutes and 8 questions left, bubble guesses for all (no penalty). The shortest-answer heuristic applies to wordiness questions.'

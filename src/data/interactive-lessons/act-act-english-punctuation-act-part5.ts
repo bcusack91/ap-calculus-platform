@@ -59,10 +59,10 @@ Quotation marks enclose titles of short works (articles, poems, short stories, c
       exercise: {
         questions: [
           {
-            question: 'Which sentence places the period correctly? (A) She called the plan "ambitious." (B) She called the plan "ambitious". (C) She called the plan \"ambitious\". ',
+            question: 'Which sentence places the period correctly? (A) She called the plan "ambitious." (B) She called the plan "ambitious". (C) She called the plan, "ambitious".',
             options: ['Sentence A', 'Sentence B', 'Sentence C', 'All are correct'],
             correctAnswer: 0,
-            explanation: 'In American English, periods always go inside quotation marks. Sentence A is correct.'
+            explanation: 'In American English, periods always go inside quotation marks, so Sentence A is correct. Sentence B leaves the period outside the closing quotation mark. Sentence C makes the same period error and also adds a comma that separates the verb "called" from its object.'
           },
           {
             question: '"Did the teacher really say \"There will be no homework\"?" Where should the question mark go?',

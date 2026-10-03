@@ -130,8 +130,8 @@ Range: $50 - 25 = 25$ units.
             options: ['exactly one', 'zero, one, or more than one', 'only two', 'at most one']
           },
           {
-            label: 'Adding a very large outlier to a data set most affects the …',
-            options: ['mode', 'median', 'mean', 'range only']
+            label: 'Of the mean, median, and mode, adding a very large outlier to a data set most affects the …',
+            options: ['mode', 'median', 'mean']
           }
         ],
         correctAnswers: ['average', 'zero, one, or more than one', 'mean'],
@@ -157,9 +157,9 @@ Range: $50 - 25 = 25$ units.
           },
           {
             question: 'A set of 5 numbers has a mode of 8, a median of 8, and a mean of 10. Which could be the set?',
-            options: ['$\\{6, 8, 8, 10, 18\\}$', '$\\{8, 8, 8, 8, 18\\}$', '$\\{4, 8, 8, 12, 18\\}$', '$\\{2, 8, 8, 14, 18\\}$'],
+            options: ['$\\{4, 4, 8, 16, 18\\}$', '$\\{6, 8, 8, 10, 16\\}$', '$\\{4, 8, 8, 12, 18\\}$', '$\\{4, 8, 10, 10, 18\\}$'],
             correctAnswer: 2,
-            explanation: 'Check: $4+8+8+12+18 = 50$ and $50 \\div 5 = 10$ ✓. Median (3rd value) $= 8$ ✓. Mode $= 8$ ✓.'
+            explanation: 'A mean of $10$ for $5$ numbers needs a sum of $50$. $\\{4, 8, 8, 12, 18\\}$: sum $50$ ✓, median (3rd value) $8$ ✓, mode $8$ ✓. $\\{4, 4, 8, 16, 18\\}$ sums to $50$ with median $8$, but its mode is $4$. $\\{6, 8, 8, 10, 16\\}$ has median and mode $8$, but sums to $48$ (mean $9.6$). $\\{4, 8, 10, 10, 18\\}$ sums to $50$, but its median and mode are both $10$.'
           }
         ]
       }

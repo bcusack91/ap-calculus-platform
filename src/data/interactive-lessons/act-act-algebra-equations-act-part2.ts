@@ -54,6 +54,18 @@ Substitute back: $2(3) + 3y = 12 \\implies y = 2$.
 **Solution:** $(3,\\, 2)$
 
 **ACT Tip:** If the ACT asks only for $x$ or only for $y$, elimination is usually faster — you can skip the back-substitution step entirely.
+
+---
+
+## Systems on the Coordinate Plane
+
+The solution of a system is the point where the two lines **intersect**. Systems often show up in coordinate geometry, for example when finding a **perpendicular bisector**.
+
+**Perpendicular bisector** of segment $\\overline{AB}$: the line that passes through the **midpoint** of $\\overline{AB}$ **and** is **perpendicular** to $\\overline{AB}$ (its slope is the negative reciprocal of the segment's slope).
+
+**Example:** $A(1, 2)$ and $B(5, 6)$. Midpoint $= (3, 4)$. Slope of $\\overline{AB} = \\frac{6 - 2}{5 - 1} = 1$, so the perpendicular slope is $-1$.
+
+$$y - 4 = -1(x - 3) \\implies y = -x + 7$$
       `
     },
     {
@@ -108,24 +120,22 @@ System: $3x + 2y = 19$ and $x - 2y = -3$.
       content: `
 ## Word Problems → Systems
 
-**Example:** A store sells pencils for \\$0.50 and pens for \\$1.25. Maria buys 14 items for \\$11.00. How many of each?
+**Example:** A store sells pencils for \\$0.50 and pens for \\$1.25. Maria buys 14 items for \\$13.00. How many of each?
 
 Let $p$ = pencils, $n$ = pens.
 
 $$p + n = 14$$
-$$0.50p + 1.25n = 11$$
+$$0.50p + 1.25n = 13$$
 
-Multiply the second equation by 4: $2p + 5n = 44$.
+Multiply the second equation by 4 to clear the decimals: $2p + 5n = 52$.
 
 From the first: $p = 14 - n$ → substitute:
 
-$$2(14 - n) + 5n = 44 \\implies 28 - 2n + 5n = 44 \\implies 3n = 16$$
+$$2(14 - n) + 5n = 52 \\implies 28 - 2n + 5n = 52 \\implies 3n = 24 \\implies n = 8$$
 
-Hmm — let's try \\$0.50 and \\$1.00:
+Then $p = 14 - 8 = 6$.
 
-$$0.50p + 1.00n = 11 \\implies p + 2n = 22$$
-
-Subtract from $p + n = 14$: $n = 8$, $p = 6$. ✓
+**Check:** 6 pencils × \\$0.50 = \\$3.00 and 8 pens × \\$1.25 = \\$10.00, for a total of \\$13.00 ✓ — 6 pencils and 8 pens.
 
 **ACT Tip:** On the ACT, back-solve from the answer choices when the algebra gets messy — it's often faster.
       `

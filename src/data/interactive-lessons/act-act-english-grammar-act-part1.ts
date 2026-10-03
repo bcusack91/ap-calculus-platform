@@ -18,7 +18,7 @@ The ACT English section frequently tests whether you can match a **subject** to 
 | Singular | Singular | *The dog **runs** in the yard.* |
 | Plural | Plural | *The dogs **run** in the yard.* |
 
-**Why it matters on the ACT:** About 3–5 questions per test target subject-verb agreement — making it one of the highest-yield grammar topics you can study.
+**Why it matters on the ACT:** Subject-verb agreement shows up regularly in the Conventions of Standard English questions on the 50-question English test, which makes it one of the highest-yield grammar topics you can study.
       `
     },
     {
@@ -93,6 +93,8 @@ The ACT loves to insert a **prepositional phrase** between the subject and verb 
 **Collective nouns** (team, group, jury, family) are usually **singular** in American English:
 - *The committee **has** reached a decision.* ✅
 
+**"Data":** Current standard usage accepts both *The data **show** a trend* and *The data **shows** a trend*, so don't count either verb as an error. Look for a clearer agreement problem instead.
+
 **ACT Tip:** "Each" and "every" always signal a singular verb, even when followed by a compound phrase: *Each boy and girl **has** a seat.*
       `
     },
@@ -102,7 +104,7 @@ The ACT loves to insert a **prepositional phrase** between the subject and verb 
       content: `
 **Fill in the Correct Verb** ✏️
 
-1) "The group of scientists _____ (is/are) publishing their findings." — Type the correct verb.
+1) "The group of scientists _____ (is/are) publishing a new study." — Type the correct verb.
 
 2) "Neither the coach nor the players _____ (was/were) satisfied." — Type the correct verb.
 

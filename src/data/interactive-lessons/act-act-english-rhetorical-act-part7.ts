@@ -123,7 +123,7 @@ Rhetorical questions can't be answered by looking at the underlined portion alon
 
 Answer each question with a single key term.
 
-1) What type of transition would you use between a problem and its solution? (two words, e.g., "cause-effect" or "problem-solution" or similar)
+1) A paragraph about a problem is followed by one about its solution. Which category of transition links them: contrast, addition, or cause-effect? __________ (hyphenated term)
 
 2) If an answer choice contains the phrase "the reason is because," you should flag it as __________ (one word).
 
@@ -135,7 +135,7 @@ Answer each question with a single key term.
         hint1: 'A problem leading to a solution is one thing causing/necessitating another.',
         hint2: '"The reason is because" says "reason" and "because" — which both mean the same thing.',
         hint3: 'The question states a specific g____ — evaluate strictly against it.',
-        explanation: 'Problem → solution uses cause-effect transitions. "The reason is because" is redundant (reason = because). Effectiveness questions must be judged against the specific goal stated in the question.'
+        explanation: 'Problem → solution is a cause-effect link (the problem prompts the response), signalled by phrases like "To address this issue" or "In response." "The reason is because" is redundant (reason = because); write "the reason is that" or use "because" alone. Effectiveness questions must be judged against the specific goal stated in the question.'
       }
     },
     {

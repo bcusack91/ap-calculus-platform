@@ -66,10 +66,10 @@ If the aside is at the **end** of a sentence, you only need one dash:
             explanation: 'The aside "which had been debated for months" must be closed with the same punctuation that opened it. Since a dash opens it, a dash must close it: "The proposal — which had been debated for months — was finally approved."'
           },
           {
-            question: 'Which sentence correctly uses an em dash? (A) She wanted one thing — to win. (B) She wanted one thing; to win. (C) She wanted one thing, to win.',
+            question: 'Which sentence correctly uses an em dash? (A) She wanted one thing — to win. (B) She wanted one thing; to win. (C) She wanted — one thing to win.',
             options: ['Sentence A', 'Sentence B', 'Sentence C', 'All are correct'],
             correctAnswer: 0,
-            explanation: 'An em dash can introduce an explanation at the end of a sentence, similar to a colon. Sentence A is correct. A semicolon (B) requires an independent clause on both sides. A comma (C) creates a weak connection where emphasis is intended.'
+            explanation: 'An em dash can introduce an explanation at the end of a sentence, similar to a colon, so Sentence A is correct: "to win" explains "one thing." Sentence B fails because a semicolon needs an independent clause on both sides, and "to win" is only a phrase. Sentence C fails because the dash splits the verb "wanted" from its object, cutting the sentence off before it is complete.'
           }
         ]
       }
@@ -110,7 +110,7 @@ Parentheses **de-emphasize** information — they tell the reader, "This is a si
       content: `
 **Identify the Correct Punctuation** ✏️
 
-Type "dashes," "parentheses," or "commas" for the best choice in each sentence.
+Type "dash," "dashes," "parentheses," "commas," or "none" for the best choice in each sentence.
 
 1) "The keynote speaker — a Nobel laureate ___ captivated the audience." — What should replace the blank to close the aside?
 
@@ -170,10 +170,10 @@ Type "dashes," "parentheses," or "commas" for the best choice in each sentence.
             explanation: 'The aside "who had designed several award-winning buildings" opens with an em dash but closes with a comma — a mismatch. It must close with an em dash: "The architect — who had designed several award-winning buildings — unveiled her latest project."'
           },
           {
-            question: '"The CEO announced that the merger (originally planned for March) would be delayed, and that employees would receive updates — in the coming weeks." What change is needed?',
-            options: ['Remove the dash before "in the coming weeks"', 'Replace the parentheses with dashes', 'Add a dash after "delayed"', 'No change needed'],
+            question: '"When the merger was announced (in early March,) employees were told to expect updates in the coming weeks." What change is needed?',
+            options: ['Move the comma outside the closing parenthesis', 'Delete the comma and the closing parenthesis', 'Add a comma before the opening parenthesis', 'No change — the comma placement is correct'],
             correctAnswer: 0,
-            explanation: '"In the coming weeks" is not a dramatic aside requiring a dash — it flows naturally from the sentence. Removing the dash creates a cleaner, correct sentence.'
+            explanation: 'The comma ends the introductory clause "When the merger was announced (in early March)," so it belongs to the larger sentence, not to the side note. Punctuation for the larger sentence goes outside the closing parenthesis: "When the merger was announced (in early March), employees were told…" Leaving the comma inside the parenthesis puts the sentence\'s punctuation inside the aside, so the original is not correct. Deleting the closing parenthesis leaves the aside open with no end. A comma before the opening parenthesis would cut the clause off from its own side note.'
           }
         ]
       }

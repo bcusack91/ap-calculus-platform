@@ -64,9 +64,9 @@ The ACT isn't just testing whether you know where to **put** punctuation — it'
         questions: [
           {
             question: '"The professor who teaches biology, is retiring at the end of the year." Should the comma stay or go?',
-            options: ['Keep the comma — it separates a clause', 'Delete the comma — it separates the subject from the verb', 'Replace the comma with a semicolon', 'Add another comma before "who"'],
+            options: ['Keep the comma — it separates a clause', 'Delete the comma — it separates the subject from the verb', 'Replace the comma with a semicolon', 'Move the comma so it follows "professor"'],
             correctAnswer: 1,
-            explanation: 'The comma incorrectly separates the subject ("The professor who teaches biology") from the verb ("is retiring"). "Who teaches biology" is an essential clause — no commas needed.'
+            explanation: 'The comma incorrectly separates the subject ("The professor who teaches biology") from the verb ("is retiring"). "Who teaches biology" identifies which professor, so it is an essential clause — no commas needed. A single comma cannot set off a clause (that takes a pair), a semicolon needs a complete sentence on each side, and moving the comma after "professor" just leaves one unpaired comma at the other end of the clause.'
           },
           {
             question: '"The team analyzed the results, and then presented their findings to the board." Is the comma correct?',
@@ -103,7 +103,8 @@ The ACT isn't just testing whether you know where to **put** punctuation — it'
 **ACT Trap — "However" Is NOT a FANBOYS:**
 - ❌ *The sky was clear, however, rain was forecast.* (Comma splice!)
 - ✅ *The sky was clear; however, rain was forecast.*
-- Words like *however, therefore, moreover, consequently, furthermore* are conjunctive adverbs — they need a semicolon, not a comma.
+- Words like *however, therefore, moreover, consequently, furthermore* are conjunctive adverbs. When one sits **between two independent clauses**, it needs a semicolon (or period) before it, not a comma.
+- When "however" **interrupts a single clause**, a pair of commas is correct: ✅ *Rain, however, was forecast.* Cover "however" — if only one complete sentence remains, use commas.
 
 **ACT Strategy:** When two complete thoughts appear in the same sentence, check the punctuation between them. A comma alone is never enough.
       `
@@ -156,7 +157,7 @@ Identify the punctuation error in each sentence. Type "comma splice," "unnecessa
         hint1: 'Nothing should interrupt the subject-verb connection.',
         hint2: 'A comma alone can\'t join two independent clauses.',
         hint3: 'Words like "however" and "therefore" belong to a special category.',
-        explanation: 'Never place a comma between subject and verb. Two independent clauses joined by only a comma = comma splice. "However" is a conjunctive adverb, requiring a semicolon before it.'
+        explanation: 'Never place a comma between subject and verb. Two independent clauses joined by only a comma = comma splice. "However" is a conjunctive adverb: it needs a semicolon before it when it joins two independent clauses, and a pair of commas when it interrupts a single clause.'
       }
     },
     {

@@ -102,7 +102,7 @@ Apostrophe questions appear on virtually every ACT English section. They test tw
 
 **Strategy:** Every time you see an apostrophe in a pronoun on the ACT, try expanding it. If "it is" or "they are" doesn't make sense, remove the apostrophe.
 
-**ACT Tip:** The ACT will almost never use the actual contraction in the correct answer. It strongly prefers the possessive pronoun. When in doubt, choose the version without the apostrophe.
+**ACT Tip:** Don't guess based on which form "looks" more formal — sometimes the contraction is correct (*It's going to rain* = *It is going to rain*). Expand every time: if "it is," "they are," or "you are" fits, keep the apostrophe; if it doesn't, use the possessive pronoun with no apostrophe.
       `
     },
     {
@@ -169,10 +169,10 @@ Apostrophe questions appear on virtually every ACT English section. They test tw
             explanation: 'Two errors: "it\'s" should be "its" (possessive — the performances belong to the orchestra) and "they\'re" should be "their" (possessive — the season belongs to them). Both are possessive pronouns that should not have apostrophes.'
           },
           {
-            question: '"Each of the student\'s projects demonstrated weeks\' worth of research." Which apostrophe usage is correct?',
-            options: ['Both are correct', '"student\'s" should be "students\'" (multiple students)', '"weeks\'" should be "week\'s"', 'Both apostrophes should be removed'],
+            question: '"The judges praised all thirty student\'s projects, each of which demonstrated weeks\' worth of research." What change, if any, is needed?',
+            options: ['Both apostrophes are used correctly', '"student\'s" should be "students\'"', '"weeks\'" should be "week\'s"', 'Both apostrophes should be removed'],
             correctAnswer: 1,
-            explanation: '"Each of the students\' projects" — "each" tells us there are multiple students whose projects are being discussed. The plural possessive "students\'" is needed. "Weeks\' worth" is correct as-is (plural possessive — the worth of multiple weeks).'
+            explanation: '"Thirty" tells us the projects belong to many students, so the owner is a regular plural and needs the plural possessive: "all thirty students\' projects." "Weeks\' worth" is already correct — the research took several weeks, so the plural possessive fits, and changing it to "week\'s" would shrink it to one week. Removing both apostrophes would erase the possession in each phrase ("students projects," "weeks worth").'
           }
         ]
       }

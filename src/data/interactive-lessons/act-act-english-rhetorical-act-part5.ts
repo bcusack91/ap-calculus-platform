@@ -40,7 +40,7 @@ The ACT frequently asks you to **combine short, choppy sentences** into a single
 > "The painting is famous. It was created by Monet. It depicts water lilies."
 
 **Combined options:**
-- ✅ *"The famous painting by Monet depicts water lilies."* (appositives + trimming)
+- ✅ *"The famous painting by Monet depicts water lilies."* (trimming: "is famous" shrinks to the adjective *famous*, and "was created by Monet" shrinks to the phrase *by Monet*)
 - ✅ *"Created by Monet, the famous painting depicts water lilies."* (participial phrase)
 - ❌ *"The painting is famous and it was created by Monet and it depicts water lilies."* (run-on with repeated "and")
 
@@ -86,7 +86,7 @@ This turns "mathematician" and "19th century" into an appositive phrase, keeping
               'It is important to note the experiment confirmed the hypothesis was correct.'
             ],
             correctAnswer: 2,
-            explanation: '"The experiment confirmed the hypothesis" conveys the full meaning in five words. The original uses 18 words with padding phrases like "it is important to note that" and "the fact that."'
+            explanation: '"The experiment confirmed the hypothesis" conveys the full meaning in five words. The original uses 16 words with padding phrases like "it is important to note that" and "the fact that." The other revisions each keep some padding: "It should be noted that" opens one, "the fact that" survives in another, and the last both keeps "It is important to note" and adds "was correct," which repeats what "confirmed" already says.'
           }
         ]
       }
@@ -101,7 +101,7 @@ This turns "mathematician" and "19th century" into an appositive phrase, keeping
 
 | Wordy | Concise |
 |-------|---------|
-| *the reason why is that* | *because* |
+| *for the reason that* | *because* |
 | *in order to* | *to* |
 | *at the present time* | *now* or *currently* |
 | *it is necessary that we* | *we must* |
@@ -109,6 +109,11 @@ This turns "mathematician" and "19th century" into an appositive phrase, keeping
 | *in a situation in which* | *when* |
 | *make a decision* | *decide* |
 | *come to the conclusion* | *conclude* |
+
+**Watch out for "the reason ... is because":** it is redundant, since *reason* already means *because*. Use *the reason ... is that*, or drop *the reason* and use *because* alone.
+- ❌ *The reason the game was canceled is because it rained.*
+- ✅ *The reason the game was canceled is that it rained.*
+- ✅ *The game was canceled because it rained.*
 
 **The ACT "Delete" Option:**
 
@@ -119,7 +124,7 @@ Sometimes the most concise answer is **"DELETE the underlined portion."** This h
 **Example:** *"She was very unique in her own way."*
 Best fix: *"She was unique."* — "Very" can't modify "unique" (it's absolute), and "in her own way" is implied.
 
-**ACT Tip:** Don't be afraid of the DELETE option. It's correct roughly **15–20%** of the time when it appears.
+**ACT Tip:** Don't be afraid of the DELETE option. It is a real answer, not a trick: choose it whenever the underlined words add nothing and the sentence still works without them. Just confirm the sentence is still complete and keeps its meaning before you pick it.
       `
     },
     {
@@ -128,9 +133,9 @@ Best fix: *"She was unique."* — "Very" can't modify "unique" (it's absolute), 
       content: `
 **Trim the Fat** 📝
 
-Replace each wordy phrase with a single word (or two-word phrase).
+Replace each wordy phrase with a single word or a two-word phrase.
 
-1) "in order to achieve" → __________ (one word: "to" + a verb, or just "to")
+1) "in order to achieve" → __________ (two words: cut the padding, keep the verb)
 
 2) "made the decision to" → __________ (past tense, one word)
 

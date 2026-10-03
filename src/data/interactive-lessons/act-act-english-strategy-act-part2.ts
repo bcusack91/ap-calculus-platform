@@ -55,7 +55,7 @@ You need the previous sentence to realise "They" refers to "aqueducts" (plural) 
           {
             question: 'What is the recommended approach for reading ACT English passages?',
             options: [
-              'Skim the entire passage, then answer all 15 questions.',
+              'Skim the entire passage, then answer all of its questions.',
               'Read the questions first, then search for answers in the passage.',
               'Read the passage from the start and answer each question as you reach the underlined portion.',
               'Read only the underlined portions and ignore the rest.'
@@ -94,7 +94,7 @@ Students fall into two traps with "NO CHANGE":
 2. If you spot one, find the choice that fixes ONLY that error.
 3. If you don't spot an error, compare all remaining choices — if they all introduce new problems, "NO CHANGE" is correct.
 
-**Stat:** On a typical ACT, "NO CHANGE" is correct for roughly **18–20 out of 75 questions**. If you're picking it much more or less often, recalibrate.
+**Calibration check:** "NO CHANGE" is one choice out of four, not your default. If you find yourself picking it on most questions in a passage — or never picking it at all — slow down and recheck.
       `
     },
     {
@@ -107,15 +107,15 @@ Students fall into two traps with "NO CHANGE":
 
 2) For pronoun questions, check the __________ (the noun the pronoun replaces).
 
-3) "NO CHANGE" is correct for roughly __________–20 out of 75 questions.
+3) For a transition question, read the sentence __________ the transition AND the sentence after it.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Go', 'antecedent', '18'],
+        correctAnswers: ['Go', 'antecedent', 'before'],
         hint1: 'Read as you … (short word meaning "proceed").',
         hint2: 'The grammar term for the noun a pronoun refers back to.',
-        hint3: 'It\'s close to 25% of 75, which is about 18 or 19.',
-        explanation: '"Read-As-You-Go" means answering questions sequentially. The antecedent is the noun a pronoun replaces. "NO CHANGE" is correct ~18–20 times per test.'
+        hint3: 'A transition links two ideas — the one that comes first and the one that follows.',
+        explanation: '"Read-As-You-Go" means answering questions sequentially. The antecedent is the noun a pronoun replaces. A transition connects the sentence before it to the sentence after it, so you need both.'
       }
     },
     {
@@ -129,9 +129,14 @@ A few questions (usually the last one for each passage) ask about the passage **
 - *"Suppose the writer's goal had been to write an essay about X. Would this essay successfully fulfil that goal?"*
 - *"Which choice would most effectively conclude the essay?"*
 
-**Strategy:** You absorb the passage's overall purpose naturally if you use the Read-As-You-Go method. By the time you reach question 15, you already have a strong sense of the passage's main idea and tone.
+**Strategy:** You absorb the passage's overall purpose naturally if you use the Read-As-You-Go method. By the time you reach the passage's last question, you already have a strong sense of its main idea and tone.
 
 **Common Mistake:** Answering "Yes" or "No" correctly but choosing the wrong *reason*. Always check that the explanation matches the passage's actual content.
+
+**Choosing a concluding sentence:** The best conclusion **ties back to the main idea** of the paragraph or essay — often by echoing the opening. Reject choices that introduce a new topic, add a stray detail, or merely repeat one minor point.
+- *Essay opens:* "Community gardens turn empty lots into shared spaces."
+- *Strong conclusion:* "By reclaiming forgotten land, these gardens give neighbors a place to grow food — and to know one another." (returns to the opening idea)
+- *Weak conclusion:* "Tomatoes need six hours of sun a day." (a new, narrow detail)
       `
     },
     {
@@ -147,19 +152,19 @@ A few questions (usually the last one for each passage) ask about the passage **
             options: ['only the underlined word', 'the sentence before AND after the transition', 'the entire passage again', 'just the question stem']
           },
           {
-            label: 'A student who picks "NO CHANGE" for 40 out of 75 questions is likely …',
-            options: ['performing well — "NO CHANGE" is usually right', 'over-selecting it — the expected rate is ~18–20', 'under-selecting it — they should pick it more', 'within normal range']
+            label: 'A student who picks "NO CHANGE" for 30 of the 50 questions is likely …',
+            options: ['performing well — "NO CHANGE" is usually right', 'over-selecting it — it should not be the default answer', 'under-selecting it — they should pick it more', 'within normal range — any rate is fine']
           },
           {
             label: 'The last question for each passage typically asks about …',
             options: ['a specific comma placement', 'the passage as a whole', 'vocabulary definitions', 'the title only']
           }
         ],
-        correctAnswers: ['the sentence before AND after the transition', 'over-selecting it — the expected rate is ~18–20', 'the passage as a whole'],
+        correctAnswers: ['the sentence before AND after the transition', 'over-selecting it — it should not be the default answer', 'the passage as a whole'],
         hint1: 'Transitions connect ideas — you need to know what\'s on both sides.',
-        hint2: '40 out of 75 is over 53%, far above the expected ~25%.',
+        hint2: '30 of 50 is 60% — "NO CHANGE" is one of four choices, not the usual answer.',
         hint3: 'These "big picture" questions come after you\'ve read the full passage.',
-        explanation: 'Transition questions need surrounding context. "NO CHANGE" should be selected ~25% of the time (18–20 out of 75). The final question often addresses the passage as a whole.'
+        explanation: 'Transition questions need surrounding context. Choosing "NO CHANGE" on most questions means the student is accepting errors instead of checking for them. The final question often addresses the passage as a whole.'
       }
     }
   ]

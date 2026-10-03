@@ -19,7 +19,8 @@ You've now covered every major punctuation rule tested on the ACT English sectio
 | **Introductory elements** | Comma after introductory words, phrases, or clauses |
 | **Nonessential clauses** | Commas on both sides (which → commas; that → no commas) |
 | **Coordinate adjectives** | Comma between adjectives if they pass the swap/and test |
-| **Semicolons** | Join two independent clauses; precede conjunctive adverbs |
+| **Semicolons** | Join two independent clauses; precede "however"/"therefore" only when it joins two clauses |
+| **"However" as an interrupter** | Mid-clause "however" takes a pair of commas: *The team, however, continued.* |
 | **Colons** | Follow a complete sentence; introduce a list or explanation |
 | **Apostrophes** | Possessives (dog's) vs. contractions (it's = it is) |
 | **Possessive pronouns** | NEVER use apostrophes (its, their, your, whose) |
@@ -55,10 +56,10 @@ The ACT often includes one answer that "sounds" correct but violates a rule. Com
 - A dash opening an aside with a comma closing it
 
 **The "No Change" Reality:**
-About 25% of ACT English answers are "No Change." Don't be afraid to choose it if the original is correct — but always verify by checking every rule that applies.
+"No Change" is correct often enough that you should treat it as a real option, not a trap. Don't be afraid to choose it if the original is correct — but always verify by checking every rule that applies.
 
 **Time Management:**
-Punctuation questions are usually the fastest to answer on the ACT. You should spend about 30 seconds per punctuation question — identify the rule, apply it, and move on.
+The enhanced ACT English section gives you 35 minutes for 50 questions — about 42 seconds per question, with 4 answer choices each. Punctuation questions are usually the fastest to answer, so aim to finish them in well under that average (identify the rule, apply it, move on) and bank the extra time for rhetorical questions that require rereading the passage.
       `
     },
     {
@@ -110,21 +111,21 @@ This passage tests five rules in a single paragraph — a realistic representati
       content: `
 **Mixed Practice — Name the Error** ✏️
 
-Identify the specific punctuation error in each sentence.
+Identify the specific punctuation error in each sentence. Type "mismatched dashes," "apostrophe errors," or "unnecessary commas."
 
 1) "The new library — designed by a world-famous architect, will open to the public in September."
 
 2) "Its important to review you\'re notes before the exam begins."
 
-3) "The coach praised the players hard work, and encouraged them to keep practicing, and studying film."
+3) "The coach praised the players\' hard work, and encouraged them to keep practicing, and studying film."
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['mismatched dashes', 'apostrophe errors', 'unnecessary commas'],
         hint1: 'What opened the aside? What closed it? Do they match?',
         hint2: 'Check each apostrophe: should "Its" have one? Should "you\'re" keep its?',
-        hint3: 'How many items are in this "list"? Does a compound predicate need commas?',
-        explanation: '1) The dash opens the aside but a comma closes it — mismatched pair (needs a dash before "will"). 2) "Its" should be "It\'s" (contraction: "It is important") and "you\'re" should be "your" (possessive: "your notes"). 3) Two unnecessary commas: "players\'" needs an apostrophe instead of a comma issue, and the comma before "and studying" breaks a two-item compound.'
+        hint3: 'How many subjects go with "praised" and "encouraged"? How many items are joined by "and studying"?',
+        explanation: '1) The dash opens the aside but a comma closes it — mismatched pair (needs a dash before "will"). 2) "Its" should be "It\'s" (contraction: "It is important") and "you\'re" should be "your" (possessive: "your notes"). 3) Two unnecessary commas. The comma before "and encouraged" splits a compound predicate: one subject ("The coach") with two verbs ("praised" and "encouraged"), so no comma goes before "and." The comma before "and studying" splits a pair of only two items ("practicing and studying film"), which is not a series, so it needs no comma either. Correct: "The coach praised the players\' hard work and encouraged them to keep practicing and studying film."'
       }
     },
     {
@@ -171,9 +172,9 @@ Identify the specific punctuation error in each sentence.
           },
           {
             question: '"Although the researchers hypothesized that the treatment would be effective, the clinical trial\'s results; however, suggested that further testing was needed before the drug could be approved." What change is needed?',
-            options: ['No change', 'Replace the semicolon before "however" with a comma', 'Remove the comma after "effective" and the semicolons around "however"', 'Replace the semicolon after "results" with a comma, and keep the comma after "however"'],
+            options: ['No change — the semicolon correctly precedes "however"', 'Replace the comma after "however" with a semicolon', 'Delete the comma after "effective" and keep the semicolon', 'Replace the semicolon after "results" with a comma'],
             correctAnswer: 3,
-            explanation: 'The clause from "Although" to "effective" is a full introductory dependent clause (comma is correct). "However" here is an interrupter within a single independent clause — not joining two independent clauses — so it should be set off with commas, not semicolons. Correct: "…the clinical trial\'s results, however, suggested…"'
+            explanation: 'Cover "however": what remains is one sentence — "the clinical trial\'s results suggested that further testing was needed." Because "however" interrupts a single independent clause instead of joining two, it is set off with a pair of commas: "…the clinical trial\'s results, however, suggested…" The semicolon is wrong because "Although … the clinical trial\'s results" is not a complete sentence, so leaving it unchanged fails, and swapping the comma after "however" for a semicolon creates the same problem on the other side. The comma after "effective" correctly ends the introductory dependent clause, so deleting it introduces a new error.'
           }
         ]
       }

@@ -9,7 +9,7 @@ export const actPunctuationPart1Data = {
 
 **Part 1 of 7 — Items in a Series, Introductory Elements, Nonessential Clauses & Coordinate Adjectives**
 
-Commas are the most frequently tested punctuation mark on the ACT English section. Approximately **5–8 questions per test** involve comma usage, so mastering these rules gives you a significant scoring advantage.
+Commas are the most frequently tested punctuation mark on the ACT English section (50 questions in 35 minutes on the enhanced ACT, each with 4 answer choices). Comma questions show up in nearly every passage, so mastering these rules gives you a significant scoring advantage.
 
 **The Four Big Comma Rules on the ACT:**
 
@@ -47,7 +47,7 @@ When you list **three or more items**, place commas between each item. The ACT t
 **Introductory Elements:**
 
 After an introductory word, phrase, or clause, use a comma:
-- ✅ *However, the results were inconclusive.*
+- ✅ *However, the results were inconclusive.* (At the start of a sentence, "however" takes just a comma after it.)
 - ✅ *After running for three miles, she stopped to rest.*
 - ✅ *When the bell rang, students rushed to the door.*
 
@@ -112,7 +112,7 @@ Two adjectives are **coordinate** (equal) when you can swap their order or inser
       content: `
 **Add the Missing Punctuation** ✏️
 
-Type the correct punctuation mark (comma, no comma, two commas) for each sentence.
+Type "comma" or "none" for each sentence. When a sentence has two blanks, both blanks take the same mark.
 
 1) "The museum ___ which was built in 1920 ___ is undergoing renovation." — What punctuation goes in each blank?
 

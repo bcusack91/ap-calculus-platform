@@ -17,6 +17,7 @@ Here's a quick-reference sheet covering every major topic from Parts 1–6.
 |-------|-------------------|
 | Quadratic Formula | $x = \\frac{-b \\pm \\sqrt{b^2-4ac}}{2a}$ |
 | Discriminant | $\\Delta > 0$: 2 real; $= 0$: 1 real; $< 0$: none |
+| Sum / product of roots | Sum $= -\\frac{b}{a}$; product $= \\frac{c}{a}$ |
 | Composition | $(f \\circ g)(x) = f(g(x))$ |
 | Domain (radical) | Radicand $\\geq 0$ |
 | Domain (fraction) | Denominator $\\neq 0$ |
@@ -34,11 +35,11 @@ Here's a quick-reference sheet covering every major topic from Parts 1–6.
       content: `
 ## ACT Intermediate Algebra Tips
 
-1. **Know your formulas cold.** The quadratic formula, log rules, and sequence formulas appear in nearly every test.
+1. **Know your formulas cold.** The quadratic formula, log rules, and sequence formulas come up often, and the ACT does not give you a formula sheet.
 2. **Plug in answers** (backsolving) when algebraic manipulation looks messy — it's often faster.
 3. **Watch for extraneous solutions** — especially with logs (arguments must be positive) and rationals (denominators can't be zero).
 4. **Factor first** in rational expressions — cancelling saves time.
-5. **Time management:** Don't spend more than 60 seconds per problem. Mark and move on.
+5. **Time management:** ACT Math gives you 50 minutes for 45 questions (about 67 seconds each, with 4 answer choices per question). If a problem is eating well past that, mark it, guess, and move on — there is no penalty for wrong answers.
 6. **Discriminant shortcut:** Before solving a quadratic, check $\\Delta$ to see how many real answers to expect.
       `
     },

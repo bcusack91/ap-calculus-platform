@@ -44,6 +44,17 @@ A **dangling modifier** is an introductory phrase that doesn't logically modify 
 - The campers were exhausted — the modifier matches the subject.
 
 **ACT Tip:** When a sentence starts with an -ing phrase, a past-participle phrase, or an infinitive phrase, check that the subject right after the comma is the one performing that action.
+
+## Misplaced Modifiers
+
+A **misplaced modifier** sits next to the wrong word, so it seems to describe something it shouldn't. Limiting words (*only, almost, just, nearly*) and descriptive phrases belong right beside what they modify.
+
+- ❌ *She almost drove her kids to every game.* (She nearly drove but never did?)
+- ✅ *She drove her kids to **almost every** game.*
+- ❌ *The waiter served a steak to the customer that was undercooked.* (The customer was undercooked?)
+- ✅ *The waiter served the customer a steak **that was undercooked**.*
+
+**Fix:** Move the modifier so it touches the word it describes.
       `
     },
     {
@@ -55,16 +66,16 @@ A **dangling modifier** is an introductory phrase that doesn't logically modify 
       exercise: {
         questions: [
           {
-            question: '"Covered in mud, the owner bathed the dog in the backyard." What is the problem?',
-            options: ['No error', 'The sentence says the owner is covered in mud — misplaced modifier', 'The verb tense is wrong', '"backyard" should be "back yard"'],
+            question: '"Wagging its muddy tail, the owner bathed the dog in the backyard." What is the problem?',
+            options: ['No error', 'Dangling modifier: the owner seems to wag a tail', 'Tense shift: "bathed" should be "bathes"', 'Word choice: "backyard" should be "back yard"'],
             correctAnswer: 1,
-            explanation: 'The modifier "Covered in mud" describes the subject right after the comma — "the owner." But it should describe "the dog." A correct version: "Covered in mud, the dog was bathed by the owner in the backyard" or "The owner bathed the mud-covered dog in the backyard."'
+            explanation: 'The introductory phrase "Wagging its muddy tail" attaches to the subject right after the comma, "the owner," but only the dog has a tail. Fix: "Wagging its muddy tail, the dog was bathed by its owner in the backyard." The sentence has only one main verb, so there is no tense shift to repair, and "backyard" is the standard one-word noun. Because the modifier is broken, the sentence is not error-free.'
           },
           {
-            question: '"She only eats vegetables on weekdays." What does "only" actually modify here?',
-            options: ['It modifies "She" — she is the only one who eats vegetables', 'It modifies "eats" — she only eats (doesn\'t cook) them', 'It modifies "vegetables" — she eats nothing but vegetables', 'It modifies "weekdays" — she does this on weekdays only'],
-            correctAnswer: 1,
-            explanation: 'As written, "only" modifies "eats." If the intended meaning is "She eats vegetables on weekdays only," then "only" should be moved to the end: "She eats vegetables only on weekdays." If she eats nothing but vegetables, write: "She eats only vegetables on weekdays."'
+            question: 'The writer wants to say that no student other than Maya solved the bonus problem. Which sentence says exactly that?',
+            options: ['Only Maya solved the bonus problem.', 'Maya only solved the bonus problem.', 'Maya solved only the bonus problem.', 'Maya solved the only bonus problem.'],
+            correctAnswer: 0,
+            explanation: 'Placing "only" directly before "Maya" limits who solved it: no one else did. Putting "only" before "solved" is ambiguous, since it could mean she merely solved it or solved nothing else. Placing it before "the bonus problem" means Maya solved nothing except that problem. "The only bonus problem" says there was just one bonus problem and says nothing about other students.'
           }
         ]
       }
@@ -154,16 +165,16 @@ Rewrite the underlined portion to make it parallel. Type only the corrected word
       exercise: {
         questions: [
           {
-            question: '"Jogging through the park, a squirrel crossed the path in front of me." What is the best revision?',
-            options: ['No change needed', '"Jogging through the park, I saw a squirrel cross the path in front of me."', '"A squirrel, jogging through the park, crossed the path."', '"The path was crossed by a squirrel, jogging through the park."'],
+            question: 'The writer was the one jogging. Which version of the sentence fixes the modifier error?',
+            options: ['Jogging through the park, a squirrel crossed the path ahead of me.', 'Jogging through the park, I saw a squirrel cross the path ahead of me.', 'A squirrel, jogging through the park, crossed the path ahead of me.', 'The path ahead of me was crossed by a squirrel jogging through the park.'],
             correctAnswer: 1,
-            explanation: 'The dangling modifier "Jogging through the park" should describe "I" (the person jogging), not "a squirrel." Revision B correctly places the true subject right after the comma.'
+            explanation: 'The person jogging is the writer, so "I" must come right after the introductory phrase: "Jogging through the park, I saw a squirrel…" The original version leaves "a squirrel" right after the comma, so the squirrel seems to be jogging. The other two rewrites go further and state outright that the squirrel was the one jogging.'
           },
           {
             question: '"The professor told the students to study the chapter, review their notes, and that they should complete the worksheet." What is the best revision of the underlined portion?',
             options: ['No change', 'complete the worksheet', 'completing the worksheet', 'the worksheet should be completed'],
             correctAnswer: 1,
-            explanation: 'The parallel structure is "to study …, review …, and ___." Since "to" is shared from the beginning, the items should all be base verbs: "study, review, and complete."'
+            explanation: 'The parallel structure is "to study …, review …, and ___." Since "to" is shared from the beginning, the items should all be base verbs: "study, review, and complete." Keeping "that they should complete" switches to a clause, "completing" switches to a gerund, and "the worksheet should be completed" switches to a passive clause, so none of them match the first two items.'
           }
         ]
       }

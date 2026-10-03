@@ -83,8 +83,8 @@ A tense shift is an error when the time frame hasn't changed but the verb tense 
 - The recovering happened **first**, then the ambulance arrived.
 
 **Common ACT Pattern — "By the time" / "Before":**
-- ❌ *Before the concert started, the band **already tuned** their instruments.*
-- ✅ *Before the concert started, the band **had already tuned** their instruments.*
+- ❌ *Before the concert started, the musicians **already tuned** their instruments.*
+- ✅ *Before the concert started, the musicians **had already tuned** their instruments.*
 - The tuning happened before the starting → use past perfect for the earlier event.
 
 **ACT Tip:** Whenever you see "before," "by the time," or "after" in a sentence with two past events, check whether the earlier event uses past perfect (*had + verb*).
@@ -148,16 +148,16 @@ A tense shift is an error when the time frame hasn't changed but the verb tense 
       exercise: {
         questions: [
           {
-            question: '"After the team wins the championship, the fans rushed onto the field." Which revision fixes the tense error?',
+            question: '"After the team wins the championship last night, the fans rushed onto the field." Which revision fixes the tense error?',
             options: ['Change "wins" to "won"', 'Change "rushed" to "rush"', 'Change "rushed" to "had rushed"', 'No change needed'],
             correctAnswer: 0,
-            explanation: '"Rushed" is past tense, so the other verb should also be past tense: "won." The sentence describes a completed event.'
+            explanation: '"Last night" fixes the time frame in the past, so "wins" must become "won" to match "rushed." Changing "rushed" to "rush" puts a second verb in the present tense, which clashes with "last night." "Had rushed" would mean the fans rushed the field before the win, which reverses the order "after" sets up. Leaving "wins" keeps a present-tense verb in a completed past event.'
           },
           {
             question: '"The students have completed the assignment before the bell rang." What is wrong?',
-            options: ['Nothing — the sentence is correct', '"have completed" should be "had completed"', '"rang" should be "rings"', '"completed" should be "completing"'],
+            options: ['Nothing — the sentence is correct', '"have completed" should be "had completed"', '"rang" should be "has rung"', '"completed" should be "completing"'],
             correctAnswer: 1,
-            explanation: 'Two past events: completing happened before the bell rang. The earlier event needs past perfect: "had completed."'
+            explanation: 'Two past events: completing happened before the bell rang. The earlier event needs past perfect: "had completed." Present perfect ("have completed," "has rung") cannot pair with a finished past moment like the bell ringing, so the sentence is not correct as written and "has rung" does not fix it. "Have completing" is not a verb form at all.'
           }
         ]
       }
