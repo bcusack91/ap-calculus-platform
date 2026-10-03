@@ -13,6 +13,7 @@
  *   npx tsx scripts/create-act-subtopics.ts            # local (.env.local)
  *   PROD=1 npx tsx scripts/create-act-subtopics.ts     # production (.env)
  *   SKIP_MISSING_PARENTS=1 …                            # dev DBs lacking some legacy ACT topics
+ *   REFRESH_TEXT=1 …                                    # also rewrite textContent on existing rows
  */
 import { config } from 'dotenv'
 config({ path: process.env.PROD ? '.env' : '.env.local', override: true })
@@ -45,7 +46,7 @@ export const ACT_SUBTOPICS: Record<string, [string, string, string]> = {
   'act-test-day-strategy-act': ['act-timing-test-strategies', 'Test-Day Strategy', 'Format and registration, timing by section, guessing, mental preparation and retakes.'],
 }
 
-/** The lesson's Key Takeaways, part by part, as the topic page's text. */
+/** The lesson's Key Takeaways, part by part (or each part's intro when it has none), as the topic page's text. */
 async function textContentFor(slug: string, title: string, description: string): Promise<string> {
   const dir = path.resolve('src/data/interactive-lessons')
   const re = new RegExp(`^act-${slug}-part(\\d+)\\.ts$`)
@@ -54,7 +55,9 @@ async function textContentFor(slug: string, title: string, description: string):
   for (const f of files) {
     const mod = await import(pathToFileURL(path.join(dir, f)).href)
     const data = Object.values(mod).find((v: any) => v && Array.isArray(v.sections)) as { sections: { id: string; type: string; content?: string }[] }
-    const summary = data.sections.find((s) => s.type === 'text' && /summary|takeaway/i.test(s.id + ' ' + (s.content ?? '').slice(0, 80)))
+    const summary =
+      data.sections.find((s) => s.type === 'text' && /summary|takeaway/i.test(s.id + ' ' + (s.content ?? '').slice(0, 80))) ??
+      data.sections.find((s) => s.type === 'text' && s.content)
     if (summary?.content) chunks.push(summary.content.trim())
   }
   return chunks.join('\n\n')
@@ -64,7 +67,7 @@ async function main() {
   const prisma = new PrismaClient()
   const host = new URL(process.env.DATABASE_URL ?? '').hostname
   console.log(`target: ${process.env.PROD ? 'PROD' : 'local'} (${host})`)
-  let created = 0, linked = 0, kept = 0
+  let created = 0, linked = 0, kept = 0, refreshed = 0
   const parents = await prisma.topic.findMany({
     where: { slug: { in: [...new Set(Object.values(ACT_SUBTOPICS).map((v) => v[0]))] } },
     select: { id: true, slug: true, categoryId: true },
@@ -81,6 +84,10 @@ async function main() {
     if (!parent) continue
     const existing = await prisma.topic.findUnique({ where: { slug }, select: { id: true, parentTopicId: true } })
     if (existing) {
+      if (process.env.REFRESH_TEXT) {
+        await prisma.topic.update({ where: { slug }, data: { textContent: await textContentFor(slug, title, description) } })
+        refreshed++
+      }
       if (!existing.parentTopicId) {
         await prisma.topic.update({ where: { slug }, data: { parentTopicId: parent.id } })
         linked++
@@ -100,7 +107,7 @@ async function main() {
     })
     created++
   }
-  console.log(`created ${created}, linked ${linked}, already present ${kept}`)
+  console.log(`created ${created}, linked ${linked}, already present ${kept}, text refreshed ${refreshed}`)
   await prisma.$disconnect()
 }
 
