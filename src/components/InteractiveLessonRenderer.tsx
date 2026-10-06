@@ -417,6 +417,12 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
   const searchParams = useSearchParams()
   const router = useRouter()
   const { data: session } = useSession()
+  // Stable session keys for effect deps: every session refetch returns a new
+  // object, which re-ran the load effects below (duplicate API calls that
+  // count against the per-user rate limit).
+  const sessionUserId = session?.user?.id
+  /** undefined while the session loads, null when signed out, else the user id. */
+  const sessionKey = session === undefined ? undefined : (session?.user?.id ?? null)
   const totalParts = preloadedParts.length || 1
   const entersCompetitiveModeOnComplete = completionDestination === 'competitive'
   const practiceModeParts = practiceModePropParts ?? []
@@ -628,11 +634,10 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
   useEffect(() => {
     const loadProgress = async () => {
       if (progressLoaded) return
-      // session is undefined while loading, null when unauthenticated
-      if (session === undefined) return
+      if (sessionKey === undefined) return
 
       // Non-logged-in users: offer entrance quiz if available, otherwise proceed
-      if (!session?.user) {
+      if (!sessionKey) {
         if (topicHasEntranceQuiz && !urlPart) {
           setEntranceQuizPhase('choice')
         }
@@ -766,7 +771,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
     }
     
     loadProgress()
-  }, [session, topicSlug, progressLoaded, urlPart, totalParts, topicHasEntranceQuiz])
+  }, [sessionKey, topicSlug, progressLoaded, urlPart, totalParts, topicHasEntranceQuiz])
   
 
   // Smart batched saves: Save every 3 sections for progress tracking
@@ -793,7 +798,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
 
   // Fetch exit quiz status on mount (if topic has exit quiz)
   useEffect(() => {
-    if (!topicHasExitQuiz || !session?.user) return
+    if (!topicHasExitQuiz || !sessionUserId) return
     const fetchStatus = async () => {
       try {
         const res = await fetch(`/api/exit-quiz/status?topicSlug=${encodeURIComponent(topicSlug)}`)
@@ -811,7 +816,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
       }
     }
     fetchStatus()
-  }, [topicHasExitQuiz, session?.user, topicSlug])
+  }, [topicHasExitQuiz, sessionUserId, topicSlug])
 
   // Deep link from in-class slide decks: ?exitQuiz=1 jumps straight into the
   // graded exit quiz. Students arrive here from the presentation's closing
@@ -832,14 +837,14 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
 
   // The student's saved choice (signed out: hidden, toggle lasts the visit).
   useEffect(() => {
-    if (!session?.user) return
+    if (!sessionUserId) return
     let active = true
     fetch('/api/lessons/settings')
       .then((r) => (r.ok ? r.json() : null))
       .then((d) => { if (active && typeof d?.includeLowYield === 'boolean') setIncludeLowYield(d.includeLowYield) })
       .catch(() => {})
     return () => { active = false }
-  }, [session?.user])
+  }, [sessionUserId])
 
   /** Flip the low-yield setting, keeping the student on the same material:
    *  the current section and the completed ones are carried over by id. */

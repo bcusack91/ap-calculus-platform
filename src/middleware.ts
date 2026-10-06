@@ -7,7 +7,9 @@ import { authReasonForPath, signInUrl, signUpUrl } from '@/lib/auth-redirect'
 
 // ── API Rate Limiter (optional — skipped if Upstash not configured) ──
 let apiRatelimit: Ratelimit | null = null
+let anonApiRatelimit: Ratelimit | null = null
 let authRatelimit: Ratelimit | null = null
+let authReadRatelimit: Ratelimit | null = null
 let gameRatelimit: Ratelimit | null = null
 
 if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) {
@@ -15,19 +17,40 @@ if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) 
     url: process.env.UPSTASH_REDIS_REST_URL,
     token: process.env.UPSTASH_REDIS_REST_TOKEN,
   })
-  // General API: 60 requests per 60 seconds per IP
+  // General API, per signed-in USER. Measured (Oct 2026): one ordinary minute
+  // of study (dashboard → lesson → dashboard → a few flashcards) is ~55-60
+  // calls — the old 60/min budget, so real students hit 429s mid-session.
   apiRatelimit = new Ratelimit({
     redis,
-    limiter: Ratelimit.slidingWindow(60, '60 s'),
+    limiter: Ratelimit.slidingWindow(300, '60 s'),
     prefix: 'rl:api',
     analytics: true,
   })
-  // Auth endpoints: stricter — 30 requests per 60 seconds per IP
-  // (OAuth flows like Google involve multiple internal round-trips)
+  // General API, anonymous traffic per IP. A whole classroom browses behind
+  // one school IP before signing in (2-4 calls per page view each).
+  anonApiRatelimit = new Ratelimit({
+    redis,
+    limiter: Ratelimit.slidingWindow(600, '60 s'),
+    prefix: 'rl:api-anon',
+    analytics: true,
+  })
+  // Sign-in / sign-up / password endpoints, per IP. Sized for a class of ~30
+  // signing in at once from one school IP; password guessing is bounded
+  // separately per email (5 failures / 15 min, credentials-rate-limit.ts).
   authRatelimit = new Ratelimit({
     redis,
-    limiter: Ratelimit.slidingWindow(30, '60 s'),
+    limiter: Ratelimit.slidingWindow(150, '60 s'),
     prefix: 'rl:auth',
+    analytics: true,
+  })
+  // NextAuth's own plumbing (session, csrf, providers, OAuth callbacks): cheap
+  // reads called on every page load. Kept OFF the general budgets — a 429
+  // here makes next-auth treat a signed-in user as signed out, and a 429 on
+  // /providers sends a sign-in attempt straight to the "Sign-In Error" page.
+  authReadRatelimit = new Ratelimit({
+    redis,
+    limiter: Ratelimit.slidingWindow(600, '60 s'),
+    prefix: 'rl:auth-read',
     analytics: true,
   })
   // Competitive gameplay polls every ~500ms and is used by whole classrooms
@@ -168,10 +191,18 @@ export async function middleware(request: NextRequest) {
       !isCredentialsCallback &&
       /^\/api\/auth\/(callback|session|csrf|providers)/.test(nextUrl.pathname)
     const strictAuth = isAuthEndpoint && !isNextAuthInternal
-    const limiter = strictAuth ? authRatelimit : apiRatelimit
+    const subject = strictAuth ? `ip:${ip}` : await subjectKey()
+    const limiter = strictAuth
+      ? authRatelimit
+      : isNextAuthInternal
+        ? authReadRatelimit
+        : subject.startsWith('user:')
+          ? apiRatelimit
+          : anonApiRatelimit
     if (limiter) {
       try {
-        const key = strictAuth ? ip : await subjectKey()
+        // Strict auth stays keyed by the bare IP (its existing Redis keys).
+        const key = strictAuth ? ip : subject
         const { success, limit, remaining, reset } = await limiter.limit(key)
 
         if (!success) {

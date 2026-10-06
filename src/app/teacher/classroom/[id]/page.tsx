@@ -403,9 +403,12 @@ export default function ClassroomDetailPage() {
     }
   }, [classroomId, router])
 
+  // Keyed on the user id, not the session object: every session refetch makes
+  // a new object, which reloaded the classroom (and its grants) each time.
+  const sessionUserId = session?.user?.id
   useEffect(() => {
-    if (session) loadClassroom()
-  }, [session, loadClassroom])
+    if (sessionUserId) loadClassroom()
+  }, [sessionUserId, loadClassroom])
 
   // Refresh the classroom (members/assignments/competitions) when the teacher
   // returns to the tab, so stale data doesn't linger after a student joins or
@@ -651,9 +654,11 @@ export default function ClassroomDetailPage() {
     }
   }, [classroomId])
 
+  // Once per loaded class, not on every classroom refresh.
+  const hasClassroom = !!classroom
   useEffect(() => {
-    if (session && classroom) loadCompetitiveGrants()
-  }, [session, classroom, loadCompetitiveGrants])
+    if (sessionUserId && hasClassroom) loadCompetitiveGrants()
+  }, [sessionUserId, hasClassroom, loadCompetitiveGrants])
 
   const toggleCompetitiveAccess = async (studentId: string) => {
     const hasGrant = competitiveGrants[studentId]

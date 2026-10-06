@@ -448,6 +448,8 @@ export default function DynamicInteractiveLessonRenderer({
   textContent: string
 }) {
   const { data: session } = useSession()
+  // Stable dep: each session refetch is a new object (re-ran the load effect).
+  const sessionUserId = session?.user?.id
 
   // Parse sections & generate quizzes once (deterministic via seeded PRNG)
   const sections = useMemo(
@@ -549,7 +551,7 @@ export default function DynamicInteractiveLessonRenderer({
   // Load progress on mount
   useEffect(() => {
     const loadProgress = async () => {
-      if (!session?.user || progressLoaded) return
+      if (!sessionUserId || progressLoaded) return
       try {
         queryCountRef.current++
         const response = await fetch(
@@ -563,7 +565,7 @@ export default function DynamicInteractiveLessonRenderer({
       }
     }
     loadProgress()
-  }, [session, topicSlug, progressLoaded])
+  }, [sessionUserId, topicSlug, progressLoaded])
 
 
   // Checkpoint save every 3 sections

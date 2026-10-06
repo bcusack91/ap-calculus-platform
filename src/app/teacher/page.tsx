@@ -316,9 +316,12 @@ export default function TeacherDashboard() {
   }
 
 
+  // Keyed on the user id, not the session object: every session refetch makes
+  // a new object, which reloaded the whole dashboard each time.
+  const sessionUserId = session?.user?.id
   useEffect(() => {
-    if (session) loadDashboard()
-  }, [session, loadDashboard])
+    if (sessionUserId) loadDashboard()
+  }, [sessionUserId, loadDashboard])
 
   // The checklist's "Create a class" link lands here with ?create=1.
   // (Read from window rather than useSearchParams, which would force a
