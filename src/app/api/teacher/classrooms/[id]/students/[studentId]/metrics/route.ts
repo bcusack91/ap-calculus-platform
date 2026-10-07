@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { requireStudentInClassroom } from '@/lib/teacher-auth'
 import { loadStudentMetrics, METRICS_RANGES, type MetricsRange } from '@/lib/student-metrics'
+import { loadQuizResults } from '@/lib/quiz-results-server'
 
 export const dynamic = 'force-dynamic'
 
@@ -10,6 +11,8 @@ export const dynamic = 'force-dynamic'
  * One student's study report: active time, flashcards (ratings, time,
  * retention, backlog), questions by source, weakest areas, lessons, weekly
  * targets and — for MCAT students — section-score trend and pacing.
+ * `quizResults` holds the student's entrance/exit quizzes per topic, all time
+ * (the class Performance tab's lists; not affected by range or scope).
  * `scope=class` limits to work stamped with this class; the default is
  * everything the student did (owner decision 2026-09-29).
  */
@@ -24,9 +27,17 @@ export async function GET(req: NextRequest, { params }: { params: Promise<{ id: 
   const scope = sp.get('scope') === 'class' ? 'class' : 'all'
 
   try {
-    const metrics = await loadStudentMetrics(studentId, { range, classroomId: scope === 'class' ? classroomId : null })
+    const [metrics, quizResults] = await Promise.all([
+      loadStudentMetrics(studentId, { range, classroomId: scope === 'class' ? classroomId : null }),
+      loadQuizResults([studentId]),
+    ])
     return NextResponse.json(
-      { student: access.student, classroom: { id: access.classroom.id, name: access.classroom.name }, metrics },
+      {
+        student: access.student,
+        classroom: { id: access.classroom.id, name: access.classroom.name },
+        metrics,
+        quizResults: quizResults.get(studentId) ?? { exitQuizzes: [], entranceQuizzes: [] },
+      },
       { headers: { 'Cache-Control': 'private, no-store' } },
     )
   } catch (err) {

@@ -2,8 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { Prisma } from '@prisma/client'
 import { prisma } from '@/lib/prisma'
 import { requireClassroomAccess } from '@/lib/teacher-auth'
-import { summarizeEntranceQuizzes, summarizeExitQuizzes } from '@/lib/quiz-results'
-import { getInteractiveTopicConfig } from '@/data/interactive-lessons/registry'
+import { loadQuizResults } from '@/lib/quiz-results-server'
 
 /**
  * GET /api/teacher/classrooms/[id]/performance — get student performance data
@@ -107,37 +106,8 @@ export async function GET(
     where: { userId: { in: studentIds } },
   })
 
-  // Get exit quiz attempts for all students
-  const exitQuizAttempts = await prisma.exitQuizAttempt.findMany({
-    where: { userId: { in: studentIds } },
-    orderBy: { completedAt: 'desc' },
-  })
-
-  // Entrance quizzes: the per-question answers (QuestionActivity, recorded
-  // since 2026-09-29) and the lesson parts each student tested out of.
-  const entranceAnswers = await prisma.questionActivity.findMany({
-    where: { userId: { in: studentIds }, source: 'ENTRANCE' },
-    select: { userId: true, topicSlug: true, answered: true, correct: true, answeredAt: true },
-  })
-  const testOuts = await prisma.topicProgress.findMany({
-    where: { userId: { in: studentIds }, masteredParts: { not: Prisma.DbNull } },
-    select: { userId: true, masteredParts: true, topic: { select: { slug: true, title: true } } },
-  })
-
-  // Resolve real Topic titles for the quiz slugs (one query on the distinct
-  // slugs) so the client never has to humanize raw slugs like
-  // "mcat-physics-mechanics-kinematics-mcat".
-  const quizSlugs = Array.from(
-    new Set([...exitQuizAttempts.map((a) => a.topicSlug), ...entranceAnswers.map((a) => a.topicSlug)]),
-  )
-  const quizTopics = quizSlugs.length > 0
-    ? await prisma.topic.findMany({
-        where: { slug: { in: quizSlugs } },
-        select: { slug: true, title: true },
-      })
-    : []
-  const quizTitleBySlug = new Map([...testOuts.map((t) => [t.topic.slug, t.topic.title] as const), ...quizTopics.map((t) => [t.slug, t.title] as const)])
-  const totalPartsFor = (slug: string) => getInteractiveTopicConfig(slug)?.parts.length || null
+  // Entrance- and exit-quiz results (shared with the student study report)
+  const quizResults = await loadQuizResults(studentIds)
 
   // Aggregate per-student
   const studentPerformance = members.map((member) => {
@@ -197,18 +167,8 @@ export async function GET(
           mastery: Math.round((tp.masteryLevel || 0) * 100),
           lastAccessed: tp.lastAccessed,
         })),
-      exitQuizzes: summarizeExitQuizzes(
-        exitQuizAttempts.filter((a) => a.userId === userId),
-        quizTitleBySlug,
-      ),
-      entranceQuizzes: summarizeEntranceQuizzes(
-        entranceAnswers.filter((a) => a.userId === userId),
-        testOuts
-          .filter((t) => t.userId === userId)
-          .map((t) => ({ topicSlug: t.topic.slug, masteredParts: t.masteredParts })),
-        quizTitleBySlug,
-        totalPartsFor,
-      ),
+      exitQuizzes: quizResults.get(userId)?.exitQuizzes ?? [],
+      entranceQuizzes: quizResults.get(userId)?.entranceQuizzes ?? [],
     }
   })
 

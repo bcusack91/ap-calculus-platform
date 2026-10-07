@@ -1844,7 +1844,7 @@ export default function ClassroomDetailPage() {
                   </table>
                 </div>
 
-                <QuizResultsSections students={perfData.students} />
+                <QuizResultsSections students={perfData.students} className="mt-8" />
               </>
             )}
           </div>

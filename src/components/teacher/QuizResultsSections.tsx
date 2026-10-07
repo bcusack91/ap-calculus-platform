@@ -91,8 +91,13 @@ function CollapsibleSection({
     } catch {}
   }
   return (
-    <section className="mt-8 rounded-xl border border-gray-200 dark:border-gray-700">
+    <section className="rounded-xl border border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-800">
       <h3>
+        {/* The print stylesheet hides every button, so print the title as text. */}
+        <span className="hidden print:flex items-baseline gap-3 px-4 pt-3 pb-1 text-lg font-bold text-gray-900">
+          {title}
+          <span className="text-sm font-normal text-gray-600">{summary}</span>
+        </span>
         <button
           type="button"
           onClick={toggle}
@@ -102,14 +107,15 @@ function CollapsibleSection({
         >
           {icon}
           <span className="text-lg font-bold text-gray-900 dark:text-white">{title}</span>
-          <span className="ml-auto text-sm text-gray-500 dark:text-gray-400">{summary}</span>
+          <span className="ml-auto whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">{summary}</span>
           <ChevronDown
             className={`h-5 w-5 shrink-0 text-gray-500 dark:text-gray-400 transition-transform motion-reduce:transition-none ${open ? 'rotate-180' : ''}`}
             aria-hidden
           />
         </button>
       </h3>
-      <div id={panelId} hidden={!open} className="border-t border-gray-200 px-2 pb-2 dark:border-gray-700">
+      {/* Closed panels still print, so a printed report keeps the tables. */}
+      <div id={panelId} className={`border-t border-gray-200 px-2 pb-2 dark:border-gray-700 ${open ? '' : 'hidden print:block'}`}>
         {children}
       </div>
     </section>
@@ -118,7 +124,7 @@ function CollapsibleSection({
 
 const plural = (n: number, word: string) => `${n} ${word}${n === 1 ? '' : 's'}`
 
-function ExitQuizTable({ students }: { students: QuizResultsStudent[] }) {
+function ExitQuizTable({ students, showStudent }: { students: QuizResultsStudent[]; showStudent: boolean }) {
   const rows = students.flatMap((s) => (s.exitQuizzes ?? []).map((eq) => ({ s, eq })))
   if (rows.length === 0) {
     return <p className="px-2 py-4 text-sm text-gray-500 dark:text-gray-400">No exit quizzes taken yet.</p>
@@ -128,7 +134,7 @@ function ExitQuizTable({ students }: { students: QuizResultsStudent[] }) {
       <table className="w-full text-sm">
         <thead>
           <tr className="border-b border-gray-200 dark:border-gray-700">
-            <th className={`${TH} text-left`}>Student</th>
+            {showStudent && <th className={`${TH} text-left`}>Student</th>}
             <th className={`${TH} text-left`}>Topic</th>
             <th className={`${TH} text-center`}>Best Score</th>
             <th className={`${TH} text-center`}>Attempts</th>
@@ -142,7 +148,7 @@ function ExitQuizTable({ students }: { students: QuizResultsStudent[] }) {
             const percent = eq.bestPercent ?? Math.round((eq.bestScore / total) * 100)
             return (
               <tr key={`${s.userId}-${eq.topicSlug}`} className={ROW}>
-                <td className="whitespace-nowrap py-3 px-4 font-medium text-gray-900 dark:text-white">{s.name}</td>
+                {showStudent && <td className="whitespace-nowrap py-3 px-4 font-medium text-gray-900 dark:text-white">{s.name}</td>}
                 <td className="py-3 px-4 text-gray-700 dark:text-gray-300">{topicLabel(eq)}</td>
                 <td className="whitespace-nowrap py-3 px-4 text-center">
                   <span className={`font-bold ${scoreColor(percent)}`}>
@@ -170,7 +176,7 @@ function ExitQuizTable({ students }: { students: QuizResultsStudent[] }) {
   )
 }
 
-function EntranceQuizTable({ students }: { students: QuizResultsStudent[] }) {
+function EntranceQuizTable({ students, showStudent }: { students: QuizResultsStudent[]; showStudent: boolean }) {
   const rows = students.flatMap((s) => (s.entranceQuizzes ?? []).map((q) => ({ s, q })))
   if (rows.length === 0) {
     return <p className="px-2 py-4 text-sm text-gray-500 dark:text-gray-400">No entrance quizzes taken yet.</p>
@@ -181,7 +187,7 @@ function EntranceQuizTable({ students }: { students: QuizResultsStudent[] }) {
         <table className="w-full text-sm">
           <thead>
             <tr className="border-b border-gray-200 dark:border-gray-700">
-              <th className={`${TH} text-left`}>Student</th>
+              {showStudent && <th className={`${TH} text-left`}>Student</th>}
               <th className={`${TH} text-left`}>Topic</th>
               <th className={`${TH} text-center`}>Latest Score</th>
               <th className={`${TH} text-center`}>Best Score</th>
@@ -195,7 +201,7 @@ function EntranceQuizTable({ students }: { students: QuizResultsStudent[] }) {
               const allParts = q.totalParts != null && q.totalParts > 0 && q.partsTestedOut >= q.totalParts
               return (
                 <tr key={`${s.userId}-${q.topicSlug}`} className={ROW}>
-                  <td className="whitespace-nowrap py-3 px-4 font-medium text-gray-900 dark:text-white">{s.name}</td>
+                  {showStudent && <td className="whitespace-nowrap py-3 px-4 font-medium text-gray-900 dark:text-white">{s.name}</td>}
                   <td className="py-3 px-4 text-gray-700 dark:text-gray-300">{topicLabel(q)}</td>
                   <td className="whitespace-nowrap py-3 px-4 text-center">
                     {q.lastCorrect != null && q.lastTotal ? (
@@ -240,30 +246,46 @@ function EntranceQuizTable({ students }: { students: QuizResultsStudent[] }) {
   )
 }
 
-/** The Performance tab's entrance- and exit-quiz results, each collapsible. */
-export default function QuizResultsSections({ students }: { students: QuizResultsStudent[] }) {
+/**
+ * Entrance- and exit-quiz results, each collapsible: the class Performance tab
+ * (every student) and one student's study report (`showStudent={false}`).
+ * `storagePrefix` keeps each page's open/closed choice separate.
+ */
+export default function QuizResultsSections({
+  students,
+  showStudent = true,
+  storagePrefix = 'teacher.performance',
+  className = '',
+}: {
+  students: QuizResultsStudent[]
+  showStudent?: boolean
+  storagePrefix?: string
+  className?: string
+}) {
   const entrance = students.flatMap((s) => s.entranceQuizzes ?? [])
   const exit = students.flatMap((s) => s.exitQuizzes ?? [])
   const testedOut = entrance.filter((q) => q.totalParts && q.partsTestedOut >= q.totalParts).length
   const passed = exit.filter((q) => q.passed).length
+  // One row per student per topic; for a single student that's one per topic.
+  const unit = showStudent ? 'result' : 'topic'
   return (
-    <>
+    <div className={`space-y-4 ${className}`}>
       <CollapsibleSection
-        storageKey="teacher.performance.entranceQuizzes"
+        storageKey={`${storagePrefix}.entranceQuizzes`}
         icon={<DoorOpen className="h-5 w-5 shrink-0 text-accent" aria-hidden />}
         title="Entrance Quiz Results"
-        summary={entrance.length ? `${plural(entrance.length, 'result')} · ${testedOut} tested out` : 'None yet'}
+        summary={entrance.length ? `${plural(entrance.length, unit)} · ${testedOut} tested out` : 'None yet'}
       >
-        <EntranceQuizTable students={students} />
+        <EntranceQuizTable students={students} showStudent={showStudent} />
       </CollapsibleSection>
       <CollapsibleSection
-        storageKey="teacher.performance.exitQuizzes"
+        storageKey={`${storagePrefix}.exitQuizzes`}
         icon={<ClipboardCheck className="h-5 w-5 shrink-0 text-accent" aria-hidden />}
         title="Exit Quiz Results"
-        summary={exit.length ? `${plural(exit.length, 'result')} · ${passed} passed` : 'None yet'}
+        summary={exit.length ? `${plural(exit.length, unit)} · ${passed} passed` : 'None yet'}
       >
-        <ExitQuizTable students={students} />
+        <ExitQuizTable students={students} showStudent={showStudent} />
       </CollapsibleSection>
-    </>
+    </div>
   )
 }

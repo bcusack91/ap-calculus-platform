@@ -3,7 +3,7 @@
 import { Suspense, useCallback, useEffect, useMemo, useState } from 'react'
 import { useParams, useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
-import { AlertTriangle, ArrowLeft, Check, Clock, Layers, ListChecks, Printer, Stethoscope, Target } from 'lucide-react'
+import { AlertTriangle, ArrowLeft, Check, ClipboardList, Clock, Layers, ListChecks, Printer, Stethoscope, Target } from 'lucide-react'
 import type { MetricsRange, StudentMetrics } from '@/lib/student-metrics'
 import {
   NoData,
@@ -21,6 +21,7 @@ import {
   type StudyScope,
 } from '@/components/teacher/StudyReportShared'
 import { ActiveTimeChart, HBarList, McatTrendChart, Meter, PacingChart, dayList } from '@/components/teacher/StudyReportCharts'
+import QuizResultsSections, { type EntranceQuizResult, type ExitQuizResult } from '@/components/teacher/QuizResultsSections'
 
 /**
  * Per-student study report for a teacher (owner request 2026-09-29: robust
@@ -37,6 +38,8 @@ interface Payload {
   student: { id: string; name: string | null; email: string | null }
   classroom: { id: string; name: string }
   metrics: StudentMetrics
+  /** Entrance/exit quizzes per topic, all time (absent from an older server). */
+  quizResults?: { entranceQuizzes: EntranceQuizResult[]; exitQuizzes: ExitQuizResult[] }
 }
 
 const SOURCE_ROWS: { key: keyof StudentMetrics['questions']['bySource']; label: string }[] = [
@@ -547,6 +550,15 @@ function StudentStudyReport() {
             <ActiveTimeSection m={m} />
             <FlashcardSection m={m} />
             <LessonsSection m={m} />
+            {data?.quizResults && (
+              <Card title="Entrance & exit quizzes" icon={ClipboardList} subtitle="Every topic, all time — not affected by the filters above.">
+                <QuizResultsSections
+                  students={[{ userId: data.student.id, name, ...data.quizResults }]}
+                  showStudent={false}
+                  storagePrefix="teacher.studentReport"
+                />
+              </Card>
+            )}
             {m.mcat && <McatSection mcat={m.mcat} />}
             <p className="text-[11px] text-gray-400 dark:text-gray-500">
               Generated {new Date(m.generatedAt).toLocaleString()}. {rangeLabel}, {scopeLabel.toLowerCase()}.
