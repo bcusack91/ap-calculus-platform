@@ -24,6 +24,7 @@ import ClassGameOptions, {
 } from '@/components/teacher/ClassGameOptions'
 import HelpLink, { HELP_ARTICLES } from '@/components/HelpLink'
 import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
+import QuizResultsSections, { type EntranceQuizResult, type ExitQuizResult } from '@/components/teacher/QuizResultsSections'
 import { topicReviewAssignment } from '@/lib/topic-review-assignment'
 import { markJoinCodeShared } from '@/lib/teacher-getting-started'
 import ImportRosterModal from '@/components/teacher/ImportRosterModal'
@@ -154,16 +155,8 @@ interface ClassroomPerformanceData {
       longest: number
       lastActive: string | null
     }
-    exitQuizzes?: {
-      topicSlug: string
-      topicTitle?: string | null // real Topic title, resolved by the performance API
-      totalAttempts: number
-      passed: boolean
-      bestScore: number
-      lastScore: number | null
-      lastAttempt: string | null
-      mustRedoUnit: boolean
-    }[]
+    exitQuizzes?: ExitQuizResult[]
+    entranceQuizzes?: EntranceQuizResult[]
   }[]
 }
 
@@ -1851,74 +1844,7 @@ export default function ClassroomDetailPage() {
                   </table>
                 </div>
 
-                {/* Exit Quiz Results */}
-                {perfData.students.some(s => s.exitQuizzes && s.exitQuizzes.length > 0) && (
-                  <div className="mt-8">
-                    <h3 className="text-lg font-bold mb-3 text-gray-900 dark:text-white">Exit Quiz Results</h3>
-                    <div className="overflow-x-auto">
-                      <table className="w-full text-sm">
-                        <thead>
-                          <tr className="border-b border-gray-200 dark:border-gray-700">
-                            <th className="text-left py-3 px-4 font-semibold text-gray-700 dark:text-gray-300">Student</th>
-                            <th className="text-left py-3 px-4 font-semibold text-gray-700 dark:text-gray-300">Topic</th>
-                            <th className="text-center py-3 px-4 font-semibold text-gray-700 dark:text-gray-300">Best Score</th>
-                            <th className="text-center py-3 px-4 font-semibold text-gray-700 dark:text-gray-300">Attempts</th>
-                            <th className="text-center py-3 px-4 font-semibold text-gray-700 dark:text-gray-300">Status</th>
-                            <th className="text-center py-3 px-4 font-semibold text-gray-700 dark:text-gray-300">Last Attempt</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          {perfData.students.flatMap(s =>
-                            (s.exitQuizzes || []).map((eq, idx) => (
-                              <tr key={`${s.userId}-${eq.topicSlug}-${idx}`} className="border-b border-gray-100 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/30">
-                                <td className="py-3 px-4">
-                                  <p className="font-medium text-gray-900 dark:text-white">{s.name}</p>
-                                </td>
-                                <td className="py-3 px-4 text-gray-700 dark:text-gray-300">
-                                  {/* Prefer the real Topic title from the API; the humanized
-                                      fallback drops a duplicated leading/trailing "mcat"
-                                      segment (e.g. "mcat-physics-…-mcat") and renders the
-                                      exam name as MCAT, not "Mcat". */}
-                                  {eq.topicTitle ?? (() => {
-                                    const parts = eq.topicSlug.split('-')
-                                    if (parts.length > 1 && parts[0] === 'mcat' && parts[parts.length - 1] === 'mcat') parts.pop()
-                                    return parts
-                                      .map(w => (w === 'mcat' ? 'MCAT' : w.charAt(0).toUpperCase() + w.slice(1)))
-                                      .join(' ')
-                                  })()}
-                                </td>
-                                <td className="text-center py-3 px-4">
-                                  <span className={`font-bold ${eq.bestScore >= 7 ? 'text-green-600' : eq.bestScore >= 5 ? 'text-yellow-600' : 'text-red-600'}`}>
-                                    {eq.bestScore}/10
-                                  </span>
-                                </td>
-                                <td className="text-center py-3 px-4 text-gray-600 dark:text-gray-400">{eq.totalAttempts}</td>
-                                <td className="text-center py-3 px-4">
-                                  {eq.passed ? (
-                                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400">
-                                      Passed
-                                    </span>
-                                  ) : eq.mustRedoUnit ? (
-                                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400">
-                                      Must Redo Unit
-                                    </span>
-                                  ) : (
-                                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400">
-                                      Can Retry
-                                    </span>
-                                  )}
-                                </td>
-                                <td className="text-center py-3 px-4 text-xs text-gray-400">
-                                  {eq.lastAttempt ? new Date(eq.lastAttempt).toLocaleDateString() : '—'}
-                                </td>
-                              </tr>
-                            ))
-                          )}
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                )}
+                <QuizResultsSections students={perfData.students} />
               </>
             )}
           </div>

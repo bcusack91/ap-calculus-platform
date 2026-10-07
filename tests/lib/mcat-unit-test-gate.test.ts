@@ -2,7 +2,7 @@
  * The MCAT retake gate now has two parts: every plan topic cleared AND the
  * cycle's unit test passed (a teacher's one-shot waiver still opens it).
  */
-import { describe, it, expect, vi, beforeEach } from 'vitest'
+import { describe, it, expect, vi, beforeAll, beforeEach } from 'vitest'
 
 const SLUGS = [
   'mcat-biochemistry-enzymes-kinetics-mcat',
@@ -24,6 +24,15 @@ const db = {
 }
 vi.mock('@/lib/prisma', () => ({ prisma: db }))
 
+// mcat-plan pulls in the large MCAT data modules; under full-suite load that
+// first import alone can exceed the 5 s per-test timeout (a timed-out test
+// then keeps running and eats the next test's one-shot mocks). Load it once,
+// up front, with room to spare.
+let buildMcatPlanStatus: typeof import('@/lib/mcat-plan').buildMcatPlanStatus
+beforeAll(async () => {
+  ;({ buildMcatPlanStatus } = await import('@/lib/mcat-plan'))
+}, 60_000)
+
 beforeEach(() => {
   vi.clearAllMocks()
   db.diagnosticTest.findFirst.mockResolvedValue({
@@ -43,7 +52,6 @@ beforeEach(() => {
 
 describe('buildMcatPlanStatus — unit test gate', () => {
   it('all topics cleared but no unit test yet: still locked, unit test available', async () => {
-    const { buildMcatPlanStatus } = await import('@/lib/mcat-plan')
     const s = await buildMcatPlanStatus('u1')
     expect(s.pendingTopics).toHaveLength(0)
     expect(s.unitTest).toMatchObject({ available: true, passed: false, attempts: 0, passPercent: 75, questionCount: 25 })
@@ -51,7 +59,6 @@ describe('buildMcatPlanStatus — unit test gate', () => {
   })
 
   it('a failed sitting keeps it locked; a passing one unlocks it', async () => {
-    const { buildMcatPlanStatus } = await import('@/lib/mcat-plan')
     db.mcatUnitTest.findMany.mockResolvedValueOnce([{ id: 'a', completedAt: AFTER, percentage: 64, passed: false }])
     const failed = await buildMcatPlanStatus('u1')
     expect(failed.canRetakeDiagnostic).toBe(false)
@@ -67,7 +74,6 @@ describe('buildMcatPlanStatus — unit test gate', () => {
   })
 
   it('a topic still pending: unit test unavailable and the gate locked', async () => {
-    const { buildMcatPlanStatus } = await import('@/lib/mcat-plan')
     db.exitQuizAttempt.findMany.mockResolvedValueOnce(
       SLUGS.slice(1).map((topicSlug) => ({ topicSlug, score: 9, totalQuestions: 10, completedAt: AFTER })),
     )
@@ -78,7 +84,6 @@ describe('buildMcatPlanStatus — unit test gate', () => {
   })
 
   it("a teacher's waiver still opens the gate without the unit test", async () => {
-    const { buildMcatPlanStatus } = await import('@/lib/mcat-plan')
     db.user.findUnique.mockResolvedValueOnce({ diagnosticGateWaivedAt: AFTER })
     const s = await buildMcatPlanStatus('u1')
     expect(s.unitTest?.passed).toBe(false)
