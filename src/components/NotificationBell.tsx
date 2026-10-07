@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { useEffect, useRef, useState, useCallback } from 'react'
+import { Megaphone } from 'lucide-react'
 import AvatarDisplay from './AvatarDisplay'
 import type { AvatarData } from '@/types/avatar'
 import { publicDisplayName } from '@/lib/display-name'
@@ -33,9 +34,23 @@ interface CompletedItem {
   outcome: 'win' | 'loss' | 'tie'
 }
 
+/** A class announcement from the last 14 days (students in a class only). */
+interface AnnouncementItem {
+  kind: 'announcement'
+  id: string
+  classroomId: string
+  classroomName: string
+  authorName: string | null
+  title: string
+  timestamp: string
+  /** Posted after the student last saw that class's announcements. */
+  unread: boolean
+}
+
 interface NotificationPayload {
   incoming: IncomingItem[]
   completed: CompletedItem[]
+  announcements?: AnnouncementItem[]
   latestTimestamp: number
 }
 
@@ -111,8 +126,8 @@ export function NotificationBell() {
     }
   }, [])
 
-  const items: Array<IncomingItem | CompletedItem> = data
-    ? [...data.incoming, ...data.completed].sort(
+  const items: Array<IncomingItem | CompletedItem | AnnouncementItem> = data
+    ? [...data.incoming, ...data.completed, ...(data.announcements ?? [])].sort(
         (a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime()
       )
     : []
@@ -157,19 +172,19 @@ export function NotificationBell() {
           className="absolute right-0 mt-2 w-80 sm:w-96 max-h-[28rem] overflow-y-auto rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-xl z-50"
         >
           <div className="px-4 py-3 border-b border-gray-100 dark:border-gray-800 flex items-center justify-between">
-            <h3 className="text-sm font-semibold text-gray-900 dark:text-white">Challenges</h3>
+            <h3 className="text-sm font-semibold text-gray-900 dark:text-white">Notifications</h3>
             <Link
               href="/competitive"
               onClick={() => setOpen(false)}
               className="text-xs text-indigo-600 dark:text-indigo-400 hover:underline"
             >
-              View all
+              All challenges
             </Link>
           </div>
 
           {items.length === 0 ? (
             <div className="p-6 text-center text-sm text-gray-500 dark:text-gray-400">
-              No challenges yet.<br />
+              Nothing new yet.<br />
               <Link
                 href="/competitive"
                 onClick={() => setOpen(false)}
@@ -181,6 +196,35 @@ export function NotificationBell() {
           ) : (
             <ul className="divide-y divide-gray-100 dark:divide-gray-800">
               {items.slice(0, 15).map(item => {
+                if (item.kind === 'announcement') {
+                  return (
+                    <li key={`a-${item.id}`}>
+                      <Link
+                        href={`/assignments#class-${item.classroomId}`}
+                        onClick={() => setOpen(false)}
+                        className="flex items-start gap-3 px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors"
+                      >
+                        <div className="w-9 h-9 shrink-0 rounded-full bg-accent-subtle dark:bg-accent-light/20 flex items-center justify-center">
+                          <Megaphone className="w-4 h-4 text-accent" aria-hidden />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <p className="text-sm text-gray-900 dark:text-white">
+                            <span className="font-semibold">{item.authorName || 'Your teacher'}</span> posted in {item.classroomName}
+                          </p>
+                          <p className="flex gap-1 text-xs text-gray-500 dark:text-gray-400">
+                            <span className="min-w-0 truncate">{item.title}</span>
+                            <span className="shrink-0">· {relativeTime(item.timestamp)}</span>
+                          </p>
+                        </div>
+                        {item.unread && (
+                          <span className="shrink-0 text-xs font-semibold px-2 py-0.5 rounded-full bg-accent-subtle text-accent dark:bg-accent-light/20 dark:text-accent-muted">
+                            New
+                          </span>
+                        )}
+                      </Link>
+                    </li>
+                  )
+                }
                 if (item.kind === 'incoming') {
                   return (
                     <li key={`i-${item.id}`}>

@@ -10,6 +10,7 @@ import AvatarDisplay from '@/components/AvatarDisplay'
 import { AvatarData } from '@/types/avatar'
 import ProgressRing from '@/components/ProgressRing'
 import LiveNowBanner from '@/components/LiveNowBanner'
+import ClassAnnouncementsBanner from '@/components/ClassAnnouncementsBanner'
 import AchievementToast from '@/components/AchievementToast'
 import ProgressCharts from '@/components/ProgressCharts'
 import StudyPlanner from '@/components/StudyPlanner'
@@ -550,6 +551,9 @@ function DashboardContent() {
         <LiveNowBanner />
 
         <NextStepCard step={nextStep} />
+
+        {/* New class announcements — below the one next step, until read or dismissed */}
+        <ClassAnnouncementsBanner />
 
         {/* Also today — whatever the next-step card didn't take */}
         <div className="mb-6 flex flex-wrap items-center gap-2">

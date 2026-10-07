@@ -1311,6 +1311,9 @@ model ClassroomMember {
   joinedAt    DateTime @default(now())
   isActive    Boolean  @default(true)
   nickname    String? // optional display name within class
+  /// When the student last saw this class's announcements (dashboard banner /
+  /// Assignments page). Null = never; only the last 14 days count as new.
+  announcementsSeenAt DateTime?
 
   classroom Classroom @relation(fields: [classroomId], references: [id], onDelete: Cascade)
   user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)

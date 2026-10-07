@@ -81,6 +81,16 @@ export default function ClassroomAnnouncements({
           } catch {
             // localStorage unavailable — badges just don't show
           }
+          // Reading the list clears this class from the dashboard banner and
+          // the bell's "New" tags on every device.
+          const newestShown = list.reduce((max, a) => (a.createdAt > max ? a.createdAt : max), '')
+          if (newestShown) {
+            void fetch('/api/announcements/seen', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ classroomId, upTo: newestShown }),
+            }).catch(() => {})
+          }
         }
       } else {
         setError('Failed to load announcements')

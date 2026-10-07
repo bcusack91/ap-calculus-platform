@@ -174,6 +174,16 @@ export default function StudentAssignmentsPage() {
     }
   }, [authStatus, router])
 
+  // Links from the dashboard banner / bell target #class-<id>; the class
+  // blocks render only after this page's data loads, so scroll once they exist.
+  useEffect(() => {
+    if (classrooms.length === 0 || typeof window === 'undefined') return
+    const hash = window.location.hash.slice(1)
+    if (!hash.startsWith('class-')) return
+    const t = setTimeout(() => document.getElementById(hash)?.scrollIntoView({ block: 'start' }), 300)
+    return () => clearTimeout(t)
+  }, [classrooms])
+
   const loadAssignments = async () => {
     try {
       // Teacher-assigned work lives in two tables — Assignment and
@@ -310,7 +320,7 @@ export default function StudentAssignmentsPage() {
         {classrooms.length > 0 && (
           <div className="space-y-6 mb-8">
             {classrooms.map((c) => (
-              <div key={c.id}>
+              <div key={c.id} id={`class-${c.id}`} className="scroll-mt-24">
                 {c.groups && c.groups.length > 0 && (
                   <div className="mb-2 flex flex-wrap items-center gap-2">
                     <span className="text-xs font-semibold text-gray-500 dark:text-gray-400">

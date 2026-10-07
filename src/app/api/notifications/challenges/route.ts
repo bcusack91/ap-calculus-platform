@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
+import { recentAnnouncementsFor } from '@/lib/student-announcements'
 
 /**
  * GET /api/notifications/challenges
@@ -8,6 +9,8 @@ import { prisma } from '@/lib/prisma'
  * Returns:
  *   incoming  — challenges sent TO the current user that they haven't played yet
  *   completed — challenges the current user SENT that have just finished (recipient played)
+ *   announcements — the student's class announcements from the last 14 days
+ *                   (`unread` = posted after they last saw that class's)
  *
  * "Seen" state is tracked client-side via localStorage timestamp; the bell shows
  * a dot when any item's createdAt/completedAt is newer than the saved timestamp.
@@ -20,7 +23,7 @@ export async function GET() {
     }
     const userId = session.user.id
 
-    const [incoming, completedSent] = await Promise.all([
+    const [incoming, completedSent, announcements] = await Promise.all([
       // Open challenges where the current user is the (designated) recipient and hasn't played
       prisma.asyncChallenge.findMany({
         where: {
@@ -56,6 +59,11 @@ export async function GET() {
         orderBy: { completedAt: 'desc' },
         take: 20,
       }),
+      // Never let announcements take the challenge feed down with them.
+      recentAnnouncementsFor(userId).catch((err) => {
+        console.error('[notifications] announcements failed (ignored):', err)
+        return []
+      }),
     ])
 
     const incomingItems = incoming.map(c => ({
@@ -87,13 +95,26 @@ export async function GET() {
       }
     })
 
+    const announcementItems = announcements.map(a => ({
+      kind: 'announcement' as const,
+      id: a.id,
+      classroomId: a.classroomId,
+      classroomName: a.classroomName,
+      authorName: a.authorName,
+      title: a.title,
+      timestamp: a.createdAt,
+      unread: a.unread,
+    }))
+
     return NextResponse.json({
       incoming: incomingItems,
       completed: completedItems,
+      announcements: announcementItems,
       latestTimestamp:
         [
           ...incomingItems.map(i => new Date(i.timestamp).getTime()),
           ...completedItems.map(i => new Date(i.timestamp).getTime()),
+          ...announcementItems.map(i => new Date(i.timestamp).getTime()),
         ].sort((a, b) => b - a)[0] ?? 0,
     }, {
       headers: { 'Cache-Control': 'private, no-store' },
