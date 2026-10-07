@@ -85,11 +85,11 @@ function chartDays(m: StudentMetrics): string[] {
   return dayList(start, end)
 }
 
-function Card({ title, icon: Icon, subtitle, children }: {
-  title: string; icon: typeof Clock; subtitle?: React.ReactNode; children: React.ReactNode
+function Card({ id, title, icon: Icon, subtitle, children }: {
+  id?: string; title: string; icon: typeof Clock; subtitle?: React.ReactNode; children: React.ReactNode
 }) {
   return (
-    <section className="report-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-5 sm:p-6">
+    <section id={id} className="report-card scroll-mt-4 bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-5 sm:p-6">
       <h2 className="flex items-center gap-2 text-xl font-bold text-gray-900 dark:text-white">
         <Icon className="w-5 h-5 text-accent print:hidden" aria-hidden />
         {title}
@@ -288,7 +288,7 @@ function LessonsSection({ m }: { m: StudentMetrics }) {
         </div>
       )}
 
-      <h3 className="mt-6 mb-2 text-sm font-semibold text-gray-900 dark:text-white">Exit quizzes</h3>
+      <h3 className="mt-6 mb-2 text-sm font-semibold text-gray-900 dark:text-white">Exit quizzes in this range</h3>
       {e.attempts === 0 && e.topicsCleared === 0 ? (
         <p className="text-sm text-gray-500 dark:text-gray-400">No exit quizzes taken in this range.</p>
       ) : (
@@ -298,6 +298,9 @@ function LessonsSection({ m }: { m: StudentMetrics }) {
           <Stat label="Topics cleared" value={String(e.topicsCleared)} hint="first pass in range" />
         </div>
       )}
+      <p className="mt-2 text-xs text-gray-500 dark:text-gray-400 print:hidden">
+        Scores by topic, all time: see <a href="#quiz-results" className="font-medium text-accent hover:underline">Entrance &amp; exit quizzes</a> below.
+      </p>
 
       <h3 className="mt-6 mb-2 text-sm font-semibold text-gray-900 dark:text-white">Weakest areas</h3>
       {m.weakAreas.length === 0 ? (
@@ -551,7 +554,7 @@ function StudentStudyReport() {
             <FlashcardSection m={m} />
             <LessonsSection m={m} />
             {data?.quizResults && (
-              <Card title="Entrance & exit quizzes" icon={ClipboardList} subtitle="Every topic, all time — not affected by the filters above.">
+              <Card id="quiz-results" title="Entrance & exit quizzes" icon={ClipboardList} subtitle="Scores by topic, all time — not affected by the filters above.">
                 <QuizResultsSections
                   students={[{ userId: data.student.id, name, ...data.quizResults }]}
                   showStudent={false}

@@ -184,15 +184,14 @@ export async function GET(
         : 0,
     totalTopicsCompleted: studentPerformance.reduce((s, p) => s + p.topicStats.completed, 0),
     activeStreaks: studentPerformance.filter((p) => p.streak.current > 0).length,
-    avgAssignmentScore:
-      studentPerformance.length > 0
-        ? Math.round(
-            studentPerformance
-              .filter((s) => s.assignmentStats.avgScore !== null)
-              .reduce((sum, s) => sum + (s.assignmentStats.avgScore || 0), 0) /
-              Math.max(1, studentPerformance.filter((s) => s.assignmentStats.avgScore !== null).length),
-          )
-        : 0,
+    // Average over students with a scored assignment; null (shown as "—")
+    // when nobody has one yet, rather than a misleading 0%.
+    avgAssignmentScore: (() => {
+      const scored = studentPerformance.filter((s) => s.assignmentStats.avgScore !== null)
+      return scored.length > 0
+        ? Math.round(scored.reduce((sum, s) => sum + (s.assignmentStats.avgScore ?? 0), 0) / scored.length)
+        : null
+    })(),
     avgStreak:
       studentPerformance.length > 0
         ? Math.round(

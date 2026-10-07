@@ -133,7 +133,7 @@ interface ClassroomPerformanceData {
   classSummary: {
     avgMastery: number
     totalTopicsCompleted: number
-    avgAssignmentScore: number
+    avgAssignmentScore: number | null
     avgStreak: number
   }
   students: {
@@ -148,7 +148,7 @@ interface ClassroomPerformanceData {
     assignmentStats: {
       completed: number
       total: number
-      avgScore: number
+      avgScore: number | null
     }
     streak: {
       current: number
@@ -1736,7 +1736,7 @@ export default function ClassroomDetailPage() {
                     <div className="text-xs text-gray-500">Topics Completed</div>
                   </div>
                   <div className="p-4 rounded-xl bg-accent-subtle dark:bg-accent-light/10 text-center">
-                    <div className="text-2xl font-bold text-accent">{perfData.classSummary.avgAssignmentScore}%</div>
+                    <div className="text-2xl font-bold text-accent">{perfData.classSummary.avgAssignmentScore == null ? '—' : `${perfData.classSummary.avgAssignmentScore}%`}</div>
                     <div className="text-xs text-gray-500">Avg Assignment Score</div>
                   </div>
                   <div className="p-4 rounded-xl bg-orange-50 dark:bg-orange-900/10 text-center">
@@ -1822,12 +1822,16 @@ export default function ClassroomDetailPage() {
                             {s.assignmentStats.completed}/{s.assignmentStats.total}
                           </td>
                           <td className="text-center py-3 px-4">
-                            <span className={`font-bold ${
-                              s.assignmentStats.avgScore >= 80 ? 'text-green-600' :
-                              s.assignmentStats.avgScore >= 60 ? 'text-yellow-600' : 'text-red-600'
-                            }`}>
-                              {s.assignmentStats.avgScore}%
-                            </span>
+                            {s.assignmentStats.avgScore == null ? (
+                              <span className="text-gray-500 dark:text-gray-400" title="No scored assignments yet">—</span>
+                            ) : (
+                              <span className={`font-bold ${
+                                s.assignmentStats.avgScore >= 80 ? 'text-green-600' :
+                                s.assignmentStats.avgScore >= 60 ? 'text-yellow-600' : 'text-red-600'
+                              }`}>
+                                {s.assignmentStats.avgScore}%
+                              </span>
+                            )}
                           </td>
                           <td className="text-center py-3 px-4">
                             <span className="text-orange-600 font-bold">{s.streak.current}</span>
