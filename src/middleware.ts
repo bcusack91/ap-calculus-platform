@@ -12,6 +12,13 @@ let authRatelimit: Ratelimit | null = null
 let authReadRatelimit: Ratelimit | null = null
 let gameRatelimit: Ratelimit | null = null
 
+// Upstash bills per command and the free plan's monthly quota ran out (Oct
+// 2026), after which every limiter failed open. Two savings with no effect on
+// latency: `analytics: false` drops the extra command each check used to
+// send, and a shared in-memory cache answers for keys that are already
+// blocked without a round trip.
+const limiterCache = new Map<string, number>()
+
 if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) {
   const redis = new Redis({
     url: process.env.UPSTASH_REDIS_REST_URL,
@@ -24,7 +31,8 @@ if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) 
     redis,
     limiter: Ratelimit.slidingWindow(300, '60 s'),
     prefix: 'rl:api',
-    analytics: true,
+    analytics: false,
+    ephemeralCache: limiterCache,
   })
   // General API, anonymous traffic per IP. A whole classroom browses behind
   // one school IP before signing in (2-4 calls per page view each).
@@ -32,7 +40,8 @@ if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) 
     redis,
     limiter: Ratelimit.slidingWindow(600, '60 s'),
     prefix: 'rl:api-anon',
-    analytics: true,
+    analytics: false,
+    ephemeralCache: limiterCache,
   })
   // Sign-in / sign-up / password endpoints, per IP. Sized for a class of ~30
   // signing in at once from one school IP; password guessing is bounded
@@ -41,7 +50,8 @@ if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) 
     redis,
     limiter: Ratelimit.slidingWindow(150, '60 s'),
     prefix: 'rl:auth',
-    analytics: true,
+    analytics: false,
+    ephemeralCache: limiterCache,
   })
   // NextAuth's own plumbing (session, csrf, providers, OAuth callbacks): cheap
   // reads called on every page load. Kept OFF the general budgets — a 429
@@ -51,7 +61,8 @@ if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) 
     redis,
     limiter: Ratelimit.slidingWindow(600, '60 s'),
     prefix: 'rl:auth-read',
-    analytics: true,
+    analytics: false,
+    ephemeralCache: limiterCache,
   })
   // Competitive gameplay polls every ~500ms and is used by whole classrooms
   // behind a single school IP, so the general IP limiter throttles legit play.
@@ -62,7 +73,8 @@ if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) 
     redis,
     limiter: Ratelimit.slidingWindow(600, '60 s'),
     prefix: 'rl:game',
-    analytics: true,
+    analytics: false,
+    ephemeralCache: limiterCache,
   })
 } else if (process.env.NODE_ENV === 'production') {
   // Fail loudly: a production deploy with no Upstash config silently has NO

@@ -2,6 +2,7 @@ import { prisma } from '@/lib/prisma'
 import { filterSectionsForYield, stripLowYield } from '@/lib/lesson-yield'
 import { generateExitQuiz } from '@/data/exit-quizzes'
 import { shuffleOptions } from '@/lib/shuffle-options'
+import { bestSegment, termsOf } from '@/lib/text-terms'
 
 /**
  * Auto-generated in-class slide decks (owner spec, Aug 2026: ~25 slides ≈ one
@@ -31,8 +32,11 @@ export type Slide =
   | { kind: 'poll'; question: string; options: string[]; correctIndex: number; explanation: string }
   | { kind: 'quiz'; topicSlug: string; title: string }
 
-const MAX_CONTENT_SLIDES = 15
-const MAX_POLLS = 5
+// Owner (Oct 2026): ~22 slides left out too much of a 4-part lesson for the
+// exit quiz that follows; decks now run to ~35–40 (28 content + up to 8 polls
+// + title, agenda, worked examples and the closing quiz slide).
+const MAX_CONTENT_SLIDES = 28
+const MAX_POLLS = 8
 const MAX_BLOCKS_PER_SLIDE = 5
 const MAX_CHARS_PER_SLIDE = 700 // a slide must fit one screen (annotation ink is position-locked)
 const MAX_EXAMPLES = 2 // each becomes a 2-3 slide progressive-reveal sequence
@@ -138,65 +142,10 @@ type PollSlide = { kind: 'poll'; question: string; options: string[]; correctInd
 
 // ---------- Relevance matching (poll/example → the segment that taught it) ----------
 
-const STOPWORDS = new Set([
-  'the', 'and', 'for', 'that', 'with', 'this', 'which', 'what', 'from', 'are', 'was',
-  'were', 'has', 'have', 'had', 'not', 'but', 'can', 'will', 'when', 'where', 'how',
-  'why', 'all', 'each', 'any', 'its', 'his', 'her', 'their', 'they', 'them', 'there',
-  'then', 'than', 'these', 'those', 'also', 'into', 'onto', 'upon', 'about', 'between',
-  'after', 'before', 'because', 'while', 'over', 'under', 'more', 'less', 'most',
-  'least', 'only', 'some', 'such', 'same', 'other', 'both', 'may', 'might', 'per',
-  'via', 'you', 'your', 'one', 'two', 'three', 'first', 'second', 'third', 'use',
-  'used', 'using', 'uses', 'does', 'did', 'been', 'being', 'would', 'could', 'should',
-  'must', 'many', 'much', 'very', 'just', 'like', 'following', 'value', 'values',
-  'answer', 'question', 'true', 'false', 'correct', 'best', 'find', 'given', 'shown',
-  'example', 'consider', 'suppose', 'let', 'new', 'way', 'means', 'called',
-])
-
-/** Meaningful lowercase terms of a chunk of slide/poll text (LaTeX stripped). */
-function termsOf(text: string): Set<string> {
-  const cleaned = text
-    .replace(/\\[a-zA-Z]+/g, ' ') // LaTeX commands (\frac, \pi, …) are noise
-    .replace(/[${}^_|]/g, ' ')
-    .toLowerCase()
-  const out = new Set<string>()
-  for (const w of cleaned.split(/[^a-z]+/)) {
-    if (w.length >= 3 && !STOPWORDS.has(w)) out.add(w)
-  }
-  return out
-}
-
 function slideText(s: ContentSlide): string {
   return `${s.title} ${s.blocks.join(' ')}`
 }
 
-/**
- * Best segment for a poll/example: rarity-weighted term overlap (a term that
- * appears in only one segment is a much stronger signal than one that appears
- * everywhere). Ties break toward the LATER segment so the concept is
- * guaranteed to have been covered. Returns -1 when nothing overlaps enough to
- * trust (< 2 shared terms) — the caller sends those to the end-of-deck review
- * run rather than risk asking before teaching.
- */
-function bestSegment(itemTerms: Set<string>, segTerms: Set<string>[]): number {
-  let bestIdx = -1
-  let bestScore = 0
-  for (let i = 0; i < segTerms.length; i++) {
-    let overlap = 0
-    let score = 0
-    for (const t of itemTerms) {
-      if (!segTerms[i].has(t)) continue
-      overlap++
-      let df = 0
-      for (const seg of segTerms) if (seg.has(t)) df++
-      score += 1 / df
-    }
-    if (overlap >= 2 && score >= bestScore) {
-      bestScore = score
-      bestIdx = i
-    }
-  }
-  return bestIdx
-}
 
 /** Lesson markdown → content slides: one per `##` section, long sections split. */
 function contentSlidesFrom(markdown: string, fallbackTitle: string): { kind: 'content'; title: string; blocks: string[] }[] {

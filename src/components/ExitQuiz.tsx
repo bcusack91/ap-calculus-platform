@@ -48,6 +48,12 @@ interface ExitQuizProps {
    * lesson" instead of promising a retake it cannot deliver.
    */
   onRetake?: (score: number, totalQuestions: number) => void | Promise<void>
+  /**
+   * The lesson's parts (lesson surface only). With these, a failed quiz works
+   * like the entrance quiz: the parts whose questions were missed are listed
+   * and the one action is to review them, then retake — never a bare retry.
+   */
+  reviewParts?: { partNumber: number; title: string }[]
 }
 
 // Render text with markdown tables and KaTeX math
@@ -70,7 +76,8 @@ export default function ExitQuiz({
   difficulty,
   includeLowYield,
   onPracticeAtDifficulty,
-  onRetake
+  onRetake,
+  reviewParts,
 }: ExitQuizProps) {
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null)
@@ -212,6 +219,14 @@ export default function ExitQuiz({
     return Array.from(wrongParts).sort((a, b) => a - b)
   }, [answers, questions])
 
+  // The parts a failed quiz sends the student back to: every part a missed
+  // question came from — or, if none could be placed, the whole lesson.
+  const partsToReview = useMemo(() => {
+    if (!reviewParts?.length) return wrongPartNumbers
+    const known = new Set(reviewParts.map((p) => p.partNumber))
+    const placed = wrongPartNumbers.filter((p) => known.has(p))
+    return placed.length > 0 ? placed : reviewParts.map((p) => p.partNumber)
+  }, [reviewParts, wrongPartNumbers])
   // Guard with a ref, never state. A `submitting` state flag cannot be a
   // dependency of this callback: setting it gives the callback a new identity,
   // which re-fires the effect below that depends on it — and resetting the flag
@@ -292,6 +307,36 @@ export default function ExitQuiz({
                   ? `You scored at least ${TOPIC_CLEAR_PERCENT}% on ${topicTitle}.`
                   : `${topicTitle} counts as done in your study plan, and its flashcards are now in your deck.`}
               </p>
+            </div>
+          ) : reviewParts && reviewParts.length > 0 ? (
+            <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl p-6 mb-6">
+              <p className="text-amber-800 dark:text-amber-300 font-semibold text-lg">
+                Not yet — review the parts you missed, then retake.
+              </p>
+              <p className="text-amber-700 dark:text-amber-400 text-sm mt-2">
+                You need {passThreshold}/{totalQuestions} to pass. The parts below are where your missed questions came from; work through them and the quiz comes back with fresh questions.
+              </p>
+              <ul className="mt-4 space-y-2" aria-label="Parts to review">
+                {reviewParts.map((pt) => {
+                  const needs = partsToReview.includes(pt.partNumber)
+                  return (
+                    <li
+                      key={pt.partNumber}
+                      className={`flex items-center justify-between rounded-xl border-2 p-3 ${needs ? 'border-amber-300 bg-white dark:border-amber-700 dark:bg-gray-800' : 'border-green-200 bg-green-50 dark:border-green-800 dark:bg-green-900/20'}`}
+                    >
+                      <span className="flex items-center gap-3">
+                        <span className={`flex h-6 w-6 items-center justify-center rounded-full text-xs font-bold ${needs ? 'bg-amber-200 text-amber-800 dark:bg-amber-800 dark:text-amber-200' : 'bg-green-200 text-green-800 dark:bg-green-800 dark:text-green-200'}`}>
+                          {pt.partNumber}
+                        </span>
+                        <span className={`text-sm font-medium ${needs ? 'text-gray-900 dark:text-white' : 'text-green-800 dark:text-green-200'}`}>{pt.title}</span>
+                      </span>
+                      <span className={`text-xs font-semibold ${needs ? 'text-amber-700 dark:text-amber-300' : 'text-green-700 dark:text-green-300'}`}>
+                        {needs ? '📚 Review' : '✓ Got it'}
+                      </span>
+                    </li>
+                  )
+                })}
+              </ul>
             </div>
           ) : quizMustRedoUnit ? (
             <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl p-6 mb-6">
@@ -384,7 +429,14 @@ export default function ExitQuiz({
             </div>
           ) : (
             <div className="mt-2 flex flex-col sm:flex-row gap-4 justify-center">
-              {quizMustRedoUnit ? (
+              {reviewParts && reviewParts.length > 0 ? (
+                <button
+                  onClick={() => onComplete(score, totalQuestions, false, quizMustRedoUnit, wrongTopicSlugs, partsToReview)}
+                  className="px-8 py-3 rounded-xl font-semibold bg-gradient-to-r from-accent to-pink-600 text-white hover:from-accent-hover hover:to-pink-700 shadow-lg"
+                >
+                  📚 Review {partsToReview.length === 1 ? 'this part' : `these ${partsToReview.length} parts`}
+                </button>
+              ) : quizMustRedoUnit ? (
                 <button
                   onClick={() => onComplete(score, totalQuestions, false, true, wrongTopicSlugs, wrongPartNumbers)}
                   className="px-8 py-3 rounded-xl font-semibold bg-gradient-to-r from-accent to-pink-600 text-white hover:from-accent-hover hover:to-pink-700 shadow-lg"

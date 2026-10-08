@@ -34,7 +34,8 @@ type Slide =
   | { kind: 'poll'; question: string; options: string[]; correctIndex: number; explanation: string }
   | { kind: 'quiz'; topicSlug: string; title: string }
 
-interface PollState { counts: number[]; total: number; myAnswer: number | null; responders?: string[] }
+/** counts/total are null for students until the teacher reveals the answer. */
+interface PollState { counts: number[] | null; total: number | null; myAnswer: number | null; responders?: string[] }
 
 interface DeckState {
   id: string
@@ -243,17 +244,19 @@ export default function SlideDeckSection({
         {slide.kind === 'poll' && (
           <div style={SLIDE_IN}>
             <p className={`mb-1 inline-block rounded-full px-3 py-1 text-xs font-bold uppercase tracking-wide ${palette.chip}`}>
-              📊 Quick check {isRevealed ? '· answer revealed' : deck.poll ? `· ${deck.poll.total} answered` : ''}
+              📊 Quick check {isRevealed ? '· answer revealed' : deck.poll?.total != null ? `· ${deck.poll.total} answered` : deck.poll?.myAnswer != null ? '· your answer is in' : ''}
             </p>
             <MathText text={slide.question} className="mb-6 text-xl font-semibold leading-relaxed text-gray-900 sm:text-2xl dark:text-white" />
             <div className="space-y-2.5">
               {slide.options.map((opt, i) => {
-                const count = deck.poll?.counts[i] ?? 0
+                const count = deck.poll?.counts?.[i] ?? 0
                 const total = deck.poll?.total ?? 0
                 const pct = total > 0 ? Math.round((count / total) * 100) : 0
                 const mine = deck.poll?.myAnswer === i
                 const isCorrect = reveal && reveal.correctIndex === i
-                const showBars = youAreTeacher || deck.poll?.myAnswer !== null || isRevealed
+                // Tallies: teacher always; students only once revealed (the
+                // server sends none before that).
+                const showBars = (youAreTeacher || isRevealed) && deck.poll?.counts != null
                 return (
                   <button
                     key={i}

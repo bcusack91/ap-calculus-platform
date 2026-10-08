@@ -26,6 +26,7 @@ import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import Image from 'next/image'
 import { generateExitQuiz, hasExitQuiz } from '@/data/exit-quizzes'
+import { bestSegment, termsOf } from '@/lib/text-terms'
 import type { ExitQuizQuestion } from '@/data/exit-quizzes'
 import LessonProgressBar from '@/components/LessonProgressBar'
 import { postQuestionActivity } from '@/lib/question-activity-client'
@@ -494,6 +495,22 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
    * than 10 items) and remounts the overlay. Returns false when the topic's
    * pool yields nothing, so callers can stay on the lesson.
    */
+  // Each lesson part's vocabulary, so an exit-quiz question whose pool doesn't
+  // say which part teaches it can still be placed (a failed quiz sends the
+  // student back to exactly those parts, like the entrance quiz does).
+  const partTerms = useMemo(
+    () =>
+      preloadedParts.map((p) => {
+        const sections = (p.data?.sections ?? []) as { type?: string; content?: unknown; exercise?: { questions?: { question?: unknown }[] } }[]
+        const text = [
+          p.title,
+          ...sections.map((sec) => (typeof sec.content === 'string' ? sec.content : '')),
+          ...sections.flatMap((sec) => (sec.exercise?.questions ?? []).map((q) => (typeof q.question === 'string' ? q.question : ''))),
+        ].join(' ')
+        return termsOf(text)
+      }),
+    [preloadedParts],
+  )
   const openExitQuiz = useCallback(
     async (difficulty?: 'easy' | 'medium' | 'hard'): Promise<boolean> => {
       const seed = (Math.floor(Math.random() * 0x7fffffff)) | 0
@@ -506,6 +523,13 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
         return false // topic without a usable quiz pool
       }
       if (questions.length === 0) return false
+      if (partTerms.length > 1) {
+        questions = questions.map((q) => {
+          if (q.partNumber && q.partNumber >= 1 && q.partNumber <= partTerms.length) return q
+          const idx = bestSegment(termsOf(`${q.question} ${q.options.join(' ')} ${q.explanation}`), partTerms)
+          return idx >= 0 ? { ...q, partNumber: idx + 1 } : q
+        })
+      }
       setExitQuizSeed(seed)
       setExitQuizIncludeLowYield(includeLowYield)
       setExitQuizDifficulty(difficulty)
@@ -515,7 +539,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
       window.scrollTo({ top: 0, behavior: 'smooth' })
       return true
     },
-    [topicSlug, includeLowYield],
+    [topicSlug, includeLowYield, partTerms],
   )
 
   // Entrance quiz state (topic-level, e.g. moles-molar-mass). When no authored
@@ -1046,21 +1070,30 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
       // Passed: the quiz's results screen already led with the next study
       // step (and offered Competitive as a secondary link); this is its
       // "Back to the lesson" action, so just return to the lesson.
-    } else if (totalVariants > 1 && variant < totalVariants) {
-      // Failed exit quiz and more variants available → advance to next variant
-      const nextVariant = variant + 1
-      // Determine which parts to redo: use part-tagged wrong answers if available, else all parts
-      const partsToRedo = wrongPartNumbers && wrongPartNumbers.length > 0
-        ? wrongPartNumbers
-        : Array.from({ length: totalParts }, (_, i) => i + 1)
+      setFailedExitParts(null)
+      setEntranceQuizPhase(null)
+    } else {
+      // Failed (any score): like the entrance quiz, the student reviews the
+      // parts their missed questions came from — every part if none could be
+      // placed — and the quiz returns with fresh questions after the last one.
+      // Lessons with content variants move to the next variant for that
+      // review; single-variant lessons re-read the same parts. (Owner, Oct
+      // 2026: a plain "retry" after a presented lesson taught nothing.)
+      const nextVariant = totalVariants > 1 && variant < totalVariants ? variant + 1 : variant
+      const placed = (wrongPartNumbers ?? []).filter((p) => p >= 1 && p <= totalParts)
+      const partsToRedo = placed.length > 0 ? placed : Array.from({ length: totalParts }, (_, i) => i + 1)
 
       setVariant(nextVariant)
       setFailedExitParts(partsToRedo)
       setLessonPart(partsToRedo[0] as LessonPart)
       setCurrentSectionIndex(0)
       setCompletedSections(new Set())
+      // A student who came straight from a presentation has no progress row,
+      // so the entrance-quiz choice screen may still be queued — the review
+      // starts on the first part to study, not there.
+      setEntranceQuizPhase(null)
 
-      // Unlock only the failed parts for this retry
+      // Unlock only the failed parts for this review
       const newUnlocked = new Set<LessonPart>(partsToRedo.map(p => p as LessonPart))
       setUnlockedParts(newUnlocked)
 
@@ -1078,14 +1111,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
       }
 
       window.scrollTo({ top: 0, behavior: 'smooth' })
-    } else if (mustRedoUnit) {
-      // Score < 5/10: review the current section, not the entire unit.
-      setCurrentSectionIndex(0)
-      setCompletedSections(new Set())
-      window.scrollTo({ top: 0, behavior: 'smooth' })
     }
-    // Score 5-6/10: can retry immediately — they stay on the last part
-    // and can click the button again to retake
   }
 
   // Entrance quiz: load questions when user chooses to take it. Authored
@@ -1343,6 +1369,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
         includeLowYield={exitQuizIncludeLowYield}
         onPracticeAtDifficulty={startExitQuizPractice}
         onRetake={handleExitQuizRetake}
+        reviewParts={preloadedParts.length > 1 ? preloadedParts.map((p, i) => ({ partNumber: i + 1, title: p.title })) : undefined}
         onComplete={handleExitQuizComplete}
         onCancel={() => setShowExitQuiz(false)}
         previousAttempts={exitQuizStatus.totalAttempts}

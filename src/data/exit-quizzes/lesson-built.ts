@@ -39,6 +39,8 @@ export interface LessonExitQuestion {
   correctIndex: number
   explanation: string
   category: string
+  /** The lesson part that teaches it — a failed quiz sends the student back to these. */
+  partNumber?: number
 }
 
 /** Topics whose exit quiz is built from their own lesson (tests iterate these). */
@@ -144,6 +146,7 @@ export function makeLessonExitQuiz(pool: readonly LessonExitItem[], topicSlug: s
       correctIndex: q.correctAnswer,
       explanation: q.explanation,
       category: topicSlug,
+      partNumber: q.part,
     }))
   }
 }

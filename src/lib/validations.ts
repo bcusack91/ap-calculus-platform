@@ -27,7 +27,7 @@ export const MAX_PROGRESS_SAVE_SECONDS = 30 * 60
 
 export const progressSaveSchema = z.object({
   topicSlug: z.string().min(1).max(200).optional(),
-  topicId: z.string().optional(),
+  topicId: z.string().nullable().optional(),
   lessonPart: z.number().int().min(0).optional(),
   // Section indexes. The lesson renderers send numbers; this was
   // z.array(z.string()) until 2026-09-29, which rejected every save with a

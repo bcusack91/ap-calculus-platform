@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server'
 import { z } from 'zod'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
+import { Prisma } from '@prisma/client'
 import { recordAssignmentCompletion } from '@/lib/assignment-autocomplete'
 import { maybeUnlockFlashcards } from '@/lib/flashcard-unlock'
 import { regradeExitQuiz, regradeExitQuizSeeded } from '@/lib/exit-quiz-regrade'
@@ -194,6 +195,8 @@ export async function POST(request: Request) {
               status: 'MASTERED',
               masteryLevel: MASTERY_LEVEL_ON_EXIT_PASS,
               completedAt: new Date(),
+              // A failed quiz's "parts to review" list is done with.
+              failedExitParts: Prisma.DbNull,
             },
             create: {
               userId,
