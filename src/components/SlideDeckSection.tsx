@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { Excalidraw, CaptureUpdateAction } from '@excalidraw/excalidraw'
 import '@excalidraw/excalidraw/index.css'
 import { MathText } from '@/components/MathText'
-import { asScene, sceneVersion, type BoardScene, type BoardElement } from '@/lib/board-merge'
+import { asScene, sceneVersion, type BoardScene, type BoardElement, mergeScenes, EMPTY_SCENE } from '@/lib/board-merge'
 import { deckPalette, SlideMotionStyles, SLIDE_IN, TitleSlideView, ContentSlideView, QuizSlideView, OptionBadge } from '@/components/SlideVisuals'
 
 declare global {
@@ -70,6 +70,23 @@ export default function SlideDeckSection({
   const activeRef = useRef(false)
   // Teacher pen: toggles an interactive transparent canvas over the slide.
   const [annotating, setAnnotating] = useState(false)
+  const annApiRef = useRef<ExcalApi | null>(null)
+  const onAnnApi = useCallback((api: ExcalApi | null) => { annApiRef.current = api }, [])
+  const [penTool, setPenTool] = useState<PenTool>('red')
+  // The presenter's canvas as last changed, so Done can show it at once: the
+  // view layer otherwise mounts from the last POLLED copy, briefly re-showing
+  // a stroke undone or cleared in the final seconds (until the poll catches up).
+  const localSceneRef = useRef<BoardScene | null>(null)
+  const onLocalScene = useCallback((scene: BoardScene) => { localSceneRef.current = scene }, [])
+  const toggleAnnotating = () => {
+    if (annotating && deck && localSceneRef.current) {
+      const key = `${deck.id}:${deck.currentSlide}`
+      const local = localSceneRef.current
+      setAnnScene(prev => ({ key, rev: prev?.key === key ? prev.rev : 0, scene: mergeScenes(prev?.key === key ? prev.scene : EMPTY_SCENE, local) }))
+    }
+    localSceneRef.current = null
+    setAnnotating(v => !v)
+  }
   // Latest annotation scene for the CURRENT slide (rev-gated via the poll).
   const [annScene, setAnnScene] = useState<{ key: string; rev: number; scene: BoardScene } | null>(null)
   const annRevRef = useRef(-1)
@@ -140,6 +157,10 @@ export default function SlideDeckSection({
   }
   const slide = slides[deck.currentSlide]
   if (!slide) return null
+  // The view layer mounts only once a slide has strokes (keyed below), so the
+  // canvas initialises WITH them: a scene pushed before the canvas finishes
+  // its async init is dropped, which left viewers blank until the next stroke.
+  const annHasStrokes = !!(annScene && annScene.key === `${deck.id}:${deck.currentSlide}` && annScene.scene.elements.some(el => !el.isDeleted))
   const palette = deckPalette(deck.title)
   const isRevealed = deck.revealed.includes(deck.currentSlide)
   const reveal = deck.youAreTeacher && slide.kind === 'poll'
@@ -165,7 +186,7 @@ export default function SlideDeckSection({
           <span className="text-xs text-gray-400">slide {deck.currentSlide + 1}/{deck.slideCount}</span>
         </div>
         {youAreTeacher && (
-          <div className="flex items-center gap-1.5">
+          <div className="flex flex-wrap items-center gap-1.5">
             <button
               onClick={() => void control({ action: 'goto', index: deck.currentSlide - 1 })}
               disabled={deck.currentSlide === 0}
@@ -177,12 +198,13 @@ export default function SlideDeckSection({
               className="rounded-lg bg-indigo-600 px-4 py-1 text-sm font-semibold text-white disabled:opacity-40"
             >Next ▶</button>
             <button
-              onClick={() => setAnnotating(v => !v)}
+              onClick={toggleAnnotating}
               className={`rounded-lg px-3 py-1 text-sm font-semibold ${annotating ? 'bg-amber-500 text-white' : 'border border-gray-300 text-gray-700 dark:border-gray-600 dark:text-gray-300'}`}
               title={annotating ? 'Stop annotating (buttons become clickable again)' : 'Draw on this slide — students see your strokes live'}
             >
               {annotating ? '✅ Done' : '✏️ Annotate'}
             </button>
+            {annotating && <PenToolbar apiRef={annApiRef} tool={penTool} setTool={setPenTool} />}
             {slide.kind === 'poll' && !isRevealed && (
               <button
                 onClick={() => void control({ action: 'reveal', index: deck.currentSlide })}
@@ -201,11 +223,14 @@ export default function SlideDeckSection({
       <SlideMotionStyles />
       <div key={deck.currentSlide} className="relative min-h-[45vh] px-6 py-8 sm:px-10">
         <AnnotationLayer
-          key={`${deck.id}:${deck.currentSlide}:${youAreTeacher && annotating ? 'draw' : 'view'}`}
+          key={`${deck.id}:${deck.currentSlide}:${youAreTeacher && annotating ? 'draw' : `view-${annHasStrokes ? 1 : 0}`}`}
           sessionId={sessionId}
           slideIndex={deck.currentSlide}
           canDraw={youAreTeacher && annotating}
           remote={annScene && annScene.key === `${deck.id}:${deck.currentSlide}` ? annScene : null}
+          onApi={onAnnApi}
+          onLocalScene={onLocalScene}
+          tool={penTool}
         />
         {slide.kind === 'title' && (
           <TitleSlideView title={slide.title} subtitle={slide.subtitle} palette={palette} />
@@ -397,12 +422,85 @@ function DeckLauncher({ sessionId, classroomId }: { sessionId: string; classroom
   )
 }
 
-/* Structural slice of ExcalidrawImperativeAPI — just what the sync uses. */
+/* Structural slice of ExcalidrawImperativeAPI — just what the sync and the pen toolbar use. */
 interface ExcalApi {
-  updateScene: (scene: { elements: BoardElement[]; captureUpdate?: unknown }) => void
+  updateScene: (scene: { elements?: BoardElement[]; appState?: Record<string, unknown>; captureUpdate?: unknown }) => void
   addFiles: (files: unknown[]) => void
+  setActiveTool: (tool: { type: 'freedraw' | 'eraser' | 'laser' | 'selection'; locked?: boolean }) => void
   getSceneElementsIncludingDeleted: () => readonly BoardElement[]
   getFiles: () => Record<string, unknown>
+}
+
+type PenTool = 'red' | 'blue' | 'black' | 'highlighter' | 'eraser' | 'laser'
+const PENS: Record<Exclude<PenTool, 'eraser' | 'laser'>, { label: string; color: string; width: number; opacity: number; swatch: string }> = {
+  red: { label: 'Red pen', color: '#e03131', width: 2, opacity: 100, swatch: 'bg-[#e03131]' },
+  blue: { label: 'Blue pen', color: '#1971c2', width: 2, opacity: 100, swatch: 'bg-[#1971c2]' },
+  black: { label: 'Black pen', color: '#1e1e1e', width: 2, opacity: 100, swatch: 'bg-[#1e1e1e]' },
+  highlighter: { label: 'Highlighter', color: '#ffd43b', width: 5, opacity: 40, swatch: 'bg-[#ffd43b]' },
+}
+
+/** Mark a stroke deleted the way Excalidraw does (a higher version), so every viewer's merge drops it too. */
+function softDelete(el: BoardElement): BoardElement {
+  return { ...el, isDeleted: true, version: (el.version ?? 0) + 1, versionNonce: Math.floor(Math.random() * 2 ** 31), updated: Date.now() }
+}
+
+const toolType = (tool: PenTool): 'freedraw' | 'eraser' | 'laser' => (tool === 'eraser' || tool === 'laser' ? tool : 'freedraw')
+
+/** The stroke settings a pen tool needs in Excalidraw's appState. */
+function penAppState(tool: PenTool): Record<string, unknown> {
+  if (tool === 'eraser' || tool === 'laser') return {}
+  const pen = PENS[tool]
+  return { currentItemStrokeColor: pen.color, currentItemStrokeWidth: pen.width, currentItemOpacity: pen.opacity }
+}
+
+/** Set the canvas up for drawing: pen in hand, stays in hand after each stroke. */
+function applyPen(api: ExcalApi, tool: PenTool) {
+  const appState = penAppState(tool)
+  if (Object.keys(appState).length) api.updateScene({ appState })
+  api.setActiveTool({ type: toolType(tool), locked: true })
+}
+
+/**
+ * The presenter's pen tools, in the bar above the slide (the canvas's own
+ * toolbar is hidden — it covered the slide). Undo and Clear soft-delete
+ * strokes so students' copies drop them too.
+ */
+function PenToolbar({ apiRef, tool, setTool }: { apiRef: React.MutableRefObject<ExcalApi | null>; tool: PenTool; setTool: (t: PenTool) => void }) {
+  const select = (t: PenTool) => {
+    setTool(t)
+    if (apiRef.current) applyPen(apiRef.current, t)
+  }
+  const undo = () => {
+    const api = apiRef.current
+    if (!api) return
+    const elements = [...api.getSceneElementsIncludingDeleted()]
+    const last = [...elements].reverse().find(el => !el.isDeleted)
+    if (!last) return
+    api.updateScene({ elements: elements.map(el => (el.id === last.id ? softDelete(el) : el)), captureUpdate: CaptureUpdateAction.IMMEDIATELY })
+  }
+  const clear = () => {
+    const api = apiRef.current
+    if (!api) return
+    const elements = [...api.getSceneElementsIncludingDeleted()]
+    if (!elements.some(el => !el.isDeleted)) return
+    if (!confirm('Clear every drawing on this slide?')) return
+    api.updateScene({ elements: elements.map(el => (el.isDeleted ? el : softDelete(el))), captureUpdate: CaptureUpdateAction.IMMEDIATELY })
+  }
+  const btn = (active: boolean) =>
+    `inline-flex h-8 min-w-8 items-center justify-center gap-1 rounded-md px-1.5 text-xs font-semibold transition ${active ? 'bg-amber-500 text-white' : 'border border-gray-300 text-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-700'}`
+  return (
+    <div className="flex flex-wrap items-center gap-1" role="toolbar" aria-label="Pen tools">
+      {(Object.keys(PENS) as (keyof typeof PENS)[]).map(k => (
+        <button key={k} type="button" onClick={() => select(k)} aria-pressed={tool === k} title={PENS[k].label} aria-label={PENS[k].label} className={btn(tool === k)}>
+          <span className={`h-3.5 w-3.5 rounded-full ${PENS[k].swatch} ${k === 'highlighter' ? 'opacity-70' : ''}`} aria-hidden />
+        </button>
+      ))}
+      <button type="button" onClick={() => select('eraser')} aria-pressed={tool === 'eraser'} title="Eraser" className={btn(tool === 'eraser')}>Eraser</button>
+      <button type="button" onClick={() => select('laser')} aria-pressed={tool === 'laser'} title="Laser pointer (fades, not saved)" className={btn(tool === 'laser')}>Laser</button>
+      <button type="button" onClick={undo} title="Remove the last stroke" className={btn(false)}>Undo</button>
+      <button type="button" onClick={clear} title="Clear every drawing on this slide" className={btn(false)}>Clear</button>
+    </div>
+  )
 }
 
 /**
@@ -424,74 +522,143 @@ function AnnotationLayer({
   slideIndex,
   canDraw,
   remote,
+  onApi,
+  tool = 'red',
+  onLocalScene,
 }: {
   sessionId: string
   slideIndex: number
   canDraw: boolean
   remote: { rev: number; scene: BoardScene } | null
+  /** Hands the canvas API to the presenter bar's pen tools (null on unmount). */
+  onApi?: (api: ExcalApi | null) => void
+  /** The presenter's current pen tool; re-asserted if a canvas shortcut switches it. */
+  tool?: PenTool
+  /** Every change of the presenter's scene (draw mode), for the parent's Done handoff. */
+  onLocalScene?: (scene: BoardScene) => void
 }) {
   const apiRef = useRef<ExcalApi | null>(null)
+  useEffect(() => () => onApi?.(null), [onApi])
   const lastSentRef = useRef(0)
-  const appliedRevRef = useRef(-1)
+  // Our own copy of the scene, kept from the canvas's change events. The
+  // unmount flush can't read the canvas: Excalidraw destroys its scene before
+  // our cleanup runs, so the API answered with an empty scene and the last
+  // ~2 s of strokes (or an Undo / Clear right before Done) never left.
+  const latestSceneRef = useRef<BoardScene | null>(null)
+  // Strokes already known at mount go in as initialData (both modes): the
+  // canvas initialises asynchronously and replaces anything pushed through the
+  // API before that, which used to leave viewers blank until the NEXT stroke.
+  const appliedRevRef = useRef(remote?.rev ?? -1)
   // Captured once at mount (the parent remounts this layer per slide/mode via
   // key) — a useState initializer, not a ref, so render never reads a ref.
-  const [initialElements] = useState<BoardElement[]>(() => (canDraw ? (remote?.scene.elements ?? []) : []))
+  const [initial] = useState<{ elements: BoardElement[]; files: unknown[] }>(() => ({
+    elements: remote?.scene.elements ?? [],
+    files: Object.values(remote?.scene.files ?? {}),
+  }))
+  // What the server already has: a draw layer re-mounted on a slide with
+  // strokes must not re-post the identical scene on Done (each rev bump makes
+  // every viewer re-download the whole scene).
+  useEffect(() => {
+    if (canDraw && initial.elements.length) lastSentRef.current = sceneVersion({ elements: initial.elements, files: {} })
+  }, [canDraw, initial])
+  const toolRef = useRef(tool)
+  useEffect(() => {
+    toolRef.current = tool
+  }, [tool])
+  const remoteRef = useRef(remote)
+  useEffect(() => {
+    remoteRef.current = remote
+  }, [remote])
+  const applyRemote = useCallback((api: ExcalApi) => {
+    const r = remoteRef.current
+    if (!r || r.rev === appliedRevRef.current) return
+    appliedRevRef.current = r.rev
+    api.updateScene({ elements: r.scene.elements, captureUpdate: CaptureUpdateAction.NEVER })
+    const files = Object.values(r.scene.files)
+    if (files.length > 0) api.addFiles(files)
+  }, [])
 
   // Teacher push loop.
   useEffect(() => {
     if (!canDraw) return
     let active = true
-    const push = async () => {
-      const api = apiRef.current
-      if (!api || !active) return
-      const scene: BoardScene = { elements: [...api.getSceneElementsIncludingDeleted()], files: api.getFiles() }
+    // `final` = the flush on unmount (Done, slide change): it must run even
+    // though the loop is stopping, or the last ~2 s of strokes never leave.
+    const push = async (final = false) => {
+      if (!active && !final) return
+      const scene = latestSceneRef.current
+      // Nothing drawn yet, or (defensively) a wiped scene after something real
+      // was sent: a Clear soft-deletes, it never empties the element list.
+      if (!scene || (scene.elements.length === 0 && lastSentRef.current !== 0)) return
       const v = sceneVersion(scene)
       if (v === lastSentRef.current) return
+      // Claim the version before the request so a slow reply doesn't make the
+      // next tick re-post the identical scene (every rev bump makes each
+      // viewer re-download the whole scene).
+      const previous = lastSentRef.current
+      lastSentRef.current = v
       try {
         const r = await fetch(`/api/live-sessions/${sessionId}/deck`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ action: 'annotate', slideIndex, scene }),
+          // The flush outlives the component (Done, slide change).
+          keepalive: final,
         })
-        if (r.ok) lastSentRef.current = v
-      } catch { /* retried next tick */ }
+        if (!r.ok) lastSentRef.current = previous
+      } catch {
+        lastSentRef.current = previous // retried next tick
+      }
     }
-    const t = setInterval(push, 2000)
-    return () => { active = false; clearInterval(t); void push() }
+    const t = setInterval(() => void push(), 2000)
+    return () => { clearInterval(t); void push(true); active = false }
   }, [canDraw, sessionId, slideIndex])
 
   // Viewer: apply newly delivered revisions.
   useEffect(() => {
     if (canDraw || !remote) return
     const api = apiRef.current
-    if (!api || remote.rev === appliedRevRef.current) return
-    appliedRevRef.current = remote.rev
-    api.updateScene({ elements: remote.scene.elements, captureUpdate: CaptureUpdateAction.NEVER })
-    const files = Object.values(remote.scene.files)
-    if (files.length > 0) api.addFiles(files)
-  }, [canDraw, remote])
+    if (api) applyRemote(api)
+  }, [canDraw, remote, applyRemote])
 
   // Nothing drawn on this slide and not drawing — no layer at all.
   const hasStrokes = (remote?.scene.elements ?? []).some(el => !el.isDeleted)
   if (!canDraw && !hasStrokes) return null
 
   return (
-    <div className={`absolute inset-0 z-20 ${canDraw ? '' : 'pointer-events-none'}`}>
+    <div className={`slide-annotations absolute inset-0 z-20 ${canDraw ? '' : 'pointer-events-none'}`}>
       <Excalidraw
         excalidrawAPI={(api) => {
-          apiRef.current = api as unknown as ExcalApi
-          // Viewer instances mount with whatever strokes are already known.
-          if (!canDraw && remote) {
-            appliedRevRef.current = remote.rev
-            ;(api as unknown as ExcalApi).updateScene({ elements: remote.scene.elements, captureUpdate: CaptureUpdateAction.NEVER })
-            const files = Object.values(remote.scene.files)
-            if (files.length > 0) (api as unknown as ExcalApi).addFiles(files)
-          }
+          const a = api as unknown as ExcalApi
+          apiRef.current = a
+          onApi?.(canDraw ? a : null)
+          if (initial.files.length > 0) a.addFiles(initial.files)
+          // A revision that landed while the canvas was still initialising:
+          // apply it once init has finished (a macrotask later).
+          if (!canDraw) setTimeout(() => { if (apiRef.current === a) applyRemote(a) }, 0)
         }}
         initialData={{
-          elements: initialElements as never[],
-          appState: { viewBackgroundColor: 'transparent', currentItemStrokeColor: '#e03131' },
+          elements: initial.elements as never[],
+          // The canvas's own toolbar is hidden (it covered the slide): the
+          // presenter starts with the pen in hand, locked so it stays there.
+          appState: {
+            viewBackgroundColor: 'transparent',
+            ...(canDraw
+              ? { ...penAppState(tool), activeTool: { type: toolType(tool), locked: true, customType: null, lastActiveTool: null } }
+              : {}),
+          },
         }}
+        onChange={canDraw ? (elements, appState, files) => {
+          // Excalidraw hands over every element (deleted ones included) on
+          // each change — this is what the push loop and the unmount flush send.
+          latestSceneRef.current = { elements: [...(elements as unknown as BoardElement[])], files: (files ?? {}) as Record<string, unknown> }
+          onLocalScene?.(latestSceneRef.current)
+          // A canvas shortcut (V, 1, Escape…) can swap the tool out from under
+          // the presenter bar; put the chosen pen back.
+          const active = (appState as { activeTool?: { type?: string } }).activeTool?.type
+          const wanted = toolType(toolRef.current)
+          if (active && active !== wanted && apiRef.current) applyPen(apiRef.current, toolRef.current)
+        } : undefined}
         viewModeEnabled={!canDraw}
         zenModeEnabled={canDraw}
         UIOptions={{ canvasActions: { toggleTheme: false, changeViewBackgroundColor: false } }}

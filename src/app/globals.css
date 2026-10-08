@@ -751,3 +751,11 @@ pre {
     break-inside: avoid;
   }
 }
+
+/* Slide annotations (SlideDeckSection): the pen canvas is a transparent
+   Excalidraw laid over the slide. Its own toolbar, hamburger menu, zoom bar
+   and help button would sit on top of the slide and hide parts of it, so the
+   whole UI layer is hidden; the presenter bar supplies the pen tools. */
+.slide-annotations .excalidraw :is(.layer-ui__wrapper, .App-top-bar, .App-bottom-bar, .mobile-misc-tools-container) {
+  display: none !important;
+}

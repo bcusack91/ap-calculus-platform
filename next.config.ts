@@ -116,7 +116,7 @@ const nextConfig: NextConfig = {
               scriptSrc,
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net",
               "img-src 'self' data: blob: https: http:",
-              "font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net",
+              "font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net https://esm.sh",
               "connect-src 'self' https://pagead2.googlesyndication.com https://www.google-analytics.com https://analytics.google.com https://*.google-analytics.com https://www.googletagmanager.com https://stats.g.doubleclick.net https://ep1.adtrafficquality.google https://*.adtrafficquality.google https://*.sentry.io https://www.clarity.ms https://*.clarity.ms https://8x8.vc",
               // Live class sessions frame video: YouTube for webcast mode,
               // 8x8.vc for the embedded JaaS conference room. Without these the
