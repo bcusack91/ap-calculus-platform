@@ -21,6 +21,7 @@ import {
 } from 'lucide-react'
 import type { CalendarCycle, CalendarEvent, CalendarEventKind } from '@/lib/calendar-types'
 import FullLengthProgress from '@/components/FullLengthProgress'
+import HelpLink, { HELP_ARTICLES } from '@/components/HelpLink'
 
 /* ── dates (all "days" are local YYYY-MM-DD strings) ─────────────────── */
 
@@ -203,6 +204,7 @@ export default function CalendarPage() {
           </h1>
           <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
             Your lessons, unit tests and diagnostics, spaced out to your next due date. Move anything to another day.
+            <HelpLink article={HELP_ARTICLES.studyCalendar} label="How the calendar schedules your work" className="ml-1" />
           </p>
         </div>
         <Link href="/dashboard?tab=practice" className="text-sm font-medium text-accent hover:underline">Study planner →</Link>

@@ -4,6 +4,7 @@ import { useCallback, useEffect, useState } from 'react'
 import Link from 'next/link'
 import { ArrowRight, Trophy } from 'lucide-react'
 import ExternalScoreForm from '@/components/ExternalScoreForm'
+import HelpLink, { HELP_ARTICLES } from '@/components/HelpLink'
 import { describeReadiness, levelThresholds, type FullLengthCourse, type FullLengthReadiness } from '@/lib/full-length-progress'
 
 const TICKS = levelThresholds().slice(1, -1)
@@ -63,6 +64,7 @@ export default function FullLengthProgress({
         <h3 id={`fl-progress-${course}`} className="flex items-center gap-2 text-sm font-bold text-gray-900 dark:text-white">
           <Trophy className="h-4 w-4 text-accent" aria-hidden />
           {r.label} full-length readiness
+          <HelpLink article={HELP_ARTICLES.fullLengthReadiness} label="How the levels work" />
         </h3>
         <p className="text-sm font-semibold tabular-nums text-gray-900 dark:text-white">
           Level {r.level}

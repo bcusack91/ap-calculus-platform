@@ -21,6 +21,7 @@ import {
 } from '@/lib/flashcard-daily-limits'
 import { MAX_ROSTER_ROWS } from '@/lib/roster-parse'
 import { FREE_DIAGNOSTIC_PLANS } from '@/lib/premium'
+import { FULL_LENGTH_COURSES, READINESS_LEVELS } from '@/lib/full-length-progress'
 import { HELP_ARTICLES, type HelpArticleSlug } from './slugs'
 
 export type HelpAudience = 'student' | 'teacher' | 'everyone'
@@ -630,6 +631,96 @@ export const HELP_ARTICLE_LIST: HelpArticle[] = [
       },
     ],
     related: [A.gettingStartedTeachers, A.joiningAClass],
+  },
+
+  {
+    slug: A.studyCalendar,
+    title: 'Your study calendar',
+    description:
+      'The calendar puts your lessons, unit tests and diagnostics on real days, spaced out to your next due date. Move anything; your choice is kept.',
+    audience: 'student',
+    blocks: [
+      { type: 'p', text: 'Your **study calendar** is at [/calendar](/calendar) (also linked from your Dashboard’s Practice tab). It shows every lesson, unit test and diagnostic from your MCAT or SAT study cycle on a day, plus class diagnostics and assignments your teacher set, and any tasks you add yourself.' },
+      { type: 'h2', id: 'how-dates-are-chosen', text: 'How the dates are chosen' },
+      { type: 'p', text: 'Your cycle is the lessons your last diagnostic recommended, then its unit test, then the next diagnostic. Once the next diagnostic has a due date, the calendar spreads the lessons you still have to clear evenly over the days until then — every day, weekends included — so each day stays light.' },
+      {
+        type: 'list',
+        items: [
+          'Lessons run up to two days before the due date (MCAT) or the day before (SAT).',
+          'The unit test lands the day before the diagnostic.',
+          'The diagnostic sits on the due date itself.',
+          'Lessons you already cleared are ticked off for you.',
+        ],
+      },
+      { type: 'h2', id: 'where-the-due-date-comes-from', text: 'Where the due date comes from' },
+      {
+        type: 'list',
+        items: [
+          '**Your teacher** set a due date on a class diagnostic: your lessons are scheduled to it automatically, and the card at the top of the calendar says so.',
+          '**You** set a target: if no teacher date applies, pick the day you want to take your next diagnostic in the card at the top and choose **Schedule my lessons**. Change it or clear it any time.',
+          'A teacher’s date always takes precedence over your own target.',
+        ],
+      },
+      { type: 'h2', id: 'moving-things', text: 'Moving things around' },
+      { type: 'p', text: 'Click any day or item to open its panel. From there you can open the lesson, mark it done, move it to another date, or move it to today. If a scheduled item was moved, the panel offers **Back to suggested**.' },
+      { type: 'note', tone: 'tip', text: 'A date you chose is yours. If the due date changes later, the other lessons re-space themselves, but the one you moved stays where you put it.' },
+      { type: 'h2', id: 'your-own-tasks', text: 'Your own tasks' },
+      { type: 'p', text: 'Use **Add task** (or **Add a task here** in a day’s panel) for anything else — a chapter to read, a set of flashcards to review. Your own tasks can be renamed, ticked and removed; scheduled cycle items tick themselves when you clear the lesson.' },
+      { type: 'h2', id: 'faq', text: 'Questions' },
+      {
+        type: 'faq',
+        items: [
+          { q: 'Nothing is scheduled. Why?', a: 'Scheduling needs two things: a diagnostic (so there are lessons to place) and a due date, from your teacher or from your own target in the card at the top.' },
+          { q: 'I cleared a lesson but it still shows on a later day.', a: 'It is ticked off on the day it was scheduled; the date is just where it sat. Open the calendar again and it will show as done.' },
+          { q: 'Can I see other courses here?', a: 'Scheduled cycles exist for the MCAT and SAT. Assignments, class diagnostics and your own tasks show for every course.' },
+        ],
+      },
+    ],
+    related: [A.fullLengthReadiness, A.diagnosticsAndStudyPlans, A.classDiagnostics],
+  },
+  {
+    slug: A.fullLengthReadiness,
+    title: 'Full-length readiness: how the levels work',
+    description:
+      `The readiness bar climbs from level 1 to ${READINESS_LEVELS} as you finish study cycles: ${FULL_LENGTH_COURSES.mcat.cyclesRequired} for the MCAT, ${FULL_LENGTH_COURSES.sat.cyclesRequired} for the SAT. Level ${READINESS_LEVELS} means it is time for a full-length.`,
+    audience: 'student',
+    blocks: [
+      { type: 'p', text: `The **full-length readiness** bar on your [MCAT](/mcat) or [SAT](/sat) page (and on your Dashboard) shows how close you are to your next full-length exam. It climbs from level 1 to level ${READINESS_LEVELS} as you complete study cycles.` },
+      { type: 'h2', id: 'what-counts', text: 'What counts' },
+      { type: 'p', text: 'A **cycle** is one diagnostic, the lessons it recommended, and — for the MCAT — the unit test on those lessons. Taking the diagnostic fills the first part of the cycle; each lesson you clear adds more; the unit test finishes it.' },
+      {
+        type: 'list',
+        items: [
+          `MCAT: ${FULL_LENGTH_COURSES.mcat.cyclesRequired} complete cycles between full-lengths. A cycle needs every recommended lesson cleared and the unit test passed.`,
+          `SAT: ${FULL_LENGTH_COURSES.sat.cyclesRequired} complete cycles. A cycle needs every recommended lesson cleared; the unit test is recommended but not required.`,
+          'Cycles you finished before the bar existed already count.',
+        ],
+      },
+      { type: 'h2', id: 'why-early-levels-go-faster', text: 'Why the early levels go faster' },
+      { type: 'p', text: `The levels are not evenly spaced on purpose. The first few come quickly — level 2 arrives after about 5% of the work — and the later ones take longer, so there is always a next level in reach. Under the bar, a plain line says exactly where you are, for example “Cycle 2 of ${FULL_LENGTH_COURSES.mcat.cyclesRequired} · 3 of 5 lessons cleared.”` },
+      { type: 'h2', id: 'level-10', text: `At level ${READINESS_LEVELS}` },
+      { type: 'p', text: 'Your Dashboard’s next step becomes the full-length. You can take one on Study Mondo, or sit an official practice test outside the site and enter the score. Either way the bar starts counting toward your next full-length. Nothing is locked: your next diagnostic stays open if you would rather keep going.' },
+      { type: 'h2', id: 'entering-a-score', text: 'Entering an outside score' },
+      {
+        type: 'steps',
+        items: [
+          'Open your MCAT or SAT page and find the readiness bar.',
+          `Choose **I took an AAMC full-length** (MCAT) or **I took a College Board / Bluebook practice test** (SAT). Below level ${READINESS_LEVELS}, use the **Enter the score** link instead.`,
+          `Pick the test, the date, and your total (MCAT ${FULL_LENGTH_COURSES.mcat.total.min}–${FULL_LENGTH_COURSES.mcat.total.max}; SAT ${FULL_LENGTH_COURSES.sat.total.min}–${FULL_LENGTH_COURSES.sat.total.max}). Section scores are optional.`,
+          'Save. The score joins your history, and your teacher can see it on your study report.',
+        ],
+      },
+      { type: 'h2', id: 'faq', text: 'Questions' },
+      {
+        type: 'faq',
+        items: [
+          { q: 'I took a full-length in the middle of a cycle. Did I lose that progress?', a: 'No. A cycle you were still working on carries over and counts toward the next full-length.' },
+          { q: 'Why did my level barely move after a lesson?', a: 'Later levels need more work than early ones. The line under the bar always shows the real count.' },
+          { q: 'Does the bar change anything my teacher sees?', a: 'Only entered outside scores, which appear on your score trend in their study report. The bar itself is for you.' },
+        ],
+      },
+    ],
+    related: [A.studyCalendar, A.diagnosticsAndStudyPlans, A.whatClearedMeans],
   },
 
   // ─────────────────────────────── Everyone ───────────────────────────────

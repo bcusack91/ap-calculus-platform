@@ -17,6 +17,8 @@ export const HELP_ARTICLES = {
   joiningAClass: 'joining-a-class',
   competitiveMode: 'competitive-mode',
   classDiagnostics: 'class-diagnostics',
+  studyCalendar: 'study-calendar',
+  fullLengthReadiness: 'full-length-readiness',
   classGamesAndLiveLessons: 'class-games-and-live-lessons',
   rosterImport: 'roster-import',
   glossary: 'glossary',

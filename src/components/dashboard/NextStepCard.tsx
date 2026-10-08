@@ -27,6 +27,7 @@ const HELP: Partial<Record<NextStep['kind'], { article: (typeof HELP_ARTICLES)[k
   flashcards: { article: HELP_ARTICLES.reviewingFlashcards, label: 'How flashcard review works' },
   'plan-topic': { article: HELP_ARTICLES.whatClearedMeans, label: 'What does cleared mean?' },
   'unit-test': { article: HELP_ARTICLES.diagnosticsAndStudyPlans, label: 'Diagnostics and study plans' },
+  'full-length': { article: HELP_ARTICLES.fullLengthReadiness, label: 'How readiness levels work' },
   'retake-diagnostic': { article: HELP_ARTICLES.diagnosticsAndStudyPlans, label: 'Diagnostics and study plans' },
   'take-diagnostic': { article: HELP_ARTICLES.diagnosticsAndStudyPlans, label: 'Diagnostics and study plans' },
 }
