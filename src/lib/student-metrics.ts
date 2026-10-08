@@ -228,7 +228,8 @@ export const MCAT_SECTION_KEYS = ['C/P', 'CARS', 'B/B', 'P/S'] as const
 export type McatSectionKey = (typeof MCAT_SECTION_KEYS)[number]
 export type McatTrendPoint = {
   at: string
-  kind: 'diagnostic' | 'class-diagnostic' | 'full-length'
+  /** 'external' = an AAMC full-length score the student entered by hand. */
+  kind: 'diagnostic' | 'class-diagnostic' | 'full-length' | 'external'
   total: number | null
   sections: Partial<Record<McatSectionKey, number>>
 }
@@ -263,8 +264,18 @@ function fullLengthSectionKey(short: unknown, section: unknown): McatSectionKey 
 
 export type DiagnosticRowLite = { category: string; results: unknown; createdAt: Date; classDiagnosticId: string | null }
 
-export function mcatTrend(rows: DiagnosticRowLite[]): McatTrendPoint[] {
+export type ExternalScoreLite = { takenAt: Date; totalScore: number; sectionScores: unknown }
+const EXTERNAL_SECTION_KEYS: Record<string, McatSectionKey> = { 'chem-phys': 'C/P', cars: 'CARS', 'bio-biochem': 'B/B', 'psych-soc': 'P/S' }
+export function mcatTrend(rows: DiagnosticRowLite[], external: ExternalScoreLite[] = []): McatTrendPoint[] {
   const points: McatTrendPoint[] = []
+  for (const e of external) {
+    const sections: Partial<Record<McatSectionKey, number>> = {}
+    const raw = obj(e.sectionScores)
+    for (const [k, key] of Object.entries(EXTERNAL_SECTION_KEYS)) {
+      if (inRange(raw[k], 118, 132)) sections[key] = raw[k]
+    }
+    points.push({ at: e.takenAt.toISOString(), kind: 'external', total: inRange(e.totalScore, 472, 528) ? e.totalScore : null, sections })
+  }
   for (const row of rows) {
     const r = obj(row.results)
     if (row.category === 'mcat-full-length') {
@@ -414,7 +425,7 @@ export async function loadStudentMetrics(userId: string, opts: LoadOpts): Promis
   const weekSince = new Date(now.getTime() - 7 * DAY_MS)
   const scope = scopeWhere(opts.classroomId)
 
-  const [timeRows, weekTimeRows, reviewLogs, overdue, questionRows, exitAttempts, progress, diagnostics, practice] = await Promise.all([
+  const [timeRows, weekTimeRows, reviewLogs, overdue, questionRows, exitAttempts, progress, diagnostics, practice, externalScores] = await Promise.all([
     prisma.activeTimeDaily.findMany({
       where: { userId, ...scope, ...(since ? { day: { gte: new Date(dayKey(since)) } } : {}) },
       select: { day: true, surface: true, seconds: true, courseSlug: true },
@@ -459,6 +470,11 @@ export async function loadStudentMetrics(userId: string, opts: LoadOpts): Promis
     prisma.mcatTestAttempt.findMany({
       where: { userId, ...(since ? { completedAt: { gte: since } } : {}) },
       select: { sectionName: true, total: true, timeSpent: true, completedAt: true },
+    }),
+    // AAMC full-length scores the student entered by hand (all time, like the diagnostics).
+    prisma.externalExamScore.findMany({
+      where: { userId, course: 'mcat' },
+      select: { takenAt: true, totalScore: true, sectionScores: true },
     }),
   ])
 
@@ -516,7 +532,7 @@ export async function loadStudentMetrics(userId: string, opts: LoadOpts): Promis
     },
     mcat: isMcat
       ? {
-          trend: mcatTrend(diagnostics),
+          trend: mcatTrend(diagnostics, externalScores),
           pacing: mcatPacing(diagnostics, practice),
           examPace: MCAT_EXAM_SECONDS_PER_QUESTION,
         }

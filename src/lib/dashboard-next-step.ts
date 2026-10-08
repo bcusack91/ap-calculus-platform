@@ -33,6 +33,8 @@ export interface NextStepPlan {
   topics: PlanTopic[]
   /** The cycle's unit test (src/lib/unit-test-courses.ts); MCAT, SAT (and ACT once enabled). */
   unitTest?: { available: boolean; passed: boolean; attempts: number; path: string; inProgressId?: string | null; locksDiagnostic?: boolean } | null
+  /** Full-length readiness (MCAT, SAT): level 10 = enough cycles done to sit a full-length. */
+  fullLength?: { ready: boolean; level: number; href: string; label: string; externalLabel: string; coursePage: string } | null
 }
 
 export interface NextStepClassDiagnostic {
@@ -71,6 +73,7 @@ export type NextStep =
   | { kind: 'flashcards'; count: number }
   | { kind: 'plan-topic'; topic: PlanTopic; courseKey: string; planLabel: string; done: number; total: number }
   | { kind: 'unit-test'; planLabel: string; href: string; attempts: number; resume: boolean; locks: boolean }
+  | { kind: 'full-length'; planLabel: string; href: string; label: string; externalLabel: string; coursePage: string }
   | { kind: 'retake-diagnostic'; planLabel: string; href: string }
   | { kind: 'take-diagnostic'; courseLabel: string; href: string }
   | { kind: 'open-course'; courseLabel: string; href: string }
@@ -106,6 +109,14 @@ export function resolveNextStep(input: NextStepInput): NextStep {
     // Every recommended topic is cleared. The cycle ends with its unit test
     // (MCAT: required unless a teacher waived it; SAT/ACT: recommended).
     const plan = ordered[0]
+    // Enough complete cycles (MCAT 4, SAT 2): a full-length comes before the
+    // next diagnostic — and before the SAT's recommended unit test, since the
+    // cycles that got them here are already complete. Encouraged, never
+    // locked: the diagnostic stays open.
+    if (plan.fullLength?.ready) {
+      const fl = plan.fullLength
+      return { kind: 'full-length', planLabel: plan.label, href: fl.href, label: fl.label, externalLabel: fl.externalLabel, coursePage: fl.coursePage }
+    }
     const unitTest = plan.unitTest
     if (unitTest && unitTestIsNextStep(unitTest, plan.canRetakeDiagnostic)) {
       return {
@@ -193,6 +204,13 @@ export function describeNextStep(step: Exclude<NextStep, { kind: 'loading' }>): 
             ? 'Finish this study cycle: pass the unit test on your study-plan topics. Retakes use new questions.'
             : 'You cleared every topic in your study plan. A 25-question test on them shows what stuck before your next diagnostic.',
         cta: step.resume ? 'Resume the unit test' : step.attempts > 0 ? 'Retake the unit test' : 'Take the unit test',
+        href: step.href,
+      }
+    case 'full-length':
+      return {
+        title: `You're ready for a ${step.label}`,
+        reason: `Level 10: you've finished every study cycle before your next full-length. Sit one now to see where you stand, or enter ${step.planLabel === 'MCAT' ? 'an' : 'a'} ${step.externalLabel} score on your ${step.planLabel} page.`,
+        cta: `Take a ${step.label}`,
         href: step.href,
       }
     case 'retake-diagnostic':

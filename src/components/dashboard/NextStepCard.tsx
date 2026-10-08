@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
-import { ArrowRight, BookOpen, ClipboardCheck, ClipboardList, Layers, NotebookPen, RotateCcw, Compass } from 'lucide-react'
+import { ArrowRight, BookOpen, ClipboardCheck, ClipboardList, Layers, NotebookPen, RotateCcw, Compass, Trophy } from 'lucide-react'
 import { describeNextStep, type NextStep } from '@/lib/dashboard-next-step'
 import { dueDeadline, formatDueDate } from '@/components/ClassDiagnosticBanner'
 import HelpLink, { HELP_ARTICLES } from '@/components/HelpLink'
@@ -13,6 +13,7 @@ const ICONS: Record<Exclude<NextStep['kind'], 'loading'>, typeof ArrowRight> = {
   flashcards: Layers,
   'plan-topic': BookOpen,
   'unit-test': ClipboardCheck,
+  'full-length': Trophy,
   'retake-diagnostic': RotateCcw,
   'take-diagnostic': NotebookPen,
   'open-course': BookOpen,

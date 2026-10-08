@@ -1,6 +1,7 @@
-import { NextRequest, NextResponse } from 'next/server'
+import { NextRequest, NextResponse, after } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { requireClassroomAccess } from '@/lib/teacher-auth'
+import { scheduleClassroom } from '@/lib/cycle-scheduler-server'
 import { CLASS_PLAN_COURSES, classPlanCourse, scoreLabelFromResults } from '@/lib/class-plan-config'
 import { isOpenClassDiagnostic, OPEN_DIAGNOSTIC_TEST_DATA, defaultDiagnosticCourseKey } from '@/lib/class-diagnostic-open'
 import { SAT_DIAGNOSTIC_SCORE_SD } from '@/lib/sat-scoring'
@@ -433,6 +434,7 @@ export async function POST(req: NextRequest, { params }: Ctx) {
       },
       select: { id: true, title: true, courseKey: true, dueDate: true },
     })
+    scheduleAfterResponse(id, courseKey, dueDate)
     return NextResponse.json({ diagnostic: { ...diagnostic, open: true } })
   }
 
@@ -485,7 +487,30 @@ export async function POST(req: NextRequest, { params }: Ctx) {
     },
     select: { id: true, title: true, courseKey: true, dueDate: true },
   })
+  scheduleAfterResponse(id, courseKey, dueDate)
   return NextResponse.json({ diagnostic })
+}
+
+/**
+ * A due date on an MCAT/SAT class diagnostic spaces each student's remaining
+ * cycle lessons out to it on their calendar (src/lib/cycle-scheduler-server).
+ * Runs after the response: a class of 30 means 30 plan builds.
+ */
+function scheduleAfterResponse(classroomId: string, courseKey: string, dueDate: Date | null) {
+  if (!dueDate) return
+  const run = async () => {
+    try {
+      await scheduleClassroom(classroomId, courseKey, dueDate)
+    } catch (err) {
+      console.error('[class-diagnostics] scheduling failed (ignored):', err)
+    }
+  }
+  try {
+    after(run)
+  } catch {
+    // `after` needs a live request; unit tests call the handler bare. Nothing
+    // to schedule against there.
+  }
 }
 
 /**

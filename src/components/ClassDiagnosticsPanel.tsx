@@ -311,7 +311,7 @@ export default function ClassDiagnosticsPanel({
               </select>
             </label>
             <label className="text-sm">
-              <span className="mb-1 block text-xs text-gray-600 dark:text-gray-400">Due date (optional)</span>
+              <span className="mb-1 block text-xs text-gray-600 dark:text-gray-400">Due date (optional) — MCAT/SAT: spaces each student&rsquo;s remaining lessons out to it on their calendar</span>
               <input type="date" value={dueDate} onChange={e => setDueDate(e.target.value)} className="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 dark:border-gray-600 dark:bg-gray-700 dark:text-white" />
             </label>
             <button

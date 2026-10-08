@@ -162,6 +162,26 @@ describe('resolveNextStep — plans and fallbacks', () => {
     expect(resolveNextStep({ ...base, plans: [{ ...sat, unitTest: { ...sat.unitTest, passed: true } }] }).kind).toBe('retake-diagnostic')
   })
 
+  it('at level 10 the full-length comes first — before the retake, and before the SAT\'s recommended unit test', () => {
+    const fullLength = { ready: true, level: 10, href: '/sat-practice', label: 'SAT practice test', externalLabel: 'College Board / Bluebook practice test', coursePage: '/sat' }
+    const sat: NextStepPlan = {
+      courseKey: 'sat',
+      label: 'SAT',
+      diagnosticRoute: '/sat-diagnostic',
+      topics: [topic('sat-a', true), topic('sat-b', true)],
+      canRetakeDiagnostic: true,
+      unitTest: { available: true, passed: false, attempts: 0, path: '/sat-unit-test', inProgressId: null, locksDiagnostic: false },
+      fullLength,
+    }
+    const step = resolveNextStep({ ...base, plans: [sat] })
+    expect(step).toMatchObject({ kind: 'full-length', href: '/sat-practice', planLabel: 'SAT' })
+    expect(describeNextStep(step as Exclude<typeof step, { kind: 'loading' }>)).toMatchObject({ cta: 'Take a SAT practice test', href: '/sat-practice' })
+    // Not ready: the usual order (unit test, then retake) still holds
+    expect(resolveNextStep({ ...base, plans: [{ ...sat, fullLength: { ...fullLength, ready: false, level: 7 } }] }).kind).toBe('unit-test')
+    // A pending lesson always comes before the full-length nudge
+    expect(resolveNextStep({ ...base, plans: [{ ...sat, topics: [topic('sat-a', true), topic('sat-b')] }] }).kind).toBe('plan-topic')
+  })
+
   it('a course with no diagnostic: keep going in that course', () => {
     const step = resolveNextStep({
       ...base,

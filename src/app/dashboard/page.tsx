@@ -11,6 +11,8 @@ import { AvatarData } from '@/types/avatar'
 import ProgressRing from '@/components/ProgressRing'
 import LiveNowBanner from '@/components/LiveNowBanner'
 import ClassAnnouncementsBanner from '@/components/ClassAnnouncementsBanner'
+import FullLengthProgress from '@/components/FullLengthProgress'
+import { isFullLengthCourse } from '@/lib/full-length-progress'
 import AchievementToast from '@/components/AchievementToast'
 import ProgressCharts from '@/components/ProgressCharts'
 import StudyPlanner from '@/components/StudyPlanner'
@@ -554,6 +556,12 @@ function DashboardContent() {
 
         {/* New class announcements — below the one next step, until read or dismissed */}
         <ClassAnnouncementsBanner />
+
+        {/* Full-length readiness for each test-prep plan (MCAT 4 cycles, SAT 2) */}
+        {plansLoaded &&
+          studyPlans.flatMap((p) => (isFullLengthCourse(p.courseKey) ? [p.courseKey] : [])).map((course) => (
+            <FullLengthProgress key={course} course={course} compact className="mb-6" />
+          ))}
 
         {/* Also today — whatever the next-step card didn't take */}
         <div className="mb-6 flex flex-wrap items-center gap-2">

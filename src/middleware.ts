@@ -309,6 +309,7 @@ export const config = {
     '/teacher/:path*',
     '/admin/:path*',
     '/competitive/:path*',
+    '/calendar/:path*',
     '/api/:path*',
   ],
 }

@@ -251,17 +251,20 @@ export const KIND_LABEL: Record<McatTrendPoint['kind'], string> = {
   diagnostic: 'Diagnostic',
   'class-diagnostic': 'Class diagnostic',
   'full-length': 'Full-length',
+  external: 'AAMC full-length (entered)',
 }
 
 const trendValue = (p: McatTrendPoint, key: McatSectionKey | 'total') => (key === 'total' ? p.total : p.sections[key]) ?? null
 
-/** Marker shape encodes the kind of test: circle, square, diamond. */
+/** Marker shape encodes the kind of test: circle, square, diamond, hollow diamond (entered by hand). */
 function KindMarker({ kind, x, y, r = 4 }: { kind: McatTrendPoint['kind']; x: number; y: number; r?: number }) {
   const cls = `${SERIES_FILL} stroke-white dark:stroke-gray-800`
   if (kind === 'class-diagnostic') return <rect x={x - r} y={y - r} width={r * 2} height={r * 2} className={cls} strokeWidth={2} />
-  if (kind === 'full-length') {
+  if (kind === 'full-length' || kind === 'external') {
     const d = r * 1.3
-    return <path d={`M${x} ${y - d}L${x + d} ${y}L${x} ${y + d}L${x - d} ${y}Z`} className={cls} strokeWidth={2} />
+    const path = `M${x} ${y - d}L${x + d} ${y}L${x} ${y + d}L${x - d} ${y}Z`
+    if (kind === 'external') return <path d={path} className={`${SERIES_STROKE} fill-white dark:fill-gray-800`} strokeWidth={2} />
+    return <path d={path} className={cls} strokeWidth={2} />
   }
   return <circle cx={x} cy={y} r={r} className={cls} strokeWidth={2} />
 }
@@ -372,7 +375,7 @@ export function McatTrendChart({ trend }: { trend: McatTrendPoint[] }) {
   const [showTable, setShowTable] = useState(false)
   const shown = hover ?? trend.length - 1
   const p = trend[shown]
-  const kinds = (['diagnostic', 'class-diagnostic', 'full-length'] as const).filter((k) => trend.some((t) => t.kind === k))
+  const kinds = (['diagnostic', 'class-diagnostic', 'full-length', 'external'] as const).filter((k) => trend.some((t) => t.kind === k))
 
   return (
     <div>

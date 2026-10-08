@@ -97,6 +97,7 @@ model User {
   mcatTestAttempts           McatTestAttempt[]
   unitTestAttempts           UnitTestAttempt[]
   mcatUnitTests              McatUnitTest[]
+  externalExamScores         ExternalExamScore[]
   frqAttempts                FrqAttempt[]
   diagnosticChallenges       DiagnosticChallenge[]
   diagnosticChallengeEntries DiagnosticChallengeEntry[]
@@ -1538,10 +1539,35 @@ model StudyTask {
   completed   Boolean   @default(false)
   completedAt DateTime?
   sortOrder   Int       @default(0)
+  /// Set by the cycle scheduler (src/lib/cycle-scheduler.ts): the due date it
+  /// last assigned. dueDate differing from it means the student moved the task.
+  autoDueDate DateTime?
+  /// Scheduler identity ('cycle:<diagnosticId>:<slug>'); null for a task the
+  /// student added themselves.
+  sourceKey   String?
   plan        StudyPlan @relation(fields: [planId], references: [id], onDelete: Cascade)
 
+  @@unique([planId, sourceKey])
   @@index([planId, completed])
   @@index([dueDate])
+}
+
+/// A full-length score earned outside StudyMondo (an AAMC MCAT full-length, a
+/// College Board / Bluebook SAT practice test). Counts as a full-length taken:
+/// it resets the full-length readiness bar and joins the score history.
+model ExternalExamScore {
+  id            String   @id @default(cuid())
+  userId        String
+  course        String // 'mcat' | 'sat'
+  source        String // e.g. 'AAMC Full Length 2', 'Bluebook Practice 4'
+  totalScore    Int
+  sectionScores Json? // MCAT { 'chem-phys': 127, … } / SAT { rw: 650, math: 700 }
+  takenAt       DateTime
+  note          String?
+  createdAt     DateTime @default(now())
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, course, takenAt])
 }
 
 // ─── Daily/Weekly Challenges ─────────────────────────────────────────

@@ -8,6 +8,8 @@ import { buildSatPlan } from '@/lib/sat-plan'
 import { buildMcatPlanStatus } from '@/lib/mcat-plan'
 import { buildActPlanStatus } from '@/lib/act-plan'
 import { unitTestStatusFor } from '@/lib/mcat-unit-test-server'
+import { fullLengthReadiness } from '@/lib/full-length-progress-server'
+import { FULL_LENGTH_COURSES, type FullLengthCourse } from '@/lib/full-length-progress'
 import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
 
 /**
@@ -46,6 +48,24 @@ function parseRecommended(results: unknown): RecommendedTopic[] {
     })
   }
   return out
+}
+
+/** The dashboard's next-step input: is the student at level 10 for this course? */
+type FullLengthSummary = { ready: boolean; level: number; href: string; label: string; externalLabel: string; coursePage: string }
+async function fullLengthSummary(
+  userId: string,
+  course: FullLengthCourse,
+  currentPlan: { diagnosticId: string; topicsTotal: number; topicsCleared: number },
+): Promise<FullLengthSummary | null> {
+  try {
+    const r = await fullLengthReadiness(userId, course, { currentPlan })
+    const cfg = FULL_LENGTH_COURSES[course]
+    return { ready: r.ready, level: r.level, href: cfg.fullLengthHref, label: cfg.fullLengthLabel, externalLabel: cfg.externalLabel, coursePage: `/${course}` }
+  } catch (err) {
+    // Readiness is a nudge; never let it take the study plan down with it.
+    console.error('[plan-status] full-length readiness failed (ignored):', err)
+    return null
+  }
 }
 
 export async function GET() {
@@ -111,10 +131,16 @@ export async function GET() {
             },
             canRetakeDiagnostic: satCourse.gated === true ? satPlan.canRetakeDiagnostic : true,
             unitTest: null as Awaited<ReturnType<typeof unitTestStatusFor>> | null,
+            fullLength: null as FullLengthSummary | null,
           }
         : null
     if (satEntry && satPlan?.hasDiagnostic) {
       satEntry.unitTest = await unitTestStatusFor(userId, satPlan.diagnosticId, satPlan.pendingTopics.length === 0, 'sat')
+      satEntry.fullLength = await fullLengthSummary(userId, 'sat', {
+        diagnosticId: satPlan.diagnosticId,
+        topicsTotal: satPlan.recommendedTopics.length,
+        topicsCleared: satPlan.recommendedTopics.length - satPlan.pendingTopics.length,
+      })
     }
 
     // The MCAT plan comes from the MCAT page's own builder too: it swaps out
@@ -139,6 +165,11 @@ export async function GET() {
           summary: { total: mcat.recommendedTopics.length, completed: mcat.recommendedTopics.length - pending, pending },
           canRetakeDiagnostic: mcat.canRetakeDiagnostic,
           unitTest: mcat.unitTest,
+          fullLength: await fullLengthSummary(userId, 'mcat', {
+            diagnosticId: mcat.diagnosticId ?? '',
+            topicsTotal: mcat.recommendedTopics.length,
+            topicsCleared: mcat.recommendedTopics.length - pending,
+          }),
         }
       }
     }

@@ -156,7 +156,10 @@ export default function StudyPlanner() {
   if (error) {
     return (
       <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm">
-        <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">📋 Study schedules</h2>
+        <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
+          <h2 className="text-lg font-semibold text-gray-900 dark:text-white">📋 Study schedules</h2>
+          <Link href="/calendar" className="text-sm font-medium text-accent hover:underline">Open calendar →</Link>
+        </div>
         <div className="text-center py-6">
           <div className="text-3xl mb-2">⚠️</div>
           <p className="text-gray-600 dark:text-gray-400 mb-3">{error}</p>

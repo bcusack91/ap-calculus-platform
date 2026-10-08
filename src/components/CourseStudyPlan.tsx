@@ -11,6 +11,8 @@ import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
 import { unitTestIsNextStep } from '@/lib/unit-test-courses'
 import type { PlanTopic } from '@/components/StudyPlanNextUp'
 import HelpLink, { HELP_ARTICLES } from '@/components/HelpLink'
+import FullLengthProgress from '@/components/FullLengthProgress'
+import { isFullLengthCourse } from '@/lib/full-length-progress'
 
 type PlanTopicStatus = PlanTopic & {
   priority?: 'high' | 'medium' | 'low'
@@ -276,6 +278,11 @@ export default function CourseStudyPlan({
               {cards.nextDueAt ? ` (next one ${formatTimeUntil(cards.nextDueAt)})` : ''}.
             </span>
           </div>
+        )}
+
+        {/* How close they are to their next full-length (MCAT 4 cycles, SAT 2) */}
+        {status === 'authenticated' && loaded && isFullLengthCourse(courseKey) && (
+          <FullLengthProgress course={courseKey} />
         )}
 
         {/* The study plan from the last diagnostic */}
