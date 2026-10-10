@@ -20,7 +20,7 @@
 import { generateExitQuiz, type ExitQuizQuestion } from '../exit-quizzes'
 import { SAT_PASSAGES, type ReadingPassage } from '../sat-passages'
 import { generateGridInProblems, type GridInProblem } from '../sat-grid-in'
-import { satSectionScaled } from '@/lib/sat-scoring'
+import { satSectionScaled, satRouteFor, SAT_ROUTING_THRESHOLD, type SatRoute } from '@/lib/sat-scoring'
 import { arrangeInPassageBlocks } from '@/lib/mcat-diagnostic-order'
 
 /* ------------------------------------------------------------------ */
@@ -38,7 +38,7 @@ export type ModuleDifficulty = 'easy' | 'medium' | 'hard'
  * the score you can reach — which is precisely what matters in the 700-800
  * band. ~70% correct on Module 1 is the commonly cited routing threshold.
  */
-export const MODULE_2_ROUTING_THRESHOLD = 0.7
+export const MODULE_2_ROUTING_THRESHOLD = SAT_ROUTING_THRESHOLD
 
 export function module2Tier(correct: number, total: number): ModuleDifficulty {
   if (total <= 0) return 'medium'
@@ -47,6 +47,18 @@ export function module2Tier(correct: number, total: number): ModuleDifficulty {
 
 export type RWDomain = 'craft-structure' | 'information-ideas' | 'conventions' | 'expression'
 export type MathDomain = 'algebra' | 'advanced' | 'problem-solving' | 'geometry'
+
+/** College Board names for the content domains (teacher reports, review pages). */
+export const SAT_DOMAIN_LABELS: Record<RWDomain | MathDomain, string> = {
+  'craft-structure': 'Craft and Structure',
+  'information-ideas': 'Information and Ideas',
+  conventions: 'Standard English Conventions',
+  expression: 'Expression of Ideas',
+  algebra: 'Algebra',
+  advanced: 'Advanced Math',
+  'problem-solving': 'Problem-Solving and Data Analysis',
+  geometry: 'Geometry and Trigonometry',
+}
 
 export interface SATTestQuestion extends ExitQuizQuestion {
   section: SATSectionType
@@ -612,6 +624,99 @@ export async function generateMiniTest(testNumber: number): Promise<SATFullTest>
     totalQuestions: sections.reduce((s, sec) => s + sec.questionCount, 0),
     totalTimeSeconds: sections.reduce((s, sec) => s + sec.timeLimitSeconds, 0),
   }
+}
+
+/* ------------------------------------------------------------------ */
+/*  Shared form build (client runner AND server grader)                */
+/* ------------------------------------------------------------------ */
+
+export type { SatRoute }
+export type SatTestFormat = 'full' | 'mini'
+
+/** The Module 2 difficulty a route draws at. */
+export function routeDifficulty(route: SatRoute): ModuleDifficulty {
+  return route === 'harder' ? 'hard' : 'easy'
+}
+
+/** The route a finished Module 1 earns (the same threshold as module2Tier). */
+export function module2Route(correct: number, total: number): SatRoute {
+  return satRouteFor(correct, total)
+}
+
+const baseFormCache = new Map<string, Promise<SATFullTest>>()
+const routedModuleCache = new Map<string, Promise<SATTestSection>>()
+const builtFormCache = new Map<string, Promise<SATFullTest>>()
+
+/** Memoize a promise, dropping it on failure so a retry can rebuild. */
+function memo<T>(cache: Map<string, Promise<T>>, key: string, build: () => Promise<T>): Promise<T> {
+  let hit = cache.get(key)
+  if (!hit) {
+    hit = build()
+    cache.set(key, hit)
+    hit.catch(() => cache.delete(key))
+  }
+  return hit
+}
+
+/** The unrouted form exactly as the runner first serves it. Shared: treat as read-only. */
+function baseForm(testNumber: number, format: SatTestFormat): Promise<SATFullTest> {
+  return memo(baseFormCache, `${format}:${testNumber}`, () =>
+    format === 'full' ? generateFullTest(testNumber) : generateMiniTest(testNumber),
+  )
+}
+
+/**
+ * The Module 2 at `test.sections[moduleIndex]` as served on `tier`. Built only
+ * from the UNROUTED form (never from whatever the caller has swapped in), so
+ * the runner and the server grader get the identical question set however and
+ * whenever each builds it. `tier` null, a Module 1 index, or a mini test
+ * returns the pre-built section unchanged. Cached per path; read-only.
+ */
+export async function routedModule2(
+  test: Pick<SATFullTest, 'testNumber' | 'format'>,
+  moduleIndex: number,
+  tier: SatRoute | null,
+): Promise<SATTestSection> {
+  const base = await baseForm(test.testNumber, test.format)
+  const section = base.sections[moduleIndex]
+  if (!section) throw new Error(`SAT form ${test.format}:${test.testNumber} has no module ${moduleIndex}`)
+  if (!tier || section.moduleNum !== 2) return section
+  return memo(routedModuleCache, `${test.format}:${test.testNumber}:${moduleIndex}:${tier}`, () => {
+    const used = new Set(base.sections.flatMap((s) => s.questions.map((q) => q.question)))
+    // Passages from every OTHER module are off limits, so the routed Module 2
+    // never repeats a passage the student already read.
+    const usedPassageIds = new Set(
+      base.sections
+        .filter((_, i) => i !== moduleIndex)
+        .flatMap((s) => s.questions.flatMap((q) => (q.passage ? [q.passage.id] : []))),
+    )
+    return regenerateModule2(section, routeDifficulty(tier), used, usedPassageIds, test.testNumber)
+  })
+}
+
+/**
+ * Deterministic rebuild of exactly what the runner serves for a test number,
+ * format and pair of Module 2 routes (null = the pre-built, unrouted module).
+ * The server grades and the review page renders from this. Cached per path;
+ * the returned form is shared, so treat it as read-only.
+ */
+export function buildSatForm(
+  testNumber: number,
+  format: SatTestFormat,
+  rwTier: SatRoute | null = null,
+  mathTier: SatRoute | null = null,
+): Promise<SATFullTest> {
+  if (format !== 'full' || (!rwTier && !mathTier)) return baseForm(testNumber, format)
+  return memo(builtFormCache, `${format}:${testNumber}:${rwTier}:${mathTier}`, async () => {
+    const base = await baseForm(testNumber, format)
+    const sections: SATTestSection[] = []
+    for (let i = 0; i < base.sections.length; i++) {
+      const s = base.sections[i]
+      const tier = s.section === 'reading-writing' ? rwTier : mathTier
+      sections.push(s.moduleNum === 2 ? await routedModule2(base, i, tier) : s)
+    }
+    return { ...base, sections }
+  })
 }
 
 /**

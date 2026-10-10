@@ -30,7 +30,7 @@ import { renderRichText } from '@/lib/render-rich-text'
 import { preloadKatex } from '@/lib/katex-lazy'
 import { scoreMCAT, projectionRange, type MCATScoreReport } from '@/lib/mcat-scoring'
 import { recommendFromFullLength } from '@/lib/mcat-fulllength-recs'
-import { MCAT_SECTION_META, type MCATPassage, type MCATSection } from '@/data/mcat/types'
+import { MCAT_SECTION_META, fullLengthQuestionId, type MCATPassage, type MCATSection } from '@/data/mcat/types'
 import 'katex/dist/katex.min.css'
 import { useActivitySurface } from '@/hooks/useActivitySurface'
 
@@ -92,6 +92,10 @@ interface SavedProgress {
   answers: Record<string, number>
   eliminated: Record<string, number[]>
   flags: number[]
+  /** Per-question flags, keyed "p:q" (additive; absent on older saves). */
+  qFlags?: string[]
+  /** Exam seconds per passage index (additive; absent on older saves). */
+  examSeconds?: Record<string, number>
   sectionDeadline: number | null
   breakDeadline: number | null
   sectionElapsed: Record<string, number>
@@ -133,6 +137,11 @@ export default function MCATPassageRunner({
   // eliminated options keyed "p:q" → set of struck indices
   const [eliminated, setEliminated] = useState<Record<string, Set<number>>>({})
   const [flags, setFlags] = useState<Set<number>>(new Set())
+  // Per-question "flag for review" (exam mode), keyed "p:q" like answers.
+  const [qFlags, setQFlags] = useState<Set<string>>(new Set())
+  // Exam seconds spent on each passage (by index) — a ref, not state, so the
+  // per-second tick doesn't re-render; saved with progress and on submit.
+  const examSecondsRef = useRef<Record<number, number>>({})
   const [checkedPassages, setCheckedPassages] = useState<Set<number>>(new Set()) // practice mode
   const [submitted, setSubmitted] = useState(false)
   const [secondsLeft, setSecondsLeft] = useState(timeLimitMinutes ? timeLimitMinutes * 60 : 0)
@@ -241,6 +250,10 @@ export default function MCATPassageRunner({
             Object.entries(s.eliminated ?? {}).map(([k, arr]) => [k, new Set(Array.isArray(arr) ? arr : [])]),
           ))
           setFlags(new Set(Array.isArray(s.flags) ? s.flags : []))
+          setQFlags(new Set(Array.isArray(s.qFlags) ? s.qFlags.filter((k) => typeof k === 'string') : []))
+          examSecondsRef.current = Object.fromEntries(
+            Object.entries(s.examSeconds ?? {}).filter(([, v]) => typeof v === 'number' && v >= 0).map(([k, v]) => [Number(k), v]),
+          )
           setSectionElapsed(s.sectionElapsed ?? {})
           const savedIdx = Math.min(Math.max(0, s.sectionIdx ?? 0), sectionRanges.length - 1)
           const savedRange = sectionRanges[savedIdx]
@@ -300,13 +313,15 @@ export default function MCATPassageRunner({
         answers,
         eliminated: Object.fromEntries(Object.entries(eliminated).map(([k, set]) => [k, [...set]])),
         flags: [...flags],
+        qFlags: [...qFlags],
+        examSeconds: examSecondsRef.current,
         sectionDeadline,
         breakDeadline,
         sectionElapsed,
       }
       localStorage.setItem(storageKey, JSON.stringify(payload))
     } catch { /* storage unavailable — exam still runs, just without resume */ }
-  }, [storageKey, restored, submitted, phase, sectionIdx, active, answers, eliminated, flags, sectionDeadline, breakDeadline, sectionElapsed, totalQuestions])
+  }, [storageKey, restored, submitted, phase, sectionIdx, active, answers, eliminated, flags, qFlags, sectionDeadline, breakDeadline, sectionElapsed, totalQuestions])
 
   // ---------- Timers ----------
   // Flat exam timer (non-sectioned) — decrement (and auto-submit at zero) from
@@ -354,6 +369,26 @@ export default function MCATPassageRunner({
     return () => clearInterval(t)
   }, [pacing, mode, submitted, active, checkedPassages])
 
+  // Exam stopwatch per passage: counts while a timed exam (or a sectioned
+  // exam's section) is running on the active passage.
+  useEffect(() => {
+    if (mode !== 'exam' || submitted || (sectioned && phase !== 'in-section')) return
+    const t = setInterval(() => {
+      examSecondsRef.current[active] = (examSecondsRef.current[active] ?? 0) + 1
+    }, 1000)
+    return () => clearInterval(t)
+  }, [mode, submitted, sectioned, phase, active])
+
+  function toggleQuestionFlag(qi: number) {
+    if (submitted) return
+    const k = key(active, qi)
+    setQFlags((f) => {
+      const n = new Set(f)
+      if (n.has(k)) n.delete(k); else n.add(k)
+      return n
+    })
+  }
+
   function select(qi: number, oi: number) {
     if (submitted || checkedPassages.has(active)) return
     setAnswers((a) => ({ ...a, [key(active, qi)]: oi }))
@@ -395,6 +430,8 @@ export default function MCATPassageRunner({
   // a failed POST is swallowed. The ref guards against React re-renders firing
   // it twice; it resets on Retake (submitted -> false).
   const savedRef = useRef(false)
+  // The saved attempt's id, for the permanent review link on the results screen.
+  const [savedAttemptId, setSavedAttemptId] = useState<string | null>(null)
   useEffect(() => {
     if (!submitted) { savedRef.current = false; return }
     // `form` gates persistence: timed single-section drills run exam mode with
@@ -402,11 +439,30 @@ export default function MCATPassageRunner({
     // "total" would pollute the adaptive plan).
     if (mode !== 'exam' || !form || !report || !session?.user?.id || savedRef.current) return
     savedRef.current = true
+    // Per-question record, keyed by stable question ids so the server can
+    // rebuild the form, grade it itself and log every answer.
+    const answersById: Record<string, number> = {}
+    const flaggedIds: string[] = []
+    passages.forEach((p, pi) => p.questions.forEach((q, qi) => {
+      const id = fullLengthQuestionId(p, q, qi)
+      const a = answers[`${pi}:${qi}`]
+      if (a !== undefined) answersById[id] = a
+      if (qFlags.has(`${pi}:${qi}`)) flaggedIds.push(id)
+    }))
+    const passageSecondsById: Record<string, number> = {}
+    for (const [pi, secs] of Object.entries(examSecondsRef.current)) {
+      const p = passages[Number(pi)]
+      if (p && secs > 0) passageSecondsById[p.id] = secs
+    }
     fetch('/api/mcat-full-length/submit', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         form,
+        answers: answersById,
+        flags: flaggedIds,
+        passageFlags: [...flags].map((pi) => passages[pi]?.id).filter((id): id is string => !!id),
+        passageSeconds: passageSecondsById,
         total: report.total,
         percentileLabel: report.percentileLabel,
         sections: report.sections.map((s) => ({
@@ -419,14 +475,20 @@ export default function MCATPassageRunner({
           .filter((s) => s.total > 0 && s.correct / s.total < 0.5)
           .map((s) => s.short),
       }),
-    }).catch(() => { /* best-effort; results UI is unaffected */ })
-  }, [submitted, mode, report, topicRecs, form, sectionElapsed, session?.user?.id])
+    })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d) => { if (typeof d?.attemptId === 'string') setSavedAttemptId(d.attemptId) })
+      .catch(() => { /* best-effort; results UI is unaffected */ })
+  }, [submitted, mode, report, topicRecs, form, sectionElapsed, session?.user?.id, passages, answers, qFlags, flags])
 
   function retake() {
     setSubmitted(false)
+    setSavedAttemptId(null)
     setAnswers({})
     setEliminated({})
     setFlags(new Set())
+    setQFlags(new Set())
+    examSecondsRef.current = {}
     setCheckedPassages(new Set())
     setActive(0)
     setPassageSeconds({})
@@ -451,6 +513,14 @@ export default function MCATPassageRunner({
       <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 py-8 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
         <div className="container max-w-3xl">
           <h1 className="mb-1 text-2xl font-black text-gray-900 dark:text-white">{title} — Results</h1>
+          {savedAttemptId && (
+            <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">
+              Saved to your history.{' '}
+              <Link href={`/review/mcat-fl/${savedAttemptId}`} className="font-semibold text-accent hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring dark:text-accent-muted">
+                Permanent review →
+              </Link>
+            </p>
+          )}
           {mode === 'exam' && singleSection && (
             <>
               <div className="my-6 rounded-2xl border border-blue-200 bg-white p-6 text-center shadow-sm dark:border-blue-800 dark:bg-gray-800">
@@ -577,6 +647,7 @@ export default function MCATPassageRunner({
                     <div key={qi} className="mt-4 border-t border-gray-100 pt-3 dark:border-gray-700">
                       <RichText text={q.question} className="text-sm font-medium text-gray-900 dark:text-gray-100" />
                       {q.needsReview && <span className="ml-1 rounded bg-amber-100 px-1.5 py-0.5 text-[10px] font-semibold text-amber-700 dark:bg-amber-900/40 dark:text-amber-300">draft</span>}
+                      {qFlags.has(key(pi, qi)) && <span className="ml-1 rounded bg-amber-100 px-1.5 py-0.5 text-[10px] font-semibold text-amber-700 dark:bg-amber-900/40 dark:text-amber-300">flagged</span>}
                       <div className="mt-2 space-y-1">
                         {q.options.map((opt, oi) => {
                           const isCorrect = oi === q.correctAnswer
@@ -596,8 +667,13 @@ export default function MCATPassageRunner({
               </details>
             ))}
           </div>
-          <div className="mt-8 flex gap-3">
+          <div className="mt-8 flex flex-wrap gap-3">
             <Link href={backHref} className="rounded-xl bg-gradient-to-r from-blue-600 to-cyan-600 px-6 py-3 font-semibold text-white">{backLabel}</Link>
+            {savedAttemptId && (
+              <Link href={`/review/mcat-fl/${savedAttemptId}`} className="rounded-xl border-2 border-accent-muted px-6 py-3 font-semibold text-accent hover:bg-accent-subtle focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring dark:text-accent-muted dark:hover:bg-accent-light/10">
+                Permanent review
+              </Link>
+            )}
             <button onClick={retake} className="rounded-xl border-2 border-gray-300 px-6 py-3 font-semibold text-gray-600 dark:border-gray-600 dark:text-gray-300">Retake</button>
           </div>
         </div>
@@ -800,7 +876,19 @@ export default function MCATPassageRunner({
                 <div key={qi} className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm dark:border-gray-700 dark:bg-gray-800">
                   <div className="mb-3 flex items-start justify-between gap-2">
                     <RichText text={`**${qi + 1}.** ${q.question}`} className="text-sm font-medium text-gray-900 dark:text-gray-100" />
-                    {q.needsReview && <span className="shrink-0 rounded bg-amber-100 px-1.5 py-0.5 text-[10px] font-semibold text-amber-700 dark:bg-amber-900/40 dark:text-amber-300" title="AI-authored — pending expert review">draft</span>}
+                    <div className="flex shrink-0 items-center gap-1.5">
+                      {q.needsReview && <span className="rounded bg-amber-100 px-1.5 py-0.5 text-[10px] font-semibold text-amber-700 dark:bg-amber-900/40 dark:text-amber-300" title="AI-authored — pending expert review">draft</span>}
+                      {mode === 'exam' && (
+                        <button
+                          type="button"
+                          onClick={() => toggleQuestionFlag(qi)}
+                          aria-pressed={qFlags.has(k)}
+                          className={`rounded-md border px-2 py-0.5 text-[11px] font-semibold ${qFlags.has(k) ? 'border-amber-400 bg-amber-50 text-amber-700 dark:border-amber-500 dark:bg-amber-900/30 dark:text-amber-300' : 'border-gray-300 text-gray-500 hover:border-amber-300 dark:border-gray-600 dark:text-gray-400'}`}
+                        >
+                          <span aria-hidden="true">{qFlags.has(k) ? '★ ' : '☆ '}</span>Flag for review
+                        </button>
+                      )}
+                    </div>
                   </div>
                   <div className="space-y-2">
                     {q.options.map((opt, oi) => {

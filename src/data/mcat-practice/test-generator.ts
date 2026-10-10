@@ -49,6 +49,12 @@ export interface MCATTestQuestion {
   difficulty: 'easy' | 'medium' | 'hard'
   /** Present on passage-based questions; the passage is shown beside each question in its set. */
   passage?: DiagnosticPassage
+  /**
+   * Stable handle the server re-resolves the question from (answer log,
+   * review): `pool:<slug>:<id>` for an exit-pool item, `mcatpsg:<passageId>:<i>`
+   * for question i of an authored passage. See src/lib/question-sources/mcat.ts.
+   */
+  ref?: string
 }
 
 /**
@@ -263,7 +269,7 @@ const PASSAGE_PLANS: Record<string, PassagePlan> = {
 }
 
 /** Topic module a passage question attributes to (drives "Recommended Learning Modules" links). */
-function topicSlugForPassage(p: MCATPassage): string {
+export function topicSlugForPassage(p: MCATPassage): string {
   const d = p.discipline
   if (p.section === 'cars') return 'mcat-cars-strategy-mcat'
   if (d === 'physics') {
@@ -283,7 +289,7 @@ function topicSlugForPassage(p: MCATPassage): string {
   return 'mcat-psychology-behavior-mcat'
 }
 
-function toTestPassage(p: MCATPassage): DiagnosticPassage {
+export function toTestPassage(p: MCATPassage): DiagnosticPassage {
   const blocks = p.chart ? chartToPassageBlocks(p.chart) : null
   return {
     id: `authored-${p.id}`,
@@ -307,7 +313,8 @@ function pickPassageBlocks(plan: PassagePlan, sectionId: string): MCATTestQuesti
     const passage = toTestPassage(p)
     const topicSlug = topicSlugForPassage(p)
     blocks.push(
-      p.questions.map((q) => ({
+      p.questions.map((q, qi) => ({
+        ref: `mcatpsg:${p.id}:${qi}`,
         question: q.question,
         options: [...q.options],
         correctAnswer: q.correctAnswer,
@@ -351,6 +358,7 @@ export async function generateSectionTest(sectionId: string): Promise<MCATSectio
         const raw = q as unknown as Record<string, unknown>
         const correctAnswer = (raw.correctAnswer ?? raw.correctIndex ?? 0) as number
         return {
+          ...(typeof q.id === 'string' && q.id ? { ref: `pool:${slug}:${q.id}` } : {}),
           question: q.question,
           options: q.options,
           correctAnswer,

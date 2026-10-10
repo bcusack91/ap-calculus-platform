@@ -12,6 +12,7 @@ import ProgressRing from '@/components/ProgressRing'
 import LiveNowBanner from '@/components/LiveNowBanner'
 import ClassAnnouncementsBanner from '@/components/ClassAnnouncementsBanner'
 import FullLengthProgress from '@/components/FullLengthProgress'
+import MistakeLogChip from '@/components/MistakeLogChip'
 import { isFullLengthCourse } from '@/lib/full-length-progress'
 import AchievementToast from '@/components/AchievementToast'
 import ProgressCharts from '@/components/ProgressCharts'
@@ -590,6 +591,9 @@ function DashboardContent() {
               {dueFlashcards} flashcard{dueFlashcards !== 1 ? 's' : ''} due
             </Link>
           )}
+          {/* Mistakes can exist without a diagnostic plan (a full-length, an exit
+              quiz), so both courses check; each chip hides itself at zero. */}
+          {(['mcat', 'sat'] as const).map((course) => <MistakeLogChip key={course} course={course} />)}
           <button
             onClick={() => setShowDailyQuestion((v) => !v)}
             aria-expanded={showDailyQuestion}

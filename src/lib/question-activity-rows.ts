@@ -1,4 +1,5 @@
-import type { QuestionRow } from '@/lib/study-tracking'
+import type { AttemptKind, QuestionRow } from '@/lib/study-tracking'
+import { questionKey } from '@/lib/question-key'
 
 /**
  * QuestionActivity rows built from stored results — shared by the submit
@@ -13,6 +14,13 @@ import type { QuestionRow } from '@/lib/study-tracking'
  * `review`; a question without a key) are covered by a per-domain batch row
  * for the remainder of that domain's tally, so the totals always match the
  * stored score.
+ *
+ * Per-question rows also carry the answer-log detail: itemIndex (position in
+ * the attempt), chosenIndex (the option picked, in the order shown; null =
+ * skipped) and, when the question's text and options are stored, a
+ * questionKey() hash. Only rows with a hashed key get `attemptKind` — the
+ * mistake log reads nothing else — so a row that falls back to an old-style key
+ * still counts for the teacher but stays out of the log.
  *
  * Pure (no database access), so the backfill script can import it.
  */
@@ -45,9 +53,36 @@ function count(v: unknown): number {
   return typeof v === 'number' && Number.isFinite(v) ? Math.max(0, Math.round(v)) : 0
 }
 
+/** A chosen option index (in shown order), or null for skipped / not an index. */
+function chosen(v: unknown): number | null {
+  return typeof v === 'number' && Number.isInteger(v) && v >= 0 ? v : null
+}
+
+type DiagnosticRowOpts = {
+  category?: string
+  courseSlug?: string
+  answeredAt?: Date
+  keyPrefix?: string
+  /** Answer-log tagging; attemptId = the stored DiagnosticTest id. */
+  attemptKind?: AttemptKind
+  attemptId?: string
+}
+
+/**
+ * questionKey() of a stored diagnostic question when its text and options
+ * are there (every current diagnostic stores them), else null.
+ */
+function storedQuestionKey(q: Rec, key: number): string | null {
+  const options = Array.isArray(q.options) ? q.options : null
+  if (typeof q.question !== 'string' || !q.question || !options?.length || !options.every((o) => typeof o === 'string')) return null
+  if (key < 0 || key >= options.length) return null
+  const passageId = str(asRecord(q.passage)?.id) || str(q.passageId) || null
+  return questionKey({ question: q.question, options: options as string[], correctIndex: key, passageId })
+}
+
 export function diagnosticQuestionRows(
   results: unknown,
-  opts: { category?: string; courseSlug?: string; answeredAt?: Date; keyPrefix?: string } = {},
+  opts: DiagnosticRowOpts = {},
 ): QuestionRow[] {
   try {
     return buildDiagnosticRows(results, opts)
@@ -58,7 +93,7 @@ export function diagnosticQuestionRows(
 
 function buildDiagnosticRows(
   results: unknown,
-  opts: { category?: string; courseSlug?: string; answeredAt?: Date; keyPrefix?: string },
+  opts: DiagnosticRowOpts,
 ): QuestionRow[] {
   const r = parseResults(results)
   if (!r) return []
@@ -94,13 +129,18 @@ function buildDiagnosticRows(
       tally.answered++
       if (ok) tally.correct++
       gradedByDomain.set(domain, tally)
+      const hashed = storedQuestionKey(q, key)
       rows.push({
         ...base,
         topicSlug: str(q.topicSlug) || str(q.sourceSlug),
         discipline: domain ? domainName(domain) : '',
-        questionKey: `${prefix}${str(q.id) || `${opts.category ?? 'diagnostic'}:${i}`}`,
+        questionKey: `${prefix}${hashed ?? (str(q.id) || `${opts.category ?? 'diagnostic'}:${i}`)}`,
         answered: 1,
         correct: ok ? 1 : 0,
+        itemIndex: i,
+        chosenIndex: chosen(answers[i]),
+        ...(opts.attemptId ? { attemptId: opts.attemptId } : {}),
+        ...(hashed && opts.attemptKind ? { attemptKind: opts.attemptKind } : {}),
       })
     })
   }
@@ -138,10 +178,11 @@ function buildDiagnosticRows(
 type PracticeAnswer = { selected?: unknown; correct?: unknown }
 
 /**
- * One MCAT section-practice attempt as a PRACTICE batch row. The test is
- * generated in the browser, so there is no server-side bank to re-grade
- * against; the count comes from the stored per-question key when it is
- * well-formed, else the (clamped) submitted tally.
+ * One MCAT section-practice attempt as a PRACTICE batch row — the legacy
+ * shape, still used for attempts without a per-question key (old clients,
+ * the backfill). The count comes from the stored per-question key when it is
+ * well-formed, else the (clamped) submitted tally. New attempts use
+ * mcatPracticeRows.
  */
 export function mcatPracticeBatchRow(a: {
   sectionId: unknown
@@ -194,4 +235,142 @@ export function mcatFullLengthRows(
       durationMs: typeof sec.elapsedSeconds === 'number' && Number.isFinite(sec.elapsedSeconds) ? count(sec.elapsedSeconds) * 1000 : null,
       ...(opts.answeredAt ? { answeredAt: opts.answeredAt } : {}),
     }))
+}
+
+/** A section-practice question re-resolved on the server from its ref. */
+export interface ResolvedPracticeQuestion {
+  /** Correct option index in the order shown. */
+  correctIndex: number
+  questionKey: string
+  topicSlug?: string
+}
+
+/**
+ * One MCAT section-practice attempt as one PRACTICE row per question.
+ *
+ * A question whose ref re-resolves (`resolved[i]`) is graded from the bank and
+ * tagged attemptKind 'mcat-practice'; one that doesn't is graded from the
+ * stored per-question key, exactly as the batch row counted it, and left out
+ * of the answer log. So for an honest client the totals equal
+ * mcatPracticeBatchRow's. Without a well-formed per-question key (an old
+ * client) it falls back to that batch row.
+ */
+export function mcatPracticeRows(
+  a: { sectionId: unknown; sectionName?: unknown; correct?: unknown; total?: unknown; timeSpent?: unknown; answers?: unknown },
+  resolved: (ResolvedPracticeQuestion | null | undefined)[],
+  opts: { attemptId?: string; answeredAt?: Date } = {},
+): QuestionRow[] {
+  const list = Array.isArray(a.answers) ? (a.answers as PracticeAnswer[]) : []
+  const keyed = list.length > 0 && list.length <= MAX_ROWS && list.every((x) => x && typeof x.correct === 'number')
+  if (!keyed) {
+    const row = mcatPracticeBatchRow(a)
+    return row.answered ? [{ ...row, ...(opts.answeredAt ? { answeredAt: opts.answeredAt } : {}) }] : []
+  }
+  const sectionId = String(a.sectionId).slice(0, 100)
+  const discipline = String(a.sectionName || a.sectionId || '').slice(0, 200)
+  const seconds = Number(a.timeSpent)
+  const perQuestionMs = Number.isFinite(seconds) && seconds > 0 ? Math.round((seconds * 1000) / list.length) : null
+  return list.map((x, i) => {
+    const item = resolved[i] ?? null
+    const pick = chosen(x.selected)
+    const ok = item ? pick === item.correctIndex : typeof x.selected === 'number' && x.selected === x.correct
+    return {
+      source: 'PRACTICE' as const,
+      courseSlug: 'mcat-prep',
+      discipline,
+      ...(item?.topicSlug ? { topicSlug: item.topicSlug } : {}),
+      questionKey: item ? item.questionKey : `mcat-practice:${sectionId}:${i}`,
+      answered: 1,
+      correct: ok ? 1 : 0,
+      durationMs: perQuestionMs,
+      itemIndex: i,
+      chosenIndex: pick,
+      ...(opts.attemptId ? { attemptId: opts.attemptId } : {}),
+      ...(item ? { attemptKind: 'mcat-practice' as const } : {}),
+      ...(opts.answeredAt ? { answeredAt: opts.answeredAt } : {}),
+    }
+  })
+}
+
+/** One graded full-length question (see buildFullLengthItems in question-sources/mcat). */
+export interface FullLengthRowItem {
+  index: number
+  questionKey: string
+  /** MCAT section id ('chem-phys' | 'cars' | ...): the row's discipline, as on the batch rows. */
+  section: string
+  topicSlug?: string
+  chosenIndex: number | null
+  isCorrect: boolean
+  flagged?: boolean
+  durationMs?: number | null
+}
+
+/**
+ * One MCAT full-length exam as one FULL_LENGTH row per question (unanswered
+ * questions included, as the score counts them wrong), so each section's
+ * totals equal the batch row mcatFullLengthRows wrote for it.
+ */
+export function mcatFullLengthQuestionRows(
+  items: FullLengthRowItem[],
+  opts: { attemptId?: string; answeredAt?: Date } = {},
+): QuestionRow[] {
+  return items.slice(0, MAX_ROWS).map((it) => ({
+    source: 'FULL_LENGTH' as const,
+    courseSlug: 'mcat-prep',
+    discipline: it.section,
+    ...(it.topicSlug ? { topicSlug: it.topicSlug } : {}),
+    questionKey: it.questionKey,
+    answered: 1,
+    correct: it.isCorrect ? 1 : 0,
+    durationMs: it.durationMs ?? null,
+    itemIndex: it.index,
+    chosenIndex: it.chosenIndex,
+    flagged: !!it.flagged,
+    ...(opts.attemptId ? { attemptId: opts.attemptId, attemptKind: 'mcat-fl' as const } : {}),
+    ...(opts.answeredAt ? { answeredAt: opts.answeredAt } : {}),
+  }))
+}
+
+/** A frozen unit-test question (McatUnitTest.questions): options already shuffled, key stored. */
+export interface UnitTestRowQuestion {
+  question: string
+  options: string[]
+  correctIndex: number
+  topicSlug: string
+}
+
+/**
+ * One cycle unit-test sitting as one UNIT_TEST row per question, graded from
+ * the frozen key (same verdicts as gradeUnitTest). attemptId = the
+ * McatUnitTest id.
+ */
+export function unitTestQuestionRows(
+  questions: UnitTestRowQuestion[],
+  answers: (number | null)[],
+  opts: { courseSlug: string; attemptId: string; timeSpentSeconds?: number; answeredAt?: Date },
+): QuestionRow[] {
+  const list = questions.slice(0, MAX_ROWS)
+  const perQuestionMs = opts.timeSpentSeconds && opts.timeSpentSeconds > 0 && list.length
+    ? Math.round((opts.timeSpentSeconds * 1000) / list.length)
+    : null
+  return list.map((q, i) => {
+    const pick = chosen(answers[i])
+    const hashed = q && typeof q.question === 'string' && Array.isArray(q.options) && q.options.length
+      ? questionKey({ question: q.question, options: q.options, correctIndex: q.correctIndex })
+      : null
+    return {
+      source: 'UNIT_TEST' as const,
+      courseSlug: opts.courseSlug,
+      topicSlug: str(q?.topicSlug),
+      questionKey: hashed ?? `unit-test:${opts.attemptId}:${i}`,
+      answered: 1,
+      correct: pick !== null && pick === q?.correctIndex ? 1 : 0,
+      durationMs: perQuestionMs,
+      itemIndex: i,
+      chosenIndex: pick,
+      attemptId: opts.attemptId,
+      ...(hashed ? { attemptKind: 'unit-test' as const } : {}),
+      ...(opts.answeredAt ? { answeredAt: opts.answeredAt } : {}),
+    }
+  })
 }

@@ -86,6 +86,9 @@ export function studentLocalDay(now: Date, tzOffset?: number | null): Date {
   return new Date(Date.UTC(local.getUTCFullYear(), local.getUTCMonth(), local.getUTCDate()))
 }
 
+/** Which kind of attempt an answer row belongs to (review pages, mistake log). */
+export type AttemptKind = 'exit' | 'diagnostic' | 'unit-test' | 'sat-practice' | 'mcat-fl' | 'mcat-practice' | 'mistake-review'
+
 export type QuestionRow = {
   source: QuestionSource
   topicSlug?: string
@@ -96,6 +99,18 @@ export type QuestionRow = {
   correct?: number
   durationMs?: number | null
   answeredAt?: Date
+  /**
+   * Per-answer detail (single-question rows only) — what makes an attempt
+   * reviewable and a missed question re-servable. `questionKey` should then be
+   * `questionKey()` from src/lib/question-key.ts.
+   */
+  attemptKind?: AttemptKind
+  attemptId?: string
+  itemIndex?: number
+  /** The option picked, in the order it was shown; null = skipped. */
+  chosenIndex?: number | null
+  chosenText?: string | null
+  flagged?: boolean
 }
 
 /**
@@ -124,6 +139,12 @@ export async function recordQuestions(
       // Capped at 4 h: a full-length MCAT section runs ~95 min, nothing runs longer.
       durationMs: r.durationMs == null ? null : Math.max(0, Math.min(Math.round(r.durationMs), 4 * 60 * 60 * 1000)),
       ...(r.answeredAt ? { answeredAt: r.answeredAt } : {}),
+      ...(r.attemptKind ? { attemptKind: r.attemptKind } : {}),
+      ...(r.attemptId ? { attemptId: r.attemptId.slice(0, 100) } : {}),
+      ...(typeof r.itemIndex === 'number' ? { itemIndex: Math.max(0, Math.round(r.itemIndex)) } : {}),
+      ...(typeof r.chosenIndex === 'number' && Number.isFinite(r.chosenIndex) ? { chosenIndex: Math.round(r.chosenIndex) } : {}),
+      ...(r.chosenText ? { chosenText: r.chosenText.slice(0, 50) } : {}),
+      ...(r.flagged ? { flagged: true } : {}),
     }))
     await (opts.db ?? prisma).questionActivity.createMany({ data })
   } catch (err) {

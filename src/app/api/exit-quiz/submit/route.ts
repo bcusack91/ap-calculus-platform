@@ -5,7 +5,7 @@ import { prisma } from '@/lib/prisma'
 import { Prisma } from '@prisma/client'
 import { recordAssignmentCompletion } from '@/lib/assignment-autocomplete'
 import { maybeUnlockFlashcards } from '@/lib/flashcard-unlock'
-import { regradeExitQuiz, regradeExitQuizSeeded } from '@/lib/exit-quiz-regrade'
+import { regradeExitQuiz, regradeExitQuizSeeded, type ResolvedExitItem } from '@/lib/exit-quiz-regrade'
 import { touchDailyStreak } from '@/lib/streak'
 import { MASTERY_LEVEL_ON_EXIT_PASS, EXIT_QUIZ_PASS_FRACTION, EXIT_QUIZ_REDO_FRACTION } from '@/lib/mastery'
 import { satBankSlugsForCourseTopic } from '@/lib/sat-topic-map'
@@ -79,6 +79,8 @@ export async function POST(request: Request) {
     // whenever a regrade ran (the attempt record, analytics and the teacher
     // report must never show the client's claim over the server's grading).
     let gradedAnswers: typeof answers_ = answers_
+    // Per answer: the bank question it was graded against (null = unresolved).
+    let resolvedItems: (ResolvedExitItem | null)[] = []
     let score: number
     if (answers_.length > 0) {
       // Preferred path: the client sent the generation seed, so regenerate the
@@ -92,6 +94,7 @@ export async function POST(request: Request) {
         // At least one question graded from the bank — trust the server count.
         score = Math.min(regrade.score, totalQuestions)
         gradedAnswers = answers_.map((a, i) => ({ ...a, correct: regrade.perAnswer[i] === true }))
+        resolvedItems = Array.isArray(regrade.items) ? regrade.items : []
       } else {
         // Nothing resolvable (bank not found or non-reproducible ids) — preserve the
         // legacy behavior: use the client's per-answer booleans, else the raw score.
@@ -149,6 +152,10 @@ export async function POST(request: Request) {
           passed: !!passed,
           mustRedoUnit: !!mustRedoUnit,
           variant: typeof variant === 'number' ? variant : 1,
+          // Generation inputs, so the review page can rebuild this exact quiz.
+          ...(typeof seed === 'number' && seed >= -2147483648 && seed <= 2147483647 ? { seed } : {}),
+          ...(difficulty ? { difficulty } : {}),
+          ...(typeof includeLowYield === 'boolean' ? { includeLowYield } : {}),
           answers: gradedAnswers,
           timeSpent: timeSpent || 0,
         }
@@ -253,20 +260,32 @@ export async function POST(request: Request) {
       console.error('exit-quiz metrics write failed (non-fatal):', metricsError)
     }
 
-    // Teacher report: one EXIT row per question from the server's grading
-    // (one batch row when the client sent no per-question answers). After the
-    // transaction commits; recordQuestions never throws.
+    // Teacher report + answer log: one EXIT row per question from the server's
+    // grading (one batch row when the client sent no per-question answers).
+    // A question graded from the bank is keyed by questionKey() and tagged
+    // attemptKind 'exit' (what the mistake log reads); an unresolved one keeps
+    // the old id key and no attemptKind. After the transaction commits, so a
+    // tracking failure can never roll back the quiz (Postgres aborts the whole
+    // transaction on a failed statement); recordQuestions never throws.
     const graded = gradedAnswers.filter((a) => typeof a.correct === 'boolean')
     if (graded.length > 0 && graded.length === gradedAnswers.length) {
       const perQuestionMs = timeSpent > 0 ? Math.round((timeSpent * 1000) / graded.length) : null
-      await recordQuestions(userId, graded.map((a) => ({
-        source: 'EXIT' as const,
-        topicSlug,
-        questionKey: a.questionId == null ? '' : String(a.questionId),
-        answered: 1,
-        correct: a.correct ? 1 : 0,
-        durationMs: perQuestionMs,
-      })))
+      await recordQuestions(userId, gradedAnswers.map((a, i) => {
+        const item = resolvedItems[i] ?? null
+        return {
+          source: 'EXIT' as const,
+          topicSlug,
+          questionKey: item ? item.questionKey : a.questionId == null ? '' : String(a.questionId),
+          answered: 1,
+          correct: a.correct ? 1 : 0,
+          durationMs: perQuestionMs,
+          attemptId: result.attempt.id,
+          itemIndex: i,
+          // -1 = "I'm guessing" (no option picked) → skipped.
+          chosenIndex: typeof a.selectedAnswer === 'number' && a.selectedAnswer >= 0 ? a.selectedAnswer : null,
+          ...(item ? { attemptKind: 'exit' as const } : {}),
+        }
+      }))
     } else {
       await recordQuestions(userId, [{
         source: 'EXIT',

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useSyncExternalStore } from 'react'
+import { useEffect, useState, useSyncExternalStore } from 'react'
 import Link from 'next/link'
 import MCATPassageRunner from '@/components/MCATPassageRunner'
 import { InArticleAd } from '@/components/ad-banner'
@@ -35,6 +35,63 @@ function readProgressSnapshot(): string {
   }
 }
 const serverProgressSnapshot = () => ''
+
+interface PastFullLength {
+  id: string
+  createdAt: string
+  form: number | null
+  total: number | null
+  reviewable: boolean
+}
+
+/** The student's own past full-lengths, each with a link to its permanent review. Hidden when signed out or empty. */
+function PastFullLengths() {
+  const [attempts, setAttempts] = useState<PastFullLength[]>([])
+  useEffect(() => {
+    let cancelled = false
+    fetch('/api/mcat-full-length/history', { cache: 'no-store' })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d) => {
+        if (!cancelled && Array.isArray(d?.attempts)) setAttempts(d.attempts)
+      })
+      .catch(() => { /* signed out or offline: no history shown */ })
+    return () => { cancelled = true }
+  }, [])
+  if (attempts.length === 0) return null
+  return (
+    <section className="mt-8" aria-labelledby="past-full-lengths">
+      <h2 id="past-full-lengths" className="mb-3 text-lg font-bold text-gray-900 dark:text-white">Past full-lengths</h2>
+      <ul className="divide-y divide-gray-100 overflow-hidden rounded-2xl border border-gray-200 bg-white dark:divide-gray-700 dark:border-gray-700 dark:bg-gray-800">
+        {attempts.map((a) => (
+          <li key={a.id} className="flex flex-wrap items-center justify-between gap-2 px-5 py-3">
+            <div>
+              <p className="font-semibold text-gray-900 dark:text-white">
+                {a.form ? `Form ${a.form}` : 'Full-length'}
+                {a.total != null && <span className="ml-2 font-bold text-accent">{a.total}</span>}
+              </p>
+              <p className="text-xs text-gray-500 dark:text-gray-400">
+                {new Date(a.createdAt).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' })}
+              </p>
+            </div>
+            {a.reviewable ? (
+              <Link
+                href={`/review/mcat-fl/${a.id}`}
+                className="rounded-lg border border-gray-300 px-3 py-1.5 text-sm font-medium text-gray-700 hover:border-accent-muted hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring dark:border-gray-600 dark:text-gray-200"
+              >
+                Review
+              </Link>
+            ) : (
+              <span className="text-xs text-gray-400 dark:text-gray-500">Question review not saved for this attempt</span>
+            )}
+          </li>
+        ))}
+      </ul>
+      <p className="mt-2 text-xs text-gray-500 dark:text-gray-400">
+        Missed and flagged questions also go to your <Link href="/mcat/mistakes" className="font-medium text-accent hover:underline">mistake log</Link>.
+      </p>
+    </section>
+  )
+}
 
 export default function MCATFullLengthPage() {
   const [started, setStarted] = useState(false)
@@ -141,7 +198,7 @@ export default function MCATFullLengthPage() {
             <li>Each section has its own hard timer and auto-submits at 0:00 — once a section ends you <strong>cannot go back to it</strong>, just like the real exam.</li>
             <li>Timed breaks between sections (10 min, 30-min mid-exam, 10 min) — resume early whenever you&apos;re ready.</li>
             <li>Your progress saves automatically: reloading resumes where you left off, but section clocks keep running while you&apos;re away.</li>
-            <li>Two-pane layout: passage on the left, questions on the right. Use <strong>strike</strong> to eliminate options and <strong>flag</strong> to mark passages.</li>
+            <li>Two-pane layout: passage on the left, questions on the right. Use <strong>strike</strong> to eliminate options and <strong>flag</strong> to mark a passage or a single question for review.</li>
             <li>Some items are marked <em>draft</em> (AI-authored, pending expert review) — weigh those keys accordingly.</li>
           </ul>
         </div>
@@ -150,6 +207,8 @@ export default function MCATFullLengthPage() {
           Start Form {form}
         </button>
         <p className="mt-3 text-center text-xs text-gray-400">Not ready for the full sit? Try a <Link href="/mcat-chem-phys" className="text-blue-600 hover:underline dark:text-blue-400">timed single section</Link>, <Link href="/mcat-cars" className="text-blue-600 hover:underline dark:text-blue-400">CARS passage practice</Link>, or <Link href="/mcat-practice" className="text-blue-600 hover:underline dark:text-blue-400">single-section drills</Link>.</p>
+
+        <PastFullLengths />
 
         <div className="mt-10">
           <InArticleAd />

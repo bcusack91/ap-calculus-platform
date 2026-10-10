@@ -28,6 +28,7 @@
  */
 
 import { shuffleOptions } from '@/lib/shuffle-options'
+import { questionKey } from '@/lib/question-key'
 import { generateExitQuiz, hasExitQuiz, type ExitQuizDifficulty } from '@/data/exit-quizzes'
 
 export interface SubmittedAnswer {
@@ -47,12 +48,90 @@ export interface RegradeResult {
   usedFallback: boolean
   /** Per-answer verdict, in submitted order (the same grading `score` counts). */
   perAnswer: boolean[]
+  /**
+   * Per-answer resolved question (in submitted order), or null where the
+   * answer was not graded from the bank. What the answer log keys on and the
+   * review page rebuilds from.
+   */
+  items: (ResolvedExitItem | null)[]
 }
 
-interface AnswerKeyEntry {
+/** One exit-quiz question as the student saw it, rebuilt from the bank. */
+export interface ResolvedExitItem {
+  questionId: string
+  question: string
+  /** Options in the order they were SHOWN (the client's seeded shuffle). */
+  options: string[]
+  /** Correct option index in the shown order. */
+  correctIndex: number
+  explanation: string
+  /** questionKey() of the bank question (order-independent). */
+  questionKey: string
+}
+
+export interface AnswerKeyEntry {
   options: string[]
   correctIndex: number
   question: string
+  explanation: string
+  /** The bank's category (MCAT pools: the subtopic slug). */
+  category?: string
+}
+
+function entryFor(q: { options?: unknown; correctIndex?: unknown; question?: unknown; explanation?: unknown; category?: unknown }): AnswerKeyEntry | null {
+  if (!Array.isArray(q.options) || typeof q.correctIndex !== 'number') return null
+  return {
+    options: q.options as string[],
+    correctIndex: q.correctIndex,
+    question: typeof q.question === 'string' ? q.question : '',
+    explanation: typeof q.explanation === 'string' ? q.explanation : '',
+    ...(typeof q.category === 'string' ? { category: q.category } : {}),
+  }
+}
+
+/** The question as the client rendered it: same seeded shuffle as ExitQuiz.tsx. */
+function resolveEntry(id: string, entry: AnswerKeyEntry): ResolvedExitItem {
+  const shown = shuffleOptions(entry.options, entry.correctIndex, id + entry.question)
+  return {
+    questionId: id,
+    question: entry.question,
+    options: shown.options,
+    correctIndex: shown.correctIndex,
+    explanation: entry.explanation,
+    questionKey: questionKey({ question: entry.question, options: entry.options, correctIndex: entry.correctIndex }),
+  }
+}
+
+/**
+ * Grade answers against a resolved key. Answers whose id is not in the key (or
+ * whose selection is not an index) fall back to the client-asserted boolean.
+ */
+function gradeAgainstKey(answers: SubmittedAnswer[], key: AnswerKey | null): RegradeResult {
+  let score = 0
+  let resolvedCount = 0
+  let unresolvedCount = 0
+  const perAnswer: boolean[] = []
+  const items: (ResolvedExitItem | null)[] = []
+  for (const answer of answers) {
+    const id = typeof answer.questionId === 'string' ? answer.questionId : undefined
+    const entry = id && key ? key.get(id) : undefined
+    let ok: boolean
+    if (id && entry && typeof answer.selectedAnswer === 'number') {
+      // Reproduce the exact deterministic shuffle the client rendered.
+      const item = resolveEntry(id, entry)
+      ok = answer.selectedAnswer === item.correctIndex
+      items.push(item)
+      resolvedCount++
+    } else {
+      // Could not resolve this question — trust the client's assertion for now.
+      ok = answer.correct === true
+      items.push(null)
+      unresolvedCount++
+    }
+    if (ok) score++
+    perAnswer.push(ok)
+  }
+  return { score, resolvedCount, unresolvedCount, usedFallback: unresolvedCount > 0, perAnswer, items }
 }
 
 type AnswerKey = Map<string, AnswerKeyEntry>
@@ -98,14 +177,8 @@ async function probeAnswerKey(topicSlug: string): Promise<AnswerKey | null> {
     const seen = new Map<string, AnswerKeyEntry>()
     for (const q of questions) {
       const id = q?.id
-      if (typeof id !== 'string' || !Array.isArray(q.options) || typeof q.correctIndex !== 'number') {
-        continue
-      }
-      const entry: AnswerKeyEntry = {
-        options: q.options,
-        correctIndex: q.correctIndex,
-        question: typeof q.question === 'string' ? q.question : '',
-      }
+      const entry = q ? entryFor(q) : null
+      if (typeof id !== 'string' || !entry) continue
       // Same id appearing twice with different content within one draw => not
       // a stable content-derived id.
       const prior = seen.get(id)
@@ -129,7 +202,11 @@ async function probeAnswerKey(topicSlug: string): Promise<AnswerKey | null> {
   return key && key.size > 0 ? key : null
 }
 
-function getAnswerKey(topicSlug: string): Promise<AnswerKey | null> {
+/**
+ * A topic's stable id → question key (every item, LOW included), or null when
+ * the topic's ids are not stable across draws. Memoized per server instance.
+ */
+export function getAnswerKey(topicSlug: string): Promise<AnswerKey | null> {
   let cached = answerKeyCache.get(topicSlug)
   if (!cached) {
     cached = probeAnswerKey(topicSlug).catch(() => null)
@@ -170,36 +247,12 @@ export async function regradeExitQuizSeeded(
 
   const key: AnswerKey = new Map()
   for (const q of questions) {
-    if (typeof q?.id === 'string' && Array.isArray(q.options) && typeof q.correctIndex === 'number') {
-      key.set(q.id, {
-        options: q.options,
-        correctIndex: q.correctIndex,
-        question: typeof q.question === 'string' ? q.question : '',
-      })
-    }
+    const entry = q ? entryFor(q) : null
+    if (typeof q?.id === 'string' && entry) key.set(q.id, entry)
   }
   if (key.size === 0) return null
 
-  let score = 0
-  let resolvedCount = 0
-  let unresolvedCount = 0
-  const perAnswer: boolean[] = []
-  for (const answer of answers) {
-    const id = typeof answer.questionId === 'string' ? answer.questionId : undefined
-    const entry = id ? key.get(id) : undefined
-    let ok: boolean
-    if (entry && typeof answer.selectedAnswer === 'number') {
-      const { correctIndex } = shuffleOptions(entry.options, entry.correctIndex, id + entry.question)
-      ok = answer.selectedAnswer === correctIndex
-      resolvedCount++
-    } else {
-      ok = answer.correct === true
-      unresolvedCount++
-    }
-    if (ok) score++
-    perAnswer.push(ok)
-  }
-  return { score, resolvedCount, unresolvedCount, usedFallback: unresolvedCount > 0, perAnswer }
+  return gradeAgainstKey(answers, key)
 }
 
 /**
@@ -214,41 +267,46 @@ export async function regradeExitQuiz(
   topicSlug: string,
   answers: SubmittedAnswer[],
 ): Promise<RegradeResult> {
-  const key = await getAnswerKey(topicSlug)
+  return gradeAgainstKey(answers, await getAnswerKey(topicSlug))
+}
 
-  let score = 0
-  let resolvedCount = 0
-  let unresolvedCount = 0
-  const perAnswer: boolean[] = []
+export interface ExitQuizGeneration {
+  seed?: number | null
+  totalQuestions: number
+  difficulty?: string | null
+  includeLowYield?: boolean | null
+}
 
-  for (const answer of answers) {
-    const id = typeof answer.questionId === 'string' ? answer.questionId : undefined
-    const entry = id && key ? key.get(id) : undefined
+function asDifficulty(d: string | null | undefined): ExitQuizDifficulty | undefined {
+  return d === 'easy' || d === 'medium' || d === 'hard' ? d : undefined
+}
 
-    let ok: boolean
-    if (entry && typeof answer.selectedAnswer === 'number') {
-      // Reproduce the exact deterministic shuffle the client rendered.
-      const { correctIndex } = shuffleOptions(
-        entry.options,
-        entry.correctIndex,
-        id + entry.question,
-      )
-      ok = answer.selectedAnswer === correctIndex
-      resolvedCount++
-    } else {
-      // Could not resolve this question — trust the client's assertion for now.
-      ok = answer.correct === true
-      unresolvedCount++
-    }
-    if (ok) score++
-    perAnswer.push(ok)
-  }
+/**
+ * The grading the submit route runs, as one call: the seeded regeneration when
+ * the quiz carried a seed, else (or when that reproduces nothing) the probe
+ * key. Shared by the submit route and the review / mistake-log resolver so
+ * both rebuild exactly the quiz that was graded.
+ */
+export async function regradeExitQuizAttempt(
+  topicSlug: string,
+  answers: SubmittedAnswer[],
+  gen: ExitQuizGeneration,
+): Promise<RegradeResult> {
+  const seeded = typeof gen.seed === 'number'
+    ? await regradeExitQuizSeeded(topicSlug, answers, gen.seed, gen.totalQuestions, asDifficulty(gen.difficulty), gen.includeLowYield ?? undefined)
+    : null
+  return seeded ?? (await regradeExitQuiz(topicSlug, answers))
+}
 
-  return {
-    score,
-    resolvedCount,
-    unresolvedCount,
-    usedFallback: unresolvedCount > 0,
-    perAnswer,
-  }
+/**
+ * Rebuild each answered question of an exit-quiz attempt (options as shown,
+ * correct index as shown, explanation, question key), or null where it can no
+ * longer be resolved. Aligned with `answers`.
+ */
+export async function resolveExitQuizItems(
+  topicSlug: string,
+  answers: SubmittedAnswer[],
+  gen: ExitQuizGeneration,
+): Promise<(ResolvedExitItem | null)[]> {
+  return (await regradeExitQuizAttempt(topicSlug, answers, gen)).items
 }

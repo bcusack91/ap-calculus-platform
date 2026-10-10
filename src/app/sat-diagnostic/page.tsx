@@ -343,7 +343,7 @@ export default function SATDiagnosticPage() {
   }, [])
 
   const handleComplete = useCallback(
-    async (diagnosticResults: DiagnosticResults, answers: (number | null)[]) => {
+    async (diagnosticResults: DiagnosticResults, answers: (number | null)[], typed: (string | null)[] = []) => {
       clearResumeState()
       setResumable(null)
       setResumeSeed(null)
@@ -364,7 +364,7 @@ export default function SATDiagnosticPage() {
                 : 'sat-full-diagnostic',
             classDiagnosticId: (hardModuleNumber || coreModuleNumber) ? undefined : (sittingAssignedId || undefined),
             results: JSON.stringify({
-              review: testData ? { questions: testData.questions, answers, domainNames: Object.fromEntries(testData.domains.map(d => [d.id, d.name])) } : undefined,
+              review: testData ? { questions: testData.questions, answers, typed, domainNames: Object.fromEntries(testData.domains.map(d => [d.id, d.name])) } : undefined,
               totalCorrect: diagnosticResults.totalCorrect,
               totalQuestions: diagnosticResults.totalQuestions,
               percentage: diagnosticResults.percentage,

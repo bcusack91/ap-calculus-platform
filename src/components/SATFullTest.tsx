@@ -1,12 +1,14 @@
 'use client'
 
 import { useState, useEffect, useCallback, useMemo, useRef } from 'react'
+import Link from 'next/link'
 import DesmosCalculatorLink from '@/components/DesmosCalculatorLink'
 import { preloadKatex } from '@/lib/katex-lazy'
 import { renderRichText } from '@/lib/render-rich-text'
-import type { SATFullTest, SATTestQuestion } from '@/data/sat-practice/test-generator'
-import { module2Tier, regenerateModule2 } from '@/data/sat-practice/test-generator'
+import type { SATFullTest, SATTestQuestion, SATTestSection } from '@/data/sat-practice/test-generator'
+import { analyzePerformance, estimateScaledScore, module2Route, routedModule2 } from '@/data/sat-practice/test-generator'
 import { gradeGridIn } from '@/data/sat-grid-in'
+import { satSectionScaledRouted } from '@/lib/sat-scoring'
 import { useActivitySurface } from '@/hooks/useActivitySurface'
 
 /* ------------------------------------------------------------------ */
@@ -35,6 +37,8 @@ type TestPhase = 'intro' | 'testing' | 'section-break' | 'review' | 'results'
 
 interface SectionResult {
   sectionId: string
+  /** Position of this module in test.sections (the server grades by it). */
+  moduleIndex: number
   sectionName: string
   /** Adaptive form this module was served at (Module 2 only). */
   tier?: 'easy' | 'medium' | 'hard'
@@ -48,10 +52,15 @@ interface SectionResult {
     textValue: string | null
     answered: boolean
     correct: boolean
+    flagged: boolean
+    /** Seconds spent on the question (summed over visits). */
+    seconds: number
   }[]
 }
 
 interface TestResults {
+  /** Server attempt id, once the submit has been saved. */
+  attemptId?: string
   rwScore: number
   mathScore: number
   totalScore: number
@@ -109,6 +118,14 @@ export default function SATFullTestComponent({ test: initialTest, onComplete, on
   const [strikethroughMode, setStrikethroughMode] = useState(false)
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
   const totalStartTimeRef = useRef(Date.now())
+  // Pending Module 2 routing builds, keyed by section index. The next module
+  // never starts until its routed form has landed (or failed): a student who
+  // clicked Continue before the swap used to sit the unrouted module.
+  const routingRef = useRef<Map<number, Promise<SATTestSection | null>>>(new Map())
+  const [preparingNext, setPreparingNext] = useState(false)
+  // Per-question time: seconds per question index, per section id.
+  const questionSecondsRef = useRef<Map<string, number[]>>(new Map())
+  const activeQuestionRef = useRef<{ sectionId: string; index: number; since: number } | null>(null)
 
   const currentSection = test.sections[currentSectionIndex]
   const currentQuestion = currentSection?.questions[currentQuestionIndex]
@@ -137,6 +154,24 @@ export default function SATFullTestComponent({ test: initialTest, onComplete, on
 
   const currentAnswer = answers[currentQuestionIndex]
 
+  // Bank the time spent on the question being left (navigation, review,
+  // section end) and start the clock on the one now shown.
+  const flushQuestionTime = useCallback(() => {
+    const active = activeQuestionRef.current
+    if (!active) return
+    const arr = questionSecondsRef.current.get(active.sectionId) ?? []
+    arr[active.index] = (arr[active.index] ?? 0) + (Date.now() - active.since) / 1000
+    questionSecondsRef.current.set(active.sectionId, arr)
+    activeQuestionRef.current = null
+  }, [])
+  const currentSectionId = currentSection?.id
+  useEffect(() => {
+    flushQuestionTime()
+    if (phase === 'testing' && currentSectionId) {
+      activeQuestionRef.current = { sectionId: currentSectionId, index: currentQuestionIndex, since: Date.now() }
+    }
+  }, [phase, currentSectionId, currentQuestionIndex, flushQuestionTime])
+
   // Timer
   useEffect(() => {
     if (phase !== 'testing') {
@@ -149,7 +184,9 @@ export default function SATFullTestComponent({ test: initialTest, onComplete, on
         if (prev <= 1) {
           // Time's up — auto-submit section
           if (timerRef.current) clearInterval(timerRef.current)
-          handleSubmitSection()
+          // Through the ref: this interval was created when the section
+          // started, so a direct call would grade that render's (empty) answers.
+          submitSectionRef.current()
           return 0
         }
         return prev - 1
@@ -159,21 +196,38 @@ export default function SATFullTestComponent({ test: initialTest, onComplete, on
     return () => {
       if (timerRef.current) clearInterval(timerRef.current)
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase, currentSectionIndex])
 
-  // Start a section
+  // Start a section. `override` is a just-routed Module 2 whose state update
+  // has not rendered yet.
   const startSection = useCallback(
-    (sectionIdx: number) => {
+    (sectionIdx: number, override?: SATTestSection) => {
       setCurrentSectionIndex(sectionIdx)
       setCurrentQuestionIndex(0)
-      const section = test.sections[sectionIdx]
+      const section = override ?? test.sections[sectionIdx]
       setTimeRemaining(section.timeLimitSeconds)
       setSectionStartTime(Date.now())
       getOrCreateSectionAnswers(section.id, section.questionCount)
       setPhase('testing')
     },
     [test.sections, getOrCreateSectionAnswers],
+  )
+
+  // Continue from the break: wait for a pending Module 2 route first.
+  const continueToSection = useCallback(
+    async (sectionIdx: number) => {
+      const pending = routingRef.current.get(sectionIdx)
+      if (!pending) {
+        startSection(sectionIdx)
+        return
+      }
+      setPreparingNext(true)
+      const rebuilt = await pending
+      routingRef.current.delete(sectionIdx)
+      setPreparingNext(false)
+      startSection(sectionIdx, rebuilt ?? undefined)
+    },
+    [startSection],
   )
 
   // Select an answer
@@ -278,6 +332,7 @@ export default function SATFullTestComponent({ test: initialTest, onComplete, on
     (sectionIdx: number): SectionResult => {
       const section = test.sections[sectionIdx]
       const sectionAns = sectionAnswers.get(section.id) ?? []
+      const seconds = questionSecondsRef.current.get(section.id) ?? []
       const timeSpent = Math.round((Date.now() - sectionStartTime) / 1000)
 
       let correct = 0
@@ -294,16 +349,16 @@ export default function SATFullTestComponent({ test: initialTest, onComplete, on
           textValue: ans?.textValue ?? null,
           answered,
           correct: isCorrect,
+          flagged: !!ans?.flagged,
+          seconds: Math.round(seconds[i] ?? 0),
         }
       })
 
-      // Import at runtime to avoid circular issues
-      // eslint-disable-next-line @typescript-eslint/no-require-imports
-      const { estimateScaledScore } = require('@/data/sat-practice/test-generator')
       const scaledScore = estimateScaledScore(correct, section.questionCount, section.section)
 
       return {
         sectionId: section.id,
+        moduleIndex: sectionIdx,
         tier: section.tier,
         sectionName: section.name,
         correct,
@@ -319,39 +374,35 @@ export default function SATFullTestComponent({ test: initialTest, onComplete, on
   // Submit current section
   const handleSubmitSection = useCallback(() => {
     if (timerRef.current) clearInterval(timerRef.current)
+    flushQuestionTime()
 
     const result = computeSectionResult(currentSectionIndex)
     const updatedCompleted = [...completedSections, result]
     setCompletedSections(updatedCompleted)
 
     // ADAPTIVE ROUTING: a finished Module 1 decides the form of the Module 2
-    // in the same subject, exactly as the digital SAT does. Fire-and-forget so
-    // the break screen appears immediately; the swap lands before the student
-    // starts the next module.
+    // in the same subject, exactly as the digital SAT does. The build runs
+    // while the break screen shows; continueToSection waits for it, so the
+    // student always sits the routed module. routedModule2 is the same helper
+    // the server grades with, so both see the identical question set.
     const justFinished = test.sections[currentSectionIndex]
     if (justFinished?.moduleNum === 1) {
       const nextIdx = test.sections.findIndex(
         (sec) => sec.section === justFinished.section && sec.moduleNum === 2,
       )
       if (nextIdx >= 0) {
-        const tier = module2Tier(result.correct, result.total)
-        const used = new Set<string>()
-        const usedPassageIds = new Set<string>()
-        test.sections.forEach((sec, idx) => {
-          for (const q of sec.questions) used.add(q.question)
-          // Passages from every OTHER module are off limits, so the rebuilt
-          // Module 2 never repeats a passage the student already read.
-          if (idx !== nextIdx) for (const q of sec.questions) if (q.passage) usedPassageIds.add(q.passage.id)
-        })
-        regenerateModule2(test.sections[nextIdx], tier, used, usedPassageIds, test.testNumber)
+        const route = module2Route(result.correct, result.total)
+        const pending = routedModule2(test, nextIdx, route)
           .then((rebuilt) => {
             setTest((prev) => {
               const sections = [...prev.sections]
               sections[nextIdx] = rebuilt
               return { ...prev, sections }
             })
+            return rebuilt
           })
-          .catch(() => { /* keep the pre-built module on failure */ })
+          .catch(() => null) // keep the pre-built module on failure (scored unrouted)
+        routingRef.current.set(nextIdx, pending)
       }
     }
 
@@ -363,12 +414,17 @@ export default function SATFullTestComponent({ test: initialTest, onComplete, on
       finishTest(updatedCompleted)
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [currentSectionIndex, completedSections, test.sections.length, computeSectionResult])
+  }, [currentSectionIndex, completedSections, test, computeSectionResult, flushQuestionTime])
+
+  // The section timer calls the latest handler, never the one from when the
+  // interval was created.
+  const submitSectionRef = useRef(handleSubmitSection)
+  useEffect(() => {
+    submitSectionRef.current = handleSubmitSection
+  }, [handleSubmitSection])
 
   const finishTest = useCallback(
     (allSections: SectionResult[]) => {
-      // eslint-disable-next-line @typescript-eslint/no-require-imports
-      const { analyzePerformance, estimateScaledScore } = require('@/data/sat-practice/test-generator')
 
       // Aggregate R&W sections
       const rwSections = allSections.filter(s => s.sectionId.startsWith('rw'))
@@ -382,8 +438,23 @@ export default function SATFullTestComponent({ test: initialTest, onComplete, on
       // Scale once on the combined raw per section (matches the digital-SAT model
       // and the SAT diagnostic, which aggregate raw across modules before scaling
       // rather than scaling each module and averaging).
-      const rwScore = rwTotal > 0 ? estimateScaledScore(rwCorrect, rwTotal, 'reading-writing') : 200
-      const mathScore = mathTotal > 0 ? estimateScaledScore(mathCorrect, mathTotal, 'math') : 200
+      // Provisional (the server's score replaces it): the curve of the Module 2
+      // route actually served, untiered when there was no routed module.
+      const sectionScore = (secs: SectionResult[]) => {
+        const m1 = secs.filter(s => s.tier === undefined || s.tier === 'medium')
+        const m2 = secs.find(s => s.tier === 'hard' || s.tier === 'easy')
+        const m1Correct = m1.reduce((n, s) => n + s.correct, 0)
+        const m1Total = m1.reduce((n, s) => n + s.total, 0)
+        return satSectionScaledRouted({
+          m1Correct,
+          m1Total,
+          m2Correct: m2?.correct ?? 0,
+          m2Total: m2?.total ?? 0,
+          tier: m2 ? (m2.tier === 'hard' ? 'harder' : 'easier') : null,
+        })
+      }
+      const rwScore = rwTotal > 0 ? sectionScore(rwSections) : 200
+      const mathScore = mathTotal > 0 ? sectionScore(mathSections) : 200
 
       // Analyze strengths and weaknesses
       const allAnswers = allSections.flatMap(s => s.answers)
@@ -552,10 +623,11 @@ export default function SATFullTestComponent({ test: initialTest, onComplete, on
           )}
 
           <button
-            onClick={() => startSection(nextIdx)}
-            className="w-full rounded-xl bg-gradient-to-r from-accent to-pink-600 px-6 py-3 font-semibold text-white shadow-lg transition hover:shadow-xl"
+            onClick={() => { void continueToSection(nextIdx) }}
+            disabled={preparingNext}
+            className="w-full rounded-xl bg-gradient-to-r from-accent to-pink-600 px-6 py-3 font-semibold text-white shadow-lg transition hover:shadow-xl disabled:cursor-wait disabled:opacity-70"
           >
-            Continue to Next Section
+            {preparingNext ? 'Preparing the next module…' : 'Continue to Next Section'}
           </button>
         </div>
       </div>
@@ -950,47 +1022,56 @@ export function SATTestWrapper({ test, onComplete, onCancel }: SATFullTestProps)
       setResults(testResults)
       setSubmitted(true)
 
-      // Save to API
+      // Save to API. The server rebuilds the form, grades every answer by
+      // question id and scores on the curve of the Module 2 route actually
+      // served; the browser's own tallies are display-only until it answers.
+      let final = testResults
       try {
-        await fetch('/api/sat-practice/submit', {
+        const res = await fetch('/api/sat-practice/submit', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             testNumber: test.testNumber,
-            rwScore: testResults.rwScore,
-            mathScore: testResults.mathScore,
-            totalScore: testResults.totalScore,
-            rwCorrect: testResults.rwCorrect,
-            rwTotal: testResults.rwTotal,
-            mathCorrect: testResults.mathCorrect,
-            mathTotal: testResults.mathTotal,
+            format: test.format,
             timeSpent: testResults.timeSpent,
             weakAreas: testResults.weakAreas.join(', '),
             strengths: testResults.strengths.join(', '),
-            answers: testResults.sections.map(s => ({
-              sectionId: s.sectionId,
-              sectionName: s.sectionName,
-              correct: s.correct,
-              total: s.total,
-              answers: s.answers.map(a => ({
+            responses: testResults.sections.flatMap(s =>
+              s.answers.map(a => ({
+                moduleIndex: s.moduleIndex,
                 questionId: a.question.id,
-                selectedIndex: a.selectedIndex,
-                textValue: a.textValue,
-                answered: a.answered,
-                correct: a.correct,
-                category: a.question.category,
-                sourceSlug: a.question.sourceSlug,
+                selectedIndex: a.question.gridIn ? null : a.selectedIndex,
+                textValue: a.question.gridIn ? a.textValue : null,
+                flagged: a.flagged,
+                seconds: a.seconds,
               })),
-            })),
+            ),
           }),
         })
+        if (res.ok) {
+          const data = await res.json()
+          if (typeof data?.totalScore === 'number') {
+            final = {
+              ...testResults,
+              attemptId: data.attemptId,
+              rwScore: data.rwScore,
+              mathScore: data.mathScore,
+              totalScore: data.totalScore,
+              rwCorrect: data.rwCorrect,
+              rwTotal: data.rwTotal,
+              mathCorrect: data.mathCorrect,
+              mathTotal: data.mathTotal,
+            }
+            setResults(final)
+          }
+        }
       } catch {
         // Silently fail — results are still shown
       }
 
-      onComplete(testResults)
+      onComplete(final)
     },
-    [test.testNumber, onComplete],
+    [test.testNumber, test.format, onComplete],
   )
 
   if (submitted && results) {
@@ -1174,7 +1255,15 @@ function SATResultsView({
         </div>
 
         {/* Actions */}
-        <div className="flex gap-4">
+        <div className="flex flex-col gap-3 sm:flex-row">
+          {results.attemptId && (
+            <Link
+              href={`/review/sat-practice/${results.attemptId}`}
+              className="flex-1 rounded-xl border-2 border-accent-muted px-6 py-3 text-center font-semibold text-accent transition hover:bg-accent-subtle focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring dark:text-accent-muted dark:hover:bg-accent-light/10"
+            >
+              Review every question
+            </Link>
+          )}
           <button
             onClick={onCancel}
             className="flex-1 rounded-xl bg-gradient-to-r from-accent to-pink-600 px-6 py-3 font-semibold text-white shadow-lg transition hover:shadow-xl"
@@ -1182,6 +1271,12 @@ function SATResultsView({
             Back to Practice Tests
           </button>
         </div>
+        {results.attemptId && (
+          <p className="mt-3 text-center text-xs text-gray-500 dark:text-gray-400">
+            Missed and flagged questions also go to your{' '}
+            <Link href="/sat/mistakes" className="font-medium text-accent hover:underline dark:text-accent-muted">SAT mistake log</Link>.
+          </p>
+        )}
       </div>
     </div>
   )

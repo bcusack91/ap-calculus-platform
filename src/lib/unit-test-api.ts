@@ -13,6 +13,8 @@ import { createUnitTest, publicQuestions, unitTestStatusFor, type McatUnitTestSt
 import { gradeUnitTest, MCAT_UNIT_TEST_PASS_PERCENT, type UnitTestQuestion } from '@/lib/mcat-unit-test'
 import { UNIT_TEST_COURSES, cycleUnitId, type UnitTestCourse } from '@/lib/unit-test-courses'
 import { recordCourseWorkCompletion } from '@/lib/assignment-autocomplete'
+import { recordQuestions } from '@/lib/study-tracking'
+import { unitTestQuestionRows } from '@/lib/question-activity-rows'
 
 interface CyclePlan {
   diagnosticId: string
@@ -127,7 +129,9 @@ export async function unitTestStartResponse(course: UnitTestCourse) {
 /**
  * POST submit: grade against the frozen questions (the client only sends
  * choices). Also logs a UnitTestAttempt so the teacher sees the sitting and a
- * course UNIT_TEST assignment completes.
+ * course UNIT_TEST assignment completes, and one UNIT_TEST QuestionActivity
+ * row per question (attemptKind 'unit-test', attemptId = the McatUnitTest id)
+ * for the teacher report, the review page and the mistake log.
  */
 export async function unitTestSubmitResponse(course: UnitTestCourse, req: Request) {
   try {
@@ -197,6 +201,12 @@ export async function unitTestSubmitResponse(course: UnitTestCourse, req: Reques
       // Teacher-visibility side effects must never cost the student their result.
       console.warn(`[${course} unit test submit] side effects failed:`, err)
     }
+    // Per-question answer log, graded from the frozen key (never throws).
+    await recordQuestions(userId, unitTestQuestionRows(questions, answers, {
+      courseSlug: cfg.courseSlug,
+      attemptId: id,
+      timeSpentSeconds: timeSpent,
+    }))
 
     return NextResponse.json({
       correct: graded.correct,

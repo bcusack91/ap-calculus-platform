@@ -27,8 +27,12 @@ export async function POST(request: Request) {
     },
   })
 
-  // Teacher report: per-question DIAGNOSTIC rows graded from the stored key.
-  await recordQuestions(session.user.id, diagnosticQuestionRows(results, { category }))
+  // Teacher report + answer log: per-question DIAGNOSTIC rows graded from the
+  // stored key, tagged with this attempt (recorded after the row exists).
+  await recordQuestions(
+    session.user.id,
+    diagnosticQuestionRows(results, { category, attemptKind: 'diagnostic', attemptId: test.id }),
+  )
 
   return NextResponse.json({ test })
 }

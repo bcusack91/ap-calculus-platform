@@ -54,7 +54,11 @@ export interface DiagnosticSittingState {
 
 interface DiagnosticTestProps {
   testData: DiagnosticTestData
-  onComplete: (results: DiagnosticResults, rawAnswers: (number | null)[]) => void
+  /**
+   * `typed` = the typed grid-in answer per question (null for multiple choice
+   * or a blank), stored in the review so grid-ins can be graded and reviewed.
+   */
+  onComplete: (results: DiagnosticResults, rawAnswers: (number | null)[], typed: (string | null)[]) => void
   onCancel: () => void
   /** A saved sitting to resume: skips the intro and restores answers, position and clock. */
   initialState?: DiagnosticSittingState | null
@@ -226,6 +230,7 @@ export default function DiagnosticTest({
         if (!a.textValue?.trim()) return null
         return gradeGridIn(q.gridIn, a.textValue) ? -1 : -2
       }),
+      answers.map((a, i) => (testData.questions[i]?.gridIn && a.textValue?.trim() ? a.textValue.trim().slice(0, 20) : null)),
     )
   }, [testData.questions, testData.band, answers, onComplete])
 

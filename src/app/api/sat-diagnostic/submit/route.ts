@@ -78,10 +78,16 @@ export async function POST(req: Request) {
       },
     })
 
-    // Teacher report: per-question DIAGNOSTIC rows graded from the stored key.
+    // Teacher report + answer log: per-question DIAGNOSTIC rows graded from
+    // the stored key, tied to the stored attempt (written after it exists).
     await recordQuestions(
       session.user.id,
-      diagnosticQuestionRows(parsedResults, { category, courseSlug: 'sat-prep' }),
+      diagnosticQuestionRows(parsedResults, {
+        category,
+        courseSlug: 'sat-prep',
+        attemptKind: 'diagnostic',
+        attemptId: diagnostic.id,
+      }),
       { classroomId: assignedClassroomId },
     )
 

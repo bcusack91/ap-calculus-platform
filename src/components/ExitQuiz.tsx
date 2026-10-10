@@ -87,6 +87,8 @@ export default function ExitQuiz({
   // Flips once the results POST has settled (success or failure) — the
   // study-plan panel waits for it so its status fetch sees this attempt.
   const [submitSettled, setSubmitSettled] = useState(false)
+  // The saved attempt's id, for the permanent "Review this quiz" link.
+  const [savedAttemptId, setSavedAttemptId] = useState<string | null>(null)
   const [startTime] = useState(Date.now())
   // One submission per mounted quiz, ever.
   const hasSubmittedRef = useRef(false)
@@ -239,7 +241,7 @@ export default function ExitQuiz({
     hasSubmittedRef.current = true
     try {
       const timeSpent = Math.round((Date.now() - startTime) / 1000)
-      await fetch('/api/exit-quiz/submit', {
+      const res = await fetch('/api/exit-quiz/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -256,6 +258,11 @@ export default function ExitQuiz({
           ...(includeLowYield ? { includeLowYield: true } : {})
         })
       })
+      if (res.ok) {
+        const data = await res.json().catch(() => null)
+        const id = data?.attemptId ?? data?.attempt?.id
+        if (typeof id === 'string') setSavedAttemptId(id)
+      }
     } catch (err) {
       console.error('Failed to submit exit quiz:', err)
     } finally {
@@ -465,7 +472,17 @@ export default function ExitQuiz({
 
           {/* Answer Review */}
           <div className="text-left mt-8">
-            <h3 className="text-lg font-bold mb-4">Review Your Answers</h3>
+            <div className="mb-4 flex flex-wrap items-baseline justify-between gap-2">
+              <h3 className="text-lg font-bold">Review Your Answers</h3>
+              {savedAttemptId && (
+                <Link
+                  href={`/review/exit/${savedAttemptId}`}
+                  className="rounded text-sm font-medium text-accent hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring dark:text-accent-muted"
+                >
+                  Review this quiz →
+                </Link>
+              )}
+            </div>
             <div className="space-y-4">
               {questions.map((q, i) => {
                 const answer = answers[i]

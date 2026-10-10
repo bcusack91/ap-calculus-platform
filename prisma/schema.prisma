@@ -626,6 +626,10 @@ enum QuestionSource {
   FULL_LENGTH
   DAILY
   COMPETITIVE
+  /// A cycle unit test question (MCAT/SAT/ACT).
+  UNIT_TEST
+  /// A question re-served from the student's mistake log.
+  MISTAKE_REVIEW
 }
 
 /// Answered questions. One row per answer where the source knows each answer
@@ -644,10 +648,25 @@ model QuestionActivity {
   correct     Int            @default(0)
   durationMs  Int?
   answeredAt  DateTime       @default(now())
+  /// Which attempt the answer belongs to (review pages, mistake log). Null on
+  /// rows written before 2026-10 and on batch rows.
+  /// exit | diagnostic | unit-test | sat-practice | mcat-fl | mcat-practice | mistake-review
+  attemptKind String?
+  attemptId   String?
+  /// Position of the question within its attempt.
+  itemIndex   Int?
+  /// The option the student picked, in the order it was SHOWN; null = skipped.
+  chosenIndex Int?
+  /// A typed answer (SAT grid-in).
+  chosenText  String?
+  /// Marked for review.
+  flagged     Boolean        @default(false)
   user        User           @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@index([userId, answeredAt])
   @@index([classroomId, answeredAt])
+  @@index([userId, courseSlug, answeredAt])
+  @@index([attemptId])
 }
 
 model DailyStreak {
@@ -1294,6 +1313,10 @@ model ExitQuizAttempt {
   passed         Boolean  @default(false) // true if score >= 7
   mustRedoUnit   Boolean  @default(false) // true if score < 5
   variant        Int      @default(1) // Which content variant this attempt was for
+  /// Generation inputs, so the exact quiz can be rebuilt for review.
+  seed            Int?
+  difficulty      String?
+  includeLowYield Boolean?
   answers        Json // array of { questionId, selectedAnswer, correct }
   startedAt      DateTime @default(now())
   completedAt    DateTime @default(now())
@@ -1661,6 +1684,12 @@ model SatTestAttempt {
   timeSpent   Int      @default(0) // Total time in seconds
   answers     Json // Full answer data per section
   weakAreas   Json? // Array of weak topic areas
+  /// 'full' | 'mini'; the Module 2 route per section ('harder' | 'easier' |
+  /// null = unrouted); scoringVersion 2 = server-scored with the routed curve.
+  format         String?
+  rwTier         String?
+  mathTier       String?
+  scoringVersion Int     @default(1)
   strengths   Json? // Array of strong topic areas
   completed   Boolean  @default(true)
   startedAt   DateTime @default(now())

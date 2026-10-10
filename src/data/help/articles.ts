@@ -722,6 +722,44 @@ export const HELP_ARTICLE_LIST: HelpArticle[] = [
     ],
     related: [A.studyCalendar, A.diagnosticsAndStudyPlans, A.whatClearedMeans],
   },
+  {
+    slug: A.reviewAndMistakeLog,
+    title: 'Reviewing past tests and your mistake log',
+    description:
+      'Every quiz and test you take is saved for review. Questions you miss or flag go to your MCAT or SAT mistake log until you answer them correctly twice.',
+    audience: 'student',
+    blocks: [
+      { type: 'p', text: 'Study Mondo saves the answer you picked on every question. That gives you two tools: a **review page** for each attempt, and a **mistake log** for the MCAT and the SAT.' },
+      { type: 'h2', id: 'review-pages', text: 'Review any attempt' },
+      { type: 'p', text: 'After an exit quiz, unit test, diagnostic, SAT practice test or MCAT full-length, the results screen has a review link. It opens a page you can come back to any time.' },
+      {
+        type: 'list',
+        items: [
+          'Each question shows your answer, the correct answer and the explanation.',
+          'Tabs show only the questions you **missed**, only the ones you **flagged**, or **all** of them.',
+          'Where it was recorded, you also see how long you spent on the question.',
+          'A question marked **Revised since you took it** was edited after your attempt. You see the current version.',
+          'A question that can no longer be shown says so. Your score is not affected.',
+        ],
+      },
+      { type: 'p', text: 'Past SAT practice tests have a **Review** link in the Recent Results table on [SAT Practice Tests](/sat-practice). Past MCAT full-lengths are listed on the [full-length page](/mcat-full-length).' },
+      { type: 'h2', id: 'mistake-log', text: 'Your mistake log' },
+      { type: 'p', text: 'Open it from the [MCAT](/mcat) or [SAT](/sat) page, or go straight to the [MCAT mistake log](/mcat/mistakes) or the [SAT mistake log](/sat/mistakes).' },
+      {
+        type: 'steps',
+        items: [
+          'A question joins the log when you answer it wrong, skip it, or flag it (flagging means you were not sure, even if you got it right).',
+          'Each later correct answer counts, wherever you see the question again: a quiz, a test or a re-quiz.',
+          'Two correct answers in a row retire it from the log. Missing it again starts the count over.',
+        ],
+      },
+      { type: 'p', text: 'Filter the log by source, section, topic or date. Each row links to the attempt where you missed the question.' },
+      { type: 'h2', id: 're-quiz', text: 'Re-quiz your mistakes' },
+      { type: 'p', text: 'Choose **Re-quiz my mistakes** to answer up to 20 of them, one at a time, with no timer. After each answer you see the explanation and how close the question is to retiring.' },
+      { type: 'note', tone: 'tip', text: 'The log starts with the tests you take after this feature launched. Older attempts can still be reviewed when their answers were saved.' },
+    ],
+    related: [A.diagnosticsAndStudyPlans, A.fullLengthReadiness, A.whatClearedMeans],
+  },
 
   // ─────────────────────────────── Everyone ───────────────────────────────
   {

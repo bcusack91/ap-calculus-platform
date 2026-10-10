@@ -3,10 +3,10 @@
 import { useState, useEffect, useCallback } from 'react'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 import dynamic from 'next/dynamic'
 import {
-  generateFullTest,
-  generateMiniTest,
+  buildSatForm,
   PRACTICE_TESTS,
   type SATFullTest,
 } from '@/data/sat-practice/test-generator'
@@ -97,13 +97,18 @@ export default function SATPracticePage() {
 
   // Start test
   const startTest = useCallback(async (testNumber: number, format: 'full' | 'mini') => {
-    const test = format === 'full' ? await generateFullTest(testNumber) : await generateMiniTest(testNumber)
+    // The unrouted form; Module 2s are routed in the runner via the same
+    // shared builder the server grades with.
+    const test = await buildSatForm(testNumber, format)
     setActiveTest(test)
   }, [])
 
   // Complete / cancel
+  // Keep the results view (and its review link) on screen after the submit
+  // lands; "Back to Practice Tests" (handleCancel) returns to the list. This
+  // used to clear the test here, which unmounted the results view as soon as
+  // the server answered.
   const handleComplete = useCallback(() => {
-    setActiveTest(null)
     fetchHistory()
   }, [fetchHistory])
 
@@ -282,6 +287,9 @@ export default function SATPracticePage() {
                       <th className="hidden px-4 py-3 font-medium text-gray-700 md:table-cell dark:text-gray-300">
                         Date
                       </th>
+                      <th className="px-4 py-3 font-medium text-gray-700 dark:text-gray-300">
+                        <span className="sr-only">Review</span>
+                      </th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
@@ -304,6 +312,15 @@ export default function SATPracticePage() {
                         </td>
                         <td className="hidden px-4 py-3 text-gray-500 md:table-cell dark:text-gray-400">
                           {new Date(attempt.completedAt).toLocaleDateString()}
+                        </td>
+                        <td className="px-4 py-3 text-right">
+                          <Link
+                            href={`/review/sat-practice/${attempt.id}`}
+                            className="rounded font-medium text-accent hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring dark:text-accent-muted"
+                            aria-label={`Review Practice Test ${attempt.testNumber} from ${new Date(attempt.completedAt).toLocaleDateString()}`}
+                          >
+                            Review
+                          </Link>
                         </td>
                       </tr>
                     ))}

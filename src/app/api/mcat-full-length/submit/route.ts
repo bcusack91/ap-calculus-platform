@@ -3,7 +3,17 @@ import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { Prisma } from '@prisma/client'
 import { recordQuestions } from '@/lib/study-tracking'
-import { mcatFullLengthRows } from '@/lib/question-activity-rows'
+import { mcatFullLengthQuestionRows, mcatFullLengthRows } from '@/lib/question-activity-rows'
+import { scoreMCAT } from '@/lib/mcat-scoring'
+import { recommendFromFullLength } from '@/lib/mcat-fulllength-recs'
+import {
+  buildFullLengthItems,
+  fullLengthForm,
+  fullLengthPositionalAnswers,
+  fullLengthRawBySection,
+  sanitizeFullLengthAnswers,
+  type FullLengthItem,
+} from '@/lib/question-sources/mcat'
 
 /**
  * Persist a completed MCAT full-length practice exam so a weak result feeds the
@@ -19,8 +29,16 @@ import { mcatFullLengthRows } from '@/lib/question-activity-rows'
  *     a SEPARATE startsWith('mcat-full-length') pass that merges these recs in.)
  *
  * The stored results.recommendedTopics is the {slug,name,priority}[] shape the
- * adaptive layer (parseRecommendedTopics) already validates, produced client-side
- * by recommendFromFullLength — so no extra mapping is needed server-side.
+ * adaptive layer (parseRecommendedTopics) already validates (recommendFromFullLength).
+ *
+ * Per-question answers (current runner): the client sends `answers` keyed by
+ * fullLengthQuestionId, per-question `flags`, `passageFlags` and
+ * `passageSeconds`. The server then rebuilds the form, grades every question
+ * itself and rescores with scoreMCAT — the client's section tallies, total
+ * and recommendations are ignored — stores the answers in results (for the
+ * review page) and writes one FULL_LENGTH row per question. An older client
+ * that sends only section tallies keeps the old behavior (tallies stored as
+ * sent, one batch row per section).
  */
 
 type IncomingTopic = { slug: string; name?: string; priority?: string }
@@ -104,6 +122,10 @@ export async function POST(req: Request) {
       sections,
       recommendedTopics,
       weakAreas,
+      answers,
+      flags,
+      passageFlags,
+      passageSeconds,
     } = body as {
       form?: unknown
       total?: unknown
@@ -111,11 +133,38 @@ export async function POST(req: Request) {
       sections?: unknown
       recommendedTopics?: unknown
       weakAreas?: unknown
+      answers?: unknown
+      flags?: unknown
+      passageFlags?: unknown
+      passageSeconds?: unknown
     }
 
-    const cleanTopics = sanitizeTopics(recommendedTopics)
-    const cleanSections = sanitizeSections(sections)
-    const cleanWeakAreas = sanitizeWeakAreas(weakAreas)
+    let cleanTopics = sanitizeTopics(recommendedTopics)
+    let cleanSections = sanitizeSections(sections)
+    let cleanWeakAreas = sanitizeWeakAreas(weakAreas)
+    let cleanTotal = num(total)
+    let cleanPercentileLabel = typeof percentileLabel === 'string' ? percentileLabel : null
+
+    // Server grading from per-question answers, when the client sent them for a known form.
+    const fl = answers && typeof answers === 'object' && !Array.isArray(answers) ? fullLengthForm(form) : null
+    let graded: { items: FullLengthItem[]; stored: ReturnType<typeof sanitizeFullLengthAnswers> } | null = null
+    if (fl) {
+      const stored = sanitizeFullLengthAnswers(fl, { answers, flags, passageFlags, passageSeconds })
+      const items = buildFullLengthItems(fl, stored)
+      const report = scoreMCAT(fullLengthRawBySection(items))
+      const elapsed = new Map(cleanSections.map((s) => [s.section, s.elapsedSeconds]))
+      cleanSections = report.sections.map((s) => {
+        const out: StoredSection = { section: s.section, short: s.short, correct: s.correct, total: s.total, scaled: s.scaled }
+        const e = elapsed.get(s.section)
+        if (typeof e === 'number') out.elapsedSeconds = e
+        return out
+      })
+      cleanTotal = report.total
+      cleanPercentileLabel = report.percentileLabel
+      cleanTopics = sanitizeTopics(recommendFromFullLength(fl.passages, fullLengthPositionalAnswers(fl, stored.answers)))
+      cleanWeakAreas = report.sections.filter((s) => s.total > 0 && s.correct / s.total < 0.5).map((s) => s.short)
+      graded = { items, stored }
+    }
 
     // Require at least something scorable so we don't write empty rows that
     // would dilute the adaptive plan.
@@ -125,11 +174,20 @@ export async function POST(req: Request) {
 
     const results: Prisma.InputJsonValue = {
       form: typeof form === 'number' ? form : null,
-      total: num(total),
-      percentileLabel: typeof percentileLabel === 'string' ? percentileLabel : null,
+      total: cleanTotal,
+      percentileLabel: cleanPercentileLabel,
       sections: cleanSections,
       // {slug,name,priority}[] — the exact shape adaptive-study-plan consumes.
       recommendedTopics: cleanTopics,
+      // Per-question record for the review page (see question-sources/mcat).
+      ...(graded
+        ? {
+            answers: graded.stored.answers,
+            flags: graded.stored.flags,
+            passageFlags: graded.stored.passageFlags,
+            passageSeconds: graded.stored.passageSeconds,
+          }
+        : {}),
     }
 
     const record = await prisma.diagnosticTest.create({
@@ -143,10 +201,20 @@ export async function POST(req: Request) {
       },
     })
 
-    // Teacher report: one FULL_LENGTH batch row per section.
-    await recordQuestions(session.user.id, mcatFullLengthRows(results))
+    // Teacher report + answer log: one FULL_LENGTH row per question when the
+    // exam was graded here (per-section totals equal the old batch rows),
+    // else one batch row per section from the submitted tallies.
+    await recordQuestions(
+      session.user.id,
+      graded ? mcatFullLengthQuestionRows(graded.items, { attemptId: record.id }) : mcatFullLengthRows(results),
+    )
 
-    return NextResponse.json({ success: true, id: record.id })
+    return NextResponse.json({
+      success: true,
+      id: record.id,
+      attemptId: record.id,
+      ...(graded ? { total: cleanTotal, sections: cleanSections } : {}),
+    })
   } catch (error) {
     console.error('MCAT full-length submit error:', error)
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 })

@@ -41,6 +41,8 @@ interface Result {
   passPercent: number
   byTopic: Record<string, { correct: number; total: number }>
   review: ReviewItem[]
+  /** The sitting's id (client-side), for the permanent review link. */
+  attemptId?: string
 }
 
 const storageKey = (course: UnitTestCourse) => `${course}-unit-test-answers-v1`
@@ -142,7 +144,7 @@ export default function CycleUnitTestPage({ course }: { course: UnitTestCourse }
       const body = await r.json().catch(() => ({}))
       if (!r.ok) throw new Error(body.error || 'Could not submit. Your answers are saved — try again.')
       try { localStorage.removeItem(storageKey(course)) } catch {}
-      setResult(body as Result)
+      setResult({ ...(body as Result), attemptId: sitting.id })
       window.scrollTo({ top: 0 })
       load()
     } catch (e) {
@@ -187,6 +189,11 @@ export default function CycleUnitTestPage({ course }: { course: UnitTestCourse }
               <button onClick={start} disabled={busy} className="rounded-xl bg-accent px-5 py-2.5 text-sm font-semibold text-white shadow transition hover:opacity-90 disabled:opacity-50">
                 {busy ? 'Building a new test…' : 'Retake with new questions'}
               </button>
+            )}
+            {result.attemptId && (
+              <Link href={`/review/unit-test/${result.attemptId}`} className="rounded-xl border border-accent-muted px-5 py-2.5 text-sm font-semibold text-accent transition hover:bg-accent-subtle focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring dark:text-accent-muted dark:hover:bg-accent-light/10">
+                Review every question
+              </Link>
             )}
             <button onClick={() => { setResult(null); setSitting(null) }} className="rounded-xl border border-gray-300 px-5 py-2.5 text-sm font-medium text-gray-700 transition hover:bg-gray-50 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-800">
               Back to overview

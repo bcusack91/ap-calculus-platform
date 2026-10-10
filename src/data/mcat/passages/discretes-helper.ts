@@ -25,8 +25,9 @@ export function buildDiscretesPassage(
     title: opts?.title ?? 'Discrete Questions',
     passageText:
       'The following questions are **independent of any passage** — each stands alone, as in the discrete sets on the real MCAT.',
-    questions: discretes.map(({ question, options, correctAnswer, explanation, skill, needsReview }) => ({
-      question, options, correctAnswer, explanation, skill, needsReview,
+    // `id` is kept so an answer to a discrete stays keyed to that item.
+    questions: discretes.map(({ id, question, options, correctAnswer, explanation, skill, needsReview }) => ({
+      id, question, options, correctAnswer, explanation, skill, needsReview,
     })),
     needsReview: discretes.some((d) => d.needsReview),
   }

@@ -121,6 +121,14 @@ export default function FullLengthProgress({
             {last
               ? `Last full-length: ${last.score != null ? `${last.score} ` : ''}${last.kind === 'external' ? `(${last.source ?? 'outside test'}) ` : ''}on ${formatDay(last.at)}. `
               : ''}
+            {last?.href && (
+              <>
+                <Link href={last.href} className="font-medium text-accent hover:underline">
+                  Review it
+                </Link>
+                .{' '}
+              </>
+            )}
             Took {course === 'mcat' ? 'an' : 'a'} {r.externalLabel} already?{' '}
             <button type="button" onClick={() => setShowForm((v) => !v)} aria-expanded={showForm} className="font-medium text-accent hover:underline">
               Enter the score

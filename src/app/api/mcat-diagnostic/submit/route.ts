@@ -90,10 +90,11 @@ export async function POST(req: Request) {
       },
     })
 
-    // Teacher report: per-question DIAGNOSTIC rows graded from the stored key.
+    // Teacher report + answer log: per-question DIAGNOSTIC rows graded from the
+    // stored key, tagged with this attempt (recorded after the row exists).
     await recordQuestions(
       session.user.id,
-      diagnosticQuestionRows(parsedResults, { category, courseSlug: 'mcat-prep' }),
+      diagnosticQuestionRows(parsedResults, { category, courseSlug: 'mcat-prep', attemptKind: 'diagnostic', attemptId: diagnostic.id }),
       { classroomId: assignedClassroomId },
     )
 

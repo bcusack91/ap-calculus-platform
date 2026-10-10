@@ -169,6 +169,25 @@ describe('POST /api/exit-quiz/submit — EXIT rows from the server grading', () 
     expect(await res.json()).toEqual(ok)
   })
 
+  it('stores the generation inputs so the quiz can be rebuilt', async () => {
+    await exitSubmit(post({ ...body, difficulty: 'hard', includeLowYield: true }))
+    expect(mockExitCreate.mock.calls[0][0].data).toMatchObject({ seed: 42, difficulty: 'hard', includeLowYield: true })
+  })
+
+  it('keys resolved questions by questionKey() and tags them with the attempt', async () => {
+    const item = (k: string) => ({ questionId: k, question: k, options: ['a', 'b'], correctIndex: 0, explanation: '', questionKey: `q:${k.padEnd(16, '0')}` })
+    mockRegradeSeeded.mockResolvedValue({
+      score: 1, resolvedCount: 2, unresolvedCount: 1, usedFallback: true, perAnswer: [true, false, false],
+      items: [item('q1'), item('q2'), null],
+    })
+    await exitSubmit(post({ ...body, answers: [...body.answers.slice(0, 2), { questionId: 'q3', selectedAnswer: -1, correct: false }] }))
+    expect(writtenRows().map((r) => [r.questionKey, r.attemptKind, r.attemptId, r.itemIndex, r.chosenIndex ?? null])).toEqual([
+      ['q:q100000000000000', 'exit', 'att1', 0, 0],
+      ['q:q200000000000000', 'exit', 'att1', 1, 1],
+      ['q3', undefined, 'att1', 2, null], // unresolved: old key, kept out of the mistake log
+    ])
+  })
+
   it('records nothing for a deduplicated re-POST', async () => {
     mockExitFindFirst.mockResolvedValue({ id: 'att0' })
     await exitSubmit(post(body))

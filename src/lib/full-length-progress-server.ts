@@ -58,18 +58,26 @@ async function fullLengthEvents(userId: string, course: FullLengthCourse): Promi
   if (course === 'mcat') {
     const rows = await prisma.diagnosticTest.findMany({
       where: { userId, category: 'mcat-full-length' },
-      select: { createdAt: true, results: true },
+      select: { id: true, createdAt: true, results: true },
     })
     for (const r of rows) {
-      const total = (r.results as { total?: unknown } | null)?.total
-      events.push({ at: r.createdAt.toISOString(), kind: 'studymondo', score: typeof total === 'number' ? total : null, source: null })
+      const res = r.results as { total?: unknown; answers?: unknown } | null
+      const total = res?.total
+      // Only attempts saved with per-question answers can be reviewed.
+      const reviewable = !!res?.answers && typeof res.answers === 'object'
+      events.push({
+        at: r.createdAt.toISOString(), kind: 'studymondo', score: typeof total === 'number' ? total : null, source: null,
+        href: reviewable ? `/review/mcat-fl/${r.id}` : null,
+      })
     }
   } else {
     const rows = await prisma.satTestAttempt.findMany({
       where: { userId, completed: true },
-      select: { completedAt: true, totalScore: true, testNumber: true },
+      select: { id: true, completedAt: true, totalScore: true, testNumber: true },
     })
-    for (const r of rows) events.push({ at: r.completedAt.toISOString(), kind: 'studymondo', score: r.totalScore, source: `Practice Test ${r.testNumber}` })
+    for (const r of rows) {
+      events.push({ at: r.completedAt.toISOString(), kind: 'studymondo', score: r.totalScore, source: `Practice Test ${r.testNumber}`, href: `/review/sat-practice/${r.id}` })
+    }
   }
   return events.sort((a, b) => (a.at < b.at ? -1 : 1))
 }

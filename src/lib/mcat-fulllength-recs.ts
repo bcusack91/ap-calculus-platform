@@ -98,7 +98,7 @@ export const TOPIC_NAMES: Record<string, string> = {
  * across two sections (only 'sociology' today) is disambiguated by section so a
  * psych-soc 'sociology' passage routes to Psych/Soc, not CARS.
  */
-function passageTopicSlug(p: MCATPassage): string {
+export function passageTopicSlug(p: MCATPassage): string {
   if (p.discipline === 'sociology') {
     return p.section === 'cars'
       ? 'mcat-cars-strategy-mcat'

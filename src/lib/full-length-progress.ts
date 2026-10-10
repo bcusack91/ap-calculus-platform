@@ -163,6 +163,8 @@ export interface FullLengthEvent {
   kind: 'studymondo' | 'external'
   score: number | null
   source: string | null
+  /** Permanent review page for a StudyMondo full-length (/review/...). */
+  href?: string | null
 }
 
 export interface FullLengthReadiness extends ReadinessBar {

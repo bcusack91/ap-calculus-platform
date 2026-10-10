@@ -110,6 +110,8 @@ export default function MCATractricePage() {
   const [loading, setLoading] = useState(true)
   const [timeStarted, setTimeStarted] = useState<number>(0)
   const [timeRemaining, setTimeRemaining] = useState<number>(0)
+  // The saved attempt's id, for the permanent review link on the results screen.
+  const [savedAttemptId, setSavedAttemptId] = useState<string | null>(null)
 
   // Auth redirect
   useEffect(() => {
@@ -169,6 +171,7 @@ export default function MCATractricePage() {
     setTestResult(null)
     setTimeStarted(Date.now())
     setTimeRemaining(test.timeLimitMinutes * 60)
+    setSavedAttemptId(null)
   }, [])
 
   // Finish test
@@ -185,7 +188,7 @@ export default function MCATractricePage() {
 
     // Submit to API
     try {
-      await fetch('/api/mcat-practice/submit', {
+      const res = await fetch('/api/mcat-practice/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -197,13 +200,20 @@ export default function MCATractricePage() {
           correct: result.correct,
           total: result.total,
           timeSpent,
+          // `ref` lets the server re-resolve each question from the bank for
+          // the answer log and the review page (it never trusts client text).
           answers: answers.map((a, i) => ({
             questionIndex: i,
             selected: a,
             correct: activeTest.questions[i].correctAnswer,
+            ...(activeTest.questions[i].ref ? { ref: activeTest.questions[i].ref } : {}),
           })),
         }),
       })
+      if (res.ok) {
+        const data = await res.json().catch(() => null)
+        if (typeof data?.attemptId === 'string') setSavedAttemptId(data.attemptId)
+      }
     } catch {
       // Silent fail
     }
@@ -371,6 +381,17 @@ export default function MCATractricePage() {
               </div>
             )}
 
+            {savedAttemptId && (
+              <p className="mb-3 text-center text-sm text-gray-600 dark:text-gray-300">
+                <Link
+                  href={`/review/mcat-practice/${savedAttemptId}`}
+                  className="font-semibold text-accent hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring dark:text-accent-muted"
+                >
+                  Permanent review of this section →
+                </Link>
+                <span className="block text-xs text-gray-500 dark:text-gray-400">Missed questions also go to your <Link href="/mcat/mistakes" className="underline">mistake log</Link>.</span>
+              </p>
+            )}
             <div className="flex gap-3">
               <button
                 onClick={handleDone}

@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import { useSession } from 'next-auth/react'
 import Link from 'next/link'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, ListChecks } from 'lucide-react'
 import { formatTimeUntil } from '@/lib/format-due-time'
 import { studyPlanTopicHref } from '@/lib/dashboard-next-step'
 import { courseDiagnosticForKey } from '@/lib/student-courses'
@@ -283,6 +283,19 @@ export default function CourseStudyPlan({
         {/* How close they are to their next full-length (MCAT 4 cycles, SAT 2) */}
         {status === 'authenticated' && loaded && isFullLengthCourse(courseKey) && (
           <FullLengthProgress course={courseKey} />
+        )}
+
+        {/* Missed and flagged questions, until answered correctly twice (MCAT, SAT) */}
+        {status === 'authenticated' && loaded && (courseKey === 'mcat' || courseKey === 'sat') && (
+          <Link
+            href={`/${courseKey}/mistakes`}
+            className="flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm text-gray-700 transition hover:border-accent-muted hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200"
+          >
+            <ListChecks className="h-4 w-4 shrink-0 text-accent" aria-hidden />
+            <span className="font-medium">Your mistake log</span>
+            <span className="hidden text-gray-500 sm:inline dark:text-gray-400">· questions you missed or flagged, ready to re-quiz</span>
+            <ArrowRight className="ml-auto h-4 w-4 shrink-0" aria-hidden />
+          </Link>
         )}
 
         {/* The study plan from the last diagnostic */}

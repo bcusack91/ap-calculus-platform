@@ -29,6 +29,12 @@ export const MCAT_SECTION_META: Record<
 export const MCAT_SECTION_ORDER: MCATSection[] = ['chem-phys', 'cars', 'bio-biochem', 'psych-soc']
 
 export interface MCATPassageQuestion {
+  /**
+   * Stable id, carried only by discrete items (see MCATDiscreteQuestion) —
+   * kept when the full-length assembler wraps discretes into a synthetic
+   * passage, so an answer to a discrete can be keyed by it.
+   */
+  id?: string
   /** Question stem. MCAT items are 4-option; passage-bound items reference the passage. */
   question: string
   options: [string, string, string, string]
@@ -114,6 +120,16 @@ export interface MCATDiscreteQuestion extends MCATPassageQuestion {
   id: string
   section: MCATSection
   discipline: string
+}
+
+/**
+ * A full-length question's stable id, as the runner submits answers and the
+ * server re-resolves them: a discrete's own id, else `<passageId>:<position>`
+ * (passage questions have no id of their own; positions are deterministic per
+ * form).
+ */
+export function fullLengthQuestionId(passage: Pick<MCATPassage, 'id'>, question: Pick<MCATPassageQuestion, 'id'>, qi: number): string {
+  return question.id ?? `${passage.id}:${qi}`
 }
 
 /** Count questions across a passage list. */

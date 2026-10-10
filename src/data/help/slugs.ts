@@ -19,6 +19,7 @@ export const HELP_ARTICLES = {
   classDiagnostics: 'class-diagnostics',
   studyCalendar: 'study-calendar',
   fullLengthReadiness: 'full-length-readiness',
+  reviewAndMistakeLog: 'review-and-mistake-log',
   classGamesAndLiveLessons: 'class-games-and-live-lessons',
   rosterImport: 'roster-import',
   glossary: 'glossary',
