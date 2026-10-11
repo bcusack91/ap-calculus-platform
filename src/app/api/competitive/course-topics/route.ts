@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
+import { curriculumCourseSlug } from '@/lib/competitive-catalog'
 
 /**
  * GET /api/competitive/course-topics?course=<slug>
@@ -83,8 +84,10 @@ export async function GET(request: NextRequest) {
       }, { headers: { 'Cache-Control': 'private, no-store' } })
     }
 
+    // Competitive slugs like 'ap-physics1' name the curriculum course
+    // 'ap-physics-1' — look up the real Course row.
     const course = await prisma.course.findUnique({
-      where: { slug: courseSlug },
+      where: { slug: curriculumCourseSlug(courseSlug) },
       select: {
         slug: true,
         name: true,
