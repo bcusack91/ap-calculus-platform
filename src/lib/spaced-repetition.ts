@@ -6,7 +6,8 @@
  * Learning phase (first sighting of a card):
  * - Again: 1 minute · Hard: 3 minutes · Good: 5 minutes · Easy: 1 day
  * - On the next review after a minute step: Good graduates to 1 DAY
- *   (Hard repeats a 10-minute step, Easy jumps to 3 days).
+ *   (Hard takes a 10-minute step, Easy jumps to 3 days). A Hard on the
+ *   10-minute step graduates to 1 day, so Hard never loops forever.
  *
  * Day phase — intervals walk a Fibonacci ladder (1, 2, 3, 5, 8, 13, 21,
  * 34 days) until they reach ~a month, then growth switches to a gentle
@@ -14,7 +15,10 @@
  * but too steep for mature cards):
  * - Good: next rung; past 34 days, x1.25 (34 → 43 → 53 → 67 → 84 → …)
  * - Easy: skip a rung; past 34 days, x1.5
- * - Hard: hold the current interval
+ * - Hard: moves forward more slowly — x1.2 while young, x1.1 once mature,
+ *   always at least one day more and never past what Good would give
+ *   (1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 → 10 → 12 → …). Owner decision Oct
+ *   2026: holding the interval left cards rated Hard due every day forever.
  * - Again: lapse — back to a 1-minute learning step
  * Everything caps at 365 days (exam prep, not lifetime maintenance).
  *
@@ -63,6 +67,11 @@ const FIB_DAYS = [1, 2, 3, 5, 8, 13, 21, 34]
 const LADDER_MAX = 34
 const MATURE_GOOD_MULTIPLIER = 1.25
 const MATURE_EASY_MULTIPLIER = 1.5
+/** Hard grows the interval by this much (at least +1 day), capped at Good. */
+const YOUNG_HARD_MULTIPLIER = 1.2
+const MATURE_HARD_MULTIPLIER = 1.1
+/** The extra learning step Hard takes after a minute step. */
+const HARD_LEARNING_STEP_MINUTES = 10
 const MAX_INTERVAL_DAYS = 365
 
 function nextRung(aboveDays: number): number {
@@ -148,8 +157,14 @@ export function calculateNextReview(
     } else if (wasMinuteInterval) {
       // Review after a minute step — graduate conservatively
       if (quality === 3) {
-        interval = 10 // Hard: one more learning step (10 minutes)
-        isMinuteInterval = true
+        if (previousInterval >= HARD_LEARNING_STEP_MINUTES) {
+          // Hard again on the extra step: graduate to 1 day
+          interval = 1
+          isMinuteInterval = false
+        } else {
+          interval = HARD_LEARNING_STEP_MINUTES // Hard: one more learning step
+          isMinuteInterval = true
+        }
       } else if (quality === 4) {
         interval = 1 // Good: graduate to 1 day
         isMinuteInterval = false
@@ -161,12 +176,14 @@ export function calculateNextReview(
     } else {
       // Day phase — Fibonacci ladder while young, fixed multiplier once mature
       const mature = previousInterval >= LADDER_MAX
+      // Good: climb one rung (1 → 2 → 3 → 5 → 8 → 13 → 21 → 34), then x1.25
+      const good = mature ? Math.round(previousInterval * MATURE_GOOD_MULTIPLIER) : nextRung(previousInterval)
       if (quality === 3) {
-        // Hard: hold the current interval
-        interval = Math.max(1, previousInterval)
+        // Hard: forward more slowly — at least a day, never past Good
+        const grown = Math.round(previousInterval * (mature ? MATURE_HARD_MULTIPLIER : YOUNG_HARD_MULTIPLIER))
+        interval = Math.min(good, Math.max(previousInterval + 1, grown))
       } else if (quality === 4) {
-        // Good: climb one rung (1 → 2 → 3 → 5 → 8 → 13 → 21 → 34), then x1.25
-        interval = mature ? Math.round(previousInterval * MATURE_GOOD_MULTIPLIER) : nextRung(previousInterval)
+        interval = good
       } else if (quality === 5) {
         // Easy: skip a rung while young, x1.5 once mature
         interval = mature ? Math.round(previousInterval * MATURE_EASY_MULTIPLIER) : nextRung(nextRung(previousInterval))

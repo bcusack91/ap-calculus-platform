@@ -60,12 +60,48 @@ describe('calculateNextReview', () => {
     expect(result.repetitions).toBe(3)
   })
 
-  it('holds the interval for Hard on graduated cards', () => {
-    // Day-phase Hard holds the current interval instead of shrinking it —
-    // the student got it right, just slowly.
+  it('moves graduated cards forward more slowly for Hard', () => {
+    // Day-phase Hard grows the interval (x1.2, at least +1 day) but never
+    // past Good: from 10 days Good gives 13, Hard 12.
     const result = calculateNextReview(3, 2.5, 10, 3, false)
-    expect(result.interval).toBe(10)
+    expect(result.interval).toBe(12)
     expect(result.isMinuteInterval).toBe(false)
+  })
+
+  it('never leaves a card rated Hard on the same interval', () => {
+    // The old rule held 1-day cards at 1 day forever when a student kept
+    // pressing Hard. Repeated Hard ratings now walk forward, never past Good.
+    const walk: number[] = []
+    let interval = 1
+    for (let i = 0; i < 12; i++) {
+      const hard = calculateNextReview(3, 2.5, interval, 3, false)
+      const good = calculateNextReview(4, 2.5, interval, 3, false)
+      expect(hard.interval).toBeGreaterThan(interval)
+      expect(hard.interval).toBeLessThanOrEqual(good.interval)
+      interval = hard.interval
+      walk.push(interval)
+    }
+    // Capped at Good where the ladder is close (12 → 13, Good's next rung).
+    expect(walk).toEqual([2, 3, 4, 5, 6, 7, 8, 10, 12, 13, 16, 19])
+  })
+
+  it('grows mature cards gently for Hard (x1.1) and still below Good (x1.25)', () => {
+    expect(calculateNextReview(3, 2.5, 40, 8, false).interval).toBe(44)
+    expect(calculateNextReview(4, 2.5, 40, 8, false).interval).toBe(50)
+    expect(calculateNextReview(3, 2.5, 365, 20, false).interval).toBe(365)
+  })
+
+  it('graduates a learning card on a second Hard instead of looping', () => {
+    // First sighting Hard → 3 min; Hard after a minute step → 10 min;
+    // Hard on that 10-minute step → 1 day.
+    const first = calculateNextReview(3, 2.5, 0, 0)
+    expect(first).toMatchObject({ interval: 3, isMinuteInterval: true })
+    const second = calculateNextReview(3, first.easeFactor, first.interval, first.repetitions, true)
+    expect(second).toMatchObject({ interval: 10, isMinuteInterval: true })
+    const third = calculateNextReview(3, second.easeFactor, second.interval, second.repetitions, true)
+    expect(third).toMatchObject({ interval: 1, isMinuteInterval: false })
+    // Again resets a card to new, so Hard after a lapse restarts at 3 minutes.
+    expect(calculateNextReview(3, 2.5, 1, 0, true)).toMatchObject({ interval: 3, isMinuteInterval: true })
   })
 
   it('skips a rung for Easy on graduated cards', () => {
