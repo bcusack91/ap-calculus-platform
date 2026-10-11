@@ -4,6 +4,7 @@ import { getToken } from 'next-auth/jwt'
 import { Ratelimit } from '@upstash/ratelimit'
 import { Redis } from '@upstash/redis'
 import { authReasonForPath, signInUrl, signUpUrl } from '@/lib/auth-redirect'
+import { staleCssRewrite, STALE_CSS_BYPASS_HEADER } from '@/lib/stale-css'
 
 // ── API Rate Limiter (optional — skipped if Upstash not configured) ──
 let apiRatelimit: Ratelimit | null = null
@@ -104,6 +105,19 @@ function getClientIp(request: NextRequest): string {
 
 export async function middleware(request: NextRequest) {
   const { nextUrl } = request
+
+  // ── Stylesheets recorded on an older deployment (session replays) ──
+  // Only requests naming another deployment's `dpl` are rerouted; the live
+  // site always asks for this deployment's own files (see lib/stale-css.ts).
+  if (nextUrl.pathname.startsWith('/_next/static/css/')) {
+    const target = staleCssRewrite(
+      nextUrl.pathname,
+      nextUrl.searchParams.get('dpl'),
+      process.env.NEXT_DEPLOYMENT_ID || process.env.VERCEL_DEPLOYMENT_ID,
+      request.headers.has(STALE_CSS_BYPASS_HEADER),
+    )
+    return target ? NextResponse.rewrite(new URL(target, request.url)) : NextResponse.next()
+  }
 
   // ── CSRF Origin Check for mutating API requests ──
   if (nextUrl.pathname.startsWith('/api/') && ['POST', 'PUT', 'PATCH', 'DELETE'].includes(request.method)) {
@@ -323,5 +337,6 @@ export const config = {
     '/competitive/:path*',
     '/calendar/:path*',
     '/api/:path*',
+    '/_next/static/css/:path*',
   ],
 }
