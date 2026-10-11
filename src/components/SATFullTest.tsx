@@ -1155,6 +1155,9 @@ export function SATTestWrapper({ test, onComplete, onCancel }: SATFullTestProps)
             format: test.format,
             // PSAT forms are graded on the PSAT curves and stored as 'psat-full'.
             ...(test.exam === 'psat' ? { exam: 'psat' } : {}),
+            // The form version this test was built at (absent on the form =
+            // v1). The server still verifies it against the question ids.
+            formVersion: test.formVersion ?? 1,
             timeSpent: testResults.timeSpent,
             weakAreas: testResults.weakAreas.join(', '),
             strengths: testResults.strengths.join(', '),
@@ -1193,7 +1196,7 @@ export function SATTestWrapper({ test, onComplete, onCancel }: SATFullTestProps)
 
       onComplete(final)
     },
-    [test.testNumber, test.format, test.exam, onComplete],
+    [test.testNumber, test.format, test.exam, test.formVersion, onComplete],
   )
 
   if (submitted && results) {

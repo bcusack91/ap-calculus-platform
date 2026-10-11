@@ -5,7 +5,8 @@
  * nothing. `--apply` writes — only after the owner has signed off on the dry
  * run.
  *
- * For each SatTestAttempt with scoringVersion 1 that was a FULL test (98
+ * For each SatTestAttempt with scoringVersion 1 (only — 2 and 3 are already
+ * server-graded; 3 is form v2) that was a FULL test (98
  * questions; mini tests have no Module 2 and keep the unrouted curve):
  *   - each section's route comes from its stored Module 1 tally (≥70% →
  *     harder), exactly as the runner routed it;
@@ -21,21 +22,15 @@
 import { config } from 'dotenv'
 config({ path: process.env.PROD ? '.env' : '.env.local', override: true })
 import { PrismaClient } from '@prisma/client'
-import { satSectionScaledRouted, satRouteFor, type SatRoute } from '../src/lib/sat-scoring'
-import { buildSatForm, routedModule2 } from '../src/data/sat-practice/test-generator'
+import { satSectionScaledRouted } from '../src/lib/sat-scoring'
+import { SAT_SCORING_VERSION } from '../src/lib/sat-attempt-format'
+import { legacySectionRoute as sectionRoute, SAT_RESCORE_WHERE, type SectionTally } from '../src/lib/sat-rescore'
 
 const APPLY = process.argv.includes('--apply')
 
 type Rec = Record<string, unknown>
 const asRecord = (v: unknown): Rec | null => (v && typeof v === 'object' && !Array.isArray(v) ? (v as Rec) : null)
 const num = (v: unknown): number | null => (typeof v === 'number' && Number.isFinite(v) ? v : null)
-
-interface SectionTally {
-  sectionId: string
-  correct: number
-  total: number
-  questionIds: string[]
-}
 
 function tallies(answers: unknown): Map<string, SectionTally> {
   const out = new Map<string, SectionTally>()
@@ -58,20 +53,6 @@ function tallies(answers: unknown): Map<string, SectionTally> {
   return out
 }
 
-/** The route a section was scored on, or null when Module 2 was unrouted / unknown. */
-async function sectionRoute(testNumber: number, m1: SectionTally, m2: SectionTally, m2Index: number): Promise<{ tier: SatRoute | null; note: string }> {
-  const tier = satRouteFor(m1.correct, m1.total)
-  if (!m2.questionIds.length) return { tier, note: 'no ids' }
-  const ids = new Set(m2.questionIds)
-  const same = (qs: { id: string }[]) => qs.length === ids.size && qs.every((q) => ids.has(q.id))
-  const base = await buildSatForm(testNumber, 'full')
-  if (same((await routedModule2(base, m2Index, tier)).questions)) return { tier, note: '' }
-  if (same(base.sections[m2Index].questions)) return { tier: null, note: 'unrouted (race)' }
-  const other: SatRoute = tier === 'harder' ? 'easier' : 'harder'
-  if (same((await routedModule2(base, m2Index, other)).questions)) return { tier: other, note: 'other route' }
-  return { tier, note: 'ids unmatched' }
-}
-
 async function main() {
   const url = process.env.DATABASE_URL ?? ''
   const host = url.replace(/^[^@]*@/, '').replace(/\/.*$/, '')
@@ -82,7 +63,7 @@ async function main() {
 
   const prisma = new PrismaClient()
   const attempts = await prisma.satTestAttempt.findMany({
-    where: { scoringVersion: 1 },
+    where: SAT_RESCORE_WHERE,
     orderBy: { completedAt: 'asc' },
     select: {
       id: true, userId: true, testNumber: true, completedAt: true, format: true,
@@ -128,7 +109,7 @@ async function main() {
     if (APPLY) {
       await prisma.satTestAttempt.update({
         where: { id: a.id },
-        data: { rwScore, mathScore, totalScore, format: 'full', rwTier: rwRoute.tier, mathTier: mathRoute.tier, scoringVersion: 2 },
+        data: { rwScore, mathScore, totalScore, format: 'full', rwTier: rwRoute.tier, mathTier: mathRoute.tier, scoringVersion: SAT_SCORING_VERSION.ROUTED },
       })
     }
   }

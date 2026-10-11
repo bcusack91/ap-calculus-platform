@@ -97,8 +97,9 @@ export default function SATPracticePage() {
 
   // Start test
   const startTest = useCallback(async (testNumber: number, format: 'full' | 'mini') => {
-    // The unrouted form; Module 2s are routed in the runner via the same
-    // shared builder the server grades with.
+    // The unrouted form at the current form version (it rides on the test
+    // object, so routing and submit keep it); Module 2s are routed in the
+    // runner via the same shared builder the server grades with.
     const test = await buildSatForm(testNumber, format)
     setActiveTest(test)
   }, [])

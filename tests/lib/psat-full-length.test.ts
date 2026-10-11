@@ -279,7 +279,7 @@ describe('POST /api/sat-practice/submit — PSAT', { timeout: 180_000 }, () => {
     const mathExpected = psatSectionScaledRouted({ m1Correct: 10, m1Total: 22, m2Correct: 18, m2Total: 22, tier: 'easier' })
     expect(data).toMatchObject({
       format: 'psat-full',
-      scoringVersion: 2,
+      scoringVersion: 3, // routed scoring on form v2
       rwTier: 'harder',
       mathTier: 'easier',
       rwCorrect: 39,
@@ -341,6 +341,7 @@ describe('PSAT review rebuild', { timeout: 180_000 }, () => {
       rwTier: grade.rw.tier,
       mathTier: grade.math.tier,
       rwTotal: 54,
+      scoringVersion: 3,
       answers: JSON.parse(JSON.stringify(storedSatAnswers(grade.items))),
     }
     expect(satAttemptExam(attempt)).toBe('psat')

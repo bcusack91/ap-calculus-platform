@@ -2,6 +2,8 @@
  * POST /api/sat-practice/submit is authoritative: it rebuilds the form, grades
  * by question id, routes Module 2 from Module 1, scores on the routed curve,
  * and logs one QuestionActivity row per question. Client scores are ignored.
+ * New tests are form v2 (scoringVersion 3); a test started on form v1 is
+ * recognised by its ids and graded/stored as v1 (scoringVersion 2).
  */
 import { describe, it, expect, vi, beforeEach } from 'vitest'
 
@@ -26,6 +28,7 @@ vi.mock('@/lib/prisma', () => {
 
 import { POST } from '@/app/api/sat-practice/submit/route'
 import {
+  buildPsatForm,
   buildSatForm,
   routedModule2,
   type SATFullTest,
@@ -33,7 +36,8 @@ import {
   type SATTestSection,
 } from '@/data/sat-practice/test-generator'
 import { satSectionScaled, satSectionScaledRouted } from '@/lib/sat-scoring'
-import { gradeSatPractice, normalizeSatResponses } from '@/lib/sat-practice-grading'
+import { psatSectionScaledRouted } from '@/lib/psat-scoring'
+import { gradeSatPractice, normalizeSatResponses, satSubmissionFormVersion } from '@/lib/sat-practice-grading'
 import { satPracticeRows } from '@/lib/sat-practice-rows'
 import { optionKey } from '@/lib/question-key'
 
@@ -96,7 +100,7 @@ describe('POST /api/sat-practice/submit', { timeout: 180_000 }, () => {
       format: 'full',
       rwTier: 'harder',
       mathTier: 'easier',
-      scoringVersion: 2,
+      scoringVersion: 3,
       rwCorrect: 40,
       rwTotal: 54,
       mathCorrect: 10 + mathCorrectM2,
@@ -183,6 +187,69 @@ describe('POST /api/sat-practice/submit', { timeout: 180_000 }, () => {
     const data = mockAttemptCreate.mock.calls[0][0].data as Row
     // 15/27 and 15/22 on Module 1 -> easier for R&W, but the pre-built Module 2 was sent: unrouted.
     expect(data).toMatchObject({ format: 'full', rwTier: null, mathTier: null, rwCorrect: 30, mathCorrect: 30 })
+  })
+
+  it('a test started on form v1 is graded against v1 and stored as scoringVersion 2', async () => {
+    const v1 = await buildSatForm(1, 'full', null, null, 1)
+    expect(v1.formVersion).toBeUndefined()
+    const rw2 = await routedModule2(v1, 1, 'harder')
+    const m2 = await routedModule2(v1, 3, 'easier')
+    const responses = [...respond(v1.sections[0], 0, 27), ...respond(rw2, 1, 13), ...respond(v1.sections[2], 2, 10), ...respond(m2, 3, 20)]
+    // An old bundle (no formVersion in the body) and a new one that says v1.
+    for (const extra of [{}, { formVersion: 1 }]) {
+      mockAttemptCreate.mockClear()
+      await POST(req({ testNumber: 1, format: 'full', responses, ...extra }))
+      const data = mockAttemptCreate.mock.calls[0][0].data as Row
+      expect(data).toMatchObject({ scoringVersion: 2, rwTier: 'harder', mathTier: 'easier', rwCorrect: 40, mathCorrect: 30 })
+      expect(data.rwScore).toBe(satSectionScaledRouted({ m1Correct: 27, m1Total: 27, m2Correct: 13, m2Total: 27, tier: 'harder' }))
+      const stored = (data.answers as Row[]).map((a) => a.questionId)
+      expect(stored).toEqual([v1.sections[0], rw2, v1.sections[2], m2].flatMap((s) => s.questions.map((q) => q.id)))
+    }
+  })
+
+  it('a v2 test is stored as scoringVersion 3 even if the body claims v1', async () => {
+    const rw2 = await routedModule2(base, 1, 'easier')
+    const responses = [...respond(base.sections[0], 0, 5), ...respond(rw2, 1, 5), ...respond(base.sections[2], 2, 22), ...respond(await routedModule2(base, 3, 'harder'), 3, 5)]
+    await POST(req({ testNumber: 1, format: 'full', formVersion: 1, responses }))
+    const data = mockAttemptCreate.mock.calls[0][0].data as Row
+    expect(data).toMatchObject({ scoringVersion: 3, rwTier: 'easier', mathTier: 'harder' })
+  })
+
+  it('mini and PSAT tests fall back to v1 the same way', async () => {
+    const mini1 = await buildSatForm(2, 'mini', null, null, 1)
+    await POST(req({ testNumber: 2, format: 'mini', responses: [...respond(mini1.sections[0], 0, 20), ...respond(mini1.sections[1], 1, 11)] }))
+    expect(mockAttemptCreate.mock.calls[0][0].data).toMatchObject({ scoringVersion: 2, format: 'mini', rwCorrect: 20, mathCorrect: 11 })
+
+    const mini2 = await buildSatForm(2, 'mini')
+    mockAttemptCreate.mockClear()
+    await POST(req({ testNumber: 2, format: 'mini', responses: [...respond(mini2.sections[0], 0, 20), ...respond(mini2.sections[1], 1, 11)] }))
+    expect(mockAttemptCreate.mock.calls[0][0].data).toMatchObject({ scoringVersion: 3, format: 'mini', rwCorrect: 20, mathCorrect: 11 })
+
+    for (const v of [1, 2] as const) {
+      const p = await buildPsatForm(1, null, null, v)
+      const rw2 = await routedModule2(p, 1, 'harder')
+      const m2 = await routedModule2(p, 3, 'easier')
+      mockAttemptCreate.mockClear()
+      await POST(req({ testNumber: 1, exam: 'psat', responses: [...respond(p.sections[0], 0, 27), ...respond(rw2, 1, 10), ...respond(p.sections[2], 2, 3), ...respond(m2, 3, 12)] }))
+      const data = mockAttemptCreate.mock.calls[0][0].data as Row
+      expect(data).toMatchObject({ scoringVersion: v === 2 ? 3 : 2, format: 'psat-full', rwTier: 'harder', mathTier: 'easier' })
+      expect(data.rwScore).toBe(psatSectionScaledRouted({ m1Correct: 27, m1Total: 27, m2Correct: 10, m2Total: 27, tier: 'harder' }))
+    }
+  })
+
+  it('picks the version every id belongs to; a garbled payload goes to the closer match', async () => {
+    const v1 = await buildSatForm(3, 'full', null, null, 1)
+    const v2 = await buildSatForm(3, 'full')
+    const ids = (f: SATFullTest) => normalizeSatResponses({ responses: f.sections.flatMap((s, i) => respond(s, i, 10)) }, f.sections.map((s) => s.id))
+    expect(await satSubmissionFormVersion({ testNumber: 3, format: 'full', responses: ids(v2) })).toBe(2)
+    expect(await satSubmissionFormVersion({ testNumber: 3, format: 'full', responses: ids(v2), preferred: 1 })).toBe(2)
+    expect(await satSubmissionFormVersion({ testNumber: 3, format: 'full', responses: ids(v1) })).toBe(1)
+    expect(await satSubmissionFormVersion({ testNumber: 3, format: 'full', responses: [] })).toBe(2)
+    expect(await satSubmissionFormVersion({ testNumber: 3, format: 'full', responses: [], preferred: 1 })).toBe(1)
+    const garbled = ids(v1).map((r, i) => (i % 3 === 0 ? { ...r, questionId: `fake-${i}` } : r))
+    expect(await satSubmissionFormVersion({ testNumber: 3, format: 'full', responses: garbled })).toBe(1)
+    const fake = ids(v2).map((r, i) => ({ ...r, questionId: `fake-${i}` }))
+    expect(await satSubmissionFormVersion({ testNumber: 3, format: 'full', responses: fake })).toBe(2)
   })
 
   it('rejects a bad test number and unauthenticated calls', async () => {

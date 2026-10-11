@@ -4,12 +4,14 @@ import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { recordQuestions } from '@/lib/study-tracking'
 import { buildExamForm, PSAT_FORM_COUNT, type SatExam, type SatTestFormat } from '@/data/sat-practice/test-generator'
-import { PSAT_FULL_FORMAT } from '@/lib/sat-attempt-format'
-import { gradeSatPractice, normalizeSatResponses, storedSatAnswers } from '@/lib/sat-practice-grading'
+import { PSAT_FULL_FORMAT, scoringVersionForForm } from '@/lib/sat-attempt-format'
+import {
+  gradeSatPractice,
+  normalizeSatResponses,
+  satSubmissionFormVersion,
+  storedSatAnswers,
+} from '@/lib/sat-practice-grading'
 import { satPracticeRows } from '@/lib/sat-practice-rows'
-
-/** Scoring version written by this route: server-graded, routing-aware curve. */
-const SCORING_VERSION = 2
 
 /**
  * POST /api/sat-practice/submit — the server is authoritative. It rebuilds the
@@ -22,6 +24,11 @@ const SCORING_VERSION = 2
  * `exam: 'psat'` grades an adaptive PSAT/NMSQT form (buildPsatForm, tests 1-3)
  * on the PSAT routed curves (160-760) and stores format 'psat-full', which
  * keeps PSAT attempts out of every SAT score reader (see sat-attempt-format).
+ *
+ * Form version: new tests are built at form v2 and stored as scoringVersion
+ * 3. A test started on v1 (before the v2 deploy) is recognised by its
+ * question ids, graded against v1 and stored as scoringVersion 2, so its
+ * review rebuilds the form it was actually taken on.
  */
 export async function POST(req: Request) {
   try {
@@ -51,9 +58,18 @@ export async function POST(req: Request) {
             : 'mini'
     const storedFormat = exam === 'psat' ? PSAT_FULL_FORMAT : format
 
+    // Section ids are the same on every form version.
     const form = await buildExamForm(exam, testNumber, format)
     const responses = normalizeSatResponses(body, form.sections.map((s) => s.id))
-    const grade = await gradeSatPractice({ testNumber, format, exam, responses })
+    const formVersion = await satSubmissionFormVersion({
+      testNumber,
+      format,
+      exam,
+      responses,
+      // The runner says which version it built; older bundles say nothing.
+      preferred: body.formVersion === 1 || body.formVersion === 2 ? body.formVersion : undefined,
+    })
+    const grade = await gradeSatPractice({ testNumber, format, exam, responses, formVersion })
 
     // Idempotency guard (same class of bug as the exit-quiz submission loop,
     // fixed in dbf64d31): a re-POST of an identical just-submitted result must
@@ -102,12 +118,13 @@ export async function POST(req: Request) {
         weakAreas: grade.weakAreas.join(', ') || undefined,
         strengths: grade.strengths.join(', ') || undefined,
         // Per-question answers in item order (the review page rebuilds the
-        // questions from testNumber/format/tiers via buildSatForm).
+        // questions from testNumber/format/tiers and the form version that
+        // scoringVersion records, via buildExamForm).
         answers: storedSatAnswers(grade.items) as unknown as Prisma.InputJsonValue,
         format: storedFormat,
         rwTier: grade.rw.tier,
         mathTier: grade.math.tier,
-        scoringVersion: SCORING_VERSION,
+        scoringVersion: scoringVersionForForm(grade.formVersion),
         completed: true,
         completedAt: new Date(),
       },

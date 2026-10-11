@@ -60,8 +60,9 @@ export default function PsatPracticeClient() {
   const startTest = useCallback(async (testNumber: number) => {
     setStarting(testNumber)
     try {
-      // The unrouted form; each Module 2 is routed in the runner with the same
-      // shared builder the server grades with.
+      // The unrouted form at the current form version (carried on the test
+      // object through routing and submit); each Module 2 is routed in the
+      // runner with the same shared builder the server grades with.
       setActiveTest(await buildPsatForm(testNumber))
     } finally {
       setStarting(null)

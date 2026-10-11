@@ -12,7 +12,7 @@ import { SAT_PASSAGES, type ReadingPassage } from '@/data/sat-passages'
 import { readOptionExplanations, remapOptionExplanations } from '@/lib/option-explanations'
 import { satOptionExplanationsFor } from '@/data/sat-practice/option-explanations'
 import type { ReviewItem } from '@/lib/question-sources/types'
-import { attemptExam, isPsatAttemptFormat, type SatAttemptExam } from '@/lib/sat-attempt-format'
+import { attemptExam, formVersionForScoring, isPsatAttemptFormat, type SatAttemptExam } from '@/lib/sat-attempt-format'
 
 /**
  * Rebuild the reviewable questions of an SAT attempt from what was stored.
@@ -23,7 +23,8 @@ import { attemptExam, isPsatAttemptFormat, type SatAttemptExam } from '@/lib/sat
  *   routes were stored (scoringVersion 1, answers grouped by section) are
  *   matched against every Module 2 the student could have sat.
  *   Adaptive PSAT/NMSQT attempts (format 'psat-full') rebuild the same way
- *   from buildPsatForm.
+ *   from buildPsatForm. The form version comes from scoringVersion (3 = form
+ *   v2, anything lower = v1; see formVersionForScoring).
  * - Diagnostics (DiagnosticTest.results.review): a stored copy of the
  *   questions as served, the chosen indices, and `typed` grid-in answers.
  *
@@ -53,6 +54,8 @@ export interface SatPracticeAttemptLike {
   rwTier?: string | null
   mathTier?: string | null
   rwTotal?: number | null
+  /** 1 legacy, 2 routed (form v1), 3 routed on form v2. Absent = 1. */
+  scoringVersion?: number | null
   answers: unknown
 }
 
@@ -159,12 +162,13 @@ function gridVerdict(raw: unknown, typed: string): Pick<ReviewItem, 'gridIn' | '
 export async function satPracticeReviewItems(attempt: SatPracticeAttemptLike): Promise<ReviewItem[]> {
   const format = satAttemptFormat(attempt)
   const exam = satAttemptExam(attempt)
+  const version = formVersionForScoring(attempt.scoringVersion)
   const answers = parse(attempt.answers)
   if (!Array.isArray(answers) || !answers.length) return []
 
   // Current shape: one record per question, { moduleIndex, questionId, ... }.
   if (answers.every((a) => typeof asRecord(a)?.questionId === 'string')) {
-    const form = await buildExamForm(exam, attempt.testNumber, format, route(attempt.rwTier), route(attempt.mathTier))
+    const form = await buildExamForm(exam, attempt.testNumber, format, route(attempt.rwTier), route(attempt.mathTier), version)
     const out: ReviewItem[] = []
     answers.forEach((raw, i) => {
       const a = asRecord(raw)!
@@ -186,7 +190,7 @@ export async function satPracticeReviewItems(attempt: SatPracticeAttemptLike): P
   // Legacy shape (scoringVersion 1): [{ sectionId, answers: [{ questionId,
   // selectedIndex, textValue }] }]. The route was never stored, so a Module 2
   // answer is looked up in the pre-built module and both routed ones.
-  const base = await buildExamForm(exam, attempt.testNumber, format)
+  const base = await buildExamForm(exam, attempt.testNumber, format, null, null, version)
   const out: ReviewItem[] = []
   let index = 0
   for (const rawSec of answers) {

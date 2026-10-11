@@ -15,6 +15,16 @@
  * College Board blueprint: R&W by content domain in exam order (Craft &
  * Structure, Information & Ideas, Standard English Conventions, Expression of
  * Ideas), Math by domain quotas including the grid-ins.
+ *
+ * FORM VERSIONS. Version 1 is the original draw. Version 2 (current) is the
+ * same build with the items and passages in SAT_FORM_V2_EXCLUDED skipped
+ * (lesson concept checks, broken, two-answer and giveaway items). Past
+ * attempts are reviewed and graded by replaying the deterministic draw, so v1
+ * must keep rebuilding byte-for-byte: every v2 difference is behind
+ * `ctx.version === 2`, and a v1 form carries no `formVersion` field at all.
+ * New tests build CURRENT_SAT_FORM_VERSION; anything rebuilding a stored
+ * attempt passes the attempt's version (formVersionForScoring in
+ * src/lib/sat-attempt-format.ts).
  */
 
 import { generateExitQuiz, type ExitQuizQuestion } from '../exit-quizzes'
@@ -22,6 +32,7 @@ import { SAT_PASSAGES, type ReadingPassage } from '../sat-passages'
 import { generateGridInProblems, type GridInProblem } from '../sat-grid-in'
 import { satSectionScaled, satRouteFor, SAT_ROUTING_THRESHOLD, type SatRoute } from '@/lib/sat-scoring'
 import { arrangeInPassageBlocks } from '@/lib/mcat-diagnostic-order'
+import { SAT_FORM_V2_EXCLUDED } from './form-v2-exclusions'
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -101,11 +112,28 @@ export interface SATTestSection {
 /** Which exam a form simulates. Absent = 'sat' (every form built before PSAT mode). */
 export type SatExam = 'sat' | 'psat'
 
+/**
+ * Form version (see header): 1 = the original draw, 2 = the draw without
+ * SAT_FORM_V2_EXCLUDED. Stored on attempts through scoringVersion
+ * (src/lib/sat-attempt-format.ts).
+ */
+export type SatFormVersion = 1 | 2
+
+/** The version new tests are built at. */
+export const CURRENT_SAT_FORM_VERSION: SatFormVersion = 2
+
+/** Coerce an unknown value to a form version (anything but 2 is v1). */
+export function satFormVersion(v: unknown): SatFormVersion {
+  return v === 2 ? 2 : 1
+}
+
 export interface SATFullTest {
   testNumber: number
   format: 'full' | 'mini'
   /** 'psat' = an adaptive PSAT/NMSQT form (buildPsatForm); absent = SAT. */
   exam?: SatExam
+  /** 2 on a v2 form; absent = version 1 (never written on v1, keeping it byte-identical). */
+  formVersion?: SatFormVersion
   sections: SATTestSection[]
   totalQuestions: number
   totalTimeSeconds: number
@@ -266,6 +294,8 @@ export const PSAT_DIFFICULTY_PROFILE: Record<'module1' | 'harder' | 'easier', Ps
 interface BuildContext {
   /** 0-based fixed form. */
   form: number
+  /** Form version: 2 skips SAT_FORM_V2_EXCLUDED items and passages. */
+  version: SatFormVersion
   /** Which fixed form an item or passage id belongs to (default practiceFormOf). */
   formOf?: (id: string) => number
   /** PSAT only: the module's difficulty profile and its running hard-item tally. */
@@ -278,10 +308,11 @@ interface BuildContext {
   seed: number
 }
 
-function newContext(testNumber: number, salt: string): BuildContext {
+function newContext(testNumber: number, salt: string, version: SatFormVersion): BuildContext {
   const form = (((testNumber - 1) % PRACTICE_FORM_COUNT) + PRACTICE_FORM_COUNT) % PRACTICE_FORM_COUNT
   return {
     form,
+    version,
     rng: mulberry32(hashString(`sat-${salt}-${testNumber}`)),
     usedStems: new Set(),
     usedPassageIds: new Set(),
@@ -300,10 +331,11 @@ export function psatFormOf(id: string): number {
   return hashString(`psat:${id}`) % PSAT_FORM_COUNT
 }
 
-function newPsatContext(testNumber: number, salt: string, profile: PsatModuleProfile): BuildContext {
+function newPsatContext(testNumber: number, salt: string, profile: PsatModuleProfile, version: SatFormVersion): BuildContext {
   const form = (((testNumber - 1) % PSAT_FORM_COUNT) + PSAT_FORM_COUNT) % PSAT_FORM_COUNT
   return {
     form,
+    version,
     formOf: psatFormOf,
     psat: { profile, owed: 0, used: 0 },
     rng: mulberry32(hashString(`psat-${salt}-${testNumber}`)),
@@ -319,6 +351,16 @@ function startModule(ctx: BuildContext): void {
 }
 
 const isHard = (q: { difficulty?: string }) => q.difficulty === 'hard'
+
+/** v2 only: an item left off v2 forms. Always false on v1. */
+function excludedFrom(ctx: BuildContext, id: string | undefined): boolean {
+  return ctx.version === 2 && !!id && SAT_FORM_V2_EXCLUDED.has(id)
+}
+
+/** v2 only: a passage with any excluded question (passages are drawn whole). */
+function passageExcludedFrom(ctx: BuildContext, p: ReadingPassage): boolean {
+  return ctx.version === 2 && p.questions.some((_, i) => SAT_FORM_V2_EXCLUDED.has(`sat-passage-${p.id}-q${i}`))
+}
 
 /* ------------------------------------------------------------------ */
 /*  Pools                                                              */
@@ -362,6 +404,7 @@ async function drawDomain(
   const candidates: SATTestQuestion[] = []
   for (const slug of slugs) {
     for (const q of await loadPool(slug)) {
+      if (excludedFrom(ctx, q.id)) continue
       if (ctx.usedStems.has(stemOf(q.question))) continue
       candidates.push({ ...q, section, sourceSlug: slug, domain })
     }
@@ -477,7 +520,7 @@ function passageQuestions(p: ReadingPassage): SATTestQuestion[] {
 
 /** Whole passages up to `maxQuestions`: this form's passages first, then others. */
 function drawPassages(maxQuestions: number, ctx: BuildContext): SATTestQuestion[] {
-  const available = SAT_PASSAGES.filter((p) => !ctx.usedPassageIds.has(p.id))
+  const available = SAT_PASSAGES.filter((p) => !ctx.usedPassageIds.has(p.id) && !passageExcludedFrom(ctx, p))
   const formOf = ctx.formOf ?? practiceFormOf
   const ordered = [
     ...shuffle(available.filter((p) => formOf(p.id) === ctx.form), ctx.rng),
@@ -563,7 +606,7 @@ async function generateMathModule(ctx: BuildContext): Promise<SATTestQuestion[]>
   startModule(ctx)
   const generated = withSeededRandom(ctx.seed, () => generateGridInProblems(60))
   let gridPool = gridInsToTestQuestions(generated, String(ctx.seed)).filter(
-    (q) => !ctx.usedStems.has(stemOf(q.question)),
+    (q) => !ctx.usedStems.has(stemOf(q.question)) && !excludedFrom(ctx, q.id),
   )
   const gridTotal = Object.values(GRID_IN_QUOTA).reduce((a, b) => a + b, 0)
   const psat = ctx.psat
@@ -679,10 +722,13 @@ export function analyzePerformance(
  * Generate full-length Practice Test N (98 questions, 134 minutes). The same
  * test number always produces the same form.
  */
-export async function generateFullTest(testNumber: number): Promise<SATFullTest> {
+export async function generateFullTest(
+  testNumber: number,
+  version: SatFormVersion = CURRENT_SAT_FORM_VERSION,
+): Promise<SATFullTest> {
   // One context across all four modules: no passage or question repeats
   // within the test.
-  return assembleFullTest(testNumber, newContext(testNumber, 'full'))
+  return assembleFullTest(testNumber, newContext(testNumber, 'full', version))
 }
 
 /**
@@ -691,8 +737,14 @@ export async function generateFullTest(testNumber: number): Promise<SATFullTest>
  * PSAT_FORM_COUNT fixed PSAT forms, with Module 1 (and the pre-built Module 2)
  * held to PSAT_DIFFICULTY_PROFILE.module1.
  */
-export async function generatePsatFullTest(testNumber: number): Promise<SATFullTest> {
-  const test = await assembleFullTest(testNumber, newPsatContext(testNumber, 'full', PSAT_DIFFICULTY_PROFILE.module1))
+export async function generatePsatFullTest(
+  testNumber: number,
+  version: SatFormVersion = CURRENT_SAT_FORM_VERSION,
+): Promise<SATFullTest> {
+  const test = await assembleFullTest(
+    testNumber,
+    newPsatContext(testNumber, 'full', PSAT_DIFFICULTY_PROFILE.module1, version),
+  )
   return { ...test, exam: 'psat' }
 }
 
@@ -715,7 +767,13 @@ async function assembleFullTest(testNumber: number, ctx: BuildContext): Promise<
     sections,
     totalQuestions: sections.reduce((s, sec) => s + sec.questionCount, 0),
     totalTimeSeconds: sections.reduce((s, sec) => s + sec.timeLimitSeconds, 0),
+    ...versionField(ctx.version),
   }
+}
+
+/** `{ formVersion: 2 }` on a v2 form; nothing on v1 (keeps v1 forms byte-identical). */
+function versionField(version: SatFormVersion): Pick<SATFullTest, 'formVersion'> {
+  return version === 2 ? { formVersion: 2 } : {}
 }
 
 /**
@@ -734,12 +792,18 @@ export async function regenerateModule2(
   usedPassageIds: Set<string> = new Set(),
   testNumber = 1,
   exam: SatExam = 'sat',
+  version: SatFormVersion = CURRENT_SAT_FORM_VERSION,
 ): Promise<SATTestSection> {
   const salt = `m2-${section.section}-${tier}`
   const ctx: BuildContext = {
     ...(exam === 'psat'
-      ? newPsatContext(testNumber, salt, tier === 'hard' ? PSAT_DIFFICULTY_PROFILE.harder : PSAT_DIFFICULTY_PROFILE.easier)
-      : newContext(testNumber, salt)),
+      ? newPsatContext(
+          testNumber,
+          salt,
+          tier === 'hard' ? PSAT_DIFFICULTY_PROFILE.harder : PSAT_DIFFICULTY_PROFILE.easier,
+          version,
+        )
+      : newContext(testNumber, salt, version)),
     usedStems: new Set([...usedQuestionTexts].map(stemOf)),
     usedPassageIds: new Set(usedPassageIds),
     difficulty: tier,
@@ -757,8 +821,11 @@ export async function regenerateModule2(
  * Generate a mini practice test (49 questions, 67 minutes).
  * Good for focused practice or time-limited sessions.
  */
-export async function generateMiniTest(testNumber: number): Promise<SATFullTest> {
-  const ctx = newContext(testNumber, 'mini')
+export async function generateMiniTest(
+  testNumber: number,
+  version: SatFormVersion = CURRENT_SAT_FORM_VERSION,
+): Promise<SATFullTest> {
+  const ctx = newContext(testNumber, 'mini', version)
   const sections: SATTestSection[] = [
     { id: 'rw-1', name: 'Reading & Writing', section: 'reading-writing', moduleNum: 1, questionCount: 27, timeLimitSeconds: 32 * 60, questions: await generateRWModule(27, ctx) },
     { id: 'math-1', name: 'Math', section: 'math', moduleNum: 1, questionCount: 22, timeLimitSeconds: 35 * 60, questions: await generateMathModule(ctx) },
@@ -770,6 +837,7 @@ export async function generateMiniTest(testNumber: number): Promise<SATFullTest>
     sections,
     totalQuestions: sections.reduce((s, sec) => s + sec.questionCount, 0),
     totalTimeSeconds: sections.reduce((s, sec) => s + sec.timeLimitSeconds, 0),
+    ...versionField(ctx.version),
   }
 }
 
@@ -807,12 +875,20 @@ function memo<T>(cache: Map<string, Promise<T>>, key: string, build: () => Promi
 
 /** Cache-key prefix per exam ('' for the SAT, so its keys are unchanged). */
 const examKey = (exam: SatExam | undefined) => (exam === 'psat' ? 'psat:' : '')
+/** Cache-key prefix per form version ('' for v1, so its keys are unchanged). */
+const versionKey = (version: SatFormVersion) => (version === 2 ? 'v2:' : '')
 
 /** The unrouted form exactly as the runner first serves it. Shared: treat as read-only. */
-function baseForm(testNumber: number, format: SatTestFormat, exam: SatExam = 'sat'): Promise<SATFullTest> {
-  if (exam === 'psat') return memo(baseFormCache, `psat:full:${testNumber}`, () => generatePsatFullTest(testNumber))
-  return memo(baseFormCache, `${format}:${testNumber}`, () =>
-    format === 'full' ? generateFullTest(testNumber) : generateMiniTest(testNumber),
+function baseForm(
+  testNumber: number,
+  format: SatTestFormat,
+  exam: SatExam,
+  version: SatFormVersion,
+): Promise<SATFullTest> {
+  const v = versionKey(version)
+  if (exam === 'psat') return memo(baseFormCache, `${v}psat:full:${testNumber}`, () => generatePsatFullTest(testNumber, version))
+  return memo(baseFormCache, `${v}${format}:${testNumber}`, () =>
+    format === 'full' ? generateFullTest(testNumber, version) : generateMiniTest(testNumber, version),
   )
 }
 
@@ -822,18 +898,22 @@ function baseForm(testNumber: number, format: SatTestFormat, exam: SatExam = 'sa
  * the runner and the server grader get the identical question set however and
  * whenever each builds it. `tier` null, a Module 1 index, or a mini test
  * returns the pre-built section unchanged. Cached per path; read-only.
+ *
+ * The form version comes from the test itself (`formVersion`, absent = v1),
+ * so a test keeps the version it was started on end to end.
  */
 export async function routedModule2(
-  test: Pick<SATFullTest, 'testNumber' | 'format' | 'exam'>,
+  test: Pick<SATFullTest, 'testNumber' | 'format' | 'exam' | 'formVersion'>,
   moduleIndex: number,
   tier: SatRoute | null,
 ): Promise<SATTestSection> {
   const exam: SatExam = test.exam === 'psat' ? 'psat' : 'sat'
-  const base = await baseForm(test.testNumber, test.format, exam)
+  const version = satFormVersion(test.formVersion)
+  const base = await baseForm(test.testNumber, test.format, exam, version)
   const section = base.sections[moduleIndex]
   if (!section) throw new Error(`${exam.toUpperCase()} form ${test.format}:${test.testNumber} has no module ${moduleIndex}`)
   if (!tier || section.moduleNum !== 2) return section
-  return memo(routedModuleCache, `${examKey(exam)}${test.format}:${test.testNumber}:${moduleIndex}:${tier}`, () => {
+  return memo(routedModuleCache, `${versionKey(version)}${examKey(exam)}${test.format}:${test.testNumber}:${moduleIndex}:${tier}`, () => {
     const used = new Set(base.sections.flatMap((s) => s.questions.map((q) => q.question)))
     // Passages from every OTHER module are off limits, so the routed Module 2
     // never repeats a passage the student already read.
@@ -842,7 +922,7 @@ export async function routedModule2(
         .filter((_, i) => i !== moduleIndex)
         .flatMap((s) => s.questions.flatMap((q) => (q.passage ? [q.passage.id] : []))),
     )
-    return regenerateModule2(section, routeDifficulty(tier), used, usedPassageIds, test.testNumber, exam)
+    return regenerateModule2(section, routeDifficulty(tier), used, usedPassageIds, test.testNumber, exam, version)
   })
 }
 
@@ -850,15 +930,17 @@ export async function routedModule2(
  * Deterministic rebuild of exactly what the runner serves for a test number,
  * format and pair of Module 2 routes (null = the pre-built, unrouted module).
  * The server grades and the review page renders from this. Cached per path;
- * the returned form is shared, so treat it as read-only.
+ * the returned form is shared, so treat it as read-only. `version` defaults to
+ * the current form version; rebuilding a stored attempt must pass its own.
  */
 export function buildSatForm(
   testNumber: number,
   format: SatTestFormat,
   rwTier: SatRoute | null = null,
   mathTier: SatRoute | null = null,
+  version: SatFormVersion = CURRENT_SAT_FORM_VERSION,
 ): Promise<SATFullTest> {
-  return buildExamForm('sat', testNumber, format, rwTier, mathTier)
+  return buildExamForm('sat', testNumber, format, rwTier, mathTier, version)
 }
 
 /**
@@ -871,8 +953,9 @@ export function buildPsatForm(
   testNumber: number,
   rwTier: SatRoute | null = null,
   mathTier: SatRoute | null = null,
+  version: SatFormVersion = CURRENT_SAT_FORM_VERSION,
 ): Promise<SATFullTest> {
-  return buildExamForm('psat', testNumber, 'full', rwTier, mathTier)
+  return buildExamForm('psat', testNumber, 'full', rwTier, mathTier, version)
 }
 
 /** buildSatForm / buildPsatForm by exam. */
@@ -882,11 +965,12 @@ export function buildExamForm(
   format: SatTestFormat,
   rwTier: SatRoute | null = null,
   mathTier: SatRoute | null = null,
+  version: SatFormVersion = CURRENT_SAT_FORM_VERSION,
 ): Promise<SATFullTest> {
   if (exam === 'psat') format = 'full'
-  if (format !== 'full' || (!rwTier && !mathTier)) return baseForm(testNumber, format, exam)
-  return memo(builtFormCache, `${examKey(exam)}${format}:${testNumber}:${rwTier}:${mathTier}`, async () => {
-    const base = await baseForm(testNumber, format, exam)
+  if (format !== 'full' || (!rwTier && !mathTier)) return baseForm(testNumber, format, exam, version)
+  return memo(builtFormCache, `${versionKey(version)}${examKey(exam)}${format}:${testNumber}:${rwTier}:${mathTier}`, async () => {
+    const base = await baseForm(testNumber, format, exam, version)
     const sections: SATTestSection[] = []
     for (let i = 0; i < base.sections.length; i++) {
       const s = base.sections[i]
@@ -895,6 +979,18 @@ export function buildExamForm(
     }
     return { ...base, sections }
   })
+}
+
+/**
+ * Every id a form could draw: pool item ids from every domain slug plus
+ * passage question ids. Used to check SAT_FORM_V2_EXCLUDED for stale ids.
+ */
+export async function satFormCandidateIds(): Promise<Set<string>> {
+  const ids = new Set<string>()
+  const slugs = [...Object.values(RW_DOMAIN_SLUGS), ...Object.values(MATH_DOMAIN_SLUGS)].flat()
+  for (const slug of slugs) for (const q of await loadPool(slug)) if (q.id) ids.add(q.id)
+  for (const p of SAT_PASSAGES) p.questions.forEach((_, i) => ids.add(`sat-passage-${p.id}-q${i}`))
+  return ids
 }
 
 /**

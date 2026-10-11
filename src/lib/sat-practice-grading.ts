@@ -1,9 +1,11 @@
 import {
   analyzePerformance,
   buildExamForm,
+  CURRENT_SAT_FORM_VERSION,
   module2Route,
   routedModule2,
   type SatExam,
+  type SatFormVersion,
   type SatRoute,
   type SatTestFormat,
   type SATTestQuestion,
@@ -66,6 +68,8 @@ export interface SatSectionGrade {
 export interface SatPracticeGrade {
   format: SatTestFormat
   exam: SatExam
+  /** The form version graded against (stored via scoringVersion). */
+  formVersion: SatFormVersion
   rw: SatSectionGrade
   math: SatSectionGrade
   rwScore: number
@@ -151,19 +155,70 @@ function sameIds(section: SATTestSection, ids: Set<string>): boolean {
 
 const other = (r: SatRoute): SatRoute => (r === 'harder' ? 'easier' : 'harder')
 
+/** How many responses name a question their module could have served on this form version. */
+async function responsesOnForm(
+  exam: SatExam,
+  testNumber: number,
+  format: SatTestFormat,
+  version: SatFormVersion,
+  responses: SatResponse[],
+): Promise<number> {
+  const base = await buildExamForm(exam, testNumber, format, null, null, version)
+  const idsByModule = new Map<number, Set<string>>()
+  for (let i = 0; i < base.sections.length; i++) {
+    const s = base.sections[i]
+    const ids = new Set(s.questions.map((q) => q.id))
+    if (s.moduleNum === 2) {
+      for (const r of ['harder', 'easier'] as const) for (const q of (await routedModule2(base, i, r)).questions) ids.add(q.id)
+    }
+    idsByModule.set(i, ids)
+  }
+  return responses.filter((r) => idsByModule.get(r.moduleIndex)?.has(r.questionId)).length
+}
+
+/**
+ * The form version a submission was taken on. A test started before the v2
+ * deploy (or in a browser still running the old bundle) carries v1 question
+ * ids. Tries `preferred` (default: the current version) first and keeps it
+ * when every submitted id belongs to it; otherwise the other version if every
+ * id belongs to that one; otherwise (a broken or tampered payload) whichever
+ * matches more ids, ties going to `preferred`.
+ */
+export async function satSubmissionFormVersion(input: {
+  testNumber: number
+  format: SatTestFormat
+  exam?: SatExam
+  responses: SatResponse[]
+  preferred?: SatFormVersion
+}): Promise<SatFormVersion> {
+  const exam: SatExam = input.exam === 'psat' ? 'psat' : 'sat'
+  const format: SatTestFormat = exam === 'psat' ? 'full' : input.format
+  const first: SatFormVersion = input.preferred ?? CURRENT_SAT_FORM_VERSION
+  const second: SatFormVersion = first === 2 ? 1 : 2
+  const total = input.responses.length
+  if (total === 0) return first
+  const firstHits = await responsesOnForm(exam, input.testNumber, format, first, input.responses)
+  if (firstHits === total) return first
+  const secondHits = await responsesOnForm(exam, input.testNumber, format, second, input.responses)
+  return secondHits > firstHits ? second : first
+}
+
 export async function gradeSatPractice(input: {
   testNumber: number
   format: SatTestFormat
   /** 'psat' grades an adaptive PSAT/NMSQT form on the 160-760 routed curves. */
   exam?: SatExam
+  /** Form version to grade against (default: the current version). */
+  formVersion?: SatFormVersion
   responses: SatResponse[]
 }): Promise<SatPracticeGrade> {
   const { testNumber } = input
   const exam: SatExam = input.exam === 'psat' ? 'psat' : 'sat'
   const format: SatTestFormat = exam === 'psat' ? 'full' : input.format
+  const formVersion: SatFormVersion = input.formVersion ?? CURRENT_SAT_FORM_VERSION
   const scaledRouted = exam === 'psat' ? psatSectionScaledRouted : satSectionScaledRouted
   const sectionFloor = exam === 'psat' ? 160 : 200
-  const base = await buildExamForm(exam, testNumber, format)
+  const base = await buildExamForm(exam, testNumber, format, null, null, formVersion)
 
   const byModule = new Map<number, Map<string, SatResponse>>()
   for (const r of input.responses) {
@@ -261,6 +316,7 @@ export async function gradeSatPractice(input: {
   return {
     format,
     exam,
+    formVersion,
     rw,
     math,
     rwScore: rw.scaled,

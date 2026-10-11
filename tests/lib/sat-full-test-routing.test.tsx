@@ -101,6 +101,7 @@ describe('SATFullTest Module 2 routing', () => {
     expect(fetchMock).toHaveBeenCalledTimes(1)
     const body = JSON.parse(fetchMock.mock.calls[0][1].body)
     expect(body.format).toBe('full')
+    expect(body.formVersion).toBe(1) // a form without formVersion is a v1 form
     expect(body.rwScore).toBeUndefined()
     expect(body.responses).toHaveLength(4)
     expect(body.responses[0]).toMatchObject({ moduleIndex: 0, questionId: 'rw-1-q', selectedIndex: 1, textValue: null, flagged: true })

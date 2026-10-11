@@ -98,6 +98,10 @@ async function main() {
       console.log(`\nStudents with progress on this topic: ${learners.length}`)
       if (!DRY && learners.length) {
         // Imported here so the shared prisma client is built after dotenv ran.
+        // That client reloads .env.local unless NODE_ENV=production (see
+        // src/lib/load-env.ts), so a PROD run must say so or enroll would hit
+        // the local database.
+        if (process.env.PROD) (process.env as Record<string, string>).NODE_ENV = 'production'
         const { maybeUnlockFlashcards } = await import('../src/lib/flashcard-unlock')
         let enrolled = 0
         for (const { userId } of learners) {

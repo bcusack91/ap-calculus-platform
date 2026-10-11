@@ -1,9 +1,10 @@
 /**
  * Rebuilding SAT attempts for review: practice tests from testNumber / format
- * / routes + stored answers, diagnostics from the stored review copy.
+ * / routes + stored answers, diagnostics from the stored review copy. The
+ * form version comes from scoringVersion (3 = form v2, else v1).
  */
 import { describe, it, expect } from 'vitest'
-import { buildSatForm, routedModule2 } from '@/data/sat-practice/test-generator'
+import { buildSatForm, routedModule2, type SatFormVersion } from '@/data/sat-practice/test-generator'
 import { gradeSatPractice, storedSatAnswers } from '@/lib/sat-practice-grading'
 import { satPracticeRows } from '@/lib/sat-practice-rows'
 import { satAttemptFormat, satDiagnosticReviewItems, satPracticeReviewItems } from '@/lib/question-sources/sat'
@@ -32,6 +33,7 @@ describe('satPracticeReviewItems', { timeout: 180_000 }, () => {
       format: 'full',
       rwTier: grade.rw.tier,
       mathTier: grade.math.tier,
+      scoringVersion: 3,
       answers: JSON.parse(JSON.stringify(stored)),
     })
     expect(items).toHaveLength(98)
@@ -48,8 +50,44 @@ describe('satPracticeReviewItems', { timeout: 180_000 }, () => {
     expect(items.map((i) => i.questionKey)).toEqual(rows.map((r) => r.questionKey))
   })
 
+  it('rebuilds each attempt on the form version its scoringVersion records', async () => {
+    const attemptOn = async (version: SatFormVersion) => {
+      const base = await buildSatForm(4, 'full', null, null, version)
+      const m2 = await routedModule2(base, 3, 'easier')
+      const responses = [base.sections[0], base.sections[1], base.sections[2], m2].flatMap((s, moduleIndex) =>
+        s.questions.map((q) => ({
+          moduleIndex,
+          questionId: q.id,
+          selectedIndex: q.gridIn ? null : 0,
+          textValue: null,
+          flagged: false,
+          seconds: 10,
+        })),
+      )
+      const grade = await gradeSatPractice({ testNumber: 4, format: 'full', formVersion: version, responses })
+      expect(grade.formVersion).toBe(version)
+      expect(grade.rw.tier).toBeNull() // pre-built R&W Module 2: unrouted
+      expect(grade.math.tier).toBe('easier')
+      return { m2, attempt: { testNumber: 4, format: 'full', rwTier: grade.rw.tier, mathTier: grade.math.tier, answers: JSON.parse(JSON.stringify(storedSatAnswers(grade.items))) } }
+    }
+    const v1 = await attemptOn(1)
+    const v2 = await attemptOn(2)
+    for (const sv of [undefined, null, 1, 2]) {
+      const items = await satPracticeReviewItems({ ...v1.attempt, scoringVersion: sv })
+      expect(items, `scoringVersion ${sv}`).toHaveLength(98)
+      expect(items[76].question).toBe(v1.m2.questions[0].question)
+    }
+    const items = await satPracticeReviewItems({ ...v2.attempt, scoringVersion: 3 })
+    expect(items).toHaveLength(98)
+    expect(items[76].question).toBe(v2.m2.questions[0].question)
+    // The wrong version does not line up.
+    expect((await satPracticeReviewItems({ ...v2.attempt, scoringVersion: 2 })).length).toBeLessThan(98)
+    expect((await satPracticeReviewItems({ ...v1.attempt, scoringVersion: 3 })).length).toBeLessThan(98)
+  })
+
   it('resolves a legacy attempt (sections of answers, no routes stored) against every Module 2 it could have sat', async () => {
-    const base = await buildSatForm(2, 'full')
+    // Legacy rows (scoringVersion 1) were all taken on form v1.
+    const base = await buildSatForm(2, 'full', null, null, 1)
     const rw2 = await routedModule2(base, 1, 'easier')
     const sections = [base.sections[0], rw2, base.sections[2], base.sections[3]]
     const legacy = sections.map((s) => ({

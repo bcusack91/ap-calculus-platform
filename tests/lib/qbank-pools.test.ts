@@ -5,6 +5,8 @@
  * remapped through the option shuffle).
  */
 import { describe, it, expect, beforeAll } from 'vitest'
+import { generateExitQuiz } from '@/data/exit-quizzes'
+import { SAT_FORM_V2_EXCLUDED } from '@/data/sat-practice/form-v2-exclusions'
 import {
   buildMcatPool,
   buildSatPool,
@@ -181,4 +183,18 @@ describe('set assembly', () => {
     expect(new Set(items.map((i) => i.correctIndex)).size).toBeGreaterThan(1)
     expect(items.map((i) => i.index)).toEqual(items.map((_, i) => i))
   })
+})
+
+describe('SAT question bank honours the form-v2 exclusions', () => {
+  it('never serves an item the v2 forms leave out (definitions, test strategy, broken items)', async () => {
+    const served = new Set(sat.units.flatMap((u) => u.items.map((i) => i.questionKey)))
+    const excludedKeys: string[] = []
+    for (const slug of ['sat-command-evidence', 'sat-punctuation-commas-semicolons', 'sat-grammar-conventions']) {
+      for (const q of await generateExitQuiz(slug, 400, undefined, 20260915)) {
+        if (q.id && SAT_FORM_V2_EXCLUDED.has(q.id)) excludedKeys.push(questionKey({ question: q.question, options: q.options, correctIndex: q.correctIndex }))
+      }
+    }
+    expect(excludedKeys.length).toBeGreaterThan(20)
+    expect(excludedKeys.filter((k) => served.has(k))).toEqual([])
+  }, 120000)
 })

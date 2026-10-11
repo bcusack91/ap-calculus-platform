@@ -22,6 +22,7 @@
  */
 import { questionKey } from '@/lib/question-key'
 import { generateExitQuiz, listExitQuizSlugs, type ExitQuizQuestion } from '@/data/exit-quizzes'
+import { SAT_FORM_V2_EXCLUDED } from '@/data/sat-practice/form-v2-exclusions'
 import { LESSON_BUILT_EXIT_TOPICS, type LessonExitItem } from '@/data/exit-quizzes/lesson-built'
 import { CARS_PASSAGES, SECTION_PASSAGES } from '@/data/mcat/passages'
 import type { MCATPassage } from '@/data/mcat/types'
@@ -352,6 +353,10 @@ export async function buildSatPool(): Promise<QbankPool> {
     const discipline = SAT_DOMAIN_LABELS[pool.domain as RWDomain | MathDomain]
     const topicSlug = canonicalizeSlug(pool.slug)
     for (const q of pool.items) {
+      // Not on the exam = not in the program: the items SAT form v2 leaves out
+      // (definitions, test strategy, broken/two-answer/giveaway items) are
+      // lesson checks, not SAT practice.
+      if (q.id && SAT_FORM_V2_EXCLUDED.has(q.id)) continue
       const correctIndex = keyIndexOf(q)
       if (typeof q.question !== 'string' || !Array.isArray(q.options) || correctIndex < 0 || correctIndex >= q.options.length) continue
       const key = questionKey({ question: q.question, options: q.options, correctIndex })
@@ -372,6 +377,7 @@ export async function buildSatPool(): Promise<QbankPool> {
 
   for (const p of SAT_PASSAGES) {
     if (!p.questions.length) continue
+    if (p.questions.some((_, i) => SAT_FORM_V2_EXCLUDED.has(`sat-passage-${p.id}-q${i}`))) continue
     const { domain, topicSlug } = satPassageInfo(p)
     const discipline = SAT_DOMAIN_LABELS[domain]
     const passage: QbankPassage = { id: p.id, title: p.title, body: p.text }
