@@ -11,8 +11,10 @@ const poll: Slide = { kind: 'poll', question: 'q', options: ['a', 'b'], correctI
 describe('slideUnitKey', () => {
   it('groups continuation pages and worked-example reveal steps', () => {
     expect(slideUnitKey('Worked Example — Diagnosing the Reasoning (cont.)')).toBe('Worked Example — Diagnosing the Reasoning')
-    expect(slideUnitKey('Worked Example — Solution (2 of 3)')).toBe('Worked Example')
-    expect(slideUnitKey('Worked Example — Try It First')).toBe('Worked Example')
+    expect(slideUnitKey('Worked Example — Solution (2 of 3)')).toBe('Worked Example (reveal)')
+    expect(slideUnitKey('Worked Example — Try It First')).toBe('Worked Example (reveal)')
+    // A lesson section titled "Worked Example" is a different unit from a reveal sequence.
+    expect(slideUnitKey('Worked Example (cont.)')).toBe('Worked Example')
     expect(slideUnitKey('Deductive Reasoning')).not.toBe(slideUnitKey('Inductive Reasoning'))
   })
 })
@@ -48,5 +50,19 @@ describe('pollsInsideUnits', () => {
     expect(pollsInsideUnits(bad)).toEqual([1])
     const good: Slide[] = [c('Worked Example — Naming the Flaw'), c('Worked Example — Naming the Flaw (cont.)'), poll, poll, c('Key Takeaways')]
     expect(pollsInsideUnits(good)).toEqual([])
+  })
+
+  it('allows a poll between two separate worked examples (each opens with "Try It First")', () => {
+    const twoExamples: Slide[] = [
+      c('Worked Example — Try It First'), c('Worked Example — Solution'), poll,
+      c('Worked Example — Try It First'), c('Worked Example — Solution (1 of 2)'), c('Worked Example — Solution (2 of 2)'),
+    ]
+    expect(pollsInsideUnits(twoExamples)).toEqual([])
+    // …but never between "Try It First" and its own solution.
+    expect(pollsInsideUnits([c('Worked Example — Try It First'), poll, c('Worked Example — Solution')])).toEqual([1])
+  })
+
+  it('allows a poll between a reveal example and a lesson section titled "Worked Example"', () => {
+    expect(pollsInsideUnits([c('Worked Example — Try It First'), c('Worked Example — Solution'), poll, c('Worked Example'), c('Worked Example (cont.)')])).toEqual([])
   })
 })

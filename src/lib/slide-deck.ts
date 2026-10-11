@@ -149,7 +149,16 @@ type ContentSlide = { kind: 'content'; title: string; blocks: string[] }
  */
 export function slideUnitKey(title: string): string {
   const base = title.replace(/\s*\((?:cont\.|\d+ of \d+)\)\s*$/i, '').trim()
-  return /^Worked Example — (Try It First|Solution)$/.test(base) ? 'Worked Example' : base
+  // Progressive-reveal steps get their own key so a reveal sequence is never
+  // confused with a lesson section that happens to be titled "Worked Example".
+  return /^Worked Example — (Try It First|Solution)$/.test(base) ? 'Worked Example (reveal)' : base
+}
+
+/** True when `next` continues the unit `prev` belongs to. A "Try It First"
+ *  slide always opens a NEW worked example, even right after another one. */
+export function sameSlideUnit(prevTitle: string, nextTitle: string): boolean {
+  if (/^Worked Example — Try It First$/.test(nextTitle.trim())) return false
+  return slideUnitKey(prevTitle) === slideUnitKey(nextTitle)
 }
 
 /**
@@ -162,7 +171,7 @@ export function segmentContent<T extends { title: string }>(content: T[], size: 
   const units: T[][] = []
   for (const slide of content) {
     const last = units[units.length - 1]
-    if (last && slideUnitKey(last[last.length - 1].title) === slideUnitKey(slide.title)) last.push(slide)
+    if (last && sameSlideUnit(last[last.length - 1].title, slide.title)) last.push(slide)
     else units.push([slide])
   }
   const segments: T[][] = []
@@ -222,7 +231,7 @@ export function pollsInsideUnits(slides: readonly Slide[]): number[] {
     while (after < slides.length && slides[after].kind === 'poll') after++
     const a = slides[before]
     const b = slides[after]
-    if (a?.kind === 'content' && b?.kind === 'content' && slideUnitKey(a.title) === slideUnitKey(b.title)) bad.push(i)
+    if (a?.kind === 'content' && b?.kind === 'content' && sameSlideUnit(a.title, b.title)) bad.push(i)
   })
   return bad
 }
