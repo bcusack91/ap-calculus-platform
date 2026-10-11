@@ -26,7 +26,12 @@ async function fetchCss(origin: string, path: string): Promise<string | null> {
 export async function GET(request: Request, { params }: { params: Promise<{ file: string }> }) {
   const file = cssFileName((await params).file)
   if (!file) return new Response('Not found', { status: 404 })
-  const origin = new URL(request.url).origin
+  // On Vercel the function sees the deployment's own *.vercel.app address,
+  // which sits behind deployment protection; fetch through the public site.
+  const origin =
+    process.env.VERCEL_ENV === 'production'
+      ? (process.env.NEXT_PUBLIC_APP_URL || 'https://www.studymondo.com').replace(/\/$/, '')
+      : new URL(request.url).origin
 
   const same = await fetchCss(origin, `/_next/static/css/${file}`)
   if (same !== null) return new Response(same, { headers: { ...CSS_HEADERS, 'x-stale-css': 'same-file' } })
@@ -40,6 +45,8 @@ export async function GET(request: Request, { params }: { params: Promise<{ file
     // fall through to 404
   }
   const parts = (await Promise.all(hrefs.map((h) => fetchCss(origin, h)))).filter((c): c is string => c !== null)
-  if (!parts.length) return new Response('Not found', { status: 404 })
+  if (!parts.length) {
+    return new Response('Not found', { status: 404, headers: { 'x-stale-css': `miss; links=${hrefs.length}` } })
+  }
   return new Response(parts.join('\n'), { headers: { ...CSS_HEADERS, 'x-stale-css': 'current-site' } })
 }
