@@ -31,6 +31,12 @@ export const FL5_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The author’s proposal in paragraph 4 is that the narrator’s lie is exact about what he needed to be the case, and that this is why the reader trusts him. The detective option is the “puzzle” explanation the author rejects because detection ends once the case is solved. The judging-from-a-distance option is the moral explanation the author calls unlovely and inaccurate. The late-reversal option describes the kind of narration the author says works only once.',
+        optionExplanations: [
+          'This is the author’s own proposal in the fourth paragraph: the lie is “the one thing in the book we can be sure of,” because it reports exactly what the narrator “needed to be the case,” and that is why readers trust and keep listening to him.',
+          'This is the “puzzle” explanation the author rejects in the second paragraph: detection is a pleasure that ends when the case is solved, yet readers keep listening on a second reading when they already know what is hidden.',
+          'This is the moral explanation the author calls “unlovely and also inaccurate”; readers do not stand at a judging distance from lying narrators, they “lean in,” as the example of the flattering friend shows.',
+          'A late reversal is the “trick” kind of unreliable narration, which the author says works only once; on rereading the withheld information is simply absent, so it cannot explain why readers return to certain narrators.',
+        ],
         skill: 'main-idea',
       },
       {
@@ -45,6 +51,12 @@ export const FL5_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The friend appears right after the author says readers “lean in” rather than standing at a judging distance; the example shows affection coexisting with, and partly caused by, the omissions. It is offered against the moral account, not as a concession to it. The author has already rejected the detection explanation in the previous paragraph. Nothing in the passage claims narrators are modeled on real acquaintances.',
+        optionExplanations: [
+          'The friend example is deployed against the moral account, not as a concession to it; the author has just said readers do not hold themselves at a distance and judge, and the friend shows the opposite relationship.',
+          'The author rejected the detection explanation in the previous paragraph, and the friend who repeats the same story is not being investigated; the point is affection despite known omissions, not an unsolved puzzle.',
+          'The friend appears immediately after the claim that readers “lean in” rather than judging from a distance; we love the friend not less for his omissions but partly because of them, which illustrates the closeness readers feel toward lying narrators.',
+          'Nothing in the passage suggests that narrators are drawn from the author’s acquaintances; the friend is an analogy for the reader’s relationship to a narrator, not a claim about where novelists find their characters.',
+        ],
         skill: 'function',
       },
       {
@@ -58,6 +70,12 @@ export const FL5_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Paragraph 2 argues that detection ends when the case is solved, yet readers keep listening on a second reading when they already know what is hidden, so the puzzle cannot be what holds them. The author grants that detection is pleasurable and that some novels offer nothing else, so the discrepancies are not said to be too obvious and the pleasure is not denied. The author never claims the true story cannot be assembled; he says it can be, and that assembling it is not the point.',
+        optionExplanations: [
+          'The author never says the planted discrepancies are too obvious; he grants that detection is a real pleasure and that some novels offer nothing else, so the puzzle is not dismissed for being too easy.',
+          'The second paragraph argues that detection ends when the case is solved, yet “the narrators we return to are not solved by a second reading”; readers who already know what the butler hides keep listening anyway, so the gap between account and facts cannot be what holds them.',
+          'The author affirms that there is pleasure in assembling the hidden story; he does not claim readers deny feeling it, only that this pleasure is finished once the solution is known.',
+          'The author never says the true story cannot be assembled; on the second reading “we know perfectly well” what is hidden. The point is that assembling it is not what keeps readers listening.',
+        ],
         skill: 'detail',
       },
       {
@@ -72,6 +90,12 @@ export const FL5_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The sister case is self-deception the reader can see past: the narrator’s insistence contradicts the evidence he supplies, which is the “portrait” kind the author says deepens on rereading. The concealed-murderer case is the withheld-revelation trick the author says works once. The accurate-but-reticent narrator is not unreliable in the author’s sense; his facts are right and nothing is being believed against evidence. The openly untrustworthy narrator offers no gap between what he needs and what the evidence shows, so there is nothing for the reader to see past.',
+        optionExplanations: [
+          'A narrator who knows he committed the murder and withholds it until the final chapter is the first kind of unreliable narration, the trick that “works once”; on rereading the voice looks like an instrument of the plot.',
+          'A narrator whose facts are accurate but who withholds his allegiance is not unreliable in the author’s sense; nothing he reports is believed against the evidence he supplies, so there is no self-deception for the reader to see past.',
+          'A narrator who announces his untrustworthiness offers no gap between what he needs to be true and what the evidence shows; the reader has nothing to catch him in and nothing to see past, so no portrait deepens.',
+          'The narrator insists on his sister’s kindness while every scene he reports shows her contempt; this is self-deception the reader can see past, the “portrait” kind that deepens with every reading because each time we see more of what he cannot.',
+        ],
         skill: 'application',
       },
       {
@@ -86,6 +110,12 @@ export const FL5_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The author predicts exactly this pattern: the trick “works once” while the portrait “deepens with every reading,” so the survey matches the distinction. The author does not claim withheld revelations stay effective; he says the opposite. The argument explicitly concerns what readers feel “before critics state it,” so reader data is relevant. The finding says nothing about whether detection is pleasurable, only that twist novels lose value once solved.',
+        optionExplanations: [
+          'The author predicts exactly this pattern: the withheld-revelation trick “works once” while the self-deceived portrait “deepens with every reading,” so lower rereading ratings for twist novels and higher ones for self-deceived narrators match his distinction.',
+          'This misstates the author’s position: he says the trick works once and that on rereading the withheld information is simply absent, so he does not claim a withheld revelation remains effective on a second reading.',
+          'The author explicitly says readers feel this consequence “before critics state it,” so data about ordinary readers is directly relevant to his distinction, not beside the point.',
+          'The survey measures how rereaders rate two kinds of novel; it says nothing about whether detection is pleasurable, and the author’s point about detection is that its pleasure ends, which the finding neither tests nor supports.',
+        ],
         skill: 'new-information',
       },
       {
@@ -100,6 +130,12 @@ export const FL5_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Planting fair clues for the reader to solve is the advice the author calls “advice for the wrong form,” because it treats the narrator as a puzzle rather than a portrait. Misstatements rooted in what the narrator cannot bear match the author’s account of the lie as a symptom. Letting the reader see past the narrator is the second, lasting kind of unreliability. Judging by whether readers still want to listen is the test stated in the final sentence.',
+        optionExplanations: [
+          'Rooting the misstatements in what the narrator cannot bear to acknowledge matches the author’s account of the lie as “a symptom” that reveals what he could not bear to lose; the author would endorse this advice.',
+          'Giving the reader enough to see past the narrator to what he refuses to see is the second, lasting kind of unreliable narration, the portrait that deepens with rereading; the author would endorse this.',
+          'Planting fair clues so the reader can solve the true story is the common advice the author calls “advice for the wrong form,” because it treats the narrator as a puzzle to be caught rather than a person to be heard; he would be least likely to endorse it.',
+          'Judging a narrator by whether readers still want to hear him after catching him is the test stated in the passage’s final sentence; this is the author’s own criterion, so he would endorse it.',
+        ],
         skill: 'application',
       },
     ],
@@ -123,6 +159,12 @@ export const FL5_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The author’s central move is that a good is shaped for whoever pays for it, so an advertiser-funded paper and a reader-funded paper are “different objects”; the final paragraph makes “Who is the customer?” the real question. The attention-and-privacy answer is the one the author calls true but shallow. The author explicitly says this is not a case for abolishing the arrangement. The silenced price signal is one step of the argument, not its conclusion.',
+        optionExplanations: [
+          'The attention-and-privacy answer is the one the author says the slogan’s question invites, and he calls such answers “though true, shallow”; it is the framing he wants to replace, not his conclusion.',
+          'The author explicitly says “None of this is a case for abolishing the arrangement” and notes that some of the best things we have were built on rented attention; replacement is not what he argues for.',
+          'The silenced price signal is one step in the argument, set up in the second paragraph, but the author moves past it to the point that the publisher “still has a customer”; the information loss is not the passage’s primary concern.',
+          'The author’s central move is that “a good is shaped for whoever pays for it,” so an advertiser-funded paper and a reader-funded paper are “different objects”; the final paragraph makes “Who is the customer?” the question that matters.',
+        ],
         skill: 'main-idea',
       },
       {
@@ -132,6 +174,12 @@ export const FL5_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Paragraph 2 describes a price as a message in two directions: to the buyer, a reason to attend to quality before paying, and to the seller, a signal of what the buyer wants. Nothing in the passage says a price informs advertisers about audience size; advertisers enter the argument only as the customer of a zero-price good. So I and II are supported and III is not.',
+        optionExplanations: [
+          'Statement I is supported, but the second paragraph also says a price tells the seller what the buyer wants, so statement II is supported as well; limiting the answer to I omits half of the two-directional message.',
+          'The second paragraph describes a price as a message in both directions: to the buyer it gives a reason to attend to quality before paying, and to the seller it says what the buyer wants. Nothing in the passage says a price informs advertisers about audience size.',
+          'Statement II is supported, but statement III is not: the passage never says a price tells advertisers how many readers will see an ad, and statement I, which this choice omits, is explicitly supported by the second paragraph.',
+          'Statements I and II are both supported, but statement III is not; advertisers enter the argument only as the customer of a zero-price good, and the passage never describes a price as informing them about readership.',
+        ],
         skill: 'detail',
       },
       {
@@ -146,6 +194,12 @@ export const FL5_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The author allows that a free paper “may be very good” but calls its goodness a by-product of a design aimed elsewhere, to be abandoned when aim and by-product diverge; its quality therefore depends on continuing to serve the advertiser’s aim. A good paper does not show design is independent of the payer; the author says it is a by-product of that very dependence. The passage says the no-stake reader has no reason to ask about quality, not that she judges it well. Advertisers are said to want papers opened widely, not finished.',
+        optionExplanations: [
+          'The author allows that a free paper “may be very good” but calls its goodness “a by-product of a design aimed elsewhere” that “will be abandoned the moment the aim and the by-product diverge”; its quality therefore depends on continuing to serve the advertiser’s aim.',
+          'A well-made free paper does not show that design is independent of the payer; the author says its goodness is a by-product of design aimed at the advertiser, so the quality is evidence of that dependence, not against it.',
+          'The passage says the no-stake reader “has no stake that would make her ask whether it is any good”; it never claims she judges quality well, so a good free paper cannot be proof of her judgment.',
+          'Advertisers are said to want a paper that is “opened, as often as possible, by as many people as possible,” whereas a reader-funded paper “rewards finishing a story”; the passage attributes finishing to the reader-funded design, not to advertiser demand.',
+        ],
         skill: 'inference',
       },
       {
@@ -160,6 +214,12 @@ export const FL5_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The paragraph explains the two messages a price sends and then observes that at zero both go silent while the publisher “still has a customer,” which sets up the next paragraph’s claim that the customer shapes the good. It is not framed as a definition aimed at the slogan’s defenders. The author never claims free goods are typically worse, and in fact allows that they may be very good. The paragraph does not concede the slogan’s accuracy; the author has already called the slogan imprecise.',
+        optionExplanations: [
+          'The paragraph is introduced as “an older observation about prices,” not as a definition aimed at the slogan’s defenders, who are not mentioned until later; its role is to build the author’s own argument.',
+          'The author never claims free goods are typically worse; he later allows that the free paper “may be very good.” The paragraph is about what messages a price carries, not about comparative quality.',
+          'The paragraph explains the two messages a price sends, notes that both go silent at a price of zero, and ends with the observation that the publisher “still has a customer, and the customer is not the reader,” which sets up the next paragraph’s claim about who shapes the good.',
+          'The author has already called the slogan imprecise and says it mistakes a rental for a sale; the paragraph does not concede the slogan’s accuracy about buyers, and it never divides costs between buyers and sellers in that way.',
+        ],
         skill: 'function',
       },
       {
@@ -174,6 +234,12 @@ export const FL5_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The author claims the two funding models produce objects built for different purposes; if their observable designs do not differ at all, that claim loses its support. Less reading time among free-paper readers is consistent with a paper built to be opened rather than read. Stories shortening after a switch to advertising directly supports the author. Advertisers paying for wide opening rather than close reading is the mechanism the author describes.',
+        optionExplanations: [
+          'Less time per issue among readers of advertiser-funded papers is consistent with the author’s claim that such papers are built to be opened rather than read; it would tend to support rather than weaken the “different objects” thesis.',
+          'Stories shortening after a switch to advertising revenue directly supports the author: it shows the good being reshaped for the new customer, exactly the dependence on the payer that the passage describes.',
+          'Advertisers paying more for papers opened by many than for papers read closely by few is the very mechanism the author describes; it explains why the advertiser-funded paper is built to be opened, so it strengthens the claim.',
+          'The author claims the two funding models produce objects built for different purposes; if advertiser-funded and subscriber-funded papers show no difference at all in layout, story length, or rhythm, the claim that they are “different objects” loses its observable support.',
+        ],
         skill: 'strengthen-weaken',
       },
       {
@@ -187,6 +253,12 @@ export const FL5_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The author’s point is that a good is shaped to serve whoever pays, so a clinic whose records are designed for the insurer who pays rather than the patient who uses them is the direct parallel. The charity example concerns how money is spent, not how the product is shaped for the payer. The bread example shows a substitution effect, not a payer shaping a good. The museum example parallels the silenced price signal in paragraph 2, where a no-stake user attends less, rather than the customer point.',
+        optionExplanations: [
+          'The charity example concerns how an organization allocates its spending, not how the product it delivers is shaped for whoever pays; the author’s point is about the design of the good itself.',
+          'A clinic paid by insurers designing its records around what insurers require rather than what patients need is the direct parallel: the good is shaped for the payer, who is not the user, exactly as an advertiser-funded paper is built for the advertiser.',
+          'Free bread reducing appetizer orders is a substitution effect, a change in what customers buy when one item becomes free; it says nothing about a good being shaped to serve a payer other than its user.',
+          'Visitors spending less time once the fee is abolished parallels the silenced price signal of the second paragraph, where a no-stake user attends less; it does not illustrate the separate point that a good is built for whoever pays.',
+        ],
         skill: 'application',
       },
     ],
@@ -210,6 +282,12 @@ export const FL5_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The author’s own account is the “two authors” idea: the builder’s legible plan and time’s unintended revision of it, visible together. The imagination-completing, mortality, and irregularity options are the three standard answers the author lists in paragraph 1 and judges insufficient, since none explains why a ruin pleases differently from a graveyard, a rock, or a sketch.',
+        optionExplanations: [
+          'Imaginative completion of what the builder left unfinished is one of the three standard answers the author lists in the first paragraph and judges insufficient; it cannot explain why a ruin pleases differently from a sketch, which is also incomplete.',
+          'The reminder of mortality at a safe distance is another of the standard answers the author sets aside; it is true of some ruins but cannot explain why a ruin pleases differently from a graveyard.',
+          'The author’s own account is the “two authors” idea: the builder’s still-legible plan and time’s unintended revision of it, seen “in the same glance,” so that the ruin shows “an argument between purpose and accident” in a single view.',
+          'Preference for irregularity is the third standard answer the author rejects; it cannot explain why a ruin pleases differently from a rock, and the author adds that a folly “built as jagged as you like” still fails to move anyone.',
+        ],
         skill: 'main-idea',
       },
       {
@@ -223,6 +301,12 @@ export const FL5_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The folly can be “as jagged as you like” and still fail, which shows that the picturesque theorist’s criteria of irregularity and incompleteness are not what produces the appeal; what is missing is the second author. The luxury objection is raised separately in paragraph 4 and is not what the follies illustrate. The author says the rebuilt ruin meets “the same fate” for the same reason, not a different one. Cost is mentioned only to be dismissed as irrelevant.',
+        optionExplanations: [
+          'The folly can be built “as jagged as you like” and still be dead, which shows that the picturesque theorist’s criteria of irregularity and incompleteness are not what produces the appeal; what the folly lacks is the second author, time working without intention.',
+          'The luxury objection, that the taste for ruins belongs to those who never lived in them, is raised separately in the fourth paragraph; the follies are not introduced to illustrate it.',
+          'The author says the rebuilt ruin meets “the same fate” as the folly for the same reason, that the accident has been edited out and only intention remains; he does not argue they fail for different reasons.',
+          'The follies’ cost is mentioned only to be dismissed (“whatever they cost, have never moved anyone”); the passage says nothing about the fashion falling out of favor or about its expense as a point of interest.',
+        ],
         skill: 'function',
       },
       {
@@ -236,6 +320,12 @@ export const FL5_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The author grants that each standard answer “is true of some ruins” and then says none explains the distinctive pleasure of a ruin, which is a qualified rather than dismissive or approving stance. The passage says the answers have been in circulation for two centuries, not that they have been refuted. The author is not uncertain; he offers a definite alternative. The answers are not said to account for most ruins together.',
+        optionExplanations: [
+          'The author does not dismiss the standard answers; he grants that “each of these is true of some ruins.” The passage says they have been in circulation for two centuries, not that two centuries of argument have refuted them.',
+          'The author does not approve of the standard answers as a sufficient account; he says “none of them explains why a ruin pleases differently from a graveyard, a rock, or a sketch,” and offers his own explanation instead.',
+          'The author is not uncertain; he states a definite alternative, the two-authors account, and uses it to explain cases the standard answers cannot. He does not treat the choice among them as undecidable.',
+          'The author grants that each standard answer “is true of some ruins” and then says none of them explains the distinctive pleasure of a ruin; accepting each as partly true while denying that any suffices is a qualified stance.',
+        ],
         skill: 'tone',
       },
       {
@@ -250,6 +340,12 @@ export const FL5_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The author holds that a fresh ruin is a wound and that “only a brute would admire its composition” until enough time has passed for the loss to stop being someone’s loss; a week-old disaster fails that condition. The argument between purpose and accident requires the distance in time that makes accident a collaborator, so recording it as it occurs is not what the author praises. The author says nothing about photography lacking a second author. Accident alone does not produce the appeal; the legible plan and the passage of time are also required.',
+        optionExplanations: [
+          'The argument between purpose and accident becomes visible as a pleasure only at a distance in time, when accident can be seen “as a collaborator rather than an enemy”; recording a week-old flood is not what the author praises.',
+          'The author holds that “a fresh ruin is not beautiful,” that a house hit last month “is a wound,” and that “only a brute would admire its composition”; the second author must have worked long enough for the loss to stop being someone’s loss, and a week is far too soon.',
+          'The passage says nothing about photography being unable to show two authors; the author’s objection to a fresh ruin is about the time elapsed, not about the medium used to depict it.',
+          'Accident alone does not produce the appeal; the passage requires a legible plan, time’s unintended revision of it, and enough distance for the loss to stop being personal. A flood last week supplies only the accident.',
+        ],
         skill: 'application',
       },
       {
@@ -264,6 +360,12 @@ export const FL5_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The abandoned mill has a legible plan, an unintended revision by time (the tree), and enough distance in time for the loss to no longer be someone’s loss. The reset wall has had its accident edited out and is “a building again.” The theater set is a folly: every break was intended, so there is no second author. The storm-damaged house is a fresh ruin, which the author calls a wound rather than a thing of beauty.',
+        optionExplanations: [
+          'A wall whose fallen stones have been reset exactly to the original plans has had its accident edited out; the author says of such a rebuilt ruin that “what remains is a building again,” with only one author.',
+          'A theater set built to resemble a collapsed abbey is a folly: every break was intended, so there is no second author, “only a single purpose pretending to have been interrupted,” and the author says such things never move anyone.',
+          'The abandoned mill has a legible plan, an unintended revision by time (the tree through the roof), and a century of distance, so the loss has stopped being someone’s loss; it meets every condition the author sets for a pleasing ruin.',
+          'A house whose roof was torn off during the previous winter is a fresh ruin, which the author calls “a wound”; not enough time has passed for the first author’s loss to stop being a particular person’s loss.',
+        ],
         skill: 'application',
       },
       {
@@ -278,6 +380,12 @@ export const FL5_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The author concedes that the mortality answer is true of some ruins; his claim is that it does not explain what distinguishes ruins from graveyards and rocks, so visitor reports of pleasant sadness are compatible with his view. He does not deny any link to mortality, so the second option misreads him. The second author is time acting on a plan, not a feeling in the viewer. The author argues from examples (follies, rebuilt ruins, fresh ruins), not from visitor reports.',
+        optionExplanations: [
+          'The author concedes that the mortality answer “is true of some ruins”; his claim is only that it does not explain what distinguishes ruins from graveyards and rocks, so visitors reporting pleasant sadness about time is compatible with his argument.',
+          'The author never denies that ruins have anything to do with mortality; he grants that the mortality answer is true of some ruins, so this option attributes to him a denial he does not make.',
+          'The second author is time acting on the builder’s plan, a feature of the ruin itself, not a feeling in the viewer; pleasant sadness about time is not what the author means by that phrase.',
+          'The author argues from examples (follies, rebuilt ruins, fresh ruins, the view that a wound is not beautiful), not from visitor reports; such reports are not the only evidence he relies on, so their content cannot undermine him on that ground.',
+        ],
         skill: 'new-information',
       },
     ],
@@ -301,6 +409,12 @@ export const FL5_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The author’s conclusion is that both archives lose the event “in different directions,” that a historian must know both failure modes, and that conflicts are resolved by asking whose distortion is visible. The author does not rank oral testimony above documents; the practical rule sometimes favors the steward. The author accepts the fixity test but rejects the conclusion drawn from it, so the passage is not a defense of the documentary position. Drift is cited for oral accounts, not against them.',
+        optionExplanations: [
+          'The author does not rank oral testimony above documents; his practical rule sometimes favors the steward over the village, as when the village “has since come to need a heroic famine.”',
+          'The author’s conclusion is that both archives lose the event “in different directions,” that a historian must know both failure modes, and that conflicts are resolved by asking “whose distortion we can see through”; this captures the whole argument.',
+          'The author accepts the fixity test but rejects the conclusion the documentary historian draws from it, so the passage is a critique of the documentary position, not a defense of it against critics.',
+          'Drift is cited for oral accounts, not against them: “I would cite it for them. The drift is a record.” The passage argues that drift makes oral accounts informative, not useless.',
+        ],
         skill: 'main-idea',
       },
       {
@@ -315,6 +429,12 @@ export const FL5_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Drift can be a record of “what the famine did to the village’s idea of itself” only if the changes track the community’s circumstances; if the changes were random, they would record nothing. The author never claims listeners remember better than tellers, only that they approve each telling. The author concedes the event itself is sometimes lost, so preservation of the event is not assumed. The argument is about how to weigh conflicting sources, so it presupposes documents are available, not absent.',
+        optionExplanations: [
+          'The author never claims listeners remember more accurately than tellers; his point is that listeners approve or reject each telling, producing a negotiated version. Accuracy of memory is not part of the argument.',
+          'The author concedes that sometimes the event itself “has been lost in the negotiation,” so his argument does not assume oral accounts preserve the original event; drift records the community, not the event.',
+          'The argument is about how to weigh written and spoken sources when they conflict, which presupposes documents are available to compare; the claim that drift is a record does not depend on their absence.',
+          'Drift can be a record of “what the famine did to the village’s idea of itself” only if the changes in the story track changes in the community’s circumstances; if the changes were random error, they would record nothing about the village.',
+        ],
         skill: 'assumption',
       },
       {
@@ -329,6 +449,12 @@ export const FL5_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The author says fixity is a virtue but that what is fixed is “one person’s purpose on one day,” frozen at its first performance; contemporaneity therefore guarantees the preservation of a purpose, not of the event. The author denies that the document kept the event. The writer typically expected to be read by someone with power over him, not the reverse. The frozen purpose is “no longer visible as a purpose,” so the historian cannot simply see it.',
+        optionExplanations: [
+          'The author says fixity is a virtue but that what the document fixes is “one person’s purpose on one day,” frozen at its first performance; being set down at the time guarantees that this purpose is preserved unchanged, not that the event is.',
+          'The author denies that the document kept the event: “the document kept the steward.” Contemporaneity fixes a purpose, not the occurrence of what the document describes.',
+          'The passage says the writer typically “expected the page to be read by someone with power over him,” which is the reverse of this option; the document’s author was usually the less powerful party.',
+          'The frozen purpose is “embalmed inside it and no longer visible as a purpose,” so contemporaneity does not let the historian see the purpose; the written record “disguises” its purpose as a fact.',
+        ],
         skill: 'inference',
       },
       {
@@ -342,6 +468,12 @@ export const FL5_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The filter the author describes is approval by listeners “who could have stopped listening,” producing a negotiated version. Tellers adding and removing material is the documentary historian’s assumption about corruption, not the filter. The famine and plenty versions are compared to show what drift records, not described as a correction. The historian’s comparison of versions is a use of the record, not the mechanism by which repetition filters.',
+        optionExplanations: [
+          'Tellers removing the false and adding what has been learned is the documentary historian’s assumption about how oral accounts are corrupted (“each of which, we assume, took something out and put something in”), not the filter the author describes.',
+          'The famine-year and plenty-year versions are compared to show what drift records about the village’s idea of itself; the author does not describe the later version as a correction of the earlier one.',
+          'The filter the author describes is approval by listeners “who could have stopped listening”; a story that survives has been accepted at each telling, which is what makes the surviving version a negotiated one.',
+          'The historian comparing versions is a way of using the record that drift creates; it is not the mechanism by which repetition itself filters the account during the generations of telling.',
+        ],
         skill: 'detail',
       },
       {
@@ -356,6 +488,12 @@ export const FL5_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The author’s rule is to ask which failure more likely produced the conflict; a charter drafted by the bishop’s clerk for his superiors is the written record’s failure mode of a purpose disguised as fact, so the spoken account should be believed. Growing detail does not by itself indicate which distortion is at work. A recent festival honoring the widow suggests the village “has since come to need” its version, which is the oral failure mode and a reason to believe the charter. The charter being the sole surviving document says nothing about whose distortion is visible.',
+        optionExplanations: [
+          'Growing detail across generations does not by itself indicate which distortion is at work; the author’s rule asks whose failure more likely produced the conflict, not how elaborate the account has become.',
+          'The author’s rule is to ask which failure more likely produced the conflict; a charter drafted by the bishop’s own clerk for his superiors is the written record’s failure mode, a purpose disguised as fact, so the spoken account should be believed.',
+          'A recent festival celebrating the widow suggests the town “has since come to need” its version of the founding, which is the oral record’s failure mode; by the author’s rule that is a reason to believe the charter, not the families.',
+          'The charter being the only surviving document says nothing about whose distortion is visible; the author’s rule turns on the likely purpose behind each account, not on how many documents survive.',
+        ],
         skill: 'application',
       },
       {
@@ -369,6 +507,12 @@ export const FL5_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The author claims drift is a record of what events did to a community’s idea of itself; versions shifting in step with the village’s fortunes is direct evidence for that claim. Agreement among charters about dates concerns fixity, which the author already grants, and does not bear on his argument about purpose. Differences between neighboring villages do not show that drift tracks circumstances and could suggest random variation. Historians doing equally well with documents alone would undercut the claim that trusting one source is reading with one eye shut.',
+        optionExplanations: [
+          'Agreement among charters about dates concerns fixity, which the author already grants is a virtue; it does not bear on his argument that documents preserve a purpose rather than the event.',
+          'Differences between neighboring villages do not show that drift tracks community circumstances; they could just as easily suggest random variation, which would undercut the author’s claim that drift is a record.',
+          'Historians doing equally well with documents alone would undermine the author’s claim that trusting only one archive is “reading with one eye shut”; this finding would weaken, not strengthen, his argument.',
+          'The author claims drift is a record of what events did to a community’s idea of itself; versions of the famine story shifting in step with the village’s later fortunes is direct evidence that the changes track circumstances, as his argument requires.',
+        ],
         skill: 'strengthen-weaken',
       },
     ],
@@ -392,6 +536,12 @@ export const FL5_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The author argues that “curiosity” covers two passions, that the first should be limited only by the inquirer’s strength, and that the second is the only one “with which the moralists need concern themselves.” The noble-but-checked view is the common reader’s confusion the author sets out to correct. The natural-world versus neighbors contrast is an illustration, not the thesis; the author’s division turns on what the knowing does to the knower, not on the subject. The author does propose governing the second curiosity, so he is not against all governance.',
+        optionExplanations: [
+          'The author argues that “curiosity” names two passions with nothing in common but restlessness, that the first is limited only by the inquirer’s strength, and that the second is “the only one with which the moralists need concern themselves.”',
+          'The noble-but-checked view is the common reader’s conclusion that the author says “conceals a confusion”; he rejects the idea that subjects can be forbidden and does not treat curiosity as a single passion to be reined.',
+          'Neighbor versus leaf is an illustration raised in the objection, not the thesis; the author’s division turns on what knowing does to the knower, and he grants that the same mind may feel both curiosities about different things.',
+          'The author does propose governing the second curiosity by asking what one will do with the information, so he is not against all governance; he distinguishes the two passions rather than defending restlessness as such.',
+        ],
         skill: 'main-idea',
       },
       {
@@ -405,6 +555,12 @@ export const FL5_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The author says the collector of intelligence, once he has heard the thing, “is exactly what he was,” with one more thing to repeat. Improved conduct and the removal of a stone from the shoe describe the first curiosity, the desire to understand. The second curiosity is not troubled by a question but by the suspicion of something unheard, and what follows is room for another item, not a new question raised by an answer.',
+        optionExplanations: [
+          'Being better able to conduct oneself describes the first curiosity, the desire to understand; that inquirer “knows the world otherwise than he knew it before, and he conducts himself accordingly.”',
+          'The second curiosity is troubled only by “the suspicion that there is something he has not yet heard,” and each piece of intelligence “makes room for another”; the passage does not describe an answer raising a new question.',
+          'The author says the collector of intelligence, once he has heard the thing, “is exactly what he was, save that he has one more thing to repeat”; he is unchanged apart from a new item to pass on.',
+          'The stone in the shoe is the author’s image for the first curiosity, the trouble of not comprehending something that ends when the thing is understood; it does not describe the desire to be informed.',
+        ],
         skill: 'detail',
       },
       {
@@ -418,6 +574,12 @@ export const FL5_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The objection is that the author has “divided what Nature has joined” because one mind can feel both curiosities; the reply is that a person can be generous one day and avaricious the next without the two being one virtue. The comparison keeps the curiosities distinct rather than merging them. It does not rank the second curiosity’s gravity against avarice. The author explicitly grants that both can inhabit the same breast, so he concedes the opposite of the third option.',
+        optionExplanations: [
+          'The comparison keeps the two curiosities distinct rather than merging them; generosity and avarice are offered as two different qualities that one person can show on different days, not as a single disposition.',
+          'The author does not rank the gravity of the second curiosity against avarice; the comparison is about how two distinct things can coexist in one person, not about how bad the desire to be informed is.',
+          'The author explicitly grants the opposite: “I do not deny it” that the same mind may feel both curiosities. He concedes they can inhabit one breast, so he does not concede that a person cannot feel both.',
+          'The objection is that the author has “divided what Nature has joined” because one mind can feel both curiosities; the reply is that a person can be generous one day and avaricious the next without the two being one virtue, so coexistence does not prove identity.',
+        ],
         skill: 'function',
       },
       {
@@ -432,6 +594,12 @@ export const FL5_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The author calls the forbidden-subject approach “an error” and says the fear behind it marks a mind that “has mistaken its own weakness for a law of the world.” He grants that an inquirer may be unable to bear what he learns, but treats that as a reason to grow stronger, not as sympathy for fencing subjects. He does not call the forbidden subjects uninteresting. The limit he proposes for the second curiosity is a test of use, not a frontier of subjects, so there is no ambivalence about frontiers.',
+        optionExplanations: [
+          'The author grants that an inquirer may be unable to bear what he has learned, but treats that as “a reason for him to grow stronger, not for the subject to be fenced”; this is not sympathy for forbidding subjects.',
+          'The author calls the forbidden-subject approach “an error” and says the fear behind it “is the mark of a mind which has mistaken its own weakness for a law of the world”; this is direct criticism of the moralists’ method.',
+          'The author does not call the forbidden subjects uninteresting; he holds that “there is no fact the understanding is the worse for possessing,” which treats every subject as fit for inquiry.',
+          'The limit the author proposes for the second curiosity is a test of what one will do with the information, not a frontier of forbidden subjects; he accepts no frontier for either curiosity, so there is no ambivalence.',
+        ],
         skill: 'tone',
       },
       {
@@ -445,6 +613,12 @@ export const FL5_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The first curiosity ends in understanding that changes how the inquirer conducts himself, which the physician’s altered treatment exemplifies. The traveler who collects customs, the reader who recounts dispatches, and the neighbor who gathers household affairs each accumulate items to repeat without being changed, which is the author’s description of the second curiosity, the desire to be informed.',
+        optionExplanations: [
+          'The first curiosity ends in understanding that changes how the inquirer conducts himself; the physician who studies a fever until he alters the way he treats it has been changed by what he learned, exactly as the passage describes.',
+          'The traveler who collects customs from every town accumulates items without being changed by them; this is the second curiosity, which “only collects” and leaves its possessor exactly what he was.',
+          'The reader who follows every dispatch and recounts it at dinner has “one more thing to repeat,” the author’s description of the desire to be informed; nothing in his conduct or judgment is altered.',
+          'The neighbor who learns everyone’s household affairs is the author’s own example of prying “into the affairs of its neighbour,” the collecting passion that gathers intelligence to repeat rather than understanding that changes the knower.',
+        ],
         skill: 'application',
       },
       {
@@ -459,6 +633,12 @@ export const FL5_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The author states that the limit of the first curiosity is reached when the inquirer cannot bear what he has learned, “which is a reason for him to grow stronger, not for the subject to be fenced,” so a prohibition on a subject is the error he describes. The first option misuses the author’s point: the inquirer’s limit is personal, not a license to forbid subjects. The author does allow that learned things can be hard to bear, so the second option overstates him. The appetite test applies to the second curiosity and concerns what one will do with an item, not whether a subject may be forbidden.',
+        optionExplanations: [
+          'This misuses the author’s point: the limit set by the inquirer’s strength is personal and is “a reason for him to grow stronger, not for the subject to be fenced”; it gives no license for a government to forbid a subject.',
+          'The author does allow that learned things can be hard to bear, since the inquirer may reach the point where he “can no longer bear the weight of what he has learned”; denying that any knowledge is painful overstates him.',
+          'The author states that the limit of the first curiosity is reached when the inquirer cannot bear what he has learned, “which is a reason for him to grow stronger, not for the subject to be fenced”; forbidding a subject on grounds of pain is exactly the error he describes.',
+          'The appetite test applies to the second curiosity and asks what one will do with a piece of intelligence; it concerns individual seeking, not whether a subject of study may be prohibited, and painful knowledge is not thereby shown to change nothing.',
+        ],
         skill: 'new-information',
       },
     ],

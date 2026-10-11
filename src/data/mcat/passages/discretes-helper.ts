@@ -26,8 +26,10 @@ export function buildDiscretesPassage(
     passageText:
       'The following questions are **independent of any passage** — each stands alone, as in the discrete sets on the real MCAT.',
     // `id` is kept so an answer to a discrete stays keyed to that item.
-    questions: discretes.map(({ id, question, options, correctAnswer, explanation, skill, needsReview }) => ({
+    // Per-option explanations ride along (review pages show them under each option).
+    questions: discretes.map(({ id, question, options, correctAnswer, explanation, optionExplanations, skill, needsReview }) => ({
       id, question, options, correctAnswer, explanation, skill, needsReview,
+      ...(optionExplanations ? { optionExplanations } : {}),
     })),
     needsReview: discretes.some((d) => d.needsReview),
   }

@@ -98,9 +98,14 @@ export interface SATTestSection {
   questions: SATTestQuestion[]
 }
 
+/** Which exam a form simulates. Absent = 'sat' (every form built before PSAT mode). */
+export type SatExam = 'sat' | 'psat'
+
 export interface SATFullTest {
   testNumber: number
   format: 'full' | 'mini'
+  /** 'psat' = an adaptive PSAT/NMSQT form (buildPsatForm); absent = SAT. */
+  exam?: SatExam
   sections: SATTestSection[]
   totalQuestions: number
   totalTimeSeconds: number
@@ -235,9 +240,36 @@ function withSeededRandom<T>(seed: number, fn: () => T): T {
   }
 }
 
+/**
+ * PSAT/NMSQT difficulty profile for one module: the most hard-tier items it may
+ * hold (as a share of the module) and the order tiers are preferred in (empty
+ * = no preference, a mixed module).
+ */
+export interface PsatModuleProfile {
+  hardShare: number
+  prefer: ModuleDifficulty[]
+}
+
+/**
+ * The PSAT/NMSQT has the SAT's structure but a lower content ceiling: fewer of
+ * the hardest items overall, and a harder Module 2 that leans on medium items
+ * instead of being drawn almost entirely from the hard tier as the SAT's is.
+ * Shares are CAPS on hard-tier items per module (passage-bank items are
+ * untiered and never count as hard).
+ */
+export const PSAT_DIFFICULTY_PROFILE: Record<'module1' | 'harder' | 'easier', PsatModuleProfile> = {
+  module1: { hardShare: 0.25, prefer: [] },
+  harder: { hardShare: 0.5, prefer: ['hard', 'medium', 'easy'] },
+  easier: { hardShare: 0, prefer: ['easy', 'medium', 'hard'] },
+}
+
 interface BuildContext {
   /** 0-based fixed form. */
   form: number
+  /** Which fixed form an item or passage id belongs to (default practiceFormOf). */
+  formOf?: (id: string) => number
+  /** PSAT only: the module's difficulty profile and its running hard-item tally. */
+  psat?: { profile: PsatModuleProfile; owed: number; used: number }
   rng: () => number
   usedStems: Set<string>
   usedPassageIds: Set<string>
@@ -256,6 +288,37 @@ function newContext(testNumber: number, salt: string): BuildContext {
     seed: hashString(`sat-grid-${salt}-${testNumber}`),
   }
 }
+
+export const PSAT_FORM_COUNT = 3
+
+/**
+ * The fixed PSAT form (0-based) an item or passage belongs to. A separate hash
+ * from practiceFormOf, so the three PSAT forms don't share content with each
+ * other (they can share items with the SAT forms: same pools).
+ */
+export function psatFormOf(id: string): number {
+  return hashString(`psat:${id}`) % PSAT_FORM_COUNT
+}
+
+function newPsatContext(testNumber: number, salt: string, profile: PsatModuleProfile): BuildContext {
+  const form = (((testNumber - 1) % PSAT_FORM_COUNT) + PSAT_FORM_COUNT) % PSAT_FORM_COUNT
+  return {
+    form,
+    formOf: psatFormOf,
+    psat: { profile, owed: 0, used: 0 },
+    rng: mulberry32(hashString(`psat-${salt}-${testNumber}`)),
+    usedStems: new Set(),
+    usedPassageIds: new Set(),
+    seed: hashString(`psat-grid-${salt}-${testNumber}`),
+  }
+}
+
+/** Start a module: reset the PSAT hard-item tally (no-op for SAT contexts). */
+function startModule(ctx: BuildContext): void {
+  if (ctx.psat) ctx.psat = { profile: ctx.psat.profile, owed: 0, used: 0 }
+}
+
+const isHard = (q: { difficulty?: string }) => q.difficulty === 'hard'
 
 /* ------------------------------------------------------------------ */
 /*  Pools                                                              */
@@ -303,6 +366,7 @@ async function drawDomain(
       candidates.push({ ...q, section, sourceSlug: slug, domain })
     }
   }
+  if (ctx.psat) return drawProfiled(candidates, count, ctx)
   const inForm = (q: SATTestQuestion) => practiceFormOf(q.id ?? q.question) === ctx.form
   const atTier = (q: SATTestQuestion) => !ctx.difficulty || (q.difficulty ?? 'medium') === ctx.difficulty
   const tiers = [
@@ -329,6 +393,54 @@ async function drawDomain(
       }
     }
   }
+  return picked
+}
+
+/**
+ * PSAT draw: like drawDomain's SAT path (this form first, round-robin by slug)
+ * but tier preference comes from the module's profile and hard-tier items stop
+ * once the module's cap is reached. The cap accrues per call (count × share),
+ * so hard items spread across domains instead of the first domain taking them
+ * all. Only if every capped bucket runs dry does a last pass allow more hard
+ * items, so a thin pool still fills its module.
+ */
+function drawProfiled(candidates: SATTestQuestion[], count: number, ctx: BuildContext): SATTestQuestion[] {
+  const state = ctx.psat!
+  const formOf = ctx.formOf ?? practiceFormOf
+  state.owed += count * state.profile.hardShare
+  const hardLeft = () => Math.floor(state.owed + 1e-9) - state.used
+  const inForm = (q: SATTestQuestion) => formOf(q.id ?? q.question) === ctx.form
+  const tierOf = (q: SATTestQuestion) => q.difficulty ?? 'medium'
+  const prefer = state.profile.prefer
+  const buckets: SATTestQuestion[][] = []
+  for (const form of [true, false]) {
+    const pool = candidates.filter((q) => inForm(q) === form)
+    if (prefer.length === 0) buckets.push(pool)
+    else for (const tier of prefer) buckets.push(pool.filter((q) => tierOf(q) === tier))
+  }
+
+  const picked: SATTestQuestion[] = []
+  const take = (bucket: SATTestQuestion[], capHard: boolean) => {
+    const bySlug = new Map<string, SATTestQuestion[]>()
+    for (const q of shuffle(bucket, ctx.rng)) bySlug.set(q.sourceSlug, [...(bySlug.get(q.sourceSlug) ?? []), q])
+    const queues = [...bySlug.values()]
+    while (picked.length < count && queues.some((queue) => queue.length > 0)) {
+      for (const queue of queues) {
+        if (picked.length >= count) break
+        const q = queue.shift()
+        if (!q || ctx.usedStems.has(stemOf(q.question))) continue
+        if (capHard && isHard(q) && hardLeft() <= 0) continue
+        ctx.usedStems.add(stemOf(q.question))
+        if (isHard(q)) state.used++
+        picked.push(q)
+      }
+    }
+  }
+  for (const bucket of buckets) {
+    if (picked.length >= count) break
+    take(bucket, true)
+  }
+  if (picked.length < count) take(candidates, false)
   return picked
 }
 
@@ -366,9 +478,10 @@ function passageQuestions(p: ReadingPassage): SATTestQuestion[] {
 /** Whole passages up to `maxQuestions`: this form's passages first, then others. */
 function drawPassages(maxQuestions: number, ctx: BuildContext): SATTestQuestion[] {
   const available = SAT_PASSAGES.filter((p) => !ctx.usedPassageIds.has(p.id))
+  const formOf = ctx.formOf ?? practiceFormOf
   const ordered = [
-    ...shuffle(available.filter((p) => practiceFormOf(p.id) === ctx.form), ctx.rng),
-    ...shuffle(available.filter((p) => practiceFormOf(p.id) !== ctx.form), ctx.rng),
+    ...shuffle(available.filter((p) => formOf(p.id) === ctx.form), ctx.rng),
+    ...shuffle(available.filter((p) => formOf(p.id) !== ctx.form), ctx.rng),
   ]
   // Passage prompts are generic ("Which choice best states the main idea of the
   // text?"), so a passage question is keyed by passage + prompt; keying on the
@@ -391,6 +504,7 @@ function drawPassages(maxQuestions: number, ctx: BuildContext): SATTestQuestion[
 /* ------------------------------------------------------------------ */
 
 async function generateRWModule(count: number, ctx: BuildContext): Promise<SATTestQuestion[]> {
+  startModule(ctx)
   const passageQs = drawPassages(RW_PASSAGE_QUESTIONS, ctx)
   const byDomain = new Map<RWDomain, SATTestQuestion[]>(RW_DOMAIN_ORDER.map((d) => [d, []]))
   for (const q of passageQs) byDomain.get(q.domain as RWDomain)!.push(q)
@@ -446,24 +560,39 @@ function gridInsToTestQuestions(problems: GridInProblem[], salt: string): SATTes
  * by student-produced-response (grid-in) items, as on the digital SAT.
  */
 async function generateMathModule(ctx: BuildContext): Promise<SATTestQuestion[]> {
+  startModule(ctx)
   const generated = withSeededRandom(ctx.seed, () => generateGridInProblems(60))
-  const gridPool = gridInsToTestQuestions(generated, String(ctx.seed)).filter(
+  let gridPool = gridInsToTestQuestions(generated, String(ctx.seed)).filter(
     (q) => !ctx.usedStems.has(stemOf(q.question)),
   )
+  const gridTotal = Object.values(GRID_IN_QUOTA).reduce((a, b) => a + b, 0)
+  const psat = ctx.psat
+  if (psat) {
+    // PSAT: grid-ins follow the module's tier preference and share its hard cap.
+    const rank = (q: SATTestQuestion) => {
+      const i = psat.profile.prefer.indexOf(q.difficulty ?? 'medium')
+      return i < 0 ? psat.profile.prefer.length : i
+    }
+    gridPool = gridPool.map((q, i) => ({ q, i })).sort((a, b) => rank(a.q) - rank(b.q) || a.i - b.i).map((x) => x.q)
+    psat.owed += gridTotal * psat.profile.hardShare
+  }
   const gridIns: SATTestQuestion[] = []
-  const takeGrid = (domain: MathDomain | null, n: number) => {
+  const takeGrid = (domain: MathDomain | null, n: number, capHard = true) => {
     for (const q of gridPool) {
       if (n <= 0) break
       if (gridIns.includes(q) || (domain && q.domain !== domain)) continue
-      if (ctx.difficulty === 'hard' && q.difficulty === 'easy') continue
+      if (psat) {
+        if (capHard && isHard(q) && Math.floor(psat.owed + 1e-9) - psat.used <= 0) continue
+        if (isHard(q)) psat.used++
+      } else if (ctx.difficulty === 'hard' && q.difficulty === 'easy') continue
       gridIns.push(q)
       ctx.usedStems.add(stemOf(q.question))
       n--
     }
   }
-  const gridTotal = Object.values(GRID_IN_QUOTA).reduce((a, b) => a + b, 0)
   for (const [domain, n] of Object.entries(GRID_IN_QUOTA) as [MathDomain, number][]) takeGrid(domain, n)
   if (gridIns.length < gridTotal) takeGrid(null, gridTotal - gridIns.length)
+  if (psat && gridIns.length < gridTotal) takeGrid(null, gridTotal - gridIns.length, false)
 
   const mcq: SATTestQuestion[] = []
   for (const [domain, quota] of Object.entries(MATH_MODULE_QUOTA) as [MathDomain, number][]) {
@@ -553,7 +682,21 @@ export function analyzePerformance(
 export async function generateFullTest(testNumber: number): Promise<SATFullTest> {
   // One context across all four modules: no passage or question repeats
   // within the test.
-  const ctx = newContext(testNumber, 'full')
+  return assembleFullTest(testNumber, newContext(testNumber, 'full'))
+}
+
+/**
+ * Generate adaptive PSAT/NMSQT Practice Test N: the SAT's structure (2×27 R&W
+ * in 32 min, 2×22 Math in 35 min) drawn from the same pools, on one of
+ * PSAT_FORM_COUNT fixed PSAT forms, with Module 1 (and the pre-built Module 2)
+ * held to PSAT_DIFFICULTY_PROFILE.module1.
+ */
+export async function generatePsatFullTest(testNumber: number): Promise<SATFullTest> {
+  const test = await assembleFullTest(testNumber, newPsatContext(testNumber, 'full', PSAT_DIFFICULTY_PROFILE.module1))
+  return { ...test, exam: 'psat' }
+}
+
+async function assembleFullTest(testNumber: number, ctx: BuildContext): Promise<SATFullTest> {
   const rw1 = await generateRWModule(27, ctx)
   const rw2 = await generateRWModule(27, ctx)
   const math1 = await generateMathModule({ ...ctx, seed: ctx.seed ^ 0x1 })
@@ -590,9 +733,13 @@ export async function regenerateModule2(
   usedQuestionTexts: Set<string>,
   usedPassageIds: Set<string> = new Set(),
   testNumber = 1,
+  exam: SatExam = 'sat',
 ): Promise<SATTestSection> {
+  const salt = `m2-${section.section}-${tier}`
   const ctx: BuildContext = {
-    ...newContext(testNumber, `m2-${section.section}-${tier}`),
+    ...(exam === 'psat'
+      ? newPsatContext(testNumber, salt, tier === 'hard' ? PSAT_DIFFICULTY_PROFILE.harder : PSAT_DIFFICULTY_PROFILE.easier)
+      : newContext(testNumber, salt)),
     usedStems: new Set([...usedQuestionTexts].map(stemOf)),
     usedPassageIds: new Set(usedPassageIds),
     difficulty: tier,
@@ -658,8 +805,12 @@ function memo<T>(cache: Map<string, Promise<T>>, key: string, build: () => Promi
   return hit
 }
 
+/** Cache-key prefix per exam ('' for the SAT, so its keys are unchanged). */
+const examKey = (exam: SatExam | undefined) => (exam === 'psat' ? 'psat:' : '')
+
 /** The unrouted form exactly as the runner first serves it. Shared: treat as read-only. */
-function baseForm(testNumber: number, format: SatTestFormat): Promise<SATFullTest> {
+function baseForm(testNumber: number, format: SatTestFormat, exam: SatExam = 'sat'): Promise<SATFullTest> {
+  if (exam === 'psat') return memo(baseFormCache, `psat:full:${testNumber}`, () => generatePsatFullTest(testNumber))
   return memo(baseFormCache, `${format}:${testNumber}`, () =>
     format === 'full' ? generateFullTest(testNumber) : generateMiniTest(testNumber),
   )
@@ -673,15 +824,16 @@ function baseForm(testNumber: number, format: SatTestFormat): Promise<SATFullTes
  * returns the pre-built section unchanged. Cached per path; read-only.
  */
 export async function routedModule2(
-  test: Pick<SATFullTest, 'testNumber' | 'format'>,
+  test: Pick<SATFullTest, 'testNumber' | 'format' | 'exam'>,
   moduleIndex: number,
   tier: SatRoute | null,
 ): Promise<SATTestSection> {
-  const base = await baseForm(test.testNumber, test.format)
+  const exam: SatExam = test.exam === 'psat' ? 'psat' : 'sat'
+  const base = await baseForm(test.testNumber, test.format, exam)
   const section = base.sections[moduleIndex]
-  if (!section) throw new Error(`SAT form ${test.format}:${test.testNumber} has no module ${moduleIndex}`)
+  if (!section) throw new Error(`${exam.toUpperCase()} form ${test.format}:${test.testNumber} has no module ${moduleIndex}`)
   if (!tier || section.moduleNum !== 2) return section
-  return memo(routedModuleCache, `${test.format}:${test.testNumber}:${moduleIndex}:${tier}`, () => {
+  return memo(routedModuleCache, `${examKey(exam)}${test.format}:${test.testNumber}:${moduleIndex}:${tier}`, () => {
     const used = new Set(base.sections.flatMap((s) => s.questions.map((q) => q.question)))
     // Passages from every OTHER module are off limits, so the routed Module 2
     // never repeats a passage the student already read.
@@ -690,7 +842,7 @@ export async function routedModule2(
         .filter((_, i) => i !== moduleIndex)
         .flatMap((s) => s.questions.flatMap((q) => (q.passage ? [q.passage.id] : []))),
     )
-    return regenerateModule2(section, routeDifficulty(tier), used, usedPassageIds, test.testNumber)
+    return regenerateModule2(section, routeDifficulty(tier), used, usedPassageIds, test.testNumber, exam)
   })
 }
 
@@ -706,9 +858,35 @@ export function buildSatForm(
   rwTier: SatRoute | null = null,
   mathTier: SatRoute | null = null,
 ): Promise<SATFullTest> {
-  if (format !== 'full' || (!rwTier && !mathTier)) return baseForm(testNumber, format)
-  return memo(builtFormCache, `${format}:${testNumber}:${rwTier}:${mathTier}`, async () => {
-    const base = await baseForm(testNumber, format)
+  return buildExamForm('sat', testNumber, format, rwTier, mathTier)
+}
+
+/**
+ * Deterministic rebuild of adaptive PSAT/NMSQT Practice Test N (1 to
+ * PSAT_FORM_COUNT) for a pair of Module 2 routes — the PSAT counterpart of
+ * buildSatForm, used by the runner, the server grader and the review page.
+ * Always full length. Cached per path; treat the result as read-only.
+ */
+export function buildPsatForm(
+  testNumber: number,
+  rwTier: SatRoute | null = null,
+  mathTier: SatRoute | null = null,
+): Promise<SATFullTest> {
+  return buildExamForm('psat', testNumber, 'full', rwTier, mathTier)
+}
+
+/** buildSatForm / buildPsatForm by exam. */
+export function buildExamForm(
+  exam: SatExam,
+  testNumber: number,
+  format: SatTestFormat,
+  rwTier: SatRoute | null = null,
+  mathTier: SatRoute | null = null,
+): Promise<SATFullTest> {
+  if (exam === 'psat') format = 'full'
+  if (format !== 'full' || (!rwTier && !mathTier)) return baseForm(testNumber, format, exam)
+  return memo(builtFormCache, `${examKey(exam)}${format}:${testNumber}:${rwTier}:${mathTier}`, async () => {
+    const base = await baseForm(testNumber, format, exam)
     const sections: SATTestSection[] = []
     for (let i = 0; i < base.sections.length; i++) {
       const s = base.sections[i]
@@ -728,4 +906,11 @@ export const PRACTICE_TESTS = [
   { id: 3, title: 'Practice Test 3', description: 'Full-length Digital SAT simulation with all sections', difficulty: 'Standard' },
   { id: 4, title: 'Practice Test 4', description: 'Full-length Digital SAT simulation with all sections', difficulty: 'Standard' },
   { id: 5, title: 'Practice Test 5', description: 'Full-length Digital SAT simulation with all sections', difficulty: 'Standard' },
+] as const
+
+/** The adaptive PSAT/NMSQT practice forms (fixed; see buildPsatForm). */
+export const PSAT_PRACTICE_TESTS = [
+  { id: 1, title: 'PSAT Practice Test 1', description: 'Full-length adaptive Digital PSAT/NMSQT simulation' },
+  { id: 2, title: 'PSAT Practice Test 2', description: 'Full-length adaptive Digital PSAT/NMSQT simulation' },
+  { id: 3, title: 'PSAT Practice Test 3', description: 'Full-length adaptive Digital PSAT/NMSQT simulation' },
 ] as const

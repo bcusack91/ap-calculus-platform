@@ -2,6 +2,7 @@ import type { QuestionRow } from '@/lib/study-tracking'
 import { questionKey } from '@/lib/question-key'
 import { SAT_DOMAIN_LABELS } from '@/data/sat-practice/test-generator'
 import type { SatGradedItem } from '@/lib/sat-practice-grading'
+import { chosenOptionKey } from '@/lib/question-activity-rows'
 
 /**
  * QuestionActivity rows for one SAT practice test: one PRACTICE row per
@@ -39,6 +40,8 @@ export function satPracticeRows(
       itemIndex: item.itemIndex,
       chosenIndex: item.selectedIndex,
       chosenText: item.textValue,
+      // Multiple choice only: a grid-in has no options (selectedIndex null).
+      chosenKey: q.gridIn ? null : chosenOptionKey(q.options, item.selectedIndex),
       flagged: item.flagged,
       ...(opts.answeredAt ? { answeredAt: opts.answeredAt } : {}),
     }

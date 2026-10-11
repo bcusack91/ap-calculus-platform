@@ -46,6 +46,12 @@ export const FL6_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Mean warmth on algebra problems climbs from about 2 to nearly 6 across the five tones, whereas on insight puzzles it stays near 2 until the answer is written, so solvers could feel an algebra solution coming but not an insight solution. Insight ratings are lower than algebra ratings at every tone, not higher. A steady approach on both types would require the insight line to rise, and it is essentially flat. Early progress that was later lost would appear as a line that starts high and falls, which neither series shows.',
+        optionExplanations: [
+          'Insight ratings are lower than algebra ratings at every tone (about 2 versus 2.1 to 5.7), not higher. This reverses the direction of the difference in Figure 1.',
+          'A steady approach on both types would require the insight line to rise, and it is essentially flat at about 2 across all five tones. Only the algebra line shows a steady climb.',
+          'Mean warmth on algebra problems climbs from about 2 to nearly 6 across the five tones, whereas on insight puzzles it stays near 2 until the answer is written. Solvers could feel an algebra solution coming but had little warning of an insight solution.',
+          'Early progress that was later lost would appear as a line that starts high and falls. The insight line never rises; it is flat near 2 throughout, so there was no sensed early progress to lose.',
+        ],
         skill: '6B data interpretation: insight vs incremental solving',
       },
       {
@@ -59,6 +65,12 @@ export const FL6_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'A break improved second-attempt success only for puzzles that had been presented with misleading associates (18% versus 41%) and did nothing for puzzles presented without them (28% versus 30%). That is what the forgetting-fixation account predicts: time away matters when there is a wrong approach to lose. Unconscious work would continue on any unsolved puzzle, so it predicts a benefit for both puzzle types, and every puzzle was shown again without associates, so that feature cannot explain a selective benefit. Recovery from fatigue would likewise help both types, and nothing indicates that the cued puzzles, displayed for the same 30 seconds, were more tiring.',
+        optionExplanations: [
+          'A break improved second-attempt success only for puzzles presented with misleading associates (18% versus 41%) and did nothing for puzzles without them (28% versus 30%). That is what forgetting fixation predicts: time away matters only when there is a wrong approach to lose.',
+          'Unconscious work would continue on any unsolved puzzle, so it predicts a benefit for both puzzle types. The break helped only the cued puzzles, which this account cannot explain.',
+          'Recovery from fatigue would help both puzzle types, and nothing indicates that the cued puzzles, displayed for the same 30 seconds, were more tiring. The selective benefit is not predicted.',
+          'Every puzzle was shown again without associates in both conditions, so that feature cannot explain why the break helped only puzzles originally shown with associates. It does not distinguish the puzzle types.',
+        ],
         skill: '6B incubation and fixation (reasoning)',
       },
       {
@@ -73,6 +85,12 @@ export const FL6_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'If participants expected the puzzles to return, they could keep thinking about them while supposedly reading, and any benefit of the break could then reflect extra conscious work rather than incubation; withholding the information guards against that. Participants saw for themselves which puzzles carried associates, and news of a second attempt would not change that. Both conditions saw each unsolved puzzle exactly twice regardless of what participants were told. Puzzle difficulty was equated by random assignment of participants and of cues, not by instructions.',
+        optionExplanations: [
+          'Participants saw for themselves which puzzles carried associates during the first attempt. News of a second attempt would not change what they could already observe.',
+          'Both conditions saw each unsolved puzzle exactly twice regardless of what participants were told. The number of exposures was fixed by the design, not by the instruction.',
+          'Puzzle difficulty was equated by random assignment of participants and of cues, not by instructions. Withholding information about the second attempt does nothing to balance difficulty.',
+          'If participants expected the puzzles to return, they could keep thinking about them while supposedly reading, and any benefit of the break could reflect extra conscious work rather than incubation. Withholding the information guards against that.',
+        ],
         skill: '6B research design: controlling conscious work in incubation',
       },
       {
@@ -87,6 +105,12 @@ export const FL6_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Because every participant attempted both kinds of problem, the very people whose insight ratings stayed flat reported rising warmth as they neared algebra solutions, which shows that they were able and willing to update ratings when they sensed progress. An equal time limit does not bear on whether ratings were updated. Backward alignment is what allows the two curves to be compared, but it does not show that participants could report progress. Random ordering controls for practice and fatigue across problems, not for absorption near a solution.',
+        optionExplanations: [
+          'An equal time limit does not bear on whether ratings were updated. It equates opportunity to solve, not willingness or ability to report progress near a solution.',
+          'Because every participant attempted both kinds of problem, the very people whose insight ratings stayed flat reported rising warmth as they neared algebra solutions. This shows they were able and willing to update ratings when they sensed progress.',
+          'Backward alignment is what allows the two curves to be compared, but it does not show that participants could report progress when absorbed. It is a data-handling step, not a check on reporting.',
+          'Random ordering controls for practice and fatigue across problems, not for absorption near a solution. It does not address whether participants updated their ratings.',
+        ],
         skill: '6B research design: within-subjects comparison',
       },
       {
@@ -96,6 +120,12 @@ export const FL6_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'On the forgetting-fixation account the break helps because the misleading associates lose strength while the solver is occupied elsewhere. Keeping them in view would maintain their strength, so the break should confer no advantage and the success rate should match the 18% seen when cued puzzles were retried immediately. A value of 41% would mean the break helped just as much with the associates still present, which is what an unconscious-work or fatigue account would predict. A value of 30% is the rate for puzzles that never carried associates and has no basis for this group, and 60% would mean that continued exposure to misleading words aided solution.',
+        optionExplanations: [
+          'On the forgetting-fixation account the break helps because the misleading associates lose strength while the solver is occupied elsewhere. Keeping them in view maintains their strength, so the break confers no advantage and success should match the 18% seen when cued puzzles were retried immediately.',
+          'A value of 30% is the rate for puzzles that never carried associates. It has no basis for this group, whose puzzles all carried associates that remained in view.',
+          'A value of 41% would mean the break helped just as much with the associates still present. That is what an unconscious-work or fatigue account would predict, not the forgetting-fixation account.',
+          'A value of 60% would mean that continued exposure to misleading words aided solution beyond any observed rate. No account predicts that keeping fixating cues in view improves performance.',
+        ],
         skill: '6B incubation: predicting from a hypothesis',
       },
     ],
@@ -124,6 +154,12 @@ export const FL6_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Shared histories of similar offenses and advance talk of confrontation indicate that the rioters brought their dispositions with them, which is the claim of convergence theory: the crowd gathered like-minded people rather than changing them. Contagion theory would be supported by evidence that ordinary spectators were swept up by spreading emotion, and an emotionally charged setting alone does not show that. The offenders knew one another and had traveled together, so anonymity among strangers is contradicted. Emergent-norm theory requires uncertainty resolved on the spot, whereas these offenders had settled on their conduct beforehand.',
+        optionExplanations: [
+          'Contagion theory would be supported by evidence that ordinary spectators were swept up by spreading emotion. An emotionally charged setting alone does not show that; the records show prior intent, not transformation by the crowd.',
+          'Shared histories of similar offenses and advance talk of confrontation indicate the rioters brought their dispositions with them. That is convergence theory: the crowd gathered like-minded people rather than changing them.',
+          'Emergent-norm theory requires uncertainty resolved on the spot as a few people act. These offenders had settled on their conduct beforehand through messages, so they were not unsure how to act.',
+          'The offenders knew one another and had traveled together, so anonymity among strangers is directly contradicted by the records. Contagion theory’s mechanism of anonymity does not apply.',
+        ],
         skill: '9A crowd theories (application)',
       },
       {
@@ -138,6 +174,12 @@ export const FL6_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'In the proposal, rumor intensity is the product of importance and ambiguity, so removing ambiguity by giving specific, verifiable information drives the product toward zero even though the topic remains important. Discouraging discussion changes neither term and leaves staff with the same unanswered questions. Stressing that every unit’s future is at stake raises importance while leaving ambiguity intact, which should intensify the rumor. Punishing the first tellers addresses the source rather than the conditions that make the rumor worth repeating.',
+        optionExplanations: [
+          'Discouraging discussion changes neither importance nor ambiguity and leaves staff with the same unanswered questions. The product of the two terms stays high.',
+          'Stressing that every unit’s future is at stake raises importance while leaving ambiguity intact, which should intensify the rumor rather than weaken it.',
+          'Punishing the first tellers addresses the source rather than the conditions that make the rumor worth repeating. Importance and ambiguity remain, so the rumor would continue through others.',
+          'In the proposal, rumor intensity is the product of importance and ambiguity. Removing ambiguity by giving specific, verifiable information drives the product toward zero even though the topic remains important.',
+        ],
         skill: '9A rumor (applying a model)',
       },
       {
@@ -152,6 +194,12 @@ export const FL6_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Teenagers were cast as a threat, the media and officials magnified the concern, and the reaction was disproportionate to a problem that the data show was shrinking; these are the defining features of a moral panic. A panic is uncoordinated flight or self-protection in the face of an immediate threat, not a legislative response. Mass hysteria involves anxiety or bodily symptoms spreading through a group, and no symptoms are described. A social movement is a sustained, organized effort, whereas this was a brief burst of amplified concern.',
+        optionExplanations: [
+          'A panic is uncoordinated flight or self-protection in the face of an immediate threat, such as a bank run. A legislative response after media coverage is not sudden self-protective action.',
+          'Mass hysteria involves anxiety or bodily symptoms spreading through a group without a physical cause. No symptoms are described here.',
+          'Teenagers were cast as a threat, the media and officials magnified the concern, and the reaction was disproportionate to a problem the data show was shrinking. These are the defining features of a moral panic.',
+          'A social movement is a sustained, organized effort directed at a defined goal. This was a brief burst of amplified concern, not an organized, enduring campaign.',
+        ],
         skill: '9A forms of collective behavior: moral panic',
       },
       {
@@ -165,6 +213,12 @@ export const FL6_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Modernization theory predicts that late industrializers will come to resemble early ones, with kinship giving way to specialized institutions and religion receding from public life; industrial societies that retain kin-based firms and strong religious authority show that there is more than one path, which undercuts the claim of common stages. Migration to factory towns in early industrializers is the urbanization the theory describes. Agricultural, family-based work in societies with little industry matches its picture of the traditional starting point. Growth of schooling and bureaucracy during industrialization is exactly what it expects.',
+        optionExplanations: [
+          'Modernization theory predicts late industrializers will come to resemble early ones, with kinship giving way to specialized institutions and religion receding. Industrial societies that retain kin-based firms and strong religious authority show more than one path, undercutting the common-stages claim.',
+          'Migration to factory towns in early industrializers is the urbanization the theory describes. It confirms rather than challenges the predicted shift from villages to cities.',
+          'Agricultural, family-based work in societies with little industry matches the theory’s picture of the traditional starting point. It is what the theory expects before industrialization.',
+          'Growth of schooling and bureaucracy during industrialization is exactly what the theory predicts. This observation supports rather than challenges it.',
+        ],
         skill: '9B modernization theory (evaluating evidence)',
       },
     ],
@@ -193,6 +247,12 @@ export const FL6_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The passage shows that testosterone responds to social experience, rising before contests and staying high after wins, so a group with more confrontations in its past and present could have higher concentrations as a result of its behavior rather than as the cause of it. The gland that supplied the hormone does not affect whether the hormone causes violence. Castration and replacement in adult animals show that testosterone has activational effects in maturity, so adult concentrations are not irrelevant. The contest-related changes occur in chess players too, so exertion is not what drives them, and nothing indicates the groups differed in activity.',
+        optionExplanations: [
+          'The gland that supplied the hormone does not affect whether the hormone causes violence. Adrenal versus testicular origin is irrelevant to the causal inference.',
+          'Castration and replacement in adult animals show that testosterone has activational effects in maturity, so adult concentrations are not irrelevant. The passage explicitly describes both organizational and activational effects.',
+          'The contest-related changes occur in chess players too, so exertion is not what drives them, and nothing indicates the groups differed in activity. This objection rests on a claim the passage undercuts.',
+          'The passage shows that testosterone responds to social experience, rising before contests and staying high after wins. A group with more confrontations in its past could have higher concentrations as a result of its behavior rather than as the cause of it.',
+        ],
         skill: '6A testosterone and aggression: direction of causation',
       },
       {
@@ -206,6 +266,12 @@ export const FL6_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Steroids are lipid soluble, so testosterone diffuses across the plasma membrane, binds an intracellular receptor, and the hormone–receptor complex regulates transcription, which is why steroid effects are slow in onset and long lasting. Peptides such as oxytocin cannot cross the membrane and instead bind surface receptors coupled to second messengers. Peptides, not steroids, are packaged in vesicles and released from terminals; steroids are made on demand and diffuse out of the cell. Steroids travel bound to carrier proteins and persist far longer than seconds.',
+        optionExplanations: [
+          'Surface receptors coupled to second messengers are how peptides such as oxytocin act, because peptides cannot cross the membrane. Testosterone, a steroid, does not need a surface receptor.',
+          'Steroids are lipid soluble, so testosterone diffuses across the plasma membrane, binds an intracellular receptor, and the complex regulates transcription. That is why steroid effects are slow in onset and long lasting.',
+          'Peptides, not steroids, are packaged in vesicles and released from axon terminals. Steroids are made on demand and diffuse out of the cell as they are synthesized.',
+          'Steroids travel bound to carrier proteins and persist far longer than seconds. Rapid breakdown and local action describe neurotransmitters, not steroid hormones.',
+        ],
         skill: '6A steroid vs peptide hormone action',
       },
       {
@@ -220,6 +286,12 @@ export const FL6_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'If adding receptors to the accumbens of the non-bonding species is enough to produce bonding, then receptor location is what separates the species, which is the conclusion at issue. Blocking receptors in prairie voles shows that oxytocin signaling is necessary in that species but says nothing about why montane voles differ. Greater release during mating describes when the hormone is secreted within one species, not a difference between species. Lower hormone concentrations in montane voles would point to the amount of hormone rather than to receptor location as the explanation.',
+        optionExplanations: [
+          'If adding accumbens receptors to the non-bonding species is enough to produce bonding, then receptor location is what separates the species. This directly tests the conclusion at issue.',
+          'Blocking receptors in prairie voles shows that oxytocin signaling is necessary in that species but says nothing about why montane voles differ. The passage already reports this finding.',
+          'Greater release during mating describes when the hormone is secreted within one species, not a difference between species. It does not address receptor location.',
+          'Lower hormone concentrations in montane voles would point to the amount of hormone rather than to receptor location as the explanation. It would weaken, not strengthen, the receptor-location conclusion.',
+        ],
         skill: '6A oxytocin and pair bonding (evaluating evidence)',
       },
       {
@@ -234,6 +306,12 @@ export const FL6_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The team studies described in the passage indicate that oxytocin strengthens behavior toward people with whom a tie already exists, so sharing should rise for the fellow club member while the rival gains nothing. An equal rise for both recipients is what the “love hormone” label would predict, and the passage rejects that description. A larger rise for the rival reverses the reported favoritism toward one’s own side. An overall decrease conflicts with the finding that oxytocin raises the sums entrusted to partners.',
+        optionExplanations: [
+          'An equal rise for both recipients is what the “love hormone” label would predict, and the passage rejects that description. Oxytocin does not increase generosity toward members of the other team.',
+          'A larger rise for the rival reverses the reported favoritism toward one’s own side. The passage says oxytocin increases favoritism toward teammates, not toward outsiders.',
+          'The team studies described in the passage indicate that oxytocin strengthens behavior toward people with whom a tie already exists. Sharing should rise for the fellow club member while the rival gains nothing.',
+          'An overall decrease conflicts with the finding that oxytocin raises the sums entrusted to partners in money games. Oxytocin increases, not decreases, in-group sharing.',
+        ],
         skill: '6A oxytocin and in-group behavior (application)',
       },
     ],
@@ -263,6 +341,12 @@ export const FL6_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Cooperation rose over the game only against tit-for-tat (60% to 74%), the one program whose choices were contingent on the participant’s; against a partner who cooperated unconditionally it fell from 62% to 45%. The most trusted partner was the always-cooperate program (5.9), yet late cooperation with it was well below the tit-for-tat value, so trust ratings did not track late cooperation. Early-round cooperation was nearly identical (58–62%) across programs, as it must be before participants could learn the partner’s rule. The always-cooperate program cooperated on every round and still did not sustain cooperation, so frequency alone was not enough.',
+        optionExplanations: [
+          'Cooperation rose over the game only against tit-for-tat (60% to 74%), the one program whose choices were contingent on the participant’s. Against a partner who cooperated unconditionally it fell from 62% to 45%.',
+          'The most trusted partner was the always-cooperate program (5.9), yet late cooperation with it was 45%, well below the tit-for-tat value of 74%. Trust ratings did not track late cooperation.',
+          'Early-round cooperation was nearly identical (58–62%) across programs, as it must be before participants could learn the partner’s rule. There was no early advantage for reciprocating partners.',
+          'The always-cooperate program cooperated on every round and still did not sustain cooperation; late cooperation fell to 45%. Frequency of cooperation alone was not enough.',
+        ],
         skill: '8C data interpretation: conditional cooperation',
       },
       {
@@ -277,6 +361,12 @@ export const FL6_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'If the other player cooperates, she earns 5 by defecting rather than 3 by cooperating; if the other defects, she earns 1 by defecting rather than 0 by cooperating. Defection is better for her in both cases, which is what makes the situation a dilemma. Mutual cooperation does beat mutual defection, but she cannot secure it by her own choice and would still gain by defecting from it. Matching the expected choice gives up 2 points when the other cooperates. Defecting only against a cooperator gives up 1 point when the other defects.',
+        optionExplanations: [
+          'Mutual cooperation does beat mutual defection, but she cannot secure it by her own choice and would still gain by defecting from it (5 instead of 3). Cooperating does not maximize her points.',
+          'Matching the expected choice gives up 2 points when the other cooperates (3 instead of 5). Defecting dominates regardless of what she expects.',
+          'If the other cooperates, she earns 5 by defecting rather than 3 by cooperating; if the other defects, she earns 1 by defecting rather than 0. Defection is better in both cases, which is what makes the situation a dilemma.',
+          'Defecting only against a cooperator gives up 1 point when the other defects (0 instead of 1). Defection is also the better choice against a defector, so the condition is unnecessary.',
+        ],
         skill: '8C prisoner’s dilemma payoff reasoning',
       },
       {
@@ -291,6 +381,12 @@ export const FL6_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Tit-for-tat punishes a defection on the following round, so defection is costly only when there is a following round; participants who knew that round 20 was the last could take the 5-point payoff with nothing to fear, whereas those who thought the game might continue still had a reason to cooperate. Both groups faced the same program for the same rounds, so their experience of the partner, and hence their trust and their accumulated points, should not have differed before round 20. Knowing the number of rounds gives no additional reason to suspect a program.',
+        optionExplanations: [
+          'Both groups faced the same tit-for-tat program for the same rounds, so their experience of the partner, and hence their trust, should not have differed before round 20.',
+          'Tit-for-tat punishes a defection on the following round, so defection is costly only when a following round exists. Participants who knew round 20 was last could take the 5-point payoff with nothing to fear, whereas those who thought the game might continue still had reason to cooperate.',
+          'Both groups played the same program for the same number of rounds, so their accumulated points should not have differed before round 20. There is no basis for a recovery motive.',
+          'Knowing the number of rounds gives no additional reason to suspect a program. Both groups were told the same cover story about a student in another room.',
+        ],
         skill: '8C repeated interaction and cooperation (reasoning)',
       },
       {
@@ -300,6 +396,12 @@ export const FL6_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'This program cooperated on every round, so a participant earned 3 points on each round in which she cooperated and 5 points on each round in which she defected. Participants cooperated on 45% of these rounds and defected on 55%, giving 0.45 × 3 + 0.55 × 5 = 1.35 + 2.75 = 4.1 points per round. A value of 1.9 wrongly assigns the mutual-defection payoff of 1 point to the rounds on which participants defected, although the program was still cooperating. A value of 3.0 assumes that participants always cooperated. A value of 3.9 comes from reversing the two percentages (0.55 × 3 + 0.45 × 5).',
+        optionExplanations: [
+          'A value of 1.9 wrongly assigns the mutual-defection payoff of 1 point to the rounds on which participants defected. The program was still cooperating, so a defecting participant earned 5, not 1.',
+          'A value of 3.0 assumes that participants always cooperated against this program. In rounds 16–20 they cooperated only 45% of the time, earning 5 points on the remaining rounds.',
+          'A value of 3.9 comes from reversing the two percentages (0.55 × 3 + 0.45 × 5). Participants cooperated 45% of the time, not 55%, so the heavier weight belongs on the 5-point rounds.',
+          'This program cooperated on every round, so a participant earned 3 on each cooperative round and 5 on each defecting round. Cooperating 45% and defecting 55% gives 0.45 × 3 + 0.55 × 5 = 1.35 + 2.75 = 4.1 points per round.',
+        ],
         skill: '8C data interpretation: expected payoff from a table',
       },
       {
@@ -313,6 +415,12 @@ export const FL6_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Each crew does better by overfishing whatever the other does, yet if both overfish the stock collapses and both end up worse off than if both had held back, which is the same structure as the game. Rival bidders are in pure competition: no outcome exists that is better for both, so there is nothing to cooperate on. Coworkers who want the same meeting time have no temptation to do otherwise. A voluntary trade that benefits both parties likewise involves no conflict between individual and joint interest.',
+        optionExplanations: [
+          'Rival bidders are in pure competition: no outcome exists that is better for both, so there is nothing to cooperate on. A social dilemma requires a joint outcome preferable to mutual defection.',
+          'Coworkers who want the same meeting time have no temptation to do otherwise. There is no conflict between individual and joint interest, so no dilemma arises.',
+          'Each crew does better by overfishing whatever the other does, yet if both overfish the stock collapses and both end up worse off than if both had held back. That is the same structure as the game.',
+          'A voluntary trade that benefits both parties involves no conflict between individual and joint interest. Neither farmer is tempted to defect, so this is not a social dilemma.',
+        ],
         skill: '8C social dilemmas (concept)',
       },
     ],
@@ -355,6 +463,12 @@ export const FL6_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'At 1 week the massed-restudy group recalled 48% after predicting 71%, an overestimate of 23 points, whereas the massed-retrieval group recalled 60% after predicting 56% and the spaced-retrieval group recalled 66% after predicting 54%, so both retrieval groups did better than they expected. Because two groups underestimated, it is not true that all three overestimated. The spaced-retrieval group’s error was the largest underestimate, not an overestimate. Because the restudy group overestimated, it is not true that all three underestimated.',
+        optionExplanations: [
+          'Both retrieval groups underestimated: massed retrieval recalled 60% after predicting 56%, and spaced retrieval recalled 66% after predicting 54%. It is not true that all three overestimated.',
+          'At 1 week the massed-restudy group recalled 48% after predicting 71%, an overestimate of 23 points, whereas the massed-retrieval group (56% predicted, 60% recalled) and the spaced-retrieval group (54% predicted, 66% recalled) both did better than expected.',
+          'The spaced-retrieval group predicted 54% and recalled 66%, the largest underestimate of the three. It did not overestimate at all.',
+          'The massed-restudy group recalled 48% after predicting 71%, a clear overestimate. It is therefore not true that all three groups underestimated.',
+        ],
         skill: '6B data interpretation: predicted vs actual retention',
       },
       {
@@ -368,6 +482,12 @@ export const FL6_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'A final test is itself an act of retrieval, so a participant tested at week 1 and again at week 2 would bring extra retrieval practice to the later test; that would contaminate the later scores and would give the restudy group the very treatment it was meant to lack. Total training time was equalized by the four 10-minute periods, not by the testing rule. Participants necessarily knew whether they had studied or been tested during training. Testing each person once means that intervals were compared between participants, the opposite of sampling every interval within each participant.',
+        optionExplanations: [
+          'Total training time was equalized by the four 10-minute periods, not by the testing rule. Every participant spent 40 minutes with the pairs regardless of how many final tests were given.',
+          'Participants necessarily knew whether they had studied or been tested during training. The single-test rule does nothing to conceal the training condition.',
+          'Testing each person once means that intervals were compared between participants, the opposite of sampling every interval within each participant. This option describes a within-subjects design that was deliberately avoided.',
+          'A final test is itself an act of retrieval, so a participant tested at week 1 and again at week 2 would bring extra retrieval practice to the later test. That would contaminate later scores and give the restudy group the very treatment it was meant to lack.',
+        ],
         skill: '6B research design: avoiding repeated-testing contamination',
       },
       {
@@ -381,6 +501,12 @@ export const FL6_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'At 5 minutes the massed-restudy group scored highest (82% versus 74% and 70%), but it then lost more than half of what it could recall, while the retrieval groups declined far less; restudy therefore made the pairs highly available in the short term without protecting them from forgetting. Motivation is not measured, and each subgroup was tested only once, so a loss of motivation over repeated testing cannot be involved. The reversed statement contradicts both ends of the figure. Retrieval practice did not produce more recall at every interval, because the restudy group led at week 0.',
+        optionExplanations: [
+          'At 5 minutes the massed-restudy group scored highest (82% versus 74% and 70%), but it then lost more than half of what it could recall while the retrieval groups declined far less. Restudy made the pairs highly available short-term without protecting them from forgetting.',
+          'Motivation was not measured, and each subgroup was tested only once, so a loss of motivation over repeated testing cannot be involved. Nor did the groups produce equal learning at week 0.',
+          'This reverses both ends of the figure. Restudy, not retrieval, led at week 0, and retrieval practice, not restudy, showed the slower decline over the weeks.',
+          'Retrieval practice did not produce more recall at every interval, because the restudy group led at week 0 (82% versus 74% and 70%). The advantage of retrieval emerged only after a delay.',
+        ],
         skill: '6B testing effect (reasoning from data)',
       },
       {
@@ -395,6 +521,12 @@ export const FL6_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'With 2 days between periods, some forgetting occurred before each retrieval attempt, which made retrieval harder (64% versus 88% correct) but left memories that survived better; the pattern indicates that difficulty during practice can enhance long-term retention. If training performance were a dependable guide, the massed-retrieval group would have retained more. If failed attempts weakened memory, the group with more failures would have retained less. Total training time was 40 minutes in every condition, so added time cannot be the source of the advantage.',
+        optionExplanations: [
+          'If training performance were a dependable guide, the massed-retrieval group (88% correct during training) would have retained more than the spaced group (64%). The opposite occurred.',
+          'If failed attempts weakened memory, the group with more failures during training, the spaced-retrieval group, would have retained less. Instead it retained more at every delayed interval.',
+          'With 2 days between periods, some forgetting occurred before each retrieval attempt, making retrieval harder (64% versus 88% correct) but leaving memories that survived better. Difficulty during practice enhanced long-term retention.',
+          'Total training time was 40 minutes in every condition, so added time cannot be the source of the spacing advantage. Spacing changed the distribution of time, not its amount.',
+        ],
         skill: '6B spacing effect (reasoning)',
       },
     ],
@@ -417,6 +549,12 @@ export const FL6_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'Cuts, fractures, and scalding are tissue-damaging mechanical and thermal stimuli, and they are signaled by nociceptors, the free nerve endings that give rise to pain; losing them abolishes protective reactions while leaving other senses intact. Mechanoreceptors are working, because touch and vibration are normal. Thermoreceptors signal innocuous warmth and coolness, which the child still discriminates; scalding heat is detected by nociceptors. Proprioceptors are working, because the child reports limb position accurately.',
+    optionExplanations: [
+      'Mechanoreceptors are working, because the child detects light touch and vibration normally. A loss of mechanoreceptors would abolish those sensations.',
+      'Thermoreceptors signal innocuous warmth and coolness, which the child still discriminates. Scalding heat is intense enough to be signaled by nociceptors, not thermoreceptors.',
+      'Proprioceptors are working, because the child reports limb position accurately with eyes closed. A proprioceptive loss would impair that ability.',
+      'Cuts, fractures, and scalding are tissue-damaging mechanical and thermal stimuli signaled by nociceptors, the free nerve endings that give rise to pain. Losing them abolishes protective reactions while leaving touch, temperature, and position sense intact.',
+    ],
     skill: '6A somatosensory receptor types',
   },
   {
@@ -434,6 +572,12 @@ export const FL6_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'Responding to the warning signal so that the aversive event never occurs is avoidance, and the response is strengthened because it prevents or removes something unpleasant, which is negative reinforcement. Escape describes the early trials, in which the rat ended a shock that had already begun; escape is also negatively reinforced, so pairing it with positive reinforcement is wrong on both counts. Positive reinforcement of avoidance would require that something desirable be delivered after crossing, and the only consequence of crossing is the absence of shock.',
+    optionExplanations: [
+      'Escape describes the early trials, in which the rat ended a shock that had already begun. Escape is also negatively reinforced, so pairing it with positive reinforcement is wrong on both counts.',
+      'Responding to the warning signal so that the aversive event never occurs is avoidance, and the response is strengthened because it prevents something unpleasant, which is negative reinforcement.',
+      'Negative reinforcement is correct, but the later behavior is avoidance, not escape. Escape would mean ending a shock already in progress; here the rat crosses before any shock occurs.',
+      'Avoidance is correct, but positive reinforcement would require that something desirable be delivered after crossing. The only consequence of crossing is the absence of shock, which is negative reinforcement.',
+    ],
     skill: '7A escape vs avoidance learning',
   },
   {
@@ -451,6 +595,12 @@ export const FL6_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'To answer “the basket,” a child must represent what the puppet believes separately from what the child knows to be true, which is the capacity called theory of mind; younger children answer from their own knowledge. Object permanence is established in infancy, and both age groups know the marble still exists. Conservation concerns quantity across transformations such as pouring, and no quantity is changed. Seriation concerns ordering objects by a property such as length, which the task does not require.',
+    optionExplanations: [
+      'Object permanence is established in infancy, and both age groups know the marble still exists. The task concerns what the puppet believes, not whether the marble persists.',
+      'Conservation concerns quantity across transformations such as pouring, and no quantity is changed here. The marble is simply moved from one container to another.',
+      'To answer “the basket,” a child must represent what the puppet believes separately from what the child knows to be true. That is theory of mind; younger children answer from their own knowledge.',
+      'Seriation concerns ordering objects by a property such as length, which the task does not require. No ordering is involved in the false-belief task.',
+    ],
     skill: '6B theory of mind (false-belief reasoning)',
   },
   {
@@ -468,6 +618,12 @@ export const FL6_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'Eysenck held that introverts have a higher resting level of cortical arousal, so modest stimulation brings them to or past their optimum and they seek calmer surroundings, whereas extraverts, with lower resting arousal, seek stimulation to reach theirs. Higher arousal paired with a preference for livelier settings would push introverts further past their optimum. The two options that give introverts lower arousal reverse the theory’s central claim; lower arousal with a preference for livelier settings describes the extravert.',
+    optionExplanations: [
+      'Eysenck held that introverts have a higher resting level of cortical arousal, so modest stimulation brings them to or past their optimum and they seek calmer surroundings. Extraverts, with lower resting arousal, seek stimulation to reach theirs.',
+      'Higher arousal paired with a preference for livelier settings would push introverts further past their optimum. The preference does not follow from the arousal level given.',
+      'This gives introverts lower arousal, reversing the theory’s central claim. Lower resting arousal is what Eysenck attributed to extraverts, not introverts.',
+      'Lower arousal with a preference for livelier settings describes the extravert in Eysenck’s theory, not the introvert. Both halves are reversed.',
+    ],
     skill: '7A biological trait theory (Eysenck)',
   },
   {
@@ -485,6 +641,12 @@ export const FL6_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'Patient 1 attributes outcomes to his own actions, which is an internal locus of control, and people who believe their behavior determines their outcomes are more likely to act on a plan that depends on that behavior. Patient 2 attributes outcomes to heredity and fate, an external locus of control, which predicts poorer adherence; calling that outlook internal mislabels it. Calling Patient 1’s outlook external likewise mislabels it, since he places control in his own conduct.',
+    optionExplanations: [
+      'Patient 2 attributes outcomes to heredity and fate, an external locus of control. Calling that outlook internal mislabels it, and external locus predicts poorer adherence.',
+      'Patient 1 places control in his own conduct, which is internal, not external. Calling his outlook external mislabels it.',
+      'Patient 2 does show an external locus of control, but that outlook predicts poorer adherence, not better. Someone who believes outcomes are fated has little reason to follow a plan.',
+      'Patient 1 attributes outcomes to his own actions, an internal locus of control. People who believe their behavior determines their outcomes are more likely to act on a plan that depends on that behavior.',
+    ],
     skill: '7A locus of control',
   },
   {
@@ -502,6 +664,12 @@ export const FL6_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'Women’s share of all households was constant while their share of poor households nearly doubled, so poverty became increasingly concentrated among women and the households they head, which is what the feminization of poverty denotes. The glass ceiling refers to barriers to advancement into top positions, which the figures do not address. Absolute poverty is a standard for deciding who is poor, not a description of a shift in who the poor are. Occupational segregation may contribute to the trend, but it names a pattern in the labor market rather than the change in the composition of the poor.',
+    optionExplanations: [
+      'The glass ceiling refers to barriers to advancement into top positions. The figures concern the composition of poor households, not access to high-paid jobs.',
+      'Women’s share of all households was constant at 24% while their share of poor households rose from 30% to 52%. Poverty became increasingly concentrated among women and the households they head, which is the feminization of poverty.',
+      'Absolute poverty is a standard for deciding who is poor, lacking resources for basic needs. It is not a description of a shift in who the poor are.',
+      'Occupational segregation may contribute to the trend, but it names a pattern in the labor market rather than the change in the composition of the poor that the figures describe.',
+    ],
     skill: '10A feminization of poverty',
   },
   {
@@ -519,6 +687,12 @@ export const FL6_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'Where members do the same work and hold the same beliefs, cohesion comes from likeness and a strong collective conscience, enforced by harsh punishment of deviance; Durkheim called this mechanical solidarity. Organic solidarity based on interdependence among specialized roles is correctly defined but belongs to societies with a complex division of labor, which the village lacks. The remaining two options attach each term to the other’s definition.',
+    optionExplanations: [
+      'Where members do the same work and hold the same beliefs, cohesion comes from likeness and a strong collective conscience, enforced by harsh punishment of deviance. Durkheim called this mechanical solidarity.',
+      'Shared beliefs and similar ways of life are correctly described, but that is the basis of mechanical solidarity, not organic. The term is mismatched to the definition.',
+      'Mechanical solidarity is the right term for this village, but it arises from likeness, not from interdependence among specialized roles. The definition belongs to organic solidarity.',
+      'Organic solidarity based on interdependence among specialized roles is correctly defined but belongs to societies with a complex division of labor. This village, where every family does the same work, lacks that.',
+    ],
     skill: '9A mechanical vs organic solidarity',
   },
   {
@@ -536,6 +710,12 @@ export const FL6_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'The same biological age carries different rights and expectations in the two societies, so “child” and “adult” are not given by nature but are defined, taught, and enforced by each society, which is what is meant by the social construction of reality. If maturation fixed the categories, they would not differ between societies. Material culture consists of physical objects, whereas categories are nonmaterial. A manifest function is an intended consequence of an institution, not a shared definition of who counts as a child.',
+    optionExplanations: [
+      'If maturation fixed the categories, they would not differ between societies for people of the same biological age. The contrast shows they are not fixed by biology.',
+      'Material culture consists of physical objects, whereas age categories are nonmaterial meanings. This misclassifies what kind of cultural element a category is.',
+      'The same biological age carries different rights and expectations in the two societies, so “child” and “adult” are not given by nature but are defined, taught, and enforced by each society. That is the social construction of reality.',
+      'A manifest function is an intended consequence of an institution, not a shared definition of who counts as a child. The contrast is about meanings, not functions.',
+    ],
     skill: '9A social construction of reality',
   },
 ]

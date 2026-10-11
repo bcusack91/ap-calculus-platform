@@ -47,6 +47,12 @@ export const FL5_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'At 4 kHz the machinists’ mean threshold is 50 dB HL and the students’ is 10 dB HL, a difference of 40 dB. The passage states that each 10-dB step is a tenfold change in intensity, so 40 dB corresponds to four tenfold steps, or 10⁴ = 10,000 times. A factor of 4 counts the number of 10-dB steps instead of multiplying them. A factor of 40 treats the decibel difference as if it were itself an intensity ratio. A factor of 100,000 adds a fifth tenfold step that the 40-dB difference does not contain.',
+        optionExplanations: [
+          'A factor of 4 counts the number of 10-dB steps in the 40-dB difference instead of multiplying them; each step is a tenfold change in intensity, so four steps compound to 10⁴, not 4.',
+          'A factor of 40 treats the decibel difference as if it were itself an intensity ratio; decibels are logarithmic, so a 40-dB gap means 10⁴ times the intensity, not 40 times.',
+          'At 4 kHz the machinists’ mean threshold is 50 dB HL and the students’ is 10 dB HL, a 40-dB difference; since each 10-dB step is a tenfold change in intensity, 40 dB is four tenfold steps, or 10⁴ = 10,000 times.',
+          'A factor of 100,000 adds a fifth tenfold step that the 40-dB difference does not contain; 10⁵ would correspond to a 50-dB gap, but the thresholds differ by only 40 dB.',
+        ],
         skill: '6A data interpretation: decibel scale',
       },
       {
@@ -60,6 +66,12 @@ export const FL5_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The machinists’ loss is small at 1–2 kHz and large from 4 kHz upward, and place theory maps those higher frequencies to the stiff basal portion of the membrane, so damage in that region produces exactly this frequency-selective pattern. Damage near the apex would raise thresholds mainly for low frequencies, which were least affected. Uniform damage would raise thresholds by a similar amount at every frequency instead of producing a loss that grows with frequency. The passage attributes noise damage to hair cells, and damage to the nerve as a whole would not single out one band of frequencies.',
+        optionExplanations: [
+          'Damage near the apex would raise thresholds mainly for low frequencies, since place theory maps low frequencies to the wide, flexible apical end; the machinists’ loss is smallest at 1–2 kHz and largest at high frequencies.',
+          'The machinists’ loss is small at 1–2 kHz and large from 4 kHz upward, and place theory maps high frequencies to the stiff basal portion of the membrane; damage concentrated in the basal half produces exactly this frequency-selective pattern.',
+          'Uniform damage along the membrane would raise thresholds by a similar amount at every frequency; instead the loss grows steeply with frequency, which requires damage concentrated in one region.',
+          'The passage attributes noise damage to hair cells, particularly outer hair cells, and damage to the auditory nerve as a whole would not single out one band of frequencies the way the figure shows.',
+        ],
         skill: '6A place theory: cochlear tonotopy',
       },
       {
@@ -73,6 +85,12 @@ export const FL5_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Localization of a 4,000-Hz tone relies mainly on interaural level differences, and an ear that is 20 dB less sensitive at that frequency makes the tone seem quieter on that side, which mimics a sound coming from the opposite side; a 500-Hz tone, localized by timing, was unaffected. Hair-cell damage lowers the sensitivity of an ear but does not delay the arrival of sound, and timing cues are not the primary cue at 4,000 Hz in any case. Elevated thresholds mean the tone was heard less well, not that it was inaudible, and random guessing would not produce errors consistently toward one side. A change in perceived pitch would not by itself bias pointing in a particular direction.',
+        optionExplanations: [
+          'Hair-cell damage lowers the sensitivity of an ear but does not delay the arrival of sound; moreover, interaural timing is the main cue below about 1,500 Hz, not at 4,000 Hz, so a false time difference is not the mechanism.',
+          'A 20-dB elevated threshold means the tone was heard less well in the left ear, not that it was inaudible; and random guessing would scatter errors in both directions, whereas these machinists erred consistently toward the right.',
+          'A change in perceived pitch would not by itself bias pointing in one particular direction; the consistent rightward errors require a cue that mimics a sound source on the right, which is an interaural level difference.',
+          'Localization of a 4,000-Hz tone relies mainly on interaural level differences, and an ear that is 20 dB less sensitive at that frequency makes the tone seem quieter on that side, mimicking a sound coming from the opposite side; the 500-Hz tone, localized by timing, was unaffected.',
+        ],
         skill: '6A sound localization: interaural level differences',
       },
       {
@@ -86,6 +104,12 @@ export const FL5_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Frequency theory holds that pitch is carried by the timing of nerve firing, so the decisive evidence is that fibers lock to the waveform at a rate matching the tone regardless of where along the membrane they originate. A single peak of displacement near the apex is the signature of place coding. Insensitivity to basal damage is also what place theory predicts, since a 500-Hz tone peaks far from the base. The firing-rate ceiling of neurons is a limitation that frequency theory must work around, not evidence for it.',
+        optionExplanations: [
+          'Frequency theory holds that pitch is carried by the timing of nerve firing, so the decisive evidence is fibers from many places along the membrane all locking to the pressure peaks of the 500-Hz wave; location is irrelevant to their signal, and timing is everything.',
+          'A single peak of displacement at one location near the apex is the signature of place coding; it is the evidence place theory, not frequency theory, would point to.',
+          'Insensitivity to basal damage is also what place theory predicts, since a 500-Hz tone peaks far from the base; it does not discriminate between the two theories.',
+          'The firing-rate ceiling of about 1,000 Hz is a limitation that frequency theory must work around through the volley principle; it is a problem for the theory, not evidence in its favor.',
+        ],
         skill: '6A frequency theory of pitch',
       },
       {
@@ -99,6 +123,12 @@ export const FL5_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The machinists are two decades older than the students, and hearing loss that accompanies aging also affects high frequencies, so Figure 1 cannot separate the effect of noise from the effect of age; a same-age comparison group without noise exposure removes that confound. Separate-ear testing would help describe asymmetry but would not address the age difference between the groups. Adding low frequencies and lengthening tones would refine the measurements without changing the fact that the groups differ in age as well as in exposure.',
+        optionExplanations: [
+          'Testing each ear separately would help describe asymmetry within individuals but would not address the two-decade age difference between the groups, which is the main limitation of the comparison.',
+          'The machinists are two decades older than the students, and aging also raises high-frequency thresholds, so Figure 1 cannot separate the effect of noise from the effect of age; a same-age comparison group without noise exposure removes that confound.',
+          'Adding frequencies below 1,000 Hz would extend the audiogram but would not change the fact that the groups differ in age as well as exposure; the confound would remain at every frequency tested.',
+          'Longer tones might refine the threshold measurements, but measurement precision is not the problem; the groups would still differ in age, so the comparison would remain confounded.',
+        ],
         skill: '6A research design: age as a confound',
       },
     ],
@@ -128,6 +158,12 @@ export const FL5_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'For Marx the only criterion is ownership of productive property, and a salaried manager who owns none must sell his labor like the workers he supervises; for Weber, class is market situation, and the manager’s scarce skills and credentials give him a market position different from that of hourly workers. Authority over others is not Marx’s criterion, and Weber would not group a credentialed manager with the workers. Marx did not classify by income, and control of labor is not Weber’s definition of class. Surplus value is extracted from those who produce, not paid to a manager, and a salary is a market return, not party power.',
+        optionExplanations: [
+          'Authority over others is not Marx’s criterion, which is ownership of productive property; and Weber would not group a credentialed, salaried manager with hourly workers, because his market situation differs from theirs.',
+          'For Marx the only criterion is ownership of productive property, so a salaried manager who owns no shares must sell his labor like the workers he supervises; for Weber, class is market situation, and the manager’s scarce skills and credentials give him a market position different from that of hourly workers.',
+          'Marx did not classify by the size of income but by relation to the means of production, and control over the labor of others is not Weber’s definition of class, which rests on market situation.',
+          'Surplus value is extracted from those who produce, not paid out to a manager as salary; and a salary is a market return, not party power, which Weber defines as organized influence over collective decisions.',
+        ],
         skill: '9A/10A Marx vs Weber on class',
       },
       {
@@ -141,6 +177,12 @@ export const FL5_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Enforced endogamy and hereditary occupation are the defining features of a closed, ascribed system in which position cannot be changed by what a person does. A strong intergenerational correlation in wealth is common in class systems, which the passage notes show considerable continuity. Justifying rank by ability and effort is the meritocratic ideology typical of class systems, not caste systems that invoke nature or the sacred. Concentrated ownership of productive property describes the distribution of economic resources in a class society rather than fixed, inherited ranks.',
+        optionExplanations: [
+          'A strong intergenerational correlation in wealth is common in class systems, which the passage notes show considerable continuity across generations; it does not establish that position is ascribed and fixed by rule.',
+          'Justifying rank by ability and effort is the meritocratic ideology typical of class systems; caste systems instead present the hierarchy as natural or sacred, so this observation points away from caste.',
+          'Enforced endogamy and hereditary occupation are the defining features of a closed, ascribed system in which position is fixed at birth and cannot be changed by what a person does; these rules mark a caste system.',
+          'Concentrated ownership of productive property describes the distribution of economic resources in a class society; it says nothing about whether positions are ascribed at birth or can be achieved.',
+        ],
         skill: '10A caste vs class systems',
       },
       {
@@ -155,6 +197,12 @@ export const FL5_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Where mobility is low, outcomes depend heavily on parental position, so a belief among low earners that the system is fair legitimates an arrangement that disadvantages them, which is precisely what conflict theorists mean by false consciousness. Class consciousness would involve recognizing shared disadvantage and opposed interests, the opposite of endorsing the system. Status inconsistency refers to a mismatch among Weber’s dimensions and is not shown by the survey. Achieved status is a type of position, not a belief about the fairness of a system.',
+        optionExplanations: [
+          'Class consciousness would involve low earners recognizing shared disadvantage and interests opposed to those above them; endorsing the fairness of a system that disadvantages them is the opposite of that awareness.',
+          'Status inconsistency refers to a mismatch among Weber’s dimensions, such as high honor with low income; the survey measured beliefs about fairness, not the low earners’ standing in social honor.',
+          'Achieved status is a type of social position, not a belief about whether the economic system is fair; the finding concerns what low earners believe, not how they acquired their position.',
+          'Where mobility is low, outcomes depend heavily on parental position, so a belief among low earners that the system is fair legitimates an arrangement that disadvantages them; this is what conflict theorists mean by false consciousness, beliefs that serve the interests of those above.',
+        ],
         skill: '10A meritocracy as ideology; false consciousness',
       },
       {
@@ -168,6 +216,12 @@ export const FL5_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The functionalist account ties rewards to a position’s importance and the scarcity of the talent it requires, so a rise in pay produced purely by restricting entry, with no change in the work’s importance, shows rewards tracking group power instead, which is the critics’ objection. Higher pay for long-training occupations is what the account predicts, since training makes qualified people scarce. Job satisfaction among the well paid says nothing about why the positions are rewarded. A link between inequality and growth would, if anything, support the claim that inequality is useful.',
+        optionExplanations: [
+          'The functionalist account ties rewards to a position’s importance and the scarcity of the talent it requires; a rise in pay produced purely by restricting entry, with the work unchanged, shows rewards tracking group power instead, which is the critics’ objection.',
+          'Higher pay for occupations requiring long training is what the functionalist account predicts, since training makes qualified people scarce and rewards must attract them; this supports rather than challenges the account.',
+          'Job satisfaction among the well paid says nothing about why those positions are rewarded; it neither confirms nor denies that rewards track importance and scarcity.',
+          'A link between inequality and economic growth would, if anything, support the functionalist claim that inequality is useful to society; it does not challenge the account.',
+        ],
         skill: '10A functionalist view of stratification (evaluate)',
       },
     ],
@@ -203,6 +257,12 @@ export const FL5_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'In the dim-light session the concentration crosses 5 pg/mL between the 8 p.m. (3 pg/mL) and 10 p.m. (9 pg/mL) samples, so onset falls at roughly 8:40 p.m.; in the bright-light session it crosses 5 pg/mL between 10 p.m. (3 pg/mL) and midnight (8 pg/mL), roughly 10:50 p.m. The difference is close to 2 hours. A delay of 30 minutes or 1 hour would require the bright-light curve to reach 5 pg/mL before the 10 p.m. sample, which it does not. A 4-hour delay would place onset after midnight, but the midnight sample is already above 5 pg/mL.',
+        optionExplanations: [
+          'A delay of 30 minutes would require the bright-light curve to cross 5 pg/mL before the 10 p.m. sample, but at 10 p.m. the bright-light concentration is still only 3 pg/mL.',
+          'A 1-hour delay would place bright-light onset at about 9:40 p.m., before the 10 p.m. sample; but the bright-light concentration is still 3 pg/mL at 10 p.m., so onset must come later.',
+          'In the dim-light session the concentration crosses 5 pg/mL between 8 p.m. (3 pg/mL) and 10 p.m. (9 pg/mL), roughly 8:40 p.m.; in the bright-light session it crosses between 10 p.m. (3 pg/mL) and midnight (8 pg/mL), roughly 10:50 p.m., a delay close to 2 hours.',
+          'A 4-hour delay would place bright-light onset at about 12:40 a.m., but the midnight sample is already at 8 pg/mL, above the 5 pg/mL onset threshold.',
+        ],
         skill: '6A data interpretation: melatonin onset',
       },
       {
@@ -216,6 +276,12 @@ export const FL5_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Acute suppression can only hold melatonin down while the light is on; once the light is off at 11 p.m., a clock that had not shifted would produce a peak and decline at the usual times, so a peak and fall that occur about 2 hours late, in the dark, show that the clock itself was reset. Low melatonin during the exposure is exactly what acute suppression alone would produce, so it cannot distinguish the two. An unchanged peak height shows that the rhythm was not blunted but says nothing about its timing. Equal 6 p.m. values simply confirm that the sessions started from the same baseline.',
+        optionExplanations: [
+          'Low melatonin during the exposure is exactly what acute suppression alone would produce, so it cannot distinguish a phase shift from simple suppression; the decisive evidence comes after the light is off.',
+          'An unchanged peak height shows that the rhythm was not blunted, but it says nothing about timing; a suppressed-only rhythm could reach the same peak at the normal time.',
+          'Equal 6 p.m. values simply confirm that both sessions started from the same baseline before any lighting condition began; they do not bear on what the light did to the clock.',
+          'Acute suppression can hold melatonin down only while the light is on; once the light is off at 11 p.m., an unshifted clock would produce the peak and decline at the usual times, so a peak and fall about 2 hours late, in the dark, show the clock itself was reset.',
+        ],
         skill: '6A circadian phase shift vs acute suppression (reasoning)',
       },
       {
@@ -229,6 +295,12 @@ export const FL5_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The passage describes the homeostatic process as producing deeper sleep the longer one has been awake, and the rise of N3 from 20% to 34%, concentrated at the start of the night, is the deep-sleep rebound that process predicts. The circadian process is independent of time awake and would not increase deep sleep because the clock time was unchanged. REM actually fell in the first half of the recovery night and rose only in the final cycles, so it was not recovered first. Nothing in Study 1 involved a light manipulation, and resetting the SCN would alter timing rather than the amount of delta-wave sleep.',
+        optionExplanations: [
+          'The passage describes the homeostatic process as producing deeper sleep the longer one has been awake; the rise of N3 from 20% to 34%, concentrated at the start of the recovery night, is exactly the deep-sleep rebound that process predicts after 40 hours awake.',
+          'The circadian process is independent of time awake and would not increase deep sleep; because the recovery night began at the same clock time as baseline, the circadian contribution was unchanged and cannot explain the extra N3.',
+          'REM actually fell to 18% in the first half of the recovery night and exceeded baseline only in the final cycles, so REM was not recovered first; the early part of the night was dominated by N3.',
+          'Nothing in Study 1 involved a light manipulation, and resetting the SCN would alter the timing of sleep rather than increase the amount of delta-wave sleep.',
+        ],
         skill: '6A homeostatic regulation of slow-wave sleep',
       },
       {
@@ -243,6 +315,12 @@ export const FL5_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The circadian process imposes a daily rhythm of alertness regardless of prior sleep, so alertness falls to a trough in the early morning hours and climbs again toward midday even as time awake, and therefore homeostatic pressure, keeps increasing. The homeostatic process does not adapt; sleep pressure continues to rise the longer one is awake. Dim light does not lower melatonin, which in any case falls on its own circadian schedule and would not explain a performance rise. Participants were supervised to stay awake, and sleep pressure built up over 40 hours was discharged during the recovery night, not during the task.',
+        optionExplanations: [
+          'The homeostatic process does not adapt; sleep pressure continues to rise the longer one is awake, as the deeper recovery sleep confirms. Something other than falling pressure must explain the late-morning improvement.',
+          'The circadian process imposes a daily rhythm of alertness regardless of prior sleep, so alertness falls to a trough in the early morning hours and climbs again toward midday even as time awake, and therefore homeostatic pressure, keeps increasing.',
+          'Dim light does not lower melatonin, and melatonin in any case falls on its own circadian schedule before waking; a melatonin decline would not explain a rise in task performance driven by alertness.',
+          'Participants were supervised to stay awake, and the accumulated sleep pressure was discharged during the recovery night, as the N3 rebound shows; brief N3 episodes during the task are not supported by the design.',
+        ],
         skill: '6A circadian vs homeostatic processes (application)',
       },
     ],
@@ -273,6 +351,12 @@ export const FL5_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'A concession can only be reciprocated if the person who made the large request is the one who retreats to the smaller one; comparing the same-requester and different-requester versions holds everything else constant and isolates that element, and the collapse of compliance to the control level (26% versus 25%) when the requester changes supports the explanation. Comparing the same-requester version with the control shows only that the technique works, not why. Comparing it with the foot-in-the-door condition contrasts two different techniques and cannot isolate the concession. Comparing the different-requester version with lowball mixes two techniques and two explanations.',
+        optionExplanations: [
+          'Comparing the same-requester version with the control shows only that the technique raises compliance (50% versus 25%), not why; it cannot isolate whether reciprocal concession is the mechanism.',
+          'A concession can be reciprocated only if the person who made the large request is the one who retreats to the smaller one; comparing the same-requester and different-requester versions isolates that element, and compliance collapsing to the control level (26% versus 25%) when the requester changes supports the explanation.',
+          'Comparing the same-requester door-in-the-face condition with the foot-in-the-door condition contrasts two different techniques with different proposed mechanisms; it cannot isolate the role of concession.',
+          'Comparing the different-requester version with the lowball condition mixes two techniques and two explanations, commitment and concession, and so tests neither of them directly.',
+        ],
         skill: '7B research design: isolating a mechanism',
       },
       {
@@ -287,6 +371,12 @@ export const FL5_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'If the effect survives a change of organization, cause, and time, it cannot depend on familiarity with this particular group, leaving the shopper’s inference about being a helpful person as the explanation. A larger effect among those already familiar with the group, higher trust ratings after signing, and a stronger effect when the group is made more identifiable all point toward familiarity and trust rather than toward a changed self-image.',
+        optionExplanations: [
+          'If the effect survives a change of organization, cause, and time, it cannot depend on familiarity with this particular group; what remains is the shopper’s inference about being a helpful person, which is the self-perception explanation.',
+          'A larger effect among shoppers already familiar with the group points toward familiarity and trust as the mechanism, which is the alternative explanation, not self-perception.',
+          'Higher trust ratings after signing would show that the petition made the group seem more trustworthy, which supports the familiarity-and-trust alternative rather than a changed self-image.',
+          'A stronger effect when the group is made more identifiable by a T-shirt links compliance to the group’s visibility and trustworthiness, again favoring the familiarity account over self-perception.',
+        ],
         skill: '7B self-perception account of compliance (strengthen)',
       },
       {
@@ -295,6 +385,12 @@ export const FL5_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The passage reports that 70% of the lowball shoppers agreed before the starting time was revealed, and Table 1 shows that 56% agreed to the target request afterward, so the proportion who maintained their commitment is 56/70 = 0.80. The value 0.56 is the final compliance rate for the whole condition, not the proportion of initial agreers. The value 0.70 is the initial agreement rate. The value 0.90 would require about 63% to have persisted.',
+        optionExplanations: [
+          'This is the final compliance rate for the whole lowball condition (56% of all 80 shoppers), not the proportion of initial agreers who persisted; the question asks for the conditional proportion.',
+          'This is the initial agreement rate, 70% of shoppers who agreed before the starting time was revealed; the question asks what fraction of those shoppers still agreed afterward.',
+          'The passage reports that 70% of lowball shoppers agreed before the starting time was revealed, and Table 1 shows 56% agreed to the target request afterward, so the proportion who maintained their commitment is 56/70 = 0.80.',
+          'A persistence rate of 0.90 would require about 63% of the condition to have agreed to the target request (0.90 × 70%), but Table 1 reports only 56%.',
+        ],
         skill: '7B data interpretation: conditional proportion',
       },
       {
@@ -304,6 +400,12 @@ export const FL5_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'An initial demand that is expected to be refused, followed by a retreat to the smaller demand the requester wanted all along, is the door-in-the-face sequence; the tenant is likely to accept the 10 percent increase as a concession to be reciprocated. Foot-in-the-door would begin with a small request that is granted, not a large one that is rejected. Lowball would secure agreement first and reveal a hidden cost afterward. Conformity to a descriptive norm involves matching what others are observed to do, and no information about other tenants is involved.',
+        optionExplanations: [
+          'Foot-in-the-door begins with a small request that is granted and then escalates; the landlord instead opened with a large demand expected to be refused, which is the reverse sequence.',
+          'Lowball secures agreement first and reveals a hidden cost afterward; the landlord revealed his demand up front and then retreated, with no hidden cost appearing after agreement.',
+          'Conformity to a descriptive norm involves matching what others are observed to do; no information about other tenants or their behavior is involved in the landlord’s approach.',
+          'An initial demand expected to be refused, followed by a retreat to the smaller demand the requester wanted all along, is the door-in-the-face sequence; the tenant is likely to accept the 10 percent increase as a concession to be reciprocated.',
+        ],
         skill: '7B compliance techniques (application)',
       },
       {
@@ -318,6 +420,12 @@ export const FL5_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Self-perception holds that people infer their dispositions from their behavior only when no obvious external cause explains it; a payment supplies such a cause, so signing would no longer imply a helpful self-image and the boost over the control condition should largely disappear. Reciprocity for a payment the shopper already received would not add to a self-image that the payment has undermined. The account depends on the inference drawn from the act, not merely on the act having occurred. Nothing in the account predicts that a small payment would reduce compliance below the control level.',
+        optionExplanations: [
+          'Reciprocity for a payment the shopper has already received would not add to a helpful self-image; the payment supplies an external reason for signing that undermines the self-perception inference, so compliance should fall, not rise.',
+          'Self-perception depends on the inference drawn from the act, not merely on the act having occurred; when an obvious external cause such as payment explains the signing, no helpful self-image is inferred.',
+          'Self-perception holds that people infer dispositions from their behavior only when no obvious external cause explains it; a payment supplies such a cause, so signing would no longer imply a helpful self-image and the boost over control should largely disappear.',
+          'Nothing in the self-perception account predicts that a small payment would push compliance below the control level; at most it removes the foot-in-the-door boost, returning compliance to roughly the control rate.',
+        ],
         skill: '7B self-perception theory (new situation)',
       },
     ],
@@ -347,6 +455,12 @@ export const FL5_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The girl clearly learned the word when she observed it, and seeing her brother punished suppressed her use of it only while the risk of similar consequences seemed real; alone in the yard, the anticipated consequences changed and the already-acquired behavior appeared, which is the acquisition–performance distinction Bandura drew. Vicarious punishment affects performance, not acquisition, so it could not have blocked learning. The girl was never reinforced herself, so direct reinforcement was not required. Punishment of a model reduces, rather than increases, the observer’s tendency to perform the behavior, so it is not vicarious reinforcement.',
+        optionExplanations: [
+          'Vicarious punishment affects performance, not acquisition; the girl learned the word when she observed it, and its later appearance shows that learning was intact all along rather than delayed.',
+          'The girl clearly learned the word on observing it, and seeing her brother punished suppressed her use of it only while similar consequences seemed likely; alone in the yard, the anticipated consequences changed and the already-acquired behavior appeared, which is Bandura’s acquisition–performance distinction.',
+          'The girl was never reinforced herself, yet the behavior appeared; observational learning does not require direct reinforcement of the observer, which is the central point of Bandura’s account.',
+          'Punishment of a model reduces, rather than increases, the observer’s tendency to perform the behavior; it is vicarious punishment, not vicarious reinforcement, regardless of whether it drew attention to the word.',
+        ],
         skill: '7A acquisition vs performance in observational learning',
       },
       {
@@ -356,6 +470,12 @@ export const FL5_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'She watched the demonstration, retained it well enough to describe the steps in order, and is motivated, so the failure lies in the capacity to execute the motor sequence, which the passage notes may require practice and feedback for complex skills. Attention was adequate, as shown by her later accurate description. Retention was adequate for the same reason. Motivation is explicitly present.',
+        optionExplanations: [
+          'Attention was adequate: she watched the demonstration closely enough to describe every step in order the next day, so attention is not what limits her performance.',
+          'Retention was adequate for the same reason; being able to describe the sequence of steps in order shows that the observed behavior was stored as a representation.',
+          'She watched, retained the sequence well enough to describe it, and is motivated, so the failure lies in reproduction, the capacity to execute the motor sequence, which the passage notes may require practice and feedback for complex skills.',
+          'Motivation is explicitly present; she wants very much to do the knot well, so a lack of motivation cannot be what limits her performance.',
+        ],
         skill: '7A Bandura’s four processes of modeling',
       },
       {
@@ -370,6 +490,12 @@ export const FL5_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Controlling for initial aggression addresses the possibility that aggressive children selected violent media, and measuring media use seven years before the outcome rules out reverse causation, but a factor that influences both media use and later aggression has not been measured or controlled and remains a plausible explanation. The selection explanation is exactly what the control for age-8 aggression addresses. A later outcome cannot cause an earlier behavior. The study measures behavior over years, not in a laboratory, so the laboratory-validity concern does not apply.',
+        optionExplanations: [
+          'Selection by already-aggressive children is exactly what the statistical control for age-8 aggression addresses; it has been accounted for and is not the explanation that remains difficult to rule out.',
+          'A later outcome cannot cause an earlier behavior; measuring media use seven years before the aggression outcome rules out this reverse-causation explanation by design.',
+          'The study measures behavior over years in the children’s lives, not in a laboratory, so the concern about laboratory measures of aggression not reflecting real behavior does not apply.',
+          'Controlling for initial aggression addresses selection and the seven-year lag rules out reverse causation, but a factor influencing both media use and later aggression, such as an unsupervised home, has not been measured or controlled and remains a plausible explanation.',
+        ],
         skill: '7A research design: longitudinal studies and confounding',
       },
       {
@@ -384,6 +510,12 @@ export const FL5_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The passage says models are imitated most readily when they are similar to the observer, admired, and seen to be rewarded, and a popular schoolmate who refuses and is accepted for it supplies all three features along with a modeled behavior to copy. A physician is an authority delivering a message, not a similar model performing the desired behavior. An unfamiliar celebrity is neither similar nor admired by the students and models no behavior. A statistic about prevalence provides no model at all and, if the percentage is high, may even suggest that vaping is common.',
+        optionExplanations: [
+          'The passage says models are imitated most readily when they are similar to the observer, admired, and seen to be rewarded; a popular schoolmate who refuses a vape and is warmly included supplies all three features and models the exact behavior to copy.',
+          'A physician in a white coat is an authority delivering a message, not a similar model performing the desired behavior; the passage emphasizes similarity and admiration, not expertise.',
+          'An unfamiliar celebrity is neither similar to the students nor admired by them, and reading a warning models no behavior at all; the key ingredients of observational learning are absent.',
+          'A prevalence statistic provides no model to observe and, if the percentage is high, may even suggest that vaping is common; it contains none of the features the passage identifies as effective.',
+        ],
         skill: '7A characteristics of effective models (application)',
       },
     ],
@@ -406,6 +538,12 @@ export const FL5_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'In a semantic network, activating one concept partially activates the concepts linked to it, so BREAD leaves BUTTER already primed and recognizable more quickly, whereas an unrelated word provides no such head start. The serial position effect concerns recall of items from a list, not recognition speed for a single word. Rehearsal would apply equally to related and unrelated first words and would not favor BUTTER after BREAD specifically. Dual coding concerns the memorability of concrete words and does not depend on the relation between two words.',
+    optionExplanations: [
+      'In a semantic network, activating one concept partially activates the concepts linked to it, so BREAD leaves BUTTER already primed and recognizable more quickly, whereas an unrelated word provides no such head start.',
+      'The serial position effect concerns recall of items from a list, with better memory for early and late items; it does not explain faster recognition of a single word based on its relation to the preceding word.',
+      'Rehearsal would apply equally to related and unrelated first words, so it cannot explain why BUTTER is recognized faster after BREAD specifically and not after CHAIR.',
+      'Dual coding concerns the memorability of concrete words that can be stored as both images and verbal codes; it depends on properties of a single word, not on its relation to a preceding word.',
+    ],
     skill: '6B semantic networks and spreading activation',
   },
   {
@@ -423,6 +561,12 @@ export const FL5_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'A group that could not have learned the expressions from films or television yet reads them the same way as people elsewhere indicates that the expressions of basic emotions are universal rather than culturally transmitted. Display rules concern when an expression is shown or masked and are known to vary across cultures; the study did not examine them. The two-factor interpretation of arousal concerns how emotion is produced, not how expressions are recognized. The facial feedback idea concerns a person’s own emotional experience, whereas these participants were judging the faces of others.',
+    optionExplanations: [
+      'Display rules concern when an expression is shown or masked and are known to vary across cultures; the study examined recognition of expressions, not the rules governing their display.',
+      'The two-factor interpretation of arousal concerns how emotion is produced from physiological arousal plus cognitive labeling; it says nothing about whether expressions are recognized across cultures.',
+      'The facial feedback idea concerns how a person identifies their own emotion from their own facial movements; these participants were judging the faces of others, not sensing their own.',
+      'A group that could not have learned the expressions from films or television yet reads them the same way as people elsewhere indicates that the expressions of basic emotions are universal rather than culturally transmitted.',
+    ],
     skill: '6C universality of facial expressions',
   },
   {
@@ -440,6 +584,12 @@ export const FL5_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'The amygdala is required for acquiring the conditioned autonomic fear response, whereas the hippocampus is required for forming the explicit memory of the pairing, so amygdala damage leaves a patient who knows the rule but shows no bodily response, and hippocampal damage leaves a patient who responds bodily without being able to report why. Because the two structures support different components, damage to one does not abolish both, so neither patient losing everything is incorrect. The pattern of the second option assigns each deficit to the wrong structure. The cerebellum is involved in conditioning simple motor reflexes such as eye-blinks, not in autonomic fear responses.',
+    optionExplanations: [
+      'The two structures support different components of fear conditioning, so damage to one does not abolish both; each patient retains the component the intact structure supports.',
+      'This assigns each deficit to the wrong structure: the amygdala is needed for the autonomic conditioned response, and the hippocampus for the explicit memory of the pairing, so the amygdala patient loses the bodily response, not the knowledge.',
+      'The cerebellum is involved in conditioning simple motor reflexes such as eye-blinks, not in autonomic fear responses; moreover both patients retaining everything ignores the roles of the damaged structures.',
+      'The amygdala is required for acquiring the conditioned autonomic fear response, whereas the hippocampus is required for the explicit memory of the pairing; amygdala damage leaves a patient who knows the rule but shows no bodily response, and hippocampal damage leaves the reverse.',
+    ],
     skill: '6A amygdala and conditioned fear',
   },
   {
@@ -457,6 +607,12 @@ export const FL5_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'Years of caregiving are a chronic stressor, and sustained glucocorticoid exposure dampens the lymphocyte responses on which an antibody response to vaccination depends. Sympathetic activation is a rapid, short-lived response to an acute threat and does not explain a deficit measured over weeks after vaccination. Stress does not raise core temperature to levels that would damage a vaccine. Lower everyday pathogen exposure would not reduce the specific antibody response to an antigen that was injected directly.',
+    optionExplanations: [
+      'Years of caregiving are a chronic stressor, and sustained glucocorticoid exposure dampens the lymphocyte responses on which an antibody response to vaccination depends.',
+      'Sympathetic activation is a rapid, short-lived response to an acute threat; it cannot explain a deficit in antibody production measured over the weeks after vaccination.',
+      'Chronic stress does not raise core body temperature to levels that would damage vaccine antigens; the antigens are injected directly and are not inactivated by the recipient’s stress state.',
+      'Lower everyday pathogen exposure would not reduce the specific antibody response to an antigen that was injected directly; the response depends on the immune system’s capacity, not on prior exposure to unrelated pathogens.',
+    ],
     skill: '6C chronic stress and immune suppression',
   },
   {
@@ -474,6 +630,12 @@ export const FL5_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'Buckling up removes an aversive chime and the behavior becomes more frequent, which is negative reinforcement; losing the phone removes a desirable stimulus and the late behavior becomes less frequent, which is negative punishment. Reversing the two labels mismatches each procedure with its effect on behavior. Nothing pleasant is added when the driver buckles up, so it is not positive reinforcement. The teenager has something taken away rather than something aversive added, so it is not positive punishment.',
+    optionExplanations: [
+      'This reverses the two labels: buckling up removes an aversive chime and increases the behavior (reinforcement), while losing the phone removes something desirable and decreases the behavior (punishment).',
+      'Nothing pleasant is added when the driver buckles up; the chime, an aversive stimulus, is removed, so the first procedure is negative rather than positive reinforcement.',
+      'Buckling up removes an aversive chime and the behavior becomes more frequent, which is negative reinforcement; losing the phone removes a desirable stimulus and the late behavior becomes less frequent, which is negative punishment.',
+      'The teenager has something desirable taken away rather than something aversive added, so the second procedure is negative punishment, not positive punishment.',
+    ],
     skill: '7A negative reinforcement vs negative punishment',
   },
   {
@@ -491,6 +653,12 @@ export const FL5_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'A certificate awarded by the institution through an official procedure is a formal sanction, and because it rewards conformity it is positive; being excluded from lunch is a spontaneous reaction by peers with no official standing, so it is an informal sanction, and because it punishes a norm violation it is negative. Describing the certificate as informal ignores its official source, and describing the exclusion as formal ignores that no rule or authority imposed it. Treating both as formal or both as informal misclassifies one of the two.',
+    optionExplanations: [
+      'Describing the certificate as informal ignores that it was awarded by the institution through an official procedure; and describing the lunch exclusion as formal ignores that no rule or authority imposed it.',
+      'A certificate awarded by the institution through an official procedure is a formal sanction, and because it rewards conformity it is positive; being excluded from lunch is a spontaneous reaction by peers with no official standing, an informal sanction, and because it punishes a norm violation it is negative.',
+      'The certificate is formal, but the lunch exclusion was imposed spontaneously by colleagues, not by any rule or authority, so it is an informal sanction rather than a formal one.',
+      'The exclusion is informal, but the certificate came from the hospital through an official procedure, which makes it a formal sanction rather than an informal one.',
+    ],
     skill: '9A formal vs informal sanctions',
   },
   {
@@ -503,6 +671,12 @@ export const FL5_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'The dependency ratio divides the dependent population (those under 15 plus those 65 and older, 24% + 16% = 40%) by the working-age population (100% − 40% = 60%) and multiplies by 100: (40/60) × 100 ≈ 67. The value 40 is the percentage of the population that is dependent, not a ratio to the working-age group. The value 60 is the working-age share of the population. The value 150 inverts the ratio, dividing the working-age population by the dependents.',
+    optionExplanations: [
+      'This is the percentage of the population that is dependent (24% + 16%), not a ratio to the working-age group; the dependency ratio divides dependents by the working-age population, not by the total.',
+      'This is the working-age share of the population (100% − 40%); it is the denominator of the dependency ratio, not the ratio itself.',
+      'The dependency ratio divides the dependent population (24% under 15 plus 16% aged 65 and over, 40%) by the working-age population (60%) and multiplies by 100: (40/60) × 100 ≈ 67 dependents per 100 working-age people.',
+      'This inverts the ratio, dividing the working-age population by the dependents (60/40 × 100 = 150); the dependency ratio expresses dependents per 100 working-age people, not the reverse.',
+    ],
     skill: '9B dependency ratio (calculation)',
   },
   {
@@ -520,6 +694,12 @@ export const FL5_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'Income is a flow measured over a year, whereas wealth is the stock of assets minus debts built up over decades and often inherited, so even modest and persistent income differences, together with differences in what previous generations could pass on, produce much larger gaps in wealth. Net worth is not a post-tax version of income; it is a different quantity altogether. Housing equity is a major component of net worth, not an exclusion from it. Medians are resistant to extreme values, so a handful of very high earners would not distort either measure.',
+    optionExplanations: [
+      'Income is a flow measured over a year, whereas wealth is a stock of assets minus debts built up over decades and often inherited, so even modest, persistent income differences and differences in what earlier generations could pass on compound into much larger gaps in wealth.',
+      'Net worth is not a post-tax version of income; it is a different quantity, assets minus debts, so differences in tax burden cannot convert a 1.3-fold income gap into an 8-fold wealth gap.',
+      'Housing equity is a major component of net worth, not an exclusion from it; spending on housing that builds equity would, if anything, add to a household’s measured wealth.',
+      'Medians are resistant to extreme values, so a handful of very high earners would not distort either the median income or the median net worth; this cannot explain the difference between the two gaps.',
+    ],
     skill: '10A wealth vs income inequality',
   },
 ]

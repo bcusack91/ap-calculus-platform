@@ -41,6 +41,12 @@ export const FL5_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'On the standing curve the pressure rises from 64 mmHg at 40 cm above the heart to 172 mmHg at 100 cm below it, a change of 108 mmHg over 140 cm, or about 0.77 mmHg per cm. This agrees with the density of blood: $\\rho g h$ for 1 cm of blood is about $(1060)(9.8)(0.01) \\approx 104$ Pa, and 1 mmHg is about 133 Pa, giving 0.78 mmHg per cm. The value 1.3 is the reciprocal of the gradient, in cm per mmHg. The values 7.7 and 0.077 each slip a factor of ten.',
+        optionExplanations: [
+          'The gradient is the slope of the standing curve, 108 mmHg over 140 cm, which is about 0.77 mmHg per cm; this value is ten times too small, a slipped decimal place in the division.',
+          'Reading the standing curve from 64 mmHg at 40 cm above the heart to 172 mmHg at 100 cm below it gives a change of 108 mmHg over 140 cm, or about 0.77 mmHg per cm, which matches $\\rho g h$ for a 1-cm column of blood (about 104 Pa, or 0.78 mmHg).',
+          'This is the reciprocal of the gradient: 140 cm divided by 108 mmHg gives about 1.3 cm per mmHg, the height of blood needed to produce one millimeter of mercury, not the pressure change per centimeter the question asks for.',
+          'The slope is 108 mmHg over 140 cm, about 0.77 mmHg per cm; this value is ten times too large and would predict a drop of over 300 mmHg between heart and head, far beyond anything in Figure 1.',
+        ],
         skill: '4B hydrostatic pressure gradient from a figure (Skill 4)',
       },
       {
@@ -54,6 +60,12 @@ export const FL5_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The cuff reports the arterial pressure at its own position, and Figure 1 shows that arterial pressure in a standing subject falls by about 0.77 mmHg for every centimeter above the heart, so a cuff 26 cm above the heart reads about $26 \\times 0.77 \\approx 20$ mmHg lower. The reading is not immune to gravity, because the artery beneath the cuff carries the hydrostatic term just as the sites in Figure 1 do. Raising the arm lowers, rather than raises, the pressure in the artery, and venous drainage does not set arterial pressure. A drop of 26 mmHg would require a gradient of 1 mmHg per cm, which the figure rules out.',
+        optionExplanations: [
+          'The cuff reads the pressure in the artery directly beneath it, and that artery carries the hydrostatic term just like every site in Figure 1; the gauge is not immune to gravity simply because the heart generates the pressure.',
+          'This reverses the direction of the effect and misattributes its cause: raising the arm lowers arterial pressure under the cuff, and venous drainage does not set the pressure in an artery, which is what the sphygmomanometer measures.',
+          'The hydrostatic gradient in Figure 1 is about 0.77 mmHg per cm, not 1 mmHg per cm; a one-to-one centimeter-to-millimeter rule would require a fluid as dense as mercury rather than blood, and the figure rules out a 26-mmHg drop.',
+          'The cuff reports the pressure at its own position, and Figure 1 shows arterial pressure falling about 0.77 mmHg for every centimeter above the heart, so a cuff 26 cm above the heart reads about $26 \\times 0.77 \\approx 20$ mmHg lower than at heart level.',
+        ],
         skill: '4B hydrostatic pressure applied to cuff measurement (Skill 2)',
       },
       {
@@ -62,6 +74,12 @@ export const FL5_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The figure reports gauge pressure, the excess over atmospheric pressure, and the standing value at 100 cm below the heart is 172 mmHg. Absolute pressure adds the atmosphere: $172 + 760 = 932$ mmHg. The value 172 mmHg is the gauge pressure alone. The value 760 mmHg is atmospheric pressure alone, which would correspond to a gauge pressure of zero. The value 588 mmHg subtracts the arterial pressure from atmospheric pressure, which would describe a pressure below atmospheric.',
+        optionExplanations: [
+          'This is the gauge pressure read from the standing curve at 100 cm below the heart, the excess over atmospheric pressure; the question asks for absolute pressure, which must add the 760 mmHg of the atmosphere.',
+          'This subtracts the arterial gauge pressure from atmospheric pressure (760 − 172), which would describe a pressure below atmospheric; the artery is above atmospheric, so the two terms must be added, not subtracted.',
+          'This is atmospheric pressure alone, which would correspond to a gauge pressure of zero; the artery at the ankle has a gauge pressure of 172 mmHg on top of the atmosphere, so its absolute pressure is higher than 760 mmHg.',
+          'Clinical pressures are gauge pressures, the excess over atmospheric pressure, so the absolute pressure is the gauge reading plus one atmosphere: $172 + 760 = 932$ mmHg at the ankle of the standing subject.',
+        ],
         skill: '4B gauge versus absolute pressure (Skill 4)',
       },
       {
@@ -70,6 +88,12 @@ export const FL5_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The brain is 2.0 m, or 200 cm, above the heart, and at about 0.77 mmHg per cm the hydrostatic drop over that height is about 154 mmHg, so the brain pressure is roughly $250 - 154 \\approx 96$ mmHg, close to the human value at heart level. The value 155 mmHg is the hydrostatic drop by itself, not the pressure that remains. The value 250 mmHg ignores the height of the brain above the heart. The value 405 mmHg adds the hydrostatic term instead of subtracting it, which would be appropriate only for a point below the heart.',
+        optionExplanations: [
+          'The brain sits 200 cm above the heart, and at the measured gradient of about 0.77 mmHg per cm the hydrostatic drop over that height is about 154 mmHg, leaving $250 - 154 \\approx 96$ mmHg, essentially the human value at heart level.',
+          'This is the hydrostatic drop itself, 200 cm times about 0.77 mmHg per cm, not the pressure that remains after that drop is subtracted from the 250 mmHg at heart level; the question asks for the brain pressure, not the loss.',
+          'This is the giraffe’s mean pressure at heart level and ignores the 2.0 m of vertical column between heart and brain; the passage states the hydrostatic gradient applies throughout the arterial tree, so the brain must be lower.',
+          'This adds the hydrostatic term instead of subtracting it, which would be appropriate only for a point below the heart; the brain lies above the heart, so pressure there must be less than the 250 mmHg at heart level.',
+        ],
         skill: '4B hydrostatic pressure in a vertical column (Skill 2)',
       },
       {
@@ -83,6 +107,12 @@ export const FL5_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'A fluid-filled catheter transmits pressure to wherever the transducer sits, and the fluid inside it is itself a column with weight, so the transducer registers the tip pressure plus or minus $\\rho g h$ for the height difference between tip and transducer. In a study whose entire purpose is to measure pressures at sites spread over 140 cm of height, an external transducer would have to be re-leveled for every site, so a tip-mounted transducer removes the problem. A continuous fluid column transmits both the mean and the pulsatile components of pressure. A fluid column adds or subtracts a hydrostatic offset; it does not change a gauge reading into an absolute one. Clotting is a practical concern for any catheter, but it is not a reason specific to this measurement.',
+        optionExplanations: [
+          'A fluid-filled catheter is itself a column of fluid with weight, so an external transducer registers the tip pressure plus or minus $\\rho g h$ for the height difference between tip and transducer; with sites spread over 140 cm of height, that offset would contaminate every reading unless re-leveled each time.',
+          'A continuous fluid column transmits both the steady and the pulsatile components of pressure; the mean pressure is exactly what such catheters are routinely used to record, so there is no selective loss of the mean.',
+          'A fluid column adds or subtracts a hydrostatic offset, $\\rho g h$; it does not change the reference against which pressure is measured, so a gauge reading at the tip stays a gauge reading, merely shifted.',
+          'Clotting is a practical concern for any catheter left in a vessel, whether or not it is fluid-filled, and it has nothing to do with the vertical spread of measurement sites that makes this study special.',
+        ],
         skill: '4B measurement design in a hydrostatic study (Skill 3)',
       },
     ],
@@ -105,6 +135,12 @@ export const FL5_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Fenton-type chemistry requires a metal that can give up an electron to H₂O₂, so an ion that is safe in the way Zn²⁺ is safe must have no accessible higher oxidation state. Mg²⁺ is a group 2 ion with a noble-gas electron configuration; like Zn²⁺ it exists in cells in a single oxidation state and cannot donate an electron. Cu⁺ and Fe²⁺ are the reduced members of the two redox couples the passage identifies as hazardous. Manganese is a transition metal with several accessible oxidation states (+2, +3, +4, and higher), so Mn²⁺ can be oxidized and does not resemble zinc in this respect.',
+        optionExplanations: [
+          'Cu⁺ is the reduced member of one of the two redox couples the passage names as hazardous; the passage states explicitly that Cu⁺ performs the same hydroxyl-radical-generating reaction as Fe²⁺, the opposite of zinc-like safety.',
+          'Fe²⁺ is the very ion written on the left side of the Fenton reaction in the passage; it donates an electron to H₂O₂ and generates the hydroxyl radical, so it is the archetype of a dangerous metal, not a zinc-like one.',
+          'Zn²⁺ is safe because its filled 3d subshell leaves no accessible second oxidation state, so it cannot donate an electron to H₂O₂. Mg²⁺ has a noble-gas configuration and likewise exists in only one oxidation state in cells, so it cannot drive Fenton-type chemistry either.',
+          'Manganese is a transition metal with several accessible oxidation states (+2, +3, +4, and higher), so Mn²⁺ can be oxidized and participate in electron transfer; sharing a 2+ charge with zinc does not give it zinc’s redox inertness.',
+        ],
         skill: '4E oxidation states and electron configuration of metal ions (Skill 1)',
       },
       {
@@ -118,6 +154,12 @@ export const FL5_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'When EDTA⁴⁻ replaces the six water ligands of the aqueous ion, one particle binds and six are set free, so the number of independent particles in solution rises by five and $\\Delta S$ is strongly positive; replacing six waters with six monodentate ligands leaves the particle count unchanged and gives no such entropic gain. The passage specifies that the individual metal–donor bonds are of similar strength, so the enthalpy of bonding cannot be the main difference. The Fe(EDTA)⁻ complex does carry a lower charge than the +3 aquo ion, but the question compares EDTA with six monodentate ligands of comparable donor type, and solvation of the product is not the dominant effect. No reduction of iron is involved, and the formation constants show that Fe³⁺ binds EDTA far more strongly than divalent ions do.',
+        optionExplanations: [
+          'Replacing the six water ligands with one EDTA⁴⁻ releases six particles while consuming one, raising the number of independent particles by five, so $\\Delta S$ is strongly positive; six monodentate ligands replace six waters one-for-one and gain no such entropy, which is the chelate effect.',
+          'The passage states that the individual metal–donor bonds are of similar strength in the two cases, so bond enthalpy cannot be the main reason the chelate is more stable; the difference lies in entropy, not in stronger bonds.',
+          'Fe(EDTA)⁻ does have a lower charge than the +3 aquo ion, but the comparison is with six monodentate ligands of comparable donor type, which could lower the charge similarly; solvation of the product is not what distinguishes a chelate from monodentate binding.',
+          'No redox step is involved in complex formation, and the formation constants in the passage show Fe³⁺ ($\\log K_f = 25.1$) binding EDTA far more strongly than any divalent ion, so reduction to Fe²⁺ would weaken, not strengthen, binding.',
+        ],
         skill: '5B/5E the chelate effect and entropy (Skill 2)',
       },
       {
@@ -126,6 +168,12 @@ export const FL5_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The administered chelator arrives already bound to Ca²⁺, so another metal can be captured only if it displaces calcium, which requires a more stable complex than Ca–EDTA ($\\log K_f = 10.7$). Zn²⁺ ($\\log K_f = 16.5$) forms a complex nearly a million-fold more stable and will be taken up and excreted, which is why zinc depletion is a recognized consequence of EDTA therapy. Mg²⁺ ($\\log K_f = 8.7$) binds more weakly than Ca²⁺ and cannot displace it. Ca²⁺ is not depleted because the chelator is already saturated with calcium; this is exactly why the calcium salt is used. Na⁺ forms no significant complex with EDTA and is present simply as a counterion.',
+        optionExplanations: [
+          'Mg²⁺ has $\\log K_f = 8.7$, lower than Ca²⁺ at 10.7, so magnesium cannot displace the calcium already occupying the chelator; a metal is captured only if it forms a more stable complex than Ca–EDTA.',
+          'The drug arrives already saturated with Ca²⁺, which is precisely why the calcium disodium salt is used instead of the disodium salt; calcium cannot be depleted by a chelator that is already carrying calcium.',
+          'Na⁺ is present only as the counterion of the salt and forms no significant complex with EDTA; it is not among the metals whose formation constants the passage lists, so it is not sequestered.',
+          'The chelator enters bound to Ca²⁺, so another metal is captured only if it displaces calcium, which requires $\\log K_f$ above 10.7. Zn²⁺ at 16.5 forms a complex nearly a million-fold more stable, so zinc is exchanged into the EDTA and excreted, depleting the essential ion.',
+        ],
         skill: '5E formation constants and ligand exchange (Skill 2)',
       },
       {
@@ -139,6 +187,12 @@ export const FL5_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Iron goes from +2 to +3, so it is oxidized, and hydrogen peroxide, which accepts the electron, is the oxidizing agent. In H₂O₂ each oxygen is in the −1 state; the oxygen that ends up in OH⁻ is reduced to −2, while the oxygen in the neutral radical •OH remains at −1. Peroxide oxygen starts at −1, not −2, so no oxygen is taken from −2 to −1. Peroxide is not the reducing agent in this reaction, and no oxygen is oxidized to the zero state, which would require O₂ formation. Only one of the two oxygens changes oxidation state, so it is incorrect to say that both are reduced.',
+        optionExplanations: [
+          'Peroxide oxygen starts at −1, not −2; a change from −2 to −1 would be an oxidation of oxygen, which contradicts peroxide’s role as the species that accepts an electron from Fe²⁺.',
+          'Iron goes from +2 to +3, so iron is oxidized and H₂O₂ is the oxidizing agent. In H₂O₂ each oxygen is at −1; the oxygen that ends up in OH⁻ is reduced to −2 while the oxygen in the neutral radical •OH stays at −1, so exactly one oxygen changes.',
+          'Peroxide gains an electron from Fe²⁺, so it is the oxidizing agent, not the reducing agent; and oxidation of an oxygen from −1 to 0 would require O₂ formation, which does not appear among the Fenton products.',
+          'Peroxide is reduced, not a reducing agent, and only one of its two oxygens changes state: the one in OH⁻ reaches −2, while the oxygen in •OH remains at −1, so both oxygens are not reduced.',
+        ],
         skill: '4C oxidation states and redox roles in the Fenton reaction (Skill 1)',
       },
     ],
@@ -163,6 +217,12 @@ export const FL5_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'A disaccharide doubles its reducing value when acid cleaves it into two monosaccharides, and Y and Z do so (1.00 to 2.00); because each already reduces the reagent before hydrolysis, each retains one free hemiacetal, so only one anomeric carbon is in the bond. V and X are also disaccharides, since acid raises their values from 0.00 to 2.00, but their lack of reducing power before hydrolysis shows that both anomeric carbons are tied up in the bond. W is unchanged by acid and by every enzyme, so it is a single hexose, not a disaccharide. Grouping all four disaccharides together ignores the untreated column, which separates the two kinds of linkage.',
+        optionExplanations: [
+          'V and X are disaccharides, since acid raises them from 0.00 to 2.00, but their complete lack of reducing power before hydrolysis shows that neither retains a free hemiacetal, so both anomeric carbons are in the bond.',
+          'W is unchanged by acid and by every enzyme (1.00 throughout), so it never releases a second reducing unit; it is a single hexose, not a disaccharide of any kind.',
+          'All four of V, X, Y, and Z are disaccharides, but grouping them together ignores the untreated column: V and X give 0.00 before hydrolysis, meaning both anomeric carbons are locked, which is the opposite of what the question asks.',
+          'Y and Z double their reducing values on acid hydrolysis (1.00 to 2.00), proving they are disaccharides, and each already reduces the reagent untreated, so each retains one free hemiacetal; only one anomeric carbon is in the glycosidic bond.',
+        ],
         skill: '5D interpreting reducing-sugar data (Skill 4)',
       },
       {
@@ -176,6 +236,12 @@ export const FL5_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'V gives no reducing value until acid hydrolysis releases two reducing units, so neither monosaccharide retains a free hemiacetal: both anomeric carbons must be part of the glycosidic bond. A β(1→4) glucose–glucose bond uses only one anomeric carbon and would leave V reducing before any treatment. A fructose unit linked through its anomeric carbon to a non-anomeric hydroxyl of glucose would leave the glucose hemiacetal free, again making V reducing; and if the glucose anomeric carbon were also used, as in sucrose, sucrase would have cleaved it, which it did not. A free hemiacetal is in equilibrium with the open-chain aldehyde and is never shielded from the reagent.',
+        optionExplanations: [
+          'A β(1→4) bond between two glucose units uses only one anomeric carbon and would leave the other glucose hemiacetal free, so V would be reducing before treatment; V gives 0.00 untreated, and lactase, the β-galactosidase, is not even the enzyme for a glucose–glucose bond.',
+          'V gives no reducing value until acid hydrolysis releases two reducing units, so neither monosaccharide has a free hemiacetal; both anomeric carbons must be locked in the glycosidic bond, which is why no enzyme or untreated test produces Cu₂O.',
+          'A fructose unit linked through its anomeric carbon to a non-anomeric glucose hydroxyl leaves the glucose hemiacetal free, which would make V reducing untreated; and if the glucose anomeric carbon were also used, as in sucrose, sucrase would have cleaved V, which it did not.',
+          'A hemiacetal is in continuous equilibrium with the open-chain aldehyde and is never shielded from Benedict’s reagent; every sample in Table 1 with a free hemiacetal gave 1.00 untreated, so a value of 0.00 means no free hemiacetal exists.',
+        ],
         skill: '5D glycosidic bonds and the anomeric carbon (Skill 2)',
       },
       {
@@ -189,6 +255,12 @@ export const FL5_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Replacing the anomeric –OH with –OCH₃ converts the hemiacetal into an acetal, the same functional group that locks the anomeric carbon in a glycoside, so the ring can no longer open to expose an aldehyde and no Cu₂O forms. The compound is a single, pure α anomer, and a value of 0.50 would require a mixture in which half the molecules still had a free hemiacetal. The oxidation state of the anomeric carbon is indeed unchanged by methylation, but reducing power depends on the ability to generate a free aldehyde, not on oxidation state alone. An ether-type methoxy group is not oxidized by Benedict’s reagent.',
+        optionExplanations: [
+          'Converting the anomeric –OH to –OCH₃ turns the hemiacetal into an acetal, the same group that locks the anomeric carbon in a glycoside; the ring can no longer open to an aldehyde, so no Cu₂O forms and the value is 0.00.',
+          'The compound is a single pure α anomer, so a half value would require a mixture in which half the molecules retained a free hemiacetal; moreover both anomers can be converted to methyl glycosides, so no such restriction exists.',
+          'Methylation does leave the oxidation state of the anomeric carbon unchanged, but reducing power depends on whether a free aldehyde can be generated, not on oxidation state alone; the acetal cannot ring-open, so it is not reducing.',
+          'An ether-type methoxy group is not oxidized by alkaline Cu²⁺, and a value of 2.00 would require two reducing equivalents per molecule, more than even free glucose provides; the acetal gives no reducing power at all.',
+        ],
         skill: '5D hemiacetal versus acetal at the anomeric carbon (Skill 1)',
       },
       {
@@ -202,6 +274,12 @@ export const FL5_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'A negative result after enzyme treatment is informative only if the enzyme was active: a denatured or mis-stored preparation would leave every substrate uncleaved. Table 1 supplies the positive controls: sucrase doubled the value of X, maltase that of Y, and lactase that of Z under the same conditions, so each preparation was active and its failure to act on V can be attributed to the structure of V. The acid result shows that V is a disaccharide of two reducing hexoses but says nothing about whether the enzymes worked. The untreated value of 0.00 shows that V has no free hemiacetal and likewise does not bear on enzyme activity. That no enzyme exceeded the acid value is expected for any disaccharide and would hold even if every enzyme were inactive.',
+        optionExplanations: [
+          'A negative result after enzyme treatment is informative only if the enzyme was active. Table 1 supplies the positive controls: sucrase doubled X, maltase doubled Y, and lactase doubled Z under the same conditions, so each preparation worked and its failure on V reflects the structure of V.',
+          'Reaching 2.00 after acid shows V is a disaccharide of two reducing hexoses, but acid cleaves bonds regardless of configuration and says nothing about whether the enzyme preparations were active; an inactive enzyme would also leave V at 0.00.',
+          'The untreated 0.00 shows V has no free hemiacetal, but it does not bear on whether the enzymes were functional; the student needs evidence that each enzyme could cleave something before a null result means anything.',
+          'That no enzyme exceeded the acid value is expected for any disaccharide, since acid releases every reducing unit; it would hold even if all three enzymes were completely inactive, so it cannot validate the negative results.',
+        ],
         skill: '5D positive controls in an enzyme-specificity experiment (Skill 3)',
       },
       {
@@ -215,6 +293,12 @@ export const FL5_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'W reduces the reagent fully (1.00) despite having a ketone rather than an aldehyde in its open-chain form. In base, the α-hydroxy ketone of a ketose undergoes keto–enol tautomerization to an enediol, which can re-ketonize with the carbonyl at C-1, giving an aldose that then reduces Cu²⁺; this is why ketoses such as fructose are classified as reducing sugars. Simple ketones are not oxidized to carboxylic acids under these conditions, because that would require breaking a carbon–carbon bond. Citrate serves only to keep Cu²⁺ in solution in base and is not a reducing agent for ketones. A hemiketal hydroxyl is a hydroxyl group, not a reducing group; it is the carbonyl that is oxidized.',
+        optionExplanations: [
+          'Simple ketones are not oxidized to carboxylic acids by Benedict’s reagent, because that would require breaking a carbon–carbon bond; the ketose reduces Cu²⁺ only after it has been converted to an aldose.',
+          'Citrate serves only to keep Cu²⁺ in solution in the alkaline reagent; it is not a reducing agent for ketones, and Cu₂O forms when the sugar reduces copper, not when citrate reduces the sugar.',
+          'A hemiketal hydroxyl is simply a hydroxyl group and is not oxidized by the reagent; it is the carbonyl, exposed on ring opening, that is oxidized, and a ketone carbonyl must first isomerize before it can act as an aldehyde.',
+          'W gives 1.00 despite having a ketone in its open-chain form because, in base, the α-hydroxy ketone tautomerizes to an enediol that re-ketonizes at C-1 to give an aldose, which then reduces Cu²⁺; this is why fructose counts as a reducing sugar.',
+        ],
         skill: '5D ketoses as reducing sugars via keto–enol tautomerization (Skill 1)',
       },
     ],
@@ -239,6 +323,12 @@ export const FL5_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'With $\\text{p}K_a = 9.4$, the exponent on side A (pH 7.4) is 2.0, giving $1 + 10^{2} = 101$, and on side B (pH 5.4) it is 4.0, giving $1 + 10^{4} \\approx 10{,}001$; the ratio is about 99. Each additional pH unit of acidity on side B traps about ten times more of the protonated form, so the ratio climbs from about 10 at pH 6.4 to about 100 at pH 5.4. A ratio of 1.0 would require equal pH on both sides. The value 9.9 is the ratio measured at pH 6.4, before the change. The value 990 corresponds to a side-B pH of 4.4, one unit more acidic than specified.',
+        optionExplanations: [
+          'A ratio of 1.0 would require the same pH on both sides of the membrane, since then each side would hold the same ionized fraction; with side B one or two units more acidic, the base is trapped there.',
+          'This is the ratio measured in Table 1 at pH 6.4; making side B one unit more acidic traps about ten times more of the protonated form, so the ratio must rise, not stay the same.',
+          'With $\\text{p}K_a = 9.4$, the exponent on side A (pH 7.4) is 2.0, giving $1 + 10^{2} = 101$, and on side B (pH 5.4) it is 4.0, giving about 10,001; the ratio is about 99, ten times the value at pH 6.4.',
+          'This corresponds to a side-B pH of 4.4, two units below the original 6.4 and one unit more acidic than the question specifies; each unit of acidity multiplies the ratio by about ten, so pH 5.4 gives about 99, not 990.',
+        ],
         skill: '5A/5D ion trapping and the Henderson–Hasselbalch relation (Skill 2)',
       },
       {
@@ -252,6 +342,12 @@ export const FL5_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'In an aromatic amine the nitrogen lone pair is conjugated with the ring and is shared with the π system by resonance, so it is less available to accept a proton, and protonation also destroys that resonance stabilization; both effects lower the $\\text{p}K_a$ of the conjugate acid by about five units. The difference between a primary and a tertiary alkylamine is small (both have $\\text{p}K_a$ near 10), so the number of carbon groups cannot account for a gap of this size. A flat benzene ring presents no meaningful steric barrier to a proton, the smallest possible electrophile. The N–H bonds of amines are not acidic in water; amines are bases, and the compound is still protonated at low pH.',
+        optionExplanations: [
+          'In an aromatic amine the nitrogen lone pair is conjugated with the ring and shared with the π system by resonance, so it is less available for protonation, and protonating it sacrifices that resonance stabilization; the result is a $\\text{p}K_a$ about five units lower than an alkylamine.',
+          'Primary and tertiary alkylamines both have conjugate-acid $\\text{p}K_a$ values near 10, so the number of carbon groups on nitrogen changes basicity only slightly; it cannot account for a gap of about five $\\text{p}K_a$ units.',
+          'A flat benzene ring poses no meaningful steric barrier to a proton, the smallest possible electrophile; basicity differences between amines are electronic, not steric, especially for something as small as H⁺.',
+          'The N–H bonds of amines are not acidic in water, and a primary aromatic amine is still protonated at low pH, so it does act as a base; the passage gives it a conjugate-acid $\\text{p}K_a$ of 4.6, which is weak basicity, not acidity.',
+        ],
         skill: '5D resonance and the basicity of aromatic versus alkyl amines (Skill 1)',
       },
       {
@@ -260,6 +356,12 @@ export const FL5_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Compound 3 is a quaternary ammonium salt: its nitrogen bears four carbon groups and a positive charge that no change in pH can remove, so it has no neutral form that can cross the membrane and essentially none reaches compartment B. The ethyltrimethylammonium bromide salt has the same structure and would behave the same way. tert-Butylamine, despite its heavily substituted carbon, is a primary amine, and N,N-dimethylethylamine is a tertiary amine; both have neutral forms and would partition like Compound 1. N,N-Dimethylacetamide is an amide, which is neutral at every pH and would cross freely, giving a ratio near 1.0.',
+        optionExplanations: [
+          'tert-Butylamine is a primary amine, since only one carbon is bonded to nitrogen regardless of how substituted that carbon is; it has a neutral form that crosses the membrane and would partition like Compound 1, not like a quaternary salt.',
+          'N,N-Dimethylethylamine is a tertiary alkylamine with a lone pair and a neutral form, essentially the same class as Compound 1; it would be trapped in the acidic compartment with a ratio near 10, not excluded from it.',
+          'N,N-Dimethylacetamide is an amide, which the passage says is not appreciably basic; it stays neutral at every pH and would cross freely in both directions, giving a ratio near 1.0, the opposite of Compound 3’s exclusion.',
+          'Compound 3 is a quaternary ammonium salt whose nitrogen bears four carbon groups and a permanent positive charge that no pH can remove, so it has no neutral form and cannot cross. Ethyltrimethylammonium bromide has exactly that structure and would also give a ratio below 0.01.',
+        ],
         skill: '5D classification of amines and quaternary ammonium salts (Skill 1)',
       },
       {
@@ -273,6 +375,12 @@ export const FL5_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Ion trapping predicts that with no pH difference the neutral form equilibrates and every ionized fraction matches, so the ratio should fall to 1.0; observing that directly isolates the pH difference as the cause. Moving Compound 3 to the other side tests a different, permanently charged compound and says nothing about Compound 1. Doubling the starting concentration tests whether the ratio is concentration-independent, which is expected for a dilute solute, but does not test the role of pH. A thicker membrane would slow the approach to equilibrium without changing the equilibrium ratio, so it does not address the question either.',
+        optionExplanations: [
+          'Moving Compound 3 to the other compartment tests a permanently charged compound that cannot cross the membrane at all; it reveals nothing about whether Compound 1’s accumulation depends on the pH difference.',
+          'Ion trapping predicts that with no pH difference the neutral form equilibrates and the ionized fractions match, so the ratio should fall from 9.9 to 1.0; running the cell at pH 7.4 on both sides isolates the pH difference as the cause.',
+          'Doubling the starting concentration tests whether the ratio is concentration-independent, which is expected for a dilute solute, but both compartments keep their pH difference, so the role of pH itself is never isolated.',
+          'A thicker membrane slows the approach to equilibrium but does not change the equilibrium ratio, which is set only by the pH values and $\\text{p}K_a$; after 24 h the same 9.9 would be expected, so it does not test the mechanism.',
+        ],
         skill: '5A experimental design for testing an ion-trapping mechanism (Skill 3)',
       },
     ],
@@ -295,6 +403,12 @@ export const FL5_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'A thickness of 10.5 cm is three half-value layers of soft tissue (3 × 3.5 cm), which transmits $(1/2)^3 = 1/8$ of the beam. To transmit the same fraction, bone must also present three of its own half-value layers, 3 × 1.0 cm = 3.0 cm. A 1.0-cm slab is a single HVL of bone and would transmit half the beam. The value 3.5 cm is the HVL of soft tissue, not a thickness of bone. The value 10.5 cm assumes equal thickness gives equal transmission, which ignores the difference in attenuation coefficients.',
+        optionExplanations: [
+          'A 1.0-cm slab is a single half-value layer of bone and transmits half the beam, whereas 10.5 cm of soft tissue is three half-value layers and transmits one eighth; the slabs would not match.',
+          'Ten and a half centimeters is three half-value layers of soft tissue (3 × 3.5 cm), transmitting $(1/2)^3 = 1/8$; to transmit the same fraction, bone must present three of its own half-value layers, 3 × 1.0 cm = 3.0 cm.',
+          'This is the half-value layer of soft tissue, not a bone thickness; 3.5 cm of bone would be three and a half HVLs of bone and would transmit less than one tenth of the beam, more attenuation than the tissue.',
+          'Equal thickness gives equal transmission only if the attenuation coefficients are equal; bone’s HVL of 1.0 cm versus tissue’s 3.5 cm means 10.5 cm of bone would transmit about $(1/2)^{10.5}$, far less than the tissue.',
+        ],
         skill: '4D exponential attenuation and half-value layers (Skill 2)',
       },
       {
@@ -303,6 +417,12 @@ export const FL5_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'From $\\text{HVL} = 0.693/\\mu$, $\\mu = 0.693/\\text{HVL} = 0.693/3.5\\ \\text{cm} \\approx 0.20\\ \\text{cm}^{-1}$. The value 0.29 cm⁻¹ is simply $1/3.5$, which omits the factor $\\ln 2$ that relates the HVL to the exponential constant. The value 0.14 cm⁻¹ uses 0.5 in place of 0.693. The value 0.10 cm⁻¹ divides by twice the HVL, as if two HVLs were needed to halve the beam.',
+        optionExplanations: [
+          'This divides 0.693 by twice the HVL, as if 7 cm were needed to halve the beam; the passage gives 3.5 cm as the thickness that halves intensity, so $\\mu$ must be about twice this value.',
+          'This substitutes 0.5 for 0.693 in the numerator, treating the half-value relation as $\\mu = 0.5/\\text{HVL}$; the correct factor is $\\ln 2 \\approx 0.693$, because $e^{-\\mu x} = 1/2$ requires $\\mu x = \\ln 2$.',
+          'From $\\text{HVL} = 0.693/\\mu$, rearranging gives $\\mu = 0.693/3.5\\ \\text{cm} \\approx 0.20\\ \\text{cm}^{-1}$; this is the exponential constant that makes 3.5 cm of soft tissue halve the beam at 60 keV.',
+          'This is simply $1/3.5$, which omits the factor $\\ln 2$ relating the half-value layer to the exponential constant; the reciprocal of the HVL is not the attenuation coefficient.',
+        ],
         skill: '4D relating the half-value layer to the attenuation coefficient (Skill 2)',
       },
       {
@@ -316,6 +436,12 @@ export const FL5_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Photoelectric absorption scales roughly as $Z^3$, and iodine’s atomic number of 53 compared with tissue’s effective value of about 7.4 gives a per-atom probability hundreds of times greater; vessels filled with iodinated agent therefore remove far more photons than the surrounding tissue. Compton scattering depends on electron density, which differs far less among materials, and the passage attributes contrast mainly to the photoelectric process. Any characteristic x-rays iodine emits after absorption are low in energy and emitted in all directions; they do not create the shadow, and a vessel that exposed the detector more would appear darker, not opaque. Diagnostic photons are absorbed or scattered, not reflected like light from a mirror.',
+        optionExplanations: [
+          'Photoelectric absorption scales roughly as $Z^3$, and iodine’s atomic number of 53 compared with tissue’s effective 7.4 makes its per-atom absorption hundreds of times greater, so iodine-filled vessels remove far more photons and cast a dense shadow.',
+          'Compton scattering depends on electron density, which differs far less among materials than atomic number does; the passage attributes radiographic contrast mainly to photoelectric absorption, not to Compton scattering.',
+          'Any characteristic x-rays iodine emits after absorbing a photon are low in energy and radiated in all directions; they do not form the image, and a vessel that exposed the detector more would appear darker, not opaque.',
+          'Diagnostic x-ray photons are absorbed or scattered within matter, not reflected like light from a mirror; density matters only insofar as it affects how many atoms the beam encounters, and the key property here is atomic number.',
+        ],
         skill: '4D photoelectric absorption and atomic number (Skill 1)',
       },
       {
@@ -329,6 +455,12 @@ export const FL5_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Doubling the voltage roughly doubles the typical photon energy, and the photoelectric probability falls as $1/E^3$, so the process that depends strongly on atomic number, and that distinguishes bone from soft tissue, contributes much less; Compton scattering, which depends on electron density and is similar for both, becomes dominant, and the two materials attenuate the beam more nearly alike. The number of photons is set by tube current, not voltage, and a weaker signal would affect brightness rather than the relative contrast. Characteristic lines are fixed by tungsten’s electron energy levels and do not shift with tube voltage. Half-value layers of both materials increase at higher energy; soft tissue does not become more absorbing.',
+        optionExplanations: [
+          'The number of photons per second is set by the tube current, not the voltage, and a weaker signal would affect overall brightness rather than the relative difference between bone and soft tissue.',
+          'Characteristic lines are fixed by tungsten’s electron energy levels and do not shift with tube voltage; raising the voltage only increases the bremsstrahlung maximum and average energy, not the position of the lines.',
+          'Half-value layers of both soft tissue and bone increase at higher photon energy, because both become more transparent; soft tissue does not become more absorbing, and bone is not unchanged.',
+          'Doubling the voltage roughly doubles the typical photon energy, and photoelectric probability falls as $1/E^3$, so the Z-dependent process that distinguishes bone from tissue fades; Compton scattering, which depends on electron density and is similar for both, dominates and contrast falls.',
+        ],
         skill: '4D energy dependence of photoelectric and Compton interactions (Skill 2)',
       },
     ],
@@ -350,6 +482,12 @@ export const FL5_CHEM_PHYS_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'A catalyst provides a pathway with a lower activation energy, which raises the rate constants of the forward and reverse reactions by the same factor; because the equilibrium constant is their ratio, it is unchanged, as is $\\Delta G$, which depends only on the states of reactants and products. A larger equilibrium constant would require the catalyst to change the free energies of A or B, which it cannot do. A more negative free-energy change is likewise impossible for a catalyst, which is not consumed and does not alter the thermodynamics. Collision frequency is set by concentration and temperature, and a catalyst acts by lowering the barrier, not by making molecules collide more often.',
+    optionExplanations: [
+      'A catalyst lowers the activation energy, raising the forward and reverse rate constants by the same factor; the equilibrium constant is their ratio and is unchanged, as is $\\Delta G$, which depends only on the states of A and B.',
+      'A larger equilibrium constant would require the catalyst to alter the free energies of A or B, which it cannot do; a catalyst speeds the approach to equilibrium without shifting its position.',
+      'A catalyst does not alter the thermodynamics of a reaction, so the free-energy change is unchanged, and the entire mechanism of catalysis is a lowered activation energy, so the activation energy is not unchanged either.',
+      'Collision frequency is set by concentration and temperature, neither of which the enzyme changes; a 10⁶-fold rate increase comes from lowering the energy barrier, not from making molecules collide more often.',
+    ],
     skill: '5E effect of a catalyst on rate and equilibrium (Skill 1)',
   },
   {
@@ -361,6 +499,12 @@ export const FL5_CHEM_PHYS_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'By Graham’s law the rate of effusion is inversely proportional to the square root of molar mass, so $\\frac{r_{\\text{unknown}}}{r_{\\text{He}}} = \\sqrt{\\frac{M_{\\text{He}}}{M_{\\text{unknown}}}}$; a ratio of 1/2 requires $M_{\\text{unknown}} = 4 \\times 4.0 = 16$ g/mol, consistent with methane. A value of 8.0 g/mol treats the rate ratio as inversely proportional to molar mass itself, without the square root. A value of 32 g/mol squares the factor of four a second time. A value of 2.0 g/mol would effuse faster than helium, not slower.',
+    optionExplanations: [
+      'A gas with molar mass 2.0 g/mol is lighter than helium and would effuse faster, not slower; by Graham’s law a lower molar mass gives a higher effusion rate.',
+      'This treats the rate ratio as inversely proportional to molar mass itself, without the square root; a factor of two in rate corresponds to a factor of four in molar mass, not two.',
+      'Graham’s law gives $\\frac{r_{\\text{unknown}}}{r_{\\text{He}}} = \\sqrt{\\frac{M_{\\text{He}}}{M_{\\text{unknown}}}}$; a rate ratio of 1/2 means the molar-mass ratio is 4, so $M_{\\text{unknown}} = 4 \\times 4.0 = 16$ g/mol, consistent with methane.',
+      'This squares the factor of four a second time, as if the rate ratio were the fourth root of the mass ratio; a molar mass of 32 g/mol would effuse at about 0.35 times the rate of helium, not half.',
+    ],
     skill: '4B Graham’s law of effusion (Skill 2)',
   },
   {
@@ -372,6 +516,12 @@ export const FL5_CHEM_PHYS_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'At the equivalence point the moles of OH⁻ added equal the moles of H⁺ present: $(0.0250\\ \\text{L})(0.120\\ \\text{M}) = 3.00 \\times 10^{-3}$ mol, and $3.00 \\times 10^{-3}\\ \\text{mol}/0.150\\ \\text{M} = 0.0200$ L = 20.0 mL. The value 25.0 mL assumes equal volumes are always needed, which holds only when the concentrations are equal. The value 31.3 mL inverts the concentration ratio, multiplying 25.0 mL by 0.150/0.120. The value 12.5 mL halves the sample volume for no chemical reason.',
+    optionExplanations: [
+      'This halves the sample volume for no chemical reason; the base is more concentrated than the acid, so less than 25.0 mL is needed, but the exact volume follows from equating moles, which gives 20.0 mL.',
+      'At equivalence, moles of OH⁻ equal moles of H⁺: $(0.0250\\ \\text{L})(0.120\\ \\text{M}) = 3.00 \\times 10^{-3}$ mol, and dividing by 0.150 M gives 0.0200 L = 20.0 mL of base.',
+      'Equal volumes are required only when the acid and base have equal concentrations; here the base is more concentrated (0.150 M versus 0.120 M), so less than 25.0 mL of it is needed.',
+      'This inverts the concentration ratio, multiplying 25.0 mL by 0.150/0.120 instead of 0.120/0.150; a more concentrated base requires less volume, not more.',
+    ],
     skill: '5A strong acid–strong base titration stoichiometry (Skill 2)',
   },
   {
@@ -388,6 +538,12 @@ export const FL5_CHEM_PHYS_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'An object moving in a circle at constant speed accelerates toward the center with $a = v^2/r = (5.0)^2/20 = 1.25\\ \\text{m/s}^2$, so the net horizontal force is $ma = (60)(1.25) = 75$ N, directed toward the center; it is supplied by friction between the shoes and the ground. A force directed outward is the fictitious centrifugal effect felt in the runner’s frame, not a real net force in the ground frame. The value 15 N uses $mv/r$ instead of $mv^2/r$. The value 300 N divides $mv^2$ by the speed rather than by the radius.',
+    optionExplanations: [
+      'This uses $mv/r$ instead of $mv^2/r$: (60)(5.0)/20 = 15 N. Centripetal acceleration depends on the square of the speed, so the correct force is $(60)(25)/20 = 75$ N.',
+      'An object moving in a circle at constant speed accelerates toward the center with $a = v^2/r = 25/20 = 1.25\\ \\text{m/s}^2$, so the net horizontal force is $ma = 75$ N directed toward the center, supplied by friction from the ground.',
+      'A 75-N outward force is the fictitious centrifugal effect perceived in the runner’s accelerating frame; in the ground frame the real net force must point toward the center to curve the path inward.',
+      'This divides $mv^2$ by the speed rather than by the radius: (60)(25)/5 = 300 N. The centripetal formula requires dividing by the radius of the curve, 20 m, giving 75 N.',
+    ],
     skill: '4A centripetal force in uniform circular motion (Skill 2)',
   },
   {
@@ -399,6 +555,12 @@ export const FL5_CHEM_PHYS_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'Kinetic energy is proportional to the square of speed, so at half the maximum speed the bob has one quarter of its maximum kinetic energy; the other three quarters of the total mechanical energy is still potential, placing the bob at $0.75 \\times 0.20 = 0.15$ m above the lowest point. A height of 0.10 m is where half the energy is kinetic, which corresponds to a speed of $1/\\sqrt{2}$ of the maximum, not one half. A height of 0.05 m would mean three quarters of the energy is kinetic, giving a speed about 0.87 of the maximum. At 0.20 m the bob is at its release height and momentarily at rest.',
+    optionExplanations: [
+      'At 0.05 m, three quarters of the energy would be kinetic, giving a speed of $\\sqrt{0.75} \\approx 0.87$ of the maximum, not half; half speed requires the bob to be much higher, where most of the energy is still potential.',
+      'At 0.10 m half the energy is kinetic, which corresponds to a speed of $1/\\sqrt{2} \\approx 0.71$ of the maximum, not one half; kinetic energy scales with the square of speed, so half speed means only one quarter of the kinetic energy.',
+      'Kinetic energy is proportional to the square of speed, so at half the maximum speed the bob has one quarter of its maximum kinetic energy; the remaining three quarters is potential, placing the bob at $0.75 \\times 0.20 = 0.15$ m.',
+      'At 0.20 m the bob is at its release height, where all the energy is potential and the bob is momentarily at rest; its speed there is zero, not half of the maximum.',
+    ],
     skill: '4A energy conservation in a pendulum (Skill 2)',
   },
   {
@@ -415,6 +577,12 @@ export const FL5_CHEM_PHYS_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'In a 1,4-disubstituted cyclohexane the trans isomer has its two substituents either both axial or both equatorial, and a ring flip interconverts these two chairs; the diequatorial chair is more stable because axial methyl groups suffer 1,3-diaxial interactions with the axial hydrogens on the same face. A chair with one axial and one equatorial methyl is the cis-1,4 isomer, whose two chairs are indeed equal in energy, but that is not the trans isomer. Placing both methyls axial maximizes, rather than avoids, steric strain. A ring flip changes conformation only; converting cis to trans would require breaking a bond to invert a stereocenter.',
+    optionExplanations: [
+      'A chair with one axial and one equatorial methyl is the cis-1,4 isomer, whose two chairs are indeed equal in energy; in the trans isomer the two methyls are either both axial or both equatorial.',
+      'Placing both methyls axial maximizes 1,3-diaxial strain rather than avoiding it; this diaxial chair is the less stable trans conformer, and the methyls being anti does not compensate for the steric cost.',
+      'A ring flip changes conformation only, interconverting the diaxial and diequatorial chairs of the same isomer; converting cis to trans would require breaking a bond to invert a stereocenter, which no conformational change can do.',
+      'In trans-1,4-dimethylcyclohexane the two substituents are either both axial or both equatorial, and the ring flip interconverts these chairs; the diequatorial chair is more stable because axial methyls suffer 1,3-diaxial interactions with axial hydrogens on the same face.',
+    ],
     skill: '5D chair conformations and 1,3-diaxial interactions (Skill 1)',
   },
   {
@@ -426,6 +594,12 @@ export const FL5_CHEM_PHYS_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'Glutamine has a polar, uncharged amide side chain, and asparagine is its closest relative, an amide side chain one methylene shorter, so it belongs to the same polar-uncharged class. Glutamate, despite the similar name, carries a carboxylate that is negatively charged at pH 7 and would introduce a charge where none existed. Leucine has a nonpolar hydrocarbon side chain and would be poorly tolerated at a solvent-exposed site. Lysine is positively charged at pH 7 and, like glutamate, changes the charge of the surface.',
+    optionExplanations: [
+      'Glutamate shares glutamine’s name and carbon skeleton but carries a carboxylate that is negatively charged at pH 7, so it would introduce a charge where glutamine had none; the amide and the acid are different classes.',
+      'Leucine has a nonpolar hydrocarbon side chain and would be poorly tolerated at a solvent-exposed site; it preserves neither the polarity nor the hydrogen-bonding capacity of the glutamine amide.',
+      'Glutamine has a polar, uncharged amide side chain, and asparagine is its closest relative, an amide one methylene shorter; both belong to the polar-uncharged class, so the substitution preserves polarity and the absence of charge.',
+      'Lysine carries a positively charged amino group at pH 7 and, like glutamate, changes the charge of the protein surface; it is polar, but it fails the requirement of preserving the uncharged state.',
+    ],
     skill: '5D classification of amino acids by side chain (Skill 1)',
   },
   {
@@ -442,6 +616,12 @@ export const FL5_CHEM_PHYS_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'Cytosine is the free pyrimidine base; cytidine is the corresponding nucleoside, in which N-1 of the base is linked to C-1′ of ribose by an N-glycosidic bond. A phosphate esterified to the 5′ carbon would make the molecule a nucleotide, cytidine monophosphate, not the nucleoside. Both cytosine and cytidine contain the same pyrimidine base; neither is a purine. The nucleoside with deoxyribose is deoxycytidine, and the free base contains no sugar at all.',
+    optionExplanations: [
+      'A phosphate esterified to the 5′ carbon would make the molecule a nucleotide, cytidine monophosphate; cytidine itself is the nucleoside and contains no phosphate.',
+      'Both cytosine and cytidine contain the same pyrimidine base; neither is a purine, and the base pairs with guanine whether free or in a nucleoside, so this misclassifies the ring system.',
+      'Cytosine is the free pyrimidine base; cytidine is the corresponding nucleoside, in which N-1 of the base is bonded to C-1′ of ribose through an N-glycosidic bond, with no phosphate attached.',
+      'The nucleoside containing deoxyribose is deoxycytidine, not cytidine, and the free base cytosine contains no sugar at all; this reverses which molecule carries a sugar and names the wrong sugar.',
+    ],
     skill: '5D base versus nucleoside versus nucleotide (Skill 1)',
   },
 ]

@@ -48,6 +48,12 @@ export const FL4_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The green-light threshold falls from 3.0 to 1.0 log units, a drop of 2 log units, so the dimmest detectable flash became 10² = 100 times weaker and sensitivity rose about 100-fold. A factor of 2 treats the difference in log units as if it were a ratio of intensities. A factor of 3 divides one log value by the other, which is not how log units convert to intensity. Sensitivity fell only if a falling threshold is misread as falling sensitivity; the passage states that a lower threshold means greater sensitivity.',
+        optionExplanations: [
+          'A factor of 2 treats the 2-log-unit difference as if it were a ratio of intensities. Log units are exponents of 10, so a drop of 2 log units means the threshold intensity fell by a factor of 10², not 2.',
+          'A factor of 3 divides one log value by the other (3.0/1.0), which is not how log units convert to intensity. Differences in log units correspond to ratios of intensity through powers of 10.',
+          'The green-light threshold falls from 3.0 to 1.0 log units, a drop of 2 log units, so the dimmest detectable flash became 10² = 100 times weaker. Since a lower threshold means greater sensitivity, sensitivity rose about 100-fold.',
+          'Sensitivity fell only if a falling threshold is misread as falling sensitivity. The passage states explicitly that a lower threshold indicates greater sensitivity, so the drop in threshold means sensitivity increased, not decreased.',
+        ],
         skill: '6A data interpretation: dark adaptation',
       },
       {
@@ -61,6 +67,12 @@ export const FL4_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Because rhodopsin responds poorly above about 620 nm, the 650 nm flash is detected by cones throughout, and the red curve therefore shows only the cone plateau reached by about 10 minutes, whereas the green curve continues downward as the more sensitive rods recover. The rate of rod recovery depends on pigment regeneration after the white bleaching field, which was the same in both sessions, not on the color of the dim test flash. Cones that were still improving would make the red curve keep falling, but it is flat after 10 minutes. Threshold flashes are by definition barely detectable and far too dim to re-bleach photopigment.',
+        optionExplanations: [
+          'Rhodopsin responds poorly above about 620 nm, so the 650 nm flash is detected by cones throughout. The red curve therefore shows only the cone plateau, reached by about 10 minutes, while the green curve continues downward as the more sensitive rods recover.',
+          'Rod recovery depends on regeneration of rhodopsin after the white bleaching field, which was identical in both sessions. The color of the dim test flash does not affect how quickly rods recover; it affects only whether rods can detect the flash.',
+          'If long-wavelength cones kept improving all session, the red curve would keep falling, but it is flat after 10 minutes. The cones plateaued; what differs between curves is whether rods could contribute to detection.',
+          'Threshold flashes are by definition barely detectable and far too dim to re-bleach photopigment. The bleaching was done by the bright white field at the start, and the test flashes are many orders of magnitude weaker.',
+        ],
         skill: '6A rods vs cones (reasoning)',
       },
       {
@@ -74,6 +86,12 @@ export const FL4_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Rods are absent from the central fovea, so a flash at fixation would stimulate only cones, and the second, rod-driven phase of dark adaptation seen with the green light could not appear. Cones are present in the periphery as well, which is why the red curve still shows a cone plateau there. The fovea is dominated by medium- and long-wavelength cones and actually lacks short-wavelength cones, so it responds well to red light. Foveal cones reach their plateau within minutes; the concern is the absence of rods, not slow adaptation.',
+        optionExplanations: [
+          'Cones are present in the periphery as well as the fovea, which is why the red curve at 20° still shows a cone plateau. A peripheral flash does not isolate rods; it simply ensures rods are present to contribute.',
+          'The fovea is dominated by medium- and long-wavelength cones and actually lacks short-wavelength cones, so it responds well to red light. This reverses the actual composition of the fovea.',
+          'Foveal cones reach their plateau within minutes, as the red curve shows for cones generally. The concern driving the placement is the absence of rods at the fovea, not any difference in the speed of adaptation.',
+          'Rods are absent from the central fovea, so a flash at fixation would stimulate only cones. The second, rod-driven phase of dark adaptation seen with the green light could not appear, and the two curves would look alike.',
+        ],
         skill: '6A research design: retinal distribution of receptors',
       },
       {
@@ -82,6 +100,12 @@ export const FL4_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Prolonged viewing fatigues the member of each opponent pair that was driven, so when the eyes move to a neutral white field the partner signal dominates: green gives way to red, yellow to blue, and black to white. Seeing the original colors would describe a positive afterimage, not the adaptation-based negative afterimage that opponent processing predicts. Keeping black for the bottom stripe ignores the black–white opponent pair. Swapping red and blue pairs green with blue and yellow with red, which are not the opponent pairings.',
+        optionExplanations: [
+          'Seeing the original colors would describe a positive afterimage, not the adaptation-based negative afterimage that opponent processing predicts. Fatigue of the driven channel member causes the partner color to dominate on a neutral field.',
+          'Prolonged viewing fatigues the driven member of each opponent pair, so on a white field the partner dominates: green gives way to red, yellow to blue, and black to white. The afterimage therefore appears red on top, blue in the middle, and white at the bottom.',
+          'Red and blue are correct for the top two stripes, but keeping black for the bottom ignores the black–white opponent pair. A black stripe fatigues the black signal, so its afterimage on a white screen appears white (brighter).',
+          'Swapping red and blue pairs green with blue and yellow with red, which are not the opponent pairings. Hering’s channels are red versus green and blue versus yellow, so green yields red and yellow yields blue.',
+        ],
         skill: '6A opponent-process theory: afterimages',
       },
       {
@@ -95,6 +119,12 @@ export const FL4_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Under trichromatic theory the number of primaries needed to match every wavelength equals the number of independent cone signals, so needing only two primaries, and confusing lights that a normal observer distinguishes, indicates dichromacy with one cone type missing. Someone relying on rods alone would have a single receptor signal and could match any wavelength with one primary by adjusting its intensity. A fourth cone type would require more primaries, not fewer, and the volunteers failed to distinguish lights the experimenter could, the reverse of an added discrimination. Rod recovery after bleaching plays no role in color matching at normal light levels, and three normal cone types would require three primaries.',
+        optionExplanations: [
+          'Under trichromatic theory, the number of primaries needed to match every wavelength equals the number of independent cone signals. Needing only two primaries, and confusing lights a normal observer distinguishes, indicates dichromacy with one cone type missing.',
+          'Someone relying on rods alone would have a single receptor signal and could match any wavelength with one primary by adjusting intensity. The volunteers needed two primaries, which indicates two functioning cone types, not zero.',
+          'A fourth cone type would require more primaries, not fewer, and would allow finer discrimination. The volunteers failed to distinguish lights the experimenter could tell apart, the reverse of an added discrimination ability.',
+          'Rod recovery after bleaching plays no role in color matching at normal light levels, and three normal cone types would require three primaries to match every wavelength. The volunteers needed only two.',
+        ],
         skill: '6A trichromatic theory: color deficiency',
       },
     ],
@@ -123,6 +153,12 @@ export const FL4_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The kits (material culture) were available before laws and family norms about their use (nonmaterial culture) had settled, which is the maladjustment Ogburn called cultural lag. Diffusion refers to spread between groups or societies; movement of a product from laboratories to consumers within one society does not capture the mismatch between technology and rules. Buying a test kit does not reject the core values of the society, so it is not a counterculture. Culture shock is the disorientation of individuals encountering an unfamiliar culture, not a society-wide gap between a technology and its norms.',
+        optionExplanations: [
+          'Diffusion refers to spread between groups or societies. Movement of a product from laboratories to consumers within one society does not capture the mismatch between a technology and the rules for using it, which is the point of the example.',
+          'Buying a test kit does not reject the core values or norms of the society, and the buyers are not living by an alternative set. The scenario describes a gap in rules, not organized opposition to mainstream institutions.',
+          'The kits (material culture) were available before laws and family norms about their use (nonmaterial culture) had settled. This period of maladjustment between a technology and the rules governing it is exactly what Ogburn called cultural lag.',
+          'Culture shock is the disorientation an individual feels on suddenly encountering an unfamiliar culture. A society-wide gap between a technology and the norms for its use is a different phenomenon, even if some families felt unsettled.',
+        ],
         skill: '9A cultural lag',
       },
       {
@@ -136,6 +172,12 @@ export const FL4_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Refusing money, private property, and state schooling rejects core economic and institutional norms of the wider society and replaces them with an alternative way of life, which defines a counterculture. Emergency physicians, radio collectors, and competitive gamers each have distinctive vocabulary or practices, but all of them work, buy, and participate within mainstream institutions and accept the society’s central values, so each is a subculture.',
+        optionExplanations: [
+          'Emergency physicians share technical slang and insider humor, but they work within mainstream institutions and accept the society’s central values. Distinctive vocabulary within an accepted role defines a subculture, not a counterculture.',
+          'Antique-radio collectors have specialized conventions and publications, but nothing about their hobby rejects core societal values or norms. They are a subculture with a distinctive leisure activity.',
+          'Competitive gamers follow leagues and use a distinctive vocabulary, yet they participate in mainstream economic and social life. Specialized leisure and jargon make them a subculture, not an opposition group.',
+          'Refusing money, private property, and state schooling rejects core economic and institutional norms of the wider society and replaces them with an alternative way of life. Opposition to central values defines a counterculture.',
+        ],
         skill: '9A subculture vs counterculture',
       },
       {
@@ -150,6 +192,12 @@ export const FL4_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'An expectation about how staff should behave is a norm, and norms, along with the symbolic meaning of the yellow color, are nonmaterial culture. The bands themselves, the printer that labels them, and the cabinet that stores them are physical objects and therefore belong to material culture, even though each is used within the system.',
+        optionExplanations: [
+          'The plastic bands are physical objects the hospital manufactures or orders, which places them in material culture regardless of the meaning attached to their color. The meaning is nonmaterial; the bands themselves are not.',
+          'An expectation about how staff should behave is a norm, and norms are nonmaterial culture. The passage lists norms, which specify expected behavior, among the ideas that make up nonmaterial culture.',
+          'The printer is a physical tool used within the system. Tools and devices are explicitly named in the passage as examples of material culture, so the printer belongs there even though it supports the norm.',
+          'The locked cabinet is a physical object used to store the bands. Like the bands and the printer, it is part of material culture; the rule about who may open it would be nonmaterial, but the cabinet itself is not.',
+        ],
         skill: '9A material vs nonmaterial culture',
       },
       {
@@ -164,6 +212,12 @@ export const FL4_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The practices moved from one society to others, which is diffusion, and the loss of their religious meaning shows the reinterpretation that borrowed elements commonly undergo. Invention creates something new by combining elements, but here an existing practice was borrowed rather than created. Assimilation describes a minority group adopting the dominant culture, whereas here the dominant societies borrowed a practice and did not take on a whole way of life. Cultural lag concerns norms trailing technology, not the reinterpretation of a borrowed practice.',
+        optionExplanations: [
+          'The practices moved from one society to others, which is diffusion, and the loss of their religious meaning illustrates the reinterpretation that the passage says borrowed elements commonly undergo so they fit the receiving culture.',
+          'Invention creates something new by combining existing elements. Here an existing practice was borrowed from another society rather than created, so the mechanism is diffusion, even though the practice was modified.',
+          'Assimilation describes a minority group adopting the dominant group’s culture and losing its distinctiveness. Here dominant societies borrowed a practice from elsewhere and did not take on a whole way of life.',
+          'Cultural lag concerns norms and laws trailing a new technology. The reinterpretation of a borrowed practice to fit a new culture is a feature of diffusion, not a mismatch between material and nonmaterial culture.',
+        ],
         skill: '9A cultural diffusion',
       },
     ],
@@ -193,6 +247,12 @@ export const FL4_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Before the examination the problem-focused group had lower anxiety (37 vs 48), but while waiting for results the emotion-focused group did (39 vs 52), so the advantage reversed with the time point. Emotion-focused coping was associated with higher, not lower, anxiety before the examination. Mean anxiety in the emotion-focused category fell from 48 to 39, so anxiety did not rise in both categories. Perceived control was low in both groups while waiting, and a correlational table cannot show that a coping style caused a change in control.',
+        optionExplanations: [
+          'Emotion-focused coping was associated with higher, not lower, anxiety before the examination (48 vs 37). Only during the waiting period was the emotion-focused group lower, so the association did not hold at both points.',
+          'Before the examination the problem-focused group had lower anxiety (37 vs 48), but while waiting for results the emotion-focused group did (39 vs 52). Which coping category went with lower anxiety reversed between the two time points.',
+          'Mean anxiety in the emotion-focused category fell from 48 to 39 between the two time points, so anxiety did not rise in both categories. Only the problem-focused category’s mean rose.',
+          'Perceived control was low in both groups while waiting (2.1 and 1.6), reflecting the situation rather than coping style, and a correlational table cannot show that a coping style caused a change in control.',
+        ],
         skill: '6C data interpretation: coping and anxiety',
       },
       {
@@ -206,6 +266,12 @@ export const FL4_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Judging what a stressful situation means, whether harm, threat, or an opportunity for growth, is primary appraisal, and seeing the examination as a chance to prove oneself is a challenge appraisal. Secondary appraisal concerns available resources, and nothing in the description indicates that these participants judged their resources to be low. A threat appraisal would describe the examination as a danger to their careers, the contrast the researchers drew. Describing the meaning of an event is an appraisal, not an action taken to alter its outcome, so it is not problem-focused coping.',
+        optionExplanations: [
+          'Secondary appraisal concerns the resources and options available for coping. Nothing in the description indicates that these participants judged their resources to be low; they framed the examination’s meaning positively.',
+          'A threat appraisal would describe the examination as a danger to their careers, which is exactly the contrast the researchers drew. Seeing it as a chance to prove competence is the opposite framing.',
+          'Describing the meaning of an event is an appraisal, not an action taken to alter its outcome. Problem-focused coping involves planning or acting on the stressor, whereas framing the exam as an opportunity is a judgment about what it means.',
+          'Judging what a stressful situation means, whether harm, threat, or an opportunity for growth, is primary appraisal. Seeing the examination as a chance to prove competence is a challenge appraisal under Lazarus’s model.',
+        ],
         skill: '6C primary vs secondary appraisal',
       },
       {
@@ -220,6 +286,12 @@ export const FL4_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Coping category was measured, not assigned, so the association could run in reverse: people who were already very anxious may have been the ones who kept rechecking answers and calling the board. A practice effect from retaking the scale would affect both waiting-period groups equally and could not produce a difference between them. The comparison in question is between two groups measured at the same time point, so a change in perceived control across time points does not undermine it. Sixty participants is ample for computing a group mean.',
+        optionExplanations: [
+          'Coping category was measured, not assigned, so the association could run in reverse: people who were already very anxious may have been the ones who kept rechecking answers and calling the board. This reverse causation cannot be excluded by a correlational design.',
+          'A practice effect from retaking the anxiety scale would affect both waiting-period groups equally, so it could not produce a difference between them. It might shift overall scores but not the comparison in question.',
+          'The comparison at issue is between two groups measured at the same time point, so a change in perceived control across time points does not undermine it. Both waiting-period groups had similarly low control.',
+          'Sixty participants is ample for computing a meaningful group mean. Sample size is not the weakness of this design; the lack of random assignment to coping category is.',
+        ],
         skill: '6C research design: correlational confound',
       },
       {
@@ -234,6 +306,12 @@ export const FL4_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The patient has been told that his own actions can change the outcome, so the situation is controllable and the hypothesis predicts that problem-focused coping, such as planning exercise and meals, will fit best. Reminding himself that others live well with the condition is emotion-focused reframing. Talking with friends to feel less alone is emotion-focused support seeking. Keeping busy to avoid thinking about the diagnosis is emotion-focused distraction. None of those three changes his blood pressure, which is the aspect of the situation he can control.',
+        optionExplanations: [
+          'Reminding himself that others live full lives with the condition is emotion-focused reframing. It regulates distress rather than changing the controllable situation, so it does not fit a case where action can alter the outcome.',
+          'Talking with friends to feel less alone is emotion-focused support seeking. It may ease worry but does nothing to lower his blood pressure, which the situation allows him to change through his own actions.',
+          'The patient has been told his own actions can bring the condition under control, so the situation is controllable. The goodness-of-fit hypothesis predicts that problem-focused coping, such as scheduling walks and low-salt meals, will fit best.',
+          'Keeping busy to avoid thinking about the diagnosis is emotion-focused distraction. In a controllable situation, distraction leaves the blood pressure unchanged and so is a poor fit under the hypothesis.',
+        ],
         skill: '6C problem- vs emotion-focused coping (application)',
       },
     ],
@@ -262,6 +340,12 @@ export const FL4_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Berkowitz’s account predicts the most aggression when negative affect is strongest and the frustration is seen as intentional and unjustified; deliberate interruptions combined with an aversive hot room satisfy both conditions. Accidental interruptions in a comfortable room provide neither, so aggression should be lowest there. Accidental interruptions in a hot room add aversive affect but lack perceived intent. Deliberate interruptions in a comfortable room supply intent without the added negative affect from heat, so aggression should be lower than when both are present.',
+        optionExplanations: [
+          'Accidental interruptions in a comfortable room provide neither perceived intent nor added aversive affect, so Berkowitz’s account predicts the least aggression in this condition.',
+          'Berkowitz’s account predicts the most aggression when negative affect is strongest and the frustration is seen as intentional and unjustified. Deliberate interruptions supply perceived intent, and an uncomfortably hot room adds aversive affect, satisfying both conditions.',
+          'A hot room adds aversive affect, but accidental interruptions lack the perceived intent that Berkowitz says turns readiness into attack. Aggression should be lower than when interruptions seem deliberate.',
+          'Deliberate interruptions supply perceived intent, but a cool, quiet room adds no aversive affect from the environment. Aggression should be lower than when heat intensifies the negative affect.',
+        ],
         skill: '7B frustration–aggression (Berkowitz)',
       },
       {
@@ -276,6 +360,12 @@ export const FL4_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'If high-empathy observers help even when they could simply leave, relieving their own distress cannot be the goal, because escape would accomplish that at no cost; helping that survives an easy escape points to concern for the victim’s welfare. A general drop in helping whenever escape is easy is exactly what an egoistic account predicts. High-empathy helping that appears only when escape is difficult is also consistent with an egoistic motive to end one’s own distress. Low-empathy participants helping more when escape is hard fits the egoistic account and says nothing in favor of an altruistic motive.',
+        optionExplanations: [
+          'A general drop in helping whenever escape is easy is exactly what an egoistic account predicts: if the goal is to relieve one’s own distress, leaving accomplishes that at no cost. This pattern does not favor altruism.',
+          'High-empathy helping that appears only when escape is difficult is consistent with an egoistic motive to end one’s own distress. When one cannot leave, helping is the only way to stop the distress, so this does not distinguish the accounts.',
+          'Low-empathy participants helping more when escape is hard fits the egoistic account and says nothing in favor of an altruistic motive. The empathy–altruism hypothesis makes its prediction about high-empathy observers.',
+          'If high-empathy observers help even when they could simply leave, relieving their own distress cannot be the goal, because escape would accomplish that at no cost. Helping that survives an easy escape points to genuine concern for the victim’s welfare.',
+        ],
         skill: '7B research design: empathy–altruism vs egoism',
       },
       {
@@ -290,6 +380,12 @@ export const FL4_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'An unsolicited gift creates a sense of obligation to give something back, which is the norm of reciprocity. Mere exposure requires repeated encounters with a stimulus, whereas the comparison is between single mailings that both carry the charity’s name. Nothing about the labels signals shared values, so similarity does not explain the difference. The comparison level for alternatives concerns whether a person stays in a relationship, and the labels do not change what other charities offer.',
+        optionExplanations: [
+          'An unsolicited gift creates a sense of obligation to give something back, which is the norm of reciprocity described in the passage. The labels are a benefit received, and donating is a way to return it.',
+          'Mere exposure requires repeated encounters with a stimulus to increase liking. The comparison is between single mailings that both carry the charity’s name, so familiarity does not differ between conditions.',
+          'Nothing about free address labels signals shared values between donor and charity. The similarity principle concerns attraction to those who share attitudes and background, not a response to a small gift.',
+          'The comparison level for alternatives concerns whether a person stays in an existing relationship by weighing it against other options. The labels do not change what other charities offer, so this concept does not apply.',
+        ],
         skill: '7B reciprocity norm',
       },
       {
@@ -304,6 +400,12 @@ export const FL4_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Because apartments were assigned at random, residents living near one another meet most often, and proximity with repeated exposure increases liking, so nearby neighbors should be named most. The passage says similarity predicts liking more reliably than complementarity, so friendships concentrated among opposites are unlikely. Attractiveness mainly shapes first impressions and has a smaller effect on lasting ties such as year-long friendships. Equal rates across the complex would mean distance played no role, contrary to the proximity effect.',
+        optionExplanations: [
+          'The passage says similarity predicts liking more reliably than complementarity does, so friendships concentrated among residents with opposite personalities are unlikely. Random assignment also makes proximity the dominant factor here.',
+          'Physical attractiveness mainly shapes first impressions and has a smaller effect on lasting relationships. Year-long friendships in a housing complex are better predicted by proximity and repeated exposure.',
+          'Because apartments were assigned at random, residents living near one another meet most often, and proximity with repeated exposure increases liking. Residents should therefore most often name the neighbors whose doors are closest.',
+          'Equal rates across the complex would mean distance played no role, contrary to the proximity effect the passage describes. Repeated encounters with nearby neighbors should make them disproportionately likely to become friends.',
+        ],
         skill: '7B attraction: proximity and mere exposure',
       },
       {
@@ -318,6 +420,12 @@ export const FL4_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Stability depends on the comparison level for alternatives: she stays because the outcomes of the marriage, though disappointing, exceed what she believes she could obtain outside it. Her marriage falls short of, rather than exceeds, what she once expected from a partner, which is why she is dissatisfied. She gives no indication that she stays to repay past benefits, so reciprocity is not her stated reason. Increased liking through exposure would make her more satisfied, but she describes the marriage as disappointing and stays for lack of a better option.',
+        optionExplanations: [
+          'Her marriage falls short of, rather than exceeds, what she once expected from a partner, which is why she is dissatisfied. Her comparison level is unmet; what keeps her is the comparison with alternatives.',
+          'She gives no indication that she stays to repay past benefits, so reciprocity is not her stated reason. Her explanation is forward-looking, about what living alone would be like, not about obligations already incurred.',
+          'Increased liking through repeated exposure would make her more satisfied, but she describes the marriage as disappointing. She stays for lack of a better option, not because her affection has grown.',
+          'Stability depends on the comparison level for alternatives: she stays because the outcomes of the marriage, though disappointing, exceed what she believes she could obtain outside it (living alone on her income).',
+        ],
         skill: '7B social exchange: comparison level for alternatives',
       },
     ],
@@ -360,6 +468,12 @@ export const FL4_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'From 0 to 8 days, false reports rose from 22% to 46% on the standard test and from 9% to 19% on the source test, so both increased but the standard-test curve climbed more than twice as much. The source test did not eliminate the effect, because misled items were still falsely reported more often (9–19%) than control items (6–7%). Control-item errors stayed flat at 6–7% across delays. On the standard test the rate rose from 37% to 46% between 4 and 8 days, an increase of about a quarter, not a doubling.',
+        optionExplanations: [
+          'From 0 to 8 days, false reports rose from 22% to 46% on the standard test and from 9% to 19% on the source test. Both increased with delay, but the standard-test curve climbed more than twice as steeply.',
+          'The source test did not eliminate the misinformation effect. Misled items were still falsely reported more often (9–19%) than control items (6–7%) at every delay, so the effect persisted even when sources were probed.',
+          'Control-item errors stayed flat at 6–7% across all delays. They did not increase steadily, which is what distinguishes the misinformation effect from a general decline in memory accuracy.',
+          'On the standard test the rate rose from 37% at 4 days to 46% at 8 days, an increase of about a quarter, not a doubling. A doubling would have required roughly 74% at 8 days.',
+        ],
         skill: '6B data interpretation: misinformation effect',
       },
       {
@@ -373,6 +487,12 @@ export const FL4_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'When participants were asked explicitly where each version came from, many of them correctly placed the summary’s version in the summary, so a large share of standard-test errors reflected misattribution of source rather than loss of the video memory. If the summary had erased the original details, asking about sources could not recover them, and the two curves would coincide. Both halves watched the same video under the same conditions and differed only in the test they later received, so there is no basis for a difference in attention to the video. Both tests were given 20 minutes after the summary, so the interval did not differ.',
+        optionExplanations: [
+          'If the summary had erased the original details for every misled item, asking about sources could not recover them, and the two misled-item curves would coincide. The large gap between curves shows that many video memories survived.',
+          'Both halves watched the same video under the same conditions and were randomly split only at the test stage. There is no basis for a difference in attention to the video between the two test groups.',
+          'When participants were asked explicitly where each version came from, many correctly placed the summary’s version in the summary. A large share of standard-test errors therefore reflected misattribution of source rather than loss of the video memory.',
+          'Both tests were given 20 minutes after the summary, so the interval between summary and test did not differ between the groups. The difference lies in how memory was probed, not in timing.',
+        ],
         skill: '6B source monitoring',
       },
       {
@@ -386,6 +506,12 @@ export const FL4_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'As the delay lengthens, the original trace weakens through forgetting, so a participant is less likely to notice that the summary contradicts what was seen and more likely to accept its version. Proactive interference from the video would impair learning of the summary and should reduce, not increase, false reports. The summary was always read 20 minutes before the test, so its recency was the same at every delay. Rehearsing the video’s details would strengthen the original memory and lower false reports, the opposite of the trend observed.',
+        optionExplanations: [
+          'Proactive interference from the video would impair learning of the summary. If the summary were encoded less well, participants would be less likely to report its version, so false reports should decrease, not increase, with delay.',
+          'As the delay lengthens, the original video trace weakens through forgetting. A participant is then less likely to notice that the summary contradicts what was seen and more likely to accept the summary’s version as the memory.',
+          'The summary was always read 20 minutes before the test, so its recency at test was identical at every delay. The delay varied between the video and the summary, not between the summary and the test.',
+          'Rehearsing the video’s details would strengthen the original memory and lower false reports. The observed rise in false reports with delay is the opposite of what more rehearsal would produce.',
+        ],
         skill: '6B forgetting and the misinformation effect',
       },
       {
@@ -400,6 +526,12 @@ export const FL4_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'If participants were merely deferring to an authority they believed accurate, telling them that the summary contained errors should remove the reason to defer and bring false reports down to the control level; if false reports persist after the warning, the summary must have changed what participants remember. Doubling the number of details changes memory load but does not separate deference from memory change. Showing the video twice strengthens the original memory, which would reduce false reports under either account. Confidence ratings for control items would not reveal why misled items were falsely reported.',
+        optionExplanations: [
+          'Doubling the number of critical details changes memory load but does not separate deference to authority from genuine memory change. Both accounts would predict similar patterns with more items.',
+          'Showing the video twice strengthens the original memory, which would reduce false reports under either account. It does not distinguish whether remaining errors come from deference or from altered memory.',
+          'Confidence ratings for control items would describe how sure participants are about unmanipulated details. They would not reveal why misled items were falsely reported, so they cannot test the critic’s claim.',
+          'If participants were merely deferring to an authority they believed accurate, telling them the summary contained errors should remove the reason to defer and bring false reports down to the control level. If false reports persist after the warning, the summary must have changed what participants remember.',
+        ],
         skill: '6B research design: demand characteristics',
       },
     ],
@@ -422,6 +554,12 @@ export const FL4_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'A drug that occupies the receptor without activating it and blocks the natural ligand is an antagonist; because GABA-A activation normally lets chloride in and inhibits the neuron, blocking it removes inhibition and makes the neuron more excitable. An agonist would open the channel and increase inhibition. Decreased excitability would follow from enhancing GABA’s effect, not from blocking it. A reuptake inhibitor acts on presynaptic transporters, not on the postsynaptic receptor, and would increase rather than block GABA signaling.',
+    optionExplanations: [
+      'An agonist would activate the receptor and open the chloride channel, increasing inhibition. This drug occupies the site without opening the channel, so it does not mimic GABA’s action.',
+      'A drug that occupies the receptor without activating it and blocks the natural ligand is an antagonist. Because GABA-A activation normally lets chloride in and inhibits the neuron, blocking it removes inhibition and makes the neuron more excitable.',
+      'The antagonist classification is right, but blocking GABA-A receptors decreases inhibition, which increases excitability. Decreased excitability would follow from enhancing GABA’s effect, not from preventing it.',
+      'A reuptake inhibitor acts on presynaptic transporters to keep neurotransmitter in the synapse longer, which would increase rather than block GABA signaling. This drug acts on the postsynaptic receptor itself.',
+    ],
     skill: '6A drug action: agonist vs antagonist',
   },
   {
@@ -439,6 +577,12 @@ export const FL4_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'In the resistance stage the body adapts to a continuing stressor, the initial surge of arousal settles, and elevated hormones such as cortisol sustain functioning, matching her situation. The alarm stage is the initial emergency response she showed at first, not the adjusted state weeks later. Exhaustion occurs when resources are depleted and illness or breakdown appears, whereas she is performing well. Selye’s model has no recovery stage while the stressor continues, and her elevated cortisol shows she is still responding to it.',
+    optionExplanations: [
+      'The alarm stage is the initial emergency response, the pounding heart and sleeplessness she showed at first. Weeks later, after her body has adjusted while the stressor continues, she has moved past alarm.',
+      'Exhaustion occurs when resources are depleted and illness or breakdown appears. She is performing well, which rules out exhaustion; elevated cortisol alone is characteristic of resistance, not exhaustion.',
+      'In the resistance stage the body adapts to a continuing stressor, the initial surge of arousal settles, and elevated hormones such as cortisol sustain functioning. Her subsided acute symptoms, continued cortisol elevation, and good performance match this stage.',
+      'Selye’s model has no recovery stage while the stressor continues, and her elevated cortisol shows she is still responding to the overnight shifts. The subsiding of acute symptoms marks adaptation, not recovery.',
+    ],
     skill: '6C general adaptation syndrome',
   },
   {
@@ -455,6 +599,12 @@ export const FL4_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'Social-cognitive theory adds cognitive variables, such as expectancies about outcomes, to learning, whereas strict behaviorism explains behavior without appeal to mental states, so only the social-cognitive theorist would accept that expectations shape behavior. Both views agree that reinforcement history contributes to consistent behavior. Both reject unconscious childhood conflict, which belongs to psychoanalytic theory. Limiting explanation to observable events is the behaviorist position, which the social-cognitive theorist would reject.',
+    optionExplanations: [
+      'Social-cognitive theory adds cognitive variables, such as expectancies about outcomes, to learning, whereas strict behaviorism explains behavior without appeal to mental states. Only the social-cognitive theorist would accept that expectations shape behavior.',
+      'Both views agree that reinforcement history contributes to consistent patterns of behavior. The social-cognitive theorist would accept this statement, but so would the behaviorist, so it does not separate them.',
+      'Both views reject unconscious childhood conflict, which belongs to psychoanalytic theory. Neither the social-cognitive theorist nor the behaviorist would accept this explanation of personality differences.',
+      'Limiting explanation to observable events is the behaviorist position. The social-cognitive theorist would reject it, since the theory explicitly includes inner states such as expectancies and self-efficacy beliefs.',
+    ],
     skill: '7A behaviorist vs social-cognitive personality theory',
   },
   {
@@ -472,6 +622,12 @@ export const FL4_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'Freud placed the Oedipal conflict in the phallic stage (about ages 3–6) and held that identifying with the same-sex parent internalizes that parent’s standards, forming the superego. The anal stage centers on toilet training and precedes the Oedipal conflict, and the ego emerges earlier as the child learns to deal with reality. Latency follows the resolution of the conflict and is a period of dormant sexual interest. The genital stage begins at puberty, long after the ego has formed.',
+    optionExplanations: [
+      'The anal stage centers on toilet training and precedes the Oedipal conflict. The ego emerges earlier than the superego, as the child learns to deal with reality, and is not the structure formed by identification with the father.',
+      'Latency follows the resolution of the Oedipal conflict and is a period of dormant sexual interest. The superego is the right structure, but it is established at the end of the phallic stage, before latency begins.',
+      'Freud placed the Oedipal conflict in the phallic stage (about ages 3–6) and held that identifying with the same-sex parent internalizes that parent’s standards, forming the superego.',
+      'The genital stage begins at puberty, long after both the Oedipal conflict and the formation of the ego. Neither the stage nor the structure matches Freud’s account of identification with the father.',
+    ],
     skill: '7A psychoanalytic theory: psychosexual stages',
   },
   {
@@ -489,6 +645,12 @@ export const FL4_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'The semicircular canals detect rotational acceleration through the movement of endolymph relative to the canal; when the chair stops, the fluid’s inertia keeps it moving, bending the hair cells as a turn in the opposite direction would. The utricle and saccule respond to linear acceleration and head tilt, not rotation. The cochlea transduces sound, not motion of the head. Neck proprioceptors signal the head’s position relative to the body, which did not change while she sat in the chair.',
+    optionExplanations: [
+      'The utricle and saccule respond to linear acceleration and head tilt through the shifting of otoliths. They do not signal rotation, so they are not the source of a sensation of turning after a spin.',
+      'The cochlea transduces sound, not motion of the head. Although it is part of the inner ear alongside the vestibular organs, its basilar membrane plays no role in sensing rotation.',
+      'Neck proprioceptors signal the head’s position relative to the body, which did not change while she sat in the chair with her head and body turning together. They cannot produce a sensation of rotation.',
+      'The semicircular canals detect rotational acceleration through movement of endolymph relative to the canal. When the chair stops, the fluid’s inertia keeps it moving, bending the hair cells as a turn in the opposite direction would.',
+    ],
     skill: '6A vestibular sense',
   },
   {
@@ -506,6 +668,12 @@ export const FL4_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'Intersectionality holds that social positions such as race and gender combine to produce distinct experiences that are not simply the sum of each position’s separate effects, which is exactly what the interviews show. Social reproduction concerns the transmission of advantage across generations, which the study does not examine. Meritocracy is a principle of allocation by ability and would not predict group-specific mistreatment. Cultural relativism is a stance for evaluating other cultures, not a pattern of inequality.',
+    optionExplanations: [
+      'Social reproduction concerns the transmission of advantage or disadvantage across generations. The study examines workplace mistreatment of current physicians, not how inequality passes from parents to children.',
+      'Intersectionality holds that social positions such as race and gender combine to produce distinct experiences that are not simply the sum of each position’s separate effects. That is exactly what the interviews show.',
+      'Meritocracy is a principle of allocating positions by ability. It would not predict group-specific patterns of mistreatment, and the finding concerns treatment at work, not how positions were allocated.',
+      'Cultural relativism is a stance for evaluating other cultures by their own standards. It describes an approach to judging practices, not a pattern of inequality among groups within one workplace.',
+    ],
     skill: '10A intersectionality',
   },
   {
@@ -518,6 +686,12 @@ export const FL4_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'In Ritzer’s account, control is achieved by replacing human judgment with nonhuman technology, as when software scripts a physician’s questions and suggests the diagnosis. Calculability, the emphasis on quantity that can be counted, is illustrated by the 12-minute appointment slot. Predictability, the sameness of products and services across settings, is illustrated by identical protocols at every location. Efficiency is the pursuit of the fastest means to an end; the software may save time, but its defining feature here is that it constrains the physician’s decisions.',
+    optionExplanations: [
+      'In Ritzer’s account, control is achieved by replacing human judgment with nonhuman technology. Software that scripts a physician’s questions and suggests the diagnosis constrains professional decisions, which is the defining feature of this dimension.',
+      'Calculability is the emphasis on quantity that can be counted, illustrated here by the 12-minute appointment slot. The software requirement is not about measuring output but about directing the physician’s decisions.',
+      'Predictability is the sameness of products and services across settings, illustrated by identical protocols at every location. The software may contribute to sameness, but its defining feature is constraining judgment.',
+      'Efficiency is the pursuit of the fastest means to an end. The software may save time, but what the question highlights is that it prompts each question and suggests a diagnosis, replacing the physician’s judgment.',
+    ],
     skill: '9A rationalization: McDonaldization',
   },
   {
@@ -535,6 +709,12 @@ export const FL4_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'Weak ties act as bridges to other social circles, so acquaintances carry information that the job seeker and her close friends, who know many of the same people, do not already have. Network research does not attribute the effect to competition among friends. Acquaintances are valuable precisely because their information differs from the seeker’s, not because it overlaps. Close friendships form in many settings, and the explanation rests on the redundancy of information within a tight cluster, not on where friends are met.',
+    optionExplanations: [
+      'Network research does not attribute the effect to competition among close friends. The explanation rests on information flow: close friends know the same people and hear the same leads, so their information is redundant.',
+      'Acquaintances are valuable precisely because their information differs from the seeker’s, not because it overlaps. Overlapping knowledge would make their tips redundant rather than useful.',
+      'Weak ties act as bridges to other social circles, so acquaintances carry information that the job seeker and her close friends, who know many of the same people, do not already have. This is the strength of weak ties.',
+      'Close friendships form in many settings, not mainly at work. The explanation rests on the redundancy of information within a tight cluster of close ties, not on where friends happen to be met.',
+    ],
     skill: '9A social networks: strength of weak ties',
   },
 ]

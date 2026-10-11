@@ -41,6 +41,12 @@ export const FL3_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Figure 1 gives a baseline stroke work of 1.00 J at 130 mL, which is $1.00/(1.33 \\times 10^{-4}) \\approx 7500$ mmHg·mL; dividing by the 100 mmHg pressure difference gives a stroke volume of 75 mL, so ESV = 130 − 75 = 55 mL. The 75 mL value is the stroke volume itself, not the volume left in the ventricle. The 113 mL value is the stroke volume computed from the dobutamine curve (1.50 J), and 17 mL is the ESV that would follow from that same misreading.',
+        optionExplanations: [
+          'This is the ESV you get by using the dobutamine curve (1.50 J) instead of the baseline curve: 1.50 J converts to about 11,300 mmHg·mL, giving a 113 mL stroke volume and 130 − 113 = 17 mL. The question specifies the baseline run.',
+          'Baseline stroke work at 130 mL is 1.00 J, or $1.00/(1.33 \\times 10^{-4}) \\approx 7500$ mmHg·mL. Dividing by the 100 mmHg pressure difference gives a stroke volume of 75 mL, so ESV = EDV − SV = 130 − 75 = 55 mL.',
+          'This is the stroke volume (the volume ejected), not the end-systolic volume. The question asks how much blood remains in the ventricle after ejection, which requires subtracting the stroke volume from the 130 mL EDV.',
+          'This is the stroke volume read from the dobutamine curve: 1.50 J ≈ 11,300 mmHg·mL, divided by 100 mmHg. It uses the wrong condition and stops at stroke volume instead of subtracting from the EDV.',
+        ],
         skill: '4A work as area under a P–V curve (data interpretation)',
       },
       {
@@ -54,6 +60,12 @@ export const FL3_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'At baseline stroke work rises 0.20 J per 20 mL (0.010 J/mL), and with dobutamine it rises 0.30 J per 20 mL (0.015 J/mL); extending each line to zero stroke work gives about 30 mL in both cases, so the drug steepened the relation without moving its intercept, the signature of greater contractility at every filling volume. A shift toward larger EDVs would displace the line sideways with an unchanged slope. The added work is not constant, growing from 0.20 J at 70 mL to 0.60 J at 150 mL. Stroke work is higher with dobutamine at all five volumes, not only the largest two.',
+        optionExplanations: [
+          'A rightward shift with unchanged slope would mean the same stroke work is reached only at larger filling volumes, that is, a weaker heart. Figure 1 shows the dobutamine line is steeper, not parallel and displaced.',
+          'The added stroke work is not constant: it grows from 0.20 J at 70 mL to 0.60 J at 150 mL. A constant offset would make the two lines parallel, but the dobutamine line clearly diverges from baseline.',
+          'Stroke work is higher under dobutamine at every one of the five EDVs tested, including the smallest (0.6 vs 0.4 J at 70 mL). The effect is not confined to the two largest volumes.',
+          'Baseline rises 0.010 J/mL and dobutamine 0.015 J/mL, so the relation is steeper. Extending each line to zero stroke work gives roughly 30 mL in both cases, so the volume intercept is unchanged, the classic signature of increased contractility.',
+        ],
         skill: '4A stroke work (data interpretation)',
       },
       {
@@ -67,6 +79,12 @@ export const FL3_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Pressure–volume work is $\\int P\\,dV$; in the isovolumetric contraction phase both valves are closed and the volume is constant, so no work is done on the blood no matter how fast pressure rises. A rapid rise in pressure does not by itself constitute work, which requires a change in volume. The sign of the work depends on whether volume decreases or increases, not on whether pressure is rising, and here there is no volume change at all. The product of pressure rise and stroke volume confuses this phase with ejection, when the blood actually leaves the chamber.',
+        optionExplanations: [
+          'Work on the blood is $\\int P\\,dV$. During isovolumetric contraction both valves are closed, so $dV = 0$ and the integral is zero no matter how rapidly pressure rises. The rapid pressure rise is tempting but irrelevant to work.',
+          'A fast rate of pressure change is not work. Work requires displacement (a change in volume), and in this interval the volume is fixed, so the ventricle does no work on the blood even though pressure is climbing quickly.',
+          'The sign of pressure–volume work depends on whether volume increases or decreases, not on whether pressure is rising. Here volume does not change at all, so the work is neither positive nor negative but zero.',
+          'Pressure change times stroke volume describes a quantity from the ejection phase, when blood actually leaves the chamber. Before the aortic valve opens no blood has been ejected, so no stroke volume is involved.',
+        ],
         skill: '4A pressure–volume work',
       },
       {
@@ -75,6 +93,12 @@ export const FL3_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'By the law of Laplace, $\\sigma = Pr/2h$, so at constant pressure stress is proportional to $r/h$: the factor is $1.5 \\times (1.2/0.9) = 1.5 \\times 1.33 = 2.0$. The value 1.5 accounts for the larger radius but ignores the thinner wall. The value 1.1 multiplies by the thickness ratio (0.75) instead of dividing by it. The value 3.0 treats stress as proportional to the square of the radius.',
+        optionExplanations: [
+          'This value multiplies by the thickness ratio 0.9/1.2 = 0.75 instead of dividing by it (1.5 × 0.75 ≈ 1.1). A thinner wall raises stress, so thickness belongs in the denominator of $\\sigma = Pr/2h$.',
+          'A factor of 1.5 accounts for the 50% increase in radius but ignores the thinner wall. Because stress is proportional to $r/h$, the decrease in $h$ from 1.2 to 0.9 cm adds a further factor of 1.33.',
+          'From $\\sigma = Pr/2h$, stress at constant pressure scales as $r/h$. The radius factor is 1.5 and the thickness factor is 1.2/0.9 = 1.33, so stress becomes 1.5 × 1.33 = 2.0 times its original value.',
+          'A factor of 3.0 treats stress as proportional to $r^2/h$ or otherwise overcounts the radius. The law of Laplace is linear in radius, so the radius contributes only a single factor of 1.5.',
+        ],
         skill: '4B law of Laplace',
       },
       {
@@ -88,6 +112,12 @@ export const FL3_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'A few seconds of reduced venous return changes only how much one heart fills, so differences in stroke work among its loops reflect preload while contractility, heart size and other animal-to-animal differences are held fixed. Reducing venous return lowers, rather than raises, arterial pressure, so it does not hold afterload in step with filling. The cuff reduces filling, so every loop in a run has an EDV at or below the resting value. The cuff is on the vena cava, not the coronary circulation, so it does not interrupt coronary flow.',
+        optionExplanations: [
+          'Tightening the vena cava cuff reduces venous return and therefore lowers, not raises, arterial pressure. It does not hold afterload in step with filling; the passage notes only that mean arterial pressure was similar between conditions.',
+          'A brief cuff occlusion changes only how much one heart fills over a few beats, so the resulting family of loops isolates preload while contractility, heart size and animal-to-animal differences are all held constant.',
+          'The cuff reduces venous return, so every loop in a run has an EDV at or below the resting value. It samples the curve by lowering filling, not by raising the EDV above rest.',
+          'The cuff is on the inferior vena cava, not the coronary arteries, so it does not interrupt coronary flow. Removing oxygen supply as a limit is not the purpose of the maneuver.',
+        ],
         skill: '4A Frank–Starling mechanism (research design)',
       },
     ],
@@ -115,6 +145,12 @@ export const FL3_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           '$\\log P$ describes the partitioning of the neutral form, so the measurement must be made where essentially all of the amine is unprotonated; two units above the $\\text{p}K_a$ the neutral base is about 99% of the total, and the measured ratio approaches $P$. At pH 3.0 the drug is almost entirely the charged conjugate acid, which stays in water and gives a ratio far below $P$. At pH 7.4 the drug is still mostly protonated, so the result is a physiologically useful $D$ rather than $P$. At pH 9.0 only half the drug is neutral, so the measured ratio is roughly half of $P$.',
+        optionExplanations: [
+          'At pH 3.0, six units below the $\\text{p}K_a$, essentially all of the amine is protonated. The charged form stays in water, so the measured ratio would be far below $P$ and would describe the ion, not the neutral drug.',
+          'At pH 7.4 the amine is still mostly protonated (about 97%). A measurement here gives the distribution coefficient $D$, which is physiologically useful but is not the $\\log P$ of the neutral form the question asks for.',
+          'At the $\\text{p}K_a$ only half the drug is neutral, so the observed ratio would be roughly half of $P$. The two forms being equal is exactly the condition that makes the measurement a $D$, not a $P$.',
+          'The passage defines $P$ for the neutral form only. Two units above the $\\text{p}K_a$ about 99% of the amine is unprotonated, so the measured octanol/water ratio approaches the true $P$ with negligible contribution from the ion.',
+        ],
         skill: '5A partition and ionization (research design)',
       },
       {
@@ -123,6 +159,12 @@ export const FL3_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'A hydrocarbon has no significant permanent dipole and no charge, and the hydrocarbon chain of octanol is likewise nonpolar, so the attraction between them arises from temporary, fluctuating dipoles, that is, London dispersion forces. Hydrogen bonds require an H bonded to N, O or F, which the drug lacks. Ion–dipole interactions require an ion, and neither partner is charged. Dipole–dipole interactions require permanent dipoles, which C–H bonds are too weakly polar to provide.',
+        optionExplanations: [
+          'Hydrogen bonds require a hydrogen bonded to N, O or F. A molecule containing only carbon and hydrogen has no such hydrogen, and the octanol hydrocarbon chain offers no acceptor, so no hydrogen bonds form.',
+          'Ion–dipole interactions require an ion. Neither the hydrocarbon drug nor the octanol chain carries a charge, so this type of attraction cannot operate between them.',
+          'Both partners are nonpolar hydrocarbons with no permanent dipole or charge. Their mutual attraction comes from temporary, fluctuating dipoles, that is, London dispersion forces, the only intermolecular force available to nonpolar species.',
+          'Dipole–dipole interactions need permanent dipoles. C–H bonds are too weakly polar to give a hydrocarbon a meaningful dipole, and the hydrocarbon portion of octanol is similarly nonpolar.',
+        ],
         skill: '5B intermolecular forces',
       },
       {
@@ -136,6 +178,12 @@ export const FL3_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The lower melting point of Form II indicates weaker forces holding its molecules in the lattice, so less energy is needed to pull them into solution and its solubility is higher. Less efficient packing weakens a lattice and therefore raises solubility rather than lowering it. Once dissolved, molecules from either polymorph are identical, so their partitioning into octanol is the same. Although the molecules are identical, solubility is an equilibrium between solution and a particular solid, and different solids give different solubilities.',
+        optionExplanations: [
+          'The lower melting point of Form II shows its molecules are held less strongly in the lattice, so less energy is needed to pull them into solution and its solubility is greater. The passage ties melting point directly to lattice strength.',
+          'Less efficient packing does weaken a lattice, but a weaker lattice dissolves more readily, not less. This choice pairs a plausible structural idea with the wrong direction for solubility.',
+          'Once dissolved, molecules from either polymorph are identical, so their polarity and octanol partitioning are the same. Polymorphism changes the solid, not the dissolved molecule.',
+          'Identical molecules do not guarantee identical solubility, because solubility is an equilibrium between solution and a particular solid lattice. The passage states explicitly that a change of polymorph can change how completely a tablet dissolves.',
+        ],
         skill: '5B intermolecular forces and phase changes',
       },
       {
@@ -149,6 +197,12 @@ export const FL3_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Methylating the amide nitrogen removes a hydrogen-bond donor without adding a charge, which lowers the cost of leaving water and speeds entry into the membrane. A phenolic hydroxyl adds a new donor and lowers $\\log P$. A carboxylic acid is largely ionized at intestinal pH, and the charged form is excluded from the membrane interior. A primary amide adds two N–H donors in place of an ester that had none.',
+        optionExplanations: [
+          'A phenolic hydroxyl adds a new hydrogen-bond donor and lowers $\\log P$, making it costlier for the molecule to leave water. This moves permeability in the wrong direction.',
+          'Methylating the amide nitrogen removes a hydrogen-bond donor (the N–H) without adding charge or a new polar group. The passage identifies donors as the most costly feature for membrane entry, so this change speeds passive diffusion.',
+          'A carboxylic acid is largely ionized at intestinal pH, and the passage states the charged form is essentially excluded from the membrane interior. This would sharply reduce, not increase, diffusion.',
+          'A primary amide introduces two N–H donors in place of an ester that had none. Adding donors slows membrane crossing according to the passage.',
+        ],
         skill: '5B hydrogen bonding and membrane permeability',
       },
     ],
@@ -178,6 +232,12 @@ export const FL3_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Edman degradation fixes Ser-Lys-Phe-Glu, and tryptic fragment T1 (Arg, Glu, Phe) must be Phe-Glu-Arg, placing Arg fifth; the remaining Gly, Leu and Tyr form T2, which does not end in Lys or Arg and so is the C-terminal fragment. Chymotryptic fragment C3 (Arg, Glu, Gly, Tyr) must end in Tyr, giving Glu-Arg-Gly-Tyr, and C1 is free Leu, so the chain ends Gly-Tyr-Leu. Ending in Gly-Leu-Tyr is consistent with trypsin but would give a five-residue chymotryptic fragment and no free Leu. Ending in Tyr-Gly-Leu would give chymotryptic fragments Glu-Arg-Tyr and Gly-Leu, and ending in Leu-Tyr-Gly would give Glu-Arg-Leu-Tyr and free Gly, neither of which appears in Table 1.',
+        optionExplanations: [
+          'Edman fixes Ser-Lys-Phe-Glu; T1 (Arg, Glu, Phe) must be Phe-Glu-Arg, placing Arg fifth. C3 (Arg, Glu, Gly, Tyr) must end in Tyr, giving Glu-Arg-Gly-Tyr, and C1 is free Leu, so the chain ends Gly-Tyr-Leu.',
+          'Ending Gly-Leu-Tyr is consistent with the trypsin data, but chymotrypsin would then produce a five-residue fragment Glu-Arg-Gly-Leu-Tyr and no free Leu, contradicting C1 and C3 in Table 1.',
+          'Ending Tyr-Gly-Leu would give chymotryptic fragments Glu-Arg-Tyr and Gly-Leu. Neither matches the observed C3 (Arg, Glu, Gly, Tyr) or the single-residue C1 (Leu).',
+          'Ending Leu-Tyr-Gly would give chymotryptic fragments Glu-Arg-Leu-Tyr and free Gly. Table 1 shows free Leu, not free Gly, and a C3 fragment containing Gly and Tyr but no Leu.',
+        ],
         skill: '5D peptide sequencing',
       },
       {
@@ -186,6 +246,12 @@ export const FL3_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'At pH 7.4 the Lys and Arg side chains are fully protonated (+2), the N-terminal amino group ($\\text{p}K_a$ 8.0) is about 80% protonated (about +0.8), the Glu side chain and C-terminal carboxyl are fully deprotonated (−2), and the Tyr side chain is neutral, for a net charge near +0.8, or about +1. A charge of +3 counts only the three basic groups and ignores the two carboxylates. A charge of +2 omits one of the two carboxylates. A charge of 0 treats the N-terminal amino group as uncharged, although pH 7.4 is below its $\\text{p}K_a$.',
+        optionExplanations: [
+          'A net charge of zero treats the N-terminal amino group as uncharged, but pH 7.4 is below its $\\text{p}K_a$ of 8.0, so it is about 80% protonated and contributes roughly +0.8.',
+          'Lys and Arg side chains are fully protonated (+2), the N-terminal amine (pKa 8.0) is about 80% protonated (+0.8), and the Glu side chain and C-terminal carboxyl are deprotonated (−2). Tyr is neutral. Net ≈ +0.8, closest to +1.',
+          'A charge of +2 omits one of the two carboxylates (Glu side chain or C-terminal carboxyl). Both have pKa values far below 7.4 and are fully negative.',
+          'A charge of +3 counts the three basic groups (Lys, Arg, N-terminus) but ignores both negatively charged carboxylates. It also treats the N-terminus as fully protonated.',
+        ],
         skill: '5D amino acid charge and pKa',
       },
       {
@@ -199,6 +265,12 @@ export const FL3_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'A fragment spanning C2 and C3 has a neutral mass of 380 + 523 − 18 = 885 Da, because joining two fragments removes one water, so its [M + H]⁺ is 886; this is Ser-Lys-Phe-Glu-Arg-Gly-Tyr, produced when the bond after Tyr is cut but the bond after Phe is not. Missing only the cut after Tyr would give Glu-Arg-Gly-Tyr-Leu, at 523 + 131 − 18 + 1 = 637. Missing both cuts leaves the intact peptide, at 999. An extra cleavage would produce fragments smaller than those in Table 1, not a larger one.',
+        optionExplanations: [
+          'Cutting after Phe but not after Tyr would leave Glu-Arg-Gly-Tyr-Leu intact, with [M + H]⁺ = 523 + 131 − 18 + 1 = 637. This does not match m/z 886.',
+          'If neither bond were cleaved, the intact peptide would remain at m/z 999 (the sum of the tryptic fragments minus two waters and two protons). That is larger than 886.',
+          'An additional cleavage after Arg would produce fragments smaller than those in Table 1. A product at m/z 886, heavier than any listed fragment, must come from a missed cleavage, not an extra one.',
+          'Joining C2 (380 Da neutral) and C3 (523 Da neutral) removes one water: 380 + 523 − 18 = 885, so [M + H]⁺ = 886. This fragment, Ser-Lys-Phe-Glu-Arg-Gly-Tyr, forms when the bond after Tyr is cut but the bond after Phe is missed.',
+        ],
         skill: '5D peptide mass spectrometry (data interpretation)',
       },
       {
@@ -207,6 +279,12 @@ export const FL3_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Trypsin cleaves after Lys and Arg, whose side chains are positively charged at physiological pH, so a negatively charged aspartate at the base of the pocket forms a favorable ionic interaction with them. A lysine would carry a positive charge and repel the substrate side chains. A leucine would create a nonpolar pocket suited to hydrophobic side chains, the kind of pocket found in enzymes that prefer bulky nonpolar residues. A glutamine is polar but uncharged and cannot supply the electrostatic complementarity that selects for Lys and Arg.',
+        optionExplanations: [
+          'Lysine carries a positive charge at physiological pH and would repel the positively charged Lys and Arg side chains that trypsin must bind. It is the opposite of what the pocket needs.',
+          'Leucine would make the pocket nonpolar and suited to bulky hydrophobic side chains, the specificity of enzymes like chymotrypsin that prefer aromatic residues, not the charged residues trypsin selects.',
+          'Trypsin cleaves after Lys and Arg, whose side chains are positively charged. A negatively charged aspartate at the base of the pocket forms a favorable ionic interaction with those side chains, explaining the specificity.',
+          'Glutamine is polar but uncharged. It can hydrogen bond but cannot provide the electrostatic complementarity needed to select specifically for the positively charged Lys and Arg side chains.',
+        ],
         skill: '5D amino acid side-chain properties',
       },
       {
@@ -220,6 +298,12 @@ export const FL3_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Peptide P itself has [M + H]⁺ = 451 + 352 + 234 − 2(19) = 999, so the second peptide is 42 Da heavier, matching acetylation, and an acetylated N-terminus lacks the free α-amino group that phenyl isothiocyanate must react with, which explains the empty first cycle. Phosphorylation of Tyr would give m/z 1079 and would leave the N-terminus free. Head-to-tail cyclization would also block Edman degradation but would lower the ion to m/z 981. C-terminal amidation would give m/z 998 and would not affect the N-terminus.',
+        optionExplanations: [
+          'Phosphorylation adds 80 Da, which would give m/z 1079, not 1041. It also leaves the N-terminal amino group free, so the first Edman cycle would still release Ser.',
+          'Head-to-tail cyclization would indeed block Edman degradation, but it removes water (−18 Da), giving m/z 981. The observed ion is 42 Da heavier than peptide P, not lighter.',
+          'Peptide P has [M + H]⁺ = 451 + 352 + 234 − 2(19) = 999, so the second peptide is 42 Da heavier, matching acetylation. An acetylated N-terminus lacks the free α-amino group phenyl isothiocyanate requires, explaining the empty first cycle.',
+          'C-terminal amidation changes the mass by only −1 Da, giving m/z 998, and does not touch the N-terminus, so Edman degradation would proceed normally. Neither observation fits.',
+        ],
         skill: '5D peptide analysis (Edman degradation and mass)',
       },
     ],
@@ -249,6 +333,12 @@ export const FL3_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'L has the formula of K plus two hydrogens and retains an ester C=O band at 1732 cm⁻¹ while gaining an O–H band, which fits reduction of the ketone alone to a secondary alcohol; NaBH₄ reduces ketones readily but not esters. A primary alcohol with a ketone describes N, which requires loss of the ethyl group (C₇), whereas L keeps all nine carbons. An aldehyde would also require cleaving off the ethoxy group, and L shows no aldehyde C–H band near 2720 cm⁻¹. Two alcohols describe M, the product of the much stronger reducing agent, which shows no C=O band at all.',
+        optionExplanations: [
+          'L has the formula of K plus two hydrogens and keeps an ester C=O band at 1732 cm⁻¹ while gaining an O–H band. NaBH₄ reduces the ketone to a secondary alcohol but leaves the ester intact.',
+          'A primary alcohol plus a ketone describes compound N, which has lost the ethyl group (C₇). L retains all nine carbons (C₉H₁₆O₃), so its ester has not been reduced.',
+          'Forming an aldehyde would require cleaving the ethoxy group, which would lower the carbon count below nine. L also shows no weak aldehyde C–H band near 2720 cm⁻¹.',
+          'Two alcohols describe compound M, the product of excess LiAlH₄, which shows a broad O–H band and no C=O band. L still has a C=O stretch at 1732 cm⁻¹.',
+        ],
         skill: '5D reduction of carbonyl compounds (NaBH₄ vs LiAlH₄)',
       },
       {
@@ -257,6 +347,12 @@ export const FL3_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'In the CH₂OH group of N the carbon has two C–H bonds (−2), one C–O bond (+1) and one C–C bond (0), for −1; in the COOH group of R it has a C=O double bond (+2), a C–O single bond (+1) and a C–C bond (0), for +3. A change from −1 to +1 describes oxidation only as far as the aldehyde, which is what PCC produces in Experiment 4. A starting value of +1 assigns the alcohol carbon the oxidation state of an aldehyde carbon. The pair −2 and +2 miscounts the bond to oxygen at both stages.',
+        optionExplanations: [
+          'Starting at −2 undercounts the alcohol carbon, which has one bond to oxygen (+1) and two C–H bonds (−2), giving −1. Ending at +2 undercounts the acid carbon, which has three bonds to oxygen.',
+          'This describes oxidation only as far as the aldehyde (one C=O, one C–H, one C–C gives +1), which is what PCC produces in Experiment 4. Jones reagent takes the carbon all the way to the acid.',
+          'A starting value of +1 assigns the CH₂OH carbon the oxidation state of an aldehyde carbon. In N this carbon has two C–H bonds and only one C–O bond, so it starts at −1.',
+          'In the CH₂OH group of N the carbon has two C–H bonds (−2), one C–O bond (+1) and one C–C bond (0), for −1. In the COOH group of R it has C=O (+2), C–O (+1) and C–C (0), for +3.',
+        ],
         skill: '5D oxidation states of carbon',
       },
       {
@@ -270,6 +366,12 @@ export const FL3_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'A cyclic acetal has no C=O and no acidic hydrogen, so it is untouched by LiAlH₄ while the ester is reduced, and heating with aqueous acid then hydrolyzes it back to the ketone. The acetal is less electrophilic than a carbonyl, not more, and its purpose is to avoid reacting with hydride, not to consume it. Acetals are cleaved by aqueous acid and are stable to hydride donors, the reverse of the stated behavior. Acidic workup does not oxidize an alcohol to a ketone, so a reduced ketone could not be restored that way.',
+        optionExplanations: [
+          'A cyclic acetal is less electrophilic than a carbonyl, not more. Its purpose is to avoid reacting with hydride altogether, not to consume hydride before the ester does.',
+          'This reverses the actual behavior: acetals are stable toward hydride donors and are cleaved by aqueous acid. If hydride cleaved the acetal, the ketone would be exposed and reduced along with the ester.',
+          'The cyclic acetal has no C=O and no acidic hydrogen, so LiAlH₄ leaves it untouched while reducing the ester to a primary alcohol. Heating with aqueous acid (step iii) then hydrolyzes the acetal back to the ketone.',
+          'Acidic workup does not oxidize alcohols. If LiAlH₄ had reduced the ketone to an alcohol, nothing in step (iii) could restore the C=O, and N would be a diol instead of a keto alcohol.',
+        ],
         skill: '5D protecting groups (acetals)',
       },
       {
@@ -283,6 +385,12 @@ export const FL3_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'In aqueous Jones reagent the aldehyde is in equilibrium with its hydrate, a gem-diol whose carbon still bears a hydrogen and an OH, so it can bond to chromium and be oxidized again to the carboxylic acid; anhydrous PCC gives no hydrate and stops at the aldehyde. R retains the ring and the ketone (C₇ formula, ketone C=O near 1710 cm⁻¹), so the ring was not opened. Chromium(VI) oxidation of a primary alcohol proceeds through the aldehyde, as the mechanism in the passage requires. Sulfuric acid is not an oxidant under these conditions and cannot convert an aldehyde into a carboxylic acid on its own.',
+        optionExplanations: [
+          'R retains the ring and the ketone, as its C₇ formula and ketone C=O band near 1710 cm⁻¹ show. The ring was not opened, and chromium(VI) does not oxidize ketones under these conditions.',
+          'In aqueous Jones reagent the aldehyde formed first equilibrates with its hydrate, a gem-diol whose carbon still bears both H and OH. That carbon can bond to chromium and be oxidized again, giving the carboxylic acid R. Anhydrous PCC gives no hydrate and stops at the aldehyde Q.',
+          'The passage mechanism requires the alcohol oxygen to bond to chromium and a C–H to be removed, which converts a primary alcohol to an aldehyde. Reaching the acid requires a second oxidation via the hydrate, not a direct one-step jump.',
+          'Sulfuric acid is not an oxidant under these conditions. It provides the acidic aqueous medium in which the hydrate forms, but the oxidation of aldehyde to acid is carried out by chromium(VI).',
+        ],
         skill: '5D oxidation of alcohols (PCC vs Jones)',
       },
     ],
@@ -310,6 +418,12 @@ export const FL3_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The critical angle satisfies $\\sin\\theta_c = 1.30/1.50 \\approx 0.87$, so $\\theta_c \\approx 60°$; a ray at 50° is below it, so part of the light is reflected and part is transmitted into the cladding. Total reflection would require an angle of incidence greater than 60°. Travel along the boundary occurs only at exactly the critical angle. A ray passing into a medium of lower index bends away from the normal, so it is refracted at an angle larger than 50° (about 62°), not smaller.',
+        optionExplanations: [
+          'Total internal reflection requires an angle of incidence greater than the critical angle, which is about 60° for this core–cladding pair ($\\sin\\theta_c = 1.30/1.50 \\approx 0.87$). A 50° ray does not qualify.',
+          'A refracted ray travels along the boundary only at exactly the critical angle, about 60°. At 50° the refracted ray enters the cladding at a definite angle rather than skimming the surface.',
+          'Light passing into a lower-index medium bends away from the normal, so the refracted angle is larger than 50° (about 62°), not smaller. This reverses the direction of bending.',
+          'The critical angle is about 60° ($\\sin\\theta_c = 1.30/1.50$). At 50°, below the critical angle, the passage says part of the light is reflected and part is transmitted into the cladding, so the ray is partly reflected and partly refracted.',
+        ],
         skill: '4D total internal reflection',
       },
       {
@@ -323,6 +437,12 @@ export const FL3_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Violet light has a shorter wavelength and higher frequency than red light, and because the index of glass is larger for shorter wavelengths, violet light travels more slowly in the core ($v = c/n$). A higher speed would require a smaller index for violet light, the opposite of normal dispersion. Frequency is set by the source and does not fall when light enters glass, so violet light keeps its higher frequency. Equal speeds would mean that glass shows no dispersion.',
+        optionExplanations: [
+          'Violet light has a shorter wavelength and therefore a higher frequency than red. Because glass has a larger index for shorter wavelengths, violet travels more slowly in the core ($v = c/n$). Both parts hold.',
+          'A higher speed for violet would require glass to have a smaller index at shorter wavelengths, the opposite of the dispersion the passage describes.',
+          'Frequency is set by the source and does not change when light enters glass. Violet light has a higher frequency than red in any medium, so a lower frequency is wrong even though the lower speed is right.',
+          'Equal speeds would mean glass shows no dispersion. The passage states the index is larger for shorter wavelengths, so violet and red light travel at different speeds in the core.',
+        ],
         skill: '4D dispersion and wave properties of light',
       },
       {
@@ -331,6 +451,12 @@ export const FL3_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Trapping requires an angle of incidence at the core–cladding wall of at least the critical angle, 60°, so inside the core the ray may make at most 90° − 60° = 30° with the axis; at the end face, Snell’s law gives $\\sin\\theta_{air} = 1.50 \\sin 30° = 0.75$, so the ray may enter at up to about 49°. The value 30° is the limiting angle inside the glass, before refraction at the end face is taken into account. The value 42° is the critical angle for a glass–air boundary, which does not apply to the core–cladding wall. The value 60° is the critical angle at the wall, measured from the normal rather than from the axis.',
+        optionExplanations: [
+          'Thirty degrees is the maximum angle the ray may make with the axis inside the glass (90° − 60°). It ignores the refraction at the end face, which allows a larger angle in air.',
+          'Forty-two degrees is the critical angle for a glass–air boundary (sin θ = 1/1.50 ≈ 0.67). The relevant boundary inside the fiber is core–cladding, and the question asks about entry from air, not a critical angle.',
+          'Trapping needs incidence at the wall of at least 60°, so inside the core the ray may make at most 30° with the axis. At the end face Snell’s law gives $\\sin\\theta_{air} = 1.50 \\times 0.50 = 0.75$, so the maximum entry angle is about 49°.',
+          'Sixty degrees is the critical angle at the core–cladding wall, measured from the normal. It is neither measured from the axis nor the angle in air at the end face.',
+        ],
         skill: '4D Snell’s law and critical angle',
       },
       {
@@ -344,6 +470,12 @@ export const FL3_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Where the fiber curves, the outer wall turns into the path of rays that were traveling nearly parallel to the old axis, so they strike it more nearly head-on; their angle of incidence falls below the critical angle and part of the light is transmitted into the cladding. Frequency does not change during propagation or reflection. Angles larger than the critical angle produce total internal reflection, which would keep the light in the core. Bending does not reverse the ordering of the two indices, which are properties of the two glasses.',
+        optionExplanations: [
+          'The frequency of light does not change during propagation, reflection or bending. Loss at a bend is a geometric effect on the angle of incidence, not a change in the light itself.',
+          'At a bend the outer wall swings into the path of rays that were nearly parallel to the old axis, so they strike it more nearly head-on. Their angle of incidence drops below the critical angle and some light is transmitted into the cladding.',
+          'Angles of incidence larger than the critical angle produce total internal reflection, which keeps light inside the core. Larger angles would reduce loss, not cause it.',
+          'The indices are properties of the two glasses and do not change when the fiber is bent. The cladding remains lower-index than the core along the curve.',
+        ],
         skill: '4D total internal reflection (application)',
       },
     ],
@@ -365,6 +497,12 @@ export const FL3_CHEM_PHYS_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'The acid adds only $1.0 \\times 10^{-8}$ M H₃O⁺ to the roughly $1.0 \\times 10^{-7}$ M that water supplies by autoionization, so the total is slightly above $10^{-7}$ M and the pH is slightly below 7 (about 6.98). A pH of exactly 7 ignores the small but real contribution of the fully dissociated acid. A pH of 8 would make an acidic solution basic, because it ignores water’s own H₃O⁺. Chloride is the conjugate base of a strong acid and has negligible basicity, so it cannot raise the pH.',
+    optionExplanations: [
+      'The acid adds $1.0 \\times 10^{-8}$ M H₃O⁺ to the roughly $1.0 \\times 10^{-7}$ M that water supplies by autoionization. The total is slightly above $10^{-7}$ M, so the pH is slightly below 7 (about 6.98).',
+      'A pH of exactly 7 ignores the small but real contribution of a fully dissociated strong acid. Any added acid, however dilute, must push the pH below 7 at 25 °C.',
+      'A pH of 8 would make an acidic solution basic. It arises from taking [H₃O⁺] as $10^{-8}$ M and ignoring the $10^{-7}$ M that water itself contributes.',
+      'Chloride is the conjugate base of a strong acid and has negligible basicity. It cannot accept protons from water to any meaningful extent, so it cannot raise the pH.',
+    ],
     skill: '5A autoionization of water and pH',
   },
   {
@@ -381,6 +519,12 @@ export const FL3_CHEM_PHYS_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'Photon energy is $E = hc/\\lambda$, so halving the wavelength doubles the energy, while all electromagnetic radiation travels at $c$ in a vacuum. Half the energy inverts the relationship between energy and wavelength. Twice the speed wrongly attributes the higher frequency to faster travel rather than to a shorter wavelength. Four times the energy treats energy as inversely proportional to the square of the wavelength.',
+    optionExplanations: [
+      'Half the energy inverts the relationship: energy is inversely proportional to wavelength ($E = hc/\\lambda$), so the shorter-wavelength UV photon has more energy, not less. The speed part is correct.',
+      'All electromagnetic radiation travels at $c$ in a vacuum regardless of wavelength. The UV photon’s higher frequency comes from its shorter wavelength, not from faster travel.',
+      'Four times the energy would require energy to scale as $1/\\lambda^2$. Photon energy is $hc/\\lambda$, linear in $1/\\lambda$, so halving the wavelength doubles the energy exactly.',
+      'Photon energy is $E = hc/\\lambda$, so halving the wavelength from 600 to 300 nm doubles the energy. Both photons travel at the same speed, $c$, in a vacuum.',
+    ],
     skill: '4E photon energy',
   },
   {
@@ -392,6 +536,12 @@ export const FL3_CHEM_PHYS_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'By Hess’s law, fermentation equals the combustion of glucose followed by the reverse of the combustion of two moles of ethanol (CO₂ is already fully oxidized): ΔH° = −2808 − 2(−1367) = −2808 + 2734 = −74 kJ. The −5542 kJ value adds the two combustion enthalpies instead of reversing the ethanol step. The −1441 kJ value reverses the combustion of only one mole of ethanol. The +74 kJ value has the correct magnitude but the wrong sign, as if glucose combustion were reversed instead.',
+    optionExplanations: [
+      'This value adds the two combustion enthalpies (−2808 + 2 × −1367) instead of reversing the ethanol combustion. Ethanol is a product of fermentation, so its combustion must be subtracted, not added.',
+      'This value reverses the combustion of only one mole of ethanol (−2808 + 1367). The fermentation equation produces two moles of ethanol, so the ethanol term must be doubled.',
+      'By Hess’s law, fermentation equals combustion of glucose followed by the reverse of combusting two moles of ethanol (CO₂ is already fully oxidized): −2808 − 2(−1367) = −2808 + 2734 = −74 kJ.',
+      'The magnitude is right but the sign is reversed, as if glucose combustion were run backward and ethanol combustion forward. Fermentation is slightly exothermic, so ΔH° must be negative.',
+    ],
     skill: '5E Hess’s law',
   },
   {
@@ -408,6 +558,12 @@ export const FL3_CHEM_PHYS_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'By the impulse–momentum theorem, the average force is $\\Delta p/\\Delta t$, and $\\Delta p = m(v_{down} + v_{up})$ depends on the rebound speed; if the headform bounced less from liner B, its momentum change would be smaller and the lower force could arise without any change in collision time. The liners may compress by different amounts; a softer liner that compresses farther simply stops the headform over a longer distance and time, which is the mechanism being tested rather than a confound. Liner thickness is a property of the designs being compared, not a quantity in the impulse calculation. Average acceleration is proportional to the average force being measured, so it cannot be the same when the forces differ.',
+    optionExplanations: [
+      'Maximum compression may legitimately differ between liners; a softer liner compresses farther and stops the headform over a longer distance and time. That is the mechanism being tested, not a confound to be ruled out.',
+      'Average force is $\\Delta p/\\Delta t$, and $\\Delta p = m(v_{down} + v_{up})$ depends on rebound speed. If the headform bounced less from liner B, the smaller momentum change alone could lower the force without any change in collision time.',
+      'Liner thickness is a design property of the two liners being compared, not a quantity in the impulse–momentum calculation. It need not be equal for the comparison to be valid.',
+      'Average acceleration is proportional to the average force being measured (F = ma with the same headform mass). Since the forces differ, the accelerations necessarily differ too and cannot be the same.',
+    ],
     skill: '4A impulse and momentum (research design)',
   },
   {
@@ -424,6 +580,12 @@ export const FL3_CHEM_PHYS_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'Horizontal and vertical motions are independent: both balls start with zero vertical velocity and accelerate downward at $g$ for the same fall time, so they reach the ground with the same vertical velocity. Ball 2 also keeps its 8 m/s horizontal velocity, so its speed is greater. Ball 1 lands directly below its release point, whereas ball 2 lands 8 m/s × t away. Ball 1 strikes vertically, while ball 2 strikes at an angle less than 90° below horizontal.',
+    optionExplanations: [
+      'Ball 2 keeps its 8 m/s horizontal velocity while gaining the same vertical velocity as ball 1, so its total speed is greater. The magnitude of velocity is not the same.',
+      'Ball 1 lands directly below its release point, whereas ball 2 travels horizontally at 8 m/s for the entire fall and lands some distance away. Their horizontal displacements differ.',
+      'Ball 1 strikes the ground moving straight down (90° below horizontal). Ball 2 has a horizontal component, so its velocity is tilted at an angle less than 90°. The angles differ.',
+      'Horizontal and vertical motions are independent. Both balls start with zero vertical velocity and accelerate downward at $g$ for the same time, so they reach the ground with identical vertical velocity components.',
+    ],
     skill: '4A projectile motion',
   },
   {
@@ -440,6 +602,12 @@ export const FL3_CHEM_PHYS_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'By the Cahn–Ingold–Prelog rules, Br outranks CH₃ on one carbon (higher atomic number) and CH₂CH₃ outranks H on the other, and these two higher-priority groups are on the same side, so the isomer is Z. The E-by-alkyl-groups reasoning applies the cis/trans convention for the carbon chain, which here gives the opposite answer from the priority rules. The two alkyl groups are actually on opposite sides in this isomer, so the claim that they share a side is false. Bromine and hydrogen are on different carbons but are not the pair of higher-priority groups, since H is the lower-priority group on its carbon.',
+    optionExplanations: [
+      'By Cahn–Ingold–Prelog rules, Br outranks CH₃ on one carbon (higher atomic number) and CH₂CH₃ outranks H on the other. Since Br and CH₂CH₃ are on the same side, the two higher-priority groups are together, so the designation is Z.',
+      'It is true that the two alkyl groups are on opposite sides here, but E/Z is assigned by priority, not by the carbon chain. Using cis/trans alkyl reasoning gives the wrong designation when a heteroatom outranks an alkyl group.',
+      'The two alkyl groups are actually on opposite sides in this isomer: CH₃ is opposite Br, and CH₂CH₃ is on Br’s side. The premise is false, even though the Z conclusion happens to match.',
+      'Bromine and hydrogen are on different carbons, but hydrogen is the lower-priority group on its carbon. E/Z compares the two higher-priority groups (Br and CH₂CH₃), which are on the same side.',
+    ],
     skill: '5D E/Z designation',
   },
   {
@@ -456,6 +624,12 @@ export const FL3_CHEM_PHYS_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'The terminal bond of ATP is a phosphoanhydride; hydrolysis separates closely spaced negative charges and yields ADP and phosphate, which are better stabilized by resonance and solvation than the reactant, so the reaction is much more exergonic than cleavage of AMP’s phosphoester. The phosphoester is the bond cleaved in AMP, the less favorable reaction. Neither hydrolysis breaks the glycosidic bond, which links adenine to ribose. Breaking any bond requires energy; the free energy released comes from the greater stability of the products, not from the bond itself.',
+    optionExplanations: [
+      'A phosphoester is the bond cleaved in AMP, the less favorable reaction (−14 kJ/mol). The freed ribose hydroxyl provides no special stabilization and cannot explain why ATP hydrolysis releases more energy.',
+      'Neither hydrolysis breaks the glycosidic bond linking adenine to ribose. Both reactions release phosphate, leaving the nucleoside portion intact.',
+      'The terminal bond of ATP is a phosphoanhydride. Hydrolysis separates closely spaced negative charges and yields ADP and phosphate, which are better stabilized by resonance and solvation than the reactant, making the reaction far more exergonic than phosphoester cleavage.',
+      'Breaking any bond requires energy input. The free energy released by ATP hydrolysis comes from the greater stability of the products relative to the reactant, not from the bond itself releasing energy as it breaks.',
+    ],
     skill: '5D phosphoanhydride and phosphoester bonds',
   },
   {
@@ -472,6 +646,12 @@ export const FL3_CHEM_PHYS_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'In an α-helix, the backbone C=O of residue $i$ hydrogen-bonds to the backbone N–H of residue $i + 4$ within the same segment, so the bonds lie roughly parallel to the helix axis; in a β-sheet, backbone C=O and N–H groups on neighboring strands bond to each other, across the direction of the strands. Both structures are stabilized by backbone, not side-chain, hydrogen bonds. The residues four apart belong to the helix, not the sheet. The orientations are reversed in the statement that helix bonds are perpendicular to the axis and sheet bonds run along a strand.',
+    optionExplanations: [
+      'Both α-helices and β-sheets are stabilized by backbone hydrogen bonds between C=O and N–H groups, not by side-chain interactions. Side chains contribute to tertiary structure, not to these secondary structures.',
+      'The residues four apart describe the α-helix (C=O of residue $i$ to N–H of residue $i + 4$), not the sheet. This choice swaps the two patterns and also misstates the helix spacing.',
+      'The orientations are reversed. Helix hydrogen bonds run roughly parallel to the helix axis, and sheet hydrogen bonds run between adjacent strands, perpendicular to the strand direction.',
+      'In an α-helix the backbone C=O of residue $i$ bonds to the N–H of residue $i + 4$ within the same segment, so the bonds lie roughly parallel to the axis. In a β-sheet, backbone groups on neighboring strands bond to each other across strands.',
+    ],
     skill: '5B hydrogen bonding in secondary structure',
   },
 ]

@@ -34,6 +34,12 @@ export const FL3_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Silver ions gained electrons at the pin and became solid silver, so reduction occurred there, which makes the pin the cathode. In an electrolytic cell the external supply pushes electrons into the cathode, so the cathode is the electrode wired to the negative terminal. The silver bar, which lost mass as Ag was oxidized to $\\text{Ag}^+$, was the anode, wired to the positive terminal; both anode options therefore describe the bar, not the pin. A cathode wired to the positive terminal reverses the polarity that an external supply imposes during electrolysis.',
+        optionExplanations: [
+          'The anode is where oxidation occurs. In Runs 1–4 the silver bar lost mass as Ag was oxidized to $\\text{Ag}^+$, so the bar, not the pin, was the anode wired to the positive terminal.',
+          'The pin is indeed the cathode, since silver ions were reduced to metal on it, but in an electrolytic cell the supply pushes electrons into the cathode, so it must be wired to the negative terminal, not the positive one.',
+          'The pin gained silver by reduction of $\\text{Ag}^+$, so it cannot be the anode. The negative terminal is correct for the pin, but the electrode name is wrong; the anode in these runs was the silver bar.',
+          'Silver ions gained electrons at the pin and became solid silver, so reduction occurred there, making the pin the cathode. In electrolysis the external supply drives electrons into the cathode, so it is wired to the negative terminal.',
+        ],
         skill: '4C electrolytic cells (Skill 1)',
       },
       {
@@ -47,6 +53,12 @@ export const FL3_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Each run lasted 965 s, so 0.10 A delivers 96.5 C, or 1.0 mmol of electrons, enough for 1.0 mmol (108 mg) of silver. The theoretical masses for Runs 1–4 are therefore 108, 216, 432, and 864 mg, and the measured masses correspond to efficiencies of about 100%, 100%, 90%, and 70%. The deposit did grow at every step, but from 0.40 A upward it grew less than in proportion to the current, so the efficiency did not stay at 100%. Between Runs 1 and 2 the deposit doubled along with the current, so the efficiency did not fall at every step, and passing more charge does not by itself raise the fraction of charge used for silver.',
+        optionExplanations: [
+          'Growth of the deposit at each step does not mean 100% efficiency. The theoretical masses are 108, 216, 432 and 864 mg; the measured 389 and 605 mg at 0.40 and 0.80 A fall well short, showing efficiency dropped.',
+          'Between Runs 1 and 2 the deposit exactly doubled (108 to 216 mg) along with the current, so efficiency stayed at 100% for that step. The decline begins only at 0.40 A, not at every step.',
+          'With 965 s per run, 0.10 A delivers 1.0 mmol of electrons, enough for 108 mg of silver. Theoretical masses are 108, 216, 432 and 864 mg; measured values give efficiencies of about 100%, 100%, 90% and 70%, so efficiency held and then fell.',
+          'Passing more total charge does not increase the fraction of charge that deposits silver. In fact the deposit grew less than proportionally at higher currents, and gas bubbles in Run 4 signal a competing reaction consuming electrons.',
+        ],
         skill: '4C current efficiency from data (Skill 4)',
       },
       {
@@ -60,6 +72,12 @@ export const FL3_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Run 2 deposited 216 mg ÷ 108 g/mol ≈ 2.0 mmol of silver, and Run 5 deposited 63 mg ÷ 63.5 g/mol ≈ 1.0 mmol of copper. Both runs passed 193 C (2.0 mmol of electrons); each $\\text{Ag}^+$ needs one electron but each $\\text{Cu}^{2+}$ needs two, so the same charge deposits half as many moles of copper, with both efficiencies near 100%. Equal charge gives equal moles only when the ions carry the same charge. The copper efficiency was not lower, since 1.0 mmol was deposited out of an expected 1.0 mmol. One-third is roughly the ratio of the masses deposited, not of the moles.',
+        optionExplanations: [
+          'Run 2 deposited 216 mg ÷ 108 g/mol ≈ 2.0 mmol of Ag; Run 5 deposited 63 mg ÷ 63.5 g/mol ≈ 1.0 mmol of Cu. Both passed 2.0 mmol of electrons, but each $\\text{Cu}^{2+}$ needs two electrons, so half as many moles of copper were deposited.',
+          'Equal charge gives equal moles of metal only when the ions carry the same charge. Here $\\text{Ag}^+$ takes one electron and $\\text{Cu}^{2+}$ takes two, so the same charge deposits half as many copper atoms.',
+          'The copper efficiency was not lower. The 2.0 mmol of electrons passed in Run 5 should deposit 1.0 mmol of copper (63.5 mg), and 63 mg was observed, so efficiency was essentially 100%. The halving comes from stoichiometry.',
+          'One-third is roughly the ratio of the deposited masses (63/216), not of the moles. Molar mass affects the mass per mole deposited, not the number of moles, which is governed by charge and electrons per ion.',
+        ],
         skill: '4C Faraday stoichiometry (Skill 2)',
       },
       {
@@ -73,6 +91,12 @@ export const FL3_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'A 540-mg deposit is 5.0 mmol of silver, which requires 5.0 mmol of electrons, or 482.5 C; delivered in 965 s, that is 0.50 A if every electron deposits silver. Table 1 shows efficiencies of about 90% at 0.40 A and 70% at 0.80 A, so near 0.5 A part of the charge goes to side reactions and a larger current is needed. "Exactly 0.50 A" assumes the 100% efficiency seen only at the lowest currents. Reduction of $\\text{Ag}^+$ to Ag takes one electron, not two. The $\\text{Ag}^+$ released at the anode replenishes the bath but does not reduce the number of electrons that must be delivered to the pin.',
+        optionExplanations: [
+          'Exactly 0.50 A assumes every electron deposits silver. Table 1 shows that is true only at the lowest currents (0.10–0.20 A); at 0.40 A efficiency is already about 90%, so 0.50 A would fall short of 540 mg.',
+          'A 540 mg deposit is 5.0 mmol of Ag, requiring 5.0 mmol of electrons (482.5 C), or 0.50 A over 965 s at 100% efficiency. Table 1 shows efficiency drops to about 90% at 0.40 A and 70% at 0.80 A, so a current above 0.50 A is needed.',
+          'Reduction of $\\text{Ag}^+$ to Ag takes one electron, not two. Doubling the current on that basis has no justification, and 1.0 A would also push the process further into the powdery, low-efficiency regime.',
+          'The silver anode replenishes $\\text{Ag}^+$ in the bath, but that does not reduce the number of electrons the pin must receive. Each silver atom deposited still requires one electron, regardless of where the ions come from.',
+        ],
         skill: '4C electrolysis calculations (Skill 2)',
       },
       {
@@ -86,6 +110,12 @@ export const FL3_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'About 30% of the 8.0 mmol of electrons in Run 4 (2.4 mmol) did not deposit silver; if they reduced hydrogen ions or water, collecting the gas should yield about 1.2 mmol of $\\text{H}_2$, since each molecule takes two electrons, which directly tests the hypothesis. The mass lost by the silver bar reflects the charge passed at the anode but reveals nothing about which reaction consumed electrons at the pin. A change in deposit mass at 50 °C would not identify the side product. Repeating Run 2 for longer tests whether total charge or current causes the drop in efficiency, a different question from what the missing electrons produced.',
+        optionExplanations: [
+          'The silver bar’s mass loss reflects the charge passed at the anode, which equals the total charge. It reveals nothing about which reaction consumed electrons at the pin, so it cannot identify hydrogen as the side product.',
+          'A change in deposit mass at a different temperature might alter the efficiency but would not identify what the missing electrons produced. It tests a different variable rather than the identity of the side product.',
+          'Running Run 2 longer to match Run 4’s total charge tests whether total charge or current causes the efficiency drop. That is a different question from whether the lost charge produced hydrogen.',
+          'About 30% of Run 4’s 8.0 mmol of electrons (2.4 mmol) did not deposit silver. If they reduced hydrogen ions or water, about 1.2 mmol of $\\text{H}_2$ should be collected (two electrons per molecule), directly testing the hypothesis.',
+        ],
         skill: '4C research design (Skill 3)',
       },
     ],
@@ -125,6 +155,12 @@ export const FL3_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Both curves fall to half of their initial height at a ligand-to-enzyme ratio of 1.0, which indicates one binding site per enzyme molecule. The early injections, in which nearly all of the ligand binds, release about 40 kJ/mol for Compound 1 and about 20 kJ/mol for Compound 2, so Compound 2 releases about half as much heat per mole bound. "Twice as much" reverses that comparison. Neither curve has its midpoint at a ratio of 2, so neither compound binds two per enzyme, and the two plateau heights clearly differ.',
+        optionExplanations: [
+          'Both curves fall to half their initial height at a ligand-to-enzyme ratio of 1.0, indicating one site per enzyme. Early injections release about 40 kJ/mol for Compound 1 and about 20 kJ/mol for Compound 2, so Compound 2 releases about half as much heat.',
+          'The stoichiometry is right, but the heat comparison is reversed. Compound 1’s plateau is near 40 kJ/mol and Compound 2’s near 20 kJ/mol, so Compound 2 releases less heat per mole, not twice as much.',
+          'If Compound 1 bound two per enzyme, its curve would drop to half height at a molar ratio of 2.0. Figure 1 shows the midpoint at 1.0 for Compound 1, so it binds one per enzyme.',
+          'Compound 2’s curve has its midpoint at a ratio of 1.0, not 2.0, so it binds one per enzyme. The plateau heights also clearly differ (about 20 vs 40 kJ/mol), so the heats are not the same.',
+        ],
         skill: '5E reading an ITC isotherm (Skill 4)',
       },
       {
@@ -133,6 +169,12 @@ export const FL3_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'A $K_d$ of 0.10 μM corresponds to $K_a = 10^7$, so $\\Delta G^\\circ \\approx -7 \\times 5.7 \\approx -40$ kJ/mol. Figure 1 shows about 20 kJ released per mole bound, so $\\Delta H^\\circ \\approx -20$ kJ/mol. Then $-T\\Delta S^\\circ = \\Delta G^\\circ - \\Delta H^\\circ \\approx -40 - (-20) = -20$ kJ/mol, a favorable entropic contribution. The value $+20$ kJ/mol is $T\\Delta S^\\circ$ itself, or a sign error; $-60$ kJ/mol adds $\\Delta H^\\circ$ to $\\Delta G^\\circ$ instead of subtracting it; $+6$ kJ/mol is the entropic term for Compound 1 ($-34 - (-40)$).',
+        optionExplanations: [
+          'This value adds $\\Delta H^\\circ$ to $\\Delta G^\\circ$ instead of subtracting it: $-40 + (-20) = -60$. The entropic term is $\\Delta G^\\circ - \\Delta H^\\circ$, which requires subtraction.',
+          'Positive 6 kJ/mol is the entropic term for Compound 1: $K_d = 1.0$ μM gives $\\Delta G^\\circ \\approx -34$ kJ/mol and $\\Delta H^\\circ \\approx -40$, so $-T\\Delta S^\\circ \\approx +6$. The question asks about Compound 2.',
+          'A $K_d$ of 0.10 μM means $K_a = 10^7$, so $\\Delta G^\\circ \\approx -7 \\times 5.7 \\approx -40$ kJ/mol. Figure 1 gives $\\Delta H^\\circ \\approx -20$ kJ/mol, so $-T\\Delta S^\\circ = \\Delta G^\\circ - \\Delta H^\\circ \\approx -20$ kJ/mol, a favorable entropic contribution.',
+          'Positive 20 kJ/mol is $T\\Delta S^\\circ$ itself (the entropy change is positive), or a sign error. The question asks for $-T\\Delta S^\\circ$, which is negative when the entropic contribution is favorable.',
+        ],
         skill: '5E ΔG = ΔH − TΔS from binding data (Skill 2)',
       },
       {
@@ -146,6 +188,12 @@ export const FL3_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Water molecules held in fixed positions against a nonpolar surface gain freedom when a nonpolar group displaces them into bulk solvent; this hydrophobic effect makes $\\Delta S^\\circ$ more positive and explains why binding of Compound 2 is entropically favored. Loss of rotational and translational freedom accompanies the binding of any ligand and makes $\\Delta S^\\circ$ more negative, not more positive. Compound 2 cannot donate the hydrogen bond that Compound 1 makes, and hydrogen bonds contribute mainly to $\\Delta H^\\circ$. The chlorine atom carries no formal charge, its partial negative charge would be repelled rather than attracted by the anionic aspartate, and an electrostatic attraction would appear mainly in $\\Delta H^\\circ$ in any case.',
+        optionExplanations: [
+          'Any ligand loses rotational and translational freedom on binding, so this effect applies to both compounds and makes $\\Delta S^\\circ$ more negative. It cannot explain why Compound 2 is more entropically favorable than Compound 1.',
+          'In the free enzyme, water molecules sit in fixed positions in the nonpolar cleft. When the chlorine displaces them into bulk solvent they gain freedom, raising solvent entropy. This hydrophobic effect accounts for the favorable $\\Delta S^\\circ$ of Compound 2.',
+          'Compound 2 replaces the hydroxyl with chlorine, which cannot donate a hydrogen bond, so it forms fewer hydrogen bonds than Compound 1, not more. Hydrogen bonds also contribute mainly to $\\Delta H^\\circ$, not entropy.',
+          'Chlorine carries no formal charge, and its partial negative charge would be repelled, not attracted, by the anionic aspartate. Any electrostatic interaction would appear mainly in the enthalpy term rather than the entropy term.',
+        ],
         skill: '5B hydrophobic effect and binding entropy (Skill 1)',
       },
       {
@@ -159,6 +207,12 @@ export const FL3_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The temperature dependence of an equilibrium constant is set by $\\Delta H^\\circ$: for an exothermic process, raising $T$ shifts the equilibrium toward the side that absorbs heat, here the unbound enzyme and ligand, so $K_a$ falls and $K_d$ rises. The same conclusion follows from $\\ln K_a = -\\Delta H^\\circ/RT + \\Delta S^\\circ/R$; Figure 1 shows heat released on binding ($\\Delta H^\\circ \\approx -40$ kJ/mol), so the first term, and hence $K_a$, shrinks as $T$ rises. The fact that binding releases heat means heating disfavors it, so $K_d$ does not decrease. Constant $\\Delta H^\\circ$ and $\\Delta S^\\circ$ do not make $K$ constant, because $\\Delta G^\\circ = \\Delta H^\\circ - T\\Delta S^\\circ$ contains $T$ explicitly. For Compound 1, $-T\\Delta S^\\circ \\approx +6$ kJ/mol, so $\\Delta S^\\circ$ is negative and the $-T\\Delta S^\\circ$ term becomes less favorable, not more, as $T$ increases.',
+        optionExplanations: [
+          'Because binding releases heat, raising the temperature shifts the equilibrium toward the side that absorbs heat, the unbound state. That weakens binding and raises $K_d$; it does not lower it.',
+          'Constant $\\Delta H^\\circ$ and $\\Delta S^\\circ$ do not make $K$ constant, because $\\Delta G^\\circ = \\Delta H^\\circ - T\\Delta S^\\circ$ contains $T$ explicitly. For Compound 1, $\\Delta G^\\circ$ becomes less negative as $T$ rises.',
+          'For Compound 1, $-T\\Delta S^\\circ \\approx +6$ kJ/mol, so $\\Delta S^\\circ$ is negative. Raising $T$ makes $-T\\Delta S^\\circ$ larger and more positive, less favorable, not more. The premise is backward for this compound.',
+          'Figure 1 shows Compound 1 binding releases about 40 kJ/mol, so $\\Delta H^\\circ$ is negative. For an exothermic process, raising $T$ shifts equilibrium toward the unbound species, so $K_a$ falls and $K_d$ rises.',
+        ],
         skill: '5E temperature dependence of K (Skill 2)',
       },
     ],
@@ -193,6 +247,12 @@ export const FL3_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'A tube closed at one end has a fundamental wavelength of $4L$; in Series A the 0.25-m tube resonated at 340 Hz, so $v = f\\lambda = 340\\ \\text{Hz} \\times 1.0\\ \\text{m} = 340$ m/s. Series B agrees: an open–open tube has $\\lambda = 2L$, and the 0.25-m tube resonated at 680 Hz, giving $680 \\times 0.50 = 340$ m/s. A value of 170 m/s results from using $\\lambda = 2L$ for the closed tube, 680 m/s from using $\\lambda = 4L$ for the open tube, and 85 m/s from taking the wavelength to equal the tube length.',
+        optionExplanations: [
+          'A value of 170 m/s results from using $\\lambda = 2L$ for the closed–open tube. The fundamental of a tube closed at one end spans a quarter wavelength, so $\\lambda = 4L$, not $2L$.',
+          'In Series A the 0.25 m closed–open tube resonated at 340 Hz with $\\lambda = 4L = 1.0$ m, giving $v = 340$ m/s. Series B confirms this: the open tube at 0.25 m gave 680 Hz with $\\lambda = 2L = 0.50$ m, also 340 m/s.',
+          'A value of 680 m/s comes from applying $\\lambda = 4L$ to the open–open tube, whose fundamental wavelength is actually $2L$. Doubling the correct wavelength doubles the apparent speed.',
+          'A value of 85 m/s comes from taking the wavelength equal to the tube length for the closed tube (340 Hz × 0.25 m). Neither tube type has a fundamental wavelength equal to its length.',
+        ],
         skill: '4D wave speed from resonance data (Skill 4)',
       },
       {
@@ -206,6 +266,12 @@ export const FL3_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Air at an open end moves freely, so each open end is a displacement antinode (and a pressure node). The simplest pattern with antinodes at both ends spans half a wavelength and has a single displacement node midway along the tube, which is why $\\lambda = 2L$ for the fundamental. Nodes at both ends describe a tube closed at both ends. The loudspeaker, held outside the open end, does not impose a node there. Nodes at the center and at both ends would require closed ends and a full wavelength in the tube.',
+        optionExplanations: [
+          'Each open end is a displacement antinode because air moves freely there. The simplest pattern with antinodes at both ends spans half a wavelength and has a single displacement node at the center, consistent with $\\lambda = 2L$.',
+          'Displacement nodes at both ends would describe a tube closed at both ends, where air cannot move. At an open end air moves freely, making it a displacement antinode, not a node.',
+          'The loudspeaker is held just outside the open end and does not impose a boundary condition. Both ends remain open and are therefore displacement antinodes, not nodes.',
+          'Nodes at the center and both ends would require a full wavelength within the tube and closed ends. The open–open fundamental has only half a wavelength and antinodes at the ends.',
+        ],
         skill: '4D standing waves: nodes and antinodes (Skill 1)',
       },
       {
@@ -214,6 +280,12 @@ export const FL3_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The tract is modeled as closed at the folds and open at the lips, so its fundamental has $\\lambda = 4L = 0.68$ m and $f = 340/0.68 = 500$ Hz. A closed–open tube supports only odd multiples of its fundamental, so the next resonance is $3 \\times 500 = 1500$ Hz. The pair 500 and 1000 Hz wrongly includes the second harmonic, which a closed–open tube cannot support. The pair 1000 and 2000 Hz belongs to a 0.17-m tube open at both ends, and 250 and 750 Hz belong to a closed–open tube twice as long.',
+        optionExplanations: [
+          'The pair 250 and 750 Hz would be correct for a closed–open tube 0.34 m long, twice the given length. For $L = 0.17$ m, $\\lambda = 4L = 0.68$ m gives a fundamental of 500 Hz, not 250.',
+          'The fundamental of 500 Hz is correct, but a closed–open tube supports only odd harmonics. The second resonance is three times the fundamental (1500 Hz), not twice it; 1000 Hz cannot resonate.',
+          'Modeled as closed at the folds and open at the lips, the tract has $\\lambda = 4L = 0.68$ m, so $f_1 = 340/0.68 = 500$ Hz. A closed–open tube supports only odd multiples, so the next resonance is $3 \\times 500 = 1500$ Hz.',
+          'The pair 1000 and 2000 Hz belongs to a 0.17 m tube open at both ends ($\\lambda = 2L = 0.34$ m, all harmonics). The passage models the tract as closed at one end, which halves the fundamental and removes even harmonics.',
+        ],
         skill: '4D harmonics of a closed–open pipe (Skill 2)',
       },
       {
@@ -227,6 +299,12 @@ export const FL3_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Pitch is set by the vibration rate of the vocal folds, which the passage says is unchanged. The formants are resonances of the tract, whose length and shape fix the resonant wavelengths; because $f = v/\\lambda$, a faster speed of sound raises every formant. Both higher-pitch options attribute to the gas a change in fold vibration that it does not produce, and one of them also leaves the formants unchanged despite the faster sound speed. Lower formants would require sound to travel more slowly in the mixture than in air.',
+        optionExplanations: [
+          'The passage says the vocal folds vibrate at their usual rate in the mixture, so pitch is unchanged. Formants, being tract resonances with fixed wavelengths, must rise because $f = v/\\lambda$ and $v$ is higher.',
+          'Pitch is set by fold vibration, which the passage states does not change with the gas. The formants do rise, but the higher pitch is a change the gas does not produce.',
+          'Lower formants would require sound to travel more slowly in the helium–oxygen mixture than in air. The passage states sound travels considerably faster in the mixture, so formants rise.',
+          'Pitch depends on the vibration rate of the vocal folds, which the passage says is unchanged. Formants are tract resonances whose wavelengths are fixed by tract geometry, so a faster speed of sound raises each formant frequency via $f = v/\\lambda$.',
+        ],
         skill: '4D resonance and wave speed (Skill 2)',
       },
       {
@@ -240,6 +318,12 @@ export const FL3_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The speed of sound in air increases with temperature (by roughly 0.6 m/s per °C), and because each resonant frequency equals $v/\\lambda$ with $\\lambda$ fixed by the tube, an uncontrolled temperature change would shift every data point. Thermal expansion of plastic over a few degrees changes a 0.25-m tube by far less than a millimeter, a negligible effect. Which harmonics are allowed depends on the conditions at the ends of the tube, not on temperature. A change in loudness could alter the height of each maximum but not the frequency at which it occurs.',
+        optionExplanations: [
+          'The speed of sound in air rises with temperature (about 0.6 m/s per °C). Each resonant frequency equals $v/\\lambda$ with $\\lambda$ fixed by the tube, so an uncontrolled temperature change would shift every data point.',
+          'Thermal expansion of plastic over a few degrees changes a 0.25 m tube by far less than a millimeter, a negligible fraction of its length. Tube length is not meaningfully affected by room-temperature variation.',
+          'Which harmonics a tube supports depends on the boundary conditions at its ends (open or closed), not on temperature. A closed–open tube supports odd harmonics at any temperature.',
+          'Loudspeaker loudness might change the height of each resonance peak but not the frequency at which the peak occurs. The investigators recorded frequencies, so loudness is not the concern.',
+        ],
         skill: '4D controlled variables (Skill 3)',
       },
     ],
@@ -264,6 +348,12 @@ export const FL3_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Because $A = -\\log T$, an absorbance of 1.000 corresponds to $T = 10^{-1}$, or 10% transmission. An absorbance of 2 would be needed for 1% transmission. The value 90% is the fraction absorbed, not the fraction transmitted. Transmission of 50% corresponds to an absorbance of only about 0.30; absorbance and transmittance are related logarithmically, not linearly.',
+        optionExplanations: [
+          'One percent transmission corresponds to an absorbance of 2 ($T = 10^{-2}$). Standard S3 has an absorbance of only 1.000, so it transmits ten times more light than this.',
+          'Fifty percent transmission corresponds to an absorbance of about 0.30 ($-\\log 0.5$). Absorbance and transmittance are related logarithmically, not linearly, so an absorbance of 1 does not mean half the light is blocked.',
+          'Since $A = -\\log T$, an absorbance of 1.000 gives $T = 10^{-1} = 0.10$, so Standard S3 transmitted about 10% of the light at 562 nm compared with the reagent blank.',
+          'Ninety percent is the fraction of light absorbed, not transmitted, by S3. The question asks what percentage passed through to the detector, which is the complementary 10%.',
+        ],
         skill: '4D absorbance and transmittance (Skill 1)',
       },
       {
@@ -272,6 +362,12 @@ export const FL3_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The corrected absorbance is $0.255 - 0.005 = 0.250$, which Table 1 places at 10 μM of iron in the cuvette (the standards give 0.025 absorbance units per μM). The serum was diluted twofold by mixing equal volumes with reagent, so the serum concentration is 20 μM. The value 10 μM is the cuvette concentration, left uncorrected for dilution. The value 5 μM divides by the dilution factor instead of multiplying, and 40 μM applies the twofold correction twice.',
+        optionExplanations: [
+          'Five μM divides the cuvette concentration by the dilution factor instead of multiplying. Mixing 1.00 mL serum with 1.00 mL reagent dilutes the serum twofold, so the serum is more concentrated than the cuvette, not less.',
+          'The corrected absorbance is 0.255 − 0.005 = 0.250, which Table 1 places at 10 μM in the cuvette (0.025 absorbance units per μM). Equal-volume mixing diluted the serum twofold, so the undiluted serum contains 20 μM iron.',
+          'Ten μM is the iron concentration in the cuvette, read directly from the calibration. It has not been corrected for the twofold dilution that occurs when 1.00 mL of serum is mixed with 1.00 mL of reagent.',
+          'Forty μM applies the twofold dilution correction twice. Only one dilution step occurred (serum plus an equal volume of reagent), so the cuvette value of 10 μM should be doubled once.',
+        ],
         skill: '4D Beer–Lambert calibration and dilution (Skill 2)',
       },
       {
@@ -280,6 +376,12 @@ export const FL3_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The sample blank records the absorbance of hemoglobin and other colored serum components at 562 nm (0.120), which adds to the absorbance of the iron complex. At 0.025 absorbance units per μM, 0.120 corresponds to 4.8 μM in the cuvette, or 9.6 μM in the serum after the twofold dilution correction. The value 4.8 μM omits the dilution correction, and 2.4 μM divides by the dilution factor instead of multiplying. The value 12 μM is the true cuvette concentration of iron in Sample Q, $(0.420 - 0.120)/0.025$, not the size of the error.',
+        optionExplanations: [
+          'This value divides the hemoglobin-equivalent cuvette concentration (4.8 μM) by the dilution factor instead of multiplying. The serum is twice as concentrated as the cuvette, so the serum error is larger, not smaller.',
+          'This is the error in cuvette concentration (0.120 ÷ 0.025 = 4.8 μM) but omits the twofold dilution correction. The laboratory reports undiluted serum values, so the error must be doubled.',
+          'Twelve μM is the true cuvette iron concentration of Sample Q, (0.420 − 0.120)/0.025. It is the correct value in the cuvette, not the size of the error that skipping the blank would introduce.',
+          'The sample blank absorbance of 0.120 is hemoglobin and other colored components at 562 nm. At 0.025 absorbance units per μM that equals 4.8 μM in the cuvette, or 9.6 μM in serum after the twofold dilution correction.',
+        ],
         skill: '4D additivity of absorbance (Skill 2)',
       },
       {
@@ -293,6 +395,12 @@ export const FL3_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The corrected absorbance of Sample R (2.14) lies beyond every standard, and S4 shows that above an absorbance of about 1 the response falls below the Beer–Lambert line (80 μM gives 1.72 rather than the 2.00 expected). Diluting the serum brings the absorbance back into the linear range covered by S1–S3, and the result is then multiplied by the additional dilution factor. Extending the line assumes linearity where Table 1 shows it fails. S4 itself lies in the nonlinear region and below the absorbance of R, so a one-point calibration on it would be biased. A wavelength of stronger absorption would raise the absorbance further and worsen the problem.',
+        optionExplanations: [
+          'Sample R’s corrected absorbance (2.14) exceeds every standard, and S4 shows the response is already nonlinear above about 1.0. Diluting brings the absorbance into the linear S1–S3 range, after which the extra dilution factor is applied.',
+          'Extending a straight line through S1–S3 assumes Beer–Lambert linearity holds at absorbance 2.14. Table 1 shows it already fails at S4 (1.72 observed vs 2.00 expected), so extrapolation would overestimate the concentration.',
+          'S4 lies in the nonlinear region and still below the absorbance of Sample R. A one-point calibration anchored there would carry S4’s own deviation and would still require extrapolating beyond the measured range.',
+          'A wavelength of stronger absorption would raise the absorbance even further, pushing the reading deeper into the range where stray light makes measurements unreliable. It worsens the problem rather than solving it.',
+        ],
         skill: '4D linear range of a calibration (Skill 3)',
       },
     ],
@@ -320,6 +428,12 @@ export const FL3_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The partial C=N double bond makes the peptide group planar in the same way that a C=C double bond makes an alkene planar: the carbonyl carbon and oxygen, the amide nitrogen and its hydrogen, and the two α-carbons bonded to C and N all lie in one plane. Limiting the plane to three atoms ignores the atoms attached to each end of the partial double bond. The carbonyl oxygen takes part directly in the resonance and must lie in the plane. Side chains are attached to the α-carbons, about which rotation is free, so they are not held in the peptide plane.',
+        optionExplanations: [
+          'Limiting the plane to three atoms ignores the atoms attached to each end of the partial C=N double bond. Just as an alkene holds all six attached atoms coplanar, the peptide group holds six atoms in a plane.',
+          'The partial C=N double bond makes the peptide group planar like an alkene: the carbonyl C and O, the amide N and H, and the two α-carbons bonded to C and N all lie in one plane. Rotation is restricted about the C–N bond.',
+          'The carbonyl oxygen participates directly in the resonance that creates the partial double bond, so it must lie in the plane. Excluding it misunderstands which atoms are part of the delocalized system.',
+          'Side chains are attached to the α-carbons, about which rotation is free, so they are not held in the peptide plane. The passage says backbone flexibility comes from rotation about bonds to each α-carbon.',
+        ],
         skill: '5D peptide bond geometry (Skill 1)',
       },
       {
@@ -333,6 +447,12 @@ export const FL3_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'When the nucleophile adds and the π bond breaks, the carbon goes from three to four σ-bonded groups and becomes sp³ hybridized, with approximately tetrahedral angles of 109.5°. The sp² description with 120° angles fits the carbonyl carbon before addition and after the intermediate collapses. An sp carbon with 180° angles has only two σ bonds, as in a nitrile or an alkyne. Angles of 90° do not arise from sp³ hybridization.',
+        optionExplanations: [
+          'An sp² carbon with 120° angles describes the carbonyl carbon before the nucleophile adds, and again after the intermediate collapses and the C=O re-forms. It is not the geometry of the tetrahedral intermediate.',
+          'An sp carbon with 180° angles has only two σ bonds, as in a nitrile or alkyne. The intermediate carbon has four σ bonds, so this geometry is impossible.',
+          'The sp³ hybridization is right, but sp³ carbons have bond angles near 109.5°, not 90°. Ninety-degree angles do not arise from any standard hybridization of carbon.',
+          'When hydroxide adds and the π bond breaks, the carbon gains a fourth σ-bonded group and becomes sp³ hybridized with roughly tetrahedral angles of 109.5°. This is why the species is called a tetrahedral intermediate.',
+        ],
         skill: '5D hybridization in acyl substitution (Skill 1)',
       },
       {
@@ -346,6 +466,12 @@ export const FL3_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Phenol (p$K_a$ ≈ 10) is a much stronger acid than ethanol (p$K_a$ ≈ 16), so phenoxide is a weaker base and a better leaving group. In addition, the ring delocalizes the lone pairs of the ester oxygen, so that oxygen donates less to the carbonyl, leaving the carbonyl carbon more electrophilic; both effects speed hydrolysis. A weaker-base leaving group speeds rather than slows the reaction. Phenoxide is not a stronger base than ethoxide, as the p$K_a$ values show. Overall polarity is not what governs the rate of nucleophilic acyl substitution.',
+        optionExplanations: [
+          'The premise is right (phenoxide is the weaker base) but the conclusion is reversed. A weaker base is a better leaving group, which speeds the collapse of the tetrahedral intermediate to products rather than slowing it.',
+          'Phenol’s pKa of about 10 versus ethanol’s 16 means phenoxide is a weaker base than ethoxide, not stronger. A stronger-base leaving group would slow hydrolysis anyway, so both the premise and the mechanism are off.',
+          'Phenol (pKa ≈ 10) is a much stronger acid than ethanol (pKa ≈ 16), so phenoxide is a weaker base and a better leaving group. The ring also pulls the ester oxygen’s lone pairs away from the carbonyl, making it more electrophilic. Both effects speed hydrolysis.',
+          'Overall polarity does not govern the rate of nucleophilic acyl substitution; leaving-group ability and carbonyl electrophilicity do. The phenyl ring actually makes the ester more reactive, not less.',
+        ],
         skill: '5D leaving-group ability in acyl substitution (Skill 2)',
       },
       {
@@ -359,6 +485,12 @@ export const FL3_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'In nucleophilic acyl substitution, the ethanol oxygen bonds to the carbonyl carbon, and the methoxy group is later expelled from the tetrahedral intermediate as methanol, so the bond that breaks is the acyl C–O bond, not the O–CH₃ bond. The labeled oxygen therefore ends up bonded to both the acyl carbon and the ethyl group in ethyl benzoate. The carbonyl oxygen comes from the original ester, not from ethanol. The methanol carries away the original, unlabeled methoxy oxygen. No water is present to hydrolyze the ester to benzoic acid, and even hydrolysis would not place ethanol’s oxygen there.',
+        optionExplanations: [
+          'In the mechanism, the ethanol oxygen attacks the carbonyl carbon and becomes the new alkoxy oxygen of the ester, while the methoxy group departs intact as methanol. The ¹⁸O therefore ends up bonded to both the acyl carbon and the ethyl group.',
+          'The carbonyl oxygen in the product is the original carbonyl oxygen of methyl benzoate. Although it is briefly an alkoxide in the intermediate, it does not exchange with the incoming ethanol oxygen under these conditions.',
+          'The methanol released carries the original, unlabeled methoxy oxygen, because the bond that breaks is the acyl C–O bond, not the O–CH₃ bond. The label stays with the ethyl group it entered with.',
+          'No water is present to hydrolyze the ester to benzoic acid, so this by-product does not form in significant amounts. Even if it did, the oxygen from ethanol would not be incorporated into it.',
+        ],
         skill: '5D transesterification mechanism (Skill 2)',
       },
     ],
@@ -375,6 +507,12 @@ export const FL3_CHEM_PHYS_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'At constant speed the net force is zero, so the friction force equals the component of gravity along the ramp: $\\mu_k mg\\cos\\theta = mg\\sin\\theta$, giving $\\mu_k = \\tan 30° = 0.50/0.87 \\approx 0.58$. The value 0.50 is sin 30° alone, which would be correct only if the normal force equaled the full weight. The value 0.87 is cos 30°, and 1.7 is cos 30°/sin 30°, the ratio inverted.',
+    optionExplanations: [
+      'This is sin 30° alone, which would be correct only if the normal force equaled the full weight. On an incline the normal force is $mg\\cos\\theta$, so the coefficient is $\\tan\\theta$, not $\\sin\\theta$.',
+      'This is cos 30°, the factor that gives the normal force. The coefficient of friction is the ratio of the gravitational component along the ramp to the normal force, which requires dividing sine by cosine.',
+      'At constant speed the net force is zero, so friction balances the component of gravity along the ramp: $\\mu_k mg\\cos\\theta = mg\\sin\\theta$, giving $\\mu_k = \\tan 30° = 0.50/0.87 \\approx 0.58$.',
+      'This is cos 30°/sin 30°, the inverted ratio. A coefficient greater than 1 would mean friction exceeds the normal force, which would stop the crate rather than let it slide at constant speed.',
+    ],
     skill: '4A friction on an incline (Skill 2)',
   },
   {
@@ -391,6 +529,12 @@ export const FL3_CHEM_PHYS_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'Resistivity is a property of the material and its condition, not of the wire’s shape; in a metal it rises with temperature because the more vigorously vibrating lattice scatters conduction electrons more often. A longer wire, a thinner wire, or a second wire in series each increases the resistance, $R = \\rho L/A$, of the circuit element, but none of them changes $\\rho$, the resistivity of copper.',
+    optionExplanations: [
+      'A longer wire has more resistance ($R = \\rho L/A$), but resistivity $\\rho$ is a property of the copper itself and is unchanged by the wire’s length.',
+      'Resistivity is a property of the material and its condition, not of the wire’s dimensions. In a metal, heating makes the lattice vibrate more vigorously, scattering conduction electrons more often and raising $\\rho$.',
+      'A thinner wire has a smaller cross-sectional area and therefore more resistance, but the material is the same copper with the same resistivity. Geometry changes $R$, not $\\rho$.',
+      'Adding a wire in series increases the total resistance of the circuit element, but each wire’s material keeps its own resistivity. Series combination is a circuit property, not a material one.',
+    ],
     skill: '4C resistivity vs resistance (Skill 1)',
   },
   {
@@ -407,6 +551,12 @@ export const FL3_CHEM_PHYS_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'Three moles of gas (2 H₂ + O₂) become two moles of liquid water, so the number of gas-phase particles and the positional freedom of the system both fall, and $\\Delta S < 0$. Sublimation converts a solid into a gas and greatly increases entropy. Dissolving an ionic solid disperses its ions through the solvent, and for ammonium nitrate the overall entropy change is positive, which is why it dissolves spontaneously even though the process is endothermic. The decomposition of calcium carbonate releases a gas from a solid, so its entropy change is positive.',
+    optionExplanations: [
+      'Sublimation converts a solid into a gas, releasing molecules from a rigid lattice into free motion. This greatly increases the system’s entropy, so $\\Delta S$ is positive.',
+      'Dissolving ammonium nitrate disperses ions throughout the solvent, and the overall entropy change is positive. That positive $\\Delta S$ is why the salt dissolves spontaneously despite the process being endothermic.',
+      'Decomposition of calcium carbonate releases CO₂ gas from a solid. Creating a gas-phase product from a solid reactant increases entropy, so $\\Delta S$ is positive.',
+      'Three moles of gas (2 H₂ + O₂) become two moles of liquid water. The number of gas-phase particles and the positional freedom of the system both drop sharply, so $\\Delta S$ is negative.',
+    ],
     skill: '5E sign of entropy change (Skill 1)',
   },
   {
@@ -418,6 +568,12 @@ export const FL3_CHEM_PHYS_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'The average atomic mass is the abundance-weighted mean of the isotope masses: $0.70 \\times 63 + 0.30 \\times 65 = 44.1 + 19.5 = 63.6$. The value 64.0 is the unweighted mean of the two masses. The value 64.4 reverses the abundances, weighting the heavier isotope at 70%. The value 63.0 ignores the heavier isotope entirely.',
+    optionExplanations: [
+      'The average atomic mass is the abundance-weighted mean: $0.70 \\times 63 + 0.30 \\times 65 = 44.1 + 19.5 = 63.6$. The more abundant lighter isotope pulls the average toward 63.',
+      'This value ignores the heavier isotope entirely and takes the mass of the m/z 63 peak alone. The 30% abundance of the m/z 65 isotope must raise the average above 63.',
+      'This is the simple unweighted mean of 63 and 65. It ignores the relative abundances, which weight the lighter isotope more heavily (70% vs 30%).',
+      'This value reverses the abundances, weighting the heavier isotope at 70% ($0.30 \\times 63 + 0.70 \\times 65 = 64.4$). The taller peak at m/z 63 means the lighter isotope is the more abundant one.',
+    ],
     skill: '4E isotopes and average atomic mass (Skill 2)',
   },
   {
@@ -434,6 +590,12 @@ export const FL3_CHEM_PHYS_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'Good leaving groups are weak bases. The negative charge of the tosylate anion is delocalized over three sulfonyl oxygens, making it the conjugate base of a strong acid and an excellent leaving group, whereas hydroxide is a strong base and a poor one. Hydroxide is a strong base, not a weak one. Tosylate’s role is to leave, not to attack, and it is a poor nucleophile. Steric bulk at the reacting carbon hinders backside attack rather than promoting it.',
+    optionExplanations: [
+      'Hydroxide is a strong base, not a weak one. It is precisely because hydroxide is a strong base (the conjugate base of water, pKa ≈ 16) that it is a poor leaving group.',
+      'Tosylate is a poor nucleophile, and its role is to leave, not to attack. The nucleophile in an SN2 reaction is a separate species that displaces the tosylate.',
+      'Good leaving groups are weak bases. The negative charge of tosylate is delocalized over three sulfonyl oxygens, making it the conjugate base of a strong acid and an excellent leaving group, unlike the strongly basic hydroxide.',
+      'Steric bulk at or near the reacting carbon hinders backside attack in SN2 reactions rather than promoting it. The tosylate’s bulk is on the sulfur side, away from the carbon, and is not the reason it is used.',
+    ],
     skill: '5D leaving-group ability (Skill 1)',
   },
   {
@@ -445,6 +607,12 @@ export const FL3_CHEM_PHYS_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'The two strands of a double helix are antiparallel, so the complement pairs C with G, T with A, A with T, and G with C to give 3′-CTAAG-5′, which is written 5′-GAATC-3′. 5′-CTAAG-3′ lists the correct complementary bases but labels the ends as if the strands were parallel. Both sequences containing U use uracil, which occurs in RNA rather than DNA.',
+    optionExplanations: [
+      'This lists the correct complementary bases (C, T, A, A, G) but labels the ends as if the strands were parallel. The complement of 5′-GATTC-3′ is 3′-CTAAG-5′, which reads 5′-GAATC-3′.',
+      'Pairing C–G, T–A, A–T, G–C along the antiparallel strand gives 3′-CTAAG-5′. Rewritten in the 5′→3′ direction, that is 5′-GAATC-3′.',
+      'This sequence contains uracil (U), which occurs in RNA, not DNA. The complementary strand of a DNA double helix must use thymine (T) to pair with adenine.',
+      'This sequence contains uracil, a base found in RNA rather than DNA, and also labels the ends as if the strands were parallel. Both errors disqualify it.',
+    ],
     skill: '5D nucleic acid strand polarity (Skill 1)',
   },
   {
@@ -456,6 +624,12 @@ export const FL3_CHEM_PHYS_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'Molar mass equals density times molar volume: $1.25\\ \\text{g/L} \\times 22.4\\ \\text{L/mol} = 28$ g/mol, which matches N₂. O₂ (32 g/mol) would have a density of about 1.43 g/L, CO₂ (44 g/mol) about 1.96 g/L, and CH₄ (16 g/mol) about 0.71 g/L.',
+    optionExplanations: [
+      'O₂ has a molar mass of 32 g/mol, which would give a density of 32/22.4 ≈ 1.43 g/L at these conditions, higher than the observed 1.25 g/L.',
+      'CO₂ has a molar mass of 44 g/mol, which would give a density of 44/22.4 ≈ 1.96 g/L, far above the observed value.',
+      'CH₄ has a molar mass of 16 g/mol, which would give a density of 16/22.4 ≈ 0.71 g/L, well below the observed 1.25 g/L.',
+      'Molar mass equals density times molar volume: $1.25\\ \\text{g/L} \\times 22.4\\ \\text{L/mol} = 28$ g/mol. That matches N₂ (2 × 14 g/mol).',
+    ],
     skill: '4B gas density and molar mass (Skill 2)',
   },
 ]

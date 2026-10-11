@@ -30,6 +30,12 @@ export const FL5_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The closing paragraph states the thesis directly: legitimacy “is not a property of what is concealed” but of “the concealment’s form: open about its own existence, bounded in time, answerable later.” The bad-faith option overstates the author, who grants that the standard defense of secrecy is true and that a government meeting the standard “may still keep many secrets.” The endanger-lives option is the “content test” the author rejects because only the secret-keeper can apply it. The prohibit-deep-secrets option ignores the fifth paragraph, where the author concedes that some secrets must be deep and proposes a rule for them rather than a ban.',
+        optionExplanations: [
+          'This overstates the author, who grants that the standard defense of secrecy is true, calls the citizen who denies it “a child,” and allows that a government meeting his standard “may still keep many secrets”; bad faith is never alleged.',
+          'This is the “content test,” which the author says asks real questions but is inadequate because only the secret-keeper can answer them; he replaces it with a test of form, not content.',
+          'The closing paragraph states the thesis directly: legitimacy “is not a property of what is concealed” but “a property of the concealment’s form: open about its own existence, bounded in time, answerable later.”',
+          'The author concedes in the fifth paragraph that “some secrets must be deep” and proposes a rule for them, a recorded placement to be read later, rather than a prohibition; what he rejects is the secret that is deep forever.',
+        ],
         skill: 'main-idea',
       },
       {
@@ -43,6 +49,12 @@ export const FL5_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The remark closes a list of cases in which secrecy really is necessary, and the next sentences pivot with “Yet” to what remains unresolved: “we have no settled way of telling the secrets a democracy can tolerate from the ones that quietly unmake it.” It is a concession that clears the ground for the author’s own test. The naive-idealism option turns a concession about one claim into a characterization of all opponents, which the passage does not make. The whatever-it-judges option contradicts the passage, which refuses to let the secret-keeper apply the test. The diplomacy option treats the sentence as a classification of citizens rather than as a step in the argument.',
+        optionExplanations: [
+          'The remark closes a list of cases where secrecy really is necessary and is followed by “Yet,” pivoting to what remains unsettled: how to tell tolerable secrets from those that “quietly unmake” democracy. It concedes the strongest point before turning to what it leaves open.',
+          'The sentence concedes that one specific claim about secrecy is true; it does not characterize opponents of secrecy in general as naive idealists, and the author goes on to side with the citizen who feels something has gone wrong.',
+          'This contradicts the passage, which refuses to let the secret-keeper apply the test (“a test that must be applied by the person it is meant to restrain is not a test”); the author does not defend unlimited discretion.',
+          'The sentence is a step in the argument, conceding a point before qualifying it, not a classification of citizens by their understanding of diplomacy; the author immediately says the same citizen “is right to feel that something has gone wrong.”',
+        ],
         skill: 'function',
       },
       {
@@ -56,6 +68,12 @@ export const FL5_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'A deep secret is one in which “the public does not know that there is anything to know,” with no acknowledged existence, no public rule, and no condition for its opening. The unacknowledged program meets every part of that description. The treaty case is shallow: the public knows a negotiation exists and that terms are withheld until signing. The sealed intelligence files are shallow because the rule was made in public and has an expiry. The sealed court records are shallow because their existence is acknowledged and a date for opening has been set in advance.',
+        optionExplanations: [
+          'A ministry that confirms it is negotiating but withholds the terms until signing is a shallow secret: the public knows a negotiation exists and knows the rule under which the terms are withheld and when it expires.',
+          'A legislature voting in public to seal files for twenty-five years creates a shallow secret: the authority to seal was granted in public and a date for opening was set in advance, so citizens can argue about and vote on the rule.',
+          'A court that seals records and announces the opening date has kept a shallow secret; its existence is acknowledged and a condition for its opening was set in advance, which is exactly what the author says keeps a secret within democracy.',
+          'A deep secret is one in which “the public does not know that there is anything to know,” with no acknowledged existence and no public rule; a program that is unacknowledged and governed by no rule the public has seen meets every part of that description.',
+        ],
         skill: 'application',
       },
       {
@@ -69,6 +87,12 @@ export const FL5_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The second paragraph grants that the content questions are real but observes that “only the secret-keeper can answer them,” concluding that a test applied by the person it restrains “is not a test. It is a request.” The ignores-dangers option is backwards: the content test is precisely about those dangers. The equally-dangerous option is the opposite of what the content test does, since it sorts secrets by their subject matter. The sealed-too-long option describes a problem the author’s own form-based test addresses, not the flaw identified in the content test.',
+        optionExplanations: [
+          'This is backwards: the content test is precisely about the dangers of disclosure to lives, sources, and operations. The author grants those questions are real; his objection is about who gets to answer them.',
+          'The second paragraph grants that the content questions are real but observes that “only the secret-keeper can answer them,” concluding that a test applied by the person it is meant to restrain “is not a test. It is a request.”',
+          'The content test does the opposite of treating all secrets alike: it sorts them by subject matter, asking whether each one endangers lives or aids an adversary. Uniformity is not the flaw the author identifies.',
+          'Secrets remaining sealed after their reasons lapse is a problem the author’s own form-based test addresses by requiring a time bound; it is not the deficiency he attributes to the content test.',
+        ],
         skill: 'detail',
       },
       {
@@ -82,6 +106,12 @@ export const FL5_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Practice I is exactly the author’s proposal for secrets that must be deep: let the placement “be recorded somewhere that will eventually be read,” turning a deep secret into “a shallow secret with a longer fuse.” Practice III is one of the three outside questions the author says can be asked of any secret: “whether the authority to seal it was granted in public.” Practice II is the content test left in the hands of the secret-keeper, which the author dismisses as “a request” rather than a test. Hence I and III only; “I only” omits the public-authority requirement, and the options including II credit the author with the view he rejects.',
+        optionExplanations: [
+          'Practice I is the author’s proposal for secrets that must be deep, recording their placement “somewhere that will eventually be read,” and practice III is one of his outside questions, “whether the authority to seal it was granted in public.” Practice II is the content test left to the secret-keeper, which he calls “a request” rather than a test.',
+          'Practice I is endorsed, but this omits practice III, requiring public authority to seal, which the author lists among the questions that can be asked of any secret from the outside and that mark a secret kept within democracy.',
+          'Practice II lets officials judge the danger of disclosure for themselves, which is the content test applied by the person it is meant to restrain; the author dismisses that as “not a test” but “a request,” so he would not endorse it.',
+          'Including practice II credits the author with the view he rejects: officials deciding for themselves whether disclosure endangers lives is the content test in the secret-keeper’s hands, which the second paragraph calls “a request” rather than a test.',
+        ],
         skill: 'application',
       },
       {
@@ -95,6 +125,12 @@ export const FL5_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The passage defines legitimacy by the form of concealment — acknowledged, bounded, answerable — and never claims that meeting the standard will make citizens feel more trusting; it even allows that a legitimate secret “may be wrong.” A finding about trust therefore addresses a claim the author did not make. The refute option invents a trust claim. The support option mistakes a null result about trust for evidence about form versus content, which the finding does not test. The weaken option is wrong because the finding says nothing about whether the sealed files could be argued about, voted on, or demanded, which is the difference the author cares about.',
+        optionExplanations: [
+          'The author never claims that shallow secrets restore citizens’ trust; he defines legitimacy by the form of concealment and even allows that a legitimate secret “may be wrong.” A trust claim is invented here.',
+          'A null result about trust does not test form against content; the finding compares a country with public seals to one without rules and measures trust, not whether form or content determines legitimacy.',
+          'The passage defines legitimacy by the form of concealment, acknowledged, bounded, and answerable later, and never claims that meeting the standard makes citizens feel more trusting; a finding about trust addresses a claim the author did not make.',
+          'The finding says nothing about whether the sealed files could be argued about, voted on, or demanded when the date arrived, which is the difference between shallow and deep secrets that the author cares about; it does not show the seals do nothing distinctive.',
+        ],
         skill: 'strengthen-weaken',
       },
     ],
@@ -118,6 +154,12 @@ export const FL5_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The passage concedes that the adult will never match a child-trained player’s fluency, then argues that fluency serves “the possibility of a stage,” which is only one answer to what learning an instrument is for; the closing line — “too late for what?” — makes the point explicit. The comparable-fluency option contradicts the second paragraph. The reform option proposes a change in children’s training that the author never advocates; the apparatus is described, not condemned. The gain-more option overreaches: the author says only that the adult’s musicianship is “different” and that he is “not sure it is the lesser.”',
+        optionExplanations: [
+          'This contradicts the second paragraph, which affirms that the child-trained player’s fluency is something “the adult beginner will never match” and that the adult “will always, at some level, be translating.”',
+          'The passage concedes the fluency gap, then argues that fluency serves “the possibility of a stage,” which is only one answer to what learning an instrument is for; the closing line, “too late for what?”, makes this the central point.',
+          'The author describes the apparatus of early instruction and what it is organized to produce, but never advocates reforming it; the essay is about the adult beginner, not about changing children’s training.',
+          'This overreaches: the author says the adult’s musicianship “is a different one, and I am not sure it is the lesser,” which stops well short of claiming that adults gain more from music than professionals do.',
+        ],
         skill: 'main-idea',
       },
       {
@@ -131,6 +173,12 @@ export const FL5_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The author opens the second paragraph with “Begin with what the pessimists get right” and affirms that the fluency gap “is simply so,” then turns on the inference: “But notice what has been measured.” That is acceptance of the premise and rejection of the conclusion. The dismissive option ignores the explicit concession. The doubtful-of-evidence option is wrong because the author accepts the evidence about fluency without reservation. The amused option misreads the tone, which is serious throughout, and attributes an ignorance to the pessimists that the passage never suggests.',
+        optionExplanations: [
+          'The author does not dismiss the pessimists’ conclusion about fluency; he opens the second paragraph with “Begin with what the pessimists get right” and affirms that the gap “is simply so.”',
+          'The author accepts the pessimists’ evidence about fluency without reservation; what he questions is not their evidence but the inference drawn from it, so doubt about evidence misreads him.',
+          'The tone is serious throughout, and the passage never suggests the pessimists are ignorant of what they describe; the author grants that what they say about fluency is true.',
+          'The author affirms that the fluency gap “is simply so,” then turns on the inference: “But notice what has been measured.” He accepts the premise and rejects what the pessimists take it to show.',
+        ],
         skill: 'tone',
       },
       {
@@ -144,6 +192,12 @@ export const FL5_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The fourth paragraph contrasts the child, whose “taste grows alongside her fingers and is never far ahead of them,” with the adult who “arrives with forty years of listening and a hand that knows nothing”; the distance is between what she can imagine and what she can make. The examinations option describes why the adult is outside the performance apparatus, not why she hears the gap. The finished-growing option explains the fluency deficit of the second paragraph, which is about the hand alone, not the gap between ear and hand. The no-audience option is what the author says sets her free, not what produces the distance.',
+        optionExplanations: [
+          'The fourth paragraph contrasts the child, whose “taste grows alongside her fingers and is never far ahead of them,” with the adult who “arrives with forty years of listening and a hand that knows nothing”; the distance is between what she can imagine and what she can make.',
+          'The examinations and recitals explain why the adult is outside the performance apparatus and why no one will listen to her; they do not explain why she hears the gap between imagined and produced sound.',
+          'Fingers trained after the hand finished growing explains the fluency deficit in the second paragraph, which concerns the hand alone; the distance in the fourth paragraph is between a refined ear and an untrained hand.',
+          'Practicing without the prospect of an audience is what the author says “sets her free,” a consequence of being outside the apparatus; it is not what produces the distance between her imagination and her execution.',
+        ],
         skill: 'detail',
       },
       {
@@ -157,6 +211,12 @@ export const FL5_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The list follows the assertion that the child is prepared “for the possibility of a stage” and is introduced as the apparatus that “exists to sort children by how well they can be listened to”; it is evidence for that claim. The rigor option introduces a comparison of difficulty the passage does not make. The beneath-decision option belongs to the second paragraph’s account of early finger training, which the apparatus does not explain. The abandon-music option raises an outcome the passage never mentions.',
+        optionExplanations: [
+          'The passage never compares the rigor of early instruction with what the adult undertakes; the list is about what the apparatus exists to do, sort children by how they can be listened to, not about difficulty.',
+          'Fluency laid down “beneath the level of decision” belongs to the second paragraph’s account of early finger training; the examinations and recitals are not offered as the explanation for that motor phenomenon.',
+          'The list follows the claim that the child is prepared “for the possibility of a stage” and is introduced as the apparatus that “exists to sort children by how well they can be listened to”; it is evidence that children’s training is organized around performance.',
+          'The passage never mentions children abandoning music or the pressures that might cause it; this introduces an outcome the author does not discuss.',
+        ],
         skill: 'function',
       },
       {
@@ -170,6 +230,12 @@ export const FL5_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The author’s only evidence for the adult’s musicianship is that she hears “exactly what the music is asking for and exactly where she falls short”; the conclusion follows only if that kind of hearing is itself musicianship, independent of the ability to produce the sound. The narrow-the-gap option is contradicted by the passage, which says the adult will always be translating, and the conclusion does not rest on improvement. The rarely-refined option is stronger than needed and not implied; the author says the child’s taste is never far ahead of her fingers, not that it stays crude. The no-bearing option is too absolute; the author needs only that execution is not the whole of musicianship, not that it is irrelevant.',
+        optionExplanations: [
+          'The passage says the adult “will always, at some level, be translating,” so the conclusion does not rest on her narrowing the gap; the author values the precision with which she hears the gap, not its eventual closing.',
+          'This is stronger than the argument needs and not implied; the author says the child’s taste “grows alongside her fingers,” never far ahead, not that trained musicians fail to develop refined taste.',
+          'This is too absolute; the author needs only that execution is not the whole of musicianship, not that fluency has no bearing on understanding. He grants that fluency is real and valuable for the stage.',
+          'The author’s only evidence for the adult’s musicianship is that she hears “exactly what the music is asking for and exactly where she falls short”; the conclusion follows only if that precise hearing counts as musicianship even when she cannot supply the sound.',
+        ],
         skill: 'assumption',
       },
       {
@@ -183,6 +249,12 @@ export const FL5_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The fifth paragraph rests on the adult beginner being “the last person who plays with no such ambition,” who “plays badly, for no one”; adults who practice in order to play for others would contradict that premise and weaken the claim that she recovers music as something done rather than delivered. The translating claim is about motor fluency and is untouched by motives. The child’s-taste claim concerns children, not adult learners. The music-as-received claim is about the culture at large and would not be challenged by what adult beginners want.',
+        optionExplanations: [
+          'The translating claim is about motor fluency laid down in childhood and is untouched by why adults practice; their motives for playing do not change what their hands can do.',
+          'The fifth paragraph rests on the adult beginner being “the last person who plays with no such ambition,” who “plays badly, for no one”; adults practicing in order to play for friends and family would contradict that premise directly.',
+          'The child’s-taste claim concerns how children develop and has nothing to do with adult learners’ motives; a survey of adult beginners cannot bear on it.',
+          'The music-as-received claim is about the culture at large, surrounded by polished performances; what adult beginners hope to do with their playing would not challenge a claim about how most people encounter music.',
+        ],
         skill: 'new-information',
       },
     ],
@@ -206,6 +278,12 @@ export const FL5_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The passage argues that small talk’s emptiness is “a design” serving to confirm that people “remain available to each other,” and that real conversations “grow out of” that availability. The conveys-information option contradicts the second paragraph, which says small talk is not an exchange of information. The shy-not-serious option conflates the two groups the author distinguishes in the opening and is not the point of the essay. The unnecessary option reverses the final paragraph, which treats the disappearance of small-talk occasions as a loss rather than as proof that small talk is no longer needed.',
+        optionExplanations: [
+          'This contradicts the second paragraph, which says small talk “is not an exchange of information; everyone involved already knows that it is raining.” Its value lies in the making of the remark, not in any content.',
+          'The opening distinguishes the shy, who dread small talk, from the self-regarding, who despise it; the author does not reduce one group to the other, and diagnosing the complainers is not the essay’s point.',
+          'This reverses the final paragraph, which treats the engineering away of small-talk occasions as “a small withdrawal from the fund of mutual availability,” a loss, not as proof that small talk is no longer needed.',
+          'The passage argues that small talk’s emptiness is “a design” that confirms people “remain available to each other,” and that real conversations “grow out of” that availability; remove the floor and the furniture falls.',
+        ],
         skill: 'main-idea',
       },
       {
@@ -219,6 +297,12 @@ export const FL5_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The fourth paragraph says the refuser “declines to perform equality with people he regards as not worth the effort,” and that the refusal “is most admired among those who can afford it,” which marks the refusal as a privilege unavailable to those who depend on the ritual. The shyness option merges the self-regarding with the shy, whom the author treats separately. The impossible-with-anyone option is too strong; the author says real conversations will become harder to begin, and that is a claim about society, not about this individual. The better-served option offers advice the passage never gives.',
+        optionExplanations: [
+          'The author treats the shy and the self-regarding as separate groups with different complaints; the “serious person” belongs to the self-regarding, and the passage does not diagnose his refusal as disguised shyness.',
+          'This is too strong; the author predicts that real conversations will become “harder to begin” as a social consequence, not that any individual refuser will find them impossible with anyone.',
+          'The fourth paragraph says the refuser “declines to perform equality with people he regards as not worth the effort” and that the refusal “is most admired among those who can afford it,” marking it as a privilege unavailable to those who depend on the ritual.',
+          'The passage never offers advice to the serious person about learning the rules; it analyzes what his refusal amounts to rather than prescribing a remedy for him.',
+        ],
         skill: 'inference',
       },
       {
@@ -232,6 +316,12 @@ export const FL5_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The author says the content of small talk is beside the point — “everyone involved already knows that it is raining” — and that its emptiness is a design; nothing in the passage suggests the participants care about the topic. The other three features are among the rules and properties the passage lists: either party may leave “and the leaving gives no offense,” “neither may dominate,” and because nothing of substance is said, the exchange “cannot fail in the way a real conversation can.”',
+        optionExplanations: [
+          'The passage lists this among the rules: “either may leave, and the leaving gives no offense.” It is an attributed feature, so it cannot be the exception.',
+          'The author says everyone already knows it is raining and that opinions are excluded by the rules; nothing in the passage suggests the participants share any interest in the topic, whose content is beside the point by design.',
+          'The passage states that “neither may dominate” as one of the rules of small talk, so this feature is attributed and cannot be the exception.',
+          'The third paragraph says that because nothing of substance is said, nothing can be refused, “and so the exchange cannot fail in the way a real conversation can”; this is an attributed feature.',
+        ],
         skill: 'detail',
       },
       {
@@ -245,6 +335,12 @@ export const FL5_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The model of equality is “enacted … between people who are in every other respect unequal,” through exchanges in which each contributes a little and neither dominates; the surgeon and the porter talking about traffic fit every element. The equal-rank colleagues are not unequal, and a policy debate is an exchange of opinion, which small talk excludes. The manager’s questioning is one-sided and takes place inside an evaluation, so it violates the no-domination rule and carries stakes. The customer’s complaint is substantive and could be refused, so it is not small talk at all.',
+        optionExplanations: [
+          'The model of equality is “enacted … between people who are in every other respect unequal,” through exchanges where each contributes a little and neither dominates; a surgeon and a porter talking about traffic while waiting fit every element.',
+          'Colleagues of the same rank are not unequal in the relevant sense, and a policy debate is an exchange of opinion, which the author says the rules of small talk exclude.',
+          'A manager questioning an employee during a performance review is one-sided and takes place inside an evaluation with stakes; it violates the rule that neither party may dominate and carries the risk that small talk is designed to avoid.',
+          'A customer explaining at length why a product failed is a substantive complaint that could be refused; it has content and stakes, so it is not small talk and does not model equality.',
+        ],
         skill: 'application',
       },
       {
@@ -258,6 +354,12 @@ export const FL5_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The final paragraph’s warning depends on the earlier claim that real conversations “grow out of” trivial exchanges that establish availability; if confiding relationships form just as readily without such exchanges, the withdrawal of small-talk occasions would cost nothing. The time-saving option restates the convenience the author already concedes is welcomed. The unpleasant option concerns how the exchanges feel, not whether they build the availability the argument needs. The shorter-wait option again describes a preference the author grants when saying each improvement is welcomed.',
+        optionExplanations: [
+          'Saving several minutes per transaction restates the convenience that the author already concedes: “Each such improvement is welcomed.” It does not touch his claim about what the convenience costs.',
+          'How the exchanges feel to participants is beside the point; the author’s argument is that they build availability regardless of their pleasantness, so unpleasantness does not weaken the claim about what they do.',
+          'The final paragraph’s warning depends on the earlier claim that real conversations “grow out of” trivial exchanges that establish availability; if confiding relationships form just as readily without them, the loss of small-talk occasions would cost nothing.',
+          'A preference for a shorter wait over conversation with a stranger is another form of the welcome the author grants each improvement; preferences do not bear on whether the withdrawals deplete the fund of availability.',
+        ],
         skill: 'strengthen-weaken',
       },
       {
@@ -271,6 +373,12 @@ export const FL5_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The author predicts that “we will not notice the withdrawals” and that when real conversations become harder to begin “we will blame ourselves, or our phones,” that is, something other than the vanished occasions for small talk. The more-time option assumes a benefit the author never grants. The identify-the-counters option is the opposite of the author’s prediction that the cause will go unrecognized. The no-change option contradicts the central claim that real conversations grow out of trivial exchanges.',
+        optionExplanations: [
+          'The author never grants that engineering away small talk frees time for substantive conversation; his prediction is that real conversations become harder to begin, not more frequent.',
+          'This is the opposite of the author’s prediction: he says “we will not notice the withdrawals,” so residents would not identify the lost counters as the cause of any decline.',
+          'This contradicts the central claim that real conversations grow out of trivial exchanges with people whose availability has been established; the author predicts a change, not stability.',
+          'The author predicts that “we will not notice the withdrawals” and that when real conversations become harder to begin “we will blame ourselves, or our phones,” that is, something other than the vanished occasions for small talk.',
+        ],
         skill: 'new-information',
       },
     ],
@@ -294,6 +402,12 @@ export const FL5_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The fourth paragraph states the conclusion: “a school may send work home only on terms it can honor,” and where it cannot provide a room, an adult, and equal credit for work done there, “it should not assign the work.” The abolish option is explicitly rejected (“I do not conclude from this that homework should be abolished”). The better-studies option misreads the opening, where the author says the problem is that the question is badly put, not that the evidence is lacking. The parental-involvement option is the defenders’ view, which the final paragraph treats as a way of prizing unequal advantages.',
+        optionExplanations: [
+          'The fourth paragraph states the conclusion: “a school may send work home only on terms it can honor,” and where it cannot provide a room, an adult, and equal credit for work done there, “it should not assign the work.”',
+          'The author explicitly rejects this: “I do not conclude from this that homework should be abolished.” He accepts the defenders’ point that something is learned by working alone.',
+          'The opening says the problem is that “the question has been badly put,” not that the evidence is lacking; the author accepts both sides’ findings and reframes the question rather than calling for more studies.',
+          'Parental involvement is a benefit the defenders value, and the final paragraph treats it as valuable “precisely because it is unequal”; the author does not recommend encouraging it in every household.',
+        ],
         skill: 'main-idea',
       },
       {
@@ -307,6 +421,12 @@ export const FL5_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The sentence is immediately followed by “it suggests the question has been badly put,” and the next paragraph replaces “Does homework work?” with an account of homework as a transfer; the double correctness is the author’s evidence that the question is malformed. The too-mixed option treats the remark as a verdict on the evidence, whereas the author accepts both sides’ evidence. The praise option misses the critical edge (“That is what makes the argument so tiresome”). The emphasis option is wrong because the author later says each side describes a different home, a difference of substance.',
+        optionExplanations: [
+          'The author does not treat the remark as a verdict that the evidence is inconclusive; he accepts both sides’ evidence as correct and draws a conclusion from that very fact.',
+          'The sentence is immediately followed by “it suggests the question has been badly put,” and the next paragraph replaces “Does homework work?” with an account of homework as a transfer; the double correctness is evidence that the question is malformed.',
+          'The remark carries a critical edge, “That is what makes the argument so tiresome,” so it is not praise; the author faults both sides for treating their own home as the general case.',
+          'The author later says the defenders and abolitionists are “describing a different home,” each treating it as the general case; that is a difference of substance, not merely of emphasis.',
+        ],
         skill: 'function',
       },
       {
@@ -320,6 +440,12 @@ export const FL5_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The final paragraph grants that the parent’s window is among the things defenders value, then observes that it “is valuable precisely because it is unequal” and “opens onto some households and not others.” The illusory option denies the benefit, which the author does not do. The strongest-reason option is wrong because the author’s own reason for keeping homework is that something is learned by working alone, not the parental window. The open-buildings option describes the author’s remedy for the resource gap, but an open school room does not give parents a window into the school, so it does not preserve this particular benefit.',
+        optionExplanations: [
+          'The author does not deny the benefit; he grants that the parent’s window is among the things defenders value and says it is real. His point is about its unequal distribution, not its illusoriness.',
+          'The author’s own reason for keeping homework is that “something is learned by working alone,” not the parental window; he treats the window as a good that rewards already-advantaged households.',
+          'An open school room with an adult present is the author’s remedy for the resource gap, but it does not give parents a window into what the school is doing; this particular benefit is not preserved by after-hours access.',
+          'The final paragraph grants that the parent’s window is valued by defenders, then observes that it “is valuable precisely because it is unequal” and “opens onto some households and not others”; the benefit is real but prized partly for its inequality.',
+        ],
         skill: 'application',
       },
       {
@@ -333,6 +459,12 @@ export const FL5_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The author’s conditions are “a room that stays open after the last bell, an adult in it, and the understanding that work done there counts exactly as work done at a kitchen table”; the proposal supplies all three. The teacher-at-her-elbow option misreads the conditions, which explicitly call for an adult to be present. The unnecessary option adopts the abolitionists’ evidence as a verdict, whereas the author keeps homework for what is learned by working alone. The everyone-must-attend option imposes a requirement the passage never suggests; the author asks only that the resource be available to those whose homes lack it.',
+        optionExplanations: [
+          'The author’s conditions explicitly call for “an adult in it,” so having teachers present does not defeat the purpose; working away from the classroom, not away from every adult, is what the defenders value.',
+          'This adopts the abolitionists’ evidence as a verdict, whereas the author keeps homework for what is learned by working alone; he does not regard supplying the resource as unnecessary.',
+          'The author’s conditions are “a room that stays open after the last bell, an adult in it, and the understanding that work done there counts exactly as work done at a kitchen table”; the proposal supplies all three.',
+          'The passage never suggests that every child must attend; the author asks only that the school supply what the work requires “to the children whose homes cannot,” leaving others free to work at their kitchen tables.',
+        ],
         skill: 'new-information',
       },
       {
@@ -346,6 +478,12 @@ export const FL5_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The step from “valuing involvement” to “prizing the advantages some children bring from home” holds only if valuing the good entails rewarding those who have it; otherwise a school could prize involvement while neutralizing its effect on outcomes. The awareness option is contradicted by the text, which says the decision was made “perhaps without knowing it.” The more-educated option introduces a specific demographic claim the argument does not need. The learn-nothing option is far stronger than required; the author needs only that uninvolved children gain less, not that they gain nothing.',
+        optionExplanations: [
+          'The step from valuing involvement to “prizing the advantages that some children bring from home” holds only if valuing the good entails rewarding those who happen to receive it; otherwise a school could prize involvement while neutralizing its effect on outcomes.',
+          'This is contradicted by the text, which says the school has made the decision “perhaps without knowing it”; the argument does not assume awareness of the inequalities.',
+          'The argument does not need any claim about the education level of involved parents; it needs only that involvement is unequally distributed, whatever the reason for the inequality.',
+          'This is far stronger than the argument requires; the author needs only that children without involved parents gain less, not that they learn nothing from the work.',
+        ],
         skill: 'assumption',
       },
     ],

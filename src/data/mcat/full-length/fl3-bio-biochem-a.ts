@@ -58,6 +58,12 @@ export const FL3_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Lowering the pH protonates ionizable groups, and the passage states that the cysteine must be a thiolate for activity; the steep loss of activity between pH 5 and pH 3 (half-maximal near pH 4) therefore reflects protonation of the cysteine thiol. The histidine is required in its protonated imidazolium form, so its protonation cannot cause the loss, and its deprotonation is what happens at high pH (the falling limb near pH 9), not at pH 3. Irreversible unfolding is ruled out because enzyme exposed to pH 3 regained full activity when returned to pH 6.5.',
+        optionExplanations: [
+          'Deprotonation happens at high pH, not low. Lowering pH to 3 adds protons; the loss of the histidine’s proton explains the falling limb near pH 9, not the near-zero activity at pH 3.',
+          'Irreversible unfolding is ruled out by the passage: enzyme held at pH 3 for 10 minutes and returned to pH 6.5 regained full activity. The loss at pH 3 is reversible ionization, not denaturation.',
+          'Lowering the pH protonates ionizable groups, and the passage says the cysteine must be a thiolate ($\\text{S}^-$) to attack the carbonyl. The steep loss between pH 5 and 3 reflects protonation of the cysteine thiol, removing the nucleophile.',
+          'The histidine is required in its protonated imidazolium form, so protonating it cannot cause the loss. It also acts as a proton donor to the leaving amine, not as a general base, in the mechanism described.',
+        ],
         skill: '1A enzyme pH dependence',
       },
       {
@@ -66,6 +72,12 @@ export const FL3_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The V curve falls by half every 10 minutes (100% → 50% at 10 min → 25% at 20 min → about 12% at 30 min), the signature of first-order inactivation by an excess of inhibitor, so one more half-time brings activity to about 6%. Zero would follow only if the loss were linear, but the amount lost in each interval shrinks as fewer active enzyme molecules remain. Twelve percent is the 30-minute value and 25% is the 20-minute value, not extrapolations to 40 minutes.',
+        optionExplanations: [
+          'Zero would follow only if the loss were linear. The V curve loses half the remaining activity each 10 minutes, so the amount lost per interval shrinks and activity approaches but does not reach zero at 40 minutes.',
+          'The V curve halves every 10 minutes: 100% → 50% (10 min) → 25% (20 min) → about 12% (30 min). This first-order pattern of inactivation by excess inhibitor predicts about 6% at 40 minutes.',
+          'Twelve percent is the 30-minute value read directly from Figure 1, not an extrapolation to 40 minutes. One more half-time would halve it again.',
+          'Twenty-five percent is the 20-minute value in Figure 1. Extending to 40 minutes requires two more half-times, bringing activity down to about 6%.',
+        ],
         skill: '1A irreversible inhibition',
       },
       {
@@ -79,6 +91,12 @@ export const FL3_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'S* occupies the substrate-binding cleft and does not react with V, so if V must enter that cleft to reach its target, S* should compete with it and slow inactivation, which is what Figure 1 shows (half-time lengthened from about 10 to about 30 minutes). Spontaneous loss of activity is tested by the buffer-only mixture, not by S*. Whether V must be processed by CP1 is not addressed by adding a non-cleavable analog. The effect of dilution is common to every sample and is not what distinguishes the S* condition.',
+        optionExplanations: [
+          'S* occupies the substrate-binding cleft and does not react with V. If V must enter that cleft to reach its target, S* should compete and slow inactivation, which Figure 1 shows (half-time lengthened from about 10 to about 30 minutes). That tests whether V’s target lies within the cleft.',
+          'Spontaneous loss of activity at 25 °C is tested by the buffer-only mixture, which stays near 97–100%. Adding S* to V addresses a different question.',
+          'Whether V must be processed by CP1 cannot be addressed by adding a non-cleavable substrate analog. S* competes for the cleft; it does not test cleavage of V.',
+          'The effect of dilution is common to every sample and is not what distinguishes the S* condition. The comparison between V alone and V plus S* isolates the role of the substrate cleft.',
+        ],
         skill: '1A active-site labeling (research design)',
       },
       {
@@ -92,6 +110,12 @@ export const FL3_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'V forms a covalent carbon–sulfur bond with the enzyme, so modified CP1 molecules never regain activity even after free V has been cleared; activity returns only as the parasite makes new enzyme. R binds noncovalently, and Figure 1 shows that its inhibition vanishes once its concentration falls (after 100-fold dilution), so recovery tracks elimination of R. Reversing the two mechanisms, or assigning the same determinant to both compounds, ignores the difference between covalent and noncovalent binding shown by the dilution experiment.',
+        optionExplanations: [
+          'This reverses the two mechanisms. V is the covalent inhibitor whose effect persists after clearance, and R is the reversible one whose effect ends once it is eliminated.',
+          'Clearance alone cannot explain recovery from V. V forms a stable carbon–sulfur bond with the enzyme, so modified CP1 molecules never regain activity even when free V is gone.',
+          'New enzyme synthesis is not needed to recover from R. R binds noncovalently, and Figure 1 shows its inhibition vanishes once its concentration falls after 100-fold dilution.',
+          'V forms a covalent carbon–sulfur bond, so inactivated CP1 never recovers; activity returns only as the parasite makes new enzyme. R binds noncovalently, and Figure 1 shows its inhibition disappears on dilution, so recovery tracks elimination of R.',
+        ],
         skill: '1A reversible vs irreversible inhibition',
       },
       {
@@ -105,6 +129,12 @@ export const FL3_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Enzyme held at 20–40 °C gives 100% activity when later assayed at 37 °C, so the low rates measured at those temperatures reflect slower catalysis by intact enzyme (fewer collisions with enough energy to reach the transition state). Enzyme held at 60–70 °C does not recover at 37 °C, showing irreversible unfolding. Attributing the low-temperature loss to unfolding reverses the evidence. Irreversible loss at every temperature is contradicted by the 20–40 °C recoveries, and full recovery at every temperature is contradicted by the 60 °C and 70 °C values.',
+        optionExplanations: [
+          'This reverses the evidence. Enzyme held at 20–40 °C gives 100% activity when later assayed at 37 °C, so no unfolding occurred below 50 °C; the low rates reflect slower catalysis by intact enzyme.',
+          'Enzyme held at 20–40 °C recovers fully at 37 °C, so low rates at those temperatures reflect slower catalysis by intact enzyme. Enzyme held at 60–70 °C does not recover (38% and 3%), showing irreversible unfolding above 50 °C.',
+          'Irreversible unfolding at every temperature except 50 °C is contradicted by the 100% recoveries after incubation at 20, 30 and 40 °C. Only 60 °C and 70 °C show irreversible loss.',
+          'Full recovery at every temperature is contradicted by the 38% recovery after 60 °C and 3% after 70 °C. The enzyme is permanently damaged at those temperatures.',
+        ],
         skill: '1A enzyme temperature dependence',
       },
     ],
@@ -133,6 +163,12 @@ export const FL3_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Phenylephrine constricts arterioles through $\\alpha_1$ receptors, raising pressure; baroreceptors sense the stretch and the brainstem increases vagal output to the SA node, where $\\text{M}_2$ receptors slow pacemaker depolarization. The passage places $\\beta_1$, not $\\alpha_1$, receptors on the heart, so a direct $\\alpha_1$ action on the node is not the mechanism. A selective $\\alpha_1$ agonist does not block $\\beta_1$ receptors. Any baroreflex decrease in adrenal output would be secondary and minor compared with the direct vagal slowing of the node.',
+        optionExplanations: [
+          'Phenylephrine constricts arterioles via $\\alpha_1$ receptors, raising pressure. Baroreceptors sense the stretch, and the brainstem increases vagal output to the SA node, where $\\text{M}_2$ receptors slow pacemaker depolarization. The bradycardia is reflex.',
+          'The passage places $\\beta_1$, not $\\alpha_1$, receptors on the heart. Phenylephrine has no direct action on SA-node pacemaker cells; its cardiac effect is indirect, via the baroreflex.',
+          'Any baroreflex decrease in adrenal epinephrine output would be secondary and minor compared with the direct vagal slowing of the node. It is not the main mechanism of the fall in heart rate.',
+          'Phenylephrine is a selective $\\alpha_1$ agonist and does not block $\\beta_1$ receptors at any concentration described. Blockade is not part of its pharmacology.',
+        ],
         skill: '3A autonomic reflexes',
       },
       {
@@ -146,6 +182,12 @@ export const FL3_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Blocking ganglia silences both divisions, leaving the SA node at its intrinsic rate of about 100/min. Since the resting rate (about 70/min) is below the intrinsic rate, parasympathetic slowing must predominate at rest, so removing both inputs raises the rate. The node fires spontaneously without any nerve input, so the rate does not approach zero. The two divisions are not balanced at rest, so the rate does not stay at 70/min. Adrenal chromaffin cells are driven through ganglionic-type nicotinic receptors, so hexamethonium reduces rather than increases epinephrine release.',
+        optionExplanations: [
+          'The SA node fires spontaneously at about 100/min without any nerve input, as the denervated-node example shows. It does not need sympathetic input to fire, so the rate cannot approach zero.',
+          'The two divisions are not balanced at rest. The resting rate (70/min) is below the intrinsic rate (100/min), so parasympathetic slowing predominates; removing both inputs cannot leave the rate unchanged.',
+          'Blocking all ganglia silences both divisions, leaving the SA node at its intrinsic rate of about 100/min. Because the resting rate of 70/min is below that, vagal tone must dominate at rest, so removing it raises the rate.',
+          'Adrenal chromaffin cells are driven through ganglionic-type nicotinic receptors on preganglionic sympathetic fibers, so hexamethonium reduces rather than increases epinephrine release. The rate would not exceed the intrinsic 100/min.',
+        ],
         skill: '3A autonomic tone',
       },
       {
@@ -159,6 +201,12 @@ export const FL3_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Phenylephrine activates $\\alpha_1$ receptors on the radial dilator muscle, widening the pupil while leaving the parasympathetically controlled ciliary muscle free to focus. Atropine does widen the pupil, but it also blocks the muscarinic receptors of the ciliary muscle, so near focus is lost. The pupillary sphincter is controlled through muscarinic, not β, receptors. Hexamethonium blocks all parasympathetic ganglionic transmission, including the pathway to the ciliary muscle, so it too would impair near vision.',
+        optionExplanations: [
+          'Atropine does widen the pupil by blocking the sphincter’s muscarinic receptors, but it also blocks the muscarinic receptors of the ciliary muscle, so the patient loses the ability to focus on near objects.',
+          'The pupillary sphincter is controlled through muscarinic receptors, not β receptors. Propranolol would have no effect on pupil size.',
+          'Hexamethonium blocks all autonomic ganglia, including the parasympathetic pathway to the ciliary muscle, so near vision would be lost. It is not selective for the pupil.',
+          'Phenylephrine activates $\\alpha_1$ receptors on the radial dilator muscle, widening the pupil. It does not touch the parasympathetically controlled ciliary muscle, so the patient can still focus on nearby print.',
+        ],
         skill: '3A autonomic pharmacology',
       },
       {
@@ -172,6 +220,12 @@ export const FL3_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Chromaffin cells are stimulated by ACh from preganglionic sympathetic fibers acting on nicotinic receptors, the same type found on postganglionic neurons, so a ganglionic nicotinic blocker prevents the release of epinephrine itself. Propranolol blocks β-receptor responses to epinephrine but does not reduce the amount secreted. Atropine blocks muscarinic, not nicotinic, receptors. Phenylephrine is an $\\alpha_1$ agonist and has no direct inhibitory action on chromaffin-cell secretion.',
+        optionExplanations: [
+          'Propranolol blocks β-receptor responses to epinephrine but does not reduce the amount secreted. Plasma epinephrine would still rise; only its effects would be blunted.',
+          'Chromaffin cells are stimulated by ACh from preganglionic sympathetic fibers acting on nicotinic receptors of the ganglionic type. Hexamethonium blocks those receptors and so prevents epinephrine release itself.',
+          'Atropine blocks muscarinic receptors, but chromaffin cells are driven through nicotinic receptors. Atropine would not interrupt the signal to the adrenal medulla.',
+          'Phenylephrine is an $\\alpha_1$ agonist with no direct inhibitory action on chromaffin-cell secretion. It does not act on the adrenal medulla’s input.',
+        ],
         skill: '3A adrenal medulla',
       },
     ],
@@ -202,6 +256,12 @@ export const FL3_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Without enzyme A no yellow intermediate is made, so enzyme B has no substrate and an *aa* plant is white whether it carries functional *B* or not; the *A* genotype therefore masks the *B* genotype. A *bb* plant with a functional *A* allele accumulates the yellow intermediate, so *bb* plants are yellow, not white, and gene *B* does not mask gene *A*. The genes are described as unlinked, and epistasis alone explains the altered ratio. Incomplete dominance would make heterozygotes intermediate, but the F1 heterozygotes are fully orange.',
+        optionExplanations: [
+          'A *bb* plant with a functional *A* allele accumulates the yellow intermediate, so *bb* plants are yellow, not white. Gene *B* does not mask gene *A*; the direction of epistasis is reversed here.',
+          'The genes are described as unlinked, and epistasis alone explains the altered ratio. Departure from 9:3:3:1 does not imply linkage when gene interaction is present.',
+          'Incomplete dominance would make heterozygotes intermediate in phenotype, but the F1 heterozygotes are fully orange. Three phenotypes arise from epistasis, not partial dominance.',
+          'Without enzyme A no yellow intermediate is made, so enzyme B has no substrate and an *aa* plant is white regardless of its *B* genotype. The *A* genotype masks the *B* genotype, which is epistasis of *A* over *B*.',
+        ],
         skill: '1C epistasis',
       },
       {
@@ -215,6 +275,12 @@ export const FL3_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Expected counts from 320 plants are 180, 60, and 80. The terms are $64/180 \\approx 0.36$, $4/60 \\approx 0.07$, and $36/80 = 0.45$, summing to about 0.9; with three classes there are 2 degrees of freedom, and 0.9 is far below 5.99, so the hypothesis is not rejected. Three degrees of freedom would apply to four classes, not three. A value of 104 comes from summing $(O - E)^2$ without dividing by E. A chi-square test can fail to reject a hypothesis but cannot prove it.',
+        optionExplanations: [
+          'Expected counts from 320 plants are 180, 60 and 80. The terms are $64/180 \\approx 0.36$, $4/60 \\approx 0.07$ and $36/80 = 0.45$, summing to about 0.9. Three classes give 2 degrees of freedom; 0.9 is far below 5.99, so the hypothesis is not rejected.',
+          'The chi-square value is right, but degrees of freedom equal the number of classes minus one. Three phenotypic classes give 2 degrees of freedom, not 3.',
+          'A value near 104 comes from summing $(O - E)^2$ (64 + 4 + 36) without dividing each term by E. The correct statistic is about 0.9.',
+          'The statistic and degrees of freedom are right, but the passage states a chi-square test can only fail to reject a hypothesis; it cannot prove one, because other models might fit equally well.',
+        ],
         skill: '1C chi-square analysis',
       },
       {
@@ -228,6 +294,12 @@ export const FL3_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'With independent assortment the *AaBb* F1 makes *AB*, *Ab*, *aB*, and *ab* gametes in equal numbers; each combines with an *ab* gamete from the tester to give *AaBb* (orange), *Aabb* (yellow), *aaBb* (white), and *aabb* (white), a 1:1:2 ratio that matches 47:51:102. Two gamete types would give no yellow class, which contradicts the 51 yellow plants. The *aabb* white parent can make only *ab* gametes. Only one of the four genotypes is orange, not three.',
+        optionExplanations: [
+          'Two gamete types would give no yellow class at all, which contradicts the 51 yellow plants observed. The F1 is *AaBb* with independent assortment and makes four gamete types.',
+          'The *aabb* white parent is homozygous at both loci and can make only *ab* gametes. The variety in the progeny comes from the F1, not the tester.',
+          'With independent assortment the *AaBb* F1 makes *AB*, *Ab*, *aB* and *ab* gametes equally. Combined with *ab*, these give *AaBb* (orange), *Aabb* (yellow), *aaBb* (white) and *aabb* (white), a 1:1:2 ratio matching 47:51:102.',
+          'Only one of the four genotypes (*AaBb*) is orange. The observed 47 orange out of 200 is one quarter, not three quarters.',
+        ],
         skill: '1C test cross',
       },
       {
@@ -241,6 +313,12 @@ export const FL3_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Only plants with at least one functional allele of both genes (*A_B_*, 9/16) make the final pigment; *A_bb* (3/16) now accumulates a colorless intermediate and joins *aaB_* (3/16) and *aabb* (1/16) in the white class, giving 9:7. A 15:1 ratio would arise if either gene alone could complete pigment synthesis (duplicate genes). A 3:1 ratio describes a single segregating gene. A 13:3 ratio arises when a dominant allele of one gene suppresses the other, which is not the case in a linear pathway.',
+        optionExplanations: [
+          'A 15:1 ratio arises when either gene alone can complete pigment synthesis (duplicate gene action). Here both enzymes are needed in sequence, so a single functional gene is not enough.',
+          'Only *A_B_* plants (9/16) make the final pigment. With a colorless intermediate, *A_bb* (3/16) joins *aaB_* (3/16) and *aabb* (1/16) in the white class, giving 9 orange : 7 white.',
+          'A 3:1 ratio describes a single segregating gene. Two unlinked genes, both required, cannot collapse to a monohybrid ratio.',
+          'A 13:3 ratio arises when a dominant allele of one gene suppresses the other. In a linear two-step pathway neither gene suppresses the other; both are simply required.',
+        ],
         skill: '1C epistatic ratios',
       },
       {
@@ -254,6 +332,12 @@ export const FL3_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'White F2 plants are *aa*, but three-quarters of them (*aaBB* and *aaBb*) still carry a functional *B* allele; their extracts contain enzyme B and should convert supplied yellow intermediate to orange pigment, so a complete failure across all white plants would contradict the model. Orange plants (*A_B_*) make enzyme B, so conversion is expected. Some white extracts converting is exactly what the model predicts. Yellow plants are *A_bb* and lack enzyme B, so their failure to convert is expected.',
+        optionExplanations: [
+          'Orange plants are *A_B_* and make enzyme B, so their extracts should convert the yellow intermediate to orange pigment. This result is exactly what the model predicts.',
+          'Some white plants (*aaBB* and *aaBb*) carry a functional *B* allele and make enzyme B, so their extracts converting the intermediate is predicted by the model, not inconsistent with it.',
+          'Yellow plants are *A_bb* and lack enzyme B, so their extracts failing to convert the intermediate is expected. This supports the pathway.',
+          'White F2 plants are *aa*, but three quarters of them (*aaBB* and *aaBb*) still carry functional *B* and should make enzyme B. If every white extract failed to convert the intermediate, enzyme B would be absent where the model requires it.',
+        ],
         skill: '1C gene–enzyme relationships (research design)',
       },
     ],
@@ -281,6 +365,12 @@ export const FL3_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Axonal plus ends point toward the terminal, so dynein, a minus-end motor, carries cargo from the terminal back toward the cell body; when it stalls, that retrograde cargo is stranded where it was picked up, in the distal axon. Cargo moving toward the terminal is carried by plus-end-directed kinesins, which the drug does not inhibit. There is no reason for cargo of both directions to collect at the axon midpoint. Retrograde cargo cannot reach the region near the cell body if the motor that carries it there is inactive.',
+        optionExplanations: [
+          'Cargo headed for the terminal is carried toward plus ends by kinesins, which the drug does not inhibit. Anterograde transport would continue normally.',
+          'Axonal plus ends point toward the terminal, so dynein, a minus-end motor, carries cargo from the terminal back toward the cell body. When dynein stalls, that retrograde cargo is stranded where it was loaded, in the distal axon.',
+          'There is no reason for cargo of both directions to collect at the midpoint. Kinesin-driven anterograde transport continues, and stalled retrograde cargo stays where it was picked up, near the terminal.',
+          'Retrograde cargo cannot reach the region near the cell body if the motor that carries it there is inactive. It would be stranded at the distal end, not the proximal end.',
+        ],
         skill: '2A motor proteins',
       },
       {
@@ -294,6 +384,12 @@ export const FL3_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Skeletal muscle contraction depends on myosin II pulling on actin, not on axonemal dynein, so it would be unaffected. Airway cilia that cannot beat fail to clear mucus and bacteria, producing recurrent infections. Sperm flagella use the same axonemal dynein, so sperm would be immotile. Without the leftward ciliary flow in the embryo, left–right placement of organs is randomized, so some affected children have a reversed (right-sided) heart.',
+        optionExplanations: [
+          'Skeletal muscle contraction depends on myosin II pulling on actin filaments, not on axonemal dynein. A dynein-arm defect would leave muscle strength unaffected.',
+          'Airway cilia use axonemal dynein to beat. Without it, cilia cannot sweep mucus and trapped bacteria toward the pharynx, so recurrent airway infections are expected.',
+          'The sperm tail is a flagellum built on the same axoneme with the same dynein arms, so sperm would be immotile and the male would be infertile.',
+          'Motile cilia in the embryonic pit generate the leftward flow that establishes left–right asymmetry. Without functional dynein, organ placement is randomized, so a right-sided heart can occur.',
+        ],
         skill: '2A cilia and flagella',
       },
       {
@@ -307,6 +403,12 @@ export const FL3_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Chromosome separation is performed by the microtubule-based spindle, which cytochalasin does not affect, but cytokinesis requires the actin–myosin contractile ring, so treated cells complete mitosis and remain binucleate. Neutrophil crawling depends on actin polymerization at the leading edge, so migration also fails. Options in which chromosome separation fails attribute a microtubule function to actin, and normal migration ignores the actin-driven lamellipodium.',
+        optionExplanations: [
+          'Chromosome separation is performed by the microtubule-based spindle, which cytochalasin does not affect. Neutrophil migration, however, requires actin polymerization at the leading edge and would fail, so normal migration is also wrong.',
+          'Chromosome separation depends on microtubules, not actin, so it would proceed. Attributing spindle function to actin is the error here, even though the migration prediction is correct.',
+          'The microtubule spindle separates chromosomes normally, but cytokinesis requires the actin–myosin contractile ring, so cells remain binucleate. Neutrophil crawling depends on actin polymerization at the lamellipodium, so migration fails.',
+          'Chromosome separation without division is correct, but neutrophils crawl by actin polymerization at the leading edge. Blocking actin assembly would prevent lamellipodium formation and migration.',
+        ],
         skill: '2A actin cytoskeleton',
       },
       {
@@ -320,6 +422,12 @@ export const FL3_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Keratins are the intermediate filaments of epithelia, whose role is mechanical: without a normal keratin network, basal epidermal cells rupture when the skin is rubbed, and the layers separate into blisters. Mitotic spindles are made of microtubules, not keratin. Intermediate filaments do not serve as tracks for motor proteins, so vesicle transport would not depend on them. Lamellipodia are driven by actin polymerization.',
+        optionExplanations: [
+          'Mitotic spindles are made of microtubules, not keratin. A keratin defect would not prevent cell division.',
+          'Intermediate filaments do not serve as tracks for motor proteins, as the passage states. Vesicle transport uses microtubules and actin, so secretion would not depend on keratin.',
+          'Lamellipodia are driven by actin polymerization, not intermediate filaments. Cell crawling into wounds would not require keratin.',
+          'Keratins are the intermediate filaments of epithelia, whose role is mechanical. Without a normal keratin network anchored at cell junctions, basal epidermal cells rupture under friction and the layers separate into blisters.',
+        ],
         skill: '2A intermediate filaments',
       },
     ],
@@ -350,6 +458,12 @@ export const FL3_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The $\\text{FEV}_1$/FVC ratios are 3.6/4.5 = 0.80 for Subject 1, 2.4/2.7 ≈ 0.89 for Subject 2, 1.4/3.6 ≈ 0.39 for Subject 3, 2.5/4.2 ≈ 0.60 for Subject 4 before the bronchodilator, and 3.4/4.5 ≈ 0.76 afterward. Only Subject 3 and pretreatment Subject 4 fall below 0.70. Subject 2 has a low absolute $\\text{FEV}_1$, but the ratio is high, the restrictive pattern. Listing Subject 3 alone overlooks the pretreatment asthma measurement.',
+        optionExplanations: [
+          'Subject 3 (1.4/3.6 ≈ 0.39) does meet the criterion, but this overlooks Subject 4 before treatment, whose ratio of 2.5/4.2 ≈ 0.60 is also below 0.70.',
+          'Subject 2 has a low absolute $\\text{FEV}_1$, but the ratio 2.4/2.7 ≈ 0.89 is high, the restrictive pattern. Subject 2 does not meet the obstruction criterion.',
+          'The $\\text{FEV}_1$/FVC ratios are 0.80 (Subject 1), 0.89 (Subject 2), 0.39 (Subject 3), 0.60 (Subject 4 before) and 0.76 (Subject 4 after). Only Subject 3 and pretreatment Subject 4 fall below 0.70.',
+          'Including Subject 2 is wrong: fibrosis reduces FVC and $\\text{FEV}_1$ together, so the ratio stays high (0.89). Restriction is not obstruction by the passage’s criterion.',
+        ],
         skill: '3B spirometry (data interpretation)',
       },
       {
@@ -363,6 +477,12 @@ export const FL3_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Destruction of alveolar walls and elastic fibers makes the lungs easier to inflate (higher compliance) and removes elastic recoil, so the outward pull on cartilage-free airways is lost and they collapse during forced exhalation, trapping air; this accounts for the high RV and TLC in Table 1. Stiffer lungs with stronger recoil describe fibrosis, whose recoil holds airways open. Rapid emptying would raise, not lower, the $\\text{FEV}_1$/FVC ratio. Impaired chest-wall expansion is a restrictive feature and would reduce, not increase, TLC.',
+        optionExplanations: [
+          'Destruction of alveolar walls and elastic fibers makes the lungs easier to inflate (higher compliance) and removes recoil, so the outward pull on cartilage-free airways is lost and they collapse during forced exhalation, trapping air. This explains the high RV and TLC.',
+          'Stiffer lungs with stronger recoil describe fibrosis, not emphysema. Strong recoil holds small airways open, so they would not collapse early.',
+          'Higher compliance is right, but emphysema weakens recoil, it does not strengthen it. Rapid emptying would also raise the $\\text{FEV}_1$/FVC ratio, whereas Subject 3’s ratio is very low.',
+          'Impaired chest-wall expansion is a restrictive feature and would reduce TLC. Subject 3’s TLC of 7.5 L is the largest in the table, not reduced.',
+        ],
         skill: '3B lung compliance',
       },
       {
@@ -376,6 +496,12 @@ export const FL3_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Tidal volume is minute ventilation divided by frequency: 1.5 L for Subject 1 and 0.75 L for Subject 2. Alveolar ventilation is (tidal volume − dead space) × frequency: (1.5 − 0.15) × 20 = 27 L/min versus (0.75 − 0.15) × 40 = 24 L/min, so Subject 2 is about 3 L/min lower because a larger fraction of each shallow breath stays in the conducting airways. Equal minute ventilation does not mean equal alveolar ventilation. A faster rate lowers alveolar ventilation when tidal volume falls in proportion. The 6 L/min figure is Subject 2’s dead-space ventilation (0.15 × 40), not the difference between subjects.',
+        optionExplanations: [
+          'Equal minute ventilation does not mean equal alveolar ventilation. Because dead space is fixed per breath, the subject taking more, smaller breaths wastes a larger fraction of each minute’s air.',
+          'Breathing faster lowers alveolar ventilation when tidal volume falls in proportion, because each breath still fills 0.15 L of dead space. Subject 2’s alveolar ventilation is lower, not higher.',
+          'The 6 L/min figure is Subject 2’s dead-space ventilation (0.15 × 40), not the difference between subjects. Subject 2 did not ventilate only dead space; most of each 0.75 L breath still reached the alveoli.',
+          'Tidal volume is minute ventilation divided by frequency: 1.5 L for Subject 1 and 0.75 L for Subject 2. Alveolar ventilation is (tidal volume − dead space) × frequency: (1.5 − 0.15) × 20 = 27 L/min versus (0.75 − 0.15) × 40 = 24 L/min.',
+        ],
         skill: '3B alveolar ventilation',
       },
       {
@@ -389,6 +515,12 @@ export const FL3_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Because the forced maneuver improves with practice, a second test could be better simply because it was repeated; showing no change after a sham inhaler under the same schedule rules out that alternative and isolates the drug’s effect in the same subject. A healthy subject’s response says nothing about why Subject 4 improved. A smaller response in emphysema supports a difference between diseases but does not exclude a practice effect in Subject 4. An unchanged TLC is irrelevant to whether the airflow change was caused by the drug.',
+        optionExplanations: [
+          'A healthy subject’s lack of response says nothing about why Subject 4 improved. It does not rule out the practice effect in Subject 4 that the passage warns about.',
+          'Because the forced maneuver improves with practice, a second test could be better simply because it was repeated. No change after a sham inhaler under the same schedule rules out that alternative and isolates the drug’s effect.',
+          'A smaller response in emphysema supports a difference between diseases but does not exclude a practice effect in Subject 4. It compares subjects rather than controlling for repetition.',
+          'An unchanged TLC is irrelevant to whether the airflow change was caused by the drug. TLC was already nearly unchanged (6.3 vs 6.1 L), and that does not address the practice-effect alternative.',
+        ],
         skill: '3B respiratory physiology (research design)',
       },
     ],
@@ -410,6 +542,12 @@ export const FL3_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'Pancreatic enzymes such as lipase have pH optima near neutrality; without bicarbonate to neutralize gastric acid, the duodenum stays acidic, lipase is inhibited, and fat is poorly digested. Secretin inhibits rather than stimulates gastric acid secretion. Pepsinogen is activated by gastric acid in the stomach, upstream of any pancreatic defect. Bile salts become less soluble and less effective at low pH, which would worsen, not improve, fat absorption.',
+    optionExplanations: [
+      'Secretin inhibits rather than stimulates gastric acid secretion. It does not act directly on parietal cells to increase acid output.',
+      'Pepsinogen is activated by gastric acid in the stomach, upstream of the pancreas. A defect in pancreatic bicarbonate secretion does not affect gastric protein digestion.',
+      'Pancreatic enzymes such as lipase have pH optima near neutrality. Without bicarbonate to neutralize gastric acid, the duodenum stays acidic, lipase is inhibited, and fat is poorly digested.',
+      'Bile salts become less soluble and less effective at low pH, which would worsen fat absorption, not improve it. An acidic duodenum impairs micelle formation.',
+    ],
     skill: '3B digestion',
   },
   {
@@ -426,6 +564,12 @@ export const FL3_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'The thick ascending limb pumps NaCl into the medullary interstitium without letting water follow, and this is the step that builds the countercurrent gradient; blocking it dissipates the gradient, so even ADH-opened aquaporins in the collecting duct have little osmotic driving force for water reabsorption. Aquaporin insertion is controlled by ADH, not by NaCl transport in the loop. The descending limb’s water permeability is not changed by the drug. Loop diuretics do not markedly raise GFR.',
+    optionExplanations: [
+      'The thick ascending limb pumps NaCl into the medullary interstitium without water, building the countercurrent gradient. Blocking it dissipates the gradient, so even ADH-opened aquaporins have little osmotic driving force for water reabsorption.',
+      'Aquaporin insertion in the collecting duct is controlled by ADH, not by NaCl transport in the loop. With high ADH the channels are present; the problem is the missing osmotic gradient.',
+      'The descending limb’s water permeability is a fixed property of its epithelium and is not changed by the drug. Filtrate still concentrates in the descending limb, though less, because the interstitium is less hypertonic.',
+      'Loop diuretics do not markedly raise GFR. Their effect is on tubular reabsorption, not on filtration.',
+    ],
     skill: '3B renal concentrating mechanism',
   },
   {
@@ -442,6 +586,12 @@ export const FL3_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'Light isomerizes retinal in rhodopsin, which activates transducin and then a phosphodiesterase that hydrolyzes cGMP; the falling cGMP closes cGMP-gated cation channels, the rod hyperpolarizes, and its tonic release of glutamate decreases. Rising cGMP with open channels describes the rod in darkness. Closing cation channels removes an inward current and cannot depolarize the cell. cGMP must fall, not rise, for the channels to close.',
+    optionExplanations: [
+      'Rising cGMP with open channels and glutamate release describes the rod in darkness, not after light absorption. Light reverses every step of this sequence.',
+      'Closing cation channels removes an inward current and cannot depolarize the cell. The falling cGMP is right, but the membrane hyperpolarizes and glutamate release decreases.',
+      'The channel closure, hyperpolarization and reduced glutamate are right, but cGMP must fall, not rise, for the cGMP-gated channels to close. Light activates a phosphodiesterase that hydrolyzes cGMP.',
+      'Light isomerizes retinal, activating transducin and a phosphodiesterase that hydrolyzes cGMP. Falling cGMP closes cGMP-gated cation channels, the rod hyperpolarizes, and its tonic glutamate release decreases.',
+    ],
     skill: '3A phototransduction',
   },
   {
@@ -458,6 +608,12 @@ export const FL3_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'Mitochondria are transmitted through the egg cytoplasm, so affected mothers can pass the trait to sons and daughters, while affected fathers do not transmit it. Transmission from fathers to all daughters and no sons indicates X-linked dominant inheritance. Affected males with unaffected carrier mothers indicate X-linked recessive inheritance. A one-half risk from either parent indicates autosomal dominant inheritance.',
+    optionExplanations: [
+      'Transmission from affected fathers to all daughters and no sons is the signature of X-linked dominant inheritance, not mitochondrial. Mitochondria are not transmitted by fathers at all.',
+      'Mitochondria are transmitted through the egg cytoplasm, so affected mothers can pass the trait to children of both sexes, while affected fathers transmit it to none. This maternal-only pattern is diagnostic.',
+      'Affected males inheriting through unaffected carrier mothers is X-linked recessive inheritance. Mitochondrial traits affect both sexes and are passed by affected mothers.',
+      'A one-half risk to children of either sex from an affected parent of either sex is autosomal dominant inheritance. Mitochondrial inheritance is never transmitted by fathers.',
+    ],
     skill: '1C mitochondrial inheritance',
   },
   {
@@ -474,6 +630,12 @@ export const FL3_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'Allolactose normally binds the repressor and releases it from the operator; a repressor that cannot bind the inducer stays on the operator even when lactose is present, so the operon is uninducible. Deleting the repressor or altering the operator so the repressor cannot bind both cause constitutive expression. Keeping adenylyl cyclase active raises cAMP and promotes CAP-dependent transcription, which would, if anything, increase expression.',
+    optionExplanations: [
+      'Allolactose normally binds the repressor and releases it from the operator. A repressor that cannot bind the inducer stays bound to the operator even when lactose is present, so the operon is uninducible.',
+      'Deleting the repressor removes all negative control, so the operon is expressed constitutively. Expression would occur, not be prevented.',
+      'An operator that cannot bind the repressor also removes negative control, producing constitutive expression. The structural genes would still be transcribed.',
+      'Keeping adenylyl cyclase active raises cAMP and promotes CAP-dependent transcription. If anything, this would increase expression, not prevent it.',
+    ],
     skill: '1B operon regulation',
   },
   {
@@ -490,6 +652,12 @@ export const FL3_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'Proline’s side chain loops back to bond its own backbone nitrogen, so the amide has no N–H to form the i → i+4 hydrogen bond of the helix, and the ring fixes the backbone angle in a way that kinks the chain; both features suit turns. Proline’s side chain is a nonpolar hydrocarbon and is uncharged. Disulfide bonds form between cysteines, not prolines. Excess flexibility from a tiny side chain describes glycine, the other common helix breaker.',
+    optionExplanations: [
+      'Proline’s side chain is a nonpolar hydrocarbon ring and is uncharged at physiological pH. Charge repulsion plays no role in its distribution.',
+      'Disulfide bonds form between the thiol groups of two cysteine residues, not proline. Proline contains no sulfur and cannot form such a bond.',
+      'Proline’s side chain loops back to bond its own backbone nitrogen, so the amide has no N–H to form the i → i+4 hydrogen bond of the helix. The ring also fixes the backbone angle, kinking the chain in a way suited to turns.',
+      'Excess flexibility from a tiny side chain describes glycine, the other common helix breaker. Proline is rigid, not flexible, because of its ring.',
+    ],
     skill: '1A protein secondary structure',
   },
   {
@@ -506,6 +674,12 @@ export const FL3_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'Glucose in prolonged starvation must come from gluconeogenesis, whose main carbon source is amino acids from muscle protein; when the brain switches largely to ketone bodies, its glucose demand falls and body protein is spared. Ketone bodies are made by the liver from fatty acids that it is actively oxidizing, and the brain uses the ketone bodies, not the fatty acids themselves. Ketone bodies are converted to acetyl-CoA in brain mitochondria rather than bypassing it. Ketone levels still rise during starvation, so their use by the brain does not outpace production.',
+    optionExplanations: [
+      'Ketone bodies are made by the liver from fatty acids it is actively oxidizing, and the brain uses the ketone bodies, not the fatty acids themselves. The liver has not lost the ability to use fatty acids.',
+      'Ketone bodies are converted to acetyl-CoA in brain mitochondria rather than bypassing it. They do not raise ATP yield per carbon.',
+      'Ketone levels still rise during starvation, so the brain’s use of them does not outpace production. Preventing ketoacidosis is not the benefit of the shift.',
+      'Glucose in prolonged starvation comes from gluconeogenesis, whose main carbon source is amino acids from muscle protein. When the brain switches largely to ketone bodies, its glucose demand falls and body protein is spared.',
+    ],
     skill: '1D ketone bodies',
   },
   {
@@ -522,6 +696,12 @@ export const FL3_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'During prophase I, homologous chromosomes pair (synapsis) and exchange segments between non-sister chromatids at chiasmata, creating recombinant chromatids. Sister chromatids are identical, so exchanges between them would not recombine alleles, and homologs are no longer paired in meiosis II. Homologs do not separate until anaphase I, after metaphase I. DNA replication does not exchange material between homologs.',
+    optionExplanations: [
+      'During prophase I, homologous chromosomes pair (synapsis) and exchange segments between non-sister chromatids at chiasmata, creating recombinant chromatids.',
+      'Sister chromatids are identical, so an exchange between them would not recombine alleles. Homologs are also no longer paired in meiosis II.',
+      'Homologs do not separate until anaphase I, after metaphase I. Crossing over occurs before this, while homologs are paired in prophase I.',
+      'DNA replication in S phase copies each chromosome but does not exchange material between homologs. Crossing over occurs after replication, during prophase I.',
+    ],
     skill: '2C meiosis',
   },
 ]

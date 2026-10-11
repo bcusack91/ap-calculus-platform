@@ -43,6 +43,13 @@ export interface MCATPassageQuestion {
   /** Why the key is right AND, for the best items, why the traps are wrong. */
   explanation: string
   /**
+   * One explanation per option, aligned to `options` (authored order): why the
+   * key is right, and why each other choice is wrong on its own content.
+   * Authored for the full-length forms (Oct 2026); review pages show each
+   * under its option, falling back to `explanation` when absent.
+   */
+  optionExplanations?: [string, string, string, string]
+  /**
    * Tag: a content category (e.g. "Amino acids") or a CARS reasoning skill
    * (e.g. "inference", "main-idea", "strengthen-weaken").
    */

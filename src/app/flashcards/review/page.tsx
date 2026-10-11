@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { useSession } from 'next-auth/react'
 import Link from 'next/link'
+import { Layers } from 'lucide-react'
 import StudyModeSwitcher from '@/components/StudyModeSwitcher'
 import FlashcardDailyLimits from '@/components/FlashcardDailyLimits'
 import { formatTimeUntil } from '@/lib/format-due-time'
@@ -281,6 +282,15 @@ export default function FlashcardReviewDashboard() {
             <div className="text-2xl mb-2">🎯</div>
             <h3 className="font-bold text-gray-900 mb-1">Continue Learning</h3>
             <p className="text-sm text-gray-600">Finish a lesson and its exit quiz to add that topic&apos;s cards</p>
+          </Link>
+
+          <Link
+            href="/flashcards/mine"
+            className="block p-6 bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 hover:border-accent-muted rounded-xl transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring md:col-span-2"
+          >
+            <Layers className="w-6 h-6 mb-2 text-accent" aria-hidden />
+            <h3 className="font-bold text-gray-900 dark:text-gray-100 mb-1">My flashcards</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400">Write your own cards — they&apos;re mixed into your review session</p>
           </Link>
         </div>
       </div>

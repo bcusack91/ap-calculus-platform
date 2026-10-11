@@ -41,6 +41,12 @@ export const FL4_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'In the linear region (2% to 5% strain) the control stress rises 12 MPa for each 1% of strain, so $E = 12\\ \\text{MPa}/0.01 = 1200\\ \\text{MPa} = 1.2$ GPa. The 0.92 GPa value divides the stress at 5% strain by the total strain from the origin, which folds the compliant toe region into the calculation. The 9.2 GPa and 12 GPa values result from treating a percentage as a tenth rather than a hundredth, applied to the secant and to the true slope respectively.',
+        optionExplanations: [
+          'This value divides the stress at 5% strain (46 MPa) by the full 5% strain measured from the origin. That secant includes the compliant toe region, where little stress produces strain, so it underestimates the modulus of the linear region.',
+          'Between 2% and 5% strain the control curve rises from 10 MPa to 46 MPa, a slope of 12 MPa per 1% of strain. Dividing 12 MPa by 0.01 gives 1200 MPa, which is 1.2 GPa.',
+          'This value comes from treating 1% as 0.1 rather than 0.01 when converting the percentage strain, and applying that error to the secant slope from the origin. It is a factor of ten too large for the material described.',
+          'This value applies the correct linear-region slope but converts the percentage strain by a tenth instead of a hundredth, giving 12 MPa divided by 0.001. Tendon modulus of roughly 12 GPa would be an order of magnitude too stiff relative to Figure 1.',
+        ],
         skill: '4A Young’s modulus from a stress–strain curve (Skill 4)',
       },
       {
@@ -49,6 +55,12 @@ export const FL4_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The stress is $\\sigma = F/A = 3200\\ \\text{N}/80\\ \\text{mm}^2 = 40$ N/mm², or 40 MPa, and the control curve reaches 40 MPa midway between 34 MPa at 4% and 46 MPa at 5%, at about 4.5% strain. The 3.3% value divides 40 MPa by the linear-region modulus as if Hooke’s law held from zero strain, ignoring the toe region. The 7.0% value reads the immobilized curve, not the control curve. The 1.1% value comes from converting 80 mm² to $8.0 \\times 10^{-4}$ m², which gives a stress ten times too small.',
+        optionExplanations: [
+          'This value results from converting 80 mm² to $8.0 \\times 10^{-4}$ m² instead of $8.0 \\times 10^{-5}$ m², which makes the computed stress ten times too small (4 MPa) and lands in the toe region of the curve.',
+          'This value divides the 40 MPa stress by the linear-region modulus of 1.2 GPa, as though Hooke’s law held from zero strain. It ignores the toe region, where the first 2% of strain develops only 10 MPa of stress.',
+          'The stress is $F/A = 3200\\ \\text{N}/80\\ \\text{mm}^2 = 40$ MPa. On the control curve, 40 MPa lies midway between 34 MPa at 4% and 46 MPa at 5%, so the strain is about 4.5%.',
+          'This value reads 40 MPa off the immobilized curve, where it falls between 39 MPa at 7% and the failure region. The question specifies the control tendons, whose curve reaches 40 MPa at a much smaller strain.',
+        ],
         skill: '4A stress and strain (Skill 2)',
       },
       {
@@ -62,6 +74,12 @@ export const FL4_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Stress depends only on force and cross-sectional area, which are unchanged, and the strain produced by a given stress is set by the material, so strain is also unchanged; because strain is elongation divided by original length, doubling the length doubles the elongation. Halving the strain would require a stiffer material, not a longer sample. Doubling the stress would require doubling the force or halving the area. Length does not enter the definition of stress, so the stress cannot be halved by lengthening the specimen.',
+        optionExplanations: [
+          'Stress depends only on force and area, both unchanged, and the material sets the strain for a given stress, so strain is also unchanged. Since strain is elongation divided by original length, the doubled length produces twice the elongation.',
+          'Halving the strain would require a stiffer material, not a longer specimen; Young’s modulus describes the material, not the sample. The same elongation in a specimen twice as long would in fact mean half the strain, which the same stress cannot produce.',
+          'Doubling the stress would require doubling the force or halving the cross-sectional area, and neither changes here. This confuses the length of the specimen, which does not enter $\\sigma = F/A$, with a factor that scales stress.',
+          'Length does not appear in the definition of stress, so lengthening the specimen cannot halve the stress. The elongation and strain parts are partially right, but the stress claim misreads how force and area, not length, determine stress.',
+        ],
         skill: '4A Hooke’s law and elastic properties (Skill 1)',
       },
       {
@@ -75,6 +93,12 @@ export const FL4_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Force was divided by each specimen’s own measured area, so a thinner tendon made of the same tissue would carry proportionally less force and produce the same stress at any strain; a lower stress–strain curve therefore reflects a change in the material. A thinner specimen does carry less force, but that difference is removed by the normalization, so it cannot account for Figure 1. Strain is set by the elongation imposed by the machine and the gauge length, not by the area. Stretching at the same rate is a sound procedural control, but it does not address the reviewer’s concern about area.',
+        optionExplanations: [
+          'A thinner specimen does carry less force at a given elongation, but the investigators divided each force by that specimen’s own area. The normalization removes exactly this effect, so a lower stress–strain curve cannot be explained by area alone.',
+          'Strain is elongation divided by gauge length and is set by the machine’s imposed stretch and the 50 mm gauge length, not by cross-sectional area. A thinner specimen is not stretched through a greater strain at a given elongation.',
+          'Stretching every specimen at the same rate is a legitimate procedural control, but it has nothing to do with the reviewer’s point about cross-sectional area. It does not explain why area differences cannot account for the lower curve.',
+          'Stress was computed from each specimen’s own measured cross-sectional area, so a thinner tendon made of identical tissue would carry proportionally less force and produce the same stress at any strain. A lower curve therefore reflects a change in the material itself.',
+        ],
         skill: '4A normalization in experimental design (Skill 3)',
       },
       {
@@ -83,6 +107,12 @@ export const FL4_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'From Figure 1, the stress rises from 10 MPa to 34 MPa, so the force rises from 200 N to 680 N, while the specimen lengthens by 2% of 50 mm, or 1.0 mm. Because the curve is linear over this interval, the energy is the average force times the elongation: $(440\\ \\text{N})(1.0 \\times 10^{-3}\\ \\text{m}) = 0.44$ J. The 0.24 J value counts only the triangular area above 200 N and omits the force already present at 2% strain. The 0.68 J value multiplies the final force by the elongation, as if that force acted throughout. The 0.88 J value adds the initial and final forces without dividing by two.',
+        optionExplanations: [
+          'This value counts only the triangular area above the 200 N force already present at 2% strain: half of (680 − 200) N times 1.0 mm. The energy added also includes the rectangular area from the 200 N baseline, which this omits.',
+          'Stress rises from 10 MPa to 34 MPa, so with a 20 mm² area the force rises from 200 N to 680 N while the specimen lengthens by 2% of 50 mm, or 1.0 mm. The curve is linear here, so energy is the average force, 440 N, times 0.0010 m, or 0.44 J.',
+          'This value multiplies the final force of 680 N by the 1.0 mm elongation, as if the full force acted throughout the stretch. Because force rises linearly over the interval, the area under the curve uses the average force, not the maximum.',
+          'This value adds the initial and final forces (200 N + 680 N = 880 N) and multiplies by the elongation without dividing by two. The trapezoidal area under a linear segment requires the average of the two forces.',
+        ],
         skill: '4A elastic potential energy (Skill 2)',
       },
     ],
@@ -112,6 +142,12 @@ export const FL4_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'By the first law, $\\Delta U = q + w$; in a rigid, sealed bomb the volume cannot change, so no pressure–volume work is done and the heat exchanged equals $\\Delta U$ rather than $\\Delta H$. The water outside is at constant pressure, but the reacting system inside the bomb is not, so the enthalpy change is not measured directly. Heat being absorbed by the assembly (not the water alone) says where the energy goes, not which state function it equals. Excess O₂ ensures complete combustion but has nothing to do with whether work is done.',
+        optionExplanations: [
+          'The surrounding water is at constant pressure, but the reacting system is the gas sealed inside the rigid bomb, which is not. Heat measured at constant pressure would equal enthalpy change; this bomb measures heat at constant volume instead.',
+          'Heat being absorbed by the water (and the bomb, stirrer and thermometer) describes where the energy goes, not which thermodynamic state function it equals. Complete capture of heat does not convert a constant-volume measurement into an enthalpy change.',
+          'Excess O₂ ensures complete combustion, which affects accuracy, but it has no bearing on whether the heat equals $\\Delta U$ or $\\Delta H$. That distinction depends on whether pressure–volume work can be done, not on reactant stoichiometry.',
+          'By the first law, $\\Delta U = q + w$. In a sealed rigid bomb the volume cannot change, so no pressure–volume work is done ($w = 0$), and the heat exchanged, $C_{cal}\\Delta T$, equals the internal energy change.',
+        ],
         skill: '5E heat at constant volume (Skill 1)',
       },
       {
@@ -120,6 +156,12 @@ export const FL4_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The benzoic acid run gives $C_{cal} = 26.4\\ \\text{kJ}/2.64\\ ^\\circ\\text{C} = 10.0$ kJ/°C, so the casein sample released $(10.0)(1.88) = 18.8$ kJ, or $18.8/0.800 = 23.5$ kJ/g, which is $23.5/4.18 \\approx 5.6$ kcal/g. The 23.5 kcal/g value omits the conversion from kilojoules. The 18.8 kcal/g value omits both the division by mass and the unit conversion. The 7.0 kcal/g value divides by the 0.800 g mass a second time.',
+        optionExplanations: [
+          'Benzoic acid gives $C_{cal} = 26.4\\ \\text{kJ}/2.64\\ ^\\circ\\text{C} = 10.0$ kJ/°C. Casein released $(10.0)(1.88) = 18.8$ kJ from 0.800 g, or 23.5 kJ/g, and dividing by 4.18 kJ/kcal gives about 5.6 kcal/g.',
+          'This value takes the correct 5.6 kcal/g result and divides by the 0.800 g sample mass a second time. The mass division has already been performed when converting 18.8 kJ per sample into 23.5 kJ per gram.',
+          'This value is the total heat released by the 0.800 g sample in kilojoules, 18.8 kJ, reported with the wrong unit and without dividing by mass. Two steps, the per-gram normalization and the kJ-to-kcal conversion, are missing.',
+          'This value is the correct energy of combustion in kJ/g, 23.5, but labeled as kcal/g. Food energy is expressed in kilocalories, and one kcal equals 4.18 kJ, so the conversion reduces the number to about 5.6.',
+        ],
         skill: '5E calorimetry calculation (Skill 4)',
       },
       {
@@ -128,6 +170,12 @@ export const FL4_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'By Hess’s law, burning casein completely (23.5 kJ/g, from 18.8 kJ per 0.800 g) is equivalent to oxidizing it to CO₂, H₂O and urea and then burning the urea, so the body’s yield is the heat of combustion of casein minus that of 0.30 g of urea: urea releases $(10.0)(1.05) = 10.5$ kJ/g, and $23.5 - (0.30)(10.5) \\approx 20.4$ kJ. The 23.5 kJ value ignores the energy left in urea. The 13.0 kJ value subtracts the combustion energy of a full gram of urea instead of 0.30 g. The 3.2 kJ value is the energy retained in the urea, not the energy released.',
+        optionExplanations: [
+          'This value is the energy that remains locked in 0.30 g of urea, $(0.30)(10.5) \\approx 3.2$ kJ. It is the quantity to subtract from the combustion energy, not the energy the body actually obtains from the casein.',
+          'This value subtracts the combustion energy of a full gram of urea (10.5 kJ) from 23.5 kJ. The question states that only 0.30 g of urea is formed per gram of casein, so the subtraction should be $0.30 \\times 10.5$ kJ.',
+          'Hess’s law makes complete combustion of casein (23.5 kJ/g) equal to oxidation to urea plus combustion of that urea. Urea releases $(10.0)(1.05) = 10.5$ kJ/g, so the body obtains $23.5 - (0.30)(10.5) \\approx 20.4$ kJ.',
+          'This value is the full heat of combustion of casein, 23.5 kJ/g. The passage states the body does not oxidize nitrogen to N₂ and that urea can still burn, so the energy left in urea must be subtracted from this figure.',
+        ],
         skill: '5E Hess’s law (Skill 2)',
       },
       {
@@ -136,6 +184,12 @@ export const FL4_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'From Table 1, sucrose releases 16.5 kJ/g, olive oil releases $19.5/0.500 = 39.0$ kJ/g and the snack mix releases 21.0 kJ/g. For a fat fraction $x$, $16.5(1 - x) + 39.0x = 21.0$, so $22.5x = 4.5$ and $x = 0.20$. The 80% value is the carbohydrate fraction. The 54% value attributes all of the snack’s energy to fat ($21.0/39.0$). The 12% value attributes only the energy in excess of sucrose to fat ($4.5/39.0$), ignoring that each gram of fat also displaces a gram of carbohydrate.',
+        optionExplanations: [
+          'This value attributes only the energy exceeding sucrose, 4.5 kJ/g, to fat ($4.5/39.0$). It forgets that each gram of fat replaces a gram of carbohydrate, so the net gain per gram of fat is $39.0 - 16.5 = 22.5$ kJ, not 39.0.',
+          'Sucrose releases 16.5 kJ/g, olive oil $19.5/0.500 = 39.0$ kJ/g, and the snack mix 21.0 kJ/g. With fat fraction $x$, $16.5(1 - x) + 39.0x = 21.0$, so $22.5x = 4.5$ and $x = 0.20$, or 20% fat.',
+          'This value divides the snack’s total energy by that of fat ($21.0/39.0$), as if the snack were made only of fat and some inert filler. The label lists carbohydrate as the other energy-yielding ingredient, which must be accounted for.',
+          'This value is the carbohydrate fraction, $1 - 0.20 = 0.80$. It correctly solves the mixing equation but reports the complement of what the question asks, which is the percentage of fat by mass.',
+        ],
         skill: '5E energy content of mixtures (Skill 2)',
       },
       {
@@ -149,6 +203,12 @@ export const FL4_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Adding water raises the true heat capacity of the assembly, so a given amount of heat produces a smaller $\\Delta T$; multiplying that smaller $\\Delta T$ by the old, too-small $C_{cal}$ underestimates the heat released. The calibration accounts only for the water present when benzoic acid was burned, which is why the passage requires the same mass of water in every run. The energy released does depend only on the sample, but the calculated value depends on the calibration being valid. More water absorbs the same total heat spread over more mass; it does not create additional heat, so the results cannot be too high.',
+        optionExplanations: [
+          'More water does not create additional heat; the same total heat is spread over a larger mass, giving a smaller temperature rise. Multiplying a smaller $\\Delta T$ by the unchanged $C_{cal}$ produces an underestimate, not an overestimate.',
+          'The calibration accounts only for the mass of water present during the benzoic acid run. The passage specifies that samples must be burned with the same mass of water precisely because the calibration does not adjust for a different amount.',
+          'Added water raises the true heat capacity of the assembly, so a given heat produces a smaller $\\Delta T$. Multiplying that smaller $\\Delta T$ by the old, too-small $C_{cal}$ underestimates the heat released by each food sample.',
+          'The energy a sample actually releases does depend only on the sample, but the calculated value depends on the calibration being valid for the conditions of the run. A changed water mass invalidates $C_{cal}$ and distorts the computed energies.',
+        ],
         skill: '5E calibration and systematic error (Skill 3)',
       },
     ],
@@ -171,6 +231,12 @@ export const FL4_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The reaction is the sum of creatine phosphate hydrolysis (−43.1 kJ/mol) and the reverse of ATP hydrolysis (+30.5 kJ/mol), so $\\Delta G^{\\circ\\prime} = -43.1 + 30.5 = -12.6$ kJ/mol. The −73.6 kJ/mol value adds the two hydrolysis values without reversing the ATP step. The −43.1 kJ/mol value is the hydrolysis of creatine phosphate alone and ignores the energy captured in ATP. The +12.6 kJ/mol value describes the reverse reaction, phosphorylation of creatine by ATP.',
+        optionExplanations: [
+          'This value adds the hydrolysis free energies of creatine phosphate (−43.1) and ATP (−30.5) directly. In the reaction written, ATP is formed rather than hydrolyzed, so the ATP step must be reversed to +30.5 kJ/mol before summing.',
+          'This value is the standard free energy of hydrolysis of creatine phosphate alone. It ignores that part of that energy is captured in forming the phosphoanhydride bond of ATP, which costs +30.5 kJ/mol under standard conditions.',
+          'The reaction is the sum of creatine phosphate hydrolysis (−43.1 kJ/mol) and the reverse of ATP hydrolysis (+30.5 kJ/mol). Adding these gives $-43.1 + 30.5 = -12.6$ kJ/mol, so phosphoryl transfer to ADP is favorable.',
+          'This value has the correct magnitude but the wrong sign; it describes the reverse reaction, phosphorylation of creatine by ATP. Creatine phosphate has the more negative hydrolysis value, so it donates its phosphoryl group to ADP spontaneously.',
+        ],
         skill: '5E coupled reactions and additivity of ΔG (Skill 2)',
       },
       {
@@ -179,6 +245,12 @@ export const FL4_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The reaction quotient is $Q = [\\text{ADP}][\\text{P}_i]/[\\text{ATP}] = (5 \\times 10^{-5})(1 \\times 10^{-3})/(5 \\times 10^{-3}) = 10^{-5}$, so $\\Delta G = -30.5 + (5.9)(-5) \\approx -60$ kJ/mol. The −42 kJ/mol value omits Pᵢ from the quotient, which makes $Q = 10^{-2}$. The −30.5 kJ/mol value is the standard value, which applies only when all species are at 1 M. The −1 kJ/mol value adds the concentration term with the wrong sign.',
+        optionExplanations: [
+          '$Q = [\\text{ADP}][\\text{P}_i]/[\\text{ATP}] = (5 \\times 10^{-5})(1 \\times 10^{-3})/(5 \\times 10^{-3}) = 10^{-5}$. Each tenfold decrease in $Q$ lowers $\\Delta G$ by 5.9 kJ/mol, so $\\Delta G \\approx -30.5 - 5(5.9) \\approx -60$ kJ/mol.',
+          'This value results from leaving Pᵢ out of the reaction quotient, giving $Q = [\\text{ADP}]/[\\text{ATP}] = 10^{-2}$ and only two tenfold factors, $-30.5 - 2(5.9) \\approx -42$ kJ/mol. Pᵢ is a product and belongs in $Q$.',
+          'This is the standard free energy change, which applies only when ATP, ADP and Pᵢ are all at 1 M. The passage emphasizes that cellular concentrations are far from standard, so the actual $\\Delta G$ differs substantially.',
+          'This value adds the concentration term with the wrong sign, $-30.5 + 29.5 \\approx -1$ kJ/mol. Because $Q$ is much less than 1, $RT\\ln Q$ is negative and makes $\\Delta G$ more negative, not closer to zero.',
+        ],
         skill: '5E ΔG under cellular conditions (Skill 2)',
       },
       {
@@ -192,6 +264,12 @@ export const FL4_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Thermodynamics determines whether a reaction can occur, not how fast; ATP is thermodynamically unstable in water but kinetically stable because the uncatalyzed reaction must pass through a high-energy transition state, which enzymes lower. A trace of ADP makes $Q$ tiny, so $\\Delta G$ remains strongly negative. ATP hydrolysis is exergonic on its own; coupling is needed to drive the other, unfavorable reaction, not the hydrolysis. Standard values are commonly tabulated at 25 °C, and a modest temperature change could not bring a −30.5 kJ/mol reaction near zero.',
+        optionExplanations: [
+          'A trace of ADP makes $Q$ extremely small, so $RT\\ln Q$ is strongly negative and $\\Delta G$ stays far below zero. ATP hydrolysis cannot become positive in free energy from the small ADP accumulation in a dilute solution.',
+          'ATP hydrolysis is exergonic on its own, with $\\Delta G^{\\circ\\prime}$ of about −30.5 kJ/mol. Coupling is used to drive the other, unfavorable reaction forward; the hydrolysis itself needs no help thermodynamically. This reverses the roles of the two coupled reactions.',
+          'Standard free energies are commonly tabulated at 25 °C, and a 12 °C temperature change could not move a −30.5 kJ/mol reaction near zero. The slow rate is a kinetic phenomenon, not a thermodynamic one.',
+          'Thermodynamics tells whether a reaction can occur, not how fast. ATP is thermodynamically unstable but kinetically stable in water because the uncatalyzed hydrolysis must cross a high-energy transition state; enzymes lower that barrier.',
+        ],
         skill: '5E thermodynamics versus kinetics (Skill 1)',
       },
       {
@@ -205,6 +283,12 @@ export const FL4_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Removing B keeps the ratio [B]/[A] far below $K\'_{eq}$, so $RT\\ln Q$ becomes negative enough to outweigh the positive $\\Delta G^{\\circ\\prime}$; many unfavorable metabolic steps are pulled forward by a strongly exergonic step that follows. Raising [B] relative to [A] increases $Q$ and makes $\\Delta G$ more positive. A catalyst speeds approach to equilibrium in both directions but does not change $\\Delta G$. Heat cannot be converted into chemical work at constant temperature in a cell; free energy must be transferred through a shared intermediate.',
+        optionExplanations: [
+          'Raising [B] relative to [A] increases $Q$, making $RT\\ln Q$ more positive and $\\Delta G$ even less favorable than the already positive standard value. This moves the reaction in the wrong direction.',
+          'An enzyme lowers the activation energy and speeds approach to equilibrium in both directions, but it cannot change $\\Delta G$ or shift the equilibrium position. With a positive $\\Delta G^{\\circ\\prime}$ and no change in concentrations, net conversion remains unfavorable.',
+          'Continuously removing B keeps [B]/[A] far below $K\'_{eq}$, so $RT\\ln Q$ becomes negative enough to outweigh the +20 kJ/mol standard value. Many unfavorable metabolic steps are pulled forward by a strongly exergonic reaction downstream.',
+          'Heat released into a cell at constant temperature cannot be converted into chemical work. The passage states that an enzyme that merely hydrolyzed ATP nearby would release heat and phosphorylate nothing; free energy transfer requires a shared intermediate.',
+        ],
         skill: '5E mass action and reaction direction (Skill 1)',
       },
     ],
@@ -227,6 +311,12 @@ export const FL4_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Setting $qE = qvB$ and $\\Delta V = Ed$ gives $v = \\Delta V/(Bd) = (24 \\times 10^{-6}\\ \\text{V})/[(0.020\\ \\text{T})(4.0 \\times 10^{-3}\\ \\text{m})] = 0.30$ m/s. The 0.60 m/s value uses the radius of the vessel rather than its diameter. The 0.030 m/s value results from reading the field as 0.20 T, and the 3.0 m/s value from reading the voltage as 240 µV; each is a power-of-ten error.',
+        optionExplanations: [
+          'This value results from reading the magnetic field as 0.20 T instead of 0.020 T, which divides the result by ten. With $v = \\Delta V/(Bd)$, a tenfold larger $B$ yields 0.030 m/s, an unrealistically slow arterial flow.',
+          'At steady state $qE = qvB$ and $\\Delta V = Ed$, so $v = \\Delta V/(Bd) = (24 \\times 10^{-6})/[(0.020)(4.0 \\times 10^{-3})] = 0.30$ m/s, a typical arterial velocity.',
+          'This value uses the vessel’s radius (2.0 mm) rather than its inner diameter (4.0 mm) for $d$. The passage defines $\\Delta V = Ed$ with $d$ as the inner diameter, the full separation between the electrodes.',
+          'This value corresponds to reading the voltage as 240 µV rather than 24 µV, a power-of-ten error. A flow velocity of 3.0 m/s would be far outside the physiological range for an artery.',
+        ],
         skill: '4C magnetic force and the flowmeter (Skill 2)',
       },
       {
@@ -240,6 +330,12 @@ export const FL4_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The magnetic force is proportional to $\\sin\\theta$, and when the velocity is parallel to the field, $\\theta = 0$, so no ions are pushed toward either wall and no voltage develops. Moving along field lines is precisely the orientation that eliminates the force, so it cannot double the signal. The speed and field strength alone do not determine the force; the angle between them matters. Reversing the voltage would require reversing the flow or the field, not aligning them.',
+        optionExplanations: [
+          'The magnetic force magnitude is $qvB\\sin\\theta$. With the field parallel to the velocity, $\\theta = 0$ and $\\sin\\theta = 0$, so no force separates the ions, no charge accumulates, and no voltage develops between the electrodes.',
+          'Motion along field lines is precisely the orientation in which the magnetic force vanishes, so the signal would disappear rather than double. Doubling would require increasing $v$, $B$ or $d$, not realigning the field with the flow.',
+          'Speed and field strength alone do not determine the magnetic force; the angle between velocity and field enters through $\\sin\\theta$. Changing that angle from 90° to 0° eliminates the force even though $v$ and $B$ are unchanged.',
+          'Reversing the voltage polarity would require reversing the direction of flow or of the field so that the cross product points the other way. Aligning the field with the flow makes the cross product zero, not negative.',
+        ],
         skill: '4C force on a moving charge (Skill 1)',
       },
       {
@@ -253,6 +349,12 @@ export const FL4_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'As the conducting plate moves into a stronger field, the flux through it increases, inducing eddy currents whose magnetic fields, by Lenz’s law, oppose that change and therefore resist the motion; with no motion there is no change in flux and no induced current. Titanium is not magnetized, but it conducts, so it is not free of all magnetic force while moving. A steady attraction toward the strong field is characteristic of ferromagnetic materials. A force that aided the motion and grew with speed would violate Lenz’s law and energy conservation.',
+        optionExplanations: [
+          'Titanium is not ferromagnetic and is not magnetized, but it is an electrical conductor. Moving a conductor through a changing field induces eddy currents, which experience a magnetic force, so it is not free of all force while in motion.',
+          'A steady force toward the stronger field is characteristic of ferromagnetic materials, which become magnetized in a nonuniform field. The passage explicitly contrasts titanium with iron, nickel and steel on this point.',
+          'As the conducting plate moves into a stronger field, the flux through it increases and induces eddy currents. By Lenz’s law their fields oppose the change, resisting the motion. Once the patient stops, flux no longer changes and the force vanishes.',
+          'A force that aided the motion and grew with speed would violate Lenz’s law and energy conservation, since the plate would gain kinetic energy from nothing. Induced currents always oppose the change in flux that creates them.',
+        ],
         skill: '4C Lenz’s law (Skill 1)',
       },
       {
@@ -261,6 +363,12 @@ export const FL4_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The loop area is 200 cm² = 0.020 m², so the flux changes by $(0.020\\ \\text{T})(0.020\\ \\text{m}^2) = 4.0 \\times 10^{-4}$ Wb, and $\\mathcal{E} = 4.0 \\times 10^{-4}/(5.0 \\times 10^{-4}\\ \\text{s}) = 0.80$ V. The 0.080 V value converts 200 cm² to 0.0020 m², and the 0.0080 V value converts it to $2.0 \\times 10^{-4}$ m², as if there were 10⁶ cm² in a square meter. The 0.40 V value halves the change in field, as if the average field during the interval, rather than its change, determined the emf.',
+        optionExplanations: [
+          'This value converts 200 cm² to $2.0 \\times 10^{-4}$ m², as if a square meter contained 10⁶ cm². A square meter is 100 cm by 100 cm, or 10⁴ cm², so 200 cm² is 0.020 m².',
+          'This value converts 200 cm² to 0.0020 m², a factor of ten too small. The correct conversion divides by 10⁴, giving 0.020 m²; with the correct area the emf is ten times larger.',
+          'This value halves the change in field, using 10 mT instead of 20 mT, as if the average field during the interval rather than its total change determined the emf. Faraday’s law uses $\\Delta\\Phi/\\Delta t$, where $\\Delta\\Phi = A\\,\\Delta B$.',
+          'The loop area is 200 cm² = 0.020 m², so $\\Delta\\Phi = (0.020\\ \\text{T})(0.020\\ \\text{m}^2) = 4.0 \\times 10^{-4}$ Wb. Dividing by $\\Delta t = 5.0 \\times 10^{-4}$ s gives an average emf of 0.80 V.',
+        ],
         skill: '4C Faraday’s law (Skill 2)',
       },
     ],
@@ -302,6 +410,12 @@ export const FL4_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Fraction C, which is 97% linalool in the fractional run, distilled on the upper plateau near 198 °C, whereas the cineole-rich fraction A distilled near 176 °C, so linalool boils higher. Its O–H group lets linalool molecules both donate and accept hydrogen bonds, whereas pure cineole has an acceptor but no donor. The two compounds are isomers with the same molar mass, so a mass difference cannot explain it. Cineole is the lower-boiling compound, and a compact ring gives less, not more, surface area for dispersion forces; cineole’s dipole–dipole attractions are weaker than linalool’s hydrogen bonds.',
+        optionExplanations: [
+          'Linalool does boil higher, but the two compounds are constitutional isomers with the same formula C₁₀H₁₈O and identical molar mass of 154 g/mol. A mass difference cannot explain the boiling-point gap.',
+          'The fractional run’s fraction C (97% linalool) distilled on the upper plateau near 198 °C, while cineole-rich fraction A distilled near 176 °C. Linalool’s O–H group lets molecules both donate and accept hydrogen bonds, whereas cineole’s ether oxygen can only accept.',
+          'Cineole is the lower-boiling compound, as fraction A (96% cineole) shows. Moreover, a compact ring reduces rather than increases molecular surface area, so it would weaken, not strengthen, dispersion forces relative to the open chain.',
+          'Cineole has the lower boiling point, so this reverses the data. Its ether oxygen does give it a dipole, but dipole–dipole attractions are weaker than the hydrogen bonds between linalool molecules, which have both donor and acceptor sites.',
+        ],
         skill: '5B intermolecular forces and boiling point (Skill 1)',
       },
       {
@@ -315,6 +429,12 @@ export const FL4_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The head temperature is set by the composition of the vapor, and on the fractional curve it jumps from 177 °C to 191 °C between 25 and 35 mL, which is fraction B, a 55:45 mixture of cineole and linalool. Linalool made up less than half of fraction B, so it was not almost pure there. Between 45 and 55 mL the temperature is constant at the boiling point of linalool, and that part of the distillate is 97% linalool. Between 5 and 15 mL the distillate was indeed nearly pure cineole, but the temperature was constant, so the composition was not changing.',
+        optionExplanations: [
+          'The still-head temperature reflects the composition of the vapor about to distill. On the fractional curve it jumps from 177 °C to 191 °C between 25 and 35 mL, and Table 1 shows that fraction B was a 55:45 mixture of cineole and linalool.',
+          'The interval is right, but Table 1 shows fraction B was only 45% linalool in the fractional run. The distillate during the transition is a mixture, not nearly pure linalool; the pure linalool appears later in fraction C.',
+          'Between 45 and 55 mL the head temperature is constant at 198 °C, the boiling point of linalool, so the vapor composition is not changing. Fraction C collected there was 97% linalool, not a similar-amounts mixture.',
+          'Between 5 and 15 mL the distillate was indeed nearly pure cineole (96%), but the head temperature held steady at 176 °C. Constant temperature means constant vapor composition, so this is not where composition changed most rapidly.',
+        ],
         skill: '5C interpreting a distillation curve (Skill 4)',
       },
       {
@@ -328,6 +448,12 @@ export const FL4_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Separation in a column depends on vapor and liquid approaching equilibrium at each level, so distilling faster degrades separation; if the two runs were collected at different rates, the difference in the curves could reflect rate rather than the column. The GC temperature program and the order of analysis affect only the later GC measurements, not the head temperatures in Figure 1. The condenser water must be cold enough to condense the vapor, but the head thermometer sits before the condenser, so its temperature does not shape the curve.',
+        optionExplanations: [
+          'The GC temperature program affects only the later analysis of the fractions, not the still-head temperatures recorded during distillation. Figure 1 was generated before any GC analysis took place, so this cannot explain curve differences.',
+          'The order in which fractions were run through the GC is a downstream analytical detail. It has no influence on the still-head temperature versus volume curves, which were recorded during the distillations themselves.',
+          'The condenser water must be cold enough to condense the vapor, but the head thermometer sits above the column and before the side arm to the condenser. Condenser temperature does not shape the still-head curve.',
+          'The passage states that a column separates well only if vapor and liquid have time to approach equilibrium at each level. Distilling faster degrades separation, so differing collection rates would confound the comparison between the two runs.',
+        ],
         skill: '5C controlled variables in distillation (Skill 3)',
       },
       {
@@ -341,6 +467,12 @@ export const FL4_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'A polar phase with acceptor groups interacts strongly with the O–H donor of linalool, which cineole lacks, so linalool is held back even longer relative to cineole than on the nonpolar phase. Polar phases retain polar, not nonpolar, compounds more strongly. Retention tracks boiling point only on a nonpolar phase, where dispersion forces dominate; a polar phase adds specific interactions. A higher boiling point lengthens rather than shortens retention on either phase.',
+        optionExplanations: [
+          'Polar stationary phases retain polar compounds more strongly, not nonpolar ones. Linalool, the more polar isomer with a hydrogen-bond donor, would be retained longer, so its relative retention time would increase rather than decrease.',
+          'The polar phase’s hydrogen-bond acceptor groups interact strongly with the O–H donor of linalool, which cineole lacks. Linalool is therefore held back even longer relative to cineole than on the nonpolar phase, increasing its relative retention time.',
+          'Retention tracks boiling point only on a nonpolar phase, where dispersion forces dominate. A polar phase introduces specific interactions such as hydrogen bonding, so retention order and spacing can change independently of boiling point.',
+          'Linalool does have the higher boiling point, but a higher boiling point lengthens retention on either phase rather than shortening it. The reasoning here points in the wrong direction and ignores the added hydrogen-bonding interaction.',
+        ],
         skill: '5C gas chromatography and polarity (Skill 2)',
       },
     ],
@@ -357,6 +489,12 @@ export const FL4_CHEM_PHYS_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'For B + H₂O ⇌ BH⁺ + OH⁻, $x^2/0.10 = 1.0 \\times 10^{-5}$, so $x = [\\text{OH}^-] = 1.0 \\times 10^{-3}$ M, the pOH is 3.0 and the pH is 14.0 − 3.0 = 11.0. The value 3.0 is the pOH, reported as if it were the pH. The value 5.0 is the p$K_b$ of the base. The value 9.0 is the p$K_a$ of the conjugate acid BH⁺, which equals the pH only when B is half-neutralized.',
+    optionExplanations: [
+      'This value is the pOH, not the pH. Solving $x^2/0.10 = 1.0 \\times 10^{-5}$ gives $[\\text{OH}^-] = 1.0 \\times 10^{-3}$ M and pOH 3.0; the pH is 14.0 minus that, since the solution is basic.',
+      'This value is the p$K_b$ of the base, $-\\log(1.0 \\times 10^{-5}) = 5.0$. The p$K_b$ characterizes the base’s strength but does not equal the pH of its 0.10 M solution, which must be calculated from the equilibrium.',
+      'This value is the p$K_a$ of the conjugate acid BH⁺, $14.0 - 5.0 = 9.0$. It would equal the pH only at the half-neutralization point of a titration, not in a solution of the pure base.',
+      'For B + H₂O ⇌ BH⁺ + OH⁻, $x^2/0.10 = 1.0 \\times 10^{-5}$, so $[\\text{OH}^-] = 1.0 \\times 10^{-3}$ M and pOH = 3.0. The pH is $14.0 - 3.0 = 11.0$, appropriately basic.',
+    ],
     skill: '5A pH of a weak base (Skill 2)',
   },
   {
@@ -368,6 +506,12 @@ export const FL4_CHEM_PHYS_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'First-row transition metals lose their 4s electrons before their 3d electrons, so Fe³⁺ is [Ar]3d⁵, with one electron in each of the five d orbitals, for five unpaired electrons. Co²⁺ is [Ar]3d⁷, with three unpaired electrons, and Ni²⁺ is [Ar]3d⁸, with two. Cu⁺ is [Ar]3d¹⁰, with every electron paired, so it is diamagnetic.',
+    optionExplanations: [
+      'Iron is [Ar]4s²3d⁶, and the ion loses the 4s electrons first, so Fe³⁺ is [Ar]3d⁵. By Hund’s rule each of the five d orbitals holds one electron, giving five unpaired electrons, the maximum for a first-row transition metal ion.',
+      'Cobalt is [Ar]4s²3d⁷, so Co²⁺ is [Ar]3d⁷. Two orbitals are doubly occupied and three singly occupied, giving three unpaired electrons, which is paramagnetic but fewer than the five of a d⁵ ion.',
+      'Nickel is [Ar]4s²3d⁸, so Ni²⁺ is [Ar]3d⁸. Three orbitals are filled and two hold single electrons, giving only two unpaired electrons, less strongly paramagnetic than the d⁵ or d⁷ ions.',
+      'Copper is [Ar]4s¹3d¹⁰, so Cu⁺ is [Ar]3d¹⁰ with every d orbital filled. All electrons are paired, making Cu⁺ diamagnetic, the opposite of what the question asks for.',
+    ],
     skill: '4E electron configuration of ions and paramagnetism (Skill 2)',
   },
   {
@@ -384,6 +528,12 @@ export const FL4_CHEM_PHYS_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'The concentration falls by 0.40 mg/mL in 4.0 h and by 0.20 mg/mL in 2.0 h, the same 0.10 mg/mL per hour, so the rate does not depend on concentration; a zero-order half-life, $[A]_0/2k$, shrinks in proportion to the starting concentration, as observed (as when an eliminating enzyme is saturated). A first-order process has a constant half-life, but the second half-life here is half the first. A second-order half-life, $1/(k[A]_0)$, grows longer as concentration falls. A rate constant is by definition constant at a fixed temperature, so describing the data by a changing constant is not a valid description of any order.',
+    optionExplanations: [
+      'A first-order process has a constant half-life regardless of concentration, but here the second half-life (2.0 h) is half the first (4.0 h). Constant half-life is the hallmark of first-order kinetics, and it is absent here.',
+      'A second-order half-life, $1/(k[A]_0)$, grows longer as concentration falls, since each successive half-life starts from a lower concentration. Shrinking half-lives are the opposite of second-order behavior.',
+      'A rate constant is by definition constant at fixed temperature, so a first-order process with a changing rate constant describes no valid reaction order. The data are instead explained by a constant rate that is independent of concentration.',
+      'The concentration drops 0.40 mg/mL in 4.0 h and 0.20 mg/mL in 2.0 h, the same 0.10 mg/mL per hour, so the rate is independent of concentration. Zero-order half-life, $[A]_0/2k$, shrinks with starting concentration exactly as observed.',
+    ],
     skill: '5E reaction order from half-life behavior (Skill 2)',
   },
   {
@@ -395,6 +545,12 @@ export const FL4_CHEM_PHYS_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'The buoyant force is the loss of apparent weight, 660 N − 60 N = 600 N, which by Archimedes’ principle equals the weight of water the body displaces; because the body and the displaced water have the same volume, the ratio of their densities equals the ratio of their weights, 660/600 = 1.1, giving 1.1 g/cm³. The 0.91 g/cm³ value inverts that ratio and would describe a body that floats. The 11 g/cm³ value divides the true weight by the apparent weight rather than by the buoyant force. The 0.091 g/cm³ value divides the apparent weight by the true weight.',
+    optionExplanations: [
+      'This value divides the apparent weight (60 N) by the true weight (660 N), yielding 0.091. Neither of these ratios represents the density comparison, which requires the buoyant force, 600 N, in the denominator.',
+      'This value inverts the correct ratio, giving 600/660 = 0.91 g/cm³. A body less dense than water would float, yet this person has a positive apparent weight when submerged, so the density must exceed 1.0 g/cm³.',
+      'The buoyant force is the lost weight, 660 N − 60 N = 600 N, equal to the weight of displaced water. Body and displaced water share the same volume, so the density ratio equals the weight ratio, 660/600 = 1.1 g/cm³.',
+      'This value divides the true weight by the apparent weight, 660/60 = 11, rather than by the buoyant force. A density of 11 g/cm³ approaches that of lead and is not physically plausible for a human body.',
+    ],
     skill: '4B buoyancy and Archimedes’ principle (Skill 2)',
   },
   {
@@ -411,6 +567,12 @@ export const FL4_CHEM_PHYS_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'Joining two thiols (R–SH) into a disulfide (R–S–S–R) removes two hydrogen atoms, and each sulfur’s oxidation state rises from −2 to −1, so the sulfurs are oxidized; this happens in the relatively oxidizing lumen of the endoplasmic reticulum, which is why disulfides are common in secreted and extracellular proteins. Reduction is the reverse process, breaking disulfides, and the reducing cytosol, rich in glutathione, disfavors disulfide formation. Hydrolysis adds water across a bond and cannot link two thiols. Phosphorylation adds a phosphate to serine, threonine or tyrosine and forms no sulfur–sulfur bond.',
+    optionExplanations: [
+      'Reduction is the reverse process, in which a disulfide is broken back into two thiols by gaining hydrogen. The cytosol, rich in reduced glutathione, is reducing and therefore disfavors disulfide formation rather than promoting it.',
+      'Joining two thiols (R–SH) into a disulfide (R–S–S–R) removes two hydrogen atoms, raising each sulfur’s oxidation state from −2 to −1. This oxidation occurs in the relatively oxidizing ER lumen, which is why secreted proteins commonly contain disulfides.',
+      'Hydrolysis adds water across a bond to break it; it cannot join two thiol groups into a sulfur–sulfur bond. Although the ER is aqueous, disulfide formation is a redox process, not a hydrolytic one.',
+      'Phosphorylation attaches a phosphate group to serine, threonine or tyrosine hydroxyls and does not create a sulfur–sulfur bond. The cytosol’s ATP supply is irrelevant to the covalent linkage between two cysteine sulfurs.',
+    ],
     skill: '5D disulfide bonds and cysteine (Skill 1)',
   },
   {
@@ -427,6 +589,12 @@ export const FL4_CHEM_PHYS_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'Cellulose is joined by β(1→4) links, in which each glucose is flipped relative to its neighbor, giving extended, straight chains that line up side by side and hydrogen-bond into strong, insoluble fibers that human enzymes cannot hydrolyze. Cellulose does not contain α links, and helical chains are the hallmark of amylose, not cellulose. Amylose is joined by α(1→4) links, not β links. Those α links produce a helical chain that amylase readily digests, not a straight, resistant one.',
+    optionExplanations: [
+      'Cellulose is joined by β(1→4) links, which flip each glucose relative to its neighbor and produce extended, straight chains. These chains align side by side and hydrogen-bond into strong, insoluble fibers that human enzymes cannot hydrolyze.',
+      'Cellulose does not contain α links; those belong to amylose. Helical chains are the hallmark of α(1→4)-linked amylose, not of cellulose, whose β links produce straight chains that pack into fibers.',
+      'Amylose is joined by α(1→4) links, not β links. Its coiled chains are indeed digested by human amylase, but attributing that structure to β linkage inverts the chemistry; β links give straight, indigestible chains.',
+      'Amylose does have α links, but they produce a helical, coiled chain rather than a straight one, and that helix is readily cleaved by human amylase. Resistance to amylase is a property of β-linked cellulose, not amylose.',
+    ],
     skill: '5D α- versus β-glycosidic bonds (Skill 1)',
   },
   {
@@ -443,6 +611,12 @@ export const FL4_CHEM_PHYS_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'When strands pair, each base gives up hydrogen bonds to surrounding water in exchange for hydrogen bonds to its partner, so the net gain is small; base-pair hydrogen bonds chiefly confer specificity, while base stacking and the hydrophobic effect supply much of the stability. Hydrogen bonds are noncovalent attractions and form readily in water. The phosphate charges repel each other across the two strands, not the neutral bases. Every Watson–Crick pair joins a purine to a pyrimidine.',
+    optionExplanations: [
+      'Hydrogen bonds are noncovalent electrostatic attractions, not covalent bonds, and they form readily in water. Describing them as covalent and solvent-restricted misstates their nature and does not explain their modest net contribution.',
+      'The negatively charged phosphates repel each other across the backbone, but the bases are neutral and are not repelled by phosphate charges. Phosphate repulsion destabilizes the duplex somewhat but does not cancel base-pair attraction.',
+      'Every Watson–Crick pair joins a purine (A or G) to a pyrimidine (T or C), so this statement is simply false. The G–C pair named in the stem is itself a purine–pyrimidine pair held by three hydrogen bonds.',
+      'In single strands, each base already hydrogen-bonds with surrounding water. Pairing merely exchanges those bonds for bonds to the partner base, so the net energetic gain is small; stacking and the hydrophobic effect provide much of the duplex stability.',
+    ],
     skill: '5B hydrogen bonding in base pairs (Skill 1)',
   },
   {
@@ -459,6 +633,12 @@ export const FL4_CHEM_PHYS_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'Counting +1 for each bond to a more electronegative atom and −1 for each bond to hydrogen, the carbonyl carbon of acetone (C=O, two C–C) is +2, and in the imine (C=N, two C–C) it is still +2, so imine formation is neither oxidation nor reduction. The carbinol carbon of ethanol (−1) becomes the aldehyde carbon (+1), an oxidation. The carbonyl carbon of acetone (+2) becomes the carbinol carbon of 2-propanol (0), a reduction. The aldehyde carbon (+1) becomes the carboxyl carbon of acetic acid (+3), an oxidation.',
+    optionExplanations: [
+      'The carbinol carbon of ethanol has one bond to oxygen (+1) and two to hydrogen (−2), giving −1. In acetaldehyde the same carbon has a double bond to oxygen (+2) and one hydrogen (−1), giving +1. The state rises by two, an oxidation.',
+      'The carbonyl carbon of acetone has a double bond to oxygen (+2) and two C–C bonds (0), giving +2. In 2-propanol it has one C–O bond (+1) and one C–H bond (−1), giving 0. The state falls by two, a reduction.',
+      'Counting +1 per bond to a more electronegative atom and −1 per bond to hydrogen, the carbonyl carbon of acetone (C=O, two C–C) is +2. In the imine, C=N replaces C=O, and nitrogen is also more electronegative, so the carbon remains +2.',
+      'The aldehyde carbon of acetaldehyde (C=O plus one H) is +1. In acetic acid the carboxyl carbon has a double bond to oxygen and a single bond to the OH oxygen (+3) with no hydrogens. The state rises by two, an oxidation.',
+    ],
     skill: '5D oxidation state of carbon (Skill 1)',
   },
 ]

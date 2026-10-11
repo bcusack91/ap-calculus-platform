@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
+import { isPsatAttemptFormat } from '@/lib/sat-attempt-format'
 
 /**
  * GET /api/progress/summary — one place that answers "what have I actually done?"
@@ -40,7 +41,7 @@ export async function GET() {
         }),
         prisma.satTestAttempt.findMany({
           where: { userId },
-          select: { testNumber: true, totalScore: true, rwScore: true, mathScore: true, completedAt: true },
+          select: { testNumber: true, totalScore: true, rwScore: true, mathScore: true, completedAt: true, format: true },
           orderBy: { completedAt: 'desc' },
           take: 25,
         }),
@@ -96,6 +97,9 @@ export async function GET() {
 
     // ── Unified activity timeline ────────────────────────────────────
     type Item = { kind: string; label: string; detail: string; at: string; href?: string }
+    // PSAT practice tests share the table (160-760 scale): list them, but keep
+    // them out of the SAT counts and best score.
+    const satOnly = satTests.filter((t) => !isPsatAttemptFormat(t.format))
     const timeline: Item[] = [
       ...exitQuizzes.map((q) => ({
         kind: 'quiz',
@@ -104,13 +108,16 @@ export async function GET() {
         at: q.completedAt.toISOString(),
         href: `/topics/${q.topicSlug}`,
       })),
-      ...satTests.map((t) => ({
-        kind: 'sat',
-        label: `SAT practice test ${t.testNumber}`,
-        detail: `${t.totalScore} (RW ${t.rwScore} · Math ${t.mathScore})`,
-        at: t.completedAt.toISOString(),
-        href: '/sat-practice',
-      })),
+      ...satTests.map((t) => {
+        const psat = isPsatAttemptFormat(t.format)
+        return {
+          kind: 'sat',
+          label: `${psat ? 'PSAT' : 'SAT'} practice test ${t.testNumber}`,
+          detail: `${t.totalScore} (RW ${t.rwScore} · Math ${t.mathScore})`,
+          at: t.completedAt.toISOString(),
+          href: psat ? '/psat-practice' : '/sat-practice',
+        }
+      }),
       ...mcatTests.map((t) => ({
         kind: 'mcat',
         label: `MCAT · ${t.sectionName}`,
@@ -145,8 +152,8 @@ export async function GET() {
         topicsInProgress: inProgress,
         quizzesTaken: exitQuizzes.length,
         quizAverage: quizAvg,
-        satTests: satTests.length,
-        bestSat: satTests.length ? Math.max(...satTests.map((t) => t.totalScore)) : null,
+        satTests: satOnly.length,
+        bestSat: satOnly.length ? Math.max(...satOnly.map((t) => t.totalScore)) : null,
         mcatSections: mcatTests.length,
         dailyChallenges: dailyResults.length,
         flashcardsLearned: learnedCards,

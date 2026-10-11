@@ -46,6 +46,12 @@ export const FL8_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'A polarizing filter selects one of the many directions, all perpendicular to the direction of travel, in which a transverse wave can oscillate. In a sound wave in air the molecules move back and forth along the direction of travel, so there is only one direction of oscillation and nothing for a filter to select. Speed is irrelevant: slow transverse waves, such as those on a stretched string, can be polarized. Wavelength is also irrelevant, since microwaves with wavelengths of centimeters are readily polarized. Being mechanical is no obstacle either; sound passes through solids, and mechanical waves that are transverse can be polarized.',
+        optionExplanations: [
+          'Sound in air is longitudinal: the molecules oscillate back and forth along the direction of travel. With only one possible direction of oscillation there is nothing for a polarizing filter to select, so polarization has no meaning for such a wave.',
+          'Speed has nothing to do with polarization. Slow transverse waves, such as those on a stretched string, can be polarized, and sound clearly does reach detectors such as microphones without dying out.',
+          'Wavelength is irrelevant to whether a wave can be polarized. Microwaves have wavelengths of centimeters and are readily polarized by grids of wires; diffraction around an obstacle is a separate phenomenon.',
+          'Being mechanical is no obstacle: sound passes through solid walls, and mechanical waves that are transverse, like those on a string, can be polarized. The decisive property is the direction of oscillation, not the medium.',
+        ],
         skill: '4D polarization as a property of transverse waves (Skill 1)',
       },
       {
@@ -54,6 +60,12 @@ export const FL8_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The greatest reading on either curve shows that the light reaching the analyzer has an intensity $I_0$ of 80 μW, and the sucrose curve, with its maximum at 30° and its minimum at 120°, shows that the plane of polarization leaving the solution lies at 30°. An analyzer set to 75° therefore makes an angle of 45° with that plane, and by Malus’s law the reading is $80\\cos^2 45° = 40$ μW. A reading of 5 μW is $80\\cos^2 75°$, which ignores the rotation produced by the sugar. A reading of 20 μW corresponds to an angle of 60° between the analyzer and the plane of polarization, and 60 μW to an angle of 30°; neither is the angle that a 75° setting makes with a plane lying at 30°.',
+        optionExplanations: [
+          'A reading of 5 μW is $80\\cos^2 75°$, which treats the plane of polarization as still lying at 0°. The sucrose curve shows that the plane has been rotated to 30°, so the angle to use is 45°, not 75°.',
+          'A reading of 20 μW corresponds to an angle of 60° between analyzer and plane of polarization, as the sucrose curve shows at 90°. An analyzer at 75° is only 45° from the plane at 30°.',
+          'The sucrose curve peaks at 30° and reads zero at 120°, so the plane of polarization leaving the solution lies at 30°. An analyzer at 75° is 45° from that plane, and Malus’s law gives $80\\cos^2 45° = 40$ μW.',
+          'A reading of 60 μW requires an angle of only 30° between analyzer and plane, which is what the sucrose curve shows at 0° and 60°. This choice may come from reading the water curve or misplacing the maximum.',
+        ],
         skill: '4D Malus’s law with a rotated plane of polarization (Skill 2)',
       },
       {
@@ -62,6 +74,12 @@ export const FL8_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'With water in the tube the minimum lies at 90°, and with the sucrose solution it lies at 120°, so the observed rotation is +30°. Rearranging the definition of specific rotation gives $c = \\alpha/([\\alpha]\\,l) = 30/(66.5 \\times 2.00) \\approx 0.23$ g/mL. The value 0.45 g/mL leaves out the path length, treating the 2.00-dm tube as if it were 1 dm long. The value 0.90 g/mL takes the analyzer setting of 120° as the rotation instead of the 30° shift between the two curves. The value 0.11 g/mL divides by the path length twice.',
+        optionExplanations: [
+          'A value of 0.11 g/mL comes from dividing the 30° rotation by $66.5 \\times 4$, that is, applying the 2.00-dm path length twice. The definition $[\\alpha] = \\alpha/(l\\,c)$ uses the path length only once.',
+          'Water gives its minimum at 90° and sucrose at 120°, so the observed rotation is +30°. Rearranging the definition, $c = \\alpha/([\\alpha]\\,l) = 30/(66.5 \\times 2.00) \\approx 0.23$ g/mL.',
+          'A value of 0.45 g/mL is $30/66.5$, which omits the path length and treats the 2.00-dm tube as if it were 1 dm long. Rotation is proportional to path length, so the longer tube means a lower concentration.',
+          'A value of 0.90 g/mL is $120/(66.5 \\times 2.00)$, taking the analyzer setting of 120° as the rotation. The rotation is the 30° shift between the water minimum and the sucrose minimum, not the absolute setting.',
+        ],
         skill: '4D concentration from observed rotation and specific rotation (Skill 4)',
       },
       {
@@ -75,6 +93,12 @@ export const FL8_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Rotation is proportional to concentration, so diluting the solution by half halves the true rotation, and candidate rotations that differ by 180° then predict different readings. A true rotation of +30° would become +15° and move the minimum to 105°, whereas a true rotation of −150° would become −75° and move the minimum to 15°. A brighter lamp raises every reading in proportion without moving the minimum. Finer steps locate the minimum more precisely, but every candidate rotation still gives a minimum at that same setting. Turning the polarizer shifts the minima for water and for sucrose by the same amount, which leaves their separation, and the ambiguity, unchanged.',
+        optionExplanations: [
+          'A brighter lamp raises every reading on the curve in proportion but moves none of the minima. Both candidate rotations, +30° and −150°, still predict a minimum at 120°, so the ambiguity remains.',
+          'Finer angular steps locate the minimum more precisely, but the two candidate rotations differ by exactly 180° and therefore predict the very same minimum setting. Precision cannot distinguish readings that are identical in principle.',
+          'Rotation is proportional to concentration, so halving the concentration halves the true rotation. A true rotation of +30° becomes +15° and the minimum moves to 105°, whereas −150° becomes −75° and the minimum moves to 15°, so one run separates the two.',
+          'Turning the polarizer by 90° shifts the water minimum and the sucrose minimum by the same amount. Their separation, which is what defines the rotation, is unchanged, and so is the 180° ambiguity.',
+        ],
         skill: '4D resolving an ambiguous polarimeter reading (Skill 3)',
       },
       {
@@ -88,6 +112,12 @@ export const FL8_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Hydrolysis produces glucose and fructose in equal numbers of moles and, because their molar masses are equal, in equal mass concentrations. Gram for gram, fructose turns the plane counterclockwise (−92.4°) more than glucose turns it clockwise (+52.7°), so the mixture is levorotatory and the minimum falls below the 90° found with water. A minimum above 120° would require products that are more dextrorotatory than sucrose, but one of them is levorotatory. The rotation of a solution depends on the molecules present, not on a tally of stereocenters, and the products have specific rotations different from that of sucrose, so the minimum cannot stay at 120°. The two rotations would cancel only if the specific rotations were equal in magnitude, which they are not.',
+        optionExplanations: [
+          'A minimum above 120° would require the products to be more dextrorotatory than sucrose. Two active sugars replace one, but fructose is strongly levorotatory, so the net rotation moves the other way.',
+          'Hydrolysis does leave the stereocenters intact, but rotation depends on the molecules present, not on a tally of stereocenters. Glucose and fructose have specific rotations different from sucrose, so the minimum cannot remain at 120°.',
+          'Cancellation to exactly 90° would require the two products to have equal and opposite specific rotations. At equal mass concentration, fructose (−92.4°) outweighs glucose (+52.7°), so the sum is not zero.',
+          'Equal moles of glucose and fructose, each 180 g/mol, give equal mass concentrations. Gram for gram, fructose turns the plane counterclockwise (−92.4°) more than glucose turns it clockwise (+52.7°), so the mixture is levorotatory and the minimum falls below the water value of 90°.',
+        ],
         skill: '4D additivity of optical rotations in a mixture (Skill 2)',
       },
     ],
@@ -122,6 +152,12 @@ export const FL8_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The flask held $(0.0100\\ \\text{L})(0.80\\ \\text{M}) = 8.0$ mmol of H₂O₂, which by Reaction 1 can give 4.0 mmol of O₂, or $(4.0\\ \\text{mmol})(24\\ \\text{mL/mmol}) = 96$ mL of gas. At 45 min, 84 mL had been collected, so $84/96$, or about 88%, of the H₂O₂ had decomposed. A value of 44% results from assuming that each H₂O₂ gives one O₂, which doubles the expected final volume to 192 mL. A value of 84% treats the reading in milliliters as if it were a percentage, which would be correct only if the final volume were 100 mL. A value of 75% is the fraction that had decomposed at 30 min, when 72 mL had been collected.',
+        optionExplanations: [
+          'A value of 44% is $84/192$, which assumes each H₂O₂ gives one O₂ and so doubles the expected final volume. Reaction 1 shows that two H₂O₂ molecules produce only one O₂.',
+          'A value of 75% is the fraction decomposed at 30 min, when 72 mL had been collected ($72/96$). The question asks about the 45-min reading, which is 84 mL.',
+          'A value of 84% treats the 84-mL reading as if it were a percentage, which would hold only if the final volume were 100 mL. The theoretical final volume here is 96 mL, not 100.',
+          'The flask held $(0.0100\\ \\text{L})(0.80\\ \\text{M}) = 8.0$ mmol of H₂O₂, which gives 4.0 mmol of O₂ by Reaction 1, or 96 mL at 24 mL/mmol. The 84 mL collected at 45 min is $84/96 \\approx 88\\%$.',
+        ],
         skill: '5E extent of reaction from the volume of gas evolved (Skill 4)',
       },
       {
@@ -135,6 +171,12 @@ export const FL8_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Iodide is consumed in step 1 and regenerated in step 2, so it is present before the reaction begins and is recovered unchanged when it ends; it does not appear in the overall equation, yet the rate depends on its concentration. That is the behavior of a catalyst. The ion IO⁻ is absent at the start, is formed in step 1, and is consumed in step 2, which makes it an intermediate. Reversing the two labels ignores which species is present at the start. Iodide is not a reactant in the overall sense, because none of it is used up, and IO⁻ is not a product, because none of it remains. A transition state is the highest-energy arrangement of atoms along a single step; it cannot be formed in one step and consumed in another, as IO⁻ is.',
+        optionExplanations: [
+          'Iodide is consumed in step 1 and regenerated in step 2, so it is present at the start, is recovered unchanged, and does not appear in the overall equation even though the rate depends on it: a catalyst. IO⁻ is formed in step 1 and consumed in step 2: an intermediate.',
+          'This reverses the two labels. The species present before the reaction and recovered at the end is the catalyst, I⁻; the species that is absent at the start, formed, and then used up is the intermediate, IO⁻.',
+          'Iodide is not a reactant in the overall sense, because none of it is used up when both steps are summed, and IO⁻ is not a product, because none of it remains. Neither appears in Reaction 1.',
+          'A transition state is the fleeting highest-energy arrangement along a single step and is never an isolable species. IO⁻ is formed in one step and consumed in another, which is the definition of an intermediate, not a transition state.',
+        ],
         skill: '5E catalyst versus intermediate in a mechanism (Skill 1)',
       },
       {
@@ -143,6 +185,12 @@ export const FL8_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The rate is proportional to the concentration of I⁻, so doubling that concentration doubles the rate at every stage of the reaction, and each volume is reached in half the time. The new run would therefore reach at 15 min the volume that Run 1 reached at 30 min, 72 mL. Figure 1 shows the same relationship in the other direction: Run 2, with half as much iodide, needs about twice as long as Run 1 to deliver a given volume. A volume of 48 mL assumes that the amount of catalyst has no effect on the rate. A volume of 96 mL doubles the Run 1 reading, but the rate falls as H₂O₂ is used up, so twice the initial rate does not give twice the volume; 96 mL would mean that all of the H₂O₂ had decomposed. A volume of 84 mL is the Run 1 reading at 45 min, which would require three times as much iodide.',
+        optionExplanations: [
+          'A volume of 48 mL is the Run 1 reading at 15 min and assumes that doubling the catalyst has no effect. The passage states that the rate is proportional to the concentration of I⁻.',
+          'The rate is proportional to iodide concentration, so doubling I⁻ doubles the rate at every stage and each volume is reached in half the time. The new run reaches at 15 min what Run 1 reached at 30 min: 72 mL. Run 2 shows the same pattern in reverse.',
+          'A volume of 84 mL is the Run 1 reading at 45 min, which would be reached at 15 min only with three times as much iodide, not twice as much.',
+          'A volume of 96 mL simply doubles the 15-min reading of Run 1, but the rate falls as H₂O₂ is consumed, so twice the initial rate does not yield twice the volume. 96 mL would mean complete decomposition within 15 min.',
+        ],
         skill: '5E effect of catalyst concentration on a reaction time course (Skill 2)',
       },
       {
@@ -156,6 +204,12 @@ export const FL8_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The purpose of Run 2 was to change the concentration of iodide alone. Without the added water, the total volume of the mixture would have been 15 mL instead of 20 mL, and the H₂O₂ would have started at 0.53 M instead of 0.40 M; a difference between the two curves could not then be assigned to iodide. Replacing the missing KI solution with an equal volume of water keeps the starting concentration of H₂O₂, on which the rate also depends, the same in both runs. The number of moles of H₂O₂ is fixed by the 10.0 mL of 0.80 M solution and is unaffected by adding water, and the final volume of O₂ depends only on that number of moles. The temperature was held constant by the water bath, not by 5 mL of water.',
+        optionExplanations: [
+          'Run 2 was meant to change iodide alone. Without the extra water the mixture would be 15 mL instead of 20 mL and the H₂O₂ would start at 0.53 M rather than 0.40 M, so the added water keeps the starting H₂O₂ concentration, on which the rate also depends, matched to Run 1.',
+          'The number of moles of H₂O₂ is fixed by the 10.0 mL of 0.80 M solution and does not change when water is added. Adding water changes concentration, not amount.',
+          'The final volume of O₂ depends only on the moles of H₂O₂ present, which are the same in both runs regardless of dilution. The water affects how fast the gas appears, not how much eventually forms.',
+          'Temperature was controlled by clamping the flask in a 20 °C water bath. Five milliliters of water added to the mixture plays no role in holding the temperature constant.',
+        ],
         skill: '5E holding one concentration fixed while varying another (Skill 3)',
       },
       {
@@ -169,6 +223,12 @@ export const FL8_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'An enzyme catalyzes its reaction only when its polypeptide chain is folded so that the groups of the active site, here the heme and the side chains around it, are held in the correct arrangement. That fold is maintained largely by hydrogen bonds, ionic attractions, and hydrophobic interactions, which are disrupted at high temperature, and the denatured protein does not regain its activity simply on cooling. Iodide is a single ion with no such structure to lose. Peptide bonds are covalent and survive minutes in boiling neutral water; their hydrolysis requires strong acid or base and many hours, or a protease. Catalase produces O₂ and does not require it. Disulfide bonds are also covalent and are broken by reducing agents, not by heat alone.',
+        optionExplanations: [
+          'Peptide bonds are covalent and survive minutes in boiling neutral water; cleaving them requires strong acid or base for many hours, or a protease. Catalase loses activity because it unfolds, not because its chain is cut.',
+          'Catalase produces O₂ rather than consuming it, so loss of dissolved oxygen cannot explain the loss of activity. Moreover, the KI solution was boiled too and lost its dissolved gas without losing effectiveness.',
+          'An enzyme works only when its polypeptide is folded so that the active-site groups, here the heme and surrounding side chains, are correctly arranged. That fold depends on hydrogen bonds, ionic attractions, and hydrophobic interactions, which heat disrupts irreversibly. Iodide, a single ion, has no structure to lose.',
+          'Disulfide bonds are covalent and are broken by reducing agents, not by heat alone. Heat denatures the enzyme by disrupting the weak noncovalent interactions that maintain its fold.',
+        ],
         skill: '5E dependence of enzyme catalysis on folded structure (Skill 1)',
       },
     ],
@@ -196,6 +256,12 @@ export const FL8_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The residue at every third position lies on the central axis, where the three backbones are packed so closely that there is no room for a side chain larger than a hydrogen atom, and glycine is the only amino acid whose side chain is a single hydrogen. Glycine is the most flexible residue, not a rigid one; the stiffness of each chain comes from the rings of proline and hydroxyproline. The hydrogen bonds between chains involve backbone N–H and C=O groups, and a side chain consisting of one hydrogen bonded to carbon cannot donate a hydrogen bond. Being nonpolar is not the requirement: alanine and valine are also nonpolar, yet either one in place of glycine disrupts the triple helix, which is what happens in osteogenesis imperfecta.',
+        optionExplanations: [
+          'Glycine is the most flexible residue, not a rigid one. The stiffness of each α chain comes from the rings of proline and hydroxyproline at positions X and Y, which restrict backbone rotation.',
+          'Every third residue lies on the central axis where the three backbones pack so closely that there is room only for a hydrogen atom. Glycine is the sole amino acid whose side chain is a single hydrogen.',
+          'The hydrogen bonds between chains run from backbone N–H to backbone C=O groups. Glycine’s side chain, a hydrogen bonded to carbon, cannot donate a hydrogen bond, so this is not its role.',
+          'Nonpolarity is not the requirement. Alanine and valine are also nonpolar, yet replacing glycine with a larger residue disrupts the triple helix, as the passage describes for osteogenesis imperfecta. Size, not polarity, is decisive.',
+        ],
         skill: '5D glycine and close packing in the collagen triple helix (Skill 1)',
       },
       {
@@ -209,6 +275,12 @@ export const FL8_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Hydroxyproline arises when prolyl hydroxylase modifies proline residues that are already part of an α chain. Labeled proline is attached to its tRNA, incorporated during translation, and then hydroxylated in the endoplasmic reticulum, so the label appears in hydroxyproline residues of the product. Free hydroxyproline is not one of the twenty amino acids specified by the genetic code: no codon and no tRNA exist for it, so a ribosome cannot place it in a chain. The choice of labeled hydroxyproline alone reverses the true result, and the choice of both cultures assumes that free hydroxyproline can be incorporated directly. The choice of neither culture overlooks the fact that the carbon label of proline is retained when the residue is hydroxylated.',
+        optionExplanations: [
+          'Hydroxyproline arises when prolyl hydroxylase modifies proline residues already incorporated into an α chain. Labeled proline is placed by the ribosome and then hydroxylated in the ER, so its carbon label appears in hydroxyproline residues of the product.',
+          'This reverses the true result. Free hydroxyproline is not one of the twenty encoded amino acids: no codon and no tRNA exist for it, so a ribosome cannot place it in a chain, and the label is excluded.',
+          'Both cultures would be labeled only if free hydroxyproline could be incorporated directly during translation. It cannot, because the modification is made after the proline residue is already part of the chain.',
+          'Neither culture being labeled overlooks that the carbon skeleton of proline is retained when the residue is hydroxylated. The proline culture therefore does produce labeled hydroxyproline residues.',
+        ],
         skill: '5D hydroxyproline as a post-translational modification (Skill 2)',
       },
       {
@@ -217,6 +289,12 @@ export const FL8_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Each type I molecule contains two α1 chains and one α2 chain. The probability that a given α1 position is filled by a normal chain is 1/2, so the probability that both are normal is $(1/2)^2 = 1/4$, and the remaining 3/4 of the molecules carry at least one mutant chain. This is why a substitution can be more harmful than an allele that makes no chain: the latter merely halves the supply of α1 chains, and every molecule that forms is normal. The value 1/4 is the fraction of molecules in which both α1 chains are normal. The value 1/2 is the fraction of α1 chains that are mutant, not the fraction of molecules affected. The value 7/8 would apply if all three chains of the molecule were α1 chains.',
+        optionExplanations: [
+          'A fraction of 1/4 is the probability that both α1 positions are filled by normal chains, $(1/2)^2$. The question asks for the complementary fraction, molecules containing at least one mutant chain.',
+          'A fraction of 1/2 is the fraction of α1 chains that are mutant, not the fraction of molecules affected. Because each molecule draws two α1 chains, more than half of the molecules receive at least one mutant copy.',
+          'Each type I molecule has two α1 chains and one α2 chain. The chance that both α1 positions are normal is $(1/2)^2 = 1/4$, so $3/4$ of molecules carry at least one mutant chain, which is why a substitution is worse than a null allele.',
+          'A fraction of 7/8 would apply if all three chains of the molecule were α1 chains, $1 - (1/2)^3$. The α2 chain comes from a separate, unaffected gene, so only two positions are at risk.',
+        ],
         skill: '5D random assembly of chains carrying a glycine substitution (Skill 2)',
       },
       {
@@ -230,6 +308,12 @@ export const FL8_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Lysyl oxidase acts outside the cell, after the chains have been hydroxylated, assembled into triple helices, and secreted. Blocking it leaves the hydroxyproline content, and therefore the temperature at which the triple helix unfolds, unchanged, but it prevents formation of the aldehydes from which the covalent cross-links between molecules arise, so the fibrils are weak and the collagen is unusually easy to extract. Triple helices that unfold at a lower temperature would result from a failure of proline hydroxylation, as in vitamin C deficiency, not from a failure of cross-linking. Fibrils of normal strength are not expected when the cross-links responsible for much of that strength cannot form.',
+        optionExplanations: [
+          'Lower unfolding temperature results from a lack of hydroxyproline, which depends on prolyl hydroxylase and vitamin C, not on lysyl oxidase. And without cross-links the fibrils cannot have normal strength.',
+          'The helix half of this pairing is wrong. Lysyl oxidase acts outside the cell after hydroxylation and assembly are complete, so inhibiting it leaves hydroxyproline content and helix stability unchanged.',
+          'Blocking lysyl oxidase prevents the lysine-derived aldehydes that form covalent cross-links, and the passage attributes much of fibril strength to those cross-links. Fibril strength therefore cannot be normal.',
+          'Lysyl oxidase works extracellularly, after chains have been hydroxylated, wound into triple helices, and secreted, so inhibiting it leaves helix stability intact. But without the aldehydes it generates, the covalent cross-links that give fibrils their tensile strength cannot form, so the fibrils are weak.',
+        ],
         skill: '5D covalent cross-links versus stability of the triple helix (Skill 2)',
       },
     ],
@@ -259,6 +343,12 @@ export const FL8_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The compound with the longest retention time, ibuprofen, spends the most time in the stationary phase. The C18 chains are saturated hydrocarbon: they have no polar bonds, no charge, and no hydrogen-bond donors or acceptors, so the only attraction they can offer is the London dispersion force, which is greatest for a solute with a large nonpolar surface such as the ring and alkyl groups of ibuprofen. The poor solvation of those groups by the polar mobile phase works in the same direction. An alkyl chain can neither accept nor donate a hydrogen bond, so the carboxyl group gains nothing from it. Ionic attraction requires charges on both partners; the C18 chains have none, and at pH 2.5 the carboxyl group is protonated in any case. An amide group is found in acetaminophen, the compound retained least, and the chains have no dipole with which it could interact.',
+        optionExplanations: [
+          'Ibuprofen, retained for 30 min, spends the most time in the stationary phase. C18 chains are saturated hydrocarbon with no polar bonds, charges, or hydrogen-bonding groups, so London dispersion with ibuprofen’s large nonpolar ring and alkyl surface is the only attraction available.',
+          'An alkyl chain can neither donate nor accept a hydrogen bond, so the carboxyl group gains nothing from the stationary phase. Hydrogen bonding would, if anything, favor the aqueous mobile phase.',
+          'Ionic attraction requires charges on both partners. The C18 chains carry none, and at pH 2.5, below the p$K_a$ of 4.4, ibuprofen’s carboxyl group is protonated and uncharged in any case.',
+          'The amide group belongs to acetaminophen, the compound retained least, so it cannot be what holds the most-retained compound. Moreover, saturated hydrocarbon chains have no dipole for a dipole–dipole interaction.',
+        ],
         skill: '5C dispersion forces and retention on a nonpolar stationary phase (Skill 1)',
       },
       {
@@ -272,6 +362,12 @@ export const FL8_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Both pH values lie far below the p$K_a$ of the phenol in acetaminophen, and caffeine has no group that ionizes in this range, so the charge on those two compounds does not change. The carboxylic acids are different: pH 2.5 is below both p$K_a$ values, so aspirin and ibuprofen are mostly protonated and uncharged, whereas pH 7.0 is more than two units above both, so each is more than 99% in its carboxylate form. An anion is strongly solvated by water and methanol and has little affinity for hydrocarbon chains, so it passes through the column sooner. The acids are uncharged at pH 2.5, not at pH 7.0, and a solute that dissolved less readily in the mobile phase would be retained longer, not for a shorter time. A carboxylic acid loses a proton as the pH rises; it does not gain one to become a cation. Ibuprofen has no bond that water can hydrolyze, and the passage describes the hydrolysis of aspirin as slow.',
+        optionExplanations: [
+          'This has the chemistry backward. The acids are uncharged at pH 2.5, not at pH 7.0, and a solute that dissolved less readily in the mobile phase would be retained longer, yet their retention times fell.',
+          'Only the two carboxylic acids change charge between the pH values: pH 2.5 is below both p$K_a$ values, while pH 7.0 is more than two units above, so each is over 99% carboxylate. The anion is strongly solvated by the polar mobile phase and leaves the hydrocarbon phase sooner.',
+          'A carboxylic acid loses a proton as pH rises; it does not gain one. Neither aspirin nor ibuprofen has a basic group that could be protonated to form a cation.',
+          'Ibuprofen has no bond that water hydrolyzes, and the passage describes aspirin hydrolysis as slow, with solutions analyzed within an hour. Hydrolysis would also produce new peaks, not simply shift two retention times.',
+        ],
         skill: '5C ionization of carboxylic acids and reverse-phase retention (Skill 2)',
       },
       {
@@ -280,6 +376,12 @@ export const FL8_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Peak area is proportional to the mass injected, and equal volumes were injected, so the aspirin concentration of the extract is $(2400/500)(0.100\\ \\text{mg/mL}) = 0.48$ mg/mL. The extract had a volume of 500 mL, so the tablet contained $(0.48)(500) = 240$ mg. A value of 80 mg results from comparing the aspirin peak of the extract with the acetaminophen peak of the standard, and 150 mg from comparing it with the caffeine peak; because the compounds absorb differently at 230 nm, each must be compared with its own standard. A value of 48 mg results from multiplying the concentration by 100 mL instead of by the 500 mL to which the extract was made up.',
+        optionExplanations: [
+          'A value of 48 mg multiplies the extract concentration of 0.48 mg/mL by 100 mL rather than by the 500 mL to which the extract was diluted. The whole tablet went into 500 mL.',
+          'A value of 80 mg compares the extract’s aspirin peak (2400) with the standard’s acetaminophen peak (1500). Because the compounds absorb differently at 230 nm, aspirin must be compared with the aspirin standard peak of 500.',
+          'A value of 150 mg compares the aspirin peak of the extract with the caffeine standard peak of 800. Each compound has its own response factor at 230 nm, so only the aspirin standard is a valid reference.',
+          'Peak area is proportional to mass injected with equal volumes, so the extract contains $(2400/500)(0.100) = 0.48$ mg/mL of aspirin. Over the 500-mL extract volume that is $0.48 \\times 500 = 240$ mg per tablet.',
+        ],
         skill: '5C quantitation from peak areas with an external standard (Skill 4)',
       },
       {
@@ -293,6 +395,12 @@ export const FL8_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'In 50% methanol the first three compounds emerge at 1.8, 2.3, and 3.5 min, well apart, but ibuprofen is held for 30 min. In 70% methanol ibuprofen emerges at 6.0 min, but the first three compounds are crowded between 1.3 and 1.8 min. Running the more polar solvent until aspirin has emerged preserves the spacing of the early peaks, and raising the methanol content afterward releases ibuprofen quickly. Using 70% methanol throughout shortens the run but compresses the early peaks. Starting with 70% methanol and then changing to 50% combines the crowding of the early peaks with a long wait for ibuprofen. Halving the flow rate makes every compound take longer to pass through the column.',
+        optionExplanations: [
+          'Using 70% methanol throughout does shorten the run, but Table 1 shows the first three peaks crowded between 1.3 and 1.8 min, closer together than the 1.8, 2.3, and 3.5 min spacing the analysts want to keep.',
+          'Starting with 70% methanol compresses the early peaks into the 1.3–1.8 min window, and switching to 50% afterward then holds ibuprofen for a long time. This combines the worst of both conditions.',
+          'Running 50% methanol until aspirin emerges at 3.5 min preserves the 1.8, 2.3, 3.5 min spacing of the first three peaks. Raising to 70% afterward releases ibuprofen quickly instead of holding it for 30 min, shortening the run.',
+          'Halving the flow rate makes every compound take longer to reach the detector, so the analysis becomes slower, not faster. It does nothing about the long retention of ibuprofen.',
+        ],
         skill: '5C designing a solvent program from retention data (Skill 3)',
       },
     ],
@@ -320,6 +428,12 @@ export const FL8_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Energy is conserved, so the difference between the energy absorbed and the energy emitted must go somewhere. As the excited molecule settles to the lowest vibrational level of the excited state, and again when it relaxes from an upper vibrational level of the ground state after emission, its excess vibrational energy passes through collisions to the surrounding solvent, which is warmed very slightly. A photon with a wavelength of 26 nm would carry far more energy than the 494-nm photon that was absorbed; a difference between two wavelengths is not the wavelength that corresponds to a difference between two energies. The molecule ends in its ground electronic state, so the energy is not stored in it. The energy of a photon is fixed by its frequency, which does not change when light passes from one medium into another, so a change of speed on leaving the solution removes no energy.',
+        optionExplanations: [
+          'A wavelength of 26 nm would carry far more energy than the 494-nm photon absorbed, violating conservation. A difference between two wavelengths is not the wavelength that corresponds to the difference between two energies.',
+          'The molecule returns to its ground electronic state after emitting, so no electronic energy is stored. The excess appears as vibrational energy that is quickly lost, not as a lingering excited state.',
+          'Energy is conserved, so the gap between absorbed and emitted photon energies must go somewhere. The molecule settles vibrationally within the excited state before emitting and again in the ground state afterward, and that excess vibrational energy is dissipated by collisions as heat to the solvent.',
+          'A photon’s energy is set by its frequency, which does not change when light crosses from one medium to another; only its speed and wavelength change. Leaving the solution removes no energy from the photon.',
+        ],
         skill: '4E conservation of energy and the Stokes shift (Skill 1)',
       },
       {
@@ -328,6 +442,12 @@ export const FL8_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'With $r/R_0 = 2$, $(r/R_0)^6 = 2^6 = 64$, so $E = 1/(1 + 64) = 1/65 \\approx 0.015$, or about 1.5%. Moving the dyes from a separation of $R_0$, at which the expression gives 50%, to twice that distance thus lowers the efficiency to under 2%, which is why the method is so sensitive to distance. A value of 33% results from using the first power of the ratio, $1/(1 + 2)$; a value of 20% from using its square, $1/(1 + 4)$; and a value of 11% from using its cube, $1/(1 + 8)$.',
+        optionExplanations: [
+          'With $r/R_0 = 10/5 = 2$, $(r/R_0)^6 = 64$, so $E = 1/(1 + 64) = 1/65 \\approx 0.015$, about 1.5%. Doubling the separation from $R_0$ drops the efficiency from 50% to under 2%.',
+          'A value of 11% is $1/(1 + 2^3) = 1/9$, which uses the cube of the distance ratio. The passage gives the sixth power.',
+          'A value of 20% is $1/(1 + 2^2) = 1/5$, which uses the square of the distance ratio instead of the sixth power.',
+          'A value of 33% is $1/(1 + 2) = 1/3$, which uses the first power of the ratio. The sixth-power dependence is what makes energy transfer so steeply sensitive to distance.',
+        ],
         skill: '4D distance dependence of resonance energy transfer (Skill 2)',
       },
       {
@@ -341,6 +461,12 @@ export const FL8_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'At 4 nm, a distance less than $R_0$, more than half of the excited donors give their energy to the acceptor instead of emitting, so the donor emission is weak while the acceptor is intact. A bleached acceptor no longer absorbs visible light, so it cannot receive energy from the donor; every excited donor must now return to the ground state by its other routes, and the donor emission rises. For the same reason the bleached product cannot absorb the photons that the donor emits. The donor molecule is indeed unaltered, but the brightness of its emission depends on whether an acceptor is available to take its energy. Energy flows from donor to acceptor, not the reverse, and the donor is excited directly by the light that it absorbs.',
+        optionExplanations: [
+          'A bleached acceptor neither absorbs nor emits visible light, so it cannot absorb the donor’s emitted photons. The direction of the effect is also wrong: removing the acceptor makes donor emission stronger, not weaker.',
+          'At 4 nm, less than $R_0$, more than half of excited donors hand their energy to the acceptor rather than emitting. Once the acceptor is bleached it can no longer accept energy, so every excited donor returns to the ground state by emission or its other routes, and donor fluorescence rises.',
+          'The donor molecule is indeed unaltered, but its emission brightness depends on whether an acceptor is nearby to drain its excitation. Removing that drain changes the donor’s emission even though the donor itself is intact.',
+          'Energy flows from donor to acceptor, not the reverse, and the donor is excited directly by the light it absorbs. Loss of the acceptor therefore cannot abolish donor emission.',
+        ],
         skill: '4D donor emission after loss of the acceptor (Skill 2)',
       },
       {
@@ -354,6 +480,12 @@ export const FL8_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'At a fixed wavelength, a more intense beam delivers more photons per second, each with the same energy as before. In a dilute solution in which only a small fraction of the molecules is excited at any moment, twice as many photons are absorbed per second, and twice as many are emitted. The energy of each emitted photon is set by the spacing of the energy levels of the fluorophore, not by the number of photons arriving, so the emission spectrum does not move. An unchanged number of emitted photons would require that the dye already be absorbing all that it could, which is not the case in a dilute solution under ordinary illumination. A shift to shorter wavelengths would require each molecule to take up more energy per absorption, but the energy of an absorbed photon depends on its wavelength, which was not changed.',
+        optionExplanations: [
+          'Both halves of this choice fail. Doubling the intensity doubles the photon arrival rate, so a dilute solution absorbs and emits twice as many photons, not the same number; and the emission wavelength cannot shift shorter, because each emitted photon’s energy is set by the fluorophore’s energy levels.',
+          'In a dilute solution only a small fraction of molecules is excited at any instant, so doubling the incoming photons doubles the absorptions and emissions. The photon count would stay unchanged only if the dye were already saturated.',
+          'The emission spectrum does not move: each emitted photon’s energy depends on the spacing of the fluorophore’s levels, not on how many photons arrive. A shift to shorter wavelengths would require more energy per absorbed photon, but the wavelength was kept the same.',
+          'A more intense beam at the same wavelength delivers twice as many photons per second, each with the same energy. In a dilute solution twice as many are absorbed and emitted, and the emitted photon energies, fixed by the molecule’s energy levels, are unchanged.',
+        ],
         skill: '4E photon number versus photon energy in fluorescence (Skill 1)',
       },
     ],
@@ -370,6 +502,12 @@ export const FL8_CHEM_PHYS_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'All of the carbon ends up in CO₂: $0.88/44 = 0.020$ mol of C, or 0.24 g. All of the hydrogen ends up in H₂O: $0.36/18 = 0.020$ mol of H₂O, which contains 0.040 mol of H, or 0.040 g. Oxygen is found by difference, $0.60 - 0.24 - 0.04 = 0.32$ g, or 0.020 mol. The mole ratio C : H : O is 1 : 2 : 1, so the empirical formula is CH₂O. The formula CH₂ ignores the 0.32 g of the sample that is neither carbon nor hydrogen. The formula CHO counts one hydrogen atom per molecule of water instead of two. The formula CH₂O₃ takes the oxygen from the products, 0.040 mol in the CO₂ and 0.020 mol in the H₂O, although most of that oxygen came from the O₂ in which the sample was burned.',
+    optionExplanations: [
+      'The formula CH₂ ignores the 0.32 g of the 0.60-g sample that is neither carbon (0.24 g) nor hydrogen (0.04 g). That mass is oxygen, 0.020 mol, and must appear in the formula.',
+      'The formula CHO counts one hydrogen per water molecule instead of two. The 0.020 mol of H₂O contains 0.040 mol of H, giving a 1 : 2 ratio of C to H.',
+      'Carbon: $0.88/44 = 0.020$ mol (0.24 g). Hydrogen: $0.36/18 = 0.020$ mol H₂O, so 0.040 mol H (0.04 g). Oxygen by difference: $0.60 - 0.28 = 0.32$ g $= 0.020$ mol. The ratio 1 : 2 : 1 gives CH₂O.',
+      'The formula CH₂O₃ counts the oxygen in the products, 0.040 mol in CO₂ plus 0.020 mol in H₂O, but most of that oxygen came from the O₂ used for combustion. Oxygen in the sample must be found by difference.',
+    ],
     skill: '5A empirical formula from combustion analysis (Skill 2)',
   },
   {
@@ -386,6 +524,12 @@ export const FL8_CHEM_PHYS_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'A Lewis acid accepts an electron pair, and a Lewis base donates one. Boron in BF₃ has only six valence electrons and an empty 2p orbital; the nitrogen of NH₃ has a lone pair, which it shares with boron to form the new B–N bond, both electrons of which come from nitrogen. BF₃ is therefore the acid and NH₃ the base. The lone pairs on fluorine are not donated to nitrogen, which has no empty orbital to receive them. No proton is transferred in this reaction, so NH₃ is not acting as an acid of any kind. NH₃ is indeed the Lewis base, but the reason is that nitrogen donates an electron pair; boron has no lone pair to give.',
+    optionExplanations: [
+      'A Lewis acid accepts an electron pair. Boron in BF₃ has only six valence electrons and an empty 2p orbital, and nitrogen’s lone pair fills it to form the B–N bond; both bonding electrons come from nitrogen.',
+      'Fluorine lone pairs are not donated to nitrogen, which already has a complete octet and no empty orbital to receive them. BF₃ is electron-deficient at boron, which makes it the acceptor, not the donor.',
+      'No proton is transferred in forming F₃B–NH₃; the reaction is the sharing of nitrogen’s lone pair with boron. NH₃ is not acting as any kind of acid here.',
+      'NH₃ is indeed the Lewis base, but the stated reason is backward. Nitrogen donates the electron pair to boron; boron has no lone pair to give and is the acceptor.',
+    ],
     skill: '5A Lewis acids and bases in adduct formation (Skill 1)',
   },
   {
@@ -402,6 +546,12 @@ export const FL8_CHEM_PHYS_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'At the equivalence point the flask contains sodium acetate, the salt of a weak acid and a strong base, so the solution is basic, with a pH near 9. Methyl red has finished changing color by pH 6.2, where $[\\text{acetate}]/[\\text{acetic acid}] = 10^{6.2 - 4.8} \\approx 25$ and about 4% of the acid has not yet been neutralized. Too little NaOH is recorded, and the calculated concentration is too low. The steep part of this titration curve runs from about pH 7 to pH 10; the range of methyl red lies largely in the buffer region below it, where the pH rises gradually, so the two indicators do not give the same volume. An end point after equivalence would be found with an indicator that changes color well above pH 10. A few drops of indicator consume a negligible quantity of titrant, and an indicator is itself a weak acid, which could not neutralize acetic acid.',
+    optionExplanations: [
+      'A few drops of indicator consume a negligible amount of titrant, and an indicator is itself a weak acid, so it cannot neutralize acetic acid. The error arises from where the color change occurs, not from the indicator’s own reaction.',
+      'At equivalence the solution is sodium acetate, with pH near 9. Methyl red finishes changing by pH 6.2, where $[\\text{acetate}]/[\\text{acid}] = 10^{1.4} \\approx 25$ and about 4% of the acid is still unneutralized. Too little NaOH is recorded, so the calculated concentration is too low.',
+      'An end point after equivalence would require an indicator that changes color well above pH 10. Methyl red’s range of 4.4 to 6.2 lies below the equivalence pH of about 9, so the error runs in the opposite direction.',
+      'The steep part of this curve runs from about pH 7 to 10; methyl red’s range lies largely in the gradual buffer region below it. Because the pH rises slowly there, the two indicators do not give the same volume.',
+    ],
     skill: '5A error from a mismatched indicator in a weak acid–strong base titration (Skill 2)',
   },
   {
@@ -418,6 +568,12 @@ export const FL8_CHEM_PHYS_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'The period of a mass on a spring is $T = 2\\pi\\sqrt{m/k}$. A larger mass has more inertia and responds more slowly to the same restoring force, so the period increases. A larger amplitude means a greater distance to travel, but the restoring force, and with it the speed at each stage of the motion, is greater in proportion, and the period is unchanged. A stiffer spring exerts a larger restoring force at every displacement and shortens the period. Gravity does not appear in the expression: on a horizontal surface the weight is balanced by the normal force, and even for a hanging mass gravity only shifts the equilibrium position. It is the period of a pendulum, not of a mass on a spring, that depends on $g$.',
+    optionExplanations: [
+      'Amplitude does not affect the period of a mass on a spring. A larger amplitude means a greater distance, but the restoring force and speed increase in proportion, so the time per cycle is unchanged.',
+      'A stiffer spring exerts a larger restoring force at every displacement and makes the block accelerate faster, which shortens the period. Since $T = 2\\pi\\sqrt{m/k}$, increasing $k$ decreases $T$.',
+      'Gravity does not appear in $T = 2\\pi\\sqrt{m/k}$. On a horizontal surface the weight is balanced by the normal force; it is the pendulum, not the spring oscillator, whose period depends on $g$.',
+      'The period of a mass on a spring is $T = 2\\pi\\sqrt{m/k}$. A larger mass has more inertia and responds more slowly to the same restoring force, so increasing $m$ lengthens the period.',
+    ],
     skill: '4A period of a mass on a spring (Skill 1)',
   },
   {
@@ -429,6 +585,12 @@ export const FL8_CHEM_PHYS_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'For a single binding site, $K_d = [\\text{R}][\\text{L}]/[\\text{RL}]$, and the fraction of receptors occupied is $[\\text{L}]/([\\text{L}] + K_d) = 6.0/(6.0 + 2.0) = 0.75$. The value 0.25 is the fraction of receptors left unoccupied, $K_d/([\\text{L}] + K_d)$. The value 0.33 is the ratio $K_d/[\\text{L}]$, which equals the ratio of free receptor to occupied receptor and is not a fraction of the total. The value 0.67 would be the occupancy at a free ligand concentration of 4.0 nM, twice $K_d$ instead of three times $K_d$.',
+    optionExplanations: [
+      'A value of 0.25 is the fraction of receptors left unoccupied, $K_d/([\\text{L}] + K_d) = 2.0/8.0$. The question asks for the bound fraction, its complement.',
+      'A value of 0.33 is the ratio $K_d/[\\text{L}] = 2.0/6.0$, which equals free receptor divided by occupied receptor. That is a ratio of two populations, not a fraction of the total.',
+      'A value of 0.67 would be the occupancy at a free ligand concentration of 4.0 nM, twice $K_d$, giving $4/(4 + 2)$. Here the ligand is at three times $K_d$.',
+      'For a single site, fractional occupancy is $[\\text{L}]/([\\text{L}] + K_d) = 6.0/(6.0 + 2.0) = 0.75$. At three times $K_d$, three-quarters of the receptors are bound.',
+    ],
     skill: '5D dissociation constant and fractional occupancy (Skill 2)',
   },
   {
@@ -445,6 +607,12 @@ export const FL8_CHEM_PHYS_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'A triacylglycerol is glycerol esterified with three fatty acids, so complete hydrolysis consumes three molecules of water and gives one glycerol and three fatty acids. In the hydrolysis of an ester, the oxygen of water attacks the carbonyl carbon, and the bond that breaks is the one between that carbon and the oxygen of the alcohol. Each glycerol oxygen therefore stays on glycerol, and the oxygen from water becomes part of the carboxyl group of a fatty acid. Label in glycerol would require cleavage of the bond between a glycerol carbon and its oxygen, which does not occur. Glycerol 3-phosphate and two fatty acids are the components of a phosphatidic acid, the core of a glycerophospholipid; a triacylglycerol contains no phosphate.',
+    optionExplanations: [
+      'A triacylglycerol is glycerol esterified with three fatty acids, so complete hydrolysis uses three waters and gives glycerol plus three fatty acids. In ester hydrolysis the water oxygen attacks the carbonyl carbon and the acyl–O bond breaks, so the ¹⁸O ends up in the fatty acid carboxyl groups.',
+      'Label in glycerol would require breaking the bond between a glycerol carbon and its oxygen, which does not happen. Ester hydrolysis cleaves the carbonyl carbon–oxygen bond, so glycerol keeps its original oxygens.',
+      'Glycerol 3-phosphate and two fatty acids are the components of a phosphatidic acid, the core of a glycerophospholipid. A triacylglycerol contains no phosphate, so these cannot be its hydrolysis products.',
+      'This both misidentifies the products, which are glycerol and three fatty acids since triacylglycerols lack phosphate, and misplaces the label, which goes into the fatty acid carboxyl groups, not the glycerol backbone.',
+    ],
     skill: '5D site of bond cleavage in triacylglycerol hydrolysis (Skill 2)',
   },
   {
@@ -461,6 +629,12 @@ export const FL8_CHEM_PHYS_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'In a Western blot the proteins of a sample are first separated by SDS–polyacrylamide gel electrophoresis, which sorts them by molecular mass, and are then transferred to a membrane and probed with the antibody; the position of the labeled band reveals the size of the protein that the antibody recognizes. In an ELISA the antibody captures or detects its target in the well of a plate without any prior separation, so the signal reports how much antigen is present but not its size, and an intact protein and a fragment that share the same epitope cannot be told apart. ELISA does measure the amount captured, but that does not answer the question asked. Detection of an mRNA after electrophoresis and transfer describes a Northern blot, not a Western blot.',
+    optionExplanations: [
+      'ELISA involves no separation step: the antibody captures its target directly in the well of a plate. Attributing size separation to ELISA confuses it with the Western blot.',
+      'ELISA does measure how much antigen the antibody captures, but that reports amount, not size. An intact protein and a fragment sharing the same epitope would give indistinguishable signals.',
+      'In a Western blot, proteins are first separated by SDS–PAGE according to molecular mass, then transferred to a membrane and probed with the antibody. The position of the band shows whether the recognized protein is 60 kDa or 35 kDa.',
+      'A Western blot detects protein, not mRNA. Detecting an mRNA after electrophoresis and transfer describes a Northern blot, which would say nothing about the size of the protein in serum.',
+    ],
     skill: '5D ELISA versus Western blot (Skill 1)',
   },
   {
@@ -472,6 +646,12 @@ export const FL8_CHEM_PHYS_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'A carboxylic acid with a carbonyl group at the β position, two carbons from the carboxyl carbon, loses CO₂ on gentle heating. The carbonyl oxygen accepts the acidic proton through a six-membered cyclic transition state as the C–C bond breaks, and the electron pair left behind is taken up by the carbonyl group to give an enol, which tautomerizes to a ketone; CH₃COCH₂COOH gives acetone and CO₂. Butanoic acid, CH₃CH₂CH₂COOH, has no carbonyl group to accept those electrons. In CH₃COCH₂CH₂COOH the ketone is one carbon too far away to form the six-membered arrangement or to stabilize the electrons released. In CH₃COCOOH the ketone carbon is bonded directly to the carboxyl carbon, where it cannot take up the electron pair, which is why enzymes require thiamine pyrophosphate to decarboxylate α-keto acids.',
+    optionExplanations: [
+      'Butanoic acid, CH₃CH₂CH₂COOH, has no carbonyl group to accept the electron pair left behind when the C–C bond breaks, so it has no low-energy route to lose CO₂ and is thermally stable.',
+      'A carboxylic acid with a ketone at the β position loses CO₂ on gentle warming: the carbonyl oxygen accepts the acidic proton through a six-membered cyclic transition state as the C–C bond breaks, giving an enol that tautomerizes. CH₃COCH₂COOH gives acetone and CO₂.',
+      'In CH₃COCH₂CH₂COOH the ketone is at the γ position, one carbon too far to form the six-membered cyclic transition state or to stabilize the electrons released by C–C cleavage. This γ-keto acid does not decarboxylate readily.',
+      'In CH₃COCOOH the ketone carbon is bonded directly to the carboxyl carbon (an α-keto acid), where it cannot take up the electron pair through a cyclic arrangement. This is why enzymes need thiamine pyrophosphate to decarboxylate α-keto acids.',
+    ],
     skill: '5D decarboxylation of a β-keto acid (Skill 1)',
   },
 ]

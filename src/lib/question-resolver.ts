@@ -2,10 +2,13 @@ import { prisma } from '@/lib/prisma'
 import type { AttemptKind } from '@/lib/study-tracking'
 import type { ReviewItem } from '@/lib/question-sources/types'
 import { exitReviewItems } from '@/lib/question-sources/exit'
-import { fullLengthReviewItems, mcatPracticeReviewItems } from '@/lib/question-sources/mcat'
+import { carsSkillForKey, fullLengthReviewItems, mcatPracticeReviewItems } from '@/lib/question-sources/mcat'
 import { satDiagnosticReviewItems, satPracticeReviewItems } from '@/lib/question-sources/sat'
+import { isPsatAttemptFormat } from '@/lib/sat-attempt-format'
 import { unitTestReviewItems } from '@/lib/question-sources/unit-test'
 import { diagnosticReviewItems } from '@/lib/question-sources/diagnostic'
+import { qbankReviewItems } from '@/lib/question-sources/qbank'
+import { satOptionExplanationsFor } from '@/data/sat-practice/option-explanations'
 
 /**
  * Rebuilds any stored attempt into review items — the permanent review page
@@ -17,7 +20,7 @@ import { diagnosticReviewItems } from '@/lib/question-sources/diagnostic'
  * rebuilt at all come back as null.
  */
 
-export const REVIEW_KINDS = ['exit', 'diagnostic', 'unit-test', 'sat-practice', 'mcat-fl', 'mcat-practice'] as const
+export const REVIEW_KINDS = ['exit', 'diagnostic', 'unit-test', 'sat-practice', 'mcat-fl', 'mcat-practice', 'qbank'] as const
 export type ReviewKind = (typeof REVIEW_KINDS)[number]
 
 export function isReviewKind(k: unknown): k is ReviewKind {
@@ -97,11 +100,13 @@ async function build(kind: ReviewKind, id: string, userId: string): Promise<Omit
     case 'sat-practice': {
       const s = await prisma.satTestAttempt.findFirst({ where: { id, userId } })
       if (!s) return null
+      // Adaptive PSAT/NMSQT practice tests share the table (format 'psat-full').
+      const psat = isPsatAttemptFormat(s.format)
       return {
         kind, id, course: 'sat', takenAt: iso(s.completedAt),
-        title: `SAT practice test ${s.testNumber}`,
+        title: `${psat ? 'PSAT' : 'SAT'} practice test ${s.testNumber}`,
         score: { correct: s.rwCorrect + s.mathCorrect, total: s.rwTotal + s.mathTotal, label: `${s.totalScore}` },
-        backHref: '/sat-practice',
+        backHref: psat ? '/psat-practice' : '/sat-practice',
         items: await satPracticeReviewItems(s),
       }
     }
@@ -114,6 +119,32 @@ async function build(kind: ReviewKind, id: string, userId: string): Promise<Omit
         score: { correct: m.correct, total: m.total, label: `${m.score}` },
         backHref: '/mcat-practice',
         items: await mcatPracticeReviewItems(m.answers, { timeSpentSeconds: m.timeSpent }),
+      }
+    }
+    case 'qbank': {
+      // In-progress sets resolve too (a tutor-mode miss is a mistake-log
+      // origin before the set is finished); only graded questions come back.
+      const q = await prisma.qbankSession.findFirst({ where: { id, userId } })
+      if (!q) return null
+      const course = q.course === 'sat' ? 'sat' : 'mcat'
+      // CARS questions carry their reasoning skill for the Report tab; SAT
+      // questions carry authored per-option notes when the item has them.
+      const items = qbankReviewItems(q).map((i) => {
+        if (!i) return i
+        if (course === 'mcat') {
+          const skill = carsSkillForKey(i.questionKey)
+          return skill ? { ...i, skill } : i
+        }
+        const optionExplanations = i.gridIn ? undefined : satOptionExplanationsFor(i.questionKey, i.options)
+        return optionExplanations ? { ...i, optionExplanations } : i
+      })
+      const correct = q.correct ?? items.filter((i) => i && (i.gridIn ? i.correct : i.chosenIndex === i.correctIndex)).length
+      return {
+        kind, id, course, takenAt: iso(q.completedAt ?? q.startedAt),
+        title: `${course.toUpperCase()} practice set · ${q.mode === 'timed' ? 'Timed' : 'Tutor'}${q.completedAt ? '' : ' (in progress)'}`,
+        score: { correct, total: q.total },
+        backHref: `/${course}/qbank`,
+        items,
       }
     }
   }

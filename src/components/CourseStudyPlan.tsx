@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import { useSession } from 'next-auth/react'
 import Link from 'next/link'
-import { ArrowRight, ListChecks } from 'lucide-react'
+import { ArrowRight, ListChecks, SlidersHorizontal } from 'lucide-react'
 import { formatTimeUntil } from '@/lib/format-due-time'
 import { studyPlanTopicHref } from '@/lib/dashboard-next-step'
 import { courseDiagnosticForKey } from '@/lib/student-courses'
@@ -12,6 +12,7 @@ import { unitTestIsNextStep } from '@/lib/unit-test-courses'
 import type { PlanTopic } from '@/components/StudyPlanNextUp'
 import HelpLink, { HELP_ARTICLES } from '@/components/HelpLink'
 import FullLengthProgress from '@/components/FullLengthProgress'
+import ExamGoalCard from '@/components/ExamGoalCard'
 import { isFullLengthCourse } from '@/lib/full-length-progress'
 
 type PlanTopicStatus = PlanTopic & {
@@ -285,6 +286,11 @@ export default function CourseStudyPlan({
           <FullLengthProgress course={courseKey} />
         )}
 
+        {/* Target score (and schools) against the latest full-length score */}
+        {status === 'authenticated' && loaded && isFullLengthCourse(courseKey) && (
+          <ExamGoalCard course={courseKey} />
+        )}
+
         {/* Missed and flagged questions, until answered correctly twice (MCAT, SAT) */}
         {status === 'authenticated' && loaded && (courseKey === 'mcat' || courseKey === 'sat') && (
           <Link
@@ -294,6 +300,19 @@ export default function CourseStudyPlan({
             <ListChecks className="h-4 w-4 shrink-0 text-accent" aria-hidden />
             <span className="font-medium">Your mistake log</span>
             <span className="hidden text-gray-500 sm:inline dark:text-gray-400">· questions you missed or flagged, ready to re-quiz</span>
+            <ArrowRight className="ml-auto h-4 w-4 shrink-0" aria-hidden />
+          </Link>
+        )}
+
+        {/* Custom question bank: pick sections, topics, difficulty, timed or tutor (MCAT, SAT) */}
+        {status === 'authenticated' && loaded && (courseKey === 'mcat' || courseKey === 'sat') && (
+          <Link
+            href={`/${courseKey}/qbank`}
+            className="flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm text-gray-700 transition hover:border-accent-muted hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200"
+          >
+            <SlidersHorizontal className="h-4 w-4 shrink-0 text-accent" aria-hidden />
+            <span className="font-medium">Build a practice set</span>
+            <span className="hidden text-gray-500 sm:inline dark:text-gray-400">· your sections, topics and difficulty, timed or tutor</span>
             <ArrowRight className="ml-auto h-4 w-4 shrink-0" aria-hidden />
           </Link>
         )}

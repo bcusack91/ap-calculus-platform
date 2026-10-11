@@ -30,6 +30,12 @@ export const FL1_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Inulin clearance equals GFR: $C = UV/P = (200\\ \\text{mg/dL} \\times 0.30\\ \\text{mL/min})/(2.0\\ \\text{mg/dL}) = 30$ mL/min, one quarter of the baseline value of $(120 \\times 2.0)/2.0 = 120$ mL/min. The 60 mL/min value multiplies urine concentration by flow but omits the division by plasma concentration. The 100 mL/min value divides the urine concentration by the plasma concentration and omits the urine flow rate. The 3.0 mL/min value is a factor-of-ten slip.',
+        optionExplanations: [
+          'A value of 3.0 mL/min is a factor-of-ten slip in the clearance calculation. $UV/P$ with $U$ = 200 mg/dL, $V$ = 0.30 mL/min, and $P$ = 2.0 mg/dL gives 30, not 3.',
+          'Inulin clearance equals GFR: $C = UV/P = (200 \\times 0.30)/2.0 = 30$ mL/min, one quarter of the baseline value of $(120 \\times 2.0)/2.0 = 120$ mL/min.',
+          'A value of 60 mL/min multiplies urine inulin concentration by urine flow (200 × 0.30) but omits the division by plasma inulin concentration (2.0 mg/dL).',
+          'A value of 100 mL/min divides urine inulin by plasma inulin (200/2.0) but omits the urine flow rate of 0.30 mL/min entirely.',
+        ],
         skill: '3B renal clearance',
       },
       {
@@ -38,6 +44,12 @@ export const FL1_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'At baseline, MAP = 84 + (120 − 84)/3 = 96 mmHg and CO = 75 beats/min × 80 mL = 6.0 L/min, so TPR = MAP/CO = 16 mmHg·min/L. After 30% hemorrhage, MAP = 46 + (76 − 46)/3 = 56 mmHg and CO = 140 × 20 mL = 2.8 L/min, so TPR = 56/2.8 = 20 mmHg·min/L, about 25% higher, as expected from sympathetic vasoconstriction and angiotensin II. The 40% figure is the fall in MAP alone, ignoring the larger fall in cardiac output. The 20% figure comes from inverting the ratio (CO/MAP). Resistance could be unchanged only if MAP and CO had fallen by the same fraction, but CO fell by more than half while MAP fell by about 40%.',
+        optionExplanations: [
+          'Roughly 40% lower is the fall in MAP alone (96 → 56 mmHg). Resistance is MAP divided by cardiac output, and CO fell by more than half, so TPR actually rose.',
+          'Roughly 20% lower comes from inverting the ratio (computing CO/MAP instead of MAP/CO). Vasoconstriction by sympathetic outflow and angiotensin II raises resistance after hemorrhage.',
+          'Resistance could be unchanged only if MAP and CO had fallen by the same fraction. CO fell from 6.0 to 2.8 L/min (over half) while MAP fell about 40%, so TPR must have risen.',
+          'Baseline MAP = 84 + 36/3 = 96 mmHg and CO = 75 × 80 mL = 6.0 L/min, so TPR = 16. After 30% hemorrhage MAP = 46 + 30/3 = 56 and CO = 140 × 20 mL = 2.8 L/min, so TPR = 20, about 25% higher.',
+        ],
         skill: '3B cardiovascular physiology',
       },
       {
@@ -51,6 +63,12 @@ export const FL1_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'From Table 1, GFR after 10% hemorrhage is $(240 \\times 1.0)/2.0 = 120$ mL/min, identical to baseline, and MAP is 88 + 30/3 = 98 mmHg, within the autoregulatory range given in the passage. With the same volume filtered but half the urine produced, a larger fraction of the filtrate was reabsorbed, which is what increased aldosterone and antidiuretic hormone release during volume loss would produce. Both the option invoking a fall below the autoregulatory range and the option invoking afferent constriction claim that filtration was halved, which the clearance data contradict. Plasma inulin was held constant at 2.0 mg/dL, so the filtered load did not fall; the doubling of urinary inulin concentration reflects water removal from an unchanged filtered load.',
+        optionExplanations: [
+          'GFR after 10% hemorrhage is $(240 \\times 1.0)/2.0 = 120$ mL/min, identical to baseline, and MAP (98 mmHg) is within the autoregulatory range. Same filtrate, half the urine: a larger fraction was reabsorbed, as aldosterone and ADH release during volume loss would produce.',
+          'MAP after 10% hemorrhage is 88 + 30/3 = 98 mmHg, within the 80–180 mmHg autoregulatory range, and inulin clearance shows GFR unchanged at 120 mL/min. Filtration did not fall.',
+          'The clearance data contradict a halved filtration rate: urine inulin doubled while flow halved, giving the same 120 mL/min GFR as baseline. Afferent constriction sufficient to halve GFR did not occur.',
+          'Plasma inulin was held constant at 2.0 mg/dL by continuous infusion, so the filtered load did not fall. The doubled urinary inulin concentration reflects water removal from an unchanged filtered load.',
+        ],
         skill: '3B renal physiology',
       },
       {
@@ -64,6 +82,12 @@ export const FL1_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'GFR in Group 2 is $(120 \\times 0.20)/2.0 = 12$ mL/min, versus 30 mL/min after hemorrhage alone. The passage states that angiotensin II constricts the efferent arteriole more than the afferent; when renal perfusion is low, that preferential efferent constriction props up the hydrostatic pressure in the glomerular capillaries. Blocking angiotensin II formation removes this support (and lowers MAP further, to 48 mmHg), so filtration falls. Plasma renin activity actually rose to 20 ng/mL/h in Group 2, because angiotensin II normally suppresses renin release, so the first option contradicts the data. Angiotensin II does not dilate the afferent arteriole; afferent dilation is part of intrinsic autoregulation, not of the renin system. Aldosterone acts on tubular sodium reabsorption, which affects urine composition rather than the filtration rate.',
+        optionExplanations: [
+          'Plasma renin activity actually rose to 20 ng/mL/h in Group 2, because angiotensin II normally suppresses renin release. The ACE inhibitor did not lower PRA; it removed the feedback that restrains it.',
+          'Angiotensin II does not dilate the afferent arteriole; afferent dilation is part of intrinsic autoregulation, not the renin system. Blocking ACE removes efferent constriction, not afferent dilation.',
+          'Angiotensin II constricts the efferent arteriole more than the afferent, propping up glomerular capillary pressure when perfusion is low. Blocking its formation removes that support (and lowers MAP to 48 mmHg), so GFR falls to $(120 \\times 0.20)/2.0 = 12$ mL/min.',
+          'Aldosterone acts on tubular sodium reabsorption in the distal nephron, which affects urine composition and volume but not the rate of filtration at the glomerulus.',
+        ],
         skill: '3B renal physiology',
       },
       {
@@ -77,6 +101,12 @@ export const FL1_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The drug measurements were taken 20 minutes after the 30% hemorrhage measurement, so continued reflex compensation and movement of interstitial fluid into the plasma could have raised GFR over that interval even without a drug. A time-matched vehicle group isolates the drug effect from the effect of elapsed time. Giving the agonist without hemorrhage tests a different question (its effect in normovolemia). Combining both drugs confounds two interventions. Reinfusing the blood removes the hypovolemia that the study is about.',
+        optionExplanations: [
+          'Giving the agonist without hemorrhage tests its effect in normovolemia, a different question. It does not control for time-dependent recovery after hemorrhage in the drug groups.',
+          'Drug measurements were taken 20 minutes after the 30% hemorrhage measurement. Continued reflex compensation and fluid shifts could raise GFR over that interval without any drug, so a time-matched vehicle group isolates the drug effect.',
+          'Combining both drugs confounds two interventions with opposing effects on angiotensin signaling and vascular tone, making it impossible to attribute any change to the agonist alone.',
+          'Reinfusing the withdrawn blood removes the hypovolemia that the study is about; the agonist’s effect would then be tested in a restored circulation, not after hemorrhage.',
+        ],
         skill: '3B research design',
       },
     ],
@@ -105,6 +135,12 @@ export const FL1_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Reverse transcriptase acts only between entry and integration, converting the RNA genome into DNA. Once the provirus is in the chromosome, host RNA polymerase II makes both the viral mRNAs and the new genomic RNAs, and host ribosomes make the viral proteins, so a producer cell keeps releasing virions; the drug would instead block those virions from establishing new proviruses in other cells. Genomic RNA is transcribed from the provirus, not made by reverse transcriptase. The provirus is transcribed in place and is never excised. Envelope glycoproteins are translated from viral mRNA by host ribosomes and are unaffected by the drug.',
+        optionExplanations: [
+          'Genomic RNA for new virions is transcribed from the integrated provirus by host RNA polymerase II, not synthesized by reverse transcriptase, which makes DNA from RNA only before integration.',
+          'The provirus is transcribed in place and is never excised. Reverse transcriptase has no excision role; integrase inserted the DNA, and expression proceeds like that of a cellular gene.',
+          'Reverse transcriptase acts only between entry and integration. Once the provirus is in the chromosome, host RNA polymerase II makes viral mRNAs and genomic RNAs and host ribosomes make the proteins, so virion release continues.',
+          'Envelope glycoproteins are translated from viral mRNA by host ribosomes and inserted into the plasma membrane; reverse transcriptase inhibition does not affect them. Released virions would be fully infectious until they try to reverse-transcribe.',
+        ],
         skill: '2B viral life cycles',
       },
       {
@@ -118,6 +154,12 @@ export const FL1_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Only his⁺ str^R cells grow on minimal medium with streptomycin, so the colonies are strain 1 cells that acquired his⁺ from strain 2. Transfer was insensitive to DNase, which rules out uptake of naked DNA (transformation), and it required that the two populations be able to touch, which rules out phage-mediated transfer (phage particles pass the filter) and points to the cell-to-cell contact that conjugation requires. Spontaneous reversion is excluded by the control in which strain 1 alone produced no colonies.',
+        optionExplanations: [
+          'Transformation requires uptake of naked DNA and is abolished by DNase. Here colonies still formed when DNase was present, so naked DNA was not the vehicle.',
+          'Phage particles pass through the filter, yet no colonies formed when the strains were separated by it. Transduction would have worked across the filter, so it is excluded.',
+          'Spontaneous reversion is excluded by the control in which strain 1 alone was incubated and plated and produced no colonies.',
+          'Transfer was DNase-insensitive (not transformation) and required that the two populations touch (not phage-mediated, since phage pass the filter). Direct cell-to-cell contact is the hallmark of conjugation, with his⁺ passing from strain 2 to str^R strain 1.',
+        ],
         skill: '2B bacterial genetics',
       },
       {
@@ -131,6 +173,12 @@ export const FL1_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Specialized transducing particles form when a prophage excises imprecisely, so the only host DNA they can carry is the DNA that flanks the attachment site; with a single site between *gal* and *bio*, those are the genes that can be transduced, and because the excised segment is a hybrid, the particle also carries phage genes. Nothing in the mechanism restricts recipients to lysogens, and only flanking genes, not any gene, are transferred. Prophages do excise when the lytic cycle is induced, and the DNA they carry is chromosomal, not plasmid. Random fragments are the signature of generalized transduction, not of a prophage.',
+        optionExplanations: [
+          'Specialized transducing particles form when a prophage excises imprecisely, carrying only the host DNA flanking its attachment site. With a single site between *gal* and *bio*, those are the transferable genes, and the hybrid segment also carries phage DNA.',
+          'Nothing in the mechanism restricts recipients to lysogens, and only the flanking genes, not any chromosomal gene, can be carried. Transfer of any gene is the signature of generalized transduction.',
+          'Prophages do excise when the lytic cycle is induced by stress, and the DNA they carry during imprecise excision is chromosomal, specifically the genes adjacent to the attachment site, not plasmid DNA.',
+          'Random chromosomal fragments are the signature of generalized transduction by a lytic phage that mispackages degraded host DNA. A prophage carries only the specific flanking genes, not random fragments.',
+        ],
         skill: '2B transduction',
       },
       {
@@ -144,6 +192,12 @@ export const FL1_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The phage depends on the host RNA polymerase to transcribe its early genes, and the retroviral provirus is transcribed by host RNA polymerase II, so neither virus can make mRNA or, for the retrovirus, new genomic RNA when the host enzyme is blocked. The polymerase the retrovirus carries is reverse transcriptase, an RNA-dependent DNA polymerase that makes DNA from RNA; it does not make mRNA. The phage-encoded DNA polymerase replicates DNA but cannot transcribe it, and it is itself made only after early transcription. Both viruses require transcription to produce the proteins of new virions.',
+        optionExplanations: [
+          'The polymerase the retrovirus carries is reverse transcriptase, an RNA-dependent DNA polymerase that makes DNA from RNA. It does not make mRNA, so the retrovirus still needs host RNA polymerase II for transcription.',
+          'The phage-encoded DNA polymerase replicates DNA but cannot transcribe it, and it is itself made only after the host RNA polymerase transcribes the early phage genes. The phage is also blocked.',
+          'The phage depends on host RNA polymerase to transcribe its early genes, and the retroviral provirus is transcribed by host RNA polymerase II. Neither can make mRNA (or new genomic RNA for the retrovirus) with the host enzyme blocked.',
+          'Both viruses require transcription to produce the proteins of new virions, and the retrovirus also needs transcription to produce genomic RNA. Neither copies its genome without transcription.',
+        ],
         skill: '2B viral gene expression',
       },
     ],
@@ -185,6 +239,12 @@ export const FL1_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           '$K_{0.5}$ is the substrate concentration at which velocity is half of $V_{max}$. The no-effector curve crosses 50% of $V_{max}$ at 1.0 mM PEP. At 0.5 mM the same curve is only about 11% of maximal, so 0.5 mM is far below $K_{0.5}$. The 0.2 mM value is roughly where the F1,6BP curve reaches half-maximal velocity, and 2.0 mM is where the ATP-plus-alanine curve does, so those values describe the effector-bound enzyme rather than the enzyme alone.',
+        optionExplanations: [
+          'At 0.2 mM the no-effector curve is near zero. This value is roughly where the F1,6BP curve reaches half-maximal velocity, describing the activator-bound enzyme rather than the enzyme alone.',
+          'At 0.5 mM the no-effector curve is only about 11% of maximal, far below the half-maximal point. The sigmoidal rise has barely begun at this concentration.',
+          '$K_{0.5}$ is the substrate concentration giving half-maximal velocity. The no-effector curve crosses 50% of $V_{max}$ at exactly 1.0 mM PEP.',
+          'At 2.0 mM the no-effector curve is at about 89% of maximal. This value is roughly where the ATP-plus-alanine curve reaches half-maximal velocity, describing the inhibited enzyme.',
+        ],
         skill: '1A enzyme kinetics',
       },
       {
@@ -198,6 +258,12 @@ export const FL1_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'With F1,6BP the curve becomes hyperbolic and reaches half-maximal velocity at a much lower PEP concentration, but it approaches the same plateau as the enzyme alone. A sigmoidal curve arises because early substrate binding must first convert subunits from the T to the R state; an activator that stabilizes the R state removes that requirement, so affinity is high from the start and the Hill coefficient falls toward 1 (compare the value of 1.1 in Table 1). A change in catalytic rate would raise the plateau, which is not observed. A competitor at the active site would lower velocity at low PEP, the opposite of what is seen. Monomers with lower affinity would shift the curve to the right, not the left.',
+        optionExplanations: [
+          'A change in catalytic rate would raise the plateau, but the F1,6BP curve approaches the same maximum as the enzyme alone. The change is in affinity and shape, not in $V_{max}$.',
+          'With F1,6BP the curve becomes hyperbolic and reaches half-maximum at much lower PEP, yet approaches the same plateau. An activator that stabilizes the R state makes affinity high from the start, so cooperativity disappears (Hill coefficient near 1.1 in Table 1).',
+          'A competitor at the active site would lower velocity at low PEP, the opposite of what is seen. F1,6BP binds an allosteric site distinct from the active site, as the passage states.',
+          'Monomers with lower affinity would shift the curve to the right (higher $K_{0.5}$), not to the left. The passage describes L-PK as a tetramer whose subunits are stabilized in the R state by activators.',
+        ],
         skill: '1A allosteric regulation',
       },
       {
@@ -211,6 +277,12 @@ export const FL1_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Phosphorylation raises $K_{0.5}$ from about 1.0 mM (Figure 1) to 2.5 mM (Table 1), but adding F1,6BP to the phosphorylated enzyme lowers $K_{0.5}$ to 0.3 mM with a Hill coefficient near 1, almost the same state the activator produces in the unphosphorylated enzyme (about 0.2 mM). Abundant F1,6BP, a signal that glycolysis is running upstream, therefore overrides most of the glucagon-driven inhibition. The phosphorylated enzyme clearly still binds the activator, and activity rises rather than falls. $V_{max}$ stays at 100% in every row of Table 1, so the activator does not raise the maximal velocity.',
+        optionExplanations: [
+          'Table 1 shows that F1,6BP lowers the phosphorylated enzyme’s $K_{0.5}$ from 2.5 to 0.3 mM and its Hill coefficient from 3.0 to 1.1. The phosphorylated enzyme clearly still binds and responds to the activator.',
+          'F1,6BP favors the R state while phosphorylation favors the T state, opposite conformations. Table 1 shows activity rises with F1,6BP (lower $K_{0.5}$), not falls.',
+          '$V_{max}$ stays at 100% in every row of Table 1, so the activator does not raise the maximal velocity of the phosphorylated enzyme above that of the unphosphorylated enzyme.',
+          'Phosphorylation raises $K_{0.5}$ from about 1.0 mM to 2.5 mM, but F1,6BP lowers it to 0.3 mM with a Hill coefficient near 1, nearly the state the activator produces in the unphosphorylated enzyme. Abundant F1,6BP overrides most of the glucagon-driven inhibition.',
+        ],
         skill: '1A covalent modification',
       },
       {
@@ -224,6 +296,12 @@ export const FL1_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Alanine is formed from pyruvate by transamination, so it rises when pyruvate, the product of the pyruvate kinase reaction, is plentiful; an end product that inhibits an earlier enzyme in its own pathway is the definition of feedback inhibition. The passage places alanine at an allosteric site, not the active site, and alanine does not resemble PEP. It is not a cofactor for the reaction, and it is derived from the product, not from a precursor of the substrate.',
+        optionExplanations: [
+          'Alanine is formed from pyruvate by transamination, so it rises when pyruvate, the product of the pyruvate kinase reaction, is plentiful. An end product inhibiting an earlier enzyme in its own pathway is the definition of feedback inhibition.',
+          'The passage places alanine at a separate allosteric site, not the active site, and alanine does not structurally resemble PEP. Competitive inhibition at the active site is not feedback inhibition.',
+          'Alanine is not a cofactor for the phosphoryl transfer. The reaction requires PEP, ADP, and divalent cations; alanine’s role is purely regulatory.',
+          'Alanine is derived from the product (pyruvate), not from a precursor of the substrate PEP. Accumulation of a downstream product, not an upstream intermediate, is what defines feedback.',
+        ],
         skill: '1A feedback inhibition',
       },
       {
@@ -237,6 +315,12 @@ export const FL1_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The measured quantity is NADH oxidation, which equals the rate of pyruvate formation only if the coupling enzyme never limits the rate; with lactate dehydrogenase and NADH in large excess, every pyruvate molecule is reduced immediately and the absorbance change tracks L-PK. Keeping NADH below the $K_m$ of lactate dehydrogenase would make the coupling step slow and dependent on NADH concentration. Adding pyruvate at the start would consume NADH for reasons unrelated to L-PK activity. ADP is a substrate of pyruvate kinase, so omitting it would abolish the reaction being measured.',
+        optionExplanations: [
+          'Keeping NADH below the $K_m$ of lactate dehydrogenase would make the coupling step slow and dependent on NADH concentration, so the measured rate would no longer track L-PK.',
+          'Adding pyruvate at the start would consume NADH for reasons unrelated to L-PK activity, producing a background absorbance change that obscures the reaction of interest.',
+          'ADP is a substrate of pyruvate kinase; omitting it would abolish the reaction being measured. The passage specifies saturating ADP.',
+          'The measured quantity is NADH oxidation, which equals pyruvate formation only if the coupling enzyme never limits the rate. With lactate dehydrogenase in excess, every pyruvate molecule is reduced immediately and absorbance tracks L-PK.',
+        ],
         skill: '1A experimental methods',
       },
     ],
@@ -267,6 +351,12 @@ export const FL1_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Forskolin activates adenylyl cyclase without any G protein. In the null cells, forskolin raised cAMP to 38 pmol and glycerol release to 92 nmol/h, essentially the wild-type response, while agonist did nothing, so the cyclase and everything downstream of it are intact and the block lies at the missing $\\text{G}\\alpha_s$. Comparing null and wild-type cells given agonist shows only that the null cells fail to respond, not why. The antagonist comparison tests the receptor, and the PDE-inhibitor comparison tests cAMP degradation; neither involves the null cells.',
+        optionExplanations: [
+          'Comparing null and wild-type cells given agonist shows only that the null cells fail to respond. It does not reveal whether the defect is at $\\text{G}\\alpha_s$ or downstream at adenylyl cyclase.',
+          'Forskolin activates adenylyl cyclase without any G protein. In null cells forskolin raised cAMP to 38 and glycerol to 92, essentially wild-type, while agonist did nothing, so the cyclase and everything downstream are intact and the block is the missing $\\text{G}\\alpha_s$.',
+          'The antagonist comparison tests whether the receptor is required in wild-type cells. It involves no null cells and says nothing about their adenylyl cyclase.',
+          'The PDE-inhibitor comparison tests cAMP degradation in wild-type cells. It involves no null cells and does not address whether their adenylyl cyclase functions.',
+        ],
         skill: '2A signal transduction',
       },
       {
@@ -280,6 +370,12 @@ export const FL1_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'With the PKA inhibitor present, agonist still raised cAMP to 41 pmol, the same as without the inhibitor, yet glycerol release stayed near the vehicle level (14 versus 10 nmol/h). cAMP production is therefore upstream of, and independent of, PKA, whereas the lipolytic response requires PKA activity. If PKA were needed to activate the cyclase, cAMP would not have risen. If cAMP could activate the lipase directly, glycerol release would have been high despite the inhibitor. Blocked receptor binding would have prevented the rise in cAMP, which was not observed.',
+        optionExplanations: [
+          'If PKA were needed to activate the cyclase, cAMP would not have risen with the PKA inhibitor present. It rose to 41 pmol, the same as agonist alone, so cyclase activation is PKA-independent.',
+          'If cAMP could activate the lipase directly, glycerol release would have been high despite the PKA inhibitor. Instead it stayed near vehicle level (14 vs 10), so cAMP acts through PKA.',
+          'With the PKA inhibitor, agonist still raised cAMP to 41 pmol (same as without inhibitor), yet glycerol release stayed near vehicle level (14 vs 10). cAMP production is upstream of PKA; lipolysis requires PKA.',
+          'Blocked receptor binding would have prevented the rise in cAMP, which was not observed. cAMP reached 41 pmol with the PKA inhibitor present, so the receptor and $\\text{G}\\alpha_s$ functioned normally.',
+        ],
         skill: '2A signal transduction',
       },
       {
@@ -293,6 +389,12 @@ export const FL1_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The relationship between cAMP and lipolysis is steep and saturable: the PDE inhibitor alone, which raised cAMP only to 12 pmol, already produced about half of the maximal glycerol release, and agonist alone (40 pmol) produced 95 nmol/h. Once the lipase is fully activated, additional cAMP cannot increase the rate further, so tripling cAMP adds almost nothing. cAMP binding releases PKA catalytic subunits; more cAMP does not drive reassociation. A direct inhibitory effect of the PDE inhibitor on the lipase is contradicted by the increase in lipolysis it produced on its own. cAMP is downstream of $\\text{G}\\alpha_s$, and GTP is not depleted by cAMP accumulation.',
+        optionExplanations: [
+          'The cAMP–lipolysis relationship is steep and saturable: the PDE inhibitor alone (12 pmol cAMP) already gave about half-maximal glycerol release, and agonist alone (40 pmol) gave 95. Once the lipase is fully activated, extra cAMP adds nothing.',
+          'cAMP binding releases PKA catalytic subunits from the regulatory subunits; more cAMP does not drive reassociation. This reverses the described mechanism of PKA activation.',
+          'A direct inhibitory effect of the PDE inhibitor on the lipase is contradicted by the increase in lipolysis it produced on its own (45 nmol/h versus 10 with vehicle).',
+          'cAMP is downstream of $\\text{G}\\alpha_s$, and GTP is not depleted by cAMP accumulation. In any case cAMP tripled, so receptor signaling was not limited; the ceiling is downstream.',
+        ],
         skill: '2A data interpretation',
       },
       {
@@ -306,6 +408,12 @@ export const FL1_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Forskolin activates adenylyl cyclase while bypassing the receptor and the G protein. If cAMP and glycerol release rise normally in the presence of the antagonist, the antagonist does not inhibit the cyclase, so its effect must be exerted upstream, at the receptor. Null cells do not respond to agonist even without antagonist, so adding antagonist to them reveals nothing. A PDE inhibitor raises cAMP by blocking degradation rather than by activating the cyclase, so that combination would not test the cyclase directly. Antagonist alone shows only whether the compound has activity of its own.',
+        optionExplanations: [
+          'Null cells do not respond to agonist even without antagonist (cAMP 2, glycerol 11), so adding antagonist to them reveals nothing about where the antagonist acts.',
+          'A PDE inhibitor raises cAMP by blocking degradation rather than by activating adenylyl cyclase, so this combination would not test whether the antagonist affects the cyclase directly.',
+          'Antagonist alone shows only whether the compound has activity of its own in the absence of agonist. It does not distinguish receptor blockade from cyclase inhibition.',
+          'Forskolin activates adenylyl cyclase while bypassing the receptor and G protein. If cAMP and glycerol release rise normally with the antagonist present, the antagonist does not inhibit the cyclase, so it must act upstream at the receptor.',
+        ],
         skill: '2A research design',
       },
     ],
@@ -334,6 +442,12 @@ export const FL1_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'On the mainland the heterozygote is the fittest genotype, so both alleles persist. On the island the heterozygote is no longer fitter than AA; the only remaining selection is against SS homozygotes, so S declines each generation. Because a rare allele is carried almost entirely by heterozygotes, which are fully fit here, the decline becomes very slow and S lingers at low frequency rather than vanishing quickly. Its frequency cannot stay constant while SS individuals leave fewer offspring, and it cannot rise, since no genotype carrying S is fitter than AA. Loss in one generation would require every S copy to be in an SS individual and all of those to fail, which is impossible when most copies sit in heterozygotes.',
+        optionExplanations: [
+          'On the island the heterozygote is no longer fitter than AA; the only remaining selection is against SS, so S declines. Because a rare allele sits mostly in fully fit heterozygotes, the decline slows and S lingers at low frequency.',
+          'S cannot stay at its mainland frequency while SS individuals leave fewer offspring. Heterozygote advantage, which maintained S on the mainland, no longer exists once AA is equally fit.',
+          'S cannot rise, since no genotype carrying S is fitter than AA. Equal fitness of AS and AA removes the advantage, and SS is still selected against, so the net direction is downward.',
+          'Loss in one generation would require every S copy to be in an SS individual and all of those to fail. Most S copies sit in heterozygotes, which are fully fit, so S persists.',
+        ],
         skill: '1C natural selection',
       },
       {
@@ -347,6 +461,12 @@ export const FL1_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Drift acts on all loci at the same time, so a founder event or bottleneck that fixed this allele by chance should also have stripped variation from unrelated, neutral loci; selection on one allele would not. A different environment and a demonstrated survival advantage both point toward selection, not away from it. A founding group of several hundred individuals would make drift weaker, which argues against, not for, drift as the explanation.',
+        optionExplanations: [
+          'A different environment in predators and diet points toward natural selection acting on the allele, not away from it. It provides a plausible selective agent, which is the opposite of what is asked.',
+          'A demonstrated survival advantage is direct evidence for selection as the cause of fixation. It argues against drift, which fixes alleles regardless of fitness.',
+          'A founding group of several hundred individuals would make drift weaker, not stronger. Drift is potent only in small populations, so this argues against drift as the explanation.',
+          'Drift acts on all loci at once, so a founder event or bottleneck that fixed this allele by chance should also have stripped variation from unrelated neutral loci. Selection on one allele would not.',
+        ],
         skill: '1C genetic drift',
       },
       {
@@ -360,6 +480,12 @@ export const FL1_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Inbreeding pairs related individuals, so alleles are combined into homozygotes more often than random mating would produce; the proportion of heterozygotes falls and that of both homozygotes rises. No alleles are added or removed by mating pattern alone, so the frequencies of the alleles themselves are unchanged unless selection then acts on the homozygotes. Allele frequencies changing without genotype frequencies changing is impossible, since genotype frequencies are built from the allele frequencies. Nothing changing would require random mating, the assumption that inbreeding violates.',
+        optionExplanations: [
+          'Allele frequencies changing without genotype frequencies changing is impossible, since genotype frequencies are built from allele frequencies. Inbreeding also does not change allele frequencies.',
+          'Inbreeding combines alleles into homozygotes more often than random mating, so heterozygotes fall and both homozygotes rise. No alleles are added or removed by mating pattern alone, so allele frequencies are unchanged.',
+          'Allele frequencies do not change under inbreeding alone, without selection, mutation, or migration. Only the arrangement of alleles into genotypes shifts toward homozygosity.',
+          'Nothing changing would require random mating, the very assumption inbreeding violates. Genotype frequencies must shift toward homozygotes.',
+        ],
         skill: '1C Hardy–Weinberg assumptions',
       },
       {
@@ -373,6 +499,12 @@ export const FL1_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Mating and fertilization occur, so no prezygotic barrier exists; the barrier is the sterility of the hybrids, which is a postzygotic form of isolation. Because sterile hybrids cannot pass alleles on, there is no effective gene flow, and the populations qualify as separate species under the biological species concept. Divergence took place while the populations were separated by open water, so the speciation was allopatric, not sympatric.',
+        optionExplanations: [
+          'Sterile hybrids cannot pass alleles on, so there is no effective gene flow even though mating occurs. Under the biological species concept the populations are separate species.',
+          'Mating and fertilization occur readily, and eggs hatch, so no prezygotic barrier exists. The barrier acts after the zygote forms, when the hybrids prove sterile.',
+          'Mating and fertilization occur, so the barrier is not prezygotic; the hybrids are sterile, which is postzygotic isolation. Divergence took place while separated by open water, making the speciation allopatric.',
+          'Divergence occurred while the populations were separated by open water for 100,000 years, which is allopatric, not sympatric. The barrier is also postzygotic, not prezygotic, since mating succeeds.',
+        ],
         skill: '1C speciation',
       },
     ],
@@ -389,6 +521,12 @@ export const FL1_BIO_BIOCHEM_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'The endoderm forms the epithelial lining of the digestive tube and its outgrowths, including the respiratory epithelium, the liver, the pancreas, and the thyroid. The adrenal medulla is derived from neural crest (ectoderm), the kidney tubules from intermediate mesoderm, and the lens from surface ectoderm.',
+    optionExplanations: [
+      'The adrenal medulla is derived from neural crest cells, which are ectodermal in origin, not endodermal.',
+      'Endoderm forms the epithelial lining of the digestive tube and its outgrowths, including the respiratory epithelium that lines the lungs, as well as the liver, pancreas, and thyroid.',
+      'The collecting tubules and other kidney structures derive from intermediate mesoderm, not endoderm.',
+      'The lens of the eye develops from surface ectoderm that invaginates in response to the optic cup, not from endoderm.',
+    ],
     skill: '2C embryology',
   },
   {
@@ -405,6 +543,12 @@ export const FL1_BIO_BIOCHEM_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'Bile salts emulsify dietary fat and form mixed micelles that carry the products of lipid digestion, including the fat-soluble vitamins A, D, E, and K, to the brush border. Without bile, vitamin K absorption falls sharply. Glucose is absorbed by sodium-coupled transport that does not involve bile, trypsin is a pancreatic enzyme activated in the duodenum independently of bile, and vitamin C is water-soluble and needs no micelles.',
+    optionExplanations: [
+      'Bile salts emulsify dietary fat and form mixed micelles that carry lipid digestion products, including fat-soluble vitamins A, D, E, and K, to the brush border. Without bile, vitamin K absorption falls sharply.',
+      'Glucose is absorbed by sodium-coupled transport (SGLT1) across the intestinal epithelium, a process that does not involve bile or micelles.',
+      'Trypsin is a pancreatic enzyme activated in the duodenum by enteropeptidase, independently of bile. Pancreatic secretion is stated to be normal, so protein digestion proceeds.',
+      'Vitamin C is water-soluble and is absorbed directly without the need for micelles, so bile obstruction does not impair its uptake.',
+    ],
     skill: '3B digestion and absorption',
   },
   {
@@ -421,6 +565,12 @@ export const FL1_BIO_BIOCHEM_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'In the cross-bridge cycle, a myosin head detaches from actin only when a new ATP molecule binds to it; without ATP, heads that have completed their power stroke stay bound, producing the rigid state seen in rigor mortis. Failure of calcium release or tropomyosin remaining in the blocking position would prevent cross-bridge formation and leave the muscle flaccid rather than stiff. Acetylcholine is removed by acetylcholinesterase, which does not require ATP, and stimulation cannot produce force without ATP anyway.',
+    optionExplanations: [
+      'Failure of calcium release would prevent cross-bridge formation and leave the muscle flaccid, not stiff. The stiffness indicates cross-bridges are formed and cannot release.',
+      'Tropomyosin remaining in the blocking position would prevent myosin from binding actin, producing a relaxed, flaccid muscle rather than a rigid one.',
+      'In the cross-bridge cycle a myosin head detaches from actin only when a new ATP molecule binds it. Without ATP, heads that completed their power stroke stay bound, producing the rigid state seen in rigor mortis.',
+      'Acetylcholine is removed by acetylcholinesterase, which does not require ATP, and continuous stimulation could not produce force without ATP anyway.',
+    ],
     skill: '3B muscle contraction',
   },
   {
@@ -437,6 +587,12 @@ export const FL1_BIO_BIOCHEM_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'The 3′→5′ exonuclease is the proofreading activity that removes a mismatched nucleotide immediately after it is added; without it, misincorporated bases persist and become point mutations after the next round of replication. Okazaki fragment length is set by primer spacing on the lagging strand, not by proofreading. Bacterial chromosomes use a single origin regardless of polymerase fidelity. Primer removal depends on the 5′→3′ exonuclease of a separate repair polymerase, which is unaffected.',
+    optionExplanations: [
+      'The 3′→5′ exonuclease is the proofreading activity that removes a mismatched nucleotide right after it is added. Without it, misincorporated bases persist and become point mutations after the next replication round.',
+      'Okazaki fragment length is set by primer spacing on the lagging strand, not by proofreading. Loss of exonuclease activity does not change how often primase lays down primers.',
+      'Bacterial chromosomes use a single origin of replication regardless of polymerase fidelity. Proofreading has no bearing on origin usage.',
+      'Primer removal depends on the 5′→3′ exonuclease of a separate repair polymerase (DNA polymerase I), which is unaffected by this mutation in the replicative polymerase.',
+    ],
     skill: '1B DNA replication',
   },
   {
@@ -453,6 +609,12 @@ export const FL1_BIO_BIOCHEM_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'The rate of diffusion across the respiratory membrane is proportional to surface area and partial-pressure gradient and inversely proportional to the thickness of the barrier; a layer of fluid lengthens the diffusion path, and oxygen, which is much less soluble in water than carbon dioxide, is affected most. Inspired air is unchanged by fluid inside the lung. A rightward shift of the dissociation curve describes unloading in tissues, not uptake in the lung. Alveolar carbon dioxide does not rise enough to displace oxygen, and carbon dioxide diffuses readily through fluid.',
+    optionExplanations: [
+      'Inspired air is unchanged by fluid inside the lung. The partial pressure of oxygen in the air being breathed is a property of the atmosphere, not the alveoli.',
+      'A rightward shift of the dissociation curve describes decreased hemoglobin affinity, which aids unloading in tissues; it does not describe reduced uptake in the lung due to a diffusion barrier.',
+      'Alveolar carbon dioxide does not rise enough to displace oxygen, and carbon dioxide diffuses readily through fluid because of its high solubility, so this is not the mechanism.',
+      'Diffusion rate is inversely proportional to barrier thickness. A layer of fluid lengthens the diffusion path, and oxygen, far less soluble in water than carbon dioxide, is affected most.',
+    ],
     skill: '3B gas exchange',
   },
   {
@@ -469,6 +631,12 @@ export const FL1_BIO_BIOCHEM_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'A cis double bond introduces a kink that prevents acyl chains from packing closely, lowering the temperature at which the bilayer transitions from a fluid to a gel-like state; more unsaturation therefore keeps the membrane fluid, and its embedded proteins functional, when the environment cools. Hydrocarbon chains do not form hydrogen bonds. Unsaturation is a matter of double bonds, not chain length, and it lowers, rather than raises, the transition temperature.',
+    optionExplanations: [
+      'Hydrocarbon acyl chains do not form hydrogen bonds; they interact only through van der Waals forces. Strengthening the bilayer would also stiffen it, the opposite of what cold adaptation requires.',
+      'A cis double bond introduces a kink that prevents acyl chains from packing closely, lowering the fluid-to-gel transition temperature. More unsaturation keeps the membrane fluid, and its proteins functional, when the environment cools.',
+      'Unsaturation is a matter of double bonds, not chain length. Unsaturated chains are not inherently shorter, and thinness is not what prevents the bilayer from entering the gel state.',
+      'Unsaturation lowers, rather than raises, the melting (transition) temperature of the bilayer. Raising it would make the membrane more likely to become gel-like in the cold.',
+    ],
     skill: '1D membrane lipids',
   },
   {
@@ -480,6 +648,12 @@ export const FL1_BIO_BIOCHEM_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'Below pH 2.0 the peptide carries +1 (the α-amino group). Between 2.0 and 4.0 the α-carboxyl is deprotonated and the net charge is 0; above 4.0 the aspartate side chain adds a negative charge. The isoelectric point is the average of the two pKa values that bracket the neutral species: (2.0 + 4.0)/2 = 3.0. Averaging the two side-chain pKa values (4.2) brackets a species with charge −1, averaging all four values (5.7) has no chemical meaning, and averaging 4.0 with 9.4 (6.7) brackets the −2 species.',
+    optionExplanations: [
+      'Below pH 2.0 the peptide is +1; between 2.0 and 4.0 the α-carboxyl is deprotonated and net charge is 0. The pI is the average of the two pKa values bracketing the neutral species: (2.0 + 4.0)/2 = 3.0.',
+      'Averaging the two side-chain pKa values (4.0 and 4.4) gives 4.2, which brackets a species with net charge −1 (α-carboxyl and aspartate deprotonated, glutamate still protonated), not the neutral species.',
+      'Averaging all four pKa values gives 5.7 but has no chemical meaning. The pI is determined by the two pKa values that flank the zero-charge form.',
+      'Averaging 4.0 with 9.4 gives 6.7, which brackets the −2 species (both carboxylic side chains and the α-carboxyl deprotonated). The neutral species exists at lower pH.',
+    ],
     skill: '1A isoelectric point',
   },
 ]

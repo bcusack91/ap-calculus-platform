@@ -32,6 +32,12 @@ export const FL8_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The author rejects both the bargain model and the benevolence model and proposes that each generation holds an inheritance “between a giver and an heir,” owing it forward unencumbered; the test is how much the future “will still be able to decide.” The sentiment option is the hardheaded conclusion the author sets out to resist. The outnumbering option is the consequence of benevolence that the author says “proves too much.” The saving option is denied outright: a holder “is not required to enrich the heir,” and the heirs are expected to be wealthier, not needier.',
+        optionExplanations: [
+          'This is the “hardheaded” conclusion the author sets out to resist in the first paragraph. The author grants that future people cannot bargain or repay, but argues that a debt still arises from what the present has received.',
+          'This is the consequence of the benevolence model that the author says “proves too much”: adding up future welfare would make a generation “little more than a means to its successors.” The author rejects it, not endorses it.',
+          'The author rejects both the bargain and benevolence models and proposes that each generation holds an inheritance “between a giver and an heir,” owing it forward “no more encumbered than he found it.” The test is how much the future “will still be able to decide.”',
+          'The passage denies this outright: a holder “is not required to enrich the heir,” and the author expects descendants to be wealthier, not needier. Saving to enrich them is precisely what the doctrine does not ask.',
+        ],
         skill: 'main-idea',
       },
       {
@@ -46,6 +52,12 @@ export const FL8_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The river illustrates the “too little” half of the objection: because benevolence “is satisfied by a good total, however it is reached,” richer descendants would be owed nothing even though they have been left a poisoned river. The demand for nearly unlimited sacrifice is the “too much” half, made earlier with the point about numbers, not with the river. The author draws no ranking of pollution against other damage. Promises and agreement belong to the bargain model of the first paragraph, not to benevolence.',
+        optionExplanations: [
+          'The river illustrates the “too little” half of the objection. Benevolence “is satisfied by a good total, however it is reached,” so if descendants are richer, the benevolent accountant must say nothing was owed, even though they were left a poisoned river.',
+          'Unlimited sacrifice is the “too much” half of the objection, made with the point about future people outnumbering us. The river example belongs to the “too little” half, where benevolence demands less than it should.',
+          'The author draws no ranking of pollution against other kinds of damage. The river is one illustration of a harm that benevolence would overlook, not a claim that pollution is the gravest harm.',
+          'Promises and agreement belong to the bargain model of the first paragraph, which the author has already set aside. The river example is aimed at the benevolence model, which has nothing to do with consent.',
+        ],
         skill: 'function',
       },
       {
@@ -60,6 +72,12 @@ export const FL8_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The fourth paragraph says a holder “is not required to enrich the heir” and that we need not stint ourselves so that wealthier successors “may be wealthier still”; spending rather than saving income therefore breaks no obligation on this account. The other three are the author’s own examples of doors that cannot be reopened: “a drained aquifer, an extinct species, a dead language cannot be had back at any price,” and spending what cannot be replaced is exactly what the holder may not do.',
+        optionExplanations: [
+          'The author lists “a drained aquifer” among the things that “cannot be had back at any price.” Pumping an ancient reserve dry closes a door that cannot be reopened, which is exactly what the holder may not do.',
+          '“An extinct species” is one of the author’s own examples of an irreversible loss. Hunting a species to extinction forecloses a choice for later generations and so violates the obligation.',
+          'The fourth paragraph says a holder “is not required to enrich the heir” and that we need not stint ourselves so wealthier successors “may be wealthier still.” Spending rather than saving income breaks no obligation on this account.',
+          '“A dead language” is named alongside the aquifer and the extinct species as something that “cannot be had back.” Letting a language die unrecorded removes a choice forever, so it fails the author’s test.',
+        ],
         skill: 'inference',
       },
       {
@@ -74,6 +92,12 @@ export const FL8_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The author stresses that each generation receives its stock “without having asked or paid” and still concludes that a debt arises; that step holds only if an unrequested benefit can obligate the one who receives it. Nothing in the argument turns on whether predecessors kept accounts. The gratitude of later generations is never mentioned and is not needed for a debt incurred by receiving. The cancellation option contradicts the passage, which says the debt survives the givers’ deaths and “can only be discharged forward.”',
+        optionExplanations: [
+          'Nothing in the argument turns on whether predecessors kept accounts. The debt arises from receiving a stock of goods, not from any record of what was handed over.',
+          'The author stresses that each generation receives its inheritance “without having asked or paid” and still concludes that “a debt for something received” arises. That step holds only if an unrequested benefit can obligate its recipient.',
+          'Gratitude of later generations is never mentioned. The debt is incurred by the present generation’s receiving, not by anything the future will feel, so the argument does not require it.',
+          'This contradicts the passage. The author says the obligation “cannot be discharged toward the givers, who are dead” and “can only be discharged forward,” so the debt survives the death of those it was originally owed to.',
+        ],
         skill: 'assumption',
       },
       {
@@ -88,6 +112,12 @@ export const FL8_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The author’s test is “not how much the future will have but how much it will still be able to decide,” and a public debt “can be repaid or repudiated” while an irreplaceable loss cannot be undone at any price. Plan 2 closes a door for good, and its fund answers only the question of wealth, which the author says is not the test. Making successors poorer is the benevolent accountant’s measure, not the author’s. Lack of consent belongs to the bargain model the author leaves behind. Present wastefulness is no part of the argument, which does not ask the present to stint itself.',
+        optionExplanations: [
+          'Leaving later generations poorer is the benevolent accountant’s measure of wrong, which the author rejects. The test is “not how much the future will have but how much it will still be able to decide,” and a debt can be repaid or repudiated.',
+          'Lack of consent belongs to the bargain model that the author leaves behind in the first paragraph. The author’s own account does not judge obligations by whether the future agreed to them.',
+          'Present wastefulness is no part of the argument. The author explicitly says the doctrine does not ask the present to stint itself; the wrong in Plan 2 is the irreversible loss, not any temptation to waste.',
+          'The author’s test is how much the future “will still be able to decide,” and a public debt “can be repaid or repudiated” while an irreplaceable loss cannot. Plan 2 closes a door for good; its fund answers only the question of wealth, which is not the test.',
+        ],
         skill: 'application',
       },
       {
@@ -102,6 +132,12 @@ export const FL8_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Extinction is offered as one example of a loss that “cannot be had back”; if it could be reversed, it would cease to be an instance, but the test itself, whether a door has been closed that cannot be reopened, would stand and would still condemn other losses such as a drained aquifer or a dead language. One reversible loss does not make every loss reversible, so the test is not defeated. The technique says nothing in favor of adding up welfare. Nor does it tell us what future people will value, so the premise of ignorance is untouched.',
+        optionExplanations: [
+          'One reversible loss does not make every loss reversible. The test, whether a door has been closed that cannot be reopened, would still condemn a drained aquifer or a dead language, so it is not defeated.',
+          'Extinction is offered as one example of a loss that “cannot be had back.” If it became reversible, it would cease to be an instance, but the test itself would stand and still apply to other irreversible losses.',
+          'The technique says nothing in favor of adding up welfare across generations. Whether descendants are better off is the benevolent accountant’s concern, which the author has rejected, and the technique does not bear on it.',
+          'The technique tells us nothing about what future people will value. The author’s premise of ignorance concerns their preferences, not our technical abilities, so it is untouched.',
+        ],
         skill: 'new-information',
       },
     ],
@@ -126,6 +162,12 @@ export const FL8_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The two servers do the same work (“the same distance”) and are paid very differently, which illustrates the finding that the size of the bill, not the quality of service, explains most of the variation in tips; this is the evidence against the incentive theory. The passage says nothing about servers steering diners toward costly items. It compares two bottles, not the generosity of diners at different restaurants. No comparison of the skill needed for wine and for food is made.',
+        optionExplanations: [
+          'The passage says nothing about servers steering diners toward costly items. The comparison concerns how two servers doing identical work are paid differently, not any influence they exert on orders.',
+          'The comparison is between two bottles carried the same distance, not between diners at different restaurants. It illustrates that tip size tracks the bill, not that some diners are more generous.',
+          'No comparison of the skill required for serving wine and serving food is made. Both servers carry a bottle “the same distance”; the point is that identical effort is paid very differently.',
+          'The two servers do the same work and are paid very differently, illustrating the finding that the size of the bill, not the quality of service, explains most of the variation in tips. This is the evidence against the incentive theory.',
+        ],
         skill: 'function',
       },
       {
@@ -139,6 +181,12 @@ export const FL8_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The author argues that the tip is a wage moved “onto the customer’s conscience” and that it endures because it “feels like a gift to the person paying it,” a feeling worth something “to everyone who has the power to choose.” The supervising option is the incentive theory, which the evidence is said to be “unkind to.” The custom option is called true but explains “very little.” The last option is contradicted by the restaurants that did show the true price on the menu and then returned to tipping.',
+        optionExplanations: [
+          'This is the incentive theory, which the author says the evidence is “unkind to”: service quality accounts for very little of the difference between tips.',
+          'The author argues that the tip is a wage moved “onto the customer’s conscience” and endures because it “feels like a gift to the person paying it,” a feeling “worth something to everyone who has the power to choose.”',
+          'The author calls the custom explanation “surely true” but says it “explains very little.” It does not say why the custom is robust or whom it serves, which is the author’s real question.',
+          'Some restaurants did show the true price on the menu and then returned to tipping within a year or two. The author’s account is that the arrangement persists precisely because it pays those with power to choose.',
+        ],
         skill: 'main-idea',
       },
       {
@@ -148,6 +196,12 @@ export const FL8_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The fifth paragraph lists those whom the arrangement pays: “the owner, whose prices look low,” the diner, and “the strongest servers,” so I and II are correct. Kitchen staff are named among the losers: “The cook, who is not at the table, is paid by nobody’s generosity.” Every option that includes III therefore counts as a gainer someone the author says is left out, and no option omitting I or II matches the author’s list.',
+        optionExplanations: [
+          'The fifth paragraph names “the owner, whose prices look low” and “the strongest servers” among those the arrangement pays, so Statements I and II are correct. The cook is explicitly a loser, “paid by nobody’s generosity,” so Statement III is excluded.',
+          'This drops the most capable servers, whom the author names as beneficiaries (“the strongest servers” who “left for competitors”), and adds kitchen staff, whom the author lists among the losers.',
+          'Kitchen staff are not beneficiaries; the author says the cook “is paid by nobody’s generosity.” This pairing also omits the owners, whose low-looking prices the author says the arrangement pays for.',
+          'Including kitchen staff contradicts the sixth paragraph, which lists the cook among those who lose. Statements I and II are correct, but Statement III is not.',
+        ],
         skill: 'detail',
       },
       {
@@ -162,6 +216,12 @@ export const FL8_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The author reads the episode as showing only whom tipping pays, and insists that the cook and the server on the slow shift lose by it but “had no say.” If those very people asked for tipping back, the claim that the arrangement works against them, and that the history does not show a general preference, is undercut. Higher earnings for the servers who left confirm the author’s account of why they left. Survival of the policy where rivals also adopted it fits the point about customers “comparing menus.” Unchanged service ratings bear on the incentive theory, which the author already rejects.',
+        optionExplanations: [
+          'Higher earnings at the tipped restaurants they joined confirm the author’s account of why the strongest servers left. It supports rather than weakens the interpretation.',
+          'Survival of the no-tipping policy only where rivals also adopted it fits the author’s point about customers “comparing menus.” It is consistent with the interpretation, not a challenge to it.',
+          'The author insists that the cook and the slow-shift server lose by tipping but “had no say” in its survival. If those very people asked for tipping back, the claim that the arrangement works against them, and that the history shows no general preference, is undercut.',
+          'Unchanged service ratings bear on the incentive theory, which the author already rejects. They say nothing about the author’s reading of why the restaurants reverted.',
+        ],
         skill: 'strengthen-weaken',
       },
       {
@@ -175,6 +235,12 @@ export const FL8_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Tipping, on the author’s account, moves a worker’s pay off the employer’s books and onto the customer’s conscience, so that the posted price looks low and the worker bears the risk of what customers choose to give. The school does all three. The shop’s compulsory charge hides part of the price but involves no discretion or sense of giving, and the shop keeps it. The charity’s collectors receive a fixed salary, so the employer still carries the risk and no price is understated. The commission shifts risk to the staff, but the employer pays it and nothing is presented to the customer as a gift.',
+        optionExplanations: [
+          'Tipping on the author’s account moves pay off the employer’s books onto the customer’s conscience, so the posted price looks low and the worker bears the risk of what customers choose to give. The school’s low tuition, parent contributions, and aide pay match all three features.',
+          'A fixed, compulsory service charge involves no discretion and no sense of giving, and the shop keeps it rather than passing it to a worker. It understates the price but lacks the gift-like feeling and the shifted risk.',
+          'The charity’s collectors receive a fixed salary, so the employer still carries the risk of a slow day and no posted price is understated. The donations go to the charity, not to the collectors at the donors’ discretion.',
+          'A commission does shift risk onto the staff, but the employer pays it and nothing is presented to the customer as a gift. The customer pays a posted price, so the price is not understated.',
+        ],
         skill: 'application',
       },
       {
@@ -189,6 +255,12 @@ export const FL8_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'A discretion he “seldom exercises” is a freedom to reward or penalize service that goes largely unused, which agrees with the earlier finding that service quality explains very little of the difference between tips while the size of the bill explains most of it. A diner who “enjoys” the discretion does not wish it taken away, and customers were put off by restaurants that removed it. Someone who enjoys a freedom is aware of having it. Nothing suggests that diners cut tips on large bills; tips are said to rise with the bill.',
+        optionExplanations: [
+          'A diner who “enjoys” the discretion does not wish it taken away, and the passage says customers were put off by restaurants that removed it. Nothing suggests diners want the amount fixed for them.',
+          'Someone who enjoys a freedom is aware of having it. The point is that diners know they could leave less but rarely do, not that they are ignorant of the option.',
+          'Nothing suggests diners cut tips on large bills. The passage says the size of the bill accounts for most of the variation, with larger bills producing larger tips.',
+          'A discretion “seldom exercised” is a freedom to reward or penalize service that goes largely unused, which agrees with the earlier finding that service quality explains very little of the difference between tips while the bill size explains most of it.',
+        ],
         skill: 'inference',
       },
     ],
@@ -212,6 +284,12 @@ export const FL8_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The first paragraph announces that “the real selector” is “the book,” and the rest of the passage shows how the container’s shape, its length and the class hour, chooses before any editor does. The prejudice option is one side of the reviewers’ trial that the author says overrates the editor. The screen option is the objection of the fifth paragraph, which the author answers by pointing to the unchanged class hour. The best-work option is contradicted by the poet remembered for songs “tossed off” beside a thirty-year labor.',
+        optionExplanations: [
+          'Prejudice versus learning is the terms of the reviewers’ trial, which the author says overrates the editor. The author’s point is that the anthologist “decides a good deal less than either party supposes.”',
+          'The first paragraph names “the real selector” as “the book,” and the rest of the passage shows how the container’s shape, its length and the class hour, chooses before any editor does.',
+          'This is the objection raised in the fifth paragraph, which the author answers: screens may lift the page limit, but “the hour of class has not grown,” so the constraint remains.',
+          'The passage contradicts this with the poet remembered for songs “tossed off” beside a thirty-year labor. What survives is the most portable work, not necessarily the best.',
+        ],
         skill: 'main-idea',
       },
       {
@@ -226,6 +304,12 @@ export const FL8_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The comparison follows the statement that “it is the hour, not the page, that determines what is assigned”: long works may be included, but, like books on shelves no one reaches for, they go unread because they are not assigned. The image says nothing about editors ranking long works above short ones. No division between scholars and students is drawn in the passage. The electronic collections are called “generous” in what they include, so the point is not that the long works have been abridged.',
+        optionExplanations: [
+          'The image says nothing about editors ranking long works above short ones. The electronic collections are called “generous” in what they include, but the point is about what gets assigned and read.',
+          'No division between scholars and students is drawn in the passage. The upper-shelf image concerns neglect by all readers, since “it is the hour, not the page, that determines what is assigned.”',
+          'The comparison follows the statement that the class hour determines what is assigned. Long works may be included, but like books on shelves no one reaches for, they go unread because they are never assigned.',
+          'The electronic collections are described as “generous” in what they include, so the point is not that long works have been abridged. The upper-shelf image is about accessibility without use, not about cutting.',
+        ],
         skill: 'inference',
       },
       {
@@ -240,6 +324,12 @@ export const FL8_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The comparison illustrates the sentence before it: editors “choose within a range that was fixed before they began,” so that rival anthologies turn out alike “in the kind of thing that stands for each name.” The author expressly says the likeness is “not always in the names,” so agreement about which authors to include is not the point. The bitterness of the disputes is taken for granted, not questioned. No comparison of reliability between divided and calm periods is made.',
+        optionExplanations: [
+          'The author expressly says the likeness is “not always in the names,” so agreement about which authors to include is not the point. The similarity is in “the kind of thing that stands for each name.”',
+          'The bitterness of the disputes is taken for granted, not questioned. The author’s point is that even bitter rivals produce similar anthologies, not that their disputes are milder than they appear.',
+          'No comparison of reliability between divided and calm periods is made. The comparison serves to show the constraint of form, not to rank anthologies by the period that produced them.',
+          'The comparison illustrates the sentence before it: editors “choose within a range that was fixed before they began,” so rival anthologies turn out alike “in the kind of thing that stands for each name” despite their disagreements.',
+        ],
         skill: 'function',
       },
       {
@@ -253,6 +343,12 @@ export const FL8_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The author predicts that editors of opposed tastes will produce anthologies alike in the kind of piece chosen, because the container favors the short and self-contained; nearly identical shares of short pieces across rival schools is that prediction confirmed. Little overlap in authors is compatible with the passage (“not always in the names”) but does nothing to show that form constrains the choice. Students who go on to whole works would undercut the claim that for most readers the anthology is “the whole of their acquaintance” with a literature. Whether students can name the editor is beside the point.',
+        optionExplanations: [
+          'The author predicts that editors of opposed tastes produce anthologies alike in the kind of piece chosen, because the container favors the short and self-contained. Nearly identical shares of short pieces across rival schools confirms exactly that prediction.',
+          'Little overlap in authors is compatible with the passage (“not always in the names”) but does nothing to show that form constrains the choice. It speaks to the names, not to the kind of thing chosen.',
+          'Students going on to whole works would undercut the claim that for most readers the anthology is “the whole of their acquaintance” with a literature. It weakens rather than strengthens the argument.',
+          'Whether students can name the editor is beside the point. The argument concerns what the form selects, not how visible the editor is to readers.',
+        ],
         skill: 'strengthen-weaken',
       },
       {
@@ -267,6 +363,12 @@ export const FL8_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'In the author’s account a fixed format, not a judgment of merit, decides what is passed on, so that a writer of long works is known by short ones; the radio slot does the same to composers of symphonies. The prize jury is the picture of the anthologist as a judge with a taste, which the author thinks overstated. The concert hall selects by past popularity, not by the shape of a container. The influential critic is again an individual’s judgment at work, the factor the author plays down.',
+        optionExplanations: [
+          'The prize jury is the picture of the anthologist as a judge with a taste, which the author thinks overstated. The author’s account turns on a fixed format, not on shared judgment of merit.',
+          'The concert hall selects by past popularity, which is a judgment of demand, not the shape of a container. The author’s mechanism is that the format itself, not anyone’s preference, decides.',
+          'In the author’s account a fixed format decides what is passed on, so a writer of long works is known by short ones. Three-minute radio slots do the same to symphonists, making them known by their briefest pieces.',
+          'The influential critic is again an individual’s judgment at work, the factor the author plays down. Revival by a critic is the opposite of selection by the form of the container.',
+        ],
         skill: 'application',
       },
       {
@@ -281,6 +383,12 @@ export const FL8_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The final paragraph says that changing editors or sympathies changes the names while the principle of selection stays, and that “the new writers too will be known by their most portable work”; thirty writers shown by two- or three-page pieces are exactly that case. Nothing in the description indicates that readers are sent on to whole books, which is the reform the author actually wants. The episode shows an editor choosing names inside the usual limits, not holding the decisive power. The author never suggests that neglected writers deserved neglect; neglect is traced to length, not to inferiority.',
+        optionExplanations: [
+          'Nothing in the description indicates that readers are sent on to whole books, which is the reform the author actually wants. Adding writers represented by short pieces does not by itself open the “door” the author describes.',
+          'The final paragraph says changing editors changes the names while the principle of selection stays, and “the new writers too will be known by their most portable work.” Thirty writers shown by two- or three-page pieces are exactly that case.',
+          'The episode shows an editor choosing names inside the usual limits, which is what the author says editors do. It does not show that the editor holds the decisive power; the form still dictates how each writer appears.',
+          'The author never suggests that neglected writers deserved neglect. Neglect is traced to length and the shape of the container, not to inferiority, so this misreads the author’s position.',
+        ],
         skill: 'new-information',
       },
     ],
@@ -304,6 +412,12 @@ export const FL8_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The author argues that what is sought “is not a success but a membership,” one that “cannot be earned” or forfeited, and that this explains “the peculiar prestige of suffering.” The share-in-victories option is the reflected-glory theory, which the author says fits casual students but not real fans. Hostility is conceded in the last paragraph as a cost of fandom, not offered as its aim. Fear of other supporters’ disapproval is never given as the motive; their esteem is used as evidence of what supporting is about.',
+        optionExplanations: [
+          'The author argues that what is sought “is not a success but a membership,” one that “cannot be earned” or forfeited, and that this explains “the peculiar prestige of suffering” and the honor given to loyalty in defeat.',
+          'This is the reflected-glory theory, which the author says fits the casual students but not the people “we should most naturally call fans.” The committed say “we lost,” not just “we won.”',
+          'Hostility is conceded in the last paragraph as a cost of fandom, not offered as its aim. The author says fandom “should be criticized as what it is,” and what it is is a form of belonging.',
+          'Fear of other supporters’ disapproval is never given as the motive. Their esteem is used as evidence of what supporting is about, not as the reason supporters stay.',
+        ],
         skill: 'main-idea',
       },
       {
@@ -318,6 +432,12 @@ export const FL8_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'If fandom were a way of borrowing success, following the winner would be the sensible course; that supporters despise exactly this person and honor the loyal follower of a loser shows, as the paragraph concludes, that the theory “has mistaken what is being sought.” No comparison is drawn between harshness toward fellow supporters and toward rivals. That “a few people” follow winners is mentioned in passing; the point is how they are regarded, not how many they are. The author grants that the theory fits the students and does not deny that they follow the team.',
+        optionExplanations: [
+          'No comparison is drawn between harshness toward fellow supporters and harshness toward rivals. The contempt for the fair-weather fan is evidence about what supporters value, not about how they treat each other generally.',
+          'That “a few people” follow winners is mentioned in passing; the point is how they are regarded, not how many they are. The author uses their low esteem as evidence, not their rarity.',
+          'The author grants that the reflected-glory theory “fits the students in the study” and does not deny that they follow the team. The point is about what committed supporters seek, not about reclassifying the students.',
+          'If fandom were a way of borrowing success, following the winner would be the sensible course. That supporters despise exactly this person and honor the loyal follower of a loser shows that the theory “has mistaken what is being sought.”',
+        ],
         skill: 'function',
       },
       {
@@ -332,6 +452,12 @@ export const FL8_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The author says the explanation “fits the students in the study” and later reports that it was “the casual followers” who distanced themselves after a defeat; the theory is thus allowed to hold for casual followers and denied for committed ones. It is therefore not treated as false of everyone. Devoted supporters are precisely those it fails to fit, since they said “we lost.” The later studies are described as locating the pronoun habit among casual followers, not as withdrawing the finding.',
+        optionExplanations: [
+          'The author says the explanation “fits the students in the study,” so it is not treated as false of everyone. It is denied only for committed supporters.',
+          'The author says the explanation “fits the students in the study” and later reports that it was “the casual followers” who said “they” after a defeat. The theory is allowed to hold for casual followers and denied for committed ones.',
+          'Devoted supporters are precisely those the theory fails to fit. They said “we lost,” stayed with losing teams, and honored constancy, none of which the borrowed-glory account explains.',
+          'The later studies are described as locating the pronoun habit among casual followers, not as withdrawing the original finding. The finding is refined, not retracted.',
+        ],
         skill: 'inference',
       },
       {
@@ -346,6 +472,12 @@ export const FL8_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The supporter’s membership is settled early by circumstances such as “a parent or a postal address,” cannot be earned, and cannot be forfeited by any failure of one’s own; belonging to one’s native town without having done anything for it has the same features. The scholar was admitted on merit, like the adult “hired because he was competent.” The voter who follows the polls is the counterpart of the person who takes up a team in its good years. The golfer’s membership is conditional on continued payment and so can be lost.',
+        optionExplanations: [
+          'The scholar was admitted on merit, like the adult “hired because he was competent.” The supporter’s membership, by contrast, “cannot be earned” and arises before any question of merit.',
+          'The voter who follows the polls is the counterpart of the person who takes up a team in its good years, the figure supporters hold in lowest esteem. This is the opposite of the unconditional membership the author describes.',
+          'The supporter’s membership is settled early by circumstances such as “a parent or a postal address,” cannot be earned, and cannot be forfeited by any failure. Belonging to one’s native town without having done anything for it has the same features.',
+          'The golfer’s membership is conditional on continued payment and so can be lost. The supporter’s allegiance, by contrast, is one that “no failure of one’s own can forfeit.”',
+        ],
         skill: 'application',
       },
       {
@@ -359,6 +491,12 @@ export const FL8_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The author’s account rests on allegiance being “settled in childhood” before “any question of merit could arise” and on its having no grounds; if the most devoted supporters picked their teams as adults by comparing records, their attachment would rest on reasons and look like the pursuit of success after all. Greater distress among committed supporters fits the claim that they stay when leaving “would be a relief.” Casual followers buying more in winning seasons matches what the author concedes about them. Strong dislike of rivals is the hostility admitted in the final paragraph.',
+        optionExplanations: [
+          'Greater distress among committed supporters fits the claim that they stay when leaving “would be a relief.” It is consistent with constancy being costly, which the author’s account predicts.',
+          'Casual followers buying more in winning seasons matches what the author concedes about them: the reflected-glory theory fits casual followers. It does not touch the account of committed supporters.',
+          'Strong dislike of rivals is the hostility admitted in the final paragraph. The author already grants that a belonging “defined against a rival carries a hostility with it.”',
+          'The author’s account rests on allegiance being “settled in childhood” before “any question of merit could arise” and on its having no grounds. If the most devoted chose as adults by comparing records, their attachment would rest on reasons and look like the pursuit of success.',
+        ],
         skill: 'strengthen-weaken',
       },
       {
@@ -372,6 +510,12 @@ export const FL8_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The author defends the supporter against the charge of self-deception and treats the belonging as something scarce and worth having, yet adds that “none of this makes fandom innocent,” since it carries hostility toward rivals. The author rejects the “absurd” charge as beside the point and does not minimize harm. The unearned character of the loyalty is presented as its very value, not as a matter for regret. The closing paragraphs deny that fandom is a means of flattering oneself, so the last option reinstates the view the author opposes.',
+        optionExplanations: [
+          'The author defends the supporter against the charge of self-deception and treats the belonging as something scarce and worth having, yet adds that “none of this makes fandom innocent” because it carries hostility toward rivals.',
+          'The author rejects the “absurd” charge as beside the point, calling arbitrariness “a condition” of the attachment, and does not minimize harm; the last paragraph says there are stadiums where hostility “is the main event.”',
+          'The unearned character of the loyalty is presented as its very value, since “only a loyalty without grounds can be unconditional.” The author does not regret it.',
+          'The closing paragraphs deny that fandom is a means of flattering oneself: the supporter “is not a counterfeiter of achievements.” This option reinstates the borrowed-glory view the author opposes.',
+        ],
         skill: 'tone',
       },
     ],
@@ -395,6 +539,12 @@ export const FL8_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The author holds that flattery is “less a false account of merit than an exact measure of power,” and that the flattered man is hurt “by what in consequence is left unsaid.” The vanity option is the common doctrine of deception and discernment that the author disputes. The no-harm option takes the first half of the argument and ignores the fifth paragraph, where the injury is described. The civility option contradicts the fourth paragraph, which separates flattery, proportioned to fortune, from compliments paid “alike to all comers.”',
+        optionExplanations: [
+          'This is the common doctrine of deception and discernment that the author disputes. The author finds that flattery “is not commonly believed,” so vanity and failure of discernment are not the explanation.',
+          'This takes the first half of the argument and ignores the fifth paragraph, where the injury is described: the flattered man is hurt “not by what is said to him, but by what in consequence is left unsaid.”',
+          'The author holds that flattery is “less a false account of merit than an exact measure of power,” and that the flattered man is hurt by “what in consequence is left unsaid,” since those around him will not hazard disagreeable truths.',
+          'The fourth paragraph expressly separates flattery, which “is proportioned to the fortune of him who receives it,” from the compliments of the drawing-room that are paid “alike to all comers.”',
+        ],
         skill: 'main-idea',
       },
       {
@@ -409,6 +559,12 @@ export const FL8_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Rent is paid because of the landlord’s position, and he accepts it “without supposing that the tenant pays from affection”; likewise the great man accepts flattery as an acknowledgment of his power and is not deceived about why it is offered. Nothing is said of his turning flattery to profit; the pleasure lies in the testimony to his consequence. The estate belongs to the figure of speech and is not a claim about who flatters him. Believing in the flatterers’ attachment is exactly what the comparison rules out.',
+        optionExplanations: [
+          'Rent is paid because of the landlord’s position, and he accepts it “without supposing that the tenant pays from affection.” Likewise the great man accepts flattery as acknowledgment of his power and is not deceived about why it is offered.',
+          'Nothing is said of the great man turning flattery to profit. The pleasure lies in the testimony to his consequence, not in any material gain he draws from the compliments.',
+          'The estate belongs to the figure of speech and is not a claim about who flatters him. The author’s point concerns the great man’s attitude toward the flattery, not the flatterers’ residence.',
+          'Believing in the flatterers’ attachment is exactly what the comparison rules out. A landlord does not suppose his tenant pays from affection, and neither does the great man suppose his flatterers speak from regard.',
+        ],
         skill: 'inference',
       },
       {
@@ -422,6 +578,12 @@ export const FL8_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The paragraph observes that the minister does not believe the compliment, has reason to know it is routine, and is pleased all the same; it concludes that we must ask “what it is that pleases him, since it cannot be the information.” The minister is described as not deceived, so he is no example of a dupe. The paragraph denies, and does not grant, that flattery is commonly believed. It states that the minister “is pleased,” so it cannot be concluding that insincere flatterers fail to please.',
+        optionExplanations: [
+          'The minister is described as not deceived; he “is seldom so weak” as to believe the compliment and “knows very well what the speech was.” He is no example of a dupe.',
+          'The paragraph denies, and does not grant, that flattery is commonly believed. Its whole point is that the pleasure survives even though belief is absent.',
+          'The paragraph states that the minister “is pleased” and would be displeased if the compliment were omitted. It cannot be concluding that insincere flatterers fail to please.',
+          'The paragraph observes that the minister does not believe the compliment, knows it is routine, and is pleased all the same. It concludes that we must ask “what it is that pleases him, since it cannot be the information.”',
+        ],
         skill: 'function',
       },
       {
@@ -436,6 +598,12 @@ export const FL8_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Flattery, for the author, “is proportioned to the fortune of him who receives it”; the clerk’s praise is graded by his superiors’ power over him. The hostess and the tutor say the same pleasant thing to everyone, which is the mark of civility: compliments “paid alike to all comers” that signify “nothing of any one.” The reviewer’s praise is believed by the person who gives it and is directed at someone with no power over her, so it is neither proportioned to fortune nor a purchase of favour.',
+        optionExplanations: [
+          'The hostess says the same pleasant thing to every departing guest. That is the mark of civility: compliments “paid alike to all comers” that signify “nothing of any one.”',
+          'Flattery, for the author, “is proportioned to the fortune of him who receives it” and rises and falls with his credit. The clerk’s praise is graded by his superiors’ power over his promotion, which is exactly this.',
+          'The reviewer’s praise is believed by the person who gives it and is directed at someone with no power over her. It is neither proportioned to fortune nor a purchase of favour, so it is not flattery in the author’s sense.',
+          'The tutor tells each pupil in turn the same encouraging thing, which is the uniform civility the author distinguishes from flattery. It is not scaled to any pupil’s fortune or influence.',
+        ],
         skill: 'application',
       },
       {
@@ -450,6 +618,12 @@ export const FL8_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The author says flattery follows the place, “removes on the day of his disgrace to the next possessor,” and “rises and falls” with a man’s credit. Compliments that outlast all power therefore fail the author’s test for flattery and must be something else, such as sincere regard or ordinary civility. The scenario shows nothing about whether the minister believed the praise. It is the reverse of what would confirm that flattery attends the place, since here the compliments stayed with the person. The blunt man tells unwelcome truths, which is no part of the case.',
+        optionExplanations: [
+          'The scenario shows nothing about whether the minister believed the praise while in office. The author’s account does not rest on belief in any case, so continued compliments cannot prove deception.',
+          'The author says flattery follows the place, “removes on the day of his disgrace to the next possessor,” and “rises and falls” with a man’s credit. Compliments that outlast all power fail the author’s test for flattery and must be something else.',
+          'This is the reverse of what would confirm that flattery attends the place. Here the compliments stayed with the person after he lost the place, which is what flattery, on the author’s account, does not do.',
+          'The blunt man is one who prides himself on telling unwelcome truths and has found “a cheaper way of flattering himself.” Nothing in the scenario involves unwelcome truths, so this is not an instance of it.',
+        ],
         skill: 'new-information',
       },
       {
@@ -464,6 +638,12 @@ export const FL8_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The injury is that those around the great “will not hazard disagreeable truths,” and the remedy is to “make it safe to tell him the truth, and bear contradiction without resentment”; openly rewarding a subordinate who brought bad news does this. Learning to detect undeserved praise is discernment, which the author says is not the cure, since the flattered person’s opinion of herself “may be as just as ever.” The colleague who tells everyone their faults is the blunt man, dismissed in the last paragraph. Routine courtesies “do no injury to truth,” and banning them does nothing to make candour safe.',
+        optionExplanations: [
+          'Learning to detect undeserved praise is discernment, which the author says is not the cure. The flattered person’s opinion of herself “may be as just as ever”; the injury is to her knowledge of everything else.',
+          'The colleague who tells everyone their faults is the blunt man, dismissed in the last paragraph as having found “a cheaper way of flattering himself.” He is not the remedy.',
+          'The injury is that those around the great “will not hazard disagreeable truths,” and the remedy is to “make it safe to tell him the truth, and bear contradiction without resentment.” Openly rewarding a subordinate who brought bad news does exactly this.',
+          'Routine courtesies “do no injury to truth,” so banning them addresses nothing. The author’s concern is making candour safe, not suppressing compliments.',
+        ],
         skill: 'application',
       },
     ],

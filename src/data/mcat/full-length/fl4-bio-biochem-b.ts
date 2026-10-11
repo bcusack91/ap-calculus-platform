@@ -34,6 +34,12 @@ export const FL4_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The carbohydrate fraction rises linearly from 0 at an RER of 0.70 to 1 at an RER of 1.00, so it equals (RER − 0.70)/0.30. At 40%, (0.85 − 0.70)/0.30 = 0.50, leaving 50% from fat; at 85%, (0.97 − 0.70)/0.30 = 0.90, leaving 10% from fat. The pair 50% and 90% gives the carbohydrate share at 85% rather than the fat share. The pair 15% and 3% subtracts the RER from 1.00, which ignores the fact that pure fat oxidation gives an RER of 0.70, not 0. The pair 85% and 97% simply reads the RER values as percentages.',
+        optionExplanations: [
+          'The pair 15% and 3% subtracts each RER from 1.00 (1.00 − 0.85 = 0.15; 1.00 − 0.97 = 0.03). That treats an RER of 0 as pure fat, but the passage states pure fat oxidation gives an RER of 0.70, so the scale must run from 0.70 to 1.00.',
+          'The 50% at the 40% bout is right, but 90% is the carbohydrate share at 85%, not the fat share. With (0.97 − 0.70)/0.30 = 0.90 from carbohydrate, only 10% comes from fat.',
+          'The carbohydrate fraction rises linearly from 0 at RER 0.70 to 1 at RER 1.00, so it equals (RER − 0.70)/0.30. At 40%, (0.85 − 0.70)/0.30 = 0.50, leaving 50% from fat; at 85%, (0.97 − 0.70)/0.30 = 0.90, leaving 10% from fat.',
+          'The pair 85% and 97% simply reads the RER values as percentages. RER is a ratio of CO₂ produced to O₂ consumed, and it must be converted to a fuel fraction using the 0.70-to-1.00 scale the passage describes.',
+        ],
         skill: '1D fuel selection (data interpretation)',
       },
       {
@@ -48,6 +54,12 @@ export const FL4_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Creatine kinase transfers phosphoryl groups from PCr to ADP within the first seconds of contraction, so ATP is buffered while PCr falls (glycolysis, reflected in the rise in muscle lactate, supplies much of the rest); Table 1 shows PCr dropping from 80 to 44 mmol/kg dm while ATP falls only from 24 to 19. Oxidative phosphorylation has the lowest maximal rate and takes the longest to activate, so it cannot account for ATP resynthesis in the first seconds. Myosin is an ATPase and does not use PCr as a substrate. Lactate dehydrogenase makes no ATP; it regenerates $\\text{NAD}^+$ so that glycolysis can continue.',
+        optionExplanations: [
+          'Creatine kinase transfers phosphoryl groups from PCr to ADP within the first seconds of contraction, buffering ATP while PCr falls. Table 1 shows PCr dropping from 80 to 44 mmol/kg dm while ATP fell only from 24 to 19.',
+          'Oxidative phosphorylation has the lowest maximal rate and takes the longest to reach it, as the passage states. It cannot account for ATP resynthesis in the first seconds of a sprint; the fast systems are the phosphagen system and glycolysis.',
+          'Myosin is an ATPase and uses only ATP as its substrate; it cannot hydrolyze phosphocreatine. The stem states the muscle hydrolyzed several times its ATP content, so ATP was consumed in large amounts and had to be regenerated.',
+          'Lactate dehydrogenase makes no ATP. Its role is to regenerate NAD⁺ by reducing pyruvate to lactate so that glycolysis can continue; the ATP from glycolysis comes from the phosphoglycerate kinase and pyruvate kinase steps.',
+        ],
         skill: '1D phosphagen system',
       },
       {
@@ -62,6 +74,12 @@ export const FL4_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Activating PDC with DCA lowered muscle lactate by 40% and spared PCr even though steady-state oxygen uptake was unchanged, so in the saline trial some pyruvate was reduced to lactate because PDC activity limited its entry into oxidation, not only because oxygen was lacking. If oxygen shortage were the main cause, raising PDC activity without changing oxygen uptake should not have reduced lactate so much. DCA does not act on lactate dehydrogenase, and nothing in the study measured a change in its activity. Hepatic uptake affects blood lactate, but the drop occurred in muscle lactate and followed a change in the muscle enzyme that forms acetyl-CoA.',
+        optionExplanations: [
+          'If oxygen shortage were the main cause, raising PDC activity without changing oxygen uptake should not have reduced muscle lactate by 40%. The DCA result shows lactate formation depended substantially on PDC activity, not solely on oxygen availability.',
+          'DCA does not act on lactate dehydrogenase, and nothing in the study measured any change in LDH activity. The lactate reduction followed activation of PDC, the enzyme that diverts pyruvate into oxidation.',
+          'Hepatic uptake affects blood lactate, but the DCA study measured a 40% drop in muscle lactate, and the intervention changed a muscle mitochondrial enzyme. Liver kinetics cannot explain a change in lactate accumulation within the working fibers.',
+          'Activating PDC with DCA lowered muscle lactate by 40% and spared PCr even though oxygen uptake was unchanged. In the saline trial, some pyruvate was therefore reduced to lactate because PDC activity limited its entry into oxidation, not only because oxygen was lacking.',
+        ],
         skill: '1D pyruvate fate (research interpretation)',
       },
       {
@@ -71,6 +89,12 @@ export const FL4_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Anaerobic glycolysis of one glucose to two lactate yields 2 ATP in muscle, while gluconeogenesis from two lactate consumes 4 ATP and 2 GTP (6 ATP-equivalents) in the liver, for a net cost of 4. A net gain of 2 counts only the muscle half of the cycle. A net cost of 6 counts only the liver half. No net change would require gluconeogenesis to be the exact reverse of glycolysis, but its bypass reactions are driven by additional ATP and GTP hydrolysis that makes the pathway irreversible.',
+        optionExplanations: [
+          'A net gain of 2 ATP counts only the muscle half of the cycle, where anaerobic glycolysis of one glucose yields 2 ATP. It ignores the cost of gluconeogenesis in the liver, which more than cancels that gain.',
+          'Anaerobic glycolysis of one glucose to two lactate yields 2 ATP in muscle, while gluconeogenesis from two lactate consumes 4 ATP and 2 GTP (6 ATP-equivalents) in the liver. The whole-body net is 2 − 6 = −4, a cost of 4 ATP.',
+          'A net cost of 6 ATP counts only the liver half of the cycle, the 4 ATP and 2 GTP consumed by gluconeogenesis. It omits the 2 ATP that glycolysis produced in muscle, which partly offsets the liver’s expenditure.',
+          'No net change would require gluconeogenesis to be the exact reverse of glycolysis. The bypass reactions of gluconeogenesis are driven by additional ATP and GTP hydrolysis that makes the pathway irreversible, so a full turn of the cycle costs energy.',
+        ],
         skill: '1D Cori cycle energetics',
       },
       {
@@ -85,6 +109,12 @@ export const FL4_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'RER reflects the mix of carbohydrate and fat being oxidized, and that mix depends strongly on how much glycogen is available; recent diet changes muscle glycogen within a day or two, so fixing the diet keeps starting glycogen comparable across trials. Maximal oxygen uptake reflects cardiovascular fitness and does not change meaningfully over days because of diet. Fiber-type composition changes only over weeks to months of training, not with 2 days of diet. Creatine kinase activity is not set by recent diet and would not alter the RER of steady exercise.',
+        optionExplanations: [
+          'RER reflects the mix of carbohydrate and fat oxidized, which depends strongly on how much glycogen is available. Recent diet changes muscle glycogen within a day or two, so fixing the diet keeps starting glycogen comparable across trials.',
+          'Maximal oxygen uptake reflects cardiovascular fitness and mitochondrial capacity; it does not change meaningfully over days because of diet. Diet standardization would not be the way to control it.',
+          'Fiber-type composition changes only over weeks to months of training, not with 2 days of diet. It is a fixed characteristic of each cyclist across the trials and is not what a short dietary control addresses.',
+          'Creatine kinase activity is not set by recent diet, and it governs the phosphagen system, not the fuel mix during steady exercise. It would not alter the RER of a 10-minute bout.',
+        ],
         skill: '1D research design in exercise metabolism',
       },
     ],
@@ -114,6 +144,12 @@ export const FL4_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The peptide stimulus was the same in both conditions; when the pH was allowed to fall to 1.5, gastrin fell from 110 to 45 pg/mL and acid output fell from 22 to 12 mmol/h, so luminal acid inhibits gastrin release, a negative feedback loop. Positive feedback would require gastrin to be higher at the lower pH, which is the opposite of the data. Peptides raised gastrin and acid output most when the pH was held at 5.5, so a low pH is not needed for their effect. Acid output tracked gastrin across the two conditions, which gives no support for a gastrin-independent route.',
+        optionExplanations: [
+          'Peptides raised gastrin and acid output most when the pH was held at 5.5, so a low pH is not needed for their effect. If anything, acid reduced the response; this reverses the direction of the relationship.',
+          'Positive feedback would require gastrin to be higher at the lower pH, but gastrin fell from 110 to 45 pg/mL when the pH dropped to 1.5. The data show the opposite: acid suppresses gastrin.',
+          'Acid output tracked gastrin across the two conditions (22 mmol/h with gastrin 110; 12 mmol/h with gastrin 45), which gives no support for a gastrin-independent route. The parallel changes point to gastrin as the mediator.',
+          'The peptide stimulus was identical in both conditions. When the pH was allowed to fall to 1.5, gastrin fell from 110 to 45 pg/mL and acid output fell from 22 to 12 mmol/h, so luminal acid inhibits gastrin release, a negative feedback loop that limits acid secretion.',
+        ],
         skill: '3B negative feedback in gastric secretion (data interpretation)',
       },
       {
@@ -128,6 +164,12 @@ export const FL4_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Condition 6 shows that omeprazole leaves gastrin eight times higher than in condition 1 (160 vs 20 pg/mL). Because the drug inactivates pumps irreversibly, acid secretion can return only as new pumps are synthesized, and while gastrin is still high those new pumps are driven hard, producing a rebound. Omeprazole acts on the pump, not the gastrin receptor, and nothing suggests it activates receptors. Secretin was essentially unchanged by omeprazole (0.9 vs 1.0 pmol/L). Irreversible inactivation means the inhibited pumps are not reactivated; recovery depends on new synthesis.',
+        optionExplanations: [
+          'Omeprazole acts on the H⁺/K⁺-ATPase, not on gastrin receptors, and nothing in the passage or table suggests it activates receptors. The elevated gastrin in condition 6 is a response to lost acid feedback, not receptor activation.',
+          'Condition 6 shows gastrin eight times higher than in condition 1 (160 vs 20 pg/mL). Because omeprazole inactivates pumps irreversibly, acid secretion returns only as new pumps are synthesized, and while gastrin remains high those new pumps are driven hard, producing a rebound.',
+          'Secretin was essentially unchanged by omeprazole (0.9 vs 1.0 pmol/L in Table 1), so a fall in secretin cannot explain the rebound. The hormone that changed dramatically was gastrin.',
+          'The passage states omeprazole binds covalently and irreversibly inactivates the pump. Inhibited pump molecules are not reactivated when the drug leaves; recovery depends entirely on synthesis of new pumps.',
+        ],
         skill: '3B gastric acid regulation',
       },
       {
@@ -141,6 +183,12 @@ export const FL4_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'CCK rose eightfold with duodenal fat and was accompanied by gallbladder contraction and a large rise in lipase output; CCK also slows gastric emptying, matching delivery of fat to the intestine’s digestive capacity. CCK does not stimulate parietal cells to secrete more acid; acid output actually fell in condition 5. Speeding gastric emptying is the opposite of CCK’s effect. Trypsinogen is activated in the duodenal lumen by enteropeptidase; activation inside acinar cells would digest the pancreas and is not a hormonal effect.',
+        optionExplanations: [
+          'CCK does not stimulate parietal cells to secrete acid. In condition 5, where CCK rose eightfold, gastric acid output actually fell from 2.0 to 0.9 mmol/h, the opposite of what this option predicts.',
+          'Speeding gastric emptying is the opposite of CCK’s effect. Fat in the duodenum signals that the intestine needs more time, and CCK slows the delivery of chyme accordingly.',
+          'CCK rose eightfold with duodenal fat and was accompanied by gallbladder contraction (volume fell to 35%) and a large rise in lipase output. CCK also slows gastric emptying, matching the delivery of fat to the intestine’s digestive capacity.',
+          'Trypsinogen is activated in the duodenal lumen by enteropeptidase, not inside acinar cells. Activation within the pancreas would digest the gland, and it is not a hormonal action of CCK, which stimulates enzyme secretion rather than activation.',
+        ],
         skill: '3B cholecystokinin actions',
       },
       {
@@ -155,6 +203,12 @@ export const FL4_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'If blocking CCK receptors prevents duodenal fat from lowering acid output, CCK is necessary for the effect; if acid still falls, another mediator must be responsible. Intravenous oleic acid bypasses the I cells, so a result would say nothing about whether CCK mediates the duodenal effect. Doubling the fat dose and remeasuring gallbladder volume tests the dose dependence of a different CCK action, not the link to acid secretion. CCK was already measured in condition 4 and was unchanged; confirming that again does not test whether CCK causes the fall in acid.',
+        optionExplanations: [
+          'If blocking CCK receptors prevents duodenal fat from lowering acid output, CCK is necessary for the effect; if acid still falls despite the antagonist, another mediator must be responsible. This directly tests the causal link.',
+          'Intravenous oleic acid bypasses the I cells of the duodenal mucosa, so it would not release CCK by the physiological route. Whatever the result, it says nothing about whether CCK mediates the duodenal effect on acid.',
+          'Doubling the fat dose and remeasuring gallbladder volume tests the dose dependence of a different CCK action, gallbladder contraction. It does not examine the link between CCK and gastric acid secretion.',
+          'CCK was already measured in condition 4 and was unchanged by duodenal acid (1.0 pmol/L). Confirming that again does not test whether CCK causes the fall in acid output seen with duodenal fat.',
+        ],
         skill: '3B research design in GI physiology',
       },
     ],
@@ -183,6 +237,12 @@ export const FL4_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'E-cadherin’s homophilic binding requires $\\text{Ca}^{2+}$, so removing calcium disrupts adherens junctions and the cells come apart from one another, while integrin binding to laminin, which the passage does not describe as calcium-dependent and which is supported by the $\\text{Mg}^{2+}$ still present, keeps them on the dish. Detachment from the dish with intact cell–cell contacts reverses the two dependencies. Cadherin binding is not calcium-independent; the passage states the ions rigidify the extracellular domains. Immediate anoikis would require loss of matrix attachment, and apoptosis takes hours, not minutes.',
+        optionExplanations: [
+          'Detachment from the dish with intact cell–cell contacts reverses the two calcium dependencies. E-cadherin binding requires calcium, whereas integrin binding to laminin is supported by the Mg²⁺ still present, so the sheet would come apart but stay on the dish.',
+          'E-cadherin’s homophilic binding requires Ca²⁺ to rigidify its extracellular domains, so removing calcium disrupts adherens junctions and the cells come apart. Integrin binding to laminin, supported by the remaining Mg²⁺, keeps them attached to the dish.',
+          'Cadherin binding is not calcium-independent; the passage states that Ca²⁺ ions rigidify the extracellular domains of E-cadherin, and without them homophilic binding fails. Protein–protein contact alone is insufficient.',
+          'Immediate anoikis would require loss of matrix attachment, but integrin binding is supported by Mg²⁺ and the cells stay attached. Apoptosis also takes hours, not minutes, so this cannot be the change observed within minutes.',
+        ],
         skill: '2A cell adhesion molecules',
       },
       {
@@ -197,6 +257,12 @@ export const FL4_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'A deletion of the E-cadherin gene is a permanent genetic change that could not be undone by removing a signal, so finding it only in invasive cells would suggest loss by mutation rather than by regulated repression. Promoter-bound repressive transcription factors are exactly what regulated repression predicts. Re-expression after TGF-β is removed shows the change is reversible. Re-expression in metastases (MET) likewise indicates the E-cadherin gene remained intact and could be switched back on.',
+        optionExplanations: [
+          'High levels of transcription factors bound to the E-cadherin promoter in invasive-edge cells are exactly what regulated repression predicts. This finding supports, rather than weakens, the view that E-cadherin loss is a regulatory change.',
+          'Re-expression of E-cadherin within days of removing TGF-β shows the change is reversible when the inducing signal is withdrawn. This directly supports regulated, reversible silencing.',
+          'Re-expression of E-cadherin in liver metastases (MET) indicates the gene remained intact and could be switched back on. This supports reversibility and is consistent with the passage’s description of MET.',
+          'A deletion in the E-cadherin gene is a permanent genetic change that cannot be undone by removing a signal. Finding deletions only in invasive-edge cells would suggest loss by mutation rather than by reversible transcriptional repression.',
+        ],
         skill: '2A epithelial–mesenchymal transition (evaluating evidence)',
       },
       {
@@ -211,6 +277,12 @@ export const FL4_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Cells in the circulation have no matrix to bind, so the integrin-dependent survival signals stop and normal epithelial cells would die by anoikis; tumor cells that survive must generate those survival signals without matrix contact. Building a basement membrane in flowing blood is not a plausible way to supply matrix signals. E-cadherin mediates homophilic binding to other E-cadherin-bearing epithelial cells, not to endothelium, and it is lost during EMT. Losing all integrins would not prevent anoikis and would also prevent the cells from later attaching to matrix in the distant organ.',
+        optionExplanations: [
+          'Cells in the circulation have no matrix to bind, so integrin-dependent survival signals stop and normal epithelial cells die by anoikis. Tumor cells that survive for hours must generate those survival signals without matrix contact.',
+          'Building a basement membrane in flowing blood is not a plausible way to supply matrix signals; the basement membrane is a sheet underlying stationary epithelium. Circulating cells cannot assemble and attach to one.',
+          'E-cadherin mediates homophilic binding to other E-cadherin-bearing epithelial cells, not to endothelium. It is also lost during EMT, so increased E-cadherin is the opposite of what invasive cells show.',
+          'Losing all integrins would not prevent anoikis, which is triggered by absence of integrin signaling, and it would prevent the cells from attaching to matrix in the distant organ, which is required to establish a metastasis.',
+        ],
         skill: '2A integrin signaling and anoikis',
       },
       {
@@ -225,6 +297,12 @@ export const FL4_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'In the collagen triple helix every third residue lies at the crowded center where the three chains meet, and only glycine, whose side chain is a single hydrogen atom, fits there; a bulkier residue pushes the chains apart. Hydroxylation occurs on proline and lysine, not glycine. Glycine has no side chain capable of hydrogen bonding; interchain hydrogen bonds involve backbone groups. Glycine is uncharged at physiological pH, and hydroxyproline carries no charge for it to pair with.',
+        optionExplanations: [
+          'Hydroxylation in collagen occurs on proline and lysine residues, not on glycine. Hydroxylysine participates in cross-linking, but glycine’s role is structural, not chemical.',
+          'Glycine has no side chain capable of hydrogen bonding; its side chain is a single hydrogen atom. The interchain hydrogen bonds that stabilize the triple helix involve backbone N–H and C=O groups.',
+          'In the collagen triple helix every third residue lies at the crowded center where the three chains meet. Only glycine, whose side chain is a single hydrogen atom, fits there; a bulkier residue pushes the chains apart and disrupts the helix.',
+          'Glycine is uncharged at physiological pH, and hydroxyproline carries no charge either. There is no ionic pairing between these residues; the triple helix is stabilized by steric fit and backbone hydrogen bonds.',
+        ],
         skill: '1A structural proteins: collagen',
       },
     ],
@@ -267,6 +345,12 @@ export const FL4_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'On day 5 the increases over vehicle (1.0) were 0.5 for TSA (1.5) and 10 for decitabine (11), summing to about 10.5, whereas the combination rose by 42 (to 43), about four times that sum, which indicates synergy rather than additivity. An additive effect would have reached only about 11.5-fold. TSA alone produced the smallest increase of the three drug regimens. The roughly 40-fold value belongs to the combination; decitabine alone reached about 11-fold.',
+        optionExplanations: [
+          'TSA alone produced the smallest increase of the three drug regimens (1.5-fold on day 5), while decitabine alone reached 11-fold. This reverses the comparison.',
+          'The roughly 40-fold value belongs to the combination (43-fold on day 5). Decitabine alone reached about 11-fold relative to vehicle, so this misreads which series reached 40-fold.',
+          'An additive effect would sum the single-drug increases: 0.5 (TSA) + 10 (decitabine) = 10.5 above vehicle, reaching about 11.5-fold. The combination reached 43-fold, far more than additive.',
+          'On day 5 the increases over vehicle (1.0) were 0.5 for TSA (1.5) and 10 for decitabine (11), summing to about 10.5. The combination rose by 42 (to 43), about four times that sum, indicating synergy rather than additivity.',
+        ],
         skill: '1B epigenetics (data interpretation)',
       },
       {
@@ -281,6 +365,12 @@ export const FL4_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'TSA strongly induced the silent gene with an unmethylated promoter, so the drug entered the cells and inhibited HDACs; its near-absence of effect on TSX, whose island stayed methylated, shows that HDAC inhibition is insufficient while the promoter remains methylated, and only after decitabine lowered methylation did TSA add a large effect. The tenfold induction of the second gene rules out a failure of TSA to act. The TSX coding sequence is intact and the gene was reactivated by drugs, which argues against a mutation. Bisulfite sequencing showed that TSA did not change CpG methylation.',
+        optionExplanations: [
+          'The tenfold induction of the second, unmethylated gene by TSA alone shows the drug entered the cells and inhibited HDACs effectively. A failure of uptake or action is ruled out.',
+          'The TSX coding sequence is intact, and the gene was reactivated more than 40-fold by the drug combination, which argues against silencing by mutation. A mutation preventing mRNA synthesis would not be reversed by epigenetic drugs.',
+          'TSA strongly induced the silent gene with an unmethylated promoter, so it inhibited HDACs effectively, yet it barely affected TSX, whose island stayed methylated. Blocking deacetylation is insufficient while the promoter remains methylated; only after decitabine lowered methylation did TSA add a large effect.',
+          'Bisulfite sequencing showed that TSA did not change CpG methylation at the TSX island. TSA is an HDAC inhibitor that affects histone acetylation, not DNA methylation.',
+        ],
         skill: '1B chromatin structure and gene silencing',
       },
       {
@@ -295,6 +385,12 @@ export const FL4_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Methylation is maintained by DNMT1 copying the pattern onto each newly made strand; when DNMT1 is trapped, new strands stay unmethylated, so methylation is diluted with each round of replication and falls only after one or more divisions. Blocking replication with aphidicolin prevents both the incorporation of decitabine and the production of unmethylated daughter strands, so methylation and expression do not change. DNMT1 adds, rather than removes, methyl groups. Decitabine works by blocking methylation of new strands, not by triggering repair enzymes to excise methylated cytosines, and DNMT1 acts on DNA in the nucleus rather than activating the drug before it enters.',
+        optionExplanations: [
+          'Methylation is maintained by DNMT1 copying the pattern onto each newly made strand. When DNMT1 is trapped, new strands stay unmethylated, so methylation is diluted with each round of replication and falls only after divisions. Aphidicolin blocks replication, preventing both decitabine incorporation and unmethylated daughter strands.',
+          'DNMT1 adds methyl groups; it does not remove them. Trapping DNMT1 prevents maintenance methylation of new strands but does not actively demethylate existing marks, which is why the effect requires cell division to dilute them.',
+          'Decitabine does not work by triggering repair enzymes to excise methylated cytosines. It is incorporated into DNA during replication and traps DNMT enzymes, blocking methylation of new strands; existing marks are lost by dilution.',
+          'Decitabine is incorporated into DNA during replication, where it traps DNMT1; DNMT1 acts on DNA in the nucleus and does not activate the drug before entry. This also would not explain why aphidicolin abolished the effect.',
+        ],
         skill: '1B maintenance of DNA methylation',
       },
       {
@@ -309,6 +405,12 @@ export const FL4_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'A reference gene corrects for differences in the amount of RNA analyzed, which works only if the reference itself is unaffected by the treatments; if a drug changed GAPDH mRNA, the TSX ratio would change even with no change in TSX expression. A methylated GAPDH promoter would make GAPDH respond to the same drugs, which is exactly what a reference must avoid. Relative abundance does not matter as long as both are measured accurately. GAPDH is a constitutively expressed metabolic gene, and a reference restricted to dividing cells would be confounded by any drug effect on proliferation.',
+        optionExplanations: [
+          'A methylated GAPDH promoter would make GAPDH respond to decitabine and TSA, which is exactly what a reference gene must avoid. The reference should be unaffected by the treatments, not similarly regulated.',
+          'A reference gene corrects for differences in the amount of RNA analyzed, which works only if the reference itself is unaffected by the treatments. If a drug changed GAPDH mRNA, the TSX ratio would change even with no change in TSX expression.',
+          'Relative abundance does not matter for normalization as long as both transcripts are measured accurately by quantitative PCR. A reference gene need not be more abundant than the gene of interest.',
+          'GAPDH is a constitutively expressed metabolic gene found in all cells, as the passage states. A reference restricted to dividing cells would be confounded by any drug effect on proliferation, undermining the normalization.',
+        ],
         skill: '1B research design: reference genes',
       },
       {
@@ -323,6 +425,12 @@ export const FL4_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Lysine side chains are positively charged and bind the negatively charged phosphate backbone of DNA; acetylation converts the amine to an uncharged amide, weakening histone–DNA contacts and opening chromatin to the transcription machinery. Acetylation removes, rather than adds, positive charge, and a positive charge would attract rather than repel DNA. Acetyltransferases modify side chains and do not cleave peptide bonds. Histone acetylation modifies histone lysines, not DNA bases.',
+        optionExplanations: [
+          'Acetylation removes, rather than adds, positive charge by converting the lysine amine to an uncharged amide. Moreover, a positive charge on histone tails would attract the negatively charged DNA backbone, not repel it.',
+          'Acetyltransferases modify lysine side chains; they do not cleave peptide bonds. Histone tails remain intact after acetylation, and no part of the histone is hydrolyzed.',
+          'Histone acetylation modifies lysine residues in histone tails, not DNA bases. Modification of DNA in this passage is methylation of cytosine by DNMTs, a separate process.',
+          'Lysine side chains are positively charged and bind the negatively charged phosphate backbone of DNA. Acetylation converts the amine to an uncharged amide, weakening histone–DNA contacts and opening chromatin to the transcription machinery.',
+        ],
         skill: '1B histone acetylation',
       },
     ],
@@ -351,6 +459,12 @@ export const FL4_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Lowering hepatic cholesterol with a statin activates SREBP, which increases LDL-receptor synthesis; the extra receptors clear LDL from plasma, and this is the indirect effect responsible for most LDL lowering. With no functional receptors, that route is unavailable, so LDL falls far less. Receptor-derived cholesterol does not compete with the statin for the reductase. Reductase inhibition still occurs, but reduced synthesis alone accounts for only a small part of the LDL-lowering effect. Reduced hepatic cholesterol tends to lower, not raise, the secretion of cholesterol-rich VLDL.',
+        optionExplanations: [
+          'Receptor-derived cholesterol does not compete with the statin for HMG-CoA reductase; the statin competes with HMG-CoA. Without receptors, the main LDL-lowering mechanism is lost, so LDL falls less, not more.',
+          'Reductase inhibition still occurs, but the passage states that most of the statin’s effect on plasma LDL arises indirectly. Reduced synthesis alone accounts for only a small part of LDL lowering, so the response would not be comparable.',
+          'Lowering hepatic cholesterol with a statin activates SREBP, which increases LDL-receptor synthesis; the extra receptors clear LDL from plasma, the indirect effect responsible for most LDL lowering. With no functional receptors, that route is unavailable, so LDL falls far less.',
+          'Reduced hepatic cholesterol tends to lower, not raise, the secretion of cholesterol-rich VLDL. There is no mechanism by which inhibiting synthesis would increase VLDL output and raise plasma LDL.',
+        ],
         skill: '1D lipoprotein metabolism and statins',
       },
       {
@@ -365,6 +479,12 @@ export const FL4_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Unesterified cholesterol is amphipathic: its 3-hydroxyl group sits among the phospholipid head groups at the aqueous surface. Forming an ester through that hydroxyl removes the only polar group, so the ester is entirely nonpolar and partitions into the core. The ester bond consumes the fatty acid’s carboxyl group, so no carboxylate charge is added. The four fused rings are unchanged by esterification. No phosphate is added, and apoB-100 lies at the surface, not in the core.',
+        optionExplanations: [
+          'The ester bond consumes the fatty acid’s carboxyl group, so no carboxylate charge is added. A negatively charged group would make the molecule more polar and push it toward the surface, not the core.',
+          'The four fused rings of the steroid nucleus are unchanged by esterification. Only the 3-hydroxyl group reacts, and the rigid ring system remains; the molecule becomes nonpolar, not flexible.',
+          'Unesterified cholesterol is amphipathic: its 3-hydroxyl group sits among phospholipid head groups at the surface. Forming an ester through that hydroxyl removes the only polar group, so the ester is entirely nonpolar and partitions into the core.',
+          'No phosphate is added by esterification with a fatty acid. ApoB-100 lies at the particle surface, not in the core, and cholesteryl esters do not bind it.',
+        ],
         skill: '1D lipid structure and lipoprotein organization',
       },
       {
@@ -379,6 +499,12 @@ export const FL4_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'If receptors cannot enter coated pits, bound LDL is not internalized, its cholesteryl esters never reach lysosomes, and no freed cholesterol reaches the ER; SREBP therefore stays active and reductase is neither repressed nor degraded, so synthesis remains high despite abundant LDL outside. Suppression requires cholesterol in the ER membrane, not LDL at the cell surface. The receptors in these cells remain at the surface and bind LDL normally, rather than being degraded. Lysosomal hydrolysis would decrease, not increase, because LDL is not delivered to lysosomes.',
+        optionExplanations: [
+          'Suppression of reductase requires cholesterol in the ER membrane, not LDL bound at the cell surface. If LDL cannot be internalized, no cholesterol reaches the ER and the sterol-sensing escort protein does not retain SREBP.',
+          'If receptors cannot enter coated pits, bound LDL is not internalized, its cholesteryl esters never reach lysosomes, and no freed cholesterol reaches the ER. SREBP stays active, reductase is neither repressed nor degraded, and synthesis remains high despite abundant external LDL.',
+          'The receptors in these cells remain at the surface and bind LDL normally, as the stem states. They are not delivered to lysosomes; the defect is failure to cluster in coated pits, which keeps receptors and bound LDL on the surface.',
+          'Lysosomal hydrolysis of cholesteryl esters would decrease, not increase, because LDL is never delivered to lysosomes. Receptors accumulating at the surface do not send LDL inward.',
+        ],
         skill: '2A receptor-mediated endocytosis',
       },
       {
@@ -393,6 +519,12 @@ export const FL4_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'When the resin diverts hepatic cholesterol into bile acids, ER cholesterol falls and SREBP raises both LDL-receptor and HMG-CoA reductase expression; increased synthesis partly refills the cholesterol pool and blunts receptor induction. A statin blocks that compensatory synthesis, so hepatic cholesterol stays low and more receptors are made to clear LDL. The resin binds bile acids, and statins do not affect that binding. Statins inhibit cholesterol synthesis and do not directly accelerate bile-acid formation. Blocking a statin’s absorption would reduce, not increase, the drug reaching the liver.',
+        optionExplanations: [
+          'The resin binds bile acids, not dietary cholesterol, and statins do not affect that binding. The sequestrant’s action in the intestinal lumen is independent of the statin.',
+          'Statins inhibit cholesterol synthesis; they do not directly accelerate conversion of cholesterol into bile acids. Increased bile-acid synthesis is the liver’s response to the resin, not an action of the statin.',
+          'Blocking a statin’s absorption would reduce, not increase, the amount of drug reaching the liver. This would weaken the combination rather than explain its enhanced effect.',
+          'When the resin diverts hepatic cholesterol into bile acids, ER cholesterol falls and SREBP raises both LDL-receptor and HMG-CoA reductase expression; increased synthesis partly refills the pool and blunts receptor induction. A statin blocks that compensatory synthesis, so more receptors are made to clear LDL.',
+        ],
         skill: '1D regulation of cholesterol synthesis',
       },
     ],
@@ -410,6 +542,12 @@ export const FL4_BIO_BIOCHEM_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'The PR interval spans atrial depolarization plus the delay in the AV node before ventricular depolarization begins, so slowing AV nodal conduction lengthens it. QRS width reflects conduction through the ventricles, which is unchanged. P-wave amplitude reflects atrial depolarization, not nodal delay. The QT interval measures ventricular depolarization and repolarization, which the drug does not affect.',
+    optionExplanations: [
+      'QRS width reflects conduction through the ventricles, which the drug does not change. Ventricular depolarization proceeds at its normal speed once the impulse leaves the AV node.',
+      'P-wave amplitude reflects the magnitude of atrial depolarization, not the timing of nodal conduction. Atrial conduction velocity is unchanged, and amplitude is not a measure of duration.',
+      'The PR interval spans atrial depolarization plus the delay in the AV node before ventricular depolarization begins. Slowing AV nodal conduction directly lengthens this interval.',
+      'The QT interval measures ventricular depolarization and repolarization, which the drug does not affect. A longer AV nodal delay shifts the QRS later but does not lengthen the QT interval itself.',
+    ],
     skill: '3B cardiac electrophysiology',
   },
   {
@@ -427,6 +565,12 @@ export const FL4_BIO_BIOCHEM_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'The first sting induced IgE, which binds high-affinity Fc receptors on mast cells; on re-exposure, the antigen cross-links adjacent bound IgE molecules, triggering immediate degranulation and histamine release. Binding to IgM on naive B cells begins a new primary response and takes days. Cytotoxic T-cell recognition kills infected cells and underlies delayed, not immediate, reactions. New IgE from plasma cells takes days to produce, and IgE binding free antigen in plasma does not by itself release histamine.',
+    optionExplanations: [
+      'Antigen binding to IgM on naive B cells begins a new primary response, which takes days to produce antibody. It cannot account for hives and wheezing within minutes of the sting.',
+      'The first sting induced IgE, which binds high-affinity Fc receptors on mast cells. On re-exposure, the venom antigen cross-links adjacent bound IgE molecules, triggering immediate degranulation and histamine release.',
+      'Cytotoxic T-cell recognition of peptides on MHC class I kills infected or abnormal cells and underlies delayed-type reactions. It does not trigger mast-cell histamine release and takes far longer than minutes.',
+      'New IgE from plasma cells takes days to produce, and IgE binding free venom in the plasma does not by itself release histamine. Histamine release requires IgE already fixed to mast cells being cross-linked.',
+    ],
     skill: '3B immediate hypersensitivity',
   },
   {
@@ -444,6 +588,12 @@ export const FL4_BIO_BIOCHEM_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'Central chemoreceptors respond to the $\\text{H}^+$ concentration of the cerebrospinal fluid; $\\text{CO}_2$ diffuses freely across the blood–brain barrier and is hydrated there to carbonic acid, whereas $\\text{H}^+$ from a nonvolatile acid crosses the barrier poorly. The central receptors respond to pH, not to $\\text{CO}_2$ molecules themselves. The stem states that arterial pH does fall, so complete buffering is ruled out. Peripheral chemoreceptors do respond to metabolic acidosis, but they stimulate breathing and do not inhibit the central receptors.',
+    optionExplanations: [
+      'Central chemoreceptors respond to the H⁺ concentration of the cerebrospinal fluid. CO₂ diffuses freely across the blood–brain barrier and is hydrated to carbonic acid there, whereas H⁺ from a nonvolatile acid crosses the barrier poorly.',
+      'Central chemoreceptors respond to pH in the fluid around them, not to CO₂ molecules directly. CO₂ matters because it is converted to H⁺ in the cerebrospinal fluid, so the receptors do respond to pH changes.',
+      'The stem states that arterial pH does fall with the nonvolatile acid, so complete buffering is ruled out. The difference lies in how readily the acid reaches the central receptors, not in whether plasma pH changes.',
+      'Peripheral chemoreceptors do respond to metabolic acidosis, but they stimulate breathing rather than inhibiting central receptors. There is no inhibitory signal that silences the medullary chemoreceptors.',
+    ],
     skill: '3B control of ventilation',
   },
   {
@@ -461,6 +611,12 @@ export const FL4_BIO_BIOCHEM_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'In codominance both alleles are fully and separately expressed, so the heterozygote shows each parental phenotype side by side, here as intermixed red and white hairs (a roan coat). Half the pigment concentration and a uniform intermediate color are both signs of incomplete dominance, in which the heterozygote’s phenotype is a blend. A heterozygote indistinguishable from the red homozygote indicates complete dominance of the red allele.',
+    optionExplanations: [
+      'Pigment at half the concentration found in red homozygotes is a sign of incomplete dominance, in which the heterozygote shows a quantitative blend of the two parental phenotypes.',
+      'A single uniform intermediate color is the classic sign of incomplete dominance. The heterozygote’s phenotype is a blend rather than a side-by-side expression of both alleles.',
+      'A heterozygote indistinguishable from the red homozygote indicates complete dominance of the red allele, in which the white allele is not expressed at all. This is neither codominance nor incomplete dominance.',
+      'In codominance both alleles are fully and separately expressed, so the heterozygote shows each parental phenotype side by side. Intermixed red and white hairs, each matching one homozygote, give the roan coat characteristic of codominance.',
+    ],
     skill: '1C patterns of dominance',
   },
   {
@@ -478,6 +634,12 @@ export const FL4_BIO_BIOCHEM_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'For the first cousin, $rB$ = 0.125 × 10 = 1.25, which exceeds the cost of 1, so the allele gains more through the relative’s extra offspring than it loses. For the full sibling, $rB$ = 1.5, which is less than the cost of 2. For the half sibling, $rB$ = 0.75, less than 1. For an unrelated individual $rB$ = 0 regardless of the benefit, so kin selection cannot favor the behavior.',
+    optionExplanations: [
+      'For the full sibling, rB = 0.5 × 3 = 1.5, which is less than the cost of 2. The allele loses more through the actor’s forgone offspring than it gains through the sibling, so selection does not favor it.',
+      'For the half sibling, rB = 0.25 × 3 = 0.75, which is less than the cost of 1. The benefit to the relative, discounted by relatedness, does not outweigh the actor’s loss.',
+      'For the first cousin, rB = 0.125 × 10 = 1.25, which exceeds the cost of 1. The allele gains more through the relative’s extra offspring than it loses through the actor’s, so Hamilton’s rule is satisfied.',
+      'For an unrelated individual r = 0, so rB = 0 regardless of how large the benefit is. Kin selection cannot favor helping an unrelated recipient; the inequality 0 > 1 is never satisfied.',
+    ],
     skill: '1C inclusive fitness',
   },
   {
@@ -495,6 +657,12 @@ export const FL4_BIO_BIOCHEM_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'Fatty acid synthesis occurs in the cytosol, and malonyl-CoA is its first committed intermediate; by blocking CPT-I, the entry point of the carnitine shuttle, malonyl-CoA prevents the fatty acids being made from being carried into the matrix and oxidized, avoiding a futile cycle. Acetyl-CoA leaves mitochondria as citrate, not through CPT-I. Fatty acid synthesis takes place in the cytosol, not the matrix, and CPT-I inhibition blocks rather than allows acyl entry. β-Oxidation produces NADH and $\\text{FADH}_2$; it does not consume NADPH.',
+    optionExplanations: [
+      'Acetyl-CoA leaves the mitochondria as citrate, which is cleaved in the cytosol by ATP-citrate lyase. CPT-I is part of the carnitine shuttle for fatty acids and plays no role in acetyl-CoA export.',
+      'Fatty acid synthesis occurs in the cytosol, and malonyl-CoA is its first committed intermediate. By blocking CPT-I, the entry point of the carnitine shuttle, malonyl-CoA prevents newly made fatty acids from being carried into the matrix and oxidized, avoiding a futile cycle.',
+      'Fatty acid synthesis takes place in the cytosol, not the mitochondrial matrix. Moreover, CPT-I inhibition blocks rather than allows acyl entry into mitochondria, so this reverses both the location and the direction of the effect.',
+      'β-Oxidation produces NADH and FADH₂; it does not consume NADPH. NADPH is consumed by fatty acid synthesis in the cytosol, and it is not generated in the mitochondria in the way this option describes.',
+    ],
     skill: '1D fatty acid synthesis vs β-oxidation',
   },
   {
@@ -512,6 +680,12 @@ export const FL4_BIO_BIOCHEM_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'All cells take up crystal violet and iodine; it is the alcohol step that dissolves the outer membrane of Gram-negative cells and washes the dye complex from their thin peptidoglycan. Without decolorization, Gram-negative cells keep the purple complex and look Gram-positive. Safranin is only a counterstain and cannot mask purple. Iodine enters all cells, and crystal violet also stains Gram-negative cells before decolorization, so they are neither colorless nor pink.',
+    optionExplanations: [
+      'All cells take up crystal violet and iodine; it is the alcohol step that dissolves the outer membrane of Gram-negative cells and washes the dye complex from their thin peptidoglycan. Without decolorization, Gram-negative cells keep the purple complex and look Gram-positive.',
+      'Safranin is only a counterstain, applied after decolorization to give color to cells that lost the crystal violet. It cannot mask the purple complex, which is still present when the alcohol step is omitted.',
+      'Iodine enters all cells, Gram-negative included, and forms the complex with crystal violet in both cell types. The outer membrane does not exclude it, so the cells would not be colorless.',
+      'Crystal violet stains Gram-negative cells just as it stains Gram-positive cells; the outer membrane does not block it. The difference between the two types appears only at the decolorization step, which was omitted.',
+    ],
     skill: '2B Gram stain',
   },
 ]

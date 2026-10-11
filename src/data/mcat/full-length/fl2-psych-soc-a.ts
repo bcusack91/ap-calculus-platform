@@ -44,6 +44,12 @@ export const FL2_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'In the base-rate group the median estimate is below the no-base-rate value at every level, yet it still climbs from 2 to 60 per 100,000 between zero and eight accounts, so the accounts continued to matter. The claim that the accounts’ influence was eliminated is contradicted by the thirtyfold rise within the base-rate group. The claim that lowering occurred only at four or more accounts is wrong because the base-rate curve is already lower at zero and two accounts. Estimates rose, not fell, with more accounts in both groups.',
+        optionExplanations: [
+          'The base-rate group’s estimate still climbs from 2 to 60 per 100,000 between zero and eight accounts, a thirtyfold rise. The accounts’ influence was reduced, not eliminated, and estimates did not stay near the true rate of 1.',
+          'The base-rate curve is already below the no-base-rate curve at zero accounts (2 versus 20) and two accounts (6 versus 90). Lowering occurred at every level, not only from four accounts upward.',
+          'Correct. At every level the base-rate group’s median is far below the no-base-rate group’s, yet it still rises steadily (2, 6, 14, 32, 60) as more accounts are read. The base rate dampened but did not remove the availability effect.',
+          'Estimates rose with more accounts in both groups. Nothing in Figure 1 shows a reversal; the base-rate curve increases monotonically from 2 to 60.',
+        ],
         skill: '6B data interpretation: availability',
       },
       {
@@ -57,6 +63,12 @@ export const FL2_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The availability heuristic ties judged frequency to how easily instances come to mind, and the passage links estimates to ease-of-imagining ratings; summaries that are hard to imagine should therefore raise estimates less than vivid accounts do. A larger rise would require the summaries to be more available than the vivid accounts, the opposite of what is stipulated. The same rise would be expected only if people counted cases rather than relying on ease of retrieval, which is what the heuristic denies. Nothing in the heuristic predicts estimates falling below the true rate, and even hard-to-imagine cases add some instances to memory.',
+        optionExplanations: [
+          'Correct. The availability heuristic ties judged frequency to how easily instances come to mind, and the passage reports $r = 0.71$ between ease-of-imagining and estimates. Summaries rated hard to imagine should raise estimates less than vivid first-person accounts.',
+          'A larger rise would require the summaries to be more available than vivid first-person accounts, which contradicts the stipulation that they are hard to imagine.',
+          'The same rise would be expected only if participants counted cases rather than relying on ease of retrieval. The heuristic predicts that vividness, not case count, drives the estimate.',
+          'Nothing in the heuristic predicts estimates falling below the true rate. Even hard-to-imagine cases add some instances to memory, and clinical wording does not imply rarity.',
+        ],
         skill: '6B availability heuristic',
       },
       {
@@ -70,6 +82,12 @@ export const FL2_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The second task showed that the same outcome described as a gain (recipients kept well) produced more recommendations than the equivalent description as a loss (recipients who still fall ill), so a gain-framed message should raise uptake. Stating that one in ten still gets sick is the loss frame that lowered recommendations. Quoting the reaction rate is a base rate, which the first task showed is easily overridden by vivid accounts, and it does not frame the vaccine’s benefit at all. The size of the trials says nothing about outcomes and is not a framing of the same result.',
+        optionExplanations: [
+          'Correct. The second task showed that describing the same outcome as a gain (90 of 100 stay well) produced 78% recommendations versus 55% for the loss frame. A message that nine in ten stay healthy applies that gain framing.',
+          'One in ten still getting sick is the loss frame, which lowered recommendations to 55% in the second task. It describes the same outcome but in the format that reduced uptake.',
+          'Quoting the serious-reaction rate is a base rate, which the first task showed is easily overridden by vivid accounts. It also does not frame the vaccine’s benefit in gain or loss terms.',
+          'Trial size says nothing about outcomes and is not a framing of the same result. The second task’s finding concerned how an outcome is described, not how many people were studied.',
+        ],
         skill: '6B framing effects',
       },
       {
@@ -83,6 +101,12 @@ export const FL2_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Every nurse who declines vaccines is also a nurse, so the second description can never be more probable than the first; rating it as more probable because it matches the stereotype is the conjunction fallacy, a product of representativeness. The base-rate fallacy would involve neglecting how common nurses are when judging whether she is a nurse at all, but both options describe a nurse. The gambler’s fallacy concerns expectations about sequences of independent random events. Belief perseverance requires holding a belief after disconfirming evidence, and no evidence was presented.',
+        optionExplanations: [
+          'Both descriptions are of a nurse, so the share of nurses in the population is irrelevant to comparing them. The base-rate fallacy would arise in judging whether she is a nurse at all.',
+          'The gambler’s fallacy concerns expecting a random outcome to be due after a run of the opposite, as in sequences of independent events. No sequence of events is involved here.',
+          'Belief perseverance requires holding a belief after contrary evidence is presented. Participants received no disconfirming evidence; they made a single judgment.',
+          'Correct. Every nurse who declines vaccines is also a nurse, so the conjunction can never be more probable than the single category. Rating it higher because it matches the stereotype is the conjunction fallacy, driven by representativeness.',
+        ],
         skill: '6B representativeness and the conjunction fallacy',
       },
       {
@@ -96,6 +120,12 @@ export const FL2_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'A page number carries no information about how often reactions occur, so if merely seeing a prominent 1 lowers estimates as much as the true base rate does, the number is acting as an anchor rather than as information that reduced reliance on the accounts. Ease ratings being unrelated to accounts would contradict the passage, which says ratings rose with accounts in both groups, and would not distinguish anchoring from reduced reliance. Reports of paying less attention to the accounts would support the alternative that participants relied less on them, not the critic. Anchoring pulls estimates toward a common value and would produce less spread among participants, not more.',
+        optionExplanations: [
+          'The passage states that ease ratings rose with accounts in both groups, so this would contradict the data. It also would not distinguish anchoring from reduced reliance on the accounts.',
+          'Correct. A page number carries no information about reaction frequency. If merely seeing a prominent 1 lowers estimates as much as the labeled base rate did, the number is acting as an anchor rather than as information that reduced reliance on the accounts.',
+          'Reports of paying less attention to the accounts would support the original interpretation, that the base rate led participants to rely less on the accounts, not the critic’s anchoring proposal.',
+          'Anchoring pulls estimates toward a common value and would produce less spread among participants, not more. Greater variability would argue against a shared anchor.',
+        ],
         skill: '6B research design: anchoring',
       },
     ],
@@ -120,6 +150,12 @@ export const FL2_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Natural increase is the birth rate minus the death rate, 38 − 12 = 26 per 1,000. Adding net migration of −2 per 1,000 gives total growth of 24 per 1,000 per year, which is 2.4%. The 2.6% value omits the emigration. The 1.2% value uses only the death rate as if it were natural increase, and 0.24% misplaces the decimal when converting per 1,000 to a percentage.',
+        optionExplanations: [
+          'This misplaces the decimal when converting per 1,000 to a percentage. Twenty-four per 1,000 is 2.4 per 100, or 2.4%, not 0.24%.',
+          'This uses only the death rate (12 per 1,000) as if it were the growth figure. Natural increase is births minus deaths, 38 − 12 = 26 per 1,000.',
+          'Correct. Natural increase = 38 − 12 = 26 per 1,000. Adding net migration of −2 gives 24 per 1,000 per year, which is 2.4%.',
+          'This is natural increase alone (26 per 1,000) and omits the net emigration of 2 per 1,000. Total growth includes migration.',
+        ],
         skill: '9B demographic rates calculation',
       },
       {
@@ -133,6 +169,12 @@ export const FL2_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Country R’s natural increase is 9 − 11 = −2 per 1,000, a natural decrease, but net migration of +3 per 1,000 more than offsets it, so the population grows by about 1 per 1,000 per year entirely because of immigration. Deaths do outnumber births, yet the population is not shrinking once migration is counted. It is not stable, and long life expectancy does not offset low fertility in the growth arithmetic; only migration does. With 24% of the population aged 65 and over, the crude death rate is relatively high, not low, and it is not the source of growth.',
+        optionExplanations: [
+          'Deaths do outnumber births (11 versus 9 per 1,000), but net migration of +3 more than offsets the natural decrease of −2. The population grows by about 1 per 1,000, so it is not shrinking.',
+          'Correct. Country R’s natural increase is 9 − 11 = −2 per 1,000, a natural decrease. Net migration of +3 per 1,000 more than offsets it, so the population grows by about 1 per 1,000 entirely because of immigration.',
+          'The population is not stable; it grows slightly. And long life expectancy does not enter the growth arithmetic, which depends only on births, deaths and migration.',
+          'With 24% of the population aged 65 and over, the crude death rate (11) is relatively high, not low, and exceeds the birth rate. Growth comes from migration, not from low mortality.',
+        ],
         skill: '9B population growth components',
       },
       {
@@ -146,6 +188,12 @@ export const FL2_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'With 30% of its population under 15 and only 6% over 64, Country Q has an age structure concentrated in and just below the reproductive ages, so even near-replacement fertility per woman yields many births per 1,000 people; this is population momentum. Net migration of +1 per 1,000 is far too small to double a crude birth rate. The death rate affects how many people die, not how many are born, and births are counted regardless of later survival. Lower contraceptive use would raise the total fertility rate, but Country Q’s fertility rate is near replacement, so the difference lies in age structure rather than in births per woman.',
+        optionExplanations: [
+          'Net migration of +1 per 1,000 is far too small to double a crude birth rate. Even if every migrant were a young child, the effect on births per 1,000 would be negligible.',
+          'The death rate affects how many people die, not how many are born. Births are counted at birth regardless of later survival, so a lower death rate does not raise the crude birth rate.',
+          'Lower contraceptive use would raise the total fertility rate, but Country Q’s TFR (2.3) is near replacement. The difference from Country R lies in age structure, not in births per woman.',
+          'Correct. With 30% under 15 and only 6% over 64, Country Q’s population is concentrated in and below the reproductive ages, so even near-replacement fertility yields many births per 1,000 people. This is population momentum.',
+        ],
         skill: '9B population momentum and age structure',
       },
       {
@@ -159,6 +207,12 @@ export const FL2_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Prevalence is approximately incidence multiplied by average duration. Lengthening survival lengthens the duration of the disease while incidence is unchanged, so more people are living with heart failure at any moment and prevalence rises. Reduced severity does not remove a person from the count of existing cases. Prevalence depends on duration as well as incidence, so it does not stay constant. Incidence is stated to be unchanged, so the rise cannot be attributed to more new cases.',
+        optionExplanations: [
+          'Correct. Prevalence ≈ incidence × average duration. Lengthening survival increases duration while incidence is unchanged, so more people are living with heart failure at any time and prevalence rises.',
+          'Reduced severity does not remove a person from the count of existing cases. Prevalence counts people who have the disease, however mild.',
+          'Prevalence depends on duration as well as incidence, as the passage states. With longer duration and constant incidence, prevalence must rise, not stay constant.',
+          'The stem states that the number of new cases each year is unchanged, so incidence did not rise. The increase in prevalence comes from longer duration.',
+        ],
         skill: '9B incidence and prevalence',
       },
     ],
@@ -200,6 +254,12 @@ export const FL2_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'On day 13 the cue-evoked peak in cocaine rats (about 230% of baseline) exceeds the infusion-evoked peak (about 185%); the two curves cross between days 7 and 10. The yoked rats’ cue response stays flat near 100–105%, so it did not rise. In cocaine rats the cue response rose while the infusion response fell, so they did not decline together. An infusion peak of about 185% is well above the 100% baseline, so the infusion response had not returned to baseline.',
+        optionExplanations: [
+          'Infusion-evoked dopamine in cocaine rats did fall (310 to 185), but the yoked rats’ cue response stayed flat near 100–105% throughout. It did not rise.',
+          'Correct. On day 13 the cue-evoked peak in cocaine rats (about 230% of baseline) exceeds the infusion-evoked peak (about 185%). The two curves cross between days 7 and 10.',
+          'The cue response rose (105 to 230) while the infusion response fell (310 to 185). They moved in opposite directions, not together.',
+          'An infusion peak of about 185% of baseline is well above 100%. The infusion response declined but did not return to baseline.',
+        ],
         skill: '6A data interpretation: dopamine signaling',
       },
       {
@@ -213,6 +273,12 @@ export const FL2_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'If dopamine reflects received reward minus expected reward, then a cue that predicts cocaine followed by no cocaine yields a negative difference, which should appear as a transient decrease below baseline. A rise to the day-1 infusion level would require an unexpected, pharmacologically active reward, and saline is neither. The cue response already occurred at the cue; the account predicts no second peak of that size when the predicted reward is omitted. Staying at baseline is what the account predicts when an outcome exactly matches expectation, not when an expected reward is withheld.',
+        optionExplanations: [
+          'A rise to the day-1 infusion level would require an unexpected, pharmacologically active reward. Saline is pharmacologically inert and, after the cue, the reward was fully expected.',
+          'The cue response already occurred at the cue. The prediction-error account predicts no second peak of that size when the predicted reward is omitted; it predicts the opposite.',
+          'Staying at baseline is what the account predicts when the outcome exactly matches expectation. Here the expected reward is withheld, so the error is negative, not zero.',
+          'Correct. If dopamine reflects received minus expected reward, a cue that predicts cocaine followed by saline yields a negative difference. The account predicts a transient dip below baseline at the time the drug would have taken effect.',
+        ],
         skill: '6A reward prediction error',
       },
       {
@@ -226,6 +292,12 @@ export const FL2_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'During abstinence, resting accumbens dopamine fell below that of yoked rats and preference for a natural reward dropped, a withdrawal state opposite to cocaine’s acute effect; renewed drug use would relieve that state, so drug seeking can be maintained by escape from withdrawal even when each dose produces less effect. Increasingly rewarding doses are contradicted by the declining infusion-evoked dopamine in Figure 1. Both groups strongly preferred the sweet solution before training, so the loss of preference was acquired. Continued reuptake blockade would raise extracellular dopamine, not lower it to 70% of the yoked level.',
+        optionExplanations: [
+          'Increasingly rewarding doses are contradicted by Figure 1, where infusion-evoked dopamine declined from 310% to 185% across days, showing tolerance rather than escalation.',
+          'Both groups strongly preferred the sweet solution before training, so the loss of preference was acquired during cocaine exposure. It was not present before the first dose.',
+          'Correct. During abstinence, resting dopamine fell to 70% of yoked levels and preference for a natural reward dropped, a withdrawal state opposite to cocaine’s acute effect. Renewed use would relieve it, so drug seeking can persist as escape from withdrawal even when each dose does less.',
+          'Continued reuptake blockade would raise extracellular dopamine, not lower it to 70% of the yoked level. The low dopamine indicates adaptation, not residual drug action.',
+        ],
         skill: '6A tolerance and withdrawal',
       },
       {
@@ -239,6 +311,12 @@ export const FL2_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Yoked rats received the same cues at the same times as their partners, differing only in that saline rather than cocaine followed each cue; because their cue response stayed flat while the cocaine rats’ grew, the growth can be attributed to pairing with cocaine rather than to repeated cue exposure or handling. No yoked rat received cocaine, so the design cannot compare self-administered with passive cocaine. Yoked rats’ levers had no consequence and dopamine was recorded only after cues and infusions, so the design provides no evidence that lever pressing alone releases dopamine. A near-baseline cue response is not evidence that the cue was aversive, and no aversion measure was taken.',
+        optionExplanations: [
+          'No yoked rat received cocaine; they received saline. The design cannot compare self-administered with passively delivered cocaine because passive cocaine was never given.',
+          'Correct. Yoked rats received the identical cues at the identical times, differing only in that saline followed each cue. Their flat cue response (104%) while cocaine rats’ grew to 230% shows the growth depended on pairing with cocaine, not on cue exposure alone.',
+          'Yoked rats’ levers had no programmed consequence, and dopamine was recorded only after cues and infusions. The design provides no evidence about lever pressing alone.',
+          'A near-baseline cue response is not evidence of aversion, and no aversion measure was taken. The yoked rats simply showed no learned dopamine response to an unpaired cue.',
+        ],
         skill: '6A research design: yoked controls',
       },
     ],
@@ -268,6 +346,12 @@ export const FL2_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Designating a participant as safety contact nearly abolished the effect of group size (90%, 88%, 85%), so the drop among non-designated participants reflects a belief that someone else would handle the problem, the diffusion-of-responsibility process. Because all other members were muted, participants could not hear how others reacted, and designated participants heard the same silence yet helped at high rates, so inference from others’ apparent calm does not explain the drop. Designated participants on five-member calls heard the same audio and helped at high rates, which rules out audibility. Random assignment spread any volunteer trait across all six conditions, so it cannot explain a difference between them.',
+        optionExplanations: [
+          'All other members were muted, so participants could not hear how others reacted. Designated participants heard the same silence yet helped at high rates, so inference from others’ calm cannot explain the drop.',
+          'Designated participants on five-member calls heard the same audio and helped at 85%, so the ill speaker was audible. Audibility cannot explain the difference between designated and non-designated participants.',
+          'Random assignment spread any volunteer trait across all six conditions equally. A shared trait cannot explain a difference between conditions.',
+          'Correct. Designating a safety contact nearly abolished the group-size effect (90%, 88%, 85%). The drop among non-designated participants (85% to 30%) therefore reflects a belief that someone else would handle it: diffusion of responsibility.',
+        ],
         skill: '7C bystander effect: diffusion of responsibility',
       },
       {
@@ -281,6 +365,12 @@ export const FL2_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The second explanation holds that bystanders interpret an ambiguous event by watching others’ reactions; manipulating whether participants can see calm reactions while holding group size constant isolates that process, which Study 1 deliberately removed by muting. Adding more members extends the group-size manipulation but does not separate the two explanations. Designating another member manipulates responsibility, which bears on the first explanation. Heart rate measures arousal but does not manipulate or measure access to others’ reactions.',
+        optionExplanations: [
+          'Adding more members extends the group-size manipulation but does not separate diffusion of responsibility from social-cue interpretation. Both explanations predict less helping in larger groups.',
+          'Designating another member manipulates perceived responsibility, which bears on the first explanation (diffusion), not on whether bystanders read others’ reactions.',
+          'Correct. The second explanation holds that bystanders judge an ambiguous event by others’ reactions. Showing calm others versus no video at a fixed group size isolates that process, which Study 1 deliberately removed by muting everyone.',
+          'Heart rate measures arousal but neither manipulates nor measures access to other members’ reactions. It cannot test the social-interpretation explanation.',
+        ],
         skill: '7C research design: bystander effect',
       },
       {
@@ -294,6 +384,12 @@ export const FL2_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Private means moved from 7.0 to 8.0 in groups leaning toward reporting and from 3.8 to 3.0 in groups leaning against it, so members’ own views became more extreme in their group’s initial direction, which is group polarization. The consensus ratings were somewhat more extreme than the later private ratings, but private ratings also shifted away from their starting values, so the change was not public compliance alone. Both kinds of groups moved away from, not toward, the midpoint. The groups leaning against reporting shifted by 0.8 point privately and 1.1 points in consensus, less than the 1.0 and 1.3 points of the other groups.',
+        optionExplanations: [
+          'Correct. Private means moved from 7.0 to 8.0 in groups leaning toward reporting and from 3.8 to 3.0 in groups leaning against. Members’ own views became more extreme in their group’s initial direction: group polarization.',
+          'Consensus ratings were slightly more extreme than later private ratings, but private ratings also shifted away from their starting values. The change was internalized, not public compliance alone.',
+          'Both kinds of groups moved away from the 5.5 midpoint (7.0 → 8.0 and 3.8 → 3.0), not toward it. Discussion polarized rather than moderated.',
+          'Groups leaning against reporting shifted 0.8 point privately and 1.1 in consensus, less than the 1.0 and 1.3 points of the groups leaning toward reporting. They shifted less, not more.',
+        ],
         skill: '7C group polarization',
       },
       {
@@ -302,6 +398,12 @@ export const FL2_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'A cohesive group with a directive leader, self-censorship of doubts, an illusion of unanimity, and failure to consider alternatives are hallmarks of groupthink. Group polarization describes a shift of members’ views toward an extreme after discussion, not suppression of dissent in favor of a leader’s preference. Social loafing is reduced individual effort when contributions are pooled. Deindividuation is a loss of self-awareness and restraint in anonymous crowds, which does not describe a small, named committee.',
+        optionExplanations: [
+          'Group polarization describes members’ views shifting toward an extreme after discussion. Here doubts are suppressed in favor of a leader’s preference, with no discussion-driven shift in attitudes.',
+          'Correct. A cohesive, long-standing group, a directive leader stating her preference first, self-censorship of private doubts, an illusion of unanimity, and no examination of alternatives are the hallmarks of groupthink.',
+          'Social loafing is reduced individual effort when contributions are pooled. The scenario involves a decision process, not effort on a shared task.',
+          'Deindividuation is loss of self-awareness and restraint in anonymous crowds. A small, named leadership committee is the opposite setting.',
+        ],
         skill: '7C groupthink',
       },
       {
@@ -315,6 +417,12 @@ export const FL2_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Among non-designated participants, the percentage who left fell from 85% to 60% to 30%, and the median time before leaving rose from 45 to 90 to 150 seconds as other members increased from zero to two to five, so both measures changed. The statement that only the number of helpers changed ignores the tripling of median time. The statement that only speed changed ignores the drop from 85% to 30%. The claim that neither changed reverses the pattern, which is present precisely in the non-designated rows.',
+        optionExplanations: [
+          'The number leaving did fall (85% to 30%), but median time to leave also tripled (45 to 150 s). This ignores the change in speed.',
+          'Speed did slow (45 to 150 s), but the percentage leaving also fell sharply (85% to 30%). This ignores the drop in how many helped.',
+          'Correct. Among non-designated participants, the percentage leaving fell from 85% to 60% to 30%, and median time rose from 45 to 90 to 150 seconds as other members increased. Both measures changed.',
+          'This reverses the pattern. The group-size effect appears precisely in the non-designated rows; it is the designated rows where neither measure changes much.',
+        ],
         skill: '7C data interpretation: bystander effect',
       },
     ],
@@ -342,6 +450,12 @@ export const FL2_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'With both regions intact, the patient can still understand speech and produce fluent speech, but repeating a heard phrase requires carrying information from the comprehension region to the production region, which is exactly the connection the arcuate fasciculus provides; this is conduction aphasia. Halting, telegraphic speech with preserved comprehension is the pattern of damage to Broca’s area, which is spared. Fluent but empty speech with poor comprehension is the pattern of damage to Wernicke’s area, also spared. Loss of both production and comprehension (global aphasia) would require damage to both regions.',
+        optionExplanations: [
+          'Correct. With Broca’s and Wernicke’s areas intact, comprehension and fluent production survive, but repeating a heard phrase requires carrying information from the comprehension region to the production region via the arcuate fasciculus. This is conduction aphasia.',
+          'Halting, telegraphic speech with preserved comprehension is the pattern of damage to Broca’s area, which is spared in this patient.',
+          'Fluent but meaningless speech with poor comprehension is the pattern of damage to Wernicke’s area, which is also spared.',
+          'Loss of both production and comprehension (global aphasia) would require damage to both regions. Both are intact here.',
+        ],
         skill: '6B language and the brain: aphasia',
       },
       {
@@ -355,6 +469,12 @@ export const FL2_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Input was matched in amount and speaker, and only the condition that allowed turn-taking and shared attention produced learning, which fits the interactionist claim that biological readiness is realized through social exchange. A nativist device that extracts structure from input would predict learning in both conditions, since input was equal. A recording cannot respond to an infant, so it could not selectively reinforce the infants’ vocalizations. The live-session infants did learn the sounds, which shows that the infants were not too old to do so.',
+        optionExplanations: [
+          'A nativist device that extracts structure from input would predict learning in both conditions, since the amount and speaker of the input were identical. Only the live condition worked.',
+          'A recording cannot respond to an infant, so it could not selectively reinforce the infants’ vocalizations. The learning account would not predict the live-session advantage from reinforcement.',
+          'The live-session infants did learn the sounds, which shows nine-month-olds were not too old. A sensitive-period account cannot explain why only one condition succeeded.',
+          'Correct. Input was matched in amount and speaker; only the condition permitting turn-taking and shared attention produced learning. This fits the interactionist claim that biological readiness is realized through social exchange.',
+        ],
         skill: '6B theories of language development',
       },
       {
@@ -368,6 +488,12 @@ export const FL2_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The difference in speed, which vanishes when verbal resources are occupied, indicates that the availability of words shapes perceptual discrimination to a modest degree, the weak (relativity) version of the Whorfian hypothesis. Linguistic determinism would require that speakers without the words be unable to distinguish the shades, but they distinguished them, only more slowly. Innate, universal color categories would predict no difference between the language groups. No reinforcement for naming was given, and the task measured discrimination rather than a trained response.',
+        optionExplanations: [
+          'Linguistic determinism would require speakers without separate words to be unable to perceive the difference. They distinguished the shades, only more slowly, so perception was not determined by vocabulary.',
+          'Correct. Speakers with two words were faster, and the advantage vanished when verbal resources were occupied by digit rehearsal. Language modestly influences perceptual judgments: the weak (relativity) form of the Whorfian hypothesis.',
+          'Innate, universal color categories would predict no difference between the language groups. The observed speed difference contradicts a purely nativist account.',
+          'No reinforcement for naming was given, and the task measured discrimination speed rather than a trained naming response. A learning account does not fit.',
+        ],
         skill: '6B language and thought: linguistic relativity',
       },
       {
@@ -381,6 +507,12 @@ export const FL2_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Phonology shows an especially strong sensitive-period effect: people who begin a second language after childhood rarely lose a detectable accent, even after decades of use. Vocabulary continues to grow throughout life and can reach native-like size with long use, consistent with the passage’s observation that vocabulary can be acquired late. The ability to learn new words remains intact in adulthood. Two decades of daily use typically produce full comprehension of everyday conversation.',
+        optionExplanations: [
+          'Vocabulary continues to grow throughout life and can reach native-like size after 20 years of daily use. The passage notes that vocabulary can be acquired late even by deprived children.',
+          'The ability to learn new words remains intact in adulthood. Nothing suggests late learners acquire new vocabulary more slowly once fluent.',
+          'Correct. Phonology shows an especially strong sensitive-period effect: people who begin a second language after childhood rarely lose a detectable accent, even after decades of daily use.',
+          'Two decades of daily use typically produce full comprehension of everyday conversation. Comprehension is among the most completely acquired aspects of a late-learned language.',
+        ],
         skill: '6B sensitive period for language',
       },
     ],
@@ -398,6 +530,12 @@ export const FL2_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'The dots are grouped because adjacent dots share a color, so elements that look alike are seen as belonging together, which is the principle of similarity. Proximity cannot explain the grouping, because the spacing is even. Closure is the tendency to complete incomplete figures, and no figure is incomplete. Continuity is the tendency to follow smooth lines or curves, which would group the whole row as a single line rather than into pairs.',
+    optionExplanations: [
+      'Proximity groups elements that are close together, but the dots are evenly spaced. Spacing cannot explain why pairs rather than a single row are perceived.',
+      'Closure is the tendency to complete incomplete figures. No figure is incomplete here; the row is a set of discrete dots.',
+      'Continuity groups elements along smooth lines or curves, which would make the whole row one line rather than separate pairs.',
+      'Correct. Adjacent dots share a color, and elements that look alike are perceived as belonging together. With spacing held constant, color similarity is what creates the pairs.',
+    ],
     skill: '6A Gestalt principles',
   },
   {
@@ -415,6 +553,12 @@ export const FL2_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'An expected external reward for an already enjoyable activity can shift the perceived reason for doing it from interest to reward, so interest falls once the reward is withdrawn; this is the overjustification effect. Extinction would return drawing toward its pre-reward level, but the rewarded children fell below children who were never rewarded, and drawing was originally maintained by interest, not by the certificate. The Yerkes–Dodson law concerns arousal and performance during a task, not later free-time choices. A certificate does not satisfy a biological need, so drive reduction does not apply.',
+    optionExplanations: [
+      'Extinction would return drawing toward its pre-reward level, but the rewarded children fell below never-rewarded peers. Drawing was originally maintained by interest, not by the certificate.',
+      'Correct. An expected external reward for an already enjoyable activity shifts the perceived reason from interest to reward, so intrinsic interest falls once the reward is withdrawn. This is the overjustification effect.',
+      'The Yerkes–Dodson law concerns arousal and performance during a task. It does not address later free-time choices after a reward has ended.',
+      'A certificate does not satisfy a biological need, and drawing served no physiological drive. Drive reduction does not apply.',
+    ],
     skill: '7A intrinsic and extrinsic motivation',
   },
   {
@@ -432,6 +576,12 @@ export const FL2_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'Fear activates the sympathetic division of the autonomic nervous system, which dilates the pupils, raises heart rate, and suppresses digestion. Constricted pupils and increased digestive activity are parasympathetic effects and would not accompany a sympathetic surge. Decreased heart rate and increased salivation are likewise parasympathetic. Constricted pupils, a slower heart, and reduced sweating are the reverse of a fight-or-flight response, in which sweating increases.',
+    optionExplanations: [
+      'Correct. Fear activates the sympathetic division: pupils dilate, heart rate rises, and digestion is suppressed as blood is directed to skeletal muscle.',
+      'Constricted pupils and increased digestive activity are parasympathetic effects. They would not accompany the sympathetic surge of sudden fear.',
+      'Decreased heart rate and increased salivation are parasympathetic effects, inconsistent with fight-or-flight. Only the dilated pupils fit.',
+      'Constricted pupils, a slower heart and reduced sweating are the reverse of a fight-or-flight response, in which sweating increases.',
+    ],
     skill: '6C emotion and the autonomic nervous system',
   },
   {
@@ -449,6 +599,12 @@ export const FL2_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'Reciprocal determinism, central to the social-cognitive perspective, holds that personal factors, behavior, and environment continually influence one another, as her confidence, her enrollment, and the course and teacher do here. The psychoanalytic perspective explains behavior by unconscious drives and conflicts, none of which is described. The trait perspective describes stable dispositions but not a loop in which the environment reshapes the person. The humanistic perspective focuses on growth toward one’s potential, not on the two-way interplay of person and situation.',
+    optionExplanations: [
+      'The psychoanalytic perspective explains behavior through unconscious drives and conflicts. None is described in this scenario of confidence, enrollment and environmental response.',
+      'The trait perspective describes stable dispositions but does not account for a loop in which environment reshapes the person and the person reshapes the environment.',
+      'Correct. Reciprocal determinism holds that personal factors, behavior and environment continually influence one another, exactly as her confidence, her enrollment, and the course and teacher’s response do here.',
+      'The humanistic perspective emphasizes growth toward one’s potential. It does not focus on the two-way causal interplay of person, behavior and situation described.',
+    ],
     skill: '7A social-cognitive theory of personality',
   },
   {
@@ -466,6 +622,12 @@ export const FL2_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'A pervasive pattern beginning by early adulthood of social inhibition, feelings of inadequacy, and hypersensitivity to rejection, in a person who wants relationships, defines avoidant personality disorder. Schizoid personality disorder also involves social withdrawal, but the person is indifferent to relationships rather than longing for them. Dependent personality disorder centers on an excessive need to be cared for and difficulty making decisions without others. Paranoid personality disorder centers on pervasive distrust and suspicion of others’ motives, which is not described.',
+    optionExplanations: [
+      'Schizoid personality disorder involves social detachment with indifference to relationships. This man very much wishes for close friends, which rules out indifference.',
+      'Dependent personality disorder centers on an excessive need to be cared for and difficulty making decisions without reassurance. Neither is described here.',
+      'Paranoid personality disorder centers on pervasive distrust and suspicion of others’ motives. He fears rejection and feels inept, not that others mean him harm.',
+      'Correct. Social inhibition, feelings of inadequacy, hypersensitivity to rejection (joining only when certain of being liked), and avoidance of interpersonal work, in a person who wants relationships, define avoidant personality disorder.',
+    ],
     skill: '7A personality disorders: DSM classification',
   },
   {
@@ -478,6 +640,12 @@ export const FL2_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'Explaining a social arrangement by the contribution it makes to the stability and smooth operation of the larger system is the hallmark of functionalism. Conflict theory would ask which groups gain or lose from triage rules and how the rules reflect unequal power. Symbolic interactionism would examine how patients and staff interpret one another in face-to-face encounters. Social constructionism would ask how categories such as an “emergency” come to be defined through shared social agreement.',
+    optionExplanations: [
+      'Conflict theory would ask which groups gain or lose from triage rules and how the rules reflect unequal power. The sociologist instead emphasizes efficiency and stability.',
+      'Correct. Explaining a social arrangement by its contribution to the stability and smooth operation of the larger system is the hallmark of functionalism.',
+      'Symbolic interactionism examines how patients and staff interpret one another in face-to-face encounters. System-level efficiency is not its focus.',
+      'Social constructionism asks how categories such as “emergency” are defined through shared agreement. The analysis here takes the categories as given and asks what they do for the system.',
+    ],
     skill: '9A theoretical approaches in sociology',
   },
   {
@@ -490,6 +658,12 @@ export const FL2_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'Relative poverty is defined by comparison with the typical living standard of a society, and income below half the median that excludes a family from ordinary activities fits that definition. Absolute poverty means lacking the resources for basic physical needs, which this family can meet. Social reproduction refers to the transmission of class position across generations, which the stem does not describe. Downward mobility requires a fall from a previous position, and no change in the family’s position is mentioned.',
+    optionExplanations: [
+      'Absolute poverty means lacking resources for basic physical needs. The family earns well above what food, shelter and clothing require.',
+      'Social reproduction refers to the transmission of class position across generations. The stem describes the family’s current standing, not intergenerational transfer.',
+      'Correct. Relative poverty is defined by comparison with a society’s typical living standard. Income below half the median that excludes the children from ordinary activities fits that definition.',
+      'Downward mobility requires a fall from a previous position. No change in the family’s circumstances over time is mentioned.',
+    ],
     skill: '10A poverty: absolute versus relative',
   },
   {
@@ -507,6 +681,12 @@ export const FL2_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'Thyroxine raises the basal metabolic rate, so an excess produces heat intolerance, weight loss despite eating more, and anxious, irritable, restless behavior, the picture of hyperthyroidism. Excess cortisol typically causes weight gain and fat redistribution rather than weight loss with heat intolerance. Excess melatonin promotes sleepiness rather than insomnia and agitation. Excess insulin lowers blood glucose and promotes fat storage, which would not produce weight loss with a raised metabolic rate.',
+    optionExplanations: [
+      'Correct. Thyroxine raises basal metabolic rate, so excess produces heat intolerance, weight loss despite increased appetite, insomnia, and anxious, irritable behavior: hyperthyroidism.',
+      'Excess cortisol typically causes weight gain with central fat redistribution rather than weight loss with heat intolerance.',
+      'Excess melatonin promotes sleepiness. It would not produce insomnia, agitation or a raised metabolic rate.',
+      'Excess insulin lowers blood glucose and promotes fat storage, tending toward weight gain. It would not cause heat intolerance or weight loss.',
+    ],
     skill: '6C endocrine system and behavior',
   },
 ]

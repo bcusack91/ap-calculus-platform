@@ -30,10 +30,16 @@ export const FL3_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
       {
         question:
           'Using the method described in the passage, the estimated heritability of conscientiousness is closest to:',
-        options: ['0.24', '0.48', '0.54', '0.68'],
+        options: ['0.24', '0.48', '0.54', '0.72'],
         correctAnswer: 1,
         explanation:
-          'Heritability was estimated as twice the difference between the MZ and DZ correlations: 2 × (.48 − .24) = 2 × .24 = .48. The value .24 is the difference before doubling. The value .54 is one minus the MZ correlation, the estimate for the nonshared environment plus error. The value .68 is simply the sum of the two twin correlations, which has no meaning in this method.',
+          'Heritability was estimated as twice the difference between the MZ and DZ correlations: 2 × (.48 − .24) = 2 × .24 = .48. The value .24 is the difference before doubling. The value .54 is the MZ correlation for openness, read from the wrong row of the table. The value .72 is simply the sum of the two twin correlations, which has no meaning in this method.',
+        optionExplanations: [
+          'The value .24 is the difference between the MZ and DZ correlations (.48 − .24) before doubling. The method requires multiplying that difference by two.',
+          'Heritability was estimated as twice the difference between the MZ and DZ correlations: 2 × (.48 − .24) = 2 × .24 = .48.',
+          'The value .54 is the MZ twin correlation for openness, read from the wrong row of Table 1. Conscientiousness has an MZ correlation of .48, and heritability comes from doubling the MZ–DZ difference, not from a single correlation.',
+          'The value .72 is the sum of the two twin correlations (.48 + .24), and adding correlations has no meaning in this method. Heritability requires doubling the difference between them, not summing them.',
+        ],
         skill: '7A heritability calculation from twin correlations',
       },
       {
@@ -47,6 +53,12 @@ export const FL3_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Agreeableness had a test–retest correlation comparable to the other scales but a much lower internal consistency, so respondents answered the items consistently across sessions even though the items did not correlate well with one another; that heterogeneity also caps the scale’s correlation with the full-length version, as the investigators noted. A test–retest correlation of .81 rules out large shifts in scores over four weeks. A correlation of .69 with the full-length scale is substantial, not an indication of an unrelated trait. Heritability describes the sources of variation among people and does not determine how consistently a scale measures a trait.',
+        optionExplanations: [
+          'A test–retest correlation of .81 rules out large shifts in scores over four weeks. Respondents answered consistently across sessions.',
+          'A correlation of .69 with the full-length scale is substantial, not an indication of an unrelated trait. It is lower than the other scales because low internal consistency caps correlations.',
+          'Heritability describes the sources of variation among people in a population. It does not determine how consistently a scale measures a trait.',
+          'Agreeableness had a test–retest correlation comparable to the other scales (.81) but a much lower internal consistency (.58). Respondents answered consistently across sessions, but the items did not correlate well with one another.',
+        ],
         skill: '7A reliability: internal consistency vs test–retest',
       },
       {
@@ -61,6 +73,12 @@ export const FL3_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'For every trait the DZ correlation is about half the MZ correlation, so the heritability estimate roughly equals the MZ correlation and the shared-environment estimate (MZ correlation minus heritability) is near zero; the nonshared environment accounts for the remaining variation. Parenting and household conditions common to siblings are exactly the shared environment, which the data show contributes little. Greater similarity in the treatment of MZ twins would be a violation of the equal environments assumption that distorts the heritability estimate, not a source of environmental variation. Values common to everyone in the sample cannot produce differences among the participants.',
+        optionExplanations: [
+          'For every trait the DZ correlation is about half the MZ correlation, so heritability roughly equals the MZ correlation and the shared-environment estimate is near zero. The remaining variation (1 − MZ r) is nonshared environment.',
+          'Parenting and household conditions common to siblings are exactly the shared environment. The data show it contributes little, since MZ r minus heritability is near zero for every trait.',
+          'Greater similarity in the treatment of MZ twins would be a violation of the equal environments assumption that distorts the heritability estimate. It is not identified as a source of environmental variation by these data.',
+          'Values common to everyone in the sample cannot produce differences among the participants. Heritability and environmental estimates concern variation, not constants.',
+        ],
         skill: '7A twin studies: shared vs nonshared environment',
       },
       {
@@ -75,6 +93,12 @@ export const FL3_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The method credits all of the extra resemblance of MZ over DZ twins to genes; if MZ twins also experience more similar environments, some of that extra resemblance is environmental, so doubling the difference inflates heritability. More similar treatment of MZ twins would not make DZ twins more alike, so there is no basis for underestimation. Being raised in the same household is precisely the condition under which the equal environments assumption can fail, so it does not guarantee accuracy. The bias arises from the twins’ environments and would affect all five scales, not only the one with low internal consistency.',
+        optionExplanations: [
+          'More similar treatment of MZ twins would not make DZ twins more alike. There is no basis for underestimation; the bias runs the other way.',
+          'Being raised in the same household is precisely the condition under which the equal environments assumption can fail. It does not guarantee accuracy.',
+          'The method credits all extra MZ-over-DZ resemblance to genes. If MZ twins also experience more similar environments, some of that extra resemblance is environmental, so doubling the difference inflates heritability.',
+          'The bias arises from the twins’ environments and would affect all five scales. It is unrelated to the agreeableness scale’s low internal consistency.',
+        ],
         skill: '7A research design: equal environments assumption',
       },
       {
@@ -88,6 +112,12 @@ export const FL3_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The estimate is 2 × (.52 − .26) = .52, and heritability describes the share of the differences among people in a particular population that is associated with genetic differences among them. It does not partition a single individual’s trait into inherited and learned portions. A heritable trait can still change substantially if the environment changes, since heritability is specific to the range of environments sampled. An estimate from within one population says nothing about the causes of average differences between populations.',
+        optionExplanations: [
+          'Heritability does not partition a single individual’s trait into inherited and learned portions. It describes variation across people, not the composition of one person’s extraversion.',
+          'The estimate is 2 × (.52 − .26) = .52. Heritability describes the share of the differences among people in a particular population that is associated with genetic differences among them.',
+          'A heritable trait can still change substantially if the environment changes. Heritability is specific to the range of environments sampled and says nothing about malleability.',
+          'An estimate from within one population says nothing about the causes of average differences between populations. National differences require different evidence.',
+        ],
         skill: '7A interpreting heritability',
       },
     ],
@@ -130,6 +160,12 @@ export const FL3_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Boycotting jumped from 6% to 15% between 2011 and 2014 and then rose only to 17% and 18%, whereas export-factory membership went from 7% in 2014 to 16% in 2020, about 9 of its 13 points of total growth. Export-factory membership rose only from 3% to 4% before 2011, so it did not double before boycotting rose. Membership in domestic-market factories rose only 2 points over the whole period, far less than in export factories. Boycotting changed little except for the single large jump between 2011 and 2014, so its rise was not steady.',
+        optionExplanations: [
+          'Export-factory membership rose only from 3% to 4% before 2011, while boycotting rose from 4% to 6%. Membership did not double before boycotting rose.',
+          'Membership in domestic-market factories rose only 2 points (3% to 5%) over the whole period, far less than in export factories (3% to 16%). The rates were very different.',
+          'Boycotting changed little except for the single large jump between 2011 and 2014 (6% to 15%). Its rise was not steady.',
+          'Boycotting jumped from 6% to 15% between 2011 and 2014 and then rose only to 17% and 18%. Export-factory membership went from 7% in 2014 to 16% in 2020, about 9 of its 13 points of total growth, after boycotting had leveled off.',
+        ],
         skill: '9B data interpretation: trend data',
       },
       {
@@ -143,6 +179,12 @@ export const FL3_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Domestic-market factories were subject to the same national economy, laws, and union procedures but were not targeted by the campaign, so they act as a comparison group: if membership had risen equally there, a nationwide trend rather than the campaign would be the likelier cause. Workers in Country P cannot report what consumers in Country C knew. Wages were not among the measures shown, and the comparison concerns union membership. Sampling garment workers from two factory types does not make the sample representative of the entire labor force.',
+        optionExplanations: [
+          'Domestic-market factories were subject to the same national economy, laws and union procedures but were not targeted by the campaign. They act as a comparison group: equal growth there would point to a nationwide trend rather than the campaign.',
+          'Workers in Country P cannot report what consumers in Country C knew. Consumer knowledge would be measured by surveying consumers.',
+          'Wages were not among the measures shown. The comparison concerns union membership, and no wage data for either factory type are presented.',
+          'Sampling garment workers from two factory types does not make the sample representative of the entire labor force. The purpose is comparison, not representativeness.',
+        ],
         skill: '9B research design: comparison group',
       },
       {
@@ -157,6 +199,12 @@ export const FL3_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The original campaign sought limited changes to institutions, higher wages, independent unions, and published inspections, without opposing the trade relationship, which makes it reformative; seizing the factories and ending production for foreign brands aims to replace the existing economic order, which is revolutionary. The original campaign did not seek to transform individuals, so it was neither redemptive nor alternative. The faction’s new goal targets the structure of production, not the inner transformation of individuals, so it is not redemptive.',
+        optionExplanations: [
+          'The original campaign did not seek to transform individuals, so it was not redemptive. And the new goal of replacing the production system is revolutionary, not reformative.',
+          'The original campaign sought limited institutional change, not limited change in individuals’ behavior. It was reformative, not alternative.',
+          'The original campaign sought limited changes to institutions (wages, unions, inspections) without opposing trade, making it reformative. Seizing factories and ending production for foreign brands aims to replace the existing economic order, which is revolutionary.',
+          'The faction’s new goal targets the structure of production, not the inner transformation of individuals. It is revolutionary, not redemptive.',
+        ],
         skill: '9B types of social movements',
       },
       {
@@ -171,6 +219,12 @@ export const FL3_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Country S is on the subordinate side of its exchanges with Country C, supplying assembly labor to core brands, and on the dominant side of its exchanges with Country P, capturing design and contracting out low-wage work, which is the intermediate position that defines the semi-periphery. Its firms control only part of their production, and the country still supplies labor to core brands, so it is not core. It is not simply peripheral, because it also controls design and outsources work to the periphery. Semi-peripheral status is defined by this double role in the division of labor, not by a wage trend, which the question does not describe.',
+        optionExplanations: [
+          'Country S’s firms control only part of their production, and the country still supplies assembly labor to core brands. A core nation would not be on the subordinate side of exchanges with Country C.',
+          'Country S is subordinate in its exchanges with Country C, supplying assembly labor to core brands, and dominant in its exchanges with Country P, capturing design and contracting out low-wage work. That double role defines the semi-periphery.',
+          'Country S is not simply peripheral, because it also controls design and outsources sewing to Country P. A peripheral nation supplies labor without exploiting others.',
+          'Semi-peripheral status is defined by a double role in the division of labor, not by a wage trend. The question describes no rising wages, only wages above Country P’s.',
+        ],
         skill: '9B globalization: world-systems theory',
       },
     ],
@@ -200,6 +254,12 @@ export const FL3_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Learning a perceptual-motor skill is procedural, implicit memory, which depends on the basal ganglia and cerebellum rather than the hippocampus, so her speed should improve across days as H.M.’s mirror tracing did, while her hippocampal damage prevents her from forming explicit memories of the sessions. Describing the game accurately each day would require the declarative memory she has lost, and her intact skill system should still produce gains. Failing to improve would imply damage to the skill-learning structures, which were spared. Sleep may aid consolidation, but it cannot create episodic memories that the damaged hippocampus never formed.',
+        optionExplanations: [
+          'Describing the game accurately each day would require the declarative memory she has lost. Her intact skill system should also still produce gains in speed.',
+          'Failing to improve would imply damage to the skill-learning structures (basal ganglia and cerebellum), which were spared. Her hippocampal damage affects explicit memory only.',
+          'Learning a perceptual-motor skill is procedural, implicit memory supported by the basal ganglia and cerebellum, not the hippocampus. Her speed should improve across days as H.M.’s mirror tracing did, while she cannot form explicit memories of the sessions.',
+          'Sleep may aid consolidation, but it cannot create episodic memories that the damaged hippocampus never formed. She should also get faster, since skill learning is intact.',
+        ],
         skill: '6B implicit vs explicit memory in amnesia',
       },
       {
@@ -214,6 +274,12 @@ export const FL3_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'A conversation from a few weeks before the injury had not yet been consolidated into cortex and still depended on the hippocampus for retrieval, so it is the memory most likely to be lost. The teenage apartment is an old episodic memory that consolidation would long since have made independent of the hippocampus. Facts learned in school are old semantic memories and are spared for the same reason. Tying shoelaces is a procedural skill that does not rely on the hippocampus at all.',
+        optionExplanations: [
+          'A conversation from a few weeks before the injury had not yet been consolidated into cortex and still depended on the hippocampus for retrieval. It is the memory most likely to be lost.',
+          'The teenage apartment is an old episodic memory that consolidation would long since have made independent of the hippocampus. It should be spared.',
+          'Facts learned in school are old semantic memories, consolidated years ago. They are spared for the same reason as other remote memories.',
+          'Tying shoelaces is a procedural skill that does not rely on the hippocampus at all. It would be unaffected.',
+        ],
         skill: '6B consolidation and retrograde amnesia',
       },
       {
@@ -228,6 +294,12 @@ export const FL3_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The offered hand, previously paired with a painful prick, now elicits avoidance even though she has no conscious memory of the pairing; this is an implicitly expressed conditioned fear response, supported mainly by the amygdala rather than the hippocampus. Episodic memory is by definition consciously recollected, and she cannot recall the event. Semantic memory is also declarative and would allow her to state the fact and its source, which she cannot. Procedural memory concerns the skill of performing an action, whereas her behavior is an emotional avoidance of a specific stimulus.',
+        optionExplanations: [
+          'Episodic memory is by definition consciously recollected, and she cannot recall the event. Her avoidance is not a retrieved episodic memory.',
+          'Semantic memory is declarative and would allow her to state the fact and its source. She cannot do so, and the behavior is specific to this physician rather than a general belief.',
+          'Procedural memory concerns the skill of performing an action. Her behavior is an emotional avoidance of a specific stimulus, not a more skillful handshake.',
+          'The offered hand, previously paired with a painful prick, now elicits avoidance even though she has no conscious memory of the pairing. This is an implicitly expressed conditioned fear response, supported mainly by the amygdala.',
+        ],
         skill: '6B types of implicit memory',
       },
       {
@@ -242,6 +314,12 @@ export const FL3_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Selectively disrupting slow-wave stages while holding total sleep time constant isolates slow-wave sleep from sleep in general, so poorer recall in that condition points specifically to slow-wave sleep. Comparing sleep with daytime activity cannot separate slow-wave sleep from other sleep stages, and it also confounds sleep with reduced interference and time of day. A correlation between habitual sleep length and memory is not specific to slow-wave sleep and could reflect third variables. Improvement in both tasks after sleep does not identify which stage is responsible, and the passage links the motor gain to other stages.',
+        optionExplanations: [
+          'Comparing sleep with daytime activity cannot separate slow-wave sleep from other sleep stages. It also confounds sleep with reduced interference and time of day.',
+          'Selectively disrupting slow-wave stages while holding total sleep time constant isolates slow-wave sleep from sleep in general. Poorer recall in that condition points specifically to slow-wave sleep.',
+          'A correlation between habitual sleep length and verbal memory is not specific to slow-wave sleep and could reflect third variables such as health or lifestyle.',
+          'Improvement in both tasks after sleep does not identify which stage is responsible. The passage links the motor gain to non-slow-wave stages, so this result cannot isolate slow-wave sleep.',
+        ],
         skill: '6B research design: sleep and consolidation',
       },
     ],
@@ -272,6 +350,12 @@ export const FL3_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'According to the passage, later information dominates when a delay separates the earlier and later information and the judgment follows the later information closely; a long break between the evaluations and the letter, followed by an immediate rating, meets both conditions. Reading everything in one sitting favors a primacy effect, so the earlier evaluations would frame the letter, whether the rating comes at once or a day later. Rereading the evaluations last makes them, rather than the letter, the most recent information.',
+        optionExplanations: [
+          'The passage says later information dominates when a delay separates the earlier and later information and the judgment follows the later information closely. A long break before the letter, then an immediate rating, meets both conditions.',
+          'Reading everything in one sitting favors a primacy effect, so the evaluations would frame the letter. A day’s delay before rating does not create the recency conditions the passage describes.',
+          'Reading everything in one sitting and rating at once favors primacy: the earlier evaluations establish the interpretive frame. There is no delay between the two sets of information.',
+          'Rereading the evaluations last makes them, rather than the letter, the most recent information. This would reduce the letter’s influence.',
+        ],
         skill: '8B primacy and recency in impression formation',
       },
       {
@@ -286,6 +370,12 @@ export const FL3_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Patients inferred an unrelated quality, medical knowledge, from a favorable evaluation of appearance without independent evidence, which is the halo effect. A primacy effect concerns the order in which pieces of information arrive, and no order was varied or compared here. An illusory correlation arises from the distinctive pairing of infrequent events, and neither attractiveness nor knowledge is described as rare. The judgment spreads from one attribute of each individual physician rather than from beliefs about a social group.',
+        optionExplanations: [
+          'A primacy effect concerns the order in which pieces of information arrive, and no order was varied or compared here. Appearance being noticed first is not the mechanism described.',
+          'An illusory correlation arises from the distinctive pairing of infrequent events. Neither attractiveness nor knowledge is described as rare, and the error is inference from one trait, not a frequency misjudgment.',
+          'Patients inferred an unrelated quality, medical knowledge, from a favorable evaluation of appearance without independent evidence. That spread of one positive attribute to others is the halo effect.',
+          'The judgment spreads from one attribute of each individual physician rather than from generalized beliefs about a social group. Attractive people are not treated here as a stereotyped category.',
+        ],
         skill: '8B halo effect',
       },
       {
@@ -300,6 +390,12 @@ export const FL3_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'If undesirable acts were the common behavior, the distinctive pairing would become small-group membership with a desirable act, so the explanation predicts that the overestimate would shift to the small group’s desirable behavior and the overestimate of its undesirable behavior would disappear. Showing every statement twice leaves the relative frequencies, and therefore the distinctive pairing, unchanged. A disliked group label would add prejudice and should increase, not reduce, the overestimate of undesirable acts. More extreme undesirable acts would be even more distinctive and memorable.',
+        optionExplanations: [
+          'Showing every statement twice leaves the relative frequencies, and therefore the distinctive pairing, unchanged. Small-group undesirable acts would remain the rarest combination.',
+          'A disliked group label would add prejudice and should increase, not reduce, the overestimate of undesirable acts.',
+          'More extreme undesirable acts would be even more distinctive and memorable, strengthening the illusory correlation rather than reducing it.',
+          'If undesirable acts were the common behavior, the distinctive pairing would become small-group membership with a desirable act. The overestimate would shift to the small group’s desirable behavior, and the overestimate of its undesirable behavior would disappear.',
+        ],
         skill: '8B illusory correlation and stereotype formation',
       },
       {
@@ -314,6 +410,12 @@ export const FL3_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Relativism, as the passage presents it, is a method of understanding a practice in terms of the values of the people who follow it, so seeking to learn the practice’s meaning before responding reflects it. Treating the practice as beyond question confuses relativism as a method with a moral doctrine, which the passage says anthropologists reject. Applying one’s own standard of autonomy to every culture, or reading the family’s practice as neglect by that standard, is ethnocentrism.',
+        optionExplanations: [
+          'Treating the practice as beyond question confuses relativism as a method with a moral doctrine, which the passage says anthropologists reject. Understanding does not require uncritical acceptance.',
+          'Relativism, as the passage presents it, is a method of understanding a practice in terms of the values of the people who follow it. Seeking to learn the practice’s meaning before responding reflects that method.',
+          'Applying one’s own standard of autonomy to every culture is ethnocentrism: evaluating another culture by the standards of one’s own.',
+          'Reading the family’s practice as neglect judges it by the provider’s own assumptions. The passage warns that this is how providers misread patients, which is ethnocentrism.',
+        ],
         skill: '9A ethnocentrism vs cultural relativism',
       },
       {
@@ -328,6 +430,12 @@ export const FL3_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Each group sees the other group’s members as alike and its own members as varied, which is the out-group homogeneity effect. In-group favoritism concerns evaluating one’s own group more positively, whereas the defining feature here is perceived variability; the surgeons say nothing favorable about themselves. The halo effect is the spread of one favorable or unfavorable evaluation to unrelated attributes of an individual. A primacy effect depends on the order of information about a person, which the scenario does not involve.',
+        optionExplanations: [
+          'Each group sees the other group’s members as alike and its own members as varied. That is the out-group homogeneity effect, which the passage attributes partly to knowing fewer out-group members well.',
+          'In-group favoritism concerns evaluating one’s own group more positively. The defining feature here is perceived variability, and the surgeons say nothing favorable about themselves.',
+          'The halo effect is the spread of one favorable or unfavorable evaluation to unrelated attributes of an individual. This scenario concerns perceptions of group variability.',
+          'A primacy effect depends on the order of information about a person. The scenario involves no sequence of information.',
+        ],
         skill: '8B out-group homogeneity',
       },
     ],
@@ -354,6 +462,12 @@ export const FL3_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Being expected to spend unhurried time with patients while also completing discharges quickly involves incompatible expectations within a single status, nurse, which is role strain. Role conflict involves expectations of two different statuses colliding, which is what the work–family conflict measure captures. Master status concerns how one status dominates others’ perceptions of a person, not demands within a job. Status inconsistency refers to holding statuses of differing rank or prestige, which the measure does not address.',
+        optionExplanations: [
+          'Role conflict involves expectations of two different statuses colliding, which is what the work–family conflict measure captures. Conflicting job demands are within one status.',
+          'Master status concerns how one status dominates others’ perceptions of a person. It does not describe competing demands within a job.',
+          'Status inconsistency refers to holding statuses of differing rank or prestige. The measure does not address rank.',
+          'Being expected to spend unhurried time with patients while also completing discharges quickly involves incompatible expectations within a single status, nurse. That is role strain.',
+        ],
         skill: '9A role strain vs role conflict',
       },
       {
@@ -367,6 +481,12 @@ export const FL3_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Moving from fixed to rotating schedules raised weekly work–family conflict by 24 points for mothers and 19 points for fathers, while conflicting job demands changed by only 2 points in each group, so schedule type tracked conflict between roles but not strain within the nurse role. Because job demands barely changed, rotating schedules did not raise both measures. Rotating-schedule fathers reported 41% versus 34% for fixed-schedule mothers, more rather than less. The gender gap in work–family conflict was 12 points on fixed schedules and 17 points on rotating schedules, so it was larger on rotating schedules.',
+        optionExplanations: [
+          'Because conflicting job demands changed by only 2 points in each group, rotating schedules did not raise both measures. Only work–family conflict rose substantially.',
+          'Rotating-schedule fathers reported 41% weekly work–family conflict versus 34% for fixed-schedule mothers, more rather than less.',
+          'Moving from fixed to rotating raised weekly work–family conflict by 24 points for mothers and 19 for fathers, while conflicting job demands changed by only 2 points each. Schedule type tracked conflict between roles, not strain within the nurse role.',
+          'The gender gap in work–family conflict was 12 points on fixed schedules (34 vs 22) and 17 points on rotating schedules (58 vs 41). It was larger on rotating schedules.',
+        ],
         skill: '9A data interpretation: survey table',
       },
       {
@@ -381,6 +501,12 @@ export const FL3_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Supervisors far more often treated mothers’ parenthood as a reason to pass them over, meaning that the status of mother shaped how supervisors interpreted their standing as nurses, which is what a master status does; fatherhood rarely had that effect. The column records supervisors’ decisions, not strain within the parent role, and it gives no evidence that fathers experienced more of it. Nursing is an achieved status for everyone who earns the credential, regardless of gender. Equal numbers of mothers and fathers worked each schedule type, so schedules cannot explain the gap.',
+        optionExplanations: [
+          'Supervisors far more often treated mothers’ parenthood as a reason to pass them over (38–45% vs 8–10%). The status of mother shaped how supervisors interpreted their standing as nurses, which is what a master status does.',
+          'The column records supervisors’ decisions, not strain within the parent role. It gives no evidence that fathers experienced more role strain.',
+          'Nursing is an achieved status for everyone who earns the credential, regardless of gender. No status becomes ascribed because of who holds it.',
+          'Equal numbers of mothers and fathers worked each schedule type (300 per group), so schedules cannot explain the gender gap in being passed over.',
+        ],
         skill: '9A master status',
       },
       {
@@ -395,6 +521,12 @@ export const FL3_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Earlier notice and the freedom to trade shifts let nurses arrange work around family obligations, so the policy targets the unpredictability that the data link to work–family conflict among rotating-schedule nurses. Supervisors’ assumptions about mothers’ availability are not addressed by a scheduling change, so reports of being passed over should not be expected to fall. Conflicting job demands arise within shifts and did not differ by schedule type, so a scheduling policy should leave them unchanged. Fixed-schedule nurses already know their hours and are not affected by changes to rotating schedules.',
+        optionExplanations: [
+          'Supervisors’ assumptions about mothers’ availability are not addressed by a scheduling change. Reports of being passed over should not be expected to fall.',
+          'Conflicting job demands arise within shifts and did not differ by schedule type. A scheduling policy should leave them unchanged.',
+          'Earlier notice and the freedom to trade shifts let nurses arrange work around family obligations. The policy targets the unpredictability that the data link to work–family conflict among rotating-schedule nurses.',
+          'Fixed-schedule nurses already know their hours and are not affected by changes to rotating schedules. Their work–family conflict should not change.',
+        ],
         skill: '9A role conflict: applying survey findings',
       },
     ],
@@ -417,6 +549,12 @@ export const FL3_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'The flavor that distinguishes one food from another depends largely on odor molecules that travel from the mouth to the olfactory epithelium at the back of the nasal cavity; congestion blocks that route, leaving only the basic tastes, which are detected by taste buds. If taste receptor cells could not signal, she would lose sour and salty as well. Sour and salty tastes are detected by taste receptor cells in the mouth, not by receptors in the nose. A block in the gustatory relay would abolish all taste, not only the ability to tell foods apart.',
+    optionExplanations: [
+      'If taste receptor cells could not signal, she would lose sour and salty as well. Her preserved basic tastes show the gustatory system is working.',
+      'The flavor that distinguishes one food from another depends largely on odor molecules that travel from the mouth to the olfactory epithelium. Congestion blocks that route, leaving only the basic tastes detected by taste buds.',
+      'Sour and salty tastes are detected by taste receptor cells in the mouth, not by receptors in the nose. This misplaces the gustatory receptors.',
+      'A block in the gustatory relay through the thalamus would abolish all taste, not only the ability to tell foods apart. She still detects sour and salty.',
+    ],
     skill: '6A chemical senses: taste, smell, and flavor',
   },
   {
@@ -434,6 +572,12 @@ export const FL3_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'The James–Lange theory holds that an emotion is the perception of the body’s physiological response, so losing most bodily feedback should markedly weaken emotional experience. The Cannon–Bard theory holds that emotional experience and bodily arousal are triggered simultaneously and independently, so it predicts exactly this preserved intensity. Facial feedback travels from the face, above the injury, and remains intact. Cognitive appraisal theory locates emotion in the evaluation of a situation, which the injury does not affect.',
+    optionExplanations: [
+      'The Cannon–Bard theory holds that emotional experience and bodily arousal are triggered simultaneously and independently. It predicts exactly this preserved intensity, so the finding is easy to reconcile with it.',
+      'Facial feedback travels from the face, above the injury, and remains intact. The hypothesis is not challenged by loss of feedback from below the neck.',
+      'Cognitive appraisal theory locates emotion in the evaluation of a situation, which the injury does not affect. Preserved emotion is consistent with it.',
+      'The James–Lange theory holds that an emotion is the perception of the body’s physiological response. Losing most bodily feedback should markedly weaken emotional experience, so preserved intensity is hard to reconcile with it.',
+    ],
     skill: '6C theories of emotion: James–Lange vs Cannon–Bard',
   },
   {
@@ -451,6 +595,12 @@ export const FL3_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'The dentate gyrus of the hippocampus is one of the few sites where new neurons are generated throughout adult life, and physical exercise increases their production. The precentral gyrus, the primary motor cortex, does not add new neurons in adulthood, although its existing connections can change with practice. Purkinje cells of the cerebellum are formed during development and are not replaced in adults. Motor neurons of the ventral horn are likewise not regenerated in adulthood.',
+    optionExplanations: [
+      'The dentate gyrus of the hippocampus is one of the few sites where new neurons are generated throughout adult life, and physical exercise increases their production.',
+      'The precentral gyrus, the primary motor cortex, does not add new neurons in adulthood. Its existing connections can change with practice, but that is synaptic plasticity, not neurogenesis.',
+      'Purkinje cells of the cerebellum are formed during development and are not replaced in adults.',
+      'Motor neurons of the ventral horn are not regenerated in adulthood. Exercise strengthens their connections but does not create new ones.',
+    ],
     skill: '6A neurogenesis and neuroplasticity',
   },
   {
@@ -468,6 +618,12 @@ export const FL3_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'Rogers argued that conditional regard teaches a child that she is worthy only when she meets certain standards; these conditions of worth lead her to deny or distort experiences that do not fit, producing incongruence between self-concept and experience, which unconditional positive regard would prevent. A punishing superego is a psychoanalytic construct, not part of Rogers’s theory. Learned helplessness follows from outcomes that do not depend on behavior, whereas her affection depends directly on her grades. Conditional regard undermines, rather than secures, the self-concept and growth toward self-actualization.',
+    optionExplanations: [
+      'A punishing superego is a psychoanalytic construct from Freud’s theory, not part of Rogers’s humanistic framework.',
+      'Learned helplessness follows from outcomes that do not depend on behavior. Her parents’ affection depends directly on her grades, so the contingency is clear, not absent.',
+      'Rogers argued that conditional regard teaches a child she is worthy only when she meets certain standards. These conditions of worth lead her to deny or distort experiences that do not fit, producing incongruence between self-concept and experience.',
+      'Conditional regard undermines, rather than secures, the self-concept and growth toward self-actualization. Rogers held that unconditional positive regard is what supports that growth.',
+    ],
     skill: '7A humanistic theory: unconditional positive regard',
   },
   {
@@ -480,6 +636,12 @@ export const FL3_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'Symbolic interactionism studies how people construct and negotiate the meanings of symbols, labels, and identities in face-to-face interaction, which is exactly the focus on how a diagnosis becomes part of a patient’s self-understanding. Structural functionalism examines how institutions contribute to the stability of society as a whole. Conflict theory focuses on competition between groups over power and resources. Rational choice theory explains behavior as a calculation of costs and benefits rather than as the negotiation of meaning.',
+    optionExplanations: [
+      'Structural functionalism examines how institutions contribute to the stability of society as a whole. It does not focus on how individuals negotiate the meaning of a label.',
+      'Conflict theory focuses on competition between groups over power and resources. The study of how a diagnosis becomes part of self-understanding is not about group conflict.',
+      'Rational choice theory explains behavior as a calculation of costs and benefits. It does not address how meanings and identities are constructed in interaction.',
+      'Symbolic interactionism studies how people construct and negotiate the meanings of symbols, labels and identities in face-to-face interaction. Studying how a diagnosis becomes part of a patient’s self-understanding fits exactly.',
+    ],
     skill: '9A symbolic interactionism',
   },
   {
@@ -492,6 +654,12 @@ export const FL3_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'The glass escalator is the tendency of men in female-dominated occupations to be advanced more quickly than their female colleagues. The second shift refers to the domestic labor that employed women continue to perform after paid work. The motherhood penalty is a wage and hiring disadvantage attached specifically to mothers, and the stem compares men and women of equal experience and ratings without reference to parenthood. Occupational sex segregation is the concentration of men and women in different occupations, whereas this pattern arises within a single occupation.',
+    optionExplanations: [
+      'The second shift refers to the domestic labor that employed women continue to perform after paid work. It does not describe promotion patterns.',
+      'The glass escalator is the tendency of men in female-dominated occupations to be advanced more quickly than their female colleagues. Men nurses promoted faster fits exactly.',
+      'The motherhood penalty is a wage and hiring disadvantage attached specifically to mothers. The stem compares men and women of equal experience without reference to parenthood.',
+      'Occupational sex segregation is the concentration of men and women in different occupations. This pattern arises within a single occupation, nursing.',
+    ],
     skill: '10A gender stratification',
   },
   {
@@ -504,6 +672,12 @@ export const FL3_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'Agenda setting is the media’s influence on which issues the public regards as important, as distinct from what the public thinks about them, which matches rankings that followed coverage while opinions stayed the same. Cultivation is the gradual shaping of beliefs about social reality through heavy media exposure, such as overestimating crime. Gatekeeping describes the decisions of editors and producers about what gets covered, not the effect on the audience. The two-step flow holds that media influence reaches most people through opinion leaders, which the data do not address.',
+    optionExplanations: [
+      'Cultivation is the gradual shaping of beliefs about social reality through heavy media exposure, such as overestimating crime. Here opinions did not change; only perceived importance did.',
+      'Gatekeeping describes the decisions of editors and producers about what gets covered. It is about media production, not the effect on the audience.',
+      'Agenda setting is the media’s influence on which issues the public regards as important, as distinct from what the public thinks about them. Rankings that followed coverage while opinions stayed the same match this.',
+      'The two-step flow holds that media influence reaches most people through opinion leaders. The data say nothing about how influence was transmitted.',
+    ],
     skill: '9B mass media as an institution',
   },
 ]

@@ -38,6 +38,12 @@ export const FL5_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The first-trimester-only group shows nearly the full rate of facial anomalies (4.8% versus 5.0% for exposure throughout) with an almost normal rate of low birth weight, whereas the third-trimester-only group shows the reverse: a baseline rate of anomalies but a doubled rate of low birth weight. Facial structures form during the embryonic period, so early exposure produces malformations; late exposure acts on a fetus whose structures are already formed and impairs growth instead. Neither outcome requires continuous exposure, since each appears at nearly full strength in a single-trimester group. The remaining pairing reverses the direction of both effects.',
+        optionExplanations: [
+          'The third-trimester-only group shows a baseline rate of facial anomalies (1.1%, essentially the same as the unexposed 1.0%), so facial anomalies do not depend on late exposure; only low birth weight does.',
+          'The first-trimester-only group shows nearly the full rate of facial anomalies (4.8% versus 5.0% for exposure throughout) with an almost normal rate of low birth weight, while the third-trimester-only group shows the reverse; facial structures form during the embryonic period, whereas late exposure impairs growth.',
+          'Neither outcome requires continuous exposure: facial anomalies appear at nearly full strength in the first-trimester-only group, and low birth weight at nearly full strength in the third-trimester-only group.',
+          'This reverses the direction of both effects; the data show facial anomalies tied to early exposure (first trimester) and low birth weight tied to late exposure (third trimester), not the other way around.',
+        ],
         skill: '7A teratogens: sensitive periods',
       },
       {
@@ -52,6 +58,12 @@ export const FL5_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Because the exposed mothers differed from the unexposed mothers in age, smoking, and prenatal care, any of those variables could produce the observed outcomes independently of alcohol; adjusting for them is the standard way to address such confounding in an observational cohort. Examiner bias was handled separately by keeping the examiners unaware of exposure status. A small group size is a question of statistical power, which adjustment cannot fix. Underreporting is a measurement problem in the exposure variable, and adjusting for other maternal characteristics does nothing to correct it.',
+        optionExplanations: [
+          'Examiner bias was handled separately by keeping the examiners unaware of the mothers’ drinking histories; statistical adjustment for maternal characteristics does not address how examiners rated the infants.',
+          'A small group size is a question of statistical power, which adjustment cannot fix; adjusting for maternal age, smoking, and prenatal care does nothing to increase the number of women in a group.',
+          'Underreporting is a measurement problem in the exposure variable itself; adjusting for other maternal characteristics does nothing to correct misclassification of how much the mothers drank.',
+          'The exposed mothers differed from the unexposed mothers in age, smoking, and prenatal care, any of which could produce the observed outcomes independently of alcohol; adjusting for them is the standard way to address such confounding in an observational cohort.',
+        ],
         skill: '7A research design: confounding',
       },
       {
@@ -65,6 +77,12 @@ export const FL5_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Every exposed group scores below the unexposed group, including the group exposed only before week 8 and the group exposed only after week 28, and the group exposed throughout scores lowest; that pattern is what a long window of vulnerability with a dose-duration effect predicts. Exposure confined to the first trimester lowered scores, so the effect is not limited to late exposure. The first-trimester-only group had a nearly normal rate of low birth weight yet still scored below the unexposed group, so birth weight cannot be the explanation. The first-trimester-only group shows the smallest deficit, not the largest, so the window does not close at week 8.',
+        optionExplanations: [
+          'Every exposed group scores below the unexposed group, including those exposed only before week 8 and only after week 28, and the group exposed throughout scores lowest; that pattern is what a long window of vulnerability with a dose-duration effect predicts.',
+          'Exposure confined to the first trimester lowered scores (97 versus 100), so the effect is not limited to exposure after week 28; the nervous system is vulnerable throughout gestation, as the passage states.',
+          'The first-trimester-only group had a nearly normal rate of low birth weight (7% versus 6%) yet still scored below the unexposed group, so low birth weight cannot be the explanation for the lower attention scores.',
+          'The first-trimester-only group shows the smallest deficit (97), not the largest; the groups exposed later or throughout score lower, so the sensitive period for attention does not close at week 8.',
+        ],
         skill: '7A prenatal development: CNS vulnerability',
       },
       {
@@ -79,6 +97,12 @@ export const FL5_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Gross motor control depends on cephalocaudal maturation of the nervous system: head control precedes sitting, which precedes standing and walking, so the sequence is invariant even when environmental factors shift the ages at which steps are reached. Infants do not learn to sit or walk by imitation, and caregivers do not teach these skills in a scripted order. Primitive reflexes fade as cortical control matures, but their disappearance is not a gate that must open in sequence before each milestone. Milestones are not critical periods, and a skill such as walking does not require the previous skill to be practiced to completion.',
+        optionExplanations: [
+          'Gross motor control depends on cephalocaudal maturation of the nervous system: head control precedes sitting, which precedes standing and walking, so the sequence is invariant even when environmental factors shift the ages at which steps are reached.',
+          'Infants do not learn to sit or walk by imitating caregivers, and caregivers do not demonstrate these skills in a scripted order; the passage attributes the order to maturational gradients, not to modeling.',
+          'Primitive reflexes fade as cortical control matures, but their disappearance is not a gate that must open in sequence before each milestone; the passage does not tie the milestone order to reflex loss.',
+          'Milestones are not critical periods, and the passage says experience affects timing more than order; a skill such as walking does not require the previous skill to be practiced to completion before it can appear.',
+        ],
         skill: '7A motor development: cephalocaudal principle',
       },
     ],
@@ -122,6 +146,12 @@ export const FL5_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'In 1980 the two groups were at 42% and 28%, an absolute gap of 14 percentage points and a ratio of 1.5; in 2020 they were at 30% and 5%, a gap of 25 points and a ratio of 6. Both measures of inequality therefore increased. The ratio could not have fallen while the absolute gap grew, because the lower prevalence shrank far faster than the higher one. The absolute gap did not shrink, since prevalence fell by 12 points in the least-educated group and by 23 points in the most-educated group.',
+        optionExplanations: [
+          'The ratio did not fall: it rose from 1.5 (42/28) in 1980 to 6 (30/5) in 2020, because the lower prevalence shrank far faster than the higher one; the absolute gap also grew.',
+          'The absolute gap did not shrink: it grew from 14 points to 25 points, since prevalence fell by 12 points in the least-educated group and by 23 points among college graduates.',
+          'In 1980 the two groups were at 42% and 28%, an absolute gap of 14 points and a ratio of 1.5; in 2020 they were at 30% and 5%, a gap of 25 points and a ratio of 6, so both measures of inequality increased.',
+          'Neither measure shrank: the absolute difference widened from 14 to 25 points, and the ratio rose from 1.5 to 6; the figure shows growing, not narrowing, inequality.',
+        ],
         skill: '10A health disparities: absolute vs relative measures',
       },
       {
@@ -135,6 +165,12 @@ export const FL5_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The theory holds that flexible resources let advantaged groups take up each new means of protection, such as cessation aids, smoke-free workplaces, and medical advice, as it becomes available, so once smoking became a known and avoidable risk their prevalence fell first and fastest. Simple lack of awareness cannot explain the gap, because the passage reports that by 1990 more than 90% of every educational group accepted that smoking causes disease. The theory concerns social resources, not biological susceptibility, and the gradient reversed direction over the century, which a fixed biological difference could not produce. Advertising exposure is one possible pathway, but the theory emphasizes that the gradient does not depend on any single pathway.',
+        optionExplanations: [
+          'Simple lack of awareness cannot explain the gap, because the passage reports that by 1990 more than 90% of every educational group accepted that smoking causes cancer and heart disease.',
+          'The theory holds that flexible resources let advantaged groups take up each new means of protection, such as cessation aids, smoke-free workplaces, and medical advice, as it becomes available; once smoking became a known, avoidable risk, their prevalence fell first and fastest.',
+          'The fundamental cause theory concerns social resources, not biological susceptibility; moreover, the gradient reversed direction over the century, which a fixed biological difference could not produce.',
+          'Advertising exposure is one possible pathway, but the theory emphasizes that the gradient does not depend on any single pathway; it persists because flexible resources can be deployed against whatever risks are known.',
+        ],
         skill: '10A fundamental cause theory',
       },
       {
@@ -149,6 +185,12 @@ export const FL5_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'When a category shrinks from 30% to 9% of the population, the people who remain in it are increasingly those with additional disadvantages, such as the unemployment, poor neighborhoods, and distress the researchers mention, so the later gap compares a more selected group with a less selected one, and some of the widening reflects that change in composition rather than a growing effect of schooling itself. Nine percent of a 30,000-person sample is still about 2,700 respondents, enough for a stable estimate. The age range was fixed at 25 to 64 in every survey year, and nothing in the passage suggests that early leavers became younger. The categories continued to be defined by schooling completed, not by income.',
+        optionExplanations: [
+          'Nine percent of a roughly 30,000-person sample is still about 2,700 respondents, which is enough for a stable prevalence estimate; the group did not become too small to survey reliably.',
+          'The age range was fixed at 25 to 64 in every survey year, and nothing in the passage suggests that early school leavers became younger on average; age composition is not the issue raised.',
+          'The categories continued to be defined by the highest level of schooling completed, not by income; the passage does not suggest that educational categories came to measure wealth.',
+          'When a category shrinks from 30% to 9% of the population, those who remain are increasingly selected on additional disadvantages such as unemployment, poor neighborhoods, and distress; the later gap compares a more selected group with a less selected one, so some of the widening reflects changed composition.',
+        ],
         skill: '9B research design: composition and selection effects',
       },
       {
@@ -162,6 +204,12 @@ export const FL5_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The passage identifies a testable implication of the theory: because flexible resources help only when there is something to act upon, gradients should be steeper for preventable conditions than for conditions no one knows how to prevent. Equal gradients for the two kinds of conditions would contradict that prediction. Early adoption of cessation aids by the most-educated group is exactly the mechanism the theory proposes. A decline in all groups after smoking bans says nothing about the gap and is compatible with the theory. The absence of a gradient before the risks were known is also what the theory predicts, since resources could not yet be deployed against an unrecognized risk.',
+        optionExplanations: [
+          'The passage identifies a testable implication: gradients should be steeper for preventable conditions than for conditions no one knows how to prevent, since resources help only when there is something to act upon. Equal gradients for both kinds would contradict that prediction.',
+          'Early adoption of nicotine replacement by college graduates is exactly the mechanism the theory proposes: flexible resources applied to a new means of avoiding a known risk. It supports, not weakens, the interpretation.',
+          'A decline in all groups after smoking bans says nothing about the gap between groups; it is compatible with the theory, which concerns differential ability to benefit from protective measures.',
+          'The absence of a gradient before the risks were known is also what the theory predicts, since resources could not yet be deployed against an unrecognized risk; this supports the interpretation.',
+        ],
         skill: '9B evaluating a theory with evidence',
       },
     ],
@@ -191,6 +239,12 @@ export const FL5_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'She shows tolerance and withdrawal, but both occurred while she took the drug as prescribed under medical supervision, and the passage states that in that case neither counts toward the diagnosis; with no other criteria met, she has zero countable criteria and no disorder. A mild disorder would require at least 2 countable criteria, so even counting one pharmacological criterion would not suffice. Moderate and severe disorders require 4 or more and 6 or more criteria, far beyond anything in her history. Her physiological dependence is real but, as the passage emphasizes, it is not the same as a use disorder.',
+        optionExplanations: [
+          'A mild disorder requires at least 2 countable criteria; her tolerance and withdrawal do not count because they arose under prescribed, supervised use, and she has no other criteria, so she falls short even of mild.',
+          'A moderate disorder requires 4 or 5 criteria; she has none that count, since the only two phenomena she shows are excluded when the drug is taken as prescribed.',
+          'A severe disorder requires 6 or more criteria, far beyond anything in her history; she has zero countable criteria.',
+          'She shows tolerance and withdrawal, but both occurred while she took the drug as prescribed under medical supervision, and the passage states that in that case neither counts toward the diagnosis; with no other criteria met, she has no disorder, only physiological dependence.',
+        ],
         skill: '6C substance use disorder: diagnostic criteria',
       },
       {
@@ -205,6 +259,12 @@ export const FL5_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Alcohol is a central nervous system depressant, and withdrawal symptoms are generally opposite to a drug’s acute effects, so abrupt cessation after heavy chronic use produces nervous system overactivity: tremor, agitation, insomnia, and in severe cases seizures. Drowsiness, slowed breathing, and constricted pupils describe intoxication with a depressant such as an opioid, not withdrawal from one. Fatigue, hypersomnia, and depressed mood are the opposite of a stimulant’s effects and characterize withdrawal from drugs such as cocaine or amphetamine. Euphoria, reduced appetite, and rapid speech describe stimulant intoxication.',
+        optionExplanations: [
+          'Alcohol is a central nervous system depressant, and withdrawal symptoms are generally opposite to a drug’s acute effects, so abrupt cessation after heavy chronic use produces nervous system overactivity: tremor, agitation, insomnia, and in severe cases seizures.',
+          'Drowsiness, slowed breathing, and constricted pupils describe intoxication with a depressant such as an opioid; they are the acute effects of a depressant, not the opposite symptoms seen in withdrawal from one.',
+          'Fatigue, increased sleep, and depressed mood are the opposite of a stimulant’s effects and characterize withdrawal from drugs such as cocaine or amphetamine, not from alcohol.',
+          'Euphoria, reduced appetite, and rapid speech describe stimulant intoxication; they are neither alcohol’s acute effects nor the opposite of them.',
+        ],
         skill: '6C withdrawal from depressants',
       },
       {
@@ -219,6 +279,12 @@ export const FL5_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Conditioned tolerance is tied to the cues that normally precede drug taking: at home those cues elicit compensatory responses that oppose the drug, but in a novel setting the cues are absent, the compensatory responses do not occur, and a dose that was safe at home becomes dangerous. Induced liver enzymes do not revert to baseline within hours, and metabolic tolerance is not setting-specific. Sensitization of reward circuitry concerns the drug’s rewarding effects, not respiratory depression, and nothing in the passage ties it to travel. The question specifies that he used his usual dose, so an increase driven by craving is ruled out.',
+        optionExplanations: [
+          'Induced liver enzymes do not revert to baseline within hours, and metabolic tolerance is not setting-specific; a change of location would not abolish the liver’s increased capacity to clear the drug.',
+          'Sensitization of reward circuitry concerns the drug’s rewarding effects, not respiratory depression, and nothing in the passage ties stress or travel to amplified suppression of breathing.',
+          'Conditioned tolerance is tied to the cues that normally precede drug taking: at home those cues elicit compensatory responses that oppose the drug, but in a novel setting the cues are absent, the compensatory responses do not occur, and a dose that was safe at home acts at full strength.',
+          'The question specifies that he injected his usual dose, so an increase in amount driven by craving is ruled out; the overdose must come from the same dose having a larger effect.',
+        ],
         skill: '7A conditioned tolerance',
       },
       {
@@ -232,6 +298,12 @@ export const FL5_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Compulsive use that continues despite serious consequences, together with repeated failed efforts to stop, is the signature of addiction, and the passage notes that cocaine produces only mild physical withdrawal, so this man is addicted without being physiologically dependent. The hospice patient shows the reverse: tolerance and withdrawal without compulsion. The student’s weekend drinking involves neither compulsion nor evidence of dependence; hangovers are acute aftereffects, not withdrawal from chronic use. The nurse has withdrawal symptoms, which is physiological dependence, but no loss of control.',
+        optionExplanations: [
+          'The hospice patient shows tolerance and withdrawal without compulsion, which is physiological dependence without addiction, the reverse of what the question asks for.',
+          'Compulsive use that continues despite serious consequences, together with repeated failed efforts to stop, is the signature of addiction, and the passage notes that cocaine produces only mild physical withdrawal; this man is addicted without being physiologically dependent.',
+          'The student’s weekend drinking involves neither compulsion nor loss of control, and hangovers are acute aftereffects rather than withdrawal from chronic use; he shows neither addiction nor dependence.',
+          'The nurse has withdrawal symptoms when she skips coffee, which is physiological dependence, but she could stop without difficulty, so there is no loss of control and no addiction.',
+        ],
         skill: '6C dependence vs addiction',
       },
       {
@@ -246,6 +318,12 @@ export const FL5_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The variant ordinarily protects against the disorder, and its protective effect shrinks where norms press people to drink heavily, which is exactly the passage’s statement that a biological protection can be overridden by social pressure: the effect of the gene depends on the environment. The variant lowers rather than raises risk, and the finding shows that its effect does vary with context. Nothing suggests that carriers move toward heavy-drinking settings; the norms are a feature of the country, not a destination chosen by carriers. Flushing and nausea are caused by drinking, so drinking more would worsen them, not relieve them.',
+        optionExplanations: [
+          'The variant lowers rather than raises the risk of alcohol use disorder, and the finding shows that its effect does vary with context; neither part of a genetic main effect fits.',
+          'Nothing suggests that carriers migrate toward heavy-drinking settings; the norms are a feature of the country as a whole, not a destination chosen by people with the variant.',
+          'The variant ordinarily protects against the disorder, and its protective effect shrinks where norms press people to drink heavily; this is the passage’s statement that a biological protection can be overridden by social pressure, so the gene’s effect depends on the environment.',
+          'Flushing and nausea are caused by drinking in carriers of the variant, so drinking more would worsen them rather than relieve them; self-medication does not describe this situation.',
+        ],
         skill: '6C biopsychosocial model: gene–environment interaction',
       },
     ],
@@ -275,6 +353,12 @@ export const FL5_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Interpersonal distance and eye contact are spontaneous, nonverbal behaviors, which the passage says implicit measures predict better than explicit ones, and the illness is a sensitive topic on which explicit and implicit measures tend to diverge. An agreement questionnaire is an explicit measure that predicts deliberate behavior better than spontaneous behavior. A face-to-face interview is also explicit and, being given in person on a sensitive topic, is especially exposed to social desirability bias. Intention is the proximal predictor of deliberate behavior in the theory of planned behavior, not of unintended nonverbal behavior.',
+        optionExplanations: [
+          'An agreement questionnaire is an explicit measure, which the passage says predicts deliberate, controllable behavior better than spontaneous nonverbal behavior such as distance and eye contact.',
+          'Interpersonal distance and eye contact are spontaneous, nonverbal behaviors, which the passage says implicit measures predict better than explicit ones, and the illness is a sensitive topic on which explicit and implicit measures tend to diverge.',
+          'A face-to-face interview is an explicit measure and, being given in person on a sensitive topic, is especially exposed to social desirability bias; it is poorly suited to predicting spontaneous behavior.',
+          'Intention is the proximal predictor of deliberate behavior in the theory of planned behavior; standing farther away and reducing eye contact are unintended, spontaneous behaviors that intention does not capture.',
+        ],
         skill: '7B implicit vs explicit attitudes and behavior',
       },
       {
@@ -289,6 +373,12 @@ export const FL5_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Her attitude, subjective norm, and intention are all favorable, so the component that remains is behavioral control: when the ward is busy, real obstacles make the behavior harder, and the theory holds that control affects behavior directly as well as through intention. Nothing in the scenario indicates that her attitude is weaker than reported; the gap appears specifically under time pressure. Her supervisors and colleagues expect hand hygiene, so the norm favors the behavior. Hand hygiene is a deliberate, controllable act, precisely the kind of behavior the theory is built to explain.',
+        optionExplanations: [
+          'Nothing in the scenario indicates that her attitude is weaker than reported; the gap appears specifically when the ward is busy, which points to a situational constraint rather than a hidden attitude.',
+          'Her supervisors and colleagues expect hand hygiene, so the subjective norm favors the behavior; there is no evidence that the ward’s norm actually endorses skipping it.',
+          'Hand hygiene is a deliberate, controllable act, precisely the kind of behavior the theory of planned behavior is built to explain; intention is relevant, but it is not sufficient when control is limited.',
+          'Her attitude, subjective norm, and intention are all favorable, so the remaining component is behavioral control: when the ward is busy, real obstacles make the behavior harder, and the theory holds that control affects behavior directly as well as through intention.',
+        ],
         skill: '7B theory of planned behavior',
       },
       {
@@ -303,6 +393,12 @@ export const FL5_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Sorting is faster when a shared key matches an existing association, and he was 250 ms faster when exercise shared a key with pleasant, so his implicit attitude toward exercise is positive; his questionnaire response is explicitly negative, so the two measures disagree. Reading the faster block as a negative association reverses the logic of the test. His explicit attitude is negative, not positive, so the two descriptions that call it positive misread the questionnaire.',
+        optionExplanations: [
+          'Sorting is faster when a shared key matches an existing association, and he was 250 ms faster when exercise shared a key with pleasant, so his implicit attitude toward exercise is positive; his questionnaire response is explicitly negative, so the two measures diverge.',
+          'Reading the faster block as a negative association reverses the logic of the test; faster sorting when exercise is paired with pleasant indicates a positive, not negative, implicit association.',
+          'His implicit attitude is positive, not negative, and his explicit attitude is negative, not positive; this option misreads both measures.',
+          'His explicit attitude is negative, since he strongly agrees that he dislikes exercising; describing it as positive misreads the questionnaire, and the two measures do not agree.',
+        ],
         skill: '7B interpreting an Implicit Association Test',
       },
       {
@@ -317,6 +413,12 @@ export const FL5_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Attitudes predict behavior best when both are measured at the same level of specificity, so an attitude toward the exact behavior in question, placing glass in one’s own bin each week, is the strongest predictor of that behavior. A general attitude toward the environment is far broader than the behavior and corresponds to it only loosely. An attitude toward the waste department concerns an organization rather than the behavior. Civic participation in general is likewise too broad, and the theory of planned behavior specifies that it is attitude toward the behavior itself that feeds into intention.',
+        optionExplanations: [
+          'A general attitude toward protecting the environment is far broader than the specific behavior of weekly glass recycling and corresponds to it only loosely; the passage stresses matching levels of specificity.',
+          'An attitude toward the waste management department concerns an organization rather than the behavior itself; it is not the attitude toward the behavior that feeds into intention.',
+          'Attitudes predict behavior best when both are measured at the same level of specificity, so an attitude toward the exact behavior, placing glass in one’s own bin each week, is the strongest predictor of that behavior.',
+          'Civic participation in general is too broad a target; the theory of planned behavior specifies that it is the attitude toward the particular behavior that shapes intention, not attitudes toward broad values.',
+        ],
         skill: '7B attitude–behavior specificity',
       },
       {
@@ -331,6 +433,12 @@ export const FL5_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The geographic spread of the establishments does not bear on whether the letter responses and the service behavior came from comparable attitudes, so it leaves the inference untouched. The mismatch between a general question and a specific, favorably presented couple is the specificity problem the passage describes, and it weakens the inference. If different people produced the two measures, the study did not compare an attitude with the same person’s behavior, which also weakens it. Strong situational pressure, in this case the awkwardness of a face-to-face refusal, is one of the conditions under which attitudes predict behavior poorly, so the behavior may not have reflected attitudes at all.',
+        optionExplanations: [
+          'The mismatch between a general question about Chinese guests and a specific, favorably presented couple is the specificity problem the passage describes; it weakens the inference, so it is not the exception.',
+          'The geographic spread of the establishments does not bear on whether the letter responses and the service behavior came from comparable attitudes; it leaves the inference untouched, so it is the consideration that does not weaken it.',
+          'If the person who answered the letter was not the employee who served the couple, the study did not compare an attitude with the same person’s behavior; this weakens the inference, so it is not the exception.',
+          'Strong situational pressure, here the awkwardness of a face-to-face refusal, is one of the conditions under which attitudes predict behavior poorly; the behavior may not have reflected attitudes at all, so this weakens the inference.',
+        ],
         skill: '7B evaluating attitude–behavior evidence',
       },
     ],
@@ -361,6 +469,12 @@ export const FL5_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Marriage fell by 32 percentage points (80% to 48%) while cohabitation rose by 12 points (1% to 13%), so cohabitation replaced less than half of the lost marriages and the share living with a partner of either kind fell from 81% to 61%. Because the offset was partial, the partnered share was not unchanged. Divorce and separation rose by only 5 points, far short of the 32-point decline in marriage, so most of that decline reflects people who had not married. The unpartnered share did roughly double, from 19% to 39%, but divorce and separation contributed 5 of those 20 points; the larger part came from adults who had never married.',
+        optionExplanations: [
+          'The offset was only partial: marriage fell by 32 points while cohabitation rose by 12, so the share living with a partner of either kind fell from 81% to 61% rather than staying unchanged.',
+          'Divorce and separation rose by only 5 points (5% to 10%), far short of the 32-point decline in marriage; most of the decline reflects adults who had not married, not those whose marriages ended.',
+          'Marriage fell by 32 percentage points (80% to 48%) while cohabitation rose by 12 points (1% to 13%), so cohabitation replaced less than half of the lost marriages and the share living with any partner fell from 81% to 61%.',
+          'The unpartnered share did roughly double, from 19% to 39%, but divorce and separation contributed only 5 of those 20 points; the larger part came from adults who had never married.',
+        ],
         skill: '9B family trends: reading a rate table',
       },
       {
@@ -374,6 +488,12 @@ export const FL5_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Ten-year divorce rose among women without a high school diploma (38% to 46%) and fell among college graduates (27% to 17%), widening the gap from 11 to 29 points, and children of college-educated mothers were more than twice as likely to live with two married parents; both facts show family stability diverging by education. Divorce did not rise at every level, since it fell by 10 points among college graduates. Differences by education widened rather than narrowed. Table 2 follows each marriage cohort for ten years regardless of the age at which the women married, so later marriage does not shorten the follow-up.',
+        optionExplanations: [
+          'Ten-year divorce rose among women without a high school diploma (38% to 46%) and fell among college graduates (27% to 17%), widening the gap from 11 to 29 points, and children of college-educated mothers were more than twice as likely to live with two married parents; family stability diverged by education.',
+          'Divorce did not rise at every level of education; it fell by 10 points among college graduates, so there was no increase, let alone the sharpest one, in that group.',
+          'Differences by education widened rather than narrowed, from an 11-point gap in the 1980 cohort to a 29-point gap in the 2010 cohort; marriage became more stable, not less, for college-educated women.',
+          'Table 2 follows each marriage cohort for ten years from the date of marriage regardless of the age at which the women married, so later marriage does not shorten the follow-up or reduce the number of marriages observed.',
+        ],
         skill: '10A stratification of family stability',
       },
       {
@@ -388,6 +508,12 @@ export const FL5_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Where marriage remains institutionalized, strong norms regulate when people marry and expect childbearing to occur within marriage, and marriage is the foundation laid before other milestones rather than a capstone reached after them, so first marriages come earlier and fewer births occur outside marriage, as in the 1970 row of Table 1. Cohabitation is a feature of the deinstitutionalized pattern, so it would be lower, not higher, and the married share would be higher rather than similar. Couples negotiating their own household arrangements is precisely what replaces shared norms when marriage deinstitutionalizes. An institutionalized regime would have a higher, not lower, share of women married by 40, and nothing in the passage ties institutionalized marriage to more divorce.',
+        optionExplanations: [
+          'Cohabitation is a feature of the deinstitutionalized pattern, so an institutionalized society would show a lower, not higher, share cohabiting; and the married share would be higher rather than similar.',
+          'Couples negotiating their own household arrangements is precisely what replaces shared norms when marriage deinstitutionalizes; an institutionalized regime would show less such negotiation, not more.',
+          'An institutionalized regime would have a higher, not lower, share of women married by 40, and nothing in the passage ties institutionalized marriage to more divorce.',
+          'Where marriage remains institutionalized, strong norms regulate when people marry and expect childbearing to occur within marriage, and marriage is the foundation laid before other milestones; first marriages come earlier and fewer births occur outside marriage, as in the 1970 row of Table 1.',
+        ],
         skill: '9B deinstitutionalization of marriage',
       },
       {
@@ -402,6 +528,12 @@ export const FL5_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'If people were merely postponing marriage, nearly as many would still have married by age 40 as before; the drop from 94% to 78% shows that a substantial share had not married by an age at which first marriage becomes uncommon, so part of the decline reflects forgoing marriage rather than delaying it. A fall in the share of cohabiting couples who marry within five years is consistent with either delay or forgoing. A rising median age at first marriage establishes postponement among those who marry but says nothing about whether others ever marry. Births outside marriage can rise under either interpretation and do not track whether the parents later marry.',
+        optionExplanations: [
+          'A fall in the share of cohabiting couples who marry within five years is consistent with either delay or forgoing; couples who do not marry within five years may still marry later, so this does not distinguish the two.',
+          'If people were merely postponing marriage, nearly as many would still have married by age 40 as before; the drop from 94% to 78% shows that a substantial share had not married by an age at which first marriage becomes uncommon, so part of the decline reflects forgoing marriage.',
+          'A rising median age at first marriage establishes postponement among those who do marry but says nothing about whether others ever marry; it cannot separate delay from forgoing.',
+          'Births outside marriage can rise under either interpretation, since parents who have children before marrying may marry later or never; this measure does not track whether marriage is eventually entered.',
+        ],
         skill: '9B interpreting cross-sectional trend data',
       },
     ],
@@ -424,6 +556,12 @@ export const FL5_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'Judging the position and movement of a body part without vision is proprioception (kinesthesia), which depends on muscle spindles, Golgi tendon organs, and joint receptors that encode stretch, tension, and joint angle. The semicircular canals are part of the vestibular system and signal rotation of the head, not the position of a toe. Thermoreceptors signal temperature and could indicate that the examiner is touching the toe but not which way it was moved. Pressure from the examiner’s grip is the same whether the toe is moved up or down, so cutaneous pressure receptors cannot supply the direction.',
+    optionExplanations: [
+      'Judging the position and movement of a body part without vision is proprioception, which depends on muscle spindles, Golgi tendon organs, and joint receptors that encode stretch, tension, and joint angle.',
+      'The semicircular canals are part of the vestibular system and signal rotation of the head; they carry no information about the position of a toe.',
+      'Thermoreceptors signal temperature and could indicate that the examiner is touching the toe, but they cannot indicate which way it was moved.',
+      'Pressure from the examiner’s grip is the same whether the toe is moved up or down, so cutaneous pressure receptors cannot supply the direction of movement.',
+    ],
     skill: '6A proprioception and kinesthesia',
   },
   {
@@ -441,6 +579,12 @@ export const FL5_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'Pecking at orange and green is stimulus generalization, and the way to narrow responding to one stimulus is discrimination training: reinforce the response in the presence of the target stimulus and withhold reinforcement in the presence of similar stimuli until responding to them extinguishes. Presenting the yellow key without reinforcement is extinction and would eliminate pecking to yellow as well. Pairing the key with a tone and transferring reinforcement to the tone shifts control to a new stimulus rather than sharpening control by color. Reinforcing regardless of color maintains generalized responding and would, if anything, strengthen pecking to all colors.',
+    optionExplanations: [
+      'Presenting the yellow key without reinforcement is extinction and would eliminate pecking to yellow as well; the goal is to keep pecking to yellow while eliminating it to other colors.',
+      'Pairing the key with a tone and transferring reinforcement to the tone shifts stimulus control to a new stimulus rather than sharpening control by color; the pigeon would still not discriminate yellow from orange and green.',
+      'Pecking at orange and green is stimulus generalization, and the way to narrow responding is discrimination training: reinforce pecks in the presence of yellow and withhold reinforcement in the presence of similar colors until responding to them extinguishes.',
+      'Reinforcing on a variable-ratio schedule regardless of color maintains generalized responding and would, if anything, strengthen pecking to all colors rather than restrict it to yellow.',
+    ],
     skill: '7A stimulus generalization and discrimination',
   },
   {
@@ -453,6 +597,12 @@ export const FL5_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'Belief perseverance is the persistence of a belief after the evidence that originally supported it has been discredited, which is exactly what happened when participants held on to their self-assessment after learning that the feedback was random. Confirmation bias is the tendency to seek or weight evidence that supports an existing belief; here no new evidence was gathered, and the only evidence was explicitly withdrawn. The availability heuristic concerns judging frequency or probability by the ease with which examples come to mind. Hindsight bias is the tendency to see an outcome as having been predictable after it is known, which does not describe a judgment about one’s own ability.',
+    optionExplanations: [
+      'Confirmation bias is the tendency to seek or weight evidence that supports an existing belief; here no new evidence was gathered, and the only evidence was explicitly withdrawn, so the belief persisted without confirmation.',
+      'The availability heuristic concerns judging frequency or probability by the ease with which examples come to mind; it does not describe maintaining a belief about one’s ability after its basis is discredited.',
+      'Hindsight bias is the tendency to see an outcome as having been predictable after it is known; it does not describe a persisting judgment about one’s own ability.',
+      'Belief perseverance is the persistence of a belief after the evidence that originally supported it has been discredited, which is exactly what happened when participants kept their self-assessment after learning the feedback was random.',
+    ],
     skill: '6B belief perseverance',
   },
   {
@@ -465,6 +615,12 @@ export const FL5_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'Planning, sustaining attention on a goal, and inhibiting impulses are executive functions that depend on the prefrontal cortex, and the pattern of impaired executive function with preserved memory, language, and movement points there. Hippocampal damage would impair the formation of new memories, yet he recalls recent events. Cerebellar damage produces problems with coordination and balance, yet he walks normally. Primary motor cortex damage produces weakness or paralysis of the opposite side of the body, not changes in judgment and planning.',
+    optionExplanations: [
+      'Hippocampal damage would impair the formation of new memories, yet he recalls recent events; his deficits are in planning and impulse control, not memory.',
+      'Planning, sustaining attention on a goal, and inhibiting impulses are executive functions that depend on the prefrontal cortex; impaired executive function with preserved memory, language, and movement points to prefrontal damage.',
+      'Cerebellar damage produces problems with coordination and balance, yet he walks without difficulty; the cerebellum does not govern planning or impulse control.',
+      'Primary motor cortex damage produces weakness or paralysis of the opposite side of the body; his movement is intact, and his problems are in judgment and planning.',
+    ],
     skill: '6A prefrontal cortex and executive function',
   },
   {
@@ -482,6 +638,12 @@ export const FL5_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'Durkheim argued that abrupt social change, including sudden prosperity as well as sudden hardship, disrupts the norms that ordinarily limit what people expect and desire, producing anomie, a state of normlessness in which unregulated aspirations lead to frustration and, in his analysis, higher suicide rates. Egoism in Durkheim’s scheme refers to weak integration into groups, and the scenario describes a change in regulation, not in group ties. Alienation is Marx’s concept, not Durkheim’s. Strain between goals and means is Merton’s later extension of anomie, and a boom narrows rather than widens the gap between goals and legitimate means.',
+    optionExplanations: [
+      'Egoism in Durkheim’s scheme refers to weak integration into groups; the scenario describes a breakdown in the norms regulating aspirations after sudden change, not a weakening of group ties.',
+      'Alienation is Marx’s concept of workers’ estrangement from the products of their labor; it is not Durkheim’s explanation of suicide, and the scenario concerns sudden prosperity, not labor relations.',
+      'Durkheim argued that abrupt social change, including sudden prosperity, disrupts the norms that ordinarily limit what people expect and desire, producing anomie, a state of normlessness in which unregulated aspirations lead to frustration and higher suicide rates.',
+      'Strain between culturally valued goals and legitimate means is Merton’s later extension of anomie, and a boom narrows rather than widens the gap between goals and legitimate means.',
+    ],
     skill: '9A anomie (Durkheim)',
   },
   {
@@ -494,6 +656,12 @@ export const FL5_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'Social exclusion is the process by which people are shut out of full participation in the political, economic, and social life of their society, and his situation combines all three dimensions, political rights, work and housing, and social ties, even though his income is adequate. Absolute poverty refers to lacking the resources needed for basic survival, which his income rules out. Status inconsistency describes holding positions that rank differently on separate dimensions of stratification, such as high education with low income. Role strain refers to competing demands within a single role, not to being barred from participation.',
+    optionExplanations: [
+      'Absolute poverty refers to lacking the resources needed for basic survival; his income is above the poverty line, so this does not describe his situation.',
+      'Status inconsistency describes holding positions that rank differently on separate dimensions of stratification, such as high education with low income; it does not describe being shut out of participation.',
+      'Role strain refers to competing demands within a single role; being barred from voting, work, housing, and social gatherings is not a conflict of demands within a role.',
+      'Social exclusion is the process by which people are shut out of full participation in political, economic, and social life; his situation combines all three dimensions, voting, work and housing, and social ties, even though his income is adequate.',
+    ],
     skill: '10A social exclusion',
   },
   {
@@ -511,6 +679,12 @@ export const FL5_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'Density is the proportion of possible ties that actually exist: 10 people can have 10 × 9 / 2 = 45 ties, and 18 / 45 = 0.40. Degree centrality is the number of ties a member has, so K, with 7 ties, the most of anyone, has the highest degree centrality, not the lowest. A density of 0.18 results from dividing the tie count by 100 rather than by the 45 possible ties. A density of 0.78 is K’s own share of possible ties (7 of 9), a property of one member rather than of the whole network.',
+    optionExplanations: [
+      'Density is the proportion of possible ties that exist: 10 people can have 10 × 9 / 2 = 45 ties, and 18 / 45 = 0.40. Degree centrality is the number of ties a member has, so K with 7 ties, the most of anyone, has the highest degree centrality.',
+      'The density of 0.40 is correct, but K has 7 ties, more than any other member, so K has the highest degree centrality, not the lowest.',
+      'A density of 0.18 results from dividing the 18 ties by 100 rather than by the 45 possible ties among 10 people; the correct density is 18/45 = 0.40.',
+      'A density of 0.78 is K’s own share of possible ties (7 of 9), a property of one member rather than of the whole network; network density is 18 of 45 possible ties, or 0.40.',
+    ],
     skill: '9A social networks: density and centrality',
   },
 ]

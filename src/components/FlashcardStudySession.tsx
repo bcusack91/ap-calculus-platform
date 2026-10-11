@@ -9,9 +9,13 @@ import { detectCloze, maskClozeText, revealClozeText } from '@/lib/cloze-utils'
 import { previewIntervals } from '@/lib/spaced-repetition'
 import { formatTimeUntil } from '@/lib/format-due-time'
 import { useCardShownTimer } from '@/hooks/useCardShownTimer'
+import { useIncludeOwnCards } from '@/hooks/useIncludeOwnCards'
+import { escapeTagOpeners } from '@/lib/user-flashcard-ids'
 
 interface SessionCard {
   id: string
+  /** A student-made card (id 'u:<id>'). */
+  own?: boolean
   front: string
   back: string
   topicSlug?: string
@@ -29,6 +33,9 @@ interface SessionStats {
   /** Cards returning later in the student's local day (unscoped sessions). */
   dueLaterToday?: number
   nextDueAt?: string | null
+  /** Student-made cards: how many exist / are due now. */
+  ownTotal?: number
+  ownDue?: number
 }
 
 interface ReviewResult {
@@ -61,6 +68,9 @@ export default function FlashcardStudySession({ topicSlug, onComplete }: Flashca
   const [katexReady, setKatexReady] = useState(false)
   // Visible time on the current card, sent with its rating for the review log.
   const cardShownMs = useCardShownTimer(cards[currentIndex])
+  // "Include my own cards" (unscoped sessions only; defaults on).
+  const [includeOwn, setIncludeOwn] = useIncludeOwnCards()
+  const ownParam = `&own=${includeOwn ? 1 : 0}`
 
   const loadSession = useCallback(() => {
     setLoading(true)
@@ -68,7 +78,7 @@ export default function FlashcardStudySession({ topicSlug, onComplete }: Flashca
     setPending([])
     const url = topicSlug
       ? `/api/flashcards/session?topicSlug=${encodeURIComponent(topicSlug)}`
-      : `/api/flashcards/session?tzOffset=${new Date().getTimezoneOffset()}`
+      : `/api/flashcards/session?tzOffset=${new Date().getTimezoneOffset()}${ownParam}`
     fetch(url)
       .then((r) => { if (!r.ok) throw new Error('Failed to load flashcards'); return r.json() })
       .then((data) => {
@@ -78,9 +88,8 @@ export default function FlashcardStudySession({ topicSlug, onComplete }: Flashca
       })
       .catch((e) => setError(e.message))
       .finally(() => setLoading(false))
-  }, [topicSlug])
+  }, [topicSlug, ownParam])
 
-  // eslint-disable-next-line react-hooks/set-state-in-effect -- async fetch callback, not synchronous
   useEffect(() => { loadSession() }, [loadSession])
 
   // KaTeX is lazily loaded and renderRichText falls back to the raw expression
@@ -144,7 +153,7 @@ export default function FlashcardStudySession({ topicSlug, onComplete }: Flashca
         // Refresh stats so the completion screen's "come back later today"
         // count includes the cards just sent into learning steps.
         if (!topicSlug) {
-          fetch(`/api/flashcards/session?tzOffset=${new Date().getTimezoneOffset()}`)
+          fetch(`/api/flashcards/session?tzOffset=${new Date().getTimezoneOffset()}${ownParam}`)
             .then((r) => (r.ok ? r.json() : null))
             .then((d) => { if (d?.stats) setStats(d.stats) })
             .catch(() => {})
@@ -153,7 +162,7 @@ export default function FlashcardStudySession({ topicSlug, onComplete }: Flashca
         setCurrentIndex((i) => i + 1)
       }
     },
-    [cards, currentIndex, topicSlug, pending, cardShownMs]
+    [cards, currentIndex, topicSlug, pending, cardShownMs, ownParam]
   )
 
   // Keyboard shortcuts
@@ -284,7 +293,9 @@ export default function FlashcardStudySession({ topicSlug, onComplete }: Flashca
   // reveal hands it an HTML string, and it now covers the same markdown bold /
   // italic that remark does on those surfaces.
   void katexReady // re-render dependency: KaTeX loads after first paint
-  const renderCard = (text: string) => renderRichText(formatFlashcardContent(text))
+  // Student-written cards go through innerHTML here, so tag openers in them
+  // are neutralized first (site cards are authored content).
+  const renderCard = (text: string) => renderRichText(formatFlashcardContent(card.own ? escapeTagOpeners(text) : text))
   const cardHtml = flipped
     ? isClozeCard
       ? `${renderCard(revealClozeText(card.front, true))}<br><br>${renderCard(card.back)}`
@@ -310,6 +321,18 @@ export default function FlashcardStudySession({ topicSlug, onComplete }: Flashca
           </span>
         )}
       </div>
+
+      {!topicSlug && (stats?.ownTotal ?? 0) > 0 && (
+        <label className="mb-3 flex items-center justify-end gap-2 text-xs text-gray-600 dark:text-gray-400 cursor-pointer">
+          <input
+            type="checkbox"
+            checked={includeOwn}
+            onChange={(e) => setIncludeOwn(e.target.checked)}
+            className="h-3.5 w-3.5 rounded border-gray-300 dark:border-gray-600 accent-[var(--accent)] focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring"
+          />
+          Include my own cards
+        </label>
+      )}
 
       {/* Card */}
       <div

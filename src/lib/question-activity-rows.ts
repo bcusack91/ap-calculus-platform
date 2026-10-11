@@ -1,5 +1,5 @@
 import type { AttemptKind, QuestionRow } from '@/lib/study-tracking'
-import { questionKey } from '@/lib/question-key'
+import { optionKey, questionKey } from '@/lib/question-key'
 
 /**
  * QuestionActivity rows built from stored results — shared by the submit
@@ -56,6 +56,18 @@ function count(v: unknown): number {
 /** A chosen option index (in shown order), or null for skipped / not an index. */
 function chosen(v: unknown): number | null {
   return typeof v === 'number' && Number.isInteger(v) && v >= 0 ? v : null
+}
+
+/**
+ * optionKey() of the option picked (by its index in the shown `options`), for
+ * "how others answered". Null when skipped, out of range, or the option isn't
+ * text — typed (grid-in) answers never get one: the stats are for multiple
+ * choice.
+ */
+export function chosenOptionKey(options: readonly unknown[] | null | undefined, pick: number | null | undefined): string | null {
+  if (!Array.isArray(options) || typeof pick !== 'number' || !Number.isInteger(pick) || pick < 0 || pick >= options.length) return null
+  const text = options[pick]
+  return typeof text === 'string' && text.trim() ? optionKey(text) : null
 }
 
 type DiagnosticRowOpts = {
@@ -139,6 +151,7 @@ function buildDiagnosticRows(
         correct: ok ? 1 : 0,
         itemIndex: i,
         chosenIndex: chosen(answers[i]),
+        chosenKey: chosenOptionKey(Array.isArray(q.options) ? q.options : null, chosen(answers[i])),
         ...(opts.attemptId ? { attemptId: opts.attemptId } : {}),
         ...(hashed && opts.attemptKind ? { attemptKind: opts.attemptKind } : {}),
       })
@@ -243,6 +256,8 @@ export interface ResolvedPracticeQuestion {
   correctIndex: number
   questionKey: string
   topicSlug?: string
+  /** Options in the order shown (for chosenKey). */
+  options?: readonly string[]
 }
 
 /**
@@ -285,6 +300,7 @@ export function mcatPracticeRows(
       durationMs: perQuestionMs,
       itemIndex: i,
       chosenIndex: pick,
+      chosenKey: item ? chosenOptionKey(item.options, pick) : null,
       ...(opts.attemptId ? { attemptId: opts.attemptId } : {}),
       ...(item ? { attemptKind: 'mcat-practice' as const } : {}),
       ...(opts.answeredAt ? { answeredAt: opts.answeredAt } : {}),
@@ -303,6 +319,8 @@ export interface FullLengthRowItem {
   isCorrect: boolean
   flagged?: boolean
   durationMs?: number | null
+  /** Options in the order shown (for chosenKey). */
+  options?: readonly string[]
 }
 
 /**
@@ -325,6 +343,7 @@ export function mcatFullLengthQuestionRows(
     durationMs: it.durationMs ?? null,
     itemIndex: it.index,
     chosenIndex: it.chosenIndex,
+    chosenKey: chosenOptionKey(it.options, it.chosenIndex),
     flagged: !!it.flagged,
     ...(opts.attemptId ? { attemptId: opts.attemptId, attemptKind: 'mcat-fl' as const } : {}),
     ...(opts.answeredAt ? { answeredAt: opts.answeredAt } : {}),
@@ -368,6 +387,7 @@ export function unitTestQuestionRows(
       durationMs: perQuestionMs,
       itemIndex: i,
       chosenIndex: pick,
+      chosenKey: chosenOptionKey(q?.options, pick),
       attemptId: opts.attemptId,
       ...(hashed ? { attemptKind: 'unit-test' as const } : {}),
       ...(opts.answeredAt ? { answeredAt: opts.answeredAt } : {}),

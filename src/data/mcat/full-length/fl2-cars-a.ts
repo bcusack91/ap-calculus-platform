@@ -29,6 +29,12 @@ export const FL2_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The author grants that the far child’s life is worth exactly what the near child’s is worth, then argues that proximity supplies “not greater worth but a determinate claim” — the duty becomes definitely mine. The worth-less option is the view the author says people “would be ashamed to state plainly.” The bias-to-subtract option is the philosopher’s position, which the author explicitly rejects. The relationships option contradicts the fourth paragraph, which says the drowning child has no relationship or shared history with the rescuer.',
+        optionExplanations: [
+          'The author explicitly grants that the far child’s life is worth precisely what the near child’s is worth and says anyone denying this makes a claim they “would be ashamed to state plainly.” This is the view the author rejects, not the thesis.',
+          'This is the philosopher’s position, which treats the pull of the near “as a bias to be subtracted, like a thumb on a scale.” The author announces “Here is where I part from the philosopher” and argues against it.',
+          'Correct. The author concedes equal worth, then argues that proximity supplies “not greater worth but a determinate claim”: it “tells me that the duty is mine.” Nearness makes the obligation definite without changing the stranger’s value.',
+          'The fourth paragraph says the argument “is not about family or friends,” whose claims rest on relationship and shared history, and that the drowning child “has neither.” The passage separates strangers’ claims from relational ones.',
+        ],
         skill: 'main-idea',
       },
       {
@@ -42,6 +48,12 @@ export const FL2_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The author says such a being “would be a better being than we are, but it would not be us,” and that morality is a set of demands the beings we actually are can meet — so the person is admirable but not the measure of what morality may demand. The mistaken-about-worth option fails because the author insists near and far lives are worth the same; feeling them equally is not an error. The typical option reverses the passage, which treats such sensitivity as exceptional. The paralysis option concerns a morality in which every claim is equally definite, not an individual’s vividness of feeling.',
+        optionExplanations: [
+          'Correct. The author says such a being “would be a better being than we are, but it would not be us,” and that morality is a set of demands “the beings we actually are can be expected to meet.” Admirable, but not the yardstick for moral demands.',
+          'The author insists the two lives are worth exactly the same, so feeling both equally vividly involves no error about worth. Being unusual in attention is not being mistaken about value.',
+          'This reverses the passage. The author describes such sensitivity as exceptional (“a better being than we are”), and says morality addresses the beings we actually are, who “see what is in front of us.”',
+          'The paralysis the author warns of results from a morality in which every claim is equally definite because every person is equally distant. It concerns a moral system’s design, not an individual’s vividness of feeling.',
+        ],
         skill: 'inference',
       },
       {
@@ -55,6 +67,12 @@ export const FL2_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The author contrasts the near case, where “no one else [is] placed as I am placed,” with the far case, where a million others could act as well as I; the conclusion that the near duty is mine follows only if a duty shared equally among many is less definite for each. The likelihood-of-rescue option concerns outcomes, which the author never invokes. The urgency option contradicts the author’s concession that the far child’s need is just as real. The capability option is too strong: the argument turns on placement, not on the bystander being the only possible rescuer.',
+        optionExplanations: [
+          'The author’s argument is about whose duty it is, not about which rescue is likelier to succeed. Outcomes and probabilities of success are never invoked in the passage.',
+          'The author concedes the far child’s need is “however real” and that a modest sum would save her “as surely” as wading in saves the near child. Urgency is not treated as lesser; definiteness is.',
+          'This is stronger than the argument requires. The author’s point rests on the bystander being uniquely placed (“no one else placed as I am placed”), not on there being no other conceivable rescuer anywhere.',
+          'Correct. The author contrasts the near case, where no one else is placed as I am, with the far case, which raises “a question that a million others could answer as well as I.” The near duty is mine only if sharing a duty among many makes it less definite for each.',
+        ],
         skill: 'assumption',
       },
       {
@@ -68,6 +86,12 @@ export const FL2_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'For the author, the far stranger’s claim is indefinite because it is “a statistic” with “an open question” about what I in particular should do; a named child and a specific act the donor can perform supply the particularity that the author says strangers acquire “by turning up.” The manipulation option misreads the passage, which treats the pull of attention as a fact rather than a fraud. The statistics option ignores that the child is no longer presented as a statistic. The distance option contradicts the author’s concession that distance does not affect worth.',
+        optionExplanations: [
+          'The author treats the pull of attention as “a fact about attention,” not a fraud or manipulation. Nothing in the passage condemns making a stranger particular; the author says strangers become particular “by turning up.”',
+          'Correct. The far stranger’s claim is indefinite because it is “a statistic” with an open question about what I in particular should do. A named child and a specific act the donor can perform give the claim the particularity proximity usually supplies.',
+          'A photographed, named child whose life this specific contribution would save is no longer a statistic. This option ignores exactly what the new information changes.',
+          'The author concedes distance is irrelevant to worth and locates its only role in making duties definite. The scenario shows definiteness can arise without proximity, which weakens rather than vindicates distance as morally relevant.',
+        ],
         skill: 'new-information',
       },
       {
@@ -81,6 +105,12 @@ export const FL2_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The philosopher holds that distance is “no more morally relevant than hair color” and that the pull of the near is a bias to be subtracted; a judge who tells jurors to strip out an irrelevant influence is doing exactly that. The doctor and teacher options describe acting on whoever is nearest or turns up first, which is the author’s position, not the philosopher’s. The lifeguard option abandons a definite near duty for a distant cause, an extreme neither party recommends.',
+        optionExplanations: [
+          'Correct. The philosopher holds distance is “no more morally relevant than hair color” and the pull of the near is a bias “to be subtracted.” A judge instructing jurors to strip out an influence that reveals nothing about truth does precisely that.',
+          'Treating the patients who are in front of her first is acting on proximity, which is the author’s view, not the philosopher’s. The philosopher would call this a bias to be corrected.',
+          'Helping whoever turns up first is the author’s position: strangers become particular “by turning up.” The philosopher regards such accidents of placement as morally irrelevant.',
+          'Abandoning a definite near duty for a distant cause is an extreme that neither the author nor the philosopher recommends. The philosopher wants consistency, not neglect of the near.',
+        ],
         skill: 'application',
       },
       {
@@ -94,6 +124,12 @@ export const FL2_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The fourth paragraph states that the drowning child has neither relationship nor shared history with the rescuer, so shared history is not what sets her claim apart — it is the feature the author explicitly denies. The particular-action, already-specified, and no-one-else-placed features are all listed in the third and fourth paragraphs as what proximity supplies and the far stranger’s claim lacks.',
+        optionExplanations: [
+          'The third paragraph says the near stranger presents “a particular thing I can do,” whereas the far stranger raises an open question about what to do. This is a stated distinction, so it is not the exception.',
+          'The fourth paragraph says a duty to everyone “waits for someone to specify it,” while “a duty to the person in the pond has already been specified.” This is a stated distinction.',
+          'Correct. The author says the drowning child “is a stranger” with “neither” relationship nor shared history, explicitly setting the argument apart from duties to family and friends. Shared history is what the author denies, so it is the exception.',
+          'The author says the near case has “no one else placed as I am placed,” unlike the far case where a million others could act. This is a stated distinction.',
+        ],
         skill: 'detail',
       },
     ],
@@ -117,6 +153,12 @@ export const FL2_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The passage first lays out a two-part mechanism (counting plus a lever) by which a harm becomes a public-health problem, then answers an objection by proposing how the parts should be kept separate in public speech — explanation followed by prescription. The confine-to-infectious-disease option is the critics’ conclusion, which the author calls the wrong lesson. The road-deaths option is a single illustration, not the purpose. The size-of-harm option is the view the author denies in the opening paragraph.',
+        optionExplanations: [
+          'Confining public health to infectious disease and sanitation is the conclusion the critics draw, and the author says they “draw the wrong lesson.” The author argues against shrinking the field.',
+          'Correct. The passage explains a two-part mechanism (counting plus a lever) by which harms become public-health problems, then prescribes how the parts should be kept separate in public speech so that pulling the lever stays a political decision.',
+          'Road deaths are a single illustration of the mechanism in the second paragraph. The passage uses the example to explain how aggregation and a lever work, not to prove a point about the history of motoring.',
+          'The author denies this in the opening paragraph: “What makes the difference is rarely the size of the harm.” The passage argues that countability and a lever, not magnitude, determine outrage.',
+        ],
         skill: 'main-idea',
       },
       {
@@ -130,6 +172,12 @@ export const FL2_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The author’s mechanism requires both aggregation and a lever, and the road example supplies both at once: the tally varied with shoulder width, curve angle and steering-column shape, which attached the pattern to road design that a government could be asked to fix. The increase option is contradicted directly — “the deaths had not increased.” The carelessness option describes the earlier “accident” framing that kept the deaths private. The ministry option is unsupported; the passage says “someone” began to tally, and counting alone is in any case insufficient.',
+        optionExplanations: [
+          'The passage states directly that “the deaths had not increased; they had been aggregated.” An increase in deaths played no role in the change.',
+          'Explaining each death by “the carelessness of the particular driver” is the earlier “accident” framing that kept the deaths private misfortunes. It is what changed, not what caused the change.',
+          'The passage says “someone” began to tally deaths per mile, not a government ministry, and in any case the third paragraph says counting alone is not enough. A lever was also needed.',
+          'Correct. Once the tally was shown to vary with shoulder width, curve angle and steering-column shape, the pattern was attached to road design, and “what the road is responsible for, a government can be asked to fix.” That supplies both the number and the lever.',
+        ],
         skill: 'detail',
       },
       {
@@ -143,6 +191,12 @@ export const FL2_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The sentence immediately follows the claim that “counting alone is not enough” and precedes the introduction of the second part of the mechanism, the lever; it serves to separate counting from problem-making. The no-lever option goes beyond the text, which uses poverty only to show that counting is insufficient, not to assert that no lever exists. The swallowing option belongs to the critics’ objection in a later paragraph. The uncountable option contradicts the example, in which the poor have been counted.',
+        optionExplanations: [
+          'Correct. The sentence immediately follows “counting alone is not enough” and precedes the introduction of the lever as the second part of the mechanism. It shows that aggregation by itself does not make a public-health problem.',
+          'The passage uses poverty only to show that counting is insufficient. It does not say whether a lever for poverty exists or has been identified; this reads more into the example than the text supports.',
+          'The worry that the field will “swallow the whole of social life” belongs to the critics’ objection in the fourth paragraph, which comes later. The poverty example serves the mechanism’s exposition, not the objection.',
+          'The example is of a harm that has been counted (“have long counted the poor”). It cannot be a concession that some harms are uncountable.',
+        ],
         skill: 'function',
       },
       {
@@ -156,6 +210,12 @@ export const FL2_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The author claims the difference is “rarely the size of the harm” and that a number without a lever yields only a tragedy; evidence that problem status tracks death toll regardless of any lever contradicts both claims. The few-deaths option supports the author, since low-toll harms became problems by the author’s mechanism. The failure-to-act option is consistent with the passage, which separates identifying a lever from the political decision to pull it. The critics option concerns what critics propose, not how harms become problems.',
+        optionExplanations: [
+          'Low-toll harms that gained ministries after being counted and attached to a lever are exactly what the author’s mechanism predicts. This supports rather than weakens the account.',
+          'The author separates identifying a lever from the political decision to pull it, and insists the latter be left to people who can be voted out. Governments failing to act is fully consistent with the passage.',
+          'Correct. The author says the difference is “rarely the size of the harm” and that a number without a lever yields only “a tragedy.” If problem status tracked death toll regardless of any lever, both claims would be contradicted.',
+          'What critics propose as a remedy has no bearing on how harms come to be treated as problems. This concerns the fourth paragraph’s objection, not the author’s causal account.',
+        ],
         skill: 'strengthen-weaken',
       },
       {
@@ -169,6 +229,12 @@ export const FL2_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The final paragraph identifies the real danger as using the word “health” to “place a harm beyond argument” and insists that the decision to pull a lever “remain a political decision”; a demand to remove the question from politics is exactly this misuse. The is-right option ignores that the author objects to the campaign’s demand, not to counting loneliness. The private-misfortune option contradicts the author’s willingness to count any harm honestly. The tragedy-grievance option applies the author’s labels to the wrong problem; the campaign’s error is about who decides, not about lacking a number or a lever.',
+        optionExplanations: [
+          'The author does not object to counting loneliness or to claiming a lever exists; both are permitted. The objection is to the demand to take the matter “out of politics,” which this option overlooks.',
+          'The author lets “the counting be done by anyone who can do it honestly” and never says loneliness cannot be aggregated into a pattern. Dismissing it as merely private contradicts the author’s openness about what may be counted.',
+          'A tragedy is a harm with a number but no lever; a grievance has a lever but no number. The campaign’s error is about who decides whether to pull the lever, not about lacking either component.',
+          'Correct. The final paragraph identifies the real danger as using the word “health” to “place a harm beyond argument” and insists the decision to pull a lever “remain a political decision.” Demanding the issue be taken out of politics is precisely this misuse.',
+        ],
         skill: 'new-information',
       },
       {
@@ -182,6 +248,12 @@ export const FL2_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The third paragraph states that counting and a lever together, and only together, make a problem, which requires I and II. Statement III is excluded: the author explicitly separates the decision to pull the lever, which is political and comes afterward, from the existence of the problem. “I only” omits the lever, which the poverty example shows is required; the options containing III import the political decision into the definition.',
+        optionExplanations: [
+          'Aggregation alone is not enough: the third paragraph says a harm with a number and no lever “is a tragedy,” and the poverty example shows counting without a lever does not make a problem.',
+          'Correct. The third paragraph says “Only the pair makes a problem”: counting (I) and an identified lever (II). The decision to act (III) is explicitly separated as a later, political step.',
+          'This omits aggregation, which the author treats as the first part of the mechanism, and includes the government’s decision, which the author says comes after the problem exists and should remain political.',
+          'Including the government’s decision imports the political choice into the definition of a problem. The author insists that choice is separate and that a problem exists once number and lever are both present.',
+        ],
         skill: 'application',
       },
     ],
@@ -205,6 +277,12 @@ export const FL2_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The author argues that the real difference between the practices lies in what the audience witnesses, that fixing a dance removes the chance to watch a decision about form, and that this loss buys repeatable, interpretable work. The less-freedom option is the shared assumption of the opening remarks, which the author calls mistaken. The superiority option overstates the author’s view; paragraph 5 defends what fixed work gains. The appearance-of-spontaneity option describes the hybrid the author objects to in the last paragraph.',
+        optionExplanations: [
+          'Correct. The author locates the real difference in the audience: fixing a dance removes “the audience’s opportunity to witness a decision about form being made,” but this loss “purchases” repeatability, and “only repetition makes interpretation possible.”',
+          'This is the assumption shared by both opening remarks, which the author calls mistaken. The second paragraph argues the choreographed dancer has “a great deal” of freedom; what she lacks is authority over the whole.',
+          'The author defends what fixed work gains in the fifth paragraph and ends by saying each practice should be content to be what it is. The passage does not rank improvisation as superior.',
+          'This describes the hybrid the author objects to in the final paragraph: the choreographed piece designed to look improvised, which “asks to be judged as a risk while running none.”',
+        ],
         skill: 'main-idea',
       },
       {
@@ -218,6 +296,12 @@ export const FL2_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Paragraph 2 lists the decisions a set-phrase dancer makes each night (how long to hold a balance, where the weight falls, how to meet the music) and says what she lacks is authority over the shape of the whole. The no-decisions option contradicts the claim that she is “not a machine.” The reproduces option inverts paragraph 3, where the audience notices how her realization differs from last season’s. The hesitations option recommends the hybrid the author criticizes.',
+        optionExplanations: [
+          'The second paragraph says a dancer executing a set phrase “is not a machine” and makes decisions night to night about balance, weight and timing. A performance is “thick with decisions of this kind.”',
+          'This inverts the third paragraph, where the audience attends to how her realization “differs from the one we saw last season.” Interpretation, not reproduction, is the point of repeated fixed works.',
+          'Correct. The second paragraph lists what she decides (how long to suspend a balance, where to let weight fall, how to meet the music) and concludes that what she lacks “is not freedom but authority over the shape of the whole.”',
+          'Adopting an improviser’s hesitations is the hybrid of “studied hesitations and rehearsed accidents” the author criticizes. The author says a fixed dance should seek vitality in execution instead.',
+        ],
         skill: 'detail',
       },
       {
@@ -231,6 +315,12 @@ export const FL2_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The failures are offered as evidence that the loss described in paragraph 3 is real: because the audience watches choice, even a failed choice shows what was at stake, and a fixed work cannot offer this. The concession option misreads the tone; the author treats these failures as part of improvisation’s interest, not a weakness. The harsh-judgment option has no basis in the passage. The set-work option confuses the example with the contrast the author draws afterward — a set work performed badly is “a different and duller thing.”',
+        optionExplanations: [
+          'The author presents these failures as “part of its interest,” not as a weakness to concede. The tone is appreciative: a stalled duet “shows us what was at stake” in the phrases that succeeded.',
+          'Correct. The failures demonstrate that the loss described in the third paragraph is real: because the audience is watching choice, even a failed choice reveals what was at stake, and “a set work cannot fail in this way.”',
+          'Nothing in the passage discusses audiences judging improvisers harshly. The author describes how failures function for viewers, not how severely viewers assess them.',
+          'The author draws the opposite contrast: a set work “can only be performed badly, which is a different and duller thing.” The failures discussed belong to improvisation, not to set works.',
+        ],
         skill: 'function',
       },
       {
@@ -244,6 +334,12 @@ export const FL2_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The author says both remarks assume the difference is how much freedom the dancer enjoys, calls that assumption mistaken, and then locates “the real difference” in the audience. Each of the two options that endorse one remark ignores that the author faults both equally. The freedom option restates the very assumption the author rejects.',
+        optionExplanations: [
+          'The author calls both remarks “clever” and faults both for the same mistaken assumption. Nothing in the passage endorses the choreographers’ remark over the dancers’.',
+          'The author does not endorse the dancers’ remark either; both are said to “assume that the difference between the two practices is a difference in how much freedom the dancer enjoys,” which the author rejects.',
+          'This restates the assumption the author explicitly calls mistaken. The second paragraph argues the choreographed dancer has a great deal of freedom, so freedom is not what separates the practices.',
+          'Correct. The author says both remarks assume the difference is about freedom, calls that assumption mistaken, and then declares that the audience “is where the real difference lies.” Both locate the difference in the wrong place.',
+        ],
         skill: 'inference',
       },
       {
@@ -257,6 +353,12 @@ export const FL2_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Dancers drilled to feign indecision produce exactly the hybrid the author objects to: the look of a decision without any decision being made. The revival option exemplifies the interpretation that only fixed works permit, which the author praises. The ensemble option shows improvisation willing to fail, which the author says it should be. The varying-balance option describes the genuine freedom the author says set-phrase dancers already have.',
+        optionExplanations: [
+          'A young dancer reinterpreting an old role is the “art of interpretation” the fifth paragraph praises, made possible only because the work was fixed. The author would approve.',
+          'An improvising ensemble whose sequences visibly lose their way is improvisation “content to fail,” which the author says it should be, since failure “is the price of the one thing it alone can show.”',
+          'Correct. Dancers drilled to feign indecision produce the hybrid the author objects to: a piece that “borrows the audience’s excitement at watching a decision while offering no decision to watch.”',
+          'Letting dancers vary the length of each balance is the genuine freedom the second paragraph says set-phrase dancers already exercise. The author says a fixed dance should seek vitality exactly there.',
+        ],
         skill: 'application',
       },
       {
@@ -270,6 +372,12 @@ export const FL2_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The author locates the difference in what the audience knows — that the sequence is “being settled in front of us” — so absorption that depends only on being told the dance is improvised supports that account. The genuine-decisions option is irrelevant, since the dance was identical in both conditions. The skill option is unsupported; the finding concerns belief, not difficulty. The hybrid option gets the direction wrong: the finding would support the claim that a dance merely appearing improvised can borrow that excitement.',
+        optionExplanations: [
+          'Correct. The author locates the difference in what the audience knows, that the sequence “is being settled in front of us.” If being told a dance is improvised changes absorption, viewers’ belief about live choice is doing the work, as the author claims.',
+          'The dance was identical in both conditions, so the finding says nothing about what decisions the dancers actually made. The claim about choreographed dancers’ genuine decisions is untouched.',
+          'The passage never claims improvisation demands more skill, and the finding concerns viewers’ beliefs, not performers’ difficulty. This connects the data to a claim the author does not make.',
+          'This gets the direction wrong. If a dance merely believed to be improvised can absorb viewers more, that supports the author’s claim that a dance appearing improvised can borrow that excitement without running any risk.',
+        ],
         skill: 'new-information',
       },
     ],
@@ -293,6 +401,12 @@ export const FL2_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The author relocates nostalgia from “inside a single head” to a social act performed in company whose function is to make people feel they belong to one another. The error option is the critics’ description, which the author sets aside, and it conflicts with the claim that policing nostalgia for accuracy would be futile and cruel. The private-feeling option is the framing the author calls “the wrong place to look.” The smoothing option places the danger exactly where the author says it does not lie.',
+        optionExplanations: [
+          'Treating nostalgia as an error to be corrected is the critics’ description, which the author sets aside. The final paragraph says policing nostalgia for accuracy “would be both futile and cruel.”',
+          'The author calls the picture of nostalgia as a private feeling inside “a single head” the wrong place to look. The passage relocates nostalgia to shared occasions and company.',
+          'The fourth paragraph says the danger “does not lie where the critics usually place it, in the distortion itself.” Smoothing is how nostalgia binds a group; the danger is enlarging the “we.”',
+          'Correct. The author argues nostalgia is “less a feeling one has than a thing one does,” usually done in company, functioning as “a declaration of belonging, not as a report.” It is a shared act rather than a private error.',
+        ],
         skill: 'main-idea',
       },
       {
@@ -306,6 +420,12 @@ export const FL2_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The author says the listener is “not correcting the record so much as signing it,” in reply to an invitation to confirm “that they were there together” — an act of affirming a shared past. The repairing option is the reading the author explicitly sets aside. The requesting option confuses the listener’s reply with a question, and the author says even the speaker’s “Do you remember” is not really a question. The testing option has no basis in the passage.',
+        optionExplanations: [
+          'The author says the listener is “not correcting the record so much as signing it.” Repair of a mistake is precisely the reading the passage sets aside.',
+          'Correct. The “Do you remember” formula invites the listener “to confirm that they were there together,” and adding a detail is “signing” the shared record. The listener affirms a past held in common.',
+          'The listener is answering, not asking, and the author says even the speaker’s “Do you remember” is “not really a question.” No request for information is involved.',
+          'Nothing in the passage suggests the listener is testing the speaker’s presence. The exchange is described as mutual confirmation, not verification.',
+        ],
         skill: 'detail',
       },
       {
@@ -319,6 +439,12 @@ export const FL2_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'A toast is spoken to bind people together, testimony to establish facts; the author grants that nostalgia fails as a historical document but says it succeeds at making people belong, so the critics are measuring it by the wrong standard. The right-about-evidence option contradicts the author’s point that judging nostalgia this way is a category mistake. The more-accurate option reverses the passage, which agrees that retelling smooths and distorts. The mistaking-celebrations option invents a confusion the passage never attributes to the critics.',
+        optionExplanations: [
+          'Correct. A toast binds people together; testimony establishes facts. The author grants nostalgia is “a poor historical document” but “an excellent instrument” for belonging, so the critics are measuring it against a standard its purpose never set.',
+          'The author says the critics are right “on their own terms,” but the point of the toast image is that those terms are the wrong ones. It denies, rather than affirms, that evidentiary standards should govern nostalgic speech.',
+          'The passage agrees that retelling smooths and distorts: “Peculiar experiences are sanded down.” The critics are not accused of underestimating accuracy, but of applying accuracy as the wrong measure.',
+          'The passage never attributes to the critics a confusion between celebrations and events. Their error is one of standard, not of mistaking a ceremony for the thing it recalls.',
+        ],
         skill: 'inference',
       },
       {
@@ -332,6 +458,12 @@ export const FL2_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The author claims nostalgia is “usually done in company” and that its smoothing comes from consensus around the table; if solitary reminiscence were just as frequent and just as smoothed, the social account of both the practice and its distortion would lose its footing. The converging-stories option is exactly what the consensus mechanism predicts. The feeling-closer option supports the claim that nostalgia binds a group. The exclusion option illustrates the danger the author describes in the fourth paragraph.',
+        optionExplanations: [
+          'Convergence on a single version is exactly what the consensus mechanism in the third paragraph predicts: “the version that survives is the one that the most people present can recognize.” This supports the account.',
+          'Feeling closer after reminiscing supports the claim that nostalgia is “an excellent instrument for making twenty people feel that they belong to one another.”',
+          'Correct. The author claims nostalgia is “usually done in company” and that its smoothing is “settled not by evidence but by consensus.” If solitary reminiscence is equally common and equally smoothed, the social account of both the practice and its distortion loses its basis.',
+          'Towns whose fond past excludes newcomers illustrate the danger the fourth paragraph describes, when a private ceremony “starts to masquerade as public history.” It supports the author.',
+        ],
         skill: 'strengthen-weaken',
       },
       {
@@ -345,6 +477,12 @@ export const FL2_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The danger arises when a “we” formed around one table is enlarged and one group’s polished past is offered as the common past of people who were never there; presenting one town’s memories as the region’s history does exactly this. The family-argument and retirement-party options are nostalgia within the group that formed it, which the author treats as legitimate. The historian option concerns correcting memory for accuracy, which the author calls futile as a remedy but does not identify as the danger.',
+        optionExplanations: [
+          'A family arguing over a date is nostalgia within the group that formed it, with details “settled by consensus.” The author treats this as legitimate; a family demanding an audited account would “soon stop having” holidays.',
+          'Coworkers fondly exaggerating a colleague’s triumphs is a toast among the people who were there. Smoothing within the group is not the danger; the author says every group “distorts together.”',
+          'A historian correcting a veteran’s memory is policing nostalgia for accuracy, which the author calls “futile and cruel” as a remedy. It is not the danger the fourth paragraph identifies.',
+          'Correct. The danger arises when a “we” formed around one table is enlarged and one town’s polished past is “offered as the common past of people who were never at the table.” A campaign presenting one town’s memories as the region’s past does exactly this.',
+        ],
         skill: 'application',
       },
       {
@@ -358,6 +496,12 @@ export const FL2_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Once a nostalgic story becomes the basis of policy, the author says we must ask whose memory it is and who was left out of the room — here, residents whose pasts the festival’s picture does not include. The verify option is the accuracy-policing the author calls futile and cruel. The reject option is too strong; the author says we are entitled to ask a question, not that such stories can never inform policy. The proceed option ignores the danger of offering one group’s past as everyone’s.',
+        optionExplanations: [
+          'Verifying every reminiscence is the accuracy-policing the author rejects as “futile and cruel.” The remedy is not to audit memory but to ask whose memory it is.',
+          'Correct. When someone proposes to build policy on a nostalgic story, the author says we may ask “whose memory is this, and who was left out of the room.” Residents who never knew the old street are those left out.',
+          'The author never says fond memory can never inform policy, only that it must face a question a hymn need not answer. Rejecting the plan outright is stronger than the passage supports.',
+          'Proceeding uncritically ignores the fourth paragraph’s danger: one group’s polished past offered as everyone’s. Binding the longtime residents does not license excluding everyone else.',
+        ],
         skill: 'new-information',
       },
     ],
@@ -381,6 +525,12 @@ export const FL2_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The author “cannot share this severity” and traces it to “a misapprehension of what a rite is,” then answers the moralist point by point — disagreement that is firm but reasoned rather than scornful. The broad-agreement option reverses the author’s position on the doubter in the pew. The contempt option ignores that the author gives the moralist a sustained reply. The uncertainty option misreads the fourth paragraph, where the author confidently draws his own line at the pulpit.',
+        optionExplanations: [
+          'The author does not broadly agree; he says “I cannot share this severity” and argues the moralist misunderstands what a rite is. Sympathy for the doubter accompanies disagreement, not agreement.',
+          'The author gives the moralist a sustained, point-by-point reply across several paragraphs. That is engagement, not contemptuous dismissal.',
+          'Correct. The author “cannot share this severity,” traces it to “a misapprehension of what a rite is,” and answers it with reasoned argument while conceding a line at the pulpit. The disagreement is firm but measured.',
+          'The fourth paragraph shows no uncertainty: the author confidently draws his own line “between the pew and the pulpit.” He is not puzzled about the moralist’s scope.',
+        ],
         skill: 'tone',
       },
       {
@@ -394,6 +544,12 @@ export const FL2_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The author compares the worshipper to one reading aloud “a letter written by his fathers,” so that joining in declares “These are my people” rather than “This I have proved.” The endorsing option describes the proposition-by-proposition view the author attributes to the moralist. The deceiving option is the moralist’s charge, which the author rejects. The casting-a-vote option is the “debating society” picture the author calls a misapprehension.',
+        optionExplanations: [
+          'Endorsing each proposition is the “debating society” picture the author attributes to the moralist, in which “his every response [is] a proposition to which he subscribes his name.” The author rejects it.',
+          'Deception is the moralist’s charge, that the doubter “utters with his lips what his mind denies.” The author argues the words are not the worshipper’s private assertions to his neighbour at all.',
+          'Treating presence as “a vote” is the moralist’s misapprehension that the second paragraph explicitly criticizes. A rite is not a debating society.',
+          'Correct. The worshipper speaks the liturgy “as one reads aloud a letter written by his fathers,” owning it “as his inheritance.” Joining in declares “These are my people, and this is our speech,” not “This I have proved.”',
+        ],
         skill: 'detail',
       },
       {
@@ -407,6 +563,12 @@ export const FL2_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The contrast sets up the claim that doubt is “a condition of the soul” which “may alter,” so that departing does not resolve it and staying may let it be answered or ripen — undercutting the moralist’s claim that honesty requires withdrawal. The importance option imports a ranking the passage never makes. The firmly-held option reverses the contrast, which denies that doubt is a settled opinion. The concede option contradicts the author’s rejection of the “debating society” view.',
+        optionExplanations: [
+          'Correct. Unlike a settled opinion on the tariff, doubt is “a condition of the soul, and a condition may alter.” Because it may change, leaving does not resolve it, and staying may let it be answered or ripen; withdrawal is not the only honest response.',
+          'The passage never ranks religious questions above political ones in importance. The contrast concerns the nature of doubt (changeable condition versus fixed opinion), not the weight of the subjects.',
+          'This reverses the contrast. The author says doubt is “not a settled opinion, like a man’s view of the tariff,” precisely to deny that it is firmly held.',
+          'The author has already rejected the view that attendance is a public declaration of propositions. The tariff contrast builds a second argument against the moralist, not a concession to him.',
+        ],
         skill: 'function',
       },
       {
@@ -420,6 +582,12 @@ export const FL2_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Addressing the congregation about one’s own faith is standing before it “as a witness,” on the pulpit side of the author’s line, where one who has seen nothing “ought to say so, or keep silence.” The accept-freely option wrongly extends the inherited-words defense, which covers only the common liturgy spoken as one voice among many. The leave option contradicts the author’s advice that the doubter keep his place. The long-attendance option makes years of attendance a license the passage never grants.',
+        optionExplanations: [
+          'The inherited-words defense covers the common liturgy spoken “as one voice among many.” Speaking about how faith sustained him personally is standing before the congregation as a witness, which the author treats differently.',
+          'Correct. The author draws a line “between the pew and the pulpit.” One who stands before the congregation speaks “as a witness; and a witness who has seen nothing ought to say so, or keep silence.” He should decline or be candid.',
+          'The author’s whole advice is that the doubter “keep his place, and keep it without shame.” The invitation calls for declining or candor, not for leaving the church.',
+          'Nothing in the passage makes long attendance a license to speak as a witness. The line at the pulpit depends on the role undertaken, not on years in the pew.',
+        ],
         skill: 'inference',
       },
       {
@@ -433,6 +601,12 @@ export const FL2_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Singing an anthem is joining in inherited common words as a declaration of belonging, not signing each claim as a personal proposition — the author’s account of the doubter in the pew. The shareholder and juror options describe votes, in which one’s act is an individual assertion; this is the “debating society” model the author says does not fit a rite. The candidate option resembles the pulpit case, where one speaks as a witness to others and the author would require candor.',
+        optionExplanations: [
+          'A vote is an individual assertion of one’s own judgment, the “debating society” model the author says does not fit a rite. The shareholder’s act is his own proposition, unlike inherited common words.',
+          'A candidate campaigning on a platform he no longer believes resembles the pulpit case: he speaks to others as a witness seeking their assurance, where the author would require candor or silence.',
+          'A juror’s vote is a personal verdict for which he alone answers. This is the vote-and-proposition picture the author rejects, not the joining of a congregation’s inherited speech.',
+          'Correct. Singing an anthem is joining in inherited common words as a declaration of belonging, not vouching for each claim as one’s own. This matches the author’s account of the doubter saying the congregation’s words.',
+        ],
         skill: 'application',
       },
       {
@@ -446,6 +620,12 @@ export const FL2_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The author’s case for staying rests partly on the observation that doubt carried to church for years becomes “humbler and wiser” than doubt carried away in a morning; evidence that leavers fare better on exactly this measure undercuts it. The many-doubters option is consistent with the author’s picture of the doubter as a familiar parish figure. The old-liturgies option supports the inheritance argument. The clergy option bears on the pulpit, not on whether a layman should remain in the pew.',
+        optionExplanations: [
+          'Correct. The author’s case for staying rests partly on his observation that doubt “carried to church for twenty years is a humbler and a wiser thing” than doubt carried away in a morning. Evidence that leavers fare better on that very measure undercuts it.',
+          'That most congregations contain private doubters is consistent with the author’s opening description of the doubter as “a figure familiar to every parish.” It does not weaken the case for staying.',
+          'That liturgies are centuries old supports the author’s image of words that “are older than he is, and will outlast him,” read aloud as an inheritance. It strengthens the argument.',
+          'Clergy who continue preaching after losing faith concern the pulpit side of the author’s line, where he himself demands candor or silence. It does not bear on whether a layman should remain in the pew.',
+        ],
         skill: 'strengthen-weaken',
       },
     ],

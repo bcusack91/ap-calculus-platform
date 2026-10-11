@@ -5,6 +5,8 @@ import { getActiveStudyContext } from '@/lib/study-context'
 import { getDailyQueueState } from '@/lib/flashcard-daily-queue'
 import { servedFlashcardWhere, servedProgressWhere } from '@/lib/flashcard-yield'
 import { yieldPrefsFor } from '@/lib/flashcard-yield-prefs'
+import { interleaveCards } from '@/lib/user-flashcard-ids'
+import { earlierDue, loadOwnQueue, ownCardAsSessionCard } from '@/lib/user-flashcards'
 
 /**
  * GET /api/flashcards/session?topicSlug=xxx&limit=20
@@ -90,8 +92,7 @@ export async function GET(req: NextRequest) {
         : []
       const rows = [...reviewRows, ...newRows]
 
-      return NextResponse.json({
-        cards: rows.map((r) => ({
+      const siteCards = rows.map((r) => ({
           id: r.flashcard.id,
           front: r.flashcard.front,
           back: r.flashcard.back,
@@ -102,18 +103,34 @@ export async function GET(req: NextRequest) {
           progress: r.reviewCount === 0
             ? null
             : { flashcardId: r.flashcardId, nextReview: r.nextReview, repetitions: r.repetitions, easeFactor: r.easeFactor, interval: r.interval, isMinuteInterval: r.isMinuteInterval },
-        })),
+      }))
+
+      // Student-made cards: `own=1` interleaves due own cards (they keep their
+      // own SRS columns and never count against the daily limits), `own=0`
+      // reports counts only, absent = legacy response.
+      const ownParam = req.nextUrl.searchParams.get('own')
+      const includeOwn = ownParam === '1'
+      const own = ownParam === null
+        ? null
+        : await loadOwnQueue(userId, { now, endOfStudentDay, take: includeOwn ? Math.min(10, limit) : 0 })
+      const cards = includeOwn && own
+        ? interleaveCards<unknown>(siteCards, own.cards.map(ownCardAsSessionCard))
+        : siteCards
+
+      return NextResponse.json({
+        cards,
         stats: {
           // Today's remaining workload under the daily limits.
           dueCount: dailyState.dueToday,
           newCount: dailyState.newToday,
           totalInDeck: dailyState.dueToday,
-          sessionSize: rows.length,
+          sessionSize: cards.length,
           reviewsBeyondLimit: dailyState.reviewsBeyondLimit,
           newBeyondLimit: dailyState.newBeyondLimit,
           limits: dailyState.limits,
-          dueLaterToday,
-          nextDueAt: nextUpcoming?.nextReview ?? null,
+          dueLaterToday: dueLaterToday + (includeOwn && own ? own.dueLaterToday : 0),
+          nextDueAt: includeOwn && own ? earlierDue(nextUpcoming?.nextReview, own.nextDueAt) : nextUpcoming?.nextReview ?? null,
+          ...(own ? { ownTotal: own.total, ownDue: own.due, ownIncluded: includeOwn } : {}),
         },
       })
     }

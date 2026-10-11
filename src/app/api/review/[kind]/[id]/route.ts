@@ -8,7 +8,7 @@ export const dynamic = 'force-dynamic'
  * GET /api/review/<kind>/<id> — one of the student's own attempts rebuilt for
  * review: every question with the option they picked, the answer, the
  * explanation, time and flags. kind = exit | diagnostic | unit-test |
- * sat-practice | mcat-fl | mcat-practice.
+ * sat-practice | mcat-fl | mcat-practice | qbank.
  */
 export async function GET(_req: Request, { params }: { params: Promise<{ kind: string; id: string }> }) {
   const session = await auth()

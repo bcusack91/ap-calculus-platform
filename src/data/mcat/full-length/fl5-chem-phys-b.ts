@@ -29,6 +29,12 @@ export const FL5_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Clearance is the blood flow multiplied by the fraction of solute removed: $K = Q_B (C_{in} - C_{out})/C_{in} = (300\\ \\text{mL/min})(100 - 40)/100 = (300)(0.60) = 180$ mL/min. The value 120 mL/min multiplies the flow by the fraction remaining (40/100) instead of the fraction removed. The value 150 mL/min assumes half of the creatinine was removed. The value 60 mL/min is the concentration drop in mg/L mistaken for a clearance.',
+        optionExplanations: [
+          'This is the concentration drop, 100 − 40 = 60 mg/L, mistaken for a clearance; clearance is a volume flow rate and requires multiplying the blood flow by the fraction of solute removed.',
+          'This multiplies the 300 mL/min flow by the fraction of creatinine remaining (40/100 = 0.40) rather than the fraction removed; clearance counts the solute that leaves the blood, not the solute that stays.',
+          'This assumes half of the creatinine was removed, but Table 1 shows the concentration falling from 100 to 40 mg/L, a removal of 60%, not 50%; half removal would give an outlet of 50 mg/L.',
+          'Clearance is blood flow times the fraction of solute removed: $K = (300\\ \\text{mL/min})(100 - 40)/100 = (300)(0.60) = 180$ mL/min; this value follows directly from the creatinine row of Table 1.',
+        ],
         skill: '5A dialysis clearance from a data table (Skill 4)',
       },
       {
@@ -42,6 +48,12 @@ export const FL5_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Even a perfect membrane can only remove the urea that the blood delivers; when $C_{out}$ falls to zero, $K = Q_B$ = 300 mL/min. Trial 1 was already at 210 mL/min, so doubling the area could add at most 90 mL/min, and the observed rise to 250 mL/min reflects this flow limit. Urea is a very small molecule that diffuses quickly, so slow diffusion does not explain the result. Dialysate enters with no urea and flows at 500 mL/min, so it is neither a source of urea nor close to saturation with it.',
+        optionExplanations: [
+          'Even a perfect membrane can remove only the urea the blood delivers, so clearance cannot exceed $Q_B$ = 300 mL/min. Trial 1 was already at 210 mL/min, leaving at most 90 mL/min of headroom, and the rise to 250 mL/min reflects this flow limit.',
+          'Urea is one of the smallest solutes in the table (60 g/mol) and diffuses rapidly; its 70% removal in a single pass shows that diffusion is far from the bottleneck, so unreached membrane area does not explain the plateau.',
+          'Dialysate enters with no urea and flows away at 500 mL/min, so it is never a source of urea for the test solution; a larger membrane cannot cause back-diffusion of a solute the dialysate does not bring in.',
+          'With 500 mL/min of fresh dialysate carrying urea away, the dialysate side stays far below the blood concentration; saturation is impossible, and the gradient persists along the fiber, as the countercurrent comparison in Table 2 confirms.',
+        ],
         skill: '5A diffusion-limited versus flow-limited clearance (Skill 2)',
       },
       {
@@ -55,6 +67,12 @@ export const FL5_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'In countercurrent exchange the blood at the exit meets fresh dialysate and the blood at the entrance meets dialysate that has already picked up urea, so at every point along the fiber the test solution is still more concentrated than the adjacent dialysate and diffusion continues. In concurrent flow the two streams approach the same concentration partway along the fiber and net transfer stops. Contact time is set by the flow rates and fiber length, which were unchanged. The diffusion coefficient of urea does not depend on the direction of bulk flow, and the ultrafiltration rate (hydrostatic driving force) was zero in both trials.',
+        optionExplanations: [
+          'Contact time is set by the flow rates and the fiber length, both of which were identical in Trials 1 and 2; reversing the direction of dialysate flow does not change how long the two streams are adjacent.',
+          'In countercurrent flow the exiting blood meets fresh dialysate while the entering blood meets dialysate that already carries urea, so the test solution remains more concentrated than the adjacent dialysate at every point and diffusion continues along the entire fiber; concurrent streams equalize partway and transfer stops.',
+          'The diffusion coefficient of urea is a property of the molecule and the medium and does not depend on the direction of bulk flow; countercurrent flow maintains the gradient, it does not speed up diffusion itself.',
+          'The ultrafiltration rate was set to zero in all trials, so there was no hydrostatic pressure difference driving transport in either flow arrangement; the difference between the trials is purely in the diffusive gradient.',
+        ],
         skill: '5A countercurrent exchange and concentration gradients (Skill 1)',
       },
       {
@@ -68,6 +86,12 @@ export const FL5_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The solution is isosmotic (290 mOsm/L) but not isotonic. Urea equilibrates across the membrane, so it exerts no sustained osmotic effect; only the 250 mOsm/L of ions are effective osmoles, and that is less than the 290 mOsm/L inside the cell, so water enters and the cell swells. Isosmotic solutions do not guarantee constant cell volume when a permeant solute is present. Urea cannot draw water out because it does not remain confined to one side of the membrane. $\\text{Na}^+$ and $\\text{Cl}^-$ do not freely enter red cells, which is why they count as effective osmoles.',
+        optionExplanations: [
+          'The solution is isosmotic (250 + 40 = 290 mOsm/L) but not isotonic; because urea crosses the membrane freely, osmolarity alone does not guarantee constant volume, and the cell will swell.',
+          'Urea cannot draw water out of the cell because it does not stay confined to one side of the membrane; it equilibrates across it and exerts no sustained osmotic pull, so the cell does not shrink.',
+          'Urea equilibrates across the membrane and exerts no sustained osmotic effect, so only the 250 mOsm/L of ions are effective osmoles; that is less than the 290 mOsm/L inside, so the solution is hypotonic, water enters, and the cell swells.',
+          '$\\text{Na}^+$ and $\\text{Cl}^-$ do not freely enter red cells, which is exactly why they count as effective osmoles; the swelling is caused by water entering down the tonicity gradient, not by salt entering the cell.',
+        ],
         skill: '5A osmolarity versus tonicity (Skill 2)',
       },
       {
@@ -81,6 +105,12 @@ export const FL5_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'If clearance is independent of concentration, as the passage claims, then varying the inlet concentration of each solute should leave its clearance unchanged; that is the direct test. Using pure water changes the dialysate composition (and would create osmotic water movement) rather than testing concentration dependence. Changing the blood flow rate alters the clearance itself and compares two solutes rather than two concentrations. Adding urea and creatinine to the dialysate removes the concentration gradient and would simply show that clearance falls to zero, which tests the driving force, not concentration independence.',
+        optionExplanations: [
+          'Pure water as dialysate changes the composition and would drive osmotic water movement across the membrane; it tests a different dialysate, not whether clearance depends on the inlet concentration of each solute.',
+          'Changing the blood flow rate alters clearance itself, since $K$ contains $Q_B$, and comparing urea with albumin contrasts two solutes rather than two concentrations of the same solute; concentration independence goes untested.',
+          'Adding urea and creatinine to the dialysate at inlet concentration abolishes the gradient, so clearance would simply fall to zero; this tests the diffusive driving force, not whether clearance is independent of concentration.',
+          'The passage claims clearance is a property of the dialyzer and operating conditions, not of how much solute is present; running each solute at several inlet concentrations and finding unchanged clearances is the direct test of that claim.',
+        ],
         skill: '5A experimental design: testing concentration independence (Skill 3)',
       },
     ],
@@ -105,6 +135,12 @@ export const FL5_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'A donor reduces an acceptor spontaneously only if the acceptor couple has the higher $E^{\\circ\\prime}$. NADH (couple at −0.32 V) can reduce pyruvate (−0.19 V), but succinate (couple at +0.03 V) cannot, because the pyruvate couple lies below it. Ubiquinone (+0.045 V) and cytochrome a₃ (+0.385 V) lie above both donor couples, so either NADH or succinate can reduce them. The H⁺/H₂ couple (−0.42 V) lies below both, so neither donor can reduce it.',
+        optionExplanations: [
+          'NADH (couple at −0.32 V) can reduce pyruvate (−0.19 V), because electrons flow to the couple with the higher potential, but succinate (couple at +0.03 V) cannot, because the pyruvate couple lies below it; pyruvate is the only acceptor that separates the two donors.',
+          'Ubiquinone at +0.045 V lies above both the NADH couple (−0.32 V) and the succinate couple (+0.03 V), so either donor can reduce it; it fails the requirement of being reducible by NADH but not succinate.',
+          'Cytochrome a₃ at +0.385 V sits well above both donor couples, so it is reduced by NADH and by succinate alike; the question asks for an acceptor that discriminates between the two donors.',
+          'The H⁺/H₂ couple at −0.42 V lies below both NADH (−0.32 V) and succinate (+0.03 V), so neither donor can reduce protons to hydrogen under standard conditions; this acceptor is reduced by neither, not by NADH alone.',
+        ],
         skill: '5E direction of electron transfer from reduction potentials (Skill 2)',
       },
       {
@@ -113,6 +149,12 @@ export const FL5_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'At $E^{\\circ\\prime}$ the oxidized and reduced forms are equal in concentration, and Table 2 shows the fraction oxidized reaching 0.50 at 0.235 V. The spacing of the data confirms a one-electron couple: 0.060 V above the midpoint the ratio of oxidized to reduced forms is about 10:1 (fraction oxidized 0.91), as the Nernst equation predicts for $n$ = 1. The value 0.175 V is where the protein is about 90% reduced; 0.205 V and 0.295 V are the points at which the protein is roughly one-quarter and nine-tenths oxidized, respectively.',
+        optionExplanations: [
+          'At 0.175 V only 9% of the protein is oxidized, so it is about 90% reduced; the standard potential is defined where the oxidized and reduced forms are equal, which occurs at a higher potential.',
+          'At 0.205 V the fraction oxidized is 0.24, roughly one quarter; the midpoint, where the two forms are present in equal amounts, lies one row farther along the table.',
+          'At $E^{\\circ\\prime}$ the oxidized and reduced forms are equal in concentration, and Table 2 shows the fraction oxidized reaching exactly 0.50 at 0.235 V; the tenfold ratio change over 0.060 V on either side confirms a one-electron couple.',
+          'At 0.295 V the protein is 91% oxidized, about a 10:1 ratio of oxidized to reduced; this is one Nernst decade (0.059 V for $n$ = 1) above the midpoint, not the midpoint itself.',
+        ],
         skill: '5E reading a redox titration table (Skill 4)',
       },
       {
@@ -121,6 +163,12 @@ export const FL5_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           '$\\Delta E^{\\circ\\prime} = 0.82 - 0.235 = 0.585$ V, and for two electrons $\\Delta G^{\\circ\\prime} = -(2)(96.5)(0.585) \\approx -113$ kJ/mol. At about 50 kJ per mole of ATP, 113 kJ supports two ATP (113/50 = 2.3, which rounds down because a third ATP would require 150 kJ). One ATP underestimates the energy available; three or four ATP would require more free energy than this step releases. (In cells Complex IV actually supports roughly one ATP, because some of the energy is lost as heat and the proton stoichiometry is not perfectly efficient.)',
+        optionExplanations: [
+          'One ATP underestimates the free energy available: $\\Delta G^{\\circ\\prime} = -(2)(96.5)(0.585) \\approx -113$ kJ/mol, more than twice the 50 kJ needed per ATP, so the step can support two.',
+          '$\\Delta E^{\\circ\\prime} = 0.82 - 0.235 = 0.585$ V, and for two electrons $\\Delta G^{\\circ\\prime} = -(2)(96.5)(0.585) \\approx -113$ kJ/mol; at about 50 kJ per ATP this supports two ATP (113/50 = 2.3), since a third would need 150 kJ.',
+          'Three ATP would require about 150 kJ, but the transfer releases only about 113 kJ per two electrons; the 2.3 ratio must be rounded down, because the energy for a partial ATP cannot be banked.',
+          'Four ATP would require about 200 kJ, nearly double the 113 kJ released; this overestimate might arise from using the full oxygen potential (0.82 V) alone or forgetting to subtract the cytochrome c potential.',
+        ],
         skill: '5E ΔG°′ = −nFΔE°′ and ATP yield (Skill 2)',
       },
       {
@@ -134,6 +182,12 @@ export const FL5_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The Nernst equation relates the potential to the ratio [oxidized]/[reduced]; multiplying both concentrations by ten leaves the ratio, and therefore the midpoint potential, unchanged. The logarithmic term involves the ratio, not the absolute concentration, so no 0.059 V shift occurs in either direction. The 0.030 V spacing would apply to the tenfold ratio change of a two-electron couple, but cytochrome c exchanges one electron and in any case concentration does not shift the midpoint.',
+        optionExplanations: [
+          'The logarithmic term in the Nernst equation contains the ratio [oxidized]/[reduced], not the absolute concentration; multiplying both by ten leaves the log term unchanged, so no upward shift of 0.059 V occurs.',
+          'Raising the total protein concentration raises both the reduced and the oxidized amounts proportionally at every potential; the ratio, and therefore the midpoint, is unchanged, and there is no reason for a downward shift.',
+          'A 0.030 V decade spacing applies to a two-electron couple, but cytochrome c carries one electron, as the 0.060 V spacing in Table 2 shows; in any case concentration does not shift the midpoint at all.',
+          'The Nernst equation relates potential to the ratio of oxidized to reduced forms; multiplying both concentrations by ten leaves that ratio, and hence the potential at which the two are equal, unchanged, so the midpoint stays at 0.235 V.',
+        ],
         skill: '5E predicting the outcome of a modified experiment (Skill 3)',
       },
     ],
@@ -171,6 +225,12 @@ export const FL5_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The field is $E = V/d = 200\\ \\text{V}/0.20\\ \\text{m} = 1000$ V/m. A 1,000-bp fragment carries about $2Ne = 2000(1.6 \\times 10^{-19}) = 3.2 \\times 10^{-16}$ C, so $F = qE = (3.2 \\times 10^{-16})(1000) = 3.2 \\times 10^{-13}$ N, directed toward the positive electrode because the charge is negative. The $1.6 \\times 10^{-13}$ N value counts one charge per base pair instead of two. The $3.2 \\times 10^{-15}$ N value treats 10 V/cm as 10 V/m, and the $3.2 \\times 10^{-11}$ N value treats the 20 cm electrode spacing as 0.20 cm.',
+        optionExplanations: [
+          'This treats the field as 10 V/m rather than 10 V/cm: with $q = 3.2 \\times 10^{-16}$ C and $E$ = 10 V/m the force is $3.2 \\times 10^{-15}$ N, a hundredfold too small because 10 V/cm equals 1000 V/m.',
+          'This counts one negative charge per base pair instead of two: a 1,000-bp duplex has 2,000 phosphates, so its charge is $3.2 \\times 10^{-16}$ C, not $1.6 \\times 10^{-16}$ C, and the force is twice this value.',
+          'The field is $E = V/d = 200\\ \\text{V}/0.20\\ \\text{m} = 1000$ V/m, and a 1,000-bp fragment carries about $2Ne = 2000(1.6 \\times 10^{-19}) = 3.2 \\times 10^{-16}$ C, so $F = qE = 3.2 \\times 10^{-13}$ N toward the positive electrode.',
+          'This treats the 20 cm electrode spacing as 0.20 cm, giving a field of $10^5$ V/m; the actual spacing of 0.20 m gives 1000 V/m and a force a hundred times smaller.',
+        ],
         skill: '4C force on a charge in a uniform field (Skill 2)',
       },
       {
@@ -179,6 +239,12 @@ export const FL5_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Mobility is the slope of the drift-speed line. In free solution the speed reaches 40 μm/s at 10 V/cm; converting, $40\\ \\mu\\text{m/s} = 4.0 \\times 10^{-3}$ cm/s, so $\\mu = v/E = (4.0 \\times 10^{-3}\\ \\text{cm/s})/(10\\ \\text{V/cm}) = 4 \\times 10^{-4}$ cm²·V⁻¹·s⁻¹. The $1 \\times 10^{-4}$ value is the slope of the 1,000-bp line in the gel, not in free solution. The $4 \\times 10^{-3}$ value forgets to divide by the field strength, and $1 \\times 10^{-3}$ mixes the gel speed with the wrong field.',
+        optionExplanations: [
+          'This is the slope of the 1,000-bp line in the gel (10 μm/s at 10 V/cm, or $1.0 \\times 10^{-3}$ cm/s divided by 10 V/cm), not the free-solution mobility the question asks for.',
+          'Mobility is the slope of the free-solution line: 40 μm/s at 10 V/cm. Converting, $40\\ \\mu\\text{m/s} = 4.0 \\times 10^{-3}$ cm/s, so $\\mu = (4.0 \\times 10^{-3}\\ \\text{cm/s})/(10\\ \\text{V/cm}) = 4 \\times 10^{-4}$ cm²·V⁻¹·s⁻¹.',
+          'This is the gel drift speed expressed in cm/s ($10\\ \\mu\\text{m/s} = 1.0 \\times 10^{-3}$ cm/s) left undivided by the field strength; a mobility must be speed per unit field, and the free-solution speed is four times higher.',
+          'This is the free-solution speed converted to cm/s ($4.0 \\times 10^{-3}$ cm/s) but not divided by the 10 V/cm field; mobility has units of cm²·V⁻¹·s⁻¹ and must include the division by field strength.',
+        ],
         skill: '4C mobility as the slope of a drift-speed plot (Skill 4)',
       },
       {
@@ -192,6 +258,12 @@ export const FL5_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'By Newton’s second law a particle accelerates only while there is a net force. The electric force $qE$ is constant in a uniform field, while the drag force $fv$ increases with speed; when $fv = qE$ the net force is zero and the particle moves at a constant terminal speed $v = qE/f$. The field between parallel electrodes is uniform, so the electric force does not weaken with position. A steady current in the buffer requires a nonzero field, so the field does not vanish. Counterions screen but do not eliminate the fragment’s charge, and this screening is established before the field is applied rather than developing over time.',
+        optionExplanations: [
+          'The field between parallel electrodes is uniform, so the force $qE$ is the same everywhere between them; the electric force does not weaken as the fragment moves, which is why the drag force is needed to reach a steady speed.',
+          'A steady current flowing through the buffer requires a nonzero field to drive it; the field does not vanish, and the passage notes current rising in proportion to voltage, consistent with a sustained field.',
+          'Counterions screen the fragment’s charge but do not neutralize it, and this screening is established in the buffer before the field is switched on; it does not develop gradually to stop the acceleration.',
+          'By Newton’s second law a particle accelerates only while there is a net force; the electric force $qE$ is constant while the drag $fv$ grows with speed, so once $fv = qE$ the net force is zero and the fragment moves at terminal speed $v = qE/f$.',
+        ],
         skill: '4A balanced forces and terminal velocity (Skill 1)',
       },
       {
@@ -200,6 +272,12 @@ export const FL5_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'From Figure 1, the 1,000-bp fragment moves at 10 μm/s in the gel at 10 V/cm. In 30 min = 1800 s it travels $(10\\ \\mu\\text{m/s})(1800\\ \\text{s}) = 18{,}000\\ \\mu\\text{m} = 1.8$ cm. The 7.2 cm value uses the free-solution speed of 40 μm/s rather than the gel speed. The 0.6 cm value uses 10 minutes instead of 30, and the 1.2 cm value corresponds to 20 minutes.',
+        optionExplanations: [
+          'This corresponds to only 10 minutes of migration (10 μm/s × 600 s = 6000 μm); the question specifies 30 minutes, which triples the distance to 1.8 cm.',
+          'This corresponds to 20 minutes (10 μm/s × 1200 s = 12,000 μm); over the full 30 minutes the fragment travels 18,000 μm, or 1.8 cm.',
+          'From Figure 1 the 1,000-bp fragment moves at 10 μm/s in the gel at 10 V/cm; in 30 min = 1800 s it travels $(10\\ \\mu\\text{m/s})(1800\\ \\text{s}) = 18{,}000\\ \\mu\\text{m} = 1.8$ cm.',
+          'This uses the free-solution speed of 40 μm/s (40 × 1800 = 72,000 μm) rather than the gel speed; the question specifies the 1% agarose gel, where the fragment moves at only 10 μm/s.',
+        ],
         skill: '4C migration distance from speed and time (Skill 2)',
       },
       {
@@ -213,6 +291,12 @@ export const FL5_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The two fragments have the same charge per unit length, so if the gel acted only on charge both would be slowed equally; the fact that the longer fragment is slowed more shows that the delay depends on size, which is the signature of sieving by the pore network. A lower speed in the gel than in solution is consistent with either explanation, since extra friction or reduced effective charge would both lower the speed. Linear speed-versus-field behavior, in solution or in the gel, shows only that mobility is constant at each condition and says nothing about what sets its value.',
+        optionExplanations: [
+          'The two fragments have the same charge per unit length, so if the gel acted only on charge both would be slowed equally; the longer fragment being slowed more shows the delay depends on size, the signature of sieving by the pore network.',
+          'A linear rise of free-solution speed with field shows only that mobility is constant in buffer alone; it involves no gel at all and so cannot distinguish how the gel acts on the fragments.',
+          'A lower speed in the gel than in solution is consistent with either explanation: extra friction from sieving or a reduced effective charge would both lower the speed, so this observation does not discriminate between the mechanisms.',
+          'Straight lines through the origin show that each fragment has a constant mobility in the gel, but say nothing about what sets that mobility; a charge-altering gel would also give straight lines through the origin.',
+        ],
         skill: '4C evaluating evidence for a proposed mechanism (Skill 3)',
       },
     ],
@@ -235,6 +319,12 @@ export const FL5_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Gas leaving the chamber is saturated with vapor, so the partial pressure of sevoflurane equals its vapor pressure, 160 mmHg. By Dalton’s law the mole fraction is the partial pressure divided by the total pressure: $160/760 \\approx 0.21$. The value 0.79 is the mole fraction of the carrier gas, not the anesthetic. The value 0.32 is the corresponding fraction for isoflurane (240/760). The value 0.021 is a power-of-ten slip that happens to match the clinical dial setting, which is reached only after dilution by the bypass stream.',
+        optionExplanations: [
+          'This is a power-of-ten slip that happens to match the clinical dial setting of about 2%; that concentration is reached only after the saturated stream is diluted by the bypass flow, not at the chamber outlet.',
+          'Gas leaving the chamber is saturated, so the sevoflurane partial pressure equals its vapor pressure at 20 °C, 160 mmHg; by Dalton’s law the mole fraction is $160/760 \\approx 0.21$.',
+          'This is the saturated mole fraction for isoflurane (240/760), whose vapor pressure at 20 °C is 240 mmHg; the question asks about sevoflurane, whose vapor pressure is 160 mmHg.',
+          'This is the mole fraction of the carrier gas, $(760 - 160)/760 \\approx 0.79$, not of the anesthetic; the question asks for the fraction of sevoflurane in the saturated stream.',
+        ],
         skill: '4B vapor pressure, Dalton’s law, and mole fraction (Skill 2)',
       },
       {
@@ -243,6 +333,12 @@ export const FL5_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Partial pressure equals mole fraction times total pressure. At sea level 2.0% of 760 mmHg is about 15 mmHg; at 570 mmHg the required fraction is $15/570 \\approx 0.027$, or equivalently $2.0\\% \\times (760/570) = 2.7\\%$. A 2.0% mixture at this pressure would provide only about 11 mmHg, roughly three-quarters of the intended partial pressure, and 1.5% scales the fraction in the wrong direction. A 4.0% mixture doubles the sea-level fraction, far more than the 33% increase the pressure ratio calls for.',
+        optionExplanations: [
+          'This scales the fraction in the wrong direction: at a lower total pressure a given volume percentage delivers a lower partial pressure, so the percentage must rise, not fall, to keep the partial pressure at about 15 mmHg.',
+          'A 2.0% mixture at 570 mmHg provides only about 11 mmHg, roughly three quarters of the 15 mmHg intended; the same volume percentage does not give the same partial pressure when total pressure falls.',
+          'Partial pressure equals mole fraction times total pressure; at sea level 2.0% of 760 mmHg is about 15 mmHg, so at 570 mmHg the fraction needed is $15/570 \\approx 0.027$, or $2.0\\% \\times (760/570) = 2.7\\%$.',
+          'Doubling the fraction to 4.0% would deliver about 23 mmHg, well above the sea-level partial pressure; the pressure ratio 760/570 calls for only a 33% increase in volume percentage.',
+        ],
         skill: '4B partial pressure at reduced total pressure (Skill 2)',
       },
       {
@@ -256,6 +352,12 @@ export const FL5_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Below its critical temperature nitrous oxide exists in the cylinder as a liquid in equilibrium with its vapor, and the pressure of a vapor above its liquid is the vapor pressure, which depends only on temperature. As gas is withdrawn, more liquid evaporates to replace it, so the gauge stays near the vapor pressure until no liquid remains; only then does the pressure fall as the remaining gas is used. Non-ideal behavior changes the relation between pressure and amount somewhat but does not make the pressure constant. A valve cannot hold the internal pressure fixed while the contents are leaving. Evaporation cools the cylinder rather than warming it, and a temperature change could not keep the pressure constant for most of the cylinder’s life.',
+        optionExplanations: [
+          'Non-ideal behavior alters the relation between pressure and amount of gas somewhat, but it cannot hold the pressure constant while most of the contents leave; a steady gauge reading reflects a liquid–vapor equilibrium, not a gauge error.',
+          'A valve restricts flow out of the cylinder but cannot hold the internal pressure fixed while gas is being withdrawn; the pressure inside is set by the state of the contents, not by the valve opening.',
+          'Evaporation of the liquid cools the cylinder rather than warming it, and no plausible temperature change could offset the loss of most of the contents; temperature effects cannot explain a constant reading for most of the cylinder’s life.',
+          'Below its critical temperature of 36.5 °C nitrous oxide sits in the cylinder as liquid in equilibrium with vapor, and the vapor pressure depends only on temperature; as gas is withdrawn more liquid evaporates, holding the gauge near 50 atm until the liquid is gone.',
+        ],
         skill: '4B vapor–liquid equilibrium in a pressurized cylinder (Skill 1)',
       },
       {
@@ -264,6 +366,12 @@ export const FL5_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The ideal gas law assumes that molecules occupy no volume and exert no forces on one another. High pressure packs the molecules closely, making their own volume a significant fraction of the container and bringing them within range of intermolecular attractions, and low temperature reduces their kinetic energy so that those attractions have a larger effect on their motion. Both conditions therefore favor deviation, and the combination of 150 atm and −20 °C deviates most. At 1 atm the molecules are so far apart that behavior is nearly ideal at either temperature, and at 150 atm the higher temperature reduces, but does not eliminate, the deviation.',
+        optionExplanations: [
+          'High pressure packs the molecules so closely that their own volume and their mutual attractions become significant, and low temperature reduces their kinetic energy so those attractions matter more; both effects together make 150 atm and −20 °C the most non-ideal condition.',
+          'At 150 atm the molecules are crowded enough for deviations to appear, but the higher temperature of 60 °C gives them more kinetic energy to overcome attractions, so this condition deviates less than the same pressure at −20 °C.',
+          'At 1 atm the molecules are so far apart that their volume and attractions are negligible, and oxygen behaves nearly ideally even at −20 °C, which is still far above its boiling point; low temperature alone is not enough.',
+          'At 1 atm and 60 °C the gas is both dilute and energetic, the two conditions that make the ideal gas law most accurate; this is the condition that deviates least, not most.',
+        ],
         skill: '4B conditions for non-ideal gas behavior (Skill 1)',
       },
     ],
@@ -286,6 +394,12 @@ export const FL5_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Methoxide is a strong nucleophile, so it opens the epoxide by SN2 attack at the less hindered carbon, the CH₂ of the ring, placing the methoxy group on C-1 and leaving the alkoxide on C-2, which becomes a hydroxyl on neutralization: $\\text{CH}_3\\text{OCH}_2\\text{CH(OH)CH}_3$, 1-methoxy-2-propanol. 2-Methoxy-1-propanol is the product expected under acidic conditions, where the more substituted carbon is attacked. The diether would require a second substitution at the hydroxyl, which does not occur under these conditions, and the diol forms only if water, not methoxide, is the nucleophile.',
+        optionExplanations: [
+          '2-Methoxy-1-propanol places the methoxy group on the more substituted carbon, which is the regiochemistry expected under acidic conditions, where the protonated ring is attacked at the carbon bearing more positive charge; methoxide in methanol is basic, not acidic.',
+          'Methoxide is a strong nucleophile and opens the epoxide by SN2 attack at the less hindered CH₂ carbon, placing –OCH₃ on C-1 and leaving an alkoxide on C-2 that becomes a hydroxyl on neutralization: $\\text{CH}_3\\text{OCH}_2\\text{CH(OH)CH}_3$, 1-methoxy-2-propanol.',
+          'The diether would require a second substitution converting the C-2 hydroxyl into a methoxy group, which does not occur under these conditions; hydroxide-type leaving groups are too poor for methanol to displace them.',
+          'The diol forms only when water is the nucleophile that opens the ring, as in acid-catalyzed hydrolysis; with sodium methoxide in methanol the nucleophile is methoxide, so one of the new groups is a methoxy group.',
+        ],
         skill: '5D regiochemistry of epoxide opening under basic conditions (Skill 1)',
       },
       {
@@ -299,6 +413,12 @@ export const FL5_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'A peroxyacid converts the alkene to cyclohexene oxide, and acid-catalyzed hydrolysis opens the ring with water attacking from the side opposite the oxygen, so the two hydroxyl groups end up trans (anti addition overall). Cold, dilute permanganate and osmium tetroxide both deliver two hydroxyls to the same face of the double bond and give the cis diol. Aqueous acid alone adds water across the double bond once, giving cyclohexanol rather than a diol.',
+        optionExplanations: [
+          'Cold, dilute permanganate delivers two hydroxyl groups to the same face of the double bond through a cyclic intermediate, giving syn addition and the cis diol, not the trans diol asked for.',
+          'Osmium tetroxide, like permanganate, forms a cyclic osmate ester on one face of the alkene, and hydrolysis with bisulfite releases a cis-1,2-diol; this is syn, not anti, dihydroxylation.',
+          'Aqueous acid alone adds a single molecule of water across the double bond, giving cyclohexanol, a mono-alcohol; no second hydroxyl group is introduced, so no diol forms.',
+          'A peroxyacid converts cyclohexene to cyclohexene oxide, and acid-catalyzed hydrolysis opens the ring with water attacking from the side opposite the oxygen, placing the two hydroxyls trans; this anti addition is the route to trans-1,2-cyclohexanediol.',
+        ],
         skill: '5D syn versus anti dihydroxylation (Skill 1)',
       },
       {
@@ -312,6 +432,12 @@ export const FL5_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The Williamson synthesis joins an alkoxide to an alkyl halide by SN2 displacement, so the halide must be methyl or primary; the only workable disconnection of tert-butyl methyl ether therefore uses the tertiary alkoxide, tert-butoxide, as the nucleophile and bromomethane as the electrophile. Pairing methoxide with the tertiary bromide fails because the strongly basic alkoxide cannot attack a tertiary carbon and instead causes E2 elimination to 2-methylpropene. tert-Butoxide and methanol simply exchange a proton, because hydroxide is too poor a leaving group for methanol to be displaced. Acid-catalyzed condensation of alcohols is not the Williamson route, and with a tertiary alcohol acid mainly causes dehydration to the alkene.',
+        optionExplanations: [
+          'Methoxide is a strong base as well as a nucleophile, and 2-bromo-2-methylpropane is tertiary; SN2 at a tertiary carbon is blocked, so E2 elimination to 2-methylpropene occurs instead of ether formation.',
+          'tert-Butoxide and methanol simply exchange a proton to give tert-butanol and methoxide; hydroxide is far too poor a leaving group for methanol to be displaced, so no C–O bond to the methyl group forms.',
+          'The Williamson synthesis requires an alkoxide and a methyl or primary halide for SN2 displacement; tert-butyl methyl ether can be assembled only by using tert-butoxide as the nucleophile and bromomethane as the electrophile.',
+          'Acid-catalyzed condensation of two alcohols is not the Williamson route, which uses an alkoxide and an alkyl halide; moreover, a tertiary alcohol in strong acid mainly dehydrates to the alkene rather than forming an ether.',
+        ],
         skill: '5D choosing substrates for the Williamson ether synthesis (Skill 1)',
       },
       {
@@ -325,6 +451,12 @@ export const FL5_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Epoxide formation from a halohydrin is an intramolecular SN2 reaction: the alkoxide must attack the carbon bearing the halide from the back side, which requires the oxygen and the chlorine to be anti to each other. In the trans isomer a ring flip places both groups axial and anti, allowing backside attack; in the cis isomer the two groups can never be anti, so ring closure is geometrically impossible. Hydroxide removes the hydroxyl proton of either isomer, and an intramolecular hydrogen bond, if present, would not prevent deprotonation. Greater thermodynamic stability of a starting material does not lower an activation energy. Direct displacement of a secondary chloride by hydroxide is slow and would be no more favorable in the cis isomer.',
+        optionExplanations: [
+          'Halohydrin cyclization is an intramolecular SN2 reaction: the alkoxide must attack the carbon bearing chlorine from the back side, so oxygen and chlorine must be anti. In the trans isomer a ring flip makes both groups axial and anti; in the cis isomer they can never be anti.',
+          'Hydroxide removes the hydroxyl proton of either diastereomer, and an intramolecular hydrogen bond, if it formed, would not prevent deprotonation; the difference between the isomers arises after the alkoxide forms, in the geometry of attack.',
+          'Greater thermodynamic stability of a starting material does not lower an activation energy; if anything, a more stable reactant lies further below the transition state. The difference is geometric, not a matter of ground-state stability.',
+          'Direct displacement of a secondary chloride by hydroxide is slow and would be no more favorable in the cis isomer than in the trans; the cis isomer simply fails to react under these conditions rather than giving a diol instead.',
+        ],
         skill: '5D stereochemical requirement of intramolecular SN2 (Skill 2)',
       },
     ],
@@ -346,6 +478,12 @@ export const FL5_CHEM_PHYS_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'The dielectric becomes polarized in the field of the plates, and its induced charges set up an opposing field that reduces the net field between the plates by the factor κ. With the battery disconnected the plate charge is trapped, so a smaller field means a smaller potential difference ($V = Ed$), and because $C = Q/V$ the capacitance rises by the factor κ. The stored energy $U = Q^2/2C$ falls by the same factor; the work the slab does as it is pulled into the gap accounts for the difference. Charge could change only if the battery were still connected.',
+    optionExplanations: [
+      'With the battery disconnected the plates are isolated and their charge is trapped; no path exists for charge to flow onto or off the plates, so the charge stays exactly the same when the slab is inserted.',
+      'The dielectric polarizes and its induced charges set up an opposing field, reducing the net field, and hence the potential difference, by the factor κ; with the trapped charge $Q$ fixed, $C = Q/V$ rises by that same factor.',
+      'The reduced net field between the plates means a smaller potential difference, $V = Ed$; the potential difference falls by the factor κ rather than rising, which is the opposite of what happens with the battery still connected to hold V fixed.',
+      'With fixed charge, the stored energy $U = Q^2/2C$ falls by the factor κ as the capacitance rises; the slab is pulled into the gap, and the work it does accounts for the lost field energy.',
+    ],
     skill: '4C capacitor with a dielectric, battery disconnected (Skill 1)',
   },
   {
@@ -357,6 +495,12 @@ export const FL5_CHEM_PHYS_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'At constant speed the push balances kinetic friction, $f = \\mu_k N = (0.40)(20\\ \\text{kg})(10\\ \\text{m/s}^2) = 80$ N. The work done against friction, $W = fd = (80\\ \\text{N})(5.0\\ \\text{m}) = 400$ J, is dissipated entirely as thermal energy because the kinetic energy of the crate does not change. The value 80 J is the friction force mistaken for an energy; 100 J is the product of mass and distance; 1000 J is $mgd$, the work that would be needed to lift the crate 5.0 m rather than slide it.',
+    optionExplanations: [
+      'This is the friction force, 80 N, mistaken for an energy; thermal energy generated equals the friction force multiplied by the 5.0 m distance over which it acts.',
+      'This is the product of mass and distance (20 kg × 5.0 m) and has no physical meaning here; the thermal energy is the work done against friction, which requires the friction force, not the mass.',
+      'At constant speed the push balances friction, $f = \\mu_k N = (0.40)(20)(10) = 80$ N, and the work done against friction over 5.0 m, $W = (80)(5.0) = 400$ J, is all dissipated as heat because the crate’s kinetic energy does not change.',
+      'This is $mgd$ = (20)(10)(5.0) = 1000 J, the work needed to lift the crate 5.0 m vertically; the crate slides horizontally, so gravity does no work and only friction dissipates energy.',
+    ],
     skill: '4A work against friction converted to heat (Skill 2)',
   },
   {
@@ -373,6 +517,12 @@ export const FL5_CHEM_PHYS_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'In the Bohr model the electron’s energy is quantized, $E_n = -13.6\\ \\text{eV}/n^2$, and a photon is emitted only when the electron drops from one allowed level to a lower one, carrying away exactly the energy difference; a limited set of differences gives a limited set of wavelengths. An orbiting electron that radiated continuously would produce a continuous spectrum and would spiral into the nucleus, which is precisely what the Bohr model rejects. Atomic collision speeds follow a continuous distribution and do not set the line positions. The nucleus does not take part in the electronic transitions that produce visible light.',
+    optionExplanations: [
+      'An electron that radiated continuously as it orbited would emit a continuous spectrum and spiral into the nucleus; this classical picture is exactly what the Bohr model rejects, and nothing selects a few frequencies to escape.',
+      'Collision speeds in a discharge tube follow a continuous Maxwell distribution and do not set the line positions; the sharpness of the lines comes from the atom’s internal energy levels, not from a few special speeds.',
+      'The nucleus does not take part in the electronic transitions that produce visible light; the lines arise from the electron moving between energy levels, and the proton’s role is only to provide the attractive potential.',
+      'In the Bohr model the electron’s energy is quantized, $E_n = -13.6\\ \\text{eV}/n^2$, and a photon is emitted only when the electron drops between allowed levels, carrying exactly their energy difference; a limited set of differences gives a limited set of lines.',
+    ],
     skill: '4E Bohr model and discrete emission lines (Skill 1)',
   },
   {
@@ -389,6 +539,12 @@ export const FL5_CHEM_PHYS_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'The reaction quotient is $Q = [\\text{NH}_3]^2/([\\text{N}_2][\\text{H}_2]^3) = (4.0)^2/[(2.0)(1.0)^3] = 16/2 = 8.0$. Because $Q > K$, the ratio of products to reactants is too high, and the reaction proceeds in reverse, consuming NH₃ and forming N₂ and H₂ until $Q$ falls to 4.0. A value of $Q$ below $K$ would drive the reaction forward, but that is not the case here, and a system with $Q > K$ cannot increase its product concentration further.',
+    optionExplanations: [
+      '$Q$ is 8.0, which is greater than $K$ = 4.0, not less; and even if $Q$ were below $K$ the forward direction would be correct, but the premise here is reversed.',
+      'This correctly predicts a change in NH₃ but misjudges the quotient: $Q = 16/2 = 8.0$ exceeds $K$, and a system with $Q < K$ would in any case make more NH₃, not less, so both halves conflict with the calculation.',
+      'The quotient is correctly found to exceed $K$, but a system with $Q > K$ has too much product relative to reactants and must shift in reverse, so the NH₃ concentration decreases rather than increases.',
+      '$Q = [\\text{NH}_3]^2/([\\text{N}_2][\\text{H}_2]^3) = (4.0)^2/[(2.0)(1.0)^3] = 16/2 = 8.0$; because $Q > K$ = 4.0, the ratio of product to reactants is too high, and the reaction runs in reverse, consuming NH₃ until $Q$ falls to 4.0.',
+    ],
     skill: '5E reaction quotient versus equilibrium constant (Skill 2)',
   },
   {
@@ -405,6 +561,12 @@ export const FL5_CHEM_PHYS_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'Priorities follow atomic number at the first point of difference: N (–NH₂) outranks the two carbons, and the carboxyl carbon (attached to O, O, O) outranks the methyl carbon (H, H, H), while H is lowest. With the lowest-priority group pointing away, a clockwise path from highest to third priority means the R configuration. The R/S designation describes the spatial arrangement only; the sign of optical rotation is an experimental property with no fixed relationship to the configuration, so neither (+) nor (−) can be deduced. The S options reverse the sense of rotation of the priority sequence.',
+    optionExplanations: [
+      'The configuration is correctly R, but the sign of optical rotation is an experimental property with no fixed relationship to the R/S label; an R compound may rotate light in either direction, so clockwise rotation cannot be deduced.',
+      'Priorities are N (–NH₂) first, then the carboxyl carbon (O, O, O) over the methyl carbon (H, H, H), with H lowest; with H pointing away, a clockwise path from first to third priority gives R. The R/S label describes geometry only, so the direction of rotation cannot be predicted.',
+      'With the lowest-priority hydrogen pointing away, a clockwise sequence from –NH₂ to –CO₂H to –CH₃ is R, not S; and in any case the sign of rotation cannot be read from the configuration label.',
+      'The sense of rotation of the priority sequence is clockwise with H in the back, which defines R, not S; the second half is right that rotation cannot be predicted, but the configuration assignment is reversed.',
+    ],
     skill: '5D assigning R/S configuration (Skill 2)',
   },
   {
@@ -421,6 +583,12 @@ export const FL5_CHEM_PHYS_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'Cofactors are nonprotein components required for enzyme activity; organic cofactors are coenzymes. A prosthetic group is a cofactor, organic or inorganic, that remains tightly or covalently bound to the enzyme and is regenerated in place during each catalytic cycle, whereas a cosubstrate such as NAD⁺ binds, is converted (to NADH), dissociates, and is restored to its original form by a different enzyme. Prosthetic groups include organic molecules such as heme, FAD in many flavoproteins, and biotin, so they are not limited to metal ions. Both types participate directly in catalysis rather than in allosteric regulation. NAD⁺ is assembled by the cell from the vitamin niacin, not absorbed intact.',
+    optionExplanations: [
+      'A prosthetic group remains tightly or covalently bound to its enzyme and is regenerated in place during each catalytic cycle, whereas a cosubstrate such as NAD⁺ binds, is converted to NADH, dissociates, and is restored by a different enzyme; permanence of binding is the defining distinction.',
+      'Prosthetic groups include organic molecules such as heme, FAD in many flavoproteins, and biotin, so they are not limited to inorganic metal ions; the distinction from NAD⁺ is how tightly they are held, not whether they are organic.',
+      'Both prosthetic groups and cosubstrates participate directly in the chemistry of catalysis, with heme carrying electrons and NAD⁺ accepting a hydride; neither class is defined by allosteric regulation.',
+      'NAD⁺ is assembled by the cell from the vitamin niacin rather than absorbed intact, and many prosthetic groups such as heme are also synthesized by the cell; dietary origin does not separate the two classes.',
+    ],
     skill: '5D cofactor, coenzyme, and prosthetic group (Skill 1)',
   },
   {
@@ -432,6 +600,12 @@ export const FL5_CHEM_PHYS_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'For a weak acid with small $K_a$, $[\\text{H}^+] \\approx \\sqrt{K_a C} = \\sqrt{(1.0 \\times 10^{-5})(0.10)} = \\sqrt{1.0 \\times 10^{-6}} = 1.0 \\times 10^{-3}$ M, so the fraction ionized is $(1.0 \\times 10^{-3})/(0.10) = 0.010$, or 1.0%. The approximation is valid because 1% ionization barely changes the acid concentration. The 3.2% value would apply to a 0.010 M solution (percent ionization rises on dilution); 10% confuses $\\sqrt{K_a C}$ with $\\sqrt{K_a/C}$; and 2.0% has no basis in the calculation.',
+    optionExplanations: [
+      'For a weak acid with small $K_a$, $[\\text{H}^+] \\approx \\sqrt{K_a C} = \\sqrt{(1.0 \\times 10^{-5})(0.10)} = 1.0 \\times 10^{-3}$ M, so the fraction ionized is $(1.0 \\times 10^{-3})/(0.10) = 0.010$, or 1.0%; the approximation holds because ionization barely changes [HA].',
+      'No step in the calculation produces 2.0%; doubling the correct 1.0% might come from counting both the H⁺ and the A⁻ formed, but percent ionization counts the fraction of acid molecules dissociated, which is 1.0%.',
+      'This would be the percent ionization of a 0.010 M solution, where $\\sqrt{(1.0 \\times 10^{-5})(0.010)} = 3.2 \\times 10^{-4}$ M gives 3.2%; percent ionization rises on dilution, but the question specifies 0.10 M.',
+      'This treats $[\\text{H}^+]$ as $\\sqrt{K_a/C} = 0.010$ M and divides by 0.10 M to get 10%; the correct expression is $\\sqrt{K_a C}$, which gives $1.0 \\times 10^{-3}$ M and 1.0%.',
+    ],
     skill: '5A percent ionization of a weak acid (Skill 2)',
   },
 ]

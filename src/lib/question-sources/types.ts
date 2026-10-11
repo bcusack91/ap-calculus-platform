@@ -36,4 +36,11 @@ export interface ReviewItem {
   gridIn?: { correctAnswer: number; acceptableAnswers?: number[]; tolerance?: number };
   /** Server's verdict where the options can't say (grid-ins). */
   correct?: boolean;
+  /** Reasoning-skill tag (MCAT CARS: 'main-idea', 'inference', … — see src/lib/cars-skills.ts). */
+  skill?: string;
+  /**
+   * One authored explanation per option, aligned to the SHOWN order (`options`).
+   * Sources remap from the bank's original order when options were shuffled.
+   */
+  optionExplanations?: string[];
 }

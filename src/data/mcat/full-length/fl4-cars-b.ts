@@ -30,6 +30,12 @@ export const FL4_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The author argues that every causal claim already contains a counterfactual, so the real choice is between careless and disciplined use, and then sets out the rules for disciplined use. Abandoning counterfactuals is the critics’ position, which the author rejects. Restoring past uncertainty is presented as “a further benefit,” a supporting point rather than the thesis. And the author faults the popular two-hundred-year books for pretending a distant question has one answer, which is the opposite of praising their rigor.',
+        optionExplanations: [
+          'Giving up counterfactuals is the critics’ position described in paragraph 1, which the author rejects by showing that “every causal claim in a history book carries a counterfactual inside it.” A historian cannot escape the question by refusing to ask it.',
+          'The author argues that causal claims already contain counterfactuals, so the real choice “is not between using counterfactuals and avoiding them, but between using them carelessly and using them with discipline,” and then lays out three rules for disciplined use.',
+          'Restoring the uncertainty participants felt is introduced as “a further benefit” that critics rarely notice. It supports the case for disciplined counterfactuals but is a secondary point, not the thesis that organizes the passage.',
+          'The author faults the popular books that trace a changed battle forward two hundred years for pretending such a question “still has one answer at that distance.” This is a criticism of their rigor, not praise for it.',
+        ],
         skill: 'main-idea',
       },
       {
@@ -43,6 +49,12 @@ export const FL4_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Each example unpacks a causal statement (“caused,” “kept the peace”) into the claim about an alternative world that it implies, which is how the author shows that critics cannot avoid counterfactuals. The rules about small premises come in the next paragraph and are not what these examples illustrate. The author does not say these causal attributions are mistaken; they are generic illustrations. Nor are the examples a concession; they are the core of the author’s rebuttal to the critics.',
+        optionExplanations: [
+          'Each example unpacks a causal statement, “caused” and “kept the peace,” into the claim about an alternative world it implies: without the drought, no rebellion then; without the treaty, no peace. This shows critics cannot avoid counterfactuals, since they lurk in every “because.”',
+          'The rules about small, single premises come in paragraph 3 and are illustrated there by the council vote. The drought and treaty examples in paragraph 2 serve a different purpose: exposing the counterfactual hidden in ordinary causal claims.',
+          'The author does not say these causal attributions are mistaken; they are generic illustrations of how historians write. The point is about the logical structure of causal claims, not about errors in the archive.',
+          'The examples are not a concession; they are the core of the author’s rebuttal to the critics. Far from admitting the record cannot settle questions, the author uses them to show the critics’ own method relies on counterfactuals.',
+        ],
         skill: 'function',
       },
       {
@@ -57,6 +69,12 @@ export const FL4_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The author says the rejected proposal is “in the record, argued for by people who expected it to work”; for that record to support reasoning about consequences, the recorded arguments and expectations must count as evidence of what the proposal would have produced. The argument does not need councils to regret narrow decisions. It does not need certainty of success; the author speaks of “estimating,” not guaranteeing. And it requires only that the rejected proposal be recorded, not that rejected proposals survive better than adopted ones.',
+        optionExplanations: [
+          'The argument does not need councils to regret narrow decisions. Whether the council later wished it had voted otherwise is irrelevant to whether its recorded debate provides evidence about what the rejected proposal would have produced.',
+          'The author speaks of “estimating what would have happened,” not guaranteeing it, and warns that possibilities multiply with distance. Certainty of success is far stronger than anything the argument requires or claims.',
+          'The argument requires only that this particular rejected proposal be in the record, “argued for by people who expected it to work.” It makes no comparative claim about how often rejected versus adopted proposals survive in archives.',
+          'The author says the rejected proposal is “in the record, argued for by people who expected it to work.” For that record to support reasoning about consequences, what contemporaries argued and expected must count as evidence of how the option would have gone.',
+        ],
         skill: 'assumption',
       },
       {
@@ -70,6 +88,12 @@ export const FL4_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The strike case alters a single decision, the alternative was actually urged at the time, and the consequences are traced only a month, so it meets all three rules. The harbor case traces consequences across three centuries, violating the rule of short distance. The uninvented weapon is an alternative no one at the time could have considered, which the author calls fiction. A founding in a different century is the kind of large premise the first rule excludes.',
+        optionExplanations: [
+          'Tracing a port city’s trade over three centuries violates the third rule, that consequences be followed only a short distance. The author says that after a few steps the historian “is no longer estimating what would have happened but choosing among possibilities.”',
+          'A weapon not yet invented anywhere is an alternative no one at the time could have considered, violating the second rule. The author calls this “writing fiction, however learned the footnotes.”',
+          'The strike inquiry alters a single decision (the mayor accepting mediation), the alternative was actually urged by her aides at the time, and consequences are traced only through that month. It satisfies all three of the author’s rules.',
+          'Founding a nation in an entirely different century is “a different century,” exactly the kind of large premise the first rule excludes in favor of “a single decision, a single accident, a single death.”',
+        ],
         skill: 'application',
       },
       {
@@ -83,6 +107,12 @@ export const FL4_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The author says the long-range books “fail not because they ask ‘what if’” but because they pretend a distant question has one answer, so the author would reject the claim that asking about unrealized events is their chief fault. The author does hold that every “because” conceals a counterfactual, so a historian who avoids “if” still makes such judgments. The author also says each step from the premise multiplies possibilities until the historian is merely choosing among them. And the final paragraph holds that the past looks inevitable only in hindsight.',
+        optionExplanations: [
+          'The author would agree: “Her counterfactuals are still there, unexamined, in every ‘because.’” A historian who avoids the word “if” has only agreed to answer the question without looking at it.',
+          'The author would agree: “Each step away from the altered premise multiplies the ways the world might have gone,” so after a few steps the historian is choosing among possibilities rather than estimating what would have happened.',
+          'The author would agree: the final paragraph says the past “looks inevitable” only in hindsight, while “People at the time did not know the ending” and “faced choices that seemed open to them.”',
+          'The author explicitly says the long-range books “fail not because they ask ‘what if’” but because they pretend a distant question still has one answer. The author would reject the claim that asking about unrealized events is their chief fault.',
+        ],
         skill: 'detail',
       },
       {
@@ -97,6 +127,12 @@ export const FL4_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The final paragraph argues that the past looks inevitable in hindsight although participants “faced choices that seemed open” and feared or hoped for outcomes that never came; officers confidently expecting a victory that did not happen are a direct instance. The letters say nothing about how many premises a counterfactual should alter, so they do not bear on the first rule. Contemporaries misjudging the outcome is exactly what the author expects, not a problem for the argument. And the discovery is relevant to the passage’s final claim even though it is not about a debated proposal.',
+        optionExplanations: [
+          'The final paragraph argues that the past looks inevitable in hindsight although participants “faced choices that seemed open” and “feared outcomes that never came.” Officers confidently expecting a victory that never arrived are a direct instance of this unrealized possibility.',
+          'The letters say nothing about how many premises a counterfactual should alter or whether battles are too complex for single-premise analysis. The first rule is not touched by evidence about what officers expected.',
+          'Contemporaries misjudging the outcome is exactly what the author expects and wants historians to recover. The author’s point is that participants did not know the ending, so their mistaken expectations illustrate rather than undermine the argument.',
+          'The discovery is relevant to the passage’s final claim about restoring the uncertainty in which participants lived, even though it concerns expectations rather than a debated proposal. The passage is not limited to its three rules.',
+        ],
         skill: 'new-information',
       },
     ],
@@ -120,6 +156,12 @@ export const FL4_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The author rejects both standard theories and argues that a sad song gives shapeless, private sorrow a shape that others have also heard, removing its loneliness — “It is the company.” Draining off sorrow is the purging theory, which the author says listeners’ behavior does not fit. Recorded sound is mentioned only to explain why the question has become pressing. Feeling a sorrow that belongs to no one is the rehearsal theory, which the author says “fares worse.”',
+        optionExplanations: [
+          'Draining off sorrow is the purging theory, which the author says listeners’ behavior does not fit: they return to the same song for years and “do not report that it has used up their sorrow.” The author rejects this account.',
+          'Recorded sound is mentioned in the opening paragraph only to explain why the question “has become pressing.” It is the setup for the inquiry, not its conclusion.',
+          'The author rejects both standard theories and argues that a sad song gives shapeless, private sorrow “a shape” that “thousands of others have heard,” removing its loneliness without removing the sorrow. The closing line, “It is the company,” states the point directly.',
+          'Feeling a sorrow that belongs to no one is the rehearsal theory, which the author says “fares worse” because the grieving listener “has the real thing already” and is not seeking a safe substitute.',
+        ],
         skill: 'main-idea',
       },
       {
@@ -133,6 +175,12 @@ export const FL4_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The rehearsal theory explains enjoying a sadness that “is not ours,” but it cannot explain the grieving listener, for whom the song is no safe substitute because she “has the real thing already.” The use-once-and-set-aside prediction belongs to the purging theory, not the rehearsal theory. Content listeners are the case the rehearsal theory handles well, so that is not its weakness. And neither theory depends on sad music being formless; that claim appears only in the author’s own argument about composers.',
+        optionExplanations: [
+          'The prediction that listeners would use a song once and set it aside belongs to the purging theory, which treats sad music “like a remedy.” It is not the author’s objection to the rehearsal theory.',
+          'The rehearsal theory explains the pleasure of “a sadness that is not ours,” but the listener who plays a lament after a real loss “is not sampling a harmless imitation of grief. She has the real thing already.” The theory cannot account for her.',
+          'Content listeners enjoying sad music is the case the rehearsal theory handles well, since they can feel sorrow “at no cost.” That is the theory’s strength, not its weakness.',
+          'Neither theory depends on sad music being harsh and formless. That observation appears only in the author’s own argument about composers, where it is used to support the author’s account, not to critique either standard theory.',
+        ],
         skill: 'inference',
       },
       {
@@ -146,6 +194,12 @@ export const FL4_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'If listeners wanted grief as such, a formless, harsh reproduction would serve; the fact that the songs people return to are “highly ordered” supports the author’s claim that what listeners value is sorrow given a shape. The observation is part of the author’s own account, not a concession to the purging theory. Nothing in the passage concerns what composers themselves feel. And the observation compares orderly with chaotic sad music; it does not address why sad music is preferred to cheerful music.',
+        optionExplanations: [
+          'The observation is part of the author’s own account, offered after both standard theories have been rejected. It is not a concession to the purging theory, which the author says does not match how listeners actually behave.',
+          'Nothing in the passage concerns what composers themselves feel. The author’s hypothetical composer “who wished only to reproduce grief” is a device for illustrating why formless music fails listeners, not a claim about composers’ emotions.',
+          'The observation compares orderly sad music with chaotic sad music. It does not address why unhappy listeners prefer sad music to cheerful music, which is the question the passage raises but answers through the idea of company.',
+          'If listeners wanted grief as such, a formless, harsh reproduction would serve. The fact that the songs people return to are “highly ordered,” their sorrow “measured, repeated, resolved,” supports the author’s claim that listeners value sorrow given a shape, not sorrow itself.',
+        ],
         skill: 'function',
       },
       {
@@ -155,6 +209,12 @@ export const FL4_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The purging theory predicts that a sad song works like a remedy, “taken once and then set aside,” and leaves the listener lighter; repeated return over years (I) and the absence of any sense that sorrow has been used up (II) both conflict with that prediction. Choosing sad songs when already unhappy (III) is just what a remedy theory expects, since remedies are sought by those who are unwell, so III does not tell against it. Hence I and II only.',
+        optionExplanations: [
+          'Statement I alone is incomplete. The passage also says listeners “do not report that it has used up their sorrow,” which separately contradicts the purging theory’s prediction that the song leaves the listener lighter.',
+          'The purging theory predicts a sad song works like a remedy, “taken once and then set aside,” leaving the listener lighter. Returning to the same song for years (I) and not reporting that sorrow has been used up (II) both conflict with that prediction. Choosing sad songs when unhappy (III) is what a remedy theory expects.',
+          'Statement III does not tell against the purging theory. Seeking a remedy when one is unwell is exactly what that theory predicts, so choosing sad songs when already unhappy is consistent with purging, not evidence against it.',
+          'Including statement III is the error. The purging theory treats sad music as a remedy, and remedies are naturally sought by those who are suffering, so choosing sad songs when unhappy fits the theory rather than contradicting it.',
+        ],
         skill: 'detail',
       },
       {
@@ -168,6 +228,12 @@ export const FL4_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The author’s central claim is that a sad song does not remove sorrow but removes its loneliness, offering “company”; listeners reporting greater isolation would contradict that directly. Sorrow that does not lessen is exactly what the author predicts (“Neither discovery removes the sorrow”). Contented listeners enjoying sad songs fits the rehearsal theory, which the author grants has “something to” it, and does not touch the author’s account of grieving listeners. Regular, repeated patterns in the most-replayed songs support the author’s point about order.',
+        optionExplanations: [
+          'Sorrow that does not lessen is exactly what the author predicts: “Neither discovery removes the sorrow. Both remove its loneliness.” This finding confirms the author’s account rather than weakening it.',
+          'Contented listeners enjoying sad songs fits the rehearsal theory, which the author grants has “something to” it. It does not touch the author’s account of grieving listeners, which is where the argument is focused.',
+          'The author’s central claim is that a sad song does not remove sorrow but removes its loneliness, offering “company.” Grieving listeners who report feeling more alone after a sad song would directly contradict that claim.',
+          'Regular, repeated melodic patterns in the most-replayed songs support the author’s observation that “the saddest music is seldom the most chaotic” and that the songs people return to are “highly ordered.”',
+        ],
         skill: 'strengthen-weaken',
       },
       {
@@ -181,6 +247,12 @@ export const FL4_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'A stranger’s account of a similar loss does what the author says a sad song does: it gives the feeling a form made by someone else and shows that the reader “is not the first to have it,” easing its loneliness. Avoiding reminders and seeking distraction are ways of escaping sorrow, whereas the author’s listener seeks her sorrow reflected back to her. A private journal gives grief a form, but one she makes herself and shares with no one, lacking both the outside form and the company the author stresses.',
+        optionExplanations: [
+          'A stranger’s account of a loss much like her own does what the author says a sad song does: it gives her feeling a form made by someone else and shows that she “is not the first to have it.” That shared shape eases the loneliness of sorrow.',
+          'Avoiding reminders is a way of escaping sorrow, whereas the author’s listener seeks her own sorrow reflected back “in a form she could not have made herself.” The author’s account explains seeking, not avoiding.',
+          'Comedies that draw attention away from sorrow are distraction, the opposite of what the author describes. The grieving listener does not want to look away from her pain but to find it given shape and company.',
+          'A private journal gives grief a form, but one she makes herself and shares with no one. The author stresses a form “that someone else composed and that thousands of others have heard,” so the journal lacks both the outside shape and the company.',
+        ],
         skill: 'application',
       },
     ],
@@ -204,6 +276,12 @@ export const FL4_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The author agrees that the timber map did harm but objects that if “every omission is an act of power,” every map is equally guilty and the critics cannot say what distinguishes the timber map from a sewer map. The author never defends the timber company’s purposes. Nothing suggests the critics assume the villagers were indifferent; their complaint is on the villagers’ behalf. And the copying of maps is mentioned only as part of how the timber map misled, not as something the critics exaggerate.',
+        optionExplanations: [
+          'The author never defends the timber company’s purposes or suggests its reasons for mapping rivers and ridges were legitimate. The author agrees the timber map did harm; the dispute is about how to explain that harm.',
+          'Nothing suggests the critics assume the villagers were indifferent. Their complaint is made on the villagers’ behalf, that the map “helped to make them disappear,” so this misdescribes the critics’ position.',
+          'Copying by later mapmakers is mentioned only as part of how the timber map’s deception spread, not as a claim the critics make or exaggerate. The author’s objection is to the logic of the critics’ argument, not to a historical overstatement.',
+          'The author says that if “every omission is an act of power, then every map is equally guilty, and the charge loses its force precisely where it ought to be sharpest.” The critics cannot explain the difference between a sewer map and a timber map that both omit villages.',
+        ],
         skill: 'inference',
       },
       {
@@ -217,6 +295,12 @@ export const FL4_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The subway diagram distorts heavily, yet riders are not deceived “because they know what it is for,” which supports the author’s claim that the fault lies in hidden rather than visible omission. The example is used against the critics’ power thesis, not in support of it. The diagram omits and distorts a great deal, so it is not an example of omitting too little. And the passage never identifies who made the diagram, so no contrast between government and company is drawn.',
+        optionExplanations: [
+          'The subway diagram is used against the critics’ power thesis, not in support of it. The author presents it as a heavily distorted map that nevertheless deceives no one, which undermines the claim that omissions are always instruments of power.',
+          'The subway diagram “straightens every curve and evens every distance,” omitting and distorting a great deal. It is not an example of a map that omits too little; it is an example of heavy omission that remains honest.',
+          'The subway diagram distorts heavily, yet its riders are not deceived “because they know what it is for.” This supports the author’s claim that the fault lies in hidden rather than visible omission: distortion with evident purpose misleads no one.',
+          'The passage never identifies who made the subway diagram, so no contrast between government-produced and company-produced maps is drawn. The example concerns the visibility of purpose, not the identity of the mapmaker.',
+        ],
         skill: 'function',
       },
       {
@@ -230,6 +314,12 @@ export const FL4_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The legend is supposed to leave “the reader … to decide what the blank spaces mean,” which works only if readers actually take the declared omissions into account when interpreting the map. The remedy is explicitly that maps “need not include everything,” so it does not rely on mapmakers adding features. The proportion of commercial maps plays no role in the argument. And the legend states “the kinds of things” omitted, not every omitted feature, which the author has already called impossible.',
+        optionExplanations: [
+          'The legend is meant to leave “the reader, rather than the mapmaker, to decide what the blank spaces mean.” That works only if readers who are told what a map leaves out actually take those declared omissions into account when interpreting its blanks.',
+          'The remedy is explicitly that “Maps need not include everything; they need to declare what they are for.” It does not rely on mapmakers adding more features; it relies on disclosure of purpose and omissions.',
+          'The proportion of commercial versus public maps plays no role in the argument. The author’s remedy applies to any map, and the sewer map and subway diagram examples are not commercial.',
+          'The author has already called a map that includes everything “impossible,” and the legend would state “the kinds of things it does not show,” not every omitted feature. The remedy does not assume an exhaustive list.',
+        ],
         skill: 'assumption',
       },
       {
@@ -243,6 +333,12 @@ export const FL4_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'For the author the fault is presenting “a selection as though it were a survey”: an atlas offered as a general survey that omits settlements without saying so makes their absence look like a fact rather than a choice. The hiking map and the visitors’ map omit or distort a great deal, but each declares its purpose, so their silences are visible. The weather map’s purpose is plain on its face, like the sewer map, so no reader would conclude the region has no towns.',
+        optionExplanations: [
+          'A hiking map titled as a guide to trails declares its purpose, so omitting roads is a visible silence that readers understand as belonging to that purpose. Like the sewer map, it deceives no one.',
+          'For the author, the fault is presenting “a selection as though it were a survey.” An atlas offered as a general survey that silently omits settlements makes their absence look like “the record of an absence rather than the result of a decision,” exactly the timber map’s deception.',
+          'A visitors’ map labeled as such and enlarging the old town is like the subway diagram: heavily distorted but honest about what it is for. Readers know its purpose, so its distortions mislead no one.',
+          'A weather map’s purpose is plain on its face, like the sewer map. No reader would conclude from temperature bands that the region has no towns, so its omissions are visible and belong to its evident purpose.',
+        ],
         skill: 'application',
       },
       {
@@ -257,6 +353,12 @@ export const FL4_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The author says the timber map did harm by deceiving its users, who “had no way to tell the difference” between an absence and a decision; officials who already knew the valleys were inhabited were not deceived, so that account of the harm would not apply to them. The discovery says nothing about maps in general, so it does not support the critics’ universal claim. If informed officials acted anyway, a legend disclosing omissions would have changed little, so the case for legends is not strengthened. And the author lists officials among the map’s users, so the discovery is relevant.',
+        optionExplanations: [
+          'The discovery concerns the knowledge of particular officials about one map. It says nothing about maps in general and so does not support the critics’ universal claim that every omission is an act of power.',
+          'If informed officials acted on the timber map anyway, a legend disclosing omissions would have told them nothing they did not already know. The discovery therefore does not strengthen the case for legends; it suggests legends would have changed little here.',
+          'The author lists officials among the users the timber map misled, alongside investors and later mapmakers. The argument is not confined to later mapmakers, so the discovery is relevant to the author’s account.',
+          'The author says the timber map deceived its users, who “had no way to tell the difference” between an absence and a decision. Officials who already knew the valleys were inhabited were not deceived, so the author’s account of how the map did harm would not apply to them.',
+        ],
         skill: 'new-information',
       },
       {
@@ -270,6 +372,12 @@ export const FL4_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The author opens by arguing that omission is what makes a map a map and closes by locating the fault in hiding the choice rather than making it, with a legend as the remedy. A map that records everything is the “impossible map” the author rejects. Treating maps as tools of power is the critics’ view, which the author calls right about the timber map but “wrong about maps.” Copying by later mapmakers is one detail of how the timber map misled, not the passage’s point.',
+        optionExplanations: [
+          'A map that records everything is the “impossible map” the author rejects in the opening paragraph; it would be “as large as the territory” and “exactly as useless.” Omission is what makes a map a map.',
+          'Treating maps as tools of power is the critics’ view. The author calls them “right about the timber map and wrong about maps,” so wholesale distrust of government and company maps is not the author’s point.',
+          'The author opens by arguing that omission is essential to maps and closes by locating the fault in hiding the choice rather than making it: “The mapmaker cannot help choosing. She can help hiding that she chose.” The legend stating purpose is the remedy.',
+          'Copying by later mapmakers is one detail of how the timber map’s deception propagated, not the passage’s main point. The author’s argument concerns the visibility of omissions, not the mechanics of copying.',
+        ],
         skill: 'main-idea',
       },
     ],
@@ -293,6 +401,12 @@ export const FL4_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The phrase summarizes the view that “the value of a pilgrimage lies in its hardship,” so that more blisters and hunger mean more worth; the athlete’s achievement is measured by what the race demands. The passage never counts shrines visited, so number of destinations is not the measure. Rituals at the shrine are not mentioned in connection with the phrase, which concerns the journey. And although the metaphor of a race might suggest rivals, the passage makes no claim that pilgrims compete with one another.',
+        optionExplanations: [
+          'The phrase summarizes the view that “the value of a pilgrimage lies in its hardship, so that the more it costs the traveler in blisters and hunger, the more it is worth.” Like an athlete’s, the pilgrim’s achievement is measured by what the race demands of him.',
+          'The passage never counts shrines visited or suggests that visiting many holy places is a measure of devotion. The athlete metaphor concerns the cost of the journey, not the number of destinations.',
+          'Rituals at the shrine are not mentioned in connection with the phrase. The “athlete of devotion” is defined by the hardship of the journey, and the author says the modern visitor “has simply skipped the race,” not skipped rituals.',
+          'Although the race metaphor might suggest rivals, the passage makes no claim that pilgrims compete with one another. The “race” is the hardship endured, and the comparison is about measuring devotion by suffering, not by outpacing others.',
+        ],
         skill: 'detail',
       },
       {
@@ -306,6 +420,12 @@ export const FL4_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The author insists “the coach, then, is not the enemy” and holds that a quick arrival is compatible with a genuine pilgrimage if the visitor is set apart, while a slow one does not guarantee it. Disapproval of speed is the complainers’ attitude, which the author corrects. The author does not praise the coach or call suffering vanity; the walk is honored, only not treated as a currency. And the author explicitly allows that a fast traveler may make “a genuine” pilgrimage, so such visitors are not dismissed as tourists.',
+        optionExplanations: [
+          'Disapproval of speed is the complainers’ attitude, which the author corrects: “The coach, then, is not the enemy. What threatens pilgrimage is not speed but the loss of any interval in which the traveler is set apart.”',
+          'The author insists “the coach, then, is not the enemy” and holds that a visitor who arrives quickly but spends her hours at the shrine in silence “may have made a genuine” pilgrimage. The means of arrival neither makes nor unmakes a pilgrim.',
+          'The author does not praise the coach or call suffering vanity. The walk is honored; the author only denies that pain is “a currency.” Admiration for the coach as such goes beyond anything in the passage.',
+          'The author explicitly allows that a fast traveler may make “a genuine” pilgrimage, so such visitors are not dismissed as mere tourists. The distinction depends on expectation and a set-apart interval, not on the mode of travel.',
+        ],
         skill: 'tone',
       },
       {
@@ -319,6 +439,12 @@ export const FL4_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'For the author, the pilgrim goes “in the hope of returning different” and needs an interval set apart from ordinary concerns; the woman who drives but spends a silent day hoping to be changed meets both conditions despite her speed. The walker endures the hardship, but earning a certificate is a goal of display, and the author denies that hardship alone makes a pilgrim. The scholar goes to see and to return as she was, the author’s definition of a tourist. A family photographing a new shrine each day has no interval set apart and treats each place as a sight.',
+        optionExplanations: [
+          'The walker endures the traditional hardship, but earning a certificate is a goal of display or achievement, not “the hope of returning different.” The author denies that hardship alone makes a pilgrim and says some walkers “arrived as unmoved as any sightseer.”',
+          'The scholar goes to see something and “means to leave unchanged,” which is the author’s definition of a tourist: one who goes “to see something and to return as she was, with the addition of a memory.”',
+          'A family photographing five shrines in five days has no interval set apart and treats each place as “a sight that is available to her” rather than something making a claim on them. This is the author’s tourist, not pilgrim.',
+          'For the author, the pilgrim goes “in the hope of returning different” and needs an interval set apart from ordinary concerns. The woman who drives but spends a silent day hoping to be changed meets both conditions, and the author says such a visitor “may have made a genuine” pilgrimage.',
+        ],
         skill: 'application',
       },
       {
@@ -332,6 +458,12 @@ export const FL4_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The author claims that the difference between pilgrim and tourist “is not the means of travel” and that few traditions have made hardship the measure; traditions that validate a journey only when it is made on foot would draw exactly the line the author says they do not. Pilgrims walking out of poverty is the author’s own example and fits the argument. Walkers who arrive unchanged illustrate the author’s point that hardship does not guarantee transformation. Identical tokens are what the final paragraph asserts.',
+        optionExplanations: [
+          'Pilgrims walking because they could not afford to ride is the author’s own example in paragraph 2, used to show that hardship cannot be the measure of devotion. It fits the argument rather than challenging it.',
+          'Walkers who arrive unchanged illustrate the author’s point that the old hardships “do not guarantee” transformation: “there were surely walkers who arrived as unmoved as any sightseer.” This supports the argument.',
+          'The author claims the difference between pilgrim and tourist “is not the means of travel” and that “few of the traditions that practice pilgrimage have believed” hardship is the measure. Traditions validating a journey only when made on foot would draw exactly the line the author says they do not.',
+          'Identical tokens are what the final paragraph asserts: “The objects do not differ.” The author uses this to show that what matters is the traveler’s belief about having changed, so the observation supports the argument.',
+        ],
         skill: 'strengthen-weaken',
       },
       {
@@ -346,6 +478,12 @@ export const FL4_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'A night of silence imposes little hardship but creates what the author says the months of walking provided: time removed from ordinary concerns in which the expectation of being changed can form. Because the requirement costs almost nothing in suffering, it does not revive the hardship view. The author says such conditions “do not guarantee” transformation, so the rule could not ensure that every visitor is changed. And an interval set apart is what the author thinks distinguishes pilgrims from tourists, so it would not turn pilgrims into tourists.',
+        optionExplanations: [
+          'A night of silence costs almost nothing in blisters or hunger, so it does not revive the hardship view that pilgrimage “is worth what it costs.” The author distinguishes hardship from the set-apart interval it once supplied.',
+          'A night of silence imposes little hardship but creates what the author says the months of walking provided: time removed from ordinary concerns in which “the expectation of being changed” can form. It restores the instrument without the suffering.',
+          'The author says the old conditions “do not guarantee” transformation and that some walkers arrived unmoved. A required night of silence could create the conditions for change but could not ensure that every visitor returns changed.',
+          'An interval set apart is precisely what the author thinks distinguishes pilgrims from tourists. A requirement that supplies such an interval would support pilgrimage, not undermine it, so it would not turn would-be pilgrims into tourists.',
+        ],
         skill: 'new-information',
       },
     ],

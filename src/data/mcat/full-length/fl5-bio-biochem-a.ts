@@ -49,6 +49,12 @@ export const FL5_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The glucokinase curve passes through 47% of maximal at 7.5 mM and 59% at 10 mM, so half-maximal activity falls at roughly 8 mM, within the range of portal glucose after a meal. A value near 0.5 mM would describe an enzyme that is almost saturated at the lowest concentrations plotted, which fits hexokinase I rather than glucokinase. At 4 mM glucokinase is running at only about a quarter of its maximum, and at 16 mM it is well above three-quarters.',
+        optionExplanations: [
+          'A half-maximal point near 0.5 mM would describe an enzyme almost saturated at the lowest concentrations plotted, which is the behavior of hexokinase I (96% at 2.5 mM), not glucokinase, which is at only 12% at 2.5 mM.',
+          'At 4 mM glucokinase is running at only about a quarter of its maximum (12% at 2.5 mM, 31% at 5 mM); half-maximal activity requires roughly twice this concentration.',
+          'The glucokinase curve passes through 47% of maximal at 7.5 mM and 59% at 10 mM, so half-maximal activity falls at roughly 8 mM, squarely within the range of portal glucose after a meal.',
+          'At 16 mM glucokinase is already well above three-quarters of maximal (74% at 15 mM, 79% at 17.5 mM); half-maximal activity was passed at about 8 mM.',
+        ],
         skill: '1A enzyme kinetics',
       },
       {
@@ -62,6 +68,12 @@ export const FL5_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Reading the figure, glucokinase rises from about 31% to about 59% of maximal, a factor of roughly 1.9, whereas hexokinase I is already at 98–99% of maximal at 5 mM and cannot increase further. A 2-fold rise for hexokinase I is impossible for an enzyme that is already saturated. A 4-fold rise overstates the glucokinase change; the curve is sigmoidal, but a doubling of substrate does not quadruple the rate of an enzyme already a third of the way to saturation. The option assigning no change to glucokinase reverses the behavior of the two enzymes.',
+        optionExplanations: [
+          'A 2-fold rise for hexokinase I is impossible: the figure shows it at 98% of maximal at 5 mM, so there is essentially no capacity left for the rate to increase when glucose doubles.',
+          'Glucokinase rises from about 31% to about 59% of maximal between 5 and 10 mM, a factor of roughly 1.9, whereas hexokinase I is already at 98–99% at 5 mM and cannot increase appreciably.',
+          'A 4-fold rise overstates the glucokinase change: the curve goes from 31% to 59%, about a doubling. Although the curve is sigmoidal, an enzyme already a third of the way to saturation does not quadruple its rate when substrate doubles.',
+          'This reverses the two enzymes: it is hexokinase I that shows no appreciable change, because it is saturated, while glucokinase roughly doubles its rate across this concentration range.',
+        ],
         skill: '1A enzyme kinetics',
       },
       {
@@ -75,6 +87,12 @@ export const FL5_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'In the presence of G6P, hexokinase I plateaus at about half its uninhibited maximal rate, and the plateau persists from 2.5 mM to 17.5 mM glucose; an inhibitor that competed with glucose for the active site would be displaced as glucose rose, and the two curves would converge at high glucose. Because the curves never converge, G6P must bind at a site other than the glucose site and lower the maximal rate. The two options that describe relief at high glucose contradict the data. Competition with ATP is excluded because ATP was held at a saturating concentration, which would overcome an inhibitor competing at the ATP site.',
+        optionExplanations: [
+          'The figure shows no relief: the hexokinase I + G6P curve stays at about 50% from 2.5 mM through 17.5 mM glucose. An inhibitor competing for the glucose site would be displaced as glucose rose, and the curves would converge.',
+          'The data show the inhibition persisting at every glucose concentration, so there is no relief to explain; an inhibitor that bound only after glucose would become more effective at high glucose, not less, which is also not what the figure shows.',
+          'The inhibition is indeed not relieved, but competition with ATP is excluded because ATP was held at a saturating concentration throughout, which would have overcome any inhibitor competing at the ATP site.',
+          'In the presence of G6P, hexokinase I plateaus at about half its uninhibited maximal rate from 2.5 mM to 17.5 mM glucose; because raising glucose never overcomes the inhibition, G6P must bind at a site distinct from the glucose site and lower the maximal rate.',
+        ],
         skill: '1A enzyme regulation',
       },
       {
@@ -88,6 +106,12 @@ export const FL5_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The passage establishes that glucose phosphorylation sets the rate of glycolysis and ATP production in β cells, and Figure 1 shows that glucokinase activity rises steeply across the physiological glucose range. With half the enzyme, any given glucose concentration produces about half the phosphorylation rate, so the glucose concentration needed to raise ATP enough to trigger insulin release is shifted upward; insulin is still released, but only once glucose exceeds a higher threshold, and fasting glucose settles at a higher set point. Secretion at a lower glucose concentration would require more, not less, enzyme activity. Hexokinase I cannot substitute as a sensor, because it is saturated at all physiological glucose concentrations and so cannot report changes in them. Half the normal glucokinase still responds to glucose, so secretion is neither continuous nor glucose-blind.',
+        optionExplanations: [
+          'The passage establishes that glucose phosphorylation sets glycolytic rate and ATP production in β cells, and Figure 1 shows glucokinase activity rising steeply across physiological glucose. With half the enzyme, a higher glucose concentration is needed to raise ATP enough to trigger insulin, so the threshold and fasting glucose shift upward.',
+          'Secretion at a lower glucose concentration would require more glucokinase activity, not less; halving the enzyme halves the phosphorylation rate at any given glucose level, so the threshold moves up, not down.',
+          'Hexokinase I cannot substitute as a glucose sensor, because Figure 1 shows it saturated at all physiological glucose concentrations; an enzyme that runs at 98% of maximal at 5 mM cannot report whether glucose has risen to 10 mM.',
+          'Half the normal glucokinase still responds to glucose across the physiological range, so the β cells are neither glucose-blind nor driven to secrete continuously; the sensor is shifted, not abolished.',
+        ],
         skill: '1A enzyme kinetics in physiology',
       },
       {
@@ -101,6 +125,12 @@ export const FL5_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Figure 1 shows that hexokinase I is strongly inhibited by its own product, so if an assay were allowed to run until appreciable G6P had accumulated, the measured rate would fall below the true initial rate and the uninhibited curve would be contaminated by product inhibition; using only the earliest portion of each trace keeps the product negligible. Normalizing to the maximal rate helps compare the two enzymes but does nothing to protect an individual rate from product inhibition. Saturating ATP ensures that ATP is not limiting, but it has no bearing on how much glucose is consumed. The coupled assay consumes ADP, not G6P, so the product of interest accumulates regardless of how the reaction is monitored.',
+        optionExplanations: [
+          'Normalizing each rate to the maximal rate makes the two enzymes comparable on one plot, but it does nothing to protect an individual rate measurement from being depressed by product that accumulates during the assay.',
+          'Saturating ATP ensures that ATP is not limiting, but it has no bearing on how much glucose is consumed or how much G6P accumulates during the measurement; glucose is consumed regardless of the ATP level.',
+          'Figure 1 shows that hexokinase I is strongly inhibited by its own product G6P, so an assay allowed to run until appreciable G6P accumulated would report a rate below the true initial rate; using only the earliest, linear portion of each trace keeps the product negligible.',
+          'The coupled assay consumes ADP to drive NADH oxidation; it does not remove G6P, which accumulates regardless of how the reaction is monitored, so the detection method does not protect against product inhibition.',
+        ],
         skill: '1A research design',
       },
     ],
@@ -130,6 +160,12 @@ export const FL5_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Cortisol produced by an adrenal tumor is not under ACTH control, and the high cortisol feeds back on the hypothalamus and pituitary to suppress CRH and ACTH, so ACTH falls while cortisol stays high. A CRH-secreting or an ACTH-secreting tumor would drive cortisol up only by raising ACTH, so ACTH would be high rather than low. Destruction of the cortex lowers cortisol and, with feedback removed, raises ACTH, the opposite of both findings.',
+        optionExplanations: [
+          'A CRH-secreting tumor would drive cortisol up only by raising ACTH, so ACTH would be high, not well below the reference range as in this patient.',
+          'Cortisol from an adrenal tumor is not under ACTH control, and the high cortisol feeds back on the hypothalamus and pituitary to suppress CRH and ACTH; the result is high cortisol with low ACTH, exactly the pattern observed.',
+          'An ACTH-secreting pituitary tumor produces Cushing syndrome with elevated ACTH, since the tumor is the source of the excess ACTH; this patient’s ACTH is low, which rules out a pituitary source.',
+          'Destruction of the adrenal cortex lowers cortisol and, with feedback removed, raises ACTH; this is the opposite of both findings in the patient.',
+        ],
         skill: '3B endocrine feedback',
       },
       {
@@ -143,6 +179,12 @@ export const FL5_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Destruction of the whole cortex removes aldosterone as well as cortisol; without aldosterone the distal nephron secretes less K⁺, so plasma K⁺ rises (and plasma Na⁺ falls). Loss of ACTH alone removes cortisol but leaves aldosterone secretion largely intact, because the glomerulosa is driven mainly by angiotensin II and plasma K⁺ rather than by ACTH. Low cortisol, fasting hypoglycemia from reduced gluconeogenesis, and loss of cortisol’s restraint on inflammation occur in both conditions and so do not distinguish them.',
+        optionExplanations: [
+          'Low cortisol occurs in both conditions: the destroyed cortex cannot make it, and without ACTH the intact fasciculata is not stimulated to make it, so this finding does not distinguish primary from secondary deficiency.',
+          'Fasting hypoglycemia from reduced gluconeogenesis follows from cortisol deficiency, which is present in both primary and secondary disease, so it is not a distinguishing finding.',
+          'Loss of cortisol’s restraint on inflammation occurs whenever cortisol is low, whether the cause is cortical destruction or absent ACTH, so an exaggerated inflammatory response does not separate the two.',
+          'Destroying the whole cortex removes aldosterone as well as cortisol; without aldosterone the distal nephron secretes less K⁺ and plasma K⁺ rises. Loss of ACTH alone leaves aldosterone largely intact, because the glomerulosa is driven mainly by angiotensin II and plasma K⁺.',
+        ],
         skill: '3B adrenal physiology',
       },
       {
@@ -156,6 +198,12 @@ export const FL5_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The synthetic glucocorticoid acted on the same feedback pathway as cortisol, suppressing CRH and ACTH for months; without ACTH’s trophic stimulation the zona fasciculata shrank, and when the drug is withdrawn the suppressed axis recovers slowly, so both ACTH and endogenous cortisol are low and the atrophied cortex cannot respond fully even to ACTH that is given. Feedback inhibition is lifted when the drug stops, but a suppressed hypothalamus and pituitary take days to weeks to resume normal output, so ACTH does not surge. Low cortisol with high ACTH describes primary adrenal failure with an intact pituitary, not a suppressed axis. Catecholamines from the medulla cannot replace the metabolic and permissive actions of cortisol and do not restore cortisol levels.',
+        optionExplanations: [
+          'The synthetic glucocorticoid suppressed CRH and ACTH for months, and without ACTH’s trophic stimulation the zona fasciculata atrophied; when the drug stops, the suppressed axis recovers slowly, so both ACTH and cortisol are low and the shrunken cortex responds poorly even to administered ACTH.',
+          'Feedback inhibition is lifted when the drug stops, but a hypothalamus and pituitary suppressed for six months take days to weeks to resume output, so ACTH does not surge; and with an atrophied cortex, cortisol could not be high in any case.',
+          'Low cortisol with high ACTH describes primary adrenal failure with an intact, responsive pituitary; here the pituitary itself has been suppressed, so ACTH is low, and the atrophied fasciculata would not respond normally.',
+          'Catecholamines from the medulla cannot replace the metabolic and permissive actions of cortisol and do not restore cortisol levels; the medulla also depends on cortisol for epinephrine synthesis, so it is not a compensating system.',
+        ],
         skill: '3B endocrine feedback',
       },
       {
@@ -169,6 +217,12 @@ export const FL5_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The chromaffin cells of the medulla are stimulated by acetylcholine released from preganglionic sympathetic fibers onto nicotinic receptors, exactly the receptors a ganglionic blocker occupies, so stressful stimuli would no longer provoke catecholamine release. Aldosterone secretion is driven hormonally, by angiotensin II and potassium, not by neuronal input to the gland, so blocking ganglionic receptors does not prevent it (a fall in renal perfusion still releases renin). ACTH acts through its own G-protein-coupled receptor on fasciculata cells. The conversion of norepinephrine to epinephrine depends on a cortisol-induced enzyme, not on nicotinic receptor signaling.',
+        optionExplanations: [
+          'Aldosterone secretion is driven hormonally by angiotensin II and plasma K⁺, not by neuronal input to the gland; a fall in blood pressure still releases renin, so ganglionic blockade does not prevent the aldosterone response.',
+          'ACTH acts through its own G-protein-coupled receptor on fasciculata cells, a hormonal pathway that does not involve nicotinic receptors; cortisol secretion in response to circulating ACTH is unaffected by a ganglionic blocker.',
+          'Chromaffin cells of the medulla are stimulated by acetylcholine released from preganglionic sympathetic fibers onto nicotinic receptors, exactly the receptors a ganglionic blocker occupies, so stressful stimuli would no longer provoke epinephrine release.',
+          'Conversion of norepinephrine to epinephrine depends on a methylating enzyme induced by cortisol reaching the medulla from the cortex; it does not depend on nicotinic receptor signaling, so a ganglionic blocker would not reduce it.',
+        ],
         skill: '3A/3B autonomic control of the adrenal medulla',
       },
     ],
@@ -200,6 +254,12 @@ export const FL5_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The mass culture contains both forms, so both alleles are expressed in the population, but every clone contains exactly one form. A clone is the mitotic progeny of a single cell, so each founding cell expressed only one allele and all of its descendants expressed the same one; the choice is therefore stable through cell division, and the near-equal split between E-1 and E-2 clones is what random choice predicts. If both alleles were expressed at low levels, clones would still show both forms, since the stain detects activity and a clone contains millions of cells. If the choice were remade at each division, every clone would come to contain cells of both types and would show both forms. Loss of an X chromosome in every one of 30 founding cells is implausible, and Table 2 shows that cells with a single active X have the same activity as cells with two X chromosomes, so the clone pattern needs no chromosome loss to explain it.',
+        optionExplanations: [
+          'The mass culture contains both forms while every one of 30 clones contains exactly one, and a clone is the mitotic progeny of a single cell; each founding cell therefore expressed only one allele and all its descendants kept that same choice, with the 16:14 split matching random choice.',
+          'If both alleles were expressed at low levels, each clone, which contains millions of cells after 20 doublings, would still show both forms on an activity stain; the complete absence of the second form in every clone rules this out.',
+          'If the choice were remade at each division, every clone would soon contain cells expressing each allele and would show both forms, as the mass culture does; the clones instead show only one form each.',
+          'Loss of an X chromosome in every one of 30 founding cells is implausible, and Table 2 shows that cells with one active X have the same enzyme activity as cells with two X chromosomes, so the clone pattern needs no chromosome loss to explain it.',
+        ],
         skill: '1C X-inactivation',
       },
       {
@@ -213,6 +273,12 @@ export const FL5_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'In every constitution in Table 2 the enzyme activity per cell equals that of a male cell, so exactly one X remains active regardless of how many are present, and the number of Barr bodies equals the number of X chromosomes minus one. A cell with four X chromosomes would therefore inactivate three (three Barr bodies), transcribe XIST from each inactivated chromosome, and have the same activity as any other cell. Four-fold activity would require all four chromosomes to stay active, contradicting the constant activity across the table. One Barr body would leave three X chromosomes active, and absent XIST would mean that no chromosome had been inactivated.',
+        optionExplanations: [
+          'One Barr body would leave three X chromosomes active, but Table 2 shows that every constitution keeps exactly one X active regardless of how many are present; a 48,XXXX cell would need three Barr bodies.',
+          'Four-fold activity would require all four X chromosomes to remain active, contradicting the constant relative activity of 1.0 across every row of Table 2; dosage compensation leaves one active X in each cell.',
+          'Three Barr bodies is correct, but XIST RNA is transcribed from every inactivated chromosome, as the 46,XX and 47,XXX rows show; absent XIST would mean no chromosome had been inactivated, which contradicts the three Barr bodies.',
+          'In every constitution in Table 2 enzyme activity per cell equals the male value, so exactly one X stays active and the Barr body count is the number of X chromosomes minus one; a 48,XXXX cell would inactivate three, transcribe XIST from each, and show relative activity of 1.0.',
+        ],
         skill: '1C dosage compensation',
       },
       {
@@ -226,6 +292,12 @@ export const FL5_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The clone data show that 3 of 30 clones express the normal allele, so she carries it and is heterozygous; her father, who is unaffected, could not have transmitted a mutant X in any case. Because inactivation is random and occurs when the embryo contains only a few hundred cells, a heterozygote can by chance inactivate the chromosome carrying the normal allele in a large majority of cells, leaving too little normal product in the relevant tissues, which is what 27 of 30 clones indicate. A dominant mutation would affect every heterozygous female and would not produce a 9:1 skew in allele expression. A cell with both X chromosomes inactivated would lack all X-linked gene products and could not survive.',
+        optionExplanations: [
+          'The clone data show 3 of 30 clones expressing the normal allele, so she carries it and is heterozygous, not homozygous; moreover her unaffected father could not have transmitted a mutant X.',
+          'Inactivation is random and occurs when the embryo has only a few hundred cells, so a heterozygote can by chance silence the chromosome carrying the normal allele in most cells; 27 of 30 clones expressing only the mutant allele shows exactly this skew, leaving too little normal product.',
+          'A dominant mutation would affect every heterozygous female, including her carrier mother, who is unaffected; it also would not produce the 9:1 skew in allele expression seen in her clones.',
+          'A cell with both X chromosomes inactivated would lack all X-linked gene products and could not survive; Table 2 shows that one X always remains active, and 3 of her clones express the normal allele, so both chromosomes are not silenced.',
+        ],
         skill: '1C sex-linked inheritance',
       },
       {
@@ -239,6 +311,12 @@ export const FL5_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'XIST is transcribed only from the chromosome that will be silenced and acts on that same chromosome. An X lacking XIST cannot be inactivated, so in every cell the other X, which carries E-2, is the one silenced, and every clone expresses E-1 alone. Expression of E-2 alone would require silencing the chromosome that lacks the means to silence itself. The half-and-half pattern is the result of random choice, which the deletion abolishes. Both forms in every clone would require two active X chromosomes, which the dosage-compensation data show does not occur.',
+        optionExplanations: [
+          'XIST is transcribed only from the chromosome to be silenced and acts in cis on that same chromosome; an X lacking XIST cannot be inactivated, so in every cell the other X, carrying E-2, is silenced, and every clone expresses E-1 alone.',
+          'Expression of E-2 alone would require silencing the E-1 chromosome, which lacks the XIST gene needed to silence itself; that chromosome must remain active in every cell.',
+          'The half-and-half pattern results from random choice between two chromosomes that can each be inactivated; the XIST deletion removes that choice, because only the E-2 chromosome retains the ability to be silenced.',
+          'Both forms in every clone would require two active X chromosomes in each cell, which the dosage-compensation data in Table 2 show does not occur; one chromosome, the one with intact XIST, is still inactivated.',
+        ],
         skill: '1C gene regulation / X-inactivation',
       },
       {
@@ -252,6 +330,12 @@ export const FL5_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The clones show which allele is active in each cell, but randomness with respect to parental origin can be assessed only if one knows which allele came from the mother and which from the father, for example by typing the parents’ enzyme forms; the 16:14 split can then be compared with the 1:1 expectation. Counting Barr bodies would show one per nucleus in every clone and reveal nothing about which chromosome was silenced. Longer culture tests the stability of the choice rather than its origin. The mass culture pools all cells and cannot reveal a parental bias beyond what the clones already show.',
+        optionExplanations: [
+          'Every clone would show one Barr body per nucleus, since each cell has one inactive X; counting them reveals nothing about which of the two chromosomes, maternal or paternal, was the one silenced.',
+          'The mass culture pools all cells and shows both forms; measuring its activity cannot reveal whether the active allele is maternal or paternal in any individual cell, nor a parental bias beyond what the clones already show.',
+          'The clones show which allele is active in each cell, but randomness with respect to parental origin can be assessed only if one knows which allele came from the mother and which from the father, for example by typing the parents; the 16:14 split can then be compared with the 1:1 expectation.',
+          'Longer culture tests whether the choice remains stable through more divisions; it addresses maintenance of inactivation, not whether the original choice was biased toward the maternal or paternal chromosome.',
+        ],
         skill: '1C research design',
       },
     ],
@@ -281,6 +365,12 @@ export const FL5_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Activation requires that each member of a ligand-induced pair phosphorylate its partner’s tail. A mutant with a normal extracellular domain pairs readily with normal receptors, but a pair containing one mutant has only one kinase domain: the normal partner can phosphorylate the mutant, which cannot reciprocate, so the normal receptor’s own tail stays unphosphorylated and the pair fails to signal. The mutant thereby disables a share of the normal receptors. Binding ligand and presenting it would not enhance signaling, since ligand is not limiting when it is added experimentally. Each receptor phosphorylates its partner rather than itself, so normal receptors are not independent of their pairing partner. Degradation of ligand-bound receptors is a termination mechanism, not the reason a kinase-dead partner weakens the response.',
+        optionExplanations: [
+          'Ligand is not limiting when added experimentally, so mutant receptors binding and presenting it would not enhance signaling; and a mutant partner in a pair actually prevents, rather than promotes, activation of the normal receptor.',
+          'Each receptor phosphorylates its partner’s tail, not its own, as the passage states; a normal receptor paired with a kinase-dead mutant therefore cannot have its own tail phosphorylated, so the response is not unchanged.',
+          'Degradation of ligand-bound receptors is a termination mechanism that operates on normal receptors too; it is not the reason a kinase-dead partner weakens the response, which lies in failed trans-phosphorylation.',
+          'Activation requires each member of a ligand-induced pair to phosphorylate its partner. A pair containing one kinase-dead mutant has only one kinase domain: the normal partner phosphorylates the mutant, which cannot reciprocate, so the normal receptor’s tail stays unphosphorylated and the pair fails to signal, disabling a share of normal receptors.',
+        ],
         skill: '2A receptor tyrosine kinases',
       },
       {
@@ -294,6 +384,12 @@ export const FL5_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Removing extracellular Ca²⁺ does not prevent the initial rise, so the ions must come from an intracellular store; blocking the IP₃ receptor abolishes it, identifying that store as the endoplasmic reticulum, whose Ca²⁺ channels IP₃ opens. If the Ca²⁺ came from outside, the Ca²⁺-free medium would have abolished the response. Diacylglycerol activates protein kinase C and does not release Ca²⁺, and the effect of the IP₃ receptor blocker shows that IP₃ is required. A plasma membrane channel could not supply Ca²⁺ from a medium that contains none.',
+        optionExplanations: [
+          'If the Ca²⁺ came from the extracellular fluid, removing extracellular Ca²⁺ would have abolished the initial rise; the fact that the rise persists in Ca²⁺-free medium shows the source is intracellular.',
+          'The initial rise persists without extracellular Ca²⁺, so the ions come from an intracellular store, and blocking the IP₃ receptor abolishes it, identifying that store as the endoplasmic reticulum whose Ca²⁺ channels IP₃ opens.',
+          'Diacylglycerol stays in the membrane and activates protein kinase C; it does not release Ca²⁺. The loss of the signal when IP₃ receptors are blocked shows that IP₃ is required, not dispensable.',
+          'A plasma membrane channel cannot supply Ca²⁺ from a medium that contains none; the persistence of the rise in Ca²⁺-free medium rules out any entry pathway across the plasma membrane as the initial source.',
+        ],
         skill: '2A second messengers',
       },
       {
@@ -307,6 +403,12 @@ export const FL5_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Paracrine signals act on nearby cells and are kept local, so a factor that never reaches an appreciable concentration in blood yet elicits responses in neighboring cells is acting through the extracellular fluid rather than through the circulation. Protein hormones such as insulin are endocrine, so chemical class and speed of synthesis do not settle the question. Receptor tyrosine kinases bind endocrine ligands (insulin) as well as paracrine ones (growth factors). Many endocrine hormones, including cortisol and insulin, are also released in bursts.',
+        optionExplanations: [
+          'Paracrine signals act on nearby cells and are kept local by degradation, uptake, or matrix binding; a factor undetectable in blood yet effective on adjacent cells is reaching its targets through extracellular fluid rather than the circulation.',
+          'Protein hormones such as insulin are endocrine, and rapid synthesis and secretion is not a property that separates the two modes; chemical class and speed of production do not indicate how far the signal travels.',
+          'Receptor tyrosine kinases bind endocrine ligands such as insulin as well as paracrine ligands such as growth factors, so the receptor family does not reveal the mode of signaling.',
+          'Many endocrine hormones, including cortisol with its daily rhythm and insulin after meals, are released in bursts, so pulsatile release does not distinguish paracrine from endocrine signaling.',
+        ],
         skill: '2A modes of signaling',
       },
       {
@@ -320,6 +422,12 @@ export const FL5_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Tyrosine phosphatases end RTK signaling by removing the phosphates that serve as docking sites. If they are inhibited, phosphotyrosines created during the pulse remain after the ligand is removed, docking proteins stay bound, and downstream signaling continues longer than usual. Kinase activity consumes a negligible fraction of the cell’s ATP. Phosphatases play no part in ligand-induced pairing, so the receptors still pair and the response still begins. Endocytosis is one of several termination mechanisms, and disabling any one of them prolongs the response, so the duration cannot be unchanged.',
+        optionExplanations: [
+          'Kinase activity consumes a negligible fraction of the cell’s ATP, so unopposed phosphorylation would not exhaust the supply; and persistence of phosphotyrosines would lengthen the response, not shorten it.',
+          'Phosphatases play no part in ligand-induced pairing, which depends on the extracellular domains binding ligand; the receptors still pair, trans-phosphorylate, and initiate the response normally.',
+          'Tyrosine phosphatases end RTK signaling by removing the phosphates that serve as docking sites; if they are inhibited, phosphotyrosines created during the pulse remain after the ligand is gone, docking proteins stay bound, and downstream signaling continues longer.',
+          'Endocytosis is one of several termination mechanisms listed in the passage, alongside dephosphorylation and GTP hydrolysis; disabling any one of them prolongs the response, so its duration cannot be unchanged.',
+        ],
         skill: '2A signal termination',
       },
     ],
@@ -346,6 +454,12 @@ export const FL5_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'MCV = hematocrit ÷ red cell count = 0.25 L/L ÷ (3.6 × 10¹² cells/L) = 6.9 × 10⁻¹⁴ L per cell = 69 fL, well below the 80–100 fL reference range, so Patient 1’s cells are abnormally small. The 36 fL value halves the result. The 89 fL value is Patient 3’s MCV (0.25 ÷ 2.8 × 10¹²), and the 118 fL value is Patient 2’s (0.26 ÷ 2.2 × 10¹²).',
+        optionExplanations: [
+          'This halves the correct result; MCV is the hematocrit divided by the red cell count, 0.25 ÷ 3.6 × 10¹² per L, which gives about 69 fL, not 36 fL.',
+          'MCV = hematocrit ÷ red cell count = 0.25 L/L ÷ (3.6 × 10¹² cells/L) = 6.9 × 10⁻¹⁴ L per cell = 69 fL, well below the 80–100 fL reference range, so Patient 1’s cells are abnormally small.',
+          'This is Patient 3’s MCV, 0.25 ÷ 2.8 × 10¹² = 89 fL, a normal value; Patient 1 has a higher red cell count for the same hematocrit, so his cells must be smaller.',
+          'This is Patient 2’s MCV, 0.26 ÷ 2.2 × 10¹² = 118 fL, which is abnormally large; Patient 1’s count of 3.6 × 10¹² per L gives a much smaller cell volume.',
+        ],
         skill: '3B blood: CBC calculation',
       },
       {
@@ -359,6 +473,12 @@ export const FL5_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Patient 3’s reticulocyte percentage is six times the upper reference limit, so the marrow is releasing young cells at a greatly increased rate, and the elevated unconjugated bilirubin shows that heme is being broken down faster than normal; together with normal iron stores, normal B₁₂, and a normal cell volume, these findings point to accelerated destruction with a marrow that is compensating. A marrow that failed to release cells would show a low reticulocyte count. Impaired hemoglobin synthesis (iron deficiency) and impaired DNA synthesis (B₁₂ deficiency) both produce underproduction with a low reticulocyte count and are excluded by the normal ferritin and B₁₂ values.',
+        optionExplanations: [
+          'A marrow that failed to release red cells would show a low reticulocyte count; Patient 3’s reticulocytes are six times the upper reference limit, so the marrow is releasing young cells at a greatly increased rate.',
+          'Impaired hemoglobin synthesis, as in iron deficiency, produces small cells and a low reticulocyte count; Patient 3 has normal ferritin, a normal MCV of about 89 fL, and a high reticulocyte count, so this does not fit.',
+          'Impaired DNA synthesis from B₁₂ deficiency produces large cells and underproduction with a low reticulocyte count; Patient 3’s B₁₂ is normal, his cells are normal in size, and his reticulocytes are markedly raised.',
+          'Patient 3’s reticulocyte percentage is six times the upper reference limit, so the marrow is responding vigorously, and his elevated unconjugated bilirubin shows heme being broken down faster than normal; with normal iron, B₁₂, and cell volume, this points to accelerated destruction with a compensating marrow.',
+        ],
         skill: '3B blood: anemia classification',
       },
       {
@@ -372,6 +492,12 @@ export const FL5_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Patient 2’s MCV is about 118 fL, far above normal, and his B₁₂ is low. Because precursors stop dividing when their hemoglobin reaches a critical concentration, and hemoglobin synthesis does not require B₁₂, cells whose DNA replication is slowed reach that concentration after fewer divisions and are therefore larger. Reduced hemoglobin synthesis would permit more divisions and produce smaller cells, the pattern of Patient 1. Early release of nucleated cells does not describe mature circulating erythrocytes and is not supported by the low reticulocyte count. Iron is not accumulating (ferritin is normal), and iron content does not determine cell volume.',
+        optionExplanations: [
+          'Reduced hemoglobin synthesis would permit more divisions before the critical hemoglobin concentration is reached, producing smaller cells; that is the pattern of Patient 1, whose MCV is 69 fL, not Patient 2, whose cells are large.',
+          'Mature circulating erythrocytes have lost their nuclei, and Patient 2’s reticulocyte count is low, not high, so early release of immature cells is not supported; his large cells are the product of a normal maturation sequence with fewer divisions.',
+          'Patient 2’s MCV is about 118 fL and his B₁₂ is low. Precursors stop dividing when cytoplasmic hemoglobin reaches a critical level, and hemoglobin synthesis does not require B₁₂, so cells whose DNA replication is slowed reach that level after fewer divisions and are larger.',
+          'Patient 2’s ferritin is normal, so iron is not accumulating, and iron content does not determine cell volume; the passage ties volume to the number of divisions completed before hemoglobin reaches its critical concentration.',
+        ],
         skill: '3B blood: erythropoiesis',
       },
       {
@@ -385,6 +511,12 @@ export const FL5_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Patient 1 has small cells, very low ferritin, and a reticulocyte percentage that has not risen despite anemia, consistent with a marrow that is starved of iron rather than intrinsically defective. If iron is the limiting factor, supplying it should let the marrow raise its output, and the passage notes that a healthy marrow responds within a week; a prompt reticulocyte rise therefore confirms both the diagnosis and the marrow’s capacity. A normal B₁₂ value excludes one alternative cause but does not test the marrow. Stable hemoglobin without treatment does not distinguish an iron-starved marrow from a defective one. Transfusion raises the oxygen content of blood and lowers erythropoietin, which would suppress rather than stimulate reticulocyte release.',
+        optionExplanations: [
+          'Patient 1 has small cells, very low ferritin, and reticulocytes that have not risen despite anemia, consistent with a marrow starved of iron. If iron is limiting, supplying it should let the marrow raise output within a week, as the passage notes; a prompt reticulocyte rise confirms both the diagnosis and the marrow’s capacity.',
+          'A normal B₁₂ value on repeat testing excludes one alternative cause of anemia but does not test whether the marrow can respond; it says nothing about iron deficiency versus an intrinsic marrow defect.',
+          'Stable hemoglobin without treatment does not distinguish an iron-starved marrow from an intrinsically defective one; both would leave the anemia unchanged, so the observation cannot confirm the iron-deficiency diagnosis.',
+          'Transfusion raises the oxygen content of blood and lowers erythropoietin, which would suppress rather than stimulate reticulocyte release; a rise after transfusion would be unexpected and would not test the role of iron.',
+        ],
         skill: '3B research design',
       },
     ],
@@ -406,6 +538,12 @@ export const FL5_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'A type A person has A antigen on red cells and makes antibodies against the B antigen. Type O red cells carry neither A nor B antigen, so the recipient’s anti-B antibodies find nothing on the donor cells to bind and no agglutination occurs. The recipient’s plasma does contain antibodies, namely anti-B. Most plasma is removed from a unit of packed red cells, and the anti-A and anti-B antibodies in type O plasma would, if anything, react with the recipient’s cells rather than neutralize the recipient’s antibodies. Antigens on one cell cannot mask antigens on another.',
+    optionExplanations: [
+      'A type A person makes anti-B antibodies, and type O red cells carry neither A nor B antigen, so the recipient’s antibodies find nothing on the donor cells to bind and no agglutination occurs.',
+      'The recipient’s plasma does contain antibodies, namely anti-B; a type A person lacks the B antigen and makes antibodies against it, so the absence of agglutination cannot be due to an absence of antibodies.',
+      'Most plasma is removed from a unit of packed red cells, and the anti-A and anti-B antibodies in type O plasma would, if anything, react with the recipient’s A cells rather than neutralize the recipient’s own antibodies.',
+      'Antigens on one cell cannot mask antigens on another cell; the donor cells are compatible because they lack A and B antigens, not because the recipient’s cells hide anything.',
+    ],
     skill: '3B ABO blood groups',
   },
   {
@@ -422,6 +560,12 @@ export const FL5_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'Myelin insulates the axon so that the depolarizing current generated at one node spreads with little leakage to the next node, where voltage-gated Na⁺ channels are clustered. When myelin is lost, current leaks across the exposed membrane, less of it reaches the next cluster of channels, and the depolarization there may be too small or too slow to reach threshold. Extracellular K⁺ is not raised by demyelination and would, if anything, hinder repolarization rather than cause premature firing. Na⁺ channels sit in the axonal membrane at the nodes, not within the myelin. The Na⁺/K⁺ pump is an axonal membrane protein and is not removed with the myelin.',
+    optionExplanations: [
+      'Demyelination does not raise extracellular K⁺, and elevated K⁺ would, if anything, hinder repolarization rather than drive premature firing; the problem is failure to reach threshold, not reaching it too early.',
+      'Myelin insulates the axon so that depolarizing current from one node spreads with little leakage to the next node, where Na⁺ channels are clustered; without myelin, current leaks across the exposed membrane and the depolarization at the next cluster may be too small or too slow to reach threshold.',
+      'Voltage-gated Na⁺ channels sit in the axonal membrane at the nodes of Ranvier, not within the myelin layers; losing the myelin sheath does not remove the channels themselves.',
+      'The Na⁺/K⁺ pump is an axonal membrane protein and is not removed with the myelin; refractoriness results from Na⁺ channel inactivation after firing, not from pump loss, and the exposed segments are not refractory.',
+    ],
     skill: '3A saltatory conduction',
   },
   {
@@ -438,6 +582,12 @@ export const FL5_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'Long bones lengthen by endochondral ossification at the epiphyseal plates, where chondrocytes proliferate, enlarge, and are replaced by bone from the shaft side. At the end of puberty the rising sex steroids accelerate that replacement until the entire plate has been ossified; with no cartilage left to proliferate, the bone can grow only in width. Periosteal osteoblasts deposit bone on the surface of the shaft and continue to do so in adults, which increases width rather than length. The marrow cavity never reaches the articular surfaces. Growth hormone receptors persist in adult bone, which is why excess growth hormone in adults thickens bones without lengthening them.',
+    optionExplanations: [
+      'Periosteal osteoblasts deposit bone on the surface of the shaft and continue to do so in adults; this appositional growth increases width, not length, so its cessation is not what ends lengthwise growth.',
+      'The marrow cavity never reaches the articular surfaces, and its size does not govern elongation; length is added at the epiphyseal plates, not limited by the cavity.',
+      'Growth hormone receptors persist in adult bone, which is why excess growth hormone in adults thickens bones without lengthening them; receptor loss is not the reason growth in length stops.',
+      'Long bones lengthen by endochondral ossification at the epiphyseal plates, where chondrocytes proliferate and are replaced by bone. At the end of puberty rising sex steroids accelerate that replacement until the plate is fully ossified; with no proliferating cartilage left, lengthening is impossible.',
+    ],
     skill: '3B skeletal system: endochondral ossification',
   },
   {
@@ -449,6 +599,12 @@ export const FL5_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'The carrier grandparent passes the allele to each child with probability 1/2, and that child passes it to the cousin with probability 1/2, so each cousin is a carrier with probability 1/4 (no other source of the allele exists under the stated assumptions). The probability that both cousins are carriers is 1/4 × 1/4 = 1/16, and two carriers have an affected child with probability 1/4, giving 1/16 × 1/4 = 1/64. The value 1/16 is the probability that both cousins are carriers, not that the child is affected. The value 1/32 treats one cousin as a carrier with probability 1/2 instead of 1/4. The value 1/256 squares 1/16 instead of multiplying it by 1/4.',
+    optionExplanations: [
+      'This is the probability that both cousins are carriers (1/4 × 1/4), not the probability that their child is affected; two carriers must still each transmit the allele, which happens with probability 1/4.',
+      'This treats one cousin as a carrier with probability 1/2 rather than 1/4; each cousin is two transmissions removed from the carrier grandparent (1/2 × 1/2 = 1/4), so the combined result is 1/4 × 1/4 × 1/4 = 1/64.',
+      'The carrier grandparent transmits the allele to each child with probability 1/2, and that child to the cousin with probability 1/2, so each cousin is a carrier with probability 1/4; both are carriers with probability 1/16, and two carriers have an affected child with probability 1/4, giving 1/64.',
+      'This squares 1/16 instead of multiplying it by 1/4; the chance that both cousins are carriers is 1/16, and the chance that two carriers have an affected child is 1/4, not another 1/16.',
+    ],
     skill: '1C autosomal recessive inheritance',
   },
   {
@@ -465,6 +621,12 @@ export const FL5_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'The ribosome selects an aminoacyl-tRNA by matching its anticodon to the codon in the A site; it has no means of inspecting the amino acid attached to the tRNA. The modified tRNA still carries the cysteine anticodon, so it delivers alanine wherever a cysteine codon appears, which shows that the fidelity of translation depends on the synthetases that charge the tRNAs. Because the ribosome does not read the amino acid, alanine codons are unaffected, the modified tRNA is not rejected, and its anticodon does not pair with alanine codons.',
+    optionExplanations: [
+      'The ribosome has no means of inspecting the amino acid attached to a tRNA; it matches only the anticodon to the codon, so the alanine-bearing tRNA with a cysteine anticodon is never delivered to alanine codons.',
+      'The ribosome selects an aminoacyl-tRNA by matching anticodon to codon in the A site and cannot check the attached amino acid; the modified tRNA still carries the cysteine anticodon, so it delivers alanine at cysteine codons, showing that translational fidelity depends on the synthetases.',
+      'The ribosome does not reject a tRNA based on its amino acid; it has no proofreading step for the amino acid–anticodon match, so the modified tRNA is accepted wherever its anticodon pairs.',
+      'The anticodon of the modified tRNA is unchanged and pairs only with cysteine codons; the chemical conversion of the amino acid does not alter the anticodon, so it cannot pair with alanine codons.',
+    ],
     skill: '1B tRNA charging and translation',
   },
   {
@@ -481,6 +643,12 @@ export const FL5_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'Induced fit holds that the active site is not pre-formed to match the substrate exactly but changes shape on binding, with catalytic residues moving into their final positions; a structural change that follows binding is therefore the direct evidence for it. Specificity for one substrate, binding of a substrate-shaped competitive inhibitor, and lowering of the activation energy are all predicted equally by the lock-and-key model, which also posits a specific, complementary active site, so none of them distinguishes the two models.',
+    optionExplanations: [
+      'Specificity for a single substrate among related candidates is predicted equally by the lock-and-key model, which posits a pre-formed, complementary active site; it does not distinguish the two models.',
+      'Binding of a substrate-shaped competitive inhibitor within the active site is consistent with a rigid complementary site as well as with a flexible one; the lock-and-key model predicts it just as well.',
+      'Induced fit holds that the active site changes shape on binding, with catalytic residues moving into their final positions; a structural change that follows substrate binding is the direct evidence for it and is not predicted by a rigid, pre-formed lock.',
+      'Lowering the activation energy without permanent alteration is the definition of any catalyst and is predicted by both models; it says nothing about whether the active site is rigid or changes shape on binding.',
+    ],
     skill: '1A enzyme structure and function',
   },
   {
@@ -492,6 +660,12 @@ export const FL5_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'Glycogen is broken down to glucose 1-phosphate, isomerized to glucose 6-phosphate, and dephosphorylated by glucose 6-phosphatase, a route that never passes through fructose 1,6-bisphosphate. Lactate and alanine enter gluconeogenesis as pyruvate, and glycerol enters as dihydroxyacetone phosphate; all three must be built up to fructose 1,6-bisphosphate and then converted to fructose 6-phosphate by fructose-1,6-bisphosphatase, the step that bypasses the irreversible phosphofructokinase reaction of glycolysis, so none of them can yield glucose without that enzyme.',
+    optionExplanations: [
+      'Lactate enters gluconeogenesis as pyruvate and must be built up to fructose 1,6-bisphosphate, which then requires fructose-1,6-bisphosphatase to proceed to fructose 6-phosphate; without that enzyme lactate cannot yield glucose.',
+      'Alanine is transaminated to pyruvate and follows the same gluconeogenic route as lactate through fructose 1,6-bisphosphate; it is blocked at the missing fructose-1,6-bisphosphatase step.',
+      'Glycerol enters as dihydroxyacetone phosphate, which is still upstream of the fructose-1,6-bisphosphatase step; it must pass through fructose 1,6-bisphosphate to reach glucose, so it is blocked as well.',
+      'Glycogen is broken down to glucose 1-phosphate, isomerized to glucose 6-phosphate, and dephosphorylated by glucose 6-phosphatase, a route that never passes through fructose 1,6-bisphosphate and so does not need fructose-1,6-bisphosphatase.',
+    ],
     skill: '1D gluconeogenesis',
   },
   {
@@ -508,6 +682,12 @@ export const FL5_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'Cytokinesis in animal cells is accomplished by a contractile ring of actin and myosin that pinches the cell in two after the chromosomes have separated. Chromosome movement in anaphase is driven by the spindle microtubules, not by actin, so the chromatids still reach the poles and nuclear envelopes re-form around both sets; without a functional ring the cytoplasm is not divided, and a binucleate cell results. Anaphase does not depend on actin and so does not arrest. Nuclear envelope reassembly is independent of cytokinesis. Cells do not revert to metaphase once their chromatids have separated.',
+    optionExplanations: [
+      'Cytokinesis in animal cells depends on a contractile ring of actin and myosin that pinches the cell in two after chromosomes separate; chromosome movement is driven by spindle microtubules, so the chromatids still reach the poles and nuclear envelopes re-form, but the cytoplasm is never divided, leaving one binucleate cell.',
+      'Anaphase chromosome movement is powered by spindle microtubules and their motor proteins, not by actin–myosin interaction, so blocking actin–myosin does not stall the chromatids midway to the poles.',
+      'Nuclear envelope reassembly around each chromatid set is independent of cytokinesis; the envelopes re-form normally, and because the cytoplasm is not divided there are not two daughter cells at all.',
+      'Cells do not revert to metaphase once sister chromatids have separated; the cell cycle proceeds forward, and the spindle disassembles as the nuclear envelopes re-form, regardless of whether cytokinesis occurs.',
+    ],
     skill: '2C cytokinesis',
   },
 ]

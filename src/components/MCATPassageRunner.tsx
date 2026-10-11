@@ -33,6 +33,14 @@ import { recommendFromFullLength } from '@/lib/mcat-fulllength-recs'
 import { MCAT_SECTION_META, fullLengthQuestionId, type MCATPassage, type MCATSection } from '@/data/mcat/types'
 import 'katex/dist/katex.min.css'
 import { useActivitySurface } from '@/hooks/useActivitySurface'
+import { Atom, ClipboardCheck, LayoutGrid } from 'lucide-react'
+import FocusTrapDialog from '@/components/FocusTrapDialog'
+import PassageHighlighter from '@/components/exam/PassageHighlighter'
+import QuestionNavigator, { type NavigatorItem } from '@/components/exam/QuestionNavigator'
+import ExamReviewScreen from '@/components/exam/ExamReviewScreen'
+import PeriodicTablePopup from '@/components/exam/PeriodicTablePopup'
+import { ExamShortcutsHelp, examShortcutFor, type ExamShortcut } from '@/components/exam/exam-shortcuts'
+import { deserializeHighlights, serializeHighlights, type HighlightRange } from '@/lib/passage-highlights'
 
 function RichText({ text, className, inline = false }: { text: string; className?: string; inline?: boolean }) {
   const [ready, setReady] = useState(false)
@@ -65,6 +73,15 @@ interface SectionRange {
 /** Real-exam break lengths AFTER sections 1, 2, 3 (10 min / 30-min lunch / 10 min). */
 const BREAK_MINUTES = [10, 30, 10]
 
+/** Stable empty highlight list (the highlighter repaints on identity change). */
+const NO_HIGHLIGHTS: HighlightRange[] = []
+
+/** Sections where the real exam offers the periodic table. */
+const PERIODIC_TABLE_SECTIONS: ReadonlySet<MCATSection> = new Set(['chem-phys', 'bio-biochem'])
+
+/** DOM id of a question card (focus target for navigator jumps / shortcuts). */
+const questionDomId = (p: number, q: number) => `mcat-q-${p}-${q}`
+
 /** CARS soft pacing target: 10 minutes per passage. */
 const PACING_TARGET_SECONDS = 600
 
@@ -96,6 +113,8 @@ interface SavedProgress {
   qFlags?: string[]
   /** Exam seconds per passage index (additive; absent on older saves). */
   examSeconds?: Record<string, number>
+  /** Passage highlights by passage index, as [start, end] offsets (additive). */
+  highlights?: Record<string, [number, number][]>
   sectionDeadline: number | null
   breakDeadline: number | null
   sectionElapsed: Record<string, number>
@@ -166,6 +185,17 @@ export default function MCATPassageRunner({
   const [confirmEnd, setConfirmEnd] = useState(false)
   const [restored, setRestored] = useState(false)
 
+  // ----- Exam-screen tools -----
+  // Passage highlights keyed by passage index (persisted with progress).
+  const [highlights, setHighlights] = useState<Record<string, HighlightRange[]>>({})
+  // The question the student is on within the active passage (Alt+N/P/F target).
+  const [currentQ, setCurrentQ] = useState(0)
+  const [navOpen, setNavOpen] = useState(false)
+  const [reviewOpen, setReviewOpen] = useState(false)
+  const [periodicOpen, setPeriodicOpen] = useState(false)
+  // A requested focus move to a question card (n makes repeats distinct).
+  const [focusReq, setFocusReq] = useState<{ p: number; q: number; n: number } | null>(null)
+
   // ----- CARS pacing state (practice + `pacing` only) -----
   const [passageSeconds, setPassageSeconds] = useState<Record<number, number>>({})
 
@@ -210,6 +240,8 @@ export default function MCATPassageRunner({
     const left = sectionDeadline ? Math.max(0, Math.ceil((sectionDeadline - Date.now()) / 1000)) : 0
     setSectionElapsed((e) => ({ ...e, [range.section]: allotted - left }))
     setConfirmEnd(false)
+    setReviewOpen(false)
+    setNavOpen(false)
     setSectionDeadline(null)
     if (sectionIdx >= sectionRanges.length - 1) {
       setSubmitted(true)
@@ -227,8 +259,11 @@ export default function MCATPassageRunner({
     if (!range) return
     const allotted = MCAT_SECTION_META[range.section].minutes * 60
     setActive(range.start)
+    setCurrentQ(0)
     setShowPassageMobile(true)
     setConfirmEnd(false)
+    setReviewOpen(false)
+    setNavOpen(false)
     setSecondsLeft(allotted)
     setSectionDeadline(Date.now() + allotted * 1000)
     setBreakDeadline(null)
@@ -254,6 +289,7 @@ export default function MCATPassageRunner({
           examSecondsRef.current = Object.fromEntries(
             Object.entries(s.examSeconds ?? {}).filter(([, v]) => typeof v === 'number' && v >= 0).map(([k, v]) => [Number(k), v]),
           )
+          setHighlights(deserializeHighlights(s.highlights))
           setSectionElapsed(s.sectionElapsed ?? {})
           const savedIdx = Math.min(Math.max(0, s.sectionIdx ?? 0), sectionRanges.length - 1)
           const savedRange = sectionRanges[savedIdx]
@@ -315,13 +351,14 @@ export default function MCATPassageRunner({
         flags: [...flags],
         qFlags: [...qFlags],
         examSeconds: examSecondsRef.current,
+        highlights: serializeHighlights(highlights),
         sectionDeadline,
         breakDeadline,
         sectionElapsed,
       }
       localStorage.setItem(storageKey, JSON.stringify(payload))
     } catch { /* storage unavailable — exam still runs, just without resume */ }
-  }, [storageKey, restored, submitted, phase, sectionIdx, active, answers, eliminated, flags, qFlags, sectionDeadline, breakDeadline, sectionElapsed, totalQuestions])
+  }, [storageKey, restored, submitted, phase, sectionIdx, active, answers, eliminated, flags, qFlags, highlights, sectionDeadline, breakDeadline, sectionElapsed, totalQuestions])
 
   // ---------- Timers ----------
   // Flat exam timer (non-sectioned) — decrement (and auto-submit at zero) from
@@ -491,6 +528,10 @@ export default function MCATPassageRunner({
     examSecondsRef.current = {}
     setCheckedPassages(new Set())
     setActive(0)
+    setCurrentQ(0)
+    setHighlights({})
+    setNavOpen(false)
+    setReviewOpen(false)
     setPassageSeconds({})
     if (timeLimitMinutes) setSecondsLeft(timeLimitMinutes * 60)
     if (sectioned) {
@@ -503,6 +544,107 @@ export default function MCATPassageRunner({
       if (storageKey) { try { localStorage.removeItem(storageKey) } catch { /* noop */ } }
     }
   }
+
+  // ---------- Navigation: navigator, review screen, keyboard shortcuts ----------
+  // The passages the student can move between right now (the current section).
+  const rangeStart = sectioned && currentRange ? currentRange.start : 0
+  const rangeEnd = sectioned && currentRange ? currentRange.end : passages.length - 1
+
+  // Questions of the current section, numbered sequentially like the real exam.
+  const sectionQuestions = useMemo(
+    () => flatQuestions.filter((fq) => fq.passageIdx >= rangeStart && fq.passageIdx <= rangeEnd),
+    [flatQuestions, rangeStart, rangeEnd],
+  )
+  const sectionNumber = useMemo(() => {
+    const m = new Map<string, number>()
+    sectionQuestions.forEach((fq, i) => m.set(`${fq.passageIdx}:${fq.qIdx}`, i + 1))
+    return m
+  }, [sectionQuestions])
+  const navigatorItems: NavigatorItem[] = sectionQuestions.map((fq, i) => {
+    const k = `${fq.passageIdx}:${fq.qIdx}`
+    return {
+      key: k,
+      label: String(i + 1),
+      group: `Passage ${fq.passageIdx - rangeStart + 1}`,
+      answered: answers[k] !== undefined,
+      flagged: qFlags.has(k),
+      current: !reviewOpen && fq.passageIdx === active && fq.qIdx === currentQ,
+    }
+  })
+
+  /** Go to a passage + question and move focus to that question. */
+  function jumpTo(p: number, q: number) {
+    setActive(p)
+    setCurrentQ(q)
+    setNavOpen(false)
+    setReviewOpen(false)
+    setConfirmEnd(false)
+    setFocusReq((r) => ({ p, q, n: (r?.n ?? 0) + 1 }))
+  }
+  function jumpToSectionIndex(i: number) {
+    const fq = sectionQuestions[i]
+    if (fq) jumpTo(fq.passageIdx, fq.qIdx)
+  }
+  function openReview() {
+    setNavOpen(false)
+    setConfirmEnd(false)
+    setReviewOpen(true)
+  }
+  function goNext() {
+    if (reviewOpen) return
+    const count = passages[active]?.questions.length ?? 0
+    if (currentQ < count - 1) jumpTo(active, currentQ + 1)
+    else if (active < rangeEnd) jumpTo(active + 1, 0)
+    else if (mode === 'exam') openReview() // past the last question → review screen (AAMC)
+  }
+  function goPrev() {
+    if (reviewOpen) {
+      const last = sectionQuestions[sectionQuestions.length - 1]
+      if (last) jumpTo(last.passageIdx, last.qIdx)
+      return
+    }
+    if (currentQ > 0) jumpTo(active, currentQ - 1)
+    else if (active > rangeStart) jumpTo(active - 1, Math.max(0, (passages[active - 1]?.questions.length ?? 1) - 1))
+  }
+
+  // Move focus (and scroll) to a jumped-to question once it has rendered.
+  useEffect(() => {
+    if (!focusReq) return
+    const el = typeof document !== 'undefined' ? document.getElementById(questionDomId(focusReq.p, focusReq.q)) : null
+    if (!el) return
+    const reduce = typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches
+    el.scrollIntoView?.({ block: 'start', behavior: reduce ? 'auto' : 'smooth' })
+    el.focus({ preventScroll: true })
+    // Closing the navigator dialog restores focus to the previously focused
+    // question card first, whose onFocus resets currentQ; re-assert the target.
+    setCurrentQ(focusReq.q)
+  }, [focusReq])
+
+  // Real-exam shortcuts, live only while the question screen is up. The
+  // listener reads the latest handler through a ref so it subscribes once.
+  const runnerVisible = !submitted && (!sectioned || (restored && phase === 'in-section'))
+  const shortcutRef = useRef<(e: KeyboardEvent) => void>(() => {})
+  useEffect(() => {
+    shortcutRef.current = (e: KeyboardEvent) => {
+      const action: ExamShortcut | null = examShortcutFor(e)
+      if (!action) return
+      // Leave open dialogs alone (except Alt+V closing the navigator itself).
+      const inDialog = e.target instanceof Element && !!e.target.closest('[role="dialog"]')
+      if (inDialog && !(action === 'navigator' && navOpen)) return
+      if (action === 'flag' && (mode !== 'exam' || reviewOpen)) return
+      e.preventDefault()
+      if (action === 'navigator') setNavOpen((v) => !v)
+      else if (action === 'next') goNext()
+      else if (action === 'prev') goPrev()
+      else toggleQuestionFlag(currentQ)
+    }
+  })
+  useEffect(() => {
+    if (!runnerVisible) return
+    const onKey = (e: KeyboardEvent) => shortcutRef.current(e)
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [runnerVisible])
 
   // ---------- Results screen ----------
   if (submitted && report) {
@@ -785,8 +927,6 @@ export default function MCATPassageRunner({
 
   // ---------- Runner screen ----------
   const passageChecked = checkedPassages.has(active)
-  const rangeStart = sectioned && currentRange ? currentRange.start : 0
-  const rangeEnd = sectioned && currentRange ? currentRange.end : passages.length - 1
   const showTimer = mode === 'exam' && (sectioned ? phase === 'in-section' : !!timeLimitMinutes)
   const mm = Math.floor(secondsLeft / 60)
   const ss = String(secondsLeft % 60).padStart(2, '0')
@@ -799,10 +939,15 @@ export default function MCATPassageRunner({
   const pacingSecs = passageSeconds[active] ?? 0
   const overPace = pacing && pacingSecs > PACING_TARGET_SECONDS
 
+  const isLastSection = sectioned && sectionIdx >= sectionRanges.length - 1
+  const showPeriodic = PERIODIC_TABLE_SECTIONS.has(passage.section)
+  const toolBtn =
+    'inline-flex items-center gap-1.5 rounded-lg border border-gray-300 px-2.5 py-1.5 text-xs font-semibold text-gray-700 hover:bg-gray-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-700'
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
       {/* top bar */}
-      <div className="sticky top-0 z-10 border-b border-gray-200 bg-white/90 backdrop-blur dark:border-gray-700 dark:bg-gray-900/90">
+      <div className="sticky top-16 z-10 border-b border-gray-200 bg-white/90 backdrop-blur dark:border-gray-700 dark:bg-gray-900/90">
         <div className="container flex items-center justify-between py-3">
           <div className="flex items-center gap-3">
             <Link href={backHref} className="text-sm text-blue-600 hover:underline dark:text-blue-400">← {backLabel}</Link>
@@ -835,7 +980,32 @@ export default function MCATPassageRunner({
                 {fmtClock(pacingSecs)} <span className="font-sans font-medium text-[10px]">/ 10:00{overPace ? ' · over pace' : ''}</span>
               </span>
             ) : null}
-            <span className="text-xs text-gray-500 dark:text-gray-400">Passage {active - rangeStart + 1}/{rangeEnd - rangeStart + 1}</span>
+            <span className="text-xs text-gray-500 dark:text-gray-400">
+              {reviewOpen ? 'Review' : `Passage ${active - rangeStart + 1}/${rangeEnd - rangeStart + 1}`}
+            </span>
+          </div>
+        </div>
+        {/* exam tools */}
+        <div className="container flex flex-wrap items-center gap-2 pb-2" role="toolbar" aria-label="Exam tools">
+          <button type="button" onClick={() => setNavOpen(true)} className={toolBtn} aria-haspopup="dialog" aria-keyshortcuts="Alt+V">
+            <LayoutGrid className="h-3.5 w-3.5" aria-hidden="true" />
+            Navigator
+            <span className="font-normal text-gray-500 dark:text-gray-400">({answeredInSection}/{sectionQCount})</span>
+          </button>
+          {mode === 'exam' && !reviewOpen && (
+            <button type="button" onClick={openReview} className={toolBtn}>
+              <ClipboardCheck className="h-3.5 w-3.5" aria-hidden="true" />
+              Review screen
+            </button>
+          )}
+          {showPeriodic && (
+            <button type="button" onClick={() => setPeriodicOpen(true)} className={toolBtn} aria-haspopup="dialog">
+              <Atom className="h-3.5 w-3.5" aria-hidden="true" />
+              Periodic table
+            </button>
+          )}
+          <div className="ml-auto">
+            <ExamShortcutsHelp actions={mode === 'exam' ? undefined : ['next', 'prev', 'navigator']} />
           </div>
         </div>
         {showTimer && lowTime && (
@@ -845,17 +1015,69 @@ export default function MCATPassageRunner({
         )}
       </div>
 
+      <FocusTrapDialog open={navOpen} onClose={() => setNavOpen(false)} title="Question navigator" className="mx-4 w-full max-w-2xl">
+        <div className="p-5 sm:p-6">
+          <h2 className="mb-3 pr-8 text-lg font-bold text-gray-900 dark:text-white">
+            Navigator{sectioned ? ` — ${MCAT_SECTION_META[passage.section].short}` : ''}
+          </h2>
+          <QuestionNavigator items={navigatorItems} onJump={jumpToSectionIndex} showFlags={mode === 'exam'} />
+          {mode === 'exam' && (
+            <button
+              type="button"
+              onClick={openReview}
+              className="mt-5 inline-flex items-center gap-1.5 rounded-xl border-2 border-gray-300 px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-700"
+            >
+              <ClipboardCheck className="h-4 w-4" aria-hidden="true" />
+              Go to section review
+            </button>
+          )}
+        </div>
+      </FocusTrapDialog>
+      {showPeriodic && <PeriodicTablePopup open={periodicOpen} onClose={() => setPeriodicOpen(false)} />}
+
       <div className="container py-5">
+        {mode === 'exam' && reviewOpen ? (
+          <ExamReviewScreen
+            title={sectioned ? MCAT_SECTION_META[passage.section].short : title}
+            items={navigatorItems}
+            onJump={jumpToSectionIndex}
+            onReturn={() => jumpTo(active, currentQ)}
+            onEnd={() => (sectioned ? setConfirmEnd(true) : finish())}
+            endLabel={sectioned ? (isLastSection ? 'End section & submit exam' : 'End section') : 'Submit exam'}
+          >
+            {sectioned && confirmEnd && (
+              <div className="mt-4 rounded-xl border border-red-200 bg-red-50 p-4 text-sm dark:border-red-800 dark:bg-red-900/20">
+                <p role="alert" className="font-semibold text-red-800 dark:text-red-200">
+                  End {MCAT_SECTION_META[passage.section].short}? You cannot come back to this section — {answeredInSection}/{sectionQCount} answered.
+                </p>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  <button onClick={endSection} className="rounded-lg bg-red-600 px-4 py-2 text-sm font-semibold text-white hover:bg-red-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-400 focus-visible:ring-offset-2">
+                    {isLastSection ? 'Yes, end section & submit' : 'Yes, end this section'}
+                  </button>
+                  <button onClick={() => setConfirmEnd(false)} className="rounded-lg border border-gray-300 px-4 py-2 text-sm font-semibold text-gray-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring dark:border-gray-600 dark:text-gray-300">Keep working</button>
+                </div>
+              </div>
+            )}
+          </ExamReviewScreen>
+        ) : (
+        <>
         <button onClick={() => setShowPassageMobile((v) => !v)} className="mb-3 w-full rounded-lg border border-gray-200 py-2 text-sm font-medium text-gray-600 lg:hidden dark:border-gray-700 dark:text-gray-300">
           {showPassageMobile ? 'Hide' : 'Show'} passage
         </button>
         <div className="grid gap-6 lg:grid-cols-2">
           {/* Passage pane */}
           <div className={`${showPassageMobile ? '' : 'hidden'} lg:block`}>
-            <div className="lg:sticky lg:top-20 lg:max-h-[calc(100vh-7rem)] lg:overflow-y-auto rounded-2xl border border-gray-200 bg-white p-5 shadow-sm dark:border-gray-700 dark:bg-gray-800">
+            <div className="lg:sticky lg:top-28 lg:max-h-[calc(100vh-9rem)] lg:overflow-y-auto rounded-2xl border border-gray-200 bg-white p-5 shadow-sm dark:border-gray-700 dark:bg-gray-800">
               <h2 className="mb-1 text-lg font-bold text-gray-900 dark:text-white">{passage.title}</h2>
               <p className="mb-3 text-xs uppercase tracking-wide text-gray-400">{passage.discipline}</p>
-              <RichText text={passage.passageText} className="prose prose-sm max-w-none leading-relaxed text-gray-800 dark:prose-invert dark:text-gray-200" />
+              <PassageHighlighter
+                key={`${active}:${passage.id}`}
+                text={passage.passageText}
+                highlights={highlights[String(active)] ?? NO_HIGHLIGHTS}
+                onChange={(next) => setHighlights((h) => ({ ...h, [String(active)]: next }))}
+                label={`Passage: ${passage.title}`}
+                className="prose prose-sm max-w-none leading-relaxed text-gray-800 dark:prose-invert dark:text-gray-200"
+              />
               {passage.chart && <div className="mt-4"><MCATFigure spec={passage.chart} /></div>}
               {passage.figure && (
                 <div className="mt-4 rounded-lg border border-gray-200 bg-gray-50 p-3 dark:border-gray-700 dark:bg-gray-900/40">
@@ -872,10 +1094,23 @@ export default function MCATPassageRunner({
               const picked = answers[k]
               const struck = eliminated[k] ?? new Set<number>()
               const revealed = passageChecked
+              const isCurrent = qi === currentQ
+              const number = mode === 'exam' ? (sectionNumber.get(k) ?? qi + 1) : qi + 1
               return (
-                <div key={qi} className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm dark:border-gray-700 dark:bg-gray-800">
+                <div
+                  key={qi}
+                  id={questionDomId(active, qi)}
+                  tabIndex={-1}
+                  aria-label={`Question ${number}`}
+                  aria-current={mode === 'exam' && isCurrent ? 'step' : undefined}
+                  onFocus={() => { if (currentQ !== qi) setCurrentQ(qi) }}
+                  onClick={() => { if (currentQ !== qi) setCurrentQ(qi) }}
+                  className={`scroll-mt-32 rounded-2xl border bg-white p-5 shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring dark:bg-gray-800 ${
+                    mode === 'exam' && isCurrent ? 'border-accent-muted dark:border-accent' : 'border-gray-200 dark:border-gray-700'
+                  }`}
+                >
                   <div className="mb-3 flex items-start justify-between gap-2">
-                    <RichText text={`**${qi + 1}.** ${q.question}`} className="text-sm font-medium text-gray-900 dark:text-gray-100" />
+                    <RichText text={`**${number}.** ${q.question}`} className="text-sm font-medium text-gray-900 dark:text-gray-100" />
                     <div className="flex shrink-0 items-center gap-1.5">
                       {q.needsReview && <span className="rounded bg-amber-100 px-1.5 py-0.5 text-[10px] font-semibold text-amber-700 dark:bg-amber-900/40 dark:text-amber-300" title="AI-authored — pending expert review">draft</span>}
                       {mode === 'exam' && (
@@ -883,7 +1118,8 @@ export default function MCATPassageRunner({
                           type="button"
                           onClick={() => toggleQuestionFlag(qi)}
                           aria-pressed={qFlags.has(k)}
-                          className={`rounded-md border px-2 py-0.5 text-[11px] font-semibold ${qFlags.has(k) ? 'border-amber-400 bg-amber-50 text-amber-700 dark:border-amber-500 dark:bg-amber-900/30 dark:text-amber-300' : 'border-gray-300 text-gray-500 hover:border-amber-300 dark:border-gray-600 dark:text-gray-400'}`}
+                          aria-keyshortcuts="Alt+F"
+                          className={`rounded-md border px-2 py-0.5 text-[11px] font-semibold focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring ${qFlags.has(k) ? 'border-amber-400 bg-amber-50 text-amber-700 dark:border-amber-500 dark:bg-amber-900/30 dark:text-amber-300' : 'border-gray-300 text-gray-500 hover:border-amber-300 dark:border-gray-600 dark:text-gray-400'}`}
                         >
                           <span aria-hidden="true">{qFlags.has(k) ? '★ ' : '☆ '}</span>Flag for review
                         </button>
@@ -942,31 +1178,18 @@ export default function MCATPassageRunner({
                 {flags.has(active) ? '★ Flagged' : '☆ Flag'}
               </button>
               <div className="ml-auto flex gap-2">
-                <button onClick={() => { setActive((i) => Math.max(rangeStart, i - 1)); setShowPassageMobile(true) }} disabled={active <= rangeStart} className="rounded-xl border-2 border-gray-300 px-4 py-2.5 text-sm font-semibold text-gray-600 disabled:opacity-40 dark:border-gray-600 dark:text-gray-300">Prev</button>
+                <button onClick={() => { setActive((i) => Math.max(rangeStart, i - 1)); setCurrentQ(0); setShowPassageMobile(true) }} disabled={active <= rangeStart} className="rounded-xl border-2 border-gray-300 px-4 py-2.5 text-sm font-semibold text-gray-600 disabled:opacity-40 dark:border-gray-600 dark:text-gray-300">Prev</button>
                 {active < rangeEnd ? (
-                  <button onClick={() => { setActive((i) => i + 1); setShowPassageMobile(true) }} className="rounded-xl bg-gray-800 px-5 py-2.5 text-sm font-semibold text-white dark:bg-gray-200 dark:text-gray-900">Next passage</button>
-                ) : sectioned ? (
-                  <button onClick={() => setConfirmEnd(true)} className="rounded-xl bg-gradient-to-r from-emerald-600 to-green-600 px-5 py-2.5 text-sm font-semibold text-white">
-                    {sectionIdx >= sectionRanges.length - 1 ? 'End section & submit exam' : 'End section'}
+                  <button onClick={() => { setActive((i) => i + 1); setCurrentQ(0); setShowPassageMobile(true) }} className="rounded-xl bg-gray-800 px-5 py-2.5 text-sm font-semibold text-white dark:bg-gray-200 dark:text-gray-900">Next passage</button>
+                ) : mode === 'exam' ? (
+                  <button onClick={openReview} className="rounded-xl bg-gradient-to-r from-emerald-600 to-green-600 px-5 py-2.5 text-sm font-semibold text-white">
+                    {sectioned ? 'Review & end section' : 'Review & submit'}
                   </button>
                 ) : (
-                  <button onClick={finish} className="rounded-xl bg-gradient-to-r from-emerald-600 to-green-600 px-5 py-2.5 text-sm font-semibold text-white">{mode === 'exam' ? 'Submit exam' : 'Finish'}</button>
+                  <button onClick={finish} className="rounded-xl bg-gradient-to-r from-emerald-600 to-green-600 px-5 py-2.5 text-sm font-semibold text-white">Finish</button>
                 )}
               </div>
             </div>
-            {sectioned && confirmEnd && (
-              <div className="rounded-xl border border-red-200 bg-red-50 p-4 text-sm dark:border-red-800 dark:bg-red-900/20">
-                <p className="font-semibold text-red-800 dark:text-red-200">
-                  End {MCAT_SECTION_META[passage.section].short}? You cannot come back to this section — {answeredInSection}/{sectionQCount} answered.
-                </p>
-                <div className="mt-3 flex gap-2">
-                  <button onClick={endSection} className="rounded-lg bg-red-600 px-4 py-2 text-sm font-semibold text-white hover:bg-red-700">
-                    {sectionIdx >= sectionRanges.length - 1 ? 'Yes, end section & submit' : 'Yes, end this section'}
-                  </button>
-                  <button onClick={() => setConfirmEnd(false)} className="rounded-lg border border-gray-300 px-4 py-2 text-sm font-semibold text-gray-600 dark:border-gray-600 dark:text-gray-300">Keep working</button>
-                </div>
-              </div>
-            )}
             {mode === 'exam' && (
               <p className="text-center text-xs text-gray-400">
                 {sectioned
@@ -976,6 +1199,8 @@ export default function MCATPassageRunner({
             )}
           </div>
         </div>
+        </>
+        )}
       </div>
     </div>
   )

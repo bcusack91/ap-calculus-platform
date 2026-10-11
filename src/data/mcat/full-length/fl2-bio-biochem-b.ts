@@ -33,6 +33,12 @@ export const FL2_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Glucose from glycogenolysis equals HGO times the fraction NOT from gluconeogenesis. After 12 hours: 2.0 × (1 − 0.50) = 1.0 mg/kg/min. After 72 hours: 1.5 × (1 − 0.90) = 0.15 mg/kg/min, which is 15% of 1.0. The 75% value compares total HGO (1.5 vs 2.0) without separating the two sources. The 50% value is the 12-hour gluconeogenic fraction, not a comparison between conditions. The 5% value would require the 72-hour glycogenolytic fraction to be about 0.03 rather than 0.10.',
+        optionExplanations: [
+          'Five percent would require the 72-hour glycogenolytic fraction to be about 0.03 (1.5 × 0.03 ≈ 0.05 mg/kg/min). The table gives 1 − 0.90 = 0.10, so the glycogen-derived output is 0.15 mg/kg/min.',
+          'Correct. Glycogen-derived glucose = HGO × (1 − gluconeogenic fraction). At 12 h: 2.0 × 0.50 = 1.0 mg/kg/min. At 72 h: 1.5 × 0.10 = 0.15 mg/kg/min, which is 15% of the 12-hour rate.',
+          'Fifty percent is the 12-hour gluconeogenic (or glycogenolytic) fraction read from the table, not a comparison between the two fasting conditions.',
+          'Seventy-five percent compares total HGO (1.5 versus 2.0 mg/kg/min) without separating glycogen-derived glucose from gluconeogenesis. Nearly all 72-hour output is gluconeogenic.',
+        ],
         skill: '1D glycogenolysis vs gluconeogenesis',
       },
       {
@@ -47,6 +53,12 @@ export const FL2_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'At 72 hours glucagon is high and insulin is very low, so hepatic PKA is active. PKA phosphorylates the bifunctional PFK-2/FBPase-2 enzyme, lowering fructose 2,6-bisphosphate; this relieves inhibition of fructose-1,6-bisphosphatase and stimulates gluconeogenesis, consistent with the 0.90 gluconeogenic fraction. Glycogen synthase is inactivated by PKA-dependent phosphorylation when glucagon is high. Acetyl-CoA carboxylase, which commits acetyl-CoA to fatty acid synthesis, is phosphorylated and inhibited in the fasted state. Liver pyruvate kinase is phosphorylated and inhibited by PKA, which prevents the futile cycling of newly formed phosphoenolpyruvate back to pyruvate.',
+        optionExplanations: [
+          'Acetyl-CoA carboxylase commits acetyl-CoA to fatty acid synthesis, a fed-state pathway. In prolonged fasting with high glucagon it is phosphorylated and inhibited, so its activity falls.',
+          'Glycogen synthase is inactivated by PKA-dependent phosphorylation when glucagon is high and insulin is low. At 72 hours its activity is at its lowest, not its highest.',
+          'Liver pyruvate kinase is phosphorylated and inhibited by PKA during fasting, which prevents newly made phosphoenolpyruvate from cycling back to pyruvate. Its activity decreases.',
+          'Correct. At 72 h glucagon is high and insulin very low, so PKA phosphorylates PFK-2/FBPase-2 and lowers fructose 2,6-bisphosphate. That relieves inhibition of fructose-1,6-bisphosphatase and drives gluconeogenesis, consistent with the 0.90 gluconeogenic fraction.',
+        ],
         skill: '1D hormonal regulation of metabolism',
       },
       {
@@ -61,6 +73,12 @@ export const FL2_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'By 72 hours β-HB has risen to 3.5 mM, and tissues such as the brain and heart oxidize ketone bodies in place of much of the glucose they would otherwise consume. Glucose demand therefore falls, plasma glucose is defended at a lower level, and the liver needs to release less glucose even though its gluconeogenic machinery is fully activated; absolute gluconeogenic output actually rose (from 1.0 to 1.35 mg/kg/min). Free fatty acids do not block glucagon receptors. Insulin inhibits rather than stimulates gluconeogenesis, so its fall cannot reduce glucose output. Glucagon activates, not inactivates, glycogen phosphorylase; glycogenolysis fell because glycogen stores were depleted.',
+        optionExplanations: [
+          'Correct. By 72 h β-HB is 3.5 mM, and brain and other tissues oxidize ketone bodies in place of much glucose. Demand falls, glucose is defended at a lower level, and the liver releases less even though gluconeogenesis is fully activated (its absolute output actually rose).',
+          'Free fatty acids do not block glucagon binding to hepatocytes. Glucagon signaling is clearly active at 72 h, as shown by the 0.90 gluconeogenic fraction and the high ketone output.',
+          'Insulin inhibits gluconeogenesis rather than stimulating it. A fall in insulin removes a brake, so it cannot explain a decrease in hepatic glucose output.',
+          'Glucagon activates glycogen phosphorylase through PKA and phosphorylase kinase; it does not inactivate it. Glycogenolysis fell because stores were depleted, not because the enzyme was switched off.',
+        ],
         skill: '1D fuel use in prolonged fasting',
       },
       {
@@ -75,6 +93,12 @@ export const FL2_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'With β-oxidation blocked at the medium-chain step, the child’s liver cannot generate acetyl-CoA from fatty acids. Ketone bodies are made from acetyl-CoA, so β-HB stays low despite abundant FFA. Gluconeogenesis also suffers: acetyl-CoA is the allosteric activator of pyruvate carboxylase, and fatty acid oxidation normally supplies the ATP and NADH that gluconeogenesis consumes, while tissues that cannot oxidize fatty acids keep drawing on glucose. The child’s FFA of 2.1 mM is high, which rules out impaired lipolysis. Insulin of 2 μU/mL is very low, ruling out insulin excess, and glucagon of 160 pg/mL is elevated, ruling out glucagon deficiency.',
+        optionExplanations: [
+          'Insulin is 2 μU/mL, very low, so insulin excess is excluded. Low insulin should permit both ketogenesis and glucose release; the defect lies downstream, in fatty acid oxidation.',
+          'FFA is 2.1 mM, higher than the healthy 72-hour adult value, so lipolysis is intact. The liver has abundant fatty acid substrate; it simply cannot oxidize the medium-chain intermediates.',
+          'Correct. With β-oxidation blocked at the medium-chain step, the liver cannot make acetyl-CoA from fatty acids, so ketone bodies stay low despite high FFA. Gluconeogenesis also falters: acetyl-CoA activates pyruvate carboxylase, and fatty acid oxidation normally supplies the ATP and NADH it consumes.',
+          'Glucagon is 160 pg/mL, elevated as expected in fasting, so the hormonal signal is present. The enzymes are being told to work; they lack the acetyl-CoA and ATP that fatty acid oxidation should provide.',
+        ],
         skill: '1D fatty acid oxidation and ketogenesis',
       },
       {
@@ -89,6 +113,12 @@ export const FL2_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The hypothesis is that gluconeogenesis, not glycogen mobilization, has failed. Alanine is a major gluconeogenic precursor; if labeled alanine is converted to labeled plasma glucose much less efficiently in the child than in fasted healthy children, the gluconeogenic pathway is directly shown to be impaired. A low glycogen content after 24 hours would support the alternative explanation that glycogen depletion caused the hypoglycemia. A normal glucose response to glucagon shortly after a meal shows that glycogenolysis works but says nothing about gluconeogenesis. A normal rise in FFA reflects intact lipolysis, which the 24-hour data already demonstrate, and does not test gluconeogenesis.',
+        optionExplanations: [
+          'Low liver glycogen after 24 h would support the alternative explanation, that glycogen depletion caused the hypoglycemia, rather than a failure of gluconeogenesis.',
+          'A normal glucose response to glucagon after a meal shows that glycogenolysis works but says nothing about gluconeogenesis, which is the pathway the hypothesis implicates.',
+          'A normal rise in FFA reflects intact lipolysis, which the 24-hour data (FFA 2.1 mM) already show. It does not test whether gluconeogenic precursors are converted to glucose.',
+          'Correct. Alanine is a major gluconeogenic precursor. If labeled alanine yields far less labeled plasma glucose in the child than in fasted healthy children, impaired gluconeogenesis is demonstrated directly, as the hypothesis predicts.',
+        ],
         skill: '1D research design in metabolism',
       },
     ],
@@ -114,6 +144,12 @@ export const FL2_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Reabsorption equals filtered load minus excretion. In the control study this difference is 125, 235, 315, 370, and 375 mg/min at the five steps; it stops increasing between the 400 and 500 mg/dL steps, so the transport maximum is about 375 mg/min. The 125 mg/min value is the reabsorption at the lowest step, where the system is far from saturated. The 250 mg/min value is the excretion rate at the highest step, not the amount reabsorbed. The 500 mg/min value is the filtered load at 400 mg/dL, of which 130 mg/min was excreted.',
+        optionExplanations: [
+          'At 100 mg/dL reabsorption is 125 − 0 = 125 mg/min, but the system is far from saturated there; reabsorption keeps rising at higher loads until it plateaus.',
+          'Two hundred fifty mg/min is the excretion rate at the 500 mg/dL step, not the amount reabsorbed. Reabsorption at that step is 625 − 250 = 375 mg/min.',
+          'Correct. Reabsorption = filtered load − excretion: 125, 235, 315, 370 and 375 mg/min across the five steps. It stops increasing between 400 and 500 mg/dL, so the transport maximum is about 375 mg/min.',
+          'Five hundred mg/min is the filtered load at 400 mg/dL. Of that, 130 mg/min was excreted, so only 370 mg/min was reabsorbed.',
+        ],
         skill: '3B renal transport maximum',
       },
       {
@@ -128,6 +164,12 @@ export const FL2_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Reabsorption equals filtered load minus excretion. With the inhibitor this is 125 − 45, 250 − 170, 375 − 295, 500 − 420, and 625 − 545, or 80 mg/min at every step. A rate that does not rise as delivery rises means the transport that remains (SGLT1, which the inhibitor spares) was already at its maximal rate at 100 mg/dL, as expected for a low-capacity transporter receiving the glucose that SGLT2 would normally have removed. Reabsorption did not rise in step with the filtered load, which increased fivefold. The fraction reabsorbed fell from about 64% to about 13%, so it was not constant. A steady 80 mg/min was still recovered, so reabsorption did not fall to zero.',
+        optionExplanations: [
+          'Reabsorption did not rise with filtered load. Load increased fivefold (125 to 625) while reabsorption stayed at 80 mg/min at every step, so the remaining transporters were saturated, not far from it.',
+          'Correct. Filtered load minus excretion is 125 − 45, 250 − 170, 375 − 295, 500 − 420, 625 − 545, all 80 mg/min. A rate that does not rise with delivery means the spared SGLT1, a low-capacity transporter, was already at its maximum at 100 mg/dL.',
+          'The fraction reabsorbed fell from 64% (80/125) to 13% (80/625), so it was not constant. The inhibitor blocks SGLT2 completely rather than lowering every transporter’s affinity.',
+          'Reabsorption did not fall to zero; a steady 80 mg/min was recovered at every step by SGLT1, which the inhibitor does not touch. SGLT2 accounts for most, not all, reabsorption.',
+        ],
         skill: '3B renal transport data',
       },
       {
@@ -142,6 +184,12 @@ export const FL2_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Water reabsorption in the proximal tubule follows solute reabsorption osmotically. When glucose is left in the lumen, it holds water there, so less water (and less of the sodium that would have followed) is reabsorbed and urine flow rises: an osmotic diuresis. The same mechanism explains the modest rise in control urine flow at the highest step, where 250 mg/min of glucose escaped reabsorption. Nothing in the study indicates a change in ADH signaling, and a collecting-duct effect would not explain the parallel rise in sodium excretion. GFR was held constant at 125 mL/min, so an afferent arteriolar effect is excluded. The inhibitor prevents glucose from entering the cells, so it cannot accumulate inside them.',
+        optionExplanations: [
+          'Correct. Proximal water reabsorption follows solute osmotically. Glucose left in the lumen holds water there, so less water and less of the sodium that would follow are reabsorbed: an osmotic diuresis, matching the parallel rise in sodium excretion.',
+          'Nothing in the study indicates altered ADH signaling, and a collecting-duct water effect would not explain why sodium excretion rose in parallel with urine flow.',
+          'GFR was measured by inulin clearance and held at 125 mL/min throughout both studies. An afferent arteriolar effect raising GFR is therefore excluded.',
+          'The inhibitor blocks glucose entry into the tubular cells from the lumen, so glucose cannot accumulate inside them. The osmotic effect comes from glucose remaining in the tubular fluid.',
+        ],
         skill: '3B osmotic diuresis',
       },
       {
@@ -156,6 +204,12 @@ export const FL2_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Sodium–glucose cotransport is secondary active transport: the energy comes from $\\text{Na}^+$ flowing down a gradient that the basolateral $\\text{Na}^+$/$\\text{K}^+$-ATPase maintains by pumping $\\text{Na}^+$ out of the cell. If the pump stops, intracellular $\\text{Na}^+$ rises, the gradient collapses, and the cotransporters can no longer accumulate glucose. Basolateral glucose exit is by facilitated diffusion through GLUT proteins and needs no ATP. The pump moves $\\text{Na}^+$ and $\\text{K}^+$ only and is on the basolateral, not the apical, membrane. Any change in tubular flow would be a secondary consequence, not the reason transport fails.',
+        optionExplanations: [
+          'Basolateral glucose exit is by facilitated diffusion through GLUT transporters and needs no ATP. The pump’s role is upstream, maintaining the Na⁺ gradient for apical entry.',
+          'The Na⁺/K⁺-ATPase moves only Na⁺ and K⁺ and sits on the basolateral membrane. It does not cotransport glucose, and apical uptake is by SGLT proteins, not the pump.',
+          'Any change in tubular flow would be a secondary consequence. The direct reason transport fails is loss of the Na⁺ gradient that powers the cotransporter.',
+          'Correct. Sodium–glucose cotransport is secondary active transport driven by Na⁺ flowing down a gradient the basolateral Na⁺/K⁺-ATPase maintains. If the pump stops, intracellular Na⁺ rises, the gradient collapses, and SGLTs can no longer accumulate glucose.',
+        ],
         skill: '3B secondary active transport',
       },
     ],
@@ -184,6 +238,12 @@ export const FL2_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Without mannose 6-phosphate, the hydrolases are not bound by the receptors in the late Golgi, so they follow the default pathway for soluble proteins and are secreted. The lysosomes, deprived of their enzymes, fill with undigested material (the pattern seen in I-cell disease). The hydrolases are already folded and have left the ER before the tag would be added in the Golgi, so ER retention and proteasomal degradation, which apply to misfolded proteins, do not follow. Secretion, not lysosomal delivery, is the default fate of a soluble protein that reaches the Golgi without a sorting signal.',
+        optionExplanations: [
+          'The hydrolases fold normally and leave the ER before the tag would be added in the Golgi. ER retention applies to misfolded proteins, not to correctly folded proteins lacking a Golgi sorting tag.',
+          'Proteasomal degradation follows retrotranslocation of misfolded ER proteins. These hydrolases are properly folded and already in the Golgi, so they are not routed to the cytosol.',
+          'Correct. Without mannose 6-phosphate, the hydrolases are not captured by the late-Golgi receptors and follow the default pathway for soluble proteins: secretion. Lysosomes lacking their enzymes fill with undigested material.',
+          'The default fate of an untagged soluble protein reaching the Golgi is secretion, not lysosomal delivery. Lysosomal targeting requires the mannose 6-phosphate signal.',
+        ],
         skill: '1B protein targeting',
       },
       {
@@ -198,6 +258,12 @@ export const FL2_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The part of the chain made before the stop-transfer sequence, which includes the amino terminus, is threaded into the ER lumen, and N-linked glycosylation takes place only in the lumen, so both lie on the lumenal side. When a transport vesicle fuses with the plasma membrane, the inner (lumenal) face of the vesicle membrane becomes the outer face of the cell, so both end up extracellular. The cytosolic option ignores that the amino-terminal portion was translocated. The two mixed options place the amino terminus and the glycans on opposite sides, but both were in the same compartment, the lumen, from the start.',
+        optionExplanations: [
+          'Correct. The chain made before the stop-transfer sequence, including the amino terminus, enters the ER lumen, and N-glycosylation occurs only in the lumen. When vesicles fuse with the plasma membrane the lumenal face becomes extracellular, so both end up outside the cell.',
+          'The amino-terminal portion was translocated into the lumen before the stop-transfer sequence halted transfer, so it cannot be cytosolic. N-linked glycans are added only in the lumen, never in the cytosol.',
+          'Both the amino terminus and the glycans were in the lumen from the start; glycosylation happens on the translocated, lumenal portion. They cannot end up on opposite sides.',
+          'N-linked glycosylation takes place only in the ER lumen, so the oligosaccharides can never face the cytosol. The glycans and the amino terminus are on the same, extracellular side.',
+        ],
         skill: '1B membrane protein topology',
       },
       {
@@ -212,6 +278,12 @@ export const FL2_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The first ubiquitin is joined through its own carboxyl terminus to a lysine of the target protein, which the mutation does not change, so the target can still be marked. What cannot form is a chain linked through lysine 48, the signal the proteasome recognizes, so the protein is degraded far more slowly and accumulates. Attachment to the target does not require lysine 48 of ubiquitin, so the options in which the protein carries no ubiquitin are wrong, and nothing in the passage suggests a switch to lysosomal degradation. Loss of the proteasome-targeting chain cannot speed degradation.',
+        optionExplanations: [
+          'The first ubiquitin attaches through its own carboxyl terminus to a lysine on the target, which the mutation does not change, so the protein is still ubiquitinated. And without the K48 chain it is degraded more slowly, not at the usual rate.',
+          'Correct. Mono-ubiquitination still occurs because attachment uses ubiquitin’s C-terminus and a lysine on the substrate. What cannot form is a lysine-48-linked chain, the proteasome’s recognition signal, so the protein is degraded far more slowly and accumulates.',
+          'Loss of the proteasome-targeting chain cannot speed degradation. Without K48-linked polyubiquitin the proteasome does not recognize the substrate efficiently.',
+          'The protein can still receive ubiquitin, since attachment to the target does not need lysine 48. Nothing in the passage suggests the proteasome substrate would be rerouted to lysosomes.',
+        ],
         skill: '1B ubiquitin–proteasome system',
       },
       {
@@ -226,6 +298,12 @@ export const FL2_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Loss of the mutant enzyme from the cells could reflect secretion, lysosomal breakdown, or proteasomal breakdown. Showing that a proteasome inhibitor slows its disappearance ties the loss specifically to the proteasome, as the ER quality-control pathway predicts. Faster disappearance than the normal enzyme, on its own, cannot distinguish degradation from secretion or identify the route of degradation. The secretion rate of the normal enzyme says nothing about the fate of the mutant. mRNA abundance affects synthesis, which is blocked during the measurement, not degradation.',
+        optionExplanations: [
+          'Faster disappearance alone cannot distinguish degradation from secretion, nor identify the degradative route. The mutant could be leaving the cell rather than being destroyed.',
+          'The secretion rate of the normal enzyme says nothing about the fate of the mutant. It tests a different protein and a different process.',
+          'Correct. Loss of the mutant from the cells could reflect secretion, lysosomal breakdown or proteasomal breakdown. Showing that a proteasome inhibitor slows its disappearance ties the loss specifically to the proteasome, as ER quality control predicts.',
+          'mRNA abundance affects synthesis, which is blocked during the measurement. It has no bearing on how fast the existing protein disappears or by what pathway.',
+        ],
         skill: '1B research design',
       },
     ],
@@ -265,6 +343,12 @@ export const FL2_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Between 2 and 4 hours the untreated count rises from $10^{6.8}$ to $10^{8.6}$ CFU/mL, 1.8 log units in 2 hours, or 0.9 log unit per hour. One doubling adds $\\log_{10} 2 \\approx 0.30$ log unit, so the culture doubles three times per hour, once every 20 minutes. A 60-minute generation time would give only 0.3 log unit per hour, and a 40-minute time about 0.45 log unit per hour; both are far slower than the plotted rise. A 10-minute time would require 1.8 log units per hour, twice the observed slope.',
+        optionExplanations: [
+          'A 10-minute generation time would give six doublings per hour, about 1.8 log units per hour. The observed rise is 0.9 log unit per hour, half that.',
+          'Correct. Between 2 and 4 h the count rises from $10^{6.8}$ to $10^{8.6}$, 0.9 log unit per hour. Each doubling adds $\\log_{10} 2 \\approx 0.30$, so there are three doublings per hour: one every 20 minutes.',
+          'A 40-minute generation time gives 1.5 doublings per hour, about 0.45 log unit per hour, only half the observed slope of 0.9.',
+          'A 60-minute generation time would add only 0.3 log unit per hour. The culture gained 1.8 log units in two hours, three times faster.',
+        ],
         skill: '2B bacterial growth data',
       },
       {
@@ -279,6 +363,12 @@ export const FL2_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The leveling off at about $10^{9.5}$ CFU/mL is the stationary phase: in a closed flask, nutrients run low and metabolic wastes build up, so the rate of division falls until it roughly equals the rate of cell death. Adjusting to fresh medium by making new enzymes and ribosomes describes the lag at the start of the curve, not its end. *E. coli* does not form endospores, and spores would in any case germinate and form colonies on the plates. Bacterial chromosomes are circular, so they do not shorten at their ends with each round of replication.',
+        optionExplanations: [
+          'Correct. The plateau at about $10^{9.5}$ CFU/mL is stationary phase: in a closed flask nutrients run low and wastes accumulate, so division slows until it roughly balances cell death.',
+          'Synthesizing enzymes and ribosomes to use fresh medium describes the lag phase at the start of the curve (0 to 1 h), not the plateau at its end.',
+          '*E. coli* does not form endospores, and even spores would germinate and form colonies on drug-free agar, so they would not be excluded from the viable count.',
+          'Bacterial chromosomes are circular and have no ends to shorten. Telomere shortening is a feature of linear eukaryotic chromosomes, not of bacterial replication.',
+        ],
         skill: '2B bacterial growth phases',
       },
       {
@@ -293,6 +383,12 @@ export const FL2_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Ampicillin kills by blocking cross-linking while a growing cell continues to open and extend its wall, so the weakened wall ruptures. Figure 1 shows that tetracycline stops growth without killing (the count stays near $10^{6.9}$), so in its presence little new wall is being made and ampicillin has no active process to disrupt; the count would stay near the tetracycline-alone value. This antagonism means the drugs do not simply act independently or add their effects. Nothing in the passage suggests that tetracycline blocks ampicillin entry, and even then the count could not rise toward the untreated value while protein synthesis is blocked.',
+        optionExplanations: [
+          'The drugs do not act independently here. Ampicillin’s killing depends on active wall growth, which tetracycline halts, so ampicillin would not reach its usual lethal effect.',
+          'Blocking two targets would not kill faster because ampicillin requires growing cells. Tetracycline-arrested cells make little new wall, removing the process ampicillin disrupts; the combination is antagonistic, not synergistic.',
+          'Correct. Ampicillin kills when a growing cell keeps extending its wall without cross-links, so the weakened wall ruptures. Figure 1 shows tetracycline halts growth without killing (count stays near $10^{6.9}$), so little wall is made and ampicillin has nothing to disrupt.',
+          'Nothing in the passage suggests tetracycline blocks ampicillin entry, and the count could not rise toward the untreated value while protein synthesis remains blocked by tetracycline.',
+        ],
         skill: '2B antibiotic mechanisms',
       },
       {
@@ -307,6 +403,12 @@ export const FL2_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'If the plasmid gene product destroys ampicillin, broth in which the resistant strain has grown will have lost its activity and will no longer kill the sensitive strain; if resistance comes from an altered target inside the resistant cells, the filtered broth will still contain active drug and will kill sensitive cells. A higher ampicillin dose could be tolerated or not under either mechanism, so it does not distinguish them. Testing tetracycline examines a different drug and says nothing about how ampicillin resistance works. Transferring pAR1 DNA would show that the plasmid carries resistance, which is already known, not how the resistance works.',
+        optionExplanations: [
+          'A higher ampicillin dose could overwhelm either a drug-destroying enzyme or an altered target, or neither. Survival at a higher dose does not distinguish the two mechanisms.',
+          'Testing tetracycline examines a different drug with a different target. It reveals nothing about how the plasmid confers resistance to ampicillin.',
+          'Transferring pAR1 DNA would confirm that the plasmid carries the resistance gene, which is already known from the growth curves. It does not reveal the mechanism.',
+          'Correct. If the plasmid product destroys ampicillin, broth in which the resistant strain grew will have lost its activity and will no longer kill sensitive cells. If resistance comes from an altered target inside the cells, the filtered broth still contains active drug and kills them.',
+        ],
         skill: '2B research design',
       },
       {
@@ -320,6 +422,12 @@ export const FL2_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The sensitive colonies contained no plasmid, so the plasmid itself was lost. When a cell occasionally divides without passing on a copy, the plasmid-free daughter is spared the cost of replicating and expressing the plasmid; without ampicillin to kill them, such cells gradually increase in the population. In ampicillin, plasmid-free cells are killed, so every surviving colony kept resistance. Silencing of the gene is ruled out because the sensitive colonies had no plasmid at all, and a chromosomal gene expressed too weakly would not explain the steady loss of the plasmid itself. Conjugative transfer copies the plasmid, so the donor keeps its own copy.',
+        optionExplanations: [
+          'If the gene had moved to the chromosome, the sensitive colonies would still carry it in their DNA. Weak expression also would not explain why plasmid DNA itself disappeared from those colonies.',
+          'The sensitive colonies contained no plasmid at all, so gene silencing cannot be the explanation. A switched-off gene on a retained plasmid would still be isolable as plasmid DNA.',
+          'Correct. Sensitive colonies had no plasmid, so the plasmid itself was lost. Cells that occasionally divide without passing on a copy are spared the cost of replicating and expressing it, and without ampicillin to kill them they gradually outgrow plasmid-bearing cells.',
+          'Conjugation copies the plasmid by replicative transfer; the donor keeps its own copy. Transfer cannot generate plasmid-free cells from plasmid-bearing ones.',
+        ],
         skill: '2B plasmids and selection',
       },
     ],
@@ -343,6 +451,12 @@ export const FL2_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Every residue linked by an α(1→4) bond, including the three residues moved by the transferase activity, is eventually removed by phosphorylase as glucose 1-phosphate. Only the residue attached by the α(1→6) bond at each branch point is released by hydrolysis as free glucose. With one branch residue per 10 residues, 9 of every 10 residues become glucose 1-phosphate: a 9:1 ratio. The 10:1 ratio counts 10 phosphorylated residues for every branch residue rather than 10 residues in total. The 3:1 ratio takes the three residues moved by the transferase as the only phosphorylated products at each branch. A 1:1 ratio would require hydrolysis to release as many residues as phosphorolysis.',
+        optionExplanations: [
+          'A 1:1 ratio would require hydrolysis to release as many residues as phosphorolysis. Only the single α(1→6)-linked residue at each branch is released as free glucose.',
+          'A 3:1 ratio counts only the three residues moved by the transferase as phosphorylated products at each branch. In fact every α(1→4)-linked residue, including those three, ends up as glucose 1-phosphate.',
+          'Correct. Every α(1→4)-linked residue, including the three moved by the transferase, is eventually removed by phosphorylase as glucose 1-phosphate. Only the α(1→6)-linked branch residue is hydrolyzed to free glucose. One branch per 10 residues gives 9:1.',
+          'A 10:1 ratio counts 10 phosphorylated residues for every branch residue rather than 10 residues in total. With one branch residue per 10, the other 9 are phosphorylated.',
+        ],
         skill: '1D glycogen breakdown',
       },
       {
@@ -357,6 +471,12 @@ export const FL2_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Free glucose must be phosphorylated by hexokinase at the cost of one ATP before it can enter glycolysis. Phosphorylase uses inorganic phosphate to cleave the glycosidic bond, so the residue emerges already phosphorylated as glucose 1-phosphate, and phosphoglucomutase converts it to glucose 6-phosphate without using ATP. The net yield therefore rises from 2 to 3 ATP per residue. The phosphofructokinase-1 step still consumes ATP, so the gain is one, not two. Phosphoglucomutase is an isomerase and uses no ATP. Only the branch-point residues are released by hydrolysis; the residues cleaved by phosphorylase are not.',
+        optionExplanations: [
+          'Correct. Free glucose must be phosphorylated by hexokinase at the cost of one ATP. Phosphorylase uses inorganic phosphate, so the residue emerges as glucose 1-phosphate and phosphoglucomutase isomerizes it to glucose 6-phosphate without ATP, raising net yield from 2 to 3 ATP.',
+          'The phosphofructokinase-1 step still consumes ATP for every glucose 6-phosphate that enters glycolysis. Only the hexokinase step is bypassed, so the gain is one ATP, not two.',
+          'Phosphoglucomutase is an isomerase that moves a phosphate from carbon 1 to carbon 6; it consumes no ATP. The sugar phosphate from phosphorolysis is a free gift relative to hexokinase.',
+          'Only the branch-point residues are released by hydrolysis as free glucose. Residues cleaved by phosphorylase are not hydrolyzed; they are phosphorylated by inorganic phosphate at no ATP cost.',
+        ],
         skill: '1D glycogen energetics',
       },
       {
@@ -371,6 +491,12 @@ export const FL2_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Because liver phosphorylase is a separate gene product and is intact, the liver can still release glucose from glycogen, and fasting blood glucose is normal. During brief, intense exercise, working muscle normally breaks down its own glycogen and converts much of the resulting glucose 6-phosphate to lactate; without muscle phosphorylase this source is unavailable, so blood lactate rises little and the patient tires quickly. A low fasting glucose and liver glycogen accumulation would point to a defect in the liver pathway, not in the muscle isozyme. A larger lactate rise would require more, not less, glycolytic flux from muscle glycogen.',
+        optionExplanations: [
+          'Fasting glucose depends on liver phosphorylase, which is a separate gene product and is intact, so fasting glucose is normal. A larger lactate rise also contradicts the loss of muscle glycogenolysis.',
+          'Low fasting glucose and hepatic glycogen accumulation would indicate a liver-pathway defect. The patient’s liver isozyme is intact, so hepatic glycogen handling is normal.',
+          'Fasting glucose is correctly normal, but a larger lactate rise would require more glycolytic flux from muscle glycogen. Without muscle phosphorylase, that flux is lost and lactate rises little.',
+          'Correct. Liver phosphorylase is intact, so hepatic glucose release and fasting glucose are normal. During brief intense exercise, muscle normally converts its own glycogen to lactate; without muscle phosphorylase this source is unavailable, so lactate rises only slightly and the patient fatigues.',
+        ],
         skill: '1D glycogen storage disease',
       },
       {
@@ -384,6 +510,12 @@ export const FL2_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Both glycogen synthase and phosphorylase act only at nonreducing ends, and each branch adds another such end. A highly branched particle therefore presents many sites at once, allowing glucose to be stored or mobilized rapidly (branching also increases solubility). Debranching enzyme hydrolyzes α(1→6) bonds, so branch points do not protect glycogen from breakdown. The energy a residue yields comes from oxidizing the glucose, not from the type of glycosidic bond, and the two bonds differ little in free energy of hydrolysis. Glycogen is far too large to cross membranes whether branched or not; it remains in the cytosol as particles.',
+        optionExplanations: [
+          'Debranching enzyme hydrolyzes α(1→6) bonds with its glucosidase activity, so branch points do not protect glycogen from breakdown. Branching serves mobilization, not protection.',
+          'Correct. Glycogen synthase and phosphorylase both act only at nonreducing ends, and every branch creates another. A highly branched particle presents many sites simultaneously, allowing rapid storage and rapid mobilization of glucose.',
+          'The energy a residue yields comes from oxidizing glucose, not from the type of glycosidic bond, and α(1→4) and α(1→6) bonds differ little in free energy of hydrolysis.',
+          'Glycogen is far too large to cross membranes whether branched or not. It remains in the cytosol as particles; its compactness matters for storage density, not transport.',
+        ],
         skill: '1D polysaccharide structure',
       },
     ],
@@ -406,6 +538,12 @@ export const FL2_BIO_BIOCHEM_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'During a single twitch, $\\text{Ca}^{2+}$ is pumped back into the sarcoplasmic reticulum before the contractile machinery reaches full force. When stimuli arrive faster than relaxation, $\\text{Ca}^{2+}$ remains elevated, troponin keeps tropomyosin off the myosin-binding sites on actin, and cross-bridge cycling continues, so forces summate toward tetanus. Action potentials are all-or-none and do not grow during a train. Recruitment of motor units cannot occur in a single fiber stimulated directly. Stretching sarcomeres beyond their optimal length reduces, rather than increases, filament overlap and force.',
+    optionExplanations: [
+      'Action potentials are all-or-none and do not grow during a train. Each releases a similar quantity of acetylcholine; summation occurs downstream in the muscle fiber.',
+      'Motor unit recruitment involves activating additional motor neurons and cannot occur when a single fiber is stimulated directly. The question concerns one fiber.',
+      'Correct. In a single twitch Ca²⁺ is pumped back into the SR before full force develops. With stimuli arriving faster than relaxation, Ca²⁺ stays elevated, troponin keeps tropomyosin off actin’s binding sites, and cross-bridges keep cycling, so force summates toward tetanus.',
+      'Stretching sarcomeres beyond their optimal length reduces thick–thin filament overlap and decreases force. Tetanic force comes from sustained activation, not from stretch.',
+    ],
     skill: '3B skeletal muscle summation',
   },
   {
@@ -423,6 +561,12 @@ export const FL2_BIO_BIOCHEM_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'The receptor potential is graded: a stronger stimulus depolarizes the receptor ending more, which brings the axon to threshold again sooner after each spike and raises the firing rate. Stimulus intensity is therefore coded by action potential frequency (and, across a population, by the number of receptors activated). Action potentials are all-or-none, so their amplitude and duration are set by the channels of the axon, not by the stimulus. Conduction velocity depends on axon diameter and myelination, which do not change with stimulus strength.',
+    optionExplanations: [
+      'Correct. The receptor potential is graded: stronger pressure depolarizes the ending more, bringing the axon to threshold sooner after each spike. Stimulus intensity is coded by action potential frequency.',
+      'Action potentials are all-or-none; their amplitude is set by the axon’s channel densities and ionic gradients, not by stimulus strength.',
+      'Conduction velocity depends on axon diameter and myelination, which do not change with stimulus strength. A stronger stimulus does not make spikes travel faster.',
+      'Action potential duration is set by the kinetics of the voltage-gated channels and is essentially fixed. It does not lengthen with stronger stimuli.',
+    ],
     skill: '3A sensory receptors',
   },
   {
@@ -439,6 +583,12 @@ export const FL2_BIO_BIOCHEM_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'A primary spermatocyte (46 replicated chromosomes) completes meiosis I, which separates homologous chromosomes, producing two secondary spermatocytes, each with 23 chromosomes still made of two sister chromatids. Meiosis II then separates the sister chromatids to give spermatids with 23 single-chromatid chromosomes. Forty-six chromosomes with two chromatids each describes the primary spermatocyte; 23 single-chromatid chromosomes describes a spermatid or sperm; 46 single-chromatid chromosomes describes a spermatogonium before DNA replication.',
+    optionExplanations: [
+      'Forty-six replicated chromosomes describes the primary spermatocyte before meiosis I. Meiosis I has already separated homologs in a secondary spermatocyte, halving the number to 23.',
+      'Correct. Meiosis I separates homologous chromosomes, leaving each secondary spermatocyte with 23 chromosomes, each still composed of two sister chromatids. Meiosis II then separates the chromatids.',
+      'Twenty-three single-chromatid chromosomes describes a spermatid or sperm, after meiosis II has separated sister chromatids. A secondary spermatocyte has not yet completed meiosis II.',
+      'Forty-six single-chromatid chromosomes describes a spermatogonium in G1, before DNA replication. It is not a meiotic cell at all.',
+    ],
     skill: '2C gametogenesis',
   },
   {
@@ -456,6 +606,12 @@ export const FL2_BIO_BIOCHEM_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'The absence of M3 shows that both X chromosomes came from the mother, so the father contributed the Y. Because the marker lies next to the centromere, crossing over is very unlikely to have separated it from the centromere, and two identical copies (M1 and M1) indicate that sister chromatids failed to separate, which is nondisjunction in meiosis II. Nondisjunction in maternal meiosis I would have delivered both homologs, giving M1 and M2. Paternal nondisjunction in meiosis I would produce an XY sperm, giving the boy a paternal X carrying M3, and paternal nondisjunction in meiosis II produces XX or YY sperm, which give XXX or XYY rather than XXY.',
+    optionExplanations: [
+      'Paternal meiosis I nondisjunction would produce an XY sperm, giving the boy a paternal X carrying M3. He has no M3, so both X chromosomes came from his mother.',
+      'Paternal meiosis II nondisjunction yields XX or YY sperm, producing XXX or XYY offspring, not XXY. And the absence of M3 shows no paternal X was contributed.',
+      'Maternal meiosis I nondisjunction would deliver both homologs, so the boy would carry M1 and M2. He has two copies of M1 only, so homologs were not both passed.',
+      'Correct. No M3 means both X chromosomes are maternal. Two identical copies of M1 at a centromere-adjacent marker (where crossing over is very unlikely) indicate sister chromatids failed to separate, which is maternal meiosis II nondisjunction.',
+    ],
     skill: '1C meiosis and nondisjunction',
   },
   {
@@ -468,6 +624,12 @@ export const FL2_BIO_BIOCHEM_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'After migration the island population is 90% residents and 10% migrants, so the new frequency is the weighted average $0.90(0.20) + 0.10(0.60) = 0.18 + 0.06 = 0.24$. Gene flow moves the island frequency toward the mainland value in proportion to the fraction of migrants. The value 0.26 adds the migrants’ contribution without reducing the residents’ share to 90%. The value 0.40 is the unweighted mean of the two populations, and 0.60 is the mainland frequency, which would be reached only if migrants replaced the residents entirely.',
+    optionExplanations: [
+      'Correct. After migration the population is 90% residents and 10% migrants: $0.90(0.20) + 0.10(0.60) = 0.18 + 0.06 = 0.24$. Gene flow moves the island frequency toward the mainland value in proportion to the migrant fraction.',
+      'This adds the migrants’ contribution (0.06) to the full resident frequency (0.20) without scaling residents down to 90%. Residents now contribute 0.18, not 0.20.',
+      'Forty percent is the unweighted mean of 0.20 and 0.60. Migrants make up only 10% of the breeding population, so the average must be weighted 90:10.',
+      'Sixty percent is the mainland frequency. The island would reach it only if migrants replaced the residents entirely, not when they form 10% of the population.',
+    ],
     skill: '1C gene flow',
   },
   {
@@ -485,6 +647,12 @@ export const FL2_BIO_BIOCHEM_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'Thiamine is the precursor of thiamine pyrophosphate, the coenzyme used by the first component of the pyruvate dehydrogenase complex to decarboxylate pyruvate. When this step is slowed, pyruvate accumulates and is reduced to lactate. Lactate dehydrogenase uses NAD(H), derived from niacin, and reduced activity would lower rather than raise lactate. Pyruvate carboxylase requires biotin, and alanine aminotransferase requires pyridoxal phosphate from vitamin $\\text{B}_6$; neither depends on thiamine.',
+    optionExplanations: [
+      'Lactate dehydrogenase uses NAD(H), derived from niacin, not thiamine. Reduced LDH activity would lower lactate formation from pyruvate rather than raise lactate.',
+      'Pyruvate carboxylase is a biotin-dependent enzyme. Its activity does not depend on thiamine, so thiamine deficiency does not impair it.',
+      'Alanine aminotransferase requires pyridoxal phosphate from vitamin B₆. It does not use thiamine, so it is not the enzyme affected here.',
+      'Correct. Thiamine pyrophosphate is the coenzyme of the pyruvate dehydrogenase E1 component, which decarboxylates pyruvate. When this step slows, pyruvate accumulates and is reduced to lactate, raising both.',
+    ],
     skill: '1A cofactors and vitamins',
   },
   {
@@ -502,6 +670,12 @@ export const FL2_BIO_BIOCHEM_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'Uracil and thymine pair identically with adenine; thymine differs only by a methyl group at carbon 5. Because uracil is not a normal component of DNA, a repair glycosylase can remove any uracil it finds, knowing that it arose from cytosine, and the gap is refilled with C opposite the G. If DNA normally contained uracil, deaminated cytosine could not be told apart from a genuine base. A–T pairs form two hydrogen bonds, not three, and are less stable than G–C pairs. The methyl group does not protect neighboring bases from hydrolysis. Thymine pairs with adenine, not guanine.',
+    optionExplanations: [
+      'A–T pairs form two hydrogen bonds, not three, and are less stable than G–C pairs. The methyl group of thymine does not add a hydrogen bond.',
+      'Correct. Uracil and thymine pair identically with adenine. Because uracil is not a normal DNA base, a repair glycosylase can remove any uracil it finds, knowing it arose from deaminated cytosine, and refill the gap with C opposite G.',
+      'The methyl group at carbon 5 does not shield neighboring bases from hydrolytic deamination. Its value is in making uracil recognizable as damage.',
+      'Thymine pairs with adenine, not guanine. Deamination produces uracil, which pairs with adenine and would fix a C→T mutation if left unrepaired; no automatic restoration occurs.',
+    ],
     skill: '1D nucleotide chemistry',
   },
 ]

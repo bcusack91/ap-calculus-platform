@@ -46,7 +46,7 @@ import { FULL_LENGTH_FORMS } from '@/data/mcat/full-length'
 import { fullLengthQuestionId } from '@/data/mcat/types'
 import { generateSectionTest } from '@/data/mcat-practice/test-generator'
 import { mcatPracticeBatchRow } from '@/lib/question-activity-rows'
-import { isQuestionKey } from '@/lib/question-key'
+import { isQuestionKey, optionKey } from '@/lib/question-key'
 
 const post = (body: unknown) =>
   new Request('http://localhost/api/x', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) })
@@ -115,6 +115,10 @@ describe('POST /api/mcat-full-length/submit — per-question answers', () => {
     expect(rows.every((r) => r.source === 'FULL_LENGTH' && r.attemptKind === 'mcat-fl' && r.attemptId === 'fl-att' && isQuestionKey(r.questionKey as string))).toBe(true)
     expect(rows[0]).toMatchObject({ itemIndex: 0, flagged: true, chosenIndex: answers[flagged] })
     expect(rows[1].flagged).toBeUndefined() // false = the column default, not written
+    // chosenKey: optionKey of the authored option picked (FL options are shown in authored order).
+    const q0 = fl.passages[0].questions[0]
+    expect(rows[0].chosenKey).toBe(optionKey(q0.options[answers[flagged]]))
+    expect(rows.every((r) => typeof r.chosenKey === 'string' && (r.chosenKey as string).startsWith('o:'))).toBe(true)
   })
 
   it('an older client (section tallies only) keeps the batch rows', async () => {
@@ -145,6 +149,10 @@ describe('POST /api/mcat-practice/submit — refs', () => {
     expect(rows.reduce((n, r) => n + (r.correct as number), 0)).toBe(batch.correct)
     expect(rows.every((r) => r.attemptKind === 'mcat-practice' && r.attemptId === 'pr-att')).toBe(true)
     expect(rows.map((r) => r.chosenIndex ?? null)).toEqual(answers.map((a) => a.selected))
+    // chosenKey from the re-resolved shown options; skipped → not written.
+    expect(rows.map((r) => r.chosenKey ?? null)).toEqual(
+      answers.map((a, i) => (a.selected === null ? null : optionKey(test.questions[i].options[a.selected]))),
+    )
   })
 })
 
@@ -166,6 +174,7 @@ describe('POST /api/mcat-unit-test/submit — UNIT_TEST rows', () => {
       ['UNIT_TEST', 'mcat-prep', 't1', 1, 1, 0, 'unit-test', 'ut1'],
       ['UNIT_TEST', 'mcat-prep', 't2', 0, 0, 1, 'unit-test', 'ut1'],
     ])
+    expect(writtenRows().map((r) => r.chosenKey)).toEqual([optionKey('x'), optionKey('w')])
   })
 
   it('logs nothing for a double submit', async () => {

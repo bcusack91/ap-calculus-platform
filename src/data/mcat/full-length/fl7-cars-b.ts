@@ -30,6 +30,12 @@ export const FL7_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The author calls the true novelty “one of conception before it is one of discipline” and says the clock won when workers stopped resisting the hour and began “disputing the price,” a change no overseer imposed. The forced-on-workers option is the usual account, which the author says is “not false” but misleading. The freed-workers option is the reading the last sentence rules out when it warns against seeing “liberation.” The cannot-be-studied option inflates the second paragraph’s caution about employers’ documents into a scepticism the author abandons as soon as the workers’ own protests are brought in as evidence.',
+        optionExplanations: [
+          'This is the usual account the passage opens with, which the author calls “not false” but misleading because it treats clock time as “simply something done to workers.” The passage argues for a different explanation of how the clock won.',
+          'The last sentence warns that we misread the history “if we see in it liberation.” The author does say a measurable day can be limited, but presenting the clock as freeing workers is one of the two misreadings explicitly rejected.',
+          'The author calls the true novelty “one of conception before it is one of discipline” and says the clock won when workers stopped resisting the hour and began “disputing the price.” That shift in workers’ own understanding, not employers’ rules, is the thesis.',
+          'This inflates the second paragraph’s caution about masters’ documents into a general scepticism the author does not hold. The fourth paragraph treats the workers’ own protests as eloquent evidence and draws firm conclusions from them.',
+        ],
         skill: 'main-idea',
       },
       {
@@ -43,6 +49,12 @@ export const FL7_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The comparison closes a paragraph arguing that mill rules “record the campaign faithfully and its success hardly at all”: a long sermon shows what the preacher wanted, not how the congregation behaved, and a rule shows what the master wanted, not what he got. The religious-authorities option treats the sermon as a historical cause, whereas it is used as a figure for a kind of evidence. The deliberately-overstated option charges the masters with distortion; the author’s complaint is about what their documents can show, not about their honesty. The never-came option contradicts the passage, which holds that the master did eventually “begin to get” punctuality and that the clock won.',
+        optionExplanations: [
+          'The comparison closes a paragraph arguing that mill rules “record the campaign faithfully and its success hardly at all.” A long sermon shows what the preacher wanted, not how the congregation behaved; a rule shows what the master wanted, not what he got.',
+          'This treats the sermon as a historical cause of punctuality, but the author uses it as a figure for a kind of evidence. The sermon against idleness appears only as one more document written by someone who wished workers punctual.',
+          'The author’s complaint concerns what the masters’ documents can show, not their honesty. Nothing suggests the masters deliberately exaggerated idleness; the point is that a rule against lateness cannot reveal when or why punctuality was achieved.',
+          'This contradicts the passage, which holds that the master did eventually “begin to get” punctuality and that “the clock won.” The sermon figure concerns evidence, not a claim that workers never complied.',
+        ],
         skill: 'function',
       },
       {
@@ -56,6 +68,12 @@ export const FL7_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The passage says that under the older rhythm “an hour not worked had been lost to no one” and that only “once labour is bought by the hour” does time become something that can be “withheld or stolen.” A charge of stealing minutes therefore presupposes a conception the earlier arrangement lacked. The other three complaints concern the task, which the author says “was a master too”: an undone task, a badly done task, and a refusal to finish the harvest are all failures that make sense where work is measured by what gets done.',
+        optionExplanations: [
+          'An urgent task left undone when the weather turned is a failure measured by what gets done. The passage says the task “was a master too,” so this complaint made sense under the older rhythm.',
+          'Careless work that cannot be sold is a complaint about the task itself, which the passage says governed labour before the clock. Quality of output was always something a master could demand.',
+          'The passage states that the harvest “kept labourers in the field by moonlight,” so refusing to stay would be a failure to meet the task’s demands. This complaint belongs to the world before the bell.',
+          'The passage says that under the older rhythm “an hour not worked had been lost to no one,” and that only “once labour is bought by the hour” does time become something that can be “withheld or stolen.” Stealing minutes presupposes a conception the earlier arrangement lacked.',
+        ],
         skill: 'inference',
       },
       {
@@ -69,6 +87,12 @@ export const FL7_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'From the fact that workers demanded fewer hours and higher rates, the author concludes that “they have accepted that their time is a quantity with a price.” That step holds only if the vocabulary of a demand reveals the outlook of those making it, and is not merely the one language an employer would listen to. The return-to-the-task option attributes to the strikers a wish the argument does not need and that would sit badly with their having accepted the hour. The willing-to-bargain option concerns the employers’ response, which is irrelevant to what the demand shows about the workers. The failed-walkouts option supplies a history of the earlier protests that the passage neither gives nor requires.',
+        optionExplanations: [
+          'The argument does not need the strikers to want a return to the task, and that wish would sit badly with the author’s conclusion that they “have accepted that their time is a quantity with a price.”',
+          'From the fact that workers demanded fewer hours and higher rates, the author concludes they had accepted that time has a price. That inference holds only if the vocabulary of a demand reveals how those making it understand their position.',
+          'Whether employers were willing to bargain concerns the employers’ response. The author’s reading is about what the demand reveals about the workers’ outlook, which does not depend on how masters answered.',
+          'The passage neither says nor requires that earlier walkouts failed. The author’s point is that the protests changed in kind, from rejecting the clock to disputing its terms, regardless of how the earlier protests fared.',
+        ],
         skill: 'assumption',
       },
       {
@@ -82,6 +106,12 @@ export const FL7_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Workers who buy watches and time themselves with pride are taking up clock time on their own account, which is what the author means in denying that it was simply imposed and in saying that workers “had come to count in” hours. The rhythm-of-the-task option concerns work before the mill, about which diaries of mill workers’ watches say nothing. The altered-clocks option concerns the masters’ cheating; private watches might help expose it but do not show that it occurred. The earliest-protests option is, if anything, harder to square with workers who embraced the clock from their first wages.',
+        optionExplanations: [
+          'Workers who buy watches and time themselves with pride are taking up clock time on their own account. That is what the author means in denying that clock time was “simply something done to workers” and in saying they “had come to count in” hours.',
+          'The rhythm of the task concerns work before the mill. Diaries of mill workers buying watches say nothing about how demanding harvests and tides had been.',
+          'The altered-clocks point concerns the masters’ cheating. Private watches might help expose such cheating, but workers owning watches does not show that masters moved the factory clock.',
+          'This option is, if anything, harder to square with the new evidence. Workers who embraced the clock from their first wages do not obviously support the claim that the earliest protests rejected the clock as such.',
+        ],
         skill: 'new-information',
       },
       {
@@ -95,6 +125,12 @@ export const FL7_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The protests moved from rejecting the clock “as such” to holding the master to it — disputing its honesty and its arithmetic, and using it as “a weapon.” Tenants who first reject leases and later sue under one have likewise passed from refusing an instrument to invoking its terms against the other party. The villagers are still refusing outright, by a different means. The students show no change at all. The merchants move in the opposite direction, from acceptance of a measure to rejection of it.',
+        optionExplanations: [
+          'The villagers are still refusing outright, merely by a different means. The author’s workers moved from refusing the clock to invoking it, which is a change in kind that flight does not parallel.',
+          'The students show no change at all; they ignore the scheme before and after. The passage describes a transformation in how workers related to the clock, from rejection to use.',
+          'The protests moved from rejecting the clock “as such” to holding the master to it, disputing its honesty and arithmetic and using it as “a weapon.” Tenants who once rejected leases and later sue under one have likewise gone from refusing an instrument to invoking its terms.',
+          'The merchants move in the opposite direction, from accepting a measure to rejecting it. The workers in the passage went from rejection to acceptance and use, so this reverses the analogy.',
+        ],
         skill: 'application',
       },
     ],
@@ -118,6 +154,12 @@ export const FL7_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The third paragraph says consent “favours whoever has most to conceal”: the gentle aunt approves, the violent uncle does not, so the veto falls to the relatives whose conduct is the book’s subject. The delay option names a practical inconvenience the author never raises. The belongs-to-others option is closer to the author’s reply to the ownership answer, and in any case the author grants that no one needs permission to describe her own childhood. The recall option introduces a question of accuracy that plays no part in the passage’s objection.',
+        optionExplanations: [
+          'Delay is a practical inconvenience the author never raises. The objection in the third paragraph is about who gains control over the book, not about how long consent takes to obtain.',
+          'The third paragraph says consent “favours whoever has most to conceal”: the gentle aunt approves her pages, the violent uncle does not, so the veto falls to the relatives whose conduct made the book worth writing.',
+          'This is closer to the author’s reply to the ownership answer, not the consent answer. In any case the author grants that no one needs permission to describe her own childhood, so the objection is not that experience belongs to others.',
+          'Accuracy of recall plays no part in the passage’s objection to consent. The author is concerned with who controls what is printed, not with whose memory is more reliable.',
+        ],
         skill: 'detail',
       },
       {
@@ -131,6 +173,12 @@ export const FL7_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The author says of the claim that “its premise is true” but that “the conclusion claims more than the premise can deliver,” because owning one’s experience of a father’s rages does not settle “whether she owns the rages.” That is partial acceptance with a stated limit. The dismissive option ignores the concession and imports a charge of cruelty the author never makes. The approving option ignores that the ownership answer is called an evasion. The neutral option is ruled out by the explicit verdict the author delivers.',
+        optionExplanations: [
+          'The author concedes that the claim’s “premise is true” and never charges its makers with cruelty. Dismissiveness ignores the explicit concession; the author treats the claim seriously before marking its limit.',
+          'The author calls the ownership answer an evasion and says the conclusion “claims more than the premise can deliver.” Approving the claim would contradict the passage’s stated verdict on it.',
+          'The author delivers an explicit verdict: the premise is true but the conclusion overreaches, since owning one’s experience of a father’s rages does not settle “whether she owns the rages.” That is not neutrality.',
+          'The author says “its premise is true” but “the conclusion claims more than the premise can deliver.” That is partial acceptance with a stated limit, which is what qualified approval means.',
+        ],
         skill: 'tone',
       },
       {
@@ -144,6 +192,12 @@ export const FL7_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The example follows the claim that “the remedy for reduction is not silence”: the father is “more exposed than before, not less,” yet has been “done a justice that concealment could not have done him.” Fuller telling, not withholding, is what makes the portrait fair. The excuses option mistakes giving a person “reasons, a history” for acquitting him; the rages remain in the portrait. The refuse-to-see option belongs to the discussion of consent, not to this example. The research option turns an obligation of fairness into a recommendation about method that the passage does not make.',
+        optionExplanations: [
+          'The example follows the claim that “the remedy for reduction is not silence.” The father is “more exposed than before, not less,” yet has been “done a justice that concealment could not have done him.” Fuller telling, not withholding, makes the portrait fair.',
+          'Giving a person “reasons, a history” is not the same as acquitting him; the rages remain in the portrait. The author never suggests that night shifts excuse violence, only that they make the father a person rather than a device.',
+          'What relatives refuse to see in print belongs to the discussion of consent in the third paragraph. The night-shifts example illustrates generous portrayal, not the kind of detail subjects object to.',
+          'The author describes an obligation of fairness, not a method of research. Nothing in the passage recommends that memoirists investigate their families as historians would; the point is about how a subject is rendered.',
+        ],
         skill: 'function',
       },
       {
@@ -157,6 +211,12 @@ export const FL7_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The wrong the author identifies is reduction: a relative who “appears only as what he did to the author.” A sister present only where she obstructs the writer is exactly that. The bankruptcy memoir discloses a painful fact but supplies the “history” the author asks for. The dying-mother memoir meets the second obligation, that the writer be “at least as unsparing with herself.” The prison-record memoir exposes a relative against the family’s wishes, but the author denies that exposure is the injury and concedes that the wish not to appear cannot “always be honoured”; giving the grandfather’s own account is the opposite of reducing him.',
+        optionExplanations: [
+          'The bankruptcy memoir discloses a painful fact but supplies the “history” the author asks for. Showing the cautious years before the collapse gives the brother reasons and a morning of his own, which is the remedy for reduction.',
+          'This memoir meets the second obligation, that the writer be “at least as unsparing with herself as with anyone else.” Recounting her own lies as fully as her mother’s coldness is what the author asks for.',
+          'The wrong the author identifies is reduction: a relative who “appears only as what he did to the author.” A sister present only where she obstructs the writer is “a weather system in someone else’s sky,” made a device rather than a person.',
+          'The author denies that exposure is the injury and concedes that the wish not to appear cannot “always be honoured.” Printing the record together with the grandfather’s own account gives him his own view of events, the opposite of reduction.',
+        ],
         skill: 'application',
       },
       {
@@ -170,6 +230,12 @@ export const FL7_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The author locates the wrong in reduction and not in disclosure, resting this on the observation that the unforgivable memoirs are “seldom the ones that told the most.” If relatives who were portrayed fully and generously were just as aggrieved by what was revealed, the injury would seem to lie in exposure after all. The ask-for-changes finding fits the author’s remark that “even the willing subject bargains.” The sales finding concerns the market, not the wrong done to subjects. The severe-with-themselves finding describes writers who satisfy the second obligation and says nothing about how their subjects were wronged.',
+        optionExplanations: [
+          'Relatives asking for changes fits the author’s remark that “even the willing subject bargains.” This finding is consistent with the passage and does not touch the claim that reduction, not disclosure, is the wrong.',
+          'Sales figures concern the market, not the wrong done to subjects. Whether sympathetic memoirs sell less has no bearing on whether reduction or exposure is what injures relatives.',
+          'This describes writers who satisfy the second obligation and says nothing about how their subjects were wronged. It neither supports nor challenges the claim that reduction is the injury.',
+          'The author locates the wrong in reduction, resting this on the observation that the unforgivable memoirs are “seldom the ones that told the most.” If fully and sympathetically drawn relatives resent revelations just as bitterly, the injury would seem to lie in exposure after all.',
+        ],
         skill: 'strengthen-weaken',
       },
       {
@@ -183,6 +249,12 @@ export const FL7_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'For the author neither truthful disclosure nor consent decides the matter; the question is whether a person “has been made a device” or has been given “reasons, a history,” and a release does not answer it. The succeeds option treats permission as sufficient, though the author calls the consent answer an evasion. The never-freely-given option overstates the remark that a willing subject “bargains,” which concerns what consent does to the portrait, not whether consent is possible. The no-claim option is the ownership answer pushed further than the author accepts, since the passage holds that relatives are owed something.',
+        optionExplanations: [
+          'The author calls both the ownership and consent answers evasions and says the real question is whether a person has been made a device. Accuracy and permission together do not exhaust what is owed; the subject must also be given reasons and a history.',
+          'For the author neither truthful disclosure nor consent decides the matter. The question is whether the mother “has been made a device” or given “reasons, a history,” and a signed release does not answer that question.',
+          'This overstates the remark that a willing subject “bargains,” which concerns what consent does to the portrait, not whether consent is ever genuine. The author does not claim releases are never freely given.',
+          'This is the ownership answer pushed further than the author accepts. The passage holds that relatives are owed something, namely to be told about rather than used, so they do have a claim on how they appear.',
+        ],
         skill: 'application',
       },
     ],
@@ -206,6 +278,12 @@ export const FL7_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The author calls the effect on “those who seek their votes” the “strongest argument for compulsory voting,” admits that compulsion “silences” the signal sent by abstention, and concludes that the remedy is “not to abandon the requirement but to complete it” with a published line for rejecting every candidate. The larger-turnout option is the argument from numbers, which the author finds weak because “a larger count is not in itself a truer one.” The should-be-opposed option takes the fifth paragraph’s difficulty as the conclusion, though the author keeps the requirement. The intrusion option reverses the use of the census and jury service, which are cited to show that the burden is an ordinary one.',
+        optionExplanations: [
+          'The author calls the effect on “those who seek their votes” the “strongest argument for compulsory voting,” admits that compulsion silences the signal sent by abstention, and concludes that the remedy is “to complete” the requirement with a published line for rejecting every candidate.',
+          'This is the argument from numbers, which the author finds weak because “a larger count is not in itself a truer one.” Random ballots add only noise, so turnout alone does not confer a stronger title.',
+          'This takes the fifth paragraph’s difficulty as the conclusion. The author acknowledges that compulsion hides discontent but keeps the requirement, proposing a rejection line so the discontent can still be read.',
+          'This reverses the use of the census and jury service. They are cited to show that attendance at the polls is an ordinary burden that people already accept, not that it is an intrusion.',
+        ],
         skill: 'main-idea',
       },
       {
@@ -219,6 +297,12 @@ export const FL7_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The passage never compares the competence of governments elected under the two systems; its claims concern who votes, how campaigns behave, and what turnout reveals. The stirring-up claim is made in the fourth paragraph, where campaigns are “built to rouse the faithful.” The certain-and-torn claim is the third paragraph’s point that voluntary voting “selects for intensity.” The warning claim is the fifth paragraph’s statement that falling turnout is “how a political class learns that it is losing the country.”',
+        optionExplanations: [
+          'The fourth paragraph says campaigns under voluntary voting are “built to rouse the faithful,” because the cheapest vote to win is a supporter who might have stayed home. This claim is made.',
+          'The third paragraph says voluntary voting “selects for intensity”: the citizen who is certain turns out while the thoughtful and torn often does not. This claim is made.',
+          'The passage never compares the competence of governments elected under the two systems. Its claims concern who votes, how campaigns behave, and what turnout reveals, not the quality of the resulting governments.',
+          'The fifth paragraph says a falling turnout “is how a political class learns that it is losing the country.” Under voluntary voting, abstention can serve as a warning, so this claim is made.',
+        ],
         skill: 'detail',
       },
       {
@@ -232,6 +316,12 @@ export const FL7_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The author says that those who accept the census and jury service “owe us an explanation” of why attendance at the polls is “the intolerable one” — that is, the liberty objection is incomplete until it distinguishes this burden from accepted ones. The would-reject option predicts what opponents would conclude, whereas the author only demands that they justify a distinction. The blank-ballot option concerns a number the passage never estimates. The less-time option attributes to opponents a specific belief about duration that the passage does not ascribe to them; the author’s point is that the burdens are of “the same order.”',
+        optionExplanations: [
+          'The author does not predict what opponents would conclude on reflection. The passage only demands that they explain why polling-station attendance is “the intolerable one,” leaving open how they might answer.',
+          'The author says those who accept the census and jury service “owe us an explanation” of why an hour at the polling station is intolerable. The liberty objection is incomplete until it distinguishes this burden from the duties its holders accept.',
+          'The passage never estimates how many would hand in blank or spoiled ballots. The census and jury-service comparison concerns the size of the burden, not the behavior of compelled voters.',
+          'The author does not attribute to opponents any specific belief about how long these duties take. The point is that the burdens are “of the same order,” not that opponents have miscalculated durations.',
+        ],
         skill: 'inference',
       },
       {
@@ -245,6 +335,12 @@ export const FL7_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The author reasons that the newly present voters “must therefore be given reasons,” which makes persuasion worthwhile only if those voters respond to reasons instead of marking “their ballots at random,” a possibility the third paragraph raises and never rules out. The better-informed option is the critics’ assumption, which the author rejects. The spend-more option concerns the total cost of campaigns, while the argument concerns where effort is directed. The share-the-views option is not needed, since the argument turns on whether the new voters can be won, not on what they already think.',
+        optionExplanations: [
+          'This is the critics’ assumption, which the author rejects. The third paragraph says voluntary voting selects for intensity rather than information, so the author’s argument does not rest on the certain being better informed.',
+          'The argument concerns where campaign effort is directed, not the total amount spent. Whether candidates would spend more or less under compulsion is irrelevant to the claim about persuasion.',
+          'The argument turns on whether the new voters can be won, not on what they already think. It does not need them to share present voters’ views; indeed it assumes they are undecided and must be given reasons.',
+          'The author reasons that newly present voters “must therefore be given reasons,” which makes persuasion worthwhile only if those voters respond to reasons rather than marking “their ballots at random,” a possibility the third paragraph raises and never rules out.',
+        ],
         skill: 'assumption',
       },
       {
@@ -258,6 +354,12 @@ export const FL7_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The fourth paragraph predicts that once attendance is required “nothing is gained by inflaming” the faithful, so campaigns will turn to the undecided; campaigns that still direct their spending at alarming their own supporters contradict that prediction. The reply on liberty concerns the size of the burden on citizens and is untouched by how campaigns spend. The considered-verdict claim concerns the meaning of abstention under voluntary voting. The proposal about the ballot concerns preserving a signal of rejection, which the finding neither supports nor undermines.',
+        optionExplanations: [
+          'The fourth paragraph predicts that once attendance is required “nothing is gained by inflaming” the faithful, so campaigns will turn to the undecided. Campaigns that still spend on alarming their own supporters contradict that prediction directly.',
+          'The reply on liberty concerns the size of the burden on citizens, comparing it to the census and jury service. How campaigns spend their money has no bearing on that comparison.',
+          'The considered-verdict claim concerns what abstention means under voluntary voting. A finding about campaign spending under compulsion does not touch whether staying home can express rejection.',
+          'The ballot proposal concerns preserving a signal of rejection that compulsion would otherwise silence. Campaign spending patterns neither support nor undermine the case for a rejection line.',
+        ],
         skill: 'new-information',
       },
       {
@@ -271,6 +373,12 @@ export const FL7_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Item I is the author’s own example: abstention can be “a verdict,” and falling turnout is how a political class learns it is losing the country. Item II is the signal the proposed line is meant to preserve, a published figure showing “how many of the governed it had failed to persuade.” Item III shows only that the electorate is closely divided between two candidates, each of whom has been endorsed by many voters; the passage never treats a close contest as a rejection of what is on offer. “I only” and “II only” each omit one of the two signals, and the option including III adds a sign the passage gives no reason to accept.',
+        optionExplanations: [
+          'Item I is the author’s example, but item II is also a sign: the proposed rejection line would show “how many of the governed it had failed to persuade.” Omitting item II leaves out the signal the author’s own proposal is designed to create.',
+          'Item II is the signal the proposal preserves, but item I is the author’s own illustration: falling turnout under voluntary voting “is how a political class learns that it is losing the country.” Omitting item I leaves out the passage’s explicit example.',
+          'Item I is the author’s own example of abstention as “a verdict.” Item II is the published figure the proposed line is meant to supply. Item III shows only a closely divided electorate, with both leading candidates endorsed by many voters, which the passage never treats as rejection.',
+          'Items I and II are both signs the author recognizes, but item III is not. A narrow margin means many voters endorsed each of two candidates; the passage never treats a close contest as a sign that nothing on offer deserves endorsement.',
+        ],
         skill: 'application',
       },
     ],
@@ -294,6 +402,12 @@ export const FL7_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The author says a term “is precise only for those who share the training that fixed its meaning”: the sailor’s phrase is exact for the sailor and “picks out nothing” for the passenger, so exactness belongs to the word together with a trained community. The more-people option makes precision a matter of how widely a term is known, which the passage never suggests. The fixed-by-definition option is the “property” view the sentence denies. The individual-care option locates precision in one speaker’s diligence, whereas the author locates it in what a community has agreed on “through long and common practice.”',
+        optionExplanations: [
+          'The passage never suggests that precision grows as more outsiders learn a term. Precision belongs to a word together with a trained community, and the author treats the boundary of that community as inseparable from the exactness.',
+          'This is the “property” view the sentence denies. The author says precision “is not a property that a word carries about with it, like its spelling,” so a definition alone cannot fix exactness regardless of who uses the term.',
+          'The author locates precision in what a community has agreed on “through long and common practice,” not in one speaker’s diligence. An individual’s care cannot make a term exact for those outside the trained community.',
+          'The author says a term “is precise only for those who share the training that fixed its meaning.” The sailor’s phrase is exact for the sailor and “picks out nothing” for the passenger, so exactness holds only among those trained to use the term alike.',
+        ],
         skill: 'detail',
       },
       {
@@ -307,6 +421,12 @@ export const FL7_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The official and the consultant are the examples of terms that “translate at no cost whatever,” have “gained nothing in exactness,” and serve to “announce the speaker’s standing.” The governments option turns an illustration into a comparison between institutions that the author never draws. The costly-translation option describes the other kind of term, the one that becomes “a paragraph, with qualifications.” The every-term option contradicts the passage, which calls the outsider’s suspicion “indiscriminate” and defends terms that carry weight.',
+        optionExplanations: [
+          'The author draws no comparison between governments and professions. The official appears alongside the consultant as one of two examples of a term that adds nothing, not as evidence about institutions.',
+          'The official and the consultant are the examples of terms that “translate at no cost whatever,” have “gained nothing in exactness,” and serve to “announce the speaker’s standing.” Rain as “a precipitation event” is a uniform worn to be seen.',
+          'This describes the other kind of term, the one that becomes “a paragraph, with qualifications” when translated. The official’s phrase translates to “rain” at no cost at all.',
+          'This contradicts the passage, which calls the outsider’s suspicion “indiscriminate” and defends terms that carry weight. The official is an example of one kind of jargon, not grounds for condemning all of it.',
+        ],
         skill: 'function',
       },
       {
@@ -320,6 +440,12 @@ export const FL7_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The reformer is said to be “asking for a sharpness that no word has ever supplied by itself”: the demand supposes that plain words could be as exact without the shared training on which, for the author, exactness depends. The most-terms option overstates the author’s view, which is that only some terms “translate at no cost.” The resentment option supplies a motive; the passage discusses the reformer’s reasoning, not his feelings. The unaware option invents a factual oversight; the author’s complaint is conceptual and has nothing to do with how often professionals explain themselves.',
+        optionExplanations: [
+          'The reformer is said to be “asking for a sharpness that no word has ever supplied by itself.” The demand supposes plain words could be as exact without the shared training on which, for the author, exactness depends.',
+          'This overstates the author’s view. Only some terms “translate at no cost”; others can be unpacked only at length, and a profession deprived of them “would be slower and would make more mistakes.”',
+          'The passage discusses the reformer’s reasoning, not his feelings. No motive of resentment is attributed to him; the author’s objection is that his demand misunderstands where precision comes from.',
+          'The author’s complaint is conceptual and has nothing to do with how often professionals explain themselves. In fact the author later asks the specialist not to pretend an explanation is as good as the term.',
+        ],
         skill: 'inference',
       },
       {
@@ -333,6 +459,12 @@ export const FL7_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The test is to “translate the term for a layman and see what the translation costs”; a term that can be rendered only by several careful sentences is one whose cost shows “the work the word was doing.” The rival-firm term is adopted by imitation, which says nothing about its exactness and suggests display. The impressive-to-clients term is the “uniform” that is “put on in order to be seen.” The swapped-without-confusion term is, by the author’s own test, one that translates “at no cost whatever” and so fails it.',
+        optionExplanations: [
+          'A term adopted by imitation from a rival firm says nothing about its exactness. If anything, taking up a word because others use it suggests display, the “uniform” that is put on to be seen.',
+          'A term that impresses clients but that staff seldom use among themselves is the uniform worn “in order to be seen.” It announces standing rather than doing work, which fails the author’s test.',
+          'By the author’s own test, a term that can be swapped for a common word without confusion translates “at no cost whatever” and so has “gained nothing in exactness.” That is the mark of idle jargon.',
+          'The test is to “translate the term for a layman and see what the translation costs.” A term that engineers can render only in several careful sentences is one whose cost shows “the work the word was doing.”',
+        ],
         skill: 'application',
       },
       {
@@ -346,6 +478,12 @@ export const FL7_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'By the author’s test, a term that does real work can be replaced only at a cost in length or in errors; letters that grew no longer and misled no one show that the removed terms translated “at no cost whatever,” which is the mark of a term that merely announces “the speaker’s standing.” The exact-for-patients option reverses the passage, in which a term is precise for the trained and not for the layman. The more-exact option is what the outcome counts against, since lost exactness would have shown up as added length or mistakes. The other-hospitals option raises a question about a wider community that the outcome does not bear on.',
+        optionExplanations: [
+          'This reverses the passage, in which a term is precise for the trained and “picks out nothing” for the layman. The patients are the laymen here, so the terms could not have been exact only for them.',
+          'By the author’s test, a term that does real work can be replaced only at a cost in length or in errors. Letters that grew no longer and misled no one show the removed terms translated “at no cost whatever,” the mark of words that merely announce standing.',
+          'Lost exactness would have shown up as added length or new misunderstandings. Since neither appeared, the outcome counts against the claim that the removed terms were more exact than their replacements.',
+          'The outcome concerns letters between these physicians and their patients. It says nothing about whether physicians elsewhere would have understood the terms, which is a question about a wider community the test does not reach.',
+        ],
         skill: 'new-information',
       },
     ],

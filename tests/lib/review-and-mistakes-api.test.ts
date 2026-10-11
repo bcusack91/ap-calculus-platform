@@ -5,7 +5,7 @@
  */
 import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { NextRequest } from 'next/server'
-import { questionKey } from '@/lib/question-key'
+import { optionKey, questionKey } from '@/lib/question-key'
 
 const mockAuth = vi.fn()
 vi.mock('@/lib/auth', () => ({ auth: () => mockAuth() }))
@@ -122,6 +122,8 @@ describe('mistake log routes', () => {
     expect(after.total).toBe(0)
     // every re-quiz answer was logged under the original key
     expect(log.filter((r) => r.source === 'MISTAKE_REVIEW' && r.questionKey === KEY_A)).toHaveLength(3)
+    // …with the picked option's text key from the rebuilt item.
+    expect(log.filter((r) => r.source === 'MISTAKE_REVIEW').map((r) => r.chosenKey)).toEqual([optionKey('Ligase'), optionKey('Helicase'), optionKey('Helicase')])
   })
 
   it('refuses to grade a question that is not in the student\'s log', async () => {

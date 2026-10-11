@@ -31,6 +31,12 @@ export const FL6_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The author’s positive claim is that promising transfers a share of authority to the promisee, and that a change such as the fever “does not change who holds what I gave away.” The unchanged-circumstances option is the silent-clause theory, and the holds-when-unwelcome option is the rigorist’s view; the author says both make the same mistake. The option about whose reading governs still treats a promise as a sentence to be interpreted, which is the very approach the author rejects.',
+        optionExplanations: [
+          'This is the silent-clause theory of paragraph 2, which holds that a promise carries an unspoken “provided that things remain roughly as they were.” The author says this view makes the same mistake as the rigorist’s and rejects it.',
+          'The author’s positive claim in paragraph 3 is that promising transfers “a share of authority over what I do” to the promisee, and paragraph 4 adds that the fever “does not change who holds what I gave away.” Later events do not take that share back.',
+          'This is the rigorist’s view from paragraph 2, that the whole use of promising is that it holds when the promiser would rather it did not. The author groups it with the silent-clause theory as sharing one mistake.',
+          'This still treats a promise as a sentence whose meaning must be settled, differing only in whose reading governs. The author rejects that whole approach in paragraph 3, saying a promise is “less like a sentence than like a transfer.”',
+        ],
         skill: 'main-idea',
       },
       {
@@ -44,6 +50,12 @@ export const FL6_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The call is contrasted with a mere courtesy: because it is “felt as asking,” the author takes it to show that the promise did not lapse when the child fell ill and that release is still the friend’s to give. Softening disappointment would make the call exactly the courtesy the author says it is not. The author’s point about grievance concerns the friend who was not asked, not a claim that warning removes all complaint. The observation is aimed against the silent-clause theory and is not offered in support of the rigorist, whom the author goes on to answer.',
+        optionExplanations: [
+          'Softening disappointment would make the call exactly the courtesy the author says it is not. He insists the call “is not felt as a courtesy” but as asking, which is the point of the example.',
+          'The author’s point about grievance is that the friend “who was not asked” has one; he does not claim that warning in advance removes all ground for complaint. The telephone call is offered as asking, not as inoculation against complaint.',
+          'The telephone observation is aimed against the silent-clause theory, not offered in support of the rigorist. The author goes on to answer the rigorist in the next paragraph, so the call is not his evidence.',
+          'The call is contrasted with a mere courtesy because it is “felt as asking.” The author uses this ordinary conduct to show the promise did not lapse when the child fell ill, and that release is still the friend’s to give.',
+        ],
         skill: 'function',
       },
       {
@@ -58,6 +70,12 @@ export const FL6_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The shared mistake named in paragraph 3 is treating a promise as a sentence to be read and supposing that the promiser is the one who reads it, which leaves the promiser to determine his own obligation. Only the silent-clause view excuses the promiser, and only the rigorist denies that the emergency changes what he ought to do, so neither of those is common to both. “Forecast” is the rigorist’s criticism of the other view, not something either view accepts about promises.',
+        optionExplanations: [
+          'The shared mistake named in paragraph 3 is treating a promise as a sentence to be read and supposing “I am the one to do the reading.” Both views leave the promiser to determine his own obligation.',
+          'Only the silent-clause view excuses the promiser when keeping the promise becomes a burden. The rigorist concludes that the promiser “ought to be carrying boxes,” so this is not common to both.',
+          'Only the rigorist denies that the emergency changes what the promiser ought to do. The silent-clause view holds that the undertaking has gone with the changed world, so this is not shared.',
+          '“Forecast” is the rigorist’s criticism of the silent-clause view, not something either view accepts about promises. Neither answer regards a promise as a forecast; the rigorist uses the word as an accusation.',
+        ],
         skill: 'detail',
       },
       {
@@ -72,6 +90,12 @@ export const FL6_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The author says a friend “who was not asked” has a grievance even if she would have agreed at once; the man at the hospital had good reason to be absent but released himself without going back to the promisee. The man with the failed car and the woman with the ill mother both asked and were released, however grudgingly in the second case. In the ladder case the promisee herself gave up what she held, which is hers to do on the author’s account.',
+        optionExplanations: [
+          'The man with the failed car telephoned and was released; this is the asking the author describes in paragraph 4. The promisee was consulted and gave her release, so no grievance arises.',
+          'In the ladder case the promisee herself gave up what she held, which on the author’s account is hers to do. The promiser did not release herself; the sister did the releasing, so there is no grievance.',
+          'The man at the hospital had good reason to be absent but released himself without going back to the promisee, explaining only by chance later. The author says a friend “who was not asked” has a grievance even if she would have agreed at once.',
+          'The woman with the ill mother asked to be let off and was released, however grudgingly. The author’s grievance attaches to the promisee who was not asked, not to one who was asked and agreed with ill grace.',
+        ],
         skill: 'application',
       },
       {
@@ -86,6 +110,12 @@ export const FL6_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The author distinguishes “broken for good reason” from “never bound” by pointing out that the first still owes something afterward, and then asserts that “our practice plainly sides with the first description.” A finding that nothing is felt to be owed would remove that support. The rigorist’s discomfort is a passing remark the finding does not touch. Whether a promisee wrongs the promiser by refusing release, and how a trustee should reason, are separate claims that do not rest on what people feel they owe after an emergency.',
+        optionExplanations: [
+          'The rigorist’s discomfort is a passing remark in paragraph 2 that the finding does not touch. Whether people feel they owe something after an emergency says nothing about how the rigorist feels about his own conclusion.',
+          'Whether a promisee does wrong by refusing release during an emergency is a separate claim that does not rest on what people feel they owe afterward. The finding concerns the aftermath, not the refusal.',
+          'The trustee account for promisees who cannot be consulted is a separate claim about how to reason, not a claim supported by what people feel they owe after an emergency. The finding leaves it untouched.',
+          'The author distinguishes “broken for good reason” from “never bound” by saying the first still owes something afterward, then asserts that “our practice plainly sides with the first description.” A finding that nothing is felt to be owed removes exactly that support.',
+        ],
         skill: 'new-information',
       },
       {
@@ -100,6 +130,12 @@ export const FL6_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'For promisees who cannot be asked, the author casts the promiser as a trustee of the other’s authority, who must reason from what the promisee would have released in light of what is now known rather than from his own preference. Publishing regardless is the rigorist’s position, which the author rejects. Treating the promise as void is the silent-clause theory, which the author says is most tempting, and still mistaken, in just this kind of case. Doing what seems best to him is precisely the self-release a trustee is not permitted.',
+        optionExplanations: [
+          'Publishing regardless is the rigorist’s position, which the author rejects. The “only ever a forecast” phrasing is the rigorist’s criticism of silent exceptions, not the author’s own view of what the promise demands.',
+          'For promisees who cannot be asked, the author casts the promiser as a trustee of the other’s authority, who asks “what the other, seeing what he now sees, would have let go.” Asking what the friend would have wanted, knowing of the harm, is exactly that reasoning.',
+          'Treating the promise as void is the silent-clause theory, which the author says is “most tempting” in just this kind of case and still mistaken. Ignorance at the time of promising does not dissolve what was transferred.',
+          'Doing whatever now seems best to him is precisely the self-release a trustee is not permitted; the author says a trustee “does not ask what would suit him.” The absence of anyone to complain does not return the authority.',
+        ],
         skill: 'application',
       },
     ],
@@ -119,6 +155,12 @@ export const FL6_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Statement I matches the author’s account of the inherited name as telling a household how a child is to be treated. Statement III matches the nickname “allowed to some and forbidden to others,” which draws a boundary among the people around the bearer. Statement II describes the fixed, lifelong name that the author assigns to the state’s registry and contrasts with “how anyone uses names among kin”: it is what a state requires of names, not what they do among the people around the bearer. Any option that includes II or omits III is therefore wrong.',
+        optionExplanations: [
+          'Statement I alone omits statement III, but the nickname “allowed to some and forbidden to others” draws a boundary among those around the bearer, so III is also accomplished by names among kin and acquaintances.',
+          'Statement II describes the fixed, lifelong name that the author assigns to the state’s registry and explicitly contrasts with “how anyone uses names among kin.” It is not something names do among relatives and acquaintances.',
+          'Statement I matches the inherited name telling a household how the child is to be treated, and statement III matches the nickname that draws a boundary among those around the bearer. Statement II is the registry’s function, which the author says is not how names work among kin.',
+          'Including statement II is wrong because keeping a person identifiable under one name for life is what a state requires of names, not what names do among kin. The author sets that function apart from relational uses.',
+        ],
         skill: 'detail',
       },
       {
@@ -133,6 +175,12 @@ export const FL6_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The author’s next sentences say one “need not suppose” the grandmother believes the infant is her husband, because watching what the name accomplishes is enough; the belief about souls is the invented mystery. The author does not grant that the belief is accurately reported, so the option conceding its accuracy fails. The belief explanation does explain the practices, only needlessly, so it is not said to leave them unexplained. Its neglect of the author’s own society is a separate point made in the next paragraph and is not what the “mystery” remark refers to.',
+        optionExplanations: [
+          'The author’s next sentences say one “need not suppose” the grandmother believes the infant is her husband, because watching what the name accomplishes is enough. The belief about souls is a strange assumption the practice gives no reason to make.',
+          'The author does not grant that the belief is accurately reported; he says one need not suppose it at all. The problem is not an unexplained origin of a real belief but an invented belief in the first place.',
+          'The belief explanation does explain the practices, only needlessly, by inventing a mystery. The author does not say it leaves the practices unexplained; his objection is that it posits more than is required.',
+          'The neglect of naming in the author’s own society is a separate point made in the following paragraph. It is not what the “creates a mystery” remark refers to, which concerns attributing an unnecessary belief.',
+        ],
         skill: 'inference',
       },
       {
@@ -147,6 +195,12 @@ export const FL6_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The examples show names being lost, inherited, or silenced as the bearer’s relations shift; that counts against the label view only if a label is the sort of thing that would stay put through such changes. The argument needs the practices to exist, not to be in the majority. Nothing depends on whether participants can articulate a purpose; the author prefers watching what the name does. Consent of the bearer plays no role in the inference.',
+        optionExplanations: [
+          'The argument needs only that the practices exist, not that they are found in most societies. A few counterexamples suffice to show that names do not always behave like labels.',
+          'Nothing in the inference depends on whether participants can articulate a purpose. The author prefers watching what the name does over asking what people believe, so their ability to explain is not assumed.',
+          'Consent of the bearer plays no role in the inference. The examples involve names being lost, inherited, or silenced by social changes, and the author draws his conclusion without reference to whether the bearer agreed.',
+          'The examples show names being lost, inherited, or silenced as the bearer’s relations shift. That counts against the label view only if a label is the sort of thing that would stay put through such changes, which the author must assume.',
+        ],
         skill: 'assumption',
       },
       {
@@ -161,6 +215,12 @@ export const FL6_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The registrar’s name is fixed, unique, and indifferent to what happens to the bearer, so that a record-keeper can find the same person over time; a reused patient code does exactly that work. The novice’s new name changes with a change in standing, like the father renamed for his child. The captain’s title tells others how to treat her and reflects her position. The uncle’s name places the boy among relatives, like the inherited names of paragraph 2.',
+        optionExplanations: [
+          'The novice’s new name changes with a change in standing, like the father renamed for his child. It marks a transition in relations, which is the relational function the author contrasts with the registrar’s fixed label.',
+          'The registrar’s name is fixed, unique, and indifferent to what happens to the bearer, so a record-keeper can find the same person over time. A patient code reused at every visit does exactly that work and nothing more.',
+          'The captain’s title tells others how to treat her and reflects her position within the team. That is an instruction addressed to those around the bearer, the relational function the author describes, not the registrar’s pointing label.',
+          'The uncle’s name places the boy among his relatives, like the inherited names of paragraph 2 that bring a set of relatives with them. It does relational work rather than keeping the boy findable for a clerk.',
+        ],
         skill: 'application',
       },
       {
@@ -175,6 +235,12 @@ export const FL6_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The report shows a naming practice sustained with no belief about souls and explained entirely by its effect on the living, which is the author’s position against the belief explanation. It therefore undercuts, rather than supports, the earlier anthropologists. Sparing the bereaved is a matter of how the name bears on those around the dead person, so it fits the “addressed to everyone around him” claim. The report says nothing about registries and leaves the author’s concession about their function untouched.',
+        optionExplanations: [
+          'The report shows a naming practice sustained with no belief about souls and explained entirely by its effect on the living, the bereaved. That is the author’s position that it is enough to watch what the name accomplishes.',
+          'The earlier anthropologists explained such practices by attributing a belief that the name contains the soul. A community that offers no account of souls undercuts, rather than supports, that explanation.',
+          'Sparing the bereaved is a matter of how the name bears on those around the dead person, which fits the author’s claim that names are addressed to everyone around the bearer. The report supports rather than weakens it.',
+          'The report says nothing about registries or the state’s need for fixed names. The author’s concession that the registrar’s name performs a real function is left entirely untouched.',
+        ],
         skill: 'new-information',
       },
       {
@@ -189,6 +255,12 @@ export const FL6_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Paragraph 4 argues that “we too” use names to do relational work, citing children named for grandparents, the bride’s surname, and restricted nicknames, so the author would answer that the critic has looked at one choice and overlooked the rest of modern practice. The author never claims that taste in names derives from the state; the state’s interest is in fixity, not sound. Nothing in the passage says modern people have left their kin or misunderstand names as a result. How a name is chosen has no bearing on whether a registry can keep track of it.',
+        optionExplanations: [
+          'The author never claims that taste in names derives from the state. The state’s interest is in a name that is fixed and findable, not in its sound, so choosing for sound does not show the outlook of the state.',
+          'Nothing in the passage says modern people have left their kin or misunderstand names as a result. The author argues that modern practice still does relational work, not that modern parents have lost the ability.',
+          'Paragraph 4 argues that “we too” use names for relational work, citing children named for grandparents, the bride’s surname, and restricted nicknames. The author would say the critic has looked at one choice and overlooked the rest of modern practice.',
+          'How a name is chosen has no bearing on whether a registry can keep track of it. A name chosen for its sound is just as fixed and findable as any other, so this reply would not address the critic.',
+        ],
         skill: 'application',
       },
     ],
@@ -212,6 +284,12 @@ export const FL6_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The passage argues that comedy’s difficulty lies in what it asks of the house: repeated audible disclosure before strangers, without which the comedy “has not taken place.” The timing explanation is granted as true but said to put the difficulty on the wrong side of the footlights. Holding back the best material is a supporting observation about how audiences are assembled, not the thesis. The author never compares how long the pleasures of comedy and tragedy last.',
+        optionExplanations: [
+          'The timing explanation is granted as true but said to locate the difficulty “on the wrong side of the footlights.” The author moves the difficulty from the performer to the house.',
+          'Holding back the best material is a supporting observation about how comedians assemble an audience in the early minutes. It is evidence for the thesis, not the thesis itself, and the author does not make success depend on it.',
+          'The author never compares how long the pleasures of comedy and tragedy last. He says comedy offers something tragedy does not, a shared discovery, but makes no claim about lasting pleasure.',
+          'The passage argues that comedy’s difficulty lies in what it asks of the house: repeated audible disclosure before strangers, without which the comedy “has not taken place.” Spectators must be willing to laugh in one another’s hearing.',
+        ],
         skill: 'main-idea',
       },
       {
@@ -225,6 +303,12 @@ export const FL6_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The umbrella is one of three states a neighbor “cannot tell” apart, supporting the point that silence commits a spectator to nothing and that stillness “will cover them all.” The author is not ranking how well the two forms hold attention; the distracted spectator shows only that silence hides distraction. Embarrassment in a thin house belongs to the later discussion of laughter. The example shows that stillness is poor evidence of being moved, the reverse of the last option.',
+        optionExplanations: [
+          'The author is not ranking how well the two forms hold attention. The distracted spectator shows only that silence hides distraction; it says nothing about tragedy being less absorbing than comedy.',
+          'The umbrella is one of three states a neighbor “cannot tell” apart, supporting the point that silence commits a spectator to nothing and that stillness “will cover them all.” It shows how much a silent house can conceal.',
+          'Embarrassment in a thin house belongs to the later discussion of laughter on a sparse Tuesday. The umbrella example concerns silence at a tragedy, where no embarrassment is at issue.',
+          'The example shows the reverse: stillness is poor evidence of being moved, since the silent spectator may be moved, bored, or thinking of his umbrella. Silence covers all three states equally.',
+        ],
         skill: 'function',
       },
       {
@@ -239,6 +323,12 @@ export const FL6_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The fragility of a late comic line appears in the first paragraph as the actors’ usual explanation of why comedy is hard, which the author sets aside; it is not used to show anything about reflexes. The full and thin houses, the hard first laugh, and the practice of opening with something small are all given in the third paragraph, immediately after the claim that theatrical laughter “behaves so little like a reflex.”',
+        optionExplanations: [
+          'The contrast between a full Saturday house and a thin Tuesday one is given in the third paragraph as evidence that laughter cares how many seats are filled, which a reflex would not. It is offered as evidence.',
+          'The special difficulty of the first laugh appears in the third paragraph immediately after the claim that laughter “behaves so little like a reflex.” It is offered as evidence for that claim.',
+          'The fragility of a late comic line appears in the first paragraph as the actors’ usual explanation of why comedy is hard, which the author sets aside. It is never used to show anything about reflexes.',
+          'The habit of opening with modest material “to let the audience hear itself” is given in the third paragraph as evidence that laughter must be assembled rather than triggered. It is offered as evidence.',
+        ],
         skill: 'detail',
       },
       {
@@ -253,6 +343,12 @@ export const FL6_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The remark closes a paragraph about each person learning, by hearing it, that what struck him as absurd struck the others too; the “room” is that shared discovery. The performers’ timing and the quality of the jokes are facts about the play, which is what the author says is not chiefly being reported, and he adds “more than any particular joke.” A full house helps the assembly succeed, but the memory described is of the agreement itself, not of attendance.',
+        optionExplanations: [
+          'The remark closes a paragraph about each person learning, by hearing it, that what struck him as absurd struck the others too. The “room” is that shared discovery; what people chiefly remember is finding their amusement confirmed.',
+          'The performers’ timing is a fact about the play, which the author says is not chiefly being reported. The remark explicitly contrasts the play with the room.',
+          'A full house helps the assembly succeed, but the memory described is of the agreement itself, not of attendance. The author says people recall the shared discovery, not simply that every seat was taken.',
+          'The quality of the jokes is a fact about the play, and the author adds that the shared discovery matters “more than any particular joke.” Better jokes are not what the “room” refers to.',
+        ],
         skill: 'inference',
       },
       {
@@ -267,6 +363,12 @@ export const FL6_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The author says producers added the recording because the solitary viewer “sat silent,” and treats this as an admission that the joke is not enough without company. Frequent solitary laughter with no recording contradicts that account. The finding concerns comedy watched at home, so it does not bear on silence at a tragedy or on how live comedians open. That recorded laughter is uninformative because it never fails to arrive is untouched by whether viewers laugh without it.',
+        optionExplanations: [
+          'The finding concerns comedy watched at home. It does not bear on what silence at a tragedy commits a spectator to, which is a claim about live theater audiences.',
+          'The author says producers added the recording because the solitary viewer “sat silent,” treating this as an admission that the joke is not enough without company. Frequent solitary laughter with no recording contradicts that account.',
+          'That recorded laughter is uninformative because it cannot fail to arrive is untouched by whether viewers laugh without it. The claim concerns what the recording tells the viewer, not whether viewers laugh.',
+          'The finding concerns broadcast comedy watched alone and says nothing about live comedians. The account of why they open with small material concerns assembling a live house and is not affected.',
+        ],
         skill: 'strengthen-weaken',
       },
       {
@@ -281,6 +383,12 @@ export const FL6_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The comedy spectator must make an audible, public response before knowing whether anyone will join him; the guest deciding whether to applaud first faces the same exposure. The reader’s opinion and the unsigned ballot are judgments made under cover, with no one able to hear them. The silent museum visitor resembles the spectator at a tragedy, whose stillness commits him to nothing.',
+        optionExplanations: [
+          'The reader’s private opinion is a judgment made under cover, with no one able to hear it. The comedy spectator, by contrast, must disclose his response audibly before strangers.',
+          'The unsigned ballot is counted but never attributed, so the juror is never heard finding anything by anyone. The comedy spectator’s laugh is heard by strangers at a moment he did not choose.',
+          'The silent museum visitor resembles the spectator at a tragedy, whose stillness commits him to nothing and conceals his state. The comedy spectator cannot hide in this way.',
+          'The comedy spectator must make an audible, public response before knowing whether anyone will join him. The guest deciding whether to applaud first faces the same exposure: a visible disclosure made before others have shown their hand.',
+        ],
         skill: 'application',
       },
     ],
@@ -304,6 +412,12 @@ export const FL6_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The author calls the explanation “elegant and, for cars, largely correct” and then doubts that it says much about second-hand goods in general. He does not dispute what sellers know or what used cars fetch, so the options locating an error in the car case are wrong. The inspectable-goods option reverses his point: it is precisely for fully inspectable goods such as books, dresses, and graded diamonds that he says the explanation fails.',
+        optionExplanations: [
+          'The author calls the explanation “elegant and, for cars, largely correct” and then doubts that it tells us much about second-hand goods in general. It is sound for its case but too narrow.',
+          'The author does not dispute what sellers of used cars know; he accepts the asymmetry for cars. His doubt concerns whether the explanation generalizes, not whether it is mistaken about cars.',
+          'This reverses the author’s point. It is precisely for fully inspectable goods such as books, dresses, and graded diamonds that he says the explanation fails; for cars, which cannot be inspected easily, he accepts it.',
+          'The author does not claim the explanation is contradicted by what used cars fetch. He says it is “for cars, largely correct” and locates the counterexamples among goods other than cars.',
+        ],
         skill: 'tone',
       },
       {
@@ -318,6 +432,12 @@ export const FL6_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The ignorance theory predicts a small discount where the buyer can know the good’s quality; the exactly graded diamond that still loses value overnight is offered as a case where that prediction fails. The ring is said to fetch “far less,” so it is not an example of value being held. The comparison concerns what can be known about the object, not how well informed two groups of buyers are in general. Nothing is claimed about the fairness of the resale market.',
+        optionExplanations: [
+          'The ring is said to fetch “far less” on Tuesday, so the diamond is not an example of value being held. It is an example of value being lost despite complete information.',
+          'The comparison concerns what can be known about the object, not how well informed two groups of buyers are in general. The author is not characterizing jewelry buyers versus car buyers.',
+          'The ignorance theory predicts a small discount where the buyer can know the good’s quality. The exactly graded diamond that still loses value overnight is offered as a case where buyer uncertainty cannot explain the lower price.',
+          'Nothing is claimed about the fairness of the resale market. The laboratory grading is mentioned only to show that there is nothing hidden to fear, yet the discount persists.',
+        ],
         skill: 'function',
       },
       {
@@ -332,6 +452,12 @@ export const FL6_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The author introduces the guitar as “the same reasoning, run in the other direction” and concludes that neither premium can be found by examining the object “because neither is located there”; both follow from value residing partly in an object’s history of ownership. He treats neither as an error, and says inspection could not reveal either. Unequal knowledge between seller and buyer is the ignorance theory he is arguing past. He explicitly denies that these are fixed tastes, noting that conventions move.',
+        optionExplanations: [
+          'The author treats neither the premium nor the discount as an error, and says explicitly that neither can be found by examining the object “because neither is located there.” Inspection could not correct them.',
+          'The author introduces the guitar as “the same reasoning, run in the other direction” and concludes that neither premium can be found by examining the object. Both follow from value residing partly in an object’s history of ownership.',
+          'Unequal knowledge between seller and buyer is the ignorance theory the author is arguing past. He says that for the dress and the storied guitar there is nothing hidden, so knowledge asymmetry is not the explanation.',
+          'The author explicitly denies that these are fixed tastes, noting that conventions move and that what one generation would not buy used the next calls vintage. They are not beyond alteration.',
+        ],
         skill: 'inference',
       },
       {
@@ -346,6 +472,12 @@ export const FL6_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The second paragraph depends on the claim that in the cases listed “there is nothing hidden to fear,” so that ignorance cannot explain the discount; evidence that dress buyers do fear concealed damage would return one of those cases to the ignorance theory. The warranty finding concerns cars, where the author already accepts that theory. The book finding restates the author’s own example. A uniform resale fraction for diamonds across countries does nothing to show that hidden defects drive the discount.',
+        optionExplanations: [
+          'The warranty finding concerns cars, where the author already accepts the ignorance theory. It shows the theory working in its home territory and does nothing to undermine the second paragraph’s counterexamples.',
+          'The book finding restates the author’s own example from the second paragraph. It supports rather than weakens his claim that the discount persists where nothing is hidden.',
+          'A uniform resale fraction for diamonds across countries does nothing to show that hidden defects drive the discount. It is consistent with the author’s view that the discount reflects something other than ignorance.',
+          'The second paragraph depends on the claim that in the cases listed “there is nothing hidden to fear.” Evidence that dress buyers do fear concealed stains would return that case to the ignorance theory, undermining the paragraph’s argument.',
+        ],
         skill: 'strengthen-weaken',
       },
       {
@@ -360,6 +492,12 @@ export const FL6_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The author holds that the buyer of a new article pays partly for being its first owner, a good not found in the object; the reader who passes over a visibly flawless used copy can be paying for nothing else. The commuter’s premium is explained by ignorance about hidden wear, the theory the author confines to cases like cars. The collector is paying the other premium, for a storied previous owner. The student’s discount reflects the book’s declining usefulness, a fact about the object itself.',
+        optionExplanations: [
+          'The commuter’s premium is explained by ignorance about hidden wear, the theory the author confines to cases like cars. It is not the premium for being first owner that the author describes.',
+          'The collector is paying the other premium the author describes, for a storied previous owner who has “added a history.” That is the opposite direction from what the buyer of a new article pays for.',
+          'The author holds that the buyer of a new article pays partly for being its first owner, a good not found in the object. The reader who passes over a visibly flawless used copy can be paying for nothing else.',
+          'The student’s discount reflects the textbook’s declining usefulness once a new edition appears, a fact about the object itself. The author’s account concerns value that is not located in the object.',
+        ],
         skill: 'application',
       },
       {
@@ -373,6 +511,12 @@ export const FL6_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'From the persistent discount on inspectable goods to the premium on storied ones, the passage builds to the claim that part of a good’s price belongs to its history of ownership and “not the object.” The author accepts the standard account for used cars, so exposing an error in it is not his aim. He grants the thrift argument its arithmetic in passing and faults its view of the difficulty; he is not advancing it. Shifting conventions across generations are one supporting observation in the last paragraph.',
+        optionExplanations: [
+          'From the persistent discount on inspectable goods to the premium on storied ones, the passage builds to the claim that part of a good’s price belongs to its history of ownership and “not the object.”',
+          'The author accepts the standard account for used cars as “largely correct,” so exposing an error in it is not his aim. His point is that the account does not generalize.',
+          'The author grants the thrift argument its arithmetic in passing and faults its view of the difficulty. He is not advancing it; he says its proponents are “wrong about the difficulty.”',
+          'Shifting conventions across generations are one supporting observation in the last paragraph, used to show that these are not fixed tastes. It is not the purpose of the passage as a whole.',
+        ],
         skill: 'main-idea',
       },
     ],
@@ -396,6 +540,12 @@ export const FL6_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The author places motive as “an end toward which the practice of giving is to carry the giver,” not a gate the gift must pass, and allows only one case in which the money had better be kept. That motive is of no account is the view of the “economists of benevolence,” which he expressly declines. That motive must first be found unmixed is the moralists’ position he argues against in the second paragraph. He calls habit “the ally of grace,” the opposite of a corrupting influence.',
+        optionExplanations: [
+          'That motive is of no account is the view of the “economists of benevolence,” which the author expressly declines in paragraph 3. He says the injury to the giver is real.',
+          'The author places motive as “an end toward which the practice of giving is to carry the giver,” not a gate the gift must pass, and allows only one case in which the money had better be kept. Motive matters for what giving makes of the giver.',
+          'That motive must first be found unmixed is the moralists’ position he argues against in the second paragraph. He says the scrupulous would give seldom and the hungry would wait.',
+          'The author calls habit “the ally of grace,” the opposite of a corrupting influence. Many a man who began giving from expectation continued until the faces he relieved mattered more than reputation.',
+        ],
         skill: 'main-idea',
       },
       {
@@ -410,6 +560,12 @@ export const FL6_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The author grants that the moralists have “a high authority on their side” and then says he cannot think the precept was given for the use to which they put it. That is not unreserved agreement. He is not indifferent, because he argues that their standard would cost the hungry their bread. He shows no scorn for piety, and he disapproves of the practical effects of their view rather than approving them.',
+        optionExplanations: [
+          'The author grants that the moralists have “a high authority on their side” but then says he cannot think the precept was given for the use to which they put it. That is not unreserved agreement with their reading.',
+          'The author is not indifferent; he argues that their standard would cost the hungry their bread, since “the hungry would wait upon the issue of an examination.” Their inquiry does affect what the poor receive.',
+          'The author shows no scorn for the moralists’ piety, and he disapproves of the practical effects of their view rather than approving them. The effect he foresees is that the scrupulous give seldom.',
+          'The author grants the moralists “a high authority on their side” and then dissents from the use to which they put the precept of secrecy. He respects the authority cited but rejects their application of it.',
+        ],
         skill: 'tone',
       },
       {
@@ -424,6 +580,12 @@ export const FL6_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The comparison follows the statement that this giver learns to treat others’ misery as the occasion of his own credit; an actor needs an audience in order to perform at all, and so this giver comes to require want as the stage for his giving. Where he chooses to give is not the point of the figure, which concerns what the poor have become to him. The author describes an injury to the giver’s character, not growing affection. Nothing suggests the giver doubts that the distress is real.',
+        optionExplanations: [
+          'The comparison follows the statement that this giver learns to regard others’ misery as the occasion of his own credit. An actor needs an audience in order to perform at all, so this giver comes to require want as the stage for his display.',
+          'Where the giver chooses to give is not the point of the figure, which concerns what the poor have become to him. The passage already says he gives before witnesses; the actor comparison adds dependence, not location.',
+          'The author describes an injury to the giver’s character, not growing affection. The giver comes to regard misery as his opportunity, which is the opposite of affection for the poor.',
+          'Nothing suggests the giver doubts that the distress is real. The figure concerns his need for the distress, not suspicion of it; an actor does not suspect his audience of feigning.',
+        ],
         skill: 'inference',
       },
       {
@@ -438,6 +600,12 @@ export const FL6_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The example is the experience the author cites for his hopeful view of motive: a man who began from a poor motive continued until those he relieved mattered more to him than those who watched. It is not a concession about how most people give; “many a man” is offered as encouragement. It counts against the moralists’ distrust of habit, which the author calls the ally of grace. The giver who binds the poor is not introduced until the following paragraph.',
+        optionExplanations: [
+          'It is not a concession about how most people give. “Many a man” is offered as encouragement, and the author’s point is that such a man’s giving continued until the faces he relieved mattered more than appearances.',
+          'The example counts against the moralists’ distrust of habit, which the author calls “the ally of grace.” It shows custom carrying a giver toward a better motive, not the moralists being right.',
+          'The example is the experience the author cites for his hopeful view: a man who began from a poor motive continued until those he relieved mattered more than those who watched. Persistence mended the motive.',
+          'The giver who seeks to bind the poor is not introduced until the following paragraph. The man of station is offered as evidence for the author’s view of habit, not as a contrast with the binding giver.',
+        ],
         skill: 'function',
       },
       {
@@ -452,6 +620,12 @@ export const FL6_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The single exception is the giver who bestows so that the receiver is bound to him and “would have his bounty remembered whenever his will is crossed,” leaving the poor less free; the landlord does exactly this. The merchant is the vain giver, who asks only that the gift be seen, and whose fault the author says ends in himself. The widower and the clerk give from mixed motives—relief from an unpleasant sight, hope of reward—but neither motive reaches the receiver, and the author’s rule for such givers is to give first and examine afterward.',
+        optionExplanations: [
+          'The merchant is the vain giver, who asks only that the gift be seen. The author says such a man’s fault “ends in himself,” and his rule for him is to give first and examine afterward, not to keep his money.',
+          'The widower gives from a mixed motive, relief from an unpleasant sight, but that motive does not reach the receiver. The author’s rule for such givers is to give first and examine himself afterward.',
+          'The clerk gives in hope of reward in the life to come, a mixed motive that does not bind the poor. Nothing in his giving asks that they be less free, so the author would not say he should keep his money.',
+          'The single exception is the giver who bestows so that the receiver is bound to him and “would have his bounty remembered whenever his will is crossed.” The landlord does exactly this, leaving his tenants less free for having received.',
+        ],
         skill: 'application',
       },
       {
@@ -466,6 +640,12 @@ export const FL6_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Refusing the showy gift rebukes the giver “at the charge of the widow,” and it also stops the practice of giving that the author thinks can carry a vain man toward a better motive. The author says the precept of secrecy was given for the giver’s sake, not the receiver’s, so the first option misstates him. Nothing in the passage suggests that denying public credit turns givers toward domination. The author takes vanity in giving to be common enough to need discussing, so he would not call the rule needless.',
+        optionExplanations: [
+          'The author says the precept of secrecy was given for the giver’s sake, not the receiver’s, to whom “it is a matter of small moment whether his benefactor be seen.” This option misstates him.',
+          'Refusing the showy gift rebukes the giver “at the charge of the widow,” and it also stops the practice of giving that the author thinks can carry a vain man toward a better motive. The rule costs both the poor and the giver.',
+          'Nothing in the passage suggests that denying public credit turns givers toward domination. The binding giver is described as a separate kind with a fault of another sort, not as a vain giver thwarted.',
+          'The author takes vanity in giving to be common enough to need discussing, and he describes the man who gives always before witnesses. He would not call a rule against public credit needless.',
+        ],
         skill: 'new-information',
       },
     ],

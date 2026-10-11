@@ -4,6 +4,7 @@ import { prisma } from '@/lib/prisma'
 import { REVIEW_HREF, isReviewKind } from '@/lib/question-resolver'
 import { CORRECT_TO_RETIRE } from '@/lib/mistake-log'
 import { activeMistakesFor, filterMistakes, isMistakeCourse } from '@/lib/mistakes-server'
+import { carsSkillForKey } from '@/lib/question-sources/mcat'
 
 export const dynamic = 'force-dynamic'
 
@@ -43,6 +44,10 @@ export async function GET(req: NextRequest) {
           topicTitle: titleOf.get(m.topicSlug) ?? null,
           discipline: m.discipline,
           source: m.origin.source,
+          // PRACTICE covers both practice tests and question-bank sets; the kind tells them apart.
+          attemptKind: m.origin.attemptKind ?? null,
+          // CARS reasoning skill, for the mistake log's skills panel (MCAT only).
+          skill: course === 'mcat' ? carsSkillForKey(m.questionKey) ?? null : null,
           reason: m.reason,
           misses: m.misses,
           correctSince: m.correctSince,

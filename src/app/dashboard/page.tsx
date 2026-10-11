@@ -12,6 +12,7 @@ import ProgressRing from '@/components/ProgressRing'
 import LiveNowBanner from '@/components/LiveNowBanner'
 import ClassAnnouncementsBanner from '@/components/ClassAnnouncementsBanner'
 import FullLengthProgress from '@/components/FullLengthProgress'
+import ExamGoalCard from '@/components/ExamGoalCard'
 import MistakeLogChip from '@/components/MistakeLogChip'
 import { isFullLengthCourse } from '@/lib/full-length-progress'
 import AchievementToast from '@/components/AchievementToast'
@@ -562,6 +563,12 @@ function DashboardContent() {
         {plansLoaded &&
           studyPlans.flatMap((p) => (isFullLengthCourse(p.courseKey) ? [p.courseKey] : [])).map((course) => (
             <FullLengthProgress key={course} course={course} compact className="mb-6" />
+          ))}
+
+        {/* Score goal per test-prep plan */}
+        {plansLoaded &&
+          studyPlans.flatMap((p) => (isFullLengthCourse(p.courseKey) ? [p.courseKey] : [])).map((course) => (
+            <ExamGoalCard key={`goal-${course}`} course={course} className="mb-6" />
           ))}
 
         {/* Also today — whatever the next-step card didn't take */}

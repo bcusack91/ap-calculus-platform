@@ -10,6 +10,7 @@ import { touchDailyStreak } from '@/lib/streak'
 import { MASTERY_LEVEL_ON_EXIT_PASS, EXIT_QUIZ_PASS_FRACTION, EXIT_QUIZ_REDO_FRACTION } from '@/lib/mastery'
 import { satBankSlugsForCourseTopic } from '@/lib/sat-topic-map'
 import { recordQuestions } from '@/lib/study-tracking'
+import { chosenOptionKey } from '@/lib/question-activity-rows'
 
 // Bounded payload: quizzes are 10 questions (score = number correct), but allow
 // headroom up to 100. answers mirrors the client shape
@@ -283,6 +284,8 @@ export async function POST(request: Request) {
           itemIndex: i,
           // -1 = "I'm guessing" (no option picked) → skipped.
           chosenIndex: typeof a.selectedAnswer === 'number' && a.selectedAnswer >= 0 ? a.selectedAnswer : null,
+          // The picked option's text from the server's rebuild (never client text).
+          chosenKey: item ? chosenOptionKey(item.options, typeof a.selectedAnswer === 'number' ? a.selectedAnswer : null) : null,
           ...(item ? { attemptKind: 'exit' as const } : {}),
         }
       }))

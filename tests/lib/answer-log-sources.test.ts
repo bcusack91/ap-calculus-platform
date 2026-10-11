@@ -13,8 +13,9 @@ import {
   mcatPracticeBatchRow,
   mcatPracticeRows,
   unitTestQuestionRows,
+  chosenOptionKey,
 } from '@/lib/question-activity-rows'
-import { questionKey, isQuestionKey } from '@/lib/question-key'
+import { questionKey, isQuestionKey, optionKey } from '@/lib/question-key'
 import { gradeUnitTest } from '@/lib/mcat-unit-test'
 import { scoreMCAT } from '@/lib/mcat-scoring'
 import { shuffleOptions } from '@/lib/shuffle-options'
@@ -84,6 +85,11 @@ describe('diagnosticQuestionRows — answer-log fields', () => {
     expect(rows.every((r) => r.attemptId === 'd1')).toBe(true)
   })
 
+  it('sets chosenKey from the stored option text (null when skipped or no options stored)', () => {
+    const rows = diagnosticQuestionRows(results, { category: 'mcat-full-diagnostic', attemptKind: 'diagnostic', attemptId: 'd1' })
+    expect(rows.map((r) => r.chosenKey)).toEqual([optionKey('Ne'), optionKey('B'), null])
+  })
+
   it('tags attemptKind only on rows with a hashed key; a legacy row keeps its old key', () => {
     const rows = diagnosticQuestionRows(results, { category: 'mcat-full-diagnostic', attemptKind: 'diagnostic', attemptId: 'd1' })
     expect(rows.map((r) => r.attemptKind)).toEqual(['diagnostic', 'diagnostic', undefined])
@@ -117,6 +123,16 @@ describe('unitTestQuestionRows', () => {
     ])
   })
 
+  it('chosenKey is the frozen option text picked, so it matches across option orders', () => {
+    const rows = unitTestQuestionRows(questions, answers, { courseSlug: 'mcat-prep', attemptId: 'ut1' })
+    expect(rows.map((r) => r.chosenKey)).toEqual([optionKey('c'), optionKey('b'), null])
+    const [shuffled] = unitTestQuestionRows([{ question: 'Q1', options: ['c', 'a', 'd', 'b'], correctIndex: 0, topicSlug: 't1' }], [0], { courseSlug: 'mcat-prep', attemptId: 'x' })
+    expect(shuffled.chosenKey).toBe(rows[0].chosenKey)
+    expect(chosenOptionKey(['a', 'b'], 5)).toBeNull()
+    expect(chosenOptionKey(['a', 'b'], -1)).toBeNull()
+    expect(chosenOptionKey([], null)).toBeNull()
+  })
+
   it('the key ignores option order, so a unit-test item matches the same exit-pool item', () => {
     const [row] = unitTestQuestionRows([{ question: 'Q1', options: ['c', 'a', 'd', 'b'], correctIndex: 0, topicSlug: 't1' }], [0], { courseSlug: 'sat-prep', attemptId: 'x' })
     expect(row.questionKey).toBe(questionKey({ question: 'Q1', options: ['a', 'b', 'c', 'd'], correctIndex: 2 }))
@@ -145,6 +161,23 @@ describe('MCAT section practice — refs, rows, review', () => {
       [undefined, 'p1', 2, null, 'mcat-practice:cars:2'],
     ])
     expect(rows.reduce((n, r) => n + (r.durationMs ?? 0), 0)).toBe(600_000)
+    // No options on the resolved items here → no chosenKey.
+    expect(rows.every((r) => r.chosenKey == null)).toBe(true)
+  })
+
+  it('chosenKey comes from the re-resolved options as shown, never the client', () => {
+    const answers = [
+      { questionIndex: 0, selected: 2, correct: 1, ref: 'r0' },
+      { questionIndex: 1, selected: null, correct: 0, ref: 'r1' },
+      { questionIndex: 2, selected: 1, correct: 0 },
+    ]
+    const resolved = [
+      { correctIndex: 1, questionKey: 'q:aaaaaaaaaaaaaaaa', options: ['w', 'x', 'y', 'z'] },
+      { correctIndex: 0, questionKey: 'q:bbbbbbbbbbbbbbbb', options: ['w', 'x', 'y', 'z'] },
+      null,
+    ]
+    const rows = mcatPracticeRows({ sectionId: 'cars', sectionName: 'CARS', answers }, resolved, { attemptId: 'p1' })
+    expect(rows.map((r) => r.chosenKey)).toEqual([optionKey('y'), null, null])
   })
 
   it('an old client without a per-question key still gets the batch row', () => {
@@ -239,6 +272,13 @@ describe('MCAT full-length — per-question grading, rows and rebuild', () => {
     expect(totalsBy(rows)).toEqual(totalsBy(batch))
     expect(rows.every((r) => r.attemptKind === 'mcat-fl' && r.attemptId === 'fl1' && isQuestionKey(r.questionKey))).toBe(true)
     expect(rows.map((r) => r.itemIndex)).toEqual(rows.map((_, i) => i))
+    // chosenKey = the authored option text picked; null for unanswered.
+    rows.forEach((r, i) => {
+      const it = items[i]
+      expect(r.chosenKey).toBe(it.chosenIndex === null ? null : optionKey(it.options[it.chosenIndex]))
+    })
+    expect(rows.some((r) => r.chosenKey)).toBe(true)
+    expect(rows.some((r) => r.chosenKey === null)).toBe(true)
   })
 
   it('sanitizes hostile input: unknown ids, out-of-range picks and silly timings are dropped', () => {

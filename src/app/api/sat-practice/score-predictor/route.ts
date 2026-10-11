@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
+import { SAT_ONLY_ATTEMPTS } from '@/lib/sat-attempt-format'
 import { unstable_cache } from 'next/cache'
 import { satSectionScaled, projectionRange, satPercentile, type EvidenceLevel } from '@/lib/sat-scoring'
 
@@ -46,7 +47,8 @@ export async function GET() {
           select: { results: true, createdAt: true },
         }),
         prisma.satTestAttempt.findMany({
-          where: { userId },
+          // PSAT practice tests (160-760 scale) never feed the SAT predictor.
+          where: { userId, ...SAT_ONLY_ATTEMPTS },
           orderBy: { completedAt: 'asc' },
           select: {
             totalScore: true,

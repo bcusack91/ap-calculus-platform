@@ -35,6 +35,12 @@ export const FL1_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The defining feature of the insecure-resistant (ambivalent) pattern is ambivalence on reunion: intense distress, contact-seeking, and then resistance to the contact, with no return to exploration. Seeking contact alone does not make the child secure, because a secure child accepts comfort and goes back to play. Avoidant children show little distress and do not seek to be picked up at all, so the intense crying and reaching rule that pattern out. The disorganized category requires contradictory or dazed behavior with no coherent strategy, whereas this child shows the consistent seek-then-resist strategy that defines resistance.',
+        optionExplanations: [
+          'Seeking contact alone does not make a child secure. The passage says secure children accept comfort and go back to exploring; this child pushes the caregiver away and never resumes play.',
+          'Avoidant children show little visible distress and ignore or turn away from the caregiver on return. This child cried intensely and reached to be picked up, which rules out the avoidant pattern.',
+          'The passage defines the insecure-resistant (ambivalent) pattern by exactly this sequence: extreme upset, seeking contact on reunion yet resisting it (arching or pushing away), and failing to return to play.',
+          'The disorganized category describes contradictory, dazed, or frozen behavior with no consistent strategy. This child shows a coherent seek-then-resist strategy, which is the defining resistant pattern, not disorganization.',
+        ],
         skill: '7A attachment',
       },
       {
@@ -49,6 +55,12 @@ export const FL1_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The passage places generativity versus stagnation in middle adulthood and defines generativity as investing in the next generation through parenting, mentoring, or lasting work; coaching youth and mentoring junior colleagues at age 50 fit both the age and the content. Industry versus inferiority belongs to school-age children mastering skills. Integrity versus despair is the late-adulthood review of a life already lived. Intimacy versus isolation concerns forming close partnerships in young adulthood rather than guiding others.',
+        optionExplanations: [
+          'Industry versus inferiority belongs to school-age children mastering skills and gaining competence. A 50-year-old guiding younger people is at a later stage.',
+          'The passage places generativity versus stagnation in middle adulthood and defines generativity as investing in the next generation through parenting, mentoring, or lasting work. Coaching youth and mentoring new employees at 50 fit both age and content.',
+          'Integrity versus despair is the late-adulthood review of a life already lived. Active mentoring and coaching describe investment in others, not retrospective evaluation.',
+          'Intimacy versus isolation concerns forming close partnerships in young adulthood. Guiding a team and junior colleagues is about the next generation, not about intimacy.',
+        ],
         skill: '7A Erikson psychosocial stages',
       },
       {
@@ -63,6 +75,12 @@ export const FL1_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Kohlberg classifies the reasoning, not the verdict, so two identical answers can sit at different levels. The first participant judges the act by the punishment the actor would suffer, which is preconventional reasoning. The second judges it by the need to maintain laws and social order, which is the law-and-order form of conventional reasoning. Neither invokes a social contract or self-chosen universal principles, so postconventional reasoning is not shown by either participant, and fear of prison is not deference to legal authority as a shared social good.',
+        optionExplanations: [
+          'Fear of being caught and imprisoned is not deference to legal authority as a shared social good; it is avoidance of personal punishment, which the passage places at the preconventional level.',
+          'Neither participant invokes a social contract or self-chosen universal principles. Looking beyond the act is not the criterion; the specific basis of the reasoning determines the level.',
+          'The first participant reasons about punishment to himself, which is preconventional, not conventional. The second’s appeal to maintaining social order is conventional (law and order), not postconventional.',
+          'The first judges the act by the punishment the actor would suffer, which the passage defines as preconventional. The second judges it by the need to maintain laws and social order, the law-and-order form of conventional reasoning.',
+        ],
         skill: '7A Kohlberg moral development',
       },
       {
@@ -77,6 +95,12 @@ export const FL1_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'If the caregiving environment that created the infant classification persisted, then later friendship quality could be produced directly by the ongoing environment, and the infant working model would be a marker rather than a cause; this is the classic alternative explanation for continuity in longitudinal attachment data. Self-report measurement raises a question about the accuracy of the outcome, not about which variable produced it. Attrition weakens generalizability but does not by itself supply a rival cause for the observed association. Finding no temperament difference removes a potential confound and therefore strengthens, rather than weakens, the causal claim.',
+        optionExplanations: [
+          'If the responsive caregiving that created the secure classification persisted into adolescence, the ongoing environment could directly produce closer friendships, making the infant working model a marker rather than a cause.',
+          'Self-report measurement raises a question about the accuracy of the outcome measure, not about which variable produced the association. It does not supply a rival cause.',
+          'Attrition of a third of participants weakens generalizability, but it does not by itself provide an alternative explanation for the association observed among those who remained.',
+          'Finding no temperament difference removes a potential confound (temperament driving both classification and friendships), which strengthens rather than weakens the causal claim.',
+        ],
         skill: '7A attachment research design',
       },
     ],
@@ -107,6 +131,12 @@ export const FL1_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Groups 1 and 3 share a low delinquent peer share and differ only in whether the student was suspended, so their difference (8% versus 19%) isolates the label with the network held constant. Comparing Groups 1 and 2 holds the label constant and varies the network, which isolates the peer effect instead. Comparing Groups 1 and 4 changes both the label and the network at once, so neither can be attributed the difference. Comparing Groups 2 and 3 also changes both variables, in opposite directions, and cannot isolate either one.',
+        optionExplanations: [
+          'Groups 1 and 2 both were not suspended and differ in peer share, so this comparison holds the label constant and isolates the peer-network effect, not the label effect.',
+          'Groups 1 and 3 share a low delinquent peer share and differ only in suspension status, so their difference (8% versus 19%) isolates the association of the formal label with the network held constant.',
+          'Groups 1 and 4 differ in both suspension and peer share at once, so the difference between them cannot be attributed to either variable alone.',
+          'Groups 2 and 3 differ in both variables in opposite directions (unsuspended/high peer share versus suspended/low peer share), so neither effect can be isolated.',
+        ],
         skill: '9A deviance data interpretation',
       },
       {
@@ -121,6 +151,12 @@ export const FL1_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Retained ties are lowest in the two suspended groups (3.2 and 2.9) regardless of peer composition, and labeling theory specifically predicts that a public label leads conventional others to withdraw, narrowing the labeled person’s network. A tightening of delinquent networks would predict more retained ties for the high-peer-share groups, but those groups retained fewer ties than their counterparts. Naming fewer friends at the outset is not a process described by labeling theory, and the largest drop in retained ties tracks suspension rather than peer share. Absence from school during a suspension is a mechanical explanation for lost contact, not the social reaction to a label that the theory proposes.',
+        optionExplanations: [
+          'A tightening of delinquent networks would predict more retained ties for high-peer-share groups, but those groups retained fewer ties than their low-peer-share counterparts (4.1 vs 4.6; 2.9 vs 3.2).',
+          'Naming fewer friends at the outset is not a process labeling theory describes, and the largest drop in retained ties tracks suspension (4.6/4.1 down to 3.2/2.9), not peer share.',
+          'Absence during a suspension is a mechanical explanation for lost contact, not the social reaction to a label. Labeling theory concerns how others respond to a public tag, not time away.',
+          'Retained ties are lowest in the two suspended groups (3.2 and 2.9) regardless of peer composition. Labeling theory predicts that a public label leads conventional others to withdraw, narrowing the labeled person’s network.',
+        ],
         skill: '9A labeling theory',
       },
       {
@@ -135,6 +171,12 @@ export const FL1_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Strain theory attributes deviance to the gap between approved goals and available means; the aspiration–expectation gap is exactly that measure, and an effect that appears regardless of suspension status shows strain operating independently of any label. Accepting a deviant self-description is the internalization of a label, which supports labeling theory. Low delinquency when the label was never public supports the labeling claim that the audience’s reaction matters. Delinquency that tracks friends’ suspensions points to peer influence or the spread of labels, not to blocked goals.',
+        optionExplanations: [
+          'Accepting the description “troublemaker” is the internalization of a deviant label leading to secondary deviance, which supports labeling theory rather than strain theory.',
+          'Low delinquency when the suspension was never public supports the labeling claim that the audience’s reaction to the label is what matters. It says nothing about blocked goals.',
+          'Strain theory attributes deviance to the gap between approved goals and available means. The aspiration–expectation gap is exactly that measure, and an effect that appears regardless of suspension shows strain operating independently of any label.',
+          'Delinquency that tracks friends’ suspensions points to peer influence or the spread of labels through the network, not to a gap between goals and means.',
+        ],
         skill: '9A strain theory',
       },
       {
@@ -149,6 +191,12 @@ export const FL1_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Suspensions are not assigned at random; students who are already more delinquent are more likely to be suspended, so a higher Year 2 rate among suspended students could simply reflect pre-existing differences (selection) rather than an effect of the label. Matching on Year 1 delinquency removes that particular alternative. Underreporting is a measurement problem that matching on a prior variable cannot fix. Unreciprocated nominations concern how ties were counted, not who was suspended. The length of the follow-up interval is a design limitation unrelated to group equivalence at baseline.',
+        optionExplanations: [
+          'Suspensions are not random; already-delinquent students are more likely to be suspended, so a higher Year 2 rate among them could reflect pre-existing differences (selection). Matching on Year 1 delinquency removes that alternative.',
+          'Underreporting of Year 2 delinquency is a measurement problem at follow-up. Matching groups on a Year 1 variable cannot correct how honestly students answered a year later.',
+          'Unreciprocated nominations concern how friendship ties were counted, not who was suspended or how delinquent they were at baseline. Matching on delinquency does not address tie counting.',
+          'The length of the follow-up interval is a design limitation unrelated to whether groups were equivalent at baseline. Matching addresses group comparability, not timing.',
+        ],
         skill: '9A research design: selection',
       },
     ],
@@ -178,6 +226,12 @@ export const FL1_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Ten days of decreased need for sleep, pressured speech, grandiosity, and reckless spending severe enough to require hospitalization meet the passage’s definition of a manic episode, and bipolar I requires only one manic episode, with depression common but not necessary. Bipolar II is excluded by the presence of full mania (hospitalization and marked impairment) and by the absence of any depressive episode. Cyclothymic disorder requires two years of symptoms that never reach full episode criteria, whereas this episode clearly does. A depressive history is not required for bipolar I, so its absence does not rule out a bipolar diagnosis.',
+        optionExplanations: [
+          'Ten days of decreased need for sleep, pressured speech, grandiosity, and reckless spending requiring hospitalization meet the passage’s definition of a manic episode. Bipolar I requires only one manic episode; depression is common but not necessary.',
+          'Bipolar II requires a hypomanic episode (without marked impairment or hospitalization) plus a major depressive episode, and no mania ever. This patient has full mania and no depression, so bipolar II is excluded on both counts.',
+          'Cyclothymic disorder requires two years of fluctuating symptoms that never meet full episode criteria. This episode clearly meets manic criteria, so cyclothymia does not apply.',
+          'A depressive history is not required for bipolar I. The passage states depressive episodes are common but not necessary, so their absence does not rule out the diagnosis.',
+        ],
         skill: '7A bipolar disorder diagnosis',
       },
       {
@@ -192,6 +246,12 @@ export const FL1_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Hallucinations and delusions satisfy the symptom-type requirement, but the passage also requires continuous signs of disturbance for at least six months, and this patient has a five-week history with no prodrome, so the duration criterion is unmet. The symptom count alone is therefore insufficient. Bipolar I requires a manic episode, and no elevated mood, decreased sleep, or increased energy is described. Major depressive disorder with psychotic features requires a depressive episode, and the patient has no mood symptoms.',
+        optionExplanations: [
+          'Hallucinations and delusions do satisfy the symptom-type requirement, but the passage also requires continuous signs of disturbance for at least six months. Symptom count alone is insufficient at five weeks.',
+          'Bipolar I requires a manic episode, and no elevated mood, decreased need for sleep, or increased energy is described. Psychotic symptoms do not by themselves indicate mania.',
+          'The symptom types are present, but the passage requires continuous signs of disturbance for at least six months. This patient has a five-week history with no prodrome, so the duration criterion is unmet and schizophrenia cannot yet be diagnosed.',
+          'Major depressive disorder with psychotic features requires a depressive episode, and the patient has no mood symptoms. Hallucinations alone do not point to a mood disorder.',
+        ],
         skill: '7A schizophrenia diagnostic criteria',
       },
       {
@@ -206,6 +266,12 @@ export const FL1_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The psychoanalytic account explains behavior through unconscious conflict managed by defense mechanisms; redirecting anger from its true, threatening object onto safer targets is displacement, one of the mechanisms the passage names. Placing the man on stable trait dimensions is the trait perspective. A gap between the actual and ideal self is the humanistic notion of incongruence. Reinforcement history is a learning explanation and involves no unconscious conflict at all.',
+        optionExplanations: [
+          'Placing the man on stable dimensions of neuroticism and agreeableness is the trait perspective, which describes dispositions without invoking unconscious conflict.',
+          'The psychoanalytic account explains behavior through unconscious conflict managed by defense mechanisms. Redirecting anger from its true, threatening object onto safer targets is displacement, one of the mechanisms the passage names.',
+          'A gap between the person he is and the person he wants to become is the humanistic concept of incongruence between actual and ideal self, not a psychoanalytic explanation.',
+          'A reinforcement history of rewarded aggression is a learning explanation. It involves no unconscious drives or defense mechanisms, so it is not psychoanalytic.',
+        ],
         skill: '7A psychoanalytic perspective',
       },
       {
@@ -220,6 +286,12 @@ export const FL1_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The passage requires either depressed mood or marked loss of interest as the core symptom, so the patient’s anhedonia satisfies that requirement; with insomnia, weight loss, fatigue, and poor concentration the total reaches five symptoms over more than two weeks. Depressed mood is therefore not required. Persistent depressive disorder requires at least two years of symptoms, not three weeks. Hypomania involves decreased need for sleep with increased energy, whereas this patient sleeps poorly and feels exhausted.',
+        optionExplanations: [
+          'The passage requires either depressed mood or marked loss of interest as the core symptom. Depressed mood is not required when anhedonia is present.',
+          'Persistent depressive disorder requires at least two years of chronic, milder symptoms. Three weeks of symptoms severe enough to impair work does not fit.',
+          'Hypomania involves decreased need for sleep with increased energy. This patient sleeps poorly and feels exhausted, the opposite of hypomanic energy.',
+          'The passage requires either depressed mood or marked loss of interest as the core symptom, so anhedonia qualifies. With insomnia, weight loss, fatigue, and poor concentration the total reaches five symptoms over more than two weeks.',
+        ],
         skill: '7A major depressive episode criteria',
       },
       {
@@ -234,6 +306,12 @@ export const FL1_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The passage states that the trait perspective assumes a person’s standing on a dimension is largely consistent across situations, so strong situational variability in the same people directly contradicts that assumption. Agreement between self-reports and friends’ ratings supports the validity of questionnaire measurement, which the perspective relies on. Similarity in twins reared apart suggests a heritable basis for traits and is compatible with the perspective. Strong correlations between ages 25 and 50 confirm the assumption of stability across adulthood rather than challenging it.',
+        optionExplanations: [
+          'Agreement between self-reports and friends’ ratings supports the validity of the questionnaire measurement that the trait perspective relies on. It confirms rather than challenges an assumption.',
+          'Similarity in twins reared apart suggests a heritable basis for traits, which is compatible with viewing personality as stable dispositions. It does not challenge any assumption of the perspective.',
+          'The passage states the trait perspective assumes a person’s standing on a dimension is largely consistent across situations. Strong situational variability in the same people on the same dimension directly contradicts that assumption.',
+          'Strong correlations between ages 25 and 50 confirm the assumption of stability across adulthood, which the passage names as a core assumption of the trait perspective.',
+        ],
         skill: '7A trait perspective',
       },
     ],
@@ -269,6 +347,12 @@ export const FL1_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Across four cues the in-group rating fell from 6.9 to 4.0, a drop of 2.9 points, or about 0.7 points per cue; the out-group rating fell from 7.0 to 6.1, a drop of 0.9 points, or about 0.2 points per cue. The difference is roughly 0.5 points per cue. The 0.2 value is the out-group drop per cue alone, and the 0.7 value is the in-group drop per cue alone, not the difference between them. The 2.0 value is close to the total gap between the two series at four cues rather than a per-cue difference.',
+        optionExplanations: [
+          'A value of 0.2 points is the out-group drop per cue alone (0.9 points over four cues), not the difference between the two groups’ per-cue drops.',
+          'In-group ratings fell from 6.9 to 4.0 (2.9 points, about 0.7 per cue); out-group ratings fell from 7.0 to 6.1 (0.9 points, about 0.2 per cue). The difference is roughly 0.5 points per cue.',
+          'A value of 0.7 points is the in-group drop per cue alone (2.9 points over four cues), not the difference between in-group and out-group slopes.',
+          'A value of 2.0 points is close to the total gap between the two series at four cues (6.1 − 4.0 = 2.1), not a per-cue difference.',
+        ],
         skill: '8B attribution data interpretation',
       },
       {
@@ -283,6 +367,12 @@ export const FL1_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Out-group ratings stayed near 6 even when four situational explanations were available, so the dispositional attribution that characterizes the fundamental attribution error persisted for the rival group member while in-group ratings were revised downward. Nothing in the design measured whether participants believed the outcome was deserved, so a just-world explanation goes beyond the data. The actor–observer difference concerns how people explain their own behavior versus others’, and participants were observers of both targets. The self-serving bias concerns attributions for one’s own outcomes, and a persistently dispositional rating for a failure does not protect anyone’s reputation.',
+        optionExplanations: [
+          'Out-group ratings stayed near 6 even with four situational explanations available, so the dispositional attribution persisted for the rival while in-group ratings were revised downward. This matches the passage’s claim that observers resist situational explanations for out-group actors.',
+          'Nothing in the design measured whether participants believed the outcome was deserved, so a just-world explanation goes beyond the data. The passage never mentions this belief.',
+          'The actor–observer difference concerns how people explain their own behavior versus others’. Participants were observers of both targets and did not treat the rival’s failure as their own.',
+          'The self-serving bias concerns attributions for one’s own outcomes. A persistently dispositional rating for a rival’s failure protects no one’s reputation; it blames the rival.',
+        ],
         skill: '8B fundamental attribution error and group membership',
       },
       {
@@ -297,6 +387,12 @@ export const FL1_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'A low dispositional rating for one’s own failure together with a high dispositional rating for one’s own success is the signature of the self-serving bias: internal credit for good outcomes and external blame for bad ones. The actor–observer difference predicts situational attributions for one’s own behavior regardless of outcome, so it cannot explain the 7.5 rating for the success. The fundamental attribution error describes explanations of others’ behavior, not one’s own. In-group favoritism concerns evaluations of fellow group members and would not produce opposite attributions for success and failure.',
+        optionExplanations: [
+          'The actor–observer difference predicts situational attributions for one’s own behavior regardless of outcome, so it cannot explain the high dispositional rating (7.5) for one’s own success.',
+          'The fundamental attribution error describes explanations of others’ behavior, not one’s own. These ratings concern the participants’ own past actions.',
+          'In-group favoritism concerns evaluations of fellow group members. It would not produce opposite attributions for one’s own success versus failure.',
+          'A low dispositional rating for one’s own failure (3.2) with a high dispositional rating for one’s own success (7.5) is the signature of the self-serving bias: internal credit for good outcomes, external blame for bad ones.',
+        ],
         skill: '8B self-serving bias',
       },
       {
@@ -311,6 +407,12 @@ export const FL1_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'A target who is an out-group member but carries no rivalry-based stereotype separates the two explanations: if ratings for that target fall with cues like the in-group ratings, the effect is specific to the rival; if they stay high, the effect is general out-group bias. Adding more cues for the rival only extends the existing manipulation and does not vary group type. Measuring liking for the rival may predict the size of the effect but cannot show whether a non-rival out-group would be treated differently. Changing the outcome to a success tests attributions for positive behavior, which is a different question.',
+        optionExplanations: [
+          'Adding more cues for the rival only extends the existing manipulation. It does not vary group type, so it cannot separate a rivalry-specific stereotype from general out-group bias.',
+          'Measuring liking for the rival may predict the size of the effect but cannot show whether a non-rival out-group would be treated differently from the rival.',
+          'An out-group target carrying no rivalry-based stereotype separates the two explanations: if ratings for that target fall with cues like in-group ratings, the effect is rival-specific; if they stay high, it is general out-group bias.',
+          'Changing the outcome to an early completion tests attributions for positive behavior, a different question. It does not vary whether the out-group is a rival.',
+        ],
         skill: '8B research design: stereotype vs out-group bias',
       },
       {
@@ -325,6 +427,12 @@ export const FL1_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The in-group versus out-group gap at four cues was nearly four times larger among participants for whom the university was central to the self (3.4 points) than among low identifiers (0.9 points), which is what social identity theory predicts when group membership is a larger part of the self-concept. No authority made categories salient in this study, and participants sorted targets by university on their own. Strong identification increased rather than removed the bias. High identifiers cannot have ignored situational information for every target, because the large gap at four cues requires that in-group ratings dropped substantially while the zero-cue gap was near zero.',
+        optionExplanations: [
+          'No authority made categories salient in this study; participants sorted targets by university on their own. The median split concerns identification strength, not category salience.',
+          'Strong identification increased rather than removed the bias: the in-group/out-group gap at four cues was 3.4 points among high identifiers versus 0.9 among low identifiers.',
+          'High identifiers cannot have ignored situational information for every target. A large gap at four cues with a near-zero gap at zero cues requires in-group ratings to have dropped substantially.',
+          'The in-group versus out-group gap at four cues was nearly four times larger among participants for whom the university was central to the self (3.4 vs 0.9). Social identity theory predicts stronger in-group bias when membership is a larger part of the self-concept.',
+        ],
         skill: '8A social identity theory',
       },
     ],
@@ -356,6 +464,12 @@ export const FL1_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The uninsured-to-insured ratio is about 1.75 in every quartile (24.5/14.0, 18.0/10.2, 13.1/7.5, and 10.0/5.6 all round to 1.75–1.8), so lacking insurance multiplies the rate by a nearly constant factor. The absolute differences shrink from 10.5 to 4.4 as income rises, so they are not constant. Uninsured rates fall from 24.5 to 10.0 across quartiles, so the gradient is present among the uninsured, not eliminated. The usual-source-of-care column varies with income, not insurance, and the table gives no way to remove insurance’s association by using it.',
+        optionExplanations: [
+          'The uninsured-to-insured ratio is about 1.75 in every quartile (24.5/14.0, 18.0/10.2, 13.1/7.5, 10.0/5.6), so lacking insurance multiplies the rate by a nearly constant factor.',
+          'The absolute differences shrink from 10.5 (lowest quartile) to 4.4 (highest), so they are not constant across quartiles. The constant factor is proportional, not absolute.',
+          'Uninsured rates fall from 24.5 to 10.0 across quartiles, so the income gradient is clearly present among the uninsured, not eliminated.',
+          'The usual-source-of-care column varies with income, not insurance, and the table provides no way to remove insurance’s association by using it. Insurance is strongly associated with the rate in every row.',
+        ],
         skill: '10A health disparities data interpretation',
       },
       {
@@ -370,6 +484,12 @@ export const FL1_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Age raises hospitalization independently of income, so a lowest quartile that is older would show an inflated crude rate, and the gap between it and the highest quartile would mix an age effect with the income effect; age adjustment removes that confound, so the unadjusted gradient would be exaggerated. Older adults are hospitalized more often, not less, so the gradient would not be understated. Standardization is applied to every rate, not only to uninsured adults. A larger older share in the lowest quartile pushes its rate up, which cannot reverse a gradient in which the lowest quartile already has the highest rate.',
+        optionExplanations: [
+          'Older adults are hospitalized more often, not less, so an older lowest quartile would inflate its crude rate and exaggerate the gradient rather than understate it.',
+          'Age raises hospitalization independently of income, so an older lowest quartile would show an inflated crude rate, mixing an age effect with the income effect. Age adjustment removes that confound, so the unadjusted gradient would be exaggerated.',
+          'Standardization is applied to every rate in Table 1, not only to uninsured adults. The passage says every rate was age-adjusted.',
+          'A larger older share in the lowest quartile pushes its rate up, which cannot reverse a gradient in which the lowest quartile already has the highest rate.',
+        ],
         skill: '10A confounding and age standardization',
       },
       {
@@ -384,6 +504,12 @@ export const FL1_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Table 2 holds income (highest quartile) and insurance (insured only) constant, and the passage states that the groups also had similar rates of a usual source of care and similar disease prevalence; the remaining differences (5.0 versus 7.6 and 6.2) therefore cannot be attributed to income, insurance, access, or disease burden, which points to other mechanisms such as those the passage lists. Differences that remain within the same income quartile are, by construction, not fully explained by income. Similar self-reported prevalence of the relevant chronic conditions rules out disease burden as the main explanation. Similar rates of having a usual source of care rule out that variable as the reason the differences would disappear.',
+        optionExplanations: [
+          'Differences that remain within the same income quartile are, by construction, not fully explained by income. Table 2 holds income constant and still shows differences.',
+          'The passage states the three groups in Table 2 had similar self-reported prevalence of diabetes, asthma, and hypertension, ruling out disease burden as the main explanation.',
+          'The groups had similar rates of having a usual source of care, so that variable cannot be the reason differences would disappear; they persist despite equal access on this measure.',
+          'Table 2 holds income and insurance constant, and the groups had similar usual-source-of-care rates and disease prevalence. The remaining differences (5.0 vs 7.6 and 6.2) must arise through other pathways, such as segregation or discrimination.',
+        ],
         skill: '10A race, socioeconomic status, and health',
       },
       {
@@ -398,6 +524,12 @@ export const FL1_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Even among adults who already have insurance, the lowest quartile’s rate (14.0) is 2.5 times the highest quartile’s (5.6), so equalizing insurance would at best move the uninsured toward 14.0, not toward 5.6; this is the pattern the fundamental cause view predicts. Insurance is not the stronger predictor: within the insured, income spans 14.0 to 5.6 (a 2.5-fold range), while within the lowest quartile insurance spans 24.5 to 14.0 (a 1.75-fold range). Nothing in the table suggests newly insured adults would do better than adults who were already insured. The table cannot report outcomes for people who gained coverage, but the insured rates already show what income does when coverage is held constant, so the expectation can be evaluated.',
+        optionExplanations: [
+          'Insurance is not the stronger predictor. Within the insured, income spans 14.0 to 5.6 (2.5-fold), while within the lowest quartile insurance spans 24.5 to 14.0 (1.75-fold).',
+          'Nothing in the table suggests newly insured adults would do better than adults who were already insured. The insured rate in the lowest quartile is the best available estimate of what coverage achieves.',
+          'Even among already-insured adults, the lowest quartile’s rate (14.0) is 2.5 times the highest quartile’s (5.6). Equalizing insurance would at best move the uninsured toward 14.0, not 5.6, as the fundamental cause view predicts.',
+          'Although the table cannot report outcomes for people who gained coverage, the insured rates already show what income does when coverage is held constant, so the expectation can be evaluated.',
+        ],
         skill: '10A social gradient and access to care',
       },
     ],
@@ -415,6 +547,12 @@ export const FL1_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'On a fixed-interval schedule the first response after a set time is reinforced, so responding is pointless right after a reinforcer and increasingly likely as the interval elapses, producing the classic scallop. A fixed-ratio schedule produces a brief post-reinforcement pause followed by a high, steady run of responses rather than a gradual acceleration. Variable-ratio schedules produce high, steady rates with little or no pause. Variable-interval schedules produce moderate, steady rates because the time to the next available reinforcer is unpredictable.',
+    optionExplanations: [
+      'A fixed-ratio schedule produces a brief post-reinforcement pause followed by a high, steady run of responses, not a gradual acceleration toward the next reinforcer.',
+      'On a fixed-interval schedule the first response after a set time is reinforced, so responding is pointless right after a reinforcer and increasingly likely as the interval elapses, producing the classic scallop.',
+      'Variable-ratio schedules produce high, steady response rates with little or no pause, because any response might be the one that is reinforced.',
+      'Variable-interval schedules produce moderate, steady rates without scalloping, because the time to the next available reinforcer is unpredictable.',
+    ],
     skill: '7A reinforcement schedules',
   },
   {
@@ -432,6 +570,12 @@ export const FL1_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'Self-efficacy is a belief about one’s ability to succeed at a specific task, and the student’s confidence that she can master the procedure is high; self-esteem is a global evaluation of one’s worth, and hers is low. The two are distinct, so they can diverge exactly this way. Low self-efficacy would mean she doubted she could learn the skill. An external locus of control would mean she attributed outcomes to luck or others, which is not described, and her self-esteem is low rather than high. Learned helplessness involves giving up on a task after uncontrollable failure, the opposite of her confidence about the skill.',
+    optionExplanations: [
+      'Self-efficacy for the skill is high, not low: she is confident she can master the procedure. Her global self-esteem is low, not high. Both halves of this choice are reversed.',
+      'An external locus of control would mean attributing outcomes to luck or others, which is not described. Her self-esteem is also low, not high.',
+      'Self-efficacy is a task-specific belief about one’s ability, and hers is high for catheter placement. Self-esteem is a global evaluation of worth, and hers is low. The two constructs are distinct and can diverge this way.',
+      'Learned helplessness involves giving up on a task after uncontrollable failure, the opposite of her confidence that practice will bring mastery of the skill.',
+    ],
     skill: '8A self-efficacy and self-esteem',
   },
   {
@@ -449,6 +593,12 @@ export const FL1_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'In the dramaturgical approach, the front stage is where a performance is given to an audience and the back stage is where the performer relaxes, prepares, and drops the front; the kitchen, away from customers, is the back stage. The presence of coworkers does not make the kitchen a front stage, because they are fellow performers rather than the audience the performance is aimed at. Role strain refers to difficulty meeting competing demands within one role, which is not what mocking customers privately shows. Role conflict involves incompatible demands from two different roles, and being a coworker is part of the same job rather than a competing role.',
+    optionExplanations: [
+      'The front stage is where a performance is given to an audience; the back stage is where the performer relaxes and drops the front. The kitchen, away from customers, is the back stage.',
+      'Coworkers are fellow performers, not the audience the performance is aimed at. Their presence does not make the kitchen a front stage.',
+      'Role strain is difficulty meeting competing demands within one role. Mocking customers privately shows a performance being set aside, not conflicting demands within the server role.',
+      'Role conflict involves incompatible demands from two different roles. Being a coworker is part of the same job, not a competing role, and no conflicting demands are described.',
+    ],
     skill: '8C dramaturgical approach',
   },
   {
@@ -466,6 +616,12 @@ export const FL1_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'Crystallized intelligence, the accumulated knowledge and verbal skill measured by vocabulary and factual questions, typically holds steady or grows into late adulthood, while fluid intelligence, the capacity to reason quickly about novel material, declines with age; the profile matches that pattern. Reversing the two labels contradicts the results, since the novel-pattern task is the one that suffered. Vocabulary performance exceeded that of the younger adults, so it is not declining and masked. General intelligence is a single overall factor and is not described as rising selectively in verbal domains.',
+    optionExplanations: [
+      'This reverses the two labels. The novel-pattern task that measures fluid intelligence is the one that suffered, while vocabulary and facts (crystallized) were strong.',
+      'Vocabulary performance exceeded that of the younger adults, so crystallized intelligence is not declining and masked. Only the fluid task showed a deficit.',
+      'General intelligence is a single overall factor and is not described as rising selectively in verbal domains. The profile shows two distinct components moving in opposite directions.',
+      'Crystallized intelligence, the accumulated knowledge measured by vocabulary and factual questions, holds steady or grows into late adulthood, while fluid intelligence, reasoning quickly about novel material, declines with age. The profile matches this pattern.',
+    ],
     skill: '6B fluid and crystallized intelligence',
   },
   {
@@ -478,6 +634,12 @@ export const FL1_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'Resource mobilization theory holds that grievances alone are not enough; movements form when organizational resources such as money, leadership, expertise, and media access become available, which is exactly what changed here. Relative deprivation theory would predict that the movement arose when residents felt newly disadvantaged relative to others, but the grievance had existed unchanged for decades. Structural strain theory emphasizes generalized beliefs and precipitating events rather than organizational capacity. Emergent norm theory explains how norms arise within crowds during collective behavior, not why an organized movement forms.',
+    optionExplanations: [
+      'Relative deprivation theory would predict the movement arose when residents felt newly disadvantaged relative to others, but the grievance had existed unchanged for decades.',
+      'Resource mobilization theory holds that grievances alone are insufficient; movements form when organizational resources (money, leadership, expertise, media access) become available. That is exactly what changed when the national organization arrived.',
+      'Structural strain theory emphasizes generalized beliefs and precipitating events rather than organizational capacity. No new precipitating event is described, only new resources.',
+      'Emergent norm theory explains how norms arise within crowds during collective behavior. It does not address why an organized, sustained movement forms.',
+    ],
     skill: '9B social movements',
   },
   {
@@ -495,6 +657,12 @@ export const FL1_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'Analyzing religion by the functions it serves for the group as a whole, such as solidarity and the reaffirmation of shared norms, is the functionalist perspective associated with Durkheim, and the claim that these functions operate independently of private belief is characteristic of it. Conflict theory would ask whose interests the institution serves and how it justifies existing power arrangements, which the observation does not address. Symbolic interactionism would focus on how participants interpret symbols in interaction rather than on society-level cohesion. Rational choice theory treats religious participation as an individual cost–benefit decision rather than as a source of collective integration.',
+    optionExplanations: [
+      'Analyzing religion by the functions it serves for the group (solidarity, reaffirming shared norms) is the functionalist perspective associated with Durkheim, and the claim that these functions operate independently of private belief is characteristic of it.',
+      'Conflict theory would ask whose interests the institution serves and how it justifies existing power arrangements. The observation addresses cohesion, not inequality or legitimation.',
+      'Symbolic interactionism would focus on how participants interpret symbols in face-to-face interaction. The analysis here concerns society-level cohesion, not individual meaning-making.',
+      'Rational choice theory treats religious participation as an individual cost–benefit decision. The analysis here concerns collective integration, not individual calculation.',
+    ],
     skill: '9B religion as a social institution',
   },
   {
@@ -512,6 +680,12 @@ export const FL1_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'Changing public behavior to match a group while privately disagreeing, in order to avoid disapproval or standing out, is compliance produced by normative social influence. Obedience requires a directive from an authority figure, and fellow jurors are peers who gave no orders. Internalization would mean the group’s information persuaded her that the defendant was guilty, but her private belief did not change. Deindividuation involves a loss of self-awareness in anonymous group settings and is not what a juror describing her own reluctance to hold up the group is showing.',
+    optionExplanations: [
+      'Obedience requires a directive from an authority figure. Fellow jurors are peers who gave no orders; she changed her vote to avoid standing out, not because she was commanded.',
+      'Internalization would mean the group’s information persuaded her the defendant was guilty. Her private belief did not change; she still believed the defendant was not guilty.',
+      'Changing public behavior to match the group while privately disagreeing, in order to avoid disapproval or standing out, is compliance produced by normative social influence.',
+      'Deindividuation involves loss of self-awareness in anonymous group settings. A juror explicitly describing her own reluctance to hold up the group is fully self-aware.',
+    ],
     skill: '7C conformity and social influence',
   },
 ]

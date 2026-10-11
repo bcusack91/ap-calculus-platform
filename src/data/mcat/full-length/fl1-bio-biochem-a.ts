@@ -48,6 +48,12 @@ export const FL1_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Over the first 4 minutes, Chamber 1 falls from 240 to 160 μM (80 μM, or 20 μM/min), while Chamber 3 falls from 240 to 80 μM (160 μM, or 40 μM/min), so the DNP chamber consumed oxygen about twice as fast. Half the rate describes the direction of the oligomycin effect, not the uncoupler effect. Ten times is roughly the ratio of Chamber 3 to Chamber 2 (40 versus 4 μM/min), not to Chamber 1. Four times overestimates the slope difference; the two traces differ by a factor of two, not four, at every time point before Chamber 3 runs out of oxygen.',
+        optionExplanations: [
+          'Half the rate describes the direction of the oligomycin effect in Chamber 2, not the uncoupler effect. DNP accelerates oxygen consumption; it never slows it below the vehicle rate.',
+          'Over the first 4 minutes Chamber 1 falls 240 → 160 μM (20 μM/min) while Chamber 3 falls 240 → 80 μM (40 μM/min). The DNP chamber consumed oxygen about twice as fast.',
+          'Four times overestimates the slope difference. At every time point before Chamber 3 runs out of oxygen, its drop from 240 μM is exactly double Chamber 1’s drop, not quadruple.',
+          'Ten times is roughly the ratio of Chamber 3 to Chamber 2 (40 versus 4 μM/min), the DNP chamber compared with the oligomycin chamber, not with the vehicle chamber.',
+        ],
         skill: '1D oxidative phosphorylation',
       },
       {
@@ -61,6 +67,12 @@ export const FL1_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Electron transport and proton pumping are thermodynamically coupled: pumping protons against an ever-steeper electrochemical gradient becomes unfavorable, so when ATP synthase can no longer let protons back in, the gradient rises until it throttles electron flow and, with it, oxygen reduction. This is respiratory control in the passage’s sense. ADP is not an electron donor to Complex I (NADH is), so ADP depletion cannot directly stop the chain. Free proton leak describes an uncoupler such as DNP, which increases rather than decreases oxygen consumption. Complex II oxidizes succinate with $\\text{FAD}$ as the electron acceptor and requires no ATP hydrolysis.',
+        optionExplanations: [
+          'Electron transport and proton pumping are coupled. With ATP synthase blocked, protons cannot re-enter, the gradient steepens until further pumping is unfavorable, and electron flow (hence oxygen reduction) is throttled. This is respiratory control.',
+          'NADH, not ADP, is the electron donor to Complex I. ADP depletion affects ATP synthase turnover, but it cannot directly stop the chain by removing an electron source.',
+          'Free proton leak describes an uncoupler such as DNP, which collapses the gradient and increases oxygen consumption. Oligomycin does the opposite: it prevents proton re-entry.',
+          'Complex II oxidizes succinate with FAD as the electron acceptor and requires no ATP hydrolysis. The succinate substrate in the buffer is still available in Chamber 2.',
+        ],
         skill: '1D oxidative phosphorylation',
       },
       {
@@ -74,6 +86,12 @@ export const FL1_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'DNP provides a route for protons to re-enter the matrix that bypasses ATP synthase, so the gradient that was throttling electron flow in the oligomycin chamber collapses and oxygen consumption accelerates to roughly the Chamber 3 rate. Because the protons no longer pass through ATP synthase, and the synthase is in any case blocked by oligomycin, no ATP is made. A continued slow rate ignores that the uncoupler removes the back-pressure that oligomycin created. Any option in which ATP accumulates is impossible with ATP synthase blocked and the gradient dissipated. Oxygen consumption stopping entirely is the opposite of an uncoupler’s effect.',
+        optionExplanations: [
+          'A continued slow rate ignores that DNP removes the back-pressure oligomycin created. Once protons can bypass the blocked synthase, the gradient collapses and electron flow accelerates.',
+          'Oxygen consumption would rise, but ATP cannot accumulate: ATP synthase is still blocked by oligomycin, and DNP dissipates the gradient that would otherwise drive it.',
+          'Stopping oxygen consumption is the opposite of an uncoupler’s effect. DNP provides a proton path back into the matrix, which relieves the throttle on electron transport.',
+          'DNP lets protons re-enter the matrix without passing through ATP synthase, so the gradient throttling Chamber 2 collapses and respiration jumps toward the Chamber 3 rate. With the synthase still blocked and the gradient dissipated, no ATP forms.',
+        ],
         skill: '1D oxidative phosphorylation',
       },
       {
@@ -87,6 +105,12 @@ export const FL1_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The buffer supplied succinate as the sole respiratory substrate. Succinate is oxidized by Complex II, which passes electrons to ubiquinone downstream of Complex I, so a Complex I inhibitor leaves the succinate-driven electron flow to Complexes III and IV essentially intact. Complex I is not the only entry point; the passage describes a second one at Complex II. A halving of the rate would require that the chain be using NADH and succinate in equal measure, but no NADH-generating substrate was provided. Complex II is not feedback-inhibited by Complex I activity, and blocking any part of the chain cannot increase oxygen consumption.',
+        optionExplanations: [
+          'Complex I is not the only entry point. The passage states that $\\text{FADH}_2$ from succinate oxidation delivers electrons at Complex II, which feeds ubiquinone downstream of Complex I.',
+          'A halving would require the chain to be using NADH and succinate in equal measure, but succinate was the sole substrate supplied. No NADH-generating fuel was present to be blocked.',
+          'Succinate was the only respiratory substrate. Its electrons enter via Complex II and reach ubiquinone, III, and IV without passing through Complex I, so a Complex I inhibitor leaves the flow essentially intact.',
+          'Complex II is not feedback-inhibited by Complex I activity, and blocking any component of the chain cannot increase total oxygen consumption.',
+        ],
         skill: '1D electron transport chain',
       },
       {
@@ -95,6 +119,12 @@ export const FL1_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Chamber 1 falls from 240 to 140 μM in 5 minutes, a change of 100 μM in a 1.0 mL chamber, which is 100 nmol of $\\text{O}_2$. Each $\\text{O}_2$ molecule contains two oxygen atoms, so 200 nmol of oxygen atoms were reduced, and at 1.5 ATP per atom this gives 300 nmol ATP. The value 150 nmol forgets that each $\\text{O}_2$ supplies two atoms. The value 600 nmol uses about 3 ATP per atom, the approximate yield for NADH-derived electrons entering at Complex I. The value 75 nmol both ignores the second atom and halves the ATP yield.',
+        optionExplanations: [
+          'A value of 75 nmol both ignores that each $\\text{O}_2$ supplies two oxygen atoms and halves the ATP yield per atom, compounding two errors.',
+          'A value of 150 nmol forgets that each $\\text{O}_2$ molecule contains two oxygen atoms; 100 nmol $\\text{O}_2$ means 200 nmol of atoms reduced.',
+          'Chamber 1 falls 240 → 140 μM in 5 minutes, 100 μM in 1.0 mL = 100 nmol $\\text{O}_2$ = 200 nmol oxygen atoms. At 1.5 ATP per atom, that is 300 nmol ATP.',
+          'A value of 600 nmol uses about 3 ATP per oxygen atom, the approximate yield for NADH-derived electrons entering at Complex I, not the 1.5 given for Complex II electrons.',
+        ],
         skill: '1D ATP yield',
       },
     ],
@@ -124,6 +154,12 @@ export const FL1_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'I-1 and II-1 are both affected, and a father contributes only a Y chromosome to his son, so the disease allele in II-1 cannot lie on an X chromosome; this single observation rules out both X-linked dominant and X-linked recessive inheritance. An affected daughter of an affected father is fully compatible with X-linked dominant inheritance, since a father gives his X to every daughter. An unaffected daughter of an affected father would be unexpected under X-linked dominance, but with reduced penetrance she could simply be a non-penetrant carrier, and under X-linked recessive inheritance she would be an unaffected carrier, so the observation is not decisive. An unaffected mother with an affected son is the classic pattern of X-linked recessive transmission and therefore does not exclude X-linkage.',
+        optionExplanations: [
+          'An unaffected daughter of an affected father is not decisive. Under X-linked recessive inheritance she would be an expected unaffected carrier, and under X-linked dominance she could be a non-penetrant carrier.',
+          'An affected daughter of an affected father is fully compatible with X-linked dominant inheritance, since a father passes his X chromosome to every daughter.',
+          'An unaffected mother with an affected son is the classic X-linked recessive pattern, so this observation is consistent with X-linkage rather than excluding it.',
+          'A father gives his son a Y chromosome, never an X. I-1 and II-1 are both affected, so the disease allele in II-1 cannot be X-linked; this excludes both X-linked dominant and recessive inheritance.',
+        ],
         skill: '1C modes of inheritance',
       },
       {
@@ -137,6 +173,12 @@ export const FL1_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'II-2 has an affected father and an affected son, her husband II-4 is unaffected with no family history, and the passage states that new mutations are rare, so the disease allele in III-1 almost certainly came from her; she must carry it without expressing it, which is exactly what 80% penetrance predicts for one in five carriers. She also carries marker allele 3, the allele in phase with the disease in this family, which is consistent with her having received the disease-bearing chromosome. A recombinant chromosome lacking the disease allele would leave no source for her son’s disease. Recessive inheritance is excluded because the trait passes from affected father to affected son and daughter across three generations without consanguinity, and the family shows affected females. A new mutation in III-1 is the least likely explanation given both the stated rarity of new mutations and the fact that III-1 carries the family’s disease-linked marker allele.',
+        optionExplanations: [
+          'II-2 has an affected father and an affected son, her husband has no family history, new mutations are rare, and she carries the in-phase marker allele 3. She must carry the allele without expressing it, as 80% penetrance predicts for one in five carriers.',
+          'If II-2 lacked the disease allele, there would be no source for her son III-1’s disease (her husband II-4 is unaffected with no family history). Her marker allele 3 also indicates she received the disease-bearing chromosome.',
+          'Recessive inheritance is excluded: the trait passes from affected father to affected son and daughter across three generations without consanguinity, and affected females (III-3) appear, so it is not male-limited.',
+          'New mutations at RP loci are stated to be rare, and III-1 carries the family’s disease-linked marker allele 3, which he received from II-2. An inherited allele is far more likely than a new mutation.',
+        ],
         skill: '1C penetrance',
       },
       {
@@ -145,6 +187,12 @@ export const FL1_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'In II-1, the disease allele is on the chromosome carrying marker allele 3 (received from I-1), and marker allele 1 is on his other chromosome (received from I-2). A fetus that received allele 1 from II-1 received the non-disease chromosome unless a crossover between the marker and the disease locus occurred in the meiosis that produced the sperm, which happens with the stated recombination frequency of 10%. A value of 0% ignores recombination entirely. A value of 5% would apply only if the 10% were further halved, but the recombination frequency already describes the chance per gamete. A value of 50% is the prior probability before any marker information and is what the marker result is meant to refine.',
+        optionExplanations: [
+          'Zero percent ignores recombination. A crossover between the marker and the disease locus separates them in 10% of meioses, so marker allele 1 is not an absolute guarantee.',
+          'Five percent would require halving the 10% recombination frequency, but that frequency already describes the chance per gamete that the marker and disease allele are separated.',
+          'In II-1 the disease allele travels with marker allele 3 (from I-1) and allele 1 is on his other chromosome (from I-2). A fetus receiving allele 1 got the non-disease chromosome unless recombination occurred, which happens 10% of the time.',
+          'Fifty percent is the prior probability before any marker information. The marker result is meant to refine this, and allele 1 points strongly toward the non-disease chromosome.',
+        ],
         skill: '1C linkage and recombination',
       },
       {
@@ -153,6 +201,12 @@ export const FL1_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'II-1 is heterozygous for a dominant disease allele and II-5 carries none, so each child has a 50% chance of inheriting the allele; only 80% of carriers express the phenotype, so the probability of being affected is 0.5 × 0.8 = 0.40. A value of 50% is the chance of inheriting the allele and ignores penetrance. A value of 80% is the penetrance itself and ignores the 50% chance of transmission. A value of 20% is the proportion of carriers who remain unaffected and is not the probability of being affected.',
+        optionExplanations: [
+          'Twenty percent is the proportion of allele carriers who remain unaffected (1 − 0.8). It is not the probability that a child both inherits the allele and expresses the disease.',
+          'II-1 is heterozygous for a dominant allele and II-5 carries none, so each child has a 50% chance of inheriting it. Only 80% of carriers express the phenotype, so 0.5 × 0.8 = 0.40.',
+          'Fifty percent is the chance of inheriting the allele and ignores penetrance. One in five carriers never develops the disease, so the probability of being affected is lower.',
+          'Eighty percent is the penetrance itself and ignores the 50% chance of transmission. It would be the risk only for a child already known to carry the allele.',
+        ],
         skill: '1C probability in pedigrees',
       },
     ],
@@ -182,6 +236,12 @@ export const FL1_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Group 3 animals are hypophysectomized: the anterior pituitary, which contains the thyrotrophs, is gone, so there is no cell population for TRH to act on and TSH stays undetectable. A rise to the Group 1 value would be expected in an intact animal, where TRH does act directly on thyrotrophs. An exaggerated rise above the Group 1 value describes what a TRH infusion would do in Group 2, whose thyrotrophs are intact and released from T4 feedback (their TSH is already 38 mU/L). The claim that TRH needs circulating T4 to work inverts the actual relationship, in which T4 inhibits rather than permits the TRH effect.',
+        optionExplanations: [
+          'A rise to the Group 1 value would be expected in an intact animal, where TRH acts on pituitary thyrotrophs. Group 3 animals have no pituitary, so there are no thyrotrophs to respond.',
+          'An exaggerated rise above Group 1 describes what TRH infusion would do in Group 2, whose thyrotrophs are intact and already released from T4 feedback (TSH 38 mU/L). Group 3 lacks the pituitary entirely.',
+          'Group 3 is hypophysectomized: the anterior pituitary, which contains the thyrotrophs that synthesize and secrete TSH, has been removed. TRH has no target cells, so TSH remains undetectable.',
+          'This inverts the relationship. T4 inhibits, rather than permits, the TRH effect on thyrotrophs; the reason TRH fails in Group 3 is the absent pituitary, not the absent T4.',
+        ],
         skill: '3B hypothalamic-pituitary axis',
       },
       {
@@ -195,6 +255,12 @@ export const FL1_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Both groups lack a thyroid gland; the only difference is that Group 4 received T4 injections, and Group 4 has normal TSH and TRH mRNA while Group 2 has both markedly elevated. Therefore T4 in the circulation is sufficient to restore feedback on the pituitary and hypothalamus, and the thyroid gland itself is not needed for the feedback loop, only as the normal source of the hormone. The idea that the thyroid must be present is contradicted directly by Group 4. Injected T4 cannot regenerate a surgically removed gland, and the values were normalized within the same four-week period in which Group 3 glands atrophied. Group 4 also shows normal TRH mRNA, so no thyroid signal other than T4 is needed to suppress TRH expression.',
+        optionExplanations: [
+          'Group 4 lacks a thyroid yet has normal TSH (1.9) with T4 replacement, directly contradicting the idea that the gland must be present for T4 to suppress TSH.',
+          'Groups 2 and 4 both lack a thyroid; the only difference is T4 injection. Group 4 has normal TSH and TRH mRNA while Group 2 has both elevated, so circulating T4 alone restores feedback without the gland.',
+          'Injected T4 cannot regenerate a surgically removed gland. The values normalized within the same four-week window in which untreated glands (Group 3) atrophied, so no regrowth is implied.',
+          'Group 4 shows normal TRH mRNA (1.0) with T4 as the only thyroid-derived factor present, so T4 alone is sufficient to suppress TRH expression; no other thyroid signal is required.',
+        ],
         skill: '3B negative feedback',
       },
       {
@@ -208,6 +274,12 @@ export const FL1_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'To separate the two candidate causes, one needs a condition in which T4 is low but TSH is not high. Group 3 provides it: T4 is undetectable, TSH is undetectable, and TRH mRNA is still tripled, so the rise in TRH expression cannot be driven by TSH and must reflect loss of T4 feedback. In Group 4 versus Group 1, and in Group 5 versus Group 1, TSH and T4 move together, so the two explanations cannot be told apart. Group 2 versus Group 5 likewise shows TSH and TRH mRNA changing in the same direction, which is exactly the correlation that leaves the question open.',
+        optionExplanations: [
+          'In Group 4 versus Group 1, TSH and T4 are both normal, so the two candidate causes of elevated TRH mRNA move together and cannot be separated.',
+          'In Group 5 versus Group 1, high T4 and low TSH occur together, so TRH mRNA suppression could be attributed to either high T4 or low TSH; the comparison does not distinguish them.',
+          'Group 2 versus Group 5 shows TSH and TRH mRNA changing in the same direction, exactly the correlation that leaves the question open. T4 also changes, confounding the comparison.',
+          'Group 3 has undetectable T4 and undetectable TSH, yet TRH mRNA is tripled. Since TSH is absent, the rise cannot be TSH-driven and must reflect loss of T4 feedback on the hypothalamus.',
+        ],
         skill: '3B experimental design in endocrinology',
       },
       {
@@ -221,6 +293,12 @@ export const FL1_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Group 5 has high T4 with suppressed TSH: the thyroid hormone excess arises independently of TSH and feeds back to shut off the pituitary. An antibody that activates the TSH receptor drives follicular cells to overproduce hormone regardless of TSH, producing exactly this pattern (high T4, low TSH). Iodine deficiency and autoimmune destruction of follicular cells both reduce hormone output, so T4 would be low and TSH high, as in Group 2. Destruction of thyrotrophs would lower TSH, but T4 would then fall rather than rise, as in Group 3.',
+        optionExplanations: [
+          'Iodine deficiency limits hormone synthesis, so T4 would be low and TSH high (as in Group 2), the opposite of Group 5’s high T4 and suppressed TSH.',
+          'Autoimmune destruction of follicular cells reduces hormone output, producing low T4 and elevated TSH, the Group 2 pattern rather than the Group 5 pattern.',
+          'Group 5 has high T4 with suppressed TSH, meaning hormone excess arises independently of TSH. An antibody activating the TSH receptor drives follicular cells to overproduce T4 regardless of TSH, which then feeds back to shut off the pituitary.',
+          'Destroying thyrotrophs lowers TSH, but without TSH the thyroid atrophies and T4 falls, as in Group 3. Group 5 has high T4, which this cannot explain.',
+        ],
         skill: '3B endocrine disorders',
       },
     ],
@@ -245,6 +323,12 @@ export const FL1_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Construct B (−1000 to +50) is induced about eightfold by forskolin, whereas Construct C (−300 to +50) is not induced at all, so the sequence that confers the response must lie in the DNA that B has and C lacks, between −1000 and −300; the mutation at −650 in Construct F, which also abolishes most of the induction, is consistent with this. The region between −2000 and −1000 is dispensable, since B responds as well as A. The regions between −300 and −100 and between −100 and +50 are present in Construct C, which shows no response, so they are not sufficient for induction, although the −100 to +50 fragment does support basal transcription.',
+        optionExplanations: [
+          'The region between −2000 and −1000 is dispensable for the forskolin response: Construct B, which lacks it, is induced about as strongly as Construct A (800 versus 820).',
+          'Construct B (−1000 to +50) is induced about eightfold by forskolin, while Construct C (−300 to +50) is not induced at all. The responsive sequence must lie in DNA that B has and C lacks, between −1000 and −300.',
+          'The region between −300 and −100 is present in Construct C, which shows no forskolin response, so it is not sufficient for induction.',
+          'The region between −100 and +50 is present in Construct C and even Construct D, neither of which responds to forskolin. It supports basal transcription but does not confer the induction.',
+        ],
         skill: '1B promoter deletion analysis',
       },
       {
@@ -258,6 +342,12 @@ export const FL1_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Construct E differs from A only in the TATA box, and its activity is near zero under every condition, including basal conditions. The TATA box is the core promoter element recognized by general transcription factors (TFIID and its partners) that assemble the preinitiation complex and set the start site; without it, initiation fails whether or not activators are bound upstream. Loss of CREB binding would abolish only the forskolin-induced increase, leaving basal expression intact, as Construct F shows. Termination and translation signals are in the luciferase portion of the construct, which is identical in every construct, and defects in them would not be specific to E.',
+        optionExplanations: [
+          'Construct E differs from A only in the TATA box and is near zero under every condition, including basal. The TATA box is where general transcription factors assemble the preinitiation complex and set the start site; without it, initiation fails.',
+          'Loss of CREB binding would abolish only the forskolin-induced increase while leaving basal expression intact, as Construct F shows (100 basal, 125 induced). Construct E loses basal activity too.',
+          'Termination signals are in the luciferase portion of the construct, which is identical across all constructs. A termination defect would not be specific to the TATA-mutated construct.',
+          'Translation initiation depends on the luciferase mRNA’s start codon, which is unchanged in every construct. The TATA mutation affects transcription, not translation.',
+        ],
         skill: '1B core promoter',
       },
       {
@@ -271,6 +361,12 @@ export const FL1_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Inverting the −1000 to −300 segment (Construct G) leaves both basal activity and the forskolin response essentially unchanged relative to Construct A, and the passage defines an enhancer as an element that functions independently of orientation. A core promoter is defined by its fixed position and orientation relative to the start site; the segment is several hundred base pairs upstream and works either way around, and Construct D shows the core promoter lies within −100 to +50. A silencer would lower transcription, but removing this segment (Construct C) lowers the induced response rather than raising it. Nothing in the data tests whether the segment blocks communication between other elements, which is what an insulator does.',
+        optionExplanations: [
+          'A core promoter is defined by fixed position and orientation relative to the start site. This segment is several hundred base pairs upstream, works in either orientation, and Construct D shows the core promoter lies within −100 to +50.',
+          'A silencer would lower transcription, but removing this segment (Construct C) lowers the induced response rather than raising it, so the segment stimulates rather than represses.',
+          'An insulator blocks communication between other elements. Nothing in the data tests whether this segment separates the promoter from distal sequences; the inversion experiment tests orientation dependence.',
+          'Inverting the −1000 to −300 segment (Construct G) leaves both basal activity and the forskolin response essentially unchanged from Construct A. The passage defines an enhancer as an element that works independently of orientation.',
+        ],
         skill: '1B enhancers',
       },
       {
@@ -284,6 +380,12 @@ export const FL1_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'In the pathway the passage describes, cAMP serves only to activate PKA; a PKA that is active without cAMP would phosphorylate CREB constitutively, so the CRE-dependent induction seen with forskolin (about 800) should appear even in vehicle-treated cells. Saying that PKA acts only when cAMP is present contradicts the premise that the mutant is cAMP-independent. CREB binds the CRE regardless of forskolin; forskolin matters only because it leads to CREB phosphorylation, which the mutant kinase supplies. The forskolin + insulin value reflects repression by insulin, and no insulin was added to vehicle-treated wells.',
+        optionExplanations: [
+          'Saying PKA acts only when cAMP is present contradicts the premise that the mutant catalytic subunit is active whether or not cAMP is present.',
+          'CREB binds the CRE regardless of forskolin. Forskolin matters only because it leads to CREB phosphorylation, which the constitutively active PKA would supply without any cAMP signal.',
+          'The forskolin + insulin value reflects repression by insulin, and no insulin was added to vehicle-treated wells. Insulin signaling is irrelevant to this prediction.',
+          'cAMP serves only to activate PKA. A PKA that is active without cAMP would phosphorylate CREB constitutively, so the CRE-dependent induction seen with forskolin (about 800) should appear even without forskolin.',
+        ],
         skill: '1B signal-dependent transcription',
       },
       {
@@ -297,6 +399,12 @@ export const FL1_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The pathway in the passage runs cAMP → PKA → phosphorylated CREB → CRE. A CREB variant lacking the PKA phosphorylation site should compete with endogenous CREB for CRE binding without being activated; if forskolin induction is lost in its presence while basal activity is retained, CREB is required. Adding a phosphodiesterase inhibitor would only raise cAMP further and tests the upstream signal, not the transcription factor. Increasing the forskolin dose on Construct C, which lacks the responsive element, tests whether the element is needed, not whether CREB acts through it. Treating Construct F with insulin alone examines insulin repression of an already-mutated element and says nothing about CREB.',
+        optionExplanations: [
+          'The pathway runs cAMP → PKA → phosphorylated CREB → CRE. A CREB variant PKA cannot phosphorylate should compete with endogenous CREB for CRE binding without being activated; loss of forskolin induction would show CREB is required.',
+          'A phosphodiesterase inhibitor would only raise cAMP further, testing the upstream signal rather than the transcription factor. It cannot distinguish whether CREB mediates the response.',
+          'Construct C lacks the responsive element entirely, so raising the forskolin dose tests whether the element is needed, not whether CREB acts through it. No CREB manipulation is involved.',
+          'Treating Construct F (already mutated at the CRE) with insulin alone examines insulin repression of a disabled element and provides no information about CREB’s role in the forskolin response.',
+        ],
         skill: '1B transcription factor function',
       },
     ],
@@ -324,6 +432,12 @@ export const FL1_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'With urea still present, the chain remained unfolded when air oxidation was permitted, so the eight cysteines paired according to which happened to be near one another rather than according to the native fold; the passage notes that 105 pairings are possible and only one is native, and about 1% activity (roughly 1 in 105) is what random pairing predicts. Once the wrong covalent disulfides form, removing urea cannot let the chain reach its native structure. Urea is a denaturant, not a hydrolyzing agent, and the passage defines denaturation as loss of structure without cleavage of peptide bonds. Air oxidation under these conditions forms disulfides; it does not permanently oxidize histidine. If the native disulfides had re-formed, the chain would have been constrained to its native fold and activity would have been high; nor does helix formation require β-mercaptoethanol.',
+        optionExplanations: [
+          'Urea is a denaturant, not a hydrolyzing agent. The passage defines denaturation as loss of structure without cleavage of peptide bonds, so no fragments were produced.',
+          'With urea still present, the chain remained unfolded while air oxidation occurred, so cysteines paired according to proximity in the random coil rather than the native fold. Only 1 of 105 pairings is native, matching the ~1% activity.',
+          'Air oxidation under these conditions forms disulfides between thiols; it does not permanently oxidize histidine residues. The passage attributes the loss to incorrect disulfide pairing, not to active-site damage.',
+          'If the four native disulfides had re-formed, the chain would have been constrained to its native fold and activity would have been high. Helix formation also does not require β-mercaptoethanol.',
+        ],
         skill: '1A protein folding',
       },
       {
@@ -337,6 +451,12 @@ export const FL1_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The hydrophobic effect that drives folding rewards burying nonpolar side chains such as isoleucine; a lysine side chain carries a positive charge at physiological pH and is strongly hydrated, so placing it in the nonpolar interior forfeits favorable solvation without gaining the hydrophobic benefit, and the fold loses stability. Lysine’s side-chain amine can donate hydrogen bonds, so an inability to hydrogen-bond is not the problem. Lysine and isoleucine are of comparable size, so steric exclusion alone does not explain a large destabilization. Both residues are compatible with helices, and the substitution is destabilizing whether or not the site is helical.',
+        optionExplanations: [
+          'Lysine’s side-chain amine can donate hydrogen bonds, so an inability to hydrogen-bond with the backbone is not the problem.',
+          'Lysine and isoleucine are of comparable size, so steric exclusion alone does not explain a large destabilization. The issue is charge, not bulk.',
+          'The hydrophobic effect rewards burying nonpolar side chains like isoleucine. A positively charged, strongly hydrated lysine placed in the nonpolar interior forfeits favorable solvation without gaining the hydrophobic benefit, destabilizing the fold.',
+          'Both residues are compatible with α helices, and the substitution is destabilizing whether or not the site is helical. Helix disruption is not the primary mechanism.',
+        ],
         skill: '1A forces stabilizing tertiary structure',
       },
       {
@@ -350,6 +470,12 @@ export const FL1_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Heat partially unfolds proteins, exposing hydrophobic stretches that Hsp70 normally binds and shields; without functional Hsp70, those surfaces are free to associate with one another, and the passage identifies aggregation as the fate of unfolded chains that cannot find the native state. Heat denatures without breaking peptide bonds, so peptide-bond cleavage would not increase. Cytosolic proteins rarely contain disulfides in the first place because the cytosol is reducing, and Hsp70 does not form them. A defect in one chaperone does not stop the cell from inducing the other heat-shock genes; if anything, accumulation of unfolded protein increases that response.',
+        optionExplanations: [
+          'Heat partially unfolds proteins, exposing hydrophobic stretches that Hsp70 normally binds and shields. Without functional Hsp70, those surfaces associate with one another, and the passage identifies aggregation as the fate of unfolded chains that cannot fold.',
+          'Heat denatures proteins without breaking peptide bonds, as the passage defines denaturation. Peptide-bond cleavage would not increase at 42 °C with or without Hsp70.',
+          'Cytosolic proteins rarely contain disulfides because the cytosol is reducing, and Hsp70 does not catalyze disulfide formation; it binds exposed hydrophobic segments.',
+          'A defect in one chaperone does not prevent induction of the other heat-shock genes. If anything, accumulation of unfolded protein would increase that transcriptional response.',
+        ],
         skill: '1A chaperones',
       },
       {
@@ -363,6 +489,12 @@ export const FL1_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Secondary structure is stabilized by backbone-to-backbone hydrogen bonds, and in the α helix each carbonyl oxygen accepts a hydrogen bond from the amide N–H of the residue four positions farther along the chain, so that every turn of the helix is tied to the next. Side-chain interactions contribute to tertiary structure, not to the helix itself, and a helix forms with almost any sequence of side chains. Two N–H groups are both hydrogen-bond donors and cannot bond to each other. A backbone-to-side-chain bond would depend on the sequence and would not produce the regular repeating geometry that defines secondary structure.',
+        optionExplanations: [
+          'Side-chain interactions contribute to tertiary structure, not to the helix itself. The passage states secondary structure is held together by backbone carbonyl-to-amide hydrogen bonds.',
+          'Two N–H groups are both hydrogen-bond donors and cannot bond to each other; a hydrogen bond needs a donor and an acceptor such as a carbonyl oxygen.',
+          'A backbone-to-side-chain bond would depend on the sequence and would not produce the regular repeating geometry that defines secondary structure.',
+          'In the α helix each backbone carbonyl oxygen accepts a hydrogen bond from the backbone N–H of the residue four positions farther along, tying every turn to the next. These are backbone-to-backbone bonds, as the passage describes.',
+        ],
         skill: '1A secondary structure',
       },
     ],
@@ -380,6 +512,12 @@ export const FL1_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'A cell that has finished replication is in G2, and the G2/M checkpoint monitors DNA integrity before entry into mitosis; damage there activates kinases that keep the mitotic cyclin-CDK complex inactive. The G1/S checkpoint also responds to DNA damage, but it acts before replication, not after. There is no distinct checkpoint at the S-to-G2 transition. The metaphase-to-anaphase (spindle assembly) checkpoint monitors kinetochore attachment to spindle microtubules, not DNA damage, and it acts after mitosis has already begun.',
+    optionExplanations: [
+      'The G1/S checkpoint responds to DNA damage, but it acts before replication begins. A cell that has already completed replication has passed this point.',
+      'There is no distinct DNA-damage checkpoint at the S-to-G2 transition. The major checkpoints are G1/S, G2/M, and the spindle assembly checkpoint in mitosis.',
+      'A cell that has finished replication is in G2, and the G2/M checkpoint monitors DNA integrity before mitosis. Damage activates kinases that keep the mitotic cyclin-CDK complex inactive, preventing entry into M.',
+      'The metaphase-to-anaphase (spindle assembly) checkpoint monitors kinetochore attachment to spindle microtubules, not DNA damage, and acts after mitosis has already begun.',
+    ],
     skill: '2C cell cycle checkpoints',
   },
   {
@@ -392,6 +530,12 @@ export const FL1_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'The affected frequency is $q^2 = 1/10{,}000$, so $q = 0.01$ and $p = 0.99$. Carriers are heterozygotes, $2pq = 2(0.99)(0.01) \\approx 0.02$, or about 1 in 50. A value of 1 in 100 is the allele frequency $q$, not the carrier frequency. A value of 1 in 200 is half of $2pq$, the error of forgetting the factor of 2 for the two possible heterozygous genotypes. A value of 1 in 25 doubles the carrier frequency.',
+    optionExplanations: [
+      'One in 25 doubles the carrier frequency. With $q = 0.01$, $2pq \\approx 0.02$ = 1 in 50, not 0.04.',
+      'Affected frequency $q^2 = 1/10{,}000$ gives $q = 0.01$ and $p = 0.99$. Carriers are heterozygotes: $2pq = 2(0.99)(0.01) \\approx 0.02$, about 1 in 50.',
+      'One in 100 is the allele frequency $q$, not the carrier frequency. Heterozygote frequency is $2pq$, roughly twice $q$ when $q$ is small.',
+      'One in 200 is half of $2pq$, the error of forgetting the factor of 2 for the two possible heterozygous genotypes (Aa and aA).',
+    ],
     skill: '1C Hardy-Weinberg',
   },
   {
@@ -409,6 +553,12 @@ export const FL1_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'Repolarization is carried by potassium efflux through voltage-gated potassium channels that open after the sodium channels; with those channels blocked, the membrane returns to rest only through leak channels and sodium-channel inactivation, so the falling phase is slower and the action potential is broader. Threshold and the rising phase depend on voltage-gated sodium channels, which are unaffected. Peak amplitude is set by sodium influx and the sodium equilibrium potential, so the overshoot is preserved. Sodium-channel inactivation is an intrinsic, time-dependent property of the sodium channel and does not require potassium current.',
+    optionExplanations: [
+      'Threshold and the rising phase depend on voltage-gated sodium channels, which the toxin does not affect. Blocking potassium channels changes the falling phase, not depolarization.',
+      'Peak amplitude is set by sodium influx and the sodium equilibrium potential, so the overshoot is preserved. Potassium channel block does not reduce the peak.',
+      'Repolarization is carried by potassium efflux through voltage-gated potassium channels. With them blocked, the membrane returns to rest only via leak channels and sodium inactivation, so the falling phase is slower and the spike broader.',
+      'Sodium-channel inactivation is an intrinsic, time-dependent property of the sodium channel and does not require potassium current. Inactivation proceeds normally.',
+    ],
     skill: '3A action potential',
   },
   {
@@ -420,6 +570,12 @@ export const FL1_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'MHC class II molecules are expressed by professional antigen-presenting cells, and the peptide-MHC II complex is recognized by the T-cell receptor of CD4-positive helper T cells, which then coordinate B-cell and cytotoxic responses. Cytotoxic (CD8-positive) T cells recognize peptides on MHC class I, which nearly all nucleated cells express. Natural killer cells are part of innate immunity and respond to the absence of MHC class I rather than to a presented peptide. Plasma cells are antibody-secreting B cells and do not survey antigen-presenting cells for peptides.',
+    optionExplanations: [
+      'Cytotoxic (CD8-positive) T cells recognize peptides presented on MHC class I, which nearly all nucleated cells express, not MHC class II.',
+      'Natural killer cells belong to innate immunity and respond to the absence of MHC class I on target cells rather than to a specific presented peptide.',
+      'Plasma cells are antibody-secreting B cells. They do not survey antigen-presenting cells for peptide-MHC complexes.',
+      'MHC class II is expressed by professional antigen-presenting cells, and the peptide-MHC II complex is recognized by the T-cell receptor of CD4-positive helper T cells, which then coordinate B-cell and cytotoxic responses.',
+    ],
     skill: '3B adaptive immunity',
   },
   {
@@ -436,6 +592,12 @@ export const FL1_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'Enveloped viruses acquire their envelope by budding through a host membrane, most commonly the plasma membrane, into which virus-encoded glycoproteins have been inserted; the lipid bilayer itself is host-derived. Viruses do not encode lipid-synthesizing enzymes and have no metabolism of their own. Peptidoglycan is a bacterial cell-wall polymer, not a lipid, and animal cells do not have one. The mitochondrial inner membrane is not a site of viral budding.',
+    optionExplanations: [
+      'Enveloped viruses acquire their envelope by budding through a host membrane, most commonly the plasma membrane, into which virus-encoded glycoproteins have been inserted. The lipid bilayer itself is host-derived.',
+      'Viruses do not encode lipid-synthesizing enzymes and have no metabolism of their own; they rely entirely on host membranes for envelope lipids.',
+      'Peptidoglycan is a bacterial cell-wall polymer, not a lipid, and animal cells do not possess one. It cannot be the source of a viral envelope.',
+      'The inner mitochondrial membrane is not a site of viral budding. Envelopes derive from the plasma membrane or, for some viruses, internal membranes like the ER or Golgi, not mitochondria.',
+    ],
     skill: '2B virus structure',
   },
   {
@@ -448,6 +610,12 @@ export const FL1_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'The Michaelis–Menten equation gives $v/V_{max} = [S]/(K_m + [S]) = 30/(10 + 30) = 0.75$. A value of 0.50 is the fraction reached when $[S] = K_m$, not at three times $K_m$. A value of 0.25 is the fraction of $K_m$ relative to the denominator, that is, the fraction of enzyme that is free rather than substrate-bound. A value of 0.90 would require $[S] = 9K_m$, or 90 μM.',
+    optionExplanations: [
+      'A value of 0.25 is $K_m/(K_m + [S])$ = 10/40, the fraction of enzyme that is free rather than substrate-bound, not the fraction of $V_{max}$.',
+      'A value of 0.50 is reached when $[S] = K_m$ (10 μM). At 30 μM, three times $K_m$, the velocity is higher.',
+      'Michaelis–Menten gives $v/V_{max} = [S]/(K_m + [S]) = 30/(10 + 30) = 30/40 = 0.75$.',
+      'A value of 0.90 would require $[S] = 9K_m$, or 90 μM, since $90/(10 + 90) = 0.90$.',
+    ],
     skill: '1A Michaelis-Menten kinetics',
   },
   {
@@ -459,6 +627,12 @@ export const FL1_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'In open-chain fructose, C1 is a $\\text{CH}_2\\text{OH}$ group, C2 is the ketone carbon (no hydrogen, two identical-type bonds to the carbonyl), and C6 is a $\\text{CH}_2\\text{OH}$ group; only C3, C4, and C5 bear four different substituents, giving three stereocenters. Four stereocenters is the count for an aldohexose such as glucose, whose C2 is a secondary alcohol carbon. Two would omit one of the three secondary alcohol carbons. Five would count the carbonyl carbon or a terminal carbon, neither of which has four different groups.',
+    optionExplanations: [
+      'Two would omit one of the three secondary alcohol carbons. C3, C4, and C5 each bear H, OH, and two different carbon chains, so all three are stereocenters.',
+      'In open-chain fructose C1 and C6 are $\\text{CH}_2\\text{OH}$ groups and C2 is the ketone carbon; only C3, C4, and C5 bear four different substituents, giving three stereocenters.',
+      'Four is the count for an aldohexose such as glucose, whose C2 is a secondary alcohol carbon. In fructose C2 is the ketone carbon and is not a stereocenter.',
+      'Five would count the carbonyl carbon or a terminal $\\text{CH}_2\\text{OH}$ carbon, neither of which has four different groups.',
+    ],
     skill: '1D carbohydrate stereochemistry',
   },
   {
@@ -475,6 +649,12 @@ export const FL1_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'Proximal tubule cells reclaim filtered bicarbonate by secreting hydrogen ions that combine with it in the lumen to form carbonic acid; carbonic anhydrase converts that to carbon dioxide and water, which re-enter the cell and are reconverted to bicarbonate for return to the blood. Blocking the enzyme leaves bicarbonate in the tubular fluid, so it is lost in the urine and blood pH falls (a metabolic acidosis). Reabsorption is decreased, not increased. Urine becomes alkaline because of the bicarbonate it carries, and hydrogen ion secretion falls because the cell can no longer generate protons efficiently. Sodium that would have been reabsorbed with bicarbonate is also lost, so sodium excretion rises.',
+    optionExplanations: [
+      'Blocking carbonic anhydrase leaves filtered bicarbonate in the tubular fluid because the cell cannot efficiently generate the protons needed to reclaim it. Bicarbonate is lost in urine and blood pH falls (metabolic acidosis).',
+      'Reabsorption is decreased, not increased. Without carbonic anhydrase, luminal carbonic acid is not converted to CO₂ and water for re-entry into the cell, so bicarbonate stays in the lumen.',
+      'Urine becomes alkaline, not acidic, because of the bicarbonate it carries, and hydrogen ion secretion falls because the cell can no longer generate protons efficiently from CO₂ and water.',
+      'Sodium that would have been reabsorbed alongside bicarbonate is also lost, so sodium excretion rises, and blood pH falls rather than rises.',
+    ],
     skill: '3B renal acid-base handling',
   },
 ]

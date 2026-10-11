@@ -1,8 +1,9 @@
 import {
   analyzePerformance,
-  buildSatForm,
+  buildExamForm,
   module2Route,
   routedModule2,
+  type SatExam,
   type SatRoute,
   type SatTestFormat,
   type SATTestQuestion,
@@ -10,6 +11,7 @@ import {
 } from '@/data/sat-practice/test-generator'
 import { gradeGridIn } from '@/data/sat-grid-in'
 import { satSectionScaledRouted } from '@/lib/sat-scoring'
+import { psatSectionScaledRouted } from '@/lib/psat-scoring'
 
 /**
  * Server-side grading of an SAT practice test (full or mini).
@@ -63,6 +65,7 @@ export interface SatSectionGrade {
 
 export interface SatPracticeGrade {
   format: SatTestFormat
+  exam: SatExam
   rw: SatSectionGrade
   math: SatSectionGrade
   rwScore: number
@@ -151,10 +154,16 @@ const other = (r: SatRoute): SatRoute => (r === 'harder' ? 'easier' : 'harder')
 export async function gradeSatPractice(input: {
   testNumber: number
   format: SatTestFormat
+  /** 'psat' grades an adaptive PSAT/NMSQT form on the 160-760 routed curves. */
+  exam?: SatExam
   responses: SatResponse[]
 }): Promise<SatPracticeGrade> {
-  const { testNumber, format } = input
-  const base = await buildSatForm(testNumber, format)
+  const { testNumber } = input
+  const exam: SatExam = input.exam === 'psat' ? 'psat' : 'sat'
+  const format: SatTestFormat = exam === 'psat' ? 'full' : input.format
+  const scaledRouted = exam === 'psat' ? psatSectionScaledRouted : satSectionScaledRouted
+  const sectionFloor = exam === 'psat' ? 160 : 200
+  const base = await buildExamForm(exam, testNumber, format)
 
   const byModule = new Map<number, Map<string, SatResponse>>()
   for (const r of input.responses) {
@@ -191,7 +200,7 @@ export async function gradeSatPractice(input: {
         m2Correct: 0,
         m2Total: 0,
         tier: null,
-        scaled: m1Total > 0 ? satSectionScaledRouted({ m1Correct, m1Total, m2Correct: 0, m2Total: 0, tier: null }) : 200,
+        scaled: m1Total > 0 ? scaledRouted({ m1Correct, m1Total, m2Correct: 0, m2Total: 0, tier: null }) : sectionFloor,
       }
     }
 
@@ -233,7 +242,7 @@ export async function gradeSatPractice(input: {
       m2Total,
       tier,
       module2: match,
-      scaled: satSectionScaledRouted({ m1Correct, m1Total, m2Correct, m2Total, tier }),
+      scaled: scaledRouted({ m1Correct, m1Total, m2Correct, m2Total, tier }),
     }
   }
 
@@ -251,6 +260,7 @@ export async function gradeSatPractice(input: {
 
   return {
     format,
+    exam,
     rw,
     math,
     rwScore: rw.scaled,

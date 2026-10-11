@@ -24,6 +24,14 @@ const features = [
     icon: 'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4',
   },
   {
+    title: 'Selection Index Calculator',
+    description: 'Turn your section scores into your National Merit Selection Index and see it against your state’s latest Semifinalist and Commended cutoffs.',
+    href: '/psat-selection-index',
+    color: 'from-indigo-500 to-blue-600',
+    stats: 'All 50 states',
+    icon: 'M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z',
+  },
+  {
     title: 'Diagnostic Test',
     description: 'The PSAT and SAT test the same skills, so the SAT diagnostic pinpoints your weak areas and builds a personalized plan that counts for both.',
     href: '/sat-diagnostic',
@@ -115,7 +123,7 @@ export default function PsatHubPage() {
 
         <div className="mx-auto mt-10 max-w-3xl rounded-2xl border border-indigo-200 bg-indigo-50/60 p-6 text-center dark:border-indigo-800 dark:bg-indigo-900/20">
           <p className="text-sm text-gray-700 dark:text-gray-300">
-            <strong>Sophomore or junior?</strong> A strong PSAT can qualify you for National Merit — and the exact same prep carries straight into your{' '}
+            <strong>Sophomore or junior?</strong> A strong PSAT can qualify you for National Merit (<Link href="/psat-selection-index" className="font-semibold text-indigo-600 hover:underline dark:text-indigo-400">check your Selection Index</Link>) — and the exact same prep carries straight into your{' '}
             <Link href="/sat" className="font-semibold text-indigo-600 hover:underline dark:text-indigo-400">SAT preparation</Link>.
           </p>
         </div>

@@ -30,6 +30,12 @@ export const FL3_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The passage builds toward its last two paragraphs: the author rejects the conclusion that correct speech is “a mere prejudice,” insists the standard must be taught, and proposes describing it as “a register” among several. The author claims stigmatized dialects do “exactly as well” as the prestigious one, not better, so greater consistency is never claimed. The history of dictionaries is one step in the argument, not its purpose. Urging schools to stop teaching the standard is the conclusion the author explicitly says “does not follow.”',
+        optionExplanations: [
+          'The author claims stigmatized dialects do “exactly as well” as the prestigious one on the test a grammar must pass, not better. Greater internal consistency is never asserted, and showing it is not the aim.',
+          'The passage builds to its last two paragraphs: the author rejects the conclusion that correctness is “a mere prejudice,” insists the standard must still be taught, and proposes describing it as “a register” rather than the correct form of which others are corrupted copies.',
+          'The history of dictionaries fixing a governing class’s usage is one step in the argument, explaining where prestige came from. It is not the author’s purpose, which concerns how the standard should be taught now.',
+          'This is the conclusion the author explicitly says “does not follow” and that “do[es] a disservice to the very speakers they mean to defend.” The author wants the standard taught, only described differently.',
+        ],
         skill: 'main-idea',
       },
       {
@@ -44,6 +50,12 @@ export const FL3_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The comparison answers the charge that “he don’t” shows collapsed agreement: a verb that keeps one form for every subject is something the standard already tolerates in the past tense “without anyone objecting,” so the dialect form is a regular pattern, not an error. Nothing is said about the standard changing over time. The comparison concerns grammatical patterns, not which listeners object to what. And the author never claims one variety borrowed from the other; the point is a parallel, not a derivation.',
+        optionExplanations: [
+          'The comparison answers the charge that “he don’t” shows collapsed agreement: a verb keeping one form for every subject is something the standard already tolerates in the past tense “without anyone objecting.” The dialect form follows an accepted pattern.',
+          'Nothing in the passage says the standard is becoming less regular over time. The past-tense fact is presented as a long-standing feature, not a trend.',
+          'The comparison concerns grammatical patterns, not which listeners object to what. The point is that no one objects to invariant past-tense forms at all, regardless of the speaker.',
+          'The author never claims one variety borrowed from the other. The point is a parallel between two regular patterns, not a derivation of the dialect’s rules from the standard.',
+        ],
         skill: 'function',
       },
       {
@@ -58,6 +70,12 @@ export const FL3_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The author holds that “prestige … flows from speakers to forms” and that a construction can be “admired in one century and mocked in the next, depending on who is using it.” A form adopted by the people who “ran things” would therefore gain prestige. The author says printing gave usage “the look of a law of nature,” not that judgments become permanent — the century-to-century reversal contradicts that. Nothing limits the newly prestigious form to casual settings. The last option reverses the scenario: the influential speakers adopt the form rather than abandon it, and the author makes no claim that forms spread to all speakers.',
+        optionExplanations: [
+          'The author says printing gave usage “the look of a law of nature,” not that judgments become permanent. The claim that a construction can be “admired in one century and mocked in the next” directly contradicts fixity.',
+          'Nothing in the passage limits a newly prestigious form to casual settings. If the people who run things adopt it, it would become part of the standard register, not excluded from it.',
+          'The author holds that “prestige … flows from speakers to forms” and that the same construction can be “admired in one century and mocked in the next, depending on who is using it.” A form adopted by leading figures would gain prestige and be heard as correct.',
+          'This reverses the scenario: the influential speakers adopt the form rather than abandon it. The author also makes no claim that forms spread to all speakers.',
+        ],
         skill: 'application',
       },
       {
@@ -72,6 +90,12 @@ export const FL3_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The author concedes that the standard would be taught either way; what changes is only “how it is described.” That proposal matters only if the description itself shapes students’ view of their home speech — “add a form” versus “confess an error,” a grandmother who “speaks badly” versus a child who will speak “in more than one way.” The speed of learning is never discussed. The author denies that the standard won its status by being more expressive. And the proposal rests on the opposite of the third option: the whole point is that a student need not be told her speech is wrong.',
+        optionExplanations: [
+          'The speed of learning a register versus a dialect is never discussed. The proposal concerns how the standard is described, not how fast it is acquired.',
+          'The author denies that the standard won its status by being more logical or expressive, and the register proposal does not depend on the standard being clearer. This contradicts the passage.',
+          'The proposal rests on the opposite: the whole point is that a student need not be told her home speech is wrong. Teaching the standard as a register “asks a student to add a form, not to confess an error.”',
+          'The author concedes the standard would be taught either way; what changes is only “how it is described.” The proposal matters only if the description shapes students’ view of their home speech, as the contrast between a grandmother who “speaks badly” and a child who will speak “in more than one way” shows.',
+        ],
         skill: 'assumption',
       },
       {
@@ -86,6 +110,12 @@ export const FL3_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The author measures a grammar against one question: “can speakers reliably produce and understand one another’s sentences?” Evidence that the dialect’s own speakers misunderstand each other on exactly the stigmatized forms would show it failing that test. Listener ratings of intelligence are the social judgment the passage already describes; they say nothing about how the grammar works. Earlier respectable use of the forms supports the author’s point that prestige shifts with users. Lower scores on tests of the standard measure command of a different variety, not whether the dialect functions for its own speakers.',
+        optionExplanations: [
+          'Listener ratings of intelligence are the social judgment the passage already describes and criticizes. They say nothing about whether the grammar lets its speakers produce and understand one another’s sentences.',
+          'The author measures a grammar against one question: “can speakers reliably produce and understand one another’s sentences?” Evidence that the dialect’s own speakers misunderstand each other on exactly the stigmatized forms would show it failing that test.',
+          'Earlier respectable use of now-stigmatized forms supports the author’s point that prestige shifts with the users of a form. It does not challenge the dialect’s functional adequacy.',
+          'Lower scores on tests of standard written English measure command of a different variety. They do not show whether the dialect works for communication among its own speakers.',
+        ],
         skill: 'strengthen-weaken',
       },
       {
@@ -100,6 +130,12 @@ export const FL3_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The author says a variety comes to be called correct “almost never” because “it was more logical or more expressive,” so greater precision is the one attribute the passage withholds. The written form of contracts and applications and the frictionless reading across regions are both named as reasons the standard is now “a working tool.” Its origin in the speech of “the people who ran things” — court, capital, universities — is the author’s historical explanation of its prestige.',
+        optionExplanations: [
+          'The author names the standard as “the form in which contracts, textbooks, and job applications are written.” This is attributed to it.',
+          'The author says the standard “lets people who share no regional dialect read one another without friction.” This is attributed to it.',
+          'The author says a variety comes to be called correct “almost never” because it was “more logical or more expressive.” Greater precision is the one attribute the passage withholds from the standard.',
+          'The author traces the standard to “the speech of the people who ran things: the court, the capital, the universities, the printing houses.” This is attributed to it.',
+        ],
         skill: 'detail',
       },
     ],
@@ -123,6 +159,12 @@ export const FL3_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The author argues against the “usual account” on which silence is a blank frame, holding instead that a rest is “always this silence, after this sound,” and that it belongs to the music “for the same reason the note does.” The author says a listener who “has followed the piece” fills the rest, but never restricts meaning to trained listeners. Performers are faulted for rushing a silence, not urged to lengthen silences in general. The applause example is used to show where a piece ends, not to measure how widely the usual account is held.',
+        optionExplanations: [
+          'The author says a listener who “has followed the piece” fills the rest with expectation, but never restricts meaning to trained listeners. The claim is about how silence works, not who can hear it.',
+          'Performers are faulted for rushing a silence the composer placed, not urged to lengthen silences in general. The author also says lengthening a mid-phrase rest changes the phrase, so longer is not better.',
+          'The applause example is used to show that a piece can continue after its sound stops, not to measure how widely the usual account is held among audiences.',
+          'The author argues against the “usual account” on which silence is a blank frame, holding instead that a rest is “always this silence, after this sound, before that one” and belongs to the music “for the same reason the note does.”',
+        ],
         skill: 'main-idea',
       },
       {
@@ -136,6 +178,12 @@ export const FL3_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The example establishes that “the music is not always over when the sound stops,” so that clapping too soon “cut[s] off part of it” — the first step toward the claim that silence belongs to the piece. The author says the early clapper is “not only impolite”; etiquette is set aside, not the point. The usual account is attributed to a general view of music, not to inexperienced listeners. Memory of the last sound enters only later, as the skeptic’s objection, and the opening says nothing about it fading.',
+        optionExplanations: [
+          'The example establishes that “the music is not always over when the sound stops,” so clapping too soon “cut[s] off part of it.” It is the first step toward the claim that silence belongs to the piece.',
+          'The author says the early clapper is “not only impolite”; etiquette is set aside in favor of the deeper point that she has misjudged where the piece ends.',
+          'The usual account is attributed to a general view of music (“music is organized sound, and silence is what surrounds it”), not to inexperienced listeners specifically.',
+          'Memory of the last sound enters only later, as the skeptic’s objection in the final paragraph. The opening says nothing about memory fading.',
+        ],
         skill: 'function',
       },
       {
@@ -145,6 +193,12 @@ export const FL3_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'For I, the author says the performer who “rushes that silence” after an unresolved ending has “changed the ending.” For II, a rest lengthened by half a beat turns an urgent phrase hesitant, so the phrase itself is altered. III does not qualify: a rest belongs to the music “because it was placed there” and is heard “in relation to everything around it,” whereas a pause for retuning between two separate works was placed by no composer and lies inside neither piece. Hence I and II only.',
+        optionExplanations: [
+          'This omits the lengthened mid-phrase rest. The author says lengthening a rest by half a beat turns an urgent phrase hesitant, so the music itself is altered.',
+          'A pause for retuning between two separate works was placed by no composer and lies inside neither piece, so it does not alter the music. It fails the author’s test that a rest belongs “because it was placed there.”',
+          'The author says the performer who “rushes that silence” after an unresolved ending has “changed the ending,” and that lengthening a mid-phrase rest by half a beat turns an urgent phrase hesitant. A retuning pause between separate works was placed by no composer and belongs to neither piece.',
+          'This includes the retuning pause, which belongs to no piece, and excludes cutting short the final silence, which the author explicitly says changes the ending.',
+        ],
         skill: 'application',
       },
       {
@@ -158,6 +212,12 @@ export const FL3_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The author answers that “every note in music is heard through the memory of the notes before it,” so if reliance on memory makes silence “merely psychological, it makes melody so as well” — the objection proves too much. The author does grant that silence “can be timed,” but the reply does not turn on denying that timing matters. No distinction between endings and mid-phrase rests is drawn; both are treated alike. And the reply is an argument about the skeptic’s logic, not an appeal to the superior hearing of practiced listeners.',
+        optionExplanations: [
+          'The author does grant that silence “can be timed with a stopwatch,” but the reply does not turn on denying that timing reveals anything. The argument is about memory and melody, not measurement.',
+          'The author answers that “every note in music is heard through the memory of the notes before it,” so if reliance on memory makes silence “merely psychological, it makes melody so as well.” The skeptic’s objection proves too much.',
+          'No distinction between endings and mid-phrase rests is drawn in the reply. Both are treated alike as placed elements heard in relation to their surroundings.',
+          'The reply is an argument about the skeptic’s logic, not an appeal to the superior hearing of practiced listeners. The author never invokes expertise.',
+        ],
         skill: 'inference',
       },
       {
@@ -172,6 +232,12 @@ export const FL3_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The author claims that “the same two seconds of quiet mean one thing after a crashing chord and another after a whisper”; identical silences heard differently depending on the preceding chord fit that claim. The author has already argued that a reaction mediated by memory does not make silence “merely psychological,” so the result would not be conceded to the skeptic. The author’s evidence is itself about how silences are heard, so listener reports are relevant. And the author says a silence’s shape comes from “the sounds on either side,” not from its length alone, so equal lengths pose no challenge.',
+        optionExplanations: [
+          'The author claims “the same two seconds of quiet mean one thing after a crashing chord and another after a whisper.” Identical silences heard as tense or restful depending on the preceding chord fit that claim exactly.',
+          'The author has already argued that a reaction mediated by memory does not make silence “merely psychological,” since melody is heard the same way. The result would not be conceded to the skeptic.',
+          'The author’s own evidence is about how silences are heard (urgent versus hesitant, a question versus a stumble), so listener reports are relevant, not beside the point.',
+          'The author says a silence’s shape comes from “the sounds on either side,” not from its length alone. Equal lengths with different characters support the claim rather than challenge it.',
+        ],
         skill: 'new-information',
       },
       {
@@ -185,6 +251,12 @@ export const FL3_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The author says that if an ending were only “the point where the notes run out, every ending would be the same kind of event,” yet “some pieces close a door and some leave it open” — a difference the usual account cannot capture. Hesitation to applaud after a resolved chord is never discussed. The author says rests are notated “with the same precision as notes,” so the second option misstates the passage. Lingering memory of the last sound is the skeptic’s explanation, which fits comfortably within the usual account rather than escaping it.',
+        optionExplanations: [
+          'Hesitation to applaud after a loud, resolved chord is never discussed. The opening example concerns a fading note followed by a held stillness, not a resolved ending.',
+          'The author says composers notate rests “with the same precision as notes,” so this misstates the passage. Equal precision is in fact evidence for the author’s view.',
+          'The author says that if an ending were only “the point where the notes run out, every ending would be the same kind of event,” yet “some pieces close a door and some leave it open.” That difference is what the usual account cannot explain.',
+          'Lingering memory of the last sound is the skeptic’s explanation, which fits comfortably within the usual account rather than escaping it. It is not something the usual account fails to explain.',
+        ],
         skill: 'detail',
       },
     ],
@@ -208,6 +280,12 @@ export const FL3_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The critics hold that “every deliberate violation, however noble its motive, teaches that the habit is optional.” That inference goes through only if observers take away the bare fact of violation regardless of the reasons offered — the very step the author later disputes by recasting disobedience as a public argument. The critics even allow that the protester “may be right about the law,” so they need not assume disliked laws are just. They say order depends “less on police than on habit,” the opposite of the third option. And they grant a “noble” motive, so no assumption of self-interest is needed.',
+        optionExplanations: [
+          'The critics allow that the protester “may be right about the law,” so they do not assume disliked laws are just. Their worry is about the habit of obedience, not the merit of particular laws.',
+          'The critics hold that “every deliberate violation, however noble its motive, teaches that the habit is optional.” That inference works only if onlookers take away the bare fact of violation regardless of the reasons offered, which is the step the author later disputes.',
+          'The critics say a legal order depends “less on police than on habit,” the opposite of this claim. They do not assume police can maintain order alone.',
+          'The critics grant a “noble” motive and that the protester “may be right,” so they need not assume self-interest. The argument runs even for principled protesters.',
+        ],
         skill: 'assumption',
       },
       {
@@ -222,6 +300,12 @@ export const FL3_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The sentence follows the claim that “the rule of law was never mainly a matter of obedience”: a perfectly obedient population can still lack the rule of law if the commands violate its principles, so obedience alone is not enough. The author calls the critics’ argument “serious” and nowhere imputes motives to them. Far from conceding that habit is a precondition, the remark separates the two ideas. And the example is a single hypothetical, not a claim about how often orderly societies have just laws.',
+        optionExplanations: [
+          'The author calls the critics’ argument “serious” and nowhere imputes authoritarian motives to them. The remark is about what the rule of law is, not about the critics’ sympathies.',
+          'Far from conceding that habit is a precondition, the remark separates habitual obedience from the rule of law. The author says the rule of law “was never mainly a matter of obedience.”',
+          'The example is a single hypothetical about a perfectly obedient population, not a claim about how often orderly societies have just laws.',
+          'The sentence follows the claim that “the rule of law was never mainly a matter of obedience”: a perfectly obedient population can still lack the rule of law if the commands violate its principles, so obedience alone is not enough.',
+        ],
         skill: 'function',
       },
       {
@@ -235,6 +319,12 @@ export const FL3_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The author redefines the rule of law as power answering “to reasons that can be stated publicly and applied to everyone alike,” and concludes that the disobedient appeals “to the principles by which every statute must be judged.” Making acceptance of the penalty the decisive justification is the defenders’ reply, which the author finds “unsatisfying.” Equating the rule of law with habitual obedience is the critics’ picture, which the author rejects. The author never judges disobedience by its success in changing laws.',
+        optionExplanations: [
+          'The author redefines the rule of law as power answering “to reasons that can be stated publicly and applied to everyone alike,” and concludes the disobedient appeals “to the principles by which every statute must be judged.” Open appeal to principle is what upholds the law.',
+          'Making acceptance of the penalty the decisive justification is the defenders’ reply, which the author finds “unsatisfying.” The author gives punishment a different and secondary role.',
+          'Equating the rule of law with habitual obedience is the critics’ picture, which the author rejects. The author says such a population would be under “rule by whoever gave the commands.”',
+          'The author never judges disobedience by whether it succeeds in changing laws. The test is whether it addresses the public in the language of shared principles.',
+        ],
         skill: 'main-idea',
       },
       {
@@ -248,6 +338,12 @@ export const FL3_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The author objects to the defenders “not because the conditions are wrong” but because they treat accepting punishment as “a price that signals … deference,” an “apology offered in advance”; the author reinterprets the same act as keeping the argument “inside the shared framework.” The dispute is therefore over what submission means, not whether it should happen — the author says it “still has a place.” Nonviolence and the targeting of a specific injustice are conditions the author leaves unchallenged.',
+        optionExplanations: [
+          'Nonviolence is one of the familiar conditions the author says are not wrong. The disagreement is “not because the conditions are wrong,” so nonviolence is not at issue.',
+          'The author says accepting punishment “still has a place,” so the dispute is not over whether to submit. The author agrees the disobedient should remain within the law’s reach.',
+          'Targeting a specific injustice is one of the conditions the author leaves unchallenged. It is not the point of disagreement.',
+          'The author objects that the defenders treat accepting punishment as “a price that signals … deference,” an “apology offered in advance,” and reinterprets the same act as keeping the argument “inside the shared framework.” The dispute is over what submission expresses.',
+        ],
         skill: 'detail',
       },
       {
@@ -262,6 +358,12 @@ export const FL3_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'For the author, the decisive feature is that the act “addresses the public”: “an act done in secret appeals to no one.” Unidentified activists acting at night make no argument to anyone and conceal who is responsible. The physician, the students, and the taxpayer each act openly and each names a failure of the principles the author lists — unequal treatment or an exemption for the powerful — so each fits the author’s account.',
+        optionExplanations: [
+          'The physician acts openly at a press conference and names a failure of equal treatment. That fits the author’s account of an argument addressed to the public.',
+          'For the author, the decisive feature is that the act “addresses the public”: “an act done in secret appeals to no one.” Unidentified activists acting at night make no argument to anyone and conceal who is responsible.',
+          'The students act in front of cameras and protest a rule that exempts the powerful, one of the principles the author lists. This fits the author’s account.',
+          'The taxpayer acts openly, tells officials in writing, and names unequal treatment of one group. This is an argument addressed to the public in the author’s sense.',
+        ],
         skill: 'application',
       },
       {
@@ -275,6 +377,12 @@ export const FL3_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The author answers the critics by denying that the disobedient issues a “private verdict”: an open act is “an argument addressed to that public.” If people who watch exactly such open, principled acts nonetheless become readier to ignore unrelated laws, then the critics’ worry — that violation teaches “the habit is optional” — holds even for the author’s model case. The ineffectiveness of secret acts is compatible with the author’s emphasis on publicity. Disobedients appealing to equal treatment supports the author’s description. Reduced penalties bear on how courts respond, not on what the act teaches or expresses.',
+        optionExplanations: [
+          'The author answers the critics by denying that the disobedient issues a “private verdict”: an open act is “an argument addressed to that public.” If watching exactly such acts makes people readier to ignore unrelated laws, the critics’ worry holds even for the author’s model case.',
+          'The ineffectiveness of secret acts is compatible with the author’s emphasis on publicity. It does nothing to undermine the author’s response to the critics.',
+          'Disobedients appealing to equal treatment supports the author’s description of what civil disobedience says. It strengthens rather than weakens the response.',
+          'Reduced penalties bear on how courts respond, not on what the act teaches onlookers or expresses to the public. The author’s argument is about the latter.',
+        ],
         skill: 'strengthen-weaken',
       },
     ],
@@ -298,6 +406,12 @@ export const FL3_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The dish returned “the same evening” and “exactly” as it came is a concrete case of the claim that “the delay and the difference … are its purpose,” which the rest of the passage explains. Nothing suggests lending is resented; the point is how a return is made. Treating gifts as loans is close to the cynic’s reading, which the author rejects. And the author and cynic do not fully agree: they share only the premise that gifts obligate, and they read the delay in opposite ways — credit for the cynic, an open relationship for the author.',
+        optionExplanations: [
+          'Nothing in the passage suggests lending is resented. The example concerns how a return is made (too soon and too exact), not whether lending is a burden.',
+          'Treating gifts as loans that must be repaid is close to the cynic’s reading, which the author rejects. The author says the obligation “is designed not to be settled.”',
+          'The author and cynic do not fully agree. They share only the premise that gifts obligate, and they read the delay in opposite ways: stretched-out credit for the cynic, an open relationship for the author.',
+          'The dish returned “the same evening” and “exactly” as it came is a concrete case of the claim that “the delay and the difference … are its purpose.” The rest of the passage interprets why timing and form matter.',
+        ],
         skill: 'function',
       },
       {
@@ -312,6 +426,12 @@ export const FL3_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The author calls the market’s freedom “real,” says “it would be foolish to wish it away,” and gives reasons a world of lifelong ties would be worse — yet adds that the market’s logic explains why its members find obligating gifts “spoiled.” That is qualified appreciation. It is not disapproval: the unease about gifts is explained, not blamed on the market as a fault. It is not indifference, since the author devotes a paragraph to the comparison. And “enthusiastic” overstates a view that immediately turns to what the market’s logic obscures.',
+        optionExplanations: [
+          'The author does not blame the market for teaching distrust as a fault. The unease about gifts is explained by the market’s logic, not condemned, and the market’s freedom is called “real.”',
+          'The author devotes a full paragraph to the market comparison and uses it to explain why people raised within it feel uneasy about gifts. That is engagement, not indifference.',
+          'The author calls the market’s freedom “real,” says “it would be foolish to wish it away,” and explains why lifelong ties for every purchase would be worse, yet adds that the market’s logic makes its members find obligating gifts “spoiled.” That is qualified appreciation.',
+          'Enthusiasm overstates a view that immediately turns to what the market’s logic obscures. The author appreciates the freedom but does not celebrate it without reservation.',
+        ],
         skill: 'tone',
       },
       {
@@ -326,6 +446,12 @@ export const FL3_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'For the author, “an exact and immediate return closes the account, and a closed account is a relationship that has ended”; paying the precise price at once is such a return, and it breaks an alternating exchange that had kept the account open. Reading the payment as mere courtesy is the market’s view, which the author says the gift-giving communities would find strange. The payment does not show the earlier lunches were trade; the author denies that the obligation in a gift is a price. And becoming “even” is, on the author’s account, the day two parties have “nothing further to do with one another,” not the start of an equal friendship.',
+        optionExplanations: [
+          'For the author, “an exact and immediate return closes the account, and a closed account is a relationship that has ended.” Paying the precise price at once breaks the alternating exchange that had kept the account open.',
+          'Reading the payment as courtesy is the market’s view, in which parting “owing nothing” is a kindness. The author says the gift-giving communities would find that feeling strange.',
+          'The payment does not show the earlier lunches were trade. The author denies that the obligation in a gift is a price; the lunches alternated and escalated, exactly as gifts do.',
+          'Becoming “even” is, on the author’s account, “the day they have nothing further to do with one another,” not the start of an equal friendship. Evenness ends the relationship.',
+        ],
         skill: 'application',
       },
       {
@@ -340,6 +466,12 @@ export const FL3_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The cynic reads the delay as “stretch[ing] out the credit” and the excess as a hidden calculation of interest. An excess set by rule and scaled to the length of the delay is exactly how interest on a loan behaves, which would make the gift look like a price after all. Wider cooperation between gift partners fits the author’s claim that the exchange is the relationship. A debt said to last as long as the households fits the author’s claim that the obligation is not designed to be settled. Slower returns among close kin are likewise consistent with gifts sustaining the closest ties, not with a calculation of interest.',
+        optionExplanations: [
+          'Wider cooperation between gift partners at harvest and in disputes fits the author’s claim that “the alternation is the relationship.” It supports the author, not the cynic.',
+          'A debt said to last as long as both households endure fits the author’s claim that the obligation “is designed not to be settled.” It supports the author’s interpretation.',
+          'Slower returns among close kin are consistent with gifts sustaining the closest ties by keeping accounts open longest. This does not suggest a calculation of interest.',
+          'The cynic reads the delay as “stretch[ing] out the credit” and the excess as a hidden calculation of interest. An excess fixed by rule and scaled to the delay is exactly how interest on a loan behaves, making the gift look like a price.',
+        ],
         skill: 'strengthen-weaken',
       },
       {
@@ -354,6 +486,12 @@ export const FL3_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The author holds that a closed account “is a relationship that has ended” and that the day two households become even is the day they have “nothing further to do with one another.” When a relationship is in fact ending, settling every account exactly is what the author’s view predicts. Settlement at a departure does not show that gifts are prices during an ongoing relationship; it fits the author’s point that settling ends the tie. The insult of an immediate exact return lies in ending a relationship unilaterally, and here the relationship is ending anyway. Far from being irrelevant, the case tests the author’s account of what exact settlement signifies.',
+        optionExplanations: [
+          'Settlement at a departure does not show that gifts are prices during an ongoing relationship. The author’s view is that settling ends the tie, so settling when the tie is ending anyway fits the author, not the cynic.',
+          'The author holds that a closed account “is a relationship that has ended” and that becoming even is the day two households have “nothing further to do with one another.” When a relationship is in fact ending, settling every account exactly is what the author predicts.',
+          'The insult of an immediate exact return lies in ending a relationship unilaterally. Here the relationship is ending anyway because of the move, so the exact return is not an insult and the claim is not challenged.',
+          'Far from irrelevant, the case tests the author’s account of what exact settlement signifies. The author never restricts the argument to households that remain neighbors for life.',
+        ],
         skill: 'new-information',
       },
     ],

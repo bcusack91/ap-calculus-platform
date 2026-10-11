@@ -37,3 +37,11 @@ export function questionKey(q: KeyableQuestion): string {
 export function isQuestionKey(key: string | null | undefined): key is string {
   return !!key && key.startsWith(QUESTION_KEY_PREFIX) && key.length === QUESTION_KEY_PREFIX.length + 16
 }
+
+/**
+ * An option's identity regardless of where it was shown: lets "how others
+ * answered" count the same choice across students who saw a different order.
+ */
+export function optionKey(text: string): string {
+  return 'o:' + createHash('sha1').update(norm(text)).digest('hex').slice(0, 12)
+}

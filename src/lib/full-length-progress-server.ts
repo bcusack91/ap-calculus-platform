@@ -1,4 +1,5 @@
 import { prisma } from '@/lib/prisma'
+import { SAT_FULL_LENGTH_ATTEMPTS } from '@/lib/sat-attempt-format'
 import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
 import { isEntranceMastery } from '@/lib/flashcard-unlock'
 import { hasExitQuiz } from '@/data/exit-quizzes'
@@ -72,7 +73,8 @@ async function fullLengthEvents(userId: string, course: FullLengthCourse): Promi
     }
   } else {
     const rows = await prisma.satTestAttempt.findMany({
-      where: { userId, completed: true },
+      // PSAT practice tests and mini tests share the table; neither is an SAT full-length.
+      where: { userId, completed: true, ...SAT_FULL_LENGTH_ATTEMPTS },
       select: { id: true, completedAt: true, totalScore: true, testNumber: true },
     })
     for (const r of rows) {

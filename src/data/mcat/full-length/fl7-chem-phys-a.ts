@@ -40,6 +40,12 @@ export const FL7_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'At its peak the plate force is 2000 N, and the volunteer’s weight is $(80)(10) = 800$ N, so the net upward force is 1200 N and the acceleration is $1200 / 80 = 15$ m/s². The value 25 m/s² divides the whole plate reading by the mass, ignoring the weight that the plate force must first balance. The value 35 m/s² adds the weight to the plate force instead of subtracting it. The value 10 m/s² is the acceleration at 0.15 s, when the plate reads 1600 N, not the acceleration at the peak.',
+        optionExplanations: [
+          'This is the acceleration at 0.15 s, when the plate reads 1600 N: $(1600 - 800)/80 = 10$ m/s². At the peak the plate reads 2000 N, so the net force and acceleration are larger.',
+          'At the peak the plate reads 2000 N while body weight is $(80)(10) = 800$ N. The net upward force is $2000 - 800 = 1200$ N, so $a = 1200/80 = 15$ m/s².',
+          'This divides the entire plate reading by the mass, $2000/80 = 25$ m/s², and forgets that 800 N of the plate force only balances the volunteer’s weight. Only the excess over body weight accelerates the center of mass.',
+          'This adds the weight to the plate force, $(2000 + 800)/80 = 35$ m/s². Weight acts downward while the plate pushes upward, so the two forces oppose each other and the weight must be subtracted.',
+        ],
         skill: '4A Newton’s second law applied to a force–time record (Skill 4)',
       },
       {
@@ -53,6 +59,12 @@ export const FL7_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The center of mass gains upward speed for as long as the net force on it is upward, that is, for as long as the plate force exceeds the body weight of 800 N. Figure 1 shows the force falling from 1300 N at 0.30 s to zero at 0.35 s, so it passes through 800 N within that interval; from then on the net force is downward and the volunteer slows slightly before leaving the plate. At 0.25 s the force and the acceleration are greatest, but the speed is still increasing. Between 0.25 s and 0.30 s the force is declining yet remains well above body weight, so the speed continues to rise. At take-off the net force has already been downward for a short time, so the speed is a little below its maximum.',
+        optionExplanations: [
+          'At 0.25 s the force, and therefore the acceleration, is at its maximum, but a maximum acceleration means the speed is still increasing as fast as it ever will. Peak force marks peak acceleration, not peak speed.',
+          'Between 0.25 s and 0.30 s the force falls from 2000 N to 1300 N, but it remains well above the 800-N body weight. The net force is still upward, so the center of mass keeps speeding up throughout this interval.',
+          'Speed increases as long as the plate force exceeds body weight (800 N). The force is 1300 N at 0.30 s and 0 at 0.35 s, so it crosses 800 N inside this interval; at that crossing the net force is zero and the speed peaks.',
+          'Just before take-off the plate force has already dropped below body weight, so the net force on the volunteer is downward and the center of mass has been slowing slightly. The speed at take-off is a little less than the maximum.',
+        ],
         skill: '4A net force and the instant of maximum speed (Skill 2)',
       },
       {
@@ -61,6 +73,12 @@ export const FL7_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The area between the record and the body-weight line is the net impulse, which equals the momentum at take-off, so $v = 200 / 80 = 2.5$ m/s. After take-off the kinetic energy is converted into gravitational potential energy, $\\tfrac{1}{2}mv^2 = mgh$, so $h = v^2 / 2g = 6.25 / 20 \\approx 0.31$ m. The value 0.63 m is $v^2 / g$, which leaves the factor of one-half out of the kinetic energy. The value 2.5 m is the take-off speed in meters per second relabeled as a distance. The value 3.1 m is $v^2 / 2$, which leaves $g$ out of the potential energy.',
+        optionExplanations: [
+          'The net impulse of 200 N·s equals the momentum at take-off, so $v = 200/80 = 2.5$ m/s. With $\\tfrac{1}{2}mv^2 = mgh$, the rise is $h = v^2/2g = 6.25/20 \\approx 0.31$ m.',
+          'This is $v^2/g = 6.25/10 \\approx 0.63$ m, which drops the factor of one-half from the kinetic energy. The energy balance is $\\tfrac{1}{2}mv^2 = mgh$, so the rise is half this value.',
+          'This is the take-off speed, 2.5 m/s, relabeled as a distance in meters. Converting the impulse to a speed is only the first step; the rise still has to be found from energy conservation, and it is far smaller than 2.5 m.',
+          'This is $v^2/2 = 6.25/2 \\approx 3.1$ m, which leaves $g$ out of the potential-energy term. A 3-m rise of the center of mass is not a plausible standing jump; dividing by $g = 10$ m/s² gives the actual rise.',
+        ],
         skill: '4A impulse–momentum and conservation of energy (Skill 2)',
       },
       {
@@ -69,6 +87,12 @@ export const FL7_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Average power is the mechanical energy gained during the push divided by the duration of the push. The gain in gravitational potential energy is $mgh = (60)(10)(0.35) = 210$ J and the gain in kinetic energy is $\\tfrac{1}{2}mv^2 = \\tfrac{1}{2}(60)(3.0)^2 = 270$ J, a total of 480 J, and $480 / 0.30 = 1600$ W. The value 700 W counts only the potential energy, and 900 W counts only the kinetic energy. The value 480 W is the energy gained, in joules, with the division by the time left out.',
+        optionExplanations: [
+          'This is the total mechanical energy gained, 480 J, reported as if it were a power. Power requires dividing that energy by the 0.30-s duration of the push, which gives a much larger number of watts.',
+          'This counts only the gravitational potential energy: $mgh = (60)(10)(0.35) = 210$ J, and $210/0.30 = 700$ W. The passage defines mechanical energy as kinetic plus potential, so the kinetic term must be added as well.',
+          'This counts only the kinetic energy: $\\tfrac{1}{2}(60)(3.0)^2 = 270$ J, and $270/0.30 = 900$ W. The center of mass also rose 0.35 m during the push, so the potential-energy gain of 210 J must be included.',
+          'The passage defines average power as total mechanical energy gained during the push divided by push duration. Potential energy $(60)(10)(0.35) = 210$ J plus kinetic energy $\\tfrac{1}{2}(60)(3.0)^2 = 270$ J gives 480 J, and $480/0.30 = 1600$ W.',
+        ],
         skill: '4A mechanical energy and average power (Skill 2)',
       },
       {
@@ -82,6 +106,12 @@ export const FL7_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The flight-time method assumes that the center of mass is at the same height at landing as at take-off, so that half of the flight is spent rising. A jumper who lands with the legs bent does not touch the plate until the center of mass has dropped below its take-off height, so the flight lasts longer than twice the time of rise, and the method converts the extra time into extra height. Movements made in the air cannot change the speed with which the center of mass left the ground or the path it follows afterward, so they neither raise its speed nor shorten its rise. The time of flight does depend on landing posture, because posture determines how far the center of mass must fall before the feet reach the plate.',
+        optionExplanations: [
+          'The flight-time method assumes the center of mass lands at its take-off height so that half the flight is spent rising. Landing with bent legs lets the center of mass drop below take-off height before the feet touch, lengthening the flight and inflating the computed height.',
+          'The direction is right but the reason is not. Once airborne, the jumper is a projectile and no movement of the limbs can change the speed or path of the center of mass. The error comes from the landing posture, not from any change in speed during flight.',
+          'Bending the legs in the air cannot shorten the rise: the center of mass follows a fixed projectile path set by take-off speed. In fact the flight is lengthened, not shortened, because the center of mass descends farther before touchdown, making the estimate too large.',
+          'The time of flight does depend on posture, because posture at landing sets how far the center of mass must fall before the feet reach the plate. The passage explicitly warns that the method holds only when landing posture matches take-off posture.',
+        ],
         skill: '4A validity of a flight-time measurement (Skill 3)',
       },
     ],
@@ -106,6 +136,12 @@ export const FL7_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The blank shows that the acid added to every flask requires 100.0 mL of 0.250 M NaOH, or 25.0 mmol, for neutralization. The Tablet B flask required only 52.0 mL, or 13.0 mmol, so the tablet had already consumed $25.0 - 13.0 = 12.0$ mmol of H⁺. The value 13.0 mmol is the acid left over, not the acid neutralized by the tablet. The value 6.0 mmol is the amount of Mg(OH)₂ in the tablet, each mole of which consumes two moles of H⁺. The value 24.0 mmol comes from multiplying the 48.0-mL difference in titrant volume by the concentration of the HCl instead of the concentration of the NaOH.',
+        optionExplanations: [
+          'This is the amount of Mg(OH)₂ in the tablet, not the acid it neutralized. Each formula unit of Mg(OH)₂ consumes two H⁺, so 6.0 mmol of base accounts for 12.0 mmol of acid, which is the quantity asked for.',
+          'The blank shows that all the acid added needs $(100.0)(0.250) = 25.0$ mmol of NaOH. Tablet B’s flask needed only $(52.0)(0.250) = 13.0$ mmol, so the tablet had already consumed $25.0 - 13.0 = 12.0$ mmol of H⁺.',
+          'This is the acid left over after the tablet reacted, $(52.0)(0.250) = 13.0$ mmol, which is what the NaOH titrated. The acid neutralized by the tablet is the blank value minus this leftover, not the leftover itself.',
+          'This multiplies the 48.0-mL difference in titrant volume by the 0.500 M concentration of the HCl rather than the 0.250 M concentration of the NaOH actually delivered. The volumes in Table 1 are volumes of NaOH, so its molarity must be used.',
+        ],
         skill: '5A back-titration stoichiometry from a data table (Skill 4)',
       },
       {
@@ -119,6 +155,12 @@ export const FL7_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The amount of H⁺ neutralized per gram is the number of protons consumed per formula unit divided by the molar mass: $2/100 = 20$ mmol/g for CaCO₃, $2/58 \\approx 34$ mmol/g for Mg(OH)₂, and $3/78 \\approx 38$ mmol/g for Al(OH)₃. The ranking that places Mg(OH)₂ highest orders the compounds by molar mass alone and overlooks the third proton consumed by each Al(OH)₃. The ranking that places CaCO₃ highest is the correct order reversed. The ranking that places Mg(OH)₂ lowest has no basis, since Mg(OH)₂ consumes as many protons as CaCO₃ does and has a smaller molar mass.',
+        optionExplanations: [
+          'This is the correct order reversed. CaCO₃ at $2/100 = 20$ mmol/g has the lowest capacity per gram, not the highest, and Al(OH)₃ at $3/78 \\approx 38$ mmol/g has the highest. Increasing order must start with CaCO₃.',
+          'This ranks the compounds by molar mass alone (100, 78, 58 g/mol), which would be right if every compound consumed the same number of protons. Al(OH)₃ consumes three H⁺ per formula unit, which lifts it above Mg(OH)₂ despite its larger mass.',
+          'Placing Mg(OH)₂ lowest has no basis: it consumes two H⁺ per formula unit, the same as CaCO₃, but its molar mass (58 g/mol) is smaller, so its capacity per gram ($\\approx 34$ mmol/g) is higher than that of CaCO₃ (20 mmol/g).',
+          'Capacity per gram is protons consumed per formula unit divided by molar mass: $2/100 = 20$ mmol/g for CaCO₃, $2/58 \\approx 34$ mmol/g for Mg(OH)₂, and $3/78 \\approx 38$ mmol/g for Al(OH)₃, giving this increasing order.',
+        ],
         skill: '5A equivalents of acid neutralized per gram of base (Skill 2)',
       },
       {
@@ -127,6 +169,12 @@ export const FL7_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Tablet C neutralized $(100.0 - 64.0)(0.250) = 9.0$ mmol of H⁺, so its flask holds 3.0 mmol of Al³⁺. Above about pH 4 each Al³⁺ takes up three hydroxide ions as solid Al(OH)₃ forms again, which consumes a further 9.0 mmol of NaOH, or 36 mL, for a total of 100 mL. This is the volume required by the blank: once the aluminum hydroxide has re-formed, every mole of HCl originally added has been neutralized by NaOH, and the tablet would appear to have no capacity at all. A volume of 64 mL assumes that only the leftover acid reacts with the titrant. A volume of 36 mL is the additional titrant alone, and 136 mL adds that 36 mL to the blank volume instead of to the 64 mL already delivered.',
+        optionExplanations: [
+          'This is only the extra titrant consumed when Al(OH)₃ re-precipitates: 3.0 mmol Al³⁺ × 3 OH⁻ = 9.0 mmol, or 36 mL. The question asks for the total volume delivered, which must include the 64.0 mL already added to reach the first end point.',
+          'This is the volume in Table 1 for the bromophenol blue end point and assumes that only leftover HCl consumes titrant. The passage states that above about pH 4, Al³⁺ combines with hydroxide to re-form Al(OH)₃, which consumes additional NaOH before pH 7.',
+          'Tablet C neutralized $(100.0 - 64.0)(0.250) = 9.0$ mmol H⁺, leaving 3.0 mmol Al³⁺. Re-forming Al(OH)₃ consumes 3 OH⁻ per Al³⁺, another 9.0 mmol, or 36 mL. The total is $64 + 36 = 100$ mL, the same as the blank.',
+          'This adds the 36 mL of extra titrant to the blank volume of 100 mL rather than to the 64 mL actually delivered to the Tablet C flask. The blank is a separate flask; the Tablet C titration starts from its own 64.0 mL.',
+        ],
         skill: '5A choice of end point when a metal hydroxide can precipitate (Skill 2)',
       },
       {
@@ -140,6 +188,12 @@ export const FL7_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The capacity is calculated as the acid added minus the leftover acid found by titration, so any error that makes the titration find too little leftover acid inflates the result. Droplets lost as spray carry away HCl that the tablet did not neutralize; less NaOH is then needed, and the missing acid is credited to the tablet. Adding NaOH past the end point makes the leftover acid appear larger and the capacity smaller. Leaving part of the tablet in the mortar means that less base reacts, which also lowers the result. Rinsing the walls with water changes the volume of the solution but not the number of moles of acid in it, so the titration is unaffected.',
+        optionExplanations: [
+          'Overshooting the end point delivers extra NaOH, which makes the leftover acid appear larger. Since capacity is acid added minus leftover acid, a larger apparent leftover gives a smaller capacity, an underestimate rather than an overestimate.',
+          'Tablet material left in the mortar means less base reaches the flask, so less HCl is consumed, more acid is left over, and more NaOH is needed. The calculated capacity falls, so this error underestimates rather than overestimates.',
+          'Adding water dilutes the solution but does not change the number of moles of HCl present. Titration measures moles of acid, not concentration, so the NaOH volume and the computed capacity are unaffected by rinsing the walls.',
+          'Spray carries away HCl that the tablet never neutralized. Less acid remains to be titrated, so less NaOH is needed, and the missing acid is wrongly credited to the tablet. The computed capacity is therefore too high.',
+        ],
         skill: '5A sources of error in a back-titration (Skill 3)',
       },
       {
@@ -153,6 +207,12 @@ export const FL7_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'A titration requires a reaction that is rapid as well as complete. Acid added to a suspension reacts only at the surfaces of the particles, so the solution turns acidic and the indicator changes color while undissolved base remains, and the color then drifts back as the solid goes on reacting. Supplying excess acid, allowing time for the reaction to finish, and then titrating the clear solution with NaOH replaces this slow reaction with a fast one between dissolved ions. Carbonates and hydroxides are consumed completely by excess strong acid, so an incomplete reaction is not the difficulty. The solids do react with acid even though they are insoluble in water; that is how they act in the stomach. Only the carbonate tablet releases a gas, and escaping gas does not interfere with reading a buret.',
+        optionExplanations: [
+          'A titration needs a reaction that is fast as well as complete. Acid added to suspended solid reacts only at particle surfaces, so the solution turns acidic and the indicator changes color while unreacted base remains, giving a premature and drifting end point.',
+          'These are weak bases, but the reaction of a carbonate or hydroxide with excess strong acid still goes to completion, as the passage’s equations and the back-titration itself rely on. Incompleteness is not the obstacle; speed is.',
+          'The solids are sparingly soluble, yet they clearly do react with acid: that is how they work in the stomach and how the back-titration consumes HCl. Insolubility slows the reaction but does not prevent it.',
+          'Only the carbonate tablet releases gas, and the two hydroxide tablets do not, so this could not explain avoiding direct titration for all three. Gas escaping from the flask also has no effect on reading the volume in a buret.',
+        ],
         skill: '5A requirements for a titration reaction (Skill 1)',
       },
     ],
@@ -180,6 +240,12 @@ export const FL7_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The transfer is direct: a hydrogen bonded to C1 of the alcohol moves, with both electrons of its C–H bond, to C4 of the nicotinamide ring, and once there it does not exchange with water. One deuterium therefore ends up on the reduced coenzyme. The other deuterium is still bonded to C1, which has become the carbonyl carbon of acetaldehyde, CH₃CDO. The only hydrogen released to the solvent is the hydroxyl proton, which is ordinary hydrogen in this substrate, so no deuterium enters the water. Both atoms cannot go to the coenzyme, because oxidizing an alcohol to an aldehyde removes only one hydrogen from carbon.',
+        optionExplanations: [
+          'The only hydrogen released to the solvent is the hydroxyl proton, which is ordinary hydrogen in CH₃CD₂OH. The deuterium atoms are bonded to carbon, and neither one is lost as D⁺ to the water.',
+          'Oxidizing an alcohol to an aldehyde removes just one hydrogen from C1; the other stays on the carbonyl carbon of the product. Only one deuterium can be transferred to C4 of the nicotinamide ring.',
+          'This correctly leaves one deuterium on acetaldehyde but sends the other to the solvent. The passage says the hydride is delivered directly to C4 of NAD⁺ and does not exchange with water, so it ends up on NADH, not in solution.',
+          'The hydride from C1 goes directly, with both electrons, to C4 of the nicotinamide ring, where it does not exchange with water, so one deuterium is on the reduced coenzyme. The other deuterium remains on C1, now the carbonyl carbon of CH₃CDO.',
+        ],
         skill: '5D hydride transfer to NAD⁺ traced with an isotope label (Skill 2)',
       },
       {
@@ -193,6 +259,12 @@ export const FL7_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'In the first half of the reaction, aspartate takes the place of lysine in the Schiff base with PLP, loses its α-hydrogen, and is released as its α-keto acid, oxaloacetate, while its amino group stays on the coenzyme as PMP. Returning PMP to PLP requires an α-keto acid to accept that amino group, and none is present, so each active site completes one half-reaction and stops. Steady accumulation of oxaloacetate would require the coenzyme to be regenerated, which cannot happen here. The Schiff base forms between PLP and the amino acid itself, so the first half-reaction does not depend on an α-keto acid. Glutamate would form, and PLP would be regenerated, only if α-ketoglutarate were supplied to accept the amino group from PMP.',
+        optionExplanations: [
+          'Steady accumulation would need PLP regenerated after each turnover, but converting PMP back to PLP requires an α-keto acid to accept the amino group. With none present, the coenzyme is stranded as PMP after one turnover.',
+          'Aspartate displaces lysine from the Schiff base, loses its α-hydrogen, and is hydrolyzed off as oxaloacetate, leaving its amino group on the coenzyme as PMP. Without an α-keto acid to accept that group, each active site completes only this first half-reaction.',
+          'The Schiff base forms between PLP and the incoming amino acid, displacing the lysine; no α-keto acid is involved in that step. The first half-reaction proceeds normally and produces one oxaloacetate per site.',
+          'Glutamate would form only if α-ketoglutarate were present to accept the amino group from PMP in the second half-reaction. No α-keto acid is supplied, so neither glutamate formation nor regeneration of PLP can occur.',
+        ],
         skill: '5D the two half-reactions of PLP-dependent transamination (Skill 2)',
       },
       {
@@ -206,6 +278,12 @@ export const FL7_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'An acid is stronger when its conjugate base is more stable. Removing the proton from C2 leaves a lone pair and a negative charge on a carbon that is bonded directly to a positively charged nitrogen, and the attraction between these adjacent opposite charges stabilizes the carbanion. The pyrophosphate group lies at the far end of the molecule and is not conjugated with the ring; its negative charges would repel a carbanion, not stabilize it, and no resonance form can move the charge onto phosphorus. Alkyl groups donate electron density, which destabilizes a carbanion and makes a C–H bond less acidic, not more.',
+        optionExplanations: [
+          'The C2 carbanion sits directly beside a positively charged ring nitrogen, and the electrostatic attraction between adjacent opposite charges stabilizes the conjugate base. A more stable conjugate base means a more acidic C–H proton.',
+          'The pyrophosphate group is at the far end of the molecule and not conjugated with the thiazolium ring. Its negative charges would repel a carbanion and destabilize it, making the proton less acidic, not more.',
+          'Alkyl groups are electron-donating, which pushes additional electron density onto an already negative carbon. That destabilizes a carbanion and makes the parent C–H bond less acidic, the opposite of the effect observed.',
+          'No resonance form of the thiazolium ring places charge on phosphorus; the phosphate groups are joined through a saturated chain and are not part of the ring’s π system. The stabilization is electrostatic, from the adjacent cationic nitrogen.',
+        ],
         skill: '5D stability of a conjugate base and C–H acidity (Skill 1)',
       },
       {
@@ -219,6 +297,12 @@ export const FL7_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Biotin-dependent enzymes are carboxylases: they attach CO₂, taken from bicarbonate and activated at the expense of ATP, to a carbon nucleophile. The conversion of pyruvate, a three-carbon α-keto acid, into oxaloacetate, a four-carbon one, is such a reaction; it is catalyzed by pyruvate carboxylase. Reduction of pyruvate to lactate is a hydride transfer from NADH. Formation of alanine from pyruvate is a transamination, which depends on PLP. Conversion of pyruvate to acetaldehyde is the decarboxylation of an α-keto acid, which depends on TPP; it removes CO₂ instead of adding it and does not involve biotin.',
+        optionExplanations: [
+          'Reduction of pyruvate to lactate is a hydride transfer from NADH catalyzed by lactate dehydrogenase. It uses the nicotinamide coenzyme described in the passage, not biotin, and would be unaffected by avidin.',
+          'Converting pyruvate to alanine is a transamination, which the passage attributes to PLP-dependent aminotransferases. Biotin plays no role in moving an amino group, so avidin would not block this reaction.',
+          'Biotin-dependent enzymes are carboxylases that attach CO₂ from bicarbonate to a carbon nucleophile at the cost of ATP. Converting three-carbon pyruvate to four-carbon oxaloacetate with HCO₃⁻ and ATP is exactly this reaction, catalyzed by pyruvate carboxylase.',
+          'Decarboxylation of pyruvate to acetaldehyde is the TPP-dependent chemistry described in the passage: the thiazolium carbanion adds to the ketone and absorbs the electrons released as CO₂ leaves. It removes CO₂ rather than adding it, so biotin is not involved.',
+        ],
         skill: '5D matching a coenzyme to its reaction type (Skill 1)',
       },
     ],
@@ -248,6 +332,12 @@ export const FL7_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The two pentadienes are isomers with the same number of carbons and the same number of double bonds; only the arrangement of the double bonds differs, and $\\lambda_{\\text{max}}$ rises from 178 nm to 223 nm when they are conjugated. Because nothing else changes, the shift can be assigned to conjugation. In each of the other pairs the number of double bonds changes as well: 1,3-pentadiene and hexatriene are both conjugated and differ by one double bond, 1,4-pentadiene and β-carotene differ in both number and arrangement, and decapentaene and β-carotene are both conjugated and differ in number. None of those comparisons separates the effect of conjugation from the effect of simply having more double bonds.',
+        optionExplanations: [
+          'Both compounds are conjugated and differ by one double bond (two versus three), so the rise from 223 to 268 nm reflects a change in number, not arrangement. It cannot separate the effect of conjugation from the effect of more double bonds.',
+          'The two pentadienes have identical carbon count and the same two double bonds; only their arrangement differs, and $\\lambda_{\\text{max}}$ jumps from 178 to 223 nm. With number held constant, the shift isolates the effect of conjugation.',
+          'These two compounds differ in both the number of double bonds (2 versus 11) and their arrangement (isolated versus conjugated). With two variables changing at once, the shift to 452 nm cannot be attributed to conjugation alone.',
+          'Both are conjugated; they differ in the number of double bonds (5 versus 11) and, as the passage notes, in methyl branching and ring placement. This comparison tests the effect of chain length, not of conjugation versus isolation.',
+        ],
         skill: '5C choosing the comparison that isolates one variable in spectral data (Skill 4)',
       },
       {
@@ -261,6 +351,12 @@ export const FL7_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Table 1 shows that each additional conjugated double bond moves the absorption maximum to longer wavelength, because extending a conjugated system narrows the gap between the HOMO and the LUMO. A second C=C bond placed between the ring and the carbonyl lengthens the conjugated system of the ester and should move its maximum from 310 nm toward the UV-A range. Adding H₂ to the existing C=C bond, or replacing the benzene ring with a saturated ring, shortens the conjugated system and would move the maximum to shorter wavelength. The chain R contains only σ bonds and is not part of the conjugated system, so its length has almost no effect on the wavelength absorbed.',
+        optionExplanations: [
+          'Hydrogenating the C=C bond between the ring and the carbonyl breaks the conjugated system into two separate pieces. Table 1 shows that shorter conjugation means shorter $\\lambda_{\\text{max}}$, so this would move absorption away from UV-A.',
+          'The chain R is saturated and contains only σ bonds, so it is not part of the conjugated system. Lengthening it from eight to twelve carbons changes the HOMO–LUMO gap of the chromophore almost not at all.',
+          'Replacing the benzene ring with a saturated ring removes six π electrons from the conjugated system, shortening it. By the trend in Table 1 this would shift $\\lambda_{\\text{max}}$ to shorter wavelength, deeper into the UV, not toward UV-A.',
+          'Table 1 shows each additional conjugated double bond lengthens $\\lambda_{\\text{max}}$ because the HOMO–LUMO gap narrows. Inserting a second C=C bond extends the ring–alkene–carbonyl system, pushing the maximum from 310 nm toward the UV-A range above 315 nm.',
+        ],
         skill: '5C extent of conjugation and absorption wavelength (Skill 2)',
       },
       {
@@ -274,6 +370,12 @@ export const FL7_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'In a conjugated hydrocarbon the highest occupied orbital is a π bonding orbital and the lowest empty orbital is a π* antibonding orbital, so the transition of lowest energy, which produces the band at the longest wavelength, is from π to π*. A transition from σ to σ* requires far more energy and falls below about 150 nm, as the passage notes for alkanes. Hydrocarbons have no lone pairs, so no nonbonding electrons are available to be promoted. Movement of an electron from π* to π describes an excited molecule returning to its ground state, which releases energy and is not absorption.',
+        optionExplanations: [
+          'In a conjugated hydrocarbon the HOMO is a π bonding orbital and the LUMO is a π* antibonding orbital. The lowest-energy transition, which gives the longest-wavelength band and hence $\\lambda_{\\text{max}}$, is π → π*.',
+          'σ → σ* transitions require far more energy; the passage notes that alkanes, which have only σ bonds, absorb below about 150 nm. The bands in Table 1 lie at 178–452 nm, far too long for σ electrons.',
+          'Nonbonding electrons belong to lone pairs on atoms such as the oxygen of a carbonyl. The compounds in Table 1 are hydrocarbons with no lone pairs, so no n → π* transition is possible.',
+          'Moving an electron from π* down to π describes an excited molecule relaxing back to its ground state, which releases energy. Absorption requires promotion from a lower-energy orbital to a higher one, not the reverse.',
+        ],
         skill: '5C electronic transitions in UV–visible spectroscopy (Skill 1)',
       },
       {
@@ -287,6 +389,12 @@ export const FL7_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Absorbance is the product of molar absorptivity, concentration, and path length. A solute at 10⁻⁵ M must have a large ε to be detected, but a solvent is present at more than 10 M, so even with ε near 15 M⁻¹·cm⁻¹ pure acetone has an absorbance in the hundreds near 280 nm and transmits essentially no light there. Hexatriene and octatetraene, whose maxima in Table 1 lie on either side of that wavelength, could not be measured. A small molar absorptivity is therefore no reason to dismiss the absorption of a solvent, and it creates no difficulty in matching the two cells. Acetone cannot donate hydrogen bonds to hydrocarbons, and a change of solvent shifts a band by a few nanometers, not into the visible range. Acetone does contain π electrons, in its C=O bond, and π electrons are not what enable a solvent to dissolve a polyene.',
+        optionExplanations: [
+          'A small molar absorptivity is not the problem, and matching the reference cell to the sample cell is routine regardless of ε. The real difficulty is that a solvent is present at such high concentration that even ε ≈ 15 gives enormous absorbance.',
+          'Acetone has no O–H or N–H bond and cannot donate hydrogen bonds, and hydrocarbons have no acceptor sites. Solvent changes shift bands by only a few nanometers, never into the visible range.',
+          'Absorbance is ε × concentration × path length. Acetone as solvent is above 10 M, so even with ε ≈ 15 M⁻¹·cm⁻¹ its 280-nm band has absorbance in the hundreds and transmits no light there, masking hexatriene (268 nm) and octatetraene (304 nm).',
+          'Acetone does contain π electrons, in its C=O double bond. Moreover, solubility depends on polarity and intermolecular forces, not on whether a solvent contains π electrons, so this reasoning is doubly mistaken.',
+        ],
         skill: '5C choosing a solvent that is transparent in the region measured (Skill 3)',
       },
     ],
@@ -309,6 +417,12 @@ export const FL7_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The heat given up by the fluid equals the heat gained by the body. The body’s heat capacity is $(60)(3500) = 210{,}000$ J/°C, fifty times that of the fluid, $(1.0)(4200) = 4200$ J/°C, so the body warms by one-fiftieth of the amount by which the fluid cools. The fluid cools by very nearly 10 °C, giving up about 42,000 J, and $42{,}000 / 210{,}000 = 0.2$ °C. A rise of 2.0 °C misplaces a decimal in this ratio. A rise of 5.0 °C would bring both to the midpoint of the two temperatures, which would be correct only if the fluid and the body had equal heat capacities. A rise of 10 °C would bring the patient to the starting temperature of the fluid, which would require the fluid to give up heat without cooling.',
+        optionExplanations: [
+          'The body’s heat capacity is $(60)(3500) = 210{,}000$ J/°C, fifty times that of the fluid, $(1.0)(4200) = 4200$ J/°C. The fluid cools almost 10 °C and releases about 42,000 J, so the body warms by $42{,}000/210{,}000 \\approx 0.2$ °C.',
+          'This is off by a factor of ten. The ratio of heat capacities is 50, not 5, so the body rises by one-fiftieth of the fluid’s drop (about 10 °C), which is 0.2 °C, not 2.0 °C.',
+          'A 5.0 °C rise would bring both the body and the fluid to 35 °C, the midpoint. That happens only when the two heat capacities are equal; here the body’s is fifty times larger, so it barely changes temperature.',
+          'A 10 °C rise would bring the patient to the fluid’s starting temperature of 40 °C, which would require the fluid to give up heat without cooling at all. Heat flows until the two temperatures meet, and the fluid must cool as the body warms.',
+        ],
         skill: '5E heat exchange between two bodies, Q = mcΔT (Skill 2)',
       },
       {
@@ -317,6 +431,12 @@ export const FL7_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'With the area, thickness, and temperature difference fixed, the rate of conduction is proportional to the thermal conductivity of the layer, so replacing air with water multiplies the rate by $0.60 / 0.025 = 24$. A factor of 0.04 is the inverse ratio and would mean that wet clothing insulates better than dry clothing. A factor of about 4 is the ratio of the specific heats of water and air, which governs how much heat each stores, not how fast heat passes through. A factor of 576 squares the ratio of conductivities, although the rate depends on the first power of $k$.',
+        optionExplanations: [
+          'This is the inverse ratio, $0.025/0.60 \\approx 0.04$, which would mean wet clothing conducts heat more slowly than dry and so insulates better. Water conducts far better than still air, so the rate rises, not falls.',
+          'This is roughly the ratio of specific heats of water and air (4200/1000). Specific heat governs how much heat a material stores, not how fast heat passes through it; conduction rate depends on thermal conductivity.',
+          'With area, thickness, and temperature difference fixed, the conduction rate is proportional to thermal conductivity. Replacing still air ($k = 0.025$) with water ($k = 0.60$) multiplies the rate by $0.60/0.025 = 24$.',
+          'This is $24^2$, the squared ratio of conductivities. The conduction formula $kA\\,\\Delta T/d$ is linear in $k$, so the rate scales with the first power of the conductivity ratio, not its square.',
+        ],
         skill: '4A/5E proportional reasoning with thermal conduction (Skill 2)',
       },
       {
@@ -330,6 +450,12 @@ export const FL7_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'A warm body emits infrared radiation, and a shiny metal surface is a good reflector and a poor emitter of electromagnetic waves, so the coating returns much of the emitted radiation to the patient. Metals are excellent conductors of heat, so the coating cannot reduce conduction, and it is in any case far too thin to insulate. The plastic film itself is what blocks moving air and so limits convection; adding metal contributes nothing to that. Metals do not absorb water vapor, and evaporation is limited by the impermeable film, not by its coating.',
+        optionExplanations: [
+          'Metals are excellent conductors of heat, not poor ones, so a metal coating cannot reduce conduction. In any case the coating is far too thin to act as an insulating layer.',
+          'A warm body loses heat by emitting infrared radiation. A shiny metal surface reflects infrared and is a poor emitter, so the coating returns much of the patient’s emitted radiation and cuts radiative loss.',
+          'It is the plastic film itself, as an impermeable barrier, that stops air from circulating and so limits convection. Adding a metal coating to the film contributes nothing further to blocking air movement.',
+          'Metals do not absorb water vapor. Evaporation is limited by the impermeable plastic film trapping moisture near the skin, not by its metal coating, which serves a different purpose.',
+        ],
         skill: '5E mechanisms of heat transfer: radiation (Skill 1)',
       },
       {
@@ -343,6 +469,12 @@ export const FL7_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Vaporizing water absorbs a large quantity of heat, and that heat is given back when the vapor condenses. Vapor that meets the cooler lining of the airways condenses there and releases about 2400 J per gram, whereas a gram of dry air cooling by 10 °C gives up only about 10 J. Gases mixed in the same sample are at the same temperature, so the vapor cannot be warmer than the air around it. Poor conduction would hinder the delivery of heat to the airways, not help it. Water vapor, with a molar mass of 18 g/mol, is less dense than air, and the mass inhaled is in any case not what accounts for the difference.',
+        optionExplanations: [
+          'Gases mixed in the same sample share a single temperature. Water vapor saturating warm air is at the same temperature as the air, so it cannot deliver heat by being warmer.',
+          'Poor thermal conduction would slow the transfer of heat into the airway walls, hindering rewarming rather than helping it. The vapor’s advantage comes from a phase change, not from conduction properties.',
+          'Water vapor (18 g/mol) is less dense than air (about 29 g/mol), not more. And even if the mass per breath were slightly different, that could not account for a difference of two orders of magnitude in heat delivered.',
+          'Vaporizing water absorbs about 2400 J per gram, and that heat is released again when the vapor condenses on the cooler airway lining. A gram of dry air cooling 10 °C gives up only about 10 J, so condensation delivers vastly more heat.',
+        ],
         skill: '5E latent heat released on condensation (Skill 1)',
       },
     ],
@@ -364,6 +496,12 @@ export const FL7_CHEM_PHYS_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'Solid BaSO₄ is in equilibrium with its ions, and $K_{sp} = [\\text{Ba}^{2+}][\\text{SO}_4^{2-}]$ is a constant at a given temperature. Raising the sulfate concentration makes the ion product exceed $K_{sp}$, so BaSO₄ precipitates until the product returns to $K_{sp}$, which leaves less Ba²⁺ in solution; this is the common-ion effect. The value of $K_{sp}$ changes with temperature, not with the addition of an ion. Sulfate is so weak a base that it has almost no effect on pH, and barium hydroxide is in any case a soluble strong base. Sulfate forms an insoluble salt with Ba²⁺, not a soluble complex, and a complexing agent would increase the total amount of barium in solution.',
+    optionExplanations: [
+      '$K_{sp}$ is an equilibrium constant that changes only with temperature. Adding an ion cannot lower it; the ion product temporarily exceeds the unchanged $K_{sp}$, and precipitation restores it.',
+      'Sulfate is an extremely weak base and has essentially no effect on pH. Even if the pH rose, barium hydroxide is a soluble strong base, so Ba²⁺ would not precipitate as Ba(OH)₂.',
+      'Raising the sulfate concentration pushes the ion product above $K_{sp}$, so BaSO₄ precipitates until $[\\text{Ba}^{2+}][\\text{SO}_4^{2-}]$ returns to the constant. Less Ba²⁺ remains dissolved while $K_{sp}$ itself is unchanged: the common-ion effect.',
+      'Sulfate forms an insoluble salt with Ba²⁺, not a soluble complex. A complexing agent would do the opposite of what is wanted, pulling more barium into solution by stabilizing it as a dissolved species.',
+    ],
     skill: '5A common-ion effect on solubility (Skill 1)',
   },
   {
@@ -380,6 +518,12 @@ export const FL7_CHEM_PHYS_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'Hydroxide ion removes a proton from HCO₃⁻: $\\text{HCO}_3^- + \\text{OH}^- \\rightarrow \\text{CO}_3^{2-} + \\text{H}_2\\text{O}$. A species that donates a proton is acting as a Brønsted–Lowry acid, and what remains after the proton is lost, CO₃²⁻, is its conjugate base. H₂CO₃ is the conjugate acid of HCO₃⁻ and forms only when HCO₃⁻ accepts a proton, so an acid cannot be converted to it. HCO₃⁻ acts as a base when a strong acid is added, not when NaOH is added, and a base that accepted a proton would become H₂CO₃; it could not become CO₃²⁻, which has one proton fewer.',
+    optionExplanations: [
+      'Hydroxide removes a proton from HCO₃⁻, giving CO₃²⁻ and water. Donating a proton is the defining behavior of a Brønsted–Lowry acid, and the product that remains, CO₃²⁻, is the conjugate base of HCO₃⁻.',
+      'Acting as an acid means losing a proton, and H₂CO₃ has one more proton than HCO₃⁻, not one fewer. An acid cannot be converted into its own conjugate acid; H₂CO₃ forms only when HCO₃⁻ accepts a proton.',
+      'HCO₃⁻ acts as a base only when a proton donor is added, such as a strong acid. NaOH supplies OH⁻, a proton acceptor, so HCO₃⁻ must act as the acid. A base gaining a proton also could not become CO₃²⁻, which has fewer protons.',
+      'Toward a strong acid HCO₃⁻ would indeed act as a base and form H₂CO₃, but the species added here is a strong base. Hydroxide ion accepts a proton from HCO₃⁻, so HCO₃⁻ is the acid in this reaction.',
+    ],
     skill: '5A amphoteric species and conjugate acid–base pairs (Skill 1)',
   },
   {
@@ -391,6 +535,12 @@ export const FL7_CHEM_PHYS_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'At the boiling point, liquid and vapor are in equilibrium, so $\\Delta G = \\Delta H - T\\Delta S = 0$ and $\\Delta S = \\Delta H / T = 35{,}000 / 350 = +100$ J/(mol·K). The sign must be positive, because a gas is far more disordered than the liquid from which it forms; −100 J/(mol·K) would describe condensation. The value +0.10 J/(mol·K) results from leaving the enthalpy in kilojoules while reporting the answer in joules. The value +455 J/(mol·K) results from dividing by the Celsius temperature, 77, instead of the absolute temperature.',
+    optionExplanations: [
+      'The sign is wrong. Vaporization converts liquid to gas, a large increase in disorder, so $\\Delta S$ must be positive. A value of −100 J/(mol·K) would describe the reverse process, condensation.',
+      'This leaves $\\Delta H$ in kilojoules while labeling the answer in joules: $35/350 = 0.10$. Converting 35 kJ to 35,000 J before dividing by 350 K gives 100 J/(mol·K).',
+      'At the boiling point liquid and vapor are in equilibrium, so $\\Delta G = 0$ and $\\Delta S = \\Delta H/T = 35{,}000\\ \\text{J/mol} / 350\\ \\text{K} = +100$ J/(mol·K). The positive sign reflects the greater disorder of the gas.',
+      'This divides by the Celsius temperature, $35{,}000/77 \\approx 455$. Thermodynamic relations such as $\\Delta S = \\Delta H/T$ require absolute temperature in kelvin, which is 350 K here.',
+    ],
     skill: '5E entropy of vaporization at the boiling point (Skill 2)',
   },
   {
@@ -402,6 +552,12 @@ export const FL7_CHEM_PHYS_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'At rest the spring force balances the weight, $kx = mg$, so $k = (0.50)(10) / 0.10 = 50$ N/m, and the stored energy is $\\tfrac{1}{2}kx^2 = \\tfrac{1}{2}(50)(0.10)^2 = 0.25$ J. The value 0.50 J is $mgx$, the gravitational potential energy lost by the mass; it overstates the energy stored, because the spring force grows from zero to $mg$ during the stretch and averages only half of $mg$, the remainder of the energy being taken up by the hand that lowers the mass. The value 2.5 J is $\\tfrac{1}{2}kx$, which omits the square. The value 5.0 J is $kx$, which is the spring force in newtons and not an energy.',
+    optionExplanations: [
+      'From equilibrium, $k = mg/x = (0.50)(10)/0.10 = 50$ N/m. The stored elastic energy is $\\tfrac{1}{2}kx^2 = \\tfrac{1}{2}(50)(0.10)^2 = 0.25$ J.',
+      'This is $mgx = (0.50)(10)(0.10) = 0.50$ J, the gravitational potential energy the mass loses. Only half of it is stored in the spring, because the spring force grows from zero to $mg$ and averages $mg/2$; the lowering hand absorbs the rest.',
+      'This is $\\tfrac{1}{2}kx = \\tfrac{1}{2}(50)(0.10) = 2.5$, which omits the square on $x$. Spring potential energy depends on the square of the extension, giving 0.25 J.',
+      'This is $kx = (50)(0.10) = 5.0$ N, the spring force at equilibrium, which is a force rather than an energy. Energy requires the factor $\\tfrac{1}{2}$ and a second factor of $x$.',
+    ],
     skill: '4A Hooke’s law and spring potential energy (Skill 2)',
   },
   {
@@ -418,6 +574,12 @@ export const FL7_CHEM_PHYS_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'From the thin-lens equation, $1/i = 1/f - 1/o = 1/10 - 1/15 = 1/30$, so the image lies 30 cm from the lens on the side opposite the object. A positive image distance means that the image is real, and a real image formed by a single lens is inverted. The magnification is $-i/o = -30/15 = -2$, so the image is twice the size of the object. A real image half the size of the object would form if the two distances were interchanged, with the object 30 cm from the lens. A virtual, upright image forms only when the object is closer to a converging lens than its focal length, and such an image is always enlarged, never reduced.',
+    optionExplanations: [
+      'A real, inverted image half the size of the object would form if the object were 30 cm from the lens, with the image at 15 cm. Here the object is at 15 cm, inside twice the focal length, so the image is enlarged, not reduced.',
+      'From $1/i = 1/f - 1/o = 1/10 - 1/15 = 1/30$, the image is 30 cm beyond the lens. A positive image distance means a real image, which a single lens inverts, and $m = -i/o = -30/15 = -2$, so it is twice the object’s size.',
+      'A virtual, upright image from a converging lens forms only when the object is inside the focal length (closer than 10 cm). At 15 cm the object is outside the focal point, so the image is real and inverted.',
+      'With the object at 15 cm, beyond the 10-cm focal length, a converging lens forms a real, inverted image, not a virtual, upright one. Virtual images from a converging lens are always enlarged, but that is not the case here.',
+    ],
     skill: '4D thin-lens equation and magnification (Skill 2)',
   },
   {
@@ -434,6 +596,12 @@ export const FL7_CHEM_PHYS_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'The anti and gauche conformations are both staggered, so neither has eclipsed bonds. In the anti conformation the two methyl groups are 180° apart; in the gauche conformation they are only 60° apart, close enough for their electron clouds to repel each other, and this steric strain raises the energy by roughly 4 kJ/mol. An angle of 180° describes the anti conformation itself, which is the more stable of the two. An angle of 0° between the methyl groups describes the fully eclipsed conformation, the least stable of all, and not the gauche form. Aligned C–H bonds occur only in eclipsed conformations, not in a staggered conformation such as gauche.',
+    optionExplanations: [
+      'A 180° separation of the methyl groups describes the anti conformation, which is the more stable of the two staggered forms. Nothing about the anti form explains why gauche is higher in energy.',
+      'A 0° separation describes the fully eclipsed conformation, the least stable of all butane conformations. The gauche conformation is staggered, not eclipsed, so its bonds are not in full eclipse.',
+      'Aligned C–H bonds, and the torsional strain they cause, occur only in eclipsed conformations. Both gauche and anti are staggered, with all bonds 60° apart, so torsional strain cannot distinguish them.',
+      'In the gauche conformation the two methyl groups sit on adjacent staggered positions, only 60° apart. Their electron clouds repel, producing steric strain of roughly 4 kJ/mol relative to the anti form, where the methyls are 180° apart.',
+    ],
     skill: '5D conformations of butane in Newman projections (Skill 1)',
   },
   {
@@ -450,6 +618,12 @@ export const FL7_CHEM_PHYS_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'Delocalization of the nitrogen lone pair into the carbonyl group gives the C–N bond of the peptide group partial double-bond character. Rotation about that bond would destroy the overlap, so it is restricted, whereas the N–Cα and Cα–C bonds are ordinary single bonds; rotation about these two bonds is what allows a chain to fold. The option that assigns the restriction to the bonds at the α-carbon reverses the two. Partial double-bond character makes the C–N bond shorter, not longer, than the single bond of an amine. Because its lone pair is committed to resonance, the amide nitrogen is not appreciably basic and is not protonated at physiological pH.',
+    optionExplanations: [
+      'Resonance gives the peptide C–N bond partial double-bond character, which makes it shorter than an ordinary amine C–N single bond, not longer. This reverses the actual effect.',
+      'Delocalizing the nitrogen lone pair into the carbonyl gives the C–N bond partial double-bond character; rotation would destroy that overlap, so it is restricted. The N–Cα and Cα–C bonds are ordinary single bonds and rotate freely, allowing folding.',
+      'This reverses the two: the bonds to the α-carbon are single bonds with free rotation (the φ and ψ angles), while the peptide C–N bond is the one locked by resonance.',
+      'Because its lone pair is committed to resonance with the carbonyl, the amide nitrogen is not available to accept a proton and is essentially non-basic. It is not protonated at physiological pH.',
+    ],
     skill: '5D resonance and restricted rotation in the peptide bond (Skill 1)',
   },
   {
@@ -466,6 +640,12 @@ export const FL7_CHEM_PHYS_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'Each isoprene unit contributes five carbons, so a 30-carbon skeleton contains $30 / 5 = 6$ units. Terpenes are named by pairs of isoprene units: a monoterpene has two units (10 carbons), a sesquiterpene three (15 carbons), a diterpene four (20 carbons), and a triterpene six (30 carbons). Squalene is therefore a triterpene built from six units. The prefix tri- counts ten-carbon terpene units, not isoprene units, so three isoprene units would make a 15-carbon sesquiterpene, and neither option with three units fits a 30-carbon compound. Six units do not make a sesquiterpene, which has only 15 carbons.',
+    optionExplanations: [
+      'Three isoprene units contain only 15 carbons, not the 30 in squalene. Three isoprene units would make a sesquiterpene; a triterpene requires six.',
+      'Each isoprene unit has five carbons, so C₃₀ contains $30/5 = 6$ units. Terpenes are named by ten-carbon pairs of isoprene units: mono- (2 units), sesqui- (3), di- (4), tri- (6). Six units make a triterpene.',
+      'Six isoprene units is the correct count, but six units make a 30-carbon triterpene. A sesquiterpene has three units and 15 carbons, so the classification does not match the unit count.',
+      'Three isoprene units would indeed be a sesquiterpene, but that compound has only 15 carbons. Squalene has 30 carbons and so must contain six isoprene units, making it a triterpene.',
+    ],
     skill: '5D isoprene units and terpene classification (Skill 1)',
   },
 ]

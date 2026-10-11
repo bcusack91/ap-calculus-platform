@@ -87,7 +87,7 @@ export function studentLocalDay(now: Date, tzOffset?: number | null): Date {
 }
 
 /** Which kind of attempt an answer row belongs to (review pages, mistake log). */
-export type AttemptKind = 'exit' | 'diagnostic' | 'unit-test' | 'sat-practice' | 'mcat-fl' | 'mcat-practice' | 'mistake-review'
+export type AttemptKind = 'exit' | 'diagnostic' | 'unit-test' | 'sat-practice' | 'mcat-fl' | 'mcat-practice' | 'mistake-review' | 'qbank'
 
 export type QuestionRow = {
   source: QuestionSource
@@ -111,6 +111,8 @@ export type QuestionRow = {
   chosenIndex?: number | null
   chosenText?: string | null
   flagged?: boolean
+  /** optionKey() of the chosen option's text (src/lib/question-key.ts). */
+  chosenKey?: string | null
 }
 
 /**
@@ -145,6 +147,7 @@ export async function recordQuestions(
       ...(typeof r.chosenIndex === 'number' && Number.isFinite(r.chosenIndex) ? { chosenIndex: Math.round(r.chosenIndex) } : {}),
       ...(r.chosenText ? { chosenText: r.chosenText.slice(0, 50) } : {}),
       ...(r.flagged ? { flagged: true } : {}),
+      ...(r.chosenKey ? { chosenKey: r.chosenKey.slice(0, 20) } : {}),
     }))
     await (opts.db ?? prisma).questionActivity.createMany({ data })
   } catch (err) {

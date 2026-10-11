@@ -100,7 +100,11 @@ export function calculateNextReview(
   wasMinuteInterval: boolean = false,
   /** Student's timezone offset (JS getTimezoneOffset, minutes). When present,
    *  day-scale intervals come due at the 4am local day rollover. */
-  tzOffsetMinutes?: number
+  tzOffsetMinutes?: number,
+  /** When the rating happened. Defaults to now; offline ratings synced
+   *  later pass their original time so the schedule isn't shifted by the
+   *  delay. */
+  now: Date = new Date()
 ): ReviewResult {
   // Validate quality rating
   if (quality < 0 || quality > 5) {
@@ -177,10 +181,9 @@ export function calculateNextReview(
   // anchor to the student's 4am day rollover when the timezone is known.
   let nextReview: Date
   if (isMinuteInterval) {
-    nextReview = new Date()
-    nextReview.setMinutes(nextReview.getMinutes() + interval)
+    nextReview = new Date(now.getTime() + interval * 60000)
   } else {
-    nextReview = dayIntervalDueDate(interval, tzOffsetMinutes)
+    nextReview = dayIntervalDueDate(interval, tzOffsetMinutes, now)
   }
 
   return {

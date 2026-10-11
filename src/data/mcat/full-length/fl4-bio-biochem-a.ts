@@ -54,6 +54,12 @@ export const FL4_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Trypsin cuts after lysine or arginine, and the activating bond of trypsinogen follows a lysine, so each trypsin molecule formed can activate further trypsinogen; the rate of activation therefore grows as trypsin accumulates, giving a slow start followed by acceleration (autoactivation) until the substrate runs out near 25–30 min. Nothing in the passage indicates that the released peptide acts on enteropeptidase, and the lysine-specific cleavage by trypsin already accounts for the acceleration. An enzyme acting on a falling substrate concentration slows rather than speeds up. Enteropeptidase is described as an active, membrane-anchored protease, and a slow unfolding of the catalyst would be expected to lower, not raise, its activity.',
+        optionExplanations: [
+          'Nothing in the passage indicates that the released activation peptide acts on enteropeptidase. Moreover, enteropeptidase was present at only 1 nM, so even a stimulated enzyme at that concentration could not account for near-complete activation of 10 μM trypsinogen in 30 minutes.',
+          'An enzyme acting on a falling substrate concentration slows down, not up. If enteropeptidase were the only activator, the rate would be highest at the start when trypsinogen is most abundant, the opposite of the slow-then-fast pattern observed.',
+          'Trypsin cleaves after lysine or arginine, and the activating bond in trypsinogen follows the Asp–Asp–Asp–Asp–Lys sequence. Each trypsin molecule formed can therefore activate more trypsinogen, so the rate accelerates as trypsin accumulates (autoactivation), producing the sigmoidal time course.',
+          'Enteropeptidase is described as an active, membrane-anchored protease, not one that needs to unfold. A catalyst slowly unfolding at 37 °C would be expected to lose activity, not gain it, and the passage gives no hint of such a conformational change.',
+        ],
         skill: '1A zymogen autoactivation',
       },
       {
@@ -62,6 +68,12 @@ export const FL4_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'By 30 min essentially all trypsinogen was activated in both enteropeptidase reactions (99% without PSTI), yet free activity in the PSTI reaction plateaued at 79%, so about 20% of 10 μM trypsin, or 2 μM, was held in 1:1 complexes with PSTI. A value of 0.2 μM would remove only 2% of the activity. A value of 8 μM corresponds to the trypsin that remained active (79% of 10 μM), not the trypsin that was inhibited. A value of 10 μM would have inhibited all of the trypsin formed, leaving no measurable activity.',
+        optionExplanations: [
+          'A PSTI concentration of 0.2 μM would inactivate only 2% of the 10 μM trypsin formed, leaving a plateau near 98%, not the 79% observed. This underestimates the inhibited fraction by a factor of ten.',
+          'By 30 minutes essentially all trypsinogen was activated (99% without PSTI), yet free activity in the PSTI reaction plateaued at 79%. About 20% of the 10 μM trypsin, or 2 μM, was therefore held in 1:1 complexes with PSTI.',
+          'A value of 8 μM corresponds to the trypsin that remained active (79% of 10 μM), not to the trypsin that was inhibited. The question asks for the inhibitor concentration, which equals the fraction of activity lost.',
+          'A PSTI concentration of 10 μM, equal to the trypsinogen concentration, would have inhibited every trypsin molecule formed, leaving no measurable activity at any time point. Figure 1 shows activity reaching 79%.',
+        ],
         skill: '1A enzyme inhibition (data interpretation)',
       },
       {
@@ -75,6 +87,12 @@ export const FL4_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Zymogen activation is a covalent modification by limited proteolysis: once the peptide bond is hydrolyzed, the change cannot be undone by removing enteropeptidase, whereas an allosteric effector binds noncovalently and its effect disappears when it dissociates. Enteropeptidase acts catalytically and departs after cleavage, so it does not need to stay bound. Cleavage does alter the primary structure, but the passage states that activation works through a conformational change that forms the substrate pocket and oxyanion hole. Enteropeptidase hydrolyzes a bond; it attaches no phosphate or other group that a phosphatase could remove.',
+        optionExplanations: [
+          'Zymogen activation is covalent modification by limited proteolysis. Once the peptide bond is hydrolyzed, the change persists after enteropeptidase is gone, whereas an allosteric effector binds noncovalently and its effect disappears when it dissociates.',
+          'Enteropeptidase acts catalytically and leaves after cleaving the bond; it does not need to remain bound. In fact, the passage notes that trypsin itself takes over further activation, which could not happen if the activating protease had to stay attached.',
+          'Cleavage does alter primary structure, but the passage describes a conformational change: the new N-terminal isoleucine inserts into a pocket, forms a salt bridge, and completes the substrate-binding pocket and oxyanion hole. The three-dimensional structure changes substantially.',
+          'Enteropeptidase hydrolyzes a peptide bond; it attaches no phosphate or other group. There is nothing for a phosphatase to remove, and the reversibility implied here is exactly what distinguishes allosteric regulation from proteolytic activation.',
+        ],
         skill: '1A regulation by proteolytic cleavage',
       },
       {
@@ -88,6 +106,12 @@ export const FL4_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The question is whether PSTI also slows enteropeptidase; assaying enteropeptidase directly, in the presence and absence of PSTI, with a substrate that trypsin does not cleave isolates that one possibility. Doubling the trypsinogen changes the fraction of trypsin that PSTI can hold but says nothing about enteropeptidase. Incubating trypsinogen with PSTI alone lacks the activating enzyme, so activity would stay near zero regardless of PSTI’s target. Showing that PSTI blocks trypsin confirms what the passage already states but cannot rule out an additional effect on enteropeptidase.',
+        optionExplanations: [
+          'Doubling the trypsinogen concentration changes the fraction of trypsin that a fixed amount of PSTI can hold, but says nothing about whether PSTI also acts on enteropeptidase. It does not separate the two possible targets.',
+          'Incubating trypsinogen with PSTI but no enteropeptidase lacks the activating enzyme entirely, so activity would stay near zero regardless of which protein PSTI targets. The result would be uninformative.',
+          'Showing that PSTI blocks purified trypsin confirms what the passage already states but cannot rule out an additional inhibitory effect on enteropeptidase. The question requires distinguishing the two targets, not confirming one.',
+          'The question is whether PSTI also slows enteropeptidase. Assaying enteropeptidase directly, with and without PSTI, using a substrate trypsin cannot cleave isolates that single possibility and rules trypsin activity out of the measurement.',
+        ],
         skill: '1A research design: controls',
       },
       {
@@ -101,6 +125,12 @@ export const FL4_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Figure 1 shows that PSTI holds activity near zero until the trypsin formed exceeds the inhibitor’s capacity, after which autoactivation proceeds. With half as much PSTI in the granules, a smaller burst of premature activation inside the gland would saturate the inhibitor, and the free trypsin would activate more trypsinogen and the other zymogens. Duodenal activation by enteropeptidase does not depend on PSTI. Each trypsinogen yields one trypsin regardless of PSTI. Less inhibitor could only leave more trypsin free in the intestine, not impair protein digestion.',
+        optionExplanations: [
+          'Duodenal activation by enteropeptidase does not depend on PSTI; the inhibitor functions inside the pancreas to restrain premature activation. Slower activation in the intestine would not cause pancreatitis, which is damage to the gland itself.',
+          'Figure 1 shows PSTI holds activity near zero until the trypsin formed exceeds the inhibitor’s capacity, after which autoactivation proceeds. With half as much PSTI, a smaller burst of premature activation inside the gland would saturate the inhibitor, freeing trypsin to activate more trypsinogen and other zymogens.',
+          'Each trypsinogen molecule yields exactly one trypsin molecule by cleavage of a single bond, regardless of how much PSTI is present. PSTI affects how much trypsin is free, not how much is generated per zymogen.',
+          'Less inhibitor would leave more trypsin free in the intestinal lumen, if anything enhancing protein digestion. Impaired digestion would not explain pancreatitis, which results from premature activation within the gland.',
+        ],
         skill: '1A zymogens and physiological protection',
       },
     ],
@@ -129,6 +159,12 @@ export const FL4_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'With fewer functioning nephrons, filtered phosphate is excreted less effectively and accumulates. Calcitriol falls for two reasons: less tubular tissue is available to express 1α-hydroxylase, and the high phosphate suppresses the enzyme. Low calcitriol reduces intestinal calcium absorption and removes calcitriol’s inhibition of PTH synthesis, so PTH rises (secondary hyperparathyroidism). The patterns with elevated calcitriol ignore the loss of renal 1α-hydroxylase, and those with decreased phosphate ignore the fall in phosphate excretion; a decreased PTH is inconsistent with falling calcitriol and calcium absorption.',
+        optionExplanations: [
+          'With fewer functioning nephrons, filtered phosphate is excreted less effectively and accumulates. Calcitriol falls because less tubular tissue expresses 1α-hydroxylase and because high phosphate suppresses that enzyme. Low calcitriol reduces calcium absorption and removes its inhibition of PTH synthesis, so PTH rises.',
+          'Elevated calcitriol ignores the loss of renal 1α-hydroxylase and the suppression of that enzyme by high phosphate. Decreased PTH is also inconsistent: low calcitriol and reduced calcium absorption both drive PTH up, not down.',
+          'Decreased phosphate ignores the fall in phosphate excretion that accompanies nephron loss; phosphate accumulates. Decreased PTH is inconsistent with falling calcitriol, which removes its inhibition of PTH synthesis and lowers calcium absorption.',
+          'Phosphate is elevated, not decreased, because the failing kidney cannot excrete it. Calcitriol is decreased, not elevated, because 1α-hydroxylase is lost with tubular tissue and suppressed by high phosphate. Only the PTH direction is correct here.',
+        ],
         skill: '3B calcium–phosphate homeostasis (kidney disease)',
       },
       {
@@ -142,6 +178,12 @@ export const FL4_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'An antibody that binds RANKL acts like osteoprotegerin: it prevents RANKL from engaging RANK, so fewer osteoclasts form and survive, and bone resorption slows. Less calcium is released from bone, plasma ionized calcium falls, fewer calcium-sensing receptors on chief cells are activated, and PTH secretion rises in compensation. A rise in calcium would require increased resorption, the opposite of the drug’s effect. A simultaneous fall in calcium and PTH would require the parathyroid glands to fail, and a rise in both would mean PTH was driving calcium up despite blocked resorption.',
+        optionExplanations: [
+          'A rise in plasma calcium would require increased bone resorption, the opposite of the drug’s effect. Blocking RANKL reduces osteoclast formation and survival, so less calcium is released from bone.',
+          'Calcium rising would require more resorption, but the drug blocks it. And PTH rising alongside rising calcium contradicts the calcium-sensing receptor feedback, in which high calcium suppresses PTH secretion.',
+          'An antibody binding RANKL acts like osteoprotegerin, preventing RANKL from engaging RANK. Fewer osteoclasts form and survive, resorption slows, less calcium enters plasma, ionized calcium falls, and the parathyroid chief cells respond by increasing PTH secretion.',
+          'A simultaneous fall in calcium and PTH would require the parathyroid glands to fail to respond to low calcium. With normal parathyroid function, falling ionized calcium deactivates the calcium-sensing receptor and PTH secretion rises.',
+        ],
         skill: '3B bone remodeling and PTH',
       },
       {
@@ -155,6 +197,12 @@ export const FL4_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Calcitriol is a lipid-soluble, steroid-like hormone derived from vitamin D; like other steroid hormones, it crosses the plasma membrane and binds an intracellular (nuclear) receptor that regulates transcription of target genes, which explains a slow increase in the amount of transport protein. Activation of adenylyl cyclase through a surface receptor is typical of peptide hormones such as PTH. Opening channels directly would change transport activity, not the amount of transport protein. The calcium-sensing receptor responds to calcium ions, not to calcitriol.',
+        optionExplanations: [
+          'Activation of adenylyl cyclase through a plasma-membrane receptor is the mechanism of peptide hormones such as PTH. Calcitriol is a lipid-soluble steroid-like molecule that crosses the membrane rather than signaling from the surface.',
+          'Opening channels directly would change transport activity, not the amount of transport protein. The passage says calcitriol raises the amounts of transport and calcium-binding proteins, which requires new protein synthesis.',
+          'The calcium-sensing receptor responds to extracellular calcium ions, not to calcitriol, and the passage places it on parathyroid chief cells. It has no described role in enterocyte protein expression.',
+          'Calcitriol is a lipid-soluble hormone derived from vitamin D. Like other steroid-type hormones, it crosses the plasma membrane and binds an intracellular receptor that regulates transcription, which explains the slow increase in the amount of transport protein.',
+        ],
         skill: '3B steroid hormone mechanism',
       },
       {
@@ -168,6 +216,12 @@ export const FL4_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Without PTH, renal calcium reabsorption falls, calcitriol production declines, and osteoclastic resorption slows, so plasma calcium falls. Low extracellular calcium lowers the threshold for opening of voltage-gated sodium channels, making nerves and muscles hyperexcitable, which produces tingling, muscle spasms, and tetany. The passage states that thyroid removal, and hence loss of calcitonin, does not produce lasting changes in plasma calcium. Hypocalcemia increases, rather than decreases, membrane excitability. PTH stimulates, rather than restrains, osteoclast activity, so its loss cannot raise calcium by that route.',
+        optionExplanations: [
+          'The passage states that neither thyroid removal nor calcitonin-secreting tumors produce lasting changes in plasma calcium, so loss of calcitonin would not cause hypercalcemia. Moreover, loss of PTH drives calcium down, not up.',
+          'Without PTH, renal calcium reabsorption falls, calcitriol production declines, and bone resorption slows, so plasma calcium falls. Low extracellular calcium lowers the threshold for voltage-gated sodium channel opening, making nerves and muscles hyperexcitable (tingling, spasms, tetany).',
+          'Hypocalcemia is correct, but it increases rather than decreases membrane excitability. Low extracellular calcium makes voltage-gated sodium channels easier to open, producing hyperexcitability, not depression of nerve and muscle function.',
+          'PTH stimulates osteoclast activity indirectly through RANKL on osteoblasts; it does not restrain osteoclasts. Loss of PTH slows resorption and lowers calcium, so this reverses both the direction of PTH’s effect and the resulting calcium change.',
+        ],
         skill: '3B hypocalcemia and excitability',
       },
     ],
@@ -193,6 +247,12 @@ export const FL4_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The m1 × m2 diploid cannot grow, so m1 and m2 fail to complement and form one group; m3 and m4 each complement every other mutant, so each forms a group of its own, for three groups in all. Two groups would require m3 and m4 to fail to complement each other, but their diploid grows. Four groups would require m1 and m2 to complement each other. One group would require every pairwise diploid to fail to grow.',
+        optionExplanations: [
+          'One group would require every pairwise diploid among m1 through m4 to fail to grow. Table 1 shows m3 and m4 complementing every other mutant, so the mutations cannot all lie in a single gene.',
+          'Two groups would require m3 and m4 to fail to complement each other and fall into one group. Their diploid (m3 × m4 α, or m4 × m3 α) grows on minimal medium, so they are in different genes.',
+          'The m1 × m2 diploid cannot grow, so m1 and m2 fail to complement and share one gene. The m3 and m4 mutations each complement every other mutant, so each defines its own group, giving three complementation groups in all.',
+          'Four groups would require m1 and m2 to complement each other, but the m1 × m2 α diploid (and m2 × m1 α) does not grow without methionine. They fail to complement and belong to the same group.',
+        ],
         skill: '1C complementation analysis (data interpretation)',
       },
       {
@@ -206,6 +266,12 @@ export const FL4_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The m5 × wild-type diploid cannot grow without methionine even though it carries a wild-type copy of every gene, so the m5 allele is dominant (for example, a protein that interferes with the normal one); every diploid containing m5 therefore fails to grow, and the complementation test cannot reveal which gene is mutated. Failure to complement ΔP or ΔQ says nothing when m5 also fails with wild type. Recessive mutations in several genes, however many, would still be masked by the wild-type partner, so the wild-type cross rules out that explanation as well.',
+        optionExplanations: [
+          'The m5 × wild-type diploid cannot grow even though it carries a wild-type copy of every gene, so the m5 allele is dominant (for example, an interfering protein). Every diploid containing m5 fails, so the complementation test cannot reveal which gene is mutated.',
+          'Failure to complement ΔP means nothing when m5 also fails to complement wild type. A recessive allele would be masked by the wild-type partner; the wild-type cross shows m5 is dominant, so the ΔP result is uninformative.',
+          'Recessive mutations in several genes would still be masked in the wild-type cross, since the wild-type α strain supplies a functional copy of every gene. The failure of that diploid to grow rules out any purely recessive explanation.',
+          'Failure to complement ΔQ cannot assign m5 to gene Q, because m5 also fails with wild type and with every other partner. A dominant allele produces the mutant phenotype in all diploids regardless of the partner’s genotype.',
+        ],
         skill: '1C dominance and complementation',
       },
       {
@@ -219,6 +285,12 @@ export const FL4_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The m3 mutation is recessive (the m3 × wild-type diploid grows) and complements ΔP, ΔQ, and every other mutant, so it disrupts a third gene required for methionine synthesis that the knockouts did not target. Sharing a phenotype with ΔP does not place m3 in gene *P*; the growth of the m3 × ΔP diploid shows the opposite. Both m3 and m4 being recessive is a precondition of the test, not evidence they share a gene, and their diploid grows. Growth of the m3 × ΔQ diploid means m3 complements ΔQ, which places it outside gene *Q*.',
+        optionExplanations: [
+          'Sharing a phenotype with ΔP does not place m3 in gene P. The m3 × ΔP diploid grows on minimal medium, meaning m3 complements the P deletion, which shows the m3 mutation lies in a different gene.',
+          'Both m3 and m4 being recessive is a precondition of the complementation test, not evidence they share a gene. Their diploid grows, so they complement each other and lie in different genes.',
+          'Growth of the m3 × ΔQ diploid means m3 complements the Q deletion, which places m3 outside gene Q. This reasoning reverses the logic of complementation: growth indicates different genes, not the same gene.',
+          'The m3 mutation is recessive (the m3 × wild-type diploid grows) and complements ΔP, ΔQ, and every other mutant. It therefore disrupts a third gene required for methionine synthesis that the knockouts did not target.',
+        ],
         skill: '1C complementation and gene identity',
       },
       {
@@ -232,6 +304,12 @@ export const FL4_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'If reintroducing only wild-type *P* restores growth, the defect must stem from the missing *P* function; an unrelated off-target mutation elsewhere would not be corrected by the plasmid. Checking gene *Q* rules out only one of many possible off-target sites. Normal growth with methionine shows that the defect is specific to methionine synthesis but not which gene causes it. A similar phenotype from a *Q* knockout concerns a different gene and cannot link the ΔP defect to *P*.',
+        optionExplanations: [
+          'Sequencing gene Q rules out only one of many possible off-target sites in the genome. Cas9 could have cut anywhere with a near-matching sequence, so an unaltered Q does not exclude off-target damage elsewhere.',
+          'If reintroducing only wild-type P restores growth on minimal medium, the defect must stem from missing P function. An unrelated off-target mutation elsewhere would not be corrected by supplying gene P, so rescue is the decisive test.',
+          'Normal growth with methionine shows the defect is specific to methionine synthesis but says nothing about which gene causes it. Both an on-target P deletion and an off-target hit in another methionine gene would give this result.',
+          'A guide targeting Q producing the same defect concerns a different gene entirely. It shows Q is also needed for methionine synthesis but cannot link the ΔP strain’s phenotype specifically to loss of P.',
+        ],
         skill: '1B research design: rescue controls',
       },
       {
@@ -245,6 +323,12 @@ export const FL4_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Most mutagen-induced alleles are recessive loss-of-function alleles; in a haploid there is only one copy of each gene, so such a mutation produces its phenotype immediately, whereas in a diploid it would be hidden by the remaining wild-type allele. Haploids, having no backup copy, are if anything more vulnerable to lethal mutations. Nothing suggests that diploids cannot take up methionine. Table 1 shows many diploids growing on minimal medium, so diploids do not require amino acids.',
+        optionExplanations: [
+          'Haploids have no backup copy of any gene, so they are if anything more vulnerable to lethal mutations than diploids, where a second allele can compensate. This reverses the actual relationship.',
+          'Nothing in the passage suggests diploids cannot take up methionine. In fact, the mutant diploids in Table 1 were tested on minimal medium and would have been maintained on methionine-supplemented medium.',
+          'Table 1 shows many diploids growing on minimal medium without methionine, so diploids do not require added amino acids. Both haploids and wild-type diploids can grow on minimal medium.',
+          'Most mutagen-induced alleles are recessive loss-of-function alleles. In a haploid there is only one copy of each gene, so such a mutation produces its phenotype immediately; in a diploid it would be hidden by the remaining wild-type allele.',
+        ],
         skill: '1C haploid genetics and recessive alleles',
       },
     ],
@@ -273,6 +357,12 @@ export const FL4_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'A + strand genome can be translated directly by host ribosomes, so the cell makes the viral RdRp and other proteins from it, and replication and assembly can follow. A − strand genome, whether single or segmented like that of influenza, cannot be translated, and because host cells have no enzyme that copies RNA from an RNA template, no viral mRNA can be made unless the virion’s own polymerase is supplied with it. The same applies to double-stranded RNA, whose mRNA must be transcribed by a viral RdRp that protein-free RNA lacks.',
+        optionExplanations: [
+          'A − strand genome cannot be translated by host ribosomes, and host cells have no enzyme that copies RNA from an RNA template. Without the virion’s own RdRp, no viral mRNA can be made from protein-free − strand RNA.',
+          'A + strand genome has the same sequence as viral mRNA, so host ribosomes translate it directly to produce the viral RdRp and other proteins. Replication and assembly can then follow from the naked RNA alone.',
+          'Double-stranded RNA cannot be translated directly; its mRNAs must be transcribed by a viral RdRp. Protein-free dsRNA lacks that polymerase, and host cells have no enzyme to supply it, so no viral proteins are made.',
+          'Influenza A has a − strand genome, so none of its eight segments can be translated directly. Supplying all segments does not help without the virion’s RdRp, since host cells cannot make mRNA from an RNA template.',
+        ],
         skill: '2B viral genome types',
       },
       {
@@ -286,6 +376,12 @@ export const FL4_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Point mutations arise from the error-prone RdRp regardless of how the genome is packaged, so drift-type change is possible. Reassortment requires a genome divided into separate segments that can be mixed during coinfection; a single-molecule genome has nothing to exchange in that way, so measles cannot undergo antigenic shift. Segmentation is not required for point mutation. An unsegmented virus would undergo shift less often, not more. With no separate segments, measles cannot reassort with any virus.',
+        optionExplanations: [
+          'Point mutations arise from the error-prone RdRp regardless of genome segmentation. Measles has an RdRp with an error rate similar to influenza’s, so it accumulates point mutations readily; segmentation is irrelevant to this process.',
+          'Antigenic shift requires reassortment of genome segments during coinfection. A single-molecule genome has no separate segments to exchange, so measles cannot undergo shift at all, let alone more often than segmented influenza A.',
+          'Reassortment requires a segmented genome. Measles has a single RNA molecule, so it cannot exchange segments with any virus, whether + or − strand. The restriction to − strand partners is beside the point.',
+          'The error-prone RdRp produces point mutations in any RNA virus, so drift-type change is possible. Reassortment requires separate genome segments that can be mixed during coinfection, which a single-molecule genome lacks, so measles cannot gain new genes that way.',
+        ],
         skill: '2B antigenic drift vs shift',
       },
       {
@@ -294,6 +390,12 @@ export const FL4_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Each copying step introduces $10^4 / (2 \\times 10^4) = 0.5$ errors per genome length. A progeny + strand is made from a − strand template that was itself copied from the infecting + strand, so it passes through two copying steps, for about $2 \\times 0.5 = 1$ mutation. A value of 0.5 counts only one copying step. A value of 2 results from taking the error rate as one per $10^4$ nucleotides while also counting two copying steps. The value $5 \\times 10^{-5}$ is the error rate per nucleotide, not per genome.',
+        optionExplanations: [
+          'This is the per-nucleotide error rate, $1/(2 \\times 10^4) = 5 \\times 10^{-5}$, not the number of mutations per genome. Multiplying by the 10,000-nucleotide genome length and the number of copying steps is required.',
+          'A value of 0.5 counts only one copying step: $10^4/(2 \\times 10^4) = 0.5$ errors per genome length. A progeny + strand is made from a − strand intermediate that was itself copied, so two copying steps separate it from the infecting genome.',
+          'Each copying step introduces $10^4/(2 \\times 10^4) = 0.5$ errors per genome. The progeny + strand is copied from a − strand that was copied from the infecting + strand, so it passes through two steps, for about $2 \\times 0.5 = 1$ mutation.',
+          'A value of 2 results from using an error rate of one per $10^4$ nucleotides (1 error per copying step) while correctly counting two steps. The stem specifies one error per $2 \\times 10^4$ nucleotides, half that rate.',
+        ],
         skill: '2B viral mutation rate (calculation)',
       },
       {
@@ -307,6 +409,12 @@ export const FL4_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Once reverse transcription and integration have occurred, the provirus is part of the host chromosome and is transcribed by host RNA polymerase II; when a latently infected cell is activated, new virions can be produced without any further reverse transcription in that cell, so the drug cannot eliminate the reservoir. Nothing indicates that resting T cells exclude drugs, and such exclusion would not explain why the silent provirus escapes. The latent HIV genome is integrated DNA, not RNA. Reverse transcriptase acts after entry to copy the genome, not in virion assembly.',
+        optionExplanations: [
+          'Once reverse transcription and integration have occurred, the provirus is part of the host chromosome and is transcribed by host RNA polymerase II. When a latently infected cell is activated, new virions are produced without further reverse transcription, so the drug cannot eliminate this reservoir.',
+          'Nothing indicates that resting T cells exclude drugs, and such exclusion would not explain the problem anyway. The silent provirus escapes because its expression requires no reverse transcription, not because the drug fails to reach the cell.',
+          'The latent HIV genome is integrated DNA (a provirus), not RNA. The passage states that reverse transcriptase copies the RNA into DNA, which integrase inserts into a chromosome; latency arises when that provirus is transcriptionally silent.',
+          'Reverse transcriptase acts after viral entry to copy the RNA genome into DNA, not during virion assembly or release. The persistence of infection depends on integrated proviruses in long-lived cells, not on any role in assembly.',
+        ],
         skill: '2B retroviral latency',
       },
     ],
@@ -350,6 +458,12 @@ export const FL4_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The soleus and EDL differ in fiber type and in many other properties (size, fiber number, enzyme content), so a difference between them cannot be attributed to any one factor; comparing soleus with soleus changes only the oxygen supply, isolating the variable of interest. Tetanic stimulation, normalization to the first contraction, and repeated time points were applied equally to all three groups, so none of them makes one comparison more informative than the other.',
+        optionExplanations: [
+          'Tetanic stimulation at 100 Hz was applied to all three groups, producing a fused tetanus in each. Because it was the same for every group, it does not make one comparison more informative than another.',
+          'Normalizing force to the first contraction was applied equally to all groups and removes differences in size from every comparison. It does not specifically favor the soleus-versus-soleus comparison.',
+          'Force was measured at many time points for all three groups, so the rate of fatigue could be estimated for each. This feature is shared across comparisons and does not distinguish them.',
+          'Soleus and EDL differ in fiber type and in many other properties (size, fiber number, enzyme content), so a difference between them cannot be attributed to one factor. Comparing oxygenated with nitrogen-bubbled soleus changes only oxygen supply, isolating the variable of interest.',
+        ],
         skill: '3B research design: controlling variables',
       },
       {
@@ -363,6 +477,12 @@ export const FL4_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Depriving the soleus of oxygen cut its force at 6 min from about 89% to about 30% of initial, far closer to the EDL’s 12% than to the oxygenated soleus, so most of the soleus’s fatigue resistance depends on oxidative ATP production. The EDL was already in 95% $\\text{O}_2$, so the data give no reason to expect that more oxygen would make it resemble the soleus. Initial force per cross-sectional area did not differ among groups, so hypoxia did not reduce maximal force; the loss appeared only with repeated contractions and reversed with rest. Fast glycolytic fibers are rich in glycolytic enzymes, not lacking them.',
+        optionExplanations: [
+          'Depriving the soleus of oxygen cut its force at 6 minutes from about 89% to about 30% of initial, far closer to the EDL’s 12% than to the oxygenated soleus. Most of the soleus’s fatigue resistance therefore depends on oxidative ATP production.',
+          'The EDL was already bubbled with 95% O₂, so oxygen supply was not limiting. The data give no reason to expect that still more oxygen would make the EDL fatigue as slowly as the soleus; its rapid fatigue reflects its fiber composition.',
+          'Initial force per cross-sectional area did not differ among the three groups, so hypoxia did not reduce the maximal force cross-bridges can generate. The loss appeared only with repeated contractions and reversed with rest.',
+          'Fast glycolytic fibers are rich in glycolytic enzymes, not lacking them. They fatigue rapidly because they rely on glycolysis and the phosphagen system, which cannot sustain ATP regeneration, not because glycolysis is absent.',
+        ],
         skill: '3B muscle fatigue and oxidative metabolism',
       },
       {
@@ -371,6 +491,12 @@ export const FL4_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Each half-sarcomere at 3.1 μm is 1.55 μm long, so a thin filament extending 1.1 μm from the Z disc ends 0.45 μm from the center. Myosin heads occupy the region from 0.1 μm (edge of the bare zone) to 0.8 μm (end of the thick filament) from the center, a span of 0.7 μm, and only the portion from 0.45 to 0.8 μm, 0.35 μm, is overlapped, which is half of the heads, so force is about 50% of maximum. Zero force would require a sarcomere length of at least 3.8 μm, where the thin filaments no longer reach the thick filaments. A value of 25% or 75% results from misplacing either the filament ends or the bare zone.',
+        optionExplanations: [
+          'Zero active force would require the thin filaments to no longer reach the thick filaments at all. With 1.1 μm thin filaments and 1.6 μm thick filaments, that occurs at a sarcomere length of about 3.8 μm, well beyond 3.1 μm.',
+          'A value of 25% results from misplacing either the filament ends or the bare zone. At 3.1 μm, the overlap region (0.45 to 0.8 μm from center) is 0.35 μm of the 0.7 μm head-bearing span, which is half, not a quarter.',
+          'Each half-sarcomere at 3.1 μm is 1.55 μm, so a 1.1 μm thin filament ends 0.45 μm from the center. Myosin heads span 0.1 μm (bare-zone edge) to 0.8 μm (thick-filament end), a 0.7 μm region; only 0.45 to 0.8 μm (0.35 μm) overlaps, so half the heads engage and force is about 50%.',
+          'A value of 75% would require three-quarters of the head-bearing region to overlap thin filaments. At 3.1 μm, only the outer 0.35 μm of the 0.7 μm head-bearing span is overlapped, which is 50%, not 75%.',
+        ],
         skill: '3B length–tension relationship',
       },
       {
@@ -384,6 +510,12 @@ export const FL4_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The EDL lost almost 90% of its force within 6 min despite ample oxygen, the behavior of fast glycolytic fibers, which rely mainly on glycolysis, contain relatively few mitochondria and little myoglobin, and quickly fall behind in ATP regeneration. Abundant mitochondria and myoglobin, slow myosin ATPase, and dense capillary networks are features of type I oxidative fibers such as those of the soleus. Fast glycolytic fibers typically store more glycogen, not less.',
+        optionExplanations: [
+          'Abundant mitochondria and high myoglobin content are features of type I oxidative fibers such as those of the soleus. The EDL lost nearly 90% of its force in 6 minutes despite ample oxygen, which is inconsistent with a highly oxidative fiber type.',
+          'The EDL lost almost 90% of its force within 6 minutes despite ample oxygen, the behavior of fast glycolytic fibers. Such fibers rely mainly on glycolysis, contain relatively few mitochondria, and quickly fall behind in ATP regeneration.',
+          'Slower myosin ATPase and a dense capillary network are features of slow oxidative type I fibers, which resist fatigue. The EDL is a fast-twitch muscle that fatigued rapidly, so these properties do not describe its fibers.',
+          'Fast glycolytic fibers typically store more glycogen, not less, to fuel anaerobic glycolysis, and a dense capillary network is a feature of oxidative fibers. Neither property matches the rapidly fatiguing EDL.',
+        ],
         skill: '3B skeletal muscle fiber types',
       },
     ],
@@ -405,6 +537,12 @@ export const FL4_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'Capillaries filter slightly more fluid, along with some plasma protein, than they reabsorb, and lymphatic vessels return this excess through the lymph nodes to the venous circulation; when the nodes draining the arm are removed, the fluid and protein accumulate in the interstitium (lymphedema). Node removal does not obstruct the artery, and arterial obstruction would lower, not raise, downstream capillary pressure. Albumin synthesis by the liver is unaffected, and a fall in plasma protein would cause generalized rather than one-arm swelling. Loss of lymphocytes does not make capillaries leaky.',
+    optionExplanations: [
+      'Capillaries filter slightly more fluid and protein than they reabsorb, and lymphatic vessels return this excess through the lymph nodes to the venous circulation. When the nodes draining the arm are removed, fluid and protein accumulate in the interstitium (lymphedema).',
+      'Lymph node removal does not obstruct the axillary artery, and arterial obstruction would lower, not raise, downstream capillary hydrostatic pressure. Reduced inflow produces ischemia, not edema.',
+      'Albumin synthesis by the liver is unaffected by removing lymph nodes from one armpit. A fall in plasma oncotic pressure would also cause generalized swelling throughout the body, not swelling confined to one arm.',
+      'Loss of lymphocytes does not make capillaries leaky. Lymph nodes contain lymphocytes, but their removal affects lymph drainage, not the permeability of the capillary wall in the arm.',
+    ],
     skill: '3B lymphatic system',
   },
   {
@@ -421,6 +559,12 @@ export const FL4_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'Keratinocytes are produced by stem and progenitor cells of the stratum basale, the deepest epidermal layer; if that layer survives, it simply regenerates the overlying epidermis. When a wound reaches deep into the dermis, repair depends on fibroblasts that deposit collagen, forming scar tissue. The stratum corneum consists of dead, keratin-filled cells that cannot divide. Collagen deposited by fibroblasts is not converted into epidermis. Melanocytes produce pigment and do not give rise to keratinocytes.',
+    optionExplanations: [
+      'The stratum corneum consists of dead, keratin-filled cells that have lost their nuclei and cannot divide. Regeneration of the epidermis comes from deeper living layers, not from the surface layer.',
+      'Collagen deposited by fibroblasts forms scar tissue in the dermis; it is never converted into epidermis. Fibroblast activity is what produces the scar in deep wounds, the opposite of scarless healing.',
+      'Keratinocytes are produced by stem and progenitor cells of the stratum basale, the deepest epidermal layer. If a shallow wound leaves that layer intact, it simply regenerates the overlying epidermis without scar formation.',
+      'Melanocytes produce pigment and transfer it to keratinocytes; they do not differentiate into keratinocytes. The keratinocyte lineage comes from basal stem cells, not from pigment cells.',
+    ],
     skill: '3B skin and wound healing',
   },
   {
@@ -437,6 +581,12 @@ export const FL4_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'The stretch-sensitive afferent from the quadriceps muscle spindle synapses directly on quadriceps motor neurons (a monosynaptic pathway) and, through a branch, on an inhibitory interneuron that suppresses hamstring motor neurons (reciprocal inhibition); only the relaxation pathway contains the interneuron. The same sensory neuron, with its cell body in the dorsal root ganglion, begins both pathways. Both pathways end on ventral-root motor neurons, one excited and one inhibited. The reflex does not require the brain, so an ascending tract is part of neither pathway.',
+    optionExplanations: [
+      'The same stretch-receptor sensory neuron, with its cell body in the dorsal root ganglion, begins both pathways: it synapses directly on quadriceps motor neurons and, through a branch, on the inhibitory interneuron. It is common to both.',
+      'The stretch afferent synapses directly on quadriceps motor neurons (monosynaptic) and, through a branch, on an inhibitory interneuron that suppresses hamstring motor neurons (reciprocal inhibition). Only the relaxation pathway contains the interneuron.',
+      'Both pathways end on motor neurons whose axons leave through the ventral root: the quadriceps motor neuron is excited and the hamstring motor neuron is inhibited. A ventral-root motor neuron is part of both.',
+      'The stretch reflex is a spinal reflex that does not require the brain. An ascending tract to the motor cortex may carry information about the stretch, but it is part of neither the contraction nor the relaxation pathway.',
+    ],
     skill: '3A spinal reflex arc',
   },
   {
@@ -453,6 +603,12 @@ export const FL4_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'The father passes his only X chromosome, which carries the dominant allele, to every daughter, and one copy is enough to cause the disorder; his sons receive his Y chromosome and one of the mother’s normal X chromosomes, so none are affected. Half of each sex would be affected if the mother, rather than the father, were the heterozygous affected parent. Sons never receive an X chromosome from their father. A dominant allele with complete penetrance produces affected, not unaffected carrier, daughters.',
+    optionExplanations: [
+      'Half of each sex would be affected if the mother were the heterozygous affected parent, since she passes the mutant X to half her children regardless of sex. With the father affected, transmission depends entirely on which sex chromosome he contributes.',
+      'Sons receive their father’s Y chromosome, never his X, so no son can inherit the father’s X-linked allele. All sons are unaffected, and the daughters, not the sons, receive the mutant X.',
+      'A dominant allele with complete penetrance produces affected daughters, not unaffected carriers. The carrier concept applies to recessive alleles; here one copy of the X-linked dominant allele is sufficient to cause the disorder.',
+      'The father passes his only X chromosome, carrying the dominant allele, to every daughter, and one copy is enough to cause the disorder. Sons receive his Y chromosome and a normal maternal X, so none are affected.',
+    ],
     skill: '1C X-linked dominant inheritance',
   },
   {
@@ -469,6 +625,12 @@ export const FL4_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'DNA polymerases can extend only an existing 3′ end. At the very end of a chromosome, the RNA primer of the final lagging-strand fragment is removed, and no upstream 3′ end exists from which polymerase could fill the gap, so each new lagging strand is left short; telomerase, a reverse transcriptase with its own RNA template, normally extends the parental 3′ end to compensate. The leading strand is synthesized continuously to the end of its template. The problem arises from primer removal, not from the location of origins. Proofreading removes only mismatched nucleotides just added, not correctly paired ones at chromosome ends.',
+    optionExplanations: [
+      'DNA polymerases extend only an existing 3′ end. At the chromosome end, the RNA primer of the final lagging-strand fragment is removed, and no upstream 3′ end exists from which polymerase could fill the gap, so each new lagging strand is left short.',
+      'The leading strand is synthesized continuously in the 5′→3′ direction all the way to the end of its template. The shortening problem is specific to the lagging strand, whose terminal primer cannot be replaced.',
+      'The problem arises from removal of the terminal RNA primer, not from where origins of replication are located. Even with an origin near the end, the final lagging-strand fragment would still need a primer that cannot be replaced.',
+      'Proofreading removes only mismatched nucleotides immediately after they are added, not correctly paired nucleotides at chromosome ends. Exonuclease activity is not responsible for progressive telomere shortening.',
+    ],
     skill: '1B telomeres and telomerase',
   },
   {
@@ -480,6 +642,12 @@ export const FL4_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'Ligases join two molecules with a new covalent bond (C–C, C–N, C–O, or C–S) using energy from the hydrolysis of ATP or another nucleoside triphosphate; carboxylases such as pyruvate carboxylase are examples. A kinase transfers a phosphoryl group from ATP to a substrate, leaving it phosphorylated, rather than joining two molecules. A lyase forms or breaks bonds by addition to or elimination from a double bond, without hydrolysis or ATP. A phosphatase removes a phosphate group by hydrolysis.',
+    optionExplanations: [
+      'A kinase transfers a phosphoryl group from ATP to a substrate, leaving it phosphorylated. It does not join two molecules with a new carbon–carbon bond; ATP is a phosphate donor, not an energy source for bond formation.',
+      'A lyase forms or breaks bonds by addition to or elimination from a double bond, without hydrolysis or ATP involvement. The coupled ATP hydrolysis in the stem rules out the lyase classification.',
+      'Ligases join two molecules with a new covalent bond (C–C, C–N, C–O, or C–S) using energy from hydrolysis of ATP or another nucleoside triphosphate. Carboxylases such as pyruvate carboxylase are examples.',
+      'A phosphatase removes a phosphate group by hydrolysis. It does not form carbon–carbon bonds or consume ATP; it is the opposite of a kinase, not a bond-forming enzyme.',
+    ],
     skill: '1A enzyme classification',
   },
   {
@@ -496,6 +664,12 @@ export const FL4_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'NADH donates electrons to complex I, which pumps protons as it passes them to ubiquinone; FADH₂, bound in complex II and other flavoproteins, hands its electrons directly to ubiquinone, so those electrons skip complex I and drive fewer protons across the inner membrane, yielding about 1.5 rather than 2.5 ATP. Electrons from both carriers pass through complex III, cytochrome c, and complex IV before reaching oxygen. FADH₂ electrons do not go through complex I, and they do not need to reduce NAD⁺ first, which would be energetically uphill.',
+    optionExplanations: [
+      'Electrons from both NADH and FADH₂ pass through complex III, cytochrome c, and complex IV before reaching oxygen. The difference between the carriers lies at the entry point, not at the exit to oxygen.',
+      'FADH₂ electrons do not pass through complex I at all; that is precisely what they bypass. Both carriers’ electrons do pass through complex IV, which pumps protons, so this reverses the actual situation.',
+      'FADH₂ electrons do not need to reduce NAD⁺ first, and doing so would be energetically uphill because NADH has a more negative reduction potential than FADH₂. FADH₂ feeds electrons directly to ubiquinone.',
+      'NADH donates electrons to complex I, which pumps protons as it passes them to ubiquinone. FADH₂, bound in complex II and other flavoproteins, hands its electrons directly to ubiquinone, skipping complex I and driving fewer protons across the membrane (about 1.5 versus 2.5 ATP).',
+    ],
     skill: '1D electron carriers NADH and FADH₂',
   },
   {
@@ -512,6 +686,12 @@ export const FL4_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'Gap junctions are clusters of connexin channels that connect the cytosol of neighboring cells and pass ions and small molecules up to roughly 1000 Da, which is why the small dye spreads but the large one does not; in heart muscle they also let action potentials spread from cell to cell. Desmosomes and adherens junctions are mechanical attachments that link the cytoskeletons of adjacent cells without forming channels between their cytoplasms. Tight junctions seal the paracellular space between epithelial cells and do not connect cell interiors.',
+    optionExplanations: [
+      'Desmosomes are mechanical attachments that link intermediate filaments of adjacent cells through cadherin-family proteins. They form no channels between cytoplasms, so a dye cannot pass through them.',
+      'Gap junctions are clusters of connexin channels that connect the cytosol of neighboring cells and pass ions and small molecules up to roughly 1000 Da. The 500-Da dye spreads while the 10,000-Da dye does not, and in heart muscle these channels also conduct action potentials.',
+      'Tight junctions seal the paracellular space between epithelial cells, preventing solutes from passing between cells. They do not connect cell interiors and would not allow a dye to move from one cytoplasm to another.',
+      'Adherens junctions anchor actin filaments of adjacent cells via cadherins and catenins. Like desmosomes, they are mechanical attachments with no channel connecting the cytoplasms.',
+    ],
     skill: '2A cell junctions',
   },
 ]

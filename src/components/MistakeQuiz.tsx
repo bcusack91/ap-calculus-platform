@@ -12,6 +12,8 @@ import { ArrowRight, CheckCircle2, Loader2, PartyPopper, XCircle } from 'lucide-
 import { preloadKatex } from '@/lib/katex-lazy'
 import { renderRichText } from '@/lib/render-rich-text'
 import { Explanation, OptionList, PassageDisclosure, type ReviewPassageView } from '@/components/AttemptReview'
+import { AnswerStatsSummary, sharesOf, useQuestionStat } from '@/components/AnswerStats'
+import AskAboutQuestion from '@/components/AskAboutQuestion'
 
 export type MistakeCourse = 'mcat' | 'sat'
 
@@ -48,7 +50,7 @@ interface AnswerResult {
   retired: boolean
 }
 
-type Graded = { chosenIndex: number | null; chosenText?: string; result: AnswerResult } | { unavailable: true; reason: 'gone' | 'retired' }
+type Graded = { chosenIndex: number | null; chosenText?: string; durationMs?: number; result: AnswerResult } | { unavailable: true; reason: 'gone' | 'retired' }
 
 export default function MistakeQuiz({
   course,
@@ -116,12 +118,16 @@ export default function MistakeQuiz({
 
   const item = items[idx]
   const current = item ? graded[item.position] : undefined
+  // How others answered — asked for only once this question has been graded.
+  const gradedNow = item && current && 'result' in current ? current : null
+  const stat = useQuestionStat(gradedNow && item ? { by: 'key', questionKey: item.questionKey, options: item.options } : null)
 
   const submit = useCallback(
     async (chosenIndex: number | null) => {
       if (!item || busy) return
       setBusy(true)
       setAnswerError(null)
+      const durationMs = Math.min(Date.now() - shownAt.current, 60 * 60 * 1000)
       try {
         const r = await fetch('/api/mistakes/answer', {
           method: 'POST',
@@ -134,7 +140,7 @@ export default function MistakeQuiz({
             origin: { attemptKind: item.origin.attemptKind, attemptId: item.origin.attemptId, itemIndex: item.origin.itemIndex },
             chosenIndex: item.typed ? null : chosenIndex,
             ...(item.typed && typedValue.trim() ? { chosenText: typedValue.trim() } : {}),
-            durationMs: Math.min(Date.now() - shownAt.current, 60 * 60 * 1000),
+            durationMs,
           }),
         })
         // 410: the question can't be rebuilt any more. 404: it already left the
@@ -145,7 +151,7 @@ export default function MistakeQuiz({
         }
         if (!r.ok) throw new Error('Could not check that answer. Try again.')
         const result = (await r.json()) as AnswerResult
-        setGraded((g) => ({ ...g, [item.position]: { chosenIndex, chosenText: item.typed ? typedValue.trim() : undefined, result } }))
+        setGraded((g) => ({ ...g, [item.position]: { chosenIndex, chosenText: item.typed ? typedValue.trim() : undefined, durationMs, result } }))
       } catch (e) {
         setAnswerError(e instanceof Error ? e.message : 'Could not check that answer.')
       } finally {
@@ -280,9 +286,18 @@ export default function MistakeQuiz({
               )}
             </p>
           ) : (
-            <OptionList item={{ options: item.options, correctIndex: answered.result.correctIndex }} chosenIndex={answered.chosenIndex} />
+            <OptionList
+              item={{ options: item.options, correctIndex: answered.result.correctIndex }}
+              chosenIndex={answered.chosenIndex}
+              shares={sharesOf(stat, item.options.length)}
+            />
           )}
+          <AnswerStatsSummary stat={stat} durationMs={answered.durationMs} />
           <Explanation text={answered.result.explanation} />
+          <AskAboutQuestion
+            key={item.position}
+            target={{ questionKey: item.questionKey, origin: { attemptKind: item.origin.attemptKind, attemptId: item.origin.attemptId, itemIndex: item.origin.itemIndex } }}
+          />
           <p className="flex items-center gap-1.5 text-sm font-medium text-gray-700 dark:text-gray-200">
             {answered.result.retired ? (
               <>

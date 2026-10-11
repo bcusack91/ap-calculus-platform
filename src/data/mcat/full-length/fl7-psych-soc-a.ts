@@ -47,6 +47,12 @@ export const FL7_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Dividing each JND by its standard gives 5/200 = 7.5/300 = 10/400 = 12.5/500 = 15/600 = 0.025, so the Weber fraction is constant from 200 g to 600 g, but at 100 g it is 4/100 = 0.04, which is larger. The JND in grams nearly quadruples across the standards, so it is not a constant amount. The fraction is not the same at every standard, because the lightest standard departs from the others. The departure at 100 g is upward, not downward: a constant fraction of 0.025 would have predicted a JND of 2.5 g there, and the measured value is higher.',
+        optionExplanations: [
+          'The JND in grams rose from 4 g at 100 g to 15 g at 600 g, nearly quadrupling. It was not a constant amount; it grew with the standard, as Weber proposed.',
+          'The fraction is constant from 200 g to 600 g (0.025 throughout), but at 100 g it is 4/100 = 0.04. Because the lightest standard departs from the others, the fraction is not the same at every standard tested.',
+          'Dividing each JND by its standard gives 5/200 = 7.5/300 = 10/400 = 12.5/500 = 15/600 = 0.025, a constant Weber fraction from 200 g up. At 100 g the fraction is 4/100 = 0.04, which is larger.',
+          'The departure at 100 g is upward, not downward. A constant fraction of 0.025 would predict a JND of 2.5 g at 100 g, but the measured JND was 4 g, giving a larger fraction of 0.04.',
+        ],
         skill: '6A data interpretation: constancy of the Weber fraction',
       },
       {
@@ -61,6 +67,12 @@ export const FL7_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Near 100 g the JND is about 4 to 5 g, so 50 g covers roughly ten or more JNDs, whereas near 500 g the JND is about 12.5 g, so 50 g covers about four. If every JND is an equal step in sensation, the lighter canister gains more steps and should feel as though it has grown heavier by more. Equal added mass does not mean equal added sensation, which is the point of Weber’s finding. A smaller JND at 100 g means more steps per gram, not fewer. Fifty grams is far above one JND at either standard, so the change would be noticed in both cases.',
+        optionExplanations: [
+          'Equal added mass does not mean equal added sensation; that is the point of Weber’s finding. Because the JND is smaller at 100 g, 50 g spans more JNDs there than at 500 g, and under Fechner’s assumption more JNDs means a larger increase in sensation.',
+          'Near 100 g the JND is about 4–5 g, so 50 g spans roughly ten or more JNDs; near 500 g the JND is 12.5 g, so 50 g spans about four. If each JND is an equal step in sensation, the lighter canister gains more steps and feels heavier by more.',
+          'A smaller JND at 100 g means more steps per gram, not fewer. The reasoning here reverses the relationship: a smaller JND makes 50 g span more JNDs, producing a greater increase in felt heaviness, not a smaller one.',
+          'Fifty grams is far above one JND at either standard (about 4–5 g at 100 g and 12.5 g at 500 g). The change would be noticed in both cases, so the question is how much heavier each feels, not whether a change is detected.',
+        ],
         skill: '6A Fechner’s scaling of sensation (reasoning from data)',
       },
       {
@@ -74,6 +86,12 @@ export const FL7_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'With the hand supported and motionless, weight is signaled only by pressure on the skin; lifting adds signals from receptors in muscles and tendons that register the effort of raising the load. Comparing JNDs in the two conditions therefore shows what those receptors contribute, and the smaller JNDs for lifting indicate that they improve discrimination. Handedness was not varied between conditions. The canisters were hidden and identical in size in both conditions, so visual size cues were excluded rather than studied. The absolute threshold was measured in a separate session with discs and involved no standard.',
+        optionExplanations: [
+          'With the hand supported and motionless, weight is signaled only by skin pressure; lifting adds signals from receptors in muscles and tendons that register effort. Comparing the two conditions isolates what those receptors contribute, and the smaller lifting JNDs show they sharpen discrimination.',
+          'Handedness was not varied between conditions. Both conditions used the same approach to the hand, and nothing in the design compares dominant with nondominant hands.',
+          'The canisters were hidden behind a curtain and identical in size in both conditions, so visual size cues were excluded from the study altogether rather than being the variable examined.',
+          'The absolute threshold for pressure was measured in a separate final session using light plastic discs, with no standard involved. The resting condition in the main experiment measured difference thresholds, not absolute ones.',
+        ],
         skill: '6A research design: isolating a sensory contribution',
       },
       {
@@ -88,6 +106,12 @@ export const FL7_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'A change is detected reliably only if it exceeds the JND, which is the Weber fraction times the standard. For saltiness the fraction is 0.15, so a 10 percent increase falls short of the 15 percent needed. For brightness the fraction is 0.08, so a 12 percent increase exceeds it. For lifted canisters Figure 1 gives a JND of 10 g at 400 g and 5 g at 200 g, so increases of 16 g and 8 g both exceed the JND.',
+        optionExplanations: [
+          'At 400 g the lifting JND from Figure 1 is 10 g, so an increase of 16 g exceeds the JND and would be detected reliably. This is not the least detectable change.',
+          'The Weber fraction for brightness is 0.08, so a 12 percent increase exceeds the 8 percent needed and would be detected. This change is well above threshold.',
+          'The Weber fraction for saltiness is 0.15, so a change must be at least 15 percent to reach the JND. A 10 percent increase falls short of that and would be the hardest of the four changes to detect.',
+          'At 200 g the lifting JND from Figure 1 is 5 g, so an increase of 8 g exceeds the JND and would be detected. The salt change is the only one that falls below its JND.',
+        ],
         skill: '6A Weber fractions across senses (application)',
       },
       {
@@ -101,6 +125,12 @@ export const FL7_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Constant pressure on one patch of skin reduces the response of the receptors there, which is why the feeling of the canister faded and why the same patch was briefly less sensitive to faint discs; the effect was confined to the stimulated palm and recovered within minutes, as sensory adaptation does. Weber’s law describes the difference threshold relative to a standard that is being judged, and no standard was present when the discs were applied. Lapses of attention would have raised the threshold on both palms, yet the other palm was unchanged. Participants reported only whether they felt a disc, so no comparison with the canister was being made.',
+        optionExplanations: [
+          'Weber’s law describes the difference threshold relative to a standard being judged, and no standard was present when the discs were applied. The absolute threshold does not grow in proportion to a previous stimulus by Weber’s law.',
+          'Lapses of attention would have raised the threshold on both palms equally, yet the other palm, which bore no canister, showed no change at any point. The effect was confined to the stimulated skin.',
+          'Participants reported only whether they felt a disc, not whether it differed from the canister, so no comparison with a remembered standard was being made. This was an absolute-threshold measurement.',
+          'Constant pressure on one patch of skin reduces the response of the receptors there, which is why the canister’s feeling faded and the same patch was briefly less sensitive to faint discs. The effect was local and recovered within minutes, as sensory adaptation does.',
+        ],
         skill: '6A sensory adaptation',
       },
     ],
@@ -128,6 +158,12 @@ export const FL7_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'If pay declines when women enter an occupation while the skills and training it demands stay the same, the decline cannot be credited to lower human capital and instead tracks who is doing the work, which is what the devaluation account claims. Fewer years of experience among women in female-dominated fields is a difference in human capital and would support that account. Choosing an occupation for hours compatible with child care is the kind of choice the human capital account invokes. Higher pay for more schooling regardless of gender composition shows pay following skill, again the human capital pattern.',
+        optionExplanations: [
+          'Fewer years of experience among women in female-dominated fields is a difference in human capital. It would support the human capital account, since it ties lower pay to lower investment in skills and experience.',
+          'If pay falls when women enter an occupation while its required training stays the same, the decline cannot be credited to lower human capital. It tracks who is doing the work, which is exactly what the devaluation account claims.',
+          'Choosing an occupation for hours compatible with child care is the kind of choice the human capital account invokes to explain women’s concentration in lower-paid work. It supports that account rather than devaluation.',
+          'Higher pay for more schooling regardless of gender composition shows pay following skill, which is the human capital pattern. It does not show that pay depends on who performs the work.',
+        ],
         skill: '10A gender wage gap: devaluation vs human capital (evidence)',
       },
       {
@@ -142,6 +178,12 @@ export const FL7_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The overall gap is 18 cents on the dollar, but only 5 cents remains when women and men in the same occupation with the same education, experience, and hours are compared; the larger part of the gap is therefore associated with women and men holding different jobs and working different hours, which an equal-pay rule for identical jobs does not touch. The gap cannot arise mainly within jobs when the within-job difference is the smaller part. Pay within jobs is not already equal, since a 5-cent difference remains. Nothing in the figures indicates how employers would reassign workers, so a widening gap has no support.',
+        optionExplanations: [
+          'The overall gap is 18 cents, but only 5 cents remains within the same job with the same qualifications and hours. The gap cannot arise mainly within jobs when the within-job portion is the smaller part.',
+          'Nothing in the figures indicates how employers would reassign workers after such a law. A widening gap has no support in the passage’s data.',
+          'Pay within jobs is not already equal: a 5-cent difference remains between women and men in the same occupation with the same education, experience and hours. The law would address that part, though it is the smaller part.',
+          'The overall gap is 18 cents on the dollar, but only 5 cents remains when women and men in the same job with the same qualifications and hours are compared. Most of the gap reflects different jobs and hours, which an equal-pay rule for identical jobs does not touch.',
+        ],
         skill: '10A occupational segregation and the wage gap (reasoning from figures)',
       },
       {
@@ -156,6 +198,12 @@ export const FL7_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'In these couples the wife has less free time and more earning power, so both the time-availability and the relative-resources explanations predict that the husband will do most of the housework. Only the gender-display explanation, which treats housework as a way of enacting gender that need not follow hours or earnings, accommodates wives continuing to do most of it. The finding therefore counts against each of the other two explanations, singly and together.',
+        optionExplanations: [
+          'In these couples the wife has less free time and more earning power, so both the time-availability and relative-resources explanations predict the husband would do most housework. Only the gender-display explanation, in which housework enacts gender regardless of hours or earnings, fits the finding.',
+          'The time-availability explanation predicts that the partner with fewer paid hours does more housework. Here the wife works more paid hours yet does most of the housework, which contradicts that prediction.',
+          'The relative-resources explanation predicts that the partner who earns less has less bargaining power and does more housework. Here the wife earns more yet does most of the housework, which contradicts that prediction.',
+          'Both the time-availability and relative-resources explanations predict that the husband, with fewer paid hours and lower earnings, would do most of the housework. The finding counts against both, not for them.',
+        ],
         skill: '9B the second shift: testing explanations',
       },
       {
@@ -169,6 +217,12 @@ export const FL7_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Males have a single X chromosome, so one recessive allele on it is expressed; the excess of males among those affected follows from chromosomal makeup and is a difference of sex. The predominance of women in nursing reflects occupational segregation, a social arrangement that differs across societies and eras. Discouraging boys from crying and giving dolls to girls are practices of gender socialization that teach gender roles. These three patterns could be otherwise in a different society, which marks them as gender.',
+        optionExplanations: [
+          'The predominance of women in nursing reflects occupational segregation, a social arrangement that differs across societies and eras. It is a pattern of gender, not of sex, because it could be otherwise in a different society.',
+          'Discouraging boys from crying is a practice of gender socialization that teaches gender roles. It is a social expectation attached to a classification, not a biological characteristic.',
+          'Males have a single X chromosome, so one recessive allele on it is expressed. The excess of males among those affected follows from chromosomal makeup, which the passage defines as sex, not from social meanings or expectations.',
+          'Giving dolls to girls more often than boys is gender socialization: parents and others supply gender-typed models. It is a social practice that could differ in another culture, which marks it as gender.',
+        ],
         skill: '9B sex vs gender',
       },
     ],
@@ -194,6 +248,12 @@ export const FL7_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Among severely maltreated boys, 40% of 60 high-activity carriers (24 boys) and 80% of 30 low-activity carriers (24 boys) were diagnosed, so 48 of 90 boys, or about 53%, met criteria. A value of 60% is the simple average of the two percentages and ignores the fact that the high-activity group is twice as large. Values of 40% and 80% are the rates for the two genotype groups taken separately, not for all severely maltreated boys.',
+        optionExplanations: [
+          'Forty percent is the rate among severely maltreated boys with the high-activity genotype only (24 of 60). It does not include the 30 low-activity carriers, 24 of whom were also diagnosed.',
+          'Among severely maltreated boys, 40% of 60 high-activity carriers (24) and 80% of 30 low-activity carriers (24) were diagnosed. That is 48 of 90 boys, or about 53%.',
+          'Sixty percent is the simple average of 40% and 80%. It ignores that the high-activity group (60 boys) is twice as large as the low-activity group (30 boys), so the weighted percentage is lower.',
+          'Eighty percent is the rate among severely maltreated boys with the low-activity genotype only (24 of 30). It does not represent all 90 severely maltreated boys.',
+        ],
         skill: '6A data interpretation: weighted percentage from a table',
       },
       {
@@ -207,6 +267,12 @@ export const FL7_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'From no maltreatment to severe maltreatment, the rate of diagnosis rose from 20% to 40% in high-activity carriers and from 22% to 80% in low-activity carriers, so the exposure mattered for both groups but far more for one, which is a gene–environment interaction. Fixed, independent contributions would produce the same genotype difference at every level of maltreatment, whereas the difference grew from 2 points to 15 to 40. For the same reason genotype did not raise risk by a similar amount at each level. Low-activity carriers were one third of every maltreatment category, so maltreated boys were no more likely to carry either variant.',
+        optionExplanations: [
+          'Fixed, independent contributions would produce the same genotype difference at every level of maltreatment. Instead the gap grew from 2 points (none) to 15 (probable) to 40 (severe), so the effects are not simply additive.',
+          'Genotype raised risk by only 2 points with no maltreatment, by 15 with probable maltreatment, and by 40 with severe maltreatment. The amount is far from the same at each level; it grows with exposure.',
+          'From no maltreatment to severe, diagnosis rose from 20% to 40% in high-activity carriers and from 22% to 80% in low-activity carriers. Maltreatment mattered for both groups but far more steeply for one, which is a gene–environment interaction.',
+          'Low-activity carriers made up one third of every maltreatment category, so maltreated boys were no more likely to carry either variant. Maltreatment’s effect cannot be an artifact of genotype distribution.',
+        ],
         skill: '6A gene–environment interaction (reasoning from data)',
       },
       {
@@ -220,6 +286,12 @@ export const FL7_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The caution is that maltreating parents may also pass on genes that predispose their children to antisocial behavior, so the link between maltreatment and conduct disorder could be inherited rather than caused by the maltreatment. Adoptive parents supply the home but not the genes, so an association between maltreatment and conduct disorder in adopted children could not be explained by genes shared with the maltreating parent. Studying girls leaves parents and children genetically related. Measuring enzyme activity refines the genotype measure but does nothing about inherited risk from the parents. Adult recall would replace prospective records with a less trustworthy measure of the exposure and would not separate genes from rearing.',
+        optionExplanations: [
+          'Studying girls leaves parents and children genetically related, so the possibility that maltreating parents also transmit predisposing genes remains. It does not address the caution.',
+          'Measuring enzyme activity directly refines the genotype measure but does nothing about inherited risk from the parents. The caution concerns the parents’ genes, not the accuracy of the MAOA classification.',
+          'Adult recall would replace prospective records with a less trustworthy measure of maltreatment and would not separate the parents’ genes from their rearing. It makes the study weaker, not more informative on this point.',
+          'The caution is that maltreating parents may also pass on genes predisposing to antisocial behavior. Adoptive parents supply the home but not the genes, so a maltreatment–conduct disorder link in adopted children could not be explained by shared genes with the maltreating parent.',
+        ],
         skill: '7A research design: adoption-study logic',
       },
       {
@@ -234,6 +306,12 @@ export const FL7_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Among boys who were not maltreated, the two genotypes had nearly identical rates of diagnosis (20% and 22%), so in a population with little maltreatment the genotype would account for almost none of the variation; among maltreated boys the genotypes diverged sharply, so where maltreatment is common the genotype would account for much more. Heritability is a property of a population in its particular range of environments, not a fixed property of a gene, so it need not be the same everywhere. The prediction that it is greater where maltreatment is rare reverses the pattern in the table. Dependence on experience does not make the genetic share zero, since genotype mattered greatly among the maltreated.',
+        optionExplanations: [
+          'Heritability is a property of a population in its particular range of environments, not a fixed property of a gene. The same DNA sequence can account for different shares of variation depending on how common the relevant exposures are.',
+          'Among non-maltreated boys the genotypes had nearly identical rates (20% vs 22%), so where maltreatment is rare genotype accounts for almost no variation. Among maltreated boys the genotypes diverged sharply, so where maltreatment is common genotype accounts for much more.',
+          'This reverses the pattern in the table. Where maltreatment is rare, almost everyone is in the no-maltreatment rows, where the genotypes barely differ (20% vs 22%), so genotype would explain very little variation.',
+          'Dependence on experience does not make the genetic share zero. Among severely maltreated boys, genotype made a 40-point difference in diagnosis rate, so in a population with much maltreatment genotype would account for substantial variation.',
+        ],
         skill: '7A heritability depends on the environments sampled',
       },
     ],
@@ -264,6 +342,12 @@ export const FL7_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Conformity climbed from 3% to 13% to 32% as the unanimous group grew from one to three accomplices, but doubling the group from three to six added only 3 points, so the effect of size had nearly leveled off and a further doubling is unlikely to double conformity. Conformity did rise with each increase, but the increases shrank sharply, which is what undermines the prediction. Conformity with six accomplices (35%) was not twice that with three (32%). Conformity did not fall beyond three accomplices; it rose slightly.',
+        optionExplanations: [
+          'Conformity did rise with each increase in accomplices, but the increments shrank sharply: +10, +19, then only +3 from three to six. That leveling off is what undermines the prediction that twelve would double the effect.',
+          'Conformity with six accomplices (35%) was not twice that with three (32%); it was only 3 points higher. The premise of this reasoning misreads the table.',
+          'Conformity did not fall beyond three accomplices; it rose slightly from 32% to 35%. The prediction is doubtful because the rise had nearly stopped, not because it reversed.',
+          'Conformity climbed from 3% to 13% to 32% as the group grew from one to three, but doubling from three to six added only 3 points. The size effect had nearly leveled off, so a further doubling is unlikely to double conformity.',
+        ],
         skill: '7B conformity and group size (prediction from data)',
       },
       {
@@ -278,6 +362,12 @@ export const FL7_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'When the group could not learn the participant’s answers, the error rate fell from 35% to 12%, so about two thirds of the yielding depended on being observed and reflects a wish to avoid the group’s disapproval. The remaining 12% is still far above the 1% seen in the control condition, so some participants were swayed in what they actually judged to be correct. Written answers did not match the control rate. Most of the errors did not remain in private; most disappeared. Writing in private clearly lowered the rate of errors.',
+        optionExplanations: [
+          'When the group could not see the participant’s answers, errors fell from 35% to 12%, so about two thirds of the yielding depended on being observed. But 12% is still far above the 1% control rate, so some participants were genuinely swayed in their judgment.',
+          'Written answers did not match the control rate: 12% in private versus 1% alone. That residual yielding shows some participants actually believed the group, so concern about reactions was not the only factor.',
+          'Most of the errors did not remain in private; the rate fell from 35% to 12%. Real doubt accounts for only the residual 12%, while the larger share disappeared once observation was removed.',
+          'Writing in private clearly lowered the error rate, from 35% to 12%. Since most of the yielding vanished when the group could not observe, it cannot have been only real doubt about the answer.',
+        ],
         skill: '7B normative vs informational influence (reasoning from data)',
       },
       {
@@ -292,6 +382,12 @@ export const FL7_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'A dissenter who is also wrong breaks the group’s unanimity without supporting the participant’s own perception; if conformity to the majority still drops, the break in unanimity is what matters, and if it does not, confirmation of the correct answer is what matters. Two correct dissenters, a correct dissenter in a different seat, and a correct dissenter in a smaller group all continue to combine a break in unanimity with confirmation of the correct answer, so none of them separates the two possibilities.',
+        optionExplanations: [
+          'Two correct dissenters still combine a break in unanimity with confirmation of the participant’s own perception. Adding a second one does not separate the two possible mechanisms.',
+          'A correct dissenter in a different seat still both breaks unanimity and confirms the correct answer. Changing seating position leaves the two possibilities confounded.',
+          'A dissenter who is also wrong breaks the group’s unanimity without supporting the participant’s perception. If conformity still drops, the break in unanimity is what matters; if it does not, confirmation of the correct answer is what matters.',
+          'A correct dissenter in a smaller group still breaks unanimity and confirms the correct answer at the same time. Reducing group size changes a different variable and does not isolate the two mechanisms.',
+        ],
         skill: '7B research design: unanimity vs social support',
       },
       {
@@ -306,6 +402,12 @@ export const FL7_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'When a judgment is difficult, people treat the answers of others as evidence about what is true, which is informational influence, and a change that persists in private after the group is gone shows that the participants came to accept the group’s answers as their own, which is internalization. Compliance is public agreement without private acceptance and would have vanished once participants were tested alone. Normative influence rests on the wish to be accepted by people who are present, and no group was present a week later.',
+        optionExplanations: [
+          'Compliance is public agreement without private acceptance and would have vanished once participants were tested alone a week later. Normative influence also depends on the group being present to approve or disapprove, and it was absent.',
+          'With rectangles so similar that solo judgments were barely above chance, people treat others’ answers as evidence about what is true, which is informational influence. A change persisting in private a week later shows internalization: the group’s answers became their own.',
+          'Informational influence is right for a difficult judgment, but compliance would not persist in private. Giving the same answers alone a week later shows genuine private acceptance, which is internalization.',
+          'Internalization fits the persistence, but normative influence rests on wanting acceptance from people who are present. No group was present at the retest, and the difficulty of the task points to informational influence.',
+        ],
         skill: '7B compliance vs internalization',
       },
       {
@@ -319,6 +421,12 @@ export const FL7_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Moving the director to the telephone lowered full obedience by 40 points for both affiliations (65% to 25% and 50% to 10%), whereas replacing the university affiliation with the private firm lowered it by 15 points at both locations, so physical presence had the larger effect. The reverse ordering misreads the sizes of the two differences. Affiliation mattered at both locations, since the 15-point difference appears in the telephone column as well. Obedience was not abolished by the director’s absence: a quarter of participants under the university director and a tenth under the firm’s employee still delivered every remark.',
+        optionExplanations: [
+          'Moving the director to the telephone lowered obedience by 40 points for both affiliations (65→25 and 50→10), whereas changing from university to private firm lowered it by 15 points at both locations (65→50 and 25→10). Presence had the larger effect.',
+          'This misreads the sizes of the two differences. Affiliation changed obedience by 15 points, while removing the director from the room changed it by 40 points, so location had the larger effect, not affiliation.',
+          'Affiliation mattered at both locations: the 15-point difference between university and firm appears in the telephone column (25 vs 10) as well as in the in-room column (65 vs 50).',
+          'Obedience was not abolished when the director left: 25% under the university director and 10% under the firm’s employee still delivered every remark. It fell sharply but did not reach zero.',
+        ],
         skill: '7B data interpretation: obedience, proximity and legitimacy',
       },
     ],
@@ -348,6 +456,12 @@ export const FL7_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Rats, which identify food largely by taste and smell, associated illness with the taste, whereas quail, which identify food by sight, associated it with the color, so the favored cue differs between species in a way that matches how each one finds food; this is what preparedness predicts. Taste cannot be the favored cue for every species when quail favored color. The result shows which of two available cues quail used, not that quail cannot learn about tastes when taste is the only cue. Taste-aversion learning in the passage tolerated delays of hours, so a requirement of a few seconds is contradicted.',
+        optionExplanations: [
+          'Taste cannot be the favored cue for every species when quail associated illness with color rather than taste. The cue that is favored differs by species, matching how each finds food.',
+          'The result shows which of two available cues quail used, not that quail cannot learn about tastes at all. When both cues were present, quail favored color; this does not show they would fail if taste were the only cue.',
+          'Rats, which find food by taste and smell, associated illness with taste; quail, which find food by sight, associated it with color. The favored cue matches how each species selects food, which is what preparedness predicts.',
+          'Taste-aversion learning in the passage formed even when illness began hours after drinking. A requirement that the cue and illness occur within seconds is directly contradicted by the passage.',
+        ],
         skill: '7A preparedness: species-specific selective association',
       },
       {
@@ -362,6 +476,12 @@ export const FL7_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'For Group 1 the tone predicted shock, since shock occurred only after the tone; for Group 2 shock was no more likely after the tone than at any other time, so the tone carried no information and little or no fear should be conditioned to it. More shocks in total do not make the tone a better signal; they are what destroyed its predictive value. Equal numbers of pairings would produce equal fear only if contiguity were sufficient, which is the assumption Rescorla’s work rejected. In Group 1 every tone was followed by shock and every shock was preceded by the tone, so conditioning is expected there.',
+        optionExplanations: [
+          'For Group 1, shock occurred only after the tone, so the tone predicted a rise in the chance of shock. For Group 2, shock was equally likely with or without the tone, so the tone carried no information and little fear should be conditioned to it.',
+          'More shocks in total do not make the tone a better signal. The extra unsignaled shocks in Group 2 are precisely what destroyed the tone’s predictive value, so Group 2 should show less fear, not more.',
+          'Equal numbers of pairings would produce equal fear only if contiguity were sufficient for conditioning. Rescorla’s work showed that contingency matters, and only Group 1’s tone was contingent with shock.',
+          'In Group 1 every tone was followed by shock and every shock was preceded by the tone, so the tone was a perfect predictor and conditioning is expected. Conditioning does not require pairing on every occasion in both groups.',
+        ],
         skill: '7A contingency vs contiguity in classical conditioning',
       },
       {
@@ -376,6 +496,12 @@ export const FL7_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Pigs root for food with the snout, and an object that has been repeatedly paired with food comes to evoke that species-typical behavior, which intrudes on the trained response even at the cost of delayed reinforcement; this is instinctive drift. Extinction requires that reinforcement be withheld, and the food was still delivered whenever the disc reached the bin. Shaping is a training method in which successive approximations are reinforced, and no one reinforced rooting. A taste aversion is a learned avoidance of a flavor after illness, and the pig was neither made ill nor avoiding the food.',
+        optionExplanations: [
+          'Extinction requires that reinforcement be withheld, but the food was still delivered whenever the disc reached the bin. The trained response was not weakened by absence of reinforcement; it was displaced by competing behavior.',
+          'Shaping is a deliberate training method in which successive approximations are reinforced. No one reinforced rooting; it emerged on its own and actually delayed the reinforcer.',
+          'A taste aversion is a learned avoidance of a flavor after illness. The pig was neither made ill nor avoiding the food; it was eagerly rooting at the disc as if it were food.',
+          'Pigs root for food with the snout, and an object repeatedly paired with food comes to evoke that species-typical behavior. It intrudes on the trained response even at the cost of delayed reinforcement, which is instinctive drift.',
+        ],
         skill: '7A instinctive drift',
       },
       {
@@ -389,6 +515,12 @@ export const FL7_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Preparedness claims that some stimuli are more readily and durably associated with danger than others; if the same conditioning procedure yields a more persistent fear response to snakes than to flowers, the difference lies in the kind of stimulus rather than in the learner’s history. More fear of dogs after a bite is ordinary conditioning and says nothing about differences among kinds of stimuli. Fear acquired by watching a parent is observational learning and likewise compares no classes of stimuli. A larger response with stronger shock is a general property of conditioning that holds for any conditioned stimulus.',
+        optionExplanations: [
+          'More fear of dogs after being bitten is ordinary conditioning from personal history. It says nothing about whether some kinds of stimuli are more readily associated with danger than others.',
+          'Preparedness claims that some stimuli are more readily and durably associated with danger than others. If the same conditioning procedure yields a more persistent fear of snakes than of flowers, the difference lies in the kind of stimulus, not in the learner’s history.',
+          'Fear acquired by watching a parent is observational learning. It compares no classes of stimuli, so it cannot show that some objects are more easily feared than others.',
+          'A larger response with stronger shock is a general property of conditioning that holds for any conditioned stimulus. It does not distinguish prepared from unprepared stimuli.',
+        ],
         skill: '7A preparedness and human fears (evaluating evidence)',
       },
     ],
@@ -411,6 +543,12 @@ export const FL7_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'Matching a new case to an individual case stored in memory is what exemplar theory describes: category membership is judged by similarity to particular remembered instances. Prototype theory would have her compare the lesion with an abstracted average of all the lesions of that type she has seen, not with one patient. A defining-feature account would have her check a list of necessary and sufficient criteria, and she consulted no such list. Locating an item within broader and narrower categories describes how categories are organized, not how the resident recognized this lesion.',
+    optionExplanations: [
+      'Prototype theory would have her compare the lesion with an abstracted average of all the lesions of that type she has seen. She instead recalled one specific patient, not a composite.',
+      'Matching a new case to an individual case stored in memory is exemplar theory: category membership is judged by similarity to particular remembered instances. Recalling one patient from last month is exactly that.',
+      'A defining-feature account would have her check a list of necessary and sufficient criteria for the category. She consulted no such list; she relied on resemblance to a remembered case.',
+      'Locating an item within broader and narrower categories describes how categories are organized relative to one another, not how the resident recognized this particular lesion.',
+    ],
     skill: '6B concept formation: prototypes vs exemplars',
   },
   {
@@ -428,6 +566,12 @@ export const FL7_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'The physical stimulus is the same in both rows, so the difference in what is seen must come from the perceiver: surrounding letters or numbers create an expectation that determines how the ambiguous marks are interpreted, which is top-down processing. Bottom-up processing builds a percept from stimulus features alone and would yield the same reading in both rows. Feature detectors respond to the lines and curves, which do not differ between the rows. Parallel analysis of color, form, and motion describes how visual attributes are handled simultaneously and does not explain an effect of context.',
+    optionExplanations: [
+      'Bottom-up processing builds a percept from stimulus features alone. The marks are identical in both rows, so bottom-up processing would yield the same reading in both, not different readings.',
+      'Feature detectors respond to the lines and curves of the stimulus, which do not differ between the two rows. They cannot explain why the same marks are read differently.',
+      'Parallel processing of color, form and motion describes how visual attributes are handled simultaneously in separate pathways. It does not explain how context changes the interpretation of an ambiguous shape.',
+      'The physical stimulus is identical in both rows, so the difference must come from the perceiver. Surrounding letters or numbers create an expectation that determines how the ambiguous marks are read, which is top-down processing.',
+    ],
     skill: '6A top-down processing and context effects',
   },
   {
@@ -440,6 +584,12 @@ export const FL7_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'The cerebellum coordinates the timing and accuracy of movement and is needed for learning motor skills, so damage produces an unsteady gait, inaccurate reaching, and failure to improve with practice on a task such as mirror tracing. Hippocampal damage would do the opposite: skill learning would be spared while memory for the sessions themselves would be lost, and she recalls the sessions well. The amygdala is central to emotional learning such as conditioned fear and does not coordinate movement. The thalamus relays sensory information to the cortex, and its damage would not selectively produce incoordination with a failure of motor learning.',
+    optionExplanations: [
+      'The cerebellum coordinates the timing and accuracy of movement and is needed for learning motor skills. Damage produces an unsteady gait, inaccurate reaching, and failure to improve with practice on mirror tracing, while declarative memory for the sessions is spared.',
+      'Hippocampal damage would produce the opposite pattern: skill learning on mirror tracing would be spared while memory for the sessions would be lost. This patient recalls the sessions well but cannot improve the skill.',
+      'The amygdala is central to emotional learning such as conditioned fear. It does not coordinate movement or support motor skill acquisition, so it cannot explain the gait and reaching deficits.',
+      'The thalamus relays sensory information to the cortex. Its damage would not selectively produce incoordination together with a failure of motor learning while leaving declarative memory intact.',
+    ],
     skill: '6A cerebellum and motor (procedural) learning',
   },
   {
@@ -452,6 +602,12 @@ export const FL7_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'Endorphins are peptides made by the body that bind the same receptors as morphine and suppress the transmission of pain signals; because blocking opioid receptors removes the analgesia, an endogenous opioid must be producing it. Substance P and glutamate are released by pain-sensing fibers in the spinal cord and carry the pain signal forward, so their release would increase pain rather than suppress it. Acetylcholine acts on nicotinic and muscarinic receptors, which naloxone does not block.',
+    optionExplanations: [
+      'Substance P is released by pain-sensing fibers in the spinal cord and carries the pain signal forward. Its release would increase pain, not suppress it.',
+      'Glutamate is the excitatory transmitter released by pain afferents in the spinal cord, transmitting the pain signal onward. More glutamate would heighten pain rather than produce analgesia.',
+      'Endorphins are endogenous peptides that bind the same receptors as morphine and suppress pain transmission. Because naloxone, an opioid receptor blocker, abolishes the analgesia, an endogenous opioid must be producing it.',
+      'Acetylcholine acts on nicotinic and muscarinic receptors, which naloxone does not block. If acetylcholine mediated the analgesia, naloxone would not abolish it.',
+    ],
     skill: '6A endorphins as endogenous opioids',
   },
   {
@@ -469,6 +625,12 @@ export const FL7_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'The square was never paired with food; it acquired its power from the bell, an already conditioned stimulus that stood in for the unconditioned stimulus, which is second-order conditioning. Generalization would require that the square resemble the bell, and a visual shape does not resemble a sound. Spontaneous recovery is the return of an extinguished response to the original conditioned stimulus, and nothing was extinguished and then rested. Secondary reinforcement belongs to operant conditioning, in which a consequence strengthens a voluntary behavior, whereas salivation here is a reflex elicited by a signal.',
+    optionExplanations: [
+      'The square was never paired with food; it acquired its power from the bell, an already conditioned stimulus that stood in for the unconditioned stimulus. That is second-order conditioning.',
+      'Generalization would require the square to resemble the bell, and a visual shape does not resemble a sound. The square gained its effect through pairing with the bell, not through similarity to it.',
+      'Spontaneous recovery is the return of an extinguished response to the original conditioned stimulus after rest. Nothing was extinguished and then rested; a new stimulus acquired a response.',
+      'Secondary reinforcement belongs to operant conditioning, in which a stimulus paired with reward strengthens a voluntary behavior. Salivation here is a reflex elicited by a signal, not a voluntary behavior being reinforced.',
+    ],
     skill: '7A second-order conditioning',
   },
   {
@@ -486,6 +648,12 @@ export const FL7_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'Anxiety and loss of bearings on entering a setting whose norms are unfamiliar, so that one’s habitual ways of acting no longer work, is culture shock. Ethnocentrism would require that she judge the local practices by her own culture’s standards and find them wanting, which the stem rules out. Cultural lag describes a gap within one society between rapidly changing technology and slower-changing norms. Assimilation is a long-term process of taking on a dominant culture’s ways, whereas she has not yet learned how to act at all.',
+    optionExplanations: [
+      'Ethnocentrism requires judging the local practices by her own culture’s standards and finding them wanting. The stem explicitly says she does not regard them as inferior.',
+      'Cultural lag describes a gap within one society between rapidly changing technology and slower-changing norms. It does not describe an individual’s disorientation on entering another culture.',
+      'Assimilation is a long-term process of taking on a dominant culture’s ways. She is in her first weeks and has not yet learned how to act at all, let alone adopted the local practices.',
+      'Anxiety and loss of bearings on entering a setting whose norms are unfamiliar, so that habitual ways of acting no longer work, is culture shock. Her distress without any judgment of inferiority fits this precisely.',
+    ],
     skill: '9A culture shock',
   },
   {
@@ -503,6 +671,12 @@ export const FL7_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'The class was a secondary group: its members came together for a limited, practical purpose and related to one another impersonally. The four who went on meeting formed a primary group, marked by enduring, emotionally close ties valued for their own sake. The reverse order describes close ties becoming impersonal, the opposite of what happened. An out-group is one to which a person does not belong and toward which the person feels opposition, and the classmates were fellow members from the start. A reference group is one used as a standard for evaluating oneself, and nothing indicates that the class served that function.',
+    optionExplanations: [
+      'The class was a secondary group: members came together for a limited practical purpose and related impersonally. The four who kept meeting formed a primary group, marked by enduring, emotionally close ties valued for their own sake.',
+      'This reverses the sequence. The impersonal exercise class came first and the intimate, family-like bonds developed later, so the movement was from secondary to primary, not the other way.',
+      'An out-group is one to which a person does not belong and toward which the person feels opposition. The classmates were fellow members from the start, so they were never an out-group.',
+      'A reference group is one used as a standard for evaluating oneself. Nothing indicates the class served that function; the change described concerns intimacy of ties, not standards of comparison.',
+    ],
     skill: '9A primary vs secondary groups',
   },
   {
@@ -520,6 +694,12 @@ export const FL7_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'A tip left where the traveler will never return costs him money and can bring no better service or standing in the future, so a calculation of personal net benefit does not predict it; explaining it requires something further, such as an internalized norm. Changing to a clinic with shorter waits lowers a cost for the same service. Moving to a better-paid job raises a reward. Dropping a course whose costs exceed its benefits is the weighing of costs and rewards that the theory describes.',
+    optionExplanations: [
+      'Changing to a clinic with shorter waits lowers a cost for the same service. This is exactly the weighing of costs and rewards that rational choice theory describes.',
+      'A tip left where the traveler will never return costs him money and cannot bring better service or standing in the future. A calculation of personal net benefit does not predict it; explaining it requires something further, such as an internalized norm.',
+      'Moving to a job with a higher salary raises a reward. This is straightforward benefit-maximizing behavior that rational choice theory predicts.',
+      'Dropping a course whose costs exceed its benefits is precisely the cost–reward weighing the theory describes. It is easy, not difficult, to explain on that assumption.',
+    ],
     skill: '9A rational choice and exchange theory (limits)',
   },
 ]

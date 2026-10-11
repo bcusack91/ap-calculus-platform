@@ -53,6 +53,7 @@ import { POST as exitSubmit } from '@/app/api/exit-quiz/submit/route'
 import { POST as mcatDiagnosticSubmit } from '@/app/api/mcat-diagnostic/submit/route'
 import { POST as apBioDiagnosticSubmit } from '@/app/api/ap-bio-diagnostic/submit/route'
 import { diagnosticQuestionRows, mcatFullLengthRows, mcatPracticeBatchRow } from '@/lib/question-activity-rows'
+import { optionKey } from '@/lib/question-key'
 
 const post = (body: unknown) =>
   new Request('http://localhost/api/x', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) })
@@ -186,6 +187,8 @@ describe('POST /api/exit-quiz/submit — EXIT rows from the server grading', () 
       ['q:q200000000000000', 'exit', 'att1', 1, 1],
       ['q3', undefined, 'att1', 2, null], // unresolved: old key, kept out of the mistake log
     ])
+    // chosenKey from the server's rebuilt options as shown; unresolved / "I'm guessing" → none.
+    expect(writtenRows().map((r) => r.chosenKey)).toEqual([optionKey('a'), optionKey('b'), undefined])
   })
 
   it('records nothing for a deduplicated re-POST', async () => {

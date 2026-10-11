@@ -1121,6 +1121,15 @@ export function hasExitQuiz(topicSlug: string): boolean {
 }
 
 /**
+ * Every registered exit-quiz slug (aliases included) that starts with
+ * `prefix`. Used by the question bank (src/lib/qbank-pools.ts) to gather a
+ * course's pools without a second hand-kept list.
+ */
+export function listExitQuizSlugs(prefix = ''): string[] {
+  return Object.keys(quizLoaders).filter((s) => s.startsWith(prefix))
+}
+
+/**
  * Stable, content-derived question id.
  *
  * Overriding each generated question's id with a deterministic hash of its content

@@ -30,6 +30,12 @@ export const FL2_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The passage moves from the figurine’s facts (findspot, wear, breakage) to the claim that objects are “eloquent about practice and nearly mute about belief,” and concludes that “care is the part of meaning that survives in matter” and is worth recovering. The author criticizes how “ritual” is used but never proposes abandoning the word, and says the temptation to use it “is honest.” Texts are mentioned only as what the restraint school would leave meaning to; the author’s point is what objects alone can yield. Limiting claims to what can be measured is the “counsel of restraint” the author calls “more dangerous than the excess it corrects.”',
+        optionExplanations: [
+          'The author criticizes how “ritual” is used as a stand-in for explanation but never proposes abandoning the word, and says the temptation to reach for it “is honest.” The complaint is about what the word is taken to accomplish, not its definition.',
+          'Texts are mentioned only as what the restraint school would “leave meaning to.” The author’s point concerns what objects alone can yield, and the passage never says texts settle belief.',
+          'Confining claims to typology, chronology and materials is the “counsel of restraint” the author calls “more dangerous than the excess it corrects.” It is the view argued against.',
+          'Correct. The passage argues objects are “eloquent about practice and nearly mute about belief,” yet preserve “a record of care” that is “recoverable with a hand lens.” How the object was lived with is worth having even though the owner’s story is lost.',
+        ],
         skill: 'main-idea',
       },
       {
@@ -43,6 +49,12 @@ export const FL2_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The sentence follows directly on “Ritual is not an explanation” and on the claim that the word “marks the point at which we stop being able to say what people were doing.” The image of a label on a box makes that point: the word names a gap, it does not fill it. The author does not propose rules for when the word may be used; the objection is to what the word is taken to accomplish. Nothing suggests that colleagues prefer belief to practice — the author says the temptation “comes from a real feature of the evidence.” And the passage never predicts that the box will be emptied by better methods; it says belief is largely unrecoverable from objects.',
+        optionExplanations: [
+          'Correct. The image follows directly on “Ritual is not an explanation” and the claim that the word “marks the point at which we stop being able to say what people were doing.” The label names a gap in explanation; it does not fill it.',
+          'The author proposes no rules for when the word may legitimately be used. The objection is to treating the word as if it explained something, not to applying it to the wrong objects.',
+          'The author explicitly declines to mock colleagues and says the temptation “comes from a real feature of the evidence.” Nothing suggests those who use the word prefer belief to practice.',
+          'The passage never predicts that better methods will empty the box. It says belief “leaves traces only when it is translated into practice, and the translation is lost,” so the gap is largely permanent.',
+        ],
         skill: 'function',
       },
       {
@@ -52,6 +64,12 @@ export const FL2_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The flank is “polished smooth along one flank as if by a thumb,” and the author later says someone “handled it often enough to polish it” (I). The head was “snapped off and the body kept,” which the author reads as the body being “worth keeping and the head was not” — so the body was retained after the break (III). What the owner believed is precisely what the author says the figurine “does not tell us,” so II cannot be determined from the evidence; the protective function is never even suggested. Thus I and III only.',
+        optionExplanations: [
+          'Handling is supported (“polished smooth along one flank as if by a thumb”), but this omits the breakage evidence: the passage says the head was snapped off “and the body kept,” which is also determinable.',
+          'Handling is determinable, but what the owner believed is precisely what the author says the figurine “does not tell us.” A protective function is never even suggested in the passage.',
+          'Correct. The author says someone “handled it often enough to polish it” and that “when it broke the body was worth keeping and the head was not.” Both are read from physical traces. Belief about protection is exactly what the object cannot show.',
+          'This includes the owner’s belief, which the author says cannot be read off the object, and omits the handling evidence, which is the clearest trace the passage describes.',
+        ],
         skill: 'detail',
       },
       {
@@ -66,6 +84,12 @@ export const FL2_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The author’s method is to distinguish “the polish on the flank from the name of the goddess”: report what was done (handled, kept, discarded) and treat “ritual” as a placeholder rather than an account. Applied to the pit, that means asking what the lining and burning reveal about use before adopting a label. The author does not substitute a rival guess such as storage — that would be another confident reconstruction. Accepting the label is what the passage criticizes: the word “is not an explanation.” Waiting for a text contradicts the author’s point that what objects show about practice is worth reporting on its own.',
+        optionExplanations: [
+          'Substituting storage for ritual would be another confident reconstruction of purpose, which the author warns against. The passage never says burnt grain is best explained as storage.',
+          'Correct. The author’s method distinguishes “the polish on the flank from the name of the goddess”: report what was done before labeling what it meant. Asking what the lining and burning show about use applies that discipline to the pit.',
+          'Accepting the label is what the passage criticizes: “Ritual is not an explanation. It is the label we put on the box of things that explanation has not reached.”',
+          'Waiting for a text contradicts the author’s rejection of the restraint school and the insistence that what objects show about practice “is not nothing” and is worth reporting on its own.',
+        ],
         skill: 'application',
       },
       {
@@ -79,6 +103,12 @@ export const FL2_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The “record of care” is read from physical traces, above all the polish taken as evidence that “someone handled it often enough.” If that polish is produced by soil rather than by hands, the trace no longer records attention, and the inference from wear to care fails. That figurines turn up in graves elsewhere does not bear on whether wear records handling. The firing temperature is a fact about manufacture, which the author already treats as recoverable practice. Neighboring written records would supply a story about meaning, which the author sets aside; they neither confirm nor deny that wear records care.',
+        optionExplanations: [
+          'Correct. The “record of care” is read from physical traces, above all the polish taken to show “someone handled it often enough.” If sandy burial produces the polish, wear no longer records attention, and the inference from trace to care fails.',
+          'Where figurines of this type turn up elsewhere says nothing about whether the wear on this one records handling. Depositional context in other sites does not touch the claim about what polish shows.',
+          'Firing temperature is a fact about manufacture, which the author already counts as recoverable practice (“how hot the kiln ran”). It neither supports nor undermines the claim that wear records care.',
+          'Written records from another culture would supply a story about meaning, which the author sets aside as a different kind of knowledge. They do not bear on whether polish records handling.',
+        ],
         skill: 'strengthen-weaken',
       },
       {
@@ -93,6 +123,12 @@ export const FL2_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The author says “what we cannot recover is the story the owner would have told” — recover, that is, from the object — and concedes that belief survives only when “translated into practice.” A tablet describing the ceremony would supply exactly that story — knowledge the object could not give. It would not vindicate the word “ritual,” which the author faults as a placeholder that names a gap; a specific text explains, the label did not. The claim about traces concerns what objects preserve, and a text does not alter that: belief “leaves traces only when it is translated into practice,” and writing is such a translation surviving. The author never ranks texts below wear; the preference for wear is over a “confident reconstruction,” not over an actual account.',
+        optionExplanations: [
+          'The author faults “ritual” as a placeholder that names a gap, not as a false claim. A specific text explaining the ceremony would supply what the label never did; it would not retroactively make the label an explanation.',
+          'The claim concerns what objects preserve: belief “leaves traces only when it is translated into practice.” A tablet is such a translation that happened to survive, so it confirms rather than overturns the claim about objects.',
+          'Correct. The author says “what we cannot recover is the story the owner would have told,” meaning from the object. A tablet describing the ceremony supplies exactly that story, knowledge the figurine itself could never have yielded.',
+          'The author never ranks texts below wear. The stated preference is for recoverable wear over “a confident reconstruction” of belief, not over an actual surviving account of it.',
+        ],
         skill: 'new-information',
       },
     ],
@@ -116,6 +152,12 @@ export const FL2_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The author replaces the ledger of “what the film kept” with one that asks “what the book does to a reader, and whether the film does something of the same shape to a viewer,” and applies that test throughout. Preservation of plot and dialogue is the standard the author rejects as measuring “the wrong thing.” Improvement on the ending is never the criterion; the invented ending is praised for reproducing the novel’s effect, not for bettering it. Explaining the novel’s meaning is not mentioned; the test is what the film does, not what its makers can say.',
+        optionExplanations: [
+          'Preservation of plot and dialogue is the “ledger of what the film owes the book” that the author says measures “the wrong thing.” It is the standard being replaced.',
+          'Correct. The author proposes asking “what the book does to a reader, and whether the film does something of the same shape to a viewer,” and applies this test of fidelity to effect throughout the passage.',
+          'The invented ending is praised for reproducing the novel’s unsettling feeling, not for improving on it. The author never calls the novel’s ending weak or treats improvement as the criterion.',
+          'The test is what the film does to its viewers, not what its makers can explain. Understanding or articulating the novel’s meaning is never mentioned as a standard.',
+        ],
         skill: 'main-idea',
       },
       {
@@ -130,6 +172,12 @@ export const FL2_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The invented ending “produces in me the exact, unsettling feeling the novel’s own ending had produced, which no faithful version ever managed” — the film reached the effect by inventing, where faithful retention had failed. Nothing is said about improving the plot; the author’s lesson is that the novel’s power “had never lived in its plot.” The novelist’s approval is never mentioned. And the author does not call the novel’s ending weak; it produced the feeling the film later matched.',
+        optionExplanations: [
+          'Nothing is said about improving the plot; the author’s lesson is that the novel’s power “had never lived in its plot.” The film discarded the final third rather than improving it.',
+          'The novelist’s approval is never mentioned anywhere in the passage. The judgment rests entirely on the author’s own response to the film’s ending.',
+          'The author does not call the novel’s ending weak. It produced “the exact, unsettling feeling” that the film later matched, so it was effective, not the weakest section.',
+          'Correct. The invented ending “produces in me the exact, unsettling feeling the novel’s own ending had produced, which no faithful version ever managed.” Invention reached the effect that faithful retention had failed to deliver.',
+        ],
         skill: 'detail',
       },
       {
@@ -144,6 +192,12 @@ export const FL2_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The romance film kept “the title, the names, and the plot” yet is denied the status of adaptation because it was “about something the book was not about at all.” That verdict only follows if what a work is about, rather than its retained characters and events, is what makes it the same work. The author does not claim a film could never combine the two subjects, only that this film replaced one with the other. The competence of readers versus viewers is not invoked in the judgment. Deliberate concealment is not asserted; the remark about advertisement concerns what the title does, not the filmmakers’ intent.',
+        optionExplanations: [
+          'Correct. The romance film kept “the title, the names, and the plot” yet is denied the status of adaptation because it was “about something the book was not about at all.” That verdict follows only if a work’s identity lies in what it is about, not in retained characters and events.',
+          'The author does not claim the two subjects can never coexist, only that this film replaced one with the other, keeping the silence “as scenery.” No general incompatibility is asserted or needed.',
+          'The judgment does not invoke readers’ superiority as judges. The author notes readers recognized the rooms but not the book as evidence of substitution, not as a claim about who judges best.',
+          'The author does not assert deliberate concealment. The remark that “the name is doing the work of an advertisement” describes what the title does, not the filmmakers’ intent.',
+        ],
         skill: 'assumption',
       },
       {
@@ -158,6 +212,12 @@ export const FL2_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The film’s failure is that it keeps all the content but destroys the effect that depended on order — the withholding that made the ending work. A joke told with every word intact but the punchline first is the same failure: nothing omitted, the effect ruined by sequence. The poem translation changes content rather than order. The cut subplot is an omission, the kind of complaint the author’s old ledger records. The half-size reproduction alters scale, not the order in which anything is revealed.',
+        optionExplanations: [
+          'A translation that changes images alters content, whereas the film kept every scene. The film’s failure is about order and withholding, not about substituted material.',
+          'Cutting a subplot is an omission, the kind of grievance recorded on the old ledger of what was left out. The film described omitted nothing; it ruined the effect by sequence.',
+          'Correct. The film keeps all the content but destroys the effect that depended on withholding. A joke with every word intact but the punchline delivered first is the same failure: nothing omitted, the effect ruined by order.',
+          'A half-size reproduction alters scale while keeping every detail. It changes nothing about the order in which anything is revealed, which is the essence of the film’s failure.',
+        ],
         skill: 'application',
       },
       {
@@ -172,6 +232,12 @@ export const FL2_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The author’s evidence that the film reproduced the novel’s effect is a single response — the author’s own, as someone who had read the book. If viewers without the book are unmoved, the feeling the author reports may have been completed by memory of the novel rather than produced by the film alone, which complicates crediting the film. The finding does not show the old ledger of retained content to be more reliable; it says nothing about that ledger. Nothing in the finding bears on how closely the invented ending tracked the novel’s plot, which the film is said to have discarded. And it says nothing about how much the novel’s own ending depended on its plot.',
+        optionExplanations: [
+          'The finding says nothing about the ledger of retained content. It bears on whether the film alone produced the effect, not on whether counting what was kept is a better measure.',
+          'The film is said to have discarded the novel’s final third and invented a new ending, so nothing in viewers’ reactions could show it tracked the plot more closely than the author thought.',
+          'The finding concerns how viewers responded to the film, not how the novel’s ending worked on readers. It says nothing about the novel’s dependence on plot.',
+          'Correct. The author’s evidence is a single response, the author’s own as someone who had read the book. If viewers without the book are unmoved, the feeling may have been completed by memory of the novel rather than produced by the film alone.',
+        ],
         skill: 'new-information',
       },
       {
@@ -185,6 +251,12 @@ export const FL2_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The remark follows the case in which readers “recognized the rooms and none recognized the book.” Calling the name an advertisement says that the title attracts the novel’s readers by promising the novel, while the film supplies something else. The passage is not a complaint about studio practice or original screenplays. The author makes no concession about drawing readers to the novel. And the readers’ ledger is introduced at the start as a general habit, not explained by this case.',
+        optionExplanations: [
+          'The passage is not a complaint about studio practice or original screenplays. The remark concerns what the title does for this particular film, not industry preferences.',
+          'Correct. The remark follows the case where readers “recognized the rooms and none recognized the book.” Calling the name an advertisement says the title draws the novel’s readers by promising the novel while the film delivers something else.',
+          'The author makes no concession that the unfaithful film brings new readers to the novel. The advertisement image is critical, not a silver lining.',
+          'The readers’ ledger is introduced at the start as a general habit (“every adaptation arrives with a complaint already attached”). This case does not explain why readers keep it.',
+        ],
         skill: 'function',
       },
     ],
@@ -208,6 +280,12 @@ export const FL2_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The passage rejects two rival accounts — the planner’s circle and the claim that neighborhoods are obsolete — on the shared ground that both “treat distance as a quantity … rather than as a pattern of encounters,” and concludes that neighborhoods are made “wherever routes overlap.” Residents’ drawings are used as evidence against the circle, but the author never ranks their accuracy; the point is what the drawings reveal. The author concedes that chosen ties have spread out but argues that unchosen local ties are what matter about a neighborhood, the opposite of the second option. And the author criticizes the walking radius rather than defending it.',
+        optionExplanations: [
+          'Residents’ drawings are used as evidence against the planner’s circle, but the author never ranks their accuracy. The point is what the drawings reveal: that neighborhoods are shaped by friction and routes.',
+          'The author concedes chosen ties have spread out but argues that unchosen local ties are “precisely” what distinguishes a neighborhood. This option states the network view the author rejects.',
+          'Correct. The author rejects the planner’s circle and the obsolescence view on the same ground, that both “treat distance as a quantity … rather than as a pattern of encounters,” and concludes neighborhoods are made “wherever routes overlap.”',
+          'The author criticizes the walking radius from the first paragraph (“almost no one lives in it”). The passage attacks both the radius and the obsolescence view rather than defending one against the other.',
+        ],
         skill: 'main-idea',
       },
       {
@@ -222,6 +300,12 @@ export const FL2_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'When residents draw their own neighborhoods, “the circles vanish”; a boundary set at a fixed walking distance is the planner’s radius, not a feature of residents’ drawings. The passage lists the other three as what residents do draw: “a long finger reaching toward the bus stop they use each morning,” “a bulge around the park where their children play,” and “a hard edge at the rail line they never cross.”',
+        optionExplanations: [
+          'Correct. When residents draw their own neighborhoods, “the circles vanish.” A boundary at a fixed walking distance is the planner’s radius, which the author says almost no one lives in; it is not what residents draw.',
+          'The passage lists “a long finger reaching toward the bus stop they use each morning” as a feature residents draw, so this is included, not the exception.',
+          'The passage lists “a bulge around the park where their children play” among residents’ drawings, so this is included.',
+          'The passage lists “a hard edge at the rail line they never cross” as a feature of residents’ drawings, so this is included.',
+        ],
         skill: 'detail',
       },
       {
@@ -236,6 +320,12 @@ export const FL2_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The “reverse” of the garage redesign, which brings residents “closer to the store and farther from everyone else,” is a street that makes errands a little slower while bringing people’s paths together — the doorways and the slower crossing multiply encounters. Placing residents farther from both shops and one another reverses only half of the garage case and ignores the doorways. Nothing suggests the street should be redesigned for speed; the author values it for slowing people down. And the passage never compares the street’s importance with that of a bus stop or rail line.',
+        optionExplanations: [
+          'Nothing suggests the street should be redesigned for speed. The author values it precisely because it is slower and lined with doorways, which multiplies encounters.',
+          'This reverses only half of the garage case and ignores the doorways. The “reverse” of “closer to the store and farther from everyone else” is slightly farther from errands but closer to one another.',
+          'The passage never compares the street’s importance with that of a bus stop or rail line. Those features appear earlier as examples of residents’ mental maps, not in this contrast.',
+          'Correct. The garage redesign brings residents “closer to the store and farther from everyone else.” Its reverse is a street that makes errands slower while bringing people’s paths together, so residents meet more often.',
+        ],
         skill: 'inference',
       },
       {
@@ -249,6 +339,12 @@ export const FL2_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The author says the view “recruits a sound premise into an unsound argument” and grants that “it is true that the neighborhood is not a circle, and true that our chosen relationships have spread out,” before arguing that the conclusion ignores unchosen ties. That is partial agreement with the premises and rejection of the conclusion. The treatment is measured, not scornful, and it is the obsolescence view, not the author, that calls the neighborhood “a sentimental survival.” The author does not accept the conclusion, reluctantly or otherwise, and takes a clear side rather than remaining neutral.',
+        optionExplanations: [
+          'The treatment is measured, not scornful, and it is the obsolescence view, not the author, that dismisses the neighborhood as “a sentimental survival.” The author does not accuse it of nostalgia.',
+          'Correct. The author says the view “recruits a sound premise into an unsound argument,” grants that “it is true that the neighborhood is not a circle, and true that our chosen relationships have spread out,” then rejects the conclusion.',
+          'The author does not accept the conclusion at all. The passage argues that unchosen local ties make the neighborhood matter, directly contradicting its obsolescence.',
+          'The author takes a clear side and argues against the view at length. There is no neutrality or suggestion that the position awaits testing.',
+        ],
         skill: 'tone',
       },
       {
@@ -262,6 +358,12 @@ export const FL2_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The author asks of a place “whose paths cross whose, and how often,” and values repeated, low-stakes exposure to people one did not choose. A shared ground-floor mailroom and laundry makes residents’ daily routes overlap. Private washers remove one of those routine crossings, the kind of convenience the author says can bring people “closer to the store and farther from everyone else.” A circular service area is the planner’s radius the author criticizes. An online hobby board builds chosen ties — a network that “confirms who we already are” — rather than unchosen ones.',
+        optionExplanations: [
+          'Private washers remove a routine crossing of paths, the kind of convenience the author says can bring people “closer to the store and farther from everyone else.”',
+          'A circular service area around the entrance is the planner’s radius the author criticizes from the opening paragraph. It treats distance as a quantity, not a pattern of encounters.',
+          'Correct. The author asks “whose paths cross whose, and how often” and values repeated, low-stakes exposure to people one did not choose. A shared mailroom and laundry makes residents’ daily routes overlap.',
+          'An online hobby board builds chosen ties, a network that “confirms who we already are.” The author values unchosen encounters, which a self-selected board does not create.',
+        ],
         skill: 'application',
       },
       {
@@ -276,6 +378,12 @@ export const FL2_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The author claims that repeated exposure turns familiar faces into “allies — when a storm floods the street.” If flood victims were helped almost entirely by chosen ties living elsewhere, the payoff the author attributes to unchosen local ties does not appear when it should. That walkers recognize more neighbors supports the mechanism the author describes. That close friends live elsewhere is something the author already concedes (“our chosen relationships have spread out”). The spread of resident-drawn maps concerns planning practice, not the value of unchosen ties.',
+        optionExplanations: [
+          'Correct. The author claims repeated exposure turns familiar faces into “allies — when a storm floods the street.” If flood victims were helped almost entirely by chosen ties elsewhere, the payoff attributed to unchosen local ties fails to appear when it should.',
+          'That walkers recognize more neighbors than drivers supports the author’s mechanism: routes that overlap on foot produce familiarity. This strengthens the argument.',
+          'The author already concedes this: “our chosen relationships have spread out.” The argument is about unchosen ties, so close friends living elsewhere does not weaken it.',
+          'A change in planning practice toward resident-drawn maps concerns the first half of the passage and is consistent with the author’s critique of the radius. It does not bear on the value of unchosen ties.',
+        ],
         skill: 'strengthen-weaken',
       },
     ],
@@ -299,6 +407,12 @@ export const FL2_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The author distinguishes difficulty of access, which a poem should remove, from difficulty of experience, which it should keep, and concludes that a poem “owes its reader every fact needed to begin” but “owes no one a summary.” Blaming readers’ laziness is one side of the quarrel the author says rests on a confusion. Surviving paraphrase is the opposite of the author’s standard: a reader who wants every image translated “will have exchanged the poem for a paraphrase.” And allusion is identified with difficulty of access, which the author calls “almost never a virtue,” not with what distinguishes poetry.',
+        optionExplanations: [
+          'Blaming readers’ laziness is one side of the quarrel the author says rests on a confusion. The author faults readers only when they overgeneralize, and equally faults poets who do the same.',
+          'Correct. The author separates difficulty of access, which a poem should remove, from difficulty of experience, which it should keep, and concludes a poem “owes its reader every fact needed to begin” but “owes no one a summary of where the beginning leads.”',
+          'Surviving paraphrase is the opposite of the author’s standard. A reader who wants every image translated “will have exchanged the poem for a paraphrase that could as well have been written in prose.”',
+          'Allusion and private reference are examples of difficulty of access, which the author calls “almost never a virtue.” The passage never contrasts poetry’s difficulty with that of prose.',
+        ],
         skill: 'main-idea',
       },
       {
@@ -312,6 +426,12 @@ export const FL2_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The line break is one of three examples offered after the author says that, in difficulty of experience, “the reader has everything needed to understand each sentence and is still unable to rest in the whole.” It illustrates a difficulty that persists after comprehension. Private references belong to difficulty of access, a different category. The author says “no footnote can dissolve” this kind of difficulty and never suggests a reader can remove it. And the example concerns what a line break does to a statement, not a ranking of question-poems against claim-poems.',
+        optionExplanations: [
+          'Correct. The line break is one of three examples given right after the author says that in difficulty of experience “the reader has everything needed to understand each sentence and is still unable to rest in the whole.” It illustrates difficulty that outlasts comprehension.',
+          'Private references belong to difficulty of access, a separate category. The line-break example concerns what the poem does with fully understood words, not disguising missing information.',
+          'The author says “no footnote can dissolve this kind of difficulty” and never suggests a careful reader can remove it. The point is that it must be performed, not solved.',
+          'The example shows what a line break does to a statement; it does not rank poems that pose questions above poems that make claims. No such comparison appears.',
+        ],
         skill: 'function',
       },
       {
@@ -326,6 +446,12 @@ export const FL2_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'An obscure allusion is the author’s first example of difficulty of access, which vanishes once “the key is handed over — in a footnote” and of which “nothing … remains in the experience of the poem”; it is “a cost the poem pays, not a treasure it offers.” So a footnote removes the obstacle and costs the poem nothing. The charge of substituting paraphrase is reserved for resolving difficulties of experience, not supplying facts. The author never blames the need for notes on readers’ laziness, which is one side of the quarrel the author diagnoses. And the author treats withheld information as a flaw to be remedied, not as meaning to be protected.',
+        optionExplanations: [
+          'The charge of substituting paraphrase is reserved for resolving difficulties of experience: translating images, returning questions to statements. Supplying a missing fact is a different act the author endorses.',
+          'The author never blames the need for notes on readers’ laziness; that accusation is one side of the quarrel being diagnosed. The author even says a poet “cannot always know” which details are common property.',
+          'The author treats withheld information as “a cost the poem pays, not a treasure it offers.” Protecting an obscure allusion as meaning is the poet’s overgeneralization the passage criticizes.',
+          'Correct. An obscure allusion is the first example of difficulty of access, which vanishes once “the key is handed over — in a footnote,” after which “nothing of it remains in the experience of the poem.” The note removes an obstacle at no cost.',
+        ],
         skill: 'inference',
       },
       {
@@ -340,6 +466,12 @@ export const FL2_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The poem is “plain in its terms” — easy to enter — and its readers cannot rest in the whole, which is the author’s mark of difficulty of experience. It therefore meets the standard of being “easy to enter and hard to leave.” The demand that a poem leave readers clear about what it affirms is the reader’s overgeneralization the author criticizes. Obscurity is a matter of missing facts, and this poem withholds none. And if a note could settle the disagreement, the difficulty would be one of access, which the author counts as a cost rather than a success.',
+        optionExplanations: [
+          'Demanding that a poem leave readers clear about what it affirms is the reader’s overgeneralization the author criticizes: wanting “every question returned to a statement.” The standard says a poem owes no summary.',
+          'Correct. The poem is “plain in its terms,” so it is easy to enter, and readers cannot rest in the whole, which is difficulty of experience. It meets the standard of being “easy to enter and hard to leave.”',
+          'Obscurity is a matter of missing facts, and this poem withholds none; readers understand every line. The disagreement arises from the poem’s tensions, not from hidden information.',
+          'If a brief note could settle the disagreement, the difficulty would be one of access, which the author counts as a cost. The poem succeeds for the opposite reason: no note can dissolve its difficulty.',
+        ],
         skill: 'new-information',
       },
       {
@@ -354,6 +486,12 @@ export const FL2_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Difficulty of access disappears once missing information is supplied, as a puzzle’s rules become usable once the script is translated; difficulty of experience remains when everything is understood, as a subtle solution stays hard with plain rules. The two trails are both hard in the same intrinsic way, with nothing to be supplied. The mumbling speaker and the noisy hall are both obstructions to receiving the content, so both resemble access. The long and out-of-print textbooks concern effort and availability, not a contrast between missing information and difficulty that survives understanding.',
+        optionExplanations: [
+          'Both trails are hard in the same intrinsic way, through physical demand. Neither difficulty is removed by supplying missing information, so the pair does not capture the access/experience contrast.',
+          'A mumbling speaker and a noisy hall are both obstructions to receiving the content. Both resemble difficulty of access; neither captures a difficulty that remains once everything is understood.',
+          'Correct. Difficulty of access disappears once information is supplied, as a puzzle’s rules become usable once the script is translated. Difficulty of experience remains when everything is understood, as a subtle solution stays hard with plain rules.',
+          'Length and availability concern effort and access to the book itself, not a contrast between missing information and difficulty that survives full understanding of the content.',
+        ],
         skill: 'application',
       },
     ],

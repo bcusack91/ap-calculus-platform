@@ -12,6 +12,7 @@ import Link from 'next/link'
 import { ExternalLink, Flag, MinusCircle, RotateCcw, XCircle } from 'lucide-react'
 import MistakeQuiz, { type MistakeCourse } from '@/components/MistakeQuiz'
 import HelpLink, { HELP_ARTICLES } from '@/components/HelpLink'
+import { countBySkill } from '@/lib/cars-skills'
 
 interface MistakeRow {
   questionKey: string
@@ -19,6 +20,10 @@ interface MistakeRow {
   topicTitle: string | null
   discipline: string
   source: string
+  /** The attempt kind the miss came from ('qbank', 'mcat-practice', …). */
+  attemptKind?: string | null
+  /** CARS reasoning skill (MCAT CARS questions only). */
+  skill?: string | null
   reason: 'wrong' | 'skipped' | 'flagged'
   misses: number
   correctSince: number
@@ -45,8 +50,44 @@ const SOURCE_LABELS: Record<string, string> = {
   COMPETITIVE: 'Competitive',
 }
 
-export function sourceLabel(s: string): string {
+/** Attempt kinds whose label differs from their answer-log source. */
+const ATTEMPT_KIND_LABELS: Record<string, string> = {
+  qbank: 'Question bank',
+}
+
+export function sourceLabel(s: string, attemptKind?: string | null): string {
+  if (attemptKind && ATTEMPT_KIND_LABELS[attemptKind]) return ATTEMPT_KIND_LABELS[attemptKind]
   return SOURCE_LABELS[s] ?? s.charAt(0) + s.slice(1).toLowerCase().replace(/_/g, ' ')
+}
+
+/** "CARS mistakes by skill": counts drawn to scale, each with its number in text. */
+function CarsSkillsPanel({ items }: { items: MistakeRow[] }) {
+  const counts = countBySkill(items.map((m) => ({ skill: m.skill ?? undefined })))
+  if (counts.length === 0) return null
+  const max = counts[0].count
+  const total = counts.reduce((n, c) => n + c.count, 0)
+  return (
+    <section className="rounded-2xl border border-gray-200 bg-white p-4 sm:p-5 dark:border-gray-700 dark:bg-gray-800" aria-labelledby="cars-skills-heading">
+      <h2 id="cars-skills-heading" className="text-sm font-semibold text-gray-900 dark:text-white">CARS mistakes by reasoning skill</h2>
+      <p className="mt-0.5 text-xs text-gray-500 dark:text-gray-400">
+        {total} CARS question{total === 1 ? '' : 's'} in this view. The skills at the top are the ones to practise.
+      </p>
+      <ul className="mt-3 space-y-2">
+        {counts.map((c) => (
+          <li key={c.skill} className="grid grid-cols-[minmax(0,10rem)_1fr_auto] items-center gap-2 text-sm">
+            <span className="truncate text-gray-800 dark:text-gray-100">{c.label}</span>
+            <span className="h-2 overflow-hidden rounded bg-gray-200 dark:bg-gray-700" aria-hidden>
+              <span className="block h-full rounded bg-accent dark:bg-accent-muted" style={{ width: `${(c.count / max) * 100}%` }} />
+            </span>
+            <span className="w-8 text-right font-semibold tabular-nums text-gray-900 dark:text-white">
+              {c.count}
+              <span className="sr-only"> mistake{c.count === 1 ? '' : 's'}</span>
+            </span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )
 }
 
 const REASON_META = {
@@ -192,6 +233,8 @@ export default function MistakeLog({ course }: { course: MistakeCourse }) {
         </fieldset>
       )}
 
+      {course === 'mcat' && !error && items.length > 0 && <CarsSkillsPanel items={items} />}
+
       {error ? (
         <p role="alert" className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800 dark:border-red-800 dark:bg-red-900/20 dark:text-red-300">{error}</p>
       ) : loading && !data ? (
@@ -222,7 +265,7 @@ export default function MistakeLog({ course }: { course: MistakeCourse }) {
                   <div className="min-w-0">
                     <p className="font-semibold text-gray-900 dark:text-white">{title}</p>
                     <p className="text-xs text-gray-500 dark:text-gray-400">
-                      {[m.topicTitle && m.discipline ? m.discipline : null, sourceLabel(m.source)].filter(Boolean).join(' · ')}
+                      {[m.topicTitle && m.discipline ? m.discipline : null, sourceLabel(m.source, m.attemptKind)].filter(Boolean).join(' · ')}
                     </p>
                   </div>
                   <span className={`inline-flex shrink-0 items-center gap-1 rounded-full px-2 py-0.5 text-xs font-semibold ${reason.cls}`}>

@@ -32,6 +32,12 @@ export const FL4_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Oxygen is much more electronegative than hydrogen, so each O–H bond is polar, and because the molecule is bent (about 104.5°) the two bond dipoles do not cancel; these permanent molecular dipoles orient around charges and weaken the field between them. A linear water molecule would have bond dipoles pointing in opposite directions that cancel, leaving no net dipole. The O–H bond is strongly polar, not nonpolar, and polarizability of electron clouds contributes only a small part of the dielectric constant. Water does not transfer protons to ions such as $\\text{Na}^+$ or $\\text{Cl}^-$; it surrounds them intact.',
+        optionExplanations: [
+          'Oxygen is far more electronegative than hydrogen, so each O–H bond is polar, and the bent geometry (about 104.5°) keeps the two bond dipoles from canceling. The resulting permanent molecular dipoles orient around dissolved charges and weaken the field between them, producing the large dielectric constant.',
+          'A linear water molecule would have its two bond dipoles pointing in opposite directions, so they would cancel and leave no net dipole. Water’s dielectric behavior depends on it being bent, not linear.',
+          'The O–H bond is strongly polar because of the large electronegativity difference between oxygen and hydrogen, not nonpolar. Distortion of electron clouds (polarizability) contributes only a small part of water’s dielectric constant compared with reorientation of permanent dipoles.',
+          'Water does not transfer protons to ions such as $\\text{Na}^+$ or $\\text{Cl}^-$; it surrounds them intact in a hydration shell. The passage describes oriented water molecules gathering around ions, not a chemical conversion to hydroxide.',
+        ],
         skill: '5B molecular polarity of water (Skill 1)',
       },
       {
@@ -40,6 +46,12 @@ export const FL4_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The solution contains 0.10 M $\\text{Mg}^{2+}$ ($z = +2$) and 0.20 M $\\text{Cl}^-$ ($z = -1$), so $I = \\tfrac{1}{2}[(0.10)(2)^2 + (0.20)(1)^2] = \\tfrac{1}{2}(0.40 + 0.20) = 0.30$ M. The value 0.15 M ignores the charges and simply halves the total ion concentration; 0.20 M uses $z$ rather than $z^2$ for magnesium; 0.60 M omits the factor of one-half in the definition.',
+        optionExplanations: [
+          'This value simply halves the total ion concentration, $\\tfrac{1}{2}(0.10 + 0.20) = 0.15$ M, ignoring the charges entirely. Ionic strength weights each ion by the square of its charge, which quadruples magnesium’s contribution.',
+          'This value uses $z$ rather than $z^2$ for magnesium: $\\tfrac{1}{2}[(0.10)(2) + (0.20)(1)] = 0.20$ M. The definition $I = \\tfrac{1}{2}\\sum c_i z_i^2$ squares the charge, so the divalent ion contributes 0.40, not 0.20.',
+          'The solution contains 0.10 M $\\text{Mg}^{2+}$ and 0.20 M $\\text{Cl}^-$. Applying $I = \\tfrac{1}{2}\\sum c_i z_i^2$ gives $\\tfrac{1}{2}[(0.10)(4) + (0.20)(1)] = \\tfrac{1}{2}(0.60) = 0.30$ M.',
+          'This value omits the factor of one-half in the definition: $(0.10)(4) + (0.20)(1) = 0.60$. The sum of $c_i z_i^2$ must be halved to give the ionic strength, which is 0.30 M.',
+        ],
         skill: '5A ionic strength calculation (Skill 2)',
       },
       {
@@ -53,6 +65,12 @@ export const FL4_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'For a weak acid, dilution shifts the dissociation equilibrium toward the ions (the ion side has more dissolved particles), so the fraction ionized rises; the ion concentration, roughly $\\sqrt{K_a C}$, falls by only about $\\sqrt{10} \\approx 3$-fold rather than tenfold. A tenfold drop would apply to a strong electrolyte whose ionization is complete at both concentrations. Ionic mobility does not fall on dilution; if anything it rises slightly. An unchanged $K_a$ does not mean an unchanged ion concentration, because the total amount of acid per liter has fallen.',
+        optionExplanations: [
+          'A tenfold drop in conductivity would apply to a strong electrolyte like NaCl, which is fully dissociated at both concentrations. Lactic acid is a weak electrolyte whose degree of ionization changes with dilution, so its ion concentration does not fall in proportion.',
+          'Dilution shifts the weak-acid equilibrium toward the ions because the ionized side has more dissolved particles, so the fraction ionized rises. The ion concentration scales roughly as $\\sqrt{K_a C}$, falling only about $\\sqrt{10} \\approx 3$-fold, so conductivity falls less than tenfold.',
+          'Ionic mobility does not fall on dilution; if anything, fewer ion–ion interactions let ions move slightly more freely. A more-than-tenfold drop would require both complete dissociation and decreased mobility, neither of which applies here.',
+          '$K_a$ is indeed constant at fixed temperature, but an unchanged equilibrium constant does not mean an unchanged ion concentration. The total acid per liter has fallen tenfold, so the absolute number of ions must decrease even though the ionized fraction increases.',
+        ],
         skill: '5A weak electrolytes and dilution (Skill 2)',
       },
       {
@@ -66,6 +84,12 @@ export const FL4_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Because $\\text{Li}^+$ packs a +1 charge into a very small volume, it attracts water dipoles strongly and moves with a large, tightly held hydration shell; the passage notes that anything that increases the effective size of the moving particle increases drag and lowers mobility. $\\text{Li}^+$ (about 7 g/mol) is much lighter than $\\text{K}^+$ (about 39 g/mol), and mobility is set by the balance of electric force and drag, not by acceleration. Both ions carry a charge of +1. Ion pairing would reduce the number of charge carriers in a salt solution but would not explain why an individual $\\text{Li}^+$ ion moves more slowly.',
+        optionExplanations: [
+          '$\\text{Li}^+$ (about 7 g/mol) is much lighter than $\\text{K}^+$ (about 39 g/mol), so this reverses the masses. Moreover, the passage states that mobility is set by the balance between electric force and drag at steady speed, not by acceleration.',
+          'Both ions carry a charge of +1, so $\\text{Li}^+$ does not have a larger charge. The difference lies in charge density (charge per unit volume), which affects hydration, not in the total charge or the number of nearby anions.',
+          'Ion pairing would reduce the number of free charge carriers in a salt solution, but the question asks why an individual $\\text{Li}^+$ ion moves more slowly in a field. Pairing does not explain a lower mobility per ion.',
+          'Packing a +1 charge into a very small volume gives $\\text{Li}^+$ a high charge density, so it binds water dipoles tightly and moves with a large hydration shell. The passage states that anything increasing the effective size of the moving particle raises drag and lowers mobility.',
+        ],
         skill: '5A hydration and ionic mobility (Skill 1)',
       },
     ],
@@ -100,6 +124,12 @@ export const FL4_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'A 3-μm sphere in the polymer solution moves at 50 μm/s. In buffer, velocity rises with the square of the radius (11, 44, 100 μm/s at 1, 2, 3 μm), so 50 μm/s corresponds to $r = 3/\\sqrt{2} \\approx 2.1$ μm, just above the 2-μm point (44 μm/s). A 1.5-μm radius would follow if velocity were proportional to radius rather than to its square. A 3.0-μm sphere in buffer moves twice as fast (100 μm/s), and a 4.2-μm sphere moves about four times as fast, applying the factor of √2 in the wrong direction.',
+        optionExplanations: [
+          'A 1.5-μm sphere would match 50 μm/s only if velocity were proportional to the radius itself (half the radius for half the speed). The buffer data (11, 44, 100 μm/s at 1, 2, 3 μm) show velocity scales with the square of the radius.',
+          'In the polymer solution a 3-μm sphere moves at 50 μm/s. In buffer, velocity rises as $r^2$ (11, 44, 100 μm/s at 1, 2, 3 μm), so 50 μm/s corresponds to $r = 3/\\sqrt{2} \\approx 2.1$ μm, just above the 2-μm point at 44 μm/s.',
+          'A 3.0-μm sphere in the saline buffer moves at 100 μm/s, twice as fast as the 50 μm/s observed in the polymer solution. Matching radii ignores the halving of velocity that the polymer produces.',
+          'A 4.2-μm sphere in buffer would move at about 200 μm/s, four times the target. This applies the factor of $\\sqrt{2}$ in the wrong direction, enlarging the radius when the slower polymer velocity calls for a smaller buffer sphere.',
+        ],
         skill: '4B reading sedimentation data (Skill 4)',
       },
       {
@@ -113,6 +143,12 @@ export const FL4_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'At constant velocity the net force is zero (Newton’s first law). The field force points outward, while both the buoyant force and the drag force point inward, so drag = field force − buoyant force. Drag is not zero; it is the very force that stops the acceleration, and it is zero only for a particle at rest relative to the fluid. Setting drag equal to the field force alone ignores buoyancy, which is large here because polystyrene is only slightly denser than the buffer. Adding the buoyant force treats it as acting in the same direction as the field force, which it does not.',
+        optionExplanations: [
+          'Drag is not zero at constant velocity; it is exactly the force that stopped the acceleration. The drag force $6\\pi\\eta r v$ depends on speed, and the sphere is still moving relative to the fluid, so drag is substantial.',
+          'Equating drag with the field force alone ignores buoyancy. Because polystyrene is only 0.05 g/cm³ denser than the buffer, the buoyant force is nearly as large as the field force, so omitting it overstates drag enormously.',
+          'At constant velocity the net force is zero. The field force points outward while both the buoyant force and the drag force point inward, so the balance is drag = field force on the sphere − buoyant force.',
+          'Adding the buoyant force treats it as acting in the same direction as the field force. Buoyancy acts opposite to the field (toward the axis in a centrifuge), so it reduces rather than augments the force that drag must balance.',
+        ],
         skill: '4A Newton’s laws: terminal velocity (Skill 1)',
       },
       {
@@ -121,6 +157,12 @@ export const FL4_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Here 3000 rev/min = 50 rev/s, so $\\omega = 2\\pi(50) \\approx 314$ rad/s and $\\omega^2 \\approx 1 \\times 10^5\\ \\text{s}^{-2}$. Then $\\omega^2 R \\approx (1 \\times 10^5)(0.10\\ \\text{m}) = 1 \\times 10^4\\ \\text{m/s}^2$, and dividing by $g \\approx 10\\ \\text{m/s}^2$ gives an RCF of about 1000. An RCF near 30 results from using 50 rev/s as $\\omega$ without the factor of $2\\pi$; about 10,000 results from forgetting to divide by $g$; about 100,000 results from using 3000 rev/min directly as $\\omega$.',
+        optionExplanations: [
+          'An RCF near 30 results from using 50 rev/s directly as $\\omega$ without converting to radians per second. Angular speed in rad/s requires multiplying revolutions per second by $2\\pi$, which squared adds a factor of about 40.',
+          'Converting 3000 rev/min to 50 rev/s and multiplying by $2\\pi$ gives $\\omega \\approx 314$ rad/s, so $\\omega^2 \\approx 1 \\times 10^5\\ \\text{s}^{-2}$. Then $\\omega^2 R \\approx (1 \\times 10^5)(0.10) = 1 \\times 10^4\\ \\text{m/s}^2$, and dividing by $g \\approx 10$ gives RCF ≈ 1000.',
+          'A value near 10,000 is the centripetal acceleration $\\omega^2 R$ in m/s² itself. RCF is defined as a multiple of $g$, so the acceleration must still be divided by about 10 m/s².',
+          'A value near 100,000 results from plugging 3000 rev/min directly into the formula as $\\omega$ without converting to rev/s or to rad/s. The units must be rad/s for $\\omega^2 R$ to give an acceleration.',
+        ],
         skill: '4A circular motion: centripetal acceleration (Skill 2)',
       },
       {
@@ -129,6 +171,12 @@ export const FL4_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Velocity is proportional to $r^2(\\rho_p - \\rho_f)$. The radius ratio of 3 μm to 1.5 μm gives a factor of $2^2 = 4$, and the density differences are 1.10 − 1.025 = 0.075 g/cm³ for red cells versus 1.04 − 1.025 = 0.015 g/cm³ for platelets, a factor of 5; together, 4 × 5 = 20. A factor of 4 considers only the radii and 5 considers only the densities. A factor of 10 treats velocity as proportional to the radius rather than to its square.',
+        optionExplanations: [
+          'A factor of 4 considers only the radii: $(3/1.5)^2 = 4$. It ignores that the red cell’s density excess over plasma (0.075 g/cm³) is five times the platelet’s (0.015 g/cm³), which multiplies the ratio further.',
+          'A factor of 5 considers only the density differences, 0.075 versus 0.015 g/cm³, and ignores the radii. The red cell has twice the radius, which contributes an additional factor of $2^2 = 4$ because velocity scales as $r^2$.',
+          'A factor of 10 treats velocity as proportional to the radius (factor 2) times the density-difference ratio (factor 5). Stokes sedimentation velocity depends on $r^2$, so the radius contributes a factor of 4, not 2.',
+          'Velocity is proportional to $r^2(\\rho_p - \\rho_f)$. The radius ratio 3 μm : 1.5 μm gives $2^2 = 4$, and the density differences 1.10 − 1.025 = 0.075 versus 1.04 − 1.025 = 0.015 g/cm³ give 5. Together, 4 × 5 = 20.',
+        ],
         skill: '4B Stokes’ law and differential centrifugation (Skill 2)',
       },
       {
@@ -142,6 +190,12 @@ export const FL4_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Velocity depends on $(\\rho_p - \\rho_f)/\\eta$. Because the spheres are only 0.05 g/cm³ denser than buffer, a polymer that raised the medium’s density to 1.025 g/cm³ would halve the velocities even with no change in viscosity, so the density must be measured before the halving in Figure 1 is attributed to viscosity alone. A higher RCF would speed spheres in both media by the same factor and would not separate the two possibilities. Every size already shows the same twofold ratio, so larger spheres would add nothing. Sphere mass is fixed by the known radius and density and is identical in both media.',
+        optionExplanations: [
+          'Velocity depends on $(\\rho_p - \\rho_f)/\\eta$, and the spheres are only 0.05 g/cm³ denser than buffer. A polymer that raised the medium density to 1.025 g/cm³ would halve velocities without any viscosity change, so density must be measured before attributing the halving to viscosity alone.',
+          'A higher RCF would increase velocities in both media by the same factor, since $a$ multiplies the whole expression. It would reproduce the same twofold ratio and could not distinguish a viscosity effect from a density effect.',
+          'Every radius in Figure 1 already shows the same twofold ratio between media, so adding larger spheres would reveal nothing new. Viscosity and density effects both scale identically with radius through the $r^2$ term.',
+          'Sphere mass is fixed by the known radius and polystyrene density and is identical in both media. Measuring it cannot address why the polymer medium halved the velocities, which hinges on properties of the medium, not the spheres.',
+        ],
         skill: '4B confounding variables (Skill 3)',
       },
     ],
@@ -166,6 +220,12 @@ export const FL4_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'At the midpoint, $K_U = 1$ and $\\Delta G_U = 0$, so $\\Delta G_U(\\text{H}_2\\text{O}) = m \\cdot C_m$: 5.7 × 4.0 ≈ 22.8 kJ/mol for the wild type and 5.7 × 4.5 ≈ 25.7 kJ/mol for Variant B, a stabilization of about 2.9 kJ/mol. The value +0.5 is the difference in $C_m$ in molar urea, not in energy. +5.7 kJ/mol is the $m$ value, the change per 1 M of urea, not the effect of the substitution. +25.7 kJ/mol is the total stability of Variant B rather than the change caused by the substitution.',
+        optionExplanations: [
+          'This value is the difference in $C_m$ in molar urea (4.5 − 4.0 = 0.5 M), not a free energy. Converting to energy requires multiplying by $m$, the change in $\\Delta G_U$ per molar urea, which is 5.7 kJ·mol⁻¹·M⁻¹.',
+          'At the midpoint, $K_U = 1$ and $\\Delta G_U = 0$, so $\\Delta G_U(\\text{H}_2\\text{O}) = m \\cdot C_m$. For wild type this is 5.7 × 4.0 ≈ 22.8 kJ/mol; for Variant B, 5.7 × 4.5 ≈ 25.7 kJ/mol. The difference is about +2.9 kJ/mol of stabilization.',
+          'This value is $m$, the change in $\\Delta G_U$ per 1 M of urea, which is identical for all three proteins. It describes how the stability responds to denaturant, not how much the substitution changed the stability in water.',
+          'This value is the total stability of Variant B in water, $m \\cdot C_m = 5.7 \\times 4.5 \\approx 25.7$ kJ/mol. The question asks for the change relative to wild type, which requires subtracting the wild-type value of 22.8 kJ/mol.',
+        ],
         skill: '5E ΔG of unfolding from denaturation data (Skill 4)',
       },
       {
@@ -174,6 +234,12 @@ export const FL4_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'For the wild type, $\\Delta G_U = 22.8 - 5.7(3.0) = 5.7$ kJ/mol. Because $\\Delta G_U = -RT\\ln K_U$ and $RT\\ln 10 \\approx 5.7$ kJ/mol, $K_U = 10^{-1} = 0.1$, so U : N = 1 : 10 and the unfolded fraction is 1/11, about 9%. The value 91% inverts the ratio, giving the folded fraction. 50% applies only at the midpoint, 4.0 M urea. 1% would require $\\Delta G_U \\approx 11.4$ kJ/mol, the value at 2.0 M urea.',
+        optionExplanations: [
+          'This value inverts the ratio and gives the folded fraction. With $K_U = 0.1$, U : N is 1 : 10, so 10/11 ≈ 91% of molecules remain folded, while only 9% are unfolded at 3.0 M urea.',
+          'Half of the molecules are unfolded only at the midpoint concentration $C_m$, which is 4.0 M urea for the wild type. At 3.0 M urea, $\\Delta G_U$ is still positive and the folded state predominates.',
+          'For wild type, $\\Delta G_U = 22.8 - 5.7(3.0) = 5.7$ kJ/mol. Since $RT\\ln 10 \\approx 5.7$ kJ/mol, $K_U = 10^{-1} = 0.1$, so U : N = 1 : 10 and the unfolded fraction is 1/11, about 9%.',
+          'An unfolded fraction of 1% would correspond to $K_U \\approx 0.01$ and $\\Delta G_U \\approx 11.4$ kJ/mol, which is the stability at 2.0 M urea, not 3.0 M. This underestimates how far the denaturant has already lowered $\\Delta G_U$.',
+        ],
         skill: '5E free energy and equilibrium constant (Skill 2)',
       },
       {
@@ -187,6 +253,12 @@ export const FL4_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Replacing leucine’s isobutyl side chain with alanine’s methyl group removes three carbons from the tightly packed core, leaving a cavity; the lost van der Waals contacts and the smaller buried nonpolar surface (a weaker hydrophobic effect) destabilize the folded state. Leucine’s side chain is a hydrocarbon, so it has no hydrogen-bond donor, carries no charge for an ionic interaction, and cannot form a covalent cross-link; disulfide cross-links form between two cysteines.',
+        optionExplanations: [
+          'Replacing leucine’s isobutyl side chain with alanine’s methyl removes three carbons from the tightly packed core, leaving a cavity. The lost van der Waals contacts and the reduced buried nonpolar surface (weaker hydrophobic effect) destabilize the native state.',
+          'Leucine’s side chain is a pure hydrocarbon with no N–H or O–H group, so it has no hydrogen-bond donor. It cannot donate a hydrogen bond to a backbone carbonyl, and losing one is not the explanation.',
+          'Leucine’s side chain carries no charge, so it cannot form an ionic interaction with lysine or any other charged residue. Ionic interactions involve acidic or basic side chains, which leucine lacks.',
+          'Leucine cannot form a covalent cross-link; the only common side-chain cross-link in proteins is the disulfide bond between two cysteines. Moreover, the crystal structures showed the variant backbone unchanged, consistent with a packing defect rather than a lost covalent bond.',
+        ],
         skill: '5B hydrophobic effect and protein stability (Skill 1)',
       },
       {
@@ -200,6 +272,12 @@ export const FL4_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'At $T_m$, half of the molecules are unfolded, so $K_U = 1$ and $\\Delta G_U = -RT\\ln 1 = 0$; from $\\Delta G = \\Delta H - T\\Delta S$, it follows that $\\Delta H_U = T_m\\Delta S_U$. $\\Delta H_U$ and $\\Delta S_U$ are both large and positive for unfolding; they cancel at $T_m$ but are not zero. A positive or negative $\\Delta G_U$ would describe temperatures below or above $T_m$, and even then both states would be present in proportions set by $K_U$.',
+        optionExplanations: [
+          'A positive $\\Delta G_U$ describes temperatures below $T_m$, where folded molecules predominate. At $T_m$ itself, by definition half the molecules are unfolded, which requires $\\Delta G_U = 0$. Even below $T_m$, some unfolded molecules exist in proportion to $K_U$.',
+          '$\\Delta G_U$ is zero at $T_m$, but $\\Delta H_U$ and $\\Delta S_U$ are both large and positive for unfolding. They cancel at $T_m$ because $\\Delta H_U = T\\Delta S_U$; neither term is itself zero.',
+          'A negative $\\Delta G_U$ describes temperatures above $T_m$, where unfolded molecules predominate. At 64 °C, the wild-type $T_m$, the two states are equally populated, so $\\Delta G_U = 0$ and neither state dominates.',
+          'At $T_m$, half of the molecules are unfolded, so $K_U = 1$ and $\\Delta G_U = -RT\\ln 1 = 0$. From $\\Delta G = \\Delta H - T\\Delta S$, setting $\\Delta G_U = 0$ gives $\\Delta H_U = T_m\\Delta S_U$.',
+        ],
         skill: '5E ΔG = ΔH − TΔS at a transition midpoint (Skill 1)',
       },
       {
@@ -213,6 +291,12 @@ export const FL4_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Tryptophan fluorescence reports burial in the core (tertiary structure), and CD at 222 nm reports helical secondary structure. If an intermediate that kept its helices but lost core packing accumulated, the two probes would give different curves; coincident curves support the two-state model on which the calculation of $\\Delta G_U$ depends. Reversibility was tested separately, by diluting samples unfolded in 8 M urea. Comparing two probes of the same samples cannot reveal a baseline effect of urea common to both. Backbone conformation was established by the crystal structures, not by the denaturation curves.',
+        optionExplanations: [
+          'Reversibility was tested by a separate experiment: samples unfolded in 8 M urea and then diluted gave the same signals as never-denatured samples. Comparing two probes on the same samples addresses a different question about intermediates.',
+          'Tryptophan fluorescence reports burial of the core (tertiary structure), while CD at 222 nm reports helical secondary structure. If an intermediate retained helices but lost core packing, the two curves would diverge; coincident curves support the two-state model underlying the $\\Delta G_U$ calculation.',
+          'Comparing two different probes of the same samples cannot isolate a baseline effect of urea common to both signals. Such an artifact would require separate controls, not a comparison of fluorescence against CD.',
+          'Backbone conformation of the variants was established by crystal structures, which showed them indistinguishable from wild type. The denaturation curves measure unfolding equilibria, not the structure of the native state.',
+        ],
         skill: '5D two-state unfolding: experimental design (Skill 3)',
       },
     ],
@@ -251,6 +335,12 @@ export const FL4_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Raising the temperature lowers $1/T$, so it corresponds to moving from right to left in Figure 1. In that direction, log $K_{sp}$ for Salt P rises from −4.5 to −4.0, while log $K_{sp}$ for Salt Q falls from −4.75 to −5.0. The option in which P decreases and Q increases reads the horizontal axis as if it were temperature itself. The two lines have slopes of opposite sign, so the two constants cannot change in the same direction.',
+        optionExplanations: [
+          'Raising temperature lowers $1/T$, which corresponds to moving leftward in Figure 1. In that direction Salt Q’s log $K_{sp}$ falls from −4.75 to −5.0, so Salt Q’s $K_{sp}$ decreases; the two salts do not change in the same direction.',
+          'The two lines have slopes of opposite sign, so the two $K_{sp}$ values cannot both decrease. Moving leftward (higher T), Salt P’s log $K_{sp}$ rises from −4.5 to −4.0, meaning its $K_{sp}$ increases with temperature.',
+          'This reads the horizontal axis as if it were temperature itself. Because the axis is $1/T$, higher temperature is to the left, where Salt P’s log $K_{sp}$ is higher (−4.0) and Salt Q’s is lower (−5.0). The actual directions are the reverse of this.',
+          'Higher temperature means smaller $1/T$, so it corresponds to moving from right to left in Figure 1. Along that direction, log $K_{sp}$ for Salt P rises from −4.5 to −4.0 (increasing $K_{sp}$), while log $K_{sp}$ for Salt Q falls from −4.75 to −5.0 (decreasing $K_{sp}$).',
+        ],
         skill: '5E reading a van ’t Hoff plot (Skill 4)',
       },
       {
@@ -259,6 +349,12 @@ export const FL4_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The slope for Salt P is $\\Delta(\\log K)/\\Delta(1/T) = (-4.0 - (-4.5))/[(32.0 - 34.5) \\times 10^{-4}\\ \\text{K}^{-1}] = 0.5/(-2.5 \\times 10^{-4}) = -2000$ K. Then $\\Delta H^\\circ = -2.303R \\times \\text{slope} = -(19)(-2000) \\approx +38{,}000$ J/mol, or +38 kJ/mol; the positive sign fits a solubility that rises with temperature. −38 kJ/mol drops the negative sign in the slope relation. +17 kJ/mol uses $R$ in place of $2.303R$, and +88 kJ/mol multiplies by 2.303 a second time.',
+        optionExplanations: [
+          'This value drops the negative sign in the slope relation. The slope is $-\\Delta H^\\circ/(2.303R)$, and Salt P’s slope is negative (−2000 K), so $\\Delta H^\\circ$ must be positive, consistent with a solubility that increases with temperature.',
+          'This value uses $R$ (8.3 J/(mol·K)) instead of $2.303R$ (19 J/(mol·K)) when converting the slope. The passage gives the equation in terms of $\\log K$ (base 10), which carries the factor of 2.303.',
+          'The slope for Salt P is $(-4.0 - (-4.5))/[(32.0 - 34.5) \\times 10^{-4}] = 0.5/(-2.5 \\times 10^{-4}) = -2000$ K. Then $\\Delta H^\\circ = -2.303R \\times \\text{slope} = -(19)(-2000) \\approx +38$ kJ/mol, positive as expected for a salt whose solubility rises with temperature.',
+          'This value multiplies by 2.303 a second time. The passage already states that $2.303R \\approx 19$ J/(mol·K), so applying another factor of 2.303 to the 38 kJ/mol result overcounts the logarithm conversion.',
+        ],
         skill: '5E ΔH from the van ’t Hoff slope (Skill 2)',
       },
       {
@@ -272,6 +368,12 @@ export const FL4_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Spontaneity under actual conditions depends on $\\Delta G = \\Delta G^\\circ + RT\\ln Q$. In pure water the ion product $Q$ starts at zero, so $RT\\ln Q$ is large and negative and $\\Delta G < 0$ until $Q$ reaches $K_{sp}$, where $\\Delta G = 0$. An endothermic $\\Delta H^\\circ$ opposes the process rather than driving it. Separating ions from a crystal lattice requires energy (the lattice energy) rather than releasing it; energy is released only as the ions are hydrated. $K_{sp}$ is a constant at a given temperature and does not change as the salt dissolves.',
+        optionExplanations: [
+          'Spontaneity under actual conditions depends on $\\Delta G = \\Delta G^\\circ + RT\\ln Q$. In pure water the ion product $Q$ begins at zero, so $RT\\ln Q$ is large and negative, making $\\Delta G < 0$ until $Q$ reaches $K_{sp}$, where $\\Delta G = 0$ and dissolution stops.',
+          'A positive $\\Delta H^\\circ$ means dissolution is endothermic, which opposes rather than drives the process. Heat absorbed is a cost, not a driving force; dissolution proceeds despite the positive enthalpy because of the entropy and concentration terms.',
+          'Separating ions from a crystal lattice requires energy (the lattice energy); it does not release it. Energy is released only in the second step, hydration of the separated ions. This reverses the sign of the lattice step.',
+          '$K_{sp}$ is an equilibrium constant that depends only on temperature and does not change as more solid dissolves. What changes is the ion product $Q$, which rises toward $K_{sp}$ until equilibrium is reached.',
+        ],
         skill: '5E ΔG versus ΔG° and the reaction quotient (Skill 1)',
       },
       {
@@ -285,6 +387,12 @@ export const FL4_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'In the first series, the solutions approached saturation from below; in the second, they approached it from above as excess solute crystallized out. If either approach had been too slow, the first series would have given values that were too low and the second values that were too high, so agreement from both directions shows that true equilibrium was reached. Figure 1 shows that the two salts have quite different $K_{sp}$ values. Both series were filtered in the same way, so they could not reveal loss of drug to the filters. $\\Delta H^\\circ$ still requires $K_{sp}$ at more than one temperature.',
+        optionExplanations: [
+          'Figure 1 shows the two salts have quite different $K_{sp}$ values, with Salt P roughly an order of magnitude more soluble than Salt Q. The second series duplicated the first series within 3% for each salt; it did not compare salts to each other.',
+          'Both series were filtered in exactly the same way at the bath temperature, so any adsorption of drug to the filters would affect both equally. Agreement between the series therefore cannot reveal or rule out filter losses.',
+          '$\\Delta H^\\circ$ still requires $K_{sp}$ at more than one temperature, since it comes from the slope of log $K$ versus $1/T$. The second series provided no shortcut around plotting; it reproduced the same six temperatures.',
+          'The first series approached saturation from below (dissolving excess solid), the second from above (crystallizing from a supersaturated solution). If 48 hours were too short, the first would read too low and the second too high; agreement from both directions shows true equilibrium was reached.',
+        ],
         skill: '5E establishing equilibrium: research design (Skill 3)',
       },
     ],
@@ -312,6 +420,12 @@ export const FL4_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Going down a group, acidity of H–A increases because the larger atom spreads the negative charge of A⁻ over a greater volume and forms a longer, weaker bond to hydrogen; for oxygen and sulfur, this size effect outweighs electronegativity. As the passage notes, sulfur is less electronegative than oxygen (2.6 versus 3.4), so electronegativity cannot explain the difference. Thiols form weaker hydrogen bonds than alcohols, and stabilizing the neutral acid would make it weaker, not stronger. Sulfur is more polarizable than oxygen, not less.',
+        optionExplanations: [
+          'Sulfur is less electronegative than oxygen (about 2.6 versus 3.4), as the passage states, so it pulls less electron density toward itself. Electronegativity would predict alcohols to be the stronger acids, the opposite of what is observed.',
+          'Thiols form weaker hydrogen bonds than alcohols because sulfur is less electronegative and larger. Moreover, stabilizing the neutral acid form would make the acid weaker, not stronger, so this reasoning runs backward.',
+          'Going down a group, acidity of H–A increases because the larger atom spreads the negative charge of the conjugate base over a greater volume and forms a longer, weaker bond to hydrogen. For oxygen versus sulfur, this size effect outweighs the electronegativity difference.',
+          'Sulfur is more polarizable than oxygen, not less, because its valence electrons occupy the third shell and are held more loosely. Greater polarizability helps disperse the thiolate’s negative charge, which stabilizes it and increases thiol acidity.',
+        ],
         skill: '5D acidity of thiols vs alcohols (Skill 1)',
       },
       {
@@ -325,6 +439,12 @@ export const FL4_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Because a sulfur 3p orbital overlaps poorly with the carbonyl π system, the thioester carbonyl receives little lone-pair donation and behaves more like a ketone carbonyl; it can therefore accept and delocalize the negative charge of the enolate onto oxygen more effectively than an ester carbonyl, whose oxygen lone pair already competes for the π system. Sulfur is less electronegative than oxygen, not more. A C–S bond is longer than a C–O bond, and the poor overlap is exactly why resonance is weak. The sulfur in a thioester is neutral and bears no formal charge.',
+        optionExplanations: [
+          'Sulfur is less electronegative than oxygen (2.6 versus 3.4), so it does not withdraw electrons more strongly. The enhanced acidity of thioester α-hydrogens arises from weak resonance donation into the carbonyl, not from inductive withdrawal.',
+          'A C–S bond is longer than a C–O bond, not shorter, because sulfur is a larger third-period atom. The 3p–2p mismatch causes poor overlap, which is precisely why resonance stabilization in thioesters is weak.',
+          'The sulfur in a thioester is neutral and carries no formal charge. It is bonded to the acyl carbon and the R′ group with two lone pairs, like the oxygen in an ordinary ester, and does not transfer charge to the methyl carbon.',
+          'Because the sulfur 3p orbital overlaps poorly with the carbonyl π system, the thioester carbonyl receives little lone-pair donation and behaves more like a ketone. It can therefore accept and delocalize the enolate’s negative charge onto oxygen more effectively than an ester carbonyl, whose oxygen lone pair competes for the π system.',
+        ],
         skill: '5D thioester reactivity and α-hydrogen acidity (Skill 2)',
       },
       {
@@ -338,6 +458,12 @@ export const FL4_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'A phosphodiester keeps one acidic OH ($\\text{p}K_a$ near 1.5), so at pH 7 it is an anion whose charge repels hydroxide and reduces the electrophilicity of phosphorus. A triester has no ionizable OH, so it is neutral and is attacked by hydroxide much more readily. Negative charge repels rather than attracts an anionic nucleophile, and the triester has less charge, not more. Hydrolysis requires nucleophilic attack at phosphorus, not removal of a proton. An additional small alkyl group adds some steric bulk, but losing the negative charge has the much larger effect.',
+        optionExplanations: [
+          'A phosphodiester retains one acidic OH ($\\text{p}K_a$ near 1.5), so at pH 7 it is an anion whose negative charge repels hydroxide and lowers phosphorus’s electrophilicity. A triester has no ionizable OH, is neutral, and is attacked by hydroxide far more readily.',
+          'Negative charge repels an anionic nucleophile like hydroxide rather than attracting it, and the triester carries less charge than the diester, not more. Both the direction of the effect and the charge comparison are reversed here.',
+          'Hydrolysis proceeds by nucleophilic attack of hydroxide at phosphorus, not by removal of a proton. The absence of an acidic proton is what keeps the triester neutral and makes it more, not less, reactive toward hydroxide.',
+          'A third small alkyl group adds some steric bulk around phosphorus, but the passage attributes kinetic stability primarily to negative charge repelling anionic nucleophiles. Losing that charge has a much larger effect than modest steric hindrance, so the triester reacts faster, not slower.',
+        ],
         skill: '5D phosphate ester reactivity (Skill 2)',
       },
       {
@@ -346,6 +472,12 @@ export const FL4_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The monoester has two acidic OH groups. With a $\\text{p}K_a$ near 1, the first is fully ionized at pH 7.4 (charge −1). For the second, pH − p$K_a$ = 7.4 − 6.4 = 1, so the ratio of ionized to un-ionized forms is 10 : 1 and about 91% of molecules carry the second negative charge, for an average near −1.9. A charge of −3.0 assumes three ionizable protons, which only free phosphate has. −1.5 would apply only if pH equaled the second p$K_a$, and −1.0 ignores the second ionization.',
+        optionExplanations: [
+          'A charge of −3.0 assumes three ionizable protons, which only free phosphoric acid has. A monoester has used one OH for the ester linkage and retains just two acidic OH groups, so its maximum charge is −2.',
+          'The first OH ($\\text{p}K_a$ near 1) is fully ionized at pH 7.4, giving −1. For the second, pH − p$K_a$ = 7.4 − 6.4 = 1, so ionized : un-ionized is 10 : 1 and about 91% carry the second charge, for an average near −1.9.',
+          'A charge of −1.5 would apply only if the pH equaled the second $\\text{p}K_a$ of 6.4, where the second ionization is exactly half complete. At pH 7.4, one unit above that $\\text{p}K_a$, about 91% rather than 50% of the molecules are doubly charged.',
+          'A charge of −1.0 counts only the first ionization and ignores the second OH group with $\\text{p}K_a$ 6.4. At pH 7.4, one unit above that value, the second group is about 91% ionized and contributes nearly a full additional negative charge.',
+        ],
         skill: '5A Henderson–Hasselbalch and phosphate charge (Skill 2)',
       },
     ],
@@ -362,6 +494,12 @@ export const FL4_CHEM_PHYS_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'The beat frequency equals the difference between the two frequencies, so the string was at either 437 Hz or 443 Hz. Raising the tension raises the wave speed on the string and therefore its frequency; because the beat frequency then increased, the string must have moved farther from 440 Hz, so it started above 440 Hz, at 443 Hz (and ended near 445 Hz). A string at 437 Hz would have moved toward 440 Hz and produced fewer beats. 435 Hz and 445 Hz differ from 440 Hz by the final beat frequency, not the original one.',
+    optionExplanations: [
+      'A string at 435 Hz differs from 440 Hz by 5 Hz, the final beat frequency, not the original 3 Hz. It would also be below the fork, and raising its tension would move it toward 440 Hz, reducing beats rather than increasing them.',
+      'A 437-Hz string would indeed produce 3 beats per second initially, but increasing its tension raises its frequency toward 440 Hz, which would reduce the beat frequency. The observed increase to 5 beats per second rules out starting below the fork.',
+      'The beat frequency equals the frequency difference, so the string was at 437 Hz or 443 Hz. Raising tension raises the string’s frequency; because beats then increased, the string moved farther from 440 Hz, so it started above the fork at 443 Hz and ended near 445 Hz.',
+      'A string at 445 Hz differs from 440 Hz by 5 Hz, which is the beat frequency after the tension was increased, not before. The original string was 3 Hz away from the fork, at 443 Hz, and reached about 445 Hz after tightening.',
+    ],
     skill: '4D beats (Skill 2)',
   },
   {
@@ -378,6 +516,12 @@ export const FL4_CHEM_PHYS_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'Potential is a scalar: the third corner is equally distant from both charges, so $kq/r + k(-q)/r = 0$. The field is a vector: the field of +q points away from +q, and the field of −q points toward −q; their components perpendicular to the base cancel, and their components along the base add, giving a nonzero field directed from the +q side toward the −q side. Zero potential does not imply zero field. A perpendicular field would arise from two like charges, and a nonzero potential would require unequal distances or unequal magnitudes.',
+    optionExplanations: [
+      'Potential is a scalar: the third corner is equidistant from +q and −q, so $kq/r + k(-q)/r = 0$. The field is a vector: the field from +q points away from it and the field from −q points toward it; their perpendicular components cancel and their components along the base add, giving a field parallel to the line from +q toward −q.',
+      'Zero potential does not imply zero field. The two field vectors have equal magnitude but do not point in opposite directions; their components along the line joining the charges add, so the net field is nonzero even though the scalar potentials cancel.',
+      'A field perpendicular to the base would arise from two like charges, whose along-base components cancel. For opposite charges, the perpendicular components cancel and the along-base components add. Moreover, the potential is zero, not nonzero, because the distances and magnitudes are equal.',
+      'The potential is zero, not nonzero, because the third corner is equidistant from charges of equal magnitude and opposite sign. The field direction is also reversed here: it points from the +q side toward the −q side, not the other way.',
+    ],
     skill: '4C electric potential vs field of point charges (Skill 1)',
   },
   {
@@ -389,6 +533,12 @@ export const FL4_CHEM_PHYS_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'Bond polarity increases with the difference in electronegativity between the bonded atoms. Using Pauling values (H 2.1, C 2.5, N 3.0, Cl 3.0, O 3.5), the differences are 1.4 for O–H, 1.0 for C–O, 0.9 for N–H, and 0.5 for C–Cl. Although chlorine is highly electronegative, carbon is fairly electronegative too, so C–Cl has the smallest difference of the four. N–H and C–O are polar but have smaller differences than O–H.',
+    optionExplanations: [
+      'Although chlorine is highly electronegative (3.0), carbon is fairly electronegative too (2.5), so the C–Cl difference is only 0.5, the smallest of the four. High electronegativity of one atom alone does not make a bond polar; the difference matters.',
+      'The N–H electronegativity difference is 3.0 − 2.1 = 0.9, which makes the bond polar but less so than O–H. Oxygen is more electronegative than nitrogen, so the O–H difference of 1.4 exceeds this value.',
+      'The C–O difference is 3.5 − 2.5 = 1.0, which is polar but smaller than the 1.4 difference for O–H. Carbon is more electronegative than hydrogen, which narrows the gap relative to the O–H bond.',
+      'Bond polarity increases with the electronegativity difference between the bonded atoms. Using Pauling values (H 2.1, C 2.5, N 3.0, Cl 3.0, O 3.5), the differences are 1.4 for O–H, 1.0 for C–O, 0.9 for N–H, and 0.5 for C–Cl, so O–H is most polar.',
+    ],
     skill: '4E electronegativity and bond polarity (Skill 1)',
   },
   {
@@ -400,6 +550,12 @@ export const FL4_CHEM_PHYS_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'Spontaneity requires $\\Delta G^\\circ = \\Delta H^\\circ - T\\Delta S^\\circ < 0$, so $T > \\Delta H^\\circ/\\Delta S^\\circ = 40{,}000/125 = 320$ K. Because both terms are positive, the unfavorable enthalpy dominates at low temperature and the favorable entropy term dominates at high temperature. Spontaneity at all temperatures would require $\\Delta H^\\circ < 0$ and $\\Delta S^\\circ > 0$; spontaneity only below a threshold describes negative $\\Delta H^\\circ$ and negative $\\Delta S^\\circ$; no spontaneous temperature describes positive $\\Delta H^\\circ$ with negative $\\Delta S^\\circ$.',
+    optionExplanations: [
+      'Spontaneity at all temperatures requires $\\Delta H^\\circ < 0$ and $\\Delta S^\\circ > 0$, so that both terms favor the reaction. Here $\\Delta H^\\circ$ is positive, so at low temperature the unfavorable enthalpy dominates and $\\Delta G^\\circ$ is positive.',
+      'Spontaneity requires $\\Delta G^\\circ = \\Delta H^\\circ - T\\Delta S^\\circ < 0$, so $T > \\Delta H^\\circ/\\Delta S^\\circ = 40{,}000/125 = 320$ K. With both terms positive, the favorable entropy term dominates only above this temperature.',
+      'Spontaneity only below a threshold temperature describes a reaction with negative $\\Delta H^\\circ$ and negative $\\Delta S^\\circ$, where the favorable enthalpy is overcome by the unfavorable entropy at high T. Here the signs are both positive, so the reverse pattern applies.',
+      'No spontaneous temperature describes a reaction with positive $\\Delta H^\\circ$ and negative $\\Delta S^\\circ$, where both terms oppose the reaction. Here $\\Delta S^\\circ$ is positive, so $-T\\Delta S^\\circ$ eventually outweighs the enthalpy at high enough temperature.',
+    ],
     skill: '5E ΔG = ΔH − TΔS and temperature (Skill 2)',
   },
   {
@@ -416,6 +572,12 @@ export const FL4_CHEM_PHYS_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'By the n + 1 rule, a signal is split by the n equivalent protons on adjacent carbons. The C-2 proton has six neighboring methyl protons, giving 6 + 1 = 7 lines (a septet), and the six equivalent methyl protons have one neighboring proton, giving a doublet. Reversing the two patterns counts the protons on the carbon itself rather than on its neighbors. A triplet and quartet describe an ethyl group. A methyl singlet would require no protons on the adjacent carbon, but C-2 bears one.',
+    optionExplanations: [
+      'This reverses the two patterns by counting the protons on each carbon itself rather than on its neighbors. The C-2 proton is split by six methyl neighbors into a septet; the methyls are split by the single C-2 proton into a doublet.',
+      'A triplet and quartet describe an ethyl group, $\\text{CH}_3\\text{CH}_2$–, where the CH₂ has three neighbors and the CH₃ has two. In 2-chloropropane the C-2 proton has six neighbors and each methyl has one.',
+      'By the n + 1 rule, the C-2 proton has six equivalent neighboring methyl protons, giving 6 + 1 = 7 lines (a septet). The six equivalent methyl protons each see one neighboring proton on C-2, giving a doublet.',
+      'The septet for the C-2 proton is right, but a methyl singlet would require no protons on the adjacent carbon. C-2 bears one proton, which splits each methyl signal into a doublet.',
+    ],
     skill: '5D ¹H NMR spin–spin splitting (Skill 2)',
   },
   {
@@ -432,6 +594,12 @@ export const FL4_CHEM_PHYS_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'Saponification hydrolyzes ester bonds to release fatty acids as carboxylate salts. Cholesterol is a steroid, an isoprenoid built of four fused hydrocarbon rings with a single hydroxyl group and no ester-linked fatty acid, so base does not release a carboxylate from it. Tristearin contains three fatty acid esters of glycerol, phosphatidylcholine contains two fatty acid esters on its glycerol backbone, and the wax cetyl palmitate is an ester of palmitic acid with a long-chain alcohol; all three release fatty acid salts.',
+    optionExplanations: [
+      'Tristearin contains three fatty acid ester linkages to glycerol. Heating with aqueous NaOH saponifies all three esters, releasing glycerol and three equivalents of sodium stearate, a carboxylate salt.',
+      'Phosphatidylcholine has two fatty acids esterified to its glycerol backbone. Base hydrolysis cleaves these ester bonds and releases the fatty acids as carboxylate salts, so this lipid is saponifiable.',
+      'Cetyl palmitate is an ester of palmitic acid with the long-chain alcohol cetyl alcohol. Saponification cleaves the ester, releasing sodium palmitate (a carboxylate salt) and cetyl alcohol.',
+      'Cholesterol is a steroid built from four fused hydrocarbon rings with a single hydroxyl group and no ester-linked fatty acid. There is no ester bond to hydrolyze, so base cannot release a carboxylate from it.',
+    ],
     skill: '5D steroid structure vs saponifiable lipids (Skill 1)',
   },
   {
@@ -448,6 +616,12 @@ export const FL4_CHEM_PHYS_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'Molality is moles of solute per kilogram of solvent; neither quantity changes with temperature, so molality is constant. Molarity is moles of solute per liter of solution, and the solution’s volume increases slightly on heating, so molarity decreases slightly. Molality depends on mass, not volume, so thermal expansion cannot change it. Keeping all solute and solvent in the container fixes the amounts but not the volume. A change in solubility affects how much salt could dissolve, not the concentration of salt already dissolved.',
+    optionExplanations: [
+      'Molality is moles of solute per kilogram of solvent, and neither quantity changes with temperature. Molarity is moles per liter of solution; the solution expands slightly on heating, so the same moles occupy a larger volume and molarity falls slightly.',
+      'This reverses the two quantities. Molality depends on the mass of solvent, which is unchanged by heating, so it cannot decrease. Molarity depends on volume, which does expand, so molarity is the one that changes.',
+      'Keeping all solute and solvent sealed in the container fixes the amounts of each, which keeps molality constant. It does not fix the volume of the solution, which expands on heating, so molarity does change.',
+      'Increased solubility affects how much additional salt could dissolve if more were present, not the concentration of salt already dissolved. The amount of NaCl in solution is unchanged, so neither concentration increases.',
+    ],
     skill: '5A molality vs molarity (Skill 1)',
   },
 ]

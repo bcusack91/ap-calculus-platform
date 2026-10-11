@@ -29,6 +29,12 @@ export const FL1_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Specific activity is total activity divided by total protein: 20,000 U / 5,000 mg = 4 U/mg in the lysate and 15,000 U / 150 mg = 100 U/mg after Step 3, so the fold purification through Step 3 is 100/4 = 25. Yield is the activity remaining relative to the starting activity: 12,000 U / 20,000 U = 60% after Step 4. The pairing of 25-fold with 75% takes the yield from Step 3 rather than Step 4. The pairing of 100-fold with 60% takes the fold purification from Step 4 (400 U/mg ÷ 4 U/mg). The 33-fold value is the ratio of total protein (5,000/150), which ignores the activity lost along the way.',
+        optionExplanations: [
+          'Specific activity rises from 20,000/5,000 = 4 U/mg in the lysate to 15,000/150 = 100 U/mg after Step 3, a 25-fold purification. Yield after Step 4 is 12,000/20,000 = 60%.',
+          'The 25-fold purification is right, but 75% is the yield after Step 3 (15,000/20,000). The question asks for the yield after Step 4, where 12,000 U remain, which is 60%.',
+          'The 60% yield is right, but 100-fold is the purification after Step 4 (400 U/mg ÷ 4 U/mg), not through Step 3, where specific activity is 100 U/mg, a 25-fold increase.',
+          'Thirty-three-fold is the ratio of total protein (5,000/150), which ignores the activity lost along the way, and 75% is the Step 3 yield rather than the final yield after Step 4.',
+        ],
         skill: '5D protein purification (Skill 4)',
       },
       {
@@ -42,6 +48,12 @@ export const FL1_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Isoelectric focusing placed the enzyme’s pI at 5.2. At pH 7.5, more than two units above the pI, the protein’s acidic side chains are deprotonated and it carries a net negative charge, so it binds the positively charged diethylaminoethyl groups; the rising NaCl gradient then supplies chloride ions that compete for the resin and displace the protein, which matches the observation that no activity passed through during loading. A net positive charge would require a pH below the pI. A protein with no net charge exists only at its pI, and DEAE-cellulose is an ion exchanger, not a hydrophobic resin. Histidine side chains (pKa near 6) are mostly neutral at pH 7.5, and a positively charged group would be repelled by the resin in any case.',
+        optionExplanations: [
+          'A net positive charge would require the pH to lie below the enzyme’s pI of 5.2. At pH 7.5 the protein is negative, and the passage states that no activity passed through during loading.',
+          'With a pI of 5.2, at pH 7.5 the enzyme’s acidic side chains are deprotonated and it is net negative, so it binds the positively charged DEAE groups until chloride from the NaCl gradient competes it off, matching the observation that no activity passed through unbound.',
+          'A protein is uncharged only at its pI (5.2), not at pH 7.5. Moreover, DEAE-cellulose is an ion exchanger that retains proteins by charge, not a hydrophobic-interaction resin.',
+          'Histidine (p$K_a$ near 6) is mostly neutral at pH 7.5, and a protonated histidine would be positive and repelled by the cationic resin rather than pairing with its counter-ions.',
+        ],
         skill: '5D ion-exchange chromatography (Skill 2)',
       },
       {
@@ -55,6 +67,12 @@ export const FL1_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Size exclusion, run under native conditions, reports a mass of about 96 kDa, whereas SDS-PAGE, which dissociates noncovalent assemblies, shows a single 48-kDa species: two identical 48-kDa subunits make a 96-kDa dimer. Because the SDS-PAGE band is the same with or without β-mercaptoethanol, no disulfide bond needs to be broken to separate the subunits, so they are held together noncovalently. SDS is a detergent that disrupts noncovalent interactions; it does not cleave peptide bonds. A disulfide-linked dimer would run near 96 kDa on SDS-PAGE without reducing agent and near 48 kDa with it. A heterodimer of unequal subunits would give two bands on SDS-PAGE.',
+        optionExplanations: [
+          'SDS is a detergent that disrupts noncovalent associations; it does not cleave peptide bonds. A single 96-kDa chain would still run at 96 kDa on SDS-PAGE.',
+          'A disulfide-linked dimer would migrate near 96 kDa without β-mercaptoethanol and near 48 kDa with it. The band position was unchanged by the reducing agent, so no disulfide holds the subunits together.',
+          'Native size exclusion gives 96 kDa, SDS-PAGE gives a single 48-kDa band, and the reducing agent changes nothing: two identical 48-kDa subunits held together by noncovalent interactions that SDS alone disrupts.',
+          'A heterodimer of subunits that differ substantially in mass would produce two distinct bands on SDS-PAGE, but the final preparation gave a single 48-kDa band.',
+        ],
         skill: '5D protein quaternary structure (Skill 2)',
       },
       {
@@ -68,6 +86,12 @@ export const FL1_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Ion-exchange binding depends on electrostatic attraction between the protein and the resin, and a redissolved ammonium sulfate pellet is a concentrated salt solution. Sulfate anions would compete with the negatively charged enzyme for the positively charged resin, and the high ionic strength would screen the attraction, so the enzyme would pass through unbound; dialysis against low-salt buffer removes the small salt ions while retaining the protein. Dialysis dilutes rather than concentrates a sample, and binding strength is set by charge, not by concentration. The pellet was redissolved in the same pH 7.5 buffer, so the pH did not need adjusting. Dialysis at 4 °C against buffer does not denature proteins.',
+        optionExplanations: [
+          'A redissolved ammonium sulfate pellet is a concentrated salt solution. Sulfate anions would compete with the negatively charged enzyme for the cationic resin and the high ionic strength would screen the attraction, so dialysis removes the salt first.',
+          'Dialysis dilutes rather than concentrates a sample, and the strength of ion-exchange binding is determined by the protein’s charge, not by its concentration.',
+          'The pellet was redissolved in the same pH 7.5 phosphate buffer used throughout, so the pH was already more than two units above the pI; no pH adjustment was needed.',
+          'Dialysis against buffer at low temperature is a gentle buffer-exchange step; it does not denature proteins, and no centrifugation step is described after it.',
+        ],
         skill: '5D separation methods (Skill 3)',
       },
       {
@@ -81,6 +105,12 @@ export const FL1_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'In size-exclusion chromatography, molecules too large to enter the pores of the beads travel only through the space between beads and elute first, while smaller molecules enter the pores, take a longer path, and elute later. The native enzyme behaves as a 96-kDa globular protein, so the 150-kDa protein elutes first, the enzyme second, and the 25-kDa protein last. Ordering from smallest to largest reverses the principle, as if size exclusion worked like SDS-PAGE, where small proteins migrate fastest. Placing the enzyme first or the 25-kDa protein before the enzyme would require the intermediate or smallest species to be excluded from more pores than the largest, which is not possible.',
+        optionExplanations: [
+          'This ordering runs smallest to largest, as if size exclusion worked like SDS-PAGE. In size exclusion the largest molecules are excluded from the pores and elute first.',
+          'The 96-kDa enzyme cannot elute before the 150-kDa protein, which is excluded from more pore volume and takes the shorter path. Placing the 25-kDa protein second also inverts the principle.',
+          'The 150-kDa protein does elute first, but the 25-kDa protein, which enters the most pore volume, must elute last, after the 96-kDa enzyme, not before it.',
+          'Large molecules bypass the bead pores and elute first; small ones enter the pores and elute later. The native enzyme behaves as 96 kDa, so the order is 150 kDa, enzyme, 25 kDa.',
+        ],
         skill: '5D size-exclusion chromatography (Skill 1)',
       },
     ],
@@ -123,6 +153,12 @@ export const FL1_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'For a first-order process the half-life, $t_{1/2} = 0.693/k$, is independent of the starting concentration. In Figure 1 both Run 1 (8.0 → 4.0 mM) and Run 2 (4.0 → 2.0 mM) take 20 minutes to halve, and within each run every successive halving also takes 20 minutes, which is the signature of first-order kinetics. A constant drop per interval would describe a zero-order reaction, and the figure shows the drop shrinking over time. The faster rate in Run 3 reflects the higher temperature and says nothing about the order with respect to the drug. Equal initial rates at different starting concentrations would indicate zero order; the initial rate in Run 2 is in fact about half that in Run 1.',
+        optionExplanations: [
+          'A constant drop in millimolar per interval is the signature of a zero-order reaction. Figure 1 shows the drop shrinking each interval (2.3, 1.7, 1.2, and so on), not staying constant.',
+          'For a first-order process the half-life is independent of starting concentration. Run 1 (8.0 → 4.0 mM) and Run 2 (4.0 → 2.0 mM) both take 20 minutes to halve, and each successive halving also takes 20 minutes.',
+          'The faster disappearance in Run 3 reflects the higher temperature (47 °C versus 37 °C), not the order in Drug P. A temperature comparison cannot establish reaction order.',
+          'Equal initial rates at different starting concentrations would indicate zero order. In fact the initial rate in Run 2 is about half that in Run 1, which is what first order predicts.',
+        ],
         skill: '5E reaction order from data (Skill 4)',
       },
       {
@@ -131,6 +167,12 @@ export const FL1_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'From Figure 1 the half-life at 37 °C is 20 min (8.0 mM falls to 4.0 mM at 20 min and to 2.0 mM at 40 min). For a first-order reaction $k = 0.693/t_{1/2} = 0.693/20\\ \\text{min} \\approx 0.035\\ \\text{min}^{-1}$. The value 0.069 min⁻¹ uses a 10-minute half-life, which belongs to Run 3 at 47 °C. The value 0.020 min⁻¹ is the reciprocal of the 50-minute observation window rather than of the half-life. The value 0.025 min⁻¹ is the average fractional loss per minute over the first 20 minutes (half of the drug in 20 min), which is not how a first-order rate constant is defined.',
+        optionExplanations: [
+          'A value of 0.020 min⁻¹ is the reciprocal of the 50-minute observation window, not of the half-life. The rate constant is derived from $t_{1/2}$, not from the total time of the experiment.',
+          'A value of 0.025 min⁻¹ is the average fractional loss per minute over the first 20 minutes (half the drug in 20 min). A first-order rate constant is 0.693 divided by the half-life, not 0.5 divided by it.',
+          'Figure 1 shows a 20-minute half-life at 37 °C (8.0 to 4.0 mM at 20 min, 2.0 mM at 40 min). For first order, $k = 0.693/t_{1/2} = 0.693/20 \\approx 0.035\\ \\text{min}^{-1}$.',
+          'A value of 0.069 min⁻¹ corresponds to a 10-minute half-life, which is what Run 3 shows at 47 °C, not the 37 °C condition asked about.',
+        ],
         skill: '5E rate constant calculation (Skill 2)',
       },
       {
@@ -144,6 +186,12 @@ export const FL1_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'To establish the order with respect to a species, its concentration must be varied while everything else is held constant. Each unit increase in pH raises the hydroxide concentration tenfold, so if the reaction is first order in hydroxide the observed rate constant should rise tenfold and the half-life should fall from 20 min to about 2 min and then 0.2 min at pH 8.4 and 9.4. Varying temperature tests the Arrhenius relationship, not the dependence on hydroxide. Varying the initial drug concentration repeats the comparison of Runs 1 and 2 and probes the order in drug only. Varying enzyme concentration characterizes the enzyme-catalyzed pathway, whose rate the passage already states is proportional to enzyme concentration.',
+        optionExplanations: [
+          'To find the order in hydroxide, only hydroxide must vary. Each pH unit raises $[\\text{OH}^-]$ tenfold, so first-order dependence predicts the half-life falling from 20 min to about 2 min and then 0.2 min.',
+          'Varying temperature while holding pH fixed probes the Arrhenius relationship and activation energy; hydroxide concentration stays constant, so this says nothing about the order in hydroxide.',
+          'Varying initial drug concentration repeats the comparison already made between Runs 1 and 2 and tests the order in Drug P, not in hydroxide ion.',
+          'Varying β-lactamase concentration characterizes the enzyme-catalyzed pathway, which the passage already states is proportional to enzyme concentration; it does not address the non-enzymatic hydroxide dependence.',
+        ],
         skill: '5E rate-law experimental design (Skill 3)',
       },
       {
@@ -157,6 +205,12 @@ export const FL1_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The Arrhenius equation describes how the rate constant grows with temperature at a fixed activation energy: raising the temperature broadens the distribution of molecular energies, so a larger fraction of encounters between drug and hydroxide has enough energy to cross the barrier, and here a 10 °C rise roughly doubles $k$. The activation energy is a property of the pathway and does not change with temperature; it is the exponential factor $e^{-E_a/RT}$ that changes. A larger equilibrium constant would affect the final extent of reaction, but hydrolysis already goes to completion in both runs and the question concerns rate, not equilibrium. Nothing in the data suggests a change of mechanism, and the frequency factor $A$ is nearly temperature independent.',
+        optionExplanations: [
+          'An equilibrium constant governs the final extent of reaction, not its rate. Hydrolysis already goes to completion in both runs; the question is about how fast $k$ changes with temperature.',
+          'Nothing in the data suggests a change in mechanism, and the frequency factor $A$ in the Arrhenius equation is nearly temperature independent; the exponential term is what changes.',
+          'Activation energy is a property of the reaction pathway and does not depend on temperature. Temperature changes the fraction of collisions that can surmount a fixed barrier.',
+          'In $k = Ae^{-E_a/RT}$, raising $T$ makes the exponential factor larger: a broader energy distribution means more drug–hydroxide encounters exceed the fixed activation energy, roughly doubling $k$ here for a 10 °C rise.',
+        ],
         skill: '5E activation energy and temperature (Skill 1)',
       },
     ],
@@ -179,6 +233,12 @@ export const FL1_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'For a parallel-plate geometry the field is uniform and equals the potential difference divided by the plate separation: $E = V/d = (0.070\\ \\text{V})/(5 \\times 10^{-9}\\ \\text{m}) = 1.4 \\times 10^{7}$ V/m, closest to $1 \\times 10^{7}$ V/m. This enormous field across a very thin insulator is what allows voltage-gated channels to sense small changes in membrane potential. The value $1 \\times 10^{4}$ V/m results from using 5 μm rather than 5 nm for the thickness. The value $1 \\times 10^{6}$ V/m slips one power of ten in converting nanometers to meters, and $1 \\times 10^{5}$ V/m slips two.',
+        optionExplanations: [
+          'A field of $1 \\times 10^{4}$ V/m results from using a thickness of 5 μm instead of 5 nm, three orders of magnitude too thick for a lipid bilayer.',
+          'A field of $1 \\times 10^{5}$ V/m slips two powers of ten in converting the 5 nm thickness to meters (5 × 10⁻⁹ m).',
+          'A field of $1 \\times 10^{6}$ V/m slips one power of ten in the nanometer-to-meter conversion; 0.070 V across 5 × 10⁻⁹ m gives 1.4 × 10⁷ V/m.',
+          'For parallel plates the field is uniform: $E = V/d = 0.070\\ \\text{V}/(5 \\times 10^{-9}\\ \\text{m}) = 1.4 \\times 10^{7}$ V/m, closest to $1 \\times 10^{7}$ V/m. This huge field is what voltage-gated channels sense.',
+        ],
         skill: '4C electric field in a capacitor (Skill 2)',
       },
       {
@@ -187,6 +247,12 @@ export const FL1_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           '$U = \\tfrac{1}{2}CV^2 = \\tfrac{1}{2}(1.0 \\times 10^{-4}\\ \\text{F})(2.0 \\times 10^{3}\\ \\text{V})^2 = \\tfrac{1}{2}(1.0 \\times 10^{-4})(4.0 \\times 10^{6}) = 200$ J, in the range of energies used clinically. The value 400 J omits the factor of one-half. The value 2 J uses $V$ rather than $V^2$ (giving $\\tfrac{1}{2}CV$ with mismatched units), and 0.2 J compounds that error with a misplaced decimal in the capacitance.',
+        optionExplanations: [
+          'A value of 0.2 J compounds two errors: using $V$ instead of $V^2$ and misplacing a decimal in the capacitance. The correct expression is $\\tfrac{1}{2}CV^2$.',
+          'A value of 2 J uses $V$ rather than $V^2$ (computing $\\tfrac{1}{2}CV$ with mismatched units). Energy on a capacitor scales with the square of the voltage.',
+          '$U = \\tfrac{1}{2}CV^2 = \\tfrac{1}{2}(1.0 \\times 10^{-4}\\ \\text{F})(2000\\ \\text{V})^2 = \\tfrac{1}{2}(10^{-4})(4 \\times 10^{6})$ = 200 J, within the clinical range for monophasic defibrillation.',
+          'A value of 400 J omits the factor of one-half in $\\tfrac{1}{2}CV^2$, computing $CV^2$ instead.',
+        ],
         skill: '4C capacitor energy (Skill 2)',
       },
       {
@@ -200,6 +266,12 @@ export const FL1_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The peak current is $I_0 = V_0/R$, so doubling the resistance halves the peak current (40 A becomes 20 A for a 2000-V charge). The time constant $\\tau = RC$ doubles (5 ms becomes 10 ms), so the discharge lasts longer. The total energy delivered is the energy that was stored on the capacitor, $\\tfrac{1}{2}CV_0^2$, all of which is eventually dissipated in the resistance regardless of its value, so the total energy is essentially unchanged. Half the energy over the same time would require the energy to depend on $R$, which it does not. The same or twice the peak current contradicts Ohm’s law for a fixed initial voltage, and a shorter delivery time contradicts the longer time constant.',
+        optionExplanations: [
+          'Peak current $I_0 = V_0/R$ halves when resistance doubles; the time constant $\\tau = RC$ doubles, so delivery takes longer. All stored energy $\\tfrac{1}{2}CV_0^2$ is eventually dissipated in the chest regardless of $R$, so total energy is unchanged.',
+          'Half the peak current is right, but the stored energy does not depend on $R$; all of it is dissipated eventually. Also the time constant doubles, so the discharge is not over an equal interval.',
+          'The same peak current contradicts Ohm’s law for a fixed initial voltage: $I_0 = V_0/R$ must halve. A shorter delivery time also contradicts the doubled time constant $RC$.',
+          'Twice the peak current would require half the resistance, not double. The energy stored on the capacitor is fixed by $\\tfrac{1}{2}CV_0^2$ and cannot double, and the time constant lengthens rather than shortens.',
+        ],
         skill: '4C RC discharge and Ohm’s law (Skill 2)',
       },
       {
@@ -213,6 +285,12 @@ export const FL1_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Open channels are conductors in parallel with one another and with the membrane capacitance. Parallel conductances add, so opening more channels raises the total conductance and lowers the membrane resistance $R$; with the capacitance fixed by the bilayer, $\\tau = RC$ decreases and the membrane potential can change more quickly. Channels are proteins that conduct ions; they do not change the thickness or area of the insulating bilayer, so the capacitance is unaffected. Adding parallel pathways lowers rather than raises resistance. Area affects $R$ and $C$ in opposite directions and cancels out of $\\tau$, which depends on the specific resistance and capacitance, so area is not what fixes the time constant.',
+        optionExplanations: [
+          'Channels are proteins that conduct ions; they do not alter the thickness or area of the insulating bilayer, so membrane capacitance is unchanged when they open.',
+          'Open channels are parallel conductances, and parallel conductances add. More open channels lower the total membrane resistance; they cannot raise it.',
+          'Ligand-gated channels are conductors in parallel; opening many of them raises total conductance and lowers membrane resistance $R$. With $C$ fixed by the bilayer, $\\tau = RC$ decreases and the potential can change faster.',
+          'Membrane area affects $R$ and $C$ in opposite directions and cancels out of $\\tau$, which depends on specific resistance and capacitance. Opening channels changes resistance, so $\\tau$ does change.',
+        ],
         skill: '4C parallel conductances and time constant (Skill 1)',
       },
     ],
@@ -242,6 +320,12 @@ export const FL1_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'In this reaction ferricyanide is reduced (the cathode half-reaction, E = +0.36 V) and $\\text{FADH}_2$ is oxidized, which is the reverse of the FAD reduction half-reaction (E = −0.22 V). The reaction potential is $E_{cathode} - E_{anode} = 0.36 - (-0.22) = +0.58$ V; a positive value means $\\Delta G$ is negative and the reaction is spontaneous, which is why ferricyanide can regenerate the active enzyme. The value +0.14 V subtracts 0.22 instead of −0.22. A value of −0.58 V would describe the reverse reaction, ferrocyanide reducing FAD, which does not occur spontaneously. The spontaneity of the reaction between the mediator and the enzyme is a property of the two couples and does not depend on whether the electrode circuit is closed; the circuit is needed only to reoxidize ferrocyanide and measure the current.',
+        optionExplanations: [
+          'A potential of +0.14 V subtracts 0.22 instead of −0.22: $E_{cathode} - E_{anode} = 0.36 - (-0.22)$, not 0.36 − 0.22. The sign of the FAD couple’s potential was dropped.',
+          'Ferricyanide is reduced (E = +0.36 V) and $\\text{FADH}_2$ is oxidized, the reverse of the FAD half-reaction (E = −0.22 V). $E = 0.36 - (-0.22) = +0.58$ V; positive E means negative $\\Delta G$ and spontaneity.',
+          'A potential of −0.58 V describes the reverse reaction, ferrocyanide reducing FAD, which is indeed nonspontaneous. The reaction asked about is the forward one, in which ferricyanide reoxidizes $\\text{FADH}_2$.',
+          'The spontaneity of the reaction between mediator and enzyme is set by the two reduction potentials alone. The electrode circuit is needed only to reoxidize ferrocyanide and measure current, not to make this reaction occur.',
+        ],
         skill: '4C cell potential from reduction potentials (Skill 2)',
       },
       {
@@ -255,6 +339,12 @@ export const FL1_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'For the reduction $\\text{Fe(CN)}_6^{3-} + e^- \\rightarrow \\text{Fe(CN)}_6^{4-}$, the reaction quotient is $Q = [\\text{Fe(CN)}_6^{4-}]/[\\text{Fe(CN)}_6^{3-}]$, and the Nernst equation gives $E = E^\\circ - (0.0592/n)\\log Q$. With far more ferricyanide (the oxidized form) than ferrocyanide, $Q < 1$, $\\log Q$ is negative, and $E$ is more positive than +0.36 V: a solution rich in the oxidized species is a stronger oxidizing agent. A quotient greater than 1 would require an excess of the reduced form and would lower the potential. The Nernst equation describes the potential of any half-cell whose concentrations are known, not only equilibrium mixtures; at equilibrium the cell potential would be zero.',
+        optionExplanations: [
+          'For the reduction half-reaction, $Q = [\\text{Fe(CN)}_6^{4-}]/[\\text{Fe(CN)}_6^{3-}]$. With far more ferricyanide (oxidized form), $Q < 1$, $\\log Q$ is negative, and $E = E^\\circ - (0.0592/n)\\log Q$ is more positive than +0.36 V.',
+          'A reaction quotient greater than 1 would require an excess of the reduced form (ferrocyanide) over ferricyanide, the opposite of the stated condition, and it would make $E$ more negative, not more positive.',
+          'The direction is reversed: with $Q < 1$, $\\log Q$ is negative, and subtracting a negative term raises $E$. A solution rich in the oxidized species is a stronger oxidizing agent.',
+          'The Nernst equation gives the potential of any half-cell with known concentrations, not just equilibrium mixtures. At true equilibrium the cell potential would be zero, which is not the situation here.',
+        ],
         skill: '4C Nernst equation (Skill 1)',
       },
       {
@@ -268,6 +358,12 @@ export const FL1_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The current reports the rate of the enzyme reaction, and an enzyme-catalyzed rate follows Michaelis–Menten behavior: nearly proportional to substrate concentration when substrate is scarce and approaching a maximum when the enzyme is saturated. Table 2 shows the current rising by 0.40 μA for each 2 mM increment up to 4 mM but by only 0.26 μA between 8 and 10 mM, the expected flattening toward $V_{max}$. Ferricyanide is present in large excess, so it is not depleted. Oxygen is not part of the mediated pathway, and the nitrogen-purge test showed that the response does not depend on it. Direct reduction of ferricyanide by glucose is ruled out by the strip prepared without enzyme, which gave no current in 10 mM glucose.',
+        optionExplanations: [
+          'Ferricyanide is present in large excess in the reagent layer, so it is not depleted at the glucose concentrations tested. Its abundance is exactly what keeps the enzyme turning over.',
+          'The current reports the enzyme’s rate, which follows Michaelis–Menten kinetics: proportional to glucose when scarce and approaching $V_{max}$ when the enzyme saturates. Table 2 shows the increment per 2 mM shrinking from 0.40 μA to 0.26 μA.',
+          'Oxygen plays no role in the mediated pathway; ferricyanide replaces it. The nitrogen-purge test showed the response was unchanged without dissolved oxygen, ruling this out.',
+          'The strip prepared without glucose oxidase gave no measurable current in 10 mM glucose, so glucose does not reduce ferricyanide directly at any tested concentration.',
+        ],
         skill: '4C enzyme electrode data interpretation (Skill 4)',
       },
       {
@@ -281,6 +377,12 @@ export const FL1_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The plain strip gives 0.32 μA of extra current when ascorbate is added, consistent with the passage’s note that ascorbate is readily oxidized at the working potential, adding electrons to the measured current without any involvement of glucose. The negatively charged membrane, which excludes anions, removes essentially all of the extra current (0.78 → 0.80 μA) while leaving the glucose response intact, so the interfering species must be an anion that the membrane keeps away from the electrode; ascorbate is an anion at pH 7. If ascorbate were a substrate of glucose oxidase the membrane, which admits neutral molecules, would not block a neutral substrate, and in any case glucose oxidase is specific for glucose. A pH shift would change the glucose signal too, and a polymer membrane does not buffer a sample. Ascorbate raised rather than lowered the current, so it did not reduce the amount of glucose reaching the enzyme.',
+        optionExplanations: [
+          'Glucose oxidase is specific for glucose, and the membrane admits small neutral molecules, so it would not block a neutral substrate. Ascorbate also adds current without the enzyme, pointing to direct electrode oxidation.',
+          'A pH shift that altered the mediator potential would change the glucose signal too, yet the membrane-coated strip gives essentially the same current with and without ascorbate. A polymer membrane does not buffer a sample.',
+          'Ascorbate raised the plain strip’s current from 0.80 to 1.12 μA, so it did not reduce the amount of glucose reaching the enzyme; less glucose would lower the current, not raise it.',
+          'Ascorbate added 0.32 μA to the plain strip, consistent with direct oxidation at the working potential. The anion-excluding membrane removed that extra current (0.78 → 0.80 μA) while preserving the glucose response, so the interferent is the ascorbate anion.',
+        ],
         skill: '4C interference and control design (Skill 3)',
       },
     ],
@@ -308,6 +410,12 @@ export const FL1_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Alkyl groups donate electron density to the carbonyl carbon by induction and hyperconjugation, reducing its partial positive charge, and they also crowd the approach of a nucleophile. An aldehyde has only one alkyl group where a ketone has two, so its carbonyl carbon is both more electrophilic and more accessible. The aldehyde is less, not more, hindered. The π bond of an aldehyde is not weaker than that of a ketone in any way relevant to nucleophilic addition; the difference lies in the electrophilicity and accessibility of the carbon. A hydrogen atom has no lone pairs or π electrons and cannot participate in resonance with the tetrahedral intermediate.',
+        optionExplanations: [
+          'An aldehyde has one alkyl group where a ketone has two. Alkyl groups donate electron density (reducing the carbon’s partial positive charge) and crowd the nucleophile’s approach, so the aldehyde carbon is more electrophilic and more accessible.',
+          'The aldehyde carbon is less hindered, not more, because a hydrogen is much smaller than an alkyl group. The claim about steric hindrance reverses the actual comparison.',
+          'The C=O π bond of an aldehyde is not weaker than a ketone’s in any way relevant to nucleophilic addition; the difference lies in the electrophilicity and accessibility of the carbonyl carbon.',
+          'A hydrogen atom has no lone pairs or π electrons, so it cannot participate in resonance with the tetrahedral intermediate. Resonance stabilization is not the source of aldehyde reactivity.',
+        ],
         skill: '5D aldehyde vs ketone reactivity (Skill 1)',
       },
       {
@@ -316,6 +424,12 @@ export const FL1_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'In an aldol addition the new carbon–carbon bond joins the α-carbon of the nucleophile to the former carbonyl carbon of the electrophile, which becomes the carbon bearing the β-hydroxyl group. A retro-aldol cleavage breaks that same bond. In fructose 1,6-bisphosphate the carbonyl is at C2, so the α-carbon is C3 and the β-carbon bearing the hydroxyl is C4; cleavage between C3 and C4 gives a three-carbon ketone fragment (C1–C3, dihydroxyacetone phosphate) and a three-carbon aldehyde fragment (C4–C6, glyceraldehyde 3-phosphate). Breaking C1–C2 or C2–C3 would sever a bond to the carbonyl carbon itself, which the aldol mechanism does not do. Breaking C4–C5 would separate the β-carbon from the γ-carbon, not from the α-carbon.',
+        optionExplanations: [
+          'Breaking C1–C2 would sever a bond to the carbonyl carbon itself. The aldol mechanism forms and breaks the bond between the α-carbon and the former electrophilic carbonyl carbon, never a bond directly to the nucleophile’s carbonyl.',
+          'Breaking C2–C3 would separate the carbonyl carbon from its own α-carbon, which the retro-aldol mechanism does not do; the enolate forms at C3 and remains attached to C2.',
+          'With the carbonyl at C2, the α-carbon is C3 and the β-hydroxyl carbon is C4; the aldol bond joins these two. Retro-aldol cleavage of C3–C4 gives dihydroxyacetone phosphate (C1–C3) and glyceraldehyde 3-phosphate (C4–C6).',
+          'Breaking C4–C5 would separate the β-carbon from the γ-carbon rather than from the α-carbon, and it would not yield two three-carbon fragments.',
+        ],
         skill: '5D aldol and retro-aldol reactions (Skill 2)',
       },
       {
@@ -329,6 +443,12 @@ export const FL1_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The side-chain amino group of lysine has a $pK_a$ near 10.5, so at pH 2 essentially every molecule is the ammonium ion, which has no lone pair and cannot attack the carbonyl carbon; without the initial addition, no carbinolamine and no imine can form. Protonation of the carbonyl oxygen makes the carbon a stronger, not a weaker, electrophile. At pH 2 the carbinolamine hydroxyl would be protonated readily, so the dehydration step is not the obstacle; the problem lies earlier. The keto form of a simple aldehyde predominates overwhelmingly at any pH, so the enol tautomer is not what limits the reaction.',
+        optionExplanations: [
+          'Protonating the carbonyl oxygen makes the carbonyl carbon a stronger electrophile, not a weaker one, so this cannot be what slows the reaction at low pH.',
+          'Lysine’s side-chain amine has a p$K_a$ near 10.5, so at pH 2 it is essentially fully protonated as the ammonium ion, which has no lone pair and cannot attack the carbonyl carbon. No carbinolamine, hence no imine, can form.',
+          'At pH 2 the carbinolamine hydroxyl would be protonated very readily, so dehydration is not the obstacle. The problem lies earlier, at the initial nucleophilic addition.',
+          'The keto form of a simple aldehyde predominates overwhelmingly at any pH, so the enol tautomer is a negligible fraction and is not what limits imine formation.',
+        ],
         skill: '5D imine formation and pH (Skill 2)',
       },
       {
@@ -337,6 +457,12 @@ export const FL1_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'In 2,4-pentanedione the central carbon (C3) lies between two carbonyl groups, so removing one of its hydrogens gives an enolate whose negative charge is delocalized onto both oxygens; this extra stabilization makes the C3–H bond far more acidic ($pK_a$ near 9) than the α-hydrogen of a simple ketone or aldehyde. Propanal has α-hydrogens whose enolate is stabilized by a single carbonyl ($pK_a$ near 17). The α-hydrogens of propanoic acid are less acidic still, because the carboxyl group is a weaker electron-withdrawing group toward its α-carbon than a ketone carbonyl and, once the O–H is ionized, the carboxylate resists further loss of charge; its O–H hydrogen is acidic, but the question asks about carbon-bound hydrogens. Propane has no adjacent electron-withdrawing group and its C–H bonds are essentially non-acidic ($pK_a$ near 50).',
+        optionExplanations: [
+          'Propanal has α-hydrogens whose enolate is stabilized by a single carbonyl (p$K_a$ near 17). That is more acidic than an alkane but far less than a hydrogen flanked by two carbonyls.',
+          'Propane has no adjacent electron-withdrawing group, and its C–H bonds are essentially non-acidic (p$K_a$ near 50). It is the least acidic compound listed.',
+          'Propanoic acid’s acidic hydrogen is on oxygen, not carbon. Its α-C–H hydrogens are less acidic than propanal’s, because a carboxyl group withdraws less strongly toward its α-carbon and the carboxylate resists further loss of charge.',
+          'In 2,4-pentanedione the C3 hydrogens sit between two carbonyls; the resulting enolate delocalizes negative charge onto both oxygens, lowering the p$K_a$ to about 9, far more acidic than any other carbon-bound hydrogen listed.',
+        ],
         skill: '5D acidity of α-hydrogens (Skill 1)',
       },
       {
@@ -350,6 +476,12 @@ export const FL1_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'At C2, pyruvate has a ketone carbon with two bonds to oxygen, whereas lactate has an alcohol carbon with one bond to oxygen and a new bond to hydrogen: the oxidation level of C2 drops, so the reaction is a reduction and requires a reducing agent, NADH. In lactate, C2 is bonded to four different groups (H, OH, $\\text{CH}_3$, and $\\text{COO}^-$), so a stereocenter is created where none existed in the planar ketone; the enzyme delivers hydride to one face only and produces a single enantiomer. An oxidation would require $\\text{NAD}^+$ and would run the reaction in the opposite direction. A tautomerization interconverts keto and enol forms without changing the oxidation level, but pyruvate and lactate differ in oxidation level. Because pyruvate has no stereocenter, the stereochemistry cannot be left unchanged; it is newly established.',
+        optionExplanations: [
+          'Pyruvate’s C2 goes from two bonds to oxygen (ketone) to one bond to oxygen plus a new C–H, which is a reduction, not an oxidation. $\\text{NAD}^+$ would drive the reverse direction, and no stereocenter is destroyed because pyruvate has none.',
+          'A tautomerization interconverts keto and enol forms without changing the oxidation level, but pyruvate (ketone carbon) and lactate (alcohol carbon) differ in oxidation level, so a cofactor is required.',
+          'C2 drops from two bonds to oxygen to one, gaining a bond to hydrogen: a reduction requiring NADH. In lactate C2 bears H, OH, $\\text{CH}_3$, and $\\text{COO}^-$, a newly created stereocenter absent in planar pyruvate.',
+          'The reduction and NADH requirement are right, but pyruvate has no stereocenter, so stereochemistry cannot be left unchanged; the enzyme creates a new stereocenter at C2 by delivering hydride to one face.',
+        ],
         skill: '5D oxidation levels and stereocenters (Skill 2)',
       },
     ],
@@ -366,6 +498,12 @@ export const FL1_CHEM_PHYS_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'The activity falls by a factor of 6400/100 = 64 = $2^6$, so six half-lives have elapsed in 60 minutes and the half-life is 10 min. A half-life of 6.0 min confuses the number of half-lives with their length. A half-life of 15 min would correspond to only four half-lives (a factor of 16), and 20 min to three (a factor of 8), neither of which reduces the activity by a factor of 64.',
+    optionExplanations: [
+      'A half-life of 6.0 min confuses the number of half-lives (six) with their duration. Six half-lives in 60 minutes means each lasts 10 minutes.',
+      'Activity falls by 6400/100 = 64 = $2^6$, so six half-lives elapsed in 60 minutes, giving a half-life of 10 min.',
+      'A 15-minute half-life gives only four half-lives in 60 minutes, reducing activity by a factor of 16 (to 400 counts per minute), not by the observed factor of 64.',
+      'A 20-minute half-life gives three half-lives in 60 minutes, a factor of 8 (to 800 counts per minute), far short of the observed 64-fold decrease.',
+    ],
     skill: '4E half-life (Skill 2)',
   },
   {
@@ -382,6 +520,12 @@ export const FL1_CHEM_PHYS_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'The radius of the circular path is $r = mv/(|q|B)$. The two particles have charges of equal magnitude and the same speed in the same field, so the radius is proportional to mass; the electron, about 1/1840 the mass of the proton, has a far smaller radius. The magnetic force $q\\vec{v} \\times \\vec{B}$ reverses direction when the sign of the charge reverses, so the electron curves the opposite way. Equal radii would require equal masses. A larger radius would require the electron to be more massive than the proton, and curving in the same direction would require charges of the same sign.',
+    optionExplanations: [
+      'Equal radii would require equal masses, since $r = mv/(|q|B)$ with equal charge magnitude, speed, and field. The electron is about 1/1840 the proton’s mass, so its radius is far smaller.',
+      'A larger radius would require the electron to be more massive than the proton. The opposite curvature is right, but the radius comparison is reversed.',
+      'Curving in the same direction would require charges of the same sign. The magnetic force $q\\vec{v} \\times \\vec{B}$ flips direction when the sign of $q$ flips, so the electron curves oppositely.',
+      'Radius $r = mv/(|q|B)$ is proportional to mass for equal charge, speed, and field, so the much lighter electron has a much smaller radius. Its negative charge reverses the force direction, so it curves the opposite way.',
+    ],
     skill: '4C magnetic force on moving charges (Skill 2)',
   },
   {
@@ -398,6 +542,12 @@ export const FL1_CHEM_PHYS_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'Three moles of gas are converted to two, so decreasing the volume raises the total pressure and, by Le Chatelier’s principle, shifts the equilibrium toward the side with fewer moles of gas, increasing the amount of SO₃. Raising the temperature of an exothermic reaction shifts the equilibrium toward the reactants, lowering the yield. A catalyst speeds the approach to equilibrium equally in both directions and does not change the equilibrium composition. Adding an inert gas at constant volume raises the total pressure but leaves every partial pressure unchanged, so the reaction quotient is unaffected and no shift occurs.',
+    optionExplanations: [
+      'The reaction is exothermic, so raising the temperature shifts the equilibrium toward the reactants (heat is treated as a product), lowering the yield of SO₃.',
+      'A catalyst speeds the approach to equilibrium equally in both directions and lowers the activation barrier, but it does not change the equilibrium composition or yield.',
+      'Three moles of gas become two. Decreasing the volume raises total pressure, and Le Chatelier’s principle shifts the equilibrium toward the side with fewer moles of gas, increasing SO₃.',
+      'Adding an inert gas at constant volume raises total pressure but leaves every reactant and product partial pressure unchanged, so the reaction quotient is unaffected and no shift occurs.',
+    ],
     skill: '5E Le Chatelier’s principle (Skill 1)',
   },
   {
@@ -409,6 +559,12 @@ export const FL1_CHEM_PHYS_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'Nitrogen in NH₃ has four electron domains (three bonding pairs and one lone pair), giving a tetrahedral electron-domain geometry; because one domain is a lone pair, the molecular shape is trigonal pyramidal with H–N–H angles slightly less than 109.5°. BF₃ has three bonding domains and no lone pair on boron, so it is trigonal planar. SO₃ has three bonding domains around sulfur with no lone pair and is likewise trigonal planar. The carbonate ion has three bonding domains around carbon with no lone pair and is trigonal planar as well, with equivalent resonance structures.',
+    optionExplanations: [
+      'Nitrogen in NH₃ has three bonding pairs and one lone pair, four electron domains in a tetrahedral arrangement. With one domain a lone pair, the molecular shape is trigonal pyramidal.',
+      'Boron in BF₃ has three bonding domains and no lone pair, so the molecule is trigonal planar with 120° bond angles.',
+      'Sulfur in SO₃ has three bonding domains and no lone pair, giving a trigonal planar geometry; the resonance structures are equivalent.',
+      'Carbon in the carbonate ion has three bonding domains and no lone pair, so CO₃²⁻ is trigonal planar with three equivalent resonance structures.',
+    ],
     skill: '5B VSEPR geometry (Skill 1)',
   },
   {
@@ -420,6 +576,12 @@ export const FL1_CHEM_PHYS_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'A strong band near 1715 cm⁻¹ is a C=O stretch, and a single singlet means all six hydrogens are equivalent and have no neighboring hydrogens to couple with: acetone, with two identical methyl groups flanking a carbonyl, fits both observations. Propanal also contains a carbonyl but would show three signals, including an aldehyde proton near 9.8 ppm split by the adjacent CH₂. Allyl alcohol has no carbonyl and would show a broad O–H stretch near 3300 cm⁻¹ and vinyl hydrogens above 3000 cm⁻¹. Propylene oxide has no carbonyl (an ether oxygen in a ring) and would give several coupled signals.',
+    optionExplanations: [
+      'Propanal has a carbonyl (1715 cm⁻¹ fits), but its ¹H NMR would show three signals, including an aldehyde proton near 9.8 ppm split by the adjacent CH₂; a single singlet is impossible.',
+      'The 1715 cm⁻¹ band is a C=O stretch, and a single singlet means all six hydrogens are equivalent with no coupling partners: acetone’s two identical methyl groups flanking a carbonyl fit both observations.',
+      'Allyl alcohol has no carbonyl; it would show a broad O–H stretch near 3300 cm⁻¹ and vinyl C–H stretches above 3000 cm⁻¹, both of which the spectrum lacks.',
+      'Propylene oxide has an ether oxygen in a ring, not a carbonyl, so it would not absorb at 1715 cm⁻¹, and its ring and methyl hydrogens would give several coupled signals.',
+    ],
     skill: '5D IR and NMR structure identification (Skill 2)',
   },
   {
@@ -436,6 +598,12 @@ export const FL1_CHEM_PHYS_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'A cis double bond introduces a kink in the acyl chain that prevents neighboring chains from packing closely, lowering the temperature at which the bilayer transitions from a fluid to a gel state; increasing the proportion of cis-unsaturated chains keeps the membrane fluid in the cold. Saturated chains pack tightly and raise the transition temperature, stiffening the membrane. Trans double bonds keep the chain nearly linear, so trans-unsaturated chains pack almost as well as saturated ones and provide little fluidity. Longer chains have more van der Waals contact and also pack more tightly, reducing fluidity.',
+    optionExplanations: [
+      'Saturated chains are straight and pack tightly, raising the gel-to-fluid transition temperature. More saturated chains would stiffen the membrane in the cold, the opposite of what is needed.',
+      'A trans double bond keeps the chain nearly linear, so trans-unsaturated chains pack almost as well as saturated ones and provide little added fluidity.',
+      'Longer chains have more van der Waals contact area and pack more tightly, which reduces fluidity and raises the transition temperature.',
+      'A cis double bond kinks the acyl chain and prevents close packing, lowering the gel-to-fluid transition temperature. More cis-unsaturated chains keep the membrane fluid at 20 °C.',
+    ],
     skill: '5D membrane lipid structure and fluidity (Skill 1)',
   },
   {
@@ -447,6 +615,12 @@ export const FL1_CHEM_PHYS_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'Osmotic pressure is a colligative property that depends on the total concentration of dissolved particles: $\\Pi = iMRT$, and NaCl dissociates into two ions, so $i = 2$. $\\Pi = 2(0.15\\ \\text{mol/L})(0.0821\\ \\text{L·atm/mol·K})(310\\ \\text{K}) \\approx 7.6$ atm, close to the osmotic pressure of blood plasma, which is why 0.15 M NaCl is used as an isotonic saline. The value 3.8 atm omits the van ’t Hoff factor. The value 15 atm doubles the factor to 4. The value 0.76 atm slips one decimal place in the concentration.',
+    optionExplanations: [
+      'NaCl dissociates into two ions, so $i = 2$ and $\\Pi = iMRT = 2(0.15)(0.0821)(310) \\approx 7.6$ atm, close to the osmotic pressure of plasma, which is why 0.15 M NaCl is isotonic saline.',
+      'A value of 3.8 atm omits the van ’t Hoff factor, treating NaCl as a single undissociated particle. Osmotic pressure depends on the total number of dissolved particles.',
+      'A value of 0.76 atm slips one decimal place in the concentration (using 0.015 M instead of 0.15 M).',
+      'A value of 15 atm doubles the van ’t Hoff factor to 4, as if NaCl produced four ions per formula unit rather than two.',
+    ],
     skill: '5A osmotic pressure (Skill 2)',
   },
 ]

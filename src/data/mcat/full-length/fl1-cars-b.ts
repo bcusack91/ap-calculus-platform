@@ -30,6 +30,12 @@ export const FL1_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The passage builds from the meal to the claim that “participation without belief is not hypocrisy” and that the observer’s stance is “a quiet way of refusing the invitation” — the host wanted the guest to “let his hospitality act on me anyway,” not to believe. Adopting the hosts’ beliefs is never proposed; the author eats without believing and says so. Suspended judgment is the posture the passage criticizes, not the one it defends. The difficulty of preserving food is not raised; the mask–meal contrast concerns what each asks of the observer, not what can be kept.',
+        optionExplanations: [
+          'Adopting the hosts’ beliefs is never proposed. The author eats the fish, says “I still do not believe it kept anyone from following me home,” and defends “participation without belief,” not conversion.',
+          'Suspended judgment is the posture the passage criticizes as “a quiet way of refusing the invitation.” The author argues for a third alternative between detachment and contempt, not for suspension.',
+          'The difficulty of preserving food is never raised. The mask–meal contrast concerns what each asks of the observer (a mask “has not been asked to believe in”; the meal “goes into the body”), not what can be kept.',
+          'The passage builds from the meal to the claim that “participation without belief is not hypocrisy” and that “I am here to observe” is a refusal of the invitation. The host wanted the guest to “let his hospitality act on me anyway.”',
+        ],
         skill: 'main-idea',
       },
       {
@@ -43,6 +49,12 @@ export const FL1_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The host expects a guest not to believe, nods, and passes the bowl anyway; later the author confirms that the host “knew perfectly well that I did not share his cosmology” and wanted only to know whether the guest would accept his hospitality. That rules out offense, since the bowl is passed without any sign of it. Nothing indicates the host hoped for or anticipated conversion. And the question was about belief, not knowledge of the ritual, so it was not a test of what the author knew.',
+        optionExplanations: [
+          'The host shows no offense: he nods and passes the bowl. Later the author confirms the host “knew perfectly well that I did not share his cosmology,” so disbelief was expected, not resented.',
+          'The host expects a guest not to believe, nods, and passes the bowl anyway. The author later says the host knew he did not share his cosmology and wanted only to know whether the guest would accept his hospitality.',
+          'Nothing indicates the host hoped for or anticipated conversion. The passage says what he wanted to know was “whether I would let his hospitality act on me,” not whether belief would follow.',
+          'The question was whether the author believed the fish would work, a question about belief, not knowledge. The host was not testing what the author knew about the ritual.',
+        ],
         skill: 'inference',
       },
       {
@@ -56,6 +68,12 @@ export const FL1_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The author says the reply amounts to declaring “that the observer’s body is exempt from the rules that govern everyone else at the table.” That reading only works if refusing is taken as a statement about the observer’s standing rather than as a simple aversion to the dish; without that assumption the refusal could be neutral after all. The passage denies that hosts sought converts — the host expected a guest not to believe. It also explicitly separates eating from believing (“I could eat the fish without believing in it”). Accuracy of written accounts is never the issue; the author says the photographer of the mask “has not been asked to believe,” not that his account is wrong.',
+        optionExplanations: [
+          'The author says the reply declares “the observer’s body is exempt from the rules that govern everyone else at the table.” That reading only works if refusing is taken as a statement about the observer’s standing, not a simple aversion to the dish.',
+          'The passage denies that hosts sought converts; the host “expected” a guest not to believe and asked only whether the guest would accept hospitality. Potential conversion is not assumed anywhere.',
+          'The author explicitly separates eating from believing: “I could eat the fish without believing in it.” The argument does not depend on eating producing belief; it depends on what refusing signals.',
+          'Accuracy of written accounts is never the issue. The author says the photographer of the mask “has not been asked to believe,” not that his account is wrong. The claim is about the table, not about documentation.',
+        ],
         skill: 'assumption',
       },
       {
@@ -69,6 +87,12 @@ export const FL1_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The author defines hypocrisy as “pretending to a conviction one lacks” and distinguishes it from submitting to a practice. If eating the dish were itself understood as an avowal that it worked, then eating without believing would be precisely a pretense of conviction, collapsing the distinction the claim rests on. Villagers not discussing the meal’s meaning says nothing about what eating signifies. Unchanged convictions are exactly what the author expects and reports of himself. The rule about children bears on the “late-arriving child” analogy, not on whether the guest’s participation is a pretense.',
+        optionExplanations: [
+          'Whether villagers discussed the meal’s meaning among themselves says nothing about what eating it signifies to them. The author’s distinction between practice and pretense is untouched.',
+          'Unchanged convictions are exactly what the author expects and reports of himself (“I still do not believe”). This confirms rather than undermines the idea of participation without belief.',
+          'The author defines hypocrisy as “pretending to a conviction one lacks.” If eating the dish were itself understood as an avowal that it worked, eating without believing would be precisely that pretense, collapsing the distinction the claim rests on.',
+          'The rule about children bears on the “late-arriving child” analogy, suggesting the villagers themselves link participation to understanding, but it does not show the guest’s eating is a pretense of conviction.',
+        ],
         skill: 'strengthen-weaken',
       },
       {
@@ -82,6 +106,12 @@ export const FL1_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The passage grants that a mask or carved figure “can be admired from a distance” and that whoever “writes a careful account of its powers has not been asked to believe in the figure”; the problem arises only with food, which “goes into the body.” The curator is therefore doing the distanced work the author allows, not the evasion the bowl exposes. Contempt is the old habit of “cataloguing the errors of others,” and a descriptive plaque does not do that. The author never asks observers to pronounce on whether beliefs are true; the meal asks for participation, not a verdict.',
+        optionExplanations: [
+          'The passage grants that a mask or carved figure “can be admired from a distance” and that whoever “writes a careful account of its powers has not been asked to believe.” The curator faces no bowl and so commits no evasion.',
+          'The author says a mask “hangs on a wall” while the meal “goes into the body,” and that the one who writes an account of a figure’s powers “has not been asked to believe.” The curator is doing the distanced work the author allows, which food does not permit.',
+          'Contempt in the passage is the old habit of “cataloguing the errors of others.” A descriptive plaque reporting what villagers attribute to the figure does not catalogue errors.',
+          'The author never asks observers to pronounce on whether beliefs are true. The meal asks for participation, not a verdict, and the mask asks for nothing of the kind.',
+        ],
         skill: 'application',
       },
       {
@@ -95,6 +125,12 @@ export const FL1_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The final paragraph objects to “a general rule that keeps the observer’s mouth closed at every table” and insists the line “ought to be drawn by conscience, case by case.” An allergy is a particular reason for this table, not a standing exemption claimed for the observer’s body, so it is not the posture under attack. The author does not treat every refusal as detachment — there are “practices one should not join.” Taste is dismissed as the concern of the fieldworker who finds the fish “disgusting,” not offered as the deciding factor. Recording beliefs first is the “treat belief as data” approach the author finds insufficient, not a precondition for refusing.',
+        optionExplanations: [
+          'The author does not treat every refusal as detachment. The final paragraph says “there are practices one should not join” and that the line should be drawn “by conscience, case by case.”',
+          'Taste is dismissed as the concern of the fieldworker who finds the fish “disgusting,” the contempt the discipline abandoned. The author never offers taste as the deciding factor.',
+          'Recording beliefs first is the “treat belief as data” approach the author finds insufficient, not a precondition for a legitimate refusal. The passage sets no such requirement.',
+          'The final paragraph objects to “a general rule that keeps the observer’s mouth closed at every table” and insists the line be drawn “case by case.” An allergy is a particular reason for this table, not a standing exemption for the observer’s body.',
+        ],
         skill: 'new-information',
       },
     ],
@@ -118,6 +154,12 @@ export const FL1_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The hinge of the passage is that both the usual complaint and the friend’s worry “rest on the same mistake, which is to treat the recording as a report of a performance”; once the recording is seen as a made object, questions of accuracy and tampering lose their grip. The author denies that live performance is superior in general — “Neither is superior in general.” Editing is defended, not lamented, since “None of these decisions is a falsification.” The friend’s habit is an anecdote that opens the essay, not advice the author gives to musicians.',
+        optionExplanations: [
+          'The hinge of the passage is that both complaints “rest on the same mistake, which is to treat the recording as a report of a performance.” Seen as a made object, “closer to a photograph than to a transcript,” a recording owes fidelity to no single event.',
+          'The author denies that live performance is superior: “Neither is superior in general; they are answers to different needs.” Risk is granted as a real value, but not as proof of superiority.',
+          'Editing is defended, not lamented: “None of these decisions is a falsification.” The author argues that knowing how a piece was “actually played” is the wrong question, not an impossible one.',
+          'The friend’s habit is an anecdote that opens the essay, not advice to musicians. The author treats her need to keep pieces open as one legitimate need among others, not as a prescription.',
+        ],
         skill: 'main-idea',
       },
       {
@@ -131,6 +173,12 @@ export const FL1_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The friend “thought them good” but found they “had begun to sound like the truth about the pieces,” and she “wanted to keep the pieces open” — that is, to leave her reading unfinished. She did not think them inferior; the author is explicit that vanity was not the motive and that she judged them good. Nothing is said about errors making her cautious; the errors-left-in idea belongs to the usual complaint about live music. Misrepresented balance is a fidelity worry, exactly the kind of “report” thinking the author says her worry inverted.',
+        optionExplanations: [
+          'The friend “thought them good”; the author is explicit that vanity was not the motive and that she judged the recordings well. She did not regard them as inferior.',
+          'Nothing is said about preserved errors making her cautious. The errors-left-in idea belongs to the usual complaint about live music, which the friend’s worry inverts.',
+          'The friend found the recordings “had begun to sound like the truth about the pieces” and “wanted to keep the pieces open.” She wanted her reading to remain unfinished, not settled by the recording.',
+          'Misrepresented balance is a fidelity worry, exactly the kind of “report” thinking the author says the friend’s worry inverted. Her problem was that the recording was “too true,” not inaccurate.',
+        ],
         skill: 'detail',
       },
       {
@@ -144,6 +192,12 @@ export const FL1_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The comparison introduces the list of decisions a recording’s maker faces — room, breath, which take — and the conclusion that “there was never a single event they were obliged to be faithful to.” A photograph is something composed; a transcript is a record of what was said. Undetectable alteration would support the “tampering” complaint the author is rejecting. The passage does not extend a standard of truth across the arts; it argues that truth is the wrong standard for recordings. And it concedes nothing about recordings capturing less — it denies that capture is what recordings do.',
+        optionExplanations: [
+          'Undetectable alteration would support the “tampering” complaint the author is rejecting. The photograph comparison is meant to dissolve that complaint, not reinforce it.',
+          'The comparison introduces the maker’s decisions (room, breath, which take) and the conclusion that “there was never a single event they were obliged to be faithful to.” A photograph is composed; a transcript records a prior event.',
+          'The passage does not extend a standard of truth across the arts. It argues that truth is the wrong standard for recordings; the photograph is an analogy for composition, not a shared criterion.',
+          'The author concedes nothing about recordings capturing less. The point is that capture is not what recordings do at all; a transcript is the wrong model, not a more complete one.',
+        ],
         skill: 'function',
       },
       {
@@ -157,6 +211,12 @@ export const FL1_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The author calls it a mistake “to suppose that one of these listeners is having a genuine experience and the other a substitute,” so the genuine-versus-substitute statement is the one the author rejects. The other three are the author’s own positions: edits are not falsifications because there was no single event to be faithful to; risk “is a real value” that “Recordings cannot carry”; and the audience’s silence “is a condition of the music being heard at all,” a “plain physical sense” in which the audience is part of the performance.',
+        optionExplanations: [
+          'The author holds that edits are not falsifications “because there was never a single event they were obliged to be faithful to.” This is the author’s own position, so it is not the exception.',
+          'The author says risk “is a real value” and that “Recordings cannot carry that.” This is a statement the author endorses, not one he rejects.',
+          'The author says the audience’s silence “is a condition of the music being heard at all,” making the audience part of the performance “in a plain physical sense.” This is the author’s view.',
+          'The author calls it a mistake “to suppose that one of these listeners is having a genuine experience and the other a substitute.” This is the one statement the author rejects, making it the exception.',
+        ],
         skill: 'inference',
       },
       {
@@ -170,6 +230,12 @@ export const FL1_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The author holds that “every recording is edited, if only by the choice of where to put the microphone,” so even a single take is a made object shaped by decisions; and the value of risk depends on everyone present knowing that “something can go wrong,” which a fixed recording cannot reproduce for later listeners. Calling it a report reinstates the very framing the author rejects. The author does not endorse an authenticity ideal for objects at all — the only version granted concerns the listener’s obligation, not the recording. And a single take still “holds still” a reading, so it serves the learning listener as well as any other recording.',
+        optionExplanations: [
+          'The author says “every recording is edited, if only by the choice of where to put the microphone,” so a single take is still a made object. Risk depends on everyone present knowing “something can go wrong,” which a fixed recording cannot reproduce.',
+          'Calling the single take a report reinstates the very framing the author rejects. Even an unedited take involves the maker’s decisions about room and microphone and so is not a report.',
+          'The author does not endorse an authenticity ideal for objects at all. The only version granted “concerns not the object but the audience,” the listener’s obligation, not the recording’s honesty.',
+          'A single take still “holds still” a reading, so it serves the learning listener as well as any other recording. Leaving slips in does not make the reading vanish.',
+        ],
         skill: 'new-information',
       },
       {
@@ -183,6 +249,12 @@ export const FL1_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'This listener is the author’s own example of someone who “needs the still reading,” one of two different needs the author says recordings and concerts respectively answer; the author denies that either experience is a substitute for the other. The friend’s fear is a legitimate but different need — keeping the piece unfinished — and the author does not treat the learning listener as making a mistake. Confusing accuracy with risk is the error of critics who “dress the preference up as a claim about truth,” not something a listener does by studying a recording.',
+        optionExplanations: [
+          'The author denies that either experience is a substitute for the other: “The mistake is to suppose that one of these listeners is having a genuine experience and the other a substitute.”',
+          'The friend’s fear is a legitimate but different need, keeping the piece unfinished. The author does not treat the learning listener as making the friend’s feared mistake; both needs are real.',
+          'This listener is the author’s own example of someone who “needs the still reading,” hearing the inner voice “six times until it is audible everywhere.” A concert, which “lets it vanish,” could not serve this need.',
+          'Confusing accuracy with risk is the error of critics who “dress the preference up as a claim about truth.” A listener studying a recording makes no claim about truth or risk.',
+        ],
         skill: 'application',
       },
     ],
@@ -206,6 +278,12 @@ export const FL1_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The author’s thesis is that constituents’ wishes “are, in large part, produced by the process of being represented,” so the legislator’s job is neither to transmit nor to override them but to give an account, invite a reply, and answer to it. Voting one’s own judgment and answering only at election time is the trustee position, which the author says gets “the remedy wrong.” The delegate model is shown to be impossible on most votes, not uniquely legitimate. The observation that constituents lack views on most measures is the author’s starting point, but the conclusion drawn is that representation must close the gap, not that it cannot be democratic.',
+        optionExplanations: [
+          'Voting one’s own judgment and answering only at election time is the trustee position, which the author says gets “the diagnosis right and the remedy wrong.” It is not the main idea.',
+          'The thesis is that constituents’ wishes “are, in large part, produced by the process of being represented,” so the legislator must give an account, invite a reply, and answer to it, neither transmitting nor overriding.',
+          'The delegate model is shown to be impossible on most votes, since constituents “have no wish at all” on measures they have never heard of. The author never calls it uniquely legitimate.',
+          'The lack of views on most measures is the author’s starting point, but the conclusion is that representation exists to close that gap, not that representation cannot be democratic.',
+        ],
         skill: 'main-idea',
       },
       {
@@ -219,6 +297,12 @@ export const FL1_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'On most votes constituents “have no wish at all,” so the delegate “guesses at what her constituents would want if they knew, which is a form of judgment.” The phrase says that the delegate is doing what a trustee does — judging — under a delegate’s description. Nothing suggests she prefers her own conscience or is being deceptive; the point is structural, not about motives. Re-election on the whole record is the trustee’s remedy, mentioned in the next paragraph, not what the clothing image conveys. And the delegate is not accused of hiding measures from constituents; constituents simply have not heard of them.',
+        optionExplanations: [
+          'Nothing suggests the delegate secretly prefers her own conscience. The point is structural: she cannot transmit wishes that do not exist, so she must guess, which is judgment.',
+          'Re-election on the whole record is the trustee’s remedy, mentioned in the next paragraph. The clothing image concerns what the delegate actually does on most votes, not how she is held accountable.',
+          'The delegate is not accused of hiding measures from constituents. Constituents simply have not heard of most measures and “would need an afternoon’s explanation to form a view.”',
+          'On most votes constituents “have no wish at all,” so the delegate “guesses at what her constituents would want if they knew, which is a form of judgment.” She does what a trustee does while describing herself as a transmitter.',
+        ],
         skill: 'inference',
       },
       {
@@ -232,6 +316,12 @@ export const FL1_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Immediately after the admission the author says the objection “applies to every form of representation whatever,” since constituents’ views are always shaped by non-neutral sources; the concession is a step toward showing that the circle is universal and can only be widened, not escaped. The author does not retreat from the production claim — the reply depends on it. The trustee model is not rehabilitated; the author has already said it draws “the wrong conclusion.” The final paragraph’s concession about time and patience is a separate point about realism, not what this admission sets up.',
+        optionExplanations: [
+          'The author does not retreat from the production claim; the reply depends on it. Constituents’ views are shaped by newspapers, neighbors, and parties, and the legislator’s voice is one more influence.',
+          'The trustee model is not rehabilitated. The author has already said it draws “the wrong conclusion,” and the admission leads to widening the circle, not to setting wishes aside.',
+          'Immediately after the admission the author says the objection “applies to every form of representation whatever.” The concession is a step toward showing the circle is universal and can only be widened, not escaped.',
+          'The final paragraph’s concession about time and patience is a separate point about realism. This admission sets up the many-influences reply, not that later concession.',
+        ],
         skill: 'function',
       },
       {
@@ -245,6 +335,12 @@ export const FL1_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The author’s rule concerns what the legislator owes “before and after the vote”: an account of the measure and her intention (I), and a change of vote, announced, if the reply changes her mind (II). Voting as a poll directs (III) is explicitly rejected — the test “is not whether the vote matched a poll” — and the second paragraph argues that polls on unfamiliar measures do not record wishes at all. Any option containing III is therefore wrong.',
+        optionExplanations: [
+          'The author’s rule covers what the legislator owes “before and after the vote”: an account of the measure and her intention (I), and a change of vote, announced, if the reply changes her mind (II). Voting by poll (III) is explicitly not the test.',
+          'Statement III is rejected: the test “is not whether the vote matched a poll,” and polls on unfamiliar measures do not record wishes at all. Statement II, which this omits, is part of the author’s rule.',
+          'Statement III is explicitly rejected by the author, and statement I, giving an account before the vote, is the core of the author’s standard and should not be omitted.',
+          'Statements I and II match the author’s rule, but statement III is explicitly rejected: representation is not tested by “whether the vote matched a poll.” Including III makes this wrong.',
+        ],
         skill: 'detail',
       },
       {
@@ -258,6 +354,12 @@ export const FL1_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The author says the gap between what constituents want and what they would want if they understood “is the thing representation exists to close,” and that closing it requires an account. A legislator who polls without explaining measures the district has never heard of records guesses, not wishes, and leaves the district no better informed. The passage does not endorse the delegate method as realistic; it argues that on most votes it is impossible. Adding no voice does not escape the circle, since newspapers and parties still shape the views polled. And matching polls is precisely what the author says the test is not.',
+        optionExplanations: [
+          'The passage does not endorse the delegate method as realistic. It argues that on most votes constituents “have no wish at all,” so polling records guesses, not wishes.',
+          'Adding no voice does not escape the circle. The author says constituents’ views are shaped by “newspapers, neighbors, and parties, none of which are neutral,” so the polled views are already produced.',
+          'Matching polls is precisely what the author says the test is not: “The test of representation on this view is not whether the vote matched a poll.”',
+          'The author says the gap between what constituents want and what they would want if they understood “is the thing representation exists to close,” and closing it requires an account. Polling without explaining leaves the district no better informed.',
+        ],
         skill: 'application',
       },
       {
@@ -271,6 +373,12 @@ export const FL1_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The author’s reply is that the legislator “is one influence among many,” so the circle is wide enough for constituents to get a turn. If her account dominated all other sources, she would in effect be authoring the opinion she then obeys — exactly the objection — and the many-influences reply would fail. Unreliable newspapers and parties do not weaken the reply; they confirm that other sources are non-neutral, which is the author’s own point. Legislators explaining votes after the fact is compatible with the reply and touches only its timing. Voters not changing their minds after passage concerns a period the author’s account does not depend on.',
+        optionExplanations: [
+          'Unreliable newspapers and parties confirm the author’s own point that other sources are non-neutral. The reply that the legislator is “one influence among many” is strengthened, not weakened.',
+          'The reply is that the legislator “is one influence among many,” so constituents get a turn. If her account dominated all other sources, she would be authoring the opinion she then obeys, exactly the objection.',
+          'Legislators already explaining votes after the fact is compatible with the reply and touches only its timing. It does not show the legislator dominates opinion formation.',
+          'Voters not changing their minds after passage concerns a period the author’s account does not depend on. The account is owed before and after the vote, and the reply happens before passage.',
+        ],
         skill: 'strengthen-weaken',
       },
     ],
@@ -294,6 +402,12 @@ export const FL1_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Because “what is measured becomes, within a few years, what is taught,” the author’s proposed standard is to ask “what we would be content to see taught to the exclusion of everything else” — restated at the close as whether one “would be satisfied if this were all that was taught.” The author explicitly does “not propose to abolish examinations.” Trusting schools to teach the rest is the “usual reply” the author rejects because “the trust never materializes.” And the author concedes that judgment-based assessment is more open to bias than a scored paper, so the fairness claim is the opposite of the author’s position.',
+        optionExplanations: [
+          'The author explicitly does “not propose to abolish examinations.” The proposal is to change the question the examiner must answer, not to eliminate testing.',
+          'Trusting schools to teach the rest is the “usual reply” the author rejects because “the trust never materializes” once schools are compared on a measure.',
+          'Because “what is measured becomes, within a few years, what is taught,” the author proposes asking “what we would be content to see taught to the exclusion of everything else,” restated at the close as whether one “would be satisfied if this were all that was taught.”',
+          'The author concedes that judgment-based assessment is “open to bias in a way that a scored paper is not” and that the machine “treats every child the same.” The fairness claim runs opposite to the author’s concession.',
+        ],
         skill: 'main-idea',
       },
       {
@@ -307,6 +421,12 @@ export const FL1_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The “trust” is the usual reply’s hope that schools, tested only on the measurable, will teach the rest anyway; the author says it fails because once “a school is compared with another on a measure, the rest is what gets cut.” Examiners declining to assess judgment-based qualities is the author’s second reason (the claim is “too convenient”), not the first. Parents’ confidence is never discussed. Teachers ignoring a committee’s syllabus reverses the mechanism: the syllabus shrinks toward the test, not away from the committee.',
+        optionExplanations: [
+          'The “trust” is the usual reply’s hope that schools tested only on the measurable will teach the rest anyway. The author says it fails because once “a school is compared with another on a measure, the rest is what gets cut.”',
+          'Examiners declining to assess judgment-based qualities is the author’s second reason, that the unmeasurable claim is “too convenient,” not the first reason about trust failing.',
+          'Parents’ confidence in schools that test recall is never discussed. The passage mentions parents only as one of the outside parties a school answers to.',
+          'Teachers ignoring a committee’s syllabus reverses the mechanism. The syllabus shrinks toward the test; the author never describes teachers departing from a committee’s list in the other direction.',
+        ],
         skill: 'detail',
       },
       {
@@ -320,6 +440,12 @@ export const FL1_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Sustaining “a piece of work over a month without being told what to do next” is the author’s own example of something assessable “by a person, over time, with judgment,” and the author grants that such assessment is expensive, slow, and more open to bias yet still prefers it to teaching “the fair and cheap.” Every test is a syllabus on the author’s account, so the project is not exempt; it is simply a better one. The equal-treatment objection is stated fairly but answered, and the author sees a gain. Trusting teachers to teach the unmeasured is the “usual reply” the author rejects; here the school is measuring the thing directly.',
+        optionExplanations: [
+          'Every test is a syllabus on the author’s account, since what is measured becomes what is taught. The project is not exempt; it is simply a syllabus the author would be content to see taught.',
+          'The author grants that judgment-based assessment sacrifices some equal treatment but denies there is no gain: the alternative is a system that has “decided to teach the fair and cheap.”',
+          'Trusting teachers to teach the unmeasured is the “usual reply” the author rejects. Here the school is measuring the thing directly, by a person over time, not trusting it to happen unmeasured.',
+          'Sustaining “a piece of work over a month without being told what to do next” is the author’s own example of something assessable “by a person, over time, with judgment.” The author grants the cost and still prefers it to teaching “the fair and cheap.”',
+        ],
         skill: 'application',
       },
       {
@@ -333,6 +459,12 @@ export const FL1_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The author wants “to state it fairly,” calls it “true” and “the strongest argument for the tests we have,” and then argues that it “concedes that the tests measure what they measure because it is fair and cheap,” not because it is what we want — respect followed by a turn. The author never disputes that the machine treats every child the same, so the objection is not dismissed on that ground. The decision to keep examinations comes from the author’s own proposal, not from being persuaded by this objection. Nothing in the passage expresses alarm about bias; the author accepts it as a cost.',
+        optionExplanations: [
+          'The author never disputes that the machine treats every child the same; he calls the objection “true.” Dismissal on the ground that the machine is less fair than claimed does not occur.',
+          'The author wants “to state it fairly,” calls it “true” and “the strongest argument for the tests we have,” then argues it “concedes that the tests measure what they measure because it is fair and cheap,” not because it is what we want.',
+          'The decision to keep examinations comes from the author’s own proposal, not from being persuaded by this objection. The author is not torn; he grants the point and turns it.',
+          'Nothing in the passage expresses alarm about bias. The author accepts bias as a cost of judgment-based assessment and argues the cost is worth paying.',
+        ],
         skill: 'tone',
       },
       {
@@ -346,6 +478,12 @@ export const FL1_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The author’s mechanism is that external comparison on a measure drives the cutting of everything the measure omits. Finding that unranked schools keep broader syllabi than otherwise similar ranked schools is direct evidence that the measure, not the staff, narrows what is taught. Recall scores predicting essay scores would if anything support the “usual reply” that testing the measurable suffices. Committees not consulting examiners bears on how tests are written, not on whether tests shape teaching. Teachers wishing they could teach more shows the narrowing is regretted, but does not by itself show that measurement caused it.',
+        optionExplanations: [
+          'The author’s mechanism is that external comparison on a measure drives the cutting of everything the measure omits. Unranked schools keeping broader syllabi than otherwise similar ranked schools is direct evidence that measurement, not staff, narrows teaching.',
+          'Recall scores predicting essay scores would, if anything, support the “usual reply” that testing the measurable suffices. It says nothing about whether measurement reshapes what is taught.',
+          'Committees not consulting examiners bears on how tests are written, not on whether tests shape teaching. The author’s claim is about the test’s effect downstream, not its design.',
+          'Teachers wishing they could teach more shows the narrowing is regretted, but does not by itself show that measurement caused it. The author needs evidence linking the measure to the shrinkage.',
+        ],
         skill: 'strengthen-weaken',
       },
     ],

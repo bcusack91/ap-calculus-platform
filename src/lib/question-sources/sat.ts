@@ -1,5 +1,5 @@
 import {
-  buildSatForm,
+  buildExamForm,
   routedModule2,
   SAT_DOMAIN_LABELS,
   type SatRoute,
@@ -8,7 +8,11 @@ import {
 } from '@/data/sat-practice/test-generator'
 import { questionKey } from '@/lib/question-key'
 import { gradeGridIn } from '@/data/sat-grid-in'
+import { SAT_PASSAGES, type ReadingPassage } from '@/data/sat-passages'
+import { readOptionExplanations, remapOptionExplanations } from '@/lib/option-explanations'
+import { satOptionExplanationsFor } from '@/data/sat-practice/option-explanations'
 import type { ReviewItem } from '@/lib/question-sources/types'
+import { attemptExam, isPsatAttemptFormat, type SatAttemptExam } from '@/lib/sat-attempt-format'
 
 /**
  * Rebuild the reviewable questions of an SAT attempt from what was stored.
@@ -18,6 +22,8 @@ import type { ReviewItem } from '@/lib/question-sources/types'
  *   matched to its question by module + question id. Attempts saved before
  *   routes were stored (scoringVersion 1, answers grouped by section) are
  *   matched against every Module 2 the student could have sat.
+ *   Adaptive PSAT/NMSQT attempts (format 'psat-full') rebuild the same way
+ *   from buildPsatForm.
  * - Diagnostics (DiagnosticTest.results.review): a stored copy of the
  *   questions as served, the chosen indices, and `typed` grid-in answers.
  *
@@ -50,10 +56,64 @@ export interface SatPracticeAttemptLike {
   answers: unknown
 }
 
-/** 'full' | 'mini' for an attempt, deriving it from the R&W total on old rows. */
+/** 'full' | 'mini' for an attempt, deriving it from the R&W total on old rows (a PSAT attempt is 'full'). */
 export function satAttemptFormat(a: Pick<SatPracticeAttemptLike, 'format' | 'rwTotal'>): SatTestFormat {
   if (a.format === 'full' || a.format === 'mini') return a.format
+  if (isPsatAttemptFormat(a.format)) return 'full'
   return (a.rwTotal ?? 0) > 27 ? 'full' : 'mini'
+}
+
+/** 'sat' | 'psat' for an attempt (PSAT = format 'psat-full'). */
+export function satAttemptExam(a: Pick<SatPracticeAttemptLike, 'format'>): SatAttemptExam {
+  return attemptExam(a.format)
+}
+
+let passageById: Map<string, ReadingPassage> | null = null
+const passageBank = () => (passageById ??= new Map(SAT_PASSAGES.map((p) => [p.id, p])))
+const normText = (t: string) => t.replace(/\s+/g, ' ').trim()
+
+/**
+ * Authored per-option explanations (`optionExplanations`, aligned to the
+ * bank's ORIGINAL option order) for a built SAT/PSAT form question, remapped
+ * to the order it was SHOWN.
+ *
+ * - Passage questions (`sat-passage-<passageId>-q<i>`): the form builder
+ *   shuffles their options with a per-id seed, so the authored list is read
+ *   from the passage bank and remapped onto the shown options by option text
+ *   (the same permutation the seeded shuffle applied, recovered exactly).
+ * - Pool questions are spread from the bank item and the form builder never
+ *   reorders their options, so an `optionExplanations` they carry is already
+ *   in shown order; it is still read through readOptionExplanations, which
+ *   drops anything of the wrong length.
+ *
+ * Optional throughout: most items carry no explanations yet (undefined).
+ */
+export function satOptionExplanations(q: SATTestQuestion): string[] | undefined {
+  if (!q.options.length || q.gridIn) return undefined
+  const m = /^sat-passage-(.+)-q(\d+)$/.exec(q.id ?? '')
+  if (m && q.passage) {
+    const src = passageBank().get(q.passage.id)?.questions[Number(m[2])]
+    if (!src) return undefined
+    return remapOptionExplanations(src.options, readOptionExplanations(src, src.options.length), q.options)
+  }
+  return readOptionExplanations(q, q.options.length)
+}
+
+/**
+ * The same for a stored SAT diagnostic question. Pool items were stored
+ * spread from the bank item (options as authored), so an `optionExplanations`
+ * on the stored copy lines up. Passage items store only the passage id: the
+ * authored question is found on the passage bank by its text and its
+ * explanations remapped by option text.
+ */
+function diagnosticOptionExplanations(q: Rec, options: string[], passageId: string | null): string[] | undefined {
+  if (!options.length || q.gridIn) return undefined
+  const own = readOptionExplanations(q, options.length)
+  if (own || !passageId) return own
+  const text = normText(str(q.question))
+  const src = passageBank().get(passageId)?.questions.find((x) => normText(x.question) === text)
+  if (!src) return undefined
+  return remapOptionExplanations(src.options, readOptionExplanations(src, src.options.length), options)
 }
 
 function practiceItem(
@@ -61,9 +121,11 @@ function practiceItem(
   q: SATTestQuestion,
   a: { selectedIndex: number | null; textValue: string | null; flagged: boolean; seconds: number | null },
 ): ReviewItem {
+  const key = questionKey({ question: q.question, options: q.options, correctIndex: q.correctIndex, passageId: q.passage?.id ?? null })
+  const optionExplanations = satOptionExplanations(q) ?? (q.gridIn ? undefined : satOptionExplanationsFor(key, q.options))
   return {
     index,
-    questionKey: questionKey({ question: q.question, options: q.options, correctIndex: q.correctIndex, passageId: q.passage?.id ?? null }),
+    questionKey: key,
     question: q.question,
     options: [...q.options],
     correctIndex: q.correctIndex,
@@ -76,6 +138,7 @@ function practiceItem(
     durationMs: a.seconds ? Math.round(a.seconds * 1000) : null,
     ...(q.sourceSlug.startsWith('sat-') ? { topicSlug: q.sourceSlug } : {}),
     discipline: q.domain ? SAT_DOMAIN_LABELS[q.domain] : q.section === 'math' ? 'Math' : 'Reading and Writing',
+    ...(optionExplanations ? { optionExplanations } : {}),
   }
 }
 
@@ -95,12 +158,13 @@ function gridVerdict(raw: unknown, typed: string): Pick<ReviewItem, 'gridIn' | '
 /** Review items for one SAT practice test attempt, in stored order. */
 export async function satPracticeReviewItems(attempt: SatPracticeAttemptLike): Promise<ReviewItem[]> {
   const format = satAttemptFormat(attempt)
+  const exam = satAttemptExam(attempt)
   const answers = parse(attempt.answers)
   if (!Array.isArray(answers) || !answers.length) return []
 
   // Current shape: one record per question, { moduleIndex, questionId, ... }.
   if (answers.every((a) => typeof asRecord(a)?.questionId === 'string')) {
-    const form = await buildSatForm(attempt.testNumber, format, route(attempt.rwTier), route(attempt.mathTier))
+    const form = await buildExamForm(exam, attempt.testNumber, format, route(attempt.rwTier), route(attempt.mathTier))
     const out: ReviewItem[] = []
     answers.forEach((raw, i) => {
       const a = asRecord(raw)!
@@ -122,7 +186,7 @@ export async function satPracticeReviewItems(attempt: SatPracticeAttemptLike): P
   // Legacy shape (scoringVersion 1): [{ sectionId, answers: [{ questionId,
   // selectedIndex, textValue }] }]. The route was never stored, so a Module 2
   // answer is looked up in the pre-built module and both routed ones.
-  const base = await buildSatForm(attempt.testNumber, format)
+  const base = await buildExamForm(exam, attempt.testNumber, format)
   const out: ReviewItem[] = []
   let index = 0
   for (const rawSec of answers) {
@@ -180,9 +244,11 @@ export function satDiagnosticReviewItems(results: unknown): ReviewItem[] {
     const isGrid = !!q.gridIn
     const chosen = intOrNull(answers[i])
     const domain = str(q.domain)
+    const key = questionKey({ question: q.question, options, correctIndex, passageId })
+    const optionExplanations = diagnosticOptionExplanations(q, options, passageId) ?? (isGrid ? undefined : satOptionExplanationsFor(key, options))
     out.push({
       index: i,
-      questionKey: questionKey({ question: q.question, options, correctIndex, passageId }),
+      questionKey: key,
       question: q.question,
       options,
       correctIndex,
@@ -195,6 +261,7 @@ export function satDiagnosticReviewItems(results: unknown): ReviewItem[] {
       durationMs: null,
       topicSlug: str(q.topicSlug) || str(q.sourceSlug) || undefined,
       discipline: domain ? str(domainNames[domain]) || domain : undefined,
+      ...(optionExplanations ? { optionExplanations } : {}),
     })
   })
   return out

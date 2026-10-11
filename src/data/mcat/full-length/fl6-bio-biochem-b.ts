@@ -34,6 +34,12 @@ export const FL6_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'With saline the ratio is 0.9/0.09 = 10, and with ethanol it is 2.7/0.03 = 90, a 9-fold increase. A 3-fold increase is the change in lactate alone (2.7 vs 0.9), and a decrease to one-third is the change in pyruvate alone (0.03 vs 0.09); the ratio combines both changes. The value 90 is the L/P ratio itself during ethanol, not its change relative to saline.',
+        optionExplanations: [
+          'A decrease to one-third is the change in pyruvate alone (0.03 vs 0.09). The L/P ratio combines the rise in lactate with the fall in pyruvate, so it increases rather than decreases.',
+          'A 3-fold increase is the change in lactate alone (2.7 vs 0.9). It ignores the simultaneous 3-fold fall in pyruvate, which multiplies the change in the ratio.',
+          'With saline the ratio is 0.9/0.09 = 10, and with ethanol it is 2.7/0.03 = 90. The ratio rose 9-fold, reflecting both the rise in lactate and the fall in pyruvate.',
+          'The value 90 is the L/P ratio itself during ethanol, not its change relative to saline. The saline ratio is 10, so the change is 90/10 = 9-fold.',
+        ],
         skill: '1D cytosolic redox state (data interpretation)',
       },
       {
@@ -48,6 +54,12 @@ export const FL6_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Twelve hours into a fast the liver still contains glycogen, and glycogenolysis releases glucose without any $\\text{NAD}^+$-dependent step, so glucose output was maintained even though the redox state shifted; by 60 hours glycogen is exhausted and glucose comes from gluconeogenesis, whose entry reactions for lactate and glycerol need $\\text{NAD}^+$. The rise in L/P after the 12-hour fast shows that ethanol was being oxidized, and insulin was low in every trial. The L/P ratios during ethanol were similar after the two fasts (80 and 90), which gives no sign of greater NADH production after 60 hours. Insulin did not rise, and the 55% fall in hepatic glucose release shows that the defect was in production rather than in removal by muscle.',
+        optionExplanations: [
+          'Twelve hours into a fast the liver still holds glycogen, and glycogenolysis releases glucose without any $\\text{NAD}^+$-dependent step, so output was maintained despite the redox shift. By 60 hours glycogen is exhausted and glucose comes from gluconeogenesis, whose entry reactions for lactate and glycerol need $\\text{NAD}^+$.',
+          'The rise in L/P after the 12-hour fast shows ethanol was being oxidized, and plasma insulin was low in every trial. Insulin did not prevent ethanol oxidation.',
+          'The L/P ratios during ethanol were similar after the two fasts (80 and 90), giving no sign of greater NADH production after 60 hours. Induction of ADH is not indicated by the data.',
+          'Plasma insulin was low after both fasts and unchanged by ethanol. The 55% fall in hepatic glucose release shows the defect was in production, not in removal by muscle.',
+        ],
         skill: '1D glycogenolysis vs gluconeogenesis in fasting',
       },
       {
@@ -61,6 +73,12 @@ export const FL6_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'With ADH inhibited, ethanol persisted in the medium yet glucose production was normal, so the inhibition depends on the oxidation of ethanol (and the NADH it generates) rather than on the ethanol molecule. Direct binding to a gluconeogenic enzyme predicts that inhibition would persist, or worsen, when ethanol remained at a high concentration. Fomepizole alone did not change glucose production, which rules out an ethanol-independent stimulation. Ethanol disappearance fell by more than 90% when ADH was inhibited, so ADH accounts for most ethanol removal.',
+        optionExplanations: [
+          'Direct binding to a gluconeogenic enzyme predicts that inhibition would persist, or worsen, when ethanol remained at high concentration. Instead, with ADH blocked and ethanol still present, glucose production was normal.',
+          'Fomepizole alone did not change glucose production, which rules out an ethanol-independent stimulation. It restored production only by preventing ethanol oxidation.',
+          'Ethanol disappearance fell by more than 90% when ADH was inhibited, so ADH accounts for most ethanol removal in these hepatocytes. There is no evidence of a major alternative route.',
+          'With ADH inhibited, ethanol persisted in the medium yet glucose production was normal. The inhibition therefore depends on oxidation of ethanol (and the NADH it generates) rather than on the ethanol molecule itself.',
+        ],
         skill: '1D research design: inhibitor controls',
       },
       {
@@ -75,6 +93,12 @@ export const FL6_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Each round of β-oxidation includes a dehydrogenase step that reduces $\\text{NAD}^+$, so when $\\text{NAD}^+$ is scarce fatty acids are oxidized more slowly and are instead esterified and stored as triacylglycerol. Fatty acid synthesis uses NADPH, not NADH, as its reductant, so a surplus of NADH does not drive it. Exporting ketone bodies removes carbon from the liver and would not cause triacylglycerol to build up. Faster hydrolysis of triacylglycerol would deplete the stores, and lipases are not activated by NADH.',
+        optionExplanations: [
+          'Fatty acid synthesis uses NADPH, not NADH, as its reductant. A surplus of NADH does not drive synthesis; it acts on oxidation instead.',
+          'Each round of β-oxidation includes a dehydrogenase step that reduces $\\text{NAD}^+$. When $\\text{NAD}^+$ is scarce, fatty acids are oxidized more slowly and are instead esterified and stored as triacylglycerol.',
+          'Exporting ketone bodies removes carbon from the liver and would not cause triacylglycerol to build up. Ketogenesis is a disposal route, not a storage route.',
+          'Faster hydrolysis of triacylglycerol would deplete hepatic stores, not accumulate them. Hepatic lipases are also not activated by NADH.',
+        ],
         skill: '1D β-oxidation and redox state',
       },
       {
@@ -89,6 +113,12 @@ export const FL6_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Ethanol fell by 4 mM in every hour regardless of its concentration, the behavior expected of an enzyme working near $V_{max}$; this agrees with ethanol concentrations of 8–20 mM, far above a $K_m$ of about 1 mM. An enzyme far from saturation would remove a constant fraction per hour, giving successively smaller decrements (20, 16, 12.8, …) instead of equal ones. The hourly decrements neither shrank, as progressive inhibition would predict, nor grew, as induction of more enzyme would predict.',
+        optionExplanations: [
+          'Ethanol fell by 4 mM in every hour regardless of its concentration (20, 16, 12, 8), the zero-order behavior of an enzyme working near $V_{max}$. This fits concentrations of 8–20 mM, far above a $K_m$ of about 1 mM.',
+          'An enzyme far from saturation would remove a constant fraction per hour, giving successively smaller decrements (20, 16, 12.8, 10.2) rather than equal ones. The data show equal 4 mM drops, not a constant fraction.',
+          'Progressive inhibition would make the hourly decrements shrink. They stayed at 4 mM throughout, so there is no sign of increasing inhibition.',
+          'Induction of more enzyme would make the hourly decrements grow. They stayed constant at 4 mM, so there is no evidence of induction over the 3 hours.',
+        ],
         skill: '1A enzyme saturation (data reasoning)',
       },
     ],
@@ -127,6 +157,12 @@ export const FL6_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The donor’s cells fall to 50% survival at about 6 $\\text{J/m}^2$, whereas the patient’s untransfected cells reach 50% at about 1 $\\text{J/m}^2$, a 6-fold difference in dose. Factors of 2, 3, or 4 would require the patient’s cells to reach 50% survival at 3, 2, or 1.5 $\\text{J/m}^2$, but Figure 1 shows that only 25% of them survive 2 $\\text{J/m}^2$ and about 12% survive 3 $\\text{J/m}^2$.',
+        optionExplanations: [
+          'A factor of 2 would require the patient’s cells to reach 50% survival at 3 J/m². Figure 1 shows only about 12% of them survive that dose.',
+          'A factor of 3 would require the patient’s cells to reach 50% survival at 2 J/m². Figure 1 shows only 25% survive that dose.',
+          'A factor of 4 would require the patient’s cells to reach 50% survival at 1.5 J/m². They are already at 50% by 1 J/m² and below 50% thereafter.',
+          'The donor’s cells fall to 50% survival at about 6 J/m², whereas the patient’s untransfected cells reach 50% at about 1 J/m², a 6-fold difference in dose.',
+        ],
         skill: '1B UV survival curves (data interpretation)',
       },
       {
@@ -141,6 +177,12 @@ export const FL6_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Repair synthesis can begin only after the lesion-containing oligonucleotide has been cut out, leaving a gap; if the strand is never incised there is no gap to fill, and no thymidine is incorporated. A ligase defect would leave a nick but would not stop the polymerase from filling the gap, so incorporation would be close to normal. Loss of proofreading would lower the accuracy of the new segment, not the amount of synthesis. NER requires no RNA primer, because the polymerase extends the 3′-hydroxyl end produced by the upstream cut.',
+        optionExplanations: [
+          'A ligase defect would leave a nick but would not stop the polymerase from filling the gap, so thymidine incorporation would be close to normal. Nearly absent synthesis points to an earlier failure.',
+          'Repair synthesis can begin only after the lesion-containing oligonucleotide has been cut out, leaving a gap. If the strand is never incised there is no gap to fill, and no thymidine is incorporated, matching the near-absence of unscheduled synthesis.',
+          'Loss of proofreading would lower the accuracy of the new segment, not the amount of synthesis. Thymidine would still be incorporated.',
+          'NER requires no RNA primer, because the polymerase extends the 3′-hydroxyl end produced by the upstream cut. Primer synthesis is not a step in this pathway.',
+        ],
         skill: '1B nucleotide-excision repair steps',
       },
       {
@@ -155,6 +197,12 @@ export const FL6_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'UV photons are absorbed in the outer layers of the skin and do not reach deeper organs, so the lesion that NER-deficient cells cannot remove is generated almost exclusively in sun-exposed skin. The patient’s defect is inherited and present in every cell, and the passage gives no evidence of an XPA-independent pathway for dimers in internal tissues. Many internal tissues, such as bone marrow and intestinal epithelium, divide rapidly. Skin cells have the same proofreading replicative polymerases as other cells.',
+        optionExplanations: [
+          'The patient’s defect is inherited and present in every cell, and the passage gives no evidence of an XPA-independent pathway for dimers in internal tissues. The difference lies in where lesions form, not in how they are repaired.',
+          'Many internal tissues, such as bone marrow and intestinal epithelium, divide rapidly, so slow division cannot explain their lower cancer risk in XP.',
+          'UV photons are absorbed in the outer layers of skin and do not reach deeper organs. The lesion that NER-deficient cells cannot remove is therefore generated almost exclusively in sun-exposed skin.',
+          'Skin cells have the same proofreading replicative polymerases as other cells. Proofreading is not the distinction, and XP is a defect in excision repair, not in polymerase fidelity.',
+        ],
         skill: '1B DNA damage by UV light',
       },
       {
@@ -169,6 +217,12 @@ export const FL6_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Transfection, the plasmid backbone, and antibiotic selection might themselves alter UV survival; patient cells carrying the plasmid without the XPA sequence control for all of these, isolating XPA as the cause of rescue. Adding XPA to donor cells would show whether extra XPA helps normal cells, not whether XPA explains the rescue of patient cells. Visible light would test whether killing depends on wavelength, a different question. Unirradiated cells of each culture were already used as the reference for scoring survival.',
+        optionExplanations: [
+          'Transfection, the plasmid backbone, and antibiotic selection might themselves alter UV survival. Patient cells carrying the plasmid without the XPA sequence control for all of these, isolating XPA as the cause of rescue.',
+          'Adding XPA to donor cells would show whether extra XPA helps normal cells, not whether XPA explains the rescue of patient cells. It does not control for the transfection procedure in the patient line.',
+          'Visible light would test whether killing depends on wavelength, a different question. It does not address whether the rescue is due to XPA rather than to transfection itself.',
+          'Unirradiated cells of each culture were already used as the reference for scoring survival, so this culture adds nothing to attributing the rescue to XPA.',
+        ],
         skill: '1B research design: vector controls',
       },
     ],
@@ -192,6 +246,12 @@ export const FL6_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Each separated cell produced an entire fetus and also contributed to a placenta, so each could form both embryonic and extraembryonic tissues, which is the definition of totipotency. A pluripotent cell forms all three germ layers but cannot form the trophoblast, so it could not have supplied a placenta. Multipotent cells are restricted to the cell types of one tissue, and unipotent cells to a single cell type; neither could build a whole organism.',
+        optionExplanations: [
+          'A pluripotent cell forms all three germ layers but cannot form the trophoblast, so it could not have supplied a placenta. Each twin had its own placenta, which exceeds pluripotency.',
+          'Each separated cell produced an entire fetus and also contributed to a placenta, so each could form both embryonic and extraembryonic tissues. That is the definition of totipotency.',
+          'Multipotent cells are restricted to the cell types of one tissue, as the hematopoietic stem cell is to blood. A multipotent cell could not build a whole organism.',
+          'Unipotent cells form only a single cell type. They could not produce a complete fetus with a placenta.',
+        ],
         skill: '2C stem-cell potency',
       },
       {
@@ -206,6 +266,12 @@ export const FL6_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Without APC, β-catenin is not destroyed even when Wnt is absent, so cells displaced from the niche behave as though they were still receiving the signal: they keep dividing and fail to differentiate, forming an expanding mass. Premature differentiation would follow from too little β-catenin activity, the opposite of what APC loss produces. The mutation acts within the mutant cell and does not kill Paneth cells; in any case the mutant cell no longer depends on their Wnt. Stabilizing β-catenin maintains a tissue stem-cell program and does not restore pluripotency, which required four specific transcription factors.',
+        optionExplanations: [
+          'Premature differentiation would follow from too little β-catenin activity. APC loss produces the opposite, stabilized β-catenin, so the stem-cell program persists rather than ending early.',
+          'The mutation acts within the mutant cell and does not kill Paneth cells. In any case the mutant cell no longer depends on their Wnt, since its β-catenin is stabilized without the signal.',
+          'Stabilizing β-catenin maintains a tissue stem-cell program and does not restore pluripotency, which required four specific transcription factors. A teratoma is not the expected early outcome.',
+          'Without APC, β-catenin is not destroyed even when Wnt is absent, so cells displaced from the niche behave as though still receiving the signal: they keep dividing and fail to differentiate, forming an expanding mass.',
+        ],
         skill: '2C stem-cell niche signaling',
       },
       {
@@ -220,6 +286,12 @@ export const FL6_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'If a fibroblast nucleus can be returned to pluripotency with no change in DNA sequence, the fibroblast must have kept a complete genome, with unused genes held inactive by reversible marks such as DNA methylation and histone modification. Deleted genes could not be recovered by expressing transcription factors, and deletion would have changed the DNA sequence. Mutation of the factor genes would likewise have appeared as a sequence difference. The four factors are normally expressed in the embryo’s own pluripotent cells, so differentiation does not depend on factors unique to culture.',
+        optionExplanations: [
+          'If a fibroblast nucleus can be returned to pluripotency with no change in DNA sequence, it must have kept a complete genome, with unused genes held inactive by reversible marks such as DNA methylation and histone modification.',
+          'Deleted genes could not be recovered by expressing transcription factors, and deletion would have changed the DNA sequence. The sequence identity of iPS cells and fibroblasts rules this out.',
+          'Mutation of the factor genes would have appeared as a sequence difference between fibroblasts and iPS cells. The passage states the sequences are the same.',
+          'The four factors are normally expressed in the embryo’s own pluripotent cells, so differentiation does not depend on factors unique to culture.',
+        ],
         skill: '2C genomic equivalence and differentiation',
       },
       {
@@ -234,6 +306,12 @@ export const FL6_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The child’s fibroblasts carry the inherited globin mutation, so blood cells derived from them would be just as defective as the marrow they replace unless the mutation is corrected first. Cells derived from the child’s own iPS cells bear the child’s histocompatibility antigens, so lifelong immunosuppression should not be needed. Undifferentiated pluripotent cells form teratomas in an adult and would not home to the marrow as hematopoietic stem cells do. Transplanted stem cells must divide for the rest of the child’s life to rebuild the blood, so preventing division would defeat the treatment.',
+        optionExplanations: [
+          'Cells derived from the child’s own iPS cells bear the child’s histocompatibility antigens, so lifelong immunosuppression should not be needed. Rejection is not the limiting problem.',
+          'Undifferentiated pluripotent cells form teratomas in an adult and would not home to the marrow as hematopoietic stem cells do. Transplanting before differentiation would be dangerous and ineffective.',
+          'The child’s fibroblasts carry the inherited globin mutation, so blood cells derived from them would be just as defective as the marrow they replace unless the mutation is corrected first.',
+          'Transplanted stem cells must divide for the rest of the child’s life to rebuild the blood. Preventing division by irradiation would defeat the treatment.',
+        ],
         skill: '2C therapeutic use of stem cells',
       },
     ],
@@ -264,6 +342,12 @@ export const FL6_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Stroke volume is CO divided by heart rate: 12,000 mL/min ÷ 120 beats/min = 100 mL in moderate exercise and 20,000 ÷ 200 = 100 mL in maximal exercise. Stroke volume was therefore unchanged, and the whole increase in CO came from heart rate. Heart rate clearly rose, from 120 to 200 beats/min, so it was not constant. Heart rate alone rose by 67%, the same percentage as CO, which leaves no room for an accompanying rise in stroke volume. A lower stroke volume is excluded by the calculation, which gives 100 mL at both workloads.',
+        optionExplanations: [
+          'Stroke volume is CO divided by heart rate: 12,000/120 = 100 mL at moderate exercise and 20,000/200 = 100 mL at maximal exercise. Stroke volume was unchanged, so the whole increase came from heart rate.',
+          'Heart rate clearly rose from 120 to 200 beats/min, so it was not constant. The increase in cardiac output cannot be attributed to stroke volume at an unchanged heart rate.',
+          'Heart rate alone rose by 67%, the same percentage as cardiac output, which leaves no room for an accompanying rise in stroke volume. Equal percentage rises in both would have produced a larger CO increase.',
+          'A lower stroke volume is excluded by the calculation, which gives 100 mL at both workloads. Heart rate did not have to outweigh any fall.',
+        ],
         skill: '3B cardiac output (data interpretation)',
       },
       {
@@ -278,6 +362,12 @@ export const FL6_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Sympathetic vasoconstrictor activity rises throughout the body, which explains the fall in flow to resting muscle, kidneys, and splanchnic organs; in contracting muscle, locally accumulating products of metabolism (for example adenosine, $\\text{K}^+$, $\\text{CO}_2$, and $\\text{H}^+$) relax arteriolar smooth muscle and override that constriction. The sympathetic outflow in exercise is not organized to dilate legs and constrict arms; had the men cranked with their arms, the pattern would have reversed. Leg and arm muscle arterioles have the same α-adrenergic receptors. MAP rose only from 90 to 105 mm Hg, far too little to explain a 14-fold rise in flow, and a pressure rise would increase rather than halve forearm flow.',
+        optionExplanations: [
+          'The sympathetic outflow in exercise is not organized to dilate legs and constrict arms. Had the men cranked with their arms, the pattern would have reversed; the difference is local activity, not anatomical wiring.',
+          'Leg and arm muscle arterioles have the same α-adrenergic receptors. Leg arterioles are not immune to norepinephrine; they are overridden by local metabolites during contraction.',
+          'Sympathetic vasoconstrictor activity rises throughout the body, explaining the fall in flow to resting muscle, kidneys, and splanchnic organs. In contracting muscle, locally accumulating metabolites (adenosine, K⁺, CO₂, H⁺) relax arteriolar smooth muscle and override that constriction.',
+          'MAP rose only from 90 to 105 mm Hg, far too little to explain a 14-fold rise in flow. A pressure rise would also increase rather than halve forearm flow.',
+        ],
         skill: '3B local control of blood flow',
       },
       {
@@ -292,6 +382,12 @@ export const FL6_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Leaving the renal and splanchnic arterioles dilated adds low-resistance parallel pathways, so TPR would be smaller than it actually was; with CO fixed at 20 L/min, MAP (CO × TPR) would be lower. Visceral vasoconstriction is what partly offsets the large fall in resistance of the working muscle. Wider arterioles reduce resistance; they cannot raise it. The stem holds cardiac output constant, so a change in stroke volume cannot be the cause of a change in pressure.',
+        optionExplanations: [
+          'Wider arterioles reduce resistance; they cannot raise it. Leaving the renal and splanchnic beds dilated would lower TPR, not increase it.',
+          'Leaving the renal and splanchnic arterioles dilated adds low-resistance parallel pathways, so TPR would be smaller than it actually was. With CO fixed at 20 L/min, MAP (CO × TPR) would be lower.',
+          'The stem holds cardiac output constant at 20 L/min, so stroke volume is not the variable at issue. In addition, wider visceral arterioles reduce TPR, which would lower MAP, not raise it.',
+          'The stem holds cardiac output constant, so a change in stroke volume cannot be the cause of a change in pressure. The direction is right but the reason is wrong; it is lower TPR that lowers MAP.',
+        ],
         skill: '3B determinants of arterial pressure',
       },
       {
@@ -306,6 +402,12 @@ export const FL6_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Veins are thin-walled and lie between muscles; each contraction compresses them, and because their valves permit flow only toward the heart, rhythmic contraction pumps blood upward against gravity. Most of the arterial pressure is dissipated across the arterioles and capillaries, so venous pressure is low. Veins do not propel blood by peristaltic waves, although sympathetic venoconstriction reduces their capacity. Valves that stayed closed would trap blood in the legs and reduce venous return.',
+        optionExplanations: [
+          'Most of the arterial pressure is dissipated across the arterioles and capillaries, so venous pressure is low. Arterial pressure is not transmitted to the leg veins without loss.',
+          'Veins do not propel blood by peristaltic waves. Sympathetic venoconstriction reduces venous capacity, but it is not a traveling contraction that pumps blood toward the heart.',
+          'Valves that stayed closed would trap blood in the legs and reduce venous return. Venous valves open to permit flow toward the heart and close only to prevent backflow.',
+          'Veins are thin-walled and lie between muscles; each contraction compresses them, and because their valves permit flow only toward the heart, rhythmic contraction pumps blood upward against gravity. This muscle pump is the major contributor during upright cycling.',
+        ],
         skill: '3B venous return',
       },
       {
@@ -320,6 +422,12 @@ export const FL6_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Digestion and absorption increase blood flow to the stomach, intestine, and liver, so a recent meal would raise the resting splanchnic value and make the decline during exercise appear larger, and more variable among subjects, than it is in the fasted state. Brain blood flow is held nearly constant and is not raised by a meal. A meal does not reduce skin blood flow; if anything, the heat produced by digestion would slightly increase it. Resting muscle blood flow is set by the low metabolic rate of inactive muscle and is not increased by eating.',
+        optionExplanations: [
+          'Brain blood flow is held nearly constant by autoregulation and is not raised by a meal. The resting value of 750 mL/min would not change.',
+          'A meal does not reduce skin blood flow; if anything, the heat produced by digestion would slightly increase it. The rise during moderate exercise would not be exaggerated.',
+          'Digestion and absorption increase blood flow to the stomach, intestine, and liver. A recent meal would raise the resting splanchnic value and make the decline during exercise appear larger, and more variable among subjects, than in the fasted state.',
+          'Resting muscle blood flow is set by the low metabolic rate of inactive muscle and is not increased by eating. Its apparent rise with exercise would be unaffected.',
+        ],
         skill: '3B research design: controlling prandial state',
       },
     ],
@@ -348,6 +456,12 @@ export const FL6_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Without HGPRT, hypoxanthine and guanine cannot be salvaged: the PRPP that salvage would have consumed accumulates and activates the amidotransferase, and the fall in IMP and GMP relieves its feedback inhibition, so de novo synthesis runs faster and the excess purines, like the unsalvaged bases, are degraded to uric acid. HGPRT is a salvage enzyme, not a renal transporter, and the defect is overproduction rather than retention. Pyrimidines are not degraded to uric acid. PRPP rises rather than falls when salvage fails, and depletion of an activator would slow the pathway.',
+        optionExplanations: [
+          'HGPRT is a salvage enzyme, not a renal transporter. The defect in Lesch–Nyhan syndrome is overproduction of uric acid, not retention.',
+          'Pyrimidines are not degraded to uric acid; only purine bases feed into xanthine oxidase. Pyrimidine rings play no part in the overproduction.',
+          'PRPP rises rather than falls when salvage fails, because salvage would have consumed it. Depletion of an activator would also slow the pathway, not speed it.',
+          'Without HGPRT, hypoxanthine and guanine cannot be salvaged: the PRPP that salvage would have used accumulates and activates the amidotransferase, and the fall in IMP and GMP relieves its feedback inhibition. De novo synthesis runs faster and the excess purines are degraded to uric acid.',
+        ],
         skill: '1D purine salvage and feedback regulation',
       },
       {
@@ -362,6 +476,12 @@ export const FL6_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Allopurinol inhibits xanthine oxidase, the enzyme that inactivates 6-mercaptopurine, so more of each dose survives to be converted into the active nucleotide, and the unchanged dose becomes an overdose. Allopurinol acts on xanthine oxidase, not on HGPRT, so activation of the drug is not prevented. Allopurinol does not accelerate de novo synthesis; by allowing more hypoxanthine to be salvaged, it tends to slow that pathway. Nothing in the passage suggests that 6-mercaptopurine interferes with the excretion of allopurinol.',
+        optionExplanations: [
+          'Allopurinol acts on xanthine oxidase, not on HGPRT, so activation of 6-mercaptopurine to its nucleotide is not prevented. The antileukemic effect is enhanced, not lost.',
+          'Allopurinol inhibits xanthine oxidase, the enzyme that inactivates 6-mercaptopurine in the liver. More of each dose survives to be converted to the active nucleotide, so the unchanged dose becomes an overdose.',
+          'Allopurinol does not accelerate de novo synthesis; by allowing more hypoxanthine to be salvaged, it tends to slow that pathway through feedback inhibition.',
+          'Nothing in the passage suggests that 6-mercaptopurine interferes with the excretion of allopurinol. The interaction runs the other way, through xanthine oxidase.',
+        ],
         skill: '1D purine degradation and drug interaction',
       },
       {
@@ -376,6 +496,12 @@ export const FL6_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Ribonucleotide reductase is the only source of the deoxyribonucleotides needed for replication, so inactivating it stalls DNA synthesis and cells accumulate in S phase. Spindle assembly depends on tubulin polymerization, which hydroxyurea does not affect. Transcription uses ribonucleotides, whose synthesis does not require the reductase. Chromosome condensation occurs after replication is complete and is not what limits hydroxyurea-treated cells.',
+        optionExplanations: [
+          'Ribonucleotide reductase is the only source of the deoxyribonucleotides needed for replication. Inactivating it stalls DNA synthesis, so cells accumulate in S phase.',
+          'Spindle assembly depends on tubulin polymerization, which hydroxyurea does not affect. The drug acts on nucleotide supply, not on the mitotic apparatus.',
+          'Transcription uses ribonucleotides, whose synthesis does not require ribonucleotide reductase. Ribosomal RNA synthesis would continue.',
+          'Chromosome condensation occurs after replication is complete and is not what limits hydroxyurea-treated cells. They never finish replicating, so they do not reach G2.',
+        ],
         skill: '1D deoxyribonucleotide synthesis',
       },
       {
@@ -389,6 +515,12 @@ export const FL6_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Thymine is 5-methyluracil, so the one-carbon unit donated by methylene-THF ends up as a methyl group on carbon 5 of the uracil ring. An amino group at carbon 4 in place of the carbonyl oxygen is what distinguishes cytosine from uracil. The sugar of dUMP is already deoxyribose and remains so in dTMP; a 2′-hydroxyl would make it a ribonucleotide. Nitrogen 3 bears the hydrogen that pairs with adenine and is not methylated in thymine.',
+        optionExplanations: [
+          'An amino group at carbon 4 in place of the carbonyl oxygen is what distinguishes cytosine from uracil, not thymine. Thymidylate synthase does not aminate the ring.',
+          'The sugar of dUMP is already deoxyribose and remains so in dTMP. Adding a 2′-hydroxyl would make it a ribonucleotide, the reverse of what ribonucleotide reductase did.',
+          'Thymine is 5-methyluracil, so the one-carbon unit donated by methylene-THF ends up as a methyl group on carbon 5 of the uracil ring, with DHF released.',
+          'Nitrogen 3 bears the hydrogen that pairs with adenine and is not methylated in thymine. Methylation there would destroy base pairing.',
+        ],
         skill: '1D pyrimidine structure and synthesis',
       },
     ],
@@ -411,6 +543,12 @@ export const FL6_BIO_BIOCHEM_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'By the Frank–Starling mechanism, a larger end-diastolic volume stretches ventricular fibers toward the sarcomere length at which actin–myosin overlap (and calcium sensitivity) is optimal, so the next contraction is stronger and ejects the extra blood. The effect is intrinsic to the muscle and does not depend on a longer action potential. A higher aortic pressure is an afterload that opposes ejection; it does not draw blood out. The atrioventricular valves are closed during ventricular systole, and their timing does not account for a more forceful beat.',
+    optionExplanations: [
+      'The Frank–Starling effect is intrinsic to the muscle and does not depend on a longer action potential. Filling alters sarcomere length, not the electrical duration of each beat.',
+      'By the Frank–Starling mechanism, a larger end-diastolic volume stretches ventricular fibers toward the sarcomere length at which actin–myosin overlap (and calcium sensitivity) is optimal, so the next contraction is stronger and ejects the extra blood.',
+      'A higher aortic pressure is an afterload that opposes ejection; it does not draw blood out of the ventricle. Greater afterload would tend to reduce stroke volume.',
+      'The atrioventricular valves are closed during ventricular systole, and their timing does not account for a more forceful beat. Valve timing is not a mechanism of increased contractility.',
+    ],
     skill: '3B Frank–Starling mechanism',
   },
   {
@@ -428,6 +566,12 @@ export const FL6_BIO_BIOCHEM_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'Stronger contractions push the fetus harder against the cervix, which increases the very stimulus that evoked oxytocin release; the loop therefore amplifies itself until delivery removes the stretch. Release from axon terminals describes neurosecretion, which occurs in negative-feedback systems as well (for example, ADH). A response that returns the stimulus toward its starting level is the definition of negative feedback. Acting at a distance is true of all endocrine hormones and says nothing about the direction of feedback.',
+    optionExplanations: [
+      'Release from axon terminals describes neurosecretion, which occurs in negative-feedback systems as well (for example, ADH). The site of release says nothing about the direction of feedback.',
+      'A response that returns the stimulus toward its starting level is the definition of negative feedback. Oxytocin does the opposite, driving the stimulus further from its starting level.',
+      'Acting at a distance is true of all endocrine hormones and says nothing about the direction of feedback. Both positive and negative loops can involve distant targets.',
+      'Stronger contractions push the fetus harder against the cervix, increasing the very stimulus that evoked oxytocin release. The loop amplifies itself until delivery removes the stretch, which is the signature of positive feedback.',
+    ],
     skill: '3B positive feedback in parturition',
   },
   {
@@ -445,6 +589,12 @@ export const FL6_BIO_BIOCHEM_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'Melatonin is secreted by the pineal gland in darkness; light detected by the retina is relayed through the hypothalamus (the suprachiasmatic nucleus) to the pineal and suppresses secretion, so bright light at night lowers melatonin. The human pineal is not itself light-sensitive, and light decreases rather than increases its output. Melatonin is not an anterior pituitary hormone and has no hypothalamic releasing hormone. The adrenal medulla secretes epinephrine and norepinephrine, not melatonin.',
+    optionExplanations: [
+      'Melatonin is secreted by the pineal gland in darkness. Light detected by the retina is relayed through the hypothalamus (suprachiasmatic nucleus) to the pineal and suppresses secretion, so bright light at night lowers melatonin.',
+      'The human pineal is not itself light-sensitive; it receives retinal input via the hypothalamus. Light decreases rather than increases its output.',
+      'Melatonin is not an anterior pituitary hormone and has no hypothalamic releasing hormone. It is made by the pineal gland.',
+      'The adrenal medulla secretes epinephrine and norepinephrine, not melatonin. Sympathetic activation does not produce melatonin.',
+    ],
     skill: '3B pineal gland and melatonin',
   },
   {
@@ -462,6 +612,12 @@ export const FL6_BIO_BIOCHEM_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'In a test cross with a bb female, a Bb male produces black and white offspring with equal probability, so seven black offspring in a row would occur with probability $(1/2)^7 = 1/128$, less than 1%; BB is therefore strongly favored though not proven. Certainty is not justified, because a Bb male could produce this litter by chance. A BB male can transmit only B, so every one of his offspring would be black. The female’s b alleles are precisely what make the cross informative: each offspring’s phenotype reveals which allele the male contributed.',
+    optionExplanations: [
+      'Certainty is not justified, because a Bb male could produce seven black offspring by chance, with probability $(1/2)^7 = 1/128$. Rare is not impossible.',
+      'A BB male can transmit only B, so every one of his offspring with a bb female would be black. He would never sire a white offspring, so this reasoning is backward.',
+      'In a test cross with a bb female, a Bb male produces black and white offspring with equal probability, so seven black in a row has probability $(1/2)^7 = 1/128$, less than 1%. BB is strongly favored though not proven.',
+      'The female’s b alleles are precisely what make the cross informative: each offspring’s phenotype reveals which allele the male contributed. The genotype is not unknown; it is probably BB.',
+    ],
     skill: '1C test cross',
   },
   {
@@ -479,6 +635,12 @@ export const FL6_BIO_BIOCHEM_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'Adenine is a purine and thymine is a pyrimidine; a substitution that exchanges a purine for a pyrimidine (or the reverse) is a transversion. A transition keeps the chemical class, purine for purine (A ↔ G) or pyrimidine for pyrimidine (C ↔ T), so the two options that call this change a transition mislabel it. The option describing a pyrimidine-for-pyrimidine change both misidentifies adenine and describes what would be a transition.',
+    optionExplanations: [
+      'Adenine and thymine are not both purines. Adenine is a purine, thymine a pyrimidine, so the change crosses classes and is a transversion, not a transition.',
+      'Adenine is a purine and thymine is a pyrimidine. A substitution that exchanges a purine for a pyrimidine is a transversion.',
+      'A purine-for-pyrimidine exchange is correctly identified, but that is the definition of a transversion, not a transition. Transitions stay within a chemical class.',
+      'This both misidentifies adenine, which is a purine, and describes a pyrimidine-for-pyrimidine change, which would be a transition rather than a transversion.',
+    ],
     skill: '1C types of base substitution',
   },
   {
@@ -496,6 +658,12 @@ export const FL6_BIO_BIOCHEM_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       '$V_{max}$ equals $k_{cat}$ times the total enzyme concentration, so doubling the enzyme doubles $V_{max}$. $K_m$ is the substrate concentration that gives half of $V_{max}$ and is determined by the rate constants of the enzyme–substrate interaction, so it does not depend on how much enzyme is present. Any option in which $K_m$ changes treats it as a property of the amount of enzyme, and any option in which $V_{max}$ is unchanged ignores the fact that twice as many active sites turn over twice as much substrate at saturation.',
+    optionExplanations: [
+      '$V_{max}$ correctly doubles, but $K_m$ is determined by the rate constants of the enzyme–substrate interaction and does not depend on enzyme amount. It would stay the same.',
+      '$V_{max}$ equals $k_{cat}$ times total enzyme, so it cannot stay unchanged when enzyme doubles. $K_m$ also does not change with enzyme concentration.',
+      'Twice as many active sites turn over twice as much substrate at saturation, so $V_{max}$ must double. $K_m$ is independent of enzyme concentration and would not double either.',
+      '$V_{max}$ equals $k_{cat}$ times the total enzyme concentration, so doubling the enzyme doubles $V_{max}$. $K_m$ is the substrate concentration giving half of $V_{max}$ and depends only on the rate constants of the enzyme–substrate interaction, not on enzyme amount.',
+    ],
     skill: '1A enzyme concentration and Vmax',
   },
   {
@@ -513,6 +681,12 @@ export const FL6_BIO_BIOCHEM_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'Resistance to treatments that destroy nucleic acids, combined with sensitivity to protein denaturation, points to an agent with no genome: a prion, a misfolded protein that converts the normally folded form of the same host protein to the abnormal conformation. A viroid is naked RNA and would be destroyed by nucleases. A retrovirus depends on its RNA genome and would be inactivated by ultraviolet light. Bacteria, including spore formers, contain DNA that ultraviolet light damages, and they do not cause transmissible spongiform disease.',
+    optionExplanations: [
+      'Resistance to nucleases and UV, combined with sensitivity to protein denaturation, points to an agent with no genome: a prion, a misfolded protein that converts normally folded copies of the same host protein to the abnormal conformation.',
+      'A viroid is naked RNA and would be destroyed by nucleases and inactivated by UV. The extract survived both, so the agent is not a viroid.',
+      'A retrovirus depends on its RNA genome and would be inactivated by UV light at virus-inactivating doses. The extract’s resistance to such doses rules it out.',
+      'Bacteria, including spore formers, contain DNA that UV light damages, and they do not cause transmissible spongiform disease. Protein denaturants alone would also not reliably kill endospores.',
+    ],
     skill: '2B prions',
   },
 ]

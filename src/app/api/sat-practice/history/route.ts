@@ -1,16 +1,23 @@
 import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
+import { PSAT_ONLY_ATTEMPTS, SAT_ONLY_ATTEMPTS } from '@/lib/sat-attempt-format'
 
-export async function GET() {
+/**
+ * GET /api/sat-practice/history — the student's SAT practice tests, or with
+ * `?exam=psat` their adaptive PSAT/NMSQT practice tests. The two never mix:
+ * they share SatTestAttempt but score on different scales.
+ */
+export async function GET(req: Request) {
   try {
     const session = await auth()
     if (!session?.user?.id) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
+    const psat = new URL(req.url).searchParams.get('exam') === 'psat'
     const attempts = await prisma.satTestAttempt.findMany({
-      where: { userId: session.user.id },
+      where: { userId: session.user.id, ...(psat ? PSAT_ONLY_ATTEMPTS : SAT_ONLY_ATTEMPTS) },
       orderBy: { completedAt: 'desc' },
       select: {
         id: true,
@@ -20,6 +27,8 @@ export async function GET() {
         totalScore: true,
         rwCorrect: true,
         rwTotal: true,
+        rwTier: true,
+        mathTier: true,
         mathCorrect: true,
         mathTotal: true,
         timeSpent: true,

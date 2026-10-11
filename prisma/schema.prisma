@@ -98,6 +98,9 @@ model User {
   unitTestAttempts           UnitTestAttempt[]
   mcatUnitTests              McatUnitTest[]
   externalExamScores         ExternalExamScore[]
+  qbankSessions              QbankSession[]
+  userFlashcards             UserFlashcard[]
+  examGoals                  ExamGoal[]
   frqAttempts                FrqAttempt[]
   diagnosticChallenges       DiagnosticChallenge[]
   diagnosticChallengeEntries DiagnosticChallengeEntry[]
@@ -661,12 +664,83 @@ model QuestionActivity {
   chosenText  String?
   /// Marked for review.
   flagged     Boolean        @default(false)
+  /// optionKey() of the option picked — order-independent, so "how others
+  /// answered" can count choices across students who saw different orders.
+  chosenKey   String?
   user        User           @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@index([userId, answeredAt])
   @@index([classroomId, answeredAt])
   @@index([userId, courseSlug, answeredAt])
   @@index([attemptId])
+  @@index([questionKey])
+}
+
+/// A custom practice set the student built (question bank): its questions are
+/// frozen at creation (options in shown order, keys included) so grading is
+/// server-side and the set can be reviewed later.
+model QbankSession {
+  id          String    @id @default(cuid())
+  userId      String
+  course      String // 'mcat' | 'sat'
+  /// 'timed' (no feedback until the end) | 'tutor' (explanation after each)
+  mode        String
+  /// What the student asked for (sections/topics/difficulty/pool filters).
+  filters     Json
+  items       Json
+  answers     Json?
+  flags       Json?
+  /// Seconds per item, aligned with items.
+  timings     Json?
+  timeLimitSec Int?
+  correct     Int?
+  total       Int
+  startedAt   DateTime  @default(now())
+  completedAt DateTime?
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, course, startedAt])
+}
+
+/// A flashcard the student wrote themselves. Scheduled with the same
+/// spaced-repetition rules as site cards (src/lib/spaced-repetition.ts).
+model UserFlashcard {
+  id               String   @id @default(cuid())
+  userId           String
+  courseSlug       String   @default("")
+  topicSlug        String   @default("")
+  front            String
+  back             String
+  hint             String?
+  /// Where it came from: 'manual' | 'mistake' (made from a missed question).
+  origin           String   @default("manual")
+  easeFactor       Float    @default(2.5)
+  interval         Int      @default(0)
+  isMinuteInterval Boolean  @default(false)
+  repetitions      Int      @default(0)
+  nextReview       DateTime @default(now())
+  lastReviewed     DateTime?
+  reviewCount      Int      @default(0)
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+  user             User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, nextReview])
+  @@index([userId, courseSlug])
+}
+
+/// A student's score goal for an exam, with the colleges it's aimed at.
+model ExamGoal {
+  id          String   @id @default(cuid())
+  userId      String
+  course      String // 'sat' | 'mcat' | 'act' | 'psat'
+  targetScore Int
+  /// [{ name, low, high }] — the college's middle-50% range when known.
+  colleges    Json?
+  updatedAt   DateTime @updatedAt
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, course])
 }
 
 model DailyStreak {

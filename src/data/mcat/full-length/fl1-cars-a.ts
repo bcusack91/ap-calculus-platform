@@ -28,6 +28,12 @@ export const FL1_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The passage builds to the claim that a first reading is “a reconnaissance” and that treating it as the whole of reading confuses “the preliminary with the thing itself”; rereading is where attention can finally settle on what the writer was doing. The comfort-of-the-familiar option describes the kind of return the author explicitly disowns as “the use of a book as a blanket.” The duty-to-the-unread option states the reproach the passage sets out to answer. The misjudgment option is too narrow: the author recommends rereading as such, not only for books one suspects one got wrong.',
+        optionExplanations: [
+          'This describes the return the author explicitly disowns in the fifth paragraph as “the use of a book as a blanket,” the one kind of return that “deserves the reproach.” It is the opposite of the passage’s point.',
+          'This is the reproach the passage sets out to answer, not the author’s view. The author argues the reproach “has its arithmetic backward” because the unreread novel is only half-read.',
+          'The passage builds to calling the first reading “a reconnaissance” and “preliminary,” and says a culture that treats it as the whole of reading “has confused the preliminary with the thing itself.” Rereading is where attention can settle on what the writer was doing.',
+          'Too narrow. The author recommends rereading as such, as the completion of reading, not only for novels one suspects one misjudged. Suspecting an error is never stated as the condition for returning.',
+        ],
         skill: 'main-idea',
       },
       {
@@ -41,6 +47,12 @@ export const FL1_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The fifth paragraph opens with “admittedly” and grants that a return seeking only “the comfort of the familiar” deserves the reproach, then denies that this counts as rereading at all — a concession that isolates what the author is defending. The comfort option treats the image as a description of typical readers, but the author uses it to mark a failure, not a norm. The every-return option reverses the paragraph, which limits the reproach to one kind of return. The avoid-rereading option is advice the passage never gives; the author asks readers to be willing to be corrected, not to abstain.',
+        optionExplanations: [
+          'The fifth paragraph opens with “admittedly,” grants that a comfort-seeking return “deserves the reproach,” then says “this is not rereading.” The image fences off a bad kind of return so the author’s defense applies only to real rereading.',
+          'The author uses the blanket image to mark a failure, not to describe what typically draws readers back. Nothing in the passage claims most readers return to novels for comfort.',
+          'This reverses the paragraph. The author limits the reproach to one kind of return, the comfort-seeking one, and explicitly separates it from genuine rereading, which is “exposed” to unwelcome discoveries.',
+          'The passage never advises anyone to abstain from rereading. The author asks readers to be “willing to be corrected,” which is an invitation to reread, not a warning against it.',
+        ],
         skill: 'function',
       },
       {
@@ -54,6 +66,12 @@ export const FL1_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Wanting “the old feeling reproduced” is precisely what the author says marks the blanket-like return that “is not rereading.” Attention to arrangement and echoes is what the author says a second reading makes possible once suspense is spent. Willingness to find the novel worse is the first half of the author’s “simple” test, and discovering that one was a worse reader then is the second half, which the author says real rereading “is often rewarded with.”',
+        optionExplanations: [
+          'Attention to “the arrangement, the withholding, the echo of one scene in another” is exactly what the author says a second reading makes possible once suspense is spent. It is characteristic of genuine rereading.',
+          'Willingness to find “that the novel is worse than she remembered” is the first half of the author’s “simple” test for real rereading, so it is characteristic of it.',
+          'Discovering “that she was a worse reader then than she is now” is the second half of the test, and the author says real rereading “is often rewarded with” it. It is characteristic of genuine rereading.',
+          'Wanting “the old feeling reproduced” is what the author says marks the blanket-like return that “is not rereading.” It is the one item that is not characteristic of genuine rereading, which makes it the exception.',
+        ],
         skill: 'detail',
       },
       {
@@ -67,6 +85,12 @@ export const FL1_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The author’s test for real rereading is whether the reader is “willing to find … that the novel is worse than she remembered”; a reader who makes that discovery has passed the test, since the blanket-seeking reader “would resent the book for changing.” Nothing in the passage privileges the first reading as more accurate; the author calls it a reconnaissance. The suspense option treats a downgraded verdict as the novel’s fault, whereas the passage presents such discoveries as what rereading is “exposed to,” not as proof about the book. The prefer-unread option restates the reproach the author rejects.',
+        optionExplanations: [
+          'Nothing in the passage privileges the first reading as more accurate. The author calls it “a reconnaissance” that is “hostage to plot,” so a downgraded verdict on rereading is not evidence the first impression was right.',
+          'The author’s test for real rereading is whether the reader is “willing to find … that the novel is worse than she remembered.” A reader who makes that discovery has passed the test; the blanket-seeking reader “would resent the book for changing.”',
+          'This treats a downgraded verdict as the novel’s fault, but the passage presents such discoveries as what rereading is “exposed to,” not as proof about the book. Suspense is a limit on the reader, not a virtue of the novel.',
+          'Preferring unread books in the future restates the reproach the author rejects. A disappointing reread is precisely the kind of correction the author says readers owe a novel, not a reason to stop returning.',
+        ],
         skill: 'new-information',
       },
       {
@@ -80,6 +104,12 @@ export const FL1_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The author argues that the first reading is “hostage to plot” and that only afterward can attention settle on “what the writer was actually doing”; calling the first pass not a reading only follows if attending to arrangement is what reading essentially is, rather than finding out what happens. The unpredictable-plot option is not needed: the argument concerns the reader’s hurry under uncertainty, not whether a plot could be guessed. The retention option belongs to the content-transfer picture the author rejects. Authorial intention plays no role in the argument, which is about the reader’s attention.',
+        optionExplanations: [
+          'Calling the first pass “not yet a reading” only follows if attending to arrangement and what the writer was doing is what reading essentially is, rather than finding out what happens. Without this, a plot-driven first pass would count as reading.',
+          'The argument concerns the reader’s hurry under uncertainty, not whether a plot could be guessed. Even a predictable plot would not change the author’s claim that a first reading is reconnaissance.',
+          'Retention of content belongs to the content-transfer picture the author rejects. The argument is about what attention can settle on, not about how much is retained.',
+          'Authorial intention plays no role in the argument, which is about the reader’s attention and the effect of suspense. The author never claims novelists intend their books to be read twice.',
+        ],
         skill: 'assumption',
       },
       {
@@ -93,6 +123,12 @@ export const FL1_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The passage describes the first reading as a “reconnaissance” consumed by not knowing what happens, and the second as the point at which attention can settle on what is actually there; the traveler’s two visits map onto both halves. The diner is the blanket-seeking reader who wants the old experience reproduced. The forgetful student repeats the same transfer of content, which is the redundant picture the author rejects. The musician’s rehearsals aim at reproducing a performance, not at seeing the piece differently.',
+        optionExplanations: [
+          'The diner returns for a reliable repeat of a known experience, which matches the blanket-seeking reader who wants “the old feeling reproduced,” not the author’s account of a second reading that sees the book anew.',
+          'The forgetful student repeats the same transfer of content, which is the redundant picture of rereading the author rejects. The second memorization adds nothing new; the author’s second reading sees what the first could not.',
+          'The passage describes the first reading as a “reconnaissance” consumed by not knowing what happens and the second as the point where attention can settle on what is actually there. The traveler’s two visits map onto both halves.',
+          'The musician’s rehearsals aim at reproducing a performance flawlessly, not at seeing the piece differently. The author’s rereading is about a changed perception, not a perfected repetition.',
+        ],
         skill: 'application',
       },
     ],
@@ -116,6 +152,12 @@ export const FL1_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The author rejects discounting as “a way of throwing away evidence” and proposes instead asking “what does it concede?”, holding that admissions against the writer’s purpose are “the most reliable facts in any partisan account.” The defend-discounting option reverses the author’s position. The documents-only option is the “history of documents” worry the author raises as an objection and then answers. The hostile-versus-sympathetic option overreaches: the passage says hostile witnesses are accurate about their own preoccupations and concessions, not about events generally.',
+        optionExplanations: [
+          'This reverses the author’s position. The passage calls discounting “a way of throwing away evidence” and argues for a different question, “what does it concede?”, instead of discounting.',
+          'The author rejects discounting as “a way of throwing away evidence” and proposes asking “what does it concede?”, holding that admissions against the writer’s purpose are “the most reliable facts in any partisan account.”',
+          'This is the “history of documents” worry the author raises as an objection in the third paragraph and then answers. The author wants to recover the rebellion, not confine history to documents.',
+          'This overreaches. The passage says hostile witnesses are accurate about their own preoccupations and about what they concede, not about events generally; read as a report of the rebels the chronicle is “compromised.”',
+        ],
         skill: 'main-idea',
       },
       {
@@ -129,6 +171,12 @@ export const FL1_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The author says the chronicle read “as a report of the abbey — of what its members feared, what they thought worth mentioning, which insults they found unforgivable — … is nearly perfect,” because that is the subject on which the writer could not help being accurate. Read as a report of the rebels, the same chronicle is “compromised,” which rules out the events and the rebels’ motives. Nothing in the passage claims special accuracy about the order of episodes.',
+        optionExplanations: [
+          'Read “as a report of the rebels,” the chronicle is “compromised,” so the course of the events it describes is exactly what it is not nearly perfect evidence about.',
+          'The chronicler is hostile to the rebels and “could not help” seeing them as a man of the abbey would, so his account of their motives is the compromised part, not the nearly perfect one.',
+          'Nothing in the passage claims special accuracy about the order of the rebellion’s episodes. Sequence is never discussed as a strength of the hostile source.',
+          'The author says the chronicle read “as a report of the abbey — of what its members feared, what they thought worth mentioning, which insults they found unforgivable — … is nearly perfect,” the one subject on which the writer could not help being accurate.',
+        ],
         skill: 'detail',
       },
       {
@@ -142,6 +190,12 @@ export const FL1_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The author’s rule is that admissions which “run against the grain” of a document’s purpose are its most reliable content; a morale-boosting newsletter has every reason to suppress a rival’s success, so mentioning it is such a concession. The general’s claim of being outnumbered serves his defensive purpose and so is exactly the kind of claim the author would treat with suspicion. The landlord’s complaint and the candidate’s attack both advance the writer’s aims and are the equivalent of the monk calling the rebels demons.',
+        optionExplanations: [
+          'A morale-raising newsletter has every reason to suppress a rival’s success, so mentioning it “runs against the grain” of its purpose. By the author’s rule such a concession is the most reliable content in a partisan document.',
+          'Claiming his troops were badly outnumbered serves the general’s defensive purpose, so it advances rather than concedes. The author would treat it like the monk calling the rebels demons.',
+          'Calling tenants idle and ungrateful advances the landlord’s petition; it is an accusation serving the writer’s aim, not an admission he had reason to suppress.',
+          'An attack on an opponent’s record advances the candidate’s purpose. It is the equivalent of the hostile claim the author says “is worth nothing,” not a concession against interest.',
+        ],
         skill: 'application',
       },
       {
@@ -155,6 +209,12 @@ export const FL1_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The paragraph states the objection that reading a source as evidence about its author means “we have lost the rebellion,” and the next paragraph opens by calling it “right about the danger and wrong about the remedy.” The discounting model was summarized in the second paragraph, not the third. The author does not concede that his approach abandons events; he offers the concession-reading precisely to recover them. The shift from rebels to chroniclers is what the objection complains about, not what the paragraph itself performs.',
+        optionExplanations: [
+          'The discounting model is summarized in the second paragraph, not the third. The third paragraph introduces a new objection to the author’s own reframing.',
+          'The author does not concede that his approach abandons events; he offers the concession-reading precisely to recover them. The paragraph voices someone else’s worry, which the author then answers.',
+          'The paragraph states the objection that reading a source as evidence about its author means “we have lost the rebellion,” and the next paragraph calls it “right about the danger and wrong about the remedy.”',
+          'The shift from rebels to chroniclers is what the objection complains about, not something the paragraph itself performs. The paragraph is a response to the reframing, not a reframing.',
+        ],
         skill: 'function',
       },
       {
@@ -168,6 +228,12 @@ export const FL1_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The author’s method rests on the claim that a concession is reliable “precisely because” it runs against the writer’s purpose; if concessions were themselves a rhetorical tactic serving that purpose, they would no longer be admissions against interest and the method would collapse. That historians with many sources rarely use one is consistent with the author’s preference for a second source. The clergy finding merely confirms the kind of bias the author already assumes. Exaggeration by sympathetic writers concerns a different kind of source and does not touch the reliability of hostile concessions.',
+        optionExplanations: [
+          'That historians with many sources rarely rely on one is consistent with the author’s own preference for a second source “even a fragment.” It does not touch the method for the only-witness case.',
+          'That most chronicles were written by clergy merely confirms the kind of bias the author already assumes. It does nothing to undermine the concession-reading method.',
+          'Exaggeration by sympathetic writers concerns a different kind of source. The author’s claim is about the reliability of hostile concessions, which this finding leaves untouched.',
+          'The method rests on the claim that a concession is reliable “precisely because” it runs against the writer’s purpose. If concessions were a tactic serving that purpose, they would no longer be admissions against interest and the method would collapse.',
+        ],
         skill: 'strengthen-weaken',
       },
       {
@@ -177,6 +243,12 @@ export const FL1_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Statement I matches the final paragraph, where a second source, “even a fragment,” should be preferred “to any amount of ingenuity.” Statement III restates the second paragraph’s claim that “there is no clean layer underneath” because seeing and disapproving “were a single act.” Statement II is contradicted by the fourth paragraph: concessions in a partisan account are “the most reliable facts” about the events, so the account is not worthless as evidence about them.',
+        optionExplanations: [
+          'Statement I is supported, but statement III is also supported by the second paragraph’s claim that “there is no clean layer underneath,” so this choice omits a statement the author would endorse.',
+          'Statement I matches the final paragraph, where a second source “even a fragment” beats “any amount of ingenuity.” Statement III restates the second paragraph: seeing and disapproving “were a single act.” Statement II is contradicted by the concession argument.',
+          'Statement II is contradicted by the fourth paragraph, where concessions in a partisan account are “the most reliable facts” about the events. This choice also wrongly omits statement I.',
+          'Statement II is false by the passage’s own argument: a partisan account is not worthless about events, because its concessions are reliable facts about them. Including II makes this choice wrong.',
+        ],
         skill: 'inference',
       },
     ],
@@ -200,6 +272,12 @@ export const FL1_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The fourth paragraph states the thesis directly: freedom lies “in the power of choosing which habits shall be formed and of unmaking those that have been ill-formed,” and the final paragraph locates freedom in the moments when a habit is founded or broken. The less-effort option reduces the argument to the economy point, which the author says is not the whole of it (“Nor is this merely a matter of economy”). The unchosen-habits option names an obstacle the author recognizes but does not state what freedom is. The decides-each-occasion option is the popular opinion the passage sets out to refute.',
+        optionExplanations: [
+          'The fourth paragraph states the thesis: freedom lies “in the power of choosing which habits shall be formed and of unmaking those that have been ill-formed.” The final paragraph locates freedom in the moments when a habit is founded or broken.',
+          'This reduces the argument to the economy point. The author explicitly says “Nor is this merely a matter of economy” and goes on to connect habit with character and freedom, not merely with less effort.',
+          'Unchosen habits are an obstacle the author recognizes in the fourth paragraph, but this does not state what freedom is. The central claim is positive: freedom is the power to form and revise habits.',
+          'Deciding each occasion afresh on its merits is the popular opinion the passage sets out to refute. The author says such a man “would not be free; he would be paralysed.”',
+        ],
         skill: 'main-idea',
       },
       {
@@ -213,6 +291,12 @@ export const FL1_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The author credits the opinion to “persons of no small reflection,” says he does “not wonder that it is popular,” and only then declares it “mistaken in its foundation” — respect paired with rejection. The contempt option contradicts the explicit acknowledgment that thoughtful people hold the view. Nothing in the passage expresses alarm about the view spreading. The persuaded option reverses the author’s stated intention to show the view is wrong.',
+        optionExplanations: [
+          'The author credits the opinion to “persons of no small reflection,” so contempt for their want of reflection contradicts the passage’s explicit acknowledgment that thoughtful people hold the view.',
+          'Nothing in the passage expresses alarm about the view spreading. The author says he does “not wonder that it is popular” and proceeds to argue against it calmly.',
+          'The author credits the view to reflective persons, says he does “not wonder that it is popular,” and only then declares it “mistaken in its foundation.” That is respect paired with firm rejection.',
+          'This reverses the author’s stated intention to show the view is wrong. He finds the opinion flattering but “mistaken in its foundation,” not persuasive on reflection.',
+        ],
         skill: 'tone',
       },
       {
@@ -226,6 +310,12 @@ export const FL1_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The author says the refusal “proceeded from himself so entirely that no deliberation was required” and that “his habit was his freedom,” so the example shows freedom expressed through character rather than through choice in the moment. The indistinguishability option misreads “could not have”: the author explicitly denies that the man was compelled. The deliberates-more option inverts the example, in which deliberation would be “the first symptom of decay.” The passage says nothing about how the habit of honesty was formed.',
+        optionExplanations: [
+          'This misreads “could not have.” The author explicitly says “we do not mean that he was compelled,” so the example is not about an observer’s inability to distinguish compulsion from freedom.',
+          'The author says the refusal “proceeded from himself so entirely that no deliberation was required” and that “his habit was his freedom.” The example shows freedom expressed through settled character rather than momentary choice.',
+          'This inverts the example. In the passage deliberation would be “the first symptom of its decay,” so the man of honour is distinguished by needing no deliberation, not by deliberating more carefully.',
+          'The passage says nothing about how the habit of honesty was formed, and certainly not that it requires repeated exposure to temptation. The example concerns the habit’s expression, not its origin.',
+        ],
         skill: 'detail',
       },
       {
@@ -239,6 +329,12 @@ export const FL1_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The final paragraph names exactly this case — “the resolution kept for a month until it keeps itself” — as an occasion on which freedom is exercised, and the fourth paragraph distinguishes tyrannical habits as those a man “did not lay down for himself.” The no-longer-free option is the popular view the passage rejects. The tyrannical option fails because the habit was chosen, and nothing suggests it cannot be revised. The paralysis option confuses the author’s point: paralysis results from the absence of habit, not from its presence.',
+        optionExplanations: [
+          'This is the popular view the passage rejects. The author argues that a habit laid down by oneself is freedom accomplished, not freedom withdrawn, even when the will is no longer consulted.',
+          'Tyrannical habits are those a man “did not lay down for himself and cannot now revise.” This habit was deliberately chosen, and nothing suggests it cannot be revised.',
+          'Paralysis in the passage results from the absence of habit, when everything requires fresh deliberation. A habit that now “keeps itself” frees attention rather than consuming it.',
+          'The final paragraph names exactly this case, “the resolution kept for a month until it keeps itself,” as an exercise of freedom, and the fourth paragraph says habits a man laid down for himself are instruments of freedom.',
+        ],
         skill: 'new-information',
       },
       {
@@ -252,6 +348,12 @@ export const FL1_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The author says freedom is truly exercised on “the few occasions on which a habit is founded or broken,” including “the vice at last confronted,” and specifically names prejudices “contracted in a nursery” as habits that must be unmade. The route-varying woman and the impulsive man both act against habit for its own sake, which the author calls “mere disorder.” The man who deliberates daily is the “reckless deliberator” who spends his liberty on small decisions and has none left for the graver ones.',
+        optionExplanations: [
+          'Varying one’s route to avoid routine is acting against habit for its own sake, which the author calls “mere disorder.” Freedom does not consist “in acting against” habits.',
+          'Deliberating daily about a standing appointment is the “reckless deliberator” who spends his liberty on small decisions and “will find he has none left” for the graver ones.',
+          'The author says freedom is truly exercised on “the few occasions on which a habit is founded or broken,” including “the vice at last confronted,” and names prejudices “contracted in a nursery” as habits that must be unmade.',
+          'Acting against custom whenever an impulse strikes is “mere disorder,” not freedom. The author explicitly denies that freedom consists in acting against one’s habits.',
+        ],
         skill: 'application',
       },
       {
@@ -265,6 +367,12 @@ export const FL1_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The economy claim holds that liberty spent on trivial choices leaves none for the grave ones; evidence that routine deliberation does not deplete the capacity for major decisions denies the scarcity the claim assumes. The finding that most daily actions are unconscious supports rather than undermines the author’s picture of delegation to the body. Greater difficulty in revising habits bears on the fourth paragraph, not on the economy of the will. The hidden-deliberation option challenges the man-of-honour example, not the claim about saving.',
+        optionExplanations: [
+          'The economy claim holds that liberty spent on trivial choices leaves none for grave ones. Evidence that routine deliberation does not deplete the capacity for major decisions denies the scarcity that claim assumes.',
+          'That most daily actions are performed without conscious thought supports the author’s picture of delegation to the body; it does not challenge the claim that the will must be saved.',
+          'Greater difficulty in revising habits bears on the fourth paragraph’s account of unmaking ill-formed habits, not on the final paragraph’s claim about conserving the will.',
+          'Hidden deliberation by the man of honour would challenge the third paragraph’s example, not the separate claim that spending liberty on small decisions leaves none for large ones.',
+        ],
         skill: 'strengthen-weaken',
       },
     ],
@@ -288,6 +396,12 @@ export const FL1_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The fifth paragraph is the passage’s destination: the fairness objection “points … not toward prohibition but toward design,” and a fixed-price public-purchaser scheme “is at least addressed to the objection, whereas prohibition merely restates it.” The organ-function option captures only the reply to the corruption objection, not the conclusion. The decisive-corruption option reverses the author’s ranking, since the corruption objection is called the weaker one. The prohibit-until option is closest to the position the fourth paragraph criticizes, in which prohibition leaves the pressure of circumstance untouched.',
+        optionExplanations: [
+          'This captures only the author’s reply to the corruption objection in the second paragraph. The passage moves beyond it to the fairness objection and the design proposal, which is the actual conclusion.',
+          'This reverses the author’s ranking. The corruption objection is called “much weaker than its popularity implies,” while the fairness objection is “more serious” and taken seriously.',
+          'Prohibiting until pressures are removed is close to the position the fourth paragraph criticizes: prohibition leaves “the pressure of circumstance” untouched and merely removes an option.',
+          'The fifth paragraph is the destination: the fairness objection “points … not toward prohibition but toward design,” and a fixed-price public-purchaser scheme “is at least addressed to the objection, whereas prohibition merely restates it.”',
+        ],
         skill: 'main-idea',
       },
       {
@@ -301,6 +415,12 @@ export const FL1_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The author concedes that payment may degrade “the donor’s gesture” but denies that it degrades “the donor’s kidney,” which functions identically either way; the reply is that the objection has confused the two. The donated-versus-purchased option is the distinction the objection itself draws, not the author’s reply to it. The blood-versus-kidney contrast is never made in the passage. The author does note the objection’s empirical premise, but the reply does not rest on separating premises from conclusions; it rests on what the argument fails to show even where the premise holds.',
+        optionExplanations: [
+          'Donated versus purchased is the distinction the corruption objection itself draws. The author’s reply does not rest on it; the reply says the objection confuses the gesture with the organ.',
+          'The author concedes payment may degrade “the donor’s gesture” but denies it degrades “the donor’s kidney,” which filters blood identically either way. The reply is that the objection has confused these two.',
+          'The passage never contrasts blood with kidneys on the basis of replenishment. The author treats blood, kidneys, and marrow together as things that may be given but not sold.',
+          'The author notes the objection’s empirical premise, but the reply does not rest on separating premises from conclusions; it rests on what the argument fails to show even where the premise holds.',
+        ],
         skill: 'inference',
       },
       {
@@ -314,6 +434,12 @@ export const FL1_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The author explicitly says the corruption argument’s premise “that payment drives out donation” deserves weight “where that premise holds,” and the finding is a case in which it holds. The author treats blood and organs together throughout, so the differ option is unsupported. Granting weight in one case is not conceding the objection everywhere, and the author’s preferred scheme is designed to attract sellers, so wholesale abandonment goes too far. The gesture-only option misapplies the author’s distinction: a fall in supply harms the waiting patient, which is exactly the interest the author says should not be sacrificed.',
+        optionExplanations: [
+          'The author treats blood and organs together throughout, listing them side by side in the first paragraph, so he would not dismiss a finding about blood as irrelevant to organs.',
+          'Granting weight in one case is not conceding the objection everywhere. The author’s proposed scheme is designed to attract sellers with a fair price, so wholesale abandonment goes well beyond what he says.',
+          'The author explicitly says the premise “that payment drives out donation” deserves weight “where that premise holds.” A fall in supply after payment began is a case in which it holds.',
+          'This misapplies the author’s distinction. A fall in supply harms the waiting patient, which is exactly the interest the author says should not be sacrificed, not merely the donors’ gesture.',
+        ],
         skill: 'new-information',
       },
       {
@@ -327,6 +453,12 @@ export const FL1_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The fairness objection is concerned with choices made “under the pressure of debt”; the sentence points out that prohibition leaves that pressure intact and removes only an option, so it does not serve the freedom the objection invokes. The concession option misattributes the point to markets, whereas the sentence is about what prohibition accomplishes. The bad-market option belongs to the third paragraph, which describes the objection, not the author’s reply. The public-purchaser proposal is introduced in the following paragraph, and the sentence prepares the ground for it rather than stating it.',
+        optionExplanations: [
+          'The fairness objection invokes the woman’s freedom under “the pressure of debt.” The sentence shows prohibition leaves that pressure intact and removes only an option, so it fails the objection’s own concern.',
+          'This misattributes the point to markets. The sentence is about what prohibition accomplishes for the woman, not about what a market would leave unchanged.',
+          'Exploitation by a badly designed market belongs to the third paragraph, which describes the objection. The sentence is part of the author’s reply, about prohibition.',
+          'The public-purchaser proposal is introduced in the following paragraph. The sentence prepares the ground by exposing prohibition’s failure, but it does not itself state the proposal.',
+        ],
         skill: 'function',
       },
       {
@@ -340,6 +472,12 @@ export const FL1_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The author’s proposed design has a single public purchaser, a fixed sum, allocation by need, and screening for desperation, so the public-agency option matches it. The prohibition-plus-campaigns option keeps the rule the author says “merely restates” the objection. Unregulated hospital purchasing at any price is the market in which “the poor sell and the rich buy,” which the author agrees would be bad. Family-only sales address neither allocation by need nor the pressure of circumstance and appear nowhere in the author’s reasoning.',
+        optionExplanations: [
+          'Prohibition plus donation campaigns keeps the rule the author says “merely restates” the fairness objection while leaving the pressure of circumstance untouched.',
+          'The author’s design has “a single public purchaser” paying “a fixed sum,” allocating “by medical need rather than by ability to pay,” and screening donors. This option matches every element.',
+          'Unregulated hospital purchasing at any price is the market in which “the poor sell and the rich buy,” the bad market the author agrees the fairness objection correctly fears.',
+          'Family-only sales address neither allocation by need nor the pressure of circumstance, and they appear nowhere in the author’s reasoning.',
+        ],
         skill: 'application',
       },
       {
@@ -353,6 +491,12 @@ export const FL1_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The author writes that whether the scheme “would work is an empirical question, and I hold my confidence loosely,” which is confidence held provisionally. The unqualified option ignores that hedge. Nothing suggests the author expects failure; the scheme is offered as the better response. The absent option overstates the hedge: an empirical question is answerable, and the author still favors the scheme as “at least addressed to the objection.”',
+        optionExplanations: [
+          'The author writes “I hold my confidence loosely” and calls success “an empirical question.” Unqualified confidence ignores this explicit hedge.',
+          'Nothing suggests the author expects failure. The scheme is offered sincerely as the response that is “at least addressed to the objection.”',
+          'An empirical question is answerable, and the author still favors the scheme. Saying the question is unanswerable in principle overstates the hedge.',
+          'The author says whether the scheme “would work is an empirical question, and I hold my confidence loosely.” Success is left open, so the confidence is provisional.',
+        ],
         skill: 'tone',
       },
     ],
@@ -376,6 +520,12 @@ export const FL1_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The fourth paragraph states the thesis: “The less choice the user has, the more the building owes,” with the owing consisting of “plain intelligibility.” The plainness option is explicitly disclaimed (“The argument is not that public buildings must be plain”). The illegitimate-challenge option ignores the author’s concession that museums and concert halls may provoke, and it substitutes funding for the author’s actual criterion, which is choice. The inspiration option reverses the final paragraph, where the author denies that inspiration is ever “purchased by confusion.”',
+        optionExplanations: [
+          'The author explicitly disclaims this: “The argument is not that public buildings must be plain.” The demand is for legibility, not plainness.',
+          'This ignores the author’s concession that museums and concert halls may legitimately provoke, and it substitutes public funding for the author’s actual criterion, which is the user’s choice.',
+          'The fourth paragraph states the thesis: “The less choice the user has, the more the building owes,” and what is owed is “plain intelligibility.” The duty scales with captivity.',
+          'This reverses the final paragraph, where the author says inspiration is never “purchased by confusion” and that the person who cannot find the door “feels that the building was made for someone else.”',
+        ],
         skill: 'main-idea',
       },
       {
@@ -389,6 +539,12 @@ export const FL1_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The sentence immediately follows “The less choice the user has, the more the building owes,” and the sequence runs from a place no one can leave to one anyone may leave, so choice is the ordering principle. Anxiety is mentioned as a condition of the first-time visitor but is not what orders the list; a theatre-goer may be anxious and still free to go. Cost and civic ideals are both rejected in the first paragraph as starting points for the ethics of public architecture.',
+        optionExplanations: [
+          'The sentence follows “The less choice the user has, the more the building owes,” and runs from a place no one can leave to one anyone may leave. Choice to enter or leave is the ordering principle.',
+          'Anxiety is mentioned as a condition of the first-time visitor, but it is not what orders the list. A theatre-goer may be anxious and still free to leave.',
+          'Cost is rejected in the first paragraph (“not economy”) as a starting point for the ethics of public architecture, so it cannot be the ranking principle.',
+          'Expression of civic ideals is also rejected in the first paragraph as the starting point. The ranking is about captivity, not about how strongly a building expresses community values.',
+        ],
         skill: 'inference',
       },
       {
@@ -402,6 +558,12 @@ export const FL1_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The author grants that the critics are “right about museums, concert halls, and the other buildings a person enters by choice and may leave,” and that the gallery visitor “has consented to be provoked.” The humiliation option applies the second paragraph’s complaint about captive users to a case the author exempts. The public-building option ignores that the author’s criterion is choice, not public status. Funding plays no role in the author’s reasoning at any point.',
+        optionExplanations: [
+          'The second paragraph’s complaint about humiliation applies to captive users. The author exempts museum visitors, who have “consented to be provoked,” so this is not a humiliation.',
+          'The author’s criterion is choice, not public status. He is “right about museums” that the critics may legitimately challenge visitors who enter by choice and may leave.',
+          'Funding plays no role in the author’s reasoning at any point. What matters is whether the visitor chose to be there and can leave.',
+          'The author grants the critics are right about “museums, concert halls, and the other buildings a person enters by choice and may leave,” and the gallery visitor “has consented to be provoked.”',
+        ],
         skill: 'new-information',
       },
       {
@@ -415,6 +577,12 @@ export const FL1_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The author says the analogy fails “exactly where the public building differs from the gallery: the novel can be closed. The defendant cannot put down the courthouse.” The many-people option is never raised. The single-author option is likewise absent from the passage. The provocative-without-confusing option contradicts the author’s concession that museums may legitimately challenge visitors, which implies that buildings too can provoke without wronging anyone.',
+        optionExplanations: [
+          'The passage never raises the point that buildings must accommodate many people at once. The analogy fails on a different ground: the ability to leave.',
+          'The author says the analogy fails “exactly where the public building differs from the gallery: the novel can be closed. The defendant cannot put down the courthouse.”',
+          'Single versus many authors is absent from the passage. The author compares buildings and novels on the user’s ability to stop, not on how they are made.',
+          'This contradicts the author’s concession that museums may legitimately challenge visitors, which implies buildings too can provoke without wronging anyone. Confusion is wrong only when users are captive.',
+        ],
         skill: 'detail',
       },
       {
@@ -428,6 +596,12 @@ export const FL1_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The final paragraph claims that inspiration is never “purchased by confusion” and that the person who cannot find the door “feels that the building was made for someone else”; a finding that the lost felt unwelcome despite grandeur supports exactly this. The inspired-more-often option supports the view the author is answering. The architects-versus-public option concerns taste, not the link between confusion and belonging. The willing-to-give-directions option, if anything, softens the harm of confusion, which cuts against the author.',
+        optionExplanations: [
+          'Reports that grand buildings inspire more often support the view the author is answering, not the author’s claim that inspiration is never bought by confusion.',
+          'Architects versus public praise concerns taste in elevations, not the link between confusion and belonging that the final paragraph asserts.',
+          'Willingness to give directions, if anything, softens the harm of confusion, which cuts against the author’s claim that the lost person feels the building was made for someone else.',
+          'The final paragraph claims inspiration is never “purchased by confusion” and the person who cannot find the door “feels that the building was made for someone else.” Lost people feeling unwelcome despite grandeur supports exactly this.',
+        ],
         skill: 'strengthen-weaken',
       },
       {
@@ -441,6 +615,12 @@ export const FL1_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'A benefits office is one of the author’s own examples of a building its users do not choose, and an unmarked route to the waiting room violates legibility — the ability to tell “where to go, where to wait, and how to leave, without asking.” The concert hall is a building people enter by choice, which the author exempts from the strict demand. The private residence may be “as strange as its owner likes.” Murals are ornament, and the author says the argument is not against ornament but for intelligibility.',
+        optionExplanations: [
+          'A benefits office is one of the author’s own examples of a building users do not choose, and an unmarked route violates legibility, the ability to tell “where to go, where to wait, and how to leave, without asking.”',
+          'A concert hall is a building people enter by choice and may leave, which the author exempts from the strict demand for legibility. A dim foyer is a permitted provocation.',
+          'A private residence may be “as strange as its owner likes,” because the people who suffer are the people who chose it. The author explicitly exempts it.',
+          'Murals are ornament, and the author says the argument is not against ornament but for intelligibility. A library may be decorated as long as users can find their way.',
+        ],
         skill: 'application',
       },
     ],

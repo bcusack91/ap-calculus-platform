@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
+import { isPsatAttemptFormat } from '@/lib/sat-attempt-format'
 import { requireTeacher } from '@/lib/auth-guard'
 import { scoreLabelFromResults } from '@/lib/class-plan-config'
 
@@ -97,7 +98,7 @@ export async function GET(req: NextRequest) {
     }),
     prisma.satTestAttempt.findMany({
       where: { userId: studentId },
-      select: { testNumber: true, totalScore: true, rwScore: true, mathScore: true, completedAt: true },
+      select: { testNumber: true, totalScore: true, rwScore: true, mathScore: true, completedAt: true, format: true },
       orderBy: { completedAt: 'desc' },
       take: 15,
     }),
@@ -230,6 +231,8 @@ export async function GET(req: NextRequest) {
         completedAt: f.completedAt.toISOString(),
       })),
       satPracticeTests: satTests.map((t) => ({
+        // PSAT practice tests share the table (160-760 sections): labelled.
+        ...(isPsatAttemptFormat(t.format) ? { exam: 'psat' as const } : {}),
         testNumber: t.testNumber,
         totalScore: t.totalScore,
         rwScore: t.rwScore,

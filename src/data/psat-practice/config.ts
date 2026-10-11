@@ -9,6 +9,7 @@ export const config: FullLengthExamConfig = {
   ctaLinks: [
     { href: '/sat-practice', label: 'SAT Practice' },
     { href: '/sat-daily-question', label: 'SAT Daily Question' },
+    { href: '/psat-selection-index', label: 'Selection Index Calculator' },
   ],
   accent: 'sky',
   // Final results add an estimated 320-1520 score range through the
@@ -52,7 +53,7 @@ export const config: FullLengthExamConfig = {
           'Each section: 160–760',
           'Total: 320–1520',
           'NMSC Selection Index: 48–228',
-          'Semifinalist cutoffs vary by state (typically 207–223)',
+          'Semifinalist cutoffs vary by state (208–223 for the class of 2027)',
           'Practice scores cannot be used as official PSAT/NMSQT entries',
         ],
       },

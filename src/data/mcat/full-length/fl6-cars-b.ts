@@ -30,6 +30,12 @@ export const FL6_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The passage faults the count (true of everyone, descriptive of no one) and the case (a voice preserved because it was unusual), then argues in the fourth paragraph that together they show “the range within which a life was actually lived.” The cannot-succeed option stops at the criticism and ignores that constructive turn. The aggregate-evidence option takes a side the author refuses to take, since the count is criticized as sharply as the case. The stop-writing option inflates the closing caution about the phrase “ordinary people” into a recommendation the author never makes.',
+        optionExplanations: [
+          'This stops at the criticism of the case method and ignores the constructive turn of the fourth paragraph, where counts and cases together reveal “the range within which a life was actually lived.” The author does not say such histories cannot succeed.',
+          'This takes a side the author refuses to take. The count is criticized as sharply as the case: its portrait is one in which “no one ... ever lived,” so aggregate evidence is not presented as truer.',
+          'The passage faults the count (true of everyone, descriptive of no one) and the case (a voice preserved because it was unusual), then argues that together they mark out the range between the usual and the possible within which ordinary lives were led.',
+          'This inflates the closing caution about the phrase “ordinary people” into a recommendation the author never makes. He asks historians to notice the vocabulary they use, not to stop writing until it is redefined.',
+        ],
         skill: 'main-idea',
       },
       {
@@ -43,6 +49,12 @@ export const FL6_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The widow “has told us something without leaving a word” only because “the registers show that most widows of her age did” remarry: the usual, established by counting, is what makes her departure from it legible. The church-court option confuses her with the miller; she appears in no interrogation. The more-reliable option invents a ranking of sources, whereas the sentence goes on to say the court “supplies what the register cannot.” The defied-customs option reverses the example, in which the registers reveal her exception rather than hide a frequent one.',
+        optionExplanations: [
+          'The widow “has told us something without leaving a word” only because “the registers show that most widows of her age did” remarry. The usual, established by counting, is what makes her departure from it legible as a choice.',
+          'This confuses the widow with the miller. She appears in no interrogation; she is known only through the registers, which record that she did not remarry when most widows did.',
+          'This invents a ranking of sources the passage does not make. The sentence goes on to say the court “supplies what the register cannot,” treating the two as complementary rather than ranking one above the other.',
+          'This reverses the example. The registers reveal her exception rather than hide a frequent one; the author’s point is that averages make a single departure visible, not that they conceal widespread defiance.',
+        ],
         skill: 'function',
       },
       {
@@ -56,6 +68,12 @@ export const FL6_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The miller was questioned “because he had said things his neighbours did not say” and the servant petitioned because something unusual had gone wrong, so whatever produced the record also set its subject apart; the existence of the record is therefore evidence of untypicality. The make-examples option adds a motive for the officials that the passage never discusses. The later-attention option misplaces the cause: the passage locates the exceptionality in the event that generated the document, not in historians’ interest. The less-accurate option raises accuracy, but the author’s concern is typicality — the case is never said to be false.',
+        optionExplanations: [
+          'This adds a motive for the officials that the passage never discusses. The author says only that the miller was interrogated because he said things his neighbours did not say, not that officials sought to make examples.',
+          'This misplaces the cause. The passage locates the exceptionality in the event that generated the document, the interrogation or petition, not in the interest historians later took in it.',
+          'This raises accuracy, but the author’s concern is typicality. The case is never said to be false; the problem is that the person was recorded at the moment he ceased to be ordinary.',
+          'The miller was questioned because he said what his neighbours did not, and the servant petitioned because something unusual went wrong. Whatever produced the record also set its subject apart, so the record’s survival is itself evidence of untypicality.',
+        ],
         skill: 'inference',
       },
       {
@@ -69,6 +87,12 @@ export const FL6_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The author wants the count to establish what was usual and the unusual case to show what was possible, each read against the other. The lawsuit set beside rolls showing how rare such suits were does exactly this: the rolls measure the apprentice’s departure from the usual, and the suit shows what such a departure involved. The wage compilation is the count alone and yields only an average. The diary published without commentary is the case alone, offered in the spirit of “giving the voiceless their voice” that the author disowns. The letters-and-averages project is the simple addition the author calls “too easy,” since it treats the voice as typical and the figures as merely needing life.',
+        optionExplanations: [
+          'The wage compilation is the count alone and yields only an average, a typical labourer whom no neighbour would have recognised. It lacks the case that shows what was possible.',
+          'The author wants the count to establish what was usual and the unusual case to show what was possible, each read against the other. The lawsuit set beside rolls showing how rarely apprentices sued does exactly this.',
+          'The diary published without commentary is the case alone, offered in the spirit of “giving the voiceless their voice” that the author disowns. It makes no inference and supplies no measure of the usual.',
+          'This is the simple addition the author calls “too easy.” It treats the letters as typical and the figures as merely needing life, whereas the author says a voice laid beside an average does not become typical.',
+        ],
         skill: 'application',
       },
       {
@@ -82,6 +106,12 @@ export const FL6_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The author’s criticism of the case method rests on the premise that the miller was recorded because he “had said things his neighbours did not say.” If his neighbours said the same things, his record did not arise from his being unlike them, and he might be typical after all. The portrait option concerns the count, which a finding about one interrogation does not touch. The inference option describes how historians work and would hold whether or not the miller was typical. The standpoint option concerns the vocabulary of the field, which the discovery leaves untouched.',
+        optionExplanations: [
+          'The author’s criticism of the case method rests on the premise that the miller was recorded because he “had said things his neighbours did not say.” If his neighbours said the same things, his record did not arise from his being unlike them.',
+          'The portrait claim concerns the count, the average villager made from thousands of entries. A finding about one interrogation does not touch what aggregate records produce.',
+          'The inference claim describes how historians work, reconstruction rather than rescue, and would hold whether or not the miller was typical. The discovery does not bear on it.',
+          'The standpoint claim concerns the vocabulary of the field, that “ordinary” describes a view from above. The discovery about the miller’s neighbours leaves that observation untouched.',
+        ],
         skill: 'new-information',
       },
       {
@@ -95,6 +125,12 @@ export const FL6_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The author never questions the accuracy of the bulk records; on the contrary, “everything in this portrait is true.” The other three objections are all made. The composite-figure objection is the second paragraph’s point that “no one in it ever lived.” The restoring-voices objection is the final paragraph’s insistence that the work is “reconstruction, not rescue.” The label objection is the closing remark that “ordinary” describes “a view from above” whose vocabulary the field still uses.',
+        optionExplanations: [
+          'The composite-figure objection is made in the second paragraph: the average villager is a figure in whom everything is true and “no one in it ever lived.” This objection is raised.',
+          'The restoring-voices objection is made in the final paragraph, which insists that the honest name for the work is “reconstruction, not rescue.” This objection is raised.',
+          'The author never questions the accuracy of the bulk records; on the contrary, “everything in this portrait is true.” His objection to the count is that it produces a person who never lived, not that the records were carelessly kept.',
+          'The label objection is made in the closing remark that “ordinary” describes “a view from above” whose vocabulary the field still uses. This objection is raised.',
+        ],
         skill: 'detail',
       },
     ],
@@ -118,6 +154,12 @@ export const FL6_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The first paragraph endorses the sceptic’s reply that scores, landscapes, and acted scripts are “the virtues of music, painting, and drama, on loan,” so praising a game for them does not show that games as such are art. The overstates option names a point the author himself makes about games in general, not a flaw he finds in the defenders’ reasoning. The winning option concerns a separate objection taken up in the fifth paragraph. The same-way option reverses the passage: variation among players is the sceptic’s objection, not an assumption of the defenders.',
+        optionExplanations: [
+          'Overstating how many games show artistic ambition is a point the author himself makes about games in general, saying most are “contests and nothing more.” It is not the flaw he finds in the defenders’ reasoning.',
+          'The first paragraph endorses the sceptic’s reply that scores, landscapes, and acted scripts are “the virtues of music, painting, and drama, on loan.” Praising a game for them does not show that games as such are art.',
+          'The objection that games are meant to be won is a separate point taken up in the fifth paragraph. It is not the flaw the author identifies in the usual defense.',
+          'This reverses the passage. Variation among players is the sceptic’s objection in the third paragraph, not an assumption the defenders make. The defenders are faulted for citing borrowed merits.',
+        ],
         skill: 'detail',
       },
       {
@@ -131,6 +173,12 @@ export const FL6_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The reply is an argument by analogy: because varied visits do not make a building unauthored, varied play does not make a game unauthored. That inference holds only if the two kinds of variation are relevantly alike, which the author takes for granted (“The designer of a game works likewise”). The less-control option compares architects with poets, a ranking the reply does not need. The same-decisions option is not required, since the author says players share the feeling “far more than the route.” The identical-experience option is the sceptic’s premise, which the reply is designed to reject rather than assume.',
+        optionExplanations: [
+          'The reply does not need a ranking of architects against poets. It needs only that varied visits do not make a building unauthored, which holds regardless of how much control the architect has relative to a poet.',
+          'The author does not require that players make the same decisions. He says players share the feeling “far more than the route,” so the reply allows different decisions while claiming a shared experience.',
+          'Identical experience is the sceptic’s premise, which the reply is designed to reject rather than assume. The author argues that a work can differ for each member of its audience and still be authored.',
+          'The reply is an argument by analogy: because varied visits do not make a building unauthored, varied play does not make a game unauthored. That holds only if the two kinds of variation are relevantly alike, which the author takes for granted.',
+        ],
         skill: 'assumption',
       },
       {
@@ -144,6 +192,12 @@ export const FL6_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Feature I is a designed choice in which “the loyal course and the profitable course part,” the author’s own picture of what only games do. Feature III matches the account of winning as an instrument: the game lets the player advance “on terms” and “later it shows her what those terms were.” Feature II is the borrowed virtue the first paragraph dismisses — a game admired for it “is a film with interruptions.” Hence I and III only; “I only” omits the later reckoning the author singles out, and the options containing II credit the game with another art’s merits.',
+        optionExplanations: [
+          'Feature I is a designed choice where “the loyal course and the profitable course part,” the author’s own picture of what only games do. Feature III matches winning as instrument: the game lets the player advance “on terms” and later shows what those terms were.',
+          'Feature I alone omits the later reckoning the author singles out. He says only a game can leave its audience answerable for what it did, which is exactly what a closing sequence revealing the cost of earlier decisions accomplishes.',
+          'Feature II is the borrowed virtue the first paragraph dismisses. A game admired for filmed interludes rivaling a motion picture “is a film with interruptions,” not evidence of what only games do.',
+          'Including feature II credits the game with another art’s merits, which the author says cannot show that games are art. The filmed interludes are the virtues of drama and photography on loan.',
+        ],
         skill: 'application',
       },
       {
@@ -157,6 +211,12 @@ export const FL6_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The remark accompanies “I grant that most games are contests and nothing more” and is followed by “But the argument proves less than it seems to”: the fact that most instances of a form are not art does not settle whether the form can be. The borrowed-merits option attaches to photography a charge the author makes only about praised games. The undervalued option contradicts “nothing more,” which denies artistic standing to ordinary contests and records. The age option introduces a claim about time and acceptance that appears nowhere in the passage.',
+        optionExplanations: [
+          'The author makes the borrowed-merits charge only about praised games, not about photography. The photograph remark is a parallel about proportion, not a claim that photography’s merits are on loan.',
+          'This contradicts “nothing more,” which denies artistic standing to ordinary contests and records. The author is not arguing that critics have undervalued them.',
+          'The remark accompanies “I grant that most games are contests and nothing more” and is followed by “But the argument proves less than it seems to.” That most instances of a form are not art does not settle whether the form can be.',
+          'The passage says nothing about time or eventual acceptance. The photography comparison concerns the proportion of instances that are art, not the age of the medium.',
+        ],
         skill: 'function',
       },
       {
@@ -170,6 +230,12 @@ export const FL6_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The reply to the control objection holds that the designer authors “the situation in which doing it will feel like something” and that this feeling “is what players of the same game turn out to share.” If players who made the same choice feel very different things, the shared element on which the designer’s authorship was said to rest is missing. The borrowed-merits option concerns what defenders praise, which the study does not address. The concession about contests is a claim about ordinary games, not about how players of an admired one respond. The materials option describes what a designer works with, which is unaffected by how reactions vary.',
+        optionExplanations: [
+          'The borrowed-merits claim concerns what defenders praise, orchestral scores and acted scripts. The study of player reactions to a choice does not address what defenders cite.',
+          'The reply to the control objection holds that the designer authors “the situation in which doing it will feel like something,” and that this feeling “is what players of the same game turn out to share.” Sharply different feelings after the same choice remove that shared element.',
+          'The concession that most games are contests is a claim about ordinary games, not about how players of an admired one respond. Varied reactions among players of a celebrated game do not bear on it.',
+          'That a designer’s materials are rules and not images describes what a designer works with. It is unaffected by how players’ reactions to a given choice vary.',
+        ],
         skill: 'new-information',
       },
       {
@@ -183,6 +249,12 @@ export const FL6_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The author insists that if games are art “it must be on account of something that only games do”; a story that would succeed equally as a novel is, by the critic’s own description, not such a thing, just as a game admired for its film is “a film with interruptions.” The is-sound option adopts the defenders’ strategy the author calls badly chosen. The no-story option makes a claim about the quality of game writing that the author never advances; his point holds even if the story is excellent. The players-determine option hands the author the sceptic’s control objection, which he answers rather than endorses.',
+        optionExplanations: [
+          'This adopts the defenders’ strategy the author calls badly chosen. Narrative shared with the established arts is a borrowed virtue, and the author insists games must be art “on account of something that only games do.”',
+          'The author never claims that game stories cannot meet novelistic standards. His point holds even if the story is excellent; what matters is whether the merit is distinctive to games.',
+          'This hands the author the sceptic’s control objection, which he answers rather than endorses. The author argues that the designer does author the situation, so he would not say players determine the story.',
+          'The author insists that if games are art “it must be on account of something that only games do.” A story that would succeed equally as a novel is, by the critic’s own description, not such a thing, just as a game admired for its film is “a film with interruptions.”',
+        ],
         skill: 'application',
       },
     ],
@@ -206,6 +278,12 @@ export const FL6_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The passage replaces the “moral” account with a functional one — words are abandoned “because the words have stopped doing work” — denies that this impoverishes a language, and then admits one exception, when a distinction disappears while the word remains. The careless-speakers option is the popular account the author calls mistaken in “nearly every part.” The never-die option contradicts the fourth paragraph, where words surviving only in fixed phrases “are not alive.” The dated-exactly option reverses the opening, which contrasts datable births with unrecorded deaths.',
+        optionExplanations: [
+          'The passage replaces the “moral” account with a functional one, words are abandoned “because the words have stopped doing work,” denies that this impoverishes a language, and admits one exception: when a distinction disappears while the word remains.',
+          'The careless-speakers account is the popular one the author calls mistaken in “nearly every part.” He also denies that the language is poorer for each lost word, so the dictionary is not disguising a loss.',
+          'This contradicts the fourth paragraph, where words surviving only in fixed phrases “are not alive” but fossils. The author says they can no longer be moved into a new sentence, which is his test for death.',
+          'This reverses the opening. The passage contrasts datable births with deaths that no one records because “no one present knew it was the last.” Deaths cannot be dated as exactly as births.',
+        ],
         skill: 'main-idea',
       },
       {
@@ -219,6 +297,12 @@ export const FL6_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The comparison is set against dying “as a person does, at a moment,” and follows the observation that no one knows which utterance of a word is the last: a path disappears by degrees as use thins, with no instant of ending. The deliberate-choice option adds a collective decision, whereas a path falls out of use without anyone resolving to close it. The reversible option introduces recovery, which the passage does not discuss. The old-documents option restricts who can observe the process, but the author’s point is that no one observes the end at all.',
+        optionExplanations: [
+          'A path falls out of use without anyone resolving to close it. The comparison emphasizes gradual thinning of use, not a collective decision; speakers abandon words individually as the words stop doing work.',
+          'The passage does not discuss recovery or renewed use. The comparison concerns how a word ends, by degrees rather than at a moment, and says nothing about whether the decline could be reversed.',
+          'The comparison is set against dying “as a person does, at a moment,” and follows the observation that no one knows which utterance of a word is the last. A path disappears by degrees as use thins, with no instant of ending.',
+          'The author’s point is that no one observes the end at all, not that only scholars can. The comparison concerns the gradual nature of the lapse, not who is positioned to see it.',
+        ],
         skill: 'detail',
       },
       {
@@ -232,6 +316,12 @@ export const FL6_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The author’s test for a dead word is that it “can no longer be moved into a new sentence,” and he adds that frequency does not matter: such a word is a fossil “however often it is pronounced.” A living word, then, is one that remains movable. The definition option picks up the remark that speakers of fossil phrases cannot say what the words mean, but the author makes mobility, not definability, the criterion. The as-often option makes frequency the test, which the author explicitly sets aside. The dictionary option relies on the very source the author says conceals the difference between living words and fossils.',
+        optionExplanations: [
+          'The definition option picks up the remark that speakers of fossil phrases cannot say what the words mean, but the author makes mobility, not definability, the criterion. A word that can be moved into new sentences is alive whether or not speakers can define it.',
+          'The author’s test for a dead word is that it “can no longer be moved into a new sentence,” and frequency does not matter: such a word is a fossil “however often it is pronounced.” A living word is one that remains movable.',
+          'This makes frequency the test, which the author explicitly sets aside. A word is a fossil “however often it is pronounced,” so being used as often as a rival says nothing about whether it is alive.',
+          'This relies on the very source the author says conceals the difference. The dictionary “prints the fossil and the living word in the same type,” so its listing cannot certify that a word is alive.',
+        ],
         skill: 'inference',
       },
       {
@@ -245,6 +335,12 @@ export const FL6_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The author says the popular account is mistaken in “nearly every part” and that “the mourners have the arithmetic wrong,” yet he ends by granting “a real cost” — though “not the one the mourners make.” That is disagreement combined with a relocated concession. The contempt option misreads the tone, which argues with the mourners and nowhere describes them as uneducated. The broad-agreement option inverts the author’s position. The indifference option cannot be squared with a passage that offers a detailed answer of its own.',
+        optionExplanations: [
+          'This misreads the tone. The author argues with the mourners and nowhere describes them as uneducated; the view he rejects is called “popular,” not ignorant, and he engages it seriously.',
+          'This inverts the author’s position. He says the popular account is mistaken in “nearly every part” and that “the mourners have the arithmetic wrong,” which is firm disagreement, not broad agreement.',
+          'Indifference cannot be squared with a passage that offers a detailed functional account of its own. The author does not find the question unanswerable; he answers it.',
+          'The author says the mourners are mistaken in “nearly every part” and have “the arithmetic wrong,” yet ends by granting “a real cost” that is “not the one the mourners make.” That is disagreement with a relocated concession.',
+        ],
         skill: 'tone',
       },
       {
@@ -258,6 +354,12 @@ export const FL6_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The regrettable loss arises “when two words that once divided a territory between them come to be used as one,” so that the words remain but the distinction must be rebuilt in a phrase. The merged terms for two kinds of killing fit: both words survive, and a distinction speakers may still need is gone. The weaving term lost its work because its object left the world, like the carriage vocabulary. The displaced term for a physician is the rival case, in which the older word comes to “sound like a costume.” The proverb case is fossilization, which the author describes without regret.',
+        optionExplanations: [
+          'The regrettable loss arises “when two words that once divided a territory between them come to be used as one.” The merged terms for planned and accidental killing fit: both words survive, and a distinction speakers may still need is gone.',
+          'The weaving term lost its work because its object left the world, like the carriage vocabulary. The author says such words did not decay; they were “left with nothing to point at,” which he does not regret.',
+          'The displaced term for a physician is the rival case, in which the older word comes to “sound like a costume.” The work has moved to the new word, which the author treats as no loss.',
+          'The proverb case is fossilization: the word survives in a fixed phrase said by people who cannot tell what it means. The author describes this without regret; the real cost lies elsewhere.',
+        ],
         skill: 'application',
       },
       {
@@ -271,6 +373,12 @@ export const FL6_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The author holds that words are abandoned only when they “have stopped doing work” — the thing is gone, a rival has taken over, or the distinction no longer matters. Words that vanished although their objects are still discussed and nothing replaced them would have been dropped while they still had work, which the account cannot explain. The tools-and-trades finding is the first route to idleness and supports the account. The set-phrases finding fits the description of fossils said “by people who could not tell you what it means.” The large-vocabularies finding supports the rejection of the view that words die through lazy speakers with small vocabularies.',
+        optionExplanations: [
+          'This is the first route to idleness the author names: “the thing it named goes out of the world.” Vanished words for vanished tools and trades support the account rather than undermine it.',
+          'The author holds that words are abandoned only when they “have stopped doing work.” Words that vanished although their objects are still discussed daily and nothing replaced them would have been dropped while they still had work, which the account cannot explain.',
+          'This fits the description of fossils said “by people who could not tell you what it means.” Speakers failing to recognize such words on their own confirms the author’s picture rather than undermining it.',
+          'This supports the rejection of the view that words die through lazy speakers with small vocabularies. If vocabulary size does not matter, the moral account is weakened and the functional account stands.',
+        ],
         skill: 'strengthen-weaken',
       },
     ],
@@ -294,6 +402,12 @@ export const FL6_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The fourth paragraph says the best endings “settle the events entirely” and leave unsettled “what the events come to,” stopping before the reader “has been told the judgment”; the final paragraph calls this handing the story over. The surprise option describes the snap ending, which the author says reduces the earlier pages to “a mechanism for withholding.” The stop-without-concluding option is the trailing ending and its defense, which the author answers by noting that experience “does not arrange itself into stories either.” The matters-less option reverses the opening, which argues that a story, unlike a novel, cannot survive a failed ending.',
+        optionExplanations: [
+          'This describes the snap ending, which the author says reduces the earlier pages to “a mechanism for withholding.” He does not recommend an ending that recasts everything through a disclosed fact.',
+          'This is the trailing ending and its defense, which the author answers by noting that experience “does not arrange itself into stories either.” A writer who has shaped cannot plead shapelessness at the last moment.',
+          'This reverses the opening, which argues that a story, unlike a novel, cannot survive a failed ending because the last paragraph is “the point from which the whole is seen.”',
+          'The fourth paragraph says the best endings “settle the events entirely” and leave unsettled “what the events come to,” stopping before the reader “has been told the judgment.” The final paragraph calls this handing the story over.',
+        ],
         skill: 'main-idea',
       },
       {
@@ -307,6 +421,12 @@ export const FL6_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The author says that in the trailing ending “the writer has declined to decide what the events amounted to and has presented the refusal as tact” — an evasion dressed as delicacy. The unanswerable-question option is contradicted outright: the reader of such an ending “is left not with a question but with a shrug.” The concealed-fact option describes the mechanism of the snap ending, not the trailing one, in which “nothing is disclosed.” The overlooked-remark option invents a hidden plot outcome; the remark at such an ending “answers nothing.”',
+        optionExplanations: [
+          'This is contradicted outright. The reader of a trailing ending “is left not with a question but with a shrug,” so the complaint is not that an unanswerable question remains.',
+          'The author says that in the trailing ending “the writer has declined to decide what the events amounted to and has presented the refusal as tact.” The complaint is evasion dressed as delicacy.',
+          'This describes the mechanism of the snap ending, not the trailing one. In the trailing ending “nothing is disclosed,” so there is no concealed fact the earlier pages were built around.',
+          'This invents a hidden plot outcome. The remark at a trailing ending “answers nothing,” so the plot does not turn on it; the author’s complaint is about refusal to decide, not an overlooked detail.',
+        ],
         skill: 'detail',
       },
       {
@@ -320,6 +440,12 @@ export const FL6_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'A novel is forgiven because “it has given so much” by the last chapter; a verdict is a judgment on the whole, so denying that a weak ending is a verdict implies the whole has already earned its standing from what came before. The less-care option makes a claim about how novelists work, which the passage never addresses. The temperament option attributes the forgiveness to the reader’s character, whereas the passage attributes it to what the novel has already supplied. The seldom-remembered option is unsupported: the weak close is noticed — it is “a disappointment” — but does not decide the book’s value.',
+        optionExplanations: [
+          'The passage never addresses how much care novelists take. The remark concerns how readers receive a weak close, not the effort writers put into it.',
+          'The passage attributes the forgiveness to what the novel has already supplied, “years of its characters’ lives, weeks of the reader’s,” not to the reader’s temperament.',
+          'A novel is forgiven because “it has given so much” by the last chapter. A verdict is a judgment on the whole, so denying that a weak ending is a verdict implies the whole has already earned its standing from what came before.',
+          'This is unsupported. The weak close is noticed, it is “a disappointment,” but it does not decide the book’s value. Nothing says the ending is forgotten.',
+        ],
         skill: 'inference',
       },
       {
@@ -333,6 +459,12 @@ export const FL6_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The admired ending settles the events — the reader is not left wondering whether “the debt be paid” — while leaving open what they come to, as with the girl who does not know whether she feels “pity or relief.” The man who pays in full and does not know his own motive fits both conditions. The uncle revelation is a snap ending that discloses a rearranging fact. The gate scene is a trailing ending: it stops on a gesture with the event itself unresolved. The narrator’s explanation settles the events but also delivers the judgment the author says the reader should be left to make.',
+        optionExplanations: [
+          'The admired ending settles the events, the debt is paid, while leaving open what they come to, as with the girl who does not know whether she feels “pity or relief.” The man unsure whether he acted from honour or spite fits both conditions.',
+          'The uncle revelation is a snap ending that discloses a rearranging fact on the final page. The author says such endings turn the preceding pages into “a mechanism for withholding.”',
+          'The gate scene is a trailing ending: it stops on a gesture with the event itself unresolved. The author wants the events settled, and here we do not know whether the debt will be paid.',
+          'The narrator’s explanation settles the events but also delivers the judgment the author says the reader should be left to make. The best endings stop before the reader “has been told the judgment.”',
+        ],
         skill: 'application',
       },
       {
@@ -346,6 +478,12 @@ export const FL6_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The author argues that after a snap ending the earlier pages “have no further work to do” and that the story is “finished in the way a crossword is finished.” Readers who find the earlier scenes richer after the disclosure are a counterexample to exactly that claim. The skill option is a concession the finding leaves intact, since a revelation that enriches a story would hardly be easier to build. The last-paragraph option is, if anything, supported, because the ending is still governing how the whole is seen. The select-and-shape option belongs to the argument against trailing endings and is not touched by a story that ends in a disclosure.',
+        optionExplanations: [
+          'The skill concession is left intact. A revelation that enriches a story would hardly be easier to build, so the finding does not challenge the claim that snap endings take craft.',
+          'This claim is, if anything, supported. The ending is still governing how the whole is seen; the finding shows the last paragraph reshaping the reader’s view of everything before it.',
+          'The author argues that after a snap ending the earlier pages “have no further work to do” and the story is “finished in the way a crossword is finished.” Readers who find the earlier scenes richer after the disclosure are a counterexample to that claim.',
+          'The select-and-shape point belongs to the argument against trailing endings. It is not touched by a story that ends in a disclosure, which is the opposite kind of ending.',
+        ],
         skill: 'new-information',
       },
     ],

@@ -3,7 +3,8 @@ import type { Prisma } from '@prisma/client'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { recordQuestions } from '@/lib/study-tracking'
-import { buildSatForm, type SatTestFormat } from '@/data/sat-practice/test-generator'
+import { buildExamForm, PSAT_FORM_COUNT, type SatExam, type SatTestFormat } from '@/data/sat-practice/test-generator'
+import { PSAT_FULL_FORMAT } from '@/lib/sat-attempt-format'
 import { gradeSatPractice, normalizeSatResponses, storedSatAnswers } from '@/lib/sat-practice-grading'
 import { satPracticeRows } from '@/lib/sat-practice-rows'
 
@@ -17,6 +18,10 @@ const SCORING_VERSION = 2
  * Module 1, checks the submitted Module 2 is the routed one (the pre-built
  * module = it started before the swap, scored unrouted), and scores on that
  * route's curve. Client scores and tallies are ignored.
+ *
+ * `exam: 'psat'` grades an adaptive PSAT/NMSQT form (buildPsatForm, tests 1-3)
+ * on the PSAT routed curves (160-760) and stores format 'psat-full', which
+ * keeps PSAT attempts out of every SAT score reader (see sat-attempt-format).
  */
 export async function POST(req: Request) {
   try {
@@ -31,17 +36,24 @@ export async function POST(req: Request) {
     if (typeof testNumber !== 'number' || !Number.isInteger(testNumber) || testNumber < 1 || testNumber > 100) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
     }
+    const exam: SatExam = body.exam === 'psat' || body.format === PSAT_FULL_FORMAT ? 'psat' : 'sat'
+    if (exam === 'psat' && testNumber > PSAT_FORM_COUNT) {
+      return NextResponse.json({ error: 'Unknown PSAT practice test' }, { status: 400 })
+    }
     // Older bundles sent no format: a full test has 54 R&W questions, a mini 27.
     const format: SatTestFormat =
-      body.format === 'full' || body.format === 'mini'
-        ? body.format
-        : Number(body.rwTotal) > 27
-          ? 'full'
-          : 'mini'
+      exam === 'psat'
+        ? 'full'
+        : body.format === 'full' || body.format === 'mini'
+          ? body.format
+          : Number(body.rwTotal) > 27
+            ? 'full'
+            : 'mini'
+    const storedFormat = exam === 'psat' ? PSAT_FULL_FORMAT : format
 
-    const form = await buildSatForm(testNumber, format)
+    const form = await buildExamForm(exam, testNumber, format)
     const responses = normalizeSatResponses(body, form.sections.map((s) => s.id))
-    const grade = await gradeSatPractice({ testNumber, format, responses })
+    const grade = await gradeSatPractice({ testNumber, format, exam, responses })
 
     // Idempotency guard (same class of bug as the exit-quiz submission loop,
     // fixed in dbf64d31): a re-POST of an identical just-submitted result must
@@ -51,12 +63,15 @@ export async function POST(req: Request) {
       where: {
         userId: session.user.id,
         testNumber,
+        format: storedFormat,
         totalScore: grade.totalScore,
         startedAt: { gte: new Date(Date.now() - 30_000) },
       },
       select: { id: true },
     })
     const scores = {
+      exam,
+      format: storedFormat,
       rwScore: grade.rwScore,
       mathScore: grade.mathScore,
       totalScore: grade.totalScore,
@@ -89,7 +104,7 @@ export async function POST(req: Request) {
         // Per-question answers in item order (the review page rebuilds the
         // questions from testNumber/format/tiers via buildSatForm).
         answers: storedSatAnswers(grade.items) as unknown as Prisma.InputJsonValue,
-        format,
+        format: storedFormat,
         rwTier: grade.rw.tier,
         mathTier: grade.math.tier,
         scoringVersion: SCORING_VERSION,

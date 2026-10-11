@@ -50,6 +50,12 @@ export const FL7_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'At 1.0 mM F6P, the enzyme assayed with 1.5 mM ATP alone ran at 6% of its maximal rate, and with 1 μM F2,6BP present it ran at about 80%; the ratio 80:6 is roughly 13. A factor near 2 describes the activation at 2.0 mM F6P (about 89% versus 50%), where the enzyme without activator is already half-maximal. The values 6 and 80 are the two rates themselves, not their ratio.',
+        optionExplanations: [
+          'A factor near 2 describes the activation at 2.0 mM F6P, where the enzyme without activator is already at 50% and F2,6BP raises it to about 89%. At 1.0 mM F6P the unactivated enzyme is far lower, so the fold change is much larger.',
+          'Six is the rate at 1.0 mM F6P with 1.5 mM ATP alone, as a percentage of maximum. It is one of the two values needed for the ratio, not the ratio itself.',
+          'At 1.0 mM F6P, the 1.5 mM ATP curve gives 6% of maximum and the curve with 1 μM F2,6BP gives about 80%. The ratio 80/6 is roughly 13, so F2,6BP increased the rate about 13-fold at this substrate concentration.',
+          'Eighty is the rate at 1.0 mM F6P with F2,6BP present, as a percentage of maximum. It is the numerator of the ratio, not the fold increase; dividing by the 6% baseline gives the factor.',
+        ],
         skill: '1D allosteric activation of PFK-1 (data interpretation)',
       },
       {
@@ -63,6 +69,12 @@ export const FL7_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'With half-saturation at about 0.05 mM, the active site is about 97% occupied at 1.5 mM ATP and about 99% occupied at 5 mM, so the extra ATP adds almost nothing as a substrate; its main effect is to fill more of the low-affinity regulatory sites, which lowers the affinity for F6P and shifts the curve to the right. An active site far from saturation would have made the rate rise with ATP, and lower regulatory-site occupancy would activate rather than inhibit. Adding a ligand cannot decrease occupancy of the active site, and a regulatory site already saturated at 1.5 mM could not produce a further shift. Inhibited auxiliary enzymes would have capped the rate at saturating F6P, which was the same under all conditions.',
+        optionExplanations: [
+          'With half-saturation at 0.05 mM, the active site is about 97% occupied at 1.5 mM ATP and 99% at 5 mM, so extra ATP adds almost nothing as substrate. Its effect is to fill more low-affinity regulatory sites, which lowers F6P affinity and shifts the curve rightward.',
+          'An active site far from saturation would make the rate rise with more ATP, since substrate would be limiting; the opposite was observed. And lower regulatory-site occupancy would relieve inhibition and activate the enzyme, not inhibit it.',
+          'A regulatory site already saturated at 1.5 mM ATP could not produce a further inhibitory shift at 5 mM. Moreover, adding more of a ligand cannot decrease the occupancy of a site that binds it; active-site occupancy rises, if anything.',
+          'Inhibited auxiliary enzymes would have capped the observed rate at saturating F6P, but the passage says the maximal rate was the same under all three conditions. The rightward shift at subsaturating F6P reflects PFK-1 itself, not the coupling system.',
+        ],
         skill: '1D ATP as substrate and allosteric inhibitor',
       },
       {
@@ -76,6 +88,12 @@ export const FL7_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Alanine cannot be phosphorylated, so PKA activated by glucagon cannot switch the mutant enzyme from its kinase form to its phosphatase form; F2,6BP therefore stays high. With F2,6BP high, PFK-1 remains activated and FBPase-1 remains inhibited, so the gluconeogenic step from F1,6BP to F6P is restrained and less lactate carbon reaches glucose than in normal cells given glucagon. A lower F2,6BP content is the normal response that the mutation prevents. A higher F2,6BP content cannot accompany faster gluconeogenesis, because F2,6BP inhibits the gluconeogenic enzyme and activates the glycolytic one.',
+        optionExplanations: [
+          'A lower F2,6BP content is the normal glucagon response, which requires PKA to phosphorylate Ser32 and switch the bifunctional enzyme to its phosphatase form. Alanine cannot be phosphorylated, so the mutant cells cannot lower F2,6BP.',
+          'A lower F2,6BP is the response the mutation prevents, and a higher rate of gluconeogenesis would require FBPase-1 to be released from inhibition. Neither occurs when the bifunctional enzyme stays in its kinase form.',
+          'F2,6BP does stay high in the mutant cells, but high F2,6BP inhibits FBPase-1 and activates PFK-1. That restrains the gluconeogenic step from F1,6BP to F6P, so glucose synthesis from lactate would be lower, not higher.',
+          'PKA cannot phosphorylate alanine, so glucagon cannot switch the mutant enzyme to its phosphatase form and F2,6BP stays high. High F2,6BP keeps PFK-1 active and FBPase-1 inhibited, so less lactate carbon reaches glucose than in normal cells given glucagon.',
+        ],
         skill: '1D fructose 2,6-bisphosphate and hormonal control',
       },
       {
@@ -89,6 +107,12 @@ export const FL7_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'PFK-1 catalyzes F6P + ATP → F1,6BP + ADP, and FBPase-1 is a hydrolase that catalyzes F1,6BP + H₂O → F6P + Pi; adding the two, the sugar phosphates cancel and the sum is the hydrolysis of ATP, with the energy lost as heat. Synthesis of ATP from ADP and Pi would require an energy source that the cycle does not have. The reaction F6P + ATP → F1,6BP + ADP is the PFK-1 step alone, not the cycle. FBPase-1 does not transfer the phosphoryl group back to ADP, so the cycle is not a simple reversal that regenerates ATP.',
+        optionExplanations: [
+          'Making ATP from ADP and Pi requires an energy input that this cycle does not provide. The cycle consumes ATP at the PFK-1 step and releases only Pi at the FBPase-1 step, so the net direction is ATP hydrolysis, not synthesis.',
+          'PFK-1 catalyzes F6P + ATP → F1,6BP + ADP, and FBPase-1 catalyzes F1,6BP + H₂O → F6P + Pi. Adding the two, the sugar phosphates cancel and the net reaction is ATP + H₂O → ADP + Pi, with the energy released as heat.',
+          'This is the PFK-1 step alone, not the net result of one turn of the cycle. Once FBPase-1 hydrolyzes F1,6BP back to F6P, the sugar phosphate terms cancel and only ATP hydrolysis remains.',
+          'FBPase-1 is a hydrolase: it removes the phosphate as free Pi using water, and does not transfer the phosphoryl group back to ADP. The cycle is not a simple reversal that regenerates ATP; it wastes it.',
+        ],
         skill: '1D substrate (futile) cycles',
       },
       {
@@ -102,6 +126,12 @@ export const FL7_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'In a coupled assay the observed signal comes from the last reaction, so it reports the first reaction only if every later step keeps pace; with the auxiliary enzymes in large excess, each F1,6BP is converted as soon as it forms and PFK-1 alone limits the rate of NADH oxidation. If the auxiliary enzymes were slower than PFK-1, the absorbance change would measure them instead. The assay follows the disappearance of NADH, so NADH must be present from the start. Adding F1,6BP at the start would cause NADH oxidation that has nothing to do with PFK-1.',
+        optionExplanations: [
+          'In a coupled assay the signal comes from the last reaction and reports the first only if every later step keeps pace. With auxiliary enzymes in large excess, each F1,6BP is consumed as soon as it forms, and PFK-1 alone limits NADH oxidation.',
+          'If the auxiliary enzymes were slower than PFK-1, F1,6BP would accumulate and the fall in absorbance would measure the auxiliary enzymes’ rate, not PFK-1’s. The coupling enzymes must never be the bottleneck.',
+          'The assay follows the disappearance of NADH, which absorbs at 340 nm while NAD⁺ does not. NADH must therefore be present from the start so that its oxidation produces a measurable fall in absorbance.',
+          'Adding F1,6BP at the start would feed the auxiliary enzymes directly, causing NADH oxidation that has nothing to do with PFK-1 activity. The F1,6BP in the assay must come only from the PFK-1 reaction being measured.',
+        ],
         skill: '1D research design: coupled enzyme assays',
       },
     ],
@@ -132,6 +162,12 @@ export const FL7_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Osteoclasts belong to the monocyte–macrophage lineage and so descend from hematopoietic stem cells; donor stem cells therefore generate a new population of osteoclasts that carry working acid-secreting machinery and can resorb the excess bone. Osteoblasts and the osteocytes derived from them come from mesenchymal stem cells, not hematopoietic ones, so the transplant does not replace either. Osteoprotegerin is made by cells of the osteoblast lineage, and blocking osteoclast formation would worsen a disease caused by too little resorption.',
+        optionExplanations: [
+          'Osteoblasts descend from mesenchymal stem cells, not hematopoietic ones, so a hematopoietic transplant does not supply new osteoblasts. The defect in this disorder is in resorption, not in matrix deposition.',
+          'Osteocytes differentiate from osteoblasts, which arise from mesenchymal stem cells. Hematopoietic stem cells do not give rise to osteocytes, and sclerostin production is not the problem in a disease of defective acid secretion.',
+          'Osteoprotegerin is made by cells of the osteoblast lineage and blocks osteoclast formation. Inactivating osteoclasts would worsen a disease caused by too little resorption; what is needed is functional osteoclasts, not fewer of them.',
+          'Osteoclasts form by fusion of monocyte–macrophage precursors, which descend from hematopoietic stem cells. Donor stem cells therefore generate a new population of osteoclasts with working acid-secreting machinery, able to resorb the excess bone.',
+        ],
         skill: '3B osteoclast lineage',
       },
       {
@@ -145,6 +181,12 @@ export const FL7_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Bone adapts to load: loaded bone is built up and unloaded bone is lost. Because sclerostin suppresses osteoblast formation, the signal that fits bone loss in weightlessness is a rise in sclerostin, which leaves fewer osteoblasts to refill remodeling sites. Less sclerostin with more osteoblasts is the response to increased loading and would add bone rather than remove it. The two remaining options contradict the stated action of sclerostin, which lowers rather than raises osteoblast numbers.',
+        optionExplanations: [
+          'Less sclerostin would increase osteoblast formation, since sclerostin suppresses osteoblasts; the stated consequence reverses the protein’s action. And more osteoblasts would add bone, the opposite of the loss seen in weightlessness.',
+          'Sclerostin suppresses osteoblast formation, and unloaded bone is lost. A rise in sclerostin that leaves fewer osteoblasts to refill remodeling sites is the signal consistent with both the passage and the bone loss observed.',
+          'This contradicts the stated action of sclerostin, which suppresses osteoblast formation. More sclerostin cannot increase osteoblast numbers.',
+          'Less sclerostin and more osteoblasts is the response to increased mechanical loading, which builds bone. In weightlessness the loading is lost, so this response would add bone rather than account for its loss.',
+        ],
         skill: '3B mechanical loading and osteocytes',
       },
       {
@@ -158,6 +200,12 @@ export const FL7_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The drugs are concentrated on hydroxyapatite and cross membranes poorly, so a cell is exposed to a high dose only if it frees the drug from the mineral and internalizes it; the osteoclast does exactly this when it acidifies and resorbs the bone beneath it. The enzyme the drugs block is one that cells in general need for survival, so its distribution cannot explain the selectivity. RANK binds RANKL, and nothing suggests that it transports bisphosphonates. Drug in the circulation reaches many cell types and is cleared rapidly, so nearness to blood vessels would not single out osteoclasts.',
+        optionExplanations: [
+          'The passage says the enzyme the drugs block is one that cells in general need to survive, so its distribution cannot explain why only osteoclasts die. Selectivity must come from which cells are exposed to the drug.',
+          'RANK is the receptor for RANKL on osteoclast precursors and controls their differentiation. Nothing in the passage suggests it transports bisphosphonates, and the drugs are described as entering cells poorly rather than through a receptor.',
+          'Bisphosphonates bind avidly to hydroxyapatite and cross membranes poorly, so a cell gets a high dose only if it frees the drug from the mineral and internalizes it. The osteoclast does exactly this when it acidifies and resorbs the bone beneath it.',
+          'Drug in the circulation is cleared quickly by the kidney and reaches many cell types in the meantime. Proximity to blood vessels would not single out osteoclasts; the drug’s concentration on bone mineral is what matters.',
+        ],
         skill: '3B antiresorptive drug mechanism',
       },
       {
@@ -171,6 +219,12 @@ export const FL7_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Remodeling occurs on bone surfaces, and spongy (trabecular) bone, the main tissue of a vertebral body, is a lattice of thin plates with far more surface per unit volume than the dense compact bone of a long-bone shaft; when remodeling accelerates, bone with more surface is turned over and lost faster. Vertebral bodies are not mainly compact bone; compact bone predominates in the shafts. All bone contains osteocytes. Vertebral bodies are well vascularized and filled with marrow.',
+        optionExplanations: [
+          'Remodeling occurs on bone surfaces, and spongy bone, the main tissue of vertebral bodies, is a lattice of thin plates with far more surface per unit volume than compact bone. When remodeling accelerates, bone with more surface turns over and is lost faster.',
+          'Vertebral bodies are not mainly compact bone; compact bone predominates in the shafts of long bones. Compact bone also has less surface per unit volume, so it would be lost more slowly, not faster.',
+          'All bone contains osteocytes, including the vertebral bodies. The passage describes osteocytes as buried throughout the matrix, so a lack of osteocytes cannot explain the regional difference.',
+          'Vertebral bodies are well vascularized and filled with marrow, so they have an abundant blood supply and ready access to precursors. The difference lies in surface area, not in vascularity.',
+        ],
         skill: '3B bone structure: spongy vs compact',
       },
     ],
@@ -203,6 +257,12 @@ export const FL7_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Patient 1 has a single copy of the region, and it is maternal; the missing copy is therefore the paternal one, which fits PWS, a lack of the paternally expressed genes. Patient 3 has a single copy that is paternal, so the deletion lies on the chromosome from the mother, which removes the only UBE3A copy that neurons use and produces AS. The reversed assignment mistakes the copy that remains for the copy that was lost. A deletion from the same parent in both patients could not produce two different disorders with opposite marker and methylation findings.',
+        optionExplanations: [
+          'Patient 1 has one copy, maternal, so the paternal chromosome carries the deletion; this fits PWS, a lack of paternally expressed genes. Patient 3 has one copy, paternal, so the maternal chromosome carries the deletion, removing the only UBE3A neurons use and causing AS.',
+          'This mistakes the remaining copy for the lost one. Patient 1’s single copy is maternal, meaning the paternal chromosome was deleted; patient 3’s single copy is paternal, meaning the maternal chromosome was deleted.',
+          'A paternal deletion in both patients would produce PWS in both, since both would lack paternally expressed genes. Patient 3 has AS with a paternal remaining copy and the opposite methylation pattern, so her deletion is maternal.',
+          'A maternal deletion in both patients would produce AS in both, since both would lack the maternal UBE3A. Patient 1 has PWS with a maternal remaining copy and M-only methylation, so his deletion is paternal.',
+        ],
         skill: '1C genomic imprinting (data interpretation)',
       },
       {
@@ -216,6 +276,12 @@ export const FL7_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The substitution was also found in the maternal grandfather, so the mother received it from her father; the paternal copy of UBE3A is silent in neurons whether or not it is mutated, and her neurons rely on the intact copy from her own mother. Simple recessiveness cannot be the explanation, because patient 5 is also heterozygous and is affected. UBE3A is on chromosome 15, an autosome, so X inactivation is irrelevant. A copy inherited from her mother would be the one her neurons transcribe, and a stop codon in it would have caused AS in the mother herself.',
+        optionExplanations: [
+          'Simple recessiveness cannot explain the pattern, because patient 5 is also heterozygous for the same substitution and is affected. The difference between mother and daughter is parent of origin, not allele count.',
+          'The maternal grandfather carries the substitution, so the mother received it from her father. The paternal copy of UBE3A is silent in neurons whether mutated or not, so her neurons rely on the intact copy from her own mother and she is healthy.',
+          'UBE3A is on chromosome 15, an autosome, so X inactivation plays no role. The passage places the entire imprinted cluster on the long arm of chromosome 15.',
+          'A copy inherited from her mother would be the maternal copy that neurons transcribe. A stop codon in that copy would have left her neurons with no functional UBE3A and caused AS in the mother herself, yet she is healthy.',
+        ],
         skill: '1C parent-of-origin effects',
       },
       {
@@ -224,6 +290,12 @@ export const FL7_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Imprints are erased and reset in the germ line according to the sex of the parent, so every chromosome 15 that the mother transmits carries the maternal pattern, including the chromosome she received from her father. She passes the mutant allele to half of her children, and in each of them it is the only UBE3A copy that neurons would express, so the risk is 1/2. A risk of 0 assumes that the allele keeps the paternal imprint it had in the mother. A risk of 1/4 applies to an autosomal recessive disorder with two carrier parents, but the father is not a carrier and one mutant maternal copy is sufficient. A risk of 1 ignores the equal chance that the child inherits her normal chromosome.',
+        optionExplanations: [
+          'A risk of 0 assumes the allele keeps the paternal imprint it had in the mother. But imprints are erased and reset in the germ line, so every chromosome 15 the mother transmits carries the maternal pattern and is the copy neurons express.',
+          'A risk of 1/4 applies to an autosomal recessive disorder with two carrier parents. Here the father does not carry the substitution, and one mutant maternal copy is sufficient to cause AS, so recessive reasoning does not apply.',
+          'Imprints are reset in the germ line according to the parent’s sex, so the mutant allele, now transmitted by the mother, carries the maternal pattern and is the copy neurons express. She passes it to half her children, each of whom would have AS, so the risk is 1/2.',
+          'A risk of 1 ignores the equal chance that the child inherits the mother’s normal chromosome 15. She is heterozygous, so only half her gametes carry the mutant allele.',
+        ],
         skill: '1C imprint resetting and recurrence risk',
       },
       {
@@ -237,6 +309,12 @@ export const FL7_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Primers anneal according to base sequence, and cytosine pairs with guanine whether or not it carries a methyl group, so untreated maternal and paternal promoters would be amplified identically. Bisulfite changes unmethylated cytosines to uracil while sparing methylated ones, which gives the two copies different sequences that separate primer pairs can recognize. Bisulfite is not described as cutting DNA, and the test does not separate products by parental size. DNA polymerase copies methylated templates, so removing methyl groups is not required, and doing so would erase the very difference being measured. The unmethylated copy is not destroyed; it is the template for the U product.',
+        optionExplanations: [
+          'Bisulfite is not described as cutting DNA, and the test does not separate the parental copies by size. The two copies are distinguished by primer specificity after amplification, not by fragment length.',
+          'DNA polymerase copies methylated templates without difficulty, so removing methyl groups is not required for PCR. Stripping them would also erase the very difference the test is designed to detect.',
+          'The unmethylated copy is not destroyed; it is the template for the U product. Both copies are amplified in the control, which shows that bisulfite leaves the unmethylated paternal promoter intact as a template.',
+          'Primers anneal by base sequence, and cytosine pairs with guanine whether methylated or not, so untreated maternal and paternal promoters would amplify identically. Bisulfite converts unmethylated C to U, giving the two copies different sequences that separate primer pairs recognize.',
+        ],
         skill: '1C research design: bisulfite methylation analysis',
       },
       {
@@ -250,6 +328,12 @@ export const FL7_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Patient 2 has two copies of the region, both maternal. Nondisjunction in the oocyte, the error that grows more frequent with maternal age, yields an egg with two chromosomes 15; fertilization gives a trisomic embryo, and loss of the single paternal chromosome leaves two maternal copies and no active paternal genes. A deletion arising in the father is the mechanism in patient 1, who has one copy, and it is unrelated to the mother’s age. A sperm with two copies followed by loss of the maternal chromosome would leave two paternal copies, the finding in patient 4. An egg bearing a paternal methylation pattern would supply active paternal-type genes, which would not cause PWS, and would not make both copies maternal.',
+        optionExplanations: [
+          'A deletion arising during spermatogenesis is the mechanism in patient 1, who has a single copy of the region. Patient 2 has two copies, both maternal, and a paternal deletion is unrelated to the mother’s age.',
+          'Nondisjunction in the oocyte, the error that increases with maternal age, yields an egg with two chromosomes 15. After fertilization the trisomic embryo loses the single paternal chromosome, leaving two maternal copies and no active paternal genes, which is patient 2’s finding.',
+          'A sperm with two copies followed by loss of the maternal chromosome would leave two paternal copies of chromosome 15. That is the finding in patient 4, who has AS, not patient 2, who has PWS with two maternal copies.',
+          'An egg bearing a paternal methylation pattern would supply active paternal-type genes, which would not cause PWS. It would also not account for the marker data showing both copies came from the mother.',
+        ],
         skill: '1C uniparental disomy',
       },
     ],
@@ -280,6 +364,12 @@ export const FL7_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'DNA damage signals through the intrinsic pathway, whose initiator is caspase-9; without it, cytochrome c release cannot lead to executioner activation, so irradiated mutant lymphocytes survive. Fas ligand acts through caspase-8, which in lymphocytes activates caspase-3 directly without help from the mitochondrial pathway, so that response is preserved. Death after neither treatment would require caspase-9 to lie downstream of Fas in these cells, which it does not. Death after radiation but not Fas ligand reverses the two pathways. Death after both treatments would mean that caspase-9 is dispensable for the response to DNA damage.',
+        optionExplanations: [
+          'Death after neither treatment would require caspase-9 to lie downstream of Fas in lymphocytes. The passage says caspase-8 activates enough caspase-3 to kill lymphocytes directly, so the Fas response does not need caspase-9.',
+          'DNA damage signals through the intrinsic pathway, whose initiator is caspase-9; without it, cytochrome c release cannot activate executioners and irradiated cells survive. Fas ligand acts through caspase-8, which in lymphocytes activates caspase-3 directly, so that response is preserved.',
+          'This reverses the two pathways. Radiation-induced DNA damage requires caspase-9, which is missing, while the Fas pathway in lymphocytes bypasses caspase-9 entirely through caspase-8 acting on caspase-3.',
+          'Death after both treatments would mean caspase-9 is dispensable for the response to DNA damage. But the passage makes caspase-9 the initiator activated by cytochrome c and Apaf-1, so radiation cannot kill cells that lack it.',
+        ],
         skill: '2C intrinsic vs extrinsic apoptosis',
       },
       {
@@ -293,6 +383,12 @@ export const FL7_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'An early apoptotic cell has moved phosphatidylserine to its outer leaflet, where annexin V can reach it, but its membrane is still intact and keeps PI away from the DNA. A necrotic cell has a ruptured membrane, so PI enters and stains the DNA, and annexin V enters and binds phosphatidylserine on the inner leaflet; it is labeled by both. Labeling of an early apoptotic cell by PI, alone or with annexin V, would require a breach of the membrane that does not occur at that stage. A necrotic cell cannot exclude PI, so it would not be labeled by annexin V alone.',
+        optionExplanations: [
+          'Labeling of an early apoptotic cell by PI requires PI to reach the DNA, which needs a breached membrane. The passage says the plasma membrane stays intact throughout apoptosis, so PI is excluded. The necrotic assignment is also wrong; it would take up both reagents.',
+          'PI cannot enter an early apoptotic cell because its membrane is intact. And a necrotic cell with a ruptured membrane admits PI as well as annexin V, so it would not be labeled by annexin V alone.',
+          'An early apoptotic cell excludes PI because its membrane is intact, so PI-only is impossible at that stage. The necrotic assignment is correct, but the apoptotic one is reversed: it should be annexin V only.',
+          'An early apoptotic cell has phosphatidylserine on its outer leaflet, where annexin V binds, but an intact membrane that excludes PI. A necrotic cell’s ruptured membrane admits PI to stain DNA and lets annexin V reach inner-leaflet phosphatidylserine, so both label it.',
+        ],
         skill: '2C phosphatidylserine exposure and membrane integrity',
       },
       {
@@ -306,6 +402,12 @@ export const FL7_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'In chromatin, about 150 base pairs of DNA are wrapped around each histone octamer, and successive nucleosomes are joined by short stretches of exposed linker DNA, giving a repeat of roughly 180–200 base pairs. A nuclease that can reach only the linkers releases fragments containing one, two, three, or more nucleosomes, which run as a ladder. Cutting the wrapped DNA while sparing the linkers would not give multiples of the nucleosome repeat. A specific recognition sequence would not recur at regular intervals throughout the genome. Trimming telomeric repeats would shorten chromosome ends but would not convert the bulk of the genome into regularly sized fragments.',
+        optionExplanations: [
+          'About 150 bp of DNA wraps each histone octamer, and successive nucleosomes are joined by short exposed linkers, giving a repeat near 180–200 bp. A nuclease that cuts only the accessible linkers releases fragments of one, two, three or more nucleosomes, which run as a ladder.',
+          'Cutting the DNA wrapped around histones while sparing the linkers would not generate fragments at multiples of the nucleosome repeat. The wrapped DNA is protected by the histone octamer; the exposed linker is what the nuclease can reach.',
+          'A specific recognition sequence does not recur at regular intervals throughout the genome. The regular 180-bp spacing reflects the physical periodicity of nucleosomes, not a sequence motif.',
+          'Trimming telomeric repeats would shorten chromosome ends but leave the bulk of the genome intact. It could not convert the whole genome into regularly sized fragments that form a ladder.',
+        ],
         skill: '2C apoptotic DNA fragmentation and nucleosomes',
       },
       {
@@ -319,6 +421,12 @@ export const FL7_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'A BH3 mimetic works by freeing the pro-apoptotic proteins that Bcl-2 has sequestered, and those proteins kill only by way of the pores that Bax and Bak form in the outer mitochondrial membrane; a cell with neither protein cannot release cytochrome c, so the drug has nothing to act through. Cells that overproduce Bcl-2 are the intended target, since their survival depends on it. Loss of p53 blocks the signal from DNA damage upstream of Bcl-2, but the drug acts below that point and does not need p53. Cells with much BH3-only protein held on Bcl-2 are especially sensitive, because displacement releases a large death signal.',
+        optionExplanations: [
+          'Cells that overproduce Bcl-2 are the intended target of BH3 mimetics. Their survival depends on Bcl-2 sequestering pro-apoptotic proteins, so displacing those proteins releases a strong death signal.',
+          'Loss of p53 blocks the DNA-damage signal upstream of Bcl-2, but a BH3 mimetic acts at Bcl-2 itself and does not need p53. The drug bypasses the lost upstream step.',
+          'A BH3 mimetic frees pro-apoptotic proteins that Bcl-2 has sequestered, but those proteins kill only through the pores that Bax and Bak form in the outer mitochondrial membrane. Without Bax and Bak, cytochrome c cannot be released and the drug has nothing to act through.',
+          'Cells holding large amounts of BH3-only proteins on Bcl-2 are especially sensitive to a BH3 mimetic, because displacement releases a large death signal all at once.',
+        ],
         skill: '2C Bcl-2 family and cancer therapy',
       },
     ],
@@ -351,6 +459,12 @@ export const FL7_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Drug X caused the largest loss of Na⁺ and tripled Ca²⁺ excretion, as expected when NKCC2 is blocked in the segment that reabsorbs a quarter of the filtered Na⁺ and whose lumen-positive voltage drives Ca²⁺ reabsorption. Drug Y caused a moderate loss of Na⁺ and halved Ca²⁺ excretion: blocking NCC lowers Na⁺ inside distal tubule cells, which steepens the gradient that powers basolateral Ca²⁺ exit. Drug Z caused the smallest loss of Na⁺ and reduced K⁺ excretion, as expected when ENaC is blocked and the lumen-negative voltage that drives K⁺ secretion is lost. Each of the other orders assigns at least one drug to a target whose blockade would change K⁺ or Ca²⁺ excretion in the direction opposite to that observed.',
+        optionExplanations: [
+          'Drug X caused the largest Na⁺ loss and tripled Ca²⁺ excretion, as expected for blocking NKCC2, whose lumen-positive voltage drives Ca²⁺ reabsorption. Drug Y halved Ca²⁺ excretion, as expected for NCC blockade. Drug Z lowered K⁺ excretion, as expected for ENaC blockade.',
+          'This assigns drug Y to ENaC, but drug Y raised K⁺ excretion (30 vs 15), whereas ENaC blockade lowers it. It also assigns drug Z to NCC, but drug Z lowered K⁺ excretion, which NCC blockade would not do.',
+          'This assigns drug X to NCC, but NCC blockade lowers Ca²⁺ excretion, whereas drug X tripled it. It also assigns drug Y to NKCC2, but NKCC2 blockade raises Ca²⁺ excretion, whereas drug Y halved it.',
+          'This assigns drug X to ENaC, but ENaC blockade reduces K⁺ excretion and produces the smallest natriuresis, whereas drug X produced the largest Na⁺ loss and raised K⁺ excretion. It also assigns drug Z to NKCC2, which would raise Ca²⁺ excretion, not leave it unchanged.',
+        ],
         skill: '3B diuretic sites of action',
       },
       {
@@ -364,6 +478,12 @@ export const FL7_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Na⁺ that escapes reabsorption in the loop or the distal tubule arrives at the collecting duct, where principal cells take up more of it through ENaC; the larger lumen-negative voltage pulls more K⁺ into the urine. NCC carries Na⁺ and Cl⁻ only, and urinary K⁺ comes mostly from secretion rather than from filtered K⁺ left behind. Diuretic-induced loss of Na⁺ and water tends to raise aldosterone, not lower it, and closing K⁺ channels would reduce K⁺ excretion. The glomerular filtration rate did not differ among study days.',
+        optionExplanations: [
+          'NCC carries Na⁺ and Cl⁻ only, not K⁺. And urinary K⁺ comes mostly from secretion by principal cells of the collecting duct, not from filtered K⁺ left unabsorbed.',
+          'Diuretic-induced loss of Na⁺ and water tends to raise aldosterone, not lower it. And closing K⁺ channels would reduce K⁺ excretion, which is the opposite of what was observed.',
+          'Na⁺ that escapes reabsorption upstream arrives at the collecting duct, where principal cells take up more through ENaC. Since Na⁺ enters without an anion, the lumen becomes more negative, and the larger voltage pulls more K⁺ into the urine.',
+          'The passage states that the glomerular filtration rate did not differ measurably among study days, so an increased filtered load cannot explain the rise in K⁺ excretion.',
+        ],
         skill: '3B potassium secretion in the collecting duct',
       },
       {
@@ -372,6 +492,12 @@ export const FL7_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'After drug X, 220 mmol of Na⁺ was excreted out of about 6,000 mmol filtered: 220/6,000 ≈ 0.037, or roughly 4%. A value near 2% corresponds to the 110 mmol excreted after drug Y. A value of 11% or 22% would require the excretion of about 660 or 1,320 mmol in 6 hours, far more than was observed; the fraction is much smaller than the share of Na⁺ handled by the blocked segment because downstream segments reabsorb part of the extra load.',
+        optionExplanations: [
+          'About 2% corresponds to the 110 mmol excreted after drug Y (110/6,000 ≈ 1.8%). Drug X excreted twice as much Na⁺, so its fraction is about double this value.',
+          'After drug X, 220 mmol of Na⁺ was excreted out of about 6,000 mmol filtered: 220/6,000 ≈ 0.037, or roughly 4%. Downstream segments reabsorb much of the extra load, so the fraction is far less than the 25% handled by the blocked segment.',
+          'An excreted fraction of 11% would require about 660 mmol of Na⁺ in 6 hours, three times the 220 mmol in Table 1. The fraction stays small because the distal tubule and collecting duct reabsorb much of the Na⁺ that the blocked loop lets through.',
+          'An excreted fraction of 22% would require about 1,320 mmol in 6 hours, six times what was observed. It approaches the 25% of filtered Na⁺ the thick ascending limb normally reabsorbs, but downstream segments recover most of what the loop fails to absorb.',
+        ],
         skill: '3B fractional sodium excretion (calculation)',
       },
       {
@@ -385,6 +511,12 @@ export const FL7_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'In a steady state the kidneys excrete what is ingested, so a volunteer who ate more salt, potassium, or calcium before one session would excrete more of it that day whatever the treatment; fixing intake makes the four sessions start from the same baseline, so that differences in Table 1 can be attributed to the drugs. A fixed diet over the preceding days does not standardize the rate at which a tablet is absorbed. Concealing treatment identity is achieved by using a placebo of matching appearance, not by diet. The filtration rate was not changed by the drugs, and diet was not a means of altering it.',
+        optionExplanations: [
+          'A fixed diet over the preceding days does not standardize how fast a tablet is absorbed from the intestine on the study day. Absorption rate depends on the drug formulation and gut conditions at the time, not on prior electrolyte intake.',
+          'Concealing treatment identity is achieved by giving a placebo of matching appearance, not by controlling diet. The diet was the same before all four sessions, so it could not help or hinder blinding.',
+          'The passage says the glomerular filtration rate did not differ among study days, so none of the drugs raised it. Diet was not a means of altering filtration rate.',
+          'In a steady state the kidneys excrete what is ingested, so a volunteer who ate more salt, potassium, or calcium before one session would excrete more that day regardless of treatment. Fixing intake makes all four sessions start from the same baseline.',
+        ],
         skill: '3B research design: dietary standardization',
       },
     ],
@@ -407,6 +539,12 @@ export const FL7_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'Arterial baroreceptors are stretch receptors, so the fall in pressure on standing reduces their firing; the brainstem responds by increasing sympathetic outflow and withdrawing vagal tone, which raises heart rate, contractility, and vascular resistance and brings pressure back up. Baroreceptor firing rises only when arterial pressure rises, which excludes the two options that begin that way. Greater parasympathetic outflow would slow the heart and lower pressure further, the opposite of what is needed.',
+    optionExplanations: [
+      'Baroreceptors are stretch receptors, and arterial pressure fell on standing, so their firing falls rather than rises. The sympathetic half of this option is right, but the afferent half reverses the signal.',
+      'Baroreceptor firing falls when pressure falls, not rises. And increased parasympathetic outflow would slow the heart and lower pressure further, the opposite of the needed correction.',
+      'A fall in arterial pressure reduces stretch on baroreceptors, so their firing falls. The brainstem responds by raising sympathetic outflow and withdrawing vagal tone, which increases heart rate, contractility and vascular resistance and restores pressure within seconds.',
+      'The afferent half is correct, since reduced stretch lowers baroreceptor firing, but increased parasympathetic outflow would slow the heart and lower pressure further. The reflex withdraws parasympathetic tone and raises sympathetic tone.',
+    ],
     skill: '3B baroreceptor reflex',
   },
   {
@@ -418,6 +556,12 @@ export const FL7_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'A peptide hormone such as glucagon is water-soluble and cannot cross the plasma membrane; it binds a surface receptor, which generates a second messenger such as cAMP within seconds and alters the activity of existing proteins without any need for new transcription. Testosterone, estradiol, and aldosterone are steroids: they diffuse into the cell, bind intracellular receptors that act as transcription factors, and produce effects that take hours and are blocked when transcription is inhibited.',
+    optionExplanations: [
+      'Testosterone is a steroid that diffuses through the membrane and binds an intracellular receptor acting as a transcription factor. Its effects take hours, are blocked by transcription inhibitors, and labeled hormone would be found inside the cell, not only at the surface.',
+      'Estradiol is a steroid: it enters the cell, binds an intracellular receptor, and alters gene expression over hours. A response within one minute that survives transcription inhibition and involves a surface-bound ligand does not fit a steroid.',
+      'Aldosterone is a steroid hormone acting through intracellular receptors and new transcription. Its effects would be blocked by a transcription inhibitor, and the labeled hormone would be found within the cell rather than only at its surface.',
+      'Glucagon is a peptide hormone: water-soluble, unable to cross the membrane, it binds a surface receptor coupled to adenylyl cyclase and raises cAMP within seconds. The response alters existing proteins and needs no new transcription, fitting every observation.',
+    ],
     skill: '3B peptide vs steroid hormones',
   },
   {
@@ -434,6 +578,12 @@ export const FL7_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'Villi and microvilli multiply the area of apical membrane, and with it the number of transporters in contact with the lumen; because the maximal rate of carrier-mediated uptake is proportional to the number of carriers, loss of surface lowers the maximal rate. Flattening the surface does not alter the structure of the individual transporter, so its affinity is unchanged. Luminal Na⁺ is supplied by the diet and by secretions and does not depend on villus height. Absorbed amino acids leave the villus in blood capillaries that drain to the portal vein; lacteals carry absorbed fat.',
+    optionExplanations: [
+      'Villi and microvilli multiply the apical membrane area and with it the number of transporters facing the lumen. Because the maximal rate of carrier-mediated uptake is proportional to carrier number, losing surface lowers the maximal rate.',
+      'Flattening the villi changes the amount of membrane, not the structure of each transporter protein. The affinity of an individual transporter for amino acids is unchanged; there are simply fewer of them exposed.',
+      'Luminal Na⁺ is supplied by the diet and by intestinal secretions and does not depend on villus height. The Na⁺ gradient that drives uptake is maintained regardless of the absorptive surface.',
+      'Absorbed amino acids leave the villus in blood capillaries that drain to the portal vein, not in lacteals. Lacteals carry absorbed fat as chylomicrons, so they are irrelevant to amino acid absorption.',
+    ],
     skill: '3B intestinal absorptive surface',
   },
   {
@@ -450,6 +600,12 @@ export const FL7_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'Pleiotropy is the influence of one gene on several seemingly unrelated traits, as when a single connective-tissue gene affects the skeleton, the eye, and the aorta; polygenic inheritance is the control of one trait by many genes, as with height. The first option reverses the two terms. Epistasis is the masking or modification of one gene’s effect by another gene, which the first situation, involving a single gene, does not show. Incomplete dominance describes a heterozygote with a phenotype intermediate between the two homozygotes and says nothing about the number of genes that affect height.',
+    optionExplanations: [
+      'This reverses the two terms. One gene affecting limbs, lens and aorta is pleiotropy, not polygenic inheritance; many genes affecting height is polygenic inheritance, not pleiotropy.',
+      'Pleiotropy is one gene influencing several seemingly unrelated traits, as when a single connective-tissue gene affects skeleton, eye and aorta. Polygenic inheritance is one trait controlled by many genes, as with height.',
+      'Epistasis is one gene masking or modifying another gene’s effect. The first situation involves a single gene with multiple effects, which is pleiotropy, not an interaction between genes.',
+      'Pleiotropy is correct for the first situation, but incomplete dominance describes a heterozygote with an intermediate phenotype. It says nothing about the number of genes that influence height, which is the point of the second situation.',
+    ],
     skill: '1C pleiotropy vs polygenic inheritance',
   },
   {
@@ -466,6 +622,12 @@ export const FL7_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'Bacteria have no spliceosomes, so a transcript of the genomic copy keeps its introns and is translated into a useless product; cDNA is copied from mature mRNA, from which the introns have already been removed, and so encodes an uninterrupted reading frame. The genetic code is nearly universal, and reverse transcription does not change codons. Plasmids are double-stranded DNA and are maintained in bacteria, and the cDNA is made double-stranded before it is cloned. Bacterial translation does not depend on a poly-A tail.',
+    optionExplanations: [
+      'The genetic code is nearly universal, shared by bacteria and humans alike. Reverse transcription copies the mRNA faithfully and does not rewrite codons, so the cDNA is in the same code as the genomic sequence.',
+      'Plasmids are double-stranded DNA maintained stably in bacteria, so bacteria do not degrade double-stranded DNA. The cDNA is also made double-stranded before cloning, so this description is wrong on both counts.',
+      'Bacteria have no spliceosomes, so a transcript from the genomic copy keeps its six introns and is translated into a useless product. cDNA is copied from mature mRNA, from which introns have already been removed, so it encodes an uninterrupted reading frame.',
+      'Bacterial translation does not depend on a poly-A tail; bacterial mRNAs generally lack one. The poly-A tail is a feature of eukaryotic mRNA processing and is not what allows the cDNA construct to work.',
+    ],
     skill: '1B cDNA and introns',
   },
   {
@@ -482,6 +644,12 @@ export const FL7_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'Each pass consists of an oxidation that reduces FAD to FADH₂, a hydration, a second oxidation that reduces NAD⁺ to NADH, and a thiolytic cleavage that releases acetyl-CoA. NADPH is the reductant of fatty acid synthesis and is not produced by β-oxidation. No ATP is formed directly in the pathway, and only one of its two oxidations uses NAD⁺. Malonyl-CoA is the three-carbon donor used in fatty acid synthesis, not a product of fatty acid breakdown.',
+    optionExplanations: [
+      'NADPH is the reductant used in fatty acid synthesis, not a product of β-oxidation. The two oxidations of β-oxidation reduce FAD and NAD⁺, not NADP⁺.',
+      'No ATP is formed directly in β-oxidation; ATP comes later from oxidative phosphorylation of the reduced carriers. And only one of the two oxidations uses NAD⁺; the first uses FAD.',
+      'FADH₂ and NADH are correct, but malonyl-CoA is the three-carbon donor used in fatty acid synthesis, not a product of fatty acid breakdown. The thiolytic cleavage releases acetyl-CoA.',
+      'Each pass consists of an oxidation reducing FAD to FADH₂, a hydration, a second oxidation reducing NAD⁺ to NADH, and a thiolytic cleavage releasing acetyl-CoA. This set of products matches those four reactions.',
+    ],
     skill: '1D products of β-oxidation',
   },
   {
@@ -498,6 +666,12 @@ export const FL7_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'Succinyl-CoA synthetase uses the energy released by cleaving the thioester bond of succinyl-CoA to phosphorylate GDP (or ADP), the only substrate-level phosphorylation of the cycle. The oxidation of isocitrate to α-ketoglutarate yields NADH and CO₂. The oxidation of succinate to fumarate yields FADH₂. The oxidation of malate to oxaloacetate yields NADH. The reduced carriers from these three steps give rise to ATP only through oxidative phosphorylation.',
+    optionExplanations: [
+      'Succinyl-CoA synthetase uses the energy of the thioester bond in succinyl-CoA to phosphorylate GDP (or ADP) directly. This is the only substrate-level phosphorylation in the citric acid cycle.',
+      'The oxidation of isocitrate to α-ketoglutarate is an oxidative decarboxylation that yields NADH and CO₂. Its energy reaches ATP only through the electron transport chain, not by direct phosphorylation.',
+      'The oxidation of succinate to fumarate reduces FAD to FADH₂, which donates electrons to the electron transport chain. No nucleotide is phosphorylated directly in this step.',
+      'The oxidation of malate to oxaloacetate reduces NAD⁺ to NADH. ATP from this step arises only through oxidative phosphorylation, not substrate-level phosphorylation.',
+    ],
     skill: '1D substrate-level phosphorylation in the citric acid cycle',
   },
   {
@@ -514,6 +688,12 @@ export const FL7_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'Fatty acids with very long chains are too long to be handled by mitochondria and are first shortened by β-oxidation in peroxisomes; without the organelle they build up in cells and plasma. Acid hydrolases that degrade glycolipids belong to lysosomes, so their loss describes a lysosomal storage disease. The oxidases that produce hydrogen peroxide are themselves peroxisomal enzymes, working alongside the catalase that destroys it, so they are not overactive when the organelle is absent. Misfolded proteins are degraded mainly by the proteasome in the cytosol.',
+    optionExplanations: [
+      'Acid hydrolases that degrade glycolipids belong to lysosomes, not peroxisomes. Their loss describes a lysosomal storage disease, which is a different organelle defect.',
+      'The oxidases that produce hydrogen peroxide are themselves peroxisomal enzymes, working alongside peroxisomal catalase. Without the organelle these oxidases are not overactive; they are mislocalized or absent along with the catalase.',
+      'Very-long-chain fatty acids are too long for mitochondria and are first shortened by β-oxidation in peroxisomes. Without functional peroxisomes they cannot be shortened and accumulate in cells and plasma.',
+      'Misfolded proteins are degraded mainly by the proteasome in the cytosol, not by peroxisomal proteases. Peroxisomes are not the cell’s main site of protein quality control.',
+    ],
     skill: '2A peroxisomes',
   },
 ]

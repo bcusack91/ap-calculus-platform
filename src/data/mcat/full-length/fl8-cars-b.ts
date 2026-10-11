@@ -30,6 +30,12 @@ export const FL8_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The author calls fairness to the dead a “weak” reason and offers stronger ones: without the rival, “acceptance begins to look like recognition,” and the record of abandoned theories is the only evidence of how far present confidence “has been a guide to truth.” The reasoned-ably option is the historians’ appeal to fairness, which the author grants is true but insufficient. The as-well-founded option is the view of those who call the choice “a matter of fashion,” which the fifth paragraph rejects. The little-study option is the working scientists’ position, which the whole passage is written to answer.',
+        optionExplanations: [
+          'This is the historians’ appeal to fairness, which the author grants is “all true” but calls “weak” as a reason for study. It makes the history “a courtesy paid to the dead,” which the scientist may decline.',
+          'This is the view of those who call the choice between theories “a matter of fashion,” which the fifth paragraph rejects: phlogiston “lost for a reason,” and to take a loser seriously is to see “exactly where it failed.”',
+          'The author argues that without the rival, “acceptance begins to look like recognition,” teaching “a false account” of how science came to be written, and that the record of abandoned theories is the only evidence of how far present confidence “has been a guide to truth.”',
+          'This is the working scientists’ position stated in the first paragraph, which the whole passage is written to answer. The author provides several reasons why the afternoon spent on losers is worth it.',
+        ],
         skill: 'main-idea',
       },
       {
@@ -43,6 +49,12 @@ export const FL8_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The example sits in a paragraph that opens “Nor did the rival merely stand in the way” and ends with the victor inheriting “the loser’s estate”: the gas that ruined phlogiston was isolated and named by someone working inside that theory, so the loser contributed to its own successor. The convention option treats the name as arbitrary, whereas the point is that the name came from the theory. The slow-to-give-up option makes the chemist an obstacle, which is the picture the paragraph is correcting. The correct-account option contradicts the passage, which says the gas “would be the ruin of phlogiston.”',
+        optionExplanations: [
+          'The example sits in a paragraph opening “Nor did the rival merely stand in the way” and ending with the victor inheriting “the loser’s estate.” The gas that ruined phlogiston was isolated and named by someone working inside that theory, so the loser contributed to its own successor.',
+          'Treating the name as a matter of convention makes it arbitrary, whereas the author’s point is that the name came directly from the theory the chemist held. The naming is evidence of the theory’s productive role, not of custom.',
+          'This makes the chemist an obstacle slow to abandon his training, which is exactly the picture the paragraph is correcting. The author presents the chemist as acting “in good faith” within a fruitful theory, not as resisting progress.',
+          'This contradicts the passage, which says the gas “would be the ruin of phlogiston.” The theory’s account of the gas was wrong; the point is that the discovery was nonetheless made within it.',
+        ],
         skill: 'function',
       },
       {
@@ -56,6 +68,12 @@ export const FL8_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The scientist “was not asking whether his predecessors were clever” but “why he should spend an afternoon on them”; the appeal to fairness answers the first question and leaves the second untouched, making the study “a courtesy” he need not pay. The overstates option is ruled out because the author says of the historians’ description, “All of this is true.” The judges-by-the-present option describes the practice the appeal to fairness opposes, not a defect in the appeal. The know-less-history option introduces a claim about scientists’ knowledge that neither party makes.',
+        optionExplanations: [
+          'The author says of the historians’ description that the partisans “reasoned carefully,” adding “All of this is true.” The appeal does not overstate their care; it simply fails to show why that care should command the scientist’s time.',
+          'Judging earlier investigators by later knowledge is the practice the appeal to fairness opposes, not a defect in the appeal. The historians ask that predecessors be judged “by what could be known in their day.”',
+          'Neither party makes any claim about how much history scientists know. The scientist’s reply concerns the use of studying predecessors, not the extent of his existing knowledge.',
+          'The scientist “was not asking whether his predecessors were clever” but “why he should spend an afternoon on them.” The appeal to fairness answers the first question and leaves the second untouched, making the study “a courtesy” he need not pay.',
+        ],
         skill: 'inference',
       },
       {
@@ -69,6 +87,12 @@ export const FL8_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The final paragraph treats the fate of past theories as evidence about “confidence of the kind he now feels.” That inference holds only if today’s support is comparable in kind to the support discarded theories once had; if present evidence were of a wholly different order, the old record would tell the scientist nothing about his own case. The most-will-be-discarded option is stronger than the argument needs, since the author asks only “how far” such confidence has been a guide. The abler option is not required; the passage says only that earlier holders were “able.” The before-the-evidence option conflicts with the claim that phlogiston “lost for a reason.”',
+        optionExplanations: [
+          'This is stronger than the argument needs. The author asks only “how far” confidence has been a guide to truth, which requires that the record be relevant evidence, not that most current theories will fall.',
+          'The final paragraph treats the fate of past theories as evidence about “confidence of the kind he now feels.” That inference holds only if today’s support is comparable in kind to the support discarded theories once had; otherwise the old record would say nothing about his case.',
+          'The passage says only that earlier holders were “able people on good evidence.” Nothing requires them to have been abler than present scientists; comparability, not superiority, is what the argument needs.',
+          'This conflicts with the fifth paragraph, which says phlogiston “lost for a reason” and that taking a loser seriously is to see “exactly where it failed.” The author does not suggest theories were abandoned prematurely.',
+        ],
         skill: 'assumption',
       },
       {
@@ -82,6 +106,12 @@ export const FL8_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The third paragraph asserts without qualification that a theory “is accepted because it did better than a rival at something both sides agreed was worth doing.” A theory adopted with no rival in existence is a counterexample to that general claim. The phlogiston option concerns one episode, which a different episode cannot overturn. The inherits option is limited by the author to “such cases” as the two described, so a case with no loser does not contradict it. The fairness option concerns what historians’ usual defence fails to supply, on which the finding has no bearing.',
+        optionExplanations: [
+          'The third paragraph asserts without qualification that a theory “is accepted because it did better than a rival at something both sides agreed was worth doing.” A theory adopted with no rival in existence is a direct counterexample to that general claim.',
+          'The phlogiston explanation concerns one historical episode: metals grow heavier when burnt. A different episode involving a different theory cannot overturn what the author says about why phlogiston specifically was abandoned.',
+          'The author limits the inheritance claim to “such cases” as the two described, the engineer and the chemist. A case with no loser at all does not contradict a claim about what happens when there is one.',
+          'The fairness point concerns what the historians’ usual defence fails to supply, namely a reason the scientist should care. A finding about how one theory was adopted has no bearing on that critique.',
+        ],
         skill: 'new-information',
       },
       {
@@ -95,6 +125,12 @@ export const FL8_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The author wants the contest shown: what the rival was good at, what the victor “inherited,” and “exactly where it failed.” A treatment covering all three is the history the passage calls for. The praises-ingenuity option is the “courtesy paid to the dead” that the author finds a weak reason. The no-worse option is the fashion view, which the author says the history itself refutes. The catalogue-of-mistakes option is the textbook’s habit of naming lost theories only “as mistakes that held things up.”',
+        optionExplanations: [
+          'Praising the ingenuity of adherents is the “courtesy paid to the dead” that the author finds a weak reason. It answers whether the predecessors were clever, not why anyone should study them.',
+          'Showing the loser fitted the evidence no worse is the fashion view, which the author says “the history they appeal to is against.” Phlogiston could accommodate the weight of burnt metals only by giving its principle “a weight less than nothing.”',
+          'The author wants the contest shown: what the rival was good at, what the victor “inherited,” and “exactly where it failed.” A treatment covering all three is the history the passage calls for.',
+          'Cataloguing mistaken claims as a caution is the textbook’s habit of naming lost theories only “as mistakes that held things up.” It omits what the theory explained and what its successor took from it.',
+        ],
         skill: 'application',
       },
     ],
@@ -118,6 +154,12 @@ export const FL8_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The second paragraph holds that “nothing prevents both from being true at once,” and the last three argue that the gallery and the legal wall turn the work “into something else.” The made-lawful option is the admirer’s inference from art to acquittal, which the author rejects in advising that we “go on calling the trespass a trespass.” The ceases-to-be-art option reverses the author’s view that the owner’s rights and the picture’s worth are separate questions. The galleries option contradicts the claim that cutting a piece from its wall preserves only “the image.”',
+        optionExplanations: [
+          'This is the admirer’s inference from art to acquittal, which the author rejects in advising that we “go on calling the trespass a trespass.” Making the painting lawful would also remove the risk that the author says distinguishes the work.',
+          'The second paragraph holds that “nothing prevents both from being true at once,” and the last three paragraphs argue that the gallery and the legal wall turn the work “into something else.” Both halves of this claim are the passage’s thesis.',
+          'This reverses the author’s view that the owner’s rights and the picture’s worth are separate questions. The owner who repaints “has destroyed something good,” so the picture remained art even as the owner objected.',
+          'This contradicts the fourth paragraph, where cutting a piece from its wall preserves only “the image” while the work “ended when the saw went in.” The author does not favor galleries over walls.',
+        ],
         skill: 'main-idea',
       },
       {
@@ -131,6 +173,12 @@ export const FL8_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The third paragraph lists what the unlicensed wall supplies: “a place that already means something,” “passers-by who did not come to look at art,” and the shared knowledge that the piece “may be gone by Friday.” Those are the setting, the viewers, and the awareness of impermanence named in the first three options. Nothing in the passage mentions the size of the surface; the contrast with the studio concerns address and circumstance, not scale.',
+        optionExplanations: [
+          'The third paragraph names “a place that already means something” as one of the things the unlicensed wall gives the painter. A setting with prior meaning is explicitly on the list.',
+          '“Passers-by who did not come to look at art” is the second item on the third paragraph’s list. Viewers who did not seek out art are explicitly offered by the wall.',
+          'The shared knowledge “that it may be gone by Friday” is the third item the author names. Awareness of impermanence is explicitly listed as something the wall supplies.',
+          'Nothing in the passage mentions the size of the surface. The contrast with the studio concerns address and circumstance, not scale, so a larger surface is not among the things the author says the wall offers.',
+        ],
         skill: 'detail',
       },
       {
@@ -144,6 +192,12 @@ export const FL8_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The stencil on the bank is a remark made “to the bank, in the bank’s own street, without the bank’s leave”; the canvas shows the same figure but is no longer that act, so the difference between them must lie in placement and permission, not in the image. The less-skill option compares difficulty, which the passage never does. The unable-to-address option overgeneralizes: the author says only that a gallery picture is “addressed differently.” The declined-to-purchase option invents a fact about the bank that plays no part in the contrast.',
+        optionExplanations: [
+          'The stencil on the bank is a remark made “to the bank, in the bank’s own street, without the bank’s leave.” The canvas shows the same figure but is no longer that act, so the difference must lie in placement and permission, not in the image.',
+          'The passage never compares the difficulty of painting on canvas and on a wall. The contrast concerns what the figure does and means in each setting, not the skill it demands.',
+          'This overgeneralizes. The author says only that a gallery picture is “addressed differently,” not that it cannot address any public question. The remark is about a specific kind of address, not a blanket incapacity.',
+          'Nothing in the passage says anything about the bank buying or declining a canvas. This invents a fact that plays no part in the contrast between remark and picture of a remark.',
+        ],
         skill: 'inference',
       },
       {
@@ -157,6 +211,12 @@ export const FL8_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'If the same image loses force once viewers learn it was commissioned, then its being uninvited was contributing to what it conveyed, which is the author’s claim. The seldom-identified finding bears on the painter’s legal risk and, if anything, lessens the hazard the author thinks matters. The repaint-sooner finding concerns owners’ tolerance for quality, not what a piece says. The sell-for-more finding shows what buyers will pay for a removed piece and says nothing about whether the piece still says what it said on its wall.',
+        optionExplanations: [
+          'That painters are seldom identified or fined bears on their legal risk. If anything it lessens the hazard the author thinks matters, and it says nothing about whether the trespass contributes to the picture’s meaning.',
+          'How quickly owners repaint crude versus skilled work concerns owners’ tolerance for quality. It does not show that the uninvited character of a piece is part of what it conveys.',
+          'If the same image loses force once viewers learn it was commissioned, then its being uninvited was contributing to what it conveyed. This directly supports the claim that the trespass is “part of what the picture says.”',
+          'Higher prices for removed images show what buyers will pay for the image. The author’s point is that the removed piece keeps the image but loses the work, so sale prices say nothing about what the piece said on its wall.',
+        ],
         skill: 'strengthen-weaken',
       },
       {
@@ -170,6 +230,12 @@ export const FL8_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The author holds that “a city cannot protect this art without turning it into something else,” and that sparing the painter the risk takes from the work “the very thing that distinguished it”; a landmark listing does exactly that, and also denies the owner a repainting he is “entitled” to. The overdue option is the admirer’s reasoning that the passage declines to follow. The pointless option rests on weathering, which the author never raises; the concern is what protection does to the work, not whether it succeeds. The unfair-to-the-painter option gives the painter an authority over the wall that the passage, which calls the act a trespass, does not grant.',
+        optionExplanations: [
+          'This is the admirer’s reasoning that the passage declines to follow. The author holds that “a city cannot protect this art without turning it into something else,” so protection is not care given to the work but its transformation.',
+          'Weathering is never raised by the author. The concern is what protection does to the work, not whether protection succeeds in preserving the image physically.',
+          'The passage calls the act a trespass and says the owner who repaints does “nothing he was not entitled to do.” The author grants the painter no authority over the wall, so unfairness to the painter is not the objection.',
+          'The author holds that “a city cannot protect this art without turning it into something else,” and that sparing the painter the risk takes from the work “the very thing that distinguished it.” A landmark listing does exactly that and also denies the owner a repainting he is entitled to.',
+        ],
         skill: 'new-information',
       },
       {
@@ -183,6 +249,12 @@ export const FL8_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'For the author the removed piece keeps “the image” while the work, “an uninvited remark in a particular place,” has ended. A heckler’s retort printed in a book keeps the words but is no longer an unasked-for reply to that speaker at that moment. The sketch is developed by its own maker into a further work, with nothing detached from an occasion. The revived play returns to its original place and remains the same kind of event. The copied manuscript is duplicated to protect the original, and its text never depended on where or to whom it was addressed.',
+        optionExplanations: [
+          'The sketch is developed by its own maker into a further work, with nothing detached from an occasion. Nothing about it depended on being uninvited or in a particular place.',
+          'For the author the removed piece keeps “the image” while the work, “an uninvited remark in a particular place,” has ended. A heckler’s retort printed in a book keeps the words but is no longer an unasked-for reply to that speaker at that moment.',
+          'The revived play returns to its original place and remains the same kind of event. Nothing has been removed from the occasion that gave it meaning, which is the opposite of what happens when the saw goes in.',
+          'The copied manuscript is duplicated to protect the original, and its text never depended on where or to whom it was addressed. There is no uninvited remark whose occasion is lost.',
+        ],
         skill: 'application',
       },
     ],
@@ -206,6 +278,12 @@ export const FL8_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The second paragraph says the chamber resembles the country “on the day it is drawn, and on no later day,” because its members are “briefed, courted, and deferred to” as almost no other citizens are. The richer-chamber option misuses the phrase “within the limits of chance,” which the author does not develop into an objection. The already-resemble option contradicts the opening description of an elected chamber as “richer, older, and more given to the practice of law.” The refuse-to-serve option raises a difficulty the passage never mentions.',
+        optionExplanations: [
+          'The second paragraph says the chamber resembles the country “on the day it is drawn, and on no later day,” because its members are “briefed, courted, and deferred to” as almost no other citizens are. Office itself makes them atypical within a month.',
+          'This misuses the phrase “within the limits of chance,” which the author mentions in stating the defence and does not develop into an objection. The author’s objection is about what happens after the draw, not the draw’s randomness.',
+          'This contradicts the opening description of an elected chamber as “richer, older, and more given to the practice of law than the country it speaks for.” The author grants that elected chambers do not resemble the country.',
+          'The passage never mentions citizens refusing to serve. This raises a practical difficulty that is no part of the author’s critique of the resemblance argument.',
+        ],
         skill: 'detail',
       },
       {
@@ -219,6 +297,12 @@ export const FL8_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The author recommends the lot for matters in which the elected are “judges in their own cause,” keeps the ballot for “the conduct of a ministry over years,” and adds a caution about briefing: approval, but bounded and qualified. The eager-support option ignores the retained ballot and the statement that the lottery’s virtue is also “the whole of its vice.” The amused-dismissal option cannot be squared with a concrete proposal for its use. The neutrality option fails because the author takes a definite position on which tasks belong to which method.',
+        optionExplanations: [
+          'The author keeps the ballot for “the conduct of a ministry over years” and says the lottery’s virtue “is also the whole of its vice.” Eager extension to every office is the opposite of this measured position.',
+          'The author makes a concrete proposal for using the lot in specific tasks, such as drawing district boundaries and setting salaries. Amused dismissal cannot be squared with recommending its use.',
+          'The author recommends the lot for matters in which the elected are “judges in their own cause,” keeps the ballot for ministries, and adds a caution about briefing. This is approval, but bounded and qualified.',
+          'The author takes a definite position on which tasks belong to which method and adds specific safeguards. Studied neutrality does not describe someone who says “I would keep the ballot” for one class of tasks and assigns another to the lot.',
+        ],
         skill: 'tone',
       },
       {
@@ -232,6 +316,12 @@ export const FL8_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The critics argue from the surgeon to the superiority of election, but the method that secures a competent surgeon is examination, which neither the lot nor the ballot provides; the comparison therefore does not support voting over drawing. The propose-examination option contradicts the remark that “nobody proposes to examine candidates for the legislature,” which the author reports without endorsing a change. The concede option reverses the purpose of the sentence, which belongs to a paragraph showing that the attack “fares no better.” The less-skill option draws a ranking of the two activities that the passage does not make.',
+        optionExplanations: [
+          'This contradicts the remark that “nobody proposes to examine candidates for the legislature,” which the author reports without endorsing a change. The point is about what elections fail to do, not a reform proposal.',
+          'The critics argue from the surgeon to the superiority of election, but the method that secures a competent surgeon is examination, which neither the lot nor the ballot provides. The comparison therefore gives voting no advantage over drawing.',
+          'This reverses the purpose of the sentence, which belongs to a paragraph showing that the attack on competence “fares no better.” The author is undermining the critics, not conceding their point.',
+          'The passage draws no ranking of governing against surgery in terms of skill. The point is about the method of selection, not the comparative difficulty of the two activities.',
+        ],
         skill: 'function',
       },
       {
@@ -245,6 +335,12 @@ export const FL8_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'What marks the allotted official is that she has “no contest ahead of her to fear”: she “cannot be bought with help in winning one” and cannot “be turned out for governing badly.” A legislator with no further election shares both features. The more-typical option concerns resemblance, which depends on how a member was selected and what office has since done to her, not on whether she will run again. The more-reliant option concerns the ignorance of people chosen at random, which retirement does not produce. The less-fit option gets the reasoning backwards, since freedom from re-election is what the author thinks suits an official to such questions.',
+        optionExplanations: [
+          'Resemblance to citizens depends on how a member was selected and what office has since done to her, not on whether she will run again. The author says office makes members atypical regardless.',
+          'Reliance on staff concerns the ignorance of people chosen at random, who “know, on average, little about the matter put to them.” Retirement from future contests does not produce that ignorance in an experienced legislator.',
+          'This gets the reasoning backwards. Freedom from re-election is precisely what the author thinks suits an official to questions in which legislators have a stake, since she cannot be bought with electoral help.',
+          'What marks the allotted official is that she has “no contest ahead of her to fear”: she “cannot be bought with help in winning one” and cannot “be turned out for governing badly.” A legislator with no further election shares both features.',
+        ],
         skill: 'application',
       },
       {
@@ -258,6 +354,12 @@ export const FL8_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The author reserves the lot for tasks “in which the elected are judges in their own cause.” Legislators deciding the length of their own terms (I) and the rules for financing their own campaigns (III) are in that position. Directing a department for years (II) is “the conduct of a ministry,” where “we want someone to blame” and the author would “keep the ballot”; it also conflicts with the advice that an allotted body be dissolved when “its single task is done.” “I only” omits the campaign-finance case, and the two options containing II include the one task the author assigns to elected officials.',
+        optionExplanations: [
+          'This omits the campaign-finance case. The author explicitly names “writing the rules by which their campaigns are paid for” among the tasks where the elected are judges in their own cause, so Statement III belongs with Statement I.',
+          'The author reserves the lot for tasks “in which the elected are judges in their own cause.” Deciding the length of their own terms (Statement I) and the rules for financing their own campaigns (Statement III) are both such tasks; directing a department for years is “the conduct of a ministry,” kept for the ballot.',
+          'Directing a department over five years is “the conduct of a ministry over years, where we want someone to blame,” which the author assigns to the ballot. Including it, and omitting the term-length question, misreads both halves.',
+          'Including the department directorship adds the one task the author explicitly keeps for elected officials. It also conflicts with the advice that an allotted body “be dissolved when its single task is done.”',
+        ],
         skill: 'application',
       },
       {
@@ -271,6 +373,12 @@ export const FL8_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The final paragraph warns that people chosen at random “will lean on whoever informs them,” so that a lottery leaving the briefing to staff “has moved” influence “from the donor to the clerk”; a panel that hears only the staff’s experts and echoes the staff is that case. The unable-to-weigh option overreaches: the panel heard one side only, and the author’s remedy is to let it “summon its own witnesses,” which presumes it can judge what it hears. The left-to-legislators option abandons the lot where the author would repair it. The can-be-bought option confuses dependence on informants with purchase by donors, from which the author says the allotted official is free.',
+        optionExplanations: [
+          'The final paragraph warns that people chosen at random “will lean on whoever informs them,” so a lottery leaving the briefing to staff “has moved” influence “from the donor to the clerk.” A panel hearing only the staff’s experts and echoing the staff is exactly that case.',
+          'This overreaches. The panel heard one side only, and the author’s remedy is to let it “summon its own witnesses,” which presumes that citizens chosen by lot can judge what they hear when given a fair range of it.',
+          'The author would repair the lot, not abandon it. The caution calls for giving the allotted body its own witnesses, not for returning the task to legislators who are judges in their own cause.',
+          'This confuses dependence on informants with purchase by donors. The author says the allotted official “cannot be bought with help in winning” an election; the danger here is influence through briefing, a different mechanism.',
+        ],
         skill: 'new-information',
       },
     ],
@@ -294,6 +402,12 @@ export const FL8_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The second paragraph argues that the keyboard “has given handwriting, for the first time, a meaning” — that the writer “took the slower way” — and the fourth that its value “has migrated to everything the copybook treated as a fault.” The given-up option is the scoffers’ position, which the author accepts only “so far as handwriting is a tool.” The drilled-in-schools option is the mourners’ remedy, which the last paragraph says “would not restore what they miss.” The lost-its-meaning option turns a threat the author describes into an accomplished fact, whereas the author goes on to say what “will survive.”',
+        optionExplanations: [
+          'This is the scoffers’ position, which the author accepts only “so far as handwriting is a tool for getting words onto a page.” The passage goes on to argue that handwriting has acquired a new meaning.',
+          'This is the mourners’ remedy, which the last paragraph says “would not restore what they miss.” Drilling a uniform hand trains a child to do what a printer does and removes the irregularities that are now its credentials.',
+          'This turns a threat the author describes into an accomplished fact. The author says counterfeiting “threatens” the meaning but goes on to say what “will survive”: the irregularities the machine cannot cheaply supply.',
+          'The second paragraph argues that the keyboard “has given handwriting, for the first time, a meaning,” that the writer “took the slower way,” and the fourth says its value “has migrated to everything the copybook treated as a fault.”',
+        ],
         skill: 'main-idea',
       },
       {
@@ -307,6 +421,12 @@ export const FL8_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'A handwritten note meant nothing special when there was no other way to write, and means something now “only because the faster way exists”: the message comes from the alternative declined. The skill option fails because writing by hand took as much skill a century ago, when on the author’s account it conveyed nothing. The how-long option fails for the same reason, since the practice is older now and only lately expressive. The drill-or-imitation option concerns how a hand is acquired, which belongs to the final paragraph’s point about teaching, not to what the choice of a pen conveys.',
+        optionExplanations: [
+          'Writing by hand took as much skill a century ago, when on the author’s account it conveyed nothing. Skill cannot be what gives the practice its meaning now.',
+          'The practice is older now than it was, and only lately expressive. Longevity cannot explain why handwriting has just acquired a meaning it lacked for centuries.',
+          'A handwritten note meant nothing special when there was no other way to write, and means something now “only because the faster way exists.” The message comes from the alternative declined.',
+          'How a hand is acquired belongs to the final paragraph’s point about teaching, not to what the choice of a pen conveys. The remark about the hand saying nothing concerns the absence of an alternative.',
+        ],
         skill: 'inference',
       },
       {
@@ -320,6 +440,12 @@ export const FL8_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Handwriting, no longer needed as a tool, “changes its work” and becomes expressive because a quicker way exists. Candles lit at a dinner in an age of electric light have likewise passed from necessity to gesture. The steel-nib case is one tool displacing another, which is the scoffers’ picture. The typewriter case is a tool that simply disappears, the outcome the author says does “not always” follow. The calculator case is a newer tool becoming obligatory, with no older practice acquiring a meaning.',
+        optionExplanations: [
+          'Handwriting, no longer needed as a tool, “changes its work” and becomes expressive because a quicker way exists. Candles lit at a dinner in an age of electric light have likewise passed from necessity to gesture.',
+          'The steel nib displacing the quill is one tool replacing another because it works better. This is the scoffers’ picture of simple replacement, not an old practice acquiring a new meaning.',
+          'A typewriter sold for scrap is a tool that simply disappears, the outcome the author says does “not always” follow. Nothing here changes its work or becomes a sign of care.',
+          'A calculator becoming obligatory is a newer tool becoming required, with no older practice acquiring a meaning. The author’s point concerns what happens to the displaced practice, not the new tool.',
+        ],
         skill: 'application',
       },
       {
@@ -333,6 +459,12 @@ export const FL8_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The author’s principle is that “a sign that anyone can produce without cost soon ceases to be a sign of anything” and that what survives is “whatever the machine cannot cheaply supply.” Once machines supply crossings-out and crowded lines cheaply, those marks lose their evidential force. The return-to-drill option does not follow, since regularity is what machines already do best. The prized-for-regularity option fails for the same reason: a regular hand is “the least convincing kind.” The give-up-imitating option runs against the scenario, in which the imitation has become more persuasive, not less.',
+        optionExplanations: [
+          'Returning to copybook drill does not follow. Regularity is what machines already do best, so a uniform hand would be even less convincing, not a renewed credential of personal writing.',
+          'The author’s principle is that “a sign that anyone can produce without cost soon ceases to be a sign of anything” and that what survives is “whatever the machine cannot cheaply supply.” Once machines supply crossings-out and crowded lines cheaply, those marks lose their evidential force.',
+          'A regular hand is “the least convincing kind” because machines excel at it. Nothing in the scenario changes that, so regularity would not become the new mark of a human hand.',
+          'This runs against the scenario, in which the imitation has become more persuasive, not less. Advertisers counterfeit what has value, and a more convincing counterfeit gives them more reason to continue.',
+        ],
         skill: 'new-information',
       },
       {
@@ -346,6 +478,12 @@ export const FL8_CARS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The author grants that “so far as handwriting is a tool for getting words onto a page, the scoffers are right,” citing the keyboard’s speed and legibility. The mere-sentiment option goes beyond anything the author says about the signature. The vanish option is denied by the second paragraph: a practice no longer necessary “does not always disappear,” and the keyboard “has not killed handwriting.” The no-longer-taught option conflicts with the final paragraph, where the author thinks a fluent hand “worth a child’s time.”',
+        optionExplanations: [
+          'The author grants that the mourners hold something more than a skill is going, but never calls their regard for a personal signature mere sentiment. The author’s own argument finds real meaning in handwriting.',
+          'This is denied by the second paragraph: a practice no longer necessary “does not always disappear,” and the keyboard “has not killed handwriting.” The abacus comparison is the scoffers’ view, not the author’s.',
+          'This conflicts with the final paragraph, where the author thinks a hand “fluent enough to be used without embarrassment is worth a child’s time.” The author wants handwriting taught differently, not abandoned.',
+          'The author grants that “so far as handwriting is a tool for getting words onto a page, the scoffers are right,” citing the keyboard’s speed and legibility. This is the one point of agreement before the argument diverges.',
+        ],
         skill: 'detail',
       },
     ],

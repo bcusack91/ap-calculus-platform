@@ -47,6 +47,12 @@ export const FL8_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'With immediate recall, performance climbed steeply over the final positions, to 62% at position 13 and 88% at position 15, but after 30 seconds of counting those positions were recalled only about as well as positions 7 through 11, at roughly one third. Recall of the first several positions was nearly identical in the two conditions, so the loss was not spread evenly across the list and did not fall on the first words. The middle positions were also nearly unchanged, and one end of the list, the last, clearly was affected.',
+        optionExplanations: [
+          'The loss was not spread evenly. Positions 1 through 11 were recalled almost identically in both conditions (differences of 1 to 6 points), whereas positions 13 and 15 dropped by 30 and 55 points.',
+          'Recall of the first words was nearly identical in both conditions (70 versus 67 at position 1), so the counting did not lower it. The last words, far from unchanged, fell from 88% to 33%.',
+          'With immediate recall, performance climbed to 62% at position 13 and 88% at position 15, but after 30 seconds of counting those positions were recalled at only 32–33%, about the same as positions 7 through 11. The recency advantage was erased.',
+          'The middle positions were nearly unchanged (33 versus 32 at position 7, for example), and one end of the list, the last, clearly was affected, dropping from 88% to 33%. Only the beginning was left intact.',
+        ],
         skill: '6B data interpretation: serial-position curves',
       },
       {
@@ -61,6 +67,12 @@ export const FL8_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'A brief task that fills short-term memory removed the advantage of the last words while sparing the rest of the list, which is what would be expected if those words are read out of a temporary store when recall follows at once. The last words have the least opportunity for rehearsal, not the most. Had they been stored securely in long-term memory, 30 seconds of counting would not have erased their advantage, just as it did not erase that of the first words. The last words follow fourteen others and are therefore the most exposed, not the least, to interference from earlier words.',
+        optionExplanations: [
+          'The last words have the least opportunity for rehearsal, not the most; no later words arrive during which they could be repeated. It is the first words that gain extra rehearsal.',
+          'A brief task that fills short-term memory removed the advantage of the last words while sparing the rest of the list, which is what would be expected if those words are read out of a temporary store when recall follows immediately.',
+          'Had the last words been stored securely in long-term memory, 30 seconds of counting would not have erased their advantage, just as it did not erase that of the first words. The advantage vanished, so it was not long-term.',
+          'The last words follow fourteen others and are therefore the most exposed, not the least, to interference from earlier words. Freedom from interference cannot explain their advantage.',
+        ],
         skill: '6B recency effect and short-term memory',
       },
       {
@@ -75,6 +87,12 @@ export const FL8_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'If the first words are recalled well because they are rehearsed again and again as later words arrive, then confining participants to the word currently being presented should remove that extra rehearsal and with it the advantage, and such a result would support the account. An advantage that survived a doubling of presentation speed, which leaves less time to rehearse, would count against the account rather than for it. The two findings about the last words concern the recency effect and say nothing about why the first words are remembered.',
+        optionExplanations: [
+          'If the first words are recalled well because they are rehearsed repeatedly as later words arrive, confining participants to the current word removes that extra rehearsal and should remove the advantage. Such a result would directly support the account.',
+          'Doubling the presentation speed leaves less time to rehearse. An advantage that survived this would count against the rehearsal account rather than for it.',
+          'Extending the counting task concerns the recency effect and the last words. It says nothing about why the first words are remembered well.',
+          'Lengthening the list to 30 words and observing the last words concerns the recency effect. It does not bear on the rehearsal explanation of primacy.',
+        ],
         skill: '6B primacy effect and rehearsal (evaluating evidence)',
       },
       {
@@ -89,6 +107,12 @@ export const FL8_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Recall recovered at once when the category changed, which shows that the decline depended on the similarity of each new set to the sets already studied: earlier fruit names were interfering with memory for later ones, which is proactive interference. Tiredness would have depressed recall of occupations as much as recall of fruits. The counting period was 20 seconds on every trial, so the time available for fading was constant and cannot explain a decline from trial to trial. Each set was recalled before the next set was shown, so words from later trials could not have disrupted it.',
+        optionExplanations: [
+          'Tiredness would have depressed recall of the occupations on trial 5 as much as recall of fruits. Instead, recall recovered when the category changed, so fatigue cannot be the explanation.',
+          'The counting period was 20 seconds on every trial, so the time available for fading was constant and cannot explain a decline from trial to trial. Nor would fading explain why a new category restored recall.',
+          'Each set was recalled before the next set was shown, so words from later trials could not have disrupted it. This describes retroactive interference, which the design rules out.',
+          'Recall recovered at once when the category changed from fruits to occupations, showing that the decline depended on the similarity of each new set to those already studied. Earlier fruit names were interfering with later ones: proactive interference, released by the category shift.',
+        ],
         skill: '6B proactive interference and its release',
       },
       {
@@ -103,6 +127,12 @@ export const FL8_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The comparison group had the same prior practice at learning lists of this kind yet needed 15 cycles, nearly as many as a first learning, whereas the experimental group needed only 7; the saving of about half the original effort must therefore come from information about these particular pairs that persisted although participants could recall almost none of it. If general practice were responsible, the comparison group would have learned the list about as quickly as the experimental group relearned it. The design varied neither whether the recall test was given nor the length of the interval, so it supports no conclusion about either.',
+        optionExplanations: [
+          'The comparison group had the same prior practice at learning lists of this kind yet needed 15 cycles, nearly as many as a first learning. If general practice were responsible, they would have learned the list about as quickly as the experimental group relearned it.',
+          'The comparison group had equal practice yet needed 15 cycles, whereas the experimental group needed only 7. The saving of about half the original effort must come from information about these particular pairs that persisted even though participants could recall almost none of it.',
+          'The design did not vary whether the recall test was given before relearning, so it supports no conclusion about the test’s effect. Every participant in the experimental group took the test.',
+          'The design used a single four-week interval and did not vary it, so it supports no conclusion about longer intervals.',
+        ],
         skill: '6B research design: savings on relearning',
       },
     ],
@@ -132,6 +162,12 @@ export const FL8_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Mores are held to matter for the welfare of the group and carry moral weight, so a breach is treated as a moral offense and the offender is condemned and excluded, whereas a breach of a folkway marks a person as odd or ill-mannered and draws only mild reactions. How widely a norm is followed and how old it is do not separate the two kinds, since a folkway can be universal and ancient. Gentle teasing of a person thought clumsy is the mild reaction that identifies a folkway.',
+        optionExplanations: [
+          'How widely a norm is followed does not separate mores from folkways. A folkway, such as a table manner, can be universal and followed by young children without carrying moral weight.',
+          'The age of a norm does not separate the two kinds. A folkway can be ancient; what distinguishes mores is the moral significance attached to breaking them, not their history.',
+          'Mores are held to matter for the welfare of the group and carry moral weight, so a breach is treated as a moral offense and the offender is condemned and excluded. Being called wicked and shunned is the reaction that identifies mores.',
+          'Gentle teasing of a person thought clumsy is the mild reaction that identifies a folkway. A breach of a folkway marks someone as odd or ill-mannered, not as morally culpable.',
+        ],
         skill: '9A norms: folkways vs mores (identifying evidence)',
       },
       {
@@ -146,6 +182,12 @@ export const FL8_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'A total institution works by cutting residents off from the outside and placing every part of the day under one authority. Recruits who go home each evening spend part of every day among the family and friends who sustain their earlier identity, so that identity is never fully set aside. Identical uniforms remove outward marks of the prior identity, a single timetable is the fixed schedule Goffman described, and privileges earned for meeting standards are the means by which a new identity is built, so those three changes would strengthen resocialization or leave it intact.',
+        optionExplanations: [
+          'A total institution works by cutting residents off from the outside and placing every part of the day under one authority. Recruits who go home each evening spend part of every day among the family and friends who sustain their earlier identity, so it is never fully set aside.',
+          'Identical uniforms remove outward marks of the prior identity, which is part of Goffman’s first step, weakening the newcomer’s identity. This would strengthen resocialization, not weaken it.',
+          'A single timetable covering the whole day is the fixed schedule Goffman described as a feature of total institutions. It supports resocialization rather than undermining it.',
+          'Privileges earned for meeting standards are the system of privileges and punishments by which, in Goffman’s second step, a new identity is built. This change would reinforce resocialization.',
+        ],
         skill: '9A resocialization and total institutions',
       },
       {
@@ -160,6 +202,12 @@ export const FL8_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The children hear their parents’ accent first and hear it at home, yet they end up speaking like their classmates, so for this behavior the peer group has prevailed over the family. That does not show that early learning in the family leaves no mark at all, only that it did not determine accent. The observation concerns what children pick up from other children, not unstated lessons taught by the school as an institution. It involves face-to-face contact with classmates and says nothing about media.',
+        optionExplanations: [
+          'The children do adopt their classmates’ accent, but that does not show early family learning leaves no mark at all, only that it did not determine accent. The claim is far broader than the evidence.',
+          'The children hear their parents’ accent first and at home, yet they end up speaking like their classmates, so for this behavior the peer group has prevailed over the family. This directly supports the claim that peers can outweigh family for some behaviors.',
+          'The observation concerns what children pick up from other children, not unstated lessons taught by the school as an institution. Accent is learned from peers, not from the formal or hidden curriculum.',
+          'The observation involves face-to-face contact with classmates and says nothing about media. It does not support a claim that media have displaced face-to-face groups.',
+        ],
         skill: '9A agents of socialization: peers and family',
       },
       {
@@ -174,6 +222,12 @@ export const FL8_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Both groups formed expectations of nursing before they began. The former aides drew on direct experience, whereas the others drew on dramatized portrayals, so their preparation for the role rested on a misleading model and the reality of the work came as a shock. Resocialization replaces an established identity, most thoroughly inside a total institution, and a first job on a ward does neither. Nothing suggests that the nurses’ early learning in the family was deficient. The distress arose from unmet expectations, not from anyone breaking a moral rule of the profession.',
+        optionExplanations: [
+          'Resocialization replaces an established identity with a new one, most thoroughly inside a total institution. A first job on a hospital ward does neither; the nurses retain their identities and simply find the work different from what they expected.',
+          'Nothing suggests that the nurses’ early learning in the family was deficient. Primary socialization concerns language, basic habits, and a first sense of self, none of which is at issue here.',
+          'The distress arose from unmet expectations, not from anyone breaking a moral rule of the profession. No breach of mores is described.',
+          'Both groups formed expectations of nursing before entering it. The former aides drew on direct experience, whereas the others drew on dramatized portrayals, so their anticipatory socialization rested on a misleading source and the reality of the work came as a shock.',
+        ],
         skill: '9A anticipatory socialization: accuracy of the source',
       },
     ],
@@ -203,6 +257,12 @@ export const FL8_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The kitten experiment shows that when one eye supplies no patterned input during the critical period, cortical neurons come to respond only to the other eye, and the loss persists after the eye is reopened even though the eye is healthy; a cataract present from birth through age 9 deprives a child’s cortex in the same way over the corresponding years. A healthy eye and nerve therefore do not guarantee sight. The remapping described in adults concerns the size of body representations after training, and the adult cat shows that the visual cortex is not reshaped by eye closure once the window has passed. The end of pruning fixes the connections that remain; it does not restore those that were lost.',
+        optionExplanations: [
+          'A healthy eye and nerve do not guarantee sight. The kitten experiment shows that the cortex, not the eye, is what fails to develop when patterned input is absent during the critical period.',
+          'The remapping described in adults concerns the size of body representations after training. The adult cat shows that the visual cortex is not reshaped by eye closure once the window has passed, so remapping cannot restore vision here.',
+          'The end of pruning fixes the connections that remain; it does not restore those that were lost. Connections from the deprived eye were eliminated during the critical period and will not return in adolescence.',
+          'The kitten experiment shows that when one eye supplies no patterned input during the critical period, cortical neurons come to respond only to the other eye, and the loss persists even though the eye is healthy. A cataract from birth through age 9 deprives the child’s cortex in the same way.',
+        ],
         skill: '6A critical periods in visual development',
       },
       {
@@ -217,6 +277,12 @@ export const FL8_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The NMDA channel opens only when glutamate is bound and the postsynaptic membrane is strongly depolarized. Rapid stimulation supplies glutamate, but if the cell is held at a strongly negative potential the second condition is never met, calcium does not enter, and the synapse is not strengthened. In the other three procedures glutamate release coincides with depolarization, whether the depolarization is supplied by injected current, paired with each slow pulse, or produced by a second strong input to the same cell, so each of them could produce LTP.',
+        optionExplanations: [
+          'The NMDA channel opens only when glutamate is bound and the postsynaptic membrane is strongly depolarized. Rapid stimulation supplies glutamate, but holding the cell at a strongly negative potential means the second condition is never met, calcium does not enter, and the synapse is not strengthened.',
+          'Rapid stimulation supplies glutamate, and the injected current supplies depolarization, so both conditions for opening the NMDA channel are met. This procedure could produce LTP.',
+          'Even with slow stimulation, each pulse of glutamate coincides with strong postsynaptic depolarization, so both conditions are satisfied at each pulse. This could produce LTP.',
+          'A second strong input exciting the same cell depolarizes the postsynaptic membrane while the first input supplies glutamate, meeting both conditions at once. This could produce LTP.',
+        ],
         skill: '6B long-term potentiation: coincidence detection',
       },
       {
@@ -231,6 +297,12 @@ export const FL8_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Both groups received the same vibration on a fingertip, so the amount of stimulation was equal; the representation grew only in the animals that had to use the vibration to perform their task, so what mattered was the relevance of the stimulation to behavior. All of the monkeys were adults, so age was not varied. Nothing in the comparison concerned which hemisphere received the input.',
+        optionExplanations: [
+          'Both groups received the same vibration on a fingertip, so the total amount of stimulation was equal. Yet only one group showed enlargement, so amount alone cannot be the determinant.',
+          'All of the monkeys were adults, so age was not varied between the groups. The difference between them lay in what they were doing while the stimulation was delivered.',
+          'Both groups received the same vibration, but the representation grew only in the animals that had to use the vibration to perform their task. What mattered was the relevance of the stimulation to behavior, not the stimulation itself.',
+          'Nothing in the comparison concerned which hemisphere received the input. Both groups received identical fingertip stimulation; the difference was attention to the task.',
+        ],
         skill: '6A use-dependent cortical remapping',
       },
       {
@@ -245,6 +317,12 @@ export const FL8_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The therapy differs from standard care in two ways at once: the stronger arm is restrained, and the weaker arm is exercised for many more hours. A group that practices just as much without any restraint differs from the therapy group in restraint alone, so any remaining advantage of the therapy group could be credited to the restraint. Restraining the weaker arm tests a different treatment and leaves practice with the weaker arm unequal. Examiners unaware of group guard against biased assessment, and delaying therapy tests the importance of timing; neither separates restraint from the amount of practice.',
+        optionExplanations: [
+          'Restraining the weaker arm tests a different treatment entirely and leaves practice with the weaker arm unequal between groups. It does not isolate the contribution of restraining the stronger arm.',
+          'The therapy differs from standard care in two ways at once: the stronger arm is restrained, and the weaker arm is exercised for many more hours. A group that practices just as much without any restraint differs in restraint alone, so any remaining advantage can be credited to the restraint.',
+          'Examiners unaware of group assignment guard against biased assessment, which is valuable, but they do not separate the effect of restraint from the effect of practice hours.',
+          'Delaying therapy tests the importance of timing after a stroke. It does not separate the restraint component from the practice component.',
+        ],
         skill: '6A research design: separating two components of a treatment',
       },
     ],
@@ -277,6 +355,12 @@ export const FL8_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Expressions of disgust fell from 4.0 to 0.6 per minute, a decrease of 85%. The rise in skin conductance went from 1.2 to 2.0 μS, an increase of about 67%; recall of the commentary fell from 13.0 to 9.5 items, about 27%; and rated disgust moved only from 5.6 to 5.5, about 2%.',
+        optionExplanations: [
+          'Expressions of disgust fell from 4.0 to 0.6 per minute, a decrease of 85%, the largest proportional change of the four measures. Skin conductance changed about 67%, recall about 27%, and rated disgust about 2%.',
+          'Self-rated disgust moved only from 5.6 to 5.5, a change of about 2%. This is the smallest proportional change in the table, not the largest.',
+          'The rise in skin conductance went from 1.2 to 2.0 μS, an increase of about 67%. This is a large change but smaller than the 85% drop in facial expressions.',
+          'Recall of commentary details fell from 13.0 to 9.5 items, about 27%. This is well below the 85% change in facial expressions.',
+        ],
         skill: '6C data interpretation: proportional change in a table',
       },
       {
@@ -290,6 +374,12 @@ export const FL8_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Participants who suppressed had to keep checking and controlling their faces throughout the film, an effortful activity that competes for the attention needed to take in spoken details; the elevated skin conductance in this condition is consistent with such effort. Rated disgust was the same as in the watch condition (5.5 versus 5.6), so stronger feeling cannot be the cause. Skin conductance rose more, not less, under suppression. Recall under reappraisal (12.8) matched the watch condition (13.0), so the two strategies did not act alike on memory.',
+        optionExplanations: [
+          'Rated disgust under suppression (5.5) was essentially the same as in the watch condition (5.6), so stronger feeling cannot be the cause of the lower recall.',
+          'Participants who suppressed had to keep checking and controlling their faces throughout the film, an effortful activity that competes for the attention needed to take in spoken details. The elevated skin conductance in this condition (2.0 versus 1.2 μS) is consistent with such effort.',
+          'Skin conductance rose more under suppression (2.0 μS), not less (1.2 μS in the watch condition). Lowered arousal is contradicted by the data.',
+          'Recall under reappraisal (12.8) matched the watch condition (13.0), so reappraisal did not reduce attention to the commentary. The two strategies did not act alike on memory.',
+        ],
         skill: '6C cognitive cost of expressive suppression (reasoning from data)',
       },
       {
@@ -303,6 +393,12 @@ export const FL8_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The hypothesis predicts that holding back an expression should weaken the feeling, yet participants who showed almost no disgust (0.6 expressions per minute against 4.0) rated their disgust as highly as those who watched freely (5.5 against 5.6). Fewer expressions together with lower rated disgust under reappraisal is what the hypothesis would lead one to expect. The hypothesis makes no prediction about skin conductance or about memory for the commentary, so those results neither support nor challenge it.',
+        optionExplanations: [
+          'Fewer expressions together with lower rated disgust under reappraisal is what the facial feedback hypothesis would lead one to expect: less expression, less feeling. This result is consistent with the hypothesis, not difficult for it.',
+          'The facial feedback hypothesis makes no prediction about skin conductance, so a rise in conductance under suppression neither supports nor challenges it.',
+          'The hypothesis predicts that holding back an expression should weaken the feeling, yet participants who showed almost no disgust (0.6 per minute versus 4.0) rated their disgust as highly as those who watched freely (5.5 versus 5.6). The feeling survived the near-total loss of expression.',
+          'The hypothesis concerns the link between facial expression and felt emotion. It makes no prediction about memory for the commentary, so the recall result is irrelevant to it.',
+        ],
         skill: '6C facial feedback hypothesis (evaluating evidence)',
       },
       {
@@ -317,6 +413,12 @@ export const FL8_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'If the lower ratings merely reflected what participants thought they were supposed to say, a measure they did not know was being taken should be unaffected; yet the faces of the reappraisal group, recorded by a hidden camera and scored by observers who did not know the conditions, showed about half as many expressions of disgust as those of the watch group. Random assignment makes the groups comparable but does not stop an instruction from shaping self-reports. Collecting ratings promptly limits forgetting, not compliance with perceived expectations. Skin conductance that matched the watch condition gives no sign of reduced emotion and so does not answer the critic.',
+        optionExplanations: [
+          'Random assignment makes the groups comparable but does not stop an instruction from shaping self-reports. The critic’s concern is about what participants thought they should report, which randomization does not address.',
+          'Collecting ratings promptly limits forgetting, not compliance with perceived expectations. Participants could report what they thought was expected whenever the ratings were taken.',
+          'Skin conductance that matched the watch condition (1.1 versus 1.2 μS) gives no sign of reduced emotion under reappraisal, so it does not corroborate the lower ratings and does not answer the critic.',
+          'If lower ratings merely reflected what participants thought they were supposed to say, a measure they did not know was being taken should be unaffected. Yet faces recorded by a hidden camera and scored by observers unaware of condition showed about half as many expressions of disgust (2.1 versus 4.0).',
+        ],
         skill: '6C research design: demand characteristics and unobtrusive measures',
       },
       {
@@ -330,6 +432,12 @@ export const FL8_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Alone, students in the two countries showed disgust equally often (4.1 and 4.0 expressions per minute), and their rated disgust did not differ, so the film evoked the same feeling and the same spontaneous expressions in both. Only in front of a senior researcher did students in Country B show far fewer expressions (1.3), which points to a learned rule about what may be shown to a person of higher standing. The study did not measure how well participants read disgust in the faces of other people.',
+        optionExplanations: [
+          'Students in the two countries showed disgust equally often when alone (4.1 and 4.0 per minute), and their rated disgust did not differ. The film evoked the same intensity of feeling in both countries.',
+          'When alone, students in both countries produced disgust expressions at the same rate, so the spontaneous facial movements did not differ. Only the presence of a superior changed the pattern, and only in one country.',
+          'Alone, students in the two countries expressed disgust equally; only in front of a senior researcher did students in Country B show far fewer expressions (1.3 versus 3.8). This points to a learned rule about what may be shown to a person of higher standing.',
+          'The study did not measure how well participants read disgust in other people’s faces. It measured only their own expressions and ratings, so recognition accuracy cannot be what explains the pattern.',
+        ],
         skill: '6C display rules across cultures',
       },
     ],
@@ -374,6 +482,12 @@ export const FL8_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The VR-10 group pressed 60 times per minute in its last training session, so half of that rate is 30 presses per minute. In Figure 1 the group’s rate was 41 in the block ending at 15 minutes and 33 in the block ending at 20 minutes, both above 30, and 26 in the block ending at 25 minutes, the first value below 30. By the block ending at 30 minutes the rate (20) had already been below half for one block.',
+        optionExplanations: [
+          'At the block ending at 15 minutes the VR-10 rate was 41 presses per minute, still above 30, which is half of the 60 presses per minute recorded in the last training session.',
+          'At the block ending at 20 minutes the rate was 33 presses per minute, still above the half-rate of 30.',
+          'The VR-10 group pressed 60 times per minute in its last training session, so half is 30. Figure 1 shows 41 at 15 minutes and 33 at 20 minutes, both above 30, and 26 at 25 minutes, the first value below half.',
+          'By the block ending at 30 minutes the rate (20) had already been below half for one block; the first block below 30 was the one ending at 25 minutes.',
+        ],
         skill: '7A data interpretation: rate relative to a training baseline',
       },
       {
@@ -388,6 +502,12 @@ export const FL8_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'On FR-10 a rat never pressed more than ten times without a pellet, so a longer unrewarded run in extinction quickly marks a change in conditions; on VR-10 the requirement ranged up to 40 presses, so long unrewarded runs were an ordinary part of training and the start of extinction was hard to tell apart from it. Every rat earned the same total of 600 pellets. All rats were held at the same percentage of free-feeding weight. The pauses after pellets did not weaken learning in the FR-10 group, which was pressing 40 times per minute by the end of training.',
+        optionExplanations: [
+          'Every rat earned the same total of 600 pellets by design. The total number of reinforcers did not differ between the ratio groups.',
+          'All rats were held at the same percentage of free-feeding weight (85%), so hunger did not differ between groups.',
+          'The pauses after pellets did not weaken learning in the FR-10 group, which was pressing 40 times per minute by the end of training. The pauses reflect the schedule, not deficient learning.',
+          'On FR-10 a rat never pressed more than ten times without a pellet, so a longer unrewarded run in extinction quickly signals a change. On VR-10 the requirement ranged up to 40, so long unrewarded runs were ordinary during training and the start of extinction was hard to tell apart from it.',
+        ],
         skill: '7A partial reinforcement: predictability and resistance to extinction',
       },
       {
@@ -402,6 +522,12 @@ export const FL8_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Dividing each block’s rate by the group’s own rate at the end of training shows how much of its former responding each group kept, which removes the advantage of simply having started at a higher rate; on this measure the VR-10 group still retained a third of its rate after 30 minutes, while the other groups retained almost none. Total presses across the session are inflated by a high starting rate just as the rates in each block are. The first block alone shows where the groups started, not how they declined. Pellets earned were equal by design and do not bear on the criticism.',
+        optionExplanations: [
+          'Total presses across the session are inflated by a high starting rate just as the rates in each block are. A group that started faster would accumulate more presses even if it declined at the same proportional rate.',
+          'Dividing each block’s rate by the group’s own final training rate shows how much of its former responding each group kept, removing the advantage of starting higher. On this measure the VR-10 group still retained a third of its rate after 30 minutes, while the others retained almost none.',
+          'The first block alone shows where the groups started, not how they declined. It would confirm the critic’s observation that the VR-10 group began faster without addressing persistence.',
+          'Pellets earned were equal by design (600 for every rat) and do not bear on the criticism, which concerns response rates during extinction.',
+        ],
         skill: '7A research design: normalizing to baseline response rate',
       },
       {
@@ -416,6 +542,12 @@ export const FL8_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'On a fixed-ratio schedule the press that follows a pellet is never reinforced, and nine more presses must be made before the next pellet, so the pellet itself marks the start of a stretch in which pressing cannot pay off, and the rat pauses. On the variable schedule the requirement could be as low as one press, so the very next press might be reinforced and no such signal exists. The pellets were the same size for both groups. Both groups were held at the same body weight and earned the same number of pellets, so satiation did not differ. The VR-10 rats pressed faster and without pauses, so tiring does not account for pauses in the slower group.',
+        optionExplanations: [
+          'On a fixed-ratio schedule the press that follows a pellet is never reinforced, and nine more must be made before the next pellet, so the pellet marks the start of a stretch in which pressing cannot pay off. On the variable schedule the very next press might be reinforced, so no such signal exists.',
+          'The pellets were the same size (45 mg) for both groups. Consumption time cannot explain why only the FR-10 group paused.',
+          'Both groups were held at the same body weight and earned the same number of pellets, so satiation did not differ between them.',
+          'The VR-10 rats pressed faster (60 per minute) and without pauses, so tiring does not account for pauses in the slower FR-10 group. If fatigue caused pauses, the faster group would pause more.',
+        ],
         skill: '7A fixed-ratio schedules: the post-reinforcement pause',
       },
     ],
@@ -438,6 +570,12 @@ export const FL8_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'In Broca’s aphasia the production of speech is effortful and stripped of grammar, but understanding of spoken words is largely preserved, so Patient 1 can pick out named objects; in Wernicke’s aphasia comprehension is severely impaired, so Patient 2 cannot. Repeating a spoken sentence is impaired in both conditions, in one because the sentence cannot be produced and in the other because it is not understood. Describing a picture in complete grammatical sentences is the very ability Patient 1 has lost. A normal rate of speech is retained by Patient 2, not by Patient 1.',
+    optionExplanations: [
+      'In Broca’s aphasia, understanding of spoken words is largely preserved, so Patient 1 can pick out named objects. In Wernicke’s aphasia, comprehension is severely impaired, so Patient 2 cannot. This task separates the two most sharply.',
+      'Repeating a spoken sentence is impaired in both conditions: Patient 1 cannot produce the sentence fluently, and Patient 2 does not understand it. Neither performs well.',
+      'Describing a picture in complete, grammatical sentences is the very ability Patient 1 has lost. Broca’s aphasia leaves speech slow, effortful, and stripped of grammar.',
+      'A normal rate of speech is retained by Patient 2, who speaks rapidly, not by Patient 1, who speaks slowly in short phrases. On this measure Patient 2 would do better.',
+    ],
     skill: '6B aphasia: comprehension in Broca’s vs Wernicke’s',
   },
   {
@@ -455,6 +593,12 @@ export const FL8_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'For a practiced reader, reading is automatic: the word is processed without intention and cannot easily be stopped, so its meaning is activated and competes with the name of the ink color, which must be retrieved by a slower, controlled process. Color naming is the less practiced and less automatic of the two tasks, which is why it is the one that suffers. Word and color are processed in parallel, and it is their simultaneous availability that produces the conflict. The ink is seen as clearly on conflicting items as on rows of X’s; the delay arises in selecting a response, not in sensing the color.',
+    optionExplanations: [
+      'Color naming is the less practiced and less automatic of the two tasks, which is why it is the one that suffers. If naming colors were automatic, the word would not slow it.',
+      'For a practiced reader, reading is automatic: the word is processed without intention and cannot easily be stopped, so its meaning is activated and competes with the name of the ink color, which must be retrieved by a slower, controlled process.',
+      'Word and color are processed in parallel, not in turn. It is their simultaneous availability that produces the conflict; sequential processing would not create competition between responses.',
+      'The ink is seen as clearly on conflicting items as on rows of X’s. The delay arises in selecting a response, not in sensing the color.',
+    ],
     skill: '6B Stroop interference and automatic processing',
   },
   {
@@ -467,6 +611,12 @@ export const FL8_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'The medulla, the lowest part of the brainstem, contains the neurons that generate the breathing rhythm and the cardiovascular centers that regulate heart rate and blood pressure, which is why depression of medullary activity is fatal. The cerebellum coordinates movement and balance. The thalamus relays sensory information to the cortex. The amygdala is involved in fear and other emotional responses. Damage to these three structures does not stop breathing.',
+    optionExplanations: [
+      'The cerebellum coordinates movement and balance. Damage to it impairs motor coordination but does not stop breathing or disrupt moment-to-moment cardiovascular control.',
+      'The thalamus relays sensory information to the cortex. It does not generate the breathing rhythm or regulate heart rate and blood pressure.',
+      'The amygdala is involved in fear and other emotional responses. It is not the site of the respiratory or cardiovascular centers.',
+      'The medulla, the lowest part of the brainstem, contains the neurons that generate the breathing rhythm and the cardiovascular centers that regulate heart rate and blood pressure. Depression of medullary activity by an opioid overdose is therefore fatal.',
+    ],
     skill: '6A medulla and vital functions',
   },
   {
@@ -479,6 +629,12 @@ export const FL8_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'Failure to attend to the left half of space and of one’s own body, together with unawareness of the problem, is hemispatial neglect, which typically follows damage to the right parietal lobe, a region that directs attention to both sides of space but especially to the left. Damage to the left parietal lobe seldom produces lasting neglect, and any neglect would be of the right side. Occipital damage produces blindness in the opposite half of the visual field, but this patient detects lights on both sides, and a person with such a field loss usually knows of it and turns the head to compensate.',
+    optionExplanations: [
+      'Failure to attend to the left half of space and of one’s own body, together with unawareness of the problem, is hemispatial neglect, which typically follows damage to the right parietal lobe, a region that directs attention to both sides of space but especially to the left.',
+      'Damage to the left parietal lobe seldom produces lasting neglect, and any neglect it produced would be of the right side of space, not the left.',
+      'Right occipital damage produces blindness in the left visual field, but this patient detects lights on both sides. A person with such a field loss usually knows of it and turns the head to compensate, unlike this patient who denies any problem.',
+      'Left occipital damage would produce blindness in the right visual field, the side this patient attends to normally. His intact detection of lights on both sides also rules out a field cut.',
+    ],
     skill: '6A hemispatial neglect and the right parietal lobe',
   },
   {
@@ -496,6 +652,12 @@ export const FL8_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'Shaping builds a new behavior by reinforcing successive approximations: once a closer approximation appears, the earlier and cruder one is no longer reinforced, so the learner’s behavior moves step by step toward the target. A variable schedule makes an established response resistant to extinction but does not create a response that has never occurred. Linking separate responses so that each cues the next is chaining, which assembles a sequence rather than refining one response. Watching a reinforced model is observational learning, which the therapist did not use.',
+    optionExplanations: [
+      'A variable schedule makes an established response resistant to extinction, but it does not create a response that has never occurred. Shaping is about building a new behavior, not maintaining one.',
+      'Linking separate responses so that each cues the next is chaining, which assembles a sequence of behaviors. Shaping refines a single response toward a target, which is a different procedure.',
+      'Shaping builds a new behavior by reinforcing successive approximations. Once a closer approximation appears, the earlier and cruder one is no longer reinforced, so the learner’s behavior moves step by step toward the target word.',
+      'Watching a reinforced model is observational learning. The therapist reinforced the child’s own sounds directly; no model was used.',
+    ],
     skill: '7A shaping by successive approximations',
   },
   {
@@ -513,6 +675,12 @@ export const FL8_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'Conflict theory treats social arrangements as outcomes of competition among groups with unequal power and resources, so it asks who benefits from a rule and who bears its cost; a fee for priority shifts access toward those able to pay. Asking how the fee contributes to efficient operation is a functionalist question about the working of the system. Asking how paying patients present themselves to staff is a symbolic interactionist question about meaning in face-to-face encounters. Asking how waiting came to be defined as a problem is a social constructionist question.',
+    optionExplanations: [
+      'Asking how the fee contributes to efficient operation is a functionalist question about how the parts of a system work together. It does not address who gains and who loses.',
+      'Asking how paying patients present themselves to staff is a symbolic interactionist question about meaning in face-to-face encounters. It concerns impression management, not inequality.',
+      'Conflict theory treats social arrangements as outcomes of competition among groups with unequal power and resources, so it asks who benefits from a rule and who bears its cost. A fee for priority shifts access toward those able to pay.',
+      'Asking how waiting came to be defined as a problem is a social constructionist question about how issues are framed. It does not focus on the distribution of advantage.',
+    ],
     skill: '9A conflict theory applied to access to care',
   },
   {
@@ -530,6 +698,12 @@ export const FL8_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'Gemeinschaft describes communities bound by kinship, long acquaintance, and mutual obligation, as when a related neighbor attends a birth and is repaid in kind; Gesellschaft describes societies in which dealings are impersonal, specialized, and governed by payment, as with clinic staff who are strangers and charge a fee. The change therefore runs from Gemeinschaft to Gesellschaft, not the reverse. Close personal ties gave way to impersonal ones, which is a movement from primary to secondary relations, and likeness gave way to a specialized division of labor, which is a movement from mechanical to organic solidarity; both of those options state the direction backward.',
+    optionExplanations: [
+      'This reverses the direction. The village midwife, a related neighbor repaid in kind, exemplifies Gemeinschaft; the fee-charging stranger exemplifies Gesellschaft. The change runs from the former to the latter.',
+      'Close personal ties gave way to impersonal, specialized ones, which is a movement from primary to secondary relations, not the reverse.',
+      'Likeness and shared roles gave way to a specialized division of labor and paid services, which is Durkheim’s movement from mechanical to organic solidarity. This option states the direction backward.',
+      'Gemeinschaft describes communities bound by kinship, long acquaintance, and mutual obligation, as when a related neighbor attends a birth and is repaid in kind. Gesellschaft describes societies in which dealings are impersonal, specialized, and governed by payment, as with clinic staff who are strangers and charge a fee.',
+    ],
     skill: '9B Gemeinschaft vs Gesellschaft',
   },
   {
@@ -547,6 +721,12 @@ export const FL8_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'A population replaces itself only if each woman is succeeded, on average, by one daughter who herself survives through the childbearing years. Where mortality among girls and young women is high, more births are needed to yield one surviving daughter, so the replacement level rises well above 2.1. Early marriage affects how many children women actually have, not how many are needed for replacement. A young age structure affects the number of births per 1,000 people, not the fertility per woman that replacement requires. Migration is excluded by the definition.',
+    optionExplanations: [
+      'A population replaces itself only if each woman is succeeded on average by one daughter who survives through her childbearing years. Where mortality among girls and young women is high, more births are needed to yield one surviving daughter, so the replacement level rises above 2.1.',
+      'Early marriage affects how many children women actually have, not how many are needed for replacement. The replacement level is a threshold, not an observed fertility rate.',
+      'A young age structure affects the number of births per 1,000 people (the crude birth rate), not the fertility per woman that replacement requires.',
+      'Migration is excluded by the definition of replacement-level fertility, which concerns replacement in the absence of migration. Emigration cannot raise the replacement threshold.',
+    ],
     skill: '9B replacement-level fertility and mortality',
   },
 ]

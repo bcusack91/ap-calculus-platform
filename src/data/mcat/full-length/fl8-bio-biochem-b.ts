@@ -39,6 +39,12 @@ export const FL8_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Citrate is an allosteric inhibitor of phosphofructokinase-1; when it rises eightfold and is exported to the cytosol, glycolysis slows at that step, glucose 6-phosphate accumulates and inhibits hexokinase, and glucose uptake falls even though the cell is short of ATP. Fluorocitrate is described as binding aconitase, and nothing suggests that it acts on hexokinase. A fall in ATP (with the accompanying rise in AMP) activates phosphofructokinase-1 rather than inhibiting it, as the higher glucose uptake of the arsenite-treated hearts illustrates. Glucose carriers are not gated by the rate of oxygen consumption; arsenite lowered oxygen consumption further and glucose uptake rose.',
+        optionExplanations: [
+          'Fluorocitrate is described as binding tightly to aconitase; nothing in the passage suggests it acts on hexokinase. The effect on glucose uptake follows from the citrate that accumulates, not from fluorocitrate itself.',
+          'Citrate is an allosteric inhibitor of phosphofructokinase-1. When it rises eightfold and is exported to the cytosol, glycolysis slows at that step, glucose 6-phosphate accumulates and inhibits hexokinase, and glucose uptake falls even though the cell is short of ATP.',
+          'A fall in ATP, with the accompanying rise in AMP, activates phosphofructokinase-1 rather than inhibiting it. The arsenite-treated hearts illustrate this: they are also short of ATP, and their glucose uptake rose.',
+          'Glucose carriers are not gated by the rate of oxygen consumption. Arsenite lowered oxygen consumption even further, to 25% of control, yet glucose uptake in those hearts rose to 6.0 μmol/min per g.',
+        ],
         skill: '1D regulation of glycolysis by citrate',
       },
       {
@@ -53,6 +59,12 @@ export const FL8_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Every citrate formed consumes one oxaloacetate, and with aconitase blocked that oxaloacetate is not regenerated. Citrate rose by 8.4 μmol/g while the other measured intermediates fell by only 0.7 μmol/g, so new four-carbon units must have entered the cycle; pyruvate carboxylase, a biotin enzyme that fixes bicarbonate onto pyruvate, makes oxaloacetate and would place label from bicarbonate in citrate. Acetyl-CoA from pyruvate dehydrogenase supplies only the two-carbon partner and releases $\\text{CO}_2$ rather than fixing it. Oxidation of malate merely recycles intermediates already present and cannot produce a net gain. A fluoroacetyl group likewise supplies two carbons and still requires an oxaloacetate for each condensation.',
+        optionExplanations: [
+          'Every citrate formed consumes an oxaloacetate, and with aconitase blocked that oxaloacetate is not regenerated. Citrate rose by 8.4 μmol/g while other intermediates fell by only 0.7, so new four-carbon units entered. Pyruvate carboxylase fixes bicarbonate onto pyruvate to make oxaloacetate and would place the ¹⁴C label in citrate.',
+          'Pyruvate dehydrogenase supplies only the two-carbon acetyl partner and releases CO₂ rather than fixing it. It could not account for the bicarbonate label in citrate, nor supply the four-carbon oxaloacetate each condensation consumes.',
+          'Oxidation of malate merely recycles intermediates already present in the cycle and cannot produce a net gain. Malate in fact fell, from 0.60 to 0.20 μmol/g, so it was not the source of new carbon.',
+          'A fluoroacetyl group supplies two carbons, like acetyl-CoA, and still requires an oxaloacetate for each condensation. It cannot explain the net accumulation of four-carbon skeletons or the incorporation of bicarbonate carbon.',
+        ],
         skill: '1D anaplerosis: pyruvate carboxylase (data interpretation)',
       },
       {
@@ -67,6 +79,12 @@ export const FL8_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'β-Oxidation uses FAD- and NAD⁺-linked dehydrogenases and a thiolase, none of which contains lipoamide, so octanoate supplies acetyl-CoA despite the block at pyruvate dehydrogenase. The acetyl-CoA can form citrate, but the cycle is still interrupted at the α-ketoglutarate dehydrogenase complex, which arsenite inactivates in the same way, so α-ketoglutarate continues to pile up and the cycle cannot run normally. Animals cannot convert the carbon of an even-chain fatty acid into pyruvate. Citrate synthase has no lipoamide cofactor; citrate fell in Table 1 only because acetyl-CoA from glucose was lacking.',
+        optionExplanations: [
+          'Acetyl-CoA would indeed form without lipoamide, but the cycle cannot run normally because arsenite also inactivates the α-ketoglutarate dehydrogenase complex, which has the same lipoamide cofactor. The block downstream remains.',
+          'Animals cannot convert the carbon of an even-chain fatty acid into pyruvate. β-Oxidation yields acetyl-CoA, which enters the cycle at citrate synthase, not pyruvate.',
+          'Citrate synthase has no lipoamide cofactor, so it is unaffected by arsenite. Citrate fell in Table 1 only because acetyl-CoA from glucose was lacking; supplied with acetyl-CoA from octanoate, citrate would be formed.',
+          'β-Oxidation uses FAD- and NAD⁺-linked dehydrogenases and a thiolase, none containing lipoamide, so octanoate supplies acetyl-CoA despite the block at pyruvate dehydrogenase. But the α-ketoglutarate dehydrogenase complex is still inactivated by arsenite, so α-ketoglutarate continues to accumulate.',
+        ],
         skill: '1D lipoamide-dependent dehydrogenase complexes',
       },
       {
@@ -81,6 +99,12 @@ export const FL8_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Arsenite is held by lipoamide because the two thiols close a stable ring around the arsenic atom. A compound with two thiols on adjacent carbons can form the same kind of ring and so competes effectively for arsenite, freeing lipoamide; a monothiol can form only a weaker, open complex and fails even at twice the concentration. 2-Mercaptoethanol is a small, uncharged molecule that crosses membranes readily, so access is not the difference. A free dithiol is not attached to the enzyme complex and cannot carry acyl groups between its active sites. Arsenite-bound lipoamide is not a disulfide, and the step that arsenite prevents is reoxidation, not reduction.',
+        optionExplanations: [
+          'Arsenite is held by lipoamide because two thiols close a stable ring around the arsenic atom. A dithiol on adjacent carbons forms the same kind of ring and competes effectively for arsenite, freeing lipoamide; a monothiol forms only a weaker open complex and fails even at twice the concentration.',
+          '2-Mercaptoethanol is a small, uncharged molecule that crosses membranes readily, so access to the matrix is not what differs between the two compounds. The difference lies in ring formation with arsenite.',
+          'A free dithiol is not attached to the enzyme complex and cannot carry acyl groups between its active sites. The role of lipoamide depends on its covalent attachment to the complex; a small molecule in solution cannot substitute.',
+          'Arsenite-bound lipoamide is not a disulfide; it is a cyclic arsenic–thiol adduct. The step arsenite prevents is reoxidation of the dithiol, not reduction of a disulfide, so a reducing agent is not what is needed.',
+        ],
         skill: '1D arsenite and paired thiol groups',
       },
       {
@@ -90,6 +114,12 @@ export const FL8_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Succinate is oxidized by succinate dehydrogenase, which passes electrons to ubiquinone and on to oxygen without any lipoamide-dependent step; brisk oxygen consumption with succinate would show that the chain is intact, and poor consumption would point to the chain itself. Pyruvate and α-ketoglutarate must first be oxidized by the two arsenite-sensitive complexes, so oxygen consumption with either would be low under both hypotheses. Isolated mitochondria cannot oxidize glucose, because glycolysis is cytosolic, so that substrate would give no information.',
+        optionExplanations: [
+          'Pyruvate must first be oxidized by the pyruvate dehydrogenase complex, which arsenite inactivates. Oxygen consumption with pyruvate would be low under both hypotheses, so it cannot distinguish them.',
+          'α-Ketoglutarate must first be oxidized by the α-ketoglutarate dehydrogenase complex, the other arsenite target. Low oxygen consumption with this substrate would be expected whether or not the electron transport chain is intact.',
+          'Succinate is oxidized by succinate dehydrogenase, which passes electrons to ubiquinone and on to oxygen without any lipoamide-dependent step. Brisk oxygen consumption with succinate shows the chain is intact; poor consumption would point to the chain itself.',
+          'Isolated mitochondria cannot oxidize glucose, because glycolysis is cytosolic. Glucose would give no oxygen consumption regardless of the state of the chain, so it provides no information.',
+        ],
         skill: '1D research design: locating a site of inhibition',
       },
     ],
@@ -120,6 +150,12 @@ export const FL8_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'If the nonsense mutations lowered the rate of transcription, stopping translation would leave the mRNA level low. Instead, 4 hours of cycloheximide raised it from 10–20% to about 90% of the control value, so the mutant transcripts are made at a nearly normal rate and are lost through a process that requires translation. Degradation that depends on ribosomes is the NMD hypothesis itself, which these results support and do not exclude. The measurements do not show where in the cell the mRNA is degraded. The stability of the encoded protein cannot be judged from measurements of mRNA.',
+        optionExplanations: [
+          'Degradation that depends on ribosomes is the NMD hypothesis itself. The cycloheximide results support it rather than exclude it: stopping translation rescued the mRNA, which is what a ribosome-dependent process predicts.',
+          'The measurements do not show where in the cell the mRNA is degraded. Cycloheximide blocks cytosolic translation, and the result is consistent with degradation after export, so this alternative is not excluded.',
+          'The stability of the encoded protein cannot be judged from measurements of mRNA. Cycloheximide data concern transcript levels only and say nothing about protein turnover.',
+          'If the nonsense mutations lowered the rate of transcription, stopping translation would leave the mRNA level low. Instead, 4 hours of cycloheximide raised it from 10–20% to about 90% of control, so the mutant transcripts are made at a nearly normal rate and lost through a translation-dependent process.',
+        ],
         skill: '1B research design: excluding an alternative explanation',
       },
       {
@@ -134,6 +170,12 @@ export const FL8_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The mutation of patient 3 lies in exon 10, the last exon, so every EJC on the transcript is upstream of the new stop codon and has been displaced by the time the ribosome terminates; with no EJC remaining downstream, the signal for decay is absent, just as it is at a normal stop codon. Ribosomes plainly reach codon 498, because a shortened protein is abundant in these cells. Patient 2 has the same stop codon, UAG, and that mRNA is degraded, so the identity of the stop codon is not the explanation. Nothing suggests that a truncated protein protects its mRNA, and patients 1 and 2 would be expected to make such a protein briefly as well.',
+        optionExplanations: [
+          'Ribosomes plainly reach codon 498, because a shortened protein is abundant in these cells, detected by the antibody against the amino-terminal segment. Translation proceeds far enough to terminate at the premature stop.',
+          'The mutation of patient 3 lies in exon 10, the last exon, so every EJC on the transcript is upstream of the new stop codon and has been displaced when the ribosome terminates. With no EJC downstream, the signal for decay is absent, just as at a normal stop codon.',
+          'Patient 2 has the same stop codon, UAG, and that mRNA is degraded to 20% of control. The identity of the stop codon therefore cannot explain why patient 3’s mRNA is spared.',
+          'Nothing suggests that a truncated protein protects its mRNA, and patients 1 and 2 would be expected to make such a protein briefly as well. The distinguishing feature of patient 3 is the exon position of the mutation.',
+        ],
         skill: '1B nonsense-mediated decay and the position of a stop codon',
       },
       {
@@ -148,6 +190,12 @@ export const FL8_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Dividing the full-length protein by the mRNA level gives the fraction of ribosomes that read through: 1.0/10 = 0.10 for the UGA codon of patient 1, 0.5/20 = 0.025 for the UAG codon of patient 2, and 2.5/100 = 0.025 for the UAG codon of patient 3, a fourfold difference between UGA and UAG. Equal frequencies would require equal ratios. The codon nearest the 3′ end (patient 3) yields the most protein only because its mRNA is ten times as abundant; its read-through fraction equals that of patient 2. A twofold difference comes from comparing the protein values of patients 1 and 2 (1.0 and 0.5) without allowing for their different mRNA levels.',
+        optionExplanations: [
+          'Dividing full-length protein by mRNA gives the read-through fraction: 1.0/10 = 0.10 for the UGA codon of patient 1, 0.5/20 = 0.025 for UAG in patient 2, and 2.5/100 = 0.025 for UAG in patient 3. UGA is read through about four times as often as UAG.',
+          'Equal frequencies would require equal protein-to-mRNA ratios. The ratio is 0.10 for UGA and 0.025 for both UAG cases, so the frequencies differ fourfold.',
+          'Patient 3’s codon, nearest the 3′ end, yields the most protein only because its mRNA is ten times as abundant. Its read-through fraction, 2.5/100 = 0.025, equals that of patient 2, so position is not the variable.',
+          'A twofold difference comes from comparing the raw protein values of patients 1 and 2 (1.0 and 0.5) without correcting for their different mRNA levels (10 and 20). The ratios differ fourfold.',
+        ],
         skill: '1B read-through efficiency (data analysis)',
       },
       {
@@ -157,6 +205,12 @@ export const FL8_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The altered tRNA pairs with UAG and still carries glutamine. In patient 3 the UAG codon replaced a glutamine codon (CAG), so inserting glutamine at codon 498 restores the normal sequence, and the normal stop codon, UAA, is not read by this tRNA. In patient 2 the UAG codon replaced a tryptophan codon, so the full-length protein would carry glutamine in place of tryptophan at position 301. The stop codon of patient 1 is UGA, with which the altered anticodon does not pair, so no full-length protein would result.',
+        optionExplanations: [
+          'Patient 1’s stop codon is UGA, with which the altered glutamine tRNA anticodon (designed for UAG) does not pair. No full-length protein would result in these cells.',
+          'Patient 2’s UAG replaced a tryptophan codon (UGG), so the glutamine tRNA would produce a full-length protein with glutamine in place of tryptophan at position 301. The sequence would not be identical to normal.',
+          'The altered tRNA pairs with UAG and still carries glutamine. In patient 3 the UAG replaced a glutamine codon (CAG), so inserting glutamine at codon 498 restores the normal sequence exactly, and the normal stop codon UAA is not read by this tRNA.',
+          'Patient 2’s protein would carry glutamine where tryptophan belongs, so only patient 3 yields a sequence identical to normal. Including patient 2 overlooks that the suppressor inserts glutamine regardless of the original codon.',
+        ],
         skill: '1B suppressor tRNA',
       },
     ],
@@ -185,6 +239,12 @@ export const FL8_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'After nondisjunction at meiosis I, one secondary spermatocyte holds both homologs and the other holds neither; a normal meiosis II then yields two sperm with two copies of chromosome 21 and two with no copy, so none has exactly one. When meiosis I is normal, each secondary spermatocyte holds one homolog. The cell in which the sister chromatids fail to separate yields one sperm with two copies and one with none, and the other cell divides normally to give two sperm with one copy each. The remaining choices assign normal sperm to the first spermatocyte, deny them to the second, or both.',
+        optionExplanations: [
+          'After nondisjunction at meiosis I, one secondary spermatocyte holds both homologs and the other holds neither, so a normal meiosis II yields two sperm with two copies and two with none. No sperm from the first spermatocyte has exactly one copy.',
+          'The first spermatocyte produces no normal sperm: its meiosis I error leaves each secondary spermatocyte with either two homologs or none, so meiosis II yields disomic and nullisomic sperm only.',
+          'After meiosis I nondisjunction, the first spermatocyte yields two sperm with two copies and two with none, so zero have one copy. In the second, meiosis I is normal and only one of the two cells fails at meiosis II; that cell gives one disomic and one nullisomic sperm, while the other cell divides normally to give two sperm with one copy each.',
+          'The second spermatocyte does produce two normal sperm. Only one of its two secondary spermatocytes undergoes the meiosis II error; the other divides normally and yields two sperm with exactly one chromosome 21.',
+        ],
         skill: '2C nondisjunction in meiosis I vs meiosis II',
       },
       {
@@ -199,6 +259,12 @@ export const FL8_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The homologs are held together by the cohesin that lies between a crossover and the end of the arm. A single crossover near the end of an arm leaves only a short stretch of cohesin to maintain the connection, so the loss of relatively few cohesin complexes frees the homologs. A crossover near the centromere has nearly a whole arm of cohesin beyond it. With a crossover on each arm, or two on one arm, the homologs are joined at two places, and the cohesin beyond both crossovers would have to be lost before they came apart.',
+        optionExplanations: [
+          'A crossover near the centromere has nearly a whole arm of cohesin beyond it holding the homologs together. Many cohesin complexes would have to be lost before the connection failed.',
+          'With a crossover on each arm, the homologs are joined at two places, and the cohesin beyond both crossovers would have to be lost before they came apart. This bivalent is more robust, not less.',
+          'Two crossovers on the same arm join the homologs at two points; both connections, and the cohesin distal to each, would have to fail. This is more stable than a single distal crossover.',
+          'The homologs are held together by cohesin lying between a crossover and the end of the arm. A single crossover near the end of an arm leaves only a short stretch of cohesin maintaining the connection, so the loss of relatively few cohesin complexes frees the homologs.',
+        ],
         skill: '2C sister-chromatid cohesion and chiasmata',
       },
       {
@@ -213,6 +279,12 @@ export const FL8_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'A recessive allele on a chromosome that has no partner is expressed, which is one reason monosomy is so harmful. This girl received the X chromosome that carries her mother’s mutant allele and no sex chromosome from her father, so, like a male, she has a single copy of every X-linked gene and shows the recessive phenotype. A man has one X chromosome and cannot carry an X-linked recessive allele without being affected, so an unaffected father cannot be the source. A single X chromosome is not inactivated; inactivation silences only the X chromosomes in excess of one. The disorder is stated to be recessive, and the unaffected father has no mutant allele to transmit.',
+        optionExplanations: [
+          'A man has one X chromosome and cannot carry an X-linked recessive allele without being affected. Her unaffected father cannot be the source of a hemophilia allele.',
+          'A recessive allele on a chromosome with no partner is expressed, one reason monosomy is so harmful. She received the X carrying her mother’s mutant allele and no sex chromosome from her father, so, like a male, she has a single copy of every X-linked gene and shows the recessive phenotype.',
+          'A single X chromosome is not inactivated; inactivation silences only the X chromosomes in excess of one. If her only X were silenced in most cells, those cells would lack all X-linked gene products, which is not survivable.',
+          'The disorder is stated to be recessive, and the unaffected father has no mutant allele to transmit. Both the source and the mechanism are wrong.',
+        ],
         skill: '2C monosomy X and expression of a recessive allele',
       },
       {
@@ -227,6 +299,12 @@ export const FL8_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Two cell lines in one person must have diverged after fertilization, so a chromosome 21 must have been gained or lost in a mitotic division of the embryo; the descendants of the affected cell form one population and the remaining cells form the other. A meiotic error in either parent, followed by normal mitoses, would place the same abnormal chromosome number in every cell of the body. Fertilization by two sperm adds a complete extra set of chromosomes, giving 69 chromosomes in every cell, not one extra chromosome in some cells.',
+        optionExplanations: [
+          'Two cell lines in one person must have diverged after fertilization, so a chromosome 21 must have been gained or lost in a mitotic division of the embryo. Descendants of the affected cell form one population and the remaining cells form the other.',
+          'A meiotic error in the oocyte, followed by normal mitoses, would place the same abnormal chromosome number in every cell of the body. It cannot produce two populations with different karyotypes.',
+          'A meiotic error in the sperm, followed by normal mitoses, would likewise give trisomy 21 in every cell. Mosaicism requires an event after the zygote has begun dividing.',
+          'Fertilization by two sperm adds a complete extra set of chromosomes, giving 69 chromosomes (triploidy) in every cell, not one extra chromosome in some cells. The karyotypes observed rule this out.',
+        ],
         skill: '2C mosaicism and mitotic error',
       },
     ],
@@ -271,6 +349,12 @@ export const FL8_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Compound X lowered and shortened the plateau and sharply reduced shortening, as expected if less Ca²⁺ entered through L-type channels: less inward current lets the outward K⁺ current repolarize the cell sooner, and less Ca²⁺ is available to trigger release from the sarcoplasmic reticulum. Compound Y left the early plateau unchanged, delayed repolarization, and slightly increased shortening, as expected if the outward current of phase 3 were reduced and Ca²⁺ entry continued for longer. A blocker of Na⁺ channels would lower the peak and the rate of rise of the upstroke, which neither compound did. Reversing the two assignments predicts a longer action potential with compound X and a shorter one with compound Y, the opposite of what was recorded.',
+        optionExplanations: [
+          'A blocker of Na⁺ channels would lower the peak and the maximal rate of rise of the upstroke, which neither compound did. And compound Y lengthened the action potential, the opposite of what a Ca²⁺ channel blocker would do.',
+          'Compound X lowered and shortened the plateau and sharply reduced shortening, as expected if less Ca²⁺ entered through L-type channels and less was available to trigger release from the sarcoplasmic reticulum. Compound Y left the early plateau unchanged, delayed repolarization, and slightly increased shortening, as expected if the phase 3 outward K⁺ current were reduced.',
+          'This reverses the assignments. Blocking K⁺ channels would lengthen the action potential, but compound X shortened it; blocking Ca²⁺ channels would shorten it and reduce shortening, but compound Y lengthened it and increased shortening.',
+          'Compound X blocking Ca²⁺ channels fits, but a Na⁺ channel blocker would lower the peak and rate of rise of the upstroke, which compound Y did not change. Compound Y’s delayed repolarization points instead to reduced K⁺ current.',
+        ],
         skill: '3B ionic currents of the cardiac action potential (data interpretation)',
       },
       {
@@ -280,6 +364,12 @@ export const FL8_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'A second action potential requires Na⁺ channels that have recovered from inactivation, which occurs only once the membrane has repolarized to about −60 mV. The untreated trace is still positive at 120 ms (+12 mV) and at 170 ms (+4 mV), so the channels remain inactivated at those times. It reaches −60 mV at 270 ms, the earliest sampled time at which the condition is met. By 370 ms the cell is fully repolarized and excitable, but this is 100 ms later than the earliest possible time.',
+        optionExplanations: [
+          'At 120 ms the untreated trace is still at +12 mV, far above the −60 mV needed for Na⁺ channels to recover from inactivation. A second stimulus could not evoke an action potential this early.',
+          'At 170 ms the untreated trace is at +4 mV, still positive. Na⁺ channels remain inactivated until the membrane repolarizes to about −60 mV, so the cell is still refractory.',
+          'A second action potential requires Na⁺ channels that have recovered from inactivation, which occurs only once the membrane has repolarized to about −60 mV. The untreated trace reaches −60 mV at 270 ms, the earliest sampled time at which this condition is met.',
+          'By 370 ms the cell is fully repolarized at −85 mV and excitable, but this is 100 ms later than the earliest possible time. The trace already reached −60 mV at 270 ms.',
+        ],
         skill: '3B refractory period of ventricular muscle (reading a figure)',
       },
       {
@@ -294,6 +384,12 @@ export const FL8_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'A skeletal fiber becomes excitable again a few milliseconds into a 100-ms twitch, so later stimuli can add force before the fiber relaxes. In the ventricular cell, the long plateau keeps Na⁺ channels inactivated until about 270 ms, by which time shortening has passed its maximum (200 ms) and relaxation is well advanced (complete by 350 ms); contractions therefore cannot fuse. The amount of Ca²⁺ released is ample for a full beat and is not what prevents summation. Conduction velocity determines when excitation arrives, not whether an excited cell can respond again. Nothing indicates a higher threshold, and a stronger stimulus cannot open inactivated channels in any case.',
+        optionExplanations: [
+          'The amount of Ca²⁺ released is ample for a full beat and is not what prevents summation. The barrier is the refractory period, which keeps the cell inexcitable until relaxation is well under way.',
+          'Conduction velocity determines when excitation arrives at a cell, not whether an excited cell can respond again. The question concerns a single isolated cell stimulated directly.',
+          'Nothing indicates a higher threshold, and a stronger stimulus cannot open inactivated Na⁺ channels in any case. The limitation is the state of the channels, not stimulus strength.',
+          'A skeletal fiber becomes excitable again a few milliseconds into a 100-ms twitch, so later stimuli add force before relaxation. In the ventricular cell the long plateau keeps Na⁺ channels inactivated until about 270 ms, by which time shortening has peaked (200 ms) and relaxation is well advanced, so contractions cannot fuse.',
+        ],
         skill: '3B why cardiac muscle cannot be tetanized',
       },
       {
@@ -308,6 +404,12 @@ export const FL8_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'When the surface membrane is made permeable, the Ca²⁺ concentration around the contractile proteins is set by the bathing solution and no longer depends on channels. If compound X leaves force unchanged under these conditions, it must act in intact cells through the membrane currents that govern Ca²⁺ entry; if it lowers force, it acts on the contractile proteins themselves. Varying the rate of stimulation or the concentration of the compound in intact cells changes Ca²⁺ entry and any direct effect together, so neither separates them. Adding compound Y alters the action potential further and likewise cannot isolate a direct effect on the contractile proteins.',
+        optionExplanations: [
+          'When the surface membrane is made permeable, the Ca²⁺ concentration around the contractile proteins is set by the bath and no longer depends on channels. If compound X leaves force unchanged, it acts in intact cells through membrane currents; if it lowers force, it acts on the contractile proteins directly.',
+          'Varying the rate of stimulation in intact cells changes Ca²⁺ entry and any direct effect on contractile proteins together. Both mechanisms would still be operating, so this cannot separate them.',
+          'Measuring the action potential at several concentrations characterizes the electrical effect but says nothing about whether compound X also acts on the contractile proteins. It does not isolate the mechanism of reduced shortening.',
+          'Adding compound Y alters the action potential further and introduces a second variable. It cannot isolate a direct effect of compound X on the contractile proteins.',
+        ],
         skill: '3B research design: isolating the site of a drug effect',
       },
       {
@@ -322,6 +424,12 @@ export const FL8_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'In nodal cells the L-type Ca²⁺ channels, not Na⁺ channels, carry the upstroke; with fewer of them available, the upstroke rises more slowly and reaches a lower peak. A faster, larger upstroke would require more inward current, not less. A longer plateau is the effect of reducing an outward K⁺ current, not of reducing an inward Ca²⁺ current. An unchanged upstroke followed by a shorter plateau is what such a drug produces in ventricular cells, whose upstroke depends on Na⁺ channels.',
+        optionExplanations: [
+          'A faster, larger upstroke would require more inward current, not less. Blocking the L-type Ca²⁺ channels that carry the nodal upstroke reduces the inward current.',
+          'A longer plateau is the effect of reducing an outward K⁺ current, not of reducing an inward Ca²⁺ current. Blocking Ca²⁺ channels would shorten, not lengthen, any plateau.',
+          'In SA-node cells the L-type Ca²⁺ channels, not Na⁺ channels, carry the upstroke, because few Na⁺ channels are available at the node’s depolarized potentials. With fewer Ca²⁺ channels available, the upstroke rises more slowly and reaches a lower peak.',
+          'An unchanged upstroke followed by a shorter plateau is what a Ca²⁺ channel blocker produces in ventricular cells, whose upstroke depends on Na⁺ channels. In nodal cells the upstroke itself depends on Ca²⁺ channels and would change.',
+        ],
         skill: '3B pacemaker action potential',
       },
     ],
@@ -350,6 +458,12 @@ export const FL8_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'An acetylated enzyme molecule is permanently inactive, so activity returns only when new enzyme is made. Endothelial cells transcribe the gene and synthesize fresh cyclooxygenase within hours. Platelets are fragments of megakaryocytes with no nucleus and almost no capacity for protein synthesis, so thromboxane production recovers only as new platelets replace the old ones over 7 to 10 days. Platelets contain COX-1, and the form of the enzyme would not explain the difference, because aspirin acetylates both. Aspirin is hydrolyzed within about an hour and is not stored. Lipoxygenase has no part in the synthesis of thromboxane or prostacyclin.',
+        optionExplanations: [
+          'Platelets contain COX-1, not COX-2, and the form of the enzyme would not explain the difference anyway, because aspirin acetylates both. The difference lies in the capacity to make new enzyme.',
+          'Aspirin is hydrolyzed to salicylate within about an hour and is not stored by any cell. Its brief presence is why the covalent modification, not the drug itself, determines the duration of inhibition.',
+          'Lipoxygenase has no part in the synthesis of thromboxane or prostacyclin, both of which are cyclooxygenase products. Its presence or absence cannot explain the different recovery times.',
+          'An acetylated enzyme is permanently inactive, so activity returns only when new enzyme is made. Endothelial cells transcribe the gene and synthesize fresh cyclooxygenase within hours. Platelets lack a nucleus and almost all protein synthesis, so thromboxane recovers only as new platelets replace old ones over 7 to 10 days.',
+        ],
         skill: '1D irreversible enzyme inhibition and protein turnover',
       },
       {
@@ -364,6 +478,12 @@ export const FL8_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Ibuprofen occupies the channel reversibly and, while it is bound, blocks access to the serine that aspirin must acetylate. Aspirin is gone from the blood within about an hour, before the ibuprofen has left, so the enzyme is never acetylated; when the ibuprofen concentration falls over the following hours, the unmodified enzyme resumes making thromboxane. Ibuprofen is not described as reacting with the acetylated serine, and the patient was protected before ibuprofen was added, so reversal of acetylation is not the explanation. Nothing suggests that a metabolite of ibuprofen activates platelets. Thromboxane is a cyclooxygenase product, and supplying more substrate could not restore an enzyme that had been acetylated.',
+        optionExplanations: [
+          'Ibuprofen is not described as reacting with the acetylated serine, and the patient was protected before ibuprofen was added. If ibuprofen reversed acetylation, aspirin would never have worked in the first place.',
+          'Ibuprofen occupies the channel reversibly and, while bound, blocks access to the serine aspirin must acetylate. Aspirin is gone from the blood within about an hour, before ibuprofen has left, so the enzyme is never acetylated; as ibuprofen falls over the following hours, the unmodified enzyme resumes making thromboxane.',
+          'Nothing in the passage suggests a metabolite of ibuprofen activates platelets. The observation is restored thromboxane synthesis, which requires an unacetylated enzyme, not a separate activating compound.',
+          'Thromboxane is a cyclooxygenase product, and supplying more substrate could not restore an enzyme that had been acetylated. NSAIDs also have no effect on lipoxygenase, so they cannot divert arachidonic acid away from it.',
+        ],
         skill: '1D reversible vs covalent inhibitors competing for one site',
       },
       {
@@ -378,6 +498,12 @@ export const FL8_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Aspirin closes the cyclooxygenase route but does not reduce the supply of arachidonic acid, so more of it can be converted by 5-lipoxygenase to leukotrienes, which constrict airway smooth muscle. A glucocorticoid inhibits phospholipase A₂ and so limits the substrate for both routes, lowering leukotriene as well as prostaglandin synthesis. Aspirin acts on the enzyme that makes prostaglandins, not on their receptors. NSAIDs have no effect on lipoxygenase, and inhibiting it would relieve, not provoke, constriction. Preventing the release of arachidonic acid is the action of the glucocorticoid, not of aspirin.',
+        optionExplanations: [
+          'Aspirin acts on the enzyme that makes prostaglandins, not on their receptors. The passage describes it acetylating a serine in the cyclooxygenase channel, with no mention of receptor blockade.',
+          'NSAIDs have no effect on lipoxygenase, as the passage states. Inhibiting lipoxygenase would reduce leukotrienes and relieve constriction, not provoke it.',
+          'Aspirin closes the cyclooxygenase route but does not reduce the supply of arachidonic acid, so more is converted by 5-lipoxygenase to leukotrienes, which constrict airway smooth muscle. A glucocorticoid inhibits phospholipase A₂, limiting substrate for both routes.',
+          'Preventing the release of arachidonic acid is the action of the glucocorticoid, through the protein that inhibits phospholipase A₂, not of aspirin. This reverses the two drugs.',
+        ],
         skill: '1D branch points: cyclooxygenase and lipoxygenase pathways',
       },
       {
@@ -392,6 +518,12 @@ export const FL8_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Phosphatidylcholine has fatty acids esterified at carbons 1 and 2 of glycerol and phosphocholine attached at carbon 3. Hydrolysis of the ester at carbon 2 removes one fatty acid and leaves the acyl chain at carbon 1 and the entire head group in place, a lysophospholipid. A diacylglycerol is produced when the bond between glycerol and phosphate is cleaved (by phospholipase C), and phosphatidic acid when only the choline is removed (by phospholipase D); in both cases the two acyl chains remain. A monoacylglycerol would require the loss of both a fatty acid and the phosphate-containing head group.',
+        optionExplanations: [
+          'Phosphatidylcholine has fatty acids esterified at carbons 1 and 2 of glycerol and phosphocholine at carbon 3. Phospholipase A₂ hydrolyzes the ester at carbon 2, removing one fatty acid and leaving the acyl chain at carbon 1 and the entire head group in place: a lysophospholipid.',
+          'A diacylglycerol is produced when the bond between glycerol and phosphate is cleaved, the action of phospholipase C. Both acyl chains remain, and no free arachidonic acid is released.',
+          'Phosphatidic acid results when only the choline is removed, the action of phospholipase D. Both acyl chains remain, so this cannot be the partner product of arachidonic acid release.',
+          'A monoacylglycerol would require loss of both a fatty acid and the phosphate-containing head group. Phospholipase A₂ cleaves only one ester bond, at carbon 2, and leaves the head group intact.',
+        ],
         skill: '1D phospholipid structure and phospholipase specificity',
       },
     ],
@@ -414,6 +546,12 @@ export const FL8_BIO_BIOCHEM_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'The action of acetylcholine at the neuromuscular junction is ended by acetylcholinesterase, an enzyme in the synaptic cleft that hydrolyzes the transmitter to acetate and choline within milliseconds; no transporter takes up intact acetylcholine, so blocking transporters does not prolong its action. Dopamine, serotonin, and norepinephrine are removed from the cleft chiefly by reuptake into the terminals that released them, so a blocker of their transporters prolongs and intensifies signaling at those sites.',
+    optionExplanations: [
+      'Dopamine is removed from the striatal synapse chiefly by reuptake into the terminals that released it. Blocking its transporter prolongs and intensifies dopamine signaling.',
+      'Acetylcholine at the neuromuscular junction is ended by acetylcholinesterase, an enzyme in the cleft that hydrolyzes it to acetate and choline within milliseconds. No transporter takes up intact acetylcholine, so blocking transporters does not prolong its action.',
+      'Serotonin is cleared from the synapse by reuptake transporters on the presynaptic terminal. A transporter blocker would prolong its action at a brainstem serotonin synapse.',
+      'Norepinephrine released at sympathetic nerve endings in the heart is removed chiefly by reuptake. Blocking that transporter would prolong its action on the heart.',
+    ],
     skill: '3A termination of transmitter action: reuptake vs enzymatic breakdown',
   },
   {
@@ -431,6 +569,12 @@ export const FL8_BIO_BIOCHEM_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'Hyperventilation removes $\\text{CO}_2$ faster than the tissues produce it, so arterial $P_{\\text{CO}_2}$ falls, the equilibrium $\\text{CO}_2 + \\text{H}_2\\text{O} \\rightleftharpoons \\text{H}^+ + \\text{HCO}_3^-$ shifts toward $\\text{CO}_2$, and the pH rises (respiratory alkalosis). Exhaled air is rich in $\\text{CO}_2$; breathing it again raises arterial $P_{\\text{CO}_2}$ and brings the pH back down toward 7.4. Lowering $P_{\\text{CO}_2}$ further would worsen the alkalosis. Arterial $P_{\\text{O}_2}$ does not set the pH, and rebreathed air contains less oxygen, not more. A rise in $P_{\\text{CO}_2}$ increases the hydrogen ion concentration and therefore cannot raise the pH.',
+    optionExplanations: [
+      'Lowering arterial $P_{\\text{CO}_2}$ further would worsen the alkalosis, since hyperventilation already removed too much CO₂. Rebreathing exhaled air, rich in CO₂, raises $P_{\\text{CO}_2}$ rather than lowering it.',
+      'Arterial $P_{\\text{O}_2}$ does not set the pH, and rebreathed air contains less oxygen, not more. The relevant change is in CO₂, which hyperventilation depleted.',
+      'Hyperventilation removes CO₂ faster than tissues produce it, so arterial $P_{\\text{CO}_2}$ falls, the bicarbonate equilibrium shifts toward CO₂, and pH rises (respiratory alkalosis). Exhaled air is rich in CO₂, so rebreathing it raises arterial $P_{\\text{CO}_2}$ and brings the pH back down toward 7.4.',
+      'Raising $P_{\\text{CO}_2}$ is correct, but a rise in $P_{\\text{CO}_2}$ increases hydrogen ion concentration through the bicarbonate equilibrium and therefore lowers the pH. It cannot raise it.',
+    ],
     skill: '3B hyperventilation and respiratory alkalosis',
   },
   {
@@ -448,6 +592,12 @@ export const FL8_BIO_BIOCHEM_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'Smooth muscle is regulated through its thick filaments: the complex of Ca²⁺ and calmodulin activates myosin light-chain kinase, and phosphorylation of the regulatory light chains allows the myosin heads to interact with actin and cycle. Regulation through troponin C and tropomyosin is the mechanism of skeletal and cardiac muscle; smooth muscle has no troponin. Ca²⁺ does not bind the myosin heads to permit ATP hydrolysis. Myosin light-chain phosphatase reverses the phosphorylation and brings about relaxation, and it is not activated by Ca²⁺–calmodulin.',
+    optionExplanations: [
+      'Smooth muscle is regulated through its thick filaments: the Ca²⁺–calmodulin complex activates myosin light-chain kinase, and phosphorylation of the regulatory light chains allows myosin heads to interact with actin and cycle.',
+      'Regulation through troponin C and tropomyosin is the mechanism of skeletal and cardiac muscle. Smooth muscle has no troponin, so this thin-filament mechanism does not apply to an arteriole.',
+      'Ca²⁺ does not bind the myosin heads to permit ATP hydrolysis. In smooth muscle Ca²⁺ acts through calmodulin and a kinase, not directly on myosin.',
+      'Myosin light-chain phosphatase reverses the phosphorylation and brings about relaxation, not contraction. It is not activated by Ca²⁺–calmodulin; that complex activates the kinase.',
+    ],
     skill: '3B smooth muscle: calmodulin and myosin light-chain kinase',
   },
   {
@@ -460,6 +610,12 @@ export const FL8_BIO_BIOCHEM_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'An $\\text{F}_2$ plant matches the red parent only if it is homozygous for the red allele at every gene, which has a probability of $(1/4)^n$ for $n$ unlinked genes; $(1/4)^3 = 1/64$, so three genes are involved, and the seven possible numbers of red alleles (0 to 6) produce the graded series characteristic of a polygenic trait. Two genes would give 1/16 and four genes 1/256. Six is the number of alleles that contribute pigment in the darkest plants, not the number of genes.',
+    optionExplanations: [
+      'Two genes would give a probability of (1/4)² = 1/16 of matching the red parent, not 1/64. Two genes would also produce only five phenotypic classes rather than the finer gradation observed.',
+      'An F₂ plant matches the red parent only if homozygous for the red allele at every gene, a probability of (1/4)ⁿ for n unlinked genes. Since (1/4)³ = 1/64, three genes are involved, and the seven possible numbers of red alleles (0 to 6) give the graded series.',
+      'Four genes would give (1/4)⁴ = 1/256 for the darkest phenotype, four times rarer than the 1/64 observed.',
+      'Six is the number of contributing alleles in the darkest plants (two per gene across three genes), not the number of genes. Six genes would give (1/4)⁶ = 1/4096.',
+    ],
     skill: '1C polygenic inheritance and continuous variation',
   },
   {
@@ -477,6 +633,12 @@ export const FL8_BIO_BIOCHEM_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'Codons are read in consecutive groups of three. A deletion of 9 base pairs removes three codons and leaves the reading frame intact, so the protein lacks three amino acids but is otherwise normal and often retains function. A deletion of 4 base pairs is not a multiple of three; it shifts the frame, so every codon downstream specifies a different amino acid and a stop codon is usually soon encountered. The size of a deletion matters less than whether it preserves the frame. A short deletion within an exon does not prevent splicing, which depends on sequences at the exon–intron boundaries, and neither deletion is stated to include the start codon.',
+    optionExplanations: [
+      'A 9-bp deletion removes three whole codons and leaves the reading frame intact, so the protein lacks three amino acids but is otherwise normal and often retains function. Size matters less than whether the frame is preserved.',
+      'A short deletion within an exon does not prevent splicing, which depends on sequences at the exon–intron boundaries. A 9-bp in-frame deletion leaves splicing unaffected and produces a nearly normal protein.',
+      'Codons are read in consecutive groups of three. A 4-bp deletion is not a multiple of three, so it shifts the reading frame; every codon downstream specifies a different amino acid and a stop codon is usually soon encountered, giving no functional protein.',
+      'Neither deletion is stated to include the start codon, and the position is described only as an early exon. The reason patient 2 is worse off is the frameshift, not loss of the initiation codon.',
+    ],
     skill: '1C frameshift vs in-frame deletion',
   },
   {
@@ -494,6 +656,12 @@ export const FL8_BIO_BIOCHEM_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'Ribosomes incorporate only L-amino acids, so the natural hormone is an L-peptide and its mirror image must be built from D-amino acids. Glycine has two hydrogen atoms on its α-carbon; with no stereocenter, it has no D or L form, and the same glycine serves in both peptides. Alanine, whose α-carbon bears a hydrogen, a methyl group, an amino group, and a carboxyl group, is chiral, so L-alanine must be replaced by D-alanine. The two choices that describe the natural hormone as a D-peptide have the configurations reversed.',
+    optionExplanations: [
+      'Ribosomes incorporate only L-amino acids, so the natural hormone is not built from D-amino acids. Alanine is also chiral and would need replacement in the mirror-image peptide.',
+      'The glycine point is right, but the configuration is backward. The natural hormone is an L-peptide; it is the chemist’s mirror image that must be built from D-amino acids.',
+      'The natural hormone is indeed an L-peptide, but alanine is chiral: its α-carbon bears a hydrogen, a methyl, an amino, and a carboxyl group. L-alanine must be replaced by D-alanine in the mirror image.',
+      'Ribosomes incorporate only L-amino acids, so the natural hormone is an L-peptide. Glycine has two hydrogens on its α-carbon and no stereocenter, so it has no D or L form, and the same glycine serves in both peptides.',
+    ],
     skill: '1A chirality of amino acids',
   },
   {
@@ -511,6 +679,12 @@ export const FL8_BIO_BIOCHEM_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'Mitochondria, which descend from bacteria, contain their own ribosomes, and these resemble bacterial ribosomes closely enough to be inhibited by some antibacterial drugs. They synthesize the subunits of the electron transport chain that are encoded in mitochondrial DNA, so inhibiting them limits oxidative phosphorylation, and cells with high energy demands suffer first. All cytosolic ribosomes of human cells, whether free or attached to the endoplasmic reticulum, are 80S particles made of 40S and 60S subunits. Ribosomal subunits assembled in the nucleolus are eukaryotic subunits from the start and do not carry out translation there.',
+    optionExplanations: [
+      'All cytosolic ribosomes of human cells are 80S particles made of 40S and 60S subunits, regardless of whether the cell is dividing. The 30S and 50S subunits are bacterial.',
+      'Ribosomes attached to the endoplasmic reticulum are the same 80S eukaryotic ribosomes as free cytosolic ones. The passage states chloramphenicol does not bind 80S ribosomes.',
+      'Ribosomal subunits assembled in the nucleolus are eukaryotic subunits from the start and do not carry out translation there. They do not resemble bacterial ribosomes at any stage.',
+      'Mitochondria descend from bacteria and contain their own ribosomes, which resemble bacterial ribosomes closely enough to bind chloramphenicol. They synthesize electron transport chain subunits encoded in mitochondrial DNA, so inhibition limits oxidative phosphorylation, and cells with high energy demands suffer first.',
+    ],
     skill: '2B selective toxicity: 70S vs 80S ribosomes',
   },
 ]

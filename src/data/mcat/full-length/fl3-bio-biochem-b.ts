@@ -44,6 +44,12 @@ export const FL3_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The deficient men began at 15.0 g/dL and reached a minimum of 11.2 g/dL on day 12, a loss of 3.8 g/dL; 3.8/15.0 ≈ 0.25, or 25%. The 34% value divides the loss by the nadir (11.2) instead of the starting value. The 75% value is the fraction of hemoglobin that remained, not the fraction lost. The 4% value treats the 3.8 g/dL decrease as if it were a percentage.',
+        optionExplanations: [
+          'Four percent treats the 3.8 g/dL decrease as if it were a percentage. The loss must be divided by the starting value of 15.0 g/dL to get a fraction.',
+          'The deficient men began at 15.0 g/dL and reached a minimum of 11.2 g/dL on day 12, a loss of 3.8 g/dL. Dividing by the starting value gives 3.8/15.0 ≈ 0.25, or 25%.',
+          'Thirty-four percent divides the loss (3.8) by the nadir value (11.2) instead of the starting value (15.0). The denominator must be the initial hemoglobin.',
+          'Seventy-five percent is the fraction of hemoglobin that remained (11.2/15.0), not the fraction lost. The question asks for the loss.',
+        ],
         skill: '1D data interpretation: hemolysis',
       },
       {
@@ -58,6 +64,12 @@ export const FL3_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Hemolysis removed the oldest, most enzyme-depleted cells, and the marrow replaced them with young cells; the density-gradient result shows that young variant cells have about five times the G6PD activity of old ones, enough to keep glutathione reduced at this drug dose. Mature red cells have no nucleus, so the drug cannot induce transcription in them. They also have no ribosomes, so they cannot raise their content of glutathione peroxidase or any other enzyme. The men are hemizygous for the variant, so every new red cell they make carries the variant enzyme, not the normal one.',
+        optionExplanations: [
+          'Mature red cells have no nucleus, so no transcription of any gene, including G6PD, can occur in them. The drug cannot induce gene expression in circulating red cells.',
+          'Mature red cells have no ribosomes, so they cannot raise their content of glutathione peroxidase or any other protein. Enzyme levels are fixed when the cell leaves the marrow.',
+          'The men are hemizygous for the variant, so every red cell they make carries the variant enzyme. The marrow cannot switch to producing the normal enzyme.',
+          'Hemolysis removed the oldest, most enzyme-depleted cells and the marrow replaced them with young cells. The density-gradient result shows young variant cells have about five times the G6PD activity of old ones, enough to keep glutathione reduced at this dose.',
+        ],
         skill: '1D pentose phosphate pathway & oxidative stress',
       },
       {
@@ -72,6 +84,12 @@ export const FL3_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'As glutathione reductase uses NADPH to regenerate GSH, NADPH falls and $\\text{NADP}^+$ rises. $\\text{NADP}^+$ is the substrate of G6PD, and NADPH is its product and inhibitor, so the shift in the ratio immediately increases flux through the rate-limiting step. Peroxide damages rather than activates proteins, and no such activating oxidation is described. Red cells lack ribosomes, so no new enzyme can be translated. Ribulose 5-phosphate is a downstream product; a product activating the first enzyme of its own pathway is not the regulatory pattern of this pathway.',
+        optionExplanations: [
+          'As glutathione reductase consumes NADPH to regenerate GSH, NADPH falls and $\\text{NADP}^+$ rises. $\\text{NADP}^+$ is G6PD’s substrate and NADPH its product and inhibitor, so the shifted ratio immediately increases flux through the rate-limiting step.',
+          'Peroxide damages proteins rather than activating them, and no activating oxidation of G6PD is described in the passage. The regulation is by substrate and product levels, not covalent modification.',
+          'Red cells lack ribosomes, so no new enzyme can be translated from stored mRNA. A tenfold increase within minutes also points to regulation of existing enzyme, not synthesis.',
+          'Ribulose 5-phosphate is a downstream product of the pathway. A product activating the first enzyme of its own pathway in a feed-forward manner is not the regulatory pattern described.',
+        ],
         skill: '1D regulation of the pentose phosphate pathway',
       },
       {
@@ -86,6 +104,12 @@ export const FL3_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Red cells store no glycogen, so glucose from the medium is the source of the glucose 6-phosphate that G6PD oxidizes. Without it, even cells with normal G6PD could not regenerate NADPH, their GSH would be depleted by the peroxide, and the test would lose its ability to discriminate. The passage gives acetylphenylhydrazine as a peroxide generator with no stated requirement for glucose. Both groups need external glucose to supply the pathway, so the difference would shrink, not widen. Glycolysis produces NADH; it does not consume NADPH, so stopping it would not spare GSH.',
+        optionExplanations: [
+          'The passage gives acetylphenylhydrazine as a peroxide generator with no stated requirement for glucose. Peroxide would still form, and deficient cells would still lose GSH.',
+          'Both groups need external glucose to supply glucose 6-phosphate to the pathway, so the difference between them would shrink, not widen. Normal cells are not independent of outside glucose.',
+          'Red cells store no glycogen, so medium glucose is the only source of glucose 6-phosphate for G6PD. Without it, even normal cells could not regenerate NADPH, their GSH would be depleted, and the test would no longer distinguish the groups.',
+          'Glycolysis produces NADH; it does not consume NADPH. Stopping glycolysis would not spare GSH, and removing glucose would also starve the pentose phosphate pathway that protects GSH.',
+        ],
         skill: '1D research design: experimental controls',
       },
       {
@@ -100,6 +124,12 @@ export const FL3_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Because the G6PD gene is X-linked, random X inactivation in each red-cell precursor leaves it expressing either the normal or the variant allele. The woman is therefore a mosaic: her variant-expressing cells behave like those of the deficient men and are destroyed, while her normal cells survive, giving hemolysis of intermediate overall severity. The normal allele is silenced in roughly half of her precursor cells, so it cannot protect every cell. Nothing indicates that the variant enzyme inactivates the normal one. Cells with half the normal activity in every cell would occur only without X inactivation.',
+        optionExplanations: [
+          'The normal allele is silenced by X inactivation in roughly half of her red-cell precursors, so it cannot protect every cell. Those expressing the variant are as vulnerable as the men’s cells.',
+          'Because G6PD is X-linked, random X inactivation in each precursor leaves it expressing either the normal or the variant allele. She is a mosaic: variant-expressing cells are destroyed while normal cells survive, giving hemolysis of intermediate severity.',
+          'Nothing in the passage indicates that the variant enzyme inactivates the normal one. Her normal-allele cells are fully protected, so her hemolysis would be milder than the men’s.',
+          'Half the normal activity in every cell would occur only if both alleles were expressed in each cell. X inactivation means each cell expresses one allele, so cells are either normal or deficient, not uniformly intermediate.',
+        ],
         skill: '1C X inactivation and X-linked traits',
       },
     ],
@@ -129,6 +159,12 @@ export const FL3_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The scrambled siRNA has the same composition as siRNA 1 and enters cells the same way, but it matches no transcript; its near-1.00 values show that introducing an siRNA does not by itself lower RCX expression, so the effects of siRNAs 1 and 2 reflect sequence-specific targeting. Cells treated with reagent alone are the mock group, and no group went entirely without reagent. Normalization used a housekeeping-gene mRNA, not the scrambled siRNA. A scrambled siRNA produces no knockdown, so it cannot report where siRNAs act in the cell.',
+        optionExplanations: [
+          'Cells treated with reagent alone are the mock group, and no group went entirely without the transfection reagent. The scrambled siRNA includes the reagent plus a nonspecific RNA.',
+          'Normalization used a housekeeping-gene mRNA, not the scrambled siRNA. The scrambled siRNA is a treatment condition, not a reference transcript.',
+          'A scrambled siRNA produces no knockdown, so it cannot report where siRNAs act. RISC also works in the cytoplasm, not the nucleus, so this misstates the mechanism.',
+          'The scrambled siRNA has the same composition as siRNA 1 and enters cells the same way but matches no transcript. Its near-1.00 values show that introducing an siRNA does not by itself alter RCX expression, so the knockdowns reflect sequence-specific targeting.',
+        ],
         skill: '1B research design: controls in RNAi',
       },
       {
@@ -142,6 +178,12 @@ export const FL3_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'RISC acts on cytoplasmic mRNAs, and introns are removed from the pre-mRNA in the nucleus and rapidly degraded; the mature M and S mRNAs therefore contain no intron 4 sequence for siRNA 3 to target, and neither isoform changes. Neither mature isoform retains intron 4, since both are spliced products. Intronic RNA, like all RNA, contains uracil rather than thymine. An offsetting shift between isoforms would lower one and raise the other, but Table 1 shows both unchanged.',
+        optionExplanations: [
+          'RISC acts on cytoplasmic mRNAs, and introns are removed from the pre-mRNA in the nucleus and rapidly degraded. The mature M and S mRNAs contain no intron 4 sequence for siRNA 3 to target, so neither isoform changes.',
+          'Neither mature isoform retains intron 4; both are spliced products. The passage says introns are removed before the mRNA leaves the nucleus, and snRNPs do not travel with mature mRNA.',
+          'Intronic RNA, like all RNA, contains uracil rather than thymine. The guide strand could pair with intron sequence if it were present; the problem is that intron 4 is absent from mature mRNA.',
+          'An offsetting shift would lower one isoform and raise the other, but Table 1 shows both unchanged (0.95 and 0.99). The result reflects no targeting at all, not a balanced redistribution.',
+        ],
         skill: '1B RNA processing and RNA interference',
       },
       {
@@ -156,6 +198,12 @@ export const FL3_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Isoform S is formed by joining exon 4 directly to exon 6, so the sequence that spans this junction exists only in S mRNA; an siRNA complementary to it would cleave S but not M. Exon 6 is present in both isoforms, so targeting it would lower both, as siRNA 2 did for exon 2. Intron 5 is removed from every transcript and, like intron 4, is not available to RISC. The exon 5–exon 6 junction exists only in isoform M, so targeting it would lower M rather than S.',
+        optionExplanations: [
+          'Exon 6 is present in both isoforms, so targeting it would lower both M and S, just as siRNA 2 did by targeting exon 2. It is not isoform-specific.',
+          'Intron 5 is removed from every transcript and, like intron 4, is absent from mature mRNA. An siRNA against it would have no effect on either isoform.',
+          'Isoform S is formed by joining exon 4 directly to exon 6, so the sequence spanning that junction exists only in S mRNA. An siRNA complementary to it would cleave S while leaving M, which has exon 5 between exons 4 and 6, intact.',
+          'The exon 5–exon 6 junction exists only in isoform M, since S skips exon 5. Targeting it would lower M rather than S, the opposite of what is wanted.',
+        ],
         skill: '1B alternative splicing: experimental design',
       },
       {
@@ -170,6 +218,12 @@ export const FL3_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The final AG of intron 4 is the 3′ splice site that marks the start of exon 5. Destroying it prevents the spliceosome from joining exon 4 to exon 5, so exon 5 is skipped more often and the exon 4–exon 6 product (isoform S) dominates. Although the variant is absent from mature mRNA, it is present in the pre-mRNA, where splice-site recognition occurs. Isoform S does not use this splice site, because it joins exon 4 to exon 6 with the 3′ splice site of intron 5. Loss of a splice signal weakens, not strengthens, inclusion of exon 5.',
+        optionExplanations: [
+          'Although the variant is absent from mature mRNA, it is present in the pre-mRNA where splice-site recognition occurs. Destroying a 3′ splice site changes which exons are joined, so isoform levels would change.',
+          'The final AG of intron 4 is the 3′ splice site marking the start of exon 5. Destroying it prevents the spliceosome from joining exon 4 to exon 5, so exon 5 is skipped more often and the exon 4–exon 6 product (isoform S) rises relative to M.',
+          'Isoform S does not use this splice site at all; it joins exon 4 to exon 6 using the 3′ splice site of intron 5. S production continues, so both isoforms would not fall.',
+          'Loss of a splice signal weakens, not strengthens, inclusion of exon 5. Without a recognizable 3′ splice site, exon 5 is harder to include, not easier.',
+        ],
         skill: '1B splice-site mutations',
       },
     ],
@@ -198,6 +252,12 @@ export const FL3_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'C9 is one of the last components added to the membrane attack complex, downstream of C3 cleavage and of C5 cleavage. Without it, pores cannot form, but C3b deposition (opsonization), C3a and C5a release, and neutrophil recruitment all proceed normally. Lysis cannot be intact, because C9 is part of the pore itself. C3b opsonization occurs upstream of C9 and does not depend on it, which eliminates both options that list impaired opsonization. C5a is released when C5 is cleaved, before C9 acts.',
+        optionExplanations: [
+          'C9 is one of the last components added to the membrane attack complex, downstream of C3 and C5 cleavage. Without it pores cannot form, but C3b deposition (opsonization), C3a and C5a release, and neutrophil recruitment all proceed normally.',
+          'Lysis cannot be intact, because C9 is part of the pore itself. Opsonization by C3b, by contrast, occurs upstream and does not depend on C9.',
+          'C3b opsonization occurs upstream of C9 and does not depend on it. Only the terminal lytic step is lost, so opsonization remains intact.',
+          'C5a is released when C5 is cleaved, before C9 acts, and C3b deposition is also upstream. Neither opsonization nor neutrophil recruitment depends on C9.',
+        ],
         skill: '3B complement cascade',
       },
       {
@@ -212,6 +272,12 @@ export const FL3_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Fever results when cytokines induce cyclooxygenase-2 in the hypothalamus and prostaglandin E2 raises the set point. Inhibiting cyclooxygenase removes this signal and returns the set point toward normal, but in a healthy person no prostaglandin-driven elevation is present, so temperature is unchanged. Aspirin acts on cyclooxygenase, downstream of cytokine release, so it does not block IL-1 or TNF-α secretion. It does not act as a direct stimulus for sweating; sweating during defervescence is the normal response to a lowered set point. Aspirin has no antibacterial action.',
+        optionExplanations: [
+          'Aspirin acts on cyclooxygenase, downstream of cytokine release. It does not block IL-1 or TNF-α secretion from macrophages.',
+          'Aspirin does not act as a direct stimulus for sweating. Sweating during defervescence is the normal response to a lowered set point, not the mechanism of aspirin’s effect.',
+          'Fever results when cytokines induce cyclooxygenase-2 in the hypothalamus and prostaglandin E2 raises the set point. Inhibiting cyclooxygenase removes that signal, but in a healthy person no prostaglandin-driven elevation exists, so temperature is unchanged.',
+          'Aspirin has no antibacterial action. Its antipyretic effect comes from blocking prostaglandin synthesis, not from reducing the bacterial stimulus for cytokine release.',
+        ],
         skill: '3B cytokines and fever',
       },
       {
@@ -226,6 +292,12 @@ export const FL3_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Without the integrin, neutrophils can roll on selectins but cannot stop and leave the venule. They therefore accumulate in the blood, producing a high count, while few reach the infected tissue. Neutrophils cannot accumulate normally in the tissue, since emigration requires firm adhesion. Phagocytosis of C3b-coated bacteria depends on complement receptors, and the question gives no reason to expect it to fail. Mast cells and histamine release do not depend on the neutrophil integrin, so vasodilation and swelling still occur.',
+        optionExplanations: [
+          'Neutrophils cannot accumulate normally in the tissue, since emigration requires firm adhesion. The blood count would also be high, not low, because neutrophils are trapped in circulation.',
+          'Emigration requires firm adhesion, so neutrophils would not accumulate normally in the tissue. Phagocytosis of C3b-coated bacteria depends on complement receptors, and nothing suggests it would fail.',
+          'Mast cells and histamine release do not depend on the neutrophil integrin, so vasodilation, redness and swelling still occur. The defect is in neutrophil emigration, not inflammation itself.',
+          'Without the integrin, neutrophils can roll on selectins but cannot stop and leave the venule. They accumulate in the blood, producing a high count, while few reach the infected tissue.',
+        ],
         skill: '3B inflammation and leukocyte recruitment',
       },
       {
@@ -240,6 +312,12 @@ export const FL3_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Cytotoxic (CD8) T cells recognize viral peptides presented on MHC class I, so removing MHC class I from the surface hides infected cells from them. NK cells, however, are restrained by inhibitory receptors that bind MHC class I; when MHC class I is missing and stress ligands are present, inhibition is lost and the NK cell kills. NK cells do not require MHC class I to kill, so the cells are not protected from both. Loss of MHC class I releases NK cells rather than restraining them. Helper (CD4) T cells recognize MHC class II, not class I.',
+        optionExplanations: [
+          'NK cells do not require MHC class I to kill; they are inhibited by it. Removing MHC class I protects against cytotoxic T cells but releases NK cells, so the cells are not protected from both.',
+          'Cytotoxic (CD8) T cells recognize viral peptides on MHC class I, so removing it hides infected cells from them. NK cells are restrained by inhibitory receptors that bind MHC class I; when it is missing and stress ligands are present, inhibition is lost and the NK cell kills.',
+          'This reverses the roles. Loss of MHC class I releases NK cells from inhibition rather than protecting against them, and it hides cells from CD8 T cells rather than exposing them.',
+          'MHC class I is needed by cytotoxic CD8 T cells, not helper T cells, which recognize MHC class II. The cells would not be equally vulnerable to both; CD8 recognition is lost while NK killing increases.',
+        ],
         skill: '3B innate–adaptive interplay: NK and CD8 cells',
       },
     ],
@@ -270,6 +348,12 @@ export const FL3_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Estradiol reached its highest value (260 pg/mL) on day 12, and LH rose to its peak (55 IU/L) two days later, the temporal sequence expected if sustained high estradiol triggers the surge. Low LH with moderate estradiol on day 3 is consistent with negative, not positive, feedback. Low LH with low endogenous estradiol during pill use reflects suppression by the synthetic hormones and does not show estradiol stimulating LH. A fall in LH while estradiol remains elevated points toward inhibition rather than stimulation.',
+        optionExplanations: [
+          'Low LH with moderate estradiol on day 3 is consistent with negative feedback, the usual relationship. It does not show estradiol stimulating LH.',
+          'Low LH with low endogenous estradiol during pill use reflects suppression by the synthetic hormones. It shows nothing about estradiol stimulating LH release.',
+          'Estradiol reached its highest value (260 pg/mL) on day 12, and LH rose to its peak (55 IU/L) two days later. This temporal sequence is what is expected if sustained high estradiol triggers the surge.',
+          'A fall in LH while estradiol remains elevated points toward inhibition rather than stimulation. It is evidence for negative feedback, not positive.',
+        ],
         skill: '3B data interpretation: positive feedback',
       },
       {
@@ -283,6 +367,12 @@ export const FL3_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Between days 21 and 27, progesterone fell from 13.0 to 1.5 ng/mL and estradiol from 140 to 60 pg/mL as the corpus luteum regressed; with less steroid (and inhibin) negative feedback, FSH rose from 3 to 6 IU/L, beginning recruitment of follicles for the next cycle. Positive feedback requires sustained high estradiol, not falling estradiol. Implantation would maintain the corpus luteum and keep progesterone high, the opposite of what the table shows. High progesterone suppresses GnRH secretion rather than triggering a surge.',
+        optionExplanations: [
+          'Positive feedback requires sustained high estradiol, not falling estradiol. Between days 21 and 27 estradiol fell from 140 to 60 pg/mL, which would not trigger positive feedback.',
+          'Between days 21 and 27, progesterone fell from 13.0 to 1.5 ng/mL and estradiol from 140 to 60 pg/mL as the corpus luteum regressed. With less steroid and inhibin negative feedback, FSH rose from 3 to 6 IU/L, beginning recruitment for the next cycle.',
+          'Implantation would maintain the corpus luteum and keep progesterone high. The table shows progesterone falling sharply, the opposite of what an embryo signal would produce.',
+          'High progesterone suppresses GnRH secretion rather than triggering a surge. The day 21 progesterone peak coincides with the lowest FSH of the cycle, not a surge.',
+        ],
         skill: '3B luteal–follicular transition',
       },
       {
@@ -296,6 +386,12 @@ export const FL3_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'During pill use FSH and LH stayed at 2–3 IU/L, endogenous estradiol stayed near 25–30 pg/mL, no follicle exceeded 10 mm, and no LH peak or follicle collapse occurred: the exogenous estrogen and progestin exert continuous negative feedback, so follicles never mature and ovulation does not occur. The pill contains a progestin, an agonist rather than a blocker of progesterone receptors. Luteinization would raise endogenous progesterone, but it stayed at 0.3 ng/mL. LH was flat at 3 IU/L, showing no repeated surges.',
+        optionExplanations: [
+          'During pill use FSH and LH stayed at 2–3 IU/L, endogenous estradiol near 25–30 pg/mL, no follicle exceeded 10 mm, and no LH peak or follicle collapse occurred. The exogenous steroids exert continuous negative feedback, so follicles never mature and ovulation does not occur.',
+          'The pill contains a progestin, an agonist rather than a blocker of progesterone receptors. Nothing in the data addresses endometrial receptivity; the data show suppressed gonadotropins.',
+          'Luteinization would raise endogenous progesterone, but it stayed at 0.3 ng/mL throughout the pill cycle. No dominant follicle even formed, so none could luteinize.',
+          'LH was flat at 3 IU/L on every pill-cycle day, showing no surges at all. Follicles were not depleted; they simply failed to grow beyond 10 mm.',
+        ],
         skill: '3B hormonal contraception',
       },
       {
@@ -310,6 +406,12 @@ export const FL3_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Only pill-cycle samples contain ethinyl estradiol, so a cross-reacting estradiol assay would add the synthetic hormone to the measured value and hide the suppression of the ovaries’ own estradiol production. An estradiol assay does not measure LH or progesterone, so cross-reactivity in it cannot change those values. Natural-cycle samples contain no ethinyl estradiol, so their estradiol values would be unaffected.',
+        optionExplanations: [
+          'An estradiol immunoassay does not measure LH, so cross-reactivity with ethinyl estradiol cannot change LH values. The pituitary suppression would appear unchanged.',
+          'An estradiol assay does not measure progesterone. The progesterone assay is a separate test, and the passage states it does not detect the synthetic progestin.',
+          'Natural-cycle samples contain no ethinyl estradiol, since the women were using no hormonal medication during that cycle. Their estradiol values would be unaffected.',
+          'Only pill-cycle samples contain ethinyl estradiol. A cross-reacting assay would add the synthetic hormone to the measured value, hiding the suppression of the ovaries’ own estradiol output that the specific assay revealed.',
+        ],
         skill: '3B research design: assay specificity',
       },
       {
@@ -324,6 +426,12 @@ export const FL3_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The implanting embryo’s trophoblast secretes human chorionic gonadotropin (hCG), which acts on LH receptors of the corpus luteum and keeps it secreting progesterone until the placenta takes over later in pregnancy; progesterone therefore stays near or above the day 21 level of 13 ng/mL. The passage states that regression happens only when no embryo implants. Implantation depends on continued progesterone, so it does not suppress ovarian steroids. The early embryo does not secrete estradiol that suppresses the corpus luteum.',
+        optionExplanations: [
+          'The implanting embryo’s trophoblast secretes hCG, which acts on LH receptors of the corpus luteum and keeps it secreting progesterone. Progesterone therefore stays near or above the day 21 level of 13 ng/mL.',
+          'The passage states that the corpus luteum regresses only if no embryo implants and supplies a maintaining signal. With implantation, regression does not occur on schedule.',
+          'Implantation depends on continued progesterone, so it does not suppress ovarian steroid production. Progesterone would be maintained, not driven below baseline.',
+          'The early embryo does not secrete estradiol that suppresses the corpus luteum. Its signal (hCG) sustains luteal secretion rather than suppressing it.',
+        ],
         skill: '3B pregnancy and the corpus luteum',
       },
     ],
@@ -347,6 +455,12 @@ export const FL3_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Differences accumulate along both lineages, so the fraction of differing sites grows at $2 \\times 10^{-9}$ per year. Time = 0.06 / ($2 \\times 10^{-9}$ per year) = $3 \\times 10^{7}$ years, or 30 million years. The 60-million-year value ignores the fact that both lineages contribute substitutions. The 15-million-year value applies the factor of 2 twice, and the 7.5-million-year value divides by a rate four times too high.',
+        optionExplanations: [
+          'The 7.5-million-year value divides by a rate four times too high ($8 \\times 10^{-9}$). Only a factor of 2 applies, for the two lineages.',
+          'The 15-million-year value applies the factor of 2 twice (dividing by $4 \\times 10^{-9}$). Both lineages contribute, so the combined rate is exactly twice the per-lineage rate.',
+          'Differences accumulate along both lineages, so the fraction of differing sites grows at $2 \\times 10^{-9}$ per year. Time = 0.06 / ($2 \\times 10^{-9}$ per year) = $3 \\times 10^{7}$ years, or 30 million years.',
+          'The 60-million-year value divides by the per-lineage rate alone, ignoring that both lineages contribute substitutions. The passage states differences grow at twice the per-lineage rate.',
+        ],
         skill: '1C molecular clock calculation',
       },
       {
@@ -361,6 +475,12 @@ export const FL3_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'A pseudogene no longer encodes a functional protein, so selection no longer distinguishes changes that would alter an amino acid from those that would not; both classes of substitution accumulate at the neutral rate and dN/dS approaches 1. A very low ratio (gene W) indicates strong purifying selection, like that on histones, not rapid change. Gene X is also under purifying selection, which implies a functional product. A ratio well above 1 (gene Y) indicates positive selection on amino acid changes, which requires a functional protein.',
+        optionExplanations: [
+          'A very low dN/dS indicates strong purifying selection, as on histones, meaning the protein is highly constrained and functional. It does not mean the gene is changing fast; it is changing slowly at amino acid sites.',
+          'A ratio of 0.15 indicates purifying selection that removes most amino acid changes, which implies a functional product under constraint. Pseudogenes are not under such selection.',
+          'A ratio well above 1 indicates positive selection favoring amino acid changes, which requires a functional protein whose changes matter. Pseudogenes have no selected function.',
+          'A pseudogene encodes no functional protein, so selection no longer distinguishes amino-acid-changing substitutions from silent ones. Both accumulate at the neutral rate, and dN/dS approaches 1.',
+        ],
         skill: '1C neutral theory and selection',
       },
       {
@@ -375,6 +495,12 @@ export const FL3_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Convergence produces resemblance in features that serve the shared function, so similarity in functionally arbitrary features is the best evidence of common ancestry; intron positions, especially within regions encoding surface loops, are not dictated by catalysis and are unlikely to match by chance. An identical catalytic arrangement, similar substrate affinity and drug sensitivity, and a shared site of production and secretion all relate to the common function and could arise through convergent selection.',
+        optionExplanations: [
+          'An identical catalytic arrangement relates directly to the shared function. The passage says convergence produces resemblance in features that serve the shared function, so this could arise independently.',
+          'Convergence produces resemblance in functionally important features. Intron positions, especially within regions encoding surface loops, are not dictated by catalysis and are unlikely to match by chance, so shared positions indicate common ancestry.',
+          'Similar substrate affinity and sensitivity to the same drug both relate to the shared catalytic function and could arise through convergent selection.',
+          'Being made in the same tissue and secreted into the same fluid relates to the shared physiological role. Selection for the same function could drive this independently.',
+        ],
         skill: '1C homology vs analogy',
       },
       {
@@ -389,6 +515,12 @@ export const FL3_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Counting differing sites misses multiple substitutions at the same site: a second change at a site that already differs, or a reversal to the original base, adds no new difference, so the count saturates for ancient splits. Selection on a site does not change according to how long ago the lineages split. The passage explains that the neutral substitution rate does not depend on population size. Separate species do not exchange DNA by recombination, so it cannot erase differences between them.',
+        optionExplanations: [
+          'Counting differing sites misses multiple substitutions at the same site. A second change at an already-different site, or a reversal to the original base, adds no new difference, so the count saturates for ancient splits.',
+          'Selection on a site does not change according to how long ago the lineages split. Synonymous sites remain largely neutral regardless of divergence time.',
+          'The passage explains that the neutral substitution rate does not depend on population size: more mutations in a large population are offset by each having a smaller chance of fixing.',
+          'Separate species do not exchange DNA by recombination, so it cannot erase differences between them. Reproductive isolation is what defines them as species.',
+        ],
         skill: '1C molecular clock limitations',
       },
     ],
@@ -411,6 +543,12 @@ export const FL3_BIO_BIOCHEM_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'The liver conjugates bilirubin with glucuronic acid and secretes it in bile. When the bile duct is blocked, conjugated bilirubin backs up into the blood; because it is water-soluble, it is filtered into the urine and darkens it, while the absence of bile pigment in the intestine leaves the stools pale. Hemolysis and reduced conjugating activity both raise unconjugated bilirubin, which is albumin-bound and does not enter urine. Reduced glomerular filtration would not keep bile pigments out of the stool.',
+    optionExplanations: [
+      'Hemolysis raises unconjugated bilirubin, which is albumin-bound and cannot enter urine. Stools would be normal or dark, not pale, because bile still reaches the intestine.',
+      'Reduced conjugating activity raises unconjugated bilirubin, not conjugated. Unconjugated bilirubin does not enter urine, so the urine would not be dark.',
+      'Reduced glomerular filtration would not keep bile pigments out of the stool. The pale stools indicate bile is not reaching the intestine, a biliary problem, not a renal one.',
+      'When the bile duct is blocked, conjugated bilirubin backs up into blood. Being water-soluble, it is filtered into urine and darkens it, while the absence of bile pigment in the intestine leaves stools pale. All three findings fit obstruction.',
+    ],
     skill: '3B liver function and bilirubin',
   },
   {
@@ -428,6 +566,12 @@ export const FL3_BIO_BIOCHEM_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'Radiation, conduction, and convection all move heat down a temperature gradient; when the surroundings are warmer than the skin, they transfer heat into the body. Evaporation of sweat removes heat as the latent heat of vaporization regardless of air temperature, and cutaneous vasodilation delivers core heat to the skin for this purpose, so it is the only route of net heat loss here.',
+    optionExplanations: [
+      'Radiation moves heat down a temperature gradient. With walls and furnishings warmer than the skin, radiation transfers heat into the body, not out of it.',
+      'Conduction moves heat from warmer to cooler. Air at 40 °C is warmer than skin, so conduction adds heat to the body.',
+      'Evaporation of sweat removes heat as the latent heat of vaporization regardless of air temperature. Cutaneous vasodilation delivers core heat to the skin for this purpose, so it is the only route of net heat loss here.',
+      'Convection carries heat down a temperature gradient. Warmer surrounding air would deliver heat to the body surface, not remove it.',
+    ],
     skill: '3B thermoregulation by the skin',
   },
   {
@@ -445,6 +589,12 @@ export const FL3_BIO_BIOCHEM_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'The stereocilia project into endolymph, which has an unusually high $\\text{K}^+$ concentration and a positive potential, so opening the mechanotransduction channels lets $\\text{K}^+$ flow in and depolarize the cell. Endolymph is low in $\\text{Na}^+$, unlike perilymph and other extracellular fluids. $\\text{Ca}^{2+}$ entry through voltage-gated channels at the base of the cell follows depolarization and triggers transmitter release; it does not generate the receptor current. $\\text{Cl}^-$ entry would hyperpolarize, not depolarize, the cell.',
+    optionExplanations: [
+      'Endolymph is low in $\\text{Na}^+$, unlike perilymph and other extracellular fluids. Sodium is not the dominant cation in the fluid bathing the stereocilia.',
+      'The stereocilia project into endolymph, which has an unusually high $\\text{K}^+$ concentration and a positive potential. Opening the mechanotransduction channels lets $\\text{K}^+$ flow in and depolarize the cell.',
+      '$\\text{Ca}^{2+}$ entry through voltage-gated channels at the base of the cell follows depolarization and triggers transmitter release. It does not generate the receptor current.',
+      '$\\text{Cl}^-$ entry would hyperpolarize, not depolarize, the cell. The mechanically gated channels opened by tip links are cation channels, so chloride does not carry the receptor current.',
+    ],
     skill: '3A auditory transduction',
   },
   {
@@ -462,6 +612,12 @@ export const FL3_BIO_BIOCHEM_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'The brain detoxifies ammonia by adding it to α-ketoglutarate (forming glutamate) and to glutamate (forming glutamine, via glutamine synthetase in astrocytes). A large ammonia load pulls α-ketoglutarate out of the citric acid cycle, reducing ATP production, and glutamine accumulation swells astrocytes. The urea cycle operates in the liver, not in brain cells. Ammonia is a weak base, not an acid. Ammonia is a substrate of glutamine synthetase, so it drives rather than inhibits that enzyme.',
+    optionExplanations: [
+      'The brain detoxifies ammonia by adding it to α-ketoglutarate (forming glutamate) and then to glutamate (forming glutamine). A large ammonia load pulls α-ketoglutarate out of the citric acid cycle, reducing ATP production, and glutamine accumulation swells astrocytes.',
+      'The urea cycle operates in the liver, not in brain cells. Astrocytes detoxify ammonia by forming glutamine, not urea.',
+      'Ammonia is a weak base, not an acid. At physiological pH it exists largely as ammonium ion and does not acidify the cytosol.',
+      'Ammonia is a substrate of glutamine synthetase, so it drives rather than inhibits that enzyme. Excess ammonia increases glutamine formation.',
+    ],
     skill: '1D urea cycle and ammonia toxicity',
   },
   {
@@ -479,6 +635,12 @@ export const FL3_BIO_BIOCHEM_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'Sigmoidal binding reflects cooperativity: binding of $\\text{O}_2$ to one subunit of the hemoglobin tetramer shifts the others toward the high-affinity state. Myoglobin has one chain and one heme, so there are no subunit interactions and its curve is hyperbolic. Functional myoglobin, like hemoglobin, binds $\\text{O}_2$ with iron in the ferrous ($\\text{Fe}^{2+}$) state. 2,3-BPG binds deoxyhemoglobin, not myoglobin. Both proteins use a proximal histidine to coordinate the heme iron.',
+    optionExplanations: [
+      'Functional myoglobin, like hemoglobin, binds $\\text{O}_2$ with iron in the ferrous ($\\text{Fe}^{2+}$) state. Ferric iron does not bind oxygen.',
+      '2,3-BPG binds deoxyhemoglobin in the central cavity between subunits. Myoglobin, a monomer, has no such site and does not bind 2,3-BPG.',
+      'Sigmoidal binding reflects cooperativity between subunits of the hemoglobin tetramer. Myoglobin has one chain and one heme, so there are no subunit interactions and its curve is hyperbolic.',
+      'Both myoglobin and hemoglobin use a proximal histidine to coordinate the heme iron. This feature is shared, not a point of difference.',
+    ],
     skill: '1A hemoglobin vs myoglobin structure–function',
   },
   {
@@ -491,6 +653,12 @@ export const FL3_BIO_BIOCHEM_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'The dihybrid’s parental chromosomes are AB and ab, so the Aabb and aaBb offspring are recombinants: (80 + 80)/1,000 = 0.16, or 16 map units (16 cM). The 8-unit value counts only one recombinant class. The 84-unit value is the frequency of parental offspring, and 42 counts only one parental class; no pair of genes can show more than 50% recombination.',
+    optionExplanations: [
+      'Eight map units counts only one recombinant class (80/1,000). Both Aabb and aaBb are recombinants and must be summed.',
+      'The dihybrid’s parental chromosomes are AB and ab, so Aabb and aaBb offspring are recombinants: (80 + 80)/1,000 = 0.16, or 16 map units.',
+      'Forty-two counts only one parental class (420/1,000) and treats it as recombinant. Parental classes are the majority, not the recombinants.',
+      'Eighty-four percent is the frequency of parental (non-recombinant) offspring. No pair of genes can show more than 50% recombination, so this cannot be a map distance.',
+    ],
     skill: '1C recombination frequency and map units',
   },
   {
@@ -508,6 +676,12 @@ export const FL3_BIO_BIOCHEM_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'Endospores are dormant, dehydrated structures that survive heat that kills vegetative cells; after heating, the spores germinated, and growth only in the absence of oxygen shows the organism is an obligate anaerobe. Spore formation is a developmental process triggered by nutrient limitation, not a response to brief heating, and growth required the absence rather than the presence of oxygen. A facultative anaerobe would grow in air as well. The chamber is oxygen-free, and nothing suggests contamination; growth in only one condition fits the organism’s own oxygen requirement.',
+    optionExplanations: [
+      'Spore formation is a developmental process triggered by nutrient limitation, not a response to 20 minutes of heat. Growth also required the absence of oxygen, not its presence.',
+      'A facultative anaerobe would grow in air as well as without it. Growth only in the oxygen-free chamber indicates an obligate anaerobe.',
+      'The chamber is oxygen-free and nothing suggests contamination. Growth in only one condition fits the organism’s own oxygen requirement, not a chance contaminant.',
+      'Endospores are dormant structures that survive heat that kills vegetative cells. After heating, spores germinated, and growth only in the absence of oxygen shows the organism is an obligate anaerobe.',
+    ],
     skill: '2B endospores and oxygen requirements',
   },
 ]

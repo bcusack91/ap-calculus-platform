@@ -5,6 +5,7 @@ import { prisma } from '@/lib/prisma'
 import { resolveItem } from '@/lib/question-resolver'
 import { recordQuestions } from '@/lib/study-tracking'
 import { isQuestionKey } from '@/lib/question-key'
+import { chosenOptionKey } from '@/lib/question-activity-rows'
 import { CORRECT_TO_RETIRE } from '@/lib/mistake-log'
 import { gradeGridIn } from '@/data/sat-grid-in'
 import { MISTAKE_COURSES, isMistakeCourse, mistakeStateFor } from '@/lib/mistakes-server'
@@ -70,6 +71,7 @@ export async function POST(req: NextRequest) {
       itemIndex: position,
       chosenIndex: item.gridIn ? null : chosenIndex,
       chosenText: item.gridIn ? chosenText || null : null,
+      chosenKey: item.gridIn ? null : chosenOptionKey(item.options, chosenIndex),
     }])
     const after = await mistakeStateFor(userId, course as 'mcat' | 'sat', questionKey)
     return NextResponse.json({

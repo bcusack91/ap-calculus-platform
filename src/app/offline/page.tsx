@@ -21,6 +21,15 @@ export default function OfflinePage() {
           >
             Try Again
           </button>
+          {/* A plain <a>: a full navigation lets the service worker serve the
+              cached review page (a client-side route change would need the network). */}
+          {/* eslint-disable-next-line @next/next/no-html-link-for-pages -- full navigation on purpose (see above) */}
+          <a
+            href="/flashcards/review/start"
+            className="block w-full px-6 py-3 bg-accent text-white rounded-lg hover:bg-accent-hover transition-colors font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring"
+          >
+            Review flashcards offline
+          </a>
           <Link
             href="/"
             className="block w-full px-6 py-3 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-medium"
@@ -29,7 +38,7 @@ export default function OfflinePage() {
           </Link>
         </div>
         <p className="text-sm text-gray-500 dark:text-gray-400 mt-8">
-          Previously visited pages may still be available from cache.
+          Flashcard review works offline once you&apos;ve opened it while connected — your ratings sync when you&apos;re back.
         </p>
       </div>
     </div>

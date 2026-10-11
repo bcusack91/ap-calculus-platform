@@ -45,6 +45,12 @@ export const FL3_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'An early filter blocks unattended input before its meaning is analyzed, so a word should never break through because of what it means; detection of one’s own name, which differs from the other words only in meaning, contradicts that. A change of voice is a physical feature that an early filter is supposed to pass, so noticing it fits the model. Failing to notice the language switch is predicted, because a change of language alters meaning rather than the voice. Chance-level recognition of the ignored nouns is exactly what blocking unattended meaning would produce.',
+        optionExplanations: [
+          'A change of voice is a physical feature (pitch), and early-selection models say unattended input is filtered on exactly such features. Most participants noticing the voice change fits the model rather than challenging it.',
+          'A switch to Dutch changes meaning but not the voice. An early filter that blocks unattended meaning predicts that few would notice, so this result is consistent with early selection.',
+          'An early filter blocks unattended input before its meaning is analyzed, so a word should never break through because of what it means. One’s own name differs from the other nouns only in meaning, so its detection by a third of participants contradicts the model.',
+          'Chance-level recognition of the ignored nouns is exactly what blocking unattended meaning would produce. This result supports early selection rather than challenging it.',
+        ],
         skill: '6B selective attention: dichotic listening',
       },
       {
@@ -58,6 +64,12 @@ export const FL3_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Detection fell from 97% to 70% for central changes and from 95% to 38% for marginal changes as soon as an 80 ms blank was added, a larger loss for marginal changes, with only small further declines afterward. The decline was not steady: almost all of it occurred between 0 and 80 ms. The central-interest advantage was smallest, only 2 points, with no blank, and grew to more than 30 points once a blank was present. Beyond 80 ms, central detection fell 6 points (70% to 64%) while marginal detection fell 8 points (38% to 30%), so marginal changes were not spared.',
+        optionExplanations: [
+          'Detection fell from 97% to 70% for central changes and from 95% to 38% for marginal changes as soon as an 80 ms blank was added, a larger loss for marginal changes. Further declines were small.',
+          'The decline was not steady. Almost all of the loss occurred between 0 and 80 ms (27 and 57 points), with only 2–3 point drops at each later step.',
+          'The central-interest advantage was smallest with no blank (97 vs 95, only 2 points) and grew to more than 30 points once any blank was present. It was not greatest at 0 ms.',
+          'Beyond 80 ms, central detection fell 6 points (70% to 64%) while marginal detection fell 8 points (38% to 30%). Marginal changes were impaired at least as much, not spared.',
+        ],
         skill: '6B data interpretation: change blindness',
       },
       {
@@ -71,6 +83,12 @@ export const FL3_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'When one image replaces the other directly, the altered region produces a localized visual transient that captures attention, so the change is found at once; a blank masks that transient, and the viewer must then search the scene object by object, which is why detection collapses once any blank is added. Image duration was fixed at 240 ms in every condition, so viewing time did not differ. The interest classification was a property of each object, fixed across blank conditions. Depth of encoding concerns how meaningfully information is processed for later memory, not whether a transient signal is available during viewing.',
+        optionExplanations: [
+          'Image duration was fixed at 240 ms in every condition, so viewing time per image did not differ between the 0 ms blank and other conditions.',
+          'The interest classification was a property of each object, fixed across blank conditions. The same central and marginal objects changed in every condition.',
+          'Depth of encoding concerns how meaningfully information is processed for later memory. It does not explain why a transient visual signal is available during viewing without a blank.',
+          'When one image directly replaces the other, the altered region produces a localized visual transient that captures attention automatically. A blank masks that transient, forcing an object-by-object search, which is why detection collapses once any blank is added.',
+        ],
         skill: '6B attention and change blindness',
       },
       {
@@ -84,6 +102,12 @@ export const FL3_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Larger or more centrally placed objects are easier to see, so without matching, better detection of central-interest changes could reflect low-level visibility rather than the meaning of the object; matching removes that confound. Matching size and position does nothing to hide which object will change. Cycle length depends on image and blank durations, not on object properties. Matching physical features cannot guarantee that participants would judge interest the same way the raters did.',
+        optionExplanations: [
+          'Matching size and position does nothing to hide which object will change. Participants did not know in advance which object would change in either case.',
+          'Larger or more centrally placed objects are easier to see, so without matching, better detection of central-interest changes could reflect low-level visibility rather than the object’s meaning. Matching removes that confound.',
+          'Cycle length depends on image and blank durations, not on object properties. Matching objects has no bearing on timing.',
+          'Matching physical features cannot guarantee that participants would judge interest the same way the raters did. Agreement on interest is a separate issue from physical salience.',
+        ],
         skill: '6B research design: controlling confounds',
       },
       {
@@ -97,6 +121,12 @@ export const FL3_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Well-practiced activities demand less of the limited capacity that controlled processing requires, so experienced participants could search a hospital scene while monitoring digits with less mutual interference. Pedal accuracy did not differ between the groups, so experienced participants did not buy their detection advantage by neglecting the digits. Keener acuity and a more lenient response criterion would both have produced a group difference in the listen-only block as well, but none was found; the difference appeared only when attention had to be divided.',
+        optionExplanations: [
+          'Well-practiced activities demand less of the limited capacity that controlled processing requires. Experienced participants could search a hospital scene more automatically while monitoring digits, with less mutual interference.',
+          'Pedal accuracy did not differ between the groups, so experienced participants did not buy their detection advantage by neglecting the digit task.',
+          'Keener acuity would have produced a group difference in the listen-only block as well, but none was found. The advantage appeared only when attention had to be divided.',
+          'A stricter criterion among inexperienced participants would have lowered their detection in the listen-only block too. The groups did not differ there, so criterion differences cannot explain the pedal-block gap.',
+        ],
         skill: '6B divided attention and automaticity',
       },
     ],
@@ -123,6 +153,12 @@ export const FL3_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The movement’s authority originally rested on devotion to its founder’s personal qualities; the constitution vests it in an elected council and a term-limited office, which is the routinization of charisma into rational-legal authority. Nothing in the scenario involves inherited custom, and the movement moved toward written rules, not away from them. The founder’s authority was charismatic from the start and did not arise from tradition. Solidarity types describe the basis of cohesion in a whole society’s division of labor, not a change in how leaders are chosen.',
+        optionExplanations: [
+          'Nothing in the scenario involves inherited custom, and the movement moved toward written rules, not away from them. This reverses the direction of the change.',
+          'The movement’s authority originally rested on devotion to the founder’s personal qualities (charismatic). The constitution vests it in an elected council and a term-limited office, which is routinization of charisma into rational-legal authority.',
+          'The founder’s authority was charismatic from the start and did not arise from tradition. The change moves away from charisma, not toward it.',
+          'Solidarity types describe the basis of cohesion in a whole society’s division of labor, not how a movement selects leaders. This applies the wrong concept.',
+        ],
         skill: '9B authority: routinization of charisma',
       },
       {
@@ -136,6 +172,12 @@ export const FL3_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Decommodification is the degree to which people can maintain a decent standard of living without selling their labor; universal, wage-related, long-lasting benefits let more people do so for longer than narrow, means-tested, short benefits. Neither country is described as owning the means of production or replacing markets with planning, so neither comparison with socialism follows; both are welfare states. Targeting benefits at the poorest leaves most people dependent on wages, so it decommodifies less, not more.',
+        optionExplanations: [
+          'Neither country is described as owning the means of production or replacing markets with planning. Means-tested benefits do not make a country closer to socialism; both are welfare states.',
+          'Taxes and transfers finance every welfare state, which the passage defines as a largely capitalist economy. Financing by taxes does not make Country Y closer to socialism.',
+          'Targeting benefits at the poorest leaves most people dependent on wages, so it decommodifies labor less, not more. Concentration on the poor is the opposite of broad decommodification.',
+          'Decommodification is the degree to which people can maintain a decent standard of living without selling their labor. Universal, wage-related, two-year benefits let more people do so for longer than narrow, means-tested, six-month benefits.',
+        ],
         skill: '9B economy: the welfare state',
       },
       {
@@ -149,6 +191,12 @@ export const FL3_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Durkheim held that a specialized division of labor produces organic solidarity, cohesion grounded in mutual dependence among people who do different things. Growing conflict between owners and workers, and workers organizing to seize the means of production, are Marx’s predictions. The claim that cohesion will be lost for good mistakes the decline of mechanical solidarity for the end of solidarity; Durkheim argued that a new basis of cohesion replaces the old one, although rapid change can bring temporary anomie.',
+        optionExplanations: [
+          'Intensifying conflict between owners and workers is Marx’s prediction, not Durkheim’s. The question asks what Durkheim alone would predict.',
+          'This mistakes the decline of mechanical solidarity for the end of solidarity. Durkheim argued that organic solidarity replaces it, so cohesion is not lost for good, though rapid change can bring temporary anomie.',
+          'Durkheim held that a specialized division of labor produces organic solidarity: cohesion grounded in mutual dependence among people who do different things. Marx did not see specialization as a source of cohesion.',
+          'Workers recognizing a shared interest and seizing the means of production is Marx’s prediction. Durkheim did not predict class revolution.',
+        ],
         skill: '9B division of labor: Durkheim vs Marx',
       },
       {
@@ -162,6 +210,12 @@ export const FL3_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The council realizes its will against resistance, which is power, but because the governed do not regard it as legitimate, that power is not authority. Occupying defined positions does not create rational-legal authority unless the rules establishing those offices are accepted as legitimate. Charismatic authority rests on followers’ devotion to a leader’s personal qualities, not on a dramatic seizure backed by fear. Power by definition can operate against resistance, so private opposition does not mean the council lacks power.',
+        optionExplanations: [
+          'The council realizes its will against resistance, which is power by Weber’s definition. Because the governed do not regard it as legitimate, that power is not authority.',
+          'Occupying defined positions does not create rational-legal authority unless the rules establishing those offices are accepted as legitimate. Citizens regard the officers as usurpers, so no such acceptance exists.',
+          'Charismatic authority rests on followers’ devotion to a leader’s extraordinary qualities. A seizure backed by fear, with citizens regarding the officers as usurpers, involves no such devotion.',
+          'Power by definition can operate against resistance, so private opposition does not mean the council lacks power. It lacks authority, but it clearly has power.',
+        ],
         skill: '9B government: power and authority',
       },
     ],
@@ -189,6 +243,12 @@ export const FL3_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Distinguishing 170 ms from 400 ms requires millisecond temporal resolution, which EEG provides. The BOLD signal used by fMRI lags neural activity by seconds and blurs events that close together, however precisely it localizes them. A lesion study could show that a region is needed for recognizing faces but says nothing about when a response begins. Structural MRI measures anatomy, not activity, so it cannot time a response at all.',
+        optionExplanations: [
+          'The BOLD signal used by fMRI lags neural activity by seconds and blurs events that close together. It cannot distinguish 170 ms from 400 ms, however precisely it localizes activity.',
+          'A lesion study could show that a region is needed for recognizing faces but says nothing about when a response begins. It lacks any temporal measure.',
+          'Structural MRI measures anatomy, such as the size of a region, not ongoing activity. It cannot time a neural response at all, let alone separate 170 ms from 400 ms.',
+          'Distinguishing 170 ms from 400 ms requires millisecond temporal resolution, which EEG provides because it records neural electrical activity directly. Its coarse spatial resolution does not matter for a timing question.',
+        ],
         skill: '6A methods: temporal resolution of EEG vs fMRI',
       },
       {
@@ -202,6 +262,12 @@ export const FL3_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Necessity is shown by disrupting a region and observing a selective loss; TMS produces a temporary disruption, and sparing color judgments shows that the impairment is specific rather than a general effect of stimulation. Greater activation for harder judgments, an EEG response at a particular latency, and activation during a related task are all additional correlations between activity and performance, and none shows that performance depends on the region.',
+        optionExplanations: [
+          'Greater activation for harder judgments is still a correlation between activity and task demands. It does not show that performance depends on the region.',
+          'Necessity is shown by disrupting a region and observing a selective loss. TMS produces a temporary, reversible disruption, and sparing color judgments shows the impairment is specific rather than a general effect of stimulation.',
+          'An EEG response at a particular latency is another correlational finding. It shows when parietal activity occurs but not whether the judgment depends on it.',
+          'Activation during a related task is yet another correlation. Showing that a region participates in multiple tasks does not establish necessity for any of them.',
+        ],
         skill: '6A research design: correlational vs disruption methods',
       },
       {
@@ -215,6 +281,12 @@ export const FL3_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Input from the left visual field reaches only the right hemisphere, which cannot produce speech, so the patient reports seeing nothing; the right hemisphere controls the left hand, which can still identify a spoon by touch. Naming the word would require the information to reach the language-dominant left hemisphere, which the cut callosum prevents. The right hand is controlled by the left hemisphere, which never received the word, so it cannot select the spoon, but the left hand can.',
+        optionExplanations: [
+          'Input from the left visual field reaches only the right hemisphere, which cannot produce speech, so she reports seeing nothing. The right hemisphere controls the left hand, which can still identify a spoon by touch.',
+          'Naming the word would require the information to reach the language-dominant left hemisphere, which the cut callosum prevents. The left-hand part is also backward: the right hemisphere saw the word and controls the left hand.',
+          'She cannot name the word because the left hemisphere never received it. The right hand, controlled by the left hemisphere, also cannot select the spoon, so “either hand” is wrong.',
+          'She does say she saw nothing, but her left hand, controlled by the right hemisphere that received the word, can pick out the spoon. Not both hands fail.',
+        ],
         skill: '6A lateralization: split-brain',
       },
       {
@@ -228,6 +300,12 @@ export const FL3_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Early extensive damage allows undamaged tissue, here the right hemisphere, to take over functions it would not normally serve, so the patient injured at age 3 most likely relies on the right hemisphere for speech. Speech is left-dominant in most adults, not right-dominant. The child’s recovery is attributed to undamaged tissue rather than to the damaged hemisphere. The adult’s limited recovery indicates that the right hemisphere did not take over, so silencing it should disturb what speech remains the least.',
+        optionExplanations: [
+          'Speech is left-dominant in most adults, not right-dominant. Anesthetizing the right hemisphere would not disrupt speech in a typical adult, so “both” is wrong.',
+          'The child’s recovery is attributed by the passage to undamaged tissue taking on new functions, not to the damaged left hemisphere. The right hemisphere likely took over speech in the early-injured patient.',
+          'Early extensive damage allows undamaged tissue, here the right hemisphere, to take over functions it would not normally serve. The patient injured at age 3 most likely relies on the right hemisphere for speech, so silencing it disrupts speech.',
+          'The adult’s limited recovery indicates that the right hemisphere did not take over speech. Silencing it should disturb what speech remains the least, not the most.',
+        ],
         skill: '6A neuroplasticity and age at injury',
       },
     ],
@@ -256,6 +334,12 @@ export const FL3_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The audience group copied more strings than the alone group (61 vs 52) but solved fewer anagrams (10 vs 14), so performance rose on the practiced task and fell on the unpracticed one. Anagram performance fell rather than rose, which rules out gains on both tasks. Worse copying with better anagram solving is the exact reverse of the observed pattern. Performance changed on both tasks, and self-awareness was higher (5.6 vs 4.1), not lower.',
+        optionExplanations: [
+          'The audience group copied more strings (61 vs 52) but solved fewer anagrams (10 vs 14), so performance rose on the practiced task and fell on the unpracticed one.',
+          'Anagram performance fell (10 vs 14) rather than rose. There was no gain on the unpracticed task, let alone a larger one.',
+          'This is the exact reverse of the observed pattern. Copying improved and anagram solving worsened with an audience.',
+          'Performance changed on both tasks, and self-awareness was higher with an audience (5.6 vs 4.1), not lower.',
+        ],
         skill: '7C data interpretation: social facilitation',
       },
       {
@@ -269,6 +353,12 @@ export const FL3_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Zajonc proposed that the presence of others increases arousal, which makes dominant (well-learned) responses more likely; on a practiced task the dominant response is correct, and on an unfamiliar task it is often wrong, producing the observed crossover. Diffused responsibility and lowered effort describe social loafing, which occurs when individual output cannot be identified, not when observers are watching. Lowered self-awareness describes deindividuation, and self-awareness actually rose with an audience. Equal distraction on both tasks would impair both, not improve copying.',
+        optionExplanations: [
+          'Diffused responsibility and lowered effort describe social loafing, which occurs when individual output cannot be identified. With observers watching and output recorded, responsibility was heightened, and copying actually improved.',
+          'Lowered self-awareness describes deindividuation. Self-awareness actually rose with an audience (5.6 vs 4.1), so this is the opposite of what happened.',
+          'Zajonc proposed that the presence of others increases arousal, which strengthens dominant (well-learned) responses. On a practiced task the dominant response is correct; on an unfamiliar task it is often wrong, producing the observed crossover.',
+          'Equal distraction on both tasks would impair both. It cannot explain why copying improved while anagram solving declined.',
+        ],
         skill: '7C social facilitation: drive theory',
       },
       {
@@ -282,6 +372,12 @@ export const FL3_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Output fell in both pooled conditions, where individual contributions were said to be unidentifiable, which is the signature of social loafing; making each person’s contribution identifiable and evaluable removes the conditions that produce it. Larger groups make any one contribution less identifiable and typically increase loafing. Hoods and coats added anonymity without changing output (43 vs 44), so they would not restore effort. A fixed fee severs the link between effort and outcome and would, if anything, reduce effort further.',
+        optionExplanations: [
+          'Larger groups make any one contribution less identifiable and typically increase social loafing. Output would fall further, not rise.',
+          'Output fell in both pooled conditions, where individual contributions were said to be unidentifiable, the signature of social loafing. Making each person’s contribution identifiable and evaluable removes the conditions that produce it.',
+          'Hoods and coats added anonymity without changing output (43 vs 44). They would not restore effort; if anything, more anonymity deepens loafing.',
+          'A fixed fee severs the link between effort and outcome and would, if anything, reduce effort further. It does nothing to make individual contributions identifiable.',
+        ],
         skill: '7C social loafing',
       },
       {
@@ -295,6 +391,12 @@ export const FL3_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The anonymous pooled condition combined anonymity with group membership, so the question is whether anonymity alone produces the effect; an otherwise identical condition with anonymity but no group isolates that factor. Displaying names in a pooled group essentially reproduces the existing pooled condition. Hooding one member changes the anonymity of only that person while still keeping everyone in a group. Hooding the observers changes the anonymity of other people, not of the participant whose behavior is being measured.',
+        optionExplanations: [
+          'Displaying names in a pooled group essentially reproduces the existing pooled condition, which already had name tags and introductions. It adds no new information about anonymity without a group.',
+          'Hooding one member changes the anonymity of only that person while still keeping everyone in a group. It cannot separate the effect of anonymity from group membership.',
+          'Hooding the observers changes the anonymity of other people, not of the participant whose behavior is measured. The participant remains identifiable.',
+          'The anonymous pooled condition combined anonymity with group membership. An otherwise identical condition with anonymity but no group isolates whether anonymity alone produces the effect.',
+        ],
         skill: '7C research design: isolating a variable',
       },
       {
@@ -308,6 +410,12 @@ export const FL3_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Token-keeping was similar in the alone (10%) and named pooled (13%) conditions but rose to 35% when group membership was combined with anonymity, alongside the lowest self-awareness rating, which is the pattern deindividuation predicts. Effort was about equally low in the two pooled conditions, yet dishonesty differed nearly threefold, so dishonesty did not track effort. The audience group, the most self-aware, was the least dishonest (5%). Output in the two pooled conditions was essentially identical, so anonymity did not reduce effort further.',
+        optionExplanations: [
+          'Effort was about equally low in the two pooled conditions (44 and 43 strings), yet dishonesty differed nearly threefold (13% vs 35%). Dishonesty did not track effort.',
+          'The audience group, the most self-aware (5.6), was the least dishonest (5%). Being observed reduced dishonesty rather than increasing it.',
+          'Token-keeping was similar in the alone (10%) and named pooled (13%) conditions but rose to 35% when group membership was combined with anonymity, alongside the lowest self-awareness rating. That is the pattern deindividuation predicts.',
+          'Output in the two pooled conditions was essentially identical (44 vs 43 strings, 12 vs 12 anagrams). Anonymity did not reduce effort further; it affected dishonesty.',
+        ],
         skill: '7C deindividuation',
       },
     ],
@@ -349,6 +457,12 @@ export const FL3_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The two inhibited groups began nearly equal (6.8 vs 7.0 at age 4) and diverged to 3.9 vs 7.5 at age 12, with the authoritative group declining toward the uninhibited group’s level. The groups were not far apart at age 4. Uninhibited children’s scores stayed flat near 2.2 to 2.4. At age 12 the authoritative inhibited group (3.9) remained more withdrawn than the uninhibited group (2.2).',
+        optionExplanations: [
+          'The two inhibited groups were not far apart at age 4: 6.8 for authoritative and 7.0 for authoritarian, a difference of only 0.2 points.',
+          'The two inhibited groups began nearly equal (6.8 vs 7.0 at age 4) and diverged to 3.9 vs 7.5 at age 12, with the authoritative group declining toward the uninhibited group’s level around 2.2.',
+          'Uninhibited children’s scores stayed flat near 2.2 to 2.4 across all ages. They did not become more withdrawn.',
+          'At age 12 the authoritative inhibited group (3.9) remained more withdrawn than the uninhibited group (2.2). The gap narrowed but did not close.',
+        ],
         skill: '7A data interpretation: longitudinal trends',
       },
       {
@@ -362,6 +476,12 @@ export const FL3_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Authoritative parenting combines high responsiveness with high demandingness: parents are warm, set and enforce clear expectations, and explain their reasons. Warmth with few rules is permissive parenting. Control and demands for unexplained obedience, with little warmth, describe authoritarian parenting. Low warmth and low demands describe the uninvolved style.',
+        optionExplanations: [
+          'Warmth and acceptance combined with few rules and little enforcement describe permissive parenting: high responsiveness but low demandingness, the opposite of authoritative on the control dimension.',
+          'Control and demands for unexplained obedience, with little warmth, describe authoritarian parenting: high demandingness, low responsiveness.',
+          'Low warmth and low demands describe the uninvolved style, added by later researchers to Baumrind’s typology.',
+          'Authoritative parenting combines high responsiveness with high demandingness: parents are warm, set and enforce clear expectations, and explain their reasons.',
+        ],
         skill: '7A parenting styles (Baumrind)',
       },
       {
@@ -375,6 +495,12 @@ export const FL3_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Toddler distress at 24 months predicted how controlling parents were a year later, so a child’s intense inhibition may elicit controlling parenting, and the same intensity could independently predict persistent withdrawal; the association would then reflect a child effect rather than a parenting effect. Teachers were unaware of the parenting ratings, so rater bias is ruled out. An effect of parenting on inhibition is not an alternative to parenting causing withdrawal; it is another parenting effect. Parenting style was unrelated to withdrawal among uninhibited children, so their parenting cannot explain the inhibited children’s outcomes.',
+        optionExplanations: [
+          'Toddler distress at 24 months predicted how controlling parents were a year later ($r = 0.38$). Intense inhibition may elicit controlling parenting and independently predict persistent withdrawal, so the association could reflect a child effect rather than a parenting effect.',
+          'Teachers were unaware of the parenting ratings, so rater bias based on knowing parents were strict is ruled out by the design.',
+          'An effect of parenting on inhibition at 24 months is not an alternative to parenting causing withdrawal; it is another parenting effect, and parenting was assessed a year after inhibition.',
+          'Parenting style was unrelated to withdrawal among uninhibited children, so their parenting cannot explain the inhibited children’s outcomes. This option also invents a finding the passage does not report.',
+        ],
         skill: '7A research design: bidirectional effects',
       },
       {
@@ -388,6 +514,12 @@ export const FL3_PSYCH_SOC_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Goodness of fit is an interaction: the same environment matters differently depending on the child’s temperament, and parenting style mattered for inhibited children but made no difference for uninhibited ones. A difference between temperament groups at every age is a main effect of temperament alone. Continuity from infant reactivity to toddler inhibition concerns the stability of temperament, not its match with the environment. A slight rise in one group describes a single trajectory and involves no comparison of temperaments.',
+        optionExplanations: [
+          'A difference between temperament groups at every age is a main effect of temperament alone. It involves no match or mismatch with the environment.',
+          'Continuity from infant reactivity to toddler inhibition concerns the stability of temperament, not its fit with the environment.',
+          'Goodness of fit is an interaction: the same environment matters differently depending on the child’s temperament. Parenting style mattered for inhibited children but made no difference for uninhibited ones, which is exactly such an interaction.',
+          'A slight rise in one group describes a single trajectory and involves no comparison of temperaments or environments.',
+        ],
         skill: '7A temperament: goodness of fit',
       },
     ],
@@ -405,6 +537,12 @@ export const FL3_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'Retinal disparity, the slight difference between the images on the two retinas, requires input from both eyes, so it is lost with monocular vision. Relative size, linear perspective, and interposition (one object blocking another) are monocular cues that are present in the image of a single eye and remain available.',
+    optionExplanations: [
+      'Relative size is a monocular cue: a single eye can compare the retinal sizes of objects. It remains available.',
+      'Linear perspective is a monocular cue present in the image of a single eye. It remains available.',
+      'Retinal disparity, the slight difference between the images on the two retinas, requires input from both eyes. With monocular vision it is lost.',
+      'Interposition (one object blocking another) is a monocular cue. It remains available with one eye.',
+    ],
     skill: '6A depth perception: binocular vs monocular cues',
   },
   {
@@ -417,6 +555,12 @@ export const FL3_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'Repeating irrelevant speech occupies the articulatory rehearsal process of the phonological loop, which is also what recodes visually presented words into sound; the short-word advantage arises because short words can be rehearsed faster, so blocking rehearsal abolishes it. The visuospatial sketchpad holds images and spatial layouts and is not taxed by repeating a word. Saying one word over and over requires little executive control, and the central executive would not explain the specific loss of the word-length effect. The episodic buffer integrates information across systems and with long-term memory rather than supporting subvocal rehearsal.',
+    optionExplanations: [
+      'Repeating irrelevant speech occupies the articulatory rehearsal process of the phonological loop, which also recodes visually presented words into sound. The short-word advantage arises because short words rehearse faster, so blocking rehearsal abolishes it.',
+      'The visuospatial sketchpad holds images and spatial layouts. Repeating a word does not tax it, and it would not explain the loss of the word-length effect.',
+      'Saying one word over and over requires little executive control, and the central executive would not explain the specific loss of the word-length effect, which is tied to rehearsal.',
+      'The episodic buffer integrates information across systems and with long-term memory. It does not support subvocal rehearsal, so blocking speech would not target it.',
+    ],
     skill: '6B working memory (Baddeley)',
   },
   {
@@ -434,6 +578,12 @@ export const FL3_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'The route was learned without any reinforcement and remained unexpressed until an incentive made performing it worthwhile, which is latent learning. Insight involves suddenly restructuring an unsolved problem after an impasse, and the child had no problem or impasse. Shaping and operant conditioning both require reinforcement of the behavior or approximations of it, but the child had never been asked for or rewarded for giving directions.',
+    optionExplanations: [
+      'Insight involves suddenly restructuring an unsolved problem after an impasse. The child had no problem or impasse; she simply had unexpressed knowledge.',
+      'The route was learned without any reinforcement and remained unexpressed until an incentive made performing it worthwhile. That is latent learning.',
+      'Shaping requires reinforcing successive approximations of a behavior. The child was never rewarded for anything related to the route before the single test.',
+      'Operant conditioning requires reinforcement of the behavior. Giving directions had never been requested or rewarded on earlier trips.',
+    ],
     skill: '7A latent learning',
   },
   {
@@ -446,6 +596,12 @@ export const FL3_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'Reaction formation manages an unacceptable impulse by expressing its exaggerated opposite, here conspicuous praise in place of resentment. Projection would attribute her own resentment to her brother, for instance by believing he resents her. Displacement would redirect the hostility toward a safer target. Sublimation would channel the impulse into a socially valued activity, such as competitive work, rather than into its opposite.',
+    optionExplanations: [
+      'Projection would attribute her own resentment to her brother, for instance by believing he resents her. She instead expresses the opposite of her feeling.',
+      'Displacement would redirect the hostility toward a safer target, such as a coworker. She is not expressing hostility toward anyone.',
+      'Sublimation would channel the impulse into a socially valued activity, such as competitive work. Praising the object of her resentment is not a channeling but a reversal.',
+      'Reaction formation manages an unacceptable impulse by expressing its exaggerated opposite. Conspicuous praise in place of unacknowledged resentment fits this exactly.',
+    ],
     skill: '7A psychoanalytic defense mechanisms',
   },
   {
@@ -463,6 +619,12 @@ export const FL3_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'The pain was registered and could be reported by a “hidden” channel even though the hypnotized participant did not consciously experience it, which fits the dissociation account that hypnosis splits consciousness into separate streams. Hypnotized people show waking EEG patterns, and the pain clearly reached the processing needed to report it, so a sleep-like state blocking sensory input does not fit. Anesthetic-like loss of sensation would leave nothing for the hidden part to report. Heightened attention to the body would increase reported discomfort, not reduce it.',
+    optionExplanations: [
+      'Hypnotized people show waking EEG patterns, and the pain clearly reached the processing needed to report it via the hidden observer. A sleep-like state blocking sensory input does not fit.',
+      'The pain was registered and could be reported by a hidden channel even though the hypnotized participant did not consciously experience it. This fits the dissociation account that hypnosis splits consciousness into separate streams.',
+      'Anesthetic-like loss of sensation would leave nothing for the hidden part to report. The hidden observer’s report of intense pain shows sensation was intact.',
+      'Heightened attention to the body would increase reported discomfort, not reduce it. The participants reported little pain.',
+    ],
     skill: '6B altered states: hypnosis',
   },
   {
@@ -480,6 +642,12 @@ export const FL3_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'Familiarity with the tastes, manners, and conventions valued by elite institutions is cultural capital, and resources available through relationships with other people are social capital. Reversing the two labels mislabels both. Human capital refers to skills and knowledge that raise productivity, such as training or grades, and describes neither the applicant’s comfort with interview etiquette nor his mother’s connection.',
+    optionExplanations: [
+      'This reverses the labels. Ease with interview conventions is cultural capital, and a personal connection to the director is social capital.',
+      'Human capital refers to skills and knowledge that raise productivity, such as training or grades. Comfort with interview etiquette is cultural capital, not human capital.',
+      'Cultural capital is right for the interview ease, but the mother’s acquaintance with the director is a relationship-based resource, which is social capital, not human capital.',
+      'Familiarity with the manners and conventions valued by elite institutions is cultural capital, and resources available through relationships with other people are social capital.',
+    ],
     skill: '10A social vs cultural capital',
   },
   {
@@ -492,6 +660,12 @@ export const FL3_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'Gentrification is the influx of higher-income residents and investment into a lower-income urban neighborhood, raising costs and displacing earlier residents. Suburbanization is the broad movement of population from central cities to suburbs by choice, not displacement of renters by an incoming wealthier population. Urban renewal refers to planned, usually government-led clearance and redevelopment. Ghettoization is the concentration and isolation of a disadvantaged group, the opposite of an inflow of affluent residents.',
+    optionExplanations: [
+      'Gentrification is the influx of higher-income residents and investment into a lower-income urban neighborhood, raising costs and displacing earlier residents. Cafés, rising rents and displaced renters fit exactly.',
+      'Suburbanization is the broad movement of population from central cities to suburbs by choice. This scenario describes affluent people moving into a downtown neighborhood.',
+      'Urban renewal refers to planned, usually government-led clearance and redevelopment. The scenario describes market-driven change through private investment.',
+      'Ghettoization is the concentration and isolation of a disadvantaged group. An inflow of affluent residents is the opposite.',
+    ],
     skill: '9B urbanization: gentrification',
   },
   {
@@ -504,6 +678,12 @@ export const FL3_PSYCH_SOC_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'A reference group is one whose standards a person uses to evaluate and shape her own behavior, whether or not she belongs to it, and the student models herself on residents she has not yet joined. A primary group is a small, intimate, long-lasting group such as family or close friends. An out-group is one a person does not identify with and often views competitively, which is not how she regards the residents. A secondary group is a larger, impersonal, goal-directed group in which she would already be a member.',
+    optionExplanations: [
+      'A primary group is a small, intimate, long-lasting group such as family or close friends. The student has no intimate ties to the residents.',
+      'An out-group is one a person does not identify with and often views competitively. She aspires to join the residents, not to oppose them.',
+      'A reference group is one whose standards a person uses to evaluate and shape her own behavior, whether or not she belongs to it. The student models herself on residents she has not yet joined.',
+      'A secondary group is a larger, impersonal, goal-directed group in which she would already be a member. She is not yet a member of the residents’ group.',
+    ],
     skill: '7C groups: reference groups',
   },
 ]

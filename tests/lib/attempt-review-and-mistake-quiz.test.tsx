@@ -159,7 +159,11 @@ describe('MistakeQuiz', () => {
       if (url === '/api/mistakes/session') {
         return { ok: true, status: 200, json: async () => ({ sessionId: 'sess-12345678', unavailable: 1, items: sessionItems }) } as unknown as Response
       }
-      return { ok: true, status: 200, json: async () => answers.shift() } as unknown as Response
+      if (url === '/api/mistakes/answer') {
+        return { ok: true, status: 200, json: async () => answers.shift() } as unknown as Response
+      }
+      // Answer stats / AI status: not under test here.
+      return { ok: false, status: 404, json: async () => ({}) } as unknown as Response
     })
     vi.stubGlobal('fetch', spy)
     return spy
@@ -217,8 +221,9 @@ describe('MistakeQuiz', () => {
     render(<MistakeQuiz course="sat" onDone={vi.fn()} />)
     await screen.findByText('First question?')
     fireEvent.click(screen.getByRole('button', { name: /I don.t know/ }))
-    await waitFor(() => expect(spy).toHaveBeenCalledTimes(2))
-    const body = JSON.parse((spy.mock.calls[1] as unknown as [string, RequestInit])[1].body as string)
+    await waitFor(() => expect(spy.mock.calls.some((c) => c[0] === '/api/mistakes/answer')).toBe(true))
+    const answerCall = spy.mock.calls.find((c) => c[0] === '/api/mistakes/answer') as unknown as [string, RequestInit]
+    const body = JSON.parse(answerCall[1].body as string)
     expect(body.chosenIndex).toBeNull()
     expect(await screen.findByText('Not answered')).toBeInTheDocument()
   })

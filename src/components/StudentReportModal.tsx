@@ -46,7 +46,7 @@ interface StudentReport {
   selfDirected?: {
     unitTests: { courseSlug: string; unit: string; correct: number; total: number; percentage: number; completedAt: string }[]
     frqs: { courseSlug: string; mode: string; pointsEarned: number; pointsPossible: number; questionCount: number; percentage: number; completedAt: string }[]
-    satPracticeTests: { testNumber: number; totalScore: number; rwScore: number; mathScore: number; completedAt: string }[]
+    satPracticeTests: { exam?: 'psat'; testNumber: number; totalScore: number; rwScore: number; mathScore: number; completedAt: string }[]
     mcatPracticeTests: { section: string; score: number; percentage: number; completedAt: string }[]
     diagnostics: { category: string; scoreLabel: string | null; takenAt: string }[]
     counts: { unitTests: number; frqs: number; satPracticeTests: number; mcatPracticeTests: number; diagnostics: number }
@@ -345,7 +345,7 @@ export default function StudentReportModal({
                   {report.selfDirected.satPracticeTests.slice(0, 4).map((t, i) => (
                     <WorkRow
                       key={`sat-${i}`}
-                      title={`SAT practice test ${t.testNumber}`}
+                      title={`${t.exam === 'psat' ? 'PSAT' : 'SAT'} practice test ${t.testNumber}`}
                       meta={`R&W ${t.rwScore} · Math ${t.mathScore} · ${new Date(t.completedAt).toLocaleDateString()}`}
                       right={String(t.totalScore)}
                     />

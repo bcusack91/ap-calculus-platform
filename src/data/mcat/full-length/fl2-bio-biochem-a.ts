@@ -48,6 +48,12 @@ export const FL2_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The uninhibited line rises by 0.02 min/μM for every 0.5 mM⁻¹ increase in 1/[leucine], so its slope is 0.04 and its y-intercept is $0.04 - 0.02 = 0.02$ min/μM. Since the y-intercept is $1/V_{max}$ and the slope is $K_m/V_{max}$, $K_m = \\text{slope}/\\text{intercept} = 0.04/0.02 = 2.0$ mM; equivalently, the x-intercept is $-0.02/0.04 = -0.5$ mM⁻¹, and $-1/K_m = -0.5$ gives $K_m = 2.0$ mM. A value of 0.5 mM is the magnitude of the x-intercept itself, not its reciprocal. A value of 50 mM is numerically $V_{max}$ (50 μM/min), not $K_m$. A value of 25 mM is the reciprocal of the slope, which equals $V_{max}/K_m$ rather than $K_m$.',
+        optionExplanations: [
+          'This is the magnitude of the x-intercept (−0.5 mM⁻¹) read directly as $K_m$. The x-intercept equals $-1/K_m$, so the reciprocal is needed: $K_m = 1/0.5 = 2.0$ mM.',
+          'Correct. The uninhibited line has slope 0.04 (0.02 per 0.5 mM⁻¹) and y-intercept 0.02 min/μM. $K_m = \\text{slope}/\\text{intercept} = 0.04/0.02 = 2.0$ mM, matching the x-intercept of −0.5 mM⁻¹.',
+          'Twenty-five is the reciprocal of the slope, which equals $V_{max}/K_m$ (50/2.0), not $K_m$. The slope of a double-reciprocal plot is $K_m/V_{max}$, so its reciprocal is a ratio, not the Michaelis constant.',
+          'Fifty is numerically $V_{max}$ in μM/min (the reciprocal of the 0.02 y-intercept), not $K_m$. The Michaelis constant has units of concentration and comes from slope divided by intercept.',
+        ],
         skill: '1A enzyme kinetics',
       },
       {
@@ -61,6 +67,12 @@ export const FL2_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The compound A line in Figure 1 is parallel to the uninhibited line (same slope, 0.04) but displaced upward (y-intercept 0.04 instead of 0.02), the signature of an uncompetitive inhibitor, which binds only the enzyme–substrate complex. Because more substrate produces more of the complex the inhibitor binds, raising the leucine concentration does not relieve the inhibition; the apparent $V_{max}$ and apparent $K_m$ both fall by the same factor (here from 50 to 25 μM/min and from 2.0 to 1.0 mM). Binding only the free enzyme would describe a competitive inhibitor, whose line steepens but keeps the same y-intercept. Equal binding to both forms would describe a noncompetitive inhibitor, whose line pivots about the x-intercept. Tighter binding to the free enzyme would raise the apparent $K_m$, which the unchanged slope and higher intercept rule out.',
+        optionExplanations: [
+          'Binding only free enzyme describes a competitive inhibitor, whose line steepens while keeping the same y-intercept. Compound A’s line has the same slope but a higher intercept, so it is not competitive and excess leucine does not overcome it.',
+          'Equal binding to both forms describes a noncompetitive inhibitor, whose line pivots about an unchanged x-intercept. Compound A shifts the line parallel, moving the x-intercept from −0.5 to −1.0 mM⁻¹ and halving the apparent $K_m$.',
+          'Tighter binding to the free enzyme would raise the apparent $K_m$ and steepen the line. Compound A leaves the slope unchanged and lowers the apparent $K_m$ (2.0 to 1.0 mM), the opposite pattern.',
+          'Correct. Compound A’s line is parallel to the uninhibited line (slope 0.04) but displaced upward (intercept 0.04 versus 0.02), the signature of an uncompetitive inhibitor binding only the ES complex. More substrate makes more ES, so excess leucine does not relieve inhibition.',
+        ],
         skill: '1A enzyme inhibition',
       },
       {
@@ -69,6 +81,12 @@ export const FL2_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The compound B line rises by 0.06 for each 0.5 mM⁻¹, so its slope is 0.12, and extrapolating back from 0.09 at 0.5 mM⁻¹ gives a y-intercept of 0.03 min/μM. The apparent $K_m$ is slope divided by intercept: $0.12/0.03 = 4.0$ mM (the x-intercept is $-0.25$ mM⁻¹, and $1/0.25 = 4.0$). Compound B therefore raises the apparent $K_m$ (from 2.0 to 4.0 mM) while lowering the apparent $V_{max}$ (from 50 to about 33 μM/min), the pattern of a mixed inhibitor that binds free enzyme more tightly than the enzyme–substrate complex. A value of 1.0 mM is the apparent $K_m$ produced by compound A, not B. A value of 2.0 mM is the uninhibited $K_m$, which would be correct only for a noncompetitive inhibitor. A value of 8.0 mM would require the slope to increase sixfold with the intercept unchanged.',
+        optionExplanations: [
+          'One millimolar is the apparent $K_m$ produced by compound A (slope 0.04 / intercept 0.04), not compound B. The question concerns the steeper compound B line.',
+          'Two millimolar is the uninhibited $K_m$. It would be the apparent $K_m$ only for a noncompetitive inhibitor, but compound B’s x-intercept moves from −0.5 to −0.25 mM⁻¹, so the apparent $K_m$ changes.',
+          'Correct. Compound B’s line has slope 0.12 (0.06 per 0.5 mM⁻¹) and y-intercept 0.03 min/μM (extrapolating from 0.09 at 0.5 mM⁻¹). Apparent $K_m$ = 0.12/0.03 = 4.0 mM, consistent with an x-intercept of −0.25 mM⁻¹.',
+          'Eight millimolar would require the slope to rise sixfold (to 0.24) with the intercept unchanged at 0.03, or a slope of 0.12 with an intercept of 0.015. Neither matches the compound B line.',
+        ],
         skill: '1A enzyme inhibition',
       },
       {
@@ -82,6 +100,12 @@ export const FL2_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'From Figure 1, the uninhibited y-intercept is 0.02 min/μM, so $V_{max} = 50$ μM/min, and with 0.10 μM enzyme, $k_{cat} = 50/0.10 = 500\\ \\text{min}^{-1}$, lower than the human value of 1200 min⁻¹. Catalytic efficiency is $k_{cat}/K_m$: bacterial, $500/2.0 = 250\\ \\text{mM}^{-1}\\text{min}^{-1}$; human, $1200/6.0 = 200\\ \\text{mM}^{-1}\\text{min}^{-1}$. The bacterial enzyme therefore turns over more slowly at saturation but is the more efficient catalyst at the low leucine concentrations found in cells. The two options that claim a higher turnover number reverse the $k_{cat}$ comparison. The option that claims a lower efficiency compares $k_{cat}$ values alone and ignores the threefold difference in $K_m$.',
+        optionExplanations: [
+          'Correct. Bacterial $V_{max}$ = 1/0.02 = 50 μM/min; with 0.10 μM enzyme, $k_{cat}$ = 500 min⁻¹, below the human 1200 min⁻¹. But $k_{cat}/K_m$ is 500/2.0 = 250 mM⁻¹min⁻¹ versus 1200/6.0 = 200 for human, so the bacterial enzyme is more efficient.',
+          'The bacterial turnover number (500 min⁻¹) is lower than the human value (1200 min⁻¹), not higher. This reverses the $k_{cat}$ comparison, though the efficiency conclusion is right.',
+          'The turnover comparison is right, but this ignores the threefold difference in $K_m$ (2.0 versus 6.0 mM). Catalytic efficiency is $k_{cat}/K_m$, and 500/2.0 exceeds 1200/6.0.',
+          'This reverses both comparisons. The bacterial $k_{cat}$ is lower (500 versus 1200 min⁻¹), and its $k_{cat}/K_m$ (250) is higher than the human value (200), not lower.',
+        ],
         skill: '1A catalytic efficiency',
       },
       {
@@ -95,6 +119,12 @@ export const FL2_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'A reversible inhibitor is in binding equilibrium with the enzyme, so diluting the mixture far below the inhibitor’s dissociation constant lets the inhibitor come off and activity recovers; a covalent, irreversible inhibitor stays attached and activity does not return. Including leucine during the incubation matters because compound A binds only the enzyme–substrate complex. Raising the 2-oxoglutarate concentration tests whether the inhibitor competes with the second substrate, not whether binding is reversible. Temperature dependence of inhibition does not distinguish reversible from irreversible binding. No inhibitor, reversible or not, changes an equilibrium constant, because a catalyst affects only the rate at which equilibrium is reached.',
+        optionExplanations: [
+          'Changing the 2-oxoglutarate concentration tests whether compound A competes with the second substrate for binding. It does not reveal whether the inhibitor–enzyme bond can be undone.',
+          'Correct. A reversible inhibitor is in binding equilibrium, so diluting far below its dissociation constant lets it come off and activity returns; a covalent irreversible inhibitor stays bound. Including leucine during incubation matters because compound A binds only the ES complex.',
+          'Temperature dependence describes the energetics of inhibition but does not distinguish a reversible noncovalent complex from a covalent adduct. Both can show Arrhenius-type behavior.',
+          'No inhibitor, reversible or irreversible, changes an equilibrium constant. Enzymes and their inhibitors affect only the rate of approach to equilibrium, so this experiment would show no change under either hypothesis.',
+        ],
         skill: '1A enzyme inhibition',
       },
     ],
@@ -123,6 +153,12 @@ export const FL2_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The pH is below 7.40, so the primary process is an acidosis. Of the two variables, only the low bicarbonate (15 mM versus 24 mM) would lower pH; the low $P_{CO_2}$ would by itself raise pH. The primary disturbance is therefore metabolic, and the low $P_{CO_2}$ is the expected respiratory compensation: chemoreceptors sense the extra $\\text{H}^+$ and ventilation increases, lowering $P_{CO_2}$ in the same direction as the fallen bicarbonate. A respiratory alkalosis would produce a pH above 7.40. A respiratory acidosis requires an elevated $P_{CO_2}$, and a metabolic alkalosis requires an elevated bicarbonate and a pH above 7.40, neither of which is present.',
+        optionExplanations: [
+          'Correct. pH 7.32 is acidemic. Only the low bicarbonate (15 mM) lowers pH; the low $P_{CO_2}$ (30 mmHg) would by itself raise it. The primary disturbance is metabolic, and the low $P_{CO_2}$ is respiratory compensation moving in the same direction.',
+          'A respiratory alkalosis would produce a pH above 7.40. The pH here is 7.32, so the primary process is an acidosis, not an alkalosis, even though $P_{CO_2}$ is low.',
+          'A respiratory acidosis requires an elevated $P_{CO_2}$. Here $P_{CO_2}$ is 30 mmHg, below normal, so the acidosis cannot be respiratory in origin.',
+          'A metabolic alkalosis requires an elevated bicarbonate and a pH above 7.40. Both bicarbonate (15 mM) and pH (7.32) are low, so this is excluded.',
+        ],
         skill: '3B acid–base disturbances',
       },
       {
@@ -136,6 +172,12 @@ export const FL2_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Extra 2,3-BPG stabilizes the T state and shifts the curve to the right, raising $P_{50}$. At the tissue $P_{O_2}$ of about 40 mmHg, which lies on the steep part of the curve, a rightward shift lowers saturation considerably, so more oxygen is released per red cell; at the arterial $P_{O_2}$ of 100 mmHg, on the flat upper portion, the same shift lowers saturation only a little. The net effect helps compensate for the reduced number of red cells. A substantial fall in lung loading contradicts the flatness of the curve near 100 mmHg. A decreased $P_{50}$ describes a leftward shift, the opposite of the effect of 2,3-BPG. An increase in saturation at every partial pressure would be a leftward shift and would hinder unloading.',
+        optionExplanations: [
+          'At the arterial $P_{O_2}$ of 100 mmHg the curve is flat, so a rightward shift lowers loading only slightly. A substantial fall in lung loading contradicts the shape of the curve’s upper portion.',
+          'A decreased $P_{50}$ describes a leftward shift (higher affinity). 2,3-BPG stabilizes the T state and shifts the curve right, raising $P_{50}$ and increasing release at tissue $P_{O_2}$.',
+          'Correct. Extra 2,3-BPG shifts the curve right. At the tissue $P_{O_2}$ of 40 mmHg, on the steep part, saturation falls considerably so more O₂ is released; at 100 mmHg, on the flat part, loading drops only a little. The net gain helps offset fewer red cells.',
+          'Increased saturation at every partial pressure is a leftward shift, which would hinder unloading at the tissues. 2,3-BPG does the opposite, lowering saturation at a given $P_{O_2}$.',
+        ],
         skill: '3B oxygen dissociation curve',
       },
       {
@@ -149,6 +191,12 @@ export const FL2_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Without the enzyme, the hydration of $\\text{CO}_2$ proceeds only at the slow uncatalyzed rate during the brief capillary transit, so the tissue’s $\\text{CO}_2$ output cannot be converted to bicarbonate as it normally is. The same amount of $\\text{CO}_2$ still enters the blood, so more of it must remain dissolved (and as carbamino compounds), which means a higher venous $P_{CO_2}$. A lower venous $P_{CO_2}$ has the direction backward: conversion to bicarbonate is what normally keeps dissolved $\\text{CO}_2$ low. Less bicarbonate formation inside red cells means a smaller, not larger, chloride shift, and plasma lacks the enzyme in any case. Carbamino binding does not depend on carbonic anhydrase, and hemoglobin still unloads oxygen in the tissues.',
+        optionExplanations: [
+          'Less bicarbonate forms inside red cells without the enzyme, so the chloride shift is smaller, not larger. Plasma lacks carbonic anhydrase, so bicarbonate would not form there instead.',
+          'This has the direction backward. Conversion to bicarbonate normally keeps dissolved CO₂ low; blocking it leaves more CO₂ dissolved, raising venous $P_{CO_2}$.',
+          'Carbamino formation does not depend on carbonic anhydrase, and hemoglobin still unloads O₂ in the tissues. If anything, more CO₂ would be carried as carbamino compounds to compensate.',
+          'Correct. Without carbonic anhydrase, hydration of CO₂ proceeds only at the slow uncatalyzed rate during capillary transit, so the tissue’s CO₂ cannot be converted to bicarbonate. The same CO₂ still enters the blood, so more remains dissolved and venous $P_{CO_2}$ rises.',
+        ],
         skill: '3B carbon dioxide transport',
       },
       {
@@ -162,6 +210,12 @@ export const FL2_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Hyperventilation at altitude lowers $P_{CO_2}$ and produces a respiratory alkalosis (day 1). Over the following days the kidneys compensate by excreting bicarbonate, so $[\\text{HCO}_3^-]$ falls from 21 to 18 mM, moving in the same direction as the low $P_{CO_2}$ and bringing the ratio, and therefore the pH, back toward normal. The $P_{CO_2}$ is identical on both days, so ventilation did not decrease. Increased hydrogen-ion excretion would raise bicarbonate and worsen the alkalosis, the opposite of what occurred. 2,3-BPG alters oxygen affinity and does not lower plasma bicarbonate.',
+        optionExplanations: [
+          '$P_{CO_2}$ is 28 mmHg on both days, so ventilation did not decrease. The change between days is entirely in bicarbonate, not in the respiratory variable.',
+          'Correct. Hyperventilation produced a respiratory alkalosis on day 1. Over days the kidneys compensate by excreting bicarbonate (21 to 18 mM), moving it in the same direction as the low $P_{CO_2}$ and bringing pH from 7.50 back toward 7.43.',
+          'Increased H⁺ excretion would raise plasma bicarbonate and worsen the alkalosis. Bicarbonate fell from 21 to 18 mM, so the kidneys were excreting bicarbonate, not acid.',
+          '2,3-BPG alters hemoglobin’s O₂ affinity; it does not lower plasma bicarbonate by 3 mM or correct pH. The passage attributes compensation to the kidneys over two to five days.',
+        ],
         skill: '3B renal compensation',
       },
     ],
@@ -192,6 +246,12 @@ export const FL2_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'A normal allele has both TaqI sites, so its 650-bp amplicon is cut into 400-, 200-, and 50-bp fragments; a c.460C>T allele has lost the codon-154 site and is cut only at the invariant site, giving 600- and 50-bp fragments. A lane containing 600, 400, and 200 bp therefore contains one allele of each kind, which is the pattern for the mother, the father, and Patient X. Child 1 shows only the 600-bp fragment (plus the 50-bp fragment common to every allele) and is homozygous for the substitution, which is consistent with an affected child of two carriers. Child 2 shows no 600-bp fragment and carries two normal alleles, so any option that includes Child 2 or Child 1 among the single-copy carriers is incorrect, and the option limited to the parents omits Patient X.',
+        optionExplanations: [
+          'The mother and father are carriers, but this omits Patient X, whose lane (600, 400, 200, 50) also shows one allele of each kind. The 600-bp fragment marks a mutant allele; 400 and 200 mark a normal one.',
+          'Child 1 shows only 600 and 50 bp, so both alleles lack the codon-154 site: homozygous, not a single-copy carrier. Patient X, with 600, 400 and 200, does have exactly one copy.',
+          'Correct. A normal allele gives 400, 200 and 50 bp; a c.460C>T allele gives 600 and 50 bp. Lanes with 600, 400 and 200 contain one of each: mother, father and Patient X. Child 1 has only 600 and Child 2 has no 600.',
+          'Child 2 shows 400, 200 and 50 with no 600-bp fragment, so both alleles retain the TaqI site at codon 154; Child 2 carries two normal alleles and zero copies of the substitution.',
+        ],
         skill: '1B restriction analysis',
       },
       {
@@ -205,6 +265,12 @@ export const FL2_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The disorder is recessive, so an affected person must have two nonfunctional alleles. Patient X’s lane shows one c.460C>T allele and one allele whose exon 5 region is normal; the second nonfunctional allele must therefore carry a different variant, such as the exon 7 deletion or the intron 9 splice-site change, that leaves both TaqI sites in the amplicon intact and so is invisible to this assay. The presence of the 50-bp fragment shows that digestion proceeded normally, and incomplete digestion of a homozygous mutant sample would have produced 650-bp product rather than 400- and 200-bp fragments. The parents’ pattern combined with their lack of symptoms shows that the allele is recessive, and a single allele cannot be dominant in one family and recessive in another. The same primers amplify both alleles because the substitution lies within, not at, the primer-binding sites.',
+        optionExplanations: [
+          'Correct. The disorder is recessive, so Patient X needs two nonfunctional alleles. The gel shows one c.460C>T allele and one allele normal in exon 5; the second must carry a different variant (exon 7 deletion or intron 9 splice change) that leaves both TaqI sites intact and is invisible here.',
+          'The 50-bp fragment is present, showing digestion worked, and incomplete digestion of a homozygous mutant would leave 650-bp product, not generate 400- and 200-bp fragments, which require an intact codon-154 site.',
+          'The parents carry the allele and are unaffected, so it is recessive. A single allele cannot be dominant in one family and recessive in another; inheritance pattern is a property of the allele.',
+          'The substitution lies within the amplicon, not at a primer-binding site, so both alleles amplify equally. A homozygote would show only 600 and 50 bp, as Child 1 does, not the 400- and 200-bp fragments seen in Patient X.',
+        ],
         skill: '1B compound heterozygosity',
       },
       {
@@ -218,6 +284,12 @@ export const FL2_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Cytosine and thymine are both pyrimidines, so a C-to-T change is a transition; a transversion exchanges a pyrimidine for a purine or vice versa. TGA is one of the three stop codons, so the substitution converts an arginine codon into a premature termination signal, a nonsense mutation, which explains the loss of the protein. A missense change would substitute another amino acid, and a frameshift requires an insertion or deletion that is not a multiple of three, whereas a substitution leaves the reading frame intact.',
+        optionExplanations: [
+          'C and T are both pyrimidines, so C→T is a transition, not a transversion. And a single-base substitution does not shift the reading frame; only insertions or deletions not divisible by three do.',
+          'The substitution is correctly called a transition, but CGA→TGA converts an arginine codon to a stop codon. That is a nonsense mutation, not a missense change to another amino acid.',
+          'TGA is indeed a stop codon, but C→T exchanges one pyrimidine for another, which is a transition. A transversion swaps a pyrimidine for a purine or vice versa.',
+          'Correct. Cytosine and thymine are both pyrimidines, so C→T is a transition. TGA is one of the three stop codons, so the change introduces a premature termination signal at codon 154, explaining the loss of the protein.',
+        ],
         skill: '1B mutation types',
       },
       {
@@ -231,6 +303,12 @@ export const FL2_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Every allele, normal or mutant, retains the invariant TaqI site 50 bp from one end, so a successful digestion always converts the 650-bp amplicon into fragments and produces a 50-bp band. An intact 650-bp product means the enzyme did not cut at all, which is a failure of the digestion step, and no genotype can be read until the digestion is repeated. A homozygous mutant would give 600- and 50-bp fragments, not 650 bp. A deletion removing both sites would shorten the amplicon well below 650 bp (and would also have to span 550 bp of the region). The PCR clearly worked, because product of the expected size is present.',
+        optionExplanations: [
+          'A homozygote for c.460C>T would still be cut at the invariant site 50 bp from the end, giving 600 and 50 bp (as in Child 1), not an intact 650-bp band.',
+          'Correct. Every allele retains the invariant TaqI site 50 bp from one end, so successful digestion always produces fragments. An intact 650-bp product means the enzyme did not cut at all; the digestion must be repeated before any genotype can be assigned.',
+          'A deletion removing both sites would have to span about 550 bp of the 650-bp region, giving a much shorter amplicon, not a 650-bp product. The observed size matches the undigested full-length amplicon.',
+          'The PCR clearly worked, because product of exactly the expected size (650 bp) is present. The failure is downstream, in the restriction digestion.',
+        ],
         skill: '1B experimental controls',
       },
       {
@@ -239,6 +317,12 @@ export const FL2_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The number of copies roughly doubles each cycle, so $n$ cycles multiply the starting number by $2^n$. Going from $10^3$ to $10^9$ copies requires a factor of $10^6$, and because $2^{10} \\approx 10^3$, a factor of $10^6$ corresponds to $2^{20}$, or about 20 cycles. Thirty cycles is the number used in the experiment and would yield about $10^{12}$ copies. Sixty cycles would give an amplification factor of about $10^{18}$. Ten cycles would multiply the template only about $10^3$-fold, reaching roughly $10^6$ copies rather than $10^9$.',
+        optionExplanations: [
+          'Ten cycles multiply the template by $2^{10} \\approx 10^3$, taking $10^3$ copies to only about $10^6$, a thousand times short of $10^9$.',
+          'Correct. Copies double each cycle, so $n$ cycles give a factor of $2^n$. From $10^3$ to $10^9$ requires $10^6$, and since $2^{10} \\approx 10^3$, $2^{20} \\approx 10^6$: about 20 cycles.',
+          'Thirty cycles is the number used in the experiment, but it gives a factor of about $10^9$, taking $10^3$ copies to roughly $10^{12}$, a thousandfold more than asked.',
+          'Sixty cycles would amplify about $10^{18}$-fold, vastly overshooting. Only a $10^6$-fold increase is needed, which 20 doublings provide.',
+        ],
         skill: '1B PCR',
       },
     ],
@@ -267,6 +351,12 @@ export const FL2_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'A B cell whose receptor binds the polysaccharide internalizes the whole conjugate, degrades the carrier protein, and displays its peptides on class II MHC. Helper T cells specific for those carrier peptides then deliver help to the polysaccharide-specific B cell, converting a T-independent antigen into one that produces class switching, affinity maturation, and memory, the type of response that infants can mount. Cross-linking of receptors is the T-independent mechanism that is already weak in infants, so improving it would not solve the problem. Class I presentation to cytotoxic T cells does not support antibody production. Polysaccharides cannot be presented by MHC molecules, which bind only peptides.',
+        optionExplanations: [
+          'Receptor cross-linking is the T-independent mechanism, which is already weak in infants under two. Improving it would not supply the T-cell help, class switching and memory the infant response lacks.',
+          'Class I presentation to cytotoxic T cells does not support antibody production. Vaccine protein taken up from outside goes to class II MHC, and the goal is anti-polysaccharide antibody, not cell killing.',
+          'MHC molecules bind only peptides; a polysaccharide cannot be presented on class II MHC. It is the carrier protein’s peptides, not the sugar, that helper T cells recognize.',
+          'Correct. A B cell whose receptor binds the polysaccharide internalizes the whole conjugate, degrades the carrier protein, and presents its peptides on class II MHC. Carrier-specific helper T cells then deliver help to that B cell, converting a T-independent antigen into a T-dependent response with memory.',
+        ],
         skill: '3B T-dependent antigens',
       },
       {
@@ -280,6 +370,12 @@ export const FL2_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'High-affinity IgG within three days is the signature of a secondary response, which requires pre-existing memory cells and therefore a prior encounter with the antigen, whether by infection or by vaccination. Patient 2’s lack of antibody at day 3 is what a normal primary response looks like, because IgM does not appear until after a lag of several days, so no deficiency of helper T cells can be inferred. An inability to class-switch would prevent IgG from appearing at all. A T-independent response would produce IgM, not an absence of antibody, and viral proteins are T-dependent antigens in any case.',
+        optionExplanations: [
+          'An inability to class-switch would prevent IgG from appearing at all; it cannot make IgG appear early. High IgG at day 3 reflects memory, not a switching defect.',
+          'No antibody at day 3 is a normal primary response: IgM does not appear until after a lag of several days. Nothing supports inferring a helper T-cell deficiency from this timing.',
+          'Correct. High-affinity IgG within three days is the signature of a secondary response, which begins within a day or two and requires pre-existing memory cells from a prior encounter, by infection or vaccination.',
+          'A T-independent response would produce IgM, not an absence of antibody, and viral proteins are T-dependent antigens in any case. Patient 2 is simply in the lag phase of a primary response.',
+        ],
         skill: '3B primary vs secondary response',
       },
       {
@@ -293,6 +389,12 @@ export const FL2_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Cytotoxic T cells recognize peptides on class I MHC, which presents proteins synthesized in the cytosol. A cell in which the virus is replicating makes capsid protein on its own ribosomes, so capsid peptides reach class I MHC and mark the cell for killing. A B cell or macrophage that has taken up virus from outside processes it through the pathway that loads class II MHC, which is recognized by helper T cells, not cytotoxic T cells. A plasma cell synthesizes antibody, not viral capsid protein, so it displays no capsid peptides on class I MHC.',
+        optionExplanations: [
+          'Correct. CD8⁺ T cells recognize peptides on class I MHC, which presents proteins synthesized in the cytosol. A cell in which the virus replicates makes capsid protein on its own ribosomes, so capsid peptides load onto class I MHC and mark the cell for killing.',
+          'A B cell that internalizes free virus processes it through the endocytic pathway onto class II MHC, recognized by CD4⁺ helper cells. Capsid protein taken up from outside does not reach class I MHC in the usual way.',
+          'Phagocytosed, antibody-coated virus is degraded in endosomes and presented on class II MHC to helper T cells, not on class I to cytotoxic T cells. The macrophage is not synthesizing capsid protein.',
+          'A plasma cell synthesizes antibody, not viral capsid protein. It displays no capsid peptides on class I MHC and is not a target for a capsid-specific CD8⁺ T cell.',
+        ],
         skill: '3B MHC class I presentation',
       },
       {
@@ -306,6 +408,12 @@ export const FL2_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Because an attenuated organism replicates inside the recipient’s cells, its proteins are synthesized in the cytosol and presented on class I MHC, which activates cytotoxic T cells and leaves memory $\\text{CD8}^+$ cells that can kill infected cells during a later infection. An inactivated vaccine is taken up from the extracellular space and mainly drives class II presentation, helper T cells, and antibody. Viral proteins are T-dependent antigens in either vaccine, so both produce class-switched antibody rather than an IgM-only response. Passive immunity comes from transferred antibody, not from any vaccine that delivers antigen.',
+        optionExplanations: [
+          'Viral proteins are T-dependent antigens in either vaccine, so both produce class-switched antibody with T-cell help. Neither gives an IgM-only T-independent response.',
+          'Correct. An attenuated organism replicates inside the recipient’s cells, so its proteins are made in the cytosol and presented on class I MHC. This activates CD8⁺ cytotoxic T cells and leaves memory CD8⁺ cells; an inactivated vaccine taken up from outside mainly drives class II presentation and antibody.',
+          'Passive immunity comes from transferred preformed antibody, as from maternal IgG or breast-milk IgA. Any vaccine that delivers antigen produces active immunity, not passive.',
+          'Both vaccines present protein antigens to helper T cells, so both support class switching. A live vaccine gives a fuller response, not a primary response lacking switching.',
+        ],
         skill: '3B vaccination',
       },
     ],
@@ -335,6 +443,12 @@ export const FL2_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'In p53+/+ cells, compound Q collapses the S-phase fraction (25% to 4%) while the G1 fraction stays high, so cells are held before DNA replication. In p53−/− cells, the G1 fraction falls from 53% to 21% and the 4N (G2/M) fraction rises from 18% to 66%, so the cells leave G1, replicate their DNA, and pile up with a 4N content: the arrest before replication requires p53, but the accumulation after replication does not. Cells that kept dividing normally would retain the vehicle distribution rather than piling up at 4N. The claim that p53−/− cells still arrest before replication reverses the data. Apoptosis (sub-G1) is lower without p53 (5% versus 21%), not higher.',
+        optionExplanations: [
+          'Cells dividing at the normal rate would retain the vehicle distribution (53% G1, 27% S, 18% G2/M). Instead p53−/− cells pile up at 66% G2/M, so a checkpoint after replication is still operating.',
+          'This reverses the data. In p53−/− cells G1 falls from 53% to 21% and S is not collapsed, so cells do not arrest before replication; they arrest after it, with 66% at 4N.',
+          'Correct. In p53+/+ cells S collapses (25% to 4%) while G1 stays high, so cells are held before replication. In p53−/− cells G1 drops to 21% and G2/M rises to 66%: cells replicate their DNA and accumulate at 4N before dividing.',
+          'Apoptosis (sub-G1) is lower without p53 (5% versus 21%), not higher. Loss of p53 reduces death after compound Q rather than increasing it.',
+        ],
         skill: '2C cell cycle checkpoints (data)',
       },
       {
@@ -348,6 +462,12 @@ export const FL2_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Compound Q raises p21 about eightfold in p53+/+ cells; p21 inhibits cyclin–CDK complexes, so less Rb is phosphorylated, E2F stays bound, and the S-phase fraction falls. The sub-G1 fraction rises from 2% to 21% and is prevented by the caspase inhibitor, showing that apoptosis increased, which requires more, not less, cytochrome c release and caspase-3 activity. Phosphorylation of p53 by damage-activated kinases is the event that stabilizes p53 after double-strand breaks, so it increases.',
+        optionExplanations: [
+          'Correct. Compound Q raises p21 8.5-fold in p53+/+ cells; p21 binds and inhibits cyclin–CDK complexes, so Rb phosphorylation falls, E2F stays bound, and S-phase entry drops (25% to 4%).',
+          'The sub-G1 fraction rises from 2% to 21% and is blocked by the caspase inhibitor, so apoptosis increased. That requires more cytochrome c release, not less.',
+          'Phosphorylation of p53 by damage-activated kinases is what stabilizes p53 after double-strand breaks. It increases after compound Q, which is why p21 rises.',
+          'Apoptosis increases (sub-G1 21%), and caspase-3 cleavage of cellular proteins is part of that process. The zVAD result confirms caspases are active, so their activity rises, not falls.',
+        ],
         skill: '2C CDK regulation',
       },
       {
@@ -361,6 +481,12 @@ export const FL2_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Two cell lines that differ only in the targeted gene share every other mutation of the parental tumor, so p53 is the single variable and differences in checkpoint behavior and apoptosis can be attributed to it; an unrelated line would differ at many other loci that could also affect the response. The lines do not respond identically (Table 1), and the purpose is to reveal a difference, not to eliminate one. Results from one isogenic pair cannot be extended to all tumors lacking p53, which vary in their other mutations. The design does not remove the need to verify p53 loss; the p21 measurements serve that purpose.',
+        optionExplanations: [
+          'The lines do not respond identically (Table 1 shows large differences), and the purpose is to reveal a difference caused by p53, not to eliminate one or to validate the assay.',
+          'Results from one isogenic pair cannot be generalized to all tumors lacking p53, which carry different additional mutations. If anything, the design narrows rather than broadens applicability.',
+          'The design does not remove the need to verify p53 loss. The researchers still measured p21, a p53 target, and its low level in p53−/− cells confirms the knockout.',
+          'Correct. Two lines that differ only in the targeted gene share every other mutation of the parental tumor, so p53 is the single variable. Differences in checkpoint behavior and apoptosis can be attributed to p53 rather than to other genetic differences an unrelated line would carry.',
+        ],
         skill: '2C research design',
       },
       {
@@ -374,6 +500,12 @@ export const FL2_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Bcl-2 prevents permeabilization of the outer mitochondrial membrane, so cytochrome c is not released, caspases are not activated, and DNA is not fragmented, keeping the sub-G1 fraction low; p53 is still stabilized and still induces p21, so the G1 arrest (high G1, low S, high p21) persists. That is the profile of p53+/+ cells given compound Q with the caspase inhibitor. The p53−/− profile after compound Q requires loss of p21 induction and of the G1 arrest, which Bcl-2 does not cause. Both vehicle conditions lack the p21 induction and the collapse of S phase that compound Q still produces.',
+        optionExplanations: [
+          'Vehicle-treated p53−/− cells have low p21 (0.2) and no S-phase collapse. Bcl-2 overexpression in p53+/+ cells does not prevent p53 stabilization, so p21 would still rise and S would fall after compound Q.',
+          'The p53−/− profile after compound Q requires loss of p21 induction and of the G1 arrest, with 66% at G2/M. Bcl-2 acts downstream at the mitochondrion and leaves p53 and p21 intact.',
+          'Correct. Bcl-2 prevents mitochondrial permeabilization, so cytochrome c is not released, caspases stay inactive and DNA is not fragmented, keeping sub-G1 low. p53 still induces p21, so the G1 arrest persists: the profile of p53+/+ cells given compound Q plus zVAD.',
+          'Vehicle-treated p53+/+ cells show baseline p21 (1.0) and 25% S phase. Compound Q would still stabilize p53 and collapse S phase in Bcl-2-overexpressing cells, so this does not match.',
+        ],
         skill: '2C apoptosis',
       },
     ],
@@ -395,6 +527,12 @@ export const FL2_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'Acetylcholinesterase normally hydrolyzes acetylcholine within milliseconds; inhibiting it lets each released molecule persist and bind repeatedly, so the remaining receptors are activated more fully and the end-plate potential more often reaches threshold. The drug acts on breakdown in the cleft, not on presynaptic release, which depends on calcium entry into the nerve terminal. It does not cause receptor synthesis or insertion. It also does not alter the voltage sensitivity of the muscle fiber’s sodium channels.',
+    optionExplanations: [
+      'Correct. Acetylcholinesterase normally hydrolyzes acetylcholine within milliseconds. Inhibiting it lets each released molecule persist and bind repeatedly, so the reduced number of receptors is activated more fully and the end-plate potential more often reaches threshold.',
+      'Release depends on calcium entry into the presynaptic terminal. An acetylcholinesterase inhibitor acts on breakdown in the cleft, not on the amount released per action potential.',
+      'The drug does not stimulate receptor synthesis or insertion into the end plate. It compensates for fewer receptors by prolonging transmitter action, not by replacing receptors.',
+      'The drug has no effect on the voltage sensitivity of the muscle fiber’s sodium channels. It increases the end-plate potential, not the excitability of the channels downstream.',
+    ],
     skill: '3A synaptic pharmacology',
   },
   {
@@ -411,6 +549,12 @@ export const FL2_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'Closing the ATP-sensitive $\\text{K}^+$ channels depolarizes the β cell, opening voltage-gated $\\text{Ca}^{2+}$ channels, and the calcium influx triggers exocytosis of insulin granules. Channels that stay open keep the membrane hyperpolarized, so insulin secretion fails and blood glucose rises. Continuous insulin release would require channels that are permanently closed, the opposite defect. The mutation is in β cells, not α cells, and it does not affect insulin receptors on target tissues, which describes insulin resistance.',
+    optionExplanations: [
+      'Continuous insulin release would require channels that are permanently closed, keeping the cell depolarized. Channels that cannot close keep the cell hyperpolarized, which blocks insulin release.',
+      'The mutation is in β cells, not α cells, and nothing in the stem affects glucagon secretion. Hypoglycemia is also the wrong direction for a loss of insulin.',
+      'Correct. Closing K_ATP channels depolarizes the β cell, opening voltage-gated Ca²⁺ channels, and Ca²⁺ influx triggers insulin exocytosis. Channels that stay open keep the membrane hyperpolarized, so insulin is not released after meals and glucose rises.',
+      'Target-tissue unresponsiveness to insulin is insulin resistance, a receptor or post-receptor defect. The mutation described is in the β cell’s secretion machinery, not in target tissues.',
+    ],
     skill: '3B endocrine pancreas',
   },
   {
@@ -427,6 +571,12 @@ export const FL2_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'Host cells that would normally have formed ventral tissue instead formed neural tissue of a second axis, so the graft must have altered their fate by signaling to them, which is embryonic induction. Autonomous specification is ruled out because most of the new axis came from host cells, not from the graft. Nothing in the result requires host cells to revert to pluripotency; they were still responsive, uncommitted embryonic cells. Elimination of host cells would not generate a new axis built largely from those same host cells.',
+    optionExplanations: [
+      'Autonomous specification would mean the grafted cells formed the new axis themselves. But most of the neural tissue came from host cells, so the graft changed the host’s fate rather than building the axis alone.',
+      'Correct. Host cells that would normally have formed ventral tissue instead formed neural tissue of a second axis. The graft must have signaled to neighboring host cells and altered their fate, which is embryonic induction.',
+      'Nothing requires host cells to revert to pluripotency. They were still uncommitted embryonic cells responsive to signals; induction redirected them without dedifferentiation.',
+      'Eliminating host cells could not produce a new axis built largely from those same host cells. The result shows host cells were respecified, not removed.',
+    ],
     skill: '2C embryonic induction',
   },
   {
@@ -443,6 +593,12 @@ export const FL2_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'A zygote does form and develops into a healthy adult, so the barrier acts after fertilization; because the adult hybrid cannot produce gametes, the barrier is hybrid sterility. Mechanical and gametic barriers are prezygotic and would prevent the hybrid zygote from forming in the first place. Hybrid inviability would mean the hybrids die before reaching reproductive age, which the stem rules out.',
+    optionExplanations: [
+      'A mechanical barrier prevents mating or fertilization. Here fertilization clearly occurred, since healthy hybrid adults exist, so the barrier is postzygotic.',
+      'Gamete incompatibility would prevent the zygote from forming. The hybrids develop into healthy adults, so gametes were compatible and the barrier acts later.',
+      'Hybrid inviability means hybrids die before reproductive age. These hybrids “grow into healthy adults,” so viability is not the issue; fertility is.',
+      'Correct. A zygote forms and develops into a healthy adult, so the barrier is postzygotic. Because chromosomes fail to pair in meiosis and no functional gametes are produced, the barrier is hybrid sterility.',
+    ],
     skill: '1C speciation',
   },
   {
@@ -459,6 +615,12 @@ export const FL2_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'Gram-negative bacteria surround a thin peptidoglycan layer with an outer membrane whose porins admit only small hydrophilic molecules, so a large glycopeptide cannot reach its target. Gram-negative bacteria do have peptidoglycan, located in the periplasmic space. It is gram-positive bacteria that have the thick peptidoglycan layer, and they are the ones vancomycin kills. Bacterial membranes generally lack sterols, which are characteristic of eukaryotic membranes.',
+    optionExplanations: [
+      'Correct. Gram-negative bacteria surround a thin peptidoglycan layer with an outer membrane whose porins admit only small hydrophilic molecules. A large glycopeptide cannot cross it to reach its peptidoglycan target in the periplasm.',
+      'Gram-negative bacteria do have peptidoglycan, a thin layer in the periplasmic space. The target exists; the drug simply cannot reach it.',
+      'It is gram-positive bacteria that have the thick peptidoglycan layer, and they are the ones vancomycin kills effectively. Gram-negative peptidoglycan is thin.',
+      'Bacterial membranes generally lack sterols, which are characteristic of eukaryotic membranes. Sterol binding is not a mechanism of vancomycin resistance.',
+    ],
     skill: '2B bacterial cell envelope',
   },
   {
@@ -475,6 +637,12 @@ export const FL2_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'At a pH above its pI, a protein carries a net negative charge, so at pH 7.0 the target (pI 5.0) is negative and binds the positively charged resin of an anion exchanger, while the contaminant (pI 8.5) is positive at pH 7.0, is repelled, and flows through. The target is not positively charged at this pH, which rules out both options built on that premise. A cation exchanger carries negative groups, so it would repel the negatively charged target and retain the contaminant instead.',
+    optionExplanations: [
+      'At pH 7.0, which is above its pI of 5.0, the target protein is negatively charged, not positive. A cation exchanger (negative resin) would repel it and bind the positively charged contaminant instead.',
+      'The resin type is right but the premise is wrong: a protein above its pI carries a net negative charge, so the target is negative at pH 7.0, and that is why an anion exchanger retains it.',
+      'The charge is correctly identified as negative, but a cation exchanger carries negatively charged groups and binds cations. It would repel the negative target and retain the positively charged contaminant.',
+      'Correct. Above its pI a protein is net negative, so at pH 7.0 the target (pI 5.0) is negative and binds the positively charged resin of an anion exchanger. The contaminant (pI 8.5) is positive at pH 7.0 and flows through.',
+    ],
     skill: '1A protein purification',
   },
   {
@@ -486,6 +654,12 @@ export const FL2_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'By the Henderson–Hasselbalch equation, $\\log([\\text{HPO}_4^{2-}]/[\\text{H}_2\\text{PO}_4^-]) = 7.4 - 6.8 = 0.6$, and because $\\log 4 \\approx 0.6$, the base-to-acid ratio is about 4; the acid-to-base ratio asked for is therefore about 1/4, or 0.25. The value 0.60 is the logarithm of the ratio, not the ratio itself. A ratio of 1.0 would hold only if the pH equaled the $\\text{p}K_a$. The value 4.0 is the base-to-acid ratio, the inverse of the ratio asked for.',
+    optionExplanations: [
+      'Correct. Henderson–Hasselbalch gives $\\log([\\text{HPO}_4^{2-}]/[\\text{H}_2\\text{PO}_4^-]) = 7.4 - 6.8 = 0.6$, so base/acid ≈ 4. The acid-to-base ratio asked for is the inverse, about 1/4 = 0.25.',
+      'This is the logarithm of the base-to-acid ratio (7.4 − 6.8 = 0.6), not the ratio itself. Taking the antilog gives 4, and inverting gives 0.25.',
+      'A ratio of 1.0 would hold only if the pH equaled the p$K_a$ (6.8). At pH 7.4, 0.6 unit above p$K_a$, the base form predominates about 4:1.',
+      'Four is the base-to-acid ratio, $[\\text{HPO}_4^{2-}]/[\\text{H}_2\\text{PO}_4^-]$. The question asks for the inverse, acid over base, which is 0.25.',
+    ],
     skill: '1A buffers (Henderson–Hasselbalch)',
   },
   {
@@ -502,6 +676,12 @@ export const FL2_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'A group can act as both a general acid and a general base near pH 7 only if appreciable fractions of it are protonated and deprotonated there, which requires a $\\text{p}K_a$ close to 7; histidine’s imidazole, with a $\\text{p}K_a$ near 6, fits. Lysine’s amino group is almost entirely protonated at pH 7 and so is a poor proton acceptor. Aspartate’s carboxyl group is almost entirely deprotonated at pH 7 and so is a poor proton donor. Serine’s hydroxyl is essentially never deprotonated near pH 7, and protonating it would require strongly acidic conditions, so it cannot shuttle protons in either direction.',
+    optionExplanations: [
+      'With a p$K_a$ near 10.5, lysine’s amino group is almost entirely protonated at pH 7, so it is a poor proton acceptor. It cannot readily act as a general base.',
+      'With a p$K_a$ near 3.9, aspartate’s carboxyl is almost entirely deprotonated at pH 7, so it is a poor proton donor. It cannot readily act as a general acid.',
+      'Correct. A group acting as both general acid and general base near pH 7 must have appreciable protonated and deprotonated fractions there, which requires a p$K_a$ near 7. Histidine’s imidazole (p$K_a$ ≈ 6.0) fits.',
+      'Serine’s hydroxyl (p$K_a$ ≈ 13) is essentially never deprotonated near pH 7 and cannot be protonated further, so it cannot shuttle protons in either direction without enzyme-specific activation.',
+    ],
     skill: '1D amino acid side-chain chemistry',
   },
 ]

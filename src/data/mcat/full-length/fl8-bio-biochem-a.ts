@@ -46,6 +46,12 @@ export const FL8_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The vertical axis is logarithmic: the plotted value falls from 5.0 at 24 g/dL to 3.0 at 28 g/dL, a difference of 2 log units, so the delay time fell from 10⁵ ms to 10³ ms, a factor of 10² = 100. A factor of 2 mistakes the difference between the two logarithms for the ratio of the delay times. A factor of 1.7 is the ratio of the two plotted logarithms (5.0/3.0), which has no physical meaning. A factor of 1,000 would require a difference of 3 log units, which is the change between 24 and about 30 g/dL.',
+        optionExplanations: [
+          'A factor of 1.7 is the ratio of the two plotted logarithms, 5.0/3.0, which has no physical meaning. The axis is logarithmic, so the ratio of delay times comes from the difference of the plotted values, not their quotient.',
+          'A factor of 2 mistakes the 2-log-unit difference between the plotted values for the ratio of the delay times. On a log₁₀ axis a difference of 2 means a ratio of 10², not 2.',
+          'The vertical axis is log₁₀ of the delay time. The plotted value falls from 5.0 at 24 g/dL to 3.0 at 28 g/dL, so the delay time fell from 10⁵ ms to 10³ ms, a factor of 10² = 100.',
+          'A factor of 1,000 would require a drop of 3 log units, which is roughly the change from 24 g/dL (5.0) to 30 g/dL (2.1). Between 24 and 28 g/dL the drop is only 2 units.',
+        ],
         skill: '1A reading a logarithmic plot (data interpretation)',
       },
       {
@@ -59,6 +65,12 @@ export const FL8_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'At pH 8.6 the side chain of glutamate is ionized and carries a negative charge, whereas that of valine is uncharged, so each HbS tetramer has two fewer negative charges than HbA and moves more slowly toward the positive electrode; a person with only HbS therefore gives the single band nearer the origin. Replacing glutamate with valine removes negative charge rather than adding it, so HbS cannot be the faster band. The two proteins differ in mass by only about 60 Da out of roughly 64,500, far too little to separate them, and the separation described depends on charge.',
+        optionExplanations: [
+          'Replacing glutamate with valine removes a negative charge rather than adding one, so HbS has less negative charge than HbA, not more, and cannot be the faster-moving band.',
+          'At pH 8.6 glutamate’s side chain is negatively charged and valine’s is uncharged, so each HbS tetramer carries two fewer negative charges than HbA and migrates more slowly toward the positive electrode. The SS lysate therefore gives the single band nearer the origin, at 3.0 cm.',
+          'The band position is right but the reason is wrong. HbS and HbA differ in mass by only about 60 Da out of roughly 64,500, far too little to separate them; the separation at pH 8.6 depends on charge.',
+          'HbS is not smaller by any meaningful amount; the mass difference is about 60 Da in 64,500. And a smaller protein would not account for the band nearer the origin in any case, since HbS is the slower band because of its reduced negative charge.',
+        ],
         skill: '1A amino acid charge and electrophoretic mobility',
       },
       {
@@ -72,6 +84,12 @@ export const FL8_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'In the mixture at 30 g/dL, HbS makes up 80% of the hemoglobin, or 24 g/dL. A delay time of 100 s is 10⁵ ms, a plotted value of 5.0, which is the value Figure 1 gives for pure HbS at 24 g/dL; the mixture therefore behaves as though the HbF were not there, as expected if HbF takes no part in the polymer. If the total concentration set the delay time, whether or not HbF entered the polymer, the mixture would match pure HbS at 30 g/dL, a plotted value of 2.1, or about 0.1 s. The delay time cannot be set by HbF alone, because solutions that contain no HbF polymerize.',
+        optionExplanations: [
+          'In the mixture at 30 g/dL, HbS is 80% of the total, or 24 g/dL. A delay time of 100 s is 10⁵ ms, a plotted value of 5.0, which is exactly what Figure 1 gives for pure HbS at 24 g/dL. The mixture behaves as though HbF were absent, so HbF stays out of the polymer and only HbS concentration matters.',
+          'If the total concentration set the delay time, the mixture would match pure HbS at 30 g/dL, a plotted value of 2.1 or about 0.1 s. The observed 100 s is a thousand times longer, so total concentration is not the determinant and HbF does not join the polymer.',
+          'HbF staying out of the polymer is correct, but total concentration cannot be what sets the delay time: at 30 g/dL total, pure HbS would give about 0.1 s, not the 100 s observed. Only the HbS fraction, 24 g/dL, predicts the result.',
+          'The delay time cannot be set by HbF alone, because solutions that contain no HbF polymerize with well-defined delay times across Figure 1. The data also show HbF does not enter the polymer, since the mixture behaves like pure HbS at the HbS concentration.',
+        ],
         skill: '1A fetal hemoglobin and polymerization (reasoning from data)',
       },
       {
@@ -85,6 +103,12 @@ export const FL8_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'A higher oxygen affinity means that more hemoglobin stays oxygenated, and therefore in the R conformation, at any given partial pressure of oxygen. Only T-state molecules expose the pocket that receives the valine of a neighbor, so fewer molecules are able to join a polymer; this is equivalent to lowering the concentration of polymerizing hemoglobin, which lengthens the delay time steeply. A larger share of T-state molecules would follow from a lower, not a higher, oxygen affinity. The valine at position 6 lies on the surface in both conformations; it is the pocket, not the valine, that the change of conformation exposes or hides.',
+        optionExplanations: [
+          'A larger share of T-state molecules would follow from a lower oxygen affinity, not a higher one. Increasing affinity keeps more hemoglobin oxygenated and in the R conformation at any given oxygen partial pressure.',
+          'The valine at position 6 lies on the protein surface in both conformations; its exposure does not change. It is the acceptor pocket, not the valine, that the T conformation exposes, so this mechanism is not how the delay time would change.',
+          'The valine is not buried by a change in conformation; it stays on the surface. The direction of the effect is right, but the mechanism is wrong: the change is in the number of molecules exposing the acceptor pocket.',
+          'Higher oxygen affinity means more hemoglobin stays oxygenated, and therefore in the R conformation, at the capillary oxygen partial pressure. Only T-state molecules expose the acceptor pocket, so fewer can join a polymer; this is equivalent to lowering polymerizing hemoglobin concentration, which lengthens the delay time steeply.',
+        ],
         skill: '1A hemoglobin conformation and ligand affinity',
       },
       {
@@ -98,6 +122,12 @@ export const FL8_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'HbA is the same protein at the same concentration, lacking only the valine that makes the fiber contact; if deoxygenated HbA shows no rise in scattering, the signal can be attributed to polymer and not to aggregation, heating, or another consequence of the procedure itself. Replicate runs show that the measurement is reproducible, but an artifact would be reproducible as well. The oxygen affinity of dilute HbS says nothing about what scatters light in the concentrated, deoxygenated sample. Recording for longer after the rise only extends the same signal without identifying its source.',
+        optionExplanations: [
+          'HbA is the same protein at the same concentration, lacking only the valine that makes the fiber contact. If deoxygenated HbA shows no rise in scattering, the signal can be attributed to polymer rather than to aggregation, heating, or any other consequence of the procedure itself.',
+          'Replicate runs show that the measurement is reproducible, but an artifact of the deoxygenation procedure would be reproducible as well. Reproducibility does not identify the source of the signal.',
+          'The oxygen affinity of dilute HbS says nothing about what scatters light in the concentrated, deoxygenated sample. It is a different measurement under different conditions and cannot serve as a control for the scattering signal.',
+          'Recording for longer after the rise simply extends the same signal without identifying its source. A longer trace cannot distinguish polymer from some other product of the procedure.',
+        ],
         skill: '1A research design: negative controls',
       },
     ],
@@ -128,6 +158,12 @@ export const FL8_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The synthetic androgen acts on the hypothalamus and pituitary as testosterone does, so LH (and FSH) secretion is suppressed. Without LH the Leydig cells stop making testosterone, and the very high local concentration that sperm formation requires collapses; the injected androgen arrives only at its plasma concentration and cannot replace it, so the sperm count falls. LH cannot rise while the androgen receptor of the pituitary is being strongly activated, which excludes the two options that begin with an increase. Testosterone within the testis cannot rise when the Leydig cells have lost the LH on which their secretion depends.',
+        optionExplanations: [
+          'LH cannot rise while the androgen receptor of the pituitary and hypothalamus is being strongly activated by the synthetic androgen; negative feedback suppresses it. And with LH gone, intratesticular testosterone and sperm count fall, not rise.',
+          'LH does fall, but testosterone within the testis cannot rise when the Leydig cells have lost the LH on which their secretion depends. The injected androgen arrives only at plasma concentration, far below the 50- to 100-fold local level that Leydig cells normally maintain.',
+          'LH cannot increase while the synthetic androgen strongly activates the androgen receptors of the hypothalamus and pituitary; the passage says testosterone slows GnRH pulses and reduces pituitary responsiveness, and the synthetic drug acts at these same sites.',
+          'The synthetic androgen suppresses LH (and FSH) by acting on the hypothalamus and pituitary as testosterone does. Without LH the Leydig cells stop secreting, the very high local testosterone that spermatogenesis requires collapses, and the plasma-level androgen cannot replace it, so the sperm count falls.',
+        ],
         skill: '3B negative feedback: exogenous androgens and the testis',
       },
       {
@@ -141,6 +177,12 @@ export const FL8_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Growth of the prostate depends on DHT, but Sertoli cells respond to testosterone itself, so an inhibitor of 5α-reductase deprives the prostate of its signal while leaving both the testosterone inside the testis and the response of the Sertoli cells in place. Blocking GnRH receptors removes LH and FSH, and with them the testosterone and the FSH that sperm formation requires. Blocking the androgen receptor everywhere prevents Sertoli cells from responding to testosterone, however much is present. Inhibiting the synthesis of testosterone lowers its concentration within the testis directly.',
+        optionExplanations: [
+          'Blocking GnRH receptors removes both LH and FSH. Without LH there is no testosterone, and without FSH the Sertoli cells lose their other required signal, so sperm formation stops.',
+          'Prostate growth depends on DHT, made by 5α-reductase, but Sertoli cells respond to testosterone itself. Inhibiting 5α-reductase deprives the prostate of its signal while leaving intratesticular testosterone and the Sertoli response intact, so sperm production is spared.',
+          'Blocking the androgen receptor in every tissue prevents Sertoli cells from responding to testosterone, however much is present within the testis. Sperm formation requires that response, so this drug would impair fertility.',
+          'Inhibiting testosterone synthesis lowers the concentration within the testis directly. Since spermatogenesis requires testosterone at 50 to 100 times the plasma level, this would reduce sperm production.',
+        ],
         skill: '3B testosterone vs dihydrotestosterone',
       },
       {
@@ -154,6 +196,12 @@ export const FL8_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The seminal vesicles and the prostate empty into the reproductive tract downstream of the point at which the vas deferens is cut, and their secretions make up most of the semen, so its volume changes little even though it no longer contains sperm. Testosterone is a hormone and leaves the testis in the blood, not through the vas deferens, so its plasma level and its feedback on the pituitary are unchanged and LH does not rise. The fluid that accompanies sperm from the testis and epididymis is only a small part of the ejaculate.',
+        optionExplanations: [
+          'Testosterone is a hormone that leaves the testis in the blood, not through the vas deferens. Cutting the vas does not trap testosterone, so the plasma level is unchanged.',
+          'Because testosterone still reaches the blood and the pituitary normally, negative feedback is intact and LH does not rise. The vas deferens carries sperm, not hormones.',
+          'The seminal vesicles and prostate empty into the tract downstream of the point where the vas deferens is cut, and the passage says their secretions make up most of the volume of semen. Semen volume therefore changes little, though it no longer contains sperm.',
+          'The fluid that accompanies sperm from the testis and epididymis is only a small part of the ejaculate. Most of the volume comes from the seminal vesicles and prostate, which are beyond the cut.',
+        ],
         skill: '3B male reproductive tract: path of sperm and sources of semen',
       },
       {
@@ -167,6 +215,12 @@ export const FL8_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Venous blood returning from the scrotum is cooler than arterial blood arriving from the abdomen, and because the two streams run side by side in opposite directions, heat is conducted from artery to vein along the whole length of the network; this countercurrent exchange precools the arterial blood and returns the heat to the body. The two sets of vessels exchange heat across their walls and do not mix their contents. Slowing of the blood would not cool it, and the heat produced by blood cells is negligible. Carbon dioxide is not transferred from arterial to venous blood across vessel walls, and its movement would not carry away heat.',
+        optionExplanations: [
+          'Venous blood returning from the cooler scrotum runs alongside arterial blood arriving from the warmer abdomen, flowing in the opposite direction. Heat is conducted from artery to vein along the whole network, precooling the arterial blood: countercurrent exchange.',
+          'The two sets of vessels exchange heat across their walls but do not mix their contents. If arterial and venous blood mixed, oxygen delivery would be compromised; the cooling comes from conduction, not mixing.',
+          'Slowing the blood would not cool it, and the metabolic heat produced by blood cells is negligible. The temperature drop comes from heat transfer to the adjacent cooler venous blood.',
+          'Carbon dioxide is not transferred from arterial to venous blood across vessel walls, and movement of CO₂ would not carry away heat in any case. This proposes a mechanism that does not exist.',
+        ],
         skill: '3B countercurrent heat exchange',
       },
     ],
@@ -203,6 +257,12 @@ export const FL8_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The daughter’s longer product is 228 base pairs, of which 60 are flanking sequence; the remaining 168 base pairs correspond to 168/3 = 56 CAG repeats, and Figure 1 gives a mean age at onset of 24 years for 56 repeats. An age of 21 years corresponds to 60 repeats, more than her allele contains. An age of 34 years corresponds to 48 repeats, which would give a product of only 204 base pairs. An age of 45 years corresponds to 44 repeats, the length of her father’s expanded allele (192 base pairs), not of hers.',
+        optionExplanations: [
+          'An onset age of 21 years corresponds to 60 repeats in Figure 1, more than the daughter’s allele contains. Her 228-bp product minus 60 bp of flanking sequence gives 168 bp, or 56 repeats.',
+          'The daughter’s longer product is 228 bp, of which 60 bp are flanking sequence. The remaining 168 bp correspond to 168/3 = 56 CAG repeats, and Figure 1 gives a mean age at onset of 24 years for 56 repeats.',
+          'An onset age of 34 years corresponds to 48 repeats, which would give a PCR product of only 60 + 144 = 204 bp. Her product is 228 bp, so her allele is longer than this.',
+          'An onset age of 45 years corresponds to 44 repeats, the length of her father’s expanded allele (192 bp). Her allele has grown to 56 repeats, so she is expected to show symptoms earlier than he did.',
+        ],
         skill: '1C repeat length and age at onset (data interpretation)',
       },
       {
@@ -216,6 +276,12 @@ export const FL8_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The daughter’s 111-base-pair product matches an allele that only her mother carries, so her other allele came from her father. His 114-base-pair allele has 18 repeats and would have been passed on unchanged; the 228-base-pair allele therefore descends from his 192-base-pair allele, which grew by 36 base pairs, or 36/3 = 12 repeats (from 44 to 56). A gain of 36 repeats confuses base pairs with repeats. Both of the mother’s alleles have fewer than 27 repeats (17 and 21), which are transmitted without change, and one of them reached the daughter at its original length.',
+        optionExplanations: [
+          'The mother’s 123-bp allele has (123 − 60)/3 = 21 repeats, below the threshold of 27 at which alleles can change length. Alleles with 26 or fewer repeats are transmitted unchanged, so it could not have expanded to 56.',
+          'The 111-bp allele has 17 repeats and is transmitted unchanged; indeed the daughter carries it at exactly 111 bp. It could not have become the 228-bp allele, and it is the allele that did reach her from her mother.',
+          'The daughter’s 111-bp product matches an allele only her mother carries, so her other allele came from her father. His 114-bp allele (18 repeats) would pass unchanged, so the 228-bp allele descends from his 192-bp allele, which grew by 36 bp, or 36/3 = 12 repeats, from 44 to 56.',
+          'A gain of 36 confuses base pairs with repeats. The allele grew from 192 to 228 bp, a difference of 36 bp, which is 36/3 = 12 CAG repeats.',
+        ],
         skill: '1C sizing repeat alleles by PCR and tracing transmission',
       },
       {
@@ -229,6 +295,12 @@ export const FL8_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Onset in childhood after paternal transmission points to a very large expansion, and the passage notes that long, GC-rich tracts are copied inefficiently and are out-competed by a shorter template; such an allele can fail to give a visible product, leaving only the normal allele’s band and a false appearance of homozygosity. Two maternal copies of chromosome 4 would not explain the symptoms, since the mother has no disease allele. Primers that annealed within the repeats could bind at many positions and would give products of many sizes, not one sharp band. An inherited expansion is present in all cells, and the expanded allele was nearly uniform in length among blood cells, so blood would still reveal it.',
+        optionExplanations: [
+          'Two maternal copies of chromosome 4 would not explain the symptoms, because the mother carries no disease allele. The child’s symptoms require an expanded allele, which could only come from the affected father.',
+          'Primers that annealed within the repeats could bind at many positions and would give products of many sizes, not a single sharp band. The observed single product argues against this.',
+          'An inherited expansion is present in all cells, and the passage says the expanded allele was nearly uniform in length among blood cells. Blood would still reveal the expanded allele if it were amplified.',
+          'Childhood onset after paternal transmission points to a very large expansion. The passage notes that long, GC-rich tracts are copied inefficiently and are out-competed by shorter templates, so such an allele can fail to appear, leaving only the normal allele’s band and a false appearance of homozygosity.',
+        ],
         skill: '1C research design: allele dropout in PCR',
       },
       {
@@ -242,6 +314,12 @@ export const FL8_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'People with only one copy of HTT are healthy, so having half the normal amount of functional protein does not cause HD, which rules out simple loss of function with one copy being too few. Complete absence of the protein is lethal to the embryo, yet people with two expanded alleles develop normally; their expanded protein must therefore still do the job of huntingtin, which also rules out a mutant product that is inactive and disables the normal one. The disease must arise from something the expanded protein newly does. A carrier of one expanded and one normal allele makes no more huntingtin than anyone else and still develops HD, so an excess of the protein cannot be the cause; the expansion alters the protein, not its amount.',
+        optionExplanations: [
+          'People with only one copy of HTT are healthy, so halving functional protein does not cause HD. Complete absence is lethal to embryos, yet people with two expanded alleles develop normally, so the expanded protein still functions. The disease must come from something new the expanded protein does.',
+          'This is ruled out by the deletion carriers, who have one working copy and no disease. If one copy were too few, people with a deletion of one HTT allele would develop HD, but they do not.',
+          'If the mutant protein were inactive and also disabled the normal product, a person with two expanded alleles would have no functional huntingtin, which is embryonically lethal in mice. Yet such people develop normally, so the expanded protein must retain function.',
+          'A carrier of one expanded and one normal allele makes no more huntingtin than anyone else and still develops HD, so excess protein cannot be the cause. The expansion alters the protein’s properties, not its amount.',
+        ],
         skill: '1C gain of function vs loss of function',
       },
       {
@@ -255,6 +333,12 @@ export const FL8_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Anticipation is the tendency of a disorder to appear earlier, or more severely, in successive generations; in HD it follows from the growth of the repeat tract during transmission, which is larger and more frequent in the male germ line, together with the earlier onset that longer tracts produce. Incomplete penetrance describes carriers who never develop the disease and does not account for a steady shift in age from one generation to the next. Imprinting would silence one parental copy in every carrier, but both copies of HTT are expressed, and the sex of the parent matters here only through its effect on repeat length. Variable expressivity due to other genes would scatter ages at onset without a consistent direction across generations.',
+        optionExplanations: [
+          'Incomplete penetrance describes carriers who never develop the disease, as with 36–39 repeat alleles. It does not account for a steady shift toward earlier onset from one generation to the next.',
+          'Imprinting would silence one parental copy in every carrier, but both copies of HTT are expressed. The sex of the parent matters here only through its effect on repeat length during transmission, not through silencing.',
+          'Anticipation is the tendency of a disorder to appear earlier in successive generations. In HD it follows from growth of the repeat tract during transmission, which is larger and more frequent in the male germ line, together with the earlier onset that longer tracts produce.',
+          'Variable expressivity due to other genes would scatter ages at onset without a consistent direction across generations. It cannot explain a systematic trend toward earlier onset, especially one linked to paternal transmission.',
+        ],
         skill: '1C anticipation',
       },
     ],
@@ -280,6 +364,12 @@ export const FL8_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Strain 2 still has its synthase, so in a dense mixed culture it releases AHL, which diffuses into every cell present. Strain 1 has an intact receptor and target genes and lacks only its own source of signal; supplied with AHL by its neighbor, it activates the luciferase genes and emits light. Strain 2 cannot respond however much AHL accumulates, because it has no receptor to carry the signal to the DNA, so it stays dark, which excludes light from both strains or from strain 2 alone. The mixture is not dark, because between them the two strains supply every component that one responding cell needs.',
+        optionExplanations: [
+          'Strain 2 lacks the receptor and cannot respond to AHL however much accumulates, so it stays dark. Only strain 1, which has a receptor but no synthase, can be rescued by the AHL its neighbor supplies.',
+          'Strain 2 still has its synthase and releases AHL into the dense culture, which diffuses freely into every cell. Strain 1 has an intact receptor and target genes and lacks only its own signal; supplied with AHL by its neighbor, it activates luciferase and emits light.',
+          'Strain 2 has no receptor to carry the signal to the DNA, so it cannot activate luciferase no matter how much AHL is present. It is strain 1, the synthase mutant, that is rescued.',
+          'The mixture is not dark, because between them the two strains supply every component that one responding cell needs: strain 2 provides the AHL and strain 1 provides the receptor and target genes that respond to it.',
+        ],
         skill: '2B quorum sensing: signal vs receptor mutants',
       },
       {
@@ -293,6 +383,12 @@ export const FL8_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'A lipid bilayer is freely permeable only to small, largely nonpolar molecules. A peptide carries a charged amino group and carboxyl group and many hydrogen-bonding peptide bonds, so it cannot cross the hydrocarbon core unaided; it needs a transporter to get out, and it signals through a receptor that spans the membrane. Peptides are made on ribosomes in the cytoplasm, not assembled in the medium, and their synthesis there shows that they are not simply destroyed by cytoplasmic proteases. Peptidoglycan is a porous mesh through which short peptides pass readily, as they must in order to reach the cell membrane of a neighboring cell.',
+        optionExplanations: [
+          'Peptides are made on ribosomes in the cytoplasm and survive there long enough to be exported, so they are not simply destroyed by cytoplasmic proteases. If they were, no autoinducer would ever be released.',
+          'Peptides are synthesized on ribosomes inside the cell, not assembled in the medium. Their synthesis in the cytoplasm is why they need a transporter to get out.',
+          'Peptidoglycan is a porous mesh through which short peptides pass readily; they must, in order to reach the cell membrane of a neighboring cell. The barrier is the lipid bilayer, not the cell wall.',
+          'A lipid bilayer is freely permeable only to small, largely nonpolar molecules. A peptide carries charged amino and carboxyl groups and many hydrogen-bonding peptide bonds, so it cannot cross the hydrocarbon core unaided; it needs a transporter to exit and signals through a membrane-spanning receptor.',
+        ],
         skill: '2B membrane permeability and signal molecules',
       },
       {
@@ -306,6 +402,12 @@ export const FL8_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'A heritable change is passed to descendants and persists outside the biofilm, whereas the protection of a biofilm depends on matrix, slow growth, and dormancy and disappears when the cells grow freely. If the descendants of the survivors, grown planktonically, are killed by the same concentration as the original strain, survival was due to the biofilm; if they withstand higher concentrations, they carry resistance. Matrix thickness and AHL concentration describe the biofilm but do not reveal whether the cells have changed genetically. Survival of cells on the intact catheter at a higher dose is expected under either explanation, so it cannot separate them.',
+        optionExplanations: [
+          'A heritable change persists in descendants outside the biofilm, whereas biofilm protection depends on matrix, slow growth, and dormancy and disappears when cells grow freely. If planktonic descendants are killed at the original concentration, survival was biofilm-dependent; if they withstand higher concentrations, they carry resistance.',
+          'Matrix thickness describes the biofilm but does not reveal whether the cells have changed genetically. A thick matrix is consistent with either explanation of survival.',
+          'Survival of cells on the intact catheter at a higher dose is expected under either explanation, since the biofilm still protects them and resistant cells would also survive. It cannot separate the two possibilities.',
+          'AHL concentration describes quorum-sensing activity in the biofilm but says nothing about whether the recovered cells carry a heritable change in drug susceptibility.',
+        ],
         skill: '2B research design: tolerance vs heritable resistance',
       },
       {
@@ -319,6 +421,12 @@ export const FL8_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Resistance spreads when resistant cells leave more descendants than susceptible ones. An antibiotic that kills or arrests susceptible cells gives a rare resistant mutant an enormous reproductive advantage; a compound that leaves the growth rate unchanged gives a mutant that ignores it almost none, so selection for resistance is weak. Drugs do not cause the mutations that confer resistance; mutations arise at random whether or not the drug is present, and selection then acts on them. Destruction of the compound by the bacteria would itself be a form of resistance, not a barrier to it. No gene is exempt from mutation.',
+        optionExplanations: [
+          'Destruction of the compound by bacteria would itself be a form of resistance, not a barrier to it. The prediction concerns how fast resistance spreads, which depends on selection, not on whether the compound is degraded.',
+          'Drugs do not cause the mutations that confer resistance; mutations arise at random whether or not the drug is present, and selection then acts on them. Rate of entry into cells is irrelevant to mutation frequency.',
+          'Resistance spreads when resistant cells leave more descendants than susceptible ones. An antibiotic that kills or arrests susceptible cells gives a rare resistant mutant an enormous advantage; a compound that leaves growth unchanged gives a mutant that ignores it almost none, so selection for resistance is weak.',
+          'No gene is exempt from mutation. The receptor gene can mutate like any other; what differs is that mutants gain little reproductive advantage because the compound does not slow susceptible cells.',
+        ],
         skill: '2B selection for resistance',
       },
     ],
@@ -352,6 +460,12 @@ export const FL8_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The H₂-receptor antagonist cut the output during pentagastrin infusion from 28 to 8 mmol/h, a loss of about 70%, although the drug does not occupy gastrin receptors; most of the response must therefore pass through histamine released from ECL cells. The same numbers contradict the claim that the antagonist left the response largely intact. Vagotomy reduced the response only from 28 to 15 mmol/h, so about half of it survives without the nerve. The proton-pump inhibitor reduced the response from 28 to 1.0 mmol/h, which shows that the pump is required.',
+        optionExplanations: [
+          'The H₂ antagonist cut the pentagastrin response from 28 to 8 mmol/h, a loss of about 70%, so most of the response was not left intact. Pentagastrin cannot act only on the parietal cell if blocking histamine receptors removes most of its effect.',
+          'The H₂-receptor antagonist reduced the pentagastrin response from 28 to 8 mmol/h, about 70%, although the drug does not occupy gastrin receptors. Most of the response must therefore pass through histamine released from ECL cells, which the passage says respond to gastrin.',
+          'Vagotomy reduced the pentagastrin response only from 28 to 15 mmol/h, so about half survives without the nerve. Pentagastrin was given intravenously and acts on gastrin receptors directly; it does not depend solely on the vagus.',
+          'The proton-pump inhibitor reduced the pentagastrin response from 28 to 1.0 mmol/h, nearly abolishing it. This shows the H⁺/K⁺-ATPase is required, not that pentagastrin acts without it.',
+        ],
         skill: '3B histamine as a mediator of gastrin (data interpretation)',
       },
       {
@@ -365,6 +479,12 @@ export const FL8_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'One HCO₃⁻ is formed for every H⁺ that the parietal cell secretes, and it leaves across the basolateral membrane into the blood, so the rise in venous HCO₃⁻ (the “alkaline tide”) follows the rate of acid secretion. Table 1 shows the highest output, 30 mmol/h, in untreated dogs given histamine. Vagotomized dogs barely responded to sham feeding (0.5 mmol/h), PPI-treated dogs given histamine secreted only 1.0 mmol/h because the pump was blocked, and untreated dogs in the basal state secreted 1.0 mmol/h; in each of these cases little HCO₃⁻ would be added to the blood.',
+        optionExplanations: [
+          'Vagotomized dogs during sham feeding secreted only 0.5 mmol/h, because the vagal signal that sham feeding depends on was cut. Almost no HCO₃⁻ would be added to the venous blood.',
+          'PPI-treated dogs given histamine secreted only 1.0 mmol/h because the pump was blocked. With little H⁺ secreted, little HCO₃⁻ is formed and exported, so the alkaline tide is minimal.',
+          'One HCO₃⁻ is formed for every H⁺ the parietal cell secretes and leaves across the basolateral membrane into the blood, so the venous HCO₃⁻ rise (the alkaline tide) tracks acid output. Table 1 shows the highest output, 30 mmol/h, in untreated dogs given histamine.',
+          'Untreated dogs in the basal state secreted only 1.0 mmol/h, thirtyfold less than with histamine. The alkaline tide follows acid output, so the basal state produces very little.',
+        ],
         skill: '3B parietal cell bicarbonate exit and the alkaline tide',
       },
       {
@@ -378,6 +498,12 @@ export const FL8_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Peptides from a meal act on G cells directly, so a meal would raise gastrin and acid output even after the vagus nerve had been cut; the investigators could not then tell how much of the response had depended on the nerve. Sham feeding supplies only the signals that originate in the brain, so its loss after vagotomy (20 to 0.5 mmol/h) can be read cleanly. Food in the stomach stimulates acid secretion and does not suppress it. The speed of digestion is beside the point, because secretion begins within minutes of eating. Drugs carried in the blood reach parietal cells from the basolateral side whether or not the lumen contains food.',
+        optionExplanations: [
+          'Food in the stomach stimulates acid secretion, chiefly by releasing gastrin; it does not suppress it. A response would certainly be measurable after a meal.',
+          'Acid secretion begins within minutes of eating, so the speed of digestion is beside the point. A response would appear well within an hour of a meal.',
+          'Drugs carried in the blood reach parietal cells from the basolateral side whether or not the lumen contains food. In any case the vagotomy experiment used no drug, so this concern does not apply.',
+          'Peptides from a meal act on G cells directly, so a meal would raise gastrin and acid output even after the vagus was cut, obscuring how much of the response depended on the nerve. Sham feeding supplies only brain-originating signals, so its loss after vagotomy (20 to 0.5 mmol/h) reads cleanly.',
+        ],
         skill: '3B research design: isolating the vagal stimulus',
       },
       {
@@ -391,6 +517,12 @@ export const FL8_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Pepsinogen is converted to active pepsin when it meets the acid of the gastric lumen, and pepsin itself works best near pH 2; with acid output reduced to a small fraction of normal, activation of the zymogen and the digestion of protein in the stomach are impaired. The secretion of pepsinogen by chief cells does not depend on the proton pump of the parietal cell. Salivary amylase is inactivated by gastric acid, so a less acidic stomach would prolong its action on starch. Bile salts are delivered to the duodenum and act in the small intestine, not in the stomach.',
+        optionExplanations: [
+          'Secretion of pepsinogen by chief cells does not depend on the proton pump of the parietal cell. The PPI blocks acid secretion, not zymogen release from a neighboring cell type.',
+          'Pepsinogen is converted to active pepsin when it meets gastric acid, and pepsin works best near pH 2. With acid output reduced to a small fraction of normal, activation of the zymogen, and so protein digestion in the stomach, is directly impaired.',
+          'Salivary amylase is inactivated by gastric acid, so a less acidic stomach would prolong its action on starch rather than impair it. The effect runs in the opposite direction.',
+          'Bile salts are delivered to the duodenum and act in the small intestine, not in the stomach. Gastric acid output has no direct bearing on fat emulsification.',
+        ],
         skill: '3B gastric acid and activation of pepsinogen',
       },
     ],
@@ -408,6 +540,12 @@ export const FL8_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'IgG is the only class of antibody carried across the placenta, by receptors that bind its constant region, so maternal IgG makes up nearly all of the antibody in a newborn’s plasma. IgA, secreted as a dimer and transported across epithelia, is the main antibody of milk and other secretions and protects mucosal surfaces. IgM is a large pentamer that does not cross the placenta; it is the first class made in a primary response. IgE is present in only trace amounts and is bound to mast cells, where it mediates allergic reactions.',
+    optionExplanations: [
+      'IgG is the only class carried across the placenta, by receptors binding its constant region, so maternal IgG makes up nearly all antibody in a newborn’s plasma. IgA, secreted as a dimer and transported across epithelia, is the main antibody of milk and protects mucosal surfaces.',
+      'IgM is a large pentamer that does not cross the placenta, so it is not the predominant class in the newborn’s plasma. It is the first class made in a primary response, which the newborn has not yet mounted.',
+      'IgG is correct for plasma, but IgE is present only in trace amounts and is bound to mast cells, where it mediates allergic reactions. It is not the antibody of milk.',
+      'This reverses the roles. IgA is the secretory antibody of milk, not the placental antibody, and IgM is a pentamer that neither crosses the placenta nor predominates in milk.',
+    ],
     skill: '3B immunoglobulin classes',
   },
   {
@@ -424,6 +562,12 @@ export const FL8_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'The lung tends to recoil inward and the chest wall to spring outward, and the opposing pulls keep the pressure in the sealed pleural space below atmospheric pressure; this difference holds the lung open against the chest wall. When the space is opened, air enters until intrapleural pressure equals atmospheric pressure, nothing then opposes the elastic recoil of the lung, and the lung collapses. Intrapleural pressure cannot fall further when the space communicates with the atmosphere, which excludes two options. The chest wall, freed from the inward pull of the lung, moves outward and not inward.',
+    optionExplanations: [
+      'Intrapleural pressure cannot fall further below atmospheric when the pleural space communicates with the atmosphere; air enters until the two pressures equalize. And with no subatmospheric pressure holding it open, the lung collapses rather than expands.',
+      'Intrapleural pressure does rise to atmospheric, but the chest wall, freed from the inward pull of the lung, springs outward rather than being drawn inward. The lung, not the chest wall, moves inward.',
+      'The opposing pulls of the lung (inward) and chest wall (outward) keep sealed pleural pressure below atmospheric, holding the lung open. Once the space is opened, air enters until intrapleural pressure equals atmospheric; nothing then opposes the lung’s elastic recoil, and it collapses.',
+      'The lung does collapse, but intrapleural pressure cannot fall further when the space is open to the atmosphere. It rises to atmospheric, which is precisely why the lung recoils.',
+    ],
     skill: '3B intrapleural pressure and pneumothorax',
   },
   {
@@ -440,6 +584,12 @@ export const FL8_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'Venous blood from the stomach and intestines is collected by the hepatic portal vein and passes through the capillaries of the liver before it enters the inferior vena cava; hepatic enzymes can remove most of an absorbed drug on this first pass. Veins beneath the tongue drain into the systemic veins directly, so a drug absorbed there bypasses the liver. Blood does not drain into lymphatic vessels, and lymph is not delivered to the kidneys. Intestinal blood does not return directly to the heart, and the difference between the two routes would not be explained by exhalation. Intestinal blood flow is brisk, particularly after a meal, and plasma is not the main site of drug metabolism.',
+    optionExplanations: [
+      'Blood does not drain into lymphatic vessels, and lymph is not delivered to the kidneys. The venous drainage of the intestine goes to the hepatic portal vein, and the difference in bioavailability arises in the liver.',
+      'Intestinal venous blood does not return directly to the right atrium; it passes through the liver first. And exhalation would not explain why the sublingual route escapes the loss, since all blood crosses the lungs.',
+      'Intestinal blood flow is brisk, particularly after a meal, and plasma is not the main site of drug metabolism. The loss occurs in hepatic enzymes, not in slowly moving plasma.',
+      'Venous blood from the stomach and intestines is collected by the hepatic portal vein and passes through the liver before entering the systemic circulation; hepatic enzymes remove most of the drug on this first pass. Veins beneath the tongue drain directly into systemic veins, bypassing the liver.',
+    ],
     skill: '3B hepatic portal circulation and first-pass metabolism',
   },
   {
@@ -456,6 +606,12 @@ export const FL8_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'The frequency of allele A is (2 × 500 + 200)/2,000 = 0.6 and that of allele a is 0.4, so random mating would give 2pq = 2(0.6)(0.4) = 0.48, or 480 heterozygotes among 1,000 seedlings; only 200 were found. Self-fertilization, the most extreme form of inbreeding, violates the assumption of random mating: half of the offspring of every selfed heterozygote are homozygous, so heterozygotes decline each generation while allele frequencies stay the same. A value of 240 is pq without the factor of 2. Selection in favor of heterozygotes would produce more of them than expected, not fewer, and the seedlings were sampled before selection acted.',
+    optionExplanations: [
+      'The frequency of A is (2 × 500 + 200)/2,000 = 0.6 and of a is 0.4, so random mating predicts 2pq = 2(0.6)(0.4) = 0.48, or 480 heterozygotes; only 200 were found. Self-fertilization violates random mating: half the offspring of every selfed heterozygote are homozygous, so heterozygotes decline each generation.',
+      'The expected number of 480 is correct, but selection favoring heterozygotes would produce more of them than expected, not fewer. Moreover, the seedlings were genotyped before any selection had acted.',
+      'A value of 240 is pq without the factor of 2; the heterozygote frequency is 2pq = 0.48, giving 480. Self-fertilization is the right explanation for the deficit, but the expected number is wrong.',
+      'Both halves are wrong. The expected number is 2pq × 1,000 = 480, not 240, and selection favoring heterozygotes would raise their number, not lower it; the sample was also taken before selection acted.',
+    ],
     skill: '1C inbreeding and departure from Hardy–Weinberg proportions',
   },
   {
@@ -472,6 +628,12 @@ export const FL8_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'The forward primer anneals to one strand of the original template and is extended in every cycle, but each strand made in this way has the same sequence as the other original strand and so offers no site to which the forward primer can anneal. Without the reverse primer the new strands are never copied, and product accumulates by one strand per original template per cycle, a linear increase; exponential growth requires two primers, so that the products of each cycle become templates in the next. The polymerase needs only one primer annealed to a template to begin synthesis, so some DNA is made. After denaturation the template strands have no annealed partner whose 3′ end could be extended.',
+    optionExplanations: [
+      'The polymerase needs only one primer annealed to a template to begin synthesis, so some DNA is made in every cycle. Both primers are required for exponential amplification, not for any synthesis at all.',
+      'The forward primer anneals to one strand of the original template and is extended each cycle, but every new strand has the sequence of the other original strand and offers no site for the forward primer. New strands are never copied, so product grows by one strand per template per cycle: linear accumulation.',
+      'New strands cannot become templates for the forward primer, because they have the sequence of the opposite strand, which the forward primer does not anneal to. Exponential doubling requires the reverse primer to copy the new strands.',
+      'After denaturation the template strands have no annealed partner whose 3′ end could be extended. Polymerase extends only a primer or strand that is already base-paired; it cannot extend a free single-stranded template end.',
+    ],
     skill: '1B PCR: role of the two primers',
   },
   {
@@ -488,6 +650,12 @@ export const FL8_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'LDH is an intracellular enzyme, so a rise in its plasma activity means that cells have lost the integrity of their membranes; because tissues differ in the isoenzymes they contain, the form that appears identifies the tissue, and H₄ points to the heart. LDH synthesized by the liver would be the M₄ form and would in any case remain inside healthy hepatocytes. A mutation acquired by the patient could not change the subunit composition of the enzyme throughout the body, and it would not raise total activity in plasma. Exercise releases lactate, the substrate, not the enzyme, and enzyme leaking from injured skeletal muscle would be M₄.',
+    optionExplanations: [
+      'LDH synthesized by the liver would be the M₄ form, since liver contains mainly M₄, and it would remain inside healthy hepatocytes in any case. A plasma rise in H₄ cannot come from the liver.',
+      'A mutation acquired by the patient could not change the subunit composition of LDH throughout the body, and even if it did, it would not raise total enzyme activity in plasma, which requires release from damaged cells.',
+      'LDH is intracellular, so a rise in plasma activity means cells have lost membrane integrity. Because tissues differ in their isoenzymes, the form that appears identifies the source, and H₄ points to the heart, which contains mainly H₄.',
+      'Exercise releases lactate, the substrate, not the enzyme. And enzyme leaking from injured skeletal muscle would be the M₄ form, not H₄.',
+    ],
     skill: '1A isoenzymes as markers of tissue damage',
   },
   {
@@ -504,6 +672,12 @@ export const FL8_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'Spanning 30 Å at 1.5 Å per residue takes 30/1.5 = 20 residues. Their side chains project outward from the helix into the fatty acyl chains of the bilayer, so they are predominantly nonpolar (leucine, isoleucine, valine, phenylalanine and the like), while the polar groups of the backbone are satisfied by hydrogen bonds within the helix. About 8 is the number of turns of 3.6 residues that 30 residues would make, or the result of dividing 30 Å by 3.6, and is far too few residues to cross the core. Charged side chains are energetically very unfavorable in a hydrocarbon environment.',
+    optionExplanations: [
+      'Eight residues at 1.5 Å each would span only 12 Å, far short of the 30-Å core. The number 8 comes from dividing 30 by 3.6 (residues per turn), which gives turns, not residues.',
+      'Eight residues would span only 12 Å, too few to cross the core, and charged side chains are energetically very unfavorable in a hydrocarbon environment. Both the count and the chemistry are wrong.',
+      'Twenty residues is the right count, but their side chains project into the fatty acyl chains of the bilayer, where charged groups would be highly unfavorable. Membrane-spanning helices are built from nonpolar residues.',
+      'Spanning 30 Å at 1.5 Å per residue takes 30/1.5 = 20 residues. Their side chains project outward into the hydrocarbon core, so they are predominantly nonpolar (leucine, isoleucine, valine, phenylalanine), while the polar backbone groups are satisfied by hydrogen bonds within the helix.',
+    ],
     skill: '1A membrane-spanning α-helices',
   },
   {
@@ -520,6 +694,12 @@ export const FL8_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'Facilitated diffusion depends on a finite number of carrier proteins, each of which must bind and release its solute; once nearly all carriers are occupied, raising the concentration further cannot increase the rate, so uptake saturates. Simple diffusion involves no binding site, and its rate remains proportional to the concentration difference. Both processes are passive: each moves solute only down its concentration gradient, neither consumes ATP, and in both the net flux falls to zero when the concentrations on the two sides are equal.',
+    optionExplanations: [
+      'Both processes are passive and move solute only down its concentration gradient. Net movement from higher to lower concentration is shared by facilitated and simple diffusion alike.',
+      'Facilitated diffusion depends on a finite number of carrier proteins, each of which must bind and release its solute. Once nearly all carriers are occupied, raising the concentration cannot increase the rate, so uptake saturates. Simple diffusion has no binding site and stays proportional to the concentration difference.',
+      'Neither process consumes ATP. Facilitated diffusion through GLUT1 is passive, just as simple diffusion of O₂ is; the requirement for ATP distinguishes active transport, not facilitated diffusion.',
+      'In both processes the net flux falls to zero when concentrations on the two sides are equal. This is a feature of all passive transport and does not distinguish the carrier-mediated route.',
+    ],
     skill: '2A facilitated vs simple diffusion: saturation',
   },
 ]

@@ -8,14 +8,27 @@ import { renderRichText } from '@/lib/render-rich-text'
 import type { SATFullTest, SATTestQuestion, SATTestSection } from '@/data/sat-practice/test-generator'
 import { analyzePerformance, estimateScaledScore, module2Route, routedModule2 } from '@/data/sat-practice/test-generator'
 import { gradeGridIn } from '@/data/sat-grid-in'
-import { satSectionScaledRouted } from '@/lib/sat-scoring'
+import { satSectionScaledRouted, projectionRange as satProjectionRange } from '@/lib/sat-scoring'
+import {
+  psatSectionScaled,
+  psatSectionScaledRouted,
+  psatSectionRange,
+  psatSelectionIndexOf,
+  psatSelectionIndexRange,
+  projectionRange as psatProjectionRange,
+} from '@/lib/psat-scoring'
 import { useActivitySurface } from '@/hooks/useActivitySurface'
+import { Circle, Eye, EyeOff, Flag, Ruler, X } from 'lucide-react'
+import PassageHighlighter from '@/components/exam/PassageHighlighter'
+import SatReferenceSheet from '@/components/exam/SatReferenceSheet'
+import QuestionNavigator, { type NavigatorItem } from '@/components/exam/QuestionNavigator'
+import type { HighlightRange } from '@/lib/passage-highlights'
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
 /* ------------------------------------------------------------------ */
 
-interface QuestionAnswer {
+export interface QuestionAnswer {
   questionIndex: number
   selectedIndex: number | null
   /** Typed response for grid-in (SPR) questions; null/'' for MCQ or when blank. */
@@ -88,6 +101,46 @@ function renderLatex(text: string): string {
   return renderRichText(text)
 }
 
+/** Stable empty highlight list (the highlighter repaints on identity change). */
+const NO_HIGHLIGHTS: HighlightRange[] = []
+
+/**
+ * Bluebook-style 5-minute warning: a hidden timer reappears for these seconds
+ * once 5:00 remains, alongside an announced warning.
+ */
+const FIVE_MINUTES = 300
+const FIVE_MINUTE_REVEAL_SECONDS = 10
+
+/** localStorage key for the hide-timer preference, per practice test. */
+function timerPrefKey(test: Pick<SATFullTest, 'format' | 'testNumber' | 'exam'>): string {
+  return `sat-timer-hidden:${test.exam === 'psat' ? 'psat-' : ''}${test.format}-${test.testNumber}`
+}
+
+/** Display facts per exam: name, section floor, scale maxima. */
+const EXAM_META = {
+  sat: { name: 'SAT', longName: 'Digital SAT', sectionMin: 200, sectionMax: 800, totalMax: 1600 },
+  psat: { name: 'PSAT', longName: 'Digital PSAT/NMSQT', sectionMin: 160, sectionMax: 760, totalMax: 1520 },
+} as const
+
+type ExamKind = keyof typeof EXAM_META
+
+const examOf = (test: Pick<SATFullTest, 'exam'>): ExamKind => (test.exam === 'psat' ? 'psat' : 'sat')
+
+/** Navigator entries for a module's answers (text + icon state, never color alone). */
+export function satNavigatorItems(
+  answers: QuestionAnswer[],
+  questions: SATTestQuestion[],
+  currentIndex: number,
+): NavigatorItem[] {
+  return answers.map((a, idx) => ({
+    key: String(idx),
+    label: String(idx + 1),
+    answered: isAnswered(a, questions[idx]),
+    flagged: a.flagged,
+    current: idx === currentIndex,
+  }))
+}
+
 function formatTime(seconds: number): string {
   const mins = Math.floor(seconds / 60)
   const secs = seconds % 60
@@ -102,6 +155,8 @@ export default function SATFullTestComponent({ test: initialTest, onComplete, on
   // Local copy: finishing a Module 1 swaps in an adaptively-regenerated
   // Module 2, mirroring the digital SAT's routing.
   const [test, setTest] = useState(initialTest)
+  const exam = examOf(initialTest)
+  const meta = EXAM_META[exam]
   const [phase, setPhase] = useState<TestPhase>('intro')
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0)
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
@@ -126,6 +181,25 @@ export default function SATFullTestComponent({ test: initialTest, onComplete, on
   // Per-question time: seconds per question index, per section id.
   const questionSecondsRef = useRef<Map<string, number[]>>(new Map())
   const activeQuestionRef = useRef<{ sectionId: string; index: number; since: number } | null>(null)
+  // Exam tools: math reference sheet, hide-timer toggle (remembered per test),
+  // R&W passage highlights keyed "sectionId:questionIndex".
+  const [referenceOpen, setReferenceOpen] = useState(false)
+  const [timerHidden, setTimerHidden] = useState(false)
+  const [highlights, setHighlights] = useState<Record<string, HighlightRange[]>>({})
+  const prefKey = timerPrefKey(initialTest)
+  useEffect(() => {
+    try { setTimerHidden(localStorage.getItem(prefKey) === '1') } catch { /* storage unavailable */ }
+  }, [prefKey])
+  const toggleTimerHidden = useCallback(() => {
+    setTimerHidden((h) => {
+      const next = !h
+      try {
+        if (next) localStorage.setItem(prefKey, '1')
+        else localStorage.removeItem(prefKey)
+      } catch { /* storage unavailable — preference lasts this session only */ }
+      return next
+    })
+  }, [prefKey])
 
   const currentSection = test.sections[currentSectionIndex]
   const currentQuestion = currentSection?.questions[currentQuestionIndex]
@@ -354,7 +428,9 @@ export default function SATFullTestComponent({ test: initialTest, onComplete, on
         }
       })
 
-      const scaledScore = estimateScaledScore(correct, section.questionCount, section.section)
+      const scaledScore = exam === 'psat'
+        ? psatSectionScaled(section.questionCount > 0 ? correct / section.questionCount : 0)
+        : estimateScaledScore(correct, section.questionCount, section.section)
 
       return {
         sectionId: section.id,
@@ -368,7 +444,7 @@ export default function SATFullTestComponent({ test: initialTest, onComplete, on
         answers: detailedAnswers,
       }
     },
-    [test.sections, sectionAnswers, sectionStartTime],
+    [test.sections, sectionAnswers, sectionStartTime, exam],
   )
 
   // Submit current section
@@ -445,7 +521,7 @@ export default function SATFullTestComponent({ test: initialTest, onComplete, on
         const m2 = secs.find(s => s.tier === 'hard' || s.tier === 'easy')
         const m1Correct = m1.reduce((n, s) => n + s.correct, 0)
         const m1Total = m1.reduce((n, s) => n + s.total, 0)
-        return satSectionScaledRouted({
+        return (exam === 'psat' ? psatSectionScaledRouted : satSectionScaledRouted)({
           m1Correct,
           m1Total,
           m2Correct: m2?.correct ?? 0,
@@ -453,8 +529,8 @@ export default function SATFullTestComponent({ test: initialTest, onComplete, on
           tier: m2 ? (m2.tier === 'hard' ? 'harder' : 'easier') : null,
         })
       }
-      const rwScore = rwTotal > 0 ? sectionScore(rwSections) : 200
-      const mathScore = mathTotal > 0 ? sectionScore(mathSections) : 200
+      const rwScore = rwTotal > 0 ? sectionScore(rwSections) : EXAM_META[exam].sectionMin
+      const mathScore = mathTotal > 0 ? sectionScore(mathSections) : EXAM_META[exam].sectionMin
 
       // Analyze strengths and weaknesses
       const allAnswers = allSections.flatMap(s => s.answers)
@@ -486,7 +562,7 @@ export default function SATFullTestComponent({ test: initialTest, onComplete, on
       setPhase('results')
       onComplete(results)
     },
-    [onComplete],
+    [onComplete, exam],
   )
 
   // ----------------------------------------------------------------
@@ -494,8 +570,11 @@ export default function SATFullTestComponent({ test: initialTest, onComplete, on
   // ----------------------------------------------------------------
   const answeredCount = answers.filter(a => isAnswered(a, currentSection?.questions[a.questionIndex])).length
   const flaggedCount = answers.filter(a => a.flagged).length
-  const timeWarning = timeRemaining <= 300 // 5 min warning
+  const timeWarning = timeRemaining <= FIVE_MINUTES // 5 min warning
   const timeCritical = timeRemaining <= 60 // 1 min critical
+  // The 10 seconds after 5:00 remain: announce, and show even a hidden timer.
+  const fiveMinuteAlert = timeRemaining <= FIVE_MINUTES && timeRemaining > FIVE_MINUTES - FIVE_MINUTE_REVEAL_SECONDS
+  const timerVisible = !timerHidden || fiveMinuteAlert
 
   // ----------------------------------------------------------------
   //  Render: Intro
@@ -511,10 +590,11 @@ export default function SATFullTestComponent({ test: initialTest, onComplete, on
               </svg>
             </div>
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-              SAT Practice Test {test.testNumber}
+              {meta.name} Practice Test {test.testNumber}
             </h2>
             <p className="mt-2 text-gray-600 dark:text-gray-400">
-              {test.format === 'full' ? 'Full-Length' : 'Mini'} Digital SAT Simulation
+              {test.format === 'full' ? 'Full-Length' : 'Mini'} {meta.longName} Simulation
+              {test.format === 'full' ? ' · adaptive Module 2' : ''}
             </p>
           </div>
 
@@ -694,7 +774,11 @@ export default function SATFullTestComponent({ test: initialTest, onComplete, on
           {(unansweredCount > 0 || flaggedReview.length > 0) && (
             <div className="mb-6">
               <p className="mb-2 text-sm font-medium text-gray-700 dark:text-gray-300">
-                Jump to question:
+                Jump to question
+                <span className="ml-2 inline-flex items-center gap-1 text-xs font-normal text-gray-500 dark:text-gray-400">
+                  (<Circle className="h-3 w-3" aria-hidden="true" /> unanswered ·{' '}
+                  <Flag className="h-3 w-3" fill="currentColor" aria-hidden="true" /> flagged)
+                </span>
               </p>
               <div className="flex flex-wrap gap-2">
                 {answers.map((a, idx) => {
@@ -702,16 +786,21 @@ export default function SATFullTestComponent({ test: initialTest, onComplete, on
                     return (
                       <button
                         key={idx}
+                        type="button"
                         onClick={() => {
                           goToQuestion(idx)
                           setPhase('testing')
                         }}
-                        className={`flex h-9 w-9 items-center justify-center rounded-lg text-sm font-medium ${
+                        aria-label={`Question ${idx + 1}, ${isAnswered(a, currentSection.questions[idx]) ? 'answered' : 'unanswered'}${a.flagged ? ', flagged for review' : ''}`}
+                        className={`flex h-9 min-w-[3rem] items-center justify-center gap-1 rounded-lg px-2 text-sm font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring ${
                           a.flagged
                             ? 'bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-400'
-                            : 'bg-red-100 text-red-700 dark:bg-red-900/40 dark:text-red-400'
+                            : 'border border-dashed border-red-300 bg-red-50 text-red-700 dark:border-red-700 dark:bg-red-900/40 dark:text-red-400'
                         }`}
                       >
+                        {a.flagged
+                          ? <Flag className="h-3.5 w-3.5" fill="currentColor" aria-hidden="true" />
+                          : <Circle className="h-3 w-3" aria-hidden="true" />}
                         {idx + 1}
                       </button>
                     )
@@ -760,23 +849,47 @@ export default function SATFullTestComponent({ test: initialTest, onComplete, on
           </p>
         </div>
 
-        {/* Timer */}
-        <div
-          className={`rounded-lg px-4 py-2 text-lg font-mono font-bold ${
-            timeCritical
-              ? 'animate-pulse bg-red-100 text-red-700 dark:bg-red-900/40 dark:text-red-400'
-              : timeWarning
-                ? 'bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-400'
-                : 'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-200'
-          }`}
-        >
-          {formatTime(timeRemaining)}
+        {/* Timer — hideable like Bluebook's; reappears briefly at 5:00 */}
+        <div className="flex items-center gap-2">
+          {timerVisible ? (
+            <div
+              role="timer"
+              aria-label={`Time remaining: ${formatTime(timeRemaining)}`}
+              className={`rounded-lg px-4 py-2 text-lg font-mono font-bold ${
+                timeCritical
+                  ? 'animate-pulse bg-red-100 text-red-700 motion-reduce:animate-none dark:bg-red-900/40 dark:text-red-400'
+                  : timeWarning
+                    ? 'bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-400'
+                    : 'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-200'
+              }`}
+            >
+              {formatTime(timeRemaining)}
+            </div>
+          ) : null}
+          <button
+            type="button"
+            onClick={toggleTimerHidden}
+            aria-pressed={timerHidden}
+            title={timerHidden ? 'Show the timer' : 'Hide the timer'}
+            className={`inline-flex items-center gap-1.5 rounded-lg border px-3 py-2 text-sm font-medium transition focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring motion-reduce:transition-none ${
+              timerHidden
+                ? 'border-accent bg-accent-subtle text-accent dark:border-accent-muted dark:bg-accent-light/20 dark:text-accent-muted'
+                : 'border-gray-300 text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-700'
+            }`}
+          >
+            {timerHidden
+              ? <Eye className="h-4 w-4" aria-hidden="true" />
+              : <EyeOff className="h-4 w-4" aria-hidden="true" />}
+            Hide timer
+          </button>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2">
           <button
+            type="button"
             onClick={() => setShowNav(!showNav)}
-            className="rounded-lg border border-gray-300 px-3 py-2 text-sm font-medium text-gray-700 transition hover:bg-gray-50 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-700"
+            aria-expanded={showNav}
+            className="rounded-lg border border-gray-300 px-3 py-2 text-sm font-medium text-gray-700 transition hover:bg-gray-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-700"
           >
             <span className="hidden sm:inline">Navigator </span>
             ({answeredCount}/{currentSection.questionCount})
@@ -789,6 +902,18 @@ export default function SATFullTestComponent({ test: initialTest, onComplete, on
           {/* Bluebook tools — the real exam supplies Desmos on Math only. */}
           {currentSection.name.toLowerCase().includes('math') && (
             <DesmosCalculatorLink size="md" />
+          )}
+          {/* Bluebook's "Reference" sheet — Math modules only. */}
+          {currentSection.section === 'math' && (
+            <button
+              type="button"
+              onClick={() => setReferenceOpen(true)}
+              aria-haspopup="dialog"
+              className="inline-flex items-center gap-1.5 rounded-lg border border-gray-300 px-3 py-2 text-sm font-medium text-gray-700 transition hover:bg-gray-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring motion-reduce:transition-none dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-700"
+            >
+              <Ruler className="h-4 w-4" aria-hidden="true" />
+              Reference
+            </button>
           )}
           {/* Strikethrough only applies to multiple-choice options */}
           {!currentQuestion.gridIn && (
@@ -810,53 +935,34 @@ export default function SATFullTestComponent({ test: initialTest, onComplete, on
         </div>
       </div>
 
-      {/* Question Navigator Overlay */}
+      {currentSection.section === 'math' && (
+        <SatReferenceSheet open={referenceOpen} onClose={() => setReferenceOpen(false)} />
+      )}
+
+      {fiveMinuteAlert && (
+        <div role="status" className="mb-4 rounded-xl border border-amber-300 bg-amber-50 px-4 py-2 text-center text-sm font-semibold text-amber-800 dark:border-amber-700 dark:bg-amber-900/20 dark:text-amber-300">
+          5 minutes remain in this module.
+        </div>
+      )}
+
+      {/* Question Navigator Overlay — every state has an icon + text label */}
       {showNav && (
         <div className="mb-4 rounded-xl border border-gray-200 bg-white p-4 shadow-lg dark:border-gray-700 dark:bg-gray-800">
           <div className="mb-3 flex items-center justify-between">
             <h3 className="font-semibold text-gray-900 dark:text-white">Question Navigator</h3>
             <button
+              type="button"
               onClick={() => setShowNav(false)}
-              className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+              aria-label="Close the question navigator"
+              className="rounded text-gray-400 hover:text-gray-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring dark:hover:text-gray-300"
             >
-              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
+              <X className="h-5 w-5" aria-hidden="true" />
             </button>
           </div>
-          <div className="grid grid-cols-9 gap-2 sm:grid-cols-12">
-            {answers.map((a, idx) => (
-              <button
-                key={idx}
-                onClick={() => goToQuestion(idx)}
-                className={`relative flex h-9 w-9 items-center justify-center rounded-lg text-sm font-medium transition ${
-                  idx === currentQuestionIndex
-                    ? 'bg-accent text-white ring-2 ring-accent-muted'
-                    : isAnswered(a, currentSection.questions[idx])
-                      ? 'bg-green-100 text-green-800 dark:bg-green-900/40 dark:text-green-400'
-                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-400 dark:hover:bg-gray-600'
-                }`}
-              >
-                {idx + 1}
-                {a.flagged && (
-                  <span className="absolute -top-1 -right-1 flex h-3 w-3 items-center justify-center rounded-full bg-amber-400 text-[8px] text-white">
-                    !
-                  </span>
-                )}
-              </button>
-            ))}
-          </div>
-          <div className="mt-3 flex gap-4 text-xs text-gray-500 dark:text-gray-400">
-            <span className="flex items-center gap-1">
-              <span className="inline-block h-3 w-3 rounded bg-green-100 dark:bg-green-900/40" /> Answered
-            </span>
-            <span className="flex items-center gap-1">
-              <span className="inline-block h-3 w-3 rounded bg-gray-100 dark:bg-gray-700" /> Unanswered
-            </span>
-            <span className="flex items-center gap-1">
-              <span className="inline-block h-3 w-3 rounded bg-accent" /> Current
-            </span>
-          </div>
+          <QuestionNavigator
+            items={satNavigatorItems(answers, currentSection.questions, currentQuestionIndex)}
+            onJump={goToQuestion}
+          />
         </div>
       )}
 
@@ -877,10 +983,24 @@ export default function SATFullTestComponent({ test: initialTest, onComplete, on
             <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-blue-700 dark:text-blue-300">
               {currentQuestion.passage.title}
             </p>
-            <div
-              className="text-base leading-relaxed text-gray-800 dark:text-gray-200"
-              dangerouslySetInnerHTML={{ __html: renderLatex(currentQuestion.passage.text) }}
-            />
+            {currentSection.section === 'reading-writing' ? (
+              <PassageHighlighter
+                key={`${currentSection.id}:${currentQuestionIndex}`}
+                text={currentQuestion.passage.text}
+                highlights={highlights[`${currentSection.id}:${currentQuestionIndex}`] ?? NO_HIGHLIGHTS}
+                onChange={(next) => {
+                  const k = `${currentSection.id}:${currentQuestionIndex}`
+                  setHighlights((h) => ({ ...h, [k]: next }))
+                }}
+                label={currentQuestion.passage.title || 'Passage'}
+                className="text-base leading-relaxed text-gray-800 dark:text-gray-200"
+              />
+            ) : (
+              <div
+                className="text-base leading-relaxed text-gray-800 dark:text-gray-200"
+                dangerouslySetInnerHTML={{ __html: renderLatex(currentQuestion.passage.text) }}
+              />
+            )}
           </div>
         )}
         {/* Question Text */}
@@ -1033,6 +1153,8 @@ export function SATTestWrapper({ test, onComplete, onCancel }: SATFullTestProps)
           body: JSON.stringify({
             testNumber: test.testNumber,
             format: test.format,
+            // PSAT forms are graded on the PSAT curves and stored as 'psat-full'.
+            ...(test.exam === 'psat' ? { exam: 'psat' } : {}),
             timeSpent: testResults.timeSpent,
             weakAreas: testResults.weakAreas.join(', '),
             strengths: testResults.strengths.join(', '),
@@ -1071,11 +1193,11 @@ export function SATTestWrapper({ test, onComplete, onCancel }: SATFullTestProps)
 
       onComplete(final)
     },
-    [test.testNumber, test.format, onComplete],
+    [test.testNumber, test.format, test.exam, onComplete],
   )
 
   if (submitted && results) {
-    return <SATResultsView results={results} testNumber={test.testNumber} onCancel={onCancel} />
+    return <SATResultsView results={results} testNumber={test.testNumber} exam={examOf(test)} onCancel={onCancel} />
   }
 
   return <SATFullTestComponent test={test} onComplete={handleComplete} onCancel={onCancel} />
@@ -1085,27 +1207,50 @@ export function SATTestWrapper({ test, onComplete, onCancel }: SATFullTestProps)
 /*  Results View                                                       */
 /* ------------------------------------------------------------------ */
 
-function SATResultsView({
+export function SATResultsView({
   results,
   testNumber,
+  exam = 'sat',
   onCancel,
 }: {
   results: TestResults
   testNumber: number
+  exam?: ExamKind
   onCancel: () => void
 }) {
+  const meta = EXAM_META[exam]
+  const psat = exam === 'psat'
+  // PSAT thresholds sit 40 points lower per section (its curve is the SAT's
+  // shifted down 40; see src/lib/psat-scoring.ts).
+  const shift = psat ? 40 : 0
   const scoreColor = (score: number) => {
-    if (score >= 700) return 'text-green-600 dark:text-green-400'
-    if (score >= 550) return 'text-amber-600 dark:text-amber-400'
+    if (score >= 700 - shift) return 'text-green-600 dark:text-green-400'
+    if (score >= 550 - shift) return 'text-amber-600 dark:text-amber-400'
     return 'text-red-600 dark:text-red-400'
   }
 
   const scoreMessage = (score: number) => {
-    if (score >= 1400) return 'Outstanding! You\'re in elite territory.'
-    if (score >= 1200) return 'Excellent work! Strong performance overall.'
-    if (score >= 1000) return 'Good foundation. Keep practicing to improve!'
-    if (score >= 800) return 'You\'re building skills. Focus on weak areas.'
+    const s = score + 2 * shift
+    if (s >= 1400) return 'Outstanding! You\'re in elite territory.'
+    if (s >= 1200) return 'Excellent work! Strong performance overall.'
+    if (s >= 1000) return 'Good foundation. Keep practicing to improve!'
+    if (s >= 800) return 'You\'re building skills. Focus on weak areas.'
     return 'Keep studying — every practice test helps you improve!'
+  }
+
+  // Practice scores are estimates: always shown with a range. A full-length
+  // SAT form is high evidence (±30); the PSAT curve has no ground-truth pins
+  // of its own, so medium (±40 total, ±20 per section).
+  const fullLength = results.rwTotal + results.mathTotal > 49
+  const totalRange = psat
+    ? psatProjectionRange(results.totalScore, 'medium')
+    : satProjectionRange(results.totalScore, fullLength ? 'high' : 'medium')
+  const selectionIndex = psat ? psatSelectionIndexOf(results.rwScore, results.mathScore) : null
+  const selectionRange = psat ? psatSelectionIndexRange(results.rwScore, results.mathScore) : null
+  const sectionRangeLabel = (score: number) => {
+    if (!psat) return null
+    const r = psatSectionRange(score)
+    return `likely ${r.low}–${r.high}`
   }
 
   return (
@@ -1119,7 +1264,7 @@ function SATResultsView({
             </svg>
           </div>
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-            Practice Test {testNumber} Results
+            {psat ? 'PSAT ' : ''}Practice Test {testNumber} Results
           </h2>
           <p className="mt-2 text-gray-600 dark:text-gray-400">
             {scoreMessage(results.totalScore)}
@@ -1131,11 +1276,32 @@ function SATResultsView({
           <p className="text-sm font-medium text-gray-500 uppercase dark:text-gray-400">
             Composite Score
           </p>
-          <p className={`text-6xl font-black ${scoreColor(results.totalScore)}`}>
+          <p className={`text-6xl font-black ${scoreColor(results.totalScore / 2)}`}>
             {results.totalScore}
           </p>
-          <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">out of 1600</p>
+          <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
+            out of {meta.totalMax} · likely range {totalRange.low}–{totalRange.high}
+          </p>
         </div>
+
+        {/* PSAT: the National Merit Selection Index */}
+        {selectionIndex !== null && selectionRange && (
+          <div className="mb-8 rounded-xl border border-accent-muted bg-accent-subtle p-5 text-center dark:border-accent-muted/40 dark:bg-accent-light/10">
+            <p className="text-xs font-medium uppercase text-gray-600 dark:text-gray-300">
+              National Merit Selection Index (estimate)
+            </p>
+            <p className="mt-1 text-4xl font-black text-gray-900 dark:text-white">{selectionIndex}</p>
+            <p className="mt-1 text-sm text-gray-600 dark:text-gray-300">
+              likely {selectionRange.low}–{selectionRange.high} · 2 × R&amp;W ÷ 10 + Math ÷ 10 (range 48–228)
+            </p>
+            <Link
+              href="/psat-selection-index"
+              className="mt-3 inline-block rounded font-semibold text-accent hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring dark:text-accent-muted"
+            >
+              Compare with your state&apos;s cutoffs
+            </Link>
+          </div>
+        )}
 
         {/* Score Breakdown */}
         <div className="mb-8 grid grid-cols-2 gap-4">
@@ -1149,6 +1315,9 @@ function SATResultsView({
             <p className="mt-1 text-sm text-blue-500 dark:text-blue-400">
               {results.rwCorrect}/{results.rwTotal} correct
             </p>
+            {sectionRangeLabel(results.rwScore) && (
+              <p className="mt-0.5 text-xs text-gray-500 dark:text-gray-400">{sectionRangeLabel(results.rwScore)}</p>
+            )}
           </div>
           <div className="rounded-xl bg-accent-subtle p-5 text-center dark:bg-accent-light/20">
             <p className="text-xs font-medium text-accent uppercase dark:text-accent-muted">
@@ -1160,6 +1329,9 @@ function SATResultsView({
             <p className="mt-1 text-sm text-accent dark:text-accent-muted">
               {results.mathCorrect}/{results.mathTotal} correct
             </p>
+            {sectionRangeLabel(results.mathScore) && (
+              <p className="mt-0.5 text-xs text-gray-500 dark:text-gray-400">{sectionRangeLabel(results.mathScore)}</p>
+            )}
           </div>
         </div>
 
@@ -1177,7 +1349,7 @@ function SATResultsView({
                       {sec.tier === 'hard' && (
                         <span
                           className="rounded-full bg-purple-100 px-2 py-0.5 text-[10px] font-semibold text-purple-700 dark:bg-purple-900/40 dark:text-purple-300"
-                          title="Your Module 1 score earned the harder second module, just like the real adaptive SAT. The top of the score range is only reachable from this form."
+                          title={`Your Module 1 score earned the harder second module, just like the real adaptive ${meta.name}. The top of the score range is only reachable from this form.`}
                         >
                           HARDER FORM EARNED
                         </span>
@@ -1185,7 +1357,7 @@ function SATResultsView({
                       {sec.tier === 'easy' && (
                         <span
                           className="rounded-full bg-gray-200 px-2 py-0.5 text-[10px] font-semibold text-gray-600 dark:bg-gray-600 dark:text-gray-300"
-                          title="Module 1 routed you to the standard second module. On the real SAT this form caps the reachable score — raising Module 1 accuracy is what unlocks the higher range."
+                          title={`Module 1 routed you to the standard second module. On the real ${meta.name} this form caps the reachable score — raising Module 1 accuracy is what unlocks the higher range.`}
                         >
                           STANDARD FORM
                         </span>
@@ -1274,7 +1446,7 @@ function SATResultsView({
         {results.attemptId && (
           <p className="mt-3 text-center text-xs text-gray-500 dark:text-gray-400">
             Missed and flagged questions also go to your{' '}
-            <Link href="/sat/mistakes" className="font-medium text-accent hover:underline dark:text-accent-muted">SAT mistake log</Link>.
+            <Link href="/sat/mistakes" className="font-medium text-accent hover:underline dark:text-accent-muted">SAT mistake log</Link>{psat ? ' (the PSAT and SAT test the same skills)' : ''}.
           </p>
         )}
       </div>

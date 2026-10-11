@@ -37,6 +37,12 @@ export const FL6_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The theory makes perceived time remaining, not age, the variable that sets goals, so older adults who imagine an extended future should shift toward the knowledge- and future-oriented goals served by novel partners such as the author or the new acquaintance. A stronger preference for the family member is what a shortened horizon produces, not a lengthened one, and ease of visiting is not part of the theory. Predicting no difference because the groups were the same age treats age itself as the cause, which the theory explicitly rejects. A preference for solitude is the prediction of disengagement theory and is unrelated to the manipulation.',
+        optionExplanations: [
+          'A stronger preference for the family member is what a shortened horizon produces, not a lengthened one. Ease of visiting is not part of the theory, which concerns goals set by perceived time remaining.',
+          'Predicting no difference because the groups were the same age treats age itself as the cause. The theory explicitly rejects this, making perceived time remaining the operative variable.',
+          'The theory makes perceived time remaining, not age, the variable that sets goals. Older adults who imagine an extended future should shift toward knowledge- and future-oriented goals served by novel partners such as the author or the new acquaintance.',
+          'A preference for solitude is the prediction of disengagement theory, not socioemotional selectivity theory, and it is unrelated to the manipulation of time horizon.',
+        ],
         skill: '7A socioemotional selectivity theory (new situation)',
       },
       {
@@ -51,6 +57,12 @@ export const FL6_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Compensation is the adoption of new means to reach the same goal when the old means are no longer available, and the stool and long-handled tools let her keep gardening despite being unable to kneel. Giving up the vegetable plots to concentrate on roses narrows her goals, which is selection. Putting more practice into pruning and feeding raises her performance in the retained domain, which is optimization. Joining a reading group replaces a lost activity with a different one, the remedy activity theory recommends, and does nothing to sustain her gardening.',
+        optionExplanations: [
+          'Compensation is the adoption of new means to reach the same goal when old means are no longer available. The stool and long-handled tools let her keep gardening despite being unable to kneel.',
+          'Giving up the vegetable plots to concentrate on roses narrows her goals to a smaller number of valued domains. That is selection, not compensation.',
+          'Putting more practice into pruning and feeding raises her performance in the retained domain. That is optimization, not compensation.',
+          'Joining a reading group replaces a lost activity with a different one, the remedy activity theory recommends. It does nothing to sustain her gardening and is not compensation as the passage defines it.',
+        ],
         skill: '7A selective optimization with compensation',
       },
       {
@@ -65,6 +77,12 @@ export const FL6_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Days spent with photographs are loss-oriented coping and days spent mastering her former tasks are restoration-oriented coping; the model treats movement back and forth between the two as the mark of healthy adjustment. Describing him as stalled between depression and acceptance applies the stage account, which the dual process model was proposed to replace. The model regards restoration work and respite from grief as necessary parts of coping, not as avoidance. It sets no deadline after which yearning becomes excessive, and only exclusive reliance on one orientation predicts poorer outcomes.',
+        optionExplanations: [
+          'Describing him as stalled between depression and acceptance applies the stage account, which the dual process model was proposed to replace. The passage notes that no reliable sequence of stages has been found.',
+          'The model regards restoration work as a necessary part of coping, not as avoidance. Mastering her former tasks is restoration-oriented coping, which healthy adjustment requires alongside grieving.',
+          'The model sets no deadline after which yearning becomes excessive. Only exclusive reliance on one orientation predicts poorer outcomes, and he is not relying exclusively on loss-oriented coping.',
+          'Days spent with photographs are loss-oriented coping and days spent mastering her former tasks are restoration-oriented coping. The model treats movement back and forth between the two as the mark of healthy adjustment.',
+        ],
         skill: '7A grief: dual process model',
       },
       {
@@ -79,6 +97,12 @@ export const FL6_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Continuity theory attributes good adjustment to preserving long-standing patterns with only the modifications circumstances require, and the second engineer keeps both a scaled-down version of his occupation and a decades-old pastime. Mutual withdrawal from obligations is the mechanism of disengagement theory, and he has in fact withdrawn less than the first engineer. Substituting new roles for lost ones is the mechanism of activity theory, and he has taken on no new roles. An open-ended time horizon and a search for new contacts come from socioemotional selectivity theory and are not described in the scenario.',
+        optionExplanations: [
+          'Mutual withdrawal from obligations is the mechanism of disengagement theory, not continuity theory. He has in fact withdrawn less than the first engineer, consulting and singing still.',
+          'Continuity theory attributes good adjustment to preserving long-standing patterns with only the modifications circumstances require. The second engineer keeps a scaled-down version of his occupation and a decades-old pastime.',
+          'Substituting new roles for lost ones is the mechanism of activity theory. The second engineer has taken on no new roles; he retains old ones in modified form.',
+          'An open-ended time horizon and a search for new contacts come from socioemotional selectivity theory and are not described in the scenario. He is keeping old connections, not seeking new ones.',
+        ],
         skill: '7A theories of aging: continuity vs activity vs disengagement',
       },
     ],
@@ -109,6 +133,12 @@ export const FL6_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'In every row the percentage who speak the language well exceeds the percentage who use it most at home, and the gap is widest in the second generation (70% versus 35% in Group X, 40% versus 12% in Group Y), so daily use is abandoned by many people who retain the ability. Ability outlasting use is the reverse of ability being lost first. The two measures do not fall at the same pace, since in Group X’s second generation home use has dropped to 35% while 70% still speak the language well. Home use in Group X falls from 90% to 35% in a generation in which only 26% married out, so the decline does not wait for majority intermarriage.',
+        optionExplanations: [
+          'Ability outlasting use is the reverse of ability being lost first. In every row, more people speak the language well than use it most at home, so speaking ability is retained longer.',
+          'The two measures do not fall at the same pace. In Group X’s second generation, home use has dropped to 35% while 70% still speak the language well, a gap of 35 points.',
+          'Home use in Group X falls from 90% to 35% in a generation in which only 26% married out. The decline does not wait for majority intermarriage.',
+          'In every row the percentage who speak the language well exceeds the percentage who use it most at home, and the gap is widest in the second generation (70% versus 35% in Group X, 40% versus 12% in Group Y). Daily use is abandoned by many who retain the ability.',
+        ],
         skill: '9B data interpretation: language shift',
       },
       {
@@ -123,6 +153,12 @@ export const FL6_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'If members of Group X marry out at Group Y’s rate once they live away from the districts where co-ethnic partners are concentrated, then the difference between the groups tracks who is available to meet, which is the opportunity explanation. A stated preference for same-background spouses among Group X residents, or stated indifference among Group Y members, would instead point to a difference in preference. A rise in intermarriage from the first to the third generation occurs in both groups and so cannot discriminate between explanations of why the groups differ from each other.',
+        optionExplanations: [
+          'A stated preference for same-background spouses among Group X residents would point to a difference in preference, not opportunity. It supports the rival explanation.',
+          'If members of Group X marry out at Group Y’s rate once they live away from the districts where co-ethnic partners are concentrated, the difference between the groups tracks who is available to meet. That is the opportunity explanation.',
+          'Stated indifference among Group Y members about a spouse’s background would point to a difference in preference, not opportunity. It supports the explanation the researchers doubt.',
+          'A rise in intermarriage from the first to the third generation occurs in both groups and so cannot discriminate between explanations of why the groups differ from each other.',
+        ],
         skill: '9B research design: distinguishing rival explanations',
       },
       {
@@ -137,6 +173,12 @@ export const FL6_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Grandchildren raised in intermarried families are the descendants least likely to have learned the heritage language and most likely to marry outside the group themselves, so if they disproportionately go uncounted, the third-generation respondents who remain are the ones with the strongest ties to the group. The sample would therefore show more language retention and less intermarriage than the true third generation. The reverse pattern would require that the most attached descendants were the ones missed. The two biases run in opposite directions because the missing respondents are low on one measure and high on the other, which rules out both measures being overstated or both understated.',
+        optionExplanations: [
+          'Grandchildren raised in intermarried families are least likely to have learned the heritage language and most likely to marry outside the group. If they disproportionately go uncounted, the remaining third-generation respondents have the strongest ties, so the sample shows more retention and less intermarriage than the truth.',
+          'The reverse pattern would require that the most attached descendants were the ones missed. The missing grandchildren are the least attached, so the sample overstates retention, not understates it.',
+          'The two biases run in opposite directions because the missing respondents are low on language retention and high on intermarriage. Both measures cannot be overstated.',
+          'The missing respondents are low on retention and high on intermarriage, so their absence raises the sample’s retention and lowers its intermarriage. Both measures cannot be understated.',
+        ],
         skill: '9B research design: selective identification',
       },
       {
@@ -151,6 +193,12 @@ export const FL6_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The model expects the second generation to be bilingual and the loss of the heritage language to come in the third, but only 40% of Group Y’s second generation speaks the language well, so most of that generation has already made the change the model assigns to their children. Only 12% of Group Y’s second generation uses the language most at home, so the claim of slower shift rests on a false reading. Fluency falls from 97% to 40% between the first and second generations, so the loss is not confined to the later step. Near-universal fluency in the immigrant generation is what the model predicts and says nothing about whether later generations shifted.',
+        optionExplanations: [
+          'Only 12% of Group Y’s second generation uses the language most at home, not most of them. The claim of slower shift rests on a false reading of Table 1.',
+          'Fluency falls from 97% to 40% between the first and second generations, so the loss is not confined to the second-to-third step. The shift came earlier than the model expects.',
+          'The model expects the second generation to be bilingual and loss to come in the third, but only 40% of Group Y’s second generation speaks the language well. Most of that generation has already made the change the model assigns to their children.',
+          'Near-universal fluency in the immigrant generation is what the model predicts and says nothing about whether later generations shifted. The shift is clearly present in the second and third rows.',
+        ],
         skill: '9B evaluating a model against data',
       },
     ],
@@ -195,6 +243,12 @@ export const FL6_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'A graded relationship means that each increment in the predictor is accompanied by an increment in the outcome, and the middle third lies between the other two at every follow-up point. Zero incidence at enrollment is a consequence of enrolling only people free of coronary disease and says nothing about hostility. Rising incidence over time in every group reflects the accumulation of events as the cohort ages. A single value for one group cannot show a gradient, because a gradient requires comparing groups at different levels of the predictor.',
+        optionExplanations: [
+          'A graded relationship means each increment in the predictor is accompanied by an increment in the outcome. The middle third lies between the other two at every follow-up point, which is the stepwise pattern a dose–response relationship requires.',
+          'Zero incidence at enrollment is a consequence of enrolling only people free of coronary disease. It says nothing about hostility or about a gradient.',
+          'Rising incidence over time in every group reflects the accumulation of events as the cohort ages. It occurs regardless of hostility level and does not show a gradient across levels.',
+          'A single value for one group cannot show a gradient, because a gradient requires comparing groups at different levels of the predictor. The 14% figure alone says nothing about the other thirds.',
+        ],
         skill: '6C data interpretation: dose–response gradient',
       },
       {
@@ -204,6 +258,12 @@ export const FL6_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Each third contains 1,000 participants. The highest third had a 20-year incidence of 14%, or about 140 events; at the lowest third’s incidence of about 7%, only about 70 events would have been expected, leaving an excess of about 70. The figure 7 is the difference in percentage points, not in participants. The figure 140 is the total number of events in the highest third, not the excess. The figure 210 adds the two groups’ events instead of subtracting them.',
+        optionExplanations: [
+          'The figure 7 is the difference in percentage points (14% minus 7%), not in participants. With 1,000 participants per third, 7 percentage points corresponds to 70 people.',
+          'Each third contains 1,000 participants. The highest third had a 20-year incidence of 14%, about 140 events; at the lowest third’s 7%, about 70 would have been expected, leaving an excess of about 70.',
+          'The figure 140 is the total number of events in the highest third (14% of 1,000), not the excess over what the lowest third’s rate would predict.',
+          'The figure 210 adds the two groups’ events (140 + 70) instead of subtracting them. The excess is the difference, not the sum.',
+        ],
         skill: '6C data interpretation: excess events (calculation)',
       },
       {
@@ -217,6 +277,12 @@ export const FL6_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Removing the contribution of smoking, drinking, inactivity, and body mass shrank the excess risk by about two-fifths, which shows that these behaviors convey part of the link, but a significant difference remained, so some other route, such as reactivity or loss of support, or an unmeasured factor, must convey the rest. If health behaviors accounted for the whole association, the adjusted difference would have vanished. If they were unrelated to hostility, adjusting for them would have left the excess risk unchanged. The behaviors were recorded at enrollment in people free of coronary disease, so they cannot be consequences of the events counted later.',
+        optionExplanations: [
+          'If health behaviors accounted for the whole association, the adjusted difference would have vanished. A significant difference remained, so hostility is not shown to be harmless.',
+          'If health behaviors were unrelated to hostility, adjusting for them would have left the excess risk unchanged. The two-fifths reduction shows they are related.',
+          'The behaviors were recorded at enrollment in people free of coronary disease, so they cannot be consequences of the events counted later. The adjustment was not misleading on this ground.',
+          'Removing the contribution of smoking, drinking, inactivity, and body mass shrank the excess risk by about two-fifths, showing these behaviors convey part of the link, but a significant difference remained. Some other route must convey the rest.',
+        ],
         skill: '6C stress and health: mediation by health behaviors',
       },
       {
@@ -231,6 +297,12 @@ export const FL6_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'A confounder is a prior factor that produces both the supposed cause and the outcome, so that the two are associated even if one does not affect the other; childhood poverty that independently fosters hostility and arterial disease fits that description. Exaggerated blood pressure responses are the reactivity pathway, a route by which hostility itself would do harm. Friendships lost because of hostility are the psychosocial vulnerability pathway. Smoking taken up more often by hostile adults is the health-behavior pathway. Each of these lies between hostility and disease, so it would transmit an effect of hostility instead of creating a spurious one.',
+        optionExplanations: [
+          'Exaggerated blood pressure responses are the reactivity pathway, a route by which hostility itself would do harm. This lies between hostility and disease and transmits an effect rather than creating a spurious one.',
+          'Friendships lost because of hostility are the psychosocial vulnerability pathway. Since hostility brings about the loss, this is a mediator, not a confounder.',
+          'A confounder is a prior factor that produces both the supposed cause and the outcome, so the two are associated even if one does not affect the other. Childhood poverty that independently fosters hostility and arterial disease fits that description.',
+          'Smoking taken up more often by hostile adults is the health-behavior pathway. It lies between hostility and disease and would transmit an effect of hostility rather than confound it.',
+        ],
         skill: '6C research design: confounder vs mediator',
       },
       {
@@ -245,6 +317,12 @@ export const FL6_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Hostility predicted coronary events in a graded fashion, whereas time urgency, another defining element of Type A, predicted almost nothing; a global Type A score therefore blends a predictive element with at least one nonpredictive one, and its relation to disease would vary with how heavily hostility happened to weigh in each study’s classification. Nothing in the passage indicates that the earlier studies were short, and Figure 1 shows differences emerging within five years. The passage does not report that earlier studies enrolled people with existing disease or that their physicians knew the classifications, and neither problem would explain why time urgency fails to predict events in the present cohort.',
+        optionExplanations: [
+          'Nothing in the passage indicates that the earlier studies were short, and Figure 1 shows differences emerging within five years. Follow-up length is not the explanation supported here.',
+          'Hostility predicted coronary events in a graded fashion, whereas time urgency, another defining element of Type A, predicted almost nothing. A global Type A score blends a predictive element with a nonpredictive one, so its relation to disease would vary with how heavily hostility weighed in each study.',
+          'The passage does not report that earlier studies enrolled people with existing disease. This problem would also not explain why time urgency fails to predict events in the present cohort.',
+          'The passage does not report that earlier physicians knew the classifications. Unblinded assessment would not explain why time urgency fails to predict events while hostility does.',
+        ],
         skill: '7A Type A pattern: components and prediction',
       },
     ],
@@ -274,6 +352,12 @@ export const FL6_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Performance on difficult, unfamiliar tasks peaks at a lower level of arousal than performance on simple tasks, so the arousal level that is optimal for addition lies beyond the optimum for the puzzles, on the descending limb of their inverted U. Performance that is still rising would require the puzzles’ optimum to lie at a higher arousal level than that of addition, which reverses the law. The two tasks cannot peak at the same level, because the optimum shifts with difficulty. Nothing in the law implies that performance past the peak happens to equal performance at very low arousal.',
+        optionExplanations: [
+          'Performance that is still rising at this arousal level would require the puzzles’ optimum to lie at a higher arousal level than that of addition. The law places the optimum for difficult tasks lower, not higher.',
+          'The two tasks cannot peak at the same level, because the optimum shifts with difficulty. Complex, unfamiliar puzzles peak at lower arousal than simple addition.',
+          'Performance on difficult, unfamiliar tasks peaks at a lower arousal level than performance on simple tasks. The arousal optimal for addition therefore lies beyond the puzzles’ optimum, on the descending limb of their inverted U.',
+          'Nothing in the law implies that performance past the peak happens to equal performance at very low arousal. The inverted U does not guarantee symmetry at any particular point.',
+        ],
         skill: '7A Yerkes–Dodson law (application)',
       },
       {
@@ -288,6 +372,12 @@ export const FL6_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The volunteers’ bodily needs were met, yet they generated stimulation for themselves and then left, which is what an organism seeking an intermediate level of arousal does when stimulation falls too low. Drive-reduction theory predicts contentment once physiological needs are satisfied and cannot explain behavior that increases tension. The achievement model concerns choices among tasks judged against a standard and says nothing about seeking sensory stimulation. External regulation by payment might reduce the quality of motivation, but it would not explain whistling and tapping, which were not rewarded.',
+        optionExplanations: [
+          'Drive-reduction theory predicts contentment once physiological needs are satisfied, and the volunteers’ bodily needs were met. It cannot explain behavior that increases tension.',
+          'The achievement model concerns choices among tasks judged against a standard of excellence. It says nothing about seeking sensory stimulation in an empty room.',
+          'External regulation by payment might reduce the quality of motivation, but it would not explain whistling and tapping, which were not rewarded. The behavior was self-generated stimulation.',
+          'The volunteers’ bodily needs were met, yet they generated stimulation for themselves and then left. That is what an organism seeking an intermediate level of arousal does when stimulation falls too low.',
+        ],
         skill: '7A optimal arousal vs drive reduction',
       },
       {
@@ -302,6 +392,12 @@ export const FL6_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Neither student studies because the activity is enjoyable in itself, so both are extrinsically motivated; the first acts to avoid shame, which is introjected regulation, and the second acts on a value he endorses, which is identified regulation and lies further along the continuum of internalization. The theory does not treat all extrinsic motivation as equally controlled, which is the point of the continuum. Pressure that originates inside the person is still pressure and does not make the first student’s motivation intrinsic. Acting on personally held values makes the second student’s motivation autonomous but not intrinsic, because he finds the material dull and studies for a separable outcome.',
+        optionExplanations: [
+          'Neither student studies because the activity is enjoyable in itself, so both are extrinsically motivated. The first acts to avoid shame (introjected regulation); the second acts on a value he endorses (identified regulation), which lies further along the internalization continuum and is more autonomous.',
+          'The theory does not treat all extrinsic motivation as equally controlled; that is the point of the continuum. Introjected regulation is more controlled than identified regulation.',
+          'Pressure that originates inside the person is still pressure and does not make motivation intrinsic. Acting to avoid shame is introjected regulation, a form of extrinsic motivation.',
+          'Acting on personally held values makes the second student’s motivation autonomous but not intrinsic. He finds the material dull and studies for a separable outcome, which is identified regulation.',
+        ],
         skill: '7A self-determination theory: internalization of extrinsic motivation',
       },
       {
@@ -316,6 +412,12 @@ export const FL6_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'A test that almost no one passes lets failure be blamed on the test, which protects a person who is mainly concerned with avoiding the shame of failing, and her remark shows that she uses it in just this way. A person in whom the motive for success dominates would choose the examination that half of students pass, because that outcome is the most uncertain and the most informative; the nearly impossible test is neither. Its outcome is close to certain, not the least certain of the three. Failure on it is the most likely result, not the least likely, so the appeal of the hard test lies in the excuse it provides and not in a low chance of failing.',
+        optionExplanations: [
+          'A person in whom the motive for success dominates would choose the examination that half of students pass, because that outcome is most informative about ability. Choosing the most demanding standard is not the mark of success motivation.',
+          'A test that almost no one passes lets failure be blamed on the test, which protects a person mainly concerned with avoiding the shame of failing. Her remark that no one could have passed shows she uses it in just this way.',
+          'The outcome of the nearly impossible test is close to certain, not the least certain of the three. The test with the most uncertain outcome is the one about half of students pass.',
+          'Failure on the hardest test is the most likely result, not the least likely. The appeal of the hard test lies in the excuse it provides, not in a low chance of failing.',
+        ],
         skill: '7A achievement motivation: task choice',
       },
       {
@@ -325,6 +427,12 @@ export const FL6_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Relatedness is the experience of connection with other people, which matches the third level of Maslow’s hierarchy, the need for affection, acceptance, and membership in groups. Safety needs concern security and protection from harm. Esteem needs concern respect, recognition, and a sense of accomplishment, which resemble the need for competence more than relatedness. Self-actualization is the realization of one’s full potential, the level Maslow placed at the top of the hierarchy.',
+        optionExplanations: [
+          'Safety needs concern security and protection from harm. They do not correspond to the experience of connection with other people.',
+          'Esteem needs concern respect, recognition, and a sense of accomplishment. They resemble the need for competence more than the need for relatedness.',
+          'Relatedness is the experience of connection with other people, which matches Maslow’s need for affection, acceptance, and membership in groups at the love and belonging level.',
+          'Self-actualization is the realization of one’s full potential, the level Maslow placed at the top of the hierarchy. It is not about social connection.',
+        ],
         skill: '7A Maslow’s hierarchy of needs',
       },
     ],
@@ -354,6 +462,12 @@ export const FL6_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'A breakaway group of converts with lay leaders and practices that set it apart from society is a sect, and its later membership by birth, professional clergy, relaxed demands, and cooperation with other bodies it treats as legitimate are the marks of a denomination. It did not begin as a cult, because it split from an established church to restore older teachings and did not introduce novel beliefs. It has not become an ecclesia, which would claim nearly the whole population and be allied with the state. A church becoming a sect would involve rising tension with society, the opposite of the direction described.',
+        optionExplanations: [
+          'A breakaway group of converts with lay leaders and practices that set it apart is a sect. Its later membership by birth, professional clergy, relaxed demands, and cooperation with other bodies it treats as legitimate are the marks of a denomination.',
+          'It did not begin as a cult, because it split from an established church to restore older teachings and did not introduce novel beliefs. Its later state is also not a sect.',
+          'It has not become an ecclesia, which would claim nearly the whole population and be allied with the state. It participates as one body among several, which is a denomination.',
+          'A church becoming a sect would involve rising tension with society and a return to intense demands. The direction described is the opposite: tension decreased and demands relaxed.',
+        ],
         skill: '9B types of religious organizations',
       },
       {
@@ -367,6 +481,12 @@ export const FL6_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The religious-economies model predicts that participation depends on how hard suppliers must work, so among societies that are equally modern, those in which many bodies compete should show more participation than those in which one protected body dominates; the secularization thesis predicts low participation in all of them. Attendance that declines as schooling and income rise is the pattern the secularization thesis expects. Lower attendance among the young than among their grandparents is also consistent with a society growing more secular over time. Higher attendance in rural districts than in industrial cities links religious decline to modernization and again favors the secularization thesis.',
+        optionExplanations: [
+          'Attendance that declines as schooling and income rise is the pattern the secularization thesis expects. It does not support the religious-economies model.',
+          'Lower attendance among the young than among their grandparents is consistent with a society growing more secular over time. It favors the secularization thesis.',
+          'Higher attendance in rural districts than in industrial cities links religious decline to modernization and again favors the secularization thesis.',
+          'The religious-economies model predicts that participation depends on how hard suppliers must work, so among equally modern societies, those with many competing bodies should show more participation than those with one protected body. The secularization thesis predicts low participation in all of them.',
+        ],
         skill: '9B secularization vs religious-economies model (evidence)',
       },
       {
@@ -381,6 +501,12 @@ export const FL6_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'A movement that insists on founding tenets and refuses accommodation with the secular world presupposes a secular world that is pressing on the faith, so fundamentalism is understood as a response to modernization and would have no occasion to arise without it. Fundamentalists read sacred texts literally and resist the scientific outlook; they do not adopt it. The passage places fundamentalism within existing traditions, so its adherents are typically people already affiliated with those traditions. Fundamentalist movements arise in many traditions and settings, not only where a state church has been disestablished.',
+        optionExplanations: [
+          'Fundamentalists read sacred texts literally and resist the scientific outlook; they do not adopt it. The passage describes them as rejecting accommodation with the secular world.',
+          'A movement that insists on founding tenets and refuses accommodation with the secular world presupposes a secular world pressing on the faith. Fundamentalism is a response to modernization and would have no occasion to arise without it.',
+          'The passage places fundamentalism within existing traditions, so its adherents are typically people already affiliated with those traditions, not the previously unaffiliated.',
+          'Fundamentalist movements arise in many traditions and settings, not only where a state church has been disestablished. The passage says they are found within many traditions.',
+        ],
         skill: '9B fundamentalism and modernization',
       },
       {
@@ -394,6 +520,12 @@ export const FL6_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Weber argued that the disciplined, ascetic conduct encouraged by certain Protestant teachings helped bring modern capitalism into being, which makes religious ideas a cause of large-scale social change. Durkheim’s argument that the object of worship represents the society itself belongs to the first position, in which religion is a source of cohesion. Marx’s argument that religion eases the suffering of the disadvantaged belongs to the second position, in which religion reconciles people to inequality. Mead’s account of the generalized other concerns the development of the self through social interaction and is not a theory of religion.',
+        optionExplanations: [
+          'Durkheim’s argument that the object of worship represents the society itself belongs to the first position, in which religion is a source of cohesion through shared ritual.',
+          'Marx’s argument that religion eases the suffering of the disadvantaged belongs to the second position, in which religion reconciles people to inequality by promising compensation.',
+          'Weber argued that the disciplined, ascetic conduct encouraged by certain Protestant teachings helped bring modern capitalism into being. That makes religious ideas a cause of large-scale social change, the third position.',
+          'Mead’s account of the generalized other concerns the development of the self through social interaction. It is not a theory of religion and does not fit any of the three positions.',
+        ],
         skill: '9B religion and social change (Weber)',
       },
     ],
@@ -416,6 +548,12 @@ export const FL6_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'Olfactory receptor neurons project to the olfactory bulb, which sends its output directly to olfactory cortex and limbic structures without first relaying in the thalamus, so smell would be the sense least affected. Auditory signals reach the cortex by way of the medial geniculate nucleus of the thalamus. Visual signals relay in the lateral geniculate nucleus. Pain and touch signals from the hand relay in the ventral posterior nucleus before reaching somatosensory cortex.',
+    optionExplanations: [
+      'Auditory signals reach the cortex by way of the medial geniculate nucleus of the thalamus. A thalamic lesion would interfere with hearing the tone.',
+      'Visual signals relay in the lateral geniculate nucleus of the thalamus. A thalamic lesion would interfere with seeing the flash.',
+      'Pain and touch signals from the hand relay in the ventral posterior nucleus of the thalamus before reaching somatosensory cortex. A thalamic lesion would interfere with feeling the pinprick.',
+      'Olfactory receptor neurons project to the olfactory bulb, which sends output directly to olfactory cortex and limbic structures without first relaying in the thalamus. Smell would be the sense least affected.',
+    ],
     skill: '6A olfactory pathway and the thalamus',
   },
   {
@@ -433,6 +571,12 @@ export const FL6_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'Tokens are secondary (conditioned) reinforcers: they have no value of their own and reinforce behavior only because they have been associated with primary reinforcers such as food, so breaking that association extinguishes their effect. Delivering a token after every session is continuous reinforcement, which maintains the behavior as long as the tokens keep their value. Paper slips that buy the same goods would acquire the same conditioned value as the plastic tokens. Moving the exchange from evening to morning changes the delay only slightly and leaves the association with the backup reinforcers intact.',
+    optionExplanations: [
+      'Tokens are secondary reinforcers with no value of their own; they reinforce behavior only because they have been associated with primary reinforcers such as food. Breaking that association extinguishes their effect.',
+      'Delivering a token after every session is continuous reinforcement, which maintains the behavior as long as the tokens keep their value. It would not weaken them.',
+      'Paper slips that buy the same goods would acquire the same conditioned value as the plastic tokens. The physical form of the token is irrelevant to its reinforcing power.',
+      'Moving the exchange from evening to morning changes the delay only slightly and leaves the association with the backup reinforcers intact. The tokens would still be exchangeable.',
+    ],
     skill: '7A primary vs secondary reinforcers',
   },
   {
@@ -450,6 +594,12 @@ export const FL6_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'A phoneme is the smallest unit of sound that distinguishes one word from another, as the first sounds of “bat” and “pat” do, and a morpheme is the smallest unit that carries meaning, as the plural ending does. Reversing the two terms assigns meaning to a single consonant sound and treats the plural ending as a mere sound. Syntax concerns the rules for ordering words into phrases and sentences, and no change in word order occurs in either example.',
+    optionExplanations: [
+      'This reverses the two terms. It assigns meaning to a single consonant sound and treats the plural ending as a mere sound, when the opposite is true.',
+      'A phoneme is the smallest unit of sound that distinguishes one word from another, as the first sounds of “bat” and “pat” do. A morpheme is the smallest unit that carries meaning, as the plural ending does.',
+      'The phoneme is correct, but syntax concerns the rules for ordering words into phrases and sentences. Adding a plural ending is a morphological change, not a change in word order.',
+      'Both terms are wrong. The first change is a phoneme, not a morpheme, and the second adds a morpheme, not a rule of syntax; no word order is altered in either example.',
+    ],
     skill: '6B language: phonemes vs morphemes',
   },
   {
@@ -462,6 +612,12 @@ export const FL6_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'The reticular formation is a network of neurons in the core of the brainstem whose ascending projections maintain cortical arousal and wakefulness; damage to it can produce coma even when the cortex itself is undamaged. Cerebellar damage impairs coordination and balance without abolishing consciousness. Loss of the dopamine neurons of the substantia nigra impairs the initiation of movement, as in Parkinson disease. Hippocampal damage impairs the formation of new memories in a person who remains awake and alert.',
+    optionExplanations: [
+      'Cerebellar damage impairs coordination and balance without abolishing consciousness. A patient with a cerebellar stroke remains rousable.',
+      'Loss of the dopamine neurons of the substantia nigra impairs the initiation of movement, as in Parkinson disease. It does not abolish wakefulness.',
+      'The reticular formation in the brainstem core has ascending projections that maintain cortical arousal and wakefulness. Damage to it can produce coma even when the cortex itself is structurally intact.',
+      'Hippocampal damage impairs the formation of new memories in a person who remains awake and alert. It does not cause unrousability.',
+    ],
     skill: '6A reticular formation and arousal',
   },
   {
@@ -479,6 +635,12 @@ export const FL6_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'A meritocracy allocates positions by ability and effort, so people of equal measured merit should fare equally whatever their origins; an advantage for those from richer families among adults with identical schooling and test scores shows that family background is being rewarded directly and that mobility is limited by origin. Large differences in income describe the degree of inequality, which a meritocracy can tolerate so long as positions are open to talent. High credentials among top earners and long hours among them are both what a system rewarding ability and effort would be expected to produce.',
+    optionExplanations: [
+      'Large differences in income describe the degree of inequality, which a meritocracy can tolerate so long as positions are open to talent. They do not show that allocation ignores merit.',
+      'High credentials among top earners are what a system rewarding ability would be expected to produce. This is consistent with meritocracy.',
+      'Long hours among top earners are what a system rewarding effort would be expected to produce. This is consistent with meritocracy.',
+      'A meritocracy allocates positions by ability and effort, so people of equal measured merit should fare equally whatever their origins. An advantage for those from richer families among adults with identical schooling and test scores shows family background being rewarded directly.',
+    ],
     skill: '10A meritocracy and social mobility',
   },
   {
@@ -496,6 +658,12 @@ export const FL6_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'A dyad is the most intimate group because each member deals only with the other, but it is also the most fragile, because it ceases to exist if either member withdraws. A triad is more stable: it survives the loss of one member, and a third party can mediate disputes, though coalitions of two against one reduce intimacy. Moving from three members to two therefore increases intimacy while decreasing stability, which rules out each of the other combinations.',
+    optionExplanations: [
+      'A dyad is more intimate but less stable than a triad. It ceases to exist if either member withdraws, so the household has not become more stable.',
+      'A dyad is the most intimate group because each member deals only with the other, but it is also the most fragile, because it ceases to exist if either withdraws. Moving from three to two increases intimacy while decreasing stability.',
+      'This reverses both properties. A triad is more stable than a dyad because it survives the loss of one member, and coalitions in a triad reduce intimacy, so the dyad is more intimate.',
+      'The dyad is less stable, but it is more intimate, not less. With only two members there are no coalitions and each deals directly with the other.',
+    ],
     skill: '9A group size: dyads and triads',
   },
   {
@@ -513,6 +681,12 @@ export const FL6_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'A household of three generations pooling resources is an extended family, and a couple living only with their children is a nuclear family; industrial wage work, which is paid to individuals and requires moving to where the jobs are, favors the smaller unit. The change runs from extended to nuclear, not the reverse, and the new households pool less income across kin, not more. A blended family is formed when partners bring children from earlier unions, which is not described. The couples move together with their children, so the households are not single-parent families.',
+    optionExplanations: [
+      'A household of three generations pooling resources is an extended family, and a couple living only with their children is a nuclear family. Industrial wage work, paid to individuals and requiring relocation to jobs, favors the smaller unit.',
+      'The change runs from extended to nuclear, not the reverse. The new households pool less income across kin, not more, since each couple lives on its own earnings.',
+      'A blended family is formed when partners bring children from earlier unions, which is not described. Migration here does not merge unrelated families.',
+      'The couples move together with their children, so the households are not single-parent families. Migration does not separate husbands from wives in this scenario.',
+    ],
     skill: '9B family forms: nuclear vs extended',
   },
 ]

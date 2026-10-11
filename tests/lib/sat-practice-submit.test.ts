@@ -35,6 +35,7 @@ import {
 import { satSectionScaled, satSectionScaledRouted } from '@/lib/sat-scoring'
 import { gradeSatPractice, normalizeSatResponses } from '@/lib/sat-practice-grading'
 import { satPracticeRows } from '@/lib/sat-practice-rows'
+import { optionKey } from '@/lib/question-key'
 
 type Row = Record<string, unknown>
 
@@ -219,5 +220,13 @@ describe('satPracticeRows', { timeout: 180_000 }, () => {
     // Disciplines are the College Board domains; passage items keep their passage in the key.
     expect(new Set(rows.map((r) => r.discipline))).toContain('Standard English Conventions')
     expect(rows.every((r) => r.courseSlug === 'sat-prep')).toBe(true)
+    // chosenKey: the picked option's text as shown; null for skips and every grid-in.
+    rows.forEach((r, i) => {
+      const it = grade.items[i]
+      const expected = it.question.gridIn || it.selectedIndex === null ? null : optionKey(it.question.options[it.selectedIndex])
+      expect(r.chosenKey ?? null).toBe(expected)
+    })
+    expect(rows.some((r) => r.chosenKey)).toBe(true)
+    expect(rows.some((r, i) => grade.items[i].question.gridIn && r.chosenText && !r.chosenKey)).toBe(true)
   })
 })

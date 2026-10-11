@@ -37,6 +37,12 @@ export const FL4_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Her career commitment was adopted from her parents without exploration, which is foreclosure, while her religious beliefs are being actively explored without commitment, which is moratorium; the passage notes that a person can hold different statuses in different domains at once. Identity achievement requires exploration followed by commitment, and she never considered other careers. Diffusion requires the absence of both exploration and commitment, whereas she is actively exploring religion and firmly committed to a career. Nothing in Marcia’s framework holds that exploration in one domain suspends commitment in the others.',
+        optionExplanations: [
+          'Identity achievement requires exploration followed by commitment. She never considered careers other than her parents’ field, so her occupational commitment was not preceded by exploration, and she has not committed in the religious domain.',
+          'Diffusion requires the absence of both exploration and commitment. She is actively exploring religion and firmly committed to a career, so neither domain fits diffusion.',
+          'Her career commitment was adopted from her parents without exploration, which is foreclosure, while her religious beliefs are being actively explored without commitment, which is moratorium. The passage notes that a person can hold different statuses in different domains at once.',
+          'Nothing in Marcia’s framework holds that exploration in one domain suspends commitment in the others. The passage explicitly says a person can occupy different statuses in different domains at the same time.',
+        ],
         skill: '8A identity statuses (Marcia)',
       },
       {
@@ -51,6 +57,12 @@ export const FL4_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Knowing that she will become a woman shows gender stability across time, but believing that a costume and wig change her friend’s gender shows that she lacks constancy across superficial changes, the typical pattern at age 4. Constancy is the last of the three steps and cannot be present while stability is absent. She clearly sorts people by gender, assigning the costumed friend to a category on the basis of appearance, so a gender schema is present. She uses the labels “woman” and “boy” correctly, so basic gender identity is already in place.',
+        optionExplanations: [
+          'Knowing she will become a woman shows gender stability across time, but believing that a costume and wig change her friend’s gender shows she lacks constancy across superficial changes, the typical pattern at age 4.',
+          'Constancy is the last of Kohlberg’s three steps and cannot be present while stability is absent. Moreover, she clearly has stability (she knows she will be a woman) and clearly lacks constancy (the costume changes gender).',
+          'She clearly sorts people by gender, assigning the costumed friend to a category on the basis of appearance. A gender schema is present; what she lacks is the understanding that gender survives superficial changes.',
+          'She uses the labels “woman” and “boy” correctly, so basic gender identity, the first of Kohlberg’s steps, is already in place. Her error concerns constancy, not labeling.',
+        ],
         skill: '8A gender identity development',
       },
       {
@@ -65,6 +77,12 @@ export const FL4_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The arrival of the recipient is an environmental cue that prompts the intended action, so this task requires little self-initiated processing and should show the smallest age deficit. Taking a pill at a set time with no reminder requires the person to monitor the time and initiate the action unaided, which Craik’s account predicts older adults will find especially difficult. Retelling a film without prompts and listing the names of new acquaintances are both forms of free recall, which provide no retrieval support and show larger age deficits.',
+        optionExplanations: [
+          'Taking a pill at a set time with no reminder requires the person to monitor the time and initiate the action unaided. Craik’s account predicts older adults will find such self-initiated tasks especially difficult.',
+          'Retelling a film without prompts is free recall with no retrieval support, which the passage says shows larger age deficits than recognition. This task demands self-initiated processing.',
+          'Listing names of people met the night before is free recall of recent episodic memory, which declines with age and offers no environmental cues to support retrieval.',
+          'The arrival of the recipient is an environmental cue that prompts the intended action, so this task requires little self-initiated processing. Craik’s account predicts the smallest age deficit when the environment provides such support.',
+        ],
         skill: '6B cognitive aging: environmental support',
       },
       {
@@ -79,6 +97,12 @@ export const FL4_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'A cross-sectional study confounds age with cohort: older participants grew up with less education and different experiences than younger ones, so part of the apparent age difference is a cohort effect, which makes cross-sectional declines look steeper. Longitudinal studies can measure any ability, including episodic memory and speed, so they are not limited to semantic memory. Retesting the same people is the defining feature of longitudinal, not cross-sectional, designs. Comparing different people at one time describes the cross-sectional design, not the longitudinal one.',
+        optionExplanations: [
+          'Longitudinal studies can measure any ability, including episodic memory and processing speed, which do decline. They are not limited to semantic memory, and the design difference does not lie in what is measured.',
+          'A cross-sectional study confounds age with cohort: older participants grew up with less education and different experiences than younger ones. Part of the apparent age difference is a cohort effect, making cross-sectional declines look steeper.',
+          'Retesting the same people is the defining feature of longitudinal, not cross-sectional, designs. Practice effects could make longitudinal declines look smaller, but this option attributes the retesting to the wrong design.',
+          'Comparing different people at one time describes the cross-sectional design. Longitudinal studies follow the same people, so this reverses the two designs.',
+        ],
         skill: '6B research design: cohort effects',
       },
     ],
@@ -119,6 +143,12 @@ export const FL4_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The gap was 40 − 8 = 32 points for the 1950 cohort and 66 − 24 = 42 points for the 1990 cohort, so it grew in absolute terms, while the ratio fell from 40/8 = 5 to 66/24 ≈ 2.75. The gap in points did not shrink or hold steady; it widened by 10 points. The ratio did not grow; children without a degree-holding parent tripled their rate while the others’ rate rose by about two-thirds, so their relative disadvantage narrowed.',
+        optionExplanations: [
+          'The gap was 40 − 8 = 32 points for the 1950 cohort and 66 − 24 = 42 points for the 1990 cohort, so it grew in absolute terms. The ratio fell from 40/8 = 5 to 66/24 ≈ 2.75, so the relative disadvantage narrowed.',
+          'The gap in percentage points did not shrink; it widened from 32 to 42 points. And the ratio fell from 5 to about 2.75 rather than rising, so both directions are reversed here.',
+          'The point gap did grow, but the ratio did not. Children without a degree-holding parent tripled their rate (8% to 24%) while the others rose by about two-thirds (40% to 66%), so the ratio fell from 5 to about 2.75.',
+          'The point gap did not hold steady; it widened by 10 points from 32 to 42. The ratio part is right, but the absolute gap grew rather than staying constant.',
+        ],
         skill: '10A data interpretation: absolute vs relative gaps',
       },
       {
@@ -133,6 +163,12 @@ export const FL4_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Exchange mobility leaves the number of positions unchanged, so some people’s gains must be offset by others’ losses; when completion rises in both groups at once, total attainment has expanded, which is the signature of structural mobility, here driven by the growth in college places. A rise among children of non-graduates alone could in principle be offset by a fall among children of graduates, so by itself it cannot rule out exchange. A widening point gap and a falling ratio describe the relation between the groups, which bears on relative mobility rather than on whether the total number of positions grew.',
+        optionExplanations: [
+          'A rise among children of non-graduates alone could in principle be offset by a fall among children of graduates, which would be exchange mobility. By itself, one group’s gain cannot rule out circulation.',
+          'Exchange mobility leaves the number of positions unchanged, so some people’s gains must be offset by others’ losses. When completion rises in both groups at once, total attainment has expanded, which is the signature of structural mobility driven by the growth in college places.',
+          'A widening point gap describes the relation between the two groups, which bears on relative mobility. It says nothing about whether the total number of degree positions grew, which is what distinguishes structural from exchange mobility.',
+          'A falling ratio describes the relation between the groups and bears on relative mobility. It does not by itself show that total attainment expanded, which is what structural mobility requires.',
+        ],
         skill: '10A structural vs exchange mobility',
       },
       {
@@ -147,6 +183,12 @@ export const FL4_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Families who left the panel had lower incomes, and lower-income children are less likely to complete college, so the remaining sample for the 1990 cohort is probably advantaged and its completion rate overstated; this selective attrition bears most heavily on the latest cohort and on children of non-graduates. Classifying by the more educated parent is a consistent rule applied to every cohort and does not bias one value. Children who never enroll are counted as non-completers, not omitted. The value of a degree to employers concerns the occupational payoff of degrees, not the accuracy of the completion rate.',
+        optionExplanations: [
+          'Classifying by the more educated parent is a consistent rule applied to every cohort. It does not bias the 1990 value in particular, and it does not threaten accuracy in the way selective attrition does.',
+          'Children who never enroll are counted as non-completers at age 30, not omitted. Measuring at 30 may miss late completers, but that applies to every cohort and does not single out the 1990 non-graduate value.',
+          'Families who left the panel had lower incomes, and lower-income children are less likely to complete college. The remaining 1990 sample is probably advantaged and its completion rate overstated, with the bias falling hardest on children of non-graduates.',
+          'The value of a degree to employers concerns the occupational payoff of degrees, not the accuracy of the completion rate. Credential inflation is a separate issue from measurement error in the panel.',
+        ],
         skill: '10A research design: selective attrition',
       },
       {
@@ -161,6 +203,12 @@ export const FL4_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'As degrees became far more common and more jobs began listing them as requirements, the share of degree holders reaching professional or managerial jobs fell from 72% to 55%, indicating that a degree came to buy less occupational standing, a pattern often called credential inflation. Comparing people born in different years is a comparison across cohorts, not a change within anyone’s lifetime, so it does not show intragenerational mobility. The occupational data are not broken down by parental education, and Figure 1 shows the ratio between the groups narrowing, so they cannot show a decline in relative mobility. Nothing in these data shows the total number of positions holding constant, which exchange mobility requires.',
+        optionExplanations: [
+          'Nothing in these data shows the total number of positions holding constant, which exchange mobility requires. The passage states that college places tripled and degree-requiring jobs rose, so structural change continued.',
+          'Comparing people born in 1950 with people born in 1980 is a comparison across cohorts, not a change within anyone’s lifetime. Intragenerational mobility requires following the same individuals over time.',
+          'The occupational data are not broken down by parental education, and Figure 1 shows the ratio between the groups narrowing. Nothing here demonstrates a decline in relative mobility for children of non-graduates.',
+          'As degrees became far more common and more jobs began listing them as requirements, the share of degree holders reaching professional or managerial jobs fell from 72% to 55%. A degree came to buy less occupational standing, a pattern often called credential inflation.',
+        ],
         skill: '10A credential inflation and occupational attainment',
       },
     ],
@@ -186,6 +234,12 @@ export const FL4_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The man has no bodily symptoms at all, and his distress centers on the conviction that he has a serious illness despite normal findings, which is the defining pattern of illness anxiety disorder. Somatic symptom disorder requires distressing bodily symptoms to which the person responds excessively, and he has none. Conversion disorder requires altered motor or sensory function, which is absent. Factitious disorder requires deliberately producing or faking symptoms, whereas he sincerely believes he is ill and has fabricated nothing.',
+        optionExplanations: [
+          'Somatic symptom disorder requires one or more distressing bodily symptoms to which the person responds excessively. The man has no physical complaints at all, so this diagnosis does not fit.',
+          'Conversion disorder requires symptoms of altered motor or sensory function, such as weakness or loss of sensation. The man has no such symptoms; his problem is a conviction about illness.',
+          'Factitious disorder requires deliberately producing or faking symptoms. The man sincerely believes he has a tumor and has fabricated nothing; his scans are genuine requests driven by worry.',
+          'The man has no bodily symptoms, and his distress centers on the conviction that he has a serious illness despite normal findings. Preoccupation with having an illness in the absence of symptoms is the defining pattern of illness anxiety disorder.',
+        ],
         skill: '7A somatic symptom and related disorders',
       },
       {
@@ -200,6 +254,12 @@ export const FL4_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Deliberately producing illness while concealing it, with no external incentive beyond being treated as a patient, is factitious disorder. Malingering also involves deliberate production of symptoms, but it requires an external incentive such as money or escape from work, and none is present. Conversion disorder involves symptoms that are not intentionally produced, whereas hers are self-induced. Somatic symptom disorder involves genuine symptoms and an excessive response to them, not fabricated illness.',
+        optionExplanations: [
+          'Malingering also involves deliberate production of symptoms, but it requires an external incentive such as money or escape from work. She gains nothing beyond medical care and attention, so no external incentive is present.',
+          'Deliberately producing illness while concealing it, with no external incentive beyond being treated as a patient, is factitious disorder. The passage distinguishes it from malingering precisely by the absence of obvious external reward.',
+          'Conversion disorder involves symptoms that are not intentionally produced and that are incompatible with neurological disease. Her hypoglycemia is self-induced by insulin, which is a real and deliberately caused condition.',
+          'Somatic symptom disorder involves genuine symptoms and an excessive response to them, not fabricated illness. She is not responding excessively to a symptom; she is secretly creating one.',
+        ],
         skill: '7A factitious disorder vs malingering',
       },
       {
@@ -209,6 +269,12 @@ export const FL4_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Patient I shows a long-standing disregard for the rights of others with deceit and lack of remorse, the pattern of antisocial personality disorder, and patient II shows the instability of relationships, identity, and impulse control that characterizes borderline personality disorder; both are Cluster B disorders. Patient III shows an excessive need to be taken care of and difficulty deciding without reassurance, which is dependent personality disorder, a Cluster C (anxious or fearful) disorder. Any option that includes III is therefore wrong, and any that omits I or II is incomplete.',
+        optionExplanations: [
+          'Patient I shows long-standing disregard for others with deceit and lack of remorse (antisocial), and patient II shows unstable relationships, shifting self-image, and impulsive self-harm (borderline). Both are Cluster B disorders. Patient III shows dependent personality disorder, which is Cluster C.',
+          'Patient III, who cannot decide without reassurance and dreads being left to care for himself, shows dependent personality disorder, a Cluster C (anxious or fearful) disorder. Including III and omitting II is doubly wrong.',
+          'Patient III has a Cluster C disorder, not Cluster B. This option also omits patient I, whose deceit, theft, and lack of remorse since adolescence fit antisocial personality disorder, a Cluster B disorder.',
+          'Patients I and II are Cluster B, but patient III’s excessive need to be cared for and difficulty deciding alone is dependent personality disorder, which belongs to Cluster C. Including III makes this option wrong.',
+        ],
         skill: '7A personality disorder clusters',
       },
       {
@@ -223,6 +289,12 @@ export const FL4_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'If diagnoses surge after a cultural portrayal and cluster among a handful of clinicians, suggestion from media and from therapists becomes a plausible cause, which is what the sociocognitive model predicts and the trauma model does not. A high rate of reported childhood abuse is the pattern the trauma model predicts. Differences in brain activity between personality states show that the states differ but not how they arose, so they do not favor either model. Memory gaps tied to alternate states are part of the disorder’s definition and are expected under both accounts.',
+        optionExplanations: [
+          'A high rate of reported childhood abuse among patients is the pattern the trauma model predicts. It supports the trauma model rather than the sociocognitive model.',
+          'Differences in brain activity between personality states show that the states differ but not how they arose. Both models could accommodate this finding, so it does not favor either one.',
+          'If diagnoses surge after a cultural portrayal and cluster among a handful of clinicians, suggestion from media and from therapists becomes a plausible cause. This is exactly what the sociocognitive model predicts and the trauma model does not.',
+          'Memory gaps tied to periods when another personality state was in control are part of the disorder’s definition and are expected under both accounts. They do not distinguish between the models.',
+        ],
         skill: '7A dissociative identity disorder: competing models',
       },
       {
@@ -237,6 +309,12 @@ export const FL4_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The biopsychosocial model treats illness as the product of interacting biological, psychological, and social factors, so the physician would continue medical care while also addressing stress, the patient’s beliefs about the pain, and the responses of the people around the patient. Searching for a hidden lesion and attributing the pain to a chemical imbalance both locate the cause in a single biological abnormality, which is the biomedical model. Treating the pain as purely psychological and imagined replaces one single-cause account with another and ignores the biological contribution the model retains.',
+        optionExplanations: [
+          'Searching for a hidden lesion locates the cause in a single biological abnormality, which is the biomedical model. After two years of negative examinations, further imaging reflects the assumption that a tissue cause must exist.',
+          'Treating the pain as purely psychological and imagined replaces one single-cause account with another. The biopsychosocial model retains the biological contribution and does not dismiss the pain as unreal.',
+          'Attributing the pain to a chemical imbalance locates the cause in a single biological abnormality, which is the biomedical model. An antidepressant might be part of a broader plan, but this reasoning is not biopsychosocial.',
+          'The biopsychosocial model treats illness as the product of interacting biological, psychological, and social factors. The physician would continue medical care while also addressing stress, the patient’s beliefs about the pain, and the responses of the people around the patient.',
+        ],
         skill: '7A biomedical vs biopsychosocial models',
       },
     ],
@@ -267,6 +345,12 @@ export const FL4_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Equal-status cooperation raised ratings by 23 points by the last day and still by 18 points after six months, whereas unequal-status cooperation raised them by 7 points and only 2 points at six months. Contact did not uniformly help: mere contact changed ratings by 1 to 2 points, and competition lowered them. Cross-school friendships were nearly twice as common with equal status (58%) as with unequal status (30%). Competition lowered ratings by 14 points, fewer than the 23 points that equal-status cooperation added.',
+        optionExplanations: [
+          'Contact did not uniformly help. Mere contact changed ratings by only 1 to 2 points, and competition lowered them from 45 to 31. Only cooperative contact produced a lasting rise.',
+          'Equal-status cooperation raised ratings by 23 points by the last day and still by 18 points after six months, whereas unequal-status cooperation raised them by 7 points and only 2 points at six months. Equal status produced the largest and most durable gains.',
+          'Cross-school friendships were nearly twice as common with equal status (58%) as with unequal status (30%). The two cooperation conditions differed substantially on this measure.',
+          'Competition lowered ratings by 14 points (45 to 31), fewer than the 23 points that equal-status cooperation added (44 to 67). The cooperative gain exceeded the competitive loss.',
+        ],
         skill: '8B data interpretation: contact conditions',
       },
       {
@@ -280,6 +364,12 @@ export const FL4_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Realistic conflict theory, the account Sherif’s work supports, holds that competition between groups for scarce resources that only one side can obtain generates hostility, matching the 14-point drop when single-school teams competed for prizes. The mere-exposure effect predicts that familiarity increases liking, the opposite of what happened. The just-world hypothesis concerns blaming victims for their misfortune and would not predict hostility from both schools regardless of who lost. Dissonance over effort spent would enhance attachment to one’s own team’s goals but does not explain derogation of the rival school.',
+        optionExplanations: [
+          'The mere-exposure effect predicts that repeated contact increases liking. Ratings in the competition condition fell by 14 points despite daily contact, the opposite of what mere exposure would predict.',
+          'The just-world hypothesis concerns blaming victims for their misfortune. It would not predict hostility from both schools regardless of who won or lost, and the drop was in ratings of the rival school as a group.',
+          'Realistic conflict theory, the account Sherif’s work supports, holds that competition between groups for scarce resources that only one side can obtain generates hostility. The 14-point drop when single-school teams competed for prizes matches this prediction.',
+          'Dissonance over effort spent would enhance attachment to one’s own team’s goals, but it does not explain derogation of the rival school. The drop in ratings of the other school is an intergroup effect, not self-justification.',
+        ],
         skill: '8B realistic conflict theory',
       },
       {
@@ -294,6 +384,12 @@ export const FL4_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'If one school always supplied the leaders, any effect of holding or lacking the leader role would be inseparable from differences between the schools, such as their initial attitudes or academic preparation; randomizing leadership by team balances such differences across the two roles. A coin flip is blind to skill, so it cannot select the most capable students. Nothing about a random draw makes the status difference seem more deserved. The number of possible cross-school friendships is fixed by team composition, two from each school, not by who leads.',
+        optionExplanations: [
+          'If one school always supplied the leaders, any effect of holding or lacking the leader role would be inseparable from differences between the schools, such as initial attitudes or academic preparation. Randomizing leadership by team balances such differences across the two roles.',
+          'A coin flip is blind to skill, so it cannot select the most capable students as leaders. The procedure was designed to be arbitrary, not to identify the strongest science students.',
+          'Nothing about a random draw makes the status difference seem more deserved. If anything, students might see a coin flip as arbitrary; the purpose was methodological balance, not perceived legitimacy.',
+          'The number of possible cross-school friendships is fixed by team composition, two from each school, regardless of who leads. The coin flip did not affect how many cross-school teammates each student had.',
+        ],
         skill: '8B research design: counterbalancing',
       },
       {
@@ -308,6 +404,12 @@ export const FL4_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Giving each member of a mixed group an indispensable piece of a shared task, as in the jigsaw classroom, reproduces the equal-status cooperation condition, with interdependence, a common goal, and equal standing, which produced the largest and most durable gains. Shared seating without a joint task corresponds to mere contact, which changed ratings very little. Contests between single-group teams correspond to the competition condition, which worsened ratings. Tutoring by one group places members of the other group in a subordinate role, like the unequal-status condition, which produced only small, short-lived gains.',
+        optionExplanations: [
+          'Shared seating without a joint task corresponds to the mere-contact condition, in which students lived and ate together but worked separately. That condition changed ratings by only 1 to 2 points.',
+          'Contests between single-group teams correspond to the competition condition, which worsened ratings by 14 points and nearly eliminated cross-group friendships. This practice would increase tension.',
+          'Tutoring by one group places members of the other group in a subordinate role, like the unequal-status condition. That condition produced only small, short-lived gains and friendships described as exceptions.',
+          'Giving each member of a mixed group an indispensable piece of a shared task, as in the jigsaw classroom, reproduces the equal-status cooperation condition with interdependence, a common goal, and equal standing. That condition produced the largest and most durable gains.',
+        ],
         skill: '8B contact hypothesis: superordinate goals',
       },
       {
@@ -322,6 +424,12 @@ export const FL4_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Describing a friend as an exception is subtyping: the liked individual is set apart from the category, so positive feelings do not transfer to the group, which fits the unequal-status condition’s 30% friendship rate alongside a six-month rating only 2 points above baseline. The remarks describe friends as exceptions, so they cannot explain why friendships were more common than under mere contact. Last-day ratings in the unequal-status condition (52) were higher, not lower, than in the competition condition (31). Similar first-day ratings reflect random assignment, not anything students said at the end of the program.',
+        optionExplanations: [
+          'The remarks describe friends as exceptions to the group, so they cannot explain why friendships were more common than under mere contact. The friendship rate is better explained by the cooperative task itself.',
+          'Last-day ratings in the unequal-status condition (52) were higher, not lower, than in the competition condition (31). This option misreads Table 1.',
+          'Describing a friend as an exception is subtyping: the liked individual is set apart from the category, so positive feelings do not transfer to the group. This fits the unequal-status condition’s 30% friendship rate alongside a six-month rating only 2 points above baseline.',
+          'Similar first-day ratings across conditions reflect random assignment before the program began. Remarks made in interviews at the end of the program cannot explain ratings collected on the first day.',
+        ],
         skill: '8B subtyping and the generalization of contact',
       },
     ],
@@ -347,6 +455,12 @@ export const FL4_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'A group once defined by religion came to be treated as possessing fixed, inherited traits, so that even those who abandoned the religion remained in the category; that transformation of a cultural category into a racial one is racialization. Symbolic ethnicity is a voluntary, low-cost attachment to heritage, whereas this classification was imposed and could not be shed. Cultural assimilation is a minority’s adoption of the dominant culture, which is not described. Amalgamation involves groups blending through intermarriage into a new group, the opposite of the sharpened boundary here.',
+        optionExplanations: [
+          'A group once defined by religion came to be treated as possessing fixed, inherited traits, so that even those who abandoned the religion remained in the category. That transformation of a cultural category into a racial one is racialization.',
+          'Symbolic ethnicity is a voluntary, low-cost attachment to heritage that places few demands on daily life. The classification here was imposed by newspapers and laws and could not be shed, the opposite of voluntary.',
+          'Cultural assimilation is a minority group’s adoption of the dominant group’s language, values, and behavior. Nothing in the scenario describes the minority adopting the dominant culture; it describes how outsiders redefined the minority.',
+          'Amalgamation involves groups intermarrying and blending into a new group unlike the originals. The scenario describes a boundary being sharpened and made hereditary, the opposite of blending.',
+        ],
         skill: '9B racialization',
       },
       {
@@ -361,6 +475,12 @@ export const FL4_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Adopting the dominant group’s language, tastes, and values is cultural assimilation, while continued exclusion from its networks, clubs, and neighborhoods means structural assimilation has not followed, which is exactly the gap Gordon said could open between the two. The reverse combination misreads which dimension has occurred. Amalgamation requires intermarriage producing a new blended culture, which is not described. Pluralism would involve retaining a distinct culture, whereas these children have largely adopted the dominant one.',
+        optionExplanations: [
+          'This reverses which dimension has occurred. The children have adopted the dominant culture (cultural assimilation) but have not entered its institutions and networks (structural assimilation), not the other way around.',
+          'Amalgamation requires intermarriage producing a new blended group and culture, which is not described. The children have adopted the dominant culture rather than blending with it into something new.',
+          'Adopting the dominant group’s language, tastes, and values is cultural assimilation, while continued exclusion from its networks, clubs, and neighborhoods means structural assimilation has not followed. This is exactly the gap Gordon said could open between the two.',
+          'Pluralism would involve retaining a distinct culture while participating as equals in shared institutions. These children have largely adopted the dominant culture, and they are excluded from, not equal participants in, its institutions.',
+        ],
         skill: '9B cultural vs structural assimilation',
       },
       {
@@ -375,6 +495,12 @@ export const FL4_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Racial formation theory holds that racial categories are made and remade through political projects of governments and movements; a census redefining its categories in response to organized lobbying shows exactly such a project changing the categories themselves. Gradual variation in visible traits and the distribution of genetic variation support the general claim that race is not a biological division, but neither shows that political processes shape the categories. Celebrating ancestral holidays while marrying out describes symbolic ethnicity rather than the political construction of race.',
+        optionExplanations: [
+          'Gradual variation in visible traits across regions supports the general claim that race is not a discrete biological division. It does not show that political processes shape the categories, which is the specific claim of racial formation theory.',
+          'Racial formation theory holds that racial categories are made and remade through political projects of governments and movements. A census redefining its categories in response to organized lobbying shows exactly such a project changing the categories themselves.',
+          'Celebrating ancestral holidays while marrying outside the group describes symbolic ethnicity, a voluntary and low-demand attachment to heritage. It concerns ethnic identity, not the political construction of racial categories.',
+          'The distribution of genetic variation within rather than between socially defined races supports the claim that race is a social construct. It does not demonstrate that political projects create and transform racial categories.',
+        ],
         skill: '9B race as a social construct: racial formation',
       },
       {
@@ -389,6 +515,12 @@ export const FL4_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The straight-line model linked prosperity to fuller assimilation, implying that getting ahead means leaving ethnic ties behind; a woman who has entered a professional occupation while keeping her ethnic language and congregation shows that advancement and retained ties can go together, the path segmented assimilation describes. The distinction between race and ethnicity is not at issue in her case. Her case does not bear on whether cultural assimilation can precede structural assimilation, since she has entered a professional workplace. The availability of symbolic ethnicity to visibly unmarked groups concerns a different question, and her active ethnic ties are more than symbolic.',
+        optionExplanations: [
+          'The distinction between race and ethnicity is not at issue in her case. Her situation concerns the relationship between economic advancement and ethnic ties, not whether categories rest on physical traits or culture.',
+          'Her case does not bear on whether cultural assimilation can precede structural assimilation. She has entered a professional workplace, so structural assimilation has occurred; the question is whether she abandoned ethnic ties to do so.',
+          'The availability of symbolic ethnicity to visibly unmarked groups concerns a different question. Her active ethnic ties, attending services and speaking the language, are more than symbolic, so her case does not test that claim.',
+          'The straight-line model linked prosperity to fuller assimilation, implying that getting ahead means leaving ethnic ties behind. A woman who became a hospital pharmacist while keeping her ethnic language and congregation shows advancement and retained ties can go together, the path segmented assimilation describes.',
+        ],
         skill: '9B segmented assimilation',
       },
     ],
@@ -411,6 +543,12 @@ export const FL4_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'Gate-control theory holds that activity in large-diameter touch and pressure fibers excites inhibitory interneurons in the dorsal horn of the spinal cord, closing the “gate” on signals from small pain fibers before they ascend to the brain. Rubbing does not deplete substance P, the transmitter released by nociceptors; depletion occurs with agents such as capsaicin. Endorphins act mainly on opioid receptors in the central nervous system, not on the injured tissue. Habituation is a gradual decline in response to a repeated stimulus, whereas the relief from rubbing is immediate and depends on a second, different input.',
+    optionExplanations: [
+      'Rubbing does not deplete substance P, the transmitter released by nociceptors. Depletion occurs with agents such as capsaicin applied over time, not with brief mechanical stimulation.',
+      'Gate-control theory holds that activity in large-diameter touch and pressure fibers excites inhibitory interneurons in the dorsal horn of the spinal cord, closing the “gate” on signals from small pain fibers before they ascend to the brain.',
+      'Endorphins act mainly on opioid receptors in the central nervous system, not on the injured tissue itself. Gate-control theory locates the relief in spinal inhibition driven by touch input, not in peripheral endorphin release.',
+      'Habituation is a gradual decline in response to a repeated stimulus. The relief from rubbing is immediate and depends on a second, different input competing at the spinal level, which is gating, not habituation.',
+    ],
     skill: '6A gate-control theory of pain',
   },
   {
@@ -428,6 +566,12 @@ export const FL4_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'The therapist is using backward chaining: separate responses are linked so that each step sets the occasion for the next and the whole sequence ends in reinforcement, whereas shaping reinforces successive approximations to one target behavior. Reinforcing approximations to a single response is the definition of shaping itself, not what sets this procedure apart. The reward is added, so the procedure uses positive reinforcement. Reinforcement is delivered each time the chain is completed, not after an unpredictable number of responses.',
+    optionExplanations: [
+      'The reward is added when the sequence is completed, so the procedure uses positive reinforcement. Negative reinforcement would involve removing an aversive stimulus, which is not described.',
+      'Reinforcing successive approximations to a single target response is the definition of shaping itself. This describes what shaping does, not what distinguishes the chaining procedure from it.',
+      'Reinforcement is delivered each time the chain is completed, which is continuous reinforcement. No variable-ratio schedule is described, and the schedule is not what distinguishes chaining from shaping.',
+      'The therapist is using backward chaining: separate responses are linked so that each step sets the occasion for the next and the whole sequence ends in reinforcement. Shaping instead reinforces successive approximations to one target behavior.',
+    ],
     skill: '7C shaping and chaining',
   },
   {
@@ -440,6 +584,12 @@ export const FL4_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'A mental set is the tendency to keep applying a strategy that has worked before even when a new problem calls for a different approach, which is why the technician keeps restarting the machine. Functional fixedness is the inability to see an object as usable for anything other than its customary function, which is not at issue. Belief perseverance is holding a belief after the evidence for it has been discredited, whereas he never processed the contrary evidence. Confirmation bias is seeking or favoring evidence that supports a hypothesis, and he is not evaluating evidence at all.',
+    optionExplanations: [
+      'A mental set is the tendency to keep applying a strategy that has worked before even when a new problem calls for a different approach. The technician keeps restarting the machine because that has worked in the past.',
+      'Functional fixedness is the inability to see an object as usable for anything other than its customary function. The technician is not failing to repurpose an object; he is repeating a familiar strategy.',
+      'Belief perseverance is holding a belief after the evidence for it has been discredited. The technician never processed the contrary evidence (the warning light), so he is not clinging to a belief despite disconfirmation.',
+      'Confirmation bias is seeking or favoring evidence that supports a hypothesis. The technician is not evaluating evidence at all; he is mechanically repeating a previously successful action.',
+    ],
     skill: '6B problem solving: mental set',
   },
   {
@@ -456,6 +606,12 @@ export const FL4_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'Coordination of rapid, skilled movement depends mainly on the cerebellum and motor cortex, not the hypothalamus. The hypothalamus contains the suprachiasmatic nucleus, which sets circadian sleep–wake rhythms; it serves as the body’s thermostat; and it detects blood osmolarity, drives thirst, and produces antidiuretic hormone, which controls urine output. A hypothalamic tumor could therefore disrupt each of the other three functions directly.',
+    optionExplanations: [
+      'The hypothalamus contains the suprachiasmatic nucleus, which sets circadian sleep–wake rhythms. A hypothalamic tumor could directly disrupt the daily cycle of sleep and wakefulness.',
+      'The hypothalamus serves as the body’s thermostat, detecting blood temperature and coordinating heat conservation and loss. A tumor there could directly disrupt temperature regulation.',
+      'Coordination of rapid, skilled movement depends mainly on the cerebellum and motor cortex, not the hypothalamus. A tumor confined to the hypothalamus would not directly disrupt this function.',
+      'The hypothalamus detects blood osmolarity, drives thirst, and produces antidiuretic hormone, which controls urine output. A tumor there could directly disrupt the balance between thirst and urine output.',
+    ],
     skill: '7A hypothalamic functions',
   },
   {
@@ -473,6 +629,12 @@ export const FL4_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'Affiliation, identifying with a denomination, barely changed, while religiosity, the intensity of religious belief and practice shown in attendance and prayer, fell sharply. The reverse description inverts the two measures. Movement toward sects would show up as changes in which groups people name, not as lower participation among those still affiliated. Fundamentalism involves a stricter return to traditional practice, which would raise rather than lower attendance and prayer.',
+    optionExplanations: [
+      'Affiliation, identifying with a denomination, barely changed (82% to 78%), while religiosity, the intensity of belief and practice shown in attendance and prayer, fell sharply (55% to 30%). The decline in religiosity is steeper.',
+      'Movement toward sects would show up as changes in which groups people name, not as lower participation among those still affiliated. The data show stable affiliation with declining practice.',
+      'Fundamentalism involves a stricter return to traditional practice, which would raise rather than lower attendance and prayer. The sharp drop in practice is the opposite of a fundamentalist rise.',
+      'This inverts the two measures. Affiliation declined by only 4 points while attendance fell by 25 points, so the decline in religiosity, not affiliation, is the steeper one.',
+    ],
     skill: '9B religiosity vs religious affiliation',
   },
   {
@@ -490,6 +652,12 @@ export const FL4_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'The two explanations differ in timing: if the neighborhoods were already disproportionately low-income and minority when the facilities were sited, siting decisions targeted them, a core environmental-justice concern, whereas if they became so only afterward, market-driven moves followed the facilities. Asthma rates bear on the health consequences of exposure, not on the order of events. The number of facilities built per decade says nothing about who lived nearby at the time. Current attitudes cannot reveal the demographic history of the neighborhoods.',
+    optionExplanations: [
+      'Asthma rates bear on the health consequences of exposure, not on the order of events. They cannot tell whether facilities were placed in already-disadvantaged neighborhoods or whether residents moved in afterward.',
+      'The number of facilities built per decade says nothing about who lived near each site at the time of siting. It describes the pace of construction, not the demographic sequence.',
+      'Current attitudes cannot reveal the demographic history of the neighborhoods. Whether residents resent the facilities does not indicate whether they lived there before or after siting.',
+      'The two explanations differ in timing. If neighborhoods were already disproportionately low-income and minority when facilities were sited, siting decisions targeted them; if they became so only afterward, market-driven moves followed the facilities.',
+    ],
     skill: '10A environmental justice: research design',
   },
   {
@@ -507,6 +675,12 @@ export const FL4_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'Role exit is the process of disengaging from a role central to one’s identity, and its final stage involves building an ex-role identity in which the former role continues to shape how the person sees himself and how others treat him, as when colleagues and students still respond to him as a former officer. Role strain involves conflicting demands within a single role, which is not described. Role conflict requires holding two roles at once, but he no longer holds the police role. Anticipatory socialization prepares a person for a role he expects to enter, and nothing suggests he plans to return.',
+    optionExplanations: [
+      'Role strain involves conflicting demands within a single role. The man’s situation is not about competing demands of teaching; it is about a former role continuing to shape his identity and how others treat him.',
+      'Role exit is the process of disengaging from a role central to one’s identity, and its final stage involves building an ex-role identity in which the former role continues to shape self-perception and treatment by others, as when colleagues and students still respond to him as a former officer.',
+      'Role conflict requires holding two roles at once with incompatible demands. He no longer holds the police role; he left the force years ago, so there is no simultaneous occupancy.',
+      'Anticipatory socialization prepares a person for a role he expects to enter. Nothing suggests he plans to return to police work; the “former cop” identity looks backward, not forward.',
+    ],
     skill: '9A role exit',
   },
 ]

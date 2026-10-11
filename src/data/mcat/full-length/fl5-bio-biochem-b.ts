@@ -47,6 +47,12 @@ export const FL5_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Infant C’s curve is a straight line rising 300 μmol/L for every 10 mg/kg/day: 150 μmol/L at 20 mg/kg/day and 450 μmol/L at 30 mg/kg/day. The treatment target of 360 μmol/L is crossed at about 27 mg/kg/day, so of the intakes listed only 25 mg/kg/day keeps the infant below target. At 35 mg/kg/day the curve predicts about 600 μmol/L, at 45 mg/kg/day about 900 μmol/L, and at 55 mg/kg/day about 1,200 μmol/L, all well above the target. Infant M, with residual enzyme, would tolerate roughly 45 mg/kg/day, but the question concerns infant C.',
+        optionExplanations: [
+          'Infant C’s curve rises 300 μmol/L per 10 mg/kg/day, from 150 μmol/L at 20 mg/kg/day to 450 μmol/L at 30, so the 360 μmol/L target is crossed at about 27 mg/kg/day; of the intakes listed, only 25 mg/kg/day keeps infant C below target.',
+          'At 35 mg/kg/day infant C’s line predicts about 600 μmol/L, well above the 360 μmol/L target; the curve already reaches 450 μmol/L at 30 mg/kg/day, so 35 cannot be tolerated.',
+          'At 45 mg/kg/day infant C’s plasma phenylalanine would be about 900 μmol/L. This intake would be roughly the limit for infant M, whose residual enzyme gives a shallower curve, but the question concerns infant C.',
+          'At 55 mg/kg/day infant C’s line predicts about 1,200 μmol/L, more than three times the treatment target; this is far beyond what an infant with no enzyme activity can tolerate.',
+        ],
         skill: '1D amino acid metabolism — reading a tolerance curve',
       },
       {
@@ -61,6 +67,12 @@ export const FL5_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'With normal PAH, plasma phenylalanine sits far below the enzyme’s Km, so the hydroxylation rate is nearly proportional to substrate concentration: a rise of a few μmol/L is enough to clear more than three times the baseline intake, which is why the healthy curve is almost flat. Growth needs are the same for all three infants and cannot explain why only the healthy infant’s plasma level stayed low. Transamination to phenylpyruvate was undetectable in the healthy infant, so it cannot be the disposal route. Intestinal absorption of amino acids does not fall with intake, and reduced absorption would have lowered the PKU infants’ plasma levels as well.',
+        optionExplanations: [
+          'Growth needs are the same for all three infants of the same age, so growth cannot explain why only the healthy infant’s plasma level stayed low while the PKU infants’ levels climbed steeply on the same diets.',
+          'Urinary phenylpyruvate was undetectable in the healthy infant at every intake, so transamination cannot be the route that disposed of the added phenylalanine in that infant; it appears only when hydroxylation fails.',
+          'With normal PAH, plasma phenylalanine sits far below the enzyme’s Km, so hydroxylation rate is nearly proportional to substrate concentration; a rise of a few μmol/L is enough to clear more than three times the baseline intake, which is why the healthy curve is almost flat.',
+          'Intestinal absorption of amino acids does not fall as intake rises, and if it did, the PKU infants’ plasma levels would also have been held down; instead their levels rose linearly with intake.',
+        ],
         skill: '1D enzyme capacity and metabolite steady state',
       },
       {
@@ -75,6 +87,12 @@ export const FL5_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Infant M’s mutant PAH is stable but binds the cofactor poorly, which is equivalent to a high Km for $\\text{BH}_4$; raising the cofactor concentration pushes more of the enzyme into the cofactor-bound, active state, so hydroxylation increases and plasma phenylalanine falls. Infant C makes no enzyme, so no amount of cofactor can restore activity. The aminotransferase that forms phenylpyruvate does not use $\\text{BH}_4$. Nothing in the passage indicates that infant M was depleted of cofactor; both infants have normal $\\text{BH}_4$ synthesis and recycling. Infant C has no enzyme to be saturated.',
+        optionExplanations: [
+          'The aminotransferase that forms phenylpyruvate does not use $\\text{BH}_4$ as a cofactor; and if it were activated, phenylpyruvate rather than tyrosine would be the product, which is not how $\\text{BH}_4$ lowers phenylalanine.',
+          'Nothing in the passage indicates that infant M was depleted of cofactor; both infants have normal $\\text{BH}_4$ synthesis and recycling. The difference lies in the enzymes, not in the cofactor supply.',
+          'Infant C produces no detectable enzyme at all, so there is nothing to be saturated with cofactor; the lack of response in infant C reflects absence of enzyme, not tight cofactor binding.',
+          'Infant M’s mutant PAH is stable but binds $\\text{BH}_4$ poorly, equivalent to a high Km for the cofactor; raising the cofactor concentration pushes more of the enzyme into the cofactor-bound, active state, so hydroxylation rises and plasma phenylalanine falls. Infant C makes no enzyme for the cofactor to act on.',
+        ],
         skill: '1A cofactor affinity and enzyme rescue',
       },
       {
@@ -89,6 +107,12 @@ export const FL5_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Phenylalanine is essential and must be present for any protein containing it to be synthesized, so when it is lacking the other dietary amino acids cannot be used for growth; they are transaminated and deaminated, and their nitrogen is excreted as urea while intake stays constant, giving a negative balance. Removing an essential amino acid lowers, not raises, the efficiency of protein synthesis. Amino acids are not stored, so there is no phenylalanine reserve to draw on except by breaking down existing protein, which itself produces a negative balance. The urea cycle does not depend on phenylalanine, and a blocked urea cycle would reduce nitrogen excretion rather than increase it.',
+        optionExplanations: [
+          'Removing an essential amino acid lowers, not raises, the efficiency of protein synthesis; proteins that contain phenylalanine cannot be completed without it, so the other amino acids cannot be incorporated.',
+          'Phenylalanine is essential and must be present for any protein containing it to be synthesized; when it is lacking, the other dietary amino acids cannot be used for growth and are deaminated, their nitrogen leaving as urea while intake stays constant, giving a negative balance.',
+          'Amino acids are not stored, as the passage states; there is no free phenylalanine reserve to draw on except by breaking down existing protein, which itself produces a negative nitrogen balance.',
+          'The urea cycle does not depend on phenylalanine, and a blocked urea cycle would reduce nitrogen excretion rather than increase it; negative balance arises because nitrogen is excreted, not because urea cannot be formed.',
+        ],
         skill: '1D nitrogen balance and essential amino acids',
       },
       {
@@ -103,6 +127,12 @@ export const FL5_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Over 12 weeks a 6-month-old gains weight and its growth rate changes, which alters how much phenylalanine is incorporated into protein per kilogram; had intake increased steadily with time, any trend in plasma level could reflect age rather than intake. Randomizing the order breaks that link. Carryover is handled by the 2-week duration of each period, which allowed the plasma level to stabilize, not by the order of diets. Differences in absorption among diets, if any, would be present whatever the order. Tolerance of the highest intake by the healthy infant is unaffected by sequence.',
+        optionExplanations: [
+          'Carryover is handled by the 2-week duration of each period, which allowed plasma phenylalanine to reach a steady level before measurement; the order of the diets does not address carryover.',
+          'Over 12 weeks a 6-month-old gains weight and its growth rate changes, altering how much phenylalanine is incorporated into protein per kilogram; had intake risen steadily with time, any trend could reflect age rather than intake, and randomizing the order breaks that link.',
+          'Any differences in absorption efficiency among the six diets would be present whatever order the diets were given in; randomization cannot remove a property intrinsic to each diet.',
+          'Whether the healthy infant could tolerate the highest intake is unaffected by the sequence of diets; the healthy infant’s plasma level stayed near normal at every intake regardless of order.',
+        ],
         skill: '1D research design — order effects',
       },
     ],
@@ -132,6 +162,12 @@ export const FL5_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Incorporation into tRNA fell only 7% at 1 μg/mL α-amanitin but 91% at 100 μg/mL, so the enzyme making tRNA is inhibited, but only by the high concentration. The enzyme making β-actin mRNA (RNA polymerase II) was almost completely inhibited at the low concentration, so it cannot be the tRNA enzyme. The enzyme making 28S rRNA (RNA polymerase I) was essentially unaffected at either concentration, so it is not the tRNA enzyme either. A polymerase insensitive at both concentrations is contradicted by the 91% drop. The pattern matches RNA polymerase III, which makes tRNA and 5S rRNA and is intermediate in sensitivity.',
+        optionExplanations: [
+          'The enzyme making β-actin mRNA was almost completely inhibited (4%) at 1 μg/mL α-amanitin, whereas tRNA synthesis was barely affected (93%) at that concentration; the two transcripts cannot be made by the same polymerase.',
+          'The enzyme making 28S rRNA was essentially unaffected at either concentration (98% and 94%), whereas tRNA synthesis fell to 9% at 100 μg/mL; the two transcripts respond differently and so come from different polymerases.',
+          'A polymerase insensitive at both concentrations is contradicted by the 91% drop in tRNA incorporation at 100 μg/mL; the tRNA enzyme is clearly inhibited by the high concentration.',
+          'Incorporation into tRNA fell only 7% at 1 μg/mL α-amanitin but 91% at 100 μg/mL, so the enzyme making tRNA is inhibited, but only by the high concentration; this intermediate sensitivity matches RNA polymerase III, distinct from the enzymes making β-actin mRNA and 28S rRNA.',
+        ],
         skill: '1B eukaryotic RNA polymerases — table interpretation',
       },
       {
@@ -146,6 +182,12 @@ export const FL5_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Rifampicin blocks extension of a new transcript past its first few nucleotides, which means it stops initiation but not an enzyme that has already cleared the promoter and is elongating. The run-on assay measures exactly those engaged polymerases, so they keep incorporating label; in intact cells over 40 minutes, nearly all synthesis depends on new initiation, which the drug blocks. The drug was added after permeabilization, so it was not washed away. Completed RNA is unlabeled and is not detected; the assay measures nucleotides added during the 5-minute reaction. Rifampicin acts without metabolic activation.',
+        optionExplanations: [
+          'Rifampicin blocks extension of a new transcript past its first few nucleotides, so it stops initiation but not polymerases already elongating; the run-on assay measures exactly those engaged enzymes, which keep incorporating label, whereas in intact cells over 40 minutes nearly all synthesis depends on new initiation.',
+          'The drug was added after permeabilization, immediately before the labeled nucleotides, so it was not washed away by the detergent treatment; the drug was present during the entire 5-minute reaction.',
+          'Completed RNA is unlabeled and is not detected by the assay, which measures only nucleotides incorporated during the 5-minute reaction; the run-on signal comes from ongoing elongation, not pre-existing RNA.',
+          'Rifampicin acts without metabolic activation; it binds the β subunit directly, as the passage describes, so loss of a cellular enzyme during permeabilization would not abolish its effect.',
+        ],
         skill: '1B transcription initiation vs elongation',
       },
       {
@@ -160,6 +202,12 @@ export const FL5_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'At 1 μg/mL, α-amanitin shuts off only RNA polymerase II, so new mRNA stops appearing while existing mRNAs decay at their usual rates. An mRNA with a 20-minute half-life is almost gone within 2 hours, and the protein it encodes stops being made, so its level falls first. An mRNA with a 24-hour half-life is still largely present after several hours and continues to be translated. 28S rRNA and tRNA are made by polymerases that this concentration does not inhibit, and tRNA charging depends on aminoacyl-tRNA synthetases, not on transcription.',
+        optionExplanations: [
+          '28S rRNA is made by a polymerase that 1 μg/mL α-amanitin does not inhibit (98% in Table 1), and rRNA already assembled into ribosomes is stable for days; its amount would not fall early.',
+          'tRNA is made by a polymerase unaffected at 1 μg/mL (93%), and charging depends on aminoacyl-tRNA synthetases, not on transcription; the charged tRNA pool would not decline in the first hours.',
+          'At 1 μg/mL α-amanitin shuts off only RNA polymerase II, so new mRNA stops appearing while existing mRNAs decay at their usual rates; an mRNA with a 20-minute half-life is almost gone within 2 hours, and the protein it encodes stops being made, so its level falls first.',
+          'An mRNA with a 24-hour half-life is still largely present after several hours and continues to be translated, so the protein it encodes is maintained long after short-lived mRNAs have disappeared.',
+        ],
         skill: '1B mRNA turnover and transcriptional inhibition',
       },
       {
@@ -174,6 +222,12 @@ export const FL5_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The pulse is meant to measure synthesis under conditions of full inhibition, so the drug must have had time to cross the membrane and occupy its binding site; otherwise the first minutes of the pulse would reflect partially inhibited polymerase and the percentages would understate the drug’s effect. RNA made before the pulse is unlabeled and invisible to the assay whether or not it is degraded. Thirty minutes is far too short to synchronize the cell cycle, and the drugs do not arrest cells at a specific stage. The unlabeled UTP pool is continuously replenished and is not depleted by waiting.',
+        optionExplanations: [
+          'The pulse is meant to measure synthesis under full inhibition, so the drug must have had time to cross the membrane and occupy its binding site; otherwise the first minutes of the pulse would reflect partially inhibited polymerase and understate the drug’s effect.',
+          'RNA made before the pulse is unlabeled and invisible to the hybridization assay whether or not it has been degraded; there is no need to wait for its removal.',
+          'Thirty minutes is far too short to synchronize a cell population, and neither drug arrests cells at a specific stage of the cell cycle; cell-cycle synchronization was not a goal of the interval.',
+          'The intracellular UTP pool is continuously replenished by nucleotide synthesis and salvage and is not depleted by waiting; the labeled uridine simply mixes with the existing pool when added.',
+        ],
         skill: '1B research design — pre-incubation control',
       },
     ],
@@ -202,6 +256,12 @@ export const FL5_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'AIRE makes tissue-restricted proteins visible in the thymus so that thymocytes reacting strongly to them can be deleted. Without AIRE those antigens are not displayed, the reactive thymocytes never meet them, and they escape negative selection into the periphery, which is why AIRE deficiency produces autoimmunity against many organs. Positive selection depends on self MHC with ordinary peptides and proceeds normally, so thymic output is not reduced. Treg development depends on FOXP3, not AIRE. Receptor editing is a B-cell process in the bone marrow and is unrelated to AIRE.',
+        optionExplanations: [
+          'Positive selection depends on weak binding to self MHC presenting ordinary peptides and proceeds normally without AIRE, so thymic output is not reduced; AIRE affects only which tissue-restricted antigens are displayed for negative selection.',
+          'AIRE drives thymic medullary cells to express tissue-restricted proteins so that thymocytes reacting strongly to them can be deleted; without AIRE those antigens are not displayed, the reactive thymocytes never meet them, and they escape negative selection into the periphery.',
+          'Regulatory T cell development depends on the transcription factor FOXP3, not on AIRE; the passage names inherited defects in AIRE and FOXP3 as separate causes of autoimmunity, so Treg cells are not absent in an AIRE-null mouse.',
+          'Receptor editing is a B-cell process in the bone marrow, where self-reactive cells rearrange a new light chain; AIRE acts in thymic epithelium and is unrelated to B-cell receptor editing.',
+        ],
         skill: '3B central tolerance — negative selection',
       },
       {
@@ -216,6 +276,12 @@ export const FL5_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'An anergic cell is alive and detectable but has been rendered unresponsive, so it does not proliferate even when antigen is presented under activating conditions; that combination distinguishes anergy from deletion. Absence of the cells from blood and lymph nodes is the signature of deletion. Cells that proliferate vigorously with costimulation are neither deleted nor anergic; their tolerance, if any, must depend on something else, such as suppression in vivo. Specific cells present only as FOXP3-expressing cells would point to tolerance by regulatory T cells rather than anergy.',
+        optionExplanations: [
+          'Specific cells present only as FOXP3-expressing cells would indicate that the self-reactive thymocytes were diverted into regulatory T cells, a tolerance mechanism distinct from both anergy and deletion.',
+          'Cells that proliferate vigorously when given antigen with costimulation are neither deleted nor anergic; any tolerance they show in vivo must depend on something else, such as suppression by regulatory T cells.',
+          'Absence of specific T cells from blood and lymph nodes is the signature of deletion, in which the cells were eliminated in the thymus; it is the opposite of the anergy pattern, in which the cells persist.',
+          'An anergic cell is alive and detectable but has been rendered unresponsive, so it fails to proliferate even when antigen is presented with costimulation; that combination of presence and unresponsiveness distinguishes anergy from deletion.',
+        ],
         skill: '3B peripheral tolerance — anergy vs deletion',
       },
       {
@@ -230,6 +296,12 @@ export const FL5_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'A single antibody population that binds a microbial protein and a structurally similar self protein is the defining feature of molecular mimicry: the B cells were legitimately activated by the bacterium, but the antibodies they produce also fit a heart epitope. Heart valve proteins are not sequestered, and release of hidden antigens would not explain why the antibodies also bind the bacterial protein. Loss of Treg cells would not create antibodies with this dual specificity. Toxin-mediated damage is not an immune mechanism and would not involve antibodies that bind the valve.',
+        optionExplanations: [
+          'Heart valve proteins are not sequestered behind a barrier, and release of hidden antigens would not explain why the same antibodies also bind the bacterial surface protein.',
+          'Loss of regulatory T cells would not create antibodies with dual specificity for a bacterial protein and a heart protein; it would release pre-existing self-reactive cells, not generate the cross-reactivity observed.',
+          'A single antibody population binding a microbial protein and a structurally similar self protein is the defining feature of molecular mimicry: the B cells were legitimately activated by the bacterium, but the antibodies they produce also fit a heart epitope.',
+          'Toxin-mediated damage is not an immune mechanism and would not involve antibodies that bind the valve; the finding of cross-reactive antibodies points to an adaptive immune response, not direct toxicity.',
+        ],
         skill: '3B molecular mimicry',
       },
       {
@@ -244,6 +316,12 @@ export const FL5_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Antibody responses to protein antigens are T-dependent: the B cell must present peptides of the antigen to a helper T cell of the same specificity. If the T cells that could recognize those peptides were removed by negative selection, the self-reactive B cells remain harmless even though they persist, which is a major reason that escaped B cells rarely cause disease. Normal B cells do express MHC class II. A skin protein is accessible to the immune system, not sequestered. The B cells are stated to exist, so they were not deleted, and receptor editing changes a receptor rather than deleting the cell.',
+        optionExplanations: [
+          'Antibody responses to protein antigens are T-dependent: the B cell must present peptides of the antigen to a helper T cell of the same specificity. If those T cells were removed by negative selection, the self-reactive B cells persist but remain harmless because no help is available.',
+          'Normal B cells do express MHC class II and present peptides to helper T cells; a general inability to present would abolish all antibody responses to protein antigens, not just the response to one self protein.',
+          'A skin protein is accessible to the immune system, not sequestered like antigens of the lens or testis; the person’s B cells are said to bind it, so the antigen has clearly been encountered.',
+          'The B cells are stated to exist with receptors that bind the self protein, so they were not deleted; moreover, receptor editing changes a receptor rather than deleting the cell, so the option misdescribes the mechanism as well.',
+        ],
         skill: '3B T-cell help and B-cell tolerance',
       },
     ],
@@ -273,6 +351,12 @@ export const FL5_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Removing the corpus luteum ended most pregnancies before week 7, about half during weeks 7 through 9, and none from week 10 onward, so by week 10 something other than the corpus luteum supplies enough progesterone; Table 1 shows that progesterone keeps rising through term even as the corpus luteum shrinks from 22 mm to 4 mm, which identifies the placenta as that source. hCG falls by almost 90% after week 10 while progesterone rises five-fold, so sustained peak hCG is not required. Progesterone never falls in Table 1, so there is no transient dip. Estriol is a different hormone with a different role and does not take over the function of progesterone.',
+        optionExplanations: [
+          'hCG falls by almost 90% after week 10 while progesterone rises five-fold through term, so sustained peak hCG is not required to maintain progesterone; the data show the opposite relationship.',
+          'Progesterone never falls in Table 1; it rises steadily from 20 to 160 ng/mL even as the corpus luteum shrinks, so there is no transient dip during the second trimester.',
+          'Removing the corpus luteum ended most pregnancies before week 7, about half during weeks 7 through 9, and none from week 10 on, so by week 10 another source supplies enough progesterone; Table 1 shows progesterone rising through term as the corpus luteum shrinks from 22 mm to 4 mm, identifying the placenta as that source.',
+          'Estriol is a different hormone that reflects fetal adrenal and placental activity; it does not take over the function of progesterone, which continues to rise and to maintain the endometrium throughout pregnancy.',
+        ],
         skill: '3B luteal–placental shift — data integration',
       },
       {
@@ -287,6 +371,12 @@ export const FL5_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Replacing a single product, progesterone, restored pregnancy continuation from 1 in 10 to 9 in 10 after the gland was removed, so progesterone alone accounts for what the corpus luteum was contributing. hCG is made by the trophoblast, not the corpus luteum. Estrogen was not replaced, yet the pregnancies continued, so luteal estrogen is not the essential factor. Suppression of ovulation is a consequence of high progesterone and estrogen acting on the pituitary, and losing it would not end an established pregnancy within days.',
+        optionExplanations: [
+          'hCG is made by the trophoblast, not the corpus luteum; removing the ovary does not remove the hCG source, so hCG secretion cannot be the contribution the corpus luteum was making.',
+          'Estrogen was not replaced in the women who received injections, yet 9 of 10 pregnancies continued; luteal estrogen therefore is not the essential factor whose loss ended the untreated early pregnancies.',
+          'Suppression of ovulation is a consequence of high progesterone and estrogen acting on the pituitary; losing it would not end an established pregnancy within days, so it is not what the injections restored.',
+          'Replacing a single product, progesterone, restored pregnancy continuation from 1 in 10 to 9 in 10 after early removal of the gland, so progesterone alone accounts for what the corpus luteum was contributing in early pregnancy.',
+        ],
         skill: '3B hormone replacement logic',
       },
       {
@@ -301,6 +391,12 @@ export const FL5_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'By week 12 the surgical series shows that pregnancies continue even when the corpus luteum is removed entirely, so the fate of the corpus luteum is irrelevant; moreover, in pregnancy the gland is driven by hCG acting on the LH receptor, not by pituitary LH, which is already suppressed by high steroid levels. Placental estrogen synthesis uses fetal adrenal androgens and placental enzymes; it does not require FSH. Uterine contractions are suppressed by progesterone, not LH, and progesterone is of placental origin at this stage.',
+        optionExplanations: [
+          'By week 12 the surgical series shows pregnancies continue even when the corpus luteum is removed entirely, so its regression would not matter; moreover, in pregnancy the gland is driven by hCG acting on the LH receptor, not by pituitary LH.',
+          'By week 12 the surgical series shows that pregnancies continue even without the corpus luteum, and the gland in pregnancy is driven by hCG rather than pituitary LH, which high steroid levels already suppress; losing LH and FSH therefore has no effect on the pregnancy.',
+          'Placental estrogen synthesis uses fetal adrenal androgen precursors and placental enzymes, as the passage describes; it does not require FSH, which plays no role in placental steroidogenesis.',
+          'Uterine contractions are suppressed by progesterone, not by LH, and at 12 weeks that progesterone is of placental origin; loss of pituitary LH would not provoke preterm labor.',
+        ],
         skill: '3B pituitary dependence of pregnancy',
       },
       {
@@ -315,6 +411,12 @@ export const FL5_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Closure of the ductus arteriosus depends on the rise in arterial oxygen tension after the lungs fill with air. If the lungs do not expand, oxygen tension stays low, the ductus stays open, and because unexpanded, hypoxic lungs keep their vascular resistance high, right ventricular blood continues to cross the ductus into the aorta, as it did in the fetus. High pulmonary resistance also keeps right atrial pressure up, so the foramen ovale is not pressed shut earlier. Hypoxia constricts pulmonary vessels rather than dilating them. With the shunts persisting, pulmonary flow stays near the fetal fraction instead of rising.',
+        optionExplanations: [
+          'Closure of the ductus arteriosus depends on the rise in arterial oxygen tension after the lungs fill with air; if the lungs do not expand, oxygen tension stays low, hypoxic lungs keep their vascular resistance high, and right ventricular blood continues to cross the open ductus into the aorta as in the fetus.',
+          'High pulmonary resistance keeps right atrial pressure up, so left atrial pressure does not rise above it and the foramen ovale is not pressed shut earlier; if anything, closure is delayed.',
+          'Hypoxia constricts pulmonary vessels rather than dilating them, as the passage notes for the fluid-filled fetal lung; an unexpanded hypoxic lung keeps pulmonary vascular resistance high, not low.',
+          'With the ductus and foramen ovale persisting and pulmonary resistance high, pulmonary flow stays near the fetal fraction of about a tenth of output instead of rising as it does in a healthy newborn.',
+        ],
         skill: '3B transition of the circulation at birth',
       },
       {
@@ -329,6 +431,12 @@ export const FL5_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'In an observational series the timing of surgery is set by the patient’s condition, so women who needed surgery very early may have differed systematically, for instance by having more severe disease or bleeding, and that difference, rather than the loss of the corpus luteum at an early age, could explain the losses. This confounding by indication is the central threat to the causal conclusion. Unmeasured progesterone and unmeasured luteal diameter would have added mechanistic detail but do not undermine the comparison of outcomes. Small groups reduce precision, but the observed differences (1 of 10 versus 10 of 10) are far too large to be a product of group size alone.',
+        optionExplanations: [
+          'Unmeasured progesterone in the injected women would have added mechanistic detail but does not undermine the comparison of outcomes across gestational ages, which is what the conclusion rests on.',
+          'Luteal diameter was measured in the normal-pregnancy cohort to track regression; its absence in the surgical series does not affect whether timing of surgery or something else determined outcome.',
+          'Small groups reduce precision, but the observed differences (1 of 10 versus 10 of 10) are far too large to be a product of group size alone; sample size is not the main threat here.',
+          'In an observational series the timing of surgery is set by the patient’s condition, so women who needed surgery very early may have differed systematically, for instance by having more severe disease; that difference, rather than early loss of the corpus luteum, could explain the losses. This confounding by indication is the central threat.',
+        ],
         skill: '3B research design — confounding in observational data',
       },
     ],
@@ -357,6 +465,12 @@ export const FL5_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The segment count is normal, so segmentation succeeded and only identity went wrong, which is the signature of a homeotic change. Where Hox domains overlap, the more posterior gene dominates; if the gene responsible for third-thoracic identity is lost, the more anterior gene whose domain extends into that segment now determines its identity, producing second-thoracic structures. A segmentation gene defect would alter the number or boundaries of segments. Ectopic expression of the third-thoracic gene in the second segment would transform the second segment toward third-thoracic identity, the reverse of what was seen. Altering the maternal gradient would shift the positions of whole regions rather than convert one segment into another.',
+        optionExplanations: [
+          'A defect in a gene that sets segment boundaries would alter the number or boundaries of segments; the larva has the normal number of segments, so segmentation succeeded and only identity went wrong.',
+          'With segmentation intact and only identity changed, this is a homeotic transformation; where Hox domains overlap the more posterior gene dominates, so loss of the gene for third-thoracic identity lets the more anterior gene whose domain extends there determine the segment, producing second-thoracic structures.',
+          'Ectopic expression of the third-thoracic Hox gene in the second thoracic segment would transform the second segment toward third-thoracic identity, the reverse of what was observed.',
+          'Altering the maternal morphogen gradient would shift the positions and sizes of whole body regions early in development; it would not convert one correctly placed segment into the likeness of another.',
+        ],
         skill: '1C homeotic transformation',
       },
       {
@@ -371,6 +485,12 @@ export const FL5_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Fates are set by threshold concentrations. If the source produces twice as much protein, every point along the gradient sees a higher concentration, so the positions at which the concentration falls through each threshold move farther from the anterior pole; the high-concentration (anterior) fates occupy more of the embryo and the low-concentration (posterior) fates are squeezed. The embryo does not scale fates to a receptor ratio in a way that would keep boundaries fixed. Shifting anterior structures toward the pole would require less morphogen, not more. The passage describes the morphogen as an activator at high concentration, not an inhibitor.',
+        optionExplanations: [
+          'Fates are set by threshold concentrations of the morphogen itself, not by a ratio to receptor that would hold boundaries fixed; the passage states that nuclei respond to high, intermediate, and low concentrations, so doubling the source moves every threshold.',
+          'Shifting anterior structures toward the anterior pole would require less morphogen, not more; with less protein, each threshold concentration would be reached closer to the source.',
+          'Fates are set by threshold concentrations. If the source produces twice as much protein, every point along the gradient sees a higher concentration, so each threshold is crossed farther from the anterior pole; anterior fates occupy more of the embryo and posterior fates are squeezed.',
+          'The passage describes the morphogen as an activator at high concentration, not an inhibitor; excess morphogen would expand the anterior regions rather than abolish them.',
+        ],
         skill: '1C morphogen thresholds',
       },
       {
@@ -385,6 +505,12 @@ export const FL5_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'For the mouse protein to substitute, its homeodomain must still bind the fly’s regulatory sequences and control the same downstream genes, which means both the DNA-binding domain and its recognition sites have been retained over the hundreds of millions of years since the lineages split, a classic argument from functional conservation. Mammals have four clusters and a different body plan, so the number of segments and genes is not the same. Horizontal transfer is not supported by shared clusters in colinear order, which indicates vertical inheritance. Mammals do not use a maternal cytoplasmic gradient of the fly type to activate Hox genes.',
+        optionExplanations: [
+          'For the mouse protein to substitute, its homeodomain must still bind the fly’s regulatory sequences and control the same downstream genes; both the DNA-binding domain and its recognition sites have been retained since the lineages split, a classic argument from functional conservation.',
+          'Mammals have four Hox clusters and a different body plan from the fly, so flies and mice do not share the same number of segments or Hox genes; functional substitution of one gene says nothing about gene or segment counts.',
+          'Shared clusters in colinear order across animals indicate vertical inheritance from a common ancestor; horizontal transfer is not supported by any feature in the passage or the rescue experiment.',
+          'Mammals do not use a maternal cytoplasmic gradient of the fly type to activate Hox genes; the passage describes maternal morphogens as a feature of the fly embryo, and the rescue shows protein function, not upstream activation, is conserved.',
+        ],
         skill: '1C conservation of developmental genes',
       },
       {
@@ -399,6 +525,12 @@ export const FL5_BIO_BIOCHEM_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Removal of the optic vesicle abolishes lens formation, so a signal from the vesicle is required; failure of the transplanted vesicle to induce a lens in trunk ectoderm shows that the signal works only on responsive tissue, which is the definition of competence. Maternal cytoplasmic morphogens act in the early embryo before separate tissues exist and are not the mechanism of a later tissue interaction. If lens cells migrated out of the vesicle, a transplanted vesicle would generate a lens anywhere. Position of the ectoderm alone cannot be sufficient, because head ectoderm deprived of the vesicle makes no lens.',
+        optionExplanations: [
+          'Maternal cytoplasmic morphogens act in the early embryo before separate tissues exist and are not the mechanism of a later interaction between an optic vesicle and overlying ectoderm; the experiment is about induction between cell groups.',
+          'If determined lens cells migrated out of the vesicle, a transplanted vesicle would generate a lens anywhere, including under trunk ectoderm; the failure of the transplant shows the lens comes from the ectoderm, not the vesicle.',
+          'Position of the ectoderm alone cannot be sufficient, because head ectoderm deprived of the optic vesicle makes no lens; a signal from the vesicle is required.',
+          'Removing the optic vesicle abolishes lens formation, so a signal from the vesicle is required; the failure of a transplanted vesicle to induce a lens in trunk ectoderm shows that the signal works only on responsive tissue, which is the definition of competence.',
+        ],
         skill: '2C induction and competence',
       },
     ],
@@ -421,6 +553,12 @@ export const FL5_BIO_BIOCHEM_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'Hypoxia is sensed by cells in the kidney, which increase their output of erythropoietin; the hormone acts on the bone marrow to increase red cell production, a process that takes days to weeks and raises the total red cell mass. The human spleen holds too few red cells to account for a sustained rise in mass. Marrow does not respond to local oxygen tension directly; it requires the hormonal signal. A smaller plasma volume does occur in the first days at altitude and raises the hematocrit, but it does not change the number of red cells.',
+    optionExplanations: [
+      'The human spleen holds too few red cells to account for a sustained rise in total red cell mass over 3 weeks; release of stored cells could produce only a small, transient change.',
+      'The marrow does not respond directly to the oxygen tension of the blood perfusing it; it requires the hormonal signal from the kidney, which is the oxygen-sensing organ for erythropoiesis.',
+      'Hypoxia is sensed by cells in the kidney, which increase erythropoietin output; the hormone acts on the bone marrow to raise red cell production over days to weeks, increasing the total circulating red cell mass.',
+      'Plasma volume does contract in the first days at altitude and raises the hematocrit, but concentration does not change the number of red cells; the question specifies an increase in total red cell mass.',
+    ],
     skill: '3B erythropoietin and altitude',
   },
   {
@@ -438,6 +576,12 @@ export const FL5_BIO_BIOCHEM_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'Absorbed water lowers plasma osmolarity, which hypothalamic osmoreceptors detect; secretion of antidiuretic hormone from the posterior pituitary falls, fewer aquaporin channels are inserted in the collecting duct, less water is reabsorbed, and the kidney excretes a large volume of dilute urine until osmolarity is restored. A rise in ADH is the response to dehydration or a high-salt load, not to a water load. Falling ADH cannot produce a small volume of concentrated urine, because ADH is what permits water reabsorption. A rise in ADH with a large dilute urine output is internally contradictory.',
+    optionExplanations: [
+      'A rise in ADH is the response to dehydration or a salt load, which raises plasma osmolarity; a water load lowers osmolarity and suppresses ADH, so this pattern is reversed.',
+      'Absorbed water lowers plasma osmolarity, which hypothalamic osmoreceptors detect; ADH secretion falls, fewer aquaporins are inserted in the collecting duct, less water is reabsorbed, and the kidney excretes a large volume of dilute urine until osmolarity is restored.',
+      'Falling ADH cannot produce a small volume of concentrated urine, because ADH is what permits water reabsorption in the collecting duct; low ADH means dilute, abundant urine.',
+      'A rise in ADH with a large output of dilute urine is internally contradictory; high ADH causes water retention and concentrated urine, not diuresis.',
+    ],
     skill: '3B ADH and plasma osmolarity',
   },
   {
@@ -455,6 +599,12 @@ export const FL5_BIO_BIOCHEM_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'Three closely spaced inputs from X arrive before the preceding depolarizations have decayed, so they add by temporal summation to roughly 12 mV, which exceeds the 10-mV threshold. Two simultaneous inputs from X and Y sum spatially to only 8 mV, short of threshold. Inputs separated by 40 or 50 ms, from the same neuron or from different neurons, each decay to baseline before the next arrives, so no summation occurs and each produces only a 4-mV change.',
+    optionExplanations: [
+      'Inputs separated by 50 ms, whether from the same or different neurons, each decay to baseline within about 15 ms before the next arrives; no summation occurs and each produces only a 4-mV change, short of the 10-mV threshold.',
+      'Two simultaneous inputs from X and Y sum spatially to only 8 mV, which falls short of the 10-mV threshold; a third coincident input would be needed.',
+      'Two inputs from X 40 ms apart do not overlap, since each depolarization decays within about 15 ms; each produces an isolated 4-mV change and the neuron never reaches threshold.',
+      'Three closely spaced inputs from X within 5 ms arrive before the preceding depolarizations have decayed, so they add by temporal summation to roughly 12 mV, which exceeds the 10-mV threshold.',
+    ],
     skill: '3A temporal vs spatial summation',
   },
   {
@@ -472,6 +622,12 @@ export const FL5_BIO_BIOCHEM_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'Glycolysis reduces $\\text{NAD}^+$ at the glyceraldehyde-3-phosphate dehydrogenase step, and the cell’s small $\\text{NAD}^+$ pool would be exhausted within seconds unless the NADH were reoxidized. Red cells have no mitochondria, so lactate dehydrogenase, which transfers the electrons from NADH to pyruvate, is their only means of regenerating $\\text{NAD}^+$ and keeping ATP production going. The reduction of pyruvate itself yields no ATP. The pentose phosphate pathway begins with glucose 6-phosphate, not lactate. Without mitochondria there is no electron transport chain to accept the stored electrons.',
+    optionExplanations: [
+      'The reduction of pyruvate to lactate itself yields no ATP; glycolytic ATP is made at the phosphoglycerate kinase and pyruvate kinase steps, and lactate dehydrogenase merely transfers electrons from NADH to pyruvate.',
+      'Glycolysis reduces $\\text{NAD}^+$ at the glyceraldehyde-3-phosphate dehydrogenase step, and the small $\\text{NAD}^+$ pool would be exhausted in seconds unless NADH were reoxidized; red cells lack mitochondria, so lactate dehydrogenase is their only way to regenerate $\\text{NAD}^+$ and keep glycolysis running.',
+      'The pentose phosphate pathway begins with glucose 6-phosphate, not lactate; lactate is an end product exported from the red cell, not a substrate for further metabolism within it.',
+      'Mature red cells have no mitochondria and therefore no electron transport chain; there is nowhere for stored reducing equivalents to be oxidized later, so lactate formation is not a storage strategy.',
+    ],
     skill: '1D lactate dehydrogenase and NAD+ regeneration',
   },
   {
@@ -489,6 +645,12 @@ export const FL5_BIO_BIOCHEM_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'The lone pairs of sulfur overlap poorly with the carbonyl π system, so a thioester has less resonance stabilization than an oxygen ester; its carbonyl carbon is more electrophilic, its hydrolysis is highly exergonic (about −31 kJ/mol, comparable to ATP), and its α-hydrogens are more readily removed to form a nucleophilic enolate, which is why acetyl-CoA can both donate its acetyl group (as in citrate formation) and act as a carbon nucleophile. Greater resonance stabilization would make the thioester a poorer, not better, acyl donor. The carbonyl is more, not less, electrophilic. The carbon–sulfur bond is weaker than carbon–oxygen and is readily broken during acyl transfer.',
+    optionExplanations: [
+      'Sulfur’s lone pairs overlap poorly with the carbonyl π system, so a thioester has less resonance stabilization than an oxygen ester; its carbonyl is more electrophilic, its hydrolysis is highly exergonic (about −31 kJ/mol), and its α-hydrogens are more acidic, letting acetyl-CoA act as both acyl donor and carbon nucleophile.',
+      'Greater resonance stabilization would make the thioester a poorer, not better, acyl donor and would lower the free energy of hydrolysis; in fact the thioester is less stabilized, which is why its hydrolysis releases more energy than an oxygen ester’s.',
+      'The thioester carbonyl is more, not less, electrophilic, because the poorly overlapping sulfur lone pairs donate less electron density into the carbonyl; acyl transfer from thioesters is correspondingly fast.',
+      'The carbon–sulfur bond is weaker than the carbon–oxygen bond and is readily broken during acyl transfer; thiolate is a good leaving group, which is precisely why acetyl-CoA transfers its acetyl group so readily.',
+    ],
     skill: '1A thioester chemistry of coenzyme A',
   },
   {
@@ -501,6 +663,12 @@ export const FL5_BIO_BIOCHEM_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'At each locus the probability of a homozygous recessive offspring is 1/4. Because the loci assort independently, P(aa or bb) = P(aa) + P(bb) − P(aa and bb) = 1/4 + 1/4 − 1/16 = 7/16. The value 1/16 is the probability of being recessive at both loci only. The value 6/16 counts the two “recessive at exactly one locus” classes (3/16 each) but omits the doubly recessive class. The value 9/16 is the fraction showing the dominant phenotype at both loci, the complement of the answer.',
+    optionExplanations: [
+      'This is the probability of being homozygous recessive at both loci only (1/4 × 1/4); the question asks for recessive at one or both, which includes the two classes recessive at exactly one locus.',
+      'This counts the two “recessive at exactly one locus” classes (3/16 each) but omits the doubly recessive class (1/16); “one or both” must include the offspring that are aabb.',
+      'At each locus the probability of homozygous recessive is 1/4; with independent assortment, P(aa or bb) = 1/4 + 1/4 − 1/16 = 7/16, which equals the two single-recessive classes (3/16 each) plus the doubly recessive class (1/16).',
+      'This is the fraction showing the dominant phenotype at both loci (3/4 × 3/4), the complement of the answer; it counts exactly the offspring that are recessive at neither locus.',
+    ],
     skill: '1C dihybrid probability',
   },
   {
@@ -518,6 +686,12 @@ export const FL5_BIO_BIOCHEM_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'Ether-linked, branched (isoprenoid) membrane lipids are found in archaea and in no other domain; bacteria and eukaryotes build their membranes from ester-linked straight-chain fatty acids. A circular chromosome without a nuclear envelope and 70S ribosomes are shared by bacteria and archaea, so neither distinguishes them. Many bacteria are also thermophiles, so an optimum above 80 °C does not identify the domain.',
+    optionExplanations: [
+      'A circular chromosome lying in the cytoplasm without a nuclear envelope is shared by bacteria and archaea; it marks a prokaryote but does not separate the two prokaryotic domains.',
+      'Ether-linked, branched isoprenoid membrane lipids are found in archaea and in no other domain; bacteria and eukaryotes build membranes from ester-linked straight-chain fatty acids, so this finding alone identifies the organism as an archaeon.',
+      '70S ribosomes with 30S and 50S subunits occur in both bacteria and archaea, so ribosome size does not distinguish the two domains.',
+      'Many bacteria are also thermophiles that grow above 80 °C, so a high temperature optimum reflects habitat adaptation and does not identify the domain.',
+    ],
     skill: '2B archaea vs bacteria vs eukarya',
   },
 ]

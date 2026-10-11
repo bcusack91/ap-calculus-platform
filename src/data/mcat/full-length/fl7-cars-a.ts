@@ -31,6 +31,12 @@ export const FL7_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The author separates two questions, fault and what a person has to answer for, grants the purist the first, and holds that the second differs between the drivers because of what happened. The “recoil” option is the purists’ own diagnosis, which the author disputes. The option making fault depend on outcome contradicts the statement that in fault “the drivers are equal.” What courts should do is expressly left unsettled in the last paragraph, so it cannot be the central claim.',
+        optionExplanations: [
+          'This is the purists’ own diagnosis, that our harsher reaction is “a recoil from the event mistaken for a verdict on the man.” The author names the purists in order to dispute them, so their view cannot be the passage’s central claim.',
+          'The author explicitly grants the purist the question of fault: “here the purist is right, and the drivers are equal.” Making fault itself depend on outcome contradicts the passage’s own distinction between fault and what one must answer for.',
+          'The fourth paragraph separates two questions, how carelessly a person chose and what a person has to answer for, concedes the first to the purists, and argues that only the second differs between the drivers because of the death. This is the thesis the rest defends.',
+          'The final paragraph says that none of the argument “settles what a court should do,” so a claim about courts cannot be the passage’s central point. The author only concedes that the purist’s demand has force in punishment, without arguing for it.',
+        ],
         skill: 'main-idea',
       },
       {
@@ -44,6 +50,12 @@ export const FL7_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The author says the principle “is not foolish,” agrees that the drivers are equal in fault, and objects only that it “has been stretched over more ground than it can cover.” The sneeze is the author’s example of where the principle is plainly right, not a confusion charged to the purists. The remorse-and-courts option reverses the passage: the author resists the principle for what the driver owes and feels, and concedes its force in punishment. Nothing is said about whether purists have had to live by their view.',
+        optionExplanations: [
+          'The author calls the principle “not foolish,” agrees that in fault “the drivers are equal,” and objects only that it “has been stretched over more ground than it can cover.” That is respect for the core combined with a charge of overextension.',
+          'The sneeze is the author’s own example of where the principle is plainly right, offered in the purists’ favor. The passage never charges purists with confusing a reflex with a choice; it credits them with asking for consistency.',
+          'This reverses the passage. The author resists the principle where private remorse is concerned, holding that the unlucky driver “who feels himself a killer is not confused,” and concedes its force precisely in punishment imposed by courts.',
+          'Nothing in the passage questions whether purists have lived by their principle. The author’s objection is that the principle cannot be lived on either consistent reading, which is a claim about the principle itself, not about its holders’ experience.',
+        ],
         skill: 'tone',
       },
       {
@@ -58,6 +70,12 @@ export const FL7_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The author stipulates that “every word would be true,” so the statement misstates nothing; its offense is that it answers the question of fault when what the parents are owed belongs to the other question, what he has to answer for. Because the statement is accurate, it cannot be understating his carelessness. It says nothing about the child’s fault. The comparison with other drivers is also granted as true, so its being a comparison is not what makes it monstrous.',
+        optionExplanations: [
+          'The author stipulates that “every word would be true,” so the statement cannot be understating anything. It accurately reports that his fault equaled that of thousands of others; its offense lies elsewhere.',
+          'The statement compares the driver with other drivers; it says nothing about the child. The passage never suggests the driver shifts blame onto the child, and the monstrousness is tied to what he owes the parents, not to any accusation.',
+          'The comparison with other drivers is granted as true, so making a comparison is not what offends. The passage treats the statement as accurate about fault; the problem is that fault is the wrong question to be answering.',
+          'The parents are owed “an acknowledgment that this is his, a grief that is not merely a spectator’s,” which belongs to the question of what he must answer for. Answering instead with a true fact about fault treats that fact as if it discharged a debt it cannot touch.',
+        ],
         skill: 'inference',
       },
       {
@@ -72,6 +90,12 @@ export const FL7_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The third paragraph argues that neither way of being consistent can be lived and concludes that the principle is therefore suspect; that step holds only if being unlivable counts against a principle. The argument says most drivers have been careless, not that they have caused accidents. Whether purists have tried to apply their view is never raised. The author does not treat present reactions as beyond criticism, since the passage concedes that in fault the drivers are equal and that courts may owe them equal treatment.',
+        optionExplanations: [
+          'The third paragraph says consistency would make “killers, in everything but the event, of most people who have ever driven a car,” which assumes most drivers have been careless, not that most have caused accidents. The argument needs widespread carelessness, not widespread harm.',
+          'The author argues that neither consistent reading “can be lived” and concludes that the principle is therefore suspect. That inference holds only if unlivability counts against a moral principle, which is exactly this assumption.',
+          'Whether purists have tried to apply their principle to themselves is never raised. The author’s suspicion rests on what consistency would require of everyone, not on any failure of purists to practice what they preach.',
+          'The author does not treat present reactions as beyond criticism; the passage concedes that in fault the drivers are equal and that courts may owe them equal treatment. The argument is narrower than a defense of all our reactions.',
+        ],
         skill: 'assumption',
       },
       {
@@ -86,6 +110,12 @@ export const FL7_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The nurses stand as the two drivers do: equal in fault, unequal in what each has to answer for. The fitting attitude therefore accepts the death as her own to answer for without pretending that she chose worse than her colleague. The colleague has no death to her account, so she does not owe the family the same thing. Holding that nothing grave was done is the “near miss” attitude the author says cannot be asked of someone who has killed. Judging herself the more careless confuses outcome with fault, which the author keeps equal.',
+        optionExplanations: [
+          'The colleague has no death to her account, so by the author’s reasoning the two nurses do not owe the family the same thing. What a person has to answer for differs with outcome even when fault is equal.',
+          'This is the “near miss” attitude, which the author says asks a person who has killed to regard the matter as if nothing happened. The passage calls that reading an abolition of our practice, not a correction of it.',
+          'Judging herself more careless confuses outcome with fault. The author insists the two agents are equal in fault; what differs is only what each has to answer for, so the second nurse was not the more careless.',
+          'The nurses stand as the two drivers do: equal in fault, unequal in what each must answer for. The fitting attitude accepts the death as hers to answer for while recognizing that her lapse was no worse than her colleague’s, exactly the author’s position on the unlucky driver.',
+        ],
         skill: 'application',
       },
       {
@@ -100,6 +130,12 @@ export const FL7_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The final paragraph says the argument does not settle what a court should do and that, in punishment imposed by strangers, the demand that like faults be treated alike has a force the author would not weaken. Equal punishment is thus compatible with the passage. The author holds that outcomes do not alter fault, so the first “inconsistent” option misstates the argument. What “cannot be lived” is equalizing our whole regard for the two drivers, not equal sentences. The author insists a completed harm does add something, namely what the agent must answer for.',
+        optionExplanations: [
+          'The final paragraph says the argument does not settle what a court should do and that in punishment imposed by strangers the demand to treat like faults alike “has a force I would not wish to weaken.” Equal sentences for equal choices fit comfortably within that concession.',
+          'The author holds that outcomes do not alter fault; in fault “the drivers are equal.” This option misstates the argument, attributing to it the view that outcomes change how gravely a person is at fault.',
+          'What “cannot be lived” is equalizing our whole regard for the two drivers, treating the killer as a near-miss or every careless driver as a killer. Equal sentencing by courts is a narrower matter the author expressly leaves open.',
+          'The author insists a completed harm does add something: the second driver has a death to his account and the first does not. The practice would be consistent with the argument, but not for this reason, which contradicts the passage.',
+        ],
         skill: 'new-information',
       },
     ],
@@ -119,6 +155,12 @@ export const FL7_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Statements I and II correspond to the two things the third paragraph says queues permit: a place left in a neighbor’s care, and a place given up to another by its holder. Statement III would give precedence to need over waiting, and the fourth paragraph says the queue “gives no weight to need”; it would also take from everyone already waiting something none of them had agreed to give. “I only” omits a practice the author expressly counts as unremarkable, and the options that include III admit the one thing the queue ignores.',
+        optionExplanations: [
+          'Leaving a bag after speaking to a neighbor is the first permitted practice, but the author also counts waving ahead a shopper with a single loaf as unremarkable. Omitting the second practice leaves out something the passage expressly allows.',
+          'Statements I and II match the two permissions in the third paragraph: a place left in a neighbor’s care and a place given up by its holder. Statement III gives precedence to need, and the fourth paragraph says the queue “gives no weight to need.”',
+          'Statement III would put the most urgent errand first, but the author says the traveler who will miss a connection “stands behind the one with an hour to spare.” Need confers nothing in a queue, so this statement conflicts with its conventions.',
+          'Statements I and II are permitted, but statement III is not. The passage states that the queue “gives no weight to need,” and serving a late arrival first would take from everyone waiting something none of them agreed to give.',
+        ],
         skill: 'detail',
       },
       {
@@ -132,6 +174,12 @@ export const FL7_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The experiments are followed at once by two verdicts: “A habit does not assign its defense so precisely,” and a love of equal treatment “ought to be offended equally wherever the intruder stands.” The pattern is evidence against both explanations and prepares the author’s own. That most people stayed silent is a by-product, not the point, and the author stresses who did object. The passage says everyone behind the intruder lost the same amount of time. The childhood-training option is the habit theory the experiments are used against.',
+        optionExplanations: [
+          'The author stresses who did object, not who stayed silent. The point is the precise pattern of objection, the person just behind the intruder, which neither rival account predicts; general passivity is not the lesson drawn.',
+          'The passage says each person behind the intruder “had lost exactly the same amount of time.” Nothing in the experiment concerns the back of the line losing more than the front; that claim contradicts the passage.',
+          'The experiments are immediately followed by two verdicts: “A habit does not assign its defense so precisely,” and a love of equal treatment “ought to be offended equally wherever the intruder stands.” The pattern is evidence against both rival explanations.',
+          'Childhood training is the habit theory, which the experiments are deployed to refute. The author argues that a habit would not assign its defense so precisely, so the experiments count against this account rather than illustrating it.',
+        ],
         skill: 'function',
       },
       {
@@ -146,6 +194,12 @@ export const FL7_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The next sentence explains the narrowness: nothing a person owns or is counts “except having stood there.” An arrangement that recognizes one claim only leaves no opening for arguments about need, wealth, or rank, which is the suggested source of its sturdiness. The passage says the queue ignores need, so it does not serve the neediest sooner. It also says waiting costs the retired less than a parent with two jobs, so the cost is not equal. Early teaching is the habit theory, which the author rejected in the second paragraph.',
+        optionExplanations: [
+          'The sentence following the remark explains the narrowness: nothing a person owns or is counts “except having stood there.” Recognizing one ground of entitlement only leaves no opening for rival claims of need, wealth, or rank, which is the implied source of sturdiness.',
+          'The passage says the queue “gives no weight to need” and that the traveler who will miss a connection stands behind one with an hour to spare. Serving the neediest sooner is the opposite of what the queue does.',
+          'The author states that the queue’s currency “is cheaper for some than for others,” since an afternoon costs the retired less than a parent with two jobs. The cost is explicitly unequal.',
+          'Early teaching is the habit theory, which the author rejected in the second paragraph on the grounds that a habit does not assign its defense so precisely. The author does not attribute the queue’s sturdiness to upbringing.',
+        ],
         skill: 'inference',
       },
       {
@@ -160,6 +214,12 @@ export const FL7_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The author reads the silence of those further back as a judgment that the trespass was the nearest person’s to settle. If they simply did not see the intrusion, their silence shows nothing about boundaries or holdings, and the pattern is explained by who could observe it. People who saw, were annoyed, and still left the matter to the person in front fit the author’s account well. A stronger response to two intruders does not bear on why one person rather than another speaks. Fewer objections to an intruder who asks leave suits the idea that a place is its holder’s to grant.',
+        optionExplanations: [
+          'People who saw the intruder, felt annoyed, and nevertheless left the matter to the person in front fit the author’s account well: they regarded the trespass as the nearest person’s to settle. This observation supports rather than weakens the explanation.',
+          'A stronger response to two intruders does not bear on why one person rather than another speaks. The author’s explanation concerns the location of objection, which this finding leaves untouched.',
+          'Fewer objections to an intruder who first asks permission suits the author’s idea that a place is a possession its holder may grant to another. This finding is consistent with the explanation, not a challenge to it.',
+          'The author reads the silence of those further back as a judgment that the trespass was the nearest person’s to settle. If they simply did not see the intruder enter, their silence shows nothing about boundaries or holdings; the pattern would be explained by who could observe.',
+        ],
         skill: 'strengthen-weaken',
       },
       {
@@ -174,6 +234,12 @@ export const FL7_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The grievance is that what people had paid in one currency, waiting, was cheapened when a second currency, money, was admitted without their being asked. The volunteers paid in hours and find that money now buys the same award. The tenants and the runners object only that someone else has more money to spend, which the author says is not the complaint: “they knew that.” The commuters face a cost that falls on everyone alike, with no earlier payment of theirs made worth less by a new way of paying.',
+        optionExplanations: [
+          'The tenants object only that a neighbor has more money to spend, which the author says is not the complaint: those left standing “knew that.” No earlier payment of theirs in a different currency has been cheapened.',
+          'The runners object that a rival spent more money on training, again a complaint about others having more money. The passage distinguishes this from the real grievance, that a second currency was admitted without consent.',
+          'The grievance is that payments made in one currency, waiting, were cheapened when money was admitted as another currency without anyone asking. Volunteers who paid in hours and now find that a donation buys the same award face exactly this.',
+          'A fare rise falls on everyone alike and introduces no second currency. No earlier payment of the commuters’ has been made worth less by a new way of paying, so the structure of the grievance differs entirely.',
+        ],
         skill: 'application',
       },
       {
@@ -187,6 +253,12 @@ export const FL7_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The author argues that people in a queue hold places bought with minutes of waiting, with rules of transfer and trespass, and that they keep the system up “without anyone to enforce it but themselves.” The habit account and the equal-treatment account are the two explanations dismissed at the outset. The sale of priority is discussed as a source of resentment that the author’s account explains; the passage does not claim that it is destroying the queue.',
+        optionExplanations: [
+          'The habit account is one of the two explanations dismissed at the start, and the second paragraph argues that habit cannot explain the precise pattern of objection to intruders. The passage presents the queue as something other than habit.',
+          'The author argues that people in a queue hold places bought with minutes of waiting, with rules of transfer and trespass, maintained “without anyone to enforce it but themselves.” This captures the passage’s overall characterization.',
+          'The equal-treatment account is the second rejected explanation. The fourth paragraph says the queue is “not, on inspection, very fair,” giving no weight to need and costing some more than others.',
+          'The sale of priority is discussed as a source of resentment that the author’s account explains, not as a force destroying the queue. The passage ends by presenting the queue as a durable system of entitlements, not a vanishing one.',
+        ],
         skill: 'main-idea',
       },
     ],
@@ -211,6 +283,12 @@ export const FL7_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The observation is the author’s reason for concluding that “something other than progress is at work”: if the forgery is dismissed without instruments and by the less expert, improved methods and training cannot account for the change. Carelessness in the earlier experts is part of the flattering explanation the author is setting aside. The author makes no general claim about the usefulness of laboratories. Nor is the point that the untrained judge better; it is that later viewers of any training see what the earlier, better-trained ones could not.',
+        optionExplanations: [
+          'Carelessness in the earlier experts is part of the flattering “usual explanation” the author sets aside. The observation that untrained later viewers reject the forgery is used to undermine that account, not to support it.',
+          'The author makes no general claim about what laboratories contribute. The observation only notes that exposure often happens before any laboratory is consulted, which bears on whether improved methods explain the change.',
+          'The point is not that untrained viewers judge better than experts. It is that later viewers, whatever their training, see what earlier and better-trained viewers could not, because taste has changed.',
+          'The observation is the author’s reason for concluding that “something other than progress is at work.” If forgeries are dismissed without instruments and by the less expert, better methods and training cannot be what reveals them.',
+        ],
         skill: 'function',
       },
       {
@@ -224,6 +302,12 @@ export const FL7_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The passage moves from the dating of forgeries to the claim that any copy is “one reading of a picture,” and concludes that preferring the original is reasonable because the original may still show us what no one has yet looked for. Improved methods are the “usual explanation” the author rejects. The machine-made copy is said to embody its own period’s decisions about what matters, so it does not escape the limits described. The author’s case does not rest on the forger’s dishonesty; the argument is extended to honest copies and to reproductions.',
+        optionExplanations: [
+          'Improved methods are the “usual explanation,” which the author rejects by noting that forgeries are often exposed at a glance, before laboratories are consulted, by people with less training than those deceived.',
+          'The passage moves from the dating of forgeries to the claim that any copy is “one reading of a picture,” containing only what the copyist found, and concludes that preferring the original is reasonable because it may still show what no one has yet looked for.',
+          'The fifth paragraph says a machine “records what it was built to record” and that each reproduction technology now looks like its own decade. Machine copies do not escape the limits of taste; they embody them invisibly.',
+          'The author’s case does not rest on forgers’ dishonesty. The argument is extended to honest copies and to photographs and engravings, so flattery and deception cannot be the reason later generations scorn forgeries.',
+        ],
         skill: 'main-idea',
       },
       {
@@ -238,6 +322,12 @@ export const FL7_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Better instruments belong to the “usual explanation,” which the author sets aside by noting that exposed forgeries are often rejected before any laboratory is consulted. The other three are steps in the author’s own account in the second paragraph: the forger sees what his time has taught him to see, supplies “a little more” of the admired quality than the master did, and is found out when a later generation admires the master for other things.',
+        optionExplanations: [
+          'Better instruments belong to the “usual explanation” that progress exposes forgeries, which the author explicitly sets aside by noting that exposed forgeries are often rejected before any laboratory is consulted.',
+          'The second paragraph says the forger “will supply sweetness, and a little more of it than the master did.” Overstating the admired quality is part of the author’s own explanation.',
+          'The second paragraph says a later generation, “admiring the master for different things, finds those things missing.” A shift in what viewers value is a step in the author’s account.',
+          'The second paragraph states that the forger “sees in his model what his own time has taught him to see.” This is the foundation of the author’s explanation.',
+        ],
         skill: 'detail',
       },
       {
@@ -252,6 +342,12 @@ export const FL7_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'If a forgery embodies the taste of the period that made it, viewers who share that taste should be the least able to see through it, and viewers from another period the most able; the finding about experts and forgeries of their own time is exactly that pattern. Exposure mainly by chemical tests would favor the “progress” explanation the author rejects. The forgers’ training as restorers is irrelevant to the argument. Close agreement across periods about a master’s qualities would undercut the claim that each period sees the master differently.',
+        optionExplanations: [
+          'Exposure mainly by chemical tests would favor the “progress” explanation the author rejects. It would suggest that improved methods, not changing taste, unmask forgeries.',
+          'The forgers’ earlier careers as restorers has no bearing on the argument. The passage concerns how taste shapes what a forger sees and what later viewers notice, not the forger’s training.',
+          'If a forgery embodies the taste of its period, viewers sharing that taste should be least able to see through it and viewers of another period most able. Experts fooled chiefly by forgeries of their own time is exactly that pattern.',
+          'Close agreement across periods about a master’s qualities would undercut the author’s claim that each generation admires the master “for different things.” This finding weakens the account rather than strengthening it.',
+        ],
         skill: 'strengthen-weaken',
       },
       {
@@ -266,6 +362,12 @@ export const FL7_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'A copy, for the author, is a faithful record limited by what its maker was able to find in the original; a transcript made by one listener is likewise an attempt at the whole that is bounded by that listener’s hearing. The speaker’s notes come from the originator and precede the work, so they are not a record of it by another. A review passes judgment on its object and does not try to reproduce it. A reply adds new matter in response and is not a rendering of the original at all.',
+        optionExplanations: [
+          'A copy, for the author, is a faithful attempt at the whole that is bounded by what its maker could find in the original. A listener’s transcript is likewise an attempt at the whole speech limited by what that listener caught.',
+          'The speaker’s notes come from the originator and precede the speech. They are not a record of the work made by another, so they do not parallel a copy made from an existing original.',
+          'A review passes judgment on its object and does not attempt to reproduce it. The author’s copy is “one reading of a picture, however faithful,” a rendering rather than an evaluation.',
+          'A reply adds new matter in response to the speech. It is not a rendering of the original at all, whereas a copy aims to reproduce what is there, limited only by the copyist’s eye.',
+        ],
         skill: 'application',
       },
       {
@@ -280,6 +382,12 @@ export const FL7_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The author holds that calling a copy indistinguishable describes the viewers, not the copy: no difference can be seen “by present eyes, looking for what present eyes look for.” The collector’s failure to find one therefore shows only that the collector’s way of looking matches the copyist’s. It does not indicate how the copy was made, and the author says machine copies carry their period’s assumptions too. The collector’s motives are not in question. That the original holds nothing more is the very conclusion the author denies can be drawn.',
+        optionExplanations: [
+          'The collector’s inability to find a difference says nothing about how the copy was made. The author also holds that machine copies embody their period’s decisions about what matters, so this inference is unsupported.',
+          'The collector’s motives are not in question. The author’s point concerns what indistinguishability tells us about viewers, not whether the collector loves the picture or its name.',
+          'This is the very conclusion the author denies can be drawn. The original “contains whatever is there to be found, including what nobody has yet learned to look for,” so present indistinguishability does not show the original holds nothing more.',
+          'The author holds that calling a copy indistinguishable describes the viewers: no difference can be seen “by present eyes, looking for what present eyes look for.” The collector’s experience shows only that his way of looking matches the copyist’s.',
+        ],
         skill: 'application',
       },
     ],
@@ -304,6 +412,12 @@ export const FL7_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The finding is introduced as “a further difficulty” for the view that boredom is a shortage of stimulation: these people “have more than enough coming at them” and are bored all the same. The author draws no conclusion about how capable bored people are; the point concerns the fit between person and task. Nothing is said about how unpleasant the two kinds of task are relative to each other. The laboratory result is offered as agreeing with the everyday cases of the assembly line and the party, not as differing from them.',
+        optionExplanations: [
+          'The finding is introduced as “a further difficulty” for the view that boredom is a shortage of stimulation. People with tasks too hard “have more than enough coming at them” and are bored anyway, so stimulation is plentiful yet boredom persists.',
+          'The author draws no conclusion about how capable bored people are. The point concerns the mismatch between person and task, whether too easy or too hard, not any ranking of people by ability.',
+          'Nothing in the passage compares how unpleasant easy and hard tasks are. Both produce boredom, but the author does not say they are equally unpleasant, and that comparison is not the purpose of the example.',
+          'The laboratory result is offered as agreeing with the everyday cases of the assembly line and the crowded party, not as differing from them. All show boredom without a shortage of stimulation.',
+        ],
         skill: 'function',
       },
       {
@@ -318,6 +432,12 @@ export const FL7_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The author says these people “have noticed half of this”: boredom does supply restlessness, but the fort of chairs requires chairs and a habit of making things, so boredom “contributes the restlessness and nothing more.” The author does not deny that boredom moves children; it is called a goad. No distinction between children and adults is drawn. The author has rejected the idea that boredom depends on the amount of stimulation, so the last option relies on a theory the passage discards.',
+        optionExplanations: [
+          'The author does not deny that boredom moves children; boredom is called “a goad” that moves people powerfully. The disagreement is about what boredom contributes, not whether it motivates.',
+          'No distinction between children and adults is drawn. The author’s criticism is that these people have noticed only half the truth about boredom, not that their point applies to one age group and not another.',
+          'The author says those who praise boredom “have noticed half of this”: boredom supplies restlessness, but the fort of chairs requires chairs and a habit of making things. Boredom “contributes the restlessness and nothing more,” so crediting it with creativity is the error.',
+          'The author has rejected the idea that boredom depends on the amount of stimulation, so this option relies on a theory the passage discards. The author also does not deny that empty afternoons produce boredom.',
+        ],
         skill: 'tone',
       },
       {
@@ -332,6 +452,12 @@ export const FL7_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'If boredom rejects the present activity without naming a replacement, then, as the author says, it “is satisfied by whatever ends it,” so even an unloved pastime should bring relief. The commuter’s sense of slowed time and the traveler’s drowsiness are facts about boredom that the “not this” claim does nothing to explain. A student who knows exactly what she would rather do has a signal with specific content, which is what the author says boredom lacks.',
+        optionExplanations: [
+          'A sense that time has slowed is a fact about boredom, but the claim that boredom “says only ‘not this’” concerns its lack of content about what to do instead. That claim does nothing to explain time perception.',
+          'If boredom rejects the present without naming a replacement, then, as the author says, it “is satisfied by whatever ends it.” Relief from an unloved pastime is exactly what a contentless signal predicts.',
+          'A student who knows exactly which activity she would rather be doing has a signal with specific content. The author says boredom lacks that content, so this observation contradicts rather than illustrates the claim.',
+          'Drowsiness is a fact about boredom that the “not this” claim does nothing to explain. The claim concerns what boredom does and does not tell the sufferer about alternatives, not sleepiness.',
+        ],
         skill: 'application',
       },
       {
@@ -346,6 +472,12 @@ export const FL7_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The patients are “in danger precisely because nothing warns them”; by analogy, someone who never feels bored may lack the signal that an unsuitable situation would normally produce, so the absence of boredom is not proof of rich inner resources. The comparison is with people who feel nothing, not with people who hide what they feel. Having found well-suited occupations is not what the patients illustrate; they stand for a missing warning, and the only other possibility the author grants is that the person really is rich in inner resources. Intelligence is not mentioned anywhere in the passage.',
+        optionExplanations: [
+          'The patients are people who feel nothing, not people who hide what they feel. The comparison concerns a missing signal, so it implies nothing about concealed boredom.',
+          'The patients do not illustrate a well-suited life; they illustrate a missing warning. The author grants that a never-bored person “may be” rich in inner resources, but the comparison is meant to raise the other possibility.',
+          'Intelligence is mentioned nowhere in the passage. The author’s concern is with whether boredom functions as a signal, not with how intelligent bored or unbored people are.',
+          'The patients are “in danger precisely because nothing warns them.” By analogy, someone never bored may lack the signal that an unsuitable situation should produce, so the absence of boredom is not proof of rich inner resources.',
+        ],
         skill: 'inference',
       },
       {
@@ -360,6 +492,12 @@ export const FL7_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The room is as bare as before, so the amount of outside stimulation is unchanged; what differs is that the volunteers have something to engage them, and the urge to escape disappears. That supports the conclusion of the second paragraph about what bored people have in common. The strength of boredom was shown by the original version, in which people did press the button, not by this one. The result does not bear on whether boredom points to a remedy. No habit of making things was measured, and the author never claims that such a habit reduces boredom.',
+        optionExplanations: [
+          'The strength of boredom as a drive was shown by the original experiment, in which people did shock themselves. A version in which almost no one presses the button does not demonstrate boredom’s power.',
+          'The room is as bare as before, so outside stimulation is unchanged; what differs is that the volunteers have something to engage them, and the urge to escape disappears. That supports the second paragraph’s claim about absorption.',
+          'The result does not bear on whether boredom points to a remedy. It shows only that absorbed people are not bored, which concerns the cause of boredom rather than the content of its signal.',
+          'No habit of making things was measured in the experiment. The author also never claims that such a habit reduces boredom; the habit is mentioned only as something boredom cannot itself supply.',
+        ],
         skill: 'new-information',
       },
       {
@@ -373,6 +511,12 @@ export const FL7_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The danger is that a person who quiets boredom each time it rises never learns what it was about and so remains in a situation that does not engage him; the accountant does this for years. The patient uses the same remedy where the author says it “matter[s] little,” in a waiting room. The retiree shows the earlier point that boredom can be ended by harmful pursuits, not the anesthetic effect. The student feels the signal and acts on it by changing her situation, which is the reverse of silencing it.',
+        optionExplanations: [
+          'The patient uses her telephone in a waiting room, where the author says the minutes “matter little.” This is the harmless use the final paragraph explicitly sets aside before describing the danger.',
+          'The retiree illustrates the earlier point that boredom “is satisfied by whatever ends it,” including gambling. That is about harmful cures, not about silencing the signal with an anesthetic and never learning what it was about.',
+          'The danger is that a person who quiets boredom each time it rises never learns what it was about and stays in a situation that does not engage him. The accountant anesthetizes the complaint for years in “the job that uses nothing of one’s abilities.”',
+          'The student feels the signal and acts on it by changing her situation, which is the reverse of silencing it. The author would regard this as boredom doing its job, not as the danger described.',
+        ],
         skill: 'application',
       },
     ],
@@ -396,6 +540,12 @@ export const FL7_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The author removes a “false” merit, sincerity, “to make room for the true” one: the diarist’s ignorance of what followed, which preserves how a day looked “while the end was still hidden.” The candor option is the common persuasion the author begins by doubting. The little-trust option stops at the first half of the argument and ignores the merit the author goes on to defend. The memoir is treated as the lesser witness on this point, because its writer cannot help arranging the past in the light of the outcome.',
+        optionExplanations: [
+          'The candor view is the “common persuasion” the author begins by doubting, saying he has “never found this solitary truth-teller in any diary.” The passage argues against this reputation.',
+          'This stops at the first half of the argument. The author does deny the diary’s sincerity but then “removes a false” merit “to make room for the true,” defending the diary’s testimony on different grounds.',
+          'The author removes a false merit, sincerity, “to make room for the true” one: the diarist’s ignorance of what followed, which preserves “how a day looked while the end was still hidden.” That shift is the central argument.',
+          'The memoir is treated as the lesser witness on this point. Its writer, knowing how things turned out, “cannot help arranging his early chapters as a road which leads thither,” so each event’s weight is distorted by hindsight.',
+        ],
         skill: 'main-idea',
       },
       {
@@ -410,6 +560,12 @@ export const FL7_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Cipher and excised leaves are the last items in a list of things a man does not do “in an empty room”; concealment makes sense only against a reader, so the practices are evidence that the diarist “feels an eye upon him.” The author is not ranking diaries by frankness or commenting on what was hidden. Far from conceding that some diarists ignore readers, the examples are said to go “further” in the same direction. The limit on how much of a day a page can hold is a separate argument made in the next paragraph.',
+        optionExplanations: [
+          'The author is not ranking diaries by frankness or commenting on what the hidden passages contained. Cipher and excision are cited as acts of concealment, not as marks of a frank record.',
+          'Far from conceding this, the author says these diarists “have gone further” in the same direction as those who explain and plead. Concealment is treated as evidence of a felt reader, not its absence.',
+          'The limit on how much of a day a page can hold is a separate argument in the next paragraph. Cipher and penknife concern concealment from a reader, not the selection forced by limited space.',
+          'Cipher and excised leaves close a list of things a man does not do “in an empty room.” Concealment makes sense only against a reader, so these practices show that the diarist “feels an eye upon him” and composes himself before it.',
+        ],
         skill: 'function',
       },
       {
@@ -424,6 +580,12 @@ export const FL7_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'A portrait in a coat of the sitter’s choosing is still a likeness of the sitter; what he controls is the presentation. The figure thus allows the diary a qualified sincerity, shaped by the writer’s selection of what is “worthy of remembrance.” The author does not say that nothing in a diary is fact, and the final paragraph rebukes readers who call the diarist a hypocrite. No comparison of how flattering diaries and memoirs are is made. The coat is chosen by the sitter, so the image concerns self-presentation, not how others habitually saw him.',
+        optionExplanations: [
+          'A portrait in a coat the sitter chose is still a likeness of the sitter; what he controls is the presentation. The figure grants the diary a qualified sincerity shaped by the writer’s selection of what is “worthy of remembrance.”',
+          'The author does not say that nothing in a diary is fact; the diarist’s brother really is a clergyman in Norfolk. The final paragraph also rebukes readers who cry out upon the diarist as a hypocrite.',
+          'No comparison of how flattering diaries and memoirs are appears in the passage. The memoir is contrasted with the diary on knowledge of outcomes, not on favorable presentation.',
+          'The coat is chosen by the sitter himself, so the image concerns self-presentation. It says nothing about how other people were accustomed to see the diarist.',
+        ],
         skill: 'inference',
       },
       {
@@ -438,6 +600,12 @@ export const FL7_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The value claimed for the diary is that its entries were written in ignorance of what followed, so that their proportions were not adjusted to the outcome. Entries recast in later life would have been rearranged with the outcome known, like a memoir. A hope of publication is one more “eye,” which the author has already granted without thinking the diary’s true merit affected. Memoirists’ use of diaries says nothing about the diaries themselves. Dwelling on matters of no consequence is the “wrongness of proportions” that the author prizes.',
+        optionExplanations: [
+          'A hope of publication is one more “eye” upon the page, which the author has already granted without thinking the diary’s true merit affected. The author says the diarist composes himself before some imagined reader in any case.',
+          'The value claimed for the diary is that entries were written in ignorance of what followed, so their proportions were not adjusted to the outcome. Entries recast in later life would have been rearranged with the outcome known, like a memoir.',
+          'Memoirists consulting their own diaries says nothing about the diaries themselves. The diary’s value as testimony to how a day looked is unaffected by what later writers do with it.',
+          'Dwelling on matters that proved inconsequential is the “wrongness of proportions” the author prizes. Three pages on a landlord’s quarrel and one line on a fateful meeting is precisely what makes the diary’s testimony “beyond price.”',
+        ],
         skill: 'strengthen-weaken',
       },
       {
@@ -452,6 +620,12 @@ export const FL7_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'What the author prizes is testimony written before the outcome was known, whatever the writer’s motives or audience; the clerk’s weekly reports are composed for a reader, yet in ignorance of how the venture will end. The merchant’s account is candid but written with a whole life in view, like a memoir at sixty. The witness and the general likewise write afterward, knowing how the accident and the campaign turned out, and so cannot help giving each incident the weight the event has since assigned it.',
+        optionExplanations: [
+          'The merchant’s account is candid but written at eighty with a whole life in view. Like the memoir at sixty, it cannot help arranging early incidents in the light of how things turned out.',
+          'A sworn statement about an accident seen a year before is written afterward, with the outcome known. The witness recalls with hindsight, which is the memoir’s condition rather than the diary’s.',
+          'A history compiled after the peace is written knowing how the campaign ended. The general cannot help giving each dispatch the weight the event has since assigned to it, which is exactly what the author says robs testimony of its special value.',
+          'What the author prizes is testimony written before the outcome was known, whatever the writer’s motives or audience. The clerk writes for a reader, yet in ignorance of how the venture will end, so his reports preserve how things looked while the end was hidden.',
+        ],
         skill: 'application',
       },
       {
@@ -466,6 +640,12 @@ export const FL7_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The final paragraph says we go to diaries “for the heart laid bare,” find “a man in his best coat,” and need not be troubled, because the diary’s real worth lies in what could not be falsified. A reader who discards a diary for self-flattery has demanded sincerity and missed the ignorance of to-morrow. The author denies that such a diary tells us nothing. The author holds that all diarists compose themselves, so other diarists are not held up as more candid. The charitable readers are those who mistake the coat for skin, the opposite of this reader’s reaction.',
+        optionExplanations: [
+          'The final paragraph says we go to diaries for the heart laid bare, find a man in his best coat, and need not be troubled, because the real worth lies in what could not be falsified. This reader demanded sincerity and missed the ignorance of to-morrow.',
+          'The author denies that a self-flattering diary tells us nothing. Its ignorance of what was to come is “the part of him which no other witness can supply,” and that survives any flattering account of a quarrel.',
+          'The author holds that all diarists compose themselves before an eye, pleading, preaching, and concealing. No other diarist is held up as more candid, so this reader’s haste is not the problem.',
+          'The charitable readers are those who “persuade themselves that the coat is skin,” that is, who take the diarist’s self-presentation for the truth. This reader did the opposite, crying out upon the diarist for a hypocrite.',
+        ],
         skill: 'application',
       },
     ],

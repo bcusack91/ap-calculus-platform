@@ -1,25 +1,24 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { randomUUID } from 'node:crypto'
-import { Prisma, type FlashcardRating } from '@prisma/client'
+import { Prisma } from '@prisma/client'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
-import { calculateNextReview, buttonToQuality } from '@/lib/spaced-repetition'
 import { flashcardReviewSchema, parseBody } from '@/lib/validations'
 import { recordAssignmentCompletion } from '@/lib/assignment-autocomplete'
 import { getActiveStudyContext } from '@/lib/study-context'
 import { getDailyQueueState } from '@/lib/flashcard-daily-queue'
 import { servedFlashcardWhere, servedProgressWhere } from '@/lib/flashcard-yield'
 import { yieldPrefsFor } from '@/lib/flashcard-yield-prefs'
-import { classroomIdFromContext } from '@/lib/study-tracking'
-
-/** Longest time on one card the review log keeps; beyond this the student walked away. */
-const MAX_CARD_MS = 60_000
-
-const RATING_ENUM = { again: 'AGAIN', hard: 'HARD', good: 'GOOD', easy: 'EASY' } as const satisfies Record<string, FlashcardRating>
+import { applyFlashcardRating } from '@/lib/flashcard-rating'
+import { interleaveCards } from '@/lib/user-flashcard-ids'
+import { earlierDue, loadOwnQueue, ownCardAsReviewRow } from '@/lib/user-flashcards'
 
 /**
  * POST /api/flashcards/review
- * Submit a flashcard review and update spaced repetition schedule
+ * Submit a flashcard review and update spaced repetition schedule.
+ * `flashcardId` may be a site card id or a student-made card ('u:<id>'),
+ * which is scheduled on UserFlashcard's own columns. The scheduling, rollup
+ * and review-log logic lives in src/lib/flashcard-rating.ts, shared with the
+ * offline batch sync (POST /api/flashcards/sync).
  */
 export async function POST(req: NextRequest) {
   try {
@@ -46,127 +45,27 @@ export async function POST(req: NextRequest) {
     // course) — resolved server-side so each mode is an independent deck.
     const context = await getActiveStudyContext(session.user.id)
 
-    // Get current progress (may not exist yet for a brand-new card)
-    const progress = await prisma.flashcardProgress.findUnique({
-      where: {
-        userId_flashcardId_context: {
-          userId: session.user.id,
-          flashcardId: flashcardId,
-          context
-        }
-      }
+    const outcome = await applyFlashcardRating({
+      userId: session.user.id,
+      context,
+      cardId: flashcardId,
+      rating,
+      tzOffset,
+      durationMs,
     })
-
-    // For a first review there is no progress row yet — treat it as a fresh card
-    // with SM-2 defaults (easeFactor 2.5, interval 0, repetitions 0) and upsert
-    // below, rather than 404ing and blocking the card from ever being reviewed.
-    const easeFactor = progress?.easeFactor ?? 2.5
-    const interval = progress?.interval ?? 0
-    const repetitions = progress?.repetitions ?? 0
-    const isMinuteInterval = progress?.isMinuteInterval ?? false
-    const reviewCount = progress?.reviewCount ?? 0
-
-    // Convert button rating to quality score
-    const quality = buttonToQuality(rating)
-
-    // Calculate the next review (day-scale intervals anchor to the student's
-    // 4am local day rollover when tzOffset is provided)
-    const result = calculateNextReview(
-      quality,
-      easeFactor,
-      interval,
-      repetitions,
-      isMinuteInterval,
-      tzOffset
-    )
-
-    // Upsert progress: create the row on a first review, update it otherwise.
-    const updatedProgress = await prisma.flashcardProgress.upsert({
-      where: {
-        userId_flashcardId_context: {
-          userId: session.user.id,
-          flashcardId: flashcardId,
-          context
-        }
-      },
-      create: {
-        userId: session.user.id,
-        flashcardId: flashcardId,
-        context,
-        easeFactor: result.easeFactor,
-        interval: result.interval,
-        isMinuteInterval: result.isMinuteInterval,
-        repetitions: result.repetitions,
-        nextReview: result.nextReview,
-        lastReviewed: new Date(),
-        reviewCount: 1
-      },
-      update: {
-        easeFactor: result.easeFactor,
-        interval: result.interval,
-        isMinuteInterval: result.isMinuteInterval,
-        repetitions: result.repetitions,
-        nextReview: result.nextReview,
-        lastReviewed: new Date(),
-        reviewCount: reviewCount + 1
-      }
-    })
-
-    // Best-effort daily-habit rollup: one row per user per UTC day, powering
-    // the teacher's "did they do their flashcards this week" view AND the
-    // Anki-style daily limits (src/lib/flashcard-daily-queue.ts). `newCards`
-    // counts INTRODUCTIONS — this rating was the card's first-ever review in
-    // this context (no progress row yet / reviewCount 0) — which is how
-    // "new cards introduced today" is measured against flashcardNewPerDay.
-    try {
-      const introduced = reviewCount === 0 ? 1 : 0
-      await prisma.$executeRaw`
-        INSERT INTO "FlashcardDailyActivity" ("id", "userId", "day", "reviews", "newCards")
-        VALUES (${randomUUID()}, ${session.user.id}, CURRENT_DATE, 1, ${introduced})
-        ON CONFLICT ("userId", "day") DO UPDATE SET
-          "reviews" = "FlashcardDailyActivity"."reviews" + 1,
-          "newCards" = "FlashcardDailyActivity"."newCards" + ${introduced}`
-    } catch (rollupError) {
-      console.error('flashcard daily rollup failed (non-fatal):', rollupError)
+    if (outcome.status !== 'applied') {
+      return NextResponse.json({ error: 'Flashcard not found' }, { status: 404 })
     }
 
     // Best-effort assignment auto-completion: topic-based FLASHCARD_REVIEW
-    // assignments (no teacher flashcardSetId) are studied on this surface,
-    // which previously never recorded a submission. A card review actually
-    // completed above, so record completion semantics (score 1 — matching
-    // the set-viewer's explicit submit). Helper swallows its own failures.
-    const reviewedCard = await prisma.flashcard.findUnique({
-      where: { id: flashcardId },
-      select: { topic: { select: { slug: true, category: { select: { course: { select: { slug: true } } } } } } },
-    })
-
-    // Best-effort review log for the teacher's per-student report: one row
-    // per rating, with the time on card (client-measured, visible time only,
-    // capped at 60 s). `wasNew` matches the rollup's "introduced" rule above;
-    // `intervalBefore` is the day-scale interval before this rating (0 for a
-    // learning-step minute interval or a brand-new card).
-    try {
-      await prisma.flashcardReviewLog.create({
-        data: {
-          userId: session.user.id,
-          flashcardId,
-          context,
-          classroomId: classroomIdFromContext(context),
-          courseSlug: reviewedCard?.topic?.category?.course?.slug ?? '',
-          rating: RATING_ENUM[rating],
-          wasNew: reviewCount === 0,
-          intervalBefore: progress && !isMinuteInterval ? Math.max(0, Math.round(interval)) : 0,
-          durationMs: durationMs == null ? null : Math.max(0, Math.min(Math.round(durationMs), MAX_CARD_MS)),
-        },
-      })
-    } catch (logError) {
-      console.error('flashcard review log failed (non-fatal):', logError)
-    }
-
-    if (reviewedCard?.topic?.slug) {
+    // assignments (no teacher flashcardSetId) are studied on this surface.
+    // A card review actually completed above, so record completion semantics
+    // (score 1 — matching the set-viewer's explicit submit). Helper swallows
+    // its own failures. Own cards belong to no assignment.
+    if (outcome.topicSlug) {
       await recordAssignmentCompletion({
         userId: session.user.id,
-        topicSlug: reviewedCard.topic.slug,
+        topicSlug: outcome.topicSlug,
         types: ['FLASHCARD_REVIEW'],
         score: 1,
       })
@@ -174,9 +73,9 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({
       success: true,
-      progress: updatedProgress,
-      nextReviewDate: result.nextReview,
-      interval: result.interval
+      progress: outcome.progress,
+      nextReviewDate: outcome.nextReview,
+      interval: outcome.interval
     })
 
   } catch (error) {
@@ -256,7 +155,39 @@ export async function GET(req: NextRequest) {
         },
       },
     } satisfies Prisma.FlashcardProgressInclude
-    const BATCH_SIZE = 50 // Batch size per fetch, not a session ceiling
+    // Batch size per fetch, not a session ceiling. `limit` (≤ 200) lets the
+    // review page pull a bigger batch to cache for offline review.
+    const limitParam = Number(searchParams.get('limit'))
+    const BATCH_SIZE = Number.isFinite(limitParam) && limitParam >= 1 ? Math.min(Math.floor(limitParam), 200) : 50
+
+    // Student-made cards (UserFlashcard). `own=1` interleaves the student's
+    // due own cards into the main session; `own=0` reports their counts only
+    // (so the page can show the "Include my own cards" toggle); absent = the
+    // legacy response untouched. `ownOnly=1` is the "Review my cards" session.
+    // Own cards keep their own SRS columns and never count against the daily
+    // limits below — see src/lib/user-flashcards.ts.
+    const ownParam = searchParams.get('own')
+    const ownOnly = searchParams.get('ownOnly') === '1'
+    const ownTake = Math.max(1, Math.ceil(BATCH_SIZE / 2))
+
+    if (ownOnly) {
+      const own = await loadOwnQueue(session.user.id, { now, endOfStudentDay, take: BATCH_SIZE })
+      const ownNew = own.cards.filter((c) => c.reviewCount === 0).length
+      return NextResponse.json({
+        cards: own.cards.map(ownCardAsReviewRow),
+        stats: {
+          total: own.total,
+          due: own.due,
+          new: ownNew,
+          review: Math.max(0, own.due - ownNew),
+          dueLaterToday: own.dueLaterToday,
+          nextDueAt: own.nextDueAt,
+          ownTotal: own.total,
+          ownDue: own.due,
+          ownOnly: true,
+        },
+      })
+    }
 
     // UNFILTERED (the main review session + dashboard stats): Anki-style
     // daily limits apply. The queue is composed as
@@ -327,19 +258,44 @@ export async function GET(req: NextRequest) {
           })
         : []
 
+      const siteRows = [...reviewRows, ...newRows]
+      if (ownParam === null) {
+        return NextResponse.json({
+          cards: siteRows,
+          stats: {
+            total: totalCards,
+            // "Due" is today's remaining workload under the daily limits.
+            due: dailyState.dueToday,
+            new: dailyState.newToday,
+            review: dailyState.reviewsToday,
+            reviewsBeyondLimit: dailyState.reviewsBeyondLimit,
+            newBeyondLimit: dailyState.newBeyondLimit,
+            limits: dailyState.limits,
+            dueLaterToday,
+            nextDueAt: nextUpcoming?.nextReview ?? null,
+          },
+        })
+      }
+
+      // Own cards: interleaved when included; `due`/`total` stay site-only
+      // (they're the daily-limit numbers) and the own counts ride alongside.
+      const includeOwn = ownParam === '1'
+      const own = await loadOwnQueue(session.user.id, { now, endOfStudentDay, take: includeOwn ? ownTake : 0 })
       return NextResponse.json({
-        cards: [...reviewRows, ...newRows],
+        cards: includeOwn ? interleaveCards<unknown>(siteRows, own.cards.map(ownCardAsReviewRow)) : siteRows,
         stats: {
           total: totalCards,
-          // "Due" is today's remaining workload under the daily limits.
           due: dailyState.dueToday,
           new: dailyState.newToday,
           review: dailyState.reviewsToday,
           reviewsBeyondLimit: dailyState.reviewsBeyondLimit,
           newBeyondLimit: dailyState.newBeyondLimit,
           limits: dailyState.limits,
-          dueLaterToday,
-          nextDueAt: nextUpcoming?.nextReview ?? null,
+          dueLaterToday: dueLaterToday + (includeOwn ? own.dueLaterToday : 0),
+          nextDueAt: includeOwn ? earlierDue(nextUpcoming?.nextReview, own.nextDueAt) : nextUpcoming?.nextReview ?? null,
+          ownTotal: own.total,
+          ownDue: own.due,
+          ownIncluded: includeOwn,
         },
       })
     }

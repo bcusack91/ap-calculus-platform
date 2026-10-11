@@ -27,6 +27,12 @@ export const FL2_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'For Reaction 3, $K = \\dfrac{[\\text{HbCO}]\\,P_{\\text{O}_2}}{[\\text{HbO}_2]\\,P_{\\text{CO}}} = 250$, so $[\\text{HbCO}]/[\\text{HbO}_2] = 250 \\times (0.20/100) = 0.50$. One CO-bound site for every two O₂-bound sites means CO occupies 1/3 of the sites, about 33%. The 50% value treats the 0.50 ratio as if it were the fraction of sites. The 67% value is the fraction still carrying O₂. The 0.20% value is simply the ratio of the two partial pressures, ignoring the much greater affinity of heme for CO.',
+        optionExplanations: [
+          'This is just the ratio of the two partial pressures (0.20/100). It ignores the equilibrium constant of 250, which makes heme bind CO far more strongly than O₂ at equal partial pressures.',
+          'Correct. From Reaction 3, $[\\text{HbCO}]/[\\text{HbO}_2] = K \\cdot P_{\\text{CO}}/P_{\\text{O}_2} = 250 \\times 0.20/100 = 0.50$. One CO site per two O₂ sites means CO occupies 1 of every 3 sites, about 33%.',
+          'Fifty percent treats the 0.50 ratio of HbCO to HbO₂ as if it were the fraction of all sites. A ratio of 1:2 corresponds to a fraction of 1/3, not 1/2.',
+          'Sixty-seven percent is the fraction of sites still carrying O₂ (2 of every 3). The question asks for the CO-occupied share, which is the remaining one-third.',
+        ],
         skill: '5E equilibrium constant calculation (Skill 2)',
       },
       {
@@ -40,6 +46,12 @@ export const FL2_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Reaction 1 shows that O₂ binding converts HbH⁺ to HbO₂ and releases H⁺. Those protons combine with $\\text{HCO}_3^-$, pulling Reaction 2 toward $\\text{H}_2\\text{CO}_3$ and then CO₂ and water, and the CO₂ is exhaled; this is the Haldane effect. The p$K_a$ of carbonic acid is a property of that acid and is not changed by hemoglobin. CO₂ that travels on hemoglobin is carried on amino groups, not on the heme iron, and it does not compete with O₂ for heme. An enzyme speeds the approach to equilibrium but cannot shift the position of the equilibrium.',
+        optionExplanations: [
+          'The p$K_a$ of carbonic acid is a fixed property of that acid at a given temperature. Hemoglobin cannot alter it; what oxygenation changes is the proton concentration, not the acid’s dissociation constant.',
+          'CO₂ carried on hemoglobin is bound to amino groups as carbamino compounds, not to the heme iron, and it does not compete with O₂ for heme. Displacement from iron is not the mechanism.',
+          'An enzyme speeds the approach to equilibrium but cannot shift its position. Even if oxygenation affected carbonic anhydrase, that would not change where Reaction 2 settles.',
+          'Correct. Reaction 1 shows O₂ binding converts HbH⁺ to HbO₂ and releases H⁺. Those protons combine with HCO₃⁻ and push Reaction 2 back toward CO₂ and water, which is exhaled; this is the Haldane effect.',
+        ],
         skill: '5E coupled equilibria and Le Chatelier (Skill 2)',
       },
       {
@@ -48,6 +60,12 @@ export const FL2_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The added H⁺ converts 12 mM $\\text{HCO}_3^-$ into CO₂, leaving 12 mM bicarbonate. Because the extra CO₂ is exhaled, dissolved CO₂ stays at $0.03 \\times 40 = 1.2$ mM, so pH $= 6.1 + \\log(12/1.2) = 6.1 + 1 = 7.1$. A pH near 6.1 is what a sealed system would give: the CO₂ would accumulate to 13.2 mM and the ratio would fall below 1. A pH of 6.8 corresponds to a ratio of 5, which would require dissolved CO₂ to double as bicarbonate halved. A pH of 7.4 assumes the buffer absorbs the acid with no change at all, but halving the bicarbonate at constant CO₂ must lower the pH by log 2, about 0.3 unit.',
+        optionExplanations: [
+          'Correct. The acid converts 12 mM HCO₃⁻ to CO₂, leaving 12 mM. Because ventilation holds $P_{\\text{CO}_2}$ at 40 mmHg, dissolved CO₂ stays at 1.2 mM, so pH $= 6.1 + \\log(12/1.2) = 7.1$.',
+          'A pH equal to the p$K_a$ would require equal bicarbonate and dissolved CO₂. That is roughly what a sealed flask would give, where the 12 mM of CO₂ produced accumulates, but here the extra CO₂ is exhaled.',
+          'A pH of 6.8 corresponds to a bicarbonate-to-CO₂ ratio of 5, which would require dissolved CO₂ to roughly double while bicarbonate halved. With $P_{\\text{CO}_2}$ held constant, CO₂ stays at 1.2 mM.',
+          'An unchanged pH assumes the buffer absorbs the acid with no effect, but bicarbonate falls from 24 to 12 mM while CO₂ is constant. Halving the ratio must lower pH by log 2, about 0.3 unit.',
+        ],
         skill: '5A open bicarbonate buffer (Skill 2)',
       },
       {
@@ -61,6 +79,12 @@ export const FL2_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'An equilibrium constant depends only on temperature. Because O₂ binding is exothermic, raising the temperature decreases $K$ for Reaction 1, lowering hemoglobin’s O₂ affinity. Raising $P_{\\text{O}_2}$ changes the reaction quotient, and the system shifts toward HbO₂ with $K$ unchanged. Lowering pH adds a product (H⁺) that appears in the equilibrium expression, so the position shifts toward HbH⁺ (the Bohr effect) while $K$ itself stays the same. Changing the amount of hemoglobin changes how much O₂ is bound, not the ratio that defines $K$.',
+        optionExplanations: [
+          'Raising $P_{\\text{O}_2}$ changes the reaction quotient, and the system shifts toward HbO₂ to restore equilibrium. The constant $K$ itself does not change; only the position of the equilibrium does.',
+          'Lowering pH adds H⁺, a product in Reaction 1, so the equilibrium shifts toward HbH⁺ (the Bohr effect). This shift occurs at a fixed $K$; concentrations of participants never alter the constant.',
+          'Correct. An equilibrium constant depends only on temperature. Because O₂ binding is exothermic (ΔH ≈ −40 kJ/mol), raising the temperature lowers $K$ for Reaction 1 and reduces hemoglobin’s O₂ affinity.',
+          'More hemoglobin means more total O₂ bound, but the ratio of products to reactants that defines $K$ is unchanged. Changing the amount of a participant shifts quantities, not the equilibrium constant.',
+        ],
         skill: '5E equilibrium constant and temperature (Skill 1)',
       },
     ],
@@ -100,6 +124,12 @@ export const FL2_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'For Phantom A, depth × frequency is $2 \\times 30 = 4 \\times 15 = 6 \\times 10 = 8 \\times 7.5 = 10 \\times 6.0 = 60$ cm·MHz, so depth is inversely proportional to frequency, as expected when the allowed round-trip loss $2\\alpha f d$ is fixed at 60 dB. The decreases are not constant: 15 cm between 2 and 4 MHz but only 1.5 cm between 8 and 10 MHz. Because wavelength is inversely proportional to frequency, depth is proportional to the first power of wavelength, not its square. Depth halves only between 2 and 4 MHz; from 4 to 6 MHz it falls by one-third.',
+        optionExplanations: [
+          'The decrements are not constant: depth falls 15 cm between 2 and 4 MHz but only 1.5 cm between 8 and 10 MHz. The relationship is inverse, not linear.',
+          'Wavelength is inversely proportional to frequency, and depth is also inversely proportional to frequency, so depth is proportional to the first power of wavelength, not its square.',
+          'Correct. Depth × frequency is 60 cm·MHz for every transducer (2 × 30, 4 × 15, 6 × 10, 8 × 7.5, 10 × 6.0). Depth is inversely proportional to frequency, as expected when the round-trip loss $2\\alpha f d$ is capped at 60 dB.',
+          'Depth halves only from 2 to 4 MHz (30 to 15 cm). From 4 to 6 MHz it drops by one-third (15 to 10 cm), so halving per 2-MHz step is not the pattern.',
+        ],
         skill: '4D attenuation and frequency (Skill 4)',
       },
       {
@@ -108,6 +138,12 @@ export const FL2_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'For Phantom B, depth × frequency is about 40 cm·MHz (for example, 2 MHz × 20 cm). Setting the round-trip loss equal to the 60-dB limit gives $2\\alpha f d = 60$, so $\\alpha = 60/(2 \\times 40) = 0.75$ dB/(cm·MHz); equivalently, Phantom B’s depths are two-thirds of Phantom A’s, so its coefficient is 1.5 times 0.50. The value 1.5 dB/(cm·MHz) counts only the one-way path to the wire. The value 0.33 dB/(cm·MHz) scales Phantom A’s coefficient by the depth ratio instead of its inverse, although a shallower limit means more attenuation. The value 0.50 dB/(cm·MHz) assumes the phantoms attenuate equally, which the different depths rule out.',
+        optionExplanations: [
+          'Correct. For Phantom B, depth × frequency ≈ 40 cm·MHz (e.g., 2 MHz × 20 cm). Setting the round-trip loss $2\\alpha f d = 60$ dB gives $\\alpha = 60/80 = 0.75$ dB/(cm·MHz), 1.5 times Phantom A’s value since its depths are two-thirds as great.',
+          'This scales Phantom A’s 0.50 by the depth ratio 2/3 instead of its inverse. A shallower detection limit means more attenuation per centimeter, so the coefficient must be larger than 0.50, not smaller.',
+          'This counts only the one-way path to the wire ($\\alpha f d = 60$). The echo must travel to the wire and back, so the attenuation path is $2d$, which halves the coefficient to 0.75.',
+          'Equal coefficients would give equal detection depths, but Phantom B’s depths are consistently two-thirds of Phantom A’s. The phantoms clearly attenuate differently.',
+        ],
         skill: '4D attenuation from data (Skill 4)',
       },
       {
@@ -116,6 +152,12 @@ export const FL2_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Figure 1 shows that in Phantom B the 4-MHz transducer reaches 10 cm but the 6-MHz transducer reaches only 6.5 cm, so 4 MHz is the highest usable frequency. Its wavelength is $\\lambda = v/f = (1540\\ \\text{m/s})/(4 \\times 10^{6}\\ \\text{Hz}) \\approx 0.39$ mm. A two-cycle pulse is $2\\lambda$ long, and the resolution limit is half of that, or one wavelength, 0.39 mm. The 0.26-mm value is the resolution of the 6-MHz transducer, which cannot reach 8 cm in this tissue. The 0.77-mm value belongs to the 2-MHz transducer, which reaches the depth but resolves less finely than necessary. The 0.19-mm value takes half of a single wavelength rather than half of the two-cycle pulse.',
+        optionExplanations: [
+          'About 0.26 mm is the resolution of the 6-MHz transducer, but in Phantom B tissue that transducer reaches only 6.5 cm and cannot image a structure at 8 cm.',
+          'About 0.77 mm is the resolution of the 2-MHz transducer. It reaches the depth, but 4 MHz also does and resolves twice as finely, so this is not the finest attainable.',
+          'This halves a single wavelength rather than half of the two-cycle pulse. The pulse is $2\\lambda$ long, and half of that is one wavelength, 0.39 mm, not 0.19 mm.',
+          'Correct. In Phantom B the 4-MHz transducer reaches 10 cm while 6 MHz reaches only 6.5 cm, so 4 MHz is the highest usable frequency. $\\lambda = 1540/(4 \\times 10^6) \\approx 0.39$ mm; a two-cycle pulse resolves half its length, one wavelength.',
+        ],
         skill: '4D wavelength and resolution (Skill 2)',
       },
       {
@@ -129,6 +171,12 @@ export const FL2_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Frequency is set by the source: each wave crest arriving at the boundary launches one crest into the second medium, so frequency is unchanged on crossing. Because $v = f\\lambda$, a greater speed at the same frequency requires a longer wavelength. An increase in frequency with fixed wavelength would also produce a higher speed, but frequency does not change at a boundary. A shorter wavelength at the same frequency would mean a lower speed. A lower frequency with a longer wavelength wrongly assigns part of the speed change to frequency.',
+        optionExplanations: [
+          'Frequency is fixed by the source and does not change at a boundary; each crest arriving launches one crest into bone. A higher speed with fixed wavelength would require a frequency change that does not occur.',
+          'Correct. Frequency is set by the source and is unchanged on crossing. Since $v = f\\lambda$, the greater speed in bone at the same frequency requires a longer wavelength.',
+          'A shorter wavelength at the same frequency would mean a lower speed ($v = f\\lambda$). Sound travels faster in bone, so the wavelength must lengthen, not shorten.',
+          'The wavelength does increase, but frequency does not fall. All of the speed change appears in the wavelength because the frequency is dictated by the transducer, not by the medium.',
+        ],
         skill: '4D wave speed, frequency, wavelength (Skill 1)',
       },
       {
@@ -142,6 +190,12 @@ export const FL2_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Maximum depth is reached when the echo just falls to the detection threshold. If one transducer emitted a weaker pulse or the receiver were less sensitive for that run, its echoes would fade out at a shallower depth for reasons unrelated to attenuation, confounding the effect of frequency. Emission intensity and receiver gain have no effect on the speed of sound, which depends on the properties of the medium. The wavelengths were meant to differ, because frequency is the independent variable. The fraction reflected by a wire depends on the impedance mismatch at the wire, not on how strongly the pulse was emitted.',
+        optionExplanations: [
+          'Correct. Maximum depth is where the echo just reaches the detection threshold. A weaker pulse or less receiver sensitivity in one run would make echoes vanish shallower for reasons unrelated to attenuation, confounding the frequency effect.',
+          'The speed of sound depends on the medium’s density and compressibility, not on how strongly the pulse is emitted or how the receiver is set. These settings have no bearing on sound speed.',
+          'Wavelengths were meant to differ: frequency is the independent variable, and $\\lambda = v/f$ changes with each transducer. Equal intensity does not and should not equalize wavelength.',
+          'The fraction reflected depends on the impedance mismatch at the wire, not on emission intensity or gain. The passage states this fraction was taken as constant; it is an assumption, not something the controls enforce.',
+        ],
         skill: '4D controls in experimental design (Skill 3)',
       },
     ],
@@ -180,6 +234,12 @@ export const FL2_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The curves cross 50% single-stranded at 55 °C, 65 °C, and 75 °C for Duplexes 1, 2, and 3, so each additional 5 G–C pairs raises $T_m$ by 10 °C, or about 2 °C per pair. The 10 °C value is the change for five substitutions, not one. The 1 °C value divides the 20 °C span between Duplexes 1 and 3 by the 20 base pairs of the duplex rather than by the 10 substitutions. The 0.5 °C value divides the 10 °C step by all 20 base pairs instead of by the 5 pairs that changed.',
+        optionExplanations: [
+          'This divides the 10 °C step between duplexes by all 20 base pairs. Only 5 pairs change between consecutive duplexes, so the step should be divided by 5.',
+          'This divides the 20 °C span between Duplex 1 and Duplex 3 by the 20 base pairs in the duplex rather than by the 10 substitutions that separate them.',
+          'Ten degrees is the $T_m$ increase between consecutive duplexes, which differ by five G–C pairs, not one. The per-pair change is one-fifth of this.',
+          'Correct. The curves cross 50% at 55, 65 and 75 °C for Duplexes 1, 2 and 3. Each additional 5 G–C pairs adds 10 °C, so each substitution raises $T_m$ by about 2 °C.',
+        ],
         skill: '5D melting temperature from data (Skill 4)',
       },
       {
@@ -193,6 +253,12 @@ export const FL2_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'A G–C pair is joined by three hydrogen bonds rather than two, and G–C-containing steps have more favorable stacking energies, so more thermal energy is needed to separate G–C-rich duplexes. Every base pair, G–C or A–T, consists of one purine and one pyrimidine. The negative charge resides on the phosphates, one per nucleotide, so all three 20-base-pair duplexes carry the same charge. Base pairs are held by noncovalent interactions; no covalent bond breaks during melting, which is why the process is readily reversible.',
+        optionExplanations: [
+          'Every Watson–Crick pair, A–T or G–C, consists of one purine and one pyrimidine. A G–C pair does not contain two purines, so this cannot explain the trend.',
+          'Correct. A G–C pair has three hydrogen bonds rather than two, and G–C-containing steps have more favorable stacking energies, so G–C-rich duplexes need more thermal energy to separate.',
+          'The negative charge is on the phosphate backbone, one per nucleotide, and is identical for all three 20-bp duplexes regardless of base composition. Charge differences cannot explain the trend.',
+          'Base pairs are held by hydrogen bonds and stacking, both noncovalent. No covalent bond breaks during melting, which is why the process reverses completely on cooling.',
+        ],
         skill: '5D nucleic acid structure and stability (Skill 1)',
       },
       {
@@ -206,6 +272,12 @@ export const FL2_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Bringing two polyanionic backbones within about 2 nm of each other costs electrostatic energy. A higher concentration of Na⁺ crowds counterions around the phosphates and screens that repulsion, stabilizing the duplex relative to the separated strands and raising $T_m$ above 65 °C (conversely, 0.010 M NaCl would lower it). Na⁺ associates with the negatively charged phosphates rather than breaking base-pair hydrogen bonds. Although NaCl does not appear in the base-pairing equation, ionic strength changes the free energy of the charged duplex and so shifts the equilibrium. Anions are repelled by the negatively charged DNA and do not enhance stacking.',
+        optionExplanations: [
+          'Na⁺ associates with the negatively charged phosphates, not with the bases, and does not break base-pair hydrogen bonds. Higher salt stabilizes, rather than destabilizes, the duplex.',
+          'Although NaCl does not appear in the base-pairing equation, ionic strength changes the electrostatic free energy of two closely spaced polyanionic backbones, and so shifts the duplex–strand equilibrium.',
+          'Correct. The two backbones lie within about 2 nm of each other and repel electrostatically. More Na⁺ counterions screen that repulsion, stabilizing the duplex relative to the separated strands and raising $T_m$.',
+          'Chloride is repelled by the negatively charged DNA and does not interact with the stacked bases. The stabilizing species is the cation, acting on the phosphates.',
+        ],
         skill: '5D electrostatics and duplex stability (Skill 2)',
       },
       {
@@ -219,6 +291,12 @@ export const FL2_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Each duplex is stable at low temperature and dissociates at high temperature, so duplex formation is favorable at low $T$ and unfavorable at high $T$. For $\\Delta G^\\circ = \\Delta H^\\circ - T\\Delta S^\\circ$ to be negative at low $T$, $\\Delta H^\\circ$ must be negative; for it to become positive as $T$ rises, $-T\\Delta S^\\circ$ must be positive, so $\\Delta S^\\circ$ is negative, consistent with two strands becoming one ordered helix. If both were positive, the duplex would form only at high temperature. A negative $\\Delta H^\\circ$ with a positive $\\Delta S^\\circ$ would favor the duplex at every temperature, and the reverse combination would disfavor it at every temperature.',
+        optionExplanations: [
+          'Correct. The duplex forms at low $T$ (ΔG° < 0) and dissociates at high $T$ (ΔG° > 0). With ΔG° = ΔH° − TΔS°, that requires ΔH° < 0 and ΔS° < 0, consistent with two strands becoming one ordered helix.',
+          'If both were positive, ΔG° would be negative only at high temperature, so the duplex would form on heating and melt on cooling, the reverse of what Figure 1 shows.',
+          'A negative ΔH° with a positive ΔS° makes ΔG° negative at every temperature, so the duplex would never melt. The sharp melting transition rules this out.',
+          'A positive ΔH° with a negative ΔS° makes ΔG° positive at every temperature, so the duplex would never form. The samples are fully paired at 45 °C, so this is impossible.',
+        ],
         skill: '5E thermodynamics of duplex formation (Skill 2)',
       },
       {
@@ -232,6 +310,12 @@ export const FL2_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'If heating had degraded the DNA, or if solvent had evaporated and concentrated the sample, the absorbance would not return to its starting value on cooling. Recovery to within 1% shows that the curves record a reversible equilibrium between duplex and single strands, which is what a $T_m$ and a $\\Delta G^\\circ$ analysis assume. The reference absorbance of separated strands comes from the high-temperature end of the heating run, not from the cooled sample. The cooling rate was the same 0.5 °C per minute as the heating rate. Hairpin formation was already excluded by the sequence design, and a cooled sample dominated by re-formed duplex could not reveal hairpins in any case.',
+        optionExplanations: [
+          'The reference absorbance for fully separated strands is taken from the high-temperature end of the heating run, where all curves reach 100%. Cooling the sample back to 45 °C gives the duplex value, not the separated-strand value.',
+          'Cooling was done at the same 0.5 °C per minute as heating, so no slower rate was used. The step compared the end absorbance to the start value, not a second $T_m$.',
+          'Hairpin formation was excluded by the sequence design, and a cooled sample dominated by re-formed duplex could not reveal hairpins in any case. Recovery of the starting absorbance argues against any alternative structure.',
+          'Correct. If heating had degraded the DNA or evaporation had concentrated the sample, absorbance would not return to its starting value. Recovery within 1% shows the curves record a reversible duplex–strand equilibrium, which the $T_m$ and ΔG° analysis requires.',
+        ],
         skill: '5D experimental controls (Skill 3)',
       },
     ],
@@ -259,6 +343,12 @@ export const FL2_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'By the time it annihilates, the positron has slowed almost to rest, so the positron–electron pair has nearly zero total momentum. Conservation of momentum then requires the two photons, which each carry momentum $E/c$, to have equal and opposite momenta: equal energies and opposite directions. Interference affects how overlapping waves combine, not the directions in which the photons are emitted. Photons carry no charge, so a magnetic field does not deflect them. Charge is conserved because the +1 and −1 charges sum to zero and the photons are neutral; charge conservation says nothing about direction.',
+        optionExplanations: [
+          'Interference describes how overlapping waves combine in amplitude; it does not determine the directions in which photons are emitted. The 180° geometry comes from momentum conservation.',
+          'Correct. The positron has slowed almost to rest before annihilating, so the pair has nearly zero total momentum. The two photons, each carrying momentum $E/c$, must therefore have equal and opposite momenta: equal energies, opposite directions.',
+          'Photons carry no charge and are not deflected by magnetic fields. PET detector rings do not steer the photons; they simply register where the photons arrive.',
+          'Charge is conserved (+1 and −1 sum to zero, and photons are neutral), but charge conservation says nothing about direction of travel. Momentum conservation is the relevant principle.',
+        ],
         skill: '4E annihilation and momentum conservation (Skill 1)',
       },
       {
@@ -267,6 +357,12 @@ export const FL2_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           '$1/T_{\\text{eff}} = 1/6.0 + 1/12 = 3/12$, so $T_{\\text{eff}} = 4.0$ h. Falling to one-quarter takes two effective half-lives, 8.0 h. The 4.0-h value is one effective half-life, which leaves half the activity. The 12-h value is two physical half-lives and ignores biological clearance. The 18-h value is two half-lives computed from the average of 6 h and 12 h, but rates of removal add; half-lives do not average.',
+        optionExplanations: [
+          'Four hours is one effective half-life ($1/T_{\\text{eff}} = 1/6 + 1/12 = 1/4$), after which half the activity remains. Falling to one-quarter requires two such half-lives.',
+          'Twelve hours is two physical half-lives of Tc-99m (6.0 h each) and ignores biological clearance. Both processes remove activity, so the actual time is shorter.',
+          'Correct. Rates add: $1/T_{\\text{eff}} = 1/6.0 + 1/12 = 3/12$, so $T_{\\text{eff}} = 4.0$ h. One-quarter of the initial activity remains after two effective half-lives, 8.0 h.',
+          'This takes two half-lives of 9 h, the average of 6 h and 12 h. But removal rates add, so the effective half-life (4.0 h) is shorter than either; half-lives do not average.',
+        ],
         skill: '4E effective half-life (Skill 2)',
       },
       {
@@ -275,6 +371,12 @@ export const FL2_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Only alpha decay changes the mass number, by 4 each time, so the drop from 223 to 207 requires $16/4 = 4$ alpha decays. Four alpha decays lower the atomic number by 8, from 88 to 80, and each beta-minus decay raises it by 1, so 2 beta-minus decays bring it to 82. Four alpha decays with no beta decay would end at element 80, mercury. Three alpha decays would lower the atomic number by exactly 6 but leave a mass number of 211. Four alpha and six beta-minus decays would give atomic number 86.',
+        optionExplanations: [
+          'Correct. Only alpha decay changes the mass number, by 4 each, so $(223 - 207)/4 = 4$ alphas. Those lower Z by 8 (88 → 80); each beta-minus raises Z by 1, so 2 beta decays reach Z = 82.',
+          'Four alpha decays alone would lower the atomic number from 88 to 80, ending at mercury-207, not lead-207. Two beta-minus decays are needed to raise Z back to 82.',
+          'Three alpha decays would lower Z by exactly 6 (88 → 82) but would reduce the mass number only to 211, not 207. The mass-number change requires four alphas.',
+          'Four alphas plus six beta-minus decays would give Z = 88 − 8 + 6 = 86, radon, not lead (Z = 82). Only two beta decays balance the atomic number.',
+        ],
         skill: '4E nuclear decay equations (Skill 2)',
       },
       {
@@ -283,6 +385,12 @@ export const FL2_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Each alpha particle deposits $5.0 \\times 1.6 \\times 10^{-13} = 8.0 \\times 10^{-13}$ J, so the total energy is $(2.5 \\times 10^{11})(8.0 \\times 10^{-13}) = 0.20$ J. Dividing by the mass in kilograms, $0.20\\ \\text{J}/0.050\\ \\text{kg} = 4.0$ Gy. The 0.004-Gy value divides by the mass in grams rather than kilograms. The 0.40-Gy and 40-Gy values are power-of-ten slips, for example from using 0.50 kg or 5.0 g as the mass.',
+        optionExplanations: [
+          'This divides the 0.20 J deposited by 50 g rather than by 0.050 kg. The gray is defined per kilogram, so the result is a thousand times too small.',
+          'This is ten times too large, as would result from using 5.0 g (0.0050 kg) as the mass or from a power-of-ten slip in the energy per particle.',
+          'This is ten times too small, as would result from using 0.50 kg instead of 0.050 kg. The correct mass in kilograms is 0.050.',
+          'Correct. Each alpha deposits $5.0 \\times 1.6 \\times 10^{-13} = 8.0 \\times 10^{-13}$ J, so the total is $(2.5 \\times 10^{11})(8.0 \\times 10^{-13}) = 0.20$ J. Dividing by 0.050 kg gives 4.0 Gy.',
+        ],
         skill: '4E absorbed dose (Skill 2)',
       },
     ],
@@ -310,6 +418,12 @@ export const FL2_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Polar aprotic solvents such as DMSO dissolve salts by solvating cations through their partially negative oxygen atoms, but they cannot hydrogen-bond to anions. The cyanide ion is therefore left relatively “naked” and highly nucleophilic, which accelerates the bimolecular SN2 step. Stabilizing a carbocation is what polar protic solvents do, and it favors SN1. Hydrogen bonding to an anion lowers its energy and weakens it as a nucleophile, and an aprotic solvent has no O–H or N–H bonds to donate in any case. DMSO is not an acid and does not protonate the leaving group.',
+        optionExplanations: [
+          'Carbocation stabilization is the role of polar protic solvents and favors SN1, the opposite of what the first chemist achieved. The high optical purity shows no carbocation formed.',
+          'Hydrogen bonding to an anion lowers its energy and makes it a weaker nucleophile, and DMSO has no O–H or N–H bonds to donate anyway. This reverses the actual effect of protic solvents.',
+          'Correct. DMSO solvates Na⁺ through its partially negative oxygen but cannot hydrogen-bond to anions, leaving cyanide relatively unsolvated and highly nucleophilic, which accelerates the bimolecular SN2 step.',
+          'DMSO is not an acid and does not protonate the leaving group. Bromide is already a good leaving group, and the solvent’s role concerns the nucleophile, not the substrate.',
+        ],
         skill: '5D solvent effects in substitution (Skill 1)',
       },
       {
@@ -323,6 +437,12 @@ export const FL2_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Backside attack in the SN2 step inverts the stereocenter. At C2 the priorities before reaction are Br > ethyl > methyl > H; after reaction they are CN > ethyl > methyl > H, because the nitrile carbon bears three bonds to nitrogen. The new group takes the old group’s top rank, so geometric inversion changes the descriptor from R to S. Retention would require a front-side or double-inversion pathway, which is not available here. A racemic product would require a carbocation, which the high optical purity of the product rules out. Labeling the inverted product (R) overlooks that the priority order is unchanged, so inversion of geometry must reverse the descriptor.',
+        optionExplanations: [
+          'Correct. SN2 backside attack inverts the geometry at C2. Priorities before (Br > ethyl > methyl > H) and after (CN > ethyl > methyl > H) keep the same order, so geometric inversion flips the descriptor from R to S.',
+          'Retention would require front-side attack or a double inversion, neither of which is available in a concerted SN2 reaction. The stereocenter is inverted.',
+          'A racemic product would require a planar carbocation intermediate attacked from both faces. The high optical purity isolated by the first chemist rules this out; SN2 in DMSO is stereospecific.',
+          'Inversion did occur, but because the incoming CN takes the same top priority rank that Br held, flipping the geometry must also flip the descriptor. The inverted product is (S), not (R).',
+        ],
         skill: '5D SN2 stereochemistry and R/S (Skill 2)',
       },
       {
@@ -331,6 +451,12 @@ export const FL2_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The ee is $24/40 = 60\\%$, meaning the (S) enantiomer exceeds the (R) by 60 percentage points. Solving $S - R = 60$ and $S + R = 100$ gives 80% (S) and 20% (R). Reporting 60% (S) mistakes the ee for the percentage of the major enantiomer. Reporting 24% (R) reads the observed rotation directly as a percentage. A sample that is 60% (R) would have a negative rotation, because the (R) enantiomer rotates light to the left by the same amount that (S) rotates it to the right.',
+        optionExplanations: [
+          'Sixty percent is the enantiomeric excess (24/40), not the percentage of the major enantiomer. A 60:40 mixture would have an ee of only 20% and a rotation of +8°.',
+          'Correct. ee = 24/40 = 60%, meaning (S) exceeds (R) by 60 percentage points. Solving S − R = 60 and S + R = 100 gives 80% (S) and 20% (R).',
+          'Reading the observed +24° rotation directly as a percentage of the minor enantiomer has no basis. The rotation gives the ee (60%), which then determines the composition.',
+          'A sample that is 60% (R) would have a net negative rotation, since (R) rotates light by −40° per unit. The observed rotation is positive, so (S) must be the major enantiomer.',
+        ],
         skill: '5D enantiomeric excess (Skill 2)',
       },
       {
@@ -344,6 +470,12 @@ export const FL2_CHEM_PHYS_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The SN2 rate is proportional to the nucleophile concentration, whereas the SN1 rate depends only on the rate of ionization of the substrate. If doubling [CN⁻] less than doubles the initial rate of substitution in aqueous ethanol, part of the reaction is proceeding through the carbocation, which would explain the racemization. Measuring the starting material’s rotation only confirms its optical purity and says nothing about how it reacts. Switching to DMSO changes the very solvent whose effect is in question, and yield alone does not reveal mechanism. Adding a strong, bulky base probes E2 elimination, not the substitution pathway.',
+        optionExplanations: [
+          'Measuring the starting bromide’s rotation confirms only that the starting material was optically pure. It says nothing about which mechanism operates during the reaction.',
+          'Switching to DMSO changes the very solvent whose effect is in question, and yield alone does not reveal mechanism. The question is what happens in aqueous ethanol.',
+          'Replacing cyanide with a strong, bulky base probes E2 elimination, not substitution. It would not reveal whether substitution in aqueous ethanol proceeds through a carbocation.',
+          'Correct. SN2 rate is proportional to nucleophile concentration while SN1 rate depends only on substrate ionization. If doubling [CN⁻] less than doubles the substitution rate, part of the reaction goes through a carbocation, explaining the racemization.',
+        ],
         skill: '5D SN1 vs SN2 experimental design (Skill 3)',
       },
     ],
@@ -365,6 +497,12 @@ export const FL2_CHEM_PHYS_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'In MnO₄⁻, four oxygens at −2 contribute −8, so manganese must be +7 for the ion to carry a −1 charge; it ends as Mn²⁺, so it gains five electrons and is reduced. The species that is reduced is the oxidizing agent, because it takes electrons from Fe²⁺. Calling permanganate the reducing agent confuses what happens to a species with what it does to its partner. The +8 value ignores the ion’s −1 charge. Iron goes from +2 to +3, so it is oxidized, and Fe²⁺ is the reducing agent.',
+    optionExplanations: [
+      'Correct. In MnO₄⁻ four oxygens contribute −8, so Mn is +7 for a −1 ion; it ends as Mn²⁺, gaining five electrons. The species reduced is the oxidizing agent, since it takes electrons from Fe²⁺.',
+      'The oxidation states are right, but the label is reversed. A species that is itself reduced removes electrons from its partner and is therefore the oxidizing agent, not the reducing agent.',
+      'Manganese is +7, not +8. Four oxygens at −2 give −8, and the ion carries a −1 charge, so Mn must be +7 to make the total −1.',
+      'Iron goes from +2 to +3, losing an electron, so it is oxidized, not reduced. Fe²⁺ is the reducing agent; Fe³⁺ is the product, not a reactant.',
+    ],
     skill: '4C oxidation states and redox agents (Skill 1)',
   },
   {
@@ -376,6 +514,12 @@ export const FL2_CHEM_PHYS_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'Removing one electron from sodium leaves Na⁺ with the neon configuration, so the second electron must come from a filled inner shell that is much closer to the nucleus and far less shielded; the second ionization energy of sodium is roughly ten times its first. For magnesium, aluminum, and silicon, the second electron still comes from the valence (n = 3) shell, so their second ionization energies are far smaller, even though effective nuclear charge increases across the period.',
+    optionExplanations: [
+      'Magnesium’s second electron comes from the 3s valence shell, like the first. Its second ionization energy is higher than its first but far below sodium’s, because no inner shell is breached.',
+      'Aluminum’s second electron is removed from the 3s subshell, still in the valence shell. Its second ionization energy is moderate, not the largest.',
+      'Correct. Removing one electron from sodium leaves Na⁺ with a neon core. The second electron must come from the filled n = 2 shell, much closer to the nucleus and poorly shielded, so sodium’s second ionization energy is roughly ten times its first.',
+      'Silicon’s second electron comes from the 3p subshell, within the valence shell. Despite its higher effective nuclear charge, its second ionization energy is much smaller than sodium’s core-electron removal.',
+    ],
     skill: '4E periodic trends: ionization energy (Skill 1)',
   },
   {
@@ -387,6 +531,12 @@ export const FL2_CHEM_PHYS_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'Each branch of a parallel circuit has the full 12 V across it, so $P = V^2/R = (12)^2/3.0 = 48$ W; equivalently, the branch current is 4.0 A and $P = I^2R = 16 \\times 3.0 = 48$ W. The 24-W value is the power in the 6.0-Ω resistor. The 72-W value is the total power delivered by the battery to both branches. The 16-W value applies $V^2/R$ with the series resistance of 9.0 Ω, as if the resistors were in series.',
+    optionExplanations: [
+      'Twenty-four watts is the power in the 6.0-Ω resistor ($12^2/6.0$). The question asks about the 3.0-Ω branch, which carries twice the current and dissipates twice the power.',
+      'Correct. Each parallel branch has the full 12 V across it, so $P = V^2/R = 144/3.0 = 48$ W; equivalently the branch current is 4.0 A and $I^2R = 16 \\times 3.0 = 48$ W.',
+      'Sixteen watts applies $V^2/R$ with 9.0 Ω, the series combination, as if the resistors were in series. In parallel each resistor sees the full battery voltage.',
+      'Seventy-two watts is the total power delivered by the battery to both branches (24 W + 48 W). The question asks only about the 3.0-Ω resistor.',
+    ],
     skill: '4C circuits: Ohm’s law and power (Skill 2)',
   },
   {
@@ -398,6 +548,12 @@ export const FL2_CHEM_PHYS_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'At very low pH aspartic acid carries a net charge of +1. Losing the α-carboxyl proton (p$K_a$ 2.0) gives the neutral zwitterion, and losing the side-chain proton (p$K_a$ 3.9) gives a net −1 form, so the neutral species exists between these two steps and the pI is their average: $(2.0 + 3.9)/2 \\approx 3.0$. The value 5.9 averages the α-carboxyl and α-amino p$K_a$ values, which would be correct only for an amino acid without an ionizable side chain. The value 6.9 averages the two p$K_a$ values that flank the −1 to −2 transition. The value 3.9 is only the side-chain p$K_a$, at which the molecule carries about −0.5 net charge.',
+    optionExplanations: [
+      'Averaging the α-carboxyl (2.0) and α-amino (9.8) p$K_a$ values would be correct for an amino acid with no ionizable side chain. Aspartate’s side-chain carboxyl changes which two p$K_a$ values bracket the neutral form.',
+      'Averaging 3.9 and 9.8 gives the midpoint of the −1 to −2 transition, not the pH where the net charge is zero. The neutral zwitterion exists between the two carboxyl p$K_a$ values.',
+      'At pH 3.9 the side-chain carboxyl is half-deprotonated and the α-carboxyl is nearly fully deprotonated, giving a net charge of about −0.5, not zero. This is a single p$K_a$, not the pI.',
+      'Correct. The neutral zwitterion forms after the α-carboxyl loses its proton (p$K_a$ 2.0) and becomes −1 after the side chain loses its proton (p$K_a$ 3.9). The pI is their average, $(2.0 + 3.9)/2 \\approx 3.0$.',
+    ],
     skill: '5D amino acid titration and pI (Skill 2)',
   },
   {
@@ -414,6 +570,12 @@ export const FL2_CHEM_PHYS_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'A carboxylic acid has a p$K_a$ near 4, so at pH 3.0 most drug molecules carry a neutral –COOH rather than a –COO⁻ group, and the ionic attraction to the positively charged lysine is lost. The lysine side chain (p$K_a$ near 10.5) becomes, if anything, even more fully protonated as the pH falls, so it remains positively charged. Protons do not generally break hydrogen bonds; protonation matters here because it removes a charge. Stronger hydrophobic contacts would tighten binding, not weaken it.',
+    optionExplanations: [
+      'Correct. A carboxylic acid has p$K_a$ near 4, so at pH 3.0 most of the drug carries a neutral –COOH. Without the negative charge, the ionic attraction to the protonated lysine is lost and binding weakens.',
+      'Lysine’s side chain has a p$K_a$ near 10.5, so lowering the pH makes it even more completely protonated and positively charged. The lysine partner of the salt bridge is intact at pH 3.0.',
+      'Excess protons do not generically break hydrogen bonds. Protonation matters here specifically because it neutralizes the carboxylate charge that formed the salt bridge.',
+      'Stronger hydrophobic contacts would tighten binding, not weaken it, and a pH change does not substantially alter hydrophobic interactions. This is the wrong direction for the observed effect.',
+    ],
     skill: '5B protein–ligand binding forces (Skill 1)',
   },
   {
@@ -430,6 +592,12 @@ export const FL2_CHEM_PHYS_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'Recrystallization relies on dissolving the crude solid in a minimum of hot solvent and letting the compound crystallize as the solution cools, while soluble impurities stay in the cold mother liquor; that requires high solubility when hot and low solubility when cold. A solvent that dissolves the compound well even when cold leaves much of it in solution, so recovery is poor. A solvent that boils above the compound’s melting point tends to make the compound separate as an oil rather than as crystals. A purification solvent should be inert; chemical conversion of impurities is not how recrystallization works.',
+    optionExplanations: [
+      'If the compound dissolves well even when cold, most of it stays in the mother liquor on cooling and recovery is poor. Low solubility when cold is essential for crystals to form.',
+      'A solvent boiling above the compound’s melting point tends to make the compound separate as an oil rather than crystallize. Boiling point should be below the melting point.',
+      'Correct. Recrystallization dissolves the crude solid in a minimum of hot solvent and lets the compound crystallize on cooling while soluble impurities remain in the cold mother liquor; that demands high hot and low cold solubility.',
+      'A recrystallization solvent must be chemically inert toward the compound and impurities. Converting impurities into product is a chemical reaction, not a purification by crystallization.',
+    ],
     skill: '5C recrystallization (Skill 1)',
   },
   {
@@ -446,6 +614,12 @@ export const FL2_CHEM_PHYS_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'The dissolution of gases such as N₂ and O₂ in water releases heat, so by Le Chatelier’s principle raising the temperature shifts the equilibrium toward the gas phase; the water becomes supersaturated in air, and the excess gas comes out as bubbles. Vapor pressure equal to atmospheric pressure is the condition for boiling, which is far from being met at room temperature. Water does not decompose into H₂ and O₂ at ordinary temperatures. Stronger gas–water attraction would increase solubility, the opposite of what is observed.',
+    optionExplanations: [
+      'Vapor pressure equal to atmospheric pressure is the condition for boiling, which occurs at 100 °C. At room temperature water’s vapor pressure is far below 1 atm.',
+      'Correct. Dissolution of N₂ and O₂ in water is exothermic, so by Le Chatelier’s principle warming shifts the equilibrium toward the gas phase. The water becomes supersaturated with air, and the excess comes out as bubbles.',
+      'Water does not decompose into hydrogen and oxygen at ordinary temperatures; that requires electrolysis or temperatures of thousands of kelvin. The bubbles are dissolved air.',
+      'Stronger gas–water attraction would increase gas solubility and keep gas dissolved. The opposite is observed: solubility falls on warming because the attractions are outweighed by thermal motion.',
+    ],
     skill: '5A gas solubility and temperature (Skill 1)',
   },
 ]

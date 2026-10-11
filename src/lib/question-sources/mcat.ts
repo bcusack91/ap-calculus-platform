@@ -22,6 +22,8 @@ import { CARS_PASSAGES, SECTION_PASSAGES } from '@/data/mcat/passages'
 import { FULL_LENGTH_FORMS, type MCATFullLength } from '@/data/mcat/full-length'
 import { fullLengthQuestionId, type MCATPassage, type MCATSection } from '@/data/mcat/types'
 import { toTestPassage, topicSlugForPassage } from '@/data/mcat-practice/test-generator'
+import { normalizeCarsSkill } from '@/lib/cars-skills'
+import { readOptionExplanations, remapOptionExplanations } from '@/lib/option-explanations'
 import type { ReviewItem, ReviewPassage } from './types'
 
 type Rec = Record<string, unknown>
@@ -147,6 +149,10 @@ export function buildFullLengthItems(fl: MCATFullLength, stored: Partial<FullLen
       const isDiscrete = typeof q.id === 'string'
       const picked = answers[questionId]
       const chosenIndex = typeof picked === 'number' ? picked : null
+      // CARS items carry a reasoning-skill tag; science tags are content labels, not skills.
+      const skill = p.section === 'cars' ? normalizeCarsSkill(q.skill) : undefined
+      // Full-length options are shown in authored order: no remap needed.
+      const optionExplanations = readOptionExplanations(q, q.options.length)
       items.push({
         index: items.length,
         questionId,
@@ -168,6 +174,8 @@ export function buildFullLengthItems(fl: MCATFullLength, stored: Partial<FullLen
         durationMs: perQuestionMs,
         topicSlug,
         discipline: MCAT_SECTION_LABELS[p.section] ?? p.section,
+        ...(skill ? { skill } : {}),
+        ...(optionExplanations ? { optionExplanations } : {}),
         isCorrect: chosenIndex === q.correctAnswer,
       })
     })
@@ -224,6 +232,8 @@ export function fullLengthReviewItems(results: unknown): ReviewItem[] | null {
     durationMs: it.durationMs,
     topicSlug: it.topicSlug,
     discipline: it.discipline,
+    ...(it.skill ? { skill: it.skill } : {}),
+    ...(it.optionExplanations ? { optionExplanations: it.optionExplanations } : {}),
   }))
 }
 
@@ -243,6 +253,10 @@ export interface McatPracticeItem {
   questionKey: string
   topicSlug: string
   passage: ReviewPassage | null
+  /** CARS reasoning skill (authored CARS passages only). */
+  skill?: string
+  /** Per-option explanations in the SHOWN order, when authored. */
+  optionExplanations?: string[]
 }
 
 let authoredById: Map<string, MCATPassage> | null = null
@@ -280,6 +294,8 @@ export async function resolveMcatPracticeRef(ref: unknown): Promise<McatPractice
       if (!p || !q) return null
       const passage = practicePassage(p)
       const shown = shuffleOptions([...q.options], q.correctAnswer, q.question)
+      const skill = p.section === 'cars' ? normalizeCarsSkill(q.skill) : undefined
+      const optionExplanations = remapOptionExplanations(q.options, readOptionExplanations(q, q.options.length), shown.options)
       return {
         ref,
         question: q.question,
@@ -289,6 +305,8 @@ export async function resolveMcatPracticeRef(ref: unknown): Promise<McatPractice
         questionKey: questionKey({ question: q.question, options: q.options, correctIndex: q.correctAnswer, passageId: passage.id }),
         topicSlug: topicSlugForPassage(p),
         passage,
+        ...(skill ? { skill } : {}),
+        ...(optionExplanations ? { optionExplanations } : {}),
       }
     }
     if (ref.startsWith('pool:')) {
@@ -300,6 +318,7 @@ export async function resolveMcatPracticeRef(ref: unknown): Promise<McatPractice
       const entry = (await getAnswerKey(slug))?.get(id)
       if (!entry) return null
       const shown = shuffleOptions(entry.options, entry.correctIndex, entry.question)
+      const optionExplanations = remapOptionExplanations(entry.options, readOptionExplanations(entry, entry.options.length), shown.options)
       return {
         ref,
         question: entry.question,
@@ -309,6 +328,7 @@ export async function resolveMcatPracticeRef(ref: unknown): Promise<McatPractice
         questionKey: questionKey({ question: entry.question, options: entry.options, correctIndex: entry.correctIndex }),
         topicSlug: entry.category || slug,
         passage: null,
+        ...(optionExplanations ? { optionExplanations } : {}),
       }
     }
   } catch {
@@ -366,6 +386,38 @@ export async function mcatPracticeReviewItems(
       flagged: false,
       durationMs: perQuestionMs,
       topicSlug: item.topicSlug,
+      ...(item.skill ? { skill: item.skill } : {}),
+      ...(item.optionExplanations ? { optionExplanations: item.optionExplanations } : {}),
     }
   })
+}
+
+/* ------------------------------------------------------------------ */
+/*  CARS skill lookup by question key                                  */
+/* ------------------------------------------------------------------ */
+
+let carsSkillByKey: Map<string, string> | null = null
+
+/**
+ * The CARS reasoning skill of an authored CARS question, by its questionKey
+ * (full-length forms and the CARS passage library share the
+ * `authored-<passageId>` keying, so one key finds the skill wherever the
+ * question was answered — mistake log, question bank). Memoized.
+ */
+export function carsSkillForKey(key: string): string | undefined {
+  if (!carsSkillByKey) {
+    const map = new Map<string, string>()
+    const add = (p: MCATPassage) => {
+      if (p.section !== 'cars') return
+      for (const q of p.questions) {
+        const skill = normalizeCarsSkill(q.skill)
+        if (!skill) continue
+        map.set(questionKey({ question: q.question, options: q.options, correctIndex: q.correctAnswer, passageId: mcatPassageKeyId(p.id) }), skill)
+      }
+    }
+    for (const fl of FULL_LENGTH_FORMS) fl.passages.forEach(add)
+    CARS_PASSAGES.forEach(add)
+    carsSkillByKey = map
+  }
+  return carsSkillByKey.get(key)
 }

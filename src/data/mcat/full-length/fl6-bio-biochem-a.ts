@@ -50,6 +50,12 @@ export const FL6_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Between 0 and 10 minutes, ATP in wild-type liver fell from 100% to about 84% of baseline, a drop of 16 percentage points, while ATP in Aldob−/− liver fell from 100% to about 52%, a drop of 48 points; over the same interval the rates are therefore in the ratio 48:16, or 3. A factor of about 1.5 is roughly the ratio of the remaining ATP levels (84:52), not of the declines. Factors of 5 and 8 would require the knockout livers to have lost 80% or more of their ATP in 10 minutes, which the figure does not show.',
+        optionExplanations: [
+          'A factor of 1.5 is roughly the ratio of the ATP levels remaining at 10 minutes (84% to 52%), not the ratio of the declines. The question asks about the rate of decline, which compares the drops from baseline.',
+          'From 0 to 10 minutes wild-type ATP fell from 100% to about 84%, a 16-point drop, while Aldob−/− ATP fell from 100% to about 52%, a 48-point drop. Over the same interval the rates are in the ratio 48:16, or 3.',
+          'A factor of 5 would require the knockout livers to have lost about 80 percentage points of ATP in 10 minutes (5 × 16), leaving roughly 20%. Figure 1 shows about 52% remaining at 10 minutes.',
+          'A factor of 8 would require a 128-point drop, more ATP than the liver started with. Figure 1 shows the Aldob−/− livers retaining about 52% at 10 minutes, a 48-point loss.',
+        ],
         skill: '1D fructose metabolism',
       },
       {
@@ -63,6 +69,12 @@ export const FL6_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'If the ATP-producing machinery is intact and only lacks a substrate, then supplying ADP and Pi to mitochondria taken from the affected livers should restore ATP synthesis to the normal rate; that result separates a shortage of phosphate from damage to oxidative phosphorylation. Slower oxygen consumption by the isolated mitochondria despite ample ADP and Pi would instead point to damaged machinery. The route of administration says nothing about the mechanism inside the hepatocyte, and a larger fall in ATP at a larger dose is expected under either explanation.',
+        optionExplanations: [
+          'Slower oxygen consumption by isolated mitochondria despite ample ADP and Pi would point to damaged respiratory machinery. That is evidence for the alternative the question asks to rule out, not for phosphate sequestration.',
+          'The route of administration says nothing about the mechanism inside the hepatocyte. Fructose that reaches the liver by either route is phosphorylated by fructokinase, so the same ATP fall is expected under either explanation.',
+          'A larger fall in ATP at a larger dose is expected under either explanation: more fructose means more F1P trapping phosphate, and also more exposure to whatever might damage the machinery. It cannot discriminate between them.',
+          'If the ATP-producing machinery is intact and only starved of substrate in vivo, then supplying ADP and Pi to mitochondria from affected livers should restore ATP synthesis to the wild-type rate. That result separates a phosphate shortage from damage to oxidative phosphorylation.',
+        ],
         skill: '1D oxidative phosphorylation',
       },
       {
@@ -76,6 +88,12 @@ export const FL6_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Mice lacking both enzymes still lack aldolase B, yet their hepatic ATP, Pi, and sugar phosphate signals did not change and the fructose was excreted; removing the step that makes F1P therefore removes the injury, which shows that the harm comes from accumulating F1P rather than from missing aldolase B itself. If fructokinase were needed for ATP production from glucose, the double knockouts would have shown lower, not stable, ATP. The pathway order is fructokinase first and aldolase B second, which is why deleting fructokinase prevents the substrate of aldolase B from forming. No F1P is produced without fructokinase, so there is nothing for an alternative cleaving enzyme to act on, and the excreted fructose shows it was not metabolized.',
+        optionExplanations: [
+          'Double-knockout mice still lack aldolase B, yet their ATP, Pi, and sugar phosphate signals did not change and the fructose was excreted. Removing the step that makes F1P removes the injury, so the harm comes from accumulating F1P rather than from missing aldolase B itself.',
+          'If fructokinase were needed to make ATP from glucose, the double knockouts, which lack it, would have shown lower ATP. Their ATP stayed at 100% of baseline, so fructokinase is not required for glucose metabolism.',
+          'The pathway order is fructokinase first and aldolase B second, as the passage states. Deleting fructokinase prevents the substrate of aldolase B from forming, which is why the double knockout is protected.',
+          'No F1P is produced without fructokinase, so there is nothing for an alternative cleaving enzyme to act on. The excreted fructose confirms it was not metabolized at all, rather than being processed by a second enzyme.',
+        ],
         skill: '1D fructose metabolism',
       },
       {
@@ -84,6 +102,12 @@ export const FL6_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Sucrose is a disaccharide of glucose and fructose, and the intestinal enzyme sucrase hydrolyzes it to those two monosaccharides, so it delivers fructose to the liver just as free fructose does. Lactose yields glucose and galactose. Maltose yields two molecules of glucose. Amylose is an unbranched polymer of glucose and yields only glucose on digestion.',
+        optionExplanations: [
+          'Lactose is a disaccharide of glucose and galactose. Its digestion releases no fructose, so it does not need to be removed from the diet of an infant with HFI.',
+          'Maltose is a disaccharide of two glucose units. Its hydrolysis yields only glucose, which the liver handles through hexokinase and glucokinase, not fructokinase.',
+          'Sucrose is a disaccharide of glucose and fructose, and intestinal sucrase hydrolyzes it to those two monosaccharides. It therefore delivers fructose to the liver just as free fructose does and must be excluded.',
+          'Amylose is an unbranched polymer of glucose and yields only glucose on digestion. Starches do not release fructose and are safe for a patient with HFI.',
+        ],
         skill: '1D carbohydrates',
       },
       {
@@ -97,6 +121,12 @@ export const FL6_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Glycogen is broken down by phosphorolysis: glycogen phosphorylase attacks the terminal glycosidic bond with inorganic phosphate to release glucose 1-phosphate, so when free Pi has been locked into F1P the enzyme lacks a substrate and glycogen cannot be mobilized even when glucagon signals that it should be. Nothing in the data suggests a loss of glucagon receptors, and receptor number is not governed by sugar phosphates. Glycogen synthesis consumes energy and is not stimulated by low ATP. Glucose 6-phosphatase is a hydrolase that requires only water, not ATP.',
+        optionExplanations: [
+          'Nothing in the data suggests a loss of glucagon receptors, and receptor number is not governed by sugar phosphates. The glucagon signal is presumably received; the liver simply cannot execute glycogenolysis without free Pi.',
+          'Glycogen phosphorylase attacks the terminal glycosidic bond with inorganic phosphate to release glucose 1-phosphate. When free Pi has been locked into F1P, the enzyme lacks a substrate, so glycogen cannot be mobilized even when glucagon signals that it should be.',
+          'Glycogen synthesis consumes energy (UTP) and is not stimulated by low ATP. In an energy-depleted cell, synthesis would slow rather than race the degradation, and this would not explain the glucagon failure anyway.',
+          'Glucose 6-phosphatase is a hydrolase that requires only water, not ATP, to remove phosphate from glucose 6-phosphate. Low ATP would not block this step.',
+        ],
         skill: '1D glycogenolysis',
       },
     ],
@@ -127,6 +157,12 @@ export const FL6_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'C-peptide is released in equal amounts with insulin and so reports how much insulin the β cells are secreting. Patient X has the autoimmune picture of type 1 diabetes, in which β cells are destroyed and secretion of both peptides becomes very low. Patient Y has the picture of type 2 diabetes at the onset of hyperglycemia, when β cells are still secreting as much insulin as normal or more against resistant tissues, so C-peptide is normal or high. Low values in both would ignore the continued secretion in early type 2 disease, high values in both would ignore β-cell destruction in type 1 disease, and the last option reverses the two patients.',
+        optionExplanations: [
+          'Low C-peptide in both would ignore the continued secretion in early type 2 disease. Patient Y’s β cells are still secreting as much insulin as normal or more against resistant tissues, so C-peptide is normal or high.',
+          'High C-peptide in both would ignore β-cell destruction in type 1 disease. Patient X has autoantibodies and weight loss, the picture of type 1 diabetes, in which secretion of insulin and C-peptide becomes very low.',
+          'C-peptide is co-released with insulin and reports how much the β cells secrete. Patient X has the autoimmune picture of type 1 diabetes with β-cell destruction, so C-peptide is low; patient Y has type 2 diabetes at onset, with β cells still secreting normal or increased amounts against resistant tissues.',
+          'This reverses the two patients. The autoantibody-positive patient who has lost weight is the one with failing β cells and low C-peptide; the obese patient without autoantibodies has resistant tissues and preserved or elevated secretion.',
+        ],
         skill: '3B endocrine pancreas',
       },
       {
@@ -140,6 +176,12 @@ export const FL6_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Glucose in the intestinal lumen triggers release of GLP-1 and GIP, which amplify the β-cell response to a given plasma glucose; glucose delivered by vein bypasses the gut, so no incretins are released and the same plasma glucose profile evokes less secretion. Because insulin and C-peptide leave the β cell together, both are lower. They cannot move in opposite directions, since they are co-secreted. Higher values after intravenous glucose would require the gut to inhibit secretion, the reverse of what incretins do. Identical values would be expected only if plasma glucose were the sole determinant of secretion.',
+        optionExplanations: [
+          'Glucose in the intestinal lumen triggers GLP-1 and GIP release, which amplifies the β-cell response to a given plasma glucose. Intravenous glucose bypasses the gut, so no incretins are released and the same glucose profile evokes less secretion; insulin and C-peptide, co-secreted, are both lower.',
+          'Insulin and C-peptide cannot move in opposite directions, because they are stored together and released together by exocytosis in equal amounts. Whatever lowers insulin secretion lowers C-peptide too.',
+          'Higher values after intravenous glucose would require the gut to inhibit secretion, the reverse of what incretins do. Nutrients in the lumen enhance, not suppress, the insulin response to glucose.',
+          'Identical values would be expected only if plasma glucose were the sole determinant of secretion. The passage says incretins increase the number of granules released for a given Ca²⁺ signal, so matched glucose does not mean matched secretion.',
+        ],
         skill: '3B endocrine pancreas',
       },
       {
@@ -153,6 +195,12 @@ export const FL6_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Skeletal muscle and adipose tissue take up glucose through GLUT4, a transporter held in intracellular vesicles and moved to the plasma membrane in response to insulin; without insulin, resting muscle admits little glucose. Neurons and erythrocytes carry transporters (GLUT3 and GLUT1) that reside permanently in the membrane, so their uptake does not depend on insulin. Intestinal epithelial cells absorb glucose from the lumen by Na⁺-coupled transport, which is also independent of insulin.',
+        optionExplanations: [
+          'Cortical neurons carry GLUT3, a transporter that resides permanently in the membrane. Their glucose uptake does not depend on insulin, which is why the brain keeps functioning during fasting.',
+          'Mature erythrocytes take up glucose through GLUT1, which is constitutively present in the membrane. Their uptake is independent of insulin.',
+          'Intestinal epithelial cells absorb glucose from the lumen by Na⁺-coupled secondary active transport. This process is independent of insulin.',
+          'Skeletal muscle and adipose tissue take up glucose through GLUT4, which is held in intracellular vesicles and moved to the plasma membrane in response to insulin. Without insulin, resting muscle admits little glucose.',
+        ],
         skill: '3B hormone action',
       },
       {
@@ -166,6 +214,12 @@ export const FL6_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Insulin released in response to amino acids promotes their uptake and use, but it also drives glucose into muscle and fat and suppresses hepatic glucose production; with no dietary carbohydrate arriving, plasma glucose would fall. Glucagon secreted at the same time keeps the liver producing glucose and so offsets that effect. Glucagon acts on the liver and has essentially no action on skeletal muscle. It is not a regulator of incretin release, which depends on nutrients in the gut lumen. It promotes the hepatic use of amino acids for gluconeogenesis rather than sending them to adipose tissue.',
+        optionExplanations: [
+          'Glucagon acts almost exclusively on the liver and has essentially no action on skeletal muscle. It does not promote amino acid uptake by muscle; that is an action of insulin.',
+          'Insulin released in response to amino acids drives glucose into muscle and fat and suppresses hepatic glucose production. With no dietary carbohydrate arriving, plasma glucose would fall; glucagon secreted at the same time keeps the liver producing glucose and offsets that effect.',
+          'Glucagon is not a regulator of incretin release, which depends on nutrients in the gut lumen. Nothing in the passage links glucagon to GLP-1 or GIP secretion.',
+          'Glucagon promotes the hepatic use of amino acids for gluconeogenesis rather than sending them to adipose tissue. It acts on the liver, not on fat storage, and amino acids are not stored in adipose tissue.',
+        ],
         skill: '3B endocrine pancreas',
       },
     ],
@@ -198,6 +252,12 @@ export const FL6_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Patient 3 has 45 chromosomes because two long arms are carried on one chromosome. An egg that receives the Robertsonian chromosome together with her free chromosome 21, but not her free chromosome 14, contains 23 chromosomes; after fertilization by a normal sperm the zygote has 46 chromosomes, yet it carries three copies of the long arm of 21 (one on the Robertsonian chromosome, one free maternal 21, and one paternal 21). A count of 45 with two copies of 21 is the mother’s own balanced state and would not produce Down syndrome. A count of 47 describes Down syndrome caused by nondisjunction, with a free extra chromosome 21 rather than a translocation. A count of 46 with two copies of 21 is a normal chromosome complement.',
+        optionExplanations: [
+          'A count of 45 with two copies of the long arm of 21 is the mother’s own balanced state. It would not produce Down syndrome, which requires three copies of chromosome 21 material.',
+          'An egg that receives the Robertsonian chromosome together with the mother’s free chromosome 21, but not her free 14, has 23 chromosomes. After fertilization by a normal sperm the zygote has 46 chromosomes but three copies of the long arm of 21: one on the translocation chromosome, one free maternal 21, and one paternal 21.',
+          'A count of 47 describes Down syndrome caused by nondisjunction, with a free extra chromosome 21. In translocation Down syndrome the extra copy rides on the fused 14;21 chromosome, so the count stays at 46.',
+          'A count of 46 with two copies of the long arm of 21 is a normal chromosome complement. A child with Down syndrome must have three copies of that material.',
+        ],
         skill: '1C chromosomal rearrangements',
       },
       {
@@ -211,6 +271,12 @@ export const FL6_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'A reciprocal translocation or an inversion changes where genes lie but, unless a break interrupts a gene, leaves two functional copies of every gene, so the carrier is usually healthy. A deletion removes one copy of every gene in the lost segment, and for genes whose product is needed in the full two-copy amount, the single remaining copy is not enough. The rearrangements of patients 2 and 4 were found in blood cells of healthy adults and can affect their gametes, so they are not confined to somatic tissue, and nothing restricts deletions to the germ line. Chromosome segments large enough to see by microscopy contain many genes, whatever the type of rearrangement. Table 1 describes each rearrangement on one member of a chromosome pair, not on both homologs.',
+        optionExplanations: [
+          'The rearrangements of patients 2 and 4 were found in blood cells of healthy adults and can affect their gametes, so they are not confined to somatic tissue. Nothing restricts deletions to the germ line either; the distinction is about gene dosage, not origin.',
+          'Chromosome segments large enough to see by microscopy contain many genes, whatever the type of rearrangement. Translocations and inversions move coding DNA too; the difference is that they do not remove it.',
+          'Table 1 describes each rearrangement on one member of a chromosome pair, not on both homologs. Patients 2 and 4 are heterozygous carriers of a single rearranged chromosome.',
+          'A reciprocal translocation or inversion changes where genes lie but, unless a break interrupts a gene, leaves two functional copies of every gene. A deletion removes one copy of every gene in the lost segment, and for dosage-sensitive genes a single copy is not enough.',
+        ],
         skill: '1C gene dosage',
       },
       {
@@ -224,6 +290,12 @@ export const FL6_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'A product from the BCR–BCR primer pair requires a transcript containing BCR exons on both sides of the breakpoint, and a product from the ABL1–ABL1 pair requires the same of ABL1; a broken gene cannot supply either, so the leukemic cells must still carry and transcribe an unrearranged copy of each gene, on the normal chromosome 22 and the normal chromosome 9. Loss of all unrearranged copies would have eliminated both of those products. The fusion transcript was amplified with a forward primer in the upstream exons of BCR, so it begins with BCR sequence and is driven by the BCR promoter. The ABL1–BCR pair gave no product, so only one orientation of fusion transcript was detected.',
+        optionExplanations: [
+          'Loss of all unrearranged copies would have eliminated the products from the BCR–BCR and ABL1–ABL1 primer pairs, since a broken gene cannot supply a transcript spanning both sides of its breakpoint. Both products are present in the leukemic cells.',
+          'The fusion transcript was amplified with a forward primer in the upstream exons of BCR, so it begins with BCR sequence and is driven by the BCR promoter. The passage confirms the BCR promoter is joined to downstream ABL1 exons.',
+          'A product from the BCR–BCR pair requires a transcript with BCR exons on both sides of the breakpoint, and likewise for ABL1–ABL1. A broken gene cannot supply either, so the leukemic cells must still carry and transcribe an unrearranged copy of each gene on the normal chromosomes 22 and 9.',
+          'The ABL1–BCR primer pair gave no product, so only one orientation of fusion transcript was detected. The reciprocal derivative chromosome either is not transcribed across the junction or is not detected here.',
+        ],
         skill: '1B RT-PCR interpretation',
       },
       {
@@ -237,6 +309,12 @@ export const FL6_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'A rearrangement inherited from a parent, or formed in the zygote, would be present in every cell, including skin fibroblasts. The fibroblasts had normal chromosomes and no fusion transcript although they transcribe both genes, so the translocation must have arisen later in a single cell of the blood-forming lineage and is confined to its descendants. For the same reason there is no evidence that it is present in germ cells. The requirement for reverse transcriptase was shown by the control reactions lacking the enzyme, not by the fibroblasts. A tissue that lacks the rearrangement cannot show that it arose in several tissues.',
+        optionExplanations: [
+          'A rearrangement inherited from a parent or formed in the zygote would be present in every cell, including skin fibroblasts. The fibroblasts had normal chromosomes and no fusion transcript although they transcribe both genes, so the translocation arose later in a blood-forming cell.',
+          'Normal fibroblasts show the translocation is not constitutional, which argues against its presence in germ cells. There is no evidence it could be transmitted; a somatic rearrangement confined to the marrow lineage is not heritable.',
+          'The requirement for reverse transcriptase was shown by the control reactions lacking the enzyme, which gave no product. The fibroblasts tested where the rearrangement is present, not whether RT is needed.',
+          'A tissue that lacks the rearrangement cannot show that it arose in several tissues. The fibroblast result points the other way: the translocation is confined to one lineage.',
+        ],
         skill: '1C somatic vs germ-line mutation',
       },
       {
@@ -250,6 +328,12 @@ export const FL6_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'An oncogene is an altered gene whose product has gained activity that drives proliferation, and one altered copy is sufficient even when normal copies are present; the fusion kinase, freed of its inhibitory segment and continuously active, fits this description and is dominant in the cell. Tumor suppressor genes normally restrain growth and contribute to cancer when their function is lost, which typically requires inactivation of both copies. The fusion gene has acquired a function rather than lost one, which excludes both tumor suppressor options. A recessive oncogene would have no effect in a cell that retains normal copies, contrary to what is observed.',
+        optionExplanations: [
+          'A tumor suppressor gene normally restrains growth and contributes to cancer when its function is lost. The fusion gene has gained a function, a continuously active kinase, so it is not a tumor suppressor of any kind.',
+          'Tumor suppressor loss is typically recessive at the cell level, requiring inactivation of both copies. The fusion gene acts through gain of function with normal copies present, which is the opposite pattern.',
+          'An oncogene is an altered gene whose product has gained activity that drives proliferation, and one copy suffices even when normal copies remain. The fusion kinase, freed of its inhibitory N-terminal segment and forced into self-phosphorylating tetramers, fits this description and is dominant in the cell.',
+          'A recessive oncogene would have no effect in a cell that retains normal copies of both genes, contrary to what is observed. The single fusion copy drives proliferation despite the unrearranged BCR and ABL1.',
+        ],
         skill: '1B oncogenes',
       },
     ],
@@ -281,6 +365,12 @@ export const FL6_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'In mutualism both partners gain. The bacteria obtain a stable, anaerobic habitat and a supply of plant polysaccharides, and the host obtains butyrate, which fuels its colonocytes, from material it could not otherwise use. Commensalism describes a relationship in which one partner benefits and the other is neither helped nor harmed, which does not fit either version offered, because both partners clearly gain here. Parasitism requires that the host be harmed, but the polysaccharides the bacteria consume are ones the host cannot digest.',
+        optionExplanations: [
+          'Commensalism requires one partner to be unaffected. The host clearly benefits here, obtaining butyrate from polysaccharides it could not otherwise use, so it is not unaffected.',
+          'In mutualism both partners gain. The bacteria obtain a stable anaerobic habitat and a supply of plant polysaccharides, and the host obtains butyrate, the main fuel of its colonocytes, from material it could not otherwise digest.',
+          'Parasitism requires that the host be harmed. The polysaccharides the bacteria consume are ones the host cannot digest, so nothing is taken at the host’s expense, and the host gains fuel in return.',
+          'Commensalism in this direction would require the bacteria to be unaffected. The bacteria gain a protected anaerobic niche and nutrients, so they are not unaffected.',
+        ],
         skill: '2B symbiosis',
       },
       {
@@ -294,6 +384,12 @@ export const FL6_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The hypothesis is causal, so the best test manipulates only the proposed cause: two groups of mice that differ solely in whether their added bacterium can convert bile acids, followed by the same challenge with spores. If the converting strain protects and the otherwise identical nonconverting mutant does not, the conversion itself is responsible. Comparing patients is correlational and cannot separate bile acid differences from the many other differences between the groups. Measuring bile acids after clindamycin describes what the antibiotic does but does not vary bile acid conversion independently of the rest of the microbiota. Germ-free mice have no converting bacteria on any diet, so changing their diet does not test the role of conversion.',
+        optionExplanations: [
+          'Comparing patients is correlational and cannot separate bile acid differences from the many other differences between those with one episode and those with repeated relapses. It does not manipulate the proposed cause.',
+          'Measuring bile acids after clindamycin describes what the antibiotic does to the microbiota but does not vary bile acid conversion independently of all the other effects of the antibiotic. It cannot isolate conversion as the protective factor.',
+          'Germ-free mice have no converting bacteria on any diet, so changing their diet does not test the role of conversion. Any difference in C. difficile growth would reflect diet, not bile acid conversion by residents.',
+          'The hypothesis is causal, so the best test manipulates only the proposed cause: two groups of mice differing solely in whether their added bacterium can convert bile acids, then the same spore challenge. If the converting strain protects and its nonconverting mutant does not, conversion itself is responsible.',
+        ],
         skill: '2B experimental design',
       },
       {
@@ -307,6 +403,12 @@ export const FL6_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Facultative anaerobes can ferment in the absence of oxygen but switch to aerobic respiration, which yields far more ATP per substrate molecule, when oxygen is present; a rise in oxygen at the epithelial surface therefore lets organisms such as E. coli outgrow their neighbors. Obligate anaerobes are inhibited or killed by oxygen, so the change harms them. Obligate aerobes were not a major part of the community, more than 99% of which consists of obligate anaerobes. The passage attributes germination of C. difficile spores to primary bile acids, not to oxygen, and the vegetative cells of an obligate anaerobe would not benefit from oxygen.',
+        optionExplanations: [
+          'Facultative anaerobes ferment without oxygen but switch to aerobic respiration, which yields far more ATP per substrate, when oxygen is present. A rise in oxygen at the epithelial surface lets organisms such as E. coli outgrow their neighbors.',
+          'Obligate anaerobes are inhibited or killed by oxygen, so a rise in oxygen harms them rather than helping. Whether fermentation acids accumulate is irrelevant to their intolerance of oxygen.',
+          'Obligate aerobes were not a major part of the community; more than 99% of colonic bacteria are obligate anaerobes. This option misdescribes the pre-antibiotic community.',
+          'The passage attributes germination of C. difficile spores to primary bile acids, not to oxygen. Moreover, C. difficile is an obligate anaerobe whose vegetative cells would not benefit from oxygen.',
+        ],
         skill: '2B bacterial metabolism',
       },
       {
@@ -320,6 +422,12 @@ export const FL6_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Vancomycin stays in the gut lumen and kills Gram-positive bacteria, a group that includes many of the dominant colonic residents and the species that make secondary bile acids; if the drug were still present, much of the donor community would be destroyed on arrival and colonization resistance would not be restored. Oral vancomycin is not absorbed, so it does not reach the blood, and it is not an immunosuppressant. An antibiotic that blocks cell-wall synthesis has no chemical action on bile acids. Donors are screened and healthy, so their stool is not a source of C. difficile to be selected.',
+        optionExplanations: [
+          'Oral vancomycin is not absorbed from the gut, so it does not reach the blood, and it is not an immunosuppressant. It cannot affect the recipient’s immune response to donor bacteria.',
+          'An antibiotic that blocks cell-wall synthesis has no chemical action on bile acids. Vancomycin cannot convert secondary bile acids back to primary ones; only bacteria interconvert them.',
+          'Vancomycin stays in the gut lumen and kills Gram-positive bacteria, which include many dominant colonic residents and the species that make secondary bile acids. If still present, it would destroy much of the donor community on arrival and colonization resistance would not be restored.',
+          'Donors are screened and healthy, so their stool is not a source of C. difficile to be selected. The concern with continued vancomycin is its effect on the beneficial transplanted bacteria, not on pathogen spores.',
+        ],
         skill: '2B antibiotics and the microbiota',
       },
     ],
@@ -364,6 +472,12 @@ export const FL6_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'At an FiO₂ of 0.2 the two interventions give nearly the same PaO₂ (54 and 56 mmHg), so that value cannot assign the animal, but the curves diverge as oxygen is added and are farthest apart at an FiO₂ of 1.0: about 100 mmHg with the occluded lobe and about 570 mmHg with the bronchoconstrictor. A single measurement there separates the groups by a wide margin. Arterial PCO₂ was held at the same value in every animal, and cardiac output did not differ among groups, so neither can discriminate. Repeating the measurement at an FiO₂ of 0.2 would only reproduce a value that the two groups share.',
+        optionExplanations: [
+          'Arterial PCO₂ was held near 40 mmHg in every animal by ventilator adjustments, so it is the same in all groups and cannot discriminate between them.',
+          'Cardiac output did not differ among the groups at any step, so measuring it would not identify which intervention the animal received.',
+          'Repeating the measurement at an FiO₂ of 0.2 would only reproduce a value the two groups share: 54 mmHg with the occluded lobe and 56 mmHg with the bronchoconstrictor are indistinguishable.',
+          'At FiO₂ 0.2 the two interventions give nearly identical PaO₂ (54 and 56 mmHg), but the curves diverge as oxygen is added and are farthest apart at FiO₂ 1.0: about 100 mmHg with the occluded lobe versus 570 mmHg with the bronchoconstrictor.',
+        ],
         skill: '3B gas exchange',
       },
       {
@@ -377,6 +491,12 @@ export const FL6_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Blood passing ventilated alveoli has hemoglobin that is almost fully saturated even at an FiO₂ of 0.2, so raising alveolar PO₂ adds only a small amount of dissolved oxygen to it; that blood then mixes with blood from the occluded lobe, which never meets the enriched gas and remains venous in composition, and the oxygen content of the mixture, and hence its PO₂, stays low. The balloon blocked one lobar bronchus, not the airways of both lungs. Hypoxic vasoconstriction reduces flow to the unventilated lobe rather than increasing it. A larger partial-pressure difference speeds diffusion rather than slowing it.',
+        optionExplanations: [
+          'Blood passing ventilated alveoli has hemoglobin almost fully saturated even at FiO₂ 0.2, so raising alveolar PO₂ adds only a little dissolved oxygen. That blood then mixes with venous-composition blood from the occluded lobe, which never meets the enriched gas, and the mixture’s PO₂ stays low.',
+          'The balloon blocked one lobar bronchus, not the airways of both lungs. The rest of the lung received the enriched gas normally; the problem is the shunted blood from the one unventilated lobe.',
+          'Hypoxic vasoconstriction reduces flow to the unventilated lobe rather than increasing it. If anything it limits the shunt; it does not redirect most of the cardiac output into the occluded region.',
+          'A larger partial-pressure difference speeds diffusion rather than slowing it. High alveolar PO₂ does not impair oxygen transfer across the barrier.',
+        ],
         skill: '3B gas exchange',
       },
       {
@@ -390,6 +510,12 @@ export const FL6_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Alveolar gas normally differs from inspired air because capillary blood continually removes oxygen from it and adds carbon dioxide to it. Where there is no blood flow, neither exchange occurs, so the gas in those alveoli comes to resemble humidified inspired air: its PO₂ is higher and its PCO₂ lower than in perfused alveoli. A lower PO₂ with a higher PCO₂ describes alveoli that are perfused but poorly ventilated, the opposite situation. Because the removal of oxygen and the addition of carbon dioxide stop together, the two partial pressures must shift in opposite directions, which excludes the two options in which both rise or both fall.',
+        optionExplanations: [
+          'Lower PO₂ with higher PCO₂ describes alveoli that are perfused but poorly ventilated, where blood keeps removing oxygen and adding CO₂ faster than fresh gas arrives. That is the opposite of the unperfused situation.',
+          'Because capillary blood normally removes oxygen and adds carbon dioxide, stopping perfusion must shift the two partial pressures in opposite directions. Both falling together is not possible when both exchanges cease.',
+          'Alveolar gas normally differs from inspired air because capillary blood continually removes oxygen and adds carbon dioxide. Where there is no blood flow, neither exchange occurs, so the gas comes to resemble humidified inspired air: higher PO₂ and lower PCO₂ than in perfused alveoli.',
+          'The removal of oxygen and the addition of carbon dioxide stop together when perfusion ceases, so PO₂ rises while PCO₂ falls. Both rising together cannot occur.',
+        ],
         skill: '3B ventilation–perfusion',
       },
       {
@@ -403,6 +529,12 @@ export const FL6_BIO_BIOCHEM_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'At rest a red cell has about three times as long in the capillary as normal equilibration requires, and this reserve lets blood equilibrate even across a thickened barrier that slows diffusion. During exercise cardiac output rises and transit time shortens; with slowed diffusion the blood now leaves the capillary before reaching the alveolar PO₂. Ventilation increases in proportion to metabolic demand during exercise, so alveolar PO₂ does not fall. Exercise does not acutely thicken the barrier. Exercise recruits and distends capillaries in ventilated lung rather than creating unventilated, perfused regions.',
+        optionExplanations: [
+          'Ventilation increases in proportion to metabolic demand during exercise, so alveolar PO₂ does not fall. The limitation in fibrosis is in diffusion across the thickened barrier, not in the alveolar gas.',
+          'At rest a red cell has about three times as long in the capillary as normal equilibration requires, a reserve that lets blood equilibrate even across a thickened barrier. During exercise cardiac output rises and transit time shortens; with slowed diffusion, blood leaves the capillary before reaching alveolar PO₂.',
+          'Exercise does not acutely thicken the alveolar barrier. Fibrosis is a chronic structural change; a rise in pulmonary arterial pressure during exercise does not alter it from breath to breath.',
+          'Exercise recruits and distends capillaries in ventilated lung rather than creating unventilated, perfused regions. A new shunt is not what develops; the problem is incomplete equilibration across the barrier.',
+        ],
         skill: '3B diffusion',
       },
     ],
@@ -425,6 +557,12 @@ export const FL6_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'Without a thymus, neither cytotoxic nor helper T cells mature. The loss of cytotoxic T cells impairs the killing of virus-infected cells, and the loss of helper T cells weakens antibody production, because B cells need T-cell help to respond fully to protein antigens. Normal antibody responses would be expected only if B cells acted independently of T cells for such antigens. B cells mature in the bone marrow, so their numbers are not reduced by removing the thymus. A fully normal immune response is what would follow removal of the thymus from an adult, whose peripheral T-cell pool is already established, not from a newborn.',
+    optionExplanations: [
+      'Without a thymus, neither cytotoxic nor helper T cells mature. Loss of cytotoxic T cells impairs killing of virus-infected cells, and loss of helper T cells weakens antibody production, because B cells need T-cell help to respond fully to protein antigens.',
+      'Normal antibody responses would be expected only if B cells acted independently of T cells for protein antigens. They do not; protein antigens require helper T cells, which are absent without a thymus.',
+      'B cells mature in the bone marrow, so their numbers are not reduced by removing the thymus. Killing of virus-infected cells would also be impaired, since cytotoxic T cells are missing.',
+      'A fully normal immune response is what would follow removal of the thymus from an adult, whose peripheral T-cell pool is already established, not from a newborn whose lymphoid tissues have not yet been populated.',
+    ],
     skill: '3B thymus and T-cell maturation',
   },
   {
@@ -441,6 +579,12 @@ export const FL6_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'During the absolute refractory period, voltage-gated Na⁺ channels are open or inactivated and cannot be opened by any stimulus. As the membrane repolarizes, channels return from the inactivated state to the closed state, from which they can open; once enough have recovered, a strong stimulus can reach threshold even though K⁺ channels that are still open oppose depolarization. A single action potential changes the ion gradients negligibly, so the pump is not what ends refractoriness. If the K⁺ channels had all closed, the membrane would be back at rest and a normal stimulus would suffice. Axonal action potentials are carried by Na⁺ channels, not by Ca²⁺ channels.',
+    optionExplanations: [
+      'A single action potential changes the ion gradients negligibly, so the Na⁺/K⁺ pump is not what ends refractoriness. Refractoriness is governed by channel states, not by gradient restoration.',
+      'If all voltage-gated K⁺ channels had closed, the membrane would be back at rest and a normal stimulus would suffice. The need for a stronger stimulus shows that some K⁺ channels remain open, opposing depolarization.',
+      'During the absolute refractory period Na⁺ channels are open or inactivated and cannot be opened. As the membrane repolarizes, channels return from inactivated to closed, from which they can open; once enough have recovered, a strong stimulus can reach threshold despite still-open K⁺ channels.',
+      'Axonal action potentials are carried by voltage-gated Na⁺ channels, not Ca²⁺ channels. Ca²⁺ channels do not supply the inward current for axonal firing during the relative refractory period.',
+    ],
     skill: '3A refractory periods',
   },
   {
@@ -457,6 +601,12 @@ export const FL6_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'The isolated segment has been cut off from the central nervous system and from ganglia outside the gut, yet it still produces a coordinated, directional reflex that requires neuronal action potentials. The circuit must therefore be contained in the gut wall: the enteric nervous system, whose plexuses include sensory neurons that detect stretch, interneurons, and excitatory and inhibitory motor neurons. Vagal and sympathetic cell bodies are absent from the excised tissue, so neither can coordinate the response. Pacemaker cells set the rhythm of slow waves, but a response abolished by a neuronal toxin cannot be produced without neural input.',
+    optionExplanations: [
+      'Vagal cell bodies lie in the brainstem, which is absent from the excised segment. A reflex that persists in isolated tissue cannot depend on them.',
+      'Sympathetic cell bodies lie in abdominal ganglia outside the gut wall and are not present in the isolated segment. They cannot coordinate the observed response.',
+      'Pacemaker cells set the rhythm of slow waves, but a response abolished by a toxin that blocks neuronal action potentials cannot be produced without neural input. The directional reflex requires neurons.',
+      'The isolated segment is cut off from the CNS and extrinsic ganglia yet still produces a coordinated, directional reflex requiring neuronal action potentials. The circuit must lie within the gut wall: the enteric nervous system with its sensory, inter-, and motor neurons.',
+    ],
     skill: '3B enteric nervous system',
   },
   {
@@ -473,6 +623,12 @@ export const FL6_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'Penetrance is the fraction of individuals with a genotype who show the associated phenotype at all: 40 of 50, or 80%. Expressivity describes how strongly or in what form the phenotype appears among those who do show it, so a range from mild to severe is variable expressivity. Incomplete dominance refers to a heterozygote whose phenotype is intermediate between the two homozygotes and does not describe differences among heterozygotes. Expressivity is not reported as a percentage of carriers affected, and the two options that do so interchange the terms.',
+    optionExplanations: [
+      'Penetrance of 80% is correct, but incomplete dominance refers to a heterozygote whose phenotype is intermediate between the two homozygotes. It does not describe differences in severity among carriers of the same genotype.',
+      'Penetrance is the fraction of carriers who show the phenotype at all: 40 of 50, or 80%. Expressivity describes how strongly the phenotype appears among those who show it, so a range from mild patches to disabling tumors is variable expressivity.',
+      'This interchanges the terms. Expressivity is not reported as a percentage of carriers affected; 80% is the penetrance. The range of severity among affected individuals is variable expressivity, not incomplete penetrance.',
+      'This interchanges the terms and also uses the wrong figure. The 20% is the fraction of nonpenetrant carriers; expressivity is not a percentage, and variation in severity is expressivity, not penetrance.',
+    ],
     skill: '1C penetrance and expressivity',
   },
   {
@@ -489,6 +645,12 @@ export const FL6_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'The 5′ cap and the poly-A tail protect the two ends of an mRNA from exonucleases, and proteins bound to the cap and tail cooperate to recruit the small ribosomal subunit; an mRNA lacking both is short-lived and poorly translated. Both mRNAs were injected directly into the cytoplasm, so nuclear export is not at issue. The two mRNAs are otherwise identical, so they do not differ in introns. The cap is a modified guanine nucleotide added to the 5′ end and does not contain or supply the AUG start codon, which lies in the transcribed sequence.',
+    optionExplanations: [
+      'The 5′ cap and poly-A tail protect the two ends of an mRNA from exonucleases, and proteins bound to them cooperate to recruit the small ribosomal subunit. An mRNA lacking both is short-lived and poorly translated.',
+      'Both mRNAs were injected directly into the cytoplasm, so nuclear export is not at issue. The unmodified mRNA is already where the ribosomes are.',
+      'The two mRNAs are otherwise identical, so they do not differ in introns. A synthetic mRNA would in any case be made without introns.',
+      'The cap is a modified guanine nucleotide added to the 5′ end and does not contain or supply the AUG start codon, which lies in the transcribed sequence shared by both mRNAs.',
+    ],
     skill: '1B mRNA processing',
   },
   {
@@ -500,6 +662,12 @@ export const FL6_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'Phosphoglycerate kinase transfers a phosphoryl group from 1,3-bisphosphoglycerate to ADP in a reaction that is close to equilibrium in the cell and runs in reverse during gluconeogenesis, even though it produces ATP in the glycolytic direction. The three irreversible steps are those catalyzed by hexokinase, phosphofructokinase-1, and pyruvate kinase; gluconeogenesis bypasses them with glucose 6-phosphatase, fructose 1,6-bisphosphatase, and the pair pyruvate carboxylase and PEP carboxykinase.',
+    optionExplanations: [
+      'Hexokinase catalyzes one of the three irreversible steps of glycolysis. Gluconeogenesis bypasses it with glucose 6-phosphatase, so it is not shared.',
+      'Phosphofructokinase-1 catalyzes an irreversible, highly regulated step of glycolysis. Gluconeogenesis bypasses it with fructose 1,6-bisphosphatase, so it is not shared.',
+      'Phosphoglycerate kinase transfers a phosphoryl group from 1,3-bisphosphoglycerate to ADP in a reaction close to equilibrium in the cell, and it runs in reverse during gluconeogenesis even though it produces ATP in the glycolytic direction.',
+      'Pyruvate kinase catalyzes the third irreversible step of glycolysis. Gluconeogenesis bypasses it with pyruvate carboxylase and PEP carboxykinase, so it is not shared.',
+    ],
     skill: '1D glycolysis',
   },
   {
@@ -516,6 +684,12 @@ export const FL6_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'Fibrous proteins are elongated, water-insoluble molecules built from one repeating element of secondary structure and serve structural roles; in α-keratin, pairs of α-helices wind around each other into coiled coils that assemble into strong filaments. Water solubility and a compact fold around a hydrophobic core are the properties of globular proteins such as myoglobin. α-Keratin is almost entirely α-helical, so it does not lack regular secondary structure. Binding a prosthetic group and carrying a ligand describes myoglobin, which holds heme and stores oxygen.',
+    optionExplanations: [
+      'Water solubility and a compact fold around a hydrophobic core are the properties of globular proteins such as myoglobin. α-Keratin, a fibrous protein, is insoluble and elongated.',
+      'α-Keratin is almost entirely α-helical, so it does not lack regular secondary structure. Its helices wind into coiled coils; it is not a random coil.',
+      'Binding a prosthetic group and carrying a ligand describes myoglobin, which holds heme and stores oxygen. α-Keratin has a structural, not a catalytic or transport, role.',
+      'Fibrous proteins are elongated, water-insoluble molecules built from one repeating secondary structure and serve structural roles. In α-keratin, pairs of α-helices wind around each other into coiled coils that assemble into strong, load-bearing filaments.',
+    ],
     skill: '1A protein structure',
   },
   {
@@ -532,6 +706,12 @@ export const FL6_BIO_BIOCHEM_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'The small protein reaches the nucleus without any signal, which shows that the pore allows passive diffusion of small molecules, while the large protein requires a nuclear localization signal, which is recognized by transport receptors that carry cargo through the pore. Arrival of the large protein in its folded state shows that the pore is a wide aqueous channel, unlike mitochondrial translocons, which pass unfolded chains. Nuclear import goes on throughout interphase, when the envelope is intact. The small protein enters without a signal, and nuclear localization signals are not removed after import.',
+    optionExplanations: [
+      'The small protein reaches the nucleus with no signal, showing the pore allows passive diffusion of small molecules, while the large protein requires a nuclear localization signal recognized by transport receptors. Arrival folded shows the pore is a wide aqueous channel.',
+      'The large protein arrives fully folded, which shows the pore does not unfold cargo. Mitochondrial translocons pass unfolded chains through narrow channels; nuclear pores do not.',
+      'Nuclear import goes on throughout interphase, when the envelope is intact. The small protein’s free diffusion and the signal-dependent entry of the large one both occur with the envelope in place.',
+      'The small protein enters without any signal, so the pore does not exclude every unsignaled protein. Nuclear localization signals are also not cleaved after import, unlike some other targeting sequences.',
+    ],
     skill: '2A nuclear transport',
   },
 ]

@@ -31,6 +31,12 @@ export const FL3_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The author accepts that the trace is real but insists that framing and selection make every photograph a claim to be judged “the way we settle any claim.” The paintings option contradicts the author’s acceptance that the camera really does receive light from the scene; photographs differ from paintings in concealing their making. The confirmation option is the defender’s remedy (“more photographs”), which the author rejects because every photograph excludes almost everything. The false-and-abandoned option overstates the author, who calls the trace idea “not … false so much as incomplete.”',
+        optionExplanations: [
+          'The author never says photographs and paintings are equally reliable; the camera really does receive light from the scene, and the difference is that a painting “wears its making openly” while a photograph conceals its making. This flattens a distinction the passage insists on.',
+          'Trusting only images confirmed by other photographs is the defender’s remedy (“more photographs, not a new theory”), which the author rejects because every photograph “excludes almost everything” and the difficulty “is not occasional.”',
+          'The author grants that “the trace is real” but argues that framing and selection make every photograph a claim that “persuades while appearing only to report,” so fairness must be settled “the way we settle any claim.” That is the thesis.',
+          'The author explicitly calls the trace idea “not … false so much as incomplete,” so abandoning it overstates the position. The trace is “the raw material,” not a mistake.',
+        ],
         skill: 'main-idea',
       },
       {
@@ -44,6 +50,12 @@ export const FL3_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The example follows the claim that framing choices subtract without adding anything false, and it ends “Both pictures are traces. Neither is neutral”: two faithful images yield a sparse crowd and a sea. The aerial-accuracy option is contradicted by the fourth paragraph, where the street-level picture may be the fair one. The crowds-are-harder option generalizes from a single illustration the author uses for all photographs. The falsification option inverts the point: the example shows how an image can mislead without any falsification at all.',
+        optionExplanations: [
+          'The example immediately follows the claim that framing choices subtract without adding anything false, and ends “Both pictures are traces. Neither is neutral.” Two faithful images yield a sparse crowd and a sea: same scene, opposite impressions.',
+          'The passage never ranks aerial over ground-level views. In the fourth paragraph the author says the street-level picture “may be the fair one” if the rooftop view flattered passersby, so neither angle is inherently more accurate.',
+          'The crowd is a single illustration of a point the author applies to all photographs (“Every photograph excludes almost everything”). Nothing suggests crowds are a uniquely difficult subject.',
+          'This inverts the point. The example shows how an image can mislead with no falsification at all: both pictures are genuine traces, and neither adds anything false. The misleading comes from what is subtracted.',
+        ],
         skill: 'function',
       },
       {
@@ -57,6 +69,12 @@ export const FL3_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The author reasons from “the frame does not announce itself as a choice” to “it persuades”; that step holds only if evidence not perceived as selected escapes the scrutiny a recognized argument would receive. The intent-to-mislead option is unneeded — the author says arguments “can be sound” and choices add “nothing false.” The paintings-persuade-more option runs against the argument, which gives photographs the more persuasive position. The viewers-understand-more option reverses the contrast: paintings wear their making openly, while photographs conceal theirs.',
+        optionExplanations: [
+          'The author does not need photographers to intend deception. Arguments “can be sound,” framing choices add “nothing false,” and the hungry-child photographer told “something true.” The persuasion works regardless of intent.',
+          'This runs against the argument. The author gives photographs the more persuasive position precisely because they conceal their making, whereas a painting “wears its making openly” and “no one mistakes a portrait for the sitter.”',
+          'This reverses the passage’s contrast. Viewers understand paintings as made; photographs “conceal [their] making behind [their] accuracy.” Viewers understand less, not more, about photographic choices.',
+          'The step from “the frame does not announce itself as a choice” to “it persuades” holds only if evidence that is not perceived as selected escapes the scrutiny a recognized argument would receive. That unstated premise is what the claim depends on.',
+        ],
         skill: 'assumption',
       },
       {
@@ -70,6 +88,12 @@ export const FL3_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'A second angle supplies some of “what else we would need to see,” but the author holds that every photograph “excludes almost everything,” so two images remain selections whose fairness must still be judged. The unnecessary option adopts the trace view the author calls incomplete. The complete-remedy option is the defender’s “more photographs” answer, which the author says misses a difficulty that is “not occasional.” The counterproductive option misreads the passage, which recommends treating photographs as testimony.',
+        optionExplanations: [
+          'Calling the rule unnecessary adopts the view that a single photograph is a trustworthy trace, which the author calls incomplete. The author would welcome more context, not dismiss the need for it.',
+          'A second angle supplies some of “what else we would need to see,” so it helps. But the author holds every photograph “excludes almost everything,” so both images remain selections whose fairness must still be judged by asking who made them and why.',
+          'This is the defender’s “more photographs” remedy, which the author rejects because the difficulty “is not occasional.” Two traces would still exclude almost everything and would leave much of the scene outside both frames.',
+          'The author recommends treating photographs as testimony (“We honor photographs more, not less, when we treat them as testimony”). A rule that encouraged this would be welcome, not counterproductive.',
+        ],
         skill: 'application',
       },
       {
@@ -83,6 +107,12 @@ export const FL3_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The author grants that “the trace is real” but calls the idea incomplete, the source of poor reading when treated as the whole story — qualified acceptance. Outright rejection ignores that concession; the author never disputes how a camera works. Enthusiastic endorsement contradicts the argument that photographs deserve scrutiny, not extra trust. Indifference misses that the author engages the view throughout and argues that pointing to the trace cannot settle fairness — a claim about the view’s limits, not its irrelevance.',
+        optionExplanations: [
+          'The author grants “the trace is real” but calls the idea incomplete and says its incompleteness “has made us poor readers of photographs.” Correct as far as it goes, misleading when taken as the whole story: qualified acceptance.',
+          'Outright rejection ignores the author’s explicit concession that the trace is real. The author never disputes how a camera records light, only what follows from it.',
+          'Enthusiastic endorsement contradicts the argument that photographs deserve scrutiny, not extra trust. The author says photographs persuade “while appearing only to report,” which is a reason for caution.',
+          'The author engages the trace view throughout and argues that fairness “cannot be settled by pointing to the trace.” That is a claim about the view’s limits, not indifference to it.',
+        ],
         skill: 'tone',
       },
       {
@@ -96,6 +126,12 @@ export const FL3_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The argument depends on viewers not registering the frame as a choice, so that photographs persuade “while appearing only to report”; if viewers routinely question what the frame excluded, that premise fails. The elevated-positions option does not bear on whether viewers notice selection. The dozens-of-pictures option strengthens the argument by showing how much choosing precedes publication. The fair-framing option is compatible with the author, who says arguments “can be sound” and that the question is how to judge fairness, not whether photographers intend it.',
+        optionExplanations: [
+          'How often elevated photographs are published says nothing about whether viewers notice that framing is a choice. It leaves the author’s premise about silent exclusion untouched.',
+          'Taking dozens of pictures before choosing one strengthens the author’s point that extensive selection precedes publication. It supports rather than weakens the argument.',
+          'The argument depends on the frame not announcing itself as a choice, so that photographs persuade “while appearing only to report.” If viewers routinely ask what was left outside the frame, that premise fails and the photograph no longer escapes scrutiny.',
+          'Photographers trying to frame fairly is compatible with the author’s view. The author says arguments “can be sound” and that the issue is how viewers judge fairness, not whether photographers intend it.',
+        ],
         skill: 'strengthen-weaken',
       },
     ],
@@ -119,6 +155,12 @@ export const FL3_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The author grants the value of flexibility but argues that classification “should follow the question … who sets the terms?” and concludes the driver works for the company. The defend-flexibility option describes the platforms’ position, which the author answers rather than advances. The earnings option introduces a comparison the passage never makes. The new-category option misreads “Whether we call these workers employees or invent some new category”: the author is indifferent to the label so long as the terms test governs.',
+        optionExplanations: [
+          'Defending flexibility against critics is the platforms’ position, which the author answers rather than advances. The author grants that flexibility is “genuinely valuable” but argues it is not the same as independence.',
+          'The author concedes the value of flexibility but argues classification “should follow the question the old test was really asking: who sets the terms?” and concludes the driver “is working for the company.” That is the purpose.',
+          'The passage never compares drivers’ earnings with those of traditional workers. Pay is mentioned only to note that the app sets rates, not to claim drivers earn less.',
+          'The author is indifferent to the label: “Whether we call these workers employees or invent some new category.” Proposing a new category is not the goal; the terms test is.',
+        ],
         skill: 'main-idea',
       },
       {
@@ -132,6 +174,12 @@ export const FL3_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Finding customers through an intermediary is what the driver and the plumber have in common — the telephone directory is itself an intermediary — so it is not a point of difference. The author does contrast the plumber, who “sets his own prices,” with a driver whose pay the app decides; the plumber turns down jobs “without penalty,” while the app tracks how often the driver accepts orders and may deactivate her; and the plumber’s reputation travels with him, while the driver’s “history stays behind.”',
+        optionExplanations: [
+          'The author contrasts the plumber, who “sets his own prices,” with the driver whose pay the app decides. This is a stated point of difference.',
+          'The plumber “turns down jobs he dislikes without penalty,” while the app tracks how often the driver accepts orders and may deactivate her. This is a stated point of difference.',
+          'The plumber builds a reputation “that belongs to him and travels with him,” while the driver’s “history stays behind” on the company’s servers. This is a stated point of difference.',
+          'Finding customers through an intermediary is what the driver and plumber share: the telephone directory is itself a listing intermediary. The author uses the directory comparison precisely because both are listed, so this is not a difference.',
+        ],
         skill: 'detail',
       },
       {
@@ -145,6 +193,12 @@ export const FL3_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The remark appears where the author is showing that the app exercises an employer’s powers, including cutting a worker off; calling the word “gentle” implies it cushions a harsher reality — losing one’s work. The praise option misreads an ironic phrase as a compliment. The rare-and-temporary option has no support; the passage says deactivation follows whenever the numbers fall. The adopted-terminology option ignores the distancing quotation marks and the qualifier, which mark the word as the industry’s, not the author’s.',
+        optionExplanations: [
+          'The remark appears where the author shows the app wielding an employer’s powers, including cutting a worker off. Calling the word “gentle” implies it cushions a harsher reality, namely losing one’s work.',
+          'This reads an ironic phrase as a compliment. The author is criticizing the platforms’ control, not praising their treatment of workers; the context is a list of powers the app holds over the driver.',
+          'Nothing in the passage suggests deactivation is rare or temporary. The author says it may happen “when those numbers fall,” presenting it as a standing threat tied to metrics.',
+          'The distancing quotation marks and the qualifier “the industry’s” mark the word as the platforms’ term, not the author’s. The author is holding the word at arm’s length, not adopting it.',
+        ],
         skill: 'function',
       },
       {
@@ -158,6 +212,12 @@ export const FL3_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The author measures independence by “who sets the terms,” citing control of prices, freedom to decline work, and a reputation that travels; the tutor who sets her rates and keeps her clients has these. The warehouse worker has only freedom over when, which the author distinguishes from economic independence. The driver who may refuse rides still has every fare set by the app. The courier is judged by standards he cannot contest, one of the controls the author says marks the driver as working for the company.',
+        optionExplanations: [
+          'Choosing shifts from a posted schedule is freedom over when, which the author distinguishes from economic independence. The algorithm still sets the terms of the work.',
+          'Refusing rides without penalty removes one control, but the app still sets every fare. The author lists price-setting as a core mark of independence, so this driver lacks it.',
+          'The author measures independence by who sets the terms: the plumber sets prices, declines jobs without penalty, and keeps a portable reputation. A tutor who sets her rates and keeps her client list has these marks.',
+          'Being paid by ratings he cannot dispute means the courier is judged by standards he does not control, one of the controls the author says marks the driver as working for the company.',
+        ],
         skill: 'application',
       },
       {
@@ -171,6 +231,12 @@ export const FL3_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The author’s case rests on the app deciding pay and penalizing refusals; if drivers set their own prices and could decline freely, the terms would be theirs and the directory comparison would hold. The part-time option bears only on the schedule, which the author says the label “gig” does describe. The harsh-ratings option leaves untouched the question of who sets the standards. The value-of-hours option restates a point the author concedes (“None of this requires denying that flexibility matters”).',
+        optionExplanations: [
+          'Part-time use bears only on the schedule, which the author concedes the label “gig” does describe. It says nothing about who sets rates, assignments, or standards.',
+          'Harsh customer ratings leave untouched the question of who sets the standards and enforces them. The author’s point is that the app controls the metrics, not that customers are lenient or harsh.',
+          'Valuing the ability to choose hours restates a point the author already concedes: “None of this requires denying that flexibility matters.” It does not challenge the claim about control.',
+          'The author’s case rests on the app deciding pay and penalizing refusals. If drivers set their own prices and could decline freely, the terms would be theirs and the directory comparison with the plumber would hold.',
+        ],
         skill: 'strengthen-weaken',
       },
       {
@@ -184,6 +250,12 @@ export const FL3_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'A portable reputation is one of the three marks of independence the author assigns to the plumber, so the change would remove one grievance (“What she has built, she has built for someone else”) while leaving prices and assignments with the app. The irrelevant option contradicts the author’s use of reputation as a criterion. The decisive-evidence option ignores that the app would still set rates and assignments. The harmful option introduces a concern about exposure the passage never raises.',
+        optionExplanations: [
+          'This contradicts the author’s use of a portable reputation as one of the three marks of independence. The plumber’s reputation “belongs to him and travels with him,” and the driver’s does not.',
+          'A portable reputation is one of the three marks of independence the author assigns to the plumber. Exporting ratings would remove one grievance (“What she has built, she has built for someone else”) while prices and assignments stay with the app, so it is a real but partial step.',
+          'Portable ratings would address only one of the author’s criteria. The app would still set rates and assignments and judge the driver by its own standards, so the change could not be decisive.',
+          'The passage never raises a concern about drivers’ records being exposed to more companies. This introduces a worry foreign to the author’s argument.',
+        ],
         skill: 'new-information',
       },
     ],
@@ -207,6 +279,12 @@ export const FL3_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The author “accept[s] every premise” but objects that the lament pictures the original as a finished object, whereas “a poem exists in its readings” — so the target is the idea that the poem is complete apart from its readers. The sound option and the inseparability option are premises the author explicitly accepts. The rhyme option contradicts the author, who says the translator who strains after a rhyme scheme “usually loses both” sound and sense.',
+        optionExplanations: [
+          'The author “accept[s] every premise” but objects that the lament pictures the original as a finished object, whereas “a poem exists in its readings.” The target is the idea that the poem is complete before anyone reads it.',
+          'The author explicitly accepts that “the sound of the original cannot be carried across.” This is a premise the author grants, not one the author disputes.',
+          'The author accepts that a poem “is not separable from its words” and says “I accept every premise.” Inseparability is conceded, not challenged.',
+          'This contradicts the author, who says the translator who “strains to reproduce a rhyme scheme at the expense of sense, usually loses both.” The author does not think rhyme can or should be forced across.',
+        ],
         skill: 'detail',
       },
       {
@@ -220,6 +298,12 @@ export const FL3_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The example sets up the contrast on which the first gain depends: the native reader may choose between two senses without noticing, while the translator is forced to choose visibly. The misunderstanding option has no support; the passage treats the translator’s choice as a reading, not an error. The one-correct-meaning option reverses the point that the original may “hold both meanings in suspension.” The avoid-ambiguity option offers advice the author never gives and that runs against the author’s valuing of ambiguity made visible.',
+        optionExplanations: [
+          'The passage treats the translator’s choice as a reading, not an error. Nothing suggests translators misunderstand poems; the point is that choosing between senses is unavoidable and made visible.',
+          'This reverses the point. The original “may hold both meanings in suspension,” so the poem has more than one available meaning, and the native reader may unknowingly settle on one.',
+          'The example sets up the contrast behind the first gain: the native reader may choose between “motionless” and “even now” without noticing, while the translator must choose visibly. It shows how an ambiguity is silently settled.',
+          'The author never advises poets to avoid ambiguity and values ambiguity made visible as something translation gains. This advice runs against the passage.',
+        ],
         skill: 'function',
       },
       {
@@ -233,6 +317,12 @@ export const FL3_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The author says that translations set side by side give “something that the original alone could never give you” — a record of where the poem could go two ways — and that translations should be read as criticism; comparing several applies both claims. The rhyme option describes the strategy the author says usually loses sound and sense. The paraphrase option reduces the poem to its subject, the thin view of translation the author rejects. The recording option preserves sound but gives a non-speaker none of the readings the author values.',
+        optionExplanations: [
+          'Reproducing a rhyme scheme as closely as possible is the strategy the author says “usually loses both” sound and sense. It is the approach the passage warns against.',
+          'The author says translations set side by side give “something that the original alone could never give you,” a record of where the poem could go two ways, and that translations should be read as criticism. Comparing several applies both claims.',
+          'A prose paraphrase reduces the poem to its subject, the thin view (“a new poem on an old subject”) the author rejects. It offers none of the visible readings the author values.',
+          'A recording preserves sound, but the author grants sound cannot be carried across and locates translation’s gains in readings made visible. A non-speaker gains none of those from a recording.',
+        ],
         skill: 'application',
       },
       {
@@ -246,6 +336,12 @@ export const FL3_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The echo is “something the poet did not put there,” so calling it the poem’s life rather than distortion requires that unintended meanings can rightly count as part of a work — the same premise behind the play’s “vitality.” The intention-to-be-translated option is unnecessary, since the argument explicitly concerns what the poet did not intend. The inherently-richer option overstates: the author says only that some histories will enlarge the poem. The readers-can-tell option is irrelevant, because the author’s point holds even if readers cannot separate intended from acquired echoes.',
+        optionExplanations: [
+          'The argument explicitly concerns meanings “the poet did not put there,” so it does not depend on poets intending translation. Intention is beside the point the author is making.',
+          'The author says only that “some of those histories will enlarge” the poem, not that the translator’s language is inherently richer. The claim is about particular echoes, not about languages in general.',
+          'The author’s point holds even if readers cannot separate intended from acquired echoes. Whether readers can tell is irrelevant; what matters is whether acquired meanings count as the poem’s.',
+          'The echo is “something the poet did not put there,” so calling it the poem continuing to live rather than distortion requires that unintended meanings can rightly belong to a work. That is the same premise behind the play’s “vitality.”',
+        ],
         skill: 'assumption',
       },
       {
@@ -259,6 +355,12 @@ export const FL3_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The first gain depends on the translator being forced to choose because her language lacks a word holding both senses; if such words are usually available, the ambiguity can be carried over and no reading is made visible. The revising-poets option is at most consistent with the author’s view that translations illuminate originals. The disagreement option supports the claim that readers make choices the text does not make. The differing-translations option supports the value of comparing translations to see where they diverge.',
+        optionExplanations: [
+          'Poets revising after reading translations is at most consistent with the author’s view that translations illuminate originals. It does not bear on whether translators are forced to choose.',
+          'Native readers disagreeing about key words supports the author’s claim that readers make choices the text does not make. It strengthens rather than weakens the account.',
+          'The first gain depends on the translator being forced to choose because her language lacks a word holding both senses. If translators can usually keep double meanings intact, no fork appears and no reading is made visible.',
+          'Translations differing widely supports the author’s point that comparing translations reveals where the poem could go two ways. It strengthens the account of the first gain.',
+        ],
         skill: 'strengthen-weaken',
       },
       {
@@ -272,6 +374,12 @@ export const FL3_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The author uses the play to argue that the purists’ complaint is inconsistent: we welcome new meanings acquired over time, so we should welcome those acquired in a new language. The easier-to-translate option misreads the example, which is about time, not translation. The distortion option reverses the author, who calls such meanings “vitality.” The read-aloud option contradicts the author’s concession that the sound of the original “cannot be carried across.”',
+        optionExplanations: [
+          'The author uses the play to argue that the purists are inconsistent: we welcome new meanings a work acquires over time as its “vitality,” so we should welcome those acquired in a new language. Time and translation are parallel ways a work gains meaning.',
+          'The example concerns a play staged centuries later, not a play translated. It is about time, not about whether plays translate more easily than poems.',
+          'This reverses the author, who calls the new meanings of an old play “vitality,” not distortion. The example is offered approvingly.',
+          'The author concedes that sound “cannot be carried across,” and nothing about the play example concerns reading aloud. This introduces a claim the passage never makes.',
+        ],
         skill: 'inference',
       },
     ],
@@ -295,6 +403,12 @@ export const FL3_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The author argues that removal “no more erases history than taking down an old campaign poster erases the election,” yet insists that a society owes its past an accurate record and that silent removal cannot be justified. The stay-in-place option contradicts the author’s denial that the past is owed permanence. The does-erase option adopts the very claim the author calls a confusion. The no-obligation option distorts the fourth paragraph, which rejects reverence and permanence but affirms an obligation to accuracy.',
+        optionExplanations: [
+          'The author denies that the past is owed permanence: “the public square belongs to the living, who are entitled to decide what it will say.” Keeping statues in place is not required.',
+          'This adopts the very claim the author calls a confusion. Removal “no more erases history than taking down an old campaign poster erases the election.”',
+          'The fourth paragraph rejects reverence and permanence but affirms an obligation: “What a society owes its past is an accurate record.” Saying there is no other obligation distorts this.',
+          'The author argues removal does not erase history, yet insists a society owes its past “an accurate record,” including of its own mistakes of memory, and that “silent removal” cannot be justified. Both halves are the main point.',
+        ],
         skill: 'main-idea',
       },
       {
@@ -303,6 +417,12 @@ export const FL3_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The obligation is “an accurate record,” which “can be met in many ways.” Action I keeps the monument but labels it as the argument it was, so it meets the obligation; the author denies the past is owed permanence but does not forbid keeping a statue. Action II preserves the statue together with evidence of “who got to decide.” Action III is the “silent removal” the author says cannot be justified. So I and II only; the options including III, or omitting II, are wrong.',
+        optionExplanations: [
+          'This omits the museum option. Moving a statue to a historical society and displaying it with the committee’s records preserves exactly the evidence of “who got to decide” that the author wants kept.',
+          'The obligation is “an accurate record,” which “can be met in many ways.” Adding an explanatory panel labels the statue as the argument it was; moving it to a historical society with the committee’s records preserves the evidence. Overnight replacement with no marker is the “silent removal” the author condemns.',
+          'This includes the silent removal (replacing the statue overnight with no indication) that the author says “cannot be justified,” and excludes the explanatory panel, which the author would accept.',
+          'Including the overnight replacement is wrong: leaving “no indication of what had stood there” is the silent removal the author explicitly rejects.',
+        ],
         skill: 'application',
       },
       {
@@ -316,6 +436,12 @@ export const FL3_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Having recast monuments as “arguments about history,” the author uses the poster, another piece of persuasion about an event, to show that withdrawing the persuasion leaves the event itself untouched. The campaigns option takes the analogy literally; the monuments in the passage are commissioned by committees long after the war. The fragile option contradicts the passage, which says monuments are made of materials chosen to resist revision. The preserve-everything option overstates the author, who says the square “belongs to the living.”',
+        optionExplanations: [
+          'This takes the analogy literally. The monuments in the passage are commissioned by committees in a later decade, not during political campaigns; the poster is a parallel, not a historical claim.',
+          'This contradicts the passage, which says monuments are made of materials “chosen precisely because they resist revision.” The comparison is about persuasion, not fragility.',
+          'Having recast monuments as “arguments about history,” the author uses the poster, another piece of persuasion about an event, to show that withdrawing the persuasion leaves the event itself untouched: the election still happened.',
+          'The author says the square “belongs to the living” and that the past is not owed permanence. Preserving every political document is not what the passage recommends.',
+        ],
         skill: 'function',
       },
       {
@@ -329,6 +455,12 @@ export const FL3_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The scenario matches the author’s warning that a town that “put[s] nothing in its place” may forget it ever honored the man — an erasure of the town’s history caused by removal without a record. The left-standing option contradicts the author’s view that the past is not owed permanence and that museums or plaques can meet the obligation. The freed-itself option treats the forgetting as a success, whereas the author condemns silent removal. The life-and-deeds option is the trap the author names: the loss is not “of the general’s history” but “of the town’s.”',
+        optionExplanations: [
+          'The scenario matches the author’s warning that a town that “put[s] nothing in its place” may in two generations forget it ever honored the man. That forgetting signals removal without an adequate record of what the town had honored.',
+          'The author denies that the past is owed permanence and says museums or plaques can meet the obligation. The problem is the missing record, not the removal itself.',
+          'The author condemns silent removal, which “treats a change of mind as though it had been the town’s opinion all along.” Forgetting is a failure, not a success.',
+          'This is the trap the author names explicitly: the loss is not “of the general’s history” but “of the town’s.” What is lost is knowledge of what the community once chose to celebrate.',
+        ],
         skill: 'new-information',
       },
       {
@@ -342,6 +474,12 @@ export const FL3_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'By narrowing “the people of that decade” to those with money and standing, the author signals that a monument records the wishes of a subset of the community; the later remark that heroes were chosen by people “who did not consult the rest of the town” confirms this. The public-taxes option is unsupported. The more-accurate-views option runs against the author’s treatment of monuments as partial arguments. The costly-bronze option contradicts the stated reason for the materials: they “resist revision.”',
+        optionExplanations: [
+          'The passage says nothing about how monuments were funded and specifically points to private money and standing, not public taxes.',
+          'By narrowing “the people of that decade” to those “with the money and standing to commission bronze,” the author signals that a monument records a subset’s wishes. The later remark about heroes chosen by people “who did not consult the rest of the town” confirms this.',
+          'This runs against the author’s treatment of monuments as partial arguments made “for particular purposes.” Nothing suggests the wealthy saw the past more accurately.',
+          'The passage gives a different reason for the materials: they were “chosen precisely because they resist revision.” Cost is not mentioned as the motive.',
+        ],
         skill: 'inference',
       },
       {
@@ -355,6 +493,12 @@ export const FL3_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The author says the objection “contains a real confusion and a real insight,” that its holders “rarely state it well,” and that they “would be right” to warn against an erasure of evidence — partial sympathy for a concern badly expressed. The dismissive option ignores the insight. The admiring option ignores the confusion, which the author spends a paragraph correcting. The hostile option imputes motives the passage never assigns to the objectors.',
+        optionExplanations: [
+          'Dismissiveness ignores the “real insight” the author finds in the objection and the concluding concession that the objectors “would be right” to warn against an erasure of evidence.',
+          'Admiration ignores the “real confusion” the author spends a paragraph correcting. The objectors misunderstand what a monument is, so they do not alone understand it.',
+          'The passage never imputes to the objectors a wish to keep arguments that deserve rejection. The author treats their error as a confusion, not a motive.',
+          'The author says the objection “contains a real confusion and a real insight,” that its holders “rarely state it well,” and that they “would be right to call it an erasure of evidence.” That is partial sympathy for a garbled but legitimate concern.',
+        ],
         skill: 'tone',
       },
     ],
@@ -378,6 +522,12 @@ export const FL3_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The author holds that solitude “is good for exactly what it returns” and that its value is judged by those to whom the solitary returns. The superiority option is the reformers’ view, which the author declines to follow. The sociable-man option ignores the first paragraph, where the author denies that society is “beholden to him.” The decide-early option contradicts the final paragraph, which urges a young person not to choose between the crowd and the cell.',
+        optionExplanations: [
+          'This is the reformers’ view, which the author says “I cannot follow.” The author explicitly denies that being alone makes a man wise and warns that solitude without society is “a mirror.”',
+          'The first paragraph denies that society is “beholden to” the sociable man, who only passes worn coin from hand to hand. The author does not credit him with serving society well.',
+          'The author holds that solitude “is good for exactly what it returns” and that its value “is to be judged not by himself but by those to whom he returns.” The worth lies in what the solitary brings back.',
+          'The final paragraph urges the opposite: “I would not … have a young person choose between the crowd and the cell. I would have him learn the rhythm of both.”',
+        ],
         skill: 'main-idea',
       },
       {
@@ -391,6 +541,12 @@ export const FL3_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The remark follows the claim that the solitary carries “his own vanity” into the woods; publishing one’s love of solitude to a large audience is offered as ironic evidence of that vanity. The more-widely-read option treats an ironic aside as a claim about sales. The ought-not-publish option draws a rule the author never states, and the essay is itself published reflection. The concede option misreads the tone, which is critical of the reformers rather than conciliatory.',
+        optionExplanations: [
+          'The remark follows the claim that the solitary carries “his own vanity” into the woods. Publishing one’s praise of solitude to a large audience is offered as ironic evidence that the professed solitary still wants others’ regard.',
+          'This treats an ironic aside as a claim about readership or sales. The author is not reporting how widely such books are read but exposing a contradiction in their authors.',
+          'The author never states a rule against publishing private reflections, and the essay is itself a published reflection. The point is about vanity, not publication.',
+          'The tone is critical of the reformers, not conciliatory. The author is not conceding their success but mocking the inconsistency of praising solitude loudly to a crowd.',
+        ],
         skill: 'function',
       },
       {
@@ -404,6 +560,12 @@ export const FL3_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The analogy says being alone does not by itself make a man wise; the third paragraph identifies what solitude can yield — the mind’s “own sense of what the facts are worth.” Freedom from interruption is the fence, the condition, not the harvest. Esteem from neighbors is not what the author values; the returning man is judged by whether he is gentler and readier to listen, not by applause. New facts are said to be “more readily had in conversation,” not in solitude.',
+        optionExplanations: [
+          'Freedom from interruption is the fence, the condition of the harvest, not the harvest itself. The author says “The fence is a condition of the harvest; it is not the harvest.”',
+          'Esteem from neighbors is not what the author values. The returning man is judged by whether he is “gentler, clearer, readier to hear,” not by the applause he receives.',
+          'New facts are said to be “more readily had in conversation,” not in solitude. Solitude fills the mind not with facts but with “its own sense of what the facts are worth.”',
+          'The analogy says being alone does not by itself make a man wise; the third paragraph identifies what solitude can yield, the mind’s “own sense of what the facts are worth.” That judgment is the harvest.',
+        ],
         skill: 'inference',
       },
       {
@@ -417,6 +579,12 @@ export const FL3_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The author says that one who “comes back prouder, holding his neighbors cheap” has spent his solitude as “merely a longer sort of company,” and that the test is whether he returns “readier to hear what he did not expect.” The well-spent option accepts the very pride the author condemns. The beyond-judgment option contradicts the claim that solitude is judged “not by himself but by those to whom he returns.” The new-facts option misplaces solitude’s value, which the author locates in judgment rather than facts.',
+        optionExplanations: [
+          'This accepts the very pride the author condemns. One who “comes back prouder, holding his neighbors cheap because they have not seen what he has seen” has spent his solitude as “merely a longer sort of company.”',
+          'The author says the test is whether one returns “readier to hear what he did not expect.” Dismissing colleagues’ questions as naive shows the scholar came back prouder and less able to receive, so the solitude was poorly spent.',
+          'This contradicts the author’s claim that solitude is judged “not by himself but by those to whom he returns.” Others can and should judge it.',
+          'The author locates solitude’s value in judgment, not facts: it fills the mind “not with new facts, for these are more readily had in conversation.” A fact-filled book would not vindicate the year.',
+        ],
         skill: 'application',
       },
       {
@@ -430,6 +598,12 @@ export const FL3_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The author claims the man who is never alone brings to company only “what the last gathering left in him,” passing around worn opinion; if such people often originate new ideas, that claim fails. The newspaper option concerns a detail of his habits, not his contribution. The hermits option concerns the reformers, not the sociable man. The restlessness option, if anything, generalizes the behavior the author describes without touching the author’s judgment of its worth.',
+        optionExplanations: [
+          'The author claims the man who is never alone brings to company only “what the last gathering left in him,” passing the same worn coin around. If such people often originate the ideas their circles discuss, that claim fails.',
+          'Disliking newspapers concerns a detail of the sociable man’s habits, not whether he contributes anything of his own to society. It does not touch the author’s judgment.',
+          'Hermits who publish praises of solitude concern the reformers of the second paragraph, not the sociable man of the first. This addresses the wrong target.',
+          'Widespread restlessness generalizes the behavior the author describes without touching the author’s judgment of its worth. It might even support the author’s picture of the sociable man.',
+        ],
         skill: 'strengthen-weaken',
       },
       {
@@ -443,6 +617,12 @@ export const FL3_CARS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Because the author holds that solitude is “good for exactly what it returns” and must be judged by those to whom the solitary returns, the thinkers’ seclusion would be vindicated by what their work offered others. The exceptions option dodges the objection with a claim the passage never makes. The always-vanity option overstates the author, who says the solitary “commonly” carries vanity, not always, and who values retirement well spent. The source-of-wisdom option contradicts “A man does not become wise by being alone.”',
+        optionExplanations: [
+          'The passage never makes a claim about exceptional thinkers whom ordinary people should not imitate. This dodges the objection with an idea foreign to the essay.',
+          'The author says the solitary “commonly” carries vanity, not always, and values retirement well spent. Calling all long seclusion vanity overstates the position and ignores the test of what is returned.',
+          'Because the author holds that solitude is “good for exactly what it returns” and must be judged “by those to whom he returns,” the thinkers’ seclusion would be vindicated by what their work gave others, not by the seclusion itself.',
+          'This contradicts the author directly: “A man does not become wise by being alone, any more than a field becomes fruitful by being fenced.” Solitude is a condition, not the source.',
+        ],
         skill: 'new-information',
       },
     ],

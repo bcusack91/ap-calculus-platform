@@ -29,6 +29,12 @@ export const FL2_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Take torques about the elbow so the joint force drops out. The biceps torque must balance the torques of the object (100 N at 0.32 m, or 32 N·m) and of the forearm itself (20 N at 0.16 m, or 3.2 N·m): $F(0.040\\ \\text{m}) = 35.2\\ \\text{N·m}$, so $F = 880$ N. The 800 N value ignores the weight of the forearm and hand. The 960 N value places the forearm’s 20 N at the hand (0.32 m) rather than at its center of mass. The 120 N value is merely the sum of the two weights, which would be correct only if the muscle acted at the same distance as the loads.',
+        optionExplanations: [
+          'This is simply the sum of the two weights (100 N + 20 N). It would be the muscle force only if the biceps acted at the same distance from the elbow as the loads, but its insertion is 4.0 cm out versus 16 and 32 cm.',
+          'This balances only the 32 N·m torque of the held object ($100 \\times 0.32 / 0.040$) and ignores the 3.2 N·m torque of the forearm’s own 20 N weight acting at its center of mass.',
+          'Correct. Taking torques about the elbow eliminates the joint force: $F(0.040) = (100)(0.32) + (20)(0.16) = 35.2$ N·m, so $F = 880$ N, far larger than the 120 N of load it supports.',
+          'This places the forearm’s 20 N at the hand (0.32 m) instead of at its center of mass (0.16 m), giving $(120)(0.32)/0.040 = 960$ N. Weight acts at the center of mass, so the forearm’s torque is only 3.2 N·m.',
+        ],
         skill: '4A torque and static equilibrium',
       },
       {
@@ -37,6 +43,12 @@ export const FL2_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'With no object in the hand, the torque condition about the elbow gives $F_{biceps}(0.040) = (20\\ \\text{N})(0.16\\ \\text{m})$, so the biceps pulls upward with 80 N. The forearm is in equilibrium, so vertical forces must sum to zero: 80 N up from the biceps and 20 N down from the forearm’s weight leave 60 N that the joint must supply downward. A 60 N upward force would give a net upward force of 120 N. The 80 N upward value is the biceps force itself, not the joint force. A 20 N downward force is the forearm’s weight and neglects the muscle entirely.',
+        optionExplanations: [
+          'Twenty newtons is just the weight of the forearm and hand. It neglects the 80 N upward biceps pull entirely; the joint must counter the excess of muscle force over weight, not the weight alone.',
+          'Correct. The torque condition gives a biceps force of $(20)(0.16)/0.040 = 80$ N upward. With 80 N up and only 20 N of weight down, the humerus must push down on the forearm with 60 N for the net force to be zero.',
+          'The magnitude is right but the direction is reversed. An upward joint force of 60 N added to the 80 N biceps pull would leave a net upward force of 120 N on a forearm that is supposed to be in equilibrium.',
+          'Eighty newtons is the biceps force itself, found from the torque condition. The question asks for the force at the joint, which follows from the force condition once the muscle force is known.',
+        ],
         skill: '4A free-body analysis',
       },
       {
@@ -50,6 +62,12 @@ export const FL2_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Work requires a displacement of the point of application along the direction of the force ($W = Fd\\cos\\phi$); a muscle contracting isometrically exerts a large force but its insertion does not move, so it does no mechanical work, even though it continues to consume chemical energy and fatigues. Multiplying the force by the forearm length treats a distance that nothing moves through as a displacement. Torque multiplied by time has the units of angular impulse, not energy. Negative work would require the insertion point to move in the direction opposite to the muscle force, which does not happen while the arm is stationary.',
+        optionExplanations: [
+          'Correct. Work is $Fd\\cos\\phi$ and requires the point of application to move. During an isometric hold the biceps insertion is stationary, so the muscle does no mechanical work even though it exerts 880 N and consumes chemical energy.',
+          'This treats the forearm’s length as a displacement, but nothing moves through that distance while the arm is held still. Length of a lever is not the distance a force acts through.',
+          'Torque multiplied by time has the units of angular impulse (N·m·s), not energy. Holding a torque for a long time does not do work unless the arm rotates.',
+          'Negative work would require the insertion to move opposite to the muscle force. Opposing directions of two forces (biceps up, weight down) do not by themselves make the work of either one negative.',
+        ],
         skill: '4A work',
       },
       {
@@ -58,6 +76,12 @@ export const FL2_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Every point on the forearm moves along an arc proportional to its distance from the elbow, so a 1.0 cm rise at the insertion (4.0 cm from the pivot) raises the hand (32 cm) by 8.0 cm and the center of mass of the forearm (16 cm) by 4.0 cm. The energy delivered is the gain in gravitational potential energy, $(100\\ \\text{N})(0.080\\ \\text{m}) + (20\\ \\text{N})(0.040\\ \\text{m}) = 8.8$ J, which is also the biceps force required by the torque condition (880 N) multiplied by the 1.0 cm its insertion moves. Dividing by 0.10 s gives 88 W. The 80 W value ignores the weight of the forearm and hand. The 10 W value multiplies the weight of the object by the 1.0 cm the tendon moves rather than the 8.0 cm the object rises. The 880 W value treats the 1.0 cm shortening as 10 cm.',
+        optionExplanations: [
+          'This multiplies the object’s 100 N weight by the 1.0 cm the tendon moves. But the hand, 32 cm from the pivot, rises 8 times farther than the insertion at 4.0 cm, so the object gains 8.0 J, not 1.0 J.',
+          'This accounts only for the object: $(100\\ \\text{N})(0.080\\ \\text{m})/0.10\\ \\text{s} = 80$ W. It omits the 0.8 J gained by the 20 N forearm as its center of mass rises 4.0 cm.',
+          'Correct. Arc lengths scale with distance from the pivot, so the hand rises 8.0 cm and the forearm’s center of mass 4.0 cm. Energy delivered is $(100)(0.080) + (20)(0.040) = 8.8$ J, equivalently 880 N × 0.010 m; over 0.10 s that is 88 W.',
+          'This is ten times too large; it treats the 1.0 cm shortening as 10 cm (or the 0.10 s as 0.010 s). The muscle does 8.8 J of work, not 88 J, in the interval.',
+        ],
         skill: '4A work and power',
       },
     ],
@@ -82,6 +106,12 @@ export const FL2_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'In pure water each formula unit that dissolves releases one Ca²⁺ and one C₂O₄²⁻, so both ions are present at the molar solubility $s = 4.5 \\times 10^{-5}$ M and $K_{sp} = s^2 = 2.0 \\times 10^{-9}$. The calcium chloride row confirms it: with calcium fixed near 0.010 M, $K_{sp} = (0.010)(2.0 \\times 10^{-7}) = 2.0 \\times 10^{-9}$. The $4.5 \\times 10^{-5}$ value is the molar solubility itself, not its square. The $8.0 \\times 10^{-9}$ value doubles one ion concentration as though the salt released two oxalate ions per formula unit. The $3.6 \\times 10^{-13}$ value applies the $4s^3$ expression that belongs to a 1:2 salt.',
+        optionExplanations: [
+          'This applies $K_{sp} = 4s^3$, the expression for a 1:2 salt such as CaF₂. Calcium oxalate releases one Ca²⁺ and one C₂O₄²⁻ per formula unit, so the correct expression is $s^2$.',
+          'Correct. In pure water $[\\text{Ca}^{2+}] = [\\text{C}_2\\text{O}_4^{2-}] = 4.5 \\times 10^{-5}$ M, so $K_{sp} = s^2 = 2.0 \\times 10^{-9}$. The CaCl₂ row agrees: $(0.010)(2.0 \\times 10^{-7}) = 2.0 \\times 10^{-9}$.',
+          'This is four times too large, as if the salt released two oxalate ions per formula unit (doubling one concentration before multiplying). The 1:1 stoichiometry of CaC₂O₄ gives $s^2$, not $(2s)(2s)$ or $(s)(4s)$.',
+          'This is the measured molar solubility in pure water, not the solubility product. $K_{sp}$ is the product of the two ion concentrations, so the solubility must be squared.',
+        ],
         skill: '5A solubility product (data analysis)',
       },
       {
@@ -90,6 +120,12 @@ export const FL2_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The ion product is $Q = (4.0 \\times 10^{-3})(4.0 \\times 10^{-4}) = 1.6 \\times 10^{-6}$, which is 800 times the $K_{sp}$ of $2.0 \\times 10^{-9}$. Diluting by a factor $d$ lowers each concentration by $d$ and therefore lowers $Q$ by $d^2$, so saturation ($Q = K_{sp}$) requires $d^2 = 800$, or $d \\approx 28$. The factor 800 is the ratio $Q/K_{sp}$ itself, which would be the answer only if dilution lowered one ion concentration but not the other. The factor 400 halves that ratio without justification. The factor $6.4 \\times 10^5$ squares 800 instead of taking its square root.',
+        optionExplanations: [
+          'Correct. $Q = (4.0 \\times 10^{-3})(4.0 \\times 10^{-4}) = 1.6 \\times 10^{-6}$, which is 800 times $K_{sp}$. Diluting by $d$ lowers both concentrations, so $Q$ falls by $d^2$; $d^2 = 800$ gives $d \\approx 28$.',
+          'There is no step in the calculation that produces 400; it is half of the ratio $Q/K_{sp}$. Dilution reduces the ion product by the square of the dilution factor, so the square root of 800 is needed.',
+          'Eight hundred is the ratio $Q/K_{sp}$, but it would be the required dilution only if dilution lowered one ion concentration and left the other unchanged. Water dilutes both ions, so $Q$ falls as $d^2$.',
+          'This squares 800 instead of taking its square root. Because both ion concentrations fall together, $Q/K_{sp} = d^2$, so the dilution factor is $\\sqrt{800}$, not $800^2$.',
+        ],
         skill: '5A ion product and dilution',
       },
       {
@@ -103,6 +139,12 @@ export const FL2_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The colleague proposes that pH, not complexation, explains the 50-fold rise in dissolved oxalate. The direct test holds pH constant while citrate is present: if the rise persists when the citrate solution is brought to the same pH as the citrate-free calcium chloride solution, pH cannot be the cause. Substituting sodium chloride tests whether sodium ions or ionic strength matter, not whether pH does. Changing the temperature alters $K_{sp}$ itself and addresses neither explanation. Adding citrate to a calcium-free solution removes the very species citrate is proposed to bind, so it cannot separate complexation from a pH effect.',
+        optionExplanations: [
+          'Swapping in sodium chloride tests whether sodium ions or ionic strength cause the rise in dissolved oxalate. It does not vary or control pH, which is the specific alternative the colleague raised.',
+          'Lowering the temperature changes $K_{sp}$ itself and alters both complexation and acid–base equilibria at once. It does not isolate pH from calcium complexation and so addresses neither explanation.',
+          'Without calcium there is nothing for citrate to complex, and there is no common-ion suppression to reverse. Removing the proposed binding partner cannot distinguish a complexation effect from a pH effect.',
+          'Correct. The colleague says the citrate effect may be a pH effect. Holding pH at the value of the citrate-free solution while citrate is present removes pH as a variable; if dissolved oxalate still rises 50-fold, complexation, not pH, is responsible.',
+        ],
         skill: '5A solubility (research design)',
       },
       {
@@ -111,6 +153,12 @@ export const FL2_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'At the lowest pH tested, almost all dissolved material is the neutral acid, so $S_0$ is close to 0.40 mM (at pH 4.5, $S = S_0(1 + 10^{\\text{pH}-\\text{p}K_a})$ gives 0.44 only if the exponential term is about 0.1). According to the passage’s equation, the total solubility equals exactly $2S_0$ when pH = p$K_a$, and the table reaches 0.80 mM at pH 5.5. A p$K_a$ of 5.0 would put the doubling at 0.53 mM, which is only about 1.3 times $S_0$. A p$K_a$ of 4.5 would make the solubility at pH 5.5 about 4.4 mM. A p$K_a$ of 6.5 would predict a solubility near $S_0$ at pH 5.5, far below the observed 0.80 mM.',
+        optionExplanations: [
+          'If p$K_a$ were 4.5, the total at pH 4.5 would already be $2S_0$ and the solubility at pH 5.5 would be about $11S_0 \\approx 4.4$ mM. The table shows only 0.80 mM at pH 5.5.',
+          'If p$K_a$ were 5.0, the total at pH 5.0 should be $2S_0 \\approx 0.80$ mM. The table shows 0.53 mM at pH 5.0, only about 1.3 times $S_0$, so the doubling has not yet occurred there.',
+          'Correct. From the passage equation, total solubility equals exactly $2S_0$ when pH = p$K_a$. The lowest-pH data put $S_0$ near 0.40 mM, and the table reaches 0.80 mM at pH 5.5, so p$K_a \\approx 5.5$.',
+          'If p$K_a$ were 6.5, then at pH 5.5 the exponential term would be only 0.1 and the solubility would sit near $S_0 \\approx 0.44$ mM, not the observed 0.80 mM; the doubling would occur at pH 6.5, where 4.4 mM is seen instead.',
+        ],
         skill: '5A weak-acid solubility (data analysis)',
       },
       {
@@ -119,6 +167,12 @@ export const FL2_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'As long as solid uric acid remains, dissolved HU is in equilibrium with the solid and is pinned at its intrinsic solubility $S_0$, whatever the pH; the increase in total solubility with pH comes entirely from urate. From the table, $S_0 \\approx 0.40$ mM (the total at pH 7.0, 13.0 mM, divided by $1 + 10^{1.5} \\approx 32.6$, gives the same value). The 13 mM value is the total of both forms, nearly all of which is urate at pH 7.0. The 6.5 mM value assumes the two forms are present in equal amounts, which is true only at pH = p$K_a$. The 0.013 mM value divides the total by 1000 as though pH 7.0 were three units above the p$K_a$.',
+        optionExplanations: [
+          'This divides the total by 1000, as though pH 7.0 were three units above the p$K_a$. In any case the question asks for neutral HU, which stays at $S_0$ whenever solid is present, not for a fraction of the total.',
+          'Correct. While solid uric acid remains, dissolved HU is in equilibrium with the solid and is pinned at its intrinsic solubility $S_0 \\approx 0.40$ mM regardless of pH; the extra solubility at pH 7.0 is entirely urate. Check: $13.0/(1 + 10^{1.5}) \\approx 0.40$.',
+          'This assumes HU and urate are present in equal amounts, which is true only at pH = p$K_a$ (5.5). At pH 7.0 the ratio $[\\text{U}^-]/[\\text{HU}] = 10^{1.5} \\approx 32$, so HU is a small minority.',
+          'Thirteen millimolar is the total of both forms at pH 7.0. Almost all of it is urate; the neutral acid remains at its fixed intrinsic solubility of about 0.40 mM.',
+        ],
         skill: '5A acid–base equilibrium and solubility',
       },
     ],
@@ -146,6 +200,12 @@ export const FL2_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Heating an ester with hydroxide (saponification) cleaves all three ester bonds of a triacylglycerol, releasing glycerol and three carboxylates; in excess base the fatty acids remain deprotonated as sodium salts, which are soaps. Neutral, protonated fatty acids are obtained only after the mixture is acidified, or from acid-catalyzed hydrolysis. Glycerol 3-phosphate is the backbone of glycerophospholipids, not of triacylglycerols, and no phosphate is present to form it. A diacylglycerol plus one carboxylate describes partial hydrolysis, which excess base carried to completion does not stop at.',
+        optionExplanations: [
+          'Triacylglycerols are built on glycerol, not glycerol 3-phosphate. No phosphate is present in olive oil or in the reagents, so a phosphorylated backbone cannot be produced; that backbone belongs to glycerophospholipids.',
+          'Hydroxide cleaves the esters, but in excess base the released carboxylic acids are immediately deprotonated to carboxylate salts. Neutral fatty acids form only after acidification or in acid-catalyzed hydrolysis.',
+          'A diacylglycerol plus one carboxylate is a partial-hydrolysis product. With excess hydroxide and heating to completion all three ester bonds are cleaved, so no acylated glycerol remains.',
+          'Correct. Saponification of a triacylglycerol with excess NaOH cleaves all three ester linkages, giving free glycerol and three sodium carboxylates (soaps); the fatty acids stay deprotonated in the basic solution.',
+        ],
         skill: '5D triacylglycerols and saponification',
       },
       {
@@ -159,6 +219,12 @@ export const FL2_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Because the free-monomer concentration is capped at the CMC, the driving force for loss of detergent across the dialysis membrane is at most the CMC; octyl glucoside, with a 25 mM CMC, maintains the highest concentration of diffusible monomer and is removed fastest. Triton X-100 is the hardest to dialyze, since its 0.2 mM CMC leaves almost all of it in micelles that cannot cross the membrane. Large micelles would slow removal, not speed it. Charge by itself does not govern passage through a dialysis membrane; SDS dialyzes faster than Triton X-100 only because its CMC is higher, and it is still slower than octyl glucoside.',
+        optionExplanations: [
+          'Correct. Only monomers cross the membrane and the monomer concentration cannot exceed the CMC. Octyl glucoside’s 25 mM CMC keeps the largest pool of diffusible monomer, so it is lost fastest through dialysis.',
+          'Charge by itself does not govern diffusion through a dialysis membrane. SDS dialyzes faster than Triton X-100 only because its CMC (8 mM) is higher, and it is still slower than octyl glucoside (25 mM).',
+          'This reverses the relationship. A low CMC means almost all detergent is held in micelles that cannot cross the membrane, so Triton X-100 (0.2 mM) is the slowest to remove, not the fastest.',
+          'Micelle size is irrelevant to the rate here because micelles do not cross the membrane at all. Only monomers do, and Triton X-100 maintains the fewest monomers of the three detergents.',
+        ],
         skill: '5D micelles and critical micelle concentration',
       },
       {
@@ -172,6 +238,12 @@ export const FL2_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'At 37 °C this bilayer is far above its $T_m$ of −17 °C and is fluid. In a fluid bilayer the rigid sterol rings restrict the motion of the neighboring acyl-chain segments, increasing their order and reducing permeability to small polar molecules; cholesterol acts as a fluidity buffer, which has the opposite effect only below $T_m$, where it disrupts tight packing. Less ordered chains describe the effect on a gel-phase bilayer. Cholesterol abolishes the sharp transition rather than shifting it. Transverse movement requires a polar head group to cross the hydrocarbon core, and ordering the core does not make that easier.',
+        optionExplanations: [
+          'Reduced order and higher permeability describe cholesterol’s effect on a gel-phase bilayer below $T_m$, where it disrupts tight packing. At 37 °C a di-18:1 bilayer ($T_m = -17$ °C) is fluid, so the effect is the opposite.',
+          'Correct. Far above $T_m$ the bilayer is fluid, and cholesterol’s rigid ring system restricts motion of the neighboring acyl-chain segments. The chains become more ordered and the bilayer less permeable to small polar solutes.',
+          'The passage states that cholesterol-rich membranes show no sharp phase transition at all. Cholesterol broadens and abolishes the transition rather than shifting it to a higher temperature.',
+          'Flip-flop between leaflets is slow because a polar head group must cross the hydrocarbon core. Ordering that core with cholesterol does not make the crossing easier; if anything it hinders it.',
+        ],
         skill: '5D cholesterol and membrane fluidity',
       },
       {
@@ -180,6 +252,12 @@ export const FL2_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Release requires a bilayer that is in the tightly packed gel phase at 37 °C but reaches its transition, where permeability peaks, near 42 °C. Since $T_m$ rises with chain length (24 °C for 14:0, 55 °C for 18:0), two 16:0 chains should give an intermediate $T_m$ of about 40 °C, just between the two temperatures. A 14:0 bilayer is already fluid at body temperature, so heating does not trigger release. An 18:0 bilayer stays in the gel phase at both temperatures. An 18:1 bilayer is fluid at both, because the cis double bonds lower its $T_m$ far below 0 °C.',
+        optionExplanations: [
+          'With $T_m = 24$ °C, a di-14:0 bilayer is already fluid and leaky at 37 °C. The drug would escape at body temperature, and heating to 42 °C would add no transition to trigger release.',
+          'With $T_m = 55$ °C, a di-18:0 bilayer stays in the tightly packed gel phase at both 37 °C and 42 °C. It retains the drug well but never reaches the leaky transition region when the tumor is heated.',
+          'The cis double bond gives di-18:1 phosphatidylcholine a $T_m$ of −17 °C, so the bilayer is fluid at both temperatures. There is no gel-to-fluid transition between 37 and 42 °C to exploit.',
+          'Correct. $T_m$ rises with chain length (24 °C for 14:0, 55 °C for 18:0), so 16:0 chains should give a $T_m$ near 40 °C. The bilayer is gel at 37 °C and reaches the permeability peak at the transition when heated to 42 °C.',
+        ],
         skill: '5D fatty acid saturation and phase transitions',
       },
     ],
@@ -214,6 +292,12 @@ export const FL2_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Resting tissues remove about 5 mL O₂ from each deciliter of arterial blood, so dissolved O₂ must reach at least 5 mL/dL. On 100% O₂, Figure 1 shows 4.18 mL/dL at 2.0 atm, which falls short, and 5.32 mL/dL at 2.5 atm, which is sufficient. At 1.0 atm (1.9 mL/dL) and 1.5 atm (3.04 mL/dL) dissolved O₂ covers well under two-thirds of the requirement, so choosing either confuses dissolved O₂ with total O₂ content, most of which is bound to hemoglobin. The room-air series never exceeds 1.3 mL/dL, so it could not meet the need at any pressure tested.',
+        optionExplanations: [
+          'At 1.0 atm on 100% O₂, dissolved O₂ is only 1.9 mL/dL, well under the 5 mL/dL the tissues extract. Choosing this confuses dissolved O₂ with total O₂ content, most of which is hemoglobin-bound.',
+          'At 1.5 atm dissolved O₂ is 3.04 mL/dL on 100% O₂, about 60% of the resting requirement. Plasma alone could not supply the 5 mL/dL the tissues remove.',
+          'At 2.0 atm the 100% O₂ series reads 4.18 mL/dL, which is close but still below the 5 mL/dL needed. It is the first pressure that fails only narrowly, which makes it tempting.',
+          'Correct. Resting tissues remove about 5 mL O₂ per deciliter. Dissolved O₂ on 100% O₂ first exceeds that at 2.5 atm (5.32 mL/dL); the room-air series never exceeds 1.3 mL/dL at any pressure.',
+        ],
         skill: '4B Henry’s law (data interpretation)',
       },
       {
@@ -222,6 +306,12 @@ export const FL2_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Dissolved O₂ was calculated from PO₂ with Henry’s law, so PO₂ = (dissolved O₂)/(0.003 mL/dL per mmHg) = 6.46/0.003 ≈ 2150 mmHg. The 2280 mmHg value is the total chamber pressure (3 × 760 mmHg), which ignores water vapor, alveolar CO₂ and the gradient between alveolar gas and arterial blood. The 630 mmHg value corresponds to the 1.0 atm point (1.9/0.003), not the 3.0 atm point. The 220 mmHg value results from dividing by 0.03 instead of 0.003.',
+        optionExplanations: [
+          'This results from dividing by 0.03 instead of 0.003 mL/dL per mmHg. With the correct Henry’s-law constant, 6.46 mL/dL corresponds to about 2150 mmHg, roughly ten times this value.',
+          'About 630 mmHg is the PO₂ at 1.0 atm (1.9/0.003). The question asks about the 3.0 atm point, where dissolved O₂ is 6.46 mL/dL.',
+          'Correct. Dissolved O₂ was computed from PO₂ by Henry’s law, so PO₂ = 6.46 mL/dL ÷ 0.003 mL/dL per mmHg ≈ 2150 mmHg.',
+          'This is the total chamber pressure (3 × 760 mmHg). Arterial PO₂ is lower because inspired gas is diluted by 47 mmHg of water vapor and by alveolar CO₂, and there is a gradient between alveolar gas and blood.',
+        ],
         skill: '4B Henry’s law',
       },
       {
@@ -230,6 +320,12 @@ export const FL2_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'For a fixed amount of gas at constant temperature, the ideal gas law reduces to Boyle’s law, $P_1V_1 = P_2V_2$, so $V_2 = (1.0\\ \\text{atm})(9.0\\ \\text{mL})/(3.0\\ \\text{atm}) = 3.0$ mL; a shrunken cuff no longer seals the airway, which is why saline, which is nearly incompressible, is used. The 27 mL value multiplies by the pressure ratio instead of dividing, which would describe expansion. The 9.0 mL value treats the gas as incompressible. The 4.5 mL value divides by the pressure increase of 2.0 atm rather than by the ratio of final to initial pressure.',
+        optionExplanations: [
+          'Correct. At constant temperature and fixed moles, $P_1V_1 = P_2V_2$: $(1.0)(9.0) = (3.0)V_2$, so $V_2 = 3.0$ mL. The shrunken cuff would no longer seal the airway, which is why saline is used.',
+          'Dividing 9.0 mL by the 2.0 atm increase in pressure rather than by the ratio of final to initial pressure (3.0) gives 4.5 mL. Boyle’s law uses the pressure ratio, not the pressure difference.',
+          'An unchanged volume would require the gas to be incompressible. Gases obey Boyle’s law and compress as pressure rises; only a saline-filled cuff keeps its volume.',
+          'Multiplying by the pressure ratio instead of dividing gives 27 mL, which describes expansion. Raising external pressure compresses a sealed gas; expansion occurs on the way back down to 1 atm.',
+        ],
         skill: '4B ideal gas law (Boyle’s law)',
       },
       {
@@ -243,6 +339,12 @@ export const FL2_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Breathing 50% O₂ at 2.0 atm gives an inspired PO₂ of 0.5(1520 − 47) ≈ 740 mmHg, nearly equal to that of 100% O₂ at 1.0 atm (713 mmHg), while doubling total pressure; equal dissolved O₂ in the two conditions would show that total pressure itself has no effect. Extending the range to 3.5 atm raises O₂ partial pressure and total pressure together, so it cannot separate them. Lengthening the breathing period at 1.0 atm tests whether equilibrium was reached, not the role of total pressure. Adding exercise introduces changes in O₂ consumption and ventilation, confounding the comparison.',
+        optionExplanations: [
+          'Going to 3.5 atm on 100% O₂ raises inspired PO₂ and total pressure together, so any change in dissolved O₂ cannot be attributed to one or the other. It extends the trend but does not separate the variables.',
+          'Correct. 50% O₂ at 2.0 atm gives inspired PO₂ ≈ 0.5(1520 − 47) ≈ 740 mmHg, essentially matching 100% O₂ at 1.0 atm (713 mmHg) while doubling total pressure. Equal dissolved O₂ in the two conditions would show total pressure is irrelevant.',
+          'Comparing 20 and 40 minutes at the same gas and pressure tests whether equilibration was complete. It holds both inspired PO₂ and total pressure fixed and so says nothing about which one matters.',
+          'Exercise changes O₂ consumption, ventilation and alveolar gas composition, introducing confounders unrelated to the question. It does not hold inspired PO₂ fixed while varying total pressure.',
+        ],
         skill: '4B partial pressure (research design)',
       },
       {
@@ -256,6 +358,12 @@ export const FL2_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'By Henry’s law, the amount of a gas dissolved in the tissues is proportional to its partial pressure; N₂ makes up 79% of air, so at depth its partial pressure and dissolved load are the largest, and unlike O₂ it is not consumed by metabolism, so it comes out of solution when the pressure falls too quickly. N₂ is actually less soluble in water than O₂ at equal partial pressure. Hemoglobin binds O₂, CO and CO₂ but not N₂. N₂ is chemically inert in the body and is not converted to another form.',
+        optionExplanations: [
+          'This reverses the facts: N₂ is actually less soluble in water than O₂ at equal partial pressure. Nitrogen dominates the dissolved load because its partial pressure is much higher, not because it is more soluble.',
+          'Hemoglobin binds O₂, CO and CO₂ but not N₂. Nitrogen is carried only in physical solution, so hemoglobin release cannot explain the bubbles.',
+          'Correct. By Henry’s law the dissolved amount scales with partial pressure, and N₂ at 79% of air has by far the highest partial pressure at depth. Unlike O₂ it is not consumed by tissues, so it remains in solution until a rapid pressure drop makes it bubble out.',
+          'Nitrogen is chemically inert in the body and undergoes no conversion. The bubbles form because dissolved gas exceeds what the lower pressure can hold, not because its chemical form changes.',
+        ],
         skill: '4B Henry’s law and decompression',
       },
     ],
@@ -285,6 +393,12 @@ export const FL2_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'For C₈H₈O₃, degrees of unsaturation = (2C + 2 − H)/2 = (18 − 8)/2 = 5 (oxygen does not change the count). A benzene ring accounts for four (one ring and three C=C bonds), and the strong IR band at 1680 cm⁻¹ shows a carbonyl group, which accounts for the fifth. Four omits that carbonyl. A second, oxygen-containing ring would also give five but leaves the 1680 cm⁻¹ carbonyl band unexplained, and none of the candidates has one. Six would require two fewer hydrogens (C₈H₆O₃).',
+        optionExplanations: [
+          'Four accounts for the benzene ring alone (one ring plus three C=C). The formula C₈H₈O₃ gives $(2 \\cdot 8 + 2 - 8)/2 = 5$, and the strong 1680 cm⁻¹ IR band shows the fifth degree is a carbonyl.',
+          'Correct. Degrees of unsaturation = $(2C + 2 - H)/2 = (18 - 8)/2 = 5$; oxygen does not change the count. The benzene ring supplies four and the C=O group shown by the strong 1680 cm⁻¹ band supplies the fifth.',
+          'A second ring would also bring the count to five, but it leaves the intense 1680 cm⁻¹ carbonyl absorption unexplained, and none of the three candidate structures contains a second ring.',
+          'Six degrees would require the formula C₈H₆O₃. Two carbonyls plus a benzene ring is inconsistent with eight hydrogens and with every candidate structure, each of which has exactly one C=O.',
+        ],
         skill: '5D molecular formula and unsaturation',
       },
       {
@@ -293,6 +407,12 @@ export const FL2_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Protons on oxygen (and nitrogen) exchange rapidly with deuterium from D₂O, and deuterium does not appear in a ¹H spectrum, so the 1H singlet at 10.8 ppm, the O–H proton, disappears. The 3H singlet at 3.9 ppm belongs to the methyl group bonded to oxygen, whose C–H protons do not exchange. The triplet at 6.9 ppm and the doublet at 7.8 ppm are aromatic C–H protons, which are also non-exchangeable under these conditions.',
+        optionExplanations: [
+          'The 3H singlet at 3.9 ppm comes from a methyl group bonded to oxygen (O–CH₃). These are C–H protons, which do not exchange with D₂O.',
+          'The triplet at 6.9 ppm is an aromatic C–H proton. Protons bonded to carbon are not exchanged by D₂O under these conditions, so the signal remains.',
+          'The doublet at 7.8 ppm is an aromatic ring proton bonded to carbon. Only protons on oxygen or nitrogen exchange with deuterium, so this signal stays.',
+          'Correct. The far-downfield 1H singlet at 10.8 ppm is the hydrogen-bonded O–H proton. Protons on oxygen exchange rapidly with D₂O, and deuterium is invisible in a ¹H spectrum, so this signal disappears.',
+        ],
         skill: '5D ¹H NMR (exchangeable protons)',
       },
       {
@@ -306,6 +426,12 @@ export const FL2_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'X shows four aromatic signals of 1H each, so its four ring protons are all inequivalent. In methyl 4-hydroxybenzoate a mirror plane through the two substituents makes the ring protons equivalent in pairs, giving two 2H signals, each split into a doublet by its single neighbor; this isomer is therefore excluded. The two candidates with adjacent substituents lack that symmetry and should each give four 1H signals, so the claims that methyl 2-hydroxybenzoate would give two signals or that 2-methoxybenzoic acid would give five are both false (a disubstituted benzene has only four ring hydrogens). The para isomer’s ring protons each have a neighboring proton, so they would be doublets, not singlets.',
+        optionExplanations: [
+          'Correct. X shows four separate 1H aromatic signals, so all four ring protons are inequivalent. In methyl 4-hydroxybenzoate a mirror plane through the two para substituents makes the ring protons equivalent in pairs, which would give only two 2H doublets.',
+          'Methyl 2-hydroxybenzoate has adjacent substituents and no symmetry relating its ring protons, so it gives four 1H signals, exactly as observed. The claim that it would give two 2H signals is false, and it is not ruled out.',
+          'A disubstituted benzene has only four ring hydrogens, so no candidate can give five aromatic signals. 2-Methoxybenzoic acid, like the other ortho isomer, gives four 1H signals and is not excluded by the aromatic region.',
+          'The para isomer is indeed excluded, but not for this reason. Each of its ring protons has one neighboring proton and would appear as a doublet, not a singlet; the real problem is that symmetry reduces the signals to two.',
+        ],
         skill: '5D ¹H NMR (symmetry and equivalence)',
       },
       {
@@ -319,6 +445,12 @@ export const FL2_CHEM_PHYS_A_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'A carboxylic acid (p$K_a$ near 4) is deprotonated by bicarbonate, whose conjugate acid has a p$K_a$ near 6.4, and moves into the aqueous layer as its carboxylate salt; a phenol (p$K_a$ near 10) is not deprotonated by bicarbonate and stays in the ether. Retention in ether therefore excludes 2-methoxybenzoic acid. Sodium hydroxide deprotonates both a phenol and a carboxylic acid, so dissolution in it cannot tell them apart. Both candidates have the formula C₈H₈O₃ and a molecular ion at 152, and both contain an O–CH₃ group that gives a 3H singlet near 3.9 ppm.',
+        optionExplanations: [
+          'Sodium hydroxide is strong enough to deprotonate both a phenol (p$K_a \\approx 10$) and a carboxylic acid (p$K_a \\approx 4$), so both candidates would dissolve. Dissolution in NaOH cannot tell them apart.',
+          'Both candidates have the formula C₈H₈O₃ and a molecular mass of 152, so both give a molecular ion at $m/z$ 152. This observation is consistent with either structure.',
+          'Correct. Bicarbonate (conjugate acid p$K_a \\approx 6.4$) deprotonates a carboxylic acid, pulling 2-methoxybenzoic acid into the aqueous layer, but cannot deprotonate a phenol. A compound that stays in the ether lacks the carboxylic acid and must be the phenolic ester.',
+          'Both candidates contain an O–CH₃ group: the methyl ester in one and the methyl ether in the other. Each gives a 3H singlet near 3.9 ppm, so this signal does not distinguish them.',
+        ],
         skill: '5C extraction and acidity (research design)',
       },
     ],
@@ -340,6 +472,12 @@ export const FL2_CHEM_PHYS_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'A 3d electron has $n = 3$ and $l = 2$ (d), and $m_l$ may take any integer value from $-l$ to $+l$, so $-2$ is allowed, as is either spin. The set with $l = 3$ is impossible because $l$ can be at most $n - 1$, and $l = 3$ would be an f orbital in any case. The set with $l = 1$ describes a p orbital, and $m_l = 2$ lies outside the range $-1$ to $+1$ allowed for it. The set with $n = 2$ and $l = 2$ is forbidden, since there is no 2d subshell.',
+    optionExplanations: [
+      '$l = 3$ is impossible when $n = 3$, because $l$ can be at most $n - 1 = 2$. An $l$ of 3 would denote an f orbital in any case, not a d orbital.',
+      '$l = 1$ describes a p orbital, not a d orbital, and $m_l = 2$ lies outside the range −1 to +1 permitted for $l = 1$. Two separate rules are violated.',
+      'There is no 2d subshell: with $n = 2$ the largest allowed $l$ is 1. A d orbital requires $n \\geq 3$.',
+      'Correct. A 3d electron has $n = 3$ and $l = 2$, and $m_l$ may be any integer from −2 to +2, so −2 is allowed; $m_s = +\\tfrac{1}{2}$ is one of the two permitted spin values.',
+    ],
     skill: '4E quantum numbers',
   },
   {
@@ -351,6 +489,12 @@ export const FL2_CHEM_PHYS_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'Quadrupling on doubling NO makes the reaction second order in NO. Doubling both multiplies the rate by 8, of which a factor of 4 comes from NO, so doubling O₂ contributes a factor of 2, making the reaction first order in O₂: rate = k[NO]²[O₂]. First order in NO would give only a doubling when NO is doubled. Second order in O₂ would give a 16-fold increase when both are doubled. Omitting O₂ from the rate law would give only a 4-fold increase when both are doubled.',
+    optionExplanations: [
+      'Correct. Quadrupling on doubling NO means second order in NO. Doubling both raises the rate 8-fold; 4 of that comes from NO, so O₂ contributes a factor of 2 and is first order: rate = k[NO]²[O₂].',
+      'First order in NO would give only a doubling of rate when NO is doubled, not the observed quadrupling. The NO exponent must be 2.',
+      'Second order in O₂ would give a 16-fold increase when both concentrations are doubled (4 × 4). Only an 8-fold increase is observed, so O₂ is first order.',
+      'Omitting O₂ predicts that doubling both reactants would raise the rate only 4-fold, the same as doubling NO alone. The observed 8-fold increase shows O₂ appears in the rate law.',
+    ],
     skill: '5E rate laws (method of initial rates)',
   },
   {
@@ -362,6 +506,12 @@ export const FL2_CHEM_PHYS_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'Adding 0.050 mol of NaOH converts half of the 0.10 mol of acetic acid to acetate, so the acid and its conjugate base are present in equal amounts and, by the Henderson–Hasselbalch equation, pH = p$K_a$ = 4.76. Adding 0.100 mol of NaOH converts all of the acid to acetate, giving a weakly basic solution near pH 9. Adding HCl leaves no acetate and makes the solution strongly acidic, near pH 1.3. Sodium chloride supplies neither a weak base nor a strong acid or base, so the solution remains 0.10 M acetic acid, near pH 2.9.',
+    optionExplanations: [
+      'Adding 0.100 mol NaOH neutralizes all 0.10 mol of acetic acid, leaving a 0.10 M acetate solution with no buffer pair; its pH is weakly basic, near 9, not 4.76.',
+      'HCl is a strong acid that adds to the acidity of the solution and generates no acetate. The pH would drop to about 1.3, far below the p$K_a$.',
+      'Correct. NaOH converts 0.050 mol of the 0.10 mol acetic acid to acetate, so [HA] = [A⁻]. By Henderson–Hasselbalch, pH = p$K_a$ + log(1) = 4.76.',
+      'Sodium chloride is a neutral salt that supplies neither a conjugate base nor a strong acid or base. The solution remains 0.10 M acetic acid at about pH 2.9.',
+    ],
     skill: '5A buffers',
   },
   {
@@ -373,6 +523,12 @@ export const FL2_CHEM_PHYS_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'Intensity from a point source falls as $1/r^2$, so moving from 1.0 m to 10 m reduces intensity by a factor of 100. Because $\\beta = 10\\log(I/I_0)$, each factor of 10 in intensity changes the level by 10 dB, so the level falls by 20 dB, to 60 dB. The 70 dB value assumes intensity falls only as $1/r$. The 8.0 dB and 0.80 dB values divide the decibel level itself by the distance ratio or its square, treating a logarithmic scale as though it were proportional to intensity.',
+    optionExplanations: [
+      'Dividing the decibel level by 100 treats the logarithmic dB scale as if it were proportional to intensity. A 100-fold drop in intensity lowers the level by 20 dB, not by a factor of 100.',
+      'Dividing 80 dB by 10 confuses the logarithmic level with intensity. Each factor of 10 in intensity changes the level by 10 dB, so a factor of 100 subtracts 20 dB.',
+      'A 10 dB drop would correspond to intensity falling by a factor of 10, which assumes intensity falls as $1/r$. For a point source intensity falls as $1/r^2$, so a tenfold distance increase cuts intensity 100-fold.',
+      'Correct. Intensity from a point source scales as $1/r^2$, so going from 1.0 m to 10 m reduces intensity 100-fold. Since $\\beta = 10\\log(I/I_0)$, that is a 20 dB drop: 80 − 20 = 60 dB.',
+    ],
     skill: '4D sound intensity and decibels',
   },
   {
@@ -389,6 +545,12 @@ export const FL2_CHEM_PHYS_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'A reaction with a large negative ΔG is far from equilibrium and essentially irreversible, so its net rate depends on how much active enzyme is present; changing the activity of F changes pathway flux. A reaction near equilibrium runs rapidly in both directions, and its net direction follows the concentrations of substrates and products, so changing the activity of E has little effect on flux. ΔG is a thermodynamic quantity and says nothing about the activation energy. A reaction with ΔG near zero can proceed in either direction as concentrations change, without being regulated.',
+    optionExplanations: [
+      'Correct. A reaction with ΔG = −30 kJ/mol is far from equilibrium and essentially irreversible, so its net rate is governed by the amount and activity of its enzyme. Changing F’s activity therefore changes pathway flux.',
+      'This reverses the principle. A near-equilibrium reaction runs rapidly in both directions, and its net flux follows substrate and product concentrations; changing the enzyme’s activity barely alters net throughput.',
+      'The right enzyme, but the reasoning is wrong. ΔG is a thermodynamic quantity and says nothing about activation energy, which is a kinetic property set by the enzyme and the mechanism.',
+      'A reaction with ΔG near zero proceeds readily in whichever direction concentrations favor; it does not need regulation to proceed. Near-equilibrium steps are poor control points precisely because they are so responsive to concentrations.',
+    ],
     skill: '5E thermodynamics and enzyme regulation',
   },
   {
@@ -405,6 +567,12 @@ export const FL2_CHEM_PHYS_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'The α and β forms are anomers, differing only at C-1, the anomeric carbon created when the C-5 hydroxyl adds to the aldehyde to form a cyclic hemiacetal. The hemiacetal opens reversibly to the open-chain aldehyde and can close from either face, so the two anomers interconvert until they reach equilibrium, a process called mutarotation. Conversion to L-glucose would require inverting every stereocenter. Inversion at C-2 would produce D-mannose, not β-D-glucose. Glucose forms only a small amount of furanose, which cannot account for a mixture that is almost entirely α- and β-pyranose.',
+    optionExplanations: [
+      'L-glucose is the enantiomer, which would require inverting every stereocenter. Mutarotation changes only the configuration at C-1, and the product is still D-glucose.',
+      'Correct. The α and β forms are anomers differing only at C-1, the hemiacetal carbon. The ring opens reversibly to the open-chain aldehyde and recloses from either face, so the two anomers interconvert until equilibrium (about 36:64) is reached.',
+      'Inverting C-2 through an enediol would convert glucose to its C-2 epimer, mannose. The equilibrium mixture described is α- and β-glucose, not a glucose–mannose mixture.',
+      'Glucose forms only a small amount of furanose at equilibrium. A pyranose-to-furanose shift cannot account for a mixture that is essentially all α- and β-pyranose, and the question describes a change at the anomeric carbon.',
+    ],
     skill: '5D carbohydrate structure (anomers)',
   },
   {
@@ -421,6 +589,12 @@ export const FL2_CHEM_PHYS_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'In base, the deprotonated 2′-hydroxyl of ribose attacks the neighboring phosphorus of the 3′,5′-phosphodiester bond, forming a 2′,3′-cyclic phosphate and cleaving the chain; deoxyribose lacks this hydroxyl, so DNA resists base hydrolysis. The bases are not part of the sugar–phosphate backbone and do not affect its cleavage. A 5′-triphosphate lies at a single chain end and cannot explain cleavage throughout the molecule. Single-stranded DNA is also stable in dilute base, so strandedness is not the cause.',
+    optionExplanations: [
+      'The bases are not part of the sugar–phosphate backbone and do not participate in its cleavage. Uracil versus thymine affects base pairing and repair, not susceptibility to base hydrolysis.',
+      'A 5′-triphosphate sits at one chain end. It cannot explain cleavage of phosphodiester bonds throughout the length of an RNA molecule.',
+      'Strandedness is not the cause: single-stranded DNA is also stable in dilute base. Hydrolysis depends on the chemistry of the sugar, not on whether the strand is paired.',
+      'Correct. In base the deprotonated 2′-OH of ribose attacks the adjacent phosphorus, forming a 2′,3′-cyclic phosphate and cleaving the backbone. Deoxyribose has no 2′-OH, so DNA cannot undergo this intramolecular attack.',
+    ],
     skill: '5D nucleotide structure',
   },
   {
@@ -437,6 +611,12 @@ export const FL2_CHEM_PHYS_A_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'Acidity depends on the stability of the conjugate base. The amide anion from ethylamine places the charge on nitrogen, which is less electronegative than oxygen (p$K_a$ near 35), so ethylamine is the weakest acid. Ethoxide localizes its charge on one oxygen (p$K_a$ near 16). Phenoxide delocalizes its charge into the aromatic ring (p$K_a$ near 10), and acetate delocalizes it equally over two oxygens (p$K_a$ near 4.8), making acetic acid the strongest. Placing ethanol below ethylamine reverses the electronegativity effect, and ranking phenol below ethanol or above acetic acid misjudges the extent of resonance stabilization.',
+    optionExplanations: [
+      'Correct. Conjugate-base stability sets acidity: ethylamine’s anion puts charge on nitrogen (p$K_a \\approx 35$), ethoxide localizes it on one oxygen (≈16), phenoxide delocalizes into the ring (≈10), and acetate shares it over two oxygens (≈4.8).',
+      'Placing ethanol below ethylamine reverses the electronegativity effect. Oxygen stabilizes a negative charge better than nitrogen, so ethanol (p$K_a \\approx 16$) is a far stronger acid than ethylamine (p$K_a \\approx 35$).',
+      'Ranking phenol below ethanol ignores resonance. Phenoxide delocalizes its charge into the aromatic ring, so phenol (p$K_a \\approx 10$) is more acidic than ethanol (p$K_a \\approx 16$).',
+      'Putting phenol above acetic acid overrates ring delocalization. Acetate spreads its charge equally over two equivalent oxygens, making acetic acid (p$K_a \\approx 4.8$) more acidic than phenol (p$K_a \\approx 10$).',
+    ],
     skill: '5D acidity of functional groups',
   },
 ]

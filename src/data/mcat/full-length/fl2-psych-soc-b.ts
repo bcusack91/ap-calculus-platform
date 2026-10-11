@@ -33,6 +33,12 @@ export const FL2_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The zone of proximal development is the gap between what a child can do alone and what the child can do with guidance, which in Table 1 is the difference between the two pass-rate columns: 10 points at age 4, 30 at age 5, 45 at age 6, and 5 at age 8. The 6-year-olds therefore show the largest zone. The 4-year-olds gained little from help, indicating the task lay beyond their zone; the 8-year-olds gained little because most already succeeded alone; the 5-year-olds gained substantially but less than the 6-year-olds.',
+        optionExplanations: [
+          'The 4-year-olds gained only 10 points from scaffolding (10% to 20%), the smallest gap. The task lay largely beyond their zone; they agreed nothing was added yet still insisted the taller glass held more.',
+          'The 5-year-olds gained 30 points (25% to 55%), a substantial zone but smaller than the 45-point gap shown by the 6-year-olds.',
+          'Correct. The zone of proximal development is the gap between unaided and assisted performance, here the difference between the two pass-rate columns: 10, 30, 45 and 5 points. The 6-year-olds (40% to 85%) show the largest gap.',
+          'The 8-year-olds gained only 5 points (90% to 95%) because most already succeeded alone. Their zone for this task is nearly closed.',
+        ],
         skill: '7A Vygotsky zone of proximal development',
       },
       {
@@ -42,6 +48,12 @@ export const FL2_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Mentally undoing a transformation to see that the original state would be restored is reversibility, which Piaget held preoperational children lack; the prompt walks the child through exactly this operation. Object permanence, knowing that hidden objects continue to exist, is a sensorimotor achievement not tested here. Conservation of number is a different conservation task rather than an underlying operation. Hypothetical-deductive reasoning belongs to the formal operational stage and involves testing abstract possibilities, not undoing a concrete change.',
+        optionExplanations: [
+          'Correct. Mentally undoing the pouring to see that the original state would be restored is reversibility, the operation Piaget held preoperational children lack. The prompt walks the child through exactly that mental reversal.',
+          'Object permanence is knowing that hidden objects continue to exist, a sensorimotor achievement of infancy. It is not what the pour-back prompt supports.',
+          'Conservation of number is a separate conservation task (e.g., spreading out a row of coins), not an underlying mental operation. The prompt targets the operation behind liquid conservation.',
+          'Hypothetical-deductive reasoning is a formal operational skill involving systematic testing of abstract possibilities. The prompt concerns undoing one concrete transformation.',
+        ],
         skill: '6B Piaget cognitive operations',
       },
       {
@@ -56,6 +68,12 @@ export const FL2_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Vygotsky’s claim is that scaffolded performance is gradually internalized and later occurs independently; a child who passes only with prompts might instead be echoing the adult in the moment, so an unassisted retest on new materials distinguishes genuine internalization from cueing. Test-retest reliability of the alone condition would require retesting children who were tested alone twice, not those who passed only with help. Two weeks is far too short an interval to study stage maturation, and the design does not compare the groups over time. The experimenter was present at the retest as well, so it cannot isolate an effect of the experimenter’s presence.',
+        optionExplanations: [
+          'Test-retest reliability of the alone condition would require retesting children who were tested alone, twice, on parallel forms. The retest was given only to children who passed with scaffolding.',
+          'Two weeks is far too short to study stage maturation, and the design does not compare groups over time. The retest concerns whether assisted learning stuck, not whether children matured.',
+          'The experimenter was present at the retest as well, so the design cannot isolate an effect of experimenter presence. And the retest targets the assisted passers, not those who failed alone.',
+          'Correct. Vygotsky claims scaffolded performance is internalized and later occurs independently. A child who passes only with prompts might merely be echoing the adult, so an unassisted retest on new materials distinguishes genuine internalization from momentary cueing.',
+        ],
         skill: '7A research design',
       },
       {
@@ -70,6 +88,12 @@ export const FL2_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Piaget’s readiness claim predicts that guidance will fail for children who lack the underlying operations, and the 4-year-olds, squarely preoperational, gained only 10 points from scaffolding even though they accepted that no juice was added. The 8-year-olds’ near-ceiling performance says nothing about whether instruction could have helped them earlier. The 6-year-olds’ durable gains after scaffolding favor Vygotsky’s internalization account rather than Piaget’s. A steady rise in unaided performance with age is consistent with both theories and does not bear on whether instruction can accelerate it.',
+        optionExplanations: [
+          'The 8-year-olds’ near-ceiling performance says nothing about whether instruction could have helped them earlier. It shows they were ready, not that readiness is required.',
+          'Correct. Piaget’s readiness claim predicts that guidance will fail for children lacking the underlying operations. The squarely preoperational 4-year-olds gained only 10 points from scaffolding, even while accepting that no juice was added.',
+          'Durable gains after scaffolding among 6-year-olds (83% passed the retest) favor Vygotsky’s internalization account, not Piaget’s claim that instruction cannot advance conservation.',
+          'A steady rise in unaided performance with age is consistent with both theories. It does not address whether instruction can accelerate conservation before readiness.',
+        ],
         skill: '6B Piaget stage theory',
       },
     ],
@@ -99,6 +123,12 @@ export const FL2_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Bowles and Gintis’s correspondence argument holds that the hidden curriculum mirrors the workplace each group of students is headed for: rule-following and external rewards for subordinate jobs, independence and self-direction for jobs with autonomy, which is exactly the contrast between the two schools. Calling the difference a latent function misses that the conflict account treats the reproduction of class as the institution serving dominant interests, not an unrecognized side effect. Teacher expectations are the interactionist self-fulfilling-prophecy mechanism, which the scenario does not describe. Attributing the contrast to ability differences is the functionalist sorting claim that the correspondence argument is meant to challenge.',
+        optionExplanations: [
+          'The conflict account treats class reproduction as the institution serving dominant interests, not an unrecognized side effect. “Latent function” is a functionalist term that misses the correspondence argument’s point.',
+          'Correct. Bowles and Gintis’s correspondence argument holds that the hidden curriculum mirrors the workplace each group is headed for: rule-following and external rewards for subordinate jobs, independence and self-direction for autonomous ones.',
+          'Teacher expectations are the interactionist self-fulfilling-prophecy mechanism. The scenario describes school-wide routines and grading practices, not individual teachers’ beliefs about pupils.',
+          'Attributing the contrast to ability differences is the functionalist sorting claim that the correspondence argument is meant to challenge. The schools differ by district income, not measured talent.',
+        ],
         skill: '9B hidden curriculum',
       },
       {
@@ -113,6 +143,12 @@ export const FL2_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The residents were chosen at random, so the label rather than any real difference produced the outcome, presumably because nurses offered the “promising” residents more opportunities and support, which is the teacher-expectancy mechanism applied to a hospital. The hidden curriculum concerns values transmitted to all trainees through routines, not a difference produced by a label attached to two of them. No formal reassignment to a different rotation occurred, so tracking does not apply. A latent function favoring greater ability is ruled out by the random selection, which guarantees the two residents were not more able on average.',
+        optionExplanations: [
+          'The hidden curriculum concerns values transmitted to all trainees through routines. It does not explain why two randomly labeled residents outperformed peers who shared the same wards.',
+          'Tracking is formal assignment to separate programs or groups. No reassignment to a different rotation occurred; the residents were simply labeled.',
+          'Random selection guarantees the two residents were not more able on average. A function favoring greater ability cannot explain an outcome produced by an arbitrary label.',
+          'Correct. The residents were chosen at random, so the “promising” label, not any real difference, produced the outcome, presumably because nurses gave them more opportunities and support. This is the teacher-expectancy self-fulfilling prophecy applied to a hospital.',
+        ],
         skill: '9B self-fulfilling prophecy / teacher expectancy',
       },
       {
@@ -127,6 +163,12 @@ export const FL2_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Referral networks are a useful consequence of residency that no program is designed to produce, which is the functionalist definition of a latent function. Certifying competence is indeed a manifest function, but the networks are not what the certification process intends, so they cannot be classified under it. The hidden curriculum is a conflict-theory concept about the transmission of values, whereas the networks are relationships rather than values. Tracking refers to formal assignment of students to separate programs, which the informal growth of referral ties does not involve.',
+        optionExplanations: [
+          'Correct. Referral networks are a useful, lasting consequence of residency that no program is designed to produce. Unintended and often unrecognized consequences are, by definition, latent functions.',
+          'Certifying competence is a manifest function, but the referral networks are not what certification intends. They fall outside the stated purpose and so are latent.',
+          'The hidden curriculum is a conflict-theory concept about values transmitted implicitly. The networks are relationships rather than values, and the question asks for a functionalist classification.',
+          'Tracking is the formal assignment of students to separate programs. Informal referral ties that grow from shared training involve no such sorting.',
+        ],
         skill: '9B manifest and latent functions',
       },
       {
@@ -141,6 +183,12 @@ export const FL2_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'If students who enter with the same measured ability are placed in different tracks depending on income, then something other than ability is doing the sorting, which directly contradicts the functionalist claim. Higher end-of-year scores in higher tracks are consistent with sorting by ability and also with the conflict view that higher tracks receive better instruction, so they do not discriminate between the claims. Teachers’ reports of low motivation in lower tracks could reflect either accurate sorting or the effect of labeling. Greater college enrollment among higher-track students is likewise compatible with either account.',
+        optionExplanations: [
+          'Higher end-of-year scores in higher tracks are consistent with ability sorting and also with the conflict view that higher tracks receive better instruction. The finding does not discriminate between claims.',
+          'Teachers’ reports of low motivation in lower tracks could reflect accurate sorting or the effect of labeling. Either account accommodates this.',
+          'Correct. If students with identical entry scores are placed in different tracks depending on family income, then something other than ability is doing the sorting, directly contradicting the functionalist claim.',
+          'Greater college enrollment among higher-track students is compatible with sorting by ability and with tracks conferring advantage. It does not weaken the ability-sorting claim.',
+        ],
         skill: '9B tracking and educational inequality',
       },
     ],
@@ -181,6 +229,12 @@ export const FL2_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Washing removes an aversive state, the distress provoked by the obsession, and behavior that is strengthened because it removes something unpleasant is negatively reinforced. Positive reinforcement would require that washing add a pleasant consequence, but the passage describes only relief from distress. Positive punishment and negative punishment both decrease a behavior, whereas the compulsion is repeated more and more often.',
+        optionExplanations: [
+          'Positive reinforcement adds a pleasant consequence. The passage describes only relief from distress, the removal of an aversive state, not the addition of a reward.',
+          'Correct. Washing removes an aversive state, the distress provoked by the obsession. Behavior strengthened because it removes something unpleasant is negatively reinforced, which is why the compulsion recurs.',
+          'Positive punishment adds an aversive consequence to decrease a behavior. The compulsion increases in frequency, so it is not being punished.',
+          'Negative punishment removes something pleasant to decrease a behavior. Handwashing is repeated more and more, the opposite of a punished response.',
+        ],
         skill: '7A negative reinforcement in OCD',
       },
       {
@@ -194,6 +248,12 @@ export const FL2_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'From week 12 to week 24, the SSRI group rose from 18 to 23, giving back 5 of its 8 points of improvement, whereas the two ERP groups rose only 1 to 2 points and kept about 12 of their 13 to 14 points. The ERP-plus-SSRI group was 1 point better than ERP alone at week 12, and the two converged afterward rather than diverging. The proportions lost differed sharply between the SSRI-only group and the ERP groups. Only the SSRI group moved back toward baseline; both ERP groups remained far below the pretreatment score of 26.',
+        optionExplanations: [
+          'ERP plus SSRI was only 1 point better than ERP alone at week 12 (12 versus 13), and the two converged to 14 by week 24. The advantage shrank rather than grew.',
+          'The SSRI group gave back 5 of 8 points (about 60%) while the ERP groups gave back 1 to 2 of 13 to 14 points (about 10%). The proportions lost differed sharply.',
+          'Only the SSRI group moved back toward baseline (23 versus 26 at start). Both ERP groups stayed at 14, far below the pretreatment score of 26.',
+          'Correct. From week 12 to 24 the SSRI group rose from 18 to 23, losing 5 of its 8 points of improvement, while the two ERP groups rose only 1 to 2 points and kept about 12 of their 13 to 14 points.',
+        ],
         skill: '7A treatment data interpretation',
       },
       {
@@ -208,6 +268,12 @@ export const FL2_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'ERP participants had two 90-minute sessions each week while SSRI-only participants had brief visits every 2 weeks, so the ERP advantage could reflect therapist attention, support, or expectancy rather than exposure itself; the conditions differ in more than one respect. The SSRI group improved steadily through week 12, so the treatment period was long enough for the drug to act. Blinded clinician ratings are a strength, since they reduce bias in the outcome measure. Tapering after week 12 affects only the follow-up period and cannot account for differences observed during treatment.',
+        optionExplanations: [
+          'Correct. ERP participants had two 90-minute sessions weekly while SSRI-only participants had brief visits every 2 weeks. The ERP advantage could reflect therapist attention, support or expectancy rather than exposure itself; the conditions differ in more than one way.',
+          'The SSRI group improved steadily from 26 to 18 by week 12, so the treatment period was long enough for the drug to act. Duration does not explain the gap.',
+          'Blinded clinician ratings are a strength, not a limitation. They reduce bias in the outcome measure relative to self-report.',
+          'Tapering after week 12 affects only the follow-up period. It cannot account for differences observed during the 12 weeks of treatment.',
+        ],
         skill: '7A research design: confounding',
       },
       {
@@ -222,6 +288,12 @@ export const FL2_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Responders to a purely behavioral treatment showed the same change in the circuit that is overactive in OCD as responders to medication, which indicates that psychotherapy can alter brain function. A shared end result does not show a shared molecular mechanism, so the finding does not establish that ERP acts through serotonin. Because caudate activity and symptoms fell together in both groups, the data cannot show which causes which. Figure 1 shows that the SSRI’s benefit faded after treatment while ERP’s did not, so equal durability is contradicted rather than supported.',
+        optionExplanations: [
+          'A shared end result in the caudate does not show a shared molecular mechanism. ERP could normalize the circuit through learning without changing serotonin levels at all.',
+          'Caudate activity and symptoms fell together in both groups, so the data cannot show which causes which. Correlated change does not establish direction.',
+          'Correct. Responders to a purely behavioral treatment showed the same decrease in the circuit that is overactive in OCD as responders to medication. That indicates psychotherapy can alter brain function in the same circuit a drug affects.',
+          'Figure 1 shows the SSRI’s benefit faded after treatment while ERP’s persisted. Equal durability is contradicted by the trial, not supported by the imaging.',
+        ],
         skill: '6C biological basis of disorders',
       },
       {
@@ -236,6 +308,12 @@ export const FL2_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Exposure works when the patient stays with the feared memory or situation until she learns that distress subsides and the feared outcome does not occur; a phrase used to neutralize rising distress functions like the ritual that ERP prevents, so relief is credited to the phrase rather than to the passage of time. Heightened distress early in exposure is expected and does not reduce benefit. Adding detail deepens engagement with the memory, which is the aim of the procedure. Approaching avoided places between sessions extends exposure and should increase benefit.',
+        optionExplanations: [
+          'Correct. Exposure works when the patient stays with the feared memory until distress subsides on its own and the feared outcome fails to occur. A calming phrase used to neutralize rising distress functions like the ritual ERP prevents; relief gets credited to the phrase, not to the passage of time.',
+          'Heightened distress early in exposure is expected and is part of the process. It does not reduce benefit; it is the state the patient learns will subside.',
+          'Adding detail deepens engagement with the memory, which is the aim of prolonged exposure. It should enhance, not reduce, the benefit.',
+          'Approaching avoided places between sessions extends exposure practice and is part of the treatment. It should increase benefit.',
+        ],
         skill: '6C exposure therapy for PTSD',
       },
     ],
@@ -265,6 +343,12 @@ export const FL2_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Knowing simultaneously what the pitcher, catcher, and infielders expect and fitting her own action into the team’s organized play is the defining achievement of Mead’s game stage. Imitation without understanding marks the preparatory stage, but she understands why she moves. The play stage involves taking one specific other’s perspective at a time, not several at once. Her action is guided by internalized expectations of others, which corresponds to the “me” rather than the spontaneous “I.”',
+        optionExplanations: [
+          'The preparatory stage involves imitation without understanding. She understands why she moves to cover second base and what each teammate expects.',
+          'The play stage involves taking one specific other’s perspective at a time. She holds several players’ expectations in mind simultaneously, which goes beyond the play stage.',
+          'Correct. Knowing at once what the pitcher, catcher and infielders expect, and fitting her own action into the team’s organized play, is the defining achievement of Mead’s game stage.',
+          'Her action is guided by internalized expectations of others, which is the organized “me,” not the spontaneous, unpredictable “I.”',
+        ],
         skill: '8A Mead role-taking stages',
       },
       {
@@ -279,6 +363,12 @@ export const FL2_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'In the looking-glass self, every step, from how one appears to how one is judged, is imagined, so self-feeling tracks the judgment the person attributes to others; the student feels discouraged because of the disappointment she reads into the comments, not the adviser’s actual high regard. Comparing herself with other students is a different process, social comparison, and Cooley’s model makes no such prediction. Her feelings run opposite to the adviser’s real evaluation, so they cannot reflect it. The generalized other is Mead’s concept of community-wide expectations, whereas her distress concerns one specific person’s view.',
+        optionExplanations: [
+          'Correct. In the looking-glass self every step is imagined: how one appears, how others judge it, and the resulting self-feeling. She is discouraged by the disappointment she reads into brief comments, not by the adviser’s actual high regard.',
+          'Comparing herself with other students is social comparison, a different process. Cooley’s model concerns imagined judgments of oneself, not the relative treatment of peers.',
+          'Her feelings run opposite to the adviser’s real evaluation (strongest student), so they cannot reflect that evaluation. Cooley stresses the reflected image over what others actually think.',
+          'The generalized other is Mead’s concept of community-wide expectations. Her distress concerns one specific person’s imagined view, which is Cooley’s looking-glass process.',
+        ],
         skill: '8A looking-glass self',
       },
       {
@@ -293,6 +383,12 @@ export const FL2_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Taking on the values, speech, and appearance of physicians before becoming one is anticipatory socialization toward a group she expects to enter. Resocialization involves the deliberate stripping away of prior norms, typically in a total institution, and she remains a student in every respect. Primary socialization is early-childhood learning within the family, and no family role is described. Role exit is the process of leaving a role, whereas she is adding a prospective identity while still fully an undergraduate.',
+        optionExplanations: [
+          'Resocialization involves the deliberate stripping away of prior norms, typically in a total institution. She remains a student in every respect and discards nothing.',
+          'Primary socialization is early-childhood learning within the family. No family role is involved in her shadowing and reading.',
+          'Role exit is the process of leaving a role. She is adding a prospective identity while still fully an undergraduate, not disengaging from being one.',
+          'Correct. Taking on the values, speech and appearance of physicians before becoming one is anticipatory socialization toward a group she expects to join.',
+        ],
         skill: '8A agents and types of socialization',
       },
       {
@@ -302,6 +398,12 @@ export const FL2_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'By presenting her dismissal as the result of company-wide downsizing, the applicant offers a socially acceptable account of an event that could otherwise be judged against her, which is an aligning action. Ingratiation would involve flattering the interviewer or agreeing with him to be liked. Self-promotion would highlight her competence or achievements, which the statement does not do. Alter-casting would assign an identity to the interviewer to steer his behavior, whereas her statement concerns her own conduct.',
+        optionExplanations: [
+          'Ingratiation uses flattery or agreement to become liked. Her statement explains her own past conduct rather than praising or agreeing with the interviewer.',
+          'Correct. Presenting her dismissal as the result of company-wide downsizing offers a socially acceptable account of conduct that could otherwise be judged negatively, which is an aligning action.',
+          'Self-promotion draws attention to competence or accomplishments. The statement does not claim any achievement; it defuses a potential negative.',
+          'Alter-casting imposes an identity on another person to steer behavior. Her statement concerns herself, not an identity assigned to the interviewer.',
+        ],
         skill: '8C impression management strategies',
       },
       {
@@ -316,6 +418,12 @@ export const FL2_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The same break room served as a back stage among fellow associates, who were teammates, and became a front stage the moment the partner, an audience for the associate’s professional performance, arrived; the region changed because the audience changed, not the room. The associate behaved appropriately for a back stage until the partner entered, so nothing indicates a misread front stage. Role conflict involves incompatible demands of two roles, whereas the associate simply switched performances when the audience changed. Alter-casting imposes an identity on another person, and the associate altered only his or her own presentation.',
+        optionExplanations: [
+          'The associate behaved appropriately for a back stage until the partner entered. Nothing indicates the break room was misread; it genuinely was a back stage among teammates.',
+          'Role conflict involves incompatible demands of two roles held at once. The associate simply switched performances when the audience changed, without any clash of obligations.',
+          'Alter-casting imposes an identity on another person. The associate altered only his or her own presentation, not the partner’s identity.',
+          'Correct. The same room was a back stage among fellow associates (teammates) and became a front stage when the partner, an audience for the professional performance, arrived. The region changed because the audience did.',
+        ],
         skill: '8C dramaturgical approach: audience and region',
       },
     ],
@@ -355,6 +463,12 @@ export const FL2_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Between 2010 and 2016 the minority share of new hires fell from 23% to 14%, while the share of managers above the prejudice cutoff drifted down from 10% to 8%, so the drop in hiring cannot be traced to rising hostility among managers. The prejudice measure never rose, so the two did not move in step. Minority hiring fell by 9 percentage points rather than holding steady. The recovery in hiring began only after 2016, while the prejudice measure had been falling slowly since 2008.',
+        optionExplanations: [
+          'Correct. Between 2010 and 2016 the minority share of new hires fell from 23% to 14%, while managers above the prejudice cutoff drifted from 10% to 8%. The hiring decline cannot be traced to rising hostility.',
+          'The prejudice measure never rose; it fell slowly from 10% to 8%. The two series did not move in step.',
+          'Minority hiring fell by 9 percentage points (23% to 14%). It did not hold steady.',
+          'The recovery in hiring began only after 2016, whereas the prejudice measure had been falling slowly since 2008. Hiring did not recover when prejudice began to fall.',
+        ],
         skill: '10A discrimination data interpretation',
       },
       {
@@ -369,6 +483,12 @@ export const FL2_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The passage gives the minority share of qualified workers only for 2008; if that share fell after 2010, the decline in hiring might simply mirror a shrinking pool, whereas a stable share would point to the hiring process itself. Referrers’ prejudice scores bear on why they referred whom they did, not on whether the pool of qualified workers changed. The total number of hires describes the chain’s volume of hiring but not the ethnic composition of the available workforce. Rejected applicants’ accounts could describe their experiences but cannot show whether fewer minority workers were available.',
+        optionExplanations: [
+          'Referrers’ prejudice scores bear on why they referred whom they did, not on whether the pool of qualified minority workers changed over time.',
+          'The total number of hires describes hiring volume, not the ethnic composition of the available workforce. It cannot distinguish a referral effect from a supply change.',
+          'Correct. The passage gives the minority share of qualified workers only for 2008. If that share fell after 2010, the hiring decline might mirror a shrinking pool; if it stayed near 25%, the hiring process itself is implicated.',
+          'Rejected applicants’ accounts could describe their experiences but cannot show whether fewer qualified minority workers were available in the region.',
+        ],
         skill: '10A research design: alternative explanations',
       },
       {
@@ -383,6 +503,12 @@ export const FL2_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'She extends an advantage to people in her own network and group while expressing no animosity toward outsiders, which is in-group favoritism; the disadvantage to others is a by-product rather than the aim. Out-group derogation requires active dislike or hostility toward the other group, which she disclaims and nothing indicates. Institutional discrimination arises from an organization’s ordinary rules rather than from one person’s choices, and her practice does not break any rule described. Stereotype threat concerns how awareness of a stereotype impairs a target’s own performance, not how a manager treats applications.',
+        optionExplanations: [
+          'Out-group derogation requires active dislike or hostility toward the other group. She disclaims any animosity, and nothing in her statement indicates it.',
+          'Correct. She extends an advantage to people in her own network and group while expressing no hostility toward outsiders. The disadvantage to others is a by-product, not the aim: in-group favoritism.',
+          'Institutional discrimination arises from an organization’s ordinary rules rather than one person’s choices, and her practice does not break any rule described in the passage.',
+          'Stereotype threat concerns how awareness of a negative stereotype impairs a target’s own performance. It does not describe how a manager treats applications.',
+        ],
         skill: '8B in-group favoritism vs out-group derogation',
       },
       {
@@ -397,6 +523,12 @@ export const FL2_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'After the chain replaced referral hiring with public postings and structured interviews, the minority share of new hires returned to about its 2008 level even though the share of prejudiced managers stayed at 8%, so the improvement tracked a change in procedure rather than in attitudes. Screening and training both target managers’ attitudes, which were already rare and did not change when outcomes improved. A targeted referral bonus was never tried, so the data offer no evidence about it, and it would still depend on referrers’ homophilous networks.',
+        optionExplanations: [
+          'Screening targets managers’ attitudes, which were already rare (8%) and did not change when outcomes improved after 2016. The data point to procedures, not attitudes.',
+          'Training to reduce explicit prejudice targets attitudes that stayed flat at 8% while hiring recovered from 14% to 23%. Attitude change was not what drove the improvement.',
+          'A targeted referral bonus was never tried, so the data offer no evidence about it, and it would still depend on referrers’ homophilous networks.',
+          'Correct. After the chain replaced referral hiring with public postings and structured interviews, the minority share of new hires returned to about its 2008 level while the prejudice share stayed at 8%. The improvement tracked a change in procedure, not attitudes.',
+        ],
         skill: '10A reducing discrimination: procedures vs attitudes',
       },
     ],
@@ -419,6 +551,12 @@ export const FL2_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'Because she hears the hum immediately when her attention is redirected, her receptors are still responding; the decline lies in a learned, central decrease in responding to a repeated, unimportant stimulus, which is habituation. Sensory adaptation is a reduction in the receptors’ own response to constant stimulation and would not reverse the instant attention shifts. Sensitization is an increase in responsiveness, the opposite of what she shows. Normal hearing thresholds rule out hair-cell damage.',
+    optionExplanations: [
+      'Sensory adaptation is a decline in the receptors’ own response to constant stimulation. It would not reverse instantly when a coworker mentions the hum; her receptors are still responding.',
+      'Sensitization is an increase in responsiveness with repeated exposure, the opposite of what she shows.',
+      'Correct. Because she hears the hum immediately when attention is redirected, her receptors are still responding. The decline is a learned, central decrease in responding to a repeated, unimportant stimulus: habituation.',
+      'Her hearing thresholds are normal, which rules out hair-cell damage and a raised absolute threshold.',
+    ],
     skill: '6A sensory adaptation vs habituation',
   },
   {
@@ -436,6 +574,12 @@ export const FL2_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'Others react the same way (high consensus), Maya does not react this way to other restaurants (high distinctiveness), and she reacts this way every time (high consistency), a combination that leads to an external attribution to the stimulus, the restaurant. High consistency alone does not produce a dispositional attribution; a dispositional attribution requires low consensus and low distinctiveness as well. Consistency is high, not low, so a one-time circumstance is not implicated. Maya rarely complains elsewhere, so distinctiveness is high rather than low.',
+    optionExplanations: [
+      'High consistency alone does not yield a dispositional attribution. With high consensus and high distinctiveness as well, the covariation model points to the stimulus (the restaurant).',
+      'Correct. Others react the same way (high consensus), Maya does not react this way elsewhere (high distinctiveness), and she reacts this way every time (high consistency). That combination yields an external attribution to the restaurant.',
+      'Consistency is high (she complained on all three visits), not low. A circumstance attribution requires low consistency.',
+      'Maya rarely complains elsewhere, so distinctiveness is high, not low. Low distinctiveness and low consensus would be needed for a dispositional attribution.',
+    ],
     skill: '8B attribution theory: covariation model',
   },
   {
@@ -453,6 +597,12 @@ export const FL2_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'Stereotype threat is the impairment that arises when a test-taker fears confirming a negative stereotype about her group, so the gap should vanish when the identical test is framed as irrelevant to the stereotyped ability; a real ability difference would persist regardless of framing. A larger gap on harder items is consistent with either explanation. Lower pretest confidence could reflect either anxiety about the stereotype or accurate self-assessment. The effect of coursework among women says nothing about why women and men with equal preparation differ.',
+    optionExplanations: [
+      'Correct. Stereotype threat arises when a test-taker fears confirming a negative stereotype about her group. If the identical test framed as unrelated to ability erases the gap, the gap reflected threat, not ability, which would persist regardless of framing.',
+      'A larger gap on harder items is consistent with either explanation: threat impairs performance most under load, and real ability differences also show most on hard items.',
+      'Lower pretest confidence could reflect anxiety about the stereotype or accurate self-assessment of ability. It does not discriminate between the two.',
+      'The effect of coursework among women says nothing about why women and men with equal preparation differ.',
+    ],
     skill: '8B stereotype threat',
   },
   {
@@ -470,6 +620,12 @@ export const FL2_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'The reappearance of the conditioned response after a rest, without any new pairings, is spontaneous recovery, and it shows that the original tone–food association survived extinction; extinction therefore adds new inhibitory learning rather than erasing what was learned. Relearning overnight is impossible because the tone and food were never paired again. Fatigue would not explain why the response returns specifically to the tone after rest yet is weaker than before. Stimulus generalization concerns responding to similar stimuli, whereas the response returned to the original tone.',
+    optionExplanations: [
+      'Relearning overnight is impossible because the tone and food were never paired again. The association must have survived extinction.',
+      'Fatigue would not explain why the response returns specifically to the tone after rest yet is weaker than before. The pattern reflects learning, not gland exhaustion.',
+      'Stimulus generalization concerns responding to similar stimuli. The response returned to the original tone itself, so generalization is not involved.',
+      'Correct. Reappearance of the conditioned response after rest without new pairings is spontaneous recovery. It shows the original tone–food association survived; extinction added new inhibitory learning rather than erasing the old association.',
+    ],
     skill: '7A extinction and spontaneous recovery',
   },
   {
@@ -487,6 +643,12 @@ export const FL2_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'Michels’s iron law of oligarchy holds that even democratically organized groups tend over time to be ruled by a small group of leaders, which is what happened to the cooperative. McDonaldization describes the spread of fast-food principles such as efficiency and standardization, not the concentration of control. Groupthink is a pattern of faulty decision-making in cohesive groups and says nothing about who holds power. Weber’s ideal-type bureaucracy places authority in offices governed by rules, whereas here power rests with particular long-serving individuals.',
+    optionExplanations: [
+      'McDonaldization describes the spread of efficiency, predictability and standardization. It does not address who holds power in an organization.',
+      'Groupthink is faulty decision-making in cohesive groups that suppress dissent. It says nothing about the concentration of control among a few long-serving officers.',
+      'Correct. Michels’s iron law of oligarchy holds that even democratically organized groups come to be ruled by a small set of leaders over time, exactly what happened to the cooperative.',
+      'Weber’s ideal-type bureaucracy vests authority in impersonal offices governed by rules. Here power rests with particular long-serving individuals, not offices.',
+    ],
     skill: '9A formal organizations and bureaucracy',
   },
   {
@@ -504,6 +666,12 @@ export const FL2_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'A funding rule that mentions no race nonetheless channels fewer resources to neighborhoods that segregation left with lower property values, producing unequal outcomes through ordinary institutional practice, which is institutional discrimination. Individual discrimination requires a person treating others unfavorably because of their group, and paying taxes on one’s own property is not such an act. De jure segregation is separation required by law, whereas this rule does not assign anyone to schools or neighborhoods by race. Prejudice is an attitude held by individuals, and nothing indicates that the rule reflects anyone’s attitudes.',
+    optionExplanations: [
+      'Individual discrimination requires a person treating others unfavorably because of their group. Paying taxes on one’s own property is not such an act.',
+      'Correct. A funding rule that mentions no race nonetheless channels fewer resources to neighborhoods that past segregation left with lower property values. Unequal outcomes produced by ordinary institutional practice is institutional discrimination.',
+      'De jure segregation is separation required by law. The funding rule does not assign anyone to schools or neighborhoods by race.',
+      'Prejudice is an attitude held by individuals. Nothing indicates the funding rule expresses anyone’s negative attitudes; its effect is structural.',
+    ],
     skill: '10A institutional discrimination and residential segregation',
   },
   {
@@ -521,6 +689,12 @@ export const FL2_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'Tracing clan membership and inheritance through the mother’s line is matrilineal descent, and a couple living apart from both families practices neolocal residence. Patrilineal descent would trace membership through the father. Bilateral descent counts both parents’ lines equally, which contradicts membership in the mother’s clan alone. Matrilocal residence would require the couple to live with or near the wife’s family, which they do not.',
+    optionExplanations: [
+      'Patrilineal descent traces membership through the father. Here children belong to the mother’s clan and inherit from her relatives.',
+      'Bilateral descent counts both parents’ lines equally, which contradicts membership in the mother’s clan alone. Residence is correctly neolocal, but descent is wrong.',
+      'Descent is correctly matrilineal, but matrilocal residence would place the couple with or near the wife’s family. They live apart from both sets of parents.',
+      'Correct. Clan membership and inheritance through the mother’s line is matrilineal descent, and a couple setting up a household apart from both families practices neolocal residence.',
+    ],
     skill: '9B family and kinship patterns',
   },
 ]

@@ -51,6 +51,12 @@ export const FL8_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Tired infants should look briefly at whatever is shown next, yet infants in the impossible-event group looked for 32 seconds on trial 7 after 15 seconds on trial 6; this recovery (dishabituation) shows that they were still able to attend and that the earlier decline was specific to the repeated event. Equal looking on trial 1 shows only that the groups began alike. A two-thirds decline in both groups is the very observation that fatigue is offered to explain. Continued brief looking in the possible-event group is what fatigue would also predict, so it cannot count against the proposal.',
+        optionExplanations: [
+          'Equal looking on trial 1 (44 and 43 seconds) shows only that the two groups began alike. It says nothing about whether the later decline was due to fatigue or to habituation to the repeated event.',
+          'A two-thirds decline in both groups across trials 1 to 6 is the very observation that fatigue is offered to explain. It cannot count against the proposal it is meant to support.',
+          'Tired infants should look briefly at whatever is shown next, yet infants in the impossible-event group looked for 32 seconds on trial 7 after 15 seconds on trial 6. This recovery (dishabituation) shows they could still attend and that the decline was specific to the repeated event.',
+          'Continued brief looking in the possible-event group on trials 7 and 8 is what fatigue would also predict, so it cannot count against the proposal. Only a recovery of looking does that.',
+        ],
         skill: '7A habituation vs fatigue: dishabituation (reasoning from data)',
       },
       {
@@ -65,6 +71,12 @@ export const FL8_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The two test events differed in where the box stood as well as in whether the outcome was physically possible, so longer looking in the impossible-event group might have reflected nothing more than the arrangement with the box on the track holding attention better. The second experiment presented the two arrangements without the truck, and looking was equal, which removes that account. Unequal tiredness is unlikely given random assignment and equal looking on trial 6, and the second experiment does not bear on it. Failure to notice the position of the box would predict no difference between the groups. Parents kept their eyes closed in the first experiment itself.',
+        optionExplanations: [
+          'The two test events differed in where the box stood as well as in whether the outcome was possible, so longer looking in the impossible-event group might have reflected only that a box on the track holds attention better. The second experiment, with equal looking at both positions without the truck, removes this account.',
+          'Unequal tiredness is unlikely given random assignment and equal looking on trial 6 (15 seconds in both groups). The second experiment does not bear on tiredness, so its absence would not make this attribution more reasonable.',
+          'Failure to notice the box’s position would predict no difference between the groups, since both would be responding to the same truck event. The observed difference rules this out regardless of the second experiment.',
+          'Parents kept their eyes closed throughout the first experiment itself, so parental cues are excluded by the original design, not by the second experiment.',
+        ],
         skill: '7A research design: control for a perceptual preference',
       },
       {
@@ -78,6 +90,12 @@ export const FL8_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Looking time shows that infants treated two events differently, and with suitable controls it can narrow down which difference they responded to, but it does not reveal what the experience was like; attributing adult-like surprise goes beyond a difference in seconds of looking. That the two test events were told apart follows from the unequal looking times in Figure 1. That the position of the box alone was not responsible follows from the second experiment, in which the two positions drew equal looking. Responding as though the hidden box were still in place is the interpretation that remains once that alternative is removed.',
+        optionExplanations: [
+          'That the two test events were told apart follows directly from the unequal looking times in Figure 1 (32 versus 18 seconds on trial 7). This conclusion is well warranted.',
+          'That the position of the box alone was not responsible follows from the second experiment, in which the two positions drew equal looking (about 16 seconds each) when no truck was released. This is warranted.',
+          'Responding as though the hidden box were still in place is the interpretation that remains once the perceptual-preference alternative is removed by the second experiment. It is the researchers’ conclusion and is reasonably supported.',
+          'Looking time shows that infants treated two events differently, but it does not reveal what the experience was like. Attributing adult-like surprise goes beyond a difference in seconds of looking, and the passage itself notes that what looking reveals about mental life remains debated.',
+        ],
         skill: '7A limits of looking-time measures',
       },
       {
@@ -92,6 +110,12 @@ export const FL8_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Reaching in the dark requires the infant to act on an object that can no longer be seen but requires only a single, direct action; lifting a cloth and then grasping requires one action to be performed as the means to another. Success on the first and failure on the second therefore locates the problem in sequencing actions. An infant who could not remember an unseen toy, or who lost interest in it, would not reach for it in the dark. A general weakness of reaching is contradicted by the successful reaches in the dark.',
+        optionExplanations: [
+          'An infant who could not remember an unseen toy would not reach for it in the dark. The successful reaches show the toy was represented even when it could not be seen.',
+          'Reaching in the dark requires acting on an unseen object but involves only a single, direct action. Lifting a cloth and then grasping requires one action as the means to another. Success on the first and failure on the second locates the problem in sequencing actions toward a goal.',
+          'An infant who lost interest in a hidden toy would not reach for it in the dark either. The reaching shows continued interest in the unseen object.',
+          'A general weakness of reaching is contradicted by the successful reaches in the dark. The infants can reach and grasp; what they cannot do is combine two actions.',
+        ],
         skill: '6B object permanence: competence vs performance on search tasks',
       },
     ],
@@ -125,6 +149,12 @@ export const FL8_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'In the “All respondents” column, moving from mild to severe behavior raises the mean from 1.0 to 2.8 without the hospitalization and from 1.6 to 3.3 with it, gains of 1.8 and 1.7; adding the hospitalization raises it from 1.0 to 1.6 for mild behavior and from 2.8 to 3.3 for severe behavior, gains of 0.6 and 0.5. Reversing the two effects assigns the smaller differences to behavior. Values of 2.8 to 3.3 and 1.6 to 3.3 are cell means, not differences between cells. Equal effects of about 1.2 match no pair of rows.',
+        optionExplanations: [
+          'In the “All respondents” column, moving from mild to severe behavior raises the mean from 1.0 to 2.8 (no hospitalization) and from 1.6 to 3.3 (with it), gains of 1.8 and 1.7. Adding the hospitalization raises it from 1.0 to 1.6 and from 2.8 to 3.3, gains of 0.6 and 0.5.',
+          'This reverses the two effects, assigning the smaller differences to behavior. Severe behavior added 1.7 to 1.8 refusals and the hospitalization 0.5 to 0.6, not the other way around.',
+          'Values of 2.8 to 3.3 and 1.6 to 3.3 are cell means from the table, not differences between cells. The effect of a factor is the change it produces, not the level of the cell.',
+          'Equal effects of about 1.1 to 1.2 match no pair of rows in the “All respondents” column. The behavior effect (1.7–1.8) is about three times the hospitalization effect (0.5–0.6).',
+        ],
         skill: '10A data interpretation: separate effects in a 2 × 2 table',
       },
       {
@@ -139,6 +169,12 @@ export const FL8_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Among respondents who held the dangerousness belief, mentioning the hospitalization raised desired distance by 1.4 for mild behavior and 1.2 for severe behavior; among those who did not, it changed distance by no more than 0.1. A label that acts only by way of conceptions the audience already holds is what the modified labeling position proposes. The label did not act on all respondents alike, as the original position would expect, and it clearly acted on one group, contrary to the critics. Severe behavior raised distance in both groups (by 1.7 to 1.9), so the effect of behavior did not depend on a prior belief.',
+        optionExplanations: [
+          'The label did not act on all respondents alike. Among those not holding the dangerousness belief, mentioning the hospitalization changed distance by no more than 0.1, so the original labeling position is not supported.',
+          'The hospitalization clearly raised distance among respondents holding the dangerousness belief, by 1.4 for mild behavior and 1.2 for severe. The critics’ claim that a label adds little is contradicted for this group.',
+          'Among respondents who held the dangerousness belief, the hospitalization raised distance by 1.4 (mild) and 1.2 (severe); among those who did not, it changed distance by no more than 0.1. A label that acts only through conceptions the audience already holds is exactly what the modified labeling position proposes.',
+          'Severe behavior raised distance in both groups, by 1.7 to 1.9, regardless of prior belief. It was the hospitalization label, not the behavior, whose effect depended on holding the belief.',
+        ],
         skill: '9B modified labeling theory (reasoning from data)',
       },
       {
@@ -153,6 +189,12 @@ export const FL8_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Dishonesty inferred from a person’s record is a blemish of individual character, the category that also holds mental disorder and addiction, and because his record is unknown to those around him he is discreditable: his task is to manage what they learn. He would be discredited only if the dismissal were evident or already known. A tribal stigma attaches to membership in a racial, national, or religious group and passes along family lines, which a personal history of embezzlement does not.',
+        optionExplanations: [
+          'Dishonesty inferred from a record is a blemish of character, but he is not discredited, because no one at his new workplace knows of the dismissal. The discredited are those whose attribute is evident or already known.',
+          'Dishonesty inferred from a person’s record is a blemish of individual character, the category that also holds mental disorder and addiction. Because his record is unknown to those around him, he is discreditable: his task is to manage what they learn.',
+          'A tribal stigma attaches to membership in a racial, national, or religious group and passes along family lines, which a personal history of embezzlement does not. And since his record is hidden, he is not discredited.',
+          'A tribal stigma concerns race, nation, or religion inherited through family, not a personal act of embezzlement. He is correctly discreditable, but the type of stigma is wrong.',
+        ],
         skill: '8B stigma: Goffman’s types; discredited vs discreditable',
       },
       {
@@ -166,6 +208,12 @@ export const FL8_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Self-stigma and help-seeking were measured at the same time, so the association can run in either direction: treatment may reduce shame about treatment, which would produce low self-stigma scores among those who had sought help without self-stigma having deterred anyone. Vignettes were assigned at random, so beliefs could not differ systematically between versions, and vignette assignment has no bearing on the self-stigma comparison. Leaving the middle third unreported does not create a difference between the outer thirds. That 400 of 1,600 respondents reported depressed mood limits the size of the subsample but offers no competing account of the association.',
+        optionExplanations: [
+          'Vignettes were assigned at random, so beliefs could not differ systematically between versions. In any case, vignette assignment has no bearing on the self-stigma comparison, which involved a separate scale and separate outcome.',
+          'Leaving the middle third unreported does not create a difference between the outer thirds. The comparison between lowest and highest thirds stands regardless of what the middle third did.',
+          'That 400 of 1,600 respondents reported depressed mood limits the size of the subsample but offers no competing account of why self-stigma and help-seeking were associated within it.',
+          'Self-stigma and help-seeking were measured at the same time, so the association can run in either direction. Treatment may reduce shame about treatment, producing low self-stigma scores among those who had sought help without self-stigma having deterred anyone.',
+        ],
         skill: '9B self-stigma and help-seeking: direction of causation',
       },
     ],
@@ -197,6 +245,12 @@ export const FL8_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Hunger is a temporary condition, and its appearance in the stories shows that what a person supplies to an ambiguous picture depends in part on the state he or she happens to be in; a test meant to describe enduring personality must then separate the lasting from the momentary. Hunger after a fast is something the volunteers could readily report, so the result does not show access to unreportable conflicts. The groups differed in what the storytellers said, not in how examiners scored it, so the result speaks neither to dependence on the examiner nor to agreement among examiners.',
+        optionExplanations: [
+          'Hunger after a 16-hour fast is something the volunteers could readily report, so the result does not show access to unreportable conflicts. The stories reflected a conscious, temporary state.',
+          'Hunger is a temporary condition, and its appearance in the stories shows that what a person supplies to an ambiguous picture depends partly on the state he or she happens to be in. A test meant to describe enduring personality must then separate the lasting from the momentary.',
+          'The groups differed in what the storytellers said, not in how examiners scored it. The result speaks to the content of the stories, not to any dependence on the examiner’s interpretation.',
+          'The study did not compare different examiners scoring the same responses, so it says nothing about agreement among examiners. It concerns the influence of the storyteller’s state on content.',
+        ],
         skill: '7A projective tests: state vs trait influences',
       },
       {
@@ -211,6 +265,12 @@ export const FL8_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Receiving the same result on retesting is consistency, which is reliability; having no relation to other accepted measures or to relevant behavior means that there is no evidence the quiz measures any characteristic of personality, which is a lack of validity. Consistent results rule out the two descriptions that deny reliability. The absence of any relation to outside criteria rules out calling the quiz valid, and it shows that a measure can be consistent without being accurate.',
+        optionExplanations: [
+          'The quiz is reliable: readers almost always receive the same color on retesting, which is consistency. Denying reliability contradicts the retest result.',
+          'Consistent results on retesting establish reliability, so the quiz is not unreliable. And no relation to any outside criterion means there is no evidence of validity, so it is not valid either. Both halves are wrong.',
+          'Reliability is correct, but with no relation to friends’ ratings, established inventories, or observed behavior, there is no evidence the quiz measures any characteristic of personality. It is not valid.',
+          'Receiving the same result on retesting is consistency, which is reliability. Having no relation to other accepted measures or to relevant behavior means there is no evidence the quiz measures any real characteristic, which is a lack of validity. A measure can be consistent without being accurate.',
+        ],
         skill: '7A reliability without validity',
       },
       {
@@ -225,6 +285,12 @@ export const FL8_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Whether a student is on time on a given day depends on many things besides punctuality, such as a late bus or a prior appointment; these momentary influences vary from day to day and wash out of a 30-lecture average, leaving the stable tendency that the scale measures, so the correlation rises. If lectures were strong situations, the scale would predict poorly in both cases. The scale was completed once; it is the behavior that was sampled more often. Nothing indicates that students were told about the recording, and the same kind of arrival enters both correlations.',
+        optionExplanations: [
+          'If lectures were strong situations in which nearly everyone behaves alike, the scale would predict poorly in both cases. Yet it predicted the 30-lecture average well (0.62), so the trait does show itself.',
+          'The scale was completed once, at the start of term. It is the behavior that was sampled more often, not the scale, so the scale’s reliability did not change.',
+          'Whether a student is on time on a given day depends on many things besides punctuality, such as a late bus or a prior appointment. These momentary influences vary from day to day and wash out of a 30-lecture average, leaving the stable tendency the scale measures, so the correlation rises.',
+          'Nothing indicates that students were told about the recording, and the same kind of arrival enters both correlations. Knowledge of recording cannot explain why aggregation raised the correlation.',
+        ],
         skill: '7A person–situation debate: aggregation (reasoning from data)',
       },
       {
@@ -239,6 +305,12 @@ export const FL8_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Statements of this kind describe virtues that almost no one can truthfully claim, so endorsing most of them signals an effort to make a good impression, and the same motive is likely to have inflated the candidate’s answers elsewhere. Social desirability bias pushes scores in the favorable direction, not the unfavorable one. A candidate who is motivated to look good would be expected to answer the same way on retesting in the same circumstances. Random answering would lead to endorsement of about half of such statements, not nearly all.',
+        optionExplanations: [
+          'Statements like “I have never been irritated by anyone” describe virtues almost no one can truthfully claim, so endorsing nearly all of them signals an effort to make a good impression. The same motive is likely to have inflated the candidate’s answers on the other scales.',
+          'Social desirability bias pushes scores in the favorable direction, not the unfavorable one. A candidate trying to look good would not produce scores less favorable than warranted.',
+          'A candidate motivated to look good would be expected to answer the same way on retesting in the same circumstances. The distortion is systematic, not random, so scores would not change greatly.',
+          'Random answering would lead to endorsement of about half of such statements, not nearly all. The pattern shows a deliberate direction, not randomness.',
+        ],
         skill: '7A social desirability bias: validity scales',
       },
       {
@@ -253,6 +325,12 @@ export const FL8_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'If a report is truly specific to the individual, its owner should be able to tell it from reports written for other people; if customers choose their own report no more often than chance, the 90% figure reflects statements that fit almost anyone. Repeating the accuracy rating later measures the same subjective impression a second time. Willingness to recommend the product is another expression of satisfaction, not of accuracy. Removing flattering statements might lower ratings, but a vague report could still be endorsed by everyone, so this would not show whether reports distinguish one person from another.',
+        optionExplanations: [
+          'Repeating the accuracy rating six months later measures the same subjective impression a second time. If the Barnum effect operated the first time, it would operate again.',
+          'Willingness to recommend the product is another expression of satisfaction, not of accuracy. A report that feels accurate because of vague flattery would be recommended just as readily.',
+          'If a report is truly specific to the individual, its owner should be able to tell it from reports written for other people. If customers choose their own report no more often than chance, the 90% accuracy rating reflects statements that fit almost anyone.',
+          'Removing flattering statements might lower ratings, but a vague report could still be endorsed by everyone. This would not show whether reports distinguish one person from another, which is the question the Barnum effect raises.',
+        ],
         skill: '7A research design: testing for the Barnum effect',
       },
     ],
@@ -284,6 +362,12 @@ export const FL8_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'A serious diagnosis threatens self-regard, and a person under such a threat tends to compare downward, with people who are worse off, and feels better as a result; inventing such people shows that the aim was reassurance. Patients seeking accurate information would compare with similar patients, not with imagined ones chosen for doing poorly. Models for improvement are found by looking upward, toward those who are doing better. Seeking confirmation of an unfavorable self-view is self-verification, and it would not lead patients to cast themselves as the ones who were coping well.',
+        optionExplanations: [
+          'Patients seeking accurate information would compare with similar patients, as Festinger proposed, not with imagined ones chosen for doing poorly. Invented comparison targets cannot supply accurate prognostic information.',
+          'Models for improvement are found by looking upward, toward those doing better. These patients looked downward, toward those coping worse, which serves a different motive.',
+          'Seeking confirmation of an unfavorable self-view is self-verification, and it would not lead patients to cast themselves as the ones coping well. The comparisons made the patients look better, not worse.',
+          'A serious diagnosis threatens self-regard, and a person under such threat tends to compare downward, with people who are worse off, and feels better as a result. Inventing such people shows that the aim was reassurance, not information.',
+        ],
         skill: '8A social comparison: downward comparison under threat',
       },
       {
@@ -298,6 +382,12 @@ export const FL8_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Self-verification is the wish to be seen as one sees oneself, so people with an unfavorable self-view should choose the evaluator who shares it; self-enhancement is the wish to think well of oneself, so on that account they should choose the flattering evaluator. Reversing the two assigns each motive the other’s prediction. The accounts would agree only for people whose self-view is favorable, for whom being seen accurately and being seen positively coincide; for these participants the motives conflict, so the two predictions cannot be the same.',
+        optionExplanations: [
+          'Self-verification is the wish to be seen as one sees oneself, so people with an unfavorable self-view should choose the evaluator who shares it (awkward). Self-enhancement is the wish to think well of oneself, so on that account they should choose the flattering evaluator (skilled).',
+          'This reverses the two predictions, assigning each motive the other’s choice. Self-verification predicts the awkward evaluator; self-enhancement predicts the skilled one.',
+          'The two accounts would agree only for people whose self-view is favorable. For these participants, who see themselves as awkward, the motives conflict, so the predictions cannot both be “awkward.”',
+          'Self-enhancement would predict the skilled evaluator, but self-verification predicts the awkward one for people with an unfavorable self-view. The two accounts diverge here, so they cannot both predict “skilled.”',
+        ],
         skill: '8A self-verification vs self-enhancement',
       },
       {
@@ -312,6 +402,12 @@ export const FL8_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Self-handicapping is most likely when a person values an ability but is unsure of being able to demonstrate it; students praised for a performance they could not account for have a reputation to protect and no basis for expecting to repeat it, so an impairing drug offers a ready excuse. Students who solved real problems have grounds for confidence and little need of an excuse, and confidence is not a reason to seek a disadvantage. A wish to learn one’s true ability would lead away from the impairing drug in either group, because a handicap makes the next result uninformative.',
+        optionExplanations: [
+          'Students who solved real problems have grounds for confidence and little need of an excuse. Confidence is not a reason to seek a disadvantage; self-handicapping arises from uncertainty, not assurance.',
+          'Self-handicapping is most likely when a person values an ability but is unsure of demonstrating it. Students praised for a performance they could not account for have a reputation to protect and no basis for expecting to repeat it, so an impairing drug offers a ready excuse.',
+          'A wish to learn one’s true ability would lead away from the impairing drug, because a handicap makes the next result uninformative. Students with solvable problems also have less reason to doubt themselves.',
+          'A wish to find out one’s true ability would lead a student to avoid the impairing drug, since a handicap makes the result uninterpretable. The unsolvable-test students choose the drug to protect themselves, not to learn.',
+        ],
         skill: '8A self-handicapping (prediction)',
       },
       {
@@ -326,6 +422,12 @@ export const FL8_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'An interdependent self is understood through relationships and roles and is expected to vary with the company one is in, which is what answers that name roles and that change between family and classmates show. An independent self is defined by internal attributes that stay the same across settings, which would produce overlapping, trait-based answers. The task asks who the students are, not how favorably they evaluate themselves, so it gives no measure of self-esteem. Self-handicapping concerns arranging excuses before a performance, and nothing in the task involves performance.',
+        optionExplanations: [
+          'The task asks who the students are, not how favorably they evaluate themselves, so it gives no measure of self-esteem. Role-based, context-dependent answers do not indicate low self-worth.',
+          'Self-handicapping concerns arranging excuses before a performance, and nothing in the sentence-completion task involves performance. The answers reveal self-construal, not self-protective strategies.',
+          'An interdependent self is understood through relationships and roles and is expected to vary with the company one is in. Answers that name roles such as “eldest daughter” and that change between family and classmate contexts show exactly this.',
+          'An independent self is defined by internal attributes that stay the same across settings, which would produce overlapping, trait-based answers. Country B’s answers overlapped less and contained more roles, the opposite pattern.',
+        ],
         skill: '8A independent vs interdependent self-construal',
       },
       {
@@ -340,6 +442,12 @@ export const FL8_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'A self-fulfilling prophecy requires that the expectation draw out the expected behavior from its target, not merely color the perceiver’s impression; judges who heard the women alone and knew nothing of the photographs could only have been responding to real differences in how the women spoke. The men’s own impressions would show a change in perception, which is exactly what unbiased judges were needed to go beyond. Photographs were assigned at random and were not of the partners, so the women’s actual attractiveness did not differ between conditions. The judges did not rate the men, and self-esteem was not measured.',
+        optionExplanations: [
+          'The men’s own impressions would show only a change in perception, which is exactly what unbiased judges were needed to go beyond. The judges heard the women alone, so their ratings could not reflect how the men heard anything.',
+          'A self-fulfilling prophecy requires that the expectation draw out the expected behavior from its target, not merely color the perceiver’s impression. Judges who heard only the women and knew nothing of the photographs could only have been responding to real differences in how the women spoke.',
+          'Photographs were assigned at random and were not of the actual partners, so the women’s real attractiveness did not differ between conditions. It cannot explain the difference in rated warmth.',
+          'The judges did not rate the men, and self-esteem was not measured. This option concerns neither the judges’ ratings nor any variable in the study.',
+        ],
         skill: '8A self-fulfilling prophecy: research design (behavioral confirmation)',
       },
     ],
@@ -371,6 +479,12 @@ export const FL8_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The threat is credible because a firm can shift production to another country, whereas the workers are held in place by immigration law, language, and family ties; this difference in mobility lets employers choose among workforces while workers cannot choose among countries. If workers could move abroad as easily as the firm, the threat would lose its force. Adapting products to local tastes concerns the marketing of goods, not the location of production. Remittances are money sent home by migrants and play no part in a negotiation between a factory and its local workforce.',
+        optionExplanations: [
+          'The threat is credible because a firm can shift production to another country, whereas workers are held in place by immigration law, language, and family ties. This difference in mobility lets employers choose among workforces while workers cannot choose among countries.',
+          'If workers could move abroad as easily as the firm, the threat would lose its force; they could simply follow the jobs. The passage stresses that most workers cannot.',
+          'Adapting products to local tastes concerns the marketing of goods, not the location of production. It has nothing to do with the firm’s bargaining power over its workers.',
+          'Remittances are money sent home by migrants abroad and play no part in a negotiation between a factory and its local workforce. Nothing suggests these workers receive remittances.',
+        ],
         skill: '9B globalization: mobility of capital vs labor',
       },
       {
@@ -385,6 +499,12 @@ export const FL8_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The critics’ claim is that recruitment drains the source country’s health workforce. If the chance to work abroad attracts enough additional trainees that the number of nurses staying home rises, the health system gains workers and the claim is undercut. Higher earnings abroad benefit the individual migrant, which critics do not dispute. Remittances spent on relatives’ housing and schooling help households, not clinics. Savings to hospitals in the destination country are the benefit that critics describe as a subsidy from the poorer country, so that finding supports their claim.',
+        optionExplanations: [
+          'Higher earnings abroad benefit the individual migrant, which critics do not dispute. Their claim concerns harm to the source country’s health system, which individual gains do not address.',
+          'Remittances spent on relatives’ housing and schooling help households, not clinics. They do not restore the health workforce that the critics say is being drained.',
+          'Savings to hospitals in the destination country are precisely the benefit that critics describe as a subsidy from the poorer country to the richer one. This finding supports their claim rather than weakening it.',
+          'The critics’ claim is that recruitment drains the source country’s health workforce. If the chance to work abroad attracts enough additional trainees that the number of nurses staying home actually rises, the health system gains workers and the claim is undercut.',
+        ],
         skill: '9B migration of health workers: evaluating evidence',
       },
       {
@@ -399,6 +519,12 @@ export const FL8_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Homogenization predicts that imported forms displace local ones and that cultures converge; a new style made by joining an imported form to a local language, and then exported, is variety created by contact, which is hybridization. Dominance of ticket sales by a few studios, the replacement of a regional language by a world language, and the spread of identical retail brands are each cases of local forms giving way to a few global ones, as the homogenization view expects.',
+        optionExplanations: [
+          'Dominance of ticket sales by a few studios on every continent is local forms giving way to a few global ones, exactly what the homogenization view expects.',
+          'Homogenization predicts that imported forms displace local ones and that cultures converge. A new style made by joining an imported form to a local language, and then exported, is variety created by contact, which is hybridization and runs against the homogenization view.',
+          'A regional language replaced by a world language within two generations is a local form displaced by a global one, as the homogenization view predicts.',
+          'Distant capitals dominated by the same retail brands is convergence toward a few global forms, which the homogenization view expects.',
+        ],
         skill: '9B cultural globalization: homogenization vs hybridization',
       },
       {
@@ -413,6 +539,12 @@ export const FL8_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Digital networks allow any service whose product is information to be delivered from a distance, and container shipping does the same for manufactured goods; work that must be done on a client’s body in the client’s home can be done only where the client is. Reading digital images and answering billing questions by telephone are information services that a network can carry across borders. Sewing garments yields a good that can be shipped cheaply, and such production is among the most readily relocated.',
+        optionExplanations: [
+          'Reading digital images is an information service, and the passage says digital communication allows any service whose product is information to be delivered over a network. This job can readily be moved offshore.',
+          'Sewing garments yields a good that container shipping moves cheaply, and such production is among the most readily relocated. This is a textbook case of offshoring.',
+          'Digital networks carry information services and container shipping carries goods, but work that must be done on a client’s body in the client’s home can be done only where the client is. Neither technology can move this job.',
+          'Answering billing questions by telephone is an information service that a network can carry across borders. Call centers are among the most commonly offshored operations.',
+        ],
         skill: '9B globalization: communication technology and tradable services',
       },
     ],
@@ -435,6 +567,12 @@ export const FL8_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'Because the optics of the eye reverse the image, the nasal half of each retina receives light from the temporal, or outer, half of that eye’s visual field, so loss of the crossing fibers removes the outer half of the field on both sides (bitemporal hemianopia). The inner halves of the fields fall on the temporal retinas, whose axons do not cross and are spared. Loss of the same half-field in both eyes follows damage behind the chiasm, in one optic tract or the visual cortex. Loss of all vision in one eye follows damage to one optic nerve in front of the chiasm.',
+    optionExplanations: [
+      'Loss of the same half-field (the left) in both eyes follows damage behind the chiasm, in the right optic tract or visual cortex. Damage to crossing fibers at the chiasm affects different halves in each eye.',
+      'The inner (nasal) halves of the visual fields fall on the temporal halves of the retinas, whose axons do not cross and are spared by a central chiasm lesion.',
+      'Loss of all vision in one eye follows damage to one optic nerve in front of the chiasm. A central chiasm lesion affects both eyes, each in part.',
+      'Because the optics of the eye reverse the image, the nasal half of each retina receives light from the temporal, or outer, half of that eye’s visual field. Loss of the crossing fibers therefore removes the outer half of the field on both sides (bitemporal hemianopia).',
+    ],
     skill: '6A visual pathway: lesion at the optic chiasm',
   },
   {
@@ -452,6 +590,12 @@ export const FL8_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'Such flashbulb memories feel exceptionally clear, but the students’ later accounts departed from what they had written the next day, so vividness and confidence did not guarantee accuracy; like other memories, these are reconstructed over time. A fixed, distortion-proof record is contradicted by the 40% of details that changed. The study did not compare the rate of forgetting with that for ordinary events. The students produced detailed accounts readily, so their difficulty lay not in bringing the memory to mind but in the accuracy of what came to mind.',
+    optionExplanations: [
+      'Such flashbulb memories feel exceptionally clear, but the students’ later accounts departed from what they had written the next day in about 40% of details. Vividness and confidence did not guarantee accuracy; these memories are reconstructed over time like any others.',
+      'A fixed, distortion-proof record is contradicted by the 40% of details that changed between the two accounts. The memories were not stored in a form that resisted alteration.',
+      'The study did not compare the rate of forgetting with that for ordinary events. It measured consistency and confidence for a single type of memory, so no conclusion about relative forgetting follows.',
+      'The students produced detailed accounts readily and rated them as vivid, so their difficulty lay not in bringing the memory to mind but in the accuracy of what came to mind.',
+    ],
     skill: '6B flashbulb memories: confidence vs accuracy',
   },
   {
@@ -469,6 +613,12 @@ export const FL8_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'If abilities were expressions of one general capacity, damage should lower them together; the loss of language with music preserved shows that the two can be dissociated, as independent intelligences would be. Positive correlations among different tests are the original evidence for g. A single reasoning score that predicts performance across many subjects likewise points to a general factor. Greater similarity of identical twins bears on heritability and does not distinguish one intelligence from several.',
+    optionExplanations: [
+      'Positive correlations among different tests (verbal with spatial) are the original evidence for g. If abilities rise and fall together, a general factor is implied, which supports Spearman, not Gardner.',
+      'If abilities were expressions of one general capacity, damage should lower them together. The loss of language with music preserved shows that the two can be dissociated, as independent intelligences would be.',
+      'A single reasoning score that predicts performance across many school subjects points to a general factor underlying them all. This supports Spearman’s g.',
+      'Greater similarity of identical twins bears on the heritability of test scores. It does not distinguish one general intelligence from several independent ones.',
+    ],
     skill: '6B general intelligence vs multiple intelligences (evidence)',
   },
   {
@@ -486,6 +636,12 @@ export const FL8_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'Voluntary movement is commanded by the primary motor cortex in the precentral gyrus of the frontal lobe, and because the descending motor fibers cross to the opposite side, each hemisphere controls the opposite half of the body; right-sided weakness therefore points to the left motor cortex. Damage to the right motor cortex would weaken the left side. The somatosensory cortex of the parietal lobe receives touch information, which is intact in this patient, so neither parietal option fits.',
+    optionExplanations: [
+      'The somatosensory cortex receives touch information, which is intact in this patient. And the right hemisphere serves the left side of the body, not the right.',
+      'The somatosensory cortex of the parietal lobe handles touch, which is normal on both sides. The deficit is motor, not sensory, so the parietal lobe is not the site.',
+      'The right motor cortex controls the left side of the body, because the descending motor fibers cross. Right-sided weakness cannot come from right motor cortex damage.',
+      'Voluntary movement is commanded by the primary motor cortex in the frontal lobe, and because the descending fibers cross, each hemisphere controls the opposite side of the body. Right-sided weakness with intact touch therefore points to the left motor cortex.',
+    ],
     skill: '6A motor cortex: contralateral control',
   },
   {
@@ -503,6 +659,12 @@ export const FL8_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'Differential association locates the origin of deviance in close contacts who pass on both techniques and the definitions that justify using them, which is what learning methods and excuses from colleagues describes. High theft where legitimate jobs are scarce is the pattern strain theory predicts when approved means to success are blocked. More offending after an arrest is the labeling account, in which an official designation changes how a person is treated and sees himself. Declining offending with marriage and work points to the restraining effect of social bonds, not to learning from intimates.',
+    optionExplanations: [
+      'High theft where legitimate jobs are scarce is the pattern strain theory predicts when approved means to success are blocked. It does not require learning from intimate groups.',
+      'More offending after an arrest is the labeling account, in which an official designation changes how a person is treated and how he sees himself. Differential association does not explain this better.',
+      'Differential association locates the origin of deviance in close contacts who pass on both techniques and the definitions that justify them. Embezzlers learning methods and excuses from colleagues is exactly this process.',
+      'Declining offending with marriage and steady work points to the restraining effect of social bonds (control theory), not to learning from intimates.',
+    ],
     skill: '9A differential association theory',
   },
   {
@@ -520,6 +682,12 @@ export const FL8_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'The Thomas theorem states that situations people define as real are real in their consequences: residents acted on their definition of the water as unsafe, and the purchases, departures, and falling prices were real although the belief was false. The belief never became accurate, since the water stayed safe, so this is not a case of a prophecy fulfilling itself. How quickly a belief travels through a network is a question about diffusion, not about its consequences. Attributing the persistence of a belief to powerful interests is a conflict-theory claim for which the scenario gives no basis.',
+    optionExplanations: [
+      'The Thomas theorem states that situations people define as real are real in their consequences. Residents acted on their definition of the water as unsafe, and the purchases, departures, and falling prices were real although the belief was false.',
+      'The belief never became accurate; the water stayed safe throughout. The Thomas theorem concerns consequences of definitions, not their eventual truth, so this is not a case of a prophecy fulfilling itself.',
+      'How quickly a belief travels through a network is a question about diffusion, not about its consequences. The Thomas theorem makes no claim about the structure of ties that spread beliefs.',
+      'Attributing the persistence of a belief to powerful interests is a conflict-theory claim for which the scenario gives no basis. No powerful group is described as benefiting.',
+    ],
     skill: '9A the Thomas theorem',
   },
   {
@@ -537,6 +705,12 @@ export const FL8_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'Cumulative advantage is the process by which an initial edge, such as a degree, yields higher earnings, savings, and returns on investments, each of which makes the next gain easier, so that a small early gap compounds over the life course. Equal gains for everyone would leave the gap unchanged. Differences between people born in different decades are cohort effects, and all of these people belong to one cohort. If those who started with the least rose fastest, the gap would narrow.',
+    optionExplanations: [
+      'Equal gains for every member of a cohort would leave the gap unchanged, not widen it. The gap grew from 20,000 to 300,000 dollars, so the groups did not gain equally.',
+      'Differences between people born in different decades are cohort effects, but all of these people belong to one cohort followed from age 30. Cohort effects cannot explain a widening gap within a single cohort.',
+      'If those who started with the least rose fastest, the gap would narrow over time. It widened fifteenfold instead.',
+      'Cumulative advantage is the process by which an initial edge, such as a degree, yields higher earnings, savings, and investment returns, each making the next gain easier. A small early gap compounds over the life course, from 20,000 to 300,000 dollars.',
+    ],
     skill: '10A cumulative advantage',
   },
 ]

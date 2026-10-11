@@ -12,6 +12,7 @@
 
 import { Fragment, useEffect, useMemo, useState } from 'react'
 import {
+  BarChart3,
   Check,
   CheckCircle2,
   ChevronDown,
@@ -34,6 +35,11 @@ import {
   type DiagnosticFigure,
 } from '@/components/MCATDiagnosticVisuals'
 import type { MCATFigureSpec } from '@/data/mcat/types'
+import { AnswerStatsSummary, formatShare, sharesOf, useAnswerStats, type QuestionStat } from '@/components/AnswerStats'
+import AskAboutQuestion from '@/components/AskAboutQuestion'
+import MakeFlashcardButton from '@/components/MakeFlashcardButton'
+import ReviewReport from '@/components/ReviewReport'
+import { buildReviewReport } from '@/lib/review-report'
 
 export interface ReviewPassageView {
   id: string
@@ -63,6 +69,10 @@ export interface AttemptReviewItem {
   revised?: boolean
   /** Server-graded result, when the source provides one (grid-ins). */
   correct?: boolean
+  /** Reasoning-skill tag (MCAT CARS). */
+  skill?: string
+  /** One explanation per option, in the shown order (authored items only). */
+  optionExplanations?: string[]
 }
 
 export interface AttemptReviewData {
@@ -171,8 +181,30 @@ const STATUS_META: Record<ItemStatus, { label: string; Icon: typeof CheckCircle2
   typed: { label: 'Typed answer', Icon: HelpCircle, cls: 'text-gray-600 dark:text-gray-300' },
 }
 
-/** The options list with the student's pick and the key marked in text and icons. */
-export function OptionList({ item, chosenIndex, ready }: { item: Pick<AttemptReviewItem, 'options' | 'correctIndex'>; chosenIndex: number | null; ready?: boolean }) {
+/** Usable per-option explanations for these options, or null. */
+export function usableOptionExplanations(item: { options: string[]; optionExplanations?: string[] }): string[] | null {
+  const e = item.optionExplanations
+  return e && e.length === item.options.length && e.some((x) => x?.trim()) ? e : null
+}
+
+/**
+ * The options list with the student's pick and the key marked in text and
+ * icons. Optional extras, shown only after answering: `shares` (how other
+ * students answered, aligned to the options) and per-option explanations.
+ */
+export function OptionList({
+  item,
+  chosenIndex,
+  ready,
+  shares,
+}: {
+  item: Pick<AttemptReviewItem, 'options' | 'correctIndex' | 'optionExplanations'>
+  chosenIndex: number | null
+  ready?: boolean
+  shares?: number[] | null
+}) {
+  const perOption = usableOptionExplanations(item)
+  const bars = shares && shares.length === item.options.length ? shares : null
   return (
     <ul className="space-y-1.5">
       {item.options.map((opt, oi) => {
@@ -203,6 +235,23 @@ export function OptionList({ item, chosenIndex, ready }: { item: Pick<AttemptRev
                 )}
               </span>
             )}
+            {bars && (
+              <span className="flex basis-full items-center gap-2 pl-5">
+                <span className="h-1.5 flex-1 overflow-hidden rounded bg-gray-200 dark:bg-gray-700" aria-hidden>
+                  <span className="block h-full rounded bg-accent dark:bg-accent-muted" style={{ width: `${Math.max(0, Math.min(1, bars[oi])) * 100}%` }} />
+                </span>
+                <span className="w-10 shrink-0 text-right text-xs font-medium tabular-nums text-gray-700 dark:text-gray-300">
+                  {formatShare(bars[oi])}
+                  <span className="sr-only"> of students chose {letter(oi)}</span>
+                </span>
+              </span>
+            )}
+            {perOption?.[oi]?.trim() && (
+              <span className="block basis-full pl-5 text-xs leading-relaxed text-gray-700 dark:text-gray-300">
+                <span className="font-semibold">{isKey ? 'Why it\u2019s right: ' : 'Why it\u2019s wrong: '}</span>
+                <Rich text={perOption[oi]} ready={ready} />
+              </span>
+            )}
           </li>
         )
       })}
@@ -210,8 +259,14 @@ export function OptionList({ item, chosenIndex, ready }: { item: Pick<AttemptRev
   )
 }
 
-export function Explanation({ text, ready }: { text: string; ready?: boolean }) {
+/**
+ * The question's explanation. With authored per-option explanations it is
+ * only a fallback: shown when the correct option has none of its own.
+ */
+export function Explanation({ text, ready, item }: { text: string; ready?: boolean; item?: { options: string[]; correctIndex: number; optionExplanations?: string[] } }) {
   if (!text.trim()) return null
+  const perOption = item ? usableOptionExplanations(item) : null
+  if (perOption && item && perOption[item.correctIndex]?.trim()) return null
   return (
     <div className="mt-3 rounded-lg border border-accent-light bg-accent-subtle p-3 dark:border-accent/40 dark:bg-accent-light/10">
       <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-accent dark:text-accent-muted">Explanation</p>
@@ -220,14 +275,51 @@ export function Explanation({ text, ready }: { text: string; ready?: boolean }) 
   )
 }
 
-type Filter = 'missed' | 'flagged' | 'all'
+type Filter = 'missed' | 'flagged' | 'all' | 'report'
+
+/** Attempts long enough for a Report tab: full-lengths, practice tests, question-bank sets, SAT tests and diagnostics. */
+const REPORT_KINDS = new Set(['mcat-fl', 'mcat-practice', 'qbank', 'sat-practice', 'diagnostic'])
+/** Kinds whose per-question times are averages (per passage / per attempt). */
+const APPROX_TIMING_KINDS = new Set(['mcat-fl', 'mcat-practice'])
+/** Mistake-log / flashcard course slugs per review course. */
+const COURSE_SLUGS: Record<string, string> = { mcat: 'mcat-prep', sat: 'sat-prep' }
+
+/** Prefilled card for "Make a flashcard": the stem on the front, the answer (and why) on the back. */
+function flashcardFor(item: AttemptReviewItem): { front: string; back: string } {
+  const answer = isGridIn(item)
+    ? item.gridIn ? String(item.gridIn.correctAnswer) : ''
+    : item.options[item.correctIndex] ?? ''
+  const back = [answer && `Answer: ${answer}`, item.explanation.trim()].filter(Boolean).join('\n\n')
+  return { front: item.question, back }
+}
 
 interface Row {
   pos: number
   item: AttemptReviewItem | null
 }
+const NO_ROWS: Row[] = []
 
-function QuestionCard({ row, open, onToggle, ready }: { row: Row; open: boolean; onToggle: () => void; ready: boolean }) {
+interface CardContext {
+  kind: string
+  attemptId: string
+  course: string
+}
+
+function QuestionCard({
+  row,
+  open,
+  onToggle,
+  ready,
+  stat,
+  ctx,
+}: {
+  row: Row
+  open: boolean
+  onToggle: () => void
+  ready: boolean
+  stat?: QuestionStat
+  ctx?: CardContext
+}) {
   const { item, pos } = row
   if (!item) {
     return (
@@ -244,7 +336,8 @@ function QuestionCard({ row, open, onToggle, ready }: { row: Row; open: boolean;
   const bodyId = `review-q-${pos}`
   return (
     <li
-      className={`rounded-xl border bg-white dark:bg-gray-800 ${status === 'wrong' ? 'border-red-200 dark:border-red-900' : status === 'skipped' ? 'border-amber-200 dark:border-amber-900' : 'border-gray-200 dark:border-gray-700'}`}
+      id={`review-card-${pos}`}
+      className={`scroll-mt-4 rounded-xl border bg-white dark:bg-gray-800 ${status === 'wrong' ? 'border-red-200 dark:border-red-900' : status === 'skipped' ? 'border-amber-200 dark:border-amber-900' : 'border-gray-200 dark:border-gray-700'}`}
     >
       <button
         type="button"
@@ -309,9 +402,23 @@ function QuestionCard({ row, open, onToggle, ready }: { row: Row; open: boolean;
               ) : null}
             </div>
           ) : (
-            <OptionList item={item} chosenIndex={item.chosenIndex} ready={ready} />
+            <OptionList item={item} chosenIndex={item.chosenIndex} ready={ready} shares={sharesOf(stat, item.options.length)} />
           )}
-          <Explanation text={item.explanation} ready={ready} />
+          <AnswerStatsSummary stat={stat} durationMs={item.durationMs} className="mt-2" />
+          <Explanation text={item.explanation} ready={ready} item={item} />
+          {ctx && (
+            <>
+              <AskAboutQuestion target={{ kind: ctx.kind, attemptId: ctx.attemptId, itemIndex: item.index }} />
+              <div className="mt-3">
+                <MakeFlashcardButton
+                  {...flashcardFor(item)}
+                  courseSlug={COURSE_SLUGS[ctx.course]}
+                  topicSlug={item.topicSlug}
+                  origin="mistake"
+                />
+              </div>
+            </>
+          )}
         </div>
       )}
     </li>
@@ -342,7 +449,46 @@ export default function AttemptReview({ attempt }: { attempt: AttemptReviewData 
       return next
     })
 
-  const visible = filter === 'missed' ? missed : filter === 'flagged' ? flagged : rows
+  const visible = filter === 'missed' ? missed : filter === 'flagged' ? flagged : filter === 'report' ? NO_ROWS : rows
+
+  // How others answered: one batched request for the whole attempt (it is
+  // already submitted, so every question has been answered).
+  const statRequests = useMemo(
+    () => attempt.items.filter((i): i is AttemptReviewItem => !!i).map((i) => ({ questionKey: i.questionKey, options: i.options })),
+    [attempt.items],
+  )
+  const stats = useAnswerStats(statRequests)
+  const ctx: CardContext = useMemo(() => ({ kind: attempt.kind, attemptId: attempt.id, course: attempt.course }), [attempt.kind, attempt.id, attempt.course])
+
+  const hasReport = REPORT_KINDS.has(attempt.kind) && attempt.items.some(Boolean)
+  const report = useMemo(() => {
+    if (!hasReport) return null
+    const medians = new Map<string, number | null>()
+    for (const [k, s] of stats) if (!s.insufficient) medians.set(k, s.medianSeconds)
+    return buildReviewReport(
+      attempt.items
+        .filter((i): i is AttemptReviewItem => !!i)
+        .map((i) => ({
+          index: i.index,
+          questionKey: i.questionKey,
+          topicSlug: i.topicSlug,
+          topicTitle: i.topicTitle,
+          discipline: i.discipline,
+          skill: i.skill,
+          durationMs: i.durationMs,
+          status: itemStatus(i),
+        })),
+      { medianSecondsByKey: medians },
+    )
+  }, [hasReport, attempt.items, stats])
+
+  const openQuestion = (index: number) => {
+    const r = rows.find((x) => x.item?.index === index)
+    if (!r) return
+    setFilter('all')
+    setOpen((prev) => new Set(prev).add(r.pos))
+    requestAnimationFrame(() => document.getElementById(`review-card-${r.pos}`)?.scrollIntoView({ block: 'start' }))
+  }
 
   // Consecutive visible questions on the same passage share one passage block.
   const groups = useMemo(() => {
@@ -358,10 +504,11 @@ export default function AttemptReview({ attempt }: { attempt: AttemptReviewData 
 
   const taken = new Date(attempt.takenAt)
   const unavailable = attempt.items.filter((i) => !i).length
-  const tabs: { key: Filter; label: string; count: number }[] = [
+  const tabs: { key: Filter; label: string; count?: number }[] = [
     { key: 'missed', label: 'Missed', count: missed.length },
     { key: 'flagged', label: 'Flagged', count: flagged.length },
     { key: 'all', label: 'All', count: rows.length },
+    ...(hasReport ? [{ key: 'report' as const, label: 'Report' }] : []),
   ]
 
   return (
@@ -399,7 +546,13 @@ export default function AttemptReview({ attempt }: { attempt: AttemptReviewData 
                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
             }`}
           >
-            {t.label} ({t.count})
+            {t.key === 'report' ? (
+              <span className="inline-flex items-center gap-1.5">
+                <BarChart3 className="h-4 w-4" aria-hidden /> {t.label}
+              </span>
+            ) : (
+              `${t.label} (${t.count})`
+            )}
           </button>
         ))}
       </div>
@@ -410,7 +563,9 @@ export default function AttemptReview({ attempt }: { attempt: AttemptReviewData 
         </p>
       )}
 
-      {visible.length === 0 ? (
+      {filter === 'report' && report ? (
+        <ReviewReport report={report} approximateTiming={APPROX_TIMING_KINDS.has(attempt.kind)} onOpenQuestion={openQuestion} />
+      ) : visible.length === 0 ? (
         <p className="rounded-xl border border-gray-200 bg-white px-4 py-6 text-center text-sm text-gray-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400">
           {filter === 'missed' ? 'Nothing missed on this attempt.' : filter === 'flagged' ? 'You did not flag any questions.' : 'No questions to show.'}
         </p>
@@ -426,7 +581,15 @@ export default function AttemptReview({ attempt }: { attempt: AttemptReviewData 
               )}
               <ul className="space-y-2">
                 {g.rows.map((r) => (
-                  <QuestionCard key={r.pos} row={r} open={open.has(r.pos)} onToggle={() => toggle(r.pos)} ready={ready} />
+                  <QuestionCard
+                    key={r.pos}
+                    row={r}
+                    open={open.has(r.pos)}
+                    onToggle={() => toggle(r.pos)}
+                    ready={ready}
+                    stat={r.item ? stats.get(r.item.questionKey) : undefined}
+                    ctx={ctx}
+                  />
                 ))}
               </ul>
             </Fragment>

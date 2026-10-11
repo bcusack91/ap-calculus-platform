@@ -49,6 +49,12 @@ export const FL7_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'With friends watching, the mean fell from 12.0 in the 13–15 group to 6.1 in the 25–27 group, whereas the alone means stayed close to 6 at every age, so age made a difference only under observation. Risk-taking alone did not fall with age, and the amount added by observation shrank from about 6 intersections to almost none. The youngest and oldest groups did not differ when tested alone. In the two oldest groups the watched means (7.0 and 6.1) were at or above the alone means, not below them.',
+        optionExplanations: [
+          'Risk-taking alone did not fall with age; the alone means stayed near 6 at every age (6.0, 6.2, 5.8, 6.0). And being watched added about 6 intersections in the youngest group but almost nothing in the oldest, not a similar amount.',
+          'When tested alone, the youngest (6.0) and oldest (6.0) groups did not differ at all. The age difference appeared only when friends were watching.',
+          'With friends watching, the mean fell from 12.0 in the 13–15 group to 6.1 in the 25–27 group, while the alone means stayed close to 6 at every age. Age made a difference only under observation, and the youngest group was highest.',
+          'In the two oldest groups the watched means (7.0 and 6.1) were at or above the alone means (5.8 and 6.0), not below them. Being watched never reduced risk-taking.',
+        ],
         skill: '7A data interpretation: age by peer-context interaction',
       },
       {
@@ -63,6 +69,12 @@ export const FL7_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'A personal fable includes the belief that misfortunes that befall others will not befall oneself, so it predicts that adolescents would rate their own chance of crashing and being hurt lower than adults do; the ratings did not differ by age. An imaginary audience concerns the sense of being watched and judged, about which the questionnaire says nothing, and it fits an effect that appears only under observation. A responsive reward system and an immature control system are claims about what drives or restrains a choice, not about what the chooser believes the odds to be, so equal ratings leave both intact.',
+        optionExplanations: [
+          'A personal fable includes believing that misfortunes striking others will not strike oneself, so it predicts adolescents would rate their own chance of crashing lower than adults. Ratings did not differ by age, which is inconsistent with that attribution.',
+          'An imaginary audience concerns the sense of being watched and judged, about which the questionnaire says nothing. It also fits an effect that appears only when friends are watching, so the ratings do not undermine it.',
+          'A highly responsive reward system is a claim about what drives a choice, not about what the chooser believes the odds to be. Equal risk ratings across ages leave this explanation intact.',
+          'A slowly maturing control system concerns what restrains a choice, not estimates of probability. Equal ratings of crash likelihood say nothing against it.',
+        ],
         skill: '7A adolescent egocentrism: personal fable (evaluating evidence)',
       },
       {
@@ -77,6 +89,12 @@ export const FL7_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Inexperience is a property of the participants and would be present whether or not anyone was watching, so if it caused risky performance the 13–15 group should also have exceeded the older groups when alone; Figure 1 shows that their alone mean was about 6, the same as that of the 25–27 group. Equal ratings of crash likelihood concern beliefs about real roads, not skill at the simulated task. An equal cash bonus shows that incentives were matched but says nothing about skill. Lower prefrontal activity in the youngest group is a difference between age groups that inexperience might itself produce, so it cannot rebut the objection.',
+        optionExplanations: [
+          'Equal ratings of crash likelihood concern beliefs about real roads, not skill at the simulated task. They do not show whether the youngest participants were worse at the simulation.',
+          'An equal cash bonus shows that incentives were matched across groups but says nothing about skill or experience. It does not address whether inexperience inflated risk-taking.',
+          'Lower prefrontal activity in the youngest group is a difference between age groups that inexperience itself might produce. It cannot rebut an objection based on inexperience.',
+          'Inexperience is a property of the participants that would be present whether or not anyone watched. If it caused risky performance, the 13–15 group should have exceeded older groups when alone; their alone mean was about 6, the same as the 25–27 group.',
+        ],
         skill: '7A research design: ruling out inexperience as a confound',
       },
       {
@@ -91,6 +109,12 @@ export const FL7_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Among the youngest participants, friends raised activity in the ventral striatum, a reward structure, at the moment of decision while leaving lateral prefrontal activity unchanged, which points to a stronger pull toward the rewarding option and not to weaker restraint. Reduced activity in control regions is ruled out by the finding that prefrontal activity was the same in the two conditions. Estimates of crash likelihood were measured by the questionnaire, not by imaging, and they did not differ by condition. Nothing in the imaging data concerns response time, and slower responding would not explain choosing to drive through.',
+        optionExplanations: [
+          'Reduced activity in control regions is ruled out by the imaging data: lateral prefrontal activity was the same in the alone and peer conditions within each age group. Friends did not weaken restraint.',
+          'Among the youngest participants, friends raised ventral striatum activity, a reward structure, at the moment of decision while prefrontal activity was unchanged. This points to a stronger pull toward the rewarding option, not weaker restraint.',
+          'Estimates of crash likelihood were measured by the questionnaire, not by imaging, and they did not differ by condition. The imaging results do not bear on probability estimates.',
+          'Nothing in the imaging data concerns response time, and slower responding would not explain why participants chose to drive through rather than brake.',
+        ],
         skill: '7A dual systems model: reward vs control (reasoning from data)',
       },
     ],
@@ -122,6 +146,12 @@ export const FL7_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'The share of low-income tracts with no supermarket nearby is 38% and 34% in the two areas with an index above 60 (W and Y) and 14% and 12% in the two areas with an index near 40 (X and Z), and this holds whether the group poverty rate is 28% or 12%. Area Y has a low poverty rate yet a high share of such tracts, so a high poverty rate is not required. The four values are far from equal. The moderately segregated areas have the lowest values in the column, not the highest.',
+        optionExplanations: [
+          'Area Y has a low Black poverty rate (12%) yet a high share of low-income tracts without a supermarket (34%). A high poverty rate is therefore not required for food deserts to be common.',
+          'The share of low-income tracts without a nearby supermarket is 38% and 34% in the highly segregated areas (W and Y) and 14% and 12% in the moderately segregated areas (X and Z). This holds whether group poverty is 28% or 12%.',
+          'The four values (38%, 14%, 34%, 12%) are far from equal. They divide clearly by segregation level, with the highly segregated areas showing roughly three times the share.',
+          'The moderately segregated areas (X and Z) have the lowest values in the column, 14% and 12%, not the highest. This reverses the actual pattern.',
+        ],
         skill: '10A data interpretation: segregation and food deserts',
       },
       {
@@ -136,6 +166,12 @@ export const FL7_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Segregation confines a group to a limited set of tracts, and those tracts take on the poverty rate of the group that lives in them; with a group poverty rate of 12% in area Y, compared with 28% in area W, few of its segregated tracts cross the 40% line. An index of 76 means that Black residents of area Y are far from evenly spread. Supermarket access is poor in area Y (34% of low-income tracts lack one), and distance to a store does not determine whether a tract is classed as high-poverty. The 40% definition of a high-poverty tract applies to all four areas alike; 60 is a cutoff for the dissimilarity index.',
+        optionExplanations: [
+          'An index of 76 means Black residents of area Y are far from evenly spread; about 76% would have to change tracts for an even distribution. Even spreading cannot be the explanation.',
+          'Supermarket access is poor in area Y (34% of low-income tracts lack one), and distance to a store does not determine whether a tract is classed as high-poverty. The 40% poverty definition is independent of food access.',
+          'The 40% definition of a high-poverty tract applies to all four areas alike. The number 60 is a conventional cutoff for the dissimilarity index, not for tract poverty.',
+          'Segregation confines a group to a limited set of tracts, which take on that group’s poverty rate. With Black poverty at 12% in area Y versus 28% in area W, few of Y’s segregated tracts cross the 40% line even though segregation is equally severe.',
+        ],
         skill: '10A residential segregation and concentrated poverty',
       },
       {
@@ -150,6 +186,12 @@ export const FL7_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Random assignment made the three groups alike on average, and comparing them as assigned preserves that equivalence; because only 48% of the low-poverty voucher group and 62% of the unrestricted group moved, each voucher group’s averages include many families that never left, and any effect of moving is diluted. The comparison cannot overstate the effect of moving, since non-movers pull the group average toward the control value. It is the alternative analysis, restricted to movers, that would let motivation differ between groups, because families that manage to use a voucher are self-selected. Comparing by assignment is the approach that avoids that problem, so it does not introduce a difference in motivation in either direction.',
+        optionExplanations: [
+          'Random assignment made the three groups alike on average, and comparing them as assigned preserves that. Because only 48% and 62% of the voucher groups actually moved, each group’s average includes many non-movers, which dilutes and understates any effect of moving.',
+          'The comparison cannot overstate the effect of moving. Non-movers in the voucher groups pull the group average toward the control value, so any true effect of moving is diluted rather than exaggerated.',
+          'It is the alternative analysis restricted to movers that would let motivation differ between groups, since families who manage to use a voucher are self-selected. Comparing by assignment avoids that problem.',
+          'Comparing by assignment keeps the groups comparable rather than letting motivation differ. The understatement comes from dilution by non-movers, not from any difference in motivation.',
+        ],
         skill: '10A research design: analysis by assigned group',
       },
       {
@@ -163,6 +205,12 @@ export const FL7_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'Children assigned to the low-poverty voucher group before age 13 later earned about 2,400 dollars a year more than controls, whereas those assigned at 13 to 18 earned slightly less than controls, which fits a benefit that accumulates with years of childhood spent in the new neighborhood. Adult employment was 52% to 53% in every group, so parental employment cannot be the route. Adolescents showed no gain, so the benefit did not extend to every age. The two vouchers had the same value, yet the unrestricted voucher produced a much smaller gain for young children, so the place and not the subsidy made the difference.',
+        optionExplanations: [
+          'Adult employment was 52% to 53% in every group, so parental employment did not change. It cannot be the route by which children’s later earnings rose.',
+          'Adolescents (aged 13–18 at assignment) in the low-poverty group earned slightly less than controls (11,300 vs 12,000), so the benefit did not extend to every age, let alone favor adolescents.',
+          'Children assigned to the low-poverty voucher group before age 13 later earned about 2,400 dollars a year more than controls, while those assigned at 13–18 earned slightly less. This fits a benefit that accumulates with years of childhood spent in the new neighborhood.',
+          'The two vouchers had the same value, yet the unrestricted voucher produced a much smaller gain for young children (600 vs 2,400 dollars). The destination neighborhood, not the subsidy amount, made the difference.',
+        ],
         skill: '10A neighborhood effects: childhood exposure',
       },
     ],
@@ -193,6 +241,12 @@ export const FL7_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'The two conditions are separated chiefly by time course: delirium arises within hours or days, whereas Alzheimer’s disease advances over years, so learning that he was oriented and managing a week ago would point to delirium, and learning of a long decline would point to dementia. Vocabulary and general knowledge are preserved in normal aging and until late in Alzheimer’s disease, and a delirious patient may be unable to attend to the test at all, so the score would not discriminate. Memories of early adulthood are likewise spared early in Alzheimer’s disease. A family history bears on long-term risk, not on what is happening today.',
+        optionExplanations: [
+          'Vocabulary and general knowledge are preserved in normal aging and until late in Alzheimer’s disease, and a delirious patient may be unable to attend to the test at all. The score would not discriminate between the two conditions.',
+          'Memories of early adulthood are spared early in Alzheimer’s disease and would also be hard to assess in a patient who cannot attend. This information does not separate delirium from dementia.',
+          'A family history bears on long-term risk of a memory disorder, not on what is happening today. It cannot tell whether the current disorientation is acute or chronic.',
+          'The two conditions are separated chiefly by time course: delirium arises within hours or days, Alzheimer’s disease over years. Learning he was oriented and managing a week ago points to delirium; a long decline points to dementia.',
+        ],
         skill: '7A delirium vs dementia: time course',
       },
       {
@@ -207,6 +261,12 @@ export const FL7_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Inhibiting the enzyme that degrades acetylcholine lets each released molecule act longer, which compensates in part for the shrinking number of cholinergic neurons; because the neurons continue to die, there is progressively less transmitter to preserve and the benefit fades. The drugs inhibit an enzyme and do not block receptors, and blocking receptors would worsen cognition from the start. They have no action on beta-amyloid plaques or tau tangles. Dopamine loss in the basal ganglia is the lesion of Parkinson’s disease, not the target of these drugs.',
+        optionExplanations: [
+          'Inhibiting the enzyme that degrades acetylcholine lets each released molecule act longer, partly compensating for the shrinking number of cholinergic neurons. Because the neurons continue to die, there is progressively less transmitter to preserve and the benefit fades.',
+          'These drugs inhibit an enzyme; they do not block receptors. Blocking acetylcholine receptors would worsen cognition from the start rather than produce modest improvement.',
+          'Acetylcholinesterase inhibitors have no action on beta-amyloid plaques or tau tangles. They act on neurotransmitter breakdown, not on the disease’s pathology.',
+          'Dopamine loss in the basal ganglia is the lesion of Parkinson’s disease, not the target of these drugs. Acetylcholinesterase inhibitors act on acetylcholine, not dopamine.',
+        ],
         skill: '7A Alzheimer’s disease: cholinergic treatment (reasoning)',
       },
       {
@@ -221,6 +281,12 @@ export const FL7_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'His amnesia with confabulation after heavy alcohol use is Korsakoff syndrome, which stops advancing once drinking ends and thiamine is replaced but usually leaves the existing memory deficit in place; Alzheimer’s disease progresses, so the other patient will have declined over the same two years. Full recovery is unlikely because the damage already done is frequently permanent, and an Alzheimer’s patient does not remain unchanged. Spreading loss of language and judgment describes the cortical progression of Alzheimer’s disease, whereas reasoning and vocabulary are comparatively preserved in Korsakoff syndrome. Resting tremor and rigidity are signs of Parkinson’s disease.',
+        optionExplanations: [
+          'Full recovery is unlikely because the memory deficit of Korsakoff syndrome is frequently permanent once established. And an Alzheimer’s patient does not remain unchanged over two years; the disease progresses.',
+          'Spreading loss of language and judgment describes the cortical progression of Alzheimer’s disease. In Korsakoff syndrome reasoning and vocabulary are comparatively preserved, so the Korsakoff patient would show less such loss, not more.',
+          'His amnesia with confabulation after heavy alcohol use is Korsakoff syndrome, which stops advancing once drinking ends and thiamine is replaced but usually leaves the existing memory deficit. Alzheimer’s disease progresses, so the other patient will have declined.',
+          'Resting tremor and rigidity are motor signs of Parkinson’s disease, caused by loss of nigral dopamine neurons. They are not features of Korsakoff syndrome.',
+        ],
         skill: '7A Korsakoff syndrome: course compared with Alzheimer’s disease',
       },
       {
@@ -235,6 +301,12 @@ export const FL7_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Loss of the nigral dopamine neurons is the lesion of Parkinson’s disease, so the patients would develop its motor signs, while memory, which depends on other structures, would be unaffected at first. Amnesia with confabulation is Korsakoff syndrome, produced by thiamine deficiency and damage to the mammillary bodies and medial thalamus. Fluctuating attention with hallucinations that resolves is delirium, a reversible consequence of a medical disturbance and not of selective cell loss. Gradual loss of recent memory followed by language difficulty is the course of Alzheimer’s disease, which begins in the medial temporal lobe.',
+        optionExplanations: [
+          'Amnesia with confabulation is Korsakoff syndrome, produced by thiamine deficiency and damage to the mammillary bodies and medial thalamus. A dopamine-specific toxin would not produce this pattern.',
+          'Loss of the nigral dopamine neurons is the lesion of Parkinson’s disease, so the patients would develop its motor signs: slowness, rigidity and tremor. Memory depends on other structures and would be unaffected at first.',
+          'Fluctuating attention with hallucinations that resolves within a week is delirium, a reversible consequence of a medical disturbance. Selective permanent cell loss would not clear up in a week.',
+          'Gradual loss of recent memory followed by word-finding difficulty is the course of Alzheimer’s disease, which begins in the medial temporal lobe. It is not the result of nigral dopamine loss.',
+        ],
         skill: '7A Parkinson’s disease: nigral dopamine loss',
       },
       {
@@ -248,6 +320,12 @@ export const FL7_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Becoming lost on a long-familiar route is a failure of spatial orientation that threatens independent travel, which normal aging leaves intact and which is characteristic of a neurocognitive disorder. Needing more practice to learn a new device reflects the slower learning of new procedures that accompanies healthy aging. A name that cannot be retrieved at the moment but returns later is the ordinary retrieval lapse of older adults, since the memory itself was not lost. Slower mental arithmetic reflects reduced processing speed, also a normal change.',
+        optionExplanations: [
+          'Needing more practice to learn a new device reflects the slower learning of new procedures that accompanies healthy aging. The passage lists this as a normal change.',
+          'A name that cannot be retrieved at the moment but returns later is the ordinary retrieval lapse of older adults. The memory itself was not lost, which the passage describes as normal aging.',
+          'Slower mental arithmetic reflects reduced processing speed, which the passage identifies as a normal part of growing old.',
+          'Losing her way on a long-familiar route is a failure of spatial orientation that threatens independent travel. Normal aging leaves this intact; such a loss is characteristic of a neurocognitive disorder.',
+        ],
         skill: '7A normal aging vs neurocognitive disorder',
       },
     ],
@@ -277,6 +355,12 @@ export const FL7_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'The team’s failure was an illusion of unanimity built on self-censorship: doubts existed but were invisible, and gathering each member’s view privately before discussion would have revealed that the doubts were shared. Having the leader speak last addresses a leader who steers the group, but this leader had stated no preference. New members from the same department would bring no outside perspective and would face the same silence. Recalling past successes would feed the group’s overestimation of itself, one of the symptoms of groupthink, and would make doubts harder to voice.',
+        optionExplanations: [
+          'Having the leader speak last addresses a leader who steers the group by announcing a preference early. This leader expressed no preference, so that was not the problem.',
+          'New members from the same department would bring no outside perspective and would face the same silence. They would not break the illusion of unanimity.',
+          'The team’s failure was an illusion of unanimity built on self-censorship: doubts existed but were invisible. Gathering each member’s view privately before discussion would have revealed that the doubts were widely shared.',
+          'Recalling past successes would feed the group’s overestimation of itself, one of the symptoms of groupthink, and make doubts harder to voice.',
+        ],
         skill: '8B groupthink: matching a remedy to a symptom',
       },
       {
@@ -291,6 +375,12 @@ export const FL7_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'A minority persuades when it is consistent over time and confident without seeming dogmatic, and a member who keeps the same position while answering her colleagues’ arguments meets both conditions. Shifting from one objection to another is the wavering that leads a minority to be dismissed. Repeating a position in the same words regardless of what is said shows consistency but also the rigidity that the passage says undermines a minority. Agreeing first and objecting later sacrifices consistency over time, the feature on which minority influence depends.',
+        optionExplanations: [
+          'Shifting from one objection to another is the wavering that leads a minority to be dismissed. Consistency over time is the condition the passage identifies for minority influence.',
+          'A minority persuades when it is consistent over time and confident without seeming dogmatic. Holding the same position while engaging with colleagues’ replies meets both conditions.',
+          'Repeating a position in identical words regardless of replies shows consistency but also the rigidity that the passage says undermines a minority. A minority that seems dogmatic is dismissed.',
+          'Agreeing first and objecting later sacrifices consistency over time, the feature on which minority influence depends. A minority that wavers is dismissed.',
+        ],
         skill: '8B minority influence: consistency without rigidity',
       },
       {
@@ -305,6 +395,12 @@ export const FL7_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'Because the confederate delivered the same arguments in both conditions, what was said cannot explain why one set of groups produced more solutions; only the belief about why the member was dissenting differed. Random assignment makes the groups comparable in their members’ abilities and so rules out preexisting differences, but it does not equate the dissent itself. Keeping the judges unaware of condition prevents biased counting of solutions, a matter of measurement. Holding group size constant removes size as an explanation but again says nothing about the content of the arguments.',
+        optionExplanations: [
+          'Because the confederate delivered the same arguments in both conditions, what was said cannot explain why one set of groups produced more solutions. Only the belief about why the member was dissenting differed.',
+          'Random assignment makes the groups comparable in their members’ abilities and rules out preexisting differences, but it does not equate the dissent itself. Only the common script does that.',
+          'Keeping the judges unaware of condition prevents biased counting of solutions, a matter of measurement. It does not control the content of the dissent.',
+          'Holding group size constant removes size as an explanation but says nothing about the content of the arguments. The script is what holds content constant.',
+        ],
         skill: '8B research design: holding message content constant',
       },
       {
@@ -319,6 +415,12 @@ export const FL7_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Strong identifiers are the members most motivated to do what their team’s norms call for, and Team 1’s norm calls for speaking up, so on that team identification promotes voicing doubts. The teams are equally cohesive, so cohesion cannot distinguish them, and Team 2’s norm discourages questioning. Strongly identified members care more, not less, about their standing as good members; they speak up on Team 1 because doing so is what a good member does. The claim that identification always suppresses dissent ignores the passage’s point that its effect depends on the content of the norm.',
+        optionExplanations: [
+          'The teams are equally cohesive, so cohesion cannot distinguish them. And Team 2’s norm, never second-guessing, discourages questioning, so strong identifiers there would be least likely to voice doubts.',
+          'Strongly identified members care more, not less, about their standing as good members. They speak up on Team 1 because doing so is what a good member does under that team’s norm.',
+          'The passage says whether identification stifles or encourages dissent depends on the team’s norms. Identification does not always suppress dissent; on Team 1 it promotes it.',
+          'Strong identifiers are the members most motivated to do what their team’s norms prescribe, and Team 1’s norm calls for speaking up. On that team, strong identification promotes voicing doubts.',
+        ],
         skill: '8A social identity: identification and team norms',
       },
       {
@@ -333,6 +435,12 @@ export const FL7_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Groupthink is a defect of process, marked by insulation from outsiders and a failure to weigh alternatives, so a council that argued over several sites and listened to outside critics did not show it, and its bad outcome must have another cause. Withholding reservations is self-censorship, a symptom of the pressure toward uniformity. Dismissing opponents as ignorant and self-interested is a stereotyped view of rivals. Failing to prepare for cost overruns is the absence of a fallback plan, one of the defects in decision making that groupthink produces.',
+        optionExplanations: [
+          'Withholding reservations during meetings is self-censorship, a symptom of the pressure toward uniformity. This finding would support a groupthink diagnosis, not count against it.',
+          'Groupthink is a defect of process marked by insulation from outsiders and failure to weigh alternatives. A council that debated several sites and heard outside critics did not show it, so the bad outcome must have another cause.',
+          'Dismissing opponents as ignorant and self-interested is a stereotyped view of rivals, one of the closed-mindedness symptoms of groupthink. It supports the attribution.',
+          'Failing to prepare for cost overruns is the absence of a fallback plan, one of the defective decision-making outcomes that groupthink produces. It supports the attribution.',
+        ],
         skill: '8B groupthink: process vs outcome',
       },
     ],
@@ -364,6 +472,12 @@ export const FL7_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 0,
         explanation:
           'The teacher takes part voluntarily and without material reward because she values the goal, which makes the hospital a normative organization for her, and the committed patient is held against his will, which makes it a coercive organization for him. The hospital is utilitarian only for those who take part in exchange for pay, such as the nurse, so neither the teacher nor the patient fits that type. Reversing the two terms would have the unpaid volunteer held by force and the committed patient joining out of conviction.',
+        optionExplanations: [
+          'The teacher takes part voluntarily and without pay because she values the goal, making the hospital normative for her. The committed patient is held against his will, making it coercive for him.',
+          'The hospital is utilitarian only for those who participate for material benefit, such as the salaried nurse. The unpaid teacher is not there for material reward, so utilitarian does not describe her.',
+          'Normative is right for the teacher, but utilitarian describes those who take part for material benefit, such as the salaried nurse. The committed patient is held against his will, which makes the hospital coercive for him, not utilitarian.',
+          'This reverses the two terms. It would have the unpaid volunteer held by force and the committed patient joining out of conviction.',
+        ],
         skill: '9A types of formal organizations: coercive, utilitarian, normative',
       },
       {
@@ -377,6 +491,12 @@ export const FL7_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 3,
         explanation:
           'Ritualism is devotion to procedure at the expense of the purpose the procedure serves, and a clerk who lets a billing form take precedence over urgent care has put the rule above the hospital’s aim of treating patients. A nurse who skips a required check is departing from the rules, the opposite of clinging to them. Appointing a nephew over a qualified applicant violates impersonality and selection by qualification, but it is favoritism, not excessive rule-following. Standardizing drug orders to reduce errors is a rule adopted in service of the organization’s goal.',
+        optionExplanations: [
+          'A nurse who skips a required check is departing from the rules to save time, the opposite of clinging to procedure. Ritualism is excessive rule-following, not rule-breaking.',
+          'Appointing a nephew over a qualified applicant violates impersonality and selection by qualification, but it is favoritism, not excessive rule-following. It is a departure from bureaucratic principles rather than ritualism.',
+          'Standardizing drug orders to reduce errors is a rule adopted in service of the organization’s goal. It is procedure serving purpose, not procedure displacing it.',
+          'Ritualism is devotion to procedure at the expense of the purpose it serves. A clerk who lets a billing form take precedence over a bleeding patient has put the rule above the hospital’s aim of treating patients.',
+        ],
         skill: '9A bureaucratic ritualism',
       },
       {
@@ -391,6 +511,12 @@ export const FL7_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 2,
         explanation:
           'When the staff withdrew their shortcuts and personal contacts and relied on the formal procedures alone, performance fell, which shows that the informal structure had been carrying part of the department’s work. Nothing suggests that the procedures were written in order to slow the work; they were simply insufficient by themselves. The same staff, with the same qualifications, had produced shorter waits before the dispute. The number of supervisory levels did not change, so it cannot explain a change in waiting time.',
+        optionExplanations: [
+          'Nothing suggests the procedures were written in order to slow the work. They were simply insufficient on their own; the informal shortcuts had been making up the difference.',
+          'The same staff, with the same qualifications, had produced shorter waits before the dispute. Qualifications did not change, so they cannot explain the doubled waiting time.',
+          'When staff withdrew their shortcuts and personal contacts and relied on formal procedures alone, performance fell. The informal structure had been carrying part of the department’s work.',
+          'The number of supervisory levels did not change during the dispute, so it cannot explain a change in waiting time. The variable that changed was the use of informal arrangements.',
+        ],
         skill: '9A informal structure of organizations',
       },
       {
@@ -404,6 +530,12 @@ export const FL7_PSYCH_SOC_B_PASSAGES: MCATPassage[] = [
         correctAnswer: 1,
         explanation:
           'Rationalization is the replacement of custom and personal judgment by calculated, efficient means to a defined end, and a data-based discharge formula that supersedes each physician’s habits is such a replacement. Naming a wing for the founding family honors tradition and sentiment. Awarding operating times out of respect for seniority follows personal loyalty and custom, not a calculation of efficiency. Nurses who arrange among themselves to cover breaks are creating informal structure, which lies outside the organization’s official rules.',
+        optionExplanations: [
+          'Naming a wing for the founding family honors tradition and sentiment. Rationalization is the displacement of exactly those things by calculated efficiency.',
+          'Rationalization is the replacement of custom and personal judgment by calculated, efficient means to a defined end. A data-based discharge formula superseding each physician’s habits is such a replacement.',
+          'Awarding operating times out of respect for long service follows personal loyalty and custom, not a calculation of efficiency. It is the kind of practice rationalization displaces.',
+          'Nurses who arrange among themselves to cover breaks are creating informal structure outside the official rules. That is not rationalization, which concerns formal calculated procedures.',
+        ],
         skill: '9A rationalization (Weber)',
       },
     ],
@@ -421,6 +553,12 @@ export const FL7_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'The lips, like the fingertips, are densely supplied with touch receptors that have small receptive fields, and they occupy a disproportionately large part of the somatosensory homunculus, so two nearby points are resolved there almost as well as on a fingertip. The upper back, thigh, and forearm are large regions with sparse receptors, large receptive fields, and small cortical representations, and their two-point thresholds are several times greater, on the order of centimeters.',
+    optionExplanations: [
+      'The upper back is a large region with sparse touch receptors, large receptive fields, and a small cortical representation. Its two-point threshold is several centimeters, far larger than a fingertip’s.',
+      'The thigh has sparse receptors and large receptive fields, with a small share of the somatosensory cortex. Two points must be centimeters apart to be distinguished there.',
+      'The lips, like the fingertips, are densely supplied with touch receptors with small receptive fields and occupy a disproportionately large part of the somatosensory homunculus. Two nearby points are resolved there almost as well as on a fingertip.',
+      'The forearm has relatively sparse receptors and a modest cortical representation. Its two-point threshold is on the order of centimeters, much larger than the few millimeters of a fingertip or the lips.',
+    ],
     skill: '6A somatosensory homunculus and two-point threshold',
   },
   {
@@ -438,6 +576,12 @@ export const FL7_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'Recall was high in the two groups whose test conditions matched their study conditions (68% and 67%) and low in the two whose conditions differed (52% and 51%), the pattern predicted by encoding specificity, according to which cues present at encoding aid retrieval when they are present again. Silent study did not help by itself, since silent study followed by a noisy test gave 52%. A silent test did not help by itself, since noisy study followed by a silent test gave 51%. An account based on the effort that noise demands would predict a uniform effect of noise, yet noise at both stages gave recall as high as silence at both.',
+    optionExplanations: [
+      'Recall was high when test conditions matched study conditions (68% and 67%) and low when they differed (52% and 51%). This is encoding specificity: cues present at encoding aid retrieval when present again.',
+      'Silent study did not help by itself: silent study followed by a noisy test gave only 52%. Noisy study with a noisy test gave 67%, so distraction at study was not the deciding factor.',
+      'A silent test did not help by itself: noisy study followed by a silent test gave only 51%. Noisy study with a noisy test gave 67%, so distraction at retrieval was not the deciding factor.',
+      'An account based on effort would predict a uniform effect of noise, yet noise at both stages gave recall (67%) as high as silence at both (68%). Effort cannot explain a pattern that depends on matching.',
+    ],
     skill: '6B encoding specificity: context-dependent memory',
   },
   {
@@ -455,6 +599,12 @@ export const FL7_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'If language strictly determined thought, speakers whose grammar does not mark tense could not distinguish past from future in their reasoning; finding that they do so accurately shows that a concept can be held without being encoded in the language. Superior tracking of direction among speakers who use compass terms, gender-typical descriptions among speakers of gendered languages, and bilinguals’ reports of reasoning differently in each language are all cases in which language appears to shape thought, so they support linguistic relativity and do nothing to contradict the stronger claim.',
+    optionExplanations: [
+      'Superior direction-tracking among speakers who use compass terms is a case of language appearing to shape thought. It supports linguistic relativity and does nothing to contradict the stronger determinist claim.',
+      'Gender-typical descriptions among speakers of gendered languages show language influencing thought. This is consistent with determinism, not evidence against it.',
+      'Bilinguals reporting that they reason differently in each language is another case of language shaping thought. It supports relativity and does not contradict determinism.',
+      'If language strictly determined thought, speakers whose grammar does not mark tense could not distinguish past from future in reasoning. Finding that they do so accurately shows a concept can be held without being encoded in the language.',
+    ],
     skill: '6B linguistic determinism vs relativity (evaluating evidence)',
   },
   {
@@ -467,6 +617,12 @@ export const FL7_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 1,
     explanation:
       'Drug 2 is a receptor agonist: it activates the postsynaptic receptor directly and so needs no dopamine from the presynaptic neuron. Drug 1 is a reuptake inhibitor, which acts by keeping released dopamine in the synapse longer, and Drug 3 slows the breakdown of dopamine; both merely amplify transmitter that the terminals release, so with the terminals gone neither has anything to act on. Any answer that includes Drug 1 or Drug 3 therefore fails. An antagonist, by contrast with all three, would occupy the receptor without activating it and reduce signaling.',
+    optionExplanations: [
+      'Drug 1 is a reuptake inhibitor that keeps released dopamine in the synapse longer. With the dopamine-releasing terminals destroyed, there is no released dopamine to keep, so Drug 1 has nothing to act on.',
+      'Drug 2 is a receptor agonist that activates postsynaptic receptors directly and needs no dopamine from the presynaptic neuron. With receptors intact but terminals destroyed, it is the only drug that can still increase signaling.',
+      'Drugs 1 and 3 both amplify transmitter that terminals release, by blocking reuptake and blocking degradation respectively. With no terminals to release dopamine, neither has anything to act on.',
+      'Drug 2 would work, but Drug 3 slows the breakdown of dopamine and depends on dopamine being released. With the terminals gone, Drug 3 has no substrate to protect.',
+    ],
     skill: '6A drug action: direct agonist vs reuptake inhibitor',
   },
   {
@@ -484,6 +640,12 @@ export const FL7_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 2,
     explanation:
       'A subculture has practices and symbols that set it apart while its members continue to accept the central values and institutions of the wider society, as the club’s members do by working, voting, and raising families; a counterculture defines itself in opposition to those values. Size does not separate the two, since a counterculture may be small and a subculture large. Distinctive symbols and vocabulary are found in both and so cannot distinguish them. Voluntary membership is likewise common to both kinds of group.',
+    optionExplanations: [
+      'Size does not separate subculture from counterculture; a counterculture may be small and a subculture large. The distinction lies in the group’s relation to dominant values.',
+      'Distinctive symbols and vocabulary are found in both subcultures and countercultures, so they cannot distinguish the two. Both kinds of group set themselves apart in this way.',
+      'A subculture keeps distinctive practices while its members continue to accept the central values and institutions of the wider society, as the club’s members do by working, voting and raising families. A counterculture defines itself in opposition to those values.',
+      'Voluntary membership is common to both subcultures and countercultures. Joining by choice does not tell us whether the group accepts or rejects dominant values.',
+    ],
     skill: '9A subculture vs counterculture (defining criterion)',
   },
   {
@@ -501,6 +663,12 @@ export const FL7_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 0,
     explanation:
       'A master status is the one that overrides a person’s other statuses in shaping how others perceive and treat him across settings, so the telling evidence is that people in his working life, his neighborhood, and his coaching all respond to the record first. A clash between coaching and working hours is role conflict, a collision between the demands of two statuses. Acquiring a status through one’s own actions makes it achieved as opposed to ascribed, which says nothing about whether it dominates. Being torn between strictness and friendliness as a coach is role strain, competing expectations within a single status.',
+    optionExplanations: [
+      'A master status is the one that overrides a person’s other statuses in shaping how others perceive and treat him across settings. Employers, neighbors and team parents all responding to the record first is exactly that evidence.',
+      'A clash between coaching hours and working hours is role conflict, a collision between the demands of two different statuses. It does not show that one status dominates how others see him.',
+      'Acquiring a status through one’s own actions makes it achieved rather than ascribed. That distinction says nothing about whether the status dominates his social identity.',
+      'Being torn between strictness and friendliness as a coach is role strain, competing expectations within a single status. It does not concern how “former prisoner” shapes others’ treatment of him.',
+    ],
     skill: '9A master status (identifying evidence)',
   },
   {
@@ -518,6 +686,12 @@ export const FL7_PSYCH_SOC_B_DISCRETES: MCATDiscreteQuestion[] = [
     correctAnswer: 3,
     explanation:
       'A surplus confined to young working ages and concentrated on the male side is the signature of labor migration, because migrants arrive as adults and, in many labor flows, are predominantly men. A past period of high fertility would produce a bulge of about equal size on both sides, since boys and girls are born in nearly equal numbers. A war that killed young men would leave a deficit, not a surplus, on the male side, and in cohorts now older than 39. A recent decline in fertility would narrow the youngest bars at the base and would not alter the bars for adults.',
+    optionExplanations: [
+      'A past period of high fertility would produce a bulge of about equal size on both sides, since boys and girls are born in nearly equal numbers. It would not create a male-heavy bulge.',
+      'A war that killed young men would leave a deficit, not a surplus, on the male side. And the affected cohort would now be older than 39, not 25–39.',
+      'A recent decline in fertility would narrow the youngest bars at the base of the pyramid. It would not alter the bars for adults aged 25–39.',
+      'A surplus confined to young working ages and concentrated on the male side is the signature of labor migration. Migrants arrive as adults, and in many labor flows they are predominantly men.',
+    ],
     skill: '9B reading a population pyramid',
   },
 ]
