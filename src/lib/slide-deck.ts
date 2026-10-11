@@ -37,6 +37,8 @@ export type Slide =
 // + title, agenda, worked examples and the closing quiz slide).
 const MAX_CONTENT_SLIDES = 28
 const MAX_POLLS = 8
+/** Pool questions considered per deck; the best-matching MAX_POLLS are used. */
+const MAX_POLL_CANDIDATES = 40
 const MAX_BLOCKS_PER_SLIDE = 5
 const MAX_CHARS_PER_SLIDE = 700 // a slide must fit one screen (annotation ink is position-locked)
 const MAX_EXAMPLES = 2 // each becomes a 2-3 slide progressive-reveal sequence
@@ -138,6 +140,92 @@ function exampleRevealSlides(question: string, solution: string): ContentSlide[]
 }
 
 type ContentSlide = { kind: 'content'; title: string; blocks: string[] }
+
+/**
+ * The unit a content slide belongs to: its title without "(cont.)" / "(2 of
+ * 3)" suffixes, with every worked-example slide ("Try It First", "Solution")
+ * of a reveal sequence folded together. Slides of one unit are taught as one
+ * piece, so a poll must never sit between them.
+ */
+export function slideUnitKey(title: string): string {
+  const base = title.replace(/\s*\((?:cont\.|\d+ of \d+)\)\s*$/i, '').trim()
+  return /^Worked Example — (Try It First|Solution)$/.test(base) ? 'Worked Example' : base
+}
+
+/**
+ * Content split into teaching beats of about `size` slides, cutting only at
+ * unit boundaries: a multi-slide worked example (or any "(cont.)" run) is
+ * never divided, so the polls placed after a beat come after the whole
+ * example, never in the middle of it.
+ */
+export function segmentContent<T extends { title: string }>(content: T[], size: number): T[][] {
+  const units: T[][] = []
+  for (const slide of content) {
+    const last = units[units.length - 1]
+    if (last && slideUnitKey(last[last.length - 1].title) === slideUnitKey(slide.title)) last.push(slide)
+    else units.push([slide])
+  }
+  const segments: T[][] = []
+  let current: T[] = []
+  for (const unit of units) {
+    current.push(...unit)
+    if (current.length >= size) {
+      segments.push(current)
+      current = []
+    }
+  }
+  if (current.length) segments.push(current)
+  // Never leave a lonely 1-slide beat at the end — fold it into the previous.
+  if (segments.length >= 2 && segments[segments.length - 1].length === 1) {
+    segments[segments.length - 2].push(...segments.pop()!)
+  }
+  return segments
+}
+
+const SLUG_NOISE = new Set(['mcat', 'sat', 'act', 'psat', 'ap', 'prep'])
+const slugTerms = (slug: string) => slug.split('-').filter((t) => t && !SLUG_NOISE.has(t))
+
+/**
+ * Pool questions with those from a SIBLING topic dropped when enough remain.
+ * Blended pools tag each question with its source pool's slug in `category`;
+ * for "mcat-cars-reasoning-mcat" a question from
+ * "mcat-cars-foundations-comprehension-mcat" shares only the course-wide
+ * "cars" with the topic, so it isn't what this lesson taught. Questions from
+ * the topic itself, an umbrella pool ("mcat-cars") or a related sub-pool
+ * ("mcat-cars-reasoning-within-text-mcat") are kept. Non-slug categories
+ * (display names) are never filtered.
+ */
+export function onTopicFirst<T extends { category?: string }>(pool: readonly T[], topicSlug: string, minKeep: number): T[] {
+  const topic = slugTerms(topicSlug)
+  const cats = [...new Set(pool.map((q) => q.category).filter((c): c is string => !!c && /^[a-z0-9-]+$/.test(c)))]
+  if (cats.length < 2) return [...pool]
+  const common = new Set(slugTerms(cats[0]).filter((t) => cats.every((c) => slugTerms(c).includes(t))))
+  const offTopic = (q: T) => {
+    const c = q.category
+    if (!c || !/^[a-z0-9-]+$/.test(c) || c === topicSlug) return false
+    const terms = slugTerms(c)
+    if (terms.every((t) => topic.includes(t))) return false // umbrella pool
+    return !terms.some((t) => topic.includes(t) && !common.has(t))
+  }
+  const kept = pool.filter((q) => !offTopic(q))
+  return kept.length >= minKeep ? kept : [...kept, ...pool.filter(offTopic)]
+}
+
+/** Polls that interrupt a unit (a poll between two slides of the same unit). */
+export function pollsInsideUnits(slides: readonly Slide[]): number[] {
+  const bad: number[] = []
+  slides.forEach((s, i) => {
+    if (s.kind !== 'poll') return
+    let before = i - 1
+    while (before >= 0 && slides[before].kind === 'poll') before--
+    let after = i + 1
+    while (after < slides.length && slides[after].kind === 'poll') after++
+    const a = slides[before]
+    const b = slides[after]
+    if (a?.kind === 'content' && b?.kind === 'content' && slideUnitKey(a.title) === slideUnitKey(b.title)) bad.push(i)
+  })
+  return bad
+}
 type PollSlide = { kind: 'poll'; question: string; options: string[]; correctIndex: number; explanation: string }
 
 // ---------- Relevance matching (poll/example → the segment that taught it) ----------
@@ -267,9 +355,9 @@ export async function generateSlideDeck(topicSlug: string): Promise<{ title: str
   // knows whether it also needs to hunt for poll material.
   let polls: Slide[] = []
   try {
-    const pool = await generateExitQuiz(topicSlug, MAX_POLLS * 2 + 4)
+    const pool = await generateExitQuiz(topicSlug, MAX_POLL_CANDIDATES)
     const seen = new Set<string>()
-    for (const q of pool) {
+    for (const q of onTopicFirst(pool, topicSlug, MAX_POLLS)) {
       const raw = q as unknown as Record<string, unknown>
       const correctIndex = (raw.correctAnswer ?? raw.correctIndex ?? 0) as number
       const stem = q.question.trim().toLowerCase()
@@ -280,7 +368,7 @@ export async function generateSlideDeck(topicSlug: string): Promise<{ title: str
       // given. Seeded by the stem so a pre-built deck and a live rebuild agree.
       const shuffled = shuffleOptions(q.options, correctIndex, q.question)
       polls.push({ kind: 'poll', question: q.question, options: shuffled.options, correctIndex: shuffled.correctIndex, explanation: q.explanation })
-      if (polls.length >= MAX_POLLS) break
+      if (polls.length >= MAX_POLL_CANDIDATES) break
     }
   } catch { polls = [] }
 
@@ -367,15 +455,8 @@ export async function generateSlideDeck(topicSlug: string): Promise<{ title: str
     exampleGroups.length = 0
   }
 
-  // ---- Segment the content into teaching beats of 3–4 slides ----
-  const segments: ContentSlide[][] = []
-  for (let i = 0; i < content.length; i += SEGMENT_SIZE) {
-    segments.push(content.slice(i, i + SEGMENT_SIZE))
-  }
-  // Never leave a lonely 1-slide beat at the end — fold it into the previous.
-  if (segments.length >= 2 && segments[segments.length - 1].length === 1) {
-    segments[segments.length - 2].push(...segments.pop()!)
-  }
+  // ---- Segment the content into teaching beats of ~3 slides (whole units) ----
+  const segments: ContentSlide[][] = segmentContent(content, SEGMENT_SIZE)
 
   // ---- Place worked examples after the segment whose concepts they apply ----
   const segTerms = segments.map((seg) => {
@@ -397,30 +478,44 @@ export async function generateSlideDeck(topicSlug: string): Promise<{ title: str
   }
 
   // ---- Place each poll after the segment that taught it (never before) ----
-  const pollsBySeg = new Map<number, PollSlide[]>()
+  // Words found across most of the deck ("passage", "author", "CARS" in a CARS
+  // deck) say nothing about WHICH beat taught a question, so they don't count
+  // toward a match — otherwise a generic strategy question attaches itself to
+  // whatever beat happens to share two common words. Within a beat, the
+  // closest-matching questions are used first.
+  const deckCommon = new Set(
+    [...new Set(segTerms.flatMap((t) => [...t]))].filter((term) => segTerms.filter((t) => t.has(term)).length > Math.max(1, segTerms.length / 2)),
+  )
+  const pollsBySeg = new Map<number, { poll: PollSlide; score: number }[]>()
   const reviewPolls: PollSlide[] = []
   for (const p of polls as PollSlide[]) {
-    const idx = bestSegment(termsOf(`${p.question} ${p.options.join(' ')}`), segTerms)
-    if (idx >= 0) pollsBySeg.set(idx, [...(pollsBySeg.get(idx) ?? []), p])
-    else reviewPolls.push(p)
+    const terms = new Set([...termsOf(`${p.question} ${p.options.join(' ')}`)].filter((t) => !deckCommon.has(t)))
+    const idx = bestSegment(terms, segTerms)
+    if (idx >= 0) {
+      const score = [...terms].filter((t) => segTerms[idx].has(t)).length
+      pollsBySeg.set(idx, [...(pollsBySeg.get(idx) ?? []), { poll: p, score }])
+    } else reviewPolls.push(p)
   }
 
   // Budget: same scaling as before (rich deck → up to 5 checks, thin → ≥2).
   // Matched polls spend the budget first (max 2 per beat, walking in lesson
-  // order); leftover budget goes to end-of-deck review polls.
+  // order); unmatched review polls only top a deck up to its 2-poll minimum.
   const pollTarget = content.length === 0
     ? polls.length
     : Math.min(polls.length, MAX_POLLS, Math.max(2, Math.ceil(content.length / 2)))
   let pollBudget = pollTarget
   const chosenBySeg = new Map<number, PollSlide[]>()
+  let matchedChosen = 0
   for (let i = 0; i < segments.length && pollBudget > 0; i++) {
-    const take = (pollsBySeg.get(i) ?? []).slice(0, Math.min(2, pollBudget))
+    const ranked = [...(pollsBySeg.get(i) ?? [])].sort((a, b) => b.score - a.score).map((m) => m.poll)
+    const take = ranked.slice(0, Math.min(2, pollBudget))
     if (take.length > 0) {
       chosenBySeg.set(i, take)
       pollBudget -= take.length
+      matchedChosen += take.length
     }
   }
-  const chosenReview = reviewPolls.slice(0, pollBudget)
+  const chosenReview = reviewPolls.slice(0, Math.min(pollBudget, Math.max(0, 2 - matchedChosen)))
 
   // ---- Intro: title + "what we'll cover" agenda built from section titles ----
   const slides: Slide[] = [{
