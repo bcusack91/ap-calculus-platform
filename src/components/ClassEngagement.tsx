@@ -181,6 +181,195 @@ interface TopicRow { title: string; course: string | null; status: string; secon
 interface SessionRow { id: string; mode: string; status: string; startedAt: string; endedAt: string | null; attendees: { name: string; minutes: number }[] }
 interface FlashcardRow { userId: string; name: string; days: number[]; activeDays: number; totalReviews: number }
 
+interface UnitTestAttempt { id: string; correct: number; total: number; percentage: number; passed: boolean; completedAt: string }
+interface UnitTestCycle { diagnosticId: string; course: string; cycle: number; lessons: number; attempts: UnitTestAttempt[]; inProgress: boolean }
+interface UnitTestStudent { userId: string; name: string; cycles: UnitTestCycle[] }
+interface LessonScore { slug: string; title: string; correct: number; total: number }
+
+/**
+ * Cycle unit tests: the 25-question test a student takes after clearing the
+ * lessons their diagnostic recommended. One row per student (latest cycle);
+ * expanding a student shows every sitting with their score on each lesson.
+ */
+export function ClassUnitTests({ classroomId }: { classroomId: string }) {
+  const [data, setData] = useState<{ passPercent: number; students: UnitTestStudent[] } | null>(null)
+  const [error, setError] = useState<string | null>(null)
+  const [expanded, setExpanded] = useState<string | null>(null)
+  // userId → sitting id → per-lesson scores, loaded when a student is first expanded.
+  const [lessons, setLessons] = useState<Record<string, Record<string, LessonScore[]> | 'error'>>({})
+
+  useEffect(() => {
+    let cancelled = false
+    fetch(`/api/teacher/classrooms/${classroomId}/unit-tests`, { cache: 'no-store' })
+      .then(async (r) => {
+        const d = await r.json().catch(() => ({}))
+        if (!r.ok) throw new Error(d.error || 'Could not load unit tests')
+        if (!cancelled) setData(d)
+      })
+      .catch((e) => !cancelled && setError(e instanceof Error ? e.message : 'Could not load unit tests'))
+    return () => {
+      cancelled = true
+    }
+  }, [classroomId])
+
+  const toggle = (userId: string) => {
+    if (expanded === userId) {
+      setExpanded(null)
+      return
+    }
+    setExpanded(userId)
+    if (lessons[userId] && lessons[userId] !== 'error') return
+    fetch(`/api/teacher/classrooms/${classroomId}/unit-tests?student=${encodeURIComponent(userId)}`, { cache: 'no-store' })
+      .then(async (r) => {
+        const d = await r.json().catch(() => ({}))
+        if (!r.ok) throw new Error()
+        setLessons((prev) => ({ ...prev, [userId]: d.lessons ?? {} }))
+      })
+      .catch(() => setLessons((prev) => ({ ...prev, [userId]: 'error' })))
+  }
+
+  const pass = data?.passPercent ?? 75
+  const scoreClass = (pct: number) =>
+    pct >= pass ? 'text-green-600 dark:text-green-400' : 'text-amber-600 dark:text-amber-400'
+
+  return (
+    <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
+      <h2 className="mb-1 text-xl font-bold text-gray-900 dark:text-white">📝 Cycle unit tests</h2>
+      <p className="mb-4 text-sm text-gray-500 dark:text-gray-400">
+        The 25-question test each student takes after finishing the lessons from their latest diagnostic. Pass mark:{' '}
+        <span className="font-medium text-green-600 dark:text-green-400">{pass}%</span>. Click a student for every sitting and
+        their score on each lesson.
+      </p>
+      {error ? (
+        <p className="text-sm text-red-600 dark:text-red-400">{error}</p>
+      ) : !data ? (
+        <div className="h-24 animate-pulse rounded-xl bg-gray-200 dark:bg-gray-700" />
+      ) : (
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-gray-200 text-left text-xs uppercase text-gray-500 dark:border-gray-700 dark:text-gray-400">
+                <th className="py-2 pr-4">Student</th>
+                <th className="py-2 pr-4">Latest cycle</th>
+                <th className="py-2 pr-4">Latest score</th>
+                <th className="py-2 pr-4">Best</th>
+                <th className="py-2 pr-4">Sittings</th>
+                <th className="py-2">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              {data.students.map((s) => {
+                const cycle = s.cycles[0]
+                const latest = cycle?.attempts[cycle.attempts.length - 1]
+                const best = cycle?.attempts.length ? Math.max(...cycle.attempts.map((a) => a.percentage)) : null
+                const passed = !!cycle?.attempts.some((a) => a.passed)
+                const open = expanded === s.userId
+                const scores = lessons[s.userId]
+                return (
+                  <Fragment key={s.userId}>
+                    <tr
+                      onClick={cycle ? () => toggle(s.userId) : undefined}
+                      className={`border-b border-gray-100 dark:border-gray-700/50 ${
+                        cycle ? 'cursor-pointer transition hover:bg-gray-50 dark:hover:bg-gray-700/40' : ''
+                      }`}
+                    >
+                      <td className="py-2 pr-4 font-medium text-gray-800 dark:text-gray-200">
+                        {cycle ? (open ? '▾ ' : '▸ ') : ''}
+                        {s.name}
+                      </td>
+                      <td className="py-2 pr-4 text-gray-600 dark:text-gray-400">
+                        {cycle ? `${cycle.course} · Cycle ${cycle.cycle || '?'}` : '—'}
+                      </td>
+                      <td className={`py-2 pr-4 tabular-nums font-medium ${latest ? scoreClass(latest.percentage) : 'text-gray-400'}`}>
+                        {latest ? `${latest.percentage}% (${latest.correct}/${latest.total})` : '—'}
+                      </td>
+                      <td className="py-2 pr-4 tabular-nums text-gray-600 dark:text-gray-400">{best !== null ? `${best}%` : '—'}</td>
+                      <td className="py-2 pr-4 tabular-nums text-gray-600 dark:text-gray-400">{cycle ? cycle.attempts.length : '—'}</td>
+                      <td className="py-2">
+                        {!cycle ? (
+                          <span className="text-xs text-gray-400">Not taken yet</span>
+                        ) : passed ? (
+                          <span className="rounded-full bg-green-100 px-2 py-0.5 text-xs font-semibold text-green-700 dark:bg-green-900/30 dark:text-green-400">
+                            Passed
+                          </span>
+                        ) : cycle.attempts.length > 0 ? (
+                          <span className="rounded-full bg-amber-100 px-2 py-0.5 text-xs font-semibold text-amber-700 dark:bg-amber-900/40 dark:text-amber-300">
+                            Not passed yet
+                          </span>
+                        ) : (
+                          <span className="rounded-full bg-blue-100 px-2 py-0.5 text-xs font-semibold text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">
+                            In progress
+                          </span>
+                        )}
+                      </td>
+                    </tr>
+                    {open && (
+                      <tr>
+                        <td colSpan={6} className="bg-gray-50 px-4 py-3 dark:bg-gray-900/40">
+                          <div className="max-h-96 space-y-4 overflow-y-auto">
+                            {s.cycles.map((c) => (
+                              <div key={c.diagnosticId}>
+                                <p className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">
+                                  {c.course} · Cycle {c.cycle || '?'} · {c.lessons} lesson{c.lessons === 1 ? '' : 's'}
+                                </p>
+                                {c.attempts.length === 0 && (
+                                  <p className="text-xs text-gray-500">Started, not submitted yet.</p>
+                                )}
+                                <div className="space-y-2">
+                                  {[...c.attempts].reverse().map((a) => {
+                                    const perLesson = scores && scores !== 'error' ? scores[a.id] : undefined
+                                    return (
+                                      <div key={a.id} className="rounded-lg bg-white px-3 py-2 text-xs dark:bg-gray-800">
+                                        <div className="flex flex-wrap items-center justify-between gap-2">
+                                          <span className={`font-semibold tabular-nums ${scoreClass(a.percentage)}`}>
+                                            {a.percentage}% ({a.correct}/{a.total}) · {a.passed ? 'Passed' : 'Not passed'}
+                                          </span>
+                                          <span className="text-gray-500 dark:text-gray-400">{new Date(a.completedAt).toLocaleDateString()}</span>
+                                        </div>
+                                        {perLesson ? (
+                                          <div className="mt-1.5 flex flex-wrap gap-1.5">
+                                            {perLesson.map((l) => (
+                                              <span
+                                                key={l.slug}
+                                                className={`rounded-full px-2 py-0.5 ${
+                                                  l.total > 0 && (l.correct / l.total) * 100 >= pass
+                                                    ? 'bg-green-50 text-green-700 dark:bg-green-900/20 dark:text-green-300'
+                                                    : 'bg-amber-50 text-amber-700 dark:bg-amber-900/20 dark:text-amber-300'
+                                                }`}
+                                              >
+                                                {l.title} · {l.correct}/{l.total}
+                                              </span>
+                                            ))}
+                                          </div>
+                                        ) : (
+                                          <p className="mt-1 text-gray-400">
+                                            {scores === 'error' ? 'Could not load the per-lesson scores.' : 'Loading per-lesson scores…'}
+                                          </p>
+                                        )}
+                                      </div>
+                                    )
+                                  })}
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        </td>
+                      </tr>
+                    )}
+                  </Fragment>
+                )
+              })}
+              {data.students.length === 0 && (
+                <tr><td colSpan={6} className="py-4 text-sm text-gray-400">No students yet.</td></tr>
+              )}
+            </tbody>
+          </table>
+        </div>
+      )}
+    </div>
+  )
+}
+
 function fmtMinutes(seconds: number): string {
   const m = Math.round(seconds / 60)
   if (m < 60) return `${m}m`
@@ -227,6 +416,7 @@ export default function ClassEngagement({ classroomId }: { classroomId: string }
     return (
       <div className="space-y-6">
         <ClassActivityTable classroomId={classroomId} />
+        <ClassUnitTests classroomId={classroomId} />
         <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
           {error ? (
             <p className="text-sm text-red-600 dark:text-red-400">{error}</p>
@@ -241,6 +431,7 @@ export default function ClassEngagement({ classroomId }: { classroomId: string }
   return (
     <div className="space-y-6">
       <ClassActivityTable classroomId={classroomId} />
+      <ClassUnitTests classroomId={classroomId} />
 
       <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
         <h2 className="mb-1 text-xl font-bold text-gray-900 dark:text-white">⏱ Lesson time</h2>
