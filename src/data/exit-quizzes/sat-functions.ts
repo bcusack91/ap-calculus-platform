@@ -92,6 +92,11 @@ function subLin(m: number, x: number, b: number): string {
   const head = m === 1 ? p(x) : m === -1 ? `-(${x})` : `${m}(${x})`
   return b === 0 ? head : `${head} ${sign(b)}`
 }
+/** ` = mid` for an intermediate step, or '' when the step already equals the
+ *  final value (avoids "= 6 = 6"). Explanation text only. */
+function eqStep(mid: string, ans: number): string {
+  return mid === `${ans}` ? '' : ` = ${mid}`
+}
 /** A running sum "a + b - c", dropping zero terms after the first. */
 function sumStr(...ns: number[]): string {
   let s = `${ns[0]}`
@@ -115,7 +120,7 @@ const questionPool: QuestionTemplate[] = [
         id: this.id, category: this.category,
         question: `If $f(x) = ${linear(a, b)}$, what is $f(${x})$?`,
         options, correctIndex,
-        explanation: `$f(${x}) = ${subLin(a, x, b)} = ${sumStr(a * x, b)} = ${ans}$.`
+        explanation: `$f(${x}) = ${subLin(a, x, b)}${eqStep(sumStr(a * x, b), ans)} = ${ans}$.`
       }
     }
   },
@@ -134,7 +139,7 @@ const questionPool: QuestionTemplate[] = [
         id: this.id, category: this.category,
         question: `If $f(x) = ${quad(a, b, c)}$, find $f(${x})$.`,
         options, correctIndex,
-        explanation: `$f(${x}) = ${a === 1 ? '' : a}(${x})^2${b === 0 ? '' : ` ${b > 0 ? '+' : '-'} ${Math.abs(b) === 1 ? '' : Math.abs(b)}(${x})`}${c === 0 ? '' : ` ${sign(c)}`} = ${sumStr(a * x * x, b * x, c)} = ${ans}$.`
+        explanation: `$f(${x}) = ${a === 1 ? '' : a}(${x})^2${b === 0 ? '' : ` ${b > 0 ? '+' : '-'} ${Math.abs(b) === 1 ? '' : Math.abs(b)}(${x})`}${c === 0 ? '' : ` ${sign(c)}`}${eqStep(sumStr(a * x * x, b * x, c), ans)} = ${ans}$.`
       }
     }
   },
@@ -182,7 +187,7 @@ const questionPool: QuestionTemplate[] = [
         id: this.id, category: this.category,
         question: `Given $g(x) = ${quad(a, 0, b)}$, evaluate $g(${x})$.`,
         options, correctIndex,
-        explanation: `$g(${x}) = ${a === 1 ? '' : a}(${x})^2${b === 0 ? '' : ` ${sign(b)}`} = ${sumStr(a * x * x, b)} = ${ans}$.`
+        explanation: `$g(${x}) = ${a === 1 ? '' : a}(${x})^2${b === 0 ? '' : ` ${sign(b)}`}${eqStep(sumStr(a * x * x, b), ans)} = ${ans}$.`
       }
     }
   },
@@ -203,7 +208,7 @@ const questionPool: QuestionTemplate[] = [
         id: this.id, category: this.category,
         question: `If $f(x) = ${linear(m, b)}$, what is $f(${x2}) - f(${x1})$?`,
         options, correctIndex,
-        explanation: `$f(${x2}) = ${f2}$, $f(${x1}) = ${f1}$. Difference $= ${f1 === 0 ? `${f2}` : `${f2} - ${p(f1)}`} = ${diff}$.`
+        explanation: `$f(${x2}) = ${f2}$, $f(${x1}) = ${f1}$. Difference $= ${f1 === 0 ? '' : `${f2} - ${p(f1)} = `}${diff}$.`
       }
     }
   },
@@ -322,8 +327,8 @@ const questionPool: QuestionTemplate[] = [
         question: `How does $g(x) = f(x ${right ? '-' : '+'} ${h})$ relate to $f(x)$?`,
         options, correctIndex,
         explanation: right
-          ? `Replacing $x$ with $x - ${h}$ shifts the graph right by $${h}$ units.`
-          : `Replacing $x$ with $x + ${h}$ shifts the graph left by $${h}$ units.`
+          ? `Replacing $x$ with $x - ${h}$ shifts the graph right by $${h}$ ${h === 1 ? 'unit' : 'units'}.`
+          : `Replacing $x$ with $x + ${h}$ shifts the graph left by $${h}$ ${h === 1 ? 'unit' : 'units'}.`
       }
     }
   },
@@ -345,8 +350,8 @@ const questionPool: QuestionTemplate[] = [
         question: `What transformation does $g(x) = f(x) ${up ? '+' : '-'} ${k}$ apply to $f(x)$?`,
         options, correctIndex,
         explanation: up
-          ? `Adding $${k}$ to every output shifts the graph up by $${k}$ units.`
-          : `Subtracting $${k}$ from every output shifts the graph down by $${k}$ units.`
+          ? `Adding $${k}$ to every output shifts the graph up by $${k}$ ${k === 1 ? 'unit' : 'units'}.`
+          : `Subtracting $${k}$ from every output shifts the graph down by $${k}$ ${k === 1 ? 'unit' : 'units'}.`
       }
     }
   },

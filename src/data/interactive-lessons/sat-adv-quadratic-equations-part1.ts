@@ -18,7 +18,7 @@ A line and a parabola "intersect at exactly one point," or an equation "has no r
 2. Write the discriminant $b^{2} - 4ac$ **in terms of the parameter**.
 3. Set it $= 0$ (tangent / one solution), $> 0$ (two), or $< 0$ (none).
 
-**Worked example.** The line $y = 8x + b$ is tangent to $y = 2x^{2} - 12x + 19$. Setting equal: $2x^{2} - 20x + (19 - b) = 0$. Tangency means discriminant zero: $400 - 8(19 - b) = 0$, so $400 = 152 - 8b$ and $b = -31$.
+**Worked example.** The line $y = 8x + b$ is tangent to $y = 2x^{2} - 12x + 19$. Setting equal: $2x^{2} - 20x + (19 - b) = 0$. Tangency means discriminant zero: $400 - 8(19 - b) = 0$, so $400 - 152 + 8b = 0$, that is, $248 + 8b = 0$, and $b = -31$.
 
 **The 700-800 twist:** the question rarely asks for the parameter itself. It asks for the $x$- or $y$-coordinate of the tangent point, or a value built from it. Read the last sentence twice — every intermediate value ($m$, then $x$, then $y$) appears among the choices.
 

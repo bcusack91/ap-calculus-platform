@@ -830,7 +830,7 @@ const questionPool: QuestionTemplate[] = [
         id: this.id, category: this.category,
         question: `A prize of \\$${total} is split between two people in the ratio $${partA} : ${partB}$. How many more dollars does the person with the larger share receive?`,
         options, correctIndex,
-        explanation: `Total parts $= ${partA + partB}$, so each part is $${total} \\div ${partA + partB} = ${unit}$ dollars. The shares differ by $${Math.abs(partA - partB)}$ parts: $${Math.abs(partA - partB)} \\times ${unit} = ${diff}$ dollars.`
+        explanation: `Total parts $= ${partA + partB}$, so each part is $${total} \\div ${partA + partB} = ${unit}$ dollars. The shares differ by $${Math.abs(partA - partB)}$ ${Math.abs(partA - partB) === 1 ? 'part' : 'parts'}: $${Math.abs(partA - partB)} \\times ${unit} = ${diff}$ dollars.`
       }
     }
   },

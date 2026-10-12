@@ -381,7 +381,7 @@ const questionPool: QuestionTemplate[] = [
         id: this.id, category: this.category,
         question: `Solve the system by elimination. Find $y$:\n\n$${a}x ${pmTerm(b1, 'y')} = ${c1}$\n\n$${a}x ${pmTerm(b2, 'y')} = ${c2}$`,
         options, correctIndex,
-        explanation: `Subtract the second equation from the first: $${b1 - b2}y = ${minus(c1, c2)} = ${c1 - c2}$, so $y = ${y}$`
+        explanation: `Subtract the second equation from the first: $${b1 - b2}y = ${c2 === 0 ? '' : `${minus(c1, c2)} = `}${c1 - c2}$, so $y = ${y}$`
       }
     }
   },
@@ -710,7 +710,7 @@ const questionPool: QuestionTemplate[] = [
           id: this.id, category: this.category,
           question: `Find the slope of the line through $(${x1}, ${y1})$ and $(${x2}, ${y2})$.`,
           options, correctIndex,
-          explanation: `Slope $= \\frac{${minus(y2, y1)}}{${minus(x2, x1)}} = \\frac{${rise}}{${run}} = ${m}$`
+          explanation: `Slope $= \\frac{${minus(y2, y1)}}{${minus(x2, x1)}}${y1 === 0 && x1 === 0 ? '' : ` = \\frac{${rise}}{${run}}`} = ${m}$`
         }
       }
       const g = gcd(rise, run) || 1
@@ -719,7 +719,7 @@ const questionPool: QuestionTemplate[] = [
         id: this.id, category: this.category,
         question: `Find the slope of the line through $(${x1}, ${y1})$ and $(${x2}, ${y2})$.`,
         options, correctIndex,
-        explanation: `Slope $= \\frac{${minus(y2, y1)}}{${minus(x2, x1)}} = \\frac{${rise}}{${run}}${Math.abs(g) > 1 ? ` = \\frac{${rise / g}}{${run / g}}` : ''}$`
+        explanation: `Slope $= \\frac{${minus(y2, y1)}}{${minus(x2, x1)}}${y1 === 0 && x1 === 0 ? '' : ` = \\frac{${rise}}{${run}}`}${Math.abs(g) > 1 ? ` = \\frac{${rise / g}}{${run / g}}` : ''}$`
       }
     }
   },

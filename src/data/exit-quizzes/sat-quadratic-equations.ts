@@ -341,7 +341,7 @@ const questionPool: QuestionTemplate[] = [
         id: this.id, category: this.category,
         question: `Which equation has exactly one real solution?`,
         options, correctIndex,
-        explanation: `$${poly([1, 'x^2'], [b, 'x'], [c, ''])} = 0$ → discriminant $= (${b})^2 - 4(${c}) = ${b * b - 4 * c} = 0$, so exactly one solution.`
+        explanation: `$${poly([1, 'x^2'], [b, 'x'], [c, ''])} = 0$ → discriminant $= (${b})^2 - 4(${c}) = ${b * b} - ${4 * c} = 0$, so exactly one solution.`
       }
     }
   },
@@ -580,7 +580,7 @@ const questionPool: QuestionTemplate[] = [
         id: this.id, category: this.category,
         question: `If $y = x^2$ and $y = ${poly([m, 'x'], [b, ''])}$ intersect at $x = ${x1}$, what is the $y$-value at that point?`,
         options, correctIndex,
-        explanation: `Substitute $x = ${x1}$ into $y = x^2$: $y = ${x1}^2 = ${y1}$.`
+        explanation: `Substitute $x = ${x1}$ into $y = x^2$: $y = ${x1 < 0 ? `(${x1})` : x1}^2 = ${y1}$.`
       }
     }
   },

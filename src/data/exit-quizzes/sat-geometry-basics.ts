@@ -510,7 +510,7 @@ const questionPool: QuestionTemplate[] = [
         const val = n / d
         if (!seen.has(val)) { seen.add(val); distractors.push(`$${fmtFrac(n, d)}$`) }
       }
-      return { id: this.id, category: this.category, question: `Find the slope between $(${x1}, ${y1})$ and $(${x2}, ${y2})$.`, ...makeStringOptions(correct, distractors), explanation: `Slope $= \\frac{${y2} - (${y1})}{${x2} - (${x1})} = \\frac{${rise}}{${run}} = ${fmtFrac(rise, run)}$.` }
+      return { id: this.id, category: this.category, question: `Find the slope between $(${x1}, ${y1})$ and $(${x2}, ${y2})$.`, ...makeStringOptions(correct, distractors), explanation: `Slope $= \\frac{${y2} - (${y1})}{${x2} - (${x1})} = \\frac{${rise}}{${run}}${fmtFrac(rise, run) === `\\frac{${rise}}{${run}}` ? '' : ` = ${fmtFrac(rise, run)}`}$.` }
     }
   },
   {

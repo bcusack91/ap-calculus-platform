@@ -19,7 +19,7 @@
  * Once v3 attempts exist in production this list is FROZEN like v2's: a
  * change would alter forms students already took. Ship a v4 instead.
  */
-import { existsSync, readFileSync, writeFileSync } from 'fs'
+import { existsSync, readdirSync, readFileSync, writeFileSync } from 'fs'
 import os from 'os'
 import path from 'path'
 import { satFormCandidateIds } from '../src/data/sat-practice/test-generator'
@@ -108,8 +108,28 @@ function weakItems(pipeline: string): Map<string, Entry> {
   const v3 = flaggedIds(pipeline, '## SAT v3 final exclusion pass (Oct 12)', [
     [/^- Arbitrary distractors[^:]*:(.*)$/m, 'weak-distractors'],
     [/^- Stem gives away a step[^:]*:(.*)$/m, 'weak-rw'],
+    [/^- Weak R&W \(v3 final pass[^:]*:(.*)$/m, 'weak-rw'],
   ], false)
   return new Map([...v2, ...v3])
+}
+
+/** The v3 math sweep (sat-v3sweep/sweep-*.verdicts.json): every keep:false verdict. */
+function sweepItems(pipeline: string): Map<string, Entry> {
+  const dir = path.join(pipeline, 'sat-v3sweep')
+  const out = new Map<string, Entry>()
+  if (!existsSync(dir)) return out
+  for (const f of readdirSync(dir).filter((n) => /^sweep-\d+\.verdicts\.json$/.test(n)).sort()) {
+    const data = JSON.parse(readFileSync(path.join(dir, f), 'utf8')) as Record<string, { keep?: boolean; reason?: string; note?: string }>
+    for (const [id, v] of Object.entries(data)) {
+      if (v?.keep !== false) continue
+      // "trivial" one-step items stay: the real digital SAT has easy questions
+      // ("What is 20% of 300?"), and removing them would make v3 harder than
+      // the exam and shift the score calibration. Only defects are excluded.
+      if (v.reason === 'trivial') continue
+      out.set(id, { reason: v.reason === 'arbitrary-distractors' ? 'weak-distractors' : 'weak-rw', note: `math sweep (${v.reason}): ${oneLine(v.note)}` })
+    }
+  }
+  return out
 }
 
 async function main() {
@@ -119,7 +139,7 @@ async function main() {
 
   const added = new Map<string, Entry>()
   const alreadyV2: string[] = []
-  for (const source of [lessonDrills(pipeline), weakItems(pipeline)]) {
+  for (const source of [lessonDrills(pipeline), weakItems(pipeline), sweepItems(pipeline)]) {
     for (const [id, e] of source) {
       if (SAT_FORM_V2_EXCLUDED.has(id)) {
         alreadyV2.push(id)
