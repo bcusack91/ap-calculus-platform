@@ -51,6 +51,8 @@ export interface ReviewPassageView {
 
 export interface AttemptReviewItem {
   index: number
+  /** Number the student saw, when it isn't index + 1 (ACT numbers each section from 1). */
+  displayNumber?: number
   questionKey: string
   question: string
   /** Options in the order they were shown. Empty for a grid-in. */
@@ -278,11 +280,11 @@ export function Explanation({ text, ready, item }: { text: string; ready?: boole
 type Filter = 'missed' | 'flagged' | 'all' | 'report'
 
 /** Attempts long enough for a Report tab: full-lengths, practice tests, question-bank sets, SAT tests and diagnostics. */
-const REPORT_KINDS = new Set(['mcat-fl', 'mcat-practice', 'qbank', 'sat-practice', 'diagnostic'])
+const REPORT_KINDS = new Set(['mcat-fl', 'mcat-practice', 'qbank', 'sat-practice', 'diagnostic', 'act-fl'])
 /** Kinds whose per-question times are averages (per passage / per attempt). */
 const APPROX_TIMING_KINDS = new Set(['mcat-fl', 'mcat-practice'])
 /** Mistake-log / flashcard course slugs per review course. */
-const COURSE_SLUGS: Record<string, string> = { mcat: 'mcat-prep', sat: 'sat-prep' }
+const COURSE_SLUGS: Record<string, string> = { mcat: 'mcat-prep', sat: 'sat-prep', act: 'act-prep' }
 
 /** Prefilled card for "Make a flashcard": the stem on the front, the answer (and why) on the back. */
 function flashcardFor(item: AttemptReviewItem): { front: string; back: string } {
@@ -330,7 +332,7 @@ function QuestionCard({
   }
   const status = itemStatus(item)
   const meta = STATUS_META[status]
-  const n = item.index + 1
+  const n = item.displayNumber ?? item.index + 1
   const tag = item.discipline || item.topicTitle || null
   const grid = isGridIn(item)
   const bodyId = `review-q-${pos}`
@@ -564,7 +566,14 @@ export default function AttemptReview({ attempt }: { attempt: AttemptReviewData 
       )}
 
       {filter === 'report' && report ? (
-        <ReviewReport report={report} approximateTiming={APPROX_TIMING_KINDS.has(attempt.kind)} onOpenQuestion={openQuestion} />
+        <ReviewReport
+          report={report}
+          approximateTiming={APPROX_TIMING_KINDS.has(attempt.kind)}
+          onOpenQuestion={openQuestion}
+          {...(attempt.course === 'act'
+            ? { skillsTitle: 'By ACT reporting category', skillsHint: 'Weakest first. Each question is tagged with the ACT reporting category it tests.' }
+            : {})}
+        />
       ) : visible.length === 0 ? (
         <p className="rounded-xl border border-gray-200 bg-white px-4 py-6 text-center text-sm text-gray-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400">
           {filter === 'missed' ? 'Nothing missed on this attempt.' : filter === 'flagged' ? 'You did not flag any questions.' : 'No questions to show.'}

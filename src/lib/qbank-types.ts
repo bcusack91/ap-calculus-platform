@@ -1,14 +1,14 @@
 /**
  * Shared shapes and constants for the custom question bank (/mcat/qbank,
- * /sat/qbank). Pure — safe to import from client components. The pools live
+ * /sat/qbank, /act/qbank). Pure — safe to import from client components. The pools live
  * in qbank-pools.ts (server), sessions in qbank-server.ts (server).
  */
 
-export const QBANK_COURSES = ['mcat', 'sat'] as const
+export const QBANK_COURSES = ['mcat', 'sat', 'act'] as const
 export type QbankCourse = (typeof QBANK_COURSES)[number]
 
 export function isQbankCourse(c: unknown): c is QbankCourse {
-  return c === 'mcat' || c === 'sat'
+  return c === 'mcat' || c === 'sat' || c === 'act'
 }
 
 export type QbankDifficulty = 'easy' | 'medium' | 'hard'
@@ -33,6 +33,13 @@ export const QBANK_SECTIONS: Record<QbankCourse, { id: string; label: string; se
   sat: [
     { id: 'reading-writing', label: 'Reading and Writing', secondsPerQuestion: 71 },
     { id: 'math', label: 'Math', secondsPerQuestion: 95 },
+  ],
+  // Enhanced ACT pace: English 35 min / 50, Math 50 / 45, Reading 40 / 36, Science 40 / 40.
+  act: [
+    { id: 'english', label: 'English', secondsPerQuestion: 42 },
+    { id: 'math', label: 'Math', secondsPerQuestion: 67 },
+    { id: 'reading', label: 'Reading', secondsPerQuestion: 67 },
+    { id: 'science', label: 'Science', secondsPerQuestion: 60 },
   ],
 }
 

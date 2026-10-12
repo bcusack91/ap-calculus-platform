@@ -15,6 +15,8 @@ export interface ReviewPassage {
 export interface ReviewItem {
   /** Position of the question within its attempt (matches QuestionActivity.itemIndex). */
   index: number;
+  /** Number the student saw, when it isn't index + 1 (ACT numbers each section from 1). */
+  displayNumber?: number;
   /** questionKey() of the question as defined in its bank ('q:' + 16 hex). */
   questionKey: string;
   question: string;

@@ -25,6 +25,7 @@ import {
   type QbankSessionSummary,
   type QbankSessionView,
 } from '@/lib/qbank-types'
+import { hasQbankPreset, parseQbankUrlParams } from '@/lib/qbank-url'
 
 const POOL_META: Record<QbankPoolKind, { label: string; hint: string }> = {
   all: { label: 'All questions', hint: 'Everything that matches your filters' },
@@ -72,6 +73,25 @@ export default function QbankBuilder({ course, onStart }: { course: QbankCourse;
   const [building, setBuilding] = useState(false)
   const [resuming, setResuming] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [presetNote, setPresetNote] = useState<string | null>(null)
+
+  // Deep links (e.g. a Bluebook plan's "practice Algebra") preset the builder
+  // from the query string: /sat/qbank?domain=algebra&count=15&mode=tutor.
+  // Read once on mount from window.location so the page stays static (no
+  // useSearchParams suspense boundary); with no params nothing changes.
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    const preset = parseQbankUrlParams(window.location.search, course)
+    if (!hasQbankPreset(preset)) return
+    if (preset.sections) setSections(preset.sections)
+    if (preset.disciplines) setDisciplines(preset.disciplines)
+    if (preset.topics) setTopics(preset.topics)
+    if (preset.difficulties) setDifficulties(preset.difficulties)
+    if (preset.pool) setPool(preset.pool)
+    if (preset.count) setCount(preset.count)
+    if (preset.mode) setMode(preset.mode)
+    if (preset.disciplines?.length) setPresetNote(`Set up for ${preset.disciplines.join(', ')}. Adjust anything, then start.`)
+  }, [course])
 
   // Live counts, debounced while the student clicks around.
   const query = useMemo(() => {
@@ -192,6 +212,11 @@ export default function QbankBuilder({ course, onStart }: { course: QbankCourse;
       )}
 
       <div className={`${card} space-y-6`}>
+        {presetNote && (
+          <p role="status" className="rounded-lg bg-accent-subtle px-3 py-2 text-sm text-gray-800 dark:bg-accent-light/10 dark:text-gray-100">
+            {presetNote}
+          </p>
+        )}
         {countsError && (
           <p role="alert" className="text-sm text-red-700 dark:text-red-400">
             Couldn&apos;t load question counts. You can still build a set.
@@ -218,7 +243,8 @@ export default function QbankBuilder({ course, onStart }: { course: QbankCourse;
         </fieldset>
 
         {/* Disciplines / domains */}
-        {disciplineList.length > 0 && (
+        {/* ACT disciplines are the sections themselves: no second row. */}
+        {disciplineList.length > 0 && course !== 'act' && (
           <fieldset>
             <legend className={legendCls}>{disciplineWord}</legend>
             <div className="flex flex-wrap gap-2">
@@ -386,7 +412,12 @@ export default function QbankBuilder({ course, onStart }: { course: QbankCourse;
               <span>
                 <span className="block font-medium">Timed</span>
                 <span className="block text-xs text-gray-500 dark:text-gray-400">
-                  {course === 'mcat' ? 'Exam pace: 95 s per question.' : 'Exam pace: 71 s per Reading and Writing question, 95 s per Math question.'} Answers at the end.
+                  {course === 'mcat'
+                    ? 'Exam pace: 95 s per question.'
+                    : course === 'act'
+                      ? 'Exam pace: 42 s per English, 67 s per Math or Reading, 60 s per Science question.'
+                      : 'Exam pace: 71 s per Reading and Writing question, 95 s per Math question.'}{' '}
+                  Answers at the end.
                 </span>
               </span>
             </label>

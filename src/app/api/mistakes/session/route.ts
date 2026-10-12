@@ -3,7 +3,7 @@ import { z } from 'zod'
 import { randomUUID } from 'crypto'
 import { auth } from '@/lib/auth'
 import { resolveItem, type ResolvedAttempt } from '@/lib/question-resolver'
-import { activeMistakesFor, filterMistakes, isMistakeCourse } from '@/lib/mistakes-server'
+import { activeMistakesFor, filterMistakes, isMistakeCourse, type MistakeCourse } from '@/lib/mistakes-server'
 
 export const dynamic = 'force-dynamic'
 
@@ -33,7 +33,7 @@ export async function POST(req: NextRequest) {
   if (!parsed.success || !isMistakeCourse(parsed.data.course)) return NextResponse.json({ error: 'Invalid request' }, { status: 400 })
   const { course, limit = MAX_ITEMS, source, topic, section, from, to } = parsed.data
   try {
-    const mistakes = filterMistakes(await activeMistakesFor(userId, course as 'mcat' | 'sat'), {
+    const mistakes = filterMistakes(await activeMistakesFor(userId, course as MistakeCourse), {
       source, topic, section,
       from: from ? new Date(`${from}T00:00:00Z`) : undefined,
       to: to ? new Date(`${to}T23:59:59.999Z`) : undefined,

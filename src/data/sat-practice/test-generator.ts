@@ -143,7 +143,7 @@ export interface SATFullTest {
 /*  Blueprint                                                          */
 /* ------------------------------------------------------------------ */
 
-const RW_DOMAIN_SLUGS: Record<RWDomain, string[]> = {
+export const RW_DOMAIN_SLUGS: Record<RWDomain, string[]> = {
   'craft-structure': ['sat-vocabulary-context'],
   'information-ideas': [
     'sat-reading-comprehension',
@@ -177,7 +177,7 @@ const RW_MODULE_QUOTA: Record<RWDomain, number> = {
 /** Passage-bank questions per R&W module (whole passages only). */
 const RW_PASSAGE_QUESTIONS = 7
 
-const MATH_DOMAIN_SLUGS: Record<MathDomain, string[]> = {
+export const MATH_DOMAIN_SLUGS: Record<MathDomain, string[]> = {
   algebra: ['sat-linear-equations-inequalities', 'sat-systems-linear-equations', 'sat-linear-inequalities-graphs'],
   advanced: [
     'sat-quadratic-equations',

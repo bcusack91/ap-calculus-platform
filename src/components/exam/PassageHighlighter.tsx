@@ -109,6 +109,7 @@ export default function PassageHighlighter({
   onChange,
   className,
   label = 'Passage',
+  renderHtml,
 }: {
   /** Raw rich text (markdown emphasis + $LaTeX$), rendered with renderRichText. */
   text: string
@@ -117,6 +118,13 @@ export default function PassageHighlighter({
   className?: string
   /** Accessible name for the passage region and toolbar. */
   label?: string
+  /**
+   * Custom text → HTML (default renderRichText), e.g. ACT English markers. It
+   * must keep the prose text stable for given highlights (only markup may
+   * vary between calls) or saved offsets drift. Memoize it: a new function
+   * re-renders the passage.
+   */
+  renderHtml?: (text: string) => string
 }) {
   const rootRef = useRef<HTMLDivElement>(null)
   // KaTeX must be loaded before offsets are meaningful: before it loads, math
@@ -131,7 +139,7 @@ export default function PassageHighlighter({
     return () => { live = false }
   }, [])
 
-  const html = useMemo(() => renderRichText(text), [text, ready]) // eslint-disable-line react-hooks/exhaustive-deps
+  const html = useMemo(() => (renderHtml ?? renderRichText)(text), [text, ready, renderHtml]) // eslint-disable-line react-hooks/exhaustive-deps
 
   useIsoLayoutEffect(() => {
     const root = rootRef.current

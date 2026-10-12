@@ -15,7 +15,7 @@ export const qbankFilterSchema = z.object({
 })
 
 export const qbankCreateSchema = qbankFilterSchema.extend({
-  course: z.enum(['mcat', 'sat']),
+  course: z.enum(['mcat', 'sat', 'act']),
   count: z.number().int().min(QBANK_MIN_COUNT).max(QBANK_MAX_COUNT),
   mode: z.enum(['timed', 'tutor']),
   pool: z.enum(['all', 'unused', 'incorrect', 'flagged']).default('all'),

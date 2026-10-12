@@ -2,6 +2,7 @@ import { prisma } from '@/lib/prisma'
 import { loadSatSuperscore } from '@/lib/superscore-server'
 import type { Superscore } from '@/lib/superscore'
 import type { GoalCourse } from '@/lib/exam-goals'
+import { latestActFullLength } from '@/lib/act-full-length-server'
 
 /** The score a goal is measured against. */
 export interface CurrentScore {
@@ -44,11 +45,29 @@ async function latestMcat(userId: string): Promise<CurrentScore> {
   return candidates.sort((a, b) => ((a.at ?? '') < (b.at ?? '') ? 1 : -1))[0]
 }
 
+/** Latest ACT composite: a StudyMondo full-length or a logged real ACT / ACT practice score, whichever is newer. */
+async function latestAct(userId: string): Promise<CurrentScore> {
+  const [fl, ext] = await Promise.all([
+    latestActFullLength(userId),
+    prisma.externalExamScore.findFirst({
+      where: { userId, course: 'act' },
+      orderBy: { takenAt: 'desc' },
+      select: { takenAt: true, totalScore: true, source: true },
+    }),
+  ])
+  const candidates: CurrentScore[] = []
+  if (fl) candidates.push({ score: fl.composite, basis: 'Latest full-length', source: 'StudyMondo full-length', at: fl.at.toISOString() })
+  if (ext && inRange(ext.totalScore, 1, 36)) candidates.push({ score: ext.totalScore, basis: 'Latest ACT score', source: ext.source, at: ext.takenAt.toISOString() })
+  if (!candidates.length) return NONE
+  return candidates.sort((a, b) => ((a.at ?? '') < (b.at ?? '') ? 1 : -1))[0]
+}
+
 /**
  * The student's current score for a goal. SAT: superscore across StudyMondo
  * full practice tests and entered College Board scores. MCAT: latest
- * full-length (StudyMondo or AAMC). ACT and PSAT have no stored full-length
- * scores yet, so their goals show without a current score.
+ * full-length (StudyMondo or AAMC). ACT: latest ACT full-length composite or
+ * logged real ACT score. PSAT has no stored full-length scores yet, so its
+ * goal shows without a current score.
  */
 export async function currentScoreFor(userId: string, course: GoalCourse): Promise<CurrentScore> {
   if (course === 'sat') {
@@ -64,5 +83,6 @@ export async function currentScoreFor(userId: string, course: GoalCourse): Promi
     }
   }
   if (course === 'mcat') return latestMcat(userId)
+  if (course === 'act') return latestAct(userId)
   return NONE
 }

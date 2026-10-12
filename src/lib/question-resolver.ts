@@ -8,6 +8,8 @@ import { isPsatAttemptFormat } from '@/lib/sat-attempt-format'
 import { unitTestReviewItems } from '@/lib/question-sources/unit-test'
 import { diagnosticReviewItems } from '@/lib/question-sources/diagnostic'
 import { qbankReviewItems } from '@/lib/question-sources/qbank'
+import { actFlReviewItems } from '@/lib/question-sources/act'
+import { ACT_FL_CATEGORY } from '@/lib/act-full-length-server'
 import { satOptionExplanationsFor } from '@/data/sat-practice/option-explanations'
 
 /**
@@ -20,7 +22,7 @@ import { satOptionExplanationsFor } from '@/data/sat-practice/option-explanation
  * rebuilt at all come back as null.
  */
 
-export const REVIEW_KINDS = ['exit', 'diagnostic', 'unit-test', 'sat-practice', 'mcat-fl', 'mcat-practice', 'qbank'] as const
+export const REVIEW_KINDS = ['exit', 'diagnostic', 'unit-test', 'sat-practice', 'mcat-fl', 'mcat-practice', 'qbank', 'act-fl'] as const
 export type ReviewKind = (typeof REVIEW_KINDS)[number]
 
 export function isReviewKind(k: unknown): k is ReviewKind {
@@ -71,6 +73,8 @@ async function build(kind: ReviewKind, id: string, userId: string): Promise<Omit
       if (!d) return null
       const isFl = d.category === 'mcat-full-length'
       if ((kind === 'mcat-fl') !== isFl) return null
+      // ACT full-lengths review under their own kind ('act-fl').
+      if (d.category === ACT_FL_CATEGORY) return null
       const r = (d.results ?? {}) as Record<string, unknown>
       const course = courseOfCategory(d.category)
       const items = isFl ? fullLengthReviewItems(d.results) ?? [] : course === 'sat' ? satDiagnosticReviewItems(d.results) : diagnosticReviewItems(d.results)
@@ -110,6 +114,20 @@ async function build(kind: ReviewKind, id: string, userId: string): Promise<Omit
         items: await satPracticeReviewItems(s),
       }
     }
+    case 'act-fl': {
+      const d = await prisma.diagnosticTest.findFirst({ where: { id, userId, category: ACT_FL_CATEGORY }, select: { results: true, createdAt: true } })
+      if (!d) return null
+      const r = (d.results ?? {}) as Record<string, unknown>
+      const items = (await actFlReviewItems(d.results)) ?? []
+      const correct = items.filter((i) => i.chosenIndex === i.correctIndex).length
+      return {
+        kind, id, course: 'act', takenAt: iso(d.createdAt),
+        title: `ACT full-length${typeof r.form === 'number' ? ` · Form ${r.form}` : ''}${r.includeScience === true ? '' : ' (no Science)'}`,
+        score: { correct, total: items.length, label: typeof r.composite === 'number' ? `Composite ${r.composite}` : undefined },
+        backHref: '/act-practice/full-length',
+        items,
+      }
+    }
     case 'mcat-practice': {
       const m = await prisma.mcatTestAttempt.findFirst({ where: { id, userId } })
       if (!m) return null
@@ -126,7 +144,7 @@ async function build(kind: ReviewKind, id: string, userId: string): Promise<Omit
       // origin before the set is finished); only graded questions come back.
       const q = await prisma.qbankSession.findFirst({ where: { id, userId } })
       if (!q) return null
-      const course = q.course === 'sat' ? 'sat' : 'mcat'
+      const course = q.course === 'sat' ? 'sat' : q.course === 'act' ? 'act' : 'mcat'
       // CARS questions carry their reasoning skill for the Report tab; SAT
       // questions carry authored per-option notes when the item has them.
       const items = qbankReviewItems(q).map((i) => {
@@ -135,6 +153,7 @@ async function build(kind: ReviewKind, id: string, userId: string): Promise<Omit
           const skill = carsSkillForKey(i.questionKey)
           return skill ? { ...i, skill } : i
         }
+        if (course === 'act') return i
         const optionExplanations = i.gridIn ? undefined : satOptionExplanationsFor(i.questionKey, i.options)
         return optionExplanations ? { ...i, optionExplanations } : i
       })

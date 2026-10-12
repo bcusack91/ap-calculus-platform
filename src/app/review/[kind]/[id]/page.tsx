@@ -8,11 +8,11 @@ import { ArrowLeft, ListChecks } from 'lucide-react'
 import AttemptReview, { type AttemptReviewData } from '@/components/AttemptReview'
 import { signInUrl } from '@/lib/auth-redirect'
 
-const MISTAKE_LOG_COURSES = new Set(['mcat', 'sat'])
+const MISTAKE_LOG_COURSES = new Set(['mcat', 'sat', 'act'])
 
 /**
  * Permanent review of one attempt: /review/<kind>/<id>, where kind is exit |
- * diagnostic | unit-test | sat-practice | mcat-fl | mcat-practice. Owner-only
+ * diagnostic | unit-test | sat-practice | mcat-fl | mcat-practice | qbank | act-fl. Owner-only
  * (the API scopes every lookup to the signed-in student).
  */
 export default function AttemptReviewPage() {

@@ -1,13 +1,14 @@
 import { prisma } from '@/lib/prisma'
 import { activeMistakes, computeMistakes, type AnswerLogRow, type MistakeItem } from '@/lib/mistake-log'
 import { QUESTION_KEY_PREFIX } from '@/lib/question-key'
+import { actSectionLabelForTopic } from '@/lib/act-topic-sections'
 
 /** The mistake log's courses and the DB course slug each one's answers are logged under. */
-export const MISTAKE_COURSES = { mcat: 'mcat-prep', sat: 'sat-prep' } as const
+export const MISTAKE_COURSES = { mcat: 'mcat-prep', sat: 'sat-prep', act: 'act-prep' } as const
 export type MistakeCourse = keyof typeof MISTAKE_COURSES
 
 export function isMistakeCourse(c: unknown): c is MistakeCourse {
-  return c === 'mcat' || c === 'sat'
+  return c === 'mcat' || c === 'sat' || c === 'act'
 }
 
 const SELECT = {
@@ -39,7 +40,12 @@ export async function answerLogFor(userId: string, course: MistakeCourse, questi
     orderBy: { answeredAt: 'asc' },
     take: 20_000,
   })
-  return rows.map((r) => ({ ...r, source: String(r.source), discipline: sectionLabel(r.discipline) }))
+  return rows.map((r) => ({
+    ...r,
+    source: String(r.source),
+    // ACT exit-quiz / unit-test rows carry no section: file them by their topic's section.
+    discipline: course === 'act' && !r.discipline ? actSectionLabelForTopic(r.topicSlug) : sectionLabel(r.discipline),
+  }))
 }
 
 export interface MistakeFilters {

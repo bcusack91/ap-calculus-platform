@@ -15,7 +15,7 @@ import { Explanation, OptionList, PassageDisclosure, type ReviewPassageView } fr
 import { AnswerStatsSummary, sharesOf, useQuestionStat } from '@/components/AnswerStats'
 import AskAboutQuestion from '@/components/AskAboutQuestion'
 
-export type MistakeCourse = 'mcat' | 'sat'
+export type MistakeCourse = 'mcat' | 'sat' | 'act'
 
 export interface MistakeQuizFilters {
   from?: string

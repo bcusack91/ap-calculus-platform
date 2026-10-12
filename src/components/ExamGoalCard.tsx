@@ -36,7 +36,7 @@ const STANDING_COPY: Record<RangeStanding, { label: string; className: string }>
 const NO_SCORE_COPY: Record<GoalCourse, { text: string; href: string; cta: string }> = {
   sat: { text: 'Take a full SAT practice test or enter a College Board score to see your superscore here.', href: '/sat-practice', cta: 'Take a practice test' },
   mcat: { text: 'Take a full-length or enter an AAMC score to measure progress toward your goal.', href: '/mcat-full-length', cta: 'Take a full-length' },
-  act: { text: 'Your goal is saved. Practice-test progress for the ACT isn’t tracked here yet.', href: '/act-practice', cta: 'ACT practice' },
+  act: { text: 'Take an ACT full-length or log a real ACT score to measure progress toward your goal.', href: '/act-practice/full-length', cta: 'Take a full-length' },
   psat: { text: 'Your goal is saved. See where your section scores put you for National Merit.', href: '/psat-selection-index', cta: 'Selection Index calculator' },
 }
 

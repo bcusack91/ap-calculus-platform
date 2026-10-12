@@ -9,7 +9,7 @@ import MistakeLog from '@/components/MistakeLog'
 import type { MistakeCourse } from '@/components/MistakeQuiz'
 import { signInUrl } from '@/lib/auth-redirect'
 
-const LABEL: Record<MistakeCourse, string> = { mcat: 'MCAT', sat: 'SAT' }
+const LABEL: Record<MistakeCourse, string> = { mcat: 'MCAT', sat: 'SAT', act: 'ACT' }
 
 /** /mcat/mistakes and /sat/mistakes. Signed-in only: /mcat and /sat aren't behind the middleware, so this redirects itself. */
 export default function MistakeLogPage({ course }: { course: MistakeCourse }) {

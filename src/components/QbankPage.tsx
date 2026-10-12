@@ -10,7 +10,7 @@ import QbankRunner from '@/components/QbankRunner'
 import type { QbankCourse, QbankSessionView } from '@/lib/qbank-types'
 import { signInUrl } from '@/lib/auth-redirect'
 
-const LABEL: Record<QbankCourse, string> = { mcat: 'MCAT', sat: 'SAT' }
+const LABEL: Record<QbankCourse, string> = { mcat: 'MCAT', sat: 'SAT', act: 'ACT' }
 
 /**
  * /mcat/qbank and /sat/qbank: build a practice set, then take it. Signed-in
@@ -21,7 +21,8 @@ export default function QbankPage({ course }: { course: QbankCourse }) {
   const router = useRouter()
   const [active, setActive] = useState<QbankSessionView | null>(null)
   useEffect(() => {
-    if (status === 'unauthenticated') router.push(signInUrl({ callbackUrl: `/${course}/qbank` }))
+    // Keep the query: deep links (?domain=…) preset the builder after sign-in.
+    if (status === 'unauthenticated') router.push(signInUrl({ callbackUrl: `/${course}/qbank${window.location.search}` }))
   }, [status, router, course])
 
   const start = (s: QbankSessionView) => {

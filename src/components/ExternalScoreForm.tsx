@@ -1,23 +1,24 @@
 'use client'
 
 import { useId, useState } from 'react'
-import { FULL_LENGTH_COURSES, type FullLengthCourse } from '@/lib/full-length-progress'
+import { externalScoreConfig, type ExternalScoreCourse } from '@/lib/external-score-courses'
 
 /**
- * Enter a full-length score earned outside StudyMondo (AAMC / College Board).
- * Saving counts as a full-length taken: the readiness bar starts over and the
- * score joins the student's history.
+ * Enter a full-length score earned outside StudyMondo (AAMC / College Board /
+ * ACT). For MCAT and SAT, saving counts as a full-length taken: the readiness
+ * bar starts over and the score joins the student's history. For the ACT it
+ * is the student's real score: it feeds their ACT goal and our calibration.
  */
 export default function ExternalScoreForm({
   course,
   onSaved,
   onCancel,
 }: {
-  course: FullLengthCourse
+  course: ExternalScoreCourse
   onSaved: () => void
   onCancel?: () => void
 }) {
-  const cfg = FULL_LENGTH_COURSES[course]
+  const cfg = externalScoreConfig(course)
   const id = useId()
   const today = new Date()
   const todayIso = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`
@@ -72,10 +73,12 @@ export default function ExternalScoreForm({
   return (
     <form onSubmit={submit} noValidate className="space-y-3 rounded-xl border border-gray-200 bg-gray-50 p-4 dark:border-gray-700 dark:bg-gray-900/40" aria-labelledby={`${id}-title`}>
       <p id={`${id}-title`} className="text-sm font-semibold text-gray-900 dark:text-white">
-        Enter {cfg.label === 'MCAT' ? 'an' : 'a'} {cfg.externalLabel} score
+        Enter {cfg.label === 'MCAT' || cfg.label === 'ACT' ? 'an' : 'a'} {cfg.externalLabel} score
       </p>
       <p className="text-xs text-gray-500 dark:text-gray-400">
-        It counts as a full-length taken: your readiness bar starts over and the score joins your history.
+        {cfg.countsAsFullLength
+          ? 'It counts as a full-length taken: your readiness bar starts over and the score joins your history.'
+          : 'Your real score tracks progress toward your goal and helps us keep our score estimates honest.'}
       </p>
       <div className="grid gap-3 sm:grid-cols-3">
         <div>
@@ -89,7 +92,7 @@ export default function ExternalScoreForm({
           <input id={`${id}-date`} type="date" value={takenAt} max={todayIso} onChange={(e) => setTakenAt(e.target.value)} required className={`mt-1 ${input}`} />
         </div>
         <div>
-          <label htmlFor={`${id}-total`} className={label}>Total score ({cfg.total.min}–{cfg.total.max})</label>
+          <label htmlFor={`${id}-total`} className={label}>{cfg.label === 'ACT' ? 'Composite' : 'Total score'} ({cfg.total.min}–{cfg.total.max})</label>
           <input
             id={`${id}-total`}
             type="number"

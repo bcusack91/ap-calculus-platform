@@ -1452,6 +1452,12 @@ export function SATResultsView({
             <Link href="/sat/mistakes" className="font-medium text-accent hover:underline dark:text-accent-muted">SAT mistake log</Link>{psat ? ' (the PSAT and SAT test the same skills)' : ''}.
           </p>
         )}
+        {!psat && (
+          <p className="mt-2 text-center text-xs text-gray-500 dark:text-gray-400">
+            Took an official Bluebook practice test too?{' '}
+            <Link href="/sat/bluebook" className="font-medium text-accent hover:underline dark:text-accent-muted">Log it and get your plan</Link>.
+          </p>
+        )}
       </div>
     </div>
   )

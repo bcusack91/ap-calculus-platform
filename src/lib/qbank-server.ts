@@ -53,7 +53,8 @@ export const MAX_ITEM_SECONDS = 60 * 60
 export async function studentStateFor(userId: string, course: QbankCourse): Promise<QbankStudentState> {
   const [log, user] = await Promise.all([
     answerLogFor(userId, course),
-    course === 'mcat' ? prisma.user.findUnique({ where: { id: userId }, select: { lessonIncludeLowYield: true } }) : null,
+    // MCAT and ACT pools are lesson-built and yield-tagged; SAT's are not.
+    course !== 'sat' ? prisma.user.findUnique({ where: { id: userId }, select: { lessonIncludeLowYield: true } }) : null,
   ])
   const active = computeMistakes(log).filter((m) => !m.retired)
   return {
@@ -72,8 +73,8 @@ const topicTitleCache = new Map<string, string>()
 
 function humanizeSlug(slug: string): string {
   return slug
-    .replace(/^(mcat|sat)-/, '')
-    .replace(/-mcat$/, '')
+    .replace(/^(mcat|sat|act)-/, '')
+    .replace(/-(mcat|act)$/, '')
     .replace(/-/g, ' ')
     .replace(/\b\w/g, (c) => c.toUpperCase())
 }

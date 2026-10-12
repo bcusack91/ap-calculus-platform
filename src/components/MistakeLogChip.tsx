@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { ListChecks } from 'lucide-react'
 import type { MistakeCourse } from '@/components/MistakeQuiz'
 
-const LABEL: Record<MistakeCourse, string> = { mcat: 'MCAT', sat: 'SAT' }
+const LABEL: Record<MistakeCourse, string> = { mcat: 'MCAT', sat: 'SAT', act: 'ACT' }
 
 /**
  * A compact "Also today" chip for the dashboard: how many questions sit in

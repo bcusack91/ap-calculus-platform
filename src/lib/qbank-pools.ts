@@ -1,5 +1,6 @@
 /**
- * Candidate pools for the custom question bank (/mcat/qbank, /sat/qbank).
+ * Candidate pools for the custom question bank (/mcat/qbank, /sat/qbank,
+ * /act/qbank).
  *
  * MCAT: every exit-quiz bank item of every MCAT topic (lesson-built pools carry
  * difficulty and yield; LOW items are served only to students who turned on
@@ -10,6 +11,11 @@
  * 700-800 tier blended in the same way, and the same seed, so an item has the
  * same question key here as on a practice form), the passage bank, and a
  * fixed set of grid-ins.
+ *
+ * ACT: the lesson-built exit pools of the ACT topics (`act-*-act`), filed
+ * under English / Math / Reading / Science by topic; low-yield items follow the
+ * student's setting as on MCAT. Full-length form items are never in it: the
+ * full-lengths stay unseen practice tests (they are not imported here).
  *
  * A passage is one UNIT: it is selected, filtered and served whole, its
  * questions in authored order, never split. A discrete question is a unit of
@@ -32,6 +38,7 @@ import { generateGridInProblems } from '@/data/sat-grid-in'
 import { SAT_DOMAIN_LABELS, type MathDomain, type RWDomain } from '@/data/sat-practice/test-generator'
 import { canonicalizeSlug } from '@/data/sat-practice/diagnostic-generator'
 import { shuffleOptions } from '@/lib/shuffle-options'
+import { actMixedItemSection, actTopicSection } from '@/lib/act-topic-sections'
 import type {
   GridInKey,
   QbankCourse,
@@ -423,6 +430,56 @@ export async function buildSatPool(): Promise<QbankPool> {
 }
 
 /* ------------------------------------------------------------------ */
+/*  ACT                                                                */
+/* ------------------------------------------------------------------ */
+
+const ACT_SECTION_LABEL: Record<'english' | 'math' | 'reading' | 'science', string> = {
+  english: 'English',
+  math: 'Math',
+  reading: 'Reading',
+  science: 'Science',
+}
+
+export async function buildActPool(): Promise<QbankPool> {
+  const slugs = LESSON_BUILT_EXIT_TOPICS.filter((s) => actTopicSection(s) !== null)
+  const pools = await Promise.all(slugs.map(mcatTopicPool))
+  pools.sort((a, b) => a.items.length - b.items.length || a.slug.localeCompare(b.slug))
+  const seen = new Set<string>()
+  const units: QbankUnit[] = []
+  for (const pool of pools) {
+    const topicSection = actTopicSection(pool.slug)!
+    for (const { q, correctIndex, key } of pool.items) {
+      if (seen.has(key)) continue
+      seen.add(key)
+      const section = topicSection === 'mixed' ? actMixedItemSection(q.question) : topicSection
+      const discipline = ACT_SECTION_LABEL[section]
+      units.push({
+        id: key,
+        passageId: null,
+        section,
+        discipline,
+        topicSlug: pool.slug,
+        items: [{
+          questionKey: key,
+          section,
+          discipline,
+          topicSlug: pool.slug,
+          difficulty: asDifficulty(q.difficulty) ?? pool.difficulties.get(key) ?? null,
+          lowYield: !pool.regularKeys.has(key),
+          passageId: null,
+          question: q.question,
+          options: [...q.options],
+          correctIndex,
+          explanation: q.explanation ?? '',
+          passage: null,
+        }],
+      })
+    }
+  }
+  return { course: 'act', units }
+}
+
+/* ------------------------------------------------------------------ */
 /*  Cache                                                              */
 /* ------------------------------------------------------------------ */
 
@@ -432,7 +489,7 @@ const poolCache = new Map<QbankCourse, Promise<QbankPool>>()
 export function getQbankPool(course: QbankCourse): Promise<QbankPool> {
   let p = poolCache.get(course)
   if (!p) {
-    p = (course === 'mcat' ? buildMcatPool() : buildSatPool()).catch((err) => {
+    p = (course === 'mcat' ? buildMcatPool() : course === 'act' ? buildActPool() : buildSatPool()).catch((err) => {
       poolCache.delete(course)
       throw err
     })

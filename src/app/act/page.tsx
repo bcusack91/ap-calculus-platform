@@ -5,6 +5,8 @@ import type { Metadata } from 'next'
 import CourseToolGrid from '@/components/CourseToolGrid'
 import { courseJsonLd } from '@/lib/jsonld'
 import CourseHero from '@/components/CourseHero'
+import ActScoreLogCard from '@/components/act/ActScoreLogCard'
+import MistakeLogChip from '@/components/MistakeLogChip'
 
 export const metadata: Metadata = {
   title: 'ACT Prep | Free ACT Practice & Review',
@@ -83,15 +85,51 @@ const features = [
     stats: 'New daily · All sections',
   },
   {
-    title: 'Full-Length Practice Exam',
-    description: 'Take a complete, timed ACT practice exam modeled on the Enhanced ACT (2025+) format: English, Math, Reading, and Science with section-by-section timing.',
-    href: '/act-practice',
+    title: 'Full-Length Practice Tests',
+    description: 'Complete Enhanced ACT forms in real order and timing: English, Math, Reading and optional Science, scored 1–36 with section, STEM and reporting-category results.',
+    href: '/act-practice/full-length',
     icon: (
       <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
       </svg>
     ),
     color: 'from-red-500 to-orange-500',
+    stats: '131–171 Q · 2–3 hours',
+  },
+  {
+    title: 'Question Bank',
+    description: 'Build your own ACT practice set: pick sections, topics and difficulty, choose unused, incorrect or flagged questions, and go timed or tutor mode.',
+    href: '/act/qbank',
+    icon: (
+      <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 12h16M4 18h7" />
+      </svg>
+    ),
+    color: 'from-sky-500 to-blue-500',
+    stats: '700+ questions · Custom sets',
+  },
+  {
+    title: 'Mistake Log',
+    description: 'Every ACT question you missed, skipped or flagged in exit quizzes, unit tests, practice sets and full-lengths, until you get it right twice.',
+    href: '/act/mistakes',
+    icon: (
+      <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+      </svg>
+    ),
+    color: 'from-emerald-500 to-teal-500',
+    stats: 'Re-quiz in one click',
+  },
+  {
+    title: 'Quick Practice Test',
+    description: 'A shorter timed ACT practice test across all four sections, drawn from our question pools: good for a quick check between full-lengths.',
+    href: '/act-practice',
+    icon: (
+      <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+      </svg>
+    ),
+    color: 'from-orange-500 to-amber-500',
     stats: '60 MCQ · 4 sections · Timed',
   },
 ]
@@ -184,6 +222,7 @@ export default function ACTLandingPage() {
       {/* Features Grid */}
       <section className="container pb-12">
         <div className="mx-auto max-w-5xl">
+          <MistakeLogChip course="act" className="mb-4" />
           <div className="grid gap-6 sm:grid-cols-2">
             {features.map(f => (
               <Link
@@ -206,6 +245,12 @@ export default function ACTLandingPage() {
               </Link>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="container pb-12">
+        <div className="mx-auto max-w-5xl">
+          <ActScoreLogCard callbackUrl="/act" />
         </div>
       </section>
 

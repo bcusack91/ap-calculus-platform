@@ -86,12 +86,17 @@ export default function ReviewReport({
   report,
   approximateTiming = false,
   onOpenQuestion,
+  skillsTitle = 'CARS by reasoning skill',
+  skillsHint = 'Weakest first. Each CARS question tests one reasoning skill.',
 }: {
   report: Report
   /** Times were recorded per passage / per attempt, so per-question times are averages. */
   approximateTiming?: boolean
   /** Jump to a question in the All tab. */
   onOpenQuestion?: (index: number) => void
+  /** Heading / hint of the per-skill panel (CARS by default; ACT reporting categories on ACT). */
+  skillsTitle?: string
+  skillsHint?: string
 }) {
   const { overall, sections, topics, skills, pacing } = report
   return (
@@ -110,7 +115,7 @@ export default function ReviewReport({
       )}
 
       {skills.length > 0 && (
-        <Section title="CARS by reasoning skill" hint="Weakest first. Each CARS question tests one reasoning skill.">
+        <Section title={skillsTitle} hint={skillsHint}>
           <BucketList buckets={skills} />
         </Section>
       )}

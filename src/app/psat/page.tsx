@@ -126,6 +126,13 @@ export default function PsatHubPage() {
             <strong>Sophomore or junior?</strong> A strong PSAT can qualify you for National Merit (<Link href="/psat-selection-index" className="font-semibold text-indigo-600 hover:underline dark:text-indigo-400">check your Selection Index</Link>) — and the exact same prep carries straight into your{' '}
             <Link href="/sat" className="font-semibold text-indigo-600 hover:underline dark:text-indigo-400">SAT preparation</Link>.
           </p>
+          <p className="mt-2 text-sm text-gray-700 dark:text-gray-300">
+            The PSAT/NMSQT uses the same adaptive design as the Digital SAT: read the{' '}
+            <Link href="/sat/digital-sat-guide" className="font-semibold text-indigo-600 hover:underline dark:text-indigo-400">Digital SAT strategy guide</Link>{' '}
+            and learn the{' '}
+            <Link href="/sat/desmos-guide" className="font-semibold text-indigo-600 hover:underline dark:text-indigo-400">built-in Desmos calculator</Link>, or start with the{' '}
+            <Link href="/sat-diagnostic" className="font-semibold text-indigo-600 hover:underline dark:text-indigo-400">free diagnostic</Link>.
+          </p>
         </div>
       </section>
       <section className="container pb-16">

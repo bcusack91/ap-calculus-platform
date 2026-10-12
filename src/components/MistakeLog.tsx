@@ -1,7 +1,7 @@
 'use client'
 
 /**
- * The student's mistake log for one course (/mcat/mistakes, /sat/mistakes):
+ * The student's mistake log for one course (/mcat/mistakes, /sat/mistakes, /act/mistakes):
  * every question they missed, skipped or flagged that they haven't yet
  * answered correctly twice since. Rows link back to the attempt the miss
  * came from; the primary button re-quizzes the filtered set (MistakeQuiz).
@@ -97,7 +97,7 @@ const REASON_META = {
 } as const
 
 const SESSION_MAX = 20
-const COURSE_LABEL: Record<MistakeCourse, string> = { mcat: 'MCAT', sat: 'SAT' }
+const COURSE_LABEL: Record<MistakeCourse, string> = { mcat: 'MCAT', sat: 'SAT', act: 'ACT' }
 
 interface Filters {
   source: string

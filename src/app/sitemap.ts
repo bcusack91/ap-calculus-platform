@@ -97,6 +97,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'weekly',
       priority: 0.9,
     },
+    // SAT guides + the Bluebook companion (static shells)
+    ...['/sat/bluebook', '/sat/desmos-guide', '/sat/digital-sat-guide'].map((p) => ({
+      url: `${baseUrl}${p}`,
+      lastModified: new Date('2026-10-12'),
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    })),
     {
       url: `${baseUrl}/sat-grid-in`,
       lastModified: new Date(),
@@ -105,6 +112,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     {
       url: `${baseUrl}/sat-reading-practice`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/act-practice/full-length`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.85,

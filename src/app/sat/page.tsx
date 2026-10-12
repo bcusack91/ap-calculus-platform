@@ -4,11 +4,13 @@ import type { Metadata } from 'next'
 import CourseToolGrid from '@/components/CourseToolGrid'
 import { courseJsonLd } from '@/lib/jsonld'
 import CourseHero from '@/components/CourseHero'
+import BluebookPromptCard from '@/components/BluebookPromptCard'
+import { GuideLinks } from '@/components/SatGuideParts'
 
 export const metadata: Metadata = {
   title: 'SAT Prep | Free Digital SAT Practice',
   description:
-    'Comprehensive SAT preparation with practice tests, diagnostic assessments, interactive lessons, exit quizzes, and a score predictor. Free for all students.',
+    'Free Digital SAT prep: a 30-minute diagnostic that builds your study plan, full-length adaptive practice tests, a question bank, interactive lessons, and a companion for your Bluebook score reports.',
   alternates: {
     canonical: 'https://www.studymondo.com/sat',
   },
@@ -201,6 +203,14 @@ export default function SATLandingPage() {
               </Link>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Bluebook companion + free guides and tools */}
+      <section className="container pb-12">
+        <div className="mx-auto max-w-5xl">
+          <BluebookPromptCard />
+          <GuideLinks title="Free SAT guides and tools" keys={['diagnostic', 'strategy', 'desmos', 'selectionIndex']} />
         </div>
       </section>
 

@@ -174,6 +174,20 @@ export default function PsatSelectionIndexPage() {
             All PSAT/NMSQT prep tools
             <ArrowRight className="h-4 w-4 text-indigo-600 transition group-hover:translate-x-0.5 dark:text-indigo-400" aria-hidden />
           </Link>
+          <Link
+            href="/sat-diagnostic"
+            className="group flex items-center justify-between rounded-xl border border-gray-200 bg-white p-4 text-sm font-semibold text-gray-900 shadow-sm transition hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 dark:border-gray-700 dark:bg-gray-800 dark:text-white"
+          >
+            Free diagnostic: find your weak areas
+            <ArrowRight className="h-4 w-4 text-indigo-600 transition group-hover:translate-x-0.5 dark:text-indigo-400" aria-hidden />
+          </Link>
+          <Link
+            href="/sat/digital-sat-guide"
+            className="group flex items-center justify-between rounded-xl border border-gray-200 bg-white p-4 text-sm font-semibold text-gray-900 shadow-sm transition hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 dark:border-gray-700 dark:bg-gray-800 dark:text-white"
+          >
+            Digital SAT and PSAT strategy guide
+            <ArrowRight className="h-4 w-4 text-indigo-600 transition group-hover:translate-x-0.5 dark:text-indigo-400" aria-hidden />
+          </Link>
         </div>
       </div>
     </div>

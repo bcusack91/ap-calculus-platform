@@ -8,7 +8,7 @@ import { isQuestionKey } from '@/lib/question-key'
 import { chosenOptionKey } from '@/lib/question-activity-rows'
 import { CORRECT_TO_RETIRE } from '@/lib/mistake-log'
 import { gradeGridIn } from '@/data/sat-grid-in'
-import { MISTAKE_COURSES, isMistakeCourse, mistakeStateFor } from '@/lib/mistakes-server'
+import { MISTAKE_COURSES, isMistakeCourse, mistakeStateFor, type MistakeCourse } from '@/lib/mistakes-server'
 
 export const dynamic = 'force-dynamic'
 
@@ -41,7 +41,7 @@ export async function POST(req: NextRequest) {
   const { course, sessionId, position, questionKey, origin, chosenIndex, chosenText, durationMs } = parsed.data
   try {
     // The origin must be one of THIS student's misses of THIS question.
-    const state = await mistakeStateFor(userId, course as 'mcat' | 'sat', questionKey)
+    const state = await mistakeStateFor(userId, course as MistakeCourse, questionKey)
     if (!state || state.origin.attemptId !== origin.attemptId || state.origin.itemIndex !== origin.itemIndex) {
       return NextResponse.json({ error: 'That question is not in your mistake log.' }, { status: 404 })
     }
@@ -59,7 +59,7 @@ export async function POST(req: NextRequest) {
       : chosenIndex !== null && chosenIndex === item.correctIndex
     await recordQuestions(userId, [{
       source: 'MISTAKE_REVIEW',
-      courseSlug: MISTAKE_COURSES[course as 'mcat' | 'sat'],
+      courseSlug: MISTAKE_COURSES[course as MistakeCourse],
       topicSlug: item.topicSlug ?? state.topicSlug,
       discipline: item.discipline ?? state.discipline,
       questionKey,
@@ -73,7 +73,7 @@ export async function POST(req: NextRequest) {
       chosenText: item.gridIn ? chosenText || null : null,
       chosenKey: item.gridIn ? null : chosenOptionKey(item.options, chosenIndex),
     }])
-    const after = await mistakeStateFor(userId, course as 'mcat' | 'sat', questionKey)
+    const after = await mistakeStateFor(userId, course as MistakeCourse, questionKey)
     return NextResponse.json({
       correct,
       correctIndex: item.correctIndex,

@@ -19,6 +19,8 @@ const footerLinks = {
     { name: 'AP Chem Diagnostic', href: '/ap-chem-diagnostic' },
     { name: 'Calc AB Diagnostic', href: '/calcab-diagnostic' },
     { name: 'Calc BC Diagnostic', href: '/calcbc-diagnostic' },
+    { name: 'SAT Diagnostic', href: '/sat-diagnostic' },
+    { name: 'PSAT Selection Index', href: '/psat-selection-index' },
     { name: 'Competitive Mode', href: '/competitive' },
     { name: 'Leaderboard', href: '/leaderboard' },
     { name: 'Search', href: '/search' },
@@ -109,7 +111,7 @@ export function Footer() {
                 © {new Date().getFullYear()} Study Mondo. Built for students.
               </p>
               <p className="text-xs text-muted-foreground/80 mt-1">
-                AP® is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this website.
+                AP® and SAT® are trademarks registered by the College Board, and PSAT/NMSQT® is a registered trademark of the College Board and the National Merit Scholarship Corporation. Neither is affiliated with, or endorses, this website.
               </p>
             </div>
             <ReportProblem />

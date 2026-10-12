@@ -38,6 +38,7 @@ export function surfaceForPath(pathname: string | null | undefined): ActivitySta
   if (first === 'flashcards' || first === 'flashcard-sets') return { surface: 'FLASHCARDS' }
   if (first === 'competitive') return { surface: 'COMPETITIVE' }
   if (first === 'mcat-full-length' || first.endsWith('-full-exam')) return { surface: 'FULL_LENGTH' }
+  if (first === 'act-practice' && seg[1] === 'full-length') return { surface: 'FULL_LENGTH' }
   if (first.endsWith('-diagnostic') || first === 'diagnostic-review') return { surface: 'DIAGNOSTIC' }
   if (
     first.endsWith('-practice') ||

@@ -50,7 +50,8 @@ export const FULL_LENGTH_COURSES: Record<FullLengthCourse, FullLengthCourseConfi
     fullLengthHref: '/sat-practice',
     fullLengthLabel: 'SAT practice test',
     externalLabel: 'College Board / Bluebook practice test',
-    externalSources: ['Bluebook Practice 1', 'Bluebook Practice 2', 'Bluebook Practice 3', 'Bluebook Practice 4', 'Bluebook Practice 5', 'Bluebook Practice 6', 'PSAT/NMSQT', 'Official SAT', 'Other practice test'],
+    // Same labels as the Bluebook companion (BLUEBOOK_SOURCES in src/lib/sat-bluebook.ts).
+    externalSources: [...Array.from({ length: 10 }, (_, i) => `Bluebook Practice ${i + 1}`), 'PSAT/NMSQT', 'Official SAT', 'Other practice test'],
     total: { min: 400, max: 1600 },
     sections: [
       { key: 'rw', label: 'Reading & Writing', min: 200, max: 800 },

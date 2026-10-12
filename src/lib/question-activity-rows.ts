@@ -350,6 +350,48 @@ export function mcatFullLengthQuestionRows(
   }))
 }
 
+/** One graded ACT full-length question (see buildActFlItems in question-sources/act). */
+export interface ActFullLengthRowItem {
+  index: number
+  questionKey: string
+  /** Section label ('English' | 'Math' | 'Reading' | 'Science'): the row's discipline. */
+  discipline?: string
+  topicSlug?: string
+  chosenIndex: number | null
+  isCorrect: boolean
+  flagged?: boolean
+  durationMs?: number | null
+  /** Options in the order shown (authored order on ACT full-lengths), for chosenKey. */
+  options?: readonly string[]
+}
+
+/**
+ * One ACT full-length sitting as one FULL_LENGTH row per question (unanswered
+ * questions included, as the score counts them wrong), tagged attemptKind
+ * 'act-fl' with attemptId = the DiagnosticTest id, under course 'act-prep'.
+ */
+export function actFullLengthQuestionRows(
+  items: ActFullLengthRowItem[],
+  opts: { attemptId?: string; answeredAt?: Date } = {},
+): QuestionRow[] {
+  return items.slice(0, MAX_ROWS).map((it) => ({
+    source: 'FULL_LENGTH' as const,
+    courseSlug: 'act-prep',
+    discipline: it.discipline ?? '',
+    ...(it.topicSlug ? { topicSlug: it.topicSlug } : {}),
+    questionKey: it.questionKey,
+    answered: 1,
+    correct: it.isCorrect ? 1 : 0,
+    durationMs: it.durationMs ?? null,
+    itemIndex: it.index,
+    chosenIndex: it.chosenIndex,
+    chosenKey: chosenOptionKey(it.options, it.chosenIndex),
+    flagged: !!it.flagged,
+    ...(opts.attemptId ? { attemptId: opts.attemptId, attemptKind: 'act-fl' as const } : {}),
+    ...(opts.answeredAt ? { answeredAt: opts.answeredAt } : {}),
+  }))
+}
+
 /** A frozen unit-test question (McatUnitTest.questions): options already shuffled, key stored. */
 export interface UnitTestRowQuestion {
   question: string

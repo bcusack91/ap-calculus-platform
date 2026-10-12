@@ -13,6 +13,7 @@ import LiveNowBanner from '@/components/LiveNowBanner'
 import ClassAnnouncementsBanner from '@/components/ClassAnnouncementsBanner'
 import FullLengthProgress from '@/components/FullLengthProgress'
 import ExamGoalCard from '@/components/ExamGoalCard'
+import BluebookPromptCard from '@/components/BluebookPromptCard'
 import MistakeLogChip from '@/components/MistakeLogChip'
 import { isFullLengthCourse } from '@/lib/full-length-progress'
 import AchievementToast from '@/components/AchievementToast'
@@ -570,6 +571,9 @@ function DashboardContent() {
           studyPlans.flatMap((p) => (isFullLengthCourse(p.courseKey) ? [p.courseKey] : [])).map((course) => (
             <ExamGoalCard key={`goal-${course}`} course={course} className="mb-6" />
           ))}
+
+        {/* SAT plans: nudge toward logging Bluebook practice tests (one slim link) */}
+        {plansLoaded && studyPlans.some((p) => p.courseKey === 'sat') && <BluebookPromptCard className="mb-6" />}
 
         {/* Also today — whatever the next-step card didn't take */}
         <div className="mb-6 flex flex-wrap items-center gap-2">

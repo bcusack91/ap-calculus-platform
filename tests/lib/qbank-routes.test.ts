@@ -162,7 +162,7 @@ describe('POST /api/qbank — building a set', () => {
 
   it('rejects bad requests and empty results', async () => {
     expect((await create(post({ course: 'sat', count: 2, mode: 'tutor' }))).status).toBe(400)
-    expect((await create(post({ course: 'act', count: 10, mode: 'tutor' }))).status).toBe(400)
+    expect((await create(post({ course: 'gre', count: 10, mode: 'tutor' }))).status).toBe(400)
     expect((await create(post({ course: 'sat', count: 10, mode: 'tutor', topics: ['nope'] }))).status).toBe(422)
     mockAuth.mockResolvedValue(null)
     expect((await create(post({ course: 'sat', count: 10, mode: 'tutor' }))).status).toBe(401)
