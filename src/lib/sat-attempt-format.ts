@@ -52,18 +52,24 @@ export const SAT_FULL_LENGTH_ATTEMPTS = {
  *   1  legacy: client-scored, routes not stored; form v1
  *   2  server-graded on the routed curves; form v1
  *   3  server-graded on the same routed curves; form v2 (SAT_FORM_V2_EXCLUDED)
+ *   4  server-graded on the same routed curves; form v3 (SAT_FORM_V3_EXCLUDED
+ *      + the conventions bank + the Craft and Structure lesson pools)
  *
  * Anything that rebuilds a stored attempt's questions passes
  * formVersionForScoring(attempt.scoringVersion) to the form builders.
  */
-export const SAT_SCORING_VERSION = { LEGACY: 1, ROUTED: 2, ROUTED_FORM_V2: 3 } as const
+export const SAT_SCORING_VERSION = { LEGACY: 1, ROUTED: 2, ROUTED_FORM_V2: 3, ROUTED_FORM_V3: 4 } as const
 
-/** The form version (1 | 2) an attempt with this scoringVersion was built at. */
-export function formVersionForScoring(scoringVersion: number | null | undefined): 1 | 2 {
-  return (scoringVersion ?? SAT_SCORING_VERSION.LEGACY) >= SAT_SCORING_VERSION.ROUTED_FORM_V2 ? 2 : 1
+/** The form version (1 | 2 | 3) an attempt with this scoringVersion was built at. */
+export function formVersionForScoring(scoringVersion: number | null | undefined): 1 | 2 | 3 {
+  const v = scoringVersion ?? SAT_SCORING_VERSION.LEGACY
+  if (v >= SAT_SCORING_VERSION.ROUTED_FORM_V3) return 3
+  if (v >= SAT_SCORING_VERSION.ROUTED_FORM_V2) return 2
+  return 1
 }
 
 /** The scoringVersion the submit route stores for a server-graded attempt on this form version. */
-export function scoringVersionForForm(formVersion: 1 | 2): number {
+export function scoringVersionForForm(formVersion: 1 | 2 | 3): number {
+  if (formVersion === 3) return SAT_SCORING_VERSION.ROUTED_FORM_V3
   return formVersion === 2 ? SAT_SCORING_VERSION.ROUTED_FORM_V2 : SAT_SCORING_VERSION.ROUTED
 }

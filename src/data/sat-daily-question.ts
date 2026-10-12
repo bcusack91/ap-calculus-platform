@@ -74,7 +74,7 @@ export interface DailyQuestion {
 export const DOMAIN_TO_DAILY_SLUGS: Record<string, { section: 'math' | 'reading-writing'; slugs: string[] }> = {
   comprehension: { section: 'reading-writing', slugs: ['sat-reading-comprehension', 'sat-central-ideas-details'] },
   evidence: { section: 'reading-writing', slugs: ['sat-command-evidence', 'sat-finding-textual-evidence'] },
-  vocabulary: { section: 'reading-writing', slugs: ['sat-vocabulary-context'] },
+  vocabulary: { section: 'reading-writing', slugs: ['sat-vocabulary-context', 'sat-text-structure-purpose', 'sat-cross-text-connections'] },
   grammar: { section: 'reading-writing', slugs: ['sat-grammar-conventions', 'sat-grammar-usage', 'sat-subject-verb-agreement', 'sat-pronoun-agreement'] },
   expression: { section: 'reading-writing', slugs: ['sat-effective-language-use', 'sat-transitions-organization'] },
   punctuation: { section: 'reading-writing', slugs: ['sat-punctuation', 'sat-punctuation-commas-semicolons', 'sat-sentence-structure'] },

@@ -67,6 +67,8 @@ const SAT_READING_TOPICS = new Set([
   'sat-finding-textual-evidence',
   'sat-craft-structure',
   'sat-vocabulary-context',
+  'sat-text-structure-purpose',
+  'sat-cross-text-connections',
   'sat-expression-ideas',
   'sat-transitions-organization',
   'sat-effective-language-use',
@@ -216,6 +218,8 @@ const CURRICULUM_TO_SKILLS: Record<string, string[]> = {
   // --- Reading & Writing: Craft and Structure ---
   'sat-craft-structure': ['sat-skill-words-in-context', 'sat-skill-text-structure-purpose', 'sat-skill-cross-text-connections'],
   'sat-vocabulary-context': ['sat-skill-words-in-context'],
+  'sat-text-structure-purpose': ['sat-skill-text-structure-purpose'],
+  'sat-cross-text-connections': ['sat-skill-cross-text-connections'],
 
   // --- Reading & Writing: Expression of Ideas ---
   'sat-expression-ideas': ['sat-skill-rhetorical-synthesis', 'sat-skill-transitions'],

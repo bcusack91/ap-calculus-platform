@@ -88,6 +88,8 @@ export async function computeSatPrediction(userId: string) {
     // Reading & Writing
     'sat-reading-comprehension': 'reading-writing',
     'sat-vocabulary-context': 'reading-writing',
+    'sat-text-structure-purpose': 'reading-writing',
+    'sat-cross-text-connections': 'reading-writing',
     'sat-central-ideas-details': 'reading-writing',
     'sat-command-evidence': 'reading-writing',
     'sat-finding-textual-evidence': 'reading-writing',

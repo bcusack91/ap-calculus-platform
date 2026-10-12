@@ -24,12 +24,24 @@ const PRACTICE_COUNT = 15
 const DOMAIN_SLUGS: Record<SatDomainKey, string[]> = { ...RW_DOMAIN_SLUGS, ...MATH_DOMAIN_SLUGS }
 
 /**
+ * Lessons a domain teaches beyond its practice-form pools. RW_DOMAIN_SLUGS
+ * drives the frozen v1/v2 forms and must not change, so Craft and Structure's
+ * Text Structure and Purpose and Cross-Text Connections lessons are listed
+ * here, after Words in Context (the College Board's in-module order).
+ */
+const EXTRA_DOMAIN_LESSONS: Partial<Record<SatDomainKey, string[]>> = {
+  'craft-structure': ['sat-text-structure-purpose', 'sat-cross-text-connections'],
+}
+
+/**
  * The lesson topics behind a content domain, in blueprint order: the practice
  * test's domain → pool mapping, resolved to real lesson pages the same way
- * diagnostic recommendations are (canonicalizeSlug).
+ * diagnostic recommendations are (canonicalizeSlug), plus the domain's
+ * lesson-only topics.
  */
 export function domainLessonSlugs(domain: SatDomainKey): string[] {
-  return Array.from(new Set((DOMAIN_SLUGS[domain] ?? []).map(canonicalizeSlug)))
+  const slugs = [...(DOMAIN_SLUGS[domain] ?? []), ...(EXTRA_DOMAIN_LESSONS[domain] ?? [])]
+  return Array.from(new Set(slugs.map(canonicalizeSlug)))
 }
 
 export interface PlanLesson {

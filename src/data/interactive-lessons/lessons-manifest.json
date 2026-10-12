@@ -3814,5 +3814,31 @@
       "Personality, Dissociative, Somatic & Neurocognitive Disorders",
       "MCAT Integration: Etiology Models, Treatment Logic & Reading Clinical Studies"
     ]
+  },
+  {
+    "slug": "sat-text-structure-purpose",
+    "importPath": "./sat-sat-text-structure-purpose-sat",
+    "partTitles": [
+      "Reading for What a Text Does",
+      "Main Purpose Questions",
+      "Overall Structure Questions",
+      "The Function of a Sentence",
+      "Purpose and Structure in Literary Texts",
+      "Trap Answers and Elimination",
+      "Mixed Practice and Test Strategy"
+    ]
+  },
+  {
+    "slug": "sat-cross-text-connections",
+    "importPath": "./sat-sat-cross-text-connections-sat",
+    "partTitles": [
+      "Meet the Paired Texts",
+      "Mapping Each Author's Position",
+      "How Would Text 2 Respond to Text 1?",
+      "Agreement Questions",
+      "Difference and Disagreement Questions",
+      "Cross-Text Traps",
+      "Mixed Practice and Test Strategy"
+    ]
   }
 ]

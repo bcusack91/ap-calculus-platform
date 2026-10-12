@@ -16,19 +16,21 @@ const tally = (s: SATTestSection, correct: number): SectionTally => ({
 })
 
 describe('scoringVersion <-> form version', () => {
-  it('maps 3 to form v2 and everything else to v1', () => {
+  it('maps 4 to form v3, 3 to form v2 and everything else to v1', () => {
+    expect(formVersionForScoring(4)).toBe(3)
     expect(formVersionForScoring(3)).toBe(2)
     for (const v of [1, 2, null, undefined, 0]) expect(formVersionForScoring(v)).toBe(1)
+    expect(scoringVersionForForm(3)).toBe(4)
     expect(scoringVersionForForm(2)).toBe(3)
     expect(scoringVersionForForm(1)).toBe(2)
-    expect(SAT_SCORING_VERSION).toEqual({ LEGACY: 1, ROUTED: 2, ROUTED_FORM_V2: 3 })
+    expect(SAT_SCORING_VERSION).toEqual({ LEGACY: 1, ROUTED: 2, ROUTED_FORM_V2: 3, ROUTED_FORM_V3: 4 })
   })
 })
 
 describe('rescore-sat-attempts selection', { timeout: 180_000 }, () => {
   it('selects only scoringVersion 1 rows', () => {
     expect(SAT_RESCORE_WHERE).toEqual({ scoringVersion: 1 })
-    const rows = [1, 2, 3].map((scoringVersion) => ({ scoringVersion }))
+    const rows = [1, 2, 3, 4].map((scoringVersion) => ({ scoringVersion }))
     const picked = rows.filter((r) => Object.entries(SAT_RESCORE_WHERE).every(([k, v]) => r[k as keyof typeof r] === v))
     expect(picked).toEqual([{ scoringVersion: 1 }])
   })

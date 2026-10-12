@@ -4,6 +4,7 @@ import {
   CURRENT_SAT_FORM_VERSION,
   module2Route,
   routedModule2,
+  SAT_FORM_VERSIONS,
   type SatExam,
   type SatFormVersion,
   type SatRoute,
@@ -177,12 +178,13 @@ async function responsesOnForm(
 }
 
 /**
- * The form version a submission was taken on. A test started before the v2
- * deploy (or in a browser still running the old bundle) carries v1 question
- * ids. Tries `preferred` (default: the current version) first and keeps it
- * when every submitted id belongs to it; otherwise the other version if every
- * id belongs to that one; otherwise (a broken or tampered payload) whichever
- * matches more ids, ties going to `preferred`.
+ * The form version a submission was taken on. A test started before a form
+ * version deploy (or in a browser still running an old bundle) carries the
+ * older version's question ids. Tries `preferred` (default: the current
+ * version) first and keeps it when every submitted id belongs to it;
+ * otherwise the newest other version (3, 2, 1) that every id belongs to;
+ * otherwise (a broken or tampered payload) whichever matches the most ids,
+ * ties going to `preferred`, then to the newer version.
  */
 export async function satSubmissionFormVersion(input: {
   testNumber: number
@@ -194,13 +196,20 @@ export async function satSubmissionFormVersion(input: {
   const exam: SatExam = input.exam === 'psat' ? 'psat' : 'sat'
   const format: SatTestFormat = exam === 'psat' ? 'full' : input.format
   const first: SatFormVersion = input.preferred ?? CURRENT_SAT_FORM_VERSION
-  const second: SatFormVersion = first === 2 ? 1 : 2
   const total = input.responses.length
   if (total === 0) return first
-  const firstHits = await responsesOnForm(exam, input.testNumber, format, first, input.responses)
-  if (firstHits === total) return first
-  const secondHits = await responsesOnForm(exam, input.testNumber, format, second, input.responses)
-  return secondHits > firstHits ? second : first
+  const order = [first, ...[...SAT_FORM_VERSIONS].reverse().filter((v) => v !== first)]
+  let best = first
+  let bestHits = -1
+  for (const v of order) {
+    const hits = await responsesOnForm(exam, input.testNumber, format, v, input.responses)
+    if (hits === total) return v
+    if (hits > bestHits) {
+      best = v
+      bestHits = hits
+    }
+  }
+  return best
 }
 
 export async function gradeSatPractice(input: {

@@ -1,7 +1,7 @@
 /**
  * Rebuilding SAT attempts for review: practice tests from testNumber / format
  * / routes + stored answers, diagnostics from the stored review copy. The
- * form version comes from scoringVersion (3 = form v2, else v1).
+ * form version comes from scoringVersion (4 = form v3, 3 = form v2, else v1).
  */
 import { describe, it, expect } from 'vitest'
 import { buildSatForm, routedModule2, type SatFormVersion } from '@/data/sat-practice/test-generator'
@@ -33,7 +33,7 @@ describe('satPracticeReviewItems', { timeout: 180_000 }, () => {
       format: 'full',
       rwTier: grade.rw.tier,
       mathTier: grade.math.tier,
-      scoringVersion: 3,
+      scoringVersion: 4,
       answers: JSON.parse(JSON.stringify(stored)),
     })
     expect(items).toHaveLength(98)
@@ -72,6 +72,7 @@ describe('satPracticeReviewItems', { timeout: 180_000 }, () => {
     }
     const v1 = await attemptOn(1)
     const v2 = await attemptOn(2)
+    const v3 = await attemptOn(3)
     for (const sv of [undefined, null, 1, 2]) {
       const items = await satPracticeReviewItems({ ...v1.attempt, scoringVersion: sv })
       expect(items, `scoringVersion ${sv}`).toHaveLength(98)
@@ -80,7 +81,14 @@ describe('satPracticeReviewItems', { timeout: 180_000 }, () => {
     const items = await satPracticeReviewItems({ ...v2.attempt, scoringVersion: 3 })
     expect(items).toHaveLength(98)
     expect(items[76].question).toBe(v2.m2.questions[0].question)
+    for (const sv of [4, 5]) {
+      const v3Items = await satPracticeReviewItems({ ...v3.attempt, scoringVersion: sv })
+      expect(v3Items, `scoringVersion ${sv}`).toHaveLength(98)
+      expect(v3Items[76].question).toBe(v3.m2.questions[0].question)
+    }
     // The wrong version does not line up.
+    expect((await satPracticeReviewItems({ ...v3.attempt, scoringVersion: 3 })).length).toBeLessThan(98)
+    expect((await satPracticeReviewItems({ ...v2.attempt, scoringVersion: 4 })).length).toBeLessThan(98)
     expect((await satPracticeReviewItems({ ...v2.attempt, scoringVersion: 2 })).length).toBeLessThan(98)
     expect((await satPracticeReviewItems({ ...v1.attempt, scoringVersion: 3 })).length).toBeLessThan(98)
   })

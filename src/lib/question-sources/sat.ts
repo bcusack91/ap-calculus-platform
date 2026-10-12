@@ -23,8 +23,8 @@ import { attemptExam, formVersionForScoring, isPsatAttemptFormat, type SatAttemp
  *   routes were stored (scoringVersion 1, answers grouped by section) are
  *   matched against every Module 2 the student could have sat.
  *   Adaptive PSAT/NMSQT attempts (format 'psat-full') rebuild the same way
- *   from buildPsatForm. The form version comes from scoringVersion (3 = form
- *   v2, anything lower = v1; see formVersionForScoring).
+ *   from buildPsatForm. The form version comes from scoringVersion (4 = form
+ *   v3, 3 = form v2, anything lower = v1; see formVersionForScoring).
  * - Diagnostics (DiagnosticTest.results.review): a stored copy of the
  *   questions as served, the chosen indices, and `typed` grid-in answers.
  *
@@ -54,7 +54,7 @@ export interface SatPracticeAttemptLike {
   rwTier?: string | null
   mathTier?: string | null
   rwTotal?: number | null
-  /** 1 legacy, 2 routed (form v1), 3 routed on form v2. Absent = 1. */
+  /** 1 legacy, 2 routed (form v1), 3 routed on form v2, 4 routed on form v3. Absent = 1. */
   scoringVersion?: number | null
   answers: unknown
 }
@@ -87,7 +87,8 @@ const normText = (t: string) => t.replace(/\s+/g, ' ').trim()
  * - Pool questions are spread from the bank item and the form builder never
  *   reorders their options, so an `optionExplanations` they carry is already
  *   in shown order; it is still read through readOptionExplanations, which
- *   drops anything of the wrong length.
+ *   drops anything of the wrong length. The v3 conventions bank items
+ *   (v3-bank/conventions.ts) take this path too: static, authored order.
  *
  * Optional throughout: most items carry no explanations yet (undefined).
  */

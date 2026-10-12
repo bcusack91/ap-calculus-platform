@@ -34,6 +34,27 @@ describe('domainLessonSlugs', () => {
     // sat-geometry-trigonometry has no topic of its own → sat-geometry-basics
     expect(domainLessonSlugs('geometry')).toEqual(['sat-geometry-basics', 'sat-circles'])
   })
+
+  it('links all three Craft and Structure lessons, in the College Board order', () => {
+    expect(domainLessonSlugs('craft-structure')).toEqual(['sat-vocabulary-context', 'sat-text-structure-purpose', 'sat-cross-text-connections'])
+  })
+})
+
+describe('buildBluebookPlan — Craft and Structure', () => {
+  it('offers Words in Context, Text Structure and Purpose, and Cross-Text Connections', async () => {
+    topics.mockResolvedValue(['sat-vocabulary-context', 'sat-text-structure-purpose', 'sat-cross-text-connections'].map(row))
+    const plan = await buildBluebookPlan('u1', { rw: 520, math: 700, domains: { 'craft-structure': 2, 'information-ideas': 5, 'algebra': 6 }, takenAt: TAKEN })
+    const cs = plan.domains.find((d) => d.key === 'craft-structure')
+    expect(cs?.lessons.map((l) => l.slug)).toEqual(['sat-vocabulary-context', 'sat-text-structure-purpose', 'sat-cross-text-connections'])
+  })
+
+  it('routes both new lessons to the 700-800 Reading Comprehension lesson on the advanced lane', async () => {
+    satPlan.mockResolvedValue({ lane: 'advanced' })
+    topics.mockResolvedValue(['sat-vocabulary-context', 'sat-vocabulary-context-advanced', 'sat-text-structure-purpose', 'sat-cross-text-connections', 'sat-reading-comprehension-advanced'].map(row))
+    const plan = await buildBluebookPlan('u1', { rw: 690, math: 700, domains: { 'craft-structure': 4, 'information-ideas': 6, 'algebra': 7 }, takenAt: TAKEN })
+    const cs = plan.domains.find((d) => d.key === 'craft-structure')
+    expect(cs?.lessons.map((l) => l.slug)).toEqual(['sat-vocabulary-context-advanced', 'sat-reading-comprehension-advanced'])
+  })
 })
 
 describe('buildBluebookPlan', () => {

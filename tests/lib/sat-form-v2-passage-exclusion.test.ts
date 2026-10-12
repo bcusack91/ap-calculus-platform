@@ -38,7 +38,8 @@ describe('SAT form v2 exclusions (controlled list)', { timeout: 180_000 }, () =>
       .map((q) => q.id)
     for (const id of poolIds) excluded.add(id)
 
-    for (const f of [await buildSatForm(1, 'full', 'harder', 'easier'), await buildSatForm(1, 'mini'), await buildPsatForm(2, 'easier', 'harder')]) {
+    // Built at v2 explicitly: v3's list is the v2 list captured at import, plus its own.
+    for (const f of [await buildSatForm(1, 'full', 'harder', 'easier', 2), await buildSatForm(1, 'mini', null, null, 2), await buildPsatForm(2, 'easier', 'harder', 2)]) {
       expect(f.formVersion).toBe(2)
       for (const q of all(f)) {
         expect(excluded.has(q.id), q.id).toBe(false)

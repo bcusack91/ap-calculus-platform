@@ -3490,4 +3490,28 @@ export const registryExtra: Record<string, InteractiveTopicConfig> = {
       { title: 'MCAT Integration: Etiology Models, Treatment Logic & Reading Clinical Studies', loader: () => import('./mcat-mcat-psychology-behavior-disorders-mcat').then((m) => m.parts[3]) },
     ],
   },
+  'sat-text-structure-purpose': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Reading for What a Text Does', loader: () => import('./sat-sat-text-structure-purpose-sat').then((m) => m.parts[0]) },
+      { title: 'Main Purpose Questions', loader: () => import('./sat-sat-text-structure-purpose-sat').then((m) => m.parts[1]) },
+      { title: 'Overall Structure Questions', loader: () => import('./sat-sat-text-structure-purpose-sat').then((m) => m.parts[2]) },
+      { title: 'The Function of a Sentence', loader: () => import('./sat-sat-text-structure-purpose-sat').then((m) => m.parts[3]) },
+      { title: 'Purpose and Structure in Literary Texts', loader: () => import('./sat-sat-text-structure-purpose-sat').then((m) => m.parts[4]) },
+      { title: 'Trap Answers and Elimination', loader: () => import('./sat-sat-text-structure-purpose-sat').then((m) => m.parts[5]) },
+      { title: 'Mixed Practice and Test Strategy', loader: () => import('./sat-sat-text-structure-purpose-sat').then((m) => m.parts[6]) },
+    ],
+  },
+  'sat-cross-text-connections': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Meet the Paired Texts', loader: () => import('./sat-sat-cross-text-connections-sat').then((m) => m.parts[0]) },
+      { title: 'Mapping Each Author\'s Position', loader: () => import('./sat-sat-cross-text-connections-sat').then((m) => m.parts[1]) },
+      { title: 'How Would Text 2 Respond to Text 1?', loader: () => import('./sat-sat-cross-text-connections-sat').then((m) => m.parts[2]) },
+      { title: 'Agreement Questions', loader: () => import('./sat-sat-cross-text-connections-sat').then((m) => m.parts[3]) },
+      { title: 'Difference and Disagreement Questions', loader: () => import('./sat-sat-cross-text-connections-sat').then((m) => m.parts[4]) },
+      { title: 'Cross-Text Traps', loader: () => import('./sat-sat-cross-text-connections-sat').then((m) => m.parts[5]) },
+      { title: 'Mixed Practice and Test Strategy', loader: () => import('./sat-sat-cross-text-connections-sat').then((m) => m.parts[6]) },
+    ],
+  },
 }

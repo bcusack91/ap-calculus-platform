@@ -9,8 +9,9 @@
  *
  * SAT: the topic pools SAT practice tests and diagnostics draw from (with the
  * 700-800 tier blended in the same way, and the same seed, so an item has the
- * same question key here as on a practice form), the passage bank, and a
- * fixed set of grid-ins.
+ * same question key here as on a practice form) minus the current form's
+ * exclusions (SAT_FORM_V3_EXCLUDED), the SAT-format conventions bank
+ * (v3-bank/), the passage bank, and a fixed set of grid-ins.
  *
  * ACT: the lesson-built exit pools of the ACT topics (`act-*-act`), filed
  * under English / Math / Reading / Science by topic; low-yield items follow the
@@ -28,7 +29,8 @@
  */
 import { questionKey } from '@/lib/question-key'
 import { generateExitQuiz, listExitQuizSlugs, type ExitQuizQuestion } from '@/data/exit-quizzes'
-import { SAT_FORM_V2_EXCLUDED } from '@/data/sat-practice/form-v2-exclusions'
+import { SAT_FORM_V3_EXCLUDED } from '@/data/sat-practice/form-v3-exclusions'
+import { SAT_V3_CONVENTIONS } from '@/data/sat-practice/v3-bank/conventions'
 import { LESSON_BUILT_EXIT_TOPICS, type LessonExitItem } from '@/data/exit-quizzes/lesson-built'
 import { CARS_PASSAGES, SECTION_PASSAGES } from '@/data/mcat/passages'
 import type { MCATPassage } from '@/data/mcat/types'
@@ -36,7 +38,7 @@ import { toTestPassage, topicSlugForPassage } from '@/data/mcat-practice/test-ge
 import { SAT_PASSAGES, type ReadingPassage } from '@/data/sat-passages'
 import { generateGridInProblems } from '@/data/sat-grid-in'
 import { SAT_DOMAIN_LABELS, type MathDomain, type RWDomain } from '@/data/sat-practice/test-generator'
-import { canonicalizeSlug } from '@/data/sat-practice/diagnostic-generator'
+import { canonicalizeSlug, craftStructureTopicFor } from '@/data/sat-practice/diagnostic-generator'
 import { shuffleOptions } from '@/lib/shuffle-options'
 import { actMixedItemSection, actTopicSection } from '@/lib/act-topic-sections'
 import type {
@@ -248,10 +250,12 @@ export async function buildMcatPool(): Promise<QbankPool> {
 
 /**
  * The SAT practice blueprint's topic pools by content domain — kept in step
- * with RW_DOMAIN_SLUGS / MATH_DOMAIN_SLUGS in src/data/sat-practice/test-generator.ts.
+ * with RW_DOMAIN_SLUGS / MATH_DOMAIN_SLUGS in src/data/sat-practice/test-generator.ts,
+ * plus the lesson-built Craft and Structure pools (Text Structure and Purpose,
+ * Cross-Text Connections), which the frozen v1/v2 forms never draw.
  */
 const SAT_DOMAIN_SLUGS: Record<RWDomain | MathDomain, string[]> = {
-  'craft-structure': ['sat-vocabulary-context'],
+  'craft-structure': ['sat-vocabulary-context', 'sat-text-structure-purpose', 'sat-cross-text-connections'],
   'information-ideas': ['sat-reading-comprehension', 'sat-central-ideas-details', 'sat-command-evidence', 'sat-finding-textual-evidence'],
   conventions: [
     'sat-grammar-usage',
@@ -308,7 +312,11 @@ function gridInDomain(category: string): MathDomain {
 /** A passage's domain and topic, from its first question's skill (the passage stays one unit). */
 function satPassageInfo(p: ReadingPassage): { domain: RWDomain; topicSlug: string } {
   const skill = p.questions[0]?.skill ?? ''
-  if (/vocabulary|craft/.test(skill)) return { domain: 'craft-structure', topicSlug: 'sat-vocabulary-context' }
+  if (/vocabulary|craft/.test(skill)) {
+    // Craft-and-structure passages are words-in-context, text-structure or
+    // cross-text questions; the stem says which lesson teaches them.
+    return { domain: 'craft-structure', topicSlug: craftStructureTopicFor(p.questions[0]?.question ?? '') ?? 'sat-vocabulary-context' }
+  }
   if (/evidence/.test(skill)) return { domain: 'information-ideas', topicSlug: 'sat-finding-textual-evidence' }
   return { domain: 'information-ideas', topicSlug: 'sat-central-ideas-details' }
 }
@@ -360,10 +368,11 @@ export async function buildSatPool(): Promise<QbankPool> {
     const discipline = SAT_DOMAIN_LABELS[pool.domain as RWDomain | MathDomain]
     const topicSlug = canonicalizeSlug(pool.slug)
     for (const q of pool.items) {
-      // Not on the exam = not in the program: the items SAT form v2 leaves out
-      // (definitions, test strategy, broken/two-answer/giveaway items) are
-      // lesson checks, not SAT practice.
-      if (q.id && SAT_FORM_V2_EXCLUDED.has(q.id)) continue
+      // Not on the exam = not in the program: the items the current SAT form
+      // (v3) leaves out (definitions, test strategy, broken/two-answer/giveaway
+      // items, lesson drills, weak distractors) are lesson checks, not SAT
+      // practice. SAT_FORM_V3_EXCLUDED includes the whole v2 list.
+      if (q.id && SAT_FORM_V3_EXCLUDED.has(q.id)) continue
       const correctIndex = keyIndexOf(q)
       if (typeof q.question !== 'string' || !Array.isArray(q.options) || correctIndex < 0 || correctIndex >= q.options.length) continue
       const key = questionKey({ question: q.question, options: q.options, correctIndex })
@@ -382,9 +391,33 @@ export async function buildSatPool(): Promise<QbankPool> {
     }
   }
 
+  // The SAT-format conventions bank v3 forms draw from (static items, filed
+  // under their lesson's topic). Same key as on a v3 form: authored order.
+  {
+    const discipline = SAT_DOMAIN_LABELS.conventions
+    for (const b of SAT_V3_CONVENTIONS) {
+      if (SAT_FORM_V3_EXCLUDED.has(b.id)) continue
+      if (b.correctIndex < 0 || b.correctIndex >= b.options.length) continue
+      const key = questionKey({ question: b.question, options: b.options, correctIndex: b.correctIndex })
+      const topicSlug = canonicalizeSlug(b.topicSlug)
+      add({
+        id: key,
+        passageId: null,
+        section: 'reading-writing',
+        discipline,
+        topicSlug,
+        items: [{
+          questionKey: key, section: 'reading-writing', discipline, topicSlug,
+          difficulty: asDifficulty(b.difficulty), lowYield: false, passageId: null,
+          question: b.question, options: [...b.options], correctIndex: b.correctIndex, explanation: b.explanation, passage: null,
+        }],
+      })
+    }
+  }
+
   for (const p of SAT_PASSAGES) {
     if (!p.questions.length) continue
-    if (p.questions.some((_, i) => SAT_FORM_V2_EXCLUDED.has(`sat-passage-${p.id}-q${i}`))) continue
+    if (p.questions.some((_, i) => SAT_FORM_V3_EXCLUDED.has(`sat-passage-${p.id}-q${i}`))) continue
     const { domain, topicSlug } = satPassageInfo(p)
     const discipline = SAT_DOMAIN_LABELS[domain]
     const passage: QbankPassage = { id: p.id, title: p.title, body: p.text }

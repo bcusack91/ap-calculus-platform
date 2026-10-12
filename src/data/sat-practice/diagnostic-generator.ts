@@ -110,10 +110,14 @@ export const DIAGNOSTIC_DOMAINS: DiagnosticDomain[] = [
     questionCount: 2,
   },
   {
+    // The diagnostic's one Craft & Structure domain (the id predates the
+    // Text Structure and Cross-Text lessons and is kept for stored results).
+    // Its slugs drive recommendations only: the R&W draws are RW_DISCRETE_PLAN
+    // and RW_HARD_PLAN, so adding a lesson here never changes the test.
     id: 'vocabulary',
-    name: 'Vocabulary in Context',
+    name: 'Craft & Structure',
     section: 'reading-writing',
-    slugs: ['sat-vocabulary-context'],
+    slugs: ['sat-vocabulary-context', 'sat-text-structure-purpose', 'sat-cross-text-connections'],
     questionCount: 2,
   },
   {
@@ -246,6 +250,28 @@ const GRID_IN_TOPIC: Record<string, string> = {
  */
 export function canonicalizeSlug(slug: string): string {
   return CANONICAL_SLUG_MAP[slug] ?? slug
+}
+
+/** Reading pools whose items can be Text Structure or Cross-Text questions. */
+const CRAFT_ROUTED_SLUGS = new Set([
+  'sat-vocabulary-context',
+  'sat-reading-comprehension',
+  'sat-central-ideas-details',
+])
+
+/**
+ * The Craft & Structure lesson that teaches a Reading & Writing question, read
+ * from its stem, or null when it is not a Text Structure and Purpose or
+ * Cross-Text Connections question. The College Board stems are fixed
+ * ("Based on the texts, ...", "main purpose", "overall structure", "function
+ * of"), so the stem identifies the skill even where the item came from a
+ * general reading pool or a craft-and-structure passage. Without this, a missed
+ * cross-text question recommended the vocabulary or central-ideas lesson.
+ */
+export function craftStructureTopicFor(question: string): string | null {
+  if (/\bbased on the texts\b/i.test(question) || /\bText 1\b[\s\S]*\bText 2\b/.test(question)) return 'sat-cross-text-connections'
+  if (/\bmain purpose\b|\boverall structure\b|\bthe function of\b|\bprimarily serves to\b/i.test(question)) return 'sat-text-structure-purpose'
+  return null
 }
 
 /**
@@ -809,7 +835,12 @@ export function analyzeDiagnosticResults(
     const q = questions[i]
     const raw = q.sourceSlug.startsWith('passage-') ? PASSAGE_TOPIC[q.domain] : q.sourceSlug
     if (!raw) continue
-    const slug = canonicalizeSlug(raw)
+    // Text Structure / Cross-Text items recommend their own lesson, whichever
+    // reading pool or passage they were drawn from.
+    const craft = q.section === 'reading-writing' && (q.sourceSlug.startsWith('passage-') || CRAFT_ROUTED_SLUGS.has(raw))
+      ? craftStructureTopicFor(q.question)
+      : null
+    const slug = craft ?? canonicalizeSlug(raw)
     const t = tallies.get(slug) ?? { asked: 0, missed: 0, domainId: q.domain }
     t.asked++
     if (!correctAt[i]) t.missed++

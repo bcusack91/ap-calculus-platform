@@ -45,6 +45,9 @@ const quizLoaders: Record<string, QuizLoader> = {
   // Reading
   'sat-reading-comprehension': () => import('./sat-reading-comprehension'),
   'sat-vocabulary-context': () => import('./sat-vocabulary-context'),
+  // Craft and Structure: lesson-built pools (see sat-craft-pool.ts)
+  'sat-text-structure-purpose': () => import('./sat-text-structure-purpose'),
+  'sat-cross-text-connections': () => import('./sat-cross-text-connections'),
   'sat-central-ideas-details': () => import('./sat-central-ideas-details'),
   'sat-command-evidence': () => import('./sat-command-evidence'),
   'sat-finding-textual-evidence': () => import('./sat-finding-textual-evidence'),

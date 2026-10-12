@@ -44,6 +44,24 @@ export const TRACK_SLUG_ALIASES: Record<string, string> = {
   'sat-subject-verb-agreement': 'sat-sentence-structure',
 }
 
+/**
+ * Aliases that apply to ONE lane only. The Text Structure and Purpose and
+ * Cross-Text Connections lessons (added 2026-10) have no track twins of their
+ * own. The 700-800 Reading Comprehension lesson is built on exactly those two
+ * skills (its Part 1 is "Function, Cross-Text, and Structure at the Top of the
+ * Scale"), so advanced students are routed there. The Core Skills Reading
+ * Comprehension lesson covers only main idea and a light overall-structure
+ * question, never paired texts, so Core Skills students keep the regular
+ * 7-part lesson rather than a short lesson that skips the skill; their exit
+ * quiz is the same lesson-built pool, whose items all carry difficulty tags.
+ */
+const LANE_SLUG_ALIASES: Partial<Record<SatLane, Record<string, string>>> = {
+  advanced: {
+    'sat-text-structure-purpose': 'sat-reading-comprehension',
+    'sat-cross-text-connections': 'sat-reading-comprehension',
+  },
+}
+
 const LANE_SUFFIX: Record<SatLane, string> = {
   'core-skills': '-core-skills',
   advanced: '-advanced',
@@ -53,7 +71,8 @@ const LANE_SUFFIX: Record<SatLane, string> = {
 /** The track twin a base slug would route to (existence is checked by the caller). */
 export function trackSlugFor(baseSlug: string, lane: SatLane): string {
   if (lane === 'regular') return baseSlug
-  return `${TRACK_SLUG_ALIASES[baseSlug] ?? baseSlug}${LANE_SUFFIX[lane]}`
+  const base = LANE_SLUG_ALIASES[lane]?.[baseSlug] ?? TRACK_SLUG_ALIASES[baseSlug] ?? baseSlug
+  return `${base}${LANE_SUFFIX[lane]}`
 }
 
 const priorityValue = (p: RecommendedTopic['priority']) => (p === 'high' ? 0 : p === 'medium' ? 1 : 2)

@@ -25,10 +25,11 @@ import { satPracticeRows } from '@/lib/sat-practice-rows'
  * on the PSAT routed curves (160-760) and stores format 'psat-full', which
  * keeps PSAT attempts out of every SAT score reader (see sat-attempt-format).
  *
- * Form version: new tests are built at form v2 and stored as scoringVersion
- * 3. A test started on v1 (before the v2 deploy) is recognised by its
- * question ids, graded against v1 and stored as scoringVersion 2, so its
- * review rebuilds the form it was actually taken on.
+ * Form version: new tests are built at form v3 and stored as scoringVersion
+ * 4. A test started on v2 or v1 (before the v3 / v2 deploy) is recognised by
+ * its question ids (satSubmissionFormVersion), graded against that version
+ * and stored as scoringVersion 3 (v2) or 2 (v1), so its review rebuilds the
+ * form it was actually taken on.
  */
 export async function POST(req: Request) {
   try {
@@ -67,7 +68,7 @@ export async function POST(req: Request) {
       exam,
       responses,
       // The runner says which version it built; older bundles say nothing.
-      preferred: body.formVersion === 1 || body.formVersion === 2 ? body.formVersion : undefined,
+      preferred: body.formVersion === 1 || body.formVersion === 2 || body.formVersion === 3 ? body.formVersion : undefined,
     })
     const grade = await gradeSatPractice({ testNumber, format, exam, responses, formVersion })
 

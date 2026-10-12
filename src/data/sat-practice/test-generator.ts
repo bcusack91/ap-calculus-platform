@@ -16,15 +16,20 @@
  * Structure, Information & Ideas, Standard English Conventions, Expression of
  * Ideas), Math by domain quotas including the grid-ins.
  *
- * FORM VERSIONS. Version 1 is the original draw. Version 2 (current) is the
- * same build with the items and passages in SAT_FORM_V2_EXCLUDED skipped
- * (lesson concept checks, broken, two-answer and giveaway items). Past
- * attempts are reviewed and graded by replaying the deterministic draw, so v1
- * must keep rebuilding byte-for-byte: every v2 difference is behind
- * `ctx.version === 2`, and a v1 form carries no `formVersion` field at all.
- * New tests build CURRENT_SAT_FORM_VERSION; anything rebuilding a stored
- * attempt passes the attempt's version (formVersionForScoring in
- * src/lib/sat-attempt-format.ts).
+ * FORM VERSIONS. Version 1 is the original draw. Version 2 is the same build
+ * with the items and passages in SAT_FORM_V2_EXCLUDED skipped (lesson concept
+ * checks, broken, two-answer and giveaway items). Version 3 (current) skips
+ * SAT_FORM_V3_EXCLUDED (v2's list plus the "lesson drill" conventions items
+ * and weak-distractor items), draws Standard English Conventions from the
+ * SAT-format conventions bank (v3-bank/) as well as the pools, and draws Craft
+ * and Structure from the Text Structure and Purpose and Cross-Text
+ * Connections lesson pools as well as Words in Context. Past attempts are
+ * reviewed and graded by replaying the deterministic draw, so v1 and v2 must
+ * keep rebuilding byte-for-byte (tests/fixtures/sat-form-v{1,2}-fingerprints
+ * .json): every later-version difference is behind a version check, and a v1
+ * form carries no `formVersion` field at all. New tests build
+ * CURRENT_SAT_FORM_VERSION; anything rebuilding a stored attempt passes the
+ * attempt's version (formVersionForScoring in src/lib/sat-attempt-format.ts).
  */
 
 import { generateExitQuiz, type ExitQuizQuestion } from '../exit-quizzes'
@@ -33,6 +38,8 @@ import { generateGridInProblems, type GridInProblem } from '../sat-grid-in'
 import { satSectionScaled, satRouteFor, SAT_ROUTING_THRESHOLD, type SatRoute } from '@/lib/sat-scoring'
 import { arrangeInPassageBlocks } from '@/lib/mcat-diagnostic-order'
 import { SAT_FORM_V2_EXCLUDED } from './form-v2-exclusions'
+import { SAT_FORM_V3_EXCLUDED } from './form-v3-exclusions'
+import { SAT_V3_CONVENTIONS } from './v3-bank/conventions'
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -76,6 +83,12 @@ export interface SATTestQuestion extends ExitQuizQuestion {
   sourceSlug: string // which quiz pool generated the question
   /** College Board content domain the item counts toward. */
   domain?: RWDomain | MathDomain
+  /**
+   * Authored per-option explanations in the order the options are shown (v3
+   * conventions bank items; pool items that carry them). Read through
+   * satOptionExplanations in src/lib/question-sources/sat.ts.
+   */
+  optionExplanations?: string[]
   passage?: {
     id: string
     title: string
@@ -114,17 +127,21 @@ export type SatExam = 'sat' | 'psat'
 
 /**
  * Form version (see header): 1 = the original draw, 2 = the draw without
- * SAT_FORM_V2_EXCLUDED. Stored on attempts through scoringVersion
- * (src/lib/sat-attempt-format.ts).
+ * SAT_FORM_V2_EXCLUDED, 3 = the draw without SAT_FORM_V3_EXCLUDED plus the
+ * conventions bank and the Craft and Structure lesson pools. Stored on
+ * attempts through scoringVersion (src/lib/sat-attempt-format.ts).
  */
-export type SatFormVersion = 1 | 2
+export type SatFormVersion = 1 | 2 | 3
+
+/** Every form version, oldest first. */
+export const SAT_FORM_VERSIONS: readonly SatFormVersion[] = [1, 2, 3]
 
 /** The version new tests are built at. */
-export const CURRENT_SAT_FORM_VERSION: SatFormVersion = 2
+export const CURRENT_SAT_FORM_VERSION: SatFormVersion = 3
 
-/** Coerce an unknown value to a form version (anything but 2 is v1). */
+/** Coerce an unknown value to a form version (anything but 2 or 3 is v1). */
 export function satFormVersion(v: unknown): SatFormVersion {
-  return v === 2 ? 2 : 1
+  return v === 3 ? 3 : v === 2 ? 2 : 1
 }
 
 export interface SATFullTest {
@@ -132,7 +149,7 @@ export interface SATFullTest {
   format: 'full' | 'mini'
   /** 'psat' = an adaptive PSAT/NMSQT form (buildPsatForm); absent = SAT. */
   exam?: SatExam
-  /** 2 on a v2 form; absent = version 1 (never written on v1, keeping it byte-identical). */
+  /** 2 or 3 on a v2/v3 form; absent = version 1 (never written on v1, keeping it byte-identical). */
   formVersion?: SatFormVersion
   sections: SATTestSection[]
   totalQuestions: number
@@ -161,6 +178,22 @@ export const RW_DOMAIN_SLUGS: Record<RWDomain, string[]> = {
     'sat-subject-verb-agreement',
   ],
   expression: ['sat-effective-language-use', 'sat-transitions-organization'],
+}
+
+/**
+ * Version 3 only: extra pools per R&W domain, appended after the v1/v2 slugs.
+ * Craft and Structure gains the Text Structure and Purpose and Cross-Text
+ * Connections lessons' exit-quiz pools. A pool that isn't registered yet
+ * loads empty (loadPool), so the domain still fills from the others.
+ */
+const RW_DOMAIN_SLUGS_V3_EXTRA: Partial<Record<RWDomain, string[]>> = {
+  'craft-structure': ['sat-text-structure-purpose', 'sat-cross-text-connections'],
+}
+
+/** The pools an R&W domain draws from on a form version (v1 and v2 share RW_DOMAIN_SLUGS). */
+export function rwDomainSlugs(domain: RWDomain, version: SatFormVersion): string[] {
+  if (version !== 3) return RW_DOMAIN_SLUGS[domain]
+  return [...RW_DOMAIN_SLUGS[domain], ...(RW_DOMAIN_SLUGS_V3_EXTRA[domain] ?? [])]
 }
 
 /** Real exam order of R&W domains within a module. */
@@ -294,7 +327,7 @@ export const PSAT_DIFFICULTY_PROFILE: Record<'module1' | 'harder' | 'easier', Ps
 interface BuildContext {
   /** 0-based fixed form. */
   form: number
-  /** Form version: 2 skips SAT_FORM_V2_EXCLUDED items and passages. */
+  /** Form version: 2 skips SAT_FORM_V2_EXCLUDED, 3 skips SAT_FORM_V3_EXCLUDED (and adds the v3 pools). */
   version: SatFormVersion
   /** Which fixed form an item or passage id belongs to (default practiceFormOf). */
   formOf?: (id: string) => number
@@ -352,14 +385,21 @@ function startModule(ctx: BuildContext): void {
 
 const isHard = (q: { difficulty?: string }) => q.difficulty === 'hard'
 
-/** v2 only: an item left off v2 forms. Always false on v1. */
-function excludedFrom(ctx: BuildContext, id: string | undefined): boolean {
-  return ctx.version === 2 && !!id && SAT_FORM_V2_EXCLUDED.has(id)
+/** The ids a form version skips (null on v1: it skips nothing). */
+export function satFormExclusions(version: SatFormVersion): ReadonlySet<string> | null {
+  return version === 3 ? SAT_FORM_V3_EXCLUDED : version === 2 ? SAT_FORM_V2_EXCLUDED : null
 }
 
-/** v2 only: a passage with any excluded question (passages are drawn whole). */
+/** v2+ only: an item left off this version's forms. Always false on v1. */
+function excludedFrom(ctx: BuildContext, id: string | undefined): boolean {
+  const excluded = satFormExclusions(ctx.version)
+  return !!excluded && !!id && excluded.has(id)
+}
+
+/** v2+ only: a passage with any excluded question (passages are drawn whole). */
 function passageExcludedFrom(ctx: BuildContext, p: ReadingPassage): boolean {
-  return ctx.version === 2 && p.questions.some((_, i) => SAT_FORM_V2_EXCLUDED.has(`sat-passage-${p.id}-q${i}`))
+  const excluded = satFormExclusions(ctx.version)
+  return !!excluded && p.questions.some((_, i) => excluded.has(`sat-passage-${p.id}-q${i}`))
 }
 
 /* ------------------------------------------------------------------ */
@@ -389,6 +429,29 @@ function loadPool(slug: string): Promise<ExitQuizQuestion[]> {
 }
 
 /**
+ * Version 3 only: the SAT-format conventions bank (v3-bank/conventions.ts) as
+ * form questions. Static items: the id is the bank id, the options keep their
+ * authored order (so `optionExplanations` line up as shown), and each item
+ * counts under its lesson's topic slug.
+ */
+function v3BankQuestions(domain: RWDomain | MathDomain): SATTestQuestion[] {
+  if (domain !== 'conventions') return []
+  return SAT_V3_CONVENTIONS.map((b) => ({
+    id: b.id,
+    question: b.question,
+    options: [...b.options],
+    correctIndex: b.correctIndex,
+    explanation: b.explanation,
+    optionExplanations: [...b.optionExplanations],
+    category: 'Standard English Conventions',
+    difficulty: b.difficulty,
+    section: 'reading-writing' as const,
+    sourceSlug: b.topicSlug,
+    domain,
+  }))
+}
+
+/**
  * Draw `count` questions from a domain's slugs for this form, round-robin
  * across slugs. Preference: this form at the requested tier, this form at any
  * tier, then other forms (only when this form's slice runs short).
@@ -407,6 +470,12 @@ async function drawDomain(
       if (excludedFrom(ctx, q.id)) continue
       if (ctx.usedStems.has(stemOf(q.question))) continue
       candidates.push({ ...q, section, sourceSlug: slug, domain })
+    }
+  }
+  if (ctx.version === 3) {
+    for (const q of v3BankQuestions(domain)) {
+      if (excludedFrom(ctx, q.id) || ctx.usedStems.has(stemOf(q.question))) continue
+      candidates.push(q)
     }
   }
   if (ctx.psat) return drawProfiled(candidates, count, ctx)
@@ -554,7 +623,7 @@ async function generateRWModule(count: number, ctx: BuildContext): Promise<SATTe
 
   for (const domain of RW_DOMAIN_ORDER) {
     const need = RW_MODULE_QUOTA[domain] - byDomain.get(domain)!.length
-    byDomain.get(domain)!.push(...(await drawDomain(RW_DOMAIN_SLUGS[domain], need, 'reading-writing', domain, ctx)))
+    byDomain.get(domain)!.push(...(await drawDomain(rwDomainSlugs(domain, ctx.version), need, 'reading-writing', domain, ctx)))
   }
 
   // A short domain (e.g. a thin Craft & Structure pool) is topped up from the
@@ -562,7 +631,7 @@ async function generateRWModule(count: number, ctx: BuildContext): Promise<SATTe
   let total = [...byDomain.values()].reduce((n, qs) => n + qs.length, 0)
   for (const domain of ['information-ideas', 'conventions', 'expression'] as RWDomain[]) {
     if (total >= count) break
-    const extra = await drawDomain(RW_DOMAIN_SLUGS[domain], count - total, 'reading-writing', domain, ctx)
+    const extra = await drawDomain(rwDomainSlugs(domain, ctx.version), count - total, 'reading-writing', domain, ctx)
     byDomain.get(domain)!.push(...extra)
     total += extra.length
   }
@@ -771,9 +840,9 @@ async function assembleFullTest(testNumber: number, ctx: BuildContext): Promise<
   }
 }
 
-/** `{ formVersion: 2 }` on a v2 form; nothing on v1 (keeps v1 forms byte-identical). */
+/** `{ formVersion: N }` on a v2+ form; nothing on v1 (keeps v1 forms byte-identical). */
 function versionField(version: SatFormVersion): Pick<SATFullTest, 'formVersion'> {
-  return version === 2 ? { formVersion: 2 } : {}
+  return version === 1 ? {} : { formVersion: version }
 }
 
 /**
@@ -876,7 +945,7 @@ function memo<T>(cache: Map<string, Promise<T>>, key: string, build: () => Promi
 /** Cache-key prefix per exam ('' for the SAT, so its keys are unchanged). */
 const examKey = (exam: SatExam | undefined) => (exam === 'psat' ? 'psat:' : '')
 /** Cache-key prefix per form version ('' for v1, so its keys are unchanged). */
-const versionKey = (version: SatFormVersion) => (version === 2 ? 'v2:' : '')
+const versionKey = (version: SatFormVersion) => (version === 1 ? '' : `v${version}:`)
 
 /** The unrouted form exactly as the runner first serves it. Shared: treat as read-only. */
 function baseForm(
@@ -982,13 +1051,16 @@ export function buildExamForm(
 }
 
 /**
- * Every id a form could draw: pool item ids from every domain slug plus
- * passage question ids. Used to check SAT_FORM_V2_EXCLUDED for stale ids.
+ * Every id a form of any version could draw: pool item ids from every domain
+ * slug (v3's extra pools included), the v3 conventions bank, and passage
+ * question ids. Used to check the exclusion lists for stale ids.
  */
 export async function satFormCandidateIds(): Promise<Set<string>> {
   const ids = new Set<string>()
-  const slugs = [...Object.values(RW_DOMAIN_SLUGS), ...Object.values(MATH_DOMAIN_SLUGS)].flat()
+  const rwSlugs = RW_DOMAIN_ORDER.flatMap((d) => rwDomainSlugs(d, 3))
+  const slugs = [...rwSlugs, ...Object.values(MATH_DOMAIN_SLUGS).flat()]
   for (const slug of slugs) for (const q of await loadPool(slug)) if (q.id) ids.add(q.id)
+  for (const b of SAT_V3_CONVENTIONS) ids.add(b.id)
   for (const p of SAT_PASSAGES) p.questions.forEach((_, i) => ids.add(`sat-passage-${p.id}-q${i}`))
   return ids
 }

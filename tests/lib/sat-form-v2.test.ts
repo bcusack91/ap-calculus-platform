@@ -34,6 +34,7 @@ import { SAT_FORM_V2_EXCLUDED } from '@/data/sat-practice/form-v2-exclusions'
 import { SAT_PASSAGES } from '@/data/sat-passages'
 
 const FIXTURE = path.resolve(__dirname, '../fixtures/sat-form-v1-fingerprints.json')
+const FIXTURE_V2 = path.resolve(__dirname, '../fixtures/sat-form-v2-fingerprints.json')
 const ROUTES: (SatRoute | null)[] = [null, 'harder', 'easier']
 const sha = (x: unknown) => createHash('sha256').update(JSON.stringify(x)).digest('hex')
 const ids = (f: SATFullTest) => f.sections.map((s) => s.questions.map((q) => q.id))
@@ -72,25 +73,33 @@ describe('SAT form versions', { timeout: 300_000 }, () => {
     for (const [, f] of forms) expect('formVersion' in f).toBe(false)
   })
 
-  it('new tests default to the current version (2)', async () => {
-    expect(CURRENT_SAT_FORM_VERSION).toBe(2)
-    expect((await buildSatForm(1, 'full')).formVersion).toBe(2)
-    expect((await buildSatForm(1, 'mini')).formVersion).toBe(2)
-    expect((await buildPsatForm(1)).formVersion).toBe(2)
-    expect((await generateFullTest(1)).formVersion).toBe(2)
-    expect((await generateMiniTest(1)).formVersion).toBe(2)
-    expect((await generatePsatFullTest(1)).formVersion).toBe(2)
-    expect(await buildSatForm(1, 'full')).toBe(await buildSatForm(1, 'full', null, null, 2))
+  it('v2 forms are byte-identical to the live v2 builder (frozen 2026-10-12)', async () => {
+    const forms = await allForms(2)
+    const now = Object.fromEntries(forms.map(([k, f]) => [k, sha(f)]))
+    if (process.env.SAT_V2_FINGERPRINT_WRITE) writeFileSync(FIXTURE_V2, JSON.stringify(now, null, 2) + '\n')
+    const frozen = JSON.parse(readFileSync(FIXTURE_V2, 'utf8')) as Record<string, string>
+    expect(Object.keys(frozen)).toHaveLength(5 * 9 + 5 + 3 * 9)
+    expect(now).toEqual(frozen)
+    for (const [, f] of forms) expect(f.formVersion).toBe(2)
+  })
+
+  it('new tests default to the current version (3; see sat-form-v3.test.ts), never v2', async () => {
+    expect(CURRENT_SAT_FORM_VERSION).toBe(3)
+    expect((await generateFullTest(1, 2)).formVersion).toBe(2)
+    expect((await generateMiniTest(1, 2)).formVersion).toBe(2)
+    expect((await generatePsatFullTest(1, 2)).formVersion).toBe(2)
+    expect(await buildSatForm(1, 'full')).not.toBe(await buildSatForm(1, 'full', null, null, 2))
     expect(await buildSatForm(1, 'full')).not.toBe(await buildSatForm(1, 'full', null, null, 1))
   })
 
-  it('coerces stored versions: anything but 2 is v1', () => {
+  it('coerces stored versions: 2 and 3 are themselves, anything else is v1', () => {
     expect(satFormVersion(2)).toBe(2)
-    for (const v of [1, undefined, null, 3, '2']) expect(satFormVersion(v)).toBe(1)
+    expect(satFormVersion(3)).toBe(3)
+    for (const v of [1, undefined, null, 4, '2', '3']) expect(satFormVersion(v)).toBe(1)
   })
 
   it('routedModule2 keeps the version the test was started on', async () => {
-    for (const v of [1, 2] as SatFormVersion[]) {
+    for (const v of [1, 2, 3] as SatFormVersion[]) {
       const base = await buildSatForm(2, 'full', null, null, v)
       const routed = await buildSatForm(2, 'full', 'harder', 'easier', v)
       expect((await routedModule2(base, 1, 'harder')).questions.map((q) => q.id)).toEqual(routed.sections[1].questions.map((q) => q.id))

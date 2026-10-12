@@ -376,6 +376,10 @@ export const SAT_SECTIONS: SatSection[] = [
         skills: [
           challenge('sat-vocabulary-context', 'Vocabulary in Context',
             ['words-in-context']),
+          challenge('sat-text-structure-purpose', 'Text Structure and Purpose',
+            ['text-structure-purpose']),
+          challenge('sat-cross-text-connections', 'Cross-Text Connections',
+            ['cross-text-connections']),
         ],
       },
       {
