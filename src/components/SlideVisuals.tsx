@@ -121,8 +121,8 @@ export function TitleSlideView({ title, subtitle, palette }: { title: string; su
     <div style={SLIDE_IN} className={`relative flex min-h-[42vh] flex-col items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br ${palette.grad} px-8 py-16 text-center text-white`}>
       <div className={`absolute -left-16 -top-16 h-56 w-56 rounded-full ${palette.titleDeco} blur-3xl`} />
       <div className={`absolute -bottom-20 -right-12 h-64 w-64 rounded-full ${palette.titleDeco} blur-3xl`} />
-      <h2 className="relative mb-4 max-w-3xl text-4xl font-extrabold tracking-tight sm:text-5xl">{title}</h2>
-      <span className="relative rounded-full bg-white/20 px-4 py-1.5 text-sm font-medium backdrop-blur">{subtitle}</span>
+      <h2 className="relative mb-4 max-w-3xl text-4xl font-extrabold tracking-tight sm:text-5xl"><MathText inline text={title} /></h2>
+      <span className="relative rounded-full bg-white/20 px-4 py-1.5 text-sm font-medium backdrop-blur"><MathText inline text={subtitle} /></span>
     </div>
   )
 }
@@ -132,7 +132,7 @@ export function ContentSlideView({ title, blocks, palette }: { title: string; bl
     <div style={SLIDE_IN}>
       <div className="mb-7 flex items-center gap-3">
         <span className={`h-9 w-1.5 shrink-0 rounded-full bg-gradient-to-b ${palette.grad}`} />
-        <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl dark:text-white">{title}</h2>
+        <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl dark:text-white"><MathText inline text={title} /></h2>
       </div>
       <div className="max-w-3xl space-y-4">
         {blocks.map((raw, i) => {
@@ -189,7 +189,7 @@ export function QuizSlideView({ title, palette, children }: { title: string; pal
     <div style={SLIDE_IN} className={`relative flex min-h-[42vh] flex-col items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br ${palette.grad} px-8 py-14 text-center text-white`}>
       <div className={`absolute -right-14 -top-14 h-56 w-56 rounded-full ${palette.titleDeco} blur-3xl`} />
       <p className="relative mb-3 text-4xl">🎯</p>
-      <h2 className="relative mb-3 text-2xl font-bold sm:text-3xl">Your turn: {title}</h2>
+      <h2 className="relative mb-3 text-2xl font-bold sm:text-3xl">Your turn: <MathText inline text={title} /></h2>
       <p className="relative mb-6 max-w-md text-white/85">
         Take the exit quiz to lock in what we covered — it unlocks this topic&apos;s flashcards, and passing counts toward homework.
       </p>

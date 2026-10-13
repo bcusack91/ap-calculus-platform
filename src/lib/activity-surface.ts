@@ -40,6 +40,8 @@ export function surfaceForPath(pathname: string | null | undefined): ActivitySta
   if (first === 'mcat-full-length' || first.endsWith('-full-exam')) return { surface: 'FULL_LENGTH' }
   if (first === 'act-practice' && seg[1] === 'full-length') return { surface: 'FULL_LENGTH' }
   if (first.endsWith('-diagnostic') || first === 'diagnostic-review') return { surface: 'DIAGNOSTIC' }
+  // Question bank practice sets (/mcat/qbank, /sat/qbank, /act/qbank).
+  if (seg[1] === 'qbank') return { surface: 'PRACTICE_TEST' }
   if (
     first.endsWith('-practice') ||
     first.endsWith('-unit-tests') ||

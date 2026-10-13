@@ -59,6 +59,8 @@ describe('surfaceForPath', () => {
     expect(surfaceForPath('/mcat-practice').surface).toBe('PRACTICE_TEST')
     expect(surfaceForPath('/mcat-cars').surface).toBe('PRACTICE_TEST')
     expect(surfaceForPath('/ap-bio-unit-tests').surface).toBe('PRACTICE_TEST')
+    expect(surfaceForPath('/mcat/qbank').surface).toBe('PRACTICE_TEST')
+    expect(surfaceForPath('/act/qbank').surface).toBe('PRACTICE_TEST')
     expect(surfaceForPath('/competitive/mcat').surface).toBe('COMPETITIVE')
     expect(surfaceForPath('/dashboard').surface).toBe('OTHER')
     expect(surfaceForPath(null).surface).toBe('OTHER')

@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { Excalidraw, CaptureUpdateAction, exportToSvg } from '@excalidraw/excalidraw'
 import '@excalidraw/excalidraw/index.css'
 import { asScene, mergeScenes, sceneVersion, type BoardScene, type BoardElement } from '@/lib/board-merge'
+import { fitView, sameView, viewFromAppState, type BoardViewRect } from '@/lib/board-view'
 
 /**
  * Whiteboards for live class sessions (see /live/[id]).
@@ -18,6 +19,10 @@ import { asScene, mergeScenes, sceneVersion, type BoardScene, type BoardElement 
  * ~2.5s, everyone GETs and element-merges every ~3s (see board-merge.ts), so
  * strokes land on other screens within a few seconds. Fonts/locales are served
  * from /public/excalidraw-assets — the CSP forbids CDNs.
+ *
+ * "Students follow my view": the teacher's class board reports the region it
+ * shows; students' boards scroll/zoom to it whenever it moves (it rides along
+ * with the class-board poll — src/lib/board-view.ts).
  */
 
 declare global {
@@ -28,14 +33,26 @@ if (typeof window !== 'undefined') {
 }
 
 /* Structural slice of ExcalidrawImperativeAPI — just what the sync loop uses. */
+interface ExcalAppState { scrollX: number; scrollY: number; zoom: { value: number }; width: number; height: number }
 interface ExcalApi {
-  updateScene: (scene: { elements: BoardElement[]; captureUpdate?: unknown }) => void
+  updateScene: (scene: { elements?: BoardElement[]; appState?: Record<string, unknown>; captureUpdate?: unknown }) => void
+  getAppState: () => ExcalAppState
   addFiles: (files: unknown[]) => void
   getSceneElementsIncludingDeleted: () => readonly BoardElement[]
   getFiles: () => Record<string, unknown>
 }
 
-interface Settings { boardMode: 'OFF' | 'TEACHER' | 'SHARED'; padsEnabled: boolean }
+interface Settings { boardMode: 'OFF' | 'TEACHER' | 'SHARED'; padsEnabled: boolean; followView: boolean }
+interface ViewPayload { rev: number; follow: boolean; view: BoardViewRect | null }
+
+/** Scroll + zoom a board so the teacher's region fills it. */
+function showView(api: ExcalApi, view: BoardViewRect) {
+  const { width, height } = api.getAppState()
+  if (!width || !height) return false
+  const fit = fitView(view, width, height)
+  api.updateScene({ appState: { scrollX: fit.scrollX, scrollY: fit.scrollY, zoom: { value: fit.zoom } }, captureUpdate: CaptureUpdateAction.NEVER })
+  return true
+}
 
 /* ------------------------------------------------------------------ */
 /*  One synced board                                                   */
@@ -46,15 +63,21 @@ function SyncedBoard({
   owner,
   canDraw,
   onSettings,
+  viewRole,
 }: {
   sessionId: string
   owner: 'class' | 'me'
   canDraw: boolean
   onSettings: (s: Settings) => void
+  /** Class board only: the teacher broadcasts their view; students follow it. */
+  viewRole?: 'broadcast' | 'follow'
 }) {
   const apiRef = useRef<ExcalApi | null>(null)
   const knownRevRef = useRef(-1)
   const lastSentRef = useRef(0)
+  const appliedViewRevRef = useRef(-1)
+  const sentViewRef = useRef<BoardViewRect | null>(null)
+  const [teacherView, setTeacherView] = useState<ViewPayload | null>(null)
   const localScene = useCallback((): BoardScene => {
     const api = apiRef.current
     if (!api) return { elements: [], files: {} }
@@ -72,8 +95,17 @@ function SyncedBoard({
         )
         if (!r.ok || !active) return
         const d = await r.json()
-        onSettings({ boardMode: d.boardMode, padsEnabled: d.padsEnabled })
+        const v: ViewPayload | undefined = d.view
+        onSettings({ boardMode: d.boardMode, padsEnabled: d.padsEnabled, followView: v?.follow ?? true })
         const api = apiRef.current
+        if (viewRole === 'follow' && v) {
+          setTeacherView((prev) => (prev && prev.rev === v.rev && prev.follow === v.follow ? prev : v))
+          // Snap only when the teacher's view moved (or following was just
+          // turned on), so a student can still look around in between.
+          if (v.follow && v.view && api && v.rev !== appliedViewRevRef.current && showView(api, v.view)) {
+            appliedViewRevRef.current = v.rev
+          }
+        }
         if (!d.board || !api) return
         knownRevRef.current = d.board.rev
         if (d.board.scene === undefined) return
@@ -90,7 +122,29 @@ function SyncedBoard({
     pull()
     const t = setInterval(pull, 3000)
     return () => { active = false; clearInterval(t) }
-  }, [sessionId, owner, onSettings, localScene])
+  }, [sessionId, owner, onSettings, localScene, viewRole])
+
+  // Teacher: report the region of the class board on screen when it moves.
+  useEffect(() => {
+    if (viewRole !== 'broadcast') return
+    let active = true
+    const report = async () => {
+      const api = apiRef.current
+      if (!api || !active) return
+      const view = viewFromAppState(api.getAppState())
+      if (!view || sameView(view, sentViewRef.current)) return
+      try {
+        const r = await fetch(`/api/live-sessions/${sessionId}/board`, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ owner: 'view', view }),
+        })
+        if (r.ok) sentViewRef.current = view
+      } catch { /* retried next tick */ }
+    }
+    const t = setInterval(report, 1500)
+    return () => { active = false; clearInterval(t) }
+  }, [sessionId, viewRole])
 
   // Push local changes while allowed to draw.
   useEffect(() => {
@@ -124,6 +178,21 @@ function SyncedBoard({
         <span className="absolute right-3 top-3 z-10 rounded-full bg-gray-900/70 px-3 py-1 text-xs font-medium text-white">
           👁 View only
         </span>
+      )}
+      {viewRole === 'follow' && teacherView?.view && (
+        teacherView.follow ? (
+          <span className="absolute left-3 top-3 z-10 rounded-full bg-blue-600/90 px-3 py-1 text-xs font-medium text-white">
+            Following your teacher&apos;s view
+          </span>
+        ) : (
+          <button
+            type="button"
+            onClick={() => { if (apiRef.current && teacherView.view) showView(apiRef.current, teacherView.view) }}
+            className="absolute left-3 top-3 z-10 rounded-full bg-blue-600 px-3 py-1 text-xs font-medium text-white shadow hover:bg-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-300"
+          >
+            Jump to teacher&apos;s view
+          </button>
+        )
       )}
       <Excalidraw
         excalidrawAPI={(api) => { apiRef.current = api as unknown as ExcalApi }}
@@ -267,13 +336,13 @@ export default function BoardSection({
   /** Fires when a board surface turns on/off — the page minimizes the video. */
   onBoardActive?: (active: boolean) => void
 }) {
-  const [settings, setSettings] = useState<Settings>({ boardMode: initialBoardMode, padsEnabled: initialPadsEnabled })
+  const [settings, setSettings] = useState<Settings>({ boardMode: initialBoardMode, padsEnabled: initialPadsEnabled, followView: true })
   const [tab, setTab] = useState<'class' | 'pads' | 'mypad'>('class')
   const onSettings = useCallback((s: Settings) => {
-    setSettings(prev => (prev.boardMode === s.boardMode && prev.padsEnabled === s.padsEnabled ? prev : s))
+    setSettings(prev => (prev.boardMode === s.boardMode && prev.padsEnabled === s.padsEnabled && prev.followView === s.followView ? prev : s))
   }, [])
 
-  const { boardMode, padsEnabled } = settings
+  const { boardMode, padsEnabled, followView } = settings
 
   // Tell the page when a board becomes the main event (video → corner).
   useEffect(() => {
@@ -291,7 +360,7 @@ export default function BoardSection({
     const check = () => {
       fetch(`/api/live-sessions/${sessionId}/board?owner=class&rev=2000000000`, { cache: 'no-store' })
         .then(r => (r.ok ? r.json() : null))
-        .then(d => { if (active && d) onSettings({ boardMode: d.boardMode, padsEnabled: d.padsEnabled }) })
+        .then(d => { if (active && d) onSettings({ boardMode: d.boardMode, padsEnabled: d.padsEnabled, followView: d.view?.follow ?? true }) })
         .catch(() => {})
     }
     check() // immediate — don't make students wait a full interval
@@ -325,6 +394,15 @@ export default function BoardSection({
     }).catch(() => {})
   }
 
+  const setFollow = async (follow: boolean) => {
+    setSettings(s => ({ ...s, followView: follow }))
+    await fetch(`/api/live-sessions/${sessionId}/board`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ owner: 'view', follow }),
+    }).catch(() => {})
+  }
+
   if (!anythingVisible) return null
 
   const chip = (active: boolean) =>
@@ -345,6 +423,16 @@ export default function BoardSection({
               <button onClick={() => void setMode('OFF')} className={chip(boardMode === 'OFF')}>Off</button>
               <button onClick={() => void setMode('TEACHER')} className={chip(boardMode === 'TEACHER')} title="You draw; students watch">Only I draw</button>
               <button onClick={() => void setMode('SHARED')} className={chip(boardMode === 'SHARED')} title="Students can draw with you">Everyone draws</button>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <span className="text-xs text-gray-500 dark:text-gray-400">Students follow my view:</span>
+              <button
+                onClick={() => void setFollow(!followView)}
+                className={chip(followView)}
+                title="Students' class boards scroll and zoom to the area you're looking at"
+              >
+                {followView ? 'On' : 'Off'}
+              </button>
             </div>
             <div className="flex items-center gap-1.5">
               <span className="text-xs text-gray-500 dark:text-gray-400">Student pads:</span>
@@ -397,6 +485,7 @@ export default function BoardSection({
             owner="class"
             canDraw={youAreTeacher || boardMode === 'SHARED'}
             onSettings={onSettings}
+            viewRole={youAreTeacher ? 'broadcast' : 'follow'}
           />
           <p className="mt-1.5 text-xs text-gray-400 dark:text-gray-500">
             Strokes reach other screens within a few seconds. Tip: paste an image (⌘V) to draw over it.

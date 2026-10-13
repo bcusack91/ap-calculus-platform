@@ -3,6 +3,7 @@ import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { asScene, mergeScenes, MAX_SCENE_BYTES, EMPTY_SCENE } from '@/lib/board-merge'
 import { touchAttendance } from '@/lib/live-session'
+import { CLASS_VIEW_KEY, asViewRect, asViewState } from '@/lib/board-view'
 
 interface Ctx { params: Promise<{ id: string }> }
 
@@ -18,6 +19,9 @@ interface Ctx { params: Promise<{ id: string }> }
  * PUT  { owner: 'class'|'me', scene } — merge-write a scene.
  *        class: teacher always; students only while boardMode is SHARED.
  *        me:    students while padsEnabled (teacher's own pad always).
+ * PUT  { owner: 'view', follow?, view? } — teacher only: the region of the
+ *        class board they're looking at and whether students follow it
+ *        (src/lib/board-view.ts). Shipped with every class-board GET as `view`.
  */
 
 async function sessionAccess(sessionId: string, userId: string) {
@@ -64,7 +68,7 @@ export async function GET(req: NextRequest, { params }: Ctx) {
     const sinceParam = req.nextUrl.searchParams.get('since')
     const since = sinceParam ? new Date(sinceParam) : null
     const boards = await prisma.liveBoard.findMany({
-      where: { sessionId: id, ownerKey: { not: 'class' } },
+      where: { sessionId: id, ownerKey: { notIn: ['class', CLASS_VIEW_KEY] } },
       orderBy: { updatedAt: 'desc' },
       select: { ownerKey: true, ownerName: true, rev: true, updatedAt: true, scene: true },
     })
@@ -88,13 +92,25 @@ export async function GET(req: NextRequest, { params }: Ctx) {
   if (ownerKey === 'class' && !isTeacher && live.boardMode === 'OFF') {
     return NextResponse.json({ ...settings, board: null }, { headers: { 'Cache-Control': 'private, no-store' } })
   }
-  const board = await prisma.liveBoard.findUnique({
-    where: { sessionId_ownerKey: { sessionId: id, ownerKey } },
-    select: { rev: true, scene: true },
-  })
+  const [board, viewRow] = await Promise.all([
+    prisma.liveBoard.findUnique({
+      where: { sessionId_ownerKey: { sessionId: id, ownerKey } },
+      select: { rev: true, scene: true },
+    }),
+    ownerKey === 'class'
+      ? prisma.liveBoard.findUnique({
+          where: { sessionId_ownerKey: { sessionId: id, ownerKey: CLASS_VIEW_KEY } },
+          select: { rev: true, scene: true },
+        })
+      : null,
+  ])
   const knownRev = Number(req.nextUrl.searchParams.get('rev') ?? '-1')
+  // The teacher's view rides along with the class board (a few bytes), so
+  // following it costs no extra request. No row yet = follow on, nothing to show.
+  const view = ownerKey === 'class' ? { rev: viewRow?.rev ?? 0, ...asViewState(viewRow?.scene) } : undefined
   return NextResponse.json({
     ...settings,
+    ...(view ? { view } : {}),
     board: board
       ? { rev: board.rev, scene: board.rev > knownRev ? board.scene : undefined }
       : { rev: 0, scene: knownRev < 0 ? EMPTY_SCENE : undefined },
@@ -118,11 +134,31 @@ export async function PUT(req: NextRequest, { params }: Ctx) {
       { status: 413 },
     )
   }
-  let body: { owner?: string; scene?: unknown }
+  let body: { owner?: string; scene?: unknown; follow?: unknown; view?: unknown }
   try {
     body = JSON.parse(raw)
   } catch {
     return NextResponse.json({ error: 'Invalid body' }, { status: 400 })
+  }
+
+  if (body.owner === 'view') {
+    if (!isTeacher) return NextResponse.json({ error: 'Teachers only' }, { status: 403 })
+    const existing = await prisma.liveBoard.findUnique({
+      where: { sessionId_ownerKey: { sessionId: id, ownerKey: CLASS_VIEW_KEY } },
+      select: { scene: true },
+    })
+    const prev = asViewState(existing?.scene)
+    const next = {
+      follow: typeof body.follow === 'boolean' ? body.follow : prev.follow,
+      view: body.view !== undefined ? asViewRect(body.view) ?? prev.view : prev.view,
+    }
+    const saved = await prisma.liveBoard.upsert({
+      where: { sessionId_ownerKey: { sessionId: id, ownerKey: CLASS_VIEW_KEY } },
+      create: { sessionId: id, ownerKey: CLASS_VIEW_KEY, ownerName: 'Teacher view', scene: next as object, rev: 1 },
+      update: { scene: next as object, rev: { increment: 1 } },
+      select: { rev: true },
+    })
+    return NextResponse.json({ rev: saved.rev, ...next })
   }
 
   const owner = body.owner === 'me' ? 'me' : body.owner === 'class' ? 'class' : null

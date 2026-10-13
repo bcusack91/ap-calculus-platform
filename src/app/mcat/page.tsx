@@ -179,6 +179,18 @@ const features = [
     color: 'from-fuchsia-500 to-purple-600',
     stats: 'spaced repetition',
   },
+  {
+    title: 'Your Study Time',
+    description: 'See how much time you have put in: lessons, entrance and exit quizzes, flashcards and tests, for the last 7 days, the last 30 days or all time.',
+    href: '/study-time?course=mcat',
+    icon: (
+      <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+    color: 'from-violet-500 to-indigo-500',
+    stats: 'Sign in to see yours',
+  },
 ]
 
 const sections = [
