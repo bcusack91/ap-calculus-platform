@@ -37,7 +37,7 @@ function prettyCategory(category: string): string {
   const slug = diagnosticPathForCategory(category).slice(1).replace(/-diagnostic$/, '')
   return slug
     .split('-')
-    .map(p => (p.length <= 3 ? p.toUpperCase() : p.charAt(0).toUpperCase() + p.slice(1)))
+    .map(p => (p.length <= 3 || p === 'mcat' || p === 'psat' ? p.toUpperCase() : p.charAt(0).toUpperCase() + p.slice(1)))
     .join(' ') + ' Diagnostic'
 }
 

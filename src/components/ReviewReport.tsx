@@ -88,8 +88,11 @@ export default function ReviewReport({
   onOpenQuestion,
   skillsTitle = 'CARS by reasoning skill',
   skillsHint = 'Weakest first. Each CARS question tests one reasoning skill.',
+  studentName,
 }: {
   report: Report
+  /** A teacher is reviewing this student's attempt. */
+  studentName?: string
   /** Times were recorded per passage / per attempt, so per-question times are averages. */
   approximateTiming?: boolean
   /** Jump to a question in the All tab. */
@@ -155,7 +158,7 @@ export default function ReviewReport({
             </dl>
             {pacing.compared > 0 && (
               <p className="text-sm text-gray-700 dark:text-gray-200">
-                On the {pacing.compared} question{pacing.compared === 1 ? '' : 's'} with enough answers to compare, you were slower than the median on{' '}
+                On the {pacing.compared} question{pacing.compared === 1 ? '' : 's'} with enough answers to compare, {studentName ? `${studentName} was` : 'you were'} slower than the median on{' '}
                 <span className="font-semibold">{pacing.slower}</span> and faster on <span className="font-semibold">{pacing.faster}</span>.
               </p>
             )}

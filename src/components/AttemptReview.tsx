@@ -199,11 +199,14 @@ export function OptionList({
   chosenIndex,
   ready,
   shares,
+  pickLabel = 'Your answer',
 }: {
   item: Pick<AttemptReviewItem, 'options' | 'correctIndex' | 'optionExplanations'>
   chosenIndex: number | null
   ready?: boolean
   shares?: number[] | null
+  /** Badge on the chosen option ("Student's answer" when a teacher is reviewing). */
+  pickLabel?: string
 }) {
   const perOption = usableOptionExplanations(item)
   const bars = shares && shares.length === item.options.length ? shares : null
@@ -226,7 +229,7 @@ export function OptionList({
                 {isPick && (
                   <span className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-xs font-semibold ${isKey ? 'bg-green-100 text-green-800 dark:bg-green-900/50 dark:text-green-200' : 'bg-red-100 text-red-800 dark:bg-red-900/50 dark:text-red-200'}`}>
                     {isKey ? <Check className="h-3.5 w-3.5" aria-hidden /> : <X className="h-3.5 w-3.5" aria-hidden />}
-                    Your answer
+                    {pickLabel}
                   </span>
                 )}
                 {isKey && (
@@ -314,13 +317,16 @@ function QuestionCard({
   ready,
   stat,
   ctx,
+  pickLabel = 'Your answer',
 }: {
   row: Row
   open: boolean
   onToggle: () => void
   ready: boolean
   stat?: QuestionStat
+  /** Student-only actions (ask the tutor, make a flashcard); omitted for a teacher. */
   ctx?: CardContext
+  pickLabel?: string
 }) {
   const { item, pos } = row
   if (!item) {
@@ -364,9 +370,9 @@ function QuestionCard({
             {item.revised && (
               <span
                 className="inline-flex items-center gap-1 rounded-full bg-sky-100 px-2 py-0.5 font-medium text-sky-800 dark:bg-sky-900/40 dark:text-sky-300"
-                title="This question was edited after you took it. You are seeing the current version."
+                title={pickLabel === 'Your answer' ? 'This question was edited after you took it. You are seeing the current version.' : 'This question was edited after this attempt. This is the current version.'}
               >
-                <History className="h-3 w-3" aria-hidden /> Revised since you took it
+                <History className="h-3 w-3" aria-hidden /> {pickLabel === 'Your answer' ? 'Revised since you took it' : 'Revised since this attempt'}
               </span>
             )}
             {item.durationMs ? (
@@ -392,7 +398,7 @@ function QuestionCard({
           {grid ? (
             <div className="space-y-1.5 text-sm">
               <p className="rounded-lg border border-gray-200 bg-gray-50 px-3 py-2 text-gray-800 dark:border-gray-700 dark:bg-gray-900/40 dark:text-gray-200">
-                Your answer:{' '}
+                {pickLabel}:{' '}
                 {item.chosenText?.trim() ? <span className="font-semibold">{item.chosenText}</span> : <span className="italic">no answer entered</span>}
               </p>
               {item.gridIn ? (
@@ -404,9 +410,9 @@ function QuestionCard({
               ) : null}
             </div>
           ) : (
-            <OptionList item={item} chosenIndex={item.chosenIndex} ready={ready} shares={sharesOf(stat, item.options.length)} />
+            <OptionList item={item} chosenIndex={item.chosenIndex} ready={ready} shares={sharesOf(stat, item.options.length)} pickLabel={pickLabel} />
           )}
-          <AnswerStatsSummary stat={stat} durationMs={item.durationMs} className="mt-2" />
+          <AnswerStatsSummary stat={stat} durationMs={item.durationMs} className="mt-2" taker={pickLabel === 'Your answer' ? 'you' : pickLabel.replace(/'s answer$/, '')} />
           <Explanation text={item.explanation} ready={ready} item={item} />
           {ctx && (
             <>
@@ -427,7 +433,12 @@ function QuestionCard({
   )
 }
 
-export default function AttemptReview({ attempt }: { attempt: AttemptReviewData }) {
+/**
+ * `studentName` set = a teacher reviewing a student's attempt: the student's
+ * answers are labelled as theirs, and the student-only actions (ask the
+ * tutor, make a flashcard) are hidden.
+ */
+export default function AttemptReview({ attempt, studentName }: { attempt: AttemptReviewData; studentName?: string }) {
   const [ready, setReady] = useState(false)
   useEffect(() => {
     let live = true
@@ -570,13 +581,14 @@ export default function AttemptReview({ attempt }: { attempt: AttemptReviewData 
           report={report}
           approximateTiming={APPROX_TIMING_KINDS.has(attempt.kind)}
           onOpenQuestion={openQuestion}
+          studentName={studentName}
           {...(attempt.course === 'act'
             ? { skillsTitle: 'By ACT reporting category', skillsHint: 'Weakest first. Each question is tagged with the ACT reporting category it tests.' }
             : {})}
         />
       ) : visible.length === 0 ? (
         <p className="rounded-xl border border-gray-200 bg-white px-4 py-6 text-center text-sm text-gray-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400">
-          {filter === 'missed' ? 'Nothing missed on this attempt.' : filter === 'flagged' ? 'You did not flag any questions.' : 'No questions to show.'}
+          {filter === 'missed' ? 'Nothing missed on this attempt.' : filter === 'flagged' ? studentName ? 'No questions were flagged.' : 'You did not flag any questions.' : 'No questions to show.'}
         </p>
       ) : (
         <div className="space-y-3">
@@ -597,7 +609,8 @@ export default function AttemptReview({ attempt }: { attempt: AttemptReviewData 
                     onToggle={() => toggle(r.pos)}
                     ready={ready}
                     stat={r.item ? stats.get(r.item.questionKey) : undefined}
-                    ctx={ctx}
+                    ctx={studentName ? undefined : ctx}
+                    pickLabel={studentName ? `${studentName}'s answer` : 'Your answer'}
                   />
                 ))}
               </ul>

@@ -3,8 +3,9 @@
 import { Suspense, useCallback, useEffect, useMemo, useState } from 'react'
 import { useParams, useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
-import { AlertTriangle, ArrowLeft, Check, ClipboardList, Clock, Layers, ListChecks, Printer, Stethoscope, Target } from 'lucide-react'
+import { AlertTriangle, ArrowLeft, Check, ChevronRight, ClipboardList, Clock, FileSearch, Layers, ListChecks, Printer, Stethoscope, Target } from 'lucide-react'
 import type { MetricsRange, StudentMetrics } from '@/lib/student-metrics'
+import type { ReviewableAttempt } from '@/lib/teacher-review-attempts'
 import {
   NoData,
   RANGE_OPTIONS,
@@ -110,6 +111,80 @@ function Stat({ label, value, hint, children }: { label: string; value: string; 
       {hint && <div className="mt-0.5 text-[11px] text-gray-500 dark:text-gray-400">{hint}</div>}
       {children}
     </div>
+  )
+}
+
+/**
+ * The student's diagnostics, full-lengths, practice tests and unit tests, each
+ * opening the question-by-question review (teacher view, read-only). Loads on
+ * its own: the range/scope filters don't apply to individual tests.
+ */
+function TestsSection({ classroomId, studentId, name }: { classroomId: string; studentId: string; name: string }) {
+  const [attempts, setAttempts] = useState<ReviewableAttempt[] | null>(null)
+  const [error, setError] = useState(false)
+  const [showAll, setShowAll] = useState(false)
+
+  useEffect(() => {
+    let cancelled = false
+    fetch(`/api/teacher/classrooms/${classroomId}/students/${studentId}/attempts`, { cache: 'no-store' })
+      .then(async (r) => {
+        if (!r.ok) throw new Error()
+        const d = await r.json()
+        if (!cancelled) setAttempts(d.attempts ?? [])
+      })
+      .catch(() => !cancelled && setError(true))
+    return () => {
+      cancelled = true
+    }
+  }, [classroomId, studentId])
+
+  const shown = attempts && !showAll ? attempts.slice(0, 8) : attempts
+  return (
+    <Card
+      id="tests"
+      title="Tests to review"
+      icon={FileSearch}
+      subtitle={`Open any test to see each question, the answer ${name} chose, the correct answer and the explanation. All time.`}
+    >
+      {error ? (
+        <p className="text-sm text-red-600 dark:text-red-400">Could not load this student’s tests. Refresh to try again.</p>
+      ) : !attempts ? (
+        <div className="h-24 animate-pulse rounded-xl bg-gray-200 dark:bg-gray-700" aria-busy="true" />
+      ) : attempts.length === 0 ? (
+        <p className="text-sm text-gray-500 dark:text-gray-400">No diagnostics, full-lengths, practice tests or unit tests to review yet.</p>
+      ) : (
+        <>
+          <ul className="divide-y divide-gray-100 dark:divide-gray-700/60">
+            {shown!.map((a) => (
+              <li key={`${a.kind}:${a.id}`}>
+                <Link
+                  href={a.href}
+                  className="group flex items-center gap-3 rounded-lg px-2 py-2.5 hover:bg-gray-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring dark:hover:bg-gray-700/40"
+                >
+                  <span className="min-w-0 flex-1">
+                    <span className="block truncate text-sm font-medium text-gray-900 dark:text-white">{a.title}</span>
+                    <span className="block text-xs text-gray-500 dark:text-gray-400">{fmtDate(a.takenAt)}</span>
+                  </span>
+                  {a.score && <span className="shrink-0 text-sm tabular-nums text-gray-700 dark:text-gray-300">{a.score}</span>}
+                  <span className="inline-flex shrink-0 items-center gap-0.5 text-sm font-medium text-accent print:hidden">
+                    Review <ChevronRight className="h-4 w-4 transition group-hover:translate-x-0.5" aria-hidden />
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+          {attempts.length > 8 && (
+            <button
+              type="button"
+              onClick={() => setShowAll((v) => !v)}
+              className="mt-2 text-sm font-medium text-accent hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring print:hidden"
+            >
+              {showAll ? 'Show fewer' : `Show all ${attempts.length}`}
+            </button>
+          )}
+        </>
+      )}
+    </Card>
   )
 }
 
@@ -552,6 +627,7 @@ function StudentStudyReport() {
         {m && (
           <div className={`space-y-6 transition-opacity ${loading ? 'opacity-60' : ''}`} aria-busy={loading}>
             <WeekSection m={m} />
+            {classroomId && studentId && <TestsSection classroomId={classroomId} studentId={studentId} name={name} />}
             <ActiveTimeSection m={m} />
             <FlashcardSection m={m} />
             <LessonsSection m={m} />

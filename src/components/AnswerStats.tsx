@@ -155,11 +155,22 @@ export function formatShare(share: number): string {
  * "N students answered · median 1m 05s · you took 1m 40s". Renders nothing
  * without enough responses.
  */
-export function AnswerStatsSummary({ stat, durationMs, className = '' }: { stat: QuestionStat | null | undefined; durationMs?: number | null; className?: string }) {
+export function AnswerStatsSummary({
+  stat,
+  durationMs,
+  className = '',
+  taker = 'you',
+}: {
+  stat: QuestionStat | null | undefined
+  durationMs?: number | null
+  className?: string
+  /** Who took the attempt ("you", or the student's name for a teacher). */
+  taker?: string
+}) {
   if (!stat || stat.insufficient) return null
   const parts = [`${stat.responses.toLocaleString()} student${stat.responses === 1 ? '' : 's'} answered`]
   if (stat.medianSeconds) parts.push(`median ${formatStatTime(stat.medianSeconds)}`)
-  if (durationMs && durationMs > 0) parts.push(`you took ${formatStatTime(durationMs / 1000)}`)
+  if (durationMs && durationMs > 0) parts.push(`${taker} took ${formatStatTime(durationMs / 1000)}`)
   return (
     <p className={`flex items-start gap-1.5 text-xs text-gray-600 dark:text-gray-400 ${className}`}>
       <Users className="mt-0.5 h-3.5 w-3.5 shrink-0" aria-hidden />

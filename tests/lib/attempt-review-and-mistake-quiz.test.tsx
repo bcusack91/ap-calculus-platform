@@ -91,6 +91,16 @@ describe('AttemptReview', () => {
     expect(screen.queryByText('Plain correct')).toBeNull()
   })
 
+  it('teacher view: labels the student\'s answers with their name and hides the student-only actions', () => {
+    render(<AttemptReview attempt={attempt} studentName="Sabrina" />)
+    const wrongOption = screen.getByText('Charlie').closest('li')!
+    expect(within(wrongOption).getByText("Sabrina's answer")).toBeInTheDocument()
+    expect(screen.queryByText('Your answer')).toBeNull()
+    expect(screen.getByText('Revised since this attempt')).toBeInTheDocument()
+    expect(screen.queryByText('Make a flashcard')).toBeNull()
+    expect(screen.queryByText('Ask about this question')).toBeNull()
+  })
+
   it('filters to flagged questions, and All shows the unavailable card', () => {
     render(<AttemptReview attempt={attempt} />)
     fireEvent.click(screen.getByRole('button', { name: 'Flagged (1)' }))

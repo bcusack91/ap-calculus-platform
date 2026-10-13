@@ -10,6 +10,18 @@ import { optionKey, questionKey } from '@/lib/question-key'
 const mockAuth = vi.fn()
 vi.mock('@/lib/auth', () => ({ auth: () => mockAuth() }))
 vi.mock('@/lib/study-context', () => ({ getActiveStudyContext: vi.fn(async () => 'personal'), isClassContext: () => false }))
+// Teacher view: t1 teaches class c1, whose active members are u1 and u3.
+vi.mock('@/lib/teacher-auth', async () => {
+  const { NextResponse } = await import('next/server')
+  return {
+    requireStudentInClassroom: vi.fn(async (classroomId: string, studentId: string) => {
+      const session = await mockAuth()
+      if (session?.user?.id !== 't1' || classroomId !== 'c1') return { error: NextResponse.json({ error: 'Classroom not found' }, { status: 404 }) }
+      if (!['u1', 'u3'].includes(studentId)) return { error: NextResponse.json({ error: 'Student not in this class' }, { status: 404 }) }
+      return { student: { id: studentId, name: studentId === 'u1' ? 'Sabrina Bogat' : 'Other Student', email: null } }
+    }),
+  }
+})
 
 const QS = [
   { id: 'a', question: 'Which enzyme unwinds DNA?', options: ['Ligase', 'Helicase', 'Primase', 'Gyrase'], correctIndex: 1, explanation: 'Helicase unwinds.', topicSlug: 'mcat-molecular-biology-dna-replication-mcat' },
@@ -86,6 +98,26 @@ describe('GET /api/review/<kind>/<id>', () => {
     expect((await reviewGET(new Request('http://localhost'), { params: Promise.resolve({ kind: 'nope', id: 'ut1' }) })).status).toBe(400)
     mockAuth.mockResolvedValueOnce(null)
     expect((await reviewGET(new Request('http://localhost'), { params: Promise.resolve({ kind: 'unit-test', id: 'ut1' }) })).status).toBe(401)
+  })
+
+  it('lets a teacher of the class review the student\'s attempt, with the student named', async () => {
+    mockAuth.mockResolvedValue({ user: { id: 't1' } })
+    const res = await reviewGET(new Request('http://localhost/x?class=c1&student=u1'), { params: Promise.resolve({ kind: 'unit-test', id: 'ut1' }) })
+    expect(res.status).toBe(200)
+    const body = await res.json()
+    expect(body.student).toEqual({ id: 'u1', name: 'Sabrina Bogat' })
+    expect(body.attempt.items[0]).toMatchObject({ chosenIndex: 2, correctIndex: 1 })
+  })
+
+  it('refuses a teacher outside the class, and a student who does not own the attempt', async () => {
+    mockAuth.mockResolvedValue({ user: { id: 't1' } })
+    const params = { params: Promise.resolve({ kind: 'unit-test', id: 'ut1' }) }
+    expect((await reviewGET(new Request('http://localhost/x?class=c2&student=u1'), params)).status).toBe(404)
+    expect((await reviewGET(new Request('http://localhost/x?class=c1&student=u9'), { params: Promise.resolve({ kind: 'unit-test', id: 'ut1' }) })).status).toBe(404)
+    // u3 is in the class but ut1 is u1's attempt.
+    expect((await reviewGET(new Request('http://localhost/x?class=c1&student=u3'), { params: Promise.resolve({ kind: 'unit-test', id: 'ut1' }) })).status).toBe(404)
+    // Without the teacher parameters, a teacher only sees their own attempts.
+    expect((await reviewGET(new Request('http://localhost/x'), { params: Promise.resolve({ kind: 'unit-test', id: 'ut1' }) })).status).toBe(404)
   })
 
   it('flags a question edited since the attempt', async () => {
