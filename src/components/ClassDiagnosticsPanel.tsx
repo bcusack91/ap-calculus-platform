@@ -1,7 +1,8 @@
 'use client'
 
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { ClipboardCheck, Minus, Plus, Trash2, TrendingDown, TrendingUp, Unlock } from 'lucide-react'
+import Link from 'next/link'
+import { ClipboardCheck, FileSearch, Minus, Plus, Trash2, TrendingDown, TrendingUp, Unlock } from 'lucide-react'
 import ConfirmDialog, { ConfirmRequest } from '@/components/teacher/ConfirmDialog'
 import { formatDueDate } from '@/components/ClassDiagnosticBanner'
 
@@ -22,6 +23,8 @@ interface DiagStudent {
   userId: string
   name: string
   takenAt: string | null
+  /** Teacher-view review of the counted sitting (null: not taken, or no stored questions). */
+  reviewHref?: string | null
   scoreLabel: string | null
   percentage: number | null
   estimatedScore: number | null
@@ -429,7 +432,17 @@ export default function ClassDiagnosticsPanel({
                   <div className="grid gap-1.5 sm:grid-cols-2">
                     {d.students.map(s => (
                       <div key={s.userId} className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 rounded-lg bg-gray-50 px-3 py-1.5 text-sm dark:bg-gray-700/50">
-                        <span className="font-medium text-gray-800 dark:text-gray-200">{s.name}</span>
+                        <span className="flex flex-wrap items-center gap-x-2 gap-y-0.5">
+                          <span className="font-medium text-gray-800 dark:text-gray-200">{s.name}</span>
+                          {s.reviewHref && (
+                            <Link
+                              href={s.reviewHref}
+                              className="inline-flex items-center gap-1 rounded-full border border-accent-muted px-2 py-0.5 text-xs font-medium text-accent transition hover:bg-accent-subtle focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring dark:text-accent-muted"
+                            >
+                              <FileSearch className="h-3 w-3" aria-hidden="true" /> Review {d.title}
+                            </Link>
+                          )}
+                        </span>
                         <span className="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-gray-600 dark:text-gray-400">
                           {s.takenAt ? (
                             <>

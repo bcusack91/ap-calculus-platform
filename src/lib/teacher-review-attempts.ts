@@ -42,6 +42,12 @@ function diagnosticTitle(category: string): string {
   return `${name} diagnostic`
 }
 
+/** A diagnostic's results kept a copy of its questions, so it can be reviewed. */
+export function hasStoredReview(results: unknown): boolean {
+  const questions = asRecord(asRecord(results)?.review)?.questions
+  return Array.isArray(questions) && questions.length > 0
+}
+
 export function teacherReviewHref(kind: ReviewKind, id: string, classroomId: string, studentId: string): string {
   return `/review/${kind}/${id}?class=${encodeURIComponent(classroomId)}&student=${encodeURIComponent(studentId)}`
 }
@@ -90,8 +96,7 @@ export async function listReviewableAttempts(studentId: string, classroomId: str
         href: href('act-fl', d.id),
       })
     } else {
-      const questions = asRecord(r.review)?.questions
-      if (!Array.isArray(questions) || questions.length === 0) continue
+      if (!hasStoredReview(d.results)) continue
       out.push({
         kind: 'diagnostic', id: d.id, takenAt: d.createdAt.toISOString(),
         title: diagnosticTitle(d.category),

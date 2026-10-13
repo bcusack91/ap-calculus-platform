@@ -228,7 +228,7 @@ describe('open class diagnostics (courses without a class test generator)', () =
       { userId: 'u2', nickname: null, user: { name: 'Ben' } },
     ] as never)
     vi.mocked(prisma.diagnosticTest.findMany).mockResolvedValueOnce([
-      { userId: 'u1', createdAt: new Date('2026-09-21T09:00:00.000Z'), results: { percentage: 64, estimatedAPScore: 3 } },
+      { id: 'att1', userId: 'u1', createdAt: new Date('2026-09-21T09:00:00.000Z'), results: { percentage: 64, estimatedAPScore: 3, review: { questions: [{ question: 'q' }], answers: [0] } } },
     ] as never)
     const { GET } = await import(ROUTE)
     const body = await (await GET(new Request('http://localhost/x') as never, ctx as never)).json()
@@ -244,8 +244,10 @@ describe('open class diagnostics (courses without a class test generator)', () =
     expect(d.growth).toBeNull()
     const ava = d.students.find((s: { userId: string }) => s.userId === 'u1')
     expect(ava.scoreLabel).toBe('3/5')
+    expect(ava.reviewHref).toBe('/review/diagnostic/att1?class=class-1&student=u1')
     const ben = d.students.find((s: { userId: string }) => s.userId === 'u2')
     expect(ben.takenAt).toBeNull()
+    expect(ben.reviewHref).toBeNull()
   })
 
   it('GET offers every diagnostic course and defaults to the class’s pinned course', async () => {

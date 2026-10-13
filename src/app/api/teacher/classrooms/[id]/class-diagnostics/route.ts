@@ -5,6 +5,7 @@ import { scheduleClassroom } from '@/lib/cycle-scheduler-server'
 import { CLASS_PLAN_COURSES, classPlanCourse, scoreLabelFromResults } from '@/lib/class-plan-config'
 import { isOpenClassDiagnostic, OPEN_DIAGNOSTIC_TEST_DATA, defaultDiagnosticCourseKey } from '@/lib/class-diagnostic-open'
 import { SAT_DIAGNOSTIC_SCORE_SD } from '@/lib/sat-scoring'
+import { hasStoredReview, teacherReviewHref } from '@/lib/teacher-review-attempts'
 
 interface Ctx { params: Promise<{ id: string }> }
 
@@ -152,7 +153,7 @@ export async function GET(_req: NextRequest, { params }: Ctx) {
       orderBy: { createdAt: 'desc' },
       select: {
         id: true, courseKey: true, title: true, dueDate: true, createdAt: true, testData: true,
-        attempts: { select: { userId: true, createdAt: true, results: true } },
+        attempts: { select: { id: true, userId: true, createdAt: true, results: true } },
       },
     }),
     prisma.classroomMember.findMany({
@@ -171,7 +172,7 @@ export async function GET(_req: NextRequest, { params }: Ctx) {
   // OPEN diagnostics have no linked attempts: any sitting of that course's
   // diagnostic by a member, on or after the assignment date, counts.
   const openCourses = [...new Set(rawDiagnostics.filter(d => isOpenClassDiagnostic(d.testData)).map(d => d.courseKey))]
-  const openAttempts = new Map<string, { userId: string; createdAt: Date; results: unknown }[]>()
+  const openAttempts = new Map<string, { id: string; userId: string; createdAt: Date; results: unknown }[]>()
   if (openCourses.length > 0 && memberIds.length > 0) {
     await Promise.all(openCourses.map(async courseKey => {
       const course = classPlanCourse(courseKey)
@@ -181,7 +182,7 @@ export async function GET(_req: NextRequest, { params }: Ctx) {
         .reduce((min, d) => (d.createdAt < min ? d.createdAt : min), new Date())
       const rows = await prisma.diagnosticTest.findMany({
         where: { userId: { in: memberIds }, category: { startsWith: course.categoryPrefix }, createdAt: { gte: oldest } },
-        select: { userId: true, createdAt: true, results: true },
+        select: { id: true, userId: true, createdAt: true, results: true },
       })
       openAttempts.set(courseKey, rows)
     }))
@@ -257,7 +258,7 @@ export async function GET(_req: NextRequest, { params }: Ctx) {
       // First attempt per student counts (retaking an assigned test is rare
       // but possible — the assigned score is the first sitting). All attempts
       // are kept per student, oldest-first, so retake deltas can be computed.
-      const firstByUser = new Map<string, { createdAt: Date; results: unknown }>()
+      const firstByUser = new Map<string, { id: string; createdAt: Date; results: unknown }>()
       const attemptsByUser = new Map<string, { createdAt: Date; results: unknown }[]>()
       for (const a of [...d.attempts].sort((x, y) => x.createdAt.getTime() - y.createdAt.getTime())) {
         if (!firstByUser.has(a.userId)) firstByUser.set(a.userId, a)
@@ -299,6 +300,9 @@ export async function GET(_req: NextRequest, { params }: Ctx) {
           userId: m.userId,
           name: nameOf.get(m.userId) ?? 'Student',
           takenAt: attempt?.createdAt ?? null,
+          // Question-by-question review of the counted (first) sitting, when
+          // the attempt kept its copy of the questions.
+          reviewHref: attempt && hasStoredReview(attempt.results) ? teacherReviewHref('diagnostic', attempt.id, id, m.userId) : null,
           scoreLabel: attempt ? scoreLabelFromResults(attempt.results) : null,
           percentage: typeof results?.percentage === 'number' ? results.percentage : null,
           estimatedScore: typeof results?.estimatedScore === 'number' ? results.estimatedScore : null,
