@@ -135,6 +135,9 @@ const DASHBOARD_TABS = [
 
 type DashboardTab = (typeof DASHBOARD_TABS)[number][0]
 
+/** Courses whose students see their study time on the dashboard (rolled out to test prep first). */
+const STUDY_TIME_COURSES: Record<string, 'mcat' | 'sat' | 'act'> = { 'mcat-prep': 'mcat', 'sat-prep': 'sat', 'act-prep': 'act' }
+
 function isDashboardTab(value: string | null): value is DashboardTab {
   return DASHBOARD_TABS.some(([key]) => key === value)
 }
@@ -852,7 +855,7 @@ function DashboardContent() {
 
             {/* Streak, weekly XP, leaderboard — deliberately BELOW the study
                 plans and course progress: motivation, not the next step. */}
-            <EngagementStrip streak={streak?.current ?? 0} />
+            <EngagementStrip streak={streak?.current ?? 0} studyTimeCourse={STUDY_TIME_COURSES[primaryCourse?.slug ?? ''] ?? null} />
 
           </div>
           {/* Overview sidebar — quick actions + what's weak */}
