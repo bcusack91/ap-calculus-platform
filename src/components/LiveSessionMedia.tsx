@@ -34,10 +34,43 @@ export interface SessionInfo {
     | { embed: false; url: string }
 }
 
+/** The slice of the JaaS External API this site uses. */
+export interface JitsiApi {
+  dispose: () => void
+  executeCommand: (command: string, ...args: unknown[]) => void
+  addListener: (event: string, listener: (...args: unknown[]) => void) => void
+}
+
 declare global {
   interface Window {
-    JitsiMeetExternalAPI?: new (domain: string, options: Record<string, unknown>) => { dispose: () => void }
+    JitsiMeetExternalAPI?: new (domain: string, options: Record<string, unknown>) => JitsiApi
   }
+}
+
+/**
+ * Leave the call cleanly before the embed goes away. Removing the iframe
+ * without hanging up leaves a ghost participant in the room until the server
+ * times it out (seen when popping the video out).
+ */
+export function leaveCall(api: JitsiApi | null | undefined, timeoutMs = 1500): Promise<void> {
+  if (!api) return Promise.resolve()
+  return new Promise((resolve) => {
+    let done = false
+    const finish = () => {
+      if (!done) {
+        done = true
+        resolve()
+      }
+    }
+    try {
+      api.addListener('videoConferenceLeft', finish)
+      api.addListener('readyToClose', finish)
+      api.executeCommand('hangup')
+    } catch {
+      finish()
+    }
+    setTimeout(finish, timeoutMs)
+  })
 }
 
 /**
@@ -76,12 +109,18 @@ export function JitsiEmbed({
   displayName,
   mini = false,
   fill = false,
+  skipPrejoin = false,
+  onApi,
 }: {
   conference: { domain: string; appId: string; room: string; jwt: string }
   displayName: string
   mini?: boolean
   /** Fill the parent (the pop-out window). */
   fill?: boolean
+  /** Join straight in (the user already joined once — popping out or bringing the video back). */
+  skipPrejoin?: boolean
+  /** Receives the API once the room is created (null on unmount), e.g. to hang up first. */
+  onApi?: (api: JitsiApi | null) => void
 }) {
   const containerRef = useRef<HTMLDivElement>(null)
   const [failed, setFailed] = useState(false)
@@ -92,17 +131,20 @@ export function JitsiEmbed({
   // before the sync effect below runs.
   const jwtRef = useRef(conference.jwt)
   const nameRef = useRef(displayName)
+  const skipPrejoinRef = useRef(skipPrejoin)
+  const onApiRef = useRef(onApi)
   useEffect(() => {
     jwtRef.current = conference.jwt
     nameRef.current = displayName
-  }, [conference.jwt, displayName])
+    onApiRef.current = onApi
+  }, [conference.jwt, displayName, onApi])
 
   const { domain, appId, room } = conference
 
   useEffect(() => {
     const node = containerRef.current
     if (!node) return
-    let api: { dispose: () => void } | null = null
+    let api: JitsiApi | null = null
     let cancelled = false
 
     loadJitsiScript(appId)
@@ -113,13 +155,19 @@ export function JitsiEmbed({
           jwt: jwtRef.current,
           parentNode: node,
           userInfo: { displayName: nameRef.current },
-          configOverwrite: { prejoinConfig: { enabled: true }, disableDeepLinking: true },
+          configOverwrite: {
+            prejoinConfig: { enabled: !skipPrejoinRef.current },
+            prejoinPageEnabled: !skipPrejoinRef.current,
+            disableDeepLinking: true,
+          },
         })
+        onApiRef.current?.(api)
       })
       .catch(() => { if (!cancelled) setFailed(true) })
 
     return () => {
       cancelled = true
+      onApiRef.current?.(null)
       api?.dispose()
     }
     // Mount once per room — jwt/displayName deliberately excluded (see refs).

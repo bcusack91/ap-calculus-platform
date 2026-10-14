@@ -1,9 +1,9 @@
 'use client'
 
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { useParams, useRouter } from 'next/navigation'
 import { useSession } from 'next-auth/react'
-import { ChatPanel, JitsiEmbed, type SessionInfo } from '@/components/LiveSessionMedia'
+import { ChatPanel, JitsiEmbed, leaveCall, type JitsiApi, type SessionInfo } from '@/components/LiveSessionMedia'
 import { useLivePopoutGuest } from '@/lib/live-popout'
 
 /**
@@ -19,7 +19,13 @@ export default function LivePopoutPage() {
   const { status: authStatus } = useSession()
   const [session, setSession] = useState<SessionInfo | null>(null)
   const [error, setError] = useState<string | null>(null)
-  useLivePopoutGuest(id)
+  // Hang up before the window closes ("Bring back here" or Return), so the
+  // class page rejoins without a ghost copy left in the room.
+  const jitsiApiRef = useRef<JitsiApi | null>(null)
+  const setJitsiApi = useCallback((api: JitsiApi | null) => { jitsiApiRef.current = api }, [])
+  const leave = useCallback(() => leaveCall(jitsiApiRef.current), [])
+  useLivePopoutGuest(id, leave)
+  const returnToClass = () => { void leave().then(() => window.close()) }
 
   useEffect(() => {
     if (authStatus === 'unauthenticated') router.push(`/auth/signin?callbackUrl=/live/${id}/popout`)
@@ -70,7 +76,7 @@ export default function LivePopoutPage() {
           <span className="truncate text-sm font-semibold">{session?.classroomName ?? 'Live class'}</span>
         </div>
         <button
-          onClick={() => window.close()}
+          onClick={returnToClass}
           className="shrink-0 rounded-lg border border-white/20 px-3 py-1 text-xs font-semibold text-white/90 transition hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
           title="Close this window and show the video on the class page again"
         >
@@ -84,7 +90,8 @@ export default function LivePopoutPage() {
         <div className="m-4 flex-1 animate-pulse rounded-xl bg-white/10" aria-busy="true" />
       ) : session.mode === 'CONFERENCE' && session.conference?.embed ? (
         <div className="min-h-0 flex-1">
-          <JitsiEmbed conference={session.conference} displayName={session.displayName} fill />
+          {/* Already joined on the class page: skip the pre-join screen. */}
+          <JitsiEmbed conference={session.conference} displayName={session.displayName} fill skipPrejoin onApi={setJitsiApi} />
         </div>
       ) : (
         <div className="grid min-h-0 flex-1 gap-3 p-3 lg:grid-cols-[2fr_1fr]">

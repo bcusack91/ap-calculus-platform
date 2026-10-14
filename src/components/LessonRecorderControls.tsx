@@ -25,7 +25,18 @@ const MODES: { value: RecorderMode; label: string }[] = [
   { value: 'board', label: 'Board' },
 ]
 
-export default function LessonRecorderControls({ classroomId, classroomName }: { classroomId: string; classroomName: string }) {
+export default function LessonRecorderControls({
+  classroomId,
+  classroomName,
+  callInTab = false,
+  onPopOut,
+}: {
+  classroomId: string
+  classroomName: string
+  /** The live video is still on this page — capturing it is the heaviest part of recording. */
+  callInTab?: boolean
+  onPopOut?: () => void
+}) {
   const recRef = useRef<LessonRecorder | null>(null)
   const [state, setState] = useState<RecorderState | null>(null)
   const [support] = useState(() => recordingSupport())
@@ -86,6 +97,7 @@ export default function LessonRecorderControls({ classroomId, classroomName }: {
 
   const rec = recRef.current!
   return (
+    <div className="flex flex-col items-end gap-1">
     <div className="flex flex-wrap items-center gap-2 rounded-xl border border-red-200 bg-red-50 px-3 py-1.5 dark:border-red-900 dark:bg-red-950/40">
       <span className="inline-flex items-center gap-1.5 text-sm font-bold tabular-nums text-red-700 dark:text-red-300" role="status">
         <span className={`h-2.5 w-2.5 rounded-full bg-red-600 ${status === 'recording' ? 'animate-pulse' : ''}`} aria-hidden />
@@ -123,6 +135,13 @@ export default function LessonRecorderControls({ classroomId, classroomName }: {
           </button>
         </>
       )}
+    </div>
+    {callInTab && onPopOut && status !== 'saving' && (
+      <p className="max-w-sm text-right text-xs text-gray-600 dark:text-gray-400">
+        Video lagging? Recording is much lighter with the call in its own window.{' '}
+        <button onClick={onPopOut} className="font-semibold text-accent hover:underline">↗ Pop out the video</button>
+      </p>
+    )}
     </div>
   )
 }

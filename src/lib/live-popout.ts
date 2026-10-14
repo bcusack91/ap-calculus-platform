@@ -33,7 +33,12 @@ export function useLivePopoutHost(sessionId: string) {
   const [poppedOut, setPoppedOut] = useState(false)
   const [ready, setReady] = useState(false)
   const [blocked, setBlocked] = useState(false)
+  // Once the video has been popped out, rejoining here skips the pre-join screen.
+  const [hasPoppedOut, setHasPoppedOut] = useState(false)
   const channelRef = useRef<BroadcastChannel | null>(null)
+  // The class page's own call must finish hanging up before its video is
+  // removed (see leaveCall); a pop-out that announces itself meanwhile waits.
+  const leavingRef = useRef<Promise<void>>(Promise.resolve())
   const windowRef = useRef<Window | null>(null)
   const lastAliveRef = useRef(0)
 
@@ -44,8 +49,11 @@ export function useLivePopoutHost(sessionId: string) {
       const t = e.data?.type
       if (t === 'hello' || t === 'alive') {
         lastAliveRef.current = Date.now()
-        setPoppedOut(true)
-        setReady(true)
+        void leavingRef.current.then(() => {
+          setPoppedOut(true)
+          setHasPoppedOut(true)
+          setReady(true)
+        })
       } else if (t === 'closed') {
         lastAliveRef.current = 0
         setPoppedOut(false)
@@ -73,7 +81,9 @@ export function useLivePopoutHost(sessionId: string) {
     }
   }, [sessionId])
 
-  const open = useCallback(() => {
+  /** Open the pop-out. `beforeHide` runs before this page's video is removed (hang up the call first). */
+  const open = useCallback((beforeHide?: () => Promise<void>) => {
+    // Synchronously, inside the click, or the browser blocks the window.
     const w = window.open(popoutPath(sessionId), windowName(sessionId), 'popup,width=1100,height=760')
     if (!w) {
       setBlocked(true)
@@ -82,8 +92,13 @@ export function useLivePopoutHost(sessionId: string) {
     setBlocked(false)
     windowRef.current = w
     lastAliveRef.current = Date.now()
-    setPoppedOut(true)
     w.focus()
+    const leaving = (beforeHide?.() ?? Promise.resolve()).catch(() => {})
+    leavingRef.current = leaving
+    void leaving.then(() => {
+      setPoppedOut(true)
+      setHasPoppedOut(true)
+    })
   }, [sessionId])
 
   const bringBack = useCallback(() => {
@@ -94,17 +109,26 @@ export function useLivePopoutHost(sessionId: string) {
     setPoppedOut(false)
   }, [])
 
-  return { poppedOut, ready, blocked, open, bringBack }
+  return { poppedOut, ready, blocked, hasPoppedOut, open, bringBack }
 }
 
-/** The pop-out window's side: announce itself, keep pinging, close on request. */
-export function useLivePopoutGuest(sessionId: string) {
+/**
+ * The pop-out window's side: announce itself, keep pinging, close on request.
+ * `beforeClose` runs first (hang up the call so no ghost stays in the room).
+ */
+export function useLivePopoutGuest(sessionId: string, beforeClose?: () => Promise<void>) {
+  const beforeCloseRef = useRef(beforeClose)
+  useEffect(() => {
+    beforeCloseRef.current = beforeClose
+  }, [beforeClose])
   useEffect(() => {
     const ch = openChannel(sessionId)
     const send = (type: Msg['type']) => ch?.postMessage({ type } satisfies Msg)
     const onMessage = (e: MessageEvent<Msg>) => {
       if (e.data?.type === 'probe') send('alive')
-      else if (e.data?.type === 'close') window.close()
+      else if (e.data?.type === 'close') {
+        void (beforeCloseRef.current?.() ?? Promise.resolve()).catch(() => {}).then(() => window.close())
+      }
     }
     ch?.addEventListener('message', onMessage)
     send('hello')

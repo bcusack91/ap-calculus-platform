@@ -5,7 +5,7 @@ import { useParams, useRouter } from 'next/navigation'
 import { useSession } from 'next-auth/react'
 import Link from 'next/link'
 import nextDynamic from 'next/dynamic'
-import { ChatPanel, JitsiEmbed, type SessionInfo } from '@/components/LiveSessionMedia'
+import { ChatPanel, JitsiEmbed, leaveCall, type JitsiApi, type SessionInfo } from '@/components/LiveSessionMedia'
 import { useLivePopoutHost } from '@/lib/live-popout'
 import LessonRecorderControls from '@/components/LessonRecorderControls'
 
@@ -53,6 +53,11 @@ export default function LiveSessionPage() {
     setVideoMini(active || boardWasActive.current)
   }, [])
   const popout = useLivePopoutHost(id)
+  // This page's own call, so popping out can hang it up first (no ghost copy
+  // of the teacher left in the room).
+  const jitsiApiRef = useRef<JitsiApi | null>(null)
+  const setJitsiApi = useCallback((api: JitsiApi | null) => { jitsiApiRef.current = api }, [])
+  const popOut = useCallback(() => popout.open(() => leaveCall(jitsiApiRef.current)), [popout])
 
   useEffect(() => {
     if (authStatus === 'unauthenticated') router.push(`/auth/signin?callbackUrl=/live/${id}`)
@@ -142,7 +147,12 @@ export default function LiveSessionPage() {
         </div>
         {session.youAreTeacher && (
           <div className="flex flex-wrap items-center gap-2">
-          <LessonRecorderControls classroomId={session.classroomId} classroomName={session.classroomName} />
+          <LessonRecorderControls
+            classroomId={session.classroomId}
+            classroomName={session.classroomName}
+            callInTab={(session.mode === 'WEBCAST' || !!session.conference?.embed) && popout.ready && !popout.poppedOut}
+            onPopOut={popOut}
+          />
           <button
             onClick={endSession}
             disabled={ending}
@@ -173,7 +183,7 @@ export default function LiveSessionPage() {
           >
             <div className="absolute right-2 top-2 z-50 flex gap-1.5">
               <button
-                onClick={popout.open}
+                onClick={popOut}
                 className="rounded-lg bg-black/60 px-2 py-1 text-xs font-semibold text-white backdrop-blur transition hover:bg-black/80"
                 title="Open in its own window, e.g. on another monitor"
               >
@@ -187,7 +197,13 @@ export default function LiveSessionPage() {
                 {videoMini ? '⤢ Expand' : '◱ Minimize'}
               </button>
             </div>
-            <JitsiEmbed conference={session.conference} displayName={session.displayName} mini={videoMini} />
+            <JitsiEmbed
+              conference={session.conference}
+              displayName={session.displayName}
+              mini={videoMini}
+              skipPrejoin={popout.hasPoppedOut}
+              onApi={setJitsiApi}
+            />
           </div>
         ) : (
           <div className="mx-auto max-w-lg rounded-2xl border border-gray-200 bg-white p-8 text-center shadow-sm dark:border-gray-700 dark:bg-gray-800">
@@ -217,7 +233,7 @@ export default function LiveSessionPage() {
           >
             <div className="absolute right-2 top-2 z-50 flex gap-1.5">
               <button
-                onClick={popout.open}
+                onClick={popOut}
                 className="rounded-lg bg-black/60 px-2 py-1 text-xs font-semibold text-white backdrop-blur transition hover:bg-black/80"
                 title="Open in its own window, e.g. on another monitor"
               >

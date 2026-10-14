@@ -32,8 +32,12 @@ export interface RecorderState {
 
 const WIDTH = 1280
 const HEIGHT = 720
-const FPS = 30
-const BITRATE = 2_000_000 // ~0.9 GB per hour
+// Kept deliberately light: the recording runs alongside a live video call
+// that is already encoding the teacher's camera, and when the CPU runs short
+// WebRTC degrades the call first. 15 fps is plenty for slides, a whiteboard
+// and a talking-head bubble, and halves capture, compositing and encoding.
+const FPS = 15
+const BITRATE = 1_500_000 // ~0.7 GB per hour
 const MARGIN = 20
 const CAM_W = Math.round(WIDTH * 0.22)
 const CAM_H = Math.round((CAM_W * 9) / 16)
@@ -132,14 +136,18 @@ export class LessonRecorder {
     try {
       // Tab first: the picker is the step people cancel.
       this.display = await navigator.mediaDevices.getDisplayMedia({
-        video: { frameRate: FPS },
+        // Cap the capture: a Retina tab would otherwise be grabbed at full
+        // device resolution only to be scaled down to 720p.
+        video: { frameRate: { max: FPS }, width: { max: 1920 }, height: { max: 1080 } },
         audio: false,
         preferCurrentTab: true,
         selfBrowserSurface: 'include',
         surfaceSwitching: 'exclude',
       } as DisplayMediaStreamOptions)
       this.cam = await navigator.mediaDevices.getUserMedia({
-        video: { width: { ideal: 640 }, height: { ideal: 360 }, facingMode: 'user' },
+        // Small: it's a corner bubble. No frameRate constraint — the camera is
+        // shared with the call, and a constraint could slow the call's feed too.
+        video: { width: { ideal: 480 }, height: { ideal: 270 }, facingMode: 'user' },
         audio: { echoCancellation: true, noiseSuppression: true, autoGainControl: true },
       })
     } catch (err) {
