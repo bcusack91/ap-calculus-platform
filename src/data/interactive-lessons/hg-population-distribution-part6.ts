@@ -127,7 +127,7 @@ Use the exact term from this part.
 ## Common Misconceptions and Exam Strategy
 
 ### Misconceptions to Avoid
-- Don\'\'t confuse **Demographic analysis** with **Census** — while related, they address different aspects of Population Distribution & Composition.
+- Don\'t confuse **Demographic analysis** with **Census** — while related, they address different aspects of Population Distribution & Composition.
 - **Cohort** is often misunderstood — remember its precise definition for the AP exam.
 - Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
 

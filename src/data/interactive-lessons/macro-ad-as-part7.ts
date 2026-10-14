@@ -127,7 +127,7 @@ Use the exact term from this part.
 ## Common Misconceptions and Exam Strategy
 
 ### Misconceptions to Avoid
-- Don\'\'t confuse **Key vocabulary** with **Common question types** — while related, they address different aspects of Aggregate Demand & Aggregate Supply.
+- Don\'t confuse **Key vocabulary** with **Common question types** — while related, they address different aspects of Aggregate Demand & Aggregate Supply.
 - **Exam strategy** is often misunderstood — remember its precise definition for the AP exam.
 - Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
 

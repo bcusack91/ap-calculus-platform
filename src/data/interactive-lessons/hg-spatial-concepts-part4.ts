@@ -127,7 +127,7 @@ Use the exact term from this part.
 ## Common Misconceptions and Exam Strategy
 
 ### Misconceptions to Avoid
-- Don\'\'t confuse **Quantitative data** with **Qualitative data** — while related, they address different aspects of Spatial Concepts & Geographic Data.
+- Don\'t confuse **Quantitative data** with **Qualitative data** — while related, they address different aspects of Spatial Concepts & Geographic Data.
 - **Remote sensing** is often misunderstood — remember its precise definition for the AP exam.
 - Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
 

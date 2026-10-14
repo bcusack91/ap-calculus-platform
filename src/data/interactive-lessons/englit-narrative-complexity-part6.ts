@@ -36,7 +36,7 @@ Apply Narrative Complexity concepts to data interpretation and analytical scenar
               'Ignore the data',
               'Only look at the title'
             ],
-            correctAnswer: 0,
+            correctAnswer: 1,
             explanation: 'Data interpretation should begin with identifying what is shown and noting visible patterns before drawing conclusions.'
           },
           {
@@ -127,7 +127,7 @@ Use the exact term from this part.
 ## Common Misconceptions and Exam Strategy
 
 ### Misconceptions to Avoid
-- Don\'\'t confuse **Data interpretation** with **Argumentation** — while related, they address different aspects of Narrative Complexity.
+- Don\'t confuse **Data interpretation** with **Argumentation** — while related, they address different aspects of Narrative Complexity.
 - **Spatial reasoning** is often misunderstood — remember its precise definition for the AP exam.
 - Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
 

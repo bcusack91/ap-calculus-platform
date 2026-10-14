@@ -127,7 +127,7 @@ Use the exact term from this part.
 ## Common Misconceptions and Exam Strategy
 
 ### Misconceptions to Avoid
-- Don\'\'t confuse **Interconnection** with **Scale interaction** — while related, they address different aspects of Open Economy & Exchange Rates.
+- Don\'t confuse **Interconnection** with **Scale interaction** — while related, they address different aspects of Open Economy & Exchange Rates.
 - **Feedback loop** is often misunderstood — remember its precise definition for the AP exam.
 - Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
 

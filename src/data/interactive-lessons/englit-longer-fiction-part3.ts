@@ -127,7 +127,7 @@ Use the exact term from this part.
 ## Common Misconceptions and Exam Strategy
 
 ### Misconceptions to Avoid
-- Don\'\'t confuse **Structural pattern** with **Case study** — while related, they address different aspects of Longer Fiction: Novel Analysis.
+- Don\'t confuse **Structural pattern** with **Case study** — while related, they address different aspects of Longer Fiction: Novel Analysis.
 - **Comparison** is often misunderstood — remember its precise definition for the AP exam.
 - Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
 
