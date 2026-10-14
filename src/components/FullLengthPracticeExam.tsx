@@ -12,6 +12,7 @@ import { shuffleOptions } from '@/lib/shuffle-options'
 import { psatTotal, projectionRange as psatProjectionRange } from '@/lib/psat-scoring'
 import { actSectionScaled, actComposite, projectionRange as actProjectionRange } from '@/lib/act-scoring'
 import { preloadKatex } from '@/lib/katex-lazy'
+import { estimateApScore } from '@/lib/ap-scoring'
 import { InArticleAd } from '@/components/ad-banner'
 import ShareScoreCard from '@/components/ShareScoreCard'
 import 'katex/dist/katex.min.css'
@@ -138,6 +139,13 @@ export interface FullLengthExamConfig {
    * omit it (all AP subjects) are unchanged.
    */
   scaledExam?: 'psat' | 'act'
+  /**
+   * AP exams: the key the page loaded this exam by (src/lib/ap-practice-exams.ts).
+   * Set, a finished exam is saved for signed-in students (graded on the server,
+   * reviewable afterwards, visible to their teacher) and the results show an
+   * estimated AP score on the shared 1–5 scale.
+   */
+  examKey?: string
 }
 
 /* ------------------------------------------------------------------ */
@@ -181,7 +189,7 @@ function blankAnswer(item: ExamItem): ItemAnswer {
 /* ------------------------------------------------------------------ */
 
 function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
-  const { subject, description, backLink, ctaLinks, accent, sections: rawSections, totalTimeMinutes, aboutInfo, scaledExam } = config
+  const { subject, description, backLink, ctaLinks, accent, sections: rawSections, totalTimeMinutes, aboutInfo, scaledExam, examKey } = config
   const t = TOKENS[accent]
 
   // Deterministically shuffle every MCQ's options. Authored key positions
@@ -209,6 +217,9 @@ function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
   const [itemIdx, setItemIdx] = useState(0)
   const [answers, setAnswers] = useState<ItemAnswer[][]>([])
   const [time, setTime] = useState(0)
+  // Saving a finished AP exam: one attempt id per sitting (a retry can't double-save).
+  const [attemptId, setAttemptId] = useState('')
+  const [save, setSave] = useState<{ state: 'idle' | 'saving' | 'saved' | 'signin' | 'error'; id?: string }>({ state: 'idle' })
 
   const currentSection = sections[sectionIdx]
 
@@ -228,6 +239,8 @@ function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
   }, [time, phase, currentSection])
 
   const startExam = useCallback(() => {
+    setAttemptId(`ap-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 10)}`)
+    setSave({ state: 'idle' })
     setAnswers(sections.map(sec => sec.items.map(blankAnswer)))
     setSectionIdx(0)
     setItemIdx(0)
@@ -237,9 +250,40 @@ function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
 
   const finishSection = useCallback(() => setPhase('section-complete'), [])
 
+  /** Send the finished exam to be graded and stored (AP exams, signed-in students). */
+  const saveAttempt = useCallback(() => {
+    if (!examKey) return
+    const mcq: { s: number; i: number; chosen: string | null }[] = []
+    const frq: { s: number; i: number; earned: number }[] = []
+    sections.forEach((sec, s) => sec.items.forEach((item, i) => {
+      const a = answers[s]?.[i]
+      if (item.type === 'mcq') {
+        mcq.push({ s, i, chosen: a?.type === 'mcq' && a.selected !== null ? item.options[a.selected] ?? null : null })
+      } else if (a && a.type !== 'mcq') {
+        // Rubric boxes ticked for this item (keys are prefixed with its index).
+        const earned = Object.entries(a.checked).filter(([k, v]) => v && k.startsWith(`${i}-`)).length
+        frq.push({ s, i, earned })
+      }
+    }))
+    setSave({ state: 'saving' })
+    fetch('/api/ap-practice/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ examKey, clientAttemptId: attemptId || undefined, mcq, frq }),
+    })
+      .then(async (r) => {
+        const d = await r.json().catch(() => ({}))
+        if (r.status === 401) setSave({ state: 'signin' })
+        else if (!r.ok) setSave({ state: 'error' })
+        else setSave({ state: 'saved', id: d.id })
+      })
+      .catch(() => setSave({ state: 'error' }))
+  }, [examKey, sections, answers, attemptId])
+
   const goToNextSection = useCallback(() => {
     if (sectionIdx + 1 >= sections.length) {
       setPhase('final-results')
+      saveAttempt()
     } else {
       const next = sectionIdx + 1
       setSectionIdx(next)
@@ -247,7 +291,7 @@ function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
       setTime(sections[next].timeLimitMinutes * 60)
       setPhase('section')
     }
-  }, [sectionIdx, sections])
+  }, [sectionIdx, sections, saveAttempt])
 
   const updateAnswer = useCallback((updater: (a: ItemAnswer) => ItemAnswer) => {
     setAnswers(prev => {
@@ -435,6 +479,40 @@ function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
               <p className="text-4xl font-black">{scoring.pct >= 80 ? '🎉' : scoring.pct >= 60 ? '👍' : '📚'}</p>
             </div>
           </div>
+
+          {examKey && !scaledCard && (
+            <div className="mb-6 rounded-2xl border border-gray-200 bg-white p-6 text-center dark:border-gray-700 dark:bg-gray-800">
+              <p className="text-sm text-gray-500 dark:text-gray-400">Estimated AP Score</p>
+              <p className={`text-5xl font-black ${t.text}`}>{estimateApScore(scoring.pct)}</p>
+              <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">on the 1–5 scale</p>
+              <p className="mt-1 text-xs text-gray-400 dark:text-gray-500">
+                Estimate from one practice exam with self-graded free response. Real AP cutoffs vary by subject and year.
+              </p>
+            </div>
+          )}
+
+          {examKey && save.state !== 'idle' && (
+            <p className="mb-6 rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300" role="status">
+              {save.state === 'saving' && 'Saving your results…'}
+              {save.state === 'saved' && (
+                <>
+                  Saved to your history.{' '}
+                  {save.id && (
+                    <Link href={`/review/ap-practice/${save.id}`} className={`font-semibold ${t.text} hover:underline`}>
+                      Review every multiple-choice question →
+                    </Link>
+                  )}
+                </>
+              )}
+              {save.state === 'signin' && (
+                <>
+                  <Link href={`/auth/signin?callbackUrl=${encodeURIComponent(typeof window !== 'undefined' ? window.location.pathname : '/')}`} className={`font-semibold ${t.text} hover:underline`}>Sign in</Link>{' '}
+                  to save your results and review them later.
+                </>
+              )}
+              {save.state === 'error' && 'Your results couldn’t be saved. They are still shown here.'}
+            </p>
+          )}
 
           {scaledCard && (
             <div className="mb-6 rounded-2xl border border-gray-200 bg-white p-6 text-center dark:border-gray-700 dark:bg-gray-800">

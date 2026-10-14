@@ -13,6 +13,7 @@
 import { calcABQuestionPool, type CalcABQuestion } from './exit-quizzes/ap-calculus-ab'
 import { mulberry32 } from './_shared/prng'
 import { calcBCQuestionPool, type CalcBCQuestion } from './exit-quizzes/ap-calculus-bc'
+import { estimateApScore } from '@/lib/ap-scoring'
 
 /* ------------------------------------------------------------------ */
 /*  Public types                                                       */
@@ -290,19 +291,9 @@ export function scoreCalcBCDiagnostic(
   const abCorrect = abResults.reduce((s, d) => s + d.correct, 0)
   const abTotal = abResults.reduce((s, d) => s + d.total, 0)
   const abPct = abTotal > 0 ? Math.round((abCorrect / abTotal) * 100) : 0
-  let abSubscore: number
-  if (abPct >= 80) abSubscore = 5
-  else if (abPct >= 65) abSubscore = 4
-  else if (abPct >= 50) abSubscore = 3
-  else if (abPct >= 35) abSubscore = 2
-  else abSubscore = 1
+  const abSubscore = estimateApScore(abPct)
 
-  let estimatedAPScore: number
-  if (percentage >= 80) estimatedAPScore = 5
-  else if (percentage >= 65) estimatedAPScore = 4
-  else if (percentage >= 50) estimatedAPScore = 3
-  else if (percentage >= 35) estimatedAPScore = 2
-  else estimatedAPScore = 1
+  const estimatedAPScore = estimateApScore(percentage)
 
   const weakAreas = domainResults.filter(d => d.level === 'weak').map(d => d.domainName)
   const moderateAreas = domainResults.filter(d => d.level === 'moderate').map(d => d.domainName)

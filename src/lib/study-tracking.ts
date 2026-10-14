@@ -87,7 +87,7 @@ export function studentLocalDay(now: Date, tzOffset?: number | null): Date {
 }
 
 /** Which kind of attempt an answer row belongs to (review pages, mistake log). */
-export type AttemptKind = 'exit' | 'diagnostic' | 'unit-test' | 'sat-practice' | 'mcat-fl' | 'mcat-practice' | 'mistake-review' | 'qbank' | 'act-fl'
+export type AttemptKind = 'exit' | 'diagnostic' | 'unit-test' | 'sat-practice' | 'mcat-fl' | 'mcat-practice' | 'mistake-review' | 'qbank' | 'act-fl' | 'ap-practice'
 
 export type QuestionRow = {
   source: QuestionSource

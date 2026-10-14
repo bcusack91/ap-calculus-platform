@@ -9,6 +9,7 @@ import { sectionScaledScore } from '@/lib/mcat-scoring'
 import { actSectionScaled } from '@/lib/act-scoring'
 import type { MCATSection } from '@/data/mcat/types'
 import { MCAT_SECTION_ORDER } from '@/data/mcat/types'
+import { estimateApScore } from '@/lib/ap-scoring'
 
 interface BasicStats {
   totalTopics: number
@@ -118,11 +119,9 @@ export async function gatherSubjectData(
 export function mapToAPScore(avgPct: number, masteryRate: number): number {
   // Blend 70% quiz performance + 30% mastery rate
   const blended = avgPct * 0.7 + masteryRate * 0.3
-  if (blended >= 0.85) return 5
-  if (blended >= 0.70) return 4
-  if (blended >= 0.55) return 3
-  if (blended >= 0.35) return 2
-  return 1
+  // Same 1–5 scale as the diagnostics and practice exams (src/lib/ap-scoring.ts).
+  // Rounded to 0.1 point so float noise (0.7 * 0.7 + 0.7 * 0.3) can't slip under a cutoff.
+  return estimateApScore(Math.round(blended * 1000) / 10)
 }
 
 /**

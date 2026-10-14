@@ -8,5 +8,5 @@ export const revalidate = 300
 
 export default async function Page() {
   const examConfig = await getPracticeExamConfig('ap-english-lang', config)
-  return <FullLengthPracticeExam {...examConfig} />
+  return <FullLengthPracticeExam {...examConfig} examKey="ap-english-lang" />
 }

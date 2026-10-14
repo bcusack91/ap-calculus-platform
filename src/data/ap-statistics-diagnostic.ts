@@ -10,6 +10,7 @@
 
 import { apStatsQuestionPool } from './exit-quizzes/ap-statistics'
 import { mulberry32 } from './_shared/prng'
+import { estimateApScore } from '@/lib/ap-scoring'
 
 /* ------------------------------------------------------------------ */
 /*  Public types                                                       */
@@ -1136,12 +1137,7 @@ export function scoreAPStatsDiagnostic(
   const percentage = totalQuestions > 0 ? Math.round((totalCorrect / totalQuestions) * 100) : 0
 
   // Estimated AP score (1-5 scale)
-  let estimatedAPScore: number
-  if (percentage >= 80) estimatedAPScore = 5
-  else if (percentage >= 65) estimatedAPScore = 4
-  else if (percentage >= 50) estimatedAPScore = 3
-  else if (percentage >= 35) estimatedAPScore = 2
-  else estimatedAPScore = 1
+  const estimatedAPScore = estimateApScore(percentage)
 
   const weakAreas = domainResults.filter(d => d.level === 'weak').map(d => d.domainName)
   const moderateAreas = domainResults.filter(d => d.level === 'moderate').map(d => d.domainName)

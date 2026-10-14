@@ -4,6 +4,7 @@
 
 import { csaQuestionPool, type CsaQuestion } from './exit-quizzes/ap-computer-science-a'
 import { mulberry32 } from './_shared/prng'
+import { estimateApScore } from '@/lib/ap-scoring'
 
 export interface APCsaDiagnosticQuestion {
   question: string
@@ -60,6 +61,7 @@ export interface APCsaDiagnosticResults {
   recommendedTopics: APCsaRecommendedTopic[]
 }
 
+// Inheritance was removed from AP CSA in the 2025-26 Course and Exam Description.
 const AP_CSA_DOMAINS: APCsaDomain[] = [
   {
     id: 'primitive-types',
@@ -108,12 +110,6 @@ const AP_CSA_DOMAINS: APCsaDomain[] = [
     name: '2D Arrays',
     topicSlugs: ['csa-2d-array', 'csa-2d-arrays'],
     questionTarget: 2,
-  },
-  {
-    id: 'inheritance',
-    name: 'Inheritance',
-    topicSlugs: ['csa-inheritance', 'csa-inheritance-polymorphism'],
-    questionTarget: 3,
   }
 ]
 
@@ -178,12 +174,7 @@ export function scoreAPCsaDiagnostic(
   const totalQuestions = domainResults.reduce((s, d) => s + d.total, 0)
   const percentage = totalQuestions > 0 ? Math.round((totalCorrect / totalQuestions) * 100) : 0
 
-  let estimatedAPScore: number
-  if (percentage >= 80) estimatedAPScore = 5
-  else if (percentage >= 65) estimatedAPScore = 4
-  else if (percentage >= 50) estimatedAPScore = 3
-  else if (percentage >= 35) estimatedAPScore = 2
-  else estimatedAPScore = 1
+  const estimatedAPScore = estimateApScore(percentage)
 
   const weakAreas = domainResults.filter(d => d.level === 'weak').map(d => d.domainName)
   const moderateAreas = domainResults.filter(d => d.level === 'moderate').map(d => d.domainName)

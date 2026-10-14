@@ -29,34 +29,30 @@ describe('mapToAPScore (blends 70% quiz + 30% mastery -> 1..5)', () => {
     expect(mapToAPScore(0, 0)).toBe(1)
   })
 
-  it('hits the 5 cutoff exactly at blended 0.85', () => {
-    // 0.85*0.7 + 0.85*0.3 = 0.85 -> 5
-    expect(mapToAPScore(0.85, 0.85)).toBe(5)
+  // Cutoffs come from the shared AP scale (src/lib/ap-scoring.ts): 70 / 57 / 43 / 30.
+  it('returns 5 at the 0.70 blended cutoff and 4 just below', () => {
+    expect(mapToAPScore(0.7, 0.7)).toBe(5)
+    expect(mapToAPScore(0.69, 0.69)).toBe(4)
   })
 
-  it('drops to 4 just below the 0.85 blended cutoff', () => {
-    // blended = 0.8 -> 4
-    expect(mapToAPScore(0.8, 0.8)).toBe(4)
+  it('returns 4 at the 0.57 cutoff and 3 just below', () => {
+    expect(mapToAPScore(0.57, 0.57)).toBe(4)
+    expect(mapToAPScore(0.56, 0.56)).toBe(3)
   })
 
-  it('returns 4 at the 0.70 cutoff and 3 just below', () => {
-    expect(mapToAPScore(0.7, 0.7)).toBe(4)
-    expect(mapToAPScore(0.69, 0.69)).toBe(3)
+  it('returns 3 at the 0.43 cutoff and 2 just below', () => {
+    expect(mapToAPScore(0.43, 0.43)).toBe(3)
+    expect(mapToAPScore(0.42, 0.42)).toBe(2)
   })
 
-  it('returns 3 at the 0.55 cutoff and 2 just below', () => {
-    expect(mapToAPScore(0.55, 0.55)).toBe(3)
-    expect(mapToAPScore(0.54, 0.54)).toBe(2)
-  })
-
-  it('returns 2 at the 0.35 cutoff and 1 just below', () => {
-    expect(mapToAPScore(0.35, 0.35)).toBe(2)
-    expect(mapToAPScore(0.34, 0.34)).toBe(1)
+  it('returns 2 at the 0.30 cutoff and 1 just below', () => {
+    expect(mapToAPScore(0.3, 0.3)).toBe(2)
+    expect(mapToAPScore(0.29, 0.29)).toBe(1)
   })
 
   it('weights quiz performance more heavily than mastery (70/30 blend)', () => {
-    // Strong quizzes, zero mastery: 0.9*0.7 = 0.63 -> tier 3
-    expect(mapToAPScore(0.9, 0)).toBe(3)
+    // Strong quizzes, zero mastery: 0.9*0.7 = 0.63 -> 4
+    expect(mapToAPScore(0.9, 0)).toBe(4)
     // Strong mastery, zero quizzes: 0.9*0.3 = 0.27 -> tier 1
     expect(mapToAPScore(0, 0.9)).toBe(1)
   })

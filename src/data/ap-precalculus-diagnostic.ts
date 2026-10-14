@@ -7,6 +7,7 @@
  */
 
 import { mulberry32 } from './_shared/prng'
+import { estimateApScore } from '@/lib/ap-scoring'
 
 export const TOTAL_FORMS = 10
 
@@ -378,7 +379,7 @@ export function scoreAPPrecalculusDiagnostic(form: DiagnosticFormNumber, questio
     return { domainId: d.id, domainName: d.name, correct: entry.correct, total: entry.total, percentage: pct, level: pct >= 75 ? 'strong' : pct >= 50 ? 'moderate' : 'weak' }
   })
   const pct = totalQuestions > 0 ? Math.round((totalCorrect / totalQuestions) * 100) : 0
-  const estimatedAPScore = pct >= 85 ? 5 : pct >= 70 ? 4 : pct >= 55 ? 3 : pct >= 40 ? 2 : 1
+  const estimatedAPScore = estimateApScore(pct)
   const weakAreas = domainResults.filter(d => d.level === 'weak').map(d => d.domainName)
   const moderateAreas = domainResults.filter(d => d.level === 'moderate').map(d => d.domainName)
   const strengths = domainResults.filter(d => d.level === 'strong').map(d => d.domainName)

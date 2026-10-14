@@ -14,6 +14,7 @@ import { diagnosticPathForCategory } from '@/lib/diagnostic-attempt-scores'
 import { ACT_FL_CATEGORY } from '@/lib/act-full-length-server'
 import { isPsatAttemptFormat } from '@/lib/sat-attempt-format'
 import type { ReviewKind } from '@/lib/question-resolver'
+import { AP_PRACTICE_CATEGORY_PREFIX } from '@/lib/ap-practice-exams'
 
 export interface ReviewableAttempt {
   kind: ReviewKind
@@ -87,6 +88,13 @@ export async function listReviewableAttempts(studentId: string, classroomId: str
         title: `MCAT full-length${typeof r.form === 'number' ? ` · Form ${r.form}` : ''}`,
         score: scoreLabelFromResults(d.results) ?? total,
         href: href('mcat-fl', d.id),
+      })
+    } else if (d.category.startsWith(AP_PRACTICE_CATEGORY_PREFIX)) {
+      out.push({
+        kind: 'ap-practice', id: d.id, takenAt: d.createdAt.toISOString(),
+        title: `${typeof r.subject === 'string' ? r.subject : 'AP'} practice exam`,
+        score: typeof r.estimatedAPScore === 'number' ? `${r.estimatedAPScore}/5 · ${r.percentage}%` : null,
+        href: href('ap-practice', d.id),
       })
     } else if (d.category === ACT_FL_CATEGORY) {
       out.push({

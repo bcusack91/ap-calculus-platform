@@ -10,6 +10,7 @@ import { diagnosticReviewItems } from '@/lib/question-sources/diagnostic'
 import { qbankReviewItems } from '@/lib/question-sources/qbank'
 import { actFlReviewItems } from '@/lib/question-sources/act'
 import { ACT_FL_CATEGORY } from '@/lib/act-full-length-server'
+import { AP_PRACTICE_CATEGORY_PREFIX, AP_PRACTICE_EXAMS, apPracticeKeyOfCategory } from '@/lib/ap-practice-exams'
 import { satOptionExplanationsFor } from '@/data/sat-practice/option-explanations'
 
 /**
@@ -22,7 +23,7 @@ import { satOptionExplanationsFor } from '@/data/sat-practice/option-explanation
  * rebuilt at all come back as null.
  */
 
-export const REVIEW_KINDS = ['exit', 'diagnostic', 'unit-test', 'sat-practice', 'mcat-fl', 'mcat-practice', 'qbank', 'act-fl'] as const
+export const REVIEW_KINDS = ['exit', 'diagnostic', 'unit-test', 'sat-practice', 'mcat-fl', 'mcat-practice', 'qbank', 'act-fl', 'ap-practice'] as const
 export type ReviewKind = (typeof REVIEW_KINDS)[number]
 
 export function isReviewKind(k: unknown): k is ReviewKind {
@@ -137,6 +138,26 @@ async function build(kind: ReviewKind, id: string, userId: string): Promise<Omit
         score: { correct: m.correct, total: m.total, label: `${m.score}` },
         backHref: '/mcat-practice',
         items: await mcatPracticeReviewItems(m.answers, { timeSpentSeconds: m.timeSpent }),
+      }
+    }
+    case 'ap-practice': {
+      // AP full-length practice exam (src/app/api/ap-practice/submit): a stored
+      // review copy of every multiple-choice question as shown.
+      const d = await prisma.diagnosticTest.findFirst({
+        where: { id, userId, category: { startsWith: AP_PRACTICE_CATEGORY_PREFIX } },
+        select: { category: true, results: true, createdAt: true },
+      })
+      if (!d) return null
+      const r = (d.results ?? {}) as Record<string, unknown>
+      const exam = AP_PRACTICE_EXAMS[apPracticeKeyOfCategory(d.category) ?? '']
+      const items = diagnosticReviewItems(d.results)
+      const correct = items.filter((i) => i && i.chosenIndex === i.correctIndex).length
+      return {
+        kind, id, course: exam?.courseSlug ?? 'ap', takenAt: iso(d.createdAt),
+        title: `${typeof r.subject === 'string' ? r.subject : 'AP'} practice exam`,
+        score: { correct, total: items.length, label: typeof r.estimatedAPScore === 'number' ? `${r.estimatedAPScore}/5` : undefined },
+        backHref: exam?.path ?? '/',
+        items,
       }
     }
     case 'qbank': {

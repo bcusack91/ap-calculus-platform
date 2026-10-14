@@ -6,6 +6,7 @@
  * unique subset of questions from the pool. Weak areas map to
  * topic slugs for interactive review.
  */
+import { estimateApScore } from '@/lib/ap-scoring'
 
 export const TOTAL_FORMS = 10
 
@@ -310,12 +311,7 @@ export function scoreAPPhysics1Diagnostic(
   const totalQuestions = domainResults.reduce((s, d) => s + d.total, 0)
   const percentage = totalQuestions > 0 ? Math.round((totalCorrect / totalQuestions) * 100) : 0
 
-  let estimatedAPScore: number
-  if (percentage >= 80) estimatedAPScore = 5
-  else if (percentage >= 65) estimatedAPScore = 4
-  else if (percentage >= 50) estimatedAPScore = 3
-  else if (percentage >= 35) estimatedAPScore = 2
-  else estimatedAPScore = 1
+  const estimatedAPScore = estimateApScore(percentage)
 
   const weakAreas = domainResults.filter(d => d.level === 'weak').map(d => d.domainName)
   const moderateAreas = domainResults.filter(d => d.level === 'moderate').map(d => d.domainName)

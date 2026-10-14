@@ -8,5 +8,5 @@ export const revalidate = 300
 
 export default async function Page() {
   const examConfig = await getPracticeExamConfig('ap-african-american-studies', config)
-  return <FullLengthPracticeExam {...examConfig} />
+  return <FullLengthPracticeExam {...examConfig} examKey="ap-african-american-studies" />
 }

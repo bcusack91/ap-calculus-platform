@@ -8,5 +8,5 @@ export const revalidate = 300
 
 export default async function Page() {
   const examConfig = await getPracticeExamConfig('ap-physics2', config)
-  return <FullLengthPracticeExam {...examConfig} />
+  return <FullLengthPracticeExam {...examConfig} examKey="ap-physics2" />
 }

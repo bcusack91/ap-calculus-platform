@@ -12,6 +12,7 @@ import type { ChemFRQ, FRQRubricItem } from '@/data/ap-chem-frq/questions'
 import { generateExitQuiz } from '@/data/exit-quizzes'
 import { shuffleArray, shuffleOptions } from '@/lib/shuffle-options'
 import { AP_CHEM_EXAM_TOPICS as TOPIC_SLUGS } from '@/data/ap-chem-full-exam-topics'
+import { estimateApScore } from '@/lib/ap-scoring'
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -522,7 +523,7 @@ export default function APChemFullExamPage() {
 
   // Composite: 50% MC + 50% FRQ
   const composite = Math.round(mcPercent * 0.5 + frqPercent * 0.5)
-  const estimatedScore = composite >= 72 ? 5 : composite >= 58 ? 4 : composite >= 43 ? 3 : composite >= 30 ? 2 : 1
+  const estimatedScore = estimateApScore(composite)
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-teal-50 via-white to-cyan-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
