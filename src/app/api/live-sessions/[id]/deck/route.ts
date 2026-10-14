@@ -67,19 +67,24 @@ export async function GET(req: NextRequest, { params }: Ctx) {
   // get the tallies only after the teacher reveals the answer (owner rule):
   // until then they see just their own choice, so a class can't be swayed by
   // the running vote — and a devtools-savvy student can't read it either.
-  let poll: { counts: number[] | null; total: number | null; myAnswer: number | null; responders?: string[] } | null = null
+  // The teacher gets "N of M students answered" — a count, never names, so a
+  // recorded lesson can't show who has or hasn't answered.
+  let poll: { counts: number[] | null; total: number | null; myAnswer: number | null; classSize?: number } | null = null
   if (current?.kind === 'poll') {
-    const responses = await prisma.slideResponse.findMany({
-      where: { deckId: deck.id, slideIndex: deck.currentSlide },
-      select: { userId: true, userName: true, answerIndex: true },
-    })
+    const [responses, classSize] = await Promise.all([
+      prisma.slideResponse.findMany({
+        where: { deckId: deck.id, slideIndex: deck.currentSlide },
+        select: { userId: true, answerIndex: true },
+      }),
+      access.isTeacher ? prisma.classroomMember.count({ where: { classroomId: access.live.classroomId, isActive: true } }) : null,
+    ])
     const canSeeTallies = access.isTeacher || revealed.includes(deck.currentSlide)
     const counts = current.options.map((_, i) => responses.filter(r => r.answerIndex === i).length)
     poll = {
       counts: canSeeTallies ? counts : null,
       total: canSeeTallies ? responses.length : null,
       myAnswer: responses.find(r => r.userId === session.user!.id)?.answerIndex ?? null,
-      ...(access.isTeacher ? { responders: responses.map(r => r.userName) } : {}),
+      ...(classSize !== null ? { classSize } : {}),
     }
   }
 

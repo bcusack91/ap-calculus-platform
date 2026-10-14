@@ -173,7 +173,10 @@ function SyncedBoard({
   }, [sessionId, owner, canDraw, localScene])
 
   return (
-    <div className="relative h-[60vh] overflow-hidden rounded-xl border border-gray-200 dark:border-gray-700">
+    <div
+      {...(owner === 'class' ? { 'data-recording-region': 'board' } : {})}
+      className="relative isolate h-[60vh] overflow-hidden rounded-xl border border-gray-200 bg-white dark:border-gray-700"
+    >
       {!canDraw && (
         <span className="absolute right-3 top-3 z-10 rounded-full bg-gray-900/70 px-3 py-1 text-xs font-medium text-white">
           👁 View only

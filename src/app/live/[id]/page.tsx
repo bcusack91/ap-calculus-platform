@@ -7,6 +7,7 @@ import Link from 'next/link'
 import nextDynamic from 'next/dynamic'
 import { ChatPanel, JitsiEmbed, type SessionInfo } from '@/components/LiveSessionMedia'
 import { useLivePopoutHost } from '@/lib/live-popout'
+import LessonRecorderControls from '@/components/LessonRecorderControls'
 
 // Whiteboards pull in Excalidraw (~a MB) — load only when a session page opens.
 const BoardSection = nextDynamic(() => import('@/components/LiveBoards'), {
@@ -140,6 +141,8 @@ export default function LiveSessionPage() {
           <h1 className="text-lg font-bold text-gray-900 dark:text-white sm:text-xl">{session.classroomName}</h1>
         </div>
         {session.youAreTeacher && (
+          <div className="flex flex-wrap items-center gap-2">
+          <LessonRecorderControls classroomId={session.classroomId} classroomName={session.classroomName} />
           <button
             onClick={endSession}
             disabled={ending}
@@ -147,6 +150,7 @@ export default function LiveSessionPage() {
           >
             {ending ? 'Ending…' : 'End session'}
           </button>
+          </div>
         )}
       </div>
 

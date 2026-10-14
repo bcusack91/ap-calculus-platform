@@ -5,6 +5,7 @@ import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import ClassroomAnnouncements from '@/components/ClassroomAnnouncements'
+import ClassRecordings from '@/components/ClassRecordings'
 import LiveNowBanner from '@/components/LiveNowBanner'
 import ClassDiagnosticBanner from '@/components/ClassDiagnosticBanner'
 import { unitTestRouteFor, frqRouteFor } from '@/lib/course-activity-routes'
@@ -343,6 +344,9 @@ export default function StudentAssignmentsPage() {
                   hideWhenEmpty
                   classroomName={c.name}
                 />
+                <div className="mt-4">
+                  <ClassRecordings classroomId={c.id} isTeacher={false} hideWhenEmpty classroomName={c.name} />
+                </div>
               </div>
             ))}
           </div>

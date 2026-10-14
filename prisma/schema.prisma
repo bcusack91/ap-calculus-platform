@@ -805,6 +805,21 @@ model Bookmark {
   @@index([userId])
 }
 
+/// A recorded lesson for a class: the teacher records in a live session
+/// (downloaded locally), uploads it to YouTube as unlisted and posts the link.
+model ClassRecording {
+  id          String   @id @default(cuid())
+  classroomId String
+  authorId    String
+  title       String
+  videoId     String // YouTube video id (embedded via youtube-nocookie)
+  createdAt   DateTime @default(now())
+
+  classroom Classroom @relation(fields: [classroomId], references: [id], onDelete: Cascade)
+
+  @@index([classroomId, createdAt])
+}
+
 model Announcement {
   id          String   @id @default(cuid())
   classroomId String
@@ -1296,6 +1311,7 @@ model Classroom {
   competitions      ScheduledCompetition[]
   competitiveGrants CompetitiveGrant[]
   announcements     Announcement[]
+  recordings        ClassRecording[]
   teacherLobbies    TeacherLobby[]         @relation("TeacherLobbyClassroom")
   liveSessions      LiveSession[]
   classDiagnostics  ClassDiagnostic[]

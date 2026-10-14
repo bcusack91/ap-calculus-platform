@@ -35,7 +35,7 @@ type Slide =
   | { kind: 'quiz'; topicSlug: string; title: string }
 
 /** counts/total are null for students until the teacher reveals the answer. */
-interface PollState { counts: number[] | null; total: number | null; myAnswer: number | null; responders?: string[] }
+interface PollState { counts: number[] | null; total: number | null; myAnswer: number | null; classSize?: number }
 
 interface DeckState {
   id: string
@@ -222,6 +222,9 @@ export default function SlideDeckSection({
 
       {/* Slide body — relative so annotation layers can sit exactly on top */}
       <SlideMotionStyles />
+      {/* Stable wrapper: the lesson recorder crops to this area (the slide body
+          itself remounts on every slide). */}
+      <div data-recording-region="slides" className="isolate rounded-b-2xl bg-white dark:bg-gray-800">
       <div key={deck.currentSlide} className="relative min-h-[45vh] px-6 py-8 sm:px-10">
         <AnnotationLayer
           key={`${deck.id}:${deck.currentSlide}:${youAreTeacher && annotating ? 'draw' : `view-${annHasStrokes ? 1 : 0}`}`}
@@ -244,7 +247,7 @@ export default function SlideDeckSection({
         {slide.kind === 'poll' && (
           <div style={SLIDE_IN}>
             <p className={`mb-1 inline-block rounded-full px-3 py-1 text-xs font-bold uppercase tracking-wide ${palette.chip}`}>
-              📊 Quick check {isRevealed ? '· answer revealed' : deck.poll?.total != null ? `· ${deck.poll.total} answered` : deck.poll?.myAnswer != null ? '· your answer is in' : ''}
+              📊 Quick check {isRevealed ? '· answer revealed' : deck.poll?.total != null ? `· ${deck.poll.total}${deck.poll.classSize != null ? ` of ${deck.poll.classSize}` : ''} answered` : deck.poll?.myAnswer != null ? '· your answer is in' : ''}
             </p>
             <MathText text={slide.question} className="mb-6 text-xl font-semibold leading-relaxed text-gray-900 sm:text-2xl dark:text-white" />
             <div className="space-y-2.5">
@@ -297,9 +300,9 @@ export default function SlideDeckSection({
                 <MathText text={reveal.explanation} className="text-sm leading-relaxed text-gray-800 dark:text-gray-200" />
               </div>
             )}
-            {youAreTeacher && deck.poll?.responders && (
-              <p className="mt-3 truncate text-xs text-gray-400" title={deck.poll.responders.join(', ')}>
-                Answered: {deck.poll.responders.join(', ') || '—'}
+            {youAreTeacher && deck.poll?.total != null && deck.poll.classSize != null && (
+              <p className="mt-3 text-xs text-gray-500 dark:text-gray-400">
+                {deck.poll.total} of {deck.poll.classSize} student{deck.poll.classSize === 1 ? '' : 's'} answered
               </p>
             )}
           </div>
@@ -316,6 +319,7 @@ export default function SlideDeckSection({
             </Link>
           </QuizSlideView>
         )}
+      </div>
       </div>
     </div>
   )

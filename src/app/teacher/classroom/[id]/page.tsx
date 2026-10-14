@@ -9,6 +9,7 @@ import { QRCodeSVG } from 'qrcode.react'
 import Gradebook from '@/components/Gradebook'
 import { StandardsMastery } from '@/components/StandardsMastery'
 import ClassroomAnnouncements from '@/components/ClassroomAnnouncements'
+import ClassRecordings from '@/components/ClassRecordings'
 import LiveSessionTeacherCard from '@/components/LiveSessionTeacherCard'
 import ClassPlan from '@/components/ClassPlan'
 import ClassEngagement from '@/components/ClassEngagement'
@@ -60,6 +61,7 @@ import {
   Upload,
   UserPlus,
   Users,
+  Video,
   X,
 } from 'lucide-react'
 
@@ -176,6 +178,7 @@ type ViewType =
   | 'members'
   | 'assignments'
   | 'announcements'
+  | 'recordings'
   | 'competitions'
   | 'performance'
   | 'gradebook'
@@ -189,6 +192,7 @@ const VIEW_GROUP: Record<ViewType, GroupType> = {
   members: 'roster',
   assignments: 'work',
   announcements: 'work',
+  recordings: 'work',
   competitions: 'work',
   performance: 'insights',
   gradebook: 'insights',
@@ -226,6 +230,7 @@ const SUB_VIEWS: Record<'work' | 'insights', { key: ViewType; label: string; ico
   work: [
     { key: 'assignments', label: 'Assignments', icon: ClipboardList, desc: 'Create work, set due dates, and see who has actually finished each assignment.' },
     { key: 'announcements', label: 'Announcements', icon: Megaphone, desc: 'Post messages the whole class sees on their dashboard.' },
+    { key: 'recordings', label: 'Recordings', icon: Video, desc: 'Lesson videos students can rewatch: record in a live session, upload to YouTube as unlisted, paste the link.' },
     { key: 'competitions', label: 'Class games', icon: Swords, desc: 'Run a real-time review game now, or put one on the calendar.' },
   ],
   insights: [
@@ -1878,6 +1883,9 @@ export default function ClassroomDetailPage() {
             />
           </div>
         )}
+
+        {/* Work › Recordings */}
+        {activeView === 'recordings' && <ClassRecordings classroomId={classroomId} isTeacher={true} />}
 
         {/* Work › Announcements */}
         {activeView === 'announcements' && (
