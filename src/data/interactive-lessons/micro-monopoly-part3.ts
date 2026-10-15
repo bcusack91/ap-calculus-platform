@@ -7,17 +7,58 @@ export const microMonopolyPart3Data = {
       content: `
 # 💰 Monopoly
 
-**Part 3 of 7 — Patterns & Examples**
+**Part 3 of 7 — Worked Monopoly Problems**
 
-This part examines specific patterns and real-world examples related to Monopoly. Case studies help illustrate abstract concepts.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| 📖 The Full Recipe: Constant Marginal Cost |
+| When Marginal Cost Rises |
+| A Monopoly That Loses Money |
 
-| Concept | Description |
-|---------|-------------|
-| **Structural pattern** | A recurring structure within Monopoly |
-| **Case study** | A specific real-world example that illustrates Monopoly |
-| **Comparison** | Analyzing similarities and differences across examples of Monopoly |
+> 🔑 **Key Concept:** Every monopoly calculation follows the same order: **MR = MC** for quantity, **demand** for price, **(P − ATC) × Q** for profit, and the **P = MC** quantity as the efficient benchmark. Once you have those four numbers, consumer surplus, producer surplus and deadweight loss are just triangle and rectangle areas.
+      `
+    },
+    {
+      id: 'micromon3-recipe',
+      type: 'text' as const,
+      content: `
+## 📖 The Full Recipe: Constant Marginal Cost
+
+A drug company holds the patent on a migraine pill. Demand is **P = 120 − 2Q**. Each unit costs \\$20 to make, so **MC = ATC = \\$20** (no fixed cost in this first version).
+
+### Step 1: Marginal Revenue
+Same intercept, twice the slope: **MR = 120 − 4Q**.
+
+### Step 2: Quantity from MR = MC
+120 − 4Q = 20, so 4Q = 100 and **Q = 25**.
+
+### Step 3: Price from Demand
+P = 120 − 2(25) = **\\$70**. The firm charges what buyers will pay for 25 units, far above MR and MC.
+
+### Step 4: Profit
+Profit = (P − ATC) × Q = (\\$70 − \\$20) × 25 = **\\$1,250**.
+
+### Step 5: Consumer Surplus
+The triangle under demand and above \\$70, from 0 to 25 units: ½ × 25 × (\\$120 − \\$70) = **\\$625**.
+
+### Step 6: The Efficient Benchmark
+Allocative efficiency needs P = MC: 120 − 2Q = 20, so **Q = 50** at **P = \\$20**. Consumer surplus would be ½ × 50 × \\$100 = \\$2,500.
+
+### Step 7: Deadweight Loss
+The triangle between demand and MC from the monopoly quantity to the efficient quantity: ½ × (50 − 25) × (\\$70 − \\$20) = **\\$625**.
+
+| Outcome | Monopoly | Efficient (P = MC) |
+|---|---|---|
+| Quantity | 25 | 50 |
+| Price | \\$70 | \\$20 |
+| Consumer surplus | \\$625 | \\$2,500 |
+| Producer surplus (profit) | \\$1,250 | \\$0 |
+| Total surplus | \\$1,875 | \\$2,500 |
+| Deadweight loss | \\$625 | \\$0 |
+
+**Check:** \\$1,875 + \\$625 = \\$2,500 ✓. Of the \\$2,500 that buyers would get under efficient pricing, \\$1,250 becomes the monopolist's profit (a **transfer**), \\$625 stays with buyers, and \\$625 is **lost to everyone**.
       `
     },
     {
@@ -29,144 +70,150 @@ This part examines specific patterns and real-world examples related to Monopoly
       exercise: {
         questions: [
           {
-            question: 'Why do analysts use case studies?',
+            question: 'A monopolist faces demand P = 80 − 2Q and has a constant marginal cost of \\$16. What price maximizes its profit?',
             options: [
-              'They are easier than analysis',
-              'They provide concrete examples that illustrate abstract concepts',
-              'They replace all other methods',
-              'They are required by law'
+              '\\$48',
+              '\\$16',
+              '\\$32',
+              '\\$40'
             ],
-            correctAnswer: 1,
-            explanation: 'Case studies ground abstract concepts in specific, real-world examples that are easier to understand and remember.'
+            correctAnswer: 0,
+            explanation: 'MR = 80 − 4Q; setting it equal to 16 gives Q = 16, and demand gives P = 80 − 32 = \\$48. \\$16 is the marginal cost, and \\$40 is the revenue-maximizing midpoint price, where MR is zero rather than equal to MC.'
           },
           {
-            question: 'Comparing examples of Monopoly across examples helps:',
+            question: 'Compared with pricing at MC, where does the migraine-pill firm\'s \\$1,250 of profit come from?',
             options: [
-              'Nothing',
-              'Identify universal patterns and unique local variations',
-              'Confuse students',
-              'Waste time'
+              'A transfer of surplus from pill buyers',
+              'The triangle of surplus lost when output is cut',
+              'Cost savings from making fewer migraine pills',
+              'A government payment tied to the drug patent'
             ],
-            correctAnswer: 1,
-            explanation: 'Comparison reveals both common patterns (generalizable) and unique local factors (context-dependent).'
+            correctAnswer: 0,
+            explanation: 'The profit rectangle sits inside what would be consumer surplus at a \\$20 price, so it is a transfer from buyers to the firm. The surplus that disappears is the separate \\$625 deadweight loss triangle, and MC is constant, so smaller output saves no cost per unit.'
           }
         ]
       }
     },
     {
-      id: 'micromon3-content',
+      id: 'micromon3-rising',
       type: 'text' as const,
       content: `
-## Patterns & Examples — Deeper Dive
+## When Marginal Cost Rises
 
-### Structural pattern
-A recurring structure within Monopoly. Understanding this concept is essential for mastering Monopoly in AP Microeconomics.
+A town's only concrete plant faces demand **P = 100 − Q**, and its marginal cost rises with output: **MC = 10 + Q**.
 
-### Case study
-A specific real-world example that illustrates Monopoly. This builds on the previous concept and connects to broader themes in the course.
+### Monopoly Outcome
+- MR = 100 − 2Q.
+- MR = MC: 100 − 2Q = 10 + Q, so 3Q = 90 and **Q = 30**.
+- Price from demand: P = 100 − 30 = **\\$70**.
+- Marginal cost of the 30th unit: 10 + 30 = **\\$40**.
 
-### Comparison
-Analyzing similarities and differences across examples of Monopoly. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+### Efficient Outcome
+- P = MC: 100 − Q = 10 + Q, so **Q = 45** and **P = \\$55**.
+
+### Deadweight Loss
+The DWL triangle has its point at the efficient output (45, \\$55) and its vertical side at the monopoly output, running from MC (\\$40) up to the price (\\$70):
+
+DWL = ½ × (45 − 30) × (\\$70 − \\$40) = ½ × 15 × \\$30 = **\\$225**
+
+> ⚠️ **Common trap:** Using \\$70 − \\$55 as the height gives \\$112.50, which is wrong. The height is the gap between the price and **marginal cost at the monopoly quantity**, called the **monopoly markup** over MC. With constant MC the two methods agree, which is why the mistake hides until MC slopes upward.
       `
     },
     {
       id: 'micromon3-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Solve the Monopoly** ✍️
 
-1) What term refers to a recurring structure within Monopoly?
+A monopolist faces demand **P = 60 − Q** and has a constant marginal cost and average total cost of \\$12.
 
-2) What concept describes a specific real-world example that illustrates Monopoly?
+1) What quantity maximizes profit?
 
-3) Name the term for analyzing similarities and differences across examples of Monopoly.
+2) What price does it charge? (dollars, number only)
 
-Use the exact term from this part.
+3) What is the deadweight loss? (dollars, number only)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Structural pattern', 'Case study', 'Comparison'],
-        hint1: 'Starts with: S',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: C',
-        explanation: 'Expected answers: Structural pattern (A recurring structure within Monopoly), Case study (A specific real-world example that illustrates Monopoly), and Comparison (Analyzing similarities and differences across examples of Monopoly).'
+        correctAnswers: ['24', '36', '288'],
+        hint1: 'MR = 60 − 2Q. Set it equal to 12.',
+        hint2: 'Plug Q into the demand curve, not the MR line.',
+        hint3: 'Efficient Q is where 60 − Q = 12. Then use ½ × (Q gap) × (P − MC).',
+        explanation: '1) 60 − 2Q = 12 gives Q = 24. 2) P = 60 − 24 = \\$36. 3) The efficient quantity is 48, so DWL = ½ × (48 − 24) × (\\$36 − \\$12) = \\$288. Profit is (\\$36 − \\$12) × 24 = \\$576.'
       }
     },
     {
-      id: 'micromon3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Fill in the Blanks** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'A recurring structure within Monopoly is called ___',
-            options: ['Structural pattern', 'Case study', 'Comparison', 'None of these']
-          },
-          {
-            label: 'A specific real-world example that illustrates Monopoly describes ___',
-            options: ['Structural pattern', 'Case study', 'Comparison', 'All of these']
-          },
-          {
-            label: 'Analyzing similarities and differences across examples of Monopoly is known as ___',
-            options: ['Comparison', 'Structural pattern', 'Case study', 'None of these']
-          }
-        ],
-        correctAnswers: ['Structural pattern', 'Case study', 'Comparison'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Structural pattern — A recurring structure within Monopoly. Case study — A specific real-world example that illustrates Monopoly. Comparison — Analyzing similarities and differences across examples of Monopoly.'
-      }
-    },
-    {
-      id: 'micromon3-strategy',
+      id: 'micromon3-loss',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## A Monopoly That Loses Money
 
-### Misconceptions to Avoid
-- Don\'t confuse **Structural pattern** with **Case study** — while related, they address different aspects of Monopoly.
-- **Comparison** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
+Monopoly power is not a guarantee of profit. Go back to the migraine pill and add a **fixed cost of \\$1,500** for the factory lease. Demand and MC are unchanged.
 
-### AP Strategy Moves
-- When you see questions about patterns & examples, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect patterns & examples to broader themes in AP Microeconomics for higher scores.
+| Item | Value |
+|---|---|
+| Quantity (MR = MC) | 25, unchanged |
+| Price | \\$70, unchanged |
+| Total revenue | \\$70 × 25 = \\$1,750 |
+| Total cost | \\$1,500 + \\$20 × 25 = \\$2,000 |
+| ATC at Q = 25 | \\$2,000 ÷ 25 = \\$80 |
+| Profit | (\\$70 − \\$80) × 25 = **−\\$250** |
+
+### Should It Keep Producing?
+Use the **same shutdown rule** as any firm: in the short run, keep producing if price covers **average variable cost**.
+
+- AVC = \\$20 and P = \\$70, so P > AVC.
+- **Produce:** loss = \\$250. **Shut down:** loss = the whole fixed cost, \\$1,500.
+- Producing loses \\$1,250 less, so the firm stays open in the **short run**.
+
+In the **long run**, all costs are variable. If the loss persists, the firm leaves the market, even with its patent.
+
+### What a Fixed Cost Does and Does Not Change
+A fixed cost moves the **ATC** curve up but leaves **MC and MR** where they were, so the profit-maximizing (or loss-minimizing) **quantity and price stay the same**. Only profit changes.
+
+> 🔑 **AP Connection:** On a graph, a loss-making monopoly has its ATC curve **above** the demand curve at the MR = MC quantity. The loss rectangle runs from P up to ATC, across Q units.
       `
     },
     {
-      id: 'micromon3-applied',
+      id: 'micromon3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'An AP question asks you to provide TWO examples of Monopoly. The strongest response would:',
+            question: 'At its MR = MC output, a monopolist\'s price is \\$40, its ATC is \\$45 and its AVC is \\$32. In the short run, the firm should',
             options: [
-              'Use two examples from the same place',
-              'Use examples from different examples to show the concept applies broadly',
-              'Make up fictional examples',
-              'Provide only one example'
+              'produce, since its price covers AVC',
+              'shut down, since the price is below average total cost',
+              'raise its price to \\$45 to cover all its costs',
+              'increase output until the price equals its ATC'
             ],
-            correctAnswer: 1,
-            explanation: 'Using examples from different contexts demonstrates broader understanding and the universality of the concept.'
+            correctAnswer: 0,
+            explanation: 'Price covers AVC (\\$40 > \\$32), so each unit adds more to revenue than to variable cost and helps pay part of the fixed cost. A higher price would mean selling fewer units on the demand curve, and the firm already chose the best price at MR = MC.'
           },
           {
-            question: 'A pattern observed in Monopoly is consistent across many examples. This suggests:',
+            question: 'The migraine-pill firm\'s fixed cost rises from \\$0 to \\$1,500. What happens to its profit-maximizing price?',
             options: [
-              'Coincidence',
-              'An underlying process that reflects a broad general principle',
-              'The data is wrong',
-              'Local factors only'
+              'It stays at \\$70',
+              'It rises to \\$80',
+              'It rises to \\$130',
+              'It falls to \\$60'
             ],
-            correctAnswer: 1,
-            explanation: 'Consistent patterns across examples suggest a systematic process rather than coincidence.'
+            correctAnswer: 0,
+            explanation: 'A fixed cost does not change MR or MC, so the firm still sells 25 units at \\$70 and profit falls by \\$1,500. \\$80 is the new ATC, and adding the \\$60-per-unit fixed cost to the price treats a fixed cost as if it were a marginal cost.'
+          },
+          {
+            question: 'A monopolist sells 30 units at \\$70, where its MC is \\$40. The efficient outcome is 45 units at \\$55. What is the deadweight loss?',
+            options: [
+              '\\$225',
+              '\\$112.50',
+              '\\$450',
+              '\\$337.50'
+            ],
+            correctAnswer: 0,
+            explanation: 'DWL = ½ × (45 − 30) × (\\$70 − \\$40) = \\$225. Using \\$70 − \\$55 as the height gives \\$112.50, which leaves out the part of the triangle between \\$55 and MC.'
           }
         ]
       }

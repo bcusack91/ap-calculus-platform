@@ -5,171 +5,253 @@ export const microGovernmentInterventionPart4Data = {
       id: 'microgov4-intro',
       type: 'text' as const,
       content: `
-# 💰 Government Intervention
+# 💰 Government Intervention in Markets
 
-**Part 4 of 7 — Connections & Interactions**
+**Part 4 of 7 — Subsidies, Quotas and Lettered Graphs**
 
-Government Intervention connects to other topics in AP Microeconomics. Understanding these connections reveals how different processes interact.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| 📖 Per-Unit Subsidies |
+| Worked Example: A \\$10 Subsidy |
+| Quotas: A Limit on Quantity |
+| Reading a Lettered Graph |
 
-| Concept | Description |
-|---------|-------------|
-| **Interconnection** | How Government Intervention links to other course topics |
-| **Scale interaction** | How Government Intervention operates differently at local, national, and global scales |
-| **Feedback loop** | How outcomes of Government Intervention can reinforce or modify the original process |
-      `
+> 🔑 **Key Concept:** A per-unit subsidy is a tax in reverse: it pushes quantity **above** the efficient level, and the government pays more than buyers and sellers gain. A quota pushes quantity **below** the efficient level, just like a tax, but the gap between price and cost goes to whoever holds the right to sell.
+`
     },
     {
-      id: 'microgov4-quiz1',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Government Intervention connects to other course topics through:',
-            options: [
-              'No connections exist',
-              'Shared processes, causes, and outcomes',
-              'Random coincidence',
-              'Administrative categories only'
-            ],
-            correctAnswer: 1,
-            explanation: 'Topics in AP Microeconomics are interconnected through shared processes, causes, and outcomes.'
-          },
-          {
-            question: 'A feedback loop in Government Intervention means:',
-            options: [
-              'The process stops',
-              'Outcomes reinforce or modify the original process',
-              'Nothing changes',
-              'The exam skips this topic'
-            ],
-            correctAnswer: 1,
-            explanation: 'Feedback loops occur when outcomes influence the conditions that created them — either reinforcing or moderating the original process.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'microgov4-content',
+      id: 'microgov4-subsidy',
       type: 'text' as const,
       content: `
-## Connections & Interactions — Deeper Dive
+## 📖 Per-Unit Subsidies
 
-### Interconnection
-How Government Intervention links to other course topics. Understanding this concept is essential for mastering Government Intervention in AP Microeconomics.
+With a per-unit subsidy of $s$ paid to sellers, a seller who needs \\$40 per unit will accept \\$30 from the buyer, because the government adds \\$10. Every point on the supply curve moves **down by $s$** (the curve shifts right).
 
-### Scale interaction
-How Government Intervention operates differently at local, national, and global scales. This builds on the previous concept and connects to broader themes in the course.
+| Price | Meaning |
+|---|---|
+| $P_c$ | What buyers pay (falls) |
+| $P_p = P_c + s$ | What producers receive in total (rises) |
+| Government cost | $s \\times Q_{new}$ |
 
-### Feedback loop
-How outcomes of Government Intervention can reinforce or modify the original process. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
-      `
+### Why a Subsidy Creates Deadweight Loss
+Before the subsidy, the market already produced every unit whose value to buyers exceeded its cost. The extra units a subsidy adds have a **cost above their value** to buyers. Taxpayers pay for that gap, and it is not matched by anyone's gain.
+
+### Who Captures the Subsidy?
+The same elasticity rule as for taxes applies in reverse: **the more inelastic side gets more of the benefit.** A subsidy to buyers of a good with perfectly inelastic supply, such as a fixed stock of apartments, ends up entirely as a higher price for the owners.
+
+> 🔑 **AP Connection:** Exam questions often ask whether a subsidy is efficient. In a market with no externality, the answer is no: it creates **overproduction** and a deadweight loss. Later topics show when a subsidy can fix a market failure instead.
+`
+    },
+    {
+      id: 'microgov4-worked',
+      type: 'text' as const,
+      content: `
+## Worked Example: A \\$10 Subsidy
+
+Market: $Q_d = 120 - 2P$ and $Q_s = 2P - 20$. Before the subsidy, $P = \\$35$, $Q = 50$, CS = PS = \\$625.
+
+**Step 1: Supply in terms of the buyer's price.** Producers receive $P_c + 10$, so $Q_s = 2(P_c + 10) - 20 = 2P_c$.
+
+**Step 2: Solve.** $120 - 2P_c = 2P_c$, so **$P_c = \\$30$**, **$P_p = \\$40$**, and **$Q = 60$**.
+
+**Step 3: Government cost.** $\\$10 \\times 60 = $ **\\$600**.
+
+**Step 4: Surplus.**
+- CS = ½ × 60 × (60 − 30) = **\\$900**, up \\$275.
+- PS = ½ × 60 × (40 − 10) = **\\$900**, up \\$275.
+- Buyers and sellers gain \\$550, but taxpayers pay \\$600.
+- DWL = 600 − 550 = **\\$50**, the triangle ½ × (60 − 50) × (40 − 30).
+
+| | Before | After \\$10 subsidy |
+|---|---|---|
+| Price buyers pay | \\$35 | \\$30 |
+| Price producers receive | \\$35 | \\$40 |
+| Quantity | 50 | 60 |
+| Consumer surplus | \\$625 | \\$900 |
+| Producer surplus | \\$625 | \\$900 |
+| Government cost | — | \\$600 |
+| Deadweight loss | — | \\$50 |
+
+The deadweight loss sits **to the right of** the old equilibrium, between 50 and 60 units, where each unit costs more to make than buyers value it. With a tax, the deadweight loss sits to the **left**.
+`
     },
     {
       id: 'microgov4-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Solve a Subsidy Problem** ✍️
 
-1) What term refers to how Government Intervention links to other course topics?
+Demand is $Q_d = 80 - P$ and supply is $Q_s = P - 20$, so the market clears at \\$50 and 30 units. The government pays sellers a **\\$6 per-unit subsidy**.
 
-2) What concept describes how Government Intervention operates differently at local, national, and global scales?
+1) New price buyers pay, in dollars?
 
-3) Name the term for how outcomes of Government Intervention can reinforce or modify the original process.
+2) New quantity?
 
-Use the exact term from this part.
+3) Total cost of the subsidy to the government, in dollars?
+
+Enter numbers only.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Interconnection', 'Scale interaction', 'Feedback loop'],
-        hint1: 'Starts with: I',
-        hint2: 'Starts with: S',
-        hint3: 'Starts with: F',
-        explanation: 'Expected answers: Interconnection (How Government Intervention links to other course topics), Scale interaction (How Government Intervention operates differently at local, national, and global scales), and Feedback loop (How outcomes of Government Intervention can reinforce or modify the original process).'
+        correctAnswers: ['47', '33', '198'],
+        hint1: 'Producers receive Pc + 6, so Qs = (Pc + 6) − 20. Set it equal to 80 − Pc.',
+        hint2: 'Substitute the buyer price into demand.',
+        hint3: 'Multiply the subsidy by the new quantity.',
+        explanation: '1) 80 − Pc = Pc − 14, so Pc = \\$47 and producers receive \\$53. 2) Q = 80 − 47 = 33. 3) Cost = \\$6 × 33 = \\$198. The deadweight loss is ½ × 3 × 6 = \\$9.'
       }
+    },
+    {
+      id: 'microgov4-quota',
+      type: 'text' as const,
+      content: `
+## Quotas: A Limit on Quantity
+
+A **quota** caps the quantity that can be sold, often through a fixed number of licenses (taxi medallions, fishing permits) or a limit on imports.
+
+### Graphing a Quota in Words
+Draw a **vertical line at the quota quantity**. If it lies to the left of the equilibrium quantity, it binds. At the quota quantity:
+- Buyers pay the price on the **demand** curve.
+- The marginal cost of the last unit is the price on the **supply** curve.
+- The gap between the two is the **quota rent**: extra income per unit for whoever holds a license.
+
+### Worked Example: A Quota of 40 Units
+Same market: $Q_d = 120 - 2P$, $Q_s = 2P - 20$.
+
+1. At Q = 40, buyers will pay $P = (120 - 40)/2 = $ **\\$40**.
+2. At Q = 40, the supply price is $P = (40 + 20)/2 = $ **\\$30**.
+3. Quota rent = (40 − 30) × 40 = **\\$400**, going to license holders.
+4. DWL = ½ × (50 − 40) × (40 − 30) = **\\$50**.
+
+Compare this with the \\$10 tax from Part 3: buyers pay \\$40, the supply price is \\$30, quantity is 40, and the deadweight loss is \\$50. **The outcomes match.** The only difference is who receives the \\$400 rectangle: the government under a tax, license holders under a quota.
+
+> 🔑 **AP Connection:** A quota raises price and lowers quantity, so it hurts buyers and creates deadweight loss. Sellers who hold licenses can gain, even though they sell fewer units.
+`
+    },
+    {
+      id: 'microgov4-quiz1',
+      type: 'multiple-choice' as const,
+      content: `**Concept Check** 🎯`,
+      exercise: {
+        questions: [
+          {
+            question: 'A per-unit subsidy is paid to producers in a competitive market with no externalities. Compared with the original equilibrium, what happens to total surplus, counting the cost to taxpayers?',
+            options: [
+              'It decreases',
+              'It increases',
+              'It stays the same',
+              'It cannot be determined'
+            ],
+            correctAnswer: 0,
+            explanation: 'The subsidy pushes output beyond the efficient quantity, and the gains to buyers and sellers are smaller than the government\'s outlay. The difference is a deadweight loss, so total surplus falls.'
+          },
+          {
+            question: 'A city limits taxi licenses to fewer rides than the market would supply. Which group gains from this quota?',
+            options: [
+              'License holders who earn fares above their costs',
+              'Riders who now pay lower fares for each taxi trip',
+              'Drivers who cannot obtain a license to operate a cab',
+              'Taxpayers who collect the gap between fare and cost'
+            ],
+            correctAnswer: 0,
+            explanation: 'The quota raises the fare above the marginal cost of the last ride, and license holders keep that gap as quota rent. Riders pay more, drivers without licenses are shut out, and no tax revenue is collected.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'microgov4-lettered',
+      type: 'text' as const,
+      content: `
+## Reading a Lettered Graph
+
+AP questions often label regions with letters. Here is the standard layout for a per-unit tax, described in words.
+
+**The graph:** Demand D slopes down; supply S₁ slopes up; S₂ = S₁ + tax lies above it. Before the tax: price $P_1$, quantity $Q_1$. After: buyers pay $P_c$, sellers keep $P_s$, quantity $Q_2$.
+
+| Region | Location |
+|---|---|
+| **A** | Under D, above $P_c$, from 0 to $Q_2$ |
+| **B** | Rectangle between $P_1$ and $P_c$, from 0 to $Q_2$ |
+| **C** | Triangle between D and $P_1$, from $Q_2$ to $Q_1$ |
+| **D** | Rectangle between $P_s$ and $P_1$, from 0 to $Q_2$ |
+| **E** | Triangle between $P_1$ and S₁, from $Q_2$ to $Q_1$ |
+| **F** | Above S₁, below $P_s$, from 0 to $Q_2$ |
+
+| Measure | Before tax | After tax |
+|---|---|---|
+| Consumer surplus | A + B + C | A |
+| Producer surplus | D + E + F | F |
+| Tax revenue | — | B + D |
+| Deadweight loss | — | C + E |
+
+### The Same Letters for Other Policies
+- **Quota at $Q_2$:** CS = A, and B + D becomes **quota rent** for license holders; DWL is still C + E.
+- **Price ceiling at $P_s$:** quantity falls to $Q_2$ and buyers pay $P_s$, so CS = A + B + D and PS = F; DWL is still C + E.
+- **Price floor at $P_c$:** quantity falls to $Q_2$, so CS = A and PS = B + D + F; DWL is still C + E.
+`
     },
     {
       id: 'microgov4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Regions** 🔍
+
+Use the lettered tax graph above.
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'How Government Intervention links to other course topics is called ___',
-            options: ['Interconnection', 'Scale interaction', 'Feedback loop', 'None of these']
+            label: 'The tax revenue collected by the government is ___',
+            options: ['B + D', 'C + E', 'A + B', 'D + F']
           },
           {
-            label: 'How Government Intervention operates differently at local, national, and global scales describes ___',
-            options: ['Interconnection', 'Scale interaction', 'Feedback loop', 'All of these']
+            label: 'Producer surplus after the tax is ___',
+            options: ['F', 'D + F', 'D + E + F', 'B + D + F']
           },
           {
-            label: 'How outcomes of Government Intervention can reinforce or modify the original process is known as ___',
-            options: ['Feedback loop', 'Interconnection', 'Scale interaction', 'None of these']
+            label: 'Under a quota at Q₂ instead of the tax, consumer surplus is ___',
+            options: ['A', 'A + B', 'A + B + C', 'A + C']
           }
         ],
-        correctAnswers: ['Interconnection', 'Scale interaction', 'Feedback loop'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Interconnection — How Government Intervention links to other course topics. Scale interaction — How Government Intervention operates differently at local, national, and global scales. Feedback loop — How outcomes of Government Intervention can reinforce or modify the original process.'
+        correctAnswers: ['B + D', 'F', 'A'],
+        hint1: 'Revenue is the tax per unit times the new quantity: the rectangle between Pc and Ps.',
+        hint2: 'Sellers keep Ps, so their surplus is the area above supply and below Ps.',
+        hint3: 'Buyers still pay Pc for Q₂ units under the quota.',
+        explanation: 'Revenue is the full rectangle between Pc and Ps, which is B + D. Producer surplus shrinks to F. A quota at Q₂ leaves buyers paying the same high price, so CS is still A; B + D goes to license holders instead of the government.'
       }
     },
     {
-      id: 'microgov4-strategy',
-      type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
-
-### Misconceptions to Avoid
-- Don\'t confuse **Interconnection** with **Scale interaction** — while related, they address different aspects of Government Intervention.
-- **Feedback loop** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about connections & interactions, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect connections & interactions to broader themes in AP Microeconomics for higher scores.
-      `
-    },
-    {
-      id: 'microgov4-applied',
+      id: 'microgov4-quiz2',
       type: 'multiple-choice' as const,
-      content: `
-**Applied Scenarios** 🎯
-      `,
+      content: `**Check Your Understanding** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'On the AP exam, demonstrating connections between Government Intervention and other units earns higher scores because:',
+            question: 'On the lettered tax graph, which areas were part of total surplus before the tax but belong to no one after it?',
             options: [
-              'The exam is random',
-              'It shows deeper understanding and analytical thinking',
-              'It wastes time',
-              'Connections are never tested'
+              'C + E',
+              'B + D',
+              'A + F',
+              'B + C'
             ],
-            correctAnswer: 1,
-            explanation: 'The AP exam rewards students who can connect concepts across units — demonstrating synthesis and analytical depth.'
+            correctAnswer: 0,
+            explanation: 'The triangles C and E sit between the old and new quantities: those trades no longer happen, so their surplus disappears. B + D is still counted, as tax revenue, and A and F remain consumer and producer surplus.'
           },
           {
-            question: 'If Government Intervention produces outcomes that further intensify the original process, this is:',
+            question: 'In the worked subsidy example, why is the government\'s \\$600 outlay larger than the \\$550 gain to buyers and sellers?',
             options: [
-              'A negative feedback loop',
-              'A positive feedback loop — outcomes reinforce the process',
-              'An unrelated event',
-              'A one-time occurrence'
+              'Ten extra units cost more to produce than buyers value them',
+              'Part of the subsidy is collected back as tax from producers',
+              'Buyers pay a higher price after the subsidy is introduced',
+              'Sellers produce fewer units than before the subsidy began'
             ],
-            correctAnswer: 1,
-            explanation: 'A positive feedback loop intensifies: the outcome amplifies the original process, creating a cycle.'
+            correctAnswer: 0,
+            explanation: 'Output rises from 50 to 60, and each of those extra units has a cost above its value to buyers. The government pays for that gap, which is the \\$50 deadweight loss; buyers actually pay less and output rises.'
           }
         ]
       }
     }
   ]
-}
+};
