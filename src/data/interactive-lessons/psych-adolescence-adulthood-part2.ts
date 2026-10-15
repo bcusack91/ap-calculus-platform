@@ -45,10 +45,10 @@ Erikson's stages and Marcia's statuses appear on nearly every AP exam. You need 
           {
             question: 'A college sophomore has changed her major three times and is currently taking electives in psychology, business, and art to "figure out what fits." According to Marcia, she is in:',
             options: [
-              'Identity achievement — she has explored many options',
+              'Identity achievement — she has explored many options and settled on a path',
               'Identity moratorium — she is actively exploring but has not yet committed',
               'Identity foreclosure — she is following her parents\' expectations',
-              'Identity diffusion — she doesn\'t care about her identity'
+              'Identity diffusion — she is drifting without any real interest in choosing'
             ],
             correctAnswer: 1,
             explanation: 'Moratorium = actively exploring (trying different majors) but NOT yet committed. This is a healthy phase — most people pass through moratorium before reaching achievement. The key distinction: she IS exploring (unlike diffusion) but has NOT committed (unlike achievement).'
@@ -56,9 +56,9 @@ Erikson's stages and Marcia's statuses appear on nearly every AP exam. You need 
           {
             question: 'Which of Marcia\'s identity statuses involves commitment WITHOUT exploration?',
             options: [
-              'Achievement — explored and committed',
-              'Moratorium — exploring but not committed',
-              'Foreclosure — committed without exploring alternatives',
+              'Achievement — explored options and then committed',
+              'Moratorium — exploring but not yet committed',
+              'Foreclosure — committed without exploring',
               'Diffusion — neither exploring nor committed'
             ],
             correctAnswer: 2,
@@ -182,10 +182,10 @@ Erikson proposed eight stages spanning the entire lifespan. Each stage involves 
           {
             question: 'A 17-year-old has always planned to attend his father\'s alma mater and major in business, just like his father and grandfather did. He has never considered other schools or majors. According to Marcia, this teen is in:',
             options: [
-              'Identity achievement — he knows exactly what he wants',
-              'Identity moratorium — he is still exploring family expectations',
-              'Identity foreclosure — he has committed to a path without exploring alternatives',
-              'Identity diffusion — he is passively accepting others\' decisions'
+              'Identity achievement — he knows exactly what he wants to study and where',
+              'Identity moratorium — he is still sorting through his family\'s expectations',
+              'Identity foreclosure — he committed without exploring alternatives',
+              'Identity diffusion — he is passively going along with others\' decisions'
             ],
             correctAnswer: 2,
             explanation: 'This is classic foreclosure: the teen has made a commitment (specific school and major) but has never explored alternatives. The identity was adopted from family tradition rather than personal exploration. Key distinction from achievement: achievement requires exploration BEFORE commitment.'

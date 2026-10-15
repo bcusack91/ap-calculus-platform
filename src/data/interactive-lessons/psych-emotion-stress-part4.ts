@@ -45,10 +45,10 @@ A college student during finals week: **Alarm** (day 1 — heart races, can't sl
           {
             question: 'A soldier deployed overseas describes three phases of stress: initial shock and heightened alertness, then weeks of functioning under constant danger, and finally physical breakdown with illness and inability to continue. This pattern most closely matches:',
             options: [
-              'The James-Lange theory of emotion',
-              'Selye\'s General Adaptation Syndrome: Alarm → Resistance → Exhaustion',
+              'The James-Lange theory of emotion and arousal',
+              'Selye\'s general adaptation syndrome',
               'The Holmes-Rahe Social Readjustment Rating Scale',
-              'The biopsychosocial model of health'
+              'The biopsychosocial model of health and illness'
             ],
             correctAnswer: 1,
             explanation: 'This perfectly illustrates Selye\'s GAS: (1) Alarm — initial shock and heightened alertness as the body mobilizes; (2) Resistance — weeks of coping and functioning despite ongoing stress; (3) Exhaustion — body\'s resources deplete, immune system fails, physical illness and breakdown. Selye\'s model specifically describes this three-stage progression.'
@@ -56,10 +56,10 @@ A college student during finals week: **Alarm** (day 1 — heart races, can't sl
           {
             question: 'The tend-and-befriend response to stress, proposed by Shelley Taylor, suggests that:',
             options: [
-              'All people respond to stress by fighting or running away',
-              'Under stress, some individuals (especially females) respond by nurturing offspring and forming social alliances rather than fighting or fleeing',
-              'Befriending strangers under stress is a sign of pathological anxiety',
-              'The sympathetic nervous system produces nurturing behavior'
+              'Under stress, all people respond by either fighting the threat or fleeing from it',
+              'Under stress, some people tend to offspring and seek out social support',
+              'Under stress, seeking out strangers for comfort is a sign of pathological anxiety',
+              'Under stress, the sympathetic nervous system directly produces nurturing behavior'
             ],
             correctAnswer: 1,
             explanation: 'Shelley Taylor proposed that the classic fight-or-flight model was based primarily on research with males. Females, influenced by the hormone oxytocin, may respond to stress by tending to offspring (protective caregiving) and befriending others (seeking social bonds for mutual support). This is an important alternative model tested on the AP exam.'
@@ -187,10 +187,10 @@ This is the body's stress response pathway: the hypothalamus signals the pituita
           {
             question: 'A researcher finds that caregivers of Alzheimer\'s patients have significantly lower levels of immune cells and heal from wounds 40% slower than non-caregivers of the same age. This finding is an example of research in:',
             options: [
-              'Health psychology — studying personality types and health',
-              'Psychoneuroimmunology — demonstrating that chronic psychological stress suppresses immune function',
+              'Health psychology — linking the caregivers\' personality types to their health',
+              'Psychoneuroimmunology — showing chronic stress suppresses immune function',
               'Behavioral neuroscience — studying brain structures involved in caregiving',
-              'Clinical psychology — diagnosing caregivers with immune disorders'
+              'Clinical psychology — diagnosing the caregivers with immune system disorders'
             ],
             correctAnswer: 1,
             explanation: 'This is a classic psychoneuroimmunology finding: chronic psychological stress (caregiving) directly impacts immune function (lower immune cells, slower wound healing). The mechanism: chronic stress → chronic cortisol elevation → suppressed lymphocyte production → weakened immune system. This specific caregiver study is frequently cited in AP Psychology.'
@@ -198,9 +198,9 @@ This is the body's stress response pathway: the hypothalamus signals the pituita
           {
             question: 'After a car accident, a passenger\'s heart races, her breathing becomes rapid, and blood rushes to her muscles. Minutes later, the danger has passed; her breathing slows, her heart rate returns to normal, and she feels her stomach "unclench." These two phases illustrate the:',
             options: [
-              'Alarm and Resistance stages of GAS',
-              'Two stages of cognitive appraisal (primary and secondary)',
-              'Activation of the sympathetic nervous system (fight-or-flight) followed by the parasympathetic nervous system (rest-and-digest)',
+              'Alarm and resistance stages of the general adaptation syndrome',
+              'Primary appraisal followed by secondary appraisal of the danger',
+              'Sympathetic arousal followed by parasympathetic calming',
               'Tend-and-befriend response followed by fight-or-flight'
             ],
             correctAnswer: 2,

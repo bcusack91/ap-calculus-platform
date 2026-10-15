@@ -147,7 +147,7 @@ Babies are born with remarkable linguistic abilities. They can distinguish phone
           {
             question: 'A researcher studies infants from different countries and finds that by 10 months, babies can no longer distinguish phonemes that are not used in their native language. This finding best supports which conclusion?',
             options: [
-              'Language is entirely learned through reinforcement',
+              'Caregivers\' reinforcement teaches infants which sounds matter',
               'The brain prunes unused neural connections for non-native sounds',
               'Babies cannot hear foreign language sounds after 10 months',
               'Morpheme recognition develops before phoneme recognition'

@@ -45,10 +45,10 @@ A professional basketball player shoots free throws BETTER with a crowd watching
           {
             question: 'According to Zajonc\'s theory of social facilitation, a concert pianist performing a well-rehearsed piece in front of an audience would MOST likely:',
             options: [
-              'Perform worse because the audience causes anxiety',
-              'Perform better because arousal enhances dominant responses on well-learned tasks',
-              'Perform the same regardless of audience size',
-              'Experience social loafing because others are present'
+              'Perform worse, because an audience raises anxiety on every kind of task',
+              'Perform better, because arousal strengthens well-learned responses',
+              'Perform about the same, since audience size has no effect on skill',
+              'Exert less effort, since social loafing occurs whenever others are present'
             ],
             correctAnswer: 1,
             explanation: 'A well-rehearsed piece = simple/well-learned task. The dominant response (playing correctly) is well-practiced. Arousal from the audience STRENGTHENS the dominant response, leading to better performance. This is the key insight of social facilitation: the same audience presence has opposite effects depending on whether the task is well-learned vs. new.'
@@ -59,7 +59,7 @@ A professional basketball player shoots free throws BETTER with a crowd watching
               'Group polarization — the group is becoming more extreme',
               'Groupthink — desire for harmony overrides critical thinking',
               'Social loafing — reduced individual effort in a group setting',
-              'Deindividuation — loss of self-awareness in the group'
+              'Deindividuation — loss of self-awareness and restraint in the group'
             ],
             correctAnswer: 2,
             explanation: 'Social loafing is the tendency for individuals to exert less effort when working in a group. It occurs because individual contributions are harder to identify, reducing accountability. Key distinction: social facilitation improves performance on SIMPLE tasks with an audience watching; social loafing REDUCES effort when individual contributions are pooled and cannot be separately evaluated.'
@@ -191,9 +191,9 @@ Groupthink occurs when the desire for unanimity in a cohesive group overrides th
           {
             question: 'An online forum about climate change, where all members already believe it is a serious threat, becomes increasingly extreme in its positions over several months. This BEST illustrates:',
             options: [
-              'Groupthink — the forum suppresses dissenting opinions',
-              'Group polarization — the group shifts to an even more extreme position through discussion',
-              'Deindividuation — online anonymity leads to extreme behavior',
+              'Groupthink — the forum suppresses dissent to keep members in agreement',
+              'Group polarization — discussion pushes the group toward a more extreme view',
+              'Deindividuation — online anonymity leads members to take extreme positions',
               'Social facilitation — members perform better on the simple task of agreement'
             ],
             correctAnswer: 1,
@@ -203,8 +203,8 @@ Groupthink occurs when the desire for unanimity in a cohesive group overrides th
             question: 'A student who studies well alone struggles to focus during a study group where each person is responsible for summarizing different chapters. Which group phenomenon BEST explains the student\'s REDUCED effort?',
             options: [
               'Social facilitation — studying is a complex task, so performance worsens',
-              'Social loafing — individual contributions are pooled in the group, reducing effort',
-              'Groupthink — desire for group harmony is distracting',
+              'Social loafing — pooled contributions reduce individual effort',
+              'Groupthink — the desire for group harmony is distracting the student',
               'Deindividuation — the student loses self-awareness in the group'
             ],
             correctAnswer: 1,

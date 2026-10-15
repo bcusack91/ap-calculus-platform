@@ -45,10 +45,10 @@ A 75-year-old retired teacher can still recite Shakespeare passages she learned 
           {
             question: 'A 65-year-old crossword champion continues to excel at puzzles requiring vocabulary and general knowledge, but struggles with timed tasks requiring rapid problem-solving of novel patterns. This illustrates:',
             options: [
-              'Both crystallized and fluid intelligence decline equally with age',
-              'Crystallized intelligence (knowledge-based) is preserved while fluid intelligence (speed/novel reasoning) declines',
-              'Fluid intelligence increases with age while crystallized declines',
-              'This person likely has dementia because of the processing speed decline'
+              'Crystallized and fluid intelligence both decline at the same rate with age',
+              'Crystallized intelligence is preserved while fluid intelligence declines',
+              'Fluid intelligence rises with age while crystallized intelligence declines',
+              'The slower puzzle speed is most likely an early sign of developing dementia'
             ],
             correctAnswer: 1,
             explanation: 'Crystallized intelligence (accumulated knowledge, vocabulary, expertise) tends to remain stable or even increase throughout adulthood. Fluid intelligence (processing speed, abstract reasoning with novel problems) begins declining in the mid-20s. The crossword champion\'s pattern is completely normal aging.'
@@ -59,7 +59,7 @@ A 75-year-old retired teacher can still recite Shakespeare passages she learned 
               'Identity vs. Role Confusion — forming a sense of self',
               'Intimacy vs. Isolation — forming close relationships',
               'Generativity vs. Stagnation — contributing to and guiding the next generation',
-              'Integrity vs. Despair — reflecting on life with satisfaction'
+              'Integrity vs. Despair — reflecting on a life well lived with a sense of satisfaction'
             ],
             correctAnswer: 2,
             explanation: 'Generativity vs. Stagnation is the middle adulthood crisis (40-65). Generativity = contributing to the next generation through mentoring, parenting, community involvement, and creative work. Stagnation = feeling unproductive and uninvolved. This person is clearly generative — actively contributing to others.'
@@ -176,10 +176,10 @@ A 75-year-old retired teacher can still recite Shakespeare passages she learned 
           {
             question: 'A 70-year-old woman says she can no longer garden as fast as she used to, so she now focuses only on her favorite roses and uses raised beds to avoid bending. According to developmental psychology, this strategy is called:',
             options: [
-              'Denial of aging — she should accept declining abilities',
-              'Selective optimization with compensation — she narrowed her focus and found compensatory strategies',
-              'Learned helplessness — she has given up on challenging activities',
-              'Identity diffusion — she has lost her sense of purpose'
+              'Denial of aging — she refuses to accept that her abilities have declined',
+              'Selective optimization with compensation — narrowing focus and compensating',
+              'Learned helplessness — she has given up on activities that now feel too hard',
+              'Identity diffusion — she has lost her sense of purpose after retirement'
             ],
             correctAnswer: 1,
             explanation: 'Selective optimization with compensation (Baltes) describes how older adults cope with decline: they SELECT their most important activities (favorite roses), OPTIMIZE their performance in those areas, and COMPENSATE for limitations (raised beds). This is an adaptive, healthy aging strategy — not giving up.'
@@ -188,9 +188,9 @@ A 75-year-old retired teacher can still recite Shakespeare passages she learned 
             question: 'Research on the "positivity effect" in aging suggests that compared to younger adults, older adults tend to:',
             options: [
               'Remember negative events more vividly due to accumulated life stress',
-              'Focus more on positive information, memories, and experiences, which often leads to greater emotional well-being',
+              'Attend more to positive information and memories than to negative ones',
               'Have identical emotional processing patterns as younger adults',
-              'Become increasingly pessimistic as physical abilities decline'
+              'Grow steadily more pessimistic as their physical abilities decline'
             ],
             correctAnswer: 1,
             explanation: 'The positivity effect is a well-documented finding: older adults pay more attention to positive information, remember positive events better, and spend less time dwelling on negative experiences compared to younger adults. This cognitive shift contributes to the surprising finding that emotional well-being often INCREASES in later life.'

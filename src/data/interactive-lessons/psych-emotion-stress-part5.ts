@@ -48,8 +48,8 @@ A student diagnosed with test anxiety uses BOTH strategies: (1) problem-focused 
             question: 'After being laid off from her job, Carla immediately updates her resume, networks with former colleagues, and enrolls in a skills workshop. This is an example of:',
             options: [
               'Emotion-focused coping — she is managing her feelings about the layoff',
-              'Problem-focused coping — she is directly addressing the stressor by taking action to find new employment',
-              'Learned helplessness — she is giving up on finding work',
+              'Problem-focused coping — she is acting directly to change the stressor',
+              'Learned helplessness — she has stopped expecting her efforts to work',
               'Tend-and-befriend — she is seeking social support rather than addressing the problem'
             ],
             correctAnswer: 1,
@@ -58,10 +58,10 @@ A student diagnosed with test anxiety uses BOTH strategies: (1) problem-focused 
           {
             question: 'In Seligman\'s learned helplessness experiments, dogs that had previously received inescapable shocks later failed to escape shocks even when escape was possible. This is because:',
             options: [
-              'The dogs were physically injured and could not move',
-              'The dogs learned that their actions had no effect on the outcome, so they stopped trying — even when the situation changed',
-              'The dogs were conditioned to enjoy the shocks through classical conditioning',
-              'The dogs forgot how to perform the escape behavior'
+              'The dogs had been injured by the earlier shocks and could not move well',
+              'The dogs had learned that their actions did not affect the outcome',
+              'The dogs had been classically conditioned to associate the box with safety',
+              'The dogs had forgotten the escape response during the long delay'
             ],
             correctAnswer: 1,
             explanation: 'Learned helplessness occurs when an organism learns that its actions have no effect on outcomes. The dogs that experienced inescapable shocks learned "nothing I do matters" — and this belief carried over even when escape became possible. Seligman later applied this to human depression: people who believe they have no control may develop helplessness and depression.'
@@ -186,10 +186,10 @@ A student diagnosed with test anxiety uses BOTH strategies: (1) problem-focused 
           {
             question: 'A patient with a terminal illness can no longer work toward a cure. Her therapist encourages her to focus on spending meaningful time with loved ones, practicing mindfulness, and writing letters to her grandchildren. The therapist is primarily promoting:',
             options: [
-              'Problem-focused coping — she is addressing the medical situation directly',
-              'Emotion-focused coping — since the stressor (the illness) cannot be changed, the focus is on managing the emotional experience and finding meaning',
-              'Learned helplessness — the therapist is encouraging the patient to give up',
-              'Denial — the therapist is helping the patient avoid thinking about death'
+              'Problem-focused coping — she is taking direct action against the medical problem',
+              'Emotion-focused coping — managing her emotional response to a stressor she cannot change',
+              'Learned helplessness — the therapist is encouraging her to stop trying to get well',
+              'Denial — the therapist is helping her avoid thinking about the illness and death'
             ],
             correctAnswer: 1,
             explanation: 'When a stressor is uncontrollable (a terminal illness that cannot be cured), emotion-focused coping is the most adaptive approach. The therapist is helping the patient find meaning, connect with loved ones, and manage her emotional response to the situation. This is NOT giving up — it\'s wisely directing energy toward what CAN be influenced (emotional well-being) rather than what cannot (the disease).'
@@ -197,10 +197,10 @@ A student diagnosed with test anxiety uses BOTH strategies: (1) problem-focused 
           {
             question: 'A researcher studies two groups of students with the same GPA. Group A attributes poor grades to "I\'m just not smart enough" (permanent, personal). Group B attributes poor grades to "I didn\'t study enough this time" (temporary, specific). The researcher would predict that:',
             options: [
-              'Both groups will respond identically to future academic challenges',
-              'Group A (pessimistic explanatory style) is more likely to develop learned helplessness and depression, while Group B (optimistic explanatory style) is more likely to persist and improve',
-              'Group B will develop learned helplessness because they blame external factors',
-              'Explanatory style has no measurable effect on academic outcomes'
+              'Both groups will respond the same way, because their GPAs are currently equal',
+              'Group A is more likely to give up and become depressed; Group B is more likely to persist',
+              'Group B is more likely to develop learned helplessness, because it blames the situation',
+              'Neither group will be affected, since explanatory style predicts health, not school'
             ],
             correctAnswer: 1,
             explanation: 'Seligman\'s explanatory style research directly predicts this: Group A\'s pessimistic style (permanent: "just not smart," personal: "me") leads to helplessness and depression. Group B\'s optimistic style (temporary: "this time," specific: "didn\'t study enough") preserves motivation and effort. This is the foundation of Seligman\'s later work on "learned optimism" — the idea that explanatory style can be changed through intervention.'

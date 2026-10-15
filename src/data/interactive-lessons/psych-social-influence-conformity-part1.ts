@@ -47,8 +47,8 @@ Social psychology studies how people's thoughts, feelings, and behaviors are inf
             options: [
               'Self-serving bias — attributing the classmate\'s failure to external causes',
               'Actor-observer bias — the student is explaining her own behavior differently',
-              'Fundamental attribution error — overestimating dispositional causes for the classmate\'s behavior',
-              'Situational attribution — considering the circumstances'
+              'Fundamental attribution error — overestimating the classmate\'s disposition',
+              'Situational attribution — the student is weighing the classmate\'s circumstances'
             ],
             correctAnswer: 2,
             explanation: 'The student is making the FUNDAMENTAL ATTRIBUTION ERROR: attributing the classmate\'s poor performance to a dispositional trait ("terrible public speaker") rather than considering the situational factor (grandmother\'s death). The FAE specifically refers to overestimating DISPOSITIONAL causes and underestimating SITUATIONAL causes when judging OTHERS\' behavior. Note: this is about judging SOMEONE ELSE (not yourself), which distinguishes it from self-serving bias.'
@@ -168,10 +168,10 @@ Social psychology studies how people's thoughts, feelings, and behaviors are inf
           {
             question: 'In a classic study, participants read essays either supporting or opposing Fidel Castro. Even when told the essay writers were ASSIGNED their position (had no choice), participants still believed the writers personally agreed with the position they wrote about. This demonstrates:',
             options: [
-              'Self-serving bias — participants protected their self-esteem',
-              'Actor-observer bias — participants explained their own behavior differently',
-              'Fundamental attribution error — participants attributed the essay content to the writers\' personal beliefs despite knowing about the situational constraint (assignment)',
-              'Cognitive dissonance — participants experienced discomfort from conflicting beliefs'
+              'Self-serving bias — participants judged the writers in ways that protected their own self-esteem',
+              'Actor-observer bias — participants explained their own essay writing in situational terms',
+              'Fundamental attribution error — crediting the essays to the writers\' beliefs despite the assignment',
+              'Cognitive dissonance — participants felt tension between the essays and their own beliefs'
             ],
             correctAnswer: 2,
             explanation: 'This is the classic Jones & Harris (1967) study demonstrating the FAE. Even with CLEAR situational information (the writer was ASSIGNED the position), participants still attributed the essay to the writer\'s personal attitude (dispositional attribution). This shows how powerful the FAE is — we attribute others\' behavior to their personality even when we KNOW the situation caused it.'
@@ -179,10 +179,10 @@ Social psychology studies how people's thoughts, feelings, and behaviors are inf
           {
             question: 'After a group project, Sarah received an A. She tells her friends, "I worked really hard and I\'m good at research." Her teammate, who received a C, tells his friends, "Sarah took over the whole project and didn\'t let me contribute." Sarah\'s explanation BEST demonstrates:',
             options: [
-              'Fundamental attribution error',
-              'Self-serving bias — she attributes her success to internal factors (hard work, ability)',
+              'Fundamental attribution error — she judges her teammate by his character',
+              'Self-serving bias — she credits her success to her own effort and ability',
               'Actor-observer bias — she explains the same event differently than her teammate',
-              'Dispositional attribution applied to herself'
+              'Just-world belief — she assumes people get the grades they deserve'
             ],
             correctAnswer: 1,
             explanation: 'Sarah attributes her SUCCESS to internal factors (hard work, ability) — classic self-serving bias. Her teammate attributes his FAILURE to external factors (Sarah taking over) — also self-serving bias! Both are protecting self-esteem. While actor-observer bias is tempting, the question specifically asks about SARAH\'s explanation. Sarah\'s pattern (success → internal attribution) is textbook self-serving bias.'

@@ -48,7 +48,7 @@ export const psychSocialInfluencePart7Data = {
             question: 'Which of the following BEST captures the central theme unifying Milgram\'s obedience study, Asch\'s conformity study, and Zimbardo\'s Stanford Prison Experiment?',
             options: [
               'People with weak moral character are easily manipulated by others',
-              'Social situations and roles exert powerful influence on behavior, often overriding individual personality traits',
+              'Social situations and roles can override individual personality traits',
               'Laboratory experiments cannot capture real-world social behavior',
               'Group behavior is always more extreme than individual behavior'
             ],
@@ -61,7 +61,7 @@ export const psychSocialInfluencePart7Data = {
               'Asch\'s line judgment study — conformity with clear correct answers',
               'Sherif\'s autokinetic effect study — conformity in ambiguous situations',
               'Milgram\'s obedience study — following authority commands',
-              'Zimbardo\'s Stanford Prison Experiment — effects of role-playing'
+              'Zimbardo\'s Stanford Prison Experiment — effects of assigned roles on behavior'
             ],
             correctAnswer: 1,
             explanation: 'Sherif\'s autokinetic effect study is the best match. In AMBIGUOUS situations (the light doesn\'t really move, so there\'s no clear correct answer), people internalize the group norm — they actually CHANGE their private beliefs. Asch showed PUBLIC conformity (people knew the group was wrong but went along), not private belief change. The distinction: Asch = compliance (normative). Sherif = acceptance/internalization (informational).'
@@ -112,7 +112,7 @@ export const psychSocialInfluencePart7Data = {
       exercise: {
         inputs: [
           { label: 'Asch\'s conformity study found that ___% of participants conformed at least once', answer: '75' },
-          { label: 'In Festinger & Carlsmith\'s study, the $1 group showed MORE attitude change due to ___ justification', answer: 'insufficient' },
+          { label: 'In Festinger & Carlsmith\'s study, the \\$1 group showed MORE attitude change due to ___ justification', answer: 'insufficient' },
           { label: 'The central theme of social psychology: the power of the ___ over the individual', answer: 'situation' }
         ]
       }
@@ -125,7 +125,7 @@ export const psychSocialInfluencePart7Data = {
       `,
       exercise: {
         dropdowns: [
-          { label: 'Asch (1951)', options: ['Conformity with line judgments', 'Obedience to authority', 'Autokinetic effect', 'Cognitive dissonance'] },
+          { label: 'Asch (1951)', options: ['Conformity with line judgments', 'Obedience to a lab authority figure', 'Autokinetic norm formation', 'Dissonance after a dull task'] },
           { label: 'Milgram (1963)', options: ['Obedience — 65% gave max shock', 'Conformity — 75% conformed once', 'Group polarization', 'Social facilitation'] },
           { label: 'Festinger (1957)', options: ['Cognitive dissonance', 'Central/peripheral routes', 'Groupthink', 'Deindividuation'] }
         ],
@@ -174,10 +174,10 @@ export const psychSocialInfluencePart7Data = {
           {
             question: 'Dr. Kim asks participants to rate how interesting a dull task was after paying them either \\$1 or \\$20 to tell the next participant it was fun. She finds the \\$1 group rated the task as significantly more interesting. To replicate this study, a researcher must include all of the following EXCEPT:',
             options: [
-              'A boring task that participants perform',
+              'A dull, repetitive task that all participants perform',
               'Different payment amounts as the independent variable',
               'Measuring participants\' attitudes toward the task after the manipulation',
-              'Using participants who already enjoy boring tasks (selected by personality test)'
+              'Selecting participants who already enjoy boring tasks'
             ],
             correctAnswer: 3,
             explanation: 'The study requires: (1) a boring task, (2) different payment levels (IV), and (3) attitude measurement (DV). It does NOT require selecting participants who enjoy boring tasks — in fact, doing so would RUIN the study. The whole point is that ORDINARY people change their attitudes due to insufficient justification (dissonance). Pre-selecting people who enjoy boring tasks would eliminate the dissonance entirely. This tests understanding of both the dissonance study and proper experimental design.'
@@ -186,12 +186,12 @@ export const psychSocialInfluencePart7Data = {
             question: 'A teacher wants to reduce conformity in class discussions so students share genuine opinions. Based on social psychology research, which strategy would be MOST effective?',
             options: [
               'Having the teacher (authority figure) share their opinion first to model honesty',
-              'Allowing students to write their answers privately before the group discussion begins',
+              'Having students write their answers privately before the discussion begins',
               'Increasing the class size so students feel less personally responsible',
               'Showing students Milgram\'s obedience study to make them aware of social pressure'
             ],
             correctAnswer: 1,
-            explanation: 'Asch found that conformity drops significantly when participants commit to an answer BEFORE hearing the group. Writing answers privately creates a public commitment to one\'s own opinion, reducing normative pressure. Having the teacher share first would increase conformity (authority sharing first sets a norm). Increasing class size would increase conformity (larger groups increase normative pressure up to a point) and social loafing. Showing Milgram\'s study is awareness-based but research shows that knowing about social influence doesn\'t make you immune to it — structural changes (like private answers first) are more effective.'
+            explanation: 'In an Asch variation where participants wrote their answers privately instead of saying them aloud, conformity dropped sharply. Writing answers privately has each student commit to an opinion before hearing anyone else, which removes the face-to-face normative pressure of a unanimous group. Having the teacher share first would increase conformity (authority sharing first sets a norm). Increasing class size would increase conformity (larger groups increase normative pressure up to a point) and social loafing. Showing Milgram\'s study is awareness-based but research shows that knowing about social influence doesn\'t make you immune to it — structural changes (like private answers first) are more effective.'
           }
         ]
       }

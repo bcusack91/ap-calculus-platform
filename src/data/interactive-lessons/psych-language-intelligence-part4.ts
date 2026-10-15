@@ -179,10 +179,10 @@ Alfred Binet created the first intelligence test in 1905 to identify French scho
           {
             question: 'A school uses an IQ test to place students into advanced classes. The test has high reliability (r = .95) but research shows it does not actually predict academic performance. What is the problem?',
             options: [
-              'The test lacks standardization — it was not normed properly',
-              'The test lacks reliability — scores are inconsistent',
+              'The test lacks standardization — it was never normed on a representative sample',
+              'The test lacks reliability — the same student\'s scores would shift from week to week',
               'The test lacks predictive validity — it does not predict what it should',
-              'The test has construct validity issues — intelligence is not real'
+              'The test has a ceiling effect — too many students earn the top possible score'
             ],
             correctAnswer: 2,
             explanation: 'The test is reliable (consistent scores) but lacks predictive validity — it doesn\'t predict academic performance, which is the purpose of placing students. This illustrates the key principle: reliability is NECESSARY but not SUFFICIENT for validity. A test must be both reliable AND valid to be useful.'

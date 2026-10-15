@@ -53,10 +53,10 @@ A student's daily hassles (alarm didn't go off, traffic jam, cold coffee, late t
           {
             question: 'Research on stress and health has consistently found that the BEST predictor of day-to-day health problems is:',
             options: [
-              'Catastrophic events like natural disasters',
-              'Major life changes on the Holmes-Rahe scale',
-              'The accumulation of daily hassles (traffic, deadlines, minor conflicts)',
-              'Type B personality characteristics'
+              'Rare catastrophic events such as natural disasters',
+              'Major life changes such as moving or a new job',
+              'The accumulation of daily hassles over time',
+              'A relaxed, easygoing Type B personality pattern'
             ],
             correctAnswer: 2,
             explanation: 'While catastrophes and major life changes are significant stressors, research consistently shows that the accumulation of DAILY HASSLES is the best predictor of everyday health problems. This is because daily hassles are chronic and ongoing — their effects compound over time. The AP exam frequently tests this counterintuitive finding.'
@@ -65,9 +65,9 @@ A student's daily hassles (alarm didn't go off, traffic jam, cold coffee, late t
             question: 'Research on Type A personality and heart disease found that the SPECIFIC component most strongly linked to coronary heart disease is:',
             options: [
               'Competitiveness — striving to achieve more than others',
-              'Time urgency — feeling constantly rushed',
-              'Hostility — chronic anger, cynicism, and aggressive responses to frustration',
-              'Perfectionism — setting unreasonably high standards'
+              'Time urgency — feeling constantly rushed and impatient',
+              'Hostility — chronic anger and cynicism toward others',
+              'Perfectionism — holding oneself to impossibly high standards'
             ],
             correctAnswer: 2,
             explanation: 'While the original Type A description included competitiveness, time urgency, and hostility, subsequent research by Redford Williams and others found that HOSTILITY is the specific "toxic" component most strongly linked to heart disease. Not all competitive or time-urgent people have elevated cardiac risk — but hostile, chronically angry people do.'
@@ -199,10 +199,10 @@ A job promotion can be appraised as exciting (challenge = eustress) or terrifyin
           {
             question: 'Two employees both receive a surprise promotion. Employee A feels excited and energized, while Employee B feels overwhelmed and anxious. The difference in their reactions is BEST explained by:',
             options: [
-              'Employee A has Type A personality and Employee B has Type B',
-              'They differ in their cognitive appraisal — Employee A appraised the promotion as a challenge (eustress), while Employee B appraised it as a threat (distress)',
-              'Employee A is biologically less sensitive to stress hormones',
-              'Only negative events can cause genuine stress responses'
+              'A has a Type A personality, while B has a more relaxed Type B personality',
+              'A appraised the promotion as a challenge, while B appraised it as a threat',
+              'A is biologically less sensitive to cortisol than B is',
+              'B is in the exhaustion stage of GAS, while A is still in the alarm stage'
             ],
             correctAnswer: 1,
             explanation: 'The same event can be appraised differently by different people. Employee A\'s primary appraisal = "this is exciting" (challenge) and secondary appraisal = "I can handle this." Employee B\'s primary appraisal = "this is overwhelming" (threat) and secondary appraisal = "I don\'t have the resources to cope." This is exactly what Lazarus\'s cognitive appraisal model predicts — appraisal determines the stress response.'
@@ -212,8 +212,8 @@ A job promotion can be appraised as exciting (challenge = eustress) or terrifyin
             options: [
               'Whether they experienced a catastrophic event in the past year',
               'Their score on the Holmes-Rahe SRRS (major life changes)',
-              'Their frequency and severity of daily hassles (roommate conflicts, academic pressure, financial worries)',
-              'Whether they have Type A personality'
+              'How often they face daily hassles such as roommate conflicts',
+              'Whether they score as Type A on a personality screening survey'
             ],
             correctAnswer: 2,
             explanation: 'Research consistently shows that daily hassles are the best predictor of everyday health problems like headaches, colds, and health center visits. Major life events (SRRS) predict health over longer periods, but for day-to-day health, chronic daily hassles have the strongest correlation. This is one of the most commonly tested findings in the stress unit.'

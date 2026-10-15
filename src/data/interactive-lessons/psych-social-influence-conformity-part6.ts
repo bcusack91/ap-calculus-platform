@@ -54,8 +54,8 @@ This section integrates ALL social influence concepts into a decision framework 
             options: [
               'Informational social influence — the juror believes others know better',
               'Normative social influence — the juror conforms to avoid social rejection',
-              'Obedience — the juror follows the judge\'s orders',
-              'Groupthink — the jury suppresses critical evaluation'
+              'Obedience — the juror is following the judge\'s instructions to agree',
+              'Groupthink — the jury suppresses critical evaluation to preserve harmony'
             ],
             correctAnswer: 1,
             explanation: 'The key phrase is "doesn\'t want to be the only holdout" — this is about SOCIAL ACCEPTANCE, not about believing others are right. The juror PRIVATELY doubts guilt (they still believe the defendant may be innocent) but publicly conforms. This is normative influence: compliance without acceptance. If the juror had genuinely changed their mind because "11 people can\'t all be wrong," that would be informational influence.'
@@ -64,7 +64,7 @@ This section integrates ALL social influence concepts into a decision framework 
             question: 'A study finds that people who just ran on a treadmill (high arousal) made MORE errors when learning a new video game but FEWER errors when playing a game they had already mastered. This is BEST explained by:',
             options: [
               'Social loafing — the aroused participants put in less effort',
-              'Social facilitation theory — arousal enhances dominant responses (correct for mastered, incorrect for new)',
+              'Social facilitation theory — arousal strengthens dominant responses',
               'Cognitive dissonance — the arousal creates psychological tension',
               'Group polarization — the running made their attitudes more extreme'
             ],
@@ -194,19 +194,19 @@ When a social influence question is tricky, systematically eliminate:
             question: 'In a classic study, participants performed a boring task and were paid either \\$1 or \\$20 to tell the next participant it was enjoyable. Those paid \\$1 later rated the task as more enjoyable. A student explains this by saying, "The \\$1 participants must have been people who naturally enjoy boring tasks." This explanation BEST demonstrates:',
             options: [
               'Cognitive dissonance — the student is experiencing psychological tension',
-              'The fundamental attribution error — attributing behavior to disposition rather than the situational manipulation',
-              'Peripheral route persuasion — the student is using superficial cues',
+              'The fundamental attribution error — crediting disposition over the situation',
+              'Peripheral route persuasion — the student is relying on superficial cues',
               'Normative social influence — the student is conforming to the expected interpretation'
             ],
             correctAnswer: 1,
-            explanation: 'Beautiful integration question! The \\$1/\\$20 finding is about cognitive dissonance (insufficient justification), but the STUDENT\'S EXPLANATION is a separate concept — the FAE. The student attributes the $1 participants\' behavior to their personality (\"naturally enjoy boring tasks\") rather than the situational factor (insufficient monetary justification creating dissonance). This is exactly the FAE: overestimating dispositional factors and underestimating situational ones.'
+            explanation: 'Beautiful integration question! The \\$1/\\$20 finding is about cognitive dissonance (insufficient justification), but the STUDENT\'S EXPLANATION is a separate concept — the FAE. The student attributes the \\$1 participants\' behavior to their personality (\"naturally enjoy boring tasks\") rather than the situational factor (insufficient monetary justification creating dissonance). This is exactly the FAE: overestimating dispositional factors and underestimating situational ones.'
           },
           {
             question: 'A manager notices that her team generates more creative ideas when brainstorming individually vs. in a group. When the team works together, some members contribute very little while a few do most of the work. The REDUCED creativity in the group is BEST explained by:',
             options: [
               'Social facilitation — the complex task of brainstorming is impaired by the audience',
-              'Social loafing — individual contributions are pooled, reducing accountability and effort',
-              'Groupthink — the team is suppressing creative ideas to maintain harmony',
+              'Social loafing — pooled contributions reduce accountability and effort',
+              'Groupthink — the team suppresses unusual ideas in order to keep the peace',
               'Group polarization — the team\'s ideas become more extreme rather than creative'
             ],
             correctAnswer: 1,

@@ -47,9 +47,9 @@ How do people change others' attitudes? The Elaboration Likelihood Model explain
             question: 'A consumer carefully reads product reviews, compares specifications, and evaluates competing brands before purchasing a laptop. This BEST illustrates:',
             options: [
               'Peripheral route persuasion — influenced by superficial cues',
-              'Central route persuasion — careful, analytical processing of argument quality',
+              'Central route persuasion — careful processing of argument quality',
               'Foot-in-the-door technique — starting with a small commitment',
-              'Cognitive dissonance — experiencing conflicting beliefs'
+              'Cognitive dissonance — reducing tension between conflicting beliefs'
             ],
             correctAnswer: 1,
             explanation: 'This is textbook central route: the consumer has HIGH motivation (expensive purchase, important decision) and HIGH ability (reading reviews, comparing specs). They\'re evaluating the QUALITY of arguments, not relying on superficial cues like brand name or celebrity endorsement. Attitude change via central route is more lasting — this consumer will likely stick with their choice even if a celebrity later endorses a competitor.'
@@ -58,9 +58,9 @@ How do people change others' attitudes? The Elaboration Likelihood Model explain
             question: 'A charity volunteer first asks if you would sign a petition supporting clean water (most people say yes), and the next week asks if you would donate \\$50 to the cause. This is an example of:',
             options: [
               'Door-in-the-face — starting with an unreasonably large request',
-              'Central route persuasion — evaluating argument quality',
-              'Foot-in-the-door — starting with a small request to increase later compliance',
-              'Peripheral route persuasion — using emotional appeals'
+              'Central route persuasion — the donor evaluates the quality of the arguments',
+              'Foot-in-the-door — a small request first, then a larger one',
+              'Peripheral route persuasion — the petition relies on emotional appeals'
             ],
             correctAnswer: 2,
             explanation: 'Classic foot-in-the-door technique: a small initial request (signing a petition — easy, free) creates a commitment. When the larger request comes (donating \\$50), the person is more likely to comply because: (1) they want to be CONSISTENT with their earlier action ("I already showed I care about clean water"), and (2) they\'ve developed a self-image as someone who supports this cause. The principle is CONSISTENCY — people want their actions to align.'
@@ -124,7 +124,7 @@ When behavior contradicts beliefs, people experience uncomfortable tension (diss
       exercise: {
         inputs: [
           { label: 'The Elaboration ___ Model describes central and peripheral routes to persuasion', answer: 'Likelihood' },
-          { label: 'In Festinger & Carlsmith (1959), the $___ group showed MORE attitude change because of insufficient justification', answer: '1' },
+          { label: 'In Festinger & Carlsmith (1959), the \\$___ group showed MORE attitude change because of insufficient justification', answer: '1' },
           { label: 'Foot-in-the-door works through the principle of ___ (wanting actions to align)', answer: 'consistency' }
         ]
       }
@@ -187,7 +187,7 @@ When behavior contradicts beliefs, people experience uncomfortable tension (diss
             options: [
               'Central route persuasion — the student is carefully evaluating arguments',
               'Peripheral route persuasion — the student is influenced by superficial cues',
-              'Cognitive dissonance — the student reduces the tension between her behavior (cheating) and self-concept (honest) by trivializing the behavior',
+              'Cognitive dissonance — she downplays the cheating to protect her honest self-image',
               'Door-in-the-face technique — the student made a large concession first'
             ],
             correctAnswer: 2,
@@ -197,8 +197,8 @@ When behavior contradicts beliefs, people experience uncomfortable tension (diss
             question: 'During an election, Voter A researches each candidate\'s policy positions and voting record before deciding. Voter B votes for the taller, more attractive candidate. According to the Elaboration Likelihood Model:',
             options: [
               'Both use central route processing — they are both making informed decisions',
-              'Voter A uses central route (argument quality); Voter B uses peripheral route (attractiveness cue)',
-              'Voter A uses peripheral route; Voter B uses central route',
+              'Voter A uses the central route, and Voter B uses the peripheral route',
+              'Voter A uses the peripheral route, and Voter B uses the central route',
               'Both use peripheral route — all voting decisions are based on superficial cues'
             ],
             correctAnswer: 1,

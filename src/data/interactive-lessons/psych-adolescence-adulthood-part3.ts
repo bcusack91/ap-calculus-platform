@@ -47,9 +47,9 @@ A child doesn't steal candy because "Mom will punish me" (preconventional). A te
           {
             question: 'A child says "I won\'t hit my brother because I\'ll get grounded." According to Kohlberg, this reasoning reflects which level?',
             options: [
-              'Conventional — the child is following family rules',
+              'Conventional — the child is following the rules the family has set',
               'Postconventional — the child understands the principle behind the rule',
-              'Preconventional — the child is motivated by avoiding punishment (self-interest)',
+              'Preconventional — the child is motivated by avoiding punishment',
               'Formal operational — the child is using abstract moral reasoning'
             ],
             correctAnswer: 2,
@@ -60,7 +60,7 @@ A child doesn't steal candy because "Mom will punish me" (preconventional). A te
             options: [
               'Preconventional morality — breaking rules for personal benefit',
               'Conventional morality — following what society expects',
-              'Postconventional morality — reasoning based on universal ethical principles that may transcend specific laws',
+              'Postconventional morality — reasoning from universal ethical principles',
               'Moral relativism — believing there are no moral absolutes'
             ],
             correctAnswer: 2,
@@ -180,10 +180,10 @@ A child doesn't steal candy because "Mom will punish me" (preconventional). A te
           {
             question: 'Two students are asked why cheating on a test is wrong. Student A says: "If you get caught, you\'ll fail the class." Student B says: "It\'s unfair to students who studied honestly." How would Kohlberg classify each student\'s reasoning?',
             options: [
-              'Both are conventional — they both agree cheating is wrong',
-              'Student A: preconventional (avoiding punishment); Student B: conventional (fairness to peers/social norms)',
+              'Both are conventional — each one is upholding the school\'s rules against cheating',
+              'Student A: preconventional (avoiding punishment); Student B: conventional (fairness to peers)',
               'Student A: conventional (following rules); Student B: postconventional (universal justice)',
-              'Both are postconventional — they both understand moral principles'
+              'Both are postconventional — each one appeals to a general principle of honesty'
             ],
             correctAnswer: 1,
             explanation: 'Student A\'s reasoning centers on consequences to SELF ("you\'ll fail") = preconventional (Stage 1: punishment avoidance). Student B\'s reasoning centers on what\'s fair within the social system ("unfair to students who studied") = conventional (Stage 3/4: maintaining social order and fairness). Same moral conclusion, different levels of reasoning.'
@@ -191,10 +191,10 @@ A child doesn't steal candy because "Mom will punish me" (preconventional). A te
           {
             question: 'Carol Gilligan would most likely criticize Kohlberg for:',
             options: [
-              'Studying children instead of adults',
-              'Using moral dilemmas that are too easy',
-              'Emphasizing abstract justice principles while undervaluing care-based reasoning focused on relationships and compassion',
-              'Ignoring biological influences on moral behavior'
+              'Relying on hypothetical dilemmas that were too simple to separate the stages',
+              'Ignoring biological and hormonal influences on how people make moral choices',
+              'Ranking justice-based reasoning above care-based reasoning about relationships',
+              'Placing too much weight on what people actually do rather than how they reason'
             ],
             correctAnswer: 2,
             explanation: 'Gilligan argued that Kohlberg\'s highest stages reward abstract, justice-oriented reasoning while devaluing care-oriented reasoning that focuses on relationships, compassion, and responsibility to others. She suggested this created a framework that could unfairly rate care-based reasoning as "less mature" when it represents a valid alternative moral approach.'

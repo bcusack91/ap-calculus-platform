@@ -44,10 +44,10 @@ This final part integrates ALL language and intelligence concepts into a compreh
           {
             question: 'A researcher studies a 3-year-old who says "foots" and "goed." The child speaks in complete sentences, knows 500+ words, and follows conversations. Which combination of concepts BEST explains the child\'s behavior?',
             options: [
-              'Overregularization (applying grammar rules) + normal language development (500+ words by age 3)',
-              'Language delay + phoneme confusion',
-              'Skinner\'s reinforcement (parents taught "goed") + critical period failure',
-              'Semantic confusion + poor pragmatic skills'
+              'Overregularization of grammar rules within normal development for age 3',
+              'A language delay, since errors like "goed" signal phoneme confusion',
+              'Imitation of parents\' errors, reinforced each time the child repeats them',
+              'Semantic confusion, since the child misunderstands what the words mean'
             ],
             correctAnswer: 0,
             explanation: 'The child shows overregularization ("foots" = applying plural rule to irregular noun; "goed" = applying past-tense rule to irregular verb) — a sign of NORMAL grammar rule learning, not delay. Speaking in sentences with 500+ words is age-appropriate. Skinner\'s view cannot explain "goed" because no adult models it.'
@@ -55,10 +55,10 @@ This final part integrates ALL language and intelligence concepts into a compreh
           {
             question: 'Which statement correctly applies the concept of heritability to a real-world situation?',
             options: [
-              'Since heritability of IQ is .75, 75% of Maria\'s intelligence is genetic',
-              'Since heritability of IQ is .75, there is no point in educational interventions',
-              'Since heritability of IQ is .75, 75% of the variation in IQ within this population is due to genetic differences',
-              'Since heritability of IQ is .75, racial IQ differences are 75% genetic'
+              'Since heritability of IQ is .75, 75% of Maria\'s own intelligence was determined by her genes',
+              'Since heritability of IQ is .75, educational interventions cannot meaningfully raise children\'s IQ',
+              'Since heritability of IQ is .75, 75% of IQ variation within this population reflects genetic differences',
+              'Since heritability of IQ is .75, average IQ differences between racial groups must be 75% genetic'
             ],
             correctAnswer: 2,
             explanation: 'Heritability describes what proportion of VARIATION within a POPULATION is due to genetics. It does NOT apply to individuals, nor does within-group heritability explain between-group differences. The Flynn effect proves that environmental changes can raise IQ scores despite high heritability.'
@@ -180,10 +180,10 @@ Language and intelligence connect to nearly every unit in AP Psychology. These c
           {
             question: 'An AP Psychology FRQ asks you to explain how Chomsky\'s theory, stereotype threat, and reliability apply to a new school testing program. Which response strategy would earn the MOST points?',
             options: [
-              'Define all three terms in a single paragraph for efficiency',
-              'For each term: define it, apply it to the specific scenario, and give a concrete example',
-              'Simply list the definitions of each term',
-              'Write a general essay about intelligence testing'
+              'Define all three terms together in one paragraph to save time for the others',
+              'Apply each term to the specific scenario, with a concrete detail for each',
+              'List an accurate textbook definition for each term, without connecting to the case',
+              'Write a general essay about intelligence testing that mentions each term once'
             ],
             correctAnswer: 1,
             explanation: 'AP FRQs are scored with rubrics that award points for: (1) correct DEFINITION, (2) APPLICATION to the specific scenario, and (3) a concrete EXAMPLE. Each term should be addressed separately with all three elements. Simply listing definitions earns only partial credit. General essays without specific application earn very few points.'
@@ -191,10 +191,10 @@ Language and intelligence connect to nearly every unit in AP Psychology. These c
           {
             question: 'Which of the following scenarios requires knowledge from BOTH the language AND intelligence units to fully answer?',
             options: [
-              'Explaining why identical twins have similar IQ scores',
-              'Describing the stages of language development in children',
-              'Evaluating whether a bilingual child\'s lower vocabulary in each language indicates lower intelligence',
-              'Explaining how Spearman developed the g factor using factor analysis'
+              'Explaining why identical twins reared apart still have similar IQ scores in adulthood',
+              'Describing the stages a child passes through from cooing to telegraphic speech',
+              'Judging whether a bilingual child\'s smaller vocabulary in each language means lower intelligence',
+              'Explaining how Spearman used factor analysis of test scores to propose the g factor'
             ],
             correctAnswer: 2,
             explanation: 'Evaluating a bilingual child\'s vocabulary requires language knowledge (total vocabulary across both languages, bilingual development norms, overregularization as normal) AND intelligence knowledge (what IQ tests measure, cultural bias, whether vocabulary in one language is a valid measure of intelligence). This is the type of cross-topic question AP Psychology loves.'

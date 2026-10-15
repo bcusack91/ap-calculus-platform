@@ -59,10 +59,10 @@ A student receives an A+ on a test she studied hard for. The physiological compo
           {
             question: 'Paul Ekman\'s cross-cultural research on facial expressions demonstrated that:',
             options: [
-              'Each culture has completely unique emotional expressions with no overlap',
-              'Six basic emotions (happiness, sadness, fear, anger, disgust, surprise) are expressed through universally recognized facial expressions across cultures',
-              'Only Western cultures display recognizable emotional expressions',
-              'Facial expressions are entirely learned and vary completely by culture'
+              'Each culture has its own distinct emotional expressions, with little overlap between cultures',
+              'Several basic emotions are expressed with facial expressions recognized across cultures',
+              'Only people exposed to Western media can reliably recognize emotional facial expressions',
+              'Facial expressions of emotion are entirely learned through each culture\'s own display rules'
             ],
             correctAnswer: 1,
             explanation: 'Ekman\'s research — including studies with isolated tribes in Papua New Guinea who had no exposure to Western media — demonstrated that six basic emotions are expressed and recognized universally. This is strong evidence that some emotional expressions are innate (biological), not entirely learned.'
@@ -187,10 +187,10 @@ While basic emotions may be universal, **display rules** are culturally learned 
           {
             question: 'Researchers show photographs of facial expressions to both American college students and members of an isolated tribe in Papua New Guinea. Both groups identify the same emotions from the same faces. This finding most strongly supports:',
             options: [
-              'Display rules — both cultures have learned the same emotional norms',
-              'The cognitive appraisal theory — both groups are interpreting the faces intellectually',
-              'Ekman\'s theory that basic emotional expressions are universal and likely innate, not entirely learned',
-              'The James-Lange theory — both groups experience the same physiological responses'
+              'Display rules — both cultures have learned the same norms for showing emotion',
+              'Cognitive appraisal theory — both groups are interpreting the faces intellectually',
+              'Ekman\'s view that basic emotional expressions are universal and likely innate',
+              'James-Lange theory — both groups experience the same physiological responses'
             ],
             correctAnswer: 2,
             explanation: 'This is the exact design of Ekman\'s classic cross-cultural research. If an isolated group with no Western media exposure can recognize the same emotions from the same expressions, those expressions must be biologically innate — not culturally learned. This supports the universality of basic emotional expressions.'
@@ -198,10 +198,10 @@ While basic emotions may be universal, **display rules** are culturally learned 
           {
             question: 'A therapist tells an anxious patient, "Even though you feel nervous, try putting on a slight smile for the next few minutes." The therapist is applying which concept?',
             options: [
-              'Display rules — teaching the patient cultural norms for expression',
-              'The facial feedback hypothesis — changing the facial expression may reduce the negative emotional experience',
-              'Schachter-Singer theory — relabeling the patient\'s arousal',
-              'Cannon-Bard theory — expression and emotion are independent'
+              'Display rules — teaching the patient the cultural norms for showing nervousness',
+              'The facial feedback hypothesis — the smile itself can ease the anxious feeling',
+              'Schachter-Singer theory — giving the patient a new label for the arousal she feels',
+              'Cannon-Bard theory — showing that the expression and the feeling are fully independent'
             ],
             correctAnswer: 1,
             explanation: 'The therapist is using the facial feedback hypothesis: by changing the physical expression (smiling), the patient\'s brain may receive feedback that reduces the anxious feeling. This is actually used in some therapeutic approaches — forcing a different facial expression can modestly shift the emotional experience.'

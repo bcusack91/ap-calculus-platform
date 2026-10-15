@@ -44,10 +44,10 @@ The Developmental Psychology unit accounts for approximately 7-9% of the AP Psyc
           {
             question: 'A researcher studying moral development finds that a 14-year-old girl explains her decision to help a friend cheat by saying, "She\'s my best friend and she was going to fail — I couldn\'t let her down." Carol Gilligan would most likely interpret this as evidence that:',
             options: [
-              'The girl is at Kohlberg\'s preconventional level because she is helping a friend avoid a bad outcome',
-              'The girl demonstrates an ethic of care — prioritizing relationships and responsiveness to others\' needs, which Kohlberg\'s justice-focused model undervalues',
-              'The girl lacks moral development because she helped someone cheat',
-              'Kohlberg\'s model accurately captures her reasoning at the conventional level'
+              'The girl is at Kohlberg\'s preconventional level, helping a friend avoid a bad outcome',
+              'The girl shows an ethic of care, prioritizing a relationship over an abstract rule',
+              'The girl lacks moral development, since she helped someone break a school rule',
+              'Kohlberg\'s justice-based model already captures her reasoning at the conventional level'
             ],
             correctAnswer: 1,
             explanation: 'Gilligan argued that Kohlberg\'s model was biased toward a male "justice" orientation and failed to value the "care" orientation that emphasizes relationships, empathy, and responsiveness. The girl\'s reasoning centers on loyalty and not letting her friend down — exactly the kind of relational reasoning Gilligan said deserved its own moral framework.'
@@ -57,7 +57,7 @@ The Developmental Psychology unit accounts for approximately 7-9% of the AP Psyc
             options: [
               'Adolescence: personal fable, identity vs. role confusion, postconventional reasoning',
               'Adolescence: personal fable, identity vs. role confusion, prefrontal cortex still developing',
-              'Middle adulthood: personal fable, generativity, crystallized intelligence peak',
+              'Middle adulthood: personal fable, generativity vs. stagnation, crystallized intelligence peak',
               'Late adulthood: formal operations, integrity vs. despair, fluid intelligence increase'
             ],
             correctAnswer: 1,
@@ -193,10 +193,10 @@ When analyzing a developmental scenario in the FRQ:
           {
             question: 'A free-response question asks: "Explain how Erikson\'s theory of psychosocial development applies to a 35-year-old woman who recently ended a long-term relationship and now focuses entirely on her career, avoiding all social connections." The strongest response would identify this as:',
             options: [
-              'Successful resolution of generativity vs. stagnation through career focus',
-              'Unsuccessful resolution of intimacy vs. isolation — she is avoiding deep personal connections and may experience isolation',
-              'Identity diffusion — she doesn\'t know who she is',
-              'Integrity vs. despair — she is reflecting on her life choices with regret'
+              'Successful resolution of generativity vs. stagnation through her focus on her career',
+              'Unsuccessful resolution of intimacy vs. isolation — she avoids close relationships',
+              'Identity diffusion — she has not yet explored or committed to who she is',
+              'Integrity vs. despair — she is looking back over her life choices with regret'
             ],
             correctAnswer: 1,
             explanation: 'At 35, this woman is in Erikson\'s young adulthood stage: intimacy vs. isolation. Her avoidance of social connections after a breakup suggests she may be moving toward isolation rather than forming new intimate relationships. A strong FRQ answer would: (1) name Erikson\'s theory, (2) identify the stage as intimacy vs. isolation, (3) cite the behavioral evidence (avoiding social connections), and (4) explain that this pattern, if continued, represents the negative resolution (isolation).'
@@ -204,10 +204,10 @@ When analyzing a developmental scenario in the FRQ:
           {
             question: 'A student writes on the AP exam: "Kübler-Ross proved that all people experience denial, then anger, then bargaining, then depression, then acceptance — in that order — when facing death." A teacher would give this response partial credit because:',
             options: [
-              'The student correctly described all five stages but failed to note that the stages are not necessarily experienced in order, are not universal, and have been criticized for limited empirical support',
-              'The student is completely correct — this is exactly how the stages work',
-              'The student listed the wrong stages — the correct order is acceptance first',
-              'Kübler-Ross never proposed five stages of grief'
+              'The student overstated the model, whose stages are not universal or fixed in order',
+              'The student listed the stages correctly but did not define each one with an example',
+              'The student reversed the order, since Kübler-Ross placed anger before denial',
+              'The student should have cited the dual-process model, the only accepted grief theory'
             ],
             correctAnswer: 0,
             explanation: 'The student correctly recalls the five stages (DABDA) but makes a critical error: presenting them as proven, universal, and sequential. For full credit, the student must note that (1) people don\'t always experience all stages, (2) stages don\'t always follow this order, (3) the model has been critiqued for limited empirical support and cultural bias, and (4) Kübler-Ross\'s work was based on informal interviews, not controlled studies. The AP exam rewards critical evaluation of theories, not just memorization.'

@@ -59,10 +59,10 @@ A family grieves differently after a grandmother's death: the father becomes qui
           {
             question: 'Which statement represents the most important critique of the Kübler-Ross model?',
             options: [
-              'The stages only apply to the person who is dying, never to grieving loved ones',
-              'People do not necessarily experience all stages, and they do not always occur in the proposed order',
-              'The model was based on thousands of longitudinal studies',
-              'Modern research has confirmed that all five stages occur universally in the exact order Kübler-Ross described'
+              'The stages describe grieving relatives well but do not fit people who are dying',
+              'People do not necessarily experience every stage, or experience them in the proposed order',
+              'The model relied too heavily on large-scale longitudinal studies of patients',
+              'The model leaves out guilt and relief, so it lists too few stages to describe most people\'s grief'
             ],
             correctAnswer: 1,
             explanation: 'The major critique of Kübler-Ross\'s model is that grief is NOT a linear, orderly process. People may skip stages, revisit stages, experience them out of order, or experience multiple stages simultaneously. The model is useful as a general framework but should not be taken as a rigid prescription for how grief "should" unfold.'
@@ -185,9 +185,9 @@ A family grieves differently after a grandmother's death: the father becomes qui
           {
             question: 'After her husband\'s death, Maria oscillates between crying over old photos and then focusing on practical tasks like updating bank accounts and reconnecting with friends. According to the dual-process model of grief, this behavior represents:',
             options: [
-              'Pathological grief — she is not consistently mourning',
-              'Denial — she is avoiding her grief by staying busy',
-              'Healthy coping — oscillating between loss-oriented and restoration-oriented processing',
+              'Complicated grief — she is not mourning steadily enough to process the loss',
+              'Denial — she is avoiding her grief by keeping herself busy with practical tasks',
+              'Healthy coping — moving between loss-focused and restoration-focused tasks',
               'The anger stage of Kübler-Ross — she is channeling frustration into activity'
             ],
             correctAnswer: 2,
@@ -196,10 +196,10 @@ A family grieves differently after a grandmother's death: the father becomes qui
           {
             question: 'A psychologist argues that the Kübler-Ross model is problematic because it was developed primarily with Western patients and may not apply to cultures where communal celebration of the dead is the norm. This critique highlights which limitation?',
             options: [
-              'The model\'s stages are too few in number',
+              'The model\'s five stages are too few to capture the full range of grief',
               'The model has cultural bias and may not be universally applicable',
-              'The model only applies to sudden deaths',
-              'The model incorrectly identifies anger as a grief response'
+              'The model applies only to sudden deaths, not to long terminal illnesses',
+              'The model wrongly treats anger as a normal part of the grieving process'
             ],
             correctAnswer: 1,
             explanation: 'Cultural bias is one of the most important critiques of the Kübler-Ross model. It was based primarily on observations of Western, middle-class individuals. Cultures with different grief traditions (e.g., celebratory remembrance in Mexican Día de los Muertos, communal mourning in West African traditions) may not follow the same emotional trajectory described by the five stages.'

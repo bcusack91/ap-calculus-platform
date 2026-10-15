@@ -47,9 +47,9 @@ Noam Chomsky pointed out that children produce sentences they have NEVER heard b
           {
             question: 'Which evidence would MOST strongly support the critical period hypothesis for language?',
             options: [
-              'Bilingual children learn faster than monolingual children',
+              'Bilingual children learn new vocabulary faster than monolingual children do',
               'Adults can learn vocabulary but struggle with native-like grammar after puberty',
-              'Children in all cultures babble at the same age',
+              'Infants in all cultures begin babbling at about the same age, whatever language they hear',
               'Parents who read to children have children with larger vocabularies'
             ],
             correctAnswer: 1,

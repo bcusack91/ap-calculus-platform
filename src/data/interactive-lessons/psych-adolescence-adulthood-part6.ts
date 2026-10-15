@@ -55,9 +55,9 @@ This workshop integrates everything from Parts 1-5: adolescent development, Erik
             question: 'A 15-year-old shoplifts a hoodie because "everyone does it and I\'ll look stupid without one." When caught, she says she didn\'t think she\'d get in trouble. Which developmental concepts BEST explain her behavior?',
             options: [
               'Generativity and crystallized intelligence — she is contributing to peer culture',
-              'Adolescent egocentrism (personal fable — "I won\'t get caught") and conventional moral reasoning (doing what peers approve of)',
+              'The personal fable and conventional moral reasoning based on peer approval',
               'Postconventional moral reasoning — she is following her own ethical code',
-              'Integrity vs. despair — she is reflecting on her life choices'
+              'Identity achievement and postconventional reasoning about personal rights'
             ],
             correctAnswer: 1,
             explanation: 'Two concepts apply here: (1) Personal fable (part of adolescent egocentrism) — she believed she was special enough to not get caught. (2) Conventional moral reasoning — her justification was based on peer norms ("everyone does it" = Stage 3 — gaining peer approval). This combination of egocentrism + conventional reasoning is very common in adolescent behavior scenarios on the AP exam.'
@@ -65,10 +65,10 @@ This workshop integrates everything from Parts 1-5: adolescent development, Erik
           {
             question: 'A 72-year-old retired doctor volunteers at a free clinic and says, "I\'ve had a wonderful career. I want to keep giving back while I can." Which TWO Erikson stages is this person demonstrating successful resolution of?',
             options: [
-              'Identity (knowing who she is) and Intimacy (close relationships)',
-              'Generativity (giving back to community) and Integrity (looking back with satisfaction)',
-              'Autonomy (independence) and Industry (competence)',
-              'Trust (reliability) and Initiative (taking action)'
+              'Identity (knowing who she is) and Intimacy (forming close relationships)',
+              'Generativity (giving back) and Integrity (satisfaction with life)',
+              'Autonomy (acting independently) and Industry (feeling competent at work)',
+              'Trust (relying on others) and Initiative (starting new projects)'
             ],
             correctAnswer: 1,
             explanation: 'This person shows (1) Generativity — still actively contributing to the next generation through volunteering, and (2) Integrity — reflecting on her career with satisfaction ("I\'ve had a wonderful career"). At 72, she would be in the integrity vs. despair stage, but her continued volunteering also reflects generativity that extends beyond middle adulthood.'
@@ -195,9 +195,9 @@ This workshop integrates everything from Parts 1-5: adolescent development, Erik
           {
             question: 'Two students debate whether to report a classmate for cheating. Student A says, "We should report her — the school handbook says cheating is a violation and must be reported." Student B says, "We should talk to her first — she might be going through something, and the principle of compassion should guide our response." According to Kohlberg, what levels of moral reasoning do Students A and B represent?',
             options: [
-              'Both are conventional — they are following social rules',
+              'Both are conventional — each is following the social rules of the school',
               'A is preconventional (self-interest) and B is conventional (social norms)',
-              'A is conventional (following rules/law and order) and B is postconventional (abstract principle of compassion)',
+              'A is conventional (law and order) and B is postconventional (compassion)',
               'Both are postconventional — they are thinking about ethical principles'
             ],
             correctAnswer: 2,
@@ -206,10 +206,10 @@ This workshop integrates everything from Parts 1-5: adolescent development, Erik
           {
             question: 'A researcher claims that adolescent risk-taking behavior is primarily caused by poor parenting. A developmental psychologist would most likely respond by noting that:',
             options: [
-              'Research confirms that parenting is the sole predictor of adolescent risk-taking behavior',
-              'Adolescent risk-taking is better explained by the developmental gap between the mature limbic system (emotional/reward responses) and the still-developing prefrontal cortex (impulse control)',
-              'Adolescents never take risks — this is an unfair stereotype',
-              'Risk-taking only occurs in adolescents with formal operational thinking deficits'
+              'Research shows parenting style is the single strongest predictor of adolescent risk-taking',
+              'Risk-taking is better explained by a limbic system that matures before the prefrontal cortex',
+              'Risk-taking is better explained by low self-esteem that peaks in the early teen years',
+              'Risk-taking is better explained by delayed formal operational thinking in most teens'
             ],
             correctAnswer: 1,
             explanation: 'The neuroscience explanation for adolescent risk-taking is that the limbic system (which drives emotional responses and reward-seeking) matures earlier than the prefrontal cortex (which manages impulse control and long-term planning). This creates a developmental mismatch — adolescents experience adult-level drives without fully developed braking systems. While parenting matters, the primary explanation on the AP exam is neurological development.'

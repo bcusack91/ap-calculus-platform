@@ -47,7 +47,7 @@ This workshop applies everything from Parts 1–5 to AP-style scenarios. The exa
               'Phoneme confusion — she mixes up Spanish and English sounds',
               'Syntactic interference — the grammar rules of one language affect the other',
               'Semantic confusion — she doesn\'t know what "red" means',
-              'Critical period — she is too old to learn English grammar'
+              'Critical period — at her age she is too old to fully acquire English grammar'
             ],
             correctAnswer: 1,
             explanation: 'This is syntactic (grammar) interference — Spanish places adjectives AFTER nouns ("el vestido rojo" = "the dress red"), and she applied that rule to English. This is a normal part of bilingual development, not a sign of confusion or delay. Phonemes are about sounds, not word order.'
@@ -55,10 +55,10 @@ This workshop applies everything from Parts 1–5 to AP-style scenarios. The exa
           {
             question: 'A researcher gives the same IQ test to two groups: Group A takes it in a quiet room, Group B takes it in a noisy cafeteria. Group A scores 10 points higher on average. The researcher concludes Group A is more intelligent. What is the primary flaw?',
             options: [
-              'The test lacks reliability — it gives different scores',
-              'The test lacks validity — it\'s not measuring intelligence',
+              'The test lacks reliability — it gives the same person different scores',
+              'The test lacks validity — it is not measuring intelligence at all',
               'The test lacks standardization — conditions were not uniform',
-              'The Flynn effect — Group A is from a later generation'
+              'The test lacks predictive validity — it cannot forecast school grades'
             ],
             correctAnswer: 2,
             explanation: 'Standardization requires that tests be administered under IDENTICAL conditions. Different testing environments (quiet vs. noisy) violate standardization, making the comparison invalid. The difference likely reflects testing conditions, not intelligence differences. This is a standardization problem, not a reliability or validity problem.'
@@ -180,10 +180,10 @@ Use this checklist before submitting any language/intelligence answer:
           {
             question: 'Dr. Martinez designs an intelligence test that uses only abstract patterns and shapes (no words, no cultural knowledge). She is trying to create a test that is:',
             options: [
-              'More reliable than traditional IQ tests',
+              'More reliable — giving the same scores on every retest',
               'Culture-fair — reducing cultural bias in test content',
-              'Based on Sternberg\'s triarchic theory',
-              'A measure of emotional intelligence'
+              'Based on Sternberg — measuring creative intelligence',
+              'Higher in content validity — sampling all school subjects'
             ],
             correctAnswer: 1,
             explanation: 'Culture-fair tests use non-verbal, abstract items to minimize the advantage that familiarity with a particular culture\'s language and knowledge provides. Raven\'s Progressive Matrices is a real example of this approach. However, even "culture-fair" tests are debated — test-taking skills, comfort with timed tests, and abstract reasoning training still vary by culture.'
@@ -191,10 +191,10 @@ Use this checklist before submitting any language/intelligence answer:
           {
             question: 'A study finds that adopted children\'s IQs are more similar to their biological parents\' IQs than to their adoptive parents\' IQs by age 18. However, adopted children raised in enriched homes score higher than their biological parents. Which PAIR of conclusions is best supported?',
             options: [
-              'Intelligence is 100% genetic; adoption has no effect',
-              'Intelligence is 100% environmental; biology plays no role',
-              'Genes influence IQ variation (biological parent correlation) AND environment affects IQ level (enrichment raises scores)',
-              'The study is flawed because the results contradict each other'
+              'Genes alone explain IQ, so the enrichment gains must come from biased testing',
+              'Environment alone explains IQ, so the biological-parent link must reflect contact',
+              'Genes influence differences in IQ, and environment influences the overall level of IQ',
+              'The two findings contradict each other, so one of them must be a measurement error'
             ],
             correctAnswer: 2,
             explanation: 'Both findings are valid and complementary: (1) the biological parent correlation shows genetic influence on WHO scores higher within a group, and (2) the enrichment effect shows environmental influence on the OVERALL LEVEL of scores. Genes set a range; environment determines where you fall within it. This is the interaction model the AP exam expects.'

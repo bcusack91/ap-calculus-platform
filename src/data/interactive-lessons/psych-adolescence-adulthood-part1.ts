@@ -41,10 +41,10 @@ The AP exam frequently tests adolescent egocentrism (imaginary audience + person
           {
             question: 'A 15-year-old is convinced that everyone in the cafeteria is watching and judging her outfit. This belief is an example of:',
             options: [
-              'Personal fable — she believes she is special and unique',
-              'Imaginary audience — she overestimates how much others are paying attention to her',
-              'Formal operational thinking — she is using abstract reasoning',
-              'Identity diffusion — she hasn\'t committed to an identity'
+              'Personal fable — she believes her experiences are unique and no one else shares them',
+              'Imaginary audience — she overestimates how closely others watch her',
+              'Formal operational thinking — she can now reason abstractly about what others think',
+              'Identity diffusion — she has neither explored nor committed to a sense of who she is'
             ],
             correctAnswer: 1,
             explanation: 'The imaginary audience is the adolescent\'s belief that others are constantly watching and evaluating them. In reality, most people are too focused on themselves to notice. This is a hallmark of adolescent egocentrism identified by David Elkind.'
@@ -52,10 +52,10 @@ The AP exam frequently tests adolescent egocentrism (imaginary audience + person
           {
             question: 'Why are adolescents more likely to engage in risky behaviors like reckless driving compared to adults?',
             options: [
-              'Their limbic system (emotion/reward center) is fully developed while their prefrontal cortex (impulse control) is not yet mature',
-              'They have lower intelligence than adults',
-              'Their sensory systems are more sensitive to danger',
-              'They have fully developed decision-making abilities but choose risks intentionally'
+              'Their limbic reward system matures before their prefrontal cortex does',
+              'Their fluid intelligence has not yet reached adult levels, so they misjudge odds',
+              'Their amygdala responds less to threat, so they do not feel fear as adults do',
+              'Their decision-making is fully mature, but they knowingly accept higher risks'
             ],
             correctAnswer: 0,
             explanation: 'The adolescent brain has a maturity gap: the limbic system (which drives emotions and reward-seeking) matures earlier than the prefrontal cortex (which handles impulse control, planning, and risk assessment). This imbalance explains why teens seek thrills but struggle to assess consequences — the gas pedal develops before the brakes.'
@@ -180,7 +180,7 @@ Both decline as the prefrontal cortex matures and perspective-taking improves.
             question: 'A 14-year-old insists on spending 45 minutes getting ready for school each morning, changing outfits multiple times and asking "Does this look okay?" repeatedly. Her parents are frustrated. A psychologist would explain this behavior as:',
             options: [
               'A sign of anxiety disorder requiring clinical intervention',
-              'The imaginary audience — a normal part of adolescent egocentrism where teens believe everyone is scrutinizing their appearance',
+              'The imaginary audience — a normal part of adolescent egocentrism',
               'Formal operational thinking — the ability to think abstractly about fashion',
               'Identity achievement — the teen has committed to a personal style'
             ],
@@ -191,9 +191,9 @@ Both decline as the prefrontal cortex matures and perspective-taking improves.
             question: 'A 16-year-old drives 90 mph on the highway, telling friends "I\'m a great driver — accidents happen to bad drivers, not me." What TWO concepts from adolescent development best explain this behavior?',
             options: [
               'Personal fable (invulnerability) and immature prefrontal cortex (poor impulse control)',
-              'Imaginary audience (showing off) and concrete operational thinking',
-              'Identity foreclosure (following peers) and crystallized intelligence',
-              'Formal operations (abstract thinking) and postconventional morality'
+              'Imaginary audience (showing off for friends) and concrete operational thinking',
+              'Identity foreclosure (copying peers\' choices) and declining crystallized intelligence',
+              'Formal operations (abstract thinking) and postconventional moral reasoning'
             ],
             correctAnswer: 0,
             explanation: 'The teen\'s belief that "accidents happen to others, not me" is the personal fable (illusion of invulnerability). The risky behavior itself reflects the immature prefrontal cortex — the brain\'s impulse-control center isn\'t fully developed, so the limbic system\'s thrill-seeking overrides rational judgment. Both concepts work together to explain adolescent risk-taking.'

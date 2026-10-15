@@ -37,10 +37,10 @@ In Steele & Aronson's (1995) landmark study, Black college students performed wo
           {
             question: 'If the heritability of IQ is estimated at .75, this means:',
             options: [
-              '75% of YOUR intelligence is determined by genes',
-              '75% of the variation in IQ scores within a population is attributable to genetic differences',
-              'Environment accounts for 75% of intelligence',
-              'Identical twins will have IQs within 75 points of each other'
+              '75% of any one person\'s IQ score was fixed by the genes they inherited',
+              '75% of the variation in IQ within a population reflects genetic differences',
+              'Environment explains 75% of the IQ differences within the population',
+              'IQ scores can be raised by at most 25% through changes in environment'
             ],
             correctAnswer: 1,
             explanation: 'Heritability describes how much of the VARIATION in a trait within a POPULATION is due to genetic differences. It does NOT tell you about any individual. Even with high heritability, environmental interventions (better nutrition, education) can still raise IQ scores — as the Flynn effect proves.'
@@ -48,10 +48,10 @@ In Steele & Aronson's (1995) landmark study, Black college students performed wo
           {
             question: 'The Flynn effect refers to the observation that:',
             options: [
-              'IQ scores have been declining in recent decades',
-              'IQ scores have been rising approximately 3 points per decade across generations',
-              'Identical twins have increasingly similar IQ scores',
-              'Cultural bias in IQ tests has been eliminated'
+              'IQ scores have fallen across generations as schooling has grown less rigorous',
+              'IQ scores have risen about 3 points per decade across generations',
+              'Adopted children\'s IQs drift toward those of their adoptive parents over time',
+              'Cultural bias in IQ tests has been eliminated by modern nonverbal test items'
             ],
             correctAnswer: 1,
             explanation: 'James Flynn documented that IQ scores have risen about 3 points per decade across 30+ countries throughout the 20th century. This CANNOT be genetic (genes don\'t change that fast) — it must be environmental (better nutrition, education, familiarity with testing, more cognitively stimulating environments).'
@@ -160,10 +160,10 @@ Imagine planting seeds from the same batch in rich soil vs. poor soil. Within EA
           {
             question: 'A researcher finds that children raised in enriched foster homes have IQ scores 15 points higher than their biological siblings raised in deprived institutions, even though identical twins in the study have correlated IQs. What conclusion is best supported?',
             options: [
-              'Intelligence is entirely genetic — twin correlations prove this',
-              'Intelligence is entirely environmental — foster home results prove this',
+              'Genes explain the twin data, so the foster-home gap must reflect sampling error',
+              'Environment explains the foster gap, so the twin correlation must reflect shared homes',
               'Both genes and environment contribute to intelligence',
-              'The study is invalid because it has conflicting results'
+              'The two results conflict, so the study cannot support any conclusion'
             ],
             correctAnswer: 2,
             explanation: 'The twin correlations show genetic influence, while the foster home vs. institution difference shows environmental influence. Both are present simultaneously — genes set a RANGE of potential, and environment determines where within that range a person falls. This is the interactionist conclusion the AP exam expects.'
@@ -172,9 +172,9 @@ Imagine planting seeds from the same batch in rich soil vs. poor soil. Within EA
             question: 'A teacher tells a student, "You\'re so smart — you don\'t even have to try!" According to Dweck\'s research, what is the most likely effect on the student?',
             options: [
               'The student will be motivated to work harder to maintain the "smart" label',
-              'The student may avoid challenges to protect the "smart" identity (fixed mindset)',
+              'The student will start avoiding challenges that could expose mistakes',
               'The student will develop a growth mindset from the positive reinforcement',
-              'The praise will have no effect on the student\'s behavior'
+              'The praise will have no lasting effect on the student\'s effort or choices'
             ],
             correctAnswer: 1,
             explanation: 'Dweck\'s research shows that praising intelligence ("You\'re so smart") fosters a FIXED mindset — students begin to see intelligence as a trait to protect rather than a skill to develop. They avoid challenges because failure would threaten their "smart" identity. Praising EFFORT ("You worked so hard on that!") fosters a growth mindset instead.'

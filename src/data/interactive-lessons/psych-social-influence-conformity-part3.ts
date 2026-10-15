@@ -56,7 +56,7 @@ Obedience is changing behavior in response to a direct command from an authority
           {
             question: 'In Milgram\'s original study, MOST participants:',
             options: [
-              'Refused to shock the learner after the first few trials',
+              'Refused to continue once the learner first cried out in pain at 150V',
               'Obeyed to the maximum 450V while showing signs of extreme distress',
               'Enjoyed delivering the shocks and showed no distress',
               'Stopped when the learner first complained of a heart condition'
@@ -192,9 +192,9 @@ Obedience is changing behavior in response to a direct command from an authority
             question: 'A nurse receives a phone call from a doctor she has never met, ordering her to administer an above-maximum dose of a medication. Research based on Milgram\'s findings predicts that the nurse will MOST likely:',
             options: [
               'Refuse immediately — nurses are trained to question unsafe orders',
-              'Obey the order, despite knowing it violates protocol — authority figure effect',
-              'Ask a colleague for advice before proceeding',
-              'Report the doctor to hospital administration'
+              'Obey the order, even though it violates hospital protocol',
+              'Ask a colleague to confirm the dose before giving any medication',
+              'Refuse and report the unknown doctor to hospital administration'
             ],
             correctAnswer: 1,
             explanation: 'In Hofling et al. (1966), a real-world replication of Milgram, 21 of 22 nurses OBEYED a phone order from an unknown "doctor" to give a patient an overdose of an unauthorized drug — despite hospital policies requiring verification. This demonstrates that obedience to perceived authority occurs even in professional settings where training SHOULD prevent it. The authority (doctor), institutional setting (hospital), and role hierarchy all contributed to obedience.'
@@ -202,10 +202,10 @@ Obedience is changing behavior in response to a direct command from an authority
           {
             question: 'After learning about Milgram\'s study, students say they would NEVER have obeyed. This prediction is MOST likely explained by:',
             options: [
-              'The students have stronger moral character than Milgram\'s participants',
-              'The fundamental attribution error — students overestimate their own dispositional resistance and underestimate situational pressure',
-              'Students today are less obedient than people in the 1960s',
-              'The students have been trained in ethics, making them immune to obedience'
+              'Moral character — the students are more principled than Milgram\'s participants',
+              'The fundamental attribution error — underestimating the pull of the situation',
+              'Generational change — students today are far less obedient than people in the 1960s',
+              'Ethics training — the students\' coursework makes them immune to obedience'
             ],
             correctAnswer: 1,
             explanation: 'This is a beautiful application of the FAE. Students attribute the PARTICIPANTS\' obedience to dispositional weakness ("they were spineless") and attribute their OWN predicted resistance to dispositional strength ("I would resist because I\'m a good person"). They underestimate the SITUATIONAL forces (authority, legitimacy, gradual escalation) that would pressure them too. Psychiatrists made the same prediction error — they predicted <1% would fully obey, when actually 65% did.'

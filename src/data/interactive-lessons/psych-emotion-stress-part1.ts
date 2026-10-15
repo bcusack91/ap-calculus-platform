@@ -41,10 +41,10 @@ One of the most heavily tested topics on the AP Psychology exam: four theories e
           {
             question: 'After nearly being hit by a car, Sam notices his heart pounding and palms sweating. He then thinks, "I must be terrified!" Which theory of emotion does this sequence best illustrate?',
             options: [
-              'Cannon-Bard — arousal and emotion occur simultaneously',
-              'James-Lange — physiological arousal occurs first, then the emotion is identified based on the body\'s response',
-              'Schachter-Singer — arousal is labeled based on context',
-              'Lazarus — cognitive appraisal comes before any arousal'
+              'Cannon-Bard — arousal and the conscious feeling of emotion occur at the same time',
+              'James-Lange — bodily arousal comes first and is then read as an emotion',
+              'Schachter-Singer — arousal is labeled as an emotion based on the setting',
+              'Lazarus — a cognitive appraisal of the threat comes before any arousal'
             ],
             correctAnswer: 1,
             explanation: 'James-Lange theory says the body reacts FIRST (heart pounding, sweating), and then we interpret those physical sensations as a specific emotion ("I must be terrified"). The key: the physical response comes BEFORE the emotional experience. Sam felt the arousal first, then labeled it as fear.'
@@ -53,9 +53,9 @@ One of the most heavily tested topics on the AP Psychology exam: four theories e
             question: 'In Schachter and Singer\'s classic experiment, participants were injected with epinephrine (causing arousal) and placed with either a euphoric or angry confederate. Participants in the "euphoric" condition reported feeling happy, while those in the "angry" condition reported feeling angry. This supports which claim?',
             options: [
               'Emotions are purely physiological — the injection directly caused the emotion',
-              'Arousal and emotion always occur simultaneously regardless of context',
-              'The same physiological arousal can be interpreted as different emotions depending on the cognitive context/label applied',
-              'Cognitive appraisal must occur before any arousal can be experienced'
+              'Arousal and emotion always occur together, regardless of the social context',
+              'The same arousal can be felt as different emotions depending on the cognitive label',
+              'Cognitive appraisal must occur before any physiological arousal is felt'
             ],
             correctAnswer: 2,
             explanation: 'This is the classic support for the Schachter-Singer (Two-Factor) theory: the SAME arousal (from epinephrine) was interpreted as different emotions depending on the social context. This proves that emotion = arousal + cognitive label. The arousal was identical; only the interpretation changed — and so did the reported emotion.'
@@ -181,10 +181,10 @@ Robert Zajonc (pronounced "ZYE-ence") argued that some emotional responses occur
           {
             question: 'A researcher gives caffeine (which causes arousal) to two groups. Group A is told the caffeine will make them jittery. Group B is not told about the jittery side effects. Group B reports feeling more anxious than Group A. This finding is best explained by:',
             options: [
-              'James-Lange — the caffeine directly caused anxiety through bodily arousal',
-              'Cannon-Bard — arousal and anxiety occurred simultaneously',
-              'Schachter-Singer — Group B had unexplained arousal and attributed it to anxiety, while Group A correctly attributed their arousal to the caffeine',
-              'Lazarus — Group B cognitively appraised their situation as threatening'
+              'James-Lange — the caffeine\'s bodily arousal was felt directly as anxiety',
+              'Cannon-Bard — the arousal and the anxiety occurred simultaneously in Group B',
+              'Schachter-Singer — Group B lacked an explanation for its arousal and labeled it anxiety',
+              'Lazarus — Group B cognitively appraised the study itself as a threatening situation'
             ],
             correctAnswer: 2,
             explanation: 'This is a classic Schachter-Singer setup: both groups had the SAME arousal (caffeine), but Group A had an explanation ("it\'s just the caffeine"), while Group B had unexplained arousal and searched for a label. Group B misattributed their caffeine-induced arousal to anxiety. This is called "misattribution of arousal" — a key concept from two-factor theory.'
@@ -192,10 +192,10 @@ Robert Zajonc (pronounced "ZYE-ence") argued that some emotional responses occur
           {
             question: 'Which scenario best illustrates the Lazarus-Zajonc debate about whether cognition must precede emotion?',
             options: [
-              'A person feels happy after receiving a gift — both theorists would agree this involves cognitive appraisal',
-              'A person jumps at a sudden loud noise before identifying what caused it — Zajonc would say this is an emotion without prior appraisal, while Lazarus would argue some minimal cognitive processing still occurred',
-              'A person experiences arousal and looks around for a label — this is the Schachter-Singer model',
-              'A person\'s body reacts before they feel the emotion — this is James-Lange theory'
+              'A person feels happy after receiving a gift — both theorists would agree this involves a conscious cognitive appraisal',
+              'A person startles at a loud noise before knowing its source — Zajonc sees emotion before appraisal; Lazarus sees fast appraisal',
+              'A person feels arousal and looks around the setting for a label — this is the Schachter-Singer two-factor model',
+              'A person\'s body reacts before they feel the emotion at all — this is the James-Lange theory, not the debate'
             ],
             correctAnswer: 1,
             explanation: 'The Lazarus-Zajonc debate centers on whether cognition must ALWAYS precede emotion. Zajonc points to instant reactions (startle, phobias, mere exposure preferences) as evidence that some emotions occur automatically without conscious appraisal. Lazarus counters that even these reactions involve some form of minimal cognitive processing — just very fast and unconscious. The jumping-at-a-noise scenario perfectly captures this disagreement.'

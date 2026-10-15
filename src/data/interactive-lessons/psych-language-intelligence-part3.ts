@@ -37,10 +37,10 @@ A student who scores high on the SAT (analytical intelligence per Sternberg) may
           {
             question: 'A school principal argues that a student who excels in dance but struggles in math is still "intelligent." Which theory BEST supports this claim?',
             options: [
-              'Spearman\'s g — high g should predict success in all areas',
+              'Spearman\'s g — a single general ability should show up in both dance and math performance',
               'Gardner\'s multiple intelligences — bodily-kinesthetic is its own form of intelligence',
-              'Sternberg\'s triarchic theory — dance reflects analytical intelligence',
-              'Thurstone\'s primary mental abilities — dance is a primary mental ability'
+              'Sternberg\'s triarchic theory — learning choreography reflects mainly analytical intelligence',
+              'Thurstone\'s primary mental abilities — dance skill is one of his seven primary mental abilities'
             ],
             correctAnswer: 1,
             explanation: 'Gardner proposed bodily-kinesthetic intelligence as one of 8 independent forms of intelligence. Under his theory, excelling in dance IS a form of intelligence, equal in legitimacy to logical-mathematical intelligence. Spearman\'s g would predict that low math ability should correlate with low ability in all domains.'
@@ -172,7 +172,7 @@ Salovey & Mayer (1990) proposed it; Goleman (1995) popularized it. EI includes: 
             options: [
               'Spearman\'s g and Thurstone\'s primary abilities',
               'Gardner\'s interpersonal intelligence and Goleman\'s emotional intelligence',
-              'Sternberg\'s analytical intelligence and Spearman\'s g',
+              'Sternberg\'s analytical intelligence and Spearman\'s general intelligence factor',
               'Gardner\'s linguistic intelligence and Sternberg\'s creative intelligence'
             ],
             correctAnswer: 1,

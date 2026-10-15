@@ -42,10 +42,10 @@ The Motivation, Emotion, and Stress unit accounts for approximately 6-8% of the 
           {
             question: 'A free-response question describes a college student whose roommate plays loud music every night. The student\'s heart races (physiology), she clenches her fists (behavioral), she thinks "this is unacceptable" (cognitive), she confronts the roommate about quiet hours (coping), and her grades drop because she can\'t sleep (health). Which set of terms CORRECTLY identifies ALL the concepts illustrated?',
             options: [
-              'Cannon-Bard theory, one emotion component, problem-focused coping, daily hassle',
-              'Three emotion components (physiological, behavioral, cognitive), problem-focused coping, and a daily hassle stressor affecting health',
-              'James-Lange theory, learned helplessness, and emotion-focused coping',
-              'Schachter-Singer theory, GAS exhaustion, and social support'
+              'Cannon-Bard theory, one emotion component, problem-focused coping, and a daily hassle stressor',
+              'Three emotion components, problem-focused coping, and a daily hassle affecting health',
+              'James-Lange theory, learned helplessness, emotion-focused coping, and a daily hassle',
+              'Schachter-Singer theory, the exhaustion stage of GAS, and seeking social support'
             ],
             correctAnswer: 1,
             explanation: 'Five concepts: (1) Physiological component — heart racing, (2) Behavioral component — clenching fists, (3) Cognitive component — "this is unacceptable," (4) Problem-focused coping — confronting the roommate to change the situation, (5) Daily hassle — the recurring loud music is a chronic, daily stressor that affects health (sleep/grades). Notice that this scenario illustrates concepts from MULTIPLE parts of the unit — exactly how the AP exam works.'
@@ -53,13 +53,13 @@ The Motivation, Emotion, and Stress unit accounts for approximately 6-8% of the 
           {
             question: 'Which statement about the relationship between emotion theories is MOST accurate for the AP exam?',
             options: [
-              'Only one theory is correct — the AP exam expects you to identify which one',
-              'Each theory captures a different aspect of emotional experience, and the AP exam tests your ability to distinguish which theory a specific scenario illustrates',
-              'The theories have been disproven by modern neuroscience research',
-              'The theories apply only to negative emotions like fear and anger'
+              'Only one theory is correct, and the AP exam expects you to identify which one',
+              'Each captures part of emotion; the exam tests the sequences, not the theory names',
+              'The theories have been disproven by neuroscience, so the exam no longer covers emotion',
+              'The theories apply only to negative emotions such as fear, anger, and disgust'
             ],
             correctAnswer: 1,
-            explanation: 'The AP exam does NOT ask which theory is "correct" — it asks you to identify which theory a given scenario illustrates. James-Lange works well for body-first experiences, Schachter-Singer explains misattribution of arousal, Lazarus explains how reappraisal changes emotion, and Cannon-Bard explains simultaneous reactions. Each captures part of the truth, and you must match scenarios to the right framework.'
+            explanation: 'The current AP Psychology framework treats the specific names of emotion theories as outside the scope of the exam. What it does test is the idea behind them: some accounts put the physiological response first, some have the body\'s response and the feeling occur together, and some require a cognitive label or appraisal before an emotion is felt. Each captures part of emotional experience, so match a scenario to the sequence it shows rather than asking which theory is "correct."'
           }
         ]
       }
@@ -195,10 +195,10 @@ When analyzing an emotion/stress scenario in the FRQ:
           {
             question: 'An AP free-response question asks: "Using TWO theories of emotion, explain how a person might experience fear differently when encountering a bear on a hiking trail." The strongest response would compare:',
             options: [
-              'Type A and Type B personality responses to the bear',
+              'Type A and Type B personality patterns and how each would respond to the bear',
               'Problem-focused coping (running away) and emotion-focused coping (deep breathing)',
-              'Two distinct theories — for example, James-Lange (body reacts first → "my heart is racing, so I must be afraid") and Lazarus (cognitive appraisal first → "I evaluate this bear as dangerous, which triggers my fear response")',
-              'Ekman\'s universal emotions and display rules for showing fear'
+              'James-Lange (body reacts, then fear) and Lazarus (appraisal, then fear)',
+              'Ekman\'s universal facial expressions and the display rules for showing fear'
             ],
             correctAnswer: 2,
             explanation: 'The question asks for TWO THEORIES OF EMOTION. A strong response picks two theories and shows how they predict DIFFERENT sequences: (1) James-Lange: see bear → heart races → "I must be afraid" (body first). (2) Lazarus: see bear → appraise "dangerous animal" → feel fear (thought first). Notice the same situation (bear) but the order of events differs by theory. This is exactly what the AP exam wants — you demonstrate understanding by showing HOW the theories differ, not just WHAT they say.'
@@ -207,8 +207,8 @@ When analyzing an emotion/stress scenario in the FRQ:
             question: 'A student experiences the following sequence during a semester: (1) Learns she will be failing calculus — heart pounds, can\'t sleep. (2) For the next month, she studies intensely, appears to function normally, but cortisol remains elevated. (3) After the final exam, she collapses with bronchitis and sleeps for three days. This sequence illustrates:',
             options: [
               'The three components of emotion (physiological, behavioral, cognitive)',
-              'Selye\'s General Adaptation Syndrome: Alarm (initial shock), Resistance (adapting to ongoing stress), Exhaustion (immune system failure and illness)',
-              'Problem-focused coping transitioning to emotion-focused coping',
+              'Selye\'s general adaptation syndrome: alarm, resistance, then exhaustion',
+              'Problem-focused coping that later shifts into emotion-focused coping',
               'The Lazarus-Zajonc debate about whether cognition precedes emotion'
             ],
             correctAnswer: 1,

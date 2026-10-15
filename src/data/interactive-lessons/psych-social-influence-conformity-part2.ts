@@ -58,8 +58,8 @@ Conformity is adjusting your behavior or thinking to match a group standard. It'
             question: 'In Asch\'s experiment, participants conformed even though the correct answer was obvious. This conformity was PRIMARILY driven by:',
             options: [
               'Informational social influence — they genuinely thought the group was right',
-              'Normative social influence — they knew the answer but didn\'t want to stand out or be rejected',
-              'Obedience to authority — the experimenter told them to conform',
+              'Normative social influence — they knew the answer but feared standing out',
+              'Obedience to authority — the experimenter instructed them to agree',
               'Social facilitation — the audience improved their performance'
             ],
             correctAnswer: 1,
@@ -68,10 +68,10 @@ Conformity is adjusting your behavior or thinking to match a group standard. It'
           {
             question: 'A new employee asks her colleagues what the dress code is because she genuinely doesn\'t know. She dresses like them the next day. This is BEST described as:',
             options: [
-              'Normative social influence — she wants to fit in',
-              'Informational social influence — she looks to the group for guidance because she\'s uncertain',
-              'Obedience — she follows orders from the group',
-              'Compliance — she publicly conforms but privately disagrees'
+              'Normative social influence — she wants to fit in and be liked by colleagues',
+              'Informational social influence — she is unsure and looks to others',
+              'Obedience — she is following a direct order from her supervisor',
+              'Compliance — she conforms in public while privately disagreeing'
             ],
             correctAnswer: 1,
             explanation: 'The employee is genuinely UNCERTAIN about the correct dress code and looks to others for information. She actually ACCEPTS the group\'s standard as correct (private acceptance, not just public compliance). This is textbook informational social influence — conformity driven by the desire to be RIGHT. If she already knew the dress code but dressed differently just to fit in, that would be normative influence.'
@@ -140,7 +140,7 @@ Conformity is adjusting your behavior or thinking to match a group standard. It'
         dropdowns: [
           { label: 'A teenager wears clothes she dislikes because her friends wear them and she fears rejection', options: ['Normative social influence', 'Informational social influence', 'Obedience', 'Social facilitation'] },
           { label: 'Lost in a new city, you follow the crowd toward what you hope is the subway station', options: ['Normative social influence', 'Informational social influence', 'Obedience', 'Compliance'] },
-          { label: 'In Sherif\'s autokinetic study, a participant\'s private estimate shifts toward the group average', options: ['Normative — compliance only', 'Informational — acceptance (private belief changed)', 'Obedience to the experimenter', 'Social loafing'] }
+          { label: 'In Sherif\'s autokinetic study, a participant\'s private estimate shifts toward the group average', options: ['Normative — compliance (public behavior changed only)', 'Informational — acceptance (private belief changed)', 'Obedience (following the experimenter\'s orders)', 'Social loafing (less effort in a group)'] }
         ],
         correctAnswers: ['Normative social influence', 'Informational social influence', 'Informational — acceptance (private belief changed)'],
         hint1: 'She knows what she likes but conforms to avoid social rejection.',
@@ -186,10 +186,10 @@ Conformity is adjusting your behavior or thinking to match a group standard. It'
           {
             question: 'During a jury deliberation, 11 jurors vote "guilty" and 1 juror votes "not guilty." The holdout juror privately believes the defendant is innocent. Research on conformity predicts the holdout is MOST likely to:',
             options: [
-              'Always maintain their position regardless of group pressure',
-              'Conform to the majority due to normative pressure, especially if the case is clear-cut',
-              'Convince all 11 other jurors to change their vote',
-              'Leave the jury rather than conform'
+              'Hold firm, since a private belief protects against any group pressure',
+              'Conform to the majority because of normative social pressure',
+              'Convince all eleven of the other jurors to switch their votes',
+              'Ask to be removed from the jury rather than give in to the group'
             ],
             correctAnswer: 1,
             explanation: 'Asch\'s research predicts that a lone dissenter facing a unanimous majority will often conform due to normative social influence. However, if the holdout can get even ONE other juror to agree (breaking unanimity), resistance increases dramatically. This is why the movie "12 Angry Men" is psychologically accurate — once the minority grows from 1 to 2, conformity pressure on the holdout drops substantially.'
@@ -198,9 +198,9 @@ Conformity is adjusting your behavior or thinking to match a group standard. It'
             question: 'A group of friends goes to a restaurant. The first person orders a salad. The second person was planning to order a burger but switches to a salad. By the time it reaches the fifth person, everyone has ordered a salad. This chain of conformity was MOST likely driven by:',
             options: [
               'Informational social influence — everyone genuinely believes salads are the best choice',
-              'Normative social influence — each person doesn\'t want to be the odd one out ordering differently',
-              'Obedience — the first person is an authority figure',
-              'Social facilitation — the audience improves their food choices'
+              'Normative social influence — no one wants to be the odd one out',
+              'Obedience — each diner is following the first person\'s instructions',
+              'Social facilitation — the others\' presence improved their food choices'
             ],
             correctAnswer: 1,
             explanation: 'This is a real-world example of normative social influence cascading through a group. Each person probably had their own preference but switched to match the emerging group standard to avoid standing out. This is compliance, not acceptance — they didn\'t genuinely change their belief about what food is best; they changed their public behavior to match the group. Research shows this "order conformity" effect is strong and increases with each person who conforms.'
