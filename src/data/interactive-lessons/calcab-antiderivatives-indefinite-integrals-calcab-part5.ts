@@ -76,9 +76,9 @@ $= \\frac{1}{2}\\arctan\\left(\\frac{x+3}{2}\\right) + C$
           },
           {
             question: 'Evaluate $\\int \\frac{3}{\\sqrt{1 - 4x^2}}\\,dx$.',
-            options: ['$3\\arcsin(2x) + C$', '$\\frac{3}{2}\\arcsin(2x) + C$', '$3\\arcsin(4x) + C$', '$\\frac{3}{4}\\arcsin(2x) + C$'],
+            options: ['$3\\arcsin(2x) + C$', '$\\frac{3}{2}\\arcsin(2x) + C$', '$3\\arcsin(4x) + C$', '$6\\arcsin(2x) + C$'],
             correctAnswer: 1,
-            explanation: 'Rewrite as $\\frac{3}{\\sqrt{1-(2x)^2}}$. With $u = 2x$: $\\frac{3}{2}\\arcsin(2x) + C$.'
+            explanation: 'Rewrite as $\\frac{3}{\\sqrt{1-(2x)^2}}$. With $u = 2x$, $du = 2\\,dx$: $\\frac{3}{2}\\arcsin(2x) + C$. Multiplying by $2$ instead of dividing gives $6\\arcsin(2x)$, and ignoring the inner factor gives $3\\arcsin(2x)$.'
           }
         ]
       }
@@ -111,9 +111,9 @@ $= \\frac{1}{2}\\arctan\\left(\\frac{x+3}{2}\\right) + C$
           },
           {
             question: 'Which integral gives an inverse trig result?',
-            options: ['$\\int \\frac{x}{\\sqrt{4-x^2}}\\,dx$', '$\\int \\frac{5}{\\sqrt{4-x^2}}\\,dx$', '$\\int \\frac{2x}{4+x^2}\\,dx$', '$\\int \\frac{x^2}{1+x^2}\\,dx$'],
+            options: ['$\\int \\frac{5}{4-x^2}\\,dx$', '$\\int \\frac{5}{\\sqrt{4-x^2}}\\,dx$', '$\\int \\frac{2x}{4+x^2}\\,dx$', '$\\int \\frac{x^2}{1+x^2}\\,dx$'],
             correctAnswer: 1,
-            explanation: 'Only $\\int \\frac{5}{\\sqrt{4-x^2}}\\,dx$ has a constant numerator with the $\\sqrt{a^2-x^2}$ form: $5\\arcsin(x/2) + C$. The others have $x$ in the numerator or need algebraic rewriting.'
+            explanation: 'Only $\\int \\frac{5}{\\sqrt{4-x^2}}\\,dx$ has a constant numerator with the $\\sqrt{a^2-x^2}$ form: $5\\arcsin(x/2) + C$. Without the square root, $\\frac{5}{4-x^2}$ needs partial fractions; the others have $x$ in the numerator or need algebraic rewriting.'
           }
         ]
       }
@@ -126,24 +126,24 @@ $= \\frac{1}{2}\\arctan\\left(\\frac{x+3}{2}\\right) + C$
         dropdowns: [
           {
             label: '$\\int \\frac{1}{\\sqrt{25-x^2}}\\,dx$ is:',
-            options: ['Arcsin form', 'Arctan form', 'Logarithm (u-sub)', 'Power Rule'],
+            options: ['Arcsin form', 'Arctan form', 'Logarithm form', 'Power Rule form'],
             correctAnswers: ['Arcsin form'],
             hints: ['$\\sqrt{a^2-x^2}$ in denominator, constant numerator.'],
             explanation: '$a = 5$: $\\arcsin(x/5) + C$.'
           },
           {
             label: '$\\int \\frac{1}{16+x^2}\\,dx$ is:',
-            options: ['Arcsin form', 'Arctan form', 'Logarithm (u-sub)', 'Power Rule'],
+            options: ['Arcsin form', 'Arctan form', 'Logarithm form', 'Power Rule form'],
             correctAnswers: ['Arctan form'],
             hints: ['$a^2 + x^2$ in denominator, no square root, constant numerator.'],
             explanation: '$a = 4$: $\\frac{1}{4}\\arctan(x/4) + C$.'
           },
           {
             label: '$\\int \\frac{x}{16+x^2}\\,dx$ is:',
-            options: ['Arcsin form', 'Arctan form', 'Logarithm (u-sub)', 'Power Rule'],
-            correctAnswers: ['Logarithm (u-sub)'],
+            options: ['Arcsin form', 'Arctan form', 'Logarithm form', 'Power Rule form'],
+            correctAnswers: ['Logarithm form'],
             hints: ['There is an $x$ in the numerator — that changes everything!'],
-            explanation: '$u = 16+x^2$, $du = 2x\\,dx$: $\\frac{1}{2}\\ln(16+x^2) + C$.'
+            explanation: '$u = 16+x^2$, $du = 2x\\,dx$: $\\frac{1}{2}\\int \\frac{du}{u} = \\frac{1}{2}\\ln(16+x^2) + C$.'
           }
         ]
       }

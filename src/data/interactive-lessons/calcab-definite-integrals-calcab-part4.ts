@@ -60,15 +60,15 @@ $= \\cos(x^3) \\cdot 3x^2 - \\cos(2x) \\cdot 2 = 3x^2\\cos(x^3) - 2\\cos(2x)$`
         questions: [
           {
             question: 'Find $\\frac{d}{dx}\\int_1^x \\sqrt{t^2 + 4}\\,dt$.',
-            options: ['$\\sqrt{x^2 + 4}$', '$\\frac{x}{\\sqrt{x^2+4}}$', '$\\frac{2x}{\\sqrt{x^2+4}}$', '$\\sqrt{x + 4}$'],
+            options: ['$\\sqrt{x^2 + 4}$', '$\\frac{x}{\\sqrt{x^2+4}}$', '$\\frac{2x}{\\sqrt{x^2+4}}$', '$\\sqrt{x^2 + 4} - \\sqrt{5}$'],
             correctAnswer: 0,
-            explanation: 'Direct FTC Part 1: substitute $x$ for $t$. Answer: $\\sqrt{x^2 + 4}$.'
+            explanation: 'Direct FTC Part 1: substitute $x$ for $t$. Answer: $\\sqrt{x^2 + 4}$. Subtracting the value at the lower limit $1$ mixes in Part 2, and no chain-rule factor appears because the upper limit is just $x$.'
           },
           {
             question: 'Find $\\frac{d}{dx}\\int_0^{3x} \\cos(t)\\,dt$.',
-            options: ['$\\cos(3x)$', '$3\\cos(3x)$', '$-\\sin(3x)$', '$3\\sin(3x)$'],
+            options: ['$\\cos(3x)$', '$3\\cos(3x)$', '$\\sin(3x)$', '$\\cos x$'],
             correctAnswer: 1,
-            explanation: 'Chain Rule: $\\cos(3x) \\cdot 3 = 3\\cos(3x)$.'
+            explanation: 'Chain Rule: $\\cos(3x) \\cdot 3 = 3\\cos(3x)$. Leaving off the factor $3$ gives $\\cos(3x)$, $\\sin(3x)$ is the integral itself, and the integrand must be evaluated at $3x$, not $x$.'
           },
           {
             question: 'Find $\\frac{d}{dx}\\int_{x}^{0} t^4\\,dt$.',
@@ -122,9 +122,9 @@ $$\\boxed{F(a) = \\int_a^a f(t)\\,dt = 0 \\qquad \\text{(always starts at 0)}}$$
           },
           {
             question: 'If $f$ has a local maximum at $x = 2$, what happens to $F$ at $x = 2$?',
-            options: ['$F$ has a local max', '$F$ has a local min', '$F$ has an inflection point', '$F$ is undefined'],
+            options: ['$F$ has a local maximum', '$F$ has a local minimum', '$F$ has an inflection point', '$F$ has a critical point'],
             correctAnswer: 2,
-            explanation: '$F\'\' = f\'$. At a local max of $f$, $f\'$ changes sign (+ to −), so $F\'\'$ changes sign → inflection point of $F$.'
+            explanation: '$F\'\' = f\'$. At a local max of $f$, $f\'$ changes sign (+ to −), so $F\'\'$ changes sign → inflection point of $F$. $F$ has a critical point only where $f = 0$, which a local max of $f$ does not guarantee.'
           }
         ]
       }
@@ -137,24 +137,24 @@ $$\\boxed{F(a) = \\int_a^a f(t)\\,dt = 0 \\qquad \\text{(always starts at 0)}}$$
         dropdowns: [
           {
             label: '$\\frac{d}{dx}\\int_1^{x^2} e^t\\,dt$ equals:',
-            options: ['$e^{x^2}$', '$2xe^{x^2}$', '$e^{2x}$', '$2xe^x$'],
+            options: ['$e^{x^2}$', '$2xe^{x^2}$', '$2e^{x^2}$', '$2xe^x$'],
             correctAnswers: ['$2xe^{x^2}$'],
             hints: ['Chain Rule: $f(g(x)) \\cdot g\'(x)$ where $g(x) = x^2$.'],
-            explanation: '$e^{(x^2)} \\cdot 2x = 2xe^{x^2}$.'
+            explanation: 'FTC Part 1 with the Chain Rule: $e^{(x^2)} \\cdot 2x = 2xe^{x^2}$. The chain factor is the full derivative of $x^2$, which is $2x$.'
           },
           {
             label: '$\\frac{d}{dx}\\int_x^{10} \\ln(t)\\,dt$ equals:',
-            options: ['$\\ln(x)$', '$-\\ln(x)$', '$\\ln(10)$', '$1/x$'],
+            options: ['$\\ln(x)$', '$-\\ln(x)$', '$-1/x$', '$1/x$'],
             correctAnswers: ['$-\\ln(x)$'],
             hints: ['Variable in lower limit → reverse limits first (negative sign).'],
-            explanation: '$= -\\frac{d}{dx}\\int_{10}^x \\ln(t)\\,dt = -\\ln(x)$.'
+            explanation: '$\\frac{d}{dx}\\int_x^{10} \\ln(t)\\,dt = -\\frac{d}{dx}\\int_{10}^x \\ln(t)\\,dt = -\\ln(x)$. FTC Part 1 evaluates the integrand at $x$; it does not differentiate it.'
           },
           {
             label: '$\\frac{d}{dx}\\int_0^{\\sin x} t^3\\,dt$ equals:',
-            options: ['$\\sin^3 x$', '$\\sin^3(x) \\cdot \\cos x$', '$3\\sin^2(x)\\cos(x)$', '$\\cos(x) \\cdot x^3$'],
-            correctAnswers: ['$\\sin^3(x) \\cdot \\cos x$'],
+            options: ['$\\sin^3 x$', '$\\sin^3 x\\cos x$', '$\\cos^3 x$', '$x^3\\cos x$'],
+            correctAnswers: ['$\\sin^3 x\\cos x$'],
             hints: ['$g(x) = \\sin x$, $g\'(x) = \\cos x$. Apply $f(g(x)) \\cdot g\'(x)$.'],
-            explanation: '$(\\sin x)^3 \\cdot \\cos x = \\sin^3(x) \\cos(x)$.'
+            explanation: '$(\\sin x)^3 \\cdot \\cos x = \\sin^3 x\\cos x$.'
           }
         ]
       }

@@ -115,22 +115,22 @@ $f(0) = C_2 = 5$, so $f(x) = 2x^3 - 2x + 5$
         dropdowns: [
           {
             label: '$\\frac{dy}{dx} = x^2 + 5$ is solved by:',
-            options: ['Direct integration', 'Separation of variables', 'Both methods work', 'Cannot be solved on AP AB'],
+            options: ['Direct integration', 'Separation of variables', 'Logistic growth formula', 'Not solvable on AP AB'],
             correctAnswers: ['Direct integration'],
             hints: ['The right side depends only on $x$.'],
             explanation: 'Since $f(x) = x^2 + 5$ has no $y$, integrate directly: $y = x^3/3 + 5x + C$.'
           },
           {
             label: '$\\frac{dy}{dx} = 3y$ is solved by:',
-            options: ['Direct integration', 'Separation of variables', 'Both methods work', 'Cannot be solved on AP AB'],
+            options: ['Direct integration', 'Separation of variables', 'Logistic growth formula', 'Not solvable on AP AB'],
             correctAnswers: ['Separation of variables'],
             hints: ['The right side depends on $y$, not just $x$.'],
             explanation: 'Separate: $\\frac{dy}{y} = 3\\,dx$. $y = Ae^{3x}$.'
           },
           {
             label: '$\\frac{dy}{dx} = x + y$ is solved by:',
-            options: ['Direct integration', 'Separation of variables', 'Both methods work', 'Cannot be solved on AP AB'],
-            correctAnswers: ['Cannot be solved on AP AB'],
+            options: ['Direct integration', 'Separation of variables', 'Logistic growth formula', 'Not solvable on AP AB'],
+            correctAnswers: ['Not solvable on AP AB'],
             hints: ['Can you separate $x + y$ into $f(x) \\cdot g(y)$? No!'],
             explanation: 'This is non-separable (the sum $x+y$ cannot be written as a product). Not tested on AP AB.'
           }

@@ -47,9 +47,9 @@ export const calcabAreaCurvesPart7Data = {
           },
           {
             question: 'The area between $y = |x|$ and $y = 3$ is:',
-            options: ['$9$', '$6$', '$3$', '$12$'],
+            options: ['$9$', '$18$', '$4.5$', '$-9$'],
             correctAnswer: 0,
-            explanation: 'Intersect at $x = \\pm 3$. $A = \\int_{-3}^3(3-|x|)\\,dx = 2\\int_0^3(3-x)\\,dx = 2[3x-\\frac{x^2}{2}]_0^3 = 2 \\cdot \\frac{9}{2} = 9$.'
+            explanation: 'Intersect at $x = \\pm 3$. $A = \\int_{-3}^3(3-|x|)\\,dx = 2\\int_0^3(3-x)\\,dx = 2[3x-\\frac{x^2}{2}]_0^3 = 2 \\cdot \\frac{9}{2} = 9$. Using the whole $6 \\times 3$ rectangle gives $18$, forgetting the left half gives $4.5$, and subtracting top from bottom gives $-9$.'
           }
         ]
       }
@@ -80,9 +80,9 @@ export const calcabAreaCurvesPart7Data = {
           },
           {
             question: 'Area between $y=4$ and $y=x^2$ using $dy$:',
-            options: ['$\\int_0^4 2\\sqrt{y}\\,dy$', '$\\int_{-2}^2(4-x^2)\\,dx$', '$\\int_0^4 y\\,dy$', '$\\int_0^2 \\sqrt{y}\\,dy$'],
+            options: ['$\\int_0^4 2\\sqrt{y}\\,dy$', '$\\int_0^4 \\sqrt{y}\\,dy$', '$\\int_0^4 y\\,dy$', '$\\int_0^2 \\sqrt{y}\\,dy$'],
             correctAnswer: 0,
-            explanation: 'In $y$: right $= \\sqrt{y}$, left $= -\\sqrt{y}$. Width $= 2\\sqrt{y}$. $\\int_0^4 2\\sqrt{y}\\,dy = \\frac{32}{3}$.'
+            explanation: 'In $y$: right $= \\sqrt{y}$, left $= -\\sqrt{y}$. Width $= 2\\sqrt{y}$. $\\int_0^4 2\\sqrt{y}\\,dy = \\frac{32}{3}$. Using only $\\sqrt{y}$ covers just the right half, and the upper limit is $y = 4$, not $2$.'
           }
         ]
       }
@@ -95,24 +95,24 @@ export const calcabAreaCurvesPart7Data = {
         dropdowns: [
           {
             label: 'Area between $y=e^x$ and $y=e^{-x}$ on $[-1,1]$. Number of sub-integrals:',
-            options: ['2 (split at $x=0$)', '1', '3', 'Cannot be computed'],
-            correctAnswers: ['2 (split at $x=0$)'],
+            options: ['2', '1', '3', '4'],
+            correctAnswers: ['2'],
             hints: ['$e^x = e^{-x}$ at $x=0$. They switch which is on top there.'],
             explanation: '$e^x > e^{-x}$ for $x>0$ and $e^{-x} > e^x$ for $x<0$. Split at $x=0$.'
           },
           {
             label: 'Best variable for area between $x=4-y^2$ and $x=y-2$:',
-            options: ['$y$ (both are functions of $y$)', '$x$ (standard setup)', 'Either is equally easy', 'Must use parametric'],
-            correctAnswers: ['$y$ (both are functions of $y$)'],
+            options: ['$y$, with one integral', '$x$, with one integral', '$y$, with two integrals', 'Either; both need one integral'],
+            correctAnswers: ['$y$, with one integral'],
             hints: ['Both curves are already expressed as $x = $ something in $y$.'],
-            explanation: 'Both curves are functions of $y$. One integral in $y$ is simplest.'
+            explanation: 'Both curves are functions of $y$ ($x = 4-y^2$ and $x = y-2$, meeting at $y=-3$ and $y=2$), so one integral in $y$ works. In $x$, the left boundary changes, so the region must be split.'
           },
           {
             label: 'Signed area of $\\sin x$ on $[0, 3\\pi]$ is:',
-            options: ['$2$ (three arches: $+2,-2,+2$)', '$0$', '$6$', '$4$'],
-            correctAnswers: ['$2$ (three arches: $+2,-2,+2$)'],
+            options: ['$2$', '$0$', '$6$', '$-2$'],
+            correctAnswers: ['$2$'],
             hints: ['$\\int_0^\\pi \\sin x\\,dx = 2$. Each half-period contributes $\\pm 2$.'],
-            explanation: '$+2-2+2 = 2$. Total area would be $6$.'
+            explanation: 'Three arches: $+2-2+2 = 2$. Total area would be $6$.'
           }
         ]
       }

@@ -58,9 +58,9 @@ $u = \\cos x$, $du = -\\sin x\\,dx$: $-\\int \\frac{du}{u} = -\\ln|\\cos x| + C 
         questions: [
           {
             question: 'Evaluate $\\int \\frac{x}{x^2 + 4}\\,dx$.',
-            options: ['$\\ln(x^2+4) + C$', '$\\frac{1}{2}\\ln|x^2+4| + C$', '$\\arctan(x/2) + C$', '$\\frac{\\ln(x^2+4)}{2x} + C$'],
+            options: ['$\\ln(x^2+4) + C$', '$\\frac{1}{2}\\ln|x^2+4| + C$', '$2\\ln|x^2+4| + C$', '$\\frac{1}{2}\\arctan(x/2) + C$'],
             correctAnswer: 1,
-            explanation: '$u = x^2+4$, $du = 2x\\,dx$. $\\frac{1}{2}\\int \\frac{du}{u} = \\frac{1}{2}\\ln|x^2+4| + C$.'
+            explanation: '$u = x^2+4$, $du = 2x\\,dx$. $\\frac{1}{2}\\int \\frac{du}{u} = \\frac{1}{2}\\ln|x^2+4| + C$. Multiplying by $2$ instead of dividing gives $2\\ln$, and $\\frac{1}{2}\\arctan(x/2)$ is the antiderivative of $\\frac{1}{x^2+4}$, which has no $x$ in the numerator.'
           },
           {
             question: 'Evaluate $\\int \\sin^4(x)\\cos(x)\\,dx$.',
@@ -70,9 +70,9 @@ $u = \\cos x$, $du = -\\sin x\\,dx$: $-\\int \\frac{du}{u} = -\\ln|\\cos x| + C 
           },
           {
             question: 'Evaluate $\\int \\tan x\\,dx$.',
-            options: ['$\\sec^2 x + C$', '$-\\ln|\\cos x| + C$', '$\\ln|\\sin x| + C$', '$\\sec x + C$'],
+            options: ['$\\sec^2 x + C$', '$-\\ln|\\cos x| + C$', '$\\ln|\\sin x| + C$', '$\\ln|\\cos x| + C$'],
             correctAnswer: 1,
-            explanation: '$\\int \\frac{\\sin x}{\\cos x}\\,dx$. $u = \\cos x$, $du = -\\sin x\\,dx$. $-\\ln|\\cos x| + C$.'
+            explanation: '$\\int \\frac{\\sin x}{\\cos x}\\,dx$. $u = \\cos x$, $du = -\\sin x\\,dx$. $-\\ln|\\cos x| + C$. Losing the minus sign from $du$ gives $\\ln|\\cos x|$, and $\\ln|\\sin x|$ is the antiderivative of $\\cot x$.'
           }
         ]
       }
@@ -99,21 +99,21 @@ $u = \\cos x$, $du = -\\sin x\\,dx$: $-\\int \\frac{du}{u} = -\\ln|\\cos x| + C 
         dropdowns: [
           {
             label: '$\\int \\frac{\\cos x}{\\sin x}\\,dx$ is the pattern:',
-            options: ['Power rule', '$f\'/f \\to \\ln$', 'Trig identity', 'Inverse trig'],
+            options: ['Power rule with $u = \\sin x$', '$f\'/f \\to \\ln$', 'Trig identity', 'Inverse trig'],
             correctAnswers: ['$f\'/f \\to \\ln$'],
             hints: ['$\\cos x$ is the derivative of $\\sin x$, and it divides $\\sin x$.'],
-            explanation: '$u = \\sin x$: $\\int \\frac{du}{u} = \\ln|\\sin x| + C$.'
+            explanation: '$u = \\sin x$: $\\int \\frac{du}{u} = \\ln|\\sin x| + C$. The Power Rule fails here because $\\frac{1}{u} = u^{-1}$ is the $n = -1$ exception.'
           },
           {
             label: '$\\int (2x+5)^7\\,dx$ uses:',
-            options: ['Full u-sub process', 'Linear shortcut $\\frac{1}{a}F(ax+b)$', 'Cannot be done with u-sub', 'Requires long division'],
+            options: ['Power rule, ignoring the $2$', 'Linear shortcut $\\frac{1}{a}F(ax+b)$', 'Product rule in reverse', 'Requires long division'],
             correctAnswers: ['Linear shortcut $\\frac{1}{a}F(ax+b)$'],
             hints: ['The inner function is linear: $2x+5$.'],
-            explanation: '$\\frac{1}{2} \\cdot \\frac{(2x+5)^8}{8} = \\frac{(2x+5)^8}{16} + C$.'
+            explanation: '$\\frac{1}{2} \\cdot \\frac{(2x+5)^8}{8} = \\frac{(2x+5)^8}{16} + C$. A full $u$-substitution with $u = 2x+5$ gives the same result; the shortcut just skips the bookkeeping.'
           },
           {
             label: '$\\int x^2 \\sin(x^3)\\,dx$ needs adjustment because:',
-            options: ['$du = 3x^2\\,dx$ but we have $x^2\\,dx$', 'There is no $u$ that works', 'We need inverse trig', 'The function is odd'],
+            options: ['$du = 3x^2\\,dx$ but we have $x^2\\,dx$', '$du = x^2\\,dx$ already matches', '$u = \\sin(x^3)$ has no matching $du$', 'Odd integrands must be split first'],
             correctAnswers: ['$du = 3x^2\\,dx$ but we have $x^2\\,dx$'],
             hints: ['$u = x^3$ gives $du = 3x^2\\,dx$. We only have $x^2\\,dx$, so multiply by $1/3$.'],
             explanation: '$u = x^3$, $du = 3x^2\\,dx$. Factor: $\\frac{1}{3}\\int \\sin u\\,du = -\\frac{\\cos(x^3)}{3} + C$.'

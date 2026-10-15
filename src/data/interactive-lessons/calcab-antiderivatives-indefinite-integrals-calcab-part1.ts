@@ -78,9 +78,9 @@ $$\\boxed{\\int [af(x) + bg(x)]\\,dx = a\\int f(x)\\,dx + b\\int g(x)\\,dx}$$
           },
           {
             question: 'Evaluate $\\int \\frac{1}{x^5}\\,dx$.',
-            options: ['$-\\frac{1}{4x^4} + C$', '$\\frac{1}{4x^4} + C$', '$-\\frac{5}{x^4} + C$', '$\\ln|x^5| + C$'],
+            options: ['$-\\frac{1}{4x^4} + C$', '$\\frac{1}{4x^4} + C$', '$-\\frac{5}{x^4} + C$', '$-\\frac{5}{x^6} + C$'],
             correctAnswer: 0,
-            explanation: '$\\int x^{-5}\\,dx = \\frac{x^{-4}}{-4} + C = -\\frac{1}{4x^4} + C$.'
+            explanation: '$\\int x^{-5}\\,dx = \\frac{x^{-4}}{-4} + C = -\\frac{1}{4x^4} + C$. The power rule raises the exponent ($-5 \\to -4$) and divides by the new exponent; $-\\frac{5}{x^6}$ is the derivative instead, and dropping the minus sign forgets that the new exponent is negative.'
           },
           {
             question: 'Evaluate $\\int \\sqrt[3]{x}\\,dx$.',
@@ -147,10 +147,10 @@ $$\\int x^{-1}\\,dx = \\int \\frac{1}{x}\\,dx = \\ln|x| + C$$
           },
           {
             label: '$\\int x^{-1/2}\\,dx =$',
-            options: ['$\\frac{x^{1/2}}{1/2} + C$', '$-\\frac{1}{2}x^{-3/2} + C$', '$\\ln|x^{1/2}| + C$', '$x^{1/2} + C$'],
+            options: ['$\\frac{x^{1/2}}{1/2} + C$', '$\\frac{x^{1/2}}{2} + C$', '$\\ln|x^{1/2}| + C$', '$x^{1/2} + C$'],
             correctAnswers: ['$\\frac{x^{1/2}}{1/2} + C$'],
             hints: ['Power Rule: add 1 to $-1/2$ to get $1/2$, then divide.'],
-            explanation: '$\\int x^{-1/2}\\,dx = \\frac{x^{1/2}}{1/2} + C = 2\\sqrt{x} + C$.'
+            explanation: '$\\int x^{-1/2}\\,dx = \\frac{x^{1/2}}{1/2} + C = 2\\sqrt{x} + C$. Dividing by the new exponent $\\frac{1}{2}$ multiplies by $2$.'
           },
           {
             label: '$\\int 0\\,dx =$',
@@ -175,7 +175,7 @@ $$\\int x^{-1}\\,dx = \\int \\frac{1}{x}\\,dx = \\ln|x| + C$$
           'So $n + 1 = 5/2$.',
           'Solve for $n$.'
         ],
-        explanation: 'By the Power Rule, $\\int x^n\\,dx = \\frac{x^{n+1}}{n+1} + C$.\\n\\nThe exponent in the answer is $5/2$, so $n+1 = 5/2$, giving $n = 3/2$.\\n\\nCheck: $\\int x^{3/2}\\,dx = \\frac{x^{5/2}}{5/2} + C = \\frac{2}{5}x^{5/2} + C$ ✓'
+        explanation: 'By the Power Rule, $\\int x^n\\,dx = \\frac{x^{n+1}}{n+1} + C$. The exponent in the answer is $5/2$, so $n+1 = 5/2$, giving $n = 3/2$. Check: $\\int x^{3/2}\\,dx = \\frac{x^{5/2}}{5/2} + C = \\frac{2}{5}x^{5/2} + C$ ✓'
       }
     },
     {

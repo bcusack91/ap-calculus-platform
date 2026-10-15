@@ -59,9 +59,9 @@ $$V = \\pi\\int_0^4(\\sqrt{x})^2\\,dx = \\pi\\int_0^4 x\\,dx = \\boxed{8\\pi}$$
           },
           {
             question: 'Region between $y = 4-x^2$ and $y = x+2$. The area is:',
-            options: ['$\\frac{9}{2}$', '$\\frac{7}{2}$', '$4$', '$6$'],
+            options: ['$\\frac{9}{2}$', '$-\\frac{9}{2}$', '$-\\frac{13}{6}$', '$\\frac{10}{3}$'],
             correctAnswer: 0,
-            explanation: '$4-x^2 = x+2 \\Rightarrow x^2+x-2=0 \\Rightarrow x=-2,1$. $A = \\int_{-2}^1(2-x-x^2)\\,dx = [2x-\\frac{x^2}{2}-\\frac{x^3}{3}]_{-2}^1 = \\frac{7}{6}+\\frac{10}{3} = \\frac{9}{2}$.'
+            explanation: '$4-x^2 = x+2 \\Rightarrow x^2+x-2=0 \\Rightarrow x=-2,1$. With $F(x) = 2x-\\frac{x^2}{2}-\\frac{x^3}{3}$: $A = F(1) - F(-2) = \\frac{7}{6}+\\frac{10}{3} = \\frac{9}{2}$. Bottom minus top gives $-\\frac{9}{2}$, adding $F(-2) = -\\frac{10}{3}$ instead of subtracting gives $-\\frac{13}{6}$, and dropping $F(1)$ gives $\\frac{10}{3}$.'
           }
         ]
       }
@@ -81,14 +81,14 @@ $$V = \\pi\\int_0^4(\\sqrt{x})^2\\,dx = \\pi\\int_0^4 x\\,dx = \\boxed{8\\pi}$$
           },
           {
             label: '"Write but do not evaluate" means:',
-            options: ['Set up integral with limits; do not compute', 'Describe in words only', 'Evaluate and check', 'Graph only'],
+            options: ['Set up integral with limits; do not compute', 'Write the antiderivative, skip limits', 'Evaluate, but leave it unsimplified', 'Write the integrand only, without limits'],
             correctAnswers: ['Set up integral with limits; do not compute'],
             hints: ['This is a specific AP instruction. Show the integral but stop there.'],
             explanation: 'Write the definite integral with correct integrand and limits. Do not simplify or evaluate.'
           },
           {
             label: 'To earn full credit on an area FRQ, you must show:',
-            options: ['Intersection points, integral setup, evaluation', 'Only the final answer', 'A graph of the region', 'The antiderivative only'],
+            options: ['Intersection points, integral setup, evaluation', 'Integral setup and a graph of the region', 'Final answer, units, and a sketch', 'Antiderivative, units, and a decimal check'],
             correctAnswers: ['Intersection points, integral setup, evaluation'],
             hints: ['Each step earns partial credit.'],
             explanation: 'AP grading gives points for finding intersections, setting up the integral correctly, and evaluating.'
@@ -103,7 +103,7 @@ $$V = \\pi\\int_0^4(\\sqrt{x})^2\\,dx = \\pi\\int_0^4 x\\,dx = \\boxed{8\\pi}$$
       exercise: {
         question: 'Region $R$ is bounded by $y = x^2$ and $y = 2x$. Find the area.\n\n$A = ?$ (Enter a fraction as a/b.)',
         correctAnswer: '4/3',
-        acceptableAnswers: ['4/3'],
+        acceptableAnswers: ['4/3', '1.33', '1.333'],
         hints: [
           'Intersect: $x^2 = 2x \\Rightarrow x(x-2) = 0 \\Rightarrow x = 0, 2$.',
           'Top: $2x$, Bottom: $x^2$ on $[0,2]$.',

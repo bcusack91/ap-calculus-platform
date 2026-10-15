@@ -45,9 +45,9 @@ $$= 3 + (48-16) - (3-4) = 3 + 32 + 1 = 36$$
           },
           {
             question: '$v(t) = \\cos t$, $s(0) = 0$. The position function is:',
-            options: ['$s(t) = \\sin t$', '$s(t) = \\cos t$', '$s(t) = -\\sin t$', '$s(t) = t$'],
+            options: ['$s(t) = \\sin t$', '$s(t) = 1 - \\cos t$', '$s(t) = -\\sin t$', '$s(t) = \\cos t - 1$'],
             correctAnswer: 0,
-            explanation: '$s(t) = 0 + \\int_0^t \\cos \\tau\\,d\\tau = [\\sin \\tau]_0^t = \\sin t$.'
+            explanation: '$s(t) = 0 + \\int_0^t \\cos \\tau\\,d\\tau = [\\sin \\tau]_0^t = \\sin t$. The constant is $0$ because $\\sin 0 = 0$; $1 - \\cos t$ integrates $\\sin$ instead of $\\cos$, and $\\cos t - 1$ treats $\\cos$ as its own antiderivative.'
           },
           {
             question: '$v(t) = -2$ (constant). $s(0) = 10$. After 5 seconds, $s(5) =$',
@@ -73,7 +73,7 @@ $$= 3 + (48-16) - (3-4) = 3 + 32 + 1 = 36$$
           },
           {
             label: 'To find position at time $b$ given $s(a)$ and $v(t)$, use:',
-            options: ['$s(b) = s(a) + \\int_a^b v(t)\\,dt$', '$s(b) = \\int_a^b v(t)\\,dt$', '$s(b) = v(b)$', '$s(b) = s(a) \\cdot b$'],
+            options: ['$s(b) = s(a) + \\int_a^b v(t)\\,dt$', '$s(b) = \\int_a^b v(t)\\,dt$', '$s(b) = s(a) + v(b) - v(a)$', '$s(b) = s(a) + v(b)$'],
             correctAnswers: ['$s(b) = s(a) + \\int_a^b v(t)\\,dt$'],
             hints: ['Initial position plus displacement.'],
             explanation: 'Position = initial position + displacement (integral of velocity).'

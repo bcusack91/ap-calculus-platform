@@ -73,21 +73,21 @@ export const calcabDefiniteIntegralsPart7Data = {
         questions: [
           {
             question: 'Find $\\frac{d}{dx}\\int_0^{\\tan x} e^{t^2}\\,dt$.',
-            options: ['$e^{\\tan^2 x}$', '$e^{\\tan^2 x} \\cdot \\sec^2 x$', '$e^{x^2} \\cdot \\sec^2 x$', '$\\sec^2 x$'],
+            options: ['$e^{\\tan^2 x}$', '$e^{\\tan^2 x} \\cdot \\sec^2 x$', '$e^{x^2} \\cdot \\sec^2 x$', '$e^{\\sec^4 x}\\sec^2 x$'],
             correctAnswer: 1,
-            explanation: 'Chain Rule: $g(x) = \\tan x$, $g\'(x) = \\sec^2 x$. Answer: $e^{\\tan^2 x} \\cdot \\sec^2 x$.'
+            explanation: 'Chain Rule: $g(x) = \\tan x$, $g\'(x) = \\sec^2 x$. Answer: $f(g(x)) \\cdot g\'(x) = e^{\\tan^2 x} \\cdot \\sec^2 x$. The integrand is evaluated at $\\tan x$, not at $x$ and not at $\\sec^2 x$.'
           },
           {
             question: 'If $\\int_0^{10} v(t)\\,dt = 25$ and $\\int_0^{10} |v(t)|\\,dt = 37$, the particle:',
-            options: ['Moved 25 units right, traveled 37 units total', 'Moved 37 units, displaced 25', 'Traveled 25 units total', 'Cannot determine'],
+            options: ['Net 25 units right; 37 units traveled', 'Net 37 units right; 25 units traveled', 'Net 12 units left; 37 units traveled', 'Net 25 units right; 62 units traveled'],
             correctAnswer: 0,
-            explanation: 'Displacement = 25 (net rightward). Total distance = 37. The particle changed direction at some point.'
+            explanation: '$\\int v\\,dt$ is displacement: $25$ (net rightward). $\\int |v|\\,dt$ is total distance: $37$. Since $37 > 25$, the particle changed direction at some point. Swapping the two, subtracting them, or adding them misreads which integral measures what.'
           },
           {
             question: 'Evaluate $\\int_{-3}^{3} (x^5 + x^2)\\,dx$.',
-            options: ['$0$', '$18$', '$\\frac{54}{3}$', '$\\frac{2 \\cdot 27}{3} = 18$'],
+            options: ['$0$', '$9$', '$261$', '$18$'],
             correctAnswer: 3,
-            explanation: '$x^5$ is odd → $0$. $x^2$ is even → $2\\int_0^3 x^2\\,dx = 2[x^3/3]_0^3 = 2(9) = 18$.'
+            explanation: '$x^5$ is odd → $0$. $x^2$ is even → $2\\int_0^3 x^2\\,dx = 2[x^3/3]_0^3 = 2(9) = 18$. Forgetting to double gives $9$, treating $x^5$ as even too gives $2(\\frac{729}{6} + 9) = 261$, and calling the whole integrand odd gives $0$.'
           }
         ]
       }
@@ -114,10 +114,10 @@ export const calcabDefiniteIntegralsPart7Data = {
           },
           {
             label: 'A Left Riemann Sum with $n = 4$ on $[0,8]$ has $\\Delta x =$:',
-            options: ['$1$', '$2$', '$4$', '$8$'],
+            options: ['$1/2$', '$2$', '$8/3$', '$32$'],
             correctAnswers: ['$2$'],
             hints: ['$\\Delta x = (b-a)/n = (8-0)/4$.'],
-            explanation: '$\\Delta x = 8/4 = 2$.'
+            explanation: '$\\Delta x = \\frac{b-a}{n} = \\frac{8-0}{4} = 2$.'
           }
         ]
       }

@@ -123,7 +123,7 @@ $$\\boxed{\\text{If } f \\text{ is odd: } \\int_{-a}^a f(x)\\,dx = 0}$$
         dropdowns: [
           {
             label: '$\\int_{-3}^{3} x^5 e^{x^2}\\,dx$ equals:',
-            options: ['Requires full computation', '$0$ by odd symmetry', '$2\\int_0^3 x^5 e^{x^2}\\,dx$', 'Cannot be evaluated'],
+            options: ['Requires full computation', '$0$ by odd symmetry', '$2\\int_0^3 x^5 e^{x^2}\\,dx$', 'Cannot be evaluated by hand'],
             correctAnswers: ['$0$ by odd symmetry'],
             hints: ['$x^5$ is odd, $e^{x^2}$ is even. Odd $\\times$ even $=$ odd.'],
             explanation: 'The integrand is odd. $\\int_{-a}^a (\\text{odd}) = 0$.'
@@ -137,10 +137,10 @@ $$\\boxed{\\text{If } f \\text{ is odd: } \\int_{-a}^a f(x)\\,dx = 0}$$
           },
           {
             label: 'After u-sub gives $\\int_2^5 3u\\,du$, you should:',
-            options: ['Replace $u$ back with $x$ and use original bounds', 'Evaluate directly: $\\frac{3u^2}{2}\\Big|_2^5$', 'Change bounds back to $x$-values', 'The integral is $0$'],
+            options: ['Back-substitute but keep bounds $2$ and $5$', 'Evaluate directly: $\\frac{3u^2}{2}\\Big|_2^5$', 'Change bounds back to $x$-values', 'Evaluate $3u$ at $5$ and $2$ and subtract'],
             correctAnswers: ['Evaluate directly: $\\frac{3u^2}{2}\\Big|_2^5$'],
             hints: ['When you changed limits to $u$-values, you are done — evaluate in $u$.'],
-            explanation: 'With $u$-limits already set, evaluate directly: $\\frac{3(25)}{2} - \\frac{3(4)}{2} = \\frac{63}{2}$.'
+            explanation: 'With $u$-limits already set, evaluate directly: $\\frac{3(25)}{2} - \\frac{3(4)}{2} = \\frac{63}{2}$. Mixing $x$ back in while keeping the $u$-bounds gives the wrong answer.'
           }
         ]
       }
@@ -152,7 +152,7 @@ $$\\boxed{\\text{If } f \\text{ is odd: } \\int_{-a}^a f(x)\\,dx = 0}$$
       exercise: {
         question: 'Evaluate $\\int_0^1 x(x^2+1)^2\\,dx$.\n\nHint: $u = x^2+1$.\n\n(Give an exact answer as a fraction like a/b.)',
         correctAnswer: '7/6',
-        acceptableAnswers: ['7/6'],
+        acceptableAnswers: ['7/6', '1.17', '1.167'],
         hints: [
           '$u = x^2+1$, $du = 2x\\,dx$, so $x\\,dx = du/2$.',
           'Limits: $x=0 \\to u=1$, $x=1 \\to u=2$.',

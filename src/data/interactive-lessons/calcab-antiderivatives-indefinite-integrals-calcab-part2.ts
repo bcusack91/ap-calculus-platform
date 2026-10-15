@@ -114,7 +114,7 @@ $= \\tan x - (-\\cot x) + C = \\tan x + \\cot x + C$
           },
           {
             question: 'Which integral is INVALID to split?',
-            options: ['$\\int (x^2 + 3x)\\,dx$', '$\\int 5\\sin x\\,dx$', '$\\int x^2 \\cdot e^x\\,dx$', '$\\int (e^x - \\cos x)\\,dx$'],
+            options: ['$\\int (x^2 + 3x)\\,dx$', '$\\int 5\\sin x\\,dx$', '$\\int x^2 \\cdot e^x\\,dx$', '$\\int (e^x - 1)\\,dx$'],
             correctAnswer: 2,
             explanation: 'The product $x^2 \\cdot e^x$ cannot be split into separate integrals. This requires integration by parts (BC topic).'
           }
@@ -164,7 +164,7 @@ $= \\tan x - (-\\cot x) + C = \\tan x + \\cot x + C$
           'Set $C = 0$ and evaluate at $x = 0$.',
           '$6e^0 + 4\\sin(0) = 6(1) + 4(0)$.'
         ],
-        explanation: '$\\int (6e^x + 4\\cos x)\\,dx = 6e^x + 4\\sin x + C$.\\n\\nAt $x = 0$ with $C = 0$: $6e^0 + 4\\sin 0 = 6(1) + 0 = 6$.'
+        explanation: '$\\int (6e^x + 4\\cos x)\\,dx = 6e^x + 4\\sin x + C$. At $x = 0$ with $C = 0$: $6e^0 + 4\\sin 0 = 6(1) + 0 = 6$.'
       }
     },
     {

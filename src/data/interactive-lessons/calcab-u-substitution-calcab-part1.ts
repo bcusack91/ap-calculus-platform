@@ -121,21 +121,21 @@ $$\\boxed{\\int f(ax+b)\\,dx = \\frac{1}{a}F(ax+b) + C}$$
         dropdowns: [
           {
             label: 'For $\\int x^3 \\cos(x^4)\\,dx$, choose $u =$:',
-            options: ['$x^3$', '$x^4$', '$\\cos(x^4)$', '$x^3\\cos(x^4)$'],
+            options: ['$\\sin(x^4)$', '$x^4$', '$\\cos(x^4)$', '$x^3\\cos(x^4)$'],
             correctAnswers: ['$x^4$'],
             hints: ['$x^4$ is the inner function, and $x^3$ is related to its derivative.'],
             explanation: '$u = x^4$, $du = 4x^3\\,dx$. Then $\\frac{1}{4}\\int \\cos u\\,du = \\frac{\\sin(x^4)}{4} + C$.'
           },
           {
             label: 'For $\\int \\frac{e^x}{1+e^x}\\,dx$, choose $u =$:',
-            options: ['$e^x$', '$1 + e^x$', '$\\frac{1}{1+e^x}$', '$\\ln(1+e^x)$'],
+            options: ['$\\frac{e^x}{1+e^x}$', '$1 + e^x$', '$\\frac{1}{1+e^x}$', '$\\ln(1+e^x)$'],
             correctAnswers: ['$1 + e^x$'],
             hints: ['Look for $\\frac{f\'}{f}$ pattern — the derivative of the denominator is in the numerator.'],
             explanation: '$u = 1+e^x$, $du = e^x\\,dx$. $\\int \\frac{du}{u} = \\ln|1+e^x| + C$.'
           },
           {
             label: 'For $\\int \\sin^3(x)\\cos(x)\\,dx$, choose $u =$:',
-            options: ['$\\sin^3(x)$', '$\\sin(x)$', '$\\cos(x)$', '$\\sin(x)\\cos(x)$'],
+            options: ['$\\sin^3(x)$', '$\\sin(x)$', '$\\sin^4(x)$', '$\\sin(x)\\cos(x)$'],
             correctAnswers: ['$\\sin(x)$'],
             hints: ['$\\cos(x)$ is the derivative of $\\sin(x)$, and $\\sin^3(x)$ is a power of $\\sin(x)$.'],
             explanation: '$u = \\sin x$, $du = \\cos x\\,dx$. $\\int u^3\\,du = \\frac{\\sin^4(x)}{4} + C$.'

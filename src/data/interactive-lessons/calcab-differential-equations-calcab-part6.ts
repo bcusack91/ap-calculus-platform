@@ -53,15 +53,15 @@ So $y(1) \\approx 2.5$.
         questions: [
           {
             question: 'For $\\frac{dy}{dx} = y(3-y)$, the equilibrium solutions are:',
-            options: ['$y = 0$ and $y = 3$', '$y = 0$ only', '$y = 3$ only', '$y = -3$ and $y = 3$'],
+            options: ['$y = 0$ and $y = 3$', '$y = 0$ only', '$y = 3$ only', '$y = \\pm 3$'],
             correctAnswer: 0,
-            explanation: '$y(3-y) = 0$ when $y = 0$ or $y = 3$.'
+            explanation: '$y(3-y) = 0$ when $y = 0$ or $y = 3$. Both factors give an equilibrium, and $y = -3$ is not a root.'
           },
           {
             question: 'Newton\'s Law of Cooling: $\\frac{dT}{dt} = -0.1(T-70)$, $T(0) = 200$. Find $T(t)$.',
-            options: ['$T = 70+130e^{-0.1t}$', '$T = 200e^{-0.1t}$', '$T = 70+200e^{-0.1t}$', '$T = 130e^{-0.1t}$'],
+            options: ['$T = 70+130e^{-0.1t}$', '$T = 200e^{-0.1t}$', '$T = 70+130e^{0.1t}$', '$T = 130e^{-0.1t}$'],
             correctAnswer: 0,
-            explanation: '$u = T-70$: $du/dt = -0.1u$. $u = 130e^{-0.1t}$. $T = 70+130e^{-0.1t}$.'
+            explanation: '$u = T-70$: $du/dt = -0.1u$. $u = 130e^{-0.1t}$. $T = 70+130e^{-0.1t}$. The constant is $T(0) - 70 = 130$, not $200$, and dropping the negative exponent would make the object heat up forever.'
           },
           {
             question: 'Using Euler\'s method with $\\frac{dy}{dx} = 2x$, $y(0) = 0$, $\\Delta x = 1$: what is $y(2)$?',
@@ -104,14 +104,14 @@ Given a table of $(x, y, dy/dx)$ values, use Euler's method or verify a proposed
         dropdowns: [
           {
             label: '$\\frac{dy}{dx} = \\frac{y-1}{x}$ is solved by:',
-            options: ['Direct integration', 'Separation of variables', 'Cannot be solved', 'Euler\'s method only'],
+            options: ['Direct integration', 'Separation of variables', 'Logistic formula', 'Not solvable on AP AB'],
             correctAnswers: ['Separation of variables'],
             hints: ['$\\frac{dy}{y-1} = \\frac{dx}{x}$. Both sides can be integrated.'],
             explanation: '$\\ln|y-1| = \\ln|x| + C$, so $y - 1 = Ax$, $y = Ax + 1$.'
           },
           {
             label: 'Euler\'s method with concave-up solution gives:',
-            options: ['Exact answer', 'Overestimate', 'Underestimate', 'Cannot determine'],
+            options: ['Exact answer', 'Overestimate', 'Underestimate', 'Undetermined'],
             correctAnswers: ['Underestimate'],
             hints: ['Tangent lines lie below a concave-up curve.'],
             explanation: 'Concave up → tangent line underestimates the curve → Euler underestimates.'

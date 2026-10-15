@@ -89,7 +89,7 @@ $$A = \\int_0^2(2x-x^2)\\,dx = \\left[x^2 - \\frac{x^3}{3}\\right]_0^2 = 4 - \\f
           },
           {
             label: 'Triangle formed by $y=0$, $x=0$, and $y=3-x$. Its area by integration is:',
-            options: ['$\\frac{9}{2}$', '$3$', '$6$', '$9$'],
+            options: ['$\\frac{9}{2}$', '$9$', '$0$', '$\\frac{27}{2}$'],
             correctAnswers: ['$\\frac{9}{2}$'],
             hints: ['$A = \\int_0^3(3-x)\\,dx$.'],
             explanation: '$A = [3x-\\frac{x^2}{2}]_0^3 = 9-\\frac{9}{2} = \\frac{9}{2}$. (Or $\\frac{1}{2}(3)(3) = \\frac{9}{2}$.)'

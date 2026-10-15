@@ -80,24 +80,24 @@ $$V = \\pi\\int_{-1}^1[(3-x^2)^2-4]\\,dx$$`
         dropdowns: [
           {
             label: 'Rotate $y=4-x^2$ and $y=0$ about $y=5$. Outer radius:',
-            options: ['$R = 5$ (from $y=0$)', '$R = 5-(4-x^2) = 1+x^2$', '$R = 4-x^2$', '$R = 5-x^2$'],
-            correctAnswers: ['$R = 5$ (from $y=0$)'],
+            options: ['$R = 5$', '$R = 5-(4-x^2) = 1+x^2$', '$R = 4-x^2$', '$R = 5-x^2$'],
+            correctAnswers: ['$R = 5$'],
             hints: ['Which curve is farther from $y=5$? $y=0$ is 5 units away.'],
-            explanation: '$y=0$ is farther from $y=5$ (distance 5). Outer $R = 5$.'
+            explanation: '$y=0$ is farther from $y=5$ (distance $5 - 0 = 5$), so the outer radius is $R = 5$. The inner radius is $r = 5-(4-x^2) = 1+x^2$.'
           },
           {
             label: 'Rotate $y=x$ and $y=0$ about $y=-2$ on $[0,3]$. Washer or disk?',
-            options: ['Washer (region does not touch $y=-2$)', 'Disk', 'Neither', 'Cannot determine'],
-            correctAnswers: ['Washer (region does not touch $y=-2$)'],
+            options: ['Washer: $R = x+2$, $r = 2$', 'Disk: $R = x+2$', 'Disk: $R = x$', 'Washer: $R = 2$, $r = x+2$'],
+            correctAnswers: ['Washer: $R = x+2$, $r = 2$'],
             hints: ['Is there a gap between the region and the axis $y=-2$?'],
-            explanation: 'The region is above the $x$-axis; $y=-2$ is below. There is a gap \u2192 washer.'
+            explanation: 'The region is above the $x$-axis and $y=-2$ is below, so there is a gap: washer. Outer $R = x-(-2) = x+2$, inner $r = 0-(-2) = 2$.'
           },
           {
             label: 'When rotating about $y=k$ above the region, the outer curve is:',
-            options: ['The bottom curve (farther from $k$)', 'The top curve', 'The axis itself', 'Always $f(x)$'],
-            correctAnswers: ['The bottom curve (farther from $k$)'],
+            options: ['The bottom curve', 'The top curve', 'The curve closer to $y = k$', 'Whichever curve is larger'],
+            correctAnswers: ['The bottom curve'],
             hints: ['With the axis above, the bottom of the region is the farthest.'],
-            explanation: 'The bottom curve is farther from an axis above \u2192 it creates the outer radius.'
+            explanation: 'The bottom curve is farther from an axis above the region, so it gives the outer radius.'
           }
         ]
       }

@@ -136,10 +136,10 @@ $= [4t - \\frac{t^3}{3}]_0^2 + [\\frac{t^3}{3} - 4t]_2^3 = \\frac{16}{3} + \\fra
         dropdowns: [
           {
             label: '$\\int_0^{10} v(t)\\,dt = -15$ means:',
-            options: ['The particle traveled 15 units total', 'The particle is 15 units left of its starting position', 'The particle is 15 units right of its starting position', 'The particle stopped after 15 seconds'],
+            options: ['The particle traveled 15 units total', 'The particle is 15 units left of its starting position', 'The particle is 15 units right of its starting position', 'The particle\'s average velocity was $-15$'],
             correctAnswers: ['The particle is 15 units left of its starting position'],
             hints: ['$\\int v\\,dt$ gives displacement (net change in position), and it is negative.'],
-            explanation: 'Displacement = −15 means the particle moved 15 units in the negative direction from its start.'
+            explanation: 'Displacement $= -15$ means the particle ends 15 units in the negative direction from its start. Average velocity would be $\\frac{-15}{10} = -1.5$.'
           },
           {
             label: 'To find the total distance traveled, you compute:',
@@ -163,7 +163,7 @@ $= [4t - \\frac{t^3}{3}]_0^2 + [\\frac{t^3}{3} - 4t]_2^3 = \\frac{16}{3} + \\fra
       type: 'input-box' as const,
       content: '**Net Change Problem** ✍️',
       exercise: {
-        question: 'A particle has velocity $v(t) = 3t^2 - 12$ and starts at $s(0) = 5$. Find $s(3)$.\n\n(Enter a whole number.)',
+        question: 'A particle has velocity $v(t) = 3t^2 - 12$ and starts at $s(0) = 5$. Find $s(3)$.\n\n(Enter an integer.)',
         correctAnswer: '-4',
         acceptableAnswers: ['-4', '-4.0'],
         hints: [

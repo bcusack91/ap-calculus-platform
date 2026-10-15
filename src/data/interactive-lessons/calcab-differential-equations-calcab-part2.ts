@@ -61,15 +61,15 @@ $$x^2 + y^2 = 25 \\quad \\text{(a circle!)}$$`
         questions: [
           {
             question: 'Solve $\\frac{dy}{dx} = \\frac{x}{y}$ with $y(0) = 3$.',
-            options: ['$y = \\sqrt{x^2 + 9}$', '$y = x^2 + 9$', '$y = \\sqrt{x + 9}$', '$y = \\sqrt{2x^2 + 9}$'],
+            options: ['$y = \\sqrt{x^2 + 9}$', '$y = x^2 + 9$', '$y = \\sqrt{x + 9}$', '$y = \\sqrt{x^2 + 3}$'],
             correctAnswer: 0,
-            explanation: '$y\\,dy = x\\,dx$. $y^2/2 = x^2/2 + C$. $y(0) = 3$: $9/2 = C$. $y^2 = x^2 + 9$. $y = \\sqrt{x^2+9}$.'
+            explanation: '$y\\,dy = x\\,dx$. $y^2/2 = x^2/2 + C$. $y(0) = 3$: $9/2 = C$. $y^2 = x^2 + 9$. $y = \\sqrt{x^2+9}$. Using $3$ as the constant before squaring gives $\\sqrt{x^2+3}$, and forgetting the square root gives $x^2 + 9$.'
           },
           {
             question: 'Solve $\\frac{dy}{dx} = 3y$ with $y(0) = 5$.',
-            options: ['$y = 5e^{3x}$', '$y = 3e^{5x}$', '$y = 5 + 3x$', '$y = e^{3x} + 4$'],
+            options: ['$y = 5e^{3x}$', '$y = e^{3x+5}$', '$y = 5(1 + 3x)$', '$y = e^{3x} + 4$'],
             correctAnswer: 0,
-            explanation: '$\\frac{dy}{y} = 3\\,dx$. $\\ln|y| = 3x + C$. $y = Ae^{3x}$. $y(0) = A = 5$.'
+            explanation: '$\\frac{dy}{y} = 3\\,dx$. $\\ln|y| = 3x + C$. $y = Ae^{3x}$. $y(0) = A = 5$. Writing $e^{3x+5}$ puts the constant in the exponent, $5(1 + 3x)$ treats the rate $3y$ as the constant $15$, and $e^{3x} + 4$ adds the constant instead of multiplying.'
           },
           {
             question: 'Which DE is NOT separable?',
@@ -116,17 +116,17 @@ Dividing by $y(3-y)$ loses $y = 0$ and $y = 3$ — these ARE constant solutions 
           },
           {
             label: '$\\frac{dy}{dx} = y^2 \\cos x$ with $y(0) = 1$ — the solution involves:',
-            options: ['$e^{\\sin x}$', '$\\frac{1}{1-\\sin x}$', '$\\tan x$', '$\\sin^2 x$'],
+            options: ['$e^{\\sin x}$', '$\\frac{1}{1-\\sin x}$', '$\\frac{1}{1+\\sin x}$', '$1 - \\sin x$'],
             correctAnswers: ['$\\frac{1}{1-\\sin x}$'],
             hints: ['$\\frac{dy}{y^2} = \\cos x\\,dx$. $-1/y = \\sin x + C$. Use $y(0)=1$.'],
             explanation: '$-1/y = \\sin x + C$. $y(0) = 1$: $C = -1$. $y = \\frac{1}{1 - \\sin x}$.'
           },
           {
             label: 'The equilibrium solutions of $\\frac{dy}{dx} = y^2 - 4$ are:',
-            options: ['$y = 0$ only', '$y = 2$ and $y = -2$', '$y = 4$ only', 'No equilibrium solutions'],
+            options: ['$y = 0$ only', '$y = 2$ and $y = -2$', '$y = 2$ only', 'No equilibrium solutions'],
             correctAnswers: ['$y = 2$ and $y = -2$'],
             hints: ['Set $dy/dx = 0$: $y^2 - 4 = 0$.'],
-            explanation: '$y^2 = 4$ gives $y = 2$ and $y = -2$. These are constant solutions.'
+            explanation: '$y^2 - 4 = 0$ gives $y = 2$ and $y = -2$. These are constant solutions; the negative root counts too.'
           }
         ]
       }
@@ -138,7 +138,7 @@ Dividing by $y(3-y)$ loses $y = 0$ and $y = 3$ — these ARE constant solutions 
       exercise: {
         question: 'Solve $\\frac{dy}{dx} = \\frac{2x}{y}$ with $y(0) = 4$. Find $y(3)$.\n\n(Enter an exact value. If irrational, use sqrt notation like $\\sqrt{N}$.)',
         correctAnswer: 'sqrt(34)',
-        acceptableAnswers: ['sqrt(34)', 'sqrt34', '√34'],
+        acceptableAnswers: ['sqrt(34)', 'sqrt34', '√34', '√(34)', '5.83', '5.831'],
         hints: [
           'Separate: $y\\,dy = 2x\\,dx$.',
           'Integrate: $y^2/2 = x^2 + C$. Use $y(0) = 4$: $C = 8$.',

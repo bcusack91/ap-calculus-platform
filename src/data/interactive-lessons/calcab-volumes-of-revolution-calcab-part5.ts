@@ -74,22 +74,22 @@ $$V = \\pi\\int_0^1(y^2-y^4)\\,dy = \\pi\\left[\\frac{y^3}{3}-\\frac{y^5}{5}\\ri
         dropdowns: [
           {
             label: 'To rotate about $x = -2$, before setting up in $dy$, you need:',
-            options: ['Express $x$ as function of $y$; use distance $|x(y)-(-2)|$', 'Express $y$ as function of $x$', 'No adjustment needed', 'Add 2 to the integrand'],
-            correctAnswers: ['Express $x$ as function of $y$; use distance $|x(y)-(-2)|$'],
+            options: ['Write $x$ in terms of $y$; radius $x(y)+2$', 'Write $y$ in terms of $x$; radius $y(x)+2$', 'Write $x$ in terms of $y$; radius $x(y)-2$', 'Write $x$ in terms of $y$; radius $x(y)$'],
+            correctAnswers: ['Write $x$ in terms of $y$; radius $x(y)+2$'],
             hints: ['Axis $x = -2$ requires radii measured horizontally from $x=-2$.'],
             explanation: 'Radius = $x(y)-(-2) = x(y)+2$ when region is to the right of $x=-2$.'
           },
           {
             label: 'Choosing $dx$ vs $dy$: the variable matches:',
-            options: ['The axis direction perpendicular to the axis of rotation', 'The axis of rotation itself', 'Whichever is easier', 'It does not matter'],
-            correctAnswers: ['The axis direction perpendicular to the axis of rotation'],
+            options: ['The direction along the axis of rotation', 'The direction perpendicular to the axis', 'Always $x$, whatever the axis', 'It does not matter for disks'],
+            correctAnswers: ['The direction along the axis of rotation'],
             hints: ['Rotate about $x$-axis (horizontal) \u2192 slice vertically \u2192 $dx$. Rotate about $y$-axis \u2192 slice horizontally \u2192 $dy$.'],
-            explanation: 'Slices are perpendicular to the axis of rotation, so integrate along that perpendicular direction.'
+            explanation: 'Disks and washers are sliced perpendicular to the axis of rotation, so each slice\'s thickness ($dx$ or $dy$) runs along that axis: a horizontal axis means $dx$, a vertical axis means $dy$.'
           },
           {
             label: 'Compared to disk/washer in $x$, disk/washer in $y$ is:',
-            options: ['The same formulas with $x$ and $y$ roles swapped', 'A completely different method', 'Only for the shell method', 'Never used on AP exams'],
-            correctAnswers: ['The same formulas with $x$ and $y$ roles swapped'],
+            options: ['The same formulas with $x$ and $y$ swapped', 'A different method with new formulas', 'The same formulas, but without the $\\pi$', 'The shell method under another name'],
+            correctAnswers: ['The same formulas with $x$ and $y$ swapped'],
             hints: ['The logic is identical \u2014 just swap variables.'],
             explanation: 'Same idea: $\\pi\\int R^2$ or $\\pi\\int(R^2-r^2)$, but radii are functions of $y$ and limits are $y$-values.'
           }
@@ -103,7 +103,7 @@ $$V = \\pi\\int_0^1(y^2-y^4)\\,dy = \\pi\\left[\\frac{y^3}{3}-\\frac{y^5}{5}\\ri
       exercise: {
         question: 'Rotate $y = x^3$ ($x = y^{1/3}$) about the $y$-axis from $y=0$ to $y=8$. Volume $= a\\pi$. Find $a$.\n\n(Enter a fraction as a/b.)',
         correctAnswer: '96/5',
-        acceptableAnswers: ['96/5'],
+        acceptableAnswers: ['96/5', '19.2'],
         hints: [
           '$R(y) = y^{1/3}$.',
           '$V = \\pi\\int_0^8(y^{1/3})^2\\,dy = \\pi\\int_0^8 y^{2/3}\\,dy$.',

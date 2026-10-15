@@ -46,15 +46,15 @@ $$V = \\pi\\int_0^1(x^2 - x^4)\\,dx = \\pi\\left[\\frac{x^3}{3}-\\frac{x^5}{5}\\
         questions: [
           {
             question: 'Region between $y = \\sqrt{x}$ and $y = x$ rotated about $x$-axis. Volume:',
-            options: ['$\\frac{\\pi}{6}$', '$\\frac{\\pi}{3}$', '$\\frac{2\\pi}{3}$', '$\\frac{\\pi}{2}$'],
+            options: ['$\\frac{\\pi}{6}$', '$\\frac{\\pi}{30}$', '$\\frac{2\\pi}{3}$', '$-\\frac{\\pi}{6}$'],
             correctAnswer: 0,
-            explanation: '$R = \\sqrt{x}$, $r = x$ on $[0,1]$. $V = \\pi\\int_0^1(x-x^2)\\,dx = \\pi(\\frac{1}{2}-\\frac{1}{3}) = \\frac{\\pi}{6}$.'
+            explanation: '$R = \\sqrt{x}$, $r = x$ on $[0,1]$. $V = \\pi\\int_0^1(R^2 - r^2)\\,dx = \\pi\\int_0^1(x-x^2)\\,dx = \\pi(\\frac{1}{2}-\\frac{1}{3}) = \\frac{\\pi}{6}$. Squaring the difference, $\\pi\\int_0^1(\\sqrt{x}-x)^2\\,dx$, gives $\\frac{\\pi}{30}$, and inner minus outer gives $-\\frac{\\pi}{6}$.'
           },
           {
             question: 'Region between $y = 4-x^2$ and $y = 0$ rotated about $x$-axis. This is a:',
-            options: ['Disk problem ($r = 0$)', 'Washer problem', 'Cross-section problem', 'Shell method problem'],
+            options: ['Disk problem', 'Washer problem', 'Shell method problem', 'Cross-section problem'],
             correctAnswer: 0,
-            explanation: 'The region touches the $x$-axis ($y = 0$), so no hole. Just a disk.'
+            explanation: 'The region sits directly on the axis of rotation ($y = 0$), so there is no hole: the inner radius is $0$ and each slice is a solid disk. A washer needs a gap between the region and the axis, and a cross-section problem builds slices on a base rather than rotating it.'
           },
           {
             question: 'Region between $y = 2$ and $y = x^2$ on $[-\\sqrt{2}, \\sqrt{2}]$ about $x$-axis. Outer radius:',
@@ -80,17 +80,17 @@ $$V = \\pi\\int_0^1(x^2 - x^4)\\,dx = \\pi\\left[\\frac{x^3}{3}-\\frac{x^5}{5}\\
           },
           {
             label: '$R^2 - r^2$ vs $(R-r)^2$: the difference matters because:',
-            options: ['$R^2-r^2 \\neq (R-r)^2$ in general', 'They are the same', 'One gives negative volume', 'The $\\pi$ cancels'],
+            options: ['$R^2-r^2 \\neq (R-r)^2$ in general', '$(R-r)^2$ is always larger', '$R^2-r^2$ can give a negative volume', '$(R-r)^2$ is the hole\'s area'],
             correctAnswers: ['$R^2-r^2 \\neq (R-r)^2$ in general'],
             hints: ['$(R-r)^2 = R^2-2Rr+r^2$. Compare with $R^2-r^2$.'],
-            explanation: '$(R-r)^2$ drops the $2Rr$ cross term and changes the sign on $r^2$. They are NOT equal.'
+            explanation: '$(R-r)^2 = R^2 - 2Rr + r^2$, which is not $R^2 - r^2$ (it is actually smaller when $0 < r < R$). Subtract the squares, not the radii.'
           },
           {
-            label: 'Rotate region between $y=e^x$ and $y=1$ ($x \\in [0,1]$). Method:',
-            options: ['Washer (gap between region and axis possible, but $y=1$ sits above axis)', 'Disk', 'Cross-section', 'Cannot determine'],
-            correctAnswers: ['Washer (gap between region and axis possible, but $y=1$ sits above axis)'],
+            label: 'Rotate region between $y=e^x$ and $y=1$ ($x \\in [0,1]$) about the $x$-axis. Method:',
+            options: ['Washer: $R = e^x$, $r = 1$', 'Disk: $R = e^x$', 'Disk: $R = e^x - 1$', 'Washer: $R = 1$, $r = e^x$'],
+            correctAnswers: ['Washer: $R = e^x$, $r = 1$'],
             hints: ['The inner boundary $y=1$ does not touch the $x$-axis.'],
-            explanation: 'Washer: outer $R=e^x$, inner $r=1$.'
+            explanation: 'The region sits between $y = 1$ and $y = e^x$, leaving a gap between it and the $x$-axis: washer with outer $R = e^x$ and inner $r = 1$. Subtracting first to get a disk with $R = e^x - 1$ is a common error.'
           }
         ]
       }

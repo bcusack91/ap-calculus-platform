@@ -72,7 +72,7 @@ $$T = \\frac{\\Delta x_1}{2}(f_0+f_1) + \\frac{\\Delta x_2}{2}(f_1+f_2) + \\cdot
           },
           {
             question: 'If $f$ is increasing and concave up, the trapezoidal rule gives:',
-            options: ['An overestimate', 'An underestimate', 'The exact value', 'Cannot determine'],
+            options: ['An overestimate', 'An underestimate', 'The exact integral value', 'Cannot determine'],
             correctAnswer: 0,
             explanation: 'Concave up $\\Rightarrow$ secant lines are above the curve $\\Rightarrow$ trapezoidal overestimates.'
           },
@@ -93,24 +93,24 @@ $$T = \\frac{\\Delta x_1}{2}(f_0+f_1) + \\frac{\\Delta x_2}{2}(f_1+f_2) + \\cdot
         dropdowns: [
           {
             label: '$f$ is concave down and increasing. Left Riemann sum is:',
-            options: ['Overestimate', 'Underestimate', 'Exact', 'Cannot determine'],
+            options: ['Overestimate', 'Underestimate', 'Exact', 'Undetermined'],
             correctAnswers: ['Underestimate'],
             hints: ['Increasing $\\Rightarrow$ left sum is under.'],
             explanation: 'Increasing: left sum underestimates (regardless of concavity).'
           },
           {
             label: '$f$ is concave down. Midpoint rule is:',
-            options: ['Overestimate', 'Underestimate', 'Exact', 'Cannot determine'],
+            options: ['Overestimate', 'Underestimate', 'Exact', 'Undetermined'],
             correctAnswers: ['Overestimate'],
             hints: ['Midpoint and trapezoidal have opposite errors from concavity.'],
             explanation: 'Concave down: trapezoidal underestimates, midpoint overestimates.'
           },
           {
             label: 'Trapezoidal with unequal subintervals: $x = 0, 2, 5$ and $f = 3, 7, 4$:',
-            options: ['$\\frac{2}{2}(3+7)+\\frac{3}{2}(7+4) = 10+16.5 = 26.5$', '$\\frac{5}{2}(3+2(7)+4) = 52.5$', '$3+7+4 = 14$', '$\\frac{1}{2}(3+7)+\\frac{1}{2}(7+4) = 10.5$'],
-            correctAnswers: ['$\\frac{2}{2}(3+7)+\\frac{3}{2}(7+4) = 10+16.5 = 26.5$'],
+            options: ['$\\frac{2}{2}(3+7)+\\frac{3}{2}(7+4) = 26.5$', '$\\frac{5}{2}(3+2(7)+4) = 52.5$', '$\\frac{5}{4}(3+2(7)+4) = 26.25$', '$\\frac{1}{2}(10)+\\frac{1}{2}(11) = 10.5$'],
+            correctAnswers: ['$\\frac{2}{2}(3+7)+\\frac{3}{2}(7+4) = 26.5$'],
             hints: ['$\\Delta x_1 = 2$, $\\Delta x_2 = 3$. Apply trapezoid to each separately.'],
-            explanation: '$T = 1(10) + 1.5(11) = 10 + 16.5 = 26.5$.'
+            explanation: '$T = \\frac{2}{2}(3+7) + \\frac{3}{2}(7+4) = 10 + 16.5 = 26.5$. Each trapezoid uses its own width.'
           }
         ]
       }

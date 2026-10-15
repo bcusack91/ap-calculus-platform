@@ -83,14 +83,14 @@ $$\\boxed{Q(t) = Q_0 + \\int_0^t [R_{in}(s) - R_{out}(s)]\\,ds}$$
         dropdowns: [
           {
             label: '$\\int_2^6 C\'(x)\\,dx = 340$ means:',
-            options: ['Total cost is \\$340', 'The cost of producing units 2 through 6 is \\$340', 'Average cost is \\$340', 'Cost per unit is \\$340'],
-            correctAnswers: ['The cost of producing units 2 through 6 is \\$340'],
+            options: ['Total cost of making 6 units is \\$340', 'Cost rises \\$340 from $x = 2$ to $x = 6$', 'Average cost per unit on $[2,6]$ is \\$340', 'Marginal cost at $x = 6$ is \\$340 per unit'],
+            correctAnswers: ['Cost rises \\$340 from $x = 2$ to $x = 6$'],
             hints: ['Integral of marginal cost = change in cost: $C(6)-C(2) = 340$.'],
-            explanation: '$C(6)-C(2) = 340$: the additional cost from unit 2 to unit 6.'
+            explanation: '$C(6)-C(2) = 340$: raising production from 2 to 6 units adds \\$340 to the cost.'
           },
           {
             label: '$\\int_0^{10} R_{in}(t)\\,dt = 500$ and $\\int_0^{10} R_{out}(t)\\,dt = 350$. Net change in tank:',
-            options: ['$150$ gallons added', '$500$ gallons added', '$350$ gallons removed', '$850$ total gallons'],
+            options: ['$150$ gallons added', '$500$ gallons added', '$350$ gallons removed', '$850$ gallons added'],
             correctAnswers: ['$150$ gallons added'],
             hints: ['Net = in $-$ out $= 500-350$.'],
             explanation: 'Net change $= 500-350 = 150$ gallons added to the tank.'

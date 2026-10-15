@@ -94,24 +94,24 @@ Note: $f$ crosses zero at $x = 3$ (linear from $2$ to $-2$). $F$ has its **maxim
         dropdowns: [
           {
             label: 'On $[0,2]$, $f = 2$ (constant). On this interval, $g$ is:',
-            options: ['Linear and increasing', 'Quadratic and increasing', 'Constant', 'Decreasing'],
+            options: ['Linear and increasing', 'Quadratic and increasing', 'Constant, equal to $2$', 'Concave up and increasing'],
             correctAnswers: ['Linear and increasing'],
             hints: ['If $f$ is constant, then $g = \\int f$ is linear.'],
             explanation: '$g\' = f = 2$ (constant), so $g$ increases at a constant rate: $g$ is linear.'
           },
           {
             label: 'On $[2,4]$, $f$ is linear from $2$ to $-2$. On this interval, $g$ is:',
-            options: ['Linear', 'Quadratic (parabola)', 'Exponential', 'Piecewise linear'],
-            correctAnswers: ['Quadratic (parabola)'],
+            options: ['Linear', 'Quadratic', 'Cubic', 'Constant'],
+            correctAnswers: ['Quadratic'],
             hints: ['If $f$ is linear (degree 1), then $g = \\int f$ is degree 2.'],
             explanation: 'Integrating a linear function gives a quadratic. $g$ is a parabola opening down on $[2,4]$.'
           },
           {
             label: 'At $x = 3$, $g$ has a local max because:',
-            options: ['$f(3) = 0$ (that is enough)', '$f$ changes from positive to negative at $x=3$', '$f$ is decreasing at $x=3$', '$g(3) > g(2)$'],
-            correctAnswers: ['$f$ changes from positive to negative at $x=3$'],
+            options: ['$f(3) = 0$, which alone is enough', '$f$ changes from $+$ to $-$ at $x=3$', '$f$ is decreasing through $x=3$', '$g(3) > g(2)$'],
+            correctAnswers: ['$f$ changes from $+$ to $-$ at $x=3$'],
             hints: ['Critical point ($f=0$) is not sufficient. You must show the sign change.'],
-            explanation: 'For a local max: $g\'(3) = f(3) = 0$ AND $f$ changes from $+$ to $-$.'
+            explanation: 'For a local max: $g\'(3) = f(3) = 0$ AND $f$ changes from $+$ to $-$. A sign change from $-$ to $+$ would give a local min, and $g(3) > g(2)$ alone does not make $x = 3$ a maximum.'
           }
         ]
       }

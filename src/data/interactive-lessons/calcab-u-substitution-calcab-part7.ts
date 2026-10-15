@@ -85,9 +85,9 @@ export const calcabUSubPart7Data = {
           },
           {
             question: '$\\int \\sec x\\,dx =$',
-            options: ['$\\tan x + C$', '$\\ln|\\sec x + \\tan x| + C$', '$\\sec x \\tan x + C$', '$\\arctan(\\sin x) + C$'],
+            options: ['$\\ln|\\sec x| + C$', '$\\ln|\\sec x + \\tan x| + C$', '$\\sec x \\tan x + C$', '$\\tan x + C$'],
             correctAnswer: 1,
-            explanation: 'Classic result: multiply by $\\frac{\\sec x + \\tan x}{\\sec x + \\tan x}$. Numerator becomes $du$ where $u = \\sec x + \\tan x$.'
+            explanation: 'Classic result: multiply by $\\frac{\\sec x + \\tan x}{\\sec x + \\tan x}$. Numerator becomes $du$ where $u = \\sec x + \\tan x$, giving $\\ln|\\sec x + \\tan x| + C$. $\\ln|\\sec x|$ is the antiderivative of $\\tan x$, $\\sec x \\tan x$ is the derivative of $\\sec x$, and $\\tan x$ is the antiderivative of $\\sec^2 x$.'
           }
         ]
       }
@@ -99,11 +99,11 @@ export const calcabUSubPart7Data = {
       exercise: {
         dropdowns: [
           {
-            label: '$\\int \\frac{5x^2+3}{x^3+2}\\,dx$ — identify the pattern:',
-            options: ['Power rule', '$f\'/f \\to \\ln$ (with adjustment)', 'Inverse trig', 'Long division'],
-            correctAnswers: ['$f\'/f \\to \\ln$ (with adjustment)'],
+            label: '$\\int \\frac{5x^2}{x^3+2}\\,dx$ — identify the pattern:',
+            options: ['Power rule on $(x^3+2)^{-1}$', '$f\'/f \\to \\ln$', 'Inverse trig form', 'Long division first'],
+            correctAnswers: ['$f\'/f \\to \\ln$'],
             hints: ['$d(x^3+2) = 3x^2\\,dx$. The numerator $5x^2$ is a constant multiple of $3x^2$.'],
-            explanation: '$u = x^3+2$, $du = 3x^2\\,dx$: $\\frac{5}{3}\\ln|x^3+2| + C$.'
+            explanation: '$u = x^3+2$, $du = 3x^2\\,dx$, and $5x^2 = \\frac{5}{3}(3x^2)$, so adjust by the constant $\\frac{5}{3}$: $\\frac{5}{3}\\ln|x^3+2| + C$.'
           },
           {
             label: '$\\int_{ -2}^{2} x^3 \\sin(x^4)\\,dx$ equals:',
@@ -114,7 +114,7 @@ export const calcabUSubPart7Data = {
           },
           {
             label: '$\\int \\frac{1}{\\sqrt{9-(x-1)^2}}\\,dx$ is:',
-            options: ['$\\arctan$ form', '$\\arcsin$ form', '$\\ln$ form', 'Requires u-sub first'],
+            options: ['$\\arctan$ form', '$\\arcsin$ form', '$\\ln$ form', 'Power rule form'],
             correctAnswers: ['$\\arcsin$ form'],
             hints: ['$\\frac{1}{\\sqrt{a^2 - u^2}} \\to \\arcsin(u/a)$.'],
             explanation: '$\\arcsin\\frac{x-1}{3} + C$. This matches $\\frac{1}{\\sqrt{a^2-u^2}}$ with $a=3, u=x-1$.'
@@ -129,7 +129,7 @@ export const calcabUSubPart7Data = {
       exercise: {
         question: 'A particle has velocity $v(t) = t \\cdot e^{-t^2}$. Find the total displacement from $t=0$ to $t=1$.\n\n(Give the exact answer in the form $(a - e^b)/c$.)',
         correctAnswer: '(1 - e^(-1))/2',
-        acceptableAnswers: ['(1 - e^(-1))/2', '(1-e^(-1))/2', '(1-1/e)/2', '(e-1)/(2e)'],
+        acceptableAnswers: ['(1 - e^(-1))/2', '(1-e^-1)/2', '(1-1/e)/2', '(e-1)/(2e)', '1/2-1/(2e)', '0.316', '0.3161'],
         hints: [
           'Displacement $= \\int_0^1 t \\cdot e^{-t^2}\\,dt$.',
           '$u = -t^2$, $du = -2t\\,dt$, so $t\\,dt = -du/2$.',

@@ -102,7 +102,7 @@ $$= \\left(2+4-\\frac{8}{3}\\right) - \\left(\\frac{1}{2}-2+\\frac{1}{3}\\right)
           },
           {
             label: 'If you compute $\\int_a^b[g(x)-f(x)]\\,dx$ and get $-5$, the area is:',
-            options: ['$5$', '$-5$', '$0$', 'Undefined'],
+            options: ['$5$', '$-5$', '$\\pm 5$', 'Undefined'],
             correctAnswers: ['$5$'],
             hints: ['Area is always positive. The negative sign means you subtracted in the wrong order.'],
             explanation: 'Area = $|{-5}| = 5$. The negative means $f$ was actually above $g$.'

@@ -44,15 +44,15 @@ export const calcabDiffEqPart7Data = {
           },
           {
             question: 'A population grows at rate $\\frac{dP}{dt} = 0.05P$. Starting at 500, when does it reach 2000?',
-            options: ['$\\frac{\\ln 4}{0.05}$', '$\\frac{\\ln 2}{0.05}$', '$80$', '$20\\ln 4$'],
+            options: ['$\\frac{\\ln 4}{0.05}$', '$\\frac{\\ln 2}{0.05}$', '$80$', '$0.05\\ln 4$'],
             correctAnswer: 0,
-            explanation: '$500e^{0.05t} = 2000$. $e^{0.05t} = 4$. $t = \\ln 4/0.05$.'
+            explanation: '$500e^{0.05t} = 2000$. $e^{0.05t} = 4$. $t = \\ln 4/0.05 = 20\\ln 4 \\approx 27.7$. Using $\\ln 2$ answers a single doubling, $80 = 4/0.05$ forgets the logarithm, and $0.05\\ln 4$ multiplies instead of dividing.'
           },
           {
             question: 'Using Euler\'s method: $dy/dx = y$, $y(0)=1$, $\\Delta x = 1$. Approximate $y(2)$.',
             options: ['$4$', '$e^2$', '$2$', '$3$'],
             correctAnswer: 0,
-            explanation: '$y(1) = 1 + 1(1) = 2$. $y(2) = 2 + 2(1) = 4$. (Exact: $e^2 \\approx 7.39$, so Euler understimates.)'
+            explanation: '$y(1) = 1 + 1(1) = 2$. $y(2) = 2 + 2(1) = 4$. (Exact: $e^2 \\approx 7.39$, so Euler underestimates.)'
           }
         ]
       }
@@ -99,7 +99,7 @@ export const calcabDiffEqPart7Data = {
           },
           {
             label: 'Euler\'s method with $dy/dx = -y$, $y(0)=4$, $\\Delta x=0.5$: $y(0.5) =$',
-            options: ['$2$', '$3$', '$4e^{-0.5}$', '$3.5$'],
+            options: ['$2$', '$-2$', '$4e^{-0.5}$', '$3.5$'],
             correctAnswers: ['$2$'],
             hints: ['$y_1 = 4 + (-4)(0.5) = 4 - 2 = 2$.'],
             explanation: '$f(0,4) = -4$. $y_1 = 4 + (-4)(0.5) = 2$.'
@@ -109,7 +109,7 @@ export const calcabDiffEqPart7Data = {
             options: ['$e^{-y}\\,dy = e^x\\,dx$', 'Cannot be separated', '$dy/e^x = e^y\\,dx$', '$e^y\\,dy = e^x\\,dx$'],
             correctAnswers: ['$e^{-y}\\,dy = e^x\\,dx$'],
             hints: ['$e^{x+y} = e^x \\cdot e^y$. Divide both sides by $e^y$.'],
-            explanation: '$dy/e^y = e^x\\,dx$, i.e., $e^{-y}\\,dy = e^x\\,dx$.'
+            explanation: '$\\frac{dy}{dx} = e^x e^y$, so $\\frac{dy}{e^y} = e^x\\,dx$, i.e., $e^{-y}\\,dy = e^x\\,dx$.'
           }
         ]
       }
@@ -121,7 +121,7 @@ export const calcabDiffEqPart7Data = {
       exercise: {
         question: 'Solve $\\frac{dy}{dx} = e^{x-y}$ with $y(0) = 0$. Find $y(\\ln 2)$.\n\n(Give an exact answer using ln notation.)',
         correctAnswer: 'ln(2)',
-        acceptableAnswers: ['ln(2)', 'ln 2', 'ln2'],
+        acceptableAnswers: ['ln(2)', 'ln2', '0.693', '0.6931'],
         hints: [
           '$e^{x-y} = e^x \\cdot e^{-y}$. Separate: $e^y\\,dy = e^x\\,dx$.',
           '$e^y = e^x + C$. $y(0) = 0$: $1 = 1 + C$, so $C = 0$.',

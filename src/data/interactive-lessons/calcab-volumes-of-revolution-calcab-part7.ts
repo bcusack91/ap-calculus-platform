@@ -69,15 +69,15 @@ export const calcabVolumesPart7Data = {
           },
           {
             question: 'Region between $y=x^2$ and $y=4$ about $y=5$. Inner radius:',
-            options: ['$r = 1$', '$r = 5-x^2$', '$r = 5$', '$r = 4-x^2$'],
+            options: ['$r = 1$', '$r = 5-x^2$', '$r = x^2 - 5$', '$r = 4-x^2$'],
             correctAnswer: 0,
-            explanation: '$y=4$ is closer to $y=5$. $r = 5-4 = 1$.'
+            explanation: '$y=4$ is closer to $y=5$, so $r = 5-4 = 1$. Radii are distances, measured as (axis) $-$ (curve) when the axis is above, so $x^2 - 5$ has the order reversed, and $5 - x^2$ is the outer radius.'
           },
           {
             question: 'Rotate $x = y^2$ about $x = 5$ from $y=0$ to $y=2$. Variable:',
-            options: ['$dy$ (vertical axis $x=5$)', '$dx$', 'Either', 'Cannot determine'],
+            options: ['$dy$, since the axis $x = 5$ is vertical', '$dx$, since the axis $x = 5$ is an $x$-value', '$dx$, since $x = y^2$ can be solved for $y$', 'Either, since disks work the same in both variables'],
             correctAnswer: 0,
-            explanation: 'Axis $x=5$ is vertical \u2192 integrate in $dy$. $R = 5-y^2$.'
+            explanation: 'The axis $x = 5$ is vertical, so disk/washer slices perpendicular to it are horizontal and stacked along $y$: integrate in $dy$ with $R = 5 - y^2$. The equation of the axis naming $x$ does not make it a $dx$ problem.'
           },
           {
             question: 'For a semicircle cross-section with diameter $d$, the area formula constant is:',
@@ -96,15 +96,15 @@ export const calcabVolumesPart7Data = {
         dropdowns: [
           {
             label: 'Rotate $y=\\sqrt{x}$ and $y=0$ about $y=2$ on $[0,4]$. Outer radius:',
-            options: ['$R = 2$ (from $y=0$)', '$R = 2-\\sqrt{x}$', '$R = \\sqrt{x}$', '$R = 2+\\sqrt{x}$'],
-            correctAnswers: ['$R = 2$ (from $y=0$)'],
+            options: ['$R = 2$', '$R = 2-\\sqrt{x}$', '$R = \\sqrt{x}$', '$R = 2+\\sqrt{x}$'],
+            correctAnswers: ['$R = 2$'],
             hints: ['$y=0$ is farther from $y=2$ than $y=\\sqrt{x}$ is.'],
-            explanation: '$R = 2-0 = 2$. $r = 2-\\sqrt{x}$.'
+            explanation: '$y=0$ is farther from $y=2$, so $R = 2-0 = 2$. The inner radius is $r = 2-\\sqrt{x}$.'
           },
           {
             label: 'Cross-section volume has $\\pi$ in the answer. The shape must be:',
-            options: ['Semicircle (or other circular shape)', 'Square', 'Equilateral triangle', 'Any shape'],
-            correctAnswers: ['Semicircle (or other circular shape)'],
+            options: ['Semicircle', 'Square', 'Equilateral triangle', 'Isosceles right triangle'],
+            correctAnswers: ['Semicircle'],
             hints: ['Only circular shapes have $\\pi$ in their area formula.'],
             explanation: 'Semicircle: $A = \\frac{\\pi s^2}{8}$. The $\\pi$ carries into the volume.'
           },

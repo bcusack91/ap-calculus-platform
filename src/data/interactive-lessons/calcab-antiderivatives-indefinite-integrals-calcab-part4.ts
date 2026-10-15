@@ -67,9 +67,9 @@ $$\\int \\sqrt[3]{x^2}\\,dx = \\int x^{2/3}\\,dx = \\frac{x^{5/3}}{5/3} + C = \\
           },
           {
             question: 'Evaluate $\\int \\frac{x+1}{\\sqrt{x}}\\,dx$.',
-            options: ['$\\frac{2}{3}x^{3/2} + 2\\sqrt{x} + C$', '$\\frac{2}{3}x^{3/2} + \\sqrt{x} + C$', '$\\sqrt{x}(x+1) + C$', '$\\ln|x| + \\sqrt{x} + C$'],
+            options: ['$\\frac{2}{3}x^{3/2} + 2\\sqrt{x} + C$', '$\\frac{2}{3}x^{3/2} + \\sqrt{x} + C$', '$\\sqrt{x}(x+1) + C$', '$x^{3/2} + 2\\sqrt{x} + C$'],
             correctAnswer: 0,
-            explanation: 'Split: $\\frac{x}{\\sqrt{x}} + \\frac{1}{\\sqrt{x}} = x^{1/2} + x^{-1/2}$. $\\int = \\frac{x^{3/2}}{3/2} + \\frac{x^{1/2}}{1/2} + C = \\frac{2}{3}x^{3/2} + 2\\sqrt{x} + C$.'
+            explanation: 'Split: $\\frac{x}{\\sqrt{x}} + \\frac{1}{\\sqrt{x}} = x^{1/2} + x^{-1/2}$. $\\int = \\frac{x^{3/2}}{3/2} + \\frac{x^{1/2}}{1/2} + C = \\frac{2}{3}x^{3/2} + 2\\sqrt{x} + C$. Dividing by $3/2$ means multiplying by $\\frac{2}{3}$, and the second term needs the full factor $2$.'
           }
         ]
       }
@@ -113,9 +113,9 @@ Sometimes you need a trig identity before integrating:
           },
           {
             question: 'Evaluate $\\int \\frac{x^3 - 1}{x - 1}\\,dx$ (for $x \\neq 1$).',
-            options: ['$\\frac{x^3}{3} + \\frac{x^2}{2} + x + C$', '$\\frac{x^3}{3} - \\frac{x^2}{2} + x + C$', '$\\frac{x^2}{2} + x + \\ln|x-1| + C$', '$\\frac{x^4}{4} - x + C$'],
+            options: ['$\\frac{x^3}{3} + \\frac{x^2}{2} + x + C$', '$\\frac{x^3}{3} + x^2 + x + C$', '$\\frac{x^2}{2} + x + \\ln|x-1| + C$', '$\\frac{x^4}{4} - x + C$'],
             correctAnswer: 0,
-            explanation: 'Factor: $\\frac{x^3-1}{x-1} = x^2 + x + 1$. $\\int (x^2 + x + 1)\\,dx = \\frac{x^3}{3} + \\frac{x^2}{2} + x + C$.'
+            explanation: 'Factor: $\\frac{x^3-1}{x-1} = x^2 + x + 1$. $\\int (x^2 + x + 1)\\,dx = \\frac{x^3}{3} + \\frac{x^2}{2} + x + C$. The middle term needs the power-rule $\\frac{1}{2}$, and you cannot integrate the numerator and denominator separately.'
           }
         ]
       }
@@ -142,7 +142,7 @@ Sometimes you need a trig identity before integrating:
           },
           {
             label: '$\\int \\frac{5}{x^3}\\,dx$ — rewrite as:',
-            options: ['$5x^3$', '$5x^{-3}$', '$\\frac{5}{3}\\ln|x|$', '$\\frac{1}{5}x^{-3}$'],
+            options: ['$5x^{1/3}$', '$5x^{-3}$', '$\\frac{5}{3}\\ln|x|$', '$\\frac{1}{5}x^{-3}$'],
             correctAnswers: ['$5x^{-3}$'],
             hints: ['Move $x^3$ to the numerator with negative exponent.'],
             explanation: '$\\frac{5}{x^3} = 5x^{-3}$. Then $\\int 5x^{-3}\\,dx = \\frac{5x^{-2}}{-2} + C = -\\frac{5}{2x^2} + C$.'
@@ -163,7 +163,7 @@ Sometimes you need a trig identity before integrating:
           'Antiderivative: $\\frac{2}{3}x^{3/2} + 2x^{1/2}$.',
           'Evaluate from 1 to 4: $\\left(\\frac{2}{3}(8) + 2(2)\\right) - \\left(\\frac{2}{3}(1) + 2(1)\\right)$.'
         ],
-        explanation: '$\\int_1^4 (x^{1/2} + x^{-1/2})\\,dx = \\left[\\frac{2}{3}x^{3/2} + 2x^{1/2}\\right]_1^4$\\n\\n$= \\left(\\frac{16}{3} + 4\\right) - \\left(\\frac{2}{3} + 2\\right) = \\frac{28}{3} - \\frac{8}{3} = \\frac{20}{3}$.'
+        explanation: '$\\int_1^4 (x^{1/2} + x^{-1/2})\\,dx = \\left[\\frac{2}{3}x^{3/2} + 2x^{1/2}\\right]_1^4$ $= \\left(\\frac{16}{3} + 4\\right) - \\left(\\frac{2}{3} + 2\\right) = \\frac{28}{3} - \\frac{8}{3} = \\frac{20}{3}$.'
       }
     },
     {

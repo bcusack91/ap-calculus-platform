@@ -81,9 +81,9 @@ Find $c$ where $f(c) = 3$: $c^2 = 3 \\Rightarrow c = \\sqrt{3} \\approx 1.732$.
           },
           {
             question: 'If $\\int_1^5 f(x)\\,dx = 20$, the average value of $f$ on $[1,5]$ is:',
-            options: ['$4$', '$5$', '$20$', '$80$'],
+            options: ['$1/5$', '$5$', '$20$', '$80$'],
             correctAnswer: 1,
-            explanation: '$f_{\\text{avg}} = \\frac{1}{5-1} \\cdot 20 = 5$.'
+            explanation: '$f_{\\text{avg}} = \\frac{1}{5-1} \\cdot 20 = 5$. Dividing the wrong way gives $4/20 = 1/5$, $20$ is the integral itself, and multiplying by the width gives $80$.'
           },
           {
             question: 'A particle moves with velocity $v(t) = t^2$ on $[0, 6]$. The average velocity is:',
@@ -102,10 +102,10 @@ Find $c$ where $f(c) = 3$: $c^2 = 3 \\Rightarrow c = \\sqrt{3} \\approx 1.732$.
         dropdowns: [
           {
             label: 'The MVT for Integrals guarantees $f(c) = f_{avg}$ because:',
-            options: ['$f$ is differentiable', '$f$ is continuous on $[a,b]$ (Intermediate Value Theorem applies)', '$f$ is increasing', '$f$ has an antiderivative'],
-            correctAnswers: ['$f$ is continuous on $[a,b]$ (Intermediate Value Theorem applies)'],
+            options: ['$f$ is differentiable', '$f$ is continuous on $[a,b]$', '$f$ is increasing', '$f$ is positive on $[a,b]$'],
+            correctAnswers: ['$f$ is continuous on $[a,b]$'],
             hints: ['Continuity is the key hypothesis.'],
-            explanation: 'Since $f$ is continuous, it achieves every value between its min and max, including $f_{avg}$.'
+            explanation: 'Since $f$ is continuous on $[a,b]$, the Intermediate Value Theorem says it takes every value between its min and max, including $f_{avg}$.'
           },
           {
             label: 'Average value of $f(x) = 6x$ on $[0, 4]$:',

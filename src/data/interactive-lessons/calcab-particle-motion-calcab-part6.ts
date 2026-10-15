@@ -69,15 +69,15 @@ $$s(6) = 2 + \\int_0^6 (t^2-5t+4)\\,dt = 2 + \\left[\\frac{t^3}{3} - \\frac{5t^2
           },
           {
             question: '$v(t) = e^t - 3$ and $s(0) = 5$. The displacement on $[0, \\ln 3]$ is:',
-            options: ['$3 - 3\\ln 3 - 1 = 2 - 3\\ln 3$', '$e^{\\ln 3} - 3\\ln 3 - e^0 = 2 - 3\\ln 3$', '$5 + 2 - 3\\ln 3$', '$3\\ln 3 - 2$'],
+            options: ['$3 - 3\\ln 3$', '$2 - 3\\ln 3$', '$7 - 3\\ln 3$', '$3\\ln 3 - 2$'],
             correctAnswer: 1,
-            explanation: '$\\int_0^{\\ln 3}(e^t - 3)\\,dt = [e^t - 3t]_0^{\\ln 3} = (3 - 3\\ln 3) - (1 - 0) = 2 - 3\\ln 3$.'
+            explanation: '$\\int_0^{\\ln 3}(e^t - 3)\\,dt = [e^t - 3t]_0^{\\ln 3} = (3 - 3\\ln 3) - (1 - 0) = 2 - 3\\ln 3$. Dropping the lower-limit value $e^0 = 1$ gives $3 - 3\\ln 3$; adding $s(0) = 5$ gives the position $s(\\ln 3) = 7 - 3\\ln 3$, not the displacement; and $3\\ln 3 - 2$ is the total distance (since $v < 0$ on the whole interval).'
           },
           {
             question: 'A free-response question asks: "Is the speed of the particle increasing at $t = 2$?" What must you check?',
-            options: ['Whether $v(2)$ and $a(2)$ have the same sign', 'Whether $a(2) > 0$', 'Whether $v(2) > 0$', 'Whether $|v(2)| > |v(1)|$'],
+            options: ['Whether $v(2)$ and $a(2)$ share a sign', 'Whether $a(2)$ is positive', 'Whether $v(2) > 0$, so it moves right', 'Whether $|v(2)|$ exceeds $|v(1)|$'],
             correctAnswer: 0,
-            explanation: 'Speed increases when velocity and acceleration have the same sign (both positive or both negative).'
+            explanation: 'Speed increases when velocity and acceleration have the same sign (both positive or both negative). A positive $a(2)$ alone only says velocity is rising, which slows a particle moving left, and comparing with $t = 1$ describes an interval, not the instant $t = 2$.'
           }
         ]
       }
@@ -90,14 +90,14 @@ $$s(6) = 2 + \\int_0^6 (t^2-5t+4)\\,dt = 2 + \\left[\\frac{t^3}{3} - \\frac{5t^2
         dropdowns: [
           {
             label: '$v(t) = 2t - 6$. The particle is at rest at $t =$',
-            options: ['$3$', '$6$', '$0$', '$2$'],
+            options: ['$3$', '$12$', '$-3$', '$1/3$'],
             correctAnswers: ['$3$'],
             hints: ['$2t - 6 = 0$.'],
             explanation: '$2t - 6 = 0 \\Rightarrow t = 3$.'
           },
           {
             label: 'On $[0,5]$, total distance $= \\int_0^3 |2t-6|\\,dt + \\int_3^5 |2t-6|\\,dt =$',
-            options: ['$9 + 4 = 13$', '$-9 + 4 = -5$', '$13$', '$5$'],
+            options: ['$9 + 4 = 13$', '$-9 + 4 = -5$', '$9 + |{-5}| = 14$', '$9 + (-4) = 5$'],
             correctAnswers: ['$9 + 4 = 13$'],
             hints: ['$v < 0$ on $[0,3)$, $v > 0$ on $(3,5]$. Integrate each piece.'],
             explanation: '$\\int_0^3 (6-2t)\\,dt = [6t-t^2]_0^3 = 9$. $\\int_3^5 (2t-6)\\,dt = [t^2-6t]_3^5 = -5-(-9) = 4$. Total $= 13$.'
@@ -117,17 +117,17 @@ $$s(6) = 2 + \\int_0^6 (t^2-5t+4)\\,dt = 2 + \\left[\\frac{t^3}{3} - \\frac{5t^2
       type: 'input-box' as const,
       content: '**AP FRQ practice.** \u270d\ufe0f',
       exercise: {
-        question: 'A particle moves with $v(t) = t^2 - 4t + 3 = (t-1)(t-3)$ and $s(0) = 5$.\n\nFind the total distance traveled on $[0,4]$.\n\nIf the answer is $a/b$ in lowest terms, enter **$a + b$**.',
-        correctAnswer: '5',
-        acceptableAnswers: ['5'],
+        question: 'A particle moves with $v(t) = t^2 - 4t + 3 = (t-1)(t-3)$ and $s(0) = 5$.\n\nFind the total distance traveled on $[0,4]$.\n\n(Enter an integer.)',
+        correctAnswer: '4',
+        acceptableAnswers: ['4', '4.0'],
         hints: [
           '$v = 0$ at $t = 1$ and $t = 3$. Sign: $v > 0$ on $[0,1)$, $v < 0$ on $(1,3)$, $v > 0$ on $(3,4]$.',
           '$\\int_0^1 v\\,dt = [t^3/3 - 2t^2 + 3t]_0^1 = 1/3 - 2 + 3 = 4/3$.',
           '$\\int_1^3 v\\,dt = [t^3/3 - 2t^2 + 3t]_1^3 = (9-18+9)-(1/3-2+3) = 0 - 4/3 = -4/3$.',
           '$\\int_3^4 v\\,dt = [t^3/3 - 2t^2 + 3t]_3^4 = (64/3-32+12)-(9-18+9) = 4/3 - 0 = 4/3$.',
-          'Total distance $= 4/3 + 4/3 + 4/3 = 12/3 = 4$. This is integer $4 = 4/1$, so $a + b = 5$.'
+          'Total distance $= |4/3| + |-4/3| + |4/3| = 12/3 = 4$.'
         ],
-        explanation: 'Split at $v = 0$: $t = 1, 3$. Total $= |4/3| + |-4/3| + |4/3| = 4$. As $4/1$: $a + b = 5$.'
+        explanation: 'Split at $v = 0$: $t = 1, 3$. Total distance $= |4/3| + |-4/3| + |4/3| = 4$. (The starting position $s(0) = 5$ does not affect distance.)'
       }
     },
     {

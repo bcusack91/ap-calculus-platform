@@ -63,21 +63,21 @@ $V = \\pi\\int_0^1(x^2-x^4)dx = \\pi[\\frac{x^3}{3}-\\frac{x^5}{5}]_0^1 = \\pi(\
         questions: [
           {
             question: 'Rotate $y = \\sqrt{x}$ about the $x$-axis from $x=0$ to $x=4$. Volume:',
-            options: ['$8\\pi$', '$4\\pi$', '$\\frac{32\\pi}{5}$', '$16\\pi$'],
+            options: ['$8\\pi$', '$\\frac{16\\pi}{3}$', '$\\frac{64\\pi}{3}$', '$16\\pi$'],
             correctAnswer: 0,
-            explanation: '$V = \\pi\\int_0^4(\\sqrt{x})^2 dx = \\pi\\int_0^4 x\\,dx = \\pi[\\frac{x^2}{2}]_0^4 = 8\\pi$.'
+            explanation: '$V = \\pi\\int_0^4(\\sqrt{x})^2 dx = \\pi\\int_0^4 x\\,dx = \\pi[\\frac{x^2}{2}]_0^4 = 8\\pi$. Forgetting to square the radius gives $\\pi\\int_0^4 \\sqrt{x}\\,dx = \\frac{16\\pi}{3}$, squaring twice ($\\pi\\int_0^4 x^2\\,dx$) gives $\\frac{64\\pi}{3}$, and treating the solid as a cylinder of radius $2$ gives $16\\pi$.'
           },
           {
-            question: 'Rotate $y = x^2$ about $y = 4$ from $x=0$ to $x=2$. The outer radius is:',
+            question: 'Rotate the region between $y = x^2$ and $y = 4$, for $0 \\le x \\le 2$, about $y = 4$. The disk radius is:',
             options: ['$4-x^2$', '$x^2-4$', '$4$', '$x^2$'],
             correctAnswer: 0,
-            explanation: 'Distance from curve to axis: $R = 4 - x^2$ (axis is above the curve).'
+            explanation: 'The region touches the axis $y = 4$, so each slice is a disk whose radius runs from the curve up to the axis: $R = 4 - x^2$ (axis is above the curve). $x^2 - 4$ reverses the order, and $4$ and $x^2$ measure from the $x$-axis instead of from $y = 4$.'
           },
           {
             question: 'The washer method is needed instead of disk when:',
-            options: ['There is a gap between the region and the axis of rotation', 'The function is negative', 'Rotating about the $y$-axis', 'The region is unbounded'],
+            options: ['There is a gap between the region and the axis', 'The function is negative on part of the interval', 'The region is rotated about the $y$-axis instead', 'The axis is a line other than one of the coordinate axes'],
             correctAnswer: 0,
-            explanation: 'A gap creates a hole in the solid, requiring outer minus inner radius: washer method.'
+            explanation: 'A gap creates a hole in the solid, requiring outer minus inner radius: washer method. A negative function, a vertical axis, or an axis like $y = 4$ can still give disks if the region touches the axis.'
           }
         ]
       }
@@ -90,24 +90,24 @@ $V = \\pi\\int_0^1(x^2-x^4)dx = \\pi[\\frac{x^3}{3}-\\frac{x^5}{5}]_0^1 = \\pi(\
         dropdowns: [
           {
             label: 'Rotate $y = x^2$ and $y = 4$ about $y = 4$. Method:',
-            options: ['Disk: $R = 4-x^2$', 'Washer: $R = 4, r = x^2$', 'Disk: $R = x^2$', 'Washer: $R = 4-x^2, r = 0$'],
+            options: ['Disk: $R = 4-x^2$', 'Washer: $R = 4, r = x^2$', 'Disk: $R = 4+x^2$', 'Washer: $R = 4-x^2, r = x^2$'],
             correctAnswers: ['Disk: $R = 4-x^2$'],
             hints: ['The region touches the axis $y=4$, so no hole: disk method.'],
             explanation: 'Rotating about $y=4$: radius $= 4-x^2$. No gap: disk method.'
           },
           {
             label: 'Rotate $y = x$ and $y = x^2$ about $y = -1$ on $[0,1]$. Outer radius:',
-            options: ['$x+1$', '$x^2+1$', '$x-(-1) = x+1$', '$x$'],
-            correctAnswers: ['$x-(-1) = x+1$'],
+            options: ['$x-1$', '$x^2+1$', '$x+1$', '$x$'],
+            correctAnswers: ['$x+1$'],
             hints: ['Outer = farther curve from $y=-1$. On $[0,1]$: $x \\ge x^2$, so $x$ is farther from $y=-1$.'],
-            explanation: '$R = x-(-1) = x+1$. $r = x^2+1$.'
+            explanation: '$R = x-(-1) = x+1$. $r = x^2-(-1) = x^2+1$.'
           },
           {
             label: 'To rotate about $x = 3$, you should integrate with respect to:',
-            options: ['$x$', '$y$ (expressing curves as $x = f(y)$)', 'Either works', '$t$'],
-            correctAnswers: ['$y$ (expressing curves as $x = f(y)$)'],
+            options: ['$x$, with curves as $y = f(x)$', '$y$, with curves as $x = g(y)$', 'Either one gives the same setup', '$x$, after shifting the axis by $3$'],
+            correctAnswers: ['$y$, with curves as $x = g(y)$'],
             hints: ['Vertical axis of rotation: use horizontal slices ($dy$).'],
-            explanation: 'Rotating about a vertical line: integrate with respect to $y$ with radii $= |f(y)-3|$.'
+            explanation: 'Rotating about a vertical line: the disks or washers are horizontal, so integrate with respect to $y$, with radii $|g(y)-3|$.'
           }
         ]
       }

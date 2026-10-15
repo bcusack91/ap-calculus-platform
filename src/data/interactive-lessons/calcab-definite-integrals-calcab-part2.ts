@@ -55,15 +55,15 @@ $\\int_{-3}^{3} \\sqrt{9-x^2}\\,dx$ = area of semicircle with $r = 3$ = $\\frac{
         questions: [
           {
             question: 'If $\\int_0^5 f(x)\\,dx = 8$ and the area of the region below the $x$-axis on $[0,5]$ is $3$, what is the total area between $f$ and the $x$-axis?',
-            options: ['$5$', '$8$', '$11$', '$14$'],
+            options: ['$5$', '$8$', '$3$', '$14$'],
             correctAnswer: 3,
-            explanation: 'Signed area: (area above) − (area below) = 8. So area above = 8 + 3 = 11. Total area = 11 + 3 = 14.'
+            explanation: 'Signed area: (area above) − (area below) = 8. So area above = 8 + 3 = 11. Total area = 11 + 3 = 14. The signed integral $8$, the difference $8 - 3 = 5$, and the area below alone ($3$) each miss part of the region.'
           },
           {
             question: 'Evaluate $\\int_{-3}^{3} \\sqrt{9-x^2}\\,dx$.',
-            options: ['$0$', '$9\\pi$', '$\\frac{9\\pi}{2}$', '$3\\pi$'],
+            options: ['$\\frac{9\\pi}{4}$', '$9\\pi$', '$\\frac{9\\pi}{2}$', '$\\frac{3\\pi}{2}$'],
             correctAnswer: 2,
-            explanation: '$\\sqrt{9-x^2}$ is a semicircle with $r = 3$. Area = $\\frac{\\pi(3)^2}{2} = \\frac{9\\pi}{2}$.'
+            explanation: '$\\sqrt{9-x^2}$ is a semicircle with $r = 3$. Area = $\\frac{\\pi(3)^2}{2} = \\frac{9\\pi}{2}$. A full circle gives $9\\pi$, a quarter circle $\\frac{9\\pi}{4}$, and using $r$ instead of $r^2$ gives $\\frac{3\\pi}{2}$.'
           },
           {
             question: 'Evaluate $\\int_0^6 |x - 3|\\,dx$ geometrically.',
@@ -138,17 +138,17 @@ $= 2\\int_0^1 x^4\\,dx + 0 = 2 \\cdot \\frac{1}{5} = \\frac{2}{5}$
           },
           {
             label: '$\\int_{-1}^{1} (x^2 + 1)\\,dx$ can be simplified to:',
-            options: ['$0$', '$2\\int_0^1 (x^2+1)\\,dx$', '$\\int_0^1 (x^2+1)\\,dx$', 'Cannot simplify'],
+            options: ['$0$', '$2\\int_0^1 (x^2+1)\\,dx$', '$\\int_0^1 (x^2+1)\\,dx$', '$2\\int_0^1 x^2\\,dx$'],
             correctAnswers: ['$2\\int_0^1 (x^2+1)\\,dx$'],
             hints: ['$x^2+1$ is an even function (all even powers).'],
             explanation: 'Even function on symmetric interval: $= 2\\int_0^1 (x^2+1)\\,dx = 2(\\frac{1}{3}+1) = \\frac{8}{3}$.'
           },
           {
             label: '$\\int_0^4 (2-x)\\,dx$ represents:',
-            options: ['Positive area only', 'Negative area only', 'Mix of positive and negative signed area', 'Zero'],
-            correctAnswers: ['Mix of positive and negative signed area'],
+            options: ['Area above plus area below', 'Only the area above the axis', 'Area above minus area below', 'Only the area below the axis'],
+            correctAnswers: ['Area above minus area below'],
             hints: ['Where does $2-x$ change sign on $[0,4]$?'],
-            explanation: '$2-x > 0$ on $[0,2)$ and $2-x < 0$ on $(2,4]$. The integral has both positive and negative contributions.'
+            explanation: '$2-x > 0$ on $[0,2)$ and $2-x < 0$ on $(2,4]$, so the integral is the signed area: the area above the axis minus the area below it (here $2 - 2 = 0$).'
           }
         ]
       }

@@ -108,24 +108,24 @@ $$= \\ln|e^x + e^{-x}| + C = \\ln(e^x + e^{-x}) + C$$
         dropdowns: [
           {
             label: '$\\int \\frac{x^2-1}{x+1}\\,dx$ — first step:',
-            options: ['u-substitution', 'Long division', 'Factor and cancel', 'Complete the square'],
+            options: ['u-substitution', 'Arctan formula', 'Factor and cancel', 'Power rule'],
             correctAnswers: ['Factor and cancel'],
             hints: ['$x^2-1 = (x+1)(x-1)$. Cancel the $(x+1)$.'],
             explanation: '$\\frac{(x+1)(x-1)}{x+1} = x-1$. $\\int (x-1)\\,dx = x^2/2 - x + C$.'
           },
           {
             label: '$\\int \\frac{\\cos(\\sqrt{x})}{\\sqrt{x}}\\,dx$ — choose $u$:',
-            options: ['$u = \\cos(\\sqrt{x})$', '$u = \\sqrt{x}$', '$u = x$', '$u = \\cos x$'],
+            options: ['$u = \\cos(\\sqrt{x})$', '$u = \\sqrt{x}$', '$u = \\frac{1}{\\sqrt{x}}$', '$u = \\sin(\\sqrt{x})$'],
             correctAnswers: ['$u = \\sqrt{x}$'],
             hints: ['$u = \\sqrt{x}$, $du = \\frac{1}{2\\sqrt{x}}dx$.'],
             explanation: '$u = \\sqrt{x}$: $2\\int \\cos u\\,du = 2\\sin(\\sqrt{x}) + C$.'
           },
           {
             label: '$\\int \\frac{1}{x^2-6x+13}\\,dx$ — technique:',
-            options: ['u-sub directly', 'Long division', 'Complete the square', 'Factor the denominator'],
+            options: ['u-sub directly', 'Long division', 'Complete the square', 'Partial fractions'],
             correctAnswers: ['Complete the square'],
             hints: ['$x^2-6x+13 = (x-3)^2 + 4$. This is an $\\arctan$ form.'],
-            explanation: '$(x-3)^2+4$: $\\frac{1}{2}\\arctan\\frac{x-3}{2} + C$.'
+            explanation: '$x^2-6x+13$ does not factor; completing the square gives $(x-3)^2+4$, so the integral is $\\frac{1}{2}\\arctan\\frac{x-3}{2} + C$.'
           }
         ]
       }
@@ -137,7 +137,7 @@ $$= \\ln|e^x + e^{-x}| + C = \\ln(e^x + e^{-x}) + C$$
       exercise: {
         question: 'Evaluate $\\int_0^{\\pi/2} \\cos x \\cdot e^{\\sin x}\\,dx$.\n\n(Give your answer in the form $e^a - b$ where $a$ and $b$ are integers.)',
         correctAnswer: 'e - 1',
-        acceptableAnswers: ['e - 1', 'e-1', 'e^1 - 1', 'e^1-1'],
+        acceptableAnswers: ['e - 1', 'e-1', 'e^1-1', '1.72', '1.718'],
         hints: [
           '$u = \\sin x$, $du = \\cos x\\,dx$.',
           'Limits: $x = 0 \\to u = 0$, $x = \\pi/2 \\to u = 1$.',

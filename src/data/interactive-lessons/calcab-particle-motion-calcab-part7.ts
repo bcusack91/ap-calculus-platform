@@ -44,9 +44,9 @@ export const calcabParticleMotionPart7Data = {
           },
           {
             question: '$v(t) = t^2 - 1$, $s(0) = 3$. Find $s(2)$.',
-            options: ['$11/3$', '$3$', '$5/3$', '$7/3$'],
+            options: ['$11/3$', '$2/3$', '$17/3$', '$7/3$'],
             correctAnswer: 0,
-            explanation: '$s(2) = 3 + \\int_0^2(t^2-1)\\,dt = 3 + [t^3/3 - t]_0^2 = 3 + 8/3 - 2 = 3 + 2/3 = 11/3$.'
+            explanation: '$s(2) = 3 + \\int_0^2(t^2-1)\\,dt = 3 + [t^3/3 - t]_0^2 = 3 + 8/3 - 2 = 3 + 2/3 = 11/3$. Forgetting $s(0)$ gives $2/3$; dropping the $-t$ term gives $3 + 8/3 = 17/3$; subtracting the integral gives $7/3$.'
           },
           {
             question: 'At time $t = 4$, $v(4) = -3$ and $a(4) = -2$. The speed is:',
@@ -98,24 +98,24 @@ export const calcabParticleMotionPart7Data = {
         dropdowns: [
           {
             label: '$s(t) = \\sin t + t$. $v(\\pi) =$',
-            options: ['$1 + \\cos\\pi = 0$', '$\\sin\\pi = 0$', '$1 - \\cos\\pi = 2$', '$\\cos\\pi + 1 = 0$'],
+            options: ['$1 + \\cos\\pi = 0$', '$\\pi + \\sin\\pi = \\pi$', '$1 - \\cos\\pi = 2$', '$\\cos\\pi = -1$'],
             correctAnswers: ['$1 + \\cos\\pi = 0$'],
             hints: ['$v = s\\prime(t) = \\cos t + 1$.'],
-            explanation: '$v(\\pi) = \\cos\\pi + 1 = -1 + 1 = 0$. The particle is at rest.'
+            explanation: '$v(t) = \\cos t + 1$, so $v(\\pi) = \\cos\\pi + 1 = -1 + 1 = 0$. The particle is at rest.'
           },
           {
             label: '$a(\\pi) =$',
-            options: ['$-\\sin\\pi = 0$', '$\\cos\\pi = -1$', '$\\sin\\pi = 0$', '$1$'],
+            options: ['$-\\sin\\pi = 0$', '$\\cos\\pi = -1$', '$-\\cos\\pi = 1$', '$1 - \\sin\\pi = 1$'],
             correctAnswers: ['$-\\sin\\pi = 0$'],
             hints: ['$a = v\\prime(t) = -\\sin t$.'],
-            explanation: '$a(\\pi) = -\\sin\\pi = 0$. Both velocity and acceleration are zero at $t = \\pi$.'
+            explanation: '$a(t) = v\'(t) = -\\sin t$ (the derivative of the constant $1$ in $v$ is $0$), so $a(\\pi) = -\\sin\\pi = 0$. Both velocity and acceleration are zero at $t = \\pi$.'
           },
           {
             label: 'Does the particle change direction at $t = \\pi$?',
-            options: ['No \u2014 $v \\ge 0$ for all $t$', 'Yes \u2014 $v = 0$ there', 'Cannot determine', 'Yes \u2014 $a = 0$ there'],
-            correctAnswers: ['No \u2014 $v \\ge 0$ for all $t$'],
+            options: ['No — $v \\ge 0$ on both sides', 'Yes — $v(\\pi) = 0$ there', 'Yes — $v$ and $a$ are $0$', 'Yes — $a(\\pi) = 0$ there'],
+            correctAnswers: ['No — $v \\ge 0$ on both sides'],
             hints: ['$v(t) = \\cos t + 1 \\ge 0$ for all $t$, so $v$ never changes sign.'],
-            explanation: '$\\cos t + 1 \\ge 0$ always. The particle pauses at $t = \\pi$ but does not reverse.'
+            explanation: '$v(t) = \\cos t + 1 \\ge 0$ for all $t$. The particle pauses at $t = \\pi$ but does not reverse, because $v$ never changes sign.'
           }
         ]
       }

@@ -54,9 +54,9 @@ $$\\int \\left(x - 1 + \\frac{2}{x+1}\\right)dx = \\frac{x^2}{2} - x + 2\\ln|x+1
           },
           {
             question: 'What is $\\int \\frac{x^2}{x-2}\\,dx$?',
-            options: ['$\\frac{x^2}{2} + 2x + 4\\ln|x-2| + C$', '$x + 2\\ln|x-2| + C$', '$\\frac{x^2}{2} - 2x + 4\\ln|x-2| + C$', '$\\frac{x^3}{3} - 2\\ln|x-2| + C$'],
+            options: ['$\\frac{x^2}{2} + 2x + 4\\ln|x-2| + C$', '$x + 2\\ln|x-2| + C$', '$\\frac{x^2}{2} + 2x + \\ln|x-2| + C$', '$\\frac{x^3}{3} - 2\\ln|x-2| + C$'],
             correctAnswer: 0,
-            explanation: '$\\frac{x^2}{x-2} = x + 2 + \\frac{4}{x-2}$. $\\int (x+2+\\frac{4}{x-2})\\,dx = \\frac{x^2}{2} + 2x + 4\\ln|x-2| + C$.'
+            explanation: '$\\frac{x^2}{x-2} = x + 2 + \\frac{4}{x-2}$. $\\int (x+2+\\frac{4}{x-2})\\,dx = \\frac{x^2}{2} + 2x + 4\\ln|x-2| + C$. The remainder $4$ must stay as the coefficient of the log term.'
           }
         ]
       }
@@ -125,14 +125,14 @@ $$\\int \\frac{dx}{\\sqrt{4-(x+1)^2}} = \\arcsin\\frac{x+1}{2} + C$$
           },
           {
             label: '$\\int \\frac{1}{x^2+4x+8}\\,dx$ requires:',
-            options: ['u-substitution only', 'Long division first', 'Completing the square', 'Power rule'],
+            options: ['u-substitution only', 'Long division first', 'Completing the square', 'Factoring first'],
             correctAnswers: ['Completing the square'],
             hints: ['$x^2+4x+8 = (x+2)^2 + 4$. No real roots.'],
-            explanation: '$(x+2)^2+4$: $\\frac{1}{2}\\arctan\\frac{x+2}{2}+C$.'
+            explanation: '$x^2+4x+8$ does not factor; completing the square gives $(x+2)^2+4$, so the integral is $\\frac{1}{2}\\arctan\\frac{x+2}{2}+C$.'
           },
           {
             label: '$\\int \\frac{2x+7}{x+3}\\,dx$ simplifies to:',
-            options: ['$2 + \\frac{1}{x+3}$', '$2x + \\frac{7}{x+3}$', '$\\frac{2x}{x+3} + 7$', 'Cannot simplify'],
+            options: ['$2 + \\frac{1}{x+3}$', '$2x + \\frac{7}{x+3}$', '$\\frac{2x}{x+3} + 7$', '$2 + \\frac{13}{x+3}$'],
             correctAnswers: ['$2 + \\frac{1}{x+3}$'],
             hints: ['Divide $2x+7$ by $x+3$: $2(x+3) = 2x+6$, remainder $= 1$.'],
             explanation: '$\\frac{2x+7}{x+3} = 2 + \\frac{1}{x+3}$. Integral: $2x + \\ln|x+3| + C$.'
@@ -146,14 +146,14 @@ $$\\int \\frac{dx}{\\sqrt{4-(x+1)^2}} = \\arcsin\\frac{x+1}{2} + C$$
       content: '**Combine techniques.** ✍️',
       exercise: {
         question: 'Evaluate $\\int_0^1 \\frac{x+3}{x+1}\\,dx$.\n\n(Give the exact answer in the form $a + \\ln b$ where $a$ and $b$ are integers.)',
-        correctAnswer: '1 + 2ln2',
-        acceptableAnswers: ['1 + 2ln2', '1+2ln2', '1 + 2ln(2)', '1+2ln(2)', '1 + 2 ln 2', '1 + 2 ln(2)'],
+        correctAnswer: '1 + ln 4',
+        acceptableAnswers: ['1 + ln 4', '1+ln4', '1+ln(4)', 'ln4+1', 'ln(4)+1', '1+2ln2', '1+2ln(2)', '2.386', '2.39'],
         hints: [
           'Long division: $\\frac{x+3}{x+1} = 1 + \\frac{2}{x+1}$.',
           '$\\int_0^1 \\left(1 + \\frac{2}{x+1}\\right)dx = [x + 2\\ln|x+1|]_0^1$.',
-          '$(1 + 2\\ln 2) - (0 + 2\\ln 1) = 1 + 2\\ln 2$.'
+          '$(1 + 2\\ln 2) - (0 + 2\\ln 1) = 1 + 2\\ln 2 = 1 + \\ln 4$.'
         ],
-        explanation: '$\\frac{x+3}{x+1} = 1 + \\frac{2}{x+1}$. $[x+2\\ln|x+1|]_0^1 = 1 + 2\\ln 2$.'
+        explanation: '$\\frac{x+3}{x+1} = 1 + \\frac{2}{x+1}$. $[x+2\\ln|x+1|]_0^1 = 1 + 2\\ln 2 = 1 + \\ln 4 \\approx 2.386$.'
       }
     },
     {

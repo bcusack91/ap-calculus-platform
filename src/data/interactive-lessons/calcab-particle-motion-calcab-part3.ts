@@ -39,21 +39,21 @@ $$= \\left[4t - \\frac{t^3}{3}\\right]_0^2 + \\left[\\frac{t^3}{3} - 4t\\right]_
         questions: [
           {
             question: '$v(t) = 3t - 6$ on $[0, 4]$. The displacement is:',
-            options: ['$0$', '$4$', '$-4$', '$8$'],
+            options: ['$0$', '$12$', '$-6$', '$24$'],
             correctAnswer: 0,
-            explanation: '$\\int_0^4 (3t-6)dt = [3t^2/2 - 6t]_0^4 = (24-24) - 0 = 0$.'
+            explanation: '$\\int_0^4 (3t-6)dt = [3t^2/2 - 6t]_0^4 = (24-24) - 0 = 0$. The total distance is $12$, stopping at $t = 2$ gives $-6$, and dropping the $\\frac{1}{2}$ in $3t^2/2$ gives $24$.'
           },
           {
             question: 'Same $v(t) = 3t - 6$ on $[0, 4]$. The total distance is:',
-            options: ['$8$', '$0$', '$4$', '$12$'],
+            options: ['$12$', '$0$', '$6$', '$-6$'],
             correctAnswer: 0,
-            explanation: '$v = 0$ at $t = 2$. $\\int_0^2 (6-3t)dt + \\int_2^4 (3t-6)dt = [6t-3t^2/2]_0^2 + [3t^2/2-6t]_2^4 = 6-6+0 + (24-24)-(6-12) = 4+4 = 8$.'
+            explanation: '$v = 0$ at $t = 2$. $\\int_0^2 (6-3t)dt + \\int_2^4 (3t-6)dt = [6t-3t^2/2]_0^2 + [3t^2/2-6t]_2^4 = (12-6) + [(24-24)-(6-12)] = 6 + 6 = 12$. Integrating $v$ without the absolute value gives the displacement $0$, and stopping after the first piece gives $6$ (or $-6$ without the sign flip).'
           },
           {
             question: 'If displacement $= 0$, the particle:',
-            options: ['Returned to its starting position', 'Did not move', 'Moved in a circle', 'Has zero velocity'],
+            options: ['Ended where it started', 'Ended at the origin, $s = 0$', 'Traveled zero total distance', 'Had zero velocity throughout'],
             correctAnswer: 0,
-            explanation: 'Zero displacement means $s(b) = s(a)$ \u2014 the particle ended where it started (but may have moved in between).'
+            explanation: 'Zero displacement means $s(b) = s(a)$ — the particle ended where it started. It need not be at the origin, and it may have moved (with nonzero velocity and positive distance) in between.'
           }
         ]
       }
@@ -66,24 +66,24 @@ $$= \\left[4t - \\frac{t^3}{3}\\right]_0^2 + \\left[\\frac{t^3}{3} - 4t\\right]_
         dropdowns: [
           {
             label: '$\\int_0^5 v(t)\\,dt = -3$ means the particle moved:',
-            options: ['3 units to the left of where it started', '3 units total', '3 units to the right', 'Did not move'],
-            correctAnswers: ['3 units to the left of where it started'],
+            options: ['3 units left of its start', '3 units of total distance traveled', '3 units right of its start', '3 units per second, leftward'],
+            correctAnswers: ['3 units left of its start'],
             hints: ['Negative displacement = net leftward motion.'],
-            explanation: 'Displacement $= -3$: the particle is 3 units left of its starting position.'
+            explanation: 'Displacement $= -3$: the particle ends 3 units left of its starting position. Total distance would need $\\int_0^5 |v(t)|\\,dt$.'
           },
           {
             label: 'To find total distance, you must:',
-            options: ['Split the integral where $v(t) = 0$', 'Just compute $\\int_a^b v(t)\\,dt$', 'Use $s(b) - s(a)$', 'Ignore negative values'],
+            options: ['Split the integral where $v(t) = 0$', 'Compute $\\int_a^b v(t)\\,dt$ in one piece', 'Use $s(b) - s(a)$ for the whole interval', 'Drop every piece where $v(t)$ is negative'],
             correctAnswers: ['Split the integral where $v(t) = 0$'],
             hints: ['Total distance uses $|v(t)|$.'],
             explanation: 'Split at zeros of $v(t)$ and take the absolute value of each piece, or integrate $|v(t)|$.'
           },
           {
             label: 'Displacement gives the _____, while total distance gives the _____:',
-            options: ['Net change in position; odometer reading', 'Speed; velocity', 'Distance; displacement', 'Total; partial'],
+            options: ['Net change in position; odometer reading', 'Odometer reading; net change in position', 'Final position; starting position', 'Average velocity; maximum speed'],
             correctAnswers: ['Net change in position; odometer reading'],
             hints: ['Think of a car trip.'],
-            explanation: 'Displacement is the straight-line distance from start to end. Total distance is how far the odometer reads.'
+            explanation: 'Displacement is the net change in position (where you end relative to where you started). Total distance is what an odometer reads: every unit traveled counts, in either direction.'
           }
         ]
       }

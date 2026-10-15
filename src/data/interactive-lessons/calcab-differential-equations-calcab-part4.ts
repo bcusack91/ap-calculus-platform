@@ -73,9 +73,9 @@ Finding $k$: $T_h = \\ln 2 / |k|$ → $k = -\\ln 2 / 10 \\approx -0.0693$`
           },
           {
             question: 'A substance decays with $k = -0.05$. Its half-life is:',
-            options: ['$20$ hours', '$\\frac{\\ln 2}{0.05}$ hours', '$\\frac{0.05}{\\ln 2}$ hours', '$\\frac{1}{0.05}$ hours'],
+            options: ['$0.05\\ln 2$ hours', '$\\frac{\\ln 2}{0.05}$ hours', '$\\frac{0.05}{\\ln 2}$ hours', '$\\frac{1}{0.05}$ hours'],
             correctAnswer: 1,
-            explanation: '$T_h = \\frac{\\ln 2}{|k|} = \\frac{\\ln 2}{0.05} \\approx 13.86$ hours.'
+            explanation: '$T_h = \\frac{\\ln 2}{|k|} = \\frac{\\ln 2}{0.05} \\approx 13.86$ hours. Inverting the fraction or multiplying by $0.05$ misplaces $k$, and $\\frac{1}{0.05} = 20$ is the time constant, not the half-life.'
           }
         ]
       }
@@ -120,7 +120,7 @@ As $t \\to \\infty$: $T \\to 70°F$ (room temperature).
           },
           {
             label: 'For Newton\'s Law of Cooling with $T_{env} = 25$ and $T_0 = 95$, a solution looks like:',
-            options: ['$T = 95e^{-kt}$', '$T = 25 + 70e^{-kt}$', '$T = 70 + 25e^{-kt}$', '$T = 95 - 25e^{-kt}$'],
+            options: ['$T = 95e^{-kt}$', '$T = 25 + 70e^{-kt}$', '$T = 70 + 25e^{-kt}$', '$T = 25 + 95e^{-kt}$'],
             correctAnswers: ['$T = 25 + 70e^{-kt}$'],
             hints: ['$T = T_{env} + (T_0 - T_{env})e^{-kt} = 25 + (95-25)e^{-kt}$.'],
             explanation: '$T = 25 + 70e^{-kt}$.'
@@ -142,7 +142,7 @@ As $t \\to \\infty$: $T \\to 70°F$ (room temperature).
       exercise: {
         question: 'A pie at $350°F$ is placed in a $75°F$ room. After 10 minutes, the pie is $250°F$. Find the cooling constant $k$ (to 3 decimal places).\n\nUse $T = T_{env} + (T_0 - T_{env})e^{-kt}$.',
         correctAnswer: '0.045',
-        acceptableAnswers: ['0.045', '0.0452', '0.046'],
+        acceptableAnswers: ['0.045', '0.0452'],
         hints: [
           '$250 = 75 + 275e^{-10k}$.',
           '$175 = 275e^{-10k}$. $e^{-10k} = 175/275 = 7/11$.',

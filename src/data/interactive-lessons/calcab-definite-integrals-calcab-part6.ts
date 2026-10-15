@@ -40,9 +40,9 @@ This part brings together everything: Riemann sums, FTC, properties, and applica
           },
           {
             question: 'Find $\\frac{d}{dx}\\int_1^{x^3} \\frac{1}{1+t^2}\\,dt$.',
-            options: ['$\\frac{1}{1+x^6}$', '$\\frac{3x^2}{1+x^6}$', '$\\frac{3x^2}{1+x^2}$', '$\\frac{x^3}{1+x^6}$'],
+            options: ['$\\frac{1}{1+x^6}$', '$\\frac{3x^2}{1+x^6}$', '$\\frac{1}{1+x^2}$', '$\\frac{x^3}{1+x^6}$'],
             correctAnswer: 1,
-            explanation: 'FTC Part 1 + Chain Rule: $\\frac{1}{1+(x^3)^2} \\cdot 3x^2 = \\frac{3x^2}{1+x^6}$.'
+            explanation: 'FTC Part 1 + Chain Rule: $\\frac{1}{1+(x^3)^2} \\cdot 3x^2 = \\frac{3x^2}{1+x^6}$. Substituting $x$ instead of $x^3$ gives $\\frac{1}{1+x^2}$, and leaving off the factor $3x^2$ gives $\\frac{1}{1+x^6}$.'
           },
           {
             question: 'Evaluate $\\int_{-1}^{1} (x^4 + x^3)\\,dx$.',
@@ -88,9 +88,9 @@ $$= (4 - 2) + (8 - 8) - (2 - 4) = 2 + 0 + 2 = 4$$
         questions: [
           {
             question: 'A particle starts at $s(0) = 2$ with $v(t) = 3t^2 - 6t$. Find $s(3)$.',
-            options: ['$2$', '$11$', '$-7$', '$5$'],
+            options: ['$2$', '$11$', '$-7$', '$56$'],
             correctAnswer: 0,
-            explanation: '$s(3) = 2 + \\int_0^3 (3t^2 - 6t)\\,dt = 2 + [t^3 - 3t^2]_0^3 = 2 + (27 - 27) = 2$.'
+            explanation: '$s(3) = 2 + \\int_0^3 (3t^2 - 6t)\\,dt = 2 + [t^3 - 3t^2]_0^3 = 2 + (27 - 27) = 2$. Adding $v(3) = 9$ gives $11$, subtracting it gives $-7$, and a sign slip ($t^3 + 3t^2$) gives $2 + 54 = 56$.'
           },
           {
             question: 'Evaluate $\\int_0^4 |x - 2|\\,dx$.',
@@ -100,9 +100,9 @@ $$= (4 - 2) + (8 - 8) - (2 - 4) = 2 + 0 + 2 = 4$$
           },
           {
             question: 'If $f$ is continuous with $\\int_0^4 f(x)\\,dx = 12$, what is the average value of $f$ on $[0,4]$?',
-            options: ['$3$', '$4$', '$12$', '$48$'],
+            options: ['$3$', '$1/3$', '$12$', '$48$'],
             correctAnswer: 0,
-            explanation: '$f_{\\text{avg}} = \\frac{1}{4-0} \\cdot 12 = 3$.'
+            explanation: '$f_{\\text{avg}} = \\frac{1}{4-0} \\cdot 12 = 3$. Dividing the wrong way gives $4/12 = 1/3$, and multiplying by the width gives $48$.'
           }
         ]
       }
@@ -115,21 +115,21 @@ $$= (4 - 2) + (8 - 8) - (2 - 4) = 2 + 0 + 2 = 4$$
         dropdowns: [
           {
             label: '"Find $\\frac{d}{dx}\\int_2^{x^2} \\sin(t)\\,dt$" uses:',
-            options: ['FTC Part 1 + Chain Rule', 'FTC Part 2', 'Net Change Theorem', 'Trapezoidal Rule'],
+            options: ['FTC Part 1 + Chain Rule', 'Mean Value Theorem', 'Net Change Theorem', 'Trapezoidal Rule'],
             correctAnswers: ['FTC Part 1 + Chain Rule'],
             hints: ['Differentiating an integral with a variable upper limit.'],
             explanation: 'FTC Part 1 with Chain Rule: $\\sin(x^2) \\cdot 2x$.'
           },
           {
             label: '"Water enters at rate $R(t)$. How much from $t = 0$ to $t = 5$?" uses:',
-            options: ['FTC Part 1 + Chain Rule', 'FTC Part 2', 'Net Change Theorem', 'Trapezoidal Rule'],
+            options: ['FTC Part 1 + Chain Rule', 'Mean Value Theorem', 'Net Change Theorem', 'Trapezoidal Rule'],
             correctAnswers: ['Net Change Theorem'],
             hints: ['Integrating a rate to find total change.'],
             explanation: '$\\int_0^5 R(t)\\,dt$ = total water added (Net Change).'
           },
           {
             label: '"Given a table of values, approximate $\\int_a^b f$" uses:',
-            options: ['FTC Part 1 + Chain Rule', 'FTC Part 2', 'Net Change Theorem', 'Trapezoidal Rule'],
+            options: ['FTC Part 1 + Chain Rule', 'Mean Value Theorem', 'Net Change Theorem', 'Trapezoidal Rule'],
             correctAnswers: ['Trapezoidal Rule'],
             hints: ['Data in a table, no formula given.'],
             explanation: 'With discrete data points, use the Trapezoidal Rule to approximate.'

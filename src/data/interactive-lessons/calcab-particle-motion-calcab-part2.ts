@@ -58,21 +58,21 @@ Same sign: $(1,2)$ (both negative) and $(3,4)$ (both positive).
         questions: [
           {
             question: 'If $v(3) = -5$ and $a(3) = -2$, at $t = 3$ the particle is:',
-            options: ['Speeding up', 'Slowing down', 'At rest', 'Not moving'],
+            options: ['Speeding up', 'Slowing down', 'Moving right', 'Changing direction'],
             correctAnswer: 0,
-            explanation: '$v$ and $a$ both negative \u2014 same sign \u2014 speeding up.'
+            explanation: '$v$ and $a$ both negative — same sign — speeding up. A negative $a$ alone does not mean slowing down; $v < 0$ means it moves left, and $v \\neq 0$ so it is not turning around.'
           },
           {
             question: 'If $v(t) = 4$ and $a(t) = -1$, the particle is:',
-            options: ['Moving right and slowing down', 'Moving right and speeding up', 'Moving left and slowing down', 'At rest'],
+            options: ['Moving right and slowing down', 'Moving right and speeding up', 'Moving left and slowing down', 'Moving left and speeding up'],
             correctAnswer: 0,
             explanation: '$v > 0$: moving right. $v$ and $a$ have opposite signs: slowing down.'
           },
           {
             question: 'The speed of a particle is $|v(t)|$. If $v(t) = -7$, the speed is:',
-            options: ['$7$', '$-7$', '$0$', '$49$'],
+            options: ['$7$', '$-7$', '$\\pm 7$', '$49$'],
             correctAnswer: 0,
-            explanation: 'Speed $= |v(t)| = |-7| = 7$.'
+            explanation: 'Speed $= |v(t)| = |-7| = 7$. Speed is a single nonnegative value (not $-7$ or $\\pm 7$), and it is not squared.'
           }
         ]
       }
@@ -85,21 +85,21 @@ Same sign: $(1,2)$ (both negative) and $(3,4)$ (both positive).
         dropdowns: [
           {
             label: '$v(t) = -3$, $a(t) = 2$. The particle is:',
-            options: ['Moving left and slowing down', 'Moving left and speeding up', 'Moving right and slowing down', 'At rest'],
+            options: ['Moving left and slowing down', 'Moving left and speeding up', 'Moving right and slowing down', 'Moving right and speeding up'],
             correctAnswers: ['Moving left and slowing down'],
             hints: ['$v < 0$: left. Opposite signs: slowing.'],
             explanation: '$v < 0$: moving left. $v$ and $a$ opposite signs: slowing down.'
           },
           {
             label: 'A particle changes direction when:',
-            options: ['$v(t)$ changes sign', '$a(t) = 0$', '$s(t) = 0$', '$a(t)$ changes sign'],
+            options: ['$v(t)$ changes sign', '$a(t) = 0$', '$v(t) = 0$', '$s(t) = 0$'],
             correctAnswers: ['$v(t)$ changes sign'],
             hints: ['Direction reversal means velocity goes from $+$ to $-$ or vice versa.'],
-            explanation: 'The particle changes direction when $v(t)$ changes from positive to negative or vice versa.'
+            explanation: 'The particle changes direction when $v(t)$ changes from positive to negative or vice versa. $v(t) = 0$ alone is not enough: $v$ can touch zero without changing sign.'
           },
           {
             label: 'Speed is increasing when:',
-            options: ['$v$ and $a$ have the same sign', '$v$ and $a$ have opposite signs', '$a > 0$', '$v > 0$'],
+            options: ['$v$ and $a$ have the same sign', '$a$ is increasing', '$a > 0$', '$v > 0$'],
             correctAnswers: ['$v$ and $a$ have the same sign'],
             hints: ['Speeding up = same sign.'],
             explanation: 'Speed increases when velocity and acceleration point in the same direction (same sign).'

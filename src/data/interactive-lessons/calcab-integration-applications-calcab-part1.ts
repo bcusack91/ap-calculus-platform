@@ -78,15 +78,15 @@ Use when curves are easier to express as $x = f(y)$.
           },
           {
             question: 'Area between $y = x+2$ and $y = x^2$ is:',
-            options: ['$\\frac{9}{2}$', '$\\frac{4}{3}$', '$\\frac{7}{2}$', '$\\frac{9}{4}$'],
+            options: ['$\\frac{9}{2}$', '$\\frac{10}{3}$', '$\\frac{13}{6}$', '$-\\frac{9}{2}$'],
             correctAnswer: 0,
-            explanation: '$x+2 = x^2 \\Rightarrow x=-1,2$. $\\int_{-1}^2(x+2-x^2)dx = [\\frac{x^2}{2}+2x-\\frac{x^3}{3}]_{-1}^2 = (2+4-\\frac{8}{3})-(\\frac{1}{2}-2+\\frac{1}{3}) = \\frac{10}{3}-(-\\frac{7}{6}) = \\frac{9}{2}$.'
+            explanation: '$x+2 = x^2 \\Rightarrow x=-1,2$. $\\int_{-1}^2(x+2-x^2)dx = [\\frac{x^2}{2}+2x-\\frac{x^3}{3}]_{-1}^2 = (2+4-\\frac{8}{3})-(\\frac{1}{2}-2+\\frac{1}{3}) = \\frac{10}{3}-(-\\frac{7}{6}) = \\frac{9}{2}$. Dropping the lower limit gives $\\frac{10}{3}$, adding its value $-\\frac{7}{6}$ instead of subtracting gives $\\frac{13}{6}$, and bottom minus top gives $-\\frac{9}{2}$.'
           },
           {
             question: 'When should you integrate with respect to $y$?',
-            options: ['When curves are functions of $y$, making setup simpler', 'Always', 'Only for circles', 'When the region touches the $y$-axis'],
+            options: ['When $x = g(y)$ form avoids splitting the region', 'Whenever the region touches the $y$-axis', 'Whenever the region is rotated about the $y$-axis', 'Only when no curve can be written as $y = f(x)$'],
             correctAnswer: 0,
-            explanation: 'Integrate with respect to $y$ when expressing curves as $x = f(y)$ avoids splitting the integral.'
+            explanation: 'Integrate with respect to $y$ when expressing the curves as $x = g(y)$ gives one right-minus-left integral instead of several pieces. Touching the $y$-axis does not decide it, area problems involve no rotation, and $dy$ is a choice, not a last resort.'
           }
         ]
       }
@@ -106,17 +106,17 @@ Use when curves are easier to express as $x = f(y)$.
           },
           {
             label: 'Area between $x = y^2$ and $x = 4$ should be integrated with respect to:',
-            options: ['$x$ (splitting into two integrals)', '$y$ (single integral from $-2$ to $2$)', 'Either works equally well', 'Neither'],
+            options: ['$x$ (single integral from $-2$ to $2$)', '$y$ (single integral from $-2$ to $2$)', '$y$ (single integral from $0$ to $4$)', '$x$ (single integral from $0$ to $2$)'],
             correctAnswers: ['$y$ (single integral from $-2$ to $2$)'],
             hints: ['$x = y^2$ is not a function of $x$ without splitting.'],
-            explanation: 'With respect to $y$: $\\int_{-2}^{2}(4-y^2)dy$. Single integral, no splitting.'
+            explanation: 'With respect to $y$: $\\int_{-2}^{2}(4-y^2)\\,dy$, one integral with $y$-limits from the intersection points $y = \\pm 2$.'
           },
           {
             label: 'The area between $y = \\sin x$ and $y = \\cos x$ from $0$ to $\\pi/2$ requires:',
-            options: ['No splitting needed', 'Splitting at $x = \\pi/4$ where they cross', 'Splitting at $x = \\pi/2$', 'Absolute value only'],
-            correctAnswers: ['Splitting at $x = \\pi/4$ where they cross'],
+            options: ['No splitting, since both are positive', 'Splitting at $x = \\pi/4$', 'Splitting where $\\cos x = 0$', 'Taking the absolute value at the end'],
+            correctAnswers: ['Splitting at $x = \\pi/4$'],
             hints: ['$\\sin x = \\cos x$ at $x = \\pi/4$.'],
-            explanation: '$\\cos x \\ge \\sin x$ on $[0,\\pi/4]$, then $\\sin x \\ge \\cos x$ on $[\\pi/4,\\pi/2]$.'
+            explanation: 'The curves cross at $x = \\pi/4$: $\\cos x \\ge \\sin x$ on $[0,\\pi/4]$, then $\\sin x \\ge \\cos x$ on $[\\pi/4,\\pi/2]$.'
           }
         ]
       }
@@ -128,7 +128,7 @@ Use when curves are easier to express as $x = f(y)$.
       exercise: {
         question: 'Find the area enclosed by $y = x^2 - 1$ and $y = 3$.\n\n(Enter a fraction as a/b.)',
         correctAnswer: '32/3',
-        acceptableAnswers: ['32/3'],
+        acceptableAnswers: ['32/3', '10.7', '10.67'],
         hints: [
           'Find intersections: $x^2-1 = 3 \\Rightarrow x^2 = 4 \\Rightarrow x = \\pm 2$.',
           'Top: $y=3$, bottom: $y=x^2-1$.',

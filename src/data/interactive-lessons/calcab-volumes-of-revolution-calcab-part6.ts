@@ -62,9 +62,9 @@ $$V = \\pi\\int_0^4\\left[9-(3-\\sqrt{x})^2\\right]dx$$
           },
           {
             question: '"Write but do not evaluate" on the AP exam means:',
-            options: ['Show the definite integral with correct bounds, do not compute', 'Describe the method in words', 'Give the final numerical answer', 'Sketch the graph'],
+            options: ['A complete definite integral, unevaluated', 'A description of the method in words', 'The final value from a calculator', 'The antiderivative, before the bounds'],
             correctAnswer: 0,
-            explanation: 'Set up the integral completely. Do not simplify or evaluate. You get full credit for a correct integral.'
+            explanation: 'Set up the definite integral completely, with integrand and bounds, and stop there. Do not simplify or evaluate. A correct integral earns full credit; a description in words, a number, or an antiderivative alone does not.'
           }
         ]
       }
@@ -77,8 +77,8 @@ $$V = \\pi\\int_0^4\\left[9-(3-\\sqrt{x})^2\\right]dx$$
         dropdowns: [
           {
             label: 'Region between $y=x^2$ and $y=4$. Rotate about $y=4$. Disk or washer?',
-            options: ['Disk (region touches $y=4$)', 'Washer', 'Cross-section', 'Cannot determine'],
-            correctAnswers: ['Disk (region touches $y=4$)'],
+            options: ['Disk: $R = 4-x^2$', 'Washer: $R = 4$, $r = x^2$', 'Disk: $R = x^2$', 'Washer: $R = 4-x^2$, $r = 4$'],
+            correctAnswers: ['Disk: $R = 4-x^2$'],
             hints: ['$y=4$ is both the axis and a boundary curve. No gap.'],
             explanation: 'The region touches the axis $y=4$, so each cross-section is a full disk. $R = 4-x^2$.'
           },
@@ -91,10 +91,10 @@ $$V = \\pi\\int_0^4\\left[9-(3-\\sqrt{x})^2\\right]dx$$
           },
           {
             label: 'On a cross-section FRQ, the most common error is:',
-            options: ['Using the wrong area formula for the shape', 'Forgetting $\\pi$', 'Wrong limits', 'Not squaring'],
-            correctAnswers: ['Using the wrong area formula for the shape'],
+            options: ['Using the wrong area formula', 'Forgetting to square the side length', 'Using the wrong limits of integration', 'Rounding too early in the calculation'],
+            correctAnswers: ['Using the wrong area formula'],
             hints: ['Students often confuse semicircle diameter/radius or equilateral triangle height.'],
-            explanation: 'Knowing the 5 cross-section formulas cold prevents this error.'
+            explanation: 'Using the wrong area formula for the cross-section shape is the most common error. Knowing the 5 cross-section formulas cold prevents it.'
           }
         ]
       }

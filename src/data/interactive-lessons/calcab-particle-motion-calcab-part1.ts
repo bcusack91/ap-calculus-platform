@@ -54,15 +54,15 @@ $$a(t) = v'(t) = 6t - 12 = 6(t-2)$$
           },
           {
             question: '$s(t) = \\sin(2t)$. The acceleration is:',
-            options: ['$a(t) = -4\\sin(2t)$', '$a(t) = 2\\cos(2t)$', '$a(t) = -2\\sin(2t)$', '$a(t) = 4\\cos(2t)$'],
+            options: ['$a(t) = -4\\sin(2t)$', '$a(t) = 2\\cos(2t)$', '$a(t) = -\\sin(2t)$', '$a(t) = 4\\cos(2t)$'],
             correctAnswer: 0,
-            explanation: '$v(t) = 2\\cos(2t)$. $a(t) = -4\\sin(2t)$.'
+            explanation: '$v(t) = 2\\cos(2t)$. $a(t) = -4\\sin(2t)$. Each derivative brings out a chain-rule factor of $2$; dropping both gives $-\\sin(2t)$, and stopping at $v$ gives $2\\cos(2t)$.'
           },
           {
             question: 'If $v(t) = 0$ at time $t = c$, the particle is:',
-            options: ['At rest (momentarily stopped)', 'At the origin', 'Accelerating', 'Moving left'],
+            options: ['Momentarily at rest', 'At the origin, where $s(c) = 0$', 'Changing direction at $t = c$', 'Not accelerating at that instant'],
             correctAnswer: 0,
-            explanation: '$v = 0$ means the particle has zero velocity \u2014 it is momentarily at rest (but may still be accelerating).'
+            explanation: '$v = 0$ means the particle has zero velocity — it is momentarily at rest. That says nothing about its position, it changes direction only if $v$ also changes sign, and it may still be accelerating.'
           }
         ]
       }
@@ -75,7 +75,7 @@ $$a(t) = v'(t) = 6t - 12 = 6(t-2)$$
         dropdowns: [
           {
             label: 'To find when a particle is at rest, solve:',
-            options: ['$v(t) = 0$', '$s(t) = 0$', '$a(t) = 0$', '$s\'\'(t) = 0$'],
+            options: ['$v(t) = 0$', '$s(t) = s(0)$', '$v\'(t) = 0$', '$s\'\'(t) = 0$'],
             correctAnswers: ['$v(t) = 0$'],
             hints: ['"At rest" means zero velocity.'],
             explanation: 'At rest means $v(t) = 0$.'
@@ -89,10 +89,10 @@ $$a(t) = v'(t) = 6t - 12 = 6(t-2)$$
           },
           {
             label: 'For $s(t) = t^3 - 6t^2 + 9t$, the particle is at rest when $t =$',
-            options: ['$1$ and $3$', '$0$ and $2$', '$2$ only', '$1$ only'],
+            options: ['$1$ and $3$', '$0$ and $3$', '$2$ only', '$-1$ and $-3$'],
             correctAnswers: ['$1$ and $3$'],
             hints: ['$v(t) = 3t^2-12t+9 = 3(t-1)(t-3)$.'],
-            explanation: '$v(t) = 3(t-1)(t-3) = 0$ at $t = 1$ and $t = 3$.'
+            explanation: '$v(t) = 3t^2 - 12t + 9 = 3(t-1)(t-3) = 0$ at $t = 1$ and $t = 3$. The zeros of $s(t)$ itself ($t = 0$ and $t = 3$) mark where the particle is at the origin, not where it is at rest.'
           }
         ]
       }

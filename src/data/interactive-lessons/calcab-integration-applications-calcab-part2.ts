@@ -89,10 +89,10 @@ If the **side length** (or diameter) of each cross section is $s(x) = f(x) - g(x
         dropdowns: [
           {
             label: 'Base between $y=0$ and $y=\\sin x$ on $[0,\\pi]$. Cross sections are squares. Volume integral:',
-            options: ['$\\int_0^{\\pi} \\sin^2 x\\,dx$', '$\\int_0^{\\pi} \\sin x\\,dx$', '$\\pi \\int_0^{\\pi} \\sin^2 x\\,dx$', '$\\int_0^{\\pi} \\sqrt{\\sin x}\\,dx$'],
+            options: ['$\\int_0^{\\pi} \\sin^2 x\\,dx$', '$\\int_0^{\\pi} \\frac{1}{2}\\sin^2 x\\,dx$', '$\\pi \\int_0^{\\pi} \\sin^2 x\\,dx$', '$\\int_0^{\\pi} \\sqrt{\\sin x}\\,dx$'],
             correctAnswers: ['$\\int_0^{\\pi} \\sin^2 x\\,dx$'],
             hints: ['$s = \\sin x$, square area $= s^2 = \\sin^2 x$.'],
-            explanation: '$V = \\int_0^{\\pi} \\sin^2 x\\,dx$.'
+            explanation: 'Each square has side $\\sin x$, so its area is $\\sin^2 x$ and $V = \\int_0^{\\pi} \\sin^2 x\\,dx$. No $\\pi$ (that is for circles) and no $\\frac{1}{2}$ (that is for triangles).'
           },
           {
             label: 'For semicircular cross sections, the area formula uses which constant?',
@@ -103,7 +103,7 @@ If the **side length** (or diameter) of each cross section is $s(x) = f(x) - g(x
           },
           {
             label: 'Base: circle $x^2+y^2=4$. Square cross sections $\\perp$ to $x$-axis. Side length at position $x$:',
-            options: ['$2\\sqrt{4-x^2}$', '$\\sqrt{4-x^2}$', '$4-x^2$', '$2x$'],
+            options: ['$2\\sqrt{4-x^2}$', '$\\sqrt{4-x^2}$', '$4-x^2$', '$2(4-x^2)$'],
             correctAnswers: ['$2\\sqrt{4-x^2}$'],
             hints: ['Top: $y=\\sqrt{4-x^2}$, bottom: $y=-\\sqrt{4-x^2}$. Side = top $-$ bottom.'],
             explanation: 'Side $= \\sqrt{4-x^2}-(-\\sqrt{4-x^2}) = 2\\sqrt{4-x^2}$.'
@@ -118,7 +118,7 @@ If the **side length** (or diameter) of each cross section is $s(x) = f(x) - g(x
       exercise: {
         question: 'Base between $y=0$ and $y=1-x^2$ (for $-1 \\le x \\le 1$). Cross sections perpendicular to the $x$-axis are squares. Find the volume.\n\n(Enter a fraction as a/b.)',
         correctAnswer: '16/15',
-        acceptableAnswers: ['16/15'],
+        acceptableAnswers: ['16/15', '1.07', '1.067'],
         hints: [
           'Side length $s = 1-x^2$. Area $= (1-x^2)^2$.',
           '$V = \\int_{-1}^{1}(1-x^2)^2 dx = 2\\int_0^1(1-2x^2+x^4)dx$.',

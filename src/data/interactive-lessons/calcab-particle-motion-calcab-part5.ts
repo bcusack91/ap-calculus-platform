@@ -48,15 +48,15 @@ $v(t) = 3t^2 - 4 = 0$ at $t = 2/\\sqrt{3}$. Check sign change: $v(0) = -4 < 0$, 
           },
           {
             question: '$a(t) = -10$ (gravity), $v(0) = 30$ m/s. When does the object reach max height?',
-            options: ['$t = 3$ s', '$t = 10$ s', '$t = 30$ s', '$t = 1$ s'],
+            options: ['$t = 3$ s', '$t = 10$ s', '$t = 30$ s', '$t = 1/3$ s'],
             correctAnswer: 0,
-            explanation: '$v(t) = 30 - 10t = 0$ at $t = 3$. Max height when $v = 0$.'
+            explanation: '$v(t) = 30 - 10t = 0$ at $t = 3$. Max height when $v = 0$. Dividing the wrong way gives $1/3$.'
           },
           {
             question: '$a(t) = \\cos t$, $v(0) = 0$. The velocity function is:',
-            options: ['$v(t) = \\sin t$', '$v(t) = \\cos t$', '$v(t) = -\\sin t$', '$v(t) = t$'],
+            options: ['$v(t) = \\sin t$', '$v(t) = \\cos t - 1$', '$v(t) = -\\sin t$', '$v(t) = -\\cos t$'],
             correctAnswer: 0,
-            explanation: '$v(t) = 0 + \\int_0^t \\cos\\tau\\,d\\tau = \\sin t$.'
+            explanation: '$v(t) = 0 + \\int_0^t \\cos\\tau\\,d\\tau = \\sin t$. $\\cos t - 1$ treats $\\cos$ as its own antiderivative, and $-\\cos t$ fails the initial condition $v(0) = 0$.'
           }
         ]
       }
@@ -76,14 +76,14 @@ $v(t) = 3t^2 - 4 = 0$ at $t = 2/\\sqrt{3}$. Check sign change: $v(0) = -4 < 0$, 
           },
           {
             label: 'Continuing: $s(t) =$',
-            options: ['$2t^2 - 6t + 10$', '$4t - 6$', '$2t^2 + 10$', '$-6t + 10$'],
+            options: ['$2t^2 - 6t + 10$', '$4t^2 - 6t + 10$', '$2t^2 + 10$', '$2t^2 - 6t$'],
             correctAnswers: ['$2t^2 - 6t + 10$'],
             hints: ['$s(t) = 10 + \\int_0^t (4\\tau - 6)d\\tau$.'],
             explanation: '$s(t) = 10 + [2\\tau^2 - 6\\tau]_0^t = 2t^2 - 6t + 10$.'
           },
           {
             label: 'The particle changes direction at $t =$',
-            options: ['$3/2$', '$5/2$', '$2$', '$1$'],
+            options: ['$3/2$', '$2/3$', '$3$', '$-3/2$'],
             correctAnswers: ['$3/2$'],
             hints: ['$v(t) = 4t - 6 = 0$.'],
             explanation: '$4t - 6 = 0$ at $t = 3/2$. $v$ changes from negative to positive there.'

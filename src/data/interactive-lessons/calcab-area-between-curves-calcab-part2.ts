@@ -61,9 +61,9 @@ $$= \\left[\\frac{x^4}{4}-\\frac{x^2}{2}\\right]_{-1}^0 + \\left[\\frac{x^2}{2}-
           },
           {
             question: 'Curves $f$ and $g$ cross at $x=3$. On $[0,5]$, $f > g$ on $[0,3)$ and $g > f$ on $(3,5]$. Which setup is correct?',
-            options: ['$\\int_0^3(f-g)\\,dx + \\int_3^5(g-f)\\,dx$', '$\\int_0^5(f-g)\\,dx$', '$\\int_0^5|f+g|\\,dx$', '$\\int_0^3(g-f)\\,dx + \\int_3^5(f-g)\\,dx$'],
+            options: ['$\\int_0^3(f-g)\\,dx + \\int_3^5(g-f)\\,dx$', '$\\int_0^5(f-g)\\,dx$', '$\\int_0^5(g-f)\\,dx$', '$\\int_0^3(g-f)\\,dx + \\int_3^5(f-g)\\,dx$'],
             correctAnswer: 0,
-            explanation: 'Split at crossing point. Top minus bottom on each subinterval.'
+            explanation: 'Split at the crossing point and take top minus bottom on each subinterval: $f - g$ on $[0,3]$, $g - f$ on $[3,5]$. A single integral of $f - g$ or $g - f$ over $[0,5]$ lets the two pieces cancel, and reversing the order on both pieces gives a negative total.'
           }
         ]
       }
@@ -83,14 +83,14 @@ $$= \\left[\\frac{x^4}{4}-\\frac{x^2}{2}\\right]_{-1}^0 + \\left[\\frac{x^2}{2}-
           },
           {
             label: 'Net (signed) area of $\\sin x$ on $[0, 2\\pi]$ is $0$. This means:',
-            options: ['Positive and negative areas cancel', 'The function is zero everywhere', 'The total area is zero', 'There is no area'],
+            options: ['Positive and negative areas cancel', 'The function is zero everywhere', 'The total area is zero', 'The region has no area to measure'],
             correctAnswers: ['Positive and negative areas cancel'],
             hints: ['Signed area allows cancellation; total area uses absolute value.'],
             explanation: '$\\int_0^{\\pi}\\sin x\\,dx = 2$ and $\\int_{\\pi}^{2\\pi}\\sin x\\,dx = -2$. They cancel to $0$.'
           },
           {
             label: 'If $f(x)-g(x)$ changes sign at $x = c$, you must:',
-            options: ['Split the integral at $x = c$', 'Ignore the sign change', 'Use only $\\int_a^b f\\,dx$', 'Set up as $\\int_a^b[f \\cdot g]\\,dx$'],
+            options: ['Split the integral at $x = c$', 'Ignore the sign change', 'Use only $\\int_a^b f\\,dx$', 'Swap $f$ and $g$ everywhere'],
             correctAnswers: ['Split the integral at $x = c$'],
             hints: ['Without splitting, positive and negative areas cancel.'],
             explanation: 'Split to ensure each piece gives positive area.'

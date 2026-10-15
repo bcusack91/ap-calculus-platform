@@ -58,15 +58,15 @@ $$\\boxed{\\text{Read} \\to \\text{Rewrite (if needed)} \\to \\text{Recognize th
           },
           {
             question: 'A particle has $a(t) = 6t$, $v(0) = -5$, $s(0) = 2$. Find $s(2)$.',
-            options: ['$0$', '$-2$', '$6$', '$4$'],
+            options: ['$0$', '$-2$', '$10$', '$20$'],
             correctAnswer: 0,
-            explanation: '$v(t) = 3t^2 - 5$. $s(t) = t^3 - 5t + 2$. $s(2) = 8 - 10 + 2 = 0$.'
+            explanation: '$v(t) = 3t^2 - 5$. $s(t) = t^3 - 5t + 2$. $s(2) = 8 - 10 + 2 = 0$. Forgetting $s(0)$ gives $-2$, forgetting $v(0)$ gives $8 + 2 = 10$, and a sign slip on $v(0)$ ($t^3 + 5t + 2$) gives $20$.'
           },
           {
             question: 'Evaluate $\\int \\frac{x^3 + x}{x^2}\\,dx$.',
-            options: ['$\\frac{x^2}{2} + \\ln|x| + C$', '$\\frac{x^2}{2} - \\frac{1}{x} + C$', '$\\ln|x^3+x| + C$', '$\\frac{x^4}{4} + \\frac{x^2}{2} + C$'],
+            options: ['$\\frac{x^2}{2} + \\ln|x| + C$', '$\\frac{x^2}{2} - \\frac{1}{x} + C$', '$\\frac{x^4/4 + x^2/2}{x^3/3} + C$', '$\\frac{x^4}{4} + \\frac{x^2}{2} + C$'],
             correctAnswer: 0,
-            explanation: 'Rewrite: $\\int (x + x^{-1})\\,dx = \\frac{x^2}{2} + \\ln|x| + C$.'
+            explanation: 'Rewrite: $\\int (x + x^{-1})\\,dx = \\frac{x^2}{2} + \\ln|x| + C$. You cannot integrate the numerator and denominator separately, and $x^{-1}$ integrates to $\\ln|x|$, not $-\\frac{1}{x}$.'
           }
         ]
       }
@@ -85,9 +85,9 @@ $$\\boxed{\\text{Read} \\to \\text{Rewrite (if needed)} \\to \\text{Recognize th
           },
           {
             question: 'If $F\'(x) = \\sec^2 x$ and $F(0) = 3$, what is $F(\\pi/4)$?',
-            options: ['$3$', '$4$', '$2$', '$1 + 3$'],
+            options: ['$3$', '$4$', '$2$', '$\\sqrt{2} + 2$'],
             correctAnswer: 1,
-            explanation: '$F(x) = \\tan x + C$. $F(0) = 0 + C = 3$, so $C = 3$. $F(\\pi/4) = \\tan(\\pi/4) + 3 = 1 + 3 = 4$.'
+            explanation: '$F(x) = \\tan x + C$. $F(0) = 0 + C = 3$, so $C = 3$. $F(\\pi/4) = \\tan(\\pi/4) + 3 = 1 + 3 = 4$. Plugging into $F\'$ gives $\\sec^2(\\pi/4) = 2$, and using $F = \\sec x + C$ gives $C = 2$ and $\\sqrt{2} + 2$.'
           },
           {
             question: 'Evaluate $\\int (\\sin^2 x + \\cos^2 x)\\,dx$.',
@@ -112,21 +112,21 @@ $$\\boxed{\\text{Read} \\to \\text{Rewrite (if needed)} \\to \\text{Recognize th
         dropdowns: [
           {
             label: '$\\int \\frac{1}{\\sqrt{49-x^2}}\\,dx$ equals:',
-            options: ['$\\arcsin(x/7) + C$', '$\\frac{1}{7}\\arctan(x/7) + C$', '$\\ln|49-x^2| + C$', '$-\\sqrt{49-x^2} + C$'],
+            options: ['$\\arcsin(x/7) + C$', '$\\frac{1}{7}\\arctan(x/7) + C$', '$\\frac{1}{7}\\arcsin(x/7) + C$', '$-\\sqrt{49-x^2} + C$'],
             correctAnswers: ['$\\arcsin(x/7) + C$'],
             hints: ['$\\sqrt{a^2 - x^2}$ with $a = 7$: arcsin form.'],
-            explanation: '$\\int \\frac{1}{\\sqrt{49-x^2}}\\,dx = \\arcsin(x/7) + C$.'
+            explanation: '$\\int \\frac{1}{\\sqrt{49-x^2}}\\,dx = \\arcsin(x/7) + C$. Unlike the arctan form, the arcsin form has no $\\frac{1}{a}$ factor in front.'
           },
           {
             label: '$\\int (x^{-3} + x^{2/3})\\,dx$ equals:',
-            options: ['$-\\frac{1}{2x^2} + \\frac{3}{5}x^{5/3} + C$', '$-3x^{-4} + \\frac{2}{3}x^{-1/3} + C$', '$\\frac{1}{x^2} + \\frac{3}{5}x^{5/3} + C$', '$-\\frac{1}{2x^2} + \\frac{5}{3}x^{5/3} + C$'],
+            options: ['$-\\frac{1}{2x^2} + \\frac{3}{5}x^{5/3} + C$', '$-3x^{-4} + \\frac{2}{3}x^{-1/3} + C$', '$\\frac{1}{x^2} + \\frac{3}{5}x^{5/3} + C$', '$-\\frac{1}{2x^2} + x^{5/3} + C$'],
             correctAnswers: ['$-\\frac{1}{2x^2} + \\frac{3}{5}x^{5/3} + C$'],
             hints: ['Power Rule on each term. Remember to divide by the new exponent.'],
             explanation: '$\\int x^{-3} = \\frac{x^{-2}}{-2}$ and $\\int x^{2/3} = \\frac{x^{5/3}}{5/3} = \\frac{3}{5}x^{5/3}$.'
           },
           {
             label: 'If $v(t) = 3t^2 - 2$ and $s(0) = 5$, then $s(3)$ equals:',
-            options: ['$20$', '$26$', '$32$', '$22$'],
+            options: ['$21$', '$26$', '$32$', '$25$'],
             correctAnswers: ['$26$'],
             hints: ['$s(t) = t^3 - 2t + C$. Use $s(0) = 5$ to find $C$.'],
             explanation: '$s(t) = t^3 - 2t + 5$. $s(3) = 27 - 6 + 5 = 26$.'

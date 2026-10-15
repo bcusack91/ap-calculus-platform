@@ -48,9 +48,9 @@ $$A = \\int_{-2}^{2}(4-y^2)\\,dy = 2\\int_0^2(4-y^2)\\,dy = 2\\left[4y-\\frac{y^
         questions: [
           {
             question: 'Find the area enclosed by $x = y^2-1$ and $x = y+1$.',
-            options: ['$\\frac{9}{2}$', '$\\frac{7}{2}$', '$3$', '$\\frac{11}{2}$'],
+            options: ['$\\frac{9}{2}$', '$\\frac{10}{3}$', '$-\\frac{9}{2}$', '$\\frac{13}{6}$'],
             correctAnswer: 0,
-            explanation: 'Intersect: $y^2-1=y+1 \\Rightarrow y^2-y-2=0 \\Rightarrow y=-1,2$. Right: $y+1$. Left: $y^2-1$. $A = \\int_{-1}^2[(y+1)-(y^2-1)]\\,dy = \\int_{-1}^2(2+y-y^2)\\,dy = \\frac{9}{2}$.'
+            explanation: 'Intersect: $y^2-1=y+1 \\Rightarrow y^2-y-2=0 \\Rightarrow y=-1,2$. Right: $y+1$. Left: $y^2-1$. $A = \\int_{-1}^2(2+y-y^2)\\,dy = [2y+\\frac{y^2}{2}-\\frac{y^3}{3}]_{-1}^2 = \\frac{10}{3} - (-\\frac{7}{6}) = \\frac{9}{2}$. Dropping the lower limit gives $\\frac{10}{3}$, adding its value $-\\frac{7}{6}$ instead of subtracting gives $\\frac{13}{6}$, and left minus right gives $-\\frac{9}{2}$.'
           },
           {
             question: 'The area between $x = y$ and $x = y^2$ for $0 \\leq y \\leq 1$ is:',
@@ -60,7 +60,7 @@ $$A = \\int_{-2}^{2}(4-y^2)\\,dy = 2\\int_0^2(4-y^2)\\,dy = 2\\left[4y-\\frac{y^
           },
           {
             question: 'When integrating wrt $y$, your limits of integration are:',
-            options: ['$y$-values of intersections', '$x$-values of intersections', 'Always $0$ to $1$', 'The same as in $dx$'],
+            options: ['$y$-values of intersections', '$x$-values where they cross', 'Always $0$ to $1$', 'The same as in $dx$'],
             correctAnswer: 0,
             explanation: 'Limits must match the variable of integration. In $dy$, use $y$-values.'
           }
@@ -75,10 +75,10 @@ $$A = \\int_{-2}^{2}(4-y^2)\\,dy = 2\\int_0^2(4-y^2)\\,dy = 2\\left[4y-\\frac{y^
         dropdowns: [
           {
             label: 'Region between $x=y^2$ and $x=2y$. Better variable:',
-            options: ['$y$ (one integral)', '$x$ (one integral)', '$x$ (two integrals)', 'Either works equally well'],
+            options: ['$y$ (one integral)', '$x$ (two integrals)', '$x$, with $\\pm\\sqrt{x}$ as bounds', '$y$ (two integrals)'],
             correctAnswers: ['$y$ (one integral)'],
             hints: ['Both curves are already functions of $y$. In $x$, you would need to solve for $y$ and might need to split.'],
-            explanation: 'Both curves are naturally functions of $y$: $x=y^2$ and $x=2y$. One integral in $y$.'
+            explanation: 'Both curves are naturally functions of $y$: $x=y^2$ and $x=2y$, meeting at $y=0$ and $y=2$. One integral in $y$, $\\int_0^2 (2y - y^2)\\,dy$, avoids square roots.'
           },
           {
             label: 'Area between $y=\\ln x$, $y=0$, $x=e$. In $dy$, right boundary is:',
@@ -89,10 +89,10 @@ $$A = \\int_{-2}^{2}(4-y^2)\\,dy = 2\\int_0^2(4-y^2)\\,dy = 2\\left[4y-\\frac{y^
           },
           {
             label: '$x = 4-y^2$ and $x = 0$. The region is bounded on the left by:',
-            options: ['$x = 0$ (the $y$-axis)', '$x = 4-y^2$', '$x = 4$', '$y = 0$'],
-            correctAnswers: ['$x = 0$ (the $y$-axis)'],
+            options: ['$x = 0$', '$x = 4-y^2$', '$x = 4$', '$y = 0$'],
+            correctAnswers: ['$x = 0$'],
             hints: ['$x=0$ is the $y$-axis. $x=4-y^2$ opens leftward and is the right boundary.'],
-            explanation: 'Left: $x=0$. Right: $x=4-y^2$. Limits: $y=-2$ to $y=2$.'
+            explanation: 'Left: $x=0$ (the $y$-axis). Right: $x=4-y^2$. Limits: $y=-2$ to $y=2$.'
           }
         ]
       }
@@ -104,7 +104,7 @@ $$A = \\int_{-2}^{2}(4-y^2)\\,dy = 2\\int_0^2(4-y^2)\\,dy = 2\\left[4y-\\frac{y^
       exercise: {
         question: 'Find the area between $x = y^2$ and $x = 2y + 3$.\n\n$A = ?$ (Enter a fraction as a/b.)',
         correctAnswer: '32/3',
-        acceptableAnswers: ['32/3'],
+        acceptableAnswers: ['32/3', '10.7', '10.67'],
         hints: [
           'Intersect: $y^2 = 2y+3 \\Rightarrow y^2-2y-3=0 \\Rightarrow (y-3)(y+1)=0$.',
           'Right: $2y+3$, Left: $y^2$. Integrate from $y=-1$ to $y=3$.',

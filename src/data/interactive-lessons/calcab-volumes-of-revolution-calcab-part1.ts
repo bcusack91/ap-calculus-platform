@@ -84,7 +84,7 @@ $$V = \\pi\\int_0^4(\\sqrt{x})^2\\,dx = \\pi\\int_0^4 x\\,dx = \\pi\\left[\\frac
         dropdowns: [
           {
             label: 'Rotate $y = \\cos x$ about $x$-axis on $[0, \\pi/2]$. The radius is:',
-            options: ['$R = \\cos x$', '$R = \\sin x$', '$R = \\cos^2 x$', '$R = \\pi \\cos x$'],
+            options: ['$R = \\cos x$', '$R = 1 - \\cos x$', '$R = \\cos^2 x$', '$R = \\pi \\cos x$'],
             correctAnswers: ['$R = \\cos x$'],
             hints: ['Radius = distance from curve to axis = $f(x)$.'],
             explanation: 'Rotating about $x$-axis: $R = f(x) = \\cos x$.'
@@ -98,10 +98,10 @@ $$V = \\pi\\int_0^4(\\sqrt{x})^2\\,dx = \\pi\\int_0^4 x\\,dx = \\pi\\left[\\frac
           },
           {
             label: 'The volume integral always includes $\\pi$ because:',
-            options: ['Each cross-section is a circle ($A = \\pi r^2$)', 'We are measuring in radians', 'The curve is periodic', 'It simplifies the math'],
-            correctAnswers: ['Each cross-section is a circle ($A = \\pi r^2$)'],
+            options: ['Each cross-section is a circle', 'The angles are measured in radians', 'The curve being rotated is periodic', 'Rotation always adds a factor of $2\\pi$'],
+            correctAnswers: ['Each cross-section is a circle'],
             hints: ['What shape is each slice?'],
-            explanation: 'Each disk has area $\\pi R^2$. Integrating these areas gives volume.'
+            explanation: 'Each cross-section is a circular disk with area $A = \\pi R^2$. Integrating these areas gives volume.'
           }
         ]
       }

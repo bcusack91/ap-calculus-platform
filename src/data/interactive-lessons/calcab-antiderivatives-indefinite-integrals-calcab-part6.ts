@@ -77,9 +77,9 @@ $f(x) = 2x^3 - 2x^2 + x + 2$
           },
           {
             question: 'Evaluate $\\int \\left(\\frac{5}{\\sqrt{x}} - \\frac{3}{x}\\right)dx$.',
-            options: ['$10\\sqrt{x} - 3\\ln|x| + C$', '$\\frac{5}{2\\sqrt{x}} - 3\\ln|x| + C$', '$5\\sqrt{x} - 3\\ln|x| + C$', '$10\\sqrt{x} - \\frac{3}{x^2} + C$'],
+            options: ['$10\\sqrt{x} - 3\\ln|x| + C$', '$\\frac{5}{2\\sqrt{x}} - 3\\ln|x| + C$', '$\\frac{5}{2}\\sqrt{x} - 3\\ln|x| + C$', '$10\\sqrt{x} - \\frac{3}{x^2} + C$'],
             correctAnswer: 0,
-            explanation: '$\\int 5x^{-1/2} = 5 \\cdot 2x^{1/2} = 10\\sqrt{x}$. $\\int 3/x = 3\\ln|x|$. Result: $10\\sqrt{x} - 3\\ln|x| + C$.'
+            explanation: '$\\int 5x^{-1/2} = 5 \\cdot 2x^{1/2} = 10\\sqrt{x}$. $\\int 3/x = 3\\ln|x|$. Result: $10\\sqrt{x} - 3\\ln|x| + C$. Dividing by the new exponent $\\frac{1}{2}$ means multiplying by $2$, not by $\\frac{1}{2}$.'
           }
         ]
       }
@@ -104,9 +104,9 @@ $f(x) = 2x^3 - 2x^2 + x + 2$
           },
           {
             question: 'Evaluate $\\int \\frac{1}{\\sqrt{1-x^2}}\\,dx$.',
-            options: ['$\\arctan(x) + C$', '$\\arcsin(x) + C$', '$-\\sqrt{1-x^2} + C$', '$\\frac{1}{2}\\ln|1-x^2| + C$'],
+            options: ['$\\operatorname{arcsec}(x) + C$', '$\\arcsin(x) + C$', '$-\\sqrt{1-x^2} + C$', '$\\frac{1}{2}\\ln|1-x^2| + C$'],
             correctAnswer: 1,
-            explanation: 'The $\\sqrt{a^2-x^2}$ form with $a = 1$: $\\arcsin(x) + C$.'
+            explanation: 'The $\\sqrt{a^2-x^2}$ form with $a = 1$: $\\arcsin(x) + C$. The arcsecant form needs $\\frac{1}{x\\sqrt{x^2-1}}$, and $\\ln$ or $-\\sqrt{1-x^2}$ would need an $x$ in the numerator.'
           }
         ]
       }
@@ -149,8 +149,8 @@ $f(x) = 2x^3 - 2x^2 + x + 2$
           },
           {
             label: '$\\int (\\csc^2 x + e^x)\\,dx$: The technique is:',
-            options: ['Power Rule', 'Trig formula + exponential', 'Inverse trig (arcsin)', 'Inverse trig (arctan)', 'Rewrite first'],
-            correctAnswers: ['Trig formula + exponential'],
+            options: ['Power Rule + exponential', 'Trig + exponential', 'Inverse trig (arcsin)', 'Inverse trig (arctan)', 'Rewrite first'],
+            correctAnswers: ['Trig + exponential'],
             hints: ['Split and use known formulas for each.'],
             explanation: '$\\int \\csc^2 x = -\\cot x$ and $\\int e^x = e^x$. Result: $-\\cot x + e^x + C$.'
           }

@@ -50,9 +50,9 @@ $$\\text{Total} = \\frac{7}{3} + \\frac{32}{3} + \\frac{7}{3} = \\boxed{\\frac{4
           },
           {
             question: 'If $\\int_a^b f(x)\\,dx = -3$, which is true?',
-            options: ['$f$ is below the $x$-axis for at least some of $[a,b]$', '$f$ is always negative on $[a,b]$', 'The total area is $-3$', '$f(x) < 0$ for all $x$'],
+            options: ['$f$ dips below the $x$-axis somewhere on $[a,b]$', '$f$ is below the $x$-axis on all of $[a,b]$', 'The area between $f$ and the $x$-axis is $-3$', 'The area between $f$ and the $x$-axis is $3$'],
             correctAnswer: 0,
-            explanation: 'A negative integral means the function dips below the axis enough for the negative parts to outweigh positive parts.'
+            explanation: 'A negative integral means the function dips below the axis enough for the negative parts to outweigh positive parts. It need not be below the axis everywhere, area is never negative, and the area equals $3$ only if $f$ never crosses above the axis.'
           },
           {
             question: 'Total area between $y=x$ and $y=0$ on $[-1, 1]$ is:',
@@ -71,10 +71,10 @@ $$\\text{Total} = \\frac{7}{3} + \\frac{32}{3} + \\frac{7}{3} = \\boxed{\\frac{4
         dropdowns: [
           {
             label: '$\\int_{-2}^2 x^3\\,dx$. Without computing, this equals:',
-            options: ['$0$ (odd function on symmetric interval)', '$16$', '$-16$', 'Cannot determine'],
-            correctAnswers: ['$0$ (odd function on symmetric interval)'],
+            options: ['$0$', '$16$', '$-16$', '$2\\int_0^2 x^3\\,dx$'],
+            correctAnswers: ['$0$'],
             hints: ['$x^3$ is an odd function. $\\int_{-a}^a f(x)\\,dx = 0$ for odd $f$.'],
-            explanation: 'Odd function on symmetric interval: signed area is always $0$.'
+            explanation: 'Odd function on a symmetric interval: the signed areas on $[-2,0]$ and $[0,2]$ cancel, so the integral is $0$.'
           },
           {
             label: '"Find the area of the region" on the AP exam means:',
@@ -85,10 +85,10 @@ $$\\text{Total} = \\frac{7}{3} + \\frac{32}{3} + \\frac{7}{3} = \\boxed{\\frac{4
           },
           {
             label: 'Displacement vs total distance: displacement uses:',
-            options: ['$\\int v(t)\\,dt$ (signed)', '$\\int|v(t)|\\,dt$ (absolute value)', 'Both are the same', 'Neither'],
-            correctAnswers: ['$\\int v(t)\\,dt$ (signed)'],
+            options: ['$\\int v(t)\\,dt$', '$\\int|v(t)|\\,dt$', 'Both are the same', '$|\\int v(t)\\,dt|$'],
+            correctAnswers: ['$\\int v(t)\\,dt$'],
             hints: ['Displacement allows cancellation (back and forth). Total distance does not.'],
-            explanation: 'Displacement $= \\int v\\,dt$. Total distance $= \\int|v|\\,dt$.'
+            explanation: 'Displacement $= \\int v\\,dt$ (signed). Total distance $= \\int|v|\\,dt$.'
           }
         ]
       }

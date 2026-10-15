@@ -55,9 +55,9 @@ $V = \\pi\\int_{-2}^{2}(4-x^2)^2 dx = \\frac{512\\pi}{15}$
         questions: [
           {
             question: 'Region between $y = x$ and $y = x^2$ on $[0,1]$. Semicircular cross sections with diameter from $y=x^2$ to $y=x$. Volume:',
-            options: ['$\\frac{\\pi}{8}\\int_0^1(x-x^2)^2 dx = \\frac{\\pi}{240}$', '$\\pi\\int_0^1(x-x^2)^2 dx$', '$\\int_0^1(x-x^2)^2 dx$', '$\\frac{\\pi}{2}\\int_0^1(x-x^2)^2dx$'],
+            options: ['$\\frac{\\pi}{240}$', '$\\frac{\\pi}{120}$', '$\\frac{\\pi}{60}$', '$\\frac{\\pi}{30}$'],
             correctAnswer: 0,
-            explanation: 'Diameter $= x-x^2$. Semicircle area $= \\frac{\\pi}{8}d^2 = \\frac{\\pi}{8}(x-x^2)^2$. $V = \\frac{\\pi}{8} \\cdot \\frac{1}{30} = \\frac{\\pi}{240}$.'
+            explanation: 'Diameter $= x-x^2$. Semicircle area $= \\frac{\\pi}{8}d^2 = \\frac{\\pi}{8}(x-x^2)^2$. $V = \\frac{\\pi}{8}\\int_0^1 (x-x^2)^2\\,dx = \\frac{\\pi}{8} \\cdot \\frac{1}{30} = \\frac{\\pi}{240}$. A full circle of radius $d/2$ gives $\\frac{\\pi}{120}$, a semicircle with $d$ used as the radius gives $\\frac{\\pi}{60}$, and a full circle of radius $d$ gives $\\frac{\\pi}{30}$.'
           },
           {
             question: 'For $f(0)=1, f(1)=4, f(2)=3, f(3)=6$, the right Riemann sum with $\\Delta x=1$ is:',
@@ -82,21 +82,21 @@ $V = \\pi\\int_{-2}^{2}(4-x^2)^2 dx = \\frac{512\\pi}{15}$
         dropdowns: [
           {
             label: 'The base of a solid is a circle of radius 3. Cross sections perpendicular to a diameter are equilateral triangles. The volume integral is:',
-            options: ['$\\int_{-3}^{3} \\frac{\\sqrt{3}}{4}(2\\sqrt{9-x^2})^2 dx$', '$\\int_{-3}^{3} (2\\sqrt{9-x^2})^2 dx$', '$\\pi\\int_{-3}^{3} (9-x^2) dx$', '$\\int_{-3}^{3} \\sqrt{9-x^2}\\,dx$'],
+            options: ['$\\int_{-3}^{3} \\frac{\\sqrt{3}}{4}(2\\sqrt{9-x^2})^2 dx$', '$\\int_{-3}^{3} \\frac{1}{2}(2\\sqrt{9-x^2})^2 dx$', '$\\pi\\int_{-3}^{3} (9-x^2) dx$', '$\\int_{-3}^{3} \\frac{\\sqrt{3}}{4}(\\sqrt{9-x^2})^2 dx$'],
             correctAnswers: ['$\\int_{-3}^{3} \\frac{\\sqrt{3}}{4}(2\\sqrt{9-x^2})^2 dx$'],
             hints: ['Side $= 2\\sqrt{9-x^2}$. Equilateral triangle area $= \\frac{\\sqrt{3}}{4}s^2$.'],
             explanation: '$s = 2\\sqrt{9-x^2}$. $A = \\frac{\\sqrt{3}}{4}\\cdot 4(9-x^2) = \\sqrt{3}(9-x^2)$.'
           },
           {
             label: '$f(0)=2, f(3)=5, f(6)=3$ with $\\Delta x = 3$. Trapezoidal approximation:',
-            options: ['$\\frac{3}{2}(2+2(5)+3) = 22.5$', '$\\frac{3}{2}(2+2\\cdot5+3)$', '$3(2+5+3) = 30$', '$\\frac{6}{2}(2+2(5)+3) = 45$'],
-            correctAnswers: ['$\\frac{3}{2}(2+2\\cdot5+3)$'],
+            options: ['$\\frac{3}{2}(2+2(5)+2(3))$', '$\\frac{3}{2}(2+2(5)+3)$', '$3(2+2(5)+3)$', '$\\frac{3}{2}(2+5+3)$'],
+            correctAnswers: ['$\\frac{3}{2}(2+2(5)+3)$'],
             hints: ['$T = \\frac{\\Delta x}{2}[f_0+2f_1+f_2] = \\frac{3}{2}(2+10+3)$.'],
-            explanation: '$\\frac{3}{2}(2+10+3) = \\frac{3}{2}(15) = 22.5$.'
+            explanation: '$\\frac{3}{2}(2+2(5)+3) = \\frac{3}{2}(15) = 22.5$. Only the interior value $f(3)$ is doubled.'
           },
           {
             label: 'A particle\u2019s velocity is always positive on $[0,5]$. Then displacement equals:',
-            options: ['Total distance', 'Zero', 'Negative of distance', 'Half the distance'],
+            options: ['Total distance', 'Average velocity', 'Negative of distance', 'Half the distance'],
             correctAnswers: ['Total distance'],
             hints: ['If $v > 0$ always, then $|v| = v$.'],
             explanation: 'When $v(t) > 0$ throughout, $\\int v\\,dt = \\int|v|\\,dt$: displacement = total distance.'

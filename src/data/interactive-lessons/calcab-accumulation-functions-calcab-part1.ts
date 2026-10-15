@@ -75,9 +75,9 @@ $$\\text{Local min at } x = 2: \\quad f(2) = 0, \\quad f \\text{ changes } - \\t
           },
           {
             question: 'If $f(x) > 0$ for all $x$ in $(1, 5)$, then on $(1, 5)$, $g$ is:',
-            options: ['Positive', 'Increasing', 'Concave up', 'Decreasing'],
+            options: ['Concave down', 'Increasing', 'Concave up', 'Decreasing'],
             correctAnswer: 1,
-            explanation: '$g\'(x) = f(x) > 0$, so $g$ is increasing on $(1, 5)$.'
+            explanation: '$g\'(x) = f(x) > 0$, so $g$ is increasing on $(1, 5)$. Concavity depends on the sign of $f\'$, which is not given.'
           },
           {
             question: 'If $f(3) = 0$ and $f$ changes from positive to negative at $x = 3$, then $g$ has:',
@@ -110,10 +110,10 @@ $$\\text{Local min at } x = 2: \\quad f(2) = 0, \\quad f \\text{ changes } - \\t
           },
           {
             label: 'An inflection point of $F$ occurs where:',
-            options: ['$f = 0$', '$f$ has a local extremum', '$f$ changes sign', '$F = 0$'],
+            options: ['$F$ has a local extremum', '$f$ has a local extremum', '$f$ changes sign', '$f\'$ has a local extremum'],
             correctAnswers: ['$f$ has a local extremum'],
             hints: ['$F\'\' = f\'$. Inflection when $F\'\'$ changes sign, i.e., $f\'$ changes sign.'],
-            explanation: '$F\'\' = f\'$ changes sign where $f$ has a local max or min.'
+            explanation: '$F\'\' = f\'$ changes sign where $f$ has a local max or min. Where $f$ changes sign, $F$ has a local extremum instead.'
           }
         ]
       }

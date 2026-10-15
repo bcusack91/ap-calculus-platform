@@ -67,15 +67,15 @@ export const calcabIntAppsPart7Data = {
         questions: [
           {
             question: '$f(0)=3, f(1)=5, f(2)=4, f(3)=7$. Trapezoidal estimate of $\\int_0^3 f\\,dx$:',
-            options: ['$14$', '$12$', '$19$', '$15$'],
+            options: ['$14$', '$12$', '$16$', '$28$'],
             correctAnswer: 0,
-            explanation: '$T = \\frac{1}{2}[3+2(5)+2(4)+7] = \\frac{1}{2}(28) = 14$.'
+            explanation: '$T = \\frac{1}{2}[3+2(5)+2(4)+7] = \\frac{1}{2}(28) = 14$. The left sum gives $12$, the right sum gives $16$, and forgetting the $\\frac{1}{2}$ gives $28$.'
           },
           {
             question: 'Cars pass a checkpoint at rate $r(t)$. $\\int_0^3 r(t)\\,dt = 42$ means:',
-            options: ['42 cars passed during the first 3 hours', 'The rate was 42 cars/hr', '42 is the average rate', '42 cars are at the checkpoint'],
+            options: ['42 cars passed in the first 3 hours', 'The rate at $t = 3$ was 42 cars per hour', 'Cars passed at an average of 42 per hour', '42 cars were waiting at the checkpoint at $t = 3$'],
             correctAnswer: 0,
-            explanation: 'Integral of rate = total count. 42 cars passed from $t=0$ to $t=3$.'
+            explanation: 'The integral of a rate is the total amount: 42 cars passed from $t=0$ to $t=3$. It is not the rate at one instant, and the average rate would be $42/3 = 14$ cars per hour.'
           },
           {
             question: 'If $f$ is increasing and concave down, which is the best approximation?',
@@ -101,7 +101,7 @@ export const calcabIntAppsPart7Data = {
           },
           {
             label: 'Cross sections are isosceles right triangles with leg $= s$. Area formula:',
-            options: ['$\\frac{1}{2}s^2$', '$s^2$', '$\\frac{\\sqrt{3}}{4}s^2$', '$\\frac{\\pi}{8}s^2$'],
+            options: ['$\\frac{1}{2}s^2$', '$\\frac{1}{4}s^2$', '$\\frac{\\sqrt{3}}{4}s^2$', '$\\frac{\\pi}{8}s^2$'],
             correctAnswers: ['$\\frac{1}{2}s^2$'],
             hints: ['Isosceles right triangle: two legs of length $s$. Area $= \\frac{1}{2} \\cdot s \\cdot s$.'],
             explanation: '$A = \\frac{1}{2}(\\text{leg})(\\text{leg}) = \\frac{1}{2}s^2$.'

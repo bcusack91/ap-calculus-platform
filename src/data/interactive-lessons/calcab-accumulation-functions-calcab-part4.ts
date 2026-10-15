@@ -75,21 +75,21 @@ Water enters a tank at $R_{\\text{in}}(t) = 5 + 4\\sin(t^2)$ gal/min and drains 
         questions: [
           {
             question: 'A particle has velocity $v(t) = t^2 - 4t + 3$ on $[0, 4]$. The total distance traveled is:',
-            options: ['$4$', '$\\frac{8}{3}$', '$4$', '$\\frac{8}{3} + \\frac{4}{3} + \\frac{8}{3} = \\frac{20}{3}$'],
+            options: ['$\\frac{4}{3}$', '$\\frac{8}{3}$', '$0$', '$4$'],
             correctAnswer: 3,
-            explanation: 'Zeros at $t=1,3$. $\\int_0^1 (t^2-4t+3)dt = \\frac{4}{3}$, $\\int_1^3 |...|dt = \\frac{4}{3}$, $\\int_3^4 = \\frac{4}{3}$. Wait: $\\int_0^1 = [\\frac{t^3}{3}-2t^2+3t]_0^1 = \\frac{1}{3}-2+3 = \\frac{4}{3}$. $\\int_1^3 = [\\frac{t^3}{3}-2t^2+3t]_1^3 = (9-18+9)-(\\frac{1}{3}-2+3) = 0-\\frac{4}{3} = -\\frac{4}{3}$. $\\int_3^4 = (\\frac{64}{3}-32+12)-(0) = \\frac{4}{3}$. Total distance = $\\frac{4}{3}+\\frac{4}{3}+\\frac{4}{3} = 4$. Actually total distance = 4.'
+            explanation: '$v = (t-1)(t-3)$ has zeros at $t = 1, 3$. With $S(t) = \\frac{t^3}{3} - 2t^2 + 3t$: $\\int_0^1 v\\,dt = \\frac{4}{3}$, $\\int_1^3 v\\,dt = 0 - \\frac{4}{3} = -\\frac{4}{3}$, $\\int_3^4 v\\,dt = \\frac{4}{3} - 0 = \\frac{4}{3}$. Total distance $= \\frac{4}{3} + \\frac{4}{3} + \\frac{4}{3} = 4$. Without absolute values you get the displacement $\\frac{4}{3}$; stopping at $t = 3$ gives $\\frac{8}{3}$ for the distance and $0$ for the signed integral.'
           },
           {
             question: 'Water enters at $R_{in}(t) = 8$ gal/min and leaves at $R_{out}(t) = 2t$ gal/min. Starting with 20 gal, the amount at $t = 3$ is:',
-            options: ['$35$', '$29$', '$20 + \\int_0^3(8-2t)dt = 35$', '$15$'],
+            options: ['$44$', '$5$', '$35$', '$15$'],
             correctAnswer: 2,
-            explanation: '$\\int_0^3(8-2t)dt = [8t-t^2]_0^3 = 24-9 = 15$. Amount = $20+15=35$.'
+            explanation: '$\\int_0^3(8-2t)dt = [8t-t^2]_0^3 = 24-9 = 15$. Amount $= 20+15=35$. Ignoring the outflow gives $20 + 24 = 44$, forgetting the starting $20$ gal gives $15$, and subtracting the net change gives $5$.'
           },
           {
             question: 'If $\\int_0^5 v(t)\\,dt = -3$ and $\\int_0^5 |v(t)|\\,dt = 11$, then the particle moved backward a total of:',
-            options: ['$3$ units', '$7$ units', '$8$ units', '$4$ units'],
+            options: ['$-3$ units', '$7$ units', '$14$ units', '$11$ units'],
             correctAnswer: 1,
-            explanation: 'Let forward $= F$, backward $= B$. $F - B = -3$ and $F + B = 11$. So $B = 7$.'
+            explanation: 'Let forward $= F$, backward $= B$. $F - B = -3$ and $F + B = 11$. So $2B = 14$ and $B = 7$. $-3$ is the displacement, $11$ the total distance, and $14$ is $2B$ before dividing.'
           }
         ]
       }
@@ -102,10 +102,10 @@ Water enters a tank at $R_{\\text{in}}(t) = 5 + 4\\sin(t^2)$ gal/min and drains 
         dropdowns: [
           {
             label: '$\\int_2^7 C\'(x)\\,dx = 150$ means:',
-            options: ['Total cost is \\$150', 'Net cost increase from unit 2 to unit 7 is \\$150', 'Average cost is \\$150', 'Cost per unit is \\$150'],
-            correctAnswers: ['Net cost increase from unit 2 to unit 7 is \\$150'],
+            options: ['Total cost of making 7 units is \\$150', 'Cost rises \\$150 from $x = 2$ to $x = 7$', 'Average cost per unit is \\$150', 'Marginal cost at $x = 7$ is \\$150'],
+            correctAnswers: ['Cost rises \\$150 from $x = 2$ to $x = 7$'],
             hints: ['Integral of rate = net change.'],
-            explanation: 'The integral of the marginal cost from 2 to 7 is $C(7)-C(2) = 150$.'
+            explanation: 'The integral of the marginal cost from 2 to 7 is $C(7)-C(2) = 150$: raising production from 2 to 7 units adds \\$150 to the cost.'
           },
           {
             label: 'To find total distance from velocity $v(t)$:',
@@ -116,7 +116,7 @@ Water enters a tank at $R_{\\text{in}}(t) = 5 + 4\\sin(t^2)$ gal/min and drains 
           },
           {
             label: 'Tank is increasing when:',
-            options: ['$R_{in}(t) > 0$', '$R_{out}(t) > 0$', '$R_{in}(t) > R_{out}(t)$', '$R_{in}(t) + R_{out}(t) > 0$'],
+            options: ['$R_{in}\'(t) > R_{out}\'(t)$', '$R_{in}(t)$ is increasing', '$R_{in}(t) > R_{out}(t)$', '$R_{in}(t) + R_{out}(t) > 0$'],
             correctAnswers: ['$R_{in}(t) > R_{out}(t)$'],
             hints: ['Net rate must be positive.'],
             explanation: 'The amount increases when the inflow rate exceeds the outflow rate.'

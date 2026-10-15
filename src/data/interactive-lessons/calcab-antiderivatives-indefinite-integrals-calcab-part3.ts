@@ -89,7 +89,7 @@ $$\\boxed{s(t) = -16t^2 + 64t + 80}$$
             question: 'If $f\'\'(x) = 6$, $f\'(0) = -2$, and $f(0) = 3$, find $f(1)$.',
             options: ['$4$', '$7$', '$1$', '$10$'],
             correctAnswer: 0,
-            explanation: '$f\'(x) = 6x + C_1$. $f\'(0) = -2$: $C_1 = -2$. $f\'(x) = 6x - 2$.\\n$f(x) = 3x^2 - 2x + C_2$. $f(0) = 3$: $C_2 = 3$.\\n$f(x) = 3x^2 - 2x + 3$. $f(1) = 3 - 2 + 3 = 4$.'
+            explanation: '$f\'(x) = 6x + C_1$. $f\'(0) = -2$: $C_1 = -2$. $f\'(x) = 6x - 2$. $f(x) = 3x^2 - 2x + C_2$. $f(0) = 3$: $C_2 = 3$. $f(x) = 3x^2 - 2x + 3$. $f(1) = 3 - 2 + 3 = 4$.'
           }
         ]
       }
@@ -150,17 +150,17 @@ $$\\boxed{f(x) = 2x^3 - 2x^2 + x}$$
         dropdowns: [
           {
             label: 'General antiderivative:',
-            options: ['$2x^2 - 3x + C$', '$4x^2 - 3x + C$', '$2x^2 - 3 + C$', '$4x - 3 + C$'],
+            options: ['$2x^2 - 3x + C$', '$2x^2 - 3x$', '$2x^2 - 3 + C$', '$4x - 3 + C$'],
             correctAnswers: ['$2x^2 - 3x + C$'],
             hints: ['$\\int 4x\\,dx = 2x^2$ and $\\int (-3)\\,dx = -3x$.'],
-            explanation: '$\\int (4x - 3)\\,dx = 2x^2 - 3x + C$.'
+            explanation: '$\\int (4x - 3)\\,dx = 2x^2 - 3x + C$. A general antiderivative must include the constant $C$.'
           },
           {
             label: 'Value of $C$:',
-            options: ['$C = 5$', '$C = 1$', '$C = -1$', '$C = 7$'],
+            options: ['$C = 5$', '$C = 9$', '$C = -3$', '$C = 7$'],
             correctAnswers: ['$C = 5$'],
             hints: ['$f(2) = 2(4) - 3(2) + C = 8 - 6 + C = 7$.'],
-            explanation: '$2 + C = 7$, so $C = 5$.'
+            explanation: '$f(x) = 2x^2 - 3x + C$, so $f(2) = 8 - 6 + C = 2 + C = 7$, giving $C = 5$.'
           },
           {
             label: '$f(0) =$',
@@ -185,7 +185,7 @@ $$\\boxed{f(x) = 2x^3 - 2x^2 + x}$$
           '$f(1) = 4 - 3 + C = 10$, so $C = 9$.',
           '$f(x) = 4x^3 - 3x^2 + 9$. Evaluate at $x = 2$.'
         ],
-        explanation: '$f(x) = 4x^3 - 3x^2 + C$. $f(1) = 4 - 3 + C = 10 \\Rightarrow C = 9$.\\n\\n$f(2) = 4(8) - 3(4) + 9 = 32 - 12 + 9 = 29$.'
+        explanation: '$f(x) = 4x^3 - 3x^2 + C$. $f(1) = 4 - 3 + C = 10 \\Rightarrow C = 9$. $f(2) = 4(8) - 3(4) + 9 = 32 - 12 + 9 = 29$.'
       }
     },
     {

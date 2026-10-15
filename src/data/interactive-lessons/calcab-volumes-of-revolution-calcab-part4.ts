@@ -75,21 +75,21 @@ $$V = \\int_0^4 x\\,dx = \\left[\\frac{x^2}{2}\\right]_0^4 = \\boxed{8}$$
         dropdowns: [
           {
             label: 'Semicircular cross-sections with diameter $s$. Area:',
-            options: ['$\\frac{\\pi s^2}{8}$', '$\\frac{\\pi s^2}{2}$', '$\\frac{s^2}{2}$', '$\\pi s^2$'],
+            options: ['$\\frac{\\pi s^2}{8}$', '$\\frac{\\pi s^2}{2}$', '$\\frac{\\pi s^2}{4}$', '$\\pi s^2$'],
             correctAnswers: ['$\\frac{\\pi s^2}{8}$'],
             hints: ['Radius $= s/2$. Area of semicircle $= \\frac{1}{2}\\pi r^2 = \\frac{\\pi(s/2)^2}{2}$.'],
             explanation: '$A = \\frac{1}{2}\\pi(\\frac{s}{2})^2 = \\frac{\\pi s^2}{8}$.'
           },
           {
             label: 'Cross-section volume vs revolution volume: when do you use $\\pi$?',
-            options: ['Only for circular/semicircular cross-sections', 'Always', 'Never for cross-sections', 'Only for revolution'],
-            correctAnswers: ['Only for circular/semicircular cross-sections'],
+            options: ['Revolution and circular cross-sections', 'Revolution and every cross-section', 'Revolution only, never cross-sections', 'Cross-sections only, never revolution'],
+            correctAnswers: ['Revolution and circular cross-sections'],
             hints: ['$\\pi$ appears in the area formula only when the shape is circular.'],
-            explanation: 'Squares, triangles: no $\\pi$. Semicircles: $\\frac{\\pi s^2}{8}$ includes $\\pi$. Revolution: $\\pi R^2$.'
+            explanation: 'Disks and washers always use $\\pi R^2$. Among cross-sections, only circular shapes such as semicircles ($\\frac{\\pi s^2}{8}$) bring in $\\pi$; squares and triangles do not.'
           },
           {
             label: '"Perpendicular to the $x$-axis" means cross-sections are:',
-            options: ['Vertical slices at each $x$', 'Horizontal slices', 'Along the axis', 'Random orientation'],
+            options: ['Vertical slices at each $x$', 'Horizontal slices at each $y$', 'Slices lying along the $x$-axis', 'Slices parallel to the base region'],
             correctAnswers: ['Vertical slices at each $x$'],
             hints: ['Perpendicular to $x$-axis = standing up at each $x$-value.'],
             explanation: 'Each cross-section sits at a particular $x$. Integrate from $a$ to $b$ in $x$.'

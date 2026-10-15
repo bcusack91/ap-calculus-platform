@@ -52,9 +52,9 @@ $$y^{3/2} = \\frac{3x^2}{4} + 8$$
         questions: [
           {
             question: 'Solve $\\frac{dy}{dx} = \\frac{y}{x+1}$ with $y(0) = 4$.',
-            options: ['$y = 4(x+1)$', '$y = 4e^x$', '$y = (x+1)^4$', '$y = 4\\ln(x+1)$'],
+            options: ['$y = 4(x+1)$', '$y = 4 + \\ln|x+1|$', '$y = (x+1)^4$', '$y = 4\\ln(x+1)$'],
             correctAnswer: 0,
-            explanation: '$\\frac{dy}{y} = \\frac{dx}{x+1}$. $\\ln|y| = \\ln|x+1| + C$. $y = A(x+1)$. $y(0) = A = 4$.'
+            explanation: '$\\frac{dy}{y} = \\frac{dx}{x+1}$. $\\ln|y| = \\ln|x+1| + C$. $y = A(x+1)$. $y(0) = A = 4$. Stopping at the logarithm, $4 + \\ln|x+1|$ forgets to exponentiate both sides.'
           },
           {
             question: 'Solve $\\frac{dy}{dx} = 2xy^2$ with $y(0) = 1$.',
@@ -64,9 +64,9 @@ $$y^{3/2} = \\frac{3x^2}{4} + 8$$
           },
           {
             question: 'The domain of $y = \\frac{1}{1-x^2}$ from the previous problem is:',
-            options: ['All real numbers', '$-1 < x < 1$', '$x > 0$', '$x \\neq \\pm 1$'],
+            options: ['All real numbers', '$-1 < x < 1$', '$-1 \\le x \\le 1$', '$x \\neq \\pm 1$'],
             correctAnswer: 1,
-            explanation: '$y$ is undefined when $1-x^2 = 0$ ($x = \\pm 1$). Since $y(0)=1 > 0$ and solution must be continuous, domain is $(-1, 1)$.'
+            explanation: '$y$ is undefined when $1-x^2 = 0$ ($x = \\pm 1$). Since $y(0)=1 > 0$ and the solution must be continuous on an interval containing $x = 0$, the domain is the open interval $(-1, 1)$: the endpoints are excluded, and the pieces with $|x| > 1$ are not reached by this solution.'
           }
         ]
       }
@@ -97,17 +97,17 @@ When finding a particular solution, always check:
         dropdowns: [
           {
             label: '$\\frac{dy}{dx} = \\frac{2x}{y}$, $y(0) = 3$. The solution is:',
-            options: ['$y = 3e^{x^2}$', '$y = \\sqrt{x^2 + 9}$ (positive root)', '$y = x^2 + 9$', '$y = \\pm\\sqrt{x^2 + 9}$'],
-            correctAnswers: ['$y = \\sqrt{x^2 + 9}$ (positive root)'],
+            options: ['$y = 3e^{x^2}$', '$y = \\sqrt{2x^2 + 9}$', '$y = 2x^2 + 9$', '$y = \\sqrt{x^2 + 9}$'],
+            correctAnswers: ['$y = \\sqrt{2x^2 + 9}$'],
             hints: ['$y\\,dy = 2x\\,dx$. $y^2/2 = x^2 + C$. $y(0) = 3$ forces positive root.'],
-            explanation: '$y^2 = 2x^2 + 9$. Since $y(0) = 3 > 0$, take positive root: $y = \\sqrt{2x^2+9}$.'
+            explanation: '$y\\,dy = 2x\\,dx$ gives $\\frac{y^2}{2} = x^2 + C$, so $y^2 = 2x^2 + 9$ after using $y(0) = 3$. Since $y(0) = 3 > 0$, take the positive root: $y = \\sqrt{2x^2 + 9}$.'
           },
           {
             label: 'For $y = \\frac{2}{1 - 2\\ln x}$, $y$ has a vertical asymptote at:',
-            options: ['$x = 0$', '$x = e^{1/2} = \\sqrt{e}$', '$x = e$', '$x = 1$'],
-            correctAnswers: ['$x = e^{1/2} = \\sqrt{e}$'],
+            options: ['$x = e^2$', '$x = e^{1/2}$', '$x = e^{-1/2}$', '$x = \\ln\\frac{1}{2}$'],
+            correctAnswers: ['$x = e^{1/2}$'],
             hints: ['Set denominator $= 0$: $1 - 2\\ln x = 0$.'],
-            explanation: '$\\ln x = 1/2$, so $x = e^{1/2} = \\sqrt{e}$.'
+            explanation: '$1 - 2\\ln x = 0$ when $\\ln x = \\frac{1}{2}$, so $x = e^{1/2} = \\sqrt{e}$.'
           },
           {
             label: 'If $y\' = y(y-4)$, the long-term behavior when $0 < y(0) < 4$ is:',
@@ -126,7 +126,7 @@ When finding a particular solution, always check:
       exercise: {
         question: 'Given $\\frac{dy}{dx} = \\frac{x^2}{y}$ with $y(0) = 2$, find $y(3)$.\n\n(Enter an exact answer using sqrt notation.)',
         correctAnswer: 'sqrt(22)',
-        acceptableAnswers: ['sqrt(22)', 'sqrt22', '√22'],
+        acceptableAnswers: ['sqrt(22)', 'sqrt22', '√22', '√(22)', '4.69', '4.690'],
         hints: [
           '$y\\,dy = x^2\\,dx$.',
           '$y^2/2 = x^3/3 + C$. $y(0) = 2$: $C = 2$.',

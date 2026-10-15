@@ -57,9 +57,9 @@ A common AP question gives you known integral values and asks you to find others
           },
           {
             question: 'If $\\int_0^3 f(x)\\,dx = 7$, find $\\int_3^5 f(x)\\,dx$.',
-            options: ['$3$', '$17$', '$7$', '$-3$'],
+            options: ['$3$', '$17$', '$10$', '$-3$'],
             correctAnswer: 0,
-            explanation: 'Additivity: $\\int_0^3 f + \\int_3^5 f = \\int_0^5 f$. So $7 + \\int_3^5 f = 10$, giving $\\int_3^5 f = 3$.'
+            explanation: 'Additivity: $\\int_0^3 f + \\int_3^5 f = \\int_0^5 f$. So $7 + \\int_3^5 f = 10$, giving $\\int_3^5 f = 3$. Adding instead gives $17$, subtracting in the wrong order gives $-3$, and $10$ is the integral over all of $[0, 5]$.'
           },
           {
             question: 'Find $\\int_5^0 f(x)\\,dx$.',
@@ -97,9 +97,9 @@ $$f_{\\text{avg}} = \\frac{1}{3-0}\\int_0^3 x^2\\,dx = \\frac{1}{3} \\cdot \\lef
         questions: [
           {
             question: 'Find the average value of $f(x) = 6x^2$ on $[0, 2]$.',
-            options: ['$4$', '$8$', '$12$', '$6$'],
+            options: ['$16$', '$8$', '$12$', '$24$'],
             correctAnswer: 1,
-            explanation: '$f_{\\text{avg}} = \\frac{1}{2}\\int_0^2 6x^2\\,dx = \\frac{1}{2}[2x^3]_0^2 = \\frac{1}{2}(16) = 8$.'
+            explanation: '$f_{\\text{avg}} = \\frac{1}{2}\\int_0^2 6x^2\\,dx = \\frac{1}{2}[2x^3]_0^2 = \\frac{1}{2}(16) = 8$. Forgetting the $\\frac{1}{2}$ gives the integral $16$, averaging the endpoint values gives $12$, and $24$ is just $f(2)$.'
           },
           {
             question: 'If the average value of $f$ on $[1, 5]$ is $7$, what is $\\int_1^5 f(x)\\,dx$?',
@@ -118,24 +118,24 @@ $$f_{\\text{avg}} = \\frac{1}{3-0}\\int_0^3 x^2\\,dx = \\frac{1}{3} \\cdot \\lef
         dropdowns: [
           {
             label: '$\\int_4^6 f(x)\\,dx$ equals:',
-            options: ['$6$', '$9$', '$24$', '$-6$'],
+            options: ['$6$', '$15$', '$24$', '$-6$'],
             correctAnswers: ['$6$'],
             hints: ['Additivity: $\\int_0^4 f + \\int_4^6 f = \\int_0^6 f$.'],
-            explanation: '$15 - 9 = 6$.'
+            explanation: '$\\int_4^6 f = \\int_0^6 f - \\int_0^4 f = 15 - 9 = 6$.'
           },
           {
             label: '$\\int_0^6 [f(x) - g(x) + 2]\\,dx$ equals:',
-            options: ['$8$', '$20$', '$12$', '$32$'],
+            options: ['$8$', '$20$', '$10$', '$34$'],
             correctAnswers: ['$20$'],
             hints: ['Split: $\\int f - \\int g + \\int 2\\,dx$. Remember $\\int_0^6 2\\,dx = 12$.'],
-            explanation: '$15 - 7 + 2(6) = 15 - 7 + 12 = 20$.'
+            explanation: '$\\int_0^6 f - \\int_0^6 g + \\int_0^6 2\\,dx = 15 - 7 + 2(6) = 20$. The constant $2$ integrates to $2 \\cdot 6 = 12$, not $2$.'
           },
           {
             label: 'The average value of $f$ on $[0, 6]$ is:',
-            options: ['$15$', '$2.5$', '$5/2$', '$5$'],
+            options: ['$15$', '$9/4$', '$5/2$', '$3$'],
             correctAnswers: ['$5/2$'],
             hints: ['$f_{\\text{avg}} = \\frac{1}{b-a}\\int_a^b f\\,dx = \\frac{1}{6}(15)$.'],
-            explanation: '$f_{\\text{avg}} = \\frac{15}{6} = \\frac{5}{2}$.'
+            explanation: '$f_{\\text{avg}} = \\frac{1}{6-0}\\int_0^6 f(x)\\,dx = \\frac{15}{6} = \\frac{5}{2}$.'
           }
         ]
       }

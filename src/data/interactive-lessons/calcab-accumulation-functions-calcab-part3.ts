@@ -66,21 +66,21 @@ $$= -\\cos(x^2) \\cdot 1 = -\\cos(x^2)$$
         questions: [
           {
             question: '$\\frac{d}{dx}\\int_0^{\\sin x} t^2\\,dt =$',
-            options: ['$\\sin^2(x) \\cos(x)$', '$\\sin^2(x)$', '$\\cos^2(x)$', '$2\\sin(x)\\cos(x)$'],
+            options: ['$\\sin^2(x) \\cos(x)$', '$\\sin^2(x)$', '$\\sin^3(x)/3$', '$2\\sin(x)\\cos(x)$'],
             correctAnswer: 0,
-            explanation: '$f(\\sin x) \\cdot (\\sin x)\' = (\\sin x)^2 \\cdot \\cos x = \\sin^2(x)\\cos(x)$.'
+            explanation: '$f(\\sin x) \\cdot (\\sin x)\' = (\\sin x)^2 \\cdot \\cos x = \\sin^2(x)\\cos(x)$. Leaving off the chain-rule factor $\\cos x$ gives $\\sin^2(x)$, and $\\sin^3(x)/3$ is the integral itself, not its derivative.'
           },
           {
             question: '$\\frac{d}{dx}\\int_{2x}^{x^2} e^t\\,dt =$',
-            options: ['$2xe^{x^2} - 2e^{2x}$', '$e^{x^2} - e^{2x}$', '$2xe^{x^2} + 2e^{2x}$', '$e^{x^2}(2x-2)$'],
+            options: ['$2xe^{x^2} - 2e^{2x}$', '$e^{x^2} - e^{2x}$', '$2xe^{x^2} - e^{2x}$', '$e^{x^2}(2x-2)$'],
             correctAnswer: 0,
-            explanation: 'Upper: $e^{x^2} \\cdot 2x$. Lower: $-e^{2x} \\cdot 2 = -2e^{2x}$. Total: $2xe^{x^2}-2e^{2x}$.'
+            explanation: 'Upper: $e^{x^2} \\cdot 2x$. Lower: $-e^{2x} \\cdot 2 = -2e^{2x}$. Total: $2xe^{x^2}-2e^{2x}$. Each limit needs its own chain-rule factor, including the $2$ from $2x$.'
           },
           {
             question: 'If $g(x) = \\int_0^x e^{-t^2}\\,dt$, then $g\'(2) =$',
-            options: ['$e^{-4}$', '$e^4$', '$2e^{-4}$', '$-2e^{-4}$'],
+            options: ['$e^{-4}$', '$-4e^{-4}$', '$2e^{-4}$', '$e^{-4} - 1$'],
             correctAnswer: 0,
-            explanation: '$g\'(x) = e^{-x^2}$. $g\'(2) = e^{-4}$.'
+            explanation: '$g\'(x) = e^{-x^2}$. $g\'(2) = e^{-4}$. No chain-rule factor is needed because the upper limit is just $x$; $-4e^{-4}$ is the derivative of the integrand at $2$, and $e^{-4} - 1$ wrongly subtracts the integrand\'s value at $0$.'
           }
         ]
       }
@@ -93,21 +93,21 @@ $$= -\\cos(x^2) \\cdot 1 = -\\cos(x^2)$$
         dropdowns: [
           {
             label: '$\\frac{d}{dx}\\int_x^{10} \\sqrt{1+t^3}\\,dt =$',
-            options: ['$\\sqrt{1+x^3}$', '$-\\sqrt{1+x^3}$', '$\\sqrt{1+10^3}$', '$0$'],
+            options: ['$\\sqrt{1+x^3}$', '$-\\sqrt{1+x^3}$', '$\\sqrt{1001}$', '$0$'],
             correctAnswers: ['$-\\sqrt{1+x^3}$'],
             hints: ['Variable in lower limit: flip and negate.'],
-            explanation: '$= -\\sqrt{1+x^3}$. (Flip limits introduces a negative sign.)'
+            explanation: '$\\frac{d}{dx}\\int_x^{10} \\sqrt{1+t^3}\\,dt = -\\frac{d}{dx}\\int_{10}^{x} \\sqrt{1+t^3}\\,dt = -\\sqrt{1+x^3}$. Flipping the limits introduces the negative sign.'
           },
           {
             label: '$\\frac{d}{dx}\\int_1^{e^x} \\ln(t)\\,dt =$',
-            options: ['$\\ln(e^x)$', '$x \\cdot e^x$', '$e^x$', '$\\ln(e^x) \\cdot e^x = xe^x$'],
-            correctAnswers: ['$\\ln(e^x) \\cdot e^x = xe^x$'],
+            options: ['$x$', '$e^x \\ln x$', '$1$', '$xe^x$'],
+            correctAnswers: ['$xe^x$'],
             hints: ['$f(e^x) \\cdot (e^x)\' = \\ln(e^x) \\cdot e^x = x \\cdot e^x$.'],
-            explanation: '$\\ln(e^x) = x$, times $e^x$: answer is $xe^x$.'
+            explanation: 'FTC Part 1 with the Chain Rule: $\\ln(e^x) \\cdot e^x = x \\cdot e^x = xe^x$.'
           },
           {
             label: 'If $H(x) = \\int_0^{x^2} \\cos(t)\\,dt$, then $H\'(x) =$',
-            options: ['$\\cos(x^2)$', '$2x\\cos(x^2)$', '$\\sin(x^2) \\cdot 2x$', '$-\\sin(x^2) \\cdot 2x$'],
+            options: ['$\\cos(x^2)$', '$2x\\cos(x^2)$', '$\\sin(x^2)$', '$2\\cos(x^2)$'],
             correctAnswers: ['$2x\\cos(x^2)$'],
             hints: ['Chain rule: $f(x^2) \\cdot (x^2)\' = \\cos(x^2) \\cdot 2x$.'],
             explanation: '$H\'(x) = \\cos(x^2) \\cdot 2x$.'

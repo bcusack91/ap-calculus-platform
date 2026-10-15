@@ -49,9 +49,9 @@ $$\\int \\sqrt{u}\\,du = \\frac{2}{3}u^{3/2} + C = \\frac{2}{3}(e^x+1)^{3/2} + C
         questions: [
           {
             question: 'Evaluate $\\int \\frac{\\ln x}{x}\\,dx$.',
-            options: ['$\\ln(\\ln x) + C$', '$\\frac{(\\ln x)^2}{2} + C$', '$\\frac{1}{x^2} + C$', '$x\\ln x - x + C$'],
+            options: ['$\\ln(\\ln x) + C$', '$\\frac{(\\ln x)^2}{2} + C$', '$(\\ln x)^2 + C$', '$x\\ln x - x + C$'],
             correctAnswer: 1,
-            explanation: '$u = \\ln x$, $du = dx/x$. $\\int u\\,du = u^2/2 = (\\ln x)^2/2 + C$.'
+            explanation: '$u = \\ln x$, $du = dx/x$. $\\int u\\,du = u^2/2 = (\\ln x)^2/2 + C$. Leaving off the $\\frac{1}{2}$ gives $(\\ln x)^2$, and $x\\ln x - x$ is the antiderivative of $\\ln x$ alone.'
           },
           {
             question: 'For $\\int x\\sqrt{x-1}\\,dx$ with $u = x-1$, we rewrite $x$ as:',
@@ -117,14 +117,14 @@ $$\\boxed{u = \\ln x, \\quad du = \\frac{1}{x}\\,dx}$$
         dropdowns: [
           {
             label: 'For $\\int \\frac{e^x}{(e^x+1)^2}\\,dx$, choose $u$:',
-            options: ['$u = e^x$', '$u = e^x + 1$', '$u = (e^x+1)^2$', '$u = x$'],
+            options: ['$u = \\frac{e^x}{(e^x+1)^2}$', '$u = e^x + 1$', '$u = (e^x+1)^2$', '$u = \\ln(e^x+1)$'],
             correctAnswers: ['$u = e^x + 1$'],
             hints: ['The denominator is $(e^x+1)^2$ and $d(e^x+1) = e^x\\,dx$.'],
             explanation: '$u = e^x+1$, $du = e^x\\,dx$. $\\int u^{-2}\\,du = -u^{-1} + C = -\\frac{1}{e^x+1} + C$.'
           },
           {
             label: 'For $\\int x\\sqrt{2x+3}\\,dx$, after $u = 2x+3$, $x$ becomes:',
-            options: ['$u - 3$', '$(u-3)/2$', '$2u + 3$', '$\\sqrt{u}$'],
+            options: ['$u - 3$', '$(u-3)/2$', '$2u + 3$', '$(u+3)/2$'],
             correctAnswers: ['$(u-3)/2$'],
             hints: ['$u = 2x+3 \\Rightarrow 2x = u-3 \\Rightarrow x = (u-3)/2$.'],
             explanation: 'Solve $u = 2x+3$ for $x$: $x = (u-3)/2$. Also $dx = du/2$.'
@@ -146,7 +146,7 @@ $$\\boxed{u = \\ln x, \\quad du = \\frac{1}{x}\\,dx}$$
       exercise: {
         question: 'Evaluate $\\int_1^e \\frac{(\\ln x)^2}{x}\\,dx$.\n\n(Give an exact answer as a fraction like a/b.)',
         correctAnswer: '1/3',
-        acceptableAnswers: ['1/3'],
+        acceptableAnswers: ['1/3', '0.333', '0.3333'],
         hints: [
           '$u = \\ln x$, $du = dx/x$.',
           'Limits: $x=1 \\to u=0$, $x=e \\to u=1$.',

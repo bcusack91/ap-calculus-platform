@@ -68,9 +68,9 @@ $$\\boxed{\\text{The relationship between the function's behavior and the estima
         questions: [
           {
             question: 'Approximate $\\int_0^4 x^2\\,dx$ using a Right Riemann Sum with $n = 4$.',
-            options: ['$14$', '$30$', '$21.33$', '$20$'],
+            options: ['$14$', '$30$', '$21.33$', '$22$'],
             correctAnswer: 1,
-            explanation: 'Right endpoints: $1, 2, 3, 4$. $R_4 = 1 + 4 + 9 + 16 = 30$.'
+            explanation: 'Right endpoints: $1, 2, 3, 4$. $R_4 = 1 + 4 + 9 + 16 = 30$. Left endpoints give $14$, the trapezoid average of the two is $22$, and $21.33$ is the exact value $64/3$, not the Right sum.'
           },
           {
             question: 'If $f$ is increasing on $[a,b]$, which Riemann sum overestimates $\\int_a^b f(x)\\,dx$?',
@@ -80,9 +80,9 @@ $$\\boxed{\\text{The relationship between the function's behavior and the estima
           },
           {
             question: 'For $f$ increasing and concave up, the Midpoint sum is:',
-            options: ['An overestimate', 'An underestimate', 'Exact', 'Cannot determine'],
+            options: ['An overestimate', 'An underestimate', 'Exact', 'Depends on $n$'],
             correctAnswer: 1,
-            explanation: 'For concave up functions, the midpoint rectangle sits below the curve (the curve bows above the midpoint value), so Midpoint underestimates.'
+            explanation: 'For concave up functions, the midpoint rectangle sits below the curve (the curve bows above the midpoint value), so Midpoint underestimates for every $n$; more subintervals shrink the error but do not change its direction.'
           }
         ]
       }
@@ -122,9 +122,9 @@ Exact: $64/3 \\approx 21.33$. Since $x^2$ is concave up, the Trapezoidal sum ove
         questions: [
           {
             question: 'Use the trapezoidal rule to approximate $\\int_0^{10} f(x)\\,dx$.',
-            options: ['$62$', '$72.5$', '$67$', '$82$'],
+            options: ['$72$', '$72.5$', '$73$', '$68.75$'],
             correctAnswer: 1,
-            explanation: 'Unequal subintervals: $\\frac{2}{2}(3+7) + \\frac{3}{2}(7+11) + \\frac{3}{2}(11+6) + \\frac{2}{2}(6+4) = 10 + 27 + 25.5 + 10 = 72.5$.'
+            explanation: 'Unequal subintervals: $\\frac{2}{2}(3+7) + \\frac{3}{2}(7+11) + \\frac{3}{2}(11+6) + \\frac{2}{2}(6+4) = 10 + 27 + 25.5 + 10 = 72.5$. The left sum gives $72$, the right sum gives $73$, and pretending every width is $2.5$ gives $68.75$.'
           },
           {
             question: 'If $f$ is concave down on $[0,10]$, is the trapezoidal approximation an over- or underestimate?',
@@ -143,21 +143,21 @@ Exact: $64/3 \\approx 21.33$. Since $x^2$ is concave up, the Trapezoidal sum ove
         dropdowns: [
           {
             label: 'Left Riemann Sum is:',
-            options: ['Overestimate', 'Underestimate', 'Exact', 'Cannot determine'],
+            options: ['Overestimate', 'Underestimate', 'Exact', 'Undetermined'],
             correctAnswers: ['Underestimate'],
             hints: ['$f$ is increasing — does the left endpoint give too much or too little on each subinterval?'],
             explanation: 'Increasing ⇒ left endpoint is the smallest value on each subinterval ⇒ underestimate.'
           },
           {
             label: 'Trapezoidal Sum is:',
-            options: ['Overestimate', 'Underestimate', 'Exact', 'Cannot determine'],
+            options: ['Overestimate', 'Underestimate', 'Exact', 'Undetermined'],
             correctAnswers: ['Overestimate'],
             hints: ['Think about concavity. Concave up means the curve bows below the trapezoid.'],
             explanation: 'Concave up ⇒ the straight-line top of trapezoids lies above the curve ⇒ overestimate.'
           },
           {
             label: 'Midpoint Sum is:',
-            options: ['Overestimate', 'Underestimate', 'Exact', 'Cannot determine'],
+            options: ['Overestimate', 'Underestimate', 'Exact', 'Undetermined'],
             correctAnswers: ['Underestimate'],
             hints: ['For concave up, the tangent line at the midpoint sits below the curve at the endpoints of the subinterval.'],
             explanation: 'Concave up ⇒ midpoint rectangle undershoots the curve ⇒ underestimate.'

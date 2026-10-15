@@ -60,21 +60,21 @@ Suppose $f$ is piecewise linear with vertices at $(0,0)$, $(2,4)$, $(5,4)$, $(7,
         questions: [
           {
             question: 'Let $g(x) = \\int_0^x f(t)\\,dt$ where $f$ has a local maximum at $x=3$. At $x=3$, $g$ has:',
-            options: ['A local maximum', 'A local minimum', 'An inflection point', 'Cannot determine without more information'],
+            options: ['A local maximum', 'A local minimum', 'An inflection point', 'A critical point'],
             correctAnswer: 2,
-            explanation: '$g\'\'(x) = f\'(x)$. Local max of $f$ means $f\'$ changes from $+$ to $-$, so $g\'\'$ changes sign: inflection point of $g$.'
+            explanation: '$g\'\'(x) = f\'(x)$. Local max of $f$ means $f\'$ changes from $+$ to $-$, so $g\'\'$ changes sign: inflection point of $g$. $g$ has a critical point only where $f = 0$, which a local max of $f$ does not guarantee.'
           },
           {
             question: 'If $f(x) > 0$ for all $x$ in $(a,b)$ and $g(x) = \\int_a^x f(t)\\,dt$, then on $(a,b)$:',
-            options: ['$g$ is positive and increasing', '$g$ is increasing (but may start at 0)', '$g$ is concave up', '$g$ is decreasing'],
+            options: ['$g$ is concave up', '$g$ is increasing', '$g$ has a maximum in $(a,b)$', '$g$ is decreasing'],
             correctAnswer: 1,
-            explanation: '$g\'(x) = f(x) > 0$, so $g$ is increasing. $g(a) = 0$, so $g$ starts at $0$ and increases.'
+            explanation: '$g\'(x) = f(x) > 0$, so $g$ is increasing (starting from $g(a) = 0$). Concavity depends on $f\'$, which is not given, and an increasing function has no maximum inside the open interval.'
           },
           {
             question: 'If $f$ is linear with positive slope on $[a,b]$, then $g(x) = \\int_a^x f(t)\\,dt$ is:',
-            options: ['Linear', 'Quadratic and concave up', 'Quadratic and concave down', 'Cubic'],
+            options: ['Linear with positive slope', 'Quadratic and concave up', 'Quadratic and concave down', 'Cubic with an inflection point'],
             correctAnswer: 1,
-            explanation: '$f$ linear ($f\'$ = positive constant) means $g\'\'(x) = f\'(x) > 0$, so $g$ is concave up. Integrating a linear function gives a quadratic.'
+            explanation: '$f$ linear ($f\'$ = positive constant) means $g\'\'(x) = f\'(x) > 0$, so $g$ is concave up. Integrating a linear function raises the degree by one, giving a quadratic, not a linear or cubic function.'
           }
         ]
       }
@@ -93,9 +93,9 @@ Suppose $f$ is piecewise linear with vertices at $(0,0)$, $(2,4)$, $(5,4)$, $(7,
           },
           {
             question: '$\\frac{d}{dx}\\int_0^{x^3} \\cos(t)\\,dt =$',
-            options: ['$\\cos(x^3)$', '$3x^2\\cos(x^3)$', '$\\sin(x^3) \\cdot 3x^2$', '$-\\sin(x^3) \\cdot 3x^2$'],
+            options: ['$\\cos(x^3) - \\cos(0)$', '$3x^2\\cos(x^3)$', '$\\sin(x^3) \\cdot 3x^2$', '$-\\sin(x^3) \\cdot 3x^2$'],
             correctAnswer: 1,
-            explanation: 'By FTC + chain rule: $\\cos(x^3) \\cdot 3x^2$.'
+            explanation: 'By FTC + chain rule: $\\cos(x^3) \\cdot 3x^2$. The lower limit is a constant, so nothing is subtracted, and $\\sin(x^3) \\cdot 3x^2$ uses the antiderivative instead of the integrand.'
           }
         ]
       }
@@ -115,17 +115,17 @@ Suppose $f$ is piecewise linear with vertices at $(0,0)$, $(2,4)$, $(5,4)$, $(7,
           },
           {
             label: 'If $f$ is constant ($f(t) = k$), then $g(x) = \\int_0^x k\\,dt$ is:',
-            options: ['Constant', 'Linear: $g(x) = kx$', 'Quadratic', 'Exponential'],
+            options: ['Constant: $g(x) = k$', 'Linear: $g(x) = kx$', 'Quadratic: $g(x) = \\frac{k}{2}x^2$', 'Exponential: $g(x) = e^{kx}$'],
             correctAnswers: ['Linear: $g(x) = kx$'],
             hints: ['Integral of a constant is a linear function.'],
             explanation: '$g(x) = kx$, which is linear with slope $k$.'
           },
           {
             label: 'Net change from a rate table: $R(t)$ at $t=0,2,4,6$ is $3,5,4,1$. Best approximation of $\\int_0^6 R(t)\\,dt$ using trapezoids:',
-            options: ['$12$', '$22$', '$24$', '$26$'],
+            options: ['$13$', '$22$', '$24$', '$26$'],
             correctAnswers: ['$22$'],
             hints: ['Trapezoidal: $\\frac{\\Delta t}{2}[R_0 + 2R_1 + 2R_2 + R_3]$.'],
-            explanation: '$\\frac{2}{2}(3+2(5)+2(4)+1) = 1 \\cdot 22 = 22$.'
+            explanation: '$\\frac{2}{2}\\big(3+2(5)+2(4)+1\\big) = 1 \\cdot 22 = 22$. Interior values are counted twice because each one is shared by two trapezoids.'
           }
         ]
       }
