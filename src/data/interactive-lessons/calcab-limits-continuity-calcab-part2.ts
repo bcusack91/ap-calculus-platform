@@ -126,9 +126,9 @@ $$\\boxed{\\lim_{x \\to \\infty} \\frac{a_n x^n + \\cdots}{b_m x^m + \\cdots} = 
         questions: [
           {
             question: 'Evaluate $\\lim_{x \\to \\infty} \\frac{4x^3 - x + 2}{2x^3 + 5x^2}$.',
-            options: ['$0$', '$2$', '$\\infty$', '$\\frac{4}{5}$'],
+            options: ['$\\frac{1}{2}$', '$2$', '$\\infty$', '$\\frac{4}{5}$'],
             correctAnswer: 1,
-            explanation: 'Same degree (3) in numerator and denominator. Limit = ratio of leading coefficients: $\\frac{4}{2} = 2$.'
+            explanation: 'Same degree (3) in numerator and denominator. Limit = ratio of leading coefficients: $\\frac{4}{2} = 2$. Flipping the ratio gives $\\frac{1}{2}$, and using the $5x^2$ coefficient instead of the leading one gives $\\frac{4}{5}$.'
           },
           {
             question: 'Evaluate $\\lim_{x \\to \\infty} \\frac{3x + 7}{x^2 - 1}$.',

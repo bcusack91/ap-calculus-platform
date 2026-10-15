@@ -175,9 +175,9 @@ More precisely: if $N$ is between $f(a)$ and $f(b)$, then there exists $c \\in (
           },
           {
             question: 'Can we use IVT to conclude that $f(x) = \\frac{1}{x}$ takes the value 0 on $[-1, 1]$?',
-            options: ['Yes, because $f(-1) = -1 < 0 < 1 = f(1)$', 'No, because $f$ is not continuous on $[-1, 1]$', 'Yes, because $f$ is a rational function', 'No, because 0 is not in the range of $f$'],
+            options: ['Yes, because $f(-1) = -1 < 0 < 1 = f(1)$', 'No, $f$ is discontinuous at $x = 0$', 'Yes, because $f$ is a rational function', 'Yes, because $f$ is continuous on its domain'],
             correctAnswer: 1,
-            explanation: '$f(x) = \\frac{1}{x}$ is NOT continuous on $[-1, 1]$ because it is undefined at $x = 0$. IVT requires continuity on the entire interval.'
+            explanation: '$f(x) = \\frac{1}{x}$ is NOT continuous on $[-1, 1]$ because it is undefined at $x = 0$. IVT requires continuity on the entire closed interval, not just on the function\'s domain, and the sign change from $f(-1) = -1$ to $f(1) = 1$ happens across the break, never at a zero.'
           }
         ]
       }

@@ -88,9 +88,9 @@ The non-leading terms become negligible, leaving just the ratio of leading coeff
           },
           {
             question: '$\\lim_{x \\to \\infty} \\dfrac{x^3 + 7}{2x^2 + 1} = ?$',
-            options: ['$0$', '$1/2$', '$+\\infty$', '$-\\infty$'],
+            options: ['$0$', '$1/2$', '$+\\infty$', '$2$'],
             correctAnswer: 2,
-            explanation: 'Top-heavier and leading coefficients are positive → $+\\infty$.'
+            explanation: 'Top-heavier and leading coefficients are positive → $+\\infty$. Using the coefficient ratio $1/2$ treats the degrees as equal, $2$ flips that ratio, and $0$ is the bottom-heavy result.'
           }
         ]
       }

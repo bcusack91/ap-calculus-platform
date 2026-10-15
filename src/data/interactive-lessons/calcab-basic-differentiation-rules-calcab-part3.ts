@@ -113,9 +113,9 @@ $$\\frac{d}{dx}[\\tan x] = \\frac{d}{dx}\\frac{\\sin x}{\\cos x} = \\frac{\\cos 
         questions: [
           {
             question: 'Find $\\frac{d}{dx}\\frac{x^2 + 1}{x^2 - 1}$ and evaluate at $x = 2$.',
-            options: ['$-\\frac{4}{9}$', '$\\frac{4}{9}$', '$\\frac{-4x}{(x^2-1)^2}$; at $x=2$: $-\\frac{8}{9}$', '$\\frac{4x}{(x^2-1)^2}$; at $x=2$: $\\frac{8}{9}$'],
+            options: ['$\\frac{-4}{(x^2-1)^2}$, so $-\\frac{4}{9}$', '$\\frac{-4x}{x^2-1}$, so $-\\frac{8}{3}$', '$\\frac{-4x}{(x^2-1)^2}$, so $-\\frac{8}{9}$', '$\\frac{4x}{(x^2-1)^2}$, so $\\frac{8}{9}$'],
             correctAnswer: 2,
-            explanation: '$\\frac{2x(x^2-1)-(x^2+1)(2x)}{(x^2-1)^2} = \\frac{2x(x^2-1-x^2-1)}{(x^2-1)^2} = \\frac{-4x}{(x^2-1)^2}$. At $x=2$: $\\frac{-8}{9}$.'
+            explanation: '$\\frac{2x(x^2-1)-(x^2+1)(2x)}{(x^2-1)^2} = \\frac{2x(x^2-1-x^2-1)}{(x^2-1)^2} = \\frac{-4x}{(x^2-1)^2}$. At $x=2$: $\\frac{-8}{9}$. Reversing the numerator order flips the sign, dropping the factor $x$ gives $-\\frac{4}{9}$, and forgetting to square the denominator gives $-\\frac{8}{3}$.'
           },
           {
             question: 'Verify using Quotient Rule: $\\frac{d}{dx}[\\cot x] = ?$',
@@ -156,10 +156,10 @@ $$\\frac{g'(2)f(2) - g(2)f'(2)}{[f(2)]^2} = \\frac{(-3)(-1) - (2)(6)}{(-1)^2} = 
         dropdowns: [
           {
             label: '$\\frac{x^4 + 3x^2}{x^2}$ — Best approach:',
-            options: ['Quotient Rule', 'Split and simplify first', 'Product Rule', 'Chain Rule'],
+            options: ['Quotient Rule as written', 'Split and simplify first', 'Product Rule with $x^{-2}$', 'Chain Rule'],
             correctAnswers: ['Split and simplify first'],
             hints: ['Can you divide each term by $x^2$?'],
-            explanation: 'Split: $\\frac{x^4}{x^2} + \\frac{3x^2}{x^2} = x^2 + 3$. Derivative: $2x$. Much simpler than Quotient Rule!'
+            explanation: 'Split: $\\frac{x^4}{x^2} + \\frac{3x^2}{x^2} = x^2 + 3$. Derivative: $2x$. The Quotient Rule or a Product Rule rewrite also work, but both take far more algebra.'
           },
           {
             label: '$\\frac{e^x}{\\sin x}$ — Best approach:',
@@ -170,7 +170,7 @@ $$\\frac{g'(2)f(2) - g(2)f'(2)}{[f(2)]^2} = \\frac{(-3)(-1) - (2)(6)}{(-1)^2} = 
           },
           {
             label: '$\\frac{7}{x^5}$ — Best approach:',
-            options: ['Quotient Rule', 'Product Rule', 'Power Rule rewrite', 'Split first'],
+            options: ['Quotient Rule directly', 'Product Rule', 'Power Rule rewrite', 'Split first'],
             correctAnswers: ['Power Rule rewrite'],
             hints: ['Rewrite as $7x^{-5}$.'],
             explanation: '$7x^{-5} \\to -35x^{-6}$. No need for the Quotient Rule when the numerator is a constant!'

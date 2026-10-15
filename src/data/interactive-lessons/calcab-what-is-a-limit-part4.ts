@@ -105,34 +105,34 @@ As $x$ shrinks toward 0, $1/x$ races to $\\infty$, and $\\sin(1/x)$ keeps oscill
             question: 'For $f(x) = 1/(x-3)^2$ as $x \\to 3$, the limit fails to exist because:',
             options: [
               'The function jumps from one value to another',
-              'The function blows up to $+\\infty$ from both sides',
+              'The function grows to $+\\infty$ from both sides',
               'The function oscillates between $-1$ and $+1$',
-              'The function is not defined for $x < 3$'
+              'The function is undefined at $x = 3$'
             ],
             correctAnswer: 1,
-            explanation: 'Squared denominator → always positive → both sides go to $+\\infty$. Unbounded behavior, vertical asymptote.'
+            explanation: 'Squared denominator → always positive → both sides go to $+\\infty$. Unbounded behavior, vertical asymptote. Being undefined at $x = 3$ alone would not stop a limit from existing (a hole is undefined too).'
           },
           {
             question: 'For $f(x) = \\cos(1/x)$ as $x \\to 0^+$, the limit fails because:',
             options: [
-              'The function jumps',
-              'The function blows up to $\\pm\\infty$',
-              'The function oscillates infinitely fast and never settles',
-              'The function is identically zero'
+              'The function jumps between $-1$ and $1$ at $x = 0$',
+              'The function blows up to $\\pm\\infty$ near $x = 0$',
+              'The function oscillates and never settles',
+              'The function is undefined at $x = 0$, so no limit'
             ],
             correctAnswer: 2,
-            explanation: 'As $x \\to 0^+$, $1/x \\to \\infty$, and $\\cos(1/x)$ keeps cycling through $[-1,1]$ infinitely many times. Oscillation.'
+            explanation: 'As $x \\to 0^+$, $1/x \\to \\infty$, and $\\cos(1/x)$ keeps cycling through $[-1,1]$ infinitely many times, faster and faster. Oscillation. The values stay bounded, so there is no blow-up, and there are no two separate one-sided values, so it is not a jump.'
           },
           {
             question: 'For the floor function $\\lfloor x \\rfloor$ at $x = 2$, the limit fails because:',
             options: [
-              'Left limit is 1, right limit is 2 (they disagree → jump)',
-              'The function blows up',
-              'The function oscillates',
-              'The function is undefined at 2'
+              'Left limit is 1, right limit is 2',
+              'The function blows up to $\\infty$ at $x = 2$',
+              'The function oscillates between 1 and 2',
+              'The function is not defined at $x = 2$'
             ],
             correctAnswer: 0,
-            explanation: '$\\lfloor 1.999 \\rfloor = 1$ but $\\lfloor 2.001 \\rfloor = 2$. Two finite, disagreeing one-sided limits — a jump.'
+            explanation: '$\\lfloor 1.999 \\rfloor = 1$ but $\\lfloor 2.001 \\rfloor = 2$. Two finite, disagreeing one-sided limits — a jump. The floor function is defined at 2 ($\\lfloor 2 \\rfloor = 2$) and stays bounded.'
           }
         ]
       }
@@ -198,18 +198,18 @@ Consider $f(x) = \\dfrac{|x - 4|}{x - 4}$.
               '$\\lim_{x \\to 0} (x+3)$'
             ],
             correctAnswer: 1,
-            explanation: '$1/x$ goes to $-\\infty$ on the left and $+\\infty$ on the right — unbounded blow-up. The first oscillates, the third jumps, the fourth has a perfectly fine limit (3).'
+            explanation: '$1/x$ goes to $-\\infty$ on the left and $+\\infty$ on the right — unbounded blow-up. $\\sin(1/x)$ oscillates, $|x|/x$ jumps, and $x+3$ has a perfectly fine limit (3).'
           },
           {
             question: 'A student claims "the limit exists because the left limit equals 5 and the function blows up to $+\\infty$ on the right." What is the correct response?',
             options: [
-              'The student is right — the average is well-defined',
-              'The student is wrong — both one-sided limits must exist as finite values *and* be equal',
-              'The student is right because the right limit is bigger',
-              'The student is right when the function is even'
+              'Right: one finite one-sided limit is enough for existence',
+              'Wrong: both one-sided limits must be finite and equal',
+              'Right: the limit exists and equals $+\\infty$, the larger side',
+              'Wrong: the limit is 5, since the left side is the finite one'
             ],
             correctAnswer: 1,
-            explanation: 'Existence requires both one-sided limits to exist (as finite, equal values). $+\\infty$ is not a finite value, and even if it were, $5 \\ne +\\infty$. The two-sided limit DNE.'
+            explanation: 'Existence requires both one-sided limits to exist (as finite, equal values). $+\\infty$ is not a finite value, and even if it were, $5 \\ne +\\infty$. The two-sided limit DNE; it is not 5 and not $+\\infty$.'
           }
         ]
       }

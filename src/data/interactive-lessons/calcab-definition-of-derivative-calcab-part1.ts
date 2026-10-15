@@ -86,9 +86,9 @@ $$\\boxed{f(x) = x^2 \\implies f'(x) = 2x}$$
         questions: [
           {
             question: 'Using the limit definition, find $f\'(x)$ for $f(x) = 3x^2$.',
-            options: ['$3x$', '$6x$', '$6x + 3h$', '$3x^2$'],
+            options: ['$6x^2$', '$6x$', '$6x + 3h$', '$3x^2$'],
             correctAnswer: 1,
-            explanation: '$f\'(x) = \\lim_{h \\to 0} \\frac{3(x+h)^2 - 3x^2}{h} = \\lim_{h \\to 0} \\frac{6xh+3h^2}{h} = \\lim_{h \\to 0} (6x+3h) = 6x$.'
+            explanation: '$f\'(x) = \\lim_{h \\to 0} \\frac{3(x+h)^2 - 3x^2}{h} = \\lim_{h \\to 0} \\frac{6xh+3h^2}{h} = \\lim_{h \\to 0} (6x+3h) = 6x$. Stopping before the limit leaves $6x + 3h$; multiplying by the exponent without lowering it gives $6x^2$.'
           },
           {
             question: 'Which limit represents $f\'(2)$ for $f(x) = x^3$?',
@@ -103,9 +103,9 @@ $$\\boxed{f(x) = x^2 \\implies f'(x) = 2x}$$
           },
           {
             question: 'The average rate of change of $f(x) = x^3$ on $[1, 3]$ is:',
-            options: ['$13$', '$26$', '$9$', '$27$'],
+            options: ['$13$', '$26$', '$14$', '$27$'],
             correctAnswer: 0,
-            explanation: '$\\frac{f(3)-f(1)}{3-1} = \\frac{27-1}{2} = \\frac{26}{2} = 13$.'
+            explanation: '$\\frac{f(3)-f(1)}{3-1} = \\frac{27-1}{2} = \\frac{26}{2} = 13$. Forgetting to divide by $3 - 1$ gives $26$; adding $f(1)$ instead of subtracting gives $\\frac{28}{2} = 14$; $27$ is just $f(3)$.'
           }
         ]
       }

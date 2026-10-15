@@ -71,24 +71,24 @@ The two sides of $x = 0$ "want" different values. A two-sided limit can't captur
           {
             question: 'In $\\lim_{x \\to 4^-} f(x)$, the $-$ superscript means:',
             options: [
-              '$x$ is negative',
-              '$x$ approaches 4 from values LESS than 4 (the left)',
-              '$x$ approaches $-4$',
-              'Subtract from $f(x)$'
+              '$x$ approaches 4 from the right side',
+              '$x$ approaches 4 from values less than 4',
+              '$x$ approaches $-4$ rather than $4$',
+              '$f(x)$ approaches the limit from below'
             ],
             correctAnswer: 1,
-            explanation: 'The "$-$" tells you to approach from the left side of 4 (smaller numbers like 3.9, 3.99…). It has nothing to do with sign.'
+            explanation: 'The "$-$" tells you to approach from the left side of 4 (smaller numbers like 3.9, 3.99…). It has nothing to do with sign, and it describes the inputs $x$, not whether the outputs $f(x)$ come from above or below.'
           },
           {
             question: 'How do you read $\\lim_{x \\to 0^+} g(x) = 7$ aloud?',
             options: [
-              'The limit of $g$ at $0 + 1$ equals 7',
+              'The limit of $g$ as $x$ approaches $0 + 1$ equals 7',
               'The limit of $g$ as $x$ approaches 0 from the right equals 7',
               'The limit of $g$ at positive 0 equals 7',
-              '$g(0+) = 7$'
+              'The limit of $g$ as $x$ approaches 0 from the left equals 7'
             ],
             correctAnswer: 1,
-            explanation: '"$+$" superscript = "from the right" (values greater than 0).'
+            explanation: '"$+$" superscript = "from the right" (values greater than 0). It does not mean adding 1, and "from the left" is the "$-$" superscript.'
           }
         ]
       }

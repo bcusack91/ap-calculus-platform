@@ -76,13 +76,13 @@ $$\\boxed{\\lim_{x \\to 2} \\frac{x^2 - 4}{x - 2} = 4}$$
           {
             question: 'Direct substitution into $\\dfrac{p(x)}{q(x)}$ gives $0/0$ at $x = a$. What does this guarantee?',
             options: [
-              'The limit is 0',
-              'The limit DNE',
-              'Both $p$ and $q$ have $(x - a)$ as a factor',
-              'The function is continuous'
+              'The limit equals $0$, as the numerator is $0$',
+              'The limit does not exist, as the denominator is $0$',
+              '$x-a$ is a factor of both $p$ and $q$',
+              'The graph has a vertical asymptote at $x = a$'
             ],
             correctAnswer: 2,
-            explanation: '$p(a) = 0$ means $(x-a) \\mid p(x)$ (factor theorem); same for $q$. So we can cancel.'
+            explanation: '$p(a) = 0$ means $(x-a) \\mid p(x)$ (factor theorem); same for $q$. So we can cancel. The $0/0$ form alone does not fix the limit\'s value, and after cancelling there may be a hole rather than an asymptote.'
           },
           {
             question: 'Compute $\\lim_{x \\to 5} \\dfrac{x^2 - 25}{x - 5}$.',

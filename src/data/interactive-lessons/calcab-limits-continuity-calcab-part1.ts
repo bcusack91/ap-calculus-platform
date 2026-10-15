@@ -101,15 +101,15 @@ Substitute $x = 2$: $8 - 8 + 7 = 7$ ✓
           },
           {
             question: 'If $\\lim_{x \\to 5} f(x) = 12$, which of the following MUST be true?',
-            options: ['$f(5) = 12$', 'As $x$ approaches 5, $f(x)$ approaches 12', 'The function is defined at $x = 5$', '$f(x) = 12$ for all $x$ near 5'],
+            options: ['$f(5) = 12$, so the graph passes through $(5, 12)$', 'As $x$ approaches 5, $f(x)$ approaches 12', '$f$ is defined at $x = 5$, even if $f(5) \\neq 12$', '$f(x) = 12$ for every $x$ in some interval around 5'],
             correctAnswer: 1,
-            explanation: 'A limit statement only tells us about behavior *approaching* the point. The function might not be defined at $x=5$, or $f(5)$ might differ from 12 (hole in the graph).'
+            explanation: 'A limit statement only tells us about behavior *approaching* the point. The function might not be defined at $x=5$, or $f(5)$ might differ from 12 (hole in the graph). It also need not be constant near 5: $f(x) = x + 7$ has limit 12 at 5 without equaling 12 anywhere else.'
           },
           {
             question: 'Evaluate $\\lim_{x \\to -1} (x^3 + 3x^2 - 2)$.',
-            options: ['$-4$', '$0$', '$2$', '$4$'],
+            options: ['$-6$', '$0$', '$2$', '$4$'],
             correctAnswer: 1,
-            explanation: 'This is a polynomial — direct substitution works: $(-1)^3 + 3(-1)^2 - 2 = -1 + 3 - 2 = 0$.'
+            explanation: 'This is a polynomial — direct substitution works: $(-1)^3 + 3(-1)^2 - 2 = -1 + 3 - 2 = 0$. Treating $(-1)^2$ as $-1$ gives $-1 - 3 - 2 = -6$, and treating $(-1)^3$ as $+1$ gives $2$.'
           }
         ]
       }

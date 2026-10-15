@@ -98,9 +98,9 @@ Sides disagree → two-sided limit DNE.
           },
           {
             question: 'For $f(x) = \\dfrac{1}{(x-2)^2}$, the two-sided limit at $x = 2$ is:',
-            options: ['$-\\infty$', '$+\\infty$', 'DNE (sides disagree)', '$0$'],
+            options: ['$-\\infty$', '$+\\infty$', 'DNE', '$0$'],
             correctAnswer: 1,
-            explanation: 'Squared denominator is positive on both sides, so both sides $\\to +\\infty$. Two-sided limit equals $+\\infty$.'
+            explanation: 'Squared denominator is positive on both sides, so both sides $\\to +\\infty$. The sides agree, so the two-sided limit equals $+\\infty$; $-\\infty$ would need a negative quotient.'
           }
         ]
       }
@@ -113,10 +113,10 @@ Sides disagree → two-sided limit DNE.
         dropdowns: [
           { label: '$\\lim_{x \\to 0^+} \\dfrac{1}{x}$', options: ['$+\\infty$', '$-\\infty$', '$0$', 'DNE'] },
           { label: '$\\lim_{x \\to 0^-} \\dfrac{1}{x}$', options: ['$+\\infty$', '$-\\infty$', '$0$', 'DNE'] },
-          { label: '$\\lim_{x \\to 0} \\dfrac{1}{x}$', options: ['$+\\infty$', '$-\\infty$', '$0$', 'DNE — sides disagree'] },
+          { label: '$\\lim_{x \\to 0} \\dfrac{1}{x}$', options: ['$+\\infty$', '$-\\infty$', '$0$', 'DNE'] },
           { label: '$\\lim_{x \\to 0} \\dfrac{1}{x^2}$', options: ['$+\\infty$', '$-\\infty$', '$0$', 'DNE'] },
         ],
-        correctAnswers: ['$+\\infty$', '$-\\infty$', 'DNE — sides disagree', '$+\\infty$'],
+        correctAnswers: ['$+\\infty$', '$-\\infty$', 'DNE', '$+\\infty$'],
         hint1: 'Right side: $1/(\\text{small +}) = $ large +.',
         hint2: 'Left side: $1/(\\text{small -}) = $ large -.',
         hint3: '$1/x^2$: denominator squared, always positive.',

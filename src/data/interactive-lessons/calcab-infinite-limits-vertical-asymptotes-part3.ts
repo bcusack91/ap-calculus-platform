@@ -85,15 +85,15 @@ If both $p(a) = 0$ and $q(a) = 0$, factor to figure out which it is.
           },
           {
             question: 'For $f(x) = \\dfrac{x - 4}{x^2 - 16}$, $x = 4$ is a:',
-            options: ['Vertical asymptote', 'Hole (removable discontinuity)', 'Horizontal asymptote', 'Critical point'],
+            options: ['Vertical asymptote', 'Hole', 'Jump discontinuity', 'Horizontal asymptote'],
             correctAnswer: 1,
-            explanation: '$\\dfrac{x-4}{(x-4)(x+4)} = \\dfrac{1}{x+4}$. The $(x-4)$ cancels exactly → hole, not asymptote.'
+            explanation: '$\\dfrac{x-4}{(x-4)(x+4)} = \\dfrac{1}{x+4}$. The $(x-4)$ cancels exactly → a hole (removable discontinuity), not an asymptote. The asymptote is at $x = -4$.'
           },
           {
             question: 'For $f(x) = \\dfrac{(x - 2)}{(x - 2)^3}$, $x = 2$ is a:',
-            options: ['Hole', 'Vertical asymptote (denominator power exceeds numerator)', 'Horizontal asymptote', 'Removable point'],
+            options: ['Hole', 'Vertical asymptote', 'Jump', 'No discontinuity'],
             correctAnswer: 1,
-            explanation: 'After cancelling one $(x-2)$, two remain in the denominator: $\\dfrac{1}{(x-2)^2}$. Vertical asymptote.'
+            explanation: 'After cancelling one $(x-2)$, two remain in the denominator: $\\dfrac{1}{(x-2)^2}$. The denominator power exceeds the numerator\'s, so this is a vertical asymptote, not a hole.'
           }
         ]
       }

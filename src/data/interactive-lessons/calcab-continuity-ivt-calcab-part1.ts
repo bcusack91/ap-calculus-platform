@@ -114,9 +114,9 @@ The function oscillates infinitely: $f(x) = \\sin(1/x)$ at $x = 0$.
           },
           {
             question: 'Which condition for continuity fails for $g(x) = \\begin{cases} 2x & x \\leq 1 \\\\ x+3 & x > 1 \\end{cases}$ at $x=1$?',
-            options: ['$g(1)$ is undefined', 'The limit does not exist', 'The limit $\\neq g(1)$', 'No condition fails; $g$ is continuous'],
+            options: ['$g(1)$ is undefined', 'The limit does not exist', 'The limit $\\neq g(1)$', 'None, $g$ is continuous'],
             correctAnswer: 1,
-            explanation: '$g(1) = 2$. $\\lim_{x \\to 1^-} = 2$, $\\lim_{x \\to 1^+} = 4$. Since left ≠ right, the two-sided limit does not exist.'
+            explanation: '$g(1) = 2$. $\\lim_{x \\to 1^-} g(x) = 2$, $\\lim_{x \\to 1^+} g(x) = 4$. Since left ≠ right, the two-sided limit does not exist. $g(1)$ is defined, so the first condition holds; the limit-equals-value condition cannot even be checked once the limit fails to exist.'
           },
           {
             question: 'At how many points is $f(x) = \\frac{1}{x^2-4}$ discontinuous?',
@@ -211,9 +211,9 @@ These function types are continuous on their **entire domains**:
           },
           {
             question: 'A polynomial $p(x)$ has a discontinuity at:',
-            options: ['Every integer', 'Its zeros', 'Nowhere — polynomials are always continuous', 'Points where $p\'(x) = 0$'],
+            options: ['Every integer', 'Its zeros', 'Nowhere', 'Points where $p\'(x) = 0$'],
             correctAnswer: 2,
-            explanation: 'Polynomials are continuous on $(-\\infty, \\infty)$. They have no discontinuities.'
+            explanation: 'Polynomials are continuous on $(-\\infty, \\infty)$, so they have no discontinuities. Zeros of $p$ and points where $p\'(x) = 0$ are ordinary points on a smooth, unbroken graph.'
           }
         ]
       }

@@ -85,9 +85,9 @@ But:
           },
           {
             question: '$\\lim_{x \\to \\infty} \\sin x = ?$',
-            options: ['$0$', '$1$', '$\\infty$', 'DNE — oscillates forever'],
+            options: ['$0$', '$1$', '$\\infty$', 'DNE'],
             correctAnswer: 3,
-            explanation: '$\\sin x$ keeps oscillating between $-1$ and $1$, never settling.'
+            explanation: '$\\sin x$ keeps oscillating between $-1$ and $1$, never settling, so the limit does not exist. Answering $0$ or $1$ confuses this with $\\lim_{x\\to\\infty} \\frac{\\sin x}{x}$ or $\\lim_{x\\to 0} \\frac{\\sin x}{x}$.'
           }
         ]
       }
@@ -100,9 +100,9 @@ But:
         questions: [
           {
             question: 'For a rational function $p(x)/q(x)$ with $\\deg p > \\deg q$, the limit as $x \\to \\infty$ is:',
-            options: ['$0$', 'Ratio of leading coefficients', '$\\pm\\infty$ (DNE as finite)', 'Always 1'],
+            options: ['It equals $0$', 'The ratio of leading coefficients', '$\\pm\\infty$', 'It equals $1$'],
             correctAnswer: 2,
-            explanation: 'Top-heavier → grows without bound. Sign depends on leading coefficients and direction.'
+            explanation: 'Top-heavier → grows without bound, so the limit is $+\\infty$ or $-\\infty$ (not a finite number). The sign depends on the leading coefficients and direction. A limit of $0$ is the bottom-heavy case and the coefficient ratio is the equal-degree case.'
           },
           {
             question: 'Which limit equals 0?',

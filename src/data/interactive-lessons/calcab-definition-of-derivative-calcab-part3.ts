@@ -67,19 +67,19 @@ $$\\boxed{f'(c) = 0 \\text{ does NOT always mean } f \\text{ has an extremum at 
           {
             question: 'If $f\'(x) > 0$ for all $x$ in $(2, 5)$ and $f\'(2) = f\'(5) = 0$, then on $[2, 5]$:',
             options: [
-              '$f$ has a local max at $x = 5$',
-              '$f$ is constant',
+              '$f$ has a local maximum at $x = 2$',
+              '$f$ is constant, since $f\' = 0$ at both ends',
               '$f$ is increasing',
               '$f$ has an inflection point'
             ],
             correctAnswer: 2,
-            explanation: 'Since $f\'(x) \\geq 0$ on $[2,5]$ and $f\' > 0$ on the interior, $f$ is increasing on $[2,5]$.'
+            explanation: 'Since $f\'(x) \\geq 0$ on $[2,5]$ and $f\' > 0$ on the interior, $f$ is increasing on $[2,5]$. A zero derivative at two isolated points does not make $f$ constant, and $f$ rises to the right of $x = 2$, so $x = 2$ is not a local maximum. An inflection point would need a change in concavity, which we know nothing about.'
           },
           {
             question: 'If the graph of $f$ has an inflection point at $x = 4$, what happens to $f\'$ at $x = 4$?',
-            options: ['$f\'(4) = 0$', '$f\'$ has a local max or min at $x = 4$', '$f\'$ is undefined', '$f\'$ changes sign'],
+            options: ['$f\'(4) = 0$', '$f\'$ has a local max or min at $x = 4$', '$f\'(4)$ does not exist', '$f\'$ changes sign at $x = 4$'],
             correctAnswer: 1,
-            explanation: 'Inflection point of $f$ → concavity changes → $f\'\'$ changes sign → $f\'$ has a local extremum at that point.'
+            explanation: 'Inflection point of $f$ → concavity changes → $f\'\'$ changes sign → $f\'$ has a local extremum at that point. A sign change of $f\'$ would signal an extremum of $f$, not an inflection point, and $f\'(4)$ need not be $0$ or undefined.'
           }
         ]
       }
@@ -143,9 +143,9 @@ $$\\boxed{\\text{Sign change of } f' \\text{ at } c \\implies \\text{local extre
           },
           {
             question: 'If $f\'(c) = 0$ but $f\'$ does NOT change sign at $c$, then $f$ has:',
-            options: ['A local max', 'A local min', 'Neither max nor min at $c$', 'A vertical tangent'],
+            options: ['A local maximum at $c$', 'A local minimum at $c$', 'No extremum at $c$', 'A vertical tangent at $c$'],
             correctAnswer: 2,
-            explanation: 'Without a sign change, there is no extremum. Example: $f(x) = x^3$ at $x = 0$.'
+            explanation: 'Without a sign change in $f\'$, there is no local extremum. Example: $f(x) = x^3$ at $x = 0$. And $f\'(c) = 0$ means a horizontal tangent, not a vertical one.'
           }
         ]
       }

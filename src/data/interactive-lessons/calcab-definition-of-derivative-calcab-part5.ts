@@ -67,9 +67,9 @@ For the example above: normal slope $= -\\frac{1}{12}$, so $y - 8 = -\\frac{1}{1
         questions: [
           {
             question: 'Find the equation of the tangent line to $f(x) = x^2 + 1$ at $x = 3$.',
-            options: ['$y = 6x - 8$', '$y = 6x + 10$', '$y = 3x + 1$', '$y = 6x - 10$'],
+            options: ['$y = 6x - 8$', '$y = 6x + 10$', '$y = 10x - 20$', '$y = 6x - 10$'],
             correctAnswer: 0,
-            explanation: '$f(3) = 10$, $f\'(3) = 6$. Tangent: $y - 10 = 6(x-3) \\Rightarrow y = 6x - 8$.'
+            explanation: '$f(3) = 10$, $f\'(3) = 6$. Tangent: $y - 10 = 6(x-3) \\Rightarrow y = 6x - 8$. Using $f(3) = 10$ as the slope gives $y = 10x - 20$; using $10$ as the $y$-intercept gives $y = 6x + 10$.'
           },
           {
             question: 'The tangent line to $f(x) = \\sin x$ at $x = \\pi$ has slope:',
@@ -149,9 +149,9 @@ Indeed: $2.025 > 2.02485...$ ✓
         questions: [
           {
             question: 'Use the tangent to $f(x) = x^3$ at $x = 2$ to approximate $f(2.1)$.',
-            options: ['$9.0$', '$9.2$', '$9.261$', '$8.0$'],
+            options: ['$8.6$', '$9.2$', '$9.261$', '$8.0$'],
             correctAnswer: 1,
-            explanation: '$f(2)=8$, $f\'(2)=12$. $L(2.1) = 8 + 12(0.1) = 9.2$. (Actual $2.1^3 = 9.261$.)'
+            explanation: '$f(2)=8$, $f\'(2)=12$. $L(2.1) = 8 + 12(0.1) = 9.2$. (Actual $2.1^3 = 9.261$.) Using slope $3x = 6$ instead of $3x^2 = 12$ gives $8.6$; $8.0$ ignores the change in $x$.'
           },
           {
             question: 'The approximation $f(2.1) \\approx 9.2$ for $f(x) = x^3$ is:',

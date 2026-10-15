@@ -80,19 +80,19 @@ On the AP exam:
           {
             question: 'A student\'s calculator shows $\\dfrac{1 - \\cos(10^{-8})}{(10^{-8})^2} = 0$ and concludes the limit is 0. The correct response is:',
             options: [
-              'They are right — the table is the gold standard',
-              'Calculator precision broke down; algebraic methods give limit $= 1/2$',
-              'The function oscillates',
-              'The function blows up'
+              'They are right: the table at $10^{-8}$ gives exactly 0',
+              'Precision failed, and the limit is really $1/2$',
+              'The limit is 1, since $1 - \\cos x \\approx x^2$ near 0',
+              'The limit DNE, since the function blows up near 0'
             ],
             correctAnswer: 1,
-            explanation: 'Catastrophic cancellation — at $10^{-8}$ the numerator is too small for finite precision. Use the identity $1 - \\cos x \\approx x^2/2$ to see the true limit is $1/2$.'
+            explanation: 'Catastrophic cancellation — at $10^{-8}$ the numerator is too small for finite precision, so the calculator rounds $\\cos(10^{-8})$ to exactly 1. Algebraically, $1 - \\cos x \\approx x^2/2$, so the true limit is $1/2$; dropping the $\\frac{1}{2}$ gives 1. The function stays near $\\frac{1}{2}$ and does not blow up.'
           },
           {
             question: 'For $f(x) = \\sin(\\pi/x)$, picking $x = 1/n$ for $n = 1, 2, 3, \\ldots$ gives $f(x) = 0$ every time. What is $\\lim_{x \\to 0} f(x)$ really?',
-            options: ['$0$', '$1$', 'DNE — function oscillates', '$\\pi$'],
+            options: ['$0$, because every sample $x = 1/n$ gives 0', '$1$, since $\\frac{\\sin u}{u} \\to 1$', 'DNE, because it oscillates', '$\\pi$, by the $\\frac{\\sin(kx)}{x} \\to k$ rule'],
             correctAnswer: 2,
-            explanation: 'The integer $1/n$ values are *cherry-picked*. Other $x$-values (like $x = 2/(2n+1)$) give $\\pm 1$. The function oscillates infinitely fast — limit DNE.'
+            explanation: 'The integer $1/n$ values are *cherry-picked*. Other $x$-values (like $x = 2/(2n+1)$) give $\\pm 1$. The function oscillates infinitely fast — limit DNE. The special limit $\\frac{\\sin u}{u} \\to 1$ and the $\\frac{\\sin(kx)}{x} \\to k$ shortcut do not apply: here the sine\'s argument $\\pi/x$ goes to infinity, not to 0.'
           }
         ]
       }
@@ -106,24 +106,24 @@ On the AP exam:
           {
             question: 'Which is the BEST description of when to use a numerical table for limits?',
             options: [
-              'Always — tables are the most rigorous method',
-              'Never — only algebra is acceptable',
-              'When direct substitution fails, especially as a first estimate or sanity check',
+              'Always, since a table proves the exact value of a limit',
+              'Never, because only algebraic work counts as justification',
+              'As a first estimate or check when substitution fails',
               'Only on the calculator-allowed sections of the AP exam'
             ],
             correctAnswer: 2,
-            explanation: 'Tables shine on indeterminate forms. They\'re a starting point — pair with algebra for full credit.'
+            explanation: 'Tables shine on indeterminate forms, especially as a first estimate or sanity check. They suggest a value but do not prove it — pair with algebra for full credit. They are useful on both calculator and non-calculator work.'
           },
           {
             question: 'A reliable way to spot oscillation from a table is:',
             options: [
-              'Outputs grow without bound',
-              'Outputs jump from one value to another',
-              'Outputs refuse to settle even as $x$ gets very close to $a$',
-              'The function equals 0 at $x = a$'
+              'Outputs grow without bound as $x$ nears $a$',
+              'Outputs settle on different values on each side',
+              'Outputs keep wandering as $x$ nears $a$',
+              'Outputs are exactly 0 at the point $x = a$'
             ],
             correctAnswer: 2,
-            explanation: 'Oscillation means no convergence. If outputs keep wandering as $|x - a|$ shrinks, suspect an oscillating limit.'
+            explanation: 'Oscillation means no convergence. If outputs keep wandering, refusing to settle even as $|x - a|$ shrinks, suspect an oscillating limit. Unbounded growth signals blow-up, different settled values on each side signal a jump, and the value at $x = a$ says nothing about the limit.'
           }
         ]
       }

@@ -82,9 +82,9 @@ Find each of the following at $x = 1$:
           },
           {
             question: 'If $f(x) = \\frac{x^2+1}{x^2-1}$, where is $f\'(x) = 0$?',
-            options: ['$x = 0$', '$x = 1$', 'Nowhere — $f\'(x)$ is never zero', '$x = \\pm 1$'],
+            options: ['$x = 0$', '$x = 0$ and $x = \\pm 1$', 'Nowhere — $f\'(x)$ is never zero', '$x = \\pm 1$'],
             correctAnswer: 0,
-            explanation: '$f\'(x) = \\frac{2x(x^2-1) - (x^2+1)(2x)}{(x^2-1)^2} = \\frac{-4x}{(x^2-1)^2}$. This equals 0 only when $x = 0$.'
+            explanation: '$f\'(x) = \\frac{2x(x^2-1) - (x^2+1)(2x)}{(x^2-1)^2} = \\frac{-4x}{(x^2-1)^2}$. This equals 0 only when $x = 0$. At $x = \\pm 1$ the denominator is $0$, so $f\'$ is undefined there, not zero.'
           },
           {
             question: 'Find the 50th derivative of $\\cos x$.',
@@ -135,9 +135,9 @@ $$\\boxed{y - f(c) = -\\frac{1}{f'(c)}(x - c)}$$
         questions: [
           {
             question: 'A function $f$ satisfies $f(1) = 3$, $f\'(1) = -2$. If $g(x) = x^2 f(x)$, find $g\'(1)$.',
-            options: ['$-2$', '$4$', '$6$', '$2$'],
+            options: ['$-2$', '$4$', '$6$', '$-4$'],
             correctAnswer: 1,
-            explanation: '$g\'(x) = 2xf(x) + x^2f\'(x)$. At $x=1$: $g\'(1) = 2(1)(3) + (1)^2(-2) = 6 - 2 = 4$.'
+            explanation: '$g\'(x) = 2xf(x) + x^2f\'(x)$. At $x=1$: $g\'(1) = 2(1)(3) + (1)^2(-2) = 6 - 2 = 4$. Keeping only the first term gives $6$, and multiplying the derivatives, $2x \\cdot f\'(x)$, gives $-4$.'
           },
           {
             question: 'Find the equation of the tangent line to $y = x^3 - 4x$ at $x = 2$.',
@@ -147,9 +147,9 @@ $$\\boxed{y - f(c) = -\\frac{1}{f'(c)}(x - c)}$$
           },
           {
             question: 'For $f(x) = x^2 + \\frac{2}{x}$, at what $x > 0$ does $f$ have a horizontal tangent?',
-            options: ['$x = 1$', '$x = 2$', '$x = \\sqrt[3]{1}$', '$x = \\sqrt[3]{1} = 1$'],
+            options: ['$x = 1$', '$x = \\sqrt[3]{2}$', '$x = \\frac{1}{\\sqrt[3]{2}}$', 'No such $x > 0$ exists'],
             correctAnswer: 0,
-            explanation: '$f\'(x) = 2x - 2x^{-2} = 2x - \\frac{2}{x^2}$. Set to 0: $2x = \\frac{2}{x^2}$, so $x^3 = 1$, giving $x = 1$.'
+            explanation: '$f\'(x) = 2x - 2x^{-2} = 2x - \\frac{2}{x^2}$. Set to 0: $2x = \\frac{2}{x^2}$, so $x^3 = 1$, giving $x = 1$. Multiplying by the new exponent ($-2$) instead of the old one ($-1$) gives $x^3 = 2$; dropping the coefficient 2 on $\\frac{2}{x}$ gives $x^3 = \\frac{1}{2}$; and writing $+\\frac{2}{x^2}$ makes $f\'$ positive for all $x > 0$.'
           }
         ]
       }

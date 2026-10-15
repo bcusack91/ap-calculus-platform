@@ -87,15 +87,15 @@ So combinations of "nice" functions stay nice.
           },
           {
             question: 'Where is $f(x) = \\dfrac{x + 1}{x^2 - 9}$ continuous?',
-            options: ['All real $x$', 'All $x \\ne 0$', 'All $x \\ne \\pm 3$', '$x \\ge 0$'],
+            options: ['All real $x$', 'All $x \\ne -1$', 'All $x \\ne \\pm 3$', 'All $x \\ne 3$'],
             correctAnswer: 2,
-            explanation: 'Rational function — continuous wherever the denominator is nonzero. $x^2 - 9 = 0$ at $x = \\pm 3$.'
+            explanation: 'Rational function — continuous wherever the denominator is nonzero. $x^2 - 9 = 0$ at $x = \\pm 3$. The numerator zero $x = -1$ is not a problem, and forgetting the negative root leaves out $x = -3$.'
           },
           {
             question: 'Is $h(x) = \\cos(\\ln x)$ continuous at $x = 1$?',
-            options: ['Yes — composition of continuous functions, both defined', 'No — $\\ln$ is undefined', 'No — $\\cos$ is undefined', 'Only on the right'],
+            options: ['Yes; $\\ln 1 = 0$ and $\\cos$ is continuous at $0$', 'No; $\\ln x$ is undefined at $x = 1$', 'No; $\\cos 0$ is undefined', 'Only from the right, where $\\ln$ is continuous'],
             correctAnswer: 0,
-            explanation: '$\\ln 1 = 0$ defined, $\\cos$ continuous at 0, composition continuous at $x = 1$.'
+            explanation: '$\\ln 1 = 0$ is defined and $\\ln$ is continuous at 1, $\\cos$ is continuous at 0, so the composition is continuous at $x = 1$ from both sides. The domain issue for $\\ln$ is at $x = 0$, not $x = 1$.'
           }
         ]
       }
@@ -107,11 +107,11 @@ So combinations of "nice" functions stay nice.
       exercise: {
         dropdowns: [
           { label: '$f(x) = x^2 + 1$ at $x = 100$', options: ['Continuous', 'Discontinuous'] },
-          { label: '$g(x) = \\ln(x)$ at $x = 0$', options: ['Continuous', 'Discontinuous (undefined)'] },
-          { label: '$h(x) = \\dfrac{1}{x - 7}$ at $x = 7$', options: ['Continuous', 'Discontinuous (denominator 0)'] },
+          { label: '$g(x) = \\ln(x)$ at $x = 0$', options: ['Continuous', 'Discontinuous'] },
+          { label: '$h(x) = \\dfrac{1}{x - 7}$ at $x = 7$', options: ['Continuous', 'Discontinuous'] },
           { label: '$k(x) = e^{\\sin x}$ at $x = \\pi$', options: ['Continuous', 'Discontinuous'] },
         ],
-        correctAnswers: ['Continuous', 'Discontinuous (undefined)', 'Discontinuous (denominator 0)', 'Continuous'],
+        correctAnswers: ['Continuous', 'Discontinuous', 'Discontinuous', 'Continuous'],
         hint1: 'Polynomials continuous everywhere.',
         hint2: 'Domain of $\\ln$ is $(0,\\infty)$.',
         hint3: 'Rational, denominator vanishes.',

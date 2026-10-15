@@ -85,9 +85,9 @@ Most "common" functions (polynomials, sin, cos, exp) are continuous everywhere t
           },
           {
             question: 'Is $f(x) = \\dfrac{x^2 - 4}{x - 2}$ continuous at $x = 2$?',
-            options: ['Yes', 'No — $f(2)$ is undefined', 'Yes if you remove the singularity', 'It depends on the limit'],
+            options: ['Yes, since the limit exists', 'No, since $f(2)$ is undefined', 'Yes, since $f(2) = 4$', 'No, since there is no limit'],
             correctAnswer: 1,
-            explanation: '$f(2) = 0/0$ is undefined, so condition (1) fails. The limit DOES exist (it\'s 4), making this a removable discontinuity.'
+            explanation: '$f(2) = 0/0$ is undefined, so condition (1) fails. The limit DOES exist (it\'s 4), but that value belongs to the limit, not to $f(2)$ — this is a removable discontinuity.'
           }
         ]
       }

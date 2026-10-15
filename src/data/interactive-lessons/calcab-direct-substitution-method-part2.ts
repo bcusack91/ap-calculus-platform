@@ -83,9 +83,9 @@ A rational function $r(x) = \\dfrac{p(x)}{q(x)}$ is continuous wherever $q(x) \\
           },
           {
             question: 'For which value of $a$ does direct substitution FAIL on $f(x) = \\dfrac{x + 3}{x - 4}$?',
-            options: ['$a = 0$', '$a = 3$', '$a = 4$ (denominator vanishes)', '$a = -3$'],
+            options: ['$a = 0$', '$a = -4$', '$a = 4$', '$a = -3$'],
             correctAnswer: 2,
-            explanation: 'At $x = 4$ the denominator is 0. Numerator is 7, so it\'s a vertical asymptote (not $0/0$).'
+            explanation: 'At $x = 4$ the denominator is 0 while the numerator is 7, so it\'s a vertical asymptote (not $0/0$). Solving $x - 4 = 0$ as $x = -4$ is a sign slip, and $x = -3$ only zeroes the numerator, where the limit is simply $0$.'
           },
           {
             question: 'Compute $\\lim_{x \\to 1} \\ln(x + e - 1)$.',
@@ -102,12 +102,12 @@ A rational function $r(x) = \\dfrac{p(x)}{q(x)}$ is continuous wherever $q(x) \\
       content: `**Substitute or Stop?** 🔽`,
       exercise: {
         dropdowns: [
-          { label: '$\\lim_{x \\to 5} (x^2 + 7)$', options: ['Substitute → 32', 'Substitute → 22', 'DNE', 'Indeterminate'] },
-          { label: '$\\lim_{x \\to 2} \\dfrac{x - 2}{x + 3}$', options: ['Substitute → 0', 'Substitute → 5', 'Indeterminate', 'DNE'] },
-          { label: '$\\lim_{x \\to 0} \\dfrac{1}{x}$', options: ['Substitute → 0', 'Substitute → 1', 'DNE — denominator zero, numerator nonzero', 'Indeterminate'] },
-          { label: '$\\lim_{x \\to 1} \\dfrac{x - 1}{x - 1}$', options: ['Substitute → 1', 'Substitute → 0', 'Indeterminate $0/0$ — need another method', 'DNE'] },
+          { label: '$\\lim_{x \\to 5} (x^2 + 7)$', options: ['Substitute → 32', 'Substitute → 17', 'DNE, nonzero over zero', 'Indeterminate, zero over zero'] },
+          { label: '$\\lim_{x \\to 2} \\dfrac{x - 2}{x + 3}$', options: ['Substitute → 0', 'Substitute → 5', 'Indeterminate, zero over zero', 'DNE, nonzero over zero'] },
+          { label: '$\\lim_{x \\to 0} \\dfrac{1}{x}$', options: ['Substitute → 0', 'Substitute → 1', 'DNE, nonzero over zero', 'Indeterminate, zero over zero'] },
+          { label: '$\\lim_{x \\to 1} \\dfrac{x - 1}{x - 1}$', options: ['Substitute → 1', 'Substitute → 0', 'Indeterminate, zero over zero', 'DNE, nonzero over zero'] },
         ],
-        correctAnswers: ['Substitute → 32', 'Substitute → 0', 'DNE — denominator zero, numerator nonzero', 'Indeterminate $0/0$ — need another method'],
+        correctAnswers: ['Substitute → 32', 'Substitute → 0', 'DNE, nonzero over zero', 'Indeterminate, zero over zero'],
         hint1: 'Polynomials always allow substitution.',
         hint2: '$\\dfrac{2-2}{2+3} = 0/5 = 0$.',
         hint3: '$\\dfrac{1}{0}$ with nonzero numerator → asymptote, DNE.',

@@ -71,9 +71,9 @@ This $\\tilde f$ is continuous everywhere — we *removed* the discontinuity by 
         questions: [
           {
             question: 'For $f(x) = \\dfrac{x^2 - 9}{x - 3}$, what type of discontinuity is at $x = 3$?',
-            options: ['Vertical asymptote', 'Removable hole', 'Jump', 'No discontinuity'],
+            options: ['Infinite', 'Removable hole', 'Jump', 'Continuous'],
             correctAnswer: 1,
-            explanation: '$\\dfrac{(x-3)(x+3)}{x-3} = x + 3$. Hole at $x = 3$, height 6.'
+            explanation: '$\\dfrac{(x-3)(x+3)}{x-3} = x + 3$. Hole at $x = 3$, height 6. The factor cancels, so there is no asymptote, and $f(3)$ is undefined, so $f$ is not continuous there.'
           },
           {
             question: 'For the function in the previous question, the height of the hole is:',

@@ -147,9 +147,9 @@ $$\\frac{1}{x^n} = x^{-n} \\qquad \\sqrt[n]{x^m} = x^{m/n}$$
           },
           {
             question: 'Find $\\frac{d}{dx}(3\\sqrt[3]{x})$.',
-            options: ['$\\frac{1}{3x^{2/3}}$', '$\\frac{1}{x^{2/3}}$', '$\\frac{3}{x^{2/3}}$', '$x^{4/3}$'],
+            options: ['$\\frac{1}{3x^{2/3}}$', '$\\frac{1}{x^{2/3}}$', '$\\frac{3}{x^{2/3}}$', '$\\frac{9}{4}x^{4/3}$'],
             correctAnswer: 1,
-            explanation: '$3x^{1/3} \\to 3 \\cdot \\frac{1}{3}x^{-2/3} = x^{-2/3} = \\frac{1}{x^{2/3}} = \\frac{1}{\\sqrt[3]{x^2}}$. Dropping the 3 gives $\\frac{1}{3x^{2/3}}$; dropping the $\\frac{1}{3}$ gives $\\frac{3}{x^{2/3}}$.'
+            explanation: '$3x^{1/3} \\to 3 \\cdot \\frac{1}{3}x^{-2/3} = x^{-2/3} = \\frac{1}{x^{2/3}} = \\frac{1}{\\sqrt[3]{x^2}}$. Dropping the 3 gives $\\frac{1}{3x^{2/3}}$; dropping the $\\frac{1}{3}$ gives $\\frac{3}{x^{2/3}}$; raising the exponent and dividing by it, $\\frac{9}{4}x^{4/3}$, is the antiderivative, not the derivative.'
           }
         ]
       }
@@ -197,10 +197,10 @@ $$\\boxed{\\frac{d}{dx}[a^x] = a^x \\ln a \\qquad \\frac{d}{dx}[\\log_a x] = \\f
           },
           {
             label: '$h(x) = \\sqrt[4]{x^3}$  →  $h\'(x) = $',
-            options: ['$\\frac{3}{4}x^{-1/4}$', '$\\frac{4}{3}x^{1/3}$', '$\\frac{3}{4}x^{3/4}$', '$\\frac{3}{4\\sqrt[4]{x}}$'],
+            options: ['$\\frac{3}{4}x^{-1/4}$', '$\\frac{4}{3}x^{1/3}$', '$\\frac{3}{4}x^{3/4}$', '$\\frac{4}{7}x^{7/4}$'],
             correctAnswers: ['$\\frac{3}{4}x^{-1/4}$', '$\\frac{3}{4\\sqrt[4]{x}}$'],
             hints: ['Rewrite as $x^{3/4}$ first, then apply Power Rule.'],
-            explanation: '$x^{3/4} \\to \\frac{3}{4}x^{3/4 - 1} = \\frac{3}{4}x^{-1/4}$.'
+            explanation: '$x^{3/4} \\to \\frac{3}{4}x^{3/4 - 1} = \\frac{3}{4}x^{-1/4}$. Inverting the exponent gives $\\frac{4}{3}x^{1/3}$, forgetting to subtract 1 gives $\\frac{3}{4}x^{3/4}$, and $\\frac{4}{7}x^{7/4}$ is the antiderivative.'
           }
         ]
       }

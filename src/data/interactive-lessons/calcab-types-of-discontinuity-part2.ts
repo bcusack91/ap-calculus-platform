@@ -74,26 +74,26 @@ A jump shows as a vertical *gap* between two pieces, often with:
         questions: [
           {
             question: 'For $f(x) = \\begin{cases} 2x, & x < 1 \\\\ x + 5, & x \\ge 1 \\end{cases}$, what happens at $x = 1$?',
-            options: ['Continuous', 'Removable hole', 'Jump (size 4)', 'Vertical asymptote'],
+            options: ['Continuous', 'Removable hole', 'Jump', 'Vertical asymptote'],
             correctAnswer: 2,
             explanation: 'Left limit: $2$. Right limit: $6$. Different finite values → jump of size $|6 - 2| = 4$.'
           },
           {
             question: 'A jump discontinuity is removable.',
-            options: ['True', 'False — left and right limits disagree, so no single value patches it'],
+            options: ['True; redefine $f$ at the jump point', 'False; the one-sided limits differ'],
             correctAnswer: 1,
-            explanation: 'Removable means the two-sided limit exists. For a jump, it doesn\'t.'
+            explanation: 'Removable means the two-sided limit exists. At a jump the left and right limits disagree, so no single value of $f(a)$ can patch it.'
           },
           {
             question: 'Which is true at a jump discontinuity?',
             options: [
-              'Two-sided limit exists',
+              'The two-sided limit exists but $\\ne f(a)$',
               'Both one-sided limits are infinite',
               'Both one-sided limits are finite but unequal',
-              'Function is continuous'
+              'The function is continuous from both sides'
             ],
             correctAnswer: 2,
-            explanation: 'Definition of jump: both finite, but unequal.'
+            explanation: 'Definition of jump: both one-sided limits are finite, but unequal. A two-sided limit that exists describes a removable discontinuity, and infinite one-sided limits describe an asymptote.'
           }
         ]
       }

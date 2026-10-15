@@ -78,19 +78,19 @@ Two different concepts, similar names — don\'t confuse them.
           {
             question: 'What does $\\lim_{x \\to 0} \\dfrac{1}{x^2} = +\\infty$ mean?',
             options: [
-              'The function equals infinity at zero',
-              'As $x$ approaches 0, the values grow without bound positively',
-              'The function is constant',
-              'The limit does not exist in any sense'
+              'The function equals infinity at $x = 0$',
+              'Values grow without bound as $x \\to 0$',
+              'The limit exists and is a very large number',
+              'The function is undefined, so nothing can be said'
             ],
             correctAnswer: 1,
-            explanation: '"$\\lim = +\\infty$" describes unbounded positive growth as $x$ nears 0.'
+            explanation: '"$\\lim = +\\infty$" describes unbounded positive growth as $x$ nears 0. It is not a value of the function at 0, and no finite number (however large) is the limit.'
           },
           {
             question: 'For $f(x) = 1/x$: $\\lim_{x \\to 0^+} f(x) = +\\infty$ and $\\lim_{x \\to 0^-} f(x) = -\\infty$. The two-sided limit:',
-            options: ['Equals $+\\infty$', 'Equals $-\\infty$', 'Equals $0$', 'DNE (sides disagree)'],
+            options: ['Equals $+\\infty$', 'Equals $-\\infty$', 'Equals $0$', 'DNE'],
             correctAnswer: 3,
-            explanation: 'Sides go to opposite infinities → two-sided limit DNE.'
+            explanation: 'Sides go to opposite infinities → the two-sided limit DNE. Picking $+\\infty$ or $-\\infty$ uses only one side.'
           }
         ]
       }

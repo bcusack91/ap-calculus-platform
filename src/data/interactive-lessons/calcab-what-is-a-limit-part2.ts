@@ -115,22 +115,22 @@ Asks: "as $x$ approaches $a$, does $f(x)$ grow without bound?" (Note: technicall
             options: [
               'The limit of g of x, as x equals 4 minus 1, equals 2',
               'The limit of g of x, as x approaches 4 from the left, equals 2',
-              'g of x minus 4 equals 2',
-              'g approaches 2 as x equals 4'
+              'The limit of g of x, as x nears 4 from the right, equals 2',
+              'The limit of g of x, as x approaches negative 4, equals 2'
             ],
             correctAnswer: 1,
-            explanation: 'The "$-$" superscript indicates one-sided approach from below (the left side of $a$).'
+            explanation: 'The "$-$" superscript indicates one-sided approach from below (the left side of $a$). It does not mean subtracting 1, approaching from the right, or approaching $-4$.'
           },
           {
             question: 'Which statement correctly says "$\\lim_{x \\to a^+} f(x) = \\lim_{x \\to a^-} f(x) = L$ implies $\\lim_{x \\to a} f(x) = L$"?',
             options: [
-              'If both one-sided limits exist and equal $L$, then the two-sided limit equals $L$',
-              'If the two-sided limit equals $L$, the function is continuous at $a$',
-              'If $f(a) = L$, then both one-sided limits equal $L$',
+              'If both one-sided limits equal $L$, the two-sided limit equals $L$',
+              'If the two-sided limit equals $L$, then $f$ is continuous at $a$',
+              'If $f(a) = L$, then both one-sided limits at $a$ must equal $L$',
               'A limit only exists when both one-sided limits go to infinity'
             ],
             correctAnswer: 0,
-            explanation: 'The two-sided limit exists ⟺ both one-sided limits exist AND are equal. This is the formal "left = right ⇒ exists" rule.'
+            explanation: 'The two-sided limit exists ⟺ both one-sided limits exist AND are equal. This is the formal "left = right ⇒ exists" rule. It says nothing about continuity or about the value $f(a)$.'
           },
           {
             question: 'Which expression describes "as $x$ runs off to negative infinity, $h(x)$ approaches 7"?',
@@ -208,24 +208,24 @@ Enter \`infinity\`, \`-infinity\`, or a number:
           {
             question: 'Which two limits, taken together, force $\\lim_{x \\to 1} f(x) = 7$ to exist and equal 7?',
             options: [
-              '$f(1) = 7$ and $f$ is differentiable at 1',
+              '$\\lim_{x \\to 7} f(x) = 1$ and $f(7) = 1$',
               '$\\lim_{x \\to 1^-} f(x) = 7$ and $\\lim_{x \\to 1^+} f(x) = 7$',
               '$\\lim_{x \\to 1^-} f(x) = 7$ and $f(1) = 7$',
-              '$f(1) = 7$ and $f(1.0001) = 7.0001$'
+              '$f(0.999) = 7$ and $f(1.001) = 7$'
             ],
             correctAnswer: 1,
-            explanation: 'Two-sided limit exists ⟺ both one-sided limits exist and are equal. The value $f(1)$ does not enter the definition of the limit at all.'
+            explanation: 'Two-sided limit exists ⟺ both one-sided limits exist and are equal. The value $f(1)$ does not enter the definition of the limit at all, and two sample values near 1 cannot force a limit. Swapping the roles of 1 and 7 describes a limit at $x = 7$, not at $x = 1$.'
           },
           {
             question: '$\\lim_{x \\to 0^+} \\dfrac{1}{x}$ is best described as:',
             options: [
               'equal to 0',
-              'equal to $+\\infty$ (the limit grows without bound from the right)',
+              'equal to $+\\infty$',
               'equal to $-\\infty$',
-              'equal to 1'
+              'undefined, since $1/0$ is undefined'
             ],
             correctAnswer: 1,
-            explanation: 'For tiny positive $x$, $1/x$ is huge and positive, growing without bound. We write this as $\\lim_{x \\to 0^+} 1/x = +\\infty$.'
+            explanation: 'For tiny positive $x$, $1/x$ is huge and positive, growing without bound from the right. We write this as $\\lim_{x \\to 0^+} 1/x = +\\infty$. The fact that $1/0$ is undefined says nothing about the behavior near 0.'
           }
         ]
       }

@@ -81,15 +81,15 @@ For a discontinuity to be removable, the limit must exist as a *finite* number. 
           },
           {
             question: 'For $\\tan x$ at $x = \\pi/2$, the discontinuity is:',
-            options: ['Removable', 'Jump', 'Infinite (essential)', 'No discontinuity'],
+            options: ['Removable', 'Jump', 'Infinite', 'No discontinuity'],
             correctAnswer: 2,
             explanation: '$\\tan$ has a vertical asymptote at $\\pi/2$ — infinite discontinuity.'
           },
           {
             question: 'Can an infinite discontinuity be removed by redefining $f$ at one point?',
-            options: ['Yes', 'No — the limit is not a finite number'],
+            options: ['Yes, by defining $f(a)$ as a very large number', 'No, the limit is not a finite number'],
             correctAnswer: 1,
-            explanation: 'No single value can patch an unbounded gap.'
+            explanation: 'No single value can patch an unbounded gap: removable requires a finite two-sided limit.'
           }
         ]
       }

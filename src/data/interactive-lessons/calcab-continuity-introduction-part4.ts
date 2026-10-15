@@ -77,21 +77,21 @@ By IVT, there exists $c \\in (0, 1)$ with $f(c) = 0$. **A root exists in $(0, 1)
         questions: [
           {
             question: 'IVT requires the function to be:',
-            options: ['Differentiable on $[a, b]$', 'Continuous on $[a, b]$', 'Polynomial', 'Bounded on $[a, b]$'],
+            options: ['Differentiable on $[a, b]$', 'Continuous on $[a, b]$', 'A polynomial on $[a, b]$', 'Strictly increasing on $[a, b]$'],
             correctAnswer: 1,
-            explanation: 'Continuity on the closed interval is the only hypothesis.'
+            explanation: 'Continuity on the closed interval is the only hypothesis. IVT applies to non-polynomials and to functions that rise and fall, and differentiability is not required.'
           },
           {
             question: 'For $f(x) = x^2 - 2$ on $[1, 2]$: $f(1) = -1$, $f(2) = 2$. By IVT, there is a $c \\in (1, 2)$ with:',
-            options: ['$f(c) = -1$', '$f(c) = 0$ (in particular)', '$f(c) = 5$', '$f(c) = -2$'],
+            options: ['$f(c) = -1$', '$f(c) = 0$', '$f(c) = 3$', '$f(c) = -2$'],
             correctAnswer: 1,
-            explanation: 'Since $0$ lies strictly between $-1$ and $2$, IVT guarantees a $c \\in (1, 2)$ with $f(c) = 0$ (this $c$ is $\\sqrt 2$).'
+            explanation: 'Since $0$ lies strictly between $-1$ and $2$, IVT guarantees a $c \\in (1, 2)$ with $f(c) = 0$ (this $c$ is $\\sqrt 2$). The value $3$ is $f(2) - f(1)$, not a value between them; $-2$ is $f(0)$, outside the interval; and $f(c) = -1$ happens only at $c = 1$, which is not in the open interval.'
           },
           {
             question: 'IVT does NOT apply to which case?',
-            options: ['$f$ continuous on $[1, 5]$', '$f$ continuous on $(1, 5)$ only (open at endpoints)', '$f$ a polynomial on $[0, 1]$', '$f(x) = \\sin x$ on $[0, \\pi]$'],
+            options: ['$f$ continuous on $[1, 5]$', '$f$ continuous on $(1, 5)$ only', '$f$ a polynomial on $[0, 1]$', '$f(x) = \\sin x$ on $[0, \\pi]$'],
             correctAnswer: 1,
-            explanation: 'IVT requires a CLOSED interval $[a, b]$, with continuity including the endpoints.'
+            explanation: 'IVT requires continuity on the CLOSED interval $[a, b]$, including the endpoints. Polynomials and $\\sin x$ are continuous on any closed interval.'
           }
         ]
       }
@@ -107,11 +107,11 @@ By IVT, there exists $c \\in (0, 1)$ with $f(c) = 0$. **A root exists in $(0, 1)
             options: [
               '$f(a)$ exists',
               '$\\lim_{x \\to a} f(x)$ exists',
-              '$\\lim_{x \\to a} f(x) = f(a)$ (with both sides existing)',
+              '$\\lim_{x \\to a} f(x)$ exists and equals $f(a)$',
               '$f$ is differentiable at $a$'
             ],
             correctAnswer: 2,
-            explanation: 'Continuity = limit equals value. Both must exist and agree.'
+            explanation: 'Continuity = limit equals value. Both must exist and agree; $f(a)$ existing or the limit existing alone is not enough, and differentiability is stronger than needed.'
           },
           {
             question: 'IVT is an example of:',

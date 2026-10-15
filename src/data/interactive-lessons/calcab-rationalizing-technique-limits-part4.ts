@@ -95,19 +95,19 @@ $$\\dfrac{(x + 4 - 4)(\\sqrt{x + 1} + 1)}{(x + 1 - 1)(\\sqrt{x + 4} + 2)} = \\df
           {
             question: 'Rationalizing is the right tool when:',
             options: [
-              'Direct substitution gives any answer',
-              'Direct substitution gives $0/0$ AND a square root is involved',
-              'You see a quadratic',
-              'The function is exponential'
+              'Substitution gives a nonzero number over zero',
+              'Substitution gives $0/0$ with a square root',
+              'Substitution gives $0/0$ with a factorable quadratic',
+              'The expression contains any square root at all'
             ],
             correctAnswer: 1,
-            explanation: '$0/0$ from a radical = use the conjugate. Pure polynomial $0/0$ = use factoring.'
+            explanation: '$0/0$ from a radical = use the conjugate. Pure polynomial $0/0$ = use factoring. Nonzero over zero signals an asymptote, and a square root with a clean substitution needs no special technique.'
           },
           {
             question: 'Why is multiplying by $\\dfrac{\\sqrt{x} + 2}{\\sqrt{x} + 2}$ a legal move?',
-            options: ['It changes the numerator only', 'It equals 1, so the value is unchanged', 'It eliminates the variable', 'Limits don\'t care about value'],
+            options: ['It changes only the numerator, not the limit', 'It equals 1, so the value is unchanged', 'It removes every square root from the expression', 'Any algebra step is allowed inside a limit'],
             correctAnswer: 1,
-            explanation: 'Any nonzero expression over itself equals 1; multiplying by 1 is always allowed.'
+            explanation: 'Any nonzero expression over itself equals 1; multiplying by 1 is always allowed. It changes both numerator and denominator, the radical moves to the denominator rather than disappearing, and steps that change the value are not allowed.'
           }
         ]
       }

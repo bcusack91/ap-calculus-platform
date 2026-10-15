@@ -94,9 +94,9 @@ $$\\boxed{\\frac{d^n}{dx^n}[\\sin x] = \\sin\\left(x + \\frac{n\\pi}{2}\\right) 
           },
           {
             question: 'A particle has position $s(t) = t^3 - 6t^2 + 9t$. Find the acceleration at $t = 2$.',
-            options: ['$0$', '$-3$', '$6$', '$-6$'],
+            options: ['$0$', '$-3$', '$12$', '$-6$'],
             correctAnswer: 0,
-            explanation: '$v(t) = s\'(t) = 3t^2 - 12t + 9$. $a(t) = v\'(t) = 6t - 12$. At $t=2$: $a(2) = 12 - 12 = 0$.'
+            explanation: '$v(t) = s\'(t) = 3t^2 - 12t + 9$. $a(t) = v\'(t) = 6t - 12$. At $t=2$: $a(2) = 12 - 12 = 0$. Dropping the $-12$ gives $12$, and $-3$ is the velocity $v(2)$, not the acceleration.'
           }
         ]
       }
@@ -191,10 +191,10 @@ So $f$ is concave up on $(0, \\infty)$ and concave down on $(-\\infty, 0)$ with 
           },
           {
             label: 'If $f\'\'$ changes from positive to negative at $x = 4$, then $x = 4$ is a(n):',
-            options: ['Local maximum of $f$', 'Inflection point of $f$', 'Local minimum of $f$', 'Zero of $f$'],
+            options: ['Relative maximum of $f$', 'Inflection point of $f$', 'Relative minimum of $f\'$', 'Zero of $f$'],
             correctAnswers: ['Inflection point of $f$'],
             hints: ['When the second derivative changes sign, what changes about the graph?'],
-            explanation: 'When $f\'\'$ changes sign, the concavity changes — this is the definition of an inflection point.'
+            explanation: 'When $f\'\'$ changes sign, the concavity changes — this is the definition of an inflection point. ($f\'$ goes from increasing to decreasing, so $f\'$ has a relative maximum there, not a minimum.)'
           }
         ]
       }

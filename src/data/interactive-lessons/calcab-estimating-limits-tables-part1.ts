@@ -88,13 +88,13 @@ A useful table approaches $a$ from **both sides** with values that get visibly c
           {
             question: 'Which set of $x$-values is BEST for estimating $\\lim_{x \\to 5} f(x)$ numerically?',
             options: [
-              '$\\{0, 1, 2, 3, 4\\}$',
+              '$\\{4.9, 4.99, 5, 5.01, 5.1\\}$',
               '$\\{4.9, 4.99, 4.999, 5.001, 5.01, 5.1\\}$',
-              '$\\{5, 5, 5, 5\\}$',
+              '$\\{5.1, 5.01, 5.001, 5.0001, 5.00001\\}$',
               '$\\{4, 4.5, 6, 6.5\\}$'
             ],
             correctAnswer: 1,
-            explanation: 'You need values that approach 5 from both sides, getting closer and closer (decreasing by powers of 10). Never include $x = 5$ itself.'
+            explanation: 'You need values that approach 5 from both sides, getting closer and closer (decreasing by powers of 10). Never include $x = 5$ itself, since the limit ignores $f(5)$. Values from only one side can\'t detect a jump, and values like 4, 4.5, 6, 6.5 never get close to 5.'
           },
           {
             question: 'A numerical table for $\\lim_{x \\to 0} f(x)$ shows $f(-0.001) \\approx 4.001$ and $f(0.001) \\approx 3.999$. The best estimate is:',
@@ -110,7 +110,7 @@ A useful table approaches $a$ from **both sides** with values that get visibly c
       type: 'input-boxes' as const,
       content: `**Pick the closest $x$-values** 🧮
 
-You want to estimate $\\lim_{x \\to 7} f(x)$. Type three values approaching 7 from the LEFT, smallest distance first (use comma separation, e.g. \`6.999,6.99,6.9\`):
+You want to estimate $\\lim_{x \\to 7} f(x)$. Type three values approaching 7 from the LEFT, smallest distance first (use comma separation; for $a = 2$ you would type \`1.999,1.99,1.9\`):
       `,
       exercise: {
         boxes: 1,

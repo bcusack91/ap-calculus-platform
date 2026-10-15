@@ -80,21 +80,21 @@ Three cleanly different outcomes when you "plug in":
         questions: [
           {
             question: 'You plug $x = 3$ into $\\dfrac{x^2 - 9}{x - 3}$ and get $\\dfrac{0}{0}$. The correct conclusion is:',
-            options: ['Limit is $0$', 'Limit DNE', 'Indeterminate — try factoring', 'Limit is $\\infty$'],
+            options: ['The limit is $0$ since the top is $0$', 'The limit DNE since the bottom is $0$', 'Indeterminate, so factor and retry', 'The limit is $\\infty$ since the bottom is $0$'],
             correctAnswer: 2,
-            explanation: '$0/0$ is indeterminate. Factor: $\\dfrac{(x-3)(x+3)}{x-3} \\to x + 3 \\to 6$.'
+            explanation: '$0/0$ is indeterminate: it says nothing yet about the limit, so neither the zero numerator nor the zero denominator decides it. Factor: $\\dfrac{(x-3)(x+3)}{x-3} \\to x + 3 \\to 6$.'
           },
           {
             question: 'You plug $x = 0$ into $\\dfrac{1}{x}$ and get $\\dfrac{1}{0}$. Conclusion:',
-            options: ['Limit is $0$', 'DNE — vertical asymptote (left and right go to $\\mp\\infty$)', 'Indeterminate — try factoring', 'Limit is $\\infty$ exactly'],
+            options: ['The limit is $0$ since the top is $1$', 'DNE, since the sides go to opposite infinities', 'Indeterminate, so factor and retry', 'The limit is $+\\infty$ from both sides'],
             correctAnswer: 1,
-            explanation: 'Nonzero over zero is NOT indeterminate — it signals a vertical asymptote. The two sides go to opposite infinities, so two-sided limit DNE.'
+            explanation: 'Nonzero over zero is NOT indeterminate — it signals a vertical asymptote. From the right $1/x \\to +\\infty$ and from the left $1/x \\to -\\infty$, so the two-sided limit DNE. Both sides going to $+\\infty$ is the behavior of $1/x^2$, not $1/x$.'
           },
           {
             question: 'You plug into $x^2 - 4x + 1$ at $x = 2$ and get $-3$. Conclusion:',
-            options: ['Indeterminate', 'Direct substitution gave $-3$, so the limit is $-3$', 'DNE', 'Try L\'Hôpital'],
+            options: ['Indeterminate; apply L\'Hôpital\'s Rule', 'The limit is $-3$', 'Unknown until both one-sided limits are checked', 'The limit is near $-3$ but cannot equal it'],
             correctAnswer: 1,
-            explanation: 'Polynomials are continuous. A clean number from substitution IS the answer.'
+            explanation: 'Polynomials are continuous, so a clean number from substitution IS the limit — no one-sided check or L\'Hôpital is needed, and a limit can equal the function\'s value.'
           }
         ]
       }
@@ -107,9 +107,9 @@ Three cleanly different outcomes when you "plug in":
         questions: [
           {
             question: 'When direct substitution succeeds, the function MUST be:',
-            options: ['Differentiable at $a$', 'Continuous at $a$', 'A polynomial', 'Linear'],
+            options: ['Differentiable at $a$', 'Continuous at $a$', 'A polynomial function', 'Defined for every real $x$'],
             correctAnswer: 1,
-            explanation: 'Direct substitution works precisely when $\\lim = f(a)$ — the definition of continuity at $a$.'
+            explanation: 'Direct substitution works precisely when $\\lim = f(a)$ — the definition of continuity at $a$. Many non-polynomials (like $\\sin x$ or $\\sqrt{x}$ on its domain) allow it, a function need only be defined near $a$, and continuity does not require differentiability.'
           },
           {
             question: 'Which of these is NOT an indeterminate form?',

@@ -93,9 +93,9 @@ $$\\operatorname{sgn}(x) = \\begin{cases} -1 & x < 0 \\\\ 0 & x = 0 \\\\ +1 & x 
           },
           {
             question: 'Same $f$: does $\\lim_{x \\to 0} f(x)$ exist?',
-            options: ['Yes, equals 1', 'Yes, equals 5', 'Yes, equals 3 (average)', 'No — sides disagree (1 vs 5)'],
+            options: ['Yes, it equals 1, the left-hand value', 'Yes, it equals 5, which is $f(0)$', 'Yes, it equals 3, the average of 1 and 5', 'No, the sides disagree'],
             correctAnswer: 3,
-            explanation: 'One-sided limits 1 and 5 disagree, so the two-sided limit DNE.'
+            explanation: 'One-sided limits 1 and 5 disagree, so the two-sided limit DNE. Neither $f(0) = 5$ nor the average of the sides changes that.'
           }
         ]
       }

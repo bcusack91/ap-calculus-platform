@@ -127,9 +127,9 @@ Speed is always non-negative. The particle speeds up when $v(t) \\cdot a(t) > 0$
           },
           {
             question: 'If $g(x) = \\frac{\\sin x + \\cos x}{\\sin x - \\cos x}$, find $g\'(x)$.',
-            options: ['$\\frac{-2}{(\\sin x - \\cos x)^2}$', '$\\frac{2}{(\\sin x - \\cos x)^2}$', '$\\frac{1}{(\\sin x - \\cos x)^2}$', '$0$'],
+            options: ['$\\frac{-2}{(\\sin x - \\cos x)^2}$', '$\\frac{2}{(\\sin x - \\cos x)^2}$', '$\\frac{1}{(\\sin x - \\cos x)^2}$', '$-2$'],
             correctAnswer: 0,
-            explanation: 'Let $u = \\sin x + \\cos x$, $v = \\sin x - \\cos x$. Then $u\' = \\cos x - \\sin x = -v$ and $v\' = \\cos x + \\sin x = u$. So $g\' = \\frac{-v \\cdot v - u \\cdot u}{v^2} = \\frac{-(v^2+u^2)}{v^2}$. Since $u^2+v^2 = 2$, we get $\\frac{-2}{(\\sin x - \\cos x)^2}$.'
+            explanation: 'Let $u = \\sin x + \\cos x$, $v = \\sin x - \\cos x$. Then $u\' = \\cos x - \\sin x = -v$ and $v\' = \\cos x + \\sin x = u$. So $g\' = \\frac{-v \\cdot v - u \\cdot u}{v^2} = \\frac{-(v^2+u^2)}{v^2}$. Since $u^2+v^2 = 2$, we get $\\frac{-2}{(\\sin x - \\cos x)^2}$. Treating $(\\sin x - \\cos x)^2$ as $\\sin^2 x + \\cos^2 x = 1$ gives $-2$, but that drops the cross term $-2\\sin x \\cos x$.'
           }
         ]
       }
@@ -142,7 +142,7 @@ Speed is always non-negative. The particle speeds up when $v(t) \\cdot a(t) > 0$
         dropdowns: [
           {
             label: '$\\frac{d}{dx}\\left[\\frac{x^4 - x^2 + 3}{x^2}\\right]$ — Best strategy:',
-            options: ['Quotient Rule directly', 'Split into separate fractions', 'Product Rule', 'Factor first'],
+            options: ['Quotient Rule on the whole fraction', 'Split into separate fractions', 'Chain Rule on the denominator', 'Factor the numerator first'],
             correctAnswers: ['Split into separate fractions'],
             hints: ['Divide each term by $x^2$: $x^2 - 1 + 3x^{-2}$.'],
             explanation: 'Split: $x^2 - 1 + 3x^{-2}$. Derivative: $2x - 6x^{-3}$. Much simpler than Quotient Rule!'

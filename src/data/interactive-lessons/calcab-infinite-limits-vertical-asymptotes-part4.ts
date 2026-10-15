@@ -101,24 +101,24 @@ Visual signs:
           {
             question: 'A vertical asymptote at $x = a$ means:',
             options: [
-              '$f(a) = 0$',
-              '$f(a)$ is very large',
+              'The denominator of $f$ is zero at $a$',
+              '$f(a)$ is undefined, so the graph breaks at $a$',
               'At least one one-sided limit at $a$ is $\\pm\\infty$',
-              '$f$ is continuous at $a$'
+              'Both one-sided limits at $a$ equal $+\\infty$'
             ],
             correctAnswer: 2,
-            explanation: 'Definition of vertical asymptote: at least one one-sided limit is unbounded.'
+            explanation: 'Definition of vertical asymptote: at least one one-sided limit is unbounded. A zero denominator or undefined $f(a)$ can also be a hole, and the two sides need not agree (as with $1/x$).'
           },
           {
             question: 'You see $0/0$ at $x = a$. This guarantees:',
             options: [
-              'A vertical asymptote',
-              'A hole — guaranteed',
-              'Indeterminate form — could be hole, asymptote, or finite limit; need to factor',
-              'No issue'
+              'A vertical asymptote at $x = a$',
+              'A hole at $x = a$, always',
+              'No conclusion until you simplify',
+              'A finite limit equal to $0$'
             ],
             correctAnswer: 2,
-            explanation: '$0/0$ is indeterminate. Factor and analyze to decide.'
+            explanation: '$0/0$ is indeterminate: it could be a hole, an asymptote, or a finite limit. Factor and analyze to decide.'
           }
         ]
       }

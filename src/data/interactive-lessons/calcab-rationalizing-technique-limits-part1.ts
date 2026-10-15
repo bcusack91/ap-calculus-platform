@@ -86,13 +86,13 @@ Now you can substitute $x = 4$: $\\dfrac{1}{2 + 2} = \\dfrac{1}{4}$.
           {
             question: 'Why does multiplying $\\sqrt{x} - 2$ by $\\sqrt{x} + 2$ help?',
             options: [
-              'It gives 0',
-              'It gives $x - 4$ — eliminates the radical',
-              'It doubles the expression',
-              'It changes the value of the limit'
+              'It gives $x + 4$, a sum of squares',
+              'It gives $x - 4$, a radical-free result',
+              'It gives $x - 2$ after cancelling',
+              'It gives $x^2 - 4$ by squaring'
             ],
             correctAnswer: 1,
-            explanation: 'Difference of squares: $(\\sqrt{x})^2 - 2^2 = x - 4$. Radical eliminated.'
+            explanation: 'Difference of squares: $(\\sqrt{x})^2 - 2^2 = x - 4$, so the radical is gone. The middle terms cancel to give a minus (not $x + 4$), $2$ must be squared too (not $x - 2$), and $(\\sqrt{x})^2$ is $x$, not $x^2$.'
           }
         ]
       }

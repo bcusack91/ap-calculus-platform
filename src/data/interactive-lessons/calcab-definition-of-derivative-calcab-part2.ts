@@ -77,15 +77,15 @@ Since $-1 \\neq 1$, $f'(0)$ does not exist.
         questions: [
           {
             question: 'At which point is $f(x) = |x - 3|$ NOT differentiable?',
-            options: ['$x = 0$', '$x = 3$', '$x = -3$', '$f$ is differentiable everywhere'],
+            options: ['$x = 0$ and $x = 3$', '$x = 3$', '$x = -3$', '$f$ is differentiable everywhere'],
             correctAnswer: 1,
-            explanation: '$|x-3|$ has a corner at $x = 3$. Left derivative: $-1$. Right derivative: $+1$. Since they differ, $f\'(3)$ DNE.'
+            explanation: '$|x-3|$ has a corner only at $x = 3$, where the inside $x - 3$ changes sign. Left derivative: $-1$. Right derivative: $+1$. Since they differ, $f\'(3)$ DNE. The graph is a straight line near $x = 0$, so there is no corner there.'
           },
           {
             question: 'If $f$ is differentiable at $x = 5$, which MUST be true?',
-            options: ['$f\'(5) > 0$', '$f$ is continuous at $x = 5$', '$f(5) = 0$', '$f$ has no corners anywhere'],
+            options: ['$f$ is increasing near $x = 5$', '$f$ is continuous at $x = 5$', '$f$ has a horizontal tangent at $x = 5$', '$f$ has no corners on its whole domain'],
             correctAnswer: 1,
-            explanation: 'Differentiability implies continuity. The derivative could be zero, negative, or positive — we only know the function is continuous at that point.'
+            explanation: 'Differentiability implies continuity at that point. The derivative could be zero, negative, or positive, so neither increasing behavior nor a horizontal tangent is forced, and differentiability at $x = 5$ says nothing about corners elsewhere.'
           },
           {
             question: 'Which function is continuous at $x = 0$ but NOT differentiable there?',
@@ -145,7 +145,7 @@ Continuous but not differentiable at $x = 1$ (corner).
             options: [
               'Yes — continuity and derivatives both match',
               'No — $g$ is not continuous at $x = 2$',
-              'No — the derivatives from left and right differ',
+              'No — the one-sided derivatives differ',
               'Cannot be determined'
             ],
             correctAnswer: 0,
@@ -155,9 +155,9 @@ Continuous but not differentiable at $x = 1$ (corner).
             question: 'For $h(x) = \\begin{cases} x^3 & x \\leq 0 \\\\ x^2 & x > 0 \\end{cases}$, is $h$ differentiable at $x = 0$?',
             options: [
               'Yes — both derivatives equal 0',
-              'No — not continuous',
-              'No — derivatives differ',
-              'No — cusp'
+              'No — the pieces do not meet at $x = 0$',
+              'No — the one-sided derivatives differ',
+              'No — the graph has a cusp at $x = 0$'
             ],
             correctAnswer: 0,
             explanation: 'Continuity: $0^3 = 0 = 0^2$ ✓. Left derivative: $3x^2 \\to 0$. Right derivative: $2x \\to 0$. Both equal 0, so differentiable at $x = 0$.'

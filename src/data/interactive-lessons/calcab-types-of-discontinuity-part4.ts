@@ -85,7 +85,7 @@ $$f(x) = \\begin{cases} \\dfrac{x^2 - 1}{x - 1}, & x \\ne 1 \\\\ 5, & x = 1 \\en
           },
           {
             question: 'For $f(x) = \\begin{cases} x + 1, & x < 0 \\\\ x - 1, & x \\ge 0 \\end{cases}$, what is the discontinuity at $x = 0$?',
-            options: ['Removable', 'Jump (size 2)', 'Infinite', 'No discontinuity'],
+            options: ['Removable', 'Jump', 'Infinite', 'No discontinuity'],
             correctAnswer: 1,
             explanation: 'Left limit: $1$. Right limit: $-1$. Finite but disagree → jump of size 2.'
           }
@@ -101,17 +101,17 @@ $$f(x) = \\begin{cases} \\dfrac{x^2 - 1}{x - 1}, & x \\ne 1 \\\\ 5, & x = 1 \\en
           {
             question: 'A removable discontinuity is characterized by:',
             options: [
-              'A vertical asymptote',
-              'A finite two-sided limit that doesn\'t equal $f(a)$ (or $f(a)$ undefined)',
-              'Two finite, unequal one-sided limits',
-              'A function value that\'s undefined everywhere'
+              'A one-sided limit equal to $\\pm\\infty$',
+              'A finite limit with $f(a)$ missing or different',
+              'Two finite one-sided limits that are not equal',
+              'An $f(a)$ that exists but no two-sided limit'
             ],
             correctAnswer: 1,
-            explanation: 'Removable = limit exists finitely; the value can be patched.'
+            explanation: 'Removable = the two-sided limit exists finitely but $f(a)$ is undefined or doesn\'t match it; the value can be patched. Unequal one-sided limits are a jump and an infinite one-sided limit is an asymptote.'
           },
           {
             question: 'Which type of discontinuity occurs at the asymptotes of $\\tan x$?',
-            options: ['Removable', 'Jump', 'Infinite (essential)', 'No discontinuity'],
+            options: ['Removable', 'Jump', 'Infinite', 'No discontinuity'],
             correctAnswer: 2,
             explanation: '$\\tan$ shoots to $\\pm\\infty$ at $\\pi/2 + k\\pi$ → infinite discontinuity.'
           }

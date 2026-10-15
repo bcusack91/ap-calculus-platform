@@ -69,21 +69,21 @@ $$\\boxed{\\frac{d}{dx}[\\sec x] = \\sec x \\tan x \\qquad \\frac{d}{dx}[\\csc x
         questions: [
           {
             question: 'Find $\\frac{d}{dx}(\\sin x + \\cos x)$ and evaluate at $x = \\frac{\\pi}{4}$.',
-            options: ['$0$', '$\\sqrt{2}$', '$-\\sqrt{2}$', '$1$'],
+            options: ['$0$', '$\\sqrt{2}$', '$-\\sqrt{2}$', '$\\frac{\\sqrt{2}}{2}$'],
             correctAnswer: 0,
-            explanation: '$\\frac{d}{dx}(\\sin x + \\cos x) = \\cos x - \\sin x$. At $x = \\pi/4$: $\\frac{\\sqrt{2}}{2} - \\frac{\\sqrt{2}}{2} = 0$.'
+            explanation: '$\\frac{d}{dx}(\\sin x + \\cos x) = \\cos x - \\sin x$. At $x = \\pi/4$: $\\frac{\\sqrt{2}}{2} - \\frac{\\sqrt{2}}{2} = 0$. Writing $\\frac{d}{dx}\\cos x = +\\sin x$ gives $\\sqrt{2}$, and differentiating only one of the two terms gives $\\frac{\\sqrt{2}}{2}$.'
           },
           {
             question: 'Find $\\frac{d}{dx}(x\\tan x)$.',
             options: ['$\\sec^2 x$', '$\\tan x + x\\sec^2 x$', '$x\\sec^2 x$', '$\\tan x + \\sec^2 x$'],
             correctAnswer: 1,
-            explanation: 'Product Rule: $(1)(\\tan x) + (x)(\\sec^2 x) = \\tan x + x\\sec^2 x$.'
+            explanation: 'Product Rule: $(1)(\\tan x) + (x)(\\sec^2 x) = \\tan x + x\\sec^2 x$. Dropping the first term gives $x\\sec^2 x$; dropping the factor $x$ in the second term gives $\\tan x + \\sec^2 x$; multiplying the two derivatives gives $\\sec^2 x$.'
           },
           {
             question: 'Find $\\frac{d}{dx}\\frac{\\cos x}{x^2}$.',
-            options: ['$\\frac{-x\\sin x - 2\\cos x}{x^3}$', '$\\frac{-x\\sin x + 2\\cos x}{x^3}$', '$\\frac{-\\sin x}{x^2}$', '$\\frac{-\\sin x}{2x}$'],
+            options: ['$\\frac{-x\\sin x - 2\\cos x}{x^3}$', '$\\frac{-x\\sin x + 2\\cos x}{x^3}$', '$\\frac{-x^2\\sin x - 2x\\cos x}{x^2}$', '$\\frac{-\\sin x}{2x}$'],
             correctAnswer: 0,
-            explanation: 'Quotient Rule: $\\frac{(-\\sin x)(x^2) - (\\cos x)(2x)}{(x^2)^2} = \\frac{-x^2\\sin x - 2x\\cos x}{x^4}$. Factor $x$: $\\frac{-x\\sin x - 2\\cos x}{x^3}$.'
+            explanation: 'Quotient Rule: $\\frac{(-\\sin x)(x^2) - (\\cos x)(2x)}{(x^2)^2} = \\frac{-x^2\\sin x - 2x\\cos x}{x^4}$. Factor $x$: $\\frac{-x\\sin x - 2\\cos x}{x^3}$. Forgetting to square the denominator leaves $x^2$ below; adding instead of subtracting in the numerator gives $+2\\cos x$; dividing the two derivatives gives $\\frac{-\\sin x}{2x}$.'
           }
         ]
       }

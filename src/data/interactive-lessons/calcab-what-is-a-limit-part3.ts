@@ -112,13 +112,13 @@ When asked **"Does $\\lim_{x \\to a} f(x)$ exist?"** follow this checklist:
           {
             question: '$\\lim_{x \\to a} f(x) = L$ exists if and only if:',
             options: [
-              '$f(a) = L$',
+              '$f(a)$ is defined and $f(a) = L$',
               '$\\lim_{x \\to a^-} f(x) = \\lim_{x \\to a^+} f(x) = L$',
-              '$f$ is continuous at $a$',
+              '$f$ is continuous at $a$ and $f(a) = L$',
               '$f$ is bounded on an interval around $a$'
             ],
             correctAnswer: 1,
-            explanation: 'This is the Existence Theorem. It says nothing about $f(a)$ — only about behavior approaching $a$.'
+            explanation: 'This is the Existence Theorem. It says nothing about $f(a)$ — only about behavior approaching $a$. Continuity is enough to guarantee the limit but is not required (a hole still has a limit), so it cannot be the "if and only if" condition.'
           }
         ]
       }
@@ -183,20 +183,20 @@ For each scenario, decide whether $\\lim_{x \\to a} f(x)$ exists.
         questions: [
           {
             question: 'Suppose $f$ is defined by $f(x) = |x|/x$ for $x \\ne 0$. What is $\\lim_{x \\to 0} f(x)$?',
-            options: ['$-1$', '$0$', '$1$', 'Does not exist'],
+            options: ['$-1$, the left-hand value', '$0$, the average of the two sides', '$1$, the right-hand value', 'Does not exist'],
             correctAnswer: 3,
             explanation: 'For $x < 0$, $|x|/x = -1$. For $x > 0$, $|x|/x = +1$. Left limit $= -1$, right limit $= +1$ — they disagree, so the two-sided limit DNE.'
           },
           {
             question: 'A piecewise function $f$ has $\\lim_{x\\to 3^-} f(x) = 7$ and $\\lim_{x\\to 3^+} f(x) = 7$, with $f(3)$ undefined. Choose the strongest true statement.',
             options: [
-              '$f$ is continuous at 3.',
-              'The two-sided limit at 3 exists and equals 7, but $f$ is not continuous at 3.',
-              'The two-sided limit at 3 does not exist.',
-              '$f$ has a jump discontinuity at 3.'
+              '$f$ is continuous at 3, since both one-sided limits equal 7.',
+              'The limit at 3 is 7, but $f$ is not continuous at 3.',
+              'The two-sided limit at 3 does not exist, since $f(3)$ is undefined.',
+              '$f$ has a jump discontinuity at 3, since $f(3)$ is undefined.'
             ],
             correctAnswer: 1,
-            explanation: 'Both one-sided limits agree at 7, so the limit exists and equals 7. But continuity additionally requires $f(3)$ to be defined and equal to that limit — here $f(3)$ is undefined, giving a removable discontinuity.'
+            explanation: 'Both one-sided limits agree at 7, so the two-sided limit exists and equals 7. But continuity additionally requires $f(3)$ to be defined and equal to that limit — here $f(3)$ is undefined, giving a removable discontinuity, not a jump.'
           }
         ]
       }

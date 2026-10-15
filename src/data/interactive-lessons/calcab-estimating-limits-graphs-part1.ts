@@ -74,13 +74,13 @@ A continuous parabola $y = (x - 2)^2 + 1$ passes through $(2, 1)$ smoothly.
           {
             question: 'When estimating a limit from a graph, where do you focus your eye?',
             options: [
-              'Only at the dot above $x = a$',
-              'On where the curve is aiming AS $x$ approaches $a$, ignoring the value AT $a$',
-              'On the $x$-intercept',
-              'On the slope of the curve'
+              'Only at the plotted point above $x = a$',
+              'Where the curve is heading as $x$ approaches $a$',
+              'On the $x$-intercept nearest to $x = a$',
+              'On the slope of the curve as it passes $x = a$'
             ],
             correctAnswer: 1,
-            explanation: 'The limit is about behavior NEAR $a$. Trace the curve toward $a$ from each side — ignore the exact point.'
+            explanation: 'The limit is about behavior NEAR $a$. Trace the curve toward $a$ from each side — ignore the exact point, whose value is $f(a)$, not the limit. Intercepts and slope answer different questions.'
           },
           {
             question: 'A curve approaches $y = 4$ from both sides as $x \\to 5$, but a solid dot sits at $(5, 9)$. The limit $\\lim_{x \\to 5} f(x)$ equals:',

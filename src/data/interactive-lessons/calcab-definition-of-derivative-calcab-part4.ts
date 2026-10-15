@@ -78,9 +78,9 @@ $$s'(t) = v(t), \\qquad s''(t) = v'(t) = a(t)$$
         questions: [
           {
             question: 'If $s(t)$ gives position in feet at time $t$ seconds, what are the units of $s\'\'(t)$?',
-            options: ['feet', 'feet/second', 'feet/second$^2$', 'seconds/foot'],
+            options: ['feet$^2$', 'feet/second', 'feet/second$^2$', 'seconds/foot'],
             correctAnswer: 2,
-            explanation: '$s\'(t)$ = velocity [$\\text{ft/s}$]. $s\'\'(t)$ = acceleration = rate of change of velocity [$\\text{ft/s}^2$].'
+            explanation: '$s\'(t)$ = velocity [$\\text{ft/s}$]. $s\'\'(t)$ = acceleration = rate of change of velocity [$\\text{ft/s}^2$]. The "second" in second derivative means dividing by time twice, not squaring the feet.'
           },
           {
             question: 'Which notation represents "the second derivative of $y$ with respect to $x$, evaluated at $x = 1$"?',
@@ -90,9 +90,9 @@ $$s'(t) = v(t), \\qquad s''(t) = v'(t) = a(t)$$
           },
           {
             question: 'The operator notation $\\frac{d}{dx}[x^2 \\sin x]$ means:',
-            options: ['Divide $x^2\\sin x$ by $dx$', 'Differentiate $x^2\\sin x$ with respect to $x$', 'Integrate $x^2\\sin x$', 'Evaluate $x^2\\sin x$ at $x = d$'],
+            options: ['Divide $x^2\\sin x$ by $dx$', 'Differentiate $x^2\\sin x$ with respect to $x$', 'Integrate $x^2\\sin x$ with respect to $x$', 'Evaluate $x^2\\sin x$ at $x = d$'],
             correctAnswer: 1,
-            explanation: '$\\frac{d}{dx}$ is the differentiation operator — it says "take the derivative of whatever follows."'
+            explanation: '$\\frac{d}{dx}$ is the differentiation operator: it says "take the derivative of whatever follows with respect to $x$." It is not a fraction to divide by, and integration is written with $\\int \\ldots \\, dx$.'
           }
         ]
       }
@@ -124,24 +124,24 @@ $$\\boxed{\\text{Units of } \\frac{dy}{dx} = \\frac{\\text{units of } y}{\\text{
           {
             question: 'If $P(t)$ represents population (thousands) at time $t$ (years), and $P\'(10) = 3$, this means:',
             options: [
-              'The population is 3,000 at year 10',
-              'At $t = 10$, population is increasing at 3,000 people per year',
-              'The population reaches 3,000 in 10 years',
+              'The population at $t = 10$ is 3,000 people',
+              'It grows by 3,000 people per year at $t = 10$',
+              'It grows by 3 people per year at $t = 10$',
               'The population triples every 10 years'
             ],
             correctAnswer: 1,
-            explanation: '$P\'(10) = 3$ means the rate of change at $t=10$ is 3 thousand/year = 3,000 people/year.'
+            explanation: '$P\'(10) = 3$ means the rate of change at $t=10$ is 3 thousand/year = 3,000 people/year. It is a rate, not the population itself, and dropping the "thousands" unit gives 3 people per year.'
           },
           {
             question: 'If $C(x)$ is the cost in dollars to produce $x$ widgets, what does $C\'(100) = 12$ mean?',
             options: [
-              'It costs $12 to make 100 widgets',
-              'The 101st widget costs approximately $12',
-              'Each widget costs $12',
-              'Profit is $12 at 100 widgets'
+              'It costs \\$12 to make all 100 widgets',
+              'The 101st widget costs about \\$12',
+              'Every widget costs \\$12 to produce',
+              'Profit is \\$12 when 100 widgets are made'
             ],
             correctAnswer: 1,
-            explanation: '$C\'(100) = 12$ means the marginal cost at $x=100$ is \\$12/widget. The next widget (101st) costs approximately \\$12.'
+            explanation: '$C\'(100) = 12$ means the marginal cost at $x=100$ is \\$12/widget. The next widget (101st) costs approximately \\$12. It is not the total cost $C(100)$, not a fixed price for every widget, and it says nothing about profit.'
           }
         ]
       }

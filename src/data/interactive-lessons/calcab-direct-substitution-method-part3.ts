@@ -78,9 +78,9 @@ In words: "you can move the limit *inside* a continuous function."
         questions: [
           {
             question: 'If $\\lim_{x \\to a} f = 3$ and $\\lim_{x \\to a} g = -2$, then $\\lim_{x \\to a} (2f - g) = ?$',
-            options: ['$1$', '$4$', '$8$', '$-1$'],
+            options: ['$10$', '$4$', '$8$', '$-7$'],
             correctAnswer: 2,
-            explanation: 'Use sum + constant multiple: $2(3) - (-2) = 6 + 2 = 8$.'
+            explanation: 'Use sum + constant multiple: $2(3) - (-2) = 6 + 2 = 8$. Getting $4$ drops the double negative ($6 - 2$); $10$ doubles $g$ as well; $-7$ swaps the roles of $f$ and $g$.'
           },
           {
             question: 'Compute $\\lim_{x \\to 0} \\cos(x^2 + \\pi)$.',

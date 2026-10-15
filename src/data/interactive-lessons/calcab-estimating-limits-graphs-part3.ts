@@ -86,17 +86,17 @@ Think $\\sin(1/x)$ at $x = 0$: as you slide toward 0, the graph crashes through 
           {
             question: 'A graph shows a vertical dashed line at $x = 4$, with the curve diving to $-\\infty$ on the left and shooting to $+\\infty$ on the right. The limit at $x = 4$:',
             options: [
-              'Equals 0 (averaged)',
-              'DNE — vertical asymptote / blow-up',
-              'Equals $+\\infty$',
-              'Equals the closed dot'
+              'Equals 0, averaging $-\\infty$ and $+\\infty$',
+              'DNE, it is unbounded',
+              'Equals $+\\infty$, since the curve shoots upward',
+              'Equals $-\\infty$, from the left-hand approach'
             ],
             correctAnswer: 1,
-            explanation: 'Curve heads to $\\pm\\infty$ from opposite sides → vertical asymptote → limit DNE.'
+            explanation: 'Curve heads to $\\pm\\infty$ from opposite sides → vertical asymptote / blow-up → limit DNE. Neither one side alone nor an "average" of the two infinities gives the two-sided limit; only when both sides head to the same infinity could we write $+\\infty$ or $-\\infty$.'
           },
           {
             question: 'A graph near $x = 0$ looks like a fuzzy band oscillating between $-1$ and $+1$. The limit at 0:',
-            options: ['$0$', '$1$', 'DNE — oscillation', '$-1$'],
+            options: ['$0$, the middle of the band', '$1$, the top of the band', 'DNE, it never settles', '$-1$, the bottom of the band'],
             correctAnswer: 2,
             explanation: 'Infinite oscillation between $-1$ and $+1$ means the curve never settles on a single $y$-value.'
           }

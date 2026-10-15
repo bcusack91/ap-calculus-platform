@@ -102,7 +102,7 @@ $\\lim_{x \\to 1} f(x) = 1$, but $f(1) = 5 \\neq 1$. The limit exists but the fu
           },
           {
             question: 'Let $h(x) = \\begin{cases} \\sin(x) & x < 0 \\\\ x^2 + 1 & x \\geq 0 \\end{cases}$. Does $\\lim_{x \\to 0} h(x)$ exist?',
-            options: ['Yes, equals 0', 'Yes, equals 1', 'No, left and right limits differ', 'No, because $h$ is not defined at 0'],
+            options: ['Yes, it equals 0, the value of $\\sin(0)$', 'Yes, it equals 1, the value of $h(0)$', 'No, left and right limits differ', 'No, because $h$ is not defined at 0'],
             correctAnswer: 2,
             explanation: 'Left: $\\lim_{x \\to 0^-} \\sin(x) = 0$. Right: $\\lim_{x \\to 0^+} (x^2+1) = 1$. Since $0 \\neq 1$, the limit does not exist.'
           }

@@ -121,24 +121,24 @@ A graph at $x = 5$ shows: left arm $\\to 3$, right arm $\\to 3$, an OPEN circle 
           {
             question: 'When estimating a limit from a graph, the most common mistake is:',
             options: [
-              'Using the curve\'s direction',
-              'Reading the value of a closed dot as if it were the limit',
-              'Tracing from the left',
-              'Using one-sided limits'
+              'Following where the curve is heading near $x = a$',
+              'Reading a closed dot\'s value as the limit',
+              'Tracing the curve toward $x = a$ from the left',
+              'Checking the left- and right-hand limits separately'
             ],
             correctAnswer: 1,
-            explanation: 'A closed dot tells you $f(a)$. The limit is what the *curve* approaches — could be a different number entirely.'
+            explanation: 'A closed dot tells you $f(a)$. The limit is what the *curve* approaches — could be a different number entirely. Following the curve, tracing from each side, and checking one-sided limits are exactly the right habits, not mistakes.'
           },
           {
             question: 'You see both arms of $f$ aiming at $y = 4$ as $x \\to 2$, but $f(2) = 4$ (closed dot). What does this tell you?',
             options: [
-              '$\\lim_{x\\to 2} f(x) = 4$ AND $f$ is continuous at 2',
-              'The limit DNE',
-              '$f(2)$ doesn\'t exist',
-              'The graph has a jump'
+              'The limit is 4 and $f$ is continuous at 2',
+              'The limit is 4, but $f$ has a hole at 2',
+              '$f(2) = 4$, but there is no limit at 2',
+              '$f$ has a jump discontinuity at $x = 2$'
             ],
             correctAnswer: 0,
-            explanation: 'When limit = value, the function is continuous at that point. This is the "nicest" case.'
+            explanation: 'Both arms aim at 4, so $\\lim_{x\\to 2} f(x) = 4$, and the closed dot gives $f(2) = 4$. When limit = value, the function is continuous at that point — the "nicest" case. A hole would need $f(2)$ undefined or different from 4.'
           }
         ]
       }

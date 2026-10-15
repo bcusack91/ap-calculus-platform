@@ -106,10 +106,10 @@ For the function $f(x) = \\dfrac{x^2 - 4}{x - 2}$:
           {
             question: 'In the symbol $\\lim_{x \\to 3} f(x) = 7$, what does $x \\to 3$ mean?',
             options: [
-              '$x$ equals 3',
-              '$x$ is getting arbitrarily close to 3 (but $x \\ne 3$)',
-              '$x$ is exactly 3.0001',
-              '$x$ is moving away from 3'
+              '$x$ is set equal to 3 and $f(3)$ is computed',
+              '$x$ gets arbitrarily close to 3 without equaling 3',
+              '$x$ is a fixed number near 3, like 3.0001',
+              '$x$ increases toward 3 from the left side only'
             ],
             correctAnswer: 1,
             explanation: '$x \\to 3$ means $x$ is approaching 3 from values nearby. We deliberately exclude $x = 3$ — the limit is about behavior *near* 3, not *at* 3.'
@@ -117,10 +117,10 @@ For the function $f(x) = \\dfrac{x^2 - 4}{x - 2}$:
           {
             question: 'If $f(2)$ is undefined, what can we say about $\\lim_{x\\to 2} f(x)$?',
             options: [
-              'The limit is also automatically undefined',
-              'The limit might still exist — undefined value at a point does not prevent the limit from existing',
-              'The limit must equal 0',
-              'The limit must equal $\\infty$'
+              'The limit is also undefined, like $f(2)$',
+              'It may still exist, since only values near 2 matter',
+              'The limit must equal 0, since $f(2)$ has no value',
+              'The limit must equal $\\infty$ there'
             ],
             correctAnswer: 1,
             explanation: 'The limit only cares about behavior near $a$, not at $a$. A function can have $f(a)$ undefined and still have a perfectly good limit at $a$ (this is called a removable discontinuity).'
@@ -128,10 +128,10 @@ For the function $f(x) = \\dfrac{x^2 - 4}{x - 2}$:
           {
             question: 'Which of these is the BEST informal definition of $\\lim_{x \\to a} f(x) = L$?',
             options: [
-              'There exists some $x$ near $a$ with $f(x) = L$',
+              'Some $x$ value near $a$ gives an output $f(x)$ equal to $L$',
               'As $x$ gets close to $a$, $f(x)$ gets close to $L$',
-              '$f(a) = L$',
-              '$f$ is continuous at $a$'
+              '$f(a) = L$, so plugging in $x = a$ gives the output $L$',
+              '$f$ is continuous at $a$, with no hole or jump at $x = a$'
             ],
             correctAnswer: 1,
             explanation: '"As $x$ approaches $a$, $f(x)$ approaches $L$." The other three either confuse limit with value, or describe continuity (which is a stronger condition).'
@@ -205,12 +205,12 @@ The function $f(x) = \\dfrac{x^2 - 9}{x - 3}$ is undefined at $x = 3$. Fill in t
             question: 'Which statement is TRUE?',
             options: [
               '$\\lim_{x\\to a} f(x)$ always equals $f(a)$.',
-              '$\\lim_{x\\to a} f(x)$ depends on what $f$ does near $a$, not at $a$.',
-              'A limit cannot exist if $f$ is undefined anywhere.',
-              'Limits are only defined for polynomials.'
+              '$\\lim_{x\\to a} f(x)$ depends on $f$ near $a$, not at $a$.',
+              'A limit cannot exist at $a$ if $f(a)$ is undefined.',
+              'A limit exists only when $f$ is continuous at $a$.'
             ],
             correctAnswer: 1,
-            explanation: 'The whole power of the limit concept is that it ignores $f(a)$ itself and only looks at behavior nearby. The limit equals $f(a)$ only when the function is continuous at $a$ — that is a special case, not a definition.'
+            explanation: 'The whole power of the limit concept is that it ignores $f(a)$ itself and only looks at behavior nearby. The limit equals $f(a)$ only when the function is continuous at $a$ — that is a special case, not a definition. A removable discontinuity (a hole, or a hole with a misplaced dot) has a limit even though $f$ is not continuous there.'
           }
         ]
       }

@@ -113,11 +113,11 @@ Both $\\pm \\frac{1}{x} \\to 0$ as $x \\to \\infty$, so $\\lim_{x \\to \\infty} 
             options: [
               '$-1 \\leq \\sqrt{x}\\sin(1/x^2) \\leq 1$',
               '$-\\sqrt{x} \\leq \\sqrt{x}\\sin(1/x^2) \\leq \\sqrt{x}$',
-              '$0 \\leq \\sqrt{x}\\sin(1/x^2) \\leq x$',
+              '$0 \\leq \\sqrt{x}\\sin(1/x^2) \\leq \\sqrt{x}$',
               '$-x^2 \\leq \\sqrt{x}\\sin(1/x^2) \\leq x^2$'
             ],
             correctAnswer: 1,
-            explanation: 'Since $-1 \\leq \\sin(1/x^2) \\leq 1$, multiply by $\\sqrt{x} \\geq 0$: $-\\sqrt{x} \\leq \\sqrt{x}\\sin(1/x^2) \\leq \\sqrt{x}$. Both bounds $\\to 0$, so the limit is 0.'
+            explanation: 'Since $-1 \\leq \\sin(1/x^2) \\leq 1$, multiply by $\\sqrt{x} \\geq 0$: $-\\sqrt{x} \\leq \\sqrt{x}\\sin(1/x^2) \\leq \\sqrt{x}$. Both bounds $\\to 0$, so the limit is 0. The sine can be negative, so 0 is not a valid lower bound, and copying the $x^2$ from inside the sine gives $\\pm x^2$, which fails because $x^2 < \\sqrt{x}$ for small $x$.'
           }
         ]
       }

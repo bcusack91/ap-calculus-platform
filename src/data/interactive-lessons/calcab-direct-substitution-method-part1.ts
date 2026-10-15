@@ -76,15 +76,15 @@ Direct substitution works because of a chain of facts:
         questions: [
           {
             question: 'Direct substitution gives the limit when:',
-            options: ['Always', 'The function is continuous at the target point', 'The function equals zero at the target point', 'The function is a polynomial of degree 1'],
+            options: ['The function is defined at the target point', 'The function is continuous at the target point', 'The function equals zero at the target point', 'The function is increasing at the target point'],
             correctAnswer: 1,
-            explanation: 'Continuity at $a$ is precisely the property that lets us substitute: $\\lim_{x\\to a} f = f(a)$.'
+            explanation: 'Continuity at $a$ is precisely the property that lets us substitute: $\\lim_{x\\to a} f = f(a)$. Being defined at $a$ is not enough (a piecewise function can be defined at $a$ and still jump there), a zero value is not required, and an increasing function can still jump at $a$.'
           },
           {
             question: 'Compute $\\lim_{x \\to 3} (x^2 - 4)$.',
-            options: ['$5$', '$0$', '$9$', '$-5$'],
+            options: ['$5$', '$13$', '$-1$', '$-5$'],
             correctAnswer: 0,
-            explanation: 'Polynomials are continuous everywhere. Substitute: $9 - 4 = 5$.'
+            explanation: 'Polynomials are continuous everywhere. Substitute: $9 - 4 = 5$. Getting $13$ means adding 4 instead of subtracting; $-1$ comes from forgetting to square ($3 - 4$); $-5$ is a sign slip ($4 - 9$).'
           }
         ]
       }

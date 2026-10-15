@@ -107,15 +107,15 @@ So $p(x) = (x - 1)(x^2 - 5x + 6)$. Cancel $(x-1)$, take limit: $1 - 5 + 6 = 2$. 
         questions: [
           {
             question: 'When direct substitution gives $0/0$ on a rational expression, the most common first move is:',
-            options: ['Try L\'Hôpital immediately', 'Factor numerator and denominator and cancel the common $(x-a)$', 'Conclude the limit is 0', 'Conclude the limit DNE'],
+            options: ['Apply L\'Hôpital\'s Rule before simplifying', 'Factor top and bottom, then cancel', 'Conclude the limit is $0$ since the top is $0$', 'Conclude the limit DNE since the bottom is $0$'],
             correctAnswer: 1,
-            explanation: 'On AP, factoring is the standard $0/0$-resolver for polynomial expressions.'
+            explanation: 'On AP, factoring is the standard $0/0$-resolver for polynomial expressions; L\'Hôpital\'s Rule comes later in the course. A $0/0$ result by itself says nothing about whether the limit is $0$ or exists.'
           },
           {
             question: 'You factor and cancel, but the new expression STILL gives $0/0$ at the target. What now?',
-            options: ['Limit is 0', 'Cancel another $(x-a)$ — there is a repeated factor', 'Limit DNE', 'Switch to a graph'],
+            options: ['Conclude the limit is $0$, since the top is $0$', 'Look for a repeated factor and divide it out', 'Conclude the limit DNE, since factoring failed', 'Switch to a graph, since algebra cannot finish'],
             correctAnswer: 1,
-            explanation: 'A repeated $(x-a)$ in both top and bottom requires a second cancellation. Repeat until you get a clean substitution.'
+            explanation: 'A second $0/0$ means $(x-a)$ is a repeated factor in both top and bottom, so cancel again. Repeat until you get a clean substitution.'
           }
         ]
       }

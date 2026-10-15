@@ -76,9 +76,9 @@ By the strict existence theorem, the two-sided limit DNE because the left-hand l
           },
           {
             question: 'For $f(x) = \\sqrt{x - 7}$, what is $\\lim_{x \\to 7^-} f(x)$?',
-            options: ['$0$', '$-i$', 'DNE — function not defined for $x < 7$', '$-\\infty$'],
+            options: ['$0$, the same as the right-hand limit', '$7$, the $x$-value being approached', 'DNE, as $\\sqrt{x-7}$ is not real for $x < 7$', '$-\\infty$, since $x - 7$ becomes negative'],
             correctAnswer: 2,
-            explanation: '$\\sqrt{x - 7}$ requires $x \\ge 7$. The left-hand limit asks about $x < 7$, where the function isn\'t real-valued — left-hand limit DNE.'
+            explanation: '$\\sqrt{x - 7}$ requires $x \\ge 7$. The left-hand limit asks about $x < 7$, where the function isn\'t real-valued — left-hand limit DNE. Copying the right-hand value 0 ignores the domain, 7 is the input being approached rather than an output, and a negative radicand does not send the root to $-\\infty$.'
           },
           {
             question: 'For $f(x) = \\ln x$, what is $\\lim_{x \\to 0^+} f(x)$?',
@@ -98,19 +98,19 @@ By the strict existence theorem, the two-sided limit DNE because the left-hand l
           {
             question: 'Which statement is TRUE about $\\lim_{x \\to 0} \\sqrt{x}$ under the strict existence theorem?',
             options: [
-              'It equals 0 because $f(0) = 0$',
-              'It DNE strictly, because $\\sqrt{x}$ isn\'t defined for $x < 0$ (left-hand limit fails)',
-              'It equals $-1$',
-              'It equals $\\infty$'
+              'It equals 0, because $\\sqrt{0} = 0$',
+              'It DNE, since the left-hand limit does not exist',
+              'It equals 0, since the right-hand limit is 0',
+              'It DNE, due to an asymptote at 0'
             ],
             correctAnswer: 1,
-            explanation: 'Strict existence requires both one-sided limits. The left-hand side doesn\'t exist (domain issue). AP often uses one-sided notation here to avoid the ambiguity.'
+            explanation: 'Strict existence requires both one-sided limits. The left-hand side doesn\'t exist because $\\sqrt{x}$ isn\'t defined for $x < 0$ (domain issue), so the right-hand limit of 0 alone is not enough. There is no asymptote: $\\sqrt{x}$ approaches 0 from the right. AP often uses one-sided notation here to avoid the ambiguity.'
           },
           {
             question: 'Two-sided existence theorem in plain English:',
             options: [
-              '$\\lim_{x\\to a} f$ exists iff $f(a)$ is defined',
-              '$\\lim_{x\\to a} f$ exists iff both one-sided limits exist and are equal',
+              '$\\lim_{x\\to a} f$ exists iff $f(a)$ is defined and finite',
+              '$\\lim_{x\\to a} f$ exists iff the one-sided limits exist and agree',
               '$\\lim_{x\\to a} f$ exists iff $f$ is differentiable at $a$',
               '$\\lim_{x\\to a} f$ exists iff $f$ is bounded near $a$'
             ],

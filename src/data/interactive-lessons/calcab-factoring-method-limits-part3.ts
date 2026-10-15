@@ -86,13 +86,13 @@ After cancellation and substitution:
             question: 'Compute $\\lim_{x \\to -1} \\dfrac{x^2 + 5x + 4}{x^2 - 1}$.',
             options: ['$-3/2$', '$3/2$', '$3$', 'DNE'],
             correctAnswer: 0,
-            explanation: 'Numerator: $(x+1)(x+4)$; denominator: $(x-1)(x+1)$. Cancel $(x+1)$: $\\dfrac{x+4}{x-1} \\to \\dfrac{3}{-2} = -3/2$.'
+            explanation: 'Numerator: $(x+1)(x+4)$; denominator: $(x-1)(x+1)$. Cancel $(x+1)$: $\\dfrac{x+4}{x-1} \\to \\dfrac{3}{-2} = -3/2$. Dropping the negative denominator gives $3/2$, using only the numerator $x + 4 \\to 3$ gives $3$, and stopping at $0/0$ gives DNE.'
           },
           {
             question: 'Compute $\\lim_{x \\to 0} \\dfrac{x^3}{x}$.',
-            options: ['$0$', '$1$', 'DNE', '$\\infty$'],
+            options: ['$0$', '$x^2$', 'Undefined', '$\\infty$'],
             correctAnswer: 0,
-            explanation: '$\\dfrac{x^3}{x} = x^2 \\to 0$.'
+            explanation: '$\\dfrac{x^3}{x} = x^2 \\to 0$. Writing $x^2$ stops after simplifying without substituting, and calling it undefined stops at the $0/0$ form instead of cancelling.'
           }
         ]
       }

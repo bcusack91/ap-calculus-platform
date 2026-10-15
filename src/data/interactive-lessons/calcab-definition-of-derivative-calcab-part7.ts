@@ -68,9 +68,9 @@ $$s(t) \\xrightarrow{d/dt} v(t) = s'(t) \\xrightarrow{d/dt} a(t) = s''(t)$$
           },
           {
             question: 'The tangent line to $y = f(x)$ at $(1, 3)$ has slope $-2$. Approximate $f(1.05)$.',
-            options: ['$2.9$', '$3.1$', '$2.95$', '$3.05$'],
+            options: ['$2.9$', '$-0.1$', '$2.95$', '$3.05$'],
             correctAnswer: 0,
-            explanation: '$f(1.05) \\approx 3 + (-2)(0.05) = 3 - 0.1 = 2.9$.'
+            explanation: '$f(1.05) \\approx 3 + (-2)(0.05) = 3 - 0.1 = 2.9$. $-0.1$ is only the change in $y$ (it forgets to add $f(1) = 3$); $2.95$ and $3.05$ move by only $0.05$, as if the slope were $-1$ or $1$.'
           },
           {
             question: 'If $f(x) = x^2$ and $g(x) = |x|$, which is differentiable at $x = 0$?',
@@ -132,7 +132,7 @@ $$s(t) \\xrightarrow{d/dt} v(t) = s'(t) \\xrightarrow{d/dt} a(t) = s''(t)$$
               '$v(t) > 0$',
               '$a(t) > 0$',
               '$v(t)$ and $a(t)$ have the same sign',
-              '$v(t)$ and $a(t)$ have opposite signs'
+              '$v(t)$ and $a(t)$ differ in sign'
             ],
             correctAnswer: 2,
             explanation: 'A particle speeds up when velocity and acceleration have the same sign (both pushing the same direction).'

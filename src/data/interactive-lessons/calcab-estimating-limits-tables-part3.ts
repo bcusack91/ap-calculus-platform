@@ -83,15 +83,15 @@ No pattern, no settling — and choosing different $x$-values gives wildly diffe
         questions: [
           {
             question: 'Table: $f(-0.01)=-100$, $f(-0.001)=-1000$, $f(0.001)=1000$, $f(0.01)=100$. This shows:',
-            options: ['Limit equals 0', 'Jump from $-100$ to $100$', 'Blow-up: left $\\to -\\infty$, right $\\to +\\infty$', 'Oscillation'],
+            options: ['Limit equals 0, since the values average to 0', 'Jump from $-100$ on the left to $100$ on the right', 'Blow-up in opposite directions', 'Oscillation, since the outputs change sign'],
             correctAnswer: 2,
-            explanation: 'Magnitudes grow without bound as $|x| \\to 0$. Left side is large negative, right side is large positive — classic $1/x$ behavior. Limit DNE.'
+            explanation: 'Magnitudes grow without bound as $|x| \\to 0$: left $\\to -\\infty$, right $\\to +\\infty$ — classic $1/x$ behavior. Limit DNE. The outputs are not settling on $\\pm 100$ (they get larger in size), and one sign change across 0 is not oscillation.'
           },
           {
             question: 'Table: $f(0.1)=0.74$, $f(0.01)=-0.51$, $f(0.001)=0.83$, $f(0.0001)=-0.31$. This shows:',
-            options: ['Limit $\\approx 0$', 'Jump', 'Blow-up', 'Oscillation — values won\'t settle'],
+            options: ['Limit $\\approx 0$, the average value', 'A jump between two values', 'Blow-up, as the outputs keep growing', 'Oscillation, as the values never settle'],
             correctAnswer: 3,
-            explanation: 'Outputs swing between positive and negative values without converging. Classic oscillation, like $\\sin(1/x)$.'
+            explanation: 'Outputs swing between positive and negative values without converging, all from the same side of 0. Classic oscillation, like $\\sin(1/x)$. The outputs stay below 1 in size, so nothing blows up, and averaging the swings does not produce a limit.'
           }
         ]
       }

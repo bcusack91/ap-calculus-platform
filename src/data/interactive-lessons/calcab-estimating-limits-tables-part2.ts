@@ -83,9 +83,9 @@ When outputs *agree to the precision shown*, round to a "clean" number — usual
         questions: [
           {
             question: 'A table for $\\lim_{x \\to 0} f(x)$ shows: $f(-0.01)=2.7193$, $f(-0.001)=2.71828$, $f(0.001)=2.71829$, $f(0.01)=2.7196$. The best estimate is:',
-            options: ['$2.7$', '$e \\approx 2.71828$', '$2.72$', 'DNE'],
+            options: ['$2.7193$', '$e \\approx 2.71828$', '$2.7196$', 'DNE, since the left and right values differ'],
             correctAnswer: 1,
-            explanation: 'The digits are converging on $e \\approx 2.71828$. Recognizing famous constants from numerical evidence is a common AP move.'
+            explanation: 'The digits are converging on $e \\approx 2.71828$: the entries closest to $x = 0$ agree to five digits. The values at $x = \\pm 0.01$ are the farthest from 0, so they are the least accurate estimates, and tiny left/right differences that shrink as $x \\to 0$ do not make the limit fail to exist. Recognizing famous constants from numerical evidence is a common AP move.'
           },
           {
             question: 'A table shows left outputs settling on 4 and right outputs settling on 7. The two-sided limit is:',

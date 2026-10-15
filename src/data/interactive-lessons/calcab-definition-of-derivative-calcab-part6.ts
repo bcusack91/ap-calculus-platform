@@ -99,9 +99,9 @@ $$\\boxed{\\text{If a limit looks like } \\frac{f(a+h)-f(a)}{h} \\text{ or } \\f
         questions: [
           {
             question: 'Evaluate $\\lim_{h \\to 0} \\frac{e^{3+h} - e^3}{h}$.',
-            options: ['$1$', '$e^3$', '$3e^2$', '$3e^3$'],
+            options: ['$e^{3+h}$', '$e^3$', '$3e^2$', '$3e^3$'],
             correctAnswer: 1,
-            explanation: 'This is $f\'(3)$ where $f(x) = e^x$. Since $f\'(x) = e^x$, $f\'(3) = e^3$.'
+            explanation: 'This is $f\'(3)$ where $f(x) = e^x$. Since $f\'(x) = e^x$, $f\'(3) = e^3$. Leaving $h$ in the answer skips the limit, and $3e^2$ applies the power rule to $e^x$ as if it were $x^3$.'
           },
           {
             question: 'Evaluate $\\lim_{h \\to 0} \\frac{\\ln(e + h) - 1}{h}$.',
