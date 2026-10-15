@@ -900,7 +900,7 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
       { title: 'Tracking Tone Shifts: Douglass\'s Letter to His Former Enslaver, 1848', loader: () => import('./englang-tone-voice-analysis-part4').then(m => m.englangToneVoiceAnalysisPart4Data) },
       { title: 'Double Tones and Common Misreadings: Chesterton\'s "On Running After One\'s Hat"', loader: () => import('./englang-tone-voice-analysis-part5').then(m => m.englangToneVoiceAnalysisPart5Data) },
       { title: 'Exam Practice: Dickens on the Eastern Penitentiary, 1842', loader: () => import('./englang-tone-voice-analysis-part6').then(m => m.englangToneVoiceAnalysisPart6Data) },
-      { title: 'AP Review', loader: () => import('./englang-tone-voice-analysis-part7').then(m => m.englangToneVoiceAnalysisPart7Data) }
+      { title: 'Review: A Complete Toolkit for Tone and Voice', loader: () => import('./englang-tone-voice-analysis-part7').then(m => m.englangToneVoiceAnalysisPart7Data) }
     ],
   },
   'englang-ethos-pathos-logos': {
@@ -923,7 +923,7 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
       { title: 'Reasoning Exposed in Real Texts: Lincoln\'s Fragment on Slavery and Plato\'s Euthyphro', loader: () => import('./englang-logical-fallacies-part3').then(m => m.englangLogicalFallaciesPart3Data) },
       { title: 'Connections & Interactions', loader: () => import('./englang-logical-fallacies-part4').then(m => m.englangLogicalFallaciesPart4Data) },
       { title: 'Change Over Time', loader: () => import('./englang-logical-fallacies-part5').then(m => m.englangLogicalFallaciesPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./englang-logical-fallacies-part6').then(m => m.englangLogicalFallaciesPart6Data) },
+      { title: 'Exam Practice: Franklin\'s 1790 Satire, Revising Faulty Sentences, and a Sound Argument Essay', loader: () => import('./englang-logical-fallacies-part6').then(m => m.englangLogicalFallaciesPart6Data) },
       { title: 'AP Review', loader: () => import('./englang-logical-fallacies-part7').then(m => m.englangLogicalFallaciesPart7Data) }
     ],
   },
@@ -934,9 +934,9 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
       { title: 'Reading a Source Set: What to Annotate', loader: () => import('./englang-synthesis-part2').then(m => m.englangSynthesisPart2Data) },
       { title: 'A Worked Source Set: Parks and the Crowded City', loader: () => import('./englang-synthesis-part3').then(m => m.englangSynthesisPart3Data) },
       { title: 'Visual and Quantitative Sources: Reading Data Without Overclaiming', loader: () => import('./englang-synthesis-part4').then(m => m.englangSynthesisPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./englang-synthesis-part5').then(m => m.englangSynthesisPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./englang-synthesis-part6').then(m => m.englangSynthesisPart6Data) },
-      { title: 'AP Review', loader: () => import('./englang-synthesis-part7').then(m => m.englangSynthesisPart7Data) }
+      { title: 'Integrating Sources: Attribution, Signal Verbs, and Common Misuses', loader: () => import('./englang-synthesis-part5').then(m => m.englangSynthesisPart5Data) },
+      { title: 'Exam Practice: Sources in a Q1 Response', loader: () => import('./englang-synthesis-part6').then(m => m.englangSynthesisPart6Data) },
+      { title: 'Synthesis Review: From Source Set to Line of Reasoning', loader: () => import('./englang-synthesis-part7').then(m => m.englangSynthesisPart7Data) }
     ],
   },
   'englang-synthesis-essay': {
