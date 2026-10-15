@@ -5,7 +5,7 @@ import { FRQS } from './frqs'
 export const config: FullLengthExamConfig = {
   subject: 'AP Physics C: E&M',
   description:
-    'Full-length practice exam modeled on the official College Board AP Physics C: Electricity & Magnetism exam (2025+ CED). 40 calculus-based multiple-choice questions across all units, plus 4 free-response questions covering mathematical routines, translation between representations, experimental design, and qualitative/quantitative translation. Calculator allowed throughout.',
+    'Full-length practice exam modeled on the official College Board AP Physics C: Electricity & Magnetism exam (2025+ CED). 42 calculus-based multiple-choice questions across all units, plus 4 free-response questions covering mathematical routines, translation between representations, experimental design, and qualitative/quantitative translation. Calculator allowed throughout.',
   backLink: { href: '/ap-physics-c-em', label: 'AP Physics C: E&M' },
   ctaLinks: [
     { href: '/ap-physics-c-em-diagnostic', label: 'Diagnostic Test' },
@@ -13,15 +13,15 @@ export const config: FullLengthExamConfig = {
     { href: '/ap-physics-c-em-daily-question', label: 'Daily Question' },
   ],
   accent: 'amber',
-  totalTimeMinutes: 180, // 80 + 100
+  totalTimeMinutes: 180, // 85 + 95
   sections: [
     {
       id: 'mcq',
       name: 'Section I',
       shortName: 'Multiple Choice',
       description:
-        '40 calculus-based MCQs covering electrostatics (Coulomb, Gauss\'s law), conductors and capacitors, electric circuits (RC, Kirchhoff), magnetic fields and forces (Biot-Savart, Ampère\'s law), and electromagnetic induction (Faraday, inductors). Calculator allowed.',
-      timeLimitMinutes: 80,
+        '42 calculus-based MCQs covering electrostatics (Coulomb, Gauss\'s law), conductors and capacitors, electric circuits (RC, Kirchhoff), magnetic fields and forces (Biot-Savart, Ampère\'s law), and electromagnetic induction (Faraday, inductors). Calculator allowed.',
+      timeLimitMinutes: 85,
       items: MCQS,
     },
     {
@@ -30,7 +30,7 @@ export const config: FullLengthExamConfig = {
       shortName: 'Free Response',
       description:
         '4 calculus-based FRQs: Q1 Mathematical Routines, Q2 Translation Between Representations, Q3 Experimental Design, Q4 Qualitative/Quantitative Translation. Self-graded rubric checklist.',
-      timeLimitMinutes: 100,
+      timeLimitMinutes: 95,
       items: FRQS,
     },
   ],
@@ -40,8 +40,8 @@ export const config: FullLengthExamConfig = {
       {
         heading: 'Exam Structure (2025+)',
         items: [
-          'Section I: 40 MCQs (80 min, 50%)',
-          'Section II: 4 FRQs (100 min, 50%)',
+          'Section I: 42 MCQs (85 min, 50%)',
+          'Section II: 4 FRQs (95 min, 50%)',
           '   • Q1 Mathematical Routines',
           '   • Q2 Translation Between Representations',
           '   • Q3 Experimental Design & Analysis',

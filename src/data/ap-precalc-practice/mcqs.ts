@@ -1,18 +1,20 @@
 import type { MCQItem } from '@/components/FullLengthPracticeExam'
 
 /**
- * AP Precalculus — 40 MCQs (Section I), matching the 2025–26 exam.
- *   Part A: Q1–Q28, no calculator (80 min).
- *   Part B: Q29–Q40, graphing calculator required (40 min).
+ * AP Precalculus — 42 MCQs (Section I), matching the May 2027 exam.
+ *   Part A: Q1–Q29, no calculator (65 min).
+ *   Part B: Q30–Q42, graphing calculator required (40 min); every Part B item needs one
+ *   (regression, graphing to solve, or decimal evaluation of exp/log/trig values).
+ * Out of scope since the 2026–27 CED: whether an interval of increase/decrease is open or closed.
  *
  * Only Units 1–3 are assessed on the AP exam (Unit 4 is not), so every item comes from them:
  *   Unit 1 Polynomial & Rational Functions (14) — Part A 10, Part B 4
- *   Unit 2 Exponential & Logarithmic Functions (13) — Part A 9, Part B 4
- *   Unit 3 Trigonometric & Polar Functions (13) — Part A 9, Part B 4
+ *   Unit 2 Exponential & Logarithmic Functions (14) — Part A 9, Part B 5
+ *   Unit 3 Trigonometric & Polar Functions (14) — Part A 10, Part B 4
  */
 
 export const MCQS: MCQItem[] = [
-  /* ---- PART A (Q1–Q28): no calculator — Unit 1 Polynomial & Rational Functions (10) ---- */
+  /* ---- PART A (Q1–Q29): no calculator — Unit 1 Polynomial & Rational Functions (10) ---- */
   {
     type: 'mcq',
     topic: 'polynomial-rational-functions',
@@ -261,7 +263,7 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 0,
     explanation: 'Three steps multiply by $r^3 = 96/12 = 8$, so $r = 2$ and $g_8 = 96 \\cdot 8 = 768$. The value 180 assumes an arithmetic sequence with a common difference of 28.',
   },
-  /* ---- Part A — Unit 3 Trigonometric & Polar Functions (9) ---- */
+  /* ---- Part A — Unit 3 Trigonometric & Polar Functions (10) ---- */
   {
     type: 'mcq',
     topic: 'trigonometric-functions',
@@ -379,7 +381,21 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 0,
     explanation: 'Multiplying by $r$ gives $x^2 + y^2 = 2x$, or $(x - 1)^2 + y^2 = 1$: a circle of radius 1 centered at (1, 0). The equation $r = 2$ would be the circle of radius 2 centered at the origin.',
   },
-  /* ---- PART B (Q29–Q40): graphing calculator required — Unit 1 (4) ---- */
+  {
+    type: 'mcq',
+    topic: 'trigonometric-functions',
+    question: 'Consider the polar function $r = 1 + 2\\cos\\theta$ on the interval $\\dfrac{2\\pi}{3} < \\theta < \\pi$. Which statement describes the distance between the point $(r, \\theta)$ and the origin on this interval?',
+    options: [
+      'The distance increases, because $r$ is negative and decreasing.',
+      'The distance decreases, because $r$ is negative and decreasing.',
+      'The distance increases, because $r$ is positive and increasing.',
+      'The distance decreases, because $r$ is positive and decreasing.',
+    ],
+    correctAnswer: 0,
+    explanation: 'For $2\\pi/3 < \\theta < \\pi$, $\\cos\\theta < -1/2$, so $r < 0$, and $\\cos\\theta$ decreases there, so $r$ falls from 0 to $-1$. When $r$ is negative and decreasing, $|r|$ grows, so the point moves away from the origin; reading "decreasing" as moving closer ignores that the radius is signed.',
+  },
+
+  /* ---- PART B (Q30–Q42): graphing calculator required — Unit 1 (4) ---- */
   {
     type: 'mcq',
     topic: 'polynomial-rational-functions',
@@ -432,7 +448,7 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 0,
     explanation: 'Graphing $y = D(t)$ and $y = 10$ shows intersections at $t \\approx 2.433$ and $t \\approx 6.863$; the first is 2.433 hours. The later intersection, 6.863 hours, is when the depth falls back to 10 feet.',
   },
-  /* ---- Part B — Unit 2 (4) ---- */
+  /* ---- Part B — Unit 2 (5) ---- */
   {
     type: 'mcq',
     topic: 'exponential-logarithmic',
@@ -485,6 +501,21 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 0,
     explanation: '$b^3 = 20/6$, so $b \\approx 1.4938$, and $f(6) = f(4)b^2 \\approx 20(2.2314) \\approx 44.63$. The value 29.33 extends the linear pattern through the two points instead of the exponential one.',
   },
+  {
+    type: 'mcq',
+    topic: 'exponential-logarithmic',
+    stimulus: 'A biologist records the area $A$, in square centimeters, covered by a mold culture $t$ days after it is started.\n\n| $t$ (days) | 0 | 2 | 4 | 6 | 8 |\n|---|---|---|---|---|---|\n| $A$ (cm²) | 14.2 | 18.9 | 27.5 | 39.1 | 52.0 |',
+    question: 'An exponential regression $A(t) = ab^t$ is fit to the data. According to this regression model, at what time $t$ will the area first reach 100 square centimeters?',
+    options: [
+      '11.8 days',
+      '12.0 days',
+      '18.5 days',
+      '27.7 days',
+    ],
+    correctAnswer: 0,
+    explanation: 'The calculator\'s exponential regression gives $A(t) \\approx 14.016(1.1807)^t$, and solving $14.016(1.1807)^t = 100$ gives $t \\approx 11.8$ days. A model built from only the first and last data points gives about 12.0 days, and a linear regression gives about 18.5 days, which misses the growing rate of change.',
+  },
+
   /* ---- Part B — Unit 3 (4) ---- */
   {
     type: 'mcq',

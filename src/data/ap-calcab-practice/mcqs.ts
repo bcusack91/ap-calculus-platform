@@ -1,23 +1,23 @@
 import type { MCQItem } from '@/components/FullLengthPracticeExam'
 
 /**
- * AP Calculus AB — 45 MCQs across 8 units, matching the real exam's Section I.
+ * AP Calculus AB — 42 MCQs across 8 units, matching the May 2027 exam's Section I.
  * Distribution mirrors the CED unit weighting:
  *   U1 Limits & Continuity                         (5)
  *   U2 Differentiation: Definition & Properties    (5)
- *   U3 Differentiation: Composite/Implicit/Inverse (5)
+ *   U3 Differentiation: Composite/Implicit/Inverse (4)
  *   U4 Contextual Apps of Differentiation          (5)
  *   U5 Analytical Apps of Differentiation          (7)
- *   U6 Integration & Accumulation                  (9)
- *   U7 Differential Equations                      (4)
+ *   U6 Integration & Accumulation                  (8)
+ *   U7 Differential Equations                      (3)
  *   U8 Applications of Integration                 (5)
  *
- * Section I Part A (Q1–Q30): 30 questions, NO calculator, 60 minutes.
- * Section I Part B (Q31–Q45): 15 questions, graphing calculator allowed (some REQUIRE one), 45 minutes.
+ * Section I Part A (Q1–Q29): 29 questions, NO calculator, 62 minutes.
+ * Section I Part B (Q30–Q42): 13 questions, graphing calculator allowed (some REQUIRE one), 38 minutes.
  */
 
 export const MCQS: MCQItem[] = [
-  /* ============== PART A — NO CALCULATOR (Q1–Q30, 30 questions) ============== */
+  /* ============== PART A — NO CALCULATOR (Q1–Q29, 29 questions) ============== */
 
   /* ---- U1: Limits & Continuity (4) ---- */
   {
@@ -196,7 +196,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'With corners at $(\\pm x, 9-x^2)$, the area is $A=2x(9-x^2)=18x-2x^3$, and $A\'=18-6x^2=0$ gives $x=\\sqrt 3$, so $A=2\\sqrt3\\cdot 6=12\\sqrt3$. Using $x$ instead of $2x$ for the width gives $6\\sqrt3$, half the true area.',
   },
 
-  /* ---- U6: Integration & Accumulation (6) ---- */
+  /* ---- U6: Integration & Accumulation (5) ---- */
   {
     type: 'mcq',
     topic: 'unit-6-integration-accumulation',
@@ -220,14 +220,6 @@ export const MCQS: MCQItem[] = [
     options: ['$5$', '$10$', '$6$', '$9$'],
     correctAnswer: 1,
     explanation: 'By the Fundamental Theorem of Calculus, $g\'(x)=x^2+1$, so $g\'(3)=10$. The value $5$ evaluates the integrand at the lower limit $2$, which does not affect $g\'$.',
-  },
-  {
-    type: 'mcq',
-    topic: 'unit-6-integration-accumulation',
-    question: 'A right Riemann sum with 4 equal subintervals approximating $\\int_0^4 x^2\\,dx$ uses which sample points?',
-    options: ['$x=0,1,2,3$', '$x=1,2,3,4$', '$x=0.5,1.5,2.5,3.5$', '$x=0,1,2,3,4$'],
-    correctAnswer: 1,
-    explanation: 'The subintervals are $[0,1],[1,2],[2,3],[3,4]$, and a right sum uses each right endpoint: $1,2,3,4$. The points $0,1,2,3$ are the left endpoints, used by a left Riemann sum.',
   },
   {
     type: 'mcq',
@@ -295,7 +287,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The diameter is $x$, so the radius is $\\frac{x}{2}$ and each cross section has area $\\frac{1}{2}\\pi\\left(\\frac{x}{2}\\right)^2=\\frac{\\pi x^2}{8}$; then $V=\\int_0^2\\frac{\\pi x^2}{8}\\,dx=\\frac{\\pi}{3}$. Using a full circle of radius $\\frac{x}{2}$ doubles this to $\\frac{2\\pi}{3}$.',
   },
 
-  /* ============== PART B — CALCULATOR ALLOWED (Q31–Q45, 15 questions) ============== */
+  /* ============== PART B — CALCULATOR ALLOWED (Q30–Q42, 13 questions) ============== */
 
   /* mixed across units */
   {
@@ -348,14 +340,6 @@ export const MCQS: MCQItem[] = [
   },
   {
     type: 'mcq',
-    topic: 'unit-7-differential-equations',
-    question: 'If $\\dfrac{dy}{dx} = 2xy$ and $y(0) = 3$, then $y(1) = $',
-    options: ['$3e$', '$3e^2$', '$e + 2$', '$e^3$'],
-    correctAnswer: 0,
-    explanation: 'Separating gives $\\ln|y|=x^2+C$, and $y(0)=3$ gives $y=3e^{x^2}$, so $y(1)=3e$. The answer $e+2$ comes from adding the constant after exponentiating ($y=e^{x^2}+C$) instead of multiplying by it.',
-  },
-  {
-    type: 'mcq',
     topic: 'unit-8-applications-integration',
     question: 'The area of the region bounded by $y=\\sin x$ and $y=\\cos x$ on $[0, \\pi/4]$ is',
     options: ['$\\sqrt 2 - 1$', '$1 - \\dfrac{\\sqrt 2}{2}$', '$\\dfrac{\\sqrt 2}{2}$', '$1$'],
@@ -404,14 +388,6 @@ export const MCQS: MCQItem[] = [
     options: ['$31.6$', '$18.4$', '$34.2$', '$50.0$'],
     correctAnswer: 0,
     explanation: 'The amount leaked is $\\int_0^{10}5e^{-0.1t}\\,dt=50(1-e^{-1})\\approx 31.6$ gallons. The value $50.0$ assumes the initial rate of $5$ gal/min holds for all $10$ minutes, ignoring the decay.',
-  },
-  {
-    type: 'mcq',
-    topic: 'unit-3-composite-implicit-inverse',
-    question: 'Let $y = \\arctan(x^2)$. Then $\\dfrac{dy}{dx}=$',
-    options: ['$\\dfrac{1}{1+x^2}$', '$\\dfrac{2x}{1+x^4}$', '$\\dfrac{2x}{1+x^2}$', '$\\dfrac{1}{1+x^4}$'],
-    correctAnswer: 1,
-    explanation: 'Since $\\frac{d}{dx}\\arctan u=\\frac{u\'}{1+u^2}$ with $u=x^2$, the derivative is $\\frac{2x}{1+x^4}$. The answer $\\frac{2x}{1+x^2}$ includes the chain factor but fails to square the inner function $x^2$ in the denominator.',
   },
   {
     type: 'mcq',

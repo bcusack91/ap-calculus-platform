@@ -1,10 +1,10 @@
 import type { MCQItem } from '@/components/FullLengthPracticeExam'
 
 /**
- * AP Physics C: Mechanics — 40 calculus-based MCQs (Section I, 80 min), 2024–25 CED.
+ * AP Physics C: Mechanics — 42 calculus-based MCQs (Section I, 85 min, May 2027 format), current CED.
  * Topic tags (site taxonomy) and counts:
  *   Kinematics (5) · Force & translational dynamics (7) · Work, energy, power (6)
- *   Linear momentum (5) · Torque, rotational dynamics, rotating systems (8)
+ *   Linear momentum (5) · Torque, rotational dynamics, rotating systems (10)
  *   Oscillations (5) · Gravitation and orbits (4, folded into Units 2, 3, and 6 of the CED)
  *
  * Calculator allowed throughout. Use g = 10 m/s² unless an item says otherwise.
@@ -314,7 +314,7 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 0,
     explanation: '$\\vec v = d\\vec r/dt = 2\\hat i + 6t\\,\\hat j$, which is $2\\hat i + 12\\hat j$ m/s at $t = 2$ s, and $\\vec p = m\\vec v$. The answer $(4\\hat i + 12\\hat j)$ uses the position vector instead of the velocity.',
   },
-  /* ---- Torque, Rotational Dynamics, and Rotating Systems (8) ---- */
+  /* ---- Torque, Rotational Dynamics, and Rotating Systems (10) ---- */
   {
     type: 'mcq',
     topic: 'unit-5-torque-rotational',
@@ -419,6 +419,34 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 1,
     explanation: 'From $\\tau = I\\alpha$, the same torque gives a larger $\\alpha$ to the object with smaller rotational inertia: the disk, with $\\tfrac{1}{2}MR^2$, versus the hoop\'s $MR^2$. Equal mass and radius do not mean equal rotational inertia, because the mass is distributed differently.',
   },
+  {
+    type: 'mcq',
+    topic: 'unit-5-torque-rotational',
+    question: 'A uniform rod of mass $M$ and length $L$ is free to rotate about a frictionless horizontal axle through one end. The rod is held horizontal and then released from rest. What is the magnitude of its angular acceleration immediately after release?',
+    options: [
+      '$\\dfrac{3g}{2L}$',
+      '$\\dfrac{2g}{L}$',
+      '$\\dfrac{6g}{L}$',
+      '$\\dfrac{3g}{L}$',
+    ],
+    correctAnswer: 0,
+    explanation: 'Gravity acts at the center of mass, so the torque about the axle is $Mg(L/2)$, and the rotational inertia about an end is $\\tfrac{1}{3}ML^2$; then $\\alpha = \\tau/I = \\dfrac{3g}{2L}$. Using the center-of-mass inertia $\\tfrac{1}{12}ML^2$ gives $6g/L$, but the rod rotates about its end, not its center.',
+  },
+  {
+    type: 'mcq',
+    topic: 'unit-5-torque-rotational',
+    stimulus: 'A uniform rod of mass 0.60 kg and length 1.0 m lies on a frictionless horizontal table and can rotate freely about a fixed vertical axle through its center. A 0.10 kg lump of clay slides across the table at 6.0 m/s, moving perpendicular to the rod, and sticks to one end of the rod.',
+    question: 'What is the angular speed of the rod-clay system just after the collision?',
+    options: [
+      '1.3 rad/s',
+      '1.7 rad/s',
+      '4.0 rad/s',
+      '6.0 rad/s',
+    ],
+    correctAnswer: 2,
+    explanation: 'The axle exerts no torque about the center, so angular momentum is conserved: $mvr = (0.10)(6.0)(0.50) = 0.30$ kg·m²/s, and $I = \\tfrac{1}{12}(0.60)(1.0)^2 + (0.10)(0.50)^2 = 0.075$ kg·m², giving $\\omega = 4.0$ rad/s. Linear momentum is not conserved here because the axle pushes on the rod, so dividing $mv$ by the total mass gives a wrong 1.7 rad/s.',
+  },
+
   /* ---- Oscillations (5) ---- */
   {
     type: 'mcq',
@@ -494,7 +522,7 @@ export const MCQS: MCQItem[] = [
       'The gravitational force on the astronauts is nearly zero at the station\'s orbital altitude.',
       'The outward centrifugal force on the astronauts balances Earth\'s gravitational pull.',
       'The station moves so fast that gravity no longer acts on the objects inside it.',
-      'They and the station are in free fall together, so the floor exerts no normal force on them.',
+      'They and the station are in free fall together, with no normal force on them.',
     ],
     correctAnswer: 3,
     explanation: 'At 400 km the gravitational field is still about $(6400/6800)^2 \\approx 0.89$ of its surface value, so gravity is far from zero. The astronauts float because they and the station are in free fall together with the same centripetal acceleration, so the floor exerts no normal force on them.',

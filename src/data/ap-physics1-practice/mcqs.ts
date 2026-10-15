@@ -1,15 +1,15 @@
 import type { MCQItem } from '@/components/FullLengthPracticeExam'
 
 /**
- * AP Physics 1 — 40 MCQs (Section I, 80 min), spread to the 2024–25 CED unit weights.
+ * AP Physics 1 — 42 MCQs (Section I, 85 min, May 2027 format), spread to the CED unit weights.
  *   U1 Kinematics                                     (5)
  *   U2 Force & Translational Dynamics                 (8)
- *   U3 Work, Energy, Power                            (7)
+ *   U3 Work, Energy, Power                            (8)
  *   U4 Linear Momentum                                (5)
  *   U5 Torque & Rotational Dynamics                   (5)
  *   U6 Energy & Momentum of Rotating Systems          (3)
  *   U7 Oscillations (Simple Harmonic Motion)          (3)
- *   U8 Fluids                                         (4)
+ *   U8 Fluids                                         (5)
  *
  * Calculator allowed throughout. Use g = 10 m/s² unless an item says otherwise.
  */
@@ -186,7 +186,7 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 1,
     explanation: 'The system accelerates at $a = (1)(10)/(3 + 1) = 2.5$ m/s², and the tension is the only horizontal force on the 3 kg block, so $T = 3(2.5) = 7.5$ N. The tension is less than the hanging block\'s 10 N weight because that block accelerates downward.',
   },
-  /* ---- U3 Work, Energy, Power (7) ---- */
+  /* ---- U3 Work, Energy, Power (8) ---- */
   {
     type: 'mcq',
     topic: 'unit-3-work-energy-power',
@@ -278,6 +278,21 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 0,
     explanation: 'The initial potential energy is $mgh = 2(10)(5.0) = 100$ J and the final kinetic energy is $\\tfrac{1}{2}(2)(8.0)^2 = 64$ J, so 36 J was dissipated. The value 64 J is the kinetic energy that remains, not the energy lost.',
   },
+  {
+    type: 'mcq',
+    topic: 'unit-3-work-energy-power',
+    stimulus: 'A 2.0 kg cart starts from rest at $x = 0$ on a level track. The net horizontal force on the cart, in the $+x$ direction, is constant at 6.0 N from $x = 0$ to $x = 2.0$ m and then decreases linearly to zero at $x = 4.0$ m.',
+    question: 'What is the speed of the cart when it reaches $x = 4.0$ m?',
+    options: [
+      '3.0 m/s',
+      '3.5 m/s',
+      '4.2 m/s',
+      '4.9 m/s',
+    ],
+    correctAnswer: 2,
+    explanation: 'The net work is the area under the force-position graph: $(6.0)(2.0) + \\tfrac{1}{2}(2.0)(6.0) = 18$ J. By the work-energy theorem, $\\tfrac{1}{2}(2.0)v^2 = 18$ J, so $v \\approx 4.2$ m/s. Treating the force as 6.0 N over the whole 4.0 m gives 24 J and 4.9 m/s, which overcounts the region where the force is shrinking.',
+  },
+
   /* ---- U4 Linear Momentum (5) ---- */
   {
     type: 'mcq',
@@ -490,7 +505,7 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 1,
     explanation: '$T = 2\\pi\\sqrt{L/g}$, so multiplying $g$ by 4 divides the period by $\\sqrt{4} = 2$. The period depends on the square root of $g$, not on $g$ directly, so it is not one-fourth as long.',
   },
-  /* ---- U8 Fluids (4) ---- */
+  /* ---- U8 Fluids (5) ---- */
   {
     type: 'mcq',
     topic: 'unit-8-fluids',
@@ -542,5 +557,18 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: 'Continuity requires the water to speed up where the pipe narrows, and Bernoulli\'s equation for a horizontal pipe then requires the pressure to drop. Expecting higher pressure in the narrow section, as if the water were being squeezed, is a common misconception.',
+  },
+  {
+    type: 'mcq',
+    topic: 'unit-8-fluids',
+    question: 'A 2.0 kg rock with a volume of $8.0 \\times 10^{-4}\\,\\text{m}^3$ hangs at rest from a string, completely submerged in fresh water of density $1000\\,\\text{kg/m}^3$ and not touching the bottom. What is the tension in the string? (Use $g = 10\\,\\text{m/s}^2$.)',
+    options: [
+      '8 N',
+      '12 N',
+      '20 N',
+      '28 N',
+    ],
+    correctAnswer: 1,
+    explanation: 'The buoyant force is $\\rho_w V g = (1000)(8.0 \\times 10^{-4})(10) = 8.0$ N upward, and equilibrium requires $T + F_B = mg$, so $T = 20 - 8.0 = 12$ N. A tension of 28 N adds the buoyant force to the weight, as if the water pushed the rock down instead of up.',
   },
 ]

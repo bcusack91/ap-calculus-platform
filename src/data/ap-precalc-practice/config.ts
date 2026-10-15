@@ -5,7 +5,7 @@ import { FRQS } from './frqs'
 export const config: FullLengthExamConfig = {
   subject: 'AP Precalculus',
   description:
-    'Full-length practice exam modeled on the official College Board AP Precalculus exam: 40 multiple-choice questions (Section I, 120 min) covering polynomial, rational, exponential, logarithmic, trigonometric, and polar functions and sequences (Units 1–3, the units the AP exam assesses), plus 4 free-response questions (Section II, 60 min) on function concepts, modeling, and symbolic manipulation.',
+    'Full-length practice exam modeled on the May 2027 College Board AP Precalculus exam: 42 multiple-choice questions (Section I, 105 min) covering polynomial, rational, exponential, logarithmic, trigonometric, and polar functions and sequences (Units 1–3, the units the AP exam assesses), plus 4 free-response questions (Section II, 70 min): function concepts, non-periodic modeling, periodic modeling, and symbolic manipulations.',
   backLink: { href: '/ap-precalculus', label: 'AP Precalculus' },
   ctaLinks: [
     { href: '/ap-precalculus-diagnostic', label: 'Diagnostic Test' },
@@ -13,15 +13,15 @@ export const config: FullLengthExamConfig = {
     { href: '/precalc-daily-question', label: 'Daily Question' },
   ],
   accent: 'indigo',
-  totalTimeMinutes: 180,
+  totalTimeMinutes: 175, // 105 + 70
   sections: [
     {
       id: 'mcq',
       name: 'Section I',
       shortName: 'Multiple Choice',
       description:
-        '40 MCQs covering Units 1–3. Part A (Q1–Q28) is no calculator (80 min); Part B (Q29–Q40) requires a graphing calculator (40 min).',
-      timeLimitMinutes: 120,
+        '42 MCQs covering Units 1–3. Part A (Q1–Q29) is no calculator (65 min); Part B (Q30–Q42) requires a graphing calculator (40 min).',
+      timeLimitMinutes: 105,
       items: MCQS,
     },
     {
@@ -29,8 +29,8 @@ export const config: FullLengthExamConfig = {
       name: 'Section II',
       shortName: 'Free Response',
       description:
-        '4 FRQs (6 points each, 24 total): Q1 Function Concepts (calc), Q2 Modeling (calc), Q3 Symbolic Manipulation (no calc), Q4 Trig & Symbolic Manipulation (no calc). Self-graded rubric.',
-      timeLimitMinutes: 60,
+        '4 FRQs (6 points each, 24 total). Part A, graphing calculator required (35 min): Q1 Function Concepts, Q2 Modeling a Non-Periodic Context. Part B, no calculator (35 min): Q3 Modeling a Periodic Context, Q4 Symbolic Manipulations. Self-graded rubric.',
+      timeLimitMinutes: 70,
       items: FRQS,
     },
   ],
@@ -40,15 +40,14 @@ export const config: FullLengthExamConfig = {
       {
         heading: 'Exam Structure',
         items: [
-          'Section I: 40 MCQs (120 min, 62.5%)',
-          '   • Part A: 28 no-calc (80 min)',
-          '   • Part B: 12 graphing calculator required (40 min)',
-          'Section II: 4 FRQs (60 min, 37.5%)',
-          '   • Q1 Function Concepts (calc, 6 pts)',
-          '   • Q2 Modeling (calc, 6 pts)',
-          '   • Q3 Symbolic Manipulation (no calc, 6 pts)',
-          '   • Q4 Trig Symbolic Manipulation (no calc, 6 pts)',
-          'Total: 3 hours',
+          'Section I: 42 MCQs (105 min, 62.5%)',
+          '   • Part A: 29 no-calc (65 min)',
+          '   • Part B: 13 graphing calculator required (40 min)',
+          'Section II: 4 FRQs (70 min, 37.5%)',
+          '   • Part A, graphing calculator (35 min): Q1 Function Concepts, Q2 Modeling a Non-Periodic Context',
+          '   • Part B, no calculator (35 min): Q3 Modeling a Periodic Context, Q4 Symbolic Manipulations',
+          '   • 6 points each',
+          'Total: 2 hours 55 minutes',
         ],
       },
       {

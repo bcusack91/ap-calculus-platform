@@ -1,9 +1,9 @@
 import type { MCQItem } from '@/components/FullLengthPracticeExam'
 
 /**
- * AP Physics C: Electricity and Magnetism — 40 calculus-based MCQs (Section I, 80 min), 2024–25 CED.
+ * AP Physics C: Electricity and Magnetism — 42 calculus-based MCQs (Section I, 85 min, May 2027 format), current CED.
  * Topic tags (site taxonomy) and counts, spread to the CED unit weights:
- *   Electric charges, fields, Gauss's law, and electric potential (Units 8–9) (12)
+ *   Electric charges, fields, Gauss's law, and electric potential (Units 8–9) (14)
  *   Conductors and capacitors (Unit 10)                                      (5)
  *   Electric circuits (Unit 11)                                              (8)
  *   Magnetic fields and electromagnetism (Unit 12)                           (7)
@@ -13,7 +13,7 @@ import type { MCQItem } from '@/components/FullLengthPracticeExam'
  */
 
 export const MCQS: MCQItem[] = [
-  /* ---- Electric charges, fields, Gauss's law, and potential (12) ---- */
+  /* ---- Electric charges, fields, Gauss's law, and potential (14) ---- */
   {
     type: 'mcq',
     topic: 'unit-1-electrostatics',
@@ -170,6 +170,33 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 0,
     explanation: 'By Gauss\'s law the total flux through the closed cube is $q/\\varepsilon_0$, and by symmetry each of the six faces receives an equal share, $q/(6\\varepsilon_0)$. The value $q/\\varepsilon_0$ is the flux through the whole cube.',
   },
+  {
+    type: 'mcq',
+    topic: 'unit-1-electrostatics',
+    question: 'A solid insulating sphere of radius $R$ has a nonuniform volume charge density $\\rho(r) = \\beta r$, where $\\beta$ is a positive constant and $r$ is the distance from the center. What is the magnitude of the electric field at a distance $r < R$ from the center?',
+    options: [
+      '$\\dfrac{\\beta r^2}{4\\varepsilon_0}$',
+      '$\\dfrac{\\beta r^2}{3\\varepsilon_0}$',
+      '$\\dfrac{\\beta r^2}{\\varepsilon_0}$',
+      '$\\dfrac{\\beta R^4}{4\\varepsilon_0 r^2}$',
+    ],
+    correctAnswer: 0,
+    explanation: 'The enclosed charge is $\\int_0^r \\beta r\'\\,(4\\pi r\'^2)\\,dr\' = \\pi\\beta r^4$, and Gauss\'s law gives $E(4\\pi r^2) = \\pi\\beta r^4/\\varepsilon_0$, so $E = \\beta r^2/(4\\varepsilon_0)$. The result $\\beta r^2/(3\\varepsilon_0)$ uses the uniform-sphere formula $\\rho r/(3\\varepsilon_0)$, which does not apply when the density varies with $r$.',
+  },
+  {
+    type: 'mcq',
+    topic: 'unit-1-electrostatics',
+    question: 'In a region of space, the electric field points along the x-axis with $E_x = 2.0x^2$, where $E_x$ is in volts per meter and $x$ is in meters. What is the potential difference $V(3.0\\,\\text{m}) - V(0)$?',
+    options: [
+      '$-18$ V',
+      '$+18$ V',
+      '$-54$ V',
+      '$-12$ V',
+    ],
+    correctAnswer: 0,
+    explanation: 'The potential difference is $\\Delta V = -\\int_0^{3} E_x\\,dx = -\\left[\\tfrac{2}{3}x^3\\right]_0^{3} = -18$ V, negative because the potential falls in the direction of the field. Multiplying the field at $x = 3.0$ m by the full distance gives $-54$ V, which treats the field as if it were uniform.',
+  },
+
   /* ---- Conductors and capacitors (5) ---- */
   {
     type: 'mcq',

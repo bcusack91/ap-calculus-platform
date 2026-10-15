@@ -1,25 +1,25 @@
 import type { MCQItem } from '@/components/FullLengthPracticeExam'
 
 /**
- * AP Calculus BC — 45 MCQs across all 10 units, matching the real exam's Section I.
+ * AP Calculus BC — 42 MCQs across all 10 units, matching the May 2027 exam's Section I.
  * Distribution mirrors the CED unit weighting (BC adds Units 9 & 10 + extra integration techniques in U6):
  *   U1 Limits & Continuity                         (3)
  *   U2 Differentiation: Definition & Properties    (3)
- *   U3 Differentiation: Composite/Implicit/Inverse (3)
- *   U4 Contextual Apps of Differentiation          (4)
+ *   U3 Differentiation: Composite/Implicit/Inverse (2)
+ *   U4 Contextual Apps of Differentiation          (3)
  *   U5 Analytical Apps of Differentiation          (4)
  *   U6 Integration & Accumulation                  (8)  [BC adds parts, partial fractions, improper]
- *   U7 Differential Equations                      (4)  [BC adds logistic + Euler]
+ *   U7 Differential Equations                      (3)  [BC adds Euler's method]
  *   U8 Applications of Integration                 (3)  [BC adds arc length]
  *   U9 Parametric, Polar, Vector-Valued            (5)
  *   U10 Infinite Sequences & Series                (8)
  *
- * Section I Part A (Q1–Q30): 30 questions, NO calculator, 60 minutes.
- * Section I Part B (Q31–Q45): 15 questions, graphing calculator allowed (some REQUIRE one), 45 minutes.
+ * Section I Part A (Q1–Q29): 29 questions, NO calculator, 62 minutes.
+ * Section I Part B (Q30–Q42): 13 questions, graphing calculator allowed (some REQUIRE one), 38 minutes.
  */
 
 export const MCQS: MCQItem[] = [
-  /* ============== PART A — NO CALCULATOR (Q1–Q30, 30 questions) ============== */
+  /* ============== PART A — NO CALCULATOR (Q1–Q29, 29 questions) ============== */
 
   /* ---- U1 (3) ---- */
   {
@@ -78,7 +78,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'Here $f\'(u)=\\ln u+1$, $g(0)=1$, and $g\'(0)=1$, so the chain rule gives $f\'(g(0))\\,g\'(0)=(\\ln 1+1)(1)=1$. The value $2$ comes from evaluating $f\'$ at $e$ instead of at $g(0)=1$.',
   },
 
-  /* ---- U3 (3) ---- */
+  /* ---- U3 (2) ---- */
   {
     type: 'mcq',
     topic: 'unit-3-composite-implicit-inverse',
@@ -99,14 +99,6 @@ export const MCQS: MCQItem[] = [
     options: ['$\\dfrac{2}{\\sqrt{1-4x^2}}$', '$\\dfrac{1}{\\sqrt{1-4x^2}}$', '$\\dfrac{2}{\\sqrt{1-x^2}}$', '$\\dfrac{1}{\\sqrt{1-2x^2}}$'],
     correctAnswer: 0,
     explanation: 'With $u=2x$, $\\frac{d}{dx}\\arcsin u=\\frac{u\'}{\\sqrt{1-u^2}}=\\frac{2}{\\sqrt{1-4x^2}}$. Dropping the chain factor $u\'=2$ leaves $\\frac{1}{\\sqrt{1-4x^2}}$, which is only half the derivative.',
-  },
-  {
-    type: 'mcq',
-    topic: 'unit-3-composite-implicit-inverse',
-    question: 'Suppose $f$ and $g$ are differentiable with $f(2) = 3$, $f\'(2) = 4$, $g(2) = 1$, $g\'(2) = 5$. If $h(x) = f(x)/g(x)$, then $h\'(2) =$',
-    options: ['$-11$', '$11$', '$19$', '$3$'],
-    correctAnswer: 0,
-    explanation: 'The quotient rule gives $h\'(2)=\\frac{f\'(2)g(2)-f(2)g\'(2)}{g(2)^2}=\\frac{4-15}{1}=-11$. Reversing the order of subtraction in the numerator gives $11$, and adding the terms (as in the product rule) gives $19$.',
   },
 
   /* ---- U4 (2) ---- */
@@ -316,7 +308,7 @@ export const MCQS: MCQItem[] = [
     explanation: 'The alternating harmonic series converges by the alternating series test, but its absolute values form the divergent harmonic series, so the convergence is conditional. The series with $n^2$ in the denominator converges absolutely, since $\\sum\\frac{1}{n^2}$ converges.',
   },
 
-  /* ============== PART B — CALCULATOR ALLOWED (Q31–Q45, 15 questions) ============== */
+  /* ============== PART B — CALCULATOR ALLOWED (Q30–Q42, 13 questions) ============== */
 
   {
     type: 'mcq',
@@ -325,14 +317,6 @@ export const MCQS: MCQItem[] = [
     options: ['$-\\dfrac{3}{25\\pi}$', '$\\dfrac{3}{25\\pi}$', '$-\\dfrac{3}{5\\pi}$', '$-\\dfrac{3}{125\\pi}$'],
     correctAnswer: 0,
     explanation: 'From $V=\\frac{4}{3}\\pi r^3$, $\\frac{dV}{dt}=4\\pi r^2\\frac{dr}{dt}$, so $-12=4\\pi(25)\\frac{dr}{dt}$ and $\\frac{dr}{dt}=-\\frac{3}{25\\pi}$. The positive value ignores that a melting snowball has a decreasing volume, so $\\frac{dV}{dt}$ must be negative.',
-  },
-  {
-    type: 'mcq',
-    topic: 'unit-4-contextual-applications-differentiation',
-    question: 'Using the tangent line approximation to $f(x) = \\sqrt{1+x}$ at $x=0$, the estimate of $\\sqrt{1.06}$ is',
-    options: ['$1.03$', '$1.06$', '$1.12$', '$0.97$'],
-    correctAnswer: 0,
-    explanation: 'Since $f(0)=1$ and $f\'(0)=\\frac{1}{2}$, $L(x)=1+\\frac{x}{2}$ and $L(0.06)=1.03$ (the true value is about $1.0296$). The estimate $1.06$ uses a slope of $1$, forgetting the $\\frac{1}{2}$ from the derivative of the square root.',
   },
   {
     type: 'mcq',
@@ -365,14 +349,6 @@ export const MCQS: MCQItem[] = [
     options: ['$2$', '$3$', '$3.25$', '$3.75$'],
     correctAnswer: 3,
     explanation: 'First step: $y(1.5)\\approx 1+0.5(1+1)=2$. Second step: $y(2)\\approx 2+0.5(1.5+2)=3.75$; reusing the starting slope $2$ for the second step gives $3$ instead.',
-  },
-  {
-    type: 'mcq',
-    topic: 'unit-7-differential-equations',
-    question: 'For the logistic model $\\dfrac{dP}{dt} = 0.05P\\left(1 - \\dfrac{P}{200}\\right)$, the population is growing fastest when $P =$',
-    options: ['$50$', '$100$', '$150$', '$200$'],
-    correctAnswer: 1,
-    explanation: 'A logistic population grows fastest at half the carrying capacity, $\\frac{200}{2}=100$, where $\\frac{dP}{dt}$ reaches its maximum. At $P=200$ the population has reached carrying capacity and $\\frac{dP}{dt}=0$.',
   },
   {
     type: 'mcq',

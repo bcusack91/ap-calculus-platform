@@ -5,7 +5,7 @@ import { FRQS } from './frqs'
 export const config: FullLengthExamConfig = {
   subject: 'AP Calculus BC',
   description:
-    'Full-length practice exam modeled on the official College Board AP Calculus BC exam. 45 multiple-choice questions and 6 free-response questions across all 10 units (including parametric/polar/vector and infinite series). Section I Part A is no-calculator; Part B allows graphing calculator. Section II Part A allows calculator; Part B is no-calculator.',
+    'Full-length practice exam modeled on the official College Board AP Calculus BC exam. 42 multiple-choice questions and 6 free-response questions across all 10 units (including parametric/polar/vector and infinite series). Section I Part A is no-calculator; Part B allows graphing calculator. Section II Part A allows calculator; Part B is no-calculator.',
   backLink: { href: '/ap-calculus-bc', label: 'AP Calculus BC' },
   ctaLinks: [
     { href: '/calcbc-diagnostic', label: 'Diagnostic Test' },
@@ -13,15 +13,15 @@ export const config: FullLengthExamConfig = {
     { href: '/ap-calcbc-daily-question', label: 'Daily Question' },
   ],
   accent: 'violet',
-  totalTimeMinutes: 195,
+  totalTimeMinutes: 190, // 100 + 90
   sections: [
     {
       id: 'mcq',
       name: 'Section I',
       shortName: 'Multiple Choice',
       description:
-        '45 multiple-choice questions across all 10 units. Part A (Q1–Q30): NO calculator (60 min). Part B (Q31–Q45): graphing calculator allowed/required (45 min). Equal weight per question.',
-      timeLimitMinutes: 105,
+        '42 multiple-choice questions across all 10 units. Part A (Q1–Q29): NO calculator (62 min). Part B (Q30–Q42): graphing calculator allowed/required (38 min). Equal weight per question.',
+      timeLimitMinutes: 100,
       items: MCQS,
     },
     {
@@ -40,13 +40,13 @@ export const config: FullLengthExamConfig = {
       {
         heading: 'Exam Structure',
         items: [
-          'Section I: 45 MCQs (105 min, 50%)',
-          '   • Part A: 30 questions, no calculator (60 min)',
-          '   • Part B: 15 questions, calculator (45 min)',
+          'Section I: 42 MCQs (100 min, 50%)',
+          '   • Part A: 29 questions, no calculator (62 min)',
+          '   • Part B: 13 questions, graphing calculator (38 min)',
           'Section II: 6 FRQs (90 min, 50%)',
           '   • Part A: 2 questions, calculator (30 min)',
           '   • Part B: 4 questions, no calculator (60 min)',
-          'Total: 3 hours 15 minutes',
+          'Total: 3 hours 10 minutes',
         ],
       },
       {

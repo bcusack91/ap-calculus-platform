@@ -1,10 +1,10 @@
 import type { MCQItem } from '@/components/FullLengthPracticeExam'
 
 /**
- * AP Physics 2 — 40 MCQs (Section I, 80 min), spread to the 2024–25 CED unit weights.
+ * AP Physics 2 — 42 MCQs (Section I, 85 min, May 2027 format), spread to the CED unit weights.
  * Fluids moved to AP Physics 1 in the 2024–25 redesign, so none appear here.
- *   U9  Thermodynamics                                (6)
- *   U10 Electric Force, Field, and Potential          (6)
+ *   U9  Thermodynamics                                (7)
+ *   U10 Electric Force, Field, and Potential          (7)
  *   U11 Electric Circuits                             (6)
  *   U12 Magnetism and Electromagnetism                (6)
  *   U13 Geometric Optics                              (5)
@@ -94,7 +94,7 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 2,
     explanation: 'The path difference is 0.5 m, which is half a wavelength, so the waves arrive out of phase and interfere destructively. A maximum would require a path difference equal to a whole number of wavelengths.',
   },
-  /* ---- Thermodynamics (6) ---- */
+  /* ---- Thermodynamics (7) ---- */
   {
     type: 'mcq',
     topic: 'unit-2-thermodynamics',
@@ -173,7 +173,22 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 0,
     explanation: 'At constant volume, pressure is proportional to absolute temperature, which goes from 300 K to 600 K, so the pressure doubles. Taking the ratio of Celsius temperatures (327/27) gives the incorrect factor of about 12.',
   },
-  /* ---- Electric Force, Field, and Potential (6) ---- */
+  {
+    type: 'mcq',
+    topic: 'unit-2-thermodynamics',
+    stimulus: 'An ideal gas is taken once around a closed cycle that forms a rectangle on a pressure-volume (PV) diagram, traversed clockwise. The corners of the rectangle are at volumes of 0.010 m³ and 0.040 m³ and at pressures of $1.0 \\times 10^5$ Pa and $3.0 \\times 10^5$ Pa.',
+    question: 'For one complete cycle, what are the net work done by the gas on its surroundings and the change in the internal energy of the gas?',
+    options: [
+      'Net work by the gas is $6.0 \\times 10^3$ J, and $\\Delta U = 0$.',
+      'Net work by the gas is $9.0 \\times 10^3$ J, and $\\Delta U = 0$.',
+      'Net work by the gas is $6.0 \\times 10^3$ J, and $\\Delta U = 6.0 \\times 10^3$ J.',
+      'Net work by the gas is zero, and $\\Delta U = 0$.',
+    ],
+    correctAnswer: 0,
+    explanation: 'The net work over a cycle is the enclosed area, $(2.0 \\times 10^5\\,\\text{Pa})(0.030\\,\\text{m}^3) = 6.0 \\times 10^3$ J, and it is done by the gas because the cycle runs clockwise. The gas returns to its starting state, so $\\Delta U = 0$. The value $9.0 \\times 10^3$ J counts only the high-pressure expansion and ignores the work done on the gas during the low-pressure compression.',
+  },
+
+  /* ---- Electric Force, Field, and Potential (7) ---- */
   {
     type: 'mcq',
     topic: 'unit-3-electric-forces-fields-potential',
@@ -252,6 +267,20 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 1,
     explanation: 'For a uniform field, $\\Delta V = Ed = 1000(0.020) = 20$ V. Slipping a decimal place in the separation gives 2.0 V or 200 V, and dividing the field by the separation gives 50,000, which does not even have units of volts.',
   },
+  {
+    type: 'mcq',
+    topic: 'unit-3-electric-forces-fields-potential',
+    question: 'Point charges of $+3.0\\,\\mu\\text{C}$ and $-2.0\\,\\mu\\text{C}$ are fixed 0.60 m apart. Taking the electric potential to be zero infinitely far away, what is the electric potential at the midpoint between the charges? (Use $k = 9.0 \\times 10^9\\,\\text{N·m}^2/\\text{C}^2$.)',
+    options: [
+      '$3.0 \\times 10^4$ V',
+      '$1.0 \\times 10^5$ V',
+      '$1.5 \\times 10^5$ V',
+      '$5.0 \\times 10^5$ V',
+    ],
+    correctAnswer: 0,
+    explanation: 'Potential is a scalar, so the contributions add with their signs: $V = k(3.0 \\times 10^{-6} - 2.0 \\times 10^{-6})/0.30 = 3.0 \\times 10^4$ V. Adding the magnitudes of the charges gives $1.5 \\times 10^5$ V, which ignores that the negative charge lowers the potential.',
+  },
+
   /* ---- Electric Circuits (6) ---- */
   {
     type: 'mcq',
@@ -524,10 +553,10 @@ export const MCQS: MCQItem[] = [
       '$\\Delta A = -4$ and $\\Delta Z = -2$',
       '$\\Delta A = -2$ and $\\Delta Z = -2$',
       '$\\Delta A = 0$ and $\\Delta Z = +1$',
-      '$\\Delta A = -4$ and $\\Delta Z = -4$',
+      '$\\Delta A = 0$ and $\\Delta Z = 0$',
     ],
     correctAnswer: 0,
-    explanation: 'An alpha particle is a helium-4 nucleus with 2 protons and 2 neutrons, so the nucleus loses 4 nucleons and 2 protons. A change of $\\Delta A = 0$, $\\Delta Z = +1$ describes beta-minus decay.',
+    explanation: 'Alpha decay transforms the nucleus into a different nucleus by emitting a helium-4 nucleus (2 protons and 2 neutrons), so $A$ falls by 4 and $Z$ by 2. No change in $A$ or $Z$ describes gamma decay, in which the same nucleus drops to a lower energy level, and $\\Delta A = 0$, $\\Delta Z = +1$ describes beta-minus decay.',
   },
   {
     type: 'mcq',

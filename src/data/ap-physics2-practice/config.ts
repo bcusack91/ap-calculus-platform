@@ -5,7 +5,7 @@ import { FRQS } from './frqs'
 export const config: FullLengthExamConfig = {
   subject: 'AP Physics 2',
   description:
-    'Full-length practice exam modeled on the official College Board AP Physics 2: Algebra-Based exam. 40 multiple-choice questions across all 7 units of the 2024+ course (thermodynamics, electric force/field/potential, circuits, magnetism and induction, geometric optics, waves/sound/physical optics, modern physics), plus 4 free-response questions. Calculator allowed throughout.',
+    'Full-length practice exam modeled on the official College Board AP Physics 2: Algebra-Based exam. 42 multiple-choice questions across all 7 units of the 2024+ course (thermodynamics, electric force/field/potential, circuits, magnetism and induction, geometric optics, waves/sound/physical optics, modern physics), plus 4 free-response questions. Calculator allowed throughout.',
   backLink: { href: '/ap-physics-2', label: 'AP Physics 2' },
   ctaLinks: [
     { href: '/physics2-diagnostic', label: 'Diagnostic Test' },
@@ -13,15 +13,15 @@ export const config: FullLengthExamConfig = {
     { href: '/ap-physics2-daily-question', label: 'Daily Question' },
   ],
   accent: 'cyan',
-  totalTimeMinutes: 180,
+  totalTimeMinutes: 180, // 85 + 95
   sections: [
     {
       id: 'mcq',
       name: 'Section I',
       shortName: 'Multiple Choice',
       description:
-        '40 multiple-choice questions across all 7 units (Thermodynamics; Electric Force, Field, and Potential; Electric Circuits; Magnetism and Electromagnetism; Geometric Optics; Waves, Sound, and Physical Optics; Modern Physics). Calculator allowed.',
-      timeLimitMinutes: 80,
+        '42 multiple-choice questions across all 7 units (Thermodynamics; Electric Force, Field, and Potential; Electric Circuits; Magnetism and Electromagnetism; Geometric Optics; Waves, Sound, and Physical Optics; Modern Physics). Calculator allowed.',
+      timeLimitMinutes: 85,
       items: MCQS,
     },
     {
@@ -30,7 +30,7 @@ export const config: FullLengthExamConfig = {
       shortName: 'Free Response',
       description:
         '4 free-response questions: Q1 Mathematical Routines (circuits), Q2 Translation Between Representations (PV diagram), Q3 Experimental Design (index of refraction), Q4 Qualitative/Quantitative Translation (EM induction).',
-      timeLimitMinutes: 100,
+      timeLimitMinutes: 95,
       items: FRQS,
     },
   ],
@@ -38,10 +38,10 @@ export const config: FullLengthExamConfig = {
     title: 'About the AP Physics 2 Exam',
     columns: [
       {
-        heading: 'Exam Structure (2024+)',
+        heading: 'Exam Structure (May 2027)',
         items: [
-          'Section I: 40 MCQs (80 min, 50%)',
-          'Section II: 4 FRQs (100 min, 50%)',
+          'Section I: 42 MCQs (85 min, 50%)',
+          'Section II: 4 FRQs (95 min, 50%)',
           '   • Q1 Mathematical Routines',
           '   • Q2 Translation Between Representations',
           '   • Q3 Experimental Design & Analysis',

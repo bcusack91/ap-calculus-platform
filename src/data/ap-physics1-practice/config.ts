@@ -5,7 +5,7 @@ import { FRQS } from './frqs'
 export const config: FullLengthExamConfig = {
   subject: 'AP Physics 1',
   description:
-    'Full-length practice exam modeled on the official College Board AP Physics 1: Algebra-Based exam (2024+ CED). 40 multiple-choice questions across all 8 units, plus 4 free-response questions covering mathematical routines, translation between representations, experimental design, and qualitative/quantitative translation. Calculator allowed throughout.',
+    'Full-length practice exam modeled on the official College Board AP Physics 1: Algebra-Based exam (2024+ CED). 42 multiple-choice questions across all 8 units, plus 4 free-response questions covering mathematical routines, translation between representations, experimental design, and qualitative/quantitative translation. Calculator allowed throughout.',
   backLink: { href: '/ap-physics-1', label: 'AP Physics 1' },
   ctaLinks: [
     { href: '/physics1-diagnostic', label: 'Diagnostic Test' },
@@ -13,15 +13,15 @@ export const config: FullLengthExamConfig = {
     { href: '/ap-physics1-daily-question', label: 'Daily Question' },
   ],
   accent: 'blue',
-  totalTimeMinutes: 180, // 80 + 100
+  totalTimeMinutes: 180, // 85 + 95
   sections: [
     {
       id: 'mcq',
       name: 'Section I',
       shortName: 'Multiple Choice',
       description:
-        '40 multiple-choice questions across all 8 units (Kinematics, Forces, Energy, Momentum, Rotation, Rotational Energy, Oscillations, Fluids). Calculator allowed.',
-      timeLimitMinutes: 80,
+        '42 multiple-choice questions across all 8 units (Kinematics, Forces, Energy, Momentum, Rotation, Rotational Energy, Oscillations, Fluids). Calculator allowed.',
+      timeLimitMinutes: 85,
       items: MCQS,
     },
     {
@@ -30,7 +30,7 @@ export const config: FullLengthExamConfig = {
       shortName: 'Free Response',
       description:
         '4 free-response questions: Q1 Mathematical Routines, Q2 Translation Between Representations, Q3 Experimental Design and Analysis, Q4 Qualitative/Quantitative Translation. Self-graded rubric checklist.',
-      timeLimitMinutes: 100,
+      timeLimitMinutes: 95,
       items: FRQS,
     },
   ],
@@ -38,10 +38,10 @@ export const config: FullLengthExamConfig = {
     title: 'About the AP Physics 1 Exam',
     columns: [
       {
-        heading: 'Exam Structure (2024+)',
+        heading: 'Exam Structure (May 2027)',
         items: [
-          'Section I: 40 MCQs (80 min, 50%)',
-          'Section II: 4 FRQs (100 min, 50%)',
+          'Section I: 42 MCQs (85 min, 50%)',
+          'Section II: 4 FRQs (95 min, 50%)',
           '   • Q1 Mathematical Routines',
           '   • Q2 Translation Between Representations',
           '   • Q3 Experimental Design & Analysis',
