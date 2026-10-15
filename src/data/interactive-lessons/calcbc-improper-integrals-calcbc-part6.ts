@@ -76,10 +76,10 @@ $$\\xrightarrow{\\text{No}} \\text{Use Comparison (DCT or LCT)}$$
         dropdowns: [
           {
             label: '$\\int_0^{\\infty} \\frac{1}{e^x + 1}\\,dx$:',
-            options: ['Converges (by DCT with $e^{-x}$)', 'Diverges', 'Converges to $\\pi/2$', 'Cannot determine'],
-            correctAnswers: ['Converges (by DCT with $e^{-x}$)'],
+            options: ['Converges by DCT with $e^{-x}$', 'Diverges by LCT with $1/x$', 'Converges to $1$', 'Cannot determine'],
+            correctAnswers: ['Converges by DCT with $e^{-x}$'],
             hints: ['$e^x + 1 > e^x$, so $\\frac{1}{e^x+1} < \\frac{1}{e^x} = e^{-x}$.'],
-            explanation: '$\\frac{1}{e^x+1} < e^{-x}$ and $\\int_0^{\\infty} e^{-x}\\,dx = 1$ converges. By DCT, the original converges. (Its exact value is $\\ln 2$.)'
+            explanation: '$\\frac{1}{e^x+1} < e^{-x}$ and $\\int_0^{\\infty} e^{-x}\\,dx = 1$ converges. By DCT, the original converges. DCT gives only an upper bound, not the value: the exact value is $\\ln 2$, not $1$. LCT with $1/x$ gives a limit of $0$, which proves nothing about divergence.'
           },
           {
             label: '$\\int_0^{\\infty} \\frac{\\arctan x}{1+x^2}\\,dx$:',

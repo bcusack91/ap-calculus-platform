@@ -78,10 +78,10 @@ $$\\boxed{\\text{Simplify} \\to \\text{Identify} \\to \\text{Execute} \\to \\tex
         dropdowns: [
           {
             label: '$\\int x\\sin(x^2)\\,dx$ — best method:',
-            options: ['$u$-sub with $u = x^2$ (answer: $-\\frac{1}{2}\\cos(x^2) + C$)', 'Integration by parts', 'Trig identity', 'Partial fractions'],
-            correctAnswers: ['$u$-sub with $u = x^2$ (answer: $-\\frac{1}{2}\\cos(x^2) + C$)'],
+            options: ['$u$-sub with $u = x^2$', 'IBP with $u = x$, $dv = \\sin(x^2)\\,dx$', 'Tabular method on $x \\cdot \\sin(x^2)$', '$u$-sub with $u = \\sin(x^2)$'],
+            correctAnswers: ['$u$-sub with $u = x^2$'],
             hints: ['$du = 2x\\,dx$, so $x\\,dx = du/2$.'],
-            explanation: '$\\frac{1}{2}\\int \\sin u\\,du = -\\frac{1}{2}\\cos u + C$.'
+            explanation: 'Let $u = x^2$, $du = 2x\\,dx$: $\\frac{1}{2}\\int \\sin u\\,du = -\\frac{1}{2}\\cos u + C = -\\frac{1}{2}\\cos(x^2) + C$. IBP and tabular both require integrating $\\sin(x^2)$, which has no elementary antiderivative.'
           },
           {
             label: '$\\int \\frac{5}{(x+1)(x-2)}\\,dx$ — best method:',

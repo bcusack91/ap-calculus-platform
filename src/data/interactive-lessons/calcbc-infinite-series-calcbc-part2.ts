@@ -60,15 +60,15 @@ $\\sum 1/\\sqrt{n}$ diverges ($p = 1/2$), so $\\sum \\frac{1}{\\sqrt{n}-1}$ dive
         questions: [
           {
             question: 'To test $\\sum \\frac{n}{n^3 + 1}$ with LCT, the best comparison is:',
-            options: ['$b_n = 1/n^2$ (dominant terms: $n/n^3$)', '$b_n = 1/n$', '$b_n = 1/n^3$', '$b_n = n$'],
+            options: ['$b_n = 1/n^2$', '$b_n = 1/n$', '$b_n = 1/n^3$', '$b_n = n$'],
             correctAnswer: 0,
-            explanation: 'For large $n$: $\\frac{n}{n^3+1} \\approx \\frac{n}{n^3} = 1/n^2$. The limit $a_n/b_n \\to 1$. Since $\\sum 1/n^2$ converges ($p=2>1$), the series converges.'
+            explanation: 'For large $n$, the dominant terms give $\\frac{n}{n^3+1} \\approx \\frac{n}{n^3} = 1/n^2$. The limit $a_n/b_n \\to 1$. Since $\\sum 1/n^2$ converges ($p=2>1$), the series converges.'
           },
           {
             question: 'DCT cannot show convergence by comparing with a divergent series. But LCT:',
-            options: ['Also cannot — LCT only compares series with the same behavior', 'Can show convergence from divergent comparison', 'Is unrelated to DCT', 'Only works for geometric series'],
+            options: ['Also cannot prove convergence that way', 'Can prove convergence from a divergent comparison', 'Can, as long as the limit $L$ is finite and positive', 'Only works when both series are geometric'],
             correctAnswer: 0,
-            explanation: 'LCT with $L \\in (0,\\infty)$ says both series behave the same way. If $b_n$ diverges, $a_n$ diverges too. Neither test can prove convergence from a divergent comparison.'
+            explanation: 'LCT with $L \\in (0,\\infty)$ says both series behave the same way, so if $\\sum b_n$ diverges, $\\sum a_n$ diverges too. Neither test can prove convergence from a divergent comparison.'
           }
         ]
       }
@@ -81,17 +81,17 @@ $\\sum 1/\\sqrt{n}$ diverges ($p = 1/2$), so $\\sum \\frac{1}{\\sqrt{n}-1}$ dive
         dropdowns: [
           {
             label: '$\\sum \\frac{\\sin^2 n}{n^2}$ converges by DCT because:',
-            options: ['$\\sin^2 n \\le 1$, so $a_n \\le 1/n^2$ and $\\sum 1/n^2$ converges', '$\\sin^2 n \\to 0$', 'LCT with $1/n^2$', 'It telescopes'],
+            options: ['$\\sin^2 n \\le 1$, so $a_n \\le 1/n^2$ and $\\sum 1/n^2$ converges', '$\\sin^2 n \\to 0$, so $a_n$ shrinks faster than $1/n^2$', '$\\sin^2 n \\ge 0$, so $a_n \\ge 0$, and $\\sum 1/n^2$ converges', '$a_n \\le \\sin^2 n \\le 1$, so the terms stay bounded'],
             correctAnswers: ['$\\sin^2 n \\le 1$, so $a_n \\le 1/n^2$ and $\\sum 1/n^2$ converges'],
             hints: ['Bound the numerator.'],
-            explanation: '$0 \\le \\frac{\\sin^2 n}{n^2} \\le \\frac{1}{n^2}$. Since $\\sum 1/n^2$ converges, DCT gives convergence.'
+            explanation: '$0 \\le \\frac{\\sin^2 n}{n^2} \\le \\frac{1}{n^2}$. Since $\\sum 1/n^2$ converges, DCT gives convergence. $\\sin^2 n$ does not tend to $0$, and knowing only that $a_n \\ge 0$ or that the terms are bounded gives no comparison with a convergent series.'
           },
           {
             label: 'When choosing $b_n$ for LCT, you should pick:',
-            options: ['A simple series ($p$-series or geometric) with the same growth rate as $a_n$', 'Any convergent series', 'Any divergent series', 'The exact same series'],
-            correctAnswers: ['A simple series ($p$-series or geometric) with the same growth rate as $a_n$'],
+            options: ['A $p$-series or geometric series growing at the same rate as $a_n$', 'Any convergent series, such as $\\sum 1/n^2$ or $\\sum 1/2^n$', 'Any divergent series, such as $\\sum 1/n$', 'A series whose terms are always larger than $a_n$'],
+            correctAnswers: ['A $p$-series or geometric series growing at the same rate as $a_n$'],
             hints: ['The limit $a_n/b_n$ should be a finite nonzero constant.'],
-            explanation: 'Match the dominant behavior: keep highest powers in numerator and denominator to identify the right $b_n$.'
+            explanation: 'Match the dominant behavior: keep highest powers in numerator and denominator to identify the right $b_n$. Terms that are always larger is the Direct Comparison set-up, and an arbitrary convergent or divergent series usually gives a limit of $0$ or $\\infty$, which can be inconclusive.'
           }
         ]
       }

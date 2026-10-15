@@ -75,21 +75,21 @@ $\\lim |a_n| = \\lim n/(n+1) = 1 \\neq 0$.
         questions: [
           {
             question: '$\\sum_{n=1}^{\\infty} \\frac{(-1)^n}{n^{2/3}}$ is:',
-            options: ['Conditionally convergent ($\\sum 1/n^{2/3}$ diverges, but AST gives convergence)', 'Absolutely convergent', 'Divergent', 'Cannot determine'],
+            options: ['Conditionally convergent', 'Absolutely convergent, since $p = 2/3 > 0$', 'Divergent, since $p = 2/3 < 1$', 'Absolutely convergent by the AST'],
             correctAnswer: 0,
-            explanation: '$\\sum 1/n^{2/3}$: $p = 2/3 < 1$, diverges. $\\sum (-1)^n/n^{2/3}$: AST, converges. Conditional.'
+            explanation: '$\\sum 1/n^{2/3}$: $p = 2/3 < 1$, diverges, so the convergence is not absolute. $\\sum (-1)^n/n^{2/3}$ converges by the AST. Conditional. The AST never shows absolute convergence, and the $p$-test applies to $\\sum |a_n|$, not to the alternating series.'
           },
           {
             question: '$\\sum_{n=1}^{\\infty} \\frac{\\cos(n\\pi)}{n^4}$. Since $\\cos(n\\pi) = (-1)^n$:',
-            options: ['Absolutely convergent ($\\sum 1/n^4$ converges)', 'Conditionally convergent', 'Divergent', 'Inconclusive'],
+            options: ['Absolutely convergent', 'Conditionally convergent', 'Divergent, since $\\cos(n\\pi)$ has no limit', 'Inconclusive, since $\\cos(n\\pi)$ oscillates'],
             correctAnswer: 0,
-            explanation: '$\\sum |a_n| = \\sum 1/n^4$, $p = 4 > 1$, converges. Absolutely convergent.'
+            explanation: '$\\sum |a_n| = \\sum 1/n^4$, $p = 4 > 1$, converges. Absolutely convergent. The oscillating sign does not matter once the absolute series converges, and the terms themselves go to $0$.'
           },
           {
             question: 'If $\\sum |a_n|$ converges, what can you conclude about $\\sum a_n$?',
-            options: ['It converges (absolutely)', 'It might converge or diverge', 'It converges conditionally', 'Nothing'],
+            options: ['It converges absolutely', 'It might converge or diverge', 'It converges conditionally', 'Nothing until $\\sum a_n$ is tested'],
             correctAnswer: 0,
-            explanation: 'Absolute convergence implies convergence. Both $\\sum |a_n|$ and $\\sum a_n$ converge.'
+            explanation: 'Absolute convergence implies convergence. Both $\\sum |a_n|$ and $\\sum a_n$ converge, so the convergence is absolute, not conditional.'
           }
         ]
       }
@@ -102,17 +102,17 @@ $\\lim |a_n| = \\lim n/(n+1) = 1 \\neq 0$.
         dropdowns: [
           {
             label: '$\\sum_{n=1}^{\\infty} \\frac{(-1)^n}{n!}$:',
-            options: ['Absolutely convergent ($\\sum 1/n!$ converges by Ratio Test)', 'Conditionally convergent', 'Divergent', 'Inconclusive'],
-            correctAnswers: ['Absolutely convergent ($\\sum 1/n!$ converges by Ratio Test)'],
+            options: ['Absolutely convergent', 'Conditionally convergent', 'Divergent', 'Inconclusive'],
+            correctAnswers: ['Absolutely convergent'],
             hints: ['$\\sum 1/n!$ converges (it equals $e - 1$).'],
-            explanation: '$\\sum 1/n!$ converges. Absolutely convergent.'
+            explanation: '$\\sum |a_n| = \\sum 1/n!$ converges by the Ratio Test ($L = \\lim 1/(n+1) = 0$). Absolutely convergent.'
           },
           {
             label: '$\\sum_{n=2}^{\\infty} \\frac{(-1)^n}{n \\ln n}$:',
-            options: ['Conditionally convergent ($\\sum 1/(n \\ln n)$ diverges by Integral Test; AST gives convergence)', 'Absolutely convergent', 'Divergent', 'Cannot determine'],
-            correctAnswers: ['Conditionally convergent ($\\sum 1/(n \\ln n)$ diverges by Integral Test; AST gives convergence)'],
+            options: ['Conditionally convergent', 'Absolutely convergent', 'Divergent (by the Integral Test)', 'Cannot determine'],
+            correctAnswers: ['Conditionally convergent'],
             hints: ['$\\sum 1/(n \\ln n)$ diverges (log-$p$-series, $p = 1$). But the alternating version converges by AST.'],
-            explanation: '$\\sum |a_n|$ diverges, $\\sum a_n$ converges. Conditionally convergent.'
+            explanation: '$\\sum |a_n| = \\sum 1/(n\\ln n)$ diverges by the Integral Test ($\\int dx/(x\\ln x) = \\ln(\\ln x) \\to \\infty$), but that only rules out absolute convergence. AST: $1/(n\\ln n)$ decreases to $0$, so $\\sum a_n$ converges. Conditionally convergent.'
           }
         ]
       }

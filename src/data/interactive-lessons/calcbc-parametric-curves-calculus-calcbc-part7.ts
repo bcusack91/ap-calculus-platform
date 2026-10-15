@@ -32,9 +32,9 @@ Master all parametric curve concepts: equations, derivatives, arc length, area, 
           },
           {
             question: 'For $x = a\\cos t$, $y = b\\sin t$, horizontal tangents occur when:',
-            options: ['$t = \\pi/2$ or $t = 3\\pi/2$', '$t = 0$ or $t = \\pi$', '$t = \\pi/4$', 'Never'],
+            options: ['$t = \\pi/2$ or $t = 3\\pi/2$', '$t = 0$ or $t = \\pi$', '$t = \\pi/2$ only', '$t = 3\\pi/2$ only'],
             correctAnswer: 0,
-            explanation: '$dy/dt = b\\cos t = 0$ at $t = \\pi/2, 3\\pi/2$. At those values $dx/dt = -a\\sin t \\ne 0$. So horizontal tangents occur there.'
+            explanation: '$dy/dt = b\\cos t = 0$ at $t = \\pi/2$ and $t = 3\\pi/2$ (top and bottom of the ellipse). At those values $dx/dt = -a\\sin t \\ne 0$, so both are horizontal tangents. $t = 0$ and $t = \\pi$ make $dx/dt = 0$, which gives vertical tangents.'
           },
           {
             question: 'The curve $x = 3\\cos t$, $y = 3\\sin t$ for $0 \\le t \\le \\pi$ has arc length:',
@@ -78,22 +78,22 @@ Master all parametric curve concepts: equations, derivatives, arc length, area, 
         dropdowns: [
           {
             label: 'For the cycloid $x = t - \\sin t$, $y = 1 - \\cos t$, cusps occur when:',
-            options: ['$t = 2n\\pi$ (both derivatives zero)', '$t = n\\pi$', '$dy/dt = 0$ only', 'Never'],
-            correctAnswers: ['$t = 2n\\pi$ (both derivatives zero)'],
+            options: ['$t = 2n\\pi$', '$t = n\\pi$', '$t = (2n+1)\\pi$', '$t = \\frac{\\pi}{2} + n\\pi$'],
+            correctAnswers: ['$t = 2n\\pi$'],
             hints: ['$dx/dt = 1 - \\cos t = 0$ when $\\cos t = 1$, i.e., $t = 2n\\pi$.'],
-            explanation: 'At $t = 2n\\pi$: $dx/dt = 0$ and $dy/dt = \\sin(2n\\pi) = 0$. Both zero, creating a cusp.'
+            explanation: 'At $t = 2n\\pi$: $dx/dt = 1 - \\cos(2n\\pi) = 0$ and $dy/dt = \\sin(2n\\pi) = 0$. Both zero, creating a cusp. At odd multiples of $\\pi$ only $dy/dt$ is $0$ (the top of an arch), so $t = n\\pi$ is too broad.'
           },
           {
             label: 'To convert parametric arc length to polar arc length, substitute:',
-            options: ['$x = r\\cos\\theta$, $y = r\\sin\\theta$ where $r = f(\\theta)$', '$x = r$, $y = \\theta$', '$t = r$', 'Cannot convert'],
-            correctAnswers: ['$x = r\\cos\\theta$, $y = r\\sin\\theta$ where $r = f(\\theta)$'],
+            options: ['$x = f(\\theta)\\cos\\theta$, $y = f(\\theta)\\sin\\theta$', '$x = r$, $y = \\theta$, with $r = f(\\theta)$', '$x = \\cos\\theta$, $y = \\sin\\theta$, then scale by $r$', '$x = r\\cos\\theta$, $y = r\\sin\\theta$ with $r$ held constant'],
+            correctAnswers: ['$x = f(\\theta)\\cos\\theta$, $y = f(\\theta)\\sin\\theta$'],
             hints: ['Polar is a special parametric form with parameter $\\theta$.'],
-            explanation: 'Polar curves are parametric with $\\theta$ as parameter. Substituting gives the polar arc length formula $\\int\\sqrt{r^2 + (dr/d\\theta)^2}\\,d\\theta$.'
+            explanation: 'Polar curves are parametric with $\\theta$ as parameter: $x = r\\cos\\theta$, $y = r\\sin\\theta$ where $r = f(\\theta)$ varies with $\\theta$. Substituting gives the polar arc length formula $\\int\\sqrt{r^2 + (dr/d\\theta)^2}\\,d\\theta$; holding $r$ constant would lose the $(dr/d\\theta)^2$ term.'
           },
           {
             label: 'The speed of a particle at time $t$ can be zero only when:',
-            options: ['$dx/dt = 0$ AND $dy/dt = 0$ simultaneously', '$dx/dt = 0$ only', '$dy/dt = 0$ only', 'Speed is always positive'],
-            correctAnswers: ['$dx/dt = 0$ AND $dy/dt = 0$ simultaneously'],
+            options: ['Both $dx/dt$ and $dy/dt$ are $0$', '$dx/dt$ or $dy/dt$ is $0$', 'The acceleration is $\\vec{0}$', 'Never: speed is always positive'],
+            correctAnswers: ['Both $dx/dt$ and $dy/dt$ are $0$'],
             hints: ['Speed $= \\sqrt{(dx/dt)^2 + (dy/dt)^2}$. When is this zero?'],
             explanation: 'Speed $= 0$ requires both components to be zero. If only one is zero, the particle still moves in the other direction.'
           }

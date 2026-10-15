@@ -99,17 +99,17 @@ The particle moves at constant speed $3$ along the circle. This is **uniform cir
         dropdowns: [
           {
             label: '$x = 5\\cos t$, $y = 3\\sin t$ traces:',
-            options: ['An ellipse ($x^2/25 + y^2/9 = 1$)', 'A circle of radius $5$', 'A circle of radius $3$', 'A parabola'],
-            correctAnswers: ['An ellipse ($x^2/25 + y^2/9 = 1$)'],
+            options: ['An ellipse', 'A circle of radius $5$', 'A circle of radius $3$', 'A hyperbola'],
+            correctAnswers: ['An ellipse'],
             hints: ['$\\cos t = x/5$, $\\sin t = y/3$. Use $\\cos^2 + \\sin^2 = 1$.'],
             explanation: '$\\frac{x^2}{25} + \\frac{y^2}{9} = 1$. An ellipse with semi-axes $a=5$ (horizontal) and $b=3$ (vertical).'
           },
           {
             label: '$x = \\sec t$, $y = \\tan t$ ($-\\pi/2 < t < \\pi/2$):',
-            options: ['Right branch of $x^2 - y^2 = 1$', 'Full hyperbola $x^2-y^2=1$', 'Circle', 'Parabola'],
+            options: ['Right branch of $x^2 - y^2 = 1$', 'Full hyperbola $x^2 - y^2 = 1$', 'Unit circle $x^2 + y^2 = 1$', 'Left branch of $x^2 - y^2 = 1$'],
             correctAnswers: ['Right branch of $x^2 - y^2 = 1$'],
             hints: ['$\\sec^2 t - \\tan^2 t = 1$, so $x^2 - y^2 = 1$. Since $\\sec t > 0$ on the given interval, $x > 0$.'],
-            explanation: '$x^2 - y^2 = 1$ with $x = \\sec t > 0$: right branch only.'
+            explanation: '$\\sec^2 t - \\tan^2 t = 1$, so $x^2 - y^2 = 1$ (not $x^2 + y^2$). With $x = \\sec t > 0$ on this interval: right branch only.'
           }
         ]
       }

@@ -111,8 +111,8 @@ $$\\boxed{\\int x e^x\\,dx = e^x(x - 1) + C}$$
             label: 'For $\\int x\\ln x\\,dx$, by LIATE the correct choice for $u$ is:',
             options: ['$u = x$', '$u = \\ln x$', '$u = x\\ln x$'],
             correctAnswers: ['$u = \\ln x$'],
-            hints: ['Logarithmic (L) has higher priority than Algebraic (A) in LIATE.'],
-            explanation: '$\\ln x$ is Logarithmic (L), which beats Algebraic (A) = $x$. So $u = \\ln x$, $dv = x\\,dx$.'
+            hints: ['Logarithmic (the L in LIATE) has higher priority than Algebraic (the A).'],
+            explanation: '$\\ln x$ is Logarithmic (L), which beats the Algebraic factor $x$ (the A in LIATE). So $u = \\ln x$, $dv = x\\,dx$.'
           },
           {
             label: 'For $\\int e^x \\sin x\\,dx$, the LIATE rule suggests $u$ should be:',

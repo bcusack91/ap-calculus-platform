@@ -64,9 +64,9 @@ $$\\boxed{\\text{No single test works for all series — practice builds intuiti
           },
           {
             question: 'Which test is BEST for $\\sum_{n=1}^\\infty \\frac{1}{n^2 + 5n + 6}$?',
-            options: ['Limit Comparison with $1/n^2$', 'Ratio Test', 'Root Test', 'AST'],
+            options: ['Limit Comparison with $1/n^2$', 'Ratio Test on $a_{n+1}/a_n$', 'Root Test on $\\sqrt[n]{a_n}$', 'Limit Comparison with $1/n$'],
             correctAnswer: 0,
-            explanation: '$a_n \\sim 1/n^2$ for large $n$. LCT with $b_n = 1/n^2$: $a_n/b_n \\to 1 > 0$. Since $\\sum 1/n^2$ converges, so does our series.'
+            explanation: '$a_n \\sim 1/n^2$ for large $n$. LCT with $b_n = 1/n^2$: $a_n/b_n \\to 1 > 0$. Since $\\sum 1/n^2$ converges, so does our series. The Ratio and Root Tests both give $L = 1$ here, and comparing with $1/n$ gives $L = 0$ against a divergent series, which proves nothing.'
           },
           {
             question: 'The Divergence Test can only prove:',
@@ -85,14 +85,14 @@ $$\\boxed{\\text{No single test works for all series — practice builds intuiti
         dropdowns: [
           {
             label: 'For $\\sum_{n=1}^\\infty \\left(\\frac{2n+1}{3n+4}\\right)^n$, the best test is:',
-            options: ['Root Test (nth power form)', 'Ratio Test', 'Integral Test', 'Comparison Test'],
+            options: ['Root Test (nth power form)', 'Ratio Test (rational base)', 'Divergence Test (base $\\to 2/3$)', 'Comparison Test'],
             correctAnswers: ['Root Test (nth power form)'],
             hints: ['The entire expression is raised to the $n$-th power.'],
-            explanation: '$\\sqrt[n]{|a_n|} = (2n+1)/(3n+4) \\to 2/3 < 1$. Converges by Root Test.'
+            explanation: '$\\sqrt[n]{|a_n|} = (2n+1)/(3n+4) \\to 2/3 < 1$. Converges by Root Test. The base tends to $2/3$, but the terms (base raised to the $n$) still tend to $0$, so the Divergence Test says nothing.'
           },
           {
             label: 'When the Ratio Test gives $L = 1$, the result is:',
-            options: ['Inconclusive — use another test', 'Convergent', 'Divergent', 'Conditionally convergent'],
+            options: ['Inconclusive — use another test', 'Convergent, like $\\sum 1/n^2$', 'Divergent, like $\\sum 1/n$', 'Conditionally convergent'],
             correctAnswers: ['Inconclusive — use another test'],
             hints: ['$\\sum 1/n$ and $\\sum 1/n^2$ both give $L = 1$ but behave differently.'],
             explanation: '$L = 1$ is inconclusive. Example: Ratio test gives $L = 1$ for both $\\sum 1/n$ (diverges) and $\\sum 1/n^2$ (converges).'

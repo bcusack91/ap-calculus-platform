@@ -73,17 +73,17 @@ export const calcbcSequencesPart7Data = {
         dropdowns: [
           {
             label: 'The divergence of the harmonic series shows that:',
-            options: ['$a_n \\to 0$ is necessary but not sufficient for $\\sum a_n$ to converge', '$p$-series always diverge', 'All decreasing sequences diverge', 'We need $a_n \\to 0$ faster than $1/n$'],
-            correctAnswers: ['$a_n \\to 0$ is necessary but not sufficient for $\\sum a_n$ to converge'],
+            options: ['$a_n \\to 0$ does not guarantee that $\\sum a_n$ converges', 'Every $p$-series diverges, whatever the value of $p$', 'Any series with decreasing positive terms diverges', '$\\sum a_n$ converges once $a_n \\to 0$ faster than $1/n$'],
+            correctAnswers: ['$a_n \\to 0$ does not guarantee that $\\sum a_n$ converges'],
             hints: ['$1/n \\to 0$ but $\\sum 1/n = \\infty$.'],
-            explanation: 'The harmonic series is the key counterexample: terms go to zero, but the sum is infinite. Additional tests are always needed when $a_n \\to 0$.'
+            explanation: 'The harmonic series is the key counterexample: terms go to zero, but the sum is infinite. Additional tests are always needed when $a_n \\to 0$. It does not show that every $p$-series or every decreasing series diverges, and shrinking faster than $1/n$ is not enough either: $\\sum 1/(n\\ln n)$ still diverges.'
           },
           {
             label: '$\\sum_{n=1}^\\infty \\frac{2}{n(n+1)} = $',
-            options: ['$2$ (telescoping)', '$1$', '$\\infty$', '$\\pi^2/3$'],
-            correctAnswers: ['$2$ (telescoping)'],
+            options: ['$2$', '$1$', '$\\infty$', '$\\pi^2/3$'],
+            correctAnswers: ['$2$'],
             hints: ['$\\frac{2}{n(n+1)} = 2\\left(\\frac{1}{n} - \\frac{1}{n+1}\\right)$.'],
-            explanation: '$2\\sum\\left(\\frac{1}{n} - \\frac{1}{n+1}\\right) = 2 \\cdot 1 = 2$.'
+            explanation: '$\\frac{2}{n(n+1)} = \\frac{2}{n} - \\frac{2}{n+1}$, which telescopes: $2\\sum\\left(\\frac{1}{n} - \\frac{1}{n+1}\\right) = 2 \\cdot 1 = 2$. Dropping the factor of $2$ gives $1$; confusing this with $2\\sum 1/n^2$ gives $\\pi^2/3$.'
           }
         ]
       }

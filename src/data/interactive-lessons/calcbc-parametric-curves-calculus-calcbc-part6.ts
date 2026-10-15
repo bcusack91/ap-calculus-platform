@@ -29,9 +29,9 @@ Mixed practice covering all parametric curve concepts: graphing, derivatives, ar
           },
           {
             question: 'For $x = e^t$, $y = e^{-t}$, $\\frac{d^2y}{dx^2}$ is always:',
-            options: ['Positive (concave up)', 'Negative (concave down)', 'Zero', 'Changes sign'],
+            options: ['Positive (concave up)', 'Negative (concave down)', 'Zero, since the curve is a line', 'Changes sign at $t = 0$'],
             correctAnswer: 0,
-            explanation: '$dy/dx = -e^{-2t}$. $\\frac{d}{dt}(-e^{-2t}) = 2e^{-2t}$. $d^2y/dx^2 = \\frac{2e^{-2t}}{e^t} = 2e^{-3t} > 0$ always. The curve $xy = 1$ is concave up for $x > 0$.'
+            explanation: '$dy/dx = -e^{-2t}$. $\\frac{d}{dt}(-e^{-2t}) = 2e^{-2t}$. $d^2y/dx^2 = \\frac{2e^{-2t}}{e^t} = 2e^{-3t} > 0$ always. The curve is $xy = 1$ for $x > 0$, which is concave up and not a line, so the sign never changes.'
           },
           {
             question: 'The total distance traveled by $(x,y) = (2\\cos t, 2\\sin t)$ from $t=0$ to $t=4\\pi$ is:',
@@ -74,17 +74,17 @@ $$\\frac{dy}{dx} = \\frac{6(2)}{3(4)-3} = \\frac{12}{9} = \\frac{4}{3}$$`
         dropdowns: [
           {
             label: 'Displacement of $x = 3t$, $y = 4t$ from $t=0$ to $t=5$ vs. arc length:',
-            options: ['Both equal $25$ (straight line)', 'Arc length $> 25$', 'Displacement $>$ arc length', 'Cannot compare'],
-            correctAnswers: ['Both equal $25$ (straight line)'],
+            options: ['Both equal $25$', 'Arc length $> 25$', 'Displacement $>$ arc length', 'Arc length $125$, displacement $25$'],
+            correctAnswers: ['Both equal $25$'],
             hints: ['The path is a straight line from $(0,0)$ to $(15,20)$.'],
-            explanation: 'Displacement $= \\sqrt{15^2 + 20^2} = 25$. Arc length $= \\int_0^5 5\\,dt = 25$. Equal because the path is a straight line.'
+            explanation: 'Displacement $= \\sqrt{15^2 + 20^2} = 25$. Arc length $= \\int_0^5 \\sqrt{3^2 + 4^2}\\,dt = \\int_0^5 5\\,dt = 25$ (forgetting the square root gives $125$). Equal because the path is a straight line.'
           },
           {
             label: 'For $x = t\\cos t$, $y = t\\sin t$ (spiral), as $t$ increases the speed:',
-            options: ['Increases (farther from origin = faster)', 'Stays constant', 'Decreases', 'Oscillates'],
-            correctAnswers: ['Increases (farther from origin = faster)'],
+            options: ['Increases without bound', 'Stays constant at $1$', 'Decreases', 'Oscillates'],
+            correctAnswers: ['Increases without bound'],
             hints: ['$x\' = \\cos t - t\\sin t$, $y\' = \\sin t + t\\cos t$. Speed$^2 = 1 + t^2$.'],
-            explanation: 'Speed $= \\sqrt{1+t^2}$, which increases with $t$. The spiral covers more distance per unit time as it moves outward.'
+            explanation: 'Speed $= \\sqrt{1+t^2}$, which increases with $t$. The individual components $dx/dt = \\cos t - t\\sin t$ and $dy/dt = \\sin t + t\\cos t$ oscillate, but the speed does not. The spiral covers more distance per unit time as it moves outward (farther from the origin = faster).'
           }
         ]
       }

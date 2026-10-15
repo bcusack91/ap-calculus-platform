@@ -41,15 +41,15 @@ $$L = \\int_1^3 \\left(x^2 + \\frac{1}{4x^2}\\right)dx = \\left[\\frac{x^3}{3} -
         questions: [
           {
             question: 'The key step in Problem 1 was recognizing that $1 + (y\')^2$ is:',
-            options: ['A perfect square', 'Equal to 1', 'A constant', 'Zero'],
+            options: ['A perfect square', 'A difference of two squares', 'A constant multiple of $x^4$', 'Always equal to $1$'],
             correctAnswer: 0,
-            explanation: 'The function was chosen so $1 + (y\')^2 = (x^2 + \\frac{1}{4x^2})^2$. This is the standard "perfect square" arc length trick.'
+            explanation: 'The function was chosen so $1 + (y\')^2 = (x^2 + \\frac{1}{4x^2})^2$. This is the standard "perfect square" arc length trick: the square root cancels the square.'
           },
           {
             question: 'The surface area when rotating $y = \\sqrt{x}$ from $x = 0$ to $x = 4$ about the $x$-axis is:',
-            options: ['$\\frac{\\pi}{6}(17\\sqrt{17} - 1)$', '$4\\pi$', '$8\\pi\\sqrt{2}$', '$\\frac{\\pi}{3}(17\\sqrt{17})$'],
+            options: ['$\\frac{\\pi}{6}(17\\sqrt{17} - 1)$', '$8\\pi$', '$\\frac{32\\pi}{3}$', '$\\frac{\\pi}{6}(17\\sqrt{17})$'],
             correctAnswer: 0,
-            explanation: '$y\' = \\frac{1}{2\\sqrt{x}}$, $1 + (y\')^2 = 1 + \\frac{1}{4x} = \\frac{4x+1}{4x}$. $S = 2\\pi\\int_0^4 \\sqrt{x}\\cdot\\frac{\\sqrt{4x+1}}{2\\sqrt{x}}\\,dx = \\pi\\int_0^4\\sqrt{4x+1}\\,dx = \\frac{\\pi}{6}[(4x+1)^{3/2}]_0^4 = \\frac{\\pi}{6}(17\\sqrt{17}-1)$.'
+            explanation: '$y\' = \\frac{1}{2\\sqrt{x}}$, $1 + (y\')^2 = 1 + \\frac{1}{4x} = \\frac{4x+1}{4x}$. $S = 2\\pi\\int_0^4 \\sqrt{x}\\cdot\\frac{\\sqrt{4x+1}}{2\\sqrt{x}}\\,dx = \\pi\\int_0^4\\sqrt{4x+1}\\,dx = \\frac{\\pi}{6}[(4x+1)^{3/2}]_0^4 = \\frac{\\pi}{6}(17\\sqrt{17}-1)$. Dropping the lower limit gives $\\frac{\\pi}{6}(17\\sqrt{17})$, leaving out the $ds$ factor gives $2\\pi\\int_0^4\\sqrt{x}\\,dx = \\frac{32\\pi}{3}$, and the disk-volume integral $\\pi\\int_0^4 x\\,dx$ gives $8\\pi$.'
           }
         ]
       }
@@ -69,10 +69,10 @@ $$L = \\int_1^3 \\left(x^2 + \\frac{1}{4x^2}\\right)dx = \\left[\\frac{x^3}{3} -
           },
           {
             label: 'Perfect-square arc length problems always involve functions of the form $y = \\frac{x^n}{n} + \\frac{1}{cx^m}$ because:',
-            options: ['$(y\')^2$ produces cross terms that cancel to give a perfect square with $+1$', 'It is a coincidence', 'The integral is always rational', 'These are the only functions with finite arc length'],
-            correctAnswers: ['$(y\')^2$ produces cross terms that cancel to give a perfect square with $+1$'],
-            hints: ['When $y\' = ax^k - bx^{-k}$, $(y\')^2 + 1 = (ax^k + bx^{-k})^2$ if $2ab = 1$.'],
-            explanation: 'If $y\' = f - g$ with $fg = 1/2$, then $(y\')^2 + 1 = f^2 + 2fg + g^2 = (f+g)^2$. The function is engineered so the square root simplifies.'
+            options: ['$1 + (y\')^2$ becomes a perfect square, so the square root cancels', '$y\'$ itself is a perfect square, so the square root cancels', 'These are the only curves whose arc length integral is finite', '$(y\')^2$ is constant, so the integrand is a constant'],
+            correctAnswers: ['$1 + (y\')^2$ becomes a perfect square, so the square root cancels'],
+            hints: ['When $y\' = ax^k - bx^{-k}$, $(y\')^2 + 1 = (ax^k + bx^{-k})^2$ if $4ab = 1$.'],
+            explanation: 'If $y\' = f - g$ with $fg = 1/4$, then $1 + (y\')^2 = f^2 - \\frac{1}{2} + g^2 + 1 = (f+g)^2$, so $\\sqrt{1 + (y\')^2} = f + g$. Example: $y = \\frac{x^3}{6} + \\frac{1}{2x}$ gives $y\' = \\frac{x^2}{2} - \\frac{1}{2x^2}$ with $fg = \\frac{1}{4}$. The function is engineered so the square root simplifies; any curve with continuous $y\'$ on a closed interval has finite arc length.'
           }
         ]
       }

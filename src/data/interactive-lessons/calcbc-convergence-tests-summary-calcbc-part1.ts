@@ -65,21 +65,21 @@ $$\\boxed{\\lim_{n \\to \\infty} a_n \\neq 0 \\quad \\Longrightarrow \\quad \\su
         questions: [
           {
             question: '$\\sum_{n=1}^{\\infty} \\frac{n}{n+1}$. Which test resolves this immediately?',
-            options: ['Divergence Test ($\\lim n/(n+1) = 1 \\neq 0$)', 'Ratio Test', '$p$-Series Test', 'Integral Test'],
+            options: ['Divergence Test', 'Ratio Test', 'Root Test', 'Integral Test'],
             correctAnswer: 0,
-            explanation: '$\\lim n/(n+1) = 1 \\neq 0$. Diverges by the Divergence Test.'
+            explanation: '$\\lim n/(n+1) = 1 \\neq 0$, so the series diverges by the Divergence Test right away. The Ratio and Root Tests both give $L = 1$ here (inconclusive), and the Integral Test is far more work.'
           },
           {
             question: '$\\sum_{n=1}^{\\infty} \\frac{5}{3^n}$. This is a:',
-            options: ['Geometric series with $r = 1/3$, converges', '$p$-Series with $p = 3$', 'Telescoping series', 'Harmonic series'],
+            options: ['Geometric series with $r = 1/3$, converges', '$p$-series with $p = 3$, converges', 'Geometric series with $r = 3$, diverges', 'Geometric series with $r = 5$, diverges'],
             correctAnswer: 0,
-            explanation: '$\\sum 5 \\cdot (1/3)^n$. Geometric: $|r| = 1/3 < 1$. Converges to $5/(1 - 1/3) = 15/2$.'
+            explanation: '$\\sum 5 \\cdot (1/3)^n$ is geometric with $|r| = 1/3 < 1$, so it converges, to $\\frac{5/3}{1 - 1/3} = \\frac{5}{2}$ (first term $\\frac{5}{3}$ since the sum starts at $n = 1$). The variable is in the exponent, so it is not a $p$-series; reading the base $3$ or the coefficient $5$ as the ratio is the usual slip.'
           },
           {
             question: 'The Divergence Test can NEVER prove:',
-            options: ['Convergence ($\\lim a_n = 0$ is necessary but not sufficient)', 'Divergence', 'That $a_n \\to 0$', 'That a series has finitely many terms'],
+            options: ['Convergence', 'Divergence', 'That $a_n \\to 0$', 'Divergence of an alternating series'],
             correctAnswer: 0,
-            explanation: '$\\lim a_n = 0$ does NOT guarantee convergence ($\\sum 1/n$ has $1/n \\to 0$ but diverges).'
+            explanation: '$\\lim a_n = 0$ is necessary but not sufficient for convergence: $\\sum 1/n$ has $1/n \\to 0$ but diverges. The test can prove divergence of any series, alternating or not, whose terms do not approach $0$ (for example $\\sum (-1)^n$).'
           }
         ]
       }
@@ -92,17 +92,17 @@ $$\\boxed{\\lim_{n \\to \\infty} a_n \\neq 0 \\quad \\Longrightarrow \\quad \\su
         dropdowns: [
           {
             label: '$\\sum_{n=1}^{\\infty} \\frac{1}{n^{4/3}}$. Best test:',
-            options: ['$p$-Series ($p = 4/3 > 1$, converges)', 'Ratio Test', 'Divergence Test', 'AST'],
+            options: ['$p$-Series ($p = 4/3 > 1$, converges)', 'Ratio Test ($L = 1$, converges)', 'Divergence Test ($a_n \\to 0$)', 'AST ($b_n \\to 0$, converges)'],
             correctAnswers: ['$p$-Series ($p = 4/3 > 1$, converges)'],
             hints: ['Direct match to $\\sum 1/n^p$ form.'],
-            explanation: '$p$-Series with $p = 4/3 > 1$. Converges.'
+            explanation: '$p$-Series with $p = 4/3 > 1$. Converges. The Ratio Test gives $L = 1$ (inconclusive), $a_n \\to 0$ alone never proves convergence, and the series is not alternating, so the AST does not apply.'
           },
           {
             label: '$\\sum_{n=1}^{\\infty} \\frac{(-1)^n}{\\sqrt{n}}$. Best test:',
-            options: ['AST ($1/\\sqrt{n}$ decreasing to $0$, converges)', '$p$-Series', 'Ratio Test', 'Comparison'],
-            correctAnswers: ['AST ($1/\\sqrt{n}$ decreasing to $0$, converges)'],
+            options: ['AST ($b_n = 1/\\sqrt{n}$ decreases to $0$)', '$p$-Series ($p = 1/2 < 1$, so it diverges)', 'Divergence Test ($a_n \\to 0$, so it converges)', 'Direct Comparison with $\\sum 1/\\sqrt{n}$ (diverges)'],
+            correctAnswers: ['AST ($b_n = 1/\\sqrt{n}$ decreases to $0$)'],
             hints: ['Alternating sign with decreasing positive part.'],
-            explanation: 'AST: $b_n = 1/\\sqrt{n}$ decreases to $0$. Converges (conditionally, since $\\sum 1/\\sqrt{n}$ diverges).'
+            explanation: 'AST: $b_n = 1/\\sqrt{n}$ decreases to $0$. Converges (conditionally, since $\\sum 1/\\sqrt{n}$ diverges). Applying the $p$-test or a comparison test to the alternating series itself is the classic slip: those tests need positive terms, and $a_n \\to 0$ alone never proves convergence.'
           }
         ]
       }

@@ -59,9 +59,9 @@ For example, $x = \\cos(2t)$, $y = \\sin(2t)$ from $0$ to $2\\pi$ traces the uni
           },
           {
             question: 'On the AP exam, which gives the MOST partial credit for an arc length problem?',
-            options: ['Correct integrand and limits, even with algebra errors in evaluation', 'Numerical answer only (no work shown)', 'The formula $L = \\int ds$ without specifics', 'A sketch of the curve'],
+            options: ['Correct integrand and correct limits', 'A numerical answer only, with no supporting work', 'The general formula $L = \\int ds$ with no specifics', 'A labeled sketch of the curve and its endpoints'],
             correctAnswer: 0,
-            explanation: 'AP rubrics typically award 2-3 points for correct setup (integrand + limits) and 1-2 points for evaluation. Setup alone earns significant credit.'
+            explanation: 'AP rubrics typically award 2-3 points for correct setup (integrand + limits) and 1-2 points for evaluation, so a correct setup earns significant credit even with algebra errors in the evaluation.'
           }
         ]
       }
@@ -74,17 +74,17 @@ For example, $x = \\cos(2t)$, $y = \\sin(2t)$ from $0$ to $2\\pi$ traces the uni
         dropdowns: [
           {
             label: '$y = \\cosh x$ has the special property that $\\sqrt{1+(y\')^2} = $',
-            options: ['$\\cosh x$ (simplifies perfectly)', '$\\sinh x$', '$e^x$', '$\\sqrt{2}\\cosh x$'],
-            correctAnswers: ['$\\cosh x$ (simplifies perfectly)'],
+            options: ['$\\cosh x$', '$1 + \\sinh x$', '$\\sqrt{1+\\cosh^2 x}$', '$\\sqrt{2}\\cosh x$'],
+            correctAnswers: ['$\\cosh x$'],
             hints: ['$1 + \\sinh^2 x = ?$ (hyperbolic identity)'],
-            explanation: '$1 + \\sinh^2 x = \\cosh^2 x$, so $\\sqrt{1 + (y\')^2} = \\cosh x$. The catenary is a "natural" arc length curve.'
+            explanation: '$y\' = \\sinh x$ and $1 + \\sinh^2 x = \\cosh^2 x$, so $\\sqrt{1 + (y\')^2} = \\cosh x$: it simplifies perfectly. Taking the root term by term gives $1 + \\sinh x$, and using $y$ in place of $y\'$ gives $\\sqrt{1+\\cosh^2 x}$. The catenary is a natural arc length curve.'
           },
           {
             label: 'If a parametrization traces a curve $n$ times, $\\int_a^b ds$ gives:',
-            options: ['$n$ times the arc length of the curve', 'The arc length of the curve', '$n^2$ times the arc length', 'An incorrect value'],
+            options: ['$n$ times the arc length of the curve', 'The arc length of the curve, counted once', '$n^2$ times the arc length of the curve', 'Zero, since the path ends where it started'],
             correctAnswers: ['$n$ times the arc length of the curve'],
             hints: ['The integral measures total path length, counting repetitions.'],
-            explanation: 'Each traversal contributes one copy of the curve\'s arc length. The integral does not "know" the curve repeats — it just adds up $ds$.'
+            explanation: 'Each traversal contributes one copy of the curve\'s arc length. The integral does not know the curve repeats — it just adds up $ds \\ge 0$. Only displacement cancels when the path returns to its start; arc length never does.'
           }
         ]
       }

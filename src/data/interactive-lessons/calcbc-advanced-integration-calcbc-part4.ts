@@ -72,9 +72,9 @@ $$\\int_a^b R(t)\\,dt = \\text{total quantity accumulated from } t = a \\text{ t
           },
           {
             question: 'Water enters a tank at $R(t) = 5 + 2t$ gal/min. Total water added from $t = 0$ to $t = 4$:',
-            options: ['$36$ gallons ($\\int_0^4 (5+2t)\\,dt = [5t+t^2]_0^4 = 36$)', '$13$ gallons', '$20$ gallons', '$28$ gallons'],
+            options: ['$36$ gallons', '$13$ gallons', '$20$ gallons', '$28$ gallons'],
             correctAnswer: 0,
-            explanation: '$\\int_0^4 (5+2t)\\,dt = [5t + t^2]_0^4 = 20 + 16 = 36$.'
+            explanation: '$\\int_0^4 (5+2t)\\,dt = [5t + t^2]_0^4 = 20 + 16 = 36$. $13$ is the rate $R(4)$, not an amount; $20$ ignores the $2t$ term; $28$ replaces $\\int_0^4 2t\\,dt$ with $2 \\cdot 4$.'
           }
         ]
       }
@@ -87,10 +87,10 @@ $$\\int_a^b R(t)\\,dt = \\text{total quantity accumulated from } t = a \\text{ t
         dropdowns: [
           {
             label: '$H(x) = \\int_2^{x^3} \\ln t\\,dt$. Then $H\'(x) =$',
-            options: ['$3x^2 \\ln(x^3) = 9x^2 \\ln x$', '$\\ln(x^3) = 3\\ln x$', '$3x^2 / x^3 = 3/x$', '$x^3 \\ln x$'],
-            correctAnswers: ['$3x^2 \\ln(x^3) = 9x^2 \\ln x$'],
+            options: ['$9x^2 \\ln x$', '$3\\ln x$', '$3x^2\\ln x$', '$3/x$'],
+            correctAnswers: ['$9x^2 \\ln x$'],
             hints: ['$f(g(x)) \\cdot g\'(x)$ where $f(t) = \\ln t$ and $g(x) = x^3$.'],
-            explanation: '$\\ln(x^3) \\cdot 3x^2 = 3\\ln x \\cdot 3x^2 = 9x^2 \\ln x$.'
+            explanation: '$\\ln(x^3) \\cdot 3x^2 = 3\\ln x \\cdot 3x^2 = 9x^2 \\ln x$. Skipping the chain-rule factor $3x^2$ gives $3\\ln x$; writing $\\ln x$ instead of $\\ln(x^3)$ gives $3x^2\\ln x$.'
           },
           {
             label: '$\\frac{d}{dx}\\int_{2x}^{x^2} e^t\\,dt =$',

@@ -88,10 +88,10 @@ $a_n = \\frac{n!}{n^n} \\to 0$ (factorial grows slower than exponential of $n$)`
         dropdowns: [
           {
             label: 'If $\\lim_{n \\to \\infty} a_n = 5$, then for large $n$, $a_n$ is:',
-            options: ['Close to $5$ (within any desired tolerance)', 'Equal to $5$', 'Greater than $5$', 'Less than $5$'],
-            correctAnswers: ['Close to $5$ (within any desired tolerance)'],
+            options: ['Arbitrarily close to $5$', 'Eventually exactly equal to $5$', 'Always slightly greater than $5$', 'Always slightly less than $5$'],
+            correctAnswers: ['Arbitrarily close to $5$'],
             hints: ['Convergence means the terms GET close, not that they equal the limit.'],
-            explanation: '$\\forall\\varepsilon > 0, \\exists N$ such that $|a_n - 5| < \\varepsilon$ for all $n > N$. The terms approach $5$ but may never equal it.'
+            explanation: '$\\forall\\varepsilon > 0, \\exists N$ such that $|a_n - 5| < \\varepsilon$ for all $n > N$. The terms approach $5$ but may never equal it, and they may approach from above, from below, or from both sides.'
           },
           {
             label: '$\\lim_{n \\to \\infty} \\frac{2^n}{n!}$ equals:',

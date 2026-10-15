@@ -101,17 +101,17 @@ $$\\int \\frac{Bx + C}{x^2 + a^2}\\,dx = B \\int \\frac{x}{x^2+a^2}\\,dx + C\\in
         dropdowns: [
           {
             label: '$\\int \\frac{x}{x^2+9}\\,dx$ is solved by:',
-            options: ['u-substitution ($u = x^2+9$)', 'Arctan formula', 'Partial fractions', 'IBP'],
+            options: ['u-substitution ($u = x^2+9$)', 'Arctan formula ($a = 3$)', 'Factoring as $(x+3)(x-3)$', 'Long division first'],
             correctAnswers: ['u-substitution ($u = x^2+9$)'],
             hints: ['The numerator $x$ is (up to a constant) the derivative of the denominator.'],
-            explanation: '$u = x^2+9$, $du = 2x\\,dx$. Result: $\\frac{1}{2}\\ln(x^2+9) + C$.'
+            explanation: '$u = x^2+9$, $du = 2x\\,dx$. Result: $\\frac{1}{2}\\ln(x^2+9) + C$. The arctan formula needs a constant numerator, $x^2+9$ does not factor over the reals, and long division is not needed because the numerator already has lower degree.'
           },
           {
             label: '$\\int \\frac{1}{x^2+9}\\,dx$ is solved by:',
-            options: ['u-substitution', 'Arctan formula ($\\frac{1}{a}\\arctan\\frac{x}{a}$)', 'Partial fractions', 'IBP'],
-            correctAnswers: ['Arctan formula ($\\frac{1}{a}\\arctan\\frac{x}{a}$)'],
+            options: ['u-substitution ($u = x^2+9$)', 'Arctan formula ($a = 3$)', 'Partial fractions over $(x+3)(x-3)$', 'Natural log ($\\ln|x^2+9|$)'],
+            correctAnswers: ['Arctan formula ($a = 3$)'],
             hints: ['This matches $\\int \\frac{1}{x^2+a^2}\\,dx$ with $a = 3$.'],
-            explanation: '$\\frac{1}{3}\\arctan\\frac{x}{3} + C$.'
+            explanation: '$\\int \\frac{dx}{x^2+a^2} = \\frac{1}{a}\\arctan\\frac{x}{a} + C$ with $a = 3$: $\\frac{1}{3}\\arctan\\frac{x}{3} + C$. There is no $x$ in the numerator, so $u = x^2+9$ (and the log answer it would give) does not work, and $x^2+9$ does not factor over the reals.'
           }
         ]
       }

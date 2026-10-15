@@ -92,11 +92,11 @@ $$\\boxed{\\frac{x^2}{(x-1)(x+2)^2} = \\frac{1/9}{x-1} + \\frac{8/9}{x+2} - \\fr
             options: [
               '$\\frac{A}{x} + \\frac{B}{x+1} + \\frac{C}{(x+1)^2}$',
               '$\\frac{A}{x} + \\frac{B}{(x+1)^2}$',
-              '$\\frac{A}{x} + \\frac{Bx+C}{(x+1)^2}$'
+              '$\\frac{A}{x} + \\frac{B}{x+1} + \\frac{C}{x+1}$'
             ],
             correctAnswers: ['$\\frac{A}{x} + \\frac{B}{x+1} + \\frac{C}{(x+1)^2}$'],
             hints: ['Repeated linear factor $(x+1)^2$ requires TWO terms: one with $(x+1)$ and one with $(x+1)^2$.'],
-            explanation: 'Each power of the repeated factor gets its own constant: $\\frac{B}{x+1} + \\frac{C}{(x+1)^2}$.'
+            explanation: 'Each power of the repeated factor gets its own constant: $\\frac{B}{x+1} + \\frac{C}{(x+1)^2}$. Two first-power terms over $x+1$ just merge into one term and can never produce the $(x+1)^2$ in the denominator.'
           },
           {
             label: 'For $\\frac{1}{x(x+1)^2}$, plugging $x = 0$ gives $A = $',

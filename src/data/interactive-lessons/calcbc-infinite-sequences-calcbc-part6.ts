@@ -44,9 +44,9 @@ $p$-series with $p = \\pi \\approx 3.14 > 1$. **Converges**.`
         questions: [
           {
             question: '$\\sum_{n=1}^\\infty \\frac{(-1)^n}{n}$ has $a_n \\to 0$. By the $n$th term test alone, we can conclude:',
-            options: ['Nothing — the test is inconclusive when $a_n \\to 0$', 'The series converges', 'The series diverges', 'The series converges absolutely'],
+            options: ['No conclusion about convergence', 'The series converges, since $a_n \\to 0$', 'The series diverges, since it alternates', 'The series converges absolutely, since $|a_n| \\to 0$'],
             correctAnswer: 0,
-            explanation: 'The $n$th term test only detects divergence (when $a_n \\not\\to 0$). When $a_n \\to 0$, the test says nothing. (This series actually converges by the Alternating Series Test.)'
+            explanation: 'The $n$th term test only detects divergence (when $a_n \\not\\to 0$). When $a_n \\to 0$, the test is inconclusive. (This series actually converges by the Alternating Series Test, but only conditionally.)'
           },
           {
             question: '$\\lim_{n \\to \\infty} \\frac{3^n}{n!} = $',

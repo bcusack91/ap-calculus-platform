@@ -29,27 +29,27 @@ For each series, think about which test best applies *before* solving.
         questions: [
           {
             question: '$\\sum_{n=1}^\\infty \\frac{n!}{e^n}$. This series:',
-            options: ['Diverges (Ratio Test $L = \\infty$)', 'Converges (Ratio Test $L < 1$)', 'Converges (comparison with geometric)', 'Cannot be determined'],
+            options: ['Diverges (Ratio Test $L = \\infty$)', 'Converges (Ratio Test gives $L = 1/e < 1$)', 'Converges (comparison with geometric)', 'Cannot be determined by the Ratio Test'],
             correctAnswer: 0,
-            explanation: '$|a_{n+1}/a_n| = (n+1)/e \\to \\infty > 1$. Diverges by Ratio Test.'
+            explanation: '$|a_{n+1}/a_n| = \\frac{(n+1)!}{e^{n+1}} \\cdot \\frac{e^n}{n!} = (n+1)/e \\to \\infty > 1$. Diverges by Ratio Test. Losing the $(n+1)$ factor gives $1/e$, and $n!$ grows faster than $e^n$, so no geometric comparison works.'
           },
           {
             question: '$\\sum_{n=2}^\\infty \\frac{1}{n(\\ln n)^2}$. This series:',
-            options: ['Converges (Integral Test)', 'Diverges (Integral Test)', 'Converges ($p$-series)', 'Diverges (comparison with $1/n$)'],
+            options: ['Converges (Integral Test)', 'Diverges (by the Integral Test)', 'Converges ($p$-series with $p = 2$)', 'Diverges (comparison with $1/n$)'],
             correctAnswer: 0,
-            explanation: '$\\int_2^\\infty \\frac{dx}{x(\\ln x)^2} = [-1/\\ln x]_2^\\infty = 1/\\ln 2 < \\infty$. Converges.'
+            explanation: '$\\int_2^\\infty \\frac{dx}{x(\\ln x)^2} = [-1/\\ln x]_2^\\infty = 1/\\ln 2 < \\infty$. Converges by the Integral Test. It is not a $p$-series (the exponent is on $\\ln n$, not $n$), and its terms are smaller than $\\frac{1}{n}$, so comparing with $\\sum \\frac{1}{n}$ proves nothing.'
           },
           {
             question: '$\\sum_{n=1}^\\infty \\frac{\\sin(1/n)}{n}$. Which approach works?',
-            options: ['LCT with $1/n^2$ (converges)', 'Divergence Test', 'Ratio Test', 'AST'],
+            options: ['LCT with $1/n^2$ (converges)', 'LCT with $1/n$ (series diverges)', 'Ratio Test ($L < 1$, converges)', 'Divergence Test (series diverges)'],
             correctAnswer: 0,
-            explanation: '$\\sin(1/n) \\sim 1/n$ for large $n$, so $a_n \\sim 1/n^2$. LCT with $b_n = 1/n^2$: $\\lim \\frac{\\sin(1/n)/n}{1/n^2} = \\lim \\frac{\\sin(1/n)}{1/n} = 1$. Converges.'
+            explanation: '$\\sin(1/n) \\sim 1/n$ for large $n$, so $a_n \\sim 1/n^2$. LCT with $b_n = 1/n^2$: $\\lim \\frac{\\sin(1/n)/n}{1/n^2} = \\lim \\frac{\\sin(1/n)}{1/n} = 1$. Converges. Comparing with $1/n$ gives $L = 0$ against a divergent series (no conclusion), the Ratio Test gives $L = 1$, and the terms go to $0$, so the Divergence Test says nothing.'
           },
           {
             question: '$\\sum_{n=0}^\\infty \\frac{(-3)^n}{(2n+1)!}$. This series:',
-            options: ['Converges absolutely (Ratio Test)', 'Converges conditionally', 'Diverges', 'Need more information'],
+            options: ['Converges absolutely (Ratio Test)', 'Converges conditionally (by AST)', 'Diverges (since $3^n$ grows)', 'Inconclusive (Ratio Test)'],
             correctAnswer: 0,
-            explanation: '$|a_{n+1}/a_n| = 3/((2n+3)(2n+2)) \\to 0 < 1$. Converges absolutely.'
+            explanation: '$|a_{n+1}/a_n| = 3/((2n+3)(2n+2)) \\to 0 < 1$, so the Ratio Test is conclusive: the series converges absolutely, which is stronger than conditional convergence. The factorial outgrows $3^n$, so the terms shrink to $0$.'
           }
         ]
       }
@@ -62,10 +62,10 @@ For each series, think about which test best applies *before* solving.
         dropdowns: [
           {
             label: '$\\sum_{n=1}^\\infty \\frac{(-1)^n}{n^{2/3}}$:',
-            options: ['Conditionally convergent', 'Absolutely convergent', 'Divergent'],
+            options: ['Conditionally convergent', 'Absolutely convergent', 'Divergent (by the $p$-test)'],
             correctAnswers: ['Conditionally convergent'],
             hints: ['$\\sum 1/n^{2/3}$ diverges ($p = 2/3 < 1$), but the series alternates and $1/n^{2/3} \\to 0$.'],
-            explanation: '$\\sum 1/n^{2/3}$ diverges ($p$-series, $p < 1$). The alternating series $\\sum (-1)^n/n^{2/3}$ converges by AST. Conditional convergence.'
+            explanation: '$\\sum 1/n^{2/3}$ diverges ($p$-series, $p < 1$). The alternating series $\\sum (-1)^n/n^{2/3}$ converges by AST. Conditional convergence. The $p$-test with $p = 2/3$ applies only to $\\sum |a_n|$, not to the alternating series itself.'
           },
           {
             label: '$\\sum_{n=1}^\\infty \\frac{(-1)^n n}{e^n}$:',
@@ -76,10 +76,10 @@ For each series, think about which test best applies *before* solving.
           },
           {
             label: '$\\sum_{n=1}^\\infty \\frac{(-1)^n (2n)!}{4^n (n!)^2}$:',
-            options: ['Divergent ($a_n \\not\\to 0$)', 'Conditionally convergent', 'Absolutely convergent'],
-            correctAnswers: ['Divergent ($a_n \\not\\to 0$)'],
-            hints: ['By Stirling or ratio analysis, $|a_n| \\to 1/\\sqrt{\\pi n} \\cdot$ something. Check $a_n \\to 0$.'],
-            explanation: 'Using Stirling: $(2n)!/(4^n(n!)^2) \\sim 1/\\sqrt{\\pi n} \\to 0$ but the terms do approach $0$. Actually by the Ratio Test, $|a_{n+1}/a_n| = (2n+1)(2n+2)/(4(n+1)^2) = (2n+1)/(2(n+1)) \\to 1$, which is inconclusive. By careful analysis this diverges (the terms don\'t decrease fast enough). The central binomial coefficient divided by $4^n$ approaches $0$ like $1/\\sqrt{\\pi n}$, making the series diverge by LCT with $1/\\sqrt{n}$.'
+            options: ['Conditionally convergent', 'Divergent ($a_n \\not\\to 0$)', 'Absolutely convergent'],
+            correctAnswers: ['Conditionally convergent'],
+            hints: ['$|a_n| \\sim 1/\\sqrt{\\pi n} \\to 0$, but $\\sum 1/\\sqrt{n}$ diverges.'],
+            explanation: 'Let $b_n = \\frac{(2n)!}{4^n (n!)^2} = \\binom{2n}{n}/4^n$. Then $\\frac{b_{n+1}}{b_n} = \\frac{(2n+2)(2n+1)}{4(n+1)^2} = \\frac{2n+1}{2n+2} < 1$, so $b_n$ decreases, and $b_n \\sim 1/\\sqrt{\\pi n} \\to 0$. The AST gives convergence, so the claim that $a_n \\not\\to 0$ is false. But $\\sum b_n$ diverges by LCT with $\\sum 1/\\sqrt{n}$ ($p = 1/2 \\le 1$); the Ratio Test gives $L = 1$ here, which is inconclusive. Conditionally convergent.'
           }
         ]
       }

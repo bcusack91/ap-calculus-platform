@@ -70,12 +70,12 @@ $$\\int x^3\\cos x\\,dx = x^3\\sin x + 3x^2\\cos x - 6x\\sin x - 6\\cos x + C$$
             question: 'Use the tabular method for $\\int x^3 e^{2x}\\,dx$. What is the coefficient of $e^{2x}$ in the final answer?',
             options: [
               '$\\frac{x^3}{2} - \\frac{3x^2}{4} + \\frac{3x}{4} - \\frac{3}{8}$',
-              '$x^3 - 3x^2 + 6x - 6$',
+              '$2x^3 - 12x^2 + 48x - 96$',
               '$\\frac{x^3}{2} - \\frac{3x^2}{2} + 3x - 3$',
-              '$x^3 - x^2 + x - 1$'
+              '$x^3 - 3x^2 + 6x - 6$'
             ],
             correctAnswer: 0,
-            explanation: 'Each integration of $e^{2x}$ divides by 2: $e^{2x}, \\frac{e^{2x}}{2}, \\frac{e^{2x}}{4}, \\frac{e^{2x}}{8}$. Multiplying diagonally with signs: $\\frac{x^3}{2} - \\frac{3x^2}{4} + \\frac{3x}{4} - \\frac{3}{8}$.'
+            explanation: 'Each integration of $e^{2x}$ divides by 2: $\\frac{e^{2x}}{2}, \\frac{e^{2x}}{4}, \\frac{e^{2x}}{8}, \\frac{e^{2x}}{16}$. Multiplying diagonally with alternating signs: $x^3 \\cdot \\frac{1}{2} - 3x^2 \\cdot \\frac{1}{4} + 6x \\cdot \\frac{1}{8} - 6 \\cdot \\frac{1}{16} = \\frac{x^3}{2} - \\frac{3x^2}{4} + \\frac{3x}{4} - \\frac{3}{8}$. Multiplying by 2 (differentiating $e^{2x}$ instead of integrating), dividing by 2 only once, or treating $e^{2x}$ like $e^x$ gives the other expressions.'
           },
           {
             question: 'How many rows does the tabular method need for $\\int x^4 \\sin x\\,dx$?',
@@ -94,15 +94,15 @@ $$\\int x^3\\cos x\\,dx = x^3\\sin x + 3x^2\\cos x - 6x\\sin x - 6\\cos x + C$$
         dropdowns: [
           {
             label: 'For $\\int x^2 \\cos(3x)\\,dx$, the best approach is:',
-            options: ['Standard IBP (twice)', 'Tabular method', 'u-substitution', 'Partial fractions'],
+            options: ['Standard IBP (once)', 'Tabular method', 'u-substitution', 'Partial fractions'],
             correctAnswers: ['Tabular method'],
             hints: ['$x^2$ is a polynomial that differentiates to 0. This is ideal for tabular.'],
-            explanation: 'Polynomial \u00d7 trig is perfect for tabular. You\u2019d need 3 rows: $x^2, 2x, 2, 0$.'
+            explanation: 'Polynomial × trig is perfect for tabular. You’d need 3 rows: $x^2, 2x, 2, 0$. A single round of standard IBP is not enough: it leaves $\\int x\\sin(3x)\\,dx$, which needs a second round.'
           },
           {
             label: 'For $\\int e^x \\cos x\\,dx$, the best approach is:',
-            options: ['Standard IBP (cycling)', 'Tabular method', 'u-substitution', 'Direct integration'],
-            correctAnswers: ['Standard IBP (cycling)'],
+            options: ['Cycling IBP', 'Tabular method', 'u-substitution', 'Direct integration'],
+            correctAnswers: ['Cycling IBP'],
             hints: ['Neither $e^x$ nor $\\cos x$ differentiates to 0, so tabular doesn\u2019t terminate.'],
             explanation: 'Neither factor goes to 0. This is a cycling/boomerang problem (Part 3).'
           }

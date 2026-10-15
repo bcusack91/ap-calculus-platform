@@ -43,24 +43,24 @@ $$\\boxed{\\text{Type I: } p > 1 \\text{ converges} \\qquad \\text{Type II: } p 
           {
             question: 'Which statement about $\\int_{-1}^{1} \\frac{1}{x}\\,dx$ is correct?',
             options: [
-              'It diverges because $\\frac{1}{x}$ has a discontinuity at $x = 0$',
-              'It equals $0$ by symmetry',
-              'It equals $\\ln 1 - \\ln(-1)$',
-              'It converges to $2$'
+              'It diverges, since $\\int_0^1 \\frac{dx}{x}$ diverges',
+              'It equals $0$, because $\\frac{1}{x}$ is an odd function',
+              'It equals $\\ln|1| - \\ln|-1| = 0$ by the Fundamental Theorem',
+              'It converges, because each half is a $p = 1$ Type II integral'
             ],
             correctAnswer: 0,
-            explanation: '$\\frac{1}{x}$ is discontinuous at $x = 0 \\in (-1,1)$. Split: $\\int_{-1}^0 \\frac{1}{x}\\,dx + \\int_0^1 \\frac{1}{x}\\,dx$. Both diverge. You cannot cancel $+\\infty$ and $-\\infty$.'
+            explanation: '$\\frac{1}{x}$ is discontinuous at $x = 0 \\in (-1,1)$, so split: $\\int_{-1}^0 \\frac{1}{x}\\,dx + \\int_0^1 \\frac{1}{x}\\,dx$. Each half is a Type II integral with $p = 1$, and $p = 1$ diverges, so the whole integral diverges. Odd symmetry and the FTC both require the integral to exist first; you cannot cancel $+\\infty$ and $-\\infty$.'
           },
           {
             question: '$\\int_0^{\\infty} \\frac{x^2}{x^4 + 1}\\,dx$ converges because:',
             options: [
-              'LCT with $1/x^2$ gives finite $L$; $p = 2 > 1$',
-              'DCT with $1/x$ gives convergence',
-              'The integrand is bounded by $1$',
+              'LCT with $\\frac{1}{x^2}$ gives $L = 1$, and $p = 2 > 1$',
+              'DCT with $\\frac{1}{x}$, which bounds the integrand',
+              'The integrand is bounded by $\\frac{1}{2}$',
               'The antiderivative is $\\arctan(x^2)$'
             ],
             correctAnswer: 0,
-            explanation: 'For large $x$: $\\frac{x^2}{x^4+1} \\approx \\frac{1}{x^2}$. LCT: $\\lim \\frac{x^2/(x^4+1)}{1/x^2} = \\lim \\frac{x^4}{x^4+1} = 1$. Since $\\int 1/x^2$ converges, so does the original.'
+            explanation: 'For large $x$: $\\frac{x^2}{x^4+1} \\approx \\frac{1}{x^2}$. LCT: $\\lim \\frac{x^2/(x^4+1)}{1/x^2} = \\lim \\frac{x^4}{x^4+1} = 1$. Since $\\int_1^\\infty \\frac{1}{x^2}\\,dx$ converges, so does the original (the piece on $[0,1]$ is a proper integral). Bounding by $\\frac{1}{x}$ proves nothing because $\\int_1^\\infty \\frac{1}{x}\\,dx$ diverges, a bounded integrand can still have infinite area on $[0,\\infty)$, and $\\arctan(x^2)$ is the antiderivative of $\\frac{2x}{1+x^4}$, not of this integrand.'
           }
         ]
       }
@@ -73,24 +73,24 @@ $$\\boxed{\\text{Type I: } p > 1 \\text{ converges} \\qquad \\text{Type II: } p 
         dropdowns: [
           {
             label: '$\\int_0^3 \\frac{dx}{(x-1)^{1/3}}$: Type and result?',
-            options: ['Type II, converges (split at $x=1$, $p=1/3<1$)', 'Type II, diverges', 'Type I, converges', 'Not improper'],
-            correctAnswers: ['Type II, converges (split at $x=1$, $p=1/3<1$)'],
+            options: ['Type II, converges', 'Type II, diverges', 'Type I, converges', 'Not improper'],
+            correctAnswers: ['Type II, converges'],
             hints: ['$(x-1)^{1/3} = 0$ at $x = 1$. This is like $\\int |u|^{-1/3}\\,du$ with $p = 1/3 < 1$.'],
-            explanation: 'Discontinuity at $x = 1$ (interior). Split and evaluate each half. Since the exponent $1/3 < 1$, both halves converge.'
+            explanation: 'Discontinuity at $x = 1$ (interior), so it is Type II. Split at $x = 1$ and evaluate each half. Since the exponent $p = 1/3 < 1$, both halves converge.'
           },
           {
             label: '$\\int_1^{\\infty} \\frac{x+\\sin x}{x^3}\\,dx$: Convergence?',
-            options: ['Converges (dominant term $\\sim 1/x^2$)', 'Diverges', 'Cannot determine', 'Converges to $\\pi$'],
-            correctAnswers: ['Converges (dominant term $\\sim 1/x^2$)'],
+            options: ['Converges (like $1/x^2$)', 'Diverges (like $1/x$)', 'Cannot determine', 'Converges to $1$'],
+            correctAnswers: ['Converges (like $1/x^2$)'],
             hints: ['$\\frac{x + \\sin x}{x^3} = \\frac{1}{x^2} + \\frac{\\sin x}{x^3}$. Both converge.'],
-            explanation: '$\\frac{1}{x^2}$ converges ($p=2>1$). $|\\frac{\\sin x}{x^3}| \\le \\frac{1}{x^3}$ converges by DCT. Sum converges.'
+            explanation: 'Split: $\\frac{x}{x^3} = \\frac{1}{x^2}$ converges ($p=2>1$), and $|\\frac{\\sin x}{x^3}| \\le \\frac{1}{x^3}$ converges by DCT. Sum converges. The value is not exactly $1$, since the $\\frac{\\sin x}{x^3}$ part adds a nonzero amount.'
           },
           {
             label: '$\\int_0^{\\infty} \\frac{1}{\\sqrt{x}\\,e^x}\\,dx$: Convergence?',
-            options: ['Converges (both halves converge)', 'Diverges at $x = 0$', 'Diverges at infinity', 'Cannot determine'],
-            correctAnswers: ['Converges (both halves converge)'],
+            options: ['Converges', 'Diverges at $x = 0$', 'Diverges at infinity', 'Cannot determine'],
+            correctAnswers: ['Converges'],
             hints: ['Split at $1$. Near $0$: like $1/\\sqrt{x}$ ($p=1/2<1$, converges). Near $\\infty$: $e^{-x}$ dominates.'],
-            explanation: '$\\int_0^1$: $\\frac{1}{\\sqrt{x}e^x} \\le \\frac{1}{\\sqrt{x}}$, converges. $\\int_1^{\\infty}$: $\\frac{1}{\\sqrt{x}e^x} \\le e^{-x}$, converges by DCT.'
+            explanation: 'Both halves converge. $\\int_0^1$: $\\frac{1}{\\sqrt{x}e^x} \\le \\frac{1}{\\sqrt{x}}$, converges ($p = 1/2 < 1$). $\\int_1^{\\infty}$: $\\frac{1}{\\sqrt{x}e^x} \\le e^{-x}$, converges by DCT.'
           }
         ]
       }

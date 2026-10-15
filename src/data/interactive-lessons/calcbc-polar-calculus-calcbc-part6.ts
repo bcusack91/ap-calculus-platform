@@ -18,15 +18,15 @@ Mixed practice covering polar coordinates, graphing, area, slopes, and arc lengt
         questions: [
           {
             question: 'The area between $r = 2$ and $r = 2 + 2\\cos\\theta$ (outside the circle, inside the cardioid) is found by:',
-            options: ['$\\frac{1}{2}\\int_{-\\pi/2}^{\\pi/2}[(2+2\\cos\\theta)^2 - 4]\\,d\\theta$', '$\\frac{1}{2}\\int_0^{2\\pi}[(2+2\\cos\\theta)^2 - 4]\\,d\\theta$', '$\\int_0^{\\pi}(2\\cos\\theta)\\,d\\theta$', 'Cannot be computed'],
+            options: ['$\\frac{1}{2}\\int_{-\\pi/2}^{\\pi/2}[(2+2\\cos\\theta)^2 - 4]\\,d\\theta$', '$\\frac{1}{2}\\int_0^{2\\pi}[(2+2\\cos\\theta)^2 - 4]\\,d\\theta$', '$\\frac{1}{2}\\int_{-\\pi/2}^{\\pi/2}(2\\cos\\theta)^2\\,d\\theta$', '$\\int_{-\\pi/2}^{\\pi/2}[(2+2\\cos\\theta) - 2]\\,d\\theta$'],
             correctAnswer: 0,
-            explanation: 'Find intersections: $2 = 2+2\\cos\\theta \\implies \\cos\\theta = 0 \\implies \\theta = \\pm\\pi/2$. On $(-\\pi/2, \\pi/2)$ the cardioid is outside. Integrate the difference of squares.'
+            explanation: 'Find intersections: $2 = 2+2\\cos\\theta \\implies \\cos\\theta = 0 \\implies \\theta = \\pm\\pi/2$. On $(-\\pi/2, \\pi/2)$ the cardioid is outside, so integrate $\\frac{1}{2}(r_{\\text{outer}}^2 - r_{\\text{inner}}^2)$ there. Squaring the difference of radii, integrating the plain difference, or using the full $[0, 2\\pi]$ are the common errors.'
           },
           {
             question: 'For $r = \\sin\\theta + \\cos\\theta$, the Cartesian equation is:',
-            options: ['$(x-\\frac{1}{2})^2 + (y-\\frac{1}{2})^2 = \\frac{1}{2}$', '$x + y = 1$', '$x^2 + y^2 = 1$', '$xy = 1$'],
+            options: ['$(x-\\frac{1}{2})^2 + (y-\\frac{1}{2})^2 = \\frac{1}{2}$', '$x + y = 1$', '$x^2 + y^2 = 1$', '$(x-1)^2 + (y-1)^2 = 2$'],
             correctAnswer: 0,
-            explanation: '$r^2 = r\\sin\\theta + r\\cos\\theta \\implies x^2+y^2 = y+x \\implies (x-1/2)^2+(y-1/2)^2 = 1/2$. A circle.'
+            explanation: '$r^2 = r\\sin\\theta + r\\cos\\theta \\implies x^2+y^2 = y+x \\implies (x-1/2)^2+(y-1/2)^2 = 1/2$. A circle. Replacing $\\sin\\theta$ and $\\cos\\theta$ by $y$ and $x$ without multiplying by $r$ gives a line, $\\sin^2\\theta + \\cos^2\\theta = 1$ is not the same equation, and $(x-1)^2 + (y-1)^2 = 2$ forgets to halve when completing the square.'
           },
           {
             question: 'The area shared by $r = \\cos\\theta$ and $r = \\sin\\theta$ intersect at:',
@@ -73,10 +73,10 @@ $$L = \\int_0^{\\pi/2}\\sqrt{4\\cos^2\\theta + 4\\sin^2\\theta}\\,d\\theta = \\i
           },
           {
             label: 'For $r = 1 - \\sin\\theta$, the curve is a:',
-            options: ['Cardioid (opening upward)', 'Lima\\c{c}on with loop', 'Circle', 'Rose'],
-            correctAnswers: ['Cardioid (opening upward)'],
+            options: ['Cardioid', 'Limaçon with an inner loop', 'Circle of diameter $1$', 'Dimpled limaçon'],
+            correctAnswers: ['Cardioid'],
             hints: ['$|a| = |b|$ in $r = a + b\\sin\\theta$ gives a cardioid.'],
-            explanation: '$r = 1 - \\sin\\theta$: $a = 1$, $b = -1$. Since $|a| = |b|$, this is a cardioid. $r = 0$ at $\\theta = \\pi/2$ (top), so it opens downward from the origin. The cusp points upward.'
+            explanation: '$r = 1 - \\sin\\theta$: $a = 1$, $b = -1$. Since $|a| = |b|$, this is a cardioid (an inner loop needs $|b| > |a|$, a dimple needs $|a| > |b|$). $r = 0$ at $\\theta = \\pi/2$, so the cusp sits at the origin at the top, and the farthest point, $r = 2$, is at $\\theta = 3\\pi/2$ (bottom).'
           }
         ]
       }

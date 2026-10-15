@@ -57,9 +57,9 @@ Symmetric about the $x$-axis (since $\\cos(-\\theta) = \\cos\\theta$).
         questions: [
           {
             question: 'The curve $r = 2 + 3\\cos\\theta$ is a:',
-            options: ['Lima\\c{c}on with inner loop', 'Cardioid', 'Convex lima\\c{c}on', 'Circle'],
+            options: ['Limaçon with an inner loop', 'Cardioid with a cusp at the origin', 'Dimpled limaçon with no inner loop', 'Convex limaçon with no inner loop'],
             correctAnswer: 0,
-            explanation: '$r = a + b\\cos\\theta$ with $|a| < |b|$ ($2 < 3$) creates a lima\\c{c}on with an inner loop. $r = 0$ when $\\cos\\theta = -2/3$.'
+            explanation: '$r = a + b\\cos\\theta$ with $|a| < |b|$ ($2 < 3$) creates a limaçon with an inner loop, since $r = 0$ when $\\cos\\theta = -2/3$. A cardioid needs $|a| = |b|$, and dimpled or convex shapes need $|a| > |b|$ (comparing $\\frac{3}{2}$ instead of $\\frac{2}{3}$ is the usual slip).'
           },
           {
             question: '$r = \\cos(4\\theta)$ has how many petals?',
@@ -84,14 +84,14 @@ Symmetric about the $x$-axis (since $\\cos(-\\theta) = \\cos\\theta$).
         dropdowns: [
           {
             label: 'The curve $r = 3\\sin\\theta$ is symmetric about:',
-            options: ['The $y$-axis ($\\theta = \\pi/2$)', 'The $x$-axis', 'The origin', 'No symmetry'],
-            correctAnswers: ['The $y$-axis ($\\theta = \\pi/2$)'],
+            options: ['The $y$-axis', 'The $x$-axis (polar axis)', 'The origin (pole)', 'No line of symmetry'],
+            correctAnswers: ['The $y$-axis'],
             hints: ['Check: $f(\\pi - \\theta) = 3\\sin(\\pi-\\theta) = 3\\sin\\theta$.'],
             explanation: '$f(\\pi-\\theta) = 3\\sin(\\pi-\\theta) = 3\\sin\\theta = f(\\theta)$. Symmetric about the $y$-axis. (It is a circle centered at $(0, 3/2)$.)'
           },
           {
             label: 'When $r < 0$ for some $\\theta$-values, the curve:',
-            options: ['Reflects those points through the origin', 'Does not exist there', 'Stays in the same location', 'Creates an asymptote'],
+            options: ['Reflects those points through the origin', 'Has no points for those $\\theta$-values', 'Plots them at $(|r|, \\theta)$', 'Reflects them across the $x$-axis'],
             correctAnswers: ['Reflects those points through the origin'],
             hints: ['Negative $r$ means go in the opposite direction from angle $\\theta$.'],
             explanation: 'A point $(r, \\theta)$ with $r < 0$ is plotted as $(|r|, \\theta + \\pi)$: reflected through the origin. This is how roses with even $n$ get their extra petals.'
@@ -118,7 +118,7 @@ Symmetric about the $x$-axis (since $\\cos(-\\theta) = \\cos\\theta$).
 
 - Graph polar curves by making a $\\theta$-$r$ table and plotting
 - Use symmetry tests to reduce graphing work
-- Know the shapes: circles, cardioids, lima\\c{c}ons, roses, lemniscates, spirals
+- Know the shapes: circles, cardioids, limaçons, roses, lemniscates, spirals
 - Negative $r$ values reflect the point through the origin
 
 > **Next:** Part 3 covers **polar area** with the integral formula.`

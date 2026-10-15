@@ -57,9 +57,9 @@ $$A = \\frac{1}{2}\\int_0^{\\pi/2}\\sin^2(2\\theta)\\,d\\theta = \\frac{1}{2}\\i
           },
           {
             question: 'When finding polar area, the $\\frac{1}{2}$ factor comes from:',
-            options: ['The area of a thin sector $\\frac{1}{2}r^2\\,d\\theta$', 'The chain rule', 'Converting from Cartesian', 'Symmetry'],
+            options: ['The area of a thin circular sector', 'The chain rule applied to $r = f(\\theta)$', 'Converting $y\\,dx$ from Cartesian form', 'Integrating over only half the curve'],
             correctAnswer: 0,
-            explanation: 'A sector with central angle $d\\theta$ and radius $r$ has area $\\frac{1}{2}r^2\\,d\\theta$, analogous to triangle area $\\frac{1}{2}bh$.'
+            explanation: 'A sector with central angle $d\\theta$ and radius $r$ has area $\\frac{1}{2}r^2\\,d\\theta$, analogous to triangle area $\\frac{1}{2}bh$. Summing those sectors gives $A = \\frac{1}{2}\\int r^2\\,d\\theta$.'
           }
         ]
       }
@@ -79,10 +79,10 @@ $$A = \\frac{1}{2}\\int_0^{\\pi/2}\\sin^2(2\\theta)\\,d\\theta = \\frac{1}{2}\\i
           },
           {
             label: 'To find the area inside $r = 1 + \\cos\\theta$ but outside $r = 1$:',
-            options: ['$\\frac{1}{2}\\int((1+\\cos\\theta)^2 - 1^2)\\,d\\theta$ with appropriate limits', '$\\frac{1}{2}\\int(1+\\cos\\theta)^2\\,d\\theta - \\pi$', 'Cannot subtract polar areas', '$\\int(\\cos\\theta)\\,d\\theta$'],
-            correctAnswers: ['$\\frac{1}{2}\\int((1+\\cos\\theta)^2 - 1^2)\\,d\\theta$ with appropriate limits'],
+            options: ['$\\frac{1}{2}\\int((1+\\cos\\theta)^2 - 1^2)\\,d\\theta$', '$\\frac{1}{2}\\int(1+\\cos\\theta)^2\\,d\\theta - \\pi$', '$\\frac{1}{2}\\int((1+\\cos\\theta) - 1)^2\\,d\\theta$', '$\\int((1+\\cos\\theta)^2 - 1^2)\\,d\\theta$'],
+            correctAnswers: ['$\\frac{1}{2}\\int((1+\\cos\\theta)^2 - 1^2)\\,d\\theta$'],
             hints: ['Between two polar curves: $\\frac{1}{2}\\int(r_{\\text{outer}}^2 - r_{\\text{inner}}^2)\\,d\\theta$.'],
-            explanation: 'Area between two polar curves: $\\frac{1}{2}\\int_{\\alpha}^{\\beta}(r_{\\text{outer}}^2 - r_{\\text{inner}}^2)\\,d\\theta$. Find where they intersect to get limits.'
+            explanation: 'Area between two polar curves: $\\frac{1}{2}\\int_{\\alpha}^{\\beta}(r_{\\text{outer}}^2 - r_{\\text{inner}}^2)\\,d\\theta$, with limits from the intersections (here $\\theta = -\\pi/2$ to $\\pi/2$). Square each radius before subtracting, keep the $\\frac{1}{2}$, and do not subtract the whole circle’s area $\\pi$, since only part of the circle bounds the region.'
           }
         ]
       }

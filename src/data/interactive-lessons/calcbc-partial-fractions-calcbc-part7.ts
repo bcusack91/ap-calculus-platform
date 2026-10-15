@@ -31,24 +31,24 @@ export const calcbcPartialFracPart7Data = {
           {
             question: 'Before decomposing $\\frac{x^4+1}{x^3-x}$, you must:',
             options: [
-              'Perform long division (deg 4 > deg 3)',
+              'Perform polynomial long division',
               'Factor the denominator immediately',
-              'Complete the square',
-              'Apply IBP'
+              'Complete the square in the denominator',
+              'Integrate by parts with $u = x^4 + 1$'
             ],
             correctAnswer: 0,
-            explanation: 'Degree 4 > degree 3 means the fraction is improper. Always divide first.'
+            explanation: 'Degree 4 > degree 3 means the fraction is improper. Always divide first; then factor the remainder\'s denominator $x^3 - x = x(x-1)(x+1)$ and decompose.'
           },
           {
             question: 'The cover-up (Heaviside) method works directly for:',
             options: [
               'Distinct linear factors only',
-              'All factor types',
-              'Repeated factors only',
-              'Irreducible quadratics only'
+              'Every factor type, including quadratics',
+              'Repeated linear factors such as $(x-1)^2$',
+              'Irreducible quadratic factors only'
             ],
             correctAnswer: 0,
-            explanation: 'Cover-up works by setting $x$ equal to the root of a linear factor and reading off the constant. It doesn\u2019t work directly for repeated or quadratic factors.'
+            explanation: 'Cover-up works by setting $x$ equal to the root of a linear factor and reading off the constant. It does not work directly for repeated or irreducible quadratic factors.'
           }
         ]
       }

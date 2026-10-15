@@ -85,17 +85,17 @@ $$\\boxed{V_{\\text{sphere}} = \\frac{4}{3}\\pi R^3 \\quad \\checkmark}$$
         dropdowns: [
           {
             label: 'Revolving $x = t^2$, $y = t$ about the $y$-axis, $SA$ uses:',
-            options: ['$2\\pi |x(t)| \\cdot \\text{speed}$ (use $|x| = t^2$)', '$2\\pi |y(t)| \\cdot \\text{speed}$', '$\\pi [x(t)]^2 y\'(t)$', '$\\pi [y(t)]^2 x\'(t)$'],
-            correctAnswers: ['$2\\pi |x(t)| \\cdot \\text{speed}$ (use $|x| = t^2$)'],
+            options: ['$2\\pi |x(t)| \\cdot \\text{speed}$', '$2\\pi y(t) \\cdot \\text{speed}$', '$\\pi [x(t)]^2 \\cdot y\'(t)$', '$\\pi [y(t)]^2 \\cdot x\'(t)$'],
+            correctAnswers: ['$2\\pi |x(t)| \\cdot \\text{speed}$'],
             hints: ['Revolution about $y$-axis uses the distance from the $y$-axis, which is $|x|$.'],
-            explanation: 'About $y$-axis: $SA = 2\\pi \\int |x| \\cdot ds = 2\\pi \\int t^2 \\sqrt{(2t)^2 + 1}\\,dt$.'
+            explanation: 'About $y$-axis the radius is the distance to the $y$-axis, $|x| = t^2$: $SA = 2\\pi \\int |x| \\cdot ds = 2\\pi \\int t^2 \\sqrt{(2t)^2 + 1}\\,dt$. The $\\pi[\\,\\cdot\\,]^2$ forms are disk volumes, not surface areas.'
           },
           {
             label: 'Volume of $x = 2\\cos t$, $y = 2\\sin t$ ($0 \\le t \\le \\pi$) about $x$-axis uses:',
-            options: ['$\\pi \\int_0^{\\pi} (2\\sin t)^2(-2\\sin t)\\,dt$', '$2\\pi \\int_0^{\\pi} 2\\sin t \\cdot 2\\,dt$', '$\\pi \\int_0^2 y^2\\,dx$', '$2\\pi \\int_0^{\\pi} (2\\cos t)^2\\,dt$'],
-            correctAnswers: ['$\\pi \\int_0^{\\pi} (2\\sin t)^2(-2\\sin t)\\,dt$'],
+            options: ['$\\pi \\int_{\\pi}^{0} (2\\sin t)^2(-2\\sin t)\\,dt$', '$2\\pi \\int_0^{\\pi} 2\\sin t \\cdot 2\\,dt$', '$\\pi \\int_0^2 y^2\\,dx$', '$\\pi \\int_0^{\\pi} (2\\sin t)^2(-2\\sin t)\\,dt$'],
+            correctAnswers: ['$\\pi \\int_{\\pi}^{0} (2\\sin t)^2(-2\\sin t)\\,dt$'],
             hints: ['Disk method: $V = \\pi \\int [y(t)]^2 x\'(t)\\,dt$. $x\' = -2\\sin t$.'],
-            explanation: '$V = \\pi \\int_0^{\\pi} 4\\sin^2 t \\cdot (-2\\sin t)\\,dt = -8\\pi \\int_0^{\\pi} \\sin^3 t\\,dt = -8\\pi \\cdot (-4/3) = \\frac{32\\pi}{3}$.'
+            explanation: 'Disk method: $V = \\pi \\int y^2\\,dx$ with $dx = -2\\sin t\\,dt$. As $x$ runs from $-2$ to $2$, $t$ runs from $\\pi$ down to $0$, so $V = \\pi \\int_{\\pi}^{0} 4\\sin^2 t \\cdot (-2\\sin t)\\,dt = 8\\pi \\int_0^{\\pi} \\sin^3 t\\,dt = 8\\pi \\cdot \\frac{4}{3} = \\frac{32\\pi}{3}$, the volume of a sphere of radius $2$. Integrating from $t = 0$ to $\\pi$ gives $-\\frac{32\\pi}{3}$ (a negative volume), $\\int_0^2$ covers only half the sphere, and $2\\pi\\int y \\cdot \\text{speed}\\,dt$ is the surface area.'
           }
         ]
       }

@@ -89,10 +89,10 @@ This confirms the well-known ellipse area formula.
         dropdowns: [
           {
             label: 'Area under $x = t^2$, $y = t$ from $t = 0$ to $t = 2$:',
-            options: ['$\\int_0^2 t \\cdot 2t\\,dt = \\int_0^2 2t^2\\,dt$', '$\\int_0^2 t^2 \\cdot 1\\,dt$', '$\\int_0^4 \\sqrt{x}\\,dx$', '$\\int_0^2 t^3\\,dt$'],
-            correctAnswers: ['$\\int_0^2 t \\cdot 2t\\,dt = \\int_0^2 2t^2\\,dt$'],
+            options: ['$\\int_0^2 t \\cdot 2t\\,dt$', '$\\int_0^2 t^2 \\cdot 1\\,dt$', '$\\int_0^2 \\sqrt{x}\\,dx$', '$\\int_0^2 t \\cdot t^2\\,dt$'],
+            correctAnswers: ['$\\int_0^2 t \\cdot 2t\\,dt$'],
             hints: ['$y(t) = t$, $x\'(t) = 2t$.'],
-            explanation: '$A = \\int_0^2 y \\cdot x\'\\,dt = \\int_0^2 t(2t)\\,dt = [\\frac{2t^3}{3}]_0^2 = \\frac{16}{3}$.'
+            explanation: '$A = \\int_0^2 y \\cdot x\'\\,dt = \\int_0^2 t(2t)\\,dt = [\\frac{2t^3}{3}]_0^2 = \\frac{16}{3}$. Using $x\\,y\'$ instead gives $\\int_0^2 t^2\\,dt$, forgetting $x\'$ gives $\\int_0^2 t^3\\,dt$, and converting to $\\sqrt{x}$ without changing the limits (they become $0$ to $4$) gives the wrong area.'
           },
           {
             label: 'Enclosed area of $x = 3\\cos t$, $y = 5\\sin t$ ($0$ to $2\\pi$):',

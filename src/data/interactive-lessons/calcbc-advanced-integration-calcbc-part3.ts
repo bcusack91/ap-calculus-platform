@@ -72,21 +72,21 @@ $$\\int \\frac{x}{x+1}\\,dx = \\int \\frac{(x+1) - 1}{x+1}\\,dx = \\int \\left(1
         questions: [
           {
             question: '$\\int \\frac{x^3}{x+2}\\,dx$ requires:',
-            options: ['Long division first (degree 3 ÷ degree 1)', 'Partial fractions directly', '$u$-substitution with $u = x + 2$', 'Integration by parts'],
+            options: ['Long division first', 'Partial fractions directly', 'Trig substitution with $x = 2\\tan\\theta$', 'Integration by parts with $u = x^3$'],
             correctAnswer: 0,
-            explanation: '$\\deg(3) > \\deg(1)$. Divide: $x^3/(x+2) = x^2 - 2x + 4 - 8/(x+2)$.'
+            explanation: '$\\deg(3) > \\deg(1)$, so the fraction is improper. Divide: $x^3/(x+2) = x^2 - 2x + 4 - 8/(x+2)$, then integrate term by term.'
           },
           {
             question: '$\\int \\frac{dx}{x^2 - 4x + 13}$. After completing the square:',
-            options: ['$\\frac{1}{3}\\arctan\\frac{x-2}{3} + C$', '$\\arctan(x-2) + C$', '$\\ln|x^2 - 4x + 13| + C$', '$\\frac{1}{13}\\arctan(x/13) + C$'],
+            options: ['$\\frac{1}{3}\\arctan\\frac{x-2}{3} + C$', '$\\arctan(x-2) + C$', '$\\ln|x^2 - 4x + 13| + C$', '$\\frac{1}{3}\\arctan(x-2) + C$'],
             correctAnswer: 0,
-            explanation: '$x^2 - 4x + 13 = (x-2)^2 + 9$. So $\\int du/(u^2+9) = \\frac{1}{3}\\arctan(u/3) + C$ with $u = x-2$.'
+            explanation: '$x^2 - 4x + 13 = (x-2)^2 + 9$. So $\\int du/(u^2+9) = \\frac{1}{3}\\arctan(u/3) + C$ with $u = x-2$. Leaving out the $\\frac{1}{3}$ or the division by $3$ inside the arctan are the usual slips.'
           },
           {
             question: '$\\int \\frac{3x + 1}{x^2 + 1}\\,dx$ splits into:',
-            options: ['$\\frac{3}{2}\\ln(x^2+1) + \\arctan x + C$', '$\\ln(3x+1) + \\arctan x + C$', '$(3x+1)\\arctan x + C$', '$3\\arctan x + \\ln|x^2+1| + C$'],
+            options: ['$\\frac{3}{2}\\ln(x^2+1) + \\arctan x + C$', '$\\ln(3x+1) + \\arctan x + C$', '$\\frac{3}{2}\\ln(x^2+1) + C$', '$3\\ln(x^2+1) + \\arctan x + C$'],
             correctAnswer: 0,
-            explanation: '$\\int \\frac{3x}{x^2+1}dx + \\int \\frac{1}{x^2+1}dx = \\frac{3}{2}\\ln(x^2+1) + \\arctan x + C$.'
+            explanation: '$\\int \\frac{3x}{x^2+1}dx + \\int \\frac{1}{x^2+1}dx = \\frac{3}{2}\\ln(x^2+1) + \\arctan x + C$. Forgetting the $\\frac{1}{2}$ from $du = 2x\\,dx$ gives $3\\ln(x^2+1)$, and dropping the $\\frac{1}{x^2+1}$ piece loses the $\\arctan x$.'
           }
         ]
       }

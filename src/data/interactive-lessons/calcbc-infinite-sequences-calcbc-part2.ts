@@ -57,15 +57,15 @@ So $\\{a_n\\}$ is **increasing**. Also $a_n < 1$ for all $n$ (bounded above). By
         questions: [
           {
             question: 'The sequence $a_n = \\frac{1}{n!}$ is:',
-            options: ['Decreasing and bounded below by $0$', 'Increasing and bounded', 'Neither increasing nor decreasing', 'Decreasing and unbounded'],
+            options: ['Decreasing and bounded below by $0$', 'Increasing and bounded above', 'Neither increasing nor decreasing', 'Decreasing and unbounded'],
             correctAnswer: 0,
-            explanation: '$a_{n+1}/a_n = \\frac{n!}{(n+1)!} = \\frac{1}{n+1} < 1$, so decreasing. $a_n > 0$ for all $n$, so bounded below by $0$. By MCT, it converges (to $0$).'
+            explanation: '$a_{n+1}/a_n = \\frac{n!}{(n+1)!} = \\frac{1}{n+1} < 1$, so the sequence is decreasing, not increasing. $a_n > 0$ for all $n$, so it is bounded below by $0$ (and above by $a_1 = 1$). By the Monotone Convergence Theorem, it converges (to $0$).'
           },
           {
             question: 'A bounded sequence that is NOT monotone:',
-            options: ['May or may not converge', 'Must converge', 'Must diverge', 'Does not exist'],
+            options: ['May or may not converge', 'Must converge', 'Must diverge', 'Must converge to $0$'],
             correctAnswer: 0,
-            explanation: '$a_n = (-1)^n/n$ is bounded and not monotone, but converges. $a_n = (-1)^n$ is bounded and not monotone, but diverges. Boundedness alone is not sufficient.'
+            explanation: '$a_n = (-1)^n/n$ is bounded and not monotone, but converges. $a_n = (-1)^n$ is bounded and not monotone, but diverges. Boundedness alone is not sufficient, and the Monotone Convergence Theorem needs monotonicity.'
           }
         ]
       }
@@ -78,17 +78,17 @@ So $\\{a_n\\}$ is **increasing**. Also $a_n < 1$ for all $n$ (bounded above). By
         dropdowns: [
           {
             label: 'The Monotone Convergence Theorem says convergence is guaranteed when a sequence is:',
-            options: ['Monotone AND bounded', 'Just monotone', 'Just bounded', 'Alternating'],
-            correctAnswers: ['Monotone AND bounded'],
+            options: ['Both monotone and bounded', 'Monotone, even if unbounded', 'Bounded, even if not monotone', 'Alternating, with bounded terms'],
+            correctAnswers: ['Both monotone and bounded'],
             hints: ['Both conditions are needed.'],
             explanation: '$a_n = n$ is monotone but not bounded (diverges). $a_n = (-1)^n$ is bounded but not monotone (diverges). You need both.'
           },
           {
             label: '$a_n = \\left(1 + \\frac{1}{n}\\right)^n$ is:',
-            options: ['Increasing and bounded above (converges to $e$)', 'Decreasing', 'Unbounded', 'Constant'],
+            options: ['Increasing and bounded above (converges to $e$)', 'Decreasing and bounded (converges to $1$)', 'Increasing and unbounded (diverges to $\\infty$)', 'Oscillating but bounded (has no limit)'],
             correctAnswers: ['Increasing and bounded above (converges to $e$)'],
             hints: ['This is the classic definition of $e$.'],
-            explanation: 'This sequence is increasing (can be shown by AM-GM) and bounded above by $3$. By MCT, it converges. The limit is $e \\approx 2.71828$.'
+            explanation: 'This sequence is increasing (can be shown by AM-GM) and bounded above by $3$. By MCT, it converges. The limit is $e \\approx 2.71828$. The base tends to $1$ while the exponent grows, so neither $1$ nor $\\infty$ is the limit.'
           }
         ]
       }

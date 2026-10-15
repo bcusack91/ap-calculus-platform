@@ -53,9 +53,9 @@ $$\\sum_{n=0}^\\infty r^n = \\frac{1}{1-r} \\quad \\text{if } |r| < 1$$
         questions: [
           {
             question: '$\\sum_{n=1}^\\infty \\frac{n}{n+1}$ diverges because:',
-            options: ['$\\lim a_n = 1 \\ne 0$ ($n$th term test)', 'The terms are decreasing', 'It is a geometric series', 'The terms are positive'],
+            options: ['Its terms approach $1$, not $0$', 'Its terms decrease too slowly toward $0$', 'It is geometric with ratio greater than $1$', 'It is the harmonic $p$-series, with $p = 1$'],
             correctAnswer: 0,
-            explanation: '$a_n = \\frac{n}{n+1} \\to 1 \\ne 0$. By the $n$th term test, the series diverges.'
+            explanation: '$a_n = \\frac{n}{n+1} \\to 1 \\ne 0$. By the $n$th term test, the series diverges. The terms increase toward $1$ rather than decrease toward $0$, and the series is neither geometric nor a $p$-series.'
           },
           {
             question: '$\\sum_{n=0}^\\infty \\left(\\frac{2}{3}\\right)^n = $',
@@ -74,17 +74,17 @@ $$\\sum_{n=0}^\\infty r^n = \\frac{1}{1-r} \\quad \\text{if } |r| < 1$$
         dropdowns: [
           {
             label: 'If $a_n \\to 0$, the series $\\sum a_n$:',
-            options: ['May converge or diverge (need more tests)', 'Must converge', 'Must diverge', 'Converges conditionally'],
-            correctAnswers: ['May converge or diverge (need more tests)'],
+            options: ['May converge or diverge; test further', 'Must converge, since its terms shrink to $0$', 'Must diverge, like the harmonic series', 'Converges conditionally, as in the AST'],
+            correctAnswers: ['May converge or diverge; test further'],
             hints: ['Think about $\\sum 1/n$ vs $\\sum 1/n^2$.'],
             explanation: '$a_n \\to 0$ is necessary but NOT sufficient. $\\sum 1/n$ diverges, but $\\sum 1/n^2 = \\pi^2/6$ converges. More tests needed.'
           },
           {
             label: 'The partial sum $S_5$ of $\\sum_{n=1}^\\infty 1/2^n$ equals:',
-            options: ['$31/32$', '$1$', '$1/32$', '$5/2$'],
+            options: ['$31/32$', '$63/64$', '$1/32$', '$5/2$'],
             correctAnswers: ['$31/32$'],
             hints: ['$S_5 = 1/2 + 1/4 + 1/8 + 1/16 + 1/32$.'],
-            explanation: '$S_5 = \\frac{1/2(1-(1/2)^5)}{1-1/2} = 1 - 1/32 = 31/32$.'
+            explanation: '$S_5 = \\frac{1/2(1-(1/2)^5)}{1-1/2} = 1 - 1/32 = 31/32$. $63/64$ is $S_6$ (one term too many), $1/32$ is the fifth term alone, and $5/2$ adds $1/2$ five times.'
           }
         ]
       }

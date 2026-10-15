@@ -67,21 +67,21 @@ $$\\boxed{\\text{Divergence Test} \\to \\text{Geometric/p?} \\to \\text{Alternat
         questions: [
           {
             question: 'Which test should you try FIRST for $\\sum_{n=1}^{\\infty} \\frac{n^2}{n^2+1}$?',
-            options: ['Divergence Test ($\\lim a_n = 1 \\neq 0$, so it diverges)', 'Ratio Test', 'Limit Comparison Test', 'Integral Test'],
+            options: ['Divergence Test', 'Ratio Test', 'Limit Comparison Test', 'Integral Test'],
             correctAnswer: 0,
-            explanation: '$\\lim n^2/(n^2+1) = 1 \\neq 0$. Diverges by the Divergence Test immediately.'
+            explanation: '$\\lim n^2/(n^2+1) = 1 \\neq 0$, so the series diverges by the Divergence Test immediately. Always check the term limit first.'
           },
           {
             question: 'On an FRQ, which response about $\\sum 1/n^3$ earns full credit?',
-            options: ['"$p$-series with $p = 3 > 1$, so the series converges."', '"Converges by $p$-test."', '"$\\sum 1/n^3 < \\infty$."', '"Terms go to zero, so it converges."'],
+            options: ['"$p$-series with $p = 3 > 1$, so the series converges."', '"Converges by the $p$-test, since terms go to $0$."', '"Geometric series with $r = 1/3$, so it converges."', '"Terms go to zero, so it converges."'],
             correctAnswer: 0,
-            explanation: 'Full credit requires: name the test, verify the condition ($p > 1$), and state the conclusion.'
+            explanation: 'Full credit requires: name the test, verify the condition ($p = 3 > 1$), and state the conclusion. Terms going to $0$ is never a valid reason for convergence, and $\\sum 1/n^3$ is not geometric.'
           },
           {
             question: 'For $\\sum_{n=0}^{\\infty} \\frac{x^n}{n!}$, after finding $R = \\infty$ by Ratio Test, what else must you do?',
-            options: ['Nothing — $R = \\infty$ means convergence for all $x$', 'Test endpoints $x = \\pm\\infty$', 'Apply the Root Test', 'Check conditional convergence'],
+            options: ['Nothing more, as it converges for all $x$', 'Test the endpoints $x = \\pm\\infty$ separately', 'Apply the Root Test to confirm the radius', 'Check for conditional convergence at $x = 0$'],
             correctAnswer: 0,
-            explanation: '$R = \\infty$ means the IOC is $(-\\infty, \\infty)$. No endpoints to test.'
+            explanation: '$R = \\infty$ means the interval of convergence is $(-\\infty, \\infty)$. There are no endpoints to test.'
           }
         ]
       }
@@ -94,17 +94,17 @@ $$\\boxed{\\text{Divergence Test} \\to \\text{Geometric/p?} \\to \\text{Alternat
         dropdowns: [
           {
             label: '$\\sum_{n=1}^{\\infty} \\frac{3^n}{n!}$: Best test?',
-            options: ['Ratio Test (factorial in denominator)', 'Root Test', 'Direct Comparison Test', 'Integral Test'],
+            options: ['Ratio Test (factorial in denominator)', 'Root Test (power $3^n$ in numerator)', 'Direct Comparison with $\\sum 3^n$', 'Integral Test (terms are positive)'],
             correctAnswers: ['Ratio Test (factorial in denominator)'],
             hints: ['Factorials → Ratio Test is almost always the right choice.'],
-            explanation: 'Ratio: $L = \\lim 3/(n+1) = 0 < 1$. Converges.'
+            explanation: 'Ratio: $L = \\lim 3/(n+1) = 0 < 1$. Converges. Comparing with the larger divergent $\\sum 3^n$ proves nothing, the $n$th root of $n!$ is awkward, and $x!$ cannot be integrated directly.'
           },
           {
             label: '$\\sum_{n=1}^{\\infty} \\frac{1}{n^2 + 3n + 2}$: Best test?',
-            options: ['LCT with $\\sum 1/n^2$ (rational function behaves like $1/n^2$)', 'Ratio Test', 'Root Test', 'Divergence Test'],
-            correctAnswers: ['LCT with $\\sum 1/n^2$ (rational function behaves like $1/n^2$)'],
+            options: ['LCT with $\\sum 1/n^2$ (both converge)', 'Ratio Test ($L = 1$, converges)', 'LCT with $\\sum 1/n$ (both diverge)', 'Divergence Test ($a_n \\to 0$, converges)'],
+            correctAnswers: ['LCT with $\\sum 1/n^2$ (both converge)'],
             hints: ['Degree of denominator is 2, numerator is 0. Behaves like $1/n^2$.'],
-            explanation: 'LCT: $\\lim \\frac{1/(n^2+3n+2)}{1/n^2} = 1$. Since $\\sum 1/n^2$ converges, so does this series.'
+            explanation: 'LCT: $\\lim \\frac{1/(n^2+3n+2)}{1/n^2} = 1$. Since $\\sum 1/n^2$ converges, so does this series. Against $\\sum 1/n$ the limit is $0$, not a positive constant; the Ratio Test gives $L = 1$ (inconclusive); and $a_n \\to 0$ alone never proves convergence.'
           }
         ]
       }

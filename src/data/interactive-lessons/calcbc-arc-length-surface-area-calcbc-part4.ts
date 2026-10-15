@@ -55,9 +55,9 @@ $S = 2\\pi\\int_0^{\\pi/2}\\sin(2\\theta)\\cdot 2\\,d\\theta = 4\\pi\\int_0^{\\p
         questions: [
           {
             question: 'To find the surface area when rotating a parametric curve about the $y$-axis, replace $y(t)$ with:',
-            options: ['$x(t)$ (the distance from the $y$-axis)', '$1$', '$t$', '$\\sqrt{x^2+y^2}$'],
+            options: ['$x(t)$', '$x\'(t)$', '$y\'(t)$', '$\\sqrt{x^2+y^2}$'],
             correctAnswer: 0,
-            explanation: 'About the $y$-axis, the radius is $x(t)$: $S = 2\\pi\\int x(t)\\,ds$.'
+            explanation: 'About the $y$-axis, the radius is the distance from the $y$-axis, which is $x(t)$: $S = 2\\pi\\int x(t)\\,ds$. The derivatives $x\'(t)$ and $y\'(t)$ belong inside $ds$, not in the radius.'
           },
           {
             question: 'For the cardioid $r = 1 + \\cos\\theta$ rotated about the polar axis, $r^2 + (r\')^2 = $',
@@ -76,10 +76,10 @@ $S = 2\\pi\\int_0^{\\pi/2}\\sin(2\\theta)\\cdot 2\\,d\\theta = 4\\pi\\int_0^{\\p
         dropdowns: [
           {
             label: 'The surface area of a torus (doughnut) is found by rotating a circle about an external axis. The appropriate form is:',
-            options: ['Parametric surface area formula', 'Cartesian formula', 'Polar formula', 'None — no formula exists'],
+            options: ['Parametric surface area formula', 'Polar surface area formula', 'Washer method volume formula', 'Shell method volume formula'],
             correctAnswers: ['Parametric surface area formula'],
             hints: ['A circle is most naturally parametrized with $\\cos$ and $\\sin$.'],
-            explanation: 'Use $x = R + r\\cos t$, $y = r\\sin t$ (circle of radius $r$ centered at distance $R$ from axis), then apply $S = 2\\pi\\int y\\,ds$.'
+            explanation: 'Use $x = R + r\\cos t$, $y = r\\sin t$ (circle of radius $r$ centered at distance $R$ from axis), then apply $S = 2\\pi\\int y\\,ds$. Washers and shells compute volume, not surface area, and the off-center circle has no simple polar equation.'
           },
           {
             label: 'When computing polar surface area about the $x$-axis, $y = $',

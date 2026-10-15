@@ -36,7 +36,7 @@ $$\\boxed{r = \\sqrt{x^2+y^2}, \\quad \\tan\\theta = \\frac{y}{x}}$$
 | $\\theta = c$ | Line through origin at angle $c$ |
 | $r = 2a\\cos\\theta$ | Circle of radius $|a|$ centered at $(a, 0)$ |
 | $r = 2a\\sin\\theta$ | Circle of radius $|a|$ centered at $(0, a)$ |
-| $r = a + b\\cos\\theta$ | Lima\\c{c}on (with loop if $|a| < |b|$) |
+| $r = a + b\\cos\\theta$ | Limaçon (with loop if $|a| < |b|$) |
 | $r = a\\cos(n\\theta)$ | Rose ($n$ petals if odd, $2n$ if even) |
 
 **Converting equations:**
@@ -56,9 +56,9 @@ $$\\boxed{r = \\sqrt{x^2+y^2}, \\quad \\tan\\theta = \\frac{y}{x}}$$
           },
           {
             question: 'The polar equation $r = 4\\sin\\theta$ represents:',
-            options: ['A circle of radius $2$ centered at $(0, 2)$', 'A circle of radius $4$ centered at origin', 'A line', 'A cardioid'],
+            options: ['A circle of radius $2$ centered at $(0, 2)$', 'A circle of radius $4$ at the origin', 'A circle of radius $2$ at $(2, 0)$', 'A cardioid through the origin'],
             correctAnswer: 0,
-            explanation: '$r = 4\\sin\\theta \\implies r^2 = 4r\\sin\\theta \\implies x^2+y^2 = 4y \\implies x^2+(y-2)^2 = 4$. Circle of radius $2$ at $(0,2)$.'
+            explanation: '$r = 4\\sin\\theta \\implies r^2 = 4r\\sin\\theta \\implies x^2+y^2 = 4y \\implies x^2+(y-2)^2 = 4$. Circle of radius $2$ at $(0,2)$. A center on the $x$-axis would come from $\\cos\\theta$, and $r = 4$ (constant) is the circle of radius $4$ at the origin.'
           },
           {
             question: 'How many petals does $r = 3\\cos(2\\theta)$ have?',
@@ -86,7 +86,7 @@ $$\\boxed{r = \\sqrt{x^2+y^2}, \\quad \\tan\\theta = \\frac{y}{x}}$$
             label: 'The polar equation $r = 1 + \\cos\\theta$ is called a:',
             options: ['Cardioid', 'Rose curve', 'Lemniscate', 'Spiral'],
             correctAnswers: ['Cardioid'],
-            hints: ['$r = a + b\\cos\\theta$ with $a = b$ is a special lima\\c{c}on.'],
+            hints: ['$r = a + b\\cos\\theta$ with $a = b$ is a special limaçon.'],
             explanation: 'When $a = b$ in $r = a + b\\cos\\theta$, the curve is a cardioid (heart shape). It passes through the origin when $\\theta = \\pi$.'
           }
         ]
@@ -112,7 +112,7 @@ $$\\boxed{r = \\sqrt{x^2+y^2}, \\quad \\tan\\theta = \\frac{y}{x}}$$
 - Polar coordinates $(r, \\theta)$ locate points by distance and angle
 - Convert with $x = r\\cos\\theta$, $y = r\\sin\\theta$ and $r^2 = x^2+y^2$
 - Representations are not unique: $(r, \\theta) = (-r, \\theta+\\pi) = (r, \\theta+2\\pi)$
-- Know the standard curves: circles, cardioids, roses, lima\\c{c}ons
+- Know the standard curves: circles, cardioids, roses, limaçons
 
 > **Next:** Part 2 covers **graphing polar curves** and symmetry analysis.`
     }

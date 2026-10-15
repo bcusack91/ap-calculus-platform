@@ -33,21 +33,21 @@ $$\\boxed{\\text{Flowchart: Div Test} \\to \\text{Recognizable} \\to \\text{Alte
         questions: [
           {
             question: '$\\sum_{n=1}^{\\infty} \\frac{2^n + n}{3^n}$',
-            options: ['Converges (split: geometric $\\sum (2/3)^n$ + comparison $\\sum n/3^n$)', 'Diverges by Divergence Test', 'Converges conditionally', 'Cannot determine'],
+            options: ['Converges, as the sum of two convergent series', 'Diverges, as $2^n + n$ is unbounded', 'Converges conditionally by the AST', 'Diverges, as $\\frac{n}{3^n}$ is not geometric'],
             correctAnswer: 0,
-            explanation: '$\\sum (2/3)^n$ converges (geometric, $|r| = 2/3 < 1$). $\\sum n/3^n$ converges (Ratio Test). Sum of convergent series converges.'
+            explanation: 'Split: $\\sum (2/3)^n$ converges (geometric, $|r| = 2/3 < 1$) and $\\sum n/3^n$ converges (Ratio Test, $L = 1/3$). The sum of two convergent series converges. An unbounded numerator does not matter when the terms still go to $0$, and the series is not alternating.'
           },
           {
             question: '$\\sum_{n=1}^{\\infty} \\frac{1}{\\sqrt{n(n+1)}}$',
-            options: ['Diverges (LCT with $\\sum 1/n$ gives $L = 1$)', 'Converges by DCT', 'Converges by Integral Test', 'Inconclusive'],
+            options: ['Diverges (LCT with $\\sum 1/n$)', 'Converges (DCT with $\\sum 1/n^2$)', 'Converges ($p$-series with $p = 2$)', 'Inconclusive (Ratio Test gives $L = 1$)'],
             correctAnswer: 0,
-            explanation: '$\\lim \\frac{1/\\sqrt{n(n+1)}}{1/n} = \\lim \\frac{n}{\\sqrt{n^2+n}} = 1$. Since $\\sum 1/n$ diverges, so does this.'
+            explanation: '$\\lim \\frac{1/\\sqrt{n(n+1)}}{1/n} = \\lim \\frac{n}{\\sqrt{n^2+n}} = 1$. Since $\\sum 1/n$ diverges, so does this. Forgetting the square root makes it look like $\\frac{1}{n^2}$, but the terms behave like $\\frac{1}{n}$, and the Ratio Test\'s $L = 1$ just means another test is needed.'
           },
           {
             question: '$\\sum_{n=2}^{\\infty} \\frac{1}{n \\ln n}$',
-            options: ['Diverges (Integral Test or log-$p$-series with $p = 1$)', 'Converges by LCT', 'Converges by DCT', 'Converges by Ratio Test'],
+            options: ['Diverges by the Integral Test', 'Converges by LCT with $\\sum \\frac{1}{n^2}$', 'Converges by DCT with $\\sum \\frac{1}{n}$', 'Converges by the Ratio Test, $L < 1$'],
             correctAnswer: 0,
-            explanation: 'Log-$p$-series with $p = 1 \\leq 1$: diverges. Or: $\\int_2^\\infty \\frac{dx}{x \\ln x} = [\\ln(\\ln x)]_2^\\infty = \\infty$.'
+            explanation: 'Log-$p$-series with $p = 1 \\leq 1$: diverges. By the Integral Test: $\\int_2^\\infty \\frac{dx}{x \\ln x} = [\\ln(\\ln x)]_2^\\infty = \\infty$. LCT with $\\frac{1}{n^2}$ gives $L = \\infty$, being smaller than a divergent series proves nothing, and the Ratio Test gives $L = 1$.'
           }
         ]
       }
@@ -66,9 +66,9 @@ $$\\boxed{\\text{Flowchart: Div Test} \\to \\text{Recognizable} \\to \\text{Alte
           },
           {
             question: '$\\sum_{n=1}^{\\infty} \\frac{(-1)^n n^2}{2^n}$ is:',
-            options: ['Absolutely convergent (Ratio Test on $\\sum n^2/2^n$ gives $L = 1/2$)', 'Conditionally convergent', 'Divergent', 'Pass to Root Test'],
+            options: ['Absolutely convergent', 'Conditionally convergent', 'Divergent, since $n^2$ grows without bound', 'Inconclusive, since the Ratio Test gives $L = 1$'],
             correctAnswer: 0,
-            explanation: '$\\sum n^2/2^n$: Ratio $L = \\lim \\frac{(n+1)^2}{2n^2} = 1/2 < 1$. $\\sum |a_n|$ converges → absolutely convergent.'
+            explanation: '$\\sum n^2/2^n$: Ratio $L = \\lim \\frac{(n+1)^2}{2n^2} = 1/2 < 1$. $\\sum |a_n|$ converges, so the series is absolutely convergent. The $2^n$ outgrows $n^2$, so the terms go to $0$.'
           }
         ]
       }
@@ -80,25 +80,25 @@ $$\\boxed{\\text{Flowchart: Div Test} \\to \\text{Recognizable} \\to \\text{Alte
       exercise: {
         dropdowns: [
           {
-            label: '$\\sum_{n=1}^{\\infty} \\frac{(2n)!}{(n!)^2 4^n}$:',
-            options: ['Ratio Test (double factorial → ratio simplifies nicely)', 'Root Test', 'LCT', 'Integral Test'],
-            correctAnswers: ['Ratio Test (double factorial → ratio simplifies nicely)'],
-            hints: ['Factorials signal Ratio Test. $\\frac{a_{n+1}}{a_n} = \\frac{(2n+2)(2n+1)}{4(n+1)^2}$.'],
-            explanation: 'Ratio: $L = \\lim \\frac{(2n+2)(2n+1)}{4(n+1)^2} = \\lim \\frac{4n^2+6n+2}{4n^2+8n+4} = 1$. Inconclusive! (This is actually $\\sum \\binom{2n}{n}/4^n \\sim 1/\\sqrt{\\pi n}$, diverges.)'
+            label: '$\\sum_{n=1}^{\\infty} \\frac{(n!)^2}{(2n)!}$:',
+            options: ['Ratio Test (factorials cancel cleanly)', 'Root Test', 'LCT with $\\sum 1/n$', 'Integral Test'],
+            correctAnswers: ['Ratio Test (factorials cancel cleanly)'],
+            hints: ['Factorials signal Ratio Test. $\\frac{a_{n+1}}{a_n} = \\frac{(n+1)^2}{(2n+2)(2n+1)}$.'],
+            explanation: 'Ratio: $\\frac{a_{n+1}}{a_n} = \\frac{(n+1)^2}{(2n+2)(2n+1)} = \\frac{n+1}{2(2n+1)} \\to \\frac{1}{4} < 1$. Converges. Factorials have no simple $n$th root and cannot be integrated, and against the divergent $\\sum 1/n$ the LCT limit is $0$, which proves nothing.'
           },
           {
             label: '$\\sum_{n=1}^{\\infty} \\frac{n}{e^n}$:',
-            options: ['Ratio Test ($L = 1/e < 1$, converges)', 'LCT with $\\sum 1/n$', 'Divergence Test', 'AST'],
+            options: ['Ratio Test ($L = 1/e < 1$, converges)', 'LCT with $\\sum 1/n$ ($L = 0$, diverges)', 'Divergence Test ($a_n \\to 0$, converges)', 'Integral Test ($\\int x e^{-x}\\,dx$ diverges)'],
             correctAnswers: ['Ratio Test ($L = 1/e < 1$, converges)'],
             hints: ['Exponential in denominator → Ratio Test.'],
-            explanation: 'Ratio: $L = \\lim \\frac{n+1}{en} = 1/e < 1$. Converges.'
+            explanation: 'Ratio: $L = \\lim \\frac{n+1}{en} = 1/e < 1$. Converges. Against $\\sum 1/n$ the LCT limit is $0$, which says nothing about a divergent comparison; $\\int_1^\\infty xe^{-x}\\,dx = 2/e$ is finite; and $a_n \\to 0$ alone never proves convergence.'
           },
           {
-            label: '$\\sum_{n=1}^{\\infty} \\frac{3n+2}{n^3-1}$:',
-            options: ['LCT with $\\sum 1/n^2$ ($L = 3$, both converge)', 'Ratio Test', 'Root Test', 'AST'],
+            label: '$\\sum_{n=2}^{\\infty} \\frac{3n+2}{n^3-1}$:',
+            options: ['LCT with $\\sum 1/n^2$ ($L = 3$, both converge)', 'Ratio Test ($L = 1$, converges)', 'LCT with $\\sum 1/n$ ($L = 3$, both diverge)', 'DCT with $\\sum 3/n^2$ (so it converges)'],
             correctAnswers: ['LCT with $\\sum 1/n^2$ ($L = 3$, both converge)'],
             hints: ['Leading terms: $3n/n^3 = 3/n^2$. Compare to $1/n^2$.'],
-            explanation: '$\\lim \\frac{(3n+2)/(n^3-1)}{1/n^2} = \\lim \\frac{3n^3+2n^2}{n^3-1} = 3 > 0$. Converges with $\\sum 1/n^2$.'
+            explanation: '$\\lim \\frac{(3n+2)/(n^3-1)}{1/n^2} = \\lim \\frac{3n^3+2n^2}{n^3-1} = 3 > 0$. Converges with $\\sum 1/n^2$. (The sum starts at $n = 2$ because $n^3 - 1 = 0$ at $n = 1$.) Against $\\sum 1/n$ the limit is $0$, not $3$; and $a_n > 3/n^2$, so direct comparison with $\\sum 3/n^2$ proves nothing.'
           }
         ]
       }

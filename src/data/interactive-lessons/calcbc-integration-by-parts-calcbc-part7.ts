@@ -40,12 +40,12 @@ This final part tests your mastery of all IBP techniques: the basic formula, LIA
             question: 'The tabular method terminates when:',
             options: [
               'The differentiation column reaches 0',
-              'The integration column reaches 0',
-              'Both columns become constant',
-              'The signs stop alternating'
+              'The integration column eventually reaches 0',
+              'Both columns become constant at the same row',
+              'The alternating signs return to a plus sign'
             ],
             correctAnswer: 0,
-            explanation: 'The polynomial in the differentiation column eventually reaches 0, ending the table.'
+            explanation: 'The polynomial in the differentiation column eventually reaches 0, ending the table. The integration column never reaches 0 (it keeps producing $e^x$ or trig terms), and the sign pattern simply alternates every row.'
           },
           {
             question: 'In a cycling IBP problem like $\\int e^{ax}\\sin(bx)\\,dx$, the denominator in the final answer is:',

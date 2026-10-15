@@ -56,9 +56,9 @@ $$\\vec{r}(t) = \\langle t^2 - t + 3,\\, -e^{-t} + 6 \\rangle$$
           },
           {
             question: 'On the AP exam, for a calculator-active distance problem, which earns full credit?',
-            options: ['Writing the integral setup AND the numerical answer', 'Just the numerical answer', 'A Riemann sum approximation', 'The antiderivative in closed form'],
+            options: ['The integral setup plus its numerical value', 'The numerical answer alone, rounded to three decimals', 'A Riemann sum approximation with four subintervals', 'The antiderivative in closed form, then its value'],
             correctAnswer: 0,
-            explanation: 'Show the integral $\\int_a^b \\|\\vec{v}\\|\\,dt$ with specific limits and integrand, then give the calculator answer to 3 decimal places.'
+            explanation: 'Show the integral $\\int_a^b \\|\\vec{v}\\|\\,dt$ with specific limits and integrand, then give the calculator answer to 3 decimal places. A bare number earns no setup credit, and a closed-form antiderivative is usually impossible for a speed integral.'
           }
         ]
       }
@@ -78,10 +78,10 @@ $$\\vec{r}(t) = \\langle t^2 - t + 3,\\, -e^{-t} + 6 \\rangle$$
           },
           {
             label: 'The direction of motion changes when:',
-            options: ['A component of velocity changes sign', 'Speed is zero', 'Acceleration is zero', 'The curve intersects itself'],
+            options: ['A component of velocity changes sign', 'The speed reaches a minimum value', 'The acceleration vector is zero', 'The curve crosses over itself'],
             correctAnswers: ['A component of velocity changes sign'],
             hints: ['In 2D, the particle reverses direction along an axis when that velocity component changes sign.'],
-            explanation: 'If $x\'(t)$ changes sign, the horizontal direction reverses. If $y\'(t)$ changes sign, the vertical direction reverses.'
+            explanation: 'If $x\'(t)$ changes sign, the horizontal direction reverses. If $y\'(t)$ changes sign, the vertical direction reverses. Zero acceleration or a self-crossing reverses neither component, and a minimum of speed need not be a turning point.'
           }
         ]
       }

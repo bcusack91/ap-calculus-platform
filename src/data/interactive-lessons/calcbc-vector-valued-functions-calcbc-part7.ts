@@ -48,21 +48,21 @@ export const calcbcVectorsPart7Data = {
         questions: [
           {
             question: 'If $\\|\\vec{v}(t)\\|$ is constant and nonzero, which is true?',
-            options: ['$\\vec{a} \\cdot \\vec{v} = 0$ (acceleration perpendicular to velocity)', 'Acceleration is zero', 'The path is a straight line', 'Speed is increasing'],
+            options: ['$\\vec{a} \\cdot \\vec{v} = 0$ for all $t$', '$\\vec{a} = \\vec{0}$ for all $t$', 'The path is a straight line', 'The speed is increasing'],
             correctAnswer: 0,
-            explanation: '$\\frac{d}{dt}(\\vec{v}\\cdot\\vec{v}) = 2\\vec{v}\\cdot\\vec{a} = \\frac{d}{dt}(c^2) = 0$. So $\\vec{a} \\perp \\vec{v}$. (Uniform circular motion is a classic example.)'
+            explanation: '$\\frac{d}{dt}(\\vec{v}\\cdot\\vec{v}) = 2\\vec{v}\\cdot\\vec{a} = \\frac{d}{dt}(c^2) = 0$. So $\\vec{a} \\perp \\vec{v}$: the acceleration is perpendicular to the velocity. Uniform circular motion is a classic example, and it shows the acceleration need not be zero and the path need not be straight.'
           },
           {
             question: 'The displacement from $t = 0$ to $t = T$ equals $\\langle 0, 0 \\rangle$. This means:',
-            options: ['The particle returns to its starting point', 'The particle never moved', 'The speed was zero', 'The path was a straight line'],
+            options: ['The particle returns to its starting point', 'The particle was at rest the whole time', 'The total distance traveled was zero', 'The path was a straight line'],
             correctAnswer: 0,
-            explanation: 'Zero displacement means $\\vec{r}(T) = \\vec{r}(0)$: the particle is back where it started. It may have traveled a long distance (e.g., a full circle).'
+            explanation: 'Zero displacement means $\\vec{r}(T) = \\vec{r}(0)$: the particle is back where it started. It may have traveled a long distance (e.g., a full circle), so neither rest nor zero distance follows.'
           },
           {
             question: 'Which increases the total distance traveled?',
-            options: ['Higher speed over the interval', 'Higher acceleration', 'Starting farther from the origin', 'Moving in a straight line'],
+            options: ['Higher speed over the interval', 'Higher acceleration at the start', 'Starting farther from the origin', 'Moving in a straight line instead'],
             correctAnswer: 0,
-            explanation: 'Distance $= \\int \\|\\vec{v}\\|\\,dt$. Higher speed (larger $\\|\\vec{v}\\|$) directly increases the integral.'
+            explanation: 'Distance $= \\int \\|\\vec{v}\\|\\,dt$. Higher speed (larger $\\|\\vec{v}\\|$) directly increases the integral. Acceleration only matters through its effect on speed, and the starting point or shape of the path does not change $\\int \\|\\vec{v}\\|\\,dt$ by itself.'
           }
         ]
       }
@@ -75,17 +75,17 @@ export const calcbcVectorsPart7Data = {
         dropdowns: [
           {
             label: 'For $\\vec{r}(t) = \\langle t - \\sin t, 1 - \\cos t \\rangle$ (cycloid), the particle is at rest when:',
-            options: ['$t = 2k\\pi$ (multiples of $2\\pi$)', '$t = k\\pi$', '$t = \\pi/2 + k\\pi$', 'Never'],
-            correctAnswers: ['$t = 2k\\pi$ (multiples of $2\\pi$)'],
+            options: ['$t = 2k\\pi$', '$t = k\\pi$', '$t = \\pi/2 + k\\pi$', 'Never'],
+            correctAnswers: ['$t = 2k\\pi$'],
             hints: ['$\\vec{v} = \\langle 1 - \\cos t, \\sin t \\rangle = \\vec{0}$ when?'],
-            explanation: '$1 - \\cos t = 0 \\implies \\cos t = 1 \\implies t = 2k\\pi$. And $\\sin(2k\\pi) = 0$ ✓. Both components are zero at $t = 2k\\pi$.'
+            explanation: '$\\vec{v} = \\langle 1 - \\cos t, \\sin t \\rangle$. $1 - \\cos t = 0 \\implies \\cos t = 1 \\implies t = 2k\\pi$ (multiples of $2\\pi$). And $\\sin(2k\\pi) = 0$ ✓. Both components are zero at $t = 2k\\pi$. At odd multiples of $\\pi$, $\\sin t = 0$ but $1 - \\cos t = 2$, so the particle is moving.'
           },
           {
             label: 'If $\\vec{v}(t) = \\langle t^2, t \\rangle$, the total distance from $t = 0$ to $t = 1$ is:',
-            options: ['$\\int_0^1 \\sqrt{t^4 + t^2}\\,dt$', '$\\langle 1/3, 1/2 \\rangle$', '$\\sqrt{1/9 + 1/4}$', '$\\int_0^1(t^2 + t)\\,dt$'],
+            options: ['$\\int_0^1 \\sqrt{t^4 + t^2}\\,dt$', '$\\langle 1/3, 1/2 \\rangle$', '$\\sqrt{(1/3)^2 + (1/2)^2}$', '$\\int_0^1 \\sqrt{1 + t^4 + t^2}\\,dt$'],
             correctAnswers: ['$\\int_0^1 \\sqrt{t^4 + t^2}\\,dt$'],
             hints: ['Distance $= \\int \\|\\vec{v}\\|\\,dt$, not $\\int(|v_x|+|v_y|)\\,dt$.'],
-            explanation: '$\\|\\vec{v}\\| = \\sqrt{t^4 + t^2}$. Distance $= \\int_0^1 \\sqrt{t^4 + t^2}\\,dt = \\int_0^1 t\\sqrt{t^2+1}\\,dt$ (since $t \\ge 0$).'
+            explanation: '$\\|\\vec{v}\\| = \\sqrt{t^4 + t^2}$. Distance $= \\int_0^1 \\sqrt{t^4 + t^2}\\,dt = \\int_0^1 t\\sqrt{t^2+1}\\,dt$ (since $t \\ge 0$). $\\langle 1/3, 1/2 \\rangle$ is the displacement and its magnitude is the straight-line distance; the extra $1 +$ comes from mixing in the $y = f(x)$ arc length formula.'
           }
         ]
       }

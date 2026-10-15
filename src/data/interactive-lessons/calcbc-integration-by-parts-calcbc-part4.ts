@@ -97,10 +97,10 @@ $$\\boxed{\\int_1^e (\\ln x)^2\\,dx = e - 2}$$`
         dropdowns: [
           {
             label: 'For $\\int_0^2 x e^{-x}\\,dx$, with $u = x$ and $v = -e^{-x}$, the $[uv]_0^2$ term equals:',
-            options: ['$-2e^{-2}$', '$2e^{-2}$', '$-2e^{-2} - 0$', '$2e^{-2} + 0$'],
+            options: ['$-2e^{-2}$', '$2e^{-2}$', '$1 - e^{-2}$', '$-2e^{2}$'],
             correctAnswers: ['$-2e^{-2}$'],
             hints: ['$[x \\cdot (-e^{-x})]_0^2 = (-2e^{-2}) - (0 \\cdot (-1))$.'],
-            explanation: '$[uv]_0^2 = [-xe^{-x}]_0^2 = -2e^{-2} - 0 = -2e^{-2}$.'
+            explanation: '$[uv]_0^2 = [-xe^{-x}]_0^2 = -2e^{-2} - 0 = -2e^{-2}$. Dropping the factor $u = x$ gives $[-e^{-x}]_0^2 = 1 - e^{-2}$, and losing the sign of the exponent gives $-2e^{2}$.'
           },
           {
             label: 'Continuing: $\\int_0^2 xe^{-x}\\,dx = -2e^{-2} - \\int_0^2 (-e^{-x})\\,dx$. The final answer simplifies to:',

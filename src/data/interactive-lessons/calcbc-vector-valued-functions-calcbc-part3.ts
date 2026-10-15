@@ -77,10 +77,10 @@ This requires trig sub or a calculator. On the AP exam, a calculator-active sect
         dropdowns: [
           {
             label: 'If $\\vec{a}(t) = \\langle 0, -g \\rangle$ (projectile motion), then $\\vec{v}(t) = $',
-            options: ['$\\langle v_{0x},\\, v_{0y} - gt \\rangle$', '$\\langle -gt, 0 \\rangle$', '$\\langle 0, -gt \\rangle$', '$\\langle gt, -g \\rangle$'],
+            options: ['$\\langle v_{0x},\\, v_{0y} - gt \\rangle$', '$\\langle 0,\\, v_{0y} - gt \\rangle$', '$\\langle v_{0x},\\, v_{0y} + gt \\rangle$', '$\\langle v_{0x}t,\\, v_{0y}t - \\frac{1}{2}gt^2 \\rangle$'],
             correctAnswers: ['$\\langle v_{0x},\\, v_{0y} - gt \\rangle$'],
             hints: ['Integrate $\\vec{a}(t)$ and apply initial velocity.'],
-            explanation: '$\\vec{v}(t) = \\int \\langle 0, -g \\rangle\\,dt = \\langle C_1, -gt + C_2 \\rangle$. At $t = 0$: $\\vec{v}(0) = \\langle v_{0x}, v_{0y} \\rangle$, so $C_1 = v_{0x}$, $C_2 = v_{0y}$.'
+            explanation: '$\\vec{v}(t) = \\int \\langle 0, -g \\rangle\\,dt = \\langle C_1, -gt + C_2 \\rangle$. At $t = 0$: $\\vec{v}(0) = \\langle v_{0x}, v_{0y} \\rangle$, so $C_1 = v_{0x}$, $C_2 = v_{0y}$. Dropping the $x$-constant, flipping the sign of $gt$, or integrating a second time (which gives position, not velocity) are the usual slips.'
           },
           {
             label: '$\\int_0^3 \\langle 2t, 6t^2 \\rangle\\,dt$ equals:',

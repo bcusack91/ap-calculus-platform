@@ -54,11 +54,11 @@ $$\\boxed{\\int_0^1 \\frac{1}{x^p}\\,dx \\quad \\begin{cases} \\text{converges t
             options: [
               'Diverges because $p = 0.99 \\le 1$',
               'Converges because $p$ is close to $1$',
-              'Converges to $100$',
+              'Converges to $100$, since $\\frac{1}{1-p} = 100$',
               'Cannot determine without computing'
             ],
             correctAnswer: 0,
-            explanation: '$p = 0.99 \\le 1$, so the integral diverges by the $p$-test. Being close to $1$ does not help \u2014 the boundary is strict.'
+            explanation: '$p = 0.99 \\le 1$, so the integral diverges by the $p$-test. Being close to $1$ does not help, because the boundary is strict. The value $\\frac{1}{1-p} = 100$ is what $\\int_0^1 \\frac{1}{x^{0.99}}\\,dx$ equals, not this Type I integral.'
           },
           {
             question: '$\\int_0^{1} \\frac{1}{x^{0.99}}\\,dx$:',
@@ -66,10 +66,10 @@ $$\\boxed{\\int_0^1 \\frac{1}{x^p}\\,dx \\quad \\begin{cases} \\text{converges t
               'Converges because $p = 0.99 < 1$',
               'Diverges because $p = 0.99$ is close to $1$',
               'Same answer as $\\int_1^{\\infty} \\frac{1}{x^{0.99}}\\,dx$',
-              'Diverges because $p < 1$'
+              'Diverges because $p < 1$ on $[0, 1]$'
             ],
             correctAnswer: 0,
-            explanation: 'For Type II (on $[0,1]$), convergence requires $p < 1$. Since $0.99 < 1$, it converges. Note this is the opposite conclusion from the Type I version!'
+            explanation: 'For Type II (on $[0,1]$), convergence requires $p < 1$. Since $0.99 < 1$, it converges (to $\\frac{1}{1-0.99} = 100$). Note this is the opposite conclusion from the Type I version, so the Type I rule "$p \\le 1$ diverges" does not carry over.'
           }
         ]
       }
@@ -118,10 +118,10 @@ $$\\boxed{\\text{Exponential decay} \\gg \\text{polynomial decay} \\gg \\text{lo
           },
           {
             label: '$\\int_0^{\\infty} e^{-2x}\\,dx$:',
-            options: ['Converges to $1/2$', 'Converges to $2$', 'Diverges', 'Converges to $1$'],
+            options: ['Converges to $1/2$', 'Converges to $2$', 'Diverges', 'Converges to $-1/2$'],
             correctAnswers: ['Converges to $1/2$'],
             hints: ['$\\int_0^t e^{-2x}\\,dx = [-\\frac{1}{2}e^{-2x}]_0^t = -\\frac{1}{2}e^{-2t} + \\frac{1}{2}$.'],
-            explanation: 'As $t \\to \\infty$: $-\\frac{1}{2}e^{-2t} + \\frac{1}{2} \\to 0 + \\frac{1}{2} = \\frac{1}{2}$.'
+            explanation: 'As $t \\to \\infty$: $-\\frac{1}{2}e^{-2t} + \\frac{1}{2} \\to 0 + \\frac{1}{2} = \\frac{1}{2}$. Subtracting in the wrong order ($F(0) - F(t)$) gives $-\\frac{1}{2}$.'
           }
         ]
       }

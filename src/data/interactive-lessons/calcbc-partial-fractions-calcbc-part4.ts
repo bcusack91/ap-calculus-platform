@@ -70,22 +70,22 @@ $$\\boxed{\\int \\frac{1}{x^2-4}\\,dx = \\frac{1}{4}\\ln\\left|\\frac{x-2}{x+2}\
             options: [
               '$\\frac{1}{3}\\ln\\left|\\frac{x-1}{x+2}\\right| + C$',
               '$\\frac{1}{2}\\ln|x^2+x-2| + C$',
-              '$\\arctan(x+\\frac{1}{2}) + C$',
-              '$\\ln|x-1| - \\ln|x+2| + C$'
+              '$\\frac{1}{3}\\ln|(x-1)(x+2)| + C$',
+              '$\\ln\\left|\\frac{x-1}{x+2}\\right| + C$'
             ],
             correctAnswer: 0,
-            explanation: 'Factor: $(x-1)(x+2)$. $A = \\frac{1}{1+2} = \\frac{1}{3}$, $B = \\frac{1}{-2-1} = -\\frac{1}{3}$. Result: $\\frac{1}{3}\\ln|x-1| - \\frac{1}{3}\\ln|x+2| + C = \\frac{1}{3}\\ln\\left|\\frac{x-1}{x+2}\\right| + C$.'
+            explanation: 'Factor: $(x-1)(x+2)$. $A = \\frac{1}{1+2} = \\frac{1}{3}$, $B = \\frac{1}{-2-1} = -\\frac{1}{3}$. Result: $\\frac{1}{3}\\ln|x-1| - \\frac{1}{3}\\ln|x+2| + C = \\frac{1}{3}\\ln\\left|\\frac{x-1}{x+2}\\right| + C$. Dropping the $\\frac{1}{3}$, using $+\\frac{1}{3}$ for $B$ (which gives the log of the product), or treating the integrand as $\\frac{u\'}{u}$ gives the other answers.'
           },
           {
             question: '$\\int_2^4 \\frac{1}{x^2-1}\\,dx$ in terms of $\\ln$:',
             options: [
-              '$\\frac{1}{2}\\ln\\frac{5}{3}$',
-              '$\\ln 3$',
-              '$\\frac{1}{2}\\ln 5$',
-              '$\\ln\\frac{3}{5}$'
+              '$\\frac{1}{2}\\ln\\frac{9}{5}$',
+              '$\\ln\\frac{9}{5}$',
+              '$\\frac{1}{2}\\ln\\frac{3}{5}$',
+              '$\\frac{1}{2}\\ln\\frac{5}{9}$'
             ],
             correctAnswer: 0,
-            explanation: '$\\frac{1}{2}[\\ln|x-1| - \\ln|x+1|]_2^4 = \\frac{1}{2}[(\\ln 3 - \\ln 5) - (\\ln 1 - \\ln 3)] = \\frac{1}{2}[\\ln 3 - \\ln 5 + \\ln 3] = \\frac{1}{2}\\ln\\frac{9}{5}$. Wait: let me recheck. $= \\frac{1}{2}(\\ln 3 - \\ln 5 - 0 + \\ln 3) = \\frac{1}{2}(2\\ln 3 - \\ln 5) = \\ln 3 - \\frac{1}{2}\\ln 5 = \\frac{1}{2}\\ln\\frac{9}{5}$. Actually the answer should be $\\frac{1}{2}\\ln\\frac{9}{5}$.'
+            explanation: '$\\frac{1}{x^2-1} = \\frac{1/2}{x-1} - \\frac{1/2}{x+1}$, so the antiderivative is $\\frac{1}{2}\\ln\\left|\\frac{x-1}{x+1}\\right|$. Then $\\frac{1}{2}\\left[\\ln\\frac{3}{5} - \\ln\\frac{1}{3}\\right] = \\frac{1}{2}\\ln\\frac{9}{5}$. Forgetting the $\\frac{1}{2}$ gives $\\ln\\frac{9}{5}$, evaluating only the upper limit gives $\\frac{1}{2}\\ln\\frac{3}{5}$, and swapping the signs of $A$ and $B$ gives $\\frac{1}{2}\\ln\\frac{5}{9}$.'
           }
         ]
       }
@@ -98,17 +98,17 @@ $$\\boxed{\\int \\frac{1}{x^2-4}\\,dx = \\frac{1}{4}\\ln\\left|\\frac{x-2}{x+2}\
         dropdowns: [
           {
             label: 'To integrate $\\frac{2x+3}{x^2+3x+2}$, the first step is:',
-            options: ['Factor the denominator', 'Complete the square', 'Use u-substitution', 'Apply IBP'],
+            options: ['Factor the denominator', 'Complete the square', 'Use long division', 'IBP with $u = 2x+3$'],
             correctAnswers: ['Factor the denominator'],
             hints: ['$x^2 + 3x + 2 = (x+1)(x+2)$. Distinct linear factors!'],
-            explanation: 'Factor first: $(x+1)(x+2)$. Then decompose: $\\frac{A}{x+1} + \\frac{B}{x+2}$.'
+            explanation: 'Factor first: $(x+1)(x+2)$. Then decompose: $\\frac{A}{x+1} + \\frac{B}{x+2}$. Long division is not needed because the numerator has lower degree than the denominator.'
           },
           {
             label: 'For the same integral, notice that $2x + 3 = \\frac{d}{dx}(x^2+3x+2)$. An alternative approach is:',
-            options: ['u-substitution directly', 'Partial fractions only', 'Neither works', 'IBP'],
+            options: ['u-substitution directly', 'Partial fractions only', 'Complete the square', 'IBP with $u = 2x+3$'],
             correctAnswers: ['u-substitution directly'],
             hints: ['If the numerator is the derivative of the denominator, $\\int \\frac{f\'(x)}{f(x)}\\,dx = \\ln|f(x)| + C$.'],
-            explanation: 'Since $2x+3$ is exactly the derivative of $x^2+3x+2$, the integral is simply $\\ln|x^2+3x+2| + C$. Partial fractions is unnecessary here!'
+            explanation: 'Since $2x+3$ is exactly the derivative of $x^2+3x+2$, the integral is simply $\\ln|x^2+3x+2| + C$. Partial fractions is unnecessary here! Completing the square does not lead to an arctan form, because $x^2+3x+2$ has real roots.'
           }
         ]
       }

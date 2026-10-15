@@ -54,9 +54,9 @@ $$\\sum_{n=1}^\\infty \\frac{1}{n(n+2)} = \\frac{1}{2}\\left(\\frac{3}{2}\\right
         questions: [
           {
             question: '$\\sum_{n=1}^\\infty \\frac{1}{n^{0.99}}$:',
-            options: ['Diverges ($p = 0.99 \\le 1$)', 'Converges ($p$ is close to $1$)', 'Converges (terms go to $0$)', 'Cannot be determined'],
+            options: ['Diverges ($p = 0.99 \\le 1$)', 'Converges ($p$ is close to $1$)', 'Converges (its terms go to $0$)', 'Cannot be determined by the $p$-test'],
             correctAnswer: 0,
-            explanation: '$p = 0.99 < 1$, so the $p$-series diverges. Being "close to $1$" from below is not enough. The boundary is sharp.'
+            explanation: '$p = 0.99 < 1$, so the $p$-series diverges. Being "close to $1$" from below is not enough, because the boundary is sharp. Terms going to $0$ never proves convergence.'
           },
           {
             question: '$\\sum_{n=1}^\\infty \\left(\\frac{1}{n} - \\frac{1}{n+1}\\right) = $',
@@ -75,17 +75,17 @@ $$\\sum_{n=1}^\\infty \\frac{1}{n(n+2)} = \\frac{1}{2}\\left(\\frac{3}{2}\\right
         dropdowns: [
           {
             label: '$\\sum_{n=1}^\\infty \\frac{1}{n^{3/2}}$ is a $p$-series with $p = 3/2$. It:',
-            options: ['Converges (since $3/2 > 1$)', 'Diverges', 'Cannot be determined', 'Equals $\\pi^2/6$'],
+            options: ['Converges (since $3/2 > 1$)', 'Diverges (since $3/2 < 2$)', 'Cannot be determined', 'Converges to $\\pi^2/6$'],
             correctAnswers: ['Converges (since $3/2 > 1$)'],
             hints: ['$p$-series converges iff $p > 1$.'],
-            explanation: '$p = 3/2 > 1$, so the series converges. (The exact sum has no simple closed form.)'
+            explanation: '$p = 3/2 > 1$, so the series converges. (The exact sum has no simple closed form.) The $p$-series cutoff is $p > 1$, not $p \\ge 2$, and $\\pi^2/6$ is the sum for $p = 2$.'
           },
           {
             label: 'To sum $\\sum \\frac{1}{n(n+1)}$, first use:',
-            options: ['Partial fractions: $\\frac{1}{n} - \\frac{1}{n+1}$', 'The ratio test', 'Integration', 'The $n$th term test'],
-            correctAnswers: ['Partial fractions: $\\frac{1}{n} - \\frac{1}{n+1}$'],
+            options: ['Partial fractions', 'The ratio test', 'Integration', 'The $n$th term test'],
+            correctAnswers: ['Partial fractions'],
             hints: ['This is a classic telescoping series.'],
-            explanation: '$\\frac{1}{n(n+1)} = \\frac{1}{n} - \\frac{1}{n+1}$. Then $S_N = 1 - \\frac{1}{N+1} \\to 1$.'
+            explanation: 'Partial fractions give $\\frac{1}{n(n+1)} = \\frac{1}{n} - \\frac{1}{n+1}$, so the series telescopes: $S_N = 1 - \\frac{1}{N+1} \\to 1$.'
           }
         ]
       }

@@ -65,9 +65,9 @@ At $t = 2$: $\\frac{d^2y}{dx^2} = \\frac{15}{32}$ (concave up since positive).`
           },
           {
             question: 'For $x = \\cos t$, $y = \\sin t$, $\\frac{d^2y}{dx^2}$ at $t = \\pi/4$ equals:',
-            options: ['$-\\sqrt{2}$', '$-1$', '$1$', '$\\sqrt{2}$'],
+            options: ['$-2\\sqrt{2}$', '$-\\sqrt{2}$', '$2$', '$2\\sqrt{2}$'],
             correctAnswer: 0,
-            explanation: '$dy/dx = \\frac{\\cos t}{-\\sin t} = -\\cot t$. $\\frac{d}{dt}(-\\cot t) = \\csc^2 t$. $\\frac{d^2y}{dx^2} = \\frac{\\csc^2 t}{-\\sin t} = -\\csc^3 t$. At $t=\\pi/4$: $-\\csc^3(\\pi/4) = -(\\sqrt{2})^3 = -2\\sqrt{2}$.'
+            explanation: '$dy/dx = \\frac{\\cos t}{-\\sin t} = -\\cot t$. $\\frac{d}{dt}(-\\cot t) = \\csc^2 t$. Then divide by $dx/dt = -\\sin t$: $\\frac{d^2y}{dx^2} = \\frac{\\csc^2 t}{-\\sin t} = -\\csc^3 t$. At $t=\\pi/4$: $-(\\sqrt{2})^3 = -2\\sqrt{2}$. Stopping at $\\csc^2 t$ gives $2$, multiplying by $dx/dt$ instead of dividing gives $-\\sqrt{2}$, and dividing by $+\\sin t$ gives $2\\sqrt{2}$.'
           }
         ]
       }
@@ -98,17 +98,17 @@ $$\\boxed{y + 1 = \\frac{1}{2}(x - 0) \\implies y = \\frac{x}{2} - 1}$$
         dropdowns: [
           {
             label: '$x = t^2$, $y = t^3$ at $t = 0$:',
-            options: ['Cusp (both $dx/dt$ and $dy/dt$ are $0$)', 'Horizontal tangent', 'Vertical tangent', 'Slope = $1$'],
-            correctAnswers: ['Cusp (both $dx/dt$ and $dy/dt$ are $0$)'],
+            options: ['Cusp (both derivatives are $0$)', 'Smooth point with slope $3/2$ there', 'Vertical tangent (only $dx/dt$ is $0$)', 'Endpoint of the curve, so no tangent'],
+            correctAnswers: ['Cusp (both derivatives are $0$)'],
             hints: ['$dx/dt = 2t = 0$ and $dy/dt = 3t^2 = 0$ at $t = 0$.'],
-            explanation: 'When both derivatives are $0$, we have an indeterminate form. $\\lim_{t\\to 0} \\frac{3t^2}{2t} = 0$: the tangent is horizontal, but it\u2019s a cusp point.'
+            explanation: '$dx/dt = 2t$ and $dy/dt = 3t^2$ are both $0$ at $t = 0$, so we have an indeterminate form. $\\lim_{t\\to 0} \\frac{3t^2}{2t} = \\lim_{t\\to 0}\\frac{3t}{2} = 0$: the tangent direction is horizontal, but it’s a cusp point. The curve is not an endpoint, since $t < 0$ continues it on the other side.'
           },
           {
             label: '$x = \\cos t$, $y = 2\\sin t$ at $t = \\pi/2$:',
-            options: ['Vertical tangent ($dx/dt = 0$, $dy/dt \\ne 0$)', 'Horizontal tangent', 'Slope = $2$', 'No tangent'],
-            correctAnswers: ['Vertical tangent ($dx/dt = 0$, $dy/dt \\ne 0$)'],
+            options: ['Horizontal tangent ($dy/dt = 0$, $dx/dt \\ne 0$)', 'Vertical tangent ($dx/dt = 0$, $dy/dt \\ne 0$)', 'Slope = $2$', 'No tangent'],
+            correctAnswers: ['Horizontal tangent ($dy/dt = 0$, $dx/dt \\ne 0$)'],
             hints: ['$dx/dt = -\\sin t = -1$ at $t=\\pi/2$... wait, that\u2019s not $0$.'],
-            explanation: 'Actually $dx/dt = -\\sin(\\pi/2) = -1 \\ne 0$ and $dy/dt = 2\\cos(\\pi/2) = 0$. So this is a horizontal tangent! The slope is $0/(-1) = 0$.'
+            explanation: '$dx/dt = -\\sin(\\pi/2) = -1 \\ne 0$ and $dy/dt = 2\\cos(\\pi/2) = 0$, so this is a horizontal tangent. The slope is $0/(-1) = 0$. (A vertical tangent needs $dx/dt = 0$ with $dy/dt \\ne 0$, which happens at $t = 0$ and $t = \\pi$.)'
           }
         ]
       }

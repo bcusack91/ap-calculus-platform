@@ -30,12 +30,12 @@ This part is a mixed-practice workshop. Every problem requires identifying the c
             question: '$\\int x^2 \\sin x\\,dx = $',
             options: [
               '$-x^2\\cos x + 2x\\sin x + 2\\cos x + C$',
-              '$x^2\\cos x + 2x\\sin x + C$',
-              '$-x^2\\cos x + 2\\sin x + C$',
-              '$x^2\\sin x - 2x\\cos x + C$'
+              '$-x^2\\cos x + 2x\\sin x - 2\\cos x + C$',
+              '$-x^2\\cos x - 2x\\sin x + 2\\cos x + C$',
+              '$-x^2\\cos x + 2x\\sin x + C$'
             ],
             correctAnswer: 0,
-            explanation: 'Tabular: $+x^2(-\\cos x) - 2x(-\\sin x) + 2(\\cos x) = -x^2\\cos x + 2x\\sin x + 2\\cos x + C$.'
+            explanation: 'Tabular: $+x^2(-\\cos x) - 2x(-\\sin x) + 2(\\cos x) = -x^2\\cos x + 2x\\sin x + 2\\cos x + C$. A minus on the last term or on the middle term comes from losing track of the alternating signs, and stopping at two terms skips the constant row $2$.'
           },
           {
             question: '$\\int x^2\\ln x\\,dx = $',
@@ -108,7 +108,7 @@ This part is a mixed-practice workshop. Every problem requires identifying the c
           },
           {
             label: '$\\int \\arctan(\\sqrt{x})\\,dx$ starts with:',
-            options: ['$u = \\arctan(\\sqrt{x})$, $dv = dx$', '$u = \\sqrt{x}$, $dv = \\arctan\\,dx$', 'u-substitution first, then IBP'],
+            options: ['Tabular IBP with $u = \\arctan(\\sqrt{x})$', '$u = \\sqrt{x}$, $dv = \\arctan\\,dx$', 'u-substitution first, then IBP'],
             correctAnswers: ['u-substitution first, then IBP'],
             hints: ['The $\\sqrt{x}$ inside $\\arctan$ suggests substituting $t = \\sqrt{x}$ first.'],
             explanation: 'Let $t = \\sqrt{x}$, $x = t^2$, $dx = 2t\\,dt$. Then $\\int 2t\\arctan t\\,dt$, which is standard IBP.'

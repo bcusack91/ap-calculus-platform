@@ -40,9 +40,9 @@ $$\\boxed{\\text{Absolute convergence} \\implies \\text{Convergence} \\implies a
           },
           {
             question: 'If $\\sum a_n$ converges conditionally, then:',
-            options: ['$\\sum |a_n|$ diverges', '$\\sum |a_n|$ converges', '$a_n > 0$ for all $n$', '$\\lim a_n \\neq 0$'],
+            options: ['$\\sum |a_n|$ diverges', '$\\sum |a_n|$ converges', '$a_n > 0$ for every $n$', '$\\lim_{n\\to\\infty} a_n \\neq 0$'],
             correctAnswer: 0,
-            explanation: 'By definition, conditional convergence means $\\sum a_n$ converges but $\\sum |a_n|$ diverges.'
+            explanation: 'By definition, conditional convergence means $\\sum a_n$ converges but $\\sum |a_n|$ diverges. Since $\\sum a_n$ converges, $a_n \\to 0$, and the terms cannot all be positive (then the series would converge absolutely).'
           },
           {
             question: 'The Integral Test requires $f$ to be all EXCEPT:',
@@ -52,9 +52,9 @@ $$\\boxed{\\text{Absolute convergence} \\implies \\text{Convergence} \\implies a
           },
           {
             question: '$\\sum_{n=1}^\\infty \\frac{(-1)^{n+1} n^2}{n^3 + 1}$. This series:',
-            options: ['Diverges', 'Converges absolutely', 'Converges conditionally', 'Cannot determine'],
-            correctAnswer: 0,
-            explanation: '$|a_n| = n^2/(n^3+1) \\sim 1/n \\to 0$, but the Divergence Test isn\'t triggered. However, $b_n = n^2/(n^3+1)$ IS decreasing and $\\to 0$, so by AST it converges. Then $\\sum |a_n|$ diverges by LCT with $1/n$. Wait — but actually we need to check more carefully. $a_n \\to 0$, AST conditions met, so it converges conditionally. Actually, $|a_n| \\sim 1/n$, so this diverges by comparison? No — the original series has alternating signs so AST applies. $\\sum |a_n|$ diverges, so it\'s conditionally convergent. Let me reconsider the intended answer: $a_n = (-1)^{n+1}n^2/(n^3+1)$, $|a_n| \\to 0$, $b_n$ is eventually decreasing → converges by AST. $\\sum|a_n|$ diverges (LCT with $1/n$). This is CONDITIONALLY convergent.'
+            options: ['Diverges (LCT with $1/n$)', 'Converges absolutely', 'Converges conditionally', 'Diverges by the $n$th term test'],
+            correctAnswer: 2,
+            explanation: 'Let $b_n = \\frac{n^2}{n^3+1}$. Then $b_n \\to 0$ and $b_n$ is decreasing ($b_1 = \\frac{1}{2}$, $b_2 = \\frac{4}{9}$, and the derivative of $\\frac{x^2}{x^3+1}$ is negative for $x \\ge 2$), so the series converges by the Alternating Series Test. But $\\sum b_n$ diverges by LCT with $\\frac{1}{n}$ ($L = 1$), so the convergence is not absolute. The series is conditionally convergent. LCT with $\\frac{1}{n}$ shows only that $\\sum |a_n|$ diverges, and the $n$th term test does not apply because $a_n \\to 0$.'
           }
         ]
       }
@@ -67,15 +67,15 @@ $$\\boxed{\\text{Absolute convergence} \\implies \\text{Convergence} \\implies a
         questions: [
           {
             question: '$\\sum_{n=1}^\\infty \\frac{2^n n!}{n^n}$. Apply the Ratio Test. The series:',
-            options: ['Converges ($L = 2/e < 1$)', 'Diverges ($L > 1$)', 'Inconclusive ($L = 1$)', 'Converges ($L = 0$)'],
+            options: ['Converges ($L = 2/e < 1$)', 'Diverges ($L = 2e > 1$)', 'Diverges ($L = 2 > 1$)', 'Inconclusive ($L = 1$)'],
             correctAnswer: 0,
-            explanation: '$\\frac{a_{n+1}}{a_n} = \\frac{2(n+1)! n^n}{(n+1)^{n+1} n!} = \\frac{2n^n}{(n+1)^n} = 2\\left(\\frac{n}{n+1}\\right)^n \\to 2/e \\approx 0.736$. Since $L = 2/e < 1$, converges.'
+            explanation: '$\\frac{a_{n+1}}{a_n} = \\frac{2(n+1)! n^n}{(n+1)^{n+1} n!} = \\frac{2n^n}{(n+1)^n} = 2\\left(\\frac{n}{n+1}\\right)^n \\to 2/e \\approx 0.736$. Since $L = 2/e < 1$, it converges. Treating $\\left(\\frac{n}{n+1}\\right)^n$ as $e$ instead of $\\frac{1}{e}$ gives $2e$, and treating it as $1$ gives $2$.'
           },
           {
             question: 'A student says "$\\sum 1/n$ diverges because the Ratio Test gives $L = 1$." Is this correct?',
-            options: ['No — $L = 1$ is inconclusive; $\\sum 1/n$ diverges by other tests', 'Yes — $L = 1$ proves divergence', 'No — $\\sum 1/n$ actually converges', 'Yes — the Ratio Test always works'],
+            options: ['No, since $L = 1$ is inconclusive', 'Yes, since $L = 1$ proves divergence', 'No, since $\\sum 1/n$ actually converges', 'Yes, since the Ratio Test always decides'],
             correctAnswer: 0,
-            explanation: 'The Ratio Test is inconclusive when $L = 1$. The harmonic series diverges, but you need the Integral Test, $p$-series, or comparison to prove it.'
+            explanation: 'The Ratio Test is inconclusive when $L = 1$. The harmonic series does diverge, but you need the Integral Test, the $p$-series test, or a comparison to prove it.'
           }
         ]
       }
@@ -88,17 +88,17 @@ $$\\boxed{\\text{Absolute convergence} \\implies \\text{Convergence} \\implies a
         dropdowns: [
           {
             label: '$\\sum_{n=1}^\\infty \\frac{(-1)^n}{n^{\\pi}}$:',
-            options: ['Absolutely convergent ($\\pi > 1$)', 'Conditionally convergent', 'Divergent'],
-            correctAnswers: ['Absolutely convergent ($\\pi > 1$)'],
+            options: ['Absolutely convergent', 'Conditionally convergent', 'Divergent'],
+            correctAnswers: ['Absolutely convergent'],
             hints: ['$\\pi \\approx 3.14$. What kind of series is $\\sum 1/n^\\pi$?'],
             explanation: '$\\sum 1/n^\\pi$ converges ($p$-series with $p = \\pi > 1$). Absolute convergence.'
           },
           {
             label: '$\\sum_{n=1}^\\infty \\frac{n!}{(2n)!}$:',
-            options: ['Converges (Ratio Test)', 'Diverges (Ratio Test)', 'Inconclusive'],
-            correctAnswers: ['Converges (Ratio Test)'],
+            options: ['Converges (Ratio Test gives $L = 0$)', 'Diverges (Ratio Test gives $L = \\infty$)', 'Inconclusive (Ratio Test gives $L = 1$)'],
+            correctAnswers: ['Converges (Ratio Test gives $L = 0$)'],
             hints: ['$a_{n+1}/a_n = (n+1)!/((2n+2)!) \\cdot (2n)!/n! = (n+1)/((2n+2)(2n+1))$.'],
-            explanation: '$|a_{n+1}/a_n| = (n+1)/((2n+2)(2n+1)) = 1/(2(2n+1)) \\to 0$. Converges.'
+            explanation: '$|a_{n+1}/a_n| = (n+1)/((2n+2)(2n+1)) = 1/(2(2n+1)) \\to 0$. Converges. Inverting the ratio ($a_n/a_{n+1}$) gives $L = \\infty$, a common slip.'
           }
         ]
       }

@@ -72,15 +72,15 @@ $$\\boxed{\\int \\frac{du}{a^2 + u^2} = \\frac{1}{a}\\arctan\\frac{u}{a} + C}$$
           },
           {
             question: 'Which method is BEST for $\\int x^2 e^x\\,dx$?',
-            options: ['Integration by parts (applied twice or tabular)', '$u$-substitution with $u = x^2$', 'Partial fractions', '$u$-substitution with $u = e^x$'],
+            options: ['Integration by parts, twice', '$u$-substitution with $u = x^2$', 'Trig substitution with $x = \\tan\\theta$', '$u$-substitution with $u = e^x$'],
             correctAnswer: 0,
-            explanation: 'Product of polynomial and exponential → integration by parts. Need two applications (or tabular method).'
+            explanation: 'Product of polynomial and exponential → integration by parts. You need two applications (or the tabular method). Neither $u = x^2$ nor $u = e^x$ leaves a matching $du$ factor.'
           },
           {
             question: '$\\int \\frac{5x + 3}{x^2 + 3x + 2}\\,dx$. The first step is:',
-            options: ['Factor denominator: $(x+1)(x+2)$, then partial fractions', 'Complete the square', '$u$-substitution with $u = x^2 + 3x + 2$', 'Integration by parts'],
+            options: ['Factor, then use partial fractions', 'Complete the square and use an arctan formula', '$u$-substitution with $u = x^2 + 3x + 2$', 'Integration by parts with $u = 5x + 3$'],
             correctAnswer: 0,
-            explanation: 'Rational function with factorable denominator → partial fractions.'
+            explanation: 'The denominator factors as $(x+1)(x+2)$, so the rational function goes to partial fractions. The numerator $5x+3$ is not a multiple of the denominator\'s derivative $2x+3$, so a direct $u$-substitution fails, and completing the square is only needed for an irreducible quadratic.'
           }
         ]
       }
@@ -93,17 +93,17 @@ $$\\boxed{\\int \\frac{du}{a^2 + u^2} = \\frac{1}{a}\\arctan\\frac{u}{a} + C}$$
         dropdowns: [
           {
             label: '$\\int \\frac{dx}{\\sqrt{16 - x^2}}$ is an inverse trig integral with $a =$',
-            options: ['$4$ (so the answer is $\\arcsin(x/4) + C$)', '$16$', '$2$', '$\\sqrt{16}$... which is also $4$'],
-            correctAnswers: ['$4$ (so the answer is $\\arcsin(x/4) + C$)'],
+            options: ['$4$', '$16$', '$8$', '$\\frac{1}{4}$'],
+            correctAnswers: ['$4$'],
             hints: ['$\\sqrt{a^2 - x^2}$ with $a^2 = 16$.'],
-            explanation: '$a = 4$. $\\int du/\\sqrt{16-u^2} = \\arcsin(u/4) + C$.'
+            explanation: '$a^2 = 16$, so $a = 4$ (not $16$, and not $16/2$). $\\int du/\\sqrt{16-u^2} = \\arcsin(u/4) + C$; the $\\frac{1}{4}$ appears inside the arcsine, but $a$ itself is $4$.'
           },
           {
             label: 'For $\\int \\frac{x^3}{x-1}\\,dx$, since $\\deg(\\text{num}) > \\deg(\\text{den})$, you should first:',
-            options: ['Perform polynomial long division', 'Use partial fractions directly', 'Substitute $u = x - 1$', 'Use integration by parts'],
+            options: ['Perform polynomial long division', 'Use partial fractions directly', 'Integrate each factor alone', 'Use integration by parts'],
             correctAnswers: ['Perform polynomial long division'],
             hints: ['When the degree of the numerator ≥ degree of denominator, divide first.'],
-            explanation: '$x^3/(x-1) = x^2 + x + 1 + 1/(x-1)$. Then integrate term by term.'
+            explanation: '$x^3/(x-1) = x^2 + x + 1 + 1/(x-1)$. Then integrate term by term. The integral of a product is not the product of integrals, so $x^3$ and $\\frac{1}{x-1}$ cannot be integrated separately.'
           }
         ]
       }

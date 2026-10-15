@@ -53,9 +53,9 @@ $$\\lim_{t \\to c} \\vec{r}(t) = \\left\\langle \\lim_{t \\to c} x(t),\\; \\lim_
         questions: [
           {
             question: 'The vector-valued function $\\vec{r}(t) = \\langle 3\\cos t, 3\\sin t \\rangle$ traces:',
-            options: ['A circle of radius 3 centered at the origin', 'A line with slope 1', 'An ellipse', 'A parabola'],
+            options: ['A circle of radius 3 centered at the origin', 'A circle of radius 9 at the origin', 'Only the upper semicircle of radius 3', 'A circle of radius 3 centered at $(3, 0)$'],
             correctAnswer: 0,
-            explanation: '$x^2 + y^2 = 9\\cos^2 t + 9\\sin^2 t = 9$. This is a circle of radius 3.'
+            explanation: '$x^2 + y^2 = 9\\cos^2 t + 9\\sin^2 t = 9$, so the radius is $\\sqrt{9} = 3$ and the center is the origin. With no restriction on $t$, the whole circle is traced, not just the upper half.'
           },
           {
             question: 'If $\\vec{r}(t) = \\langle t^2 - 1, 2t + 3 \\rangle$, what is $\\vec{r}(2)$?',

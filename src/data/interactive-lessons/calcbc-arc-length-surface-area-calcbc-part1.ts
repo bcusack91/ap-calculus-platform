@@ -57,15 +57,15 @@ $$L = \\int_1^e \\left(\\frac{x}{2} + \\frac{1}{2x}\\right)dx = \\left[\\frac{x^
           },
           {
             question: 'For $y = \\sin x$, the arc length from $0$ to $\\pi$ equals $\\int_0^\\pi \\sqrt{1 + \\cos^2 x}\\,dx$. This integral:',
-            options: ['Has no elementary antiderivative', 'Equals $\\pi\\sqrt{2}$', 'Equals $2$', 'Equals $\\pi$'],
+            options: ['Has no elementary antiderivative', 'Equals $\\pi\\sqrt{2}$, since $1 + \\cos^2 x = 2$', 'Equals $2$, since $\\int_0^\\pi \\sin x\\,dx = 2$', 'Equals $\\pi$, as the $\\cos^2 x$ term averages out'],
             correctAnswer: 0,
-            explanation: '$\\int\\sqrt{1+\\cos^2 x}\\,dx$ is an elliptic integral — no closed-form antiderivative. Calculator required.'
+            explanation: '$\\int\\sqrt{1+\\cos^2 x}\\,dx$ is an elliptic integral with no closed-form antiderivative, so a calculator is required (about $3.820$). $1 + \\cos^2 x$ is not constant, $2$ is the area under the curve, and the square root does not let the $\\cos^2 x$ term average away.'
           },
           {
             question: 'Which function is most likely to have an arc length that can be computed by hand?',
-            options: ['$y = x^{3/2}$', '$y = e^x$', '$y = \\tan x$', '$y = x^3$'],
+            options: ['$y = x^{3/2}$', '$y = e^x$', '$y = \\tan x$', '$y = x^{5/2}$'],
             correctAnswer: 0,
-            explanation: '$y = x^{3/2}$ gives $(y\')^2 = \\frac{9}{4}x$, leading to $\\int\\sqrt{1 + \\frac{9}{4}x}\\,dx$ which is a basic $u$-substitution.'
+            explanation: '$y = x^{3/2}$ gives $(y\')^2 = \\frac{9}{4}x$, leading to $\\int\\sqrt{1 + \\frac{9}{4}x}\\,dx$, which is a basic $u$-substitution. $y = x^{5/2}$ gives $\\sqrt{1 + \\frac{25}{4}x^3}$, and $e^x$ and $\\tan x$ also leave square roots with no elementary antiderivative.'
           }
         ]
       }
@@ -78,10 +78,10 @@ $$L = \\int_1^e \\left(\\frac{x}{2} + \\frac{1}{2x}\\right)dx = \\left[\\frac{x^
         dropdowns: [
           {
             label: 'Arc length is always _____ the straight-line distance between endpoints.',
-            options: ['Greater than or equal to', 'Less than', 'Equal to', 'Unrelated to'],
+            options: ['Greater than or equal to', 'Less than or equal to', 'Strictly greater than', 'Approximately equal to'],
             correctAnswers: ['Greater than or equal to'],
             hints: ['The shortest path between two points is a straight line.'],
-            explanation: '$L \\ge \\sqrt{(b-a)^2 + (f(b)-f(a))^2}$ with equality only when $f$ is linear (the curve IS the straight line).'
+            explanation: '$L \\ge \\sqrt{(b-a)^2 + (f(b)-f(a))^2}$ with equality only when $f$ is linear (the curve IS the straight line). So the arc can never be shorter, and strictly greater fails for a line.'
           },
           {
             label: 'The differential of arc length is $ds = $',

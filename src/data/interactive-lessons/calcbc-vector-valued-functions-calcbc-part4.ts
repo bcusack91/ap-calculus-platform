@@ -59,9 +59,9 @@ $\\|\\vec{r}\\,'(t)\\| = \\sqrt{9\\sin^2 t + 9\\cos^2 t} = 3$
           },
           {
             question: 'The unit tangent vector has magnitude:',
-            options: ['Always 1', 'Equal to the speed', 'Variable', 'Always greater than 1'],
+            options: ['Always 1', 'Equal to the speed', 'Variable, depending on $t$', 'Always greater than 1'],
             correctAnswer: 0,
-            explanation: 'By definition, $\\hat{T} = \\vec{r}\\,\'/\\|\\vec{r}\\,\'\\|$ is normalized to have unit length.'
+            explanation: 'By definition, $\\hat{T} = \\vec{r}\\,\'/\\|\\vec{r}\\,\'\\|$ is normalized to have unit length, so its magnitude is always 1 no matter how the speed changes.'
           }
         ]
       }
@@ -81,10 +81,10 @@ $\\|\\vec{r}\\,'(t)\\| = \\sqrt{9\\sin^2 t + 9\\cos^2 t} = 3$
           },
           {
             label: 'Arc length depends on:',
-            options: ['The parametrization (path and speed)', 'Only the shape of the curve', 'Only the speed', 'The acceleration'],
-            correctAnswers: ['The parametrization (path and speed)'],
+            options: ['The path traced, including any retracing', 'Only the two endpoints, like displacement', 'How fast the particle moves along the path', 'The acceleration of the particle on the path'],
+            correctAnswers: ['The path traced, including any retracing'],
             hints: ['Different parametrizations of the same curve can cover different portions.'],
-            explanation: 'The integral $\\int\\|\\vec{r}\\,\'\\|\\,dt$ depends on both the curve shape and how it is traversed. However, for the same path traversed once, the arc length is the same regardless of parametrization.'
+            explanation: '$L = \\int\\|\\vec{r}\\,\'(t)\\|\\,dt$ adds up the distance actually traveled. Reparametrizing the same path (traced once) at a different speed leaves $L$ unchanged, and acceleration plays no role; but a parametrization that retraces part of the curve counts that part again. The endpoints alone give displacement, not arc length.'
           }
         ]
       }

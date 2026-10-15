@@ -62,9 +62,9 @@ Using symmetry: $= 4\\int_0^{\\pi}\\cos(\\theta/2)\\,d\\theta = 4[2\\sin(\\theta
           },
           {
             question: 'The arc length of the spiral $r = \\theta$ from $\\theta = 0$ to $\\theta = 2\\pi$ requires:',
-            options: ['$\\int_0^{2\\pi}\\sqrt{\\theta^2 + 1}\\,d\\theta$ (trig sub or formula)', '$\\int_0^{2\\pi}\\theta\\,d\\theta$', '$\\int_0^{2\\pi}\\sqrt{\\theta}\\,d\\theta$', '$2\\pi^2$'],
+            options: ['$\\int_0^{2\\pi}\\sqrt{\\theta^2 + 1}\\,d\\theta$', '$\\int_0^{2\\pi}\\theta\\,d\\theta$', '$\\int_0^{2\\pi}\\sqrt{\\theta}\\,d\\theta$', '$\\frac{1}{2}\\int_0^{2\\pi}\\theta^2\\,d\\theta$'],
             correctAnswer: 0,
-            explanation: '$r = \\theta$, $r\' = 1$. $L = \\int_0^{2\\pi}\\sqrt{\\theta^2+1}\\,d\\theta$. This requires trig substitution or a hyperbolic formula.'
+            explanation: '$r = \\theta$, $r\' = 1$. $L = \\int_0^{2\\pi}\\sqrt{r^2 + (r\')^2}\\,d\\theta = \\int_0^{2\\pi}\\sqrt{\\theta^2+1}\\,d\\theta$, which needs trig substitution or a calculator. Dropping $r\'$, taking $\\sqrt{r}$, or using the area formula $\\frac{1}{2}\\int r^2\\,d\\theta$ gives the other integrals.'
           }
         ]
       }
@@ -77,14 +77,14 @@ Using symmetry: $= 4\\int_0^{\\pi}\\cos(\\theta/2)\\,d\\theta = 4[2\\sin(\\theta
         dropdowns: [
           {
             label: 'For one petal of $r = \\cos(2\\theta)$, the arc length integral limits are:',
-            options: ['$-\\pi/4$ to $\\pi/4$', '$0$ to $\\pi/2$', '$0$ to $\\pi$', '$0$ to $2\\pi$'],
+            options: ['$-\\pi/4$ to $\\pi/4$', '$0$ to $\\pi/4$', '$0$ to $\\pi$', '$0$ to $2\\pi$'],
             correctAnswers: ['$-\\pi/4$ to $\\pi/4$'],
             hints: ['The first petal exists where $\\cos(2\\theta) \\ge 0$.'],
-            explanation: '$\\cos(2\\theta) \\ge 0$ when $-\\pi/4 \\le \\theta \\le \\pi/4$. This traces one petal.'
+            explanation: '$\\cos(2\\theta) \\ge 0$ when $-\\pi/4 \\le \\theta \\le \\pi/4$. This traces one petal. Running only from $0$ to $\\pi/4$ traces half a petal, and the full turns $0$ to $\\pi$ or $0$ to $2\\pi$ trace two or four petals.'
           },
           {
             label: 'The identity $1 + \\cos\\theta = 2\\cos^2(\\theta/2)$ is most useful for:',
-            options: ['Cardioid arc length integrals', 'Rose curve areas', 'Converting coordinates', 'Finding slopes'],
+            options: ['Cardioid arc length integrals', 'Converting polar equations to Cartesian form', 'Finding slopes $dy/dx$ on polar curves', 'Locating the tips of rose petals'],
             correctAnswers: ['Cardioid arc length integrals'],
             hints: ['It simplifies $\\sqrt{(1+\\cos\\theta)^2 + \\sin^2\\theta}$.'],
             explanation: 'In cardioid arc length, the integrand becomes $\\sqrt{2+2\\cos\\theta}$, which simplifies to $2|\\cos(\\theta/2)|$ via this identity.'

@@ -62,21 +62,21 @@ Since $\\sum 1/n$ diverges and our series is term-by-term larger, $\\sum 1/(n - 
         questions: [
           {
             question: '$\\sum \\frac{1}{2^n + n}$. Best comparison:',
-            options: ['DCT with $1/2^n$: since $2^n + n > 2^n$, $1/(2^n+n) < 1/2^n$. Converges.', 'LCT with $1/n$', 'Integral Test', 'AST'],
+            options: ['DCT with $1/2^n$', 'LCT with $1/n$', 'DCT with $1/n$', 'LCT with $1/\\sqrt{n}$'],
             correctAnswer: 0,
-            explanation: '$1/(2^n + n) < 1/2^n$ and $\\sum 1/2^n$ converges (geometric). DCT works cleanly.'
+            explanation: 'Since $2^n + n > 2^n$, $\\frac{1}{2^n + n} < \\frac{1}{2^n}$, and $\\sum 1/2^n$ converges (geometric). DCT works cleanly. Comparing with $1/n$ or $1/\\sqrt{n}$ uses a divergent series that is larger than the terms, which proves nothing.'
           },
           {
             question: '$\\sum \\frac{n^2 + 3}{n^4 + n + 7}$. Best comparison series for LCT:',
-            options: ['$1/n^2$ (dominant terms: $n^2/n^4 = 1/n^2$)', '$1/n^4$', '$1/n^3$', '$1/n$'],
+            options: ['$1/n^2$', '$1/n^4$', '$1/n^3$', '$1/n$'],
             correctAnswer: 0,
-            explanation: 'Dominant: $n^2/n^4 = 1/n^2$. LCT: $\\lim (n^2+3)/(n^4+n+7) \\cdot n^2 = 1$. Converges.'
+            explanation: 'Dominant terms: $n^2/n^4 = 1/n^2$. LCT: $\\lim \\frac{n^2+3}{n^4+n+7} \\cdot n^2 = 1$. Since $\\sum 1/n^2$ converges, the series converges.'
           },
           {
             question: 'For LCT, if $\\lim a_n/b_n = 0$:',
-            options: ['If $\\sum b_n$ converges, $\\sum a_n$ converges (but not vice versa)', 'Both have same behavior', '$\\sum a_n$ diverges', 'Test is inconclusive'],
+            options: ['If $\\sum b_n$ converges, so does $\\sum a_n$', 'Both series converge, or else both series diverge', 'If $\\sum b_n$ diverges, then $\\sum a_n$ diverges too', 'If $\\sum a_n$ converges, then $\\sum b_n$ converges too'],
             correctAnswer: 0,
-            explanation: '$L = 0$ means $a_n$ is much smaller than $b_n$. If $b_n$ converges, $a_n$ does too. But $a_n$ could converge while $b_n$ diverges.'
+            explanation: '$L = 0$ means $a_n$ is eventually much smaller than $b_n$. If $\\sum b_n$ converges, $\\sum a_n$ does too. The converse fails: $\\sum a_n$ could converge while $\\sum b_n$ diverges. "Same behavior" is the conclusion only for $0 < L < \\infty$.'
           }
         ]
       }
@@ -89,17 +89,17 @@ Since $\\sum 1/n$ diverges and our series is term-by-term larger, $\\sum 1/(n - 
         dropdowns: [
           {
             label: '$\\sum \\frac{\\ln n}{n^2}$. Compare with $1/n^{3/2}$ using LCT:',
-            options: ['$\\lim (\\ln n /n^2)/(1/n^{3/2}) = \\lim \\ln n / \\sqrt{n} = 0$. Since $\\sum 1/n^{3/2}$ converges, so does ours.', '$\\lim = \\infty$, inconclusive', '$\\lim = 1$, same behavior', 'Cannot use LCT here'],
-            correctAnswers: ['$\\lim (\\ln n /n^2)/(1/n^{3/2}) = \\lim \\ln n / \\sqrt{n} = 0$. Since $\\sum 1/n^{3/2}$ converges, so does ours.'],
+            options: ['$\\lim \\ln n/\\sqrt{n} = 0$ and $\\sum 1/n^{3/2}$ converges, so ours converges too', '$\\lim \\ln n/\\sqrt{n} = \\infty$, so this comparison is inconclusive', '$\\lim \\ln n/\\sqrt{n} = 1$, so the two series behave alike', '$\\lim \\ln n/\\sqrt{n} = 0$, so LCT says our series diverges'],
+            correctAnswers: ['$\\lim \\ln n/\\sqrt{n} = 0$ and $\\sum 1/n^{3/2}$ converges, so ours converges too'],
             hints: ['$\\ln n$ grows slower than any power of $n$.'],
-            explanation: '$\\ln n/\\sqrt{n} \\to 0$. $L = 0$ with convergent comparison → our series converges.'
+            explanation: '$\\frac{\\ln n/n^2}{1/n^{3/2}} = \\frac{\\ln n}{\\sqrt{n}} \\to 0$ (logs grow slower than any power). $L = 0$ with a convergent comparison series means our series converges too. A limit of $0$ never signals divergence.'
           },
           {
             label: '$\\sum \\frac{1}{\\sqrt{n^2 + 1}}$. Best comparison for LCT:',
-            options: ['$1/n$ ($\\sqrt{n^2+1} \\approx n$). Limit $= 1$, same behavior: diverges.', '$1/n^2$, converges', '$1/\\sqrt{n}$, diverges', '$1/n^3$'],
-            correctAnswers: ['$1/n$ ($\\sqrt{n^2+1} \\approx n$). Limit $= 1$, same behavior: diverges.'],
+            options: ['$1/n$: limit $1$, so both diverge', '$1/n^2$: limit $1$, so both converge', '$1/\\sqrt{n}$: limit $1$, so both diverge', '$1/(n^2+1)$: limit $1$, so both converge'],
+            correctAnswers: ['$1/n$: limit $1$, so both diverge'],
             hints: ['$\\sqrt{n^2+1} \\approx n$ for large $n$.'],
-            explanation: '$\\lim n/\\sqrt{n^2+1} = 1$. $\\sum 1/n$ diverges → our series diverges.'
+            explanation: '$\\sqrt{n^2+1} \\approx n$, so compare with $1/n$: $\\lim n/\\sqrt{n^2+1} = 1$. $\\sum 1/n$ diverges → our series diverges. Dropping the square root (comparing with $1/n^2$ or $1/(n^2+1)$) is the common slip, and against $1/\\sqrt{n}$ the limit is $0$, not $1$.'
           }
         ]
       }

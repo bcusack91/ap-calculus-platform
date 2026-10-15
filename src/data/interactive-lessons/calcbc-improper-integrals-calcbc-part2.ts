@@ -98,7 +98,7 @@ Both halves diverge ($\\lim_{t \\to 0} \\frac{1}{t} = \\infty$), so the integral
         dropdowns: [
           {
             label: '$\\int_0^{\\infty} \\frac{1}{x^2}\\,dx$ is:',
-            options: ['Type I only', 'Type II only', 'Both Type I and Type II', 'Not improper'],
+            options: ['Type I only (infinite upper limit)', 'Type II only (blows up at $x = 0$)', 'Both Type I and Type II', 'Neither type: it is a $p$-integral'],
             correctAnswers: ['Both Type I and Type II'],
             hints: ['Upper limit is $\\infty$ (Type I). And $\\frac{1}{x^2}$ is undefined at $x = 0$ (Type II).'],
             explanation: 'Both issues: infinite limit AND discontinuity at $x=0$. Split at $x=1$: $\\int_0^1 + \\int_1^{\\infty}$. The first part diverges, so the whole integral diverges.'

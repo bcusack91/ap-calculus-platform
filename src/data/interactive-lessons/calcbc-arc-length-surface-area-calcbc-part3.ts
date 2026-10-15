@@ -60,9 +60,9 @@ $$S = 2\\pi\\int_0^3 2x\\cdot\\sqrt{5}\\,dx = 4\\pi\\sqrt{5}\\cdot\\frac{9}{2} =
           },
           {
             question: 'For revolution about the $y$-axis, the "radius of revolution" for a point $(x, y)$ is:',
-            options: ['$x$ (horizontal distance to the $y$-axis)', '$y$', '$\\sqrt{x^2+y^2}$', '$x + y$'],
+            options: ['$x$', '$y$', '$\\sqrt{x^2+y^2}$', '$x + y$'],
             correctAnswer: 0,
-            explanation: 'Distance from $(x, y)$ to the $y$-axis is $|x|$. With $x \\ge 0$, this is simply $x$.'
+            explanation: 'The radius is the horizontal distance from $(x, y)$ to the $y$-axis, which is $|x|$. With $x \\ge 0$, this is simply $x$.'
           }
         ]
       }
@@ -75,17 +75,17 @@ $$S = 2\\pi\\int_0^3 2x\\cdot\\sqrt{5}\\,dx = 4\\pi\\sqrt{5}\\cdot\\frac{9}{2} =
         dropdowns: [
           {
             label: 'Rotating $y = x^2$ from $x = 0$ to $x = 1$ about the $x$-axis gives $S = $',
-            options: ['$2\\pi\\int_0^1 x^2\\sqrt{1+4x^2}\\,dx$', '$2\\pi\\int_0^1 x\\sqrt{1+4x^2}\\,dx$', '$2\\pi\\int_0^1 \\sqrt{1+4x^2}\\,dx$', '$\\pi\\int_0^1 x^4\\,dx$'],
+            options: ['$2\\pi\\int_0^1 x^2\\sqrt{1+4x^2}\\,dx$', '$2\\pi\\int_0^1 x\\sqrt{1+4x^2}\\,dx$', '$2\\pi\\int_0^1 \\sqrt{1+4x^2}\\,dx$', '$\\pi\\int_0^1 x^4\\sqrt{1+4x^2}\\,dx$'],
             correctAnswers: ['$2\\pi\\int_0^1 x^2\\sqrt{1+4x^2}\\,dx$'],
             hints: ['About the $x$-axis: radius $= y = x^2$, $ds = \\sqrt{1+(2x)^2}\\,dx$.'],
-            explanation: '$S = 2\\pi\\int y\\,ds = 2\\pi\\int_0^1 x^2\\sqrt{1+4x^2}\\,dx$.'
+            explanation: '$S = 2\\pi\\int y\\,ds = 2\\pi\\int_0^1 x^2\\sqrt{1+4x^2}\\,dx$. Using the disk-style $\\pi y^2$, using $x$ instead of $y$ as the radius, or dropping the radius altogether are the common slips.'
           },
           {
             label: 'If a curve lies below the $x$-axis and is rotated about the $x$-axis, the radius is:',
-            options: ['$|y|$ (take absolute value)', '$y$ (negative)', '$-y$', '0'],
-            correctAnswers: ['$|y|$ (take absolute value)'],
+            options: ['$|y|$ (distance to the axis)', '$y$ (signed, so negative here)', '$y^2$ (squared to stay positive)', '$\\sqrt{1+(y\')^2}$ (the arc length factor)'],
+            correctAnswers: ['$|y|$ (distance to the axis)'],
             hints: ['Surface area must be positive.'],
-            explanation: 'Distance from the curve to the axis is $|y|$. Surface area is always non-negative.'
+            explanation: 'The radius is the distance from the curve to the axis, $|y|$ (which equals $-y$ when $y < 0$). Using signed $y$ makes the integral negative, $y^2$ is not a distance, and $\\sqrt{1+(y\')^2}$ is the $ds$ factor, not the radius. Surface area is always non-negative.'
           }
         ]
       }

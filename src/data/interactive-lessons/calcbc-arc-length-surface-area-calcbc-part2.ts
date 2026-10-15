@@ -78,17 +78,17 @@ $dr/d\\theta = e^\\theta$. $L = \\int_0^{\\ln 2}\\sqrt{e^{2\\theta} + e^{2\\thet
         dropdowns: [
           {
             label: 'For the spiral $r = \\theta$, $0 \\le \\theta \\le 2\\pi$, the arc length integral has $r^2 + (dr/d\\theta)^2 = $',
-            options: ['$\\theta^2 + 1$', '$\\theta^2$', '$2\\theta^2$', '$1$'],
+            options: ['$\\theta^2 + 1$', '$\\theta^2$', '$(\\theta + 1)^2$', '$\\theta + 1$'],
             correctAnswers: ['$\\theta^2 + 1$'],
             hints: ['$r = \\theta$, $dr/d\\theta = 1$.'],
-            explanation: '$r^2 + (r\')^2 = \\theta^2 + 1$. So $L = \\int_0^{2\\pi}\\sqrt{\\theta^2 + 1}\\,d\\theta$ (requires trig substitution or calculator).'
+            explanation: '$r^2 + (r\')^2 = \\theta^2 + 1$. So $L = \\int_0^{2\\pi}\\sqrt{\\theta^2 + 1}\\,d\\theta$ (requires trig substitution or calculator). Squaring $r + r\'$ as a single quantity, or forgetting to square $r$, are the common slips.'
           },
           {
             label: 'The polar arc length formula reduces to the Cartesian formula when $r = $ constant because:',
-            options: ['$dr/d\\theta = 0$, so $ds = r\\,d\\theta$, giving the circumference formula', 'Polar and Cartesian are identical', 'The substitution fails', 'It does not reduce'],
+            options: ['$dr/d\\theta = 0$, so $ds = r\\,d\\theta$, giving the circumference formula', 'Polar and Cartesian coordinates coincide when $r$ is constant', '$dr/d\\theta = 0$, so $ds = d\\theta$ and the length is just $\\beta - \\alpha$', 'It does not reduce; a circle needs the Cartesian formula instead'],
             correctAnswers: ['$dr/d\\theta = 0$, so $ds = r\\,d\\theta$, giving the circumference formula'],
             hints: ['What happens when the radius is fixed?'],
-            explanation: 'With $r$ constant and $dr/d\\theta = 0$: $L = \\int_\\alpha^\\beta r\\,d\\theta = r(\\beta - \\alpha)$. Over $[0, 2\\pi]$: $L = 2\\pi r$.'
+            explanation: 'With $r$ constant and $dr/d\\theta = 0$: $ds = \\sqrt{r^2 + 0}\\,d\\theta = r\\,d\\theta$, so $L = \\int_\\alpha^\\beta r\\,d\\theta = r(\\beta - \\alpha)$. Over $[0, 2\\pi]$: $L = 2\\pi r$. Dropping the $r^2$ term (getting $ds = d\\theta$) is the usual slip.'
           }
         ]
       }

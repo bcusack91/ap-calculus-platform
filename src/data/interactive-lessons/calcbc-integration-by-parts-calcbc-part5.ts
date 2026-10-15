@@ -104,12 +104,12 @@ $$\\int (\\ln x)^n\\,dx = x(\\ln x)^n - n\\int (\\ln x)^{n-1}\\,dx$$`
             question: 'What is $\\int x\\ln x\\,dx$?',
             options: [
               '$\\frac{x^2}{2}\\ln x - \\frac{x^2}{4} + C$',
+              '$\\frac{x^2}{2}\\ln x - \\frac{x}{2} + C$',
               '$\\frac{x^2}{2}\\ln x + C$',
-              '$x\\ln x - x + C$',
-              '$\\frac{x^2}{4}\\ln x + C$'
+              '$x\\ln x - x + C$'
             ],
             correctAnswer: 0,
-            explanation: '$u = \\ln x$ (L beats A), $dv = x\\,dx$, $v = \\frac{x^2}{2}$. Result: $\\frac{x^2}{2}\\ln x - \\int \\frac{x^2}{2} \\cdot \\frac{1}{x}\\,dx = \\frac{x^2}{2}\\ln x - \\frac{x^2}{4} + C$.'
+            explanation: '$u = \\ln x$ (L beats A), $dv = x\\,dx$, $v = \\frac{x^2}{2}$. Result: $\\frac{x^2}{2}\\ln x - \\int \\frac{x^2}{2} \\cdot \\frac{1}{x}\\,dx = \\frac{x^2}{2}\\ln x - \\int \\frac{x}{2}\\,dx = \\frac{x^2}{2}\\ln x - \\frac{x^2}{4} + C$. Writing $-\\frac{x}{2}$ forgets to integrate $\\frac{x}{2}$, stopping at $\\frac{x^2}{2}\\ln x$ drops the $\\int v\\,du$ term, and $x\\ln x - x$ is the antiderivative of $\\ln x$ alone.'
           }
         ]
       }

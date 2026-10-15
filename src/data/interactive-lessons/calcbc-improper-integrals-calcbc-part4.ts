@@ -110,8 +110,8 @@ Since $L = 1 \\in (0, \\infty)$ and $\\int_1^{\\infty} \\frac{1}{x^2}\\,dx$ conv
         dropdowns: [
           {
             label: '$\\int_1^{\\infty} \\frac{e^{-x}}{x}\\,dx$: Best approach?',
-            options: ['DCT: $\\frac{e^{-x}}{x} \\le e^{-x}$', 'LCT with $1/x$', '$p$-test with $p = 1$', 'Direct computation'],
-            correctAnswers: ['DCT: $\\frac{e^{-x}}{x} \\le e^{-x}$'],
+            options: ['DCT with $e^{-x}$', 'LCT with $\\frac{1}{x}$', '$p$-test with $p = 1$', 'Direct antiderivative'],
+            correctAnswers: ['DCT with $e^{-x}$'],
             hints: ['For $x \\ge 1$: $\\frac{1}{x} \\le 1$, so $\\frac{e^{-x}}{x} \\le e^{-x}$.'],
             explanation: '$\\frac{e^{-x}}{x} \\le e^{-x}$ for $x \\ge 1$, and $\\int_1^{\\infty} e^{-x}\\,dx = e^{-1}$ converges. By DCT, the original converges.'
           },

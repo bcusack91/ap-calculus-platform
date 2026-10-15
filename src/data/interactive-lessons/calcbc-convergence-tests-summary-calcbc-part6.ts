@@ -18,9 +18,9 @@ Work through these problems choosing the best test for each.`
         questions: [
           {
             question: '$\\sum_{n=1}^{\\infty} \\frac{5^n}{n \\cdot 3^n}$',
-            options: ['Diverges (Ratio Test gives $L = 5/3 > 1$)', 'Converges absolutely', 'Converges conditionally', 'Inconclusive by Ratio Test'],
+            options: ['Diverges (Ratio Test gives $L = 5/3 > 1$)', 'Converges (Ratio Test, $L = 3/5 < 1$)', 'Converges conditionally', 'Inconclusive (Ratio Test gives $L = 1$)'],
             correctAnswer: 0,
-            explanation: 'Ratio: $L = \\lim \\frac{5^{n+1}/((n+1)3^{n+1})}{5^n/(n \\cdot 3^n)} = \\lim \\frac{5n}{3(n+1)} = 5/3 > 1$. Diverges.'
+            explanation: 'Ratio: $L = \\lim \\frac{5^{n+1}/((n+1)3^{n+1})}{5^n/(n \\cdot 3^n)} = \\lim \\frac{5n}{3(n+1)} = 5/3 > 1$. Diverges. Inverting the ratio gives $3/5$, and the $\\frac{n}{n+1}$ factor tends to $1$ but does not make $L$ itself equal $1$.'
           },
           {
             question: '$\\sum_{n=2}^{\\infty} \\frac{1}{n(\\ln n)^2}$',
@@ -30,9 +30,9 @@ Work through these problems choosing the best test for each.`
           },
           {
             question: '$\\sum_{n=1}^{\\infty} \\frac{(-1)^n n}{2n+1}$',
-            options: ['Diverges by Divergence Test ($\\lim |a_n| = 1/2 \\neq 0$)', 'Converges by AST', 'Converges conditionally', 'Converges absolutely'],
+            options: ['Diverges by the Divergence Test', 'Converges by the Alternating Series Test', 'Converges conditionally by the AST', 'Converges absolutely by the Ratio Test'],
             correctAnswer: 0,
-            explanation: '$\\lim n/(2n+1) = 1/2 \\neq 0$. The Divergence Test applies even to alternating series.'
+            explanation: '$\\lim n/(2n+1) = 1/2 \\neq 0$, so the terms do not approach $0$ and the series diverges by the Divergence Test. The Divergence Test applies even to alternating series, and the AST fails because $b_n \\not\\to 0$.'
           }
         ]
       }
@@ -45,15 +45,15 @@ Work through these problems choosing the best test for each.`
         questions: [
           {
             question: '$\\sum_{n=1}^{\\infty} \\left(\\frac{2n+1}{3n+4}\\right)^n$. Best test?',
-            options: ['Root Test ($L = 2/3 < 1$, converges)', 'Ratio Test', 'Direct Comparison', 'Integral Test'],
+            options: ['Root Test', 'Ratio Test', 'Direct Comparison', 'Integral Test'],
             correctAnswer: 0,
-            explanation: '$\\sqrt[n]{|a_n|} = \\frac{2n+1}{3n+4} \\to 2/3 < 1$. Converges by Root Test.'
+            explanation: '$\\sqrt[n]{|a_n|} = \\frac{2n+1}{3n+4} \\to 2/3 < 1$. Converges by the Root Test. An $n$th power of an expression in $n$ is the signal for the Root Test.'
           },
           {
             question: '$\\sum_{n=1}^{\\infty} \\frac{n^2+1}{n^4-n+2}$. Best test?',
-            options: ['LCT with $\\sum 1/n^2$ since degree gap = 2', 'Root Test', 'Divergence Test', 'AST'],
+            options: ['LCT with $\\sum 1/n^2$', 'Ratio Test', 'Divergence Test', 'LCT with $\\sum 1/n$'],
             correctAnswer: 0,
-            explanation: '$\\frac{(n^2+1)/(n^4-n+2)}{1/n^2} = \\frac{n^4+n^2}{n^4-n+2} \\to 1$. Since $\\sum 1/n^2$ converges, this does too.'
+            explanation: 'The degree gap is $4 - 2 = 2$, so compare with $1/n^2$: $\\frac{(n^2+1)/(n^4-n+2)}{1/n^2} = \\frac{n^4+n^2}{n^4-n+2} \\to 1$. Since $\\sum 1/n^2$ converges, this does too. Comparing with $1/n$ gives $L = 0$ against a divergent series, the Ratio Test gives $L = 1$, and the terms go to $0$.'
           }
         ]
       }
@@ -73,10 +73,10 @@ Work through these problems choosing the best test for each.`
           },
           {
             label: '$\\sum_{n=1}^{\\infty} \\frac{(-1)^n \\ln n}{n}$:',
-            options: ['Conditionally convergent', 'Absolutely convergent', 'Divergent'],
+            options: ['Conditionally convergent', 'Absolutely convergent', 'Divergent ($\\sum \\ln n/n$ diverges)'],
             correctAnswers: ['Conditionally convergent'],
             hints: ['$\\sum \\ln n/n$ diverges (compare to $\\sum 1/n$). But AST applies since $\\ln n/n$ eventually decreases to 0.'],
-            explanation: '$\\sum |a_n| = \\sum \\ln n/n$ diverges. AST applies: $b_n = \\ln n/n \\to 0$ and eventually decreasing. Conditional.'
+            explanation: '$\\sum |a_n| = \\sum \\ln n/n$ diverges. AST applies: $b_n = \\ln n/n \\to 0$ and eventually decreasing. Conditional. Divergence of $\\sum |a_n|$ rules out only absolute convergence; it does not make $\\sum a_n$ diverge.'
           },
           {
             label: '$\\sum_{n=0}^{\\infty} \\frac{(-3)^n}{(2n)!}$:',

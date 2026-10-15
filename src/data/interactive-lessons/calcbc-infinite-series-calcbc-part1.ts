@@ -62,15 +62,15 @@ $$\\int_{N+1}^\\infty f(x)\\,dx \\le S - S_N \\le \\int_N^\\infty f(x)\\,dx$$`
         questions: [
           {
             question: 'The integral test requires $f(x)$ to be:',
-            options: ['Continuous, positive, and decreasing', 'Just continuous', 'Just positive', 'Differentiable'],
+            options: ['Continuous, positive, and decreasing', 'Continuous, positive, and increasing', 'Differentiable, positive, and decreasing', 'Continuous, alternating, and decreasing'],
             correctAnswer: 0,
-            explanation: 'All three conditions are needed: continuous (so the integral makes sense), positive (terms are comparable), and decreasing (monotonicity ensures the comparison works).'
+            explanation: 'All three conditions are needed: continuous (so the integral makes sense), positive (terms are comparable to area), and decreasing (monotonicity ensures the comparison works). Differentiability is not required, and alternating terms call for the AST instead.'
           },
           {
             question: '$\\sum_{n=1}^\\infty \\frac{1}{n^2 + 1}$ converges because:',
-            options: ['$\\int_1^\\infty \\frac{dx}{x^2+1} = \\pi/2 - \\pi/4 = \\pi/4$ (finite)', '$1/(n^2+1) < 1/n$', 'The terms alternate', 'It is geometric'],
+            options: ['$\\int_1^\\infty \\frac{dx}{x^2+1}$ is finite', 'Its terms are smaller than $\\frac{1}{n}$', 'Its terms approach $0$ as $n \\to \\infty$', 'It is a $p$-series with $p = 2$'],
             correctAnswer: 0,
-            explanation: '$f(x) = 1/(x^2+1)$ is continuous, positive, decreasing. $\\int_1^\\infty \\frac{dx}{x^2+1} = [\\arctan x]_1^\\infty = \\pi/2 - \\pi/4 = \\pi/4$. Converges.'
+            explanation: '$f(x) = 1/(x^2+1)$ is continuous, positive, decreasing. $\\int_1^\\infty \\frac{dx}{x^2+1} = [\\arctan x]_1^\\infty = \\pi/2 - \\pi/4 = \\pi/4$, which is finite, so the series converges. Being smaller than the divergent $\\frac{1}{n}$ proves nothing, terms going to $0$ is not enough, and $\\frac{1}{n^2+1}$ is not itself a $p$-series.'
           }
         ]
       }
@@ -83,17 +83,17 @@ $$\\int_{N+1}^\\infty f(x)\\,dx \\le S - S_N \\le \\int_N^\\infty f(x)\\,dx$$`
         dropdowns: [
           {
             label: 'The integral test tells you the value of the series sum.',
-            options: ['False — it only tells convergence or divergence', 'True', 'True for $p$-series only', 'Sometimes'],
+            options: ['False — it only tells convergence or divergence', 'True — the integral\'s value equals the sum', 'True, but only for $p$-series like $\\sum 1/n^2$', 'Sometimes — only when the integral converges'],
             correctAnswers: ['False — it only tells convergence or divergence'],
             hints: ['$\\int_1^\\infty 1/x^2\\,dx = 1$, but $\\sum 1/n^2 = \\pi^2/6 \\ne 1$.'],
             explanation: 'The integral value is related to but not equal to the series sum. $\\sum 1/n^2 = \\pi^2/6 \\approx 1.645$, not $1$.'
           },
           {
             label: '$\\sum_{n=2}^\\infty \\frac{1}{n\\ln n}$:',
-            options: ['Diverges ($\\int_2^\\infty \\frac{dx}{x\\ln x} = \\infty$)', 'Converges', 'Inconclusive', 'Is a $p$-series'],
-            correctAnswers: ['Diverges ($\\int_2^\\infty \\frac{dx}{x\\ln x} = \\infty$)'],
+            options: ['Diverges (by the Integral Test)', 'Converges (terms shrink faster than $1/n$)', 'Inconclusive (Integral Test does not apply)', 'Converges (like a $p$-series with $p > 1$)'],
+            correctAnswers: ['Diverges (by the Integral Test)'],
             hints: ['$\\int \\frac{dx}{x\\ln x} = \\ln(\\ln x) + C$.'],
-            explanation: '$\\int_2^\\infty \\frac{dx}{x\\ln x} = [\\ln(\\ln x)]_2^\\infty = \\infty$. Diverges by integral test.'
+            explanation: '$\\int_2^\\infty \\frac{dx}{x\\ln x} = [\\ln(\\ln x)]_2^\\infty = \\infty$. Diverges by integral test ($1/(x\\ln x)$ is positive, continuous and decreasing on $[2, \\infty)$, so the test applies). The terms do shrink faster than $1/n$, but not fast enough, and $n\\ln n$ is not $n^p$ for any $p > 1$.'
           }
         ]
       }

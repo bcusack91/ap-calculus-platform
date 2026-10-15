@@ -47,15 +47,15 @@ $$\\boxed{\\vec{r}(t) = \\langle t^2 + t,\\, -t^3 + 4t \\rangle}$$`
         questions: [
           {
             question: 'Using Problem 1 above, when is the particle moving to the left ($x$ decreasing)?',
-            options: ['Never (for $t > 0$)', 'When $t < -1/2$', 'When $t > 1$', 'Always'],
+            options: ['Never, for $t \\ge 0$', 'When $t > 2/\\sqrt{3}$', 'When $0 \\le t < 1/2$', 'Always, for $t \\ge 0$'],
             correctAnswer: 0,
-            explanation: '$x\'(t) = 2t + 1 > 0$ for all $t > -1/2$. If we restrict to $t \\ge 0$, then $x\'(t) \\ge 1 > 0$ always. The particle always moves right.'
+            explanation: '$x\'(t) = 2t + 1$, which is at least $1$ for all $t \\ge 0$, so the particle always moves right. $t > 2/\\sqrt{3}$ is where $y\'(t) = -3t^2 + 4 < 0$ (moving down, not left), and $0 \\le t < 1/2$ comes from the sign slip $x\'(t) = 2t - 1$.'
           },
           {
             question: 'From Problem 1, the speed at $t = 1$ is:',
-            options: ['$\\sqrt{10}$', '$\\sqrt{8}$', '$3$', '$\\sqrt{5}$'],
+            options: ['$\\sqrt{10}$', '$\\sqrt{13}$', '$4$', '$\\sqrt{40}$'],
             correctAnswer: 0,
-            explanation: '$\\vec{v}(1) = \\langle 3, 1 \\rangle$. Speed $= \\sqrt{9 + 1} = \\sqrt{10}$.'
+            explanation: '$\\vec{v}(1) = \\langle 3, 1 \\rangle$. Speed $= \\sqrt{9 + 1} = \\sqrt{10}$. Dropping the initial velocity gives $\\langle 2, -3 \\rangle$ and $\\sqrt{13}$, adding components gives $4$, and using $\\vec{a}(1) = \\langle 2, -6 \\rangle$ gives $\\sqrt{40}$.'
           }
         ]
       }

@@ -53,21 +53,21 @@ $$\\boxed{\\text{Can I use a known formula?} \\to \\text{Is it a } u\\text{-sub?
         questions: [
           {
             question: '$\\int_0^1 \\frac{x}{\\sqrt{1 - x^2}}\\,dx =$',
-            options: ['$1$ (let $u = 1-x^2$)', '$\\pi/4$', '$\\pi/2$', '$1/2$'],
+            options: ['$1$', '$\\pi/4$', '$\\pi/2$', '$1/2$'],
             correctAnswer: 0,
-            explanation: '$u = 1 - x^2$, $du = -2x\\,dx$. $-\\frac{1}{2}\\int_1^0 u^{-1/2}\\,du = \\frac{1}{2}[2\\sqrt{u}]_0^1 = 1$.'
+            explanation: '$u = 1 - x^2$, $du = -2x\\,dx$. $-\\frac{1}{2}\\int_1^0 u^{-1/2}\\,du = \\frac{1}{2}[2\\sqrt{u}]_0^1 = 1$. $\\frac{\\pi}{2}$ is $\\int_0^1 \\frac{dx}{\\sqrt{1-x^2}}$ (no $x$ in the numerator), and $\\frac{1}{2}$ forgets that $\\int u^{-1/2}\\,du = 2\\sqrt{u}$.'
           },
           {
             question: 'On a no-calculator FRQ: $\\int \\frac{3}{x^2 - 9}\\,dx$. Best approach:',
-            options: ['Partial fractions: $\\frac{3}{(x-3)(x+3)} = \\frac{A}{x-3} + \\frac{B}{x+3}$', '$u$-sub with $u = x^2 - 9$', 'Trig substitution', 'Cannot be integrated by hand'],
+            options: ['Partial fractions', '$u$-sub with $u = x^2 - 9$', 'Arctan formula with $a = 3$', 'A calculator, as there is no elementary antiderivative'],
             correctAnswer: 0,
-            explanation: 'Factor denominator, then partial fractions: $A = 1/2$, $B = -1/2$.'
+            explanation: 'Factor the denominator, $\\frac{3}{(x-3)(x+3)} = \\frac{A}{x-3} + \\frac{B}{x+3}$, and use cover-up: $A = 1/2$, $B = -1/2$. The arctan formula needs $x^2 + 9$, not $x^2 - 9$, and $u = x^2 - 9$ needs an $x$ in the numerator.'
           },
           {
             question: 'If the AP FRQ says "set up but do not evaluate," you should:',
-            options: ['Write the complete integral expression with correct bounds and integrand', 'Evaluate it anyway for extra credit', 'Only write the integrand', 'Write the result as a decimal'],
+            options: ['Write the integral with its bounds and integrand', 'Evaluate it anyway, since a correct value earns extra credit', 'Write the integrand, leaving the bounds for later', 'Give a decimal approximation from your calculator'],
             correctAnswer: 0,
-            explanation: '"Set up" means write the integral with correct bounds. Do NOT evaluate — you will not earn extra credit and may lose points for errors.'
+            explanation: '"Set up" means write the complete integral expression with correct bounds and integrand. Do NOT evaluate: you will not earn extra credit and may lose points for errors.'
           }
         ]
       }
@@ -87,10 +87,10 @@ $$\\boxed{\\text{Can I use a known formula?} \\to \\text{Is it a } u\\text{-sub?
           },
           {
             label: '$\\int \\frac{2x + 3}{x^2 + 3x + 7}\\,dx =$',
-            options: ['$\\ln|x^2 + 3x + 7| + C$ (numerator is derivative of denominator)', '$\\arctan(x^2 + 3x + 7) + C$', '$(x^2+3x+7)^2/2 + C$', 'Partial fractions needed'],
-            correctAnswers: ['$\\ln|x^2 + 3x + 7| + C$ (numerator is derivative of denominator)'],
+            options: ['$\\ln|x^2 + 3x + 7| + C$', '$\\arctan(x^2 + 3x + 7) + C$', '$\\frac{(x^2+3x+7)^2}{2} + C$', '$-\\frac{1}{x^2+3x+7} + C$'],
+            correctAnswers: ['$\\ln|x^2 + 3x + 7| + C$'],
             hints: ['$d(x^2+3x+7)/dx = 2x+3$.'],
-            explanation: 'Numerator = derivative of denominator → $\\ln|\\text{denom}| + C$.'
+            explanation: 'Numerator = derivative of denominator, so with $u = x^2+3x+7$ the integral is $\\int \\frac{du}{u} = \\ln|u| + C$. The power rule does not apply to $u^{-1}$, and the arctan form needs a constant numerator.'
           }
         ]
       }

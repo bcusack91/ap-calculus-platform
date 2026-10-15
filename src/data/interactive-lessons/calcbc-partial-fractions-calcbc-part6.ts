@@ -51,12 +51,12 @@ Mixed practice combining all partial fraction techniques. For each problem, deci
             question: 'Before applying partial fractions to $\\frac{x^3+x}{x^2-4}$, you must first:',
             options: [
               'Perform polynomial long division',
-              'Factor the denominator',
-              'Complete the square',
-              'Apply u-substitution'
+              'Factor the denominator as $(x-2)(x+2)$ and decompose',
+              'Complete the square in the denominator',
+              'Substitute $u = x^2 - 4$ for the whole fraction'
             ],
             correctAnswer: 0,
-            explanation: 'deg(3) > deg(2), so the fraction is improper. Long division: $\\frac{x^3+x}{x^2-4} = x + \\frac{5x}{x^2-4}$.'
+            explanation: 'deg(3) > deg(2), so the fraction is improper and must be divided first: $\\frac{x^3+x}{x^2-4} = x + \\frac{5x}{x^2-4}$. Only then factor $x^2 - 4$ and decompose the proper remainder.'
           }
         ]
       }
@@ -89,10 +89,10 @@ Mixed practice combining all partial fraction techniques. For each problem, deci
         dropdowns: [
           {
             label: '$\\int \\frac{dx}{x^2+6x+9}$ is best approached by:',
-            options: ['Recognizing $(x+3)^2$ and using power rule', 'Partial fractions with distinct factors', 'Completing the square for arctan', 'u-substitution'],
-            correctAnswers: ['Recognizing $(x+3)^2$ and using power rule'],
+            options: ['Rewriting as $(x+3)^{-2}$, then power rule', 'Partial fractions with distinct factors', 'Completing the square for arctan', 'u-substitution with $u = x^2+6x+9$'],
+            correctAnswers: ['Rewriting as $(x+3)^{-2}$, then power rule'],
             hints: ['$x^2+6x+9 = (x+3)^2$. This is a repeated factor, but with just one term \u2014 no decomposition needed.'],
-            explanation: '$\\int (x+3)^{-2}\\,dx = -\\frac{1}{x+3} + C$. No partial fractions needed!'
+            explanation: '$x^2+6x+9 = (x+3)^2$, so $\\int (x+3)^{-2}\\,dx = -\\frac{1}{x+3} + C$. No partial fractions needed! There are no distinct factors, completing the square gives $(x+3)^2 + 0$ (no arctan form), and $u = x^2+6x+9$ fails because the numerator is not $2x+6$.'
           },
           {
             label: '$\\int \\frac{x^2+1}{x^2-1}\\,dx$ requires which first step?',

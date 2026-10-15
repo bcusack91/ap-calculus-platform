@@ -56,21 +56,21 @@ Conditionally convergent series have surprising properties:
         questions: [
           {
             question: '$\\sum_{n=1}^\\infty \\frac{(-1)^n}{n^2}$ converges:',
-            options: ['Absolutely', 'Conditionally', 'Diverges', 'Cannot determine'],
+            options: ['Absolutely', 'Conditionally', 'It diverges', 'Cannot determine'],
             correctAnswer: 0,
             explanation: '$\\sum |a_n| = \\sum 1/n^2$ converges ($p = 2 > 1$). So the series converges absolutely.'
           },
           {
             question: '$\\sum_{n=1}^\\infty \\frac{(-1)^n}{\\sqrt{n}}$ converges:',
-            options: ['Conditionally', 'Absolutely', 'Diverges', 'To $0$'],
+            options: ['Conditionally', 'Absolutely, as $p = \\frac{1}{2} > 0$', 'It diverges, as $p = \\frac{1}{2} < 1$', 'To $0$, since its terms approach $0$'],
             correctAnswer: 0,
-            explanation: '$\\sum 1/\\sqrt{n}$ diverges ($p = 1/2 < 1$). But $\\sum (-1)^n/\\sqrt{n}$ converges by AST (terms decrease to $0$). Conditional convergence.'
+            explanation: '$\\sum 1/\\sqrt{n}$ diverges ($p = 1/2 < 1$), so the convergence is not absolute. But $\\sum (-1)^n/\\sqrt{n}$ converges by AST (terms decrease to $0$). Conditional convergence. The $p$-test applies to $\\sum |a_n|$, not to the alternating series, and terms approaching $0$ says nothing about the sum.'
           },
           {
             question: 'If $\\sum a_n$ converges absolutely, which rearrangement of terms:',
-            options: ['Gives the same sum', 'May give a different sum', 'Always diverges', 'Is not allowed'],
+            options: ['Gives the same sum', 'May give a different sum', 'Always makes the series diverge', 'Is not allowed for infinite sums'],
             correctAnswer: 0,
-            explanation: 'Absolutely convergent series have the same sum regardless of the order of terms. This is a major theorem of analysis.'
+            explanation: 'Absolutely convergent series have the same sum regardless of the order of terms. Only conditionally convergent series can be rearranged to a different sum (Riemann rearrangement theorem).'
           }
         ]
       }
@@ -83,17 +83,17 @@ Conditionally convergent series have surprising properties:
         dropdowns: [
           {
             label: '$\\sum_{n=1}^\\infty \\frac{\\cos(n\\pi)}{n^3}$ converges:',
-            options: ['Absolutely ($\\cos(n\\pi) = (-1)^n$, $\\sum 1/n^3$ converges)', 'Conditionally', 'Diverges', 'Cannot tell'],
-            correctAnswers: ['Absolutely ($\\cos(n\\pi) = (-1)^n$, $\\sum 1/n^3$ converges)'],
+            options: ['Absolutely', 'Conditionally', 'Diverges', 'Cannot tell'],
+            correctAnswers: ['Absolutely'],
             hints: ['$\\cos(n\\pi) = (-1)^n$. Then $|a_n| = 1/n^3$.'],
-            explanation: '$\\sum |a_n| = \\sum 1/n^3$ converges ($p = 3$). Absolute convergence.'
+            explanation: '$\\cos(n\\pi) = (-1)^n$, so $\\sum |a_n| = \\sum 1/n^3$, which converges ($p = 3 > 1$). Absolute convergence.'
           },
           {
             label: 'Absolute convergence implies convergence, but convergence does NOT imply:',
-            options: ['Absolute convergence', 'Divergence', '$a_n \\to 0$', 'Boundedness'],
+            options: ['Absolute convergence', 'Bounded partial sums $S_n$', 'Terms $a_n$ that tend to $0$', 'Terms that stay bounded'],
             correctAnswers: ['Absolute convergence'],
             hints: ['The alternating harmonic series is the key example.'],
-            explanation: '$\\sum (-1)^{n+1}/n$ converges but $\\sum 1/n$ diverges. Convergence without absolute convergence = conditional convergence.'
+            explanation: '$\\sum (-1)^{n+1}/n$ converges but $\\sum 1/n$ diverges. Convergence without absolute convergence = conditional convergence. Convergence does force $a_n \\to 0$, bounded terms and bounded partial sums, so those are all implied.'
           }
         ]
       }

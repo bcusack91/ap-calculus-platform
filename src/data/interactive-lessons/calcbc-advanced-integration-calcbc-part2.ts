@@ -67,9 +67,9 @@ $$\\int \\frac{2\\cos\\theta\\,d\\theta}{2\\cos\\theta} = \\int d\\theta = \\the
         questions: [
           {
             question: 'For $\\int \\sin^2 x\\,dx$, the correct approach is:',
-            options: ['Half-angle identity: $\\sin^2 x = \\frac{1 - \\cos 2x}{2}$', 'Let $u = \\sin x$', 'Integration by parts', 'Let $u = \\sin^2 x$'],
+            options: ['Use the half-angle identity for $\\sin^2 x$', 'Let $u = \\sin x$, so $du = \\cos x\\,dx$', 'Apply the power rule to $\\sin^2 x$', 'Rewrite it as $1 - \\cos^2 x$'],
             correctAnswer: 0,
-            explanation: 'Both exponents are even (2 and 0). Use half-angle formula.'
+            explanation: 'An even power of sine with no odd cosine factor calls for the half-angle identity $\\sin^2 x = \\frac{1 - \\cos 2x}{2}$, giving $\\frac{x}{2} - \\frac{\\sin 2x}{4} + C$. $u = \\sin x$ needs a $\\cos x$ factor that is not there, the power rule ignores the chain rule (it would give $\\frac{\\sin^3 x}{3}$), and $1 - \\cos^2 x$ just trades one even power for another.'
           },
           {
             question: 'For $\\int \\sqrt{x^2 - 9}\\,dx$, the trig substitution is:',
@@ -94,17 +94,17 @@ $$\\int \\frac{2\\cos\\theta\\,d\\theta}{2\\cos\\theta} = \\int d\\theta = \\the
         dropdowns: [
           {
             label: '$\\int \\sin^5 x \\cos^4 x\\,dx$: since $m = 5$ is odd, you should:',
-            options: ['Save one $\\sin x$, convert $\\sin^4 x = (1-\\cos^2 x)^2$, let $u = \\cos x$', 'Use half-angle identities', 'Save one $\\cos x$, let $u = \\sin x$', 'Use reduction formula'],
-            correctAnswers: ['Save one $\\sin x$, convert $\\sin^4 x = (1-\\cos^2 x)^2$, let $u = \\cos x$'],
+            options: ['Save one $\\sin x$, write $\\sin^4 x$ in cosines, let $u = \\cos x$', 'Apply half-angle identities to $\\sin^2 x$ and $\\cos^2 x$', 'Save one $\\cos x$, write $\\cos^3 x$ in sines, let $u = \\sin x$', 'Use the reduction formula for $\\int \\sin^n x\\,dx$'],
+            correctAnswers: ['Save one $\\sin x$, write $\\sin^4 x$ in cosines, let $u = \\cos x$'],
             hints: ['Odd power of sine → save one $\\sin x$.'],
-            explanation: 'Save $\\sin x$ for $du$, convert remaining $\\sin^4 x = (1-\\cos^2 x)^2$, then $u = \\cos x$.'
+            explanation: 'Save $\\sin x$ for $du$, convert remaining $\\sin^4 x = (1-\\cos^2 x)^2$, then $u = \\cos x$. Saving a $\\cos x$ fails because the leftover $\\cos^3 x$ is an odd power, and half-angle identities are the tool when both powers are even.'
           },
           {
             label: '$\\int \\sin^2 x \\cos^2 x\\,dx$: both even, so use:',
-            options: ['$\\sin^2 x \\cos^2 x = \\frac{1}{4}\\sin^2(2x) = \\frac{1}{8}(1-\\cos 4x)$', '$u$-substitution with $u = \\sin x$', 'Integration by parts', 'Factor as $(\\sin x \\cos x)^2 = (\\sin 2x/2)^2$ then stop'],
-            correctAnswers: ['$\\sin^2 x \\cos^2 x = \\frac{1}{4}\\sin^2(2x) = \\frac{1}{8}(1-\\cos 4x)$'],
+            options: ['$\\sin^2 x \\cos^2 x = \\frac{1}{8}(1-\\cos 4x)$', '$\\sin^2 x \\cos^2 x = \\frac{1}{4}(1-\\cos 4x)$', '$\\sin^2 x \\cos^2 x = \\frac{1}{8}(1-\\cos 2x)$', '$\\sin^2 x \\cos^2 x = \\frac{1}{2}\\sin^2(2x)$'],
+            correctAnswers: ['$\\sin^2 x \\cos^2 x = \\frac{1}{8}(1-\\cos 4x)$'],
             hints: ['$\\sin x \\cos x = \\frac{1}{2}\\sin 2x$, then apply half-angle again.'],
-            explanation: 'Double angle first, then half-angle: $\\frac{1}{4}\\sin^2(2x) = \\frac{1}{8}(1-\\cos 4x)$.'
+            explanation: 'Double angle first: $\\sin x\\cos x = \\frac{1}{2}\\sin 2x$, so $\\sin^2 x \\cos^2 x = \\frac{1}{4}\\sin^2(2x)$. Then half-angle: $\\sin^2(2x) = \\frac{1-\\cos 4x}{2}$, giving $\\frac{1}{8}(1-\\cos 4x)$. Forgetting to square the $\\frac{1}{2}$, dropping the half-angle $\\frac{1}{2}$, or not doubling the angle gives the other forms.'
           }
         ]
       }

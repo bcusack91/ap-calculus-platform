@@ -51,15 +51,15 @@ The tangent is **horizontal** at $\\theta = \\pi/3$!
           },
           {
             question: 'The polar curve $r = \\theta$ (spiral) has a horizontal tangent when:',
-            options: ['$\\tan\\theta = -\\theta$', '$\\theta = 0$', '$\\theta = \\pi/2$', 'Never'],
+            options: ['$\\tan\\theta = -\\theta$', '$\\tan\\theta = \\theta$', '$\\tan\\theta = \\frac{1}{\\theta}$', 'Never'],
             correctAnswer: 0,
-            explanation: '$dy/d\\theta = \\sin\\theta + \\theta\\cos\\theta = 0 \\implies \\tan\\theta = -\\theta$. This transcendental equation has infinitely many solutions.'
+            explanation: '$y = \\theta\\sin\\theta$, so $dy/d\\theta = \\sin\\theta + \\theta\\cos\\theta = 0 \\implies \\tan\\theta = -\\theta$. This transcendental equation has infinitely many solutions. $\\tan\\theta = \\frac{1}{\\theta}$ comes from $dx/d\\theta = \\cos\\theta - \\theta\\sin\\theta = 0$, which marks vertical tangents.'
           },
           {
             question: 'At $\\theta = 0$ on $r = 1 + \\cos\\theta$, the tangent line is:',
-            options: ['Vertical (since $dx/d\\theta = 0$)', 'Horizontal', 'Has slope $1$', 'Does not exist'],
+            options: ['Vertical', 'Horizontal', 'Has slope $1$', 'Undefined, since $dy/d\\theta = 0$ too'],
             correctAnswer: 0,
-            explanation: '$dx/d\\theta = -\\sin\\theta\\cos\\theta - (1+\\cos\\theta)\\sin\\theta = -\\sin\\theta(\\cos\\theta + 1 + \\cos\\theta)$. At $\\theta=0$: $dx/d\\theta = 0$. But $dy/d\\theta = -\\sin(0)(2\\cos 0+1)+0 = 0$ also. Need L\'H\\^opital.'
+            explanation: '$x = r\\cos\\theta$, $y = r\\sin\\theta$. $dx/d\\theta = -\\sin\\theta\\cos\\theta - (1+\\cos\\theta)\\sin\\theta$, which is $0$ at $\\theta = 0$. $dy/d\\theta = -\\sin^2\\theta + (1+\\cos\\theta)\\cos\\theta$, which is $0 + 2 = 2 \\ne 0$ at $\\theta = 0$. Since $dx/d\\theta = 0$ and $dy/d\\theta \\ne 0$, the tangent at $(2, 0)$ is vertical.'
           }
         ]
       }
@@ -72,17 +72,17 @@ The tangent is **horizontal** at $\\theta = \\pi/3$!
         dropdowns: [
           {
             label: 'At the origin ($r = 0$) of a polar curve, the tangent line:',
-            options: ['Is the line $\\theta = \\theta_0$ where $f(\\theta_0) = 0$', 'Does not exist', 'Is always horizontal', 'Is always vertical'],
+            options: ['Is the line $\\theta = \\theta_0$ where $f(\\theta_0) = 0$', 'Does not exist, since both derivatives are $0$', 'Is horizontal, since $y = r\\sin\\theta = 0$ there', 'Is vertical, since $x = r\\cos\\theta = 0$ there'],
             correctAnswers: ['Is the line $\\theta = \\theta_0$ where $f(\\theta_0) = 0$'],
             hints: ['When $r = 0$ at $\\theta = \\theta_0$, the curve passes through the origin at angle $\\theta_0$.'],
-            explanation: 'When $r = 0$ at $\\theta = \\theta_0$ and $dr/d\\theta \\ne 0$, the tangent line at the origin is the line $\\theta = \\theta_0$. Its Cartesian slope is $\\tan\\theta_0$.'
+            explanation: 'When $r = 0$ at $\\theta = \\theta_0$ and $dr/d\\theta \\ne 0$, the tangent line at the origin is the line $\\theta = \\theta_0$. Its Cartesian slope is $\\tan\\theta_0$. Both $x$ and $y$ are $0$ there, but $dx/d\\theta = f\'(\\theta_0)\\cos\\theta_0$ and $dy/d\\theta = f\'(\\theta_0)\\sin\\theta_0$ are not both $0$.'
           },
           {
             label: 'For $r = \\sin(2\\theta)$, the tangent lines at the origin occur at:',
-            options: ['$\\theta = 0, \\pi/2, \\pi, 3\\pi/2$ (four tangent lines)', '$\\theta = 0$ only', '$\\theta = \\pi/4$ only', 'No tangent exists'],
-            correctAnswers: ['$\\theta = 0, \\pi/2, \\pi, 3\\pi/2$ (four tangent lines)'],
+            options: ['$\\theta = 0, \\pi/2, \\pi, 3\\pi/2$', '$\\theta = 0$ and $\\theta = \\pi$ only', '$\\theta = \\pi/4, 3\\pi/4, 5\\pi/4, 7\\pi/4$', 'None: the slope formula gives $0/0$'],
+            correctAnswers: ['$\\theta = 0, \\pi/2, \\pi, 3\\pi/2$'],
             hints: ['$r = 0$ when $\\sin(2\\theta) = 0$.'],
-            explanation: '$\\sin(2\\theta) = 0$ at $\\theta = 0, \\pi/2, \\pi, 3\\pi/2$. The curve passes through the origin four times, each with a different tangent direction.'
+            explanation: '$\\sin(2\\theta) = 0$ at $\\theta = 0, \\pi/2, \\pi, 3\\pi/2$, so the curve passes through the origin four times. The lines $\\theta = 0$ and $\\theta = \\pi$ are the same line, as are $\\theta = \\pi/2$ and $3\\pi/2$, so the tangent lines at the origin are the $x$-axis and the $y$-axis. The angles $\\pi/4, 3\\pi/4, \\ldots$ are petal tips ($|r| = 1$), not the origin.'
           }
         ]
       }

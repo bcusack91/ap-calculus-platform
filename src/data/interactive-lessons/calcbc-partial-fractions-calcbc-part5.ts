@@ -63,9 +63,9 @@ $$\\boxed{= \\frac{x^2}{2} + \\frac{3}{2}\\ln|x-1| - \\frac{1}{2}\\ln|x+1| + C}$
           },
           {
             question: 'Is $\\frac{x^2+3x+2}{x^2+x}$ proper or improper?',
-            options: ['Improper (equal degrees)', 'Proper', 'Neither', 'Cannot determine'],
+            options: ['Improper, because the degrees are equal', 'Proper, because the degrees are equal', 'Proper, because it reduces to $\\frac{x+2}{x}$', 'Neither, because the factor $x+1$ cancels'],
             correctAnswer: 0,
-            explanation: 'Both numerator and denominator have degree 2. Since deg(num) = deg(den), the fraction is improper. Long division gives quotient 1.'
+            explanation: 'Both numerator and denominator have degree 2. Since deg(num) $\\ge$ deg(den), the fraction is improper, and long division gives quotient 1. Canceling $x+1$ leaves $\\frac{x+2}{x}$, which is still improper (degree 1 over degree 1).'
           }
         ]
       }

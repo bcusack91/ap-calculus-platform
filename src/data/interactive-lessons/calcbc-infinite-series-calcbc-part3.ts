@@ -76,17 +76,17 @@ $L = 1/2 < 1$: **converges absolutely**.`
         dropdowns: [
           {
             label: 'Best test for $\\sum \\frac{n!}{10^n}$:',
-            options: ['Ratio test (involves factorial)', 'Root test', 'Integral test', '$p$-series test'],
+            options: ['Ratio test (involves factorial)', 'Root test (involves the power $10^n$)', 'Integral test (all terms are positive)', 'Comparison test (with $\\sum 1/10^n$)'],
             correctAnswers: ['Ratio test (involves factorial)'],
             hints: ['Factorial in the series $\\implies$ ratio test.'],
-            explanation: '$|a_{n+1}/a_n| = \\frac{n+1}{10} \\to \\infty$. Diverges. The ratio test handles factorials cleanly.'
+            explanation: '$|a_{n+1}/a_n| = \\frac{n+1}{10} \\to \\infty$. Diverges. The ratio test handles factorials cleanly. The $n$th root of $n!$ is awkward, $x!$ cannot be integrated directly, and comparing with the smaller convergent $\\sum 1/10^n$ proves nothing.'
           },
           {
             label: 'Best test for $\\sum \\left(\\frac{3}{n}\\right)^n$:',
-            options: ['Root test ($n$th power form)', 'Ratio test', 'Comparison test', 'Integral test'],
-            correctAnswers: ['Root test ($n$th power form)'],
+            options: ['Root test (whole term is an $n$th power)', 'Ratio test (numerator is $3^n$)', 'Comparison test (with $\\sum 3^n$)', 'Integral test (terms are positive)'],
+            correctAnswers: ['Root test (whole term is an $n$th power)'],
             hints: ['When $a_n$ has the form $(f(n))^n$, use root test.'],
-            explanation: '$\\sqrt[n]{a_n} = 3/n \\to 0 < 1$. Converges. Root test naturally handles $n$th powers.'
+            explanation: '$\\sqrt[n]{a_n} = 3/n \\to 0 < 1$. Converges. Root test naturally handles $n$th powers. Comparing with the larger divergent $\\sum 3^n$ proves nothing, and $(3/x)^x$ has no elementary antiderivative.'
           }
         ]
       }

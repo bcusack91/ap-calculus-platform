@@ -96,10 +96,10 @@ Arc length $\\ge$ displacement, with equality only for straight-line motion.
           },
           {
             label: 'Is the integrand for arc length always positive?',
-            options: ['Yes, square root of sum of squares', 'No, speed can be negative', 'Only when $t > 0$', 'Depends on direction'],
-            correctAnswers: ['Yes, square root of sum of squares'],
+            options: ['Yes, a square root is never negative', 'No, speed can be negative', 'Only when $dx/dt, dy/dt > 0$', 'Only on intervals where $t > 0$'],
+            correctAnswers: ['Yes, a square root is never negative'],
             hints: ['$(dx/dt)^2 + (dy/dt)^2 \\ge 0$, and $= 0$ only at stationary points.'],
-            explanation: 'The speed is always $\\ge 0$. The integrand is a square root of a sum of squares, so it\u2019s always non-negative.'
+            explanation: 'The speed is always $\\ge 0$. The integrand is a square root of a sum of squares, so it’s always non-negative (it equals $0$ only where both derivatives are $0$), regardless of direction or the signs of $dx/dt$ and $dy/dt$.'
           }
         ]
       }
