@@ -1570,10 +1570,10 @@ export const registryChunk3: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./apush-reform-movements-part1').then(m => m.apushReformMovementsPart1Data) },
-      { title: 'Key Processes', loader: () => import('./apush-reform-movements-part2').then(m => m.apushReformMovementsPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./apush-reform-movements-part3').then(m => m.apushReformMovementsPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./apush-reform-movements-part4').then(m => m.apushReformMovementsPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./apush-reform-movements-part5').then(m => m.apushReformMovementsPart5Data) },
+      { title: 'Revival, Markets and the Reform Impulse', loader: () => import('./apush-reform-movements-part2').then(m => m.apushReformMovementsPart2Data) },
+      { title: 'Abolitionism, Read Closely (1829–1852)', loader: () => import('./apush-reform-movements-part3').then(m => m.apushReformMovementsPart3Data) },
+      { title: 'Remaking Institutions: Schools, Asylums, Prisons and Utopias', loader: () => import('./apush-reform-movements-part4').then(m => m.apushReformMovementsPart4Data) },
+      { title: 'Women\'s Rights, Backlash and the Limits of Reform', loader: () => import('./apush-reform-movements-part5').then(m => m.apushReformMovementsPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./apush-reform-movements-part6').then(m => m.apushReformMovementsPart6Data) },
       { title: 'AP Review', loader: () => import('./apush-reform-movements-part7').then(m => m.apushReformMovementsPart7Data) }
     ],
@@ -1582,10 +1582,10 @@ export const registryChunk3: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./apush-civil-war-part1').then(m => m.apushCivilWarPart1Data) },
-      { title: 'Key Processes', loader: () => import('./apush-civil-war-part2').then(m => m.apushCivilWarPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./apush-civil-war-part3').then(m => m.apushCivilWarPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./apush-civil-war-part4').then(m => m.apushCivilWarPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./apush-civil-war-part5').then(m => m.apushCivilWarPart5Data) },
+      { title: 'The Collapse of Compromise, 1846–1861', loader: () => import('./apush-civil-war-part2').then(m => m.apushCivilWarPart2Data) },
+      { title: 'Secession and War Aims in the Sources, 1860–1865', loader: () => import('./apush-civil-war-part3').then(m => m.apushCivilWarPart3Data) },
+      { title: 'Two Home Fronts and the Union Victory', loader: () => import('./apush-civil-war-part4').then(m => m.apushCivilWarPart4Data) },
+      { title: 'Emancipation as a Process, the War in the West, and Misconceptions', loader: () => import('./apush-civil-war-part5').then(m => m.apushCivilWarPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./apush-civil-war-part6').then(m => m.apushCivilWarPart6Data) },
       { title: 'AP Review', loader: () => import('./apush-civil-war-part7').then(m => m.apushCivilWarPart7Data) }
     ],

@@ -7,9 +7,9 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./apush-gilded-age-part1').then(m => m.apushGildedAgePart1Data) },
-      { title: 'Key Processes', loader: () => import('./apush-gilded-age-part2').then(m => m.apushGildedAgePart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./apush-gilded-age-part3').then(m => m.apushGildedAgePart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./apush-gilded-age-part4').then(m => m.apushGildedAgePart4Data) },
+      { title: 'How Industrial Capitalism Was Built (1865–1898)', loader: () => import('./apush-gilded-age-part2').then(m => m.apushGildedAgePart2Data) },
+      { title: 'Voices of the Gilded Age: Reading the Sources', loader: () => import('./apush-gilded-age-part3').then(m => m.apushGildedAgePart3Data) },
+      { title: 'The West and the New South Compared', loader: () => import('./apush-gilded-age-part4').then(m => m.apushGildedAgePart4Data) },
       { title: 'Change Over Time', loader: () => import('./apush-gilded-age-part5').then(m => m.apushGildedAgePart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./apush-gilded-age-part6').then(m => m.apushGildedAgePart6Data) },
       { title: 'AP Review', loader: () => import('./apush-gilded-age-part7').then(m => m.apushGildedAgePart7Data) }
@@ -631,10 +631,10 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./englit-dramatic-structure-part1').then(m => m.englitDramaticStructurePart1Data) },
-      { title: 'Key Processes', loader: () => import('./englit-dramatic-structure-part2').then(m => m.englitDramaticStructurePart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./englit-dramatic-structure-part3').then(m => m.englitDramaticStructurePart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./englit-dramatic-structure-part4').then(m => m.englitDramaticStructurePart4Data) },
-      { title: 'Change Over Time', loader: () => import('./englit-dramatic-structure-part5').then(m => m.englitDramaticStructurePart5Data) },
+      { title: 'The Architecture of a Play', loader: () => import('./englit-dramatic-structure-part2').then(m => m.englitDramaticStructurePart2Data) },
+      { title: 'Speech on Stage: Dialogue, Soliloquy, Aside and Monologue', loader: () => import('./englit-dramatic-structure-part3').then(m => m.englitDramaticStructurePart3Data) },
+      { title: 'Tragedy: Hamartia, Peripeteia, Anagnorisis and Catharsis', loader: () => import('./englit-dramatic-structure-part4').then(m => m.englitDramaticStructurePart4Data) },
+      { title: 'Dramatic Irony, Comic Structure and Staging', loader: () => import('./englit-dramatic-structure-part5').then(m => m.englitDramaticStructurePart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./englit-dramatic-structure-part6').then(m => m.englitDramaticStructurePart6Data) },
       { title: 'AP Review', loader: () => import('./englit-dramatic-structure-part7').then(m => m.englitDramaticStructurePart7Data) }
     ],
@@ -643,9 +643,9 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./englit-character-setting-part1').then(m => m.englitCharacterSettingPart1Data) },
-      { title: 'Key Processes', loader: () => import('./englit-character-setting-part2').then(m => m.englitCharacterSettingPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./englit-character-setting-part3').then(m => m.englitCharacterSettingPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./englit-character-setting-part4').then(m => m.englitCharacterSettingPart4Data) },
+      { title: 'Building a Character: The Channels of Characterization', loader: () => import('./englit-character-setting-part2').then(m => m.englitCharacterSettingPart2Data) },
+      { title: 'Setting as a Social World', loader: () => import('./englit-character-setting-part3').then(m => m.englitCharacterSettingPart3Data) },
+      { title: 'Setting as Atmosphere, Mirror and Antagonist', loader: () => import('./englit-character-setting-part4').then(m => m.englitCharacterSettingPart4Data) },
       { title: 'Change Over Time', loader: () => import('./englit-character-setting-part5').then(m => m.englitCharacterSettingPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./englit-character-setting-part6').then(m => m.englitCharacterSettingPart6Data) },
       { title: 'AP Review', loader: () => import('./englit-character-setting-part7').then(m => m.englitCharacterSettingPart7Data) }
@@ -655,8 +655,8 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./englit-narration-pov-part1').then(m => m.englitNarrationPovPart1Data) },
-      { title: 'Key Processes', loader: () => import('./englit-narration-pov-part2').then(m => m.englitNarrationPovPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./englit-narration-pov-part3').then(m => m.englitNarrationPovPart3Data) },
+      { title: 'The Point-of-View Toolkit: Person and Access', loader: () => import('./englit-narration-pov-part2').then(m => m.englitNarrationPovPart2Data) },
+      { title: 'Point of View vs. Perspective', loader: () => import('./englit-narration-pov-part3').then(m => m.englitNarrationPovPart3Data) },
       { title: 'Connections & Interactions', loader: () => import('./englit-narration-pov-part4').then(m => m.englitNarrationPovPart4Data) },
       { title: 'Change Over Time', loader: () => import('./englit-narration-pov-part5').then(m => m.englitNarrationPovPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./englit-narration-pov-part6').then(m => m.englitNarrationPovPart6Data) },
@@ -667,7 +667,7 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./englit-narrative-complexity-part1').then(m => m.englitNarrativeComplexityPart1Data) },
-      { title: 'Key Processes', loader: () => import('./englit-narrative-complexity-part2').then(m => m.englitNarrativeComplexityPart2Data) },
+      { title: 'Story Order and Telling Order', loader: () => import('./englit-narrative-complexity-part2').then(m => m.englitNarrativeComplexityPart2Data) },
       { title: 'Patterns & Examples', loader: () => import('./englit-narrative-complexity-part3').then(m => m.englitNarrativeComplexityPart3Data) },
       { title: 'Connections & Interactions', loader: () => import('./englit-narrative-complexity-part4').then(m => m.englitNarrativeComplexityPart4Data) },
       { title: 'Change Over Time', loader: () => import('./englit-narrative-complexity-part5').then(m => m.englitNarrativeComplexityPart5Data) },
@@ -691,7 +691,7 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./englit-figurative-language-part1').then(m => m.englitFigurativeLanguagePart1Data) },
-      { title: 'Key Processes', loader: () => import('./englit-figurative-language-part2').then(m => m.englitFigurativeLanguagePart2Data) },
+      { title: 'Imagery in Depth: Senses, Synesthesia and Image Patterns', loader: () => import('./englit-figurative-language-part2').then(m => m.englitFigurativeLanguagePart2Data) },
       { title: 'Patterns & Examples', loader: () => import('./englit-figurative-language-part3').then(m => m.englitFigurativeLanguagePart3Data) },
       { title: 'Connections & Interactions', loader: () => import('./englit-figurative-language-part4').then(m => m.englitFigurativeLanguagePart4Data) },
       { title: 'Change Over Time', loader: () => import('./englit-figurative-language-part5').then(m => m.englitFigurativeLanguagePart5Data) },
@@ -703,7 +703,7 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./englit-tone-speaker-part1').then(m => m.englitToneSpeakerPart1Data) },
-      { title: 'Key Processes', loader: () => import('./englit-tone-speaker-part2').then(m => m.englitToneSpeakerPart2Data) },
+      { title: 'A Precise Vocabulary for Tone', loader: () => import('./englit-tone-speaker-part2').then(m => m.englitToneSpeakerPart2Data) },
       { title: 'Patterns & Examples', loader: () => import('./englit-tone-speaker-part3').then(m => m.englitToneSpeakerPart3Data) },
       { title: 'Connections & Interactions', loader: () => import('./englit-tone-speaker-part4').then(m => m.englitToneSpeakerPart4Data) },
       { title: 'Change Over Time', loader: () => import('./englit-tone-speaker-part5').then(m => m.englitToneSpeakerPart5Data) },
@@ -909,10 +909,10 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
       { title: 'Core Concepts', loader: () => import('./englang-ethos-pathos-logos-part1').then(m => m.englangEthosPathosLogosPart1Data) },
       { title: 'Key Processes', loader: () => import('./englang-ethos-pathos-logos-part2').then(m => m.englangEthosPathosLogosPart2Data) },
       { title: 'Patterns & Examples', loader: () => import('./englang-ethos-pathos-logos-part3').then(m => m.englangEthosPathosLogosPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./englang-ethos-pathos-logos-part4').then(m => m.englangEthosPathosLogosPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./englang-ethos-pathos-logos-part5').then(m => m.englangEthosPathosLogosPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./englang-ethos-pathos-logos-part6').then(m => m.englangEthosPathosLogosPart6Data) },
-      { title: 'AP Review', loader: () => import('./englang-ethos-pathos-logos-part7').then(m => m.englangEthosPathosLogosPart7Data) }
+      { title: 'Logos in Depth: Burke\'s Speech on Conciliation with America, 1775', loader: () => import('./englang-ethos-pathos-logos-part4').then(m => m.englangEthosPathosLogosPart4Data) },
+      { title: 'Appeals in Combination, Kairos, and Misconceptions: Garrison\'s "To the Public," 1831', loader: () => import('./englang-ethos-pathos-logos-part5').then(m => m.englangEthosPathosLogosPart5Data) },
+      { title: 'Exam Practice: John Brown\'s Speech to the Court, 1859', loader: () => import('./englang-ethos-pathos-logos-part6').then(m => m.englangEthosPathosLogosPart6Data) },
+      { title: 'Review: Using the Appeals to Explain, Not to Label', loader: () => import('./englang-ethos-pathos-logos-part7').then(m => m.englangEthosPathosLogosPart7Data) }
     ],
   },
   'englang-logical-fallacies': {
@@ -924,7 +924,7 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
       { title: 'Connections & Interactions', loader: () => import('./englang-logical-fallacies-part4').then(m => m.englangLogicalFallaciesPart4Data) },
       { title: 'Change Over Time', loader: () => import('./englang-logical-fallacies-part5').then(m => m.englangLogicalFallaciesPart5Data) },
       { title: 'Exam Practice: Franklin\'s 1790 Satire, Revising Faulty Sentences, and a Sound Argument Essay', loader: () => import('./englang-logical-fallacies-part6').then(m => m.englangLogicalFallaciesPart6Data) },
-      { title: 'AP Review', loader: () => import('./englang-logical-fallacies-part7').then(m => m.englangLogicalFallaciesPart7Data) }
+      { title: 'Synthesis Review: From Spotting Fallacies to Evaluating Reasoning', loader: () => import('./englang-logical-fallacies-part7').then(m => m.englangLogicalFallaciesPart7Data) }
     ],
   },
   'englang-synthesis': {
