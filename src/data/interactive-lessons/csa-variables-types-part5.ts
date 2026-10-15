@@ -5,19 +5,39 @@ export const csaVariablesTypesPart5Data = {
       id: 'csavaria5-intro',
       type: 'text' as const,
       content: `
-# 💻 Variables & Data Types
+# 📦 Variables & Data Types
 
-**Part 5 of 7 — Change Over Time**
+**Part 5 of 7 — Type Compatibility, Cast Placement, and Misconceptions**
 
-Variables & Data Types has evolved over time. Understanding historical and contemporary changes helps explain current patterns and predict future trends.
+---
 
-### Key Concepts
+Most Unit 1 "what is printed" questions turn on two decisions: **will this line compile**, and **when does each cast and division happen**? This part gives you a reliable procedure for both, then names the misconceptions that cost the most points.
 
-| Concept | Description |
-|---------|-------------|
-| **Continuity** | Aspects of Variables & Data Types that have remained stable over time |
-| **Change** | How Variables & Data Types has transformed due to new forces and conditions |
-| **Trend** | The direction of change in Variables & Data Types over time |
+| In this part |
+|---|
+| Which assignments compile |
+| Where the cast goes |
+| Worked example: computing a percentage |
+| Misconceptions to retire |
+      `
+    },
+    {
+      id: 'csavaria5-compat',
+      type: 'text' as const,
+      content: `
+## Which Assignments Compile?
+
+| Storing... into... | Compiles? | Example | Result |
+|---|---|---|---|
+| an int into a double | Yes (widening) | \`double d = 7;\` | \`d\` is 7.0 |
+| a double into an int | Only with a cast | \`int n = (int) 7.9;\` | \`n\` is 7 |
+| a double into an int, no cast | No | \`int n = 7.9;\` | Compile-time error |
+| an int into a boolean | Never | \`boolean b = 1;\` | Compile-time error |
+| an int into a String | No | \`String s = 5;\` | Compile-time error |
+
+No cast converts between \`boolean\` and a number: \`(int) true\` and \`(boolean) 1\` are both compile-time errors.
+
+The same widening rule applies to method arguments. \`Math.sqrt\` expects a double, so \`Math.sqrt(16)\` compiles: the int 16 widens to 16.0, and the method returns 4.0.
       `
     },
     {
@@ -29,144 +49,163 @@ Variables & Data Types has evolved over time. Understanding historical and conte
       exercise: {
         questions: [
           {
-            question: 'Studying change over time in Variables & Data Types helps:',
+            question: 'Which declaration compiles without an error?',
             options: [
-              'Only with history classes',
-              'Explain current patterns and predict future developments',
-              'Nothing',
-              'Memorize dates'
+              'double d = 12;',
+              'int count = 12.0;',
+              'boolean flag = 0;',
+              'String name = 12;'
             ],
-            correctAnswer: 1,
-            explanation: 'Understanding how things have changed reveals the forces shaping current conditions and likely future trends.'
+            correctAnswer: 0,
+            explanation: 'An int widens to a double automatically, so d holds 12.0. A double needs a cast to become an int, no number converts to boolean, and an int is not a String.'
           },
           {
-            question: 'Continuity in Variables & Data Types means:',
+            question: 'Which expression produces a compile-time error?',
             options: [
-              'Everything changes',
-              'Some aspects have remained stable despite other changes',
-              'Nothing ever happened',
-              'The topic is boring'
+              '(int) false',
+              '(int) 4.5 + 2',
+              '(double) 9 / 2',
+              '(int) (3.0 * 2)'
             ],
-            correctAnswer: 1,
-            explanation: 'Continuity refers to elements that persist even as other aspects change — an important analytical concept.'
+            correctAnswer: 0,
+            explanation: 'Java has no conversion between boolean and int, so casting false is rejected. The other casts convert between int and double, which is always allowed with an explicit cast.'
           }
         ]
       }
     },
     {
-      id: 'csavaria5-content',
+      id: 'csavaria5-placement',
       type: 'text' as const,
       content: `
-## Change Over Time — Deeper Dive
+## Where the Cast Goes Matters
 
-### Continuity
-Aspects of Variables & Data Types that have remained stable over time. Understanding this concept is essential for mastering Variables & Data Types in AP Computer Science A.
+A cast applies to the **single value immediately to its right**, and it happens before \`*\`, \`/\` and \`%\`. To cast a whole expression, wrap the expression in parentheses.
 
-### Change
-How Variables & Data Types has transformed due to new forces and conditions. This builds on the previous concept and connects to broader themes in the course.
+With \`int a = 7;\` and \`int b = 2;\`:
 
-### Trend
-The direction of change in Variables & Data Types over time. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+| Expression | Steps | Result |
+|---|---|---|
+| \`(double) a / b\` | 7.0 / 2 | 3.5 |
+| \`a / (double) b\` | 7 / 2.0 | 3.5 |
+| \`(double) (a / b)\` | (double) 3 | 3.0 |
+| \`(int) a / b\` | 7 / 2 | 3 |
+| \`(int) 3.5 * 2\` | 3 * 2 | 6 |
+| \`(int) (3.5 * 2)\` | (int) 7.0 | 7 |
+
+### Worked Example: Computing a Percentage
+\`\`\`java
+int correct = 17;
+int total = 20;
+double pct1 = correct / total * 100;            // 0 * 100 is 0, stored as 0.0
+double pct2 = (double) correct / total * 100;   // 0.85 * 100 is 85.0
+double pct3 = 100 * correct / total;            // 1700 / 20 is 85, stored as 85.0
+\`\`\`
+
+- **pct1** fails: 17 / 20 is int division, which gives 0 before the multiplication happens.
+- **pct2** is correct: the cast makes 17.0, so every later operation is double arithmetic.
+- **pct3** happens to work here, but only because 1700 divides evenly by 20. With \`total = 30\` it would give 56.0 instead of about 56.67, because the division is still int division.
       `
-    },
-    {
-      id: 'csavaria5-input',
-      type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
-
-1) What term refers to aspects of Variables & Data Types that have remained stable over time?
-
-2) What concept describes how Variables & Data Types has transformed due to new forces and conditions?
-
-3) Name the term for the direction of change in Variables & Data Types over time.
-
-Use the exact term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['Continuity', 'Change', 'Trend'],
-        hint1: 'Starts with: C',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: T',
-        explanation: 'Expected answers: Continuity (Aspects of Variables & Data Types that have remained stable over time), Change (How Variables & Data Types has transformed due to new forces and conditions), and Trend (The direction of change in Variables & Data Types over time).'
-      }
     },
     {
       id: 'csavaria5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Evaluate the Cast** 🔍
+
+Use \`int a = 9;\` and \`int b = 4;\`.
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Aspects of Variables & Data Types that have remained stable over time is called ___',
-            options: ['Continuity', 'Change', 'Trend', 'None of these']
+            label: '(double) a / b evaluates to ___',
+            options: ['2.25', '2.0', '2', '2.5']
           },
           {
-            label: 'How Variables & Data Types has transformed due to new forces and conditions describes ___',
-            options: ['Continuity', 'Change', 'Trend', 'All of these']
+            label: '(double) (a / b) evaluates to ___',
+            options: ['2.0', '2.25', '2', '2.5']
           },
           {
-            label: 'The direction of change in Variables & Data Types over time is known as ___',
-            options: ['Trend', 'Continuity', 'Change', 'None of these']
+            label: '(int) 2.75 * b evaluates to ___',
+            options: ['8', '11', '11.0', '8.0']
           }
         ],
-        correctAnswers: ['Continuity', 'Change', 'Trend'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Continuity — Aspects of Variables & Data Types that have remained stable over time. Change — How Variables & Data Types has transformed due to new forces and conditions. Trend — The direction of change in Variables & Data Types over time.'
+        correctAnswers: ['2.25', '2.0', '8'],
+        hint1: 'The cast turns a into 9.0 before the division.',
+        hint2: 'The int division 9 / 4 happens inside the parentheses first.',
+        hint3: 'The cast applies only to 2.75.',
+        explanation: '9.0 / 4 = 2.25. (double) (9 / 4) = (double) 2 = 2.0. (int) 2.75 is 2, and 2 * 4 = 8.'
       }
     },
     {
-      id: 'csavaria5-strategy',
+      id: 'csavaria5-misconceptions',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## Misconceptions to Retire
 
-### Misconceptions to Avoid
-- Don\'t confuse **Continuity** with **Change** — while related, they address different aspects of Variables & Data Types.
-- **Trend** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
+| Belief | Reality |
+|---|---|
+| "Storing the result in a double makes the division exact." | The right side is evaluated first: \`double d = 7 / 2;\` stores 3.0. |
+| "Casting to int rounds." | It truncates toward zero. Round with + 0.5 (Part 4). |
+| "\`(double) (a / b)\` fixes integer division." | The int division already happened inside the parentheses. |
+| "A double holds any number exactly." | Round-off error makes 0.1 + 0.2 print 0.30000000000000004. |
+| "int and double mix freely in assignments." | int to double is automatic; double to int needs a cast. |
+| "\`final\` makes a variable read-only from the start, so it needs no value." | A final variable must be given a value once; after that it cannot be reassigned. |
 
-### AP Strategy Moves
-- When you see questions about change over time, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect change over time to broader themes in AP Computer Science A for higher scores.
+### Constants in Calculations
+\`\`\`java
+final int MAX_SCORE = 40;
+int earned = 34;
+double pct = 100.0 * earned / MAX_SCORE;   // 3400.0 / 40 is 85.0
+\`\`\`
+Starting the expression with the double literal 100.0 makes every later step double arithmetic, so the order of the remaining operations cannot cause int division.
       `
     },
     {
       id: 'csavaria5-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
+
+**Segment A**
+\`\`\`java
+int a = 5;
+int b = 2;
+double x = a / b;
+double y = (double) a / b;
+double z = (double) (a / b);
+System.out.println(x + " " + y + " " + z);
+\`\`\`
+
+**Segment B**
+\`\`\`java
+int hours = 7;
+int days = 2;
+double perDay = (int) (hours / (double) days);
+\`\`\`
       `,
       exercise: {
         questions: [
           {
-            question: 'An AP question asks how Variables & Data Types has changed in the last 50 years. A strong answer would:',
+            question: 'What is printed by Segment A?',
             options: [
-              'Say nothing has changed',
-              'Identify specific changes, explain their causes, and note what has remained constant',
-              'Only list dates',
-              'Make up information'
+              '2.0 2.5 2.0',
+              '2.5 2.5 2.5',
+              '2.0 2.5 2.5',
+              '2 2.5 2'
             ],
-            correctAnswer: 1,
-            explanation: 'Strong AP answers address both change AND continuity, explaining causes and consequences of transformation.'
+            correctAnswer: 0,
+            explanation: 'x stores the int quotient 2 as 2.0, y casts first and gets 2.5, and z casts the already-truncated 2 to get 2.0. Double variables always print with a decimal point.'
           },
           {
-            question: 'A trend in Variables & Data Types shows acceleration in recent decades. The most likely explanation is:',
+            question: 'What value does perDay hold after Segment B executes?',
             options: [
-              'Random chance',
-              'New technologies, policies, or conditions intensifying existing processes',
-              'The data is wrong',
-              'Nothing has changed'
+              '3.0',
+              '3.5',
+              '3',
+              '4.0'
             ],
-            correctAnswer: 1,
-            explanation: 'Accelerating trends are typically driven by new forces (technology, policy, globalization) intensifying existing processes.'
+            correctAnswer: 0,
+            explanation: '7 / 2.0 is 3.5, the cast to int truncates it to 3, and storing 3 in a double variable widens it to 3.0. A double variable never holds the int 3 itself.'
           }
         ]
       }

@@ -5,19 +5,60 @@ export const csaExpressionsOperatorsPart2Data = {
       id: 'csaexpre2-intro',
       type: 'text' as const,
       content: `
-# 💻 Expressions & Operators
+# ➗ Expressions & Operators
 
-**Part 2 of 7 — Key Processes**
+**Part 2 of 7 — Output with print and println**
 
-Understanding the processes related to Expressions & Operators helps explain how and why patterns develop. This part explores the mechanisms driving key phenomena.
+---
 
-### Key Concepts
+Almost every AP CSA trace question ends with "What is printed?" To answer exactly, you need to know where each line break comes from, how string literals are written, and how an expression is turned into text (CED Topic 1.3).
 
-| Concept | Description |
-|---------|-------------|
-| **Process 1** | The primary mechanism that drives patterns in Expressions & Operators |
-| **Process 2** | A secondary process that shapes outcomes in Expressions & Operators |
-| **Cause and effect** | The relationship between actions and outcomes in Expressions & Operators |
+| In this part |
+|---|
+| print vs. println |
+| Escape sequences |
+| Building output with concatenation |
+      `
+    },
+    {
+      id: 'csaexpre2-print',
+      type: 'text' as const,
+      content: `
+## print vs. println
+
+| Statement | What it does |
+|---|---|
+| \`System.out.print(x);\` | Displays \`x\` and leaves the cursor on the **same** line |
+| \`System.out.println(x);\` | Displays \`x\`, then moves to the **next** line |
+| \`System.out.println();\` | Displays nothing and moves to the next line (ends the current line) |
+
+### Worked Example
+\`\`\`java
+System.out.print("AP ");
+System.out.print("CSA");
+System.out.println("!");
+System.out.println("Done");
+\`\`\`
+
+Output:
+\`\`\`
+AP CSA!
+Done
+\`\`\`
+
+Trace: the first two calls stay on one line, giving \`AP CSA\`. The \`println("!")\` adds the \`!\` and **then** ends the line, so \`Done\` starts on a new line.
+
+> 🔑 **The line break comes after the text, not before it.** \`println\` never starts a new line before printing; it ends the line after printing.
+
+## Literals
+A **literal** is a fixed value written directly in code.
+
+| Literal | Type |
+|---|---|
+| \`"Hello"\` | String (in double quotes) |
+| \`42\` | int |
+| \`3.0\` | double (has a decimal point) |
+| \`true\` | boolean |
       `
     },
     {
@@ -25,150 +66,196 @@ Understanding the processes related to Expressions & Operators helps explain how
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
+
+**Segment A**
+\`\`\`java
+System.out.print("one");
+System.out.println("two");
+System.out.print("three");
+System.out.println();
+System.out.println("four");
+\`\`\`
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key process in Expressions & Operators?',
+            question: 'How many lines of output does Segment A produce?',
             options: [
-              'A random event',
-              'A systematic mechanism that produces predictable patterns',
-              'An unexplainable phenomenon',
-              'A one-time occurrence'
+              'Three lines',
+              'Four lines',
+              'Five lines',
+              'Two lines'
             ],
-            correctAnswer: 1,
-            explanation: 'Key processes are systematic mechanisms that produce identifiable, often predictable patterns.'
+            correctAnswer: 0,
+            explanation: 'Line one is onetwo, ended by the first println. Line two is three, ended by the empty println. Line three is four.'
           },
           {
-            question: 'Understanding cause and effect in Expressions & Operators helps students:',
+            question: 'What is the first line of output from Segment A?',
             options: [
-              'Memorize dates',
-              'Explain why patterns exist rather than just describing them',
-              'Avoid analysis',
-              'Skip exam questions'
+              'onetwo',
+              'one two',
+              'one two three',
+              'onetwothree'
             ],
-            correctAnswer: 1,
-            explanation: 'Cause-and-effect reasoning helps explain WHY patterns exist — a higher-order skill tested on the AP exam.'
+            correctAnswer: 0,
+            explanation: 'print does not add a space or a line break, so two follows one directly. The println that prints two ends the line before three is printed.'
           }
         ]
       }
     },
     {
-      id: 'csaexpre2-content',
+      id: 'csaexpre2-escapes',
       type: 'text' as const,
       content: `
-## Key Processes — Deeper Dive
+## Escape Sequences
 
-### Process 1
-The primary mechanism that drives patterns in Expressions & Operators. Understanding this concept is essential for mastering Expressions & Operators in AP Computer Science A.
+Some characters cannot be typed directly inside a string literal. An **escape sequence** starts with a backslash. The AP subset uses three:
 
-### Process 2
-A secondary process that shapes outcomes in Expressions & Operators. This builds on the previous concept and connects to broader themes in the course.
+| Escape sequence | Prints |
+|---|---|
+| \`\\"\` | a double quotation mark |
+| \`\\\\\` | a single backslash |
+| \`\\n\` | a line break |
 
-### Cause and effect
-The relationship between actions and outcomes in Expressions & Operators. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+### Worked Example
+\`\`\`java
+System.out.println("She said \\"hi\\"\\nC:\\\\temp");
+\`\`\`
+
+Output:
+\`\`\`
+She said "hi"
+C:\\temp
+\`\`\`
+
+Trace: \`\\"\` prints a quotation mark without ending the string, \`\\n\` breaks the line, and \`\\\\\` prints one backslash. The \`println\` then ends the second line.
       `
-    },
-    {
-      id: 'csaexpre2-input',
-      type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
-
-1) What term refers to the primary mechanism that drives patterns in Expressions & Operators?
-
-2) What concept describes a secondary process that shapes outcomes in Expressions & Operators?
-
-3) Name the term for the relationship between actions and outcomes in Expressions & Operators.
-
-Use the exact term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['Process 1', 'Process 2', 'Cause and effect'],
-        hint1: 'Starts with: P',
-        hint2: 'Starts with: P',
-        hint3: 'Starts with: C',
-        explanation: 'Expected answers: Process 1 (The primary mechanism that drives patterns in Expressions & Operators), Process 2 (A secondary process that shapes outcomes in Expressions & Operators), and Cause and effect (The relationship between actions and outcomes in Expressions & Operators).'
-      }
     },
     {
       id: 'csaexpre2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Read the Literal** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The primary mechanism that drives patterns in Expressions & Operators is called ___',
-            options: ['Process 1', 'Process 2', 'Cause and effect', 'None of these']
+            label: 'System.out.print("a\\nb"); displays ___',
+            options: ['a and b on two lines', 'a\\nb on one line', 'ab on one line', 'a space b on one line']
           },
           {
-            label: 'A secondary process that shapes outcomes in Expressions & Operators describes ___',
-            options: ['Process 1', 'Process 2', 'Cause and effect', 'All of these']
+            label: 'To print one backslash, the string literal must contain ___',
+            options: ['two backslashes', 'one backslash', 'a forward slash', 'backslash n']
           },
           {
-            label: 'The relationship between actions and outcomes in Expressions & Operators is known as ___',
-            options: ['Cause and effect', 'Process 1', 'Process 2', 'None of these']
+            label: 'The literal "Say \\"yes\\"" prints ___',
+            options: ['Say "yes"', 'Say \\"yes\\"', 'Say yes', 'Say ""yes""']
           }
         ],
-        correctAnswers: ['Process 1', 'Process 2', 'Cause and effect'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Process 1 — The primary mechanism that drives patterns in Expressions & Operators. Process 2 — A secondary process that shapes outcomes in Expressions & Operators. Cause and effect — The relationship between actions and outcomes in Expressions & Operators.'
+        correctAnswers: ['a and b on two lines', 'two backslashes', 'Say "yes"'],
+        hint1: '\\n is the line-break escape.',
+        hint2: 'A single backslash starts an escape sequence.',
+        hint3: 'Each \\" prints one quotation mark.',
+        explanation: '\\n starts a new line, \\\\ prints one backslash, and \\" prints a quotation mark without ending the string.'
       }
     },
     {
-      id: 'csaexpre2-strategy',
+      id: 'csaexpre2-concat',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## Building Output with Concatenation
 
-### Misconceptions to Avoid
-- Don\'t confuse **Process 1** with **Process 2** — while related, they address different aspects of Expressions & Operators.
-- **Cause and effect** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
+Java evaluates the whole expression inside the parentheses **before** printing it. Part 1 showed that \`+\` works left to right and switches to concatenation once a String is involved. Here is how that plays out in realistic output lines:
 
-### AP Strategy Moves
-- When you see questions about key processes, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect key processes to broader themes in AP Computer Science A for higher scores.
+\`\`\`java
+int wins = 7;
+int games = 10;
+System.out.println("Record: " + wins + "-" + (games - wins));
+System.out.println("Win rate: " + (double) wins / games);
+System.out.println(wins + games + " total, " + wins * 2 + " points");
+\`\`\`
+
+Output:
+\`\`\`
+Record: 7-3
+Win rate: 0.7
+17 total, 14 points
+\`\`\`
+
+| Line | Why |
+|---|---|
+| 1 | The parentheses force \`games - wins\` (3) to be computed as a number before it is joined. |
+| 2 | The cast and \`/\` have higher precedence than \`+\`, so 7.0 / 10 = 0.7 is computed first. |
+| 3 | \`wins + games\` is int addition (17) because no String has appeared yet; \`wins * 2\` is done before its \`+\`. |
+
+### A Compile-Time Trap
+\`\`\`java
+System.out.println("Diff: " + games - wins);   // does not compile
+\`\`\`
+\`"Diff: " + games\` becomes the String \`"Diff: 10"\`, and Java cannot subtract an int from a String. Parentheses fix it: \`"Diff: " + (games - wins)\`.
       `
     },
     {
       id: 'csaexpre2-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
+
+**Segment B**
+\`\`\`java
+int a = 4;
+int b = 6;
+System.out.print(a + b);
+System.out.println(" " + a + b);
+System.out.println(a * b + "!");
+\`\`\`
       `,
       exercise: {
         questions: [
           {
-            question: 'A student observes a pattern and needs to explain the underlying process. They should:',
+            question: 'What is the first line printed by Segment B?',
             options: [
-              'Just describe what they see',
-              'Identify the mechanism causing the pattern and explain how it operates',
-              'Say the pattern is random',
-              'Ignore the pattern'
+              '10 46',
+              '10 10',
+              '46 10',
+              '1046'
             ],
-            correctAnswer: 1,
-            explanation: 'Explaining processes requires identifying the underlying mechanism, not just describing the observable pattern.'
+            correctAnswer: 0,
+            explanation: 'a + b with two ints prints 10, and print stays on the line. Then " " + a + b concatenates from left to right, giving a space followed by 4 and 6.'
           },
           {
-            question: 'On the AP exam, process questions typically require students to:',
+            question: 'With int a = 4 and int b = 6, which statement causes a compile-time error?',
             options: [
-              'List facts',
-              'Explain how a mechanism works and connect it to outcomes',
-              'Draw a picture',
-              'Write a poem'
+              'System.out.println("Sum: " + a - b);',
+              'System.out.println("Sum: " + (a - b));',
+              'System.out.println("Sum: " + a * b + "!");',
+              'System.out.println(a - b + " sum");'
             ],
-            correctAnswer: 1,
-            explanation: 'AP process questions test whether students understand HOW things work, not just WHAT happens.'
+            correctAnswer: 0,
+            explanation: '"Sum: " + a produces a String, and a String minus an int is not allowed. Parentheses around a - b, a product that is computed first, or subtraction before any String all compile.'
           }
         ]
+      }
+    },
+    {
+      id: 'csaexpre2-input',
+      type: 'input-boxes' as const,
+      content: `
+**Applied Recall** ✍️
+
+1) The method that displays its argument and then moves to a new line is System.out._______.
+
+2) The escape sequence for a line break is a backslash followed by the letter _______.
+
+3) System.out.println("Score: " + 3 * 4); prints Score: _______
+      `,
+      exercise: {
+        boxes: 3,
+        correctAnswers: ['println', 'n', '12'],
+        hint1: 'Its name ends in "ln" for "line".',
+        hint2: 'Think of "new line".',
+        hint3: 'Multiplication happens before concatenation.',
+        explanation: 'println prints and then ends the line. \\n is a line break. 3 * 4 = 12 is computed before it is joined to the String.'
       }
     }
   ]

@@ -5,168 +5,170 @@ export const csaExpressionsOperatorsPart6Data = {
       id: 'csaexpre6-intro',
       type: 'text' as const,
       content: `
-# 💻 Expressions & Operators
+# ➗ Expressions & Operators
 
-**Part 6 of 7 — Problem-Solving Workshop**
+**Part 6 of 7 — AP-Style Practice: Tracing and Writing Expressions**
 
-Apply Expressions & Operators concepts to data interpretation and analytical scenarios. Practice the types of questions seen on the AP exam.
+---
 
-### Key Concepts
+This part is exam practice. For every trace item:
 
-| Concept | Description |
-|---------|-------------|
-| **Data interpretation** | Analyzing maps, graphs, and tables related to Expressions & Operators |
-| **Argumentation** | Making evidence-based claims about Expressions & Operators |
-| **Spatial reasoning** | Using geographic thinking to analyze Expressions & Operators |
+1. **Mark the types** of every variable before you compute anything.
+2. **Evaluate one operator at a time** in precedence order, left to right within a level, writing each intermediate value.
+3. **Watch for the moment a String appears**, because every \`+\` after it joins text.
       `
     },
     {
-      id: 'csaexpre6-quiz1',
+      id: 'csaexpre6-mc1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Multiple-Choice Practice** 🎯
+
+**Segment A**
+\`\`\`java
+int x = 17;
+int y = 5;
+x %= y;
+y += x * 2;
+System.out.println(x + y + "" + x * y);
+\`\`\`
+
+**Segment B**
+\`\`\`java
+double d = 7 / 2 + 7 % 2 / 2.0;
+int k = (int) (d * 10) % 4;
+\`\`\`
       `,
       exercise: {
         questions: [
           {
-            question: 'When interpreting data about Expressions & Operators, the first step is:',
+            question: 'What is printed by Segment A?',
             options: [
-              'Jump to conclusions',
-              'Identify what the data shows and note any patterns or trends',
-              'Ignore the data',
-              'Only look at the title'
+              '1118',
+              '2918',
+              '11 18',
+              '710'
             ],
-            correctAnswer: 1,
-            explanation: 'Data interpretation should begin with identifying what is shown and noting visible patterns before drawing conclusions.'
+            correctAnswer: 0,
+            explanation: 'x becomes 17 % 5 = 2 and y becomes 5 + 4 = 9. Then x + y is int addition (11), the empty String turns it into text, and x * y = 18 is joined, giving 1118.'
           },
           {
-            question: 'An evidence-based argument about Expressions & Operators requires:',
+            question: 'What is the value of k after Segment B executes?',
             options: [
-              'Just opinions',
-              'A clear claim supported by specific evidence and reasoning',
-              'No evidence',
-              'Only emotional appeals'
+              '3',
+              '2',
+              '0',
+              '35'
             ],
-            correctAnswer: 1,
-            explanation: 'Evidence-based arguments need a claim (thesis), supporting evidence (data, examples), and reasoning (explanation).'
+            correctAnswer: 0,
+            explanation: '7 / 2 is 3 and 7 % 2 / 2.0 is 0.5, so d is 3.5. Then (int) 35.0 is 35, and the % runs after the cast: 35 % 4 = 3.'
+          },
+          {
+            question: 'A shipping program packs n items (n is positive) into boxes that each hold 12, and a partly filled box still counts. Which expression gives the number of boxes needed?',
+            options: [
+              '(n + 11) / 12',
+              'n / 12 + 1',
+              'n / 12',
+              '(n + 12) / 12'
+            ],
+            correctAnswer: 0,
+            explanation: 'Adding 11 before dividing rounds any partial box up without adding an extra box when n is a multiple of 12. Adding 1 after dividing, or adding 12 before, counts one box too many when n is 24, for example.'
           }
         ]
       }
     },
     {
-      id: 'csaexpre6-content',
+      id: 'csaexpre6-frq',
       type: 'text' as const,
       content: `
-## Problem-Solving Workshop — Deeper Dive
+## FRQ-Style Task: Height Conversion
 
-### Data interpretation
-Analyzing maps, graphs, and tables related to Expressions & Operators. Understanding this concept is essential for mastering Expressions & Operators in AP Computer Science A.
+A program stores a height as \`int totalInches\`. Write statements that:
 
-### Argumentation
-Making evidence-based claims about Expressions & Operators. This builds on the previous concept and connects to broader themes in the course.
+- **(a)** print the height in the form \`5 ft 7 in\`;
+- **(b)** store the height in meters in a double (1 inch is 2.54 centimeters, and 100 centimeters is 1 meter).
 
-### Spatial reasoning
-Using geographic thinking to analyze Expressions & Operators. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+### Worked Solution
+\`\`\`java
+int totalInches = 67;
+int feet = totalInches / 12;                  // 5
+int inches = totalInches % 12;                // 7
+System.out.println(feet + " ft " + inches + " in");
+double meters = totalInches * 2.54 / 100;     // 170.18 / 100, about 1.70
+\`\`\`
+
+### Why Each Line Earns Credit
+- \`/\` and \`%\` by 12 split the inches into whole feet and leftover inches.
+- The spaces live inside the String literals, so the output reads \`5 ft 7 in\`, not \`5ft7in\`.
+- \`totalInches * 2.54\` is a double, so the division by 100 is double division.
+
+### Where Points Are Lost
+\`\`\`java
+int feet = totalInches / 12.0;                // does not compile: the result is a double
+double meters = totalInches * 254 / 10000;    // 17018 / 10000 is 1, stored as 1.0
+\`\`\`
+The second line uses whole numbers to avoid the decimal 2.54, but \`17018 / 10000\` is int division, so the answer collapses to 1.0.
       `
-    },
-    {
-      id: 'csaexpre6-input',
-      type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
-
-1) What term refers to analyzing maps, graphs, and tables related to Expressions & Operators?
-
-2) What concept describes making evidence-based claims about Expressions & Operators?
-
-3) Name the term for using geographic thinking to analyze Expressions & Operators.
-
-Use the exact term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['Data interpretation', 'Argumentation', 'Spatial reasoning'],
-        hint1: 'Starts with: D',
-        hint2: 'Starts with: A',
-        hint3: 'Starts with: S',
-        explanation: 'Expected answers: Data interpretation (Analyzing maps, graphs, and tables related to Expressions & Operators), Argumentation (Making evidence-based claims about Expressions & Operators), and Spatial reasoning (Using geographic thinking to analyze Expressions & Operators).'
-      }
     },
     {
       id: 'csaexpre6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Check the Solution** 🔍
+
+Now suppose \`totalInches = 75\`.
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Analyzing maps, graphs, and tables related to Expressions & Operators is called ___',
-            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'None of these']
+            label: 'feet = totalInches / 12 stores ___',
+            options: ['6', '6.25', '7', '3']
           },
           {
-            label: 'Making evidence-based claims about Expressions & Operators describes ___',
-            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'All of these']
+            label: 'inches = totalInches % 12 stores ___',
+            options: ['3', '6', '25', '9']
           },
           {
-            label: 'Using geographic thinking to analyze Expressions & Operators is known as ___',
-            options: ['Spatial reasoning', 'Data interpretation', 'Argumentation', 'None of these']
+            label: 'totalInches * 254 / 10000 evaluates to ___',
+            options: ['1', '1.905', '2', '19050']
           }
         ],
-        correctAnswers: ['Data interpretation', 'Argumentation', 'Spatial reasoning'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Data interpretation — Analyzing maps, graphs, and tables related to Expressions & Operators. Argumentation — Making evidence-based claims about Expressions & Operators. Spatial reasoning — Using geographic thinking to analyze Expressions & Operators.'
+        correctAnswers: ['6', '3', '1'],
+        hint1: 'How many whole 12s fit in 75?',
+        hint2: '6 * 12 = 72; what is left?',
+        hint3: '75 * 254 = 19050; then int division.',
+        explanation: '75 / 12 = 6 and 75 % 12 = 3, so 75 inches is 6 ft 3 in. 75 * 254 = 19050, and 19050 / 10000 = 1 with int division.'
       }
     },
     {
-      id: 'csaexpre6-strategy',
-      type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
-
-### Misconceptions to Avoid
-- Don\'t confuse **Data interpretation** with **Argumentation** — while related, they address different aspects of Expressions & Operators.
-- **Spatial reasoning** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about problem-solving workshop, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect problem-solving workshop to broader themes in AP Computer Science A for higher scores.
-      `
-    },
-    {
-      id: 'csaexpre6-applied',
+      id: 'csaexpre6-mc2',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**FRQ Reasoning** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'You are given a data table about Expressions & Operators and asked to identify a trend. You should:',
+            question: 'A student writes int feet = totalInches / 12.0; in part (a). What happens?',
             options: [
-              'Pick random numbers',
-              'Look for consistent increases, decreases, or patterns across the data',
-              'Ignore the table',
-              'Only read the first row'
+              'It does not compile',
+              'feet is rounded down',
+              'feet is rounded to nearest',
+              'feet keeps the fraction'
             ],
-            correctAnswer: 1,
-            explanation: 'Trend identification requires examining the entire dataset for consistent patterns of change.'
+            correctAnswer: 0,
+            explanation: 'totalInches / 12.0 is a double, and a double cannot be stored in an int without a cast, so the compiler rejects the line. An int variable can never hold a fraction.'
           },
           {
-            question: 'A free-response question asks you to use evidence to support an argument about Expressions & Operators. The best approach is:',
+            question: 'The int variable price holds an amount in cents. Which statement adds a 7 percent fee and stores the total, rounded to the nearest cent, back in price?',
             options: [
-              'State your opinion without evidence',
-              'Make a clear claim, cite specific data or examples, and explain how they support your argument',
-              'Copy the question',
-              'Write about a different topic'
+              'price += (int) (price * 0.07 + 0.5);',
+              'price += (price * 7) / 100;',
+              'price = price * 1.07;',
+              'price = price * 107 / 100.0;'
             ],
-            correctAnswer: 1,
-            explanation: 'AP free-response answers require a clear thesis, specific supporting evidence, and explanation of how evidence supports the argument.'
+            correctAnswer: 0,
+            explanation: 'The fee is computed as a double, shifted by 0.5 and cast, so it rounds to the nearest cent. The all-int version truncates the fee instead of rounding it, and the other two leave a double on the right side of an int assignment, which does not compile.'
           }
         ]
       }

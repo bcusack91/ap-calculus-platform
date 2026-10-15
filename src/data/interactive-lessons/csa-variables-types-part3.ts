@@ -5,19 +5,54 @@ export const csaVariablesTypesPart3Data = {
       id: 'csavaria3-intro',
       type: 'text' as const,
       content: `
-# 💻 Variables & Data Types
+# 📦 Variables & Data Types
 
-**Part 3 of 7 — Patterns & Examples**
+**Part 3 of 7 — Assignment Statements and Trace Tables**
 
-This part examines specific patterns and real-world examples related to Variables & Data Types. Case studies help illustrate abstract concepts.
+---
 
-### Key Concepts
+The assignment operator \`=\` is an **instruction**, not a statement that two things are equal. It tells Java: evaluate the expression on the right, then store the result in the variable on the left, replacing the old value (CED Topic 1.4). Tracing these updates accurately is the most-used skill on the AP CSA exam.
 
-| Concept | Description |
-|---------|-------------|
-| **Structural pattern** | A recurring structure within Variables & Data Types |
-| **Case study** | A specific real-world example that illustrates Variables & Data Types |
-| **Comparison** | Analyzing similarities and differences across examples of Variables & Data Types |
+| In this part |
+|---|
+| How an assignment statement executes |
+| Trace tables |
+| Worked example: swapping two values |
+| Common assignment mistakes |
+      `
+    },
+    {
+      id: 'csavaria3-rules',
+      type: 'text' as const,
+      content: `
+## How an Assignment Statement Executes
+
+1. **Evaluate** the expression on the right, using the **current** values of any variables.
+2. **Store** the result in the variable on the left. Its old value is gone.
+
+\`\`\`java
+int x = 5;
+x = x + 3;   // right side: 5 + 3 is 8, so x now holds 8
+\`\`\`
+
+In algebra, x = x + 3 has no solution. In Java it is an ordinary update.
+
+| Statement | Legal? | Reason |
+|---|---|---|
+| \`x = 7;\` | Yes | A variable is on the left |
+| \`7 = x;\` | No | The left side must be a variable |
+| \`x + 1 = 9;\` | No | The left side must be a variable |
+| \`int y = x;\` | Yes | Copies the current value of \`x\` into \`y\` |
+
+### Copies Are Independent
+For primitive types, \`int y = x;\` copies the **value**. Changing \`x\` afterward does not change \`y\`.
+
+### A Variable Must Be Assigned Before It Is Read
+\`\`\`java
+int total;
+total = total + 5;   // compile-time error: total might not have been initialized
+\`\`\`
+A local variable has no value until something is assigned to it, so the compiler rejects any attempt to read it first.
       `
     },
     {
@@ -29,144 +64,178 @@ This part examines specific patterns and real-world examples related to Variable
       exercise: {
         questions: [
           {
-            question: 'Why do analysts use case studies?',
+            question: 'After int a = 4; int b = a; a = a * 3; execute, what are the values of a and b?',
             options: [
-              'They are easier than analysis',
-              'They provide concrete examples that illustrate abstract concepts',
-              'They replace all other methods',
-              'They are required by law'
+              'a is 12 and b is 4',
+              'a is 12 and b is 12',
+              'a is 4 and b is 12',
+              'a is 12 and b is 3'
             ],
-            correctAnswer: 1,
-            explanation: 'Case studies ground abstract concepts in specific, real-world examples that are easier to understand and remember.'
+            correctAnswer: 0,
+            explanation: 'b receives a copy of the value 4. The later statement multiplies a by 3, giving 12, and does not touch b.'
           },
           {
-            question: 'Comparing examples of Variables & Data Types across examples helps:',
+            question: 'Which statement is not a legal assignment in Java?',
             options: [
-              'Nothing',
-              'Identify universal patterns and unique local variations',
-              'Confuse students',
-              'Waste time'
+              'count + 1 = total;',
+              'total = count + 1;',
+              'count = count;',
+              'total = total * total;'
             ],
-            correctAnswer: 1,
-            explanation: 'Comparison reveals both common patterns (generalizable) and unique local factors (context-dependent).'
+            correctAnswer: 0,
+            explanation: 'The left side of = must be a single variable that can receive a value. count + 1 is an expression, so that line does not compile; assigning a variable to itself is legal, if pointless.'
           }
         ]
       }
     },
     {
-      id: 'csavaria3-content',
+      id: 'csavaria3-tables',
       type: 'text' as const,
       content: `
-## Patterns & Examples — Deeper Dive
+## Trace Tables
 
-### Structural pattern
-A recurring structure within Variables & Data Types. Understanding this concept is essential for mastering Variables & Data Types in AP Computer Science A.
+A **trace table** has one column per variable and one row per statement. Write a new value only in the column that changes.
 
-### Case study
-A specific real-world example that illustrates Variables & Data Types. This builds on the previous concept and connects to broader themes in the course.
+### Worked Example
+\`\`\`java
+int a = 3;
+int b = 8;
+a = b - a;
+b = b - a;
+a = a + b;
+\`\`\`
 
-### Comparison
-Analyzing similarities and differences across examples of Variables & Data Types. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+| After line | a | b | Work |
+|---|---|---|---|
+| 1 | 3 | — | |
+| 2 | 3 | 8 | |
+| 3 | 5 | 8 | 8 - 3 |
+| 4 | 5 | 3 | 8 - 5 |
+| 5 | 8 | 3 | 5 + 3 |
+
+The final values are a = 8 and b = 3: these three lines swap the two values without a third variable.
+
+### Tracing Tips
+- One assignment changes exactly one variable.
+- Always use the value from the **most recent** row, not the starting value.
+- Write intermediate work; most trace errors are arithmetic done in your head.
+      `
+    },
+    {
+      id: 'csavaria3-swap',
+      type: 'text' as const,
+      content: `
+## Worked Example: Swapping Two Values
+
+**The broken version**
+\`\`\`java
+int first = 10;
+int second = 20;
+first = second;    // first is 20; the 10 is lost
+second = first;    // second is 20
+\`\`\`
+Both variables end at 20, because the original value of \`first\` was overwritten before it was saved.
+
+**The correct version uses a temporary variable**
+\`\`\`java
+int temp = first;  // temp is 10
+first = second;    // first is 20
+second = temp;     // second is 10
+\`\`\`
+
+> 🔑 **AP Connection:** Swapping two values with a temporary variable is the core step of the selection sort and insertion sort algorithms you will trace in Unit 4.
       `
     },
     {
       id: 'csavaria3-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Trace It** ✍️
 
-1) What term refers to a recurring structure within Variables & Data Types?
+\`\`\`java
+int p = 6;
+int q = 2;
+p = p * q;    // line 3
+q = p - q;    // line 4
+p = p / q;    // line 5
+\`\`\`
 
-2) What concept describes a specific real-world example that illustrates Variables & Data Types?
+1) The value of p after line 3 is _______.
 
-3) Name the term for analyzing similarities and differences across examples of Variables & Data Types.
+2) The value of q after line 4 is _______.
 
-Use the exact term from this part.
+3) The value of p after line 5 is _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Structural pattern', 'Case study', 'Comparison'],
-        hint1: 'Starts with: S',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: C',
-        explanation: 'Expected answers: Structural pattern (A recurring structure within Variables & Data Types), Case study (A specific real-world example that illustrates Variables & Data Types), and Comparison (Analyzing similarities and differences across examples of Variables & Data Types).'
+        correctAnswers: ['12', '10', '1'],
+        hint1: '6 times 2.',
+        hint2: 'Use the new p, not the original 6.',
+        hint3: 'Both operands are ints, so the division truncates.',
+        explanation: 'Line 3: p = 6 * 2 = 12. Line 4: q = 12 - 2 = 10. Line 5: p = 12 / 10 = 1 with integer division.'
       }
     },
     {
-      id: 'csavaria3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Fill in the Blanks** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'A recurring structure within Variables & Data Types is called ___',
-            options: ['Structural pattern', 'Case study', 'Comparison', 'None of these']
-          },
-          {
-            label: 'A specific real-world example that illustrates Variables & Data Types describes ___',
-            options: ['Structural pattern', 'Case study', 'Comparison', 'All of these']
-          },
-          {
-            label: 'Analyzing similarities and differences across examples of Variables & Data Types is known as ___',
-            options: ['Comparison', 'Structural pattern', 'Case study', 'None of these']
-          }
-        ],
-        correctAnswers: ['Structural pattern', 'Case study', 'Comparison'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Structural pattern — A recurring structure within Variables & Data Types. Case study — A specific real-world example that illustrates Variables & Data Types. Comparison — Analyzing similarities and differences across examples of Variables & Data Types.'
-      }
-    },
-    {
-      id: 'csavaria3-strategy',
+      id: 'csavaria3-mistakes',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## Common Assignment Mistakes
 
-### Misconceptions to Avoid
-- Don\'t confuse **Structural pattern** with **Case study** — while related, they address different aspects of Variables & Data Types.
-- **Comparison** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about patterns & examples, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect patterns & examples to broader themes in AP Computer Science A for higher scores.
+| Mistake | Example | What actually happens |
+|---|---|---|
+| Reading \`=\` as "is equal to" | \`x = x + 1;\` | \`x\` increases by 1 |
+| Expecting a copy to stay linked | \`int y = x; x = 9;\` | \`y\` keeps the old value of \`x\` |
+| Losing a value before saving it | \`first = second; second = first;\` | Both hold the old value of \`second\` |
+| Declaring a variable twice | \`int x = 5;\` and later \`int x = 6;\` | Compile-time error: \`x\` is already defined |
+| Reading before assigning | \`int t; int u = t + 1;\` | Compile-time error: \`t\` is not initialized |
       `
     },
     {
       id: 'csavaria3-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
+
+**Segment A**
+\`\`\`java
+int x = 2;
+int y = 5;
+x = y;
+y = x + y;
+x = x * 2;
+\`\`\`
+
+**Segment B**
+\`\`\`java
+int total = 0;
+total = total + 4;
+total = total * 3;
+total = total - total / 2;
+\`\`\`
       `,
       exercise: {
         questions: [
           {
-            question: 'An AP question asks you to provide TWO examples of Variables & Data Types. The strongest response would:',
+            question: 'What are the values of x and y after Segment A executes?',
             options: [
-              'Use two examples from the same place',
-              'Use examples from different examples to show the concept applies broadly',
-              'Make up fictional examples',
-              'Provide only one example'
+              'x is 10 and y is 10',
+              'x is 10 and y is 7',
+              'x is 4 and y is 7',
+              'x is 5 and y is 10'
             ],
-            correctAnswer: 1,
-            explanation: 'Using examples from different contexts demonstrates broader understanding and the universality of the concept.'
+            correctAnswer: 0,
+            explanation: 'x becomes 5, then y becomes 5 + 5 = 10, then x becomes 5 * 2 = 10. Each line must use the newest values, not the starting values 2 and 5.'
           },
           {
-            question: 'A pattern observed in Variables & Data Types is consistent across many examples. This suggests:',
+            question: 'What is the value of total after Segment B executes?',
             options: [
-              'Coincidence',
-              'An underlying process that reflects a broad general principle',
-              'The data is wrong',
-              'Local factors only'
+              '6',
+              '0',
+              '12',
+              '2'
             ],
-            correctAnswer: 1,
-            explanation: 'Consistent patterns across examples suggest a systematic process rather than coincidence.'
+            correctAnswer: 0,
+            explanation: 'total goes 0, 4, 12. On the last line, division happens before subtraction: 12 - 12 / 2 = 12 - 6 = 6.'
           }
         ]
       }

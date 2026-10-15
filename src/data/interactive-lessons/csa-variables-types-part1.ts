@@ -18,9 +18,8 @@ export const csaVariablesTypesPart1Data = {
 | **int** | 32 bits | -2,147,483,648 to 2,147,483,647 | \`int count = 42;\` |
 | **double** | 64 bits | Decimal numbers (floating-point) | \`double gpa = 3.95;\` |
 | **boolean** | 1 bit | \`true\` or \`false\` only | \`boolean passed = true;\` |
-| **char** | 16 bits | Single Unicode character | \`char grade = 'A';\` |
 
-> 🔑 **AP CSA focuses on int, double, and boolean.** These three primitives appear on nearly every exam.
+> 🔑 **The AP CSA subset uses exactly three primitive types: int, double, and boolean.** Java has other primitives (such as char and long), but they are outside the AP Java subset and never appear on the exam. Text is stored in a **String**, which is an object, not a primitive.
 
 ---
 
@@ -69,10 +68,10 @@ boolean isValid = true;
               'int 2ndPlace = 5;',
               'double my-score = 9.5;',
               'boolean isReady = true;',
-              'String char = "hello";'
+              'String class = "hello";'
             ],
             correctAnswer: 2,
-            explanation: 'Variable names cannot start with a digit (2ndPlace), cannot contain hyphens (my-score), and cannot be reserved words (char). isReady follows valid camelCase naming rules.'
+            explanation: 'Variable names cannot start with a digit (2ndPlace), cannot contain hyphens (my-score), and cannot be reserved words (class). isReady follows valid camelCase naming rules.'
           }
         ]
       }

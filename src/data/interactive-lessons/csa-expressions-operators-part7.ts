@@ -5,171 +5,143 @@ export const csaExpressionsOperatorsPart7Data = {
       id: 'csaexpre7-intro',
       type: 'text' as const,
       content: `
-# 💻 Expressions & Operators
+# ➗ Expressions & Operators
 
-**Part 7 of 7 — AP Review**
+**Part 7 of 7 — Synthesis Review**
 
-Comprehensive review of Expressions & Operators for the AP exam. Focus on key concepts, common question types, and exam strategies.
+---
 
-### Key Concepts
+Every expression question in this topic is answered the same way: **find the order, track the type, watch for Strings.** This table ties Parts 1–6 together.
 
-| Concept | Description |
-|---------|-------------|
-| **Key vocabulary** | Essential terms and definitions for Expressions & Operators |
-| **Common question types** | The most frequent ways Expressions & Operators is tested on the AP exam |
-| **Exam strategy** | Approaches for answering Expressions & Operators questions effectively |
+| Skill | Part | Key rule |
+|---|---|---|
+| Arithmetic and \`%\` | 1, 4 | \`a / b\` counts whole groups, \`a % b\` is the leftover |
+| Output | 2 | \`println\` ends the line after printing; \`\\n\`, \`\\"\` and \`\\\\\` are escapes |
+| Order of operations | 1, 3 | Parentheses, casts, then \`* / %\`, then \`+ -\`, left to right within a level |
+| Type of each operation | 3 | int with int gives an int; one double makes it a double |
+| Run-time error | 3 | int \`/\` or \`%\` by zero throws an \`ArithmeticException\` |
+| Compound assignment | 5 | \`x op= e\` means \`x = x op (e)\` |
+| String concatenation | 1, 2, 5 | Once a String appears, every later \`+\` joins text |
       `
     },
     {
-      id: 'csaexpre7-quiz1',
+      id: 'csaexpre7-trace',
+      type: 'text' as const,
+      content: `
+## One Trace, Every Skill
+
+\`\`\`java
+int a = 29;
+int b = 4;
+b += a % b * 2;                          // b = 4 + (1 * 2) = 6
+double r = a / b + a % b / 2.0;          // 4 + 5 / 2.0 = 6.5
+System.out.print(a / b + "R" + a % b);   // prints 4R5 with no line break
+System.out.println(" " + r);             // prints a space, then 6.5, and ends the line
+\`\`\`
+
+Output: \`4R5 6.5\`
+
+| Step | Skill used |
+|---|---|
+| \`a % b * 2\` | \`%\` and \`*\` left to right: 29 % 4 = 1, then 1 * 2 = 2 |
+| \`b += ...\` | The whole right side first: 4 + 2 = 6 |
+| \`a / b\` | int division: 29 / 6 = 4 |
+| \`a % b / 2.0\` | 29 % 6 = 5, then 5 / 2.0 = 2.5, a double |
+| \`a / b + "R" + a % b\` | The int 4 joins "R", then 5 is joined as text |
+| \`print\` then \`println\` | One output line |
+      `
+    },
+    {
+      id: 'csaexpre7-review',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Mixed Review** 🎯
+
+**Segment A**
+\`\`\`java
+int a = 23;
+int b = 4;
+System.out.print(a / b + " ");
+System.out.print(a % b + " ");
+System.out.println((double) a / b);
+\`\`\`
       `,
       exercise: {
         questions: [
           {
-            question: 'The most important exam strategy for Expressions & Operators is:',
+            question: 'What is printed by Segment A?',
             options: [
-              'Guess randomly',
-              'Know key terms, use specific examples, and connect to course themes',
-              'Skip these questions',
-              'Only memorize definitions'
+              '5 3 5.75',
+              '5 3 5.0',
+              '5 3 5',
+              '5 3 6'
             ],
-            correctAnswer: 1,
-            explanation: 'Effective exam strategy combines vocabulary knowledge, specific examples, and connections to broader themes.'
+            correctAnswer: 0,
+            explanation: '23 / 4 is 5 with int division and 23 % 4 is 3. The cast makes the last division 23.0 / 4 = 5.75, which is neither truncated to 5 nor rounded to 6.'
           },
           {
-            question: 'AP multiple-choice questions about Expressions & Operators often test:',
+            question: 'With int x = 4 and int y = 5, which statement prints Total: 9?',
             options: [
-              'Random trivia',
-              'Application of concepts to new scenarios',
-              'Spelling',
-              'Personal opinions'
+              'System.out.println("Total: " + (x + y));',
+              'System.out.println("Total: " + x + y);',
+              'System.out.println("Total: " + (x) + (y));',
+              'System.out.println("Total: " + x * y);'
             ],
-            correctAnswer: 1,
-            explanation: 'AP multiple-choice questions typically present a new scenario and ask students to apply concepts rather than just recall facts.'
+            correctAnswer: 0,
+            explanation: 'Parentheses around x + y force numeric addition before concatenation. Without them, or with parentheses around each variable alone, the 4 and 5 are joined as text to give 45, and the product prints 20.'
+          },
+          {
+            question: 'After int n = 15; n %= 4; n *= n + 1; executes, what is the value of n?',
+            options: [
+              '12',
+              '10',
+              '4',
+              '3'
+            ],
+            correctAnswer: 0,
+            explanation: '15 % 4 is 3, and then n = 3 * (3 + 1) = 12. Ignoring the implied parentheses gives 3 * 3 + 1 = 10.'
           }
         ]
-      }
-    },
-    {
-      id: 'csaexpre7-content',
-      type: 'text' as const,
-      content: `
-## AP Review — Deeper Dive
-
-### Key vocabulary
-Essential terms and definitions for Expressions & Operators. Understanding this concept is essential for mastering Expressions & Operators in AP Computer Science A.
-
-### Common question types
-The most frequent ways Expressions & Operators is tested on the AP exam. This builds on the previous concept and connects to broader themes in the course.
-
-### Exam strategy
-Approaches for answering Expressions & Operators questions effectively. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
-      `
-    },
-    {
-      id: 'csaexpre7-input',
-      type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
-
-1) What term refers to essential terms and definitions for Expressions & Operators?
-
-2) What concept describes the most frequent ways Expressions & Operators is tested on the AP exam?
-
-3) Name the term for approaches for answering Expressions & Operators questions effectively.
-
-Use the exact term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['Key vocabulary', 'Common question types', 'Exam strategy'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: E',
-        explanation: 'Expected answers: Key vocabulary (Essential terms and definitions for Expressions & Operators), Common question types (The most frequent ways Expressions & Operators is tested on the AP exam), and Exam strategy (Approaches for answering Expressions & Operators questions effectively).'
       }
     },
     {
       id: 'csaexpre7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Final Check** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Essential terms and definitions for Expressions & Operators is called ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'None of these']
+            label: '5 + 10 / 4 * 2 evaluates to ___',
+            options: ['9', '10', '10.0', '7']
           },
           {
-            label: 'The most frequent ways Expressions & Operators is tested on the AP exam describes ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'All of these']
+            label: 'System.out.println("a" + 1 + 2 * 3) prints ___',
+            options: ['a16', 'a19', 'a7', 'a123']
           },
           {
-            label: 'Approaches for answering Expressions & Operators questions effectively is known as ___',
-            options: ['Exam strategy', 'Key vocabulary', 'Common question types', 'None of these']
+            label: '19 % 4 + 19 / 4 evaluates to ___',
+            options: ['7', '8.75', '4', '3']
           }
         ],
-        correctAnswers: ['Key vocabulary', 'Common question types', 'Exam strategy'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key vocabulary — Essential terms and definitions for Expressions & Operators. Common question types — The most frequent ways Expressions & Operators is tested on the AP exam. Exam strategy — Approaches for answering Expressions & Operators questions effectively.'
+        correctAnswers: ['9', 'a16', '7'],
+        hint1: '10 / 4 is int division.',
+        hint2: '* goes before +, and the String comes first.',
+        hint3: 'Remainder plus quotient.',
+        explanation: '10 / 4 = 2, 2 * 2 = 4, 5 + 4 = 9. "a" + 1 is "a1", then 2 * 3 = 6 is joined, giving a16. 19 % 4 = 3 and 19 / 4 = 4, so the sum is 7.'
       }
     },
     {
-      id: 'csaexpre7-strategy',
+      id: 'csaexpre7-wrap',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Connection
 
-### Misconceptions to Avoid
-- Don\'t confuse **Key vocabulary** with **Common question types** — while related, they address different aspects of Expressions & Operators.
-- **Exam strategy** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about ap review, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect ap review to broader themes in AP Computer Science A for higher scores.
+- Expressions appear inside nearly every question on the exam, including every free-response question. A single int division in the wrong place can cost a point on an otherwise correct method.
+- In free-response code, compute averages and percentages with a double operand early in the expression, and use \`/\` and \`%\` together for conversions.
+- In multiple choice, when the answer choices differ only in a ".0", a joined digit, or a line break, slow down and trace each operator.
       `
-    },
-    {
-      id: 'csaexpre7-applied',
-      type: 'multiple-choice' as const,
-      content: `
-**Applied Scenarios** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'On the AP exam, a question presents a scenario you have never seen before about Expressions & Operators. You should:',
-            options: [
-              'Panic',
-              'Apply the key concepts and processes you learned to analyze the new scenario',
-              'Skip it',
-              'Write about something else'
-            ],
-            correctAnswer: 1,
-            explanation: 'The AP exam tests application — use your knowledge of concepts and processes to analyze unfamiliar scenarios.'
-          },
-          {
-            question: 'For free-response questions on Expressions & Operators, the most common mistake is:',
-            options: [
-              'Writing too clearly',
-              'Being too vague and not using specific examples or key vocabulary',
-              'Showing too much knowledge',
-              'Answering the question directly'
-            ],
-            correctAnswer: 1,
-            explanation: 'The most common FRQ mistake is vagueness — AP graders look for specific terms, definitions, and concrete examples.'
-          }
-        ]
-      }
     }
   ]
 }

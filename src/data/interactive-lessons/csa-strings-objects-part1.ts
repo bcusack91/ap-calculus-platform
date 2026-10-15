@@ -79,8 +79,8 @@ String: "h  e  l  l  o"
 
 \`\`\`java
 String s = "hello";
-s.toUpperCase();          // Returns "HELLO" but s is still "hello"!
-s = s.toUpperCase();      // Now s = "HELLO" (reassigned to new String)
+s.substring(1);           // Returns "ello" but s is still "hello"!
+s = s.substring(1);       // Now s = "ello" (reassigned to the new String)
 \`\`\`
 
 ## compareTo() Details

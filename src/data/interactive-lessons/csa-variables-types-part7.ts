@@ -5,171 +5,140 @@ export const csaVariablesTypesPart7Data = {
       id: 'csavaria7-intro',
       type: 'text' as const,
       content: `
-# 💻 Variables & Data Types
+# 📦 Variables & Data Types
 
-**Part 7 of 7 — AP Review**
+**Part 7 of 7 — Synthesis Review**
 
-Comprehensive review of Variables & Data Types for the AP exam. Focus on key concepts, common question types, and exam strategies.
+---
 
-### Key Concepts
+Three questions settle almost every Unit 1 variable problem: **What type is each value? Does each line compile? What value results?** This review ties Parts 1–6 together around those questions.
 
-| Concept | Description |
-|---------|-------------|
-| **Key vocabulary** | Essential terms and definitions for Variables & Data Types |
-| **Common question types** | The most frequent ways Variables & Data Types is tested on the AP exam |
-| **Exam strategy** | Approaches for answering Variables & Data Types questions effectively |
+| Question | Where you learned it | Key rule |
+|---|---|---|
+| What type does this variable hold? | Parts 1–2 | int, double and boolean are primitives; String is a reference type |
+| Does this line compile? | Parts 2 and 5 | int to double is automatic; double to int needs a cast; boolean never converts |
+| What does this line do? | Part 3 | Evaluate the right side with current values, then store |
+| Is the int still in range? | Part 4 | Overflow wraps around silently |
+| Is the double exact? | Part 4 | Round-off error; avoid == on computed doubles |
+| Where does the cast apply? | Part 5 | To the single value immediately to its right |
       `
     },
     {
-      id: 'csavaria7-quiz1',
+      id: 'csavaria7-trace',
+      type: 'text' as const,
+      content: `
+## One Trace, Every Skill
+
+\`\`\`java
+final int LIMIT = 3;
+int a = 11;
+int b = a / LIMIT;
+double c = a / (double) LIMIT;
+int d = (int) (c + 0.5);
+a = a - b * LIMIT;
+\`\`\`
+
+| Line | Variable changed | Work | Value |
+|---|---|---|---|
+| 1 | \`LIMIT\` (final) | | 3 |
+| 2 | \`a\` | | 11 |
+| 3 | \`b\` | 11 / 3 with int division | 3 |
+| 4 | \`c\` | 11 / 3.0 | 3.666... |
+| 5 | \`d\` | (int) 4.166... | 4 |
+| 6 | \`a\` | 11 - 3 * 3 | 2 |
+
+Notice how each skill shows up: the int division in line 3, the cast in line 4 that forces double division, rounding in line 5, and an update in line 6 that uses the current values of \`a\` and \`b\`. Adding \`LIMIT = 4;\` anywhere after line 1 would be a compile-time error.
+      `
+    },
+    {
+      id: 'csavaria7-review',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Mixed Review** 🎯
+
+**Segment A**
+\`\`\`java
+int t = 25;
+double h = t / 10.0;
+t = t - (int) h * 10;
+\`\`\`
       `,
       exercise: {
         questions: [
           {
-            question: 'The most important exam strategy for Variables & Data Types is:',
+            question: 'A programmer runs int x = Integer.MAX_VALUE; x = x + 1; and expects a larger number. Which kind of error is this?',
             options: [
-              'Guess randomly',
-              'Know key terms, use specific examples, and connect to course themes',
-              'Skip these questions',
-              'Only memorize definitions'
+              'A logic error',
+              'A compile-time error',
+              'An ArithmeticException',
+              'A syntax error'
             ],
-            correctAnswer: 1,
-            explanation: 'Effective exam strategy combines vocabulary knowledge, specific examples, and connections to broader themes.'
+            correctAnswer: 0,
+            explanation: 'The code compiles and runs, but overflow silently wraps x to the most negative int. A wrong result with no crash is a logic error.'
           },
           {
-            question: 'AP multiple-choice questions about Variables & Data Types often test:',
+            question: 'What is the value of t after Segment A executes?',
             options: [
-              'Random trivia',
-              'Application of concepts to new scenarios',
-              'Spelling',
-              'Personal opinions'
+              '5',
+              '0',
+              '25',
+              '2.5'
             ],
-            correctAnswer: 1,
-            explanation: 'AP multiple-choice questions typically present a new scenario and ask students to apply concepts rather than just recall facts.'
+            correctAnswer: 0,
+            explanation: 'h is 2.5. The cast applies only to h, so (int) h * 10 is 2 * 10 = 20, and t becomes 25 - 20 = 5. Casting the product h * 10 instead would give 25 and leave t at 0.'
+          },
+          {
+            question: 'Which declaration stores approximately 0.778 (seven made out of nine attempts) in rate?',
+            options: [
+              'double rate = (double) 7 / 9;',
+              'double rate = 7 / 9;',
+              'double rate = 7 / 9 * 1.0;',
+              'int rate = (int) (7.0 / 9);'
+            ],
+            correctAnswer: 0,
+            explanation: 'Casting 7 to a double before dividing forces double division, giving about 0.778. Dividing two ints gives 0 no matter what it is multiplied by afterward, and storing the quotient in an int truncates 0.778 to 0.'
           }
         ]
-      }
-    },
-    {
-      id: 'csavaria7-content',
-      type: 'text' as const,
-      content: `
-## AP Review — Deeper Dive
-
-### Key vocabulary
-Essential terms and definitions for Variables & Data Types. Understanding this concept is essential for mastering Variables & Data Types in AP Computer Science A.
-
-### Common question types
-The most frequent ways Variables & Data Types is tested on the AP exam. This builds on the previous concept and connects to broader themes in the course.
-
-### Exam strategy
-Approaches for answering Variables & Data Types questions effectively. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
-      `
-    },
-    {
-      id: 'csavaria7-input',
-      type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
-
-1) What term refers to essential terms and definitions for Variables & Data Types?
-
-2) What concept describes the most frequent ways Variables & Data Types is tested on the AP exam?
-
-3) Name the term for approaches for answering Variables & Data Types questions effectively.
-
-Use the exact term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['Key vocabulary', 'Common question types', 'Exam strategy'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: E',
-        explanation: 'Expected answers: Key vocabulary (Essential terms and definitions for Variables & Data Types), Common question types (The most frequent ways Variables & Data Types is tested on the AP exam), and Exam strategy (Approaches for answering Variables & Data Types questions effectively).'
       }
     },
     {
       id: 'csavaria7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Final Check** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Essential terms and definitions for Variables & Data Types is called ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'None of these']
+            label: 'double d = 15 / 4; stores ___',
+            options: ['3.0', '3.75', '3', '4.0']
           },
           {
-            label: 'The most frequent ways Variables & Data Types is tested on the AP exam describes ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'All of these']
+            label: '(int) (-1.8 - 0.5) evaluates to ___',
+            options: ['-2', '-1', '-3', '-2.3']
           },
           {
-            label: 'Approaches for answering Variables & Data Types questions effectively is known as ___',
-            options: ['Exam strategy', 'Key vocabulary', 'Common question types', 'None of these']
+            label: 'Integer.MIN_VALUE - 1 evaluates to the same value as ___',
+            options: ['Integer.MAX_VALUE', 'Integer.MIN_VALUE', '-Integer.MAX_VALUE', 'Integer.MIN_VALUE + 1']
           }
         ],
-        correctAnswers: ['Key vocabulary', 'Common question types', 'Exam strategy'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key vocabulary — Essential terms and definitions for Variables & Data Types. Common question types — The most frequent ways Variables & Data Types is tested on the AP exam. Exam strategy — Approaches for answering Variables & Data Types questions effectively.'
+        correctAnswers: ['3.0', '-2', 'Integer.MAX_VALUE'],
+        hint1: 'Int division happens before the value is stored.',
+        hint2: '-1.8 - 0.5 is -2.3; truncate toward zero.',
+        hint3: 'Going below the bottom of the range wraps to the top.',
+        explanation: '15 / 4 is 3, stored as 3.0. (int) -2.3 is -2. Subtracting 1 from the smallest int overflows to the largest int.'
       }
     },
     {
-      id: 'csavaria7-strategy',
+      id: 'csavaria7-wrap',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Connection
 
-### Misconceptions to Avoid
-- Don\'t confuse **Key vocabulary** with **Common question types** — while related, they address different aspects of Variables & Data Types.
-- **Exam strategy** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about ap review, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect ap review to broader themes in AP Computer Science A for higher scores.
+- Unit 1 (Using Objects and Methods) is weighted **15–25%** of the exam, and these variable skills reappear inside every later unit.
+- On free-response questions, the same decisions decide points: declaring an average as a double, forcing double division, and rounding with a cast.
+- When an answer choice reads "compile-time error," check types first. When it reads "exception," look for a division by zero. When every choice is a number, build a trace table.
       `
-    },
-    {
-      id: 'csavaria7-applied',
-      type: 'multiple-choice' as const,
-      content: `
-**Applied Scenarios** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'On the AP exam, a question presents a scenario you have never seen before about Variables & Data Types. You should:',
-            options: [
-              'Panic',
-              'Apply the key concepts and processes you learned to analyze the new scenario',
-              'Skip it',
-              'Write about something else'
-            ],
-            correctAnswer: 1,
-            explanation: 'The AP exam tests application — use your knowledge of concepts and processes to analyze unfamiliar scenarios.'
-          },
-          {
-            question: 'For free-response questions on Variables & Data Types, the most common mistake is:',
-            options: [
-              'Writing too clearly',
-              'Being too vague and not using specific examples or key vocabulary',
-              'Showing too much knowledge',
-              'Answering the question directly'
-            ],
-            correctAnswer: 1,
-            explanation: 'The most common FRQ mistake is vagueness — AP graders look for specific terms, definitions, and concrete examples.'
-          }
-        ]
-      }
     }
   ]
 }

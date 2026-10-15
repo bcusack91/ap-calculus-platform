@@ -16,7 +16,7 @@ export const csaUsingObjectsPart1Data = {
 | Feature | Primitive | Object (Reference Type) |
 |---------|----------|----------------------|
 | **Storage** | Stores the actual value | Stores a reference (memory address) |
-| **Types** | int, double, boolean, char | String, Scanner, ArrayList, custom classes |
+| **Types** | int, double, boolean | String, ArrayList, custom classes |
 | **Default value** | 0, 0.0, false | \`null\` |
 | **Comparison** | == compares values | == compares references; use .equals() for content |
 | **Methods** | None | Has methods you can call |
@@ -27,7 +27,6 @@ export const csaUsingObjectsPart1Data = {
 
 \`\`\`java
 // Syntax: ClassName objectName = new ClassName(arguments);
-Scanner input = new Scanner(System.in);
 String greeting = new String("hello");
 ArrayList<Integer> numbers = new ArrayList<Integer>();
 \`\`\`
@@ -62,10 +61,10 @@ ArrayList<Integer> numbers = new ArrayList<Integer>();
           {
             question: 'Which of the following correctly creates a new object?',
             options: [
-              'Scanner sc = Scanner(System.in);',
-              'Scanner sc = new Scanner(System.in);',
-              'new Scanner sc = Scanner(System.in);',
-              'Scanner sc = new Scanner;'
+              'Rectangle r = Rectangle(3, 4);',
+              'Rectangle r = new Rectangle(3, 4);',
+              'new Rectangle r = Rectangle(3, 4);',
+              'Rectangle r = new Rectangle;'
             ],
             correctAnswer: 1,
             explanation: 'Object creation syntax: Type name = new Type(args); The new keyword is required before the constructor call, and parentheses are required even with no arguments.'
@@ -105,7 +104,7 @@ When two variables reference the same object, they are **aliases**. Changing the
 ### Static Methods (Class Methods)
 - Called on the **class**, not on an object
 - \`Math.abs(-5)\`, \`Math.pow(2, 3)\`, \`Math.random()\`
-- No object needed: \`Math.max(a, b)\`
+- No object needed: \`Math.sqrt(x)\`
       `
     },
     {
@@ -165,7 +164,7 @@ When two variables reference the same object, they are **aliases**. Changing the
 
 - **Aliasing** is commonly tested — know that assigning one array/object to another creates a shared reference, not a copy
 - **NullPointerException** is the most common runtime error on the AP exam
-- Know Math class static methods: \`abs\`, \`pow\`, \`sqrt\`, \`random\`, \`max\`, \`min\`
+- Know the four Math class methods on the AP Java Quick Reference: \`abs\`, \`pow\`, \`sqrt\`, \`random\` (methods such as max and min are not on it, so write a comparison instead)
 - Math.random() returns [0.0, 1.0) — to get a random int from 0 to n-1: \`(int)(Math.random() * n)\`
 - Understand the difference between instance methods (called on objects) and static methods (called on classes)
       `

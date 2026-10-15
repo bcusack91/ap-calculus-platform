@@ -5,171 +5,243 @@ export const csaStringsObjectsPart6Data = {
       id: 'csastrin6-intro',
       type: 'text' as const,
       content: `
-# 💻 Strings & Objects
+# 🔤 Strings & Objects
 
-**Part 6 of 7 — Problem-Solving Workshop**
+**Part 6 of 7 — AP-Style Practice**
 
-Apply Strings & Objects concepts to data interpretation and analytical scenarios. Practice the types of questions seen on the AP exam.
+---
 
-### Key Concepts
+Strings appear all over the AP Computer Science A exam. Multiple-choice questions ask you to trace substring, indexOf, and compareTo calls, often inside a loop. Free-response question 1 (Methods and Control Structures) regularly asks you to write a method that walks through a String. This part practices both.
 
-| Concept | Description |
-|---------|-------------|
-| **Data interpretation** | Analyzing maps, graphs, and tables related to Strings & Objects |
-| **Argumentation** | Making evidence-based claims about Strings & Objects |
-| **Spatial reasoning** | Using geographic thinking to analyze Strings & Objects |
+### How to Attack a String Question
+
+| Step | Do this |
+|---|---|
+| 1 | Write the indices under every String in the code. |
+| 2 | For each substring call, write the start and end and check \`0 <= a <= b <= length\`. |
+| 3 | For loops, make a trace table: \`i\`, the piece examined, and the accumulator. |
+| 4 | For each comparison, ask whether it compares contents (equals, compareTo) or references (==). |
+| 5 | Find where the output happens: inside the loop, after it, or never (if an exception is thrown first). |
+
+> 🔑 **Key Concept:** Most wrong answers on String traces are the result of one predictable slip: an end index counted as included, a loop that runs one pass too many or too few, or a prepend read as an append.
       `
     },
     {
-      id: 'csastrin6-quiz1',
+      id: 'csastrin6-mc1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Practice Set 1: Tracing** 🎯
+
+**Segment A**
+\`\`\`java
+String s = "abcdef";
+String r = "";
+for (int i = 0; i < s.length(); i += 2) {
+    r += s.substring(i + 1, i + 2) + s.substring(i, i + 1);
+}
+System.out.println(r);
+\`\`\`
+
+**Segment B**
+\`\`\`java
+String w = "ALGORITHM";
+int p = w.indexOf("RI");
+String x = w.substring(p) + w.substring(0, p);
+System.out.println(x.length() + " " + x.substring(0, 3));
+\`\`\`
       `,
       exercise: {
         questions: [
           {
-            question: 'When interpreting data about Strings & Objects, the first step is:',
+            question: 'What is printed by Segment A?',
             options: [
-              'Jump to conclusions',
-              'Identify what the data shows and note any patterns or trends',
-              'Ignore the data',
-              'Only look at the title'
+              'bdf',
+              'badcfe',
+              'ace',
+              'badc'
             ],
             correctAnswer: 1,
-            explanation: 'Data interpretation should begin with identifying what is shown and noting visible patterns before drawing conclusions.'
+            explanation: 'The loop visits i = 0, 2 and 4, and each pass appends the letter at i + 1 followed by the letter at i, swapping each pair: "ba", "dc", "fe". On the last pass i + 2 is 6, which equals the length, so no exception occurs.'
           },
           {
-            question: 'An evidence-based argument about Strings & Objects requires:',
+            question: 'What is printed by Segment B?',
             options: [
-              'Just opinions',
-              'A clear claim supported by specific evidence and reasoning',
-              'No evidence',
-              'Only emotional appeals'
+              '9 RITH',
+              '10 RIT',
+              '9 RIT',
+              '10 RITH'
             ],
-            correctAnswer: 1,
-            explanation: 'Evidence-based arguments need a claim (thesis), supporting evidence (data, examples), and reasoning (explanation).'
+            correctAnswer: 2,
+            explanation: 'p is 4, so x is "RITHM" + "ALGO", which still has all 9 letters, and x.substring(0, 3) is "RIT". A length of 10 would require the second piece to end at index 5 instead of 4, and "RITH" would count the end index as included.'
           }
         ]
       }
     },
     {
-      id: 'csastrin6-content',
+      id: 'csastrin6-frq1',
       type: 'text' as const,
       content: `
-## Problem-Solving Workshop — Deeper Dive
+## FRQ-Style Task 1 — countDoubles
 
-### Data interpretation
-Analyzing maps, graphs, and tables related to Strings & Objects. Understanding this concept is essential for mastering Strings & Objects in AP Computer Science A.
+**Prompt.** Write a static method \`countDoubles\` that returns the number of indices \`i\` where the character at \`i\` is the same as the character at \`i + 1\`.
 
-### Argumentation
-Making evidence-based claims about Strings & Objects. This builds on the previous concept and connects to broader themes in the course.
+| Call | Matching pairs | Returns |
+|---|---|---|
+| \`countDoubles("bookkeeper")\` | oo, kk, ee | 3 |
+| \`countDoubles("aaabb")\` | aa (0 and 1), aa (1 and 2), bb | 3 |
+| \`countDoubles("x")\` | none | 0 |
+| \`countDoubles("")\` | none | 0 |
 
-### Spatial reasoning
-Using geographic thinking to analyze Strings & Objects. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+### Plan before you write
+
+- Each pass looks at **two** neighbors, so the last legal \`i\` is \`str.length() - 2\`. The loop condition is \`i < str.length() - 1\`.
+- Pull out the neighbors with \`substring(i, i + 1)\` and \`substring(i + 1, i + 2)\`.
+- Compare them with equals and count.
+
+### Solution
+
+\`\`\`java
+public static int countDoubles(String str) {
+    int count = 0;
+    for (int i = 0; i < str.length() - 1; i++) {
+        String a = str.substring(i, i + 1);
+        String b = str.substring(i + 1, i + 2);
+        if (a.equals(b)) {
+            count++;
+        }
+    }
+    return count;
+}
+\`\`\`
+
+For \`""\` the condition is \`0 < -1\`, which is false, so the loop never runs and the method returns 0 without an exception.
+
+### What a rubric looks for
+
+| Point | Earned by |
+|---|---|
+| Traversal | visits every adjacent pair with no out-of-bounds call |
+| Extraction | gets the two neighbors as one-character Strings |
+| Comparison | compares contents with equals (not ==) |
+| Result | initializes the count, increments it, and **returns** it after the loop |
+      `
+    },
+    {
+      id: 'csastrin6-mc2',
+      type: 'multiple-choice' as const,
+      content: `
+**Practice Set 2: Reasoning About countDoubles** 🎯
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'A student writes the loop header in countDoubles as for (int i = 0; i < str.length(); i++). What happens when the method is called with "moon"?',
+            options: [
+              'It returns 1',
+              'It returns 2',
+              'It throws an exception',
+              'It returns 0'
+            ],
+            correctAnswer: 2,
+            explanation: 'On the last pass i is 3, and str.substring(4, 5) asks for an end index past the length of 4, which throws a StringIndexOutOfBoundsException. The "oo" match was counted earlier, but the method never reaches its return statement.'
+          },
+          {
+            question: 'Which replacement for a.equals(b) in countDoubles would NOT work reliably?',
+            options: [
+              'b.equals(a)',
+              'a.compareTo(b) == 0',
+              'a == b',
+              'b.compareTo(a) == 0'
+            ],
+            correctAnswer: 2,
+            explanation: 'substring builds new String objects while the program runs, so == compares two different references and can be false even when the letters match. The other three expressions all compare contents.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'csastrin6-frq2',
+      type: 'text' as const,
+      content: `
+## FRQ-Style Task 2 — isAlphabetical
+
+**Prompt.** Write a static method \`isAlphabetical\` that returns true if every letter of \`word\` is the same as, or comes after, the letter before it in Java String order, and false otherwise.
+
+| Call | Why | Returns |
+|---|---|---|
+| \`isAlphabetical("almost")\` | a, l, m, o, s, t never go backward | true |
+| \`isAlphabetical("hello")\` | "e" comes before "h" | false |
+| \`isAlphabetical("Ghost")\` | uppercase "G" comes before every lowercase letter | true |
+
+### Solution
+
+\`\`\`java
+public static boolean isAlphabetical(String word) {
+    for (int i = 0; i < word.length() - 1; i++) {
+        String current = word.substring(i, i + 1);
+        String next = word.substring(i + 1, i + 2);
+        if (current.compareTo(next) > 0) {
+            return false;
+        }
+    }
+    return true;
+}
+\`\`\`
+
+- **Return false early.** One out-of-order pair is enough to answer the question.
+- **Return true only after the loop.** You can only say "every pair is in order" once you have checked every pair.
+
+### The classic mistake
+
+\`\`\`java
+if (current.compareTo(next) > 0) {
+    return false;
+} else {
+    return true;    // returns after checking only the first pair
+}
+\`\`\`
+
+With this version, \`isAlphabetical("abca")\` returns true: the first pair "a", "b" is in order, so the method returns before it ever reaches "c", "a".
       `
     },
     {
       id: 'csastrin6-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to analyzing maps, graphs, and tables related to Strings & Objects?
+1) Using the correct isAlphabetical, what does \`isAlphabetical("Ghost")\` return? (true or false)
 
-2) What concept describes making evidence-based claims about Strings & Objects?
+2) What does \`countDoubles("aaabb")\` return?
 
-3) Name the term for using geographic thinking to analyze Strings & Objects.
-
-Use the exact term from this part.
+3) How many times does the correct isAlphabetical evaluate \`current.compareTo(next)\` when called with \`"bear"\`?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Data interpretation', 'Argumentation', 'Spatial reasoning'],
-        hint1: 'Starts with: D',
-        hint2: 'Starts with: A',
-        hint3: 'Starts with: S',
-        explanation: 'Expected answers: Data interpretation (Analyzing maps, graphs, and tables related to Strings & Objects), Argumentation (Making evidence-based claims about Strings & Objects), and Spatial reasoning (Using geographic thinking to analyze Strings & Objects).'
+        correctAnswers: ['true', '3', '2'],
+        hint1: 'Compare G with h, h with o, o with s, and s with t.',
+        hint2: 'Overlapping pairs count separately: check indices 0-1, 1-2, 2-3, 3-4.',
+        hint3: 'The method returns as soon as it finds a pair that goes backward.',
+        explanation: 'Uppercase "G" comes before "h", and the rest of "Ghost" is in order, so it returns true. "aaabb" has matching pairs at indices 0, 1 and 3, so the count is 3. In "bear", "b" to "e" is fine, but "e" to "a" goes backward, so the method returns false after 2 comparisons.'
       }
     },
     {
-      id: 'csastrin6-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Fill in the Blanks** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Analyzing maps, graphs, and tables related to Strings & Objects is called ___',
-            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'None of these']
-          },
-          {
-            label: 'Making evidence-based claims about Strings & Objects describes ___',
-            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'All of these']
-          },
-          {
-            label: 'Using geographic thinking to analyze Strings & Objects is known as ___',
-            options: ['Spatial reasoning', 'Data interpretation', 'Argumentation', 'None of these']
-          }
-        ],
-        correctAnswers: ['Data interpretation', 'Argumentation', 'Spatial reasoning'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Data interpretation — Analyzing maps, graphs, and tables related to Strings & Objects. Argumentation — Making evidence-based claims about Strings & Objects. Spatial reasoning — Using geographic thinking to analyze Strings & Objects.'
-      }
-    },
-    {
-      id: 'csastrin6-strategy',
+      id: 'csastrin6-deductions',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## Common FRQ Deductions on String Methods
 
-### Misconceptions to Avoid
-- Don\'t confuse **Data interpretation** with **Argumentation** — while related, they address different aspects of Strings & Objects.
-- **Spatial reasoning** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
+| Mistake | Why it costs points |
+|---|---|
+| Comparing Strings with == | compares references, not contents |
+| Loop bound one too far | substring throws when the end index passes the length |
+| Returning inside the loop on both branches | the method stops after one check |
+| Printing the answer instead of returning it | the method must return a value to its caller |
+| Never using the return value of substring | Strings are immutable; the result must be stored or used |
+| Calling a method on a parameter that might be null | throws NullPointerException (rare on the exam, but check the preconditions) |
 
-### AP Strategy Moves
-- When you see questions about problem-solving workshop, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect problem-solving workshop to broader themes in AP Computer Science A for higher scores.
+> 🎯 **AP Connection:** Write with the methods on the Java Quick Reference: \`length\`, \`substring\`, \`indexOf\`, \`equals\`, and \`compareTo\`. They are enough for every String task the exam sets, and readers know exactly what they do.
       `
-    },
-    {
-      id: 'csastrin6-applied',
-      type: 'multiple-choice' as const,
-      content: `
-**Applied Scenarios** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'You are given a data table about Strings & Objects and asked to identify a trend. You should:',
-            options: [
-              'Pick random numbers',
-              'Look for consistent increases, decreases, or patterns across the data',
-              'Ignore the table',
-              'Only read the first row'
-            ],
-            correctAnswer: 1,
-            explanation: 'Trend identification requires examining the entire dataset for consistent patterns of change.'
-          },
-          {
-            question: 'A free-response question asks you to use evidence to support an argument about Strings & Objects. The best approach is:',
-            options: [
-              'State your opinion without evidence',
-              'Make a clear claim, cite specific data or examples, and explain how they support your argument',
-              'Copy the question',
-              'Write about a different topic'
-            ],
-            correctAnswer: 1,
-            explanation: 'AP free-response answers require a clear thesis, specific supporting evidence, and explanation of how evidence supports the argument.'
-          }
-        ]
-      }
     }
   ]
-}
+};

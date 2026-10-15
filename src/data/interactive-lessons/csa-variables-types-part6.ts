@@ -5,168 +5,168 @@ export const csaVariablesTypesPart6Data = {
       id: 'csavaria6-intro',
       type: 'text' as const,
       content: `
-# 💻 Variables & Data Types
+# 📦 Variables & Data Types
 
-**Part 6 of 7 — Problem-Solving Workshop**
+**Part 6 of 7 — AP-Style Practice: Tracing and Writing Declarations**
 
-Apply Variables & Data Types concepts to data interpretation and analytical scenarios. Practice the types of questions seen on the AP exam.
+---
 
-### Key Concepts
+This part is exam practice. Use the same three-step routine on every item:
 
-| Concept | Description |
-|---------|-------------|
-| **Data interpretation** | Analyzing maps, graphs, and tables related to Variables & Data Types |
-| **Argumentation** | Making evidence-based claims about Variables & Data Types |
-| **Spatial reasoning** | Using geographic thinking to analyze Variables & Data Types |
+1. **Check that every line compiles.** Look at each declared type and each value stored in it.
+2. **Trace with a table.** Write each variable's type at the top of its column so you remember when to add ".0".
+3. **For writing tasks, choose the type first**, then the expression, then the cast.
       `
     },
     {
-      id: 'csavaria6-quiz1',
+      id: 'csavaria6-mc1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Multiple-Choice Practice** 🎯
+
+**Segment A**
+\`\`\`java
+int m = 14;
+int n = 4;
+double q = m / n + m % n / 2.0;
+System.out.println(q);
+\`\`\`
+
+**Segment B**
+\`\`\`java
+int base = 9;
+base = base / 2;
+double half = base / 2;
+int back = (int) (half * 2);
+System.out.println(base + " " + half + " " + back);
+\`\`\`
       `,
       exercise: {
         questions: [
           {
-            question: 'When interpreting data about Variables & Data Types, the first step is:',
+            question: 'What is printed by Segment A?',
             options: [
-              'Jump to conclusions',
-              'Identify what the data shows and note any patterns or trends',
-              'Ignore the data',
-              'Only look at the title'
+              '4.0',
+              '4.5',
+              '3.5',
+              '4'
             ],
-            correctAnswer: 1,
-            explanation: 'Data interpretation should begin with identifying what is shown and noting visible patterns before drawing conclusions.'
+            correctAnswer: 0,
+            explanation: 'm / n is the int 3 and m % n is 2, so the expression is 3 + 2 / 2.0 = 3 + 1.0 = 4.0. Treating m / n as 3.5 would give 4.5, and a double always prints with a decimal point.'
           },
           {
-            question: 'An evidence-based argument about Variables & Data Types requires:',
+            question: 'What is printed by Segment B?',
             options: [
-              'Just opinions',
-              'A clear claim supported by specific evidence and reasoning',
-              'No evidence',
-              'Only emotional appeals'
+              '4 2.0 4',
+              '4.5 2.25 4',
+              '4 2 4',
+              '4 2.25 4'
             ],
-            correctAnswer: 1,
-            explanation: 'Evidence-based arguments need a claim (thesis), supporting evidence (data, examples), and reasoning (explanation).'
+            correctAnswer: 0,
+            explanation: 'base becomes 9 / 2 = 4, half becomes 4 / 2 = 2 stored as 2.0, and back is (int) 4.0 = 4. The double half prints as 2.0, never as 2.'
+          },
+          {
+            question: 'An int variable totalPoints holds a nonnegative total and numStudents holds the class size. Which statement stores the class average, rounded to the nearest whole number, in avg?',
+            options: [
+              'int avg = (int) ((double) totalPoints / numStudents + 0.5);',
+              'int avg = (int) (totalPoints / numStudents + 0.5);',
+              'int avg = (int) ((double) totalPoints / numStudents) + 0.5;',
+              'int avg = (double) totalPoints / numStudents + 0.5;'
+            ],
+            correctAnswer: 0,
+            explanation: 'The correct version divides as doubles, shifts by 0.5, and then truncates. Dividing two ints first throws away the fraction before rounding, and the two versions that leave a double on the right side do not compile.'
           }
         ]
       }
     },
     {
-      id: 'csavaria6-content',
+      id: 'csavaria6-frq',
       type: 'text' as const,
       content: `
-## Problem-Solving Workshop — Deeper Dive
+## FRQ-Style Task: A Step Counter
 
-### Data interpretation
-Analyzing maps, graphs, and tables related to Variables & Data Types. Understanding this concept is essential for mastering Variables & Data Types in AP Computer Science A.
+A fitness app stores \`int steps\` and \`double strideInches\` (the length of one step). There are 63,360 inches in a mile. Write statements that:
 
-### Argumentation
-Making evidence-based claims about Variables & Data Types. This builds on the previous concept and connects to broader themes in the course.
+- **(a)** store the distance walked, in miles, in a double;
+- **(b)** store the number of **whole** miles completed in an int;
+- **(c)** store the distance rounded to the nearest mile in an int.
 
-### Spatial reasoning
-Using geographic thinking to analyze Variables & Data Types. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+### Worked Solution
+\`\`\`java
+final int INCHES_PER_MILE = 63360;
+int steps = 14000;
+double strideInches = 30.5;
+
+double miles = steps * strideInches / INCHES_PER_MILE;   // 427000.0 / 63360 is about 6.74
+int wholeMiles = (int) miles;                            // 6
+int roundedMiles = (int) (miles + 0.5);                  // (int) 7.24 is 7
+\`\`\`
+
+### Why Each Line Earns Credit
+- **Types match the data:** a distance can be fractional, so \`miles\` is a double; whole and rounded miles are counts, so they are ints.
+- **No int division:** \`steps * strideInches\` is a double (427000.0) because \`strideInches\` is a double, so the division is double division.
+- **Truncate vs. round:** a plain cast truncates for (b); the + 0.5 shift rounds for (c).
+- **A named constant** replaces the "magic number" 63360.
+
+### Where Points Are Lost
+\`\`\`java
+double miles = steps / INCHES_PER_MILE * strideInches;   // 14000 / 63360 is 0, so miles is 0.0
+\`\`\`
+The same operations in a different order give 0.0, because \`steps / INCHES_PER_MILE\` divides two ints before \`strideInches\` ever joins the expression.
       `
     },
     {
       id: 'csavaria6-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Check the Solution** ✍️
 
-1) What term refers to analyzing maps, graphs, and tables related to Variables & Data Types?
+Use \`steps = 14000\`, \`strideInches = 30.5\`, and \`INCHES_PER_MILE = 63360\`.
 
-2) What concept describes making evidence-based claims about Variables & Data Types?
+1) The int expression steps / INCHES_PER_MILE evaluates to _______.
 
-3) Name the term for using geographic thinking to analyze Variables & Data Types.
+2) The value stored in wholeMiles is _______.
 
-Use the exact term from this part.
+3) The value stored in roundedMiles is _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Data interpretation', 'Argumentation', 'Spatial reasoning'],
-        hint1: 'Starts with: D',
-        hint2: 'Starts with: A',
-        hint3: 'Starts with: S',
-        explanation: 'Expected answers: Data interpretation (Analyzing maps, graphs, and tables related to Variables & Data Types), Argumentation (Making evidence-based claims about Variables & Data Types), and Spatial reasoning (Using geographic thinking to analyze Variables & Data Types).'
+        correctAnswers: ['0', '6', '7'],
+        hint1: '14000 is smaller than 63360, and both are ints.',
+        hint2: 'miles is about 6.74; a cast truncates.',
+        hint3: 'About 6.74 + 0.5 is about 7.24.',
+        explanation: '14000 / 63360 is 0 with int division. miles is about 6.74, which truncates to 6 and rounds to 7.'
       }
     },
     {
-      id: 'csavaria6-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Fill in the Blanks** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Analyzing maps, graphs, and tables related to Variables & Data Types is called ___',
-            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'None of these']
-          },
-          {
-            label: 'Making evidence-based claims about Variables & Data Types describes ___',
-            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'All of these']
-          },
-          {
-            label: 'Using geographic thinking to analyze Variables & Data Types is known as ___',
-            options: ['Spatial reasoning', 'Data interpretation', 'Argumentation', 'None of these']
-          }
-        ],
-        correctAnswers: ['Data interpretation', 'Argumentation', 'Spatial reasoning'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Data interpretation — Analyzing maps, graphs, and tables related to Variables & Data Types. Argumentation — Making evidence-based claims about Variables & Data Types. Spatial reasoning — Using geographic thinking to analyze Variables & Data Types.'
-      }
-    },
-    {
-      id: 'csavaria6-strategy',
-      type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
-
-### Misconceptions to Avoid
-- Don\'t confuse **Data interpretation** with **Argumentation** — while related, they address different aspects of Variables & Data Types.
-- **Spatial reasoning** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about problem-solving workshop, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect problem-solving workshop to broader themes in AP Computer Science A for higher scores.
-      `
-    },
-    {
-      id: 'csavaria6-applied',
+      id: 'csavaria6-mc2',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**FRQ Reasoning** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'You are given a data table about Variables & Data Types and asked to identify a trend. You should:',
+            question: 'A student writes double miles = steps / INCHES_PER_MILE * strideInches; with the values above. Which change makes it compute the correct distance?',
             options: [
-              'Pick random numbers',
-              'Look for consistent increases, decreases, or patterns across the data',
-              'Ignore the table',
-              'Only read the first row'
+              'Do the multiplication before the division',
+              'Declare miles as an int instead',
+              'Cast the final quotient to a double',
+              'Add 0.5 before storing the result'
             ],
-            correctAnswer: 1,
-            explanation: 'Trend identification requires examining the entire dataset for consistent patterns of change.'
+            correctAnswer: 0,
+            explanation: 'Multiplying first makes the left operand of the division a double, so no int division occurs. Casting at the end or adding 0.5 cannot recover a quotient that was already truncated to 0, and an int variable cannot hold a fractional distance.'
           },
           {
-            question: 'A free-response question asks you to use evidence to support an argument about Variables & Data Types. The best approach is:',
+            question: 'Which statement declares a constant for the number of inches in a foot and follows Java naming conventions for constants?',
             options: [
-              'State your opinion without evidence',
-              'Make a clear claim, cite specific data or examples, and explain how they support your argument',
-              'Copy the question',
-              'Write about a different topic'
+              'final int INCHES_PER_FOOT = 12;',
+              'static int INCHES_PER_FOOT = 12;',
+              'int final INCHES_PER_FOOT = 12;',
+              'constant int INCHES_PER_FOOT = 12;'
             ],
-            correctAnswer: 1,
-            explanation: 'AP free-response answers require a clear thesis, specific supporting evidence, and explanation of how evidence supports the argument.'
+            correctAnswer: 0,
+            explanation: 'final goes before the type and makes the value unchangeable, and constants are named in ALL_CAPS with underscores. Without final the variable can still be reassigned, putting final after the type does not compile, and constant is not a Java keyword.'
           }
         ]
       }

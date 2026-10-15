@@ -5,19 +5,52 @@ export const csaExpressionsOperatorsPart5Data = {
       id: 'csaexpre5-intro',
       type: 'text' as const,
       content: `
-# 💻 Expressions & Operators
+# ➗ Expressions & Operators
 
-**Part 5 of 7 — Change Over Time**
+**Part 5 of 7 — Compound Assignment and Tracing Updates**
 
-Expressions & Operators has evolved over time. Understanding historical and contemporary changes helps explain current patterns and predict future trends.
+---
 
-### Key Concepts
+Compound assignment operators combine an arithmetic operation with assignment (CED Topic 1.6). Part 1 listed them. This part traces them, including the case that catches most students: the **entire** right side is evaluated before the operator is applied.
 
-| Concept | Description |
-|---------|-------------|
-| **Continuity** | Aspects of Expressions & Operators that have remained stable over time |
-| **Change** | How Expressions & Operators has transformed due to new forces and conditions |
-| **Trend** | The direction of change in Expressions & Operators over time |
+| In this part |
+|---|
+| The whole right side goes first |
+| ++ and -- |
+| Worked example: a trace table of updates |
+| += with Strings |
+      `
+    },
+    {
+      id: 'csaexpre5-rhs',
+      type: 'text' as const,
+      content: `
+## The Whole Right Side Goes First
+
+\`x op= expression;\` means \`x = x op (expression);\` — with parentheses around the entire right side.
+
+\`\`\`java
+int x = 4;
+x *= 2 + 3;     // x = 4 * (2 + 3) = 20, not 4 * 2 + 3 = 11
+\`\`\`
+
+Each row below starts fresh with \`x = 10\`:
+
+| Statement | Means | New x |
+|---|---|---|
+| \`x += 5;\` | x = x + 5 | 15 |
+| \`x -= 2 * 3;\` | x = x - (2 * 3) | 4 |
+| \`x *= 1 + 1;\` | x = x * (1 + 1) | 20 |
+| \`x /= 4;\` | x = x / 4 | 2 |
+| \`x %= 4;\` | x = x % 4 | 2 |
+| \`x /= 2 + 3;\` | x = x / (2 + 3) | 2 |
+
+### Type Still Matters
+- With an int, \`/=\` truncates: \`int y = 7; y /= 2;\` leaves \`y\` at 3.
+- With a double, it does not: \`double d = 7; d /= 2;\` leaves \`d\` at 3.5.
+
+## ++ and --
+\`count++;\` adds 1 to \`count\`, and \`count--;\` subtracts 1. In AP CSA these appear only as **standalone statements** (and in \`for\` loop headers). Using them inside a larger expression, such as \`y = x++ + 1;\`, or in prefix form (\`++x\`) is outside the course.
       `
     },
     {
@@ -29,144 +62,152 @@ Expressions & Operators has evolved over time. Understanding historical and cont
       exercise: {
         questions: [
           {
-            question: 'Studying change over time in Expressions & Operators helps:',
+            question: 'After int x = 6; x -= 2 + 1; executes, what is the value of x?',
             options: [
-              'Only with history classes',
-              'Explain current patterns and predict future developments',
-              'Nothing',
-              'Memorize dates'
+              '3',
+              '5',
+              '9',
+              '1'
             ],
-            correctAnswer: 1,
-            explanation: 'Understanding how things have changed reveals the forces shaping current conditions and likely future trends.'
+            correctAnswer: 0,
+            explanation: 'The whole right side is evaluated first, so x = 6 - (2 + 1) = 3. Getting 5 means computing 6 - 2 + 1 without the implied parentheses.'
           },
           {
-            question: 'Continuity in Expressions & Operators means:',
+            question: 'After int y = 9; y /= 2; y *= 2; executes, what is the value of y?',
             options: [
-              'Everything changes',
-              'Some aspects have remained stable despite other changes',
-              'Nothing ever happened',
-              'The topic is boring'
+              '8',
+              '9',
+              '4',
+              '18'
             ],
-            correctAnswer: 1,
-            explanation: 'Continuity refers to elements that persist even as other aspects change — an important analytical concept.'
+            correctAnswer: 0,
+            explanation: 'y /= 2 is int division, so y becomes 4, and y *= 2 makes it 8. Dividing and then multiplying by 2 does not restore 9 once the remainder is lost.'
           }
         ]
       }
     },
     {
-      id: 'csaexpre5-content',
+      id: 'csaexpre5-trace',
       type: 'text' as const,
       content: `
-## Change Over Time — Deeper Dive
+## Worked Example: A Trace Table of Updates
 
-### Continuity
-Aspects of Expressions & Operators that have remained stable over time. Understanding this concept is essential for mastering Expressions & Operators in AP Computer Science A.
+\`\`\`java
+int a = 5;
+int b = 3;
+a += b;       // line 3
+b *= a - 6;   // line 4
+a %= b;       // line 5
+b -= a;       // line 6
+a++;          // line 7
+\`\`\`
 
-### Change
-How Expressions & Operators has transformed due to new forces and conditions. This builds on the previous concept and connects to broader themes in the course.
+| After line | a | b | Work |
+|---|---|---|---|
+| 2 | 5 | 3 | |
+| 3 | 8 | 3 | 5 + 3 |
+| 4 | 8 | 6 | 3 * (8 - 6) |
+| 5 | 2 | 6 | 8 % 6 |
+| 6 | 2 | 4 | 6 - 2 |
+| 7 | 3 | 4 | 2 + 1 |
 
-### Trend
-The direction of change in Expressions & Operators over time. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+Line 4 is where most mistakes happen. Writing \`3 * 8 - 6 = 18\` ignores the implied parentheses; the right side \`a - 6\` is 2, and 3 * 2 = 6.
+      `
+    },
+    {
+      id: 'csaexpre5-strings',
+      type: 'text' as const,
+      content: `
+## += with Strings
+
+\`+=\` also works on a String variable: \`s += x;\` means \`s = s + (x);\`. Because the right side is still evaluated first, it can behave differently from writing the \`+\` signs out:
+
+\`\`\`java
+String code = "A";
+code += 1 + 2;          // code = "A" + (1 + 2), which is "A3"
+code += "B" + 4;        // code = "A3" + ("B" + 4), which is "A3B4"
+
+String other = "A";
+other = other + 1 + 2;  // left to right: "A1", then "A12"
+\`\`\`
+
+The first line adds 1 + 2 as numbers because both are ints and they are evaluated before the String is involved. In the last line, \`other + 1\` is already a String, so the 2 is joined as text.
       `
     },
     {
       id: 'csaexpre5-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Trace It** ✍️
 
-1) What term refers to aspects of Expressions & Operators that have remained stable over time?
+\`\`\`java
+int p = 12;
+p -= 4;      // line 2
+p *= p - 5;  // line 3
+p %= 7;      // line 4
+p++;         // line 5
+\`\`\`
 
-2) What concept describes how Expressions & Operators has transformed due to new forces and conditions?
+1) The value of p after line 2 is _______.
 
-3) Name the term for the direction of change in Expressions & Operators over time.
+2) The value of p after line 3 is _______.
 
-Use the exact term from this part.
+3) The value of p after line 5 is _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Continuity', 'Change', 'Trend'],
-        hint1: 'Starts with: C',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: T',
-        explanation: 'Expected answers: Continuity (Aspects of Expressions & Operators that have remained stable over time), Change (How Expressions & Operators has transformed due to new forces and conditions), and Trend (The direction of change in Expressions & Operators over time).'
+        correctAnswers: ['8', '24', '4'],
+        hint1: '12 - 4.',
+        hint2: 'p * (p - 5) with p = 8.',
+        hint3: '24 % 7, then add 1.',
+        explanation: 'p goes 12, then 8, then 8 * (8 - 5) = 24, then 24 % 7 = 3, then 4.'
       }
-    },
-    {
-      id: 'csaexpre5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Fill in the Blanks** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Aspects of Expressions & Operators that have remained stable over time is called ___',
-            options: ['Continuity', 'Change', 'Trend', 'None of these']
-          },
-          {
-            label: 'How Expressions & Operators has transformed due to new forces and conditions describes ___',
-            options: ['Continuity', 'Change', 'Trend', 'All of these']
-          },
-          {
-            label: 'The direction of change in Expressions & Operators over time is known as ___',
-            options: ['Trend', 'Continuity', 'Change', 'None of these']
-          }
-        ],
-        correctAnswers: ['Continuity', 'Change', 'Trend'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Continuity — Aspects of Expressions & Operators that have remained stable over time. Change — How Expressions & Operators has transformed due to new forces and conditions. Trend — The direction of change in Expressions & Operators over time.'
-      }
-    },
-    {
-      id: 'csaexpre5-strategy',
-      type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
-
-### Misconceptions to Avoid
-- Don\'t confuse **Continuity** with **Change** — while related, they address different aspects of Expressions & Operators.
-- **Trend** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about change over time, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect change over time to broader themes in AP Computer Science A for higher scores.
-      `
     },
     {
       id: 'csaexpre5-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
+
+**Segment A**
+\`\`\`java
+String s = "x";
+s += 2 + 3;
+s = s + 2 + 3;
+System.out.println(s);
+\`\`\`
+
+**Segment B**
+\`\`\`java
+int total = 100;
+total /= 3;
+total *= 3;
+total += total % 4;
+\`\`\`
       `,
       exercise: {
         questions: [
           {
-            question: 'An AP question asks how Expressions & Operators has changed in the last 50 years. A strong answer would:',
+            question: 'What is printed by Segment A?',
             options: [
-              'Say nothing has changed',
-              'Identify specific changes, explain their causes, and note what has remained constant',
-              'Only list dates',
-              'Make up information'
+              'x523',
+              'x55',
+              'x2323',
+              'x235'
             ],
-            correctAnswer: 1,
-            explanation: 'Strong AP answers address both change AND continuity, explaining causes and consequences of transformation.'
+            correctAnswer: 0,
+            explanation: 'In the compound statement, 2 + 3 is evaluated first as 5, giving x5. In the next line, s + 2 is already a String, so 2 and 3 are joined as text, giving x523.'
           },
           {
-            question: 'A trend in Expressions & Operators shows acceleration in recent decades. The most likely explanation is:',
+            question: 'What is the value of total after Segment B executes?',
             options: [
-              'Random chance',
-              'New technologies, policies, or conditions intensifying existing processes',
-              'The data is wrong',
-              'Nothing has changed'
+              '102',
+              '33',
+              '99',
+              '2'
             ],
-            correctAnswer: 1,
-            explanation: 'Accelerating trends are typically driven by new forces (technology, policy, globalization) intensifying existing processes.'
+            correctAnswer: 0,
+            explanation: '100 / 3 is 33 with int division, and 33 * 3 is 99, not 100, because the remainder is gone. Then 99 % 4 is 3, and 99 + 3 is 102.'
           }
         ]
       }
