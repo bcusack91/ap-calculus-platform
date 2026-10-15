@@ -108,12 +108,12 @@ Fill in each blank about the road into Vietnam.`,
             { label: 'Nationalist/communist leader of the Viet Minh:', options: ['Ho Chi Minh', 'Mao Zedong', 'Ngo Dinh Diem', 'Pol Pot'] },
             { label: 'The 1954 French defeat that ended colonial rule:', options: ['Dien Bien Phu', 'Ia Drang Valley', 'Khe Sanh', 'Hamburger Hill'] },
             { label: 'The Geneva Accords divided Vietnam at the:', options: ['17th parallel', '38th parallel', 'Mekong Delta', 'Equator'] },
-            { label: 'U.S.-backed leader of South Vietnam:', options: ['Ngo Dinh Diem', 'Ho Chi Minh', 'Nguyen Cao Ky', 'Bao Dai'] },
+            { label: 'U.S.-backed leader of South Vietnam:', options: ['Ngo Dinh Diem', 'Ho Chi Minh', 'Norodom Sihanouk', 'Lon Nol'] },
           ],
           correctAnswers: ['Ho Chi Minh', 'Dien Bien Phu', '17th parallel', 'Ngo Dinh Diem'],
           hint1: 'The Viet Minh leader also declared Vietnamese independence in 1945.',
           hint2: 'The French lost a fortified valley position in 1954, prompting the Geneva talks.',
-          hint3: 'Korea was divided at the 38th parallel; Vietnam was divided at the 17th. The South\'s first leader shared his surname "Ngo."',
+          hint3: 'Korea was divided at the 38th parallel; Vietnam was divided at the 17th. The South\'s leader was a Catholic anti-communist who refused the 1956 reunification elections.',
           explanation: 'Ho Chi Minh led the Viet Minh; the French defeat at Dien Bien Phu (1954) led to the Geneva Accords, which split Vietnam at the 17th parallel into Ho\'s North and Diem\'s U.S.-backed South.',
         },
       },
@@ -137,13 +137,13 @@ Short answers about the road into Vietnam.
 
 **1)** Year of the French defeat at Dien Bien Phu and the Geneva Accords: $\\,?$
 **2)** Parallel of latitude at which Geneva divided Vietnam (number only, e.g. "17"): $\\,?$
-**3)** Last name of the U.S.-backed South Vietnamese leader overthrown in 1963: $\\,?$`,
+**3)** Name by which the U.S.-backed South Vietnamese leader overthrown in 1963 is usually known (one word): $\\,?$`,
         exercise: {
           boxes: 3,
           correctAnswers: ['1954', '17', 'Diem'],
           hint1: 'The French lost and the Geneva talks concluded in the same year.',
           hint2: 'Korea split at the 38th parallel; Vietnam split at a lower number.',
-          hint3: 'Ngo Dinh Diem — enter just his final name.',
+          hint3: 'Ngo Dinh Diem — enter the one-word name he is usually known by.',
           explanation: '1) 1954 (Dien Bien Phu and the Geneva Accords). 2) 17 — the 17th parallel. 3) Diem — Ngo Dinh Diem was overthrown and killed in November 1963.',
         },
       },
@@ -215,7 +215,7 @@ In **August 1964**, the Johnson administration reported that North Vietnamese bo
 With his authority secured, Johnson rapidly "Americanized" the war in **1965**:
 
 - **Operation Rolling Thunder** — a sustained bombing campaign against North Vietnam that began in 1965 and continued for years.
-- **Ground troops** poured in. U.S. troop levels rose from roughly **180,000** at the end of 1965 to a peak of about **536,000** in **1968**.
+- **Ground troops** poured in. U.S. troop levels rose from roughly **180,000** at the end of 1965 to about **536,000** by the end of **1968** (peaking near 543,000 in early 1969).
 - The war relied on the **draft (Selective Service)**, which disproportionately affected working-class and minority young men, since college deferments shielded many wealthier students.
 
 The military pursued a strategy of **attrition**, measured by the **body count** — the grim metric of enemy dead — rather than territory captured. Against a determined guerrilla enemy fighting on home soil, attrition produced enormous casualties without decisive victory.
@@ -231,14 +231,14 @@ Fill in the missing figures from the escalation era.
 
 **1)** Year of the Gulf of Tonkin Resolution: $\\,?$
 **2)** Number of U.S. senators who voted *against* the Gulf of Tonkin Resolution: $\\,?$
-**3)** Approximate peak U.S. troop level (in thousands, e.g. enter "536" for 536,000) reached in 1968: $\\,?$`,
+**3)** Approximate U.S. troop level at the end of 1968 (in thousands, e.g. enter "536" for 536,000): $\\,?$`,
         exercise: {
           boxes: 3,
           correctAnswers: ['1964', '2', '536'],
           hint1: 'The Tonkin incident and resolution both occurred in August of an election year.',
           hint2: 'The vote was nearly unanimous — only a tiny number of senators dissented.',
-          hint3: 'The peak was reached the same year as the Tet Offensive (1968): about 536,000 troops.',
-          explanation: '1) 1964 — the resolution passed in August 1964. 2) 2 senators (Wayne Morse and Ernest Gruening) opposed it. 3) ~536,000 troops, the peak, in 1968.',
+          hint3: 'By the end of 1968, the year of the Tet Offensive, about 536,000 U.S. troops were in Vietnam.',
+          explanation: '1) 1964 — the resolution passed in August 1964. 2) 2 senators (Wayne Morse and Ernest Gruening) opposed it. 3) ~536,000 troops at the end of 1968 (the peak, about 543,000, came in early 1969).',
         },
       },
       {
@@ -296,7 +296,7 @@ During **Tet** (the Vietnamese Lunar New Year) in **January 1968**, the **Viet C
 |---------|------------------|-------------------|
 | Tet Offensive | U.S./South Vietnam repelled the attacks; the Viet Cong suffered heavy losses | Americans saw a war that officials had called "nearly won" suddenly exploding nationwide |
 
-The contradiction was devastating. Just months earlier, U.S. commander **General William Westmoreland** had assured the public there was "light at the end of the tunnel." Tet made that claim look like a lie.
+The contradiction was devastating. Just months earlier, U.S. commander **General William Westmoreland** had assured the public that "the end begins to come into view." Tet made that claim look like a lie.
 
 > ⚠️ **The "living-room war":** Vietnam was the first war broadcast nightly on television. Graphic footage of Tet collided with rosy official statements, deepening public distrust.`,
       },
@@ -471,7 +471,7 @@ But Nixon simultaneously **widened** the war:
 
 The human cost was staggering: roughly **58,000** American military deaths and an estimated **2–3 million** Vietnamese deaths. The war left deep scars — a generation of veterans, a wary public, and the so-called "**Vietnam Syndrome**," a lasting reluctance to commit U.S. troops abroad.
 
-> 🔑 **Outcome:** Despite years of fighting and "peace with honor," South Vietnam fell in **1975**. The domino it was meant to prevent did fall — yet the broader regional collapse the domino theory predicted did not materialize.`,
+> 🔑 **Outcome:** Despite years of fighting and "peace with honor," South Vietnam fell in **1975**. South Vietnam, Laos, and Cambodia all fell to communist forces that year — yet the wider collapse the domino theory predicted (Thailand, Malaysia, Indonesia, the Philippines) did not materialize.`,
       },
       {
         id: 'apvsc4-input-end',

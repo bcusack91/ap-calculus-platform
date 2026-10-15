@@ -891,7 +891,7 @@ In the early 1970s, President **Nixon** and his adviser **Henry Kissinger** purs
 | Move | Year | Significance |
 |------|------|--------------|
 | **Nixon visits China** | 1972 | Opened relations with communist China, exploiting the **Sino-Soviet split** |
-| **Nixon visits Moscow** | 1972 | First U.S. president to visit the U.S.S.R.; symbolized thaw |
+| **Nixon visits Moscow** | 1972 | First U.S. president to visit Moscow; symbolized thaw |
 | **SALT I** | 1972 | Strategic Arms Limitation Talks; first treaty to **limit nuclear arsenals** |
 | **Helsinki Accords** | 1975 | Recognized European borders; included human-rights pledges |
 

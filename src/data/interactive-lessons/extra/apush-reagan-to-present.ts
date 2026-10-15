@@ -298,7 +298,7 @@ Sort Gorbachev's two reforms.`,
             { label: 'The Cold War strategy Reagan rejected when he took office:', options: ['Détente', 'Glasnost', 'Perestroika', 'The Reagan Doctrine'] },
           ],
           correctAnswers: ['Glasnost', 'Perestroika', 'Détente'],
-          hint1: 'Glasnost = "glass," think transparency / openness.',
+          hint1: 'Glasnost comes from the Russian word for "voice": giving people a voice = openness.',
           hint2: 'Perestroika = re-structuring the economy.',
           hint3: 'Reagan replaced the 1970s easing-of-tensions policy with a more confrontational stance early on.',
           explanation: 'Glasnost = openness (free speech, less censorship); perestroika = economic restructuring. Reagan abandoned the 1970s policy of détente in favor of confrontation, only to negotiate seriously with Gorbachev later in the decade.',
@@ -398,7 +398,7 @@ Place these Persian Gulf War facts.`,
             { label: 'The 1991 offensive that expelled Iraq from Kuwait:', options: ['Operation Desert Storm', 'Operation Desert Shield', 'The Bay of Pigs', 'The Tet Offensive'] },
           ],
           correctAnswers: ['Saddam Hussein', 'Operation Desert Shield', 'Operation Desert Storm'],
-          hint1: 'The Iraqi leader who seized Kuwait shares his first name with the later target of the 2003 Iraq War.',
+          hint1: 'The Iraqi dictator who seized Kuwait was the same leader toppled in the 2003 Iraq War.',
           hint2: 'The defensive "shield" came first, before the offensive "storm."',
           hint3: 'The fast 1991 offensive shares the word "storm."',
           explanation: 'Saddam Hussein invaded Kuwait (Aug. 1990). Desert *Shield* was the defensive buildup; Desert *Storm* (Jan.–Feb. 1991) was the offensive that liberated Kuwait in about six weeks.',
@@ -421,7 +421,7 @@ The Persian Gulf War unfolded fast — barely seven months from invasion to libe
         exercise: {
           boxes: 2,
           correctAnswers: ['1990', '1991'],
-          hint1: 'The invasion of Kuwait came in August, two years after the Berlin Wall fell.',
+          hint1: 'The invasion of Kuwait came in August 1990, less than a year after the Berlin Wall fell.',
           hint2: 'Desert Storm followed the invasion the next year, in January–February.',
           hint3: 'Think 1990 (the August invasion) and 1991 (the early-year liberation) — back-to-back years.',
           explanation: 'Iraq invaded Kuwait in August 1990; Operation Desert Storm liberated it in early 1991. The whole conflict spanned 1990–1991.',
@@ -450,7 +450,7 @@ The Persian Gulf War unfolded fast — barely seven months from invasion to libe
         type: 'text' as const,
         content: `## Clinton and the "New Democrats"
 
-In **1992**, Clinton defeated incumbent George H. W. Bush in a **three-way race** that also featured independent **H. Ross Perot**, who won an impressive **~19% of the popular vote** (the strongest third-party showing since 1912). Perot's focus on the deficit pulled votes from Bush.
+In **1992**, Clinton defeated incumbent George H. W. Bush in a **three-way race** that also featured independent **H. Ross Perot**, who won an impressive **~19% of the popular vote** (the strongest third-party showing since 1912). Perot's focus on the deficit tapped frustration with both parties (analysts still debate whether he cost Bush the election).
 
 Clinton positioned himself as a **centrist "New Democrat,"** moving the party toward the middle. Major developments:
 
