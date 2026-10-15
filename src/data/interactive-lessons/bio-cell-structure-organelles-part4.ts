@@ -68,9 +68,9 @@ The Golgi is a stack of flattened, membrane-bound sacs (cisternae) that function
             question: 'A protein is synthesized on the rough ER. In what order does it travel through the endomembrane system?',
             options: [
               'Rough ER → Golgi cis face → Golgi trans face → vesicle → destination',
-              'Golgi → Rough ER → smooth ER → vesicle → destination',
-              'Nucleus → smooth ER → Golgi → rough ER → destination',
-              'Free ribosome → Golgi → rough ER → vesicle → destination'
+              'Golgi trans face → Golgi cis face → rough ER → destination',
+              'Nucleus → smooth ER → Golgi cis face → rough ER → destination',
+              'Free ribosome → Golgi trans face → rough ER → vesicle → destination'
             ],
             correctAnswer: 0,
             explanation: 'Proteins synthesized on the rough ER are packaged in transport vesicles that bud from the ER, fuse with the cis face of the Golgi, move through the Golgi cisternae while being modified, and exit from the trans face in vesicles targeted to their destination.'
@@ -78,10 +78,10 @@ The Golgi is a stack of flattened, membrane-bound sacs (cisternae) that function
           {
             question: 'Glycosylation is the process of:',
             options: [
-              'Removing amino acids from a protein',
+              'Removing amino acids from the ends of a protein',
               'Adding carbohydrate chains to proteins or lipids',
-              'Breaking down glucose for energy',
-              'Replicating glycogen molecules'
+              'Breaking down glucose to release energy for the cell',
+              'Linking glucose units into glycogen for storage'
             ],
             correctAnswer: 1,
             explanation: 'Glycosylation is the covalent attachment of carbohydrate chains (oligosaccharides) to proteins or lipids. It begins in the rough ER and continues in the Golgi. Glycoproteins are common on the cell surface and in secreted proteins.'
@@ -154,10 +154,10 @@ Lysosomes are membrane-bound organelles containing **hydrolytic enzymes** (hydro
           {
             question: 'A plant cell is placed in a hypertonic solution. What happens to the central vacuole?',
             options: [
-              'It expands and pushes the cell wall outward',
+              'It expands as water enters and pushes the cell wall outward',
               'It shrinks as water leaves by osmosis, causing plasmolysis',
-              'It ruptures and releases its contents',
-              'It remains unchanged because of the cell wall'
+              'It swells until it ruptures and releases its stored contents',
+              'It stays the same size because the cell wall resists any change'
             ],
             correctAnswer: 1,
             explanation: 'In a hypertonic solution, water moves out of the cell by osmosis. The central vacuole shrinks, the plasma membrane pulls away from the cell wall (plasmolysis), and the plant wilts. The cell wall prevents the cell from lysing but cannot prevent water loss.'
@@ -225,7 +225,7 @@ Enter the correct term for each description.
           {
             question: 'A researcher uses a radioactive amino acid to trace the path of a secreted protein. In which order would radioactivity appear?',
             options: [
-              'Golgi → ER → plasma membrane → extracellular space',
+              'Golgi → rough ER → plasma membrane → extracellular space',
               'Rough ER → Golgi → vesicles → plasma membrane → extracellular space',
               'Free ribosomes → smooth ER → Golgi → lysosomes',
               'Nucleus → rough ER → lysosomes → extracellular space'
@@ -236,13 +236,13 @@ Enter the correct term for each description.
           {
             question: 'If the pH inside lysosomes were raised to 7.0 (neutral), what would most likely happen?',
             options: [
-              'Lysosomal enzymes would work faster',
-              'Lysosomal enzymes would denature and lose function',
-              'The lysosome would fuse more readily with phagosomes',
-              'The lysosome would begin producing ATP'
+              'Lysosomal enzymes would work faster at the higher pH',
+              'Lysosomal enzymes would lose most of their activity',
+              'Lysosomal membranes would fuse more readily with phagosomes',
+              'Lysosomal enzymes would start producing ATP'
             ],
             correctAnswer: 1,
-            explanation: 'Lysosomal hydrolases are acid hydrolases — they have optimal activity at pH 4.5–5.0. At neutral pH, these enzymes lose their functional conformation (denature), which serves as a safety mechanism: if a lysosome ruptures, the enzymes become inactive in the neutral cytoplasm.'
+            explanation: 'Lysosomal hydrolases are acid hydrolases with optimal activity at pH 4.5–5.0. At neutral pH they lose most of their activity, which serves as a safety mechanism: if a lysosome ruptures, the enzymes are largely inactive in the neutral cytoplasm.'
           }
         ]
       }

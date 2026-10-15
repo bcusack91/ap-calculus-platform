@@ -37,7 +37,7 @@ The **induced fit model** explains enzyme action:
           {
             question: 'Enzymes speed up reactions by:',
             options: [
-              'Increasing the temperature',
+              'Raising the temperature around the substrate',
               'Lowering the activation energy',
               'Changing the equilibrium',
               'Increasing ΔG'
@@ -79,8 +79,8 @@ Enzymes can speed up reactions by factors of **$10^6$ to $10^{12}$**!
             options: [
               'The substrate changes shape to fit the enzyme',
               'The enzyme changes shape when the substrate binds',
-              'Lock and key is always correct',
-              'Enzymes are consumed in reactions'
+              'The enzyme\'s active site is rigid and never changes shape',
+              'The enzyme is used up once it binds the substrate'
             ],
             correctAnswer: 1,
             explanation: 'In the induced fit model, the enzyme\'s active site changes conformation when the substrate binds, creating a tighter fit.'

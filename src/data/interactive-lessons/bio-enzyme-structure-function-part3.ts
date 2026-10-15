@@ -39,10 +39,10 @@ export const bioEnzymesPart3Data = {
           {
             question: 'Pepsin works best at pH 2 because:',
             options: [
-              'All enzymes prefer acidic conditions',
+              'All enzymes, including pepsin, prefer acidic conditions',
               'The stomach is acidic and pepsin evolved to function there',
-              'Low pH increases activation energy',
-              'pH 2 denatures all other proteins'
+              'Low pH raises the activation energy pepsin must overcome',
+              'pH 2 denatures every protein except pepsin'
             ],
             correctAnswer: 1,
             explanation: 'Pepsin evolved to function in the highly acidic environment of the stomach (pH ~2). Its optimal pH reflects its natural working conditions.'
@@ -76,10 +76,10 @@ export const bioEnzymesPart3Data = {
           {
             question: 'What happens to an enzyme heated well above its optimal temperature?',
             options: [
-              'It works faster',
+              'It works faster because molecules collide more often',
               'It denatures and loses function',
-              'Its Km decreases',
-              'It becomes a ribozyme'
+              'It binds substrate more tightly and saturates sooner',
+              'It permanently shifts to a new, higher optimum'
             ],
             correctAnswer: 1,
             explanation: 'Excessive heat breaks the weak bonds (H-bonds, ionic bonds, hydrophobic interactions) that maintain the enzyme\'s 3D shape, causing denaturation.'

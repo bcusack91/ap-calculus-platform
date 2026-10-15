@@ -49,7 +49,7 @@ A researcher examines an unknown eukaryotic cell under an electron microscope an
             options: [
               'Photosynthesis',
               'Protein secretion',
-              'Fat storage',
+              'Lipid storage',
               'Cell division'
             ],
             correctAnswer: 1,
@@ -58,7 +58,7 @@ A researcher examines an unknown eukaryotic cell under an electron microscope an
           {
             question: 'The absence of chloroplasts and a large central vacuole suggests this cell is from:',
             options: [
-              'A plant leaf',
+              'A plant leaf blade',
               'A fungal hypha',
               'An animal tissue',
               'An algal colony'
@@ -69,10 +69,10 @@ A researcher examines an unknown eukaryotic cell under an electron microscope an
           {
             question: 'Why would this cell need numerous mitochondria?',
             options: [
-              'To store excess glucose',
-              'To provide ATP for the energy-demanding process of protein synthesis and secretion',
-              'To photosynthesize when light is available',
-              'To replicate mitochondrial DNA for the next generation'
+              'To store excess glucose as glycogen granules',
+              'To supply ATP for making and secreting proteins',
+              'To photosynthesize whenever light is available',
+              'To copy mitochondrial DNA for daughter cells'
             ],
             correctAnswer: 1,
             explanation: 'Protein synthesis, folding, modification, packaging, and vesicular transport all require large amounts of ATP. Active secretory cells have many mitochondria to meet this energy demand.'
@@ -101,10 +101,10 @@ A biologist treats cells with **Brefeldin A**, a drug that causes the Golgi appa
           {
             question: 'If the Golgi collapses, which process would be MOST directly impaired?',
             options: [
-              'DNA replication',
+              'DNA replication, repair, and packaging',
               'Protein sorting, modification, and secretion',
               'Glycolysis in the cytoplasm',
-              'mRNA transcription in the nucleus'
+              'mRNA transcription, splicing, and export'
             ],
             correctAnswer: 1,
             explanation: 'The Golgi is responsible for modifying proteins (glycosylation), sorting them to correct destinations, and packaging them into vesicles. Without a functional Golgi, proteins made in the ER cannot be properly processed or delivered.'
@@ -205,10 +205,10 @@ Identify the organelle described.
           {
             question: 'A genetic mutation prevents a cell from producing mannose-6-phosphate tags. Which organelle would be MOST directly affected?',
             options: [
-              'Mitochondria — they would not receive enough ATP',
+              'Mitochondria — they would not receive enough ATP from the Golgi',
               'Lysosomes — hydrolytic enzymes would not be targeted correctly',
-              'Chloroplasts — photosynthesis would slow down',
-              'Nucleus — DNA replication would fail'
+              'Chloroplasts — photosynthetic enzymes would not reach the stroma',
+              'Nucleus — DNA replication enzymes could not enter through the pores'
             ],
             correctAnswer: 1,
             explanation: 'Mannose-6-phosphate (M6P) is the molecular "address label" that directs enzymes from the Golgi to lysosomes. Without M6P tags, hydrolytic enzymes would be secreted outside the cell instead of being delivered to lysosomes. This leads to I-cell disease (inclusion cell disease).'
@@ -216,10 +216,10 @@ Identify the organelle described.
           {
             question: 'A researcher stains cells with a fluorescent dye that binds to actin. Under the fluorescence microscope, which structures would glow?',
             options: [
-              'Mitotic spindle fibers and cilia',
+              'Microtubules, mitotic spindle fibers, and cilia',
               'Microfilaments, cleavage furrows, and microvilli',
-              'Intermediate filaments and the nuclear lamina',
-              'Rough ER and the Golgi apparatus'
+              'Intermediate filaments, keratin, and the nuclear lamina',
+              'Rough ER, the Golgi apparatus, and vesicles'
             ],
             correctAnswer: 1,
             explanation: 'Actin is the protein that makes up microfilaments (7 nm). These form cleavage furrows during cytokinesis, support microvilli, and are involved in cell crawling. Microtubules (tubulin) form the spindle and cilia. Intermediate filaments are made of keratins/lamins.'

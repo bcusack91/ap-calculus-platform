@@ -46,7 +46,7 @@ export const bioProteinsPart4Data = {
           {
             question: 'An enzyme normally active at 37 °C is exposed briefly to 90 °C. The reaction rate drops to zero. The most likely explanation is:',
             options: [
-              'The substrate evaporated',
+              'The substrate evaporated before it reached the active site',
               'The enzyme denatured, destroying its active site',
               'Enzymes work better above 80 °C',
               'High temperature converted the enzyme into a lipid'

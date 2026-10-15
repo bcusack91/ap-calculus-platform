@@ -34,7 +34,7 @@ export const bioEnzymesPart7Data = {
             options: [
               'Higher $V_{max}$, same $K_m$',
               'Same $V_{max}$, higher apparent $K_m$',
-              'Lower $V_{max}$, same $K_m$',
+              'Lower $V_{max}$, same apparent $K_m$',
               'Lower $V_{max}$, lower $K_m$'
             ],
             correctAnswer: 1,

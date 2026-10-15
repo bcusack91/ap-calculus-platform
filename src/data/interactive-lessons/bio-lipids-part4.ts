@@ -24,7 +24,7 @@ export const bioLipidsPart4Data = {
         questions: [
           {
             question: 'Researchers compare two membrane samples. Sample A has more unsaturated phospholipids; Sample B has more saturated phospholipids. At 4 °C, which sample is more likely to remain fluid and functional?',
-            options: ['Sample A — more kinks → less tight packing → more fluid', 'Sample B — straight tails fold flat at low temp', 'Both equally fluid', 'Neither — both freeze solid below 10 °C'],
+            options: ['Sample A — more kinks → less tight packing → more fluid', 'Sample B — straight saturated tails slide past each other more easily', 'Both equally fluid — temperature affects only the protein content', 'Neither — all phospholipid membranes freeze solid below 10 °C'],
             correctAnswer: 0,
             explanation: 'Unsaturated kinks prevent tight packing, preserving fluidity at low temperatures — a known cold-adaptation strategy in fish and arctic plants.'
           }
@@ -40,10 +40,10 @@ export const bioLipidsPart4Data = {
           {
             question: 'Steroid hormones such as testosterone bind intracellular receptors because they:',
             options: [
-              'Are positively charged at physiological pH',
-              'Are large enough to require active transport',
+              'Are positively charged and drawn through ion channels',
+              'Are large enough to require active transport into cells',
               'Are hydrophobic and cross the plasma membrane directly',
-              'Bind to cell-surface ATPases'
+              'Are polar and must enter through membrane carrier proteins'
             ],
             correctAnswer: 2,
             explanation: 'Steroid hormones are lipid-soluble. Their hydrophobic backbone allows them to diffuse across the phospholipid bilayer and bind cytoplasmic or nuclear receptors directly.'

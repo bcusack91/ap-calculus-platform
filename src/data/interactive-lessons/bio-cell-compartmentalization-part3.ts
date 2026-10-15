@@ -36,13 +36,13 @@ export const bioCellCompartmentPart3Data = {
           {
             question: 'For Membrane Surfaces, what best describes Golgi apparatus?',
             options: [
-              'modifies, sorts, and packages proteins and lipids',
+              'modifies and sorts proteins and lipids, then packages them',
               'internal ER space where folding and processing occur',
               'pinches off a membrane packet for cargo transport',
               'short amino acid sequence directing protein destination'
             ],
             correctAnswer: 0,
-            explanation: 'Golgi apparatus is best matched with: modifies, sorts, and packages proteins and lipids.'
+            explanation: 'Golgi apparatus is best matched with: modifies and sorts proteins and lipids, then packages them.'
           },
           {
             question: 'In this part\'s context, what is the strongest definition of ER lumen?',
@@ -184,7 +184,7 @@ export const bioCellCompartmentPart3Data = {
               'vesicle budding',
               'signal peptide',
               'proton gradient',
-              'endosymbiosis'
+              'proton pump'
             ],
             correctAnswer: 2,
             explanation: 'Use proton gradient because it directly maps to the described biological pattern: difference in proton concentration across a membrane.'

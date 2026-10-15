@@ -79,10 +79,10 @@ Large polar molecules and ions cannot pass through the lipid bilayer by simple d
           {
             question: 'Which of the following is true about facilitated diffusion?',
             options: [
-              'It requires ATP',
-              'It moves solutes against their concentration gradient',
-              'It uses membrane proteins but requires no energy input — solutes move down their gradient',
-              'It only transports water'
+              'It uses ATP to move solutes through channel proteins',
+              'It moves solutes against their gradient through carriers',
+              'It uses membrane proteins to move solutes down their gradient',
+              'It moves only water, through aquaporins in the membrane'
             ],
             correctAnswer: 2,
             explanation: 'Facilitated diffusion uses channel or carrier proteins to help polar molecules and ions cross the membrane, but the driving force is the concentration gradient — no cellular energy (ATP) is expended. It is still passive transport.'
@@ -90,10 +90,10 @@ Large polar molecules and ions cannot pass through the lipid bilayer by simple d
           {
             question: 'A carrier protein that transports glucose shows a maximum transport rate (Vmax) that cannot be exceeded even at very high glucose concentrations. What explains this saturation?',
             options: [
-              'The cell runs out of ATP',
-              'There is a finite number of carrier proteins, and at high substrate concentrations all carriers are occupied',
-              'Glucose begins to denature at high concentrations',
-              'The concentration gradient reverses'
+              'The cell runs out of the ATP that carrier proteins need',
+              'Every carrier protein is already occupied at high glucose levels',
+              'Glucose denatures carrier proteins at high concentrations',
+              'The concentration gradient reverses as glucose fills the cell'
             ],
             correctAnswer: 1,
             explanation: 'Like enzymes, carrier proteins have a finite number of binding sites. When all carriers are simultaneously occupied (saturated), increasing substrate concentration cannot increase the rate further — the system operates at Vmax. This is analogous to enzyme saturation kinetics.'
@@ -101,10 +101,10 @@ Large polar molecules and ions cannot pass through the lipid bilayer by simple d
           {
             question: 'Nerve cells have voltage-gated Na+ channels that open when the membrane depolarizes. This is an example of:',
             options: [
-              'Active transport',
+              'Primary active transport',
               'Simple diffusion',
-              'Facilitated diffusion through a gated channel',
-              'Exocytosis'
+              'Facilitated diffusion',
+              'Secondary active transport'
             ],
             correctAnswer: 2,
             explanation: 'Na+ ions flow through the voltage-gated channel down their electrochemical gradient (from high Na+ outside to low Na+ inside). No ATP is required for the ion movement itself — the energy comes from the pre-existing Na+ gradient. The channel simply provides a regulated pathway.'
@@ -172,10 +172,10 @@ The **membrane potential** (typically -70 mV in animal cells, inside negative) m
           {
             question: 'A molecule moves from an area of lower concentration to higher concentration across a membrane. This movement:',
             options: [
-              'Is driven by simple diffusion',
-              'Could be facilitated diffusion if the electrical gradient favors that direction (for charged molecules)',
-              'Must be simple diffusion because it crosses the membrane',
-              'Is impossible — molecules can only move down their gradient'
+              'Is driven by simple diffusion down the concentration gradient',
+              'Could be passive for an ion, if the electrical gradient favors that direction',
+              'Must be simple diffusion, since any molecule crossing a membrane diffuses',
+              'Is impossible, since molecules only move down their concentration gradient'
             ],
             correctAnswer: 1,
             explanation: 'For charged molecules (ions), the electrochemical gradient combines concentration and electrical forces. An ion could move against its concentration gradient if the electrical force (membrane potential) is strong enough to make the net electrochemical gradient favorable. For uncharged molecules, however, movement against the concentration gradient always requires active transport.'
@@ -183,8 +183,8 @@ The **membrane potential** (typically -70 mV in animal cells, inside negative) m
           {
             question: 'Which of the following would NOT increase the rate of simple diffusion across a membrane?',
             options: [
-              'Increasing the concentration gradient',
-              'Increasing the temperature',
+              'Increasing the concentration gradient across it',
+              'Increasing the temperature of the solution',
               'Increasing the membrane surface area',
               'Adding more carrier proteins to the membrane'
             ],

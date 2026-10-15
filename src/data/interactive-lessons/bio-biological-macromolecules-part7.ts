@@ -94,14 +94,14 @@ export const bioMacromoleculesPart7Data = {
           },
           {
             label: 'Long-term energy storage in animals uses ___',
-            options: ['glycogen', 'starch', 'fat (triglycerides)', 'cellulose']
+            options: ['glycogen', 'starch', 'fat', 'cellulose']
           },
           {
             label: 'DNA stores ___ information',
             options: ['energy', 'structural', 'genetic', 'metabolic']
           }
         ],
-        correctAnswers: ['Biuret', 'fat (triglycerides)', 'genetic'],
+        correctAnswers: ['Biuret', 'fat', 'genetic'],
         hint1: 'Biuret reagent turns purple in the presence of peptide bonds.',
         hint2: 'Which macromolecule stores the most energy per gram?',
         hint3: 'DNA is the blueprint of life.',

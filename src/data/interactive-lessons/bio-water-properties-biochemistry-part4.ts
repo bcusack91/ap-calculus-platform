@@ -39,8 +39,8 @@ Hydrophobic molecules are excluded from the aqueous environment, which is critic
             question: 'A solution with pH 4 has how many more $H^{+}$ ions than a solution with pH 7?',
             options: [
               '3 times more',
-              '30 times more',
               '300 times more',
+              '10,000 times more',
               '1,000 times more'
             ],
             correctAnswer: 3,

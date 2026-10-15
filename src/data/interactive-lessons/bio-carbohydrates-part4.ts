@@ -46,9 +46,9 @@ export const bioCarbohydratesPart4Data = {
             question: 'Which experimental result would best support the hypothesis that a polysaccharide is a structural rather than storage polymer?',
             options: [
               'It dissolves quickly in cold water',
-              'It is rapidly hydrolyzed by amylase',
-              'It forms tough fibers and resists enzymatic digestion in the digestive tract',
-              'It tastes sweet on the tongue'
+              'It is rapidly hydrolyzed by amylase into glucose',
+              'It forms tough fibers and resists digestive enzymes',
+              'It is stored in large amounts in liver cells'
             ],
             correctAnswer: 2,
             explanation: 'Structural polysaccharides like cellulose form rigid fibers and resist hydrolysis (β-linkages). Quick solubility and amylase digestion are storage hallmarks.'

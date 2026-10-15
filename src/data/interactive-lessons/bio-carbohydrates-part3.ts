@@ -33,10 +33,10 @@ This single linkage difference (α vs β) is why we can digest starch but not ce
           {
             question: 'Why can humans digest starch but not cellulose, even though both are glucose polymers?',
             options: [
-              'Cellulose contains nitrogen atoms our enzymes cannot break',
+              'Cellulose contains nitrogen atoms that human enzymes cannot break apart',
               'Humans lack enzymes that hydrolyze β-1,4 glycosidic linkages',
-              'Cellulose is a lipid, not a true carbohydrate',
-              'Starch contains shorter chains than cellulose'
+              'Cellulose is a lipid, not a true carbohydrate, so human amylase ignores it',
+              'Starch has much shorter chains than cellulose, so humans absorb it whole'
             ],
             correctAnswer: 1,
             explanation: 'Amylase digests α-1,4 linkages found in starch. Cellulose uses β-1,4 linkages, which require cellulase — an enzyme humans (and most animals) do not produce.'
@@ -73,10 +73,10 @@ The total carbohydrate coating of a cell is called the **glycocalyx**.
           {
             question: 'The ABO blood type system is based on differences in:',
             options: [
-              'Protein sequence on red blood cells',
-              'Lipid composition of the membrane',
+              'Amino acid sequence of the hemoglobin inside red blood cells',
+              'Lipid composition of the membrane bilayer',
               'Carbohydrate residues attached to membrane glycoproteins',
-              'Number of mitochondria per cell'
+              'Number and size of mitochondria in each cell'
             ],
             correctAnswer: 2,
             explanation: 'ABO blood groups differ in the terminal carbohydrate (a sugar epitope) attached to membrane glycoproteins on red blood cells.'

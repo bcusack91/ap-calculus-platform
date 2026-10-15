@@ -76,10 +76,10 @@ So nucleotides do far more than store information — they are also the cell's *
               'Modified amino acids',
               'Modified fatty acids',
               'Nucleotide derivatives',
-              'Polysaccharides'
+              'Modified polysaccharides'
             ],
             correctAnswer: 2,
-            explanation: 'ATP, $NAD^{+}$, FAD, NADP$ {}^{+}$, and cAMP are all nucleotide-based, illustrating how the cell repurposes one chemical scaffold across many roles.'
+            explanation: 'ATP, $NAD^{+}$, FAD, $NADP^{+}$, and cAMP are all nucleotide-based, illustrating how the cell repurposes one chemical scaffold across many roles.'
           }
         ]
       }

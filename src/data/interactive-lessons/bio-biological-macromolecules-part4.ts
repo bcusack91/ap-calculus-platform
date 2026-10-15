@@ -92,10 +92,10 @@ Changes in **pH, temperature, or salt concentration** can disrupt these bonds an
           {
             question: 'Denaturation disrupts which levels of protein structure?',
             options: [
-              'Only primary',
-              'Only secondary',
+              'Primary, secondary, and tertiary',
+              'Only the primary sequence of amino acids',
               'Secondary, tertiary, and quaternary',
-              'All four levels'
+              'All four levels, including peptide bonds'
             ],
             correctAnswer: 2,
             explanation: 'Denaturation unfolds the 3D structure (disrupting secondary, tertiary, and quaternary bonds) but does NOT break peptide bonds — the primary structure remains intact.'

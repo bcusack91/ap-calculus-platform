@@ -72,7 +72,7 @@ Two monosaccharides join through a **glycosidic linkage** formed by **dehydratio
         questions: [
           {
             question: 'Two glucose molecules join to form maltose. What else is produced?',
-            options: ['ATP', 'A water molecule', 'A hydrogen ion', 'Carbon dioxide'],
+            options: ['A molecule of ATP', 'A water molecule', 'A hydrogen ion', 'A carbon dioxide molecule'],
             correctAnswer: 1,
             explanation: 'A glycosidic bond forms by dehydration synthesis, removing one water molecule per bond formed.'
           }
@@ -87,7 +87,7 @@ Two monosaccharides join through a **glycosidic linkage** formed by **dehydratio
         dropdowns: [
           { label: 'A 6-carbon sugar is called a ___', options: ['triose', 'pentose', 'hexose', 'heptose'] },
           { label: 'Two monosaccharides are joined by a ___ bond', options: ['peptide', 'phosphodiester', 'glycosidic', 'ester'] },
-          { label: 'Hydrolysis ___ water to break bonds', options: ['removes', 'adds', 'ignores', 'oxidizes'] }
+          { label: 'Hydrolysis ___ water to break bonds', options: ['removes', 'adds', 'produces', 'oxidizes'] }
         ],
         correctAnswers: ['hexose', 'glycosidic', 'adds'],
         hint1: 'Hex = 6.',

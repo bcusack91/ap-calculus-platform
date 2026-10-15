@@ -52,10 +52,10 @@ In an aqueous environment, phospholipids spontaneously arrange into a bilayer â€
           {
             question: 'A cell membrane is found to have an unusually high proportion of unsaturated fatty acids in its phospholipids. How would this affect membrane properties?',
             options: [
-              'The membrane would become more rigid and less permeable',
-              'The membrane would be more fluid because unsaturated tails create kinks that prevent tight packing',
-              'The membrane would dissolve in water',
-              'Cholesterol would no longer be needed'
+              'The membrane would become more rigid as unsaturated tails pack tightly',
+              'The membrane would be more fluid, since kinked tails cannot pack tightly',
+              'The membrane would be less permeable, since double bonds attract water',
+              'Cholesterol would no longer be needed in this membrane'
             ],
             correctAnswer: 1,
             explanation: 'Unsaturated fatty acid tails contain one or more cis double bonds that create kinks in the hydrocarbon chain. These kinks prevent adjacent phospholipids from packing closely together, resulting in greater membrane fluidity.'
@@ -63,10 +63,10 @@ In an aqueous environment, phospholipids spontaneously arrange into a bilayer â€
           {
             question: 'Cholesterol is often described as a "fluidity buffer." What does this mean?',
             options: [
-              'Cholesterol always increases membrane fluidity',
-              'Cholesterol always decreases membrane fluidity',
-              'At high temperatures cholesterol restrains phospholipid movement (reducing fluidity); at low temperatures it prevents tight packing (maintaining fluidity)',
-              'Cholesterol has no effect on fluidity'
+              'It raises membrane fluidity at every temperature by spreading the phospholipids apart',
+              'It lowers membrane fluidity at every temperature by binding tightly to the phospholipid tails',
+              'It restrains phospholipid movement when warm and prevents tight packing when cold',
+              'It absorbs excess heat from the membrane so its temperature never changes at all'
             ],
             correctAnswer: 2,
             explanation: 'Cholesterol inserts between phospholipids with its hydroxyl group near the heads and its rigid steroid ring among the tails. At high temps, it restricts adjacent tail movement. At low temps, it prevents the tails from packing into a rigid crystalline state. It stabilizes fluidity across a range of temperatures.'
@@ -112,10 +112,10 @@ The "mosaic" in the fluid mosaic model refers to the diverse proteins embedded i
           {
             question: 'A transmembrane transport protein must have which structural feature to span the lipid bilayer?',
             options: [
-              'A long hydrophilic alpha helix',
-              'One or more hydrophobic alpha-helical domains that interact with the fatty acid tails of the bilayer',
-              'Only beta-sheet secondary structure',
-              'A signal peptide on the cytoplasmic side'
+              'A long hydrophilic alpha helix lined with charged amino acids',
+              'Hydrophobic alpha helices that sit among the fatty acid tails',
+              'Only beta sheets, which keep the protein flat on the bilayer surface',
+              'A signal peptide that stays on the cytoplasmic side of the bilayer'
             ],
             correctAnswer: 1,
             explanation: 'To span the hydrophobic interior of the lipid bilayer, transmembrane proteins contain one or more alpha-helical regions composed predominantly of nonpolar amino acids. These hydrophobic domains interact favorably with the fatty acid tails, anchoring the protein in the membrane.'
@@ -123,10 +123,10 @@ The "mosaic" in the fluid mosaic model refers to the diverse proteins embedded i
           {
             question: 'The glycocalyx is important for:',
             options: [
-              'Maintaining membrane fluidity',
-              'Cell-cell recognition, protection, and adhesion â€” it is composed of carbohydrates attached to membrane proteins and lipids on the extracellular surface',
-              'Lipid synthesis within the membrane',
-              'Anchoring the nucleus to the membrane'
+              'Maintaining membrane fluidity at low temperatures',
+              'Cell-cell recognition and adhesion at the cell surface',
+              'Synthesizing the lipids that make up the membrane',
+              'Anchoring the nucleus to the inner membrane face'
             ],
             correctAnswer: 1,
             explanation: 'The glycocalyx (carbohydrate coat) consists of oligosaccharide chains on glycoproteins and glycolipids. It functions in cell-cell recognition (e.g., immune system, blood type), protection from mechanical and chemical damage, and cell adhesion.'
@@ -190,8 +190,8 @@ Substances that cannot cross freely require **transport proteins** (channels or 
         questions: [
           {
             question: 'Proteins that span the entire membrane with hydrophobic transmembrane domains:',
-            options: ['Peripheral proteins', 'Integral (transmembrane) proteins', 'Glycolipids', 'Cholesterol'],
-            correctAnswer: 'Integral (transmembrane) proteins'
+            options: ['Peripheral proteins', 'Integral proteins', 'Glycolipids', 'Cholesterol'],
+            correctAnswer: 'Integral proteins'
           },
           {
             question: 'The component that prevents tight packing of phospholipids due to kinks in the tails:',
@@ -219,8 +219,8 @@ Substances that cannot cross freely require **transport proteins** (channels or 
             options: [
               'Saturated fatty acids',
               'Unsaturated fatty acids',
-              'Cholesterol',
-              'Glycoproteins'
+              'Cholesterol molecules',
+              'Transmembrane glycoproteins'
             ],
             correctAnswer: 1,
             explanation: 'At cold temperatures, membranes with predominantly saturated fatty acids would become too rigid. Arctic fish compensate by incorporating more unsaturated fatty acids (with kinks from cis double bonds) to maintain membrane fluidity at low temperatures.'

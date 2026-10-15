@@ -41,13 +41,13 @@ Two monosaccharides linked by a **glycosidic bond**:
           {
             question: 'What distinguishes cellulose from starch?',
             options: [
-              'Different monomers',
+              'Different monomers (fructose vs glucose)',
               'Different glycosidic linkages (α vs β)',
-              'Cellulose contains nitrogen',
-              'Starch is branched, cellulose is not'
+              'Cellulose contains nitrogen (as in chitin)',
+              'Different bond types (ionic vs covalent)'
             ],
             correctAnswer: 1,
-            explanation: 'Both are glucose polymers, but starch uses α-1,4 linkages while cellulose uses β-1,4 linkages. This makes cellulose indigestible to most animals.'
+            explanation: 'Both are glucose polymers built with covalent glycosidic bonds, but starch uses α-1,4 linkages while cellulose uses β-1,4 linkages. This makes cellulose indigestible to most animals.'
           }
         ]
       }

@@ -37,10 +37,10 @@ This means water resists temperature change — it absorbs or releases a large a
           {
             question: 'Water\'s high specific heat is due to:',
             options: [
-              'Covalent bonds within the molecule',
+              'The energy needed to break covalent O–H bonds within each molecule',
               'The need to break hydrogen bonds before temperature rises',
               'Water\'s low molecular weight',
-              'Water\'s ability to dissolve solutes'
+              'Water\'s ability to dissolve many ionic and polar solutes'
             ],
             correctAnswer: 1,
             explanation: 'Energy input first goes to breaking hydrogen bonds between water molecules. Only after bonds break does kinetic energy (and thus temperature) increase.'
@@ -81,7 +81,7 @@ Without this property, organisms would overheat during metabolic activity.
               'Cold water evaporates faster',
               'The highest-energy molecules leave the liquid',
               'Hydrogen bonds increase during evaporation',
-              'Water absorbs heat from the environment when it evaporates'
+              'Water releases heat to the environment when it evaporates'
             ],
             correctAnswer: 1,
             explanation: 'The fastest-moving (highest-energy) molecules escape the liquid surface, lowering the average kinetic energy (temperature) of the remaining molecules.'

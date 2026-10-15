@@ -89,7 +89,7 @@ This directionality is crucial for replication and transcription.
               'Peptide bond',
               'Glycosidic bond',
               'Phosphodiester bond',
-              'Hydrogen bond'
+              'Hydrogen bond between bases'
             ],
             correctAnswer: 2,
             explanation: 'Phosphodiester bonds link the 3\' carbon of one sugar to the 5\' carbon of the next nucleotide, forming the backbone.'

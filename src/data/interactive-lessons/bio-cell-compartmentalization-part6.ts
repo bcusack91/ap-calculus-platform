@@ -50,7 +50,7 @@ export const bioCellCompartmentPart6Data = {
               'difference in proton concentration across a membrane',
               'short amino acid sequence directing protein destination',
               'origin model where mitochondria and chloroplasts derive from bacteria',
-              'separates cellular processes into distinct membrane-bound regions'
+              'membrane protein that pumps protons into a compartment'
             ],
             correctAnswer: 0,
             explanation: 'proton gradient is best matched with: difference in proton concentration across a membrane.'
@@ -173,7 +173,7 @@ export const bioCellCompartmentPart6Data = {
               'organelle targeting',
               'proton gradient',
               'signal peptide',
-              'endosymbiosis'
+              'organelle biogenesis'
             ],
             correctAnswer: 0,
             explanation: 'Use organelle targeting because it directly maps to the described biological pattern: delivery of molecules to correct intracellular compartment.'

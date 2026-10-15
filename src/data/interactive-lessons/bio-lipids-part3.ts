@@ -30,10 +30,10 @@ Triglycerides yield about **9 kcal/g** vs **4 kcal/g** for carbohydrates. They a
           {
             question: 'Why is fat the preferred long-term energy store rather than carbohydrate?',
             options: [
-              'Fat is easier to digest than carbohydrate',
+              'Fat is easier to digest, so its energy reaches cells faster than sugar',
               'Fat is anhydrous and stores roughly twice as much energy per gram',
-              'Fat does not require oxygen to break down',
-              'Fat can be polymerized into longer chains'
+              'Fat stores energy without needing oxygen to release it later in cells',
+              'Fat can be polymerized into longer chains that store energy more tightly'
             ],
             correctAnswer: 1,
             explanation: 'Triglycerides yield ~9 kcal/g vs ~4 kcal/g for carbs and are stored without water, making them far more compact reserves.'

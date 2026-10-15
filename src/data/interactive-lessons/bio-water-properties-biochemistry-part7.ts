@@ -33,10 +33,10 @@ export const bioWaterPropertiesPart7Data = {
           {
             question: 'Which statement best explains why water is essential for life on Earth?',
             options: [
-              'Water is the only liquid that exists naturally',
+              'Water is the only liquid found naturally on Earth, so life had no other solvent available',
               'Water\'s hydrogen bonding creates properties that support biological processes',
-              'Water is the simplest molecule in nature',
-              'Water cannot be broken down into simpler substances'
+              'Water is the simplest molecule in nature, so cells can build it from almost any nutrient',
+              'Water cannot be broken down into simpler substances, so it provides a permanent store of energy'
             ],
             correctAnswer: 1,
             explanation: 'Water\'s hydrogen bonding network creates unique properties — high specific heat, solvent capability, cohesion/adhesion, and density anomaly — that collectively support life.'
@@ -85,13 +85,13 @@ export const bioWaterPropertiesPart7Data = {
           {
             question: 'During a drought, a plant wilts because:',
             options: [
-              'Adhesion forces break down',
-              'Transpiration stops and water cannot be pulled up',
-              'Water becomes hydrophobic',
-              'Surface tension in leaves increases'
+              'Adhesion forces between water and xylem walls break down',
+              'Water lost by transpiration exceeds uptake, so cells lose turgor',
+              'Water in the soil becomes hydrophobic and repels the roots',
+              'Surface tension in leaf cells rises and pulls them inward'
             ],
             correctAnswer: 1,
-            explanation: 'Without sufficient water, the transpiration stream (driven by evaporation, cohesion, and adhesion) fails. Turgor pressure drops and the plant wilts.'
+            explanation: 'When soil water is scarce, the leaves keep losing water by transpiration faster than the roots can replace it. Cells lose water, turgor pressure drops, and the plant wilts; stomata close to slow further loss.'
           }
         ]
       }

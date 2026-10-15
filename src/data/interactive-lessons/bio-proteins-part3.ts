@@ -40,10 +40,10 @@ Denatured proteins typically cannot refold spontaneously — function is lost pe
           {
             question: 'A single amino acid substitution in hemoglobin causes sickle cell disease. This best illustrates which principle?',
             options: [
-              'Carbohydrates determine cell shape',
+              'Carbohydrates on the cell surface determine red blood cell shape',
               'Primary structure determines higher-order structure and function',
-              'Lipids are essential for blood transport',
-              'Quaternary structure can occur with one polypeptide'
+              'Lipids in the membrane determine how blood carries oxygen',
+              'Quaternary structure can form from a single polypeptide chain alone'
             ],
             correctAnswer: 1,
             explanation: 'Sickle cell disease shows that primary structure (amino acid sequence) ultimately determines folding, shape, and therefore function.'
@@ -84,10 +84,10 @@ This is the same principle covered in detail in the **Enzymes & Metabolism** top
           {
             question: 'An allosteric inhibitor reduces enzyme activity by:',
             options: [
-              'Cooking the substrate',
-              'Binding the active site directly',
+              'Breaking peptide bonds in the enzyme\'s active site',
+              'Binding the active site directly and blocking the substrate',
               'Binding a different site and reshaping the active site',
-              'Adding water across the substrate'
+              'Adding water across the substrate to hydrolyze it'
             ],
             correctAnswer: 2,
             explanation: 'Allosteric regulators bind a non-active site and induce a conformational change that alters the active site\'s ability to bind substrate.'

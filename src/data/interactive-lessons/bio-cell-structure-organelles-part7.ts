@@ -35,24 +35,24 @@ export const bioCellStructurePart7Data = {
           {
             question: 'A cell biologist uses autoradiography with tritiated $(^{3}H)$ leucine (a radioactive amino acid) to track protein production. After 5 minutes, radioactivity is concentrated in the rough ER. After 20 minutes, radioactivity is concentrated in the Golgi. After 60 minutes, radioactivity is found outside the cell. This experiment demonstrates:',
             options: [
-              'Proteins are synthesized in the Golgi and secreted via the ER',
-              'The secretory pathway: rough ER → Golgi → secretory vesicles → extracellular space',
-              'Radioactive amino acids are toxic and are expelled from the cell',
-              'Proteins are synthesized outside the cell and imported via endocytosis'
+              'Proteins are made in the Golgi and then secreted through the rough ER',
+              'Secreted proteins move from the rough ER to the Golgi and then out of the cell',
+              'Radioactive leucine is toxic, so the cell expels it through the rough ER',
+              'Proteins are made outside the cell and imported by endocytosis into the Golgi'
             ],
             correctAnswer: 1,
             explanation: 'This is George Palade\'s classic pulse-chase experiment (Nobel Prize, 1974). The temporal sequence of radioactivity precisely maps the secretory pathway: rough ER (synthesis) → Golgi (modification/sorting) → secretory vesicles → exocytosis.'
           },
           {
-            question: 'Cyanide inhibits cytochrome c oxidase, a protein in the mitochondrial electron transport chain. A cell treated with cyanide would:',
+            question: 'Cyanide blocks the last step of the mitochondrial electron transport chain, where electrons pass to oxygen. A cell treated with cyanide would:',
             options: [
-              'Increase its rate of aerobic respiration to compensate',
-              'Continue to produce ATP at the same rate via glycolysis',
-              'Dramatically reduce ATP production because oxidative phosphorylation is blocked',
-              'Switch to photosynthesis for energy production'
+              'Raise its rate of oxidative phosphorylation to make up the loss',
+              'Keep making ATP at the same rate, since glycolysis would take over',
+              'Sharply cut ATP output, since oxidative phosphorylation would stop',
+              'Switch to photosynthesis, since its mitochondria would fail'
             ],
             correctAnswer: 2,
-            explanation: 'Cyanide blocks Complex IV of the ETC, halting electron flow and preventing the $H^{+}$ gradient from being maintained. Without the gradient, ATP synthase cannot produce ATP via oxidative phosphorylation. Glycolysis can still produce a small amount of ATP (2 per glucose), but this is far less than the ~30-34 from oxidative phosphorylation.'
+            explanation: 'Cyanide stops electron flow at the end of the electron transport chain, so electrons can no longer pass to oxygen and the $H^{+}$ gradient is not maintained. Without the gradient, ATP synthase cannot make ATP by oxidative phosphorylation. Glycolysis still yields a little ATP (2 per glucose), far less than the roughly 26–28 normally made by oxidative phosphorylation, and animal cells cannot photosynthesize.'
           },
           {
             question: 'Which of the following correctly pairs a cellular structure with the type of cell in which it would be MOST abundant?',
@@ -79,10 +79,10 @@ export const bioCellStructurePart7Data = {
           {
             question: 'A student argues that viruses disprove cell theory because they can reproduce without being composed of cells. The best response to this argument is:',
             options: [
-              'Viruses are actually composed of very small cells',
-              'Viruses are not considered living organisms and therefore do not contradict cell theory for living things',
-              'Cell theory has been disproven and is no longer accepted',
-              'Viruses contain their own ribosomes and can reproduce independently'
+              'Viruses are actually made of very small cells that pass through filters',
+              'Viruses are not considered living organisms, so cell theory does not cover them',
+              'Cell theory has been disproven and is no longer accepted by biologists',
+              'Viruses are built with their own ribosomes and reproduce independently'
             ],
             correctAnswer: 1,
             explanation: 'Cell theory applies to living organisms. Viruses lack key characteristics of life — they have no metabolism, cannot reproduce independently (they hijack host cell machinery), and are not made of cells. Most biologists classify viruses as "non-living" or "obligate intracellular parasites," so they exist outside the scope of cell theory.'
@@ -90,9 +90,9 @@ export const bioCellStructurePart7Data = {
           {
             question: 'An antibiotic targets the 30S ribosomal subunit. This drug would inhibit protein synthesis in:',
             options: [
-              'Eukaryotic cells only (which have 30S subunits in their 80S ribosomes)',
-              'Bacteria only (which have 30S subunits in their 70S ribosomes)',
-              'Both bacteria and human mitochondria',
+              'Eukaryotic cells only, through their 80S ribosomes',
+              'Bacteria only, since mitochondria use 80S ribosomes',
+              'Bacteria and the mitochondria of human cells',
               'Neither bacteria nor eukaryotic cells'
             ],
             correctAnswer: 2,
@@ -172,10 +172,10 @@ Enter the correct term for each description.
           {
             question: 'A researcher isolates mitochondria from cells and places them in a test tube with the necessary substrates. The mitochondria continue to produce ATP. This observation supports the idea that:',
             options: [
-              'Mitochondria are not important for cell function',
-              'ATP can only be produced inside living cells',
-              'Mitochondria are semi-autonomous organelles capable of independent function',
-              'Mitochondria do not need substrates to make ATP'
+              'Mitochondria can survive alone but are unimportant to the function of cells',
+              'ATP can only be produced by mitochondria inside intact living cells',
+              'Mitochondria can carry out their own reactions apart from the cell',
+              'Mitochondria can make ATP from nothing, without needing any substrates'
             ],
             correctAnswer: 2,
             explanation: 'The ability of isolated mitochondria to function independently supports their semi-autonomous nature — consistent with endosymbiotic theory. They retain the molecular machinery (DNA, ribosomes, enzymes) needed for energy conversion, just as their free-living bacterial ancestors did.'

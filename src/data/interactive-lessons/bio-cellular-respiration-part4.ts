@@ -80,15 +80,15 @@ The regenerated **oxaloacetate** is ready to combine with another acetyl-CoA, co
             explanation: 'Two CO2 molecules are released per turn — one at step 3 (isocitrate to alpha-ketoglutarate) and one at step 4 (alpha-ketoglutarate to succinyl-CoA). These represent the two carbons that entered as the acetyl group.'
           },
           {
-            question: 'Which electron carrier is produced at step 6 (succinate to fumarate) rather than NADH?',
+            question: 'Besides NADH, which reduced electron carrier does the citric acid cycle produce?',
             options: [
               'FADH2',
-              'ATP',
-              'Coenzyme Q',
-              'Cytochrome c'
+              'NADPH',
+              'Acetyl-CoA',
+              'Oxaloacetate'
             ],
             correctAnswer: 0,
-            explanation: 'Succinate dehydrogenase produces FADH2 instead of NADH. This enzyme is unique because it is embedded in the inner mitochondrial membrane and is also Complex II of the electron transport chain.'
+            explanation: 'Each turn of the citric acid cycle produces FADH2 as well as NADH, and both carry electrons to the electron transport chain. NADPH is made in the light reactions of photosynthesis, while acetyl-CoA and oxaloacetate are carbon compounds that enter the cycle, not electron carriers.'
           }
         ]
       }
@@ -128,10 +128,10 @@ When intermediates are pulled out for biosynthesis, they must be replenished thr
           {
             question: 'The citric acid cycle is called a "metabolic hub" because:',
             options: [
-              'It only processes glucose-derived molecules',
-              'It produces more ATP than any other pathway',
+              'It processes only glucose, never fats, proteins, or amino acids',
+              'It produces more ATP than glycolysis, fermentation, and oxidative phosphorylation',
               'Its intermediates connect to amino acid, fat, and carbohydrate metabolism',
-              'It operates in every compartment of the cell'
+              'It runs in every metabolic compartment of the cell at once'
             ],
             correctAnswer: 2,
             explanation: 'The citric acid cycle sits at the crossroads of metabolism. Amino acids, fatty acids, and carbohydrates can all feed into the cycle, and its intermediates can be withdrawn for biosynthetic pathways.'
@@ -139,9 +139,9 @@ When intermediates are pulled out for biosynthesis, they must be replenished thr
           {
             question: 'What are anaplerotic reactions?',
             options: [
-              'Reactions that break down citric acid cycle intermediates',
-              'Reactions that replenish citric acid cycle intermediates when they are withdrawn for biosynthesis',
-              'Reactions that produce ATP from cycle intermediates',
+              'Reactions that break down cycle intermediates for energy',
+              'Reactions that refill cycle intermediates withdrawn for biosynthesis',
+              'Reactions that make ATP directly from cycle intermediates',
               'Reactions that convert CO2 back into organic molecules'
             ],
             correctAnswer: 1,
@@ -188,9 +188,9 @@ When intermediates are pulled out for biosynthesis, they must be replenished thr
       exercise: {
         questions: [
           {
-            question: 'The enzyme embedded in the inner mitochondrial membrane (also Complex II of the ETC):',
-            options: ['Citrate synthase', 'Isocitrate dehydrogenase', 'Succinate dehydrogenase', 'Malate dehydrogenase'],
-            correctAnswer: 'Succinate dehydrogenase'
+            question: 'The electron carrier that the cycle reduces along with NAD+:',
+            options: ['ATP', 'NADP+', 'FAD', 'Coenzyme A'],
+            correctAnswer: 'FAD'
           },
           {
             question: 'The 4-carbon molecule regenerated at the end of each cycle to restart the process:',
@@ -198,7 +198,7 @@ When intermediates are pulled out for biosynthesis, they must be replenished thr
             correctAnswer: 'Oxaloacetate'
           },
           {
-            question: 'The high-energy nucleotide produced at step 5 (equivalent to ATP):',
+            question: 'The ATP-equivalent nucleotide made directly by each turn of the cycle:',
             options: ['GMP', 'GDP', 'GTP', 'cAMP'],
             correctAnswer: 'GTP'
           }
@@ -229,7 +229,7 @@ When intermediates are pulled out for biosynthesis, they must be replenished thr
             options: [
               'NAD+ and FAD',
               'NADH and FADH2',
-              'ATP and GTP',
+              'Acetyl-CoA and ATP',
               'CO2 and H2O'
             ],
             correctAnswer: 1,

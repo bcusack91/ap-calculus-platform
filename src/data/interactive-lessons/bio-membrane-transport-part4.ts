@@ -62,10 +62,10 @@ This creates and maintains steep concentration gradients:
           {
             question: 'The Na+/K+ ATPase pumps 3 Na+ out and 2 K+ in per ATP. Why does this contribute to the membrane potential?',
             options: [
-              'It does not contribute to membrane potential',
-              'The unequal exchange of ions (3 positive charges out, 2 positive charges in) creates a net export of positive charge, making the inside more negative',
-              'It only moves uncharged molecules',
-              'Na+ and K+ cancel each other out'
+              'It does not contribute, since Na+ and K+ each carry the same single charge',
+              'It moves more positive charge out than in, leaving the inside more negative',
+              'It pumps chloride ions in along with K+, making the inside more negative',
+              'It moves more positive charge in than out, leaving the inside positive'
             ],
             correctAnswer: 1,
             explanation: 'Each cycle of the pump exports 3 positive charges (Na+) and imports only 2 positive charges (K+). The net export of 1 positive charge per cycle contributes to the negative resting membrane potential. However, the pump accounts for only ~10% of the membrane potential — the rest comes from K+ leak channels.'
@@ -73,10 +73,10 @@ This creates and maintains steep concentration gradients:
           {
             question: 'Why is the Na+/K+ ATPase classified as an "active" transporter?',
             options: [
-              'It moves Na+ and K+ down their concentration gradients',
-              'It uses energy from ATP hydrolysis to move ions AGAINST their electrochemical gradients',
-              'It only works when the cell is metabolically active',
-              'It transports molecules faster than channel proteins'
+              'It moves Na+ and K+ down their concentration gradients through a pore',
+              'It uses ATP hydrolysis to move ions against their gradients',
+              'It works only while the cell is metabolically active and dividing',
+              'It moves ions faster than channel proteins, so it is called active'
             ],
             correctAnswer: 1,
             explanation: 'Active transport requires direct energy input (ATP hydrolysis in this case) because it moves substances against their gradient. Na+ is pumped out despite being at lower concentration inside, and K+ is pumped in despite being at lower concentration outside.'
@@ -119,10 +119,10 @@ Secondary active transport uses the energy stored in an **existing ion gradient*
           {
             question: 'In the small intestine, glucose is absorbed against its concentration gradient using a Na+/glucose symporter (SGLT1). Why is this considered secondary active transport?',
             options: [
-              'It uses ATP directly to pump glucose',
-              'It uses the Na+ gradient (created by the Na+/K+ ATPase) as an energy source — Na+ flows down its gradient, providing energy to move glucose against its gradient',
-              'Glucose moves down its gradient alongside Na+',
-              'It uses GTP instead of ATP'
+              'The symporter uses ATP directly to pump glucose against its gradient',
+              'Glucose uptake is powered by the Na+ gradient that the Na+/K+ pump builds',
+              'Glucose moves down its own gradient alongside the Na+ ions',
+              'It uses GTP instead of ATP to pump glucose into the cell'
             ],
             correctAnswer: 1,
             explanation: 'SGLT1 couples the downhill movement of Na+ (established by the Na+/K+ ATPase on the basolateral membrane) with the uphill movement of glucose. The energy for glucose transport comes indirectly from ATP — via the Na+ gradient — hence "secondary" active transport.'
@@ -130,10 +130,10 @@ Secondary active transport uses the energy stored in an **existing ion gradient*
           {
             question: 'What is the difference between a symporter and an antiporter?',
             options: [
-              'A symporter uses ATP; an antiporter does not',
-              'A symporter moves two substances in the same direction; an antiporter moves them in opposite directions',
-              'A symporter moves one substance; an antiporter moves two',
-              'There is no functional difference'
+              'A symporter uses ATP directly; an antiporter uses an existing ion gradient',
+              'A symporter moves both one way; an antiporter moves them opposite ways',
+              'A symporter moves one substance; an antiporter moves two at the same time',
+              'A symporter works in plants; an antiporter works only in animal cells'
             ],
             correctAnswer: 1,
             explanation: 'In symport (cotransport), both the ion and the transported molecule move in the same direction across the membrane. In antiport (exchange), the ion and transported molecule move in opposite directions. Both are powered by the existing ion gradient.'
@@ -181,8 +181,8 @@ Secondary active transport uses the energy stored in an **existing ion gradient*
           {
             question: 'If a cell is treated with a metabolic poison that stops ATP production, which of the following would be directly affected?',
             options: [
-              'Simple diffusion of O2 across the membrane',
-              'Osmosis through aquaporins',
+              'Simple diffusion of O2 and CO2 across the lipid bilayer of the membrane',
+              'Osmosis of water through aquaporin channels',
               'The Na+/K+ ATPase and all other primary active transport systems',
               'Facilitated diffusion of glucose through GLUT channels'
             ],
@@ -192,10 +192,10 @@ Secondary active transport uses the energy stored in an **existing ion gradient*
           {
             question: 'A drug called ouabain specifically inhibits the Na+/K+ ATPase. If ouabain is applied to intestinal epithelial cells, what would happen to glucose absorption via SGLT1?',
             options: [
-              'Glucose absorption would increase',
-              'Glucose absorption would decrease because the Na+ gradient that powers SGLT1 would collapse without the Na+/K+ ATPase to maintain it',
-              'Glucose absorption would be unaffected because SGLT1 uses ATP directly',
-              'The cells would switch to simple diffusion for glucose uptake'
+              'It would rise, because more Na+ would stay outside the cells to drive it',
+              'It would drop as the Na+ gradient powering SGLT1 collapses',
+              'It would be unaffected, because SGLT1 hydrolyzes ATP directly',
+              'It would continue, since the cells would switch to simple diffusion'
             ],
             correctAnswer: 1,
             explanation: 'SGLT1 (secondary active transport) depends on the Na+ gradient maintained by the Na+/K+ ATPase (primary active transport). Ouabain inhibits the pump, causing Na+ to accumulate inside the cell, collapsing the Na+ gradient. Without this gradient, SGLT1 cannot drive glucose against its gradient.'

@@ -28,21 +28,21 @@ Let's apply what you've learned about water's properties to solve AP Biology-sty
           {
             question: 'A student observes that a paper towel absorbs water and the water moves upward against gravity. Which property best explains this?',
             options: [
-              'Evaporative cooling',
-              'Capillary action due to adhesion and cohesion',
-              'High specific heat',
-              'Low density of ice'
+              'Evaporative cooling at the towel\'s surface',
+              'Capillary action from adhesion and cohesion',
+              'High specific heat of the absorbed water',
+              'Hydrophobic exclusion of water by fibers'
             ],
             correctAnswer: 1,
-            explanation: 'Water moves upward in the paper towel fibers due to capillary action — adhesion to the cellulose fibers combined with cohesion between water molecules.'
+            explanation: 'Water moves upward in the paper towel fibers by capillary action: adhesion to the cellulose fibers combined with cohesion between water molecules.'
           },
           {
             question: 'In an experiment, a student adds salt to two beakers of water. Beaker A is at 20°C and Beaker B is at 80°C. In which beaker will salt dissolve faster, and why?',
             options: [
-              'Beaker A — cold water is a better solvent',
+              'Beaker A — cold water has more intact hydrogen bonds to surround ions',
               'Beaker B — higher kinetic energy increases dissolution rate',
-              'Both dissolve at the same rate',
-              'Neither — salt does not dissolve in water'
+              'Both at the same rate — temperature does not affect dissolving solids',
+              'Beaker A — heating drives off the water that would hydrate the ions'
             ],
             correctAnswer: 1,
             explanation: 'At higher temperatures, water molecules have more kinetic energy and interact more vigorously with solute particles, increasing the rate of dissolution.'
@@ -78,10 +78,10 @@ Water moves from roots to leaves in tall trees (some over 100 m tall) without an
           {
             question: 'Why do large bodies of water moderate nearby land temperatures?',
             options: [
-              'Water reflects sunlight',
+              'Water reflects most incoming sunlight back into the atmosphere above it',
               'Water has a high specific heat and absorbs/releases heat slowly',
-              'Water evaporates and creates clouds',
-              'Water is transparent to infrared radiation'
+              'Water evaporates and creates clouds that shade the nearby land',
+              'Water is transparent to infrared radiation, so it never warms up'
             ],
             correctAnswer: 1,
             explanation: 'Water\'s high specific heat means it absorbs and releases large amounts of heat energy with relatively small temperature changes, moderating nearby temperatures.'

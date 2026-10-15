@@ -63,8 +63,8 @@ Every cell — whether prokaryotic or eukaryotic — has:
           {
             question: 'A cell is observed to have a single circular chromosome, 70S ribosomes, and no membrane-bound organelles. This cell is most likely:',
             options: [
-              'A plant cell',
-              'An animal cell',
+              'A plant root cell',
+              'A eukaryotic animal cell',
               'A prokaryotic cell',
               'A fungal cell'
             ],
@@ -85,10 +85,10 @@ Every cell — whether prokaryotic or eukaryotic — has:
           {
             question: 'Prokaryotic ribosomes are 70S while eukaryotic cytoplasmic ribosomes are 80S. Why is this difference medically significant?',
             options: [
-              'It allows eukaryotic cells to make larger proteins',
+              'It allows eukaryotic cells to make larger and more complex proteins',
               'Antibiotics can target 70S ribosomes without harming host 80S ribosomes',
-              'Prokaryotic ribosomes produce different amino acids',
-              '70S ribosomes cannot read eukaryotic mRNA'
+              'Prokaryotic ribosomes use different amino acids than ours do',
+              '70S ribosomes cannot read eukaryotic mRNA, so infections cannot spread'
             ],
             correctAnswer: 1,
             explanation: "This structural difference is the basis for many antibiotics (tetracycline, chloramphenicol, erythromycin). These drugs bind to bacterial 70S ribosomes but not human 80S ribosomes, killing bacteria without harming the patient's cells."
@@ -170,14 +170,14 @@ Enter the correct term for each description.
           },
           {
             label: 'The primary advantage of compartmentalization in eukaryotic cells is',
-            options: ['Faster binary fission', 'Separating incompatible reactions into specialized compartments', 'Eliminating the need for ribosomes', 'Reducing the number of genes needed']
+            options: ['Allowing faster cell division by binary fission', 'Separating incompatible reactions into distinct regions', 'Removing the need for ribosomes in the cytoplasm', 'Reducing the number of genes each cell needs']
           },
           {
             label: 'On the phylogenetic tree, Archaea are most closely related to',
-            options: ['Bacteria', 'Eukarya', 'Viruses', 'Protists']
+            options: ['Bacteria', 'Eukarya', 'Viruses', 'Cyanobacteria']
           }
         ],
-        correctAnswers: ['Archaea', '80S', 'Separating incompatible reactions into specialized compartments', 'Eukarya'],
+        correctAnswers: ['Archaea', '80S', 'Separating incompatible reactions into distinct regions', 'Eukarya'],
         hint1: 'Ether-linked lipids and no peptidoglycan rule out Bacteria.',
         hint2: 'Prokaryotic = 70S, Eukaryotic cytoplasmic = 80S.',
         hint3: 'Compartmentalization allows different chemical environments within one cell.',
@@ -195,8 +195,8 @@ Enter the correct term for each description.
           {
             question: 'Mitochondria contain 70S ribosomes and circular DNA, similar to bacteria. This observation best supports which hypothesis?',
             options: [
-              'Mitochondria evolved from the nuclear genome',
-              'Bacteria evolved from eukaryotic cells',
+              'Mitochondria evolved from pieces of the nuclear genome',
+              'Bacteria evolved from mitochondria released by eukaryotes',
               'Mitochondria originated as endosymbiotic bacteria',
               'All organelles contain their own DNA'
             ],
@@ -206,10 +206,10 @@ Enter the correct term for each description.
           {
             question: 'A researcher treats cells with an antibiotic that specifically binds to the 50S ribosomal subunit. Which cells would be MOST affected?',
             options: [
-              'Human liver cells only',
-              'Plant cells only',
+              'Eukaryotic cells only, through their 80S cytoplasmic ribosomes',
+              'Plant cells only, because their cell walls absorb the drug',
               'Bacterial cells and mitochondria within eukaryotic cells',
-              'Only cells in the domain Archaea'
+              'Only cells in the domain Archaea, which lack 80S ribosomes'
             ],
             correctAnswer: 2,
             explanation: 'The 50S subunit is part of the 70S prokaryotic ribosome. Both bacteria and mitochondria have 70S ribosomes (supporting endosymbiotic theory). This is why some antibiotics can have side effects — they can partially inhibit mitochondrial protein synthesis.'

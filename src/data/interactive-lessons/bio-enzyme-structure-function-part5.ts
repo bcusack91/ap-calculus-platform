@@ -38,10 +38,10 @@ export const bioEnzymesPart5Data = {
           {
             question: '$NAD^{+}$ functions as a(n):',
             options: [
-              'Enzyme',
-              'Substrate',
-              'Coenzyme (electron carrier)',
-              'Competitive inhibitor'
+              'Enzyme that oxidizes glucose directly',
+              'Substrate for ATP synthase',
+              'Coenzyme that carries electrons',
+              'Competitive inhibitor of glycolysis'
             ],
             correctAnswer: 2,
             explanation: '$NAD^{+}$ is a coenzyme that carries electrons (as NADH) during cellular respiration. It shuttles electrons to the electron transport chain.'
@@ -77,9 +77,9 @@ Without the proper cofactor, an enzyme is called an **apoenzyme** (inactive). Wi
             question: 'An apoenzyme is:',
             options: [
               'An enzyme with its cofactor attached',
-              'An enzyme without its cofactor (inactive)',
-              'A denatured enzyme',
-              'An enzyme inhibitor'
+              'An enzyme lacking its required cofactor',
+              'An enzyme denatured by high heat',
+              'An inhibitor bound to the active site'
             ],
             correctAnswer: 1,
             explanation: 'An apoenzyme is the protein portion of an enzyme without its required cofactor. It\'s inactive. With the cofactor, it becomes a holoenzyme.'
@@ -101,14 +101,14 @@ Without the proper cofactor, an enzyme is called an **apoenzyme** (inactive). Wi
           },
           {
             label: '$NAD^{+}$ is derived from vitamin ___',
-            options: ['A', 'B3 (niacin)', 'C', 'D']
+            options: ['A', 'B3', 'C', 'D']
           },
           {
             label: 'An enzyme with its cofactor is called a ___',
             options: ['apoenzyme', 'holoenzyme', 'proenzyme', 'isoenzyme']
           }
         ],
-        correctAnswers: ['cofactors', 'B3 (niacin)', 'holoenzyme'],
+        correctAnswers: ['cofactors', 'B3', 'holoenzyme'],
         hint1: 'These non-protein helpers are often metal ions.',
         hint2: 'This B vitamin is essential for cellular respiration.',
         hint3: 'Holo = whole, complete.',

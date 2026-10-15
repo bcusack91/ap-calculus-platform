@@ -36,10 +36,10 @@ Comprehensive AP-exam-style questions integrating concepts from all parts of the
           {
             question: 'A cell is placed in an isotonic solution containing a solute that slowly permeates the membrane. Over time, what will happen?',
             options: [
-              'The cell will remain unchanged indefinitely',
-              'As the permeating solute enters the cell and equilibrates, the non-permeating solutes inside the cell make the interior hypertonic; water will enter by osmosis and the cell will swell',
-              'The cell will shrink as the solute draws water out',
-              'The solute will be actively pumped out'
+              'The cell will stay unchanged indefinitely, since the solution is isotonic',
+              'Water will enter and the cell will swell as the solute moves in',
+              'The cell will shrink as the solute draws water out of it',
+              'The solute will be pumped back out, so nothing will change'
             ],
             correctAnswer: 1,
             explanation: 'Initially, the solution is isotonic (equal total solute). As the permeating solute crosses the membrane and equilibrates, it no longer contributes to the osmotic gradient. But the non-permeating solutes inside the cell still exert osmotic pressure, making the interior effectively hypertonic relative to the outside. Water enters, and the cell swells.'
@@ -47,10 +47,10 @@ Comprehensive AP-exam-style questions integrating concepts from all parts of the
           {
             question: 'Cystic fibrosis is caused by a mutation in the CFTR protein, a Cl- channel in epithelial cells. Defective CFTR prevents normal Cl- secretion. How does this lead to thick, sticky mucus?',
             options: [
-              'Cl- directly makes mucus thicker',
-              'Without Cl- secretion, less water follows by osmosis to hydrate the mucus layer, resulting in dehydrated, thick mucus that is difficult to clear',
-              'The mutation causes excess mucus production',
-              'CFTR normally transports mucus proteins'
+              'Cl- binds secreted mucus proteins and cross-links them',
+              'Less Cl- is secreted, so less water follows to hydrate the mucus',
+              'The mutation makes cells secrete far more mucus than normal',
+              'CFTR normally secretes mucus proteins, so they now build up'
             ],
             correctAnswer: 1,
             explanation: 'Normally, CFTR exports Cl- to the epithelial surface, and Na+ follows electrically. The resulting NaCl concentration outside the cell draws water out by osmosis, keeping the mucus hydrated. Without functional CFTR, Cl- and water do not exit, and mucus becomes dehydrated and thick.'
@@ -58,10 +58,10 @@ Comprehensive AP-exam-style questions integrating concepts from all parts of the
           {
             question: 'During a nerve impulse, Na+ channels open and Na+ rushes into the cell. This Na+ movement is:',
             options: [
-              'Active transport — it requires ATP',
-              'Facilitated diffusion — Na+ moves down its electrochemical gradient through a channel protein, requiring no ATP',
-              'Simple diffusion — Na+ passes directly through the lipid bilayer',
-              'Exocytosis — Na+ is released from vesicles'
+              'Active transport, since each channel spends ATP to let Na+ pass',
+              'Facilitated diffusion down its gradient, through a channel',
+              'Simple diffusion straight through the lipid bilayer, not a channel',
+              'Exocytosis of Na+ ions that were stored inside secretory vesicles'
             ],
             correctAnswer: 1,
             explanation: 'Na+ flows through voltage-gated Na+ channels down its electrochemical gradient (high Na+ outside, membrane potential is negative inside — both concentration and electrical gradients favor Na+ entry). No ATP is directly required for this movement. The Na+/K+ ATPase later restores the gradient.'
@@ -80,10 +80,10 @@ Comprehensive AP-exam-style questions integrating concepts from all parts of the
           {
             question: 'Paramecium (a freshwater protist) has a contractile vacuole that periodically expels water. Why is this organelle necessary?',
             options: [
-              'To excrete metabolic waste',
-              'Because the freshwater environment is hypotonic — water constantly enters by osmosis, and without the contractile vacuole, the cell would burst',
-              'To take in nutrients from the environment',
-              'To maintain the cell wall'
+              'Metabolic wastes build up and must be flushed out with excess water',
+              'Water keeps entering from the hypotonic pond and must be removed',
+              'Nutrients must be drawn in with large volumes of water from the pond',
+              'Salt keeps entering with the pond water and must be pumped back out'
             ],
             correctAnswer: 1,
             explanation: 'Freshwater is hypotonic relative to the cytoplasm of Paramecium. Water continuously enters by osmosis. The contractile vacuole collects excess water and periodically contracts to expel it, preventing cell lysis. This process requires ATP — it is an active, energy-consuming process.'
@@ -91,10 +91,10 @@ Comprehensive AP-exam-style questions integrating concepts from all parts of the
           {
             question: 'A researcher discovers that a particular drug increases membrane fluidity and slightly increases the permeability of the lipid bilayer to small polar molecules. What is a likely mechanism?',
             options: [
-              'The drug is inserting between phospholipids and disrupting their packing, similar to the effect of unsaturated fatty acids',
-              'The drug is adding more cholesterol to the membrane',
-              'The drug is cross-linking membrane proteins',
-              'The drug is dehydrating the membrane'
+              'The drug inserts between phospholipids and disrupts their packing',
+              'The drug adds cholesterol that packs phospholipids tightly',
+              'The drug cross-links membrane proteins into rigid clusters',
+              'The drug dehydrates the membrane by drawing water out of it'
             ],
             correctAnswer: 0,
             explanation: 'A drug that inserts between phospholipids would disrupt the tight packing of the hydrophobic tails, increasing fluidity. Greater fluidity creates transient gaps that allow small polar molecules to slip through more easily. This is similar to how unsaturated fatty acids increase permeability.'
@@ -102,10 +102,10 @@ Comprehensive AP-exam-style questions integrating concepts from all parts of the
           {
             question: 'Aquaporins increase the rate of osmosis by 10-100 fold compared to diffusion through the lipid bilayer alone. If all aquaporins were suddenly blocked, would osmosis stop?',
             options: [
-              'Yes — without aquaporins, water cannot cross the membrane',
-              'No — water can still cross slowly by diffusing through the lipid bilayer; aquaporins simply accelerate the process',
-              'No — water would use Na+/K+ ATPase pumps instead',
-              'Yes — lipid bilayers are completely impermeable to water'
+              'Yes, without aquaporins no water can cross the membrane at all',
+              'No, water can still cross slowly through the lipid bilayer',
+              'No, the Na+/K+ pumps would carry water across instead',
+              'Yes, lipid bilayers are completely impermeable to water'
             ],
             correctAnswer: 1,
             explanation: 'Water is a small enough molecule to diffuse slowly through the lipid bilayer. Aquaporins dramatically increase the rate of water movement but are not absolutely required. Without them, osmosis continues at a much slower rate through the bilayer itself.'
@@ -183,10 +183,10 @@ Comprehensive AP-exam-style questions integrating concepts from all parts of the
           {
             question: 'A biologist discovers a unicellular organism in a hot spring. Its membrane has an unusually high proportion of saturated fatty acids and is reinforced with unique lipid-spanning molecules. What is the most likely advantage of this membrane composition?',
             options: [
-              'It increases membrane fluidity at high temperatures',
-              'It maintains membrane stability and prevents excessive fluidity at the extreme temperatures of the hot spring',
-              'It allows the organism to photosynthesize more efficiently',
-              'It increases the rate of active transport'
+              'It increases membrane fluidity in the hot spring',
+              'It keeps the membrane from becoming too fluid at high temperatures',
+              'It lets the organism photosynthesize in the light of the spring',
+              'It speeds active transport by loosening the membrane'
             ],
             correctAnswer: 1,
             explanation: 'At high temperatures (60-80+ °C), a typical membrane would become excessively fluid and leaky. Saturated fatty acids pack tightly, and lipid-spanning molecules (like those in archaeal membranes) form a rigid monolayer, maintaining membrane integrity at extreme temperatures.'
@@ -194,10 +194,10 @@ Comprehensive AP-exam-style questions integrating concepts from all parts of the
           {
             question: 'Integration question: A cell requires glucose, which is at lower concentration outside than inside. Na+ is at higher concentration outside. The cell uses an Na+/glucose symporter. Identify the transport type for each molecule.',
             options: [
-              'Both are actively transported using ATP',
-              'Na+ moves by facilitated diffusion (down its gradient); glucose moves by secondary active transport (against its gradient, powered by the Na+ gradient)',
-              'Both move by facilitated diffusion',
-              'Glucose moves by simple diffusion; Na+ is actively pumped'
+              'Both move by primary active transport; the symporter hydrolyzes ATP for both',
+              'Na+ moves down its gradient; glucose moves by secondary active transport',
+              'Both move by facilitated diffusion; neither needs any energy source at all',
+              'Glucose moves by simple diffusion; Na+ is pumped in by primary active transport'
             ],
             correctAnswer: 1,
             explanation: 'In the symporter, Na+ moves down its electrochemical gradient (facilitated by the transporter — no ATP needed for Na+ movement itself). The energy released by Na+ entry drives glucose into the cell against its concentration gradient. This is secondary active transport for glucose, coupled to passive transport for Na+.'

@@ -35,10 +35,10 @@ Hydrophobic molecules:
           {
             question: 'Why are lipids classified as a "diverse" rather than "polymer" family?',
             options: [
-              'They contain no carbon',
-              'They do not form by repeated linking of identical monomers',
-              'They lack hydrogen',
-              'They are inorganic'
+              'They are built from amino acids, not sugars',
+              'They are not built by linking many similar monomers',
+              'They form by hydrolysis, not dehydration',
+              'They are all built on one four-ring structure'
             ],
             correctAnswer: 1,
             explanation: 'Lipids include very different molecules (TGs, phospholipids, steroids) that don\'t share a single repeating monomer — so they\'re not true polymers.'

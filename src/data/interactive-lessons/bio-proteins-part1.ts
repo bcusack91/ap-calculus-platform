@@ -79,7 +79,7 @@ Two amino acids join when the carboxyl of one and the amino of the next undergo 
             options: [
               'The amino group',
               'The carboxyl group',
-              'The R (side) group',
+              'The R group',
               'The α-carbon'
             ],
             correctAnswer: 2,

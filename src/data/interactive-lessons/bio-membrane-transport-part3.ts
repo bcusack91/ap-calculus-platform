@@ -60,10 +60,10 @@ Osmosis is technically a special case of facilitated diffusion (when aquaporins 
           {
             question: 'A plant cell is placed in a hypertonic solution. What happens?',
             options: [
-              'The cell becomes turgid as water rushes in',
-              'The cell undergoes plasmolysis — water leaves, and the plasma membrane pulls away from the cell wall',
-              'The cell wall dissolves',
-              'Nothing — plant cells are not affected by tonicity'
+              'Water rushes in and the cell becomes turgid, pressing on the cell wall',
+              'Water leaves and the plasma membrane pulls away from the cell wall',
+              'The cell wall dissolves and the cell shrivels like a red blood cell',
+              'Nothing happens, since the rigid cell wall blocks all water movement'
             ],
             correctAnswer: 1,
             explanation: 'In a hypertonic solution, water moves out of the cell by osmosis. The cytoplasm shrinks, but the rigid cell wall maintains its shape. The plasma membrane pulls away from the cell wall in a process called plasmolysis, which is visible under a microscope.'
@@ -71,10 +71,10 @@ Osmosis is technically a special case of facilitated diffusion (when aquaporins 
           {
             question: 'Why does an animal cell placed in pure water burst (lyse), but a plant cell in the same solution does not?',
             options: [
-              'Animal cells absorb more water than plant cells',
-              'Plant cells have a rigid cell wall that exerts turgor pressure, preventing over-expansion; animal cells lack a cell wall and cannot resist the osmotic influx',
-              'Plant cells actively pump water out',
-              'Animal cells have more aquaporins'
+              'Animal cells absorb more water because their membranes are thinner',
+              'Plant cells have a rigid wall that resists swelling, but animal cells do not',
+              'Plant cells pump the extra water out using ATP-driven transporters',
+              'Plant cells have fewer aquaporins, so water enters them too slowly'
             ],
             correctAnswer: 1,
             explanation: 'Both cells experience water influx in a hypotonic environment. The plant cell wall is strong enough to resist expansion, generating turgor pressure that opposes further water entry. Animal cells lack a cell wall and continue to swell until the membrane ruptures (lysis).'
@@ -83,9 +83,9 @@ Osmosis is technically a special case of facilitated diffusion (when aquaporins 
             question: 'IV (intravenous) fluids given to patients are typically isotonic (0.9% NaCl). Why is this important?',
             options: [
               'Hypertonic fluids would cause white blood cells to swell and burst',
-              'Isotonic fluids prevent net water movement across red blood cell membranes, avoiding both lysis (hypotonic) and crenation (hypertonic)',
-              'Isotonic fluids contain more nutrients',
-              'Hypertonic fluids would promote bacterial growth'
+              'Isotonic fluids cause no net water movement into or out of blood cells',
+              'Isotonic fluids carry more nutrients into the cells than plain water',
+              'Isotonic fluids keep bacteria from growing in the IV bag and line'
             ],
             correctAnswer: 1,
             explanation: 'If IV fluids were hypotonic, water would enter red blood cells, causing them to swell and lyse. If hypertonic, water would leave, causing crenation. Isotonic fluids (0.9% NaCl matches blood plasma osmolarity) prevent net water movement and maintain normal cell shape.'
@@ -148,10 +148,10 @@ Where:
           {
             question: 'If the same cell is placed in pure water (water potential = 0), which direction will water move?',
             options: [
-              'Out of the cell (cell has higher water potential)',
-              'Into the cell (pure water has higher water potential than the cell)',
-              'No movement (they are equal)',
-              'It depends on temperature only'
+              'Out of the cell, since the cell has the higher water potential',
+              'Into the cell, since pure water has the higher water potential',
+              'Neither way, since the two water potentials are already equal',
+              'Out of the cell, since its pressure potential pushes water outward'
             ],
             correctAnswer: 1,
             explanation: 'The cell has a water potential of -0.5 MPa. Pure water has a water potential of 0. Water moves from high (0) to low (-0.5), so water enters the cell. This will continue until turgor pressure increases enough to equalize the water potentials.'
@@ -199,10 +199,10 @@ Where:
           {
             question: 'A red blood cell is placed in a solution of 10% NaCl. What will happen?',
             options: [
-              'The cell will swell and lyse',
-              'The cell will crenate (shrink) because the solution is hypertonic, drawing water out by osmosis',
-              'Nothing will happen',
-              'The cell will become turgid'
+              'It will swell and lyse as water moves in from the salt solution',
+              'It will shrivel as water leaves by osmosis into the hypertonic solution',
+              'It will keep its shape, since neither salt nor water can cross',
+              'It will become turgid as salt and water both enter it by diffusion'
             ],
             correctAnswer: 1,
             explanation: '10% NaCl is highly hypertonic compared to the ~0.9% NaCl of blood plasma. Water will leave the red blood cell by osmosis, causing it to shrivel and crenate.'
@@ -210,10 +210,10 @@ Where:
           {
             question: 'For a turgid plant cell, the pressure potential is positive and opposes further water entry. At full turgor, what is the relationship between water potential of the cell and its surroundings?',
             options: [
-              'Cell water potential is lower than surroundings',
-              'Cell water potential equals the water potential of the surroundings — no net water movement',
-              'Cell water potential is higher than surroundings',
-              'Pressure potential equals zero'
+              'Cell water potential is lower than that of its surroundings',
+              'Cell water potential equals that of its surroundings',
+              'Cell water potential is higher than that of its surroundings',
+              'Pressure potential has fallen back to zero inside the cell'
             ],
             correctAnswer: 1,
             explanation: 'At full turgor, the positive pressure potential has increased the total water potential of the cell until it equals the water potential of the surrounding solution. At this point, no net water movement occurs — the system is at equilibrium.'

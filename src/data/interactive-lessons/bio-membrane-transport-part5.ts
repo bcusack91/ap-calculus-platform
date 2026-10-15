@@ -79,7 +79,7 @@ Endocytosis is the inward folding of the plasma membrane to form a vesicle that 
               'Pinocytosis',
               'Receptor-mediated endocytosis',
               'Phagocytosis',
-              'Exocytosis'
+              'Phagolysosome formation'
             ],
             correctAnswer: 2,
             explanation: 'Phagocytosis ("cell eating") involves the extension of pseudopods to surround and engulf large particles (like bacteria). The resulting vesicle is called a phagosome, which fuses with a lysosome for digestion.'
@@ -87,10 +87,10 @@ Endocytosis is the inward folding of the plasma membrane to form a vesicle that 
           {
             question: 'Why is receptor-mediated endocytosis more efficient than pinocytosis for taking up specific molecules like cholesterol?',
             options: [
-              'It uses more ATP',
-              'Receptors concentrate specific molecules in clathrin-coated pits before internalization, enabling selective and efficient uptake even at low extracellular concentrations',
-              'Pinocytosis cannot take in molecules at all',
-              'Receptor-mediated endocytosis does not require membrane invagination'
+              'It spends more ATP per vesicle, so each vesicle swallows more fluid',
+              'Receptors gather the target molecules before the membrane folds in',
+              'Pinocytosis cannot take in any dissolved molecules from outside the cell',
+              'It skips membrane folding, so receptors pass molecules straight into the cytoplasm'
             ],
             correctAnswer: 1,
             explanation: 'Receptor-mediated endocytosis is specific — receptors bind particular ligands and cluster them in coated pits. This concentrating effect allows cells to take up specific molecules efficiently, even when their external concentration is very low. Pinocytosis is non-specific and takes in whatever is dissolved in the fluid.'
@@ -192,10 +192,10 @@ Endocytosis is the inward folding of the plasma membrane to form a vesicle that 
           {
             question: 'A cell is actively performing endocytosis. Over time, what would happen to the plasma membrane if exocytosis did not also occur?',
             options: [
-              'The membrane would grow larger and larger',
-              'The plasma membrane surface area would decrease as membrane is internalized, potentially compromising cell function',
-              'Nothing — membrane is continuously synthesized at the same rate',
-              'The cell would divide to compensate'
+              'The plasma membrane would keep growing as vesicles add to it',
+              'The plasma membrane would shrink as pieces of it are pulled inward',
+              'Nothing would change, since new membrane is made at the same rate',
+              'The plasma membrane would be restored when the cell divides'
             ],
             correctAnswer: 1,
             explanation: 'Each endocytic event removes a portion of the plasma membrane to form a vesicle. Without compensating exocytosis (which adds membrane back), the plasma membrane would shrink. In healthy cells, these processes are balanced to maintain constant membrane area.'

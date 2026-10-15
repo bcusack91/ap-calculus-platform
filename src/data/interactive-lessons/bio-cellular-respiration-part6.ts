@@ -43,10 +43,10 @@ A student uses a **respirometer** to measure the rate of cellular respiration in
           {
             question: 'Why do germinating seeds consume more O2 than non-germinating seeds?',
             options: [
-              'Germinating seeds are photosynthesizing',
-              'Germinating seeds have higher metabolic rates — they are actively growing, dividing, and building new structures, requiring more ATP and therefore more aerobic respiration',
-              'Non-germinating seeds do not contain mitochondria',
-              'Germinating seeds produce more CO2, which displaces O2'
+              'Germinating seeds are photosynthesizing and need O2 to do it',
+              'Growing seeds use more ATP, so they respire faster',
+              'Non-germinating seeds have no mitochondria in their cells',
+              'Germinating seeds release CO2, which pushes O2 into them'
             ],
             correctAnswer: 1,
             explanation: 'Germinating seeds are metabolically active — mobilizing stored energy, synthesizing new proteins, and undergoing cell division. This requires much more ATP, which drives increased aerobic respiration and O2 consumption.'
@@ -54,9 +54,9 @@ A student uses a **respirometer** to measure the rate of cellular respiration in
           {
             question: 'Why does increasing temperature from 10 °C to 25 °C increase O2 consumption?',
             options: [
-              'Higher temperature creates more O2 through thermal decomposition of water',
-              'Higher temperature increases the kinetic energy of molecules, increasing the rate of enzyme-catalyzed metabolic reactions',
-              'Higher temperature decreases enzyme affinity, causing more O2 to bind',
+              'Higher temperature splits water and releases extra O2 to consume',
+              'It raises kinetic energy, speeding up the enzyme reactions of respiration',
+              'Higher temperature lowers enzyme affinity, so more O2 binds',
               'Higher temperature expands the gas, making more O2 available'
             ],
             correctAnswer: 1,
@@ -65,9 +65,9 @@ A student uses a **respirometer** to measure the rate of cellular respiration in
           {
             question: 'Why is KOH included in the respirometer?',
             options: [
-              'To provide additional O2 for respiration',
-              'To absorb CO2 so that the only gas change measured is O2 consumption',
-              'To prevent fermentation',
+              'To release extra O2 so the seeds never run short during the run',
+              'To absorb CO2 so only O2 uptake changes the gas volume',
+              'To keep the seeds from switching to fermentation',
               'To neutralize the acids produced by respiration'
             ],
             correctAnswer: 1,
@@ -103,10 +103,10 @@ A researcher treats four groups of cells with different metabolic poisons and me
           {
             question: 'Oligomycin blocks the proton channel of ATP synthase. Why does the ETC eventually slow down when oligomycin is added?',
             options: [
-              'The ETC enzymes are directly inhibited by oligomycin',
-              'Without proton flow through ATP synthase, the gradient becomes so large that Complexes I, III, and IV cannot pump more protons against it',
-              'Oligomycin destroys the inner mitochondrial membrane',
-              'NADH is depleted'
+              'The chain\'s proteins are directly inhibited by oligomycin as well',
+              'Protons pile up until the chain can no longer pump against them',
+              'Oligomycin destroys the inner membrane, so no proton gradient can form',
+              'NADH runs out quickly, so no new electrons can enter the chain at all'
             ],
             correctAnswer: 1,
             explanation: 'Oligomycin blocks the only significant route for protons to return to the matrix. The gradient builds up until the back-pressure (electrochemical force opposing further pumping) equals the energy available from electron transfer, at which point the complexes can no longer pump protons and the chain stalls.'
@@ -114,10 +114,10 @@ A researcher treats four groups of cells with different metabolic poisons and me
           {
             question: 'DNP (an uncoupler) causes cells to consume oxygen at an accelerated rate and generate excessive heat. Why?',
             options: [
-              'DNP activates Complex IV to work faster',
-              'Without the proton gradient to restrain the chain, electron flow and O2 consumption increase; but since protons bypass ATP synthase, the energy is released as heat instead of being captured as ATP',
-              'DNP converts ATP directly into heat',
-              'DNP stimulates glycolysis and fermentation simultaneously'
+              'DNP activates the final carrier of the chain so it binds O2 faster',
+              'Electron flow speeds up and the energy is lost as heat rather than ATP',
+              'DNP breaks down stored ATP directly, and that breakdown releases heat',
+              'DNP stimulates glycolysis and fermentation, which both use O2 and give off heat'
             ],
             correctAnswer: 1,
             explanation: 'Normally, the proton gradient acts as back-pressure on the ETC. DNP dissipates this gradient by allowing protons to leak freely. Without back-pressure, the ETC runs unrestricted, consuming O2 rapidly. Since protons bypass ATP synthase, the free energy is released as thermal energy (heat) rather than driving ATP synthesis.'
@@ -160,10 +160,10 @@ Complete the ATP accounting table for the aerobic oxidation of one glucose molec
           {
             question: 'Why is the total ATP yield from glucose oxidation described as an approximation (30-32) rather than an exact number?',
             options: [
-              'Because some ATP is immediately used by the cell',
-              'Because the number of protons needed per ATP and the shuttle used for cytoplasmic NADH both introduce variability',
-              'Because cells always perform fermentation simultaneously',
-              'Because some glucose molecules are only partially oxidized'
+              'Because some of the ATP is used up by the cell as soon as it is made',
+              'Because protons per ATP and the NADH shuttle used can both vary',
+              'Because cells always run fermentation alongside aerobic respiration',
+              'Because some glucose molecules are only partly oxidized to pyruvate'
             ],
             correctAnswer: 1,
             explanation: 'Two factors create variability: (1) the H+/ATP ratio may not be exactly 4:1, and (2) cytoplasmic NADH from glycolysis must be transported into mitochondria via shuttle systems — the malate-aspartate shuttle preserves 2.5 ATP/NADH while the glycerol-3-phosphate shuttle yields only 1.5 ATP/NADH.'
@@ -171,9 +171,9 @@ Complete the ATP accounting table for the aerobic oxidation of one glucose molec
           {
             question: 'Approximately what percentage of the ATP from aerobic respiration comes from oxidative phosphorylation?',
             options: [
-              'About 10%',
-              'About 50%',
-              'About 75%',
+              'About 10-15%',
+              'About 45-50%',
+              'About 70-75%',
               'About 85-90%'
             ],
             correctAnswer: 3,
@@ -216,10 +216,10 @@ Complete the ATP accounting table for the aerobic oxidation of one glucose molec
           {
             question: 'A student compares ATP production in muscle cells under aerobic and anaerobic conditions. Which statement is correct?',
             options: [
-              'Anaerobic conditions produce the same amount of ATP as aerobic conditions, just more slowly',
-              'Aerobic conditions produce approximately 15 times more ATP per glucose than anaerobic conditions',
-              'Anaerobic conditions produce more ATP because fermentation is more efficient',
-              'Both conditions produce exactly 36 ATP per glucose'
+              'Anaerobic conditions yield the same ATP as aerobic ones, only more slowly',
+              'Aerobic conditions yield roughly 15 times more ATP per glucose',
+              'Anaerobic conditions yield more ATP, since fermentation is more efficient',
+              'Both conditions yield exactly 36 ATP per glucose molecule'
             ],
             correctAnswer: 1,
             explanation: 'Aerobic respiration produces ~30-32 ATP per glucose, while anaerobic glycolysis + fermentation produces only 2 ATP per glucose (net from glycolysis). That is approximately a 15:1 ratio, demonstrating the dramatic efficiency advantage of aerobic respiration.'

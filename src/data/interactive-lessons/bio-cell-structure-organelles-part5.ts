@@ -70,10 +70,10 @@ The cristae dramatically increase the **surface area** of the inner membrane. Mo
           {
             question: 'The inner membrane of the mitochondrion is folded into cristae. This structural feature is significant because it:',
             options: [
-              'Stores more mitochondrial DNA',
+              'Stores extra copies of mitochondrial DNA within each fold of membrane',
               'Increases surface area for the electron transport chain and ATP synthase',
-              'Prevents oxygen from entering the matrix',
-              'Allows the mitochondrion to divide by mitosis'
+              'Prevents oxygen from entering the matrix, where it would damage enzymes',
+              'Allows the mitochondrion to divide by mitosis along with the cell'
             ],
             correctAnswer: 1,
             explanation: 'Cristae increase the inner membrane surface area, providing more space for ETC proteins and ATP synthase. Cells with high energy demands (like cardiac muscle) have mitochondria with densely packed cristae.'
@@ -81,10 +81,10 @@ The cristae dramatically increase the **surface area** of the inner membrane. Mo
           {
             question: 'Mitochondrial DNA is inherited exclusively from the mother. This is because:',
             options: [
-              'Only egg cells contain mitochondria',
+              'Only egg cells contain mitochondria, while sperm lack them',
               'Sperm mitochondria are destroyed after fertilization',
-              'Fathers do not have mitochondria',
-              'Mitochondrial DNA is located in the nucleus'
+              'Fathers\' mitochondria cannot pass through the egg membrane',
+              'Mitochondrial DNA is stored in the nucleus of the egg'
             ],
             correctAnswer: 1,
             explanation: 'Both sperm and egg cells contain mitochondria, but sperm mitochondria (located in the midpiece) are tagged for destruction after fertilization. The resulting embryo inherits all its mitochondria from the egg cell.'
@@ -148,10 +148,10 @@ Chloroplasts capture light energy and convert it into chemical energy through **
           {
             question: 'Which observation provides the STRONGEST evidence for the endosymbiotic origin of mitochondria?',
             options: [
-              'Mitochondria are found in all eukaryotic cells',
+              'Mitochondria are found in all eukaryotic cells, tissues, and organs',
               'Mitochondria have a double membrane, circular DNA, and 70S ribosomes',
-              'Mitochondria produce ATP',
-              'Mitochondria are larger than ribosomes'
+              'Mitochondria produce ATP, use oxygen, and release carbon dioxide',
+              'Mitochondria are larger than ribosomes, nuclei, and lysosomes'
             ],
             correctAnswer: 1,
             explanation: 'The combination of double membrane, circular DNA, and 70S ribosomes closely matches features of free-living bacteria. Together they provide compelling evidence for endosymbiotic origin.'
@@ -212,7 +212,7 @@ The cytoskeleton is a network of protein fibers that provides structural support
           },
           {
             label: 'The cleavage furrow during animal cell cytokinesis is formed by',
-            options: ['Microtubules', 'Microfilaments (actin)', 'Intermediate filaments', 'Cilia']
+            options: ['Microtubules', 'Actin microfilaments', 'Intermediate filaments', 'Cilia']
           },
           {
             label: 'According to endosymbiotic theory, chloroplasts evolved from ancient',
@@ -223,7 +223,7 @@ The cytoskeleton is a network of protein fibers that provides structural support
             options: ['Outer membrane', 'Inner membrane', 'Nuclear envelope', 'Plasma membrane']
           }
         ],
-        correctAnswers: ['Stroma', 'Microfilaments (actin)', 'Cyanobacteria', 'Inner membrane'],
+        correctAnswers: ['Stroma', 'Actin microfilaments', 'Cyanobacteria', 'Inner membrane'],
         hint1: 'The stroma is the fluid-filled space outside the thylakoids.',
         hint2: 'The cleavage furrow is a contractile ring made of actin and myosin.',
         hint3: 'Cyanobacteria are photosynthetic prokaryotes — the ancestors of chloroplasts.',
@@ -260,7 +260,7 @@ Enter the correct term for each description.
             options: [
               'Protein synthesis on ribosomes',
               'ATP production in mitochondria',
-              'Cell division (mitosis)',
+              'Cell division by mitosis',
               'Photosynthesis in chloroplasts'
             ],
             correctAnswer: 2,
@@ -269,10 +269,10 @@ Enter the correct term for each description.
           {
             question: 'A plant cell in the light performs both photosynthesis and cellular respiration. The oxygen produced by the chloroplast is:',
             options: [
-              'Immediately released from the cell and never used',
+              'Released from the cell immediately and never used in cellular respiration',
               'Used by mitochondria for cellular respiration within the same cell',
-              'Converted back into carbon dioxide by the chloroplast',
-              'Stored in the central vacuole for later use'
+              'Converted back into carbon dioxide by the chloroplast\'s Calvin cycle',
+              'Stored in the central vacuole until cellular respiration needs it at night'
             ],
             correctAnswer: 1,
             explanation: 'In illuminated plant cells, $O_{2}$ produced by the light reactions in chloroplasts can be used directly by mitochondria for cellular respiration. Similarly, $CO_{2}$ released by mitochondria can be fixed by the Calvin cycle.'

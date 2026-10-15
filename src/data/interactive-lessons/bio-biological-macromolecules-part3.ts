@@ -45,7 +45,7 @@ Four fused carbon rings (e.g., cholesterol, estrogen, testosterone). Cholesterol
             options: [
               'Two identical fatty acid tails',
               'A hydrophilic head and hydrophobic tails',
-              'Only polar components',
+              'A hydrophobic head and polar tails',
               'Only nonpolar components'
             ],
             correctAnswer: 1,
@@ -81,10 +81,10 @@ Four fused carbon rings (e.g., cholesterol, estrogen, testosterone). Cholesterol
           {
             question: 'Fats store more energy per gram than carbohydrates because:',
             options: [
-              'Fats are larger molecules',
+              'Fats are larger molecules, so each one weighs more',
               'Fats have more C-H bonds to oxidize',
-              'Fats dissolve in water',
-              'Fats are polymers'
+              'Fats dissolve in water and enter cells faster',
+              'Fats are polymers built from many glucose units'
             ],
             correctAnswer: 1,
             explanation: 'Fats have many C-H bonds that can be oxidized to release energy. They yield ~9 kcal/g compared to ~4 kcal/g for carbohydrates.'

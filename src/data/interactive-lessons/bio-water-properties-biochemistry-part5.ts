@@ -35,9 +35,9 @@ Unlike most substances, water is **less dense as a solid** than as a liquid.
           {
             question: 'Why does ice float on liquid water?',
             options: [
-              'Ice has more hydrogen bonds per molecule',
+              'Ice molecules pack more tightly than liquid ones',
               'The hydrogen bond lattice in ice is more spread out',
-              'Ice molecules move faster',
+              'Ice molecules move faster and push apart',
               'Liquid water has more dissolved gases'
             ],
             correctAnswer: 1,
@@ -76,9 +76,9 @@ All of these properties trace back to one feature: **hydrogen bonding** between 
             question: 'If ice sank instead of floating, what would happen?',
             options: [
               'Lakes would freeze from the bottom up, killing aquatic life',
-              'Water would become more acidic',
-              'Evaporation would increase dramatically',
-              'Surface tension would disappear'
+              'Lake water would become more acidic as ice dissolved carbon dioxide',
+              'Evaporation from lakes would increase, drying them out each winter',
+              'Surface tension would disappear, so insects could not stand on lakes'
             ],
             correctAnswer: 0,
             explanation: 'If ice were denser than liquid water, it would sink to the bottom. Lakes would freeze solid from the bottom up, making aquatic life impossible in cold climates.'

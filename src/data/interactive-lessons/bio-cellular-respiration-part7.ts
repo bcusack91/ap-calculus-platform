@@ -38,23 +38,23 @@ $$\\text{C}_6\\text{H}_{12}\\text{O}_6 + 6\\text{O}_2 + \\sim30\\text{ADP} + \\s
       exercise: {
         questions: [
           {
-            question: 'A researcher uses radioactively labeled oxygen (18-O) in the glucose molecules fed to cells. In which product will the 18-O label appear?',
+            question: 'A researcher feeds cells glucose labeled with a heavy isotope of oxygen (18-O). In which product will the 18-O label appear?',
             options: [
               'H2O only',
               'CO2 only',
               'Both CO2 and H2O',
-              'Neither — the oxygen in glucose is not released as O2'
+              'Both O2 and ATP'
             ],
             correctAnswer: 2,
-            explanation: 'The oxygen atoms from glucose (C6H12O6) end up in both CO2 (during decarboxylation reactions) and H2O (during various dehydration and hydrolysis reactions). If the 18-O were in the O2 breathed in, it would appear primarily in H2O (formed at Complex IV).'
+            explanation: 'The oxygen atoms from glucose (C6H12O6) end up mostly in CO2, released during the decarboxylation steps, and some end up in H2O removed from intermediates during glycolysis. If the 18-O were in the O2 breathed in instead, it would appear in the H2O formed at the end of the electron transport chain.'
           },
           {
             question: 'Brown adipose tissue in hibernating mammals contains high concentrations of a protein called thermogenin (UCP1). This protein creates a proton channel in the inner mitochondrial membrane that bypasses ATP synthase. What is the physiological purpose of thermogenin?',
             options: [
-              'To increase ATP production during hibernation',
-              'To generate heat by dissipating the proton gradient without producing ATP (non-shivering thermogenesis)',
-              'To store excess protons for later use',
-              'To block the electron transport chain during sleep'
+              'To boost ATP production so the animal can fuel shivering',
+              'To release the gradient\'s energy as heat instead of ATP',
+              'To store excess protons for use when the animal wakes up',
+              'To block the electron transport chain while the animal sleeps'
             ],
             correctAnswer: 1,
             explanation: 'Thermogenin (UCP1) uncouples electron transport from ATP synthesis — similar to DNP. Protons flow through thermogenin instead of ATP synthase, and the energy of the gradient is released as heat. This "non-shivering thermogenesis" helps hibernating animals maintain body temperature.'
@@ -82,37 +82,37 @@ $$\\text{C}_6\\text{H}_{12}\\text{O}_6 + 6\\text{O}_2 + \\sim30\\text{ADP} + \\s
       exercise: {
         questions: [
           {
-            question: 'The antibiotic antimycin A blocks electron flow between Complex III and cytochrome c. Which of the following would you observe in cells treated with antimycin A?',
+            question: 'A drug blocks electron flow partway along the electron transport chain. Which of the following would you observe in treated cells?',
             options: [
-              'Increased ATP production from chemiosmosis',
-              'Accumulation of reduced ubiquinone (QH2) and decreased O2 consumption',
-              'Increased NADH oxidation at Complex I',
-              'Accelerated citric acid cycle activity'
+              'More ATP made by chemiosmosis as electrons pile up behind the block',
+              'Carriers before the block stay reduced, and O2 use drops',
+              'Faster oxidation of NADH at the start of the chain',
+              'A faster citric acid cycle to make up for lost ATP'
             ],
             correctAnswer: 1,
-            explanation: 'Blocking electron flow at Complex III causes electrons to back up. Reduced ubiquinone (QH2) accumulates because it cannot donate electrons to Complex III. No electrons reach Complex IV, so O2 consumption drops. NADH accumulates (cannot be oxidized), slowing the citric acid cycle.'
+            explanation: 'Blocking the chain partway makes electrons back up: carriers before the block stay reduced because they cannot pass electrons on, and no electrons reach oxygen, so O2 consumption drops. NADH cannot be reoxidized, so it accumulates and the citric acid cycle slows.'
           },
           {
             question: 'Skeletal muscle cells can function under both aerobic and anaerobic conditions. During a sprint, lactate levels in the blood rise. Once the sprint ends and oxygen becomes available again, what happens to the accumulated lactate?',
             options: [
-              'It is excreted as waste and cannot be reused',
-              'It is converted back to pyruvate (primarily in the liver) and either oxidized via aerobic respiration or used to synthesize glucose (gluconeogenesis)',
-              'It is directly converted to ATP in the muscle cells',
-              'It is converted to ethanol and exhaled'
+              'It is excreted in urine and sweat as waste that cannot be reused',
+              'It is turned back into pyruvate in the liver and oxidized or made into glucose',
+              'It is converted directly into ATP inside the muscle cells that made it',
+              'It is converted into ethanol by the liver and exhaled'
             ],
             correctAnswer: 1,
             explanation: 'Lactate is transported to the liver via the blood (the Cori cycle). There, lactate dehydrogenase converts lactate back to pyruvate. The pyruvate can be oxidized aerobically or used in gluconeogenesis to regenerate glucose, which can return to the muscles.'
           },
           {
-            question: 'A mutation in the gene encoding cytochrome c oxidase (Complex IV) reduces its activity by 50%. How would this affect the cell?',
+            question: 'A mutation cuts by 50% the activity of the protein that passes electrons to oxygen at the end of the electron transport chain. How would this affect the cell?',
             options: [
               'Glycolysis would become twice as efficient to compensate',
-              'The proton gradient would be partially reduced, leading to decreased ATP production and potential increase in anaerobic metabolism',
-              'The citric acid cycle would speed up to compensate',
-              'FADH2 production would increase to bypass Complex IV'
+              'ATP output would fall and the cell would lean more on fermentation',
+              'The citric acid cycle would speed up to make up the difference',
+              'FADH2 production would rise to bypass the damaged final protein'
             ],
             correctAnswer: 1,
-            explanation: 'Reduced Complex IV activity means fewer electrons can be passed to O2, slowing the entire ETC. Less proton pumping leads to a weaker gradient and less ATP from chemiosmosis. The cell may upregulate glycolysis and fermentation to partially compensate for the ATP deficit.'
+            explanation: 'With the final protein of the chain working at half speed, fewer electrons reach O2 and the whole chain slows. Less proton pumping means a weaker gradient and less ATP from chemiosmosis, so the cell may rely more on glycolysis and fermentation to partly make up the deficit.'
           }
         ]
       }
@@ -193,10 +193,10 @@ $$\\text{C}_6\\text{H}_{12}\\text{O}_6 + 6\\text{O}_2 + \\sim30\\text{ADP} + \\s
           {
             question: 'Which of the following best explains why organisms that perform aerobic respiration have a significant evolutionary advantage over obligate anaerobes in oxygen-rich environments?',
             options: [
-              'Aerobic organisms can absorb more nutrients',
-              'Aerobic respiration extracts approximately 15 times more ATP per glucose, allowing more energy for growth, reproduction, and competition',
-              'Obligate anaerobes cannot perform glycolysis',
-              'Aerobic organisms do not need glucose'
+              'Aerobic respiration lets organisms absorb more nutrients through membranes',
+              'Aerobic respiration yields about 15 times more ATP per glucose',
+              'Obligate anaerobes cannot perform glycolysis, so they cannot make ATP',
+              'Aerobic respiration does not need glucose at all to make ATP'
             ],
             correctAnswer: 1,
             explanation: 'Aerobic respiration produces ~30-32 ATP per glucose vs. 2 ATP from glycolysis/fermentation — roughly 15 times more. This enormous energy advantage allows aerobic organisms to support larger body sizes, more complex tissues, and higher metabolic rates.'
@@ -210,7 +210,7 @@ $$\\text{C}_6\\text{H}_{12}\\text{O}_6 + 6\\text{O}_2 + \\sim30\\text{ADP} + \\s
               '2, 1, 4, 3'
             ],
             correctAnswer: 1,
-            explanation: 'Without O2, Complex IV cannot pass electrons to the final acceptor, so the ETC stops first (1). NADH cannot be reoxidized, so it accumulates (2). Without NAD+, the dehydrogenase reactions of the citric acid cycle cannot proceed, so the cycle slows (3). The cell switches to fermentation to regenerate NAD+ and sustain glycolysis (4).'
+            explanation: 'Without O2, the end of the chain cannot pass electrons to the final acceptor, so the ETC stops first (1). NADH cannot be reoxidized, so it accumulates (2). Without NAD+, the dehydrogenase reactions of the citric acid cycle cannot proceed, so the cycle slows (3). The cell switches to fermentation to regenerate NAD+ and sustain glycolysis (4).'
           }
         ]
       }

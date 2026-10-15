@@ -35,7 +35,7 @@ export const bioMacromoleculesPart6Data = {
               'Triglyceride',
               'Phospholipid',
               'Steroid',
-              'Wax'
+              'Phosphoprotein'
             ],
             correctAnswer: 1,
             explanation: 'Phospholipids have glycerol + 2 fatty acids + phosphate group. Triglycerides have glycerol + 3 fatty acids.'
@@ -43,10 +43,10 @@ export const bioMacromoleculesPart6Data = {
           {
             question: 'Which macromolecule would be most affected by a change in pH?',
             options: [
-              'Starch',
-              'DNA',
+              'A starch granule',
+              'A DNA double helix',
               'A protein enzyme',
-              'Triglyceride'
+              'A triglyceride'
             ],
             correctAnswer: 2,
             explanation: 'Proteins (especially enzymes) are highly sensitive to pH changes because pH affects the charges on R groups, disrupting ionic bonds and hydrogen bonds that maintain 3D structure.'
@@ -82,9 +82,9 @@ An unknown sample contains C, H, O, N, and S. Which macromolecule is it most lik
           {
             question: 'Cellulose and starch are both made of glucose but have different properties because:',
             options: [
-              'They contain different elements',
+              'They contain different elements in their rings',
               'They have different glycosidic linkages',
-              'Cellulose has more branches',
+              'Cellulose has more branches than starch does',
               'Starch contains fructose'
             ],
             correctAnswer: 1,

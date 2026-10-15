@@ -170,7 +170,7 @@ export const bioCellCompartmentPart4Data = {
           {
             question: 'In vesicle trafficking between ER and Golgi, the observed pattern is: difference in proton concentration across a membrane. What term should anchor the explanation?',
             options: [
-              'ER lumen',
+              'proton pump',
               'signal peptide',
               'proton gradient',
               'vesicle budding'

@@ -99,7 +99,7 @@ Note: Lipids are **not true polymers** — they don't form by linking identical 
             options: ['nucleotide', 'amino acid', 'monosaccharide', 'fatty acid']
           },
           {
-            label: 'The element unique to nucleic acids is ___',
+            label: 'The element in the phosphate group of every nucleotide is ___',
             options: ['sulfur', 'nitrogen', 'phosphorus', 'iron']
           }
         ],

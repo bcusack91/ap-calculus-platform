@@ -47,13 +47,13 @@ export const bioCellCompartmentPart2Data = {
           {
             question: 'In this part\'s context, what is the strongest definition of Golgi apparatus?',
             options: [
-              'modifies, sorts, and packages proteins and lipids',
+              'modifies and sorts proteins and lipids, then packages them',
               'short amino acid sequence directing protein destination',
               'internal ER space where folding and processing occur',
               'contains hydrolytic enzymes for intracellular digestion'
             ],
             correctAnswer: 0,
-            explanation: 'Golgi apparatus is best matched with: modifies, sorts, and packages proteins and lipids.'
+            explanation: 'Golgi apparatus is best matched with: modifies and sorts proteins and lipids, then packages them.'
           }
         ]
       }

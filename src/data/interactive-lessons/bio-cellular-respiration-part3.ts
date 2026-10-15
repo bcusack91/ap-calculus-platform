@@ -63,9 +63,9 @@ The CO$_2$ released here (and in the subsequent citric acid cycle) is ultimately
           {
             question: 'What are the three products of pyruvate oxidation (per pyruvate molecule)?',
             options: [
-              'ATP, FADH2, and CO2',
+              'Acetyl-CoA, ATP, and O2',
               'Acetyl-CoA, NADH, and CO2',
-              'Glucose, NAD+, and O2',
+              'Acetyl-CoA, FAD, and O2',
               'Lactate, ATP, and NADH'
             ],
             correctAnswer: 1,
@@ -74,9 +74,9 @@ The CO$_2$ released here (and in the subsequent citric acid cycle) is ultimately
           {
             question: 'The pyruvate dehydrogenase complex performs an "oxidative decarboxylation." What does this term mean?',
             options: [
-              'Oxygen is added to the molecule and a phosphate group is removed',
-              'A carboxyl group is removed (as CO2) and the molecule is oxidized (electrons are removed)',
-              'Water is added to remove a carbon group',
+              'Oxygen is added to the molecule and a phosphate is removed',
+              'A carboxyl group leaves as CO2 and the molecule loses electrons',
+              'Water is added to split off a carbon group from the molecule',
               'The molecule gains electrons and gains a carboxyl group'
             ],
             correctAnswer: 1,
@@ -153,10 +153,10 @@ $$\\text{Acetaldehyde} + \\text{NADH} \\longrightarrow \\text{Ethanol} + \\text{
           {
             question: 'What is the primary purpose of fermentation?',
             options: [
-              'To produce large amounts of ATP',
+              'To produce large amounts of ATP without oxygen',
               'To regenerate NAD+ so glycolysis can continue',
-              'To convert glucose into amino acids',
-              'To produce oxygen for the cell'
+              'To convert pyruvate into amino acids for growth',
+              'To produce oxygen for the electron transport chain'
             ],
             correctAnswer: 1,
             explanation: 'Fermentation regenerates NAD+ from NADH by transferring electrons to pyruvate (or its derivative). This allows glycolysis to continue producing 2 ATP per glucose even without oxygen.'
@@ -226,10 +226,10 @@ $$\\text{Acetaldehyde} + \\text{NADH} \\longrightarrow \\text{Ethanol} + \\text{
           {
             question: 'A researcher adds a chemical that blocks pyruvate translocase. What will happen in the cell?',
             options: [
-              'Glycolysis will stop immediately',
-              'Pyruvate will accumulate in the cytoplasm and the cell may switch to fermentation',
-              'The citric acid cycle will speed up to compensate',
-              'ATP production will increase through substrate-level phosphorylation'
+              'Glycolysis will stop at once because pyruvate cannot be made',
+              'Pyruvate will pile up in the cytosol, favoring fermentation',
+              'The citric acid cycle will speed up to compensate for the loss',
+              'ATP production will rise through substrate-level phosphorylation'
             ],
             correctAnswer: 1,
             explanation: 'Blocking pyruvate translocase prevents pyruvate from entering the mitochondria. Pyruvate accumulates in the cytoplasm. The cell may switch to fermentation to regenerate NAD+ and continue glycolysis, but total ATP output drops dramatically.'

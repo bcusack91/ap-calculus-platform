@@ -38,10 +38,10 @@ export const bioEnzymesPart4Data = {
           {
             question: 'A competitive inhibitor can be overcome by:',
             options: [
-              'Lowering temperature',
+              'Lowering the temperature of the reaction mixture',
               'Increasing substrate concentration',
-              'Adding more inhibitor',
-              'Changing pH'
+              'Raising the pH well above the enzyme\'s optimum',
+              'Removing the enzyme\'s cofactor from the solution'
             ],
             correctAnswer: 1,
             explanation: 'Competitive inhibitors compete with substrate for the active site. Adding more substrate outcompetes the inhibitor.'
@@ -86,8 +86,8 @@ This is a form of **negative feedback** that prevents overproduction.
             options: [
               'The last enzyme in the pathway',
               'The first enzyme in the pathway',
-              'All enzymes equally',
-              'No specific enzyme'
+              'Every enzyme in the pathway equally',
+              'An enzyme in an unrelated pathway'
             ],
             correctAnswer: 1,
             explanation: 'Feedback inhibition targets an early (often the first) enzyme in the pathway. This efficiently shuts down the entire pathway when the end product accumulates.'

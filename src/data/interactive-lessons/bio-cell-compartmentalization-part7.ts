@@ -38,7 +38,7 @@ export const bioCellCompartmentPart7Data = {
             options: [
               'difference in proton concentration across a membrane',
               'origin model where mitochondria and chloroplasts derive from bacteria',
-              'delivery of molecules to correct intracellular compartment',
+              'membrane protein that pumps protons into a compartment',
               'separates cellular processes into distinct membrane-bound regions'
             ],
             correctAnswer: 0,
@@ -170,7 +170,7 @@ export const bioCellCompartmentPart7Data = {
           {
             question: 'In cross-unit synthesis on compartment logic, the observed pattern is: separates cellular processes into distinct membrane-bound regions. What term should anchor the explanation?',
             options: [
-              'endosymbiosis',
+              'compartment-specific pH',
               'compartmentalization',
               'organelle targeting',
               'proton gradient'

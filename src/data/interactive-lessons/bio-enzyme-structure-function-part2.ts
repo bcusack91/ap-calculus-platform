@@ -41,8 +41,8 @@ $K_m$ is a measure of enzyme-substrate affinity:
             options: [
               'Low enzyme-substrate affinity',
               'High enzyme-substrate affinity',
-              'The enzyme works slowly',
-              'The reaction is endergonic'
+              'The enzyme has a slow maximum rate',
+              'The reaction is strongly endergonic'
             ],
             correctAnswer: 1,
             explanation: '$K_m$ is the substrate concentration needed to reach half of $V_{max}$. A low $K_m$ means less substrate is needed, indicating high affinity.'

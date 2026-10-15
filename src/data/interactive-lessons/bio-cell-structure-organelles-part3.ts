@@ -71,10 +71,10 @@ Nuclear pores are not simple holes — they are **selective gates**:
           {
             question: 'The nucleolus is the site of:',
             options: [
-              'DNA replication',
-              'mRNA splicing',
+              'DNA replication and chromosome condensation',
+              'mRNA splicing and nuclear export of mRNA',
               'Ribosomal RNA synthesis and ribosome subunit assembly',
-              'Protein folding and modification'
+              'Protein folding and modification for secretion'
             ],
             correctAnswer: 2,
             explanation: 'The nucleolus is where rRNA genes are transcribed and ribosomal subunits are partially assembled. The subunits are then exported through nuclear pores to the cytoplasm, where they join during translation.'
@@ -82,10 +82,10 @@ Nuclear pores are not simple holes — they are **selective gates**:
           {
             question: 'Why is the separation of transcription and translation in eukaryotes biologically significant?',
             options: [
-              'It allows cells to make proteins faster',
-              'It enables RNA processing (capping, splicing, polyadenylation) before translation',
-              'It prevents ribosomes from entering the nucleus',
-              'It eliminates the need for mRNA'
+              'It lets cells translate proteins faster than prokaryotes can',
+              'It allows pre-mRNA to be processed before ribosomes translate it',
+              'It prevents ribosomes from entering the nucleus and copying DNA',
+              'It removes the need for mRNA, since ribosomes read DNA'
             ],
             correctAnswer: 1,
             explanation: 'The nuclear envelope creates a spatial separation that allows pre-mRNA to be processed (5-prime cap added, introns spliced out, poly-A tail added) before it reaches ribosomes. This is a major regulatory opportunity that prokaryotes lack.'
@@ -230,10 +230,10 @@ Enter the correct term for each description.
           {
             question: 'A mutation removes the signal peptide from a secretory protein. What is the most likely consequence?',
             options: [
-              'The protein will be synthesized in the nucleus',
-              'The protein will be translated on free ribosomes and remain in the cytoplasm',
-              'The protein will be sent directly to the Golgi',
-              'The cell will not be able to make the protein at all'
+              'It will be synthesized inside the nucleus and stay there',
+              'It will be made on free ribosomes and stay in the cytosol',
+              'It will bypass the rough ER and be sent straight to the Golgi',
+              'It will not be made at all, since translation requires the peptide'
             ],
             correctAnswer: 1,
             explanation: 'Without a signal peptide, the ribosome has no signal to dock at the rough ER. Translation will complete on a free ribosome, and the protein will remain in the cytoplasm instead of entering the secretory pathway.'
@@ -241,7 +241,7 @@ Enter the correct term for each description.
           {
             question: 'Which observation would provide evidence that a cell is specialized for secretion?',
             options: [
-              'Large central vacuole and many chloroplasts',
+              'A large central vacuole and many chloroplasts in the cytoplasm',
               'Extensive rough ER and prominent Golgi apparatus',
               'Many smooth ER tubules and few ribosomes',
               'Multiple nuclei and thick cell wall'

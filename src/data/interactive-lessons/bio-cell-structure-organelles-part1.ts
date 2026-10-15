@@ -94,9 +94,9 @@ Cell theory was established in the 1830s–1850s by **Schleiden**, **Schwann**, 
           {
             question: 'Robert Hooke observed cells in cork tissue and coined the term "cell." Why did he choose this word?',
             options: [
-              'The cells were moving like living organisms',
-              'The empty chambers reminded him of monastery rooms (cellae)',
-              'He could see the nucleus inside each cell',
+              'The chambers seemed to move and divide like living organisms',
+              'The empty chambers reminded him of the small rooms monks lived in',
+              'He could see a nucleus and cytoplasm inside each cork chamber',
               'The cork contained visible organelles'
             ],
             correctAnswer: 1,
@@ -181,7 +181,7 @@ As a cell gets **larger**:
             question: 'Intestinal epithelial cells have microvilli on their apical surface. This adaptation directly addresses which cellular constraint?',
             options: [
               'The need for more ribosomes to produce enzymes',
-              'The decreasing SA:V ratio as cells grow',
+              'The decreasing SA:V ratio as a cell grows',
               'The requirement for more mitochondria',
               'The need to store more DNA'
             ],
@@ -294,9 +294,9 @@ Enter the correct term for each description.
             question: 'A researcher discovers an organism in a deep-sea vent that carries out metabolic reactions and reproduces. Under a microscope, it appears to contain cytoplasm enclosed by a membrane. Which statement about this organism is most consistent with cell theory?',
             options: [
               'It must be a prokaryote because it lives in an extreme environment',
-              'It is composed of at least one cell since all living things are made of cells',
-              'It must contain a nucleus because all cells have nuclei',
-              'It arose spontaneously from minerals in the vent'
+              'It is made of at least one cell, as all living things are',
+              'It must contain a nucleus because all true cells have nuclei',
+              'It arose spontaneously from the minerals around the vent'
             ],
             correctAnswer: 1,
             explanation: 'Cell theory states all living things are made of one or more cells. Since this organism carries out metabolism, reproduces, and has membrane-enclosed cytoplasm, it is composed of at least one cell. It could be prokaryotic or eukaryotic — not all cells have nuclei (prokaryotes lack them). Spontaneous generation has been disproven.'

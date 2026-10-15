@@ -111,7 +111,7 @@ A student adds increasing amounts of substrate to an enzyme-catalyzed reaction. 
             options: ['increases', 'decreases', 'does not change', 'doubles']
           },
           {
-            label: 'Cyanide inhibits cytochrome c oxidase irreversibly. This type of inhibition ___ be overcome by adding more substrate',
+            label: 'An irreversible inhibitor permanently alters the enzyme. This type of inhibition ___ be overcome by adding more substrate',
             options: ['can', 'cannot', 'sometimes can', 'always can']
           }
         ],

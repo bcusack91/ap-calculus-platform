@@ -65,10 +65,10 @@ Each G3P molecule is oxidized and rearranged, producing ATP and NADH:
           {
             question: 'Why is the phosphofructokinase (PFK) reaction considered the "committed step" of glycolysis?',
             options: [
-              'It is the first reaction in the pathway',
-              'It produces the first ATP',
-              'It is irreversible and commits the sugar to being split — plus PFK is the primary allosteric regulatory enzyme',
-              'It is the only step that requires oxygen'
+              'It is the first reaction in the pathway, so every sugar passes through it',
+              'It produces the first ATP, which pays back the energy invested so far',
+              'It is an irreversible, regulated step that locks the sugar into being split',
+              'It is the only step of glycolysis that requires oxygen to proceed'
             ],
             correctAnswer: 2,
             explanation: 'PFK catalyzes an irreversible reaction and is allosterically regulated by ATP (inhibitor), AMP (activator), and citrate (inhibitor). Once fructose-1,6-bisphosphate is formed, the cell is committed to completing glycolysis.'
@@ -76,10 +76,10 @@ Each G3P molecule is oxidized and rearranged, producing ATP and NADH:
           {
             question: 'Glycolysis produces 4 ATP but has a net yield of only 2 ATP. Why?',
             options: [
-              '2 ATP are consumed by the electron transport chain',
-              '2 ATP are used during the energy investment phase to phosphorylate the sugar',
-              '2 ATP are broken down to produce NADH',
-              '2 ATP remain attached to pyruvate'
+              '2 ATP are consumed to carry pyruvate into the mitochondria',
+              '2 ATP are spent early on to phosphorylate the sugar',
+              '2 ATP are broken down to supply the energy to make NADH',
+              '2 ATP remain attached to pyruvate at the end of the pathway'
             ],
             correctAnswer: 1,
             explanation: 'Steps 1 and 3 each consume 1 ATP to phosphorylate the sugar (energy investment phase). Steps 7 and 10 each produce 2 ATP (one per G3P). Gross = 4 ATP, investment = 2 ATP, net = 2 ATP.'
@@ -88,9 +88,9 @@ Each G3P molecule is oxidized and rearranged, producing ATP and NADH:
             question: 'After step 4 of glycolysis (aldolase reaction), every subsequent reaction occurs twice per original glucose molecule. Why?',
             options: [
               'Two glucose molecules enter glycolysis simultaneously',
-              'The 6-carbon sugar is split into two 3-carbon molecules (G3P)',
-              'Each enzyme has two active sites',
-              'Isomerase duplicates the G3P molecule'
+              'The 6-carbon sugar is split into two 3-carbon molecules',
+              'Each glycolytic enzyme has two active sites that work together',
+              'An isomerase makes an extra copy of each 3-carbon molecule'
             ],
             correctAnswer: 1,
             explanation: 'Aldolase cleaves fructose-1,6-bisphosphate into glyceraldehyde-3-phosphate (G3P) and dihydroxyacetone phosphate (DHAP). DHAP is then converted to a second G3P. Each G3P proceeds through steps 6-10 independently.'
@@ -230,10 +230,10 @@ This is a classic example of **feedback inhibition** — the end product (ATP) i
           {
             question: 'If a mutation inactivated the enzyme aldolase, what would be the direct consequence?',
             options: [
-              'Glucose could not be phosphorylated',
-              'Fructose-1,6-bisphosphate could not be split into two 3-carbon molecules',
-              'Pyruvate could not be converted to acetyl-CoA',
-              'NAD+ could not be reduced to NADH'
+              'Glucose could not be phosphorylated at the start of glycolysis',
+              'The 6-carbon sugar could not be split into two halves',
+              'Pyruvate could not be converted to acetyl-CoA in the matrix',
+              'NAD+ could not be reduced to NADH during the payoff phase'
             ],
             correctAnswer: 1,
             explanation: 'Aldolase catalyzes step 4 — the cleavage of fructose-1,6-bisphosphate into G3P and DHAP. Without aldolase, the 6-carbon intermediate accumulates, and no 3-carbon products are formed for the payoff phase.'

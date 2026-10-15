@@ -42,10 +42,10 @@ Water moves up through narrow xylem vessels because:
           {
             question: 'Capillary action in plants relies on which combination of forces?',
             options: [
-              'Only cohesion',
-              'Only adhesion',
+              'Cohesion only, with no adhesion',
+              'Adhesion only, with no cohesion',
               'Both cohesion and adhesion',
-              'Ionic and covalent bonding'
+              'Both ionic and covalent bonding'
             ],
             correctAnswer: 2,
             explanation: 'Capillary action requires both adhesion (water clinging to xylem walls) and cohesion (water molecules pulling each other along).'

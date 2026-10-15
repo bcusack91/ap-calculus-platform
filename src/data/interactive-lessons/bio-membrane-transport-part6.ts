@@ -31,7 +31,7 @@ A student fills a dialysis tubing bag (selectively permeable — allows water an
 **Analysis:**
 - Starch molecules are too large to cross the dialysis membrane — they stayed inside
 - Glucose molecules are small enough to cross — glucose moved from the beaker (high, 10%) into the bag (low, 2%) by diffusion
-- The bag gained mass because water moved in by osmosis (the interior solution had higher total solute concentration initially)
+- The bag gained mass because water moved in by osmosis: glucose diffused in while the starch stayed trapped, so the bag ended up with a higher total solute concentration (lower water potential) than the beaker
       `
     },
     {
@@ -45,10 +45,10 @@ A student fills a dialysis tubing bag (selectively permeable — allows water an
           {
             question: 'Why was glucose found in the beaker after 30 minutes even though it started at a higher concentration in the beaker?',
             options: [
-              'Starch was converted to glucose outside the bag',
-              'Glucose diffused in both directions, but the NET movement was from the beaker (10%) into the bag (2%); at 30 minutes, glucose is present in both compartments as it approaches equilibrium',
-              'Glucose leaked through pores in the tubing only outward',
-              'The tubing is impermeable to glucose'
+              'Starch leaked out and was broken down into glucose in the beaker',
+              'Glucose moves both ways, but net movement was into the bag',
+              'Glucose moved only outward through the tubing, never into the bag',
+              'The tubing is impermeable to glucose, so none could leave the beaker'
             ],
             correctAnswer: 1,
             explanation: 'Diffusion is a two-way process. Glucose molecules move randomly in both directions across the membrane. The NET movement is from high to low concentration (beaker to bag). After 30 minutes, glucose is present on both sides as the system approaches equilibrium.'
@@ -56,13 +56,13 @@ A student fills a dialysis tubing bag (selectively permeable — allows water an
           {
             question: 'The bag gained mass. This is best explained by:',
             options: [
-              'Starch entered the bag from the beaker',
-              'Net water movement into the bag by osmosis — the bag contents had a higher total solute concentration (more negative water potential) initially',
-              'Glucose accumulating inside the bag made it heavier',
-              'The dialysis tubing expanded'
+              'Starch entered the bag from the beaker, since starch is a small molecule',
+              'Net osmosis into the bag, since starch stayed in while glucose also entered',
+              'Glucose accumulating inside the bag made the bag heavier',
+              'The dialysis tubing absorbed water and expanded'
             ],
             correctAnswer: 1,
-            explanation: 'The solution inside the bag had starch (5%) plus glucose (initially 2%), while the beaker had only glucose (10%). The total solute concentration inside was higher, meaning the water potential inside was lower. Water moved into the bag by osmosis, increasing its mass.'
+            explanation: 'Starch (5%) could not leave the bag, while glucose diffused in from the beaker (10%) toward equal concentrations on both sides. Once glucose evened out, the bag still held its starch, so its total solute concentration was higher (and its water potential lower) than the beaker\'s. Water therefore moved into the bag by osmosis, increasing its mass.'
           }
         ]
       }
@@ -105,10 +105,10 @@ Since the potato is in a hypotonic solution at 0.2 M (gains mass), water enters.
           {
             question: 'At 0.0 M sucrose (pure water), the potato gained 18% mass. Why?',
             options: [
-              'The potato absorbed sucrose from the water',
-              'Pure water has maximum water potential (0 bars); the potato cells have a negative water potential due to dissolved solutes; water moves from high to low water potential — into the cells',
-              'The potato expanded due to increased temperature',
-              'Starch in the potato attracted water molecules chemically'
+              'The potato took up sugar from the water, and water followed the sugar in',
+              'Water moved from the pure water into cells with lower water potential',
+              'The potato cells swelled because the water was warmer than they were',
+              'Starch in the potato bonded chemically with the water molecules'
             ],
             correctAnswer: 1,
             explanation: 'Pure water has a water potential of 0 bars (the maximum). The potato cells contain dissolved solutes, giving them a negative water potential. Water moves from the solution (higher \u03A8) into the cells (lower \u03A8) by osmosis, causing the potato to gain mass.'
@@ -116,10 +116,10 @@ Since the potato is in a hypotonic solution at 0.2 M (gains mass), water enters.
           {
             question: 'If the potato cores were boiled before placing them in the solutions, how would the results differ?',
             options: [
-              'Results would be identical',
-              'Boiled potato cells would have disrupted membranes, eliminating selective permeability; osmosis could not occur normally, and results would be different (likely much less change in mass)',
-              'Boiled potatoes would gain more mass in all solutions',
-              'Boiling would increase the solute concentration in potato cells'
+              'Results would be identical, since the cell walls alone control water movement',
+              'Boiled membranes lose selective permeability, so mass would change far less',
+              'Boiled potatoes would gain more mass in every solution as their cells softened',
+              'Boiling would raise solute concentration in the cells, so they would gain more mass'
             ],
             correctAnswer: 1,
             explanation: 'Boiling denatures membrane proteins and disrupts the phospholipid bilayer, destroying selective permeability. Without intact membranes, osmosis cannot function properly. Solutes would also leak out of the cells, further disrupting the expected results.'
@@ -161,10 +161,10 @@ Since the potato is in a hypotonic solution at 0.2 M (gains mass), water enters.
           {
             question: 'E. coli bacteria have a cell wall and live in varying osmotic environments. If placed in distilled water, E. coli will:',
             options: [
-              'Lyse immediately like a red blood cell',
-              'Swell slightly but survive — the cell wall prevents excessive expansion, similar to a plant cell becoming turgid',
-              'Lose water and shrink',
-              'The cell wall dissolves'
+              'Lyse at once, since it lacks a cell wall like a red blood cell',
+              'Swell slightly but survive, since the cell wall resists expansion',
+              'Lose water and shrink, since distilled water is hypertonic',
+              'Dissolve its cell wall and then burst from the inflow of water'
             ],
             correctAnswer: 1,
             explanation: 'Like plant cells, bacteria have a cell wall that provides structural support. In a hypotonic environment, water enters by osmosis, but the cell wall resists expansion and generates turgor pressure. The cell swells slightly but does not lyse under normal conditions (unlike animal cells which lack a cell wall).'
@@ -172,10 +172,10 @@ Since the potato is in a hypotonic solution at 0.2 M (gains mass), water enters.
           {
             question: 'A cell is observed to transport glucose against its concentration gradient using a Na+/glucose symporter. If the extracellular Na+ concentration is reduced to match the intracellular concentration, what happens to glucose transport?',
             options: [
-              'Glucose transport increases',
-              'Glucose transport stops because the Na+ gradient that provides the driving force has been eliminated',
-              'Glucose transport switches to active pumping using ATP',
-              'The symporter begins to export glucose instead'
+              'Glucose transport increases, since less Na+ competes for the carrier',
+              'Uphill glucose transport stops, since Na+ no longer flows inward',
+              'Glucose transport switches to direct pumping that uses ATP',
+              'The symporter begins exporting glucose out of the cell instead'
             ],
             correctAnswer: 1,
             explanation: 'The Na+/glucose symporter (SGLT1) is powered by the Na+ gradient — Na+ flows down its gradient, providing energy to move glucose against its gradient. If the Na+ gradient is eliminated, there is no energy source to drive glucose transport, and it stops.'
