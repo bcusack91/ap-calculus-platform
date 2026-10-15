@@ -7,18 +7,72 @@ export const hgSpatialConceptsPart5Data = {
       content: `
 # 🌍 Spatial Concepts & Geographic Data
 
-**Part 5 of 7 — Spatial Interaction Models**
+**Part 5 of 7 — Scale of Analysis and Human-Environment Interaction**
 
-Models like gravity, distance decay, and Tobler's first law help explain spatial relationships. The gravity model predicts interaction based on size and distance.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| 📖 Scales of Analysis |
+| Worked Example: One Variable at Four Scales |
+| Environmental Determinism and Possibilism |
+| Sustainability, Resources and Land Use |
 
-| Concept | Description |
-|---------|-------------|
-| **Gravity model** | Predicts interaction between places based on population size and distance |
-| **Tobler's first law** | Everything is related to everything else, but near things are more related |
-| **Space-time compression** | The reduction in travel time between places due to technology |
-      `
+> 🔑 **Key Concept:** The same question can have different answers at different **scales of analysis**, so geographers always state the scale they are working at (CED Topic 1.6). And the relationship between people and their environment runs both ways: the environment offers limits and possibilities, and people modify it (CED Topic 1.5).
+`
+    },
+    {
+      id: 'hgspatia5-scales',
+      type: 'text' as const,
+      content: `
+## 📖 Scales of Analysis
+
+**Scale of analysis** is the level at which data are organized and a pattern is studied.
+
+| Scale | Unit of study | Example question |
+|---|---|---|
+| **Global** | The whole world | Which countries have the oldest populations? |
+| **Regional** | A group of countries, or a large part of one country | How does fertility in Sub-Saharan Africa compare with Europe? |
+| **National** | One country | Which U.S. states gained House seats after 2020? |
+| **Local** | A city, county or neighborhood | Which census tracts in Chicago lack a grocery store within a mile? |
+
+Each scale **reveals** some patterns and **hides** others. Data aggregated to a large unit (a whole country) average out the differences inside it. Data at a small unit (a neighborhood) show detail but can miss the larger system that produces it.
+
+> ⚠️ **Do not confuse the two kinds of scale.**
+> - **Map scale** = the ratio of map distance to ground distance (1:24,000).
+> - **Scale of analysis** = the level of study (local, national, regional, global).
+> A question that says "explain how the pattern differs at the national and local scales" is about scale of analysis.
+`
+    },
+    {
+      id: 'hgspatia5-worked',
+      type: 'text' as const,
+      content: `
+## Worked Example: One Variable at Four Scales
+
+**Variable:** share of the population aged 65 and older (rounded, early 2020s; UN and Japanese government estimates).
+
+| Scale | Unit | Share aged 65+ |
+|---|---|---|
+| Global | World | about 10% |
+| National | Japan | about 29% |
+| Local | Akita Prefecture, northern Japan | about 39% |
+| Local | Tokyo Metropolis | about 23% |
+
+### Reading Across the Scales
+
+1. **Global:** Japan stands out as one of the oldest countries on Earth, nearly three times the world share.
+2. **National:** a single number for Japan suggests the whole country ages evenly.
+3. **Local:** inside Japan the share ranges from about 23 percent in Tokyo to about 39 percent in rural Akita.
+
+**What the local scale reveals that the national scale hides:** young adults migrate from rural prefectures such as Akita to Tokyo for university and jobs. That migration makes Tokyo younger and Akita older. The process (internal rural-to-urban migration) is invisible in the national average.
+
+### The Map, Described in Text
+
+A choropleth of Japan's 47 prefectures by share aged 65 and older shows the darkest shades in rural prefectures of northern Honshu, Shikoku and parts of Kyushu, and the lightest shades in a band around the large metropolitan areas of Tokyo, Nagoya and Osaka, plus Okinawa in the far south. At a world scale, that whole internal pattern collapses into one dark shade for Japan.
+
+> 🔑 **AP Connection:** FRQs often ask you to "explain how the pattern changes when the scale of analysis changes." The full answer names the two scales, describes what each shows, and identifies the process that only the finer (or broader) scale reveals.
+`
     },
     {
       id: 'hgspatia5-quiz1',
@@ -29,144 +83,146 @@ Models like gravity, distance decay, and Tobler's first law help explain spatial
       exercise: {
         questions: [
           {
-            question: 'The gravity model predicts that interaction between two cities will:',
+            question: 'A national average shows that Japan is aging, but prefecture data show rural areas aging far faster than Tokyo. Which process best explains the difference?',
             options: [
-              'Increase with distance',
-              'Increase with population size and decrease with distance',
-              'Be the same regardless of distance',
-              'Only depend on transportation'
+              'Young adults leaving rural areas for jobs in large cities',
+              'Older adults moving from rural areas into large cities',
+              'Higher fertility in rural areas than in large cities',
+              'Lower life expectancy in cities than in rural areas'
             ],
-            correctAnswer: 1,
-            explanation: 'The gravity model says larger populations generate more interaction, but distance reduces it.'
+            correctAnswer: 0,
+            explanation: 'Rural-to-urban migration of young adults makes cities younger and leaves rural places older. Older adults moving to cities would age the cities, higher rural fertility would make rural areas younger, and city life expectancy is not lower.'
           },
           {
-            question: 'Tobler\'s first law states:',
+            question: 'Which question is framed at the local scale of analysis?',
             options: [
-              'Distance doesn\'t matter',
-              'Near things are more related than distant things',
-              'All places are equally connected',
-              'Technology eliminates distance'
+              'Which countries in South America have the highest fertility?',
+              'Which neighborhoods of Houston flooded during the hurricane?',
+              'How does Europe\'s median age compare with Africa\'s?',
+              'Which U.S. states lost seats in the House after 2020?'
             ],
             correctAnswer: 1,
-            explanation: 'Tobler\'s first law of geography: everything is related, but near things are more related than distant things.'
+            explanation: 'Neighborhoods within one city are a local scale. Countries within a continent and Europe compared with Africa are regional or global comparisons, and states within the United States are a national-scale question.'
+          },
+          {
+            question: 'A teacher says a 1:24,000 topographic map is "large scale." A student replies that it must therefore be a study of the whole world. What is wrong with the reply?',
+            options: [
+              'It mixes up map scale with scale of analysis',
+              'It mixes up a reference map with a thematic map',
+              'It mixes up absolute location with relative location',
+              'It mixes up a ratio scale with a written scale'
+            ],
+            correctAnswer: 0,
+            explanation: 'A large map scale such as 1:24,000 shows a small area in detail, which usually supports a local scale of analysis; the two ideas are different. The error has nothing to do with map type, location or the form in which the scale is written.'
           }
         ]
       }
     },
     {
-      id: 'hgspatia5-content',
+      id: 'hgspatia5-environment',
       type: 'text' as const,
       content: `
-## Spatial Interaction Models — Deeper Dive
+## Environmental Determinism and Possibilism
 
-### Gravity model
-Predicts interaction between places based on population size and distance. Understanding this concept is essential for mastering Spatial Concepts & Geographic Data in AP Human Geography.
+| Theory | Core claim | Associated geographers | Status |
+|---|---|---|---|
+| **Environmental determinism** | The physical environment, especially climate, determines human behavior, culture and level of development | Ellen Churchill Semple, Ellsworth Huntington (early 1900s) | **Rejected.** It ignored culture, history and choice, and it was used to claim that people in tropical climates were inferior, which helped justify colonialism |
+| **Possibilism** | The environment sets **limits and possibilities**, but people choose among them using culture and technology | Paul Vidal de la Blache (France) | The mainstream view; the basis for studying human-environment interaction |
 
-### Tobler's first law
-Everything is related to everything else, but near things are more related. This builds on the previous concept and connects to broader themes in the course.
+### Possibilism in Real Landscapes
 
-### Space-time compression
-The reduction in travel time between places due to technology. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
-      `
-    },
-    {
-      id: 'hgspatia5-input',
-      type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
+| Environment | Limit | Human choice |
+|---|---|---|
+| Steep mountains of the northern Philippines | Little flat land for rice | The Ifugao built terraced rice fields up the slopes, now a UNESCO World Heritage site |
+| Low-lying coast of the Netherlands | About a quarter of the country lies below sea level | Dikes, pumps and **polders** (land reclaimed from the sea and lakes) turned wetlands into farmland and cities |
+| Desert of southern Nevada and Arizona | Little rainfall | Dams and canals bring Colorado River water to Las Vegas and Phoenix |
 
-1) What term refers to predicts interaction between places based on population size and distance?
+### Limitation of Possibilism
 
-2) What concept describes everything is related to everything else, but near things are more related?
+Possibilism stresses human choice, but choices have environmental costs, and the limits can bite back. From the 1960s, Soviet planners diverted the two rivers feeding the Aral Sea to irrigate cotton in Central Asia. By the 2010s the sea had shrunk to roughly a tenth of its 1960 area, fisheries collapsed and salty dust storms damaged health and farms. People *chose*, but the environment set the consequences.
 
-3) Name the term for the reduction in travel time between places due to technology.
-
-Use the exact term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['Gravity model', 'Tobler\'s first law', 'Space-time compression'],
-        hint1: 'Starts with: G',
-        hint2: 'Starts with: T',
-        hint3: 'Starts with: S',
-        explanation: 'Expected answers: Gravity model (Predicts interaction between places based on population size and distance), Tobler\'s first law (Everything is related to everything else, but near things are more related), and Space-time compression (The reduction in travel time between places due to technology).'
-      }
+> ⚠️ A determinist explanation is a **single-cause** explanation. If an answer says "people in Region X are poor *because* it is hot," it is determinist and will not earn credit on the AP exam.
+`
     },
     {
       id: 'hgspatia5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Determinism or Possibilism?** 🔍
+
+Classify the reasoning in each statement.
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Predicts interaction between places based on population size and distance is called ___',
-            options: ['Gravity model', 'Tobler\'s first law', 'Space-time compression', 'None of these']
+            label: '"Hot climates make people less hardworking, so tropical countries stay poor." This reasoning is ___',
+            options: ['environmental determinism', 'possibilism', 'sustainability', 'time-space compression']
           },
           {
-            label: 'Everything is related to everything else, but near things are more related describes ___',
-            options: ['Gravity model', 'Tobler\'s first law', 'Space-time compression', 'All of these']
+            label: '"Farmers on steep slopes built terraces so they could grow rice." This reasoning is ___',
+            options: ['environmental determinism', 'possibilism', 'sustainability', 'time-space compression']
           },
           {
-            label: 'The reduction in travel time between places due to technology is known as ___',
-            options: ['Space-time compression', 'Gravity model', 'Tobler\'s first law', 'None of these']
+            label: '"A city limits groundwater pumping so the aquifer refills for future residents." This goal is ___',
+            options: ['environmental determinism', 'possibilism', 'sustainability', 'time-space compression']
           }
         ],
-        correctAnswers: ['Gravity model', 'Tobler\'s first law', 'Space-time compression'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Gravity model — Predicts interaction between places based on population size and distance. Tobler\'s first law — Everything is related to everything else, but near things are more related. Space-time compression — The reduction in travel time between places due to technology.'
+        correctAnswers: ['environmental determinism', 'possibilism', 'sustainability'],
+        hint1: 'The climate is treated as the single cause of a human outcome.',
+        hint2: 'The environment sets a limit, and people choose a way around it.',
+        hint3: 'Meeting present needs without harming future generations\' ability to meet theirs.',
+        explanation: 'Blaming climate for a society\'s economy is environmental determinism. Building terraces to overcome slope is possibilism. Limiting pumping so an aquifer lasts is sustainability.'
       }
     },
     {
-      id: 'hgspatia5-strategy',
+      id: 'hgspatia5-resources',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## Sustainability, Resources and Land Use
 
-### Misconceptions to Avoid
-- Don\'t confuse **Gravity model** with **Tobler's first law** — while related, they address different aspects of Spatial Concepts & Geographic Data.
-- **Space-time compression** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
+**Sustainability** means using resources to meet present needs without reducing the ability of future generations to meet theirs.
 
-### AP Strategy Moves
-- When you see questions about spatial interaction models, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect spatial interaction models to broader themes in AP Human Geography for higher scores.
-      `
+| Resource type | Definition | Examples | Sustainability concern |
+|---|---|---|---|
+| **Renewable** | Replenished naturally on a human time scale | Solar, wind, forests, fresh water, fish | Can still be overused: aquifers pumped faster than they refill, fisheries overfished |
+| **Nonrenewable** | Formed over geologic time; finite | Coal, oil, natural gas, metal ores | Will run out or become too costly; burning fossil fuels adds carbon dioxide |
+
+**Land use** is how people use the surface: farming, housing, industry, conservation. Land-use change is one of the clearest ways to see human-environment interaction on a map. A time series of satellite images of the Brazilian Amazon, for example, shows a "fishbone" pattern: a straight highway with side roads branching off it at regular intervals, each lined by cleared pasture, spreading into unbroken forest.
+
+**Scale reminder:** a sustainability problem can look different at each scale. Global fish catches can appear stable while a local fishery, such as the cod fishery off Newfoundland, collapses; Canada closed that fishery in 1992.
+
+> 🔑 **AP Connection:** Human-environment interaction returns in agriculture (Unit 5), urban sustainability (Unit 6) and industrial pollution (Unit 7). Possibilism plus a clear statement of limits is the reasoning the exam rewards.
+`
     },
     {
-      id: 'hgspatia5-applied',
+      id: 'hgspatia5-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'High-speed rail reducing travel time from 4 hours to 1 hour between cities demonstrates:',
+            question: 'Why do geographers reject environmental determinism?',
             options: [
-              'Gravity model — predicting interaction',
-              'Space-time compression — technology reducing the friction of distance',
-              'Distance decay — interaction decreasing with distance',
-              'Tobler\'s law — near things being more related'
+              'It leaves out culture and human choice',
+              'It treats the climate as one factor among many',
+              'It was developed only by geographers in France',
+              'It relies too heavily on satellite and GIS data'
             ],
-            correctAnswer: 1,
-            explanation: 'Faster transportation compresses the effective distance between places — space-time compression.'
+            correctAnswer: 0,
+            explanation: 'Determinism treats the environment as the single cause of human outcomes and leaves out culture, history and choice; it was also used to justify colonial rule. Treating climate as one factor among many describes possibilism, and determinism predates satellite data.'
           },
           {
-            question: 'Two equally sized cities are 100 miles and 500 miles from a third city. The gravity model predicts:',
+            question: 'The Dutch built dikes and pumped water out of low-lying land to create polders for farming and housing. Which idea does this illustrate?',
             options: [
-              'Equal interaction with both',
-              'More interaction with the closer city',
-              'More interaction with the farther city',
-              'No interaction with either'
+              'Environmental determinism',
+              'Possibilism',
+              'Distance decay',
+              'Time-space compression'
             ],
             correctAnswer: 1,
-            explanation: 'The gravity model predicts greater interaction with the nearby city because distance is inversely related to interaction.'
+            explanation: 'The low coast set a limit, and Dutch society used technology to work around it, which is possibilism. Determinism would predict the land must stay wetland, and the other two concepts describe distance and connectivity.'
           }
         ]
       }

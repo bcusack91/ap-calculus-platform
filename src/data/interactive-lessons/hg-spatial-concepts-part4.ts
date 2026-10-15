@@ -7,18 +7,48 @@ export const hgSpatialConceptsPart4Data = {
       content: `
 # 🌍 Spatial Concepts & Geographic Data
 
-**Part 4 of 7 — Geographic Data Sources**
+**Part 4 of 7 — Geographic Data and Its Power**
 
-Geographers use both quantitative and qualitative data. Census data, satellite imagery, fieldwork, and surveys all provide spatial information.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| 📖 Where Geographic Data Come From |
+| Geospatial Technologies: GPS, Remote Sensing and GIS |
+| The Power of Geographic Data: Three Cases |
+| Limits of Data |
 
-| Concept | Description |
-|---------|-------------|
-| **Quantitative data** | Numerical data that can be measured and analyzed statistically |
-| **Qualitative data** | Descriptive data about characteristics, experiences, and perceptions |
-| **Remote sensing** | Collecting data about Earth's surface from satellites or aircraft |
-      `
+> 🔑 **Key Concept:** Geographers collect data in the field and from documents, then store, map and analyze them with geospatial technologies. Individuals, businesses and governments use those data to make decisions, so data quality and scale have real consequences (CED Topics 1.2 and 1.3).
+`
+    },
+    {
+      id: 'hgspatia4-sources',
+      type: 'text' as const,
+      content: `
+## 📖 Where Geographic Data Come From
+
+### Quantitative vs. Qualitative
+
+| Kind | What it is | Examples |
+|---|---|---|
+| **Quantitative** | Numbers that can be counted, measured and mapped | Census population counts, rainfall totals, income, migration flows |
+| **Qualitative** | Descriptions, meanings and perceptions | Interviews about why people moved, photographs of a neighborhood, travel narratives |
+
+Neither kind is "better." A census can show *that* a neighborhood lost 20 percent of its residents; interviews explain *why* they left.
+
+### Common Sources Named in the CED
+
+| Source | Type | What it is good for |
+|---|---|---|
+| **Field observation** | Usually qualitative | Seeing the landscape directly: building styles, land use, signs in different languages |
+| **Personal interviews** | Qualitative | Motives and experiences: why a family migrated |
+| **Census and surveys** | Quantitative | Population, age, income, housing at many scales |
+| **Policy documents** | Both | What governments intend: zoning plans, immigration laws |
+| **Media reports and travel narratives** | Mostly qualitative | Events and perceptions of places, though often biased |
+| **Landscape and photo analysis** | Qualitative | How a place changed: compare photos of a block in 1980 and today |
+
+> 🔑 **AP Connection:** Expect a question that asks you to "describe one source of data" a geographer could use to study a stated problem, or to "explain a limitation" of a given source. Name the source, then link it to the specific question.
+`
     },
     {
       id: 'hgspatia4-quiz1',
@@ -29,144 +59,167 @@ Geographers use both quantitative and qualitative data. Census data, satellite i
       exercise: {
         questions: [
           {
-            question: 'Census data is an example of:',
+            question: 'A geographer wants to learn why residents of a rural town chose to move to the state capital. Which data source would help most?',
             options: [
-              'Qualitative data',
-              'Quantitative data',
-              'Remote sensing',
-              'Field observation'
+              'Satellite images of the town',
+              'Interviews with the people who moved',
+              'A choropleth of the state by income',
+              'A census count of the town by age'
             ],
             correctAnswer: 1,
-            explanation: 'Census data provides numerical (quantitative) information about population, income, housing, etc.'
+            explanation: 'Motives are qualitative, so asking the migrants directly reveals their reasons. Satellite images, an income choropleth and an age count can show where and how many, but not why people decided to move.'
           },
           {
-            question: 'Remote sensing involves:',
+            question: 'Which of these is an example of quantitative geographic data?',
             options: [
-              'Door-to-door surveys',
-              'Collecting data using satellites or aircraft',
-              'Reading historical documents',
-              'Conducting interviews'
+              'A travel writer\'s account of a market town',
+              'Photographs of a street from 1960 and 2020',
+              'Counts of residents by age in each county',
+              'Interviews with farmers about a long drought'
             ],
-            correctAnswer: 1,
-            explanation: 'Remote sensing uses technology like satellites to collect data about Earth without direct contact.'
+            correctAnswer: 2,
+            explanation: 'Counts of residents are numbers that can be measured and mapped, so they are quantitative. A travel account, paired photographs and interviews describe meanings and conditions, which makes them qualitative.'
           }
         ]
       }
     },
     {
-      id: 'hgspatia4-content',
+      id: 'hgspatia4-tech',
       type: 'text' as const,
       content: `
-## Geographic Data Sources — Deeper Dive
+## Geospatial Technologies: GPS, Remote Sensing and GIS
 
-### Quantitative data
-Numerical data that can be measured and analyzed statistically. Understanding this concept is essential for mastering Spatial Concepts & Geographic Data in AP Human Geography.
+| Technology | What it does | Example use |
+|---|---|---|
+| **GPS (Global Positioning System)** | A U.S. network of satellites that lets a receiver calculate its absolute location; a receiver needs signals from at least four satellites for a fix with altitude | Phone navigation, tracking delivery trucks, mapping field sites |
+| **Remote sensing** | Collecting data about Earth's surface from a distance, usually by satellite or aircraft | Measuring deforestation in the Amazon, crop health, the spread of a city; the U.S. Landsat program has imaged Earth since 1972 |
+| **GIS (geographic information system)** | Computer software that stores spatial data in **layers** and lets you overlay and analyze them | Finding the best site for a new hospital, mapping flood risk |
+| **Online mapping and visualization** | Web maps and dashboards that let anyone view or add spatial data | Public COVID-19 case dashboards, crowd-sourced maps after a disaster |
 
-### Qualitative data
-Descriptive data about characteristics, experiences, and perceptions. This builds on the previous concept and connects to broader themes in the course.
+### Worked Example: Siting a Clinic with GIS Layers
 
-### Remote sensing
-Collecting data about Earth's surface from satellites or aircraft. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
-      `
-    },
-    {
-      id: 'hgspatia4-input',
-      type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
+A county health department wants to place one new clinic. An analyst stacks four layers in a GIS:
 
-1) What term refers to numerical data that can be measured and analyzed statistically?
+1. **Population layer:** census tracts shaded by number of residents.
+2. **Existing clinics layer:** points for every current clinic, each with a 5-mile buffer drawn around it.
+3. **Roads layer:** major roads and bus routes.
+4. **Flood-zone layer:** areas the federal flood map marks as high risk.
 
-2) What concept describes descriptive data about characteristics, experiences, and perceptions?
+The analyst then asks the GIS for tracts that are (a) heavily populated, (b) outside every existing clinic's 5-mile buffer, (c) within half a mile of a bus route, and (d) outside the flood zone. Only the tracts meeting all four conditions remain on the map. The overlay turns four separate data sets into one location decision.
 
-3) Name the term for collecting data about Earth's surface from satellites or aircraft.
-
-Use the exact term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['Quantitative data', 'Qualitative data', 'Remote sensing'],
-        hint1: 'Starts with: Q',
-        hint2: 'Starts with: Q',
-        hint3: 'Starts with: R',
-        explanation: 'Expected answers: Quantitative data (Numerical data that can be measured and analyzed statistically), Qualitative data (Descriptive data about characteristics, experiences, and perceptions), and Remote sensing (Collecting data about Earth\'s surface from satellites or aircraft).'
-      }
+> ⚠️ GPS and remote sensing **collect** data; GIS **stores and analyzes** it. A common error is calling Google Maps navigation "GIS." The route on your phone uses GPS for your location and an online map built from GIS data.
+`
     },
     {
       id: 'hgspatia4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Name the Technology** 🔍
+
+Choose the geospatial technology described.
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Numerical data that can be measured and analyzed statistically is called ___',
-            options: ['Quantitative data', 'Qualitative data', 'Remote sensing', 'None of these']
+            label: 'Satellite images taken each year show forest loss in the Brazilian state of Rondônia: ___',
+            options: ['GPS', 'remote sensing', 'GIS', 'a census']
           },
           {
-            label: 'Descriptive data about characteristics, experiences, and perceptions describes ___',
-            options: ['Quantitative data', 'Qualitative data', 'Remote sensing', 'All of these']
+            label: 'A planner overlays layers of zoning, flood risk and land value to choose a site: ___',
+            options: ['GPS', 'remote sensing', 'GIS', 'a census']
           },
           {
-            label: 'Collecting data about Earth\'s surface from satellites or aircraft is known as ___',
-            options: ['Remote sensing', 'Quantitative data', 'Qualitative data', 'None of these']
+            label: 'A hiker\'s watch records her exact latitude and longitude every minute: ___',
+            options: ['GPS', 'remote sensing', 'GIS', 'a census']
           }
         ],
-        correctAnswers: ['Quantitative data', 'Qualitative data', 'Remote sensing'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Quantitative data — Numerical data that can be measured and analyzed statistically. Qualitative data — Descriptive data about characteristics, experiences, and perceptions. Remote sensing — Collecting data about Earth\'s surface from satellites or aircraft.'
+        correctAnswers: ['remote sensing', 'GIS', 'GPS'],
+        hint1: 'The data are gathered from far above the surface.',
+        hint2: 'Stacking and comparing layers is the defining feature.',
+        hint3: 'Satellite signals give a receiver its absolute location.',
+        explanation: 'Satellite imagery of forest loss is remote sensing. Overlaying zoning, flood and land-value layers is GIS analysis. A watch that logs coordinates uses GPS.'
       }
     },
     {
-      id: 'hgspatia4-strategy',
+      id: 'hgspatia4-power',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## The Power of Geographic Data: Three Cases
 
-### Misconceptions to Avoid
-- Don\'t confuse **Quantitative data** with **Qualitative data** — while related, they address different aspects of Spatial Concepts & Geographic Data.
-- **Remote sensing** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
+Geographic data are used at every scale, from a person choosing a route to a national government drawing districts.
 
-### AP Strategy Moves
-- When you see questions about geographic data sources, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect geographic data sources to broader themes in AP Human Geography for higher scores.
-      `
+### Case 1: John Snow's Cholera Map, London, 1854
+
+During a cholera outbreak in the Soho district, physician John Snow mapped the homes of people who died. **The map, described in text:** small black bars stacked at each address cluster tightly around a public water pump on Broad Street and thin out with distance from it. Snow used the pattern, along with interviews about where victims drew water, to argue that cholera spread through contaminated water rather than "bad air." The parish authorities removed the pump's handle. His map is a classic case of spatial data shaping a public decision, and of **distance decay** in action.
+
+### Case 2: The U.S. Census and Apportionment
+
+The U.S. Constitution requires a census every 10 years. Its counts are used to divide the 435 seats in the House of Representatives among the states and to guide the distribution of federal funds.
+
+| After the 2020 Census | States |
+|---|---|
+| Gained 2 seats | Texas |
+| Gained 1 seat | Colorado, Florida, Montana, North Carolina, Oregon |
+| Lost 1 seat | California, Illinois, Michigan, New York, Ohio, Pennsylvania, West Virginia |
+
+The pattern on a map is clear: seats shifted from the Northeast and Midwest toward the South and West, following decades of internal migration.
+
+### Case 3: Business Site Selection
+
+A coffee chain choosing a new location uses data on traffic counts, the income and age of nearby residents, competitors' locations and commuting routes. These are the same layered-data methods as the clinic example, applied for profit.
+
+## Limits of Data
+
+| Limit | Example |
+|---|---|
+| **Undercounts** | The Census Bureau's own follow-up survey estimated that the 2020 Census undercounted the Black population by about 3.3 percent and the Hispanic population by about 5 percent |
+| **Scale and aggregation** | A county average can hide very different neighborhoods inside it |
+| **Age of data** | A 10-year census can be out of date in a fast-growing suburb |
+| **Bias and privacy** | Media reports may exaggerate; phone location data raise privacy concerns |
+
+> 🔑 **AP Connection:** An undercount is not just a statistic. Because seats and funding follow the count, communities that are undercounted lose representation and money. This links data (Unit 1) to political geography and redistricting (Unit 4).
+`
     },
     {
-      id: 'hgspatia4-applied',
+      id: 'hgspatia4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A geographer studying urban sprawl over 30 years would most likely use:',
+            question: 'John Snow\'s 1854 map persuaded officials to act mainly because it showed that',
             options: [
-              'Remote sensing — comparing satellite imagery over time',
-              'Interviews with city residents',
-              'A chemistry lab',
-              'A literary analysis'
-            ],
-            correctAnswer: 0,
-            explanation: 'Satellite imagery from different years allows geographers to track changes in land use — ideal for studying urban sprawl.'
-          },
-          {
-            question: 'To understand why immigrants choose certain neighborhoods, a geographer would use:',
-            options: [
-              'Only quantitative census data',
-              'Qualitative data from interviews and fieldwork',
-              'Only satellite imagery',
-              'Only road maps'
+              'cholera deaths were spread evenly across all of London',
+              'cholera deaths clustered around one water pump',
+              'cholera deaths were highest in the richest households',
+              'cholera deaths rose with height above the River Thames'
             ],
             correctAnswer: 1,
-            explanation: 'Understanding motivations and experiences requires qualitative methods like interviews — numbers alone can\'t explain "why."'
+            explanation: 'The deaths clustered around the Broad Street pump and became rarer with distance from it, which pointed to the water as the source. An even spread, a wealth pattern or an elevation pattern would not have implicated a single pump.'
+          },
+          {
+            question: 'Why does a census undercount of one group have political consequences in the United States?',
+            options: [
+              'House seats and federal funds are allocated by population counts',
+              'Undercounted groups are removed from the voter registration rolls',
+              'The Constitution requires each state to hold a new census to fix it',
+              'Undercounts change the absolute location of the affected counties'
+            ],
+            correctAnswer: 0,
+            explanation: 'Apportionment of House seats and many funding formulas use census counts, so an undercount lowers a community\'s representation and resources. Census counts do not remove anyone from voter rolls, and states do not run replacement censuses.'
+          },
+          {
+            question: 'A geographer studies deforestation with satellite images but cannot tell from them who cleared the land or why. This illustrates that',
+            options: [
+              'remote sensing explains causes better than it shows patterns',
+              'remote sensing shows patterns but needs other sources for causes',
+              'remote sensing cannot show any change in land cover over time',
+              'GIS cannot be used together with satellite images of a region'
+            ],
+            correctAnswer: 1,
+            explanation: 'Satellite imagery is excellent at showing where land cover changed, but explaining who acted and why requires field work, interviews or policy documents. Imagery is stronger on patterns than on causes, it can show change over time, and GIS routinely uses satellite layers.'
           }
         ]
       }

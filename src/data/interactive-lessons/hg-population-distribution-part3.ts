@@ -7,18 +7,105 @@ export const hgPopulationDistributionPart3Data = {
       content: `
 # 🌍 Population Distribution & Composition
 
-**Part 3 of 7 — Population Density Measures**
+**Part 3 of 7 — Three Density Measures**
 
-Different density measures reveal different aspects of population pressure. Agricultural density focuses on farmers per arable land.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| 📖 Arithmetic, Physiological and Agricultural Density |
+| Worked Calculations with Five Countries |
+| What Each Measure Reveals and Hides |
+| Interpreting Combinations |
 
-| Concept | Description |
-|---------|-------------|
-| **Physiological density** | Population per unit of arable land |
-| **Agricultural density** | Number of farmers per unit of arable land |
-| **Carrying capacity** | The maximum population an area can support |
-      `
+> 🔑 **Key Concept:** One number cannot capture how crowded a country is. **Arithmetic density** compares people with all land, **physiological density** compares people with farmland, and **agricultural density** compares farmers with farmland. Used together, they show pressure on land and how farming is organized (CED Topic 2.1).
+`
+    },
+    {
+      id: 'hgpopula3-formulas',
+      type: 'text' as const,
+      content: `
+## 📖 Arithmetic, Physiological and Agricultural Density
+
+| Measure | Formula | Answers the question |
+|---|---|---|
+| **Arithmetic density** | Total population ÷ total land area | How many people are there per unit of land overall? |
+| **Physiological density** | Total population ÷ **arable** (farmable) land | How much pressure do people put on the land that can grow food? |
+| **Agricultural density** | Number of **farmers** ÷ arable land | How many farmers work each unit of farmland? |
+
+**Arable land** is land suitable for growing crops. In most countries it is only a fraction of the total area.
+
+### Worked Calculations with Five Countries
+
+The figures below are approximate for the early 2020s and **rounded so the arithmetic is clear**. Farmers means people employed in agriculture.
+
+| Country | Population | Land area (km²) | Arable land (km²) | Farmers |
+|---|---|---|---|---|
+| Egypt | 110 million | 1,000,000 | 35,000 | 5.5 million |
+| Bangladesh | 170 million | 130,000 | 80,000 | 25 million |
+| Netherlands | 18 million | 34,000 | 10,000 | 200,000 |
+| Canada | 40 million | 9,000,000 | 380,000 | — |
+| United States | 335 million | 9,150,000 | 1,570,000 | — |
+
+**Egypt, step by step:**
+1. Arithmetic density = 110,000,000 ÷ 1,000,000 = **110 people per km²**
+2. Physiological density = 110,000,000 ÷ 35,000 ≈ **3,140 people per km² of arable land**
+3. Agricultural density = 5,500,000 ÷ 35,000 ≈ **157 farmers per km² of arable land**
+
+**All five countries:**
+
+| Country | Arithmetic | Physiological | Agricultural |
+|---|---|---|---|
+| Egypt | 110 | about 3,140 | about 157 |
+| Bangladesh | about 1,310 | about 2,130 | about 313 |
+| Netherlands | about 530 | 1,800 | 20 |
+| Canada | about 4.4 | about 105 | — |
+| United States | about 37 | about 213 | — |
+`
+    },
+    {
+      id: 'hgpopula3-input',
+      type: 'input-boxes' as const,
+      content: `
+**Calculate It** 🧮
+
+Use the rounded figures in the first table. Enter whole numbers without commas.
+
+**1)** Netherlands: 18 million people ÷ 10,000 km² of arable land. What is the physiological density, in people per km²?
+
+**2)** Netherlands: 200,000 farmers ÷ 10,000 km² of arable land. What is the agricultural density, in farmers per km²?
+
+**3)** A country has 60 million people, 300,000 km² of land and 50,000 km² of arable land. What is its physiological density?
+      `,
+      exercise: {
+        boxes: 3,
+        correctAnswers: ['1800', '20', '1200'],
+        hint1: 'Divide 18,000,000 by 10,000.',
+        hint2: 'Divide 200,000 by 10,000.',
+        hint3: 'Physiological density uses arable land, not total land: 60,000,000 ÷ 50,000.',
+        explanation: '1) 18,000,000 ÷ 10,000 = 1,800 people per km² of arable land. 2) 200,000 ÷ 10,000 = 20 farmers per km². 3) 60,000,000 ÷ 50,000 = 1,200 people per km² of arable land; the 300,000 km² total would give the arithmetic density of 200.'
+      }
+    },
+    {
+      id: 'hgpopula3-reveals',
+      type: 'text' as const,
+      content: `
+## What Each Measure Reveals and Hides
+
+### Arithmetic Density
+- **Reveals:** a quick, comparable figure for any country.
+- **Hides:** where people actually live and whether the land can feed them. Egypt's 110 per km² sounds moderate; it averages crowded Nile farmland with empty desert.
+
+### Physiological Density
+- **Reveals:** pressure on food-producing land. Egypt's physiological density is about **29 times** its arithmetic density (3,140 ÷ 110), because only about 3.5 percent of its land is arable.
+- **Hides:** how productive the farmland is, and whether the country imports food. A high physiological density does not by itself mean hunger.
+
+### Agricultural Density
+- **Reveals:** how farming is organized. A **high** agricultural density means many farmers on each unit of land, which usually signals small plots, more hand labor and less machinery. A **low** agricultural density means few farmers working large, mechanized farms.
+- **Hides:** total food output and the rest of the economy.
+
+> ⚠️ **Common error:** physiological density uses **all people**; agricultural density uses **only farmers**. Both divide by **arable land**, not total land.
+`
     },
     {
       id: 'hgpopula3-quiz1',
@@ -29,144 +116,98 @@ Different density measures reveal different aspects of population pressure. Agri
       exercise: {
         questions: [
           {
-            question: 'Physiological density differs from arithmetic density because it uses:',
+            question: 'Egypt\'s physiological density is far higher than its arithmetic density. What does this show?',
             options: [
-              'Total land area',
-              'Only arable (farmable) land',
-              'Only urban land',
-              'Only water area'
+              'Only a small share of Egypt\'s land can be farmed',
+              'Most Egyptians work on large, highly mechanized farms',
+              'Egypt has more farmland than most other countries',
+              'Egypt\'s population is spread evenly across its land'
             ],
-            correctAnswer: 1,
-            explanation: 'Physiological density uses arable land in the denominator, giving a better picture of food production pressure.'
+            correctAnswer: 0,
+            explanation: 'Physiological density divides the same population by arable land instead of total land, so a much larger number means arable land is a small fraction of the whole. It says nothing about mechanization, and Egypt\'s people are concentrated, not evenly spread.'
           },
           {
-            question: 'A country with low agricultural density likely has:',
+            question: 'Which measure would best show whether a country\'s farms are mostly small and labor-intensive?',
             options: [
-              'Many subsistence farmers',
-              'Mechanized, efficient agriculture',
-              'No farmland',
-              'Overpopulation'
+              'Agricultural density',
+              'Arithmetic density',
+              'Physiological density',
+              'Total fertility rate'
             ],
-            correctAnswer: 1,
-            explanation: 'Low agricultural density means few farmers per arable acre — indicating mechanized, efficient farming systems.'
+            correctAnswer: 0,
+            explanation: 'Agricultural density counts farmers per unit of arable land, so a high value points to many workers on small plots. Arithmetic and physiological density count everyone, and fertility rate measures births, not farming.'
           }
         ]
       }
     },
     {
-      id: 'hgpopula3-content',
+      id: 'hgpopula3-combos',
       type: 'text' as const,
       content: `
-## Population Density Measures — Deeper Dive
+## Interpreting Combinations
 
-### Physiological density
-Population per unit of arable land. Understanding this concept is essential for mastering Population Distribution & Composition in AP Human Geography.
+The measures are most useful in pairs.
 
-### Agricultural density
-Number of farmers per unit of arable land. This builds on the previous concept and connects to broader themes in the course.
+| Pattern | Likely meaning | Example from the table |
+|---|---|---|
+| High physiological, **high** agricultural | Many people depend on limited land, and much of the work force farms it by hand; strong pressure on land | Bangladesh: about 2,130 and about 313 |
+| High physiological, **low** agricultural | Limited farmland, but farming is mechanized and productive; most people work in other sectors, and food can be imported | Netherlands: 1,800 and 20 |
+| Low arithmetic, much higher physiological | Population concentrated on a small share of usable land | Egypt and Canada |
+| Low physiological | Plenty of farmland per person; large food exports possible | Canada at about 105, United States at about 213 |
 
-### Carrying capacity
-The maximum population an area can support. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
-      `
+### Worked Comparison: Bangladesh vs. the Netherlands
+
+Both countries are crowded relative to their farmland. The difference is in **who works the land**:
+- In Bangladesh, about 25 million people farm 80,000 km², about **313 per km²**.
+- In the Netherlands, about 200,000 people farm 10,000 km², about **20 per km²**.
+
+Dutch farms use machinery, greenhouses and capital, so a small work force produces a lot; the Netherlands is one of the world's largest exporters of agricultural products by value. In Bangladesh, small family plots and more hand labor mean far more farmers per unit of land. The comparison links density to **level of development** and to the **agricultural** unit (Unit 5).
+
+**Limitation of all three measures:** they are **national averages**. Bangladesh's coastal and northern districts differ, and a single Dutch figure blends greenhouse districts with dairy pasture. For a sharper picture, compute the measures at a finer scale.
+
+> 🔑 **AP Connection:** If a question gives two countries' densities and asks you to "explain a difference," name the measure, say what it divides, and connect the number to a real process: land pressure, mechanization or food imports.
+`
     },
     {
-      id: 'hgpopula3-input',
-      type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
-
-1) What term refers to population per unit of arable land?
-
-2) What concept describes number of farmers per unit of arable land?
-
-3) Name the term for the maximum population an area can support.
-
-Use the exact term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['Physiological density', 'Agricultural density', 'Carrying capacity'],
-        hint1: 'Starts with: P',
-        hint2: 'Starts with: A',
-        hint3: 'Starts with: C',
-        explanation: 'Expected answers: Physiological density (Population per unit of arable land), Agricultural density (Number of farmers per unit of arable land), and Carrying capacity (The maximum population an area can support).'
-      }
-    },
-    {
-      id: 'hgpopula3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Fill in the Blanks** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Population per unit of arable land is called ___',
-            options: ['Physiological density', 'Agricultural density', 'Carrying capacity', 'None of these']
-          },
-          {
-            label: 'Number of farmers per unit of arable land describes ___',
-            options: ['Physiological density', 'Agricultural density', 'Carrying capacity', 'All of these']
-          },
-          {
-            label: 'The maximum population an area can support is known as ___',
-            options: ['Carrying capacity', 'Physiological density', 'Agricultural density', 'None of these']
-          }
-        ],
-        correctAnswers: ['Physiological density', 'Agricultural density', 'Carrying capacity'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Physiological density — Population per unit of arable land. Agricultural density — Number of farmers per unit of arable land. Carrying capacity — The maximum population an area can support.'
-      }
-    },
-    {
-      id: 'hgpopula3-strategy',
-      type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
-
-### Misconceptions to Avoid
-- Don\'t confuse **Physiological density** with **Agricultural density** — while related, they address different aspects of Population Distribution & Composition.
-- **Carrying capacity** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about population density measures, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect population density measures to broader themes in AP Human Geography for higher scores.
-      `
-    },
-    {
-      id: 'hgpopula3-applied',
+      id: 'hgpopula3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Country A has high arithmetic but low physiological density. This suggests:',
+            question: 'Country A and Country B have similar physiological densities, but Country A\'s agricultural density is ten times higher. What is the most likely explanation?',
             options: [
-              'A large total area with abundant farmland',
-              'A small total area with little farmland',
-              'Overpopulation on limited land',
-              'No agricultural production'
+              'Country A has more small, labor-intensive farms',
+              'Country A has more arable land than B',
+              'Country B has a much larger total population overall',
+              'Country B has many more farmers working on each farm'
             ],
             correctAnswer: 0,
-            explanation: 'High arithmetic but low physiological density means the country is large (lowering arithmetic density\'s usefulness) but has plenty of farmland per person.'
+            explanation: 'With similar pressure on farmland, a much higher agricultural density means far more farmers work each unit of land, which points to small plots and less mechanization. More farmers per farm in Country B would raise B\'s agricultural density, not A\'s.'
           },
           {
-            question: 'As technology improves agricultural yields, a region\'s carrying capacity:',
+            question: 'Why might the Netherlands have a high physiological density without food shortages?',
             options: [
-              'Stays the same',
-              'May increase as more food can be produced',
-              'Decreases',
-              'Becomes irrelevant'
+              'It farms intensively and can import food it needs',
+              'Its arithmetic density is lower than that of Canada',
+              'Most of its population works in agriculture',
+              'Its arable land covers most of the country\'s area'
             ],
-            correctAnswer: 1,
-            explanation: 'Improved technology can increase carrying capacity by enabling more food production from the same land.'
+            correctAnswer: 0,
+            explanation: 'Highly productive, mechanized farming and the income to import food let a country with little farmland per person stay well fed. Its arithmetic density is far higher than Canada\'s, only a small share of workers farm, and arable land is under a third of its area.'
+          },
+          {
+            question: 'Which calculation gives arithmetic density?',
+            options: [
+              'Farmers divided by arable land',
+              'All residents divided by arable land',
+              'Total population divided by total land area',
+              'Arable land divided by total land area'
+            ],
+            correctAnswer: 2,
+            explanation: 'Arithmetic density divides all people by all land. Dividing by arable land gives physiological density, farmers over arable land gives agricultural density, and arable land over total land is a share of land, not a density.'
           }
         ]
       }

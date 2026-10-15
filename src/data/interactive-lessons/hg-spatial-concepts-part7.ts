@@ -7,166 +7,204 @@ export const hgSpatialConceptsPart7Data = {
       content: `
 # 🌍 Spatial Concepts & Geographic Data
 
-**Part 7 of 7 — AP Review**
+**Part 7 of 7 — Synthesis Review: Thinking Spatially**
 
-Comprehensive review of spatial concepts for the AP exam. Master location types, spatial patterns, map skills, and interaction models.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| 📖 How the Six Parts Fit Together |
+| Master Vocabulary Table |
+| One Case, Every Concept: Choosing a Warehouse Site |
+| Mixed Review |
 
-| Concept | Description |
-|---------|-------------|
-| **Geographic perspective** | The unique lens of geography — analyzing WHERE and WHY there |
-| **Spatial association** | When two or more phenomena share similar spatial patterns |
-| **Environmental determinism vs possibilism** | Debate over whether environment controls or influences human activity |
-      `
+> 🔑 **Key Concept:** The concepts in this topic form one chain of reasoning. **Where** is something (location, site, situation)? **How** is it arranged (density, concentration, pattern)? **How** do we show and measure it (maps, data, technology)? At **what scale** are we looking? And **how** do people and environment shape each other?
+`
+    },
+    {
+      id: 'hgspatia7-chain',
+      type: 'text' as const,
+      content: `
+## 📖 How the Six Parts Fit Together
+
+| Part | Big question | Core ideas |
+|---|---|---|
+| 1 | What is this place like, and how is it connected? | Site, situation, place |
+| 2 | Where is it, and how are things arranged? | Absolute/relative location, distance, direction, time-space compression, distance decay, flows, density, concentration, pattern |
+| 3 | How do maps show it, and what do they distort? | Reference vs. thematic maps; choropleth, dot, graduated symbol, isoline, cartogram; projections; map scale |
+| 4 | Where do the data come from, and who uses them? | Quantitative vs. qualitative; field work, census, interviews; GPS, remote sensing, GIS; John Snow; apportionment |
+| 5 | At what level are we looking, and how do people and environment interact? | Global, regional, national, local; determinism vs. possibilism; sustainability |
+| 6 | How does the exam test it? | Identify, describe, explain; stimulus reading |
+
+## Master Vocabulary Table
+
+| Pair often confused | The difference |
+|---|---|
+| Site vs. situation | Internal physical features vs. connections to other places |
+| Absolute vs. relative distance | Miles or kilometers vs. time, cost or social connection |
+| Density vs. concentration | How many per area vs. how spread out they are from each other |
+| Map scale vs. scale of analysis | Ratio of map to ground vs. level of study |
+| Large-scale vs. small-scale map | Small area, high detail vs. large area, low detail |
+| Choropleth vs. cartogram | Shades areas by a rate vs. resizes areas by a variable |
+| Remote sensing vs. GIS | Collects images from a distance vs. stores and overlays layers |
+| Determinism vs. possibilism | Environment dictates vs. environment offers limits and choices |
+`
     },
     {
       id: 'hgspatia7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Mixed Review** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Environmental determinism argues that:',
+            question: 'Singapore has a deep natural harbor and sits beside the Strait of Malacca, one of the busiest shipping lanes in the world. The strait describes Singapore\'s',
             options: [
-              'Humans shape the environment',
-              'The environment controls human behavior and development',
-              'Humans and environment have no relationship',
-              'Technology eliminates environmental constraints'
+              'site',
+              'situation',
+              'absolute location',
+              'density'
             ],
             correctAnswer: 1,
-            explanation: 'Environmental determinism claims the physical environment dictates human activity and cultural development.'
+            explanation: 'The strait is about Singapore\'s position relative to global shipping routes, which is situation. The harbor is a site feature, coordinates would be absolute location, and density measures people per area.'
           },
           {
-            question: 'Possibilism differs from environmental determinism by arguing:',
+            question: 'A map of Brazil shades each state by the percentage of residents living in cities. A student says the map proves that every town in a dark state is urban. What is the flaw in this reasoning?',
             options: [
-              'Environment has no effect on humans',
-              'Environment sets limitations but humans can adapt and choose',
-              'Technology is irrelevant',
-              'Culture doesn\'t matter'
+              'A choropleth gives one value per state, so it hides how places differ inside it',
+              'A choropleth should never show percentages, so the map is drawn the wrong way',
+              'A percentage cannot be mapped at the state scale, only at the national scale',
+              'The projection used for Brazil distorts the area of each of its states'
+            ],
+            correctAnswer: 0,
+            explanation: 'A choropleth assigns one value to a whole area, so it cannot show variation between towns inside that area. Percentages are exactly what choropleths should show, and state-level data can be mapped at any national scale.'
+          },
+          {
+            question: 'Which pairing of a technology with a task is correct?',
+            options: [
+              'Remote sensing, to overlay census tracts with flood zones and bus routes',
+              'GIS, to overlay census tracts with flood zones and bus routes on one map',
+              'GPS, to measure how much farmland a whole country lost to drought',
+              'GIS, to find a hiker\'s exact latitude and longitude from satellites'
             ],
             correctAnswer: 1,
-            explanation: 'Possibilism holds that the environment offers possibilities and constraints, but humans make choices within those limits.'
+            explanation: 'Overlaying several data layers to answer a location question is what GIS does. Remote sensing collects images, GPS finds the position of one receiver, and a hiker\'s coordinates come from GPS, not GIS.'
           }
         ]
       }
     },
     {
-      id: 'hgspatia7-content',
+      id: 'hgspatia7-case',
       type: 'text' as const,
       content: `
-## AP Review — Deeper Dive
+## One Case, Every Concept: Choosing a Warehouse Site
 
-### Geographic perspective
-The unique lens of geography — analyzing WHERE and WHY there. Understanding this concept is essential for mastering Spatial Concepts & Geographic Data in AP Human Geography.
+An online retailer wants a new warehouse that can deliver to customers in the U.S. Southeast within one day. Follow how each concept from this topic enters the decision.
 
-### Spatial association
-When two or more phenomena share similar spatial patterns. This builds on the previous concept and connects to broader themes in the course.
+| Step | Concept used | What the analyst does |
+|---|---|---|
+| 1 | **Scale of analysis** | Starts at the regional scale (the Southeast), then narrows to the local scale (specific parcels of land) |
+| 2 | **Data sources** | Gathers census population counts, highway traffic counts and land prices |
+| 3 | **Thematic maps** | Makes a dot distribution map of population to see where customers cluster |
+| 4 | **Distance and time-space compression** | Measures relative distance as truck-hours, not miles, from each candidate site |
+| 5 | **Distance decay** | Expects fewer same-day orders from places more than about eight truck-hours away |
+| 6 | **GIS** | Overlays population, interstate highways, land cost and flood zones to find parcels meeting every condition |
+| 7 | **Site and situation** | Compares the finalists: flat, dry, cheap land (site) next to an interstate junction near large metros (situation) |
+| 8 | **Human-environment interaction** | Avoids floodplains and plans stormwater control, a possibilist response to a real environmental limit |
 
-### Environmental determinism vs possibilism
-Debate over whether environment controls or influences human activity. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
-      `
-    },
-    {
-      id: 'hgspatia7-input',
-      type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
+**The map at the end, described in text:** a dot map of the Southeast shows dense clusters around Atlanta, Charlotte, Nashville and the Florida metros. Interstate lines run between them. A shaded flood layer covers river bottoms and the coastal lowlands. The few remaining candidate parcels sit near interstate junctions in north-central Georgia, roughly in the middle of the customer clusters.
 
-1) What term refers to the unique lens of geography — analyzing WHERE and WHY there?
-
-2) What concept describes when two or more phenomena share similar spatial patterns?
-
-3) Name the term for debate over whether environment controls or influences human activity.
-
-Use the exact term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['Geographic perspective', 'Spatial association', 'Environmental determinism vs possibilism'],
-        hint1: 'Starts with: G',
-        hint2: 'Starts with: S',
-        hint3: 'Starts with: E',
-        explanation: 'Expected answers: Geographic perspective (The unique lens of geography — analyzing WHERE and WHY there), Spatial association (When two or more phenomena share similar spatial patterns), and Environmental determinism vs possibilism (Debate over whether environment controls or influences human activity).'
-      }
+> 🔑 **AP Connection:** A strong FRQ answer often uses two or three of these concepts together. If a question asks why a company chose a location, combine **situation** (access to markets), **relative distance** (travel time) and **site** (land, cost, hazards).
+`
     },
     {
       id: 'hgspatia7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Name the Concept** 🔍
+
+Choose the concept each statement shows.
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The unique lens of geography — analyzing WHERE and WHY there is called ___',
-            options: ['Geographic perspective', 'Spatial association', 'Environmental determinism vs possibilism', 'None of these']
+            label: 'Same-day orders fall off sharply beyond eight truck-hours from the warehouse: ___',
+            options: ['distance decay', 'time-space compression', 'possibilism', 'concentration']
           },
           {
-            label: 'When two or more phenomena share similar spatial patterns describes ___',
-            options: ['Geographic perspective', 'Spatial association', 'Environmental determinism vs possibilism', 'All of these']
+            label: 'A new interstate cuts the trip between two cities from five hours to three: ___',
+            options: ['distance decay', 'time-space compression', 'possibilism', 'concentration']
           },
           {
-            label: 'Debate over whether environment controls or influences human activity is known as ___',
-            options: ['Environmental determinism vs possibilism', 'Geographic perspective', 'Spatial association', 'None of these']
+            label: 'Customers are packed into a few metro areas rather than spread evenly: ___',
+            options: ['distance decay', 'time-space compression', 'possibilism', 'concentration']
+          },
+          {
+            label: 'Engineers build drainage so a warehouse can stand on low, wet ground: ___',
+            options: ['distance decay', 'time-space compression', 'possibilism', 'concentration']
           }
         ],
-        correctAnswers: ['Geographic perspective', 'Spatial association', 'Environmental determinism vs possibilism'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Geographic perspective — The unique lens of geography — analyzing WHERE and WHY there. Spatial association — When two or more phenomena share similar spatial patterns. Environmental determinism vs possibilism — Debate over whether environment controls or influences human activity.'
+        correctAnswers: ['distance decay', 'time-space compression', 'concentration', 'possibilism'],
+        hint1: 'Interaction declines as distance increases.',
+        hint2: 'Faster transport shrinks relative distance.',
+        hint3: 'How spread out features are from each other.',
+        explanation: 'Falling orders with distance is distance decay. A faster highway is time-space compression. Customers packed into metros describes their concentration (clustered). Draining wet ground is a possibilist response to an environmental limit.'
       }
     },
     {
-      id: 'hgspatia7-strategy',
+      id: 'hgspatia7-traps',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## Final Checklist: Five Traps
 
-### Misconceptions to Avoid
-- Don\'t confuse **Geographic perspective** with **Spatial association** — while related, they address different aspects of Spatial Concepts & Geographic Data.
-- **Environmental determinism vs possibilism** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about ap review, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect ap review to broader themes in AP Human Geography for higher scores.
-      `
+1. **"Large-scale map = big area."** No: large scale means small area, high detail.
+2. **"Dense means clustered."** No: density counts per area; concentration describes spacing.
+3. **"The Mercator shows true size."** No: it inflates area toward the poles; Africa is about 14 times Greenland's area.
+4. **"A national average describes everyone."** No: finer scales reveal variation the average hides, such as Akita versus Tokyo.
+5. **"Climate explains culture."** No: that is environmental determinism; use possibilism and name the human choices.
+`
     },
     {
-      id: 'hgspatia7-applied',
+      id: 'hgspatia7-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**Final Check** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Two maps show that areas with high poverty and areas with poor health outcomes overlap significantly. This demonstrates:',
+            question: 'In the warehouse case, measuring candidate sites by truck-hours rather than miles is an example of using',
             options: [
-              'Coincidence',
-              'Spatial association — the similar spatial distribution suggests a relationship',
-              'Causation — poverty definitely causes poor health',
-              'Distance decay'
+              'absolute distance',
+              'relative distance',
+              'absolute direction',
+              'relative direction'
             ],
             correctAnswer: 1,
-            explanation: 'When spatial patterns of different phenomena overlap, it suggests spatial association — though correlation doesn\'t prove causation.'
+            explanation: 'Truck-hours measure separation in time, which is relative distance and better predicts delivery speed than miles. Miles would be absolute distance, and absolute or relative direction describes which way, not how far.'
           },
           {
-            question: 'A critic argues that a Mercator projection world map in a classroom gives students a biased view of the world. This criticism relates to:',
+            question: 'A state\'s average income is high, but a census-tract map shows several very poor neighborhoods in its largest city. This contrast shows that',
             options: [
-              'Map projections distorting area and potentially reinforcing Eurocentric worldviews',
-              'Maps being too expensive',
-              'Students not liking geography',
-              'The map being too old'
+              'the state average is wrong and the tract data are correct',
+              'a broad average can hide the local variation a finer scale reveals',
+              'census tracts form a small-scale map and states a large-scale one',
+              'income is a qualitative variable that cannot be shown on a map'
             ],
-            correctAnswer: 0,
-            explanation: 'The Mercator projection exaggerates high-latitude areas (mostly wealthy nations), potentially reinforcing biased perceptions of the world.'
+            correctAnswer: 1,
+            explanation: 'Both data sets can be accurate; the state average simply hides variation that appears at the finer, local scale. The contrast is about scale of analysis, not map scale, and income is quantitative.'
+          },
+          {
+            question: 'Which statement about the Gall-Peters and Mercator projections is accurate?',
+            options: [
+              'Both keep area true, but only the Mercator keeps shape true',
+              'Gall-Peters keeps area true; Mercator keeps compass bearings straight',
+              'Both distort direction, but only the Gall-Peters distorts area',
+              'Mercator keeps area true; Gall-Peters keeps compass bearings straight'
+            ],
+            correctAnswer: 1,
+            explanation: 'The Gall-Peters is equal-area, and the Mercator keeps lines of constant compass bearing straight at the cost of area. The other choices reverse or misstate which property each projection preserves.'
           }
         ]
       }
