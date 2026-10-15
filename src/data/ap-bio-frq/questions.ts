@@ -1,8 +1,9 @@
 /**
  * AP Biology FRQ Practice Questions
  * Based on College Board AP Biology FRQ format:
- * - 2 long FRQs (8-10 pts each, ~25 min each)
+ * - 2 long FRQs (9 pts each, ~25 min each)
  * - 4 short FRQs (4 pts each, ~10 min each)
+ * - Total: 34 points in 90 minutes
  * Topics span all 8 units
  */
 
@@ -52,7 +53,7 @@ The researcher measured the number of floating leaf disks over time under three 
 | 10 | 7 | 3 | 0 |
 | 15 | 10 | 5 | 0 |
 | 20 | 10 | 7 | 0 |`,
-    totalPoints: 10,
+    totalPoints: 9,
     timeRecommendation: '~25 minutes',
     calculatorAllowed: false,
     parts: [
@@ -70,10 +71,9 @@ The researcher measured the number of floating leaf disks over time under three 
       {
         label: '(b)',
         prompt: 'Explain the difference in the rate of floating between Condition A (bright light) and Condition B (dim light). Use the concept of the light-dependent reactions in your answer.',
-        maxPoints: 3,
+        maxPoints: 2,
         rubric: [
-          { points: 1, description: 'States that higher light intensity increases the rate of light-dependent reactions', keywords: ['light intensity', 'rate', 'light-dependent', 'photosystems'] },
-          { points: 1, description: 'Explains that more photons excite more electrons in photosystems, increasing ATP and NADPH production', keywords: ['photon', 'electron', 'ATP', 'NADPH', 'photosystem'] },
+          { points: 1, description: 'Explains that higher light intensity excites more electrons in the photosystems, increasing the rate of the light-dependent reactions (more ATP and NADPH)', keywords: ['light intensity', 'light-dependent', 'photon', 'photosystem', 'atp', 'nadph'] },
           { points: 1, description: 'Connects increased ATP/NADPH to faster Calvin cycle and greater net $O_{2}$ output', keywords: ['Calvin cycle', 'carbon fixation', 'oxygen', 'net', 'faster'] },
         ],
         sampleAnswer: 'In Condition A (bright light), more photons are available to excite electrons in Photosystem II and Photosystem I. This drives a faster rate of electron transport, producing more ATP (via chemiosmosis) and NADPH.\n\nWith more ATP and NADPH available, the Calvin cycle fixes $CO_{2}$ faster. The higher rate of light reactions also means more water is split, producing $O_{2}$ more rapidly. The net rate of photosynthesis exceeds the rate of cellular respiration by a greater margin in bright light than in dim light, so disks float sooner.',
@@ -115,7 +115,7 @@ A researcher creates four bacterial strains with different mutations and grows t
 | Strain 1 | *lacI* (constitutive repressor) | – | – | – |
 | Strain 2 | Operator constitutive ($O^c$) | + | + | + |
 | Strain 3 | *lacZ* deletion | – | – | – |`,
-    totalPoints: 10,
+    totalPoints: 9,
     timeRecommendation: '~25 minutes',
     calculatorAllowed: false,
     parts: [
@@ -143,10 +143,9 @@ A researcher creates four bacterial strains with different mutations and grows t
       {
         label: '(c)',
         prompt: 'Explain why Strain 2 ($O^c$ mutation) produces β-galactosidase even in glucose-only medium. How does this differ from wild-type regulation?',
-        maxPoints: 3,
+        maxPoints: 2,
         rubric: [
-          { points: 1, description: 'Explains that the Oc mutation changes the operator so the repressor cannot bind to it', keywords: ['operator', 'mutant', 'cannot bind', 'repressor cannot', 'Oc'] },
-          { points: 1, description: 'States that transcription occurs constitutively because the operator is always "open"', keywords: ['constitutive', 'always', 'transcription', 'open', 'continuous'] },
+          { points: 1, description: 'Explains that the Oc mutation changes the operator so the repressor cannot bind to it, so transcription occurs constitutively (the operator is always open)', keywords: ['operator', 'cannot bind', 'repressor cannot', 'constitutive', 'always'] },
           { points: 1, description: 'Explains that this differs from wild type because wild-type expression requires inducer (lactose) and absence of glucose', keywords: ['wild type', 'requires', 'inducer', 'lactose', 'glucose'] },
         ],
         sampleAnswer: 'The $O^c$ mutation alters the operator DNA sequence so that the repressor protein can no longer bind to it. Without repressor binding, RNA polymerase can always access the promoter and transcribe the structural genes.\n\nThis means the operon is constitutively expressed — β-galactosidase is produced regardless of whether lactose is present. Even in glucose-only medium, transcription proceeds because the operator is permanently "open."\n\nThis differs from wild-type regulation, where expression requires: (1) lactose to inactivate the repressor AND (2) absence of glucose to allow CAP activation. The Oc mutation bypasses the repressor-mediated control entirely.',

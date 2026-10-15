@@ -1,8 +1,11 @@
 /**
  * AP Calculus BC FRQ Practice Questions
  * Based on College Board AP Calculus BC FRQ format:
- * - 2 long FRQs (9 pts each, ~30 min each)
- * - 4 short FRQs (9 pts each, ~15 min each)
+ * - Part A: 2 FRQs, graphing calculator required (30 min)
+ * - Part B: 4 FRQs, no calculator (60 min)
+ * - Every FRQ is worth 9 points (~15 min each); 54 points in 90 minutes.
+ * The `type` field ('long' | 'short') is a legacy grouping kept for the content store;
+ * the page groups and times questions by `calculatorAllowed` (Part A vs Part B).
  * Topics span BC-specific content: series, parametric/polar, advanced integration
  */
 
@@ -32,7 +35,7 @@ export interface CalcBCFRQ {
   calculatorAllowed: boolean
 }
 
-// ─── Long FRQs (9 points each, ~30 minutes) ─────────────────────────
+// ─── Legacy "long" group (9 points each, ~15 minutes) ──────────────
 
 const longFRQs: CalcBCFRQ[] = [
   {
@@ -46,7 +49,7 @@ $$\\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{2n}}{(2n)!}$$
 
 which converges for all real numbers $x$.`,
     totalPoints: 9,
-    timeRecommendation: '~30 minutes',
+    timeRecommendation: '~15 minutes',
     calculatorAllowed: false,
     parts: [
       {
@@ -99,7 +102,7 @@ which converges for all real numbers $x$.`,
     title: 'Parametric Motion & Arc Length',
     prompt: `A particle moves in the $xy$-plane so that its position at time $t$ is given by $x(t) = 3\\cos(t)$ and $y(t) = 2\\sin(t)$ for $0 \\le t \\le 2\\pi$.`,
     totalPoints: 9,
-    timeRecommendation: '~30 minutes',
+    timeRecommendation: '~15 minutes',
     calculatorAllowed: true,
     parts: [
       {
@@ -152,7 +155,7 @@ which converges for all real numbers $x$.`,
     title: 'Power Series & Interval of Convergence',
     prompt: `Consider the power series $\\displaystyle\\sum_{n=1}^{\\infty} \\frac{(x - 3)^n}{n \\cdot 2^n}$.`,
     totalPoints: 9,
-    timeRecommendation: '~30 minutes',
+    timeRecommendation: '~15 minutes',
     calculatorAllowed: false,
     parts: [
       {
@@ -192,7 +195,7 @@ which converges for all real numbers $x$.`,
   },
 ]
 
-// ─── Short FRQs (9 points each, ~15 minutes) ────────────────────────
+// ─── Legacy "short" group (9 points each, ~15 minutes) ─────────────
 
 const shortFRQs: CalcBCFRQ[] = [
   {
@@ -475,13 +478,25 @@ export function getShortFRQs(): CalcBCFRQ[] {
   return shortFRQs
 }
 
+export function getCalculatorFRQs(pool: CalcBCFRQ[] = apCalcBCFRQs): CalcBCFRQ[] {
+  return pool.filter((q) => q.calculatorAllowed)
+}
+
+export function getNoCalculatorFRQs(pool: CalcBCFRQ[] = apCalcBCFRQs): CalcBCFRQ[] {
+  return pool.filter((q) => !q.calculatorAllowed)
+}
+
+/**
+ * Timed simulation that respects the calculator split: Part A is 2 calculator-active
+ * FRQs (30 min), Part B is 4 no-calculator FRQs (60 min). 54 points in 90 minutes.
+ */
 export function generateFullExamFRQs(pool: CalcBCFRQ[] = apCalcBCFRQs): {
-  long: CalcBCFRQ[]
-  short: CalcBCFRQ[]
+  partA: CalcBCFRQ[]
+  partB: CalcBCFRQ[]
   totalPoints: number
-  totalTime: string
+  totalMinutes: number
 } {
-  const shuffle = <T>(arr: T[]): T[] => {
+  const shuffle = <U,>(arr: U[]): U[] => {
     const copy = [...arr]
     for (let i = copy.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1))
@@ -490,12 +505,9 @@ export function generateFullExamFRQs(pool: CalcBCFRQ[] = apCalcBCFRQs): {
     return copy
   }
 
-  const selectedLong = shuffle(pool.filter((f) => f.type === 'long')).slice(0, 2)
-  const selectedShort = shuffle(pool.filter((f) => f.type === 'short')).slice(0, 4)
+  const partA = shuffle(getCalculatorFRQs(pool)).slice(0, 2)
+  const partB = shuffle(getNoCalculatorFRQs(pool)).slice(0, 4)
+  const totalPoints = [...partA, ...partB].reduce((s, q) => s + q.totalPoints, 0)
 
-  const totalPoints =
-    selectedLong.reduce((s, q) => s + q.totalPoints, 0) +
-    selectedShort.reduce((s, q) => s + q.totalPoints, 0)
-
-  return { long: selectedLong, short: selectedShort, totalPoints, totalTime: '90 min' }
+  return { partA, partB, totalPoints, totalMinutes: 90 }
 }

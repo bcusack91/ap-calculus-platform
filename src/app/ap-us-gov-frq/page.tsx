@@ -11,7 +11,9 @@ import rehypeKatex from 'rehype-katex'
 import {
   getApUSGovFRQs,
   generateFullExamFRQs,
+  US_GOV_FRQ_TYPES,
   type USGovFRQ,
+  type USGovFRQType,
   type FRQRubricItem,
 } from '@/data/ap-us-gov-frq/questions'
 import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
@@ -40,7 +42,22 @@ function formatTime(seconds: number): string {
 }
 
 type Mode = 'menu' | 'practice' | 'timed' | 'results'
-type Filter = 'all' | 'long' | 'short'
+type Filter = 'all' | USGovFRQType
+
+const TYPE_META = Object.fromEntries(US_GOV_FRQ_TYPES.map((t) => [t.type, t])) as Record<USGovFRQType, (typeof US_GOV_FRQ_TYPES)[number]>
+
+const TYPE_STYLE: Record<USGovFRQType, { icon: string; gradient: string; badge: string; headerBadge: string; blurb: string }> = {
+  'concept-application': { icon: '🏛️', gradient: 'from-blue-500 to-indigo-500', badge: 'bg-blue-100 dark:bg-blue-900/30 text-blue-600', headerBadge: 'bg-blue-800', blurb: 'Apply a course concept to a new political scenario: describe it, then explain it in context.' },
+  'quantitative-analysis': { icon: '📊', gradient: 'from-emerald-500 to-teal-500', badge: 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600', headerBadge: 'bg-emerald-700', blurb: 'Read a real data table, describe a pattern, draw a conclusion, and connect it to a political process.' },
+  'scotus-comparison': { icon: '⚖️', gradient: 'from-purple-500 to-pink-500', badge: 'bg-purple-100 dark:bg-purple-900/30 text-purple-600', headerBadge: 'bg-purple-700', blurb: 'Compare a required Supreme Court case with a non-required case summarized in the prompt.' },
+  'argument-essay': { icon: '✍️', gradient: 'from-amber-500 to-orange-500', badge: 'bg-amber-100 dark:bg-amber-900/30 text-amber-700', headerBadge: 'bg-amber-700', blurb: 'Defend a claim with evidence from the required foundational documents and rebut an opposing view.' },
+}
+
+/** Only current-format items (the four real types); an older content-store copy falls back to the static pool. */
+function currentFormat(frqs: unknown): USGovFRQ[] {
+  if (!Array.isArray(frqs)) return []
+  return frqs.filter((q): q is USGovFRQ => typeof q?.type === 'string' && q.type in TYPE_META)
+}
 
 function APUSGovFRQPageInner() {
   const { status } = useSession()
@@ -69,7 +86,10 @@ function APUSGovFRQPageInner() {
     let active = true
     fetch('/api/frq/ap-us-gov')
       .then((r) => (r.ok ? r.json() : null))
-      .then((data) => { if (active && Array.isArray(data?.frqs) && data.frqs.length > 0) setAllFrqs(data.frqs) })
+      .then((data) => {
+        const fresh = currentFormat(data?.frqs)
+        if (active && fresh.length > 0) setAllFrqs(fresh)
+      })
       .catch(() => {})
     return () => { active = false }
   }, [])
@@ -92,7 +112,7 @@ function APUSGovFRQPageInner() {
 
   const startPractice = useCallback((f: Filter) => {
     setFilter(f)
-    const pool = f === 'long' ? allFrqs.filter(q => q.type === 'long') : f === 'short' ? allFrqs.filter(q => q.type === 'short') : allFrqs
+    const pool = f === 'all' ? allFrqs : allFrqs.filter((q) => q.type === f)
     setFrqs(pool)
     setCurrentIdx(0)
     setResponses({})
@@ -103,14 +123,14 @@ function APUSGovFRQPageInner() {
   }, [allFrqs])
 
   const startTimedExam = useCallback(() => {
-    const { long, short } = generateFullExamFRQs(allFrqs)
-    setFrqs([...long, ...short])
+    const { questions, totalMinutes } = generateFullExamFRQs(allFrqs)
+    setFrqs(questions)
     setCurrentIdx(0)
     setResponses({})
     setResults({})
     setShowSample({})
     setShowRubric({})
-    setTimeRemaining(100 * 60)
+    setTimeRemaining(totalMinutes * 60)
     setMode('timed')
   }, [allFrqs])
 
@@ -194,12 +214,12 @@ function APUSGovFRQPageInner() {
               <div>
                 <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">Section II Structure</h4>
                 <ul className="space-y-1">
-                  <li>• 4 free-response questions</li>
-                  <li>• 1 Concept Application (20 min)</li>
-                  <li>• 1 Quantitative Analysis (20 min)</li>
-                  <li>• 1 SCOTUS Comparison (20 min)</li>
-                  <li>• 1 Argument Essay (40 min)</li>
-                  <li>• Total: 100 minutes</li>
+                  <li>• 4 free-response questions, 50% of the exam score</li>
+                  <li>• Concept Application (3 pts, ~20 min)</li>
+                  <li>• Quantitative Analysis (4 pts, ~20 min)</li>
+                  <li>• SCOTUS Comparison (4 pts, ~20 min)</li>
+                  <li>• Argument Essay (6 pts, ~40 min)</li>
+                  <li>• Total: 17 points in 100 minutes</li>
                 </ul>
               </div>
               <div>
@@ -215,27 +235,18 @@ function APUSGovFRQPageInner() {
           </div>
 
           <div className="grid sm:grid-cols-2 gap-4 mb-8">
-            <button onClick={() => startPractice('long')} className="group rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 text-left hover:shadow-lg transition">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="h-12 w-12 flex items-center justify-center rounded-xl bg-gradient-to-r from-blue-500 to-indigo-500 text-white text-xl">📄</div>
-                <div>
-                  <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400">Long FRQs</h3>
-                  <p className="text-xs text-gray-500">7-8 points · ~25 min each</p>
+            {US_GOV_FRQ_TYPES.map((t) => (
+              <button key={t.type} onClick={() => startPractice(t.type)} className="group rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 text-left hover:shadow-lg transition">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className={`h-12 w-12 flex items-center justify-center rounded-xl bg-gradient-to-r ${TYPE_STYLE[t.type].gradient} text-white text-xl`}>{TYPE_STYLE[t.type].icon}</div>
+                  <div>
+                    <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400">{t.label}</h3>
+                    <p className="text-xs text-gray-500">{t.points} points · ~{t.minutes} min · {allFrqs.filter((q) => q.type === t.type).length} questions</p>
+                  </div>
                 </div>
-              </div>
-              <p className="text-sm text-gray-600 dark:text-gray-400">Multi-part questions requiring analysis of foundational documents, Supreme Court cases, and political processes</p>
-            </button>
-
-            <button onClick={() => startPractice('short')} className="group rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 text-left hover:shadow-lg transition">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="h-12 w-12 flex items-center justify-center rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xl">📝</div>
-                <div>
-                  <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400">Short FRQs</h3>
-                  <p className="text-xs text-gray-500">3-4 points · ~12 min each</p>
-                </div>
-              </div>
-              <p className="text-sm text-gray-600 dark:text-gray-400">Focused questions on specific government institutions, civil liberties, and political participation</p>
-            </button>
+                <p className="text-sm text-gray-600 dark:text-gray-400">{TYPE_STYLE[t.type].blurb}</p>
+              </button>
+            ))}
 
             <button onClick={() => startPractice('all')} className="group rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 text-left hover:shadow-lg transition">
               <div className="flex items-center gap-3 mb-3">
@@ -253,7 +264,7 @@ function APUSGovFRQPageInner() {
                 <div className="h-12 w-12 flex items-center justify-center rounded-xl bg-gradient-to-r from-red-500 to-orange-500 text-white text-xl">⏱️</div>
                 <div>
                   <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-red-600 dark:group-hover:text-red-400">Timed Exam Simulation</h3>
-                  <p className="text-xs text-gray-500">100 min</p>
+                  <p className="text-xs text-gray-500">1 of each type · 17 points · 100 min</p>
                 </div>
               </div>
               <p className="text-sm text-gray-600 dark:text-gray-400">Simulate the real AP US Government Section II under exam conditions with a countdown timer.</p>
@@ -277,7 +288,7 @@ function APUSGovFRQPageInner() {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-blue-500 mt-0.5">✓</span>
-                For argument essays, take a clear position with evidence
+                Argument essay: one listed foundational document, a second piece of evidence, and a rebuttal
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-blue-500 mt-0.5">✓</span>
@@ -316,7 +327,7 @@ function APUSGovFRQPageInner() {
                 <div key={frq.id} className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4">
                   <div className="flex items-center justify-between">
                     <div>
-                      <span className={`text-xs font-bold px-2 py-0.5 rounded ${frq.type === 'long' ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-600' : 'bg-purple-100 dark:bg-purple-900/30 text-purple-600'}`}>{frq.type === 'long' ? 'Long FRQ' : 'Short FRQ'}</span>
+                      <span className={`text-xs font-bold px-2 py-0.5 rounded ${TYPE_STYLE[frq.type]?.badge ?? ''}`}>{TYPE_META[frq.type]?.short ?? 'FRQ'}</span>
                       <span className="ml-2 text-sm font-medium text-gray-900 dark:text-white">{frq.title}</span>
                     </div>
                     <span className={`font-bold ${frqTotal >= frq.totalPoints * 0.7 ? 'text-green-600' : frqTotal >= frq.totalPoints * 0.4 ? 'text-yellow-600' : 'text-red-600'}`}>{frqTotal}/{frq.totalPoints}</span>
@@ -342,7 +353,7 @@ function APUSGovFRQPageInner() {
         <div className="flex items-center justify-between mb-6 flex-wrap gap-3">
           <div>
             <button onClick={() => setMode('menu')} className="text-sm text-blue-600 dark:text-blue-400 hover:underline mb-1">&larr; Back to Menu</button>
-            <h1 className="text-xl font-bold text-gray-900 dark:text-white">{mode === 'timed' ? 'Timed FRQ Exam' : `FRQ Practice (${filter})`}</h1>
+            <h1 className="text-xl font-bold text-gray-900 dark:text-white">{mode === 'timed' ? 'Timed FRQ Exam' : `FRQ Practice: ${filter === 'all' ? 'All FRQs' : TYPE_META[filter].label}`}</h1>
           </div>
           <div className="flex items-center gap-4">
             {mode === 'timed' && (
@@ -360,7 +371,7 @@ function APUSGovFRQPageInner() {
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-4">
             <div className="flex items-center justify-between flex-wrap gap-2">
               <div>
-                <span className={`text-xs font-bold px-2 py-0.5 rounded mr-2 ${currentFRQ.type === 'long' ? 'bg-blue-800' : 'bg-purple-700'}`}>{currentFRQ.type === 'long' ? 'Long FRQ' : 'Short FRQ'}</span>
+                <span className={`text-xs font-bold px-2 py-0.5 rounded mr-2 ${TYPE_STYLE[currentFRQ.type]?.headerBadge ?? ''}`}>{TYPE_META[currentFRQ.type]?.label ?? 'FRQ'}</span>
                 <h2 className="text-lg font-bold mt-1">{currentFRQ.title}</h2>
               </div>
               <div className="flex items-center gap-3 text-sm">
@@ -377,6 +388,13 @@ function APUSGovFRQPageInner() {
               </div>
             </div>
 
+            {currentFRQ.dataTableHtml && (
+              <div
+                className="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-5 mb-6 border border-gray-200 dark:border-gray-600 overflow-x-auto prose prose-sm max-w-none dark:prose-invert [&_table]:w-full [&_th]:bg-blue-100 [&_th]:dark:bg-blue-900/30 [&_th]:px-3 [&_th]:py-1.5 [&_td]:px-3 [&_td]:py-1.5 [&_td]:border [&_th]:border [&_td]:border-gray-300 [&_th]:border-gray-300 [&_td]:dark:border-gray-600 [&_th]:dark:border-gray-600"
+                dangerouslySetInnerHTML={{ __html: currentFRQ.dataTableHtml }}
+              />
+            )}
+
             <div className="space-y-6">
               {currentFRQ.parts.map((part) => {
                 const key = `${currentFRQ.id}-${part.label}`
@@ -385,13 +403,13 @@ function APUSGovFRQPageInner() {
                   <div key={part.label} className="border border-gray-200 dark:border-gray-700 rounded-xl p-5">
                     <div className="flex items-center justify-between mb-3">
                       <div className="flex items-center gap-2">
-                        <span className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold">{part.label}</span>
+                        <span className="bg-blue-600 text-white min-w-8 h-8 px-2 rounded-full flex items-center justify-center text-sm font-bold">{part.label}</span>
                         <span className="text-sm text-blue-600 dark:text-blue-400 font-medium">({part.maxPoints} {part.maxPoints === 1 ? 'point' : 'points'})</span>
                       </div>
                       {result && <span className={`font-bold text-sm ${result.pointsEarned === part.maxPoints ? 'text-green-600' : result.pointsEarned > 0 ? 'text-yellow-600' : 'text-red-600'}`}>{result.pointsEarned}/{part.maxPoints}</span>}
                     </div>
                     <div className="mb-3 prose prose-sm max-w-none dark:prose-invert"><ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>{escapeCurrencyMath(part.prompt)}</ReactMarkdown></div>
-                    <textarea value={responses[key] || ''} onChange={(ev) => setResponses((prev) => ({ ...prev, [key]: ev.target.value }))} placeholder="Write your response here..." className="w-full h-36 p-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-gray-100 resize-y text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500" disabled={!!result} maxLength={2000} />
+                    <textarea value={responses[key] || ''} onChange={(ev) => setResponses((prev) => ({ ...prev, [key]: ev.target.value }))} placeholder={currentFRQ.type === 'argument-essay' ? 'Write your full essay here: claim, evidence from a listed document, a second piece of evidence, reasoning, and a response to an opposing view...' : 'Write your response here...'} className={`w-full ${currentFRQ.type === 'argument-essay' ? 'h-96' : 'h-36'} p-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-gray-100 resize-y text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500`} disabled={!!result} maxLength={currentFRQ.type === 'argument-essay' ? 8000 : 2000} />
                     {!result ? (
                       <div className="mt-3"><button onClick={() => handleGrade(currentFRQ.id, part.label, part.rubric)} className="px-4 py-2 text-sm bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 font-medium" disabled={!(responses[key] || '').trim()}>Grade Part {part.label}</button></div>
                     ) : (

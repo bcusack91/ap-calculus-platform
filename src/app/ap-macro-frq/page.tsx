@@ -226,7 +226,7 @@ function APMacroFRQPageInner() {
                 <div className="h-12 w-12 flex items-center justify-center rounded-xl bg-gradient-to-r from-emerald-500 to-green-500 text-white text-xl">📄</div>
                 <div>
                   <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400">Long FRQs</h3>
-                  <p className="text-xs text-gray-500">7 points · ~25 min each</p>
+                  <p className="text-xs text-gray-500">10 points · ~25 min</p>
                 </div>
               </div>
               <p className="text-sm text-gray-600 dark:text-gray-400">Multi-part problems covering key topics in AP Macroeconomics.</p>
@@ -237,7 +237,7 @@ function APMacroFRQPageInner() {
                 <div className="h-12 w-12 flex items-center justify-center rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xl">📝</div>
                 <div>
                   <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400">Short FRQs</h3>
-                  <p className="text-xs text-gray-500">4 points · ~12 min each</p>
+                  <p className="text-xs text-gray-500">5 points · ~12 min each</p>
                 </div>
               </div>
               <p className="text-sm text-gray-600 dark:text-gray-400">Focused questions on specific topics in AP Macroeconomics.</p>
@@ -259,7 +259,7 @@ function APMacroFRQPageInner() {
                 <div className="h-12 w-12 flex items-center justify-center rounded-xl bg-gradient-to-r from-red-500 to-orange-500 text-white text-xl">⏱️</div>
                 <div>
                   <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-red-600 dark:group-hover:text-red-400">Timed Exam Simulation</h3>
-                  <p className="text-xs text-gray-500">60 min</p>
+                  <p className="text-xs text-gray-500">1 long + 2 short · 20 points · 60 min</p>
                 </div>
               </div>
               <p className="text-sm text-gray-600 dark:text-gray-400">Simulate the real AP Macroeconomics Section II under exam conditions with a countdown timer.</p>
@@ -291,7 +291,7 @@ function APMacroFRQPageInner() {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-emerald-500 mt-0.5">✓</span>
-                Budget your time according to point values
+                Budget ~25 min for the long FRQ and ~12 min for each short FRQ
               </li>
             </ul>
           </div>

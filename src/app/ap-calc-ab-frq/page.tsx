@@ -40,7 +40,9 @@ function formatTime(seconds: number): string {
 }
 
 type Mode = 'menu' | 'practice' | 'timed' | 'results'
-type Filter = 'all' | 'long' | 'short'
+type Filter = 'all' | 'calc' | 'nocalc'
+
+const FILTER_LABEL: Record<Filter, string> = { all: 'All FRQs', calc: 'Part A (Calculator)', nocalc: 'Part B (No Calculator)' }
 
 function APCalcABFRQPageInner() {
   const { status } = useSession()
@@ -92,7 +94,7 @@ function APCalcABFRQPageInner() {
 
   const startPractice = useCallback((f: Filter) => {
     setFilter(f)
-    const pool = f === 'long' ? allFrqs.filter(q => q.type === 'long') : f === 'short' ? allFrqs.filter(q => q.type === 'short') : allFrqs
+    const pool = f === 'calc' ? allFrqs.filter((q) => q.calculatorAllowed) : f === 'nocalc' ? allFrqs.filter((q) => !q.calculatorAllowed) : allFrqs
     setFrqs(pool)
     setCurrentIdx(0)
     setResponses({})
@@ -103,14 +105,14 @@ function APCalcABFRQPageInner() {
   }, [allFrqs])
 
   const startTimedExam = useCallback(() => {
-    const { long, short } = generateFullExamFRQs(allFrqs)
-    setFrqs([...long, ...short])
+    const { partA, partB, totalMinutes } = generateFullExamFRQs(allFrqs)
+    setFrqs([...partA, ...partB])
     setCurrentIdx(0)
     setResponses({})
     setResults({})
     setShowSample({})
     setShowRubric({})
-    setTimeRemaining(90 * 60)
+    setTimeRemaining(totalMinutes * 60)
     setMode('timed')
   }, [allFrqs])
 
@@ -218,7 +220,7 @@ function APCalcABFRQPageInner() {
 
           <div className="grid sm:grid-cols-2 gap-4 mb-8">
             <button
-              onClick={() => startPractice('long')}
+              onClick={() => startPractice('calc')}
               className="group rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 text-left hover:shadow-lg transition"
             >
               <div className="flex items-center gap-3 mb-3">
@@ -227,18 +229,18 @@ function APCalcABFRQPageInner() {
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400">
-                    Long FRQs
+                    Part A: Calculator
                   </h3>
-                  <p className="text-xs text-gray-500">~9 points · ~30 min each</p>
+                  <p className="text-xs text-gray-500">9 points · ~15 min each · {allFrqs.filter((q) => q.calculatorAllowed).length} questions</p>
                 </div>
               </div>
               <p className="text-sm text-gray-600 dark:text-gray-400">
-                Multi-part problems involving accumulation, related rates, differential equations, and applications with data analysis.
+                Graphing calculator required: accumulation from table data, related rates, and modeling with real-world context.
               </p>
             </button>
 
             <button
-              onClick={() => startPractice('short')}
+              onClick={() => startPractice('nocalc')}
               className="group rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 text-left hover:shadow-lg transition"
             >
               <div className="flex items-center gap-3 mb-3">
@@ -247,13 +249,13 @@ function APCalcABFRQPageInner() {
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400">
-                    Short FRQs
+                    Part B: No Calculator
                   </h3>
-                  <p className="text-xs text-gray-500">~9 points · ~15 min each</p>
+                  <p className="text-xs text-gray-500">9 points · ~15 min each · {allFrqs.filter((q) => !q.calculatorAllowed).length} questions</p>
                 </div>
               </div>
               <p className="text-sm text-gray-600 dark:text-gray-400">
-                Focused questions on limits, derivatives, integration techniques, and the Fundamental Theorem of Calculus.
+                No calculator: limits, derivatives, slope fields and differential equations, and the Fundamental Theorem of Calculus.
               </p>
             </button>
 
@@ -291,7 +293,7 @@ function APCalcABFRQPageInner() {
                   <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-red-600 dark:group-hover:text-red-400">
                     Timed Exam Simulation
                   </h3>
-                  <p className="text-xs text-gray-500">2 long + 4 short · 90 min</p>
+                  <p className="text-xs text-gray-500">2 calculator + 4 no-calculator · 54 points · 90 min</p>
                 </div>
               </div>
               <p className="text-sm text-gray-600 dark:text-gray-400">
@@ -327,7 +329,7 @@ function APCalcABFRQPageInner() {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-blue-500 mt-0.5">✓</span>
-                Budget time: ~30 min per long FRQ, ~15 min per short
+                Budget time: ~15 min per FRQ (30 min Part A, 60 min Part B)
               </li>
             </ul>
           </div>
@@ -382,9 +384,9 @@ function APCalcABFRQPageInner() {
                   <div className="flex items-center justify-between">
                     <div>
                       <span
-                        className={`text-xs font-bold px-2 py-0.5 rounded ${frq.type === 'long' ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-600' : 'bg-purple-100 dark:bg-purple-900/30 text-purple-600'}`}
+                        className={`text-xs font-bold px-2 py-0.5 rounded ${frq.calculatorAllowed ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-600' : 'bg-purple-100 dark:bg-purple-900/30 text-purple-600'}`}
                       >
-                        {frq.type === 'long' ? 'Long FRQ' : 'Short FRQ'}
+                        {frq.calculatorAllowed ? 'Part A · Calculator' : 'Part B · No Calculator'}
                       </span>
                       <span className="ml-2 text-sm font-medium text-gray-900 dark:text-white">
                         {frq.title}
@@ -440,7 +442,7 @@ function APCalcABFRQPageInner() {
               ← Back to Menu
             </button>
             <h1 className="text-xl font-bold text-gray-900 dark:text-white">
-              {mode === 'timed' ? 'Timed FRQ Exam' : `FRQ Practice (${filter})`}
+              {mode === 'timed' ? 'Timed FRQ Exam' : `FRQ Practice: ${FILTER_LABEL[filter]}`}
             </h1>
           </div>
           <div className="flex items-center gap-4">
@@ -469,9 +471,9 @@ function APCalcABFRQPageInner() {
             <div className="flex items-center justify-between flex-wrap gap-2">
               <div>
                 <span
-                  className={`text-xs font-bold px-2 py-0.5 rounded mr-2 ${currentFRQ.type === 'long' ? 'bg-blue-800' : 'bg-purple-700'}`}
+                  className={`text-xs font-bold px-2 py-0.5 rounded mr-2 ${currentFRQ.calculatorAllowed ? 'bg-blue-800' : 'bg-purple-700'}`}
                 >
-                  {currentFRQ.type === 'long' ? 'Long FRQ' : 'Short FRQ'}
+                  {currentFRQ.calculatorAllowed ? 'Part A · Calculator' : 'Part B · No Calculator'}
                 </span>
                 <span className="text-xs text-blue-200">Unit {currentFRQ.unit}</span>
                 <h2 className="text-lg font-bold mt-1">{currentFRQ.title}</h2>

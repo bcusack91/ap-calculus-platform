@@ -118,7 +118,7 @@ const longFRQs: MacroFRQ[] = [
         prompt: "Identify ONE specific open-market operation the Fed could conduct to address the inflation problem, and show its effect on your money market graph.",
         maxPoints: 2,
         rubric: [
-          { points: 1, description: "Identifies open-market SALE of U.S. Treasury securities (or 'sell bonds')", keywords: ["open market sale", "sell bonds", "sell securities", "sell Treasuries", "contractionary"] },
+          { points: 1, description: "Identifies open-market SALE of U.S. Treasury securities (or 'sell bonds')", keywords: ["open market sale", "open-market sale", "sell bonds", "sell securities", "sell Treasuries", "contractionary"] },
           { points: 1, description: "Shows MS shifting LEFT, raising the nominal interest rate to i_2 > i_1", keywords: ["MS shifts left", "MS2", "higher interest rate", "i_2", "i_2 > i_1"] }
         ],
         sampleAnswer: "An open-market SALE of Treasuries by the Fed drains reserves from the banking system, shifting MS leftward to MS2. The new equilibrium nominal interest rate i_2 > i_1.",
@@ -129,7 +129,7 @@ const longFRQs: MacroFRQ[] = [
         maxPoints: 2,
         rubric: [
           { points: 1, description: "Correctly labels loanable funds market (Real Interest Rate on Y, Quantity of Loanable Funds on X) with upward-sloping supply (S_LF) and downward-sloping demand (D_LF)", keywords: ["real interest rate", "loanable funds", "S_LF", "D_LF", "supply of loanable funds", "demand for loanable funds"] },
-          { points: 1, description: "Shows S_LF shifting LEFT (or D_LF context), raising real interest rate and lowering quantity of loanable funds", keywords: ["S_LF shifts left", "higher real interest rate", "lower quantity", "Q_LF decreases"] }
+          { points: 1, description: "Shows S_LF shifting LEFT (or D_LF context), raising real interest rate and lowering quantity of loanable funds", keywords: ["S_LF shifts left", "shifting s_lf left", "real interest rate rises", "higher real interest rate", "lower quantity", "Q_LF decreases"] }
         ],
         sampleAnswer: "Fed contraction reduces bank reserves, shifting S_LF left. Real interest rate rises and quantity of loanable funds falls.",
       },
@@ -140,7 +140,7 @@ const longFRQs: MacroFRQ[] = [
         rubric: [
           { points: 1, description: "Investment spending: DECREASES (higher real interest rate → cost of borrowing rises → fewer projects have NPV > 0)", keywords: ["investment", "decreases", "I decreases", "cost of borrowing", "NPV", "fewer projects"] },
           { points: 1, description: "Aggregate demand: SHIFTS LEFT (lower I → lower AD via interest-rate effect on AD)", keywords: ["AD shifts left", "lower AD", "AD decreases", "interest rate effect"] },
-          { points: 1, description: "Price level and real GDP in the short run: BOTH DECREASE (movement along SRAS as AD shifts left)", keywords: ["price level decreases", "lower PL", "real GDP decreases", "lower output", "disinflation"] }
+          { points: 1, description: "Price level and real GDP in the short run: BOTH DECREASE (movement along SRAS as AD shifts left)", keywords: ["price level decreases", "price level and real gdp fall", "lower PL", "real GDP decreases", "lower output", "disinflation"] }
         ],
         sampleAnswer: "Higher real interest rate → I decreases (NPV of projects falls) → AD shifts left → both price level and real GDP fall in the short run; the inflation rate moderates toward the Fed's 2% target.",
       },
@@ -180,7 +180,7 @@ const longFRQs: MacroFRQ[] = [
         prompt: "Explain the crowding-out effect on private investment, and identify ONE long-run consequence for the LRAS curve.",
         maxPoints: 2,
         rubric: [
-          { points: 1, description: "Explains crowding out: higher real interest rate → reduces private investment (firms borrow less for capital projects)", keywords: ["crowding out", "private investment", "lower investment", "I decreases", "higher interest rate"] },
+          { points: 1, description: "Explains crowding out: higher real interest rate → reduces private investment (firms borrow less for capital projects)", keywords: ["crowding out", "private investment", "fewer investment", "lower investment", "I decreases", "higher interest rate"] },
           { points: 1, description: "Identifies long-run consequence: smaller capital stock → LRAS grows more slowly than it otherwise would", keywords: ["LRAS", "capital stock", "grows slower", "potential output", "long run", "growth"] }
         ],
         sampleAnswer: "The higher real interest rate raises the cost of private capital, so firms undertake fewer investment projects (Q_private↓). Less investment means slower accumulation of physical capital — LRAS grows more slowly over time, lowering long-run potential output.",
@@ -206,14 +206,14 @@ const longFRQs: MacroFRQ[] = [
       },
       {
         label: "(e)",
-        prompt: "Suppose a sudden negative supply shock (e.g., an oil price spike) hits the economy. On your Phillips curve graph from (d), show the short-run effect, and explain why this creates a policy DILEMMA for the central bank.",
+        prompt: "Suppose a sudden negative supply shock (e.g., an oil price spike) hits the economy. On your Phillips curve graph from (d), show the short-run effect. Explain how the shock affects short-run aggregate supply, and explain why this creates a policy DILEMMA for the central bank.",
         maxPoints: 3,
         rubric: [
           { points: 1, description: "Shows SRPC shifting RIGHT/UPWARD (SRPC → SRPC2) creating stagflation: higher inflation AND higher unemployment", keywords: ["SRPC shifts right", "SRPC2", "stagflation", "higher inflation", "higher unemployment", "supply shock"] },
           { points: 1, description: "Identifies the dilemma: contractionary policy reduces inflation but raises unemployment further; expansionary policy reduces unemployment but worsens inflation", keywords: ["dilemma", "trade-off", "contractionary worsens unemployment", "expansionary worsens inflation", "no dual mandate"] },
-          { points: 1, description: "Provides a concrete historical example (1973-74 OPEC oil embargo, 1979 Iranian Revolution oil shock, 2022 Russia-Ukraine energy spike, Volcker disinflation 1980-82)", keywords: ["1973", "OPEC", "oil embargo", "1979", "Iranian Revolution", "2022", "Volcker", "1980", "1982", "stagflation"] }
+          { points: 1, description: "Explains the mechanism: higher input costs shift SRAS to the LEFT, so the price level rises while real GDP falls (higher inflation and higher unemployment together)", keywords: ["sras shifts left", "sras decreases", "decrease in sras", "decrease in short-run aggregate supply", "short-run aggregate supply decreases", "short-run aggregate supply shifts left", "leftward shift of sras", "sras to the left"] }
         ],
-        sampleAnswer: "A negative supply shock shifts SRPC up/right (SRPC2), producing stagflation. The dilemma: tightening to fight inflation deepens the recession (Volcker 1980-82 raised the federal funds rate above 19%, causing the unemployment rate to peak at 10.8% in 1982); easing to fight unemployment entrenches inflation expectations. The 1973-74 OPEC embargo and 1979 Iranian Revolution oil shock both produced this trade-off.",
+        sampleAnswer: "A negative supply shock shifts SRPC up/right (SRPC2), producing stagflation. The oil price spike raises firms' production costs, so SRAS shifts left: the price level rises and real GDP falls, which means inflation and unemployment rise together. The dilemma: contractionary policy to fight inflation would push unemployment even higher, while expansionary policy to fight unemployment would make inflation worse. The central bank cannot fix both at once with demand-side policy.",
       }
     ],
     totalPoints: 10,
@@ -232,7 +232,7 @@ const longFRQs: MacroFRQ[] = [
         prompt: "Draw a correctly labeled FX market graph for the U.S. dollar (price = MXN per USD on Y-axis, quantity of dollars on X-axis). Show the initial equilibrium exchange rate.",
         maxPoints: 2,
         rubric: [
-          { points: 1, description: "Correctly labels axes (MXN/USD on Y-axis, Quantity of USD on X-axis) with downward-sloping demand for USD ($D_{\\$}$) and upward-sloping supply of USD ($S_{\\$}$)", keywords: ["MXN/USD", "quantity of dollars", "demand for dollars", "supply of dollars", "downward", "upward"] },
+          { points: 1, description: "Correctly labels axes (MXN/USD on Y-axis, Quantity of USD on X-axis) with downward-sloping demand for USD ($D_{\\$}$) and upward-sloping supply of USD ($S_{\\$}$)", keywords: ["MXN/USD", "mxn per usd", "quantity of usd", "quantity of dollars", "demand for dollars", "supply of dollars", "downward", "upward"] },
           { points: 1, description: "Shows initial equilibrium exchange rate E_1 at intersection", keywords: ["equilibrium", "E_1", "intersection"] }
         ],
         sampleAnswer: "FX market for USD: Y-axis = MXN per USD (price of dollars in pesos), X-axis = quantity of USD. D_\\$ slopes down, S_\\$ slopes up. Equilibrium exchange rate E_1 at intersection.",
@@ -253,7 +253,7 @@ const longFRQs: MacroFRQ[] = [
         maxPoints: 3,
         rubric: [
           { points: 1, description: "U.S. exports: DECREASE (U.S. goods more expensive for Mexican buyers)", keywords: ["exports decrease", "X decreases", "more expensive", "less competitive"] },
-          { points: 1, description: "U.S. imports: INCREASE (Mexican goods cheaper for U.S. buyers)", keywords: ["imports increase", "M increases", "cheaper imports", "more attractive"] },
+          { points: 1, description: "U.S. imports: INCREASE (Mexican goods cheaper for U.S. buyers)", keywords: ["imports increase", "imports rise", "M increases", "cheaper imports", "more attractive"] },
           { points: 1, description: "U.S. current account balance: WORSENS / becomes more negative (X − M falls)", keywords: ["current account", "deficit", "worsens", "more negative", "trade deficit", "X minus M"] }
         ],
         sampleAnswer: "Stronger USD: U.S. exports become more expensive abroad (Mexican buyers need more pesos per dollar of U.S. goods → exports fall) and U.S. imports become cheaper (U.S. buyers get more Mexican pesos per dollar → imports rise). Current account balance (≈ X − M) worsens.",
@@ -290,7 +290,7 @@ const shortFRQs: MacroFRQ[] = [
     type: 'short' as const,
     unit: 4,
     title: "Money Multiplier and Bank Balance Sheet",
-    prompt: "A central bank requires commercial banks to hold reserves equal to 10% of deposits. Bank A receives a new deposit of \\$5,000.",
+    prompt: "A central bank requires commercial banks to hold reserves equal to 10% of deposits. A customer takes \\$5,000 in cash that she had been keeping at home and deposits it in her checking account at Bank A.",
     parts: [
       {
         label: "(a)",
@@ -307,9 +307,9 @@ const shortFRQs: MacroFRQ[] = [
         maxPoints: 2,
         rubric: [
           { points: 1, description: "Money multiplier = 1 / required reserve ratio = 1 / 0.10 = 10", keywords: ["money multiplier", "1/RR", "1/0.10", "= 10", "ten"] },
-          { points: 1, description: "Maximum change in money supply = \\$5,000 × 10 = \\$50,000 (or, more precisely, change in loans × multiplier = \\$4,500 × 10 = \\$45,000 with original deposit already counted)", keywords: ["$50,000", "$45,000", "money supply", "total change"] }
+          { points: 1, description: "Maximum change in the money supply = excess reserves × multiplier = \\$4,500 × 10 = \\$45,000. The \\$5,000 cash deposit itself does not change the money supply, because it only converts currency into checkable deposits (both are part of M1)", keywords: ["45,000", "45000", "4,500 × 10", "4,500 x 10", "4500 x 10", "4500 × 10"] }
         ],
-        sampleAnswer: "Money multiplier = 1/RR = 1/0.10 = 10. Maximum change in money supply from a \\$5,000 deposit cascade = \\$5,000 × 10 = \\$50,000 (or \\$4,500 × 10 = \\$45,000 in newly created loans plus the original \\$5,000 deposit = \\$50,000).",
+        sampleAnswer: "Money multiplier = 1/RR = 1/0.10 = 10. The deposit moves \\$5,000 of currency into checkable deposits, so by itself it does not change the money supply (M1). Bank A's \\$4,500 of excess reserves can be lent and redeposited through the banking system, creating at most \\$4,500 × 10 = \\$45,000 of new money. Maximum change in the money supply = \\$45,000.",
       },
       {
         label: "(c)",
@@ -322,12 +322,12 @@ const shortFRQs: MacroFRQ[] = [
       },
       {
         label: "(d)",
-        prompt: "Identify ONE specific real-world reason the actual money multiplier in the United States has been smaller than this textbook calculation since 2008.",
+        prompt: "Explain ONE reason the actual increase in the money supply could be smaller than the maximum you calculated in part (b).",
         maxPoints: 1,
         rubric: [
-          { points: 1, description: "Identifies a real-world reason (banks hold large excess reserves due to interest on reserves IORB since 2008; abundant reserves regime; cash leakages; lower demand for loans post-2008)", keywords: ["interest on reserves", "IORB", "IOER", "excess reserves", "2008", "abundant reserves", "Fed pays interest", "cash leakages", "ample reserves regime"] }
+          { points: 1, description: "Explains a reason: banks may keep some excess reserves instead of lending them all, or borrowers may hold part of their loans as cash instead of redepositing it (a currency leakage), so less money is created at each round", keywords: ["excess reserves", "hold reserves", "keep reserves", "do not lend", "don't lend", "not lend", "hold cash", "keep cash", "hold currency", "leakage", "not redeposit", "don't redeposit"] }
         ],
-        sampleAnswer: "Since the Fed began paying Interest on Reserve Balances (IORB) in October 2008, banks have held trillions in excess reserves rather than lending them out, dramatically lowering the actual money multiplier and breaking the textbook 1/RR relationship.",
+        sampleAnswer: "The maximum assumes every bank lends out all of its excess reserves and every loan is redeposited. If banks choose to keep some excess reserves, or if borrowers hold some of the money they borrow as cash instead of depositing it, less is redeposited at each round, so the money supply grows by less than \\$45,000.",
       }
     ],
     totalPoints: 5,

@@ -69,7 +69,13 @@ function APBioFRQPageInner() {
     let active = true
     fetch('/api/frq/ap-bio')
       .then((r) => (r.ok ? r.json() : null))
-      .then((data) => { if (active && Array.isArray(data?.frqs) && data.frqs.length > 0) setAllFrqs(data.frqs) })
+      .then((data) => {
+        // Accept content-store rows only at the current point values (long 9, short 4);
+        // an older copy (long 10) falls back to the static bank.
+        const rows = Array.isArray(data?.frqs) ? (data.frqs as BioFRQ[]) : []
+        const current = rows.length > 0 && rows.every((q) => q.totalPoints === (q.type === 'long' ? 9 : 4))
+        if (active && current) setAllFrqs(rows)
+      })
       .catch(() => {})
     return () => { active = false }
   }, [])
@@ -229,7 +235,7 @@ function APBioFRQPageInner() {
                   <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-green-600 dark:group-hover:text-green-400">
                     Long FRQs
                   </h3>
-                  <p className="text-xs text-gray-500">8–10 points · ~25 min each</p>
+                  <p className="text-xs text-gray-500">9 points · ~25 min each</p>
                 </div>
               </div>
               <p className="text-sm text-gray-600 dark:text-gray-400">
@@ -293,7 +299,7 @@ function APBioFRQPageInner() {
                   <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-red-600 dark:group-hover:text-red-400">
                     Timed Exam Simulation
                   </h3>
-                  <p className="text-xs text-gray-500">2 long + 4 short · 90 min</p>
+                  <p className="text-xs text-gray-500">2 long + 4 short · 34 points · 90 min</p>
                 </div>
               </div>
               <p className="text-sm text-gray-600 dark:text-gray-400">

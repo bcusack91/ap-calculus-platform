@@ -1,8 +1,11 @@
 /**
  * AP Calculus AB FRQ Practice Questions
  * Based on College Board AP Calculus AB FRQ format:
- * - 2 long FRQs (9 pts each, ~30 min each)
- * - 4 short FRQs (9 pts each, ~15 min each)
+ * - Part A: 2 FRQs, graphing calculator required (30 min)
+ * - Part B: 4 FRQs, no calculator (60 min)
+ * - Every FRQ is worth 9 points (~15 min each); 54 points in 90 minutes.
+ * The `type` field ('long' | 'short') is a legacy grouping kept for the content store;
+ * the page groups and times questions by `calculatorAllowed` (Part A vs Part B).
  * Topics span all 8 units
  */
 
@@ -33,7 +36,7 @@ export interface CalcABFRQ {
   dataTableHtml?: string
 }
 
-// ─── Long FRQs (9 points each, ~30 minutes) ─────────────────────────
+// ─── Legacy "long" group (9 points each, ~15 minutes) ──────────────
 
 const longFRQs: CalcABFRQ[] = [
   {
@@ -49,7 +52,7 @@ const longFRQs: CalcABFRQ[] = [
 
 Water is simultaneously drained from the tank at a constant rate of 2 liters per minute.`,
     totalPoints: 9,
-    timeRecommendation: '~30 minutes',
+    timeRecommendation: '~15 minutes',
     calculatorAllowed: true,
     parts: [
       {
@@ -102,7 +105,7 @@ Water is simultaneously drained from the tank at a constant rate of 2 liters per
     title: 'Related Rates & Optimization',
     prompt: `A conical tank has a height of 10 meters and a top radius of 4 meters. Water is being pumped into the tank at a constant rate of $2$ cubic meters per minute. The volume of a cone is $V = \\frac{1}{3}\\pi r^2 h$.`,
     totalPoints: 9,
-    timeRecommendation: '~30 minutes',
+    timeRecommendation: '~15 minutes',
     calculatorAllowed: true,
     parts: [
       {
@@ -155,7 +158,7 @@ Water is simultaneously drained from the tank at a constant rate of 2 liters per
     title: 'Differential Equations & Slope Fields',
     prompt: `Consider the differential equation $\\frac{dy}{dx} = \\frac{x + 1}{y}$, where $y \\neq 0$.`,
     totalPoints: 9,
-    timeRecommendation: '~30 minutes',
+    timeRecommendation: '~15 minutes',
     calculatorAllowed: false,
     parts: [
       {
@@ -203,7 +206,7 @@ Water is simultaneously drained from the tank at a constant rate of 2 liters per
   },
 ]
 
-// ─── Short FRQs (9 points each, ~15 minutes) ────────────────────────
+// ─── Legacy "short" group (9 points each, ~15 minutes) ─────────────
 
 const shortFRQs: CalcABFRQ[] = [
   {
@@ -398,8 +401,8 @@ The semicircle has center $(2, 0)$ and radius 2, lying below the $x$-axis (from 
     id: 'calcab-short-5',
     type: 'short',
     unit: 4,
-    title: 'L\'Hôpital\'s Rule & Improper Integrals',
-    prompt: `Use L'Hôpital's Rule where appropriate to evaluate the following limits, and determine the convergence of a related improper integral.`,
+    title: 'L\'Hôpital\'s Rule & Integration by Substitution',
+    prompt: `Use L'Hôpital's Rule where appropriate to evaluate the following limits, then evaluate a definite integral using substitution.`,
     totalPoints: 9,
     timeRecommendation: '~15 minutes',
     calculatorAllowed: false,
@@ -457,13 +460,25 @@ export function getShortFRQs(): CalcABFRQ[] {
   return shortFRQs
 }
 
+export function getCalculatorFRQs(pool: CalcABFRQ[] = apCalcABFRQs): CalcABFRQ[] {
+  return pool.filter((q) => q.calculatorAllowed)
+}
+
+export function getNoCalculatorFRQs(pool: CalcABFRQ[] = apCalcABFRQs): CalcABFRQ[] {
+  return pool.filter((q) => !q.calculatorAllowed)
+}
+
+/**
+ * Timed simulation that respects the calculator split: Part A is 2 calculator-active
+ * FRQs (30 min), Part B is 4 no-calculator FRQs (60 min). 54 points in 90 minutes.
+ */
 export function generateFullExamFRQs(pool: CalcABFRQ[] = apCalcABFRQs): {
-  long: CalcABFRQ[]
-  short: CalcABFRQ[]
+  partA: CalcABFRQ[]
+  partB: CalcABFRQ[]
   totalPoints: number
-  totalTime: string
+  totalMinutes: number
 } {
-  const shuffle = <T>(arr: T[]): T[] => {
+  const shuffle = <U,>(arr: U[]): U[] => {
     const copy = [...arr]
     for (let i = copy.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1))
@@ -472,12 +487,9 @@ export function generateFullExamFRQs(pool: CalcABFRQ[] = apCalcABFRQs): {
     return copy
   }
 
-  const selectedLong = shuffle(pool.filter((f) => f.type === 'long')).slice(0, 2)
-  const selectedShort = shuffle(pool.filter((f) => f.type === 'short')).slice(0, 4)
+  const partA = shuffle(getCalculatorFRQs(pool)).slice(0, 2)
+  const partB = shuffle(getNoCalculatorFRQs(pool)).slice(0, 4)
+  const totalPoints = [...partA, ...partB].reduce((s, q) => s + q.totalPoints, 0)
 
-  const totalPoints =
-    selectedLong.reduce((s, q) => s + q.totalPoints, 0) +
-    selectedShort.reduce((s, q) => s + q.totalPoints, 0)
-
-  return { long: selectedLong, short: selectedShort, totalPoints, totalTime: '90 min' }
+  return { partA, partB, totalPoints, totalMinutes: 90 }
 }

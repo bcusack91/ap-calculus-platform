@@ -11,6 +11,7 @@ import rehypeKatex from 'rehype-katex'
 import {
   getApCSAFRQs,
   generateFullExamFRQs,
+  CSA_FRQ_TYPES,
   type CSAFRQ,
   type FRQRubricItem,
 } from '@/data/ap-csa-frq/questions'
@@ -42,6 +43,17 @@ function formatTime(seconds: number): string {
 type Mode = 'menu' | 'practice' | 'timed' | 'results'
 type Filter = 'all' | 'long' | 'short'
 
+const FILTER_LABEL: Record<Filter, string> = { all: 'All FRQs', long: 'Q1–Q2', short: 'Q3–Q4' }
+const TYPE_BY_ID = Object.fromEntries(CSA_FRQ_TYPES.map((t) => [t.id, t]))
+
+/** Accept content-store rows only when they carry the real 7/7/5/6 point values; older copies fall back to the static bank. */
+function currentFormat(frqs: unknown): CSAFRQ[] {
+  if (!Array.isArray(frqs)) return []
+  const rows = frqs as CSAFRQ[]
+  const ok = CSA_FRQ_TYPES.every((t) => rows.some((q) => q?.id === t.id && q.totalPoints === t.points))
+  return ok ? rows.filter((q) => !TYPE_BY_ID[q.id] || TYPE_BY_ID[q.id].points === q.totalPoints) : []
+}
+
 function APCSAFRQPageInner() {
   const { status } = useSession()
   const router = useRouter()
@@ -69,7 +81,10 @@ function APCSAFRQPageInner() {
     let active = true
     fetch('/api/frq/ap-csa')
       .then((r) => (r.ok ? r.json() : null))
-      .then((data) => { if (active && Array.isArray(data?.frqs) && data.frqs.length > 0) setAllFrqs(data.frqs) })
+      .then((data) => {
+        const fresh = currentFormat(data?.frqs)
+        if (active && fresh.length > 0) setAllFrqs(fresh)
+      })
       .catch(() => {})
     return () => { active = false }
   }, [])
@@ -103,14 +118,14 @@ function APCSAFRQPageInner() {
   }, [allFrqs])
 
   const startTimedExam = useCallback(() => {
-    const { long, short } = generateFullExamFRQs(allFrqs)
-    setFrqs([...long, ...short])
+    const { questions, totalMinutes } = generateFullExamFRQs(allFrqs)
+    setFrqs(questions)
     setCurrentIdx(0)
     setResponses({})
     setResults({})
     setShowSample({})
     setShowRubric({})
-    setTimeRemaining(90 * 60)
+    setTimeRemaining(totalMinutes * 60)
     setMode('timed')
   }, [allFrqs])
 
@@ -216,22 +231,22 @@ function APCSAFRQPageInner() {
               <div className="flex items-center gap-3 mb-3">
                 <div className="h-12 w-12 flex items-center justify-center rounded-xl bg-gradient-to-r from-orange-500 to-amber-500 text-white text-xl">📄</div>
                 <div>
-                  <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400">Long FRQs</h3>
-                  <p className="text-xs text-gray-500">7 points · ~25 min each</p>
+                  <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400">Q1–Q2: Methods &amp; Class Design</h3>
+                  <p className="text-xs text-gray-500">7 points each · ~22 min each</p>
                 </div>
               </div>
-              <p className="text-sm text-gray-600 dark:text-gray-400">Multi-part problems covering key topics in AP Computer Science A.</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Q1 Methods and Control Structures (Part B uses String methods) and Q2 Class Design.</p>
             </button>
 
             <button onClick={() => startPractice('short')} className="group rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 text-left hover:shadow-lg transition">
               <div className="flex items-center gap-3 mb-3">
                 <div className="h-12 w-12 flex items-center justify-center rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xl">📝</div>
                 <div>
-                  <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400">Short FRQs</h3>
-                  <p className="text-xs text-gray-500">4 points · ~12 min each</p>
+                  <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400">Q3–Q4: ArrayList &amp; 2D Array</h3>
+                  <p className="text-xs text-gray-500">5 and 6 points · ~22 min each</p>
                 </div>
               </div>
-              <p className="text-sm text-gray-600 dark:text-gray-400">Focused questions on specific topics in AP Computer Science A.</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Q3 Data Analysis with ArrayList and Q4 2D Array traversal.</p>
             </button>
 
             <button onClick={() => startPractice('all')} className="group rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 text-left hover:shadow-lg transition">
@@ -250,7 +265,7 @@ function APCSAFRQPageInner() {
                 <div className="h-12 w-12 flex items-center justify-center rounded-xl bg-gradient-to-r from-red-500 to-orange-500 text-white text-xl">⏱️</div>
                 <div>
                   <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-red-600 dark:group-hover:text-red-400">Timed Exam Simulation</h3>
-                  <p className="text-xs text-gray-500">90 min</p>
+                  <p className="text-xs text-gray-500">Q1–Q4 in order · 25 points · 90 min</p>
                 </div>
               </div>
               <p className="text-sm text-gray-600 dark:text-gray-400">Simulate the real AP Computer Science A Section II under exam conditions with a countdown timer.</p>
@@ -282,7 +297,7 @@ function APCSAFRQPageInner() {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-orange-500 mt-0.5">✓</span>
-                Budget your time according to point values
+                Budget about 22 minutes per question
               </li>
             </ul>
           </div>
@@ -313,7 +328,7 @@ function APCSAFRQPageInner() {
                 <div key={frq.id} className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4">
                   <div className="flex items-center justify-between">
                     <div>
-                      <span className={`text-xs font-bold px-2 py-0.5 rounded ${frq.type === 'long' ? 'bg-orange-100 dark:bg-orange-900/30 text-orange-600' : 'bg-purple-100 dark:bg-purple-900/30 text-purple-600'}`}>{frq.type === 'long' ? 'Long FRQ' : 'Short FRQ'}</span>
+                      <span className={`text-xs font-bold px-2 py-0.5 rounded ${frq.type === 'long' ? 'bg-orange-100 dark:bg-orange-900/30 text-orange-600' : 'bg-purple-100 dark:bg-purple-900/30 text-purple-600'}`}>{TYPE_BY_ID[frq.id]?.label ?? (frq.type === 'long' ? 'Long FRQ' : 'Short FRQ')}</span>
                       <span className="ml-2 text-sm font-medium text-gray-900 dark:text-white">{frq.title}</span>
                     </div>
                     <span className={`font-bold ${frqTotal >= frq.totalPoints * 0.7 ? 'text-green-600' : frqTotal >= frq.totalPoints * 0.4 ? 'text-yellow-600' : 'text-red-600'}`}>{frqTotal}/{frq.totalPoints}</span>
@@ -339,7 +354,7 @@ function APCSAFRQPageInner() {
         <div className="flex items-center justify-between mb-6 flex-wrap gap-3">
           <div>
             <button onClick={() => setMode('menu')} className="text-sm text-orange-600 dark:text-orange-400 hover:underline mb-1">&larr; Back to Menu</button>
-            <h1 className="text-xl font-bold text-gray-900 dark:text-white">{mode === 'timed' ? 'Timed FRQ Exam' : `FRQ Practice (${filter})`}</h1>
+            <h1 className="text-xl font-bold text-gray-900 dark:text-white">{mode === 'timed' ? 'Timed FRQ Exam' : `FRQ Practice: ${FILTER_LABEL[filter]}`}</h1>
           </div>
           <div className="flex items-center gap-4">
             {mode === 'timed' && (
@@ -357,7 +372,7 @@ function APCSAFRQPageInner() {
           <div className="bg-gradient-to-r from-orange-600 to-amber-600 text-white px-6 py-4">
             <div className="flex items-center justify-between flex-wrap gap-2">
               <div>
-                <span className={`text-xs font-bold px-2 py-0.5 rounded mr-2 ${currentFRQ.type === 'long' ? 'bg-orange-800' : 'bg-purple-700'}`}>{currentFRQ.type === 'long' ? 'Long FRQ' : 'Short FRQ'}</span>
+                <span className={`text-xs font-bold px-2 py-0.5 rounded mr-2 ${currentFRQ.type === 'long' ? 'bg-orange-800' : 'bg-purple-700'}`}>{TYPE_BY_ID[currentFRQ.id]?.label ?? (currentFRQ.type === 'long' ? 'Long FRQ' : 'Short FRQ')}</span>
                 <h2 className="text-lg font-bold mt-1">{currentFRQ.title}</h2>
               </div>
               <div className="flex items-center gap-3 text-sm">
