@@ -65,7 +65,7 @@ Fallacy detection is crucial for AP reading and writing:
               'Hasty generalization'
             ],
             correctAnswer: 1,
-            explanation: 'The statement attacks the person-s character/history instead of addressing the policy argument itself. That is ad hominem reasoning.'
+            explanation: 'The statement attacks the person\'s character/history instead of addressing the policy argument itself. That is ad hominem reasoning.'
           }
         ]
       }

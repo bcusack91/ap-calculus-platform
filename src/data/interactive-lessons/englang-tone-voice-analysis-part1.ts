@@ -66,7 +66,7 @@ Voice reflects recurring stylistic identity:
               'A change in audience'
             ],
             correctAnswer: 1,
-            explanation: 'The speaker-s attitude changes from measured to indignant, which is a tone shift. The underlying voice may remain the same (e.g., formal and authoritative) even as tone evolves.'
+            explanation: 'The speaker\'s attitude changes from measured to indignant, which is a tone shift. The underlying voice may remain the same (e.g., formal and authoritative) even as tone evolves.'
           }
         ]
       }

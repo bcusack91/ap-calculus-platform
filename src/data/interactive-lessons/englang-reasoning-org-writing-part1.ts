@@ -194,7 +194,7 @@ Restate thesis with nuance -> synthesize key reasons -> explain stakes/implicati
               'Use more advanced vocabulary'
             ],
             correctAnswer: 1,
-            explanation: 'The issue is coherence, not evidence quantity. Topic sentences and transitions make the argument-s logical structure explicit and help readers follow the reasoning chain.'
+            explanation: 'The issue is coherence, not evidence quantity. Topic sentences and transitions make the argument\'s logical structure explicit and help readers follow the reasoning chain.'
           },
           {
             question: 'Which paragraph order best supports a persuasive line of reasoning?',

@@ -66,7 +66,7 @@ If any link is weak or missing, the argument becomes less persuasive.
               'The biography of the author'
             ],
             correctAnswer: 1,
-            explanation: 'Line of reasoning is the argument-s logic in motion: how each idea builds toward the conclusion. AP scoring rewards clear, coherent reasoning rather than isolated points.'
+            explanation: 'Line of reasoning is the argument\'s logic in motion: how each idea builds toward the conclusion. AP scoring rewards clear, coherent reasoning rather than isolated points.'
           }
         ]
       }
@@ -189,13 +189,13 @@ Weak passages often:
               'Providing neutral background'
             ],
             correctAnswer: 1,
-            explanation: 'The "Yet" transition signals a turn from counterargument to rebuttal. Paragraph 4 directly responds to paragraph 3 and restores the writer-s main line of reasoning.'
+            explanation: 'The "Yet" transition signals a turn from counterargument to rebuttal. Paragraph 4 directly responds to paragraph 3 and restores the writer\'s main line of reasoning.'
           },
           {
             question: 'Why is identifying paragraph function useful on AP Lang multiple-choice?',
             options: [
               'It helps memorize quotes faster',
-              'It clarifies how each paragraph advances the author-s purpose and argument',
+              'It clarifies how each paragraph advances the author\'s purpose and argument',
               'It replaces the need to read carefully',
               'It only helps on poetry questions'
             ],
