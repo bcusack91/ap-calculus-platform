@@ -451,24 +451,24 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./aas-wwi-wwii-era-part1').then(m => m.aasWwiWwiiEraPart1Data) },
-      { title: 'Key Processes', loader: () => import('./aas-wwi-wwii-era-part2').then(m => m.aasWwiWwiiEraPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./aas-wwi-wwii-era-part3').then(m => m.aasWwiWwiiEraPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./aas-wwi-wwii-era-part4').then(m => m.aasWwiWwiiEraPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./aas-wwi-wwii-era-part5').then(m => m.aasWwiWwiiEraPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./aas-wwi-wwii-era-part6').then(m => m.aasWwiWwiiEraPart6Data) },
-      { title: 'AP Review', loader: () => import('./aas-wwi-wwii-era-part7').then(m => m.aasWwiWwiiEraPart7Data) }
+      { title: 'World War I: Service and Segregation (1917–1919)', loader: () => import('./aas-wwi-wwii-era-part2').then(m => m.aasWwiWwiiEraPart2Data) },
+      { title: 'The Home Front in Crisis: East St. Louis to the Red Summer (1917–1921)', loader: () => import('./aas-wwi-wwii-era-part3').then(m => m.aasWwiWwiiEraPart3Data) },
+      { title: 'Depression and New Deal: Labor, Relief and Political Realignment (1925–1940)', loader: () => import('./aas-wwi-wwii-era-part4').then(m => m.aasWwiWwiiEraPart4Data) },
+      { title: 'World War II: The Double V in Practice (1941–1945)', loader: () => import('./aas-wwi-wwii-era-part5').then(m => m.aasWwiWwiiEraPart5Data) },
+      { title: 'Source Workshop: War, Protest and Federal Power (1941–1948)', loader: () => import('./aas-wwi-wwii-era-part6').then(m => m.aasWwiWwiiEraPart6Data) },
+      { title: 'Synthesis and AP Review: Comparing the Two Wars', loader: () => import('./aas-wwi-wwii-era-part7').then(m => m.aasWwiWwiiEraPart7Data) }
     ],
   },
   'aas-practice-freedom': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./aas-practice-freedom-part1').then(m => m.aasPracticeFreedomPart1Data) },
-      { title: 'Key Processes', loader: () => import('./aas-practice-freedom-part2').then(m => m.aasPracticeFreedomPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./aas-practice-freedom-part3').then(m => m.aasPracticeFreedomPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./aas-practice-freedom-part4').then(m => m.aasPracticeFreedomPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./aas-practice-freedom-part5').then(m => m.aasPracticeFreedomPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./aas-practice-freedom-part6').then(m => m.aasPracticeFreedomPart6Data) },
-      { title: 'AP Review', loader: () => import('./aas-practice-freedom-part7').then(m => m.aasPracticeFreedomPart7Data) }
+      { title: 'The Black Church: Independence, Worship and Public Life', loader: () => import('./aas-practice-freedom-part2').then(m => m.aasPracticeFreedomPart2Data) },
+      { title: 'Schooling Freedom: Freedpeople\'s Schools, HBCUs and Rosenwald Schools', loader: () => import('./aas-practice-freedom-part3').then(m => m.aasPracticeFreedomPart3Data) },
+      { title: 'Lifting as We Climb: Women\'s Clubs, Mutual Aid and Black Business', loader: () => import('./aas-practice-freedom-part4').then(m => m.aasPracticeFreedomPart4Data) },
+      { title: 'Organizing for Rights: The Black Press, the NAACP and the Legal Campaign (1890s–1950)', loader: () => import('./aas-practice-freedom-part5').then(m => m.aasPracticeFreedomPart5Data) },
+      { title: 'Source Workshop: Institutions in Their Own Words', loader: () => import('./aas-practice-freedom-part6').then(m => m.aasPracticeFreedomPart6Data) },
+      { title: 'Synthesis and AP Review: Institutions as Infrastructure', loader: () => import('./aas-practice-freedom-part7').then(m => m.aasPracticeFreedomPart7Data) }
     ],
   },
   'aas-civil-rights-movement': {
