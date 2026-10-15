@@ -11,12 +11,26 @@ import rehypeKatex from 'rehype-katex'
 import {
   getApAASFRQs,
   generateFullExamFRQs,
+  AAS_FRQ_TYPES,
   type AASFRQ,
+  type AASFRQType,
   type FRQRubricItem,
 } from '@/data/ap-african-american-studies-frq/questions'
 import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 import { useRecordFrqAttempt } from '@/lib/use-frq-attempt'
 import { signUpUrl } from '@/lib/auth-redirect'
+
+/**
+ * Word-start keyword match, so 'tea' does not match "instead" and 'war' does not match
+ * "toward"; prefix stems ('legitim', 'industrializ') still match. A keyword that starts
+ * with punctuation or a space (e.g. '%') is matched as a plain substring.
+ */
+function keywordMatches(text: string, keyword: string): boolean {
+  const kw = keyword.toLowerCase()
+  if (!/^[a-z0-9]/.test(kw)) return text.includes(kw)
+  const escaped = kw.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+  return new RegExp('(^|[^a-z0-9])' + escaped).test(text)
+}
 
 function gradeResponse(
   response: string,
@@ -24,7 +38,8 @@ function gradeResponse(
 ): { pointsEarned: number; breakdown: { earned: boolean; item: FRQRubricItem }[] } {
   const lower = response.toLowerCase().replace(/\s+/g, ' ')
   const breakdown = rubric.map((item) => {
-    const earned = item.keywords.some((kw) => lower.includes(kw.toLowerCase()))
+    const hits = [...new Set(item.keywords)].filter((kw) => keywordMatches(lower, kw)).length
+    const earned = hits >= (item.minMatches ?? 1)
     return { earned, item }
   })
   return {
@@ -40,9 +55,34 @@ function formatTime(seconds: number): string {
 }
 
 type Mode = 'menu' | 'practice' | 'timed' | 'results'
-type Filter = 'all' | 'long' | 'short' | 'dbq'
+type Filter = 'all' | AASFRQType
 
-const TYPE_LABEL: Record<string, string> = { long: 'Long FRQ', short: 'Short FRQ', dbq: 'DBQ' }
+const TYPE_META = Object.fromEntries(AAS_FRQ_TYPES.map((t) => [t.type, t])) as Record<AASFRQType, (typeof AAS_FRQ_TYPES)[number]>
+
+const TYPE_STYLE: Record<AASFRQType, { icon: string; gradient: string; badge: string; headerBadge: string; blurb: string }> = {
+  'saq-text': { icon: '📜', gradient: 'from-purple-500 to-pink-500', badge: 'bg-purple-100 dark:bg-purple-900/30 text-purple-600', headerBadge: 'bg-purple-700', blurb: 'Analyze a written primary source in four 1-point parts: its claims, its context, and the developments it connects to.' },
+  'saq-visual': { icon: '🖼️', gradient: 'from-pink-500 to-rose-500', badge: 'bg-pink-100 dark:bg-pink-900/30 text-pink-600', headerBadge: 'bg-pink-700', blurb: 'Analyze an image, map, or work of art in three 1-point parts.' },
+  'saq-nosource': { icon: '💬', gradient: 'from-indigo-500 to-blue-500', badge: 'bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600', headerBadge: 'bg-indigo-700', blurb: 'Answer three 1-point parts on a course theme from your own knowledge, with no source.' },
+  'dbq': { icon: '🗂️', gradient: 'from-yellow-500 to-amber-500', badge: 'bg-teal-100 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300', headerBadge: 'bg-teal-700', blurb: 'Document-based essays with 5 sources, scored on the official 7-point DBQ rubric.' },
+}
+
+function typeBadge(q: AASFRQ): string {
+  return TYPE_META[q.type]?.short ?? 'FRQ'
+}
+
+function typeLabel(q: AASFRQ): string {
+  return TYPE_META[q.type]?.label ?? 'FRQ'
+}
+
+/**
+ * Only current-format items. Content-store rows of the retired long/short types are ignored, and the
+ * stored pool is used only once it holds every current type; otherwise the static bank is used.
+ */
+function currentFormat(frqs: unknown): AASFRQ[] {
+  if (!Array.isArray(frqs)) return []
+  const fresh = frqs.filter((q): q is AASFRQ => typeof q?.type === 'string' && q.type in TYPE_META)
+  return AAS_FRQ_TYPES.every((t) => fresh.some((q) => q.type === t.type)) ? fresh : []
+}
 
 function APAASFRQPageInner() {
   const { status } = useSession()
@@ -71,7 +111,10 @@ function APAASFRQPageInner() {
     let active = true
     fetch('/api/frq/ap-african-american-studies')
       .then((r) => (r.ok ? r.json() : null))
-      .then((data) => { if (active && Array.isArray(data?.frqs) && data.frqs.length > 0) setAllFrqs(data.frqs) })
+      .then((data) => {
+        const fresh = currentFormat(data?.frqs)
+        if (active && fresh.length > 0) setAllFrqs(fresh)
+      })
       .catch(() => {})
     return () => { active = false }
   }, [])
@@ -105,14 +148,14 @@ function APAASFRQPageInner() {
   }, [allFrqs])
 
   const startTimedExam = useCallback(() => {
-    const { long, short } = generateFullExamFRQs(allFrqs)
-    setFrqs([...long, ...short])
+    const { questions, totalMinutes } = generateFullExamFRQs(allFrqs)
+    setFrqs(questions)
     setCurrentIdx(0)
     setResponses({})
     setResults({})
     setShowSample({})
     setShowRubric({})
-    setTimeRemaining(90 * 60)
+    setTimeRemaining(totalMinutes * 60)
     setMode('timed')
   }, [allFrqs])
 
@@ -196,10 +239,10 @@ function APAASFRQPageInner() {
               <div>
                 <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">Section II Structure</h4>
                 <ul className="space-y-1">
-                  <li>• 3 SAQs in 40 minutes + 1 DBQ in 45 minutes</li>
-                  <li>• SAQs: one text source, one visual source, one thematic</li>
-                  <li>• DBQ: 5 sources, 7-point rubric, 45 min</li>
-                  <li>• Rubric-based scoring</li>
+                  <li>• 3 SAQs in 40 min + 1 DBQ in 45 min (85 min in all)</li>
+                  <li>• SAQ 1 text source (4 pts), SAQ 2 visual source (3 pts), SAQ 3 no source (3 pts)</li>
+                  <li>• DBQ: 5 sources, 7-point rubric</li>
+                  <li>• The exam-day project question is not included</li>
                 </ul>
               </div>
               <div>
@@ -215,38 +258,18 @@ function APAASFRQPageInner() {
           </div>
 
           <div className="grid sm:grid-cols-2 gap-4 mb-8">
-            <button onClick={() => startPractice('dbq')} className="group rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 text-left hover:shadow-lg transition">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="h-12 w-12 flex items-center justify-center rounded-xl bg-gradient-to-r from-yellow-500 to-amber-500 text-white text-xl">🗂️</div>
-                <div>
-                  <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-yellow-600 dark:group-hover:text-yellow-400">Document-Based Questions (DBQ)</h3>
-                  <p className="text-xs text-gray-500">5 sources · 7 points · 45 min</p>
+            {AAS_FRQ_TYPES.map((t) => (
+              <button key={t.type} onClick={() => startPractice(t.type)} className="group rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 text-left hover:shadow-lg transition">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className={`h-12 w-12 flex items-center justify-center rounded-xl bg-gradient-to-r ${TYPE_STYLE[t.type].gradient} text-white text-xl`}>{TYPE_STYLE[t.type].icon}</div>
+                  <div>
+                    <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-yellow-600 dark:group-hover:text-yellow-400">{t.label} ({t.short})</h3>
+                    <p className="text-xs text-gray-500">{t.points} points · ~{t.minutes} min · {allFrqs.filter((q) => q.type === t.type).length} in bank</p>
+                  </div>
                 </div>
-              </div>
-              <p className="text-sm text-gray-600 dark:text-gray-400">Document-based essays with 5 sources, scored on the official 7-point DBQ rubric.</p>
-            </button>
-
-            <button onClick={() => startPractice('long')} className="group rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 text-left hover:shadow-lg transition">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="h-12 w-12 flex items-center justify-center rounded-xl bg-gradient-to-r from-yellow-500 to-amber-500 text-white text-xl">📄</div>
-                <div>
-                  <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-yellow-600 dark:group-hover:text-yellow-400">Long FRQs</h3>
-                  <p className="text-xs text-gray-500">7 points · ~25 min each</p>
-                </div>
-              </div>
-              <p className="text-sm text-gray-600 dark:text-gray-400">Multi-part problems covering key topics in AP African American Studies.</p>
-            </button>
-
-            <button onClick={() => startPractice('short')} className="group rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 text-left hover:shadow-lg transition">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="h-12 w-12 flex items-center justify-center rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xl">📝</div>
-                <div>
-                  <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400">Short FRQs</h3>
-                  <p className="text-xs text-gray-500">4 points · ~12 min each</p>
-                </div>
-              </div>
-              <p className="text-sm text-gray-600 dark:text-gray-400">Focused questions on specific topics in AP African American Studies.</p>
-            </button>
+                <p className="text-sm text-gray-600 dark:text-gray-400">{TYPE_STYLE[t.type].blurb}</p>
+              </button>
+            ))}
 
             <button onClick={() => startPractice('all')} className="group rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 text-left hover:shadow-lg transition">
               <div className="flex items-center gap-3 mb-3">
@@ -264,7 +287,7 @@ function APAASFRQPageInner() {
                 <div className="h-12 w-12 flex items-center justify-center rounded-xl bg-gradient-to-r from-red-500 to-orange-500 text-white text-xl">⏱️</div>
                 <div>
                   <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-red-600 dark:group-hover:text-red-400">Timed Exam Simulation</h3>
-                  <p className="text-xs text-gray-500">90 min</p>
+                  <p className="text-xs text-gray-500">SAQ 1–3 (40 min) → DBQ (45 min) · 17 points · 85 min</p>
                 </div>
               </div>
               <p className="text-sm text-gray-600 dark:text-gray-400">Simulate the real AP African American Studies Section II under exam conditions with a countdown timer.</p>
@@ -327,7 +350,7 @@ function APAASFRQPageInner() {
                 <div key={frq.id} className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4">
                   <div className="flex items-center justify-between">
                     <div>
-                      <span className={`text-xs font-bold px-2 py-0.5 rounded ${frq.type === 'long' ? 'bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600' : frq.type === 'dbq' ? 'bg-teal-100 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300' : 'bg-purple-100 dark:bg-purple-900/30 text-purple-600'}`}>{TYPE_LABEL[frq.type] ?? 'FRQ'}</span>
+                      <span className={`text-xs font-bold px-2 py-0.5 rounded ${TYPE_STYLE[frq.type]?.badge ?? ''}`}>{typeBadge(frq)}</span>
                       <span className="ml-2 text-sm font-medium text-gray-900 dark:text-white">{frq.title}</span>
                     </div>
                     <span className={`font-bold ${frqTotal >= frq.totalPoints * 0.7 ? 'text-green-600' : frqTotal >= frq.totalPoints * 0.4 ? 'text-yellow-600' : 'text-red-600'}`}>{frqTotal}/{frq.totalPoints}</span>
@@ -347,13 +370,15 @@ function APAASFRQPageInner() {
 
   if (!currentFRQ) return <div className="min-h-screen flex items-center justify-center"><p className="text-gray-500">No questions available.</p></div>
 
+  const isEssay = currentFRQ.type === 'dbq'
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-yellow-50 via-white to-amber-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
       <div className="max-w-4xl mx-auto px-4 py-8">
         <div className="flex items-center justify-between mb-6 flex-wrap gap-3">
           <div>
             <button onClick={() => setMode('menu')} className="text-sm text-yellow-600 dark:text-yellow-400 hover:underline mb-1">&larr; Back to Menu</button>
-            <h1 className="text-xl font-bold text-gray-900 dark:text-white">{mode === 'timed' ? 'Timed FRQ Exam' : filter === 'dbq' ? 'DBQ Practice' : `FRQ Practice (${filter})`}</h1>
+            <h1 className="text-xl font-bold text-gray-900 dark:text-white">{mode === 'timed' ? 'Timed FRQ Exam' : `FRQ Practice: ${filter === 'all' ? 'All FRQs' : TYPE_META[filter].label}`}</h1>
           </div>
           <div className="flex items-center gap-4">
             {mode === 'timed' && (
@@ -371,7 +396,7 @@ function APAASFRQPageInner() {
           <div className="bg-gradient-to-r from-yellow-600 to-amber-600 text-white px-6 py-4">
             <div className="flex items-center justify-between flex-wrap gap-2">
               <div>
-                <span className={`text-xs font-bold px-2 py-0.5 rounded mr-2 ${currentFRQ.type === 'long' ? 'bg-yellow-800' : currentFRQ.type === 'dbq' ? 'bg-teal-700' : 'bg-purple-700'}`}>{TYPE_LABEL[currentFRQ.type] ?? 'FRQ'}</span>
+                <span className={`text-xs font-bold px-2 py-0.5 rounded mr-2 ${TYPE_STYLE[currentFRQ.type]?.headerBadge ?? ''}`}>{typeLabel(currentFRQ)}</span>
                 <h2 className="text-lg font-bold mt-1">{currentFRQ.title}</h2>
               </div>
               <div className="flex items-center gap-3 text-sm">
@@ -402,9 +427,9 @@ function APAASFRQPageInner() {
                       {result && <span className={`font-bold text-sm ${result.pointsEarned === part.maxPoints ? 'text-green-600' : result.pointsEarned > 0 ? 'text-yellow-600' : 'text-red-600'}`}>{result.pointsEarned}/{part.maxPoints}</span>}
                     </div>
                     <div className="mb-3 prose prose-sm max-w-none dark:prose-invert"><ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>{escapeCurrencyMath(part.prompt)}</ReactMarkdown></div>
-                    <textarea value={responses[key] || ''} onChange={(ev) => setResponses((prev) => ({ ...prev, [key]: ev.target.value }))} placeholder={currentFRQ.type === 'dbq' ? 'Write your essay here...' : 'Write your response here...'} className={`w-full ${currentFRQ.type === 'dbq' ? 'h-96' : 'h-36'} p-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-gray-100 resize-y text-sm focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500`} disabled={!!result} maxLength={currentFRQ.type === 'dbq' ? 12000 : 2000} />
+                    <textarea value={responses[key] || ''} onChange={(ev) => setResponses((prev) => ({ ...prev, [key]: ev.target.value }))} placeholder={isEssay ? 'Write your essay here...' : 'Write your response here...'} className={`w-full ${isEssay ? 'h-96' : 'h-36'} p-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-gray-100 resize-y text-sm focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500`} disabled={!!result} maxLength={isEssay ? 12000 : 2000} />
                     {!result ? (
-                      <div className="mt-3"><button onClick={() => handleGrade(currentFRQ.id, part.label, part.rubric)} className="px-4 py-2 text-sm bg-yellow-600 text-white rounded-lg hover:bg-yellow-700 transition-colors disabled:opacity-50 font-medium" disabled={!(responses[key] || '').trim()}>{currentFRQ.type === 'dbq' ? 'Grade Essay' : `Grade Part ${part.label}`}</button></div>
+                      <div className="mt-3"><button onClick={() => handleGrade(currentFRQ.id, part.label, part.rubric)} className="px-4 py-2 text-sm bg-yellow-600 text-white rounded-lg hover:bg-yellow-700 transition-colors disabled:opacity-50 font-medium" disabled={!(responses[key] || '').trim()}>{isEssay ? 'Grade Essay' : `Grade Part ${part.label}`}</button></div>
                     ) : (
                       <div className="mt-3 space-y-3">
                         <div className="space-y-1">
