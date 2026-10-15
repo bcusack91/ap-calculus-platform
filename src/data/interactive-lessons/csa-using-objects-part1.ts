@@ -50,20 +50,20 @@ ArrayList<Integer> numbers = new ArrayList<Integer>();
           {
             question: 'What happens when you write: String s = null; s.length();',
             options: [
-              'Returns 0',
-              'Returns -1',
-              'Throws a NullPointerException',
-              'Compile error'
+              'It returns 0, the length of an empty String',
+              'It returns -1 to signal that s is missing',
+              'It throws a NullPointerException',
+              'A compile error, since s holds no object'
             ],
             correctAnswer: 2,
-            explanation: 'null means s does not reference any String object. Calling .length() on null triggers a NullPointerException at runtime because there is no object to call the method on.'
+            explanation: 'null means s does not reference any String object. Calling .length() on null triggers a NullPointerException at runtime because there is no object to call the method on. The code compiles, since null is a legal value for a String variable.'
           },
           {
             question: 'Which of the following correctly creates a new object?',
             options: [
               'Rectangle r = Rectangle(3, 4);',
               'Rectangle r = new Rectangle(3, 4);',
-              'new Rectangle r = Rectangle(3, 4);',
+              'new Rectangle r(3, 4);',
               'Rectangle r = new Rectangle;'
             ],
             correctAnswer: 1,
@@ -138,18 +138,18 @@ When two variables reference the same object, they are **aliases**. Changing the
         dropdowns: [
           {
             label: 'Math.random() returns a value in the range ___',
-            options: ['0.0 (inclusive) to 1.0 (exclusive)', '0 to 100', '1 to 10', '-1.0 to 1.0']
+            options: ['0.0 to 1.0, excluding 1.0', '0.0 to 1.0, including 1.0', '1 to 10, including 10', '-1.0 to 1.0, excluding 1.0']
           },
           {
             label: 'int[] a = {1,2,3}; int[] b = a; b[0] = 9; After this, a[0] is ___',
-            options: ['9 (aliases reference the same array)', '1 (b is an independent copy)', '0 (reset to default)', 'Compile error']
+            options: ['9 (a and b share one array)', '1 (b is an independent copy)', '0 (reset to the default)', 'Compile error']
           },
           {
             label: 'Calling a method on a null reference causes a ___',
             options: ['NullPointerException', 'ArrayIndexOutOfBoundsException', 'Compile error', 'The method returns null']
           }
         ],
-        correctAnswers: ['0.0 (inclusive) to 1.0 (exclusive)', '9 (aliases reference the same array)', 'NullPointerException'],
+        correctAnswers: ['0.0 to 1.0, excluding 1.0', '9 (a and b share one array)', 'NullPointerException'],
         hint1: 'A double from 0 up to but not including 1.',
         hint2: 'Both variables point to the same array in memory.',
         hint3: 'No object to call the method on.',
@@ -194,10 +194,10 @@ When two variables reference the same object, they are **aliases**. Changing the
               '"world"',
               '"hello"',
               'null',
-              'Compile error'
+              'A compile error, since "hello" is immutable'
             ],
             correctAnswer: 1,
-            explanation: 'Strings are immutable. When a = "world" is executed, a points to a new String object "world", but b still points to the original "hello". Reassigning a does not affect b.'
+            explanation: 'Strings are immutable. When a = "world" is executed, a points to a new String object "world", but b still points to the original "hello". Reassigning a does not affect b. Immutability means the String object cannot change; it does not stop a variable from being reassigned, so the code compiles.'
           }
         ]
       }

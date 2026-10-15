@@ -47,10 +47,10 @@ Since P is constant for a competitive firm:
           {
             question: 'In perfect competition, a firm\'s demand curve is:',
             options: [
-              'Downward-sloping like the market demand',
+              'Downward-sloping, like the market demand curve',
               'Perfectly elastic (horizontal) at the market price',
-              'Perfectly inelastic (vertical)',
-              'Upward-sloping'
+              'Perfectly inelastic (vertical) at the firm\'s output',
+              'Upward-sloping along the firm\'s marginal cost curve'
             ],
             correctAnswer: 1,
             explanation: 'A price taker can sell any quantity at the market price — if it charges above, it sells nothing; below is unnecessary. Demand is perfectly elastic (horizontal).'
@@ -130,11 +130,11 @@ Why? If P < AVC, the firm loses MORE by operating than by shutting down. When sh
         dropdowns: [
           {
             label: 'When P > ATC at the profit-maximizing quantity, the firm earns ___',
-            options: ['Economic profit', 'Normal profit', 'Economic loss', 'Zero revenue']
+            options: ['Economic profit', 'Normal profit', 'Economic loss', 'Accounting loss']
           },
           {
             label: 'When ATC > P > AVC, the firm should ___ in the short run',
-            options: ['Continue producing', 'Shut down immediately', 'Raise its price', 'Double production']
+            options: ['Continue producing', 'Shut down immediately', 'Raise its price', 'Exit the industry']
           },
           {
             label: 'The short-run supply curve of a competitive firm is the MC curve above ___',
@@ -189,10 +189,10 @@ In the long run, free entry and exit drive economic profit to **zero**:
           {
             question: 'If firms in a perfectly competitive industry are currently earning economic profit, what will happen in the long run?',
             options: [
-              'Firms will raise prices to increase profits further',
-              'New firms enter, supply increases, price falls until profit equals zero',
-              'Existing firms will merge to form a monopoly',
-              'Nothing — profits persist indefinitely'
+              'Existing firms raise their prices to earn even larger profits',
+              'New firms enter and increase supply until each firm\'s profit falls to zero',
+              'Existing firms merge into a few large firms to protect profits',
+              'Profits persist because each firm is too small to affect supply'
             ],
             correctAnswer: 1,
             explanation: 'Free entry means profit attracts new firms → supply shifts right → market price falls → each firm\'s profit shrinks until P = min ATC and economic profit = 0.'
@@ -202,7 +202,7 @@ In the long run, free entry and exit drive economic profit to **zero**:
             options: [
               'Shut down because it is making a loss',
               'Continue producing because P > AVC',
-              'Raise its price above $10',
+              'Raise its price above \\$10',
               'Increase output to cover fixed costs'
             ],
             correctAnswer: 1,

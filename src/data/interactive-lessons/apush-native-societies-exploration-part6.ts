@@ -181,7 +181,7 @@ From May 2027 all three SAQs are required and all three are sourced: SAQ 1 uses 
               'Jamestown in 1607 depended on tobacco and indentured servants, which caused conflict with the Powhatan over farmland'
             ],
             correctAnswer: 0,
-            explanation: 'The encomienda answer names a venture, explains how it worked, and links it to an effect on Native-European relations. The second only identifies a system without explaining an effect, the French answer is inaccurate, and the Jamestown answer falls outside the period the prompt names.'
+            explanation: 'The encomienda answer names a venture, explains how it worked, and links it to an effect on Native-European relations. The answer calling the encomienda "one of the most important institutions" only identifies a system without explaining an effect, the French answer is inaccurate, and the Jamestown answer falls outside the period the prompt names.'
           },
           {
             question: 'Which short answer best demonstrates AP "complexity" about the collapse of Indigenous populations?',

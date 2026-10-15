@@ -53,7 +53,7 @@ Market failure occurs when **any of these conditions break down**.
           {
             question: 'A market is allocatively efficient when:',
             options: [
-              'The firm produces at minimum ATC',
+              'The firm produces at its lowest ATC',
               'Price equals marginal cost for the last unit',
               'Total revenue is maximized',
               'Producer surplus exceeds consumer surplus'

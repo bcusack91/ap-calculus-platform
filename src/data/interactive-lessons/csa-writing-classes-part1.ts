@@ -70,10 +70,10 @@ public class Student {
           {
             question: 'Why should instance variables be declared private?',
             options: [
-              'Private variables run faster than public ones',
+              'Private variables are read faster because the JVM can cache them',
               'To enforce encapsulation and prevent direct access from outside the class',
-              'Java requires all variables to be private',
-              'Private variables use less memory'
+              'Java will not compile a class whose instance variables are public',
+              'Only private variables can be given values inside a constructor'
             ],
             correctAnswer: 1,
             explanation: 'Encapsulation (data hiding) is a core OOP principle. Making fields private forces users to go through methods, which can validate input and maintain object integrity.'
@@ -81,10 +81,10 @@ public class Student {
           {
             question: 'What is the purpose of the "this" keyword in a constructor?',
             options: [
-              'It creates a new object',
-              'It calls another constructor',
+              'It creates a new object of the class before the constructor body runs',
+              'It makes the parameter keep its value after the constructor ends',
               'It distinguishes the instance variable from the parameter with the same name',
-              'It makes the variable public'
+              'It makes the instance variable public so other classes can read it'
             ],
             correctAnswer: 2,
             explanation: 'When a parameter and instance variable have the same name, "this.name" refers to the instance variable and "name" refers to the parameter. This resolves the ambiguity.'
@@ -168,18 +168,18 @@ System.out.println(s);  // Calls s.toString() automatically
           },
           {
             label: 'A constructor has ___ return type',
-            options: ['No return type (not even void)', 'void', 'The class type', 'int']
+            options: ['No', 'A void', 'An int', 'A boolean']
           },
           {
             label: 'If a class has no constructors written, Java provides ___',
             options: ['A default no-argument constructor', 'A parameterized constructor', 'Nothing — the class cannot be instantiated', 'A static factory method']
           }
         ],
-        correctAnswers: ['Accessor (getter) method', 'No return type (not even void)', 'A default no-argument constructor'],
+        correctAnswers: ['Accessor (getter) method', 'No', 'A default no-argument constructor'],
         hint1: 'Returns data without modifying anything.',
         hint2: 'Constructors are special — they have no return type at all.',
         hint3: 'Java auto-generates one only if you write none.',
-        explanation: 'getName() = accessor. Constructors have no return type. Java provides default constructor only if none are written.'
+        explanation: 'getName() = accessor. Constructors have no return type, not even void. Java provides default constructor only if none are written.'
       }
     },
     {
@@ -221,10 +221,10 @@ System.out.println(s);  // Calls s.toString() automatically
               'Location: (3,7)',
               'Location: Point@abc123',
               'Compile error',
-              'Location: null'
+              'Location: (x,y)'
             ],
             correctAnswer: 0,
-            explanation: 'String concatenation with an object calls toString() automatically. The toString() method returns "(3,7)", so the output is "Location: (3,7)".'
+            explanation: 'String concatenation with an object calls toString() automatically. The toString() method returns "(3,7)", so the output is "Location: (3,7)". toString() builds the String from the values stored in x and y, not from the variable names.'
           }
         ]
       }

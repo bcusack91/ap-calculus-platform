@@ -59,10 +59,10 @@ MR falls **twice as fast** as the demand curve (for a linear demand).
           {
             question: 'For a monopolist, marginal revenue is less than price because:',
             options: [
-              'The government taxes monopoly profits',
+              'Taxes on monopoly profit take part of the revenue from each unit',
               'Lowering price to sell more reduces revenue on all previous units',
-              'Monopolists always operate at a loss',
-              'Demand is perfectly elastic for monopolies'
+              'Rising average cost forces the firm to accept less for later units',
+              'The monopolist\'s demand is perfectly elastic at the market price'
             ],
             correctAnswer: 1,
             explanation: 'To sell the 3rd unit at \\$8, the monopolist also drops from \\$9 to \\$8 on the first two units — losing \\$2 on inframarginal units. MR = \\$6 < P = \\$8.'
@@ -70,10 +70,10 @@ MR falls **twice as fast** as the demand curve (for a linear demand).
           {
             question: 'A monopoly can earn positive economic profit in the long run because:',
             options: [
-              'It produces at minimum ATC',
+              'It produces at the minimum of its average total cost curve',
               'Barriers to entry prevent new firms from competing away profits',
-              'The government subsidizes monopoly output',
-              'Demand is perfectly inelastic'
+              'The government pays it a per-unit subsidy that keeps profit up',
+              'Its demand is perfectly inelastic, so it can charge any price'
             ],
             correctAnswer: 1,
             explanation: 'Unlike competitive markets where entry eliminates profits, monopoly barriers (patents, huge scale requirements, resource control) keep competitors out permanently.'
@@ -148,10 +148,10 @@ The monopolist produces where MR = MC, but charges P > MC:
           },
           {
             label: 'A monopoly\'s demand curve is ___',
-            options: ['Downward-sloping (the market demand curve)', 'Horizontal', 'Vertical', 'Upward-sloping']
+            options: ['Downward-sloping', 'Horizontal', 'Vertical', 'Upward-sloping']
           }
         ],
-        correctAnswers: ['Higher', 'Lower', 'Downward-sloping (the market demand curve)'],
+        correctAnswers: ['Higher', 'Lower', 'Downward-sloping'],
         hint1: 'Monopolies restrict output to raise price.',
         hint2: 'MR = MC at a lower Q than the competitive equilibrium.',
         hint3: 'The monopoly IS the market — it faces market demand.',
@@ -201,10 +201,10 @@ Most regulated monopolies use **fair-return pricing** (P = ATC) as a compromise.
           {
             question: 'A profit-maximizing monopolist produces where MR = MC and finds that P = \\$15, ATC = \\$12, and Q = 100. The monopolist\'s economic profit is:',
             options: [
-              '$300',
-              '$1,500',
-              '$1,200',
-              '$12'
+              '\\$300',
+              '\\$1,500',
+              '\\$1,200',
+              '\\$12'
             ],
             correctAnswer: 0,
             explanation: 'Profit = (P − ATC) × Q = (\\$15 − \\$12) × 100 = \\$300.'

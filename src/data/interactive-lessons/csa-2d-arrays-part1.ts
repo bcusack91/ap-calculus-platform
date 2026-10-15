@@ -183,18 +183,18 @@ for (int r = 0; r < matrix.length; r++) {
           },
           {
             label: 'Processing the main diagonal of a square matrix requires ___ loop(s)',
-            options: ['One loop (for i: matrix[i][i])', 'Two nested loops', 'Three nested loops', 'No loops']
+            options: ['One loop', 'Two nested loops', 'Two separate loops', 'Three nested loops']
           },
           {
             label: 'An enhanced for loop on a 2D array int[][] m: "for (int[] row : m)" gives each row as ___',
             options: ['A 1D int array', 'A single int', 'An ArrayList', 'A 2D array']
           }
         ],
-        correctAnswers: ['matrix[0][0]', 'One loop (for i: matrix[i][i])', 'A 1D int array'],
+        correctAnswers: ['matrix[0][0]', 'One loop', 'A 1D int array'],
         hint1: 'Use an actual element as the starting comparison.',
         hint2: 'Diagonal means row index equals column index.',
         hint3: 'The outer array contains 1D arrays (rows).',
-        explanation: 'Max init with [0][0]. Diagonal needs one loop. Enhanced for gives 1D rows.'
+        explanation: 'Max init with [0][0]. Diagonal needs one loop, because matrix[i][i] uses the same index for row and column. Enhanced for gives 1D rows.'
       }
     },
     {

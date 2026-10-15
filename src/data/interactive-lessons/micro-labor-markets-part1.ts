@@ -59,9 +59,9 @@ If the market wage is \\$70/hour, the firm hires **4 workers** (MRP ≥ W for wo
             question: 'The labor demand curve slopes downward because of:',
             options: [
               'Diminishing marginal returns to labor',
-              'Increasing labor supply over time',
-              'Government wage regulations',
-              'Workers becoming less motivated'
+              'Labor supply increasing steadily over time',
+              'Minimum wage laws set by the government',
+              'Workers becoming less motivated as hours rise'
             ],
             correctAnswer: 0,
             explanation: 'Diminishing marginal returns means each additional worker adds less output (declining MP), so MRP falls — creating a downward-sloping demand curve.'
@@ -134,11 +134,11 @@ Why do some workers earn more than others?
         dropdowns: [
           {
             label: 'New automation technology replaces warehouse workers. This shifts labor demand ___',
-            options: ['Left (decrease)', 'Right (increase)', 'No change', 'Both left and right']
+            options: ['Left (decrease)', 'Right (increase)', 'No change', 'Right (higher productivity)']
           },
           {
             label: 'A wave of immigration increases the pool of available workers. This shifts labor supply ___',
-            options: ['Right (increase)', 'Left (decrease)', 'No change', 'Both left and right']
+            options: ['Right (increase)', 'Left (decrease)', 'No change', 'Left (lower wages)']
           },
           {
             label: 'The effect of increased immigration on equilibrium wages is to make them ___',
@@ -187,7 +187,7 @@ The minimum wage is a **price floor** on labor. If set above the equilibrium wag
             options: [
               'Create unemployment equal to the labor surplus',
               'Have no effect on wages or employment',
-              'Raise wages to $11/hour for all workers',
+              'Raise wages to \\$11/hour for all workers',
               'Cause a shortage of workers'
             ],
             correctAnswer: 1,
@@ -196,10 +196,10 @@ The minimum wage is a **price floor** on labor. If set above the equilibrium wag
           {
             question: 'A technology firm finds that each additional programmer adds \\$150,000 in annual revenue. If the market salary is \\$130,000, the firm should:',
             options: [
-              'Stop hiring since salaries are too high',
+              'Stop hiring because each programmer costs \\$130,000',
               'Hire more programmers because MRP exceeds the wage',
-              'Cut salaries to maximize profit',
-              'Hire exactly one programmer'
+              'Cut salaries below the market rate to raise its own profit',
+              'Keep its current staff, since revenue already exceeds cost'
             ],
             correctAnswer: 1,
             explanation: 'MRP (\\$150K) > W (\\$130K), so each additional programmer adds more revenue than they cost. The firm should hire more until MRP falls to equal the wage.'

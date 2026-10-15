@@ -83,10 +83,10 @@ arr[2] = 25;
           {
             question: 'When inserting an element into an array by shifting right, you should start the shift from:',
             options: [
-              'The beginning of the array',
-              'The insertion point',
-              'The end of the array (working backward)',
-              'The middle of the array'
+              'The beginning of the array, moving forward',
+              'The insertion point, moving toward the end',
+              'The end of the array, moving backward',
+              'The middle of the array, moving outward'
             ],
             correctAnswer: 2,
             explanation: 'Shifting right starting from the end prevents overwriting data. If you start from the insertion point, each shift overwrites the next element before it can be moved.'
@@ -177,7 +177,7 @@ for (int i = 0; i < arr.length - 1; i++) {
         dropdowns: [
           {
             label: 'To find if a value exists in an unsorted array, use ___',
-            options: ['Linear search', 'Binary search', 'Selection sort first', 'Hash lookup']
+            options: ['Linear search', 'Binary search', 'Selection sort', 'Insertion sort']
           },
           {
             label: 'When reversing an array in-place, the loop runs ___',
@@ -185,14 +185,14 @@ for (int i = 0; i < arr.length - 1; i++) {
           },
           {
             label: 'Selection sort finds the minimum of the unsorted portion and ___',
-            options: ['Swaps it to the front of the unsorted portion', 'Inserts it at the end', 'Deletes it', 'Copies the entire array']
+            options: ['Swaps it with the first unsorted element', 'Swaps it with the last unsorted element', 'Inserts it by shifting the sorted part right', 'Removes it and appends it to a new array']
           }
         ],
-        correctAnswers: ['Linear search', 'arr.length / 2 times', 'Swaps it to the front of the unsorted portion'],
+        correctAnswers: ['Linear search', 'arr.length / 2 times', 'Swaps it with the first unsorted element'],
         hint1: 'Binary search requires a sorted array.',
         hint2: 'Swap pairs from both ends toward the middle.',
         hint3: 'Select the minimum, place it in position.',
-        explanation: 'Unsorted = linear search. Reverse loops halfway. Selection sort = find min, swap to front.'
+        explanation: 'Unsorted = linear search. Reverse loops halfway. Selection sort = find min, swap it with the first unsorted element (shifting the sorted part right is insertion sort).'
       }
     },
     {

@@ -168,22 +168,22 @@ for (int[] row : matrix) {
         dropdowns: [
           {
             label: 'Row-major traversal visits elements in order ___',
-            options: ['Left to right, top to bottom (row by row)', 'Top to bottom, left to right (column by column)', 'Diagonal only', 'Random order']
+            options: ['Row by row, left to right', 'Column by column, top to bottom', 'Row by row, right to left', 'Along each diagonal in turn']
           },
           {
             label: 'In the enhanced for loop "for (int[] row : matrix)", each row is ___',
-            options: ['A 1D array (one row of the matrix)', 'A single integer', 'The row index', 'A 2D array']
+            options: ['A 1D array', 'A single int', 'The row index', 'A 2D array']
           },
           {
             label: 'new int[3][4] creates a grid with ___ total elements',
             options: ['12', '7', '3', '4']
           }
         ],
-        correctAnswers: ['Left to right, top to bottom (row by row)', 'A 1D array (one row of the matrix)', '12'],
+        correctAnswers: ['Row by row, left to right', 'A 1D array', '12'],
         hint1: 'Process each row from left to right.',
         hint2: 'Each element of the outer array is a row (1D array).',
         hint3: '3 rows times 4 columns.',
-        explanation: 'Row-major = row by row (L to R). Each row is a 1D array. 3 x 4 = 12 elements.'
+        explanation: 'Row-major = row by row, left to right within each row. Each row is a 1D array (one row of the matrix). 3 x 4 = 12 elements.'
       }
     },
     {

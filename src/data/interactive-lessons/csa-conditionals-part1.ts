@@ -66,13 +66,13 @@ Many conditions can be rewritten in different ways:
           {
             question: 'Which is equivalent to: if (done == true) return true; else return false;',
             options: [
-              'return true;',
+              'return done = true;',
               'return done;',
               'return !done;',
               'return false;'
             ],
             correctAnswer: 1,
-            explanation: 'Since done is already a boolean, the entire if/else just returns done as-is. If done is true, it returns true. If done is false, it returns false. So return done; is equivalent.'
+            explanation: 'Since done is already a boolean, the entire if/else just returns done as-is. If done is true, it returns true. If done is false, it returns false. So return done; is equivalent. return done = true; assigns true to done and then always returns true, and return !done; returns the opposite value.'
           }
         ]
       }
@@ -165,14 +165,14 @@ else
           },
           {
             label: 'In Java, 1 < x < 100 is ___',
-            options: ['A compile error (Java does not support chained comparisons)', 'Valid syntax for a range check', 'Equivalent to x >= 1 && x <= 100', 'A runtime exception']
+            options: ['A compile error', 'Valid syntax for a range check', 'Equivalent to x > 1 && x < 100', 'A runtime exception']
           }
         ],
-        correctAnswers: ['return x > 0;', 'x >= 1 && x <= 100', 'A compile error (Java does not support chained comparisons)'],
+        correctAnswers: ['return x > 0;', 'x >= 1 && x <= 100', 'A compile error'],
         hint1: 'The boolean expression is the return value.',
         hint2: 'AND ensures both bounds are satisfied.',
         hint3: 'Java requires explicit comparisons connected by && or ||.',
-        explanation: 'Return the boolean directly. Use && for range checks. Java does not support chained comparisons like Python.'
+        explanation: 'Return the boolean directly. Use && for range checks. Java does not support chained comparisons like Python: 1 < x is a boolean, and a boolean cannot be compared to 100 with <, so 1 < x < 100 is a compile error.'
       }
     },
     {

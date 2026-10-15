@@ -78,13 +78,13 @@ A **price floor** is a legally imposed **minimum price** — buyers cannot pay b
           {
             question: 'The government sets a minimum wage of \\$12/hour in a market where the equilibrium wage is \\$10/hour. This will likely cause:',
             options: [
-              'A shortage of workers at $12/hour',
+              'A shortage of workers at \\$12/hour',
               'An increase in the quantity of labor demanded',
               'Unemployment among low-skill workers',
               'No effect because \\$12 > \\$10'
             ],
             correctAnswer: 2,
-            explanation: 'A minimum wage above equilibrium is a binding price floor. At $12, Qs of labor > Qd of labor, creating a surplus of workers — unemployment.'
+            explanation: 'A minimum wage above equilibrium is a binding price floor. At \\$12, Qs of labor > Qd of labor, creating a surplus of workers — unemployment.'
           }
         ]
       }
@@ -157,7 +157,7 @@ $$\\text{Tax burden} \\propto \\frac{1}{\\text{Elasticity}}$$
             options: ['Price floor', 'Price ceiling', 'Excise tax', 'Quota']
           },
           {
-            label: 'A $2 per gallon tax on gasoline is an example of a ___',
+            label: 'A \\$2 per gallon tax on gasoline is an example of a ___',
             options: ['Excise tax', 'Price ceiling', 'Price floor', 'Subsidy']
           }
         ],
@@ -204,7 +204,7 @@ A **tariff** is a tax on imports:
       exercise: {
         questions: [
           {
-            question: 'If the demand for insulin is perfectly inelastic and a $5 excise tax is imposed, who bears the tax burden?',
+            question: 'If the demand for insulin is perfectly inelastic and a \\$5 excise tax is imposed, who bears the tax burden?',
             options: [
               'Producers bear all of the burden',
               'Consumers bear all of the burden',
@@ -212,7 +212,7 @@ A **tariff** is a tax on imports:
               'Neither — the tax creates no burden'
             ],
             correctAnswer: 1,
-            explanation: 'With perfectly inelastic demand, consumers cannot reduce quantity demanded in response to a price increase. They bear 100% of the tax — the consumer price rises by the full $5.'
+            explanation: 'With perfectly inelastic demand, consumers cannot reduce quantity demanded in response to a price increase. They bear 100% of the tax — the consumer price rises by the full \\$5.'
           },
           {
             question: 'A city imposes rent control. Which outcome is LEAST likely?',

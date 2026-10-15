@@ -41,7 +41,7 @@ export const apushProgressivismWwiPart7Data = {
 | 1908 | *Muller v. Oregon* (Brandeis brief) | Upheld 10-hour day for women |
 | 1909 | NAACP founded (Du Bois et al.) | Beginning of legal challenge to Jim Crow |
 | 1911 | Triangle Shirtwaist Fire (146 dead); *Standard Oil* broken up | Workplace safety reform; major antitrust |
-| 1912 | Election: Wilson (D) defeats TR (Progressive/Bull Moose) and Taft (R); Republican split | Progressive realignment |
+| 1912 | Election: Wilson (Democrat) defeats TR (Progressive/Bull Moose) and Taft (Republican); Republican split | Progressive realignment |
 | 1913 | 16th Amendment (income tax); 17th Amendment (direct election senators); Federal Reserve Act; Underwood Tariff (lowered) | Wilson "New Freedom" |
 | 1914 | Clayton Antitrust Act; Federal Trade Commission Act; WWI begins (August) | Antitrust strengthened; war begins |
 | 1915 | *Lusitania* sunk (May, 128 Americans killed); *Birth of a Nation* (white-supremacist film) | Anti-German sentiment grows |

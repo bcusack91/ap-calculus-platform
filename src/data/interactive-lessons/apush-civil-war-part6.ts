@@ -181,7 +181,7 @@ From May 2027 all three SAQs are required and all three are sourced: SAQ 1 uses 
               'The Kansas-Nebraska Act was passed after John Brown\'s raid, which convinced Southern leaders to demand popular sovereignty in the West'
             ],
             correctAnswer: 0,
-            explanation: 'The strongest response names the event, states what it did, and explains how it raised tension. The second only identifies the act, the third reverses what the act did, and the fourth gets the order wrong, since Brown\'s raid came in 1859.'
+            explanation: 'The strongest response names the event, states what it did, and explains how it raised tension. The "most famous laws" answer only identifies the act, the answer saying it banned slavery reverses what the act did, and the John Brown answer gets the order wrong, since Brown\'s raid came in 1859.'
           },
           {
             question: 'Which short answer best shows AP "complexity" about the claim that "Lincoln freed the slaves"?',

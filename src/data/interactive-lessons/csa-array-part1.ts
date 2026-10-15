@@ -159,7 +159,7 @@ for (int value : arr) {
         dropdowns: [
           {
             label: 'To set each element of an array to its index value, use a ___',
-            options: ['Standard for loop (need index to assign values)', 'Enhanced for-each loop', 'While loop only', 'Do-while loop only']
+            options: ['Standard for loop', 'Enhanced for loop', 'Pair of nested loops', 'Single assignment statement']
           },
           {
             label: 'After int[] a = new int[3]; the values are ___',
@@ -170,11 +170,11 @@ for (int value : arr) {
             options: ['Has no parentheses (it is a field)', 'Has parentheses (it is a method)', 'Returns the last index', 'Returns the number of non-zero elements']
           }
         ],
-        correctAnswers: ['Standard for loop (need index to assign values)', '{0, 0, 0}', 'Has no parentheses (it is a field)'],
+        correctAnswers: ['Standard for loop', '{0, 0, 0}', 'Has no parentheses (it is a field)'],
         hint1: 'You need the index i to do arr[i] = i.',
         hint2: 'int arrays default to 0.',
         hint3: 'arr.length vs. str.length() — spot the difference.',
-        explanation: 'Need index → standard for. int[] defaults to 0s. arr.length is a field (no parens).'
+        explanation: 'Need index → standard for (an enhanced for loop gives copies of the values, not the index, so it cannot assign arr[i] = i). int[] defaults to 0s. arr.length is a field (no parens).'
       }
     },
     {

@@ -182,7 +182,7 @@ From May 2027 all three SAQs are required and all three are sourced: SAQ 1 uses 
               'The Compromise of 1877 ended the Civil War, which allowed Johnson to restore Southern governments under his lenient plan'
             ],
             correctAnswer: 2,
-            explanation: 'The strongest response names the event and explains how it ended Reconstruction: withdrawing the troops let Democrats take over South Carolina and Louisiana. The first only identifies the compromise, the second reverses its effect, and the fourth confuses it with 1865.'
+            explanation: 'The strongest response names the event and explains how it ended Reconstruction: withdrawing the troops let Democrats take over South Carolina and Louisiana. The "most famous agreements" answer only identifies the compromise, the answer about sending more troops reverses its effect, and the Johnson answer confuses it with 1865.'
           },
           {
             question: 'Which short answer best shows AP "complexity" about the claim that "Reconstruction failed"?',
@@ -193,7 +193,7 @@ From May 2027 all three SAQs are required and all three are sourced: SAQ 1 uses 
               'Its main achievement was the Dawes Act, which protected Native land claims'
             ],
             correctAnswer: 2,
-            explanation: 'The strongest answer weighs both sides: Black political power was destroyed after 1877, but the 14th and 15th Amendments and institutions such as Black colleges later supported the civil rights movement. The first two are too absolute, and the Dawes Act (1887) broke up Native land.'
+            explanation: 'The strongest answer weighs both sides: Black political power was destroyed after 1877, but the 14th and 15th Amendments and institutions such as Black colleges later supported the civil rights movement. The "failed completely" and "succeeded fully" answers are too absolute, and the Dawes Act (1887) broke up Native land.'
           }
         ]
       }

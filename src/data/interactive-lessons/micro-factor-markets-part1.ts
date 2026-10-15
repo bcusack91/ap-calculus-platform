@@ -63,9 +63,9 @@ $$MRP = MP \\times P$$
             question: 'Demand for labor is called "derived demand" because:',
             options: [
               'It is derived from the supply of labor in the market',
-              'It is derived from the demand for the product that labor produces',
-              'Workers derive satisfaction from working',
-              'It is set by government labor regulations'
+              'It is derived from sales of the goods that labor produces',
+              'It is derived from the satisfaction workers get from working',
+              'It is derived from the wages that the government sets by law'
             ],
             correctAnswer: 1,
             explanation: 'Firms hire labor to produce goods consumers want. If product demand falls, labor demand falls. Labor demand is "derived" from product demand.'
@@ -73,10 +73,10 @@ $$MRP = MP \\times P$$
           {
             question: 'Using the table above, what is the MRP of the 3rd worker?',
             options: [
-              '$24',
-              '$30',
-              '$18',
-              '$6'
+              '\\$24',
+              '\\$30',
+              '\\$18',
+              '\\$6'
             ],
             correctAnswer: 1,
             explanation: 'The 3rd worker has MP = 6 units. MRP = MP × P = 6 × \\$5 = \\$30.'
@@ -162,11 +162,11 @@ Labor supply shifts when:
           },
           {
             label: 'If new technology makes workers more productive, MRP will ___',
-            options: ['Increase', 'Decrease', 'Stay the same', 'Become negative']
+            options: ['Increase', 'Decrease', 'Stay the same', 'Equal the wage']
           },
           {
             label: 'If immigration increases the supply of labor, equilibrium wages will ___',
-            options: ['Decrease', 'Increase', 'Stay the same', 'Become zero']
+            options: ['Decrease', 'Increase', 'Stay the same', 'Be indeterminate']
           }
         ],
         correctAnswers: ['Increase (shift right)', 'Increase', 'Decrease'],

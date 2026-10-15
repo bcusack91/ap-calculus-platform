@@ -51,7 +51,7 @@ String: "h  e  l  l  o"
             options: [
               '"put"',
               '"pute"',
-              '"mpu"',
+              '"mput"',
               '"comp"'
             ],
             correctAnswer: 0,
@@ -146,12 +146,12 @@ s = s.substring(1);       // Now s = "ello" (reassigned to the new String)
           },
           {
             label: '"test".indexOf("xyz") returns ___',
-            options: ['-1 (not found)', '0', '4', 'An exception']
+            options: ['-1', '0', '4', 'An exception']
           }
         ],
-        correctAnswers: ['"prog"', 'Negative (j comes before p)', '-1 (not found)'],
+        correctAnswers: ['"prog"', 'Negative (j comes before p)', '-1'],
         hint1: 'Indices 0,1,2,3 — p,r,o,g.',
-        hint2: 'j (106) is less than p (112) in Unicode.',
+        hint2: '"java" comes before "python" in dictionary order.',
         hint3: 'indexOf returns -1 when the substring is not found.',
         explanation: 'substring(0,4) = "prog". "java" < "python" → negative. "xyz" not in "test" → -1.'
       }
@@ -183,11 +183,11 @@ s = s.substring(1);       // Now s = "ello" (reassigned to the new String)
             options: [
               '"abef"',
               '"abcdef"',
-              '"cdef"',
-              '"abcf"'
+              '"abdef"',
+              '"abcef"'
             ],
             correctAnswer: 0,
-            explanation: 's.substring(0, 2) = "ab". s.substring(4) = "ef". Concatenation: "ab" + "ef" = "abef". This effectively removes characters at indices 2 and 3.'
+            explanation: 's.substring(0, 2) = "ab". s.substring(4) = "ef". Concatenation: "ab" + "ef" = "abef". This effectively removes characters at indices 2 and 3. Reading substring(0, 2) as including index 2 would give "abcef".'
           },
           {
             question: 'What does this method return for mystery("racecar")?\npublic String mystery(String s) {\n    String result = "";\n    for (int i = s.length() - 1; i >= 0; i--) {\n        result += s.substring(i, i + 1);\n    }\n    return result;\n}',
@@ -195,7 +195,7 @@ s = s.substring(1);       // Now s = "ello" (reassigned to the new String)
               '"racecar"',
               '"raceca"',
               '"r"',
-              '"racecar " (with trailing space)'
+              '"acecar"'
             ],
             correctAnswer: 0,
             explanation: 'The method builds the string in reverse order. It takes each character from right to left: r,a,c,e,c,a,r → "racecar". Since "racecar" is a palindrome, the reverse is the same.'

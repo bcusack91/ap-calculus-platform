@@ -53,7 +53,7 @@ export const csaBooleanIfPart1Data = {
               'true',
               'false',
               'Compile error',
-              'null'
+              'A runtime error'
             ],
             correctAnswer: 0,
             explanation: '5 > 3 is true. 2 > 4 is false. true && false = false. !(false) = true.'
@@ -61,10 +61,10 @@ export const csaBooleanIfPart1Data = {
           {
             question: 'String s1 = "hello"; String s2 = "hello"; What does s1 == s2 check?',
             options: [
-              'Whether the contents of s1 and s2 are the same',
-              'Whether s1 and s2 refer to the same object in memory',
-              'Whether s1 is longer than s2',
-              'Whether s1 comes before s2 alphabetically'
+              'Whether s1 and s2 hold the same characters in order',
+              'Whether s1 and s2 are the same object',
+              'Whether s1 and s2 have the same number of characters',
+              'Whether s1 comes before s2 in alphabetical order'
             ],
             correctAnswer: 1,
             explanation: 'For objects (including Strings), == compares references (memory addresses), not content. Use s1.equals(s2) to compare String content. Note: Java may intern string literals, so == can sometimes return true, but this is unreliable.'
@@ -144,7 +144,7 @@ age < 18 || !hasID
         dropdowns: [
           {
             label: 'The expression !(true || false) evaluates to ___',
-            options: ['false', 'true', 'null', 'Compile error']
+            options: ['false', 'true', 'A runtime error', 'Compile error']
           },
           {
             label: 'Using De Morgan s Law, !(x > 5 || y < 2) is equivalent to ___',
@@ -152,14 +152,14 @@ age < 18 || !hasID
           },
           {
             label: 'In an if/else if/else chain, how many branches execute?',
-            options: ['Exactly one (the first matching branch)', 'All branches that match', 'Always two branches', 'Zero branches if no match']
+            options: ['Exactly one, the first that matches', 'Every branch whose condition is true', 'Two: the first match plus the else', 'None, unless the first condition is true']
           }
         ],
-        correctAnswers: ['false', 'x <= 5 && y >= 2', 'Exactly one (the first matching branch)'],
+        correctAnswers: ['false', 'x <= 5 && y >= 2', 'Exactly one, the first that matches'],
         hint1: 'true || false = true, then negate.',
         hint2: 'Negate each part and flip || to &&.',
         hint3: 'Only the first true condition runs.',
-        explanation: '!(true) = false. De Morgan: negate each, flip operator. Only first matching branch executes in if/else if/else.'
+        explanation: '!(true) = false. De Morgan: negate each, flip operator. Only the first matching branch executes in if/else if/else, and the final else runs when nothing matches, so exactly one branch runs.'
       }
     },
     {

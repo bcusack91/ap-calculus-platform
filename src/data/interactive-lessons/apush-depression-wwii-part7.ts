@@ -161,7 +161,7 @@ export const apushDepressionWwiiPart7Data = {
               'The first was struck down by Congress, and the second was struck down by the Court'
             ],
             correctAnswer: 1,
-            explanation: 'The First New Deal relied on planning with business through the NIRA codes and the AAA, while the Second New Deal produced the Wagner Act, Social Security and the WPA. The first choice reverses the two, federal relief expanded in 1935, and Congress passed rather than struck down the early programs.'
+            explanation: 'The First New Deal relied on planning with business through the NIRA codes and the AAA, while the Second New Deal produced the Wagner Act, Social Security and the WPA. The answer pairing the First New Deal with labor rights reverses the two, federal relief expanded in 1935, and Congress passed rather than struck down the early programs.'
           },
           {
             question: 'Which best describes the relationship among Executive Order 9066 (1942), Korematsu v. United States (1944) and the Civil Liberties Act of 1988?',
@@ -245,7 +245,7 @@ export const apushDepressionWwiiPart7Data = {
               'The New Deal included many programs, such as the CCC, the WPA and Social Security, that affected people in different ways'
             ],
             correctAnswer: 2,
-            explanation: 'This thesis makes a claim about extent and qualifies it, which also sets up the complexity point. The first and second overstate in opposite directions, and the fourth lists programs without arguing how much the relationship changed.'
+            explanation: 'This thesis makes a claim about extent and qualifies it, which also sets up the complexity point. The "transformed the relationship in every way" and "changed almost nothing" theses overstate in opposite directions, and the thesis naming the CCC, the WPA and Social Security lists programs without arguing how much the relationship changed.'
           },
           {
             question: 'Which piece of outside evidence would best support an argument that the New Deal strengthened organized labor?',

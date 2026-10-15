@@ -70,13 +70,13 @@ for (int i = 0; i < 5; i++) {
           {
             question: 'What happens if the update statement (i++) is removed from a while loop?',
             options: [
-              'The loop runs once and stops',
-              'The loop runs backwards',
-              'The loop runs forever (infinite loop)',
-              'A compile error occurs'
+              'The loop body runs once and then the loop exits',
+              'The loop runs one extra time past its bound',
+              'The loop runs forever',
+              'The compiler reports a missing update error'
             ],
             correctAnswer: 2,
-            explanation: 'Without updating the control variable, the condition never becomes false, so the loop runs forever. This is an infinite loop — one of the most common bugs.'
+            explanation: 'Without updating the control variable, the condition never becomes false, so the loop runs forever. This is an infinite loop — one of the most common bugs. The code still compiles, because Java does not require a while loop to change its control variable.'
           }
         ]
       }

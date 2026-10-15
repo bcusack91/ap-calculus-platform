@@ -134,7 +134,7 @@ export const apushReformMovementsPart7Data = {
               'Political abolitionists refused to let Black speakers address their meetings'
             ],
             correctAnswer: 0,
-            explanation: 'Garrison rejected voting and called the Constitution a "covenant with death," while political abolitionists formed the Liberty, Free Soil and later Republican parties. The second choice reverses the two camps, political abolitionists did not return to colonization, and Black abolitionists spoke in both camps.'
+            explanation: 'Garrison rejected voting and called the Constitution a "covenant with death," while political abolitionists formed the Liberty, Free Soil and later Republican parties. The Liberty Party answer reverses the two camps, political abolitionists did not return to colonization, and Black abolitionists spoke in both camps.'
           },
           {
             question: 'Which of the following best describes the relationship between abolitionism and the early women\'s rights movement?',
@@ -218,7 +218,7 @@ export const apushReformMovementsPart7Data = {
               'Antebellum reform movements were shaped by many different factors, including religion, the economy and politics'
             ],
             correctAnswer: 1,
-            explanation: 'This thesis takes a position on the extent of religious influence and names the other forces that shaped reform, which also sets up the complexity point. The first and third overstate one cause, and the fourth lists factors without making a claim about extent.'
+            explanation: 'This thesis takes a position on the extent of religious influence and names the other forces that shaped reform, which also sets up the complexity point. The camp-meeting thesis and the factory-owner thesis each overstate one cause, and the "many different factors" thesis lists factors without making a claim about extent.'
           },
           {
             question: 'Which piece of outside evidence would best support an argument that moral abolitionism developed into electoral politics?',

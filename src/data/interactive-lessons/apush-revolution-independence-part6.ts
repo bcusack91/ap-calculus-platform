@@ -181,7 +181,7 @@ From May 2027 all three SAQs are required and all three are sourced: SAQ 1 uses 
               'The Proclamation of 1763 closed western lands, which made colonists in Boston riot against stamp collectors'
             ],
             correctAnswer: 0,
-            explanation: 'The strongest response names the event, explains the colonial reaction, and connects it to a change in colonial-British relations. The second only identifies the act, the third confuses the Stamp Act with the Tea Act, and the fourth invents a causal link between the Proclamation and the stamp riots.'
+            explanation: 'The strongest response names the event, explains the colonial reaction, and connects it to a change in colonial-British relations. The "most famous events" answer only identifies the act, the tea-dumping answer confuses the Stamp Act with the Tea Act, and the Proclamation answer invents a causal link between the Proclamation and the stamp riots.'
           },
           {
             question: 'Which short answer best demonstrates AP "complexity" about the American Revolution?',

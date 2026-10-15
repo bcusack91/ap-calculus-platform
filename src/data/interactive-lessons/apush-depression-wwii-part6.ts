@@ -182,7 +182,7 @@ From May 2027 all three SAQs are required and all three are sourced: SAQ 1 uses 
               'The Wagner Act of 1935 set a national minimum wage and a 40-hour week, which ended the need for labor unions in most industries'
             ],
             correctAnswer: 1,
-            explanation: 'The strongest response names the program and explains the change: a new federal responsibility for economic security. The first only identifies the law, the third ignores the exclusion of farm and domestic workers and the payroll-tax funding, and the fourth confuses the Wagner Act with the Fair Labor Standards Act of 1938.'
+            explanation: 'The strongest response names the program and explains the change: a new federal responsibility for economic security. The "most important New Deal laws" answer only identifies the law, the "every worker" answer ignores the exclusion of farm and domestic workers and the payroll-tax funding, and the Wagner Act answer confuses it with the Fair Labor Standards Act of 1938.'
           },
           {
             question: 'Which short answer best demonstrates complexity by qualifying the claim that "the New Deal saved American capitalism"?',

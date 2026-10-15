@@ -62,7 +62,7 @@ Free entry/exit drives profits to zero:
               'Positive economic profit due to brand loyalty',
               'Zero economic profit because entry eliminates profits',
               'Negative economic profit because of excess capacity',
-              'The same profit as a monopolist'
+              'The same profit as a protected monopolist'
             ],
             correctAnswer: 1,
             explanation: 'Low barriers to entry mean new firms enter when profits exist, shifting demand left for each firm until P = ATC and economic profit = 0.'
@@ -70,10 +70,10 @@ Free entry/exit drives profits to zero:
           {
             question: 'Monopolistic competition is inefficient because:',
             options: [
-              'Firms collude to raise prices',
-              'There are too many firms in the market',
+              'Firms collude with rivals to keep prices high',
+              'There are too many firms for any to earn profit',
               'Firms produce where P > MC with excess capacity',
-              'Products are identical across all firms'
+              'Every firm sells an identical, standardized product'
             ],
             correctAnswer: 2,
             explanation: 'P > MC means allocative inefficiency (not producing enough). Producing on the downward-sloping part of ATC (not at minimum) means productive inefficiency — excess capacity.'
@@ -195,10 +195,10 @@ An oligopoly has **few dominant firms** with **high barriers to entry**. The dis
           {
             question: 'In the prisoner\'s dilemma payoff matrix, the Nash equilibrium is often NOT the best combined outcome. This illustrates that:',
             options: [
-              'Individual rationality can lead to collectively suboptimal results',
-              'Cooperation is always the dominant strategy',
-              'Firms in oligopoly always collude successfully',
-              'Game theory does not apply to real markets'
+              'Each firm\'s rational choice can leave both firms worse off',
+              'Cooperating is each firm\'s dominant strategy in the game',
+              'Oligopoly firms reach the best joint outcome without trying',
+              'Payoff matrices cannot predict how real firms will behave'
             ],
             correctAnswer: 0,
             explanation: 'Each firm rationally chooses its dominant strategy (compete/low price), but the resulting Nash equilibrium yields lower joint profits than cooperation. Individual rationality leads to a collectively worse outcome.'
@@ -206,10 +206,10 @@ An oligopoly has **few dominant firms** with **high barriers to entry**. The dis
           {
             question: 'A monopolistically competitive firm is producing where MR = MC and P > ATC. In the long run:',
             options: [
-              'The firm will continue earning economic profit',
+              'The firm will keep earning economic profit in the long run',
               'New firms will enter, reducing the firm\'s demand until P = ATC',
               'The firm will merge with competitors to form an oligopoly',
-              'The government will regulate prices down to MC'
+              'The government will regulate the firm\'s price down to MC'
             ],
             correctAnswer: 1,
             explanation: 'Low barriers to entry attract new firms when P > ATC. Entry shifts each incumbent\'s demand left until P falls to ATC and economic profit reaches zero.'

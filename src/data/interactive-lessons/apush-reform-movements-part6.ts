@@ -182,7 +182,7 @@ From May 2027 all three SAQs are required and all three are sourced: SAQ 1 uses 
               'Catholic bishops led revivals in the Burned-Over District, so converts built public common schools across the state of New York'
             ],
             correctAnswer: 1,
-            explanation: 'The strongest response links a religious idea (sin can and must be removed) to a specific reform and the action reformers took. The first only identifies the movement, the third invents a federal whiskey ban, and the fourth credits Catholic bishops with a Protestant revival.'
+            explanation: 'The strongest response links a religious idea (sin can and must be removed) to a specific reform and the action reformers took. The "major reform of the period" answer only identifies the movement, the whiskey answer invents a federal ban, and the Burned-Over District answer credits Catholic bishops with a Protestant revival.'
           },
           {
             question: 'Which short answer best demonstrates complexity by challenging the view that abolitionism was led by white Northerners?',
@@ -193,7 +193,7 @@ From May 2027 all three SAQs are required and all three are sourced: SAQ 1 uses 
               'Black activists such as Walker and Douglass shaped its demands, and it was an interracial effort, not a white-led cause'
             ],
             correctAnswer: 3,
-            explanation: 'Walker attacked colonization before most white reformers did, and Black writers, speakers, churches and Underground Railroad networks shaped the movement throughout. The first restates the view being challenged, the Grimkés were exceptions rather than typical leaders, and Clay and Calhoun were not abolitionists.'
+            explanation: 'Walker attacked colonization before most white reformers did, and Black writers, speakers, churches and Underground Railroad networks shaped the movement throughout. The Garrison-and-Tappans answer restates the view being challenged, the Grimkés were exceptions rather than typical leaders, and Clay and Calhoun were not abolitionists.'
           }
         ]
       }

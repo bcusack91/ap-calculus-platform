@@ -16,12 +16,12 @@ export const csaArraylistUsagePart1Data = {
 \`\`\`java
 // BUGGY: Skips elements after removal!
 ArrayList<String> words = new ArrayList<>();
-// words = ["cat", "dog", "cat", "bird"]
+// words = ["cat", "cat", "dog", "bird"]
 for (int i = 0; i < words.size(); i++) {
     if (words.get(i).equals("cat")) {
         words.remove(i);
-        // After removing index 0: ["dog", "cat", "bird"]
-        // i becomes 1, skipping "dog" -> misses second "cat"!
+        // After removing index 0: ["cat", "dog", "bird"]
+        // i becomes 1, so the "cat" now at index 0 is never checked!
     }
 }
 \`\`\`
@@ -69,24 +69,24 @@ while (i < words.size()) {
           {
             question: 'Why does removing elements while traversing forward cause bugs?',
             options: [
-              'The ArrayList becomes null after removal',
-              'Elements shift left, so the next element moves to the current index and gets skipped',
-              'The remove method does not work inside loops',
-              'Forward loops are always slower than backward loops'
+              'The removed slot is left holding null, which the loop then reads as a value',
+              'Later values shift left, so the next one slides into the current index and is skipped',
+              'The remove method throws an exception whenever it is called inside a loop',
+              'The value of size() is fixed when the loop starts and never updates'
             ],
             correctAnswer: 1,
-            explanation: 'When you remove element at index i, all later elements shift left by one. The element that was at i+1 is now at i. When i increments, it skips that element.'
+            explanation: 'When you remove element at index i, all later elements shift left by one. The element that was at i+1 is now at i. When i increments, it skips that element. remove does not leave a null gap or throw inside a loop, and size() is re-evaluated each time the condition is checked.'
           },
           {
             question: 'Which traversal direction avoids the remove-while-traversing bug without extra logic?',
             options: [
-              'Forward (i = 0 to size)',
-              'Backward (i = size-1 to 0)',
-              'Random order',
-              'Every other element'
+              'Forward (i = 0 up to size() - 1)',
+              'Backward (i = size() - 1 down to 0)',
+              'Forward, saving size() in a variable first',
+              'Every other index (i += 2 from 0)'
             ],
             correctAnswer: 1,
-            explanation: 'Traversing backward means removals only affect indices AFTER the current position (which have already been processed). No elements are skipped.'
+            explanation: 'Traversing backward means removals only affect indices AFTER the current position (which have already been processed). No elements are skipped. A forward loop still skips the element that slides into the removed spot, and saving size() first also runs past the end of the shrinking list.'
           }
         ]
       }
@@ -187,22 +187,22 @@ There is no membership method on the AP Java Quick Reference, so the inner loop 
         dropdowns: [
           {
             label: 'To build a new list with only elements matching a condition, use the ___ pattern',
-            options: ['Filter (create new list, add matching elements)', 'Remove (delete non-matching from original)', 'Sort (reorder elements)', 'Swap (exchange elements)']
+            options: ['Filter', 'Remove', 'Sort', 'Swap']
           },
           {
             label: 'list.set(i, newVal) ___ the size of the ArrayList',
-            options: ['Does not change (replaces in place)', 'Increases by 1', 'Decreases by 1', 'Doubles']
+            options: ['Does not change', 'Increases by 1', 'Decreases by 1', 'Grows to i + 1 if needed']
           },
           {
             label: 'enhanced for loop on an ArrayList should NOT be used when you need to ___',
             options: ['Remove elements during traversal', 'Read each element', 'Print each element', 'Calculate a sum']
           }
         ],
-        correctAnswers: ['Filter (create new list, add matching elements)', 'Does not change (replaces in place)', 'Remove elements during traversal'],
+        correctAnswers: ['Filter', 'Does not change', 'Remove elements during traversal'],
         hint1: 'Create a new list and selectively add.',
         hint2: 'set() replaces; it does not insert.',
         hint3: 'Enhanced for loop cannot safely remove.',
-        explanation: 'Filter pattern builds new list. set() replaces in place (same size). Enhanced for cannot remove safely.'
+        explanation: 'Filter pattern builds a new list and adds only the matching elements. set() replaces in place (same size), and an index at or past size() throws an exception instead of growing the list. Enhanced for cannot remove safely.'
       }
     },
     {

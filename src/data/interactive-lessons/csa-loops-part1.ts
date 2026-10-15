@@ -164,7 +164,7 @@ The first value is read **before** the loop, and the next value is read at the *
         dropdowns: [
           {
             label: 'A loop that prints * then ** then *** (growing triangle) requires the inner loop bound to depend on ___',
-            options: ['The outer loop variable (j <= i)', 'A constant value', 'The array length', 'A random number']
+            options: ['The outer loop variable', 'A fixed constant value', 'The inner loop variable itself', 'The length of a String']
           },
           {
             label: 'To traverse a String character by character, loop from i = 0 to ___',
@@ -175,7 +175,7 @@ The first value is read **before** the loop, and the next value is read at the *
             options: ['n * n', 'n', '2 * n', 'n + 1']
           }
         ],
-        correctAnswers: ['The outer loop variable (j <= i)', 'i < s.length()', 'n * n'],
+        correctAnswers: ['The outer loop variable', 'i < s.length()', 'n * n'],
         hint1: 'Each row has stars equal to the row number.',
         hint2: 'Indices go from 0 to length-1.',
         hint3: 'The inner loop runs all n of its passes for every outer pass.',

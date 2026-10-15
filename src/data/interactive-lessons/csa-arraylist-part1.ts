@@ -49,7 +49,7 @@ names.remove(1);         // ["Anna", "Bob"]
               'ArrayList<int> list = new ArrayList<>();',
               'ArrayList<Integer> list = new ArrayList<>();',
               'ArrayList list = new ArrayList<int>();',
-              'int ArrayList list = new ArrayList<>();'
+              'Integer ArrayList list = new ArrayList<>();'
             ],
             correctAnswer: 1,
             explanation: 'ArrayList cannot store primitive types directly. You must use the wrapper class Integer instead of int. Java autoboxes int values to Integer objects automatically.'
@@ -57,10 +57,10 @@ names.remove(1);         // ["Anna", "Bob"]
           {
             question: 'What is the key advantage of ArrayList over arrays?',
             options: [
-              'ArrayList is faster for accessing elements',
-              'ArrayList can store primitive types directly',
-              'ArrayList automatically resizes as elements are added or removed',
-              'ArrayList uses less memory'
+              'It reads an element by index faster than an array does',
+              'It can hold primitive int values without a wrapper class',
+              'It grows and shrinks as elements are added or removed',
+              'It stores its elements using less memory than an array'
             ],
             correctAnswer: 2,
             explanation: 'The main advantage of ArrayList is dynamic sizing. Arrays have a fixed size set at creation, but ArrayList grows when you add() and shrinks when you remove().'
@@ -163,7 +163,7 @@ for (String name : list) {
 
 - **arr.length** (field) vs **list.size()** (method) — know the distinction
 - **arr[i]** vs **list.get(i)** — arrays use brackets, ArrayList uses methods
-- ArrayList CANNOT store primitives — must use Integer, Double, Boolean
+- ArrayList CANNOT store primitives — use the wrapper classes Integer and Double
 - When removing elements while traversing, indices shift! Traverse backward or adjust the index
 - add(i, obj) shifts existing elements RIGHT; remove(i) shifts elements LEFT
 - ArrayList is required for FRQ problems involving dynamic collections
@@ -191,13 +191,13 @@ for (String name : list) {
           {
             question: 'What happens when you try: ArrayList<int> nums = new ArrayList<>();',
             options: [
-              'An empty ArrayList is created successfully',
-              'A compile error: cannot use primitive type int with ArrayList',
-              'An ArrayList of size 0 with default values',
-              'A runtime error'
+              'It compiles and creates an empty list of int values',
+              'A compile error occurs',
+              'It compiles, but adding an int causes a runtime error',
+              'A NullPointerException is thrown when the line runs'
             ],
             correctAnswer: 1,
-            explanation: 'ArrayList cannot use primitive types. int must be replaced with Integer. This is a compile-time error, one of the most common AP CSA mistakes.'
+            explanation: 'ArrayList cannot use primitive types, so the declaration does not compile. int must be replaced with Integer. This is a compile-time error, one of the most common AP CSA mistakes.'
           }
         ]
       }

@@ -74,10 +74,10 @@ For a **positive production externality**, the MSC lies **below** MPC, and the m
           {
             question: 'The vertical distance between the MSC and MPC curves represents:',
             options: [
-              'Consumer surplus',
+              'Consumer surplus on each unit',
               'The per-unit external cost',
-              'Producer surplus',
-              'The tax rate'
+              'Producer surplus on each unit',
+              'The sales tax rate on each unit'
             ],
             correctAnswer: 1,
             explanation: 'MSC = MPC + external cost per unit. The vertical gap between the two curves equals the per-unit external cost imposed on third parties.'

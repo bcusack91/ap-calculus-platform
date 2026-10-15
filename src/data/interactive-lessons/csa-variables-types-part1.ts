@@ -68,7 +68,7 @@ boolean isValid = true;
               'int 2ndPlace = 5;',
               'double my-score = 9.5;',
               'boolean isReady = true;',
-              'String class = "hello";'
+              'String class = "hi";'
             ],
             correctAnswer: 2,
             explanation: 'Variable names cannot start with a digit (2ndPlace), cannot contain hyphens (my-score), and cannot be reserved words (class). isReady follows valid camelCase naming rules.'
@@ -137,22 +137,22 @@ A \`final\` variable is a **constant** — its value cannot change after initial
         dropdowns: [
           {
             label: 'The expression (int) 4.9 evaluates to ___',
-            options: ['4 (truncation, not rounding)', '5 (rounded up)', '4.9 (unchanged)', 'Compile error']
+            options: ['4', '5', '4.9', 'Compile error']
           },
           {
             label: 'The variable declaration double x = 10; performs a ___ cast',
-            options: ['Widening (implicit) cast from int to double', 'Narrowing (explicit) cast', 'No casting occurs', 'Illegal operation']
+            options: ['Widening (implicit)', 'Narrowing (implicit)', 'Narrowing (explicit)', 'Widening (explicit)']
           },
           {
             label: 'The correct Java naming convention for a variable is ___',
             options: ['camelCase (studentAge)', 'PascalCase (StudentAge)', 'snake_case (student_age)', 'ALL_CAPS (STUDENT_AGE)']
           }
         ],
-        correctAnswers: ['4 (truncation, not rounding)', 'Widening (implicit) cast from int to double', 'camelCase (studentAge)'],
+        correctAnswers: ['4', 'Widening (implicit)', 'camelCase (studentAge)'],
         hint1: 'Casting to int truncates, it does not round.',
         hint2: 'int fits inside double without data loss.',
         hint3: 'Variables start lowercase; each subsequent word capitalized.',
-        explanation: '(int) 4.9 = 4 (truncated). int to double = widening. Java variables use camelCase.'
+        explanation: '(int) 4.9 = 4 (truncated, not rounded). double x = 10; widens the int 10 to 10.0 automatically, with no cast written. Java variables use camelCase.'
       }
     },
     {

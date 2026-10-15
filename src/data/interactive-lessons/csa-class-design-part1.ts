@@ -68,10 +68,10 @@ public class Counter {
           {
             question: 'Why does a static method cause a compile error if it uses an instance variable by its bare name, as in return myCount;?',
             options: [
-              'Static methods run faster and cannot use slow instance data',
-              'Static methods belong to the class, not any object, so there is no "this" to reference',
-              'Instance variables are always private',
-              'Static methods can only return void'
+              'Static methods may only use local variables and their own parameters',
+              'Static methods belong to the class, so there is no "this" object to reference',
+              'Instance variables are private, so only constructors may read them',
+              'Static methods must return void, so returning a value is never allowed'
             ],
             correctAnswer: 1,
             explanation: 'A static method is called on the class (e.g., Math.sqrt()), not on an object, so there is no current object whose myCount the bare name could mean. It can still reach instance data through an object reference, such as c.myCount for a Counter c passed in as a parameter.'
@@ -148,7 +148,7 @@ public class Example {
         dropdowns: [
           {
             label: 'A variable declared in a for loop header (int i = 0) has ___ scope',
-            options: ['Loop scope (only inside the loop)', 'Method scope', 'Class scope', 'Global scope']
+            options: ['Loop', 'Method', 'Class', 'Global']
           },
           {
             label: 'Integer.MAX_VALUE is a static final variable. It is accessed using ___',
@@ -156,14 +156,14 @@ public class Example {
           },
           {
             label: 'Two methods named calculate(int x) and calculate(int x, int y) demonstrate ___',
-            options: ['Method overloading', 'Method overriding', 'Inheritance', 'Polymorphism']
+            options: ['Method overloading', 'Method decomposition', 'Encapsulation', 'Recursion']
           }
         ],
-        correctAnswers: ['Loop scope (only inside the loop)', 'The class name: Integer.MAX_VALUE', 'Method overloading'],
+        correctAnswers: ['Loop', 'The class name: Integer.MAX_VALUE', 'Method overloading'],
         hint1: 'The variable dies when the loop ends.',
         hint2: 'Static members are accessed via the class.',
         hint3: 'Same name, different parameter count.',
-        explanation: 'Loop variables have loop scope. Static members accessed via class name. Same name + different params = overloading.'
+        explanation: 'Loop variables have loop scope: they exist only inside the loop. Static members accessed via class name. Same name + different params = overloading.'
       }
     },
     {
