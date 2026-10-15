@@ -5,168 +5,228 @@ export const englitPoeticStructureFormPart6Data = {
       id: 'englitpo6-intro',
       type: 'text' as const,
       content: `
-# 📖 Poetic Structure & Form
+# 📐 Poetic Structure and Form
 
-**Part 6 of 7 — Problem-Solving Workshop**
+**Part 6 of 7 — Writing About Form on the Exam**
 
-Apply Poetic Structure & Form concepts to data interpretation and analytical scenarios. Practice the types of questions seen on the AP exam.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| 📖 How the Exam Asks About Structure |
+| Practice Poem: Keats's "When I have fears" |
+| The Observation Ladder: From Label to Argument |
+| An Annotated Model Paragraph |
+| Form in the Thesis |
 
-| Concept | Description |
-|---------|-------------|
-| **Data interpretation** | Analyzing maps, graphs, and tables related to Poetic Structure & Form |
-| **Argumentation** | Making evidence-based claims about Poetic Structure & Form |
-| **Spatial reasoning** | Using geographic thinking to analyze Poetic Structure & Form |
-      `
+> 🔑 **Key Concept:** On the AP exam, form matters only as part of an interpretation. Section I (55 questions, 60 minutes, 45% of the score) asks what structural choices *do*. In Section II, the poetry analysis essay (Q1) rewards structure woven into a line of reasoning, never a separate "form paragraph" that lists features.
+`
+    },
+    {
+      id: 'englitpo6-stems',
+      type: 'text' as const,
+      content: `
+## 📖 How the Exam Asks About Structure
+
+| Question stem you may see | What it is really asking | First move |
+|---|---|---|
+| "The structure of the poem as a whole is best described as" | The movement of the argument from part to part | Label each unit's job: problem, example, turn, resolution |
+| "The shift in line 9 (or 12) is from ... to ..." | Where and how the speaker's thinking turns | Find the volta; compare tone before and after |
+| "The final couplet primarily serves to" | How the ending relates to everything before it | Does it sum up, reverse, or undercut? |
+| "The repetition of 'When' at the start of lines 1, 5 and 9 serves to" | How a structural pattern organizes ideas | Ask what each repetition introduces |
+| "Which of the following best describes the relationship between stanzas 1 and 2?" | Parallel, contrast, cause and effect, question and answer | Paraphrase each stanza in one line |
+
+Correct answers in this category almost always describe a **movement** or **relationship**, such as "from anxious speculation to a stark acceptance." Wrong answers often describe a feature accurately but misstate its effect.
+`
+    },
+    {
+      id: 'englitpo6-keats',
+      type: 'text' as const,
+      content: `
+## Practice Poem: Keats's "When I have fears"
+
+> When I have fears that I may cease to be
+> Before my pen has glean'd my teeming brain,
+> Before high-piléd books, in charact'ry,
+> Hold like rich garners the full-ripen'd grain;
+> When I behold, upon the night's starr'd face,
+> Huge cloudy symbols of a high romance,
+> And think that I may never live to trace
+> Their shadows, with the magic hand of chance;
+> And when I feel, fair Creature of an hour!
+> That I shall never look upon thee more,
+> Never have relish in the fairy power
+> Of unreflecting love—then on the shore
+> Of the wide world I stand alone, and think,
+> Till Love and Fame to nothingness do sink.
+>
+> — John Keats, "When I have fears that I may cease to be," written 1818, published 1848 (text from Palgrave's *Golden Treasury*, 1861)
+
+**Glossary:** *glean'd*: gathered, as grain left after harvest; *charact'ry*: written characters, print; *garners*: granaries.
+
+### Mapping the Form
+
+| Unit | Rhyme | Opening word | Fear |
+|---|---|---|---|
+| Quatrain 1 (1-4) | be / brain / charact'ry / grain (ABAB) | "When" | Dying before writing all his poems; harvest metaphor (pen gleaning the brain, books as granaries) |
+| Quatrain 2 (5-8) | face / romance / trace / chance (CDCD) | "When" | Dying before capturing the grand visions he sees in the night sky |
+| Quatrain 3 (9-12) | hour / more / power / shore (EFEF) | "And when" | Losing a beloved, the "fair Creature of an hour" |
+| Couplet (13-14) | think / sink (GG) | (no new clause) | All ambitions sink to "nothingness" |
+
+**The key structural fact.** The whole poem is one sentence. Three "When" clauses, one per quatrain, pile up fears; the main clause does not arrive until the dash in **line 12**: "then on the shore / Of the wide world I stand alone, and think." The Shakespearean form leads us to expect a turn at line 9 and a separate closing couplet. Keats delays the turn to the middle of line 12 and runs the sentence straight across the boundary into the couplet. The couplet does not stand apart to resolve the poem; it completes the sinking.
+`
     },
     {
       id: 'englitpo6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Exam-Style Questions** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'When interpreting data about Poetic Structure & Form, the first step is:',
+            question: `The repetition of "When" at the beginning of each quatrain primarily serves to`,
             options: [
-              'Jump to conclusions',
-              'Identify what the data shows and note any patterns or trends',
-              'Ignore the data',
-              'Only look at the title'
+              `separate three unrelated memories from the speaker's youth`,
+              `pile up fears before the main clause arrives`,
+              `signal that each quatrain will end with a moment of hope`,
+              `mark a change of speaker at the start of every quatrain`
             ],
             correctAnswer: 1,
-            explanation: 'Data interpretation should begin with identifying what is shown and noting visible patterns before drawing conclusions.'
+            explanation: `Each "When" opens another subordinate clause of fear, and the sentence's main clause is withheld until line 12, so dread accumulates. The fears are related, not memories; no quatrain ends in hope; and the speaker never changes.`
           },
           {
-            question: 'An evidence-based argument about Poetic Structure & Form requires:',
+            question: `The shift that occurs in line 12 is best described as a movement from`,
             options: [
-              'Just opinions',
-              'A clear claim supported by specific evidence and reasoning',
-              'No evidence',
-              'Only emotional appeals'
+              `listing fears to confronting them in isolation`,
+              `celebrating fame to lamenting a lost love`,
+              `addressing the reader to addressing the stars`,
+              `present-tense reflection to a story of the past`
             ],
-            correctAnswer: 1,
-            explanation: 'Evidence-based arguments need a claim (thesis), supporting evidence (data, examples), and reasoning (explanation).'
+            correctAnswer: 0,
+            explanation: `After three "When" clauses of fear, the dash brings the main clause: the speaker stands "alone" on the shore and thinks until ambition sinks. The poem never celebrates fame, the beloved (not the stars) is addressed, and the tense stays present.`
+          },
+          {
+            question: `The final couplet differs from that of a typical Shakespearean sonnet chiefly because it`,
+            options: [
+              `continues the sentence begun in line 1 rather than standing apart`,
+              `abandons iambic pentameter for a shorter, freer line`,
+              `introduces a new rhyme sound not found elsewhere`,
+              `reverses the poem's argument with a hopeful twist`
+            ],
+            correctAnswer: 0,
+            explanation: `The couplet is the end of the poem's single sentence, so it completes the turn rather than delivering a separate summary. It keeps the meter, every Shakespearean couplet introduces a new rhyme, and its "nothingness" offers no hopeful reversal.`
           }
         ]
       }
     },
     {
-      id: 'englitpo6-content',
+      id: 'englitpo6-ladder',
       type: 'text' as const,
       content: `
-## Problem-Solving Workshop — Deeper Dive
+## The Observation Ladder: From Label to Argument
 
-### Data interpretation
-Analyzing maps, graphs, and tables related to Poetic Structure & Form. Understanding this concept is essential for mastering Poetic Structure & Form in AP English Literature.
+| Rung | Example on Keats | Value on the exam |
+|---|---|---|
+| 1. **Label** | "The poem is a Shakespearean sonnet." | Nothing yet |
+| 2. **Description** | "The poem is one sentence whose main clause comes in line 12." | Accurate, but not interpretive |
+| 3. **Function** | "Delaying the main clause lets fears pile up before the speaker can act or conclude." | Commentary begins |
+| 4. **Interpretation** | "By withholding the turn until line 12 and running it into the couplet, Keats denies the sonnet its usual resolution, so the poem enacts a mind overwhelmed until even 'Love and Fame' sink." | Commentary that serves a line of reasoning (Row B) |
 
-### Argumentation
-Making evidence-based claims about Poetic Structure & Form. This builds on the previous concept and connects to broader themes in the course.
+Climb every rung, quickly. Skipping straight to interpretation without describing the feature leaves the reader unsure what you noticed. Stopping at rung 2 leaves your evidence unexplained.
 
-### Spatial reasoning
-Using geographic thinking to analyze Poetic Structure & Form. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
-      `
-    },
-    {
-      id: 'englitpo6-input',
-      type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
+### Three Moves That Connect Form to Meaning
 
-1) What term refers to analyzing maps, graphs, and tables related to Poetic Structure & Form?
-
-2) What concept describes making evidence-based claims about Poetic Structure & Form?
-
-3) Name the term for using geographic thinking to analyze Poetic Structure & Form.
-
-Use the exact term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['Data interpretation', 'Argumentation', 'Spatial reasoning'],
-        hint1: 'Starts with: D',
-        hint2: 'Starts with: A',
-        hint3: 'Starts with: S',
-        explanation: 'Expected answers: Data interpretation (Analyzing maps, graphs, and tables related to Poetic Structure & Form), Argumentation (Making evidence-based claims about Poetic Structure & Form), and Spatial reasoning (Using geographic thinking to analyze Poetic Structure & Form).'
-      }
+1. **Expectation and departure.** Name what the form leads a reader to expect, then show where the poem departs and why.
+2. **Form mirrors content.** Show a structure enacting what the words say (the sinking sentence, the circling refrain, the interlocking rhymes).
+3. **Form against content.** Show a structure in tension with what the words say (a calm, regular rhythm describing horror). Tensions like this are often where Row C sophistication lives.
+`
     },
     {
       id: 'englitpo6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Which Rung?** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Analyzing maps, graphs, and tables related to Poetic Structure & Form is called ___',
-            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'None of these']
+            label: `"The rhyme scheme is ABAB CDCD EFEF GG." This sentence is ___`,
+            options: ['a label or description', 'a function', 'an interpretation', 'a thesis']
           },
           {
-            label: 'Making evidence-based claims about Poetic Structure & Form describes ___',
-            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'All of these']
+            label: `"Each 'When' clause adds another fear before any resolution can come." This sentence explains a ___`,
+            options: ['function', 'label', 'rhyme scheme', 'meter']
           },
           {
-            label: 'Using geographic thinking to analyze Poetic Structure & Form is known as ___',
-            options: ['Spatial reasoning', 'Data interpretation', 'Argumentation', 'None of these']
+            label: `"Keats withholds the volta so long that the sonnet's promised resolution collapses into 'nothingness.'" This sentence is ___`,
+            options: ['an interpretation', 'a label', 'a description', 'a summary']
           }
         ],
-        correctAnswers: ['Data interpretation', 'Argumentation', 'Spatial reasoning'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Data interpretation — Analyzing maps, graphs, and tables related to Poetic Structure & Form. Argumentation — Making evidence-based claims about Poetic Structure & Form. Spatial reasoning — Using geographic thinking to analyze Poetic Structure & Form.'
+        correctAnswers: ['a label or description', 'function', 'an interpretation'],
+        hint1: 'It reports a fact without saying what the fact does.',
+        hint2: 'It says what the repetition does, but not yet what it means for the whole poem.',
+        hint3: 'It links a structural choice to the poem\'s overall meaning.',
+        explanation: 'Writing out the rhyme scheme only describes; saying what the repeated "When" does is function; and tying the delayed turn to the poem\'s collapse into "nothingness" is interpretation.'
       }
     },
     {
-      id: 'englitpo6-strategy',
+      id: 'englitpo6-model',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## An Annotated Model Paragraph
 
-### Misconceptions to Avoid
-- Don\'t confuse **Data interpretation** with **Argumentation** — while related, they address different aspects of Poetic Structure & Form.
-- **Spatial reasoning** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
+*Prompt (practice, in the AP format): analyze how Keats uses literary elements and techniques to convey the speaker's complex response to the possibility of an early death.*
 
-### AP Strategy Moves
-- When you see questions about problem-solving workshop, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect problem-solving workshop to broader themes in AP English Literature for higher scores.
-      `
+> **(1)** Keats builds the sonnet as a single sentence that cannot reach its conclusion, so the reader feels the speaker's fears accumulate faster than he can master them. **(2)** Each quatrain opens with "When," and each "When" adds a new loss: unwritten books, unrecorded visions of "a high romance," and a "fair Creature of an hour." **(3)** Because these are subordinate clauses, the sentence keeps postponing its main verb; the speaker, like the grammar, is suspended in dread. **(4)** The Shakespearean form leads a reader to expect a turn at line 9 and a couplet that resolves the argument, but Keats delays the turn until the dash in line 12. **(5)** When it finally comes, "then on the shore / Of the wide world I stand alone," the main clause offers no answer, only isolation. **(6)** The sentence then runs straight into the couplet, where "Love and Fame to nothingness do sink," so the place a sonnet usually reserves for resolution becomes the place where everything the speaker desires goes under. **(7)** The structure thus makes the poem's response complex: the speaker does not defeat his fear, yet by standing and thinking he reaches a stark calm in which ambition no longer matters.
+
+| Sentence | Job | Rubric link |
+|---|---|---|
+| (1) | Claim about structure *and* meaning | Line of reasoning (Row B) |
+| (2) | Evidence: the repeated "When" and the three fears | Row B: specific evidence |
+| (3) | Commentary: grammar enacts suspension | Row B: explains how |
+| (4)-(5) | Expectation and departure: the delayed volta | Row B, and complexity |
+| (6) | Form mirrors content: the couplet sinks | Row B commentary |
+| (7) | Names the complexity: fear and calm together | Row C opportunity, if sustained across the essay |
+
+## Form in the Thesis
+
+A strong Q1 thesis names a structural choice alongside other techniques, in service of one interpretation:
+
+> "Through a single sentence that delays its turn until the twelfth line, and through images of harvest and starlight that the speaker fears he will never gather, Keats portrays a mind that moves from frantic ambition to a stark, solitary calm."
+
+> 🔑 **AP Connection:** Avoid organizing an essay by device ("Paragraph 1: form; Paragraph 2: imagery"). Organize by stages of your interpretation, and bring in form wherever it supports a stage.
+`
     },
     {
-      id: 'englitpo6-applied',
+      id: 'englitpo6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**Writing Practice** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'You are given a data table about Poetic Structure & Form and asked to identify a trend. You should:',
+            question: `Which sentence about Keats's sonnet would add the most to an essay's commentary?`,
             options: [
-              'Pick random numbers',
-              'Look for consistent increases, decreases, or patterns across the data',
-              'Ignore the table',
-              'Only read the first row'
+              `"The poem follows the ABAB CDCD EFEF GG rhyme scheme."`,
+              `"Keats wrote this sonnet in 1818, three years before his death."`,
+              `"Withholding the main clause leaves the speaker suspended in dread."`,
+              `"The poem has fourteen lines and is written in iambic pentameter."`
             ],
-            correctAnswer: 1,
-            explanation: 'Trend identification requires examining the entire dataset for consistent patterns of change.'
+            correctAnswer: 2,
+            explanation: `Only this sentence explains what a structural feature does for meaning. The rhyme scheme and line count are labels, and the biographical date is context that still needs to be tied to the text.`
           },
           {
-            question: 'A free-response question asks you to use evidence to support an argument about Poetic Structure & Form. The best approach is:',
+            question: `A student's essay has one paragraph on "form," one on "imagery" and one on "diction." The best advice is to`,
             options: [
-              'State your opinion without evidence',
-              'Make a clear claim, cite specific data or examples, and explain how they support your argument',
-              'Copy the question',
-              'Write about a different topic'
+              `add a fourth paragraph on sound devices`,
+              `reorganize by stages of the interpretation`,
+              `remove the form paragraph entirely`,
+              `begin each paragraph with a definition`
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response answers require a clear thesis, specific supporting evidence, and explanation of how evidence supports the argument.'
+            explanation: `Device-by-device organization tends to list features; paragraphs built on stages of an argument use any device that serves each stage. Another device paragraph or definitions would deepen the list, and structure should be used, not removed.`
           }
         ]
       }
