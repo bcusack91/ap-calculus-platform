@@ -23,7 +23,7 @@ The **rhetorical situation** is the set of circumstances that shapes a text. Eve
 | **Purpose** | The goal of the communication | Is this meant to persuade, inform, entertain, or call to action? |
 | **Context** | The circumstances surrounding the text | What historical, cultural, or social factors are at play? |
 
-> 🔑 **Exigence** is the most frequently tested and least understood element. It is the specific trigger — the event, situation, or problem — that makes the writer feel compelled to communicate.
+> 🔑 **Exigence** is often the least understood element. It is the specific trigger — the event, situation, or problem — that makes the writer feel compelled to communicate.
 
 ---
 
@@ -165,7 +165,7 @@ Writers do not make choices in a vacuum. Every element of the rhetorical situati
 ## AP Exam Strategy: Rhetorical Situation
 
 - ALWAYS start your rhetorical analysis by identifying the **rhetorical situation** (speaker, audience, exigence, purpose, context)
-- **Exigence** is the most commonly tested element — know it cold
+- Know **exigence** cold: it explains why the text exists at that moment, and students often confuse it with purpose
 - Explain how the situation SHAPES the writer's choices (don't just list elements)
 - Use **SOAPSTone** as a pre-reading checklist for any passage
 - The AP rubric rewards connecting rhetorical choices to purpose and audience
@@ -181,15 +181,15 @@ Writers do not make choices in a vacuum. Every element of the rhetorical situati
       exercise: {
         questions: [
           {
-            question: 'Frederick Douglass gave his speech "What to the Slave Is the Fourth of July?" on July 5, 1852, to a predominantly white abolitionist audience. What is the strategic significance of the DATE?',
+            question: 'Frederick Douglass gave "What to the Slave Is the Fourth of July?" on July 5, 1852 (the Fourth fell on a Sunday that year), at an Independence Day event hosted by an antislavery society. What is the rhetorical significance of the OCCASION?',
             options: [
-              'It was a convenient scheduling decision',
-              'Speaking the day after July 4th highlights the hypocrisy of celebrating freedom while millions remain enslaved',
-              'He wanted to avoid crowds on July 4th',
-              'The date has no rhetorical significance'
+              'Douglass can turn a celebration of liberty into evidence against slavery',
+              'Douglass can avoid political topics that the holiday would make awkward',
+              'Douglass can rely on the crowd\'s patriotism to praise the nation\'s record',
+              'Douglass can speak briefly, since holiday audiences expect short remarks'
             ],
-            correctAnswer: 1,
-            explanation: 'Douglass deliberately leveraged the context of Independence Day to sharpen his argument. The juxtaposition of celebrating liberty while slavery exists makes the hypocrisy undeniable. This is the rhetorical situation shaping the text.'
+            correctAnswer: 0,
+            explanation: 'The Independence Day occasion lets Douglass set the nation\'s celebration of liberty against its practice of slavery, exposing the contradiction to an audience gathered to honor freedom. The July 5 date was a calendar matter, since July 4 fell on a Sunday; the significance lies in the occasion, not in a deliberate day-after choice.'
           },
           {
             question: 'An author writes an opinion piece in the New York Times about income inequality. If the same author published the same argument in an academic economics journal, what would MOST likely change?',
@@ -200,7 +200,7 @@ Writers do not make choices in a vacuum. Every element of the rhetorical situati
               'Only the title'
             ],
             correctAnswer: 1,
-            explanation: 'Different audiences require different approaches. A newspaper audience expects accessible language and concrete examples. An academic audience expects technical terminology, citations, and formal tone. The audience shapes the writer-s choices.'
+            explanation: 'Different audiences require different approaches. A newspaper audience expects accessible language and concrete examples. An academic audience expects technical terminology, citations, and formal tone. The audience shapes the writer\'s choices.'
           }
         ]
       }

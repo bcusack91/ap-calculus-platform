@@ -147,7 +147,7 @@ Strong arguments **acknowledge and refute** opposing views:
             options: ['Sufficient and representative — large sample from a credible source', 'Based on a single experience', 'An emotional anecdote', 'A personal opinion']
           },
           {
-            label: '"While opponents argue the policy is too expensive, the Congressional Budget Office projects it will save $50 billion over ten years." This sentence uses ___',
+            label: '"While opponents argue the policy is too expensive, the Congressional Budget Office projects it will save \\$50 billion over ten years." This sentence uses ___',
             options: ['Concession and rebuttal', 'Only pathos', 'Only ethos', 'Only anecdote']
           }
         ],
@@ -168,7 +168,7 @@ Strong arguments **acknowledge and refute** opposing views:
 - On the argument essay, use at least 2-3 types of evidence (statistics, examples, expert testimony)
 - ALWAYS include commentary — evidence without explanation earns minimal credit
 - Address counterarguments to show sophistication
-- The AP rubric specifically rewards "concession and rebuttal" in the argument essay
+- The essay rubric has no separate row for counterarguments: it scores thesis (0–1), evidence and commentary (0–4), and sophistication (0–1). A concession and rebuttal that consistently explores the complexity of the issue is one route to the sophistication point
 - Evaluate source credibility: peer-reviewed research > news articles > personal blogs
       `
     },
@@ -200,7 +200,7 @@ Strong arguments **acknowledge and refute** opposing views:
               '"I believe homework should be optional."'
             ],
             correctAnswer: 1,
-            explanation: 'This sentence concedes that some evidence supports moderate homework ("While some studies suggest...") before rebutting with stronger evidence for the writer-s position. This demonstrates sophistication and fair-mindedness.'
+            explanation: 'This sentence concedes that some evidence supports moderate homework ("While some studies suggest...") before rebutting with stronger evidence for the writer\'s position. This demonstrates sophistication and fair-mindedness.'
           }
         ]
       }

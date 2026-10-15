@@ -5,168 +5,195 @@ export const englangRhetoricalSituationPart7Data = {
       id: 'englangr7-intro',
       type: 'text' as const,
       content: `
-# ✍️ The Rhetorical Situation
+# 🎯 The Rhetorical Situation (Reading)
 
-**Part 7 of 7 — AP Review**
+**Part 7 of 7 — Synthesis Review: Reading Any Text Through Its Situation**
 
-Comprehensive review of The Rhetorical Situation for the AP exam. Focus on key concepts, common question types, and exam strategies.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| 📖 Six Texts, Six Situations |
+| A Headnote Routine for Section I and Question 2 |
+| Fresh Practice: Wilson's War Message (1917) |
+| Final Review Checklist |
 
-| Concept | Description |
-|---------|-------------|
-| **Key vocabulary** | Essential terms and definitions for The Rhetorical Situation |
-| **Common question types** | The most frequent ways The Rhetorical Situation is tested on the AP exam |
-| **Exam strategy** | Approaches for answering The Rhetorical Situation questions effectively |
-      `
+> 🔑 **Key Concept:** Every text in this lesson made different choices because it faced a different situation. The skill that transfers to any passage on the exam is a routine: read the headnote, map the six components, find the central tension, and explain each choice as a response to it.
+`
+    },
+    {
+      id: 'englangr7-table',
+      type: 'text' as const,
+      content: `
+## 📖 Six Texts, Six Situations
+
+| Text | Exigence | Audience | Central tension | Signature choice |
+|---|---|---|---|---|
+| Lincoln to Greeley (1862) | Greeley's public criticism | A public divided over emancipation | Keep both sides behind the war | One "paramount object" everyone shares |
+| Declaration of Independence (1776) | A vote to separate | "mankind," a "candid world" | Rebellion must look lawful | Appeal to "the Laws of Nature" |
+| Paine, *The American Crisis* (1776) | Retreat and expiring enlistments | Discouraged soldiers and citizens | Admit hardship without breaking morale | "summer soldier and the sunshine patriot" |
+| Douglass (1852) | Invitation to a Fourth of July event | Sympathetic but complacent Northerners | An honored guest excluded from the celebration | "This Fourth July is yours, not mine." |
+| Lincoln, Second Inaugural (1865) | A second term as victory nears | North, South and opponents of slavery | Judge slavery without inviting revenge | "let us judge not, that we be not judged" |
+| Anthony (1873) | Indictment for voting | Potential jurors | A defendant must sound like a loyal citizen | "we, the whole people" |
+
+### Patterns Across the Texts
+
+- A **friendly** audience can still be a **difficult** one (Douglass).
+- A **divided** audience pushes writers toward shared values (Lincoln in 1862 and 1865).
+- A writer in a **weak position** often borrows authority from texts the audience reveres (the Declaration's "Laws of Nature," Anthony's Preamble).
+- **Admitting** a difficulty can be more persuasive than denying it when the audience already knows it (Paine).
+`
     },
     {
       id: 'englangr7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Mixed Review** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'The most important exam strategy for The Rhetorical Situation is:',
+            question: 'Which two texts from this lesson most clearly borrow authority from a founding document their audiences revered?',
             options: [
-              'Guess randomly',
-              'Know key terms, use specific examples, and connect to course themes',
-              'Skip these questions',
-              'Only memorize definitions'
+              'Douglass\'s speech and Paine\'s essay',
+              'Anthony\'s speech and Douglass\'s speech',
+              'Paine\'s essay and Lincoln\'s Second Inaugural',
+              'Lincoln\'s letter to Greeley and Paine\'s essay'
             ],
             correctAnswer: 1,
-            explanation: 'Effective exam strategy combines vocabulary knowledge, specific examples, and connections to broader themes.'
+            explanation: 'Anthony rereads the Preamble, and Douglass asks whether the principles "embodied in that Declaration of Independence" extend to the enslaved. Paine and the Greeley letter do not build on a founding document in these excerpts.'
           },
           {
-            question: 'AP multiple-choice questions about The Rhetorical Situation often test:',
+            question: 'What do Lincoln\'s letter to Greeley and his Second Inaugural have in common as responses to their situations?',
             options: [
-              'Random trivia',
-              'Application of concepts to new scenarios',
-              'Spelling',
-              'Personal opinions'
+              'Both rely on statistics to persuade a skeptical public',
+              'Both seek shared ground with a divided audience',
+              'Both were addressed mainly to foreign governments',
+              'Both avoid any reference to slavery or emancipation'
             ],
             correctAnswer: 1,
-            explanation: 'AP multiple-choice questions typically present a new scenario and ask students to apply concepts rather than just recall facts.'
+            explanation: 'In 1862 Lincoln names a goal every faction shares, and in 1865 he offers "charity for all" to North and South alike. Neither text relies on statistics or targets foreign governments, and both address slavery directly.'
           }
         ]
       }
     },
     {
-      id: 'englangr7-content',
+      id: 'englangr7-routine',
       type: 'text' as const,
       content: `
-## AP Review — Deeper Dive
+## A Headnote Routine for Section I and Question 2
 
-### Key vocabulary
-Essential terms and definitions for The Rhetorical Situation. Understanding this concept is essential for mastering The Rhetorical Situation in AP English Language.
+1. **Underline** the writer, date, place and audience named in the headnote.
+2. **Ask what happened** that made the text necessary (exigence).
+3. **Ask what the audience believes, values or needs**, including where it is divided.
+4. **Name the tension**: what makes this situation hard for this writer?
+5. **Read the passage** looking for choices that resolve that tension.
 
-### Common question types
-The most frequent ways The Rhetorical Situation is tested on the AP exam. This builds on the previous concept and connects to broader themes in the course.
+## Fresh Practice: Wilson's War Message (1917)
 
-### Exam strategy
-Approaches for answering The Rhetorical Situation questions effectively. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
-      `
-    },
-    {
-      id: 'englangr7-input',
-      type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
+*Headnote: On April 2, 1917, President Woodrow Wilson addressed a joint session of Congress to ask for a declaration of war against Germany. Germany had resumed unrestricted submarine warfare against ships, including American ones, two months earlier. Wilson had won reelection in 1916 in part on the slogan "He kept us out of war," and many Americans still opposed entering the conflict.*
 
-1) What term refers to essential terms and definitions for The Rhetorical Situation?
+> The world must be made safe for democracy. Its peace must be planted upon the tested foundations of political liberty.
+>
+> — Woodrow Wilson, address to Congress, April 2, 1917
 
-2) What concept describes the most frequent ways The Rhetorical Situation is tested on the AP exam?
+### Applying the Routine
 
-3) Name the term for approaches for answering The Rhetorical Situation questions effectively.
+| Step | Wilson |
+|---|---|
+| Exigence | Germany's renewed submarine attacks |
+| Audience | Congress, which must vote, and a public that had reelected him as a peacekeeper |
+| Tension | A president known for keeping the country out of war must ask for war |
+| Choice | He frames entry not as revenge for sunk ships but as a cause larger than national interest: making the world "safe for democracy" |
 
-Use the exact term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['Key vocabulary', 'Common question types', 'Exam strategy'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: E',
-        explanation: 'Expected answers: Key vocabulary (Essential terms and definitions for The Rhetorical Situation), Common question types (The most frequent ways The Rhetorical Situation is tested on the AP exam), and Exam strategy (Approaches for answering The Rhetorical Situation questions effectively).'
-      }
+The framing addresses the tension directly. A war for narrow interests would contradict his record; a war for democracy and "political liberty" can be presented as continuous with the values that made him seek peace.
+`
     },
     {
       id: 'englangr7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Map Wilson's Situation** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Essential terms and definitions for The Rhetorical Situation is called ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'Guessing']
+            label: 'Germany\'s resumed submarine attacks are the ___',
+            options: ['exigence', 'purpose', 'message', 'audience']
           },
           {
-            label: 'The most frequent ways The Rhetorical Situation is tested on the AP exam describes ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'Guessing']
+            label: 'Persuading Congress to declare war is the ___',
+            options: ['exigence', 'purpose', 'message', 'audience']
           },
           {
-            label: 'Approaches for answering The Rhetorical Situation questions effectively is known as ___',
-            options: ['Exam strategy', 'Key vocabulary', 'Common question types', 'Guessing']
+            label: 'Wilson\'s 1916 slogan "He kept us out of war" creates a ___ he must overcome',
+            options: ['tension', 'concession', 'statistic', 'persona']
           }
         ],
-        correctAnswers: ['Key vocabulary', 'Common question types', 'Exam strategy'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key vocabulary — Essential terms and definitions for The Rhetorical Situation. Common question types — The most frequent ways The Rhetorical Situation is tested on the AP exam. Exam strategy — Approaches for answering The Rhetorical Situation questions effectively.'
+        correctAnswers: ['exigence', 'purpose', 'tension'],
+        hint1: 'Which item is the event that prompted the speech?',
+        hint2: 'Which item is the action Wilson wants?',
+        hint3: 'His own record seems to point the other way.',
+        explanation: 'The submarine campaign prompted the address (exigence). A declaration of war is the outcome he seeks (purpose). His reputation as a peacekeeper creates a tension the speech must resolve.'
       }
     },
     {
-      id: 'englangr7-strategy',
+      id: 'englangr7-checklist',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## Final Review Checklist
 
-### Misconceptions to Avoid
-- Don\'t confuse **Key vocabulary** with **Common question types** — while related, they address different aspects of The Rhetorical Situation.
-- **Exam strategy** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
+| Skill | Can you... |
+|---|---|
+| Distinguish components | Separate exigence (what prompted it) from purpose (what it seeks) and message (what it says)? |
+| Profile the audience | Name shared values and the divisions within the audience? |
+| Find the tension | State in one sentence what makes the situation hard for this writer? |
+| Connect choice to situation | Explain why a choice fits this audience at this moment? |
+| Use context as commentary | Bring in context only where it explains a choice? |
 
-### AP Strategy Moves
-- When you see questions about ap review, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect ap review to broader themes in AP English Language for higher scores.
-      `
+> 🔑 **AP Connection:** In Section I, wrong options often describe a choice correctly but tie it to the wrong audience or purpose. In the essay, the same skill becomes commentary: "Because her listeners could sit on her jury, Anthony..." is the sentence shape that turns description into analysis.
+`
     },
     {
-      id: 'englangr7-applied',
+      id: 'englangr7-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Questions on Wilson** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'On the AP exam, a question presents a scenario you have never seen before about The Rhetorical Situation. You should:',
+            question: 'Wilson\'s claim that "The world must be made safe for democracy" primarily serves to',
             options: [
-              'Panic',
-              'Apply the key concepts and processes you learned to analyze the new scenario',
-              'Skip it',
-              'Write about something else'
+              'present the war as a cause larger than revenge for lost ships',
+              'promise Congress that the war will be brief and inexpensive',
+              'concede that his earlier policy of neutrality had been wrong',
+              'warn Germany that the United States has already begun fighting'
             ],
-            correctAnswer: 1,
-            explanation: 'The AP exam tests application — use your knowledge of concepts and processes to analyze unfamiliar scenarios.'
+            correctAnswer: 0,
+            explanation: 'By naming democracy rather than sunk ships as the stake, Wilson lifts the war above national grievance, which suits a president known for avoiding war. The sentence makes no promise about cost, admits no error and does not address Germany.'
           },
           {
-            question: 'For free-response questions on The Rhetorical Situation, the most common mistake is:',
+            question: 'Which detail from the headnote best explains why Wilson needed a large, principled justification?',
             options: [
-              'Writing too clearly',
-              'Being too vague and not using specific examples or key vocabulary',
-              'Showing too much knowledge',
-              'Answering the question directly'
+              'He had been reelected partly as the president who kept the nation out of war',
+              'He spoke to a joint session of Congress rather than to the Senate alone',
+              'Germany had resumed unrestricted submarine warfare two months earlier',
+              'The address was delivered in early April rather than in the winter months'
             ],
-            correctAnswer: 1,
-            explanation: 'The most common FRQ mistake is vagueness — AP graders look for specific terms, definitions, and concrete examples.'
+            correctAnswer: 0,
+            explanation: 'His reputation as a peacekeeper meant a request for war could look like a reversal, so he needed a principle large enough to justify it. The submarine attacks are the exigence, not the source of that difficulty, and the other details do not bear on it.'
+          },
+          {
+            question: 'Which statement best describes a pattern shared by Anthony\'s speech and the Declaration of Independence?',
+            options: [
+              'Each speaks from a weak position by appealing to an authority the audience accepts',
+              'Each was written to persuade foreign governments to recognize a new nation',
+              'Each relies mainly on personal anecdote to win over a hostile audience',
+              'Each concedes that the opposing side has the stronger legal argument'
+            ],
+            correctAnswer: 0,
+            explanation: 'Colonists in rebellion appealed to the "Laws of Nature," and a woman indicted for voting appealed to the Preamble; both borrow authority their audiences already respect. Neither relies on anecdote or concedes the legal argument, and only the Declaration addressed foreign powers.'
           }
         ]
       }

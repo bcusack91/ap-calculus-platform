@@ -5,168 +5,201 @@ export const englangRhetoricalSituationWritingPart7Data = {
       id: 'englangr7-intro',
       type: 'text' as const,
       content: `
-# ✍️ Rhetorical Situation in Writing
+# 🧭 Rhetorical Situation in Writing
 
-**Part 7 of 7 — AP Review**
+**Part 7 of 7 — Review: Writing for the Situation, Start to Finish**
 
-Comprehensive review of Rhetorical Situation in Writing for the AP exam. Focus on key concepts, common question types, and exam strategies.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| 📖 The Workflow in One Table |
+| Three Writers, One Skill Set |
+| One More Ending: Stanton Looks Ahead |
+| Vocabulary and Final Checklist |
 
-| Concept | Description |
-|---------|-------------|
-| **Key vocabulary** | Essential terms and definitions for Rhetorical Situation in Writing |
-| **Common question types** | The most frequent ways Rhetorical Situation in Writing is tested on the AP exam |
-| **Exam strategy** | Approaches for answering Rhetorical Situation in Writing questions effectively |
-      `
+> 🔑 **Key Concept:** Writing for a rhetorical situation is a sequence of decisions. **Read the situation, profile the audience, choose a persona, open in a way that orients and engages, support the claim with evidence the reader trusts, answer the reader's strongest objection, and close with significance.** Skills 2.A (introductions and conclusions) and 2.B (audience beliefs, values, and needs) run through every step.
+`
+    },
+    {
+      id: 'englangr7-workflow',
+      type: 'text' as const,
+      content: `
+## 📖 The Workflow in One Table
+
+| Step | Question | Where it was taught |
+|---|---|---|
+| 1. Read the situation | Who, to whom, why, why now? In an exam prompt, what do the context words reveal? | Parts 1 and 4 |
+| 2. Profile the audience | What does the reader **believe**, **value**, and **need**? What do they already know? | Part 2 |
+| 3. Find common ground | Which value can I share with a reader who disagrees? | Part 2 |
+| 4. Choose persona and register | What kind of writer will this reader trust? | Part 5 |
+| 5. Write the introduction | How will I orient, engage, and focus? Where does the thesis go? | Part 3 |
+| 6. Plan evidence and concession | Which evidence will this reader accept? Which objection or fear must I answer? | Parts 2 and 5 |
+| 7. Write the conclusion | What follows if the reader accepts my claim? What should they do or think? | Part 3 |
+| 8. Check the rubric | Row A thesis, Row B evidence and commentary, Row C sophistication | Parts 4 and 6 |
+
+## Three Writers, One Skill Set
+
+| | **Wollstonecraft (1792)** | **Stanton (1848)** | **Roosevelt (1933)** |
+|---|---|---|---|
+| **Audience** | Talleyrand, a reformer who prized reason | A public that revered the founders | A frightened, distrustful nation |
+| **What the audience valued or needed** | Reasoned principle; the progress of society | Loyalty to the Declaration of Independence | Honesty and a reason to trust that action would come |
+| **Opening move** | Direct dedication stating why he should read with attention | Allusion that rewrites the Declaration's first sentences | Promise of candor; fear redefined as the enemy |
+| **Audience move in the body** | Answers the fear that educated women would seek power over men | A list of grievances in the founders' form | A program for action (described in the full address) |
+| **Closing move** | (Not studied here) | Anticipates ridicule and commits to action (below) | Authority presented as the people's mandate |
+
+The pattern is the same each time: the writer starts from something the audience already holds and argues that it leads to the writer's claim.
+`
     },
     {
       id: 'englangr7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Mixed Review** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'The most important exam strategy for Rhetorical Situation in Writing is:',
+            question: 'What strategy do Wollstonecraft\'s dedication and Stanton\'s opening have in common?',
             options: [
-              'Guess randomly',
-              'Know key terms, use specific examples, and connect to course themes',
-              'Skip these questions',
-              'Only memorize definitions'
+              'Each starts from a value the audience holds and extends it to women',
+              'Each opens with a statistic that establishes the scale of the harm',
+              'Each begins by conceding that the current laws are mostly just',
+              'Each addresses an audience of women who already agree with her'
             ],
-            correctAnswer: 1,
-            explanation: 'Effective exam strategy combines vocabulary knowledge, specific examples, and connections to broader themes.'
+            correctAnswer: 0,
+            explanation: 'Wollstonecraft links women\'s education to the progress Talleyrand valued, and Stanton adds "and women" to principles her readers revered. Neither opens with statistics, concedes the justice of current law, or writes chiefly to readers who already agree.'
           },
           {
-            question: 'AP multiple-choice questions about Rhetorical Situation in Writing often test:',
+            question: 'A student\'s argument essay keeps its thesis but replaces national statistics with data from the reader\'s own town and adds a concession to the reader\'s main worry. These changes best show',
             options: [
-              'Random trivia',
-              'Application of concepts to new scenarios',
-              'Spelling',
-              'Personal opinions'
+              'pandering to readers',
+              'audience adaptation',
+              'summarizing evidence',
+              'an attention hook'
             ],
             correctAnswer: 1,
-            explanation: 'AP multiple-choice questions typically present a new scenario and ask students to apply concepts rather than just recall facts.'
+            explanation: 'The claim stays the same while the evidence and concession are chosen for this reader, which is adaptation. Pandering would change the claim to please readers, summarizing restates evidence without arguing, and an attention hook only grabs interest at the opening.'
+          },
+          {
+            question: 'Which conclusion is most appropriate for an argument essay urging a city council to fund a one-year trial of later library hours?',
+            options: [
+              'In conclusion, libraries are important, so the hours should be extended.',
+              'A twelve-month test lets the council decide with evidence, not guesses.',
+              'Libraries have existed since ancient times and will continue to exist.',
+              'Every council member should be ashamed of the cuts made last year.'
+            ],
+            correctAnswer: 1,
+            explanation: 'This conclusion explains what the council gains by acting, which fits a cautious audience\'s need for evidence. The summary adds nothing, the history drifts from the decision, and shaming the council turns readers into opponents.'
           }
         ]
       }
     },
     {
-      id: 'englangr7-content',
+      id: 'englangr7-stanton',
       type: 'text' as const,
       content: `
-## AP Review — Deeper Dive
+## One More Ending: Stanton Looks Ahead
 
-### Key vocabulary
-Essential terms and definitions for Rhetorical Situation in Writing. Understanding this concept is essential for mastering Rhetorical Situation in Writing in AP English Language.
+Near the end of the Declaration of Sentiments, after the list of grievances, Stanton turns to what comes next:
 
-### Common question types
-The most frequent ways Rhetorical Situation in Writing is tested on the AP exam. This builds on the previous concept and connects to broader themes in the course.
+> "In entering upon the great work before us, we anticipate no small amount of misconception, misrepresentation, and ridicule; but we shall use every instrumentality within our power to effect our object. We shall employ agents, circulate tracts, petition the State and National legislatures, and endeavor to enlist the pulpit and the press in our behalf."
+> — Elizabeth Cady Stanton, Declaration of Sentiments (1848)
 
-### Exam strategy
-Approaches for answering Rhetorical Situation in Writing questions effectively. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
-      `
+### Why this closing fits the situation
+
+| Choice | Effect on the audience |
+|---|---|
+| "we anticipate... ridicule" | Names the reaction many readers would have before they can have it, which takes away some of its force |
+| "but we shall use every instrumentality" | Turns from the expected ridicule to resolve; the "but" marks the pivot |
+| A concrete list: agents, tracts, petitions, "the pulpit and the press" | Shows the movement has a plan, answering the belief that it was a passing complaint |
+| "the great work before us" | Looks forward, inviting supporters to join the work rather than only agree with it |
+
+This is a **call to action** combined with a response to the audience's expected objection. Compare Roosevelt, who closes by presenting his power as the people's mandate: both conclusions answer a doubt the audience is likely to hold at the moment the text ends.
+`
     },
     {
       id: 'englangr7-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Vocabulary Recall** ✍️
 
-1) What term refers to essential terms and definitions for Rhetorical Situation in Writing?
+**1)** Stanton's reuse of the Declaration of Independence's wording is an _______, a reference to a well-known text.
 
-2) What concept describes the most frequent ways Rhetorical Situation in Writing is tested on the AP exam?
+**2)** Changing your claim itself to please a reader, rather than changing your evidence or order, is called _______.
 
-3) Name the term for approaches for answering Rhetorical Situation in Writing questions effectively.
-
-Use the exact term from this part.
+**3)** The character a writer presents to readers, such as Roosevelt's candid leader, is the writer's _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key vocabulary', 'Common question types', 'Exam strategy'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: E',
-        explanation: 'Expected answers: Key vocabulary (Essential terms and definitions for Rhetorical Situation in Writing), Common question types (The most frequent ways Rhetorical Situation in Writing is tested on the AP exam), and Exam strategy (Approaches for answering Rhetorical Situation in Writing questions effectively).'
+        correctAnswers: ['allusion', 'pandering', 'persona'],
+        hint1: 'It begins with "a" and works only if the audience recognizes the source.',
+        hint2: 'Part 5 contrasted it with adaptation.',
+        hint3: 'From the Latin word for a mask an actor wore.',
+        explanation: 'An allusion borrows the authority of a text the audience knows. Pandering changes the claim to please the reader, while adaptation keeps the claim and changes the route. Persona is the character the writer presents, chosen for the situation.'
       }
     },
     {
-      id: 'englangr7-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Fill in the Blanks** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Essential terms and definitions for Rhetorical Situation in Writing is called ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'Guessing']
-          },
-          {
-            label: 'The most frequent ways Rhetorical Situation in Writing is tested on the AP exam describes ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'Guessing']
-          },
-          {
-            label: 'Approaches for answering Rhetorical Situation in Writing questions effectively is known as ___',
-            options: ['Exam strategy', 'Key vocabulary', 'Common question types', 'Guessing']
-          }
-        ],
-        correctAnswers: ['Key vocabulary', 'Common question types', 'Exam strategy'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key vocabulary — Essential terms and definitions for Rhetorical Situation in Writing. Common question types — The most frequent ways Rhetorical Situation in Writing is tested on the AP exam. Exam strategy — Approaches for answering Rhetorical Situation in Writing questions effectively.'
-      }
-    },
-    {
-      id: 'englangr7-strategy',
+      id: 'englangr7-checklist',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## Vocabulary and Final Checklist
 
-### Misconceptions to Avoid
-- Don\'t confuse **Key vocabulary** with **Common question types** — while related, they address different aspects of Rhetorical Situation in Writing.
-- **Exam strategy** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
+| Term | Meaning |
+|---|---|
+| **Exigence** | The problem or occasion that makes writing necessary now |
+| **Beliefs / values / needs** | What the audience holds true / ranks highest / requires before agreeing |
+| **Common ground** | A value or belief the writer and audience share |
+| **Audience adaptation** | Changing evidence, order, and diction for a reader while keeping the claim |
+| **Pandering** | Changing the claim to please the reader |
+| **Concession** | Granting a fair point to the other side before answering it |
+| **Persona** | The character a writer presents |
+| **Register** | The level of formality and technicality |
+| **Allusion** | A reference to a well-known text, person, or event |
+| **Defensible thesis** | A position a reasonable reader could dispute (Row A) |
 
-### AP Strategy Moves
-- When you see questions about ap review, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect ap review to broader themes in AP English Language for higher scores.
-      `
+### Final checklist for any essay draft
+
+- [ ] My introduction **orients** (context), **engages** (stakes), and **focuses** (thesis).
+- [ ] I can name the reader I am persuading and one thing that reader values.
+- [ ] My evidence comes from sources this reader would trust.
+- [ ] I concede the strongest objection fairly and answer it.
+- [ ] My persona is calm, precise, and serious; no mocking of readers who disagree.
+- [ ] My conclusion explains significance, implications, or a next step, not only a summary.
+- [ ] In rhetorical analysis, every choice I discuss is explained in light of the passage's audience and purpose.
+
+> 🔑 **AP Connection:** These moves show up in all three essays. In the synthesis and argument essays, they make your own argument persuasive. In the rhetorical analysis essay, you use the same understanding to explain why another writer's choices worked for that writer's audience.
+`
     },
     {
-      id: 'englangr7-applied',
+      id: 'englangr7-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**Final Check** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'On the AP exam, a question presents a scenario you have never seen before about Rhetorical Situation in Writing. You should:',
+            question: 'In the closing passage of the Declaration of Sentiments, the statement that the signers "anticipate no small amount of misconception, misrepresentation, and ridicule" primarily serves to',
             options: [
-              'Panic',
-              'Apply the key concepts and processes you learned to analyze the new scenario',
-              'Skip it',
-              'Write about something else'
+              'admit the convention may abandon its demands',
+              'answer a likely reaction before readers voice it',
+              'accuse the press of spreading false reports already',
+              'signal that the writers now expect certain defeat'
             ],
             correctAnswer: 1,
-            explanation: 'The AP exam tests application — use your knowledge of concepts and processes to analyze unfamiliar scenarios.'
+            explanation: 'By naming the ridicule in advance and then pledging action, Stanton takes some force out of a reaction many readers would have. The passage goes on to promise more effort, not retreat, makes no charge against the press, and expects a struggle rather than defeat.'
           },
           {
-            question: 'For free-response questions on Rhetorical Situation in Writing, the most common mistake is:',
+            question: 'A student\'s rhetorical analysis paragraph says, "Roosevelt uses a metaphor here, which is very effective." What would most improve the paragraph\'s commentary?',
             options: [
-              'Writing too clearly',
-              'Being too vague and not using specific examples or key vocabulary',
-              'Showing too much knowledge',
-              'Answering the question directly'
+              'Explaining how the metaphor answers what his audience needed in 1933',
+              'Naming two more devices that appear in the same part of the address',
+              'Defining the term "metaphor" before giving any example of its use',
+              'Replacing the word "effective" with a stronger word like "powerful"'
             ],
-            correctAnswer: 1,
-            explanation: 'The most common FRQ mistake is vagueness — AP graders look for specific terms, definitions, and concrete examples.'
+            correctAnswer: 0,
+            explanation: 'Commentary earns credit in Row B when it explains how a choice works for the audience in its situation. More devices, a definition, or a stronger adjective still leave the effect unexplained.'
           }
         ]
       }

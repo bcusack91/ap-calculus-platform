@@ -128,15 +128,15 @@ This signals nuanced engagement with real-world context.
 
 2) Adapting examples and framing to fit a specific audience is called audience _______.
 
-3) Acknowledging likely objections before responding strengthens rhetorical _______.
+3) In the phone-ban plan, acknowledging the families' emergency concerns before answering them is a _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['exigence', 'adaptation', 'effectiveness'],
+        correctAnswers: ['exigence', 'adaptation', 'concession'],
         hint1: 'The trigger behind the writing.',
         hint2: 'You adapt to audience needs.',
-        hint3: 'How well persuasion works.',
-        explanation: 'Exigence drives urgency. Audience adaptation tailors strategy. Addressing objections improves effectiveness.'
+        hint3: 'Look at the Strategy list in the sample phone-ban response: the move that grants a point to the other side.',
+        explanation: 'Exigence drives urgency. Audience adaptation tailors strategy. Granting a reasonable objection before answering it is a concession, which the writer then follows with a rebuttal.'
       }
     },
     {

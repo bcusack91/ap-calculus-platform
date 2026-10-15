@@ -160,7 +160,7 @@ On the AP English Language exam, you will do BOTH.
 ## AP Exam Strategy: Rhetoric
 
 - Always identify the **rhetorical situation** first: speaker, audience, purpose, context
-- The three appeals (ethos, logos, pathos) appear on EVERY rhetorical analysis essay
+- Ethos, logos and pathos are useful lenses, but the rubric does not require you to label appeals; it rewards explaining how specific choices serve the writer's purpose
 - Do not just NAME the appeal — explain HOW it works and WHY the writer chose it
 - Context matters: the same argument changes meaning in different historical moments
 - The AP exam rewards analysis of how rhetorical choices serve the writer's purpose

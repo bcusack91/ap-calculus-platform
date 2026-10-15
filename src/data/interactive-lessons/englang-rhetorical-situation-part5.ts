@@ -5,168 +5,196 @@ export const englangRhetoricalSituationPart5Data = {
       id: 'englangr5-intro',
       type: 'text' as const,
       content: `
-# ✍️ The Rhetorical Situation
+# 🎯 The Rhetorical Situation (Reading)
 
-**Part 5 of 7 — Change Over Time**
+**Part 5 of 7 — Complex Situations: Divided Audiences and Layered Purposes**
 
-The Rhetorical Situation has evolved over time. Understanding historical and contemporary changes helps explain current patterns and predict future trends.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| 📖 Six Misconceptions About the Rhetorical Situation |
+| Divided Audiences: Lincoln's Second Inaugural Address |
+| Layered Purposes |
+| AP Connection: Writing About Complexity |
 
-| Concept | Description |
-|---------|-------------|
-| **Continuity** | Aspects of The Rhetorical Situation that have remained stable over time |
-| **Change** | How The Rhetorical Situation has transformed due to new forces and conditions |
-| **Trend** | The direction of change in The Rhetorical Situation over time |
-      `
+> 🔑 **Key Concept:** Real situations are rarely simple. A text may address several audiences who want opposite things, and a writer may pursue more than one purpose at once. Explaining how a writer manages those tensions is one way strong essays show a complex understanding of the rhetorical situation.
+`
+    },
+    {
+      id: 'englangr5-myths',
+      type: 'text' as const,
+      content: `
+## 📖 Six Misconceptions About the Rhetorical Situation
+
+| Misconception | Correction |
+|---|---|
+| "The exigence is the topic." | The topic is what the text is about; the exigence is the specific event or need that prompted it. "Slavery" is a topic; the invitation to speak at a Fourth of July event is an exigence. |
+| "The audience is anyone who reads it." | Analysis focuses on the **intended** audience the writer shaped choices for, plus any secondary audience the writer anticipated. |
+| "A text has one purpose." | Many texts have a primary purpose and supporting ones, such as honoring the dead while recommitting the living. |
+| "Context is background for the introduction." | Context matters only when it explains a choice. Use it inside body paragraphs. |
+| "The writer's identity is just a credential." | The writer's perspective and relationship to the audience shape tone, evidence and structure, not only credibility. |
+| "Every audience is either friendly or hostile." | Audiences can be sympathetic but complacent, divided, skeptical, grieving or triumphant, and each calls for different choices. |
+`
     },
     {
       id: 'englangr5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Studying change over time in The Rhetorical Situation helps:',
+            question: 'A student writes: "The context of Douglass\'s speech is slavery." What is the most accurate criticism?',
             options: [
-              'Only with history classes',
-              'Explain current patterns and predict future developments',
-              'Nothing',
-              'Memorize dates'
+              'Slavery is the topic; context names conditions like the Fugitive Slave Act',
+              'Slavery is the audience; context would name the people listening in Rochester',
+              'Slavery is the purpose; context would name what Douglass wanted listeners to do',
+              'Slavery is the message; context would name Douglass\'s main claim in the speech'
             ],
-            correctAnswer: 1,
-            explanation: 'Understanding how things have changed reveals the forces shaping current conditions and likely future trends.'
+            correctAnswer: 0,
+            explanation: 'Slavery is what the speech is about. Context means specific conditions shaping how the speech was given and received, such as the 1850 law that pulled Northern states into returning people who escaped slavery.'
           },
           {
-            question: 'Continuity in The Rhetorical Situation means:',
+            question: 'Why should context usually appear in body paragraphs rather than only in the introduction of a rhetorical analysis?',
             options: [
-              'Everything changes',
-              'Some aspects have remained stable despite other changes',
-              'Nothing ever happened',
-              'The topic is boring'
+              'Body paragraphs are where context explains why a choice was made',
+              'Introductions on the exam are not allowed to mention history',
+              'Context earns the thesis point only when placed in body paragraphs',
+              'Graders skip introductions and read only the body of an essay'
             ],
-            correctAnswer: 1,
-            explanation: 'Continuity refers to elements that persist even as other aspects change — an important analytical concept.'
+            correctAnswer: 0,
+            explanation: 'Context is useful as commentary: it explains why a writer made a particular choice for this audience. Introductions may mention it, and no rule requires it in a particular place, but context that never touches a choice adds little.'
           }
         ]
       }
     },
     {
-      id: 'englangr5-content',
+      id: 'englangr5-lincoln',
       type: 'text' as const,
       content: `
-## Change Over Time — Deeper Dive
+## Divided Audiences: Lincoln's Second Inaugural Address
 
-### Continuity
-Aspects of The Rhetorical Situation that have remained stable over time. Understanding this concept is essential for mastering The Rhetorical Situation in AP English Language.
+**Situation.** Lincoln was inaugurated for a second term on March 4, 1865. Union victory was close; Lee would surrender about five weeks later. The crowd at the Capitol and the Northern public had suffered four years of war, and many wanted the South punished. Lincoln also knew the South would read the speech, and that the nation would have to be reunited.
 
-### Change
-How The Rhetorical Situation has transformed due to new forces and conditions. This builds on the previous concept and connects to broader themes in the course.
+| Audience | What they wanted or feared |
+|---|---|
+| Northern public | Vindication and, for many, punishment of the South |
+| White Southerners | Fear of harsh treatment after defeat |
+| Opponents of slavery | Assurance that the war's moral purpose would not be abandoned |
 
-### Trend
-The direction of change in The Rhetorical Situation over time. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
-      `
-    },
-    {
-      id: 'englangr5-input',
-      type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
+The speech had to satisfy a demand for moral judgment without feeding a desire for revenge. Read how it does that.
 
-1) What term refers to aspects of The Rhetorical Situation that have remained stable over time?
+> Both parties deprecated war; but one of them would make war rather than let the nation survive; and the other would accept war rather than let it perish. And the war came.
 
-2) What concept describes how The Rhetorical Situation has transformed due to new forces and conditions?
+> Both read the same Bible and pray to the same God, and each invokes His aid against the other. It may seem strange that any men should dare to ask a just God's assistance in wringing their bread from the sweat of other men's faces, but let us judge not, that we be not judged. The prayers of both could not be answered. That of neither has been answered fully.
 
-3) Name the term for the direction of change in The Rhetorical Situation over time.
+> With malice toward none, with charity for all, with firmness in the right as God gives us to see the right, let us strive on to finish the work we are in, to bind up the nation's wounds, to care for him who shall have borne the battle and for his widow and his orphan, to do all which may achieve and cherish a just and lasting peace among ourselves and with all nations.
+>
+> — Abraham Lincoln, Second Inaugural Address, March 4, 1865
 
-Use the exact term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['Continuity', 'Change', 'Trend'],
-        hint1: 'Starts with: C',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: T',
-        explanation: 'Expected answers: Continuity (Aspects of The Rhetorical Situation that have remained stable over time), Change (How The Rhetorical Situation has transformed due to new forces and conditions), and Trend (The direction of change in The Rhetorical Situation over time).'
-      }
+### How the Choices Manage the Division
+
+| Choice | What it does for each audience |
+|---|---|
+| "Both parties," "Both read," "each invokes" | Treats North and South as parallel, which avoids gloating and includes Southerners in the story |
+| "would make war... would accept war" | Still assigns responsibility: one side made war, the other accepted it, which gives Northerners their moral judgment |
+| "And the war came." | A four-word sentence that presents the war almost as a force beyond either side's control |
+| "wringing their bread from the sweat of other men's faces" | Condemns slavery in a biblical image (echoing Genesis), so opponents of slavery hear the moral case |
+| "but let us judge not, that we be not judged" | Immediately restrains that condemnation with a quotation from the Sermon on the Mount, warning Northerners against vengeance |
+| "With malice toward none, with charity for all" | Ends with a program of reconciliation that every audience can share |
+
+The pattern is **judgment, then restraint**. Lincoln names slavery as a wrong and the South as the side that "would make war," and in the same breath he refuses to let that judgment become revenge.
+`
     },
     {
       id: 'englangr5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Which Audience Is Served?** 🔍
+
+Choose the audience each choice most directly addresses.
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Aspects of The Rhetorical Situation that have remained stable over time is called ___',
-            options: ['Continuity', 'Change', 'Trend', 'Audience']
+            label: '"wringing their bread from the sweat of other men\'s faces" most directly reassures ___',
+            options: ['opponents of slavery', 'white Southerners', 'foreign governments', 'Union generals']
           },
           {
-            label: 'How The Rhetorical Situation has transformed due to new forces and conditions describes ___',
-            options: ['Continuity', 'Change', 'Trend', 'Audience']
+            label: '"let us judge not, that we be not judged" most directly cautions ___',
+            options: ['Northerners seeking revenge', 'white Southerners', 'foreign governments', 'opponents of slavery']
           },
           {
-            label: 'The direction of change in The Rhetorical Situation over time is known as ___',
-            options: ['Trend', 'Continuity', 'Change', 'Audience']
+            label: '"Both read the same Bible" invites ___ to see themselves in the speech',
+            options: ['white Southerners', 'Union generals', 'foreign governments', 'newspaper editors']
           }
         ],
-        correctAnswers: ['Continuity', 'Change', 'Trend'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Continuity — Aspects of The Rhetorical Situation that have remained stable over time. Change — How The Rhetorical Situation has transformed due to new forces and conditions. Trend — The direction of change in The Rhetorical Situation over time.'
+        correctAnswers: ['opponents of slavery', 'Northerners seeking revenge', 'white Southerners'],
+        hint1: 'The image condemns living off the forced labor of others.',
+        hint2: 'Who is tempted to judge after winning a war?',
+        hint3: '"Both" includes the side that lost.',
+        explanation: 'The biblical image of bread wrung from others\' sweat condemns slavery, reassuring those who saw the war as a moral cause. The warning against judging is aimed at victorious Northerners. "Both read the same Bible" places Southerners inside a shared faith.'
       }
     },
     {
-      id: 'englangr5-strategy',
+      id: 'englangr5-layers',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## Layered Purposes
 
-### Misconceptions to Avoid
-- Don\'t confuse **Continuity** with **Change** — while related, they address different aspects of The Rhetorical Situation.
-- **Trend** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
+The Second Inaugural pursues several purposes at once:
 
-### AP Strategy Moves
-- When you see questions about change over time, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect change over time to broader themes in AP English Language for higher scores.
-      `
+1. **To interpret the war:** it was, as Lincoln says elsewhere in the speech, "somehow" caused by slavery, and it is a judgment on the whole nation.
+2. **To restrain vengeance** among victorious Northerners.
+3. **To prepare for reunion** on terms of "charity for all."
+
+A strong analysis identifies the primary purpose and shows how secondary purposes support or complicate it. For example, the moral judgment of slavery and the call for charity could seem to conflict. Lincoln resolves the tension by placing both sides under a judgment higher than either, which makes humility, not vengeance, the fitting response.
+
+> 🔑 **AP Connection:** The sophistication point (Row C) on the rhetorical analysis essay can be earned by explaining the significance or relevance of the writer's choices within the broader situation, or by explaining a purpose or tension in the passage. A sentence such as "Lincoln must condemn slavery without inflaming a victorious North, so he pairs every judgment with a restraint" shows exactly that kind of understanding, as long as the essay develops it throughout.
+`
     },
     {
-      id: 'englangr5-applied',
+      id: 'englangr5-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Practice** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'An AP question asks how The Rhetorical Situation has changed in the last 50 years. A strong answer would:',
+            question: 'The sentence "And the war came." is notable primarily because it',
             options: [
-              'Say nothing has changed',
-              'Identify specific changes, explain their causes, and note what has remained constant',
-              'Only list dates',
-              'Make up information'
+              'presents the war briefly, as a force neither side controlled',
+              'announces that the war has finally ended in a Union victory',
+              'blames the Union for failing to prevent the war from starting',
+              'introduces a detailed history of the war\'s major battles'
             ],
-            correctAnswer: 1,
-            explanation: 'Strong AP answers address both change AND continuity, explaining causes and consequences of transformation.'
+            correctAnswer: 0,
+            explanation: 'After two balanced clauses about the two sides, the short sentence describes the war arriving rather than being chosen. The war had not ended in March 1865, and the speech offers no battle history or blame of the Union.'
           },
           {
-            question: 'A trend in The Rhetorical Situation shows acceleration in recent decades. The most likely explanation is:',
+            question: 'The phrase "let us judge not, that we be not judged" functions in the passage to',
             options: [
-              'Random chance',
-              'New technologies, policies, or conditions intensifying existing processes',
-              'The data is wrong',
-              'Nothing has changed'
+              'restrain the condemnation that comes just before it',
+              'reject the claim that slavery caused the war',
+              'quote a Southern leader\'s defense of slavery',
+              'conclude the speech with a direct call to arms'
+            ],
+            correctAnswer: 0,
+            explanation: 'Lincoln has just condemned those who live off others\' labor; the scriptural warning keeps that condemnation from becoming vengeance. It does not deny slavery\'s role, quote a Southern leader or call for more fighting.'
+          },
+          {
+            question: 'Which statement best describes how Lincoln addresses his divided audience?',
+            options: [
+              'He speaks only to the Union and leaves the South for later speeches',
+              'He pairs moral judgment of slavery with restraint and shared hope',
+              'He avoids mentioning slavery so that no audience will be offended',
+              'He blames both sides equally so that no one feels singled out'
             ],
             correctAnswer: 1,
-            explanation: 'Accelerating trends are typically driven by new forces (technology, policy, globalization) intensifying existing processes.'
+            explanation: 'Lincoln names slavery as a wrong and the South as the side that made war, then immediately restrains judgment and offers "charity for all." He does not ignore the South, avoid slavery or assign equal blame.'
           }
         ]
       }

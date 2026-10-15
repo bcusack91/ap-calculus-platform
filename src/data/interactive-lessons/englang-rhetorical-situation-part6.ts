@@ -5,168 +5,176 @@ export const englangRhetoricalSituationPart6Data = {
       id: 'englangr6-intro',
       type: 'text' as const,
       content: `
-# ✍️ The Rhetorical Situation
+# 🎯 The Rhetorical Situation (Reading)
 
-**Part 6 of 7 — Problem-Solving Workshop**
+**Part 6 of 7 — AP Practice: Rhetorical Analysis of Susan B. Anthony (1873)**
 
-Apply The Rhetorical Situation concepts to data interpretation and analytical scenarios. Practice the types of questions seen on the AP exam.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| 📖 The Passage and Its Headnote |
+| Exam-Style Questions |
+| Annotated Model Introduction and Body Paragraph |
+| How the Model Meets the Rubric |
 
-| Concept | Description |
-|---------|-------------|
-| **Data interpretation** | Analyzing maps, graphs, and tables related to The Rhetorical Situation |
-| **Argumentation** | Making evidence-based claims about The Rhetorical Situation |
-| **Spatial reasoning** | Using geographic thinking to analyze The Rhetorical Situation |
-      `
+> 🔑 **Key Concept:** On the rhetorical analysis essay, the headnote gives you the situation and the passage gives you the choices. A high-scoring response uses the situation **inside** its commentary to explain why each choice suits this writer, this audience and this moment.
+`
+    },
+    {
+      id: 'englangr6-passage',
+      type: 'text' as const,
+      content: `
+## 📖 The Passage and Its Headnote
+
+*Headnote: In November 1872, Susan B. Anthony voted in the presidential election in Rochester, New York. She was arrested and indicted for voting illegally, since New York did not allow women to vote. Before her trial in 1873, she delivered the following speech in many towns of Monroe County, where the jurors for her trial would be drawn.*
+
+> Friends and fellow citizens: I stand before you tonight under indictment for the alleged crime of having voted at the last presidential election, without having a lawful right to vote. It shall be my work this evening to prove to you that in thus voting, I not only committed no crime, but, instead, simply exercised my citizen's rights, guaranteed to me and all United States citizens by the National Constitution, beyond the power of any State to deny.
+>
+> ...
+>
+> It was we, the people; not we, the white male citizens; nor yet we, the male citizens; but we, the whole people, who formed the Union. And we formed it, not to give the blessings of liberty, but to secure them; not to the half of ourselves and the half of our posterity, but to the whole people—women as well as men.
+>
+> — Susan B. Anthony, "Is It a Crime for a Citizen of the United States to Vote?" (1873)
+
+### Mapping the Situation
+
+| Component | Details |
+|---|---|
+| **Exigence** | Her arrest and indictment for voting |
+| **Audience** | Citizens of Monroe County, some of whom could sit on her jury; nearly all of them men, since only men served on New York juries |
+| **Purpose** | To convince listeners that her vote was a lawful exercise of constitutional rights, not a crime |
+| **Context** | The Fourteenth Amendment (1868) had defined citizenship; women's suffrage advocates argued that citizens could not be denied the vote |
+`
     },
     {
       id: 'englangr6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Exam-Style Questions, Set 1** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'When interpreting data about The Rhetorical Situation, the first step is:',
+            question: 'In the first sentence, the words "alleged crime" primarily serve to',
             options: [
-              'Jump to conclusions',
-              'Identify what the data shows and note any patterns or trends',
-              'Ignore the data',
-              'Only look at the title'
+              'question from the outset that her vote was unlawful at all',
+              'admit that she broke the law and now seeks the jury\'s mercy',
+              'show the audience that she misunderstands the charges against her',
+              'describe the exact wording of the indictment for the record'
             ],
-            correctAnswer: 1,
-            explanation: 'Data interpretation should begin with identifying what is shown and noting visible patterns before drawing conclusions.'
+            correctAnswer: 0,
+            explanation: '"Alleged" marks the charge as unproven and sets up her claim that she "committed no crime." She does not admit guilt or plead for mercy, and the word signals disagreement, not confusion.'
           },
           {
-            question: 'An evidence-based argument about The Rhetorical Situation requires:',
+            question: 'The writer\'s primary purpose in the first paragraph is to',
             options: [
-              'Just opinions',
-              'A clear claim supported by specific evidence and reasoning',
-              'No evidence',
-              'Only emotional appeals'
+              'describe the events of election day in Rochester',
+              'announce the claim her speech will set out to prove',
+              'apologize to the citizens who were offended by her vote',
+              'explain why women should be allowed to serve on juries'
             ],
             correctAnswer: 1,
-            explanation: 'Evidence-based arguments need a claim (thesis), supporting evidence (data, examples), and reasoning (explanation).'
+            explanation: 'She states that it "shall be my work this evening to prove" her vote was a lawful exercise of rights, which previews the argument to come. The paragraph gives no narrative of election day, offers no apology and does not discuss jury service.'
           }
         ]
       }
     },
     {
-      id: 'englangr6-content',
+      id: 'englangr6-model',
       type: 'text' as const,
       content: `
-## Problem-Solving Workshop — Deeper Dive
+## Annotated Model Introduction and Body Paragraph
 
-### Data interpretation
-Analyzing maps, graphs, and tables related to The Rhetorical Situation. Understanding this concept is essential for mastering The Rhetorical Situation in AP English Language.
+### Model Introduction
 
-### Argumentation
-Making evidence-based claims about The Rhetorical Situation. This builds on the previous concept and connects to broader themes in the course.
+> **[Situation, briefly]** Facing trial in 1873 for voting in the previous year's presidential election, Susan B. Anthony spoke directly to the men of Monroe County who might soon decide her case. **[Defensible thesis: choices + purpose]** Rather than plead for leniency, Anthony recasts herself from defendant to lawful citizen, first by treating the charge as merely "alleged" and then by rereading the Constitution's own words, "we, the people," so that her listeners must either include her among the people or narrow a phrase they revere.
 
-### Spatial reasoning
-Using geographic thinking to analyze The Rhetorical Situation. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
-      `
-    },
-    {
-      id: 'englangr6-input',
-      type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
+Notice what the thesis does **not** do: it does not list "ethos, pathos and logos," and it does not stop at "Anthony uses many rhetorical strategies." It names two choices in the order the essay will discuss them and connects them to a purpose.
 
-1) What term refers to analyzing maps, graphs, and tables related to The Rhetorical Situation?
+### Model Body Paragraph
 
-2) What concept describes making evidence-based claims about The Rhetorical Situation?
+> **[Topic sentence: a choice and its purpose]** Anthony's most powerful move is to turn the Preamble's familiar words into a test that her audience must answer. **[Evidence]** She declares that "It was we, the people; not we, the white male citizens; nor yet we, the male citizens; but we, the whole people, who formed the Union." **[Commentary: how it works]** The sentence repeats "we" four times, and each time strips away a qualifier her listeners might have silently added, moving from "white male" to "male" to "the whole people." **[Commentary: why for this audience]** For men who could sit on her jury and who revered the Constitution, the structure makes exclusion look like an edit to a sacred text; to convict her, they would have to read words into the Preamble that the founders never wrote. **[Link to situation]** By grounding her case in the document her listeners already honor, Anthony makes the alleged criminal sound like the faithful reader and the law that charged her sound like the departure.
 
-3) Name the term for using geographic thinking to analyze The Rhetorical Situation.
+### How the Model Meets the Rubric
 
-Use the exact term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['Data interpretation', 'Argumentation', 'Spatial reasoning'],
-        hint1: 'Starts with: D',
-        hint2: 'Starts with: A',
-        hint3: 'Starts with: S',
-        explanation: 'Expected answers: Data interpretation (Analyzing maps, graphs, and tables related to The Rhetorical Situation), Argumentation (Making evidence-based claims about The Rhetorical Situation), and Spatial reasoning (Using geographic thinking to analyze The Rhetorical Situation).'
-      }
+| Rubric row | Evidence in the model |
+|---|---|
+| **Row A: Thesis (0–1)** | The thesis names specific choices and a purpose that can be defended |
+| **Row B: Evidence and Commentary (0–4)** | Exact quotations, followed by explanation of how the structure works and why it suits jurors who revere the Constitution |
+| **Row C: Sophistication (0–1)** | The paragraph explains the significance of the choice within the situation: a defendant speaking to potential jurors turns their own reverence into her argument |
+`
     },
     {
       id: 'englangr6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Label the Model** 🔍
+
+Choose the job each sentence from the model body paragraph performs.
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Analyzing maps, graphs, and tables related to The Rhetorical Situation is called ___',
-            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'Memorization']
+            label: '"Anthony\'s most powerful move is to turn the Preamble\'s familiar words into a test that her audience must answer." ___',
+            options: ['topic sentence', 'evidence', 'commentary', 'summary']
           },
           {
-            label: 'Making evidence-based claims about The Rhetorical Situation describes ___',
-            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'Memorization']
+            label: '"She declares that \'It was we, the people; not we, the white male citizens...\'" ___',
+            options: ['topic sentence', 'evidence', 'commentary', 'summary']
           },
           {
-            label: 'Using geographic thinking to analyze The Rhetorical Situation is known as ___',
-            options: ['Spatial reasoning', 'Data interpretation', 'Argumentation', 'Memorization']
+            label: '"The sentence repeats \'we\' four times, and each time strips away a qualifier..." ___',
+            options: ['topic sentence', 'evidence', 'commentary', 'summary']
           }
         ],
-        correctAnswers: ['Data interpretation', 'Argumentation', 'Spatial reasoning'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Data interpretation — Analyzing maps, graphs, and tables related to The Rhetorical Situation. Argumentation — Making evidence-based claims about The Rhetorical Situation. Spatial reasoning — Using geographic thinking to analyze The Rhetorical Situation.'
+        correctAnswers: ['topic sentence', 'evidence', 'commentary'],
+        hint1: 'Which sentence makes a claim the paragraph will support?',
+        hint2: 'Which sentence presents the writer\'s words?',
+        hint3: 'Which sentence explains how the quoted words work?',
+        explanation: 'The first sentence states the paragraph\'s claim about a choice. The second supplies the quotation as evidence. The third explains how the repetition works, which is commentary.'
       }
     },
     {
-      id: 'englangr6-strategy',
-      type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
-
-### Misconceptions to Avoid
-- Don\'t confuse **Data interpretation** with **Argumentation** — while related, they address different aspects of The Rhetorical Situation.
-- **Spatial reasoning** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about problem-solving workshop, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect problem-solving workshop to broader themes in AP English Language for higher scores.
-      `
-    },
-    {
-      id: 'englangr6-applied',
+      id: 'englangr6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**Exam-Style Questions, Set 2** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'You are given a data table about The Rhetorical Situation and asked to identify a trend. You should:',
+            question: 'The sequence "not we, the white male citizens; nor yet we, the male citizens; but we, the whole people" is best described as',
             options: [
-              'Pick random numbers',
-              'Look for consistent increases, decreases, or patterns across the data',
-              'Ignore the table',
-              'Only read the first row'
+              'a progression that removes one limiting term at a time',
+              'a list of groups that opposed the writer\'s right to vote',
+              'a concession that the founders intended only men to vote',
+              'a quotation taken directly from the Fourteenth Amendment'
             ],
-            correctAnswer: 1,
-            explanation: 'Trend identification requires examining the entire dataset for consistent patterns of change.'
+            correctAnswer: 0,
+            explanation: 'Each phrase drops a qualifier until only "the whole people" remains, so the sentence enacts the widening it argues for. It does not list opponents, concede the founders\' intent or quote the amendment.'
           },
           {
-            question: 'A free-response question asks you to use evidence to support an argument about The Rhetorical Situation. The best approach is:',
+            question: 'Which feature of the rhetorical situation best explains why Anthony relies so heavily on the Constitution\'s language?',
             options: [
-              'State your opinion without evidence',
-              'Make a clear claim, cite specific data or examples, and explain how they support your argument',
-              'Copy the question',
-              'Write about a different topic'
+              'Her listeners included men who might judge her case',
+              'Her listeners were mostly women who had already voted',
+              'Her listeners were legal scholars who doubted the Preamble',
+              'Her listeners had asked her to explain the election results'
             ],
-            correctAnswer: 1,
-            explanation: 'AP free-response answers require a clear thesis, specific supporting evidence, and explanation of how evidence supports the argument.'
+            correctAnswer: 0,
+            explanation: 'Potential jurors would decide whether she broke the law, so arguing from the nation\'s founding legal text speaks to the question they would face. The audience was not mostly women voters, legal scholars or people asking about results.'
+          },
+          {
+            question: 'In the final sentence, the contrast "not to give the blessings of liberty, but to secure them" primarily serves to',
+            options: [
+              'argue that liberty is a right people already hold and government must protect',
+              'suggest that the founders hoped to give liberty to future generations',
+              'admit that women had not yet received all the blessings of liberty',
+              'distinguish between the rights of state and national governments'
+            ],
+            correctAnswer: 0,
+            explanation: 'By insisting the Union was formed to "secure" rather than "give" liberty, Anthony implies that women already possess the right and that government may only protect it. That framing makes denying her vote a failure of government\'s duty, not a withheld gift.'
           }
         ]
       }
