@@ -21,24 +21,24 @@ export const aasWwiWwiiEraPart5Data = {
           {
             "question": "Which best describes continuity within WWI & WWII Era?",
             "options": [
-              "Aspects such as federal employment opening persisted even as other features changed.",
-              "Nothing about this topic ever changed.",
-              "Continuity is irrelevant to AP scoring.",
-              "Only the most recent decade matters."
+              "Segregated military service persisted through both world wars even as other features changed.",
+              "Defense-industry discrimination went unchallenged by any federal action from 1914 to 1945.",
+              "Black newspapers stayed silent on civil rights throughout both world wars.",
+              "The Great Migration ended in 1918 and never resumed during the period."
             ],
             "correctAnswer": 0,
-            "explanation": "Continuity = elements that persist across change — a key AP analytical category."
+            "explanation": "Continuity means elements that persist across change: the armed forces stayed segregated from World War I through World War II, until EO 9981 in 1948. EO 8802 (1941) challenged defense-industry discrimination, the Black press led the Double V campaign, and wartime jobs renewed the migration."
           },
           {
             "question": "Which event marks a decisive change within WWI & WWII Era?",
             "options": [
-              "1948 EO 9981 — Truman desegregates U.S. armed forces.",
-              "An anecdote with no historical impact.",
-              "A 21st-century news headline unrelated to the period.",
-              "A purely literary aesthetic with no political effect."
+              "1948 EO 9981 — Truman orders the desegregation of the U.S. armed forces.",
+              "1896 *Plessy v. Ferguson* — Court upholds 'separate but equal' segregation.",
+              "1964 Civil Rights Act — Bans segregation in public accommodations.",
+              "1870 15th Amendment — Bars race-based denial of male suffrage."
             ],
             "correctAnswer": 0,
-            "explanation": "Specific dated events anchor change-over-time arguments."
+            "explanation": "Executive Order 9981 (1948) ordered equal treatment and opportunity in the armed forces, ending the segregated service that defined both world wars. *Plessy*, the 15th Amendment, and the Civil Rights Act are real turning points but belong to other units."
           }
         ]
       }
@@ -69,33 +69,33 @@ export const aasWwiWwiiEraPart5Data = {
           {
             "label": "Continuity in this unit is best illustrated by ___",
             "options": [
-              "Federal employment opening",
+              "Segregated military service",
               "1948 EO 9981",
-              "An unrelated modern slogan",
-              "A topic from a different course"
+              "1941 EO 8802 / FEPC created",
+              "1942 CORE founded in Chicago"
             ]
           },
           {
             "label": "Change in this unit is best illustrated by ___",
             "options": [
               "1948 EO 9981",
-              "Federal employment opening",
-              "An anecdote with no date",
-              "An unrelated personal opinion"
+              "Segregated military service",
+              "Persistence of Jim Crow at home",
+              "Black press activism"
             ]
           },
           {
             "label": "An AP CCOT response should ___",
             "options": [
               "Identify both continuities and changes with specific evidence",
-              "Pick only one without analysis",
-              "Avoid using dates",
-              "Replace evidence with opinion"
+              "Trace only the changes, in order, with specific evidence",
+              "Argue that continuity outweighed every change in the period",
+              "Describe the period's main events without a central claim"
             ]
           }
         ],
         "correctAnswers": [
-          "Federal employment opening",
+          "Segregated military service",
           "1948 EO 9981",
           "Identify both continuities and changes with specific evidence"
         ],
@@ -114,24 +114,24 @@ export const aasWwiWwiiEraPart5Data = {
           {
             "question": "Which CCOT thesis is strongest?",
             "options": [
-              "Although federal employment opening continued, 1948 EO 9981 marked a decisive change in WWI & WWII Era.",
-              "Nothing changed and nothing stayed the same.",
-              "Change is impossible to identify in history.",
-              "AP rubrics do not reward CCOT analysis."
+              "Although segregated military service persisted through both wars, Truman's 1948 EO 9981 marked a decisive change.",
+              "EO 9981 changed everything about Black life at once, so that no form of segregation survived anywhere after 1948.",
+              "Although new orders were issued, Black military service mostly stayed the same from 1914 to 1948 in every branch.",
+              "Segregated military service and EO 9981 were both important parts of the WWI & WWII Era."
             ],
             "correctAnswer": 0,
-            "explanation": "Strong CCOT theses pair specific continuities with specific changes."
+            "explanation": "A strong CCOT thesis names a specific continuity and a specific change and makes a defensible claim about them. Total change, near-total continuity, and a claim that both 'were important' each miss part of that move."
           },
           {
             "question": "Which evidence move is most valuable in a CCOT response?",
             "options": [
               "Naming a specific dated event AND a continuity within the same paragraph.",
-              "Listing dates without analysis.",
-              "Replacing evidence with a moral judgment.",
-              "Citing only post-2010 news stories."
+              "Listing every major date in the unit in chronological order.",
+              "Describing one change in detail without noting what persisted.",
+              "Quoting a historian's verdict on the period in place of evidence."
             ],
             "correctAnswer": 0,
-            "explanation": "AP CCOT scoring rewards paired specificity."
+            "explanation": "CCOT credit needs both halves anchored in evidence: a dated change and a named continuity. A list of dates, a change with no continuity, or a borrowed verdict replaces that analysis."
           }
         ]
       }

@@ -22,23 +22,23 @@ export const aasAfricanKingdomsPart3Data = {
             "question": "Which case BEST illustrates a pattern central to African Kingdoms?",
             "options": [
               "c. 300–1076 Ghana Empire — Controlled the gold–salt trade; sacked by the Almoravids in 1076.",
-              "An unrelated event from another century.",
-              "A purely fictional event.",
-              "An anecdote with no documentary support."
+              "1619 Africans arrive at Point Comfort — First recorded enslaved Africans in English North America.",
+              "1791–1804 Haitian Revolution — Defeats French, Spanish, and British forces; founds Haiti.",
+              "1807 British Abolition Act — Bans the Atlantic slave trade in British ships."
             ],
             "correctAnswer": 0,
-            "explanation": "Use historically attested events to illustrate patterns."
+            "explanation": "Ghana's control of the gold–salt trade falls inside this unit and shows the trans-Saharan pattern. Point Comfort, the Haitian Revolution, and British abolition are real but belong to later units."
           },
           {
             "question": "A comparison of c. 300–1076 Ghana Empire and 1235 Battle of Kirina is most useful because:",
             "options": [
               "Both cases let students see common patterns and unique local differences in concrete historical detail.",
-              "Both events occurred in identical contexts and produced identical outcomes.",
-              "Comparison is irrelevant to AP scoring.",
-              "Neither event left primary sources for historians."
+              "Both cases show that West African states rose and fell without any real connection to trans-Saharan trade.",
+              "Both cases show that Ghana and Mali were ruled by the same dynasty, so their histories are essentially identical.",
+              "Both cases show that the Almoravids founded the Mali Empire right after destroying Ghana's capital in 1076."
             ],
             "correctAnswer": 0,
-            "explanation": "AP comparison rewards specific similarities and differences with named cases."
+            "explanation": "Comparison rewards a specific similarity and a specific difference. Ghana and Mali both depended on trans-Saharan trade, were ruled by different dynasties, and Mali was founded by Sundiata at Kirina, not by the Almoravids."
           }
         ]
       }
@@ -72,32 +72,32 @@ export const aasAfricanKingdomsPart3Data = {
               "c. 300–1076 Ghana Empire",
               "1235 Battle of Kirina",
               "1324 Mansa Musa's hajj",
-              "An unrelated 21st-century news story"
+              "1464–1492 Sunni Ali"
             ]
           },
           {
             "label": "The case most central to Islamic scholarship is ___",
             "options": [
-              "1235 Battle of Kirina",
-              "c. 300–1076 Ghana Empire",
               "1324 Mansa Musa's hajj",
-              "An unrelated 21st-century news story"
+              "c. 300–1076 Ghana Empire",
+              "1235 Battle of Kirina",
+              "1591 Battle of Tondibi"
             ]
           },
           {
             "label": "The case most central to Centralized empires is ___",
             "options": [
-              "1324 Mansa Musa's hajj",
-              "c. 300–1076 Ghana Empire",
               "1235 Battle of Kirina",
-              "An unrelated 21st-century news story"
+              "c. 300–1076 Ghana Empire",
+              "1324 Mansa Musa's hajj",
+              "11th–15th c. Great Zimbabwe"
             ]
           }
         ],
         "correctAnswers": [
           "c. 300–1076 Ghana Empire",
-          "1235 Battle of Kirina",
-          "1324 Mansa Musa's hajj"
+          "1324 Mansa Musa's hajj",
+          "1235 Battle of Kirina"
         ],
         "hint1": "Use chronology to disambiguate.",
         "hint2": "Match the event to the concept it best illustrates.",
@@ -114,24 +114,24 @@ export const aasAfricanKingdomsPart3Data = {
           {
             "question": "Using one specific case from African Kingdoms, which sentence is the BEST AP comparison move?",
             "options": [
-              "Both c. 300–1076 Ghana Empire and 1235 Battle of Kirina reveal trans-saharan trade, but they differ in actors and outcomes.",
-              "Both events were fictional and produced no consequences.",
-              "These events are too old to compare meaningfully.",
-              "Comparison is unimportant in AP rubrics."
+              "Both Ghana and Sundiata's Mali grew rich taxing trans-Saharan gold, but Mali's rulers embraced Islam far more fully.",
+              "Both Ghana and Sundiata's Mali grew rich taxing trans-Saharan gold, so they were essentially the same West African empire.",
+              "Both Ghana and Sundiata's Mali were West African states in the Sahel, but Ghana arose several centuries earlier than Mali.",
+              "Mali's founding at Kirina mattered more than Ghana's fall, since Sundiata was simply the greater and more famous ruler."
             ],
             "correctAnswer": 0,
-            "explanation": "AP comparison combines a specific shared pattern with a specific difference."
+            "explanation": "A full comparison pairs a shared pattern (wealth from taxing trans-Saharan gold) with a meaningful difference (Mali's rulers embraced Islam far more fully). A similarity alone, a trivial difference such as date, or a value judgment does not complete the move."
           },
           {
             "question": "Sundiata Keita's role in African Kingdoms is best illustrated by which event?",
             "options": [
-              "c. 300–1076 Ghana Empire — Controlled the gold–salt trade; sacked by the Almoravids in 1076.",
-              "An unrelated event in a different century.",
-              "A purely literary publication unconnected to politics.",
-              "An event before the figure was born."
+              "1235 Battle of Kirina — Sundiata defeats Sumanguru of Sosso; foundation of Mali.",
+              "c. 300–1076 Ghana Empire — Gold–salt power that fell to the Almoravids long before Sundiata's birth.",
+              "1324 Mansa Musa's hajj — Caravan of gold; placed Mali on European maps.",
+              "1464–1492 Sunni Ali — Built Songhai's army and seized Timbuktu and Djenné."
             ],
             "correctAnswer": 0,
-            "explanation": "Tie figures to dated events for high-scoring AP arguments."
+            "explanation": "Sundiata's defining event is his victory at Kirina (1235), which founded Mali. Ghana's empire fell before his rise, the 1324 hajj was Mansa Musa's, and Sunni Ali built Songhai two centuries later."
           }
         ]
       }

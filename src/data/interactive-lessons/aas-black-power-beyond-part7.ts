@@ -10,7 +10,7 @@ export const aasBlackPowerBeyondPart7Data = {
     {
       id: "aasbpb7-review",
       type: 'text' as const,
-      content: "## Master review for Black Power & Beyond\n\n### Concepts to define on demand\n\n| Core concept | What it refers to |\n|---|---|\n| **Black Power** | Stokely Carmichael's June 1966 Greenwood, MS rally — slogan reframes the movement. |\n| **Community survival programs** | Black Panther Free Breakfast, free clinics, sickle-cell screening. |\n| **Black Arts Movement** | Cultural arm of Black Power — Amiri Baraka, Sonia Sanchez, Larry Neal. |\n\n### Figures to deploy\n\n| Figure | Dates | Why they matter |\n|---|---|---|\n| **Malcolm X** | 1925–1965 | Nation of Islam minister; founded OAAU (1964); pilgrimage to Mecca shifts toward internationalism; assassinated Feb. 21, 1965. |\n| **Stokely Carmichael / Kwame Ture** | 1941–1998 | SNCC chair; coined 'Black Power' (1966); All-African People's Revolutionary Party. |\n| **Huey P. Newton** | 1942–1989 | Co-founded Black Panther Party with Bobby Seale (Oakland, Oct. 1966). |\n| **Angela Davis** | b. 1944 | UCLA philosopher fired for Communist Party membership; 1972 acquittal galvanizes prison-abolition organizing. |\n| **Fred Hampton** | 1948–1969 | Illinois BPP chair; built the original Rainbow Coalition; killed in FBI/Chicago police raid Dec. 4, 1969. |\n\n### Events to cite\n\n| Event | Significance |\n|---|---|\n| **1965 Watts uprising** | 34 deaths; signals northern urban unrest. |\n| **1966 Black Panther Party founded** | Ten-Point Program demands housing, employment, justice. |\n| **1968 Olympic Project for Human Rights** | Smith and Carlos raise gloved fists in Mexico City. |\n| **1969 Free Breakfast Program** | BPP feeds tens of thousands of children before Federal School Breakfast Program expanded. |\n| **1971 Attica uprising** | Prison rebellion — Black Power and prisoners' rights converge. |\n\n### Sources to attribute\n\n- **Black Panther Ten-Point Program (1966)** — Programmatic statement of Black Power demands.\n- **Carmichael & Hamilton, *Black Power* (1967)** — Defines institutional racism.\n- **Davis, *Women, Race & Class* (1981)** — Synthesizes Black feminism, Marxism, and abolitionism.\n"
+      content: "## Master review for Black Power & Beyond\n\n### Concepts to define on demand\n\n| Core concept | What it refers to |\n|---|---|\n| **Black Power** | Stokely Carmichael's June 1966 Greenwood, MS rally — slogan reframes the movement. |\n| **Community survival programs** | Black Panther Free Breakfast, free clinics, sickle-cell screening. |\n| **Black Arts Movement** | Cultural arm of Black Power — Amiri Baraka, Sonia Sanchez, Larry Neal. |\n\n### Figures to deploy\n\n| Figure | Dates | Why they matter |\n|---|---|---|\n| **Malcolm X** | 1925–1965 | Nation of Islam minister; founded OAAU (1964); pilgrimage to Mecca shifts toward internationalism; assassinated Feb. 21, 1965. |\n| **Stokely Carmichael / Kwame Ture** | 1941–1998 | SNCC chair; popularized 'Black Power' (1966); All-African People's Revolutionary Party. |\n| **Huey P. Newton** | 1942–1989 | Co-founded Black Panther Party with Bobby Seale (Oakland, Oct. 1966). |\n| **Angela Davis** | b. 1944 | UCLA philosopher fired for Communist Party membership; 1972 acquittal galvanizes prison-abolition organizing. |\n| **Fred Hampton** | 1948–1969 | Illinois BPP chair; built the original Rainbow Coalition; killed in FBI/Chicago police raid Dec. 4, 1969. |\n\n### Events to cite\n\n| Event | Significance |\n|---|---|\n| **1965 Watts uprising** | 34 deaths; signals northern urban unrest. |\n| **1966 Black Panther Party founded** | Ten-Point Program demands housing, employment, justice. |\n| **1968 Olympic Project for Human Rights** | Smith and Carlos raise gloved fists in Mexico City. |\n| **1969 Free Breakfast Program** | BPP feeds tens of thousands of children before Federal School Breakfast Program expanded. |\n| **1971 Attica uprising** | Prison rebellion — Black Power and prisoners' rights converge. |\n\n### Sources to attribute\n\n- **Black Panther Ten-Point Program (1966)** — Programmatic statement of Black Power demands.\n- **Carmichael & Hamilton, *Black Power* (1967)** — Defines institutional racism.\n- **Davis, *Women, Race & Class* (1981)** — Synthesizes Black feminism, Marxism, and abolitionism.\n"
     },
     {
       id: "aasbpb7-quiz",
@@ -22,23 +22,23 @@ export const aasBlackPowerBeyondPart7Data = {
             "question": "A high-scoring AP response on this unit will:",
             "options": [
               "Combine a clear thesis with named figures, dated events, and at least one primary source.",
-              "Memorize dates with no analysis.",
-              "Use only 21st-century examples to discuss earlier periods.",
-              "Avoid citing sources."
+              "Narrate the unit's events in order, with names, dates, and places, but no thesis.",
+              "Open with a strong moral judgment and support it with general claims about the era.",
+              "Restate the prompt as its thesis and end by summarizing each body paragraph."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rubrics consistently reward specificity, sourcing, and clear analytical structure."
+            "explanation": "High-scoring responses pair a defensible thesis with specific evidence: named figures, dated events, and sourced documents. Narration without a claim, moral judgment without evidence, and a restated prompt all fall short."
           },
           {
             "question": "Which is the BEST one-sentence thesis for an essay on Black Power & Beyond?",
             "options": [
-              "During 1965–1980, black power reshaped Black life — visible in 1965 Watts uprising and Malcolm X's career — even as black arts movement persisted.",
-              "Black Power & Beyond was important.",
-              "Nothing changed during 1965–1980.",
-              "Black Power & Beyond cannot be analyzed."
+              "From 1965 to 1980, Black Power turned activism toward self-determination and community control, yet it grew from civil rights organizing.",
+              "Between 1965 and 1980, Black Power rejected politics entirely and focused only on cultural expression in the arts.",
+              "Black Power & Beyond was an important period that shaped African American history and American culture in many different and lasting ways.",
+              "Malcolm X, Carmichael, and Newton were the three most important leaders of the late twentieth-century freedom struggle."
             ],
             "correctAnswer": 0,
-            "explanation": "Strong theses combine a defensible claim with specific evidence and acknowledge complexity."
+            "explanation": "A strong thesis makes a defensible claim, ties it to the period, and acknowledges complexity: Black Power redirected activism toward self-determination and community control while growing out of civil rights organizing. Black Power included electoral and community work, a vague 'important' claim is not defensible, and ranking leaders does not address the prompt."
           }
         ]
       }
@@ -70,27 +70,27 @@ export const aasBlackPowerBeyondPart7Data = {
             "label": "Contextualization is best demonstrated by ___",
             "options": [
               "Placing the topic within larger historical processes (e.g., the Atlantic World, post-Reconstruction politics).",
-              "Citing only one date with no context.",
-              "Replacing evidence with opinion.",
-              "Using only 21st-century examples for older periods."
+              "Listing the unit's key events (with dates) in strict chronological order.",
+              "Defining each key term before stating the thesis.",
+              "Explaining how a document's author shaped its message."
             ]
           },
           {
             "label": "Causation is best demonstrated by ___",
             "options": [
               "Identifying a specific cause and its specific consequence with named actors.",
-              "A vague slogan.",
-              "An anecdote without analysis.",
-              "A list of names with no explanation."
+              "Showing that two events happened in the same decade.",
+              "Describing one event in detail with named actors.",
+              "Comparing two similar events across different regions."
             ]
           },
           {
             "label": "CCOT is best demonstrated by ___",
             "options": [
               "Pairing a specific continuity with a specific change, both supported with evidence.",
-              "Choosing only continuity OR only change.",
-              "Avoiding dates.",
-              "Replacing evidence with personal preference."
+              "Tracing a sequence of changes, each supported with evidence.",
+              "Arguing that the period was mostly continuous, with one example.",
+              "Comparing two regions at a single moment in time."
             ]
           }
         ],
@@ -102,7 +102,7 @@ export const aasBlackPowerBeyondPart7Data = {
         "hint1": "Contextualization = larger frame.",
         "hint2": "Causation = cause + consequence.",
         "hint3": "CCOT = both halves with evidence.",
-        "explanation": "These are the highest-leverage AP skills tested across MCQ, SAQ, LEQ, and DBQ."
+        "explanation": "These are the highest-leverage AP skills tested across MCQ, SAQ, and DBQ."
       }
     },
     {
@@ -114,24 +114,24 @@ export const aasBlackPowerBeyondPart7Data = {
           {
             "question": "You are writing an SAQ on Black Power & Beyond. The strongest opening sentence is:",
             "options": [
-              "Within 1965–1980, Malcolm X (1925–1965) advanced black power — visible in 1965 Watts uprising — even as black arts movement continued.",
-              "Black Power & Beyond happened.",
-              "There is nothing to say about this topic.",
-              "Modern social media debates are the best evidence."
+              "Malcolm X's call for self-defense and self-determination, voiced before his 1965 death, shaped the Black Power groups that followed.",
+              "Black Power is a very important topic that historians have debated for many years.",
+              "*The Autobiography of Malcolm X* (1965) is a famous book that many students still read in school today.",
+              "In 1965 Watts erupted, in 1966 the Panthers formed, and in 1972 delegates met at Gary."
             ],
             "correctAnswer": 0,
-            "explanation": "Strong AP openings combine date, figure, mechanism, event, and continuity in a single sentence."
+            "explanation": "A strong SAQ opening ties a named figure and dated event to a claim about how Black Power developed. A vague claim, a remark about a book's fame, or a list of dates without a claim does not answer the question."
           },
           {
-            "question": "Which closing move strengthens an LEQ on this unit?",
+            "question": "Which closing move strengthens a DBQ essay on this unit?",
             "options": [
               "Synthesizing the topic with Civil Rights Movement via a specific shared cause or consequence.",
-              "Repeating the prompt verbatim.",
-              "Adding a moral judgment with no evidence.",
-              "Listing topics not assigned in the prompt."
+              "Restating the thesis in different words and then summarizing each of the body paragraphs in turn.",
+              "Introducing a new document that none of the body paragraphs ever analyzed.",
+              "Ending with a personal reflection on why the topic still matters today."
             ],
             "correctAnswer": 0,
-            "explanation": "AP synthesis moves earn extra rubric points by connecting units."
+            "explanation": "A strong close extends the argument by linking this unit to another through a specific shared cause or consequence. Restating the thesis, adding unanalyzed evidence, or reflecting personally adds no new analysis."
           }
         ]
       }

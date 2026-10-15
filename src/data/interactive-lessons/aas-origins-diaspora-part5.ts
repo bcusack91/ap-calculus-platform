@@ -22,23 +22,23 @@ export const aasOriginsDiasporaPart5Data = {
             "question": "Which best describes continuity within Origins of the Diaspora?",
             "options": [
               "Aspects such as creolization persisted even as other features changed.",
-              "Nothing about this topic ever changed.",
-              "Continuity is irrelevant to AP scoring.",
-              "Only the most recent decade matters."
+              "African cultural practices vanished once captives reached the Americas.",
+              "The trade's annual volume stayed constant from 1450 to 1800.",
+              "Portugal kept a monopoly on the slave trade throughout the period."
             ],
             "correctAnswer": 0,
-            "explanation": "Continuity = elements that persist across change — a key AP analytical category."
+            "explanation": "Continuity means elements that persist across change; creolized cultures endured as the trade grew. African practices did not vanish, the trade's volume rose sharply in the 1700s, and Dutch, English, and French traders broke Portugal's early dominance."
           },
           {
             "question": "Which event marks a decisive change within Origins of the Diaspora?",
             "options": [
               "c. 1500–1888 Atlantic slave trade — ~12.5 million Africans embarked; ~10.7 million survived.",
-              "An anecdote with no historical impact.",
-              "A 21st-century news headline unrelated to the period.",
-              "A purely literary aesthetic with no political effect."
+              "1863 Emancipation Proclamation — Frees enslaved people in Confederate-held territory.",
+              "1910–1940 Great Migration — ~1.6 million move north; Chicago, Detroit, and New York grow.",
+              "1896 *Plessy v. Ferguson* — Court upholds 'separate but equal' segregation."
             ],
             "correctAnswer": 0,
-            "explanation": "Specific dated events anchor change-over-time arguments."
+            "explanation": "The scale of the Atlantic trade transformed the diaspora within this unit's period. Emancipation, the Great Migration, and *Plessy* are real turning points but belong to later units."
           }
         ]
       }
@@ -71,8 +71,8 @@ export const aasOriginsDiasporaPart5Data = {
             "options": [
               "Creolization",
               "c. 1500–1888 Atlantic slave trade",
-              "An unrelated modern slogan",
-              "A topic from a different course"
+              "1441 first Portuguese captives to Lisbon",
+              "1619 Africans arrive at Point Comfort, Virginia"
             ]
           },
           {
@@ -80,17 +80,17 @@ export const aasOriginsDiasporaPart5Data = {
             "options": [
               "c. 1500–1888 Atlantic slave trade",
               "Creolization",
-              "An anecdote with no date",
-              "An unrelated personal opinion"
+              "Cultural retention",
+              "Persistence of African naming practices"
             ]
           },
           {
             "label": "An AP CCOT response should ___",
             "options": [
               "Identify both continuities and changes with specific evidence",
-              "Pick only one without analysis",
-              "Avoid using dates",
-              "Replace evidence with opinion"
+              "Trace only the changes, in order, with specific evidence",
+              "Argue that continuity outweighed every change in the period",
+              "Describe the period's main events without a central claim"
             ]
           }
         ],
@@ -115,23 +115,23 @@ export const aasOriginsDiasporaPart5Data = {
             "question": "Which CCOT thesis is strongest?",
             "options": [
               "Although creolization continued, c. 1500–1888 Atlantic slave trade marked a decisive change in Origins of the Diaspora.",
-              "Nothing changed and nothing stayed the same.",
-              "Change is impossible to identify in history.",
-              "AP rubrics do not reward CCOT analysis."
+              "The Atlantic slave trade changed everything about African life, so that nothing from Africa survived anywhere in the Americas.",
+              "Although the trade grew, the diaspora mostly stayed the same from 1450 to 1800 in every region.",
+              "Creolization and the Atlantic slave trade were both important parts of Origins of the Diaspora."
             ],
             "correctAnswer": 0,
-            "explanation": "Strong CCOT theses pair specific continuities with specific changes."
+            "explanation": "A strong CCOT thesis names a specific continuity and a specific change and makes a defensible claim about them. Total change, near-total continuity, and a claim that both 'were important' each miss part of that move."
           },
           {
             "question": "Which evidence move is most valuable in a CCOT response?",
             "options": [
               "Naming a specific dated event AND a continuity within the same paragraph.",
-              "Listing dates without analysis.",
-              "Replacing evidence with a moral judgment.",
-              "Citing only post-2010 news stories."
+              "Listing every major date in the unit in chronological order.",
+              "Describing one change in detail without noting what persisted.",
+              "Quoting a historian's verdict on the period in place of evidence."
             ],
             "correctAnswer": 0,
-            "explanation": "AP CCOT scoring rewards paired specificity."
+            "explanation": "CCOT credit needs both halves anchored in evidence: a dated change and a named continuity. A list of dates, a change with no continuity, or a borrowed verdict replaces that analysis."
           }
         ]
       }

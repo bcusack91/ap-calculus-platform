@@ -22,23 +22,23 @@ export const aasPracticeFreedomPart3Data = {
             "question": "Which case BEST illustrates a pattern central to Practice of Freedom?",
             "options": [
               "1881 Tuskegee Institute founded — Vocational education model under Booker T. Washington.",
-              "An unrelated event from another century.",
-              "A purely fictional event.",
-              "An anecdote with no documentary support."
+              "1857 *Dred Scott v. Sandford* — Taney denies that Black Americans can ever be U.S. citizens.",
+              "1917 East St. Louis riot — White mobs attack Black workers during the WWI labor migration.",
+              "1965 Voting Rights Act — Federal examiners register Black voters across the Deep South states."
             ],
             "correctAnswer": 0,
-            "explanation": "Use historically attested events to illustrate patterns."
+            "explanation": "Tuskegee's founding (1881) shows the unit's central pattern of Black institution building. *Dred Scott*, the East St. Louis riot, and the Voting Rights Act are real events, but they concern citizenship, racial violence, and voting rights rather than building institutions."
           },
           {
             "question": "A comparison of 1881 Tuskegee Institute founded and 1896 NACW founded is most useful because:",
             "options": [
               "Both cases let students see common patterns and unique local differences in concrete historical detail.",
-              "Both events occurred in identical contexts and produced identical outcomes.",
-              "Comparison is irrelevant to AP scoring.",
-              "Neither event left primary sources for historians."
+              "Both cases show that Black institutions were founded and run by white philanthropists rather than Black leaders.",
+              "Both cases show that Black women led every institution founded in the late nineteenth century.",
+              "Both cases prove that Black institution building ended once *Plessy* upheld segregation in 1896."
             ],
             "correctAnswer": 0,
-            "explanation": "AP comparison rewards specific similarities and differences with named cases."
+            "explanation": "Comparison rewards a specific similarity and a specific difference: both are Black-led institutions built under segregation, but Tuskegee trained students in one place while the NACW linked women's clubs nationwide. Black leaders ran both, Tuskegee was led by Booker T. Washington, and institution building expanded after 1896."
           }
         ]
       }
@@ -69,35 +69,35 @@ export const aasPracticeFreedomPart3Data = {
           {
             "label": "The case most central to Black church is ___",
             "options": [
+              "1816 AME Church founded",
               "1881 Tuskegee Institute founded",
               "1896 NACW founded",
-              "1909 NAACP founded",
-              "An unrelated 21st-century news story"
+              "1920 Negro National League begins play"
             ]
           },
           {
             "label": "The case most central to HBCUs is ___",
             "options": [
-              "1896 NACW founded",
               "1881 Tuskegee Institute founded",
+              "1816 AME Church founded",
               "1909 NAACP founded",
-              "An unrelated 21st-century news story"
+              "1920 Negro National League begins play"
             ]
           },
           {
             "label": "The case most central to Black press is ___",
             "options": [
-              "1909 NAACP founded",
+              "1905 *Chicago Defender* founded",
               "1881 Tuskegee Institute founded",
               "1896 NACW founded",
-              "An unrelated 21st-century news story"
+              "1915 ASNLH founded"
             ]
           }
         ],
         "correctAnswers": [
+          "1816 AME Church founded",
           "1881 Tuskegee Institute founded",
-          "1896 NACW founded",
-          "1909 NAACP founded"
+          "1905 *Chicago Defender* founded"
         ],
         "hint1": "Use chronology to disambiguate.",
         "hint2": "Match the event to the concept it best illustrates.",
@@ -114,24 +114,24 @@ export const aasPracticeFreedomPart3Data = {
           {
             "question": "Using one specific case from Practice of Freedom, which sentence is the BEST AP comparison move?",
             "options": [
-              "Both 1881 Tuskegee Institute founded and 1896 NACW founded reveal black church, but they differ in actors and outcomes.",
-              "Both events were fictional and produced no consequences.",
-              "These events are too old to compare meaningfully.",
-              "Comparison is unimportant in AP rubrics."
+              "Both the 1881 founding of Tuskegee and the 1896 founding of the NACW reveal Black institution building, but they differ in actors and outcomes.",
+              "Both the 1881 founding of Tuskegee and the 1896 founding of the NACW were early parts of Black institution building.",
+              "Tuskegee and the NACW differ mainly because they were founded fifteen years apart.",
+              "Both the 1881 founding of Tuskegee and the 1896 founding of the NACW show resilience, so they should be remembered as inspiring lessons."
             ],
             "correctAnswer": 0,
-            "explanation": "AP comparison combines a specific shared pattern with a specific difference."
+            "explanation": "A full comparison pairs a shared pattern with a meaningful difference, here a single school led by Booker T. Washington versus a national federation of Black women's clubs. A similarity alone, a trivial difference such as date, or a moral judgment does not complete the move."
           },
           {
             "question": "Mary McLeod Bethune's role in Practice of Freedom is best illustrated by which event?",
             "options": [
+              "1904 Daytona school for Black girls opens — Grows into a college by merging with Cookman in 1923.",
               "1881 Tuskegee Institute founded — Vocational education model under Booker T. Washington.",
-              "An unrelated event in a different century.",
-              "A purely literary publication unconnected to politics.",
-              "An event before the figure was born."
+              "1915 ASNLH founded — Carter Woodson institutionalizes Black historical scholarship.",
+              "1920 Negro National League begins play — Rube Foster organizes Black professional baseball in the Midwest."
             ],
             "correctAnswer": 0,
-            "explanation": "Tie figures to dated events for high-scoring AP arguments."
+            "explanation": "Mary McLeod Bethune opened her Daytona school for Black girls in 1904; it merged with the Cookman Institute in 1923 to become Bethune-Cookman. Tuskegee was Booker T. Washington's, the ASNLH was Carter G. Woodson's, and the Negro National League was Rube Foster's."
           }
         ]
       }

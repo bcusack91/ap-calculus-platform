@@ -21,24 +21,24 @@ export const aasBlackPowerBeyondPart3Data = {
           {
             "question": "Which case BEST illustrates a pattern central to Black Power & Beyond?",
             "options": [
-              "1965 Watts uprising — 34 deaths; signals northern urban unrest.",
-              "An unrelated event from another century.",
-              "A purely fictional event.",
-              "An anecdote with no documentary support."
+              "1965 Watts uprising — 34 deaths; signals urban unrest outside the South.",
+              "1955 Montgomery Bus Boycott — 381-day protest; nonviolent mass action.",
+              "1896 *Plessy v. Ferguson* — 7–1 ruling; upholds state segregation laws.",
+              "1919 Red Summer — dozens of riots; white mobs attack Black neighborhoods."
             ],
             "correctAnswer": 0,
-            "explanation": "Use historically attested events to illustrate patterns."
+            "explanation": "The 1965 Watts uprising in Los Angeles, which left 34 dead, signaled urban unrest outside the South and helped turn many activists toward Black Power. Montgomery belongs to the civil rights unit, *Plessy* to Jim Crow, and Red Summer to the World War I era."
           },
           {
             "question": "A comparison of 1965 Watts uprising and 1966 Black Panther Party founded is most useful because:",
             "options": [
               "Both cases let students see common patterns and unique local differences in concrete historical detail.",
-              "Both events occurred in identical contexts and produced identical outcomes.",
-              "Comparison is irrelevant to AP scoring.",
-              "Neither event left primary sources for historians."
+              "Both cases show that Black Power began in the rural South rather than in American cities.",
+              "Both cases show that federal officials quickly fixed the urban conditions behind the unrest.",
+              "Both cases took place in New York, so they reveal only one city's experience of racism."
             ],
             "correctAnswer": 0,
-            "explanation": "AP comparison rewards specific similarities and differences with named cases."
+            "explanation": "Comparison rewards a specific similarity and a specific difference: both arose from police conflict and urban inequality in California, but Watts was an unplanned uprising while the Panthers built an organization with a program. Both were urban, federal remedies were limited, and they occurred in Los Angeles and Oakland, not New York."
           }
         ]
       }
@@ -69,10 +69,10 @@ export const aasBlackPowerBeyondPart3Data = {
           {
             "label": "The case most central to Black Power is ___",
             "options": [
-              "1965 Watts uprising",
-              "1966 Black Panther Party founded",
-              "1968 Olympic Project for Human Rights",
-              "An unrelated 21st-century news story"
+              "1966 Greenwood 'Black Power' rally",
+              "1963 March on Washington",
+              "1957 Little Rock Nine",
+              "1961 Freedom Rides"
             ]
           },
           {
@@ -81,23 +81,23 @@ export const aasBlackPowerBeyondPart3Data = {
               "1966 Black Panther Party founded",
               "1965 Watts uprising",
               "1968 Olympic Project for Human Rights",
-              "An unrelated 21st-century news story"
+              "1972 Gary Black Political Convention"
             ]
           },
           {
             "label": "The case most central to Black Arts Movement is ___",
             "options": [
-              "1968 Olympic Project for Human Rights",
+              "1965 Black Arts Repertory Theatre/School founded",
               "1965 Watts uprising",
               "1966 Black Panther Party founded",
-              "An unrelated 21st-century news story"
+              "1968 Olympic Project for Human Rights"
             ]
           }
         ],
         "correctAnswers": [
-          "1965 Watts uprising",
+          "1966 Greenwood 'Black Power' rally",
           "1966 Black Panther Party founded",
-          "1968 Olympic Project for Human Rights"
+          "1965 Black Arts Repertory Theatre/School founded"
         ],
         "hint1": "Use chronology to disambiguate.",
         "hint2": "Match the event to the concept it best illustrates.",
@@ -114,24 +114,24 @@ export const aasBlackPowerBeyondPart3Data = {
           {
             "question": "Using one specific case from Black Power & Beyond, which sentence is the BEST AP comparison move?",
             "options": [
-              "Both 1965 Watts uprising and 1966 Black Panther Party founded reveal black power, but they differ in actors and outcomes.",
-              "Both events were fictional and produced no consequences.",
-              "These events are too old to compare meaningfully.",
-              "Comparison is unimportant in AP rubrics."
+              "Both Watts and the Panthers grew from police conflict in California cities, but one was a revolt and one a group.",
+              "Both the 1965 Watts uprising and the 1966 founding of the Black Panther Party were important events in the Black Power era.",
+              "The Watts uprising and the Black Panther Party differ mainly because one happened in 1965 and the other was founded in 1966.",
+              "Both the Watts uprising and the Black Panther Party show how angry people were, so they should be remembered as warnings."
             ],
             "correctAnswer": 0,
-            "explanation": "AP comparison combines a specific shared pattern with a specific difference."
+            "explanation": "A full comparison pairs a shared pattern with a meaningful difference: both grew out of conflict with police in California cities, but Watts was an unplanned uprising and the Panthers a disciplined organization with a program. A similarity alone, a trivial difference such as date, or a moral judgment does not complete the move."
           },
           {
             "question": "Malcolm X's role in Black Power & Beyond is best illustrated by which event?",
             "options": [
-              "1965 Watts uprising — 34 deaths; signals northern urban unrest.",
-              "An unrelated event in a different century.",
-              "A purely literary publication unconnected to politics.",
-              "An event before the figure was born."
+              "1964 Organization of Afro-American Unity founded — Pan-African turn after the Nation of Islam split.",
+              "1965 Watts uprising — 34 deaths; signals urban unrest outside the South.",
+              "1966 Black Panther Party founded — Oakland group launches armed patrols and community programs.",
+              "1972 Gary Black Political Convention — Delegates draft a National Black Political Agenda."
             ],
             "correctAnswer": 0,
-            "explanation": "Tie figures to dated events for high-scoring AP arguments."
+            "explanation": "Malcolm X founded the Organization of Afro-American Unity in 1964 after leaving the Nation of Islam, turning toward pan-African and human-rights internationalism. He was assassinated in February 1965, before the Watts uprising, the Panthers' founding, and the Gary convention."
           }
         ]
       }

@@ -5,7 +5,7 @@ export const aasTransatlanticSlaveTradePart3Data = {
     {
       id: "aasts3-intro",
       type: 'text' as const,
-      content: "# ⛓️ The Transatlantic Slave Trade\n\n**Part 3 of 7 — Patterns, Regions & Case Studies**\n\n---\n\n## Specific cases — not abstractions\n\n| Event | Significance |\n|---|---|\n| **1444 first major Portuguese auction at Lagos** | Codifies European commercial trafficking of Africans. |\n| **1518 Spanish asiento authorizes direct African shipments to the Americas** | Bypasses Iberian re-export. |\n| **1619 *White Lion* arrives at Point Comfort, Virginia** | First documented enslaved Africans in English North America. |\n| **1781 *Zong* massacre** | Captain throws 132 enslaved Africans overboard for insurance; galvanizes British abolitionism. |\n| **1807 British Abolition of the Slave Trade Act** | U.S. follows in 1808 (constitutionally permitted then). |\n| **1820–1860 illegal trade** | British/U.S. patrols intercept ships; Brazil and Cuba continue legal imports until 1850/1867. |\n"
+      content: "# ⛓️ The Transatlantic Slave Trade\n\n**Part 3 of 7 — Patterns, Regions & Case Studies**\n\n---\n\n## Specific cases — not abstractions\n\n| Event | Significance |\n|---|---|\n| **1444 first major Portuguese auction at Lagos** | Codifies European commercial trafficking of Africans. |\n| **1518 Spanish asiento authorizes direct African shipments to the Americas** | Bypasses Iberian re-export. |\n| **1619 *White Lion* arrives at Point Comfort, Virginia** | First documented enslaved Africans in English North America. |\n| **1781 *Zong* massacre** | Captain throws 132 enslaved Africans overboard for insurance; galvanizes British abolitionism. |\n| **1807 British Abolition of the Slave Trade Act** | U.S. follows in 1808 (constitutionally permitted then). |\n| **1820–1860 illegal trade** | British/U.S. patrols intercept ships; illegal imports to Brazil and Cuba persist until c. 1850 and 1867. |\n"
     },
     {
       id: "aasts3-cases",
@@ -22,23 +22,23 @@ export const aasTransatlanticSlaveTradePart3Data = {
             "question": "Which case BEST illustrates a pattern central to Transatlantic Slave Trade?",
             "options": [
               "1444 first major Portuguese auction at Lagos — Codifies European commercial trafficking of Africans.",
-              "An unrelated event from another century.",
-              "A purely fictional event.",
-              "An anecdote with no documentary support."
+              "1324 Mansa Musa's hajj — Caravan of gold that placed Mali on European maps.",
+              "1863 Emancipation Proclamation — Frees enslaved people in Confederate-held areas and permits Black enlistment.",
+              "1916 Great Migration intensifies — Wartime labor demand pulls Black workers north."
             ],
             "correctAnswer": 0,
-            "explanation": "Use historically attested events to illustrate patterns."
+            "explanation": "The 1444 Lagos auction falls within this unit and shows the commercial pattern of the trade. Mansa Musa's hajj, the Emancipation Proclamation, and the Great Migration belong to other units."
           },
           {
             "question": "A comparison of 1444 first major Portuguese auction at Lagos and 1518 Spanish asiento authorizes direct African shipments to the Americas is most useful because:",
             "options": [
               "Both cases let students see common patterns and unique local differences in concrete historical detail.",
-              "Both events occurred in identical contexts and produced identical outcomes.",
-              "Comparison is irrelevant to AP scoring.",
-              "Neither event left primary sources for historians."
+              "Both cases show that England led the Atlantic slave trade from its very beginning in the fifteenth century.",
+              "Both cases show that the trade carried captives mainly to Europe rather than to the Americas after 1518.",
+              "Both cases show that African rulers played no part in selling captives to European traders at any point."
             ],
             "correctAnswer": 0,
-            "explanation": "AP comparison rewards specific similarities and differences with named cases."
+            "explanation": "Comparison rewards a specific similarity and a specific difference. Portugal and Spain, not England, led the early trade; after 1518 captives went directly to the Americas; and African rulers and merchants supplied most captives."
           }
         ]
       }
@@ -72,32 +72,32 @@ export const aasTransatlanticSlaveTradePart3Data = {
               "1444 first major Portuguese auction at Lagos",
               "1518 Spanish asiento authorizes direct African shipments to the Americas",
               "1619 *White Lion* arrives at Point Comfort, Virginia",
-              "An unrelated 21st-century news story"
+              "1807 British Abolition of the Slave Trade Act"
             ]
           },
           {
             "label": "The case most central to Middle Passage is ___",
             "options": [
-              "1518 Spanish asiento authorizes direct African shipments to the Americas",
+              "1781 *Zong* massacre",
               "1444 first major Portuguese auction at Lagos",
               "1619 *White Lion* arrives at Point Comfort, Virginia",
-              "An unrelated 21st-century news story"
+              "1807 British Abolition of the Slave Trade Act"
             ]
           },
           {
             "label": "The case most central to Asiento is ___",
             "options": [
-              "1619 *White Lion* arrives at Point Comfort, Virginia",
-              "1444 first major Portuguese auction at Lagos",
               "1518 Spanish asiento authorizes direct African shipments to the Americas",
-              "An unrelated 21st-century news story"
+              "1444 first major Portuguese auction at Lagos",
+              "1619 *White Lion* arrives at Point Comfort, Virginia",
+              "1781 *Zong* massacre"
             ]
           }
         ],
         "correctAnswers": [
           "1444 first major Portuguese auction at Lagos",
-          "1518 Spanish asiento authorizes direct African shipments to the Americas",
-          "1619 *White Lion* arrives at Point Comfort, Virginia"
+          "1781 *Zong* massacre",
+          "1518 Spanish asiento authorizes direct African shipments to the Americas"
         ],
         "hint1": "Use chronology to disambiguate.",
         "hint2": "Match the event to the concept it best illustrates.",
@@ -114,24 +114,24 @@ export const aasTransatlanticSlaveTradePart3Data = {
           {
             "question": "Using one specific case from Transatlantic Slave Trade, which sentence is the BEST AP comparison move?",
             "options": [
-              "Both 1444 first major Portuguese auction at Lagos and 1518 Spanish asiento authorizes direct African shipments to the Americas reveal triangular trade, but they differ in actors and outcomes.",
-              "Both events were fictional and produced no consequences.",
-              "These events are too old to compare meaningfully.",
-              "Comparison is unimportant in AP rubrics."
+              "Both the 1444 Lagos auction and the 1518 asiento commercialized trafficking, but only the asiento sent captives straight to the Americas.",
+              "Both the 1444 Lagos auction and the 1518 asiento commercialized trafficking, so they were basically the same event.",
+              "Both the 1444 Lagos auction and the 1518 asiento were Iberian, but one happened in the 1400s and one in the 1500s.",
+              "The asiento mattered more than the Lagos auction, since the Spanish empire was much larger than Portugal's."
             ],
             "correctAnswer": 0,
-            "explanation": "AP comparison combines a specific shared pattern with a specific difference."
+            "explanation": "A full comparison pairs a shared pattern (commercial trafficking) with a meaningful difference (direct shipment to the Americas). A similarity alone, a trivial difference such as date, or a value judgment does not complete the move."
           },
           {
             "question": "John Hawkins's role in Transatlantic Slave Trade is best illustrated by which event?",
             "options": [
+              "1562–63 first English slaving voyage — Africans seized in Sierra Leone are sold in Hispaniola.",
               "1444 first major Portuguese auction at Lagos — Codifies European commercial trafficking of Africans.",
-              "An unrelated event in a different century.",
-              "A purely literary publication unconnected to politics.",
-              "An event before the figure was born."
+              "1672 Royal African Company chartered — English monopoly under James, Duke of York.",
+              "1807 British Abolition Act — Parliament bans the British slave trade."
             ],
             "correctAnswer": 0,
-            "explanation": "Tie figures to dated events for high-scoring AP arguments."
+            "explanation": "Hawkins's defining act was the 1562–63 voyage that seized Africans in Sierra Leone and sold them in Hispaniola, launching English slave trading. The Lagos auction predates his birth, and the Royal African Company and the 1807 Act came long after his death."
           }
         ]
       }

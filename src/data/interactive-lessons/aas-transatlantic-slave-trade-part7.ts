@@ -10,7 +10,7 @@ export const aasTransatlanticSlaveTradePart7Data = {
     {
       id: "aasts7-review",
       type: 'text' as const,
-      content: "## Master review for Transatlantic Slave Trade\n\n### Concepts to define on demand\n\n| Core concept | What it refers to |\n|---|---|\n| **Triangular trade** | European manufactures → African captives → American plantation goods → Europe. |\n| **Middle Passage** | The Atlantic crossing; mortality averaged ~15%, sometimes much higher. |\n| **Asiento** | Spanish license granting European powers the monopoly to supply enslaved Africans to Spanish colonies. |\n\n### Figures to deploy\n\n| Figure | Dates | Why they matter |\n|---|---|---|\n| **John Hawkins** | 1532–1595 | First English slaver; raids West Africa 1562 with backing of Elizabeth I. |\n| **Royal African Company** | chartered 1672 | English monopoly under James, Duke of York; branded the initials 'DY' on captives. |\n| **Olaudah Equiano** | captured c. 1756 | Describes Bight of Biafra capture, holding pens at Bonny, and the Middle Passage. |\n| **Captain John Newton** | 1725–1807 | Slave-ship captain turned abolitionist; wrote 'Amazing Grace' (1772) and *Thoughts upon the Slave Trade* (1788). |\n| **Thomas Clarkson** | 1760–1846 | British abolitionist whose evidence on conditions aboard ships catalyzed the 1807 Abolition Act. |\n\n### Events to cite\n\n| Event | Significance |\n|---|---|\n| **1444 first major Portuguese auction at Lagos** | Codifies European commercial trafficking of Africans. |\n| **1518 Spanish asiento authorizes direct African shipments to the Americas** | Bypasses Iberian re-export. |\n| **1619 *White Lion* arrives at Point Comfort, Virginia** | First documented enslaved Africans in English North America. |\n| **1781 *Zong* massacre** | Captain throws 132 enslaved Africans overboard for insurance; galvanizes British abolitionism. |\n| **1807 British Abolition of the Slave Trade Act** | U.S. follows in 1808 (constitutionally permitted then). |\n\n### Sources to attribute\n\n- **Equiano, *Narrative* ch. 2 (1789)** — Most-cited Middle Passage testimony in 18th-century abolition debates.\n- **Brookes slave-ship diagram (1788)** — Showed 482 Africans packed below decks; mass-printed by Clarkson.\n- **Trans-Atlantic Slave Trade Database (Voyages.org)** — Modern database of ~36,000 documented voyages used by historians.\n"
+      content: "## Master review for Transatlantic Slave Trade\n\n### Concepts to define on demand\n\n| Core concept | What it refers to |\n|---|---|\n| **Triangular trade** | European manufactures → African captives → American plantation goods → Europe. |\n| **Middle Passage** | The Atlantic crossing; mortality averaged ~15%, sometimes much higher. |\n| **Asiento** | Spanish license granting European powers the monopoly to supply enslaved Africans to Spanish colonies. |\n\n### Figures to deploy\n\n| Figure | Dates | Why they matter |\n|---|---|---|\n| **John Hawkins** | 1532–1595 | Pioneer of the English slave trade; first voyage 1562, later voyages backed by Elizabeth I. |\n| **Royal African Company** | chartered 1672 | English monopoly under James, Duke of York; branded the initials 'DY' on captives. |\n| **Olaudah Equiano** | captured c. 1756 | Describes capture in the Bight of Biafra hinterland, sale to the coast, and the Middle Passage. |\n| **Captain John Newton** | 1725–1807 | Slave-ship captain turned abolitionist; wrote 'Amazing Grace' (1772) and *Thoughts upon the Slave Trade* (1788). |\n| **Thomas Clarkson** | 1760–1846 | British abolitionist whose evidence on conditions aboard ships catalyzed the 1807 Abolition Act. |\n\n### Events to cite\n\n| Event | Significance |\n|---|---|\n| **1444 first major Portuguese auction at Lagos** | Codifies European commercial trafficking of Africans. |\n| **1518 Spanish asiento authorizes direct African shipments to the Americas** | Bypasses Iberian re-export. |\n| **1619 *White Lion* arrives at Point Comfort, Virginia** | First documented enslaved Africans in English North America. |\n| **1781 *Zong* massacre** | Captain throws 132 enslaved Africans overboard for insurance; galvanizes British abolitionism. |\n| **1807 British Abolition of the Slave Trade Act** | U.S. follows in 1808 (constitutionally permitted then). |\n\n### Sources to attribute\n\n- **Equiano, *Narrative* ch. 2 (1789)** — Most-cited Middle Passage testimony in 18th-century abolition debates.\n- **Brookes slave-ship diagram (1788)** — Showed hundreds of Africans packed below decks; mass-printed by British abolitionists.\n- **Trans-Atlantic Slave Trade Database (Voyages.org)** — Modern database of ~36,000 documented voyages used by historians.\n"
     },
     {
       id: "aasts7-quiz",
@@ -22,23 +22,23 @@ export const aasTransatlanticSlaveTradePart7Data = {
             "question": "A high-scoring AP response on this unit will:",
             "options": [
               "Combine a clear thesis with named figures, dated events, and at least one primary source.",
-              "Memorize dates with no analysis.",
-              "Use only 21st-century examples to discuss earlier periods.",
-              "Avoid citing sources."
+              "Narrate the unit's events in order, with names, dates, and places, but no thesis.",
+              "Open with a strong moral judgment and support it with general claims about the era.",
+              "Restate the prompt as its thesis and end by summarizing each body paragraph."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rubrics consistently reward specificity, sourcing, and clear analytical structure."
+            "explanation": "High-scoring responses pair a defensible thesis with specific evidence: named figures, dated events, and sourced documents. Narration without a claim, moral judgment without evidence, and a restated prompt all fall short."
           },
           {
             "question": "Which is the BEST one-sentence thesis for an essay on Transatlantic Slave Trade?",
             "options": [
-              "During c. 1500–1888, triangular trade reshaped Black life — visible in 1444 first major Portuguese auction at Lagos and John Hawkins's career — even as asiento persisted.",
-              "Transatlantic Slave Trade was important.",
-              "Nothing changed during c. 1500–1888.",
-              "Transatlantic Slave Trade cannot be analyzed."
+              "From 1501 to 1866, the trade built Atlantic plantation wealth on 12.5 million captives, even as Africans resisted at every stage.",
+              "Between 1501 and 1866, the trade built Atlantic plantation wealth on captive labor, which is why it was important.",
+              "The Transatlantic Slave Trade was an important part of history that affected many people in many ways.",
+              "Most enslaved Africans were carried to mainland North America, which made it the center of the trade."
             ],
             "correctAnswer": 0,
-            "explanation": "Strong theses combine a defensible claim with specific evidence and acknowledge complexity."
+            "explanation": "A strong thesis makes a defensible claim, ties it to the period, and acknowledges complexity: plantation wealth built on forced migration, alongside African resistance. A circular claim, a vague claim, or a factual error (most captives went to Brazil and the Caribbean) does not."
           }
         ]
       }
@@ -70,27 +70,27 @@ export const aasTransatlanticSlaveTradePart7Data = {
             "label": "Contextualization is best demonstrated by ___",
             "options": [
               "Placing the topic within larger historical processes (e.g., the Atlantic World, post-Reconstruction politics).",
-              "Citing only one date with no context.",
-              "Replacing evidence with opinion.",
-              "Using only 21st-century examples for older periods."
+              "Listing the unit's key events (with dates) in strict chronological order.",
+              "Defining each key term before stating the thesis.",
+              "Explaining how a document's author shaped its message."
             ]
           },
           {
             "label": "Causation is best demonstrated by ___",
             "options": [
               "Identifying a specific cause and its specific consequence with named actors.",
-              "A vague slogan.",
-              "An anecdote without analysis.",
-              "A list of names with no explanation."
+              "Showing that two events happened in the same decade.",
+              "Describing one event in detail with named actors.",
+              "Comparing two similar events across different regions."
             ]
           },
           {
             "label": "CCOT is best demonstrated by ___",
             "options": [
               "Pairing a specific continuity with a specific change, both supported with evidence.",
-              "Choosing only continuity OR only change.",
-              "Avoiding dates.",
-              "Replacing evidence with personal preference."
+              "Tracing a sequence of changes, each supported with evidence.",
+              "Arguing that the period was mostly continuous, with one example.",
+              "Comparing two regions at a single moment in time."
             ]
           }
         ],
@@ -102,7 +102,7 @@ export const aasTransatlanticSlaveTradePart7Data = {
         "hint1": "Contextualization = larger frame.",
         "hint2": "Causation = cause + consequence.",
         "hint3": "CCOT = both halves with evidence.",
-        "explanation": "These are the highest-leverage AP skills tested across MCQ, SAQ, LEQ, and DBQ."
+        "explanation": "These are the highest-leverage AP skills tested across MCQ, SAQ, and DBQ."
       }
     },
     {
@@ -114,24 +114,24 @@ export const aasTransatlanticSlaveTradePart7Data = {
           {
             "question": "You are writing an SAQ on Transatlantic Slave Trade. The strongest opening sentence is:",
             "options": [
-              "Within c. 1500–1888, John Hawkins (1532–1595) advanced triangular trade — visible in 1444 first major Portuguese auction at Lagos — even as asiento continued.",
-              "Transatlantic Slave Trade happened.",
-              "There is nothing to say about this topic.",
-              "Modern social media debates are the best evidence."
+              "John Hawkins's 1562 voyage shows England entering a trade the Portuguese had run from the 1440s onward.",
+              "The Transatlantic Slave Trade is an important topic that historians have studied for many years.",
+              "Hawkins was a famous English sailor, and his voyages are still discussed by historians today.",
+              "In 1444 captives were sold at Lagos, and in 1518 Spain issued the first asiento."
             ],
             "correctAnswer": 0,
-            "explanation": "Strong AP openings combine date, figure, mechanism, event, and continuity in a single sentence."
+            "explanation": "A strong SAQ opening ties a named figure and dated event to a historical claim about change. A vague claim, a remark about fame, or a list of dates without a claim does not answer the question."
           },
           {
-            "question": "Which closing move strengthens an LEQ on this unit?",
+            "question": "Which closing move strengthens a DBQ essay on this unit?",
             "options": [
               "Synthesizing the topic with Slavery in America via a specific shared cause or consequence.",
-              "Repeating the prompt verbatim.",
-              "Adding a moral judgment with no evidence.",
-              "Listing topics not assigned in the prompt."
+              "Restating the thesis in different words and then summarizing each of the body paragraphs in turn.",
+              "Introducing a new document that none of the body paragraphs ever analyzed.",
+              "Ending with a personal reflection on why the topic still matters today."
             ],
             "correctAnswer": 0,
-            "explanation": "AP synthesis moves earn extra rubric points by connecting units."
+            "explanation": "A strong close extends the argument by linking this unit to another through a specific shared cause or consequence. Restating the thesis, adding unanalyzed evidence, or reflecting personally adds no new analysis."
           }
         ]
       }

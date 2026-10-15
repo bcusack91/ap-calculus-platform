@@ -21,24 +21,24 @@ export const aasContemporaryIssuesPart5Data = {
           {
             "question": "Which best describes continuity within Contemporary Issues?",
             "options": [
-              "Aspects such as movement for black lives persisted even as other features changed.",
-              "Nothing about this topic ever changed.",
-              "Continuity is irrelevant to AP scoring.",
-              "Only the most recent decade matters."
+              "Activism against police violence persisted from the 1992 uprising to the Movement for Black Lives.",
+              "Racial gaps in wealth and incarceration closed steadily after 1980.",
+              "Black voters' party loyalties shifted every decade from 1980 to 2020.",
+              "Federal drug sentencing law stayed exactly the same from the 1986 act all the way to the present day."
             ],
             "correctAnswer": 0,
-            "explanation": "Continuity = elements that persist across change — a key AP analytical category."
+            "explanation": "Continuity means elements that persist across change: protest against police violence runs from the 1992 Los Angeles uprising through Ferguson (2014) and the 2020 protests. Racial gaps in wealth and incarceration remain wide, Black voters have stayed heavily Democratic since the 1960s, and the Fair Sentencing Act (2010) and First Step Act (2018) changed federal sentencing."
           },
           {
             "question": "Which event marks a decisive change within Contemporary Issues?",
             "options": [
-              "2020 George Floyd protests — ~15–26 million Americans participate — likely largest U.S. protest movement ever.",
-              "An anecdote with no historical impact.",
-              "A 21st-century news headline unrelated to the period.",
-              "A purely literary aesthetic with no political effect."
+              "2020 George Floyd protests — By some estimates 15–26 million join, likely the largest U.S. protests ever.",
+              "1963 March on Washington — About 250,000 people rally at the Lincoln Memorial for jobs and freedom in August.",
+              "1955 Montgomery Bus Boycott — Black residents sustain a 381-day boycott that ends bus segregation in the city.",
+              "1972 Gary convention — Thousands of Black delegates draft a National Black Political Agenda in Gary, Indiana."
             ],
             "correctAnswer": 0,
-            "explanation": "Specific dated events anchor change-over-time arguments."
+            "explanation": "The 2020 protests after George Floyd's murder drew an estimated 15 to 26 million participants, likely the largest protest wave in U.S. history, and pushed policing and structural racism to the center of national debate. The March on Washington, the Montgomery boycott, and the Gary convention belong to earlier units."
           }
         ]
       }
@@ -71,8 +71,8 @@ export const aasContemporaryIssuesPart5Data = {
             "options": [
               "Movement for Black Lives",
               "2020 George Floyd protests",
-              "An unrelated modern slogan",
-              "A topic from a different course"
+              "2008 Obama elected president",
+              "1986 Anti-Drug Abuse Act"
             ]
           },
           {
@@ -80,17 +80,17 @@ export const aasContemporaryIssuesPart5Data = {
             "options": [
               "2020 George Floyd protests",
               "Movement for Black Lives",
-              "An anecdote with no date",
-              "An unrelated personal opinion"
+              "Persistent racial wealth gap",
+              "Unequal drug sentencing"
             ]
           },
           {
             "label": "An AP CCOT response should ___",
             "options": [
               "Identify both continuities and changes with specific evidence",
-              "Pick only one without analysis",
-              "Avoid using dates",
-              "Replace evidence with opinion"
+              "Trace only the changes, in order, with specific evidence",
+              "Argue that continuity outweighed every change in the period",
+              "Describe the period's main events without a central claim"
             ]
           }
         ],
@@ -114,24 +114,24 @@ export const aasContemporaryIssuesPart5Data = {
           {
             "question": "Which CCOT thesis is strongest?",
             "options": [
-              "Although movement for black lives continued, 2020 George Floyd protests marked a decisive change in Contemporary Issues.",
-              "Nothing changed and nothing stayed the same.",
-              "Change is impossible to identify in history.",
-              "AP rubrics do not reward CCOT analysis."
+              "Although protest against police violence endured, the 2020 George Floyd protests marked a decisive change in its scale.",
+              "The 2020 protests changed everything, so police violence and racial inequality ended across the country.",
+              "Although the protests were large, Black life mostly stayed the same from 1980 to the present in every way.",
+              "Police violence and the 2020 protests were both important parts of recent African American history."
             ],
             "correctAnswer": 0,
-            "explanation": "Strong CCOT theses pair specific continuities with specific changes."
+            "explanation": "A strong CCOT thesis names a specific continuity and a specific change and makes a defensible claim about them. Total change, near-total continuity, and a claim that both 'were important' each miss part of that move."
           },
           {
             "question": "Which evidence move is most valuable in a CCOT response?",
             "options": [
               "Naming a specific dated event AND a continuity within the same paragraph.",
-              "Listing dates without analysis.",
-              "Replacing evidence with a moral judgment.",
-              "Citing only post-2010 news stories."
+              "Listing every major date in the unit in chronological order.",
+              "Describing one change in detail without noting what persisted.",
+              "Quoting a historian's verdict on the period in place of evidence."
             ],
             "correctAnswer": 0,
-            "explanation": "AP CCOT scoring rewards paired specificity."
+            "explanation": "CCOT credit needs both halves anchored in evidence: a dated change and a named continuity. A list of dates, a change with no continuity, or a borrowed verdict replaces that analysis."
           }
         ]
       }

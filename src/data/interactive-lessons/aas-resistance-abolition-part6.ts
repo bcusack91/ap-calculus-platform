@@ -22,23 +22,23 @@ export const aasResistanceAbolitionPart6Data = {
             "question": "What makes Walker's *Appeal* (1829) a strong source for studying Resistance & Abolition?",
             "options": [
               "Pamphlet smuggled into the South in sailors' clothing.",
-              "It was published in 2024 with no link to the period.",
-              "It is fictional and includes no historical content.",
-              "It is unsigned and undated."
+              "Speech indicting national hypocrisy in biblical cadence.",
+              "Confession recorded by a white lawyer after a failed revolt.",
+              "Petition asking Congress for gradual, compensated emancipation."
             ],
             "correctAnswer": 0,
-            "explanation": "Provenance, date, and authorial position determine source value."
+            "explanation": "Walker's *Appeal* (1829) is valuable because its smuggled circulation shows how a free Black author reached enslaved readers in the South. The other descriptions fit Douglass's 1852 speech, the *Confessions of Nat Turner*, and a petition."
           },
           {
             "question": "When using a primary source on the AP exam, you should:",
             "options": [
               "Identify author/date/audience and tie the source to a specific claim.",
-              "Quote the source verbatim without analysis.",
-              "Ignore the author's position.",
-              "Treat the source as neutral and unbiased."
+              "Summarize the source's main idea accurately and let it stand as your argument.",
+              "Quote the most striking passage at length so readers can judge its meaning for themselves.",
+              "Treat it as neutral, reliable evidence, since primary sources record events as they happened."
             ],
             "correctAnswer": 0,
-            "explanation": "AP source-use rewards explicit attribution and analytical framing."
+            "explanation": "Source use earns credit when you attribute the source (author, date, audience) and put it to work for a claim. Summary, long quotation, and treating a source as neutral all skip that analysis."
           }
         ]
       }
@@ -72,7 +72,7 @@ export const aasResistanceAbolitionPart6Data = {
               "Pamphlet smuggled into the South in sailors' clothing.",
               "Indicts national hypocrisy in plain biblical cadence.",
               "Mediated by Thomas Gray; complex source on revolt motives.",
-              "Unrelated to this unit"
+              "Petition asking Congress for gradual, compensated emancipation."
             ]
           },
           {
@@ -81,7 +81,7 @@ export const aasResistanceAbolitionPart6Data = {
               "Indicts national hypocrisy in plain biblical cadence.",
               "Pamphlet smuggled into the South in sailors' clothing.",
               "Mediated by Thomas Gray; complex source on revolt motives.",
-              "Unrelated to this unit"
+              "Petition asking Congress for gradual, compensated emancipation."
             ]
           },
           {
@@ -90,7 +90,7 @@ export const aasResistanceAbolitionPart6Data = {
               "Mediated by Thomas Gray; complex source on revolt motives.",
               "Pamphlet smuggled into the South in sailors' clothing.",
               "Indicts national hypocrisy in plain biblical cadence.",
-              "Unrelated to this unit"
+              "Petition asking Congress for gradual, compensated emancipation."
             ]
           }
         ],
@@ -115,23 +115,23 @@ export const aasResistanceAbolitionPart6Data = {
             "question": "A strong AP citation of Walker's *Appeal* (1829) reads:",
             "options": [
               "'According to Walker's *Appeal* (1829), …' followed by inference about purpose and historical situation.",
-              "A direct quote with no attribution.",
-              "A loose paraphrase that hides the source's identity.",
-              "An anachronistic reading that ignores the date."
+              "'According to Walker's *Appeal* (1829), …' followed by a long, unbroken quotation, with no further comment.",
+              "'Walker's *Appeal* is too radical,' followed by dismissing its call to resist as unreliable.",
+              "'According to one Black pamphleteer, …' followed by a paraphrase that never names the source."
             ],
             "correctAnswer": 0,
-            "explanation": "Attribution + sourcing analysis is the AP scoring standard."
+            "explanation": "Attribution plus sourcing analysis is the standard: name the source, then explain how Walker's purpose and 1829 context shape it. Quoting without comment, dismissing a source as radical, and hiding its identity all fall short."
           },
           {
             "question": "Which source-analysis move earns the AP 'sourcing' point?",
             "options": [
               "Identifying author, audience, purpose, OR historical situation — and using it to support a claim.",
-              "Quoting verbatim with no analysis.",
-              "Ignoring the source's date.",
-              "Citing only 21st-century opinion pieces."
+              "Restating the source's topic, date, and title — and quoting its most memorable line.",
+              "Explaining whether you agree with the author's view — and describing how it makes you feel about the past.",
+              "Summarizing what the source says accurately — and placing it in chronological order."
             ],
             "correctAnswer": 0,
-            "explanation": "AP DBQ rubrics explicitly reward sourcing analysis tied to claims."
+            "explanation": "Sourcing means explaining how the author's point of view, purpose, audience, or historical situation matters, then using that to support the argument. Restating, quoting, summarizing, or reacting personally does not count."
           }
         ]
       }

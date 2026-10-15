@@ -22,23 +22,23 @@ export const aasResistanceAbolitionPart5Data = {
             "question": "Which best describes continuity within Resistance & Abolition?",
             "options": [
               "Aspects such as moral suasion vs political action persisted even as other features changed.",
-              "Nothing about this topic ever changed.",
-              "Continuity is irrelevant to AP scoring.",
-              "Only the most recent decade matters."
+              "Armed revolt remained the main form of resistance from the 1700s through the Civil War years.",
+              "Abolitionists stayed united on strategy from the 1830s to the Civil War.",
+              "Slave codes grew milder after each revolt, from Stono to Nat Turner."
             ],
             "correctAnswer": 0,
-            "explanation": "Continuity = elements that persist across change — a key AP analytical category."
+            "explanation": "Continuity means elements that persist across change: the debate over moral suasion and political action ran from the 1830s to the Civil War. Everyday resistance was far more common than revolt, abolitionists split over strategy, and slave codes grew harsher after revolts."
           },
           {
             "question": "Which event marks a decisive change within Resistance & Abolition?",
             "options": [
               "1863 Emancipation Proclamation — Frees enslaved people in Confederate-held areas; permits Black enlistment.",
-              "An anecdote with no historical impact.",
-              "A 21st-century news headline unrelated to the period.",
-              "A purely literary aesthetic with no political effect."
+              "1441 Portuguese captives reach Lisbon — European Atlantic slave trade begins; Prince Henry's voyages expand.",
+              "1896 *Plessy v. Ferguson* — Court upholds segregation; only Justice Harlan dissents.",
+              "1955 Montgomery bus boycott — 381-day protest; Rosa Parks and Dr. King lead it."
             ],
             "correctAnswer": 0,
-            "explanation": "Specific dated events anchor change-over-time arguments."
+            "explanation": "The Emancipation Proclamation falls inside c. 1700–1865 and turned the war into a war against slavery. The 1441 Lisbon captives, *Plessy*, and the Montgomery boycott belong to other units."
           }
         ]
       }
@@ -71,8 +71,8 @@ export const aasResistanceAbolitionPart5Data = {
             "options": [
               "Moral suasion vs political action",
               "1863 Emancipation Proclamation",
-              "An unrelated modern slogan",
-              "A topic from a different course"
+              "1831 Nat Turner Rebellion",
+              "1859 John Brown's raid on Harpers Ferry"
             ]
           },
           {
@@ -80,17 +80,17 @@ export const aasResistanceAbolitionPart5Data = {
             "options": [
               "1863 Emancipation Proclamation",
               "Moral suasion vs political action",
-              "An anecdote with no date",
-              "An unrelated personal opinion"
+              "Everyday resistance",
+              "Armed revolt"
             ]
           },
           {
             "label": "An AP CCOT response should ___",
             "options": [
               "Identify both continuities and changes with specific evidence",
-              "Pick only one without analysis",
-              "Avoid using dates",
-              "Replace evidence with opinion"
+              "Trace only the changes, in order, with specific evidence",
+              "Argue that continuity outweighed every change in the period",
+              "Describe the period's main events without a central claim"
             ]
           }
         ],
@@ -114,24 +114,24 @@ export const aasResistanceAbolitionPart5Data = {
           {
             "question": "Which CCOT thesis is strongest?",
             "options": [
-              "Although moral suasion vs political action continued, 1863 Emancipation Proclamation marked a decisive change in Resistance & Abolition.",
-              "Nothing changed and nothing stayed the same.",
-              "Change is impossible to identify in history.",
-              "AP rubrics do not reward CCOT analysis."
+              "Although the debate over moral suasion and political action continued, the 1863 Emancipation Proclamation marked a decisive change.",
+              "The Emancipation Proclamation changed everything, freeing every enslaved person in the United States at once.",
+              "Despite the Emancipation Proclamation, resistance and abolition stayed the same in every way until 1865.",
+              "Moral suasion and the Emancipation Proclamation were both important parts of Resistance & Abolition."
             ],
             "correctAnswer": 0,
-            "explanation": "Strong CCOT theses pair specific continuities with specific changes."
+            "explanation": "A strong CCOT thesis names a specific continuity and a specific change and makes a defensible claim about them. The Proclamation freed people only in Confederate-held areas, so total change is wrong; total continuity and 'both were important' also miss the move."
           },
           {
             "question": "Which evidence move is most valuable in a CCOT response?",
             "options": [
               "Naming a specific dated event AND a continuity within the same paragraph.",
-              "Listing dates without analysis.",
-              "Replacing evidence with a moral judgment.",
-              "Citing only post-2010 news stories."
+              "Listing every major date in the unit in chronological order.",
+              "Describing one change in detail without noting what persisted.",
+              "Quoting a historian's verdict on the period in place of evidence."
             ],
             "correctAnswer": 0,
-            "explanation": "AP CCOT scoring rewards paired specificity."
+            "explanation": "CCOT credit needs both halves anchored in evidence: a dated change and a named continuity. A list of dates, a change with no continuity, or a borrowed verdict replaces that analysis."
           }
         ]
       }

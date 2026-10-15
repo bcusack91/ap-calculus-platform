@@ -21,24 +21,24 @@ export const aasSlaveryInAmericaPart1Data = {
           {
             "question": "Which statement BEST captures why Slavery in America is foundational to AP African American History?",
             "options": [
-              "Slavery in British North America hardened from a fluid 17th-century labor system into race-based, hereditary chattel slavery. By 1860, ~4 million enslaved African Americans produced two-thirds of the world's cotton supply, financing southern wealth and northern industry.",
-              "Slavery in America is primarily a literary movement with no political implications.",
-              "Slavery in America only matters to one decade and rarely appears on the AP exam.",
-              "Slavery in America is studied to memorize dates without analyzing causes."
+              "Slavery hardened from a fluid 1600s labor system into hereditary, race-based bondage holding ~4 million by 1860.",
+              "Slavery began as hereditary, race-based bondage in 1619, and it stayed unchanged in law and in practice until 1865.",
+              "Slavery remained a small, mostly urban institution in the colonies; by 1860 it held fewer than half a million people.",
+              "Slavery faded after 1800 as cotton lost value, so by 1860 most Southern farm labor was free and paid in cash wages."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rewards students who can articulate why Slavery in America matters in the broader course narrative, not just describe it."
+            "explanation": "Slavery in British North America hardened from a fluid 17th-century labor system into race-based, hereditary chattel slavery. By 1860 about 4 million enslaved African Americans produced roughly two-thirds of the world's cotton, financing southern wealth and northern industry."
           },
           {
             "question": "Anthony Johnson (c. 1600–1670) is significant in this unit primarily because:",
             "options": [
               "Angolan-born Virginia free Black who himself owned servants — illustrates pre-1660s fluidity.",
-              "Anthony Johnson opposed every form of African American institution building.",
-              "Anthony Johnson lived after the events of Slavery in America ended.",
-              "Anthony Johnson is mentioned only in passing on the AP exam."
+              "Inventor of the cotton gin (1793) — made short-staple cotton profitable across the Deep South.",
+              "Free Black New Yorker kidnapped into Louisiana slavery — wrote *Twelve Years a Slave* (1853).",
+              "Enslaved Virginia preacher who led an 1831 revolt — prompted harsher slave codes across the South."
             ],
             "correctAnswer": 0,
-            "explanation": "Anthony Johnson is one of the central named figures the AP exam expects students to deploy when writing about Slavery in America."
+            "explanation": "Johnson, probably Angolan-born, became free in 1600s Virginia and held servants himself, showing how fluid race and status were before the 1660s. The other descriptions fit Eli Whitney, Solomon Northup, and Nat Turner."
           }
         ]
       }
@@ -77,7 +77,7 @@ export const aasSlaveryInAmericaPart1Data = {
               "Legal status defining humans as inheritable property — distinct from indenture or serfdom.",
               "Virginia 1662 law: a child's status follows the mother's, making slavery hereditary.",
               "After 1808 ban on imports, ~1 million people forcibly relocated from Upper to Lower South.",
-              "An unrelated modern policy debate"
+              "Labor contract binding a worker for a fixed term of four to seven years."
             ]
           },
           {
@@ -86,7 +86,7 @@ export const aasSlaveryInAmericaPart1Data = {
               "Virginia 1662 law: a child's status follows the mother's, making slavery hereditary.",
               "Legal status defining humans as inheritable property — distinct from indenture or serfdom.",
               "After 1808 ban on imports, ~1 million people forcibly relocated from Upper to Lower South.",
-              "A 21st-century technology trend"
+              "Massachusetts 1641 law permitting slavery for 'lawful captives' taken in war."
             ]
           },
           {
@@ -95,7 +95,7 @@ export const aasSlaveryInAmericaPart1Data = {
               "After 1808 ban on imports, ~1 million people forcibly relocated from Upper to Lower South.",
               "Legal status defining humans as inheritable property — distinct from indenture or serfdom.",
               "Virginia 1662 law: a child's status follows the mother's, making slavery hereditary.",
-              "An economic theory unrelated to this period"
+              "Smuggling of African captives into U.S. ports after the 1808 ban."
             ]
           }
         ],
@@ -120,23 +120,23 @@ export const aasSlaveryInAmericaPart1Data = {
             "question": "A historian argues that Slavery in America is essential for understanding African American history. Which evidence BEST supports the claim?",
             "options": [
               "Anthony Johnson (c. 1600–1670) — Angolan-born Virginia free Black who himself owned servants — illustrates pre-1660s fluidity.",
-              "A 21st-century pop song references Slavery in America without historical context.",
-              "Slavery in America is unrelated to broader trends in U.S. or Atlantic history.",
-              "There are no primary sources for this period."
+              "Anthony Johnson (c. 1600–1670) — Maryland slave who taught himself to read and published his *Narrative* in 1845 to expose slavery.",
+              "Eli Whitney (1765–1825) — Free Black New Yorker kidnapped into Louisiana slavery; wrote *Twelve Years a Slave*.",
+              "Anthony Johnson (c. 1600–1670) — Virginia planter whose 1662 partus law made slavery hereditary through the mother."
             ],
             "correctAnswer": 0,
-            "explanation": "Strong AP arguments cite specific historical actors and dates, not anachronistic or vague references."
+            "explanation": "Strong evidence is accurately attributed. Johnson's free status and servant-holding show the fluidity of early Virginia. The *Narrative* (1845) was Douglass's, *Twelve Years a Slave* was Northup's, and the 1662 partus law was passed by Virginia's legislature."
           },
           {
             "question": "Which statement most accurately describes the historical context of Slavery in America?",
             "options": [
-              "Slavery in British North America hardened from a fluid 17th-century labor system into race-based, hereditary chattel slavery. By 1860, ~4 million enslaved African Americans produced two-thirds of the world's cotton supply, financing southern wealth and northern industry.",
-              "Slavery in America occurred entirely outside any global or transregional context.",
-              "Slavery in America produced no documentary evidence and is impossible to study.",
-              "Slavery in America only appears on AP optional questions."
+              "Slavery grew from a fluid colonial labor system into a cotton empire of ~4 million people that financed the nation.",
+              "Slavery was confined to the South from the start, since no northern colony ever permitted the enslavement of Africans.",
+              "Mainland slavery existed mainly to supply sugar for Europe, since North America never grew any other major cash crops.",
+              "Slavery shrank steadily after independence, as the domestic slave trade carried enslaved people out of the United States."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rewards contextualization — placing the topic within larger historical processes."
+            "explanation": "Contextualization places slavery's growth within colonial law and the cotton economy, which by 1860 held about 4 million people and fed both southern and northern wealth. Northern colonies such as Massachusetts (1641) legalized slavery, tobacco, rice, and cotton were major crops, and the domestic trade moved people within the country."
           }
         ]
       }

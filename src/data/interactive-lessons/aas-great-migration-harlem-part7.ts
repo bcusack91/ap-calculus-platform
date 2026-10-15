@@ -22,23 +22,23 @@ export const aasGreatMigrationHarlemPart7Data = {
             "question": "A high-scoring AP response on this unit will:",
             "options": [
               "Combine a clear thesis with named figures, dated events, and at least one primary source.",
-              "Memorize dates with no analysis.",
-              "Use only 21st-century examples to discuss earlier periods.",
-              "Avoid citing sources."
+              "Narrate the unit's events in order, with names, dates, and places, but no thesis.",
+              "Open with a strong moral judgment and support it with general claims about the era.",
+              "Restate the prompt as its thesis and end by summarizing each body paragraph."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rubrics consistently reward specificity, sourcing, and clear analytical structure."
+            "explanation": "High-scoring responses pair a defensible thesis with specific evidence: named figures, dated events, and sourced documents. Narration without a claim, moral judgment without evidence, and a restated prompt all fall short."
           },
           {
             "question": "Which is the BEST one-sentence thesis for an essay on Great Migration & Harlem Renaissance?",
             "options": [
-              "During 1910–1940, push factors reshaped Black life — visible in 1916 first wave of Great Migration intensifies and Robert S. Abbott's career — even as new negro persisted.",
-              "Great Migration & Harlem Renaissance was important.",
-              "Nothing changed during 1910–1940.",
-              "Great Migration & Harlem Renaissance cannot be analyzed."
+              "From 1910 to 1940, Jim Crow and wartime jobs drove millions north, where migrants built a renaissance despite Northern racism.",
+              "Between 1910 and 1940, Black migrants found equal treatment in Northern cities, which ended the need for protest.",
+              "Great Migration & Harlem Renaissance was an important period that shaped African American history in lasting ways.",
+              "Langston Hughes, Zora Neale Hurston, and Alain Locke were the three most important writers of the Harlem Renaissance."
             ],
             "correctAnswer": 0,
-            "explanation": "Strong theses combine a defensible claim with specific evidence and acknowledge complexity."
+            "explanation": "A strong thesis makes a defensible claim, ties it to the period, and acknowledges complexity: push and pull factors, cultural achievement, and continued racism in the North. Claiming equal treatment is inaccurate, a vague 'important' claim is not defensible, and ranking writers does not address the prompt."
           }
         ]
       }
@@ -70,27 +70,27 @@ export const aasGreatMigrationHarlemPart7Data = {
             "label": "Contextualization is best demonstrated by ___",
             "options": [
               "Placing the topic within larger historical processes (e.g., the Atlantic World, post-Reconstruction politics).",
-              "Citing only one date with no context.",
-              "Replacing evidence with opinion.",
-              "Using only 21st-century examples for older periods."
+              "Listing the unit's key events (with dates) in strict chronological order.",
+              "Defining each key term before stating the thesis.",
+              "Explaining how a document's author shaped its message."
             ]
           },
           {
             "label": "Causation is best demonstrated by ___",
             "options": [
               "Identifying a specific cause and its specific consequence with named actors.",
-              "A vague slogan.",
-              "An anecdote without analysis.",
-              "A list of names with no explanation."
+              "Showing that two events happened in the same decade.",
+              "Describing one event in detail with named actors.",
+              "Comparing two similar events across different regions."
             ]
           },
           {
             "label": "CCOT is best demonstrated by ___",
             "options": [
               "Pairing a specific continuity with a specific change, both supported with evidence.",
-              "Choosing only continuity OR only change.",
-              "Avoiding dates.",
-              "Replacing evidence with personal preference."
+              "Tracing a sequence of changes, each supported with evidence.",
+              "Arguing that the period was mostly continuous, with one example.",
+              "Comparing two regions at a single moment in time."
             ]
           }
         ],
@@ -102,7 +102,7 @@ export const aasGreatMigrationHarlemPart7Data = {
         "hint1": "Contextualization = larger frame.",
         "hint2": "Causation = cause + consequence.",
         "hint3": "CCOT = both halves with evidence.",
-        "explanation": "These are the highest-leverage AP skills tested across MCQ, SAQ, LEQ, and DBQ."
+        "explanation": "These are the highest-leverage AP skills tested across MCQ, SAQ, and DBQ."
       }
     },
     {
@@ -114,24 +114,24 @@ export const aasGreatMigrationHarlemPart7Data = {
           {
             "question": "You are writing an SAQ on Great Migration & Harlem Renaissance. The strongest opening sentence is:",
             "options": [
-              "Within 1910–1940, Robert S. Abbott (1870–1940) advanced push factors — visible in 1916 first wave of Great Migration intensifies — even as new negro continued.",
-              "Great Migration & Harlem Renaissance happened.",
-              "There is nothing to say about this topic.",
-              "Modern social media debates are the best evidence."
+              "Robert Abbott's *Chicago Defender* drew Southerners north, but the 1917 East St. Louis riot showed the North's own racism.",
+              "The Great Migration is a very important topic that historians have debated for many years.",
+              "Alain Locke's *The New Negro* (1925) is a famous anthology that many students still read and discuss in school today.",
+              "In 1916 the migration intensified, in 1917 a riot struck East St. Louis, and in 1919 riots broke out during the Red Summer."
             ],
             "correctAnswer": 0,
-            "explanation": "Strong AP openings combine date, figure, mechanism, event, and continuity in a single sentence."
+            "explanation": "A strong SAQ opening ties a named figure and dated event to a claim about change and continuity. A vague claim, a remark about a book's fame, or a list of dates without a claim does not answer the question."
           },
           {
-            "question": "Which closing move strengthens an LEQ on this unit?",
+            "question": "Which closing move strengthens a DBQ essay on this unit?",
             "options": [
               "Synthesizing the topic with WWI & WWII Era via a specific shared cause or consequence.",
-              "Repeating the prompt verbatim.",
-              "Adding a moral judgment with no evidence.",
-              "Listing topics not assigned in the prompt."
+              "Restating the thesis in different words and then summarizing each of the body paragraphs in turn.",
+              "Introducing a new document that none of the body paragraphs ever analyzed.",
+              "Ending with a personal reflection on why the topic still matters today."
             ],
             "correctAnswer": 0,
-            "explanation": "AP synthesis moves earn extra rubric points by connecting units."
+            "explanation": "A strong close extends the argument by linking this unit to another through a specific shared cause or consequence. Restating the thesis, adding unanalyzed evidence, or reflecting personally adds no new analysis."
           }
         ]
       }

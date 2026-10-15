@@ -22,23 +22,23 @@ export const aasContemporaryIssuesPart6Data = {
             "question": "What makes Alexander, *The New Jim Crow* (2010) a strong source for studying Contemporary Issues?",
             "options": [
               "Argues mass incarceration is a racial caste system.",
-              "It was published in 2024 with no link to the period.",
-              "It is fictional and includes no historical content.",
-              "It is unsigned and undated."
+              "Frames redlining and housing discrimination as theft.",
+              "Centers Black queer and women's lives within the movement.",
+              "Coins the term institutional racism."
             ],
             "correctAnswer": 0,
-            "explanation": "Provenance, date, and authorial position determine source value."
+            "explanation": "Michelle Alexander's *The New Jim Crow* (2010) argues that mass incarceration functions as a racial caste system, so it shows how scholars and activists framed the period's central mechanism. Framing redlining as theft is Coates's essay, centering queer and women's lives is the BLM founders' statement, and 'institutional racism' comes from Carmichael and Hamilton (1967)."
           },
           {
             "question": "When using a primary source on the AP exam, you should:",
             "options": [
               "Identify author/date/audience and tie the source to a specific claim.",
-              "Quote the source verbatim without analysis.",
-              "Ignore the author's position.",
-              "Treat the source as neutral and unbiased."
+              "Summarize the source's main idea accurately and let it stand as your argument.",
+              "Quote the most striking passage at length so readers can judge its meaning for themselves.",
+              "Treat it as neutral, reliable evidence, since primary sources record events as they happened."
             ],
             "correctAnswer": 0,
-            "explanation": "AP source-use rewards explicit attribution and analytical framing."
+            "explanation": "Source use earns credit when you attribute the source (author, date, audience) and put it to work for a claim. Summary, long quotation, and treating a source as neutral all skip that analysis."
           }
         ]
       }
@@ -72,7 +72,7 @@ export const aasContemporaryIssuesPart6Data = {
               "Argues mass incarceration is a racial caste system.",
               "Frames housing discrimination and HOLC redlining as theft.",
               "Centers Black queer and women's lives within the movement.",
-              "Unrelated to this unit"
+              "Coins the term institutional racism."
             ]
           },
           {
@@ -81,7 +81,7 @@ export const aasContemporaryIssuesPart6Data = {
               "Frames housing discrimination and HOLC redlining as theft.",
               "Argues mass incarceration is a racial caste system.",
               "Centers Black queer and women's lives within the movement.",
-              "Unrelated to this unit"
+              "Coins the term institutional racism."
             ]
           },
           {
@@ -90,7 +90,7 @@ export const aasContemporaryIssuesPart6Data = {
               "Centers Black queer and women's lives within the movement.",
               "Argues mass incarceration is a racial caste system.",
               "Frames housing discrimination and HOLC redlining as theft.",
-              "Unrelated to this unit"
+              "Coins the term institutional racism."
             ]
           }
         ],
@@ -114,24 +114,24 @@ export const aasContemporaryIssuesPart6Data = {
           {
             "question": "A strong AP citation of Alexander, *The New Jim Crow* (2010) reads:",
             "options": [
-              "'According to Alexander, *The New Jim Crow* (2010), …' followed by inference about purpose and historical situation.",
-              "A direct quote with no attribution.",
-              "A loose paraphrase that hides the source's identity.",
-              "An anachronistic reading that ignores the date."
+              "'According to Alexander's *The New Jim Crow* (2010), …' followed by inference about purpose and audience.",
+              "'According to Alexander (2010), …' followed by a long, unbroken quotation from *The New Jim Crow*, with no comment.",
+              "'Alexander's book is biased,' followed by dismissing its argument about mass incarceration.",
+              "'One legal scholar wrote …' followed by a paraphrase that leaves out the author and date."
             ],
             "correctAnswer": 0,
-            "explanation": "Attribution + sourcing analysis is the AP scoring standard."
+            "explanation": "Attribution plus sourcing analysis is the standard: name the source, then explain how its purpose, audience, or historical situation shapes it; Alexander, a civil rights lawyer, wrote for a general audience at a moment when many called America post-racial. Quoting without comment, dismissing a source as biased, and hiding its identity all fall short."
           },
           {
             "question": "Which source-analysis move earns the AP 'sourcing' point?",
             "options": [
               "Identifying author, audience, purpose, OR historical situation — and using it to support a claim.",
-              "Quoting verbatim with no analysis.",
-              "Ignoring the source's date.",
-              "Citing only 21st-century opinion pieces."
+              "Restating the source's topic, date, and title — and quoting its most memorable line.",
+              "Explaining whether you agree with the author's view — and describing how it makes you feel about the past.",
+              "Summarizing what the source says accurately — and placing it in chronological order."
             ],
             "correctAnswer": 0,
-            "explanation": "AP DBQ rubrics explicitly reward sourcing analysis tied to claims."
+            "explanation": "Sourcing means explaining how the author's point of view, purpose, audience, or historical situation matters, then using that to support the argument. Restating, quoting, summarizing, or reacting personally does not count."
           }
         ]
       }

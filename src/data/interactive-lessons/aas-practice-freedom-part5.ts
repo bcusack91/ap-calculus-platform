@@ -21,24 +21,24 @@ export const aasPracticeFreedomPart5Data = {
           {
             "question": "Which best describes continuity within Practice of Freedom?",
             "options": [
-              "Aspects such as black press persisted even as other features changed.",
-              "Nothing about this topic ever changed.",
-              "Continuity is irrelevant to AP scoring.",
-              "Only the most recent decade matters."
+              "The Black press persisted even as other features of Black life changed.",
+              "Black newspapers vanished for decades after *Freedom's Journal* closed in 1829.",
+              "Black churches withdrew from public and political life after the Civil War.",
+              "Most HBCUs closed during the Great Depression and never reopened."
             ],
             "correctAnswer": 0,
-            "explanation": "Continuity = elements that persist across change — a key AP analytical category."
+            "explanation": "Continuity means elements that persist across change: from *Freedom's Journal* (1827) to the *Chicago Defender* and *Pittsburgh Courier*, the Black press remained a voice for Black communities. Other Black papers followed *Freedom's Journal* quickly, churches stayed central to politics, and HBCUs survived the Depression."
           },
           {
             "question": "Which event marks a decisive change within Practice of Freedom?",
             "options": [
               "1935 NCNW founded — Bethune unites Black women's organizations.",
-              "An anecdote with no historical impact.",
-              "A 21st-century news headline unrelated to the period.",
-              "A purely literary aesthetic with no political effect."
+              "1857 *Dred Scott* — Taney denies Black Americans citizenship.",
+              "1954 *Brown v. Board* — Court ends legal school segregation.",
+              "1965 Watts uprising — Unrest erupts in Los Angeles."
             ],
             "correctAnswer": 0,
-            "explanation": "Specific dated events anchor change-over-time arguments."
+            "explanation": "The NCNW (1935) brought Black women's organizations into one national council under Mary McLeod Bethune, a decisive change in how Black institutions organized. *Dred Scott*, *Brown*, and Watts are real turning points but belong to other units."
           }
         ]
       }
@@ -71,8 +71,8 @@ export const aasPracticeFreedomPart5Data = {
             "options": [
               "Black press",
               "1935 NCNW founded",
-              "An unrelated modern slogan",
-              "A topic from a different course"
+              "1909 NAACP founded",
+              "1920 Negro National League begins play"
             ]
           },
           {
@@ -80,17 +80,17 @@ export const aasPracticeFreedomPart5Data = {
             "options": [
               "1935 NCNW founded",
               "Black press",
-              "An anecdote with no date",
-              "An unrelated personal opinion"
+              "Black church",
+              "Persistence of mutual-aid societies"
             ]
           },
           {
             "label": "An AP CCOT response should ___",
             "options": [
               "Identify both continuities and changes with specific evidence",
-              "Pick only one without analysis",
-              "Avoid using dates",
-              "Replace evidence with opinion"
+              "Trace only the changes, in order, with specific evidence",
+              "Argue that continuity outweighed every change in the period",
+              "Describe the period's main events without a central claim"
             ]
           }
         ],
@@ -114,24 +114,24 @@ export const aasPracticeFreedomPart5Data = {
           {
             "question": "Which CCOT thesis is strongest?",
             "options": [
-              "Although black press continued, 1935 NCNW founded marked a decisive change in Practice of Freedom.",
-              "Nothing changed and nothing stayed the same.",
-              "Change is impossible to identify in history.",
-              "AP rubrics do not reward CCOT analysis."
+              "Although the Black press continued, the 1935 founding of the NCNW marked a decisive change in Practice of Freedom.",
+              "The NCNW's founding changed everything about Black life, so that no earlier institution survived anywhere.",
+              "Although new groups formed, Black institutional life mostly stayed the same from 1830 to 1950 in every region of the country.",
+              "The Black press and the NCNW were both important parts of Practice of Freedom."
             ],
             "correctAnswer": 0,
-            "explanation": "Strong CCOT theses pair specific continuities with specific changes."
+            "explanation": "A strong CCOT thesis names a specific continuity and a specific change and makes a defensible claim about them. Total change, near-total continuity, and a claim that both 'were important' each miss part of that move."
           },
           {
             "question": "Which evidence move is most valuable in a CCOT response?",
             "options": [
               "Naming a specific dated event AND a continuity within the same paragraph.",
-              "Listing dates without analysis.",
-              "Replacing evidence with a moral judgment.",
-              "Citing only post-2010 news stories."
+              "Listing every major date in the unit in chronological order.",
+              "Describing one change in detail without noting what persisted.",
+              "Quoting a historian's verdict on the period in place of evidence."
             ],
             "correctAnswer": 0,
-            "explanation": "AP CCOT scoring rewards paired specificity."
+            "explanation": "CCOT credit needs both halves anchored in evidence: a dated change and a named continuity. A list of dates, a change with no continuity, or a borrowed verdict replaces that analysis."
           }
         ]
       }

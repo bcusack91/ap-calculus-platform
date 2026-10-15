@@ -22,23 +22,23 @@ export const aasOriginsDiasporaPart4Data = {
             "question": "How does Origins of the Diaspora BEST connect to African Kingdoms?",
             "options": [
               "The diaspora preserved memory of these polities.",
-              "Origins of the Diaspora and African Kingdoms are completely unrelated topics.",
-              "Connections between units are not tested on the AP exam.",
-              "AP rubrics reward isolated facts over connections."
+              "The trade began only after these kingdoms had collapsed.",
+              "These kingdoms stayed isolated from Atlantic commerce.",
+              "Nearly all diaspora captives came from the Mali Empire alone."
             ],
             "correctAnswer": 0,
-            "explanation": "AP synthesis prompts ask students to articulate how units interact."
+            "explanation": "Diaspora communities carried memories, names, and practices from West and Central African polities such as Kongo, Oyo, and Asante. Many of these states were active, and some were trading with Europeans, while the trade operated; captives came from many regions, not Mali alone."
           },
           {
             "question": "A 'feedback loop' across units means:",
             "options": [
               "Outcomes of one process reinforce or modify the conditions that produced it.",
-              "Two unrelated facts placed next to each other.",
-              "A modern policy with no historical relevance.",
-              "Memorizing additional vocabulary words."
+              "One process triggers a second, which then runs its course without acting back on the first.",
+              "Two processes unfold at the same time in different regions without influencing each other.",
+              "A later generation reinterprets an earlier event in light of its own political concerns."
             ],
             "correctAnswer": 0,
-            "explanation": "Feedback loops are a recurring AP analytical move."
+            "explanation": "A feedback loop runs both ways: the outcome acts back on the conditions that produced it. A one-way chain of causes, parallel developments, and later reinterpretation all lack that return effect."
           }
         ]
       }
@@ -67,30 +67,30 @@ export const aasOriginsDiasporaPart4Data = {
       exercise: {
         "dropdowns": [
           {
-            "label": "Origins of the Diaspora most directly causes ___",
+            "label": "Origins of the Diaspora connects most directly to ___",
             "options": [
               "African Kingdoms",
-              "An unrelated 21st-century event",
-              "A pre-modern European war",
-              "A purely cultural festival"
+              "Civil Rights Movement",
+              "Black Power & Beyond",
+              "Contemporary Issues"
             ]
           },
           {
             "label": "A 'feedback loop' is ___",
             "options": [
               "Outcomes that reinforce their own causes",
-              "A failed argument",
-              "An anachronism",
-              "A primary source"
+              "A cause with a single one-way effect",
+              "Two trends that develop in parallel",
+              "A later reversal of an earlier trend"
             ]
           },
           {
             "label": "AP 'synthesis' refers to ___",
             "options": [
               "Combining evidence across units to support a claim",
-              "Memorizing dates only",
-              "Avoiding all comparison",
-              "Citing one example without analysis"
+              "Summarizing one unit's events in chronological order",
+              "Quoting several sources at length without a claim",
+              "Restating the thesis in a new conclusion"
             ]
           }
         ],
@@ -102,7 +102,7 @@ export const aasOriginsDiasporaPart4Data = {
         "hint1": "Map cause to consequence.",
         "hint2": "'Loop' implies feedback.",
         "hint3": "Synthesis = bringing units together.",
-        "explanation": "Connecting units is a high-leverage AP skill rewarded across MCQ, SAQ, and LEQ."
+        "explanation": "Connecting units is a high-leverage AP skill rewarded across MCQ, SAQ, and DBQ."
       }
     },
     {
@@ -114,24 +114,24 @@ export const aasOriginsDiasporaPart4Data = {
           {
             "question": "A student writes: 'Origins of the Diaspora had no effect on African Kingdoms.' The best AP correction is:",
             "options": [
-              "Show specific connections — the diaspora preserved memory of these polities — to demonstrate causal interaction.",
-              "Insist there are no connections in U.S. history.",
-              "Cite only events outside the unit.",
-              "Replace the claim with a personal opinion."
+              "Show that the trade drew captives from kingdoms like Kongo and reshaped their politics, as Afonso I's protests reveal.",
+              "Agree, since the major African kingdoms had all declined well before Portuguese ships reached the West African coast in the 1440s.",
+              "Replace the claim with the opposite generalization that the diaspora affected every African society in exactly the same way.",
+              "Cite the Great Migration instead, since the diaspora's effects appear only in American cities."
             ],
             "correctAnswer": 0,
-            "explanation": "AP synthesis demands explicit, specific connections backed by evidence."
+            "explanation": "The correction needs a specific connection: the Atlantic trade drew captives from and reshaped African states, as Afonso I of Kongo's letters protesting Portuguese slaving show. Kingdoms such as Kongo and Benin were active during the trade, effects were uneven, and the Great Migration is a different unit."
           },
           {
             "question": "The strongest AP synthesis move uses:",
             "options": [
               "Specific evidence from at least two units to support a single, defensible claim.",
-              "One vague generalization across centuries.",
-              "Multiple unrelated personal opinions.",
-              "A list of names without explanation."
+              "A detailed chronological summary of one unit, with dates and names but no central claim.",
+              "A sweeping claim about all of African American history, illustrated by one famous example.",
+              "Several separate claims, each backed by evidence drawn from a different unit."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rubrics consistently reward specificity + cross-unit synthesis."
+            "explanation": "Synthesis joins evidence from more than one unit behind ONE defensible claim. A summary without a claim, a sweeping claim on thin evidence, and several unconnected claims each miss part of that move."
           }
         ]
       }

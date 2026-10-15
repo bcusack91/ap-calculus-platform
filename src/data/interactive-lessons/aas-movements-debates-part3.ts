@@ -22,23 +22,23 @@ export const aasMovementsDebatesPart3Data = {
             "question": "Which case BEST illustrates a pattern central to Movements & Debates?",
             "options": [
               "1895 Atlanta Compromise vs. 1903 *Souls of Black Folk* — Public Washington–Du Bois split.",
-              "An unrelated event from another century.",
-              "A purely fictional event.",
-              "An anecdote with no documentary support."
+              "1896 *Plessy v. Ferguson* — Supreme Court upholds state-mandated 'separate but equal' segregation.",
+              "1955 Montgomery Bus Boycott — 381-day protest ends bus segregation in Montgomery.",
+              "1986 Anti-Drug Abuse Act — 100:1 crack/powder cocaine sentencing disparity."
             ],
             "correctAnswer": 0,
-            "explanation": "Use historically attested events to illustrate patterns."
+            "explanation": "Washington's Atlanta address (1895) and Du Bois's *The Souls of Black Folk* (1903) made the accommodation-versus-agitation debate public, the kind of strategic argument this unit traces. *Plessy*, the Montgomery boycott, and the 1986 drug law are landmark events of other units, not debates over strategy."
           },
           {
             "question": "A comparison of 1895 Atlanta Compromise vs. 1903 *Souls of Black Folk* and 1919 Pan-African Congress (Paris) is most useful because:",
             "options": [
               "Both cases let students see common patterns and unique local differences in concrete historical detail.",
-              "Both events occurred in identical contexts and produced identical outcomes.",
-              "Comparison is irrelevant to AP scoring.",
-              "Neither event left primary sources for historians."
+              "Both cases show that Black leaders agreed fully on strategy in the early 1900s.",
+              "Both cases took place in the American South, so they reveal only one region.",
+              "Both cases show that Pan-Africanism ended once Washington's influence peaked."
             ],
             "correctAnswer": 0,
-            "explanation": "AP comparison rewards specific similarities and differences with named cases."
+            "explanation": "Comparison rewards a specific similarity and a specific difference: both show Black leaders debating strategy, but the Washington–Du Bois split concerned rights within the United States, while the 1919 Paris Congress linked Black Americans to colonized Africa. Leaders disagreed sharply, the 1919 Congress met in Paris, and Pan-Africanism grew after Washington's death in 1915."
           }
         ]
       }
@@ -71,33 +71,33 @@ export const aasMovementsDebatesPart3Data = {
             "options": [
               "1895 Atlanta Compromise vs. 1903 *Souls of Black Folk*",
               "1919 Pan-African Congress (Paris)",
-              "1955 Bandung Conference",
-              "An unrelated 21st-century news story"
+              "1977 Combahee River Collective Statement",
+              "1955 Bandung Conference"
             ]
           },
           {
             "label": "The case most central to Intersectionality is ___",
             "options": [
-              "1919 Pan-African Congress (Paris)",
+              "1977 Combahee River Collective Statement",
               "1895 Atlanta Compromise vs. 1903 *Souls of Black Folk*",
-              "1955 Bandung Conference",
-              "An unrelated 21st-century news story"
+              "1919 Pan-African Congress (Paris)",
+              "1955 Bandung Conference"
             ]
           },
           {
             "label": "The case most central to Pan-Africanism is ___",
             "options": [
-              "1955 Bandung Conference",
-              "1895 Atlanta Compromise vs. 1903 *Souls of Black Folk*",
               "1919 Pan-African Congress (Paris)",
-              "An unrelated 21st-century news story"
+              "1895 Atlanta Compromise vs. 1903 *Souls of Black Folk*",
+              "1977 Combahee River Collective Statement",
+              "1989 Crenshaw coins 'intersectionality'"
             ]
           }
         ],
         "correctAnswers": [
           "1895 Atlanta Compromise vs. 1903 *Souls of Black Folk*",
-          "1919 Pan-African Congress (Paris)",
-          "1955 Bandung Conference"
+          "1977 Combahee River Collective Statement",
+          "1919 Pan-African Congress (Paris)"
         ],
         "hint1": "Use chronology to disambiguate.",
         "hint2": "Match the event to the concept it best illustrates.",
@@ -114,24 +114,24 @@ export const aasMovementsDebatesPart3Data = {
           {
             "question": "Using one specific case from Movements & Debates, which sentence is the BEST AP comparison move?",
             "options": [
-              "Both 1895 Atlanta Compromise vs. 1903 *Souls of Black Folk* and 1919 Pan-African Congress (Paris) reveal integration vs. separatism, but they differ in actors and outcomes.",
-              "Both events were fictional and produced no consequences.",
-              "These events are too old to compare meaningfully.",
-              "Comparison is unimportant in AP rubrics."
+              "Both show Du Bois debating Black strategy, but one is a U.S. rights fight and the other a global Pan-African one.",
+              "Both the 1895–1903 Washington–Du Bois split and the 1919 Pan-African Congress were important events in Black political thought.",
+              "The Washington–Du Bois split and the 1919 Pan-African Congress differ mainly because one came about sixteen years after the other.",
+              "Both the Washington–Du Bois split and the 1919 Pan-African Congress show how divided leaders were in their debates, so they should be regretted."
             ],
             "correctAnswer": 0,
-            "explanation": "AP comparison combines a specific shared pattern with a specific difference."
+            "explanation": "A full comparison pairs a shared pattern with a meaningful difference: Du Bois was central to both, but the split with Washington concerned civil and political rights at home, while the 1919 Congress pressed for African rights under colonial rule. A similarity alone, a trivial difference such as date, or a moral judgment does not complete the move."
           },
           {
             "question": "Frederick Douglass vs. Martin Delany's role in Movements & Debates is best illustrated by which event?",
             "options": [
+              "1852 *The Condition…* published — Emigrationist case against staying to fight for U.S. citizenship.",
               "1895 Atlanta Compromise vs. 1903 *Souls of Black Folk* — Public Washington–Du Bois split.",
-              "An unrelated event in a different century.",
-              "A purely literary publication unconnected to politics.",
-              "An event before the figure was born."
+              "1919 Pan-African Congress (Paris) — Du Bois presses for African rights under European colonial rule.",
+              "1977 Combahee River Collective Statement — Black feminists define identity politics."
             ],
             "correctAnswer": 0,
-            "explanation": "Tie figures to dated events for high-scoring AP arguments."
+            "explanation": "Delany's *The Condition, Elevation, Emigration, and Destiny of the Colored People of the United States* (1852) argued that Black Americans should emigrate, while Douglass insisted on staying to fight for citizenship, defining their 1850s debate. The Washington–Du Bois split, the 1919 Congress, and the Combahee statement came decades later."
           }
         ]
       }

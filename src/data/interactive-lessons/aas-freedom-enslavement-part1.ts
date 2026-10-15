@@ -10,7 +10,7 @@ export const aasFreedomEnslavementPart1Data = {
     {
       id: "aasfe1-figures",
       type: 'text' as const,
-      content: "## 📖 Key Figures of Freedom & Enslavement\n\n| Figure | Dates | Why they matter |\n|---|---|---|\n| **Richard Allen** | 1760–1831 | Founded the African Methodist Episcopal Church (1816); first Black bishop in the U.S. |\n| **Absalom Jones** | 1746–1818 | Co-founded Philadelphia's Free African Society (1787); first Black Episcopal priest. |\n| **Prince Hall** | c. 1735–1807 | Founded the first Black Masonic lodge (1784); petitioned Massachusetts to end slavery. |\n| **James Forten** | 1766–1842 | Wealthy Philadelphia sailmaker; financier of *The Liberator* and Black conventions. |\n| **Maria W. Stewart** | 1803–1879 | First U.S.-born woman to lecture publicly on political topics; Boston, 1832–1833. |\n\n> ⚠️ **AP Alert:** Strong responses cite specific figures by name and date — e.g., 'Richard Allen (1760–1831)' rather than 'a famous leader.'"
+      content: "## 📖 Key Figures of Freedom & Enslavement\n\n| Figure | Dates | Why they matter |\n|---|---|---|\n| **Richard Allen** | 1760–1831 | Founded the African Methodist Episcopal Church (1816); first Black bishop in the U.S. |\n| **Absalom Jones** | 1746–1818 | Co-founded Philadelphia's Free African Society (1787); first Black Episcopal priest. |\n| **Prince Hall** | c. 1735–1807 | Founded the first Black Masonic lodge (1784); petitioned Massachusetts to end slavery. |\n| **James Forten** | 1766–1842 | Wealthy Philadelphia sailmaker; financier of *The Liberator* and Black conventions. |\n| **Maria W. Stewart** | 1803–1879 | Among the first U.S.-born women to lecture publicly on politics; Boston, 1832–1833. |\n\n> ⚠️ **AP Alert:** Strong responses cite specific figures by name and date — e.g., 'Richard Allen (1760–1831)' rather than 'a famous leader.'"
     },
     {
       id: "aasfe1-quiz1",
@@ -21,24 +21,24 @@ export const aasFreedomEnslavementPart1Data = {
           {
             "question": "Which statement BEST captures why Freedom & Enslavement is foundational to AP African American History?",
             "options": [
-              "Across the early Republic, free Black communities built churches, schools, mutual-aid societies, and a self-conscious press, even as federal law (Fugitive Slave Acts, *Dred Scott*) expanded slavery's reach. The line between 'free' and 'enslaved' was always contingent and racialized.",
-              "Freedom & Enslavement is primarily a literary movement with no political implications.",
-              "Freedom & Enslavement only matters to one decade and rarely appears on the AP exam.",
-              "Freedom & Enslavement is studied to memorize dates without analyzing causes."
+              "Free Black communities built churches, schools, and a press, even as federal law such as *Dred Scott* extended slavery's reach.",
+              "Northern gradual emancipation acts freed all enslaved people at once, granting them voting rights, jury service, and full citizenship.",
+              "Most free Black Americans stayed out of public life, leaving churches, schools, and newspapers to white allies.",
+              "Federal law steadily narrowed slavery after 1787, as Congress barred it from new territories and protected free Black travelers."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rewards students who can articulate why Freedom & Enslavement matters in the broader course narrative, not just describe it."
+            "explanation": "The unit is foundational because free Black communities built churches, schools, mutual-aid societies, and a press while federal law, from the Fugitive Slave Acts to *Dred Scott* (1857), extended slavery's reach; freedom stayed contingent and racialized. Northern emancipation was gradual and did not bring full citizenship, Black Americans led their own institutions, and federal policy expanded rather than narrowed slavery's protections."
           },
           {
             "question": "Richard Allen (1760–1831) is significant in this unit primarily because:",
             "options": [
               "Founded the African Methodist Episcopal Church (1816); first Black bishop in the U.S.",
-              "Richard Allen opposed every form of African American institution building.",
-              "Richard Allen lived after the events of Freedom & Enslavement ended.",
-              "Richard Allen is mentioned only in passing on the AP exam."
+              "Ordained as the first Black Episcopal priest (1804); led St. Thomas African Episcopal Church.",
+              "Founded African Lodge No. 1 (1784); petitioned Massachusetts to abolish slavery (1777).",
+              "Published the *Appeal* (1829); urged the enslaved to resist."
             ],
             "correctAnswer": 0,
-            "explanation": "Richard Allen is one of the central named figures the AP exam expects students to deploy when writing about Freedom & Enslavement."
+            "explanation": "Richard Allen founded the African Methodist Episcopal Church in 1816 and became its first bishop. The other descriptions belong to Absalom Jones, Prince Hall, and David Walker."
           }
         ]
       }
@@ -46,7 +46,7 @@ export const aasFreedomEnslavementPart1Data = {
     {
       id: "aasfe1-context",
       type: 'text' as const,
-      content: "## Historical Context\n\n| Event | Significance |\n|---|---|\n| **1780 PA Gradual Abolition Act** | First state emancipation law in the Atlantic world. |\n| **1787 Free African Society** | Black mutual-aid organization in Philadelphia. |\n| **1816 American Colonization Society founded** | Promoted resettlement to Liberia; Black opinion sharply divided. |\n\n### Primary sources to know\n\n- **Walker, *Appeal* (1829)** — Articulates citizenship and rights claims for free Black Americans.\n- **Stewart speeches (1832)** — Earliest published political addresses by an American-born woman.\n- **AME Church *Discipline* (1817)** — Institutional charter of independent Black religious life.\n"
+      content: "## Historical Context\n\n| Event | Significance |\n|---|---|\n| **1780 PA Gradual Abolition Act** | First gradual abolition act passed by a state legislature. |\n| **1787 Free African Society** | Black mutual-aid organization in Philadelphia. |\n| **1816 American Colonization Society founded** | Promoted resettlement to Liberia; Black opinion sharply divided. |\n\n### Primary sources to know\n\n- **Walker, *Appeal* (1829)** — Articulates citizenship and rights claims for free Black Americans.\n- **Stewart speeches (1832)** — Among the earliest political addresses published by an American-born woman.\n- **AME Church *Discipline* (1817)** — Institutional charter of independent Black religious life.\n"
     },
     {
       id: "aasfe1-input",
@@ -77,7 +77,7 @@ export const aasFreedomEnslavementPart1Data = {
               "Pennsylvania (1780), New York (1799), New Jersey (1804) freed enslaved people only by birthdates.",
               "Owner-granted freedom; often restricted by southern states after 1820s.",
               "*Dred Scott* (1857) declared people of African descent could never be U.S. citizens.",
-              "An unrelated modern policy debate"
+              "Immediate, uncompensated abolition ordered by Congress for every Northern state."
             ]
           },
           {
@@ -86,7 +86,7 @@ export const aasFreedomEnslavementPart1Data = {
               "Owner-granted freedom; often restricted by southern states after 1820s.",
               "Pennsylvania (1780), New York (1799), New Jersey (1804) freed enslaved people only by birthdates.",
               "*Dred Scott* (1857) declared people of African descent could never be U.S. citizens.",
-              "A 21st-century technology trend"
+              "Federal grant of freedom to any enslaved person who reached a free state."
             ]
           },
           {
@@ -95,7 +95,7 @@ export const aasFreedomEnslavementPart1Data = {
               "*Dred Scott* (1857) declared people of African descent could never be U.S. citizens.",
               "Pennsylvania (1780), New York (1799), New Jersey (1804) freed enslaved people only by birthdates.",
               "Owner-granted freedom; often restricted by southern states after 1820s.",
-              "An economic theory unrelated to this period"
+              "Supreme Court ruling that free Black Northerners were full citizens of the nation."
             ]
           }
         ],
@@ -120,23 +120,23 @@ export const aasFreedomEnslavementPart1Data = {
             "question": "A historian argues that Freedom & Enslavement is essential for understanding African American history. Which evidence BEST supports the claim?",
             "options": [
               "Richard Allen (1760–1831) — Founded the African Methodist Episcopal Church (1816); first Black bishop in the U.S.",
-              "A 21st-century pop song references Freedom & Enslavement without historical context.",
-              "Freedom & Enslavement is unrelated to broader trends in U.S. or Atlantic history.",
-              "There are no primary sources for this period."
+              "Absalom Jones (1746–1818) — Founded the African Methodist Episcopal Church (1816); first Black bishop in the U.S.",
+              "Prince Hall (c. 1735–1807) — Published the *Appeal* (1829), urging enslaved people to resist slavery by force.",
+              "David Walker (c. 1796–1830) — Founded the first Black Masonic lodge (1784); petitioned Massachusetts to end slavery."
             ],
             "correctAnswer": 0,
-            "explanation": "Strong AP arguments cite specific historical actors and dates, not anachronistic or vague references."
+            "explanation": "Strong AP arguments cite accurately attributed actors and dates. Richard Allen founded the AME Church; Absalom Jones became the first Black Episcopal priest; Prince Hall founded the first Black Masonic lodge; David Walker wrote the *Appeal*."
           },
           {
             "question": "Which statement most accurately describes the historical context of Freedom & Enslavement?",
             "options": [
-              "Across the early Republic, free Black communities built churches, schools, mutual-aid societies, and a self-conscious press, even as federal law (Fugitive Slave Acts, *Dred Scott*) expanded slavery's reach. The line between 'free' and 'enslaved' was always contingent and racialized.",
-              "Freedom & Enslavement occurred entirely outside any global or transregional context.",
-              "Freedom & Enslavement produced no documentary evidence and is impossible to study.",
-              "Freedom & Enslavement only appears on AP optional questions."
+              "Free Black communities grew in Northern cities while the Fugitive Slave Acts and *Dred Scott* extended slavery's legal reach.",
+              "Slavery shrank nationwide after 1787 while Southern states adopted gradual emancipation laws modeled on Pennsylvania's 1780 act.",
+              "Most free Black Americans emigrated to Liberia after 1816, leaving few Black institutions in American cities by the 1830s.",
+              "Federal courts consistently recognized free Black people as U.S. citizens until the Civil War began in 1861."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rewards contextualization — placing the topic within larger historical processes."
+            "explanation": "Contextualization places the topic in a larger process: free Black communities and institutions grew in Northern cities even as federal law, from the Fugitive Slave Acts to *Dred Scott* (1857), extended slavery's reach. No Southern state adopted gradual emancipation, only a few thousand Black Americans emigrated to Liberia, and *Dred Scott* denied that Black people could be citizens."
           }
         ]
       }

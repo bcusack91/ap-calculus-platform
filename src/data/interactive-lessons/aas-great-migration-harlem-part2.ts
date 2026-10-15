@@ -22,23 +22,23 @@ export const aasGreatMigrationHarlemPart2Data = {
             "question": "Which BEST describes a primary mechanism shaping Great Migration & Harlem Renaissance?",
             "options": [
               "Lynching, sharecropping debt, boll weevil, disfranchisement.",
-              "An unrelated technological invention from a different century.",
-              "Pure coincidence with no identifiable cause.",
-              "A modern political slogan with no historical content."
+              "Federal land grants, Southern factory jobs, and new voting rights in Mississippi.",
+              "European immigration surges, falling Northern wages, and closed factory gates.",
+              "Mechanized cotton picking, highway building, and suburban growth after 1945."
             ],
             "correctAnswer": 0,
-            "explanation": "Push factors is the central mechanism the AP exam expects students to explain."
+            "explanation": "Push factors in the South, including lynching, sharecropping debt, the boll weevil, and disfranchisement, drove Black Southerners to leave. There were no federal land grants or new Mississippi voting rights, wartime immigration fell while Northern wages rose, and mechanized cotton picking shaped the later, post-1940 migration."
           },
           {
             "question": "Marcus Garvey's career illustrates which historical mechanism?",
             "options": [
               "UNIA (founded 1914 in Jamaica, NYC by 1916); 'Back to Africa,' Black Star Line, mass nationalism.",
-              "Marcus Garvey had no impact on Great Migration & Harlem Renaissance.",
-              "An entirely modern policy debate.",
-              "A purely literary aesthetic."
+              "NAACP (founded 1909 in New York, *The Crisis* by 1910); integration, lawsuits, antilynching campaigns.",
+              "*Chicago Defender* (founded 1905 in Chicago); Pullman porters, migration ads, the Great Northern Drive.",
+              "Brotherhood of Sleeping Car Porters (founded 1925 in Harlem); unions, wages, labor rights."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rewards specific causal claims tied to named figures."
+            "explanation": "Marcus Garvey's Universal Negro Improvement Association, founded in Jamaica in 1914 and based in New York after he arrived in 1916, built a mass Black nationalist movement around 'Back to Africa' and the Black Star Line. The NAACP was Du Bois's platform, the *Defender* was Robert Abbott's, and the porters' union was A. Philip Randolph's."
           }
         ]
       }
@@ -72,7 +72,7 @@ export const aasGreatMigrationHarlemPart2Data = {
               "*Chicago Defender* publisher; promoted northern migration through targeted Pullman porter distribution.",
               "UNIA (founded 1914 in Jamaica, NYC by 1916); 'Back to Africa,' Black Star Line, mass nationalism.",
               "First Black Rhodes Scholar; editor *The New Negro* (1925).",
-              "Unrelated to this unit"
+              "Jazz-poetry of *The Weary Blues* (1926); 'The Negro Speaks of Rivers' (1921)."
             ]
           },
           {
@@ -81,7 +81,7 @@ export const aasGreatMigrationHarlemPart2Data = {
               "UNIA (founded 1914 in Jamaica, NYC by 1916); 'Back to Africa,' Black Star Line, mass nationalism.",
               "*Chicago Defender* publisher; promoted northern migration through targeted Pullman porter distribution.",
               "First Black Rhodes Scholar; editor *The New Negro* (1925).",
-              "Unrelated to this unit"
+              "*Their Eyes Were Watching God* (1937); folklorist of African diasporic culture."
             ]
           },
           {
@@ -90,7 +90,7 @@ export const aasGreatMigrationHarlemPart2Data = {
               "First Black Rhodes Scholar; editor *The New Negro* (1925).",
               "*Chicago Defender* publisher; promoted northern migration through targeted Pullman porter distribution.",
               "UNIA (founded 1914 in Jamaica, NYC by 1916); 'Back to Africa,' Black Star Line, mass nationalism.",
-              "Unrelated to this unit"
+              "Jazz-poetry of *The Weary Blues* (1926); 'The Negro Speaks of Rivers' (1921)."
             ]
           }
         ],
@@ -114,24 +114,24 @@ export const aasGreatMigrationHarlemPart2Data = {
           {
             "question": "A student argues that Great Migration & Harlem Renaissance happened spontaneously. The strongest counter-argument is:",
             "options": [
-              "Identifying specific actors and processes — e.g., Robert S. Abbott (1870–1940) — that drove the change.",
-              "Insisting that historians cannot know causes.",
-              "Citing only events from outside this period.",
-              "Memorizing dates without analyzing them."
+              "Identifying the specific actors and processes — Southern violence, wartime jobs, papers like Abbott's *Defender* — that drove it.",
+              "Arguing that the migration came mainly from federal policy — Washington relocating Black workers to war plants by order.",
+              "Noting that letters, newspapers, and census records are too sparse to show any cause at all.",
+              "Pointing out that the Civil Rights Act of 1964, not wartime jobs or Southern violence, set the migration in motion."
             ],
             "correctAnswer": 0,
-            "explanation": "Historical causation requires named actors, dated events, and articulated mechanisms."
+            "explanation": "Historical causation names actors and mechanisms: Southern push factors such as lynching and sharecropping debt, wartime industrial jobs, and Black newspapers such as Robert Abbott's *Chicago Defender*. Migrants chose to move without federal orders, the movement is richly documented, and it began decades before 1964."
           },
           {
             "question": "Which mechanism is MOST closely linked to Pull factors?",
             "options": [
               "WWI labor demand (immigration cut off 1917), higher wages, voting rights, urban Black institutions.",
-              "Lynching, sharecropping debt, boll weevil, disfranchisement.",
-              "Alain Locke's 1925 anthology framing self-confident, modern Black identity.",
-              "A cause from a different historical era."
+              "Lynching, sharecropping debt, the boll weevil, and disfranchisement across the rural South.",
+              "Federal homestead grants (offered after 1917) reserved for Black families settling Western farmland.",
+              "Mechanized cotton harvesting (widespread after 1945), suburban growth, and highway construction."
             ],
             "correctAnswer": 0,
-            "explanation": "Pull factors has its own historical mechanism distinct from related concepts."
+            "explanation": "Pull factors drew migrants north: wartime labor demand once European immigration fell, higher wages, the chance to vote, and urban Black institutions. Lynching and sharecropping debt are push factors, no homestead program targeted Black families, and mechanized harvesting belongs to the post-1940 migration."
           }
         ]
       }

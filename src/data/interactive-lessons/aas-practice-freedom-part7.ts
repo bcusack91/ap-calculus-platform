@@ -10,7 +10,7 @@ export const aasPracticeFreedomPart7Data = {
     {
       id: "aaspf7-review",
       type: 'text' as const,
-      content: "## Master review for Practice of Freedom\n\n### Concepts to define on demand\n\n| Core concept | What it refers to |\n|---|---|\n| **Black church** | AME (1816), AMEZ (1821), National Baptist (1895) — institutional bedrock of Black civic life. |\n| **HBCUs** | Howard (1867), Fisk (1866), Spelman (1881), Morehouse (1867), Tuskegee (1881). |\n| **Black press** | *Freedom's Journal* (1827), *Chicago Defender* (1905), *Pittsburgh Courier* (1907). |\n\n### Figures to deploy\n\n| Figure | Dates | Why they matter |\n|---|---|---|\n| **Mary McLeod Bethune** | 1875–1955 | Founded Bethune-Cookman (1904); FDR's 'Black Cabinet' coordinator; founded NCNW (1935). |\n| **Ida B. Wells** | 1862–1931 | Anti-lynching crusader; co-founder NAACP (1909); suffragist. |\n| **Madam C. J. Walker** | 1867–1919 | First Black woman millionaire; built haircare empire and trained ~40,000 Black women agents. |\n| **Carter G. Woodson** | 1875–1950 | Founded ASNLH (1915) and 'Negro History Week' (1926; later Black History Month). |\n| **Charles Hamilton Houston** | 1895–1950 | Howard Law dean; mentored Thurgood Marshall; designed NAACP legal strategy. |\n\n### Events to cite\n\n| Event | Significance |\n|---|---|\n| **1881 Tuskegee Institute founded** | Vocational education model under Booker T. Washington. |\n| **1896 NACW founded** | National Association of Colored Women — 'Lifting as We Climb.' |\n| **1909 NAACP founded** | Du Bois, Wells, Mary White Ovington. |\n| **1915 ASNLH founded** | Carter Woodson institutionalizes Black historical scholarship. |\n| **1920 Negro National League begins play** | Rube Foster's professional baseball circuit. |\n\n### Sources to attribute\n\n- **Wells, *Crusade for Justice* (autobiography, pub. 1970)** — Anti-lynching organizing memoir.\n- **Woodson, *The Mis-Education of the Negro* (1933)** — Critique of curriculum that erases Black history.\n- ***Pittsburgh Courier* archives** — Largest-circulation Black weekly of the early 20th c.\n"
+      content: "## Master review for Practice of Freedom\n\n### Concepts to define on demand\n\n| Core concept | What it refers to |\n|---|---|\n| **Black church** | AME (1816), AMEZ (1821), National Baptist (1895) — institutional bedrock of Black civic life. |\n| **HBCUs** | Howard (1867), Fisk (1866), Spelman (1881), Morehouse (1867), Tuskegee (1881). |\n| **Black press** | *Freedom's Journal* (1827), *Chicago Defender* (1905), *Pittsburgh Courier* (1907). |\n\n### Figures to deploy\n\n| Figure | Dates | Why they matter |\n|---|---|---|\n| **Mary McLeod Bethune** | 1875–1955 | Founded Bethune-Cookman (1904); FDR's 'Black Cabinet' coordinator; founded NCNW (1935). |\n| **Ida B. Wells** | 1862–1931 | Anti-lynching crusader; co-founder NAACP (1909); suffragist. |\n| **Madam C. J. Walker** | 1867–1919 | Self-made haircare entrepreneur, often called the first Black woman millionaire; trained ~40,000 Black women agents. |\n| **Carter G. Woodson** | 1875–1950 | Founded ASNLH (1915) and 'Negro History Week' (1926; later Black History Month). |\n| **Charles Hamilton Houston** | 1895–1950 | Howard Law dean; mentored Thurgood Marshall; designed NAACP legal strategy. |\n\n### Events to cite\n\n| Event | Significance |\n|---|---|\n| **1881 Tuskegee Institute founded** | Vocational education model under Booker T. Washington. |\n| **1896 NACW founded** | National Association of Colored Women — 'Lifting as We Climb.' |\n| **1909 NAACP founded** | Du Bois, Wells, Mary White Ovington. |\n| **1915 ASNLH founded** | Carter Woodson institutionalizes Black historical scholarship. |\n| **1920 Negro National League begins play** | Rube Foster's professional baseball circuit. |\n\n### Sources to attribute\n\n- **Wells, *Crusade for Justice* (autobiography, pub. 1970)** — Anti-lynching organizing memoir.\n- **Woodson, *The Mis-Education of the Negro* (1933)** — Critique of curriculum that erases Black history.\n- ***Pittsburgh Courier* archives** — Largest-circulation Black weekly by the late 1930s.\n"
     },
     {
       id: "aaspf7-quiz",
@@ -22,23 +22,23 @@ export const aasPracticeFreedomPart7Data = {
             "question": "A high-scoring AP response on this unit will:",
             "options": [
               "Combine a clear thesis with named figures, dated events, and at least one primary source.",
-              "Memorize dates with no analysis.",
-              "Use only 21st-century examples to discuss earlier periods.",
-              "Avoid citing sources."
+              "Narrate the unit's events in order, with names, dates, and places, but no thesis.",
+              "Open with a strong moral judgment and support it with general claims about the era.",
+              "Restate the prompt as its thesis and end by summarizing each body paragraph."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rubrics consistently reward specificity, sourcing, and clear analytical structure."
+            "explanation": "High-scoring responses pair a defensible thesis with specific evidence: named figures, dated events, and sourced documents. Narration without a claim, moral judgment without evidence, and a restated prompt all fall short."
           },
           {
             "question": "Which is the BEST one-sentence thesis for an essay on Practice of Freedom?",
             "options": [
-              "During c. 1830–1950, black church reshaped Black life — visible in 1881 Tuskegee Institute founded and Mary McLeod Bethune's career — even as black press persisted.",
-              "Practice of Freedom was important.",
-              "Nothing changed during c. 1830–1950.",
-              "Practice of Freedom cannot be analyzed."
+              "From 1830 to 1950, Black Americans built churches, colleges, presses, and clubs under segregation that later anchored the civil rights movement.",
+              "Between 1830 and 1950, segregation prevented Black Americans from building lasting institutions of their own.",
+              "Practice of Freedom was an important period that shaped African American history and culture in many lasting ways.",
+              "Mary McLeod Bethune, Ida B. Wells, and Carter G. Woodson were the three most important leaders of the period."
             ],
             "correctAnswer": 0,
-            "explanation": "Strong theses combine a defensible claim with specific evidence and acknowledge complexity."
+            "explanation": "A strong thesis makes a defensible claim, ties it to the period, and acknowledges complexity: institution building under segregation that later anchored the movement. Claiming segregation prevented institutions is inaccurate, a vague 'important' claim is not defensible, and ranking leaders does not address the prompt."
           }
         ]
       }
@@ -70,27 +70,27 @@ export const aasPracticeFreedomPart7Data = {
             "label": "Contextualization is best demonstrated by ___",
             "options": [
               "Placing the topic within larger historical processes (e.g., the Atlantic World, post-Reconstruction politics).",
-              "Citing only one date with no context.",
-              "Replacing evidence with opinion.",
-              "Using only 21st-century examples for older periods."
+              "Listing the unit's key events (with dates) in strict chronological order.",
+              "Defining each key term before stating the thesis.",
+              "Explaining how a document's author shaped its message."
             ]
           },
           {
             "label": "Causation is best demonstrated by ___",
             "options": [
               "Identifying a specific cause and its specific consequence with named actors.",
-              "A vague slogan.",
-              "An anecdote without analysis.",
-              "A list of names with no explanation."
+              "Showing that two events happened in the same decade.",
+              "Describing one event in detail with named actors.",
+              "Comparing two similar events across different regions."
             ]
           },
           {
             "label": "CCOT is best demonstrated by ___",
             "options": [
               "Pairing a specific continuity with a specific change, both supported with evidence.",
-              "Choosing only continuity OR only change.",
-              "Avoiding dates.",
-              "Replacing evidence with personal preference."
+              "Tracing a sequence of changes, each supported with evidence.",
+              "Arguing that the period was mostly continuous, with one example.",
+              "Comparing two regions at a single moment in time."
             ]
           }
         ],
@@ -102,7 +102,7 @@ export const aasPracticeFreedomPart7Data = {
         "hint1": "Contextualization = larger frame.",
         "hint2": "Causation = cause + consequence.",
         "hint3": "CCOT = both halves with evidence.",
-        "explanation": "These are the highest-leverage AP skills tested across MCQ, SAQ, LEQ, and DBQ."
+        "explanation": "These are the highest-leverage AP skills tested across MCQ, SAQ, and DBQ."
       }
     },
     {
@@ -114,24 +114,24 @@ export const aasPracticeFreedomPart7Data = {
           {
             "question": "You are writing an SAQ on Practice of Freedom. The strongest opening sentence is:",
             "options": [
-              "Within c. 1830–1950, Mary McLeod Bethune (1875–1955) advanced black church — visible in 1881 Tuskegee Institute founded — even as black press continued.",
-              "Practice of Freedom happened.",
-              "There is nothing to say about this topic.",
-              "Modern social media debates are the best evidence."
+              "Bethune's founding of the NCNW (1935) shows Black women building national institutions that pressed for rights under segregation.",
+              "Black institution building is a very important topic that historians have debated for many years.",
+              "Carter G. Woodson's *The Mis-Education of the Negro* (1933) is a famous book that many students still read and discuss in school today.",
+              "In 1881 Tuskegee was founded, and in 1909 the NAACP was founded."
             ],
             "correctAnswer": 0,
-            "explanation": "Strong AP openings combine date, figure, mechanism, event, and continuity in a single sentence."
+            "explanation": "A strong SAQ opening ties a named figure and dated event to a claim about change and continuity. A vague claim, a remark about a book's fame, or a list of dates without a claim does not answer the question."
           },
           {
-            "question": "Which closing move strengthens an LEQ on this unit?",
+            "question": "Which closing move strengthens a DBQ essay on this unit?",
             "options": [
               "Synthesizing the topic with Civil Rights Movement via a specific shared cause or consequence.",
-              "Repeating the prompt verbatim.",
-              "Adding a moral judgment with no evidence.",
-              "Listing topics not assigned in the prompt."
+              "Restating the thesis in different words and then summarizing each of the body paragraphs in turn.",
+              "Introducing a new document that none of the body paragraphs ever analyzed.",
+              "Ending with a personal reflection on why the topic still matters today."
             ],
             "correctAnswer": 0,
-            "explanation": "AP synthesis moves earn extra rubric points by connecting units."
+            "explanation": "A strong close extends the argument by linking this unit to another through a specific shared cause or consequence. Restating the thesis, adding unanalyzed evidence, or reflecting personally adds no new analysis."
           }
         ]
       }

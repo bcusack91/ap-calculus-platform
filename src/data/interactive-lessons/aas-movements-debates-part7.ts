@@ -22,23 +22,23 @@ export const aasMovementsDebatesPart7Data = {
             "question": "A high-scoring AP response on this unit will:",
             "options": [
               "Combine a clear thesis with named figures, dated events, and at least one primary source.",
-              "Memorize dates with no analysis.",
-              "Use only 21st-century examples to discuss earlier periods.",
-              "Avoid citing sources."
+              "Narrate the unit's events in order, with names, dates, and places, but no thesis.",
+              "Open with a strong moral judgment and support it with general claims about the era.",
+              "Restate the prompt as its thesis and end by summarizing each body paragraph."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rubrics consistently reward specificity, sourcing, and clear analytical structure."
+            "explanation": "High-scoring responses pair a defensible thesis with specific evidence: named figures, dated events, and sourced documents. Narration without a claim, moral judgment without evidence, and a restated prompt all fall short."
           },
           {
             "question": "Which is the BEST one-sentence thesis for an essay on Movements & Debates?",
             "options": [
-              "During 1850–present, integration vs. separatism reshaped Black life — visible in 1895 Atlanta Compromise vs. 1903 *Souls of Black Folk* and Frederick Douglass vs. Martin Delany's career — even as pan-africanism persisted.",
-              "Movements & Debates was important.",
-              "Nothing changed during 1850–present.",
-              "Movements & Debates cannot be analyzed."
+              "From Douglass and Delany to Combahee, Black thinkers split over integration and separatism, yet shared goals of freedom and power.",
+              "Since the 1850s, Black leaders have agreed on a single strategy, integration through courts and legislation.",
+              "Movements & Debates is an important topic that has shaped African American history and politics in many different and lasting ways.",
+              "Douglass, Du Bois, and King were the three most important Black thinkers in all of American history."
             ],
             "correctAnswer": 0,
-            "explanation": "Strong theses combine a defensible claim with specific evidence and acknowledge complexity."
+            "explanation": "A strong thesis makes a defensible claim, ties it to the period, and acknowledges complexity: Black thinkers disagreed sharply over integration and separatism while sharing goals of freedom and power. Claiming a single agreed strategy is inaccurate, a vague 'important' claim is not defensible, and ranking thinkers does not address the prompt."
           }
         ]
       }
@@ -70,27 +70,27 @@ export const aasMovementsDebatesPart7Data = {
             "label": "Contextualization is best demonstrated by ___",
             "options": [
               "Placing the topic within larger historical processes (e.g., the Atlantic World, post-Reconstruction politics).",
-              "Citing only one date with no context.",
-              "Replacing evidence with opinion.",
-              "Using only 21st-century examples for older periods."
+              "Listing the unit's key events (with dates) in strict chronological order.",
+              "Defining each key term before stating the thesis.",
+              "Explaining how a document's author shaped its message."
             ]
           },
           {
             "label": "Causation is best demonstrated by ___",
             "options": [
               "Identifying a specific cause and its specific consequence with named actors.",
-              "A vague slogan.",
-              "An anecdote without analysis.",
-              "A list of names with no explanation."
+              "Showing that two events happened in the same decade.",
+              "Describing one event in detail with named actors.",
+              "Comparing two similar events across different regions."
             ]
           },
           {
             "label": "CCOT is best demonstrated by ___",
             "options": [
               "Pairing a specific continuity with a specific change, both supported with evidence.",
-              "Choosing only continuity OR only change.",
-              "Avoiding dates.",
-              "Replacing evidence with personal preference."
+              "Tracing a sequence of changes, each supported with evidence.",
+              "Arguing that the period was mostly continuous, with one example.",
+              "Comparing two regions at a single moment in time."
             ]
           }
         ],
@@ -102,7 +102,7 @@ export const aasMovementsDebatesPart7Data = {
         "hint1": "Contextualization = larger frame.",
         "hint2": "Causation = cause + consequence.",
         "hint3": "CCOT = both halves with evidence.",
-        "explanation": "These are the highest-leverage AP skills tested across MCQ, SAQ, LEQ, and DBQ."
+        "explanation": "These are the highest-leverage AP skills tested across MCQ, SAQ, and DBQ."
       }
     },
     {
@@ -114,24 +114,24 @@ export const aasMovementsDebatesPart7Data = {
           {
             "question": "You are writing an SAQ on Movements & Debates. The strongest opening sentence is:",
             "options": [
-              "Within 1850–present, Frederick Douglass vs. Martin Delany (19th c.) advanced integration vs. separatism — visible in 1895 Atlanta Compromise vs. 1903 *Souls of Black Folk* — even as pan-africanism continued.",
-              "Movements & Debates happened.",
-              "There is nothing to say about this topic.",
-              "Modern social media debates are the best evidence."
+              "Du Bois's *Souls of Black Folk* (1903) rejected Washington's accommodation, starting a debate over strategy that still echoes.",
+              "Black political thought is a very important topic that historians have debated for many years.",
+              "*The Souls of Black Folk* (1903) by W. E. B. Du Bois is a famous book that many students still read today.",
+              "In 1852 Delany wrote, in 1895 Washington spoke, and in 1903 Du Bois answered him."
             ],
             "correctAnswer": 0,
-            "explanation": "Strong AP openings combine date, figure, mechanism, event, and continuity in a single sentence."
+            "explanation": "A strong SAQ opening ties a named figure and dated source to a claim about how the debate developed. A vague claim, a remark about a book's fame, or a list of dates without a claim does not answer the question."
           },
           {
-            "question": "Which closing move strengthens an LEQ on this unit?",
+            "question": "Which closing move strengthens a DBQ essay on this unit?",
             "options": [
               "Synthesizing the topic with Contemporary Issues via a specific shared cause or consequence.",
-              "Repeating the prompt verbatim.",
-              "Adding a moral judgment with no evidence.",
-              "Listing topics not assigned in the prompt."
+              "Restating the thesis in different words and then summarizing each of the body paragraphs in turn.",
+              "Introducing a new document that none of the body paragraphs ever analyzed.",
+              "Ending with a personal reflection on why the topic still matters today."
             ],
             "correctAnswer": 0,
-            "explanation": "AP synthesis moves earn extra rubric points by connecting units."
+            "explanation": "A strong close extends the argument by linking this unit to another through a specific shared cause or consequence. Restating the thesis, adding unanalyzed evidence, or reflecting personally adds no new analysis."
           }
         ]
       }

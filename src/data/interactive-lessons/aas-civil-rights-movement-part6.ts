@@ -22,23 +22,23 @@ export const aasCivilRightsMovementPart6Data = {
             "question": "What makes King, 'Letter from Birmingham Jail' (1963) a strong source for studying Civil Rights Movement?",
             "options": [
               "Defends nonviolent direct action against white-moderate critics.",
-              "It was published in 2024 with no link to the period.",
-              "It is fictional and includes no historical content.",
-              "It is unsigned and undated."
+              "Records televised testimony on Mississippi violence before the 1964 DNC.",
+              "Reports the Supreme Court's reasoning against school segregation.",
+              "Calls for armed self-defense and Black political independence."
             ],
             "correctAnswer": 0,
-            "explanation": "Provenance, date, and authorial position determine source value."
+            "explanation": "King wrote the 'Letter' (1963) from a Birmingham jail to answer white clergymen who called the protests 'unwise and untimely,' so it shows how movement leaders defended nonviolent direct action. It is not Fannie Lou Hamer's testimony, the *Brown* opinion, or a call for armed self-defense."
           },
           {
             "question": "When using a primary source on the AP exam, you should:",
             "options": [
               "Identify author/date/audience and tie the source to a specific claim.",
-              "Quote the source verbatim without analysis.",
-              "Ignore the author's position.",
-              "Treat the source as neutral and unbiased."
+              "Summarize the source's main idea accurately and let it stand as your argument.",
+              "Quote the most striking passage at length so readers can judge its meaning for themselves.",
+              "Treat it as neutral, reliable evidence, since primary sources record events as they happened."
             ],
             "correctAnswer": 0,
-            "explanation": "AP source-use rewards explicit attribution and analytical framing."
+            "explanation": "Source use earns credit when you attribute the source (author, date, audience) and put it to work for a claim. Summary, long quotation, and treating a source as neutral all skip that analysis."
           }
         ]
       }
@@ -72,7 +72,7 @@ export const aasCivilRightsMovementPart6Data = {
               "Defends nonviolent direct action against white-moderate critics.",
               "Nationally televised account of Mississippi violence.",
               "'Bloody Sunday' images shift national opinion toward VRA.",
-              "Unrelated to this unit"
+              "Unanimous ruling that segregated public schools are unequal."
             ]
           },
           {
@@ -81,7 +81,7 @@ export const aasCivilRightsMovementPart6Data = {
               "Nationally televised account of Mississippi violence.",
               "Defends nonviolent direct action against white-moderate critics.",
               "'Bloody Sunday' images shift national opinion toward VRA.",
-              "Unrelated to this unit"
+              "Unanimous ruling that segregated public schools are unequal."
             ]
           },
           {
@@ -90,7 +90,7 @@ export const aasCivilRightsMovementPart6Data = {
               "'Bloody Sunday' images shift national opinion toward VRA.",
               "Defends nonviolent direct action against white-moderate critics.",
               "Nationally televised account of Mississippi violence.",
-              "Unrelated to this unit"
+              "Unanimous ruling that segregated public schools are unequal."
             ]
           }
         ],
@@ -114,24 +114,24 @@ export const aasCivilRightsMovementPart6Data = {
           {
             "question": "A strong AP citation of King, 'Letter from Birmingham Jail' (1963) reads:",
             "options": [
-              "'According to King, 'Letter from Birmingham Jail' (1963), …' followed by inference about purpose and historical situation.",
-              "A direct quote with no attribution.",
-              "A loose paraphrase that hides the source's identity.",
-              "An anachronistic reading that ignores the date."
+              "'According to King's 'Letter from Birmingham Jail' (1963), …' followed by inference about purpose and audience.",
+              "'According to King's Birmingham letter (1963), …' followed by a long, unbroken quotation from it, with no further comment.",
+              "'King's letter is biased,' followed by dismissing its defense of nonviolent direct action.",
+              "'One civil rights leader wrote …' followed by a paraphrase that leaves out the author and date."
             ],
             "correctAnswer": 0,
-            "explanation": "Attribution + sourcing analysis is the AP scoring standard."
+            "explanation": "Attribution plus sourcing analysis is the standard: name the source, then explain how its purpose, audience, or historical situation shapes it; King was answering white clergymen who had urged patience. Quoting without comment, dismissing a source as biased, and hiding its identity all fall short."
           },
           {
             "question": "Which source-analysis move earns the AP 'sourcing' point?",
             "options": [
               "Identifying author, audience, purpose, OR historical situation — and using it to support a claim.",
-              "Quoting verbatim with no analysis.",
-              "Ignoring the source's date.",
-              "Citing only 21st-century opinion pieces."
+              "Restating the source's topic, date, and title — and quoting its most memorable line.",
+              "Explaining whether you agree with the author's view — and describing how it makes you feel about the past.",
+              "Summarizing what the source says accurately — and placing it in chronological order."
             ],
             "correctAnswer": 0,
-            "explanation": "AP DBQ rubrics explicitly reward sourcing analysis tied to claims."
+            "explanation": "Sourcing means explaining how the author's point of view, purpose, audience, or historical situation matters, then using that to support the argument. Restating, quoting, summarizing, or reacting personally does not count."
           }
         ]
       }

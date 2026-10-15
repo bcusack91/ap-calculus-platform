@@ -10,7 +10,7 @@ export const aasTransatlanticSlaveTradePart5Data = {
     {
       id: "aasts5-change",
       type: 'text' as const,
-      content: "## Specific moments of change\n\n| Event | Significance |\n|---|---|\n| **1781 *Zong* massacre** | Captain throws 132 enslaved Africans overboard for insurance; galvanizes British abolitionism. |\n| **1807 British Abolition of the Slave Trade Act** | U.S. follows in 1808 (constitutionally permitted then). |\n| **1820–1860 illegal trade** | British/U.S. patrols intercept ships; Brazil and Cuba continue legal imports until 1850/1867. |\n\n### Strong CCOT sentence\n\n> Although triangular trade continued throughout c. 1500–1888, the events of 1820–1860 illegal trade marked a decisive shift in how Black communities engaged with it."
+      content: "## Specific moments of change\n\n| Event | Significance |\n|---|---|\n| **1781 *Zong* massacre** | Captain throws 132 enslaved Africans overboard for insurance; galvanizes British abolitionism. |\n| **1807 British Abolition of the Slave Trade Act** | U.S. follows in 1808 (constitutionally permitted then). |\n| **1820–1860 illegal trade** | British/U.S. patrols intercept ships; illegal imports to Brazil and Cuba persist until c. 1850 and 1867. |\n\n### Strong CCOT sentence\n\n> Although triangular trade continued throughout c. 1500–1888, the events of 1820–1860 illegal trade marked a decisive shift in how Black communities engaged with it."
     },
     {
       id: "aasts5-quiz",
@@ -22,23 +22,23 @@ export const aasTransatlanticSlaveTradePart5Data = {
             "question": "Which best describes continuity within Transatlantic Slave Trade?",
             "options": [
               "Aspects such as asiento persisted even as other features changed.",
-              "Nothing about this topic ever changed.",
-              "Continuity is irrelevant to AP scoring.",
-              "Only the most recent decade matters."
+              "Portugal dominated the trade from its start until it ended in the 1860s.",
+              "Mortality on the Middle Passage stayed at 50% or more throughout.",
+              "Britain remained the leading carrier even after its 1807 ban."
             ],
             "correctAnswer": 0,
-            "explanation": "Continuity = elements that persist across change — a key AP analytical category."
+            "explanation": "Continuity means elements that persist across change: Spain's asiento licensing system lasted for centuries while carriers and routes shifted. Leadership passed among Portugal, the Netherlands, and Britain; average mortality was near 15%; and Britain stopped carrying captives after 1807."
           },
           {
             "question": "Which event marks a decisive change within Transatlantic Slave Trade?",
             "options": [
-              "1820–1860 illegal trade — British/U.S. patrols intercept ships; Brazil and Cuba continue legal imports until 1850/1867.",
-              "An anecdote with no historical impact.",
-              "A 21st-century news headline unrelated to the period.",
-              "A purely literary aesthetic with no political effect."
+              "1820–1860 illegal trade — British/U.S. patrols intercept ships; illegal imports to Brazil and Cuba persist until c. 1850 and 1867.",
+              "1324 Mansa Musa's hajj — Trans-Saharan trade in gold places Mali on European maps; Cairo's gold price falls.",
+              "1793 cotton gin — Short-staple cotton becomes profitable; the domestic slave trade expands west into Alabama, Mississippi, and Louisiana.",
+              "1863 Emancipation Proclamation — Frees enslaved people in Confederate-held areas; permits Black enlistment."
             ],
             "correctAnswer": 0,
-            "explanation": "Specific dated events anchor change-over-time arguments."
+            "explanation": "After the 1807–08 bans the trade became illegal and was hunted by naval patrols, though illegal imports to Brazil and Cuba continued until about 1850 and 1867. Mansa Musa's hajj, the cotton gin, and the Emancipation Proclamation belong to other units."
           }
         ]
       }
@@ -71,8 +71,8 @@ export const aasTransatlanticSlaveTradePart5Data = {
             "options": [
               "Asiento",
               "1820–1860 illegal trade",
-              "An unrelated modern slogan",
-              "A topic from a different course"
+              "1807 British Abolition of the Slave Trade Act",
+              "1518 Spanish asiento authorizes direct African shipments to the Americas"
             ]
           },
           {
@@ -80,17 +80,17 @@ export const aasTransatlanticSlaveTradePart5Data = {
             "options": [
               "1820–1860 illegal trade",
               "Asiento",
-              "An anecdote with no date",
-              "An unrelated personal opinion"
+              "Triangular trade",
+              "Middle Passage"
             ]
           },
           {
             "label": "An AP CCOT response should ___",
             "options": [
               "Identify both continuities and changes with specific evidence",
-              "Pick only one without analysis",
-              "Avoid using dates",
-              "Replace evidence with opinion"
+              "Trace only the changes, in order, with specific evidence",
+              "Argue that continuity outweighed every change in the period",
+              "Describe the period's main events without a central claim"
             ]
           }
         ],
@@ -114,24 +114,24 @@ export const aasTransatlanticSlaveTradePart5Data = {
           {
             "question": "Which CCOT thesis is strongest?",
             "options": [
-              "Although asiento continued, 1820–1860 illegal trade marked a decisive change in Transatlantic Slave Trade.",
-              "Nothing changed and nothing stayed the same.",
-              "Change is impossible to identify in history.",
-              "AP rubrics do not reward CCOT analysis."
+              "Although illegal imports to Brazil and Cuba continued, the 1807–08 British and U.S. bans marked a decisive change in the trade.",
+              "The 1807–08 bans changed everything, and no enslaved Africans were carried across the Atlantic after them.",
+              "Although the 1807–08 bans passed, the trade stayed the same in every way until the 1860s.",
+              "The asiento and the 1807–08 bans were both important parts of the history of the transatlantic slave trade."
             ],
             "correctAnswer": 0,
-            "explanation": "Strong CCOT theses pair specific continuities with specific changes."
+            "explanation": "A strong CCOT thesis names a specific continuity (illegal imports to Brazil and Cuba) and a specific change (the 1807–08 bans and naval suppression). Total change, total continuity, and 'both were important' each miss part of that move."
           },
           {
             "question": "Which evidence move is most valuable in a CCOT response?",
             "options": [
               "Naming a specific dated event AND a continuity within the same paragraph.",
-              "Listing dates without analysis.",
-              "Replacing evidence with a moral judgment.",
-              "Citing only post-2010 news stories."
+              "Listing every major date in the unit in chronological order.",
+              "Describing one change in detail without noting what persisted.",
+              "Quoting a historian's verdict on the period in place of evidence."
             ],
             "correctAnswer": 0,
-            "explanation": "AP CCOT scoring rewards paired specificity."
+            "explanation": "CCOT credit needs both halves anchored in evidence: a dated change and a named continuity. A list of dates, a change with no continuity, or a borrowed verdict replaces that analysis."
           }
         ]
       }

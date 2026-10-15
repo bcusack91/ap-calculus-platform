@@ -21,24 +21,24 @@ export const aasContemporaryIssuesPart4Data = {
           {
             "question": "How does Contemporary Issues BEST connect to Movements & Debates?",
             "options": [
-              "Contemporary debates extend long-running questions of strategy and identity.",
-              "Contemporary Issues and Movements & Debates are completely unrelated topics.",
-              "Connections between units are not tested on the AP exam.",
-              "AP rubrics reward isolated facts over connections."
+              "Present-day debates over reparations and policing revisit long-running questions of strategy and identity.",
+              "Contemporary activists rejected all earlier debates, so the two topics share no ideas.",
+              "The long-running debates over strategy ended with the civil rights laws of the 1960s.",
+              "Debates over integration versus separatism first arose after 2008, with no earlier history."
             ],
             "correctAnswer": 0,
-            "explanation": "AP synthesis prompts ask students to articulate how units interact."
+            "explanation": "Contemporary debates over reparations, policing, and electoral politics revisit questions of strategy and identity that run from Douglass and Delany through Washington and Du Bois to King and Malcolm X. These debates did not end in the 1960s or begin in 2008, and they draw directly on earlier ideas."
           },
           {
             "question": "A 'feedback loop' across units means:",
             "options": [
               "Outcomes of one process reinforce or modify the conditions that produced it.",
-              "Two unrelated facts placed next to each other.",
-              "A modern policy with no historical relevance.",
-              "Memorizing additional vocabulary words."
+              "One process triggers a second, which then runs its course without acting back on the first.",
+              "Two processes unfold at the same time in different regions without influencing each other.",
+              "A later generation reinterprets an earlier event in light of its own political concerns."
             ],
             "correctAnswer": 0,
-            "explanation": "Feedback loops are a recurring AP analytical move."
+            "explanation": "A feedback loop runs both ways: the outcome acts back on the conditions that produced it. A one-way chain of causes, parallel developments, and later reinterpretation all lack that return effect."
           }
         ]
       }
@@ -70,27 +70,27 @@ export const aasContemporaryIssuesPart4Data = {
             "label": "Contemporary Issues most directly causes ___",
             "options": [
               "Movements & Debates",
-              "An unrelated 21st-century event",
-              "A pre-modern European war",
-              "A purely cultural festival"
+              "African Kingdoms",
+              "Origins of the Diaspora",
+              "Transatlantic Slave Trade"
             ]
           },
           {
             "label": "A 'feedback loop' is ___",
             "options": [
               "Outcomes that reinforce their own causes",
-              "A failed argument",
-              "An anachronism",
-              "A primary source"
+              "A cause with a single one-way effect",
+              "Two trends that develop in parallel",
+              "A later reversal of an earlier trend"
             ]
           },
           {
             "label": "AP 'synthesis' refers to ___",
             "options": [
               "Combining evidence across units to support a claim",
-              "Memorizing dates only",
-              "Avoiding all comparison",
-              "Citing one example without analysis"
+              "Summarizing one unit's events in chronological order",
+              "Quoting several sources at length without a claim",
+              "Restating the thesis in a new conclusion"
             ]
           }
         ],
@@ -102,7 +102,7 @@ export const aasContemporaryIssuesPart4Data = {
         "hint1": "Map cause to consequence.",
         "hint2": "'Loop' implies feedback.",
         "hint3": "Synthesis = bringing units together.",
-        "explanation": "Connecting units is a high-leverage AP skill rewarded across MCQ, SAQ, and LEQ."
+        "explanation": "Connecting units is a high-leverage AP skill rewarded across MCQ, SAQ, and DBQ."
       }
     },
     {
@@ -114,24 +114,24 @@ export const aasContemporaryIssuesPart4Data = {
           {
             "question": "A student writes: 'Contemporary Issues had no effect on Movements & Debates.' The best AP correction is:",
             "options": [
-              "Show specific connections — contemporary debates extend long-running questions of strategy and identity — to demonstrate causal interaction.",
-              "Insist there are no connections in U.S. history.",
-              "Cite only events outside the unit.",
-              "Replace the claim with a personal opinion."
+              "Show specific links, such as Coates's 2014 reparations essay renewing an old debate.",
+              "Agree, since recent issues such as policing and reparations have no roots in earlier Black political debates.",
+              "Replace the claim with the opposite generalization that every Black thinker today agrees on strategy.",
+              "Cite the Harlem Renaissance instead, since today's debates came straight from 1920s Harlem writers."
             ],
             "correctAnswer": 0,
-            "explanation": "AP synthesis demands explicit, specific connections backed by evidence."
+            "explanation": "The correction needs a specific connection: Ta-Nehisi Coates's 'The Case for Reparations' (2014) renewed a debate stretching back to 'forty acres and a mule' and Callie House's ex-slave pension movement. Policing and reparations have deep roots, Black thinkers still disagree on strategy, and the Harlem Renaissance is a different unit."
           },
           {
             "question": "The strongest AP synthesis move uses:",
             "options": [
               "Specific evidence from at least two units to support a single, defensible claim.",
-              "One vague generalization across centuries.",
-              "Multiple unrelated personal opinions.",
-              "A list of names without explanation."
+              "A detailed chronological summary of one unit, with dates and names but no central claim.",
+              "A sweeping claim about all of African American history, illustrated by one famous example.",
+              "Several separate claims, each backed by evidence drawn from a different unit."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rubrics consistently reward specificity + cross-unit synthesis."
+            "explanation": "Synthesis joins evidence from more than one unit behind ONE defensible claim. A summary without a claim, a sweeping claim on thin evidence, and several unconnected claims each miss part of that move."
           }
         ]
       }

@@ -21,24 +21,24 @@ export const aasMovementsDebatesPart5Data = {
           {
             "question": "Which best describes continuity within Movements & Debates?",
             "options": [
-              "Aspects such as pan-africanism persisted even as other features changed.",
-              "Nothing about this topic ever changed.",
-              "Continuity is irrelevant to AP scoring.",
-              "Only the most recent decade matters."
+              "Pan-Africanism persisted from Garvey and Du Bois to Black Power's African turn.",
+              "Black leaders' views on strategy stayed fixed from 1850 to the present.",
+              "The integration-versus-separatism question disappeared after the 1960s.",
+              "Every major Black organization embraced Pan-Africanism and emigration by the 1920s and after."
             ],
             "correctAnswer": 0,
-            "explanation": "Continuity = elements that persist across change — a key AP analytical category."
+            "explanation": "Continuity means elements that persist across change: Pan-African ties ran from the 1900 London conference and Du Bois's congresses through Garvey's UNIA to Black Power's African turn. Black strategy kept shifting, the integration-versus-separatism question endures, and many organizations, such as the NAACP, never embraced emigration."
           },
           {
             "question": "Which event marks a decisive change within Movements & Debates?",
             "options": [
-              "2014 Coates 'Reparations' — Revives policy debate; HR 40 study commission re-introduced.",
-              "An anecdote with no historical impact.",
-              "A 21st-century news headline unrelated to the period.",
-              "A purely literary aesthetic with no political effect."
+              "2014 Coates 'Reparations' — Revives the reparations question; Coates testifies on H.R. 40 (2019).",
+              "1863 Emancipation Proclamation — Lincoln frees enslaved people in areas still in rebellion against the Union.",
+              "1954 *Brown v. Board of Education* — Unanimous Court (9–0) rules segregated public schools unconstitutional.",
+              "1965 Watts uprising — Six days of unrest in Los Angeles; 34 people die and the urban crisis deepens."
             ],
             "correctAnswer": 0,
-            "explanation": "Specific dated events anchor change-over-time arguments."
+            "explanation": "Ta-Nehisi Coates's 'The Case for Reparations' (2014) moved reparations from the margins into mainstream debate; in 2019 he testified at the House hearing on H.R. 40, the long-stalled bill to study reparations. Emancipation, *Brown*, and Watts are turning points in other units."
           }
         ]
       }
@@ -71,8 +71,8 @@ export const aasMovementsDebatesPart5Data = {
             "options": [
               "Pan-Africanism",
               "2014 Coates 'Reparations'",
-              "An unrelated modern slogan",
-              "A topic from a different course"
+              "1977 Combahee River Collective Statement",
+              "1989 Crenshaw coins 'intersectionality'"
             ]
           },
           {
@@ -80,17 +80,17 @@ export const aasMovementsDebatesPart5Data = {
             "options": [
               "2014 Coates 'Reparations'",
               "Pan-Africanism",
-              "An anecdote with no date",
-              "An unrelated personal opinion"
+              "Integration vs. separatism",
+              "Accommodation vs. agitation"
             ]
           },
           {
             "label": "An AP CCOT response should ___",
             "options": [
               "Identify both continuities and changes with specific evidence",
-              "Pick only one without analysis",
-              "Avoid using dates",
-              "Replace evidence with opinion"
+              "Trace only the changes, in order, with specific evidence",
+              "Argue that continuity outweighed every change in the period",
+              "Describe the period's main events without a central claim"
             ]
           }
         ],
@@ -114,24 +114,24 @@ export const aasMovementsDebatesPart5Data = {
           {
             "question": "Which CCOT thesis is strongest?",
             "options": [
-              "Although pan-africanism continued, 2014 Coates 'Reparations' marked a decisive change in Movements & Debates.",
-              "Nothing changed and nothing stayed the same.",
-              "Change is impossible to identify in history.",
-              "AP rubrics do not reward CCOT analysis."
+              "Although Pan-Africanism endured, Coates's 2014 essay marked a decisive change in how Americans debated reparations.",
+              "Coates's essay changed everything, so earlier debates over strategy and identity simply disappeared.",
+              "Although Coates's essay drew notice, Black debates mostly stayed the same from 1850 to today.",
+              "Pan-Africanism and Coates's essay were both important parts of African American debates."
             ],
             "correctAnswer": 0,
-            "explanation": "Strong CCOT theses pair specific continuities with specific changes."
+            "explanation": "A strong CCOT thesis names a specific continuity and a specific change and makes a defensible claim about them. Total change, near-total continuity, and a claim that both 'were important' each miss part of that move."
           },
           {
             "question": "Which evidence move is most valuable in a CCOT response?",
             "options": [
               "Naming a specific dated event AND a continuity within the same paragraph.",
-              "Listing dates without analysis.",
-              "Replacing evidence with a moral judgment.",
-              "Citing only post-2010 news stories."
+              "Listing every major date in the unit in chronological order.",
+              "Describing one change in detail without noting what persisted.",
+              "Quoting a historian's verdict on the period in place of evidence."
             ],
             "correctAnswer": 0,
-            "explanation": "AP CCOT scoring rewards paired specificity."
+            "explanation": "CCOT credit needs both halves anchored in evidence: a dated change and a named continuity. A list of dates, a change with no continuity, or a borrowed verdict replaces that analysis."
           }
         ]
       }

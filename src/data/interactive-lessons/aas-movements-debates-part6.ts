@@ -22,23 +22,23 @@ export const aasMovementsDebatesPart6Data = {
             "question": "What makes Combahee River Collective Statement (1977) a strong source for studying Movements & Debates?",
             "options": [
               "Defines identity politics from a Black lesbian socialist standpoint.",
-              "It was published in 2024 with no link to the period.",
-              "It is fictional and includes no historical content.",
-              "It is unsigned and undated."
+              "Coins 'intersectionality' as a legal term for overlapping discrimination.",
+              "Traces housing theft and redlining to make a case for reparations.",
+              "Urges vocational training and economic self-help over agitation."
             ],
             "correctAnswer": 0,
-            "explanation": "Provenance, date, and authorial position determine source value."
+            "explanation": "The Combahee River Collective Statement (1977) defined identity politics from the standpoint of Black lesbian socialist feminists, so it shows how Black feminists challenged race-only and gender-only movements. Crenshaw coined 'intersectionality' in 1989, Coates made the case for reparations in 2014, and vocational self-help was Booker T. Washington's program."
           },
           {
             "question": "When using a primary source on the AP exam, you should:",
             "options": [
               "Identify author/date/audience and tie the source to a specific claim.",
-              "Quote the source verbatim without analysis.",
-              "Ignore the author's position.",
-              "Treat the source as neutral and unbiased."
+              "Summarize the source's main idea accurately and let it stand as your argument.",
+              "Quote the most striking passage at length so readers can judge its meaning for themselves.",
+              "Treat it as neutral, reliable evidence, since primary sources record events as they happened."
             ],
             "correctAnswer": 0,
-            "explanation": "AP source-use rewards explicit attribution and analytical framing."
+            "explanation": "Source use earns credit when you attribute the source (author, date, audience) and put it to work for a claim. Summary, long quotation, and treating a source as neutral all skip that analysis."
           }
         ]
       }
@@ -72,7 +72,7 @@ export const aasMovementsDebatesPart6Data = {
               "Defines identity politics from a Black lesbian socialist standpoint.",
               "Origin of 'intersectionality' as legal-academic term.",
               "Synthesis of housing discrimination, mass incarceration, and historical theft.",
-              "Unrelated to this unit"
+              "Urges vocational training and economic self-help."
             ]
           },
           {
@@ -81,7 +81,7 @@ export const aasMovementsDebatesPart6Data = {
               "Origin of 'intersectionality' as legal-academic term.",
               "Defines identity politics from a Black lesbian socialist standpoint.",
               "Synthesis of housing discrimination, mass incarceration, and historical theft.",
-              "Unrelated to this unit"
+              "Urges vocational training and economic self-help."
             ]
           },
           {
@@ -90,7 +90,7 @@ export const aasMovementsDebatesPart6Data = {
               "Synthesis of housing discrimination, mass incarceration, and historical theft.",
               "Defines identity politics from a Black lesbian socialist standpoint.",
               "Origin of 'intersectionality' as legal-academic term.",
-              "Unrelated to this unit"
+              "Urges vocational training and economic self-help."
             ]
           }
         ],
@@ -114,24 +114,24 @@ export const aasMovementsDebatesPart6Data = {
           {
             "question": "A strong AP citation of Combahee River Collective Statement (1977) reads:",
             "options": [
-              "'According to Combahee River Collective Statement (1977), …' followed by inference about purpose and historical situation.",
-              "A direct quote with no attribution.",
-              "A loose paraphrase that hides the source's identity.",
-              "An anachronistic reading that ignores the date."
+              "'According to the Combahee River Collective Statement (1977), …' followed by inference about purpose and audience.",
+              "'According to the Combahee River Collective (1977), …' followed by a long, unbroken quotation from the statement, with no comment.",
+              "'The Combahee statement is biased,' followed by dismissing its argument about identity politics.",
+              "'One feminist group wrote …' followed by a paraphrase that leaves out the author and date."
             ],
             "correctAnswer": 0,
-            "explanation": "Attribution + sourcing analysis is the AP scoring standard."
+            "explanation": "Attribution plus sourcing analysis is the standard: name the source, then explain how its purpose, audience, or historical situation shapes it; the Collective wrote as Black lesbian socialists who felt excluded by both white feminism and male-led Black politics. Quoting without comment, dismissing a source as biased, and hiding its identity all fall short."
           },
           {
             "question": "Which source-analysis move earns the AP 'sourcing' point?",
             "options": [
               "Identifying author, audience, purpose, OR historical situation — and using it to support a claim.",
-              "Quoting verbatim with no analysis.",
-              "Ignoring the source's date.",
-              "Citing only 21st-century opinion pieces."
+              "Restating the source's topic, date, and title — and quoting its most memorable line.",
+              "Explaining whether you agree with the author's view — and describing how it makes you feel about the past.",
+              "Summarizing what the source says accurately — and placing it in chronological order."
             ],
             "correctAnswer": 0,
-            "explanation": "AP DBQ rubrics explicitly reward sourcing analysis tied to claims."
+            "explanation": "Sourcing means explaining how the author's point of view, purpose, audience, or historical situation matters, then using that to support the argument. Restating, quoting, summarizing, or reacting personally does not count."
           }
         ]
       }

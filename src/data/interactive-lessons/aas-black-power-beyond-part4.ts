@@ -21,24 +21,24 @@ export const aasBlackPowerBeyondPart4Data = {
           {
             "question": "How does Black Power & Beyond BEST connect to Civil Rights Movement?",
             "options": [
-              "Black power both extended and critiqued integrationist strategy.",
-              "Black Power & Beyond and Civil Rights Movement are completely unrelated topics.",
-              "Connections between units are not tested on the AP exam.",
-              "AP rubrics reward isolated facts over connections."
+              "Black Power grew out of SNCC and other civil rights groups yet challenged their integrationist strategy.",
+              "Black Power came before the civil rights movement and inspired the Montgomery Bus Boycott of 1955.",
+              "Black Power leaders such as Carmichael had never taken part in southern civil rights campaigns.",
+              "The two movements were unrelated, since civil rights activism ended completely before 1966."
             ],
             "correctAnswer": 0,
-            "explanation": "AP synthesis prompts ask students to articulate how units interact."
+            "explanation": "Black Power grew directly out of the civil rights movement: SNCC veterans such as Carmichael, who had organized in Mississippi and Alabama, challenged nonviolence and integration as the main strategy after 1966. It followed rather than preceded Montgomery, and the two movements overlapped in time and personnel."
           },
           {
             "question": "A 'feedback loop' across units means:",
             "options": [
               "Outcomes of one process reinforce or modify the conditions that produced it.",
-              "Two unrelated facts placed next to each other.",
-              "A modern policy with no historical relevance.",
-              "Memorizing additional vocabulary words."
+              "One process triggers a second, which then runs its course without acting back on the first.",
+              "Two processes unfold at the same time in different regions without influencing each other.",
+              "A later generation reinterprets an earlier event in light of its own political concerns."
             ],
             "correctAnswer": 0,
-            "explanation": "Feedback loops are a recurring AP analytical move."
+            "explanation": "A feedback loop runs both ways: the outcome acts back on the conditions that produced it. A one-way chain of causes, parallel developments, and later reinterpretation all lack that return effect."
           }
         ]
       }
@@ -67,30 +67,30 @@ export const aasBlackPowerBeyondPart4Data = {
       exercise: {
         "dropdowns": [
           {
-            "label": "Black Power & Beyond most directly causes ___",
+            "label": "Black Power & Beyond connects most directly to ___",
             "options": [
               "Civil Rights Movement",
-              "An unrelated 21st-century event",
-              "A pre-modern European war",
-              "A purely cultural festival"
+              "African Kingdoms",
+              "Origins of the Diaspora",
+              "Transatlantic Slave Trade"
             ]
           },
           {
             "label": "A 'feedback loop' is ___",
             "options": [
               "Outcomes that reinforce their own causes",
-              "A failed argument",
-              "An anachronism",
-              "A primary source"
+              "A cause with a single one-way effect",
+              "Two trends that develop in parallel",
+              "A later reversal of an earlier trend"
             ]
           },
           {
             "label": "AP 'synthesis' refers to ___",
             "options": [
               "Combining evidence across units to support a claim",
-              "Memorizing dates only",
-              "Avoiding all comparison",
-              "Citing one example without analysis"
+              "Summarizing one unit's events in chronological order",
+              "Quoting several sources at length without a claim",
+              "Restating the thesis in a new conclusion"
             ]
           }
         ],
@@ -102,7 +102,7 @@ export const aasBlackPowerBeyondPart4Data = {
         "hint1": "Map cause to consequence.",
         "hint2": "'Loop' implies feedback.",
         "hint3": "Synthesis = bringing units together.",
-        "explanation": "Connecting units is a high-leverage AP skill rewarded across MCQ, SAQ, and LEQ."
+        "explanation": "Connecting units is a high-leverage AP skill rewarded across MCQ, SAQ, and DBQ."
       }
     },
     {
@@ -114,24 +114,24 @@ export const aasBlackPowerBeyondPart4Data = {
           {
             "question": "A student writes: 'Black Power & Beyond had no effect on Civil Rights Movement.' The best AP correction is:",
             "options": [
-              "Show specific connections — Black Power both extended and critiqued integrationist strategy — to demonstrate causal interaction.",
-              "Insist there are no connections in U.S. history.",
-              "Cite only events outside the unit.",
-              "Replace the claim with a personal opinion."
+              "Show specific links, such as SNCC's 1966 shift from interracial organizing to Black Power.",
+              "Agree, since Black Power arose among northern activists who never joined a southern civil rights campaign.",
+              "Replace the claim with the opposite generalization that every civil rights group embraced Black Power by 1967.",
+              "Cite the Harlem Renaissance instead, since Black Power's ideas came straight from 1920s Harlem writers."
             ],
             "correctAnswer": 0,
-            "explanation": "AP synthesis demands explicit, specific connections backed by evidence."
+            "explanation": "The correction needs a specific connection: Black Power reshaped civil rights organizations themselves, as when SNCC under Carmichael moved from interracial organizing to Black Power in 1966. Many Black Power leaders were southern movement veterans, the NAACP and SCLC rejected the slogan, and the Harlem Renaissance belongs to another unit."
           },
           {
             "question": "The strongest AP synthesis move uses:",
             "options": [
               "Specific evidence from at least two units to support a single, defensible claim.",
-              "One vague generalization across centuries.",
-              "Multiple unrelated personal opinions.",
-              "A list of names without explanation."
+              "A detailed chronological summary of one unit, with dates and names but no central claim.",
+              "A sweeping claim about all of African American history, illustrated by one famous example.",
+              "Several separate claims, each backed by evidence drawn from a different unit."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rubrics consistently reward specificity + cross-unit synthesis."
+            "explanation": "Synthesis joins evidence from more than one unit behind ONE defensible claim. A summary without a claim, a sweeping claim on thin evidence, and several unconnected claims each miss part of that move."
           }
         ]
       }

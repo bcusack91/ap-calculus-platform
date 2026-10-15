@@ -10,7 +10,7 @@ export const aasReconstructionJimCrowPart5Data = {
     {
       id: "aasrjc5-change",
       type: 'text' as const,
-      content: "## Specific moments of change\n\n| Event | Significance |\n|---|---|\n| **1890 Mississippi Plan** | Constitutional convention eliminates Black voters via poll tax/literacy test. |\n| **1896 *Plessy v. Ferguson*** | Establishes 'separate but equal'; only Justice Harlan dissents. |\n| **1898 Wilmington insurrection** | White mob overthrows multiracial NC government — only successful U.S. coup. |\n\n### Strong CCOT sentence\n\n> Although reconstruction amendments continued throughout 1865–1900, the events of 1898 Wilmington insurrection marked a decisive shift in how Black communities engaged with it."
+      content: "## Specific moments of change\n\n| Event | Significance |\n|---|---|\n| **1890 Mississippi Plan** | Constitutional convention eliminates Black voters via poll tax/literacy test. |\n| **1896 *Plessy v. Ferguson*** | Establishes 'separate but equal'; only Justice Harlan dissents. |\n| **1898 Wilmington insurrection** | Armed white supremacists violently overthrow Wilmington's elected biracial city government. |\n\n### Strong CCOT sentence\n\n> Although reconstruction amendments continued throughout 1865–1900, the events of 1898 Wilmington insurrection marked a decisive shift in how Black communities engaged with it."
     },
     {
       id: "aasrjc5-quiz",
@@ -21,24 +21,24 @@ export const aasReconstructionJimCrowPart5Data = {
           {
             "question": "Which best describes continuity within Reconstruction & Jim Crow?",
             "options": [
-              "Aspects such as disfranchisement persisted even as other features changed.",
-              "Nothing about this topic ever changed.",
-              "Continuity is irrelevant to AP scoring.",
-              "Only the most recent decade matters."
+              "Disfranchisement persisted even as other features of Black life changed.",
+              "Black men voted freely across the South from 1870 until 1900, protected by the 15th Amendment.",
+              "Federal troops protected Black voters at Southern polls throughout the whole period.",
+              "Southern segregation laws were repealed soon after the *Plessy* decision of 1896."
             ],
             "correctAnswer": 0,
-            "explanation": "Continuity = elements that persist across change — a key AP analytical category."
+            "explanation": "Continuity means elements that persist across change: efforts to strip Black men of the vote ran from Reconstruction-era violence through the 1890 Mississippi Plan. Black voting was attacked from the start, troops left in 1877, and *Plessy* (1896) upheld segregation rather than ending it."
           },
           {
             "question": "Which event marks a decisive change within Reconstruction & Jim Crow?",
             "options": [
-              "1898 Wilmington insurrection — White mob overthrows multiracial NC government — only successful U.S. coup.",
-              "An anecdote with no historical impact.",
-              "A 21st-century news headline unrelated to the period.",
-              "A purely literary aesthetic with no political effect."
+              "1898 Wilmington insurrection — Armed white supremacists violently overthrow Wilmington's elected biracial city government.",
+              "1857 *Dred Scott v. Sandford* — Taney rules that people of African descent could never be U.S. citizens.",
+              "1919 Red Summer — White mobs attack Black neighborhoods in Chicago, Elaine, and dozens of other places.",
+              "1921 Tulsa massacre — White mobs destroy Greenwood, the prosperous Black district of Tulsa, Oklahoma."
             ],
             "correctAnswer": 0,
-            "explanation": "Specific dated events anchor change-over-time arguments."
+            "explanation": "The 1898 Wilmington coup ended biracial government in a Southern city by force and falls within this unit's period. *Dred Scott*, Red Summer, and Tulsa are real turning points but belong to the antebellum and Great Migration units."
           }
         ]
       }
@@ -55,7 +55,7 @@ export const aasReconstructionJimCrowPart5Data = {
           "continuity and change"
         ],
         "hint1": "Hint: Poll taxes, literacy tests, grandfather clauses, w…",
-        "hint2": "Hint: White mob overthrows multiracial NC government — o…",
+        "hint2": "Hint: Armed white supremacists violently overthrow Wilmi…",
         "hint3": "Hint: AP CCOT",
         "explanation": "AP CCOT prompts demand both continuity and change with specific evidence."
       }
@@ -71,8 +71,8 @@ export const aasReconstructionJimCrowPart5Data = {
             "options": [
               "Disfranchisement",
               "1898 Wilmington insurrection",
-              "An unrelated modern slogan",
-              "A topic from a different course"
+              "1877 Compromise",
+              "1870 15th Amendment"
             ]
           },
           {
@@ -80,17 +80,17 @@ export const aasReconstructionJimCrowPart5Data = {
             "options": [
               "1898 Wilmington insurrection",
               "Disfranchisement",
-              "An anecdote with no date",
-              "An unrelated personal opinion"
+              "Sharecropping",
+              "Persistence of Black churches"
             ]
           },
           {
             "label": "An AP CCOT response should ___",
             "options": [
               "Identify both continuities and changes with specific evidence",
-              "Pick only one without analysis",
-              "Avoid using dates",
-              "Replace evidence with opinion"
+              "Trace only the changes, in order, with specific evidence",
+              "Argue that continuity outweighed every change in the period",
+              "Describe the period's main events without a central claim"
             ]
           }
         ],
@@ -114,24 +114,24 @@ export const aasReconstructionJimCrowPart5Data = {
           {
             "question": "Which CCOT thesis is strongest?",
             "options": [
-              "Although disfranchisement continued, 1898 Wilmington insurrection marked a decisive change in Reconstruction & Jim Crow.",
-              "Nothing changed and nothing stayed the same.",
-              "Change is impossible to identify in history.",
-              "AP rubrics do not reward CCOT analysis."
+              "Although disfranchisement continued, the 1898 Wilmington insurrection marked a decisive change in Reconstruction & Jim Crow.",
+              "The Wilmington insurrection changed everything about Black life, so that nothing from Reconstruction survived anywhere.",
+              "Although new federal laws passed, Black political life mostly stayed the same from 1865 to 1900 in every former Confederate state.",
+              "Disfranchisement and the Wilmington insurrection were both important parts of Reconstruction & Jim Crow."
             ],
             "correctAnswer": 0,
-            "explanation": "Strong CCOT theses pair specific continuities with specific changes."
+            "explanation": "A strong CCOT thesis names a specific continuity and a specific change and makes a defensible claim about them. Total change, near-total continuity, and a claim that both 'were important' each miss part of that move."
           },
           {
             "question": "Which evidence move is most valuable in a CCOT response?",
             "options": [
               "Naming a specific dated event AND a continuity within the same paragraph.",
-              "Listing dates without analysis.",
-              "Replacing evidence with a moral judgment.",
-              "Citing only post-2010 news stories."
+              "Listing every major date in the unit in chronological order.",
+              "Describing one change in detail without noting what persisted.",
+              "Quoting a historian's verdict on the period in place of evidence."
             ],
             "correctAnswer": 0,
-            "explanation": "AP CCOT scoring rewards paired specificity."
+            "explanation": "CCOT credit needs both halves anchored in evidence: a dated change and a named continuity. A list of dates, a change with no continuity, or a borrowed verdict replaces that analysis."
           }
         ]
       }

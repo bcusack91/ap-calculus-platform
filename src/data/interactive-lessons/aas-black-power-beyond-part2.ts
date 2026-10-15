@@ -22,23 +22,23 @@ export const aasBlackPowerBeyondPart2Data = {
             "question": "Which BEST describes a primary mechanism shaping Black Power & Beyond?",
             "options": [
               "Stokely Carmichael's June 1966 Greenwood, MS rally — slogan reframes the movement.",
-              "An unrelated technological invention from a different century.",
-              "Pure coincidence with no identifiable cause.",
-              "A modern political slogan with no historical content."
+              "Thurgood Marshall's 1954 *Brown* argument — litigation desegregates schools.",
+              "Martin Luther King's 1963 March on Washington speech — a call for interracial unity.",
+              "Booker T. Washington's 1895 Atlanta address — accommodation wins white support."
             ],
             "correctAnswer": 0,
-            "explanation": "Black Power is the central mechanism the AP exam expects students to explain."
+            "explanation": "Carmichael's call for 'Black Power' at Greenwood, Mississippi, during the June 1966 Meredith March reframed the movement around self-determination. *Brown*, the March on Washington, and the Atlanta address belong to the civil rights and Jim Crow eras and stress integration or accommodation."
           },
           {
             "question": "Stokely Carmichael / Kwame Ture's career illustrates which historical mechanism?",
             "options": [
-              "SNCC chair; coined 'Black Power' (1966); All-African People's Revolutionary Party.",
-              "Stokely Carmichael / Kwame Ture had no impact on Black Power & Beyond.",
-              "An entirely modern policy debate.",
-              "A purely literary aesthetic."
+              "SNCC chair; popularized 'Black Power' (1966); All-African People's Revolutionary Party.",
+              "Nation of Islam minister; founded the OAAU (1964); assassinated in Harlem in February 1965.",
+              "Co-founded the Black Panther Party (1966); co-wrote its Ten-Point Program with Bobby Seale.",
+              "Poet and playwright; founded the Black Arts Repertory Theatre/School in Harlem in spring 1965."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rewards specific causal claims tied to named figures."
+            "explanation": "Carmichael chaired SNCC, popularized 'Black Power' in 1966, co-wrote *Black Power* (1967), and later, as Kwame Ture, led the All-African People's Revolutionary Party. The other descriptions fit Malcolm X, Huey P. Newton, and Amiri Baraka."
           }
         ]
       }
@@ -70,18 +70,18 @@ export const aasBlackPowerBeyondPart2Data = {
             "label": "The mechanism most strongly associated with Malcolm X is ___",
             "options": [
               "Nation of Islam minister; founded OAAU (1964); pilgrimage to Mecca shifts toward internationalism; assassinated Feb. 21, 1965.",
-              "SNCC chair; coined 'Black Power' (1966); All-African People's Revolutionary Party.",
+              "SNCC chair; popularized 'Black Power' (1966); All-African People's Revolutionary Party.",
               "Co-founded Black Panther Party with Bobby Seale (Oakland, Oct. 1966).",
-              "Unrelated to this unit"
+              "Playwright and poet; founded the Black Arts Repertory Theatre/School (1965)."
             ]
           },
           {
             "label": "The mechanism most strongly associated with Stokely Carmichael / Kwame Ture is ___",
             "options": [
-              "SNCC chair; coined 'Black Power' (1966); All-African People's Revolutionary Party.",
+              "SNCC chair; popularized 'Black Power' (1966); All-African People's Revolutionary Party.",
               "Nation of Islam minister; founded OAAU (1964); pilgrimage to Mecca shifts toward internationalism; assassinated Feb. 21, 1965.",
               "Co-founded Black Panther Party with Bobby Seale (Oakland, Oct. 1966).",
-              "Unrelated to this unit"
+              "Playwright and poet; founded the Black Arts Repertory Theatre/School (1965)."
             ]
           },
           {
@@ -89,14 +89,14 @@ export const aasBlackPowerBeyondPart2Data = {
             "options": [
               "Co-founded Black Panther Party with Bobby Seale (Oakland, Oct. 1966).",
               "Nation of Islam minister; founded OAAU (1964); pilgrimage to Mecca shifts toward internationalism; assassinated Feb. 21, 1965.",
-              "SNCC chair; coined 'Black Power' (1966); All-African People's Revolutionary Party.",
-              "Unrelated to this unit"
+              "SNCC chair; popularized 'Black Power' (1966); All-African People's Revolutionary Party.",
+              "Playwright and poet; founded the Black Arts Repertory Theatre/School (1965)."
             ]
           }
         ],
         "correctAnswers": [
           "Nation of Islam minister; founded OAAU (1964); pilgrimage to Mecca shifts toward internationalism; assassinated Feb. 21, 1965.",
-          "SNCC chair; coined 'Black Power' (1966); All-African People's Revolutionary Party.",
+          "SNCC chair; popularized 'Black Power' (1966); All-African People's Revolutionary Party.",
           "Co-founded Black Panther Party with Bobby Seale (Oakland, Oct. 1966)."
         ],
         "hint1": "Match the figure's actual contribution.",
@@ -114,13 +114,13 @@ export const aasBlackPowerBeyondPart2Data = {
           {
             "question": "A student argues that Black Power & Beyond happened spontaneously. The strongest counter-argument is:",
             "options": [
-              "Identifying specific actors and processes — e.g., Malcolm X (1925–1965) — that drove the change.",
-              "Insisting that historians cannot know causes.",
-              "Citing only events from outside this period.",
-              "Memorizing dates without analyzing them."
+              "Identifying the specific actors and processes — Malcolm X, SNCC, the Panthers — that drove it.",
+              "Agreeing, since the Watts uprising erupted without warning and created Black Power on its own.",
+              "Noting that sources — speeches, FBI files, Panther newspapers — are too sparse to show any cause.",
+              "Pointing out that Black Power was imported from abroad with no roots in U.S. activism."
             ],
             "correctAnswer": 0,
-            "explanation": "Historical causation requires named actors, dated events, and articulated mechanisms."
+            "explanation": "Historical causation names actors and mechanisms: Malcolm X's call for self-determination, SNCC's 1966 turn under Carmichael, and organizations such as the Black Panther Party. Watts was one context among many, the movement is richly documented, and it grew from U.S. activism even as it drew on anticolonial movements abroad."
           },
           {
             "question": "Which mechanism is MOST closely linked to Community survival programs?",
@@ -128,10 +128,10 @@ export const aasBlackPowerBeyondPart2Data = {
               "Black Panther Free Breakfast, free clinics, sickle-cell screening.",
               "Stokely Carmichael's June 1966 Greenwood, MS rally — slogan reframes the movement.",
               "Cultural arm of Black Power — Amiri Baraka, Sonia Sanchez, Larry Neal.",
-              "A cause from a different historical era."
+              "Gary convention's National Black Political Agenda (1972)."
             ],
             "correctAnswer": 0,
-            "explanation": "Community survival programs has its own historical mechanism distinct from related concepts."
+            "explanation": "Community survival programs were Panther services such as the Free Breakfast for Children program, free health clinics, and sickle-cell screening. The Greenwood rally launched the slogan, the Black Arts Movement was the cultural arm, and the Gary agenda was electoral."
           }
         ]
       }

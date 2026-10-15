@@ -22,23 +22,23 @@ export const aasAfricanKingdomsPart5Data = {
             "question": "Which best describes continuity within African Kingdoms?",
             "options": [
               "Aspects such as centralized empires persisted even as other features changed.",
-              "Nothing about this topic ever changed.",
-              "Continuity is irrelevant to AP scoring.",
-              "Only the most recent decade matters."
+              "Ghana's ruling dynasty governed the Sahel without a single break from 300 to 1600.",
+              "Gold stopped crossing the Sahara once the Swahili city-states rose in the east.",
+              "Islam vanished from West Africa after Songhai fell in 1591."
             ],
             "correctAnswer": 0,
-            "explanation": "Continuity = elements that persist across change — a key AP analytical category."
+            "explanation": "Continuity means elements that persist across change: Ghana, Mali, and Songhai succeeded one another, but large centralized empires remained a feature of the Sahel. Dynasties changed, caravan gold kept flowing, and Islam endured after Tondibi."
           },
           {
             "question": "Which event marks a decisive change within African Kingdoms?",
             "options": [
               "c. 800–1500 Swahili city-states — Kilwa, Mombasa, Mogadishu integrate the East African coast into Indian Ocean trade; Swahili language emerges.",
-              "An anecdote with no historical impact.",
-              "A 21st-century news headline unrelated to the period.",
-              "A purely literary aesthetic with no political effect."
+              "1807 British Abolition Act — Parliament bans British ships, crews, and ports from carrying enslaved Africans across the Atlantic Ocean after 1807.",
+              "1865 Thirteenth Amendment — Abolishes slavery throughout the United States, freeing about four million people.",
+              "1884–85 Berlin Conference — European powers set rules for partitioning Africa among themselves, opening the colonial 'Scramble for Africa.'"
             ],
             "correctAnswer": 0,
-            "explanation": "Specific dated events anchor change-over-time arguments."
+            "explanation": "The rise of the Swahili city-states falls inside c. 700–1600 and reoriented East Africa toward Indian Ocean trade. British abolition, the Thirteenth Amendment, and the Berlin Conference are real turning points but come centuries later."
           }
         ]
       }
@@ -71,8 +71,8 @@ export const aasAfricanKingdomsPart5Data = {
             "options": [
               "Centralized empires",
               "c. 800–1500 Swahili city-states",
-              "An unrelated modern slogan",
-              "A topic from a different course"
+              "1324 Mansa Musa's hajj",
+              "1591 Battle of Tondibi"
             ]
           },
           {
@@ -80,17 +80,17 @@ export const aasAfricanKingdomsPart5Data = {
             "options": [
               "c. 800–1500 Swahili city-states",
               "Centralized empires",
-              "An anecdote with no date",
-              "An unrelated personal opinion"
+              "Islamic scholarship",
+              "Trans-Saharan trade"
             ]
           },
           {
             "label": "An AP CCOT response should ___",
             "options": [
               "Identify both continuities and changes with specific evidence",
-              "Pick only one without analysis",
-              "Avoid using dates",
-              "Replace evidence with opinion"
+              "Trace only the changes, in order, with specific evidence",
+              "Argue that continuity outweighed every change in the period",
+              "Describe the period's main events without a central claim"
             ]
           }
         ],
@@ -115,23 +115,23 @@ export const aasAfricanKingdomsPart5Data = {
             "question": "Which CCOT thesis is strongest?",
             "options": [
               "Although centralized empires continued, c. 800–1500 Swahili city-states marked a decisive change in African Kingdoms.",
-              "Nothing changed and nothing stayed the same.",
-              "Change is impossible to identify in history.",
-              "AP rubrics do not reward CCOT analysis."
+              "Centralized empires and the Swahili city-states were both important parts of the long history of African Kingdoms.",
+              "The Swahili city-states changed everything, and nothing from the earlier West African empires carried on after them.",
+              "Although trade routes shifted, African kingdoms stayed essentially the same from 700 to 1600 in every single region."
             ],
             "correctAnswer": 0,
-            "explanation": "Strong CCOT theses pair specific continuities with specific changes."
+            "explanation": "A strong CCOT thesis names a specific continuity and a specific change and makes a defensible claim about them. Saying both 'were important', claiming total change, or claiming near-total continuity each misses part of that move."
           },
           {
             "question": "Which evidence move is most valuable in a CCOT response?",
             "options": [
               "Naming a specific dated event AND a continuity within the same paragraph.",
-              "Listing dates without analysis.",
-              "Replacing evidence with a moral judgment.",
-              "Citing only post-2010 news stories."
+              "Listing every major date in the unit in chronological order.",
+              "Describing one change in detail without noting what persisted.",
+              "Quoting a historian's verdict on the period in place of evidence."
             ],
             "correctAnswer": 0,
-            "explanation": "AP CCOT scoring rewards paired specificity."
+            "explanation": "CCOT credit needs both halves anchored in evidence: a dated change and a named continuity. A list of dates, a change with no continuity, or a borrowed verdict replaces that analysis."
           }
         ]
       }

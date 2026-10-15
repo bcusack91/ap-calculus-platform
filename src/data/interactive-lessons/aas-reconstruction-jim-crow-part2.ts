@@ -22,23 +22,23 @@ export const aasReconstructionJimCrowPart2Data = {
             "question": "Which BEST describes a primary mechanism shaping Reconstruction & Jim Crow?",
             "options": [
               "13th (1865) abolition; 14th (1868) citizenship/equal protection; 15th (1870) Black male suffrage.",
-              "An unrelated technological invention from a different century.",
-              "Pure coincidence with no identifiable cause.",
-              "A modern political slogan with no historical content."
+              "13th (1865) citizenship; 14th (1868) Black male suffrage; 15th (1870) abolition of slavery nationwide.",
+              "13th (1863) abolition in rebel states; 14th (1866) Freedmen's Bureau; 15th (1875) public accommodations.",
+              "14th (1868) universal suffrage for men and women; 15th (1870) a federal ban on poll taxes."
             ],
             "correctAnswer": 0,
-            "explanation": "Reconstruction Amendments is the central mechanism the AP exam expects students to explain."
+            "explanation": "The Reconstruction Amendments abolished slavery (13th, 1865), defined citizenship and equal protection (14th, 1868), and barred race-based denial of male suffrage (15th, 1870). The other options scramble the amendments or confuse them with the Emancipation Proclamation, the Freedmen's Bureau, the Civil Rights Act of 1875, and the 24th Amendment."
           },
           {
             "question": "Robert Smalls's career illustrates which historical mechanism?",
             "options": [
               "Commandeered the *Planter* (1862); five-term U.S. congressman from SC.",
-              "Robert Smalls had no impact on Reconstruction & Jim Crow.",
-              "An entirely modern policy debate.",
-              "A purely literary aesthetic."
+              "First Black U.S. Senator (MS, 1870); filled Jefferson Davis's former seat.",
+              "Founded Tuskegee (1881); argued for vocational training and accommodation.",
+              "Wrote *Southern Horrors* (1892); documented lynching across the South."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rewards specific causal claims tied to named figures."
+            "explanation": "Robert Smalls freed himself and others by steering the Confederate ship *Planter* to the Union fleet in 1862, then served five terms in Congress, showing how emancipation led to Black political office. The other descriptions fit Hiram Revels, Booker T. Washington, and Ida B. Wells."
           }
         ]
       }
@@ -72,7 +72,7 @@ export const aasReconstructionJimCrowPart2Data = {
               "First Black U.S. Senator (MS, 1870); filled Jefferson Davis's former seat.",
               "Commandeered the *Planter* (1862); five-term U.S. congressman from SC.",
               "Shifts focus to civil-rights enforcement; U.S. Marshal for D.C., minister to Haiti.",
-              "Unrelated to this unit"
+              "*Southern Horrors* (1892) and *A Red Record* (1895) document lynchings."
             ]
           },
           {
@@ -81,7 +81,7 @@ export const aasReconstructionJimCrowPart2Data = {
               "Commandeered the *Planter* (1862); five-term U.S. congressman from SC.",
               "First Black U.S. Senator (MS, 1870); filled Jefferson Davis's former seat.",
               "Shifts focus to civil-rights enforcement; U.S. Marshal for D.C., minister to Haiti.",
-              "Unrelated to this unit"
+              "Tuskegee (1881); 1895 Atlanta Compromise advocates vocational training."
             ]
           },
           {
@@ -90,7 +90,7 @@ export const aasReconstructionJimCrowPart2Data = {
               "Shifts focus to civil-rights enforcement; U.S. Marshal for D.C., minister to Haiti.",
               "First Black U.S. Senator (MS, 1870); filled Jefferson Davis's former seat.",
               "Commandeered the *Planter* (1862); five-term U.S. congressman from SC.",
-              "Unrelated to this unit"
+              "*Southern Horrors* (1892) and *A Red Record* (1895) document lynchings."
             ]
           }
         ],
@@ -114,24 +114,24 @@ export const aasReconstructionJimCrowPart2Data = {
           {
             "question": "A student argues that Reconstruction & Jim Crow happened spontaneously. The strongest counter-argument is:",
             "options": [
-              "Identifying specific actors and processes — e.g., Hiram Revels (1827–1901) — that drove the change.",
-              "Insisting that historians cannot know causes.",
-              "Citing only events from outside this period.",
-              "Memorizing dates without analyzing them."
+              "Identifying the specific actors and processes — Congress, the Freedmen's Bureau, leaders like Hiram Revels — that drove it.",
+              "Arguing that Black political gains came mainly from Southern goodwill — planters sharing power freely, without any federal pressure.",
+              "Noting that Bureau records, newspapers, and congressional debates are too sparse to show any cause at all.",
+              "Pointing out that the New Deal, not Reconstruction-era laws or leaders, first shaped Black citizenship."
             ],
             "correctAnswer": 0,
-            "explanation": "Historical causation requires named actors, dated events, and articulated mechanisms."
+            "explanation": "Historical causation names actors and mechanisms: Congress and the Reconstruction Amendments, the Freedmen's Bureau, and Black officeholders such as Hiram Revels and Robert Smalls. Southern planters resisted these changes, the era is richly documented, and Black citizenship was defined in the 1860s, long before the New Deal."
           },
           {
             "question": "Which mechanism is MOST closely linked to Freedmen's Bureau?",
             "options": [
               "1865–1872 federal agency providing schools, contracts, and legal aid.",
-              "13th (1865) abolition; 14th (1868) citizenship/equal protection; 15th (1870) Black male suffrage.",
-              "Poll taxes, literacy tests, grandfather clauses, white primaries strip Black voting rights.",
-              "A cause from a different historical era."
+              "1865–1877 Union army program granting every freed family 40 acres of confiscated land.",
+              "1866–1870 private Northern charity funding Black churches, colleges, and newspapers.",
+              "1870–1890 state agency that registered Black voters and policed elections across the South."
             ],
             "correctAnswer": 0,
-            "explanation": "Freedmen's Bureau has its own historical mechanism distinct from related concepts."
+            "explanation": "The Freedmen's Bureau (1865–1872) was a federal agency that ran schools, oversaw labor contracts, and offered legal aid. Most freed families never received land, Northern aid societies were private and separate, and no Southern state agency protected Black voters."
           }
         ]
       }

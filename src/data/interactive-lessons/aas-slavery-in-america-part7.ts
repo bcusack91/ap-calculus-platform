@@ -10,7 +10,7 @@ export const aasSlaveryInAmericaPart7Data = {
     {
       id: "aassia7-review",
       type: 'text' as const,
-      content: "## Master review for Slavery in America\n\n### Concepts to define on demand\n\n| Core concept | What it refers to |\n|---|---|\n| **Chattel slavery** | Legal status defining humans as inheritable property — distinct from indenture or serfdom. |\n| **Partus sequitur ventrem** | Virginia 1662 law: a child's status follows the mother's, making slavery hereditary. |\n| **Domestic slave trade** | After 1808 ban on imports, ~1 million people forcibly relocated from Upper to Lower South. |\n\n### Figures to deploy\n\n| Figure | Dates | Why they matter |\n|---|---|---|\n| **Anthony Johnson** | c. 1600–1670 | Angolan-born Virginia free Black who himself owned servants — illustrates pre-1660s fluidity. |\n| **Eli Whitney** | 1765–1825 | Cotton gin (1793) made short-staple cotton profitable, expanding slavery into the Deep South. |\n| **Solomon Northup** | 1808–c. 1864 | Free Black New Yorker kidnapped into Louisiana slavery; *Twelve Years a Slave* (1853). |\n| **Harriet Jacobs** | c. 1813–1897 | *Incidents in the Life of a Slave Girl* (1861) — first-person account of sexual exploitation. |\n| **Frederick Douglass** | c. 1818–1895 | *Narrative* (1845) describes Maryland slavery and the path to literacy as resistance. |\n\n### Events to cite\n\n| Event | Significance |\n|---|---|\n| **1641 Massachusetts legalizes slavery** | First English colony to do so. |\n| **1662 Virginia partus law** | Slavery becomes hereditary through the mother. |\n| **1705 Virginia Slave Codes** | Comprehensive race-based legal regime; later models for other colonies. |\n| **1793 cotton gin** | Cotton acreage soars from ~10,000 bales (1793) to ~4 million (1860). |\n| **1808 federal ban on Atlantic slave imports** | Domestic trade replaces Atlantic supply. |\n\n### Sources to attribute\n\n- **Douglass, *Narrative* (1845)** — Argues that literacy is the road to freedom — a reframing of master-slave power.\n- **Jacobs, *Incidents* (1861)** — Reveals gendered violence largely absent from earlier male-authored narratives.\n- **Slave Codes of Virginia (1705)** — Codifies racial hierarchy in colonial law.\n"
+      content: "## Master review for Slavery in America\n\n### Concepts to define on demand\n\n| Core concept | What it refers to |\n|---|---|\n| **Chattel slavery** | Legal status defining humans as inheritable property — distinct from indenture or serfdom. |\n| **Partus sequitur ventrem** | Virginia 1662 law: a child's status follows the mother's, making slavery hereditary. |\n| **Domestic slave trade** | After 1808 ban on imports, ~1 million people forcibly relocated from Upper to Lower South. |\n\n### Figures to deploy\n\n| Figure | Dates | Why they matter |\n|---|---|---|\n| **Anthony Johnson** | c. 1600–1670 | Angolan-born Virginia free Black who himself owned servants — illustrates pre-1660s fluidity. |\n| **Eli Whitney** | 1765–1825 | Cotton gin (1793) made short-staple cotton profitable, expanding slavery into the Deep South. |\n| **Solomon Northup** | 1808–c. 1864 | Free Black New Yorker kidnapped into Louisiana slavery; *Twelve Years a Slave* (1853). |\n| **Harriet Jacobs** | c. 1813–1897 | *Incidents in the Life of a Slave Girl* (1861) — first-person account of sexual exploitation. |\n| **Frederick Douglass** | c. 1818–1895 | *Narrative* (1845) describes Maryland slavery and the path to literacy as resistance. |\n\n### Events to cite\n\n| Event | Significance |\n|---|---|\n| **1641 Massachusetts legalizes slavery** | First English colony to do so. |\n| **1662 Virginia partus law** | Slavery becomes hereditary through the mother. |\n| **1705 Virginia Slave Codes** | Comprehensive race-based legal regime; later models for other colonies. |\n| **1793 cotton gin** | Cotton output soars from ~10,000 bales (1793) to ~4 million bales (1860). |\n| **1808 federal ban on Atlantic slave imports** | Domestic trade replaces Atlantic supply. |\n\n### Sources to attribute\n\n- **Douglass, *Narrative* (1845)** — Argues that literacy is the road to freedom — a reframing of master-slave power.\n- **Jacobs, *Incidents* (1861)** — Reveals gendered violence largely absent from earlier male-authored narratives.\n- **Slave Codes of Virginia (1705)** — Codifies racial hierarchy in colonial law.\n"
     },
     {
       id: "aassia7-quiz",
@@ -22,23 +22,23 @@ export const aasSlaveryInAmericaPart7Data = {
             "question": "A high-scoring AP response on this unit will:",
             "options": [
               "Combine a clear thesis with named figures, dated events, and at least one primary source.",
-              "Memorize dates with no analysis.",
-              "Use only 21st-century examples to discuss earlier periods.",
-              "Avoid citing sources."
+              "Narrate the unit's events in order, with names, dates, and places, but no thesis.",
+              "Open with a strong moral judgment and support it with general claims about the era.",
+              "Restate the prompt as its thesis and end by summarizing each body paragraph."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rubrics consistently reward specificity, sourcing, and clear analytical structure."
+            "explanation": "High-scoring responses pair a defensible thesis with specific evidence: named figures, dated events, and sourced documents. Narration without a claim, moral judgment without evidence, and a restated prompt all fall short."
           },
           {
             "question": "Which is the BEST one-sentence thesis for an essay on Slavery in America?",
             "options": [
-              "During c. 1619–1865, chattel slavery reshaped Black life — visible in 1641 Massachusetts legalizes slavery and Anthony Johnson's career — even as domestic slave trade persisted.",
-              "Slavery in America was important.",
-              "Nothing changed during c. 1619–1865.",
-              "Slavery in America cannot be analyzed."
+              "From 1619 to 1865, slavery hardened into hereditary racial bondage and spread west with cotton, though enslaved people resisted.",
+              "Between 1619 and 1865, slavery hardened into hereditary racial bondage, which is why it was so important.",
+              "Slavery in America was an important institution that affected many people in many different ways.",
+              "Slavery in America began and ended in the South, and it had no effect on the northern economy."
             ],
             "correctAnswer": 0,
-            "explanation": "Strong theses combine a defensible claim with specific evidence and acknowledge complexity."
+            "explanation": "A strong thesis makes a defensible claim, ties it to the period, and acknowledges complexity: legal hardening and westward expansion alongside resistance. A circular claim, a vague claim, or a factual error does not."
           }
         ]
       }
@@ -70,27 +70,27 @@ export const aasSlaveryInAmericaPart7Data = {
             "label": "Contextualization is best demonstrated by ___",
             "options": [
               "Placing the topic within larger historical processes (e.g., the Atlantic World, post-Reconstruction politics).",
-              "Citing only one date with no context.",
-              "Replacing evidence with opinion.",
-              "Using only 21st-century examples for older periods."
+              "Listing the unit's key events (with dates) in strict chronological order.",
+              "Defining each key term before stating the thesis.",
+              "Explaining how a document's author shaped its message."
             ]
           },
           {
             "label": "Causation is best demonstrated by ___",
             "options": [
               "Identifying a specific cause and its specific consequence with named actors.",
-              "A vague slogan.",
-              "An anecdote without analysis.",
-              "A list of names with no explanation."
+              "Showing that two events happened in the same decade.",
+              "Describing one event in detail with named actors.",
+              "Comparing two similar events across different regions."
             ]
           },
           {
             "label": "CCOT is best demonstrated by ___",
             "options": [
               "Pairing a specific continuity with a specific change, both supported with evidence.",
-              "Choosing only continuity OR only change.",
-              "Avoiding dates.",
-              "Replacing evidence with personal preference."
+              "Tracing a sequence of changes, each supported with evidence.",
+              "Arguing that the period was mostly continuous, with one example.",
+              "Comparing two regions at a single moment in time."
             ]
           }
         ],
@@ -102,7 +102,7 @@ export const aasSlaveryInAmericaPart7Data = {
         "hint1": "Contextualization = larger frame.",
         "hint2": "Causation = cause + consequence.",
         "hint3": "CCOT = both halves with evidence.",
-        "explanation": "These are the highest-leverage AP skills tested across MCQ, SAQ, LEQ, and DBQ."
+        "explanation": "These are the highest-leverage AP skills tested across MCQ, SAQ, and DBQ."
       }
     },
     {
@@ -114,24 +114,24 @@ export const aasSlaveryInAmericaPart7Data = {
           {
             "question": "You are writing an SAQ on Slavery in America. The strongest opening sentence is:",
             "options": [
-              "Within c. 1619–1865, Anthony Johnson (c. 1600–1670) advanced chattel slavery — visible in 1641 Massachusetts legalizes slavery — even as domestic slave trade continued.",
-              "Slavery in America happened.",
-              "There is nothing to say about this topic.",
-              "Modern social media debates are the best evidence."
+              "Anthony Johnson's career shows that race and freedom were still fluid in 1600s Virginia, before laws hardened slavery.",
+              "Slavery in America is an important topic that historians have studied for many years.",
+              "Johnson was a free Black man in Virginia, and his story is interesting to historians today.",
+              "In 1641 Massachusetts legalized slavery, and in 1662 Virginia passed its partus law."
             ],
             "correctAnswer": 0,
-            "explanation": "Strong AP openings combine date, figure, mechanism, event, and continuity in a single sentence."
+            "explanation": "A strong SAQ opening ties a named figure to a historical claim about change. A vague claim, a remark about interest, or a list of dates without a claim does not answer the question."
           },
           {
-            "question": "Which closing move strengthens an LEQ on this unit?",
+            "question": "Which closing move strengthens a DBQ essay on this unit?",
             "options": [
               "Synthesizing the topic with Resistance & Abolition via a specific shared cause or consequence.",
-              "Repeating the prompt verbatim.",
-              "Adding a moral judgment with no evidence.",
-              "Listing topics not assigned in the prompt."
+              "Restating the thesis in different words and then summarizing each of the body paragraphs in turn.",
+              "Introducing a new document that none of the body paragraphs ever analyzed.",
+              "Ending with a personal reflection on why the topic still matters today."
             ],
             "correctAnswer": 0,
-            "explanation": "AP synthesis moves earn extra rubric points by connecting units."
+            "explanation": "A strong close extends the argument by linking this unit to another through a specific shared cause or consequence. Restating the thesis, adding unanalyzed evidence, or reflecting personally adds no new analysis."
           }
         ]
       }

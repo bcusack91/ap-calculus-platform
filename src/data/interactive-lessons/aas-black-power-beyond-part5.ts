@@ -21,24 +21,24 @@ export const aasBlackPowerBeyondPart5Data = {
           {
             "question": "Which best describes continuity within Black Power & Beyond?",
             "options": [
-              "Aspects such as black arts movement persisted even as other features changed.",
-              "Nothing about this topic ever changed.",
-              "Continuity is irrelevant to AP scoring.",
-              "Only the most recent decade matters."
+              "Black cultural expression such as the Black Arts Movement persisted as political groups rose and fell.",
+              "Black Power groups kept one fixed ideology and leadership from 1965 to 1980.",
+              "Every Black Power organization stayed active and unchanged through the 1970s.",
+              "Black electoral politics remained entirely absent throughout the period, even after the 1972 Gary convention."
             ],
             "correctAnswer": 0,
-            "explanation": "Continuity = elements that persist across change — a key AP analytical category."
+            "explanation": "Continuity means elements that persist across change: Black cultural expression, from the Black Arts Movement to Black Studies programs, endured as organizations such as SNCC and the Panthers declined. Black Power groups split over ideology, many collapsed under repression and internal conflict, and Black electoral politics grew after Gary (1972)."
           },
           {
             "question": "Which event marks a decisive change within Black Power & Beyond?",
             "options": [
-              "1972 Gary Black Political Convention — ~10,000 delegates draft a National Black Political Agenda.",
-              "An anecdote with no historical impact.",
-              "A 21st-century news headline unrelated to the period.",
-              "A purely literary aesthetic with no political effect."
+              "1972 Gary Black Political Convention — ~10,000 attendees draft a National Black Political Agenda.",
+              "1954 *Brown v. Board of Education* — Unanimous Court strikes down school segregation for Black children.",
+              "1909 NAACP founded — Interracial group launches a legal campaign for Black civil rights and against lynching.",
+              "1963 March on Washington — About 250,000 people rally for Black jobs and freedom at the Lincoln Memorial."
             ],
             "correctAnswer": 0,
-            "explanation": "Specific dated events anchor change-over-time arguments."
+            "explanation": "The 1972 National Black Political Convention in Gary, Indiana, drew some 10,000 participants and adopted a National Black Political Agenda, marking Black Power's turn toward electoral politics. *Brown*, the NAACP's founding, and the March on Washington belong to earlier units."
           }
         ]
       }
@@ -71,8 +71,8 @@ export const aasBlackPowerBeyondPart5Data = {
             "options": [
               "Black Arts Movement",
               "1972 Gary Black Political Convention",
-              "An unrelated modern slogan",
-              "A topic from a different course"
+              "1966 Black Panther Party founded",
+              "1965 Watts uprising"
             ]
           },
           {
@@ -80,17 +80,17 @@ export const aasBlackPowerBeyondPart5Data = {
             "options": [
               "1972 Gary Black Political Convention",
               "Black Arts Movement",
-              "An anecdote with no date",
-              "An unrelated personal opinion"
+              "Calls for community control",
+              "Pan-African solidarity"
             ]
           },
           {
             "label": "An AP CCOT response should ___",
             "options": [
               "Identify both continuities and changes with specific evidence",
-              "Pick only one without analysis",
-              "Avoid using dates",
-              "Replace evidence with opinion"
+              "Trace only the changes, in order, with specific evidence",
+              "Argue that continuity outweighed every change in the period",
+              "Describe the period's main events without a central claim"
             ]
           }
         ],
@@ -114,24 +114,24 @@ export const aasBlackPowerBeyondPart5Data = {
           {
             "question": "Which CCOT thesis is strongest?",
             "options": [
-              "Although black arts movement continued, 1972 Gary Black Political Convention marked a decisive change in Black Power & Beyond.",
-              "Nothing changed and nothing stayed the same.",
-              "Change is impossible to identify in history.",
-              "AP rubrics do not reward CCOT analysis."
+              "Although Black cultural expression endured, the 1972 Gary convention marked a decisive turn toward electoral politics.",
+              "The Gary convention changed everything, so Black activists abandoned all protest and cultural work after 1972.",
+              "Although Gary drew thousands, Black Power mostly stayed the same from 1965 to 1980 in every city.",
+              "The Black Arts Movement and the Gary convention were both important parts of the Black Power era."
             ],
             "correctAnswer": 0,
-            "explanation": "Strong CCOT theses pair specific continuities with specific changes."
+            "explanation": "A strong CCOT thesis names a specific continuity and a specific change and makes a defensible claim about them. Total change, near-total continuity, and a claim that both 'were important' each miss part of that move."
           },
           {
             "question": "Which evidence move is most valuable in a CCOT response?",
             "options": [
               "Naming a specific dated event AND a continuity within the same paragraph.",
-              "Listing dates without analysis.",
-              "Replacing evidence with a moral judgment.",
-              "Citing only post-2010 news stories."
+              "Listing every major date in the unit in chronological order.",
+              "Describing one change in detail without noting what persisted.",
+              "Quoting a historian's verdict on the period in place of evidence."
             ],
             "correctAnswer": 0,
-            "explanation": "AP CCOT scoring rewards paired specificity."
+            "explanation": "CCOT credit needs both halves anchored in evidence: a dated change and a named continuity. A list of dates, a change with no continuity, or a borrowed verdict replaces that analysis."
           }
         ]
       }

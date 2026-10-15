@@ -22,23 +22,23 @@ export const aasCivilRightsMovementPart3Data = {
             "question": "Which case BEST illustrates a pattern central to Civil Rights Movement?",
             "options": [
               "1954 *Brown v. Board of Education* — Unanimous decision overturns *Plessy* in public schools.",
-              "An unrelated event from another century.",
-              "A purely fictional event.",
-              "An anecdote with no documentary support."
+              "1896 *Plessy v. Ferguson* — Court upholds state-mandated 'separate but equal' segregation.",
+              "1919 Red Summer — White mob violence strikes Black communities in dozens of U.S. cities.",
+              "1966 Black Panther Party founded — Oakland group stresses self-defense and community programs."
             ],
             "correctAnswer": 0,
-            "explanation": "Use historically attested events to illustrate patterns."
+            "explanation": "*Brown* (1954) opens this unit and anchors the movement's legal strategy. *Plessy* belongs to the Jim Crow unit, Red Summer to the World War I era, and the Black Panther Party to Black Power."
           },
           {
             "question": "A comparison of 1954 *Brown v. Board of Education* and 1955–1956 Montgomery Bus Boycott is most useful because:",
             "options": [
               "Both cases let students see common patterns and unique local differences in concrete historical detail.",
-              "Both events occurred in identical contexts and produced identical outcomes.",
-              "Comparison is irrelevant to AP scoring.",
-              "Neither event left primary sources for historians."
+              "Both cases show that national NAACP lawyers, not local Black communities, drove every victory.",
+              "Both cases show that segregation ended across the South within a year of each ruling or protest.",
+              "Both cases took place in Alabama, so they reveal only one state's experience of segregation."
             ],
             "correctAnswer": 0,
-            "explanation": "AP comparison rewards specific similarities and differences with named cases."
+            "explanation": "Comparison rewards a specific similarity and a specific difference: both challenged segregation's legitimacy, but *Brown* won through LDF litigation while Montgomery's 381-day boycott relied on local church and community organizing. Local communities were central to both, segregation persisted for years after each, and *Brown* arose from Topeka, Kansas, and companion cases, not Alabama."
           }
         ]
       }
@@ -72,7 +72,7 @@ export const aasCivilRightsMovementPart3Data = {
               "1954 *Brown v. Board of Education*",
               "1955–1956 Montgomery Bus Boycott",
               "1957 Little Rock Nine",
-              "An unrelated 21st-century news story"
+              "1966 Black Panther Party founded"
             ]
           },
           {
@@ -81,7 +81,7 @@ export const aasCivilRightsMovementPart3Data = {
               "1955–1956 Montgomery Bus Boycott",
               "1954 *Brown v. Board of Education*",
               "1957 Little Rock Nine",
-              "An unrelated 21st-century news story"
+              "1965 Watts uprising"
             ]
           },
           {
@@ -90,7 +90,7 @@ export const aasCivilRightsMovementPart3Data = {
               "1957 Little Rock Nine",
               "1954 *Brown v. Board of Education*",
               "1955–1956 Montgomery Bus Boycott",
-              "An unrelated 21st-century news story"
+              "1966 Black Panther Party founded"
             ]
           }
         ],
@@ -114,24 +114,24 @@ export const aasCivilRightsMovementPart3Data = {
           {
             "question": "Using one specific case from Civil Rights Movement, which sentence is the BEST AP comparison move?",
             "options": [
-              "Both 1954 *Brown v. Board of Education* and 1955–1956 Montgomery Bus Boycott reveal legal strategy, but they differ in actors and outcomes.",
-              "Both events were fictional and produced no consequences.",
-              "These events are too old to compare meaningfully.",
-              "Comparison is unimportant in AP rubrics."
+              "Both *Brown* and the Montgomery boycott challenged segregation, but *Brown* used lawyers and Montgomery a mass boycott.",
+              "Both *Brown v. Board* (1954) and the Montgomery Bus Boycott (1955–1956) were important early events in the civil rights movement.",
+              "*Brown* and the Montgomery Bus Boycott differ mainly because one was decided in 1954 and the other began in December 1955.",
+              "Both *Brown* and the Montgomery Bus Boycott show how cruel segregation was, so they should be remembered as moral lessons."
             ],
             "correctAnswer": 0,
-            "explanation": "AP comparison combines a specific shared pattern with a specific difference."
+            "explanation": "A full comparison pairs a shared pattern with a meaningful difference: both attacked segregation, but *Brown* worked through LDF litigation and Montgomery through a mass boycott. A similarity alone, a trivial difference such as date, or a moral judgment does not complete the move."
           },
           {
             "question": "Thurgood Marshall's role in Civil Rights Movement is best illustrated by which event?",
             "options": [
               "1954 *Brown v. Board of Education* — Unanimous decision overturns *Plessy* in public schools.",
-              "An unrelated event in a different century.",
-              "A purely literary publication unconnected to politics.",
-              "An event before the figure was born."
+              "1955 Montgomery Bus Boycott — Local organizers sustain a 381-day boycott of city buses.",
+              "1963 'Letter from Birmingham Jail' — Defense of direct action against white moderates.",
+              "1964 Freedom Summer — Volunteers register Mississippi voters and run Freedom Schools despite violence."
             ],
             "correctAnswer": 0,
-            "explanation": "Tie figures to dated events for high-scoring AP arguments."
+            "explanation": "Marshall argued *Brown v. Board* (1954) as chief counsel of the NAACP Legal Defense Fund. The Montgomery boycott was led by local organizers and King, the 'Letter' was King's, and Freedom Summer was run by SNCC and COFO."
           }
         ]
       }

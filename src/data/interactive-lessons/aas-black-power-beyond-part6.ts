@@ -21,24 +21,24 @@ export const aasBlackPowerBeyondPart6Data = {
           {
             "question": "What makes Black Panther Ten-Point Program (1966) a strong source for studying Black Power & Beyond?",
             "options": [
-              "Programmatic statement of Black Power demands.",
-              "It was published in 2024 with no link to the period.",
-              "It is fictional and includes no historical content.",
-              "It is unsigned and undated."
+              "Lists the party's demands for housing, jobs, schooling, and an end to police brutality.",
+              "Defines institutional racism in a scholarly book written for a broad national readership of the late 1960s.",
+              "Links race, class, and gender in a Black feminist history of U.S. women.",
+              "Sets out a National Black Political Agenda adopted at Gary in 1972."
             ],
             "correctAnswer": 0,
-            "explanation": "Provenance, date, and authorial position determine source value."
+            "explanation": "The Ten-Point Program (1966) set out the Panthers' demands, from decent housing, jobs, and education to an end to police brutality, so it shows Black Power goals in the movement's own words. Defining institutional racism was Carmichael and Hamilton's *Black Power* (1967), the race-class-gender history is Angela Davis's (1981), and the Gary agenda came in 1972."
           },
           {
             "question": "When using a primary source on the AP exam, you should:",
             "options": [
               "Identify author/date/audience and tie the source to a specific claim.",
-              "Quote the source verbatim without analysis.",
-              "Ignore the author's position.",
-              "Treat the source as neutral and unbiased."
+              "Summarize the source's main idea accurately and let it stand as your argument.",
+              "Quote the most striking passage at length so readers can judge its meaning for themselves.",
+              "Treat it as neutral, reliable evidence, since primary sources record events as they happened."
             ],
             "correctAnswer": 0,
-            "explanation": "AP source-use rewards explicit attribution and analytical framing."
+            "explanation": "Source use earns credit when you attribute the source (author, date, audience) and put it to work for a claim. Summary, long quotation, and treating a source as neutral all skip that analysis."
           }
         ]
       }
@@ -72,7 +72,7 @@ export const aasBlackPowerBeyondPart6Data = {
               "Programmatic statement of Black Power demands.",
               "Defines institutional racism.",
               "Synthesizes Black feminism, Marxism, and abolitionism.",
-              "Unrelated to this unit"
+              "Adopts a National Black Political Agenda at Gary."
             ]
           },
           {
@@ -81,7 +81,7 @@ export const aasBlackPowerBeyondPart6Data = {
               "Defines institutional racism.",
               "Programmatic statement of Black Power demands.",
               "Synthesizes Black feminism, Marxism, and abolitionism.",
-              "Unrelated to this unit"
+              "Adopts a National Black Political Agenda at Gary."
             ]
           },
           {
@@ -90,7 +90,7 @@ export const aasBlackPowerBeyondPart6Data = {
               "Synthesizes Black feminism, Marxism, and abolitionism.",
               "Programmatic statement of Black Power demands.",
               "Defines institutional racism.",
-              "Unrelated to this unit"
+              "Adopts a National Black Political Agenda at Gary."
             ]
           }
         ],
@@ -114,24 +114,24 @@ export const aasBlackPowerBeyondPart6Data = {
           {
             "question": "A strong AP citation of Black Panther Ten-Point Program (1966) reads:",
             "options": [
-              "'According to Black Panther Ten-Point Program (1966), …' followed by inference about purpose and historical situation.",
-              "A direct quote with no attribution.",
-              "A loose paraphrase that hides the source's identity.",
-              "An anachronistic reading that ignores the date."
+              "'According to the Panthers' Ten-Point Program (1966), …' followed by inference about purpose and audience.",
+              "'According to the Black Panther Party (1966), …' followed by a long, unbroken quotation from the program, with no comment.",
+              "'The Ten-Point Program is biased,' followed by dismissing its demands as propaganda.",
+              "'One activist group wrote …' followed by a paraphrase that leaves out the author and date."
             ],
             "correctAnswer": 0,
-            "explanation": "Attribution + sourcing analysis is the AP scoring standard."
+            "explanation": "Attribution plus sourcing analysis is the standard: name the source, then explain how its purpose, audience, or historical situation shapes it; Newton and Seale wrote the program for Oakland's Black community amid conflict with police. Quoting without comment, dismissing a source as biased, and hiding its identity all fall short."
           },
           {
             "question": "Which source-analysis move earns the AP 'sourcing' point?",
             "options": [
               "Identifying author, audience, purpose, OR historical situation — and using it to support a claim.",
-              "Quoting verbatim with no analysis.",
-              "Ignoring the source's date.",
-              "Citing only 21st-century opinion pieces."
+              "Restating the source's topic, date, and title — and quoting its most memorable line.",
+              "Explaining whether you agree with the author's view — and describing how it makes you feel about the past.",
+              "Summarizing what the source says accurately — and placing it in chronological order."
             ],
             "correctAnswer": 0,
-            "explanation": "AP DBQ rubrics explicitly reward sourcing analysis tied to claims."
+            "explanation": "Sourcing means explaining how the author's point of view, purpose, audience, or historical situation matters, then using that to support the argument. Restating, quoting, summarizing, or reacting personally does not count."
           }
         ]
       }

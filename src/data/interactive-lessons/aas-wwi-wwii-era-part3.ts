@@ -22,23 +22,23 @@ export const aasWwiWwiiEraPart3Data = {
             "question": "Which case BEST illustrates a pattern central to WWI & WWII Era?",
             "options": [
               "1917 East St. Louis riot — Anti-Black violence during WWI labor migration.",
-              "An unrelated event from another century.",
-              "A purely fictional event.",
-              "An anecdote with no documentary support."
+              "1898 Wilmington insurrection — White supremacists overthrow a biracial city government.",
+              "1955 Montgomery Bus Boycott — Year-long protest ends segregated city bus seating.",
+              "1965 Watts uprising — Unrest erupts in Los Angeles after a police traffic stop."
             ],
             "correctAnswer": 0,
-            "explanation": "Use historically attested events to illustrate patterns."
+            "explanation": "The 1917 East St. Louis riot falls inside 1914–1945 and shows the era's pattern of white violence against Black workers drawn north by wartime jobs. Wilmington belongs to the Jim Crow unit, and Montgomery and Watts to the civil rights era."
           },
           {
             "question": "A comparison of 1917 East St. Louis riot and 1925 Brotherhood of Sleeping Car Porters founded is most useful because:",
             "options": [
               "Both cases let students see common patterns and unique local differences in concrete historical detail.",
-              "Both events occurred in identical contexts and produced identical outcomes.",
-              "Comparison is irrelevant to AP scoring.",
-              "Neither event left primary sources for historians."
+              "Both cases show that white unions welcomed Black workers as equal members throughout the World War I years and after.",
+              "Both cases show that federal troops protected Black workers and their families in Northern cities after 1917.",
+              "Both cases prove that Black labor organizing collapsed for good after the 1917 riot in East St. Louis, Illinois."
             ],
             "correctAnswer": 0,
-            "explanation": "AP comparison rewards specific similarities and differences with named cases."
+            "explanation": "Comparison rewards a specific similarity and a specific difference: both turn on Black workers' place in the industrial economy, but one is white mob violence and the other is Black workers organizing their own union. White unions often excluded Black workers, federal troops did not protect them, and the porters' union was founded after the riot."
           }
         ]
       }
@@ -69,19 +69,19 @@ export const aasWwiWwiiEraPart3Data = {
           {
             "label": "The case most central to Segregated military service is ___",
             "options": [
+              "1918 369th fights under French command",
               "1917 East St. Louis riot",
-              "1925 Brotherhood of Sleeping Car Porters founded",
               "1941 EO 8802 / FEPC created",
-              "An unrelated 21st-century news story"
+              "1925 Brotherhood of Sleeping Car Porters founded"
             ]
           },
           {
             "label": "The case most central to Double V is ___",
             "options": [
-              "1925 Brotherhood of Sleeping Car Porters founded",
+              "1942 *Pittsburgh Courier* launches Double V campaign",
               "1917 East St. Louis riot",
-              "1941 EO 8802 / FEPC created",
-              "An unrelated 21st-century news story"
+              "1925 Brotherhood of Sleeping Car Porters founded",
+              "1918 369th fights under French command"
             ]
           },
           {
@@ -90,13 +90,13 @@ export const aasWwiWwiiEraPart3Data = {
               "1941 EO 8802 / FEPC created",
               "1917 East St. Louis riot",
               "1925 Brotherhood of Sleeping Car Porters founded",
-              "An unrelated 21st-century news story"
+              "1918 369th fights under French command"
             ]
           }
         ],
         "correctAnswers": [
-          "1917 East St. Louis riot",
-          "1925 Brotherhood of Sleeping Car Porters founded",
+          "1918 369th fights under French command",
+          "1942 *Pittsburgh Courier* launches Double V campaign",
           "1941 EO 8802 / FEPC created"
         ],
         "hint1": "Use chronology to disambiguate.",
@@ -114,24 +114,24 @@ export const aasWwiWwiiEraPart3Data = {
           {
             "question": "Using one specific case from WWI & WWII Era, which sentence is the BEST AP comparison move?",
             "options": [
-              "Both 1917 East St. Louis riot and 1925 Brotherhood of Sleeping Car Porters founded reveal segregated military service, but they differ in actors and outcomes.",
-              "Both events were fictional and produced no consequences.",
-              "These events are too old to compare meaningfully.",
-              "Comparison is unimportant in AP rubrics."
+              "Both the 1917 East St. Louis riot and the 1925 Brotherhood of Sleeping Car Porters reveal conflict over Black labor, but they differ in actors and outcomes.",
+              "Both the 1917 East St. Louis riot and the 1925 Brotherhood of Sleeping Car Porters were early parts of Black labor history.",
+              "The 1917 riot and the 1925 founding of the porters' union differ mainly because they happened eight years apart.",
+              "Both the 1917 East St. Louis riot and the 1925 Brotherhood of Sleeping Car Porters show injustice, so they should be remembered as moral lessons."
             ],
             "correctAnswer": 0,
-            "explanation": "AP comparison combines a specific shared pattern with a specific difference."
+            "explanation": "A full comparison pairs a shared pattern with a meaningful difference, here white mobs attacking Black workers versus Black workers organizing a union. A similarity alone, a trivial difference such as date, or a moral judgment does not complete the move."
           },
           {
-            "question": "369th 'Harlem Hellfighters''s role in WWI & WWII Era is best illustrated by which event?",
+            "question": "The role of the 369th 'Harlem Hellfighters' in WWI & WWII Era is best illustrated by which event?",
             "options": [
-              "1917 East St. Louis riot — Anti-Black violence during WWI labor migration.",
-              "An unrelated event in a different century.",
-              "A purely literary publication unconnected to politics.",
-              "An event before the figure was born."
+              "1918 Black regiment fights under French command — The U.S. Army will not let it fight beside white units.",
+              "1917 East St. Louis riot — White mobs attack Black workers recruited to the city's booming wartime factories.",
+              "1925 Brotherhood of Sleeping Car Porters founded — First Black-led union to win a full AFL international charter.",
+              "1941 EO 8802 / FEPC created — Roosevelt bans racial discrimination in defense-industry and federal hiring."
             ],
             "correctAnswer": 0,
-            "explanation": "Tie figures to dated events for high-scoring AP arguments."
+            "explanation": "The 369th was assigned to the French Army in 1918 because the segregated U.S. Army would not send it into combat beside white American units; it went on to spend 191 days in combat. The East St. Louis riot, the porters' union, and EO 8802 are real events in this unit, but none involves the 369th."
           }
         ]
       }

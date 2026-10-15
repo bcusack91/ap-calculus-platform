@@ -10,7 +10,7 @@ export const aasFreedomEnslavementPart2Data = {
     {
       id: "aasfe2-process",
       type: 'text' as const,
-      content: "## Mechanisms in action\n\n| Event | Significance |\n|---|---|\n| **1780 PA Gradual Abolition Act** | First state emancipation law in the Atlantic world. |\n| **1787 Free African Society** | Black mutual-aid organization in Philadelphia. |\n| **1816 American Colonization Society founded** | Promoted resettlement to Liberia; Black opinion sharply divided. |\n| **1830 first National Negro Convention (Philadelphia)** | Black leaders organize collective political response. |\n\n### Causal chains\n\nAP responses on Freedom & Enslavement should make causation explicit. A strong sentence might be:\n\n> Because gradual emancipation in the north intensified, communities responded by citizenship contested, which in turn produced manumission.\n"
+      content: "## Mechanisms in action\n\n| Event | Significance |\n|---|---|\n| **1780 PA Gradual Abolition Act** | First gradual abolition act passed by a state legislature. |\n| **1787 Free African Society** | Black mutual-aid organization in Philadelphia. |\n| **1816 American Colonization Society founded** | Promoted resettlement to Liberia; Black opinion sharply divided. |\n| **1830 first National Negro Convention (Philadelphia)** | Black leaders organize collective political response. |\n\n### Causal chains\n\nAP responses on Freedom & Enslavement should make causation explicit. A strong sentence might be:\n\n> Because gradual emancipation in the north intensified, communities responded by citizenship contested, which in turn produced manumission.\n"
     },
     {
       id: "aasfe2-quiz",
@@ -21,24 +21,24 @@ export const aasFreedomEnslavementPart2Data = {
           {
             "question": "Which BEST describes a primary mechanism shaping Freedom & Enslavement?",
             "options": [
-              "Pennsylvania (1780), New York (1799), New Jersey (1804) freed enslaved people only by birthdates.",
-              "An unrelated technological invention from a different century.",
-              "Pure coincidence with no identifiable cause.",
-              "A modern political slogan with no historical content."
+              "Pennsylvania (1780), New York (1799), and New Jersey (1804) passed acts that freed people gradually, by birthdate.",
+              "Virginia (1782), Maryland (1796), and Kentucky (1799) passed acts that freed every enslaved person within a decade.",
+              "Congress (1808) freed all enslaved people born after the year it closed U.S. ports to the African trade.",
+              "State courts in New York and New Jersey freed all enslaved adults at once, with no term of service."
             ],
             "correctAnswer": 0,
-            "explanation": "Gradual emancipation in the North is the central mechanism the AP exam expects students to explain."
+            "explanation": "Northern gradual emancipation acts in Pennsylvania (1780), New York (1799), and New Jersey (1804) freed children born after the law's date, usually after long indentures. Virginia's 1782 law only eased private manumission, the 1808 ban on imports freed no one, and the New York and New Jersey changes were gradual legislative acts, not court orders."
           },
           {
             "question": "Absalom Jones's career illustrates which historical mechanism?",
             "options": [
               "Co-founded Philadelphia's Free African Society (1787); first Black Episcopal priest.",
-              "Absalom Jones had no impact on Freedom & Enslavement.",
-              "An entirely modern policy debate.",
-              "A purely literary aesthetic."
+              "Founded the AME Church (1816) after leaving St. George's; became the first Black bishop in the U.S.",
+              "Organized African Lodge No. 1 (1784) and petitioned Massachusetts to end slavery (1777).",
+              "Wrote the *Appeal* (1829), which sailors smuggled into Southern ports in their clothing."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rewards specific causal claims tied to named figures."
+            "explanation": "Absalom Jones co-founded the Free African Society with Richard Allen in 1787 and became the first Black Episcopal priest, showing institution building as a path to freedom. The other descriptions fit Richard Allen, Prince Hall, and David Walker."
           }
         ]
       }
@@ -72,7 +72,7 @@ export const aasFreedomEnslavementPart2Data = {
               "Founded the African Methodist Episcopal Church (1816); first Black bishop in the U.S.",
               "Co-founded Philadelphia's Free African Society (1787); first Black Episcopal priest.",
               "Founded the first Black Masonic lodge (1784); petitioned Massachusetts to end slavery.",
-              "Unrelated to this unit"
+              "Wrote the *Appeal* (1829); urged enslaved people to resist slavery by force."
             ]
           },
           {
@@ -81,7 +81,7 @@ export const aasFreedomEnslavementPart2Data = {
               "Co-founded Philadelphia's Free African Society (1787); first Black Episcopal priest.",
               "Founded the African Methodist Episcopal Church (1816); first Black bishop in the U.S.",
               "Founded the first Black Masonic lodge (1784); petitioned Massachusetts to end slavery.",
-              "Unrelated to this unit"
+              "Co-founded *Freedom's Journal* (1827), the first Black-owned newspaper in the U.S."
             ]
           },
           {
@@ -90,7 +90,7 @@ export const aasFreedomEnslavementPart2Data = {
               "Founded the first Black Masonic lodge (1784); petitioned Massachusetts to end slavery.",
               "Founded the African Methodist Episcopal Church (1816); first Black bishop in the U.S.",
               "Co-founded Philadelphia's Free African Society (1787); first Black Episcopal priest.",
-              "Unrelated to this unit"
+              "Wrote the *Appeal* (1829); urged enslaved people to resist slavery by force."
             ]
           }
         ],
@@ -114,24 +114,24 @@ export const aasFreedomEnslavementPart2Data = {
           {
             "question": "A student argues that Freedom & Enslavement happened spontaneously. The strongest counter-argument is:",
             "options": [
-              "Identifying specific actors and processes — e.g., Richard Allen (1760–1831) — that drove the change.",
-              "Insisting that historians cannot know causes.",
-              "Citing only events from outside this period.",
-              "Memorizing dates without analyzing them."
+              "Identifying the specific actors and processes — Black founders like Richard Allen, state legislatures — that drove it.",
+              "Arguing that freedom came mainly from white benevolence — owners and legislators acting without any Black pressure.",
+              "Noting that church records, petitions, and newspapers are too sparse to show any cause at all.",
+              "Pointing out that the Civil War, not early Republic laws or institutions, produced all Black freedom."
             ],
             "correctAnswer": 0,
-            "explanation": "Historical causation requires named actors, dated events, and articulated mechanisms."
+            "explanation": "Historical causation names actors and mechanisms: Black founders such as Richard Allen and Absalom Jones, petitioners such as Prince Hall, and the state legislatures that passed gradual emancipation acts. Black pressure shaped these changes, the period is richly documented, and Northern freedom predates the Civil War."
           },
           {
             "question": "Which mechanism is MOST closely linked to Manumission?",
             "options": [
-              "Owner-granted freedom; often restricted by southern states after 1820s.",
-              "Pennsylvania (1780), New York (1799), New Jersey (1804) freed enslaved people only by birthdates.",
-              "*Dred Scott* (1857) declared people of African descent could never be U.S. citizens.",
-              "A cause from a different historical era."
+              "Owner-granted freedom, by will or deed; increasingly restricted by Southern states after the 1820s.",
+              "Legislative acts freeing children born after a set date, once they had served long terms of indenture.",
+              "Court rulings, such as *Dred Scott* (1857), that settled whether Black Americans could hold citizenship.",
+              "Federal purchase of freedom for enslaved people, funded by Congress and offered in every slave state."
             ],
             "correctAnswer": 0,
-            "explanation": "Manumission has its own historical mechanism distinct from related concepts."
+            "explanation": "Manumission is freedom granted by an owner, by will or deed, which Southern states increasingly restricted. Legislative freeing by birthdate is gradual emancipation, *Dred Scott* concerns contested citizenship, and Congress never funded emancipation across the slave states."
           }
         ]
       }

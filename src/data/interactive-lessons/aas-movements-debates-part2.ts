@@ -22,23 +22,23 @@ export const aasMovementsDebatesPart2Data = {
             "question": "Which BEST describes a primary mechanism shaping Movements & Debates?",
             "options": [
               "Douglass vs. Delany; King vs. Malcolm X; NAACP vs. Nation of Islam.",
-              "An unrelated technological invention from a different century.",
-              "Pure coincidence with no identifiable cause.",
-              "A modern political slogan with no historical content."
+              "Cotton gin; westward expansion; the domestic slave trade.",
+              "Disfranchisement laws; poll taxes; grandfather clauses; lynching.",
+              "War on Drugs; 1986 sentencing law; 1994 Crime Bill; rapid prison growth."
             ],
             "correctAnswer": 0,
-            "explanation": "Integration vs. separatism is the central mechanism the AP exam expects students to explain."
+            "explanation": "The integration-versus-separatism debate, from Douglass and Delany to King and Malcolm X and the NAACP and the Nation of Islam, is the recurring engine of this unit. The other lists describe the mechanisms of slavery's expansion, Jim Crow, and mass incarceration."
           },
           {
             "question": "Booker T. Washington vs. W. E. B. Du Bois's career illustrates which historical mechanism?",
             "options": [
               "Vocational uplift vs. liberal arts and political agitation.",
-              "Booker T. Washington vs. W. E. B. Du Bois had no impact on Movements & Debates.",
-              "An entirely modern policy debate.",
-              "A purely literary aesthetic."
+              "Moral suasion and integration vs. emigration and Black nationalism.",
+              "Nonviolent integration vs. Black nationalism and armed self-defense.",
+              "Interracial civil rights reform vs. Garvey's mass Back-to-Africa movement."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rewards specific causal claims tied to named figures."
+            "explanation": "Washington's Atlanta address (1895) urged vocational training and economic self-help while deferring political rights, and Du Bois's *The Souls of Black Folk* (1903) answered with a call for liberal education and agitation for full rights. The other pairings describe Douglass and Delany, King and Malcolm X, and Du Bois and Garvey."
           }
         ]
       }
@@ -72,7 +72,7 @@ export const aasMovementsDebatesPart2Data = {
               "Moral suasion / integration vs. emigration / Black nationalism.",
               "Vocational uplift vs. liberal arts and political agitation.",
               "Black lesbian feminist statement (1977) defines identity politics.",
-              "Unrelated to this unit"
+              "Nonviolent integration vs. Black nationalism and self-defense."
             ]
           },
           {
@@ -81,7 +81,7 @@ export const aasMovementsDebatesPart2Data = {
               "Vocational uplift vs. liberal arts and political agitation.",
               "Moral suasion / integration vs. emigration / Black nationalism.",
               "Black lesbian feminist statement (1977) defines identity politics.",
-              "Unrelated to this unit"
+              "Nonviolent integration vs. Black nationalism and self-defense."
             ]
           },
           {
@@ -90,7 +90,7 @@ export const aasMovementsDebatesPart2Data = {
               "Black lesbian feminist statement (1977) defines identity politics.",
               "Moral suasion / integration vs. emigration / Black nationalism.",
               "Vocational uplift vs. liberal arts and political agitation.",
-              "Unrelated to this unit"
+              "Nonviolent integration vs. Black nationalism and self-defense."
             ]
           }
         ],
@@ -114,24 +114,24 @@ export const aasMovementsDebatesPart2Data = {
           {
             "question": "A student argues that Movements & Debates happened spontaneously. The strongest counter-argument is:",
             "options": [
-              "Identifying specific actors and processes — e.g., Frederick Douglass vs. Martin Delany (19th c.) — that drove the change.",
-              "Insisting that historians cannot know causes.",
-              "Citing only events from outside this period.",
-              "Memorizing dates without analyzing them."
+              "Identifying the specific actors and debates — Douglass and Delany, Washington and Du Bois — that drove it.",
+              "Agreeing, since these debates arose overnight in the 1960s with no earlier thinkers behind them.",
+              "Noting that sources — speeches, essays, newspapers — are too sparse to show any cause at all.",
+              "Pointing out that these debates were imported from Europe with no roots in Black thought."
             ],
             "correctAnswer": 0,
-            "explanation": "Historical causation requires named actors, dated events, and articulated mechanisms."
+            "explanation": "Historical causation names actors and mechanisms: Douglass and Delany in the 1850s, Washington and Du Bois around 1900, and organizations from the NAACP to the Nation of Islam. These debates are a century older than the 1960s, richly documented in speeches and essays, and rooted in Black experience."
           },
           {
             "question": "Which mechanism is MOST closely linked to Intersectionality?",
             "options": [
               "Crenshaw (1989) — overlapping race, gender, and class generate distinct experiences of inequality.",
               "Douglass vs. Delany; King vs. Malcolm X; NAACP vs. Nation of Islam.",
-              "Du Bois congresses (1900–1945); Garvey UNIA; Kwame Nkrumah; Black Power's African turn.",
-              "A cause from a different historical era."
+              "Pan-African conferences (1900–1945); Garvey's UNIA; Kwame Nkrumah; Black Power's African turn.",
+              "Washington (1895) — vocational training and economic self-help before demands for political rights."
             ],
             "correctAnswer": 0,
-            "explanation": "Intersectionality has its own historical mechanism distinct from related concepts."
+            "explanation": "Intersectionality, Kimberlé Crenshaw's 1989 term, describes how overlapping race, gender, and class create distinct experiences of discrimination. The other options describe the integration-versus-separatism debate, Pan-Africanism, and Washington's accommodationism."
           }
         ]
       }

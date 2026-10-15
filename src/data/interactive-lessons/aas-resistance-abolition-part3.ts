@@ -5,7 +5,7 @@ export const aasResistanceAbolitionPart3Data = {
     {
       id: "aasra3-intro",
       type: 'text' as const,
-      content: "# ✊ Resistance & Abolition\n\n**Part 3 of 7 — Patterns, Regions & Case Studies**\n\n---\n\n## Specific cases — not abstractions\n\n| Event | Significance |\n|---|---|\n| **1739 Stono Rebellion (SC)** | ~20 white deaths; led to the Negro Act of 1740 restricting movement and literacy. |\n| **1791–1804 Haitian Revolution** | Defeats French, Spanish, and British forces; abolishes slavery and founds Haiti. |\n| **1816 AME Church founded** | Richard Allen leads first independent Black denomination in the U.S. |\n| **1831 Nat Turner Rebellion** | Triggers gag rules and harsher slave codes across the South. |\n| **1850 Fugitive Slave Act** | Forces northern compliance; radicalizes northern opinion. |\n| **1859 John Brown's raid on Harpers Ferry** | Brown plans a guerrilla war against slavery; executed but valorized by abolitionists. |\n| **1863 Emancipation Proclamation** | Frees enslaved people in Confederate-held areas; permits Black enlistment. |\n"
+      content: "# ✊ Resistance & Abolition\n\n**Part 3 of 7 — Patterns, Regions & Case Studies**\n\n---\n\n## Specific cases — not abstractions\n\n| Event | Significance |\n|---|---|\n| **1739 Stono Rebellion (SC)** | ~20 white deaths; led to the Negro Act of 1740 restricting movement and literacy. |\n| **1791–1804 Haitian Revolution** | Defeats French, Spanish, and British forces; abolishes slavery and founds Haiti. |\n| **1816 AME Church founded** | Richard Allen leads first independent Black denomination in the U.S. |\n| **1831 Nat Turner Rebellion** | Triggers harsher slave codes and anti-literacy laws across the South. |\n| **1850 Fugitive Slave Act** | Forces northern compliance; radicalizes northern opinion. |\n| **1859 John Brown's raid on Harpers Ferry** | Brown plans a guerrilla war against slavery; executed but valorized by abolitionists. |\n| **1863 Emancipation Proclamation** | Frees enslaved people in Confederate-held areas; permits Black enlistment. |\n"
     },
     {
       id: "aasra3-cases",
@@ -22,23 +22,23 @@ export const aasResistanceAbolitionPart3Data = {
             "question": "Which case BEST illustrates a pattern central to Resistance & Abolition?",
             "options": [
               "1739 Stono Rebellion (SC) — ~20 white deaths; led to the Negro Act of 1740 restricting movement and literacy.",
-              "An unrelated event from another century.",
-              "A purely fictional event.",
-              "An anecdote with no documentary support."
+              "1324 Mansa Musa's hajj (Mali) — ~60,000 attendants; placed Mali on European maps.",
+              "1662 Virginia partus law (VA) — Slavery becomes hereditary; status follows the mother.",
+              "1916 Great Migration (U.S.) — Wartime labor need; Black workers move to Chicago and Detroit."
             ],
             "correctAnswer": 0,
-            "explanation": "Use historically attested events to illustrate patterns."
+            "explanation": "Stono falls inside this unit and shows armed revolt and the harsher laws that followed. Mansa Musa's hajj, the partus law, and the Great Migration belong to other units."
           },
           {
             "question": "A comparison of 1739 Stono Rebellion (SC) and 1791–1804 Haitian Revolution is most useful because:",
             "options": [
               "Both cases let students see common patterns and unique local differences in concrete historical detail.",
-              "Both events occurred in identical contexts and produced identical outcomes.",
-              "Comparison is irrelevant to AP scoring.",
-              "Neither event left primary sources for historians."
+              "Both cases show that armed revolts always succeeded once enough enslaved people joined them in the fighting.",
+              "Both cases show that revolts in the Americas were planned and led mainly by white abolitionists from the North.",
+              "Both cases show that colonial governments answered each revolt by abolishing slavery in the colony at once."
             ],
             "correctAnswer": 0,
-            "explanation": "AP comparison rewards specific similarities and differences with named cases."
+            "explanation": "Comparison rewards a specific similarity and a specific difference. Stono was crushed while Haiti succeeded, both were led by enslaved people, and South Carolina answered Stono with the harsher Negro Act."
           }
         ]
       }
@@ -67,30 +67,30 @@ export const aasResistanceAbolitionPart3Data = {
       exercise: {
         "dropdowns": [
           {
-            "label": "The case most central to Everyday resistance is ___",
+            "label": "The case showing armed revolt that led to harsher slave laws in British North America is ___",
             "options": [
               "1739 Stono Rebellion (SC)",
-              "1791–1804 Haitian Revolution",
               "1816 AME Church founded",
-              "An unrelated 21st-century news story"
+              "1850 Fugitive Slave Act",
+              "1863 Emancipation Proclamation"
             ]
           },
           {
             "label": "The case most central to Armed revolt is ___",
             "options": [
               "1791–1804 Haitian Revolution",
-              "1739 Stono Rebellion (SC)",
               "1816 AME Church founded",
-              "An unrelated 21st-century news story"
+              "1850 Fugitive Slave Act",
+              "1863 Emancipation Proclamation"
             ]
           },
           {
-            "label": "The case most central to Moral suasion vs political action is ___",
+            "label": "The case most central to Black institution building is ___",
             "options": [
               "1816 AME Church founded",
               "1739 Stono Rebellion (SC)",
               "1791–1804 Haitian Revolution",
-              "An unrelated 21st-century news story"
+              "1850 Fugitive Slave Act"
             ]
           }
         ],
@@ -114,24 +114,24 @@ export const aasResistanceAbolitionPart3Data = {
           {
             "question": "Using one specific case from Resistance & Abolition, which sentence is the BEST AP comparison move?",
             "options": [
-              "Both 1739 Stono Rebellion (SC) and 1791–1804 Haitian Revolution reveal everyday resistance, but they differ in actors and outcomes.",
-              "Both events were fictional and produced no consequences.",
-              "These events are too old to compare meaningfully.",
-              "Comparison is unimportant in AP rubrics."
+              "Both Stono (1739) and the Haitian Revolution were armed revolts, but only Haiti's overthrew slavery and won independence.",
+              "Both Stono (1739) and the Haitian Revolution were armed revolts, so their causes and results were the same.",
+              "Both Stono (1739) and the Haitian Revolution were armed revolts, but Stono broke out a full half century before Haiti's did.",
+              "The Haitian Revolution mattered more than Stono, since Haiti was a larger and wealthier colony."
             ],
             "correctAnswer": 0,
-            "explanation": "AP comparison combines a specific shared pattern with a specific difference."
+            "explanation": "A full comparison pairs a shared pattern (armed revolt) with a meaningful difference (only Haiti destroyed slavery and won independence). A similarity alone, a trivial difference such as date, or a ranking does not complete the move."
           },
           {
             "question": "Toussaint L'Ouverture's role in Resistance & Abolition is best illustrated by which event?",
             "options": [
+              "1791–1804 Haitian Revolution — Defeats French, Spanish, and British forces; abolishes slavery and founds Haiti.",
               "1739 Stono Rebellion (SC) — ~20 white deaths; led to the Negro Act of 1740 restricting movement and literacy.",
-              "An unrelated event in a different century.",
-              "A purely literary publication unconnected to politics.",
-              "An event before the figure was born."
+              "1831 Nat Turner Rebellion — Triggers harsher slave codes and anti-literacy laws across the South.",
+              "1859 John Brown's raid on Harpers Ferry — Abolitionist plans a guerrilla war against slavery; executed but valorized."
             ],
             "correctAnswer": 0,
-            "explanation": "Tie figures to dated events for high-scoring AP arguments."
+            "explanation": "Toussaint's role is defined by the Haitian Revolution, which he led until his capture in 1802. Stono occurred before his birth, and Nat Turner's revolt and John Brown's raid were U.S. events after his death."
           }
         ]
       }

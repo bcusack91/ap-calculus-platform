@@ -10,7 +10,7 @@ export const aasOriginsDiasporaPart7Data = {
     {
       id: "aasod7-review",
       type: 'text' as const,
-      content: "## Master review for Origins of the Diaspora\n\n### Concepts to define on demand\n\n| Core concept | What it refers to |\n|---|---|\n| **Diaspora** | Dispersed populations linked by shared African origin and ongoing cultural connections. |\n| **Cultural retention** | Survival of African religious, musical, linguistic, and culinary practices in the Americas. |\n| **Creolization** | Blending of African, European, and Indigenous American forms into new languages and cultures. |\n\n### Figures to deploy\n\n| Figure | Dates | Why they matter |\n|---|---|---|\n| **Olaudah Equiano** | c. 1745–1797 | Igbo-born survivor of the Middle Passage; *The Interesting Narrative* (1789) is a foundational diaspora autobiography. |\n| **Phillis Wheatley** | c. 1753–1784 | Enslaved in Senegambia, sold to a Boston family; first published African American poet (1773). |\n| **Ottobah Cugoano** | c. 1757–after 1791 | Fante-born abolitionist; *Thoughts and Sentiments on the Evil of Slavery* (1787) attacked the trade from London. |\n| **Boukman Dutty** | d. 1791 | Vodou priest who led the Bois Caïman ceremony that ignited the Haitian Revolution. |\n| **Granny Nanny of the Maroons** | c. 1686–c. 1755 | Asante-descended leader of Jamaica's Windward Maroons against the British. |\n\n### Events to cite\n\n| Event | Significance |\n|---|---|\n| **1441 first Portuguese captives to Lisbon** | Beginning of European Atlantic slave trade. |\n| **1500s Portuguese-Kongo slaving** | Trade entangles Central African polities; Afonso I protests. |\n| **1619 Africans arrive at Point Comfort, Virginia** | First recorded enslaved Africans in English North America. |\n| **1655 British seize Jamaica** | Spanish-era enslaved people flee to mountains, establishing maroon communities. |\n| **1739 Treaties with Jamaican Maroons** | British recognize Maroon autonomy after First Maroon War. |\n\n### Sources to attribute\n\n- **Equiano, *The Interesting Narrative* (1789)** — Eyewitness account of Igbo society, capture, and Middle Passage.\n- **Wheatley, *Poems on Various Subjects* (1773)** — Demonstrates literacy and classical education to challenge proslavery claims.\n- **Cugoano, *Thoughts and Sentiments* (1787)** — Direct demand for total abolition by an enslaved survivor.\n"
+      content: "## Master review for Origins of the Diaspora\n\n### Concepts to define on demand\n\n| Core concept | What it refers to |\n|---|---|\n| **Diaspora** | Dispersed populations linked by shared African origin and ongoing cultural connections. |\n| **Cultural retention** | Survival of African religious, musical, linguistic, and culinary practices in the Americas. |\n| **Creolization** | Blending of African, European, and Indigenous American forms into new languages and cultures. |\n\n### Figures to deploy\n\n| Figure | Dates | Why they matter |\n|---|---|---|\n| **Olaudah Equiano** | c. 1745–1797 | Igbo-born survivor of the Middle Passage; *The Interesting Narrative* (1789) is a foundational diaspora autobiography. |\n| **Phillis Wheatley** | c. 1753–1784 | Kidnapped from West Africa as a child, sold to a Boston family; first African American woman to publish a book of poetry (1773). |\n| **Ottobah Cugoano** | c. 1757–after 1791 | Fante-born abolitionist; *Thoughts and Sentiments on the Evil of Slavery* (1787) attacked the trade from London. |\n| **Boukman Dutty** | d. 1791 | Vodou priest who led the Bois Caïman ceremony that ignited the Haitian Revolution. |\n| **Granny Nanny of the Maroons** | c. 1686–c. 1755 | Asante-descended leader of Jamaica's Windward Maroons against the British. |\n\n### Events to cite\n\n| Event | Significance |\n|---|---|\n| **1441 first Portuguese captives to Lisbon** | Beginning of European Atlantic slave trade. |\n| **1500s Portuguese-Kongo slaving** | Trade entangles Central African polities; Afonso I protests. |\n| **1619 Africans arrive at Point Comfort, Virginia** | First recorded enslaved Africans in English North America. |\n| **1655 British seize Jamaica** | Spanish-era enslaved people flee to mountains, establishing maroon communities. |\n| **1739 Treaties with Jamaican Maroons** | British recognize Maroon autonomy after First Maroon War. |\n\n### Sources to attribute\n\n- **Equiano, *The Interesting Narrative* (1789)** — Eyewitness account of Igbo society, capture, and Middle Passage.\n- **Wheatley, *Poems on Various Subjects* (1773)** — Demonstrates literacy and classical education to challenge proslavery claims.\n- **Cugoano, *Thoughts and Sentiments* (1787)** — Direct demand for total abolition by an enslaved survivor.\n"
     },
     {
       id: "aasod7-quiz",
@@ -22,23 +22,23 @@ export const aasOriginsDiasporaPart7Data = {
             "question": "A high-scoring AP response on this unit will:",
             "options": [
               "Combine a clear thesis with named figures, dated events, and at least one primary source.",
-              "Memorize dates with no analysis.",
-              "Use only 21st-century examples to discuss earlier periods.",
-              "Avoid citing sources."
+              "Narrate the unit's events in order, with names, dates, and places, but no thesis.",
+              "Open with a strong moral judgment and support it with general claims about the era.",
+              "Restate the prompt as its thesis and end by summarizing each body paragraph."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rubrics consistently reward specificity, sourcing, and clear analytical structure."
+            "explanation": "High-scoring responses pair a defensible thesis with specific evidence: named figures, dated events, and sourced documents. Narration without a claim, moral judgment without evidence, and a restated prompt all fall short."
           },
           {
             "question": "Which is the BEST one-sentence thesis for an essay on Origins of the Diaspora?",
             "options": [
-              "During c. 1450–1800, diaspora reshaped Black life — visible in 1441 first Portuguese captives to Lisbon and Olaudah Equiano's career — even as creolization persisted.",
-              "Origins of the Diaspora was important.",
-              "Nothing changed during c. 1450–1800.",
-              "Origins of the Diaspora cannot be analyzed."
+              "From 1450 to 1800, the slave trade scattered Africans across the Atlantic, yet creolized cultures kept African forms alive.",
+              "Between 1450 and 1800, the slave trade scattered Africans across the Atlantic and erased their languages, faiths, and music.",
+              "Origins of the Diaspora was an important period that shaped African American history and culture in many different, lasting ways.",
+              "Equiano, Wheatley, and Cugoano were the three most important writers of the eighteenth-century Atlantic world and its debates."
             ],
             "correctAnswer": 0,
-            "explanation": "Strong theses combine a defensible claim with specific evidence and acknowledge complexity."
+            "explanation": "A strong thesis makes a defensible claim, ties it to the period, and acknowledges complexity: dispersal by the trade alongside cultural continuity through creolization. Claiming total erasure is inaccurate, a vague 'important' claim is not defensible, and ranking writers does not address the prompt."
           }
         ]
       }
@@ -70,27 +70,27 @@ export const aasOriginsDiasporaPart7Data = {
             "label": "Contextualization is best demonstrated by ___",
             "options": [
               "Placing the topic within larger historical processes (e.g., the Atlantic World, post-Reconstruction politics).",
-              "Citing only one date with no context.",
-              "Replacing evidence with opinion.",
-              "Using only 21st-century examples for older periods."
+              "Listing the unit's key events (with dates) in strict chronological order.",
+              "Defining each key term before stating the thesis.",
+              "Explaining how a document's author shaped its message."
             ]
           },
           {
             "label": "Causation is best demonstrated by ___",
             "options": [
               "Identifying a specific cause and its specific consequence with named actors.",
-              "A vague slogan.",
-              "An anecdote without analysis.",
-              "A list of names with no explanation."
+              "Showing that two events happened in the same decade.",
+              "Describing one event in detail with named actors.",
+              "Comparing two similar events across different regions."
             ]
           },
           {
             "label": "CCOT is best demonstrated by ___",
             "options": [
               "Pairing a specific continuity with a specific change, both supported with evidence.",
-              "Choosing only continuity OR only change.",
-              "Avoiding dates.",
-              "Replacing evidence with personal preference."
+              "Tracing a sequence of changes, each supported with evidence.",
+              "Arguing that the period was mostly continuous, with one example.",
+              "Comparing two regions at a single moment in time."
             ]
           }
         ],
@@ -102,7 +102,7 @@ export const aasOriginsDiasporaPart7Data = {
         "hint1": "Contextualization = larger frame.",
         "hint2": "Causation = cause + consequence.",
         "hint3": "CCOT = both halves with evidence.",
-        "explanation": "These are the highest-leverage AP skills tested across MCQ, SAQ, LEQ, and DBQ."
+        "explanation": "These are the highest-leverage AP skills tested across MCQ, SAQ, and DBQ."
       }
     },
     {
@@ -114,24 +114,24 @@ export const aasOriginsDiasporaPart7Data = {
           {
             "question": "You are writing an SAQ on Origins of the Diaspora. The strongest opening sentence is:",
             "options": [
-              "Within c. 1450–1800, Olaudah Equiano (c. 1745–1797) advanced diaspora — visible in 1441 first Portuguese captives to Lisbon — even as creolization continued.",
-              "Origins of the Diaspora happened.",
-              "There is nothing to say about this topic.",
-              "Modern social media debates are the best evidence."
+              "Equiano's *Narrative* (1789) shows the trade uprooting Igbo captives who still carried African memory into the Americas.",
+              "The African diaspora is a very important topic that historians have debated for many years.",
+              "*The Interesting Narrative* (1789) by Olaudah Equiano is a famous book that many students still read in school today.",
+              "In 1441 the Portuguese brought captives to Lisbon, and in 1619 Africans reached Virginia."
             ],
             "correctAnswer": 0,
-            "explanation": "Strong AP openings combine date, figure, mechanism, event, and continuity in a single sentence."
+            "explanation": "A strong SAQ opening ties a named figure and dated source to a claim about change and continuity. A vague claim, a remark about a book's fame, or a list of dates without a claim does not answer the question."
           },
           {
-            "question": "Which closing move strengthens an LEQ on this unit?",
+            "question": "Which closing move strengthens a DBQ essay on this unit?",
             "options": [
               "Synthesizing the topic with African Kingdoms via a specific shared cause or consequence.",
-              "Repeating the prompt verbatim.",
-              "Adding a moral judgment with no evidence.",
-              "Listing topics not assigned in the prompt."
+              "Restating the thesis in different words and then summarizing each of the body paragraphs in turn.",
+              "Introducing a new document that none of the body paragraphs ever analyzed.",
+              "Ending with a personal reflection on why the topic still matters today."
             ],
             "correctAnswer": 0,
-            "explanation": "AP synthesis moves earn extra rubric points by connecting units."
+            "explanation": "A strong close extends the argument by linking this unit to another through a specific shared cause or consequence. Restating the thesis, adding unanalyzed evidence, or reflecting personally adds no new analysis."
           }
         ]
       }

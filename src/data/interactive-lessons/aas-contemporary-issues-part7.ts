@@ -10,7 +10,7 @@ export const aasContemporaryIssuesPart7Data = {
     {
       id: "aasci7-review",
       type: 'text' as const,
-      content: "## Master review for Contemporary Issues\n\n### Concepts to define on demand\n\n| Core concept | What it refers to |\n|---|---|\n| **Mass incarceration** | U.S. prison population rose from ~300,000 (1972) to ~2.3 million (2008); Black men incarcerated at 5–6× white rate. |\n| **Color-blind racism** | Post-Civil Rights ideology that ignores structural inequality (Eduardo Bonilla-Silva). |\n| **Movement for Black Lives** | Decentralized network founded 2013; broadens civil-rights agenda to police violence, abolition, intersectionality. |\n\n### Figures to deploy\n\n| Figure | Dates | Why they matter |\n|---|---|---|\n| **Jesse Jackson** | b. 1941 | 1984 and 1988 Democratic presidential campaigns; Rainbow Coalition. |\n| **Toni Morrison** | 1931–2019 | Nobel Prize 1993; *Beloved* (1987) reframes American memory of slavery. |\n| **Cornel West** | b. 1953 | *Race Matters* (1993); Black prophetic Christian intellectual. |\n| **Barack Obama** | b. 1961 | First Black U.S. president (2009–2017). |\n| **Patrisse Cullors, Alicia Garza, Opal Tometi** | founded BLM 2013 | Following the acquittal of Trayvon Martin's killer. |\n\n### Events to cite\n\n| Event | Significance |\n|---|---|\n| **1986 Anti-Drug Abuse Act** | 100:1 crack/powder cocaine sentencing disparity. |\n| **1992 LA Uprising** | After Rodney King verdict; ~63 deaths. |\n| **1994 Crime Bill** | Three-strikes mandatory minimums; truth-in-sentencing grants. |\n| **2008 Obama elected** | First Black U.S. president. |\n| **2013 *Shelby County v. Holder*** | Strikes VRA Section 5 preclearance formula. |\n\n### Sources to attribute\n\n- **Alexander, *The New Jim Crow* (2010)** — Argues mass incarceration is a racial caste system.\n- **Coates, 'The Case for Reparations' (2014)** — Frames housing discrimination and HOLC redlining as theft.\n- **BLM founding statement (2013)** — Centers Black queer and women's lives within the movement.\n"
+      content: "## Master review for Contemporary Issues\n\n### Concepts to define on demand\n\n| Core concept | What it refers to |\n|---|---|\n| **Mass incarceration** | U.S. prison population rose from ~300,000 (1972) to ~2.3 million (2008); Black men incarcerated at 5–6× white rate. |\n| **Color-blind racism** | Post-Civil Rights ideology that ignores structural inequality (Eduardo Bonilla-Silva). |\n| **Movement for Black Lives** | Decentralized network founded 2013; broadens civil-rights agenda to police violence, abolition, intersectionality. |\n\n### Figures to deploy\n\n| Figure | Dates | Why they matter |\n|---|---|---|\n| **Jesse Jackson** | b. 1941 | 1984 and 1988 Democratic presidential campaigns; Rainbow Coalition. |\n| **Toni Morrison** | 1931–2019 | Nobel Prize 1993; *Beloved* (1987) reframes American memory of slavery. |\n| **Cornel West** | b. 1953 | *Race Matters* (1993); Black prophetic Christian intellectual. |\n| **Barack Obama** | b. 1961 | First Black U.S. president (2009–2017). |\n| **Patrisse Cullors, Alicia Garza, Opal Tometi** | founded BLM 2013 | Following the acquittal of Trayvon Martin's killer. |\n\n### Events to cite\n\n| Event | Significance |\n|---|---|\n| **1986 Anti-Drug Abuse Act** | 100:1 crack/powder cocaine sentencing disparity. |\n| **1992 LA Uprising** | After Rodney King verdict; ~63 deaths. |\n| **1994 Crime Bill** | Three-strikes mandatory minimums; truth-in-sentencing grants. |\n| **2008 Obama elected** | First Black U.S. president. |\n| **2013 *Shelby County v. Holder*** | Strikes the VRA Section 4(b) coverage formula, idling Section 5 preclearance. |\n\n### Sources to attribute\n\n- **Alexander, *The New Jim Crow* (2010)** — Argues mass incarceration is a racial caste system.\n- **Coates, 'The Case for Reparations' (2014)** — Frames housing discrimination and HOLC redlining as theft.\n- **BLM founding statement (2013)** — Centers Black queer and women's lives within the movement.\n"
     },
     {
       id: "aasci7-quiz",
@@ -22,23 +22,23 @@ export const aasContemporaryIssuesPart7Data = {
             "question": "A high-scoring AP response on this unit will:",
             "options": [
               "Combine a clear thesis with named figures, dated events, and at least one primary source.",
-              "Memorize dates with no analysis.",
-              "Use only 21st-century examples to discuss earlier periods.",
-              "Avoid citing sources."
+              "Narrate the unit's events in order, with names, dates, and places, but no thesis.",
+              "Open with a strong moral judgment and support it with general claims about the era.",
+              "Restate the prompt as its thesis and end by summarizing each body paragraph."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rubrics consistently reward specificity, sourcing, and clear analytical structure."
+            "explanation": "High-scoring responses pair a defensible thesis with specific evidence: named figures, dated events, and sourced documents. Narration without a claim, moral judgment without evidence, and a restated prompt all fall short."
           },
           {
             "question": "Which is the BEST one-sentence thesis for an essay on Contemporary Issues?",
             "options": [
-              "During 1980–present, mass incarceration reshaped Black life — visible in 1986 Anti-Drug Abuse Act and Jesse Jackson's career — even as movement for black lives persisted.",
-              "Contemporary Issues was important.",
-              "Nothing changed during 1980–present.",
-              "Contemporary Issues cannot be analyzed."
+              "Since 1980, mass incarceration has deepened racial inequality even as Black Americans gained new political and cultural power.",
+              "Since 1980, the United States has become a post-racial society in which race no longer shapes life chances.",
+              "Contemporary Issues is an important topic that has shaped African American history and American politics in many different and lasting ways.",
+              "Jackson, Morrison, and Obama were the three most important Black Americans of the late twentieth and early twenty-first centuries."
             ],
             "correctAnswer": 0,
-            "explanation": "Strong theses combine a defensible claim with specific evidence and acknowledge complexity."
+            "explanation": "A strong thesis makes a defensible claim, ties it to the period, and acknowledges complexity: mass incarceration deepened inequality while Black Americans gained political and cultural power. The post-racial claim is inaccurate, a vague 'important' claim is not defensible, and ranking figures does not address the prompt."
           }
         ]
       }
@@ -70,27 +70,27 @@ export const aasContemporaryIssuesPart7Data = {
             "label": "Contextualization is best demonstrated by ___",
             "options": [
               "Placing the topic within larger historical processes (e.g., the Atlantic World, post-Reconstruction politics).",
-              "Citing only one date with no context.",
-              "Replacing evidence with opinion.",
-              "Using only 21st-century examples for older periods."
+              "Listing the unit's key events (with dates) in strict chronological order.",
+              "Defining each key term before stating the thesis.",
+              "Explaining how a document's author shaped its message."
             ]
           },
           {
             "label": "Causation is best demonstrated by ___",
             "options": [
               "Identifying a specific cause and its specific consequence with named actors.",
-              "A vague slogan.",
-              "An anecdote without analysis.",
-              "A list of names with no explanation."
+              "Showing that two events happened in the same decade.",
+              "Describing one event in detail with named actors.",
+              "Comparing two similar events across different regions."
             ]
           },
           {
             "label": "CCOT is best demonstrated by ___",
             "options": [
               "Pairing a specific continuity with a specific change, both supported with evidence.",
-              "Choosing only continuity OR only change.",
-              "Avoiding dates.",
-              "Replacing evidence with personal preference."
+              "Tracing a sequence of changes, each supported with evidence.",
+              "Arguing that the period was mostly continuous, with one example.",
+              "Comparing two regions at a single moment in time."
             ]
           }
         ],
@@ -102,7 +102,7 @@ export const aasContemporaryIssuesPart7Data = {
         "hint1": "Contextualization = larger frame.",
         "hint2": "Causation = cause + consequence.",
         "hint3": "CCOT = both halves with evidence.",
-        "explanation": "These are the highest-leverage AP skills tested across MCQ, SAQ, LEQ, and DBQ."
+        "explanation": "These are the highest-leverage AP skills tested across MCQ, SAQ, and DBQ."
       }
     },
     {
@@ -114,24 +114,24 @@ export const aasContemporaryIssuesPart7Data = {
           {
             "question": "You are writing an SAQ on Contemporary Issues. The strongest opening sentence is:",
             "options": [
-              "Within 1980–present, Jesse Jackson (b. 1941) advanced mass incarceration — visible in 1986 Anti-Drug Abuse Act — even as movement for black lives continued.",
-              "Contemporary Issues happened.",
-              "There is nothing to say about this topic.",
-              "Modern social media debates are the best evidence."
+              "The 1986 Anti-Drug Abuse Act's 100:1 crack penalty shows how drug policy drove Black mass incarceration after 1980.",
+              "Mass incarceration is a very important topic that historians have debated for many years.",
+              "*The New Jim Crow* (2010) by Michelle Alexander is a famous book that many students still read today.",
+              "In 1986 Congress passed a drug law, in 1992 Los Angeles erupted, and in 2008 Obama won."
             ],
             "correctAnswer": 0,
-            "explanation": "Strong AP openings combine date, figure, mechanism, event, and continuity in a single sentence."
+            "explanation": "A strong SAQ opening ties a specific, dated piece of evidence to a claim about change in the period. A vague claim, a remark about a book's fame, or a list of dates without a claim does not answer the question."
           },
           {
-            "question": "Which closing move strengthens an LEQ on this unit?",
+            "question": "Which closing move strengthens a DBQ essay on this unit?",
             "options": [
               "Synthesizing the topic with Movements & Debates via a specific shared cause or consequence.",
-              "Repeating the prompt verbatim.",
-              "Adding a moral judgment with no evidence.",
-              "Listing topics not assigned in the prompt."
+              "Restating the thesis in different words and then summarizing each of the body paragraphs in turn.",
+              "Introducing a new document that none of the body paragraphs ever analyzed.",
+              "Ending with a personal reflection on why the topic still matters today."
             ],
             "correctAnswer": 0,
-            "explanation": "AP synthesis moves earn extra rubric points by connecting units."
+            "explanation": "A strong close extends the argument by linking this unit to another through a specific shared cause or consequence. Restating the thesis, adding unanalyzed evidence, or reflecting personally adds no new analysis."
           }
         ]
       }

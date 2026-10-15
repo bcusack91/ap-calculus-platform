@@ -22,23 +22,23 @@ export const aasAfricanKingdomsPart2Data = {
             "question": "Which BEST describes a primary mechanism shaping African Kingdoms?",
             "options": [
               "Camel caravans linked West Africa with North Africa, exchanging gold, salt, copper, kola nuts, and enslaved people.",
-              "An unrelated technological invention from a different century.",
-              "Pure coincidence with no identifiable cause.",
-              "A modern political slogan with no historical content."
+              "Sugar plantations along the West African coast supplied Europe with sugar, cotton, and tobacco well before 1400.",
+              "Portuguese naval patrols controlled West Africa's gold, salt, and ivory trade from the Gulf of Guinea long before the 1400s.",
+              "Monsoon routes carried Mali's gold directly to China in exchange for porcelain, silk, and tea."
             ],
             "correctAnswer": 0,
-            "explanation": "Trans-Saharan trade is the central mechanism the AP exam expects students to explain."
+            "explanation": "Trans-Saharan caravan trade was the central mechanism: gold, salt, copper, kola nuts, and enslaved people moved between West and North Africa, enriching Ghana, Mali, and Songhai. There were no West African export plantations before 1400, the Portuguese arrived only in the 1400s, and Mali's gold flowed north across the Sahara."
           },
           {
             "question": "Mansa Musa's career illustrates which historical mechanism?",
             "options": [
               "Mali emperor whose 1324 hajj distributed so much gold it depressed Cairo's currency for a decade; commissioned Djinguereber Mosque at Timbuktu.",
-              "Mansa Musa had no impact on African Kingdoms.",
-              "An entirely modern policy debate.",
-              "A purely literary aesthetic."
+              "Founder of the Mali Empire who defeated the Sosso king Sumanguru at Kirina (1235) and is celebrated in the griots' epic.",
+              "Songhai ruler who seized Timbuktu (1468) and Djenné (1473), building the cavalry army that made Songhai the largest empire in Sahel history.",
+              "King of Kongo who converted to Catholicism; in 1526 he wrote to Portugal protesting slave-raiding by Portuguese merchants in his realm."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rewards specific causal claims tied to named figures."
+            "explanation": "Mansa Musa's 1324 hajj and his patronage of Timbuktu show how trans-Saharan gold and Islam linked Mali to the wider Muslim world. The other descriptions fit Sundiata Keita, Sunni Ali, and Afonso I of Kongo."
           }
         ]
       }
@@ -72,7 +72,7 @@ export const aasAfricanKingdomsPart2Data = {
               "Founder of the Mali Empire; defeated the Sosso at the Battle of Kirina (1235); preserved in the *Epic of Sundiata*.",
               "Mali emperor whose 1324 hajj distributed so much gold it depressed Cairo's currency for a decade; commissioned Djinguereber Mosque at Timbuktu.",
               "Songhai ruler who centralized administration, performed his own hajj, and elevated Timbuktu's Sankore Madrasa.",
-              "Unrelated to this unit"
+              "King of Kongo who converted to Catholicism, then in 1526 protested Portuguese slave-raiding."
             ]
           },
           {
@@ -81,7 +81,7 @@ export const aasAfricanKingdomsPart2Data = {
               "Mali emperor whose 1324 hajj distributed so much gold it depressed Cairo's currency for a decade; commissioned Djinguereber Mosque at Timbuktu.",
               "Founder of the Mali Empire; defeated the Sosso at the Battle of Kirina (1235); preserved in the *Epic of Sundiata*.",
               "Songhai ruler who centralized administration, performed his own hajj, and elevated Timbuktu's Sankore Madrasa.",
-              "Unrelated to this unit"
+              "Moroccan jurist whose *Rihla* gives an eyewitness account of Mansa Suleyman's court."
             ]
           },
           {
@@ -90,7 +90,7 @@ export const aasAfricanKingdomsPart2Data = {
               "Songhai ruler who centralized administration, performed his own hajj, and elevated Timbuktu's Sankore Madrasa.",
               "Founder of the Mali Empire; defeated the Sosso at the Battle of Kirina (1235); preserved in the *Epic of Sundiata*.",
               "Mali emperor whose 1324 hajj distributed so much gold it depressed Cairo's currency for a decade; commissioned Djinguereber Mosque at Timbuktu.",
-              "Unrelated to this unit"
+              "King of Kongo who converted to Catholicism, then in 1526 protested Portuguese slave-raiding."
             ]
           }
         ],
@@ -114,13 +114,13 @@ export const aasAfricanKingdomsPart2Data = {
           {
             "question": "A student argues that African Kingdoms happened spontaneously. The strongest counter-argument is:",
             "options": [
-              "Identifying specific actors and processes — e.g., Sundiata Keita (r. c. 1235–1255) — that drove the change.",
-              "Insisting that historians cannot know causes.",
-              "Citing only events from outside this period.",
-              "Memorizing dates without analyzing them."
+              "Identifying the actors and processes — Sundiata's conquests, caravan trade, Islamic learning — that built these states.",
+              "Arguing that these states grew mainly from Portuguese contact — the coastal trade in gold and captives that began in the 1440s.",
+              "Insisting that griots, chroniclers, and travelers are too unreliable to show any cause at all.",
+              "Pointing out that Mali and Songhai simply inherited Ghana's power without any new state-building."
             ],
             "correctAnswer": 0,
-            "explanation": "Historical causation requires named actors, dated events, and articulated mechanisms."
+            "explanation": "Causation requires named actors and mechanisms: Sundiata's conquests, taxation of caravan trade, and Islamic scholarship built Mali and Songhai. These empires predate Portuguese contact, oral and written sources do reveal causes, and each empire was built through new conquest and administration."
           },
           {
             "question": "Which mechanism is MOST closely linked to Islamic scholarship?",
@@ -128,10 +128,10 @@ export const aasAfricanKingdomsPart2Data = {
               "Cities like Timbuktu and Djenné became centers of Quranic learning and law (Maliki school).",
               "Camel caravans linked West Africa with North Africa, exchanging gold, salt, copper, kola nuts, and enslaved people.",
               "Mali and Songhai built tax systems, standing armies, and provincial governors over millions of subjects.",
-              "A cause from a different historical era."
+              "Coastal kingdoms adopted Christianity through Portuguese missions (Kongo, 1491)."
             ],
             "correctAnswer": 0,
-            "explanation": "Islamic scholarship has its own historical mechanism distinct from related concepts."
+            "explanation": "Islamic scholarship refers to Timbuktu and Djenné as centers of Quranic learning and Maliki law. Caravan trade and centralized administration are related but distinct mechanisms, and Kongo's conversion to Catholicism is a different religious story."
           }
         ]
       }

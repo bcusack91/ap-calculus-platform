@@ -10,7 +10,7 @@ export const aasOriginsDiasporaPart1Data = {
     {
       id: "aasod1-figures",
       type: 'text' as const,
-      content: "## 📖 Key Figures of Origins of the Diaspora\n\n| Figure | Dates | Why they matter |\n|---|---|---|\n| **Olaudah Equiano** | c. 1745–1797 | Igbo-born survivor of the Middle Passage; *The Interesting Narrative* (1789) is a foundational diaspora autobiography. |\n| **Phillis Wheatley** | c. 1753–1784 | Enslaved in Senegambia, sold to a Boston family; first published African American poet (1773). |\n| **Ottobah Cugoano** | c. 1757–after 1791 | Fante-born abolitionist; *Thoughts and Sentiments on the Evil of Slavery* (1787) attacked the trade from London. |\n| **Boukman Dutty** | d. 1791 | Vodou priest who led the Bois Caïman ceremony that ignited the Haitian Revolution. |\n| **Granny Nanny of the Maroons** | c. 1686–c. 1755 | Asante-descended leader of Jamaica's Windward Maroons against the British. |\n\n> ⚠️ **AP Alert:** Strong responses cite specific figures by name and date — e.g., 'Olaudah Equiano (c. 1745–1797)' rather than 'a famous leader.'"
+      content: "## 📖 Key Figures of Origins of the Diaspora\n\n| Figure | Dates | Why they matter |\n|---|---|---|\n| **Olaudah Equiano** | c. 1745–1797 | Igbo-born survivor of the Middle Passage; *The Interesting Narrative* (1789) is a foundational diaspora autobiography. |\n| **Phillis Wheatley** | c. 1753–1784 | Kidnapped from West Africa as a child, sold to a Boston family; first African American woman to publish a book of poetry (1773). |\n| **Ottobah Cugoano** | c. 1757–after 1791 | Fante-born abolitionist; *Thoughts and Sentiments on the Evil of Slavery* (1787) attacked the trade from London. |\n| **Boukman Dutty** | d. 1791 | Vodou priest who led the Bois Caïman ceremony that ignited the Haitian Revolution. |\n| **Granny Nanny of the Maroons** | c. 1686–c. 1755 | Asante-descended leader of Jamaica's Windward Maroons against the British. |\n\n> ⚠️ **AP Alert:** Strong responses cite specific figures by name and date — e.g., 'Olaudah Equiano (c. 1745–1797)' rather than 'a famous leader.'"
     },
     {
       id: "aasod1-quiz1",
@@ -21,24 +21,24 @@ export const aasOriginsDiasporaPart1Data = {
           {
             "question": "Which statement BEST captures why Origins of the Diaspora is foundational to AP African American History?",
             "options": [
-              "The African diaspora refers to the global dispersal of African-descended peoples — primarily through the transatlantic slave trade — and the cultural, linguistic, and religious continuities they preserved across the Americas, Caribbean, and Atlantic Europe.",
-              "Origins of the Diaspora is primarily a literary movement with no political implications.",
-              "Origins of the Diaspora only matters to one decade and rarely appears on the AP exam.",
-              "Origins of the Diaspora is studied to memorize dates without analyzing causes."
+              "It traces how the slave trade scattered Africans across the Atlantic and how they kept faiths, music, and languages alive.",
+              "It shows that most captives landed in mainland North America, where African languages, religions, and music were quickly erased.",
+              "It traces a voluntary migration of West African merchants to Lisbon and Seville, where they built self-governing trading quarters.",
+              "It explains how African states stayed cut off from Atlantic commerce until European colonial conquest in the late nineteenth century."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rewards students who can articulate why Origins of the Diaspora matters in the broader course narrative, not just describe it."
+            "explanation": "The African diaspora is the global dispersal of African-descended peoples, primarily through the transatlantic slave trade, together with the cultural, linguistic, and religious continuities they preserved across the Americas, the Caribbean, and Atlantic Europe. Only about 3.6% of captives reached mainland North America, the movement was forced rather than voluntary, and African states were deeply involved in Atlantic trade from the 1400s."
           },
           {
             "question": "Olaudah Equiano (c. 1745–1797) is significant in this unit primarily because:",
             "options": [
               "Igbo-born survivor of the Middle Passage; *The Interesting Narrative* (1789) is a foundational diaspora autobiography.",
-              "Olaudah Equiano opposed every form of African American institution building.",
-              "Olaudah Equiano lived after the events of Origins of the Diaspora ended.",
-              "Olaudah Equiano is mentioned only in passing on the AP exam."
+              "Fante-born abolitionist; his *Thoughts and Sentiments on the Evil of Slavery* (1787) demanded total abolition from London.",
+              "Vodou priest; led the Bois Caïman ceremony (1791) that helped ignite the Haitian Revolution.",
+              "Asante-descended leader of Jamaica's Windward Maroons; fought the British until the 1739–40 treaties."
             ],
             "correctAnswer": 0,
-            "explanation": "Olaudah Equiano is one of the central named figures the AP exam expects students to deploy when writing about Origins of the Diaspora."
+            "explanation": "Equiano was Igbo-born, survived the Middle Passage, and published *The Interesting Narrative* in 1789. The other descriptions belong to Ottobah Cugoano, Boukman Dutty, and Granny Nanny of the Maroons."
           }
         ]
       }
@@ -77,7 +77,7 @@ export const aasOriginsDiasporaPart1Data = {
               "Dispersed populations linked by shared African origin and ongoing cultural connections.",
               "Survival of African religious, musical, linguistic, and culinary practices in the Americas.",
               "Blending of African, European, and Indigenous American forms into new languages and cultures.",
-              "An unrelated modern policy debate"
+              "Forced assimilation that erased African identities within a single generation."
             ]
           },
           {
@@ -86,7 +86,7 @@ export const aasOriginsDiasporaPart1Data = {
               "Survival of African religious, musical, linguistic, and culinary practices in the Americas.",
               "Dispersed populations linked by shared African origin and ongoing cultural connections.",
               "Blending of African, European, and Indigenous American forms into new languages and cultures.",
-              "A 21st-century technology trend"
+              "Gradual loss of African practices as enslaved people adopted European ones."
             ]
           },
           {
@@ -95,7 +95,7 @@ export const aasOriginsDiasporaPart1Data = {
               "Blending of African, European, and Indigenous American forms into new languages and cultures.",
               "Dispersed populations linked by shared African origin and ongoing cultural connections.",
               "Survival of African religious, musical, linguistic, and culinary practices in the Americas.",
-              "An economic theory unrelated to this period"
+              "Strict separation of African and European cultures under colonial slave codes."
             ]
           }
         ],
@@ -119,24 +119,24 @@ export const aasOriginsDiasporaPart1Data = {
           {
             "question": "A historian argues that Origins of the Diaspora is essential for understanding African American history. Which evidence BEST supports the claim?",
             "options": [
-              "Olaudah Equiano (c. 1745–1797) — Igbo-born survivor of the Middle Passage; *The Interesting Narrative* (1789) is a foundational diaspora autobiography.",
-              "A 21st-century pop song references Origins of the Diaspora without historical context.",
-              "Origins of the Diaspora is unrelated to broader trends in U.S. or Atlantic history.",
-              "There are no primary sources for this period."
+              "Olaudah Equiano (c. 1745–1797) — Igbo-born Middle Passage survivor; *The Interesting Narrative* (1789) is a founding slave narrative.",
+              "Ottobah Cugoano (c. 1757–after 1791) — Igbo-born author of *The Interesting Narrative* (1789), the best-known Middle Passage account of its era.",
+              "Boukman Dutty (d. 1791) — Jamaican Maroon leader whose 1739 treaty with Britain secured Maroon autonomy in the Blue Mountains.",
+              "Granny Nanny (c. 1686–c. 1755) — Vodou priestess; led the Bois Caïman ceremony (1791) that began the Haitian Revolution."
             ],
             "correctAnswer": 0,
-            "explanation": "Strong AP arguments cite specific historical actors and dates, not anachronistic or vague references."
+            "explanation": "Strong AP arguments cite accurately attributed actors and dates. Equiano wrote *The Interesting Narrative*; Cugoano was Fante-born and wrote *Thoughts and Sentiments*; Boukman led Bois Caïman in Saint-Domingue; Nanny led Jamaica's Windward Maroons."
           },
           {
             "question": "Which statement most accurately describes the historical context of Origins of the Diaspora?",
             "options": [
-              "The African diaspora refers to the global dispersal of African-descended peoples — primarily through the transatlantic slave trade — and the cultural, linguistic, and religious continuities they preserved across the Americas, Caribbean, and Atlantic Europe.",
-              "Origins of the Diaspora occurred entirely outside any global or transregional context.",
-              "Origins of the Diaspora produced no documentary evidence and is impossible to study.",
-              "Origins of the Diaspora only appears on AP optional questions."
+              "The slave trade dispersed Africans across the Americas, the Caribbean, and Europe, where they preserved and adapted African cultures.",
+              "Most Africans in the Atlantic trade were carried to mainland North America, which received over half of all who survived the voyage.",
+              "European crews seized most captives themselves in inland raids; African states and merchants played no part in supplying the coast.",
+              "The diaspora began when Dutch ships first carried Africans to Brazil in the 1620s, long after Europeans had begun trading with Africa."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rewards contextualization — placing the topic within larger historical processes."
+            "explanation": "Contextualization places the topic in the larger Atlantic process: the slave trade dispersed African-descended peoples across the Americas, the Caribbean, and Atlantic Europe, where they preserved cultural, linguistic, and religious continuities. Mainland North America received only about 3.6% of survivors; African states and merchants supplied most captives; and Portuguese trafficking began in the 1440s."
           }
         ]
       }

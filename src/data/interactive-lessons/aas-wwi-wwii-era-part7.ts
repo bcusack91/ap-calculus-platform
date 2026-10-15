@@ -22,23 +22,23 @@ export const aasWwiWwiiEraPart7Data = {
             "question": "A high-scoring AP response on this unit will:",
             "options": [
               "Combine a clear thesis with named figures, dated events, and at least one primary source.",
-              "Memorize dates with no analysis.",
-              "Use only 21st-century examples to discuss earlier periods.",
-              "Avoid citing sources."
+              "Narrate the unit's events in order, with names, dates, and places, but no thesis.",
+              "Open with a strong moral judgment and support it with general claims about the era.",
+              "Restate the prompt as its thesis and end by summarizing each body paragraph."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rubrics consistently reward specificity, sourcing, and clear analytical structure."
+            "explanation": "High-scoring responses pair a defensible thesis with specific evidence: named figures, dated events, and sourced documents. Narration without a claim, moral judgment without evidence, and a restated prompt all fall short."
           },
           {
             "question": "Which is the BEST one-sentence thesis for an essay on WWI & WWII Era?",
             "options": [
-              "During 1914–1945, segregated military service reshaped Black life — visible in 1917 East St. Louis riot and 369th 'Harlem Hellfighters''s career — even as federal employment opening persisted.",
-              "WWI & WWII Era was important.",
-              "Nothing changed during 1914–1945.",
-              "WWI & WWII Era cannot be analyzed."
+              "From 1914 to 1945, Black Americans served in segregated units abroad, and that contradiction turned wartime service into demands for rights at home.",
+              "Between 1914 and 1945, Black military service won full integration of the armed forces and ended Jim Crow in the South.",
+              "WWI & WWII Era was an important period that shaped African American history and civil rights in many lasting ways.",
+              "A. Philip Randolph, Charles Hamilton Houston, and the Tuskegee Airmen were the most important figures of the era."
             ],
             "correctAnswer": 0,
-            "explanation": "Strong theses combine a defensible claim with specific evidence and acknowledge complexity."
+            "explanation": "A strong thesis makes a defensible claim, ties it to the period, and acknowledges complexity: segregated service abroad alongside rising demands for rights at home. Claiming full integration is inaccurate, a vague 'important' claim is not defensible, and ranking figures does not address the prompt."
           }
         ]
       }
@@ -70,27 +70,27 @@ export const aasWwiWwiiEraPart7Data = {
             "label": "Contextualization is best demonstrated by ___",
             "options": [
               "Placing the topic within larger historical processes (e.g., the Atlantic World, post-Reconstruction politics).",
-              "Citing only one date with no context.",
-              "Replacing evidence with opinion.",
-              "Using only 21st-century examples for older periods."
+              "Listing the unit's key events (with dates) in strict chronological order.",
+              "Defining each key term before stating the thesis.",
+              "Explaining how a document's author shaped its message."
             ]
           },
           {
             "label": "Causation is best demonstrated by ___",
             "options": [
               "Identifying a specific cause and its specific consequence with named actors.",
-              "A vague slogan.",
-              "An anecdote without analysis.",
-              "A list of names with no explanation."
+              "Showing that two events happened in the same decade.",
+              "Describing one event in detail with named actors.",
+              "Comparing two similar events across different regions."
             ]
           },
           {
             "label": "CCOT is best demonstrated by ___",
             "options": [
               "Pairing a specific continuity with a specific change, both supported with evidence.",
-              "Choosing only continuity OR only change.",
-              "Avoiding dates.",
-              "Replacing evidence with personal preference."
+              "Tracing a sequence of changes, each supported with evidence.",
+              "Arguing that the period was mostly continuous, with one example.",
+              "Comparing two regions at a single moment in time."
             ]
           }
         ],
@@ -102,7 +102,7 @@ export const aasWwiWwiiEraPart7Data = {
         "hint1": "Contextualization = larger frame.",
         "hint2": "Causation = cause + consequence.",
         "hint3": "CCOT = both halves with evidence.",
-        "explanation": "These are the highest-leverage AP skills tested across MCQ, SAQ, LEQ, and DBQ."
+        "explanation": "These are the highest-leverage AP skills tested across MCQ, SAQ, and DBQ."
       }
     },
     {
@@ -114,24 +114,24 @@ export const aasWwiWwiiEraPart7Data = {
           {
             "question": "You are writing an SAQ on WWI & WWII Era. The strongest opening sentence is:",
             "options": [
-              "Within 1914–1945, 369th 'Harlem Hellfighters' (1917–1919) advanced segregated military service — visible in 1917 East St. Louis riot — even as federal employment opening continued.",
-              "WWI & WWII Era happened.",
-              "There is nothing to say about this topic.",
-              "Modern social media debates are the best evidence."
+              "The 369th's 191 days in combat (1918) under French command show Black valor abroad amid segregation in the U.S. Army.",
+              "The world wars are a very important topic that historians have debated for many years.",
+              "The *Pittsburgh Courier*'s Double V campaign (1942) is a famous slogan that many students still learn about in school today.",
+              "In 1917 a riot struck East St. Louis, and in 1941 Roosevelt issued EO 8802."
             ],
             "correctAnswer": 0,
-            "explanation": "Strong AP openings combine date, figure, mechanism, event, and continuity in a single sentence."
+            "explanation": "A strong SAQ opening ties a named unit and dated event to a claim about change and continuity. A vague claim, a remark about a slogan's fame, or a list of dates without a claim does not answer the question."
           },
           {
-            "question": "Which closing move strengthens an LEQ on this unit?",
+            "question": "Which closing move strengthens a DBQ essay on this unit?",
             "options": [
               "Synthesizing the topic with Civil Rights Movement via a specific shared cause or consequence.",
-              "Repeating the prompt verbatim.",
-              "Adding a moral judgment with no evidence.",
-              "Listing topics not assigned in the prompt."
+              "Restating the thesis in different words and then summarizing each of the body paragraphs in turn.",
+              "Introducing a new document that none of the body paragraphs ever analyzed.",
+              "Ending with a personal reflection on why the topic still matters today."
             ],
             "correctAnswer": 0,
-            "explanation": "AP synthesis moves earn extra rubric points by connecting units."
+            "explanation": "A strong close extends the argument by linking this unit to another through a specific shared cause or consequence. Restating the thesis, adding unanalyzed evidence, or reflecting personally adds no new analysis."
           }
         ]
       }

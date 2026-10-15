@@ -10,7 +10,7 @@ export const aasSlaveryInAmericaPart2Data = {
     {
       id: "aassia2-process",
       type: 'text' as const,
-      content: "## Mechanisms in action\n\n| Event | Significance |\n|---|---|\n| **1641 Massachusetts legalizes slavery** | First English colony to do so. |\n| **1662 Virginia partus law** | Slavery becomes hereditary through the mother. |\n| **1705 Virginia Slave Codes** | Comprehensive race-based legal regime; later models for other colonies. |\n| **1793 cotton gin** | Cotton acreage soars from ~10,000 bales (1793) to ~4 million (1860). |\n\n### Causal chains\n\nAP responses on Slavery in America should make causation explicit. A strong sentence might be:\n\n> Because chattel slavery intensified, communities responded by domestic slave trade, which in turn produced partus sequitur ventrem.\n"
+      content: "## Mechanisms in action\n\n| Event | Significance |\n|---|---|\n| **1641 Massachusetts legalizes slavery** | First English colony to do so. |\n| **1662 Virginia partus law** | Slavery becomes hereditary through the mother. |\n| **1705 Virginia Slave Codes** | Comprehensive race-based legal regime; later models for other colonies. |\n| **1793 cotton gin** | Cotton output soars from ~10,000 bales (1793) to ~4 million bales (1860). |\n\n### Causal chains\n\nAP responses on Slavery in America should make causation explicit. A strong sentence might be:\n\n> Because chattel slavery intensified, communities responded by domestic slave trade, which in turn produced partus sequitur ventrem.\n"
     },
     {
       id: "aassia2-quiz",
@@ -22,23 +22,23 @@ export const aasSlaveryInAmericaPart2Data = {
             "question": "Which BEST describes a primary mechanism shaping Slavery in America?",
             "options": [
               "Legal status defining humans as inheritable property — distinct from indenture or serfdom.",
-              "An unrelated technological invention from a different century.",
-              "Pure coincidence with no identifiable cause.",
-              "A modern political slogan with no historical content."
+              "Temporary contract labor — servants freed after four to seven years, often with land, tools, or clothing.",
+              "Feudal tenure — peasants bound to the land but never owned or sold apart from it.",
+              "Wage labor — free workers hired by the day or season and paid in cash or credit."
             ],
             "correctAnswer": 0,
-            "explanation": "Chattel slavery is the central mechanism the AP exam expects students to explain."
+            "explanation": "Chattel slavery made people inheritable property, which distinguished it from indenture (a fixed term), serfdom (bound to land), and wage labor."
           },
           {
             "question": "Eli Whitney's career illustrates which historical mechanism?",
             "options": [
               "Cotton gin (1793) made short-staple cotton profitable, expanding slavery into the Deep South.",
-              "Eli Whitney had no impact on Slavery in America.",
-              "An entirely modern policy debate.",
-              "A purely literary aesthetic."
+              "Steamboat (1807) opened western rivers to trade, carrying slavery north into the Ohio Valley.",
+              "Mechanical reaper (1831) mechanized grain harvests, shrinking slavery's role in the Upper South.",
+              "Railroad (1830s) linked Northern factories to Southern ports, ending planters' need for slave labor."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rewards specific causal claims tied to named figures."
+            "explanation": "Whitney's cotton gin made short-staple cotton profitable and drove slavery's expansion into the Deep South. The steamboat was Fulton's and slavery was barred north of the Ohio; the reaper was McCormick's; railroads did not end planters' reliance on enslaved labor."
           }
         ]
       }
@@ -72,7 +72,7 @@ export const aasSlaveryInAmericaPart2Data = {
               "Angolan-born Virginia free Black who himself owned servants — illustrates pre-1660s fluidity.",
               "Cotton gin (1793) made short-staple cotton profitable, expanding slavery into the Deep South.",
               "Free Black New Yorker kidnapped into Louisiana slavery; *Twelve Years a Slave* (1853).",
-              "Unrelated to this unit"
+              "*Narrative* (1845) describes Maryland slavery and the path to literacy as resistance."
             ]
           },
           {
@@ -81,7 +81,7 @@ export const aasSlaveryInAmericaPart2Data = {
               "Cotton gin (1793) made short-staple cotton profitable, expanding slavery into the Deep South.",
               "Angolan-born Virginia free Black who himself owned servants — illustrates pre-1660s fluidity.",
               "Free Black New Yorker kidnapped into Louisiana slavery; *Twelve Years a Slave* (1853).",
-              "Unrelated to this unit"
+              "*Incidents in the Life of a Slave Girl* (1861) — first-person account of sexual exploitation."
             ]
           },
           {
@@ -90,7 +90,7 @@ export const aasSlaveryInAmericaPart2Data = {
               "Free Black New Yorker kidnapped into Louisiana slavery; *Twelve Years a Slave* (1853).",
               "Angolan-born Virginia free Black who himself owned servants — illustrates pre-1660s fluidity.",
               "Cotton gin (1793) made short-staple cotton profitable, expanding slavery into the Deep South.",
-              "Unrelated to this unit"
+              "*Narrative* (1845) describes Maryland slavery and the path to literacy as resistance."
             ]
           }
         ],
@@ -114,13 +114,13 @@ export const aasSlaveryInAmericaPart2Data = {
           {
             "question": "A student argues that Slavery in America happened spontaneously. The strongest counter-argument is:",
             "options": [
-              "Identifying specific actors and processes — e.g., Anthony Johnson (c. 1600–1670) — that drove the change.",
-              "Insisting that historians cannot know causes.",
-              "Citing only events from outside this period.",
-              "Memorizing dates without analyzing them."
+              "Identifying the actors and processes — colonial legislatures, planters, cotton markets — that hardened slavery.",
+              "Arguing that slavery grew mainly from African traditions — the practices that captives themselves brought to the colonies.",
+              "Insisting that court records, slave codes, and plantation ledgers are far too sparse to reveal any of its causes.",
+              "Pointing out that slavery was fully formed by 1619 and never changed in law or in everyday practice after that."
             ],
             "correctAnswer": 0,
-            "explanation": "Historical causation requires named actors, dated events, and articulated mechanisms."
+            "explanation": "Causation requires named actors and mechanisms: colonial legislatures wrote slave codes, planters demanded labor, and cotton markets drove expansion. Slavery was a colonial creation, it is richly documented, and it changed greatly between 1619 and 1865."
           },
           {
             "question": "Which mechanism is MOST closely linked to Partus sequitur ventrem?",
@@ -128,10 +128,10 @@ export const aasSlaveryInAmericaPart2Data = {
               "Virginia 1662 law: a child's status follows the mother's, making slavery hereditary.",
               "Legal status defining humans as inheritable property — distinct from indenture or serfdom.",
               "After 1808 ban on imports, ~1 million people forcibly relocated from Upper to Lower South.",
-              "A cause from a different historical era."
+              "Codes of 1705: enslaved people barred from bearing arms or from leaving a plantation without a pass."
             ],
             "correctAnswer": 0,
-            "explanation": "Partus sequitur ventrem has its own historical mechanism distinct from related concepts."
+            "explanation": "*Partus sequitur ventrem* is Virginia's 1662 rule that a child's status follows the mother's. Chattel status, the domestic slave trade, and the 1705 slave codes are related but distinct."
           }
         ]
       }

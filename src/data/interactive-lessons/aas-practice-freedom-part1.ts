@@ -10,7 +10,7 @@ export const aasPracticeFreedomPart1Data = {
     {
       id: "aaspf1-figures",
       type: 'text' as const,
-      content: "## 📖 Key Figures of Practice of Freedom\n\n| Figure | Dates | Why they matter |\n|---|---|---|\n| **Mary McLeod Bethune** | 1875–1955 | Founded Bethune-Cookman (1904); FDR's 'Black Cabinet' coordinator; founded NCNW (1935). |\n| **Ida B. Wells** | 1862–1931 | Anti-lynching crusader; co-founder NAACP (1909); suffragist. |\n| **Madam C. J. Walker** | 1867–1919 | First Black woman millionaire; built haircare empire and trained ~40,000 Black women agents. |\n| **Carter G. Woodson** | 1875–1950 | Founded ASNLH (1915) and 'Negro History Week' (1926; later Black History Month). |\n| **Charles Hamilton Houston** | 1895–1950 | Howard Law dean; mentored Thurgood Marshall; designed NAACP legal strategy. |\n\n> ⚠️ **AP Alert:** Strong responses cite specific figures by name and date — e.g., 'Mary McLeod Bethune (1875–1955)' rather than 'a famous leader.'"
+      content: "## 📖 Key Figures of Practice of Freedom\n\n| Figure | Dates | Why they matter |\n|---|---|---|\n| **Mary McLeod Bethune** | 1875–1955 | Founded Bethune-Cookman (1904); FDR's 'Black Cabinet' coordinator; founded NCNW (1935). |\n| **Ida B. Wells** | 1862–1931 | Anti-lynching crusader; co-founder NAACP (1909); suffragist. |\n| **Madam C. J. Walker** | 1867–1919 | Self-made haircare entrepreneur, often called the first Black woman millionaire; trained ~40,000 Black women agents. |\n| **Carter G. Woodson** | 1875–1950 | Founded ASNLH (1915) and 'Negro History Week' (1926; later Black History Month). |\n| **Charles Hamilton Houston** | 1895–1950 | Howard Law dean; mentored Thurgood Marshall; designed NAACP legal strategy. |\n\n> ⚠️ **AP Alert:** Strong responses cite specific figures by name and date — e.g., 'Mary McLeod Bethune (1875–1955)' rather than 'a famous leader.'"
     },
     {
       id: "aaspf1-quiz1",
@@ -21,24 +21,24 @@ export const aasPracticeFreedomPart1Data = {
           {
             "question": "Which statement BEST captures why Practice of Freedom is foundational to AP African American History?",
             "options": [
-              "Black Americans built an entire counter-public — churches, HBCUs, fraternal orders, newspapers, sororities, banks, baseball leagues, and women's clubs — that sustained community life and trained generations of activists, intellectuals, and leaders.",
-              "Practice of Freedom is primarily a literary movement with no political implications.",
-              "Practice of Freedom only matters to one decade and rarely appears on the AP exam.",
-              "Practice of Freedom is studied to memorize dates without analyzing causes."
+              "Black communities built churches, colleges, newspapers, and clubs that sustained daily life and trained generations of activists.",
+              "Black institutions were founded mainly by white philanthropists, who chose their leaders, teachers, curricula, and editorial lines.",
+              "Segregation left Black communities with no institutions of their own until federal programs arrived in the 1960s.",
+              "Black churches, colleges, and newspapers stayed out of politics, so they played no part in later civil-rights struggles."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rewards students who can articulate why Practice of Freedom matters in the broader course narrative, not just describe it."
+            "explanation": "The unit is foundational because Black Americans built a counter-public of churches, HBCUs, fraternal orders, newspapers, women's clubs, banks, and baseball leagues that sustained community life and trained activists and leaders. Black leaders founded and ran most of these institutions, they long predated the 1960s, and they became staging grounds for civil-rights organizing."
           },
           {
             "question": "Mary McLeod Bethune (1875–1955) is significant in this unit primarily because:",
             "options": [
-              "Founded Bethune-Cookman (1904); FDR's 'Black Cabinet' coordinator; founded NCNW (1935).",
-              "Mary McLeod Bethune opposed every form of African American institution building.",
-              "Mary McLeod Bethune lived after the events of Practice of Freedom ended.",
-              "Mary McLeod Bethune is mentioned only in passing on the AP exam."
+              "Founded a Daytona school for Black girls (1904); FDR's 'Black Cabinet' coordinator; founded NCNW (1935).",
+              "Founded ASNLH (1915); launched 'Negro History Week' (1926); wrote *The Mis-Education of the Negro* (1933).",
+              "Anti-lynching crusader; co-founded the NAACP (1909); organized Chicago's Alpha Suffrage Club (1913).",
+              "Haircare entrepreneur; trained thousands of sales agents; gave to the NAACP's antilynching fund (1919)."
             ],
             "correctAnswer": 0,
-            "explanation": "Mary McLeod Bethune is one of the central named figures the AP exam expects students to deploy when writing about Practice of Freedom."
+            "explanation": "Mary McLeod Bethune founded the Daytona school that became Bethune-Cookman (1904), coordinated FDR's 'Black Cabinet,' and founded the National Council of Negro Women (1935). The other descriptions belong to Carter G. Woodson, Ida B. Wells, and Madam C. J. Walker."
           }
         ]
       }
@@ -46,7 +46,7 @@ export const aasPracticeFreedomPart1Data = {
     {
       id: "aaspf1-context",
       type: 'text' as const,
-      content: "## Historical Context\n\n| Event | Significance |\n|---|---|\n| **1881 Tuskegee Institute founded** | Vocational education model under Booker T. Washington. |\n| **1896 NACW founded** | National Association of Colored Women — 'Lifting as We Climb.' |\n| **1909 NAACP founded** | Du Bois, Wells, Mary White Ovington. |\n\n### Primary sources to know\n\n- **Wells, *Crusade for Justice* (autobiography, pub. 1970)** — Anti-lynching organizing memoir.\n- **Woodson, *The Mis-Education of the Negro* (1933)** — Critique of curriculum that erases Black history.\n- ***Pittsburgh Courier* archives** — Largest-circulation Black weekly of the early 20th c.\n"
+      content: "## Historical Context\n\n| Event | Significance |\n|---|---|\n| **1881 Tuskegee Institute founded** | Vocational education model under Booker T. Washington. |\n| **1896 NACW founded** | National Association of Colored Women — 'Lifting as We Climb.' |\n| **1909 NAACP founded** | Du Bois, Wells, Mary White Ovington. |\n\n### Primary sources to know\n\n- **Wells, *Crusade for Justice* (autobiography, pub. 1970)** — Anti-lynching organizing memoir.\n- **Woodson, *The Mis-Education of the Negro* (1933)** — Critique of curriculum that erases Black history.\n- ***Pittsburgh Courier* archives** — Largest-circulation Black weekly by the late 1930s.\n"
     },
     {
       id: "aaspf1-input",
@@ -77,7 +77,7 @@ export const aasPracticeFreedomPart1Data = {
               "AME (1816), AMEZ (1821), National Baptist (1895) — institutional bedrock of Black civic life.",
               "Howard (1867), Fisk (1866), Spelman (1881), Morehouse (1867), Tuskegee (1881).",
               "*Freedom's Journal* (1827), *Chicago Defender* (1905), *Pittsburgh Courier* (1907).",
-              "An unrelated modern policy debate"
+              "Federal agencies that ran Black civic life after Reconstruction."
             ]
           },
           {
@@ -86,7 +86,7 @@ export const aasPracticeFreedomPart1Data = {
               "Howard (1867), Fisk (1866), Spelman (1881), Morehouse (1867), Tuskegee (1881).",
               "AME (1816), AMEZ (1821), National Baptist (1895) — institutional bedrock of Black civic life.",
               "*Freedom's Journal* (1827), *Chicago Defender* (1905), *Pittsburgh Courier* (1907).",
-              "A 21st-century technology trend"
+              "White-run academies that barred Black students until the 1950s."
             ]
           },
           {
@@ -95,7 +95,7 @@ export const aasPracticeFreedomPart1Data = {
               "*Freedom's Journal* (1827), *Chicago Defender* (1905), *Pittsburgh Courier* (1907).",
               "AME (1816), AMEZ (1821), National Baptist (1895) — institutional bedrock of Black civic life.",
               "Howard (1867), Fisk (1866), Spelman (1881), Morehouse (1867), Tuskegee (1881).",
-              "An economic theory unrelated to this period"
+              "Government bulletins that reported on Black communities."
             ]
           }
         ],
@@ -120,23 +120,23 @@ export const aasPracticeFreedomPart1Data = {
             "question": "A historian argues that Practice of Freedom is essential for understanding African American history. Which evidence BEST supports the claim?",
             "options": [
               "Mary McLeod Bethune (1875–1955) — Founded Bethune-Cookman (1904); FDR's 'Black Cabinet' coordinator; founded NCNW (1935).",
-              "A 21st-century pop song references Practice of Freedom without historical context.",
-              "Practice of Freedom is unrelated to broader trends in U.S. or Atlantic history.",
-              "There are no primary sources for this period."
+              "Ida B. Wells (1862–1931) — Founded Bethune-Cookman (1904); FDR's 'Black Cabinet' coordinator; founded NCNW (1935).",
+              "Carter G. Woodson (1875–1950) — Self-made haircare entrepreneur; trained ~40,000 Black women as sales agents.",
+              "Madam C. J. Walker (1867–1919) — Founded ASNLH (1915) and 'Negro History Week' (1926), which later became Black History Month."
             ],
             "correctAnswer": 0,
-            "explanation": "Strong AP arguments cite specific historical actors and dates, not anachronistic or vague references."
+            "explanation": "Strong AP arguments cite accurately attributed actors and dates. Bethune founded Bethune-Cookman and the NCNW; Ida B. Wells led the antilynching crusade; Carter G. Woodson founded the ASNLH and Negro History Week; Madam C. J. Walker built a haircare business."
           },
           {
             "question": "Which statement most accurately describes the historical context of Practice of Freedom?",
             "options": [
-              "Black Americans built an entire counter-public — churches, HBCUs, fraternal orders, newspapers, sororities, banks, baseball leagues, and women's clubs — that sustained community life and trained generations of activists, intellectuals, and leaders.",
-              "Practice of Freedom occurred entirely outside any global or transregional context.",
-              "Practice of Freedom produced no documentary evidence and is impossible to study.",
-              "Practice of Freedom only appears on AP optional questions."
+              "Barred from white institutions, Black Americans built their own churches, colleges, presses, and clubs as bases for community and protest.",
+              "Welcomed into white institutions after 1865, Black Americans saw little need for separate churches, colleges, or newspapers.",
+              "Led by federal agencies, Black colleges and newspapers were run from Washington until the New Deal ended in the 1940s.",
+              "Shut out of public life, Black Americans kept their churches strictly religious and avoided politics until the 1950s."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rewards contextualization — placing the topic within larger historical processes."
+            "explanation": "Contextualization places the topic in a larger process: excluded by segregation, Black Americans built their own churches, HBCUs, newspapers, and clubs, which served as bases for community life and protest. White institutions largely excluded Black Americans, Black leaders ran these institutions, and Black churches were political long before the 1950s."
           }
         ]
       }

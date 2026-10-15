@@ -21,24 +21,24 @@ export const aasCivilRightsMovementPart1Data = {
           {
             "question": "Which statement BEST captures why Civil Rights Movement is foundational to AP African American History?",
             "options": [
-              "From *Brown v. Board* (1954) through the Civil Rights Act (1964) and Voting Rights Act (1965), a generation of organizers, lawyers, students, and ordinary people dismantled de jure segregation through litigation, mass nonviolent direct action, voter registration, and federal legislation.",
-              "Civil Rights Movement is primarily a literary movement with no political implications.",
-              "Civil Rights Movement only matters to one decade and rarely appears on the AP exam.",
-              "Civil Rights Movement is studied to memorize dates without analyzing causes."
+              "From *Brown* (1954) to the Voting Rights Act (1965), litigation, direct action, and federal law dismantled de jure segregation.",
+              "From *Plessy* (1896) to the Civil Rights Act (1964), federal courts alone ended segregation, with little role for local organizers or mass protest.",
+              "From the March on Washington (1963) onward, the movement focused on northern housing, leaving southern voting laws unchanged until the 1980s.",
+              "From the Montgomery boycott (1955) to Selma (1965), the movement won mainly through armed self-defense rather than courts, Congress, or protest."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rewards students who can articulate why Civil Rights Movement matters in the broader course narrative, not just describe it."
+            "explanation": "Between *Brown v. Board* (1954) and the Voting Rights Act (1965), organizers, lawyers, students, and ordinary people dismantled de jure segregation through litigation, nonviolent direct action, voter registration, and federal legislation. Courts did not act alone, southern voting changed sharply right after 1965, and the movement's victories came through nonviolent protest and federal law rather than armed self-defense."
           },
           {
             "question": "Thurgood Marshall (1908–1993) is significant in this unit primarily because:",
             "options": [
               "Chief NAACP LDF counsel in *Brown*; first Black Supreme Court Justice (1967).",
-              "Thurgood Marshall opposed every form of African American institution building.",
-              "Thurgood Marshall lived after the events of Civil Rights Movement ended.",
-              "Thurgood Marshall is mentioned only in passing on the AP exam."
+              "Directed SNCC's Mississippi voter drives; organized Freedom Summer (1964).",
+              "Helped found SNCC at Shaw University (1960); championed group-centered leadership.",
+              "Chief organizer of the March on Washington (1963); pacifist adviser to King."
             ],
             "correctAnswer": 0,
-            "explanation": "Thurgood Marshall is one of the central named figures the AP exam expects students to deploy when writing about Civil Rights Movement."
+            "explanation": "Marshall led the NAACP Legal Defense Fund's litigation, argued *Brown v. Board* (1954), and became the first Black Supreme Court Justice in 1967. The other descriptions fit Bob Moses, Ella Baker, and Bayard Rustin."
           }
         ]
       }
@@ -77,7 +77,7 @@ export const aasCivilRightsMovementPart1Data = {
               "NAACP LDF litigation campaign building toward *Brown v. Board* (1954).",
               "Boycotts, sit-ins, freedom rides, marches under Gandhian/Christian discipline.",
               "1957 and 1964 Civil Rights Acts; 1965 Voting Rights Act with Section 5 preclearance.",
-              "An unrelated modern policy debate"
+              "Armed self-defense by groups such as the Deacons for Defense (1964)."
             ]
           },
           {
@@ -86,7 +86,7 @@ export const aasCivilRightsMovementPart1Data = {
               "Boycotts, sit-ins, freedom rides, marches under Gandhian/Christian discipline.",
               "NAACP LDF litigation campaign building toward *Brown v. Board* (1954).",
               "1957 and 1964 Civil Rights Acts; 1965 Voting Rights Act with Section 5 preclearance.",
-              "A 21st-century technology trend"
+              "Black Power calls for community control and self-defense after 1966."
             ]
           },
           {
@@ -95,7 +95,7 @@ export const aasCivilRightsMovementPart1Data = {
               "1957 and 1964 Civil Rights Acts; 1965 Voting Rights Act with Section 5 preclearance.",
               "NAACP LDF litigation campaign building toward *Brown v. Board* (1954).",
               "Boycotts, sit-ins, freedom rides, marches under Gandhian/Christian discipline.",
-              "An economic theory unrelated to this period"
+              "Southern 'massive resistance' to court-ordered school desegregation."
             ]
           }
         ],
@@ -120,23 +120,23 @@ export const aasCivilRightsMovementPart1Data = {
             "question": "A historian argues that Civil Rights Movement is essential for understanding African American history. Which evidence BEST supports the claim?",
             "options": [
               "Thurgood Marshall (1908–1993) — Chief NAACP LDF counsel in *Brown*; first Black Supreme Court Justice (1967).",
-              "A 21st-century pop song references Civil Rights Movement without historical context.",
-              "Civil Rights Movement is unrelated to broader trends in U.S. or Atlantic history.",
-              "There are no primary sources for this period."
+              "Medgar Evers (1925–1963) — Chief NAACP LDF counsel in *Brown*; later the first Black Solicitor General (1965).",
+              "Ralph Abernathy (1926–1990) — Founded SNCC at Shaw University (1960); wrote 'Letter from Birmingham Jail.'",
+              "Fannie Lou Hamer (1917–1977) — Led the Montgomery Improvement Association; first Black congresswoman."
             ],
             "correctAnswer": 0,
-            "explanation": "Strong AP arguments cite specific historical actors and dates, not anachronistic or vague references."
+            "explanation": "Strong AP arguments cite accurately attributed actors and dates. Marshall argued *Brown* and joined the Supreme Court in 1967 (he was also the first Black Solicitor General); Evers was the NAACP's Mississippi field secretary; Ella Baker convened SNCC's founding and King wrote the 'Letter'; King led the Montgomery Improvement Association, and Shirley Chisholm was the first Black congresswoman."
           },
           {
             "question": "Which statement most accurately describes the historical context of Civil Rights Movement?",
             "options": [
-              "From *Brown v. Board* (1954) through the Civil Rights Act (1964) and Voting Rights Act (1965), a generation of organizers, lawyers, students, and ordinary people dismantled de jure segregation through litigation, mass nonviolent direct action, voter registration, and federal legislation.",
-              "Civil Rights Movement occurred entirely outside any global or transregional context.",
-              "Civil Rights Movement produced no documentary evidence and is impossible to study.",
-              "Civil Rights Movement only appears on AP optional questions."
+              "From 1954 to 1965, Black lawyers, students, and organizers dismantled legal segregation through courts, protest, and Congress.",
+              "Segregation ended in 1948, when Truman desegregated the armed forces, so later protest targeted only northern housing and jobs.",
+              "Southern states repealed Jim Crow on their own in the 1950s, well before federal courts or Congress had acted on the issue.",
+              "The movement began after the 1965 Voting Rights Act, which first allowed Black southerners to organize protests openly."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rewards contextualization — placing the topic within larger historical processes."
+            "explanation": "Contextualization places the movement in its larger process: from 1954 to 1965 lawyers, students, and community organizers dismantled de jure segregation through litigation, nonviolent protest, voter registration, and federal law. Truman's 1948 order desegregated only the military, southern states resisted rather than repealing Jim Crow, and the Voting Rights Act was a result of the movement, not its starting point."
           }
         ]
       }

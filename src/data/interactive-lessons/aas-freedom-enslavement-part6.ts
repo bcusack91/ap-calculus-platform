@@ -5,7 +5,7 @@ export const aasFreedomEnslavementPart6Data = {
     {
       id: "aasfe6-intro",
       type: 'text' as const,
-      content: "# 🕊️ Freedom & Enslavement\n\n**Part 6 of 7 — Source & Evidence Workshop**\n\n---\n\n## Working with primary sources for Freedom & Enslavement\n\nAP DBQ-style work expects students to identify a source's *purpose, audience, point of view, and historical situation* — and to use that analysis to support a claim.\n\n### Primary sources for this unit\n\n- **Walker, *Appeal* (1829)** — Articulates citizenship and rights claims for free Black Americans.\n- **Stewart speeches (1832)** — Earliest published political addresses by an American-born woman.\n- **AME Church *Discipline* (1817)** — Institutional charter of independent Black religious life.\n"
+      content: "# 🕊️ Freedom & Enslavement\n\n**Part 6 of 7 — Source & Evidence Workshop**\n\n---\n\n## Working with primary sources for Freedom & Enslavement\n\nAP DBQ-style work expects students to identify a source's *purpose, audience, point of view, and historical situation* — and to use that analysis to support a claim.\n\n### Primary sources for this unit\n\n- **Walker, *Appeal* (1829)** — Articulates citizenship and rights claims for free Black Americans.\n- **Stewart speeches (1832)** — Among the earliest political addresses published by an American-born woman.\n- **AME Church *Discipline* (1817)** — Institutional charter of independent Black religious life.\n"
     },
     {
       id: "aasfe6-workshop",
@@ -22,23 +22,23 @@ export const aasFreedomEnslavementPart6Data = {
             "question": "What makes Walker, *Appeal* (1829) a strong source for studying Freedom & Enslavement?",
             "options": [
               "Articulates citizenship and rights claims for free Black Americans.",
-              "It was published in 2024 with no link to the period.",
-              "It is fictional and includes no historical content.",
-              "It is unsigned and undated."
+              "Records the founding minutes and bylaws of the Free African Society.",
+              "Reports a white planter's view of enslaved people's daily labor.",
+              "Sets out the rules of worship for an independent Black church."
             ],
             "correctAnswer": 0,
-            "explanation": "Provenance, date, and authorial position determine source value."
+            "explanation": "Walker's *Appeal* (1829) is valuable because a free Black author directly claims citizenship and rights for Black Americans. It is a political pamphlet, not society minutes, a planter's report, or a church rulebook (that is the AME *Discipline*)."
           },
           {
             "question": "When using a primary source on the AP exam, you should:",
             "options": [
               "Identify author/date/audience and tie the source to a specific claim.",
-              "Quote the source verbatim without analysis.",
-              "Ignore the author's position.",
-              "Treat the source as neutral and unbiased."
+              "Summarize the source's main idea accurately and let it stand as your argument.",
+              "Quote the most striking passage at length so readers can judge its meaning for themselves.",
+              "Treat it as neutral, reliable evidence, since primary sources record events as they happened."
             ],
             "correctAnswer": 0,
-            "explanation": "AP source-use rewards explicit attribution and analytical framing."
+            "explanation": "Source use earns credit when you attribute the source (author, date, audience) and put it to work for a claim. Summary, long quotation, and treating a source as neutral all skip that analysis."
           }
         ]
       }
@@ -46,7 +46,7 @@ export const aasFreedomEnslavementPart6Data = {
     {
       id: "aasfe6-input",
       type: 'input-boxes' as const,
-      content: "**Applied Recall** ✍️\n\n1) Name the source: Articulates citizenship and rights claims for free Black Ame…\n\n2) Name the source: Earliest published political addresses by an American-born w…\n\n3) Name the source: Institutional charter of independent Black religious life.…\n",
+      content: "**Applied Recall** ✍️\n\n1) Name the source: Articulates citizenship and rights claims for free Black Ame…\n\n2) Name the source: Among the earliest political addresses published by an Ameri…\n\n3) Name the source: Institutional charter of independent Black religious life.…\n",
       exercise: {
         "boxes": 3,
         "correctAnswers": [
@@ -70,18 +70,18 @@ export const aasFreedomEnslavementPart6Data = {
             "label": "Walker, *Appeal* (1829) — purpose ___",
             "options": [
               "Articulates citizenship and rights claims for free Black Americans.",
-              "Earliest published political addresses by an American-born woman.",
+              "Among the earliest political addresses published by an American-born woman.",
               "Institutional charter of independent Black religious life.",
-              "Unrelated to this unit"
+              "Ship captain's log recording prices paid on the African coast."
             ]
           },
           {
             "label": "Stewart speeches (1832) — purpose ___",
             "options": [
-              "Earliest published political addresses by an American-born woman.",
+              "Among the earliest political addresses published by an American-born woman.",
               "Articulates citizenship and rights claims for free Black Americans.",
               "Institutional charter of independent Black religious life.",
-              "Unrelated to this unit"
+              "Plantation ledger tracking births, deaths, and sales in Virginia."
             ]
           },
           {
@@ -89,14 +89,14 @@ export const aasFreedomEnslavementPart6Data = {
             "options": [
               "Institutional charter of independent Black religious life.",
               "Articulates citizenship and rights claims for free Black Americans.",
-              "Earliest published political addresses by an American-born woman.",
-              "Unrelated to this unit"
+              "Among the earliest political addresses published by an American-born woman.",
+              "Royal charter granting a company a monopoly on the English trade."
             ]
           }
         ],
         "correctAnswers": [
           "Articulates citizenship and rights claims for free Black Americans.",
-          "Earliest published political addresses by an American-born woman.",
+          "Among the earliest political addresses published by an American-born woman.",
           "Institutional charter of independent Black religious life."
         ],
         "hint1": "Match the source to its actual function.",
@@ -115,23 +115,23 @@ export const aasFreedomEnslavementPart6Data = {
             "question": "A strong AP citation of Walker, *Appeal* (1829) reads:",
             "options": [
               "'According to Walker, *Appeal* (1829), …' followed by inference about purpose and historical situation.",
-              "A direct quote with no attribution.",
-              "A loose paraphrase that hides the source's identity.",
-              "An anachronistic reading that ignores the date."
+              "'According to Walker (1829), …' followed by a long, unbroken quotation from the *Appeal*, with no further comment.",
+              "'The *Appeal* is biased,' followed by dismissing its account of slavery and colonization.",
+              "'One Black writer said …' followed by a paraphrase that leaves out the author and date."
             ],
             "correctAnswer": 0,
-            "explanation": "Attribution + sourcing analysis is the AP scoring standard."
+            "explanation": "Attribution plus sourcing analysis is the standard: name the source, then explain how its purpose or historical situation shapes it. Quoting without comment, dismissing a source as biased, and hiding its identity all fall short."
           },
           {
             "question": "Which source-analysis move earns the AP 'sourcing' point?",
             "options": [
               "Identifying author, audience, purpose, OR historical situation — and using it to support a claim.",
-              "Quoting verbatim with no analysis.",
-              "Ignoring the source's date.",
-              "Citing only 21st-century opinion pieces."
+              "Restating the source's topic, date, and title — and quoting its most memorable line.",
+              "Explaining whether you agree with the author's view — and describing how it makes you feel about the past.",
+              "Summarizing what the source says accurately — and placing it in chronological order."
             ],
             "correctAnswer": 0,
-            "explanation": "AP DBQ rubrics explicitly reward sourcing analysis tied to claims."
+            "explanation": "Sourcing means explaining how the author's point of view, purpose, audience, or historical situation matters, then using that to support the argument. Restating, quoting, summarizing, or reacting personally does not count."
           }
         ]
       }

@@ -5,7 +5,7 @@ export const aasContemporaryIssuesPart3Data = {
     {
       id: "aasci3-intro",
       type: 'text' as const,
-      content: "# ⚡ Contemporary Issues & Debates\n\n**Part 3 of 7 — Patterns, Regions & Case Studies**\n\n---\n\n## Specific cases — not abstractions\n\n| Event | Significance |\n|---|---|\n| **1986 Anti-Drug Abuse Act** | 100:1 crack/powder cocaine sentencing disparity. |\n| **1992 LA Uprising** | After Rodney King verdict; ~63 deaths. |\n| **1994 Crime Bill** | Three-strikes mandatory minimums; truth-in-sentencing grants. |\n| **2008 Obama elected** | First Black U.S. president. |\n| **2013 *Shelby County v. Holder*** | Strikes VRA Section 5 preclearance formula. |\n| **2014 Ferguson uprising** | Following Michael Brown's death; BLM moves into national spotlight. |\n| **2019 *1619 Project* (Hannah-Jones)** | Reframes American founding around slavery; provokes curriculum debates. |\n| **2020 George Floyd protests** | ~15–26 million Americans participate — likely largest U.S. protest movement ever. |\n"
+      content: "# ⚡ Contemporary Issues & Debates\n\n**Part 3 of 7 — Patterns, Regions & Case Studies**\n\n---\n\n## Specific cases — not abstractions\n\n| Event | Significance |\n|---|---|\n| **1986 Anti-Drug Abuse Act** | 100:1 crack/powder cocaine sentencing disparity. |\n| **1992 LA Uprising** | After Rodney King verdict; ~63 deaths. |\n| **1994 Crime Bill** | Three-strikes mandatory minimums; truth-in-sentencing grants. |\n| **2008 Obama elected** | First Black U.S. president. |\n| **2013 *Shelby County v. Holder*** | Strikes the VRA Section 4(b) coverage formula, idling Section 5 preclearance. |\n| **2014 Ferguson uprising** | Following Michael Brown's death; BLM moves into national spotlight. |\n| **2019 *1619 Project* (Hannah-Jones)** | Reframes American founding around slavery; provokes curriculum debates. |\n| **2020 George Floyd protests** | ~15–26 million Americans participate — likely largest U.S. protest movement ever. |\n"
     },
     {
       id: "aasci3-cases",
@@ -22,23 +22,23 @@ export const aasContemporaryIssuesPart3Data = {
             "question": "Which case BEST illustrates a pattern central to Contemporary Issues?",
             "options": [
               "1986 Anti-Drug Abuse Act — 100:1 crack/powder cocaine sentencing disparity.",
-              "An unrelated event from another century.",
-              "A purely fictional event.",
-              "An anecdote with no documentary support."
+              "1965 Voting Rights Act — preclearance protects southern Black voters.",
+              "1919 Red Summer — white mob violence strikes Black communities nationwide.",
+              "1972 Gary convention — thousands of delegates draft a National Black Political Agenda."
             ],
             "correctAnswer": 0,
-            "explanation": "Use historically attested events to illustrate patterns."
+            "explanation": "The 1986 Anti-Drug Abuse Act set a 100:1 sentencing disparity between crack and powder cocaine, a central driver of racially disparate mass incarceration (Congress cut it to 18:1 in 2010). The Voting Rights Act belongs to the civil rights unit, Red Summer to the World War I era, and the Gary convention to Black Power."
           },
           {
             "question": "A comparison of 1986 Anti-Drug Abuse Act and 1992 LA Uprising is most useful because:",
             "options": [
               "Both cases let students see common patterns and unique local differences in concrete historical detail.",
-              "Both events occurred in identical contexts and produced identical outcomes.",
-              "Comparison is irrelevant to AP scoring.",
-              "Neither event left primary sources for historians."
+              "Both cases show that federal drug policy cut incarceration in Black communities.",
+              "Both cases took place in New York City, so they reveal only one place's history.",
+              "Both cases show that police and courts treated Black and white Americans equally."
             ],
             "correctAnswer": 0,
-            "explanation": "AP comparison rewards specific similarities and differences with named cases."
+            "explanation": "Comparison rewards a specific similarity and a specific difference: both reveal how criminal justice shaped Black life, but one is a federal sentencing law and the other a local uprising after the 1992 acquittal of officers who beat Rodney King. The act drove incarceration up, it was federal law rather than a New York event, and both reveal unequal treatment."
           }
         ]
       }
@@ -71,33 +71,33 @@ export const aasContemporaryIssuesPart3Data = {
             "options": [
               "1986 Anti-Drug Abuse Act",
               "1992 LA Uprising",
-              "1994 Crime Bill",
-              "An unrelated 21st-century news story"
+              "2014 Ferguson protests",
+              "1987 *Beloved* published"
             ]
           },
           {
             "label": "The case most central to Color-blind racism is ___",
             "options": [
-              "1992 LA Uprising",
-              "1986 Anti-Drug Abuse Act",
-              "1994 Crime Bill",
-              "An unrelated 21st-century news story"
+              "2013 *Shelby County v. Holder*",
+              "1984 Rainbow Coalition campaign",
+              "1987 *Beloved* published",
+              "2014 Ferguson protests"
             ]
           },
           {
             "label": "The case most central to Movement for Black Lives is ___",
             "options": [
-              "1994 Crime Bill",
+              "2014 Ferguson protests",
               "1986 Anti-Drug Abuse Act",
-              "1992 LA Uprising",
-              "An unrelated 21st-century news story"
+              "1987 *Beloved* published",
+              "1984 Rainbow Coalition campaign"
             ]
           }
         ],
         "correctAnswers": [
           "1986 Anti-Drug Abuse Act",
-          "1992 LA Uprising",
-          "1994 Crime Bill"
+          "2013 *Shelby County v. Holder*",
+          "2014 Ferguson protests"
         ],
         "hint1": "Use chronology to disambiguate.",
         "hint2": "Match the event to the concept it best illustrates.",
@@ -114,24 +114,24 @@ export const aasContemporaryIssuesPart3Data = {
           {
             "question": "Using one specific case from Contemporary Issues, which sentence is the BEST AP comparison move?",
             "options": [
-              "Both 1986 Anti-Drug Abuse Act and 1992 LA Uprising reveal mass incarceration, but they differ in actors and outcomes.",
-              "Both events were fictional and produced no consequences.",
-              "These events are too old to compare meaningfully.",
-              "Comparison is unimportant in AP rubrics."
+              "Both reveal criminal-justice inequality, but the 1986 act was federal law and the 1992 uprising a local revolt.",
+              "Both the 1986 Anti-Drug Abuse Act and the 1992 LA Uprising were important events in recent African American history.",
+              "The 1986 Anti-Drug Abuse Act and the 1992 LA Uprising differ mainly because one came in 1986 and the other in 1992.",
+              "Both the 1986 Anti-Drug Abuse Act and the 1992 LA Uprising show how unjust the system was, so they should be condemned."
             ],
             "correctAnswer": 0,
-            "explanation": "AP comparison combines a specific shared pattern with a specific difference."
+            "explanation": "A full comparison pairs a shared pattern with a meaningful difference: both expose inequality in criminal justice, but one was a federal sentencing law and the other a local uprising after the Rodney King verdict. A similarity alone, a trivial difference such as date, or a moral judgment does not complete the move."
           },
           {
             "question": "Jesse Jackson's role in Contemporary Issues is best illustrated by which event?",
             "options": [
+              "1988 Rainbow Coalition campaign — Nearly 7 million primary votes for a Black candidate.",
               "1986 Anti-Drug Abuse Act — 100:1 crack/powder cocaine sentencing disparity.",
-              "An unrelated event in a different century.",
-              "A purely literary publication unconnected to politics.",
-              "An event before the figure was born."
+              "1992 LA Uprising — Unrest follows acquittal of officers who beat Rodney King.",
+              "2008 Obama elected president — First Black president wins with a broad multiracial coalition."
             ],
             "correctAnswer": 0,
-            "explanation": "Tie figures to dated events for high-scoring AP arguments."
+            "explanation": "Jackson's 1984 and 1988 presidential campaigns built the Rainbow Coalition; in 1988 he won nearly 7 million primary votes and several state contests. The 1986 drug law, the 1992 Los Angeles uprising, and Obama's 2008 victory are other events of the period that Jackson did not lead."
           }
         ]
       }

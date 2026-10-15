@@ -21,24 +21,24 @@ export const aasResistanceAbolitionPart1Data = {
           {
             "question": "Which statement BEST captures why Resistance & Abolition is foundational to AP African American History?",
             "options": [
-              "Enslaved African Americans resisted bondage daily — through work slowdowns, sabotage, flight, cultural retention, and outright revolt — while a transatlantic abolition movement of formerly enslaved leaders, Black ministers, and white allies dismantled the trade and, ultimately, slavery itself.",
-              "Resistance & Abolition is primarily a literary movement with no political implications.",
-              "Resistance & Abolition only matters to one decade and rarely appears on the AP exam.",
-              "Resistance & Abolition is studied to memorize dates without analyzing causes."
+              "Enslaved people resisted daily, from slowdowns to revolt, as a Black-led Atlantic movement fought to end slavery.",
+              "Few enslaved people ever resisted, so slavery ended mainly through the work of white reformers, courts, and legislatures.",
+              "Resistance took the form of armed revolt alone, while abolitionists in the North worked only through the federal courts.",
+              "Abolition succeeded in the United States first, several decades before Britain, France, or Haiti brought slavery to an end."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rewards students who can articulate why Resistance & Abolition matters in the broader course narrative, not just describe it."
+            "explanation": "Enslaved African Americans resisted bondage daily — through work slowdowns, sabotage, flight, cultural retention, and outright revolt — while a transatlantic abolition movement of formerly enslaved leaders, Black ministers, and white allies dismantled the trade and, ultimately, slavery itself. Haiti (1804) and Britain (1833) abolished slavery before the United States (1865)."
           },
           {
             "question": "Toussaint L'Ouverture (1743–1803) is significant in this unit primarily because:",
             "options": [
               "Led the Haitian Revolution, the only successful national slave revolt; first Black-led independent state in the Americas (1804).",
-              "Toussaint L'Ouverture opposed every form of African American institution building.",
-              "Toussaint L'Ouverture lived after the events of Resistance & Abolition ended.",
-              "Toussaint L'Ouverture is mentioned only in passing on the AP exam."
+              "Charleston AME founder who organized a planned 1822 uprising across the Carolina Lowcountry; executed before it could be carried out.",
+              "Virginia preacher who led the deadliest U.S. slave revolt (1831) in Southampton County; hanged after two months in hiding.",
+              "Conductor of ~13 Underground Railroad missions who later led the 1863 Combahee River Raid, freeing about 750 enslaved people."
             ],
             "correctAnswer": 0,
-            "explanation": "Toussaint L'Ouverture is one of the central named figures the AP exam expects students to deploy when writing about Resistance & Abolition."
+            "explanation": "Toussaint led the Haitian Revolution, the only slave revolt that produced an independent nation (1804). The other descriptions fit Denmark Vesey, Nat Turner, and Harriet Tubman."
           }
         ]
       }
@@ -77,7 +77,7 @@ export const aasResistanceAbolitionPart1Data = {
               "Tool-breaking, feigned illness, slowed work, theft of food, preservation of African names.",
               "Stono (1739), Gabriel's (1800), Vesey (1822), Nat Turner (1831), Haiti (1791).",
               "Garrisonian immediatism vs. Liberty/Free Soil/Republican electoral strategies.",
-              "An unrelated modern policy debate"
+              "Coordinated uprisings in which enslaved people seized arms and attacked planters."
             ]
           },
           {
@@ -86,7 +86,7 @@ export const aasResistanceAbolitionPart1Data = {
               "Stono (1739), Gabriel's (1800), Vesey (1822), Nat Turner (1831), Haiti (1791).",
               "Tool-breaking, feigned illness, slowed work, theft of food, preservation of African names.",
               "Garrisonian immediatism vs. Liberty/Free Soil/Republican electoral strategies.",
-              "A 21st-century technology trend"
+              "Freedom suits filed in colonial and state courts by enslaved petitioners."
             ]
           },
           {
@@ -95,7 +95,7 @@ export const aasResistanceAbolitionPart1Data = {
               "Garrisonian immediatism vs. Liberty/Free Soil/Republican electoral strategies.",
               "Tool-breaking, feigned illness, slowed work, theft of food, preservation of African names.",
               "Stono (1739), Gabriel's (1800), Vesey (1822), Nat Turner (1831), Haiti (1791).",
-              "An economic theory unrelated to this period"
+              "Choice between buying freedom and escaping north on the Underground Railroad."
             ]
           }
         ],
@@ -120,23 +120,23 @@ export const aasResistanceAbolitionPart1Data = {
             "question": "A historian argues that Resistance & Abolition is essential for understanding African American history. Which evidence BEST supports the claim?",
             "options": [
               "Toussaint L'Ouverture (1743–1803) — Led the Haitian Revolution, the only successful national slave revolt; first Black-led independent state in the Americas (1804).",
-              "A 21st-century pop song references Resistance & Abolition without historical context.",
-              "Resistance & Abolition is unrelated to broader trends in U.S. or Atlantic history.",
-              "There are no primary sources for this period."
+              "Denmark Vesey (1767–1822) — Led the Haitian Revolution, the only successful national slave revolt, then returned to help found Charleston's AME church.",
+              "Toussaint L'Ouverture (1743–1803) — Charleston AME founder who planned an 1822 uprising; executed before it began.",
+              "Toussaint L'Ouverture (1743–1803) — Led the 1739 Stono Rebellion in South Carolina, a colony of British North America; prompted the Negro Act (1740)."
             ],
             "correctAnswer": 0,
-            "explanation": "Strong AP arguments cite specific historical actors and dates, not anachronistic or vague references."
+            "explanation": "Strong evidence is accurately attributed: Toussaint led the Haitian Revolution. Vesey planned the 1822 Charleston uprising and did not lead in Haiti, and Stono (1739) took place before Toussaint was born."
           },
           {
             "question": "Which statement most accurately describes the historical context of Resistance & Abolition?",
             "options": [
-              "Enslaved African Americans resisted bondage daily — through work slowdowns, sabotage, flight, cultural retention, and outright revolt — while a transatlantic abolition movement of formerly enslaved leaders, Black ministers, and white allies dismantled the trade and, ultimately, slavery itself.",
-              "Resistance & Abolition occurred entirely outside any global or transregional context.",
-              "Resistance & Abolition produced no documentary evidence and is impossible to study.",
-              "Resistance & Abolition only appears on AP optional questions."
+              "Enslaved resistance and a transatlantic abolition movement ended the slave trade and, ultimately, slavery.",
+              "Abolition began in the United States, which banned slavery well before Britain, France, or Haiti ever did.",
+              "Resistance stayed local and unconnected, since enslaved people never heard of revolts elsewhere.",
+              "Abolitionists won by moral persuasion alone, and politics played no part in ending U.S. slavery."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rewards contextualization — placing the topic within larger historical processes."
+            "explanation": "Contextualization places resistance and abolition in an Atlantic setting: news of Haiti spread widely, Haiti and Britain abolished slavery before the United States, and abolition advanced through politics and war as well as persuasion."
           }
         ]
       }

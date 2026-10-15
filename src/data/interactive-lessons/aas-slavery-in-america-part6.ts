@@ -22,23 +22,23 @@ export const aasSlaveryInAmericaPart6Data = {
             "question": "What makes Douglass, *Narrative* (1845) a strong source for studying Slavery in America?",
             "options": [
               "Argues that literacy is the road to freedom — a reframing of master-slave power.",
-              "It was published in 2024 with no link to the period.",
-              "It is fictional and includes no historical content.",
-              "It is unsigned and undated."
+              "Reveals gendered violence against enslaved women — rare in male-authored slave narratives.",
+              "Codifies racial hierarchy in colonial law — Virginia's legal framework for slavery.",
+              "Records a kidnapping into Louisiana slavery — a free New Yorker's twelve-year ordeal."
             ],
             "correctAnswer": 0,
-            "explanation": "Provenance, date, and authorial position determine source value."
+            "explanation": "Douglass's *Narrative* (1845) is valuable for its first-person argument that literacy leads to freedom, reframing master-slave power. The other descriptions fit Jacobs's *Incidents*, the 1705 Virginia Slave Codes, and Northup's *Twelve Years a Slave*."
           },
           {
             "question": "When using a primary source on the AP exam, you should:",
             "options": [
               "Identify author/date/audience and tie the source to a specific claim.",
-              "Quote the source verbatim without analysis.",
-              "Ignore the author's position.",
-              "Treat the source as neutral and unbiased."
+              "Summarize the source's main idea accurately and let it stand as your argument.",
+              "Quote the most striking passage at length so readers can judge its meaning for themselves.",
+              "Treat it as neutral, reliable evidence, since primary sources record events as they happened."
             ],
             "correctAnswer": 0,
-            "explanation": "AP source-use rewards explicit attribution and analytical framing."
+            "explanation": "Source use earns credit when you attribute the source (author, date, audience) and put it to work for a claim. Summary, long quotation, and treating a source as neutral all skip that analysis."
           }
         ]
       }
@@ -72,7 +72,7 @@ export const aasSlaveryInAmericaPart6Data = {
               "Argues that literacy is the road to freedom — a reframing of master-slave power.",
               "Reveals gendered violence largely absent from earlier male-authored narratives.",
               "Codifies racial hierarchy in colonial law.",
-              "Unrelated to this unit"
+              "Free New Yorker's account of being kidnapped into Louisiana slavery."
             ]
           },
           {
@@ -81,7 +81,7 @@ export const aasSlaveryInAmericaPart6Data = {
               "Reveals gendered violence largely absent from earlier male-authored narratives.",
               "Argues that literacy is the road to freedom — a reframing of master-slave power.",
               "Codifies racial hierarchy in colonial law.",
-              "Unrelated to this unit"
+              "Free New Yorker's account of being kidnapped into Louisiana slavery."
             ]
           },
           {
@@ -90,7 +90,7 @@ export const aasSlaveryInAmericaPart6Data = {
               "Codifies racial hierarchy in colonial law.",
               "Argues that literacy is the road to freedom — a reframing of master-slave power.",
               "Reveals gendered violence largely absent from earlier male-authored narratives.",
-              "Unrelated to this unit"
+              "Free New Yorker's account of being kidnapped into Louisiana slavery."
             ]
           }
         ],
@@ -115,23 +115,23 @@ export const aasSlaveryInAmericaPart6Data = {
             "question": "A strong AP citation of Douglass, *Narrative* (1845) reads:",
             "options": [
               "'According to Douglass, *Narrative* (1845), …' followed by inference about purpose and historical situation.",
-              "A direct quote with no attribution.",
-              "A loose paraphrase that hides the source's identity.",
-              "An anachronistic reading that ignores the date."
+              "'According to Douglass's *Narrative* (1845), …' followed by a long, unbroken quotation, with no further comment.",
+              "'Douglass's *Narrative* is biased,' followed by dismissing his account of Maryland slavery entirely.",
+              "'According to one formerly enslaved writer, …' followed by a paraphrase that never names the source."
             ],
             "correctAnswer": 0,
-            "explanation": "Attribution + sourcing analysis is the AP scoring standard."
+            "explanation": "Attribution plus sourcing analysis is the standard: name the source, then explain how its abolitionist purpose and 1845 context shape it. Quoting without comment, dismissing a source as biased, and hiding its identity all fall short."
           },
           {
             "question": "Which source-analysis move earns the AP 'sourcing' point?",
             "options": [
               "Identifying author, audience, purpose, OR historical situation — and using it to support a claim.",
-              "Quoting verbatim with no analysis.",
-              "Ignoring the source's date.",
-              "Citing only 21st-century opinion pieces."
+              "Restating the source's topic, date, and title — and quoting its most memorable line.",
+              "Explaining whether you agree with the author's view — and describing how it makes you feel about the past.",
+              "Summarizing what the source says accurately — and placing it in chronological order."
             ],
             "correctAnswer": 0,
-            "explanation": "AP DBQ rubrics explicitly reward sourcing analysis tied to claims."
+            "explanation": "Sourcing means explaining how the author's point of view, purpose, audience, or historical situation matters, then using that to support the argument. Restating, quoting, summarizing, or reacting personally does not count."
           }
         ]
       }

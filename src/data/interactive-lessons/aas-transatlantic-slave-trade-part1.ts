@@ -10,7 +10,7 @@ export const aasTransatlanticSlaveTradePart1Data = {
     {
       id: "aasts1-figures",
       type: 'text' as const,
-      content: "## 📖 Key Figures of Transatlantic Slave Trade\n\n| Figure | Dates | Why they matter |\n|---|---|---|\n| **John Hawkins** | 1532–1595 | First English slaver; raids West Africa 1562 with backing of Elizabeth I. |\n| **Royal African Company** | chartered 1672 | English monopoly under James, Duke of York; branded the initials 'DY' on captives. |\n| **Olaudah Equiano** | captured c. 1756 | Describes Bight of Biafra capture, holding pens at Bonny, and the Middle Passage. |\n| **Captain John Newton** | 1725–1807 | Slave-ship captain turned abolitionist; wrote 'Amazing Grace' (1772) and *Thoughts upon the Slave Trade* (1788). |\n| **Thomas Clarkson** | 1760–1846 | British abolitionist whose evidence on conditions aboard ships catalyzed the 1807 Abolition Act. |\n\n> ⚠️ **AP Alert:** Strong responses cite specific figures by name and date — e.g., 'John Hawkins (1532–1595)' rather than 'a famous leader.'"
+      content: "## 📖 Key Figures of Transatlantic Slave Trade\n\n| Figure | Dates | Why they matter |\n|---|---|---|\n| **John Hawkins** | 1532–1595 | Pioneer of the English slave trade; first voyage 1562, later voyages backed by Elizabeth I. |\n| **Royal African Company** | chartered 1672 | English monopoly under James, Duke of York; branded the initials 'DY' on captives. |\n| **Olaudah Equiano** | captured c. 1756 | Describes capture in the Bight of Biafra hinterland, sale to the coast, and the Middle Passage. |\n| **Captain John Newton** | 1725–1807 | Slave-ship captain turned abolitionist; wrote 'Amazing Grace' (1772) and *Thoughts upon the Slave Trade* (1788). |\n| **Thomas Clarkson** | 1760–1846 | British abolitionist whose evidence on conditions aboard ships catalyzed the 1807 Abolition Act. |\n\n> ⚠️ **AP Alert:** Strong responses cite specific figures by name and date — e.g., 'John Hawkins (1532–1595)' rather than 'a famous leader.'"
     },
     {
       id: "aasts1-quiz1",
@@ -21,24 +21,24 @@ export const aasTransatlanticSlaveTradePart1Data = {
           {
             "question": "Which statement BEST captures why Transatlantic Slave Trade is foundational to AP African American History?",
             "options": [
-              "Between 1501 and 1866, an estimated 12.5 million Africans were forcibly embarked on European ships across the Atlantic. About 10.7 million survived the Middle Passage; only ~388,000 (~3.6%) disembarked in mainland North America. The trade integrated four continents into a coercive economic system.",
-              "Transatlantic Slave Trade is primarily a literary movement with no political implications.",
-              "Transatlantic Slave Trade only matters to one decade and rarely appears on the AP exam.",
-              "Transatlantic Slave Trade is studied to memorize dates without analyzing causes."
+              "About 12.5 million Africans were forced onto ships from 1501 to 1866; only ~3.6% of survivors landed in mainland North America.",
+              "Most of the 12.5 million Africans forced across the Atlantic landed in mainland North America, by far the trade's main destination.",
+              "Only about 1.2 million Africans crossed the Atlantic, most of them carried to Europe to work as household servants.",
+              "The trade lasted only from 1619 to 1808; it carried Africans almost entirely to the English mainland colonies."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rewards students who can articulate why Transatlantic Slave Trade matters in the broader course narrative, not just describe it."
+            "explanation": "Between 1501 and 1866 an estimated 12.5 million Africans were forcibly embarked; about 10.7 million survived the Middle Passage, and only ~388,000 (~3.6%) disembarked in mainland North America. The trade integrated four continents into one coercive economic system, with Brazil and the Caribbean as its main destinations."
           },
           {
             "question": "John Hawkins (1532–1595) is significant in this unit primarily because:",
             "options": [
-              "First English slaver; raids West Africa 1562 with backing of Elizabeth I.",
-              "John Hawkins opposed every form of African American institution building.",
-              "John Hawkins lived after the events of Transatlantic Slave Trade ended.",
-              "John Hawkins is mentioned only in passing on the AP exam."
+              "Pioneer of the English slave trade; first voyage 1562, later voyages backed by Elizabeth I.",
+              "Slave-ship captain turned abolitionist; wrote 'Amazing Grace' and *Thoughts upon the Slave Trade*.",
+              "British abolitionist; gathered evidence on shipboard conditions that helped pass the 1807 Act.",
+              "Portuguese prince; sponsored the voyages that brought the first African captives to Lisbon."
             ],
             "correctAnswer": 0,
-            "explanation": "John Hawkins is one of the central named figures the AP exam expects students to deploy when writing about Transatlantic Slave Trade."
+            "explanation": "Hawkins pioneered English slave trading with his 1562 voyage, and Elizabeth I backed his later voyages. The other descriptions fit John Newton, Thomas Clarkson, and Prince Henry of Portugal."
           }
         ]
       }
@@ -46,7 +46,7 @@ export const aasTransatlanticSlaveTradePart1Data = {
     {
       id: "aasts1-context",
       type: 'text' as const,
-      content: "## Historical Context\n\n| Event | Significance |\n|---|---|\n| **1444 first major Portuguese auction at Lagos** | Codifies European commercial trafficking of Africans. |\n| **1518 Spanish asiento authorizes direct African shipments to the Americas** | Bypasses Iberian re-export. |\n| **1619 *White Lion* arrives at Point Comfort, Virginia** | First documented enslaved Africans in English North America. |\n\n### Primary sources to know\n\n- **Equiano, *Narrative* ch. 2 (1789)** — Most-cited Middle Passage testimony in 18th-century abolition debates.\n- **Brookes slave-ship diagram (1788)** — Showed 482 Africans packed below decks; mass-printed by Clarkson.\n- **Trans-Atlantic Slave Trade Database (Voyages.org)** — Modern database of ~36,000 documented voyages used by historians.\n"
+      content: "## Historical Context\n\n| Event | Significance |\n|---|---|\n| **1444 first major Portuguese auction at Lagos** | Codifies European commercial trafficking of Africans. |\n| **1518 Spanish asiento authorizes direct African shipments to the Americas** | Bypasses Iberian re-export. |\n| **1619 *White Lion* arrives at Point Comfort, Virginia** | First documented enslaved Africans in English North America. |\n\n### Primary sources to know\n\n- **Equiano, *Narrative* ch. 2 (1789)** — Most-cited Middle Passage testimony in 18th-century abolition debates.\n- **Brookes slave-ship diagram (1788)** — Showed hundreds of Africans packed below decks; mass-printed by British abolitionists.\n- **Trans-Atlantic Slave Trade Database (Voyages.org)** — Modern database of ~36,000 documented voyages used by historians.\n"
     },
     {
       id: "aasts1-input",
@@ -77,7 +77,7 @@ export const aasTransatlanticSlaveTradePart1Data = {
               "European manufactures → African captives → American plantation goods → Europe.",
               "The Atlantic crossing; mortality averaged ~15%, sometimes much higher.",
               "Spanish license granting European powers the monopoly to supply enslaved Africans to Spanish colonies.",
-              "An unrelated modern policy debate"
+              "Direct two-way exchange of Asian spices for European silver."
             ]
           },
           {
@@ -86,7 +86,7 @@ export const aasTransatlanticSlaveTradePart1Data = {
               "The Atlantic crossing; mortality averaged ~15%, sometimes much higher.",
               "European manufactures → African captives → American plantation goods → Europe.",
               "Spanish license granting European powers the monopoly to supply enslaved Africans to Spanish colonies.",
-              "A 21st-century technology trend"
+              "The overland march of captives from inland Africa to the coast."
             ]
           },
           {
@@ -95,7 +95,7 @@ export const aasTransatlanticSlaveTradePart1Data = {
               "Spanish license granting European powers the monopoly to supply enslaved Africans to Spanish colonies.",
               "European manufactures → African captives → American plantation goods → Europe.",
               "The Atlantic crossing; mortality averaged ~15%, sometimes much higher.",
-              "An economic theory unrelated to this period"
+              "British act of Parliament banning the Atlantic slave trade in 1807."
             ]
           }
         ],
@@ -119,24 +119,24 @@ export const aasTransatlanticSlaveTradePart1Data = {
           {
             "question": "A historian argues that Transatlantic Slave Trade is essential for understanding African American history. Which evidence BEST supports the claim?",
             "options": [
-              "John Hawkins (1532–1595) — First English slaver; raids West Africa 1562 with backing of Elizabeth I.",
-              "A 21st-century pop song references Transatlantic Slave Trade without historical context.",
-              "Transatlantic Slave Trade is unrelated to broader trends in U.S. or Atlantic history.",
-              "There are no primary sources for this period."
+              "John Hawkins (1532–1595) — Pioneer of the English slave trade; first voyage 1562, later voyages backed by Elizabeth I.",
+              "John Hawkins (1532–1595) — British abolitionist; his shipboard evidence helped pass the 1807 Abolition Act of Parliament.",
+              "John Hawkins (1532–1595) — Royal African Company governor who branded captives with the initials 'DY'.",
+              "Thomas Clarkson (1760–1846) — Slave-ship captain who later wrote 'Amazing Grace' and turned against the trade."
             ],
             "correctAnswer": 0,
-            "explanation": "Strong AP arguments cite specific historical actors and dates, not anachronistic or vague references."
+            "explanation": "Strong evidence is accurately attributed: Hawkins launched English slave trading in 1562. Clarkson was an abolitionist, not a captain; the 1807 Act and the Royal African Company (1672) came long after Hawkins died; and 'Amazing Grace' was John Newton's."
           },
           {
             "question": "Which statement most accurately describes the historical context of Transatlantic Slave Trade?",
             "options": [
-              "Between 1501 and 1866, an estimated 12.5 million Africans were forcibly embarked on European ships across the Atlantic. About 10.7 million survived the Middle Passage; only ~388,000 (~3.6%) disembarked in mainland North America. The trade integrated four continents into a coercive economic system.",
-              "Transatlantic Slave Trade occurred entirely outside any global or transregional context.",
-              "Transatlantic Slave Trade produced no documentary evidence and is impossible to study.",
-              "Transatlantic Slave Trade only appears on AP optional questions."
+              "The trade bound Europe, Africa, and the Americas into one coercive system that carried ~12.5 million Africans.",
+              "The trade was a regional exchange between West Africa and Portugal that rarely reached the Americas at any point.",
+              "The trade began after 1700, to supply cotton, rice, and indigo planters in the U.S. South, its largest market by far.",
+              "The trade carried mainly European indentured servants, with Africans only a small minority of all those shipped."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rewards contextualization — placing the topic within larger historical processes."
+            "explanation": "Contextualization places the trade within an Atlantic system linking four continents. It reached the Americas from the early 1500s, Brazil and the Caribbean were its largest markets, and Africans far outnumbered European migrants to the Americas before 1820."
           }
         ]
       }

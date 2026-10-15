@@ -21,24 +21,24 @@ export const aasReconstructionJimCrowPart1Data = {
           {
             "question": "Which statement BEST captures why Reconstruction & Jim Crow is foundational to AP African American History?",
             "options": [
-              "After emancipation, the Reconstruction Amendments (13th, 14th, 15th) and Freedmen's Bureau promised citizenship, education, and political participation. The withdrawal of federal troops in 1877 enabled white-supremacist violence and a regime of legal segregation, disfranchisement, and convict-lease labor sustained by *Plessy v. Ferguson* (1896).",
-              "Reconstruction & Jim Crow is primarily a literary movement with no political implications.",
-              "Reconstruction & Jim Crow only matters to one decade and rarely appears on the AP exam.",
-              "Reconstruction & Jim Crow is studied to memorize dates without analyzing causes."
+              "The Reconstruction Amendments and Freedmen's Bureau promised citizenship, but after 1877 violence and *Plessy* entrenched Jim Crow.",
+              "Federal troops stayed in the South until 1900, enforcing Reconstruction's 14th and 15th Amendments against white-supremacist violence.",
+              "Jim Crow laws arose mainly in the North, while the former Confederate states kept Black voting rights intact.",
+              "The Freedmen's Bureau gave every freed family land, securing Black economic independence across the South by 1870."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rewards students who can articulate why Reconstruction & Jim Crow matters in the broader course narrative, not just describe it."
+            "explanation": "The unit is foundational because the Reconstruction Amendments and the Freedmen's Bureau promised citizenship, education, and political participation, and the 1877 withdrawal of federal troops let violence, disfranchisement, and *Plessy v. Ferguson* (1896) build Jim Crow. Troops left in 1877, Jim Crow centered on the South, and most freed families never received land."
           },
           {
             "question": "Hiram Revels (1827–1901) is significant in this unit primarily because:",
             "options": [
               "First Black U.S. Senator (MS, 1870); filled Jefferson Davis's former seat.",
-              "Hiram Revels opposed every form of African American institution building.",
-              "Hiram Revels lived after the events of Reconstruction & Jim Crow ended.",
-              "Hiram Revels is mentioned only in passing on the AP exam."
+              "Commandeered the *Planter* (1862); five-term U.S. congressman from South Carolina.",
+              "Founded Tuskegee Institute (1881); urged accommodation in the Atlanta Compromise (1895).",
+              "Served as U.S. Marshal for D.C. (1877); later U.S. minister to Haiti (1889)."
             ],
             "correctAnswer": 0,
-            "explanation": "Hiram Revels is one of the central named figures the AP exam expects students to deploy when writing about Reconstruction & Jim Crow."
+            "explanation": "Hiram Revels became the first Black U.S. senator in 1870, filling the Mississippi seat Jefferson Davis had once held. The other descriptions belong to Robert Smalls, Booker T. Washington, and Frederick Douglass."
           }
         ]
       }
@@ -77,7 +77,7 @@ export const aasReconstructionJimCrowPart1Data = {
               "13th (1865) abolition; 14th (1868) citizenship/equal protection; 15th (1870) Black male suffrage.",
               "1865–1872 federal agency providing schools, contracts, and legal aid.",
               "Poll taxes, literacy tests, grandfather clauses, white primaries strip Black voting rights.",
-              "An unrelated modern policy debate"
+              "Laws passed by Southern legislatures to restrict freedpeople's labor and movement."
             ]
           },
           {
@@ -86,7 +86,7 @@ export const aasReconstructionJimCrowPart1Data = {
               "1865–1872 federal agency providing schools, contracts, and legal aid.",
               "13th (1865) abolition; 14th (1868) citizenship/equal protection; 15th (1870) Black male suffrage.",
               "Poll taxes, literacy tests, grandfather clauses, white primaries strip Black voting rights.",
-              "A 21st-century technology trend"
+              "Private Northern charity that gave every freed family 40 acres of land."
             ]
           },
           {
@@ -95,7 +95,7 @@ export const aasReconstructionJimCrowPart1Data = {
               "Poll taxes, literacy tests, grandfather clauses, white primaries strip Black voting rights.",
               "13th (1865) abolition; 14th (1868) citizenship/equal protection; 15th (1870) Black male suffrage.",
               "1865–1872 federal agency providing schools, contracts, and legal aid.",
-              "An economic theory unrelated to this period"
+              "Federal enforcement of Black voting rights by troops posted at Southern polls."
             ]
           }
         ],
@@ -120,23 +120,23 @@ export const aasReconstructionJimCrowPart1Data = {
             "question": "A historian argues that Reconstruction & Jim Crow is essential for understanding African American history. Which evidence BEST supports the claim?",
             "options": [
               "Hiram Revels (1827–1901) — First Black U.S. Senator (MS, 1870); filled Jefferson Davis's former seat.",
-              "A 21st-century pop song references Reconstruction & Jim Crow without historical context.",
-              "Reconstruction & Jim Crow is unrelated to broader trends in U.S. or Atlantic history.",
-              "There are no primary sources for this period."
+              "Robert Smalls (1839–1915) — First Black U.S. Senator (MS, 1870); filled Jefferson Davis's former seat.",
+              "Booker T. Washington (1856–1915) — Commandeered the *Planter* (1862); five-term congressman from SC.",
+              "Ida B. Wells (1862–1931) — Founded Tuskegee Institute (1881); delivered the Atlanta Compromise (1895)."
             ],
             "correctAnswer": 0,
-            "explanation": "Strong AP arguments cite specific historical actors and dates, not anachronistic or vague references."
+            "explanation": "Strong AP arguments cite accurately attributed actors and dates. Hiram Revels was the first Black senator; Robert Smalls seized the *Planter* and served in the House; Booker T. Washington founded Tuskegee; Ida B. Wells documented lynching in *Southern Horrors*."
           },
           {
             "question": "Which statement most accurately describes the historical context of Reconstruction & Jim Crow?",
             "options": [
-              "After emancipation, the Reconstruction Amendments (13th, 14th, 15th) and Freedmen's Bureau promised citizenship, education, and political participation. The withdrawal of federal troops in 1877 enabled white-supremacist violence and a regime of legal segregation, disfranchisement, and convict-lease labor sustained by *Plessy v. Ferguson* (1896).",
-              "Reconstruction & Jim Crow occurred entirely outside any global or transregional context.",
-              "Reconstruction & Jim Crow produced no documentary evidence and is impossible to study.",
-              "Reconstruction & Jim Crow only appears on AP optional questions."
+              "After 1877, federal withdrawal let violence, disfranchisement, and *Plessy* (1896) undo the Reconstruction Amendments' promises.",
+              "Federal troops remained after 1877, enforcing the 14th and 15th Amendments, and kept Black voters at the polls until 1900.",
+              "The Supreme Court struck down segregation laws in *Plessy* (1896), so Jim Crow survived only through private custom.",
+              "Most freedpeople left the South during Reconstruction, so Southern states had few Black voters left to disfranchise."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rewards contextualization — placing the topic within larger historical processes."
+            "explanation": "Contextualization places the topic in a larger process: after the 1877 withdrawal of federal troops, white-supremacist violence, disfranchisement, and *Plessy v. Ferguson* (1896), which upheld segregation, undid the Reconstruction Amendments' promises. Most Black Southerners stayed in the South until the Great Migration."
           }
         ]
       }

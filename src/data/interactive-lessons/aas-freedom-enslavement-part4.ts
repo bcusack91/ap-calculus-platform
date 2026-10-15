@@ -10,7 +10,7 @@ export const aasFreedomEnslavementPart4Data = {
     {
       id: "aasfe4-links",
       type: 'text' as const,
-      content: "## Specific cross-unit connections\n\n| Event | Significance |\n|---|---|\n| **1780 PA Gradual Abolition Act** | First state emancipation law in the Atlantic world. |\n| **1787 Free African Society** | Black mutual-aid organization in Philadelphia. |\n| **1816 American Colonization Society founded** | Promoted resettlement to Liberia; Black opinion sharply divided. |\n\nEach event above interacts with **Resistance & Abolition** — either as cause, consequence, or parallel."
+      content: "## Specific cross-unit connections\n\n| Event | Significance |\n|---|---|\n| **1780 PA Gradual Abolition Act** | First gradual abolition act passed by a state legislature. |\n| **1787 Free African Society** | Black mutual-aid organization in Philadelphia. |\n| **1816 American Colonization Society founded** | Promoted resettlement to Liberia; Black opinion sharply divided. |\n\nEach event above interacts with **Resistance & Abolition** — either as cause, consequence, or parallel."
     },
     {
       id: "aasfe4-quiz",
@@ -21,24 +21,24 @@ export const aasFreedomEnslavementPart4Data = {
           {
             "question": "How does Freedom & Enslavement BEST connect to Resistance & Abolition?",
             "options": [
-              "Free black institutions sheltered abolitionist organizing.",
-              "Freedom & Enslavement and Resistance & Abolition are completely unrelated topics.",
-              "Connections between units are not tested on the AP exam.",
-              "AP rubrics reward isolated facts over connections."
+              "Free Black institutions sheltered abolitionist organizing.",
+              "Gradual emancipation ended abolitionist organizing in Northern cities by 1804.",
+              "The Colonization Society united free Black leaders behind emigration to Liberia.",
+              "Black communities in the North avoided abolition to protect their free legal status."
             ],
             "correctAnswer": 0,
-            "explanation": "AP synthesis prompts ask students to articulate how units interact."
+            "explanation": "Black churches, mutual-aid societies, and conventions hosted and funded abolitionist work, linking this unit to Resistance & Abolition. Abolitionism grew after 1804, most free Black leaders opposed the Colonization Society, and free Black communities were central to the movement."
           },
           {
             "question": "A 'feedback loop' across units means:",
             "options": [
               "Outcomes of one process reinforce or modify the conditions that produced it.",
-              "Two unrelated facts placed next to each other.",
-              "A modern policy with no historical relevance.",
-              "Memorizing additional vocabulary words."
+              "One process triggers a second, which then runs its course without acting back on the first.",
+              "Two processes unfold at the same time in different regions without influencing each other.",
+              "A later generation reinterprets an earlier event in light of its own political concerns."
             ],
             "correctAnswer": 0,
-            "explanation": "Feedback loops are a recurring AP analytical move."
+            "explanation": "A feedback loop runs both ways: the outcome acts back on the conditions that produced it. A one-way chain of causes, parallel developments, and later reinterpretation all lack that return effect."
           }
         ]
       }
@@ -67,30 +67,30 @@ export const aasFreedomEnslavementPart4Data = {
       exercise: {
         "dropdowns": [
           {
-            "label": "Freedom & Enslavement most directly causes ___",
+            "label": "Freedom & Enslavement connects most directly to ___",
             "options": [
               "Resistance & Abolition",
-              "An unrelated 21st-century event",
-              "A pre-modern European war",
-              "A purely cultural festival"
+              "Civil Rights Movement",
+              "Black Power & Beyond",
+              "Contemporary Issues"
             ]
           },
           {
             "label": "A 'feedback loop' is ___",
             "options": [
               "Outcomes that reinforce their own causes",
-              "A failed argument",
-              "An anachronism",
-              "A primary source"
+              "A cause with a single one-way effect",
+              "Two trends that develop in parallel",
+              "A later reversal of an earlier trend"
             ]
           },
           {
             "label": "AP 'synthesis' refers to ___",
             "options": [
               "Combining evidence across units to support a claim",
-              "Memorizing dates only",
-              "Avoiding all comparison",
-              "Citing one example without analysis"
+              "Summarizing one unit's events in chronological order",
+              "Quoting several sources at length without a claim",
+              "Restating the thesis in a new conclusion"
             ]
           }
         ],
@@ -102,7 +102,7 @@ export const aasFreedomEnslavementPart4Data = {
         "hint1": "Map cause to consequence.",
         "hint2": "'Loop' implies feedback.",
         "hint3": "Synthesis = bringing units together.",
-        "explanation": "Connecting units is a high-leverage AP skill rewarded across MCQ, SAQ, and LEQ."
+        "explanation": "Connecting units is a high-leverage AP skill rewarded across MCQ, SAQ, and DBQ."
       }
     },
     {
@@ -114,24 +114,24 @@ export const aasFreedomEnslavementPart4Data = {
           {
             "question": "A student writes: 'Freedom & Enslavement had no effect on Resistance & Abolition.' The best AP correction is:",
             "options": [
-              "Show specific connections — free Black institutions sheltered abolitionist organizing — to demonstrate causal interaction.",
-              "Insist there are no connections in U.S. history.",
-              "Cite only events outside the unit.",
-              "Replace the claim with a personal opinion."
+              "Show that free Black institutions such as Bethel AME Church and the Black conventions sheltered abolitionist organizing.",
+              "Agree, since abolitionism was led entirely by white reformers like Garrison who worked apart from free Black communities.",
+              "Replace the claim with the opposite generalization that every free Black American joined the abolition movement.",
+              "Cite the Harlem Renaissance instead, since Black institutions mattered only after 1900."
             ],
             "correctAnswer": 0,
-            "explanation": "AP synthesis demands explicit, specific connections backed by evidence."
+            "explanation": "The correction needs a specific connection: free Black churches, societies, and conventions sheltered and funded abolitionist organizing. Black subscribers sustained *The Liberator*, Black participation varied, and the Harlem Renaissance belongs to a much later unit."
           },
           {
             "question": "The strongest AP synthesis move uses:",
             "options": [
               "Specific evidence from at least two units to support a single, defensible claim.",
-              "One vague generalization across centuries.",
-              "Multiple unrelated personal opinions.",
-              "A list of names without explanation."
+              "A detailed chronological summary of one unit, with dates and names but no central claim.",
+              "A sweeping claim about all of African American history, illustrated by one famous example.",
+              "Several separate claims, each backed by evidence drawn from a different unit."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rubrics consistently reward specificity + cross-unit synthesis."
+            "explanation": "Synthesis joins evidence from more than one unit behind ONE defensible claim. A summary without a claim, a sweeping claim on thin evidence, and several unconnected claims each miss part of that move."
           }
         ]
       }

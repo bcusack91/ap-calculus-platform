@@ -21,24 +21,24 @@ export const aasMovementsDebatesPart1Data = {
           {
             "question": "Which statement BEST captures why Movements & Debates is foundational to AP African American History?",
             "options": [
-              "Across more than 150 years, African American thought has grappled with enduring questions: integration vs. separatism, gradualism vs. immediatism, civil rights vs. human rights, race alone vs. intersectional analysis. These debates have shaped strategy, art, and political alignments from Frederick Douglass through bell hooks and the Movement for Black Lives.",
-              "Movements & Debates is primarily a literary movement with no political implications.",
-              "Movements & Debates only matters to one decade and rarely appears on the AP exam.",
-              "Movements & Debates is studied to memorize dates without analyzing causes."
+              "Black thinkers have long debated strategy, such as integration vs. separatism and race vs. intersectional analysis.",
+              "African American leaders have largely agreed on one strategy, integration through the courts, ever since Douglass's day.",
+              "Black political debate began only in the 1960s, when King and Malcolm X first disagreed over integration and separatism.",
+              "Black intellectual debates mattered mainly to scholars, with little effect on strategy, art, or political alliances over time."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rewards students who can articulate why Movements & Debates matters in the broader course narrative, not just describe it."
+            "explanation": "For more than 150 years, African American thought has wrestled with enduring questions, such as integration versus separatism, accommodation versus protest, civil rights versus human rights, and race-only versus intersectional analysis, from Douglass and Delany to the Combahee River Collective and the Movement for Black Lives. Leaders have disagreed sharply, the debates predate the 1960s by a century, and they have shaped strategy, art, and alliances."
           },
           {
             "question": "Frederick Douglass vs. Martin Delany (19th c.) is significant in this unit primarily because:",
             "options": [
               "Moral suasion / integration vs. emigration / Black nationalism.",
-              "Frederick Douglass vs. Martin Delany opposed every form of African American institution building.",
-              "Frederick Douglass vs. Martin Delany lived after the events of Movements & Debates ended.",
-              "Frederick Douglass vs. Martin Delany is mentioned only in passing on the AP exam."
+              "Vocational uplift vs. liberal arts and political agitation.",
+              "Nonviolent integration vs. Black nationalism and self-defense in the 1960s.",
+              "Interracial NAACP reform vs. Garvey's mass Back-to-Africa movement."
             ],
             "correctAnswer": 0,
-            "explanation": "Frederick Douglass vs. Martin Delany is one of the central named figures the AP exam expects students to deploy when writing about Movements & Debates."
+            "explanation": "In the 1850s, Douglass championed moral suasion and full citizenship in the United States, while Delany argued for emigration and Black nationalism in *The Condition, Elevation, Emigration, and Destiny of the Colored People* (1852). The other pairings describe Washington and Du Bois, King and Malcolm X, and Du Bois and Garvey."
           }
         ]
       }
@@ -76,8 +76,8 @@ export const aasMovementsDebatesPart1Data = {
             "options": [
               "Douglass vs. Delany; King vs. Malcolm X; NAACP vs. Nation of Islam.",
               "Crenshaw (1989) — overlapping race, gender, and class generate distinct experiences of inequality.",
-              "Du Bois congresses (1900–1945); Garvey UNIA; Kwame Nkrumah; Black Power's African turn.",
-              "An unrelated modern policy debate"
+              "Pan-African conferences (1900–1945); Garvey's UNIA; Kwame Nkrumah; Black Power's African turn.",
+              "Combahee River Collective's Black feminist statement (1977)."
             ]
           },
           {
@@ -85,24 +85,24 @@ export const aasMovementsDebatesPart1Data = {
             "options": [
               "Crenshaw (1989) — overlapping race, gender, and class generate distinct experiences of inequality.",
               "Douglass vs. Delany; King vs. Malcolm X; NAACP vs. Nation of Islam.",
-              "Du Bois congresses (1900–1945); Garvey UNIA; Kwame Nkrumah; Black Power's African turn.",
-              "A 21st-century technology trend"
+              "Pan-African conferences (1900–1945); Garvey's UNIA; Kwame Nkrumah; Black Power's African turn.",
+              "Vocational uplift vs. liberal arts and political agitation."
             ]
           },
           {
             "label": "Pan-Africanism is best described as ___",
             "options": [
-              "Du Bois congresses (1900–1945); Garvey UNIA; Kwame Nkrumah; Black Power's African turn.",
+              "Pan-African conferences (1900–1945); Garvey's UNIA; Kwame Nkrumah; Black Power's African turn.",
               "Douglass vs. Delany; King vs. Malcolm X; NAACP vs. Nation of Islam.",
               "Crenshaw (1989) — overlapping race, gender, and class generate distinct experiences of inequality.",
-              "An economic theory unrelated to this period"
+              "Vocational uplift vs. liberal arts and political agitation."
             ]
           }
         ],
         "correctAnswers": [
           "Douglass vs. Delany; King vs. Malcolm X; NAACP vs. Nation of Islam.",
           "Crenshaw (1989) — overlapping race, gender, and class generate distinct experiences of inequality.",
-          "Du Bois congresses (1900–1945); Garvey UNIA; Kwame Nkrumah; Black Power's African turn."
+          "Pan-African conferences (1900–1945); Garvey's UNIA; Kwame Nkrumah; Black Power's African turn."
         ],
         "hint1": "Definition tracks the concept name closely.",
         "hint2": "Match the language used in primary sources.",
@@ -119,24 +119,24 @@ export const aasMovementsDebatesPart1Data = {
           {
             "question": "A historian argues that Movements & Debates is essential for understanding African American history. Which evidence BEST supports the claim?",
             "options": [
-              "Frederick Douglass vs. Martin Delany (19th c.) — Moral suasion / integration vs. emigration / Black nationalism.",
-              "A 21st-century pop song references Movements & Debates without historical context.",
-              "Movements & Debates is unrelated to broader trends in U.S. or Atlantic history.",
-              "There are no primary sources for this period."
+              "Frederick Douglass vs. Martin Delany (1850s) — Integration and moral suasion vs. emigration and Black nationalism.",
+              "Booker T. Washington vs. Marcus Garvey (1890s) — Liberal arts and political agitation vs. vocational and industrial training.",
+              "Martin Luther King Jr. vs. W. E. B. Du Bois (1960s) — Black Power vs. nonviolent integration.",
+              "Kimberlé Crenshaw vs. Malcolm X (1970s) — Combahee River Collective vs. Nation of Islam."
             ],
             "correctAnswer": 0,
-            "explanation": "Strong AP arguments cite specific historical actors and dates, not anachronistic or vague references."
+            "explanation": "Strong AP arguments cite accurately attributed actors and dates. Douglass and Delany debated integration versus emigration in the 1850s; Washington's rival was Du Bois, who favored liberal arts and agitation; Du Bois died in 1963 and never debated Black Power with King; and Crenshaw coined 'intersectionality' in 1989, long after Malcolm X's death."
           },
           {
             "question": "Which statement most accurately describes the historical context of Movements & Debates?",
             "options": [
-              "Across more than 150 years, African American thought has grappled with enduring questions: integration vs. separatism, gradualism vs. immediatism, civil rights vs. human rights, race alone vs. intersectional analysis. These debates have shaped strategy, art, and political alignments from Frederick Douglass through bell hooks and the Movement for Black Lives.",
-              "Movements & Debates occurred entirely outside any global or transregional context.",
-              "Movements & Debates produced no documentary evidence and is impossible to study.",
-              "Movements & Debates only appears on AP optional questions."
+              "For over 150 years Black thinkers have debated strategy, from Douglass and Delany to King and Malcolm X.",
+              "Debates over Black strategy began after 2013, when the Movement for Black Lives first raised questions of identity.",
+              "African American leaders have spoken with one voice since emancipation, so internal debate played little role.",
+              "Black political debates took place in isolation from global anticolonial and Pan-African movements."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rewards contextualization — placing the topic within larger historical processes."
+            "explanation": "Contextualization places these debates in their long arc: from Douglass and Delany in the 1850s through Washington and Du Bois, Garvey, King and Malcolm X, and the Combahee River Collective, Black thinkers argued over strategy and identity, often in dialogue with Pan-African and anticolonial movements abroad."
           }
         ]
       }

@@ -5,7 +5,7 @@ export const aasTransatlanticSlaveTradePart6Data = {
     {
       id: "aasts6-intro",
       type: 'text' as const,
-      content: "# ⛓️ The Transatlantic Slave Trade\n\n**Part 6 of 7 — Source & Evidence Workshop**\n\n---\n\n## Working with primary sources for Transatlantic Slave Trade\n\nAP DBQ-style work expects students to identify a source's *purpose, audience, point of view, and historical situation* — and to use that analysis to support a claim.\n\n### Primary sources for this unit\n\n- **Equiano, *Narrative* ch. 2 (1789)** — Most-cited Middle Passage testimony in 18th-century abolition debates.\n- **Brookes slave-ship diagram (1788)** — Showed 482 Africans packed below decks; mass-printed by Clarkson.\n- **Trans-Atlantic Slave Trade Database (Voyages.org)** — Modern database of ~36,000 documented voyages used by historians.\n"
+      content: "# ⛓️ The Transatlantic Slave Trade\n\n**Part 6 of 7 — Source & Evidence Workshop**\n\n---\n\n## Working with primary sources for Transatlantic Slave Trade\n\nAP DBQ-style work expects students to identify a source's *purpose, audience, point of view, and historical situation* — and to use that analysis to support a claim.\n\n### Primary sources for this unit\n\n- **Equiano, *Narrative* ch. 2 (1789)** — Most-cited Middle Passage testimony in 18th-century abolition debates.\n- **Brookes slave-ship diagram (1788)** — Showed hundreds of Africans packed below decks; mass-printed by British abolitionists.\n- **Trans-Atlantic Slave Trade Database (Voyages.org)** — Modern database of ~36,000 documented voyages used by historians.\n"
     },
     {
       id: "aasts6-workshop",
@@ -22,23 +22,23 @@ export const aasTransatlanticSlaveTradePart6Data = {
             "question": "What makes Equiano, *Narrative* ch. 2 (1789) a strong source for studying Transatlantic Slave Trade?",
             "options": [
               "Most-cited Middle Passage testimony in 18th-century abolition debates.",
-              "It was published in 2024 with no link to the period.",
-              "It is fictional and includes no historical content.",
-              "It is unsigned and undated."
+              "Captain's log recording prices, cargoes, and deaths on a Liverpool voyage.",
+              "Parliamentary testimony by a slave-ship surgeon on shipboard mortality.",
+              "Plan of a regulated slave ship used to show the cruelty of tight packing."
             ],
             "correctAnswer": 0,
-            "explanation": "Provenance, date, and authorial position determine source value."
+            "explanation": "Chapter 2 of Equiano's *Narrative* was the most-cited Middle Passage testimony in 18th-century abolition debates, written by a survivor. It is not a captain's log, a surgeon's testimony, or the Brookes ship plan."
           },
           {
             "question": "When using a primary source on the AP exam, you should:",
             "options": [
               "Identify author/date/audience and tie the source to a specific claim.",
-              "Quote the source verbatim without analysis.",
-              "Ignore the author's position.",
-              "Treat the source as neutral and unbiased."
+              "Summarize the source's main idea accurately and let it stand as your argument.",
+              "Quote the most striking passage at length so readers can judge its meaning for themselves.",
+              "Treat it as neutral, reliable evidence, since primary sources record events as they happened."
             ],
             "correctAnswer": 0,
-            "explanation": "AP source-use rewards explicit attribution and analytical framing."
+            "explanation": "Source use earns credit when you attribute the source (author, date, audience) and put it to work for a claim. Summary, long quotation, and treating a source as neutral all skip that analysis."
           }
         ]
       }
@@ -46,7 +46,7 @@ export const aasTransatlanticSlaveTradePart6Data = {
     {
       id: "aasts6-input",
       type: 'input-boxes' as const,
-      content: "**Applied Recall** ✍️\n\n1) Name the source: Most-cited Middle Passage testimony in 18th-century abolitio…\n\n2) Name the source: Showed 482 Africans packed below decks; mass-printed by Clar…\n\n3) Name the source: Modern database of ~36,000 documented voyages used by histor…\n",
+      content: "**Applied Recall** ✍️\n\n1) Name the source: Most-cited Middle Passage testimony in 18th-century abolitio…\n\n2) Name the source: Showed hundreds of Africans packed below decks; mass-printed by Brit…\n\n3) Name the source: Modern database of ~36,000 documented voyages used by histor…\n",
       exercise: {
         "boxes": 3,
         "correctAnswers": [
@@ -70,18 +70,18 @@ export const aasTransatlanticSlaveTradePart6Data = {
             "label": "Equiano, *Narrative* ch. 2 (1789) — purpose ___",
             "options": [
               "Most-cited Middle Passage testimony in 18th-century abolition debates.",
-              "Showed 482 Africans packed below decks; mass-printed by Clarkson.",
+              "Showed hundreds of Africans packed below decks; mass-printed by British abolitionists.",
               "Modern database of ~36,000 documented voyages used by historians.",
-              "Unrelated to this unit"
+              "Ship surgeon's testimony to Parliament on mortality below decks."
             ]
           },
           {
             "label": "Brookes slave-ship diagram (1788) — purpose ___",
             "options": [
-              "Showed 482 Africans packed below decks; mass-printed by Clarkson.",
+              "Showed hundreds of Africans packed below decks; mass-printed by British abolitionists.",
               "Most-cited Middle Passage testimony in 18th-century abolition debates.",
               "Modern database of ~36,000 documented voyages used by historians.",
-              "Unrelated to this unit"
+              "Ship surgeon's testimony to Parliament on mortality below decks."
             ]
           },
           {
@@ -89,14 +89,14 @@ export const aasTransatlanticSlaveTradePart6Data = {
             "options": [
               "Modern database of ~36,000 documented voyages used by historians.",
               "Most-cited Middle Passage testimony in 18th-century abolition debates.",
-              "Showed 482 Africans packed below decks; mass-printed by Clarkson.",
-              "Unrelated to this unit"
+              "Showed hundreds of Africans packed below decks; mass-printed by British abolitionists.",
+              "Ship surgeon's testimony to Parliament on mortality below decks."
             ]
           }
         ],
         "correctAnswers": [
           "Most-cited Middle Passage testimony in 18th-century abolition debates.",
-          "Showed 482 Africans packed below decks; mass-printed by Clarkson.",
+          "Showed hundreds of Africans packed below decks; mass-printed by British abolitionists.",
           "Modern database of ~36,000 documented voyages used by historians."
         ],
         "hint1": "Match the source to its actual function.",
@@ -115,23 +115,23 @@ export const aasTransatlanticSlaveTradePart6Data = {
             "question": "A strong AP citation of Equiano, *Narrative* ch. 2 (1789) reads:",
             "options": [
               "'According to Equiano, *Narrative* ch. 2 (1789), …' followed by inference about purpose and historical situation.",
-              "A direct quote with no attribution.",
-              "A loose paraphrase that hides the source's identity.",
-              "An anachronistic reading that ignores the date."
+              "'According to Equiano's *Narrative* (1789), …' followed by a long, unbroken quotation, with no further comment.",
+              "'Equiano's *Narrative* is biased,' followed by dismissing its account of the Middle Passage entirely.",
+              "'According to one formerly enslaved writer, …' followed by a paraphrase that never names the source."
             ],
             "correctAnswer": 0,
-            "explanation": "Attribution + sourcing analysis is the AP scoring standard."
+            "explanation": "Attribution plus sourcing analysis is the standard: name the source, then explain how its abolitionist purpose and 1789 context shape it. Quoting without comment, dismissing a source as biased, and hiding its identity all fall short."
           },
           {
             "question": "Which source-analysis move earns the AP 'sourcing' point?",
             "options": [
               "Identifying author, audience, purpose, OR historical situation — and using it to support a claim.",
-              "Quoting verbatim with no analysis.",
-              "Ignoring the source's date.",
-              "Citing only 21st-century opinion pieces."
+              "Restating the source's topic, date, and title — and quoting its most memorable line.",
+              "Explaining whether you agree with the author's view — and describing how it makes you feel about the past.",
+              "Summarizing what the source says accurately — and placing it in chronological order."
             ],
             "correctAnswer": 0,
-            "explanation": "AP DBQ rubrics explicitly reward sourcing analysis tied to claims."
+            "explanation": "Sourcing means explaining how the author's point of view, purpose, audience, or historical situation matters, then using that to support the argument. Restating, quoting, summarizing, or reacting personally does not count."
           }
         ]
       }

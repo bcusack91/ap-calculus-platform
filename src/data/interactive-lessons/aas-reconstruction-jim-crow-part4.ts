@@ -21,24 +21,24 @@ export const aasReconstructionJimCrowPart4Data = {
           {
             "question": "How does Reconstruction & Jim Crow BEST connect to Great Migration & Harlem Renaissance?",
             "options": [
-              "Jim crow violence drove the 20th-century migration north.",
-              "Reconstruction & Jim Crow and Great Migration & Harlem Renaissance are completely unrelated topics.",
-              "Connections between units are not tested on the AP exam.",
-              "AP rubrics reward isolated facts over connections."
+              "Jim Crow violence drove the 20th-century migration north.",
+              "Reconstruction's land grants kept most Black families farming in the South until 1940.",
+              "Northern factories recruited Black workers only after Jim Crow laws were repealed.",
+              "The Great Migration began in the 1870s, when Exodusters moved to Kansas."
             ],
             "correctAnswer": 0,
-            "explanation": "AP synthesis prompts ask students to articulate how units interact."
+            "explanation": "Lynching, disfranchisement, and segregation pushed millions of Black Southerners north after 1910, linking this unit to the Great Migration. Most freed families never received land, Jim Crow laws stood until the 1960s, and the 1879 Exoduster movement was a small forerunner rather than the Great Migration itself."
           },
           {
             "question": "A 'feedback loop' across units means:",
             "options": [
               "Outcomes of one process reinforce or modify the conditions that produced it.",
-              "Two unrelated facts placed next to each other.",
-              "A modern policy with no historical relevance.",
-              "Memorizing additional vocabulary words."
+              "One process triggers a second, which then runs its course without acting back on the first.",
+              "Two processes unfold at the same time in different regions without influencing each other.",
+              "A later generation reinterprets an earlier event in light of its own political concerns."
             ],
             "correctAnswer": 0,
-            "explanation": "Feedback loops are a recurring AP analytical move."
+            "explanation": "A feedback loop runs both ways: the outcome acts back on the conditions that produced it. A one-way chain of causes, parallel developments, and later reinterpretation all lack that return effect."
           }
         ]
       }
@@ -70,27 +70,27 @@ export const aasReconstructionJimCrowPart4Data = {
             "label": "Reconstruction & Jim Crow most directly causes ___",
             "options": [
               "Great Migration & Harlem Renaissance",
-              "An unrelated 21st-century event",
-              "A pre-modern European war",
-              "A purely cultural festival"
+              "African Kingdoms",
+              "Origins of the Diaspora",
+              "Transatlantic Slave Trade"
             ]
           },
           {
             "label": "A 'feedback loop' is ___",
             "options": [
               "Outcomes that reinforce their own causes",
-              "A failed argument",
-              "An anachronism",
-              "A primary source"
+              "A cause with a single one-way effect",
+              "Two trends that develop in parallel",
+              "A later reversal of an earlier trend"
             ]
           },
           {
             "label": "AP 'synthesis' refers to ___",
             "options": [
               "Combining evidence across units to support a claim",
-              "Memorizing dates only",
-              "Avoiding all comparison",
-              "Citing one example without analysis"
+              "Summarizing one unit's events in chronological order",
+              "Quoting several sources at length without a claim",
+              "Restating the thesis in a new conclusion"
             ]
           }
         ],
@@ -102,7 +102,7 @@ export const aasReconstructionJimCrowPart4Data = {
         "hint1": "Map cause to consequence.",
         "hint2": "'Loop' implies feedback.",
         "hint3": "Synthesis = bringing units together.",
-        "explanation": "Connecting units is a high-leverage AP skill rewarded across MCQ, SAQ, and LEQ."
+        "explanation": "Connecting units is a high-leverage AP skill rewarded across MCQ, SAQ, and DBQ."
       }
     },
     {
@@ -114,24 +114,24 @@ export const aasReconstructionJimCrowPart4Data = {
           {
             "question": "A student writes: 'Reconstruction & Jim Crow had no effect on Great Migration & Harlem Renaissance.' The best AP correction is:",
             "options": [
-              "Show specific connections — Jim Crow violence drove the 20th-century migration north — to demonstrate causal interaction.",
-              "Insist there are no connections in U.S. history.",
-              "Cite only events outside the unit.",
-              "Replace the claim with a personal opinion."
+              "Show that Jim Crow violence and disfranchisement pushed Black Southerners into the 20th-century migration north.",
+              "Agree, since the Great Migration was driven only by Northern factory wages, with no push from conditions in the South.",
+              "Replace the claim with the opposite generalization that every Black Southerner left the South after 1877.",
+              "Cite the Civil Rights Movement instead, since Jim Crow's effects appear only after 1954."
             ],
             "correctAnswer": 0,
-            "explanation": "AP synthesis demands explicit, specific connections backed by evidence."
+            "explanation": "The correction needs a specific connection: lynching, disfranchisement, and segregation pushed Black Southerners north. Northern jobs pulled migrants, but Southern conditions pushed them; most Black Southerners stayed until after 1910; and Jim Crow shaped Black life long before 1954."
           },
           {
             "question": "The strongest AP synthesis move uses:",
             "options": [
               "Specific evidence from at least two units to support a single, defensible claim.",
-              "One vague generalization across centuries.",
-              "Multiple unrelated personal opinions.",
-              "A list of names without explanation."
+              "A detailed chronological summary of one unit, with dates and names but no central claim.",
+              "A sweeping claim about all of African American history, illustrated by one famous example.",
+              "Several separate claims, each backed by evidence drawn from a different unit."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rubrics consistently reward specificity + cross-unit synthesis."
+            "explanation": "Synthesis joins evidence from more than one unit behind ONE defensible claim. A summary without a claim, a sweeping claim on thin evidence, and several unconnected claims each miss part of that move."
           }
         ]
       }

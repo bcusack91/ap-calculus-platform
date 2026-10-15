@@ -22,23 +22,23 @@ export const aasAfricanKingdomsPart6Data = {
             "question": "What makes *Epic of Sundiata* a strong source for studying African Kingdoms?",
             "options": [
               "Oral tradition transmitted by Mande griots; founding narrative of Mali.",
-              "It was published in 2024 with no link to the period.",
-              "It is fictional and includes no historical content.",
-              "It is unsigned and undated."
+              "Arabic chronicle written by a Timbuktu scholar; record of Songhai's rulers and scholars.",
+              "Moroccan traveler's eyewitness account; detailed description of Mansa Suleyman's court.",
+              "Kongo king's letter to Portugal's king; protest against Portuguese slave-raiding."
             ],
             "correctAnswer": 0,
-            "explanation": "Provenance, date, and authorial position determine source value."
+            "explanation": "The *Epic of Sundiata* is valuable as oral tradition carried by Mande griots that preserves Mali's founding narrative. The other descriptions fit the *Tarikh al-Sudan*, Ibn Battuta's *Rihla*, and Afonso I's 1526 letter."
           },
           {
             "question": "When using a primary source on the AP exam, you should:",
             "options": [
               "Identify author/date/audience and tie the source to a specific claim.",
-              "Quote the source verbatim without analysis.",
-              "Ignore the author's position.",
-              "Treat the source as neutral and unbiased."
+              "Summarize the source's main idea accurately and let it stand as your argument.",
+              "Quote the most striking passage at length so readers can judge its meaning for themselves.",
+              "Treat it as neutral, reliable evidence, since primary sources record events as they happened."
             ],
             "correctAnswer": 0,
-            "explanation": "AP source-use rewards explicit attribution and analytical framing."
+            "explanation": "Source use earns credit when you attribute the source (author, date, audience) and put it to work for a claim. Summary, long quotation, and treating a source as neutral all skip that analysis."
           }
         ]
       }
@@ -72,7 +72,7 @@ export const aasAfricanKingdomsPart6Data = {
               "Oral tradition transmitted by Mande griots; founding narrative of Mali.",
               "Description of Mansa Suleyman's court, mosque attendance, and royal protocol.",
               "King of Kongo's letter denouncing Portuguese slavers operating in his kingdom.",
-              "Unrelated to this unit"
+              "Timbuktu chronicle of Songhai rulers and scholars."
             ]
           },
           {
@@ -81,7 +81,7 @@ export const aasAfricanKingdomsPart6Data = {
               "Description of Mansa Suleyman's court, mosque attendance, and royal protocol.",
               "Oral tradition transmitted by Mande griots; founding narrative of Mali.",
               "King of Kongo's letter denouncing Portuguese slavers operating in his kingdom.",
-              "Unrelated to this unit"
+              "Timbuktu chronicle of Songhai rulers and scholars."
             ]
           },
           {
@@ -90,7 +90,7 @@ export const aasAfricanKingdomsPart6Data = {
               "King of Kongo's letter denouncing Portuguese slavers operating in his kingdom.",
               "Oral tradition transmitted by Mande griots; founding narrative of Mali.",
               "Description of Mansa Suleyman's court, mosque attendance, and royal protocol.",
-              "Unrelated to this unit"
+              "Timbuktu chronicle of Songhai rulers and scholars."
             ]
           }
         ],
@@ -115,23 +115,23 @@ export const aasAfricanKingdomsPart6Data = {
             "question": "A strong AP citation of *Epic of Sundiata* reads:",
             "options": [
               "'According to *Epic of Sundiata*, …' followed by inference about purpose and historical situation.",
-              "A direct quote with no attribution.",
-              "A loose paraphrase that hides the source's identity.",
-              "An anachronistic reading that ignores the date."
+              "'According to the *Epic of Sundiata*, …' followed by a long quotation with no further comment.",
+              "'The *Epic of Sundiata* is just a legend,' followed by dismissing it as evidence altogether.",
+              "'According to one old African story, …' followed by a paraphrase that never names the source."
             ],
             "correctAnswer": 0,
-            "explanation": "Attribution + sourcing analysis is the AP scoring standard."
+            "explanation": "Attribution plus sourcing analysis is the standard: name the source, then explain how its purpose (praising Mali's founder) and situation (griot performance) shape it. Quoting without comment, dismissing oral tradition, and hiding the source all fall short."
           },
           {
             "question": "Which source-analysis move earns the AP 'sourcing' point?",
             "options": [
               "Identifying author, audience, purpose, OR historical situation — and using it to support a claim.",
-              "Quoting verbatim with no analysis.",
-              "Ignoring the source's date.",
-              "Citing only 21st-century opinion pieces."
+              "Restating the source's topic, date, and title — and quoting its most memorable line.",
+              "Explaining whether you agree with the author's view — and describing how it makes you feel about the past.",
+              "Summarizing what the source says accurately — and placing it in chronological order."
             ],
             "correctAnswer": 0,
-            "explanation": "AP DBQ rubrics explicitly reward sourcing analysis tied to claims."
+            "explanation": "Sourcing means explaining how the author's point of view, purpose, audience, or historical situation matters, then using that to support the argument. Restating, quoting, summarizing, or reacting personally does not count."
           }
         ]
       }

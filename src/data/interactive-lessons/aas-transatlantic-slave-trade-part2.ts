@@ -22,23 +22,23 @@ export const aasTransatlanticSlaveTradePart2Data = {
             "question": "Which BEST describes a primary mechanism shaping Transatlantic Slave Trade?",
             "options": [
               "European manufactures → African captives → American plantation goods → Europe.",
-              "An unrelated technological invention from a different century.",
-              "Pure coincidence with no identifiable cause.",
-              "A modern political slogan with no historical content."
+              "West African gold → Saharan caravans → North African ports → Mediterranean Europe.",
+              "American silver → Manila galleons → Chinese silk → Spanish America.",
+              "Asian spices → Venetian merchants → European markets → Asian ports."
             ],
             "correctAnswer": 0,
-            "explanation": "Triangular trade is the central mechanism the AP exam expects students to explain."
+            "explanation": "The triangular trade exchanged European manufactures for African captives, whose forced labor produced plantation goods shipped back to Europe. The other chains describe the trans-Saharan trade, the Manila galleon trade, and the Mediterranean spice trade."
           },
           {
             "question": "Royal African Company's career illustrates which historical mechanism?",
             "options": [
               "English monopoly under James, Duke of York; branded the initials 'DY' on captives.",
-              "Royal African Company had no impact on Transatlantic Slave Trade.",
-              "An entirely modern policy debate.",
-              "A purely literary aesthetic."
+              "Dutch trading firm that seized Elmina from Portugal (1637) and dominated the 1600s trade.",
+              "Spanish crown license; let foreign merchants supply captives to Spanish American colonies.",
+              "British abolitionist society that mass-printed the Brookes diagram to rally public opinion."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rewards specific causal claims tied to named figures."
+            "explanation": "The Royal African Company held England's monopoly under James, Duke of York, and branded captives 'DY'. The other descriptions fit the Dutch West India Company, the asiento, and the Society for Effecting the Abolition of the Slave Trade."
           }
         ]
       }
@@ -69,35 +69,35 @@ export const aasTransatlanticSlaveTradePart2Data = {
           {
             "label": "The mechanism most strongly associated with John Hawkins is ___",
             "options": [
-              "First English slaver; raids West Africa 1562 with backing of Elizabeth I.",
+              "Pioneer of the English slave trade; first voyage 1562, later voyages backed by Elizabeth I.",
               "English monopoly under James, Duke of York; branded the initials 'DY' on captives.",
-              "Describes Bight of Biafra capture, holding pens at Bonny, and the Middle Passage.",
-              "Unrelated to this unit"
+              "Describes capture in the Bight of Biafra hinterland, sale to the coast, and the Middle Passage.",
+              "Slave-ship captain turned abolitionist; wrote 'Amazing Grace' (1772)."
             ]
           },
           {
             "label": "The mechanism most strongly associated with Royal African Company is ___",
             "options": [
               "English monopoly under James, Duke of York; branded the initials 'DY' on captives.",
-              "First English slaver; raids West Africa 1562 with backing of Elizabeth I.",
-              "Describes Bight of Biafra capture, holding pens at Bonny, and the Middle Passage.",
-              "Unrelated to this unit"
+              "Pioneer of the English slave trade; first voyage 1562, later voyages backed by Elizabeth I.",
+              "Describes capture in the Bight of Biafra hinterland, sale to the coast, and the Middle Passage.",
+              "British abolitionist whose shipboard evidence helped pass the 1807 Act."
             ]
           },
           {
             "label": "The mechanism most strongly associated with Olaudah Equiano is ___",
             "options": [
-              "Describes Bight of Biafra capture, holding pens at Bonny, and the Middle Passage.",
-              "First English slaver; raids West Africa 1562 with backing of Elizabeth I.",
+              "Describes capture in the Bight of Biafra hinterland, sale to the coast, and the Middle Passage.",
+              "Pioneer of the English slave trade; first voyage 1562, later voyages backed by Elizabeth I.",
               "English monopoly under James, Duke of York; branded the initials 'DY' on captives.",
-              "Unrelated to this unit"
+              "Slave-ship captain turned abolitionist; wrote 'Amazing Grace' (1772)."
             ]
           }
         ],
         "correctAnswers": [
-          "First English slaver; raids West Africa 1562 with backing of Elizabeth I.",
+          "Pioneer of the English slave trade; first voyage 1562, later voyages backed by Elizabeth I.",
           "English monopoly under James, Duke of York; branded the initials 'DY' on captives.",
-          "Describes Bight of Biafra capture, holding pens at Bonny, and the Middle Passage."
+          "Describes capture in the Bight of Biafra hinterland, sale to the coast, and the Middle Passage."
         ],
         "hint1": "Match the figure's actual contribution.",
         "hint2": "Use the dates as a guide.",
@@ -114,13 +114,13 @@ export const aasTransatlanticSlaveTradePart2Data = {
           {
             "question": "A student argues that Transatlantic Slave Trade happened spontaneously. The strongest counter-argument is:",
             "options": [
-              "Identifying specific actors and processes — e.g., John Hawkins (1532–1595) — that drove the change.",
-              "Insisting that historians cannot know causes.",
-              "Citing only events from outside this period.",
-              "Memorizing dates without analyzing them."
+              "Identifying the actors and processes — chartered companies, African suppliers, plantation demand — that drove it.",
+              "Arguing that the trade grew mainly from voluntary migration — Africans seeking paid work on American plantations.",
+              "Insisting that ship logs, port records, and company ledgers are too sparse to show any cause at all.",
+              "Pointing out that the trade began only after the cotton gin created demand for labor in the 1790s."
             ],
             "correctAnswer": 0,
-            "explanation": "Historical causation requires named actors, dated events, and articulated mechanisms."
+            "explanation": "Causation requires named actors and mechanisms: chartered companies, African states and merchants who supplied captives, and plantation demand for labor. The trade was forced, richly documented, and nearly three centuries old by the 1790s."
           },
           {
             "question": "Which mechanism is MOST closely linked to Middle Passage?",
@@ -128,10 +128,10 @@ export const aasTransatlanticSlaveTradePart2Data = {
               "The Atlantic crossing; mortality averaged ~15%, sometimes much higher.",
               "European manufactures → African captives → American plantation goods → Europe.",
               "Spanish license granting European powers the monopoly to supply enslaved Africans to Spanish colonies.",
-              "A cause from a different historical era."
+              "The overland march to the coast; captives were held in forts such as Elmina."
             ],
             "correctAnswer": 0,
-            "explanation": "Middle Passage has its own historical mechanism distinct from related concepts."
+            "explanation": "The Middle Passage is the Atlantic crossing itself, with average mortality near 15%. The triangular route, the asiento license, and the march to coastal forts are related stages or institutions, not the crossing."
           }
         ]
       }

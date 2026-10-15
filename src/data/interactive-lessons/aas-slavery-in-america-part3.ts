@@ -5,7 +5,7 @@ export const aasSlaveryInAmericaPart3Data = {
     {
       id: "aassia3-intro",
       type: 'text' as const,
-      content: "# 🏚️ Slavery in America\n\n**Part 3 of 7 — Patterns, Regions & Case Studies**\n\n---\n\n## Specific cases — not abstractions\n\n| Event | Significance |\n|---|---|\n| **1641 Massachusetts legalizes slavery** | First English colony to do so. |\n| **1662 Virginia partus law** | Slavery becomes hereditary through the mother. |\n| **1705 Virginia Slave Codes** | Comprehensive race-based legal regime; later models for other colonies. |\n| **1793 cotton gin** | Cotton acreage soars from ~10,000 bales (1793) to ~4 million (1860). |\n| **1808 federal ban on Atlantic slave imports** | Domestic trade replaces Atlantic supply. |\n| **1820 Missouri Compromise** | 36°30′ line divides expansion of slavery in the Louisiana Purchase. |\n"
+      content: "# 🏚️ Slavery in America\n\n**Part 3 of 7 — Patterns, Regions & Case Studies**\n\n---\n\n## Specific cases — not abstractions\n\n| Event | Significance |\n|---|---|\n| **1641 Massachusetts legalizes slavery** | First English colony to do so. |\n| **1662 Virginia partus law** | Slavery becomes hereditary through the mother. |\n| **1705 Virginia Slave Codes** | Comprehensive race-based legal regime; later models for other colonies. |\n| **1793 cotton gin** | Cotton output soars from ~10,000 bales (1793) to ~4 million bales (1860). |\n| **1808 federal ban on Atlantic slave imports** | Domestic trade replaces Atlantic supply. |\n| **1820 Missouri Compromise** | 36°30′ line divides expansion of slavery in the Louisiana Purchase. |\n"
     },
     {
       id: "aassia3-cases",
@@ -22,23 +22,23 @@ export const aasSlaveryInAmericaPart3Data = {
             "question": "Which case BEST illustrates a pattern central to Slavery in America?",
             "options": [
               "1641 Massachusetts legalizes slavery — First English colony to do so.",
-              "An unrelated event from another century.",
-              "A purely fictional event.",
-              "An anecdote with no documentary support."
+              "1444 Lagos auction — Portuguese sell African captives into slavery in Europe.",
+              "1896 *Plessy v. Ferguson* — Upholds segregation decades after slavery ended.",
+              "1954 *Brown v. Board* — Strikes down school segregation, a legacy of slavery."
             ],
             "correctAnswer": 0,
-            "explanation": "Use historically attested events to illustrate patterns."
+            "explanation": "Massachusetts's 1641 law falls inside c. 1619–1865 and shows slavery being written into English colonial law. The Lagos auction, *Plessy*, and *Brown* belong to other units."
           },
           {
             "question": "A comparison of 1641 Massachusetts legalizes slavery and 1662 Virginia partus law is most useful because:",
             "options": [
               "Both cases let students see common patterns and unique local differences in concrete historical detail.",
-              "Both events occurred in identical contexts and produced identical outcomes.",
-              "Comparison is irrelevant to AP scoring.",
-              "Neither event left primary sources for historians."
+              "Both cases show that slavery in English America was racial and hereditary from the very first arrivals in 1619.",
+              "Both cases show that northern colonies rejected slavery while only Virginia ever made it legal.",
+              "Both cases show that colonial courts, not legislatures, created the basic laws of American slavery."
             ],
             "correctAnswer": 0,
-            "explanation": "AP comparison rewards specific similarities and differences with named cases."
+            "explanation": "Comparison rewards a specific similarity and a specific difference. Both colonies legislated slavery, so status was still being defined after 1619; Massachusetts was a northern colony that legalized it; and both laws came from legislatures."
           }
         ]
       }
@@ -69,10 +69,10 @@ export const aasSlaveryInAmericaPart3Data = {
           {
             "label": "The case most central to Chattel slavery is ___",
             "options": [
-              "1641 Massachusetts legalizes slavery",
-              "1662 Virginia partus law",
               "1705 Virginia Slave Codes",
-              "An unrelated 21st-century news story"
+              "1662 Virginia partus law",
+              "1808 federal ban on Atlantic slave imports",
+              "1820 Missouri Compromise"
             ]
           },
           {
@@ -81,23 +81,23 @@ export const aasSlaveryInAmericaPart3Data = {
               "1662 Virginia partus law",
               "1641 Massachusetts legalizes slavery",
               "1705 Virginia Slave Codes",
-              "An unrelated 21st-century news story"
+              "1793 cotton gin"
             ]
           },
           {
             "label": "The case most central to Domestic slave trade is ___",
             "options": [
-              "1705 Virginia Slave Codes",
+              "1808 federal ban on Atlantic slave imports",
               "1641 Massachusetts legalizes slavery",
               "1662 Virginia partus law",
-              "An unrelated 21st-century news story"
+              "1705 Virginia Slave Codes"
             ]
           }
         ],
         "correctAnswers": [
-          "1641 Massachusetts legalizes slavery",
+          "1705 Virginia Slave Codes",
           "1662 Virginia partus law",
-          "1705 Virginia Slave Codes"
+          "1808 federal ban on Atlantic slave imports"
         ],
         "hint1": "Use chronology to disambiguate.",
         "hint2": "Match the event to the concept it best illustrates.",
@@ -114,24 +114,24 @@ export const aasSlaveryInAmericaPart3Data = {
           {
             "question": "Using one specific case from Slavery in America, which sentence is the BEST AP comparison move?",
             "options": [
-              "Both 1641 Massachusetts legalizes slavery and 1662 Virginia partus law reveal chattel slavery, but they differ in actors and outcomes.",
-              "Both events were fictional and produced no consequences.",
-              "These events are too old to compare meaningfully.",
-              "Comparison is unimportant in AP rubrics."
+              "Both Massachusetts (1641) and Virginia (1662) wrote slavery into law, but only Virginia's law made it hereditary by the mother.",
+              "Both Massachusetts (1641) and Virginia (1662) wrote slavery into law, so slavery was the same in every colony.",
+              "Both Massachusetts (1641) and Virginia (1662) were English colonies, but one passed its law two decades later.",
+              "Virginia's 1662 law mattered more than Massachusetts's, since Virginia held far more enslaved people."
             ],
             "correctAnswer": 0,
-            "explanation": "AP comparison combines a specific shared pattern with a specific difference."
+            "explanation": "A full comparison pairs a shared pattern (legislating slavery) with a meaningful difference (Virginia's rule that status follows the mother). A similarity alone, a trivial difference such as date, or a ranking does not complete the move."
           },
           {
             "question": "Anthony Johnson's role in Slavery in America is best illustrated by which event?",
             "options": [
-              "1641 Massachusetts legalizes slavery — First English colony to do so.",
-              "An unrelated event in a different century.",
-              "A purely literary publication unconnected to politics.",
-              "An event before the figure was born."
+              "1655 Casor case — Virginia court rules that John Casor must serve Johnson for life.",
+              "1641 Massachusetts legalizes slavery — Two decades after Johnson first reached the Virginia colony.",
+              "1662 Virginia partus law — Slavery becomes hereditary through the mother.",
+              "1705 Virginia Slave Codes — Comprehensive race-based legal regime."
             ],
             "correctAnswer": 0,
-            "explanation": "Tie figures to dated events for high-scoring AP arguments."
+            "explanation": "Johnson's defining moment is the 1655 Casor case, in which a Virginia court let him hold John Casor as a servant for life, showing a free Black planter inside a still-fluid system. Massachusetts's law is a different colony, and the 1662 and 1705 Virginia laws came as that fluidity closed."
           }
         ]
       }

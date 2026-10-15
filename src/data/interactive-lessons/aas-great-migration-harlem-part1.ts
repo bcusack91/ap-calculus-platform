@@ -21,24 +21,24 @@ export const aasGreatMigrationHarlemPart1Data = {
           {
             "question": "Which statement BEST captures why Great Migration & Harlem Renaissance is foundational to AP African American History?",
             "options": [
-              "Between 1910 and 1970, ~6 million African Americans moved from the rural South to northern, midwestern, and western cities — fleeing Jim Crow and pulled by industrial labor demand. In neighborhoods like Harlem, this demographic shift produced an unprecedented flowering of Black literature, music, theater, and political thought.",
-              "Great Migration & Harlem Renaissance is primarily a literary movement with no political implications.",
-              "Great Migration & Harlem Renaissance only matters to one decade and rarely appears on the AP exam.",
-              "Great Migration & Harlem Renaissance is studied to memorize dates without analyzing causes."
+              "About 6 million Black Southerners moved to Northern and Western cities by 1970, and Harlem's new community sparked a cultural renaissance.",
+              "Most Black Southerners moved only to Southern cities like Atlanta, so the Harlem Renaissance drew mainly on rural Southern writers.",
+              "The migration began only after World War II, when mechanized cotton farming first pushed Black workers out of the South.",
+              "Northern cities welcomed Black migrants without segregation, so Harlem's writers turned away from questions of race."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rewards students who can articulate why Great Migration & Harlem Renaissance matters in the broader course narrative, not just describe it."
+            "explanation": "The unit is foundational because about 6 million Black Southerners left for Northern, Midwestern, and Western cities between 1910 and 1970, fleeing Jim Crow and drawn by industrial work, and in neighborhoods like Harlem that shift produced a flowering of Black literature, music, and political thought. The migration began during World War I, it went largely to Northern cities, and migrants met segregation there too."
           },
           {
             "question": "Robert S. Abbott (1870–1940) is significant in this unit primarily because:",
             "options": [
               "*Chicago Defender* publisher; promoted northern migration through targeted Pullman porter distribution.",
-              "Robert S. Abbott opposed every form of African American institution building.",
-              "Robert S. Abbott lived after the events of Great Migration & Harlem Renaissance ended.",
-              "Robert S. Abbott is mentioned only in passing on the AP exam."
+              "UNIA leader; promoted 'Back to Africa' emigration through the Black Star Line shipping company and mass rallies.",
+              "First Black Rhodes Scholar; edited *The New Negro* anthology (1925) and mentored young Harlem Renaissance writers.",
+              "Jazz poet of *The Weary Blues* (1926); celebrated the blues, jazz, and everyday life of working-class Harlem."
             ],
             "correctAnswer": 0,
-            "explanation": "Robert S. Abbott is one of the central named figures the AP exam expects students to deploy when writing about Great Migration & Harlem Renaissance."
+            "explanation": "Robert S. Abbott published the *Chicago Defender*, and Pullman porters carried it across the South, spreading the call to move north. The other descriptions belong to Marcus Garvey, Alain Locke, and Langston Hughes."
           }
         ]
       }
@@ -77,7 +77,7 @@ export const aasGreatMigrationHarlemPart1Data = {
               "Lynching, sharecropping debt, boll weevil, disfranchisement.",
               "WWI labor demand (immigration cut off 1917), higher wages, voting rights, urban Black institutions.",
               "Alain Locke's 1925 anthology framing self-confident, modern Black identity.",
-              "An unrelated modern policy debate"
+              "Federal land grants that kept Black families farming in the South."
             ]
           },
           {
@@ -86,7 +86,7 @@ export const aasGreatMigrationHarlemPart1Data = {
               "WWI labor demand (immigration cut off 1917), higher wages, voting rights, urban Black institutions.",
               "Lynching, sharecropping debt, boll weevil, disfranchisement.",
               "Alain Locke's 1925 anthology framing self-confident, modern Black identity.",
-              "A 21st-century technology trend"
+              "Southern factory jobs and new voting rights in Mississippi."
             ]
           },
           {
@@ -95,7 +95,7 @@ export const aasGreatMigrationHarlemPart1Data = {
               "Alain Locke's 1925 anthology framing self-confident, modern Black identity.",
               "Lynching, sharecropping debt, boll weevil, disfranchisement.",
               "WWI labor demand (immigration cut off 1917), higher wages, voting rights, urban Black institutions.",
-              "An economic theory unrelated to this period"
+              "Garvey's call for mass emigration to Africa on the Black Star Line."
             ]
           }
         ],
@@ -120,23 +120,23 @@ export const aasGreatMigrationHarlemPart1Data = {
             "question": "A historian argues that Great Migration & Harlem Renaissance is essential for understanding African American history. Which evidence BEST supports the claim?",
             "options": [
               "Robert S. Abbott (1870–1940) — *Chicago Defender* publisher; promoted northern migration through targeted Pullman porter distribution.",
-              "A 21st-century pop song references Great Migration & Harlem Renaissance without historical context.",
-              "Great Migration & Harlem Renaissance is unrelated to broader trends in U.S. or Atlantic history.",
-              "There are no primary sources for this period."
+              "Marcus Garvey (1887–1940) — *Chicago Defender* publisher; promoted northern migration through Pullman porter distribution.",
+              "Alain Locke (1885–1954) — UNIA founder; launched the Black Star Line to promote 'Back to Africa' emigration.",
+              "Langston Hughes (1901–1967) — First Black Rhodes Scholar; edited *The New Negro* (1925), the defining anthology of the Harlem Renaissance."
             ],
             "correctAnswer": 0,
-            "explanation": "Strong AP arguments cite specific historical actors and dates, not anachronistic or vague references."
+            "explanation": "Strong AP arguments cite accurately attributed actors and dates. Robert S. Abbott published the *Chicago Defender*; Marcus Garvey led the UNIA; Alain Locke was the first Black Rhodes Scholar and edited *The New Negro*; Langston Hughes wrote *The Weary Blues*."
           },
           {
             "question": "Which statement most accurately describes the historical context of Great Migration & Harlem Renaissance?",
             "options": [
-              "Between 1910 and 1970, ~6 million African Americans moved from the rural South to northern, midwestern, and western cities — fleeing Jim Crow and pulled by industrial labor demand. In neighborhoods like Harlem, this demographic shift produced an unprecedented flowering of Black literature, music, theater, and political thought.",
-              "Great Migration & Harlem Renaissance occurred entirely outside any global or transregional context.",
-              "Great Migration & Harlem Renaissance produced no documentary evidence and is impossible to study.",
-              "Great Migration & Harlem Renaissance only appears on AP optional questions."
+              "Fleeing Jim Crow and drawn by industrial jobs, Black Southerners filled Northern cities, where Harlem became a cultural capital.",
+              "Pushed out by Northern labor unions, Black workers left Chicago and Detroit for Southern farms after the First World War ended.",
+              "Drawn by federal land grants, most Black Southerners resettled in rural Kansas and Oklahoma between 1910 and 1940.",
+              "Freed from segregation by WWI-era federal law, Black migrants entered Harlem, Chicago, and other Northern neighborhoods as equals."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rewards contextualization — placing the topic within larger historical processes."
+            "explanation": "Contextualization places the topic in a larger process: Jim Crow violence and poverty pushed Black Southerners out, wartime industrial jobs pulled them to Northern cities, and Harlem became a center of Black culture. The flow ran north, not south; there were no federal land grants; and migrants met housing and job segregation in the North."
           }
         ]
       }

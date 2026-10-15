@@ -22,23 +22,23 @@ export const aasOriginsDiasporaPart2Data = {
             "question": "Which BEST describes a primary mechanism shaping Origins of the Diaspora?",
             "options": [
               "Dispersed populations linked by shared African origin and ongoing cultural connections.",
-              "An unrelated technological invention from a different century.",
-              "Pure coincidence with no identifiable cause.",
-              "A modern political slogan with no historical content."
+              "Rapid assimilation in which captives abandoned African origins within a generation.",
+              "Voluntary resettlement of free African traders between Lisbon and the Gold Coast.",
+              "Replacement of African labor by indentured Europeans across the Caribbean colonies."
             ],
             "correctAnswer": 0,
-            "explanation": "Diaspora is the central mechanism the AP exam expects students to explain."
+            "explanation": "Diaspora describes dispersed populations still linked by shared African origin and ongoing cultural ties. The diaspora was forced rather than voluntary, African practices persisted rather than vanishing in a generation, and African labor expanded rather than being replaced in the Caribbean."
           },
           {
             "question": "Phillis Wheatley's career illustrates which historical mechanism?",
             "options": [
-              "Enslaved in Senegambia, sold to a Boston family; first published African American poet (1773).",
-              "Phillis Wheatley had no impact on Origins of the Diaspora.",
-              "An entirely modern policy debate.",
-              "A purely literary aesthetic."
+              "Kidnapped from West Africa as a child, sold to a Boston family; first African American woman to publish a book of poetry (1773).",
+              "Igbo-born survivor of the Middle Passage who later bought his own freedom and published a best-selling autobiography in London (1789).",
+              "Fante-born captive taken to Grenada and later freed in England; published a direct call for total abolition (1787).",
+              "Born free in Hartford to a merchant family; first Black woman to lecture in public against slavery in Boston (1832)."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rewards specific causal claims tied to named figures."
+            "explanation": "Wheatley was kidnapped from West Africa as a child and sold to the Wheatley family of Boston; her *Poems on Various Subjects* (1773) made her the first African American woman to publish a book of poetry. The other descriptions fit Equiano, Cugoano, and (loosely) Maria Stewart."
           }
         ]
       }
@@ -70,18 +70,18 @@ export const aasOriginsDiasporaPart2Data = {
             "label": "The mechanism most strongly associated with Olaudah Equiano is ___",
             "options": [
               "Igbo-born survivor of the Middle Passage; *The Interesting Narrative* (1789) is a foundational diaspora autobiography.",
-              "Enslaved in Senegambia, sold to a Boston family; first published African American poet (1773).",
+              "Kidnapped from West Africa as a child, sold to a Boston family; first African American woman to publish a book of poetry (1773).",
               "Fante-born abolitionist; *Thoughts and Sentiments on the Evil of Slavery* (1787) attacked the trade from London.",
-              "Unrelated to this unit"
+              "Asante-descended leader of Jamaica's Windward Maroons against the British."
             ]
           },
           {
             "label": "The mechanism most strongly associated with Phillis Wheatley is ___",
             "options": [
-              "Enslaved in Senegambia, sold to a Boston family; first published African American poet (1773).",
+              "Kidnapped from West Africa as a child, sold to a Boston family; first African American woman to publish a book of poetry (1773).",
               "Igbo-born survivor of the Middle Passage; *The Interesting Narrative* (1789) is a foundational diaspora autobiography.",
               "Fante-born abolitionist; *Thoughts and Sentiments on the Evil of Slavery* (1787) attacked the trade from London.",
-              "Unrelated to this unit"
+              "Vodou priest who led the Bois Caïman ceremony that ignited the Haitian Revolution."
             ]
           },
           {
@@ -89,14 +89,14 @@ export const aasOriginsDiasporaPart2Data = {
             "options": [
               "Fante-born abolitionist; *Thoughts and Sentiments on the Evil of Slavery* (1787) attacked the trade from London.",
               "Igbo-born survivor of the Middle Passage; *The Interesting Narrative* (1789) is a foundational diaspora autobiography.",
-              "Enslaved in Senegambia, sold to a Boston family; first published African American poet (1773).",
-              "Unrelated to this unit"
+              "Kidnapped from West Africa as a child, sold to a Boston family; first African American woman to publish a book of poetry (1773).",
+              "Asante-descended leader of Jamaica's Windward Maroons against the British."
             ]
           }
         ],
         "correctAnswers": [
           "Igbo-born survivor of the Middle Passage; *The Interesting Narrative* (1789) is a foundational diaspora autobiography.",
-          "Enslaved in Senegambia, sold to a Boston family; first published African American poet (1773).",
+          "Kidnapped from West Africa as a child, sold to a Boston family; first African American woman to publish a book of poetry (1773).",
           "Fante-born abolitionist; *Thoughts and Sentiments on the Evil of Slavery* (1787) attacked the trade from London."
         ],
         "hint1": "Match the figure's actual contribution.",
@@ -114,13 +114,13 @@ export const aasOriginsDiasporaPart2Data = {
           {
             "question": "A student argues that Origins of the Diaspora happened spontaneously. The strongest counter-argument is:",
             "options": [
-              "Identifying specific actors and processes — e.g., Olaudah Equiano (c. 1745–1797) — that drove the change.",
-              "Insisting that historians cannot know causes.",
-              "Citing only events from outside this period.",
-              "Memorizing dates without analyzing them."
+              "Identifying the specific actors and processes — Portuguese traders, African suppliers, plantation demand — that drove it.",
+              "Arguing that the diaspora grew mainly from voluntary migration — African merchants moving to European ports in search of trade.",
+              "Noting that ship records, port ledgers, and traders' letters are too sparse to show any cause at all.",
+              "Pointing out that twentieth-century migrations, not the slave trade, created the African diaspora."
             ],
             "correctAnswer": 0,
-            "explanation": "Historical causation requires named actors, dated events, and articulated mechanisms."
+            "explanation": "Historical causation names actors and mechanisms: Portuguese and later other European traders, African states and merchants who supplied captives, and plantation demand in the Americas. The diaspora was forced, it is richly documented, and it began centuries before modern migrations."
           },
           {
             "question": "Which mechanism is MOST closely linked to Cultural retention?",
@@ -128,10 +128,10 @@ export const aasOriginsDiasporaPart2Data = {
               "Survival of African religious, musical, linguistic, and culinary practices in the Americas.",
               "Dispersed populations linked by shared African origin and ongoing cultural connections.",
               "Blending of African, European, and Indigenous American forms into new languages and cultures.",
-              "A cause from a different historical era."
+              "Abandonment of African languages and faiths as enslaved people adopted European customs."
             ],
             "correctAnswer": 0,
-            "explanation": "Cultural retention has its own historical mechanism distinct from related concepts."
+            "explanation": "Cultural retention is the survival of specific African practices, such as religion, music, language, and foodways, in the Americas. Diaspora names the dispersal itself, creolization names the blending into new forms, and abandonment is the opposite of retention."
           }
         ]
       }

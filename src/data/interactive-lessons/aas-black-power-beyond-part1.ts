@@ -10,7 +10,7 @@ export const aasBlackPowerBeyondPart1Data = {
     {
       id: "aasbpb1-figures",
       type: 'text' as const,
-      content: "## 📖 Key Figures of Black Power & Beyond\n\n| Figure | Dates | Why they matter |\n|---|---|---|\n| **Malcolm X** | 1925–1965 | Nation of Islam minister; founded OAAU (1964); pilgrimage to Mecca shifts toward internationalism; assassinated Feb. 21, 1965. |\n| **Stokely Carmichael / Kwame Ture** | 1941–1998 | SNCC chair; coined 'Black Power' (1966); All-African People's Revolutionary Party. |\n| **Huey P. Newton** | 1942–1989 | Co-founded Black Panther Party with Bobby Seale (Oakland, Oct. 1966). |\n| **Angela Davis** | b. 1944 | UCLA philosopher fired for Communist Party membership; 1972 acquittal galvanizes prison-abolition organizing. |\n| **Fred Hampton** | 1948–1969 | Illinois BPP chair; built the original Rainbow Coalition; killed in FBI/Chicago police raid Dec. 4, 1969. |\n\n> ⚠️ **AP Alert:** Strong responses cite specific figures by name and date — e.g., 'Malcolm X (1925–1965)' rather than 'a famous leader.'"
+      content: "## 📖 Key Figures of Black Power & Beyond\n\n| Figure | Dates | Why they matter |\n|---|---|---|\n| **Malcolm X** | 1925–1965 | Nation of Islam minister; founded OAAU (1964); pilgrimage to Mecca shifts toward internationalism; assassinated Feb. 21, 1965. |\n| **Stokely Carmichael / Kwame Ture** | 1941–1998 | SNCC chair; popularized 'Black Power' (1966); All-African People's Revolutionary Party. |\n| **Huey P. Newton** | 1942–1989 | Co-founded Black Panther Party with Bobby Seale (Oakland, Oct. 1966). |\n| **Angela Davis** | b. 1944 | UCLA philosopher fired for Communist Party membership; 1972 acquittal galvanizes prison-abolition organizing. |\n| **Fred Hampton** | 1948–1969 | Illinois BPP chair; built the original Rainbow Coalition; killed in FBI/Chicago police raid Dec. 4, 1969. |\n\n> ⚠️ **AP Alert:** Strong responses cite specific figures by name and date — e.g., 'Malcolm X (1925–1965)' rather than 'a famous leader.'"
     },
     {
       id: "aasbpb1-quiz1",
@@ -21,24 +21,24 @@ export const aasBlackPowerBeyondPart1Data = {
           {
             "question": "Which statement BEST captures why Black Power & Beyond is foundational to AP African American History?",
             "options": [
-              "After 1965, frustration with the pace of change and persistent northern racism produced Black Power: a constellation of nationalist, socialist, cultural, and pan-African movements that emphasized self-determination, community control, and Black aesthetic and intellectual autonomy.",
-              "Black Power & Beyond is primarily a literary movement with no political implications.",
-              "Black Power & Beyond only matters to one decade and rarely appears on the AP exam.",
-              "Black Power & Beyond is studied to memorize dates without analyzing causes."
+              "After 1965, Black Power turned activists toward self-determination, community control, and Black cultural pride.",
+              "After 1965, Black Power replaced all political organizing with cultural work, so activists abandoned elections, schools, and programs.",
+              "After 1965, Black Power was a single organization, the Black Panther Party, with one ideology, one leader, and one national program.",
+              "After 1965, Black Power faded quickly, leaving no lasting mark on Black politics, Black Studies, or American culture by the 1970s."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rewards students who can articulate why Black Power & Beyond matters in the broader course narrative, not just describe it."
+            "explanation": "After 1965, frustration with the slow pace of change and persistent northern racism produced Black Power, a range of nationalist, socialist, cultural, and pan-African movements stressing self-determination, community control, and Black cultural autonomy. It included political work such as the Gary convention, spanned many organizations and ideologies, and left lasting legacies such as Black Studies programs and a new generation of Black elected officials."
           },
           {
             "question": "Malcolm X (1925–1965) is significant in this unit primarily because:",
             "options": [
-              "Nation of Islam minister; founded OAAU (1964); pilgrimage to Mecca shifts toward internationalism; assassinated Feb. 21, 1965.",
-              "Malcolm X opposed every form of African American institution building.",
-              "Malcolm X lived after the events of Black Power & Beyond ended.",
-              "Malcolm X is mentioned only in passing on the AP exam."
+              "Nation of Islam minister; founded OAAU (1964); Mecca pilgrimage broadened his internationalism.",
+              "SNCC chair; popularized 'Black Power' (1966); later led the All-African People's Revolutionary Party.",
+              "Co-founded the Black Panther Party (1966); wrote the Ten-Point Program with Bobby Seale.",
+              "Black Arts poet and playwright; founded the Black Arts Repertory Theatre/School (1965)."
             ],
             "correctAnswer": 0,
-            "explanation": "Malcolm X is one of the central named figures the AP exam expects students to deploy when writing about Black Power & Beyond."
+            "explanation": "Malcolm X was the Nation of Islam's best-known minister, broke with it in 1964, founded the Organization of Afro-American Unity, and after his pilgrimage to Mecca framed Black freedom as an international human-rights struggle; he was assassinated on Feb. 21, 1965. The other descriptions fit Stokely Carmichael, Huey P. Newton, and Amiri Baraka."
           }
         ]
       }
@@ -77,7 +77,7 @@ export const aasBlackPowerBeyondPart1Data = {
               "Stokely Carmichael's June 1966 Greenwood, MS rally — slogan reframes the movement.",
               "Black Panther Free Breakfast, free clinics, sickle-cell screening.",
               "Cultural arm of Black Power — Amiri Baraka, Sonia Sanchez, Larry Neal.",
-              "An unrelated modern policy debate"
+              "Sit-ins and freedom rides under strict nonviolent discipline."
             ]
           },
           {
@@ -86,7 +86,7 @@ export const aasBlackPowerBeyondPart1Data = {
               "Black Panther Free Breakfast, free clinics, sickle-cell screening.",
               "Stokely Carmichael's June 1966 Greenwood, MS rally — slogan reframes the movement.",
               "Cultural arm of Black Power — Amiri Baraka, Sonia Sanchez, Larry Neal.",
-              "A 21st-century technology trend"
+              "NAACP lawsuits aimed at desegregating public schools."
             ]
           },
           {
@@ -95,7 +95,7 @@ export const aasBlackPowerBeyondPart1Data = {
               "Cultural arm of Black Power — Amiri Baraka, Sonia Sanchez, Larry Neal.",
               "Stokely Carmichael's June 1966 Greenwood, MS rally — slogan reframes the movement.",
               "Black Panther Free Breakfast, free clinics, sickle-cell screening.",
-              "An economic theory unrelated to this period"
+              "Mass voter-registration drive in Mississippi (1964)."
             ]
           }
         ],
@@ -119,24 +119,24 @@ export const aasBlackPowerBeyondPart1Data = {
           {
             "question": "A historian argues that Black Power & Beyond is essential for understanding African American history. Which evidence BEST supports the claim?",
             "options": [
-              "Malcolm X (1925–1965) — Nation of Islam minister; founded OAAU (1964); pilgrimage to Mecca shifts toward internationalism; assassinated Feb. 21, 1965.",
-              "A 21st-century pop song references Black Power & Beyond without historical context.",
-              "Black Power & Beyond is unrelated to broader trends in U.S. or Atlantic history.",
-              "There are no primary sources for this period."
+              "Malcolm X (1925–1965) — Nation of Islam minister; founded OAAU (1964); assassinated Feb. 21, 1965.",
+              "Huey P. Newton (1942–1989) — SNCC chair; popularized 'Black Power' at the Greenwood, MS rally (1966).",
+              "Amiri Baraka (1934–2014) — Co-founded the Black Panther Party in Oakland (1966).",
+              "Angela Davis (b. 1944) — Nation of Islam minister; founded the OAAU in Harlem (1964)."
             ],
             "correctAnswer": 0,
-            "explanation": "Strong AP arguments cite specific historical actors and dates, not anachronistic or vague references."
+            "explanation": "Strong AP arguments cite accurately attributed actors and dates. Malcolm X led the OAAU before his assassination in 1965; Carmichael, not Newton, popularized 'Black Power'; Newton and Bobby Seale, not Baraka, founded the Panthers; and Davis was a Communist Party activist and scholar, not a Nation of Islam minister."
           },
           {
             "question": "Which statement most accurately describes the historical context of Black Power & Beyond?",
             "options": [
-              "After 1965, frustration with the pace of change and persistent northern racism produced Black Power: a constellation of nationalist, socialist, cultural, and pan-African movements that emphasized self-determination, community control, and Black aesthetic and intellectual autonomy.",
-              "Black Power & Beyond occurred entirely outside any global or transregional context.",
-              "Black Power & Beyond produced no documentary evidence and is impossible to study.",
-              "Black Power & Beyond only appears on AP optional questions."
+              "Urban uprisings, slow federal progress, and northern racism after 1965 pushed many activists toward Black Power.",
+              "Black Power arose in the 1940s as a wartime protest against segregation in the armed forces, defense plants, and unions.",
+              "Black Power emerged once the South had fully desegregated, so activists turned only to overseas liberation causes.",
+              "Black Power began as a federal antipoverty program that Congress created under the Great Society in 1964."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rewards contextualization — placing the topic within larger historical processes."
+            "explanation": "Contextualization places Black Power in its setting: after 1965, urban uprisings such as Watts, slow change in northern housing and jobs, and violence against southern activists pushed many toward self-determination and community control. The Double V campaign belongs to World War II, the South had not fully desegregated, and Black Power grew from activists, not a federal program."
           }
         ]
       }

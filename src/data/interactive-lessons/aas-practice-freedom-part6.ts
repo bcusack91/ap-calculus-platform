@@ -5,7 +5,7 @@ export const aasPracticeFreedomPart6Data = {
     {
       id: "aaspf6-intro",
       type: 'text' as const,
-      content: "# 🤝 The Practice of Freedom\n\n**Part 6 of 7 — Source & Evidence Workshop**\n\n---\n\n## Working with primary sources for Practice of Freedom\n\nAP DBQ-style work expects students to identify a source's *purpose, audience, point of view, and historical situation* — and to use that analysis to support a claim.\n\n### Primary sources for this unit\n\n- **Wells, *Crusade for Justice* (autobiography, pub. 1970)** — Anti-lynching organizing memoir.\n- **Woodson, *The Mis-Education of the Negro* (1933)** — Critique of curriculum that erases Black history.\n- ***Pittsburgh Courier* archives** — Largest-circulation Black weekly of the early 20th c.\n"
+      content: "# 🤝 The Practice of Freedom\n\n**Part 6 of 7 — Source & Evidence Workshop**\n\n---\n\n## Working with primary sources for Practice of Freedom\n\nAP DBQ-style work expects students to identify a source's *purpose, audience, point of view, and historical situation* — and to use that analysis to support a claim.\n\n### Primary sources for this unit\n\n- **Wells, *Crusade for Justice* (autobiography, pub. 1970)** — Anti-lynching organizing memoir.\n- **Woodson, *The Mis-Education of the Negro* (1933)** — Critique of curriculum that erases Black history.\n- ***Pittsburgh Courier* archives** — Largest-circulation Black weekly by the late 1930s.\n"
     },
     {
       id: "aaspf6-workshop",
@@ -22,23 +22,23 @@ export const aasPracticeFreedomPart6Data = {
             "question": "What makes Wells, *Crusade for Justice* (autobiography, pub. 1970) a strong source for studying Practice of Freedom?",
             "options": [
               "Anti-lynching organizing memoir.",
-              "It was published in 2024 with no link to the period.",
-              "It is fictional and includes no historical content.",
-              "It is unsigned and undated."
+              "Government report on lynching in the South.",
+              "Official minutes of the NAACP's 1909 founding.",
+              "Critique of a curriculum that erases Black history."
             ],
             "correctAnswer": 0,
-            "explanation": "Provenance, date, and authorial position determine source value."
+            "explanation": "*Crusade for Justice* is valuable as Ida B. Wells's own account of organizing against lynching, though it was written late in her life and published only in 1970. It is not a government report or official minutes, and the curriculum critique is Woodson's *The Mis-Education of the Negro*."
           },
           {
             "question": "When using a primary source on the AP exam, you should:",
             "options": [
               "Identify author/date/audience and tie the source to a specific claim.",
-              "Quote the source verbatim without analysis.",
-              "Ignore the author's position.",
-              "Treat the source as neutral and unbiased."
+              "Summarize the source's main idea accurately and let it stand as your argument.",
+              "Quote the most striking passage at length so readers can judge its meaning for themselves.",
+              "Treat it as neutral, reliable evidence, since primary sources record events as they happened."
             ],
             "correctAnswer": 0,
-            "explanation": "AP source-use rewards explicit attribution and analytical framing."
+            "explanation": "Source use earns credit when you attribute the source (author, date, audience) and put it to work for a claim. Summary, long quotation, and treating a source as neutral all skip that analysis."
           }
         ]
       }
@@ -46,7 +46,7 @@ export const aasPracticeFreedomPart6Data = {
     {
       id: "aaspf6-input",
       type: 'input-boxes' as const,
-      content: "**Applied Recall** ✍️\n\n1) Name the source: Anti-lynching organizing memoir.…\n\n2) Name the source: Critique of curriculum that erases Black history.…\n\n3) Name the source: Largest-circulation Black weekly of the early 20th c.…\n",
+      content: "**Applied Recall** ✍️\n\n1) Name the source: Anti-lynching organizing memoir.…\n\n2) Name the source: Critique of curriculum that erases Black history.…\n\n3) Name the source: Largest-circulation Black weekly by the late 1930s.…\n",
       exercise: {
         "boxes": 3,
         "correctAnswers": [
@@ -71,8 +71,8 @@ export const aasPracticeFreedomPart6Data = {
             "options": [
               "Anti-lynching organizing memoir.",
               "Critique of curriculum that erases Black history.",
-              "Largest-circulation Black weekly of the early 20th c.",
-              "Unrelated to this unit"
+              "Largest-circulation Black weekly by the late 1930s.",
+              "Government report on lynching in the South."
             ]
           },
           {
@@ -80,24 +80,24 @@ export const aasPracticeFreedomPart6Data = {
             "options": [
               "Critique of curriculum that erases Black history.",
               "Anti-lynching organizing memoir.",
-              "Largest-circulation Black weekly of the early 20th c.",
-              "Unrelated to this unit"
+              "Largest-circulation Black weekly by the late 1930s.",
+              "Founding charter of the NAACP."
             ]
           },
           {
             "label": "*Pittsburgh Courier* archives — purpose ___",
             "options": [
-              "Largest-circulation Black weekly of the early 20th c.",
+              "Largest-circulation Black weekly by the late 1930s.",
               "Anti-lynching organizing memoir.",
               "Critique of curriculum that erases Black history.",
-              "Unrelated to this unit"
+              "Official minutes of the NACW's founding convention."
             ]
           }
         ],
         "correctAnswers": [
           "Anti-lynching organizing memoir.",
           "Critique of curriculum that erases Black history.",
-          "Largest-circulation Black weekly of the early 20th c."
+          "Largest-circulation Black weekly by the late 1930s."
         ],
         "hint1": "Match the source to its actual function.",
         "hint2": "Date and audience matter.",
@@ -115,23 +115,23 @@ export const aasPracticeFreedomPart6Data = {
             "question": "A strong AP citation of Wells, *Crusade for Justice* (autobiography, pub. 1970) reads:",
             "options": [
               "'According to Wells, *Crusade for Justice* (autobiography, pub. 1970), …' followed by inference about purpose and historical situation.",
-              "A direct quote with no attribution.",
-              "A loose paraphrase that hides the source's identity.",
-              "An anachronistic reading that ignores the date."
+              "'According to Wells's autobiography (1970), …' followed by a long, unbroken quotation from *Crusade for Justice*, with no further comment.",
+              "'*Crusade for Justice* is biased,' followed by dismissing its account of lynching.",
+              "'One activist said …' followed by a paraphrase that leaves out the author and date."
             ],
             "correctAnswer": 0,
-            "explanation": "Attribution + sourcing analysis is the AP scoring standard."
+            "explanation": "Attribution plus sourcing analysis is the standard: name the source, then explain how its purpose or historical situation shapes it. Quoting without comment, dismissing a source as biased, and hiding its identity all fall short."
           },
           {
             "question": "Which source-analysis move earns the AP 'sourcing' point?",
             "options": [
               "Identifying author, audience, purpose, OR historical situation — and using it to support a claim.",
-              "Quoting verbatim with no analysis.",
-              "Ignoring the source's date.",
-              "Citing only 21st-century opinion pieces."
+              "Restating the source's topic, date, and title — and quoting its most memorable line.",
+              "Explaining whether you agree with the author's view — and describing how it makes you feel about the past.",
+              "Summarizing what the source says accurately — and placing it in chronological order."
             ],
             "correctAnswer": 0,
-            "explanation": "AP DBQ rubrics explicitly reward sourcing analysis tied to claims."
+            "explanation": "Sourcing means explaining how the author's point of view, purpose, audience, or historical situation matters, then using that to support the argument. Restating, quoting, summarizing, or reacting personally does not count."
           }
         ]
       }

@@ -22,23 +22,23 @@ export const aasWwiWwiiEraPart2Data = {
             "question": "Which BEST describes a primary mechanism shaping WWI & WWII Era?",
             "options": [
               "U.S. armed forces remained legally segregated until Truman's Executive Order 9981 (1948).",
-              "An unrelated technological invention from a different century.",
-              "Pure coincidence with no identifiable cause.",
-              "A modern political slogan with no historical content."
+              "U.S. armed forces were desegregated by Wilson's wartime order of 1917, before the 369th sailed for France.",
+              "Black Americans were exempt from the draft in both wars under the Selective Service Act (1917).",
+              "The Supreme Court ordered the armed forces integrated in *Smith v. Allwright* (1944)."
             ],
             "correctAnswer": 0,
-            "explanation": "Segregated military service is the central mechanism the AP exam expects students to explain."
+            "explanation": "Segregated military service shaped the whole era: Black troops served in separate units through both world wars until Truman's Executive Order 9981 (1948). Wilson issued no desegregation order, Black men were drafted in both wars, and *Smith v. Allwright* struck down the white primary, not military segregation."
           },
           {
             "question": "A. Philip Randolph's career illustrates which historical mechanism?",
             "options": [
               "Brotherhood of Sleeping Car Porters (1925); 1941 March on Washington Movement pressured FDR into EO 8802.",
-              "A. Philip Randolph had no impact on WWI & WWII Era.",
-              "An entirely modern policy debate.",
-              "A purely literary aesthetic."
+              "Wichita cafeteria worker (1942); his letter to the *Pittsburgh Courier* sparked the Double V campaign.",
+              "Howard Law dean (1929); designed the NAACP's legal campaign and trained Thurgood Marshall.",
+              "Founder of CORE (1942); led the 1947 Journey of Reconciliation testing bus desegregation."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rewards specific causal claims tied to named figures."
+            "explanation": "A. Philip Randolph built Black labor power through the Brotherhood of Sleeping Car Porters, then used the threat of a 1941 March on Washington to force FDR to issue EO 8802, showing how organized pressure won federal action. The other descriptions fit James G. Thompson, Charles Hamilton Houston, and the founders of CORE."
           }
         ]
       }
@@ -72,7 +72,7 @@ export const aasWwiWwiiEraPart2Data = {
               "Spent 191 days in combat with French Army; awarded the Croix de Guerre.",
               "Brotherhood of Sleeping Car Porters (1925); 1941 March on Washington Movement pressured FDR into EO 8802.",
               "Coined the 'Double V' campaign.",
-              "Unrelated to this unit"
+              "Black combat pilots of the 332nd Fighter Group; ~1,500 missions."
             ]
           },
           {
@@ -81,7 +81,7 @@ export const aasWwiWwiiEraPart2Data = {
               "Brotherhood of Sleeping Car Porters (1925); 1941 March on Washington Movement pressured FDR into EO 8802.",
               "Spent 191 days in combat with French Army; awarded the Croix de Guerre.",
               "Coined the 'Double V' campaign.",
-              "Unrelated to this unit"
+              "WWI veteran, Howard Law dean; architect of NAACP legal strategy."
             ]
           },
           {
@@ -90,7 +90,7 @@ export const aasWwiWwiiEraPart2Data = {
               "Coined the 'Double V' campaign.",
               "Spent 191 days in combat with French Army; awarded the Croix de Guerre.",
               "Brotherhood of Sleeping Car Porters (1925); 1941 March on Washington Movement pressured FDR into EO 8802.",
-              "Unrelated to this unit"
+              "Black combat pilots of the 332nd Fighter Group; ~1,500 missions."
             ]
           }
         ],
@@ -114,24 +114,24 @@ export const aasWwiWwiiEraPart2Data = {
           {
             "question": "A student argues that WWI & WWII Era happened spontaneously. The strongest counter-argument is:",
             "options": [
-              "Identifying specific actors and processes — e.g., 369th 'Harlem Hellfighters' (1917–1919) — that drove the change.",
-              "Insisting that historians cannot know causes.",
-              "Citing only events from outside this period.",
-              "Memorizing dates without analyzing them."
+              "Identifying the specific actors and processes — Randolph's march threat, the Black press, Black veterans — that drove it.",
+              "Arguing that wartime gains came mainly from federal goodwill — Roosevelt acting entirely alone, without any Black pressure at all.",
+              "Noting that military records, union files, and newspapers are too sparse to show any cause at all.",
+              "Pointing out that the 1964 Civil Rights Act, not wartime protest or service, produced every gain of the era."
             ],
             "correctAnswer": 0,
-            "explanation": "Historical causation requires named actors, dated events, and articulated mechanisms."
+            "explanation": "Historical causation names actors and mechanisms: A. Philip Randolph's march threat, the Black press's Double V campaign, and the service and activism of Black veterans. EO 8802 came only after Black pressure, the era is richly documented, and its gains came decades before 1964."
           },
           {
             "question": "Which mechanism is MOST closely linked to Double V?",
             "options": [
               "Victory abroad over fascism, victory at home over racism.",
-              "U.S. armed forces remained legally segregated until Truman's Executive Order 9981 (1948).",
-              "EO 8802 (1941) banned defense-industry discrimination — the first such order since Reconstruction.",
-              "A cause from a different historical era."
+              "Military victory first, with civil-rights demands set aside until the war ended.",
+              "Victory at home through emigration to Africa rather than wartime service.",
+              "Victory in the courts through lawsuits against segregated military units."
             ],
             "correctAnswer": 0,
-            "explanation": "Double V has its own historical mechanism distinct from related concepts."
+            "explanation": "Double V meant two victories at once: over fascism abroad and over racism at home. Setting rights aside until the war ended was the opposite approach, and the campaign promoted neither emigration nor a lawsuit strategy."
           }
         ]
       }

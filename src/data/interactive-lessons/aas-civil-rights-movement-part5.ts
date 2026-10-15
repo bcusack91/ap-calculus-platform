@@ -21,24 +21,24 @@ export const aasCivilRightsMovementPart5Data = {
           {
             "question": "Which best describes continuity within Civil Rights Movement?",
             "options": [
-              "Aspects such as federal enforcement persisted even as other features changed.",
-              "Nothing about this topic ever changed.",
-              "Continuity is irrelevant to AP scoring.",
-              "Only the most recent decade matters."
+              "Activists kept pressing for federal enforcement even as tactics shifted.",
+              "Movement tactics stayed fixed on courtroom litigation from 1954 to 1968.",
+              "Southern state governments steadily enforced *Brown* after 1955.",
+              "Federal officials refused to intervene in the South at every stage of the era."
             ],
             "correctAnswer": 0,
-            "explanation": "Continuity = elements that persist across change — a key AP analytical category."
+            "explanation": "Continuity means elements that persist across change: from Little Rock (1957) to Selma (1965), activists repeatedly sought federal enforcement even as tactics shifted from litigation to mass direct action. Tactics did not stay fixed on litigation, southern states mounted 'massive resistance' to *Brown*, and presidents did intervene at Little Rock, Ole Miss, and Selma."
           },
           {
             "question": "Which event marks a decisive change within Civil Rights Movement?",
             "options": [
-              "1965 Selma–Montgomery marches → Voting Rights Act — VRA Section 5 preclearance protects southern Black voting until *Shelby County v. Holder* (2013).",
-              "An anecdote with no historical impact.",
-              "A 21st-century news headline unrelated to the period.",
-              "A purely literary aesthetic with no political effect."
+              "1965 Selma marches → Voting Rights Act — Federal examiners and preclearance protect Black voting rights.",
+              "1896 *Plessy v. Ferguson* — Supreme Court upholds state segregation laws, weakening Black civil rights for decades.",
+              "1909 NAACP founded — Interracial group begins a long legal and lobbying campaign against lynching and segregation.",
+              "1966 Black Panther Party founded — Oakland activists stress armed self-defense and community survival programs."
             ],
             "correctAnswer": 0,
-            "explanation": "Specific dated events anchor change-over-time arguments."
+            "explanation": "The Selma marches and 'Bloody Sunday' pushed Congress to pass the Voting Rights Act (1965), which suspended literacy tests, sent federal examiners, and required preclearance in covered jurisdictions; Black registration in the Deep South rose sharply. *Shelby County v. Holder* (2013) later struck down the Section 4(b) coverage formula, leaving preclearance without effect. *Plessy*, the NAACP's founding, and the Black Panther Party belong to other units."
           }
         ]
       }
@@ -71,8 +71,8 @@ export const aasCivilRightsMovementPart5Data = {
             "options": [
               "Federal enforcement",
               "1965 Selma–Montgomery marches → Voting Rights Act",
-              "An unrelated modern slogan",
-              "A topic from a different course"
+              "1954 *Brown v. Board of Education*",
+              "1960 Greensboro sit-ins"
             ]
           },
           {
@@ -80,17 +80,17 @@ export const aasCivilRightsMovementPart5Data = {
             "options": [
               "1965 Selma–Montgomery marches → Voting Rights Act",
               "Federal enforcement",
-              "An anecdote with no date",
-              "An unrelated personal opinion"
+              "Black churches as organizing centers",
+              "Persistence of southern 'massive resistance'"
             ]
           },
           {
             "label": "An AP CCOT response should ___",
             "options": [
               "Identify both continuities and changes with specific evidence",
-              "Pick only one without analysis",
-              "Avoid using dates",
-              "Replace evidence with opinion"
+              "Trace only the changes, in order, with specific evidence",
+              "Argue that continuity outweighed every change in the period",
+              "Describe the period's main events without a central claim"
             ]
           }
         ],
@@ -114,24 +114,24 @@ export const aasCivilRightsMovementPart5Data = {
           {
             "question": "Which CCOT thesis is strongest?",
             "options": [
-              "Although federal enforcement continued, 1965 Selma–Montgomery marches → Voting Rights Act marked a decisive change in Civil Rights Movement.",
-              "Nothing changed and nothing stayed the same.",
-              "Change is impossible to identify in history.",
-              "AP rubrics do not reward CCOT analysis."
+              "Although activists kept pressing for federal enforcement, the 1965 Voting Rights Act marked a decisive change in Black political power.",
+              "The Voting Rights Act changed everything about southern life, so that no racial inequality remained in the South after 1965.",
+              "Although Congress passed new laws, the civil rights era mostly stayed the same from 1954 to 1968 in every southern state.",
+              "Federal enforcement and the Voting Rights Act were both important parts of the civil rights movement."
             ],
             "correctAnswer": 0,
-            "explanation": "Strong CCOT theses pair specific continuities with specific changes."
+            "explanation": "A strong CCOT thesis names a specific continuity and a specific change and makes a defensible claim about them. Total change, near-total continuity, and a claim that both 'were important' each miss part of that move."
           },
           {
             "question": "Which evidence move is most valuable in a CCOT response?",
             "options": [
               "Naming a specific dated event AND a continuity within the same paragraph.",
-              "Listing dates without analysis.",
-              "Replacing evidence with a moral judgment.",
-              "Citing only post-2010 news stories."
+              "Listing every major date in the unit in chronological order.",
+              "Describing one change in detail without noting what persisted.",
+              "Quoting a historian's verdict on the period in place of evidence."
             ],
             "correctAnswer": 0,
-            "explanation": "AP CCOT scoring rewards paired specificity."
+            "explanation": "CCOT credit needs both halves anchored in evidence: a dated change and a named continuity. A list of dates, a change with no continuity, or a borrowed verdict replaces that analysis."
           }
         ]
       }

@@ -21,24 +21,24 @@ export const aasContemporaryIssuesPart2Data = {
           {
             "question": "Which BEST describes a primary mechanism shaping Contemporary Issues?",
             "options": [
-              "U.S. prison population rose from ~300,000 (1972) to ~2.3 million (2008); Black men incarcerated at 5–6× white rate.",
-              "An unrelated technological invention from a different century.",
-              "Pure coincidence with no identifiable cause.",
-              "A modern political slogan with no historical content."
+              "Incarceration rose from ~300,000 (1972) to ~2.3 million (2008); Black men were jailed at 5–6× the white rate.",
+              "Louisiana's Black voter rolls fell from ~130,000 (1896) to ~1,300 (1904) after new disfranchisement laws took effect.",
+              "About 6 million Black southerners left for northern and western cities (1910–1970); urban Black populations soared.",
+              "Federal troops left southern statehouses (1877), ending Reconstruction's protection of Black voters."
             ],
             "correctAnswer": 0,
-            "explanation": "Mass incarceration is the central mechanism the AP exam expects students to explain."
+            "explanation": "Mass incarceration, driven by the War on Drugs and harsher sentencing laws, is the period's central mechanism: the incarcerated population grew from roughly 300,000 in the early 1970s to about 2.3 million in 2008, with Black men imprisoned at several times the white rate. Louisiana disfranchisement, the Great Migration, and the end of Reconstruction belong to earlier units."
           },
           {
             "question": "Toni Morrison's career illustrates which historical mechanism?",
             "options": [
               "Nobel Prize 1993; *Beloved* (1987) reframes American memory of slavery.",
-              "Toni Morrison had no impact on Contemporary Issues.",
-              "An entirely modern policy debate.",
-              "A purely literary aesthetic."
+              "*Race Matters* (1993); a Black prophetic Christian critique of nihilism and American democracy.",
+              "*The New Jim Crow* (2010); recasts mass incarceration as a new racial caste system.",
+              "'The Case for Reparations' (2014); traces redlining and housing theft in Chicago."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rewards specific causal claims tied to named figures."
+            "explanation": "Morrison won the Nobel Prize in Literature in 1993, and *Beloved* (1987) reshaped how Americans remember slavery and its psychic costs. The other works are Cornel West's *Race Matters*, Michelle Alexander's *The New Jim Crow*, and Ta-Nehisi Coates's 'The Case for Reparations.'"
           }
         ]
       }
@@ -72,7 +72,7 @@ export const aasContemporaryIssuesPart2Data = {
               "1984 and 1988 Democratic presidential campaigns; Rainbow Coalition.",
               "Nobel Prize 1993; *Beloved* (1987) reframes American memory of slavery.",
               "*Race Matters* (1993); Black prophetic Christian intellectual.",
-              "Unrelated to this unit"
+              "First Black U.S. president (2009–2017); Affordable Care Act."
             ]
           },
           {
@@ -81,7 +81,7 @@ export const aasContemporaryIssuesPart2Data = {
               "Nobel Prize 1993; *Beloved* (1987) reframes American memory of slavery.",
               "1984 and 1988 Democratic presidential campaigns; Rainbow Coalition.",
               "*Race Matters* (1993); Black prophetic Christian intellectual.",
-              "Unrelated to this unit"
+              "First Black U.S. president (2009–2017); Affordable Care Act."
             ]
           },
           {
@@ -90,7 +90,7 @@ export const aasContemporaryIssuesPart2Data = {
               "*Race Matters* (1993); Black prophetic Christian intellectual.",
               "1984 and 1988 Democratic presidential campaigns; Rainbow Coalition.",
               "Nobel Prize 1993; *Beloved* (1987) reframes American memory of slavery.",
-              "Unrelated to this unit"
+              "First Black U.S. president (2009–2017); Affordable Care Act."
             ]
           }
         ],
@@ -114,24 +114,24 @@ export const aasContemporaryIssuesPart2Data = {
           {
             "question": "A student argues that Contemporary Issues happened spontaneously. The strongest counter-argument is:",
             "options": [
-              "Identifying specific actors and processes — e.g., Jesse Jackson (b. 1941) — that drove the change.",
-              "Insisting that historians cannot know causes.",
-              "Citing only events from outside this period.",
-              "Memorizing dates without analyzing them."
+              "Identifying the specific actors and processes — drug laws, sentencing rules, Black organizers — that drove it.",
+              "Agreeing, since mass incarceration grew from rising crime alone, with no policy choices involved.",
+              "Noting that sources — court records, prison data, news reports — are too sparse to show any cause.",
+              "Pointing out that these trends began in the 1800s and have not changed since then."
             ],
             "correctAnswer": 0,
-            "explanation": "Historical causation requires named actors, dated events, and articulated mechanisms."
+            "explanation": "Historical causation names actors and mechanisms: the War on Drugs, the 1986 and 1994 federal crime laws, and organizers from Jackson's Rainbow Coalition to Black Lives Matter. Policy choices, not crime rates alone, drove incarceration; the period is richly documented; and these trends changed sharply after 1980."
           },
           {
             "question": "Which mechanism is MOST closely linked to Color-blind racism?",
             "options": [
               "Post-Civil Rights ideology that ignores structural inequality (Eduardo Bonilla-Silva).",
-              "U.S. prison population rose from ~300,000 (1972) to ~2.3 million (2008); Black men incarcerated at 5–6× white rate.",
-              "Decentralized network founded 2013; broadens civil-rights agenda to police violence, abolition, intersectionality.",
-              "A cause from a different historical era."
+              "U.S. incarcerated population rose from ~300,000 (1972) to ~2.3 million (2008); Black men incarcerated at 5–6× white rate.",
+              "Decentralized movement sparked by #BlackLivesMatter (2013); broadens agenda to police violence, abolition, intersectionality.",
+              "Explicit Jim Crow laws requiring racial separation in public places (1890s–1960s)."
             ],
             "correctAnswer": 0,
-            "explanation": "Color-blind racism has its own historical mechanism distinct from related concepts."
+            "explanation": "Color-blind racism, Eduardo Bonilla-Silva's term, is the post-civil rights ideology that treats race-neutral language as proof of fairness while ignoring structural inequality. Mass incarceration is a policy outcome, the Movement for Black Lives is a protest movement, and explicit Jim Crow laws are the opposite of color-blind framing."
           }
         ]
       }

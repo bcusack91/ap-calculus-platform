@@ -22,23 +22,23 @@ export const aasReconstructionJimCrowPart6Data = {
             "question": "What makes Wells-Barnett, *Southern Horrors* (1892) a strong source for studying Reconstruction & Jim Crow?",
             "options": [
               "Statistical and journalistic indictment of lynching.",
-              "It was published in 2024 with no link to the period.",
-              "It is fictional and includes no historical content.",
-              "It is unsigned and undated."
+              "Coins 'double-consciousness' to describe Black identity.",
+              "Urges accommodation and vocational training over protest.",
+              "Official government census of Southern lynchings."
             ],
             "correctAnswer": 0,
-            "explanation": "Provenance, date, and authorial position determine source value."
+            "explanation": "*Southern Horrors* (1892) is valuable because Ida B. Wells used newspaper reports and statistics to expose lynching and the false justifications for it. 'Double-consciousness' is Du Bois's, accommodation is Washington's Atlanta Compromise, and the pamphlet was independent journalism, not a government count."
           },
           {
             "question": "When using a primary source on the AP exam, you should:",
             "options": [
               "Identify author/date/audience and tie the source to a specific claim.",
-              "Quote the source verbatim without analysis.",
-              "Ignore the author's position.",
-              "Treat the source as neutral and unbiased."
+              "Summarize the source's main idea accurately and let it stand as your argument.",
+              "Quote the most striking passage at length so readers can judge its meaning for themselves.",
+              "Treat it as neutral, reliable evidence, since primary sources record events as they happened."
             ],
             "correctAnswer": 0,
-            "explanation": "AP source-use rewards explicit attribution and analytical framing."
+            "explanation": "Source use earns credit when you attribute the source (author, date, audience) and put it to work for a claim. Summary, long quotation, and treating a source as neutral all skip that analysis."
           }
         ]
       }
@@ -72,7 +72,7 @@ export const aasReconstructionJimCrowPart6Data = {
               "Statistical and journalistic indictment of lynching.",
               "Coins 'double-consciousness' and the 'color line.'",
               "Argues for economic uplift over immediate political confrontation.",
-              "Unrelated to this unit"
+              "Official congressional report on Ku Klux Klan violence."
             ]
           },
           {
@@ -81,7 +81,7 @@ export const aasReconstructionJimCrowPart6Data = {
               "Coins 'double-consciousness' and the 'color line.'",
               "Statistical and journalistic indictment of lynching.",
               "Argues for economic uplift over immediate political confrontation.",
-              "Unrelated to this unit"
+              "Calls for Black emigration to Liberia."
             ]
           },
           {
@@ -90,7 +90,7 @@ export const aasReconstructionJimCrowPart6Data = {
               "Argues for economic uplift over immediate political confrontation.",
               "Statistical and journalistic indictment of lynching.",
               "Coins 'double-consciousness' and the 'color line.'",
-              "Unrelated to this unit"
+              "Official congressional report on Ku Klux Klan violence."
             ]
           }
         ],
@@ -115,23 +115,23 @@ export const aasReconstructionJimCrowPart6Data = {
             "question": "A strong AP citation of Wells-Barnett, *Southern Horrors* (1892) reads:",
             "options": [
               "'According to Wells-Barnett, *Southern Horrors* (1892), …' followed by inference about purpose and historical situation.",
-              "A direct quote with no attribution.",
-              "A loose paraphrase that hides the source's identity.",
-              "An anachronistic reading that ignores the date."
+              "'According to Wells-Barnett (1892), …' followed by a long, unbroken quotation from the pamphlet, with no further comment.",
+              "'*Southern Horrors* is biased,' followed by dismissing its account of lynching.",
+              "'One journalist said …' followed by a paraphrase that leaves out the author and date."
             ],
             "correctAnswer": 0,
-            "explanation": "Attribution + sourcing analysis is the AP scoring standard."
+            "explanation": "Attribution plus sourcing analysis is the standard: name the source, then explain how its purpose or historical situation shapes it. Quoting without comment, dismissing a source as biased, and hiding its identity all fall short."
           },
           {
             "question": "Which source-analysis move earns the AP 'sourcing' point?",
             "options": [
               "Identifying author, audience, purpose, OR historical situation — and using it to support a claim.",
-              "Quoting verbatim with no analysis.",
-              "Ignoring the source's date.",
-              "Citing only 21st-century opinion pieces."
+              "Restating the source's topic, date, and title — and quoting its most memorable line.",
+              "Explaining whether you agree with the author's view — and describing how it makes you feel about the past.",
+              "Summarizing what the source says accurately — and placing it in chronological order."
             ],
             "correctAnswer": 0,
-            "explanation": "AP DBQ rubrics explicitly reward sourcing analysis tied to claims."
+            "explanation": "Sourcing means explaining how the author's point of view, purpose, audience, or historical situation matters, then using that to support the argument. Restating, quoting, summarizing, or reacting personally does not count."
           }
         ]
       }

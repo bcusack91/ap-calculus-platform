@@ -21,24 +21,24 @@ export const aasAfricanKingdomsPart1Data = {
           {
             "question": "Which statement BEST captures why African Kingdoms is foundational to AP African American History?",
             "options": [
-              "Before the transatlantic slave trade, sub-Saharan Africa hosted a series of large, literate, and commercially sophisticated states — Ghana, Mali, Songhai, Kongo, the Swahili coast, Great Zimbabwe, and Aksum/Ethiopia — connected by trans-Saharan and Indian Ocean trade networks.",
-              "African Kingdoms is primarily a literary movement with no political implications.",
-              "African Kingdoms only matters to one decade and rarely appears on the AP exam.",
-              "African Kingdoms is studied to memorize dates without analyzing causes."
+              "Long before the slave trade, Africa hosted large, literate trading states such as Mali, Songhai, Kongo, and Great Zimbabwe.",
+              "It shows that African societies before 1500 were small, isolated villages with no states, writing, or long-distance trade.",
+              "It shows that Africa's wealthiest states arose only after European traders first reached the West African coast in the 1400s.",
+              "It traces how Mali, Songhai, and Great Zimbabwe were founded as colonies by North African and Arab settlers."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rewards students who can articulate why African Kingdoms matters in the broader course narrative, not just describe it."
+            "explanation": "Before the transatlantic slave trade, sub-Saharan Africa hosted large, literate, and commercially sophisticated states — Ghana, Mali, Songhai, Kongo, the Swahili coast, Great Zimbabwe, and Aksum/Ethiopia — connected by trans-Saharan and Indian Ocean trade. These states were neither isolated nor products of European contact, and they were built by African peoples, not foreign settlers."
           },
           {
             "question": "Sundiata Keita (r. c. 1235–1255) is significant in this unit primarily because:",
             "options": [
               "Founder of the Mali Empire; defeated the Sosso at the Battle of Kirina (1235); preserved in the *Epic of Sundiata*.",
-              "Sundiata Keita opposed every form of African American institution building.",
-              "Sundiata Keita lived after the events of African Kingdoms ended.",
-              "Sundiata Keita is mentioned only in passing on the AP exam."
+              "Mali emperor whose 1324 hajj spread so much gold that it depressed Cairo's currency; built the Djinguereber Mosque.",
+              "Songhai ruler (r. 1493–1528) who centralized administration, made his own hajj, and elevated the Sankore Madrasa.",
+              "King of Kongo, far from Sundiata's Mali, who converted to Catholicism; protested slave-raiding in 1526."
             ],
             "correctAnswer": 0,
-            "explanation": "Sundiata Keita is one of the central named figures the AP exam expects students to deploy when writing about African Kingdoms."
+            "explanation": "Sundiata founded Mali after defeating Sumanguru of Sosso at Kirina (1235), and griots preserved his story in the *Epic of Sundiata*. The other descriptions fit Mansa Musa, Askia Muhammad I, and Afonso I of Kongo."
           }
         ]
       }
@@ -77,7 +77,7 @@ export const aasAfricanKingdomsPart1Data = {
               "Camel caravans linked West Africa with North Africa, exchanging gold, salt, copper, kola nuts, and enslaved people.",
               "Cities like Timbuktu and Djenné became centers of Quranic learning and law (Maliki school).",
               "Mali and Songhai built tax systems, standing armies, and provincial governors over millions of subjects.",
-              "An unrelated modern policy debate"
+              "Portuguese ships carried West African gold directly to Lisbon long before the year 1000."
             ]
           },
           {
@@ -86,7 +86,7 @@ export const aasAfricanKingdomsPart1Data = {
               "Cities like Timbuktu and Djenné became centers of Quranic learning and law (Maliki school).",
               "Camel caravans linked West Africa with North Africa, exchanging gold, salt, copper, kola nuts, and enslaved people.",
               "Mali and Songhai built tax systems, standing armies, and provincial governors over millions of subjects.",
-              "A 21st-century technology trend"
+              "Christian monasteries in Mali trained scribes to copy the Bible in Latin."
             ]
           },
           {
@@ -95,7 +95,7 @@ export const aasAfricanKingdomsPart1Data = {
               "Mali and Songhai built tax systems, standing armies, and provincial governors over millions of subjects.",
               "Camel caravans linked West Africa with North Africa, exchanging gold, salt, copper, kola nuts, and enslaved people.",
               "Cities like Timbuktu and Djenné became centers of Quranic learning and law (Maliki school).",
-              "An economic theory unrelated to this period"
+              "Small villages governed by elders, with no taxes, armies, or provincial officials."
             ]
           }
         ],
@@ -120,23 +120,23 @@ export const aasAfricanKingdomsPart1Data = {
             "question": "A historian argues that African Kingdoms is essential for understanding African American history. Which evidence BEST supports the claim?",
             "options": [
               "Sundiata Keita (r. c. 1235–1255) — Founder of the Mali Empire; defeated the Sosso at the Battle of Kirina (1235); preserved in the *Epic of Sundiata*.",
-              "A 21st-century pop song references African Kingdoms without historical context.",
-              "African Kingdoms is unrelated to broader trends in U.S. or Atlantic history.",
-              "There are no primary sources for this period."
+              "Mansa Musa (r. 1312–1337) — Founder of the Mali Empire; defeated the Sosso at Kirina; his deeds are preserved in Ibn Battuta's *Rihla*.",
+              "Ibn Battuta (visited Mali 1352–1354) — Mande griot whose oral *Epic of Sundiata* recounts the founding of the Songhai Empire.",
+              "Afonso I (r. 1509–1542) — Songhai king who defeated the Moroccan army at Tondibi (1591); preserved Timbuktu's libraries."
             ],
             "correctAnswer": 0,
-            "explanation": "Strong AP arguments cite specific historical actors and dates, not anachronistic or vague references."
+            "explanation": "Strong evidence is accurately attributed. Sundiata founded Mali at Kirina and is remembered in the griots' epic. Mansa Musa ruled Mali later, Ibn Battuta was a Moroccan traveler, Songhai lost at Tondibi, and Afonso I was king of Kongo."
           },
           {
             "question": "Which statement most accurately describes the historical context of African Kingdoms?",
             "options": [
-              "Before the transatlantic slave trade, sub-Saharan Africa hosted a series of large, literate, and commercially sophisticated states — Ghana, Mali, Songhai, Kongo, the Swahili coast, Great Zimbabwe, and Aksum/Ethiopia — connected by trans-Saharan and Indian Ocean trade networks.",
-              "African Kingdoms occurred entirely outside any global or transregional context.",
-              "African Kingdoms produced no documentary evidence and is impossible to study.",
-              "African Kingdoms only appears on AP optional questions."
+              "Sub-Saharan states such as Ghana, Mali, and Songhai grew rich through trans-Saharan and Indian Ocean trade before 1600.",
+              "Coastal states traded mainly with Europe by sea, since the Sahara blocked overland caravans, merchants, and goods before 1500.",
+              "West African empires such as Ghana and Mali were founded by Portuguese traders who arrived seeking West African gold in the 1400s.",
+              "Most African states before 1600 rejected Islam entirely, so Timbuktu's scholars were mainly Christian missionaries from Europe."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rewards contextualization — placing the topic within larger historical processes."
+            "explanation": "Contextualization places these kingdoms within trans-Saharan and Indian Ocean trade networks that made Ghana, Mali, Songhai, and the Swahili coast wealthy. Camel caravans crossed the Sahara for centuries, these empires predate Portuguese contact, and Timbuktu was a center of Islamic scholarship."
           }
         ]
       }

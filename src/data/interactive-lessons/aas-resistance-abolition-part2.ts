@@ -10,7 +10,7 @@ export const aasResistanceAbolitionPart2Data = {
     {
       id: "aasra2-process",
       type: 'text' as const,
-      content: "## Mechanisms in action\n\n| Event | Significance |\n|---|---|\n| **1739 Stono Rebellion (SC)** | ~20 white deaths; led to the Negro Act of 1740 restricting movement and literacy. |\n| **1791–1804 Haitian Revolution** | Defeats French, Spanish, and British forces; abolishes slavery and founds Haiti. |\n| **1816 AME Church founded** | Richard Allen leads first independent Black denomination in the U.S. |\n| **1831 Nat Turner Rebellion** | Triggers gag rules and harsher slave codes across the South. |\n\n### Causal chains\n\nAP responses on Resistance & Abolition should make causation explicit. A strong sentence might be:\n\n> Because everyday resistance intensified, communities responded by moral suasion vs political action, which in turn produced armed revolt.\n"
+      content: "## Mechanisms in action\n\n| Event | Significance |\n|---|---|\n| **1739 Stono Rebellion (SC)** | ~20 white deaths; led to the Negro Act of 1740 restricting movement and literacy. |\n| **1791–1804 Haitian Revolution** | Defeats French, Spanish, and British forces; abolishes slavery and founds Haiti. |\n| **1816 AME Church founded** | Richard Allen leads first independent Black denomination in the U.S. |\n| **1831 Nat Turner Rebellion** | Triggers harsher slave codes and anti-literacy laws across the South. |\n\n### Causal chains\n\nAP responses on Resistance & Abolition should make causation explicit. A strong sentence might be:\n\n> Because everyday resistance intensified, communities responded by moral suasion vs political action, which in turn produced armed revolt.\n"
     },
     {
       id: "aasra2-quiz",
@@ -22,23 +22,23 @@ export const aasResistanceAbolitionPart2Data = {
             "question": "Which BEST describes a primary mechanism shaping Resistance & Abolition?",
             "options": [
               "Tool-breaking, feigned illness, slowed work, theft of food, preservation of African names.",
-              "An unrelated technological invention from a different century.",
-              "Pure coincidence with no identifiable cause.",
-              "A modern political slogan with no historical content."
+              "Compensation schemes in which Southern states, counties, and towns bought enslaved people's freedom.",
+              "Royal decrees from Britain that freed all enslaved people in the U.S. South after 1833.",
+              "Voluntary manumission by most planters once cotton prices fell in the 1840s."
             ],
             "correctAnswer": 0,
-            "explanation": "Everyday resistance is the central mechanism the AP exam expects students to explain."
+            "explanation": "Everyday resistance — tool-breaking, feigned illness, slowed work, taking food, preserving African names — was the constant mechanism of resistance. Southern states never paid compensated emancipation, British law did not reach the United States, and cotton planters did not free their workers en masse."
           },
           {
             "question": "Denmark Vesey's career illustrates which historical mechanism?",
             "options": [
               "Charleston AME founder who organized a planned 1822 uprising; executed before it could be carried out.",
-              "Denmark Vesey had no impact on Resistance & Abolition.",
-              "An entirely modern policy debate.",
-              "A purely literary aesthetic."
+              "Virginia preacher who led the 1831 Southampton revolt; captured after more than two months in hiding and executed.",
+              "Enslaved blacksmith who planned an 1800 march on Richmond; betrayed by informants and hanged before it began.",
+              "Boston clothing dealer whose 1829 *Appeal* urged enslaved people across the South to resist slavery by force."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rewards specific causal claims tied to named figures."
+            "explanation": "Vesey, a founder of Charleston's AME church, organized an 1822 uprising that was betrayed before it began. The other descriptions fit Nat Turner, Gabriel, and David Walker."
           }
         ]
       }
@@ -72,7 +72,7 @@ export const aasResistanceAbolitionPart2Data = {
               "Led the Haitian Revolution, the only successful national slave revolt; first Black-led independent state in the Americas (1804).",
               "Charleston AME founder who organized a planned 1822 uprising; executed before it could be carried out.",
               "Virginia preacher who led the deadliest U.S. slave revolt (Aug. 1831, ~60 white deaths).",
-              "Unrelated to this unit"
+              "Enslaved blacksmith who planned an 1800 march on Richmond; betrayed and hanged."
             ]
           },
           {
@@ -81,7 +81,7 @@ export const aasResistanceAbolitionPart2Data = {
               "Charleston AME founder who organized a planned 1822 uprising; executed before it could be carried out.",
               "Led the Haitian Revolution, the only successful national slave revolt; first Black-led independent state in the Americas (1804).",
               "Virginia preacher who led the deadliest U.S. slave revolt (Aug. 1831, ~60 white deaths).",
-              "Unrelated to this unit"
+              "Conducted ~13 Underground Railroad missions; led the 1863 Combahee River Raid freeing ~750."
             ]
           },
           {
@@ -90,7 +90,7 @@ export const aasResistanceAbolitionPart2Data = {
               "Virginia preacher who led the deadliest U.S. slave revolt (Aug. 1831, ~60 white deaths).",
               "Led the Haitian Revolution, the only successful national slave revolt; first Black-led independent state in the Americas (1804).",
               "Charleston AME founder who organized a planned 1822 uprising; executed before it could be carried out.",
-              "Unrelated to this unit"
+              "Enslaved blacksmith who planned an 1800 march on Richmond; betrayed and hanged."
             ]
           }
         ],
@@ -114,13 +114,13 @@ export const aasResistanceAbolitionPart2Data = {
           {
             "question": "A student argues that Resistance & Abolition happened spontaneously. The strongest counter-argument is:",
             "options": [
-              "Identifying specific actors and processes — e.g., Toussaint L'Ouverture (1743–1803) — that drove the change.",
-              "Insisting that historians cannot know causes.",
-              "Citing only events from outside this period.",
-              "Memorizing dates without analyzing them."
+              "Identifying the actors and processes — Vesey's networks, Walker's pamphlets, Tubman's raids — that drove resistance.",
+              "Arguing that resistance grew mainly from white abolitionists — northern reformers who stirred up otherwise passive enslaved people.",
+              "Insisting that trial records, slave narratives, and pamphlets are too biased to reveal any causes at all.",
+              "Pointing out that resistance began only after 1850, when the Fugitive Slave Act angered the North."
             ],
             "correctAnswer": 0,
-            "explanation": "Historical causation requires named actors, dated events, and articulated mechanisms."
+            "explanation": "Causation requires named actors and mechanisms such as Vesey's church networks, Walker's smuggled *Appeal*, and Tubman's rescue missions. Resistance was led by Black people, the sources can be read critically, and it long predates 1850."
           },
           {
             "question": "Which mechanism is MOST closely linked to Armed revolt?",
@@ -128,10 +128,10 @@ export const aasResistanceAbolitionPart2Data = {
               "Stono (1739), Gabriel's (1800), Vesey (1822), Nat Turner (1831), Haiti (1791).",
               "Tool-breaking, feigned illness, slowed work, theft of food, preservation of African names.",
               "Garrisonian immediatism vs. Liberty/Free Soil/Republican electoral strategies.",
-              "A cause from a different historical era."
+              "Underground Railroad (1840s), vigilance committees (1830s), Tubman's missions (1850s)."
             ],
             "correctAnswer": 0,
-            "explanation": "Armed revolt has its own historical mechanism distinct from related concepts."
+            "explanation": "Armed revolt is illustrated by Stono, Gabriel's plot, Vesey's plan, Nat Turner, and Haiti. Everyday resistance, abolitionist strategy, and flight networks are other forms of resistance."
           }
         ]
       }

@@ -21,24 +21,24 @@ export const aasGreatMigrationHarlemPart5Data = {
           {
             "question": "Which best describes continuity within Great Migration & Harlem Renaissance?",
             "options": [
-              "Aspects such as new negro persisted even as other features changed.",
-              "Nothing about this topic ever changed.",
-              "Continuity is irrelevant to AP scoring.",
-              "Only the most recent decade matters."
+              "New Negro racial pride persisted even as the Depression changed Harlem.",
+              "The migration stopped for good when the First World War ended in 1918.",
+              "Lynching in the South ended once the first migrants left in 1916.",
+              "Harlem's writers abandoned racial themes after Locke's anthology appeared."
             ],
             "correctAnswer": 0,
-            "explanation": "Continuity = elements that persist across change — a key AP analytical category."
+            "explanation": "Continuity means elements that persist across change: the New Negro spirit of racial pride and self-assertion outlasted the renaissance's 1920s peak. The migration resumed after 1918, lynching continued for decades, and writers such as Hughes and Hurston kept exploring Black life."
           },
           {
             "question": "Which event marks a decisive change within Great Migration & Harlem Renaissance?",
             "options": [
-              "1929 Great Depression — Disproportionate impact on Black workers; renaissance funding collapses.",
-              "An anecdote with no historical impact.",
-              "A 21st-century news headline unrelated to the period.",
-              "A purely literary aesthetic with no political effect."
+              "1929 Great Depression — Black workers hit hardest; white patronage of Black arts collapses.",
+              "1865 Special Field Order 15 — Sherman sets aside land for freed families; Johnson reverses it.",
+              "1954 *Brown v. Board* — Court strikes down school segregation; Southern resistance follows.",
+              "1968 Fair Housing Act — Bans housing discrimination; caps the Great Society's civil rights laws."
             ],
             "correctAnswer": 0,
-            "explanation": "Specific dated events anchor change-over-time arguments."
+            "explanation": "The Great Depression hit Black workers hardest and dried up the patronage that had funded the renaissance, a decisive change within 1910–1940. Field Order 15, *Brown*, and the Fair Housing Act are real turning points but belong to other units."
           }
         ]
       }
@@ -71,8 +71,8 @@ export const aasGreatMigrationHarlemPart5Data = {
             "options": [
               "New Negro",
               "1929 Great Depression",
-              "An unrelated modern slogan",
-              "A topic from a different course"
+              "1916 first wave of Great Migration intensifies",
+              "1921 Tulsa Race Massacre"
             ]
           },
           {
@@ -80,17 +80,17 @@ export const aasGreatMigrationHarlemPart5Data = {
             "options": [
               "1929 Great Depression",
               "New Negro",
-              "An anecdote with no date",
-              "An unrelated personal opinion"
+              "Persistence of Jim Crow in the South",
+              "Black church life in Northern cities"
             ]
           },
           {
             "label": "An AP CCOT response should ___",
             "options": [
               "Identify both continuities and changes with specific evidence",
-              "Pick only one without analysis",
-              "Avoid using dates",
-              "Replace evidence with opinion"
+              "Trace only the changes, in order, with specific evidence",
+              "Argue that continuity outweighed every change in the period",
+              "Describe the period's main events without a central claim"
             ]
           }
         ],
@@ -114,24 +114,24 @@ export const aasGreatMigrationHarlemPart5Data = {
           {
             "question": "Which CCOT thesis is strongest?",
             "options": [
-              "Although new negro continued, 1929 Great Depression marked a decisive change in Great Migration & Harlem Renaissance.",
-              "Nothing changed and nothing stayed the same.",
-              "Change is impossible to identify in history.",
-              "AP rubrics do not reward CCOT analysis."
+              "Although the New Negro ideal continued, the 1929 Depression marked a decisive change in Great Migration & Harlem Renaissance.",
+              "The Great Depression changed everything about Black life, so that nothing from the renaissance survived anywhere.",
+              "Even as the economy collapsed in 1929, Black life mostly stayed the same from 1910 to 1940 in every single Northern and Western city.",
+              "The New Negro ideal and the Great Depression were both important parts of Great Migration & Harlem Renaissance."
             ],
             "correctAnswer": 0,
-            "explanation": "Strong CCOT theses pair specific continuities with specific changes."
+            "explanation": "A strong CCOT thesis names a specific continuity and a specific change and makes a defensible claim about them. Total change, near-total continuity, and a claim that both 'were important' each miss part of that move."
           },
           {
             "question": "Which evidence move is most valuable in a CCOT response?",
             "options": [
               "Naming a specific dated event AND a continuity within the same paragraph.",
-              "Listing dates without analysis.",
-              "Replacing evidence with a moral judgment.",
-              "Citing only post-2010 news stories."
+              "Listing every major date in the unit in chronological order.",
+              "Describing one change in detail without noting what persisted.",
+              "Quoting a historian's verdict on the period in place of evidence."
             ],
             "correctAnswer": 0,
-            "explanation": "AP CCOT scoring rewards paired specificity."
+            "explanation": "CCOT credit needs both halves anchored in evidence: a dated change and a named continuity. A list of dates, a change with no continuity, or a borrowed verdict replaces that analysis."
           }
         ]
       }

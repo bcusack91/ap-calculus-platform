@@ -22,23 +22,23 @@ export const aasOriginsDiasporaPart3Data = {
             "question": "Which case BEST illustrates a pattern central to Origins of the Diaspora?",
             "options": [
               "1441 first Portuguese captives to Lisbon — Beginning of European Atlantic slave trade.",
-              "An unrelated event from another century.",
-              "A purely fictional event.",
-              "An anecdote with no documentary support."
+              "1863 Emancipation Proclamation — Frees enslaved people in areas still in rebellion.",
+              "1896 *Plessy v. Ferguson* — Upholds state-mandated racial segregation.",
+              "1954 *Brown v. Board* — Unanimous Court rules school segregation unconstitutional."
             ],
             "correctAnswer": 0,
-            "explanation": "Use historically attested events to illustrate patterns."
+            "explanation": "The 1441 Portuguese seizure of captives opens this unit's era and launches the trade that created the diaspora. The other cases are real but belong to later units on emancipation, Jim Crow, and civil rights."
           },
           {
             "question": "A comparison of 1441 first Portuguese captives to Lisbon and 1500s Portuguese-Kongo slaving is most useful because:",
             "options": [
               "Both cases let students see common patterns and unique local differences in concrete historical detail.",
-              "Both events occurred in identical contexts and produced identical outcomes.",
-              "Comparison is irrelevant to AP scoring.",
-              "Neither event left primary sources for historians."
+              "Both cases show that African rulers refused to take any part in the European trade in captives along the coast.",
+              "Both cases show that English merchants, not Portuguese ones, dominated the trade in Africans before 1600.",
+              "Both cases prove that the Atlantic trade began in the Americas and only later spread back to the African coast."
             ],
             "correctAnswer": 0,
-            "explanation": "AP comparison rewards specific similarities and differences with named cases."
+            "explanation": "Comparison rewards a specific similarity and a specific difference. In Kongo, rulers such as Afonso I did take part in the trade even as he protested its abuses; Portuguese, not English, traders dominated before 1600; and the trade began on the African coast."
           }
         ]
       }
@@ -72,7 +72,7 @@ export const aasOriginsDiasporaPart3Data = {
               "1441 first Portuguese captives to Lisbon",
               "1500s Portuguese-Kongo slaving",
               "1619 Africans arrive at Point Comfort, Virginia",
-              "An unrelated 21st-century news story"
+              "1739 Treaties with Jamaican Maroons"
             ]
           },
           {
@@ -81,7 +81,7 @@ export const aasOriginsDiasporaPart3Data = {
               "1500s Portuguese-Kongo slaving",
               "1441 first Portuguese captives to Lisbon",
               "1619 Africans arrive at Point Comfort, Virginia",
-              "An unrelated 21st-century news story"
+              "c. 1500–1888 Atlantic slave trade"
             ]
           },
           {
@@ -90,7 +90,7 @@ export const aasOriginsDiasporaPart3Data = {
               "1619 Africans arrive at Point Comfort, Virginia",
               "1441 first Portuguese captives to Lisbon",
               "1500s Portuguese-Kongo slaving",
-              "An unrelated 21st-century news story"
+              "1739 Treaties with Jamaican Maroons"
             ]
           }
         ],
@@ -115,23 +115,23 @@ export const aasOriginsDiasporaPart3Data = {
             "question": "Using one specific case from Origins of the Diaspora, which sentence is the BEST AP comparison move?",
             "options": [
               "Both 1441 first Portuguese captives to Lisbon and 1500s Portuguese-Kongo slaving reveal diaspora, but they differ in actors and outcomes.",
-              "Both events were fictional and produced no consequences.",
-              "These events are too old to compare meaningfully.",
-              "Comparison is unimportant in AP rubrics."
+              "Both 1441 first Portuguese captives to Lisbon and 1500s Portuguese-Kongo slaving were early parts of the African diaspora.",
+              "The 1441 captives and 1500s Kongo slaving differ mainly because they took place in different decades.",
+              "Both 1441 first Portuguese captives to Lisbon and 1500s Portuguese-Kongo slaving show the trade's cruelty, so it should be remembered as a moral lesson."
             ],
             "correctAnswer": 0,
-            "explanation": "AP comparison combines a specific shared pattern with a specific difference."
+            "explanation": "A full comparison pairs a shared pattern with a meaningful difference. A similarity alone, a trivial difference such as date, or a moral judgment does not complete the move."
           },
           {
             "question": "Olaudah Equiano's role in Origins of the Diaspora is best illustrated by which event?",
             "options": [
+              "1789 *The Interesting Narrative* published — Igbo-born survivor's account of capture and the Middle Passage.",
               "1441 first Portuguese captives to Lisbon — Beginning of European Atlantic slave trade.",
-              "An unrelated event in a different century.",
-              "A purely literary publication unconnected to politics.",
-              "An event before the figure was born."
+              "1739 Treaties with Jamaican Maroons — British recognize Maroon autonomy after the First Maroon War.",
+              "1773 *Poems on Various Subjects* published — Literary challenge to proslavery claims about African intellect."
             ],
             "correctAnswer": 0,
-            "explanation": "Tie figures to dated events for high-scoring AP arguments."
+            "explanation": "Equiano's defining act was publishing *The Interesting Narrative* (1789). The 1441 captives predate his birth by three centuries, the Maroon treaties concern Jamaica, and the 1773 *Poems* are Phillis Wheatley's."
           }
         ]
       }

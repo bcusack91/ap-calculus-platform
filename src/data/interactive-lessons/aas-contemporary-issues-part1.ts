@@ -21,24 +21,24 @@ export const aasContemporaryIssuesPart1Data = {
           {
             "question": "Which statement BEST captures why Contemporary Issues is foundational to AP African American History?",
             "options": [
-              "From the War on Drugs and mass incarceration through Obama's election, Black Lives Matter, and the 1619 Project, contemporary African American history has been shaped by the persistence of structural inequality alongside unprecedented political and cultural visibility.",
-              "Contemporary Issues is primarily a literary movement with no political implications.",
-              "Contemporary Issues only matters to one decade and rarely appears on the AP exam.",
-              "Contemporary Issues is studied to memorize dates without analyzing causes."
+              "Since 1980, structural inequality has persisted alongside unprecedented Black political and cultural visibility.",
+              "Since 1980, the civil rights laws of the 1960s have fully closed racial gaps in wealth, health, schooling, and incarceration.",
+              "Since 1980, Black political gains have stalled entirely, with no Black senators, governors, or presidents elected in that time.",
+              "Since 1980, African American history has turned mainly on overseas events, not on U.S. policing, prisons, or elections."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rewards students who can articulate why Contemporary Issues matters in the broader course narrative, not just describe it."
+            "explanation": "Since 1980, African American history has combined persistent structural inequality, visible in the War on Drugs and mass incarceration, with unprecedented visibility, from Jesse Jackson's campaigns to Barack Obama's election in 2008. Racial gaps in wealth, health, and incarceration persist; Black officials such as Douglas Wilder and Obama won high office; and U.S. policing, prisons, and elections remain central."
           },
           {
             "question": "Jesse Jackson (b. 1941) is significant in this unit primarily because:",
             "options": [
               "1984 and 1988 Democratic presidential campaigns; Rainbow Coalition.",
-              "Jesse Jackson opposed every form of African American institution building.",
-              "Jesse Jackson lived after the events of Contemporary Issues ended.",
-              "Jesse Jackson is mentioned only in passing on the AP exam."
+              "First Black U.S. president, elected 2008 and 2012; Affordable Care Act.",
+              "Wrote *The New Jim Crow* (2010) on mass incarceration as caste.",
+              "Nobel Prize 1993; *Beloved* (1987) reframes memory of slavery."
             ],
             "correctAnswer": 0,
-            "explanation": "Jesse Jackson is one of the central named figures the AP exam expects students to deploy when writing about Contemporary Issues."
+            "explanation": "Jackson ran for the Democratic presidential nomination in 1984 and 1988, building the multiracial Rainbow Coalition and winning nearly 7 million primary votes in 1988. The other descriptions fit Barack Obama, Michelle Alexander, and Toni Morrison."
           }
         ]
       }
@@ -74,35 +74,35 @@ export const aasContemporaryIssuesPart1Data = {
           {
             "label": "Mass incarceration is best described as ___",
             "options": [
-              "U.S. prison population rose from ~300,000 (1972) to ~2.3 million (2008); Black men incarcerated at 5–6× white rate.",
+              "U.S. incarcerated population rose from ~300,000 (1972) to ~2.3 million (2008); Black men incarcerated at 5–6× white rate.",
               "Post-Civil Rights ideology that ignores structural inequality (Eduardo Bonilla-Silva).",
-              "Decentralized network founded 2013; broadens civil-rights agenda to police violence, abolition, intersectionality.",
-              "An unrelated modern policy debate"
+              "Decentralized movement sparked by #BlackLivesMatter (2013); broadens agenda to police violence, abolition, intersectionality.",
+              "Campaign for slavery reparations through the H.R. 40 study bill."
             ]
           },
           {
             "label": "Color-blind racism is best described as ___",
             "options": [
               "Post-Civil Rights ideology that ignores structural inequality (Eduardo Bonilla-Silva).",
-              "U.S. prison population rose from ~300,000 (1972) to ~2.3 million (2008); Black men incarcerated at 5–6× white rate.",
-              "Decentralized network founded 2013; broadens civil-rights agenda to police violence, abolition, intersectionality.",
-              "A 21st-century technology trend"
+              "U.S. incarcerated population rose from ~300,000 (1972) to ~2.3 million (2008); Black men incarcerated at 5–6× white rate.",
+              "Decentralized movement sparked by #BlackLivesMatter (2013); broadens agenda to police violence, abolition, intersectionality.",
+              "Movement to elect Black mayors in major cities after 1967."
             ]
           },
           {
             "label": "Movement for Black Lives is best described as ___",
             "options": [
-              "Decentralized network founded 2013; broadens civil-rights agenda to police violence, abolition, intersectionality.",
-              "U.S. prison population rose from ~300,000 (1972) to ~2.3 million (2008); Black men incarcerated at 5–6× white rate.",
+              "Decentralized movement sparked by #BlackLivesMatter (2013); broadens agenda to police violence, abolition, intersectionality.",
+              "U.S. incarcerated population rose from ~300,000 (1972) to ~2.3 million (2008); Black men incarcerated at 5–6× white rate.",
               "Post-Civil Rights ideology that ignores structural inequality (Eduardo Bonilla-Silva).",
-              "An economic theory unrelated to this period"
+              "Multiracial electoral alliance behind Jackson's 1984 and 1988 campaigns."
             ]
           }
         ],
         "correctAnswers": [
-          "U.S. prison population rose from ~300,000 (1972) to ~2.3 million (2008); Black men incarcerated at 5–6× white rate.",
+          "U.S. incarcerated population rose from ~300,000 (1972) to ~2.3 million (2008); Black men incarcerated at 5–6× white rate.",
           "Post-Civil Rights ideology that ignores structural inequality (Eduardo Bonilla-Silva).",
-          "Decentralized network founded 2013; broadens civil-rights agenda to police violence, abolition, intersectionality."
+          "Decentralized movement sparked by #BlackLivesMatter (2013); broadens agenda to police violence, abolition, intersectionality."
         ],
         "hint1": "Definition tracks the concept name closely.",
         "hint2": "Match the language used in primary sources.",
@@ -120,23 +120,23 @@ export const aasContemporaryIssuesPart1Data = {
             "question": "A historian argues that Contemporary Issues is essential for understanding African American history. Which evidence BEST supports the claim?",
             "options": [
               "Jesse Jackson (b. 1941) — 1984 and 1988 Democratic presidential campaigns; Rainbow Coalition.",
-              "A 21st-century pop song references Contemporary Issues without historical context.",
-              "Contemporary Issues is unrelated to broader trends in U.S. or Atlantic history.",
-              "There are no primary sources for this period."
+              "Cornel West (b. 1953) — 1984 and 1988 Democratic presidential campaigns; Rainbow Coalition.",
+              "Toni Morrison (1931–2019) — Wrote *The New Jim Crow* (2010) on mass incarceration.",
+              "Michelle Alexander (b. 1967) — Nobel Prize in Literature (1993); author of the novel *Beloved* (1987)."
             ],
             "correctAnswer": 0,
-            "explanation": "Strong AP arguments cite specific historical actors and dates, not anachronistic or vague references."
+            "explanation": "Strong AP arguments cite accurately attributed actors and dates. Jackson ran the 1984 and 1988 campaigns and built the Rainbow Coalition; Cornel West is a philosopher known for *Race Matters* (1993); Alexander wrote *The New Jim Crow*; and Morrison won the Nobel Prize and wrote *Beloved*."
           },
           {
             "question": "Which statement most accurately describes the historical context of Contemporary Issues?",
             "options": [
-              "From the War on Drugs and mass incarceration through Obama's election, Black Lives Matter, and the 1619 Project, contemporary African American history has been shaped by the persistence of structural inequality alongside unprecedented political and cultural visibility.",
-              "Contemporary Issues occurred entirely outside any global or transregional context.",
-              "Contemporary Issues produced no documentary evidence and is impossible to study.",
-              "Contemporary Issues only appears on AP optional questions."
+              "Since 1980, the War on Drugs and mass incarceration have coexisted with rising Black political and cultural visibility.",
+              "Since 1980, federal policy has steadily reduced incarceration, so prison populations today are below 1970s levels.",
+              "Since 1980, Black political participation has fallen sharply, and no Black candidate has won a major party's nomination.",
+              "Since 1980, racial inequality has been driven only by overseas trade, not by domestic policing or sentencing laws."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rewards contextualization — placing the topic within larger historical processes."
+            "explanation": "Contextualization places the period in its larger process: the War on Drugs, harsher sentencing laws, and mass incarceration coincided with Jackson's campaigns, Obama's election, and new cultural visibility. Incarceration rose roughly sevenfold from the early 1970s to 2008 and remains far above 1970s levels, Obama won the 2008 Democratic nomination, and domestic policy drove these trends."
           }
         ]
       }

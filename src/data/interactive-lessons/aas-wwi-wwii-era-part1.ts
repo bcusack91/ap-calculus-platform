@@ -21,24 +21,24 @@ export const aasWwiWwiiEraPart1Data = {
           {
             "question": "Which statement BEST captures why WWI & WWII Era is foundational to AP African American History?",
             "options": [
-              "African Americans served in segregated units in both world wars while facing Jim Crow at home. The contradiction between fighting fascism abroad and racism at home — captured by the *Pittsburgh Courier*'s 'Double V' campaign — accelerated postwar civil-rights mobilization.",
-              "WWI & WWII Era is primarily a literary movement with no political implications.",
-              "WWI & WWII Era only matters to one decade and rarely appears on the AP exam.",
-              "WWI & WWII Era is studied to memorize dates without analyzing causes."
+              "Black troops fought fascism abroad in segregated units, and the Double V campaign turned that contradiction into postwar protest.",
+              "Both world wars integrated the armed forces from the start, so the military became a model for desegregating the South.",
+              "Wartime industries refused to hire Black workers in both wars, so the Great Migration stopped between 1914 and 1945.",
+              "The Black press set aside all civil-rights demands in both wars, backing the war effort without any criticism until final victory."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rewards students who can articulate why WWI & WWII Era matters in the broader course narrative, not just describe it."
+            "explanation": "The unit is foundational because Black Americans served in segregated units in both world wars while facing Jim Crow at home, and the contradiction, captured by the *Pittsburgh Courier*'s Double V campaign, accelerated postwar civil-rights mobilization. The military stayed segregated until 1948, wartime jobs pulled migrants north, and the Black press campaigned for rights during World War II."
           },
           {
             "question": "369th 'Harlem Hellfighters' (1917–1919) is significant in this unit primarily because:",
             "options": [
               "Spent 191 days in combat with French Army; awarded the Croix de Guerre.",
-              "369th 'Harlem Hellfighters' opposed every form of African American institution building.",
-              "369th 'Harlem Hellfighters' lived after the events of WWI & WWII Era ended.",
-              "369th 'Harlem Hellfighters' is mentioned only in passing on the AP exam."
+              "Black combat pilots of the 332nd Fighter Group; flew about 1,500 missions escorting bombers.",
+              "Founded the Brotherhood of Sleeping Car Porters; pressured FDR into issuing EO 8802 (1941).",
+              "WWI veteran and Howard Law dean; designed the NAACP's legal attack on segregation."
             ],
             "correctAnswer": 0,
-            "explanation": "369th 'Harlem Hellfighters' is one of the central named figures the AP exam expects students to deploy when writing about WWI & WWII Era."
+            "explanation": "The 369th Infantry, the 'Harlem Hellfighters,' fought 191 days under French command in World War I and received the Croix de Guerre, showing Black valor despite a segregated U.S. Army. The other descriptions fit the Tuskegee Airmen, A. Philip Randolph, and Charles Hamilton Houston."
           }
         ]
       }
@@ -77,7 +77,7 @@ export const aasWwiWwiiEraPart1Data = {
               "U.S. armed forces remained legally segregated until Truman's Executive Order 9981 (1948).",
               "Victory abroad over fascism, victory at home over racism.",
               "EO 8802 (1941) banned defense-industry discrimination — the first such order since Reconstruction.",
-              "An unrelated modern policy debate"
+              "Draft exemption for Black men in both world wars."
             ]
           },
           {
@@ -86,7 +86,7 @@ export const aasWwiWwiiEraPart1Data = {
               "Victory abroad over fascism, victory at home over racism.",
               "U.S. armed forces remained legally segregated until Truman's Executive Order 9981 (1948).",
               "EO 8802 (1941) banned defense-industry discrimination — the first such order since Reconstruction.",
-              "A 21st-century technology trend"
+              "Military victory first, with civil-rights demands postponed until peace."
             ]
           },
           {
@@ -95,7 +95,7 @@ export const aasWwiWwiiEraPart1Data = {
               "EO 8802 (1941) banned defense-industry discrimination — the first such order since Reconstruction.",
               "U.S. armed forces remained legally segregated until Truman's Executive Order 9981 (1948).",
               "Victory abroad over fascism, victory at home over racism.",
-              "An economic theory unrelated to this period"
+              "New Deal program that guaranteed equal relief payments to Black workers."
             ]
           }
         ],
@@ -120,23 +120,23 @@ export const aasWwiWwiiEraPart1Data = {
             "question": "A historian argues that WWI & WWII Era is essential for understanding African American history. Which evidence BEST supports the claim?",
             "options": [
               "369th 'Harlem Hellfighters' (1917–1919) — Spent 191 days in combat with French Army; awarded the Croix de Guerre.",
-              "A 21st-century pop song references WWI & WWII Era without historical context.",
-              "WWI & WWII Era is unrelated to broader trends in U.S. or Atlantic history.",
-              "There are no primary sources for this period."
+              "Tuskegee Airmen (1941–1946) — Spent 191 days in combat with the French Army; awarded the Croix de Guerre.",
+              "A. Philip Randolph (1889–1979) — Coined the 'Double V' slogan in a 1942 letter to the *Pittsburgh Courier*.",
+              "James G. Thompson (1942) — Founded the Brotherhood of Sleeping Car Porters (1925); pressured FDR into issuing EO 8802."
             ],
             "correctAnswer": 0,
-            "explanation": "Strong AP arguments cite specific historical actors and dates, not anachronistic or vague references."
+            "explanation": "Strong AP arguments cite accurately attributed actors and dates. The 369th fought under French command in World War I; the Tuskegee Airmen flew in World War II; James G. Thompson's 1942 letter inspired Double V; A. Philip Randolph founded the porters' union and led the March on Washington Movement."
           },
           {
             "question": "Which statement most accurately describes the historical context of WWI & WWII Era?",
             "options": [
-              "African Americans served in segregated units in both world wars while facing Jim Crow at home. The contradiction between fighting fascism abroad and racism at home — captured by the *Pittsburgh Courier*'s 'Double V' campaign — accelerated postwar civil-rights mobilization.",
-              "WWI & WWII Era occurred entirely outside any global or transregional context.",
-              "WWI & WWII Era produced no documentary evidence and is impossible to study.",
-              "WWI & WWII Era only appears on AP optional questions."
+              "Black Americans served in segregated units in both wars, and the contradiction of fighting fascism under Jim Crow fueled the Double V campaign.",
+              "Black Americans were barred from combat in both wars, so the Black press focused its campaigns only on Northern factory jobs.",
+              "Black Americans won full equality in the military in 1917, which removed the main grievance behind wartime protest.",
+              "Federal officials ended Jim Crow during World War I to unite the nation, so Black protest faded until the 1950s."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rewards contextualization — placing the topic within larger historical processes."
+            "explanation": "Contextualization places the topic in a larger process: Black Americans served in segregated units in both world wars while facing Jim Crow at home, and the *Pittsburgh Courier*'s Double V campaign turned that contradiction into a demand for rights. Black troops saw combat in both wars, the military stayed segregated until 1948, and Jim Crow endured through both wars."
           }
         ]
       }

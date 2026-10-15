@@ -10,7 +10,7 @@ export const aasFreedomEnslavementPart7Data = {
     {
       id: "aasfe7-review",
       type: 'text' as const,
-      content: "## Master review for Freedom & Enslavement\n\n### Concepts to define on demand\n\n| Core concept | What it refers to |\n|---|---|\n| **Gradual emancipation in the North** | Pennsylvania (1780), New York (1799), New Jersey (1804) freed enslaved people only by birthdates. |\n| **Manumission** | Owner-granted freedom; often restricted by southern states after 1820s. |\n| **Citizenship contested** | *Dred Scott* (1857) declared people of African descent could never be U.S. citizens. |\n\n### Figures to deploy\n\n| Figure | Dates | Why they matter |\n|---|---|---|\n| **Richard Allen** | 1760–1831 | Founded the African Methodist Episcopal Church (1816); first Black bishop in the U.S. |\n| **Absalom Jones** | 1746–1818 | Co-founded Philadelphia's Free African Society (1787); first Black Episcopal priest. |\n| **Prince Hall** | c. 1735–1807 | Founded the first Black Masonic lodge (1784); petitioned Massachusetts to end slavery. |\n| **James Forten** | 1766–1842 | Wealthy Philadelphia sailmaker; financier of *The Liberator* and Black conventions. |\n| **Maria W. Stewart** | 1803–1879 | First U.S.-born woman to lecture publicly on political topics; Boston, 1832–1833. |\n\n### Events to cite\n\n| Event | Significance |\n|---|---|\n| **1780 PA Gradual Abolition Act** | First state emancipation law in the Atlantic world. |\n| **1787 Free African Society** | Black mutual-aid organization in Philadelphia. |\n| **1816 American Colonization Society founded** | Promoted resettlement to Liberia; Black opinion sharply divided. |\n| **1830 first National Negro Convention (Philadelphia)** | Black leaders organize collective political response. |\n| **1850 Fugitive Slave Act** | Federal commissioners paid more for returns than releases; sparks resistance. |\n\n### Sources to attribute\n\n- **Walker, *Appeal* (1829)** — Articulates citizenship and rights claims for free Black Americans.\n- **Stewart speeches (1832)** — Earliest published political addresses by an American-born woman.\n- **AME Church *Discipline* (1817)** — Institutional charter of independent Black religious life.\n"
+      content: "## Master review for Freedom & Enslavement\n\n### Concepts to define on demand\n\n| Core concept | What it refers to |\n|---|---|\n| **Gradual emancipation in the North** | Pennsylvania (1780), New York (1799), New Jersey (1804) freed enslaved people only by birthdates. |\n| **Manumission** | Owner-granted freedom; often restricted by southern states after 1820s. |\n| **Citizenship contested** | *Dred Scott* (1857) declared people of African descent could never be U.S. citizens. |\n\n### Figures to deploy\n\n| Figure | Dates | Why they matter |\n|---|---|---|\n| **Richard Allen** | 1760–1831 | Founded the African Methodist Episcopal Church (1816); first Black bishop in the U.S. |\n| **Absalom Jones** | 1746–1818 | Co-founded Philadelphia's Free African Society (1787); first Black Episcopal priest. |\n| **Prince Hall** | c. 1735–1807 | Founded the first Black Masonic lodge (1784); petitioned Massachusetts to end slavery. |\n| **James Forten** | 1766–1842 | Wealthy Philadelphia sailmaker; financier of *The Liberator* and Black conventions. |\n| **Maria W. Stewart** | 1803–1879 | Among the first U.S.-born women to lecture publicly on politics; Boston, 1832–1833. |\n\n### Events to cite\n\n| Event | Significance |\n|---|---|\n| **1780 PA Gradual Abolition Act** | First gradual abolition act passed by a state legislature. |\n| **1787 Free African Society** | Black mutual-aid organization in Philadelphia. |\n| **1816 American Colonization Society founded** | Promoted resettlement to Liberia; Black opinion sharply divided. |\n| **1830 first National Negro Convention (Philadelphia)** | Black leaders organize collective political response. |\n| **1850 Fugitive Slave Act** | Federal commissioners paid more for returns than releases; sparks resistance. |\n\n### Sources to attribute\n\n- **Walker, *Appeal* (1829)** — Articulates citizenship and rights claims for free Black Americans.\n- **Stewart speeches (1832)** — Among the earliest political addresses published by an American-born woman.\n- **AME Church *Discipline* (1817)** — Institutional charter of independent Black religious life.\n"
     },
     {
       id: "aasfe7-quiz",
@@ -22,23 +22,23 @@ export const aasFreedomEnslavementPart7Data = {
             "question": "A high-scoring AP response on this unit will:",
             "options": [
               "Combine a clear thesis with named figures, dated events, and at least one primary source.",
-              "Memorize dates with no analysis.",
-              "Use only 21st-century examples to discuss earlier periods.",
-              "Avoid citing sources."
+              "Narrate the unit's events in order, with names, dates, and places, but no thesis.",
+              "Open with a strong moral judgment and support it with general claims about the era.",
+              "Restate the prompt as its thesis and end by summarizing each body paragraph."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rubrics consistently reward specificity, sourcing, and clear analytical structure."
+            "explanation": "High-scoring responses pair a defensible thesis with specific evidence: named figures, dated events, and sourced documents. Narration without a claim, moral judgment without evidence, and a restated prompt all fall short."
           },
           {
             "question": "Which is the BEST one-sentence thesis for an essay on Freedom & Enslavement?",
             "options": [
-              "During c. 1780–1865, gradual emancipation in the north reshaped Black life — visible in 1780 PA Gradual Abolition Act and Richard Allen's career — even as citizenship contested persisted.",
-              "Freedom & Enslavement was important.",
-              "Nothing changed during c. 1780–1865.",
-              "Freedom & Enslavement cannot be analyzed."
+              "From 1780 to 1865, free Black communities built churches and societies, yet *Dred Scott* showed their citizenship stayed contested.",
+              "Between 1780 and 1865, gradual emancipation gave free Black Northerners full and secure citizenship in every state.",
+              "Freedom & Enslavement was an important period that shaped African American history and culture in many lasting ways.",
+              "Richard Allen, Absalom Jones, and Prince Hall were the three most important Black leaders of the early Republic."
             ],
             "correctAnswer": 0,
-            "explanation": "Strong theses combine a defensible claim with specific evidence and acknowledge complexity."
+            "explanation": "A strong thesis makes a defensible claim, ties it to the period, and acknowledges complexity: free Black institution building alongside contested citizenship. Claiming full citizenship is inaccurate, a vague 'important' claim is not defensible, and ranking leaders does not address the prompt."
           }
         ]
       }
@@ -55,7 +55,7 @@ export const aasFreedomEnslavementPart7Data = {
           "Walker, Appeal (1829)"
         ],
         "hint1": "Hint: 1760–1831",
-        "hint2": "Hint: First state emancipation law in the Atla…",
+        "hint2": "Hint: First gradual abolition act passed by a st…",
         "hint3": "Hint: Articulates citizenship and rights claim…",
         "explanation": "Always pre-load one figure, one event, and one primary source for each AP unit."
       }
@@ -70,27 +70,27 @@ export const aasFreedomEnslavementPart7Data = {
             "label": "Contextualization is best demonstrated by ___",
             "options": [
               "Placing the topic within larger historical processes (e.g., the Atlantic World, post-Reconstruction politics).",
-              "Citing only one date with no context.",
-              "Replacing evidence with opinion.",
-              "Using only 21st-century examples for older periods."
+              "Listing the unit's key events (with dates) in strict chronological order.",
+              "Defining each key term before stating the thesis.",
+              "Explaining how a document's author shaped its message."
             ]
           },
           {
             "label": "Causation is best demonstrated by ___",
             "options": [
               "Identifying a specific cause and its specific consequence with named actors.",
-              "A vague slogan.",
-              "An anecdote without analysis.",
-              "A list of names with no explanation."
+              "Showing that two events happened in the same decade.",
+              "Describing one event in detail with named actors.",
+              "Comparing two similar events across different regions."
             ]
           },
           {
             "label": "CCOT is best demonstrated by ___",
             "options": [
               "Pairing a specific continuity with a specific change, both supported with evidence.",
-              "Choosing only continuity OR only change.",
-              "Avoiding dates.",
-              "Replacing evidence with personal preference."
+              "Tracing a sequence of changes, each supported with evidence.",
+              "Arguing that the period was mostly continuous, with one example.",
+              "Comparing two regions at a single moment in time."
             ]
           }
         ],
@@ -102,7 +102,7 @@ export const aasFreedomEnslavementPart7Data = {
         "hint1": "Contextualization = larger frame.",
         "hint2": "Causation = cause + consequence.",
         "hint3": "CCOT = both halves with evidence.",
-        "explanation": "These are the highest-leverage AP skills tested across MCQ, SAQ, LEQ, and DBQ."
+        "explanation": "These are the highest-leverage AP skills tested across MCQ, SAQ, and DBQ."
       }
     },
     {
@@ -114,24 +114,24 @@ export const aasFreedomEnslavementPart7Data = {
           {
             "question": "You are writing an SAQ on Freedom & Enslavement. The strongest opening sentence is:",
             "options": [
-              "Within c. 1780–1865, Richard Allen (1760–1831) advanced gradual emancipation in the north — visible in 1780 PA Gradual Abolition Act — even as citizenship contested continued.",
-              "Freedom & Enslavement happened.",
-              "There is nothing to say about this topic.",
-              "Modern social media debates are the best evidence."
+              "Richard Allen's AME Church (1816) shows free Black Northerners building institutions even as their citizenship stayed contested.",
+              "Free Black life in the early Republic is a very important topic that historians have debated for many years.",
+              "David Walker's *Appeal* (1829) is a famous pamphlet that many students still read in school today.",
+              "In 1780 Pennsylvania passed a gradual abolition act, and in 1857 the Court decided *Dred Scott*."
             ],
             "correctAnswer": 0,
-            "explanation": "Strong AP openings combine date, figure, mechanism, event, and continuity in a single sentence."
+            "explanation": "A strong SAQ opening ties a named figure and dated event to a claim about change and continuity. A vague claim, a remark about a pamphlet's fame, or a list of dates without a claim does not answer the question."
           },
           {
-            "question": "Which closing move strengthens an LEQ on this unit?",
+            "question": "Which closing move strengthens a DBQ essay on this unit?",
             "options": [
               "Synthesizing the topic with Resistance & Abolition via a specific shared cause or consequence.",
-              "Repeating the prompt verbatim.",
-              "Adding a moral judgment with no evidence.",
-              "Listing topics not assigned in the prompt."
+              "Restating the thesis in different words and then summarizing each of the body paragraphs in turn.",
+              "Introducing a new document that none of the body paragraphs ever analyzed.",
+              "Ending with a personal reflection on why the topic still matters today."
             ],
             "correctAnswer": 0,
-            "explanation": "AP synthesis moves earn extra rubric points by connecting units."
+            "explanation": "A strong close extends the argument by linking this unit to another through a specific shared cause or consequence. Restating the thesis, adding unanalyzed evidence, or reflecting personally adds no new analysis."
           }
         ]
       }

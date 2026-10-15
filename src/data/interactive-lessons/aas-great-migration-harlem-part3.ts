@@ -21,24 +21,24 @@ export const aasGreatMigrationHarlemPart3Data = {
           {
             "question": "Which case BEST illustrates a pattern central to Great Migration & Harlem Renaissance?",
             "options": [
-              "1916 first wave of Great Migration intensifies — Wartime labor need pulls workers north.",
-              "An unrelated event from another century.",
-              "A purely fictional event.",
-              "An anecdote with no documentary support."
+              "1916 first wave of migration intensifies — Wartime labor need pulls Black workers north.",
+              "1865 Special Field Order 15 — Sherman sets aside 40-acre plots for freed families on the coast.",
+              "1879 Exoduster migration — Thousands of Black Southerners leave Louisiana and Mississippi for Kansas.",
+              "1965 Voting Rights Act — Federal examiners register Black voters across the Deep South."
             ],
             "correctAnswer": 0,
-            "explanation": "Use historically attested events to illustrate patterns."
+            "explanation": "The 1916 surge falls inside 1910–1940 and shows the unit's central pattern: wartime jobs pulling Black Southerners north. Field Order 15 and the Exoduster movement belong to Reconstruction, and the Voting Rights Act to the civil rights era."
           },
           {
             "question": "A comparison of 1916 first wave of Great Migration intensifies and 1917 East St. Louis riot is most useful because:",
             "options": [
               "Both cases let students see common patterns and unique local differences in concrete historical detail.",
-              "Both events occurred in identical contexts and produced identical outcomes.",
-              "Comparison is irrelevant to AP scoring.",
-              "Neither event left primary sources for historians."
+              "Both cases show that Northern cities welcomed migrants peacefully, with no conflict over jobs or housing.",
+              "Both cases show that the migration ended in 1917 once white mobs attacked Black workers.",
+              "Both cases prove that the migration's main cause was Northern violence, not Southern conditions."
             ],
             "correctAnswer": 0,
-            "explanation": "AP comparison rewards specific similarities and differences with named cases."
+            "explanation": "Comparison rewards a specific similarity and a specific difference: both show migrants drawn to wartime industrial jobs, but the East St. Louis riot shows white workers violently resisting them. The riot proves Northern cities were not peaceful, the migration continued for decades, and Southern conditions pushed migrants out."
           }
         ]
       }
@@ -69,35 +69,35 @@ export const aasGreatMigrationHarlemPart3Data = {
           {
             "label": "The case most central to Push factors is ___",
             "options": [
+              "1916 Waco lynching of Jesse Washington",
               "1916 first wave of Great Migration intensifies",
-              "1917 East St. Louis riot",
-              "1919 Red Summer",
-              "An unrelated 21st-century news story"
+              "1925 *The New Negro* published",
+              "1917 East St. Louis riot"
             ]
           },
           {
             "label": "The case most central to Pull factors is ___",
             "options": [
-              "1917 East St. Louis riot",
               "1916 first wave of Great Migration intensifies",
-              "1919 Red Summer",
-              "An unrelated 21st-century news story"
+              "1916 Waco lynching of Jesse Washington",
+              "1917 East St. Louis riot",
+              "1925 *The New Negro* published"
             ]
           },
           {
             "label": "The case most central to New Negro is ___",
             "options": [
-              "1919 Red Summer",
+              "1925 *The New Negro* published",
               "1916 first wave of Great Migration intensifies",
               "1917 East St. Louis riot",
-              "An unrelated 21st-century news story"
+              "1916 Waco lynching of Jesse Washington"
             ]
           }
         ],
         "correctAnswers": [
+          "1916 Waco lynching of Jesse Washington",
           "1916 first wave of Great Migration intensifies",
-          "1917 East St. Louis riot",
-          "1919 Red Summer"
+          "1925 *The New Negro* published"
         ],
         "hint1": "Use chronology to disambiguate.",
         "hint2": "Match the event to the concept it best illustrates.",
@@ -114,24 +114,24 @@ export const aasGreatMigrationHarlemPart3Data = {
           {
             "question": "Using one specific case from Great Migration & Harlem Renaissance, which sentence is the BEST AP comparison move?",
             "options": [
-              "Both 1916 first wave of Great Migration intensifies and 1917 East St. Louis riot reveal push factors, but they differ in actors and outcomes.",
-              "Both events were fictional and produced no consequences.",
-              "These events are too old to compare meaningfully.",
-              "Comparison is unimportant in AP rubrics."
+              "Both the 1916 wave of the Great Migration and the 1917 East St. Louis riot reveal its tensions, but they differ in actors and outcomes.",
+              "Both the 1916 wave of the Great Migration and the 1917 East St. Louis riot were early parts of the migration north.",
+              "The 1916 migration wave and the 1917 riot differ mainly because they took place a year apart.",
+              "Both the 1916 wave of the Great Migration and the 1917 East St. Louis riot show racism's cruelty, so they should be remembered as moral lessons."
             ],
             "correctAnswer": 0,
-            "explanation": "AP comparison combines a specific shared pattern with a specific difference."
+            "explanation": "A full comparison pairs a shared pattern with a meaningful difference, here migrants seeking wartime work versus white mobs attacking them. A similarity alone, a trivial difference such as date, or a moral judgment does not complete the move."
           },
           {
             "question": "Robert S. Abbott's role in Great Migration & Harlem Renaissance is best illustrated by which event?",
             "options": [
-              "1916 first wave of Great Migration intensifies — Wartime labor need pulls workers north.",
-              "An unrelated event in a different century.",
-              "A purely literary publication unconnected to politics.",
-              "An event before the figure was born."
+              "1916 first wave of migration intensifies — The *Chicago Defender* urges Southern readers to come north.",
+              "1917 East St. Louis riot — White mobs attack Black workers recruited to local war plants; dozens die.",
+              "1925 *The New Negro* published — Locke's anthology announces the Harlem Renaissance's arrival.",
+              "1914 UNIA founded — Garvey's movement promotes Black nationalism and migration to Africa."
             ],
             "correctAnswer": 0,
-            "explanation": "Tie figures to dated events for high-scoring AP arguments."
+            "explanation": "Robert S. Abbott's *Chicago Defender* urged Southern readers to move north and helped drive the 1916 surge. The East St. Louis riot was a white mob attack, *The New Negro* was Alain Locke's, and the UNIA was Marcus Garvey's."
           }
         ]
       }

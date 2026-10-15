@@ -22,23 +22,23 @@ export const aasGreatMigrationHarlemPart6Data = {
             "question": "What makes Locke, *The New Negro* (1925) a strong source for studying Great Migration & Harlem Renaissance?",
             "options": [
               "Anthology of essays, fiction, poetry, and visual art.",
-              "It was published in 2024 with no link to the period.",
-              "It is fictional and includes no historical content.",
-              "It is unsigned and undated."
+              "Ethnographic record of folktales, hoodoo, and work songs.",
+              "Newspaper ads, editorials, and train schedules urging migration.",
+              "Government survey of wages, rents, and housing in Harlem."
             ],
             "correctAnswer": 0,
-            "explanation": "Provenance, date, and authorial position determine source value."
+            "explanation": "*The New Negro* (1925) is valuable because Alain Locke gathered essays, fiction, poetry, and art from many renaissance voices in one volume. Folklore collecting describes Hurston's *Mules and Men*, migration ads describe the *Chicago Defender*, and the anthology was not a government survey."
           },
           {
             "question": "When using a primary source on the AP exam, you should:",
             "options": [
               "Identify author/date/audience and tie the source to a specific claim.",
-              "Quote the source verbatim without analysis.",
-              "Ignore the author's position.",
-              "Treat the source as neutral and unbiased."
+              "Summarize the source's main idea accurately and let it stand as your argument.",
+              "Quote the most striking passage at length so readers can judge its meaning for themselves.",
+              "Treat it as neutral, reliable evidence, since primary sources record events as they happened."
             ],
             "correctAnswer": 0,
-            "explanation": "AP source-use rewards explicit attribution and analytical framing."
+            "explanation": "Source use earns credit when you attribute the source (author, date, audience) and put it to work for a claim. Summary, long quotation, and treating a source as neutral all skip that analysis."
           }
         ]
       }
@@ -72,7 +72,7 @@ export const aasGreatMigrationHarlemPart6Data = {
               "Anthology of essays, fiction, poetry, and visual art.",
               "Aesthetic manifesto of the renaissance.",
               "Ethnographic recording of Black folk culture.",
-              "Unrelated to this unit"
+              "Newspaper editorials urging Southern readers to move north."
             ]
           },
           {
@@ -81,7 +81,7 @@ export const aasGreatMigrationHarlemPart6Data = {
               "Aesthetic manifesto of the renaissance.",
               "Anthology of essays, fiction, poetry, and visual art.",
               "Ethnographic recording of Black folk culture.",
-              "Unrelated to this unit"
+              "Political platform of Garvey's UNIA."
             ]
           },
           {
@@ -90,7 +90,7 @@ export const aasGreatMigrationHarlemPart6Data = {
               "Ethnographic recording of Black folk culture.",
               "Anthology of essays, fiction, poetry, and visual art.",
               "Aesthetic manifesto of the renaissance.",
-              "Unrelated to this unit"
+              "Statistical record of lynching in the South."
             ]
           }
         ],
@@ -115,23 +115,23 @@ export const aasGreatMigrationHarlemPart6Data = {
             "question": "A strong AP citation of Locke, *The New Negro* (1925) reads:",
             "options": [
               "'According to Locke, *The New Negro* (1925), …' followed by inference about purpose and historical situation.",
-              "A direct quote with no attribution.",
-              "A loose paraphrase that hides the source's identity.",
-              "An anachronistic reading that ignores the date."
+              "'According to Locke (1925), …' followed by a long, unbroken quotation from *The New Negro*, with no further comment.",
+              "'*The New Negro* is biased,' followed by dismissing its picture of Harlem.",
+              "'One Harlem editor said …' followed by a paraphrase that leaves out the author and date."
             ],
             "correctAnswer": 0,
-            "explanation": "Attribution + sourcing analysis is the AP scoring standard."
+            "explanation": "Attribution plus sourcing analysis is the standard: name the source, then explain how its purpose or historical situation shapes it. Quoting without comment, dismissing a source as biased, and hiding its identity all fall short."
           },
           {
             "question": "Which source-analysis move earns the AP 'sourcing' point?",
             "options": [
               "Identifying author, audience, purpose, OR historical situation — and using it to support a claim.",
-              "Quoting verbatim with no analysis.",
-              "Ignoring the source's date.",
-              "Citing only 21st-century opinion pieces."
+              "Restating the source's topic, date, and title — and quoting its most memorable line.",
+              "Explaining whether you agree with the author's view — and describing how it makes you feel about the past.",
+              "Summarizing what the source says accurately — and placing it in chronological order."
             ],
             "correctAnswer": 0,
-            "explanation": "AP DBQ rubrics explicitly reward sourcing analysis tied to claims."
+            "explanation": "Sourcing means explaining how the author's point of view, purpose, audience, or historical situation matters, then using that to support the argument. Restating, quoting, summarizing, or reacting personally does not count."
           }
         ]
       }

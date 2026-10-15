@@ -22,23 +22,23 @@ export const aasPracticeFreedomPart2Data = {
             "question": "Which BEST describes a primary mechanism shaping Practice of Freedom?",
             "options": [
               "AME (1816), AMEZ (1821), National Baptist (1895) — institutional bedrock of Black civic life.",
-              "An unrelated technological invention from a different century.",
-              "Pure coincidence with no identifiable cause.",
-              "A modern political slogan with no historical content."
+              "Freedmen's Bureau (1865), Peabody Fund (1867), Rosenwald Fund (1917) — white-run agencies that governed Black civic life.",
+              "Black Codes (1865), *Plessy* (1896), poll taxes (1890s) — laws that created Black institutions by design.",
+              "Federal charters (1870s), state subsidies (1880s), WPA grants (1935) — public funds that built most Black churches."
             ],
             "correctAnswer": 0,
-            "explanation": "Black church is the central mechanism the AP exam expects students to explain."
+            "explanation": "Independent Black churches, such as the AME, AME Zion, and National Baptist Convention, were the institutional bedrock of Black civic life. Aid agencies and funds supported some schools but did not govern Black civic life, segregation laws restricted rather than built institutions, and Black congregations funded their own churches."
           },
           {
             "question": "Ida B. Wells's career illustrates which historical mechanism?",
             "options": [
               "Anti-lynching crusader; co-founder NAACP (1909); suffragist.",
-              "Ida B. Wells had no impact on Practice of Freedom.",
-              "An entirely modern policy debate.",
-              "A purely literary aesthetic."
+              "Founder of Bethune-Cookman (1904); led FDR's 'Black Cabinet'; founded NCNW (1935).",
+              "Haircare entrepreneur; trained ~40,000 sales agents; often called first Black woman millionaire.",
+              "Founder of ASNLH (1915); created 'Negro History Week' (1926); historian."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rewards specific causal claims tied to named figures."
+            "explanation": "Ida B. Wells exposed lynching through journalism, helped found the NAACP, and organized for women's suffrage, showing how activism built national institutions. The other descriptions fit Mary McLeod Bethune, Madam C. J. Walker, and Carter G. Woodson."
           }
         ]
       }
@@ -71,8 +71,8 @@ export const aasPracticeFreedomPart2Data = {
             "options": [
               "Founded Bethune-Cookman (1904); FDR's 'Black Cabinet' coordinator; founded NCNW (1935).",
               "Anti-lynching crusader; co-founder NAACP (1909); suffragist.",
-              "First Black woman millionaire; built haircare empire and trained ~40,000 Black women agents.",
-              "Unrelated to this unit"
+              "Self-made haircare entrepreneur, often called the first Black woman millionaire; trained ~40,000 Black women agents.",
+              "Founded ASNLH (1915) and 'Negro History Week' (1926)."
             ]
           },
           {
@@ -80,24 +80,24 @@ export const aasPracticeFreedomPart2Data = {
             "options": [
               "Anti-lynching crusader; co-founder NAACP (1909); suffragist.",
               "Founded Bethune-Cookman (1904); FDR's 'Black Cabinet' coordinator; founded NCNW (1935).",
-              "First Black woman millionaire; built haircare empire and trained ~40,000 Black women agents.",
-              "Unrelated to this unit"
+              "Self-made haircare entrepreneur, often called the first Black woman millionaire; trained ~40,000 Black women agents.",
+              "Howard Law dean; mentored Thurgood Marshall; designed NAACP legal strategy."
             ]
           },
           {
             "label": "The mechanism most strongly associated with Madam C. J. Walker is ___",
             "options": [
-              "First Black woman millionaire; built haircare empire and trained ~40,000 Black women agents.",
+              "Self-made haircare entrepreneur, often called the first Black woman millionaire; trained ~40,000 Black women agents.",
               "Founded Bethune-Cookman (1904); FDR's 'Black Cabinet' coordinator; founded NCNW (1935).",
               "Anti-lynching crusader; co-founder NAACP (1909); suffragist.",
-              "Unrelated to this unit"
+              "Founded ASNLH (1915) and 'Negro History Week' (1926)."
             ]
           }
         ],
         "correctAnswers": [
           "Founded Bethune-Cookman (1904); FDR's 'Black Cabinet' coordinator; founded NCNW (1935).",
           "Anti-lynching crusader; co-founder NAACP (1909); suffragist.",
-          "First Black woman millionaire; built haircare empire and trained ~40,000 Black women agents."
+          "Self-made haircare entrepreneur, often called the first Black woman millionaire; trained ~40,000 Black women agents."
         ],
         "hint1": "Match the figure's actual contribution.",
         "hint2": "Use the dates as a guide.",
@@ -114,24 +114,24 @@ export const aasPracticeFreedomPart2Data = {
           {
             "question": "A student argues that Practice of Freedom happened spontaneously. The strongest counter-argument is:",
             "options": [
-              "Identifying specific actors and processes — e.g., Mary McLeod Bethune (1875–1955) — that drove the change.",
-              "Insisting that historians cannot know causes.",
-              "Citing only events from outside this period.",
-              "Memorizing dates without analyzing them."
+              "Identifying the specific actors and processes — Bethune's schools, Black churches, the NAACP — that drove it.",
+              "Arguing that Black institutions came mainly from white charity — philanthropists founding and running them alone.",
+              "Noting that church minutes, club records, and newspapers are too sparse to show any cause at all.",
+              "Pointing out that the 1960s civil rights laws, not earlier Black institution building, created these organizations."
             ],
             "correctAnswer": 0,
-            "explanation": "Historical causation requires named actors, dated events, and articulated mechanisms."
+            "explanation": "Historical causation names actors and mechanisms: founders such as Mary McLeod Bethune and Carter G. Woodson, congregations that built independent churches, and organizations such as the NACW and NAACP. Black communities founded and ran these institutions, the record is rich, and most predate the 1960s by decades."
           },
           {
             "question": "Which mechanism is MOST closely linked to HBCUs?",
             "options": [
               "Howard (1867), Fisk (1866), Spelman (1881), Morehouse (1867), Tuskegee (1881).",
-              "AME (1816), AMEZ (1821), National Baptist (1895) — institutional bedrock of Black civic life.",
-              "*Freedom's Journal* (1827), *Chicago Defender* (1905), *Pittsburgh Courier* (1907).",
-              "A cause from a different historical era."
+              "AME (1816), AMEZ (1821), National Baptist (1895), Abyssinian Baptist (1808).",
+              "*Freedom's Journal* (1827), *Defender* (1905), *Courier* (1907), *The Crisis* (1910), *Amsterdam News* (1909).",
+              "NACW (1896), NAACP (1909), Urban League (1910), ASNLH (1915), NCNW (1935)."
             ],
             "correctAnswer": 0,
-            "explanation": "HBCUs has its own historical mechanism distinct from related concepts."
+            "explanation": "HBCUs are colleges such as Howard, Fisk, Spelman, Morehouse, and Tuskegee. The other lists name Black churches, Black newspapers and magazines, and national Black organizations."
           }
         ]
       }

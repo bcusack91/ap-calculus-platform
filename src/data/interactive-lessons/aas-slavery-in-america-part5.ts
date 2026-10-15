@@ -10,7 +10,7 @@ export const aasSlaveryInAmericaPart5Data = {
     {
       id: "aassia5-change",
       type: 'text' as const,
-      content: "## Specific moments of change\n\n| Event | Significance |\n|---|---|\n| **1793 cotton gin** | Cotton acreage soars from ~10,000 bales (1793) to ~4 million (1860). |\n| **1808 federal ban on Atlantic slave imports** | Domestic trade replaces Atlantic supply. |\n| **1820 Missouri Compromise** | 36°30′ line divides expansion of slavery in the Louisiana Purchase. |\n\n### Strong CCOT sentence\n\n> Although chattel slavery continued throughout c. 1619–1865, the events of 1820 Missouri Compromise marked a decisive shift in how Black communities engaged with it."
+      content: "## Specific moments of change\n\n| Event | Significance |\n|---|---|\n| **1793 cotton gin** | Cotton output soars from ~10,000 bales (1793) to ~4 million bales (1860). |\n| **1808 federal ban on Atlantic slave imports** | Domestic trade replaces Atlantic supply. |\n| **1820 Missouri Compromise** | 36°30′ line divides expansion of slavery in the Louisiana Purchase. |\n\n### Strong CCOT sentence\n\n> Although chattel slavery continued throughout c. 1619–1865, the events of 1820 Missouri Compromise marked a decisive shift in how Black communities engaged with it."
     },
     {
       id: "aassia5-quiz",
@@ -22,23 +22,23 @@ export const aasSlaveryInAmericaPart5Data = {
             "question": "Which best describes continuity within Slavery in America?",
             "options": [
               "Aspects such as domestic slave trade persisted even as other features changed.",
-              "Nothing about this topic ever changed.",
-              "Continuity is irrelevant to AP scoring.",
-              "Only the most recent decade matters."
+              "Atlantic slave imports continued legally right up to the outbreak of the Civil War.",
+              "Enslaved people's legal status stayed fluid from 1619 to 1865.",
+              "Tobacco remained the main slave-grown crop in the South throughout the period."
             ],
             "correctAnswer": 0,
-            "explanation": "Continuity = elements that persist across change — a key AP analytical category."
+            "explanation": "Continuity means elements that persist across change: the domestic slave trade carried about a million people south from 1808 to 1865 even as territory and politics changed. Imports were banned in 1808, status hardened by the 1660s, and cotton overtook tobacco after 1793."
           },
           {
             "question": "Which event marks a decisive change within Slavery in America?",
             "options": [
               "1820 Missouri Compromise — 36°30′ line divides expansion of slavery in the Louisiana Purchase.",
-              "An anecdote with no historical impact.",
-              "A 21st-century news headline unrelated to the period.",
-              "A purely literary aesthetic with no political effect."
+              "1896 *Plessy v. Ferguson* — Court upholds segregation more than three decades after slavery ended.",
+              "1441 Portuguese captives reach Lisbon — Europe's Atlantic slave trade begins.",
+              "1916 Great Migration intensifies — Descendants of the enslaved move north for wartime jobs."
             ],
             "correctAnswer": 0,
-            "explanation": "Specific dated events anchor change-over-time arguments."
+            "explanation": "The Missouri Compromise falls inside c. 1619–1865 and reshaped where slavery could expand. *Plessy*, the 1441 Lisbon captives, and the Great Migration belong to other units."
           }
         ]
       }
@@ -71,8 +71,8 @@ export const aasSlaveryInAmericaPart5Data = {
             "options": [
               "Domestic slave trade",
               "1820 Missouri Compromise",
-              "An unrelated modern slogan",
-              "A topic from a different course"
+              "1662 Virginia partus law",
+              "1808 federal ban on Atlantic slave imports"
             ]
           },
           {
@@ -80,17 +80,17 @@ export const aasSlaveryInAmericaPart5Data = {
             "options": [
               "1820 Missouri Compromise",
               "Domestic slave trade",
-              "An anecdote with no date",
-              "An unrelated personal opinion"
+              "Chattel slavery",
+              "Partus sequitur ventrem"
             ]
           },
           {
             "label": "An AP CCOT response should ___",
             "options": [
               "Identify both continuities and changes with specific evidence",
-              "Pick only one without analysis",
-              "Avoid using dates",
-              "Replace evidence with opinion"
+              "Trace only the changes, in order, with specific evidence",
+              "Argue that continuity outweighed every change in the period",
+              "Describe the period's main events without a central claim"
             ]
           }
         ],
@@ -114,24 +114,24 @@ export const aasSlaveryInAmericaPart5Data = {
           {
             "question": "Which CCOT thesis is strongest?",
             "options": [
-              "Although domestic slave trade continued, 1820 Missouri Compromise marked a decisive change in Slavery in America.",
-              "Nothing changed and nothing stayed the same.",
-              "Change is impossible to identify in history.",
-              "AP rubrics do not reward CCOT analysis."
+              "Although the domestic slave trade continued, the 1820 Missouri Compromise marked a decisive change in slavery's expansion.",
+              "The Missouri Compromise changed everything, and slavery stopped spreading west after 1820.",
+              "Despite the Missouri Compromise, slavery stayed the same in every way from 1619 to 1865.",
+              "The domestic slave trade and the Missouri Compromise were both important parts of Slavery in America."
             ],
             "correctAnswer": 0,
-            "explanation": "Strong CCOT theses pair specific continuities with specific changes."
+            "explanation": "A strong CCOT thesis names a specific continuity and a specific change and makes a defensible claim about them. Total change, total continuity, and 'both were important' each miss part of that move."
           },
           {
             "question": "Which evidence move is most valuable in a CCOT response?",
             "options": [
               "Naming a specific dated event AND a continuity within the same paragraph.",
-              "Listing dates without analysis.",
-              "Replacing evidence with a moral judgment.",
-              "Citing only post-2010 news stories."
+              "Listing every major date in the unit in chronological order.",
+              "Describing one change in detail without noting what persisted.",
+              "Quoting a historian's verdict on the period in place of evidence."
             ],
             "correctAnswer": 0,
-            "explanation": "AP CCOT scoring rewards paired specificity."
+            "explanation": "CCOT credit needs both halves anchored in evidence: a dated change and a named continuity. A list of dates, a change with no continuity, or a borrowed verdict replaces that analysis."
           }
         ]
       }

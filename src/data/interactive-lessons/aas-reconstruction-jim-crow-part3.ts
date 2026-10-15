@@ -5,7 +5,7 @@ export const aasReconstructionJimCrowPart3Data = {
     {
       id: "aasrjc3-intro",
       type: 'text' as const,
-      content: "# ⚖️ Reconstruction & Jim Crow\n\n**Part 3 of 7 — Patterns, Regions & Case Studies**\n\n---\n\n## Specific cases — not abstractions\n\n| Event | Significance |\n|---|---|\n| **1865 Special Field Order 15** | Sherman promises freedmen '40 acres and a mule'; Andrew Johnson rescinds. |\n| **1866 Civil Rights Act / 1868 14th Amendment** | Codify birthright citizenship and equal protection. |\n| **1870 15th Amendment** | Bars race-based denial of male suffrage. |\n| **1877 Compromise** | Hayes withdraws federal troops; Reconstruction ends. |\n| **1890 Mississippi Plan** | Constitutional convention eliminates Black voters via poll tax/literacy test. |\n| **1896 *Plessy v. Ferguson*** | Establishes 'separate but equal'; only Justice Harlan dissents. |\n| **1898 Wilmington insurrection** | White mob overthrows multiracial NC government — only successful U.S. coup. |\n"
+      content: "# ⚖️ Reconstruction & Jim Crow\n\n**Part 3 of 7 — Patterns, Regions & Case Studies**\n\n---\n\n## Specific cases — not abstractions\n\n| Event | Significance |\n|---|---|\n| **1865 Special Field Order 15** | Sherman promises freedmen '40 acres and a mule'; Andrew Johnson rescinds. |\n| **1866 Civil Rights Act / 1868 14th Amendment** | Codify birthright citizenship and equal protection. |\n| **1870 15th Amendment** | Bars race-based denial of male suffrage. |\n| **1877 Compromise** | Hayes withdraws federal troops; Reconstruction ends. |\n| **1890 Mississippi Plan** | Constitutional convention eliminates Black voters via poll tax/literacy test. |\n| **1896 *Plessy v. Ferguson*** | Establishes 'separate but equal'; only Justice Harlan dissents. |\n| **1898 Wilmington insurrection** | Armed white supremacists violently overthrow Wilmington's elected biracial city government. |\n"
     },
     {
       id: "aasrjc3-cases",
@@ -21,24 +21,24 @@ export const aasReconstructionJimCrowPart3Data = {
           {
             "question": "Which case BEST illustrates a pattern central to Reconstruction & Jim Crow?",
             "options": [
-              "1865 Special Field Order 15 — Sherman promises freedmen '40 acres and a mule'; Andrew Johnson rescinds.",
-              "An unrelated event from another century.",
-              "A purely fictional event.",
-              "An anecdote with no documentary support."
+              "1865 Special Field Order 15 — Sherman sets aside 40-acre plots for freed families; Johnson reverses it.",
+              "1857 *Dred Scott v. Sandford* — Taney rules that people of African descent could never be U.S. citizens.",
+              "1919 Red Summer — White mob violence strikes Black communities in Chicago, Elaine, and dozens of other places.",
+              "1964 Civil Rights Act — Outlaws segregation in public places; bans discrimination in hiring and employment."
             ],
             "correctAnswer": 0,
-            "explanation": "Use historically attested events to illustrate patterns."
+            "explanation": "Special Field Order 15 (1865) falls inside 1865–1900 and captures Reconstruction's pattern of promise and reversal: land set aside for freed families, then returned to former owners under Andrew Johnson. The other events are real but belong to the antebellum, Great Migration, and civil rights units."
           },
           {
             "question": "A comparison of 1865 Special Field Order 15 and 1866 Civil Rights Act / 1868 14th Amendment is most useful because:",
             "options": [
               "Both cases let students see common patterns and unique local differences in concrete historical detail.",
-              "Both events occurred in identical contexts and produced identical outcomes.",
-              "Comparison is irrelevant to AP scoring.",
-              "Neither event left primary sources for historians."
+              "Both cases show that Congress gave freed families land, then wrote that land grant into the Constitution.",
+              "Both cases show that Reconstruction policy was made by Southern states, not by federal officials.",
+              "Both cases prove that Reconstruction's promises were permanently secured by 1868."
             ],
             "correctAnswer": 0,
-            "explanation": "AP comparison rewards specific similarities and differences with named cases."
+            "explanation": "Comparison rewards a specific similarity and a specific difference: both were federal promises to freedpeople, but Special Field Order 15 was a military order soon reversed, while the 14th Amendment endured as constitutional law. Neither granted land by statute or amendment, both came from federal authorities, and many of their promises were undone after 1877."
           }
         ]
       }
@@ -69,35 +69,35 @@ export const aasReconstructionJimCrowPart3Data = {
           {
             "label": "The case most central to Reconstruction Amendments is ___",
             "options": [
-              "1865 Special Field Order 15",
-              "1866 Civil Rights Act / 1868 14th Amendment",
               "1870 15th Amendment",
-              "An unrelated 21st-century news story"
+              "1865 Special Field Order 15",
+              "1890 Mississippi Plan",
+              "1877 Compromise"
             ]
           },
           {
             "label": "The case most central to Freedmen's Bureau is ___",
             "options": [
-              "1866 Civil Rights Act / 1868 14th Amendment",
               "1865 Special Field Order 15",
               "1870 15th Amendment",
-              "An unrelated 21st-century news story"
+              "1890 Mississippi Plan",
+              "1877 Compromise"
             ]
           },
           {
             "label": "The case most central to Disfranchisement is ___",
             "options": [
-              "1870 15th Amendment",
+              "1890 Mississippi Plan",
               "1865 Special Field Order 15",
               "1866 Civil Rights Act / 1868 14th Amendment",
-              "An unrelated 21st-century news story"
+              "1870 15th Amendment"
             ]
           }
         ],
         "correctAnswers": [
+          "1870 15th Amendment",
           "1865 Special Field Order 15",
-          "1866 Civil Rights Act / 1868 14th Amendment",
-          "1870 15th Amendment"
+          "1890 Mississippi Plan"
         ],
         "hint1": "Use chronology to disambiguate.",
         "hint2": "Match the event to the concept it best illustrates.",
@@ -114,24 +114,24 @@ export const aasReconstructionJimCrowPart3Data = {
           {
             "question": "Using one specific case from Reconstruction & Jim Crow, which sentence is the BEST AP comparison move?",
             "options": [
-              "Both 1865 Special Field Order 15 and 1866 Civil Rights Act / 1868 14th Amendment reveal reconstruction amendments, but they differ in actors and outcomes.",
-              "Both events were fictional and produced no consequences.",
-              "These events are too old to compare meaningfully.",
-              "Comparison is unimportant in AP rubrics."
+              "Both Special Field Order 15 and the 14th Amendment reveal Reconstruction's promises, but they differ in actors and outcomes.",
+              "Both Special Field Order 15 and the 14th Amendment were early parts of Reconstruction's promises to freedpeople.",
+              "Field Order 15 and the 14th Amendment differ mainly because they were issued three years apart.",
+              "Both Special Field Order 15 and the 14th Amendment show Reconstruction's failures, so they should be remembered as moral lessons."
             ],
             "correctAnswer": 0,
-            "explanation": "AP comparison combines a specific shared pattern with a specific difference."
+            "explanation": "A full comparison pairs a shared pattern with a meaningful difference, here a general's reversible order versus a ratified amendment. A similarity alone, a trivial difference such as date, or a moral judgment does not complete the move."
           },
           {
             "question": "Hiram Revels's role in Reconstruction & Jim Crow is best illustrated by which event?",
             "options": [
-              "1865 Special Field Order 15 — Sherman promises freedmen '40 acres and a mule'; Andrew Johnson rescinds.",
-              "An unrelated event in a different century.",
-              "A purely literary publication unconnected to politics.",
-              "An event before the figure was born."
+              "1870 First Black U.S. senator seated — Mississippi fills Jefferson Davis's former seat.",
+              "1865 Special Field Order 15 — Sherman sets aside coastal land in 40-acre plots for freed families.",
+              "1862 *Planter* seized — An enslaved pilot steers a Confederate ship out to the Union blockade.",
+              "1890 Mississippi Plan — State convention strips Black voters with a poll tax and literacy test."
             ],
             "correctAnswer": 0,
-            "explanation": "Tie figures to dated events for high-scoring AP arguments."
+            "explanation": "Hiram Revels's defining moment came in 1870, when Mississippi's legislature sent him to the U.S. Senate as its first Black member. Special Field Order 15 was Sherman's, the *Planter* was seized by Robert Smalls, and the Mississippi Plan undid the political gains Revels represented."
           }
         ]
       }

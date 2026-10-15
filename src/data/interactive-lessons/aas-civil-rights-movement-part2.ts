@@ -22,23 +22,23 @@ export const aasCivilRightsMovementPart2Data = {
             "question": "Which BEST describes a primary mechanism shaping Civil Rights Movement?",
             "options": [
               "NAACP LDF litigation campaign building toward *Brown v. Board* (1954).",
-              "An unrelated technological invention from a different century.",
-              "Pure coincidence with no identifiable cause.",
-              "A modern political slogan with no historical content."
+              "Presidential executive orders ending Jim Crow across the South (1948).",
+              "Garveyite emigration campaigns urging a return to Africa (1920s).",
+              "Enforcement of the federal antilynching law Congress passed in the Dyer Act (1922)."
             ],
             "correctAnswer": 0,
-            "explanation": "Legal strategy is the central mechanism the AP exam expects students to explain."
+            "explanation": "The NAACP Legal Defense Fund's long litigation campaign, led by Charles Hamilton Houston and Thurgood Marshall, built the precedents that produced *Brown* (1954). Truman's 1948 order desegregated only the armed forces, Garveyism peaked in the 1920s, and the Dyer antilynching bill passed the House but died in the Senate."
           },
           {
             "question": "Rosa Parks's career illustrates which historical mechanism?",
             "options": [
               "Trained NAACP secretary whose Dec. 1, 1955 arrest sparked the Montgomery Bus Boycott.",
-              "Rosa Parks had no impact on Civil Rights Movement.",
-              "An entirely modern policy debate.",
-              "A purely literary aesthetic."
+              "Spontaneous protest by a tired seamstress with no ties to any civil rights group before her arrest.",
+              "SNCC organizer whose 1960 Greensboro lunch-counter sit-in launched a wave of student protests.",
+              "NAACP lawyer whose 1954 lawsuit against Topeka schools produced the unanimous *Brown* ruling."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rewards specific causal claims tied to named figures."
+            "explanation": "Parks was a trained NAACP chapter secretary who had attended the Highlander Folk School; her Dec. 1, 1955 arrest gave organizers the case that launched the Montgomery Bus Boycott. The 'tired seamstress' story erases her activism, the Greensboro sit-in was begun by four A&T students before SNCC existed, and *Brown* was argued by Thurgood Marshall's LDF team."
           }
         ]
       }
@@ -72,7 +72,7 @@ export const aasCivilRightsMovementPart2Data = {
               "Chief NAACP LDF counsel in *Brown*; first Black Supreme Court Justice (1967).",
               "Trained NAACP secretary whose Dec. 1, 1955 arrest sparked the Montgomery Bus Boycott.",
               "Co-founded SCLC (1957); 'Letter from Birmingham Jail' (1963); Nobel Peace Prize (1964).",
-              "Unrelated to this unit"
+              "Mississippi sharecropper; co-founded the Mississippi Freedom Democratic Party (1964)."
             ]
           },
           {
@@ -81,7 +81,7 @@ export const aasCivilRightsMovementPart2Data = {
               "Trained NAACP secretary whose Dec. 1, 1955 arrest sparked the Montgomery Bus Boycott.",
               "Chief NAACP LDF counsel in *Brown*; first Black Supreme Court Justice (1967).",
               "Co-founded SCLC (1957); 'Letter from Birmingham Jail' (1963); Nobel Peace Prize (1964).",
-              "Unrelated to this unit"
+              "Mississippi sharecropper; co-founded the Mississippi Freedom Democratic Party (1964)."
             ]
           },
           {
@@ -90,7 +90,7 @@ export const aasCivilRightsMovementPart2Data = {
               "Co-founded SCLC (1957); 'Letter from Birmingham Jail' (1963); Nobel Peace Prize (1964).",
               "Chief NAACP LDF counsel in *Brown*; first Black Supreme Court Justice (1967).",
               "Trained NAACP secretary whose Dec. 1, 1955 arrest sparked the Montgomery Bus Boycott.",
-              "Unrelated to this unit"
+              "Mississippi sharecropper; co-founded the Mississippi Freedom Democratic Party (1964)."
             ]
           }
         ],
@@ -114,13 +114,13 @@ export const aasCivilRightsMovementPart2Data = {
           {
             "question": "A student argues that Civil Rights Movement happened spontaneously. The strongest counter-argument is:",
             "options": [
-              "Identifying specific actors and processes — e.g., Thurgood Marshall (1908–1993) — that drove the change.",
-              "Insisting that historians cannot know causes.",
-              "Citing only events from outside this period.",
-              "Memorizing dates without analyzing them."
+              "Identifying the organized actors and processes — LDF lawyers, Black churches, SNCC organizers — that drove it.",
+              "Agreeing, since the Montgomery boycott began only after Rosa Parks's unplanned, solitary protest.",
+              "Noting that the records — court filings, church minutes, FBI files — are too sparse to show any cause.",
+              "Pointing out that the 1965 Voting Rights Act, not activism, is what created the movement."
             ],
             "correctAnswer": 0,
-            "explanation": "Historical causation requires named actors, dated events, and articulated mechanisms."
+            "explanation": "Historical causation names organized actors and mechanisms: the NAACP Legal Defense Fund's litigation, church and community networks that sustained boycotts, and student groups such as SNCC. Parks's arrest became a planned test case backed by a trained activist and local organizers, the movement is richly documented, and the Voting Rights Act was the movement's result, not its cause."
           },
           {
             "question": "Which mechanism is MOST closely linked to Nonviolent direct action?",
@@ -128,10 +128,10 @@ export const aasCivilRightsMovementPart2Data = {
               "Boycotts, sit-ins, freedom rides, marches under Gandhian/Christian discipline.",
               "NAACP LDF litigation campaign building toward *Brown v. Board* (1954).",
               "1957 and 1964 Civil Rights Acts; 1965 Voting Rights Act with Section 5 preclearance.",
-              "A cause from a different historical era."
+              "Armed self-defense patrols such as the Deacons for Defense in Louisiana."
             ],
             "correctAnswer": 0,
-            "explanation": "Nonviolent direct action has its own historical mechanism distinct from related concepts."
+            "explanation": "Nonviolent direct action meant boycotts, sit-ins, Freedom Rides, and marches disciplined by Gandhian and Christian principles. LDF litigation was the legal strategy, the civil rights acts were federal enforcement, and the Deacons for Defense practiced armed self-defense."
           }
         ]
       }

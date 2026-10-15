@@ -5,7 +5,7 @@ export const aasFreedomEnslavementPart3Data = {
     {
       id: "aasfe3-intro",
       type: 'text' as const,
-      content: "# 🕊️ Freedom & Enslavement\n\n**Part 3 of 7 — Patterns, Regions & Case Studies**\n\n---\n\n## Specific cases — not abstractions\n\n| Event | Significance |\n|---|---|\n| **1780 PA Gradual Abolition Act** | First state emancipation law in the Atlantic world. |\n| **1787 Free African Society** | Black mutual-aid organization in Philadelphia. |\n| **1816 American Colonization Society founded** | Promoted resettlement to Liberia; Black opinion sharply divided. |\n| **1830 first National Negro Convention (Philadelphia)** | Black leaders organize collective political response. |\n| **1850 Fugitive Slave Act** | Federal commissioners paid more for returns than releases; sparks resistance. |\n| **1857 *Dred Scott v. Sandford*** | Taney rules Black people 'have no rights which the white man was bound to respect.' |\n"
+      content: "# 🕊️ Freedom & Enslavement\n\n**Part 3 of 7 — Patterns, Regions & Case Studies**\n\n---\n\n## Specific cases — not abstractions\n\n| Event | Significance |\n|---|---|\n| **1780 PA Gradual Abolition Act** | First gradual abolition act passed by a state legislature. |\n| **1787 Free African Society** | Black mutual-aid organization in Philadelphia. |\n| **1816 American Colonization Society founded** | Promoted resettlement to Liberia; Black opinion sharply divided. |\n| **1830 first National Negro Convention (Philadelphia)** | Black leaders organize collective political response. |\n| **1850 Fugitive Slave Act** | Federal commissioners paid more for returns than releases; sparks resistance. |\n| **1857 *Dred Scott v. Sandford*** | Taney rules Black people 'have no rights which the white man was bound to respect.' |\n"
     },
     {
       id: "aasfe3-cases",
@@ -21,24 +21,24 @@ export const aasFreedomEnslavementPart3Data = {
           {
             "question": "Which case BEST illustrates a pattern central to Freedom & Enslavement?",
             "options": [
-              "1780 PA Gradual Abolition Act — First state emancipation law in the Atlantic world.",
-              "An unrelated event from another century.",
-              "A purely fictional event.",
-              "An anecdote with no documentary support."
+              "1780 PA Gradual Abolition Act — First gradual abolition act passed by a state legislature.",
+              "1739 Stono Rebellion — Largest uprising of enslaved people in Britain's mainland colonies.",
+              "1896 *Plessy v. Ferguson* — Court upholds state-mandated segregation on railroad cars.",
+              "1919 Red Summer — White mob violence strikes Black communities in dozens of cities."
             ],
             "correctAnswer": 0,
-            "explanation": "Use historically attested events to illustrate patterns."
+            "explanation": "The 1780 Pennsylvania act falls inside c. 1780–1865 and models the gradual emancipation that defined Northern freedom. The other events are real but belong to the colonial resistance, Jim Crow, and Great Migration units."
           },
           {
             "question": "A comparison of 1780 PA Gradual Abolition Act and 1787 Free African Society is most useful because:",
             "options": [
               "Both cases let students see common patterns and unique local differences in concrete historical detail.",
-              "Both events occurred in identical contexts and produced identical outcomes.",
-              "Comparison is irrelevant to AP scoring.",
-              "Neither event left primary sources for historians."
+              "Both cases show that Pennsylvania freed all enslaved people immediately and then built Black churches for them.",
+              "Both cases show that Philadelphia's free Black community was organized by white Quakers, not by Black leaders.",
+              "Both cases prove that gradual emancipation spread south to Virginia and Maryland soon after 1787."
             ],
             "correctAnswer": 0,
-            "explanation": "AP comparison rewards specific similarities and differences with named cases."
+            "explanation": "Comparison rewards a specific similarity and a specific difference: a state law and a Black-founded mutual-aid society both shaped free Black Philadelphia, through different actors. Pennsylvania's act was gradual, the Free African Society was founded by Black leaders Richard Allen and Absalom Jones, and no Southern state adopted gradual emancipation."
           }
         ]
       }
@@ -46,7 +46,7 @@ export const aasFreedomEnslavementPart3Data = {
     {
       id: "aasfe3-input",
       type: 'input-boxes' as const,
-      content: "**Applied Recall** ✍️\n\n1) Name the event: First state emancipation law in the Atlantic world.…\n\n2) Name the event: Black mutual-aid organization in Philadelphia.…\n\n3) Name the event: Promoted resettlement to Liberia; Black opinion sharply divided.…\n",
+      content: "**Applied Recall** ✍️\n\n1) Name the event: First gradual abolition act passed by a state legislature.…\n\n2) Name the event: Black mutual-aid organization in Philadelphia.…\n\n3) Name the event: Promoted resettlement to Liberia; Black opinion sharply divided.…\n",
       exercise: {
         "boxes": 3,
         "correctAnswers": [
@@ -72,7 +72,7 @@ export const aasFreedomEnslavementPart3Data = {
               "1780 PA Gradual Abolition Act",
               "1787 Free African Society",
               "1816 American Colonization Society founded",
-              "An unrelated 21st-century news story"
+              "1739 Stono Rebellion"
             ]
           },
           {
@@ -81,7 +81,7 @@ export const aasFreedomEnslavementPart3Data = {
               "1787 Free African Society",
               "1780 PA Gradual Abolition Act",
               "1816 American Colonization Society founded",
-              "An unrelated 21st-century news story"
+              "1619 Africans arrive at Point Comfort, Virginia"
             ]
           },
           {
@@ -90,7 +90,7 @@ export const aasFreedomEnslavementPart3Data = {
               "1816 American Colonization Society founded",
               "1780 PA Gradual Abolition Act",
               "1787 Free African Society",
-              "An unrelated 21st-century news story"
+              "1739 Stono Rebellion"
             ]
           }
         ],
@@ -114,24 +114,24 @@ export const aasFreedomEnslavementPart3Data = {
           {
             "question": "Using one specific case from Freedom & Enslavement, which sentence is the BEST AP comparison move?",
             "options": [
-              "Both 1780 PA Gradual Abolition Act and 1787 Free African Society reveal gradual emancipation in the north, but they differ in actors and outcomes.",
-              "Both events were fictional and produced no consequences.",
-              "These events are too old to compare meaningfully.",
-              "Comparison is unimportant in AP rubrics."
+              "Both the 1780 PA Gradual Abolition Act and the 1787 Free African Society reveal Northern emancipation, but they differ in actors and outcomes.",
+              "Both the 1780 PA Gradual Abolition Act and the 1787 Free African Society were early parts of Northern emancipation.",
+              "The 1780 act and the 1787 Free African Society differ mainly because they took place seven years apart.",
+              "Both the 1780 PA Gradual Abolition Act and the 1787 Free African Society show slavery's injustice, so they should be remembered as moral lessons."
             ],
             "correctAnswer": 0,
-            "explanation": "AP comparison combines a specific shared pattern with a specific difference."
+            "explanation": "A full comparison pairs a shared pattern with a meaningful difference, here a legislature acting from above versus Black Philadelphians organizing themselves. A similarity alone, a trivial difference such as date, or a moral judgment does not complete the move."
           },
           {
             "question": "Richard Allen's role in Freedom & Enslavement is best illustrated by which event?",
             "options": [
-              "1780 PA Gradual Abolition Act — First state emancipation law in the Atlantic world.",
-              "An unrelated event in a different century.",
-              "A purely literary publication unconnected to politics.",
-              "An event before the figure was born."
+              "1816 AME Church founded — Black Methodist congregations unite under their first bishop.",
+              "1780 PA Gradual Abolition Act — First gradual abolition act passed by a state legislature.",
+              "1784 African Lodge No. 1 chartered — Boston's Black Freemasons gain recognition from England's Grand Lodge.",
+              "1857 *Dred Scott v. Sandford* — Taney rules that people of African descent could never be U.S. citizens."
             ],
             "correctAnswer": 0,
-            "explanation": "Tie figures to dated events for high-scoring AP arguments."
+            "explanation": "Richard Allen's defining act was founding the African Methodist Episcopal Church in 1816 and becoming its first bishop. The 1780 act was passed by Pennsylvania's legislature, African Lodge No. 1 was Prince Hall's work, and *Dred Scott* came after Allen's death in 1831."
           }
         ]
       }

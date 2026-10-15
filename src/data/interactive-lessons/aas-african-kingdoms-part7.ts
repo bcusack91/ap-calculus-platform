@@ -22,23 +22,23 @@ export const aasAfricanKingdomsPart7Data = {
             "question": "A high-scoring AP response on this unit will:",
             "options": [
               "Combine a clear thesis with named figures, dated events, and at least one primary source.",
-              "Memorize dates with no analysis.",
-              "Use only 21st-century examples to discuss earlier periods.",
-              "Avoid citing sources."
+              "Narrate the unit's events in order, with names, dates, and places, but no thesis.",
+              "Open with a strong moral judgment and support it with general claims about the era.",
+              "Restate the prompt as its thesis and end by summarizing each body paragraph."
             ],
             "correctAnswer": 0,
-            "explanation": "AP rubrics consistently reward specificity, sourcing, and clear analytical structure."
+            "explanation": "High-scoring responses pair a defensible thesis with specific evidence: named figures, dated events, and sourced documents. Narration without a claim, moral judgment without evidence, and a restated prompt all fall short."
           },
           {
             "question": "Which is the BEST one-sentence thesis for an essay on African Kingdoms?",
             "options": [
-              "During c. 700–1600 CE, trans-saharan trade reshaped Black life — visible in c. 300–1076 Ghana Empire and Sundiata Keita's career — even as centralized empires persisted.",
-              "African Kingdoms was important.",
-              "Nothing changed during c. 700–1600 CE.",
-              "African Kingdoms cannot be analyzed."
+              "From 700 to 1600, trans-Saharan trade brought wealth and Islamic learning to Mali and Songhai, though griot traditions endured.",
+              "Between 700 and 1600, trans-Saharan trade made Mali and Songhai wealthy and powerful, which is why historians call them important.",
+              "African Kingdoms was an important era that shaped the history of Africa, its trade, and the wider world in many ways.",
+              "Mansa Musa was the richest and most important ruler in the entire history of Africa before 1600."
             ],
             "correctAnswer": 0,
-            "explanation": "Strong theses combine a defensible claim with specific evidence and acknowledge complexity."
+            "explanation": "A strong thesis makes a defensible claim, ties it to the period, and acknowledges complexity: trade brought wealth and Islamic learning while older Mande traditions endured. A circular claim, a vague claim, or a superlative about one ruler does not."
           }
         ]
       }
@@ -70,27 +70,27 @@ export const aasAfricanKingdomsPart7Data = {
             "label": "Contextualization is best demonstrated by ___",
             "options": [
               "Placing the topic within larger historical processes (e.g., the Atlantic World, post-Reconstruction politics).",
-              "Citing only one date with no context.",
-              "Replacing evidence with opinion.",
-              "Using only 21st-century examples for older periods."
+              "Listing the unit's key events (with dates) in strict chronological order.",
+              "Defining each key term before stating the thesis.",
+              "Explaining how a document's author shaped its message."
             ]
           },
           {
             "label": "Causation is best demonstrated by ___",
             "options": [
               "Identifying a specific cause and its specific consequence with named actors.",
-              "A vague slogan.",
-              "An anecdote without analysis.",
-              "A list of names with no explanation."
+              "Showing that two events happened in the same decade.",
+              "Describing one event in detail with named actors.",
+              "Comparing two similar events across different regions."
             ]
           },
           {
             "label": "CCOT is best demonstrated by ___",
             "options": [
               "Pairing a specific continuity with a specific change, both supported with evidence.",
-              "Choosing only continuity OR only change.",
-              "Avoiding dates.",
-              "Replacing evidence with personal preference."
+              "Tracing a sequence of changes, each supported with evidence.",
+              "Arguing that the period was mostly continuous, with one example.",
+              "Comparing two regions at a single moment in time."
             ]
           }
         ],
@@ -102,7 +102,7 @@ export const aasAfricanKingdomsPart7Data = {
         "hint1": "Contextualization = larger frame.",
         "hint2": "Causation = cause + consequence.",
         "hint3": "CCOT = both halves with evidence.",
-        "explanation": "These are the highest-leverage AP skills tested across MCQ, SAQ, LEQ, and DBQ."
+        "explanation": "These are the highest-leverage AP skills tested across MCQ, SAQ, and DBQ."
       }
     },
     {
@@ -114,24 +114,24 @@ export const aasAfricanKingdomsPart7Data = {
           {
             "question": "You are writing an SAQ on African Kingdoms. The strongest opening sentence is:",
             "options": [
-              "Within c. 700–1600 CE, Sundiata Keita (r. c. 1235–1255) advanced trans-saharan trade — visible in c. 300–1076 Ghana Empire — even as centralized empires continued.",
-              "African Kingdoms happened.",
-              "There is nothing to say about this topic.",
-              "Modern social media debates are the best evidence."
+              "Mansa Musa's 1324 hajj shows how trans-Saharan gold and Islam tied Mali to the wider Muslim world.",
+              "African Kingdoms is an important topic that historians and students have studied closely for a very long time.",
+              "The 1324 hajj made Mansa Musa famous, and it remains one of the best-known royal journeys in all of history.",
+              "In 1235 Sundiata won the Battle of Kirina, and in 1324 Mansa Musa traveled on hajj from Mali to Mecca."
             ],
             "correctAnswer": 0,
-            "explanation": "Strong AP openings combine date, figure, mechanism, event, and continuity in a single sentence."
+            "explanation": "A strong SAQ opening ties a named figure and dated event to a historical claim. A vague claim, a remark about fame, or a list of dates without a claim does not answer the question."
           },
           {
-            "question": "Which closing move strengthens an LEQ on this unit?",
+            "question": "Which closing move strengthens a DBQ essay on this unit?",
             "options": [
               "Synthesizing the topic with Origins of the African Diaspora via a specific shared cause or consequence.",
-              "Repeating the prompt verbatim.",
-              "Adding a moral judgment with no evidence.",
-              "Listing topics not assigned in the prompt."
+              "Restating the thesis in different words and then summarizing each of the body paragraphs in turn.",
+              "Introducing a new document that none of the body paragraphs ever analyzed.",
+              "Ending with a personal reflection on why the topic still matters today."
             ],
             "correctAnswer": 0,
-            "explanation": "AP synthesis moves earn extra rubric points by connecting units."
+            "explanation": "A strong close extends the argument by linking this unit to another through a specific shared cause or consequence. Restating the thesis, adding unanalyzed evidence, or reflecting personally adds no new analysis."
           }
         ]
       }

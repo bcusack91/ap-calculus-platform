@@ -21,24 +21,24 @@ export const aasFreedomEnslavementPart5Data = {
           {
             "question": "Which best describes continuity within Freedom & Enslavement?",
             "options": [
-              "Aspects such as citizenship contested persisted even as other features changed.",
-              "Nothing about this topic ever changed.",
-              "Continuity is irrelevant to AP scoring.",
-              "Only the most recent decade matters."
+              "Contested citizenship persisted even as other features of free Black life changed.",
+              "Gradual emancipation ended slavery in every Northern state by 1790.",
+              "Free Black Americans gained secure citizenship after the Colonization Society formed.",
+              "Free Black institutions disappeared after the Fugitive Slave Act of 1850."
             ],
             "correctAnswer": 0,
-            "explanation": "Continuity = elements that persist across change — a key AP analytical category."
+            "explanation": "Continuity means elements that persist across change: free Black Americans' citizenship stayed contested from the 1780s through *Dred Scott*. Slavery lingered in New York until 1827 and New Jersey into the 1860s, the Colonization Society questioned Black belonging, and Black institutions grew stronger after 1850."
           },
           {
             "question": "Which event marks a decisive change within Freedom & Enslavement?",
             "options": [
-              "1857 *Dred Scott v. Sandford* — Taney rules Black people 'have no rights which the white man was bound to respect.'",
-              "An anecdote with no historical impact.",
-              "A 21st-century news headline unrelated to the period.",
-              "A purely literary aesthetic with no political effect."
+              "1857 *Dred Scott v. Sandford* — Taney writes that Black Americans 'had no rights which the white man was bound to respect.'",
+              "1896 *Plessy v. Ferguson* — Court upholds 'separate but equal' laws, which spread segregation across the South.",
+              "1954 *Brown v. Board* — Unanimous Court rules that segregated public schools are inherently unequal.",
+              "1910–1940 Great Migration — About 1.6 million Black Southerners move to Northern and Western cities."
             ],
             "correctAnswer": 0,
-            "explanation": "Specific dated events anchor change-over-time arguments."
+            "explanation": "*Dred Scott* (1857) denied that people of African descent could be citizens, a decisive change within this unit's period. *Plessy*, *Brown*, and the Great Migration are real turning points but belong to later units."
           }
         ]
       }
@@ -71,8 +71,8 @@ export const aasFreedomEnslavementPart5Data = {
             "options": [
               "Citizenship contested",
               "1857 *Dred Scott v. Sandford*",
-              "An unrelated modern slogan",
-              "A topic from a different course"
+              "1780 PA Gradual Abolition Act",
+              "1816 American Colonization Society founded"
             ]
           },
           {
@@ -80,17 +80,17 @@ export const aasFreedomEnslavementPart5Data = {
             "options": [
               "1857 *Dred Scott v. Sandford*",
               "Citizenship contested",
-              "An anecdote with no date",
-              "An unrelated personal opinion"
+              "Manumission",
+              "Persistence of Black mutual-aid societies"
             ]
           },
           {
             "label": "An AP CCOT response should ___",
             "options": [
               "Identify both continuities and changes with specific evidence",
-              "Pick only one without analysis",
-              "Avoid using dates",
-              "Replace evidence with opinion"
+              "Trace only the changes, in order, with specific evidence",
+              "Argue that continuity outweighed every change in the period",
+              "Describe the period's main events without a central claim"
             ]
           }
         ],
@@ -114,24 +114,24 @@ export const aasFreedomEnslavementPart5Data = {
           {
             "question": "Which CCOT thesis is strongest?",
             "options": [
-              "Although citizenship contested continued, 1857 *Dred Scott v. Sandford* marked a decisive change in Freedom & Enslavement.",
-              "Nothing changed and nothing stayed the same.",
-              "Change is impossible to identify in history.",
-              "AP rubrics do not reward CCOT analysis."
+              "Although contested citizenship continued, the 1857 *Dred Scott* ruling marked a decisive change in Freedom & Enslavement.",
+              "The *Dred Scott* ruling changed everything about free Black life, so that nothing from the earlier era survived anywhere.",
+              "Although Northern laws changed, free Black life mostly stayed the same from 1780 to 1865 in every region.",
+              "Contested citizenship and the *Dred Scott* decision were both important parts of Freedom & Enslavement."
             ],
             "correctAnswer": 0,
-            "explanation": "Strong CCOT theses pair specific continuities with specific changes."
+            "explanation": "A strong CCOT thesis names a specific continuity and a specific change and makes a defensible claim about them. Total change, near-total continuity, and a claim that both 'were important' each miss part of that move."
           },
           {
             "question": "Which evidence move is most valuable in a CCOT response?",
             "options": [
               "Naming a specific dated event AND a continuity within the same paragraph.",
-              "Listing dates without analysis.",
-              "Replacing evidence with a moral judgment.",
-              "Citing only post-2010 news stories."
+              "Listing every major date in the unit in chronological order.",
+              "Describing one change in detail without noting what persisted.",
+              "Quoting a historian's verdict on the period in place of evidence."
             ],
             "correctAnswer": 0,
-            "explanation": "AP CCOT scoring rewards paired specificity."
+            "explanation": "CCOT credit needs both halves anchored in evidence: a dated change and a named continuity. A list of dates, a change with no continuity, or a borrowed verdict replaces that analysis."
           }
         ]
       }
