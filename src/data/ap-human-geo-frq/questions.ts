@@ -82,7 +82,7 @@ const humanGeoFRQs: HumanGeoFRQ[] = [
         'A',
         'Define the Green Revolution.',
         'The rapid diffusion of new agricultural technology (high-yield seed varieties, synthetic fertilizers and pesticides, irrigation, mechanization) to developing countries from the mid-twentieth century, greatly increasing crop yields.',
-        ['high-yield', 'high yield', 'hyv', 'new seed', 'new technolog', 'agricultural technolog', 'increase crop yields', 'increased crop yields', 'increase yields', 'increased yields'],
+        ['high-yield', 'high yield', 'hyv', 'new seed', 'new technolog', 'agricultural technolog', 'increase crop yields', 'increased crop yields', 'increase yields', 'increased yields', 'fertiliz', 'food production', 'increase production', 'increased production'],
         'The Green Revolution was the diffusion of new agricultural technology, especially high-yield varieties of wheat and rice together with synthetic fertilizer, pesticides, and irrigation, to developing countries from the 1940s through the 1970s, which greatly increased grain yields per hectare.'
       ),
       part(
@@ -97,7 +97,7 @@ const humanGeoFRQs: HumanGeoFRQ[] = [
         'Explain how the Green Revolution increased the food supply in South Asia.',
         'Explains the link: HYV seeds plus fertilizer and irrigation raised yields per hectare and allowed double-cropping, so countries such as India and Pakistan produced far more wheat and rice on the same land, reducing famine risk and dependence on food imports.',
         ['more grain per', 'yields per', 'yield per', 'higher yields', 'raised yields', 'increased yields', 'double crop', 'double-crop', 'two crops', 'same amount of land', 'same land', 'self-sufficien', 'less food import'],
-        'High-yield wheat and rice, combined with fertilizer and irrigation, produced several times more grain per hectare than traditional varieties and matured faster, so farmers in Punjab could grow two crops a year on the same land. India went from relying on food imports in the mid-1960s to near self-sufficiency in grain.'
+        'High-yield wheat and rice, combined with fertilizer and irrigation, produced two to three times more grain per hectare than traditional varieties and matured faster, so farmers in Punjab could grow two crops a year on the same land. India went from relying on food imports in the mid-1960s to near self-sufficiency in grain.'
       ),
       part(
         'D',
@@ -117,7 +117,7 @@ const humanGeoFRQs: HumanGeoFRQ[] = [
         'F',
         'Explain the degree to which the Green Revolution supports OR challenges the population theory of Thomas Malthus.',
         'States a degree and explains it: it largely challenges Malthus, because technology made food supply grow faster than population (geometric population growth did not outrun food as he predicted); it partly supports neo-Malthusian concerns because the gains depend on finite water, soil, and fossil-fuel inputs and have slowed.',
-        ['challenge', 'contradict', 'disprove', 'refute', 'proved malthus wrong', 'support', 'neo-malthus', 'neomalthus'],
+        ['contradict', 'disprove', 'refute', 'proved malthus wrong', 'neo-malthus', 'neomalthus', 'faster than population', 'outpace', 'kept pace', 'keep up with', 'kept up with', 'prevented famine', 'avoided famine', 'finite', 'unsustainab'],
         'The Green Revolution largely challenges Malthus. Malthus argued that population grows geometrically while food supply grows only arithmetically, so famine would check population. Instead, new technology increased food production faster than population grew in Mexico, India, and much of Asia. It only partly refutes him, though: neo-Malthusians note that these gains depend on finite groundwater and fertile soil, so the theory still raises concerns for the future.'
       ),
       part(
@@ -183,7 +183,7 @@ const humanGeoFRQs: HumanGeoFRQ[] = [
         'F',
         'Explain ONE way that membership in a supranational organization, such as the European Union, can encourage devolutionary movements within its member states.',
         'Because the EU provides a common market, free trade, a shared currency, and security, a small region can argue it would be economically viable as an independent state inside the EU; EU regional funding and recognition of regional languages also strengthen regional identity.',
-        ['common market', 'single market', 'free trade', 'shared currency', 'euro', 'viable', 'survive', 'regional fund', 'no longer need', 'would still have access'],
+        ['common market', 'single market', 'free trade', 'shared currency', 'eurozone', 'single currency', 'common currency', 'the euro ', 'the euro,', 'the euro.', 'eu member', 'join the eu', 'remain in the eu', 'schengen', 'eu funding', 'viable', 'survive', 'regional fund', 'no longer need', 'would still have access'],
         'The EU gives small regions access to a single market and a shared currency, so a region such as Catalonia or Scotland can argue that it would still have free trade with its neighbors and would not need the larger state to survive economically.'
       ),
       part(
@@ -221,9 +221,9 @@ const humanGeoFRQs: HumanGeoFRQ[] = [
       ),
       part(
         'B',
-        'Using the data, calculate Country A’s rate of natural increase as a percentage.',
+        'Using the data, identify Country A’s rate of natural increase as a percentage.',
         'RNI = (36 − 8) / 10 = 2.8%.',
-        ['2.8%', '2.8 %', '2.8 percent'],
+        ['2.8%', '2.8 %', '2.8 percent', '2.8', '28 per 1,000', '28 per 1000', '28 per thousand'],
         'Rate of natural increase = (CBR − CDR) / 10 = (36 − 8) / 10 = 2.8% per year.'
       ),
       part(
@@ -237,7 +237,7 @@ const humanGeoFRQs: HumanGeoFRQ[] = [
         'D',
         'Describe the shape of the population pyramid for Country A, using the data.',
         'A wide base that narrows quickly toward a small top (a triangle or pyramid shape), because 42% of the population is under 15 and only 3% is 65 or older.',
-        ['wide base', 'broad base', 'wide at the bottom', 'wider at the bottom', 'triangle', 'triangular', 'narrow top', 'narrow at the top', 'expansive'],
+        ['wide base', 'broad base', 'wide at the bottom', 'wider at the bottom', 'triangle', 'triangular', 'narrow top', 'narrow at the top', 'expansive', 'wide at the base', 'large base', 'wider base', 'bottom-heavy', 'bottom heavy', 'narrows'],
         'Country A’s pyramid has a very wide base that narrows quickly to a small top, a triangle shape. The wide base reflects the 42% of people under 15, and the narrow top reflects the 3% who are 65 or older.'
       ),
       part(
@@ -290,14 +290,14 @@ const humanGeoFRQs: HumanGeoFRQ[] = [
         'B',
         'Describe the spatial pattern of maquiladoras shown on the map.',
         'Clustered along the U.S.–Mexico border in border cities paired with U.S. cities, with smaller clusters in a few interior industrial cities and very few in the south.',
-        ['along the border', 'near the border', 'close to the border', 'clustered', 'concentrated', 'border cities', 'northern mexico', 'north of mexico'],
+        ['along the border', 'near the border', 'close to the border', 'clustered', 'concentrated', 'border cities', 'northern mexico', 'north of mexico', 'mexico border', 'u.s. border', 'us border', 'northern border', 'border region', 'border area'],
         'Maquiladoras are clustered in a narrow band along the U.S.–Mexico border, in border cities such as Tijuana and Ciudad Juárez that face U.S. cities. A few smaller clusters lie in interior industrial cities such as Monterrey, and almost none are in southern Mexico.'
       ),
       part(
         'C',
         'Explain ONE reason companies locate maquiladoras in the pattern shown on the map.',
         'Least-cost location: the border sites are close to the U.S. market and to U.S. suppliers, which minimizes transportation costs and time while using lower-wage Mexican labor; border crossings and highways speed shipping (just-in-time delivery).',
-        ['transportation cost', 'transport cost', 'shipping cost', 'close to the united states', 'close to the u.s', 'near the united states', 'near the u.s', 'proximity', 'least cost', 'least-cost', 'just-in-time', 'just in time', 'weber'],
+        ['transportation cost', 'transport cost', 'shipping cost', 'close to the united states', 'close to the u.s', 'near the united states', 'near the u.s', 'proximity', 'least cost', 'least-cost', 'just-in-time', 'just in time', 'weber', 'close to the us', 'near the us', 'u.s. market', 'us market', 'american market', 'american consumers', 'transportation'],
         'Companies locate at the border to minimize transportation costs. Parts can be trucked in from U.S. suppliers and finished goods trucked back to U.S. consumers within hours, while the plant still uses lower-wage Mexican labor. This is a least-cost location, as Weber’s model predicts.'
       ),
       part(
@@ -312,7 +312,7 @@ const humanGeoFRQs: HumanGeoFRQ[] = [
         'Explain ONE positive economic effect of maquiladoras on Mexico.',
         'Jobs and wages for many Mexican workers; foreign direct investment; foreign currency from exports; a multiplier effect that supports local businesses; transfer of skills and technology.',
         ['jobs', 'employment', 'foreign direct investment', 'fdi', 'investment', 'multiplier', 'export earnings', 'foreign currency', 'skills', 'technology transfer'],
-        'Maquiladoras employ hundreds of thousands of Mexican workers, and those wages are spent at local stores, restaurants, and services, a multiplier effect that adds more jobs in border cities.'
+        'Maquiladoras employ more than a million Mexican workers, and those wages are spent at local stores, restaurants, and services, a multiplier effect that adds more jobs in border cities.'
       ),
       part(
         'F',
@@ -325,7 +325,7 @@ const humanGeoFRQs: HumanGeoFRQ[] = [
         'G',
         'Explain the degree to which free-trade agreements such as NAFTA (1994) and its replacement, the USMCA (2020), influenced the growth of maquiladoras.',
         'States a degree and explains it: to a large degree, because removing tariffs among the U.S., Mexico, and Canada made Mexican assembly for the U.S. market cheaper and more secure, and the number of maquiladoras and their employment grew rapidly after 1994; but the program began earlier (1965) and growth also depended on wages, the peso, and competition from China.',
-        ['tariff', 'free trade', 'duty-free', 'trade barrier', '1965', 'border industrialization', 'grew rapidly', 'grew quickly', 'increased rapidly', 'large degree', 'great degree', 'significant degree'],
+        ['tariff', 'trade barrier', '1965', 'border industrialization', 'grew rapidly', 'grew quickly', 'increased rapidly', 'large degree', 'great degree', 'significant degree'],
         'NAFTA influenced maquiladora growth to a large degree. By removing most tariffs among the United States, Mexico, and Canada starting in 1994, it made assembling goods in Mexico for sale in the U.S. cheaper and more predictable, and maquiladora employment grew rapidly through the late 1990s. It was not the only cause, though: the program began in 1965, and growth later slowed when companies moved assembly to lower-wage China.'
       ),
     ],
@@ -344,7 +344,7 @@ const humanGeoFRQs: HumanGeoFRQ[] = [
       '**Stimulus 2 (image, described).** A photograph from São Paulo, Brazil, shows a dense neighborhood of self-built brick and concrete homes, many with unfinished upper floors, packed closely together with narrow lanes. Directly beside it, separated by a wall, stands a high-rise luxury apartment tower with a private swimming pool on each balcony.\n\n' +
       'Use both stimuli to answer parts A through G.',
     dataTableHtml:
-      '<table><tr><th>Region</th><th>Urban population, 1970 (%)</th><th>Urban population, 2020 (%)</th></tr><tr><td>Northern America</td><td>74</td><td>83</td></tr><tr><td>Europe</td><td>63</td><td>75</td></tr><tr><td>Latin America and the Caribbean</td><td>57</td><td>81</td></tr><tr><td>Asia</td><td>24</td><td>51</td></tr><tr><td>Africa</td><td>24</td><td>44</td></tr><tr><td>World</td><td>37</td><td>56</td></tr></table>',
+      '<table><tr><th>Region</th><th>Urban population, 1970 (%)</th><th>Urban population, 2020 (%)</th></tr><tr><td>Northern America</td><td>74</td><td>83</td></tr><tr><td>Europe</td><td>63</td><td>75</td></tr><tr><td>Latin America and the Caribbean</td><td>57</td><td>81</td></tr><tr><td>Asia</td><td>24</td><td>51</td></tr><tr><td>Africa</td><td>23</td><td>43</td></tr><tr><td>World</td><td>37</td><td>56</td></tr></table>',
     totalPoints: 7,
     timeRecommendation: '~25 minutes',
     calculatorAllowed: false,
@@ -361,7 +361,7 @@ const humanGeoFRQs: HumanGeoFRQ[] = [
         'Using Stimulus 1, compare the urbanization of more-developed regions (Northern America and Europe) with that of less-developed regions (Asia and Africa) from 1970 to 2020.',
         'More-developed regions were already mostly urban in 1970 and urbanized slowly (9 to 12 points); Asia and Africa started much less urban but urbanized faster (about 20 to 27 points), though they remain less urban.',
         ['already', 'faster', 'more rapidly', 'more quickly', 'slower', 'more slowly', 'started lower', 'started higher', 'less urban', 'more urban'],
-        'Northern America and Europe were already mostly urban in 1970 (74% and 63%) and gained only 9 to 12 percentage points by 2020. Asia and Africa started at only 24% urban but urbanized much faster, gaining 27 and 20 points, although both are still less urban than the more-developed regions.'
+        'Northern America and Europe were already mostly urban in 1970 (74% and 63%) and gained only 9 to 12 percentage points by 2020. Asia started at only 24% urban and Africa at 23%, but both urbanized much faster, gaining 27 and 20 points, although both are still less urban than the more-developed regions.'
       ),
       part(
         'C',
@@ -395,7 +395,7 @@ const humanGeoFRQs: HumanGeoFRQ[] = [
         'G',
         'Explain the degree to which upgrading programs, which add roads, water, sewers, and other services to existing informal settlements, address the challenges of these settlements.',
         'States a degree and explains it: to a moderate or large degree, upgrading brings water, sanitation, transport, and legal title to residents without displacing them (e.g., Rio de Janeiro’s Favela-Bairro program, Medellín’s cable cars); but it is limited because it is costly, does not address the poverty, inequality, and housing shortage that cause new settlements, and can raise rents and displace residents.',
-        ['favela-bairro', 'favela bairro', 'medell', 'cable car', 'title', 'without displacing', 'without relocating', 'stay in their', 'root cause', 'poverty', 'expensive', 'costly', 'displace', 'gentrif', 'limited degree', 'moderate degree', 'large degree', 'great degree'],
+        ['favela-bairro', 'favela bairro', 'medell', 'cable car', 'title', 'without displacing', 'without relocating', 'stay in their', 'root cause', 'does not fix poverty', 'expensive', 'costly', 'displace', 'gentrif', 'limited degree', 'moderate degree', 'large degree', 'great degree'],
         'Upgrading addresses these challenges to a moderate degree. Programs such as Rio de Janeiro’s Favela-Bairro brought paved streets, water, and sewers to existing favelas, improving health and safety while letting residents keep their homes and social networks. However, upgrading is expensive and does not fix the low wages, inequality, and housing shortage that create informal settlements in the first place, so new ones keep forming.'
       ),
     ],
@@ -427,23 +427,23 @@ const humanGeoFRQs: HumanGeoFRQ[] = [
       part(
         'B',
         'Explain the historical process that produced the pattern shown in Stimulus 1.',
-        'French colonization: France settled New France along the St. Lawrence River (Quebec City, 1608) and Acadia in the Maritimes, so French spread by relocation diffusion; after Britain took control (1763), English-speaking settlers dominated the rest of Canada while French persisted in its original core.',
+        'French colonization: France settled New France along the St. Lawrence River (Quebec City, 1608) and Acadia in the Maritimes, so French spread by relocation diffusion; after Britain took Acadia (1713) and the rest of New France (1763), English-speaking settlers dominated the rest of Canada while French persisted in its original core.',
         ['colon', 'new france', 'french settlers', 'settled by the french', 'france settled', 'acadia', 'relocation diffusion', 'st. lawrence', 'saint lawrence', '1763', '1608'],
-        'France colonized New France along the St. Lawrence River, founding Quebec City in 1608, and settled Acadia in the Maritimes. French settlers carried their language there by relocation diffusion. After Britain gained control in 1763, most later settlers in the rest of Canada spoke English, so French remained concentrated in its original colonial core.'
+        'France colonized New France along the St. Lawrence River, founding Quebec City in 1608, and settled Acadia in the Maritimes. French settlers carried their language there by relocation diffusion. After Britain took Acadia (1713) and the rest of New France (1763), most later settlers in the rest of Canada spoke English, so French remained concentrated in its original colonial core.'
       ),
       part(
         'C',
         'Using Stimulus 2, explain how the sign is an example of the cultural landscape.',
         'The cultural landscape is the visible human imprint on the land; the French-only sign shows how the dominant language and the province’s language laws are expressed in public space, marking the area as francophone.',
-        ['cultural landscape', 'visible', 'imprint', 'human modification', 'built environment', 'public space', 'mark', 'identity'],
+        ['cultural landscape', 'visible', 'imprint', 'human modification', 'built environment', 'public space', 'marks the', 'marking', 'identity'],
         'The cultural landscape is the visible imprint that a culture leaves on a place. A French-only stop sign shows that French is the dominant public language in Quebec and that the province’s language laws shape what people see on the street, marking the landscape as francophone.'
       ),
       part(
         'D',
         'Explain why the provincial government of Quebec passed language laws, such as the Charter of the French Language (Bill 101, 1977), that produced landscapes like Stimulus 2.',
-        'To preserve French culture and identity against assimilation into the English-speaking majority of Canada and North America: the charter made French the official language of Quebec and required French in government, business, signs, and schooling.',
+        'To preserve French culture and identity against assimilation into the English-speaking majority of Canada and North America: the charter confirmed French as the sole official language of Quebec and required French in government, business, signs, and schooling.',
         ['preserve', 'protect', 'assimilat', 'english-speaking majority', 'surrounded by english', 'dominance of english', 'identity', 'survival'],
-        'Quebec’s francophones are a small minority in an English-speaking North America. To protect French from assimilation, the Charter of the French Language made French the official language of Quebec and required it in government, business, public signs, and most schooling.'
+        'Quebec’s francophones are a small minority in an English-speaking North America. To protect French from assimilation, the Charter of the French Language confirmed French as the sole official language of Quebec and required it in government, business, public signs, and most schooling.'
       ),
       part(
         'E',
@@ -456,7 +456,7 @@ const humanGeoFRQs: HumanGeoFRQ[] = [
         'F',
         'Explain the degree to which language differences have acted as a centrifugal force in Canada.',
         'States a degree and explains it: to a significant degree, because language-based Quebec nationalism produced independence referendums in 1980 and 1995 (the 1995 “No” side won with about 50.6%); but limited, because both failed and federal bilingualism (Official Languages Act, 1969) and provincial autonomy have kept Quebec in Canada.',
-        ['referendum', '1980', '1995', 'sovereignty', 'separatis', 'independence', 'parti québécois', 'parti quebecois', 'bloc'],
+        ['referendum', '1980', '1995', 'sovereignty', 'separatis', 'independence', 'parti québécois', 'parti quebecois', 'bloc', 'secession', 'secede', 'sovereign', 'nationalis', 'bilingual'],
         'Language has been a strong centrifugal force, but not one that broke the state. French-speaking nationalism led Quebec to hold independence referendums in 1980 and 1995, and the 1995 vote failed by roughly one percentage point. Both failed, however, and Canada has accommodated Quebec through official bilingualism and wide provincial powers, so the country remains united.'
       ),
       part(
