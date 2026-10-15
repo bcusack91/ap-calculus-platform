@@ -347,13 +347,13 @@ export const registryChunk1: Record<string, InteractiveTopicConfig> = {
   'cell-communication-signaling': {
     completionDestination: 'competitive',
     parts: [
-      { title: 'Cell Signaling Overview', loader: () => import('./bio-cell-communication-signaling-part1').then(m => m.bioCellCommPart1Data) },
-      { title: 'Signal Transduction', loader: () => import('./bio-cell-communication-signaling-part2').then(m => m.bioCellCommPart2Data) },
-      { title: 'Second Messengers', loader: () => import('./bio-cell-communication-signaling-part3').then(m => m.bioCellCommPart3Data) },
-      { title: 'Response to Signals', loader: () => import('./bio-cell-communication-signaling-part4').then(m => m.bioCellCommPart4Data) },
-      { title: 'Feedback Loops', loader: () => import('./bio-cell-communication-signaling-part5').then(m => m.bioCellCommPart5Data) },
+      { title: 'Signal Transduction Overview', loader: () => import('./bio-cell-communication-signaling-part1').then(m => m.bioCellCommPart1Data) },
+      { title: 'Types of Signaling', loader: () => import('./bio-cell-communication-signaling-part2').then(m => m.bioCellCommPart2Data) },
+      { title: 'Signal Reception', loader: () => import('./bio-cell-communication-signaling-part3').then(m => m.bioCellCommPart3Data) },
+      { title: 'Signal Transduction Pathways', loader: () => import('./bio-cell-communication-signaling-part4').then(m => m.bioCellCommPart4Data) },
+      { title: 'Cellular Responses', loader: () => import('./bio-cell-communication-signaling-part5').then(m => m.bioCellCommPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./bio-cell-communication-signaling-part6').then(m => m.bioCellCommPart6Data) },
-      { title: 'AP Review', loader: () => import('./bio-cell-communication-signaling-part7').then(m => m.bioCellCommPart7Data) },
+      { title: 'Synthesis & AP Review', loader: () => import('./bio-cell-communication-signaling-part7').then(m => m.bioCellCommPart7Data) },
     ],
   },
   'cell-cycle-mitosis': {
@@ -386,10 +386,10 @@ export const registryChunk1: Record<string, InteractiveTopicConfig> = {
       { title: 'Meiosis Overview', loader: () => import('./bio-meiosis-genetic-diversity-part1').then(m => m.bioMeiosisPart1Data) },
       { title: 'Meiosis I', loader: () => import('./bio-meiosis-genetic-diversity-part2').then(m => m.bioMeiosisPart2Data) },
       { title: 'Meiosis II', loader: () => import('./bio-meiosis-genetic-diversity-part3').then(m => m.bioMeiosisPart3Data) },
-      { title: 'Crossing Over', loader: () => import('./bio-meiosis-genetic-diversity-part4').then(m => m.bioMeiosisPart4Data) },
-      { title: 'Independent Assortment', loader: () => import('./bio-meiosis-genetic-diversity-part5').then(m => m.bioMeiosisPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./bio-meiosis-genetic-diversity-part6').then(m => m.bioMeiosisPart6Data) },
-      { title: 'AP Review', loader: () => import('./bio-meiosis-genetic-diversity-part7').then(m => m.bioMeiosisPart7Data) },
+      { title: 'Crossing Over & Recombination', loader: () => import('./bio-meiosis-genetic-diversity-part4').then(m => m.bioMeiosisPart4Data) },
+      { title: 'Sources of Genetic Variation', loader: () => import('./bio-meiosis-genetic-diversity-part5').then(m => m.bioMeiosisPart5Data) },
+      { title: 'Meiosis: Problem-Solving Workshop', loader: () => import('./bio-meiosis-genetic-diversity-part6').then(m => m.bioMeiosisPart6Data) },
+      { title: 'Meiosis: Synthesis & AP Review', loader: () => import('./bio-meiosis-genetic-diversity-part7').then(m => m.bioMeiosisPart7Data) },
     ],
   },
   'mendelian-genetics': {
@@ -407,13 +407,13 @@ export const registryChunk1: Record<string, InteractiveTopicConfig> = {
   'non-mendelian-genetics': {
     completionDestination: 'competitive',
     parts: [
-      { title: 'Incomplete Dominance', loader: () => import('./bio-non-mendelian-genetics-part1').then(m => m.bioNonMendelianPart1Data) },
-      { title: 'Codominance', loader: () => import('./bio-non-mendelian-genetics-part2').then(m => m.bioNonMendelianPart2Data) },
-      { title: 'Multiple Alleles', loader: () => import('./bio-non-mendelian-genetics-part3').then(m => m.bioNonMendelianPart3Data) },
-      { title: 'Polygenic Traits', loader: () => import('./bio-non-mendelian-genetics-part4').then(m => m.bioNonMendelianPart4Data) },
-      { title: 'Epistasis', loader: () => import('./bio-non-mendelian-genetics-part5').then(m => m.bioNonMendelianPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./bio-non-mendelian-genetics-part6').then(m => m.bioNonMendelianPart6Data) },
-      { title: 'AP Review', loader: () => import('./bio-non-mendelian-genetics-part7').then(m => m.bioNonMendelianPart7Data) },
+      { title: 'Incomplete & Codominance', loader: () => import('./bio-non-mendelian-genetics-part1').then(m => m.bioNonMendelianPart1Data) },
+      { title: 'Multiple Alleles & Polygenic', loader: () => import('./bio-non-mendelian-genetics-part2').then(m => m.bioNonMendelianPart2Data) },
+      { title: 'Epistasis', loader: () => import('./bio-non-mendelian-genetics-part3').then(m => m.bioNonMendelianPart3Data) },
+      { title: 'Sex-Linked Traits', loader: () => import('./bio-non-mendelian-genetics-part4').then(m => m.bioNonMendelianPart4Data) },
+      { title: 'Environmental Effects on Phenotype', loader: () => import('./bio-non-mendelian-genetics-part5').then(m => m.bioNonMendelianPart5Data) },
+      { title: 'Non-Mendelian Genetics: Problem-Solving Workshop', loader: () => import('./bio-non-mendelian-genetics-part6').then(m => m.bioNonMendelianPart6Data) },
+      { title: 'Non-Mendelian Genetics: Synthesis & AP Review', loader: () => import('./bio-non-mendelian-genetics-part7').then(m => m.bioNonMendelianPart7Data) },
     ],
   },
   'dna-replication': {
@@ -431,13 +431,13 @@ export const registryChunk1: Record<string, InteractiveTopicConfig> = {
   'transcription-translation': {
     completionDestination: 'competitive',
     parts: [
-      { title: 'Gene Expression Overview', loader: () => import('./bio-transcription-translation-part1').then(m => m.bioTranscriptionPart1Data) },
+      { title: 'Central Dogma', loader: () => import('./bio-transcription-translation-part1').then(m => m.bioTranscriptionPart1Data) },
       { title: 'Transcription', loader: () => import('./bio-transcription-translation-part2').then(m => m.bioTranscriptionPart2Data) },
       { title: 'RNA Processing', loader: () => import('./bio-transcription-translation-part3').then(m => m.bioTranscriptionPart3Data) },
       { title: 'Translation', loader: () => import('./bio-transcription-translation-part4').then(m => m.bioTranscriptionPart4Data) },
       { title: 'Post-Translational Modification', loader: () => import('./bio-transcription-translation-part5').then(m => m.bioTranscriptionPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./bio-transcription-translation-part6').then(m => m.bioTranscriptionPart6Data) },
-      { title: 'AP Review', loader: () => import('./bio-transcription-translation-part7').then(m => m.bioTranscriptionPart7Data) },
+      { title: 'Synthesis & AP Review', loader: () => import('./bio-transcription-translation-part7').then(m => m.bioTranscriptionPart7Data) },
     ],
   },
   'gene-regulation': {
