@@ -50,10 +50,10 @@ export const psychThinkingPart7Data = {
           {
             question: 'Which statement BEST captures the central insight from Tversky and Kahneman\'s research program on heuristics and biases?',
             options: [
-              'People are fundamentally irrational and cannot be trusted to make good decisions',
-              'Heuristics are mental shortcuts that are usually effective but lead to PREDICTABLE, SYSTEMATIC errors in specific situations',
-              'Algorithms are always superior to heuristics for decision-making',
-              'Cognitive biases only affect people with lower education levels'
+              'People decide at random, so their judgment errors follow no predictable pattern at all',
+              'Heuristics are efficient shortcuts that produce predictable, systematic errors in certain situations',
+              'Algorithms beat heuristics in every situation, so careful reasoning removes judgment errors',
+              'Cognitive biases affect mainly people with less education and fade with more schooling'
             ],
             correctAnswer: 1,
             explanation: 'Tversky and Kahneman\'s key insight is that human thinking errors are NOT random — they are SYSTEMATIC and PREDICTABLE. Heuristics evolved because they\'re efficient and usually correct. But in specific situations, they create reliable biases. This is why we can study and predict these errors. It\'s NOT that people are "stupid" or "irrational" — it\'s that our cognitive shortcuts have specific, identifiable failure modes. Understanding these patterns is the foundation of behavioral economics.'
@@ -61,10 +61,10 @@ export const psychThinkingPart7Data = {
           {
             question: 'A student says: "Functional fixedness and mental set are the same thing because both involve being stuck." How should you CORRECT this statement?',
             options: [
-              'They ARE the same thing — both are forms of fixation',
-              'Functional fixedness is being stuck on an OBJECT\'S typical function; mental set is being stuck on a previously successful STRATEGY. Same category (fixation), different targets',
-              'Functional fixedness only applies to physical objects; mental set only applies to abstract problems',
-              'Mental set is more severe than functional fixedness'
+              'They are the same: both are forms of fixation, so the two terms can be used interchangeably',
+              'They differ in target: functional fixedness fixes on an object\'s usual use, mental set on a past strategy',
+              'They differ in domain: functional fixedness applies to physical objects, mental set to abstract problems',
+              'They differ in severity: mental set is a stronger and longer-lasting fixation than functional fixedness'
             ],
             correctAnswer: 1,
             explanation: 'Both ARE forms of fixation (being "stuck"), but they target different things. Functional fixedness: you can\'t see that a BOX could be a SHELF (object → new function). Mental set: you keep using ALGEBRA when a GRAPH would be faster (strategy → new strategy). The student is right that they\'re related, but wrong that they\'re identical. AP exam: if the question mentions an OBJECT, think functional fixedness. If it mentions an APPROACH/METHOD, think mental set.'
@@ -129,10 +129,10 @@ export const psychThinkingPart7Data = {
       exercise: {
         dropdowns: [
           { label: 'Tversky & Kahneman (1973) — Letter K study', options: ['Availability heuristic', 'Representativeness heuristic', 'Anchoring bias', 'Framing effect'] },
-          { label: 'Tversky & Kahneman (1983) — Linda Problem', options: ['Representativeness heuristic (conjunction fallacy)', 'Availability heuristic', 'Confirmation bias', 'Sunk cost fallacy'] },
+          { label: 'Tversky & Kahneman (1983) — Linda Problem', options: ['Representativeness heuristic', 'Availability heuristic', 'Confirmation bias', 'Sunk cost fallacy'] },
           { label: 'Duncker (1945) — Candle Problem', options: ['Functional fixedness', 'Mental set', 'Insight', 'Anchoring bias'] }
         ],
-        correctAnswers: ['Availability heuristic', 'Representativeness heuristic (conjunction fallacy)', 'Functional fixedness'],
+        correctAnswers: ['Availability heuristic', 'Representativeness heuristic', 'Functional fixedness'],
         hint1: 'Is the population of K-words larger at the start or third position? People judge by how easily examples come to mind.',
         hint2: 'Linda "seems like" a feminist bank teller more than just a bank teller — prototype matching overrides probability.',
         hint3: 'Can\'t see the tack box as a candle shelf — fixated on the object\'s typical function.',
@@ -177,9 +177,9 @@ export const psychThinkingPart7Data = {
           {
             question: 'A researcher presents participants with two medical treatments. Treatment A: "This treatment saves 400 out of 600 patients." Treatment B: "This treatment results in the death of 200 out of 600 patients." Most participants prefer Treatment A, even though the outcomes are identical. This finding MOST supports:',
             options: [
-              'Loss aversion — participants want to avoid losing patients',
-              'The availability heuristic — saved patients are easier to recall',
-              'The framing effect — identical outcomes are perceived differently based on how they\'re described (gains vs. losses)',
+              'Loss aversion — participants weigh the pain of losing patients more than the joy of saving them',
+              'The availability heuristic — saved patients are easier to picture and recall than deaths',
+              'The framing effect — the same result is judged differently depending on wording',
               'Overconfidence — participants overestimate Treatment A\'s success'
             ],
             correctAnswer: 2,
@@ -188,13 +188,13 @@ export const psychThinkingPart7Data = {
           {
             question: 'Which of the following scenarios BEST demonstrates the combined effect of the representativeness heuristic AND base rate neglect?',
             options: [
-              'A person fears flying more after watching a movie about a plane crash',
-              'A person describes someone as "quiet, organized, and detail-oriented" and assumes they are an accountant rather than a teacher, despite teachers outnumbering accountants 10 to 1',
-              'A person continues investing in a failing stock because they\'ve already invested heavily',
-              'A person estimates the population of a city too high because they were given a high anchor number'
+              'Fearing flying more after watching a vivid movie about a plane crash, despite safety statistics',
+              'Judging someone "quiet and detail-oriented" to be an accountant, though teachers far outnumber accountants',
+              'Holding on to a failing stock because a large amount has already been invested in it',
+              'Overestimating a city\'s population after first being asked whether it exceeds a very high number'
             ],
             correctAnswer: 1,
-            explanation: 'This combines BOTH errors: (1) Representativeness heuristic — the description ("quiet, organized, detail-oriented") matches the PROTOTYPE of an accountant, leading to a probability judgment based on similarity. (2) Base rate neglect — teachers outnumber accountants 10:1, so statistically, even a "quiet, organized" person is more likely to be a teacher. But the vivid description overrides this statistical fact. This is exactly the structure of the original "Tom W." and "Linda" problems by Tversky and Kahneman. Fear of flying after a crash movie = availability. Holding the failing stock = sunk cost. The high city estimate = anchoring.'
+            explanation: 'This combines BOTH errors: (1) Representativeness heuristic — the description ("quiet and detail-oriented") matches the PROTOTYPE of an accountant, leading to a probability judgment based on similarity. (2) Base rate neglect — teachers far outnumber accountants, so statistically, even a quiet, detail-oriented person is more likely to be a teacher. But the vivid description overrides this statistical fact. This is exactly the structure of the original "Tom W." and "Linda" problems by Tversky and Kahneman. Fear of flying after a crash movie = availability. Holding the failing stock = sunk cost. The high city estimate = anchoring.'
           }
         ]
       }

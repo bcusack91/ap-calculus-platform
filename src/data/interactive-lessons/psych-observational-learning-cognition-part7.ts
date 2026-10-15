@@ -47,9 +47,9 @@ This final part integrates everything from the unit into one comprehensive revie
           {
             question: 'Which researcher\'s work is BEST described as bridging behaviorism and cognitive psychology?',
             options: [
-              'Pavlov — his classical conditioning involved cognitive associations',
-              'Skinner — his operant conditioning acknowledged internal states',
-              'Bandura — his social learning theory combined behavioral and cognitive elements',
+              'Pavlov — his classical conditioning work emphasized cognitive expectations',
+              'Skinner — his operant conditioning research acknowledged internal mental states',
+              'Bandura — his social learning theory merged conditioning with mental processes',
               'Watson — his Little Albert study showed cognitive processing of fear'
             ],
             correctAnswer: 2,
@@ -59,8 +59,8 @@ This final part integrates everything from the unit into one comprehensive revie
             question: 'Garcia & Koelling\'s taste aversion research challenged classical conditioning because it demonstrated that:',
             options: [
               'Not all neutral stimuli can become conditioned stimuli equally easily',
-              'Conditioning always requires multiple pairings of CS and UCS',
-              'Only food-related stimuli can be classically conditioned',
+              'Conditioning always requires many repeated pairings of the CS and the UCS',
+              'Only food-related stimuli can ever become classically conditioned stimuli',
               'Extinction cannot occur with taste-related conditioned responses'
             ],
             correctAnswer: 0,
@@ -191,9 +191,9 @@ When an FRQ asks you to "explain how [concept] relates to the scenario":
           {
             question: 'A therapist treats a client\'s spider phobia by gradually exposing her to spiders while she practices deep breathing and relaxation. After several sessions, the client can hold a spider without anxiety. This therapy is BEST explained by:',
             options: [
-              'Operant conditioning — the client is reinforced for staying calm',
+              'Operant conditioning — the client is reinforced each time she stays calm',
               'Observational learning — the client watches the therapist remain calm',
-              'Classical conditioning — specifically counterconditioning/systematic desensitization',
+              'Classical conditioning — counterconditioning through systematic desensitization',
               'Insight learning — the client suddenly realizes spiders are not dangerous'
             ],
             correctAnswer: 2,
@@ -202,10 +202,10 @@ When an FRQ asks you to "explain how [concept] relates to the scenario":
           {
             question: 'Which of the following scenarios BEST illustrates the distinction between learning and performance that Bandura emphasized?',
             options: [
-              'A student studies hard and gets an A on the test',
+              'A student studies hard for a test and then earns an A on it',
               'A child watches a violent TV show and immediately hits a sibling',
               'A child observes aggression but only imitates it when told there will be a reward',
-              'A rat learns to press a lever faster when given food pellets more frequently'
+              'A rat presses a lever faster and faster as it receives food pellets more frequently'
             ],
             correctAnswer: 2,
             explanation: 'Bandura\'s 1965 follow-up study showed that ALL children LEARNED the aggressive behavior equally (learning), but only those who expected a reward PERFORMED it (performance). The child who observed aggression but only imitated it when told there would be a reward demonstrates this distinction perfectly — the learning occurred during observation, but performance depended on expected consequences (motivation component of ARRM). This is one of the most important concepts in observational learning theory.'

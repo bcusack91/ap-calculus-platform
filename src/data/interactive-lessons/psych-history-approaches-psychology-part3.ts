@@ -108,7 +108,7 @@ Research question: Does caffeine improve test performance?
           },
           {
             label: '___ assignment ensures groups are equivalent',
-            options: ['Self', 'Random', 'Alphabetical', 'Age-based']
+            options: ['Self-selected', 'Random', 'Convenience', 'Volunteer']
           },
           {
             label: 'The variable that is measured in an experiment is the ___',
@@ -152,10 +152,10 @@ Research question: Does caffeine improve test performance?
           {
             question: 'A study finds that students who sleep more have higher GPAs. A newspaper headline reads: "More sleep leads to better grades!" What is wrong with this headline?',
             options: [
-              'It implies causation from a correlational finding — a third variable like motivation could explain both',
-              'The study used too large a sample size',
-              'Sleep and grades cannot be correlated',
-              'The headline correctly reports the finding'
+              'It implies causation from a correlational finding; a third variable such as motivation could explain both',
+              'It overstates the result, since a sample this large exaggerates small differences in GPA',
+              'It reverses the direction, since the study shows that higher grades lead to more sleep',
+              'Nothing; a link between sleep and grades shows that sleep improves academic performance'
             ],
             correctAnswer: 0,
             explanation: 'This is a classic correlation ≠ causation error. The study only found an association. A third variable (e.g., motivation or time management) could cause BOTH more sleep and higher grades. Without random assignment and manipulation, causation cannot be claimed.'
@@ -163,10 +163,10 @@ Research question: Does caffeine improve test performance?
           {
             question: 'A researcher wants to study the effects of caffeine on reaction time. She has 50 participants drink either coffee or water, then measures their reaction time on a computer task. However, she lets participants choose which group they want to be in. What is the biggest problem with this design?',
             options: [
-              'No random assignment — participants who choose coffee may differ systematically from those who choose water',
-              'The sample size is too small',
-              'She should have used a survey instead',
-              'Reaction time cannot be measured on a computer'
+              'No random assignment — people who pick coffee may differ from those who pick water',
+              'Too small a sample — 50 coffee and water drinkers cannot reveal any effect on reaction time',
+              'Wrong method — a survey of caffeine habits would show cause and effect more directly',
+              'No valid measure — reaction time cannot be measured reliably on a computer task'
             ],
             correctAnswer: 0,
             explanation: 'Without random assignment, the groups may differ in ways besides caffeine intake (e.g., regular coffee drinkers may choose coffee, and they may already have faster reaction times). This creates a confounding variable that makes causal conclusions impossible.'

@@ -45,10 +45,10 @@ We categorize new items by comparing them to our PROTOTYPE — the most typical 
           {
             question: 'When asked to name a bird, most Americans say "robin" before "penguin," even though both are equally valid birds. This BEST illustrates:',
             options: [
-              'A script — a schema for a sequence of events',
-              'A prototype — robin is the most typical example of the "bird" concept',
-              'An algorithm — a systematic procedure for categorization',
-              'Functional fixedness — inability to see new uses for an object'
+              'A script — a schema for the usual order of events in a familiar setting',
+              'A prototype — the most typical example of the "bird" concept',
+              'An algorithm — a step-by-step procedure that guarantees correct categorization',
+              'Functional fixedness — seeing an object in only one role'
             ],
             correctAnswer: 1,
             explanation: 'Robin is the PROTOTYPE of the bird category for most Americans — it\'s the most typical example that comes to mind. Prototypes are central, typical members of a category that serve as a reference point. We categorize faster when items match our prototype (robin → "bird" faster than penguin → "bird"). This is Eleanor Rosch\'s prototype theory.'
@@ -56,10 +56,10 @@ We categorize new items by comparing them to our PROTOTYPE — the most typical 
           {
             question: 'A child who visits a new restaurant and automatically expects to be seated, given a menu, order food, eat, and then pay is using a:',
             options: [
-              'Prototype — the best example of a restaurant',
-              'Concept — a mental category for restaurants',
-              'Script — a schema for the expected sequence of events in a familiar situation',
-              'Heuristic — a mental shortcut for making decisions'
+              'Prototype — the restaurant that best represents the whole category',
+              'Concept — a mental category grouping restaurants by shared features',
+              'Script — a schema for the usual sequence of events',
+              'Heuristic — a mental shortcut for making fast judgments under uncertainty'
             ],
             correctAnswer: 2,
             explanation: 'A script is a type of schema that organizes our knowledge about the SEQUENCE of events in a familiar situation. The "restaurant script" is the classic example: you know to wait to be seated, look at a menu, order from a server, eat, and pay — even in a restaurant you\'ve never visited before. Scripts help us navigate familiar situations efficiently, but they can also cause errors when a situation doesn\'t follow the expected script.'
@@ -186,10 +186,10 @@ Schemas are mental frameworks that organize and interpret information. They are 
           {
             question: 'When reading a story about a birthday party, readers automatically assume there was cake, presents, and singing — even though the story never mentioned these details. This gap-filling is BEST explained by:',
             options: [
-              'The availability heuristic — cake is easy to recall',
-              'Schema-driven processing — the "birthday party" schema fills in expected details',
-              'Confirmation bias — readers seek evidence consistent with their beliefs',
-              'The framing effect — the word "party" frames expectations'
+              'The availability heuristic — cake and presents are the details easiest to recall',
+              'Schema-driven processing — the party schema fills in expected details',
+              'Confirmation bias — readers look only for details that support what they already believe',
+              'The framing effect — the word "party" frames how readers interpret the story'
             ],
             correctAnswer: 1,
             explanation: 'Schemas automatically fill in gaps with expected information. The "birthday party" schema includes cake, presents, singing, guests, and decorations. When reading, we don\'t just process what\'s stated — our schemas add expected details. This is adaptive (efficient processing), but it can cause false memories — people may later "remember" reading about cake even though it was never mentioned. This connects directly to Bartlett\'s finding that schemas distort memory.'

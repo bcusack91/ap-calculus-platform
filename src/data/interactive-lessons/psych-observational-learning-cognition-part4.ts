@@ -37,9 +37,9 @@ You're stuck on a difficult puzzle for 30 minutes. Suddenly, while getting a gla
             question: 'Köhler\'s chimpanzee Sultan was in a cage with bananas hanging from the ceiling and boxes on the floor. After pausing and looking around, Sultan suddenly stacked the boxes and reached the bananas. This demonstrates:',
             options: [
               'Trial-and-error learning — Sultan tried random solutions until one worked',
-              'Insight learning — Sultan suddenly perceived the relationship between boxes and bananas',
-              'Operant conditioning — Sultan was reinforced for stacking boxes',
-              'Classical conditioning — boxes became associated with food'
+              'Insight learning — Sultan grasped the problem\'s structure all at once',
+              'Operant conditioning — Sultan was reinforced each time he stacked boxes',
+              'Classical conditioning — the boxes became associated with getting food'
             ],
             correctAnswer: 1,
             explanation: 'Sultan didn\'t randomly try solutions — he paused, surveyed the situation, and then acted decisively and correctly on the first attempt. This sudden reorganization of the problem (seeing boxes as a tool to reach bananas) is the hallmark of insight learning. Trial-and-error would show gradual improvement, not a sudden solution.'
@@ -117,10 +117,10 @@ This demonstrates **abstract learning** — understanding the underlying princip
       exercise: {
         dropdowns: [
           { label: 'A student suddenly sees how to solve a math proof after struggling for hours', options: ['Trial-and-error', 'Insight learning', 'Latent learning', 'Classical conditioning'] },
-          { label: 'A cat escapes a puzzle box faster each time (gradual improvement)', options: ['Insight learning', 'Trial-and-error (Thorndike)', 'Observational learning', 'Learned helplessness'] },
+          { label: 'A cat escapes a puzzle box faster each time (gradual improvement)', options: ['Insight learning', 'Trial-and-error learning', 'Observational learning', 'Learned helplessness'] },
           { label: 'Knowing Spanish makes learning Italian easier', options: ['Negative transfer', 'Positive transfer', 'Latent learning', 'Abstract learning'] }
         ],
-        correctAnswers: ['Insight learning', 'Trial-and-error (Thorndike)', 'Positive transfer'],
+        correctAnswers: ['Insight learning', 'Trial-and-error learning', 'Positive transfer'],
         hint1: 'Sudden "aha!" moment after struggling = insight learning.',
         hint2: 'Gradual improvement with each trial = Thorndike\'s trial-and-error.',
         hint3: 'A prior skill helping with a new related skill = positive transfer.',
@@ -161,10 +161,10 @@ The common thread connecting insight (Köhler), cognitive maps (Tolman), latent 
           {
             question: 'A researcher gives monkeys 200 different object discrimination problems. On the first few problems, the monkeys perform at chance level. By problem 190, they solve new problems on the first trial. This pattern best demonstrates:',
             options: [
-              'Classical conditioning — the monkeys became conditioned to the correct objects',
-              'Insight learning — each problem was solved with an "aha!" moment',
-              'Learning sets — the monkeys learned the abstract rule for solving discrimination problems',
-              'Operant conditioning — the monkeys were reinforced for choosing correctly'
+              'Classical conditioning — the correct objects became conditioned stimuli for food',
+              'Insight learning — each new problem was solved in a sudden, separate "aha!" moment',
+              'Learning sets — the monkeys learned a general rule for solving such problems',
+              'Operant conditioning — the monkeys were reinforced for each specific correct choice'
             ],
             correctAnswer: 2,
             explanation: 'This is Harlow\'s learning sets experiment. The monkeys didn\'t just learn specific object-reward associations (operant) — they learned the ABSTRACT STRATEGY of how to solve discrimination problems in general. By problem 190, they needed only one trial because they had "learned to learn." This is a cognitive process beyond simple reinforcement.'
@@ -172,10 +172,10 @@ The common thread connecting insight (Köhler), cognitive maps (Tolman), latent 
           {
             question: 'A physics student who excels at Newtonian mechanics initially struggles with quantum mechanics because the rules are contradictory. This is best explained by:',
             options: [
-              'Positive transfer — Newtonian skills help with quantum',
+              'Positive transfer — Newtonian skills make the quantum material easier to master',
               'Negative transfer — prior Newtonian learning interferes with quantum learning',
               'Insight learning — the student will suddenly understand quantum mechanics',
-              'Learned helplessness — the student gives up on quantum mechanics'
+              'Learned helplessness — the student gives up after early failures in quantum'
             ],
             correctAnswer: 1,
             explanation: 'Negative transfer occurs when previously learned knowledge INTERFERES with learning new material. In this case, Newtonian mechanics (deterministic, objects have definite positions) contradicts quantum mechanics (probabilistic, particles have wave-like properties), making the transition harder, not easier.'

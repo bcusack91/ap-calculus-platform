@@ -66,10 +66,10 @@ What is creativity, and how does it work? Creativity involves generating novel, 
           {
             question: 'Research shows that people who are paid to do creative work often produce LESS creative output than those who do it voluntarily. This finding BEST supports the role of:',
             options: [
-              'Convergent thinking — payment narrows focus to one approach',
-              'Extrinsic motivation — external rewards decrease intrinsic motivation, reducing creativity (overjustification effect)',
-              'Mental set — payment creates a rigid problem-solving approach',
-              'The framing effect — payment frames the task differently'
+              'Convergent thinking — payment pushes people to narrow in on one safe approach',
+              'Extrinsic motivation — outside rewards can undermine the intrinsic interest original work needs',
+              'Mental set — payment locks workers into a rigid approach that worked for them before',
+              'Functional fixedness — paid workers see their materials only in their standard uses'
             ],
             correctAnswer: 1,
             explanation: 'This demonstrates the OVERJUSTIFICATION EFFECT: when an external reward is added to an already intrinsically motivating activity, intrinsic motivation decreases. The person shifts from "I\'m doing this because I enjoy it" to "I\'m doing this for the money." This undermines the intrinsic motivation that Sternberg identified as a key component of creativity. Exception: rewards that INFORM (feedback) rather than CONTROL can maintain intrinsic motivation.'
@@ -191,21 +191,21 @@ What is creativity, and how does it work? Creativity involves generating novel, 
           {
             question: 'A company offers its engineering team a $10,000 bonus for the most innovative product design. After implementing the bonus, the team produces designs that are technically competent but less original than before. This outcome is BEST explained by:',
             options: [
-              'Functional fixedness — the bonus prevents seeing new design possibilities',
-              'The overjustification effect — the external reward reduced intrinsic motivation and creative risk-taking',
-              'Mental set — the team is stuck on previously successful designs',
-              'Group polarization — the team\'s designs became more extreme'
+              'Functional fixedness — the bonus keeps the engineers from seeing new uses for their parts',
+              'The overjustification effect — the reward displaced the team\'s intrinsic motivation',
+              'Mental set — the team keeps reusing design strategies that succeeded in the past',
+              'Group polarization — group discussion pushed the team\'s designs toward an extreme'
             ],
             correctAnswer: 1,
-            explanation: 'The overjustification effect: the $10,000 bonus shifted the team\'s motivation from intrinsic (love of innovation, curiosity) to extrinsic (winning the bonus). This narrows focus to "what will win the money?" rather than "what\'s truly innovative?" — leading to safer, less creative designs. Research consistently shows that when external rewards are introduced for creative tasks, the work becomes more conventional and less original. The designs are "technically competent" (convergent thinking maintained) but "less original" (divergent thinking decreased).'
+            explanation: 'The overjustification effect: the \\$10,000 bonus shifted the team\'s motivation from intrinsic (love of innovation, curiosity) to extrinsic (winning the bonus). This narrows focus to "what will win the money?" rather than "what\'s truly innovative?" — leading to safer, less creative designs. Research consistently shows that when external rewards are introduced for creative tasks, the work becomes more conventional and less original. The designs are "technically competent" (convergent thinking maintained) but "less original" (divergent thinking decreased).'
           },
           {
             question: 'A teacher wants to foster creativity in her students. Based on research, which approach would be MOST effective?',
             options: [
-              'Give the highest grade to the most creative project — competitive rewards drive innovation',
-              'Only teach divergent thinking exercises and ignore traditional subject matter',
-              'Provide a supportive environment where failure is acceptable, build expertise through instruction, and nurture intrinsic interest in the subject',
-              'Have students always work in brainstorming groups, since groups produce more creative ideas than individuals'
+              'Give the top grade to the most creative project, since competition for rewards drives innovation',
+              'Teach only divergent-thinking exercises and drop subject content, since knowledge limits originality',
+              'Make failure safe while building expertise and nurturing students\' intrinsic interest in the subject',
+              'Have students always brainstorm in groups, since groups produce more creative ideas than individuals'
             ],
             correctAnswer: 2,
             explanation: 'This combines multiple research findings: (1) Creative environment — a safe space where failure is acceptable encourages risk-taking. (2) Expertise — you need a knowledge base (convergent) to be creative. (3) Intrinsic motivation — nurturing internal interest is more effective than external rewards (competitive grades could trigger overjustification). Competitive grading adds extrinsic pressure. Teaching only divergent thinking ignores the need for expertise. Always brainstorming in groups contradicts research showing individuals often outperform groups in idea generation.'

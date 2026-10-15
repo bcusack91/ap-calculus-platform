@@ -155,10 +155,10 @@ export const psychHistoryApproachesPart4Data = {
           {
             question: 'Five employees earn \\$30K, \\$32K, \\$35K, \\$33K, and \\$200K. Which measure of central tendency best represents the typical salary?',
             options: [
-              'Median (\\$33K) — the mean would be inflated by the \\$200K outlier',
-              'Mean ($66K) — it averages all values equally',
-              'Mode — use the most frequent value',
-              'Range — it captures the spread of salaries'
+              'Median (\\$33K) — the \\$200K outlier would inflate the mean',
+              'Mean (\\$66K) — it gives every salary equal weight in the average',
+              'Mode — it reports the salary that occurs most often in the data',
+              'Range (\\$170K) — it captures how widely the salaries are spread'
             ],
             correctAnswer: 0,
             explanation: 'The \\$200K salary is an extreme outlier that pulls the mean (\\$66K) far above most salaries. The median (\\$33K) is unaffected by outliers and better represents the typical salary. This is why the AP exam tests when to use mean vs. median.'
@@ -166,10 +166,10 @@ export const psychHistoryApproachesPart4Data = {
           {
             question: 'A personality test gives a student similar scores every time they take it, but experts agree it doesn\'t actually measure personality well. This test has:',
             options: [
-              'high reliability but low validity — it\'s consistent but doesn\'t measure what it claims',
-              'high validity but low reliability — it measures well but inconsistently',
-              'both high reliability and high validity',
-              'neither reliability nor validity'
+              'high reliability but low validity — consistent, but not measuring the trait it claims to measure',
+              'high validity but low reliability — accurate, but its scores vary from one test to the next',
+              'both high reliability and high validity — consistent scores show it measures personality',
+              'low reliability and low validity — expert doubts mean its scores are also inconsistent'
             ],
             correctAnswer: 0,
             explanation: 'Consistent scores = high reliability. Not measuring personality well = low validity. A test can be reliable without being valid (like a bathroom scale that always reads 5 pounds too heavy — it\'s consistent but inaccurate).'

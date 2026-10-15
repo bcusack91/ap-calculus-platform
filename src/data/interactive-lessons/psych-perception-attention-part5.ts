@@ -44,10 +44,10 @@ What we perceive depends not just on what's "out there" — it depends on what's
           {
             question: 'In a famous demonstration, the same ambiguous figure is perceived as a young woman by people who were first shown pictures of young women, and as an old woman by people who were first shown pictures of old women. This demonstrates:',
             options: [
-              'Bottom-up processing — the sensory data determined perception',
-              'Perceptual set — prior exposure created expectations that influenced interpretation',
-              'Change blindness — people didn\'t notice the figure changed',
-              'The Gestalt principle of closure — people filled in missing details'
+              'Bottom-up processing — the sensory features of the figure alone determined perception',
+              'Perceptual set — prior exposure created expectations that shaped each group\'s interpretation',
+              'Change blindness — people didn\'t notice that the figure was swapped between viewings',
+              'The Gestalt principle of closure — people filled in missing details to complete a face'
             ],
             correctAnswer: 1,
             explanation: 'The "young woman/old woman" ambiguous figure demonstrates perceptual set perfectly. The figure itself is ambiguous (identical sensory data), but what people PERCEIVE depends on their prior exposure (expectations). Those primed with young women see a young woman; those primed with old women see an old woman. Same stimulus, different perception = perceptual set at work. This is top-down processing in action.'
@@ -55,10 +55,10 @@ What we perceive depends not just on what's "out there" — it depends on what's
           {
             question: 'Research shows that people who are afraid of spiders estimate spider sizes as LARGER than they actually are, compared to people who are not afraid. This finding demonstrates that:',
             options: [
-              'Arachnophobes have better visual acuity for spiders',
-              'Emotional state (fear) influences perception, creating a perceptual set',
-              'Spiders actually appear larger when someone is afraid',
-              'Bottom-up processing is enhanced by fear'
+              'Arachnophobes have sharper visual acuity, so they detect a spider\'s true size better',
+              'Fear as an emotional state shapes perception by creating a perceptual set',
+              'Spiders physically cast a larger retinal image when the observer is afraid',
+              'Fear enhances bottom-up processing of a spider\'s raw sensory features'
             ],
             correctAnswer: 1,
             explanation: 'Fear creates a perceptual set that influences size perception — frightened people literally PERCEIVE spiders as larger than non-frightened people do. This illustrates that emotion is a powerful factor in creating perceptual sets. The spider\'s actual (physical) size is the same; the PERCEIVED size differs based on emotional state. This connects to motivated perception and has implications for anxiety disorders.'
@@ -169,10 +169,10 @@ What we perceive depends not just on what's "out there" — it depends on what's
           {
             question: 'Police officers in a high-crime neighborhood are more likely to misperceive a cell phone held by a young Black man as a weapon, compared to the same cell phone held in a low-crime neighborhood. This tragic pattern BEST illustrates:',
             options: [
-              'Bottom-up processing — the cell phone looks like a weapon',
-              'Perceptual set — expectations based on context and stereotypes influence what officers perceive',
-              'Change blindness — officers fail to detect the change from weapon to phone',
-              'The Gestalt principle of similarity — the phone and weapon look similar'
+              'Bottom-up processing — the phone\'s physical features closely match those of a weapon',
+              'Perceptual set — expectations from context and stereotypes shape what officers perceive',
+              'Change blindness — officers fail to detect that the object changed from a weapon to a phone',
+              'The Gestalt principle of similarity — the phone and a weapon are grouped as similar shapes'
             ],
             correctAnswer: 1,
             explanation: 'This is a critically important real-world example of perceptual set. The officer\'s expectations (high-crime area + racial stereotypes) create a perceptual set to see "weapon." The same ambiguous stimulus (a dark object in someone\'s hand) is perceived differently depending on context, expectations, and unfortunately, implicit bias. This connects to social psychology (implicit bias, stereotypes) and has life-or-death consequences. Research by Correll et al. (2002) demonstrated this pattern experimentally.'
@@ -180,10 +180,10 @@ What we perceive depends not just on what's "out there" — it depends on what's
           {
             question: 'After spending a week at a bird-watching retreat, Maria notices birds everywhere — in trees, on buildings, in the sky — that she would normally have overlooked. This is BEST explained by:',
             options: [
-              'There are actually more birds than usual that week',
-              'Perceptual set — her bird-focused experience created a readiness to perceive birds',
-              'Inattentional blindness — she was previously blind to all birds',
-              'Bottom-up processing — her visual acuity improved at the retreat'
+              'Actual bird numbers rose that week, so there really were more birds to notice',
+              'Perceptual set — her retreat created a readiness to perceive birds',
+              'Inattentional blindness — before the retreat she was unable to see any birds at all',
+              'Bottom-up processing — her visual acuity for small, fast objects improved at the retreat'
             ],
             correctAnswer: 1,
             explanation: 'Maria\'s birdwatching experience created a perceptual set — a mental predisposition to perceive (notice and identify) birds. The birds were always there; what changed was her readiness to perceive them. This is top-down processing: her new knowledge and expectations guide her attention and interpretation of sensory data. Her visual acuity didn\'t change — her perceptual framework did.'

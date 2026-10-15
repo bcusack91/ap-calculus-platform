@@ -36,9 +36,9 @@ export const psychClassicalPart3Data = {
             question: 'A dog has been conditioned to salivate at a tone. The researcher then presents the tone 30 times without food, and salivation gradually stops. This process is called:',
             options: [
               'extinction — the CR weakens when the CS is presented without the UCS',
-              'acquisition — the CS-UCS pairing is being strengthened',
-              'spontaneous recovery — the CR reappears after a rest',
-              'higher-order conditioning — the CS is being paired with a new stimulus'
+              'acquisition — the CS-UCS pairing is being strengthened with each presentation',
+              'spontaneous recovery — the CR reappears after a rest without any new training',
+              'higher-order conditioning — the CS is paired with a new stimulus'
             ],
             correctAnswer: 0,
             explanation: 'Extinction occurs when the CS (tone) is repeatedly presented without the UCS (food), causing the CR (salivation) to gradually weaken and stop.'
@@ -46,10 +46,10 @@ export const psychClassicalPart3Data = {
           {
             question: 'Two days after extinction, the dog hears the tone again and briefly salivates. This is:',
             options: [
-              'spontaneous recovery — the extinguished CR reappears after a rest period',
-              'reacquisition — the dog was reconditioned',
-              'generalization — the dog responds to a similar stimulus',
-              'higher-order conditioning — a new association formed'
+              'spontaneous recovery — the CR returns after a rest period',
+              'reacquisition — the tone was paired with food again, relearning the CR',
+              'generalization — the dog responds to a tone similar to the original CS',
+              'higher-order conditioning — the tone was paired with a second neutral stimulus'
             ],
             correctAnswer: 0,
             explanation: 'Spontaneous recovery is the temporary return of the CR after a rest period following extinction. It demonstrates that extinction suppresses rather than erases the original learning.'
@@ -164,10 +164,10 @@ export const psychClassicalPart3Data = {
           {
             question: 'A therapist treats a patient\'s spider phobia using exposure therapy. After many sessions of seeing spiders without any negative experience, the patient no longer feels fearful. Three months later, the patient encounters a spider and briefly feels a burst of anxiety. This brief return of fear is:',
             options: [
-              'spontaneous recovery — the extinguished fear briefly returns after a rest period',
-              'reacquisition — the patient was reconditioned by seeing the spider',
-              'generalization — the patient is responding to a new stimulus',
-              'higher-order conditioning — a new association was formed'
+              'spontaneous recovery — the extinguished fear reappears following a rest period',
+              'reacquisition — the spider was paired with a new trauma, relearning the fear',
+              'generalization — the patient now fears a stimulus resembling the therapy spiders',
+              'higher-order conditioning — the spider was paired with another feared stimulus'
             ],
             correctAnswer: 0,
             explanation: 'This is spontaneous recovery: after extinction (therapy eliminated the fear) and a rest period (3 months), the CR (anxiety) briefly reappears. It will likely fade quickly without the UCS being reintroduced.'
@@ -176,9 +176,9 @@ export const psychClassicalPart3Data = {
             question: 'A researcher conditions a dog to salivate to a bell $(CS_{1})$. Then the researcher pairs a light with the bell (without food). The dog begins to salivate slightly at the light. This is:',
             options: [
               'higher-order conditioning — the light became a $CS_{2}$ through pairing with $CS_{1}$',
-              'acquisition — the dog is learning to associate light with food',
-              'generalization — the dog is responding to a similar stimulus',
-              'spontaneous recovery — the CR returned after extinction'
+              'acquisition — the dog is being conditioned to link the light directly with food',
+              'generalization — the dog responds to the light because it resembles the bell',
+              'spontaneous recovery — the CR to the bell returned and spread to the light'
             ],
             correctAnswer: 0,
             explanation: 'This is higher-order (second-order) conditioning. The light (NS) was paired with the bell $(CS_{1})$, making the light a $CS_{2}$. Note: food (UCS) was never paired with the light directly. The response will be weaker and extinguish faster than the original bell-salivation association.'

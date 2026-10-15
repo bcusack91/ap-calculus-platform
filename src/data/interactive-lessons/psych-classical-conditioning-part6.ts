@@ -39,9 +39,9 @@ export const psychClassicalPart6Data = {
             question: 'A cat comes running to the kitchen when it hears the electric can opener, because the sound has been paired with receiving food. Identify the CS and CR:',
             options: [
               'CS = can opener sound; CR = running to kitchen',
-              'CS = food; CR = running to kitchen',
-              'CS = can opener sound; CR = eating food',
-              'CS = kitchen; CR = hearing the can opener'
+              'CS = the food bowl; CR = running to the kitchen',
+              'CS = the whirring sound; CR = eating the food',
+              'CS = the kitchen; CR = hearing the can opener'
             ],
             correctAnswer: 0,
             explanation: 'The can opener sound (originally neutral) was paired with food (UCS) and became the CS. Running to the kitchen is the learned response to the sound (CR). The food is the UCS, and eating/salivating to food is the UCR.'
@@ -50,8 +50,8 @@ export const psychClassicalPart6Data = {
             question: 'To test whether a conditioning procedure was effective, a researcher should:',
             options: [
               'present the CS alone and observe whether the CR occurs',
-              'present the UCS alone and observe the UCR',
-              'present the CS and UCS together',
+              'present the UCS alone and observe whether the UCR occurs',
+              'present the CS and UCS together and measure the response',
               'remove all stimuli and wait for spontaneous recovery'
             ],
             correctAnswer: 0,
@@ -180,10 +180,10 @@ export const psychClassicalPart6Data = {
           {
             question: 'A college student always studies in a specific coffee shop. During exams, she finds that just the smell of coffee makes her feel more alert and focused, even before drinking any. In this scenario, the smell of coffee is the:',
             options: [
-              'CS — the smell was paired with studying/alertness and now triggers focus on its own',
-              'UCS — coffee smell naturally causes alertness',
-              'CR — the alertness is the conditioned response',
-              'UCR — feeling alert is a natural reaction to smell'
+              'CS — linked to studying, the smell alone now sparks alertness',
+              'UCS — coffee smell naturally causes alertness with no prior learning',
+              'CR — the smell is the conditioned response the student has learned',
+              'UCR — feeling alert is the natural, unlearned reaction to the smell'
             ],
             correctAnswer: 0,
             explanation: 'The coffee smell (originally neutral in terms of focus) was repeatedly paired with the studying context and caffeine alertness (UCS). It became a CS that triggers a conditioned feeling of alertness (CR). The actual caffeine is the UCS.'
@@ -191,9 +191,9 @@ export const psychClassicalPart6Data = {
           {
             question: 'A researcher wants to demonstrate that a dog\'s salivation to a bell is due to classical conditioning and not a natural reflex. Which evidence would be most convincing?',
             options: [
-              'Show that the dog did NOT salivate to the bell before the CS-UCS pairings began',
-              'Show that the dog salivates to food',
-              'Show that other dogs also salivate to bells',
+              'Show that the dog did NOT salivate to the bell before the pairings began',
+              'Show that the dog salivates whenever food is placed in its mouth',
+              'Show that other untrained dogs also salivate when a bell rings',
               'Show that the dog salivates more with each conditioning trial'
             ],
             correctAnswer: 0,

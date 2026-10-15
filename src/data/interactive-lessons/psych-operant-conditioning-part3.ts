@@ -43,10 +43,10 @@ The AP exam requires you to classify ANY scenario into one of four categories: +
           {
             question: 'A parent spanks a child for hitting their sibling. The child hits less often afterward. This is:',
             options: [
-              'Negative reinforcement — physical contact is involved',
-              'Positive punishment — an aversive stimulus (spanking) is added to decrease hitting',
-              'Negative punishment — something pleasant was removed',
-              'Positive reinforcement — the parent is responding to the behavior'
+              'Negative reinforcement — the sibling\'s crying is removed, decreasing hitting',
+              'Positive punishment — an aversive stimulus is added, decreasing hitting',
+              'Negative punishment — the child\'s freedom is taken away, decreasing hitting',
+              'Positive reinforcement — the parent\'s attention is added after hitting'
             ],
             correctAnswer: 1,
             explanation: 'Spanking ADDS an aversive stimulus (positive = adding) and the hitting behavior DECREASES (punishment). Therefore: positive punishment. Remember, "positive" doesn\'t mean "good" — it means something is being added.'
@@ -54,10 +54,10 @@ The AP exam requires you to classify ANY scenario into one of four categories: +
           {
             question: 'A student talks in class, so the teacher takes away 10 minutes of recess. The student talks less in class afterwards. This is:',
             options: [
-              'Positive punishment — recess removal is unpleasant',
-              'Negative reinforcement — the talking is removed',
-              'Negative punishment — a pleasant stimulus (recess) is removed to decrease the behavior',
-              'Positive reinforcement — the teacher is correcting the student'
+              'Positive punishment — an unpleasant loss is added, decreasing talking',
+              'Negative reinforcement — the talking is removed, so the behavior weakens',
+              'Negative punishment — a pleasant privilege is removed, decreasing talking',
+              'Positive reinforcement — the teacher\'s correction is added to change talking'
             ],
             correctAnswer: 2,
             explanation: 'Recess (something pleasant) is REMOVED (negative = removing) and the talking behavior DECREASES (punishment). Negative punishment = removing something desirable to weaken a behavior.'
@@ -138,7 +138,7 @@ Despite limitations, punishment is most effective when it is:
           },
           {
             label: 'A major drawback of punishment is that it can cause ___ and avoidance',
-            options: ['happiness', 'fear', 'motivation', 'reinforcement']
+            options: ['insight', 'fear', 'latent learning', 'reinforcement']
           }
         ],
         correctAnswers: ['negative punishment', 'positive punishment', 'fear'],
@@ -178,10 +178,10 @@ Despite limitations, punishment is most effective when it is:
           {
             question: 'A company fines employees $50 every time they arrive late. Tardiness decreases initially, but after a few months, some employees start calling in sick instead of arriving late. This outcome best illustrates:',
             options: [
-              'Positive reinforcement — the fine motivates on-time behavior',
-              'A limitation of punishment — it suppressed tardiness but created avoidance behavior instead',
-              'Negative reinforcement — removing the fine increases attendance',
-              'Classical conditioning — employees associate work with punishment'
+              'Positive reinforcement — the fine motivated employees to value punctuality',
+              'A limitation of punishment — it suppressed lateness but bred avoidance',
+              'Spontaneous recovery — tardiness returned after a period of apparent extinction',
+              'Classical conditioning — employees came to associate the workplace with the fine'
             ],
             correctAnswer: 1,
             explanation: 'The fine is positive punishment (adding an aversive stimulus to decrease tardiness). However, it illustrates a key limitation: punishment can cause avoidance of the punisher/situation rather than genuinely changing the underlying behavior. Employees avoided the fine by calling in sick — a worse outcome.'
@@ -189,10 +189,10 @@ Despite limitations, punishment is most effective when it is:
           {
             question: 'A parent wants to reduce their child\'s screen time. They decide to give the child extra chores every time they exceed 2 hours of screen time. Classify this consequence AND suggest a more effective alternative:',
             options: [
-              'This is positive punishment (adding chores); reinforcing reading or outdoor play instead would be more effective',
-              'This is negative punishment (removing screen time); the approach is already ideal',
-              'This is negative reinforcement (removing screen access); adding more punishments would be more effective',
-              'This is positive reinforcement (adding chores as a reward); the child will enjoy extra responsibilities'
+              'Positive punishment (adding chores); reinforcing reading or outdoor play would work better',
+              'Negative punishment (removing screen time); the current approach is already the most effective',
+              'Negative reinforcement (removing screen access); adding stronger punishments would work better',
+              'Positive reinforcement (adding chores as a reward); the child will come to enjoy extra responsibility'
             ],
             correctAnswer: 0,
             explanation: 'Extra chores are an aversive stimulus ADDED after the behavior = positive punishment. A more effective approach would be positive reinforcement of alternative activities — rewarding the child for reading, playing outside, or choosing to turn off screens. This teaches what TO do rather than just what NOT to do.'

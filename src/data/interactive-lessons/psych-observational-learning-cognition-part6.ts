@@ -45,10 +45,10 @@ This workshop applies all learning concepts to AP-style scenarios. The exam's fa
           {
             question: 'A 4-year-old watches her father cook dinner every night. One day, she picks up a toy pan and pretends to stir and flip food. She has never been rewarded for cooking. This is:',
             options: [
-              'Classical conditioning — cooking was paired with food',
-              'Operant conditioning — she was reinforced by pretending',
-              'Observational learning — she imitated her father without direct reinforcement',
-              'Insight learning — she suddenly realized how to cook'
+              'Classical conditioning — the act of cooking was repeatedly paired with food',
+              'Operant conditioning — she was reinforced by the fun of pretending to cook',
+              'Observational learning — she imitated a model without being reinforced',
+              'Insight learning — she suddenly realized on her own how cooking must work'
             ],
             correctAnswer: 2,
             explanation: 'The child watched her father (model), remembered the behavior (retention), was able to imitate it (reproduction), and was motivated to do so (motivation) — all WITHOUT direct reinforcement. This is textbook observational learning (Bandura). The key clue is "never been rewarded for cooking."'
@@ -57,12 +57,12 @@ This workshop applies all learning concepts to AP-style scenarios. The exam's fa
             question: 'A teenager gets grounded (loses phone privileges) for staying out past curfew and subsequently comes home on time. Meanwhile, her younger brother — who witnessed the grounding — also starts coming home on time even though he has never been punished. Which TWO learning types are demonstrated?',
             options: [
               'Classical conditioning (sister) + observational learning (brother)',
-              'Operant conditioning/punishment (sister) + vicarious punishment/observational learning (brother)',
-              'Latent learning (sister) + insight learning (brother)',
+              'Operant conditioning (sister) + observational learning (brother)',
+              'Negative reinforcement (sister) + latent learning (brother)',
               'Instinctive drift (sister) + learned helplessness (brother)'
             ],
             correctAnswer: 1,
-            explanation: 'The sister experiences DIRECT punishment (operant conditioning — positive punishment reduces curfew violation). The brother experiences VICARIOUS punishment (observational learning — he saw the consequence and changed his behavior without being directly punished). This question tests whether you can identify two different types operating in the same scenario.'
+            explanation: 'The sister experiences DIRECT punishment (operant conditioning — losing phone privileges is negative punishment, which reduces curfew violations). The brother experiences VICARIOUS punishment (observational learning — he saw the consequence and changed his behavior without being directly punished). This question tests whether you can identify two different types operating in the same scenario.'
           }
         ]
       }
@@ -174,10 +174,10 @@ Confusing CLASSICAL and OPERANT conditioning:
           {
             question: 'A math teacher demonstrates how to solve quadratic equations step-by-step on the board, talking through her reasoning process. Students then practice on their own. This teaching method primarily uses:',
             options: [
-              'Classical conditioning — pairing math with teacher approval',
-              'Observational learning — students observe the model (teacher) and imitate the process',
+              'Classical conditioning — math is paired with the teacher\'s approval',
+              'Observational learning — students observe a model and imitate the process',
               'Operant conditioning — students are reinforced for correct answers',
-              'Insight learning — students experience sudden understanding'
+              'Insight learning — students experience a sudden flash of understanding'
             ],
             correctAnswer: 1,
             explanation: 'The teacher is serving as a MODEL, demonstrating the behavior (problem-solving), while students observe. This is a direct application of Bandura\'s observational learning. The students pay attention, retain the steps, reproduce them in practice, and are motivated by grades/understanding. Later, operant conditioning may also occur when they receive feedback on practice problems — but the primary teaching method is modeling.'
@@ -185,10 +185,10 @@ Confusing CLASSICAL and OPERANT conditioning:
           {
             question: 'Three-year-old Maya watches a YouTube video of other children opening toys and squealing with delight. Maya then opens her own toy box and squeals loudly, imitating the children. Her parents have never reinforced squealing. Identify ALL applicable learning concepts:',
             options: [
-              'Only operant conditioning — she squeals because squealing was reinforced in the past',
-              'Observational learning (imitating the model) + vicarious reinforcement (model appeared to enjoy it)',
-              'Classical conditioning — toys became paired with squealing',
-              'Insight learning — she suddenly discovered how to express excitement'
+              'Operant conditioning alone — squealing was reinforced by her parents in the past',
+              'Observational learning + vicarious reinforcement — the models visibly enjoyed it',
+              'Classical conditioning + generalization — toys became paired with excited squealing',
+              'Insight learning alone — she suddenly discovered a new way to express excitement'
             ],
             correctAnswer: 1,
             explanation: 'Maya observed a model (children on YouTube), saw the model appearing happy (vicarious reinforcement — the model was "rewarded" by the joy of opening toys), and imitated the behavior. No direct reinforcement occurred for Maya. This is observational learning with vicarious reinforcement as the motivational component.'

@@ -139,21 +139,21 @@ export const psychHistoryApproachesPart7Data = {
           {
             question: 'A teenager develops anxiety after a car accident. How would a psychodynamic psychologist and a behavioral psychologist explain this differently?',
             options: [
-              'Psychodynamic: repressed unconscious fear from childhood resurfaced; Behavioral: anxiety was classically conditioned by pairing cars with the traumatic event',
-              'Psychodynamic: neurotransmitter imbalance; Behavioral: the teen chose to be anxious',
-              'Psychodynamic: classical conditioning; Behavioral: unconscious conflict',
-              'Both perspectives would explain it the same way — through learning'
+              'Psychodynamic: repressed childhood fears resurfaced; behavioral: cars became conditioned fear cues',
+              'Psychodynamic: a neurotransmitter imbalance; behavioral: the teen consciously chose to be anxious',
+              'Psychodynamic: cars became conditioned fear cues; behavioral: an unconscious conflict resurfaced',
+              'Psychodynamic and behavioral: both trace the anxiety to the same learned association with cars'
             ],
             correctAnswer: 0,
             explanation: 'The psychodynamic perspective focuses on unconscious processes and past experiences (perhaps the accident triggered deeper repressed fears). The behavioral perspective focuses on learning — the car became a conditioned stimulus associated with fear through classical conditioning. This contrast is a common AP question format.'
           },
           {
-            question: 'An AP Psychology FRQ asks you to design an experiment testing whether classical music improves test performance. Which element is MOST critical for establishing causation?',
+            question: 'You are designing an experiment to test whether classical music improves test performance. Which element is MOST critical for establishing causation?',
             options: [
-              'Using a large sample size from multiple schools',
-              'Random assignment of participants to music vs. no-music groups',
-              'Ensuring all participants like classical music',
-              'Collecting qualitative data through interviews'
+              'Using a large sample of students drawn from multiple schools',
+              'Randomly assigning participants to music and no-music groups',
+              'Making sure all participants say they enjoy classical music',
+              'Collecting qualitative data through follow-up interviews'
             ],
             correctAnswer: 1,
             explanation: 'Random assignment is the single most critical element for establishing causation. It ensures that the groups are equivalent before the IV (music/no music) is applied, so any difference in the DV (test scores) can be attributed to the IV rather than pre-existing differences between groups.'

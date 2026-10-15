@@ -43,10 +43,10 @@ Attention is the gateway to perception — you can only perceive what you attend
           {
             question: 'At a noisy party, you\'re deep in conversation when you suddenly hear your name mentioned across the room. This is BEST explained by:',
             options: [
-              'Broadbent\'s filter theory — your name was in the attended channel',
-              'Treisman\'s attenuation theory — unattended messages are attenuated but important stimuli break through',
-              'Inattentional blindness — you failed to notice the conversation',
-              'Change blindness — you detected a change in the auditory scene'
+              'Broadbent\'s filter theory — your name got through because it was on the attended channel',
+              'Treisman\'s attenuation theory — weakened unattended input still lets your name through',
+              'Inattentional blindness — absorbed in conversation, you missed most of the room around you',
+              'Change blindness — you detected a sudden shift in the background noise of the room'
             ],
             correctAnswer: 1,
             explanation: 'The cocktail party effect — hearing your name in unattended background noise — is best explained by Treisman\'s attenuation theory. According to Treisman, unattended messages are NOT completely filtered out (as Broadbent suggested) but are ATTENUATED (turned down). Highly personally relevant stimuli like your name have a low activation threshold, so they can break through even when attenuated. This is why Treisman\'s model replaced Broadbent\'s strict filter theory.'
@@ -56,11 +56,11 @@ Attention is the gateway to perception — you can only perceive what you attend
             options: [
               'Change blindness — participants failed to detect a change',
               'The cocktail party effect — the gorilla was personally relevant',
-              'Inattentional blindness — focused attention caused failure to notice an unexpected stimulus',
+              'Inattentional blindness — focused attention caused failure to see an unexpected stimulus',
               'Selective attention working correctly — participants successfully filtered out irrelevant information'
             ],
             correctAnswer: 2,
-            explanation: 'This is the classic demonstration of INATTENTIONAL blindness — when attention is focused on a specific task (counting passes), we can fail to notice fully visible, salient stimuli (a gorilla!) that we would normally notice immediately. It\'s NOT change blindness (nothing changed — the gorilla was always there). The "selective attention working correctly" option is tempting but wrong because the gorilla was not "irrelevant noise" — it was a gorilla walking through the middle of the scene for 9 seconds!'
+            explanation: 'This is the classic demonstration of INATTENTIONAL blindness — when attention is focused on a specific task (counting passes), we can fail to notice fully visible, salient stimuli (a gorilla!) that we would normally notice immediately. It\'s NOT change blindness (nothing changed — the gorilla was simply there). The "selective attention working correctly" option is tempting but wrong because the gorilla was not "irrelevant noise" — it was a person in a gorilla suit walking through the middle of the scene for several seconds, even pausing to thump its chest!'
           }
         ]
       }
@@ -169,10 +169,10 @@ Attention is the gateway to perception — you can only perceive what you attend
           {
             question: 'Research shows that driving while talking on a hands-free cell phone is just as dangerous as using a handheld phone. This finding is BEST explained by:',
             options: [
-              'The physical act of holding the phone causes the danger',
-              'Hands-free phones have worse audio quality',
-              'The cognitive demands of the conversation produce inattentional blindness, regardless of whether hands are free',
-              'Change blindness — drivers can\'t detect changes while on the phone'
+              'Holding the phone takes a hand off the wheel, which slows steering responses',
+              'Hands-free audio is poorer, so drivers strain to hear and lose track of the road',
+              'The conversation itself drains attention, causing inattentional blindness',
+              'Change blindness keeps drivers from detecting shifts in traffic while on calls'
             ],
             correctAnswer: 2,
             explanation: 'The danger of cell phone use while driving is NOT about the hands — it\'s about the cognitive load. Engaging in a phone conversation diverts attentional resources from driving, causing INATTENTIONAL blindness. Drivers "look but don\'t see" — they may look directly at a red light or pedestrian but fail to consciously perceive it because attention is consumed by the conversation. This is why hands-free laws alone don\'t solve the problem.'
@@ -180,10 +180,10 @@ Attention is the gateway to perception — you can only perceive what you attend
           {
             question: 'During a dichotic listening experiment, a participant shadows (repeats) a message in the right ear while ignoring the left ear. The participant does NOT notice when the left ear message switches from English to French, but DOES notice when their own name is played in the left ear. This pattern supports:',
             options: [
-              'Broadbent\'s filter theory — all unattended input is completely blocked',
-              'Deutsch & Deutsch\'s late selection — all input is fully processed for meaning',
-              'Treisman\'s attenuation theory — unattended input is reduced but personally relevant stimuli break through',
-              'Bottom-up processing — raw sensory data drives attention'
+              'Broadbent\'s filter theory — all unattended input is completely blocked before meaning',
+              'Deutsch & Deutsch\'s late selection — all input in both ears is fully processed for meaning',
+              'Treisman\'s attenuation theory — unattended input is weakened but not fully blocked',
+              'Bottom-up processing — raw sensory features alone determine what reaches awareness'
             ],
             correctAnswer: 2,
             explanation: 'This result is inconsistent with both Broadbent (who would predict NOTHING gets through in the unattended ear) and Deutsch & Deutsch (who would predict the language switch WOULD be noticed since all meaning is processed). Treisman\'s attenuation theory perfectly explains it: unattended messages are attenuated (so the language switch isn\'t noticed), but highly relevant stimuli like your own name have a low activation threshold and break through the attenuation.'

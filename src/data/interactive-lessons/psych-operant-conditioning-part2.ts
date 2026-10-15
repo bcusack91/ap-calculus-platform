@@ -43,10 +43,10 @@ The #1 mistake students make on the AP exam is confusing negative reinforcement 
           {
             question: 'A child cleans their room and receives $5 as a reward. They clean their room more often. This is an example of:',
             options: [
-              'Negative reinforcement — the mess is removed',
-              'Positive reinforcement — a pleasant stimulus (money) is added to increase behavior',
-              'Positive punishment — money is presented after the behavior',
-              'Negative punishment — something is taken away'
+              'Negative reinforcement — the messy room is removed, so cleaning increases',
+              'Positive reinforcement — money is added, and cleaning increases',
+              'Positive punishment — a stimulus is added right after the behavior occurs',
+              'Negative punishment — the free time spent cleaning is taken away'
             ],
             correctAnswer: 1,
             explanation: 'The child receives (positive = adding) money, a pleasant stimulus, which increases the cleaning behavior (reinforcement). Positive reinforcement = adding something desirable to strengthen a behavior.'
@@ -54,10 +54,10 @@ The #1 mistake students make on the AP exam is confusing negative reinforcement 
           {
             question: 'Which of the following is an example of NEGATIVE reinforcement?',
             options: [
-              'A student receives a gold star for good behavior',
+              'A student receives a gold star for good classroom behavior',
               'A teenager loses phone privileges for breaking curfew',
-              'A prisoner gets time reduced for good behavior — the aversive prison time is shortened',
-              'A child receives a spanking for misbehavior'
+              'A prisoner\'s sentence is shortened for good behavior',
+              'A child receives a spanking for misbehaving at dinner'
             ],
             correctAnswer: 2,
             explanation: 'Negative reinforcement removes an aversive stimulus (prison time) to increase a behavior (good behavior). The prisoner is MORE LIKELY to behave well again because it led to removal of something unpleasant. This is NOT punishment — the behavior increased.'
@@ -182,10 +182,10 @@ The distinction matters because secondary reinforcers are **learned** and can va
           {
             question: 'A teacher gives students extra recess time when the whole class behaves well. Students behave better more often. What type of reinforcement is this, and what type of reinforcer is "extra recess"?',
             options: [
-              'Positive reinforcement with a primary reinforcer — recess satisfies a biological need',
+              'Positive reinforcement with a primary reinforcer — recess meets a biological need',
               'Positive reinforcement with a secondary reinforcer — recess time is a learned reward',
-              'Negative reinforcement — the teacher removes boredom by adding recess',
-              'Negative punishment — something is being taken away from students who misbehave'
+              'Negative reinforcement with a secondary reinforcer — recess removes classroom boredom',
+              'Negative reinforcement with a primary reinforcer — recess relieves a physical need to move'
             ],
             correctAnswer: 1,
             explanation: 'Extra recess is ADDED (positive) and behavior INCREASES (reinforcement) = positive reinforcement. Recess time is a secondary/conditioned reinforcer — its value is learned through experience, not biologically innate like food or water.'
@@ -193,10 +193,10 @@ The distinction matters because secondary reinforcers are **learned** and can va
           {
             question: 'Marcus puts on sunscreen before going outside because last time he didn\'t, he got a painful sunburn. Now he always applies sunscreen to AVOID the pain. This is best described as:',
             options: [
-              'Positive reinforcement — sunscreen is a pleasant addition',
-              'Positive punishment — the sunburn punished not wearing sunscreen',
-              'Negative reinforcement — applying sunscreen removes/avoids an aversive stimulus (sunburn), increasing the behavior',
-              'Classical conditioning — the sun is a conditioned stimulus'
+              'Positive reinforcement — applying sunscreen adds a pleasant feeling, increasing the behavior',
+              'Positive punishment — the added sunburn pain decreases how often he applies sunscreen',
+              'Negative reinforcement — sunscreen prevents an aversive sunburn, increasing the behavior',
+              'Classical conditioning — the sun is a conditioned stimulus that elicits sunscreen use'
             ],
             correctAnswer: 2,
             explanation: 'Marcus applies sunscreen to AVOID an aversive stimulus (sunburn pain). The avoidance of pain INCREASES his sunscreen-applying behavior. This is negative reinforcement — removing/avoiding something unpleasant to strengthen a behavior. The keyword "avoid" is a classic signal for negative reinforcement.'

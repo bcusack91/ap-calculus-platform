@@ -35,10 +35,10 @@ export const psychClassicalPart2Data = {
           {
             question: 'In Pavlov\'s experiment, the food that naturally caused the dogs to salivate is called the:',
             options: [
-              'UCS (unconditioned stimulus) — it naturally triggers salivation without learning',
-              'CS (conditioned stimulus) — it was paired with the bell',
-              'CR (conditioned response) — it is the learned response',
-              'UCR (unconditioned response) — it is the natural response'
+              'UCS — it triggers salivation automatically, without any learning',
+              'CS — it was paired with the bell and so became a learned signal',
+              'CR — it is the learned salivation the dogs come to produce',
+              'UCR — it is the automatic, unlearned response to the bell'
             ],
             correctAnswer: 0,
             explanation: 'Food is the UCS because it naturally and automatically causes salivation. No learning is required. The UCS is always the stimulus that works without conditioning.'
@@ -46,10 +46,10 @@ export const psychClassicalPart2Data = {
           {
             question: 'After conditioning, a dog salivates when it hears a bell. The salivation to the bell is the:',
             options: [
-              'CR (conditioned response) — a learned response to the conditioned stimulus',
-              'UCR (unconditioned response) — a natural response to the bell',
-              'UCS (unconditioned stimulus) — the bell causes a natural response',
-              'CS (conditioned stimulus) — the bell triggers learning'
+              'CR — a learned response to the conditioned stimulus',
+              'UCR — an unlearned response that the bell triggers by nature',
+              'UCS — the bell is a stimulus that triggers salivation on its own',
+              'CS — the bell has become a conditioned signal that food is coming'
             ],
             correctAnswer: 0,
             explanation: 'Salivation to the bell is the CR because it was learned through conditioning. Before conditioning, the bell produced no salivation. The same physical response (salivation) is a UCR when triggered by food and a CR when triggered by the bell.'
@@ -167,9 +167,9 @@ export const psychClassicalPart2Data = {
             question: 'Every time a nurse gives a child a shot (causing pain), the nurse is wearing a blue uniform. Eventually, the child cries when seeing anyone in a blue uniform. In this scenario, the blue uniform is the:',
             options: [
               'CS — it was neutral but became associated with pain',
-              'UCS — it naturally causes crying',
-              'UCR — it is the natural response to pain',
-              'CR — it is the learned crying behavior'
+              'UCS — it naturally causes crying without any learning',
+              'UCR — it is the child\'s unlearned reaction to the pain',
+              'CR — it is the crying the child learned to do'
             ],
             correctAnswer: 0,
             explanation: 'The blue uniform started as a neutral stimulus (it didn\'t cause crying before). After repeated pairing with the shot (UCS), the uniform became a CS that now triggers crying (CR). The shot is the UCS, and crying from the shot is the UCR.'
@@ -179,7 +179,7 @@ export const psychClassicalPart2Data = {
             options: [
               'UCR; CR — flinching to noise is natural, flinching to light is learned',
               'CR; UCR — flinching to noise is learned, flinching to light is natural',
-              'UCS; CS — noise is tbe natural stimulus, light is the learned stimulus',
+              'UCS; CS — noise is the natural stimulus, light is the learned stimulus',
               'CS; UCS — light was paired, noise was unconditioned'
             ],
             correctAnswer: 0,

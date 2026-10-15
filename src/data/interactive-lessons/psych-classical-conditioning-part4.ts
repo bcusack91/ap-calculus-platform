@@ -36,9 +36,9 @@ export const psychClassicalPart4Data = {
             question: 'Little Albert was conditioned to fear a white rat. He then showed fear of a white rabbit, a fur coat, and a Santa Claus mask. This demonstrates:',
             options: [
               'stimulus generalization — Albert responded to stimuli similar to the original CS',
-              'stimulus discrimination — Albert learned to distinguish between stimuli',
-              'extinction — Albert\'s fear faded over time',
-              'higher-order conditioning — new stimuli were paired with the rat'
+              'stimulus discrimination — Albert learned to tell the rat apart from other furry objects',
+              'extinction — Albert\'s fear of the rat faded and shifted onto other objects',
+              'higher-order conditioning — each new object was paired with the rat in turn'
             ],
             correctAnswer: 0,
             explanation: 'Albert\'s fear spread to similar white/furry objects — this is generalization. He responded to stimuli that resembled the original CS (white rat) but were not identical to it.'
@@ -46,10 +46,10 @@ export const psychClassicalPart4Data = {
           {
             question: 'A dog conditioned to salivate to a 1000 Hz tone does NOT salivate to a 500 Hz tone. This shows:',
             options: [
-              'stimulus discrimination — the dog distinguishes the CS from a dissimilar stimulus',
-              'stimulus generalization — the dog responds to similar tones',
-              'extinction — the response has been eliminated',
-              'spontaneous recovery — the response returned after a rest'
+              'stimulus discrimination — the dog tells the CS apart from a different tone',
+              'stimulus generalization — the dog responds to tones that sound like the original CS',
+              'extinction — the response to every tone has been eliminated by nonreinforcement',
+              'spontaneous recovery — the response returned after a rest, but only to the 1000 Hz tone'
             ],
             correctAnswer: 0,
             explanation: 'The dog has learned to discriminate: it responds to the specific CS (1000 Hz) but not to a sufficiently different stimulus (500 Hz). Discrimination is the opposite of generalization.'
@@ -128,7 +128,7 @@ export const psychClassicalPart4Data = {
           },
           {
             label: 'Watson conditioned Little Albert to fear a white rat. This study demonstrated:',
-            options: ['classical conditioning of emotional responses', 'operant conditioning of voluntary behavior', 'observational learning through modeling', 'biological preparedness for all fears']
+            options: ['classical conditioning of emotional responses', 'operant conditioning of voluntary behaviors', 'observational learning of fear through modeling', 'biological preparedness for snake and spider fears']
           }
         ],
         correctAnswers: ['stimulus generalization', 'stimulus discrimination', 'classical conditioning of emotional responses'],
@@ -168,10 +168,10 @@ export const psychClassicalPart4Data = {
           {
             question: 'A veteran who experienced combat develops anxiety when hearing fireworks. The veteran also becomes anxious hearing a car backfire and thunder. The anxiety response to thunder is best explained by:',
             options: [
-              'stimulus generalization — thunder sounds similar to the combat sounds (CS)',
-              'stimulus discrimination — the veteran distinguishes between different sounds',
-              'extinction — the anxiety is fading over time',
-              'higher-order conditioning — thunder was paired with fireworks'
+              'stimulus generalization — thunder resembles the explosions that served as the CS',
+              'stimulus discrimination — the veteran learns to tell thunder apart from combat sounds',
+              'extinction — the anxiety is fading and spreading to new sounds over time',
+              'higher-order conditioning — thunder was paired with fireworks, a learned CS'
             ],
             correctAnswer: 0,
             explanation: 'Thunder sounds similar to combat explosions (the original CS that was paired with danger). The veteran\'s anxiety generalizes to similar loud sounds. This is why PTSD often involves generalized triggers.'
@@ -179,10 +179,10 @@ export const psychClassicalPart4Data = {
           {
             question: 'A researcher wants to study whether Watson\'s Little Albert experiment could be replicated today. What is the MOST significant ethical barrier?',
             options: [
-              'Deliberately conditioning fear in an infant violates informed consent and causes potential lasting harm',
-              'The experiment would take too long to complete',
-              'Modern infants would not display fear responses',
-              'Institutional review boards only approve studies on adults'
+              'Deliberately conditioning fear in an infant risks lasting harm without valid consent',
+              'The months needed to condition and follow up an infant make it impractical',
+              'Modern infants are too desensitized by media to display conditioned fear',
+              'Review boards approve conditioning studies only when participants are adults'
             ],
             correctAnswer: 0,
             explanation: 'Modern ethical standards (APA guidelines) require informed consent, protection from harm, and debriefing. Intentionally conditioning a lasting fear in an infant — who cannot consent — violates multiple ethical principles. This is a key AP exam point about research ethics.'

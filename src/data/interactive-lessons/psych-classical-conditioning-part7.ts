@@ -38,7 +38,7 @@ export const psychClassicalPart7Data = {
               'involuntary, automatic responses paired with stimuli',
               'voluntary behaviors shaped by rewards and punishments',
               'learning through observation and imitation',
-              'conscious decision-making about behavior'
+              'conscious decisions that involve weighing outcomes'
             ],
             correctAnswer: 0,
             explanation: 'Classical conditioning = involuntary, automatic responses (salivation, fear, nausea) learned through stimulus-stimulus associations. Operant conditioning = voluntary behaviors shaped by consequences (reinforcement/punishment). This distinction is one of the most important on the AP exam.'
@@ -47,9 +47,9 @@ export const psychClassicalPart7Data = {
             question: 'Biological preparedness helps explain why:',
             options: [
               'taste-nausea associations form more easily than light-nausea associations',
-              'all stimuli are equally easy to condition',
-              'classical conditioning only works with food',
-              'extinction permanently erases learned associations'
+              'all stimuli are equally easy to condition, whatever the response involved',
+              'classical conditioning works only when food is used as the unconditioned stimulus',
+              'extinction permanently erases the associations an organism has learned'
             ],
             correctAnswer: 0,
             explanation: 'Biological preparedness means organisms are evolutionarily predisposed to form certain associations more easily. Taste-nausea (relevant to avoiding poisonous food) is learned faster than light-nausea (irrelevant to food safety). This challenged strict behaviorism\'s view that all associations are equally learnable.'
@@ -181,10 +181,10 @@ export const psychClassicalPart7Data = {
           {
             question: 'A student associates the smell of a particular room freshener with test anxiety because their classroom always smells like it during exams. After graduation, the student walks into a store selling the same freshener and suddenly feels anxious. Later that year, the student enters the store again and feels no anxiety. This sequence illustrates:',
             options: [
-              'conditioning (freshener → anxiety), then extinction (repeated exposure without exams reduces anxiety)',
-              'generalization (anxiety spreads to stores), then discrimination (learning stores differ from classrooms)',
+              'conditioning (freshener → anxiety), then extinction (repeated exposure without tests reduces anxiety)',
+              'generalization (anxiety spreads to stores), then discrimination (learning stores differ from exam rooms)',
               'spontaneous recovery (anxiety returned), then higher-order conditioning',
-              'biological preparedness (humans are predisposed to fear room fresheners)'
+              'higher-order conditioning (store → freshener), then generalization (anxiety spreads to other stores)'
             ],
             correctAnswer: 0,
             explanation: 'The freshener (CS) was paired with exam stress (UCS) during school, creating conditioned anxiety (CR). In the store, the CS triggered anxiety without the UCS. On the later visit, repeated exposure without exams resulted in extinction. This is a complete classical conditioning timeline.'
@@ -192,10 +192,10 @@ export const psychClassicalPart7Data = {
           {
             question: 'On an AP free-response question, a student writes: "The loud noise is the CR because it causes Albert to cry." What error did the student make?',
             options: [
-              'The loud noise is the UCS, not the CR — the noise is a stimulus that naturally triggers fear, not a learned response',
-              'The loud noise is the CS — it was paired with the rat',
-              'The loud noise is the UCR — it is the natural response',
-              'The student is correct — the loud noise is the CR'
+              'The noise is the UCS, a stimulus that naturally triggers fear, not a learned response',
+              'The noise is the CS, since it was the stimulus repeatedly paired with the rat',
+              'The noise is the UCR, the natural fear response that occurs without learning',
+              'The student is correct; the noise is the CR because Albert learned to cry at it'
             ],
             correctAnswer: 0,
             explanation: 'The loud noise is the UCS (unconditioned stimulus) — it naturally causes fear without any learning. The student confused stimulus (something in the environment) with response (what the organism does). The CR is Albert\'s fear/crying to the white rat, not to the noise. This is one of the most common errors on AP exams.'

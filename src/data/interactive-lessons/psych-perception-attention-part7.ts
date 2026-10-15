@@ -54,21 +54,21 @@ This connects to:
           {
             question: 'Which of the following BEST illustrates how perception is an active, constructive process rather than a passive recording?',
             options: [
-              'Our retinas accurately detect light waves',
-              'We perceive a white shirt as white even under blue lighting — our brain computes the "real" color by factoring out the illumination',
-              'Our pupils dilate in darkness to let in more light',
-              'Sound waves are converted to neural signals in the cochlea'
+              'Our retinas accurately detect light waves and pass a faithful copy of them to the brain',
+              'A white shirt looks white under blue light as the brain factors out the illumination',
+              'Our pupils dilate in darkness, automatically letting more light reach the retina',
+              'Sound waves are converted to neural signals by hair cells in the cochlea'
             ],
             correctAnswer: 1,
             explanation: 'Color constancy perfectly demonstrates constructive perception. Your retina receives BLUE light reflected from the shirt (physical reality), but your brain COMPUTES that the shirt is white by factoring out the blue illumination. This is active construction — your brain creates a perception that differs from the raw sensory data to give you a more useful representation of the world. The retina, pupil, and cochlea options describe SENSATION (passive detection), not perception (active interpretation).'
           },
           {
-            question: 'An AP Psychology FRQ asks: "Explain how TWO concepts from perception and attention relate to eyewitness testimony reliability." Which pair would earn the MOST credit?',
+            question: 'A free-response practice prompt asks: "Explain how TWO concepts from perception and attention relate to eyewitness testimony reliability." Which pair would earn the MOST credit?',
             options: [
               'Size constancy and shape constancy',
               'Inattentional blindness and perceptual set',
               'Motion parallax and convergence',
-              'The Gestalt principles of proximity and similarity'
+              'Perceptual constancy and Gestalt proximity'
             ],
             correctAnswer: 1,
             explanation: 'Inattentional blindness + perceptual set is the strongest pair for eyewitness testimony: (1) Inattentional blindness — a witness focused on one aspect (weapon focus) may miss other details (suspect\'s face, clothing). (2) Perceptual set — the witness\'s expectations, emotions, and schemas influence what they perceive and later recall (e.g., perceiving a suspect as taller/more threatening due to fear). The other options are real perception concepts but don\'t directly connect to eyewitness reliability.'
@@ -182,10 +182,10 @@ This connects to:
           {
             question: 'A researcher shows participants an ambiguous figure that could be seen as either a duck or a rabbit. Before viewing, Group A is told "You\'ll see an animal that swims," and Group B is told "You\'ll see an animal that hops." Group A overwhelmingly reports seeing a duck, while Group B reports seeing a rabbit. This experiment demonstrates the interaction between:',
             options: [
-              'Bottom-up processing only — the figure determines what is seen',
-              'Top-down processing (verbal context created expectations) and perceptual set (readiness to see one thing over another)',
-              'Inattentional blindness and change blindness',
-              'Size constancy and shape constancy'
+              'Bottom-up processing and feature detection, with the figure alone fixing what is seen',
+              'Top-down processing and perceptual set, with verbal cues priming one reading of it',
+              'Inattentional blindness and change blindness, with each group missing part of the figure',
+              'Size constancy and shape constancy, with each group judging the figure\'s form differently'
             ],
             correctAnswer: 1,
             explanation: 'The verbal instructions created a TOP-DOWN expectation (swim → duck, hop → rabbit) that resulted in a PERCEPTUAL SET — a readiness to perceive one interpretation over the other. The sensory data (bottom-up) is identical for both groups, but the perception differs because of the expectations created by the instructions. This is a classic demonstration that perception = sensory data + prior knowledge/expectations. Top-down processing and perceptual set work together here.'
@@ -193,9 +193,9 @@ This connects to:
           {
             question: 'Which of the following is the BEST evidence that perceptual organization has INNATE components rather than being entirely learned?',
             options: [
-              'Adults from all cultures experience the Müller-Lyer illusion (even if strength varies)',
-              'Newborn infants show preferential looking toward face-like patterns over scrambled patterns within hours of birth',
-              'Experienced radiologists spot tumors faster than students',
+              'Adults from all cultures experience the Müller-Lyer illusion, though its strength varies',
+              'Newborns look longer at face-like patterns than at scrambled ones within hours of birth',
+              'Experienced radiologists spot tumors on scans faster than medical students do',
               'People from carpentered environments are more susceptible to certain illusions'
             ],
             correctAnswer: 1,

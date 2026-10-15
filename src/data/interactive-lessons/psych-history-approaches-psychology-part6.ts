@@ -153,10 +153,10 @@ A researcher wants to know if sleep deprivation affects memory. She randomly ass
           {
             question: 'A school principal notices that students who participate in after-school sports have higher GPAs. She concludes that sports participation improves academic performance. What is the flaw in her reasoning?',
             options: [
-              'She is inferring causation from a correlational observation — a third variable like motivation could explain both',
-              'Her sample size is too small to draw conclusions',
-              'She should have used a double-blind procedure',
-              'She forgot to get IRB approval for her observation'
+              'She infers causation from a correlation — motivation could explain both',
+              'Her sample is too small — one school cannot support any conclusion',
+              'She needed a double-blind procedure — her own bias produced the link',
+              'She lacked IRB approval — ethics violations invalidate her finding'
             ],
             correctAnswer: 0,
             explanation: 'This is a classic correlation ≠ causation error. Students who play sports may also be more disciplined, motivated, or from families that emphasize academics. Without random assignment to "sports" vs. "no sports" groups, she cannot claim sports CAUSE better grades.'

@@ -41,10 +41,10 @@ Constancies rely on **context** — your brain compares the target object to sur
           {
             question: 'You look at a coin from directly above (it appears circular) and then from an angle (the retinal image is now an ellipse). Yet you still perceive it as circular. This is:',
             options: [
-              'Size constancy — the coin appears the same size',
-              'Shape constancy — the coin appears the same shape despite viewing angle changes',
-              'Color constancy — the coin appears the same color',
-              'The Gestalt principle of closure — you fill in the missing round shape'
+              'Size constancy — the coin\'s perceived size stays the same as the angle changes',
+              'Shape constancy — the coin keeps looking round even as the viewing angle changes',
+              'Color constancy — the coin\'s perceived color stays the same under new lighting',
+              'The Gestalt principle of closure — you fill in the hidden part of the circle'
             ],
             correctAnswer: 1,
             explanation: 'Shape constancy allows us to perceive objects as maintaining their actual shape even when the retinal image changes due to viewing angle. The coin\'s retinal image is elliptical when viewed at an angle, but our brain "knows" the coin is round and perceives it accordingly. This is NOT closure (no gaps to fill) or size constancy (size isn\'t changing).'
@@ -52,10 +52,10 @@ Constancies rely on **context** — your brain compares the target object to sur
           {
             question: 'In the viral photo debate about "The Dress" (2015), people disagreed about whether a dress was blue/black or white/gold. This disagreement is best explained by differences in:',
             options: [
-              'Visual acuity — some people had better vision',
-              'Color constancy — different brains made different assumptions about the illumination',
-              'Retinal disparity — each eye saw different colors',
-              'The Gestalt principle of similarity — people grouped colors differently'
+              'Visual acuity — some viewers resolved the fine detail of the fabric more sharply',
+              'Color constancy — brains made different assumptions about the room\'s illumination',
+              'Retinal disparity — each eye registered a slightly different color of the dress',
+              'The Gestalt principle of similarity — people grouped the stripes by color differently'
             ],
             correctAnswer: 1,
             explanation: 'The Dress illusion perfectly illustrates color constancy. Our brains must "subtract" the illumination color to determine the object\'s true color. Some brains assumed the dress was in shadow (blue illumination → subtract blue → perceive white/gold). Others assumed bright yellowish light (→ subtract yellow → perceive blue/black). Same retinal image, different color constancy assumptions = different perceived colors!'
@@ -164,10 +164,10 @@ Illusions reveal HOW our perceptual system works by showing when it fails. Each 
           {
             question: 'Researchers found that the Müller-Lyer illusion is significantly weaker among the Zulu people of South Africa, who traditionally live in round dwellings without right angles. This finding BEST supports the idea that:',
             options: [
-              'The Müller-Lyer illusion is entirely innate',
-              'Perceptual experiences with carpentered environments (right angles, corners) influence susceptibility to the illusion',
-              'The Zulu people have superior visual acuity',
-              'Visual illusions are entirely cultural and have no biological basis'
+              'The Müller-Lyer illusion is entirely innate and unaffected by where a person grows up',
+              'Experience with carpentered, corner-filled environments shapes susceptibility to the illusion',
+              'The Zulu people have superior visual acuity that lets them judge line length accurately',
+              'Visual illusions are entirely cultural and have no basis in how the brain processes depth'
             ],
             correctAnswer: 1,
             explanation: 'Gregory\'s theory suggests the Müller-Lyer illusion works because outward/inward arrows resemble corners of rectangular buildings. People who grow up in carpentered environments (with many right angles) develop stronger associations between arrow shapes and depth, making the illusion more powerful. The Zulu, with round dwellings, have less experience with these corner cues, so the illusion is weaker. This doesn\'t mean the illusion is entirely cultural — it\'s BOTH biological (basic depth processing) and experiential (carpentered environment strengthens the effect).'

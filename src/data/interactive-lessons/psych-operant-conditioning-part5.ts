@@ -41,10 +41,10 @@ Shaping questions appear on nearly every AP exam. You need to understand the pro
           {
             question: 'A mother wants to teach her toddler to say "mama." She first reinforces any "mmm" sound, then only "ma," then only "mama." This process is called:',
             options: [
-              'Classical conditioning — associating sounds with reinforcement',
-              'Shaping — reinforcing successive approximations toward the target behavior',
-              'Chaining — linking multiple behaviors in sequence',
-              'Negative reinforcement — removing frustration when the child speaks'
+              'Classical conditioning — pairing the sounds with a reinforcing stimulus',
+              'Shaping — reinforcing successive approximations toward the target',
+              'Chaining — linking separate sounds into a sequence of reinforced behaviors',
+              'Negative reinforcement — removing the child\'s frustration whenever she speaks'
             ],
             correctAnswer: 1,
             explanation: 'The mother reinforces closer and closer attempts (mmm → ma → mama). Each reinforced step is a successive approximation toward the final target behavior. This is shaping — the most common method for teaching new behaviors.'
@@ -52,10 +52,10 @@ Shaping questions appear on nearly every AP exam. You need to understand the pro
           {
             question: 'In a psychiatric hospital, patients earn tokens for making their beds and attending therapy. They exchange tokens for TV time and snacks. This system is called a:',
             options: [
-              'Primary reinforcement system',
-              'Variable-ratio schedule',
-              'Token economy — secondary reinforcers exchanged for primary reinforcers',
-              'Classical conditioning program'
+              'Primary reinforcement system — patients earn rewards that are innately satisfying',
+              'Variable-ratio schedule — tokens arrive after unpredictable numbers of tasks',
+              'Token economy — secondary reinforcers traded for primary reinforcers',
+              'Classical conditioning program — tokens are paired with reflexes'
             ],
             correctAnswer: 2,
             explanation: 'Tokens are secondary (conditioned) reinforcers — they have no inherent value but can be exchanged for primary reinforcers (food, privileges). Token economies are widely used in schools, hospitals, and rehabilitation programs.'
@@ -185,10 +185,10 @@ Token economies work because they bridge the gap between behavior and delayed re
           {
             question: 'A kindergarten teacher wants to teach students to raise their hands before speaking. She first praises ANY student who lifts their arm at all, then only praises students who raise their hand high, and finally only praises students who raise their hand and wait to be called on. What principle is she using?',
             options: [
-              'Chaining — she is linking multiple behaviors together',
-              'Shaping — she is reinforcing successive approximations toward the target behavior',
-              'Negative reinforcement — she is removing speaking out of turn',
-              'Fixed-ratio reinforcement — she reinforces every 3rd hand raise'
+              'Chaining — she is linking several separate behaviors into a sequence',
+              'Shaping — reinforcing successive approximations toward the target behavior',
+              'Negative reinforcement — she removes the noise of students calling out',
+              'Fixed-ratio reinforcement — she praises every third raised hand'
             ],
             correctAnswer: 1,
             explanation: 'The teacher is reinforcing progressively closer approximations: any arm lift → high hand raise → hand raise + waiting. Each step gets closer to the target behavior. She stops reinforcing earlier approximations once students master the next step. This is classic shaping.'
@@ -196,10 +196,10 @@ Token economies work because they bridge the gap between behavior and delayed re
           {
             question: 'A behavioral therapy program for a child with autism uses tokens (stickers) earned for appropriate social behaviors. The child exchanges 10 stickers for 15 minutes of iPad time. Which operant conditioning concepts are being applied?',
             options: [
-              'Token economy (stickers as secondary reinforcers) and fixed-ratio schedule (every 10 stickers)',
-              'Classical conditioning (associating stickers with iPad) and continuous reinforcement',
-              'Negative reinforcement (removing stickers reduces behavior) and variable-ratio schedule',
-              'Shaping (successive approximations) and primary reinforcement (iPad time)'
+              'Token economy (stickers as secondary reinforcers) and fixed-ratio schedule (set sticker count)',
+              'Classical conditioning (pairing tokens with the iPad) and continuous reinforcement (every behavior)',
+              'Negative reinforcement (removing stickers to reduce behavior) and variable-ratio schedule (unpredictable)',
+              'Shaping (successive approximations) and primary reinforcement (tokens as innate rewards)'
             ],
             correctAnswer: 0,
             explanation: 'The stickers are secondary reinforcers in a token economy — they have no inherent value but can be exchanged for reinforcers (iPad time). The exchange rate of 10 stickers makes this a fixed-ratio schedule (FR-10). iPad time serves as the backup reinforcer. This is a textbook ABA application.'

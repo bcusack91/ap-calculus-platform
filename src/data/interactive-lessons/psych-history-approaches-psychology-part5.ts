@@ -42,10 +42,10 @@ export const psychHistoryApproachesPart5Data = {
           {
             question: 'Informed consent requires that participants:',
             options: [
-              'Sign a legal contract',
-              'Know what the study involves before participating',
-              'Are paid for their time',
-              'Have a psychology background'
+              'Sign a legal contract waiving their right to withdraw',
+              'Know what the study involves before they agree to take part',
+              'Are paid fairly for the time they spend in the study',
+              'Have the research background to judge its methods'
             ],
             correctAnswer: 1,
             explanation: 'Informed consent means participants must be told what the study involves and voluntarily agree to participate before the study begins.'
@@ -113,7 +113,7 @@ Animal research has contributed to understanding of:
           },
           {
             label: 'The Milgram study raised concerns about ___',
-            options: ['animal welfare', 'participant distress', 'data fabrication', 'informed consent']
+            options: ['animal welfare', 'participant distress', 'data fabrication', 'sampling bias']
           }
         ],
         correctAnswers: ['IRB', 'withdraw', 'participant distress'],
@@ -165,9 +165,9 @@ Animal research has contributed to understanding of:
           {
             question: 'A psychology student reads that Zimbardo\'s Stanford prison experiment was halted early. What was the primary ethical concern?',
             options: [
-              'Participants were not paid for their time',
-              'Guards and prisoners experienced significant psychological harm and distress',
-              'The study used deception without debriefing',
+              'Participants were never paid the full wages they had been promised',
+              'Guards and inmates suffered serious emotional harm and distress',
+              'The study used deception and never debriefed the participants',
               'The results could not be replicated'
             ],
             correctAnswer: 1,

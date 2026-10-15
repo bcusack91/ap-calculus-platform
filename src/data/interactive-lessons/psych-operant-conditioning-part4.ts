@@ -43,9 +43,9 @@ Behaviors reinforced on a partial schedule are MORE resistant to extinction than
             question: 'A factory worker is paid for every 20 widgets they assemble. This is a:',
             options: [
               'Fixed-interval schedule — payment comes at regular time intervals',
-              'Variable-ratio schedule — the number of widgets varies',
-              'Fixed-ratio schedule — reinforcement comes after a set number of responses',
-              'Variable-interval schedule — payment timing is unpredictable'
+              'Variable-ratio schedule — the number of widgets per payment varies',
+              'Fixed-ratio schedule — pay follows a set number of responses',
+              'Variable-interval schedule — payment arrives after unpredictable times'
             ],
             correctAnswer: 2,
             explanation: 'The worker is reinforced after a FIXED NUMBER (20) of responses (widgets). Fixed = predictable/set, Ratio = based on number of responses. This is a fixed-ratio (FR-20) schedule.'
@@ -53,10 +53,10 @@ Behaviors reinforced on a partial schedule are MORE resistant to extinction than
           {
             question: 'Which schedule of reinforcement produces the HIGHEST resistance to extinction?',
             options: [
-              'Continuous reinforcement — reinforcing every response',
-              'Fixed-interval — reinforcing after set time periods',
+              'Continuous reinforcement — reinforcing every single response the learner makes',
+              'Fixed-interval — reinforcing the first response after a set time period',
               'Variable-ratio — reinforcing after unpredictable numbers of responses',
-              'Fixed-ratio — reinforcing after set numbers of responses'
+              'Fixed-ratio — reinforcing after a set number of responses'
             ],
             correctAnswer: 2,
             explanation: 'Variable-ratio schedules produce the highest, steadiest response rates and greatest resistance to extinction. This is why gambling is so addictive — you never know which pull of the lever will pay off, so you keep going.'
@@ -175,10 +175,10 @@ Best strategy: start with continuous reinforcement to teach a new behavior, then
           {
             question: 'A fisherman casts his line repeatedly. Sometimes he catches a fish after 3 casts, sometimes after 20, sometimes after 8. He keeps fishing for hours despite long stretches without catching anything. This pattern is best explained by:',
             options: [
-              'Fixed-interval reinforcement — he fishes at regular time intervals',
-              'Continuous reinforcement — he catches a fish every time he casts',
-              'Variable-ratio reinforcement — reinforcement comes after an unpredictable number of responses, producing high persistence',
-              'Fixed-ratio reinforcement — he catches a fish every 10 casts'
+              'Fixed-interval reinforcement — he fishes at regular, timed intervals',
+              'Continuous reinforcement — every cast he makes is followed by a catch',
+              'Variable-ratio reinforcement — a catch follows an unpredictable number of attempts',
+              'Fixed-ratio reinforcement — he catches a fish after every tenth cast'
             ],
             correctAnswer: 2,
             explanation: 'The fisherman is reinforced (catches a fish) after an unpredictable NUMBER of casts. This is a variable-ratio schedule. The unpredictability is why he persists — he can never be sure the NEXT cast won\'t be the one. VR schedules produce the highest response rates and greatest resistance to extinction.'
@@ -186,10 +186,10 @@ Best strategy: start with continuous reinforcement to teach a new behavior, then
           {
             question: 'A student procrastinates after each exam, then crams intensely as the next exam approaches. This "study, slack, cram" pattern repeats all semester. Which schedule of reinforcement explains this pattern?',
             options: [
-              'Variable-ratio — studying is reinforced after unpredictable numbers of study sessions',
-              'Fixed-interval — the grade (reinforcement) comes after a fixed time period, producing a scalloped response pattern',
-              'Continuous reinforcement — every study session is immediately reinforced',
-              'Variable-interval — exams occur at unpredictable times'
+              'Variable-ratio — studying pays off after an unpredictable number of sessions',
+              'Fixed-interval — the grade arrives after a set time, producing scalloped responding',
+              'Continuous reinforcement — every study session is immediately rewarded with a grade',
+              'Variable-interval — exams arrive at unpredictable times, producing steady studying'
             ],
             correctAnswer: 1,
             explanation: 'Exams occur at predictable intervals (every few weeks = fixed-interval). The student shows the classic FI "scallop" pattern: low responding right after reinforcement (slacking after an exam), then accelerating as the next reinforcement approaches (cramming before the next exam). This is one of the most commonly tested FI examples.'

@@ -49,10 +49,10 @@ This section integrates ALL thinking and problem-solving concepts into a decisio
           {
             question: 'A doctor diagnoses a patient with a rare disease after seeing two cases last week, even though the symptoms also match a much more common condition. The doctor\'s judgment is MOST influenced by:',
             options: [
-              'The representativeness heuristic — the symptoms match the rare disease prototype',
-              'The availability heuristic — the recent cases make the rare disease come to mind easily, overriding base rate information',
-              'Anchoring bias — the first diagnosis anchors subsequent judgments',
-              'Confirmation bias — the doctor only looks for symptoms of the rare disease'
+              'The representativeness heuristic — the symptoms match the textbook prototype of the rare disease',
+              'The availability heuristic — two recent encounters make the rare disease easy to recall',
+              'Anchoring bias — the doctor\'s first impression anchors every later judgment about the case',
+              'Confirmation bias — the doctor searches only for symptoms that would confirm the rare disease'
             ],
             correctAnswer: 1,
             explanation: 'The KEY is "after seeing two cases last week" — RECENCY makes the rare disease easy to recall, inflating the doctor\'s estimate of its likelihood. This is availability, not representativeness. If the question said "the symptoms perfectly match the textbook description of the rare disease," THAT would be representativeness (matching a prototype). Here, it\'s the RECENT experience that biases the judgment. Note: this also involves base rate neglect — the common condition should be considered first, but available recent examples override the base rate.'
@@ -188,23 +188,23 @@ Real decisions often involve MULTIPLE biases at once:
       exercise: {
         questions: [
           {
-            question: 'A startup founder has invested \\$500,000 and two years into a product that market research now shows has no viable customer base. She decides to invest another \\$200,000(saying "We\'ve come too far to quit now." Later, she is also overheard saying "I\'m 90% confident this will succeed." Which TWO biases are MOST evident?',
+            question: 'A startup founder has invested \\$500,000 and two years into a product that market research now shows has no viable customer base. She decides to invest another \\$200,000, saying "We\'ve come too far to quit now." Later, she is also overheard saying "I\'m 90% confident this will succeed." Which TWO biases are MOST evident?',
             options: [
               'Availability heuristic and anchoring bias',
-              'Sunk cost fallacy ("We\'ve come too far") and overconfidence ("90% confident" despite evidence suggesting failure)',
+              'Sunk cost fallacy and overconfidence',
               'Framing effect and representativeness heuristic',
               'Confirmation bias and mental set'
             ],
             correctAnswer: 1,
-            explanation: 'Two biases work together: (1) SUNK COST FALLACY — "We\'ve come too far to quit" explicitly references past investment (time, money) as the reason to continue, rather than evaluating future prospects. The $500,000 is gone whether she continues or not. (2) OVERCONFIDENCE — claiming 90% confidence despite market research showing no viable customers. Her certainty dramatically exceeds what the evidence supports. These two biases compound: the sunk cost fallacy keeps her invested, and overconfidence prevents her from accurately assessing the risk.'
+            explanation: 'Two biases work together: (1) SUNK COST FALLACY — "We\'ve come too far to quit" explicitly references past investment (time, money) as the reason to continue, rather than evaluating future prospects. The \\$500,000 is gone whether she continues or not. (2) OVERCONFIDENCE — claiming 90% confidence despite market research showing no viable customers. Her certainty dramatically exceeds what the evidence supports. These two biases compound: the sunk cost fallacy keeps her invested, and overconfidence prevents her from accurately assessing the risk.'
           },
           {
             question: 'In a research study, participants are asked: "Is the population of Chicago more or less than 20 million?" and then asked to estimate Chicago\'s actual population. A second group is asked "more or less than 1 million?" and then estimates. What pattern will the researchers MOST likely find?',
             options: [
-              'Both groups will give accurate estimates because they know the anchor is arbitrary',
-              'The "20 million" group will estimate HIGHER than the "1 million" group, even though both anchors are clearly wrong — demonstrating anchoring bias',
-              'The "20 million" group will estimate LOWER because they overcompensate for the high anchor',
-              'Results will be random because anchoring only works with realistic numbers'
+              'The "20 million" group will match the other group, because both anchors are arbitrary',
+              'The "20 million" group will estimate higher than the "1 million" group, though both anchors are wrong',
+              'The "20 million" group will estimate lower, because people overcorrect for an implausible anchor',
+              'Estimates will not differ, because anchoring works only when the anchor number is realistic'
             ],
             correctAnswer: 1,
             explanation: 'Anchoring bias operates even when anchors are CLEARLY arbitrary or wrong. The "20 million" anchor will pull estimates UP, while the "1 million" anchor will pull estimates DOWN — even though participants KNOW these numbers are extreme. This is the same finding as Tversky & Kahneman\'s wheel-of-fortune study: a random number on a spinning wheel influenced estimates about African UN membership. Anchoring is remarkably robust — knowing about it barely reduces its influence.'

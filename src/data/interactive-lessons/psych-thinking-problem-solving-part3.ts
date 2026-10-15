@@ -30,7 +30,7 @@ How do we make choices? Research by Kahneman and Tversky revealed that human dec
 |-------|----------|----------|
 | **Gain frame** | "200 people will be SAVED" | "1/3 chance ALL 600 saved, 2/3 chance NO ONE saved" |
 | **Loss frame** | "400 people will DIE" | "1/3 chance NO ONE dies, 2/3 chance ALL 600 die" |
-| **Result** | Gain frame → people choose the CERTAIN option (A) | Loss frame → people choose the RISKY option (B) |
+| **Result** | Gain frame → people choose the CERTAIN option (Option A) | Loss frame → people choose the RISKY option (Option B) |
 
 > **The options are mathematically IDENTICAL** — but framing changes the decision. We are risk-averse with gains ("let's keep what we have") and risk-seeking with losses ("let's gamble to avoid losing"). This is a cornerstone finding of behavioral economics.
       `
@@ -46,10 +46,10 @@ How do we make choices? Research by Kahneman and Tversky revealed that human dec
           {
             question: 'A doctor tells Patient A: "This surgery has a 90% survival rate." She tells Patient B: "This surgery has a 10% mortality rate." Both patients receive identical information, but Patient B is more hesitant. This BEST illustrates:',
             options: [
-              'Loss aversion — Patient B fears the loss more than Patient A values the gain',
-              'The framing effect — the way the information is presented changes the response, even though the content is identical',
-              'Overconfidence — Patient A overestimates the surgery\'s success',
-              'The sunk cost fallacy — Patient B considers past medical costs'
+              'Loss aversion — Patient B weighs the possible loss more than Patient A weighs the gain',
+              'The framing effect — the same facts worded differently change the response',
+              'Overconfidence — Patient A overestimates the surgery\'s chance of success',
+              'The sunk cost fallacy — Patient B is weighing the money already spent on medical care'
             ],
             correctAnswer: 1,
             explanation: 'This is a textbook framing effect: "90% survival" and "10% mortality" are mathematically IDENTICAL, but "mortality" (loss frame) triggers more negative feelings than "survival" (gain frame). The information is the same — only the PRESENTATION changes. This is why the framing effect matters in real life: doctors, politicians, and advertisers can influence decisions simply by choosing how to present identical information.'
@@ -57,10 +57,10 @@ How do we make choices? Research by Kahneman and Tversky revealed that human dec
           {
             question: 'A person continues watching a terrible movie because they already paid \\$15 for the ticket, even though leaving and doing something enjoyable would make them happier. This BEST illustrates:',
             options: [
-              'The framing effect — the ticket price frames the experience',
-              'Loss aversion — the person wants to avoid losing the \\$15',
-              'The sunk cost fallacy — the person continues because of past investment that can\'t be recovered',
-              'Overconfidence — the person believes the movie will get better'
+              'The framing effect — the ticket price frames how enjoyable the movie seems to be',
+              'Loss aversion — the person wants to avoid the unpleasant feeling of losing the \\$15',
+              'The sunk cost fallacy — an unrecoverable past cost is driving the choice',
+              'Overconfidence — the person is overly sure the movie will improve before it ends'
             ],
             correctAnswer: 2,
             explanation: 'Classic sunk cost fallacy: the \\$15 is already spent (sunk) — it\'s gone whether you stay or leave. The rational choice is to leave and do something enjoyable, since staying doesn\'t recover the money. But people feel they must "get their money\'s worth," which leads to continuing an activity that provides no further benefit. The key test: "Would I start this activity NOW if I hadn\'t already invested?" If no, you\'re falling for the sunk cost fallacy.'
@@ -172,10 +172,10 @@ How do we make choices? Research by Kahneman and Tversky revealed that human dec
           {
             question: 'A researcher finds that people will drive 20 minutes to save \\$10 on a \\$25 calculator but will NOT drive 20 minutes to save \\$10 on a \\$500 jacket. This irrational difference is BEST explained by:',
             options: [
-              'The framing effect — the calculator saving is framed as larger',
-              'Diminishing sensitivity — \\$10 feels like a bigger savings on a \\$25 item than on a \\$500 item, even though the actual savings is identical',
-              'Loss aversion — people fear losing the money more for small purchases',
-              'Overconfidence — people overestimate the value of the calculator savings'
+              'The framing effect — the calculator discount is described as a bigger deal than the jacket\'s',
+              'Diminishing sensitivity — \\$10 feels larger relative to \\$25 than relative to \\$500',
+              'Loss aversion — people fear losing money more on small purchases than on large ones',
+              'Overconfidence — people overestimate how much the calculator savings are really worth'
             ],
             correctAnswer: 1,
             explanation: 'This is diminishing sensitivity from prospect theory. \\$10 is \\$10 regardless of the original price — 20 minutes of driving is the same tradeoff. But people evaluate gains relative to a reference point: \\$10 off \\$25 = 40% savings (feels big). \\$10 off \\$500 = 2% savings (feels tiny). The ABSOLUTE value (\\$10) is the same, but the RELATIVE value (percentage of original) differs. This violates rational economic theory but reflects how humans actually process value.'

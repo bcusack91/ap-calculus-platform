@@ -40,10 +40,10 @@ Operant conditioning is one of the most heavily tested topics on the AP exam. Yo
           {
             question: 'Thorndike\'s Law of Effect states that:',
             options: [
-              'All behavior is reflexive and involuntary',
+              'Behaviors are learned only when a neutral stimulus is paired with a reflex',
               'Behaviors followed by satisfying consequences are more likely to be repeated',
-              'Learning occurs only through observation of others',
-              'Punishment is always more effective than reinforcement'
+              'Learning occurs mainly by watching and imitating what others are rewarded for',
+              'Responses followed by punishment are repeated more often than rewarded ones'
             ],
             correctAnswer: 1,
             explanation: 'Thorndike placed cats in puzzle boxes and observed that behaviors leading to escape (satisfying consequence) were repeated faster in subsequent trials. This principle — that consequences shape future behavior — became the foundation for operant conditioning.'
@@ -51,10 +51,10 @@ Operant conditioning is one of the most heavily tested topics on the AP exam. Yo
           {
             question: 'What is the key difference between classical and operant conditioning?',
             options: [
-              'Classical uses punishment; operant uses reinforcement',
-              'Classical involves voluntary behavior; operant involves involuntary reflexes',
+              'Classical involves rewards and punishments for behavior; operant involves pairing a neutral stimulus with a reflex',
+              'Classical involves voluntary behaviors chosen by the learner; operant involves involuntary reflexes elicited by stimuli',
               'Classical involves involuntary responses to stimuli; operant involves voluntary behaviors shaped by consequences',
-              'There is no meaningful difference between them'
+              'Classical involves learning in a single trial; operant involves gradual learning that requires many repeated trials'
             ],
             correctAnswer: 2,
             explanation: 'Classical conditioning pairs stimuli to produce involuntary responses (like salivation or fear). Operant conditioning shapes voluntary behaviors through consequences (reinforcement and punishment). This distinction is one of the most common AP exam questions.'
@@ -130,7 +130,7 @@ Skinner identified four types of consequences that shape behavior. You'll study 
         dropdowns: [
           {
             label: 'Thorndike studied learning using a ___',
-            options: ['Skinner box', 'puzzle box', 'maze', 'mirror']
+            options: ['Skinner box', 'puzzle box', 'maze', 'Bobo doll']
           },
           {
             label: 'Operant conditioning shapes ___ behavior through consequences',
@@ -138,7 +138,7 @@ Skinner identified four types of consequences that shape behavior. You'll study 
           },
           {
             label: 'Skinner\'s key contribution was precisely controlling ___',
-            options: ['stimuli pairing', 'reinforcement delivery', 'brain chemistry', 'dream analysis']
+            options: ['stimuli pairing', 'reinforcement delivery', 'reflex elicitation', 'model imitation']
           }
         ],
         correctAnswers: ['puzzle box', 'voluntary', 'reinforcement delivery'],
@@ -176,23 +176,23 @@ Skinner identified four types of consequences that shape behavior. You'll study 
       exercise: {
         questions: [
           {
-            question: 'A dog learns to sit on command because it receives a treat each time. A different dog flinches at the sound of a loud noise. Which type of conditioning explains each behavior?',
+            question: 'A dog learns to sit on command because it receives a treat each time. A different dog flinches whenever it sees a rolled-up newspaper, which was once paired with a loud bang. Which type of conditioning explains each behavior?',
             options: [
-              'Sitting = operant conditioning (voluntary behavior shaped by a consequence); Flinching = classical conditioning (involuntary reflex)',
-              'Both are operant conditioning because both involve learning',
-              'Sitting = classical conditioning; Flinching = operant conditioning',
-              'Neither involves conditioning — they are instinctive behaviors'
+              'Sitting is operant conditioning; flinching is classical conditioning',
+              'Both are operant conditioning, since each behavior changed through learning',
+              'Sitting is classical conditioning; flinching is operant conditioning',
+              'Both are classical conditioning, since each is triggered by a stimulus'
             ],
             correctAnswer: 0,
-            explanation: 'Sitting on command is a voluntary behavior reinforced by a treat (operant conditioning). Flinching at a loud noise is an involuntary reflex triggered by a stimulus (classical conditioning). The voluntary vs. involuntary distinction is the clearest way to differentiate the two types.'
+            explanation: 'Sitting on command is a voluntary behavior strengthened by a consequence (the treat), so it is operant conditioning. Flinching at the newspaper is an involuntary response to a stimulus that was paired with a loud bang (newspaper = CS, flinch = CR), so it is classical conditioning. The voluntary vs. involuntary distinction is the clearest way to tell the two types apart.'
           },
           {
             question: 'Thorndike observed that his cats escaped the puzzle box faster with each trial. According to the Law of Effect, why?',
             options: [
-              'The cats were classically conditioned to associate the box with food',
-              'The successful escape behavior was "stamped in" because it was followed by a satisfying consequence',
-              'The cats observed other cats escaping and imitated them',
-              'The cats\' reflexes improved through physical practice'
+              'The cats paired the closed box with food through classical conditioning',
+              'The escape behavior was "stamped in" by the satisfying consequence that followed it',
+              'The cats watched other cats escape and then imitated the latch-opening',
+              'The cats\' paw reflexes grew faster and stronger through physical practice'
             ],
             correctAnswer: 1,
             explanation: 'The Law of Effect states that behaviors followed by satisfying consequences (escape + food) are strengthened and repeated, while behaviors followed by unsatisfying consequences weaken. The cats\' random scratching decreased while the successful latch-opening behavior increased — it was "stamped in" by its favorable outcome.'

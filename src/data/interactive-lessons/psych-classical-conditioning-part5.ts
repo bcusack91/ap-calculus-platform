@@ -35,10 +35,10 @@ export const psychClassicalPart5Data = {
           {
             question: 'Garcia and Koelling found that rats easily learned to associate taste (but not lights/sounds) with nausea. This finding is significant because it shows:',
             options: [
-              'biological preparedness — organisms are predisposed to associate certain stimuli more easily than others',
-              'stimulus generalization — rats respond to all stimuli equally',
-              'extinction — the taste aversion faded over time',
-              'higher-order conditioning — taste was paired with another CS'
+              'biological preparedness — evolution makes some stimulus pairings far quicker to learn',
+              'stimulus generalization — rats spread the nausea response to every cue in the cage',
+              'extinction — the taste aversion faded once the nausea stopped being paired with it',
+              'higher-order conditioning — taste was linked to nausea through a previously learned CS'
             ],
             correctAnswer: 0,
             explanation: 'Garcia\'s research demonstrated biological preparedness: animals are evolutionarily predisposed to associate certain CS-UCS pairings (taste-nausea) more easily than others (light-nausea). This challenged the behaviorist assumption that any stimulus could be equally conditioned.'
@@ -46,13 +46,13 @@ export const psychClassicalPart5Data = {
           {
             question: 'A therapist treats a client\'s dog phobia by teaching the client deep relaxation, then gradually presenting images of increasingly threatening dogs while maintaining relaxation. This technique is:',
             options: [
-              'systematic desensitization — pairing relaxation with the feared stimulus to replace fear',
-              'flooding — immediate full exposure to the feared stimulus',
+              'systematic desensitization — relaxation is paired with the feared stimulus',
+              'flooding — immediate, prolonged exposure to the most feared stimulus with no escape',
               'aversion therapy — pairing an unpleasant stimulus with an unwanted behavior',
-              'extinction — simply removing the UCS'
+              'extinction — the feared stimulus is shown repeatedly with no relaxation training'
             ],
             correctAnswer: 0,
-            explanation: 'Systematic desensitization uses counterconditioning: the therapist replaces the fear response (CR) with a relaxation response by gradually pairing the feared object (CS) with deep relaxation (new UCS). The key elements: relaxation training + gradual exposure (anxiety hierarchy).'
+            explanation: 'Systematic desensitization uses counterconditioning: the therapist replaces the fear response (CR) with relaxation, a response incompatible with fear, by gradually pairing the feared object (CS) with deep relaxation. The key elements: relaxation training + gradual exposure (anxiety hierarchy). Flooding skips the gradual hierarchy, and plain extinction involves no relaxation training at all.'
           }
         ]
       }
@@ -122,18 +122,18 @@ export const psychClassicalPart5Data = {
         dropdowns: [
           {
             label: 'A car commercial pairs the car with an attractive setting and exciting music. This uses:',
-            options: ['operant conditioning', 'classical conditioning in advertising', 'observational learning', 'cognitive restructuring']
+            options: ['operant conditioning', 'classical conditioning', 'observational learning', 'cognitive restructuring']
           },
           {
             label: 'Taste aversion can form after just one CS-UCS pairing. This is called:',
-            options: ['multi-trial learning', 'one-trial learning', 'systematic desensitization', 'higher-order conditioning']
+            options: ['latent learning', 'one-trial learning', 'systematic desensitization', 'higher-order conditioning']
           },
           {
             label: 'Garcia found that rats associate taste (but not light) with nausea, demonstrating:',
             options: ['stimulus generalization', 'biological preparedness', 'extinction', 'spontaneous recovery']
           }
         ],
-        correctAnswers: ['classical conditioning in advertising', 'one-trial learning', 'biological preparedness'],
+        correctAnswers: ['classical conditioning', 'one-trial learning', 'biological preparedness'],
         hint1: 'Advertisers pair products (NS) with stimuli that already trigger positive emotions (UCS).',
         hint2: 'Unlike most conditioning, taste aversion doesn\'t require many repeated pairings.',
         hint3: 'Evolution predisposes organisms to form certain associations more easily.',
@@ -170,10 +170,10 @@ export const psychClassicalPart5Data = {
           {
             question: 'After receiving chemotherapy (which causes nausea), a cancer patient develops a strong aversion to the food eaten before treatment. The patient still feels nauseated 6 months later when smelling that food. This illustrates:',
             options: [
-              'taste aversion — the food (CS) was associated with nausea (UCR from chemo) in one or few pairings',
-              'operant conditioning — the patient is being punished for eating',
-              'extinction — the response should have faded by now',
-              'stimulus discrimination — the patient only avoids that one food'
+              'taste aversion — the food became a CS for nausea after one or a few pairings',
+              'operant conditioning — the patient is being punished each time they eat the food',
+              'extinction — the food\'s link to nausea weakens a little with each smell',
+              'stimulus discrimination — the aversion is limited to that one food and no others'
             ],
             correctAnswer: 0,
             explanation: 'This is a real-world taste aversion: the food (CS) was paired with chemotherapy-induced nausea (UCS → UCR). Taste aversions are remarkably persistent and can form in just one trial, even with a long delay between eating and nausea.'
@@ -181,10 +181,10 @@ export const psychClassicalPart5Data = {
           {
             question: 'A beer company shows its commercials during exciting sporting events with attractive people and celebration. The company is hoping that consumers will:',
             options: [
-              'develop a conditioned positive response to the beer brand through association',
-              'learn through operant conditioning that buying beer leads to rewards',
-              'observe and imitate the behavior of the people in the commercial',
-              'generalize their excitement about sports to all beverages'
+              'form a conditioned positive response to the brand through association',
+              'learn through operant conditioning that buying the beer earns social rewards',
+              'observe and imitate the drinking of the attractive people in the commercial',
+              'generalize their excitement about sports to every beverage on store shelves'
             ],
             correctAnswer: 0,
             explanation: 'This is classical conditioning in advertising: the beer (CS/neutral product) is paired with excitement, attractiveness, and celebration (UCS that naturally triggers positive feelings). The goal is for consumers to have a conditioned positive response (CR) to the brand.'

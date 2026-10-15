@@ -37,8 +37,8 @@ If you eat shrimp and get violently ill 6 hours later, you will likely develop a
             question: 'Garcia and Koelling found that rats easily learned to associate a flavored water (taste) with nausea, but NOT with electric shock. Conversely, rats easily associated a light-sound combo with shock, but NOT with nausea. This demonstrates:',
             options: [
               'Stimulus generalization — the rats generalized from one stimulus to another',
-              'Biological preparedness — organisms are evolutionarily prepared to associate certain stimuli',
-              'Classical extinction — the association weakened over time',
+              'Biological preparedness — organisms are evolved to link certain stimuli more readily',
+              'Classical extinction — the taste-shock association weakened over repeated trials',
               'Operant conditioning — the rats were reinforced for avoiding flavored water'
             ],
             correctAnswer: 1,
@@ -47,10 +47,10 @@ If you eat shrimp and get violently ill 6 hours later, you will likely develop a
           {
             question: 'The Brelands trained a raccoon to deposit coins in a piggy bank. Instead, the raccoon rubbed the coins together and refused to drop them in. This is an example of:',
             options: [
-              'Extinction — the reinforcement stopped working',
-              'Latent learning — the raccoon had learned something else',
+              'Extinction — the coin-dropping response faded because reinforcement stopped',
+              'Latent learning — the raccoon had learned the task but lacked motivation to show it',
               'Instinctive drift — the raccoon reverted to innate food-washing behavior',
-              'Insight learning — the raccoon found a better solution'
+              'Insight learning — the raccoon suddenly found a better way to earn its reward'
             ],
             correctAnswer: 2,
             explanation: 'The Brelands (Keller and Marian) coined the term "instinctive drift" after observing that trained animals reverted to species-typical behaviors. Raccoons naturally "wash" food by rubbing it together — so the raccoon treated the coins like food objects despite operant conditioning. Biology overrode reinforcement.'
@@ -166,10 +166,10 @@ In each case, the animals were food-reinforced, and their innate food-related be
           {
             question: 'A cancer patient who receives chemotherapy develops nausea. Despite knowing that the nausea is caused by the drugs (not the hospital food), the patient develops a strong aversion to the food eaten before treatment. This illustrates:',
             options: [
-              'The patient is being irrational and not thinking clearly',
-              'Taste aversion — biologically prepared associations form even when logically understood',
-              'Operant conditioning — the patient learned to avoid the food through punishment',
-              'Observational learning — the patient saw others avoiding the food'
+              'Cognitive distortion — the patient is too distressed to reason about the true cause',
+              'Taste aversion — a biologically prepared link forms even when the cause is understood',
+              'Operant conditioning — the aversion was learned through positive punishment for eating',
+              'Observational learning — the patient saw other patients avoiding the hospital food'
             ],
             correctAnswer: 1,
             explanation: 'Taste aversion is SO biologically prepared that it occurs even when the person KNOWS the food isn\'t the cause. This is a well-documented phenomenon in cancer treatment — patients develop aversions to foods eaten before chemotherapy despite understanding that the drugs cause the nausea. The biological mechanism overrides rational thought.'
@@ -177,10 +177,10 @@ In each case, the animals were food-reinforced, and their innate food-related be
           {
             question: 'Which of the following would be the HARDEST association to condition, based on biological preparedness research?',
             options: [
-              'A rat learning to avoid a food that made it sick (taste-nausea)',
-              'A person developing a fear of snakes after being bitten (prepared)',
-              'A pigeon learning to peck a key for food (moderate)',
-              'A cat learning to yawn on command for a food reward (contraprepared)'
+              'A rat learning to avoid a food that made it sick',
+              'A person developing a fear of snakes after one bite',
+              'A pigeon learning to peck a key to obtain food',
+              'A cat learning to yawn on command for a food reward'
             ],
             correctAnswer: 3,
             explanation: 'On Seligman\'s preparedness continuum, contraprepared associations (like yawning for food) are the hardest to learn because yawning has no biological connection to feeding. Taste-nausea = prepared (one trial). Snake fear = prepared (very quick). Key-pecking = unprepared (moderate). Yawning for food = contraprepared (extremely difficult).'

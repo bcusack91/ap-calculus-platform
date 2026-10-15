@@ -54,10 +54,10 @@ How do we solve problems? We have two main approaches — slow-and-sure algorith
           {
             question: 'A student tries to unscramble the letters OCHPS by systematically testing every possible arrangement until finding the word. The student is using:',
             options: [
-              'A heuristic — a mental shortcut for fast problem-solving',
-              'An algorithm — a systematic step-by-step procedure guaranteed to find the solution',
-              'Insight — a sudden realization of the answer',
-              'Functional fixedness — seeing only one use for the letters'
+              'A heuristic — a rule of thumb that narrows the search but may fail',
+              'An algorithm — a step-by-step procedure guaranteed to find the solution',
+              'Insight — a sudden realization of the answer after reaching an impasse',
+              'Functional fixedness — seeing the letters only in their original order'
             ],
             correctAnswer: 1,
             explanation: 'Testing every possible arrangement is an algorithm — a systematic, exhaustive procedure that GUARANTEES finding the solution (if one exists). It\'s slow but reliable. If the student instead looked for common letter patterns (like "ch" or "sh") to narrow down possibilities, that would be a heuristic — faster but not guaranteed. The answer, by the way, is "CHOPS."'
@@ -65,10 +65,10 @@ How do we solve problems? We have two main approaches — slow-and-sure algorith
           {
             question: 'In Duncker\'s candle problem, participants are given a candle, a box of tacks, and matches, and asked to attach the candle to the wall so wax doesn\'t drip on the table. Most fail because they can\'t see the tack box as a shelf. This failure is called:',
             options: [
-              'Mental set — applying a previously successful strategy',
-              'Insight — a sudden realization of the solution',
-              'Functional fixedness — inability to perceive a new use for a familiar object',
-              'The availability heuristic — judging by ease of recall'
+              'Mental set — reusing a strategy that solved earlier problems of this kind',
+              'Insight — a sudden restructuring that reveals the answer',
+              'Functional fixedness — failing to see a new use for a familiar object',
+              'The availability heuristic — judging a solution by how easily it comes to mind'
             ],
             correctAnswer: 2,
             explanation: 'Functional fixedness: participants see the box only as a "container for tacks" and can\'t reconceive it as a "shelf" to hold the candle. The solution is to empty the box, tack it to the wall as a platform, and place the candle on it. When the tacks are presented OUTSIDE the box (reducing the "container" association), more participants solve it — confirming that the fixation is on the box\'s function, not its physical properties.'
@@ -188,10 +188,10 @@ Connect all 9 dots (arranged in a 3×3 grid) with 4 straight lines without lifti
           {
             question: 'A mechanic who always fixes engine problems in the same order — checking spark plugs first, then fuel lines, then timing — even when the symptoms clearly point to a different component, is MOST demonstrating:',
             options: [
-              'Functional fixedness — seeing tools only in terms of their usual function',
-              'Mental set — applying a previously successful strategy even when another approach would be better',
-              'Insight — having a sudden realization about the engine',
-              'An algorithm — systematically checking every component'
+              'Functional fixedness — seeing each tool only in terms of its usual function',
+              'Mental set — sticking with a strategy that worked before when another fits better',
+              'Insight — a sudden realization that reorganizes how he understands the engine',
+              'An algorithm — a fixed procedure that checks every component until the fault appears'
             ],
             correctAnswer: 1,
             explanation: 'The mechanic is stuck on a STRATEGY (specific diagnostic order) that has worked before, even when the current situation calls for a different approach. This is mental set — a fixation on a previously successful method. If the mechanic couldn\'t think of using a wrench as a hammer, THAT would be functional fixedness (stuck on an object\'s function). The distinction is strategy vs. object.'
@@ -199,10 +199,10 @@ Connect all 9 dots (arranged in a 3×3 grid) with 4 straight lines without lifti
           {
             question: 'During a camping trip, a group needs to open a can of food but has no can opener. One person suddenly realizes they can use a flat rock to scrape along the can\'s rim. This solution MOST involves:',
             options: [
-              'Overcoming functional fixedness — seeing a rock\'s use beyond its typical function',
-              'Using an algorithm — testing every possible tool systematically',
-              'Applying a mental set — using a strategy that worked before',
-              'Using the availability heuristic — recalling similar situations'
+              'Overcoming functional fixedness — seeing a new use for a rock',
+              'Using an algorithm — testing every available object one by one until one works',
+              'Applying a mental set — reusing a can-opening strategy that worked on earlier trips',
+              'Using the availability heuristic — picking the first tool that comes to mind'
             ],
             correctAnswer: 0,
             explanation: 'The person overcame functional fixedness by seeing a rock not just as a "rock" (something you throw or stack) but as a tool for scraping/opening. This is the opposite of what Duncker\'s participants did — they COULDN\'T see the tack box as a shelf. Here, the person successfully reconceptualized a familiar object for a novel use. The "sudden realization" also suggests an element of insight.'

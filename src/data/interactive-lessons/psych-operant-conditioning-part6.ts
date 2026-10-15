@@ -54,10 +54,10 @@ A teenager texts during class. The teacher takes away the student's phone for th
           {
             question: 'A rat in a Skinner box presses a lever and an electric shock stops. The rat presses the lever more quickly in future trials. This is:',
             options: [
-              'Positive reinforcement — the lever press adds a reward',
-              'Negative reinforcement — an aversive stimulus (shock) is removed, increasing lever pressing',
-              'Positive punishment — the shock is an aversive stimulus',
-              'Classical conditioning — the lever is associated with shock removal'
+              'Positive reinforcement — pressing the lever adds a reward, increasing pressing',
+              'Negative reinforcement — an aversive shock is removed, increasing lever pressing',
+              'Positive punishment — an aversive shock is added, decreasing lever pressing',
+              'Classical conditioning — the lever becomes a conditioned stimulus for relief'
             ],
             correctAnswer: 1,
             explanation: 'The shock (aversive stimulus) is REMOVED when the rat presses the lever, and lever pressing INCREASES. Removing aversive + behavior increases = negative reinforcement. This is called "escape learning" — the rat learns to escape the shock.'
@@ -66,9 +66,9 @@ A teenager texts during class. The teacher takes away the student's phone for th
             question: 'After eating bad sushi, Maria feels nauseated every time she sees sushi. She avoids sushi restaurants. The nausea response is best explained by ___, while the avoidance of restaurants is best explained by ___.',
             options: [
               'Operant conditioning; classical conditioning',
-              'Classical conditioning (involuntary nausea paired with sushi); operant conditioning (voluntary avoidance reinforced by removing nausea)',
+              'Classical conditioning; operant conditioning',
               'Positive punishment; negative punishment',
-              'Shaping; chaining'
+              'Observational learning; latent learning'
             ],
             correctAnswer: 1,
             explanation: 'The nausea is an involuntary response that was classically conditioned (sushi = CS, nausea = CR). The avoidance is a voluntary behavior maintained by negative reinforcement — avoiding sushi REMOVES the unpleasant nausea. This scenario combines both types of conditioning, which is a common AP question format.'
@@ -192,10 +192,10 @@ This last example shows how the same scenario involves different consequences fo
           {
             question: 'A teenager cleans their room to stop their mother from nagging. The nagging stops, and the teenager cleans their room more often in the future. Meanwhile, the mother nags more often because it gets the room cleaned. From the MOTHER\'s perspective, her nagging behavior is being maintained by:',
             options: [
-              'Positive punishment — the messy room is an aversive stimulus',
-              'Negative punishment — she loses her patience',
-              'Positive reinforcement — a clean room (pleasant stimulus) is added after nagging, increasing nagging behavior',
-              'Negative reinforcement — cleaning the room removes the mess'
+              'Positive punishment — the messy room is added, decreasing the mother\'s nagging',
+              'Negative punishment — her patience is removed, decreasing the mother\'s nagging',
+              'Positive reinforcement — a clean room is added after nagging, increasing nagging',
+              'Negative reinforcement — nagging is removed once the room is clean'
             ],
             correctAnswer: 2,
             explanation: 'From the mother\'s perspective: she nags, and a clean room (pleasant outcome) APPEARS (positive = added). Her nagging behavior INCREASES (reinforcement). So the mother is positively reinforced for nagging. Meanwhile, the teenager is negatively reinforced (nagging removed → cleaning increases). Both people are being reinforced — classic AP Psychology trick!'
@@ -203,10 +203,10 @@ This last example shows how the same scenario involves different consequences fo
           {
             question: 'Classify this scenario: A dog begs at the dinner table. Sometimes family members give the dog food scraps. Even though the family tries to stop, the dog continues begging persistently despite not getting food every time. What schedule of reinforcement explains the dog\'s persistence?',
             options: [
-              'Continuous reinforcement — the dog expects food every time',
-              'Variable-ratio — the dog is reinforced after an unpredictable number of begging attempts, making the behavior highly resistant to extinction',
-              'Fixed-interval — the dog begs at scheduled meal times',
-              'Negative reinforcement — the dog\'s begging removes the family\'s guilt'
+              'Continuous reinforcement — every begging attempt is rewarded with food scraps',
+              'Variable-ratio — begging is reinforced after an unpredictable number of attempts',
+              'Fixed-interval — begging is reinforced at the same scheduled time each meal',
+              'Negative reinforcement — begging removes the family\'s guilt about ignoring the dog'
             ],
             correctAnswer: 1,
             explanation: 'The dog sometimes gets food and sometimes doesn\'t — reinforcement comes after an unpredictable number of begging attempts. This is a variable-ratio schedule, which produces the highest resistance to extinction. The dog persists because "maybe THIS time" it will get food — the same psychology behind gambling.'

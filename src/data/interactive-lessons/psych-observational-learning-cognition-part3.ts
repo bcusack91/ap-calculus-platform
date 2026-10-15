@@ -36,10 +36,10 @@ You walk through your school every day without a map. You've formed a **cognitiv
           {
             question: 'Tolman\'s rats explored a maze without receiving food rewards. When food was finally introduced, they immediately navigated the maze as well as rats who had been rewarded from the start. This demonstrates:',
             options: [
-              'Classical conditioning — the maze became a CS paired with food',
-              'Operant conditioning — the food reinforced maze running',
-              'Latent learning — the rats had learned the maze but didn\'t show it until motivated',
-              'Instinctive drift — the rats relied on innate navigational instincts'
+              'Classical conditioning — the maze became a conditioned stimulus paired with food',
+              'Operant conditioning — the newly added food instantly reinforced faster maze running',
+              'Latent learning — the rats learned the maze but showed it only once motivated',
+              'Instinctive drift — the rats relied on innate navigational instincts to find food'
             ],
             correctAnswer: 2,
             explanation: 'The rats explored the maze and formed cognitive maps (learned the layout) without any reinforcement. When food was introduced, they PERFORMED what they had already LEARNED. This is latent learning — learning that exists but is not demonstrated until there is a reason (motivation) to show it.'
@@ -47,9 +47,9 @@ You walk through your school every day without a map. You've formed a **cognitiv
           {
             question: 'Seligman\'s dogs who received inescapable shocks later failed to escape when escape was possible. This demonstrates:',
             options: [
-              'Extinction — the escape response was extinguished',
+              'Extinction — the escape response faded after it went unreinforced',
               'Learned helplessness — the dogs expected they could not control outcomes',
-              'Habituation — the dogs habituated to the shocks',
+              'Habituation — the dogs grew used to the shocks and stopped responding to them',
               'Operant conditioning — the dogs were reinforced for staying still'
             ],
             correctAnswer: 1,
@@ -120,9 +120,9 @@ Sources of self-efficacy (strongest → weakest):
         dropdowns: [
           { label: 'A student who failed repeatedly stops studying and says "Why bother?"', options: ['Cognitive map', 'Latent learning', 'Learned helplessness', 'Self-efficacy'] },
           { label: 'You navigate a new route to school because your usual road is closed', options: ['Cognitive map', 'Latent learning', 'Learned helplessness', 'Vicarious learning'] },
-          { label: '"I aced the last exam, so I know I can do well on this one"', options: ['Latent learning', 'Learned helplessness', 'Self-efficacy from mastery experience', 'Cognitive map'] }
+          { label: '"I aced the last exam, so I know I can do well on this one"', options: ['Latent learning', 'Learned helplessness', 'Self-efficacy', 'Cognitive map'] }
         ],
-        correctAnswers: ['Learned helplessness', 'Cognitive map', 'Self-efficacy from mastery experience'],
+        correctAnswers: ['Learned helplessness', 'Cognitive map', 'Self-efficacy'],
         hint1: 'Giving up because past efforts seemed futile = learned helplessness.',
         hint2: 'Using a mental representation of spatial layout = cognitive map.',
         hint3: 'Past success building confidence in future ability = mastery experience → self-efficacy.',
@@ -166,10 +166,10 @@ Sources of self-efficacy (strongest → weakest):
           {
             question: 'A new employee is told by an encouraging manager, "You\'re going to do great here!" According to Bandura, this would be LEAST effective at building self-efficacy because:',
             options: [
-              'Encouragement has no effect on self-efficacy',
+              'Encouragement has no measurable effect on self-efficacy',
               'Verbal persuasion is weaker than mastery experiences at building self-efficacy',
-              'Self-efficacy cannot be changed once established',
-              'Only vicarious experiences build self-efficacy'
+              'Self-efficacy is fixed once it is established in childhood',
+              'Only vicarious experiences can build self-efficacy'
             ],
             correctAnswer: 1,
             explanation: 'Bandura identified four sources of self-efficacy ranked by strength: (1) mastery experiences (strongest), (2) vicarious experiences, (3) verbal persuasion, (4) physiological arousal. While verbal persuasion CAN help, it is relatively weak compared to actual experience of success. The new employee would build stronger self-efficacy by actually succeeding at tasks.'
@@ -177,10 +177,10 @@ Sources of self-efficacy (strongest → weakest):
           {
             question: 'Which scenario best illustrates the difference between learning and performance?',
             options: [
-              'A student studies hard and gets an A on the test',
-              'A rat runs a maze faster each day with food rewards',
+              'A student studies hard and then earns an A on the unit test',
+              'A rat runs a maze faster each day as it receives food rewards',
               'A child knows how to solve a math problem but refuses to do homework',
-              'A dog salivates when hearing a bell paired with food'
+              'A dog salivates at a bell after the bell is repeatedly paired with food'
             ],
             correctAnswer: 2,
             explanation: 'The child has LEARNED the math skill (cognitive acquisition) but chooses not to PERFORM it (behavioral demonstration). This is exactly what Tolman demonstrated — learning can exist without performance. The child has the knowledge (latent learning) but lacks the motivation to demonstrate it. This distinction is Bandura and Tolman\'s core challenge to behaviorism.'

@@ -36,10 +36,10 @@ You watch a cooking show and see a chef make a soufflé. You paid **attention** 
           {
             question: 'A student watches a math teacher solve a problem on the board but is texting during the demonstration. When asked to solve a similar problem, the student cannot do it. Which modeling process FAILED?',
             options: [
-              'Attention — the student was distracted and didn\'t observe the model',
-              'Retention — the student forgot the steps',
-              'Reproduction — the student lacks math ability',
-              'Motivation — the student doesn\'t care about math'
+              'Attention — the student was distracted and missed the worked steps',
+              'Retention — the student saw the steps but failed to store them in memory',
+              'Reproduction — the student lacks the math ability to carry out the steps',
+              'Motivation — the student saw no reason to use the steps afterward'
             ],
             correctAnswer: 0,
             explanation: 'The student was texting (distracted) and therefore did not attend to the model\'s demonstration. Without attention — the FIRST step — retention, reproduction, and motivation are irrelevant. The chain breaks at the first link.'
@@ -47,10 +47,10 @@ You watch a cooking show and see a chef make a soufflé. You paid **attention** 
           {
             question: 'A child watches an older sibling ride a bicycle and tries to imitate but keeps falling. Which modeling process is the primary barrier?',
             options: [
-              'Attention — the child didn\'t watch carefully enough',
-              'Retention — the child forgot how to do it',
-              'Reproduction — the child lacks the physical coordination needed',
-              'Motivation — the child doesn\'t want to ride a bike'
+              'Attention — the child didn\'t watch the sibling\'s movements carefully enough',
+              'Retention — the child forgot the sequence of steps the sibling used',
+              'Reproduction — the child lacks the coordination to perform it',
+              'Motivation — the child doesn\'t really want to ride the bike yet'
             ],
             correctAnswer: 2,
             explanation: 'The child watched (attention), remembered (retention), and is motivated (trying to do it). The problem is reproduction — the child\'s motor skills and coordination are not yet developed enough to perform the behavior. With practice, reproduction will improve.'
@@ -167,10 +167,10 @@ Example: A confident student (person) participates in class (behavior), which le
           {
             question: 'A music student watches a famous pianist perform a complex piece on YouTube (attention), practices it mentally in her head (retention), and is highly motivated to learn it. After months of practice, she finally performs it successfully. Which statement best captures the role of reproduction in this scenario?',
             options: [
-              'Reproduction occurred instantly after watching the video',
-              'Reproduction required extensive practice to develop the necessary motor skills',
+              'Reproduction happened instantly, as soon as she finished watching',
+              'Reproduction required extensive practice to develop the needed motor skills',
               'Reproduction was unnecessary because she already had the knowledge',
-              'Reproduction only required motivation, not physical practice'
+              'Reproduction depended only on motivation, not on physical practice'
             ],
             correctAnswer: 1,
             explanation: 'Reproduction — the third process — requires physical and cognitive ability to perform the observed behavior. For complex motor skills like piano performance, reproduction requires extensive practice even when attention, retention, and motivation are all present. Learning occurred during observation, but performance required developing the motor skills.'
@@ -178,10 +178,10 @@ Example: A confident student (person) participates in class (behavior), which le
           {
             question: 'According to reciprocal determinism, a child who is naturally outgoing (personal factor) joins a drama club (behavior), receives praise from the teacher (environment), and becomes even more outgoing (personal factor). What does this example illustrate?',
             options: [
-              'The environment completely determines behavior',
-              'Personal factors, behavior, and environment influence each other continuously',
-              'Behavior is determined only by reinforcement history',
-              'Personal factors are more important than environment'
+              'Environmental factors, such as the teacher\'s praise, entirely determine the child\'s behavior',
+              'Personal factors, behavior, and environment continuously influence each other',
+              'Behavior, like personality, is set only by the child\'s past history of reinforcement',
+              'Inner traits outweigh the environment, so the teacher\'s praise played no real role'
             ],
             correctAnswer: 1,
             explanation: 'Reciprocal determinism states that personal factors (outgoing personality), behavior (joining drama), and environment (teacher praise) all influence each other in a continuous feedback loop. None is the sole cause — they interact. This is Bandura\'s key contribution beyond simple behaviorism.'

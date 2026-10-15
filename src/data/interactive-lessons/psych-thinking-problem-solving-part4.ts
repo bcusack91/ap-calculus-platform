@@ -58,10 +58,10 @@ Which is more probable?
           {
             question: 'After watching several news reports about home invasions, a homeowner installs an expensive security system — even though her neighborhood has one of the lowest crime rates in the city. Her fear is MOST influenced by:',
             options: [
-              'The representativeness heuristic — her neighborhood matches the prototype of a crime area',
-              'The availability heuristic — vivid news coverage makes home invasions seem more common than they actually are',
-              'Anchoring bias — the first crime report set an anchor for crime frequency',
-              'Confirmation bias — she only watches crime-related news'
+              'The representativeness heuristic — her neighborhood matches her prototype of a high-crime area',
+              'The availability heuristic — vivid news coverage makes break-ins seem common',
+              'Anchoring bias — the first crime report she saw set an anchor for how often crime occurs',
+              'Confirmation bias — she seeks out only news stories that confirm her fear of crime'
             ],
             correctAnswer: 1,
             explanation: 'Vivid, emotionally charged news stories about home invasions are easy to RECALL, making the homeowner overestimate the likelihood of this event in her own life. This is the availability heuristic: if examples come to mind easily (because of media coverage, recency, or emotional impact), we judge the event as MORE COMMON. The actual base rate of crime in her neighborhood (low) is being overridden by the ease of recalling dramatic examples.'
@@ -69,10 +69,10 @@ Which is more probable?
           {
             question: 'A shy, organized person who loves reading and crossword puzzles is MOST likely to be guessed as a librarian rather than a salesperson, even though there are far more salespeople than librarians. This error occurs because of:',
             options: [
-              'The availability heuristic — librarians are easier to recall than salespeople',
-              'The representativeness heuristic — the description matches the librarian prototype, and base rates are ignored',
-              'Functional fixedness — people can only see one occupation for this person',
-              'The framing effect — the description is framed to suggest librarian'
+              'The availability heuristic — librarians are easier to bring to mind than salespeople',
+              'The representativeness heuristic — the description fits the librarian prototype',
+              'Functional fixedness — people can see only one occupation that fits this person',
+              'The framing effect — the order of the description frames the person as a librarian'
             ],
             correctAnswer: 1,
             explanation: 'This is the representativeness heuristic with base rate neglect. The person\'s description MATCHES the prototype of "librarian" (shy, organized, loves reading), so people judge them as a librarian. But this ignores the BASE RATE: there are far more salespeople than librarians, so statistically, a shy organized person is still more likely to be a salesperson simply because there are so many more of them. The representativeness heuristic overrides statistical reasoning.'
@@ -198,21 +198,21 @@ The wheel was completely RANDOM and IRRELEVANT — yet it still influenced answe
           {
             question: 'A student is described as quiet, meticulous, and passionate about numbers. When asked whether this student is more likely studying accounting or psychology, most people guess accounting — even though psychology programs are far larger. Which TWO cognitive errors contribute to this incorrect judgment?',
             options: [
-              'Availability heuristic + anchoring bias',
-              'Representativeness heuristic + base rate neglect — the description matches the "accountant" prototype, and the larger size of psychology programs (base rate) is ignored',
-              'Framing effect + sunk cost fallacy',
-              'Confirmation bias + hindsight bias'
+              'Availability heuristic + anchoring bias — accountants come to mind easily and the first trait anchors the guess',
+              'Representativeness heuristic + base rate neglect — the profile fits an accountant and the base rate is ignored',
+              'Framing effect + sunk cost fallacy — the word "numbers" frames the choice and past guesses lock it in',
+              'Confirmation bias + hindsight bias — people seek clues that fit accounting and later feel they knew it'
             ],
             correctAnswer: 1,
             explanation: 'Two errors work together: (1) Representativeness heuristic — the description matches the "accountant" prototype (quiet, meticulous, numbers), so people judge "accounting" as more likely. (2) Base rate neglect — psychology programs are MUCH larger, so any random student is more likely to be a psych major. But the vivid description overrides this statistical fact. This is the same mechanism as the Linda problem — prototype matching overrides probability.'
           },
           {
-            question: 'A jury must decide if a defendant is guilty. The prosecution mentions that 80% of similar cases resulted in conviction (anchoring). Then the defense presents DNA evidence exonerating the defendant, but multiple jurors still lean toward guilty. The jurors\' judgment is MOST influenced by:',
+            question: 'A jury must decide if a defendant is guilty. The prosecution mentions that 80% of similar cases resulted in conviction. Then the defense presents DNA evidence exonerating the defendant, but multiple jurors still lean toward guilty. The jurors\' judgment is MOST influenced by:',
             options: [
-              'The availability heuristic — they recall convictions more easily than acquittals',
-              'Anchoring bias — the 80% conviction rate anchors their probability estimate, making them discount even strong evidence',
-              'The representativeness heuristic — the defendant matches their "criminal" prototype',
-              'Loss aversion — they fear losing the case more than wrongly convicting'
+              'The availability heuristic — they recall news stories about convictions more easily than acquittals',
+              'Anchoring bias — the 80% figure holds their estimate up despite the DNA results',
+              'The representativeness heuristic — the defendant matches their mental prototype of a criminal',
+              'Loss aversion — they fear freeing a guilty person more than they fear convicting an innocent one'
             ],
             correctAnswer: 1,
             explanation: 'The 80% conviction rate serves as an ANCHOR — even when strong new evidence (DNA) should shift the probability dramatically, the anchor keeps the estimate higher than it should be. This is a dangerous real-world example of anchoring: once jurors hear a strong initial number, subsequent evidence is underweighted. The DNA evidence should logically be decisive, but the anchor biases interpretations. This is why some argue that conviction statistics should not be presented to juries.'

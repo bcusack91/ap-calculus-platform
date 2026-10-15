@@ -47,10 +47,10 @@ The Gestalt psychologists (early 1900s, Germany) argued **"the whole is differen
           {
             question: 'A radiologist examines an X-ray and immediately spots a tumor that a medical student misses entirely. The radiologist is primarily using:',
             options: [
-              'Bottom-up processing — analyzing each pixel of the X-ray systematically',
-              'Top-down processing — using prior knowledge and expectations to guide perception',
-              'The Gestalt principle of closure — filling in missing information',
-              'Selective attention — focusing on one part of the X-ray'
+              'Bottom-up processing — building the image up pixel by pixel with no expectations',
+              'Top-down processing — prior knowledge and expectations guide perception',
+              'The Gestalt principle of closure — filling in the missing outline of the tumor',
+              'Selective attention — tuning out every part of the film except one small region'
             ],
             correctAnswer: 1,
             explanation: 'The radiologist\'s years of experience create expectations about what tumors look like and where they appear. This prior knowledge guides perception — the hallmark of top-down processing. The medical student, lacking this experience, must rely more on bottom-up processing (examining each element without guidance from expectation). This is why experienced doctors sometimes spot things in a glance that trainees miss after careful study.'
@@ -58,10 +58,10 @@ The Gestalt psychologists (early 1900s, Germany) argued **"the whole is differen
           {
             question: 'You see the Olympic rings logo and perceive five interlocking circles, even though parts of each circle are hidden behind others. This BEST demonstrates:',
             options: [
-              'Proximity — the rings are near each other',
-              'Similarity — the rings look alike',
-              'Closure — we fill in the hidden portions to perceive complete circles',
-              'Common fate — the rings appear to move together'
+              'Proximity — the rings sit close together, so they are grouped as one logo',
+              'Similarity — the rings share a shape, so they are grouped as a single set',
+              'Closure — the brain fills in the covered arcs so each ring is seen as whole',
+              'Common fate — the rings seem to move as a unit, so they are seen as linked'
             ],
             correctAnswer: 2,
             explanation: 'Even though portions of each ring are occluded (hidden) by overlapping rings, we perceive five COMPLETE circles. Our brain fills in the missing segments — this is the Gestalt principle of closure. Proximity and similarity are also present but don\'t explain why we see complete circles rather than arcs.'
@@ -165,10 +165,10 @@ Most real-world perception uses BOTH simultaneously. When you read this sentence
           {
             question: 'A proofreader is less likely to catch typos in her own writing than in someone else\'s writing. This is BEST explained by:',
             options: [
-              'Bottom-up processing — she is not detecting the sensory data',
-              'Top-down processing — her knowledge of what she intended to write leads her to see correct words even when they contain errors',
-              'The Gestalt principle of closure — she fills in the missing letters',
-              'Change blindness — she fails to detect the changes in her text'
+              'Bottom-up processing — she reads too fast for the sensory data to register',
+              'Top-down processing — knowing what she meant, she sees the intended words',
+              'The Gestalt principle of closure — she fills in missing letters to finish words',
+              'Change blindness — she fails to notice that her draft changed between readings'
             ],
             correctAnswer: 1,
             explanation: 'The proofreader KNOWS what she intended to write, so her top-down processing fills in the "correct" version even when the actual text contains errors. When reading someone else\'s work, she has fewer expectations about specific wording, forcing more bottom-up processing of the actual text. This is a classic example of how top-down processing can create errors.'
@@ -176,10 +176,10 @@ Most real-world perception uses BOTH simultaneously. When you read this sentence
           {
             question: 'A designer creates a website where the navigation buttons are different colors but placed far apart, while unrelated text elements are placed close together. Users keep accidentally clicking the text instead of the buttons. Which Gestalt principle explains this usability problem?',
             options: [
-              'Similarity — the text elements look similar to buttons',
-              'Proximity — users group the nearby text elements as related/clickable',
-              'Closure — users perceive the text as part of the navigation',
-              'Continuity — users follow the text in a smooth pattern'
+              'Similarity — the text elements share a color and font with the buttons',
+              'Proximity — users group the nearby text elements as related',
+              'Closure — users mentally complete the text into one navigation bar',
+              'Continuity — users follow the line of text as if it were a menu path'
             ],
             correctAnswer: 1,
             explanation: 'Proximity overrides similarity in this case. Even though the buttons are visually distinct (different colors), users group the nearby text elements together because proximity is one of the strongest Gestalt principles. Good UI/UX design uses Gestalt principles: related items should be near each other (proximity), visually similar (similarity), and clearly separated from unrelated items.'

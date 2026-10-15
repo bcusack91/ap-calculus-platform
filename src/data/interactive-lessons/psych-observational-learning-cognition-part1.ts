@@ -163,10 +163,10 @@ Bandura's 1965 follow-up is crucial for AP: children who watched the model get p
           {
             question: 'A parent frequently yells at their child for being aggressive toward siblings. Despite the punishment, the child continues to be aggressive. Bandura would explain this by noting that:',
             options: [
-              'Punishment is never effective for reducing behavior',
-              'The child is imitating the parent\'s aggressive behavior (yelling), which models aggression',
+              'Punishment never reduces behavior, so yelling cannot lower the child\'s aggression',
+              'The parent\'s yelling models the very aggression the child then imitates',
               'The child has a biological predisposition for aggression that cannot be changed',
-              'Classical conditioning has paired the siblings with negative emotions'
+              'Classical conditioning has paired the siblings with the parent\'s angry yelling'
             ],
             correctAnswer: 1,
             explanation: 'This is a powerful application of Bandura: the parent is MODELING aggression (yelling) while trying to punish aggression. The child observes the parent using aggression to solve problems and imitates that approach. The parent\'s behavior sends a stronger message than the parent\'s words — "aggression works."'
@@ -174,10 +174,10 @@ Bandura's 1965 follow-up is crucial for AP: children who watched the model get p
           {
             question: 'A company shows new employees a video of a top performer receiving a bonus for excellent customer service. The new employees then adopt similar customer service behaviors. This demonstrates:',
             options: [
-              'Classical conditioning — the bonus is the UCS',
-              'Negative reinforcement — avoiding bad performance reviews',
-              'Vicarious reinforcement through observational learning',
-              'Instinctive drift toward prosocial behavior'
+              'Classical conditioning — the bonus acts as the unconditioned stimulus',
+              'Negative reinforcement — the workers avoid poor performance reviews',
+              'Vicarious reinforcement — workers imitate a model they saw rewarded',
+              'Instinctive drift — workers revert to innate helping behavior'
             ],
             correctAnswer: 2,
             explanation: 'The new employees watched someone ELSE get rewarded (vicarious reinforcement) and imitated the behavior. They were not directly reinforced themselves — they observed the model being reinforced. This is a practical application of Bandura\'s social learning theory in the workplace.'

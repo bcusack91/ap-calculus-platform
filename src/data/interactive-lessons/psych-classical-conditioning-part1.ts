@@ -34,10 +34,10 @@ export const psychClassicalPart1Data = {
           {
             question: 'Pavlov originally set out to study digestion, but noticed his dogs began salivating before food was presented. This accidental finding led to the discovery of:',
             options: [
-              'classical conditioning — learning through association between two stimuli',
-              'operant conditioning — learning through consequences',
-              'observational learning — learning by watching others',
-              'insight learning — sudden realization of a solution'
+              'classical conditioning — learning by associating two stimuli',
+              'operant conditioning — learning through rewards and punishments',
+              'observational learning — learning by watching and imitating others',
+              'insight learning — a sudden realization of how to solve a problem'
             ],
             correctAnswer: 0,
             explanation: 'Pavlov discovered classical conditioning: the dogs learned to associate a neutral stimulus (bell/footsteps) with food, producing a learned salivation response. This is associative learning involving involuntary responses.'
@@ -46,7 +46,7 @@ export const psychClassicalPart1Data = {
             question: 'Which statement best captures the psychological definition of "learning"?',
             options: [
               'A relatively permanent change in behavior due to experience',
-              'Any change in behavior, including temporary changes from fatigue or drugs',
+              'Any change in behavior, including temporary changes due to fatigue or drugs',
               'The ability to memorize facts for an exam',
               'A biological maturation process that occurs with age'
             ],
@@ -121,14 +121,14 @@ export const psychClassicalPart1Data = {
           },
           {
             label: 'Classical conditioning involves what type of responses?',
-            options: ['voluntary behaviors', 'involuntary/automatic responses', 'conscious decisions', 'cognitive processes']
+            options: ['voluntary behaviors', 'involuntary responses', 'conscious decisions', 'cognitive processes']
           },
           {
             label: 'Select what a neutral stimulus becomes after repeated pairing with a UCS:',
             options: ['unconditioned stimulus', 'conditioned stimulus', 'unconditioned response', 'neutral response']
           }
         ],
-        correctAnswers: ['digestion', 'involuntary/automatic responses', 'conditioned stimulus'],
+        correctAnswers: ['digestion', 'involuntary responses', 'conditioned stimulus'],
         hint1: 'Pavlov was a physiologist — think about what physiological process he studied.',
         hint2: 'Salivation, fear, and nausea are all examples of this type of response.',
         hint3: 'The neutral stimulus gains the power to trigger a response — it becomes "conditioned."',
@@ -177,9 +177,9 @@ export const psychClassicalPart1Data = {
             question: 'A researcher discovers that after repeatedly pairing a tone with a puff of air to the eye, a rabbit begins blinking at the tone alone. Why does this qualify as learning?',
             options: [
               'It represents a relatively permanent change in behavior due to experience',
-              'The rabbit chose to blink, demonstrating voluntary control',
-              'The blinking is an innate reflex that requires no experience',
-              'The behavior is temporary and disappears immediately'
+              'The rabbit chose to blink at the tone, which shows voluntary control over a reflex',
+              'The blink is an innate reflex, so the tone needed no prior experience to work',
+              'The blink to the tone appears briefly and then disappears for good after the session'
             ],
             correctAnswer: 0,
             explanation: 'Learning is defined as a relatively permanent change in behavior due to experience. The rabbit now blinks to the tone (a new behavior) because of the experience of tone-air puff pairings. This meets both criteria: permanent change + due to experience.'

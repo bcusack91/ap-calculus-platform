@@ -51,12 +51,12 @@ This workshop applies all perception and attention concepts to AP-style scenario
       exercise: {
         questions: [
           {
-            question: 'A experienced radiologist quickly spots a small tumor on a chest X-ray that a medical student misses after careful examination. Meanwhile, both the radiologist and the student fail to notice that a matchbook-sized image of a gorilla has been inserted into the X-ray (Trafton Drew, 2013). This scenario demonstrates:',
+            question: 'An experienced radiologist quickly spots a small tumor on a chest X-ray that a medical student misses after careful examination. Meanwhile, both the radiologist and the student fail to notice that a matchbook-sized image of a gorilla has been inserted into the X-ray (Trafton Drew, 2013). This scenario demonstrates:',
             options: [
-              'The radiologist uses top-down processing (expertise), while both demonstrate inattentional blindness (missed gorilla)',
-              'The radiologist has better bottom-up processing and change blindness',
-              'Both demonstrate the cocktail party effect for visual stimuli',
-              'The student has perceptual set for gorillas'
+              'Top-down processing in the radiologist, and inattentional blindness in both viewers',
+              'Bottom-up processing in the radiologist, and change blindness in both viewers',
+              'The cocktail party effect in the radiologist, and perceptual set in both viewers',
+              'Perceptual set for gorillas in the student, and selective attention in the radiologist'
             ],
             correctAnswer: 0,
             explanation: 'This real study by Drew et al. (2013) beautifully demonstrates TWO concepts: (1) The radiologist\'s expertise creates top-down processing — knowledge guides attention to tumors (perceptual set for medical abnormalities). The student, lacking this knowledge, relies more on bottom-up processing. (2) BOTH miss the gorilla — 83% of radiologists missed it! This is inattentional blindness: when focused on searching for tumors, even experts fail to notice an unexpected gorilla-shaped stimulus. Same scenario, two different concepts.'
@@ -64,10 +64,10 @@ This workshop applies all perception and attention concepts to AP-style scenario
           {
             question: 'While watching a movie in a dimly lit room, the screen shows a bright outdoor scene. A character\'s white shirt appears white on screen despite your room being dark. However, the actual light emitted by the "white shirt" pixels is dimmer than a flashlight shone at the wall. This demonstrates:',
             options: [
-              'Inattentional blindness — you don\'t notice the actual light levels',
-              'Color constancy — your brain adjusts for the lighting context within the scene',
-              'Size constancy — objects on screen appear normal size',
-              'The Gestalt principle of figure-ground'
+              'Inattentional blindness — you don\'t notice the actual light levels on the screen',
+              'Color constancy — the brain judges color relative to on-screen lighting',
+              'Size constancy — on-screen objects keep their perceived size despite the screen\'s scale',
+              'The Gestalt principle of figure-ground — the shirt stands out against the background'
             ],
             correctAnswer: 1,
             explanation: 'Color constancy operates WITHIN the scene\'s context. Your brain processes the movie scene as a whole: the sky is bright, shadows are dark, so the shirt (being the brightest object relative to the on-screen context) is perceived as "white." Your visual system doesn\'t compare the shirt to your actual dark room — it compares it to the other elements in the scene. This is why movies "work" in dark theaters.'
@@ -131,11 +131,11 @@ A bank robbery occurs. The witness was texting when the robber entered (attentio
       `,
       exercise: {
         dropdowns: [
-          { label: 'A researcher plays the same ambiguous sound and tells one group it\'s a word, another group it\'s music — groups perceive differently', options: ['Bottom-up processing', 'Top-down processing / perceptual set', 'Inattentional blindness', 'Change blindness'] },
+          { label: 'A researcher plays the same ambiguous sound and tells one group it\'s a word, another group it\'s music — groups perceive differently', options: ['Bottom-up processing', 'Perceptual set', 'Inattentional blindness', 'Change blindness'] },
           { label: 'During a basketball game, an announcer misses that a player switched jerseys during halftime', options: ['Inattentional blindness', 'Change blindness', 'Selective attention', 'Perceptual set'] },
           { label: 'A one-eyed pirate can still judge distance using the sizes of ships and where they overlap the horizon', options: ['Binocular cues', 'Monocular cues', 'Convergence', 'Retinal disparity'] }
         ],
-        correctAnswers: ['Top-down processing / perceptual set', 'Change blindness', 'Monocular cues'],
+        correctAnswers: ['Perceptual set', 'Change blindness', 'Monocular cues'],
         hint1: 'Prior instruction (expectations) shaped how they interpreted the same stimulus.',
         hint2: 'A change occurred and wasn\'t detected — especially with a break (halftime).',
         hint3: 'One eye available = can only use monocular cues (relative size, interposition).',
@@ -182,10 +182,10 @@ A bank robbery occurs. The witness was texting when the robber entered (attentio
           {
             question: 'A sports referee is focused on watching whether a player\'s foot touches the boundary line. At the same moment, another player commits a foul directly in front of the referee, but the referee doesn\'t call it. Fans are furious, claiming the referee is biased. What psychological concept BEST explains the missed call?',
             options: [
-              'The referee is biased against the fouling player\'s team',
-              'Inattentional blindness — the referee\'s focused attention on the boundary caused failure to perceive the foul',
-              'Change blindness — the foul happened too quickly to detect',
-              'The referee lacks the perceptual set to recognize fouls'
+              'Bias — the referee consciously favors one team and chose to ignore the foul',
+              'Inattentional blindness — attention fixed on the line left the foul unperceived',
+              'Change blindness — the foul happened too quickly for the referee to register a change',
+              'Perceptual set — the referee lacks the expectations needed to recognize a foul'
             ],
             correctAnswer: 1,
             explanation: 'This is a real-world example of inattentional blindness. The referee was focused on the boundary line (selective attention), causing them to miss a fully visible foul happening right in front of them. Fans assume bias, but the more likely explanation is attentional limitation — humans simply cannot attend to everything simultaneously. This is why multiple officials are used in sports. Research by Chabris et al. confirms that even trained observers miss unexpected events when attention is focused elsewhere.'
@@ -193,10 +193,10 @@ A bank robbery occurs. The witness was texting when the robber entered (attentio
           {
             question: 'A graphic designer creates a poster where product images are arranged in three tight clusters. Viewers automatically perceive three product "groups" even though the designer never drew any borders or lines around them. The viewers are using:',
             options: [
-              'The Gestalt principle of proximity — nearby objects are grouped together',
-              'The Gestalt principle of closure — viewers fill in invisible borders',
-              'Top-down processing — viewers expect products to be in groups',
-              'Perceptual constancy — products maintain their appearance despite grouping'
+              'Proximity — objects placed near one another are perceived as a group',
+              'Closure — viewers fill in invisible borders around each cluster',
+              'Top-down processing — viewers expect store products to come in groups',
+              'Perceptual constancy — each product keeps its appearance within the cluster'
             ],
             correctAnswer: 0,
             explanation: 'Proximity is the operative Gestalt principle here — objects near each other are automatically perceived as belonging to the same group, even without explicit borders. While closure might seem tempting (perceiving invisible borders), the grouping effect is driven by SPATIAL NEARNESS, not gap-filling. No borders or containers are perceived — just groups based on proximity. This is why graphic designers use spacing as a primary tool for visual organization.'

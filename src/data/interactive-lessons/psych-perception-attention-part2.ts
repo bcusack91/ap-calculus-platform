@@ -53,10 +53,10 @@ How do we perceive a 3D world from 2D images on our retinas? The answer involves
           {
             question: 'While driving, you notice that nearby fence posts seem to fly past quickly, but distant mountains barely move. This depth cue is:',
             options: [
-              'Retinal disparity — each eye sees the fence posts differently',
-              'Linear perspective — the fence posts converge in the distance',
-              'Motion parallax — closer objects appear to move faster during observer movement',
-              'Convergence — your eyes turn inward to focus on the fence posts'
+              'Retinal disparity — each eye receives a slightly different image of the posts',
+              'Linear perspective — the fence line converges toward a point in the distance',
+              'Motion parallax — nearer objects seem to move faster as you travel',
+              'Convergence — your eyes turn inward more sharply to track the nearby posts'
             ],
             correctAnswer: 2,
             explanation: 'Motion parallax is a MONOCULAR cue based on the apparent speed of objects during observer movement. Close objects (fence posts) appear to move quickly in the opposite direction of your movement, while distant objects (mountains) barely move. This is why you can judge distance even with one eye closed while moving. Key: the OBSERVER must be moving for motion parallax to work.'
@@ -134,10 +134,10 @@ How do we perceive a 3D world from 2D images on our retinas? The answer involves
       exercise: {
         dropdowns: [
           { label: 'Your eyes turn inward when focusing on a close object, providing distance information', options: ['Retinal disparity', 'Convergence', 'Linear perspective', 'Motion parallax'] },
-          { label: 'In a painting, a house partially blocking a tree indicates the house is closer', options: ['Relative size', 'Interposition (overlap)', 'Texture gradient', 'Aerial perspective'] },
+          { label: 'In a painting, a house partially blocking a tree indicates the house is closer', options: ['Relative size', 'Interposition', 'Texture gradient', 'Aerial perspective'] },
           { label: 'Distant mountains appear hazy and bluish compared to nearby trees', options: ['Relative height', 'Aerial perspective', 'Light and shadow', 'Retinal disparity'] }
         ],
-        correctAnswers: ['Convergence', 'Interposition (overlap)', 'Aerial perspective'],
+        correctAnswers: ['Convergence', 'Interposition', 'Aerial perspective'],
         hint1: 'Eye muscles turning inward = a binocular cue related to muscle tension.',
         hint2: 'One object blocking another = interposition/overlap.',
         hint3: 'Haziness and blue tint at distance = atmospheric/aerial perspective.',
@@ -177,21 +177,21 @@ How do we perceive a 3D world from 2D images on our retinas? The answer involves
           {
             question: 'An artist wants to create the illusion of depth in a flat painting. She cannot use binocular cues because the painting is 2D. Which combination of monocular cues would be MOST effective?',
             options: [
-              'Retinal disparity and convergence',
+              'Retinal disparity, convergence, and relative size',
               'Linear perspective, interposition, and relative size',
-              'Motion parallax and convergence',
-              'Retinal disparity and texture gradient'
+              'Motion parallax, convergence, and texture gradient',
+              'Retinal disparity, interposition, and texture gradient'
             ],
             correctAnswer: 1,
-            explanation: 'Artists can only use MONOCULAR cues in 2D paintings (binocular cues like retinal disparity and convergence require actual 3D space). Linear perspective (converging lines), interposition (overlapping objects), and relative size (smaller = farther) are the most commonly used artistic techniques for creating depth. Motion parallax also can\'t be used in a static painting.'
+            explanation: 'Artists can only use MONOCULAR cues in 2D paintings (binocular cues like retinal disparity and convergence require two eyes viewing actual 3D space), so any set containing one of them fails. Motion parallax also can\'t be used in a static painting. Linear perspective (converging lines), interposition (overlapping objects), and relative size (smaller = farther) are all monocular and are the most commonly used artistic techniques for creating depth.'
           },
           {
             question: 'A 5-month-old infant is placed on the visual cliff apparatus. The infant shows interest (decreased heart rate) when looking at the deep side but does NOT show fear. A 9-month-old infant shows fear (increased heart rate) and refuses to cross. What does this suggest?',
             options: [
-              'Only the 9-month-old can perceive depth',
-              'Depth perception is present early, but the fear response develops later with crawling experience',
-              'The 5-month-old has defective vision',
-              'Depth perception is entirely learned between 5 and 9 months'
+              'Only the 9-month-old can perceive depth; the 5-month-old cannot detect the drop',
+              'Depth perception is present early, but fear of drops develops later with crawling',
+              'The 5-month-old\'s visual system is too immature to register texture',
+              'Infants learn depth perception entirely between 5 and 9 months of age'
             ],
             correctAnswer: 1,
             explanation: 'The decreased heart rate in the 5-month-old indicates INTEREST — meaning the infant CAN perceive the depth difference (otherwise there would be nothing interesting about the deep side). However, the FEAR response (avoidance) develops later, likely after the infant gains crawling experience and learns that drops are dangerous. This supports the view that depth PERCEPTION has innate components, but the FEAR of heights is partly learned through experience.'

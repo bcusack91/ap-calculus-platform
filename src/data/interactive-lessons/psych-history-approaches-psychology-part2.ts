@@ -36,10 +36,10 @@ Modern psychology recognizes that behavior results from the interaction of:
           {
             question: 'The biopsychosocial approach emphasizes:',
             options: [
-              'Only biological factors',
+              'Genes and brain chemistry as the root cause of all behavior',
               'The interaction of biological, psychological, and social factors',
-              'Only unconscious processes',
-              'Only observable behavior'
+              'Unconscious drives, childhood conflicts, and defense mechanisms as causes',
+              'Observable behavior shaped by rewards, punishments, and conditioning'
             ],
             correctAnswer: 1,
             explanation: 'The biopsychosocial approach recognizes that behavior results from the complex interaction of biological, psychological, and social factors.'
@@ -146,10 +146,10 @@ Modern psychology recognizes that behavior results from the interaction of:
           {
             question: 'A psychologist explains depression by examining neurotransmitter imbalances, pessimistic thinking patterns, AND the patient\'s social isolation. This approach is best described as:',
             options: [
-              'biopsychosocial — integrating biological, psychological, and social factors',
-              'psychodynamic — focusing on unconscious conflicts',
-              'behavioral — examining learned behaviors',
-              'cognitive — focusing only on thinking patterns'
+              'biopsychosocial — combining the biological, psychological and social levels',
+              'psychodynamic — tracing the depression to unresolved conflicts from early childhood',
+              'behavioral — examining how depressed behaviors were learned through reinforcement',
+              'cognitive — focusing on how pessimistic thoughts feed social withdrawal and low mood'
             ],
             correctAnswer: 0,
             explanation: 'The biopsychosocial approach integrates all three levels: biological (neurotransmitters), psychological (pessimistic thinking), and social (isolation). No single perspective captures the full picture — the biopsychosocial model combines them.'
@@ -157,10 +157,10 @@ Modern psychology recognizes that behavior results from the interaction of:
           {
             question: 'If asked "How would a behaviorist explain why a student studies hard?", the best answer would focus on:',
             options: [
-              'observable rewards and punishments (e.g., praise for good grades, losing privileges for bad grades)',
-              'unconscious desire to please parents rooted in childhood experiences',
+              'the rewards and punishments that have followed studying in the past',
+              'an unconscious desire to please parents rooted in childhood experiences',
               'the student\'s genetic predisposition toward conscientiousness',
-              'the student\'s intrinsic motivation and desire for self-actualization'
+              'the student\'s intrinsic motivation and drive toward self-actualization'
             ],
             correctAnswer: 0,
             explanation: 'Behaviorists explain behavior through observable stimuli and responses — specifically reinforcements and punishments. They would NOT reference unconscious desires (psychodynamic), genetics (biological), or intrinsic motivation (humanistic).'

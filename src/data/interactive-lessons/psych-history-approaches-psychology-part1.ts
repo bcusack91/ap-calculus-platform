@@ -50,7 +50,7 @@ Wundt is considered the **"father of psychology"** for establishing the first ex
               'Dream analysis',
               'Behavioral observation',
               'Introspection',
-              'Brain imaging'
+              'Free association'
             ],
             correctAnswer: 2,
             explanation: 'Structuralists used introspection — trained subjects reported their conscious experiences of stimuli.'
@@ -162,10 +162,10 @@ Wundt is considered the **"father of psychology"** for establishing the first ex
           {
             question: 'A researcher asks trained participants to describe their moment-by-moment sensory experience while looking at an apple — reporting the color, shape, texture, and emotional response. This method is most consistent with:',
             options: [
-              'structuralism — using introspection to break consciousness into basic elements',
-              'functionalism — studying the purpose of the experience',
-              'behaviorism — observing measurable responses to stimuli',
-              'Gestalt psychology — studying the whole perceptual experience'
+              'structuralism — using introspection to break experience into basic elements',
+              'functionalism — asking what adaptive purpose the conscious experience serves',
+              'behaviorism — recording only the observable responses made to the apple',
+              'Gestalt psychology — studying how the parts are perceived as an organized whole'
             ],
             correctAnswer: 0,
             explanation: 'This is introspection as used by structuralists: trained participants systematically report their conscious experience of a stimulus, trying to identify its basic elements (color, shape, texture, feeling).'
@@ -174,9 +174,9 @@ Wundt is considered the **"father of psychology"** for establishing the first ex
             question: 'A psychologist studies how fear helps humans avoid danger and survive. This "what is it FOR?" approach most closely aligns with:',
             options: [
               'functionalism — studying the adaptive purpose of mental processes',
-              'structuralism — identifying the elements of fear',
-              'psychodynamic — exploring unconscious sources of fear',
-              'Gestalt — studying how fear is perceived as a whole'
+              'structuralism — breaking the experience of fear into its basic sensory elements',
+              'psychodynamic — tracing fear to unconscious conflicts rooted in early childhood',
+              'Gestalt — studying how the parts of a fear experience form a perceived whole'
             ],
             correctAnswer: 0,
             explanation: 'Functionalism, influenced by Darwin, asks how mental processes help organisms adapt. Studying the survival purpose of fear is a classic functionalist question — "What function does this serve?"'

@@ -44,8 +44,8 @@ The AP exam tests whether you understand that learning is NOT purely behavioral.
           {
             question: 'Tolman\'s rats explored a maze without receiving any reward. When a reward was later introduced, they immediately ran the maze efficiently. This demonstrates:',
             options: [
-              'Classical conditioning — the maze became a conditioned stimulus',
-              'Latent learning — the rats learned the maze layout but didn\'t demonstrate it until motivated',
+              'Classical conditioning — the maze became a conditioned stimulus for food',
+              'Latent learning — the rats learned the maze layout but didn\'t show it until motivated',
               'Shaping — the rats were reinforced through successive approximations',
               'Fixed-ratio reinforcement — the rats were reinforced after exploring the maze a set number of times'
             ],
@@ -55,10 +55,10 @@ The AP exam tests whether you understand that learning is NOT purely behavioral.
           {
             question: 'Seligman\'s dogs received inescapable electric shocks. Later, when placed in a situation where they COULD escape, they didn\'t even try. This phenomenon is called:',
             options: [
-              'Extinction — the escape behavior was extinguished',
-              'Negative punishment — something pleasant was removed',
-              'Learned helplessness — the dogs learned that their behavior had no effect on outcomes',
-              'Latent learning — the dogs learned but didn\'t show it'
+              'Extinction — the escape response faded because it was never reinforced',
+              'Negative punishment — the chance to escape was removed, decreasing escape',
+              'Learned helplessness — the dogs learned their behavior had no effect on outcomes',
+              'Latent learning — the dogs learned to escape but lacked motivation to show it'
             ],
             correctAnswer: 2,
             explanation: 'Learned helplessness occurs when an organism learns that it has no control over negative events. The dogs developed a cognitive expectation that nothing they did would stop the shocks. This concept is important because it\'s used to explain human depression — feeling helpless to change one\'s circumstances.'
@@ -178,21 +178,21 @@ Not all behaviors are equally easy to condition:
           {
             question: 'A student fails several math tests despite studying hard. Eventually, the student stops studying for math entirely, saying "Nothing I do makes a difference." A psychologist would connect this to:',
             options: [
-              'Extinction — the studying behavior was extinguished because it wasn\'t reinforced',
-              'Learned helplessness — repeated failure created a belief that effort doesn\'t affect outcomes, a concept linked to depression',
-              'Latent learning — the student learned math but isn\'t showing it',
-              'Negative punishment — failing grades removed the student\'s motivation'
+              'Extinction — studying stopped because it was no longer followed by any reinforcement',
+              'Learned helplessness — repeated failure taught that effort can\'t change outcomes',
+              'Latent learning — the student learned the math but has no incentive to show it yet',
+              'Negative punishment — failing grades removed the student\'s motivation to keep studying'
             ],
             correctAnswer: 1,
             explanation: 'This is learned helplessness — the student experienced repeated "inescapable" failure (like Seligman\'s dogs receiving inescapable shocks) and developed the belief that their behavior (studying) has no effect on outcomes (grades). This cognitive expectation of failure is a key model for understanding depression. Note: extinction is also partially correct, but the cognitive component ("Nothing I do makes a difference") is the hallmark of learned helplessness.'
           },
           {
-            question: 'An AP Psychology FRQ asks: "Using operant conditioning principles, design a plan to increase a child\'s reading behavior." Which response element would earn the MOST points?',
+            question: 'A free-response practice prompt asks: "Using operant conditioning principles, design a plan to increase a child\'s reading behavior." Which response element would earn the MOST points?',
             options: [
-              'Describe classical conditioning and pair books with pleasant sounds',
-              'Explain how to use positive reinforcement (praise/rewards for reading), start with continuous reinforcement, then transition to a variable-ratio schedule for long-term maintenance',
-              'Recommend positive punishment for not reading and negative punishment for reading non-academic books',
-              'Suggest insight learning — the child will eventually realize reading is valuable'
+              'Pair books with pleasant music so that reading comes to elicit a conditioned positive emotional response',
+              'Use positive reinforcement for reading, starting continuous and shifting to a variable-ratio schedule',
+              'Apply positive punishment for not reading and negative punishment for reading non-academic books',
+              'Rely on insight learning, so the child eventually realizes on his own that reading is valuable'
             ],
             correctAnswer: 1,
             explanation: 'A complete FRQ response should: (1) identify the type of reinforcement (positive — adding rewards), (2) specify starting with continuous reinforcement for fast acquisition, (3) transition to partial reinforcement (VR) for resistance to extinction, and (4) potentially include shaping if the child isn\'t reading at all yet. Punishment-based approaches would lose points because they don\'t teach the desired behavior and have well-documented limitations.'
