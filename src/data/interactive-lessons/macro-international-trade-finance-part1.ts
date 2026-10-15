@@ -21,7 +21,7 @@ export const macroInternationalTradeFinancePart1Data = {
 ## 📖 Exchange Rates
 
 ### Key Definitions
-- **Exchange rate:** The price of one currency in terms of another (e.g., $1 = 110 yen)
+- **Exchange rate:** The price of one currency in terms of another (e.g., \\$1 = 110 yen)
 - **Appreciation:** A currency increases in value (buys more foreign currency)
 - **Depreciation:** A currency decreases in value (buys less foreign currency)
 
@@ -36,11 +36,11 @@ export const macroInternationalTradeFinancePart1Data = {
 
 | Factor | Effect on Dollar |
 |---|---|
-| **Higher U.S. interest rates** | Dollar APPRECIATES — foreign investors buy dollars to invest in higher-return U.S. assets (demand for dollars rises) |
+| **Higher U.S. real interest rates** (relative to other countries) | Dollar APPRECIATES — foreign investors buy dollars to invest in higher-return U.S. assets (demand for dollars rises) |
 | **Higher U.S. inflation** | Dollar DEPRECIATES — U.S. goods become relatively more expensive (demand for dollars falls) |
-| **Stronger U.S. economy (growth)** | Dollar APPRECIATES — attracted foreign investment increases demand for dollars |
+| **Higher U.S. income** (relative to trading partners) | Dollar DEPRECIATES — Americans buy more imports, so they supply more dollars to the forex market. If the growth also raises U.S. real interest rates, capital inflows push the other way (Part 5) |
 | **Increased demand for U.S. exports** | Dollar APPRECIATES — foreigners need dollars to buy U.S. goods |
-| **U.S. trade deficit** | Dollar DEPRECIATES — more dollars flow out to buy imports than flow in from exports |
+| **Increased U.S. demand for imports** | Dollar DEPRECIATES — Americans supply more dollars to buy foreign goods (supply of dollars rises) |
 
 > 🔑 **AP Connection:** The AP exam frequently asks: "If U.S. interest rates rise relative to other countries, what happens to the dollar?" Answer: Dollar APPRECIATES because foreign investors demand more dollars to invest in higher-yield U.S. assets → demand for dollars rises in the forex market → dollar value rises.
 `},
@@ -65,7 +65,7 @@ If a country has a **current account deficit** (imports > exports), it must have
 ### Why?
 - When the U.S. buys more goods from abroad than it sells (current account deficit), dollars flow out to foreign sellers
 - Those foreign sellers (or their governments) use those dollars to buy U.S. assets (Treasury bonds, stocks, real estate) — creating a capital account surplus
-- The U.S. current account deficit (≈ $800B+) is financed by foreign purchases of U.S. assets
+- The U.S. current account deficit (≈ \\$800B+) is financed by foreign purchases of U.S. assets
 
 ### Trade Deficits — Good or Bad?
 | Argument: Deficits Are Concerning | Argument: Deficits Are Not Necessarily Bad |
@@ -77,7 +77,7 @@ If a country has a **current account deficit** (imports > exports), it must have
 > 🔑 **AP Connection:** The relationship between the current account and capital account is critical: **if one is in deficit, the other must be in surplus** (they sum to zero). This is tested in both multiple-choice and FRQ.
 `},
     {id:'macrointr1-quiz2',type:'multiple-choice' as const,content:`**Check Your Understanding** 🎯`,exercise:{questions:[
-      {question:'If the United States has a current account deficit of $500 billion, what must be true about its capital (financial) account?',options:['The capital account must also be in deficit by $500 billion — both accounts move in the same direction','The capital account must be in surplus of approximately $500 billion — the two accounts must balance to zero','The capital account is unrelated to the current account and can be in either surplus or deficit independently','The capital account is always zero because the United States does not allow foreign investment in domestic assets'],correctAnswer:1,explanation:'The balance of payments must balance: Current Account + Capital Account ≈ 0. If the current account has a \\$500B deficit (the U.S. imports more than it exports), the capital account must show a roughly \\$500B surplus (foreign investment flowing into the U.S. exceeds U.S. investment flowing abroad). The dollars sent abroad to buy imports come back as foreign purchases of U.S. stocks, bonds, and real estate.'},
+      {question:'If the United States has a current account deficit of \\$500 billion, what must be true about its capital (financial) account?',options:['The capital account must also be in deficit by \\$500 billion — both accounts move in the same direction','The capital account must be in surplus of approximately \\$500 billion — the two accounts must balance to zero','The capital account is unrelated to the current account and can be in either surplus or deficit independently','The capital account is always zero because the United States does not allow foreign investment in domestic assets'],correctAnswer:1,explanation:'The balance of payments must balance: Current Account + Capital Account ≈ 0. If the current account has a \\$500B deficit (the U.S. imports more than it exports), the capital account must show a roughly \\$500B surplus (foreign investment flowing into the U.S. exceeds U.S. investment flowing abroad). The dollars sent abroad to buy imports come back as foreign purchases of U.S. stocks, bonds, and real estate.'},
       {question:'The Federal Reserve raises U.S. interest rates. What is the expected effect on the U.S. dollar and net exports?',options:['The dollar depreciates and net exports increase because lower rates attract foreign investment','The dollar appreciates and net exports decrease — higher rates attract foreign capital (increasing demand for dollars), but the stronger dollar makes U.S. exports more expensive and imports cheaper','The dollar is unaffected because the Federal Reserve cannot influence exchange rates through interest rate policy','The dollar depreciates and net exports decrease because higher rates cause a recession that reduces all economic activity'],correctAnswer:1,explanation:'Higher U.S. interest rates → higher returns on U.S. financial assets → foreign investors buy more U.S. assets → they need dollars to do so → demand for dollars rises in the forex market → dollar appreciates. However, a stronger dollar makes U.S. exports more expensive for foreigners (exports ↓) and foreign imports cheaper for Americans (imports ↑) → net exports decrease → AD shifts left. This is one way monetary policy affects the economy through the exchange rate channel.'}
     ]}}
   ]

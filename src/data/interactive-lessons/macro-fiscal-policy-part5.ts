@@ -5,20 +5,56 @@ export const macroFiscalPolicyPart5Data = {
       id: 'macrofis5-intro',
       type: 'text' as const,
       content: `
-# 📈 Fiscal Policy
+# 🏛️ Fiscal Policy
 
-**Part 5 of 7 — Change Over Time**
+**Part 5 of 7 — Policy Mix, Nuance and Misconceptions**
 
-Fiscal Policy has evolved over time. Understanding historical and contemporary changes helps explain current patterns and predict future trends.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| 📖 When Fiscal and Monetary Policy Act Together |
+| Who Does What |
+| The Balanced-Budget Rule Problem |
+| Misconceptions to Avoid |
 
-| Concept | Description |
-|---------|-------------|
-| **Continuity** | Aspects of Fiscal Policy that have remained stable over time |
-| **Change** | How Fiscal Policy has transformed due to new forces and conditions |
-| **Trend** | The direction of change in Fiscal Policy over time |
-      `
+> 🔑 **Key Concept:** Fiscal policy (Congress and the president) and monetary policy (the Federal Reserve) often act at the same time. When two policies push a variable in the **same** direction, the result is certain; when they push in **opposite** directions, the net effect is **indeterminate** unless you know which push is bigger.
+`
+    },
+    {
+      id: 'macrofis5-mix',
+      type: 'text' as const,
+      content: `
+## 📖 When Fiscal and Monetary Policy Act Together
+
+Each policy moves two things you can track: **AD** (and with it real GDP and the price level) and **interest rates**.
+
+| Policy | Effect on AD | Effect on interest rates |
+|---|---|---|
+| Expansionary fiscal | Right | **Up** (government borrowing raises demand for loanable funds; higher income raises money demand) |
+| Contractionary fiscal | Left | Down |
+| Expansionary monetary | Right | **Down** (the Fed lowers rates to raise investment) |
+| Contractionary monetary | Left | Up |
+
+### Combining them
+
+| Fiscal | Monetary | AD and real GDP | Interest rates |
+|---|---|---|---|
+| Expansionary | Expansionary | **Rise** | Indeterminate |
+| Contractionary | Contractionary | **Fall** | Indeterminate |
+| Expansionary | Contractionary | Indeterminate | **Rise** |
+| Contractionary | Expansionary | Indeterminate | **Fall** |
+
+### Worked Example: Expansionary fiscal + contractionary monetary
+
+Congress cuts taxes while the Fed raises interest rates to fight inflation.
+
+- **Interest rates:** both policies push rates up, so rates **rise** for certain.
+- **Private investment:** higher rates make borrowing costlier, so investment **falls**.
+- **AD and real GDP:** the tax cut raises consumption, but the higher rates cut investment. Without knowing the sizes, the net effect is **indeterminate**.
+
+> 🔑 **AP Connection:** When the free-response question asks about a variable with opposing forces, the right answer is "indeterminate," followed by **both** forces: "the tax cut increases AD, but the higher interest rate decreases investment."
+`
     },
     {
       id: 'macrofis5-quiz1',
@@ -29,144 +65,174 @@ Fiscal Policy has evolved over time. Understanding historical and contemporary c
       exercise: {
         questions: [
           {
-            question: 'Studying change over time in Fiscal Policy helps:',
+            question: 'The government increases its purchases while the central bank sells bonds to raise interest rates. What is the effect on interest rates and on real GDP?',
             options: [
-              'Only with history classes',
-              'Explain current patterns and predict future developments',
-              'Nothing',
-              'Memorize dates'
+              'Rates rise; real GDP is indeterminate',
+              'Both rates and real GDP rise',
+              'Rates are indeterminate; real GDP rises',
+              'Rates fall; real GDP is indeterminate'
             ],
-            correctAnswer: 1,
-            explanation: 'Understanding how things have changed reveals the forces shaping current conditions and likely future trends.'
+            correctAnswer: 0,
+            explanation: 'Both policies push interest rates up, so that result is certain. Higher purchases raise AD, but higher rates reduce investment, so the net change in real GDP depends on the sizes of the two effects.'
           },
           {
-            question: 'Continuity in Fiscal Policy means:',
+            question: 'Both fiscal and monetary policy turn expansionary at the same time. Which result is certain in the short run?',
             options: [
-              'Everything changes',
-              'Some aspects have remained stable despite other changes',
-              'Nothing ever happened',
-              'The topic is boring'
+              'Interest rates fall',
+              'Real GDP rises',
+              'Interest rates rise',
+              'The price level falls'
             ],
             correctAnswer: 1,
-            explanation: 'Continuity refers to elements that persist even as other aspects change — an important analytical concept.'
+            explanation: 'Both policies shift AD right, so real GDP rises for certain. Fiscal expansion pushes interest rates up while monetary expansion pushes them down, so the interest rate is indeterminate, and the price level rises rather than falls.'
+          },
+          {
+            question: 'A government raises taxes while the central bank lowers interest rates. What happens to private investment?',
+            options: [
+              'It falls because taxes are higher',
+              'It is indeterminate in direction',
+              'It rises because borrowing has become cheaper',
+              'It stays the same as AD is fixed'
+            ],
+            correctAnswer: 2,
+            explanation: 'Contractionary fiscal policy reduces borrowing pressure and expansionary monetary policy cuts rates, so interest rates fall and interest-sensitive investment rises. The tax increase works mainly through consumption, and AD itself is the indeterminate variable here.'
           }
         ]
       }
     },
     {
-      id: 'macrofis5-content',
+      id: 'macrofis5-actors',
       type: 'text' as const,
       content: `
-## Change Over Time — Deeper Dive
+## Who Does What
 
-### Continuity
-Aspects of Fiscal Policy that have remained stable over time. Understanding this concept is essential for mastering Fiscal Policy in AP Macroeconomics.
+| | Fiscal policy | Monetary policy |
+|---|---|---|
+| **Decision makers** | Congress and the president | The Federal Reserve |
+| **Tools** | Government purchases, taxes, transfer payments | Interest rate on reserve balances (ample reserves); open-market operations, discount rate, reserve requirement (limited reserves) |
+| **First link to AD** | G directly; taxes and transfers through disposable income | Interest rates → investment and interest-sensitive consumption |
+| **Typical delay** | Long decision lag: a bill must pass | Short decision lag: the Fed can act at any meeting |
 
-### Change
-How Fiscal Policy has transformed due to new forces and conditions. This builds on the previous concept and connects to broader themes in the course.
+The monetary column is a quick reference; the Monetary Policy topic teaches those tools.
 
-### Trend
-The direction of change in Fiscal Policy over time. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
-      `
-    },
-    {
-      id: 'macrofis5-input',
-      type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
+### Three distinctions that cost points
 
-1) What term refers to aspects of Fiscal Policy that have remained stable over time?
-
-2) What concept describes how Fiscal Policy has transformed due to new forces and conditions?
-
-3) Name the term for the direction of change in Fiscal Policy over time.
-
-Use the exact term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['Continuity', 'Change', 'Trend'],
-        hint1: 'Starts with: C',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: T',
-        explanation: 'Expected answers: Continuity (Aspects of Fiscal Policy that have remained stable over time), Change (How Fiscal Policy has transformed due to new forces and conditions), and Trend (The direction of change in Fiscal Policy over time).'
-      }
+1. **Transfers are not government purchases.** Social Security or unemployment benefits are not counted in G when measuring GDP, because nothing is produced in exchange. They affect AD only through consumption.
+2. **A deficit is not the debt.** The deficit is the shortfall in **one year** (a flow). The national debt is the **total** of all past deficits minus surpluses (a stock). A smaller deficit still adds to the debt.
+3. **Crowding out reduces, but rarely cancels, the effect.** Government borrowing can raise the real interest rate and reduce private investment, shrinking the AD shift (Fiscal Policy Tools, Part 3, works through the loanable funds graph).
+`
     },
     {
       id: 'macrofis5-dropdown',
       type: 'dropdown-select' as const,
       content: `
 **Fill in the Blanks** 🔍
+
+Choose the term that completes each statement.
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Aspects of Fiscal Policy that have remained stable over time is called ___',
-            options: ['Continuity', 'Change', 'Trend', 'None of these']
+            label: 'Fiscal policy is set by ___.',
+            options: ['the Federal Reserve', 'the Treasury alone', 'Congress and the president', 'the Supreme Court']
           },
           {
-            label: 'How Fiscal Policy has transformed due to new forces and conditions describes ___',
-            options: ['Continuity', 'Change', 'Trend', 'All of these']
+            label: 'Unemployment benefits ___ in GDP.',
+            options: ['count as government purchases', 'count as consumption', 'are not counted', 'count as investment']
           },
           {
-            label: 'The direction of change in Fiscal Policy over time is known as ___',
-            options: ['Trend', 'Continuity', 'Change', 'None of these']
+            label: 'The total of all past deficits minus surpluses is the ___.',
+            options: ['national debt', 'budget deficit', 'trade deficit', 'money supply']
+          },
+          {
+            label: 'Expansionary fiscal policy combined with contractionary monetary policy makes interest rates ___.',
+            options: ['fall', 'rise', 'indeterminate', 'unchanged']
           }
         ],
-        correctAnswers: ['Continuity', 'Change', 'Trend'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Continuity — Aspects of Fiscal Policy that have remained stable over time. Change — How Fiscal Policy has transformed due to new forces and conditions. Trend — The direction of change in Fiscal Policy over time.'
+        correctAnswers: ['Congress and the president', 'are not counted', 'national debt', 'rise'],
+        hint1: 'The branch that writes budget laws, plus the official who signs them.',
+        hint2: 'Ask what good or service the government receives in exchange.',
+        hint3: 'One is a yearly flow; the other is an accumulated stock.',
+        explanation: 'Congress and the president set fiscal policy. Transfers are not counted in GDP because nothing is produced in exchange. Accumulated deficits minus surpluses form the national debt, and both policies in the mix push interest rates up.'
       }
     },
     {
-      id: 'macrofis5-strategy',
+      id: 'macrofis5-balanced',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## The Balanced-Budget Rule Problem
 
-### Misconceptions to Avoid
-- Don\'t confuse **Continuity** with **Change** — while related, they address different aspects of Fiscal Policy.
-- **Trend** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
+Suppose a law required the government to balance its budget **every year**. Many U.S. states operate under balanced-budget requirements, so the question is a practical one.
 
-### AP Strategy Moves
-- When you see questions about change over time, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect change over time to broader themes in AP Macroeconomics for higher scores.
-      `
+### Worked Example: A recession under a strict balanced-budget rule
+
+1. A recession cuts income. Tax revenue falls by \\$80 billion and transfers rise by \\$20 billion, so a balanced budget turns into a **\\$100 billion deficit**.
+2. To obey the rule, the government must **raise taxes or cut spending** by \\$100 billion.
+3. That is contractionary fiscal policy **in the middle of a recession**: AD shifts further left, output falls more and unemployment rises more.
+
+In a boom, the rule works the other way: rising revenue creates a surplus, and the government would have to **cut taxes or raise spending**, adding demand to an overheating economy.
+
+**Conclusion:** A strict annual balanced-budget rule is **pro-cyclical**. It cancels the automatic stabilizers and pushes with the business cycle instead of against it.
+
+> 🔑 **AP Connection:** If a question asks for the effect of "requiring a balanced budget during a recession," the answer is that the required tax increases or spending cuts **reduce AD** and **deepen the recession**.
+`
     },
     {
-      id: 'macrofis5-applied',
+      id: 'macrofis5-misconceptions',
+      type: 'text' as const,
+      content: `
+## Misconceptions to Avoid
+
+| Misconception | Correction |
+|---|---|
+| "The Fed runs fiscal policy." | Fiscal policy belongs to Congress and the president; the Fed runs monetary policy. |
+| "A tax cut increases government spending." | A tax cut changes revenue, not G. It raises AD through consumption (or investment for business taxes). |
+| "Expansionary fiscal policy always lowers interest rates." | It tends to **raise** them, because the government borrows more and money demand rises with income. |
+| "Automatic stabilizers need Congress to act each time." | They are built into existing law and respond on their own. |
+| "Fiscal stimulus permanently raises output." | Demand-side stimulus at full employment raises output only in the short run; in the long run only the price level is higher. |
+| "If the deficit shrinks, the debt shrinks." | The debt falls only when the budget is in **surplus**. |
+`
+    },
+    {
+      id: 'macrofis5-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'An AP question asks how Fiscal Policy has changed in the last 50 years. A strong answer would:',
+            question: 'A state must balance its budget each year. A recession cuts its tax revenue. What does obeying the rule do to the recession?',
             options: [
-              'Say nothing has changed',
-              'Identify specific changes, explain their causes, and note what has remained constant',
-              'Only list dates',
-              'Make up information'
+              'It shortens the recession, since deficits fall',
+              'It has no effect, since the budget stays balanced',
+              'It ends the recession through lower interest rates',
+              'It deepens the recession'
             ],
-            correctAnswer: 1,
-            explanation: 'Strong AP answers address both change AND continuity, explaining causes and consequences of transformation.'
+            correctAnswer: 3,
+            explanation: 'Balancing the budget after revenue falls requires tax increases or spending cuts, which shift AD further left. Keeping the budget balanced is the cause of the harm, not a neutral outcome.'
           },
           {
-            question: 'A trend in Fiscal Policy shows acceleration in recent decades. The most likely explanation is:',
+            question: 'The deficit falls from \\$300 billion to \\$200 billion. What happens to the national debt that year?',
             options: [
-              'Random chance',
-              'New technologies, policies, or conditions intensifying existing processes',
-              'The data is wrong',
-              'Nothing has changed'
+              'It rises by \\$200 billion',
+              'It falls by \\$100 billion',
+              'It falls by \\$200 billion',
+              'It rises by \\$100 billion'
+            ],
+            correctAnswer: 0,
+            explanation: 'Any deficit is new borrowing, so this year\'s \\$200 billion deficit adds \\$200 billion to the debt. A shrinking deficit slows the growth of the debt, but only a surplus reduces it.'
+          },
+          {
+            question: 'Which statement about transfer payments is correct?',
+            options: [
+              'They are counted in GDP as government purchases',
+              'They are not counted in GDP but can raise consumption',
+              'They are counted in GDP as household consumption',
+              'They are not counted in GDP and cannot affect AD'
             ],
             correctAnswer: 1,
-            explanation: 'Accelerating trends are typically driven by new forces (technology, policy, globalization) intensifying existing processes.'
+            explanation: 'Transfers buy no newly produced good or service, so they are excluded from GDP. They still raise recipients\' disposable income, so consumption, which is counted in GDP, rises.'
           }
         ]
       }

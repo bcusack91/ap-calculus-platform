@@ -10,23 +10,23 @@ export const macroFiscalPolicyToolsPart1Data = {
 
 | Section |
 |---------|
-| 📖 Tax Policy Tools |
-| Government Spending Programs |
+| 📖 The Three Fiscal Tools |
+| Tax Cuts vs. Spending Increases |
 | Supply-Side Economics |
-| Deficits, Debt & Sustainability |
+| Short Run vs. Long Run |
 
 > 🔑 **Key Concept:** The AP exam tests how specific fiscal tools (tax cuts, spending programs, supply-side policies) affect the economy differently. You must understand the **spending multiplier** and **tax multiplier** — covered in the Multiplier Effect lesson.
 `},
     {id:'macrofist1-taxes',type:'text' as const,content:`
-## 📖 Tax Policy as a Fiscal Tool
+## 📖 The Three Fiscal Tools
 
-### Types of Taxes
+| Tool | Examples | How it reaches AD |
+|---|---|---|
+| **Government purchases (G)** | Highways, military equipment, public-school teachers' salaries | **Directly**: G is a component of AD (C + I + G + Xn) |
+| **Taxes** | Personal income taxes, payroll taxes, taxes on business profits | **Indirectly**: personal taxes change disposable income and so consumption; business taxes change after-tax returns and so investment |
+| **Transfer payments** | Unemployment benefits, Social Security, SNAP food assistance | **Indirectly**: transfers change disposable income and so consumption; they are not counted as G in GDP |
 
-| Tax Type | Description | Example | Progressive/Regressive? |
-|---|---|---|---|
-| **Progressive** | Higher income → higher tax rate | Federal income tax (10%–37% brackets) | Progressive |
-| **Regressive** | Takes a larger % of income from low earners | Sales tax, payroll tax (Social Security capped at \\$168,600 in 2024) | Regressive |
-| **Proportional (flat)** | Same rate for all income levels | Some state income taxes; proposed "flat tax" | Proportional |
+Expansionary policy raises G, cuts taxes or raises transfers; contractionary policy does the reverse.
 
 ### Tax Cuts vs. Spending Increases
 Both are expansionary, but they affect AD differently:
@@ -49,7 +49,7 @@ Both are expansionary, but they affect AD differently:
 `},
     {id:'macrofist1-quiz1',type:'multiple-choice' as const,content:`**Concept Check** 🎯`,exercise:{questions:[
       {question:'Why does a \\$100 billion increase in government spending have a larger effect on GDP than a \\$100 billion tax cut?',options:['Tax cuts only benefit wealthy individuals who don\'t spend their additional income on any goods or services','Government spending enters the spending stream immediately and in full, while consumers save a portion of a tax cut (based on MPS) rather than spending all of it','Tax cuts reduce government revenue and therefore decrease GDP, while government spending has no effect on the budget','Government spending is not subject to the multiplier effect, while tax cuts multiply through the economy faster'],correctAnswer:1,explanation:'When the government spends \\$100B on infrastructure, that entire \\$100B is immediately injected into the economy (workers are hired, materials purchased). When consumers receive a \\$100B tax cut, they save a portion (determined by the marginal propensity to save, MPS) and spend only the remainder. If MPS = 0.2, only \\$80B of the tax cut enters the spending stream initially. This is why the spending multiplier > tax multiplier.'},
-      {question:'The Social Security payroll tax is considered regressive because:',options:['It charges a higher tax rate to individuals who earn more money each year','It is capped at \\$168,600 (2024), so individuals earning above that amount pay a smaller percentage of their total income','It only applies to people over 65 years old who are already receiving Social Security benefits','It taxes all income at a flat rate with no cap, making everyone pay the same dollar amount'],correctAnswer:1,explanation:'The Social Security payroll tax (6.2% for employees) applies only to income up to \\$168,600 (2024 cap). Someone earning \\$168,600 pays 6.2% of their entire income. But someone earning \\$500,000 pays the same dollar amount of Social Security tax — which is only about 2.1% of their income. The effective rate decreases as income rises above the cap, making it regressive.'}
+      {question:'A government increases transfer payments to households by \\$50 billion. Through which component of aggregate demand does this policy first work?',options:['Consumption','Government purchases','Investment','Net exports'],correctAnswer:0,explanation:'Transfers raise households\' disposable income, and households spend part of it, so consumption rises first. Transfers buy no good or service, so they are not counted as government purchases.'}
     ]}},
     {id:'macrofist1-supply',type:'text' as const,content:`
 ## 📖 Supply-Side Economics
@@ -68,23 +68,24 @@ Both are expansionary, but they affect AD differently:
 | **Investment in human capital** | Education/training → more productive workforce → AS shifts right |
 | **Infrastructure investment** | Better roads, broadband, ports → lower transportation costs → AS shifts right |
 
-### The Laffer Curve
-- Shows the relationship between **tax rates** and **tax revenue**
-- At 0% tax rate → \\$0 revenue
-- At 100% tax rate → \\$0 revenue (nobody works if all income is taxed)
-- Revenue is maximized at some rate between 0% and 100%
-- **Supply-side argument:** If current tax rates are above the revenue-maximizing rate, cutting taxes will actually INCREASE revenue (more economic activity)
+### Short Run vs. Long Run: Two Effects of the Same Policy
+Supply-side fiscal policies usually work on **both** sides of the AD-AS model, at different times:
 
-### Criticism
-- Critics argue the economy is rarely on the "wrong side" of the Laffer Curve
-- Tax cuts may primarily increase deficits rather than generating enough growth to offset lost revenue
-- Benefits disproportionately go to high-income individuals and corporations
+| Policy | Short run: AD | Long run: LRAS and potential output |
+|---|---|---|
+| **Building highways and broadband** | G rises → AD shifts right | More public capital → LRAS shifts right |
+| **Tax credit for new business equipment** | I rises → AD shifts right | More private capital → LRAS shifts right |
+| **Funding job training and education** | G rises → AD shifts right | More human capital → LRAS shifts right |
 
-> 🔑 **AP Connection:** The Laffer Curve occasionally appears on the AP exam. You should be able to explain the theory AND the criticism — the AP exam values analytical thinking, not ideological positions.
+- **Short run:** the spending or the new investment is itself part of AD, so AD shifts right first.
+- **Long run:** once the roads are built and the workers trained, the economy can produce more at full employment. Potential output rises, LRAS shifts right and the PPC shifts outward.
+- **Trade-off:** if these policies are financed by government borrowing, a higher real interest rate can crowd out some private investment and shrink the long-run gain (Parts 3 and 5).
+
+> 🔑 **AP Connection:** When a fiscal policy adds to the economy's productive capacity, show **AD shifting right in the short run** and **LRAS shifting right in the long run**. The supply-side effect takes time to arrive.
 `},
     {id:'macrofist1-quiz2',type:'multiple-choice' as const,content:`**Check Your Understanding** 🎯`,exercise:{questions:[
       {question:'Supply-side economists argue that tax cuts focused on businesses and investors will primarily:',options:['Shift aggregate demand to the left by reducing government tax revenue and forcing spending cuts','Increase incentives to invest, produce, and work — shifting aggregate supply to the right and increasing potential output','Have no effect on the economy because businesses always reinvest the same amount regardless of tax rates','Shift aggregate demand to the right without any effect on the supply side of the economy'],correctAnswer:1,explanation:'Supply-side economics focuses on production incentives: lower taxes on businesses → higher after-tax returns on investment → more capital spending and hiring → productive capacity increases → AS shifts right. This contrasts with demand-side (Keynesian) fiscal policy that focuses on shifting AD through spending and tax changes. The distinction between demand-side and supply-side approaches is a common AP exam topic.'},
-      {question:'According to the Laffer Curve, what happens to tax revenue if the government raises tax rates from a point that is already above the revenue-maximizing rate?',options:['Tax revenue increases proportionally because higher rates always generate more government income','Tax revenue decreases because excessively high rates discourage productive economic activity, shrinking the tax base by more than the rate increase adds','Tax revenue stays exactly the same because the Laffer Curve shows revenue is constant at all rates above the maximum point','Tax revenue doubles because the government collects from both the increased rate and the expanded economic activity'],correctAnswer:1,explanation:'The Laffer Curve shows tax revenue initially rises with higher rates but eventually falls when rates become so high that they discourage work, investment, and economic activity. Beyond the revenue-maximizing rate, each rate increase shrinks the tax base (less economic activity) by more than it increases per-dollar tax collection — so total revenue falls. Whether any country is actually at this point is debated.'}
+      {question:'A government pays for a large highway-building program. Which pair of effects is most likely?',options:['AD rises now; LRAS shifts left later','LRAS shifts right now; AD falls later','AD rises now; LRAS shifts right later','AD rises now; LRAS does not change'],correctAnswer:2,explanation:'Highway spending is a government purchase, so AD shifts right in the short run; once built, the highways add public capital and shift LRAS right. Assuming LRAS never changes ignores the capital the program creates.'}
     ]}}
   ]
 };

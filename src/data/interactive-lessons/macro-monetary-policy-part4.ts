@@ -5,20 +5,57 @@ export const macroMonetaryPolicyPart4Data = {
       id: 'macromon4-intro',
       type: 'text' as const,
       content: `
-# 📈 Monetary Policy & The Federal Reserve
+# 🏦 Monetary Policy
 
-**Part 4 of 7 — Connections & Interactions**
+**Part 4 of 7 — Reading Money Market and AD-AS Data**
 
-Monetary Policy & The Federal Reserve connects to other topics in AP Macroeconomics. Understanding these connections reveals how different processes interact.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| 📖 Finding Equilibrium from a Money Demand Schedule |
+| Shifting Money Supply and Money Demand with Numbers |
+| From the Interest Rate to Investment |
+| Two Graphs Side by Side |
 
-| Concept | Description |
-|---------|-------------|
-| **Interconnection** | How Monetary Policy & The Federal Reserve links to other course topics |
-| **Scale interaction** | How Monetary Policy & The Federal Reserve operates differently at local, national, and global scales |
-| **Feedback loop** | How outcomes of Monetary Policy & The Federal Reserve can reinforce or modify the original process |
-      `
+> 🔑 **Key Concept:** Exam questions often give a **money demand schedule** or describe a graph in words, then ask what happens to the interest rate, investment and AD. Read the schedule like a supply-and-demand table: equilibrium is the interest rate at which **quantity of money demanded = money supply**.
+`
+    },
+    {
+      id: 'macromon4-schedule',
+      type: 'text' as const,
+      content: `
+## 📖 Finding Equilibrium from a Money Demand Schedule
+
+The table shows money demand in the economy of Northland (billions of dollars).
+
+| Nominal interest rate | Quantity of money demanded (MD₁) |
+|---|---|
+| 7% | \\$300 |
+| 6% | \\$350 |
+| 5% | \\$400 |
+| 4% | \\$450 |
+| 3% | \\$500 |
+| 2% | \\$550 |
+
+### Worked example 1: equilibrium
+
+The money supply is \\$400 billion. Find the row where quantity demanded = \\$400 billion: **5%**. That is the equilibrium nominal interest rate.
+
+### Worked example 2: what if the rate were 6%?
+
+At 6%, people want to hold only \\$350 billion, but \\$400 billion exists. There is an **excess supply of money** of \\$50 billion. People use it to buy bonds, bond prices rise, and the interest rate falls back toward 5%.
+
+### Worked example 3: what if the rate were 4%?
+
+At 4%, people want \\$450 billion, but only \\$400 billion exists: an **excess demand for money** of \\$50 billion. People sell bonds, bond prices fall, and the rate rises back toward 5%.
+
+| Interest rate above equilibrium | Interest rate below equilibrium |
+|---|---|
+| Excess supply of money | Excess demand for money |
+| People buy bonds | People sell bonds |
+| Bond prices rise, rate falls | Bond prices fall, rate rises |
+`
     },
     {
       id: 'macromon4-quiz1',
@@ -29,147 +66,190 @@ Monetary Policy & The Federal Reserve connects to other topics in AP Macroeconom
       exercise: {
         questions: [
           {
-            question: 'Monetary Policy & The Federal Reserve connects to other course topics through:',
+            question: 'Using the Northland schedule, the money supply is \\$500 billion. What is the equilibrium nominal interest rate?',
             options: [
-              'No connections exist',
-              'Shared processes, causes, and outcomes',
-              'Random coincidence',
-              'Administrative categories only'
+              '3%',
+              '5%',
+              '7%',
+              '2%'
             ],
-            correctAnswer: 1,
-            explanation: 'Topics in AP Macroeconomics are interconnected through shared processes, causes, and outcomes.'
+            correctAnswer: 0,
+            explanation: 'Quantity of money demanded equals \\$500 billion at 3%, so that is where the vertical money supply crosses money demand. At 5% people would want only \\$400 billion.'
           },
           {
-            question: 'A feedback loop in Monetary Policy & The Federal Reserve means:',
+            question: 'In Northland the money supply is \\$400 billion, but the interest rate is temporarily 6%. What happens next?',
             options: [
-              'The process stops',
-              'Outcomes reinforce or modify the original process',
-              'Nothing changes',
-              'The exam skips this topic'
+              'People sell bonds, and the rate rises above 6%',
+              'People buy bonds, and the rate falls back toward 5%',
+              'The Fed sells bonds, and the rate stays at 6%',
+              'Money demand shifts right until it reaches 6%'
             ],
             correctAnswer: 1,
-            explanation: 'Feedback loops occur when outcomes influence the conditions that created them — either reinforcing or moderating the original process.'
+            explanation: 'At 6% there is an excess supply of money, so people buy bonds, which raises bond prices and pushes the rate down to the 5% equilibrium. Selling bonds would happen only with an excess demand for money.'
           }
         ]
       }
     },
     {
-      id: 'macromon4-content',
+      id: 'macromon4-shifts',
       type: 'text' as const,
       content: `
-## Connections & Interactions — Deeper Dive
+## Shifting Money Supply and Money Demand with Numbers
 
-### Interconnection
-How Monetary Policy & The Federal Reserve links to other course topics. Understanding this concept is essential for mastering Monetary Policy & The Federal Reserve in AP Macroeconomics.
+Keep using the Northland schedule. Start at MS = \\$400 billion and i = 5%.
 
-### Scale interaction
-How Monetary Policy & The Federal Reserve operates differently at local, national, and global scales. This builds on the previous concept and connects to broader themes in the course.
+### Case 1: the Fed increases the money supply
 
-### Feedback loop
-How outcomes of Monetary Policy & The Federal Reserve can reinforce or modify the original process. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
-      `
+The Fed buys bonds and MS rises by \\$100 billion to \\$500 billion. The new equilibrium is the row where quantity demanded = \\$500 billion: **3%**. The rate falls 2 percentage points.
+
+### Case 2: money demand increases with a fixed money supply
+
+Real GDP rises, and at every interest rate people now want \\$100 billion more money (MD₂):
+
+| Nominal interest rate | MD₁ | MD₂ |
+|---|---|---|
+| 7% | \\$300 | \\$400 |
+| 6% | \\$350 | \\$450 |
+| 5% | \\$400 | \\$500 |
+| 4% | \\$450 | \\$550 |
+
+With MS still \\$400 billion, the new equilibrium is where MD₂ = \\$400 billion: **7%**. The rate rises 2 points, and the quantity of money stays \\$400 billion.
+
+### Case 3: the Fed keeps the rate steady
+
+If the Fed wants to hold the rate at 5% after MD rises to MD₂, it must raise MS to \\$500 billion, the quantity demanded on MD₂ at 5%. This is called **accommodating** the rise in money demand.
+
+> 🔑 **AP Connection:** "What must the Fed do to keep the interest rate constant?" means: find the quantity demanded on the **new** MD curve at the **old** rate, and change MS to match.
+`
     },
     {
       id: 'macromon4-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Calculate It** ✍️
 
-1) What term refers to how Monetary Policy & The Federal Reserve links to other course topics?
+Use the Northland MD₁ schedule (7% → \\$300, 6% → \\$350, 5% → \\$400, 4% → \\$450, 3% → \\$500, 2% → \\$550, in billions).
 
-2) What concept describes how Monetary Policy & The Federal Reserve operates differently at local, national, and global scales?
+**1)** The money supply is \\$450 billion. What is the equilibrium nominal interest rate, in percent?
 
-3) Name the term for how outcomes of Monetary Policy & The Federal Reserve can reinforce or modify the original process.
+**2)** The Fed wants to lower the rate from 4% to 2%. By how many billions of dollars must it increase the money supply?
 
-Use the exact term from this part.
+**3)** At a rate of 6% with MS = \\$450 billion, what is the excess supply of money, in billions of dollars?
+
+Enter numbers only.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Interconnection', 'Scale interaction', 'Feedback loop'],
-        hint1: 'Starts with: I',
-        hint2: 'Starts with: S',
-        hint3: 'Starts with: F',
-        explanation: 'Expected answers: Interconnection (How Monetary Policy & The Federal Reserve links to other course topics), Scale interaction (How Monetary Policy & The Federal Reserve operates differently at local, national, and global scales), and Feedback loop (How outcomes of Monetary Policy & The Federal Reserve can reinforce or modify the original process).'
+        correctAnswers: ['4', '100', '100'],
+        hint1: 'Find the row where quantity demanded equals \\$450 billion.',
+        hint2: 'Compare quantity demanded at 2% with quantity demanded at 4%.',
+        hint3: 'Excess supply = money supply − quantity demanded at 6%.',
+        explanation: '1) Quantity demanded is \\$450 billion at 4%. 2) At 2% people want \\$550 billion, so MS must rise from \\$450 billion by \\$100 billion. 3) At 6% people want \\$350 billion, so \\$450 − \\$350 = \\$100 billion is an excess supply.'
       }
     },
     {
-      id: 'macromon4-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Fill in the Blanks** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'How Monetary Policy & The Federal Reserve links to other course topics is called ___',
-            options: ['Interconnection', 'Scale interaction', 'Feedback loop', 'None of these']
-          },
-          {
-            label: 'How Monetary Policy & The Federal Reserve operates differently at local, national, and global scales describes ___',
-            options: ['Interconnection', 'Scale interaction', 'Feedback loop', 'All of these']
-          },
-          {
-            label: 'How outcomes of Monetary Policy & The Federal Reserve can reinforce or modify the original process is known as ___',
-            options: ['Feedback loop', 'Interconnection', 'Scale interaction', 'None of these']
-          }
-        ],
-        correctAnswers: ['Interconnection', 'Scale interaction', 'Feedback loop'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Interconnection — How Monetary Policy & The Federal Reserve links to other course topics. Scale interaction — How Monetary Policy & The Federal Reserve operates differently at local, national, and global scales. Feedback loop — How outcomes of Monetary Policy & The Federal Reserve can reinforce or modify the original process.'
-      }
-    },
-    {
-      id: 'macromon4-strategy',
+      id: 'macromon4-investment',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## From the Interest Rate to Investment
 
-### Misconceptions to Avoid
-- Don\'t confuse **Interconnection** with **Scale interaction** — while related, they address different aspects of Monetary Policy & The Federal Reserve.
-- **Feedback loop** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
+Firms undertake a project when its expected rate of return is at least the **real** interest rate they must pay (or could earn elsewhere). An **investment demand** schedule lists how much investment firms plan at each real interest rate.
 
-### AP Strategy Moves
-- When you see questions about connections & interactions, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect connections & interactions to broader themes in AP Macroeconomics for higher scores.
-      `
+| Real interest rate | Planned investment (billions) |
+|---|---|
+| 5% | \\$200 |
+| 4% | \\$240 |
+| 3% | \\$280 |
+| 2% | \\$320 |
+| 1% | \\$360 |
+
+Expected inflation in Northland is 2%.
+
+### Worked example: the Fed raises the money supply from \\$400 to \\$500 billion
+
+1. Money market: nominal rate falls from 5% to 3%.
+2. Real rate (short run, expected inflation fixed at 2%): falls from 5% − 2% = **3%** to 3% − 2% = **1%**.
+3. Investment schedule: planned investment rises from \\$280 billion to \\$360 billion, an increase of **\\$80 billion**.
+4. AD shifts right. With a spending multiplier, AD shifts by more than \\$80 billion at each price level (Multiplier Effect lesson).
+
+> 🔑 **Key Concept:** The money market sets the **nominal** rate; investment responds to the **real** rate. In the short run they move together, so it is enough on most FRQs to say "the interest rate falls, so investment rises."
+`
     },
     {
-      id: 'macromon4-applied',
+      id: 'macromon4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'On the AP exam, demonstrating connections between Monetary Policy & The Federal Reserve and other units earns higher scores because:',
+            question: 'Using the Northland schedules, the money supply falls from \\$400 billion to \\$350 billion while expected inflation stays at 2%. By how much does planned investment change?',
             options: [
-              'The exam is random',
-              'It shows deeper understanding and analytical thinking',
-              'It wastes time',
-              'Connections are never tested'
+              'It falls by \\$40 billion',
+              'It falls by \\$80 billion',
+              'It rises by \\$40 billion',
+              'It does not change at all'
             ],
-            correctAnswer: 1,
-            explanation: 'The AP exam rewards students who can connect concepts across units — demonstrating synthesis and analytical depth.'
+            correctAnswer: 0,
+            explanation: 'The nominal rate rises from 5% to 6%, so the real rate rises from 3% to 4%, and planned investment falls from \\$280 billion to \\$240 billion. An \\$80 billion change would need a 2-point move in the real rate.'
           },
           {
-            question: 'If Monetary Policy & The Federal Reserve produces outcomes that further intensify the original process, this is:',
+            question: 'Money demand rises because of higher real GDP, and the Fed does not change the money supply. What happens to investment?',
             options: [
-              'A negative feedback loop',
-              'A positive feedback loop — outcomes reinforce the process',
-              'An unrelated event',
-              'A one-time occurrence'
+              'Investment rises, because higher income raises profits',
+              'Investment does not change, because MS did not change',
+              'Investment falls, because the interest rate rises',
+              'Investment rises, because the quantity of money rises'
             ],
-            correctAnswer: 1,
-            explanation: 'A positive feedback loop intensifies: the outcome amplifies the original process, creating a cycle.'
+            correctAnswer: 2,
+            explanation: 'With a fixed money supply, higher money demand raises the equilibrium interest rate, and a higher rate reduces interest-sensitive investment. The quantity of money does not change when only MD shifts.'
+          },
+          {
+            question: 'After money demand rises, the Fed wants to keep the interest rate unchanged. What should it do?',
+            options: [
+              'Raise IORB enough to offset the higher demand',
+              'Sell bonds to reduce the quantity of money',
+              'Raise the reserve requirement on deposits',
+              'Buy bonds to increase the money supply'
+            ],
+            correctAnswer: 3,
+            explanation: 'Higher money demand would push the rate up, so the Fed must increase the money supply to hold it steady, which in the limited-reserves model means buying bonds. Selling bonds, raising IORB or raising the reserve requirement would push rates even higher.'
           }
         ]
       }
+    },
+    {
+      id: 'macromon4-sidebyside',
+      type: 'text' as const,
+      content: `
+## Two Graphs Side by Side
+
+FRQs often ask for two graphs: the **money market** and the **AD-AS** model. Here is how to describe an expansionary policy in words, the way you would label your drawings.
+
+### Money market
+
+- Axes: nominal interest rate (vertical), quantity of money (horizontal).
+- Downward-sloping MD; vertical MS₁ at Q₁; equilibrium rate i₁.
+- After a bond purchase: MS₂ to the right of MS₁; new equilibrium rate i₂ **below** i₁.
+
+### AD-AS
+
+- Axes: price level (vertical), real GDP (horizontal).
+- AD₁, upward-sloping SRAS, vertical LRAS at full-employment output Yf; initial equilibrium at Y₁ **left** of Yf (recessionary gap).
+- After the policy: AD₂ to the right of AD₁; new equilibrium with **higher** real GDP (Y₂) and **higher** price level (PL₂).
+
+### Connecting the graphs
+
+| Money market shows | Which causes | AD-AS shows |
+|---|---|---|
+| MS → right, i falls | Investment and interest-sensitive consumption rise | AD → right, real GDP and price level rise |
+| MS → left, i rises | Investment and interest-sensitive consumption fall | AD → left, real GDP and price level fall |
+
+Under ample reserves, describe the money market result the same way (a lower or higher nominal interest rate), and name the tool as a change in IORB.
+
+> 🔑 **AP Connection:** Label everything: both axes, every curve with a subscript (MS₁, MS₂), and the old and new equilibrium values on the axes. Unlabeled shifts earn no graph points.
+`
     }
   ]
-}
+};

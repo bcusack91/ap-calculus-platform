@@ -5,20 +5,46 @@ export const macroOpenEconomyPart7Data = {
       id: 'macroope7-intro',
       type: 'text' as const,
       content: `
-# 📈 Open Economy & Exchange Rates
+# 🌏 Open Economy Macroeconomics
 
-**Part 7 of 7 — AP Review**
+**Part 7 of 7 — Synthesis Review**
 
-Comprehensive review of Open Economy & Exchange Rates for the AP exam. Focus on key concepts, common question types, and exam strategies.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| 📖 The Big Picture |
+| The Four Markets at a Glance |
+| Chain Cheat Sheet |
+| Mixed Review |
 
-| Concept | Description |
-|---------|-------------|
-| **Key vocabulary** | Essential terms and definitions for Open Economy & Exchange Rates |
-| **Common question types** | The most frequent ways Open Economy & Exchange Rates is tested on the AP exam |
-| **Exam strategy** | Approaches for answering Open Economy & Exchange Rates questions effectively |
-      `
+> 🔑 **Key Concept:** The open economy adds one link to everything you know about policy: **relative real interest rates move financial capital**, capital flows move **exchange rates**, and exchange rates move **net exports**. Fiscal expansion is partly offset by that link; monetary policy is reinforced by it.
+`
+    },
+    {
+      id: 'macroope7-big',
+      type: 'text' as const,
+      content: `
+## 📖 The Big Picture
+
+| Part | Main idea |
+|---|---|
+| 1 | Loanable funds basics; deficits raise r, crowd out investment and appreciate the currency; fiscal vs. monetary policy in an open economy |
+| 2 | Who supplies and demands loanable funds; shifter tables; equilibrium from a schedule; loanable funds vs. money market |
+| 3 | Capital flows toward higher relative real rates; an inflow raises loanable funds supply and demand for the currency |
+| 4 | Tracing shocks through the money market, loanable funds, forex and AD-AS |
+| 5 | Nominal vs. real rates; inflow and outflow signs; who gains from a strong currency; saving and growth |
+| 6 | FRQ practice with model answers |
+
+## The Four Markets at a Glance
+
+| Market | Price | Demand comes from | Supply comes from | Key link out |
+|---|---|---|---|---|
+| Money market | Nominal interest rate | People holding money (transactions, asset) | The central bank | Interest rate → investment → AD |
+| Loanable funds | Real interest rate | Borrowers: firms, home buyers, government deficits | Savers: households, firms, surpluses, foreign savers | Real rate → investment and capital flows |
+| Forex (dollars) | Foreign currency per dollar | Foreigners buying U.S. goods, services, assets | Americans buying foreign goods, services, assets | Exchange rate → net exports |
+| AD-AS | Price level | C + I + G + NX | Firms' production (SRAS, LRAS) | Price level and GDP → money demand |
+`
     },
     {
       id: 'macroope7-quiz1',
@@ -29,146 +55,154 @@ Comprehensive review of Open Economy & Exchange Rates for the AP exam. Focus on 
       exercise: {
         questions: [
           {
-            question: 'The most important exam strategy for Open Economy & Exchange Rates is:',
+            question: 'Which change shifts the supply of loanable funds to the right in the United States?',
             options: [
-              'Guess randomly',
-              'Know key terms, use specific examples, and connect to course themes',
-              'Skip these questions',
-              'Only memorize definitions'
+              'Foreign savers buy more U.S. corporate bonds',
+              'Firms expect higher future profits',
+              'The federal budget deficit grows',
+              'Americans buy more foreign stocks'
             ],
-            correctAnswer: 1,
-            explanation: 'Effective exam strategy combines vocabulary knowledge, specific examples, and connections to broader themes.'
+            correctAnswer: 0,
+            explanation: 'Foreign purchases of U.S. bonds are a capital inflow, which adds foreign saving to supply. Higher expected profits and a larger deficit raise demand, and buying foreign stocks is an outflow that shifts supply left.'
           },
           {
-            question: 'AP multiple-choice questions about Open Economy & Exchange Rates often test:',
+            question: 'Which pair of results follows from expansionary monetary policy in an open economy in the short run?',
             options: [
-              'Random trivia',
-              'Application of concepts to new scenarios',
-              'Spelling',
-              'Personal opinions'
+              'Higher real rates and an appreciating currency',
+              'Lower real rates and a depreciating currency',
+              'Falling real rates and an appreciating currency',
+              'Unchanged real rates and a depreciating currency'
             ],
             correctAnswer: 1,
-            explanation: 'AP multiple-choice questions typically present a new scenario and ask students to apply concepts rather than just recall facts.'
+            explanation: 'Lower nominal rates mean lower real rates while expected inflation is slow to adjust, and the resulting capital outflow depreciates the currency. Real rates stay unchanged only in the long run.'
+          },
+          {
+            question: 'Why is an expansionary fiscal policy less powerful in an open economy with flexible exchange rates than the spending multiplier alone suggests?',
+            options: [
+              'Its currency depreciates and imports rise',
+              'Foreign saving lowers the real interest rate',
+              'The currency appreciates and net exports fall',
+              'Higher prices attract foreign capital inflows'
+            ],
+            correctAnswer: 2,
+            explanation: 'The deficit raises the real rate, capital flows in, the currency appreciates and lower net exports pull AD back partway. Foreign saving softens the rise in the real rate but does not by itself weaken the policy.'
           }
         ]
       }
     },
     {
-      id: 'macroope7-content',
+      id: 'macroope7-chains',
       type: 'text' as const,
       content: `
-## AP Review — Deeper Dive
+## Chain Cheat Sheet
 
-### Key vocabulary
-Essential terms and definitions for Open Economy & Exchange Rates. Understanding this concept is essential for mastering Open Economy & Exchange Rates in AP Macroeconomics.
+| Shock | Loanable funds | Real rate | Capital flow | Currency | Net exports |
+|---|---|---|---|---|---|
+| Budget deficit rises | D right | ↑ | In | Appreciates | ↓ |
+| Budget moves to surplus | S right (or D left) | ↓ | Out | Depreciates | ↑ |
+| Households save more | S right | ↓ | Out | Depreciates | ↑ |
+| Investment tax credit | D right | ↑ | In | Appreciates | ↓ |
+| Foreign real rates rise | S left (outflow) | ↑ | Out | Depreciates | ↑ |
+| Expansionary monetary policy (lower IORB or buy bonds) | — (money market) | ↓ short run | Out | Depreciates | ↑ |
+| Contractionary monetary policy (higher IORB or sell bonds) | — (money market) | ↑ short run | In | Appreciates | ↓ |
 
-### Common question types
-The most frequent ways Open Economy & Exchange Rates is tested on the AP exam. This builds on the previous concept and connects to broader themes in the course.
+### Three sentences that cover most questions
 
-### Exam strategy
-Approaches for answering Open Economy & Exchange Rates questions effectively. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
-      `
-    },
-    {
-      id: 'macroope7-input',
-      type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
-
-1) What term refers to essential terms and definitions for Open Economy & Exchange Rates?
-
-2) What concept describes the most frequent ways Open Economy & Exchange Rates is tested on the AP exam?
-
-3) Name the term for approaches for answering Open Economy & Exchange Rates questions effectively.
-
-Use the exact term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['Key vocabulary', 'Common question types', 'Exam strategy'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: E',
-        explanation: 'Expected answers: Key vocabulary (Essential terms and definitions for Open Economy & Exchange Rates), Common question types (The most frequent ways Open Economy & Exchange Rates is tested on the AP exam), and Exam strategy (Approaches for answering Open Economy & Exchange Rates questions effectively).'
-      }
+1. A higher **relative** real interest rate brings capital **in** and makes the currency **appreciate**.
+2. Appreciation **lowers** net exports and AD; depreciation **raises** them.
+3. Fiscal expansion is **offset** by the exchange rate; monetary policy is **reinforced** by it.
+`
     },
     {
       id: 'macroope7-dropdown',
       type: 'dropdown-select' as const,
       content: `
 **Fill in the Blanks** 🔍
+
+Choose the term that completes each statement.
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Essential terms and definitions for Open Economy & Exchange Rates is called ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'None of these']
+            label: 'The price in the loanable funds market is the ___ interest rate.',
+            options: ['real', 'nominal', 'discount', 'federal funds']
           },
           {
-            label: 'The most frequent ways Open Economy & Exchange Rates is tested on the AP exam describes ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'All of these']
+            label: 'A capital outflow shifts the ___ of loanable funds to the left.',
+            options: ['supply', 'demand', 'price', 'quantity demanded']
           },
           {
-            label: 'Approaches for answering Open Economy & Exchange Rates questions effectively is known as ___',
-            options: ['Exam strategy', 'Key vocabulary', 'Common question types', 'None of these']
+            label: 'Foreigners who want to buy U.S. assets add to the ___ dollars.',
+            options: ['demand for', 'supply of', 'quantity supplied of', 'reserves of']
+          },
+          {
+            label: 'In the ample-reserves framework, the Fed\'s main tool is the interest rate on ___.',
+            options: ['reserve balances', 'federal funds', 'discount loans', 'Treasury bonds']
           }
         ],
-        correctAnswers: ['Key vocabulary', 'Common question types', 'Exam strategy'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key vocabulary — Essential terms and definitions for Open Economy & Exchange Rates. Common question types — The most frequent ways Open Economy & Exchange Rates is tested on the AP exam. Exam strategy — Approaches for answering Open Economy & Exchange Rates questions effectively.'
+        correctAnswers: ['real', 'supply', 'demand for', 'reserve balances'],
+        hint1: 'Savers and borrowers care about inflation-adjusted returns.',
+        hint2: 'Savers are on this side of the market.',
+        hint3: 'They need dollars to complete the purchase.',
+        explanation: 'Loanable funds are priced by the real interest rate, and an outflow removes savers, shifting supply left. Foreign buyers of U.S. assets demand dollars. The Fed\'s main tool with ample reserves is the interest rate on reserve balances; the federal funds rate is its target.'
       }
     },
     {
-      id: 'macroope7-strategy',
-      type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
-
-### Misconceptions to Avoid
-- Don\'t confuse **Key vocabulary** with **Common question types** — while related, they address different aspects of Open Economy & Exchange Rates.
-- **Exam strategy** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about ap review, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect ap review to broader themes in AP Macroeconomics for higher scores.
-      `
-    },
-    {
-      id: 'macroope7-applied',
+      id: 'macroope7-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'On the AP exam, a question presents a scenario you have never seen before about Open Economy & Exchange Rates. You should:',
+            question: 'Canada\'s government begins running large budget surpluses while U.S. policy is unchanged. What happens to the Canadian dollar against the U.S. dollar?',
             options: [
-              'Panic',
-              'Apply the key concepts and processes you learned to analyze the new scenario',
-              'Skip it',
-              'Write about something else'
+              'It appreciates',
+              'It stays the same',
+              'It rises, then falls',
+              'It depreciates'
             ],
-            correctAnswer: 1,
-            explanation: 'The AP exam tests application — use your knowledge of concepts and processes to analyze unfamiliar scenarios.'
+            correctAnswer: 3,
+            explanation: 'Canadian surpluses add public saving and lower Canada\'s real interest rate, so capital flows out of Canada and the supply of Canadian dollars rises. A deficit, not a surplus, would make the Canadian dollar appreciate.'
           },
           {
-            question: 'For free-response questions on Open Economy & Exchange Rates, the most common mistake is:',
+            question: 'Higher saving by U.S. households is often described as good for long-run growth. Through which channel?',
             options: [
-              'Writing too clearly',
-              'Being too vague and not using specific examples or key vocabulary',
-              'Showing too much knowledge',
-              'Answering the question directly'
+              'Lower real rates raise investment and the capital stock',
+              'Lower consumption raises AD and short-run output',
+              'Higher real rates draw in capital and raise output',
+              'Higher saving raises the money supply and real GDP'
             ],
-            correctAnswer: 1,
-            explanation: 'The most common FRQ mistake is vagueness — AP graders look for specific terms, definitions, and concrete examples.'
+            correctAnswer: 0,
+            explanation: 'More saving lowers the real interest rate, firms invest more in physical capital, and a larger capital stock shifts LRAS right. Lower consumption reduces AD in the short run rather than raising it.'
           }
         ]
+      }
+    },
+    {
+      id: 'macroope7-input',
+      type: 'input-boxes' as const,
+      content: `
+**Calculate It** ✍️
+
+The U.S. nominal interest rate is 6% and expected inflation is 2%. Mexico's nominal rate is 9% and expected inflation is 7%.
+
+**1)** What is the U.S. real interest rate, in percent?
+
+**2)** What is Mexico's real interest rate, in percent?
+
+**3)** By how many percentage points does the higher real rate exceed the lower one?
+
+Enter numbers only.
+      `,
+      exercise: {
+        boxes: 3,
+        correctAnswers: ['4', '2', '2'],
+        hint1: 'Real rate = nominal rate − expected inflation.',
+        hint2: 'Mexico\'s high nominal rate is mostly inflation.',
+        hint3: 'Subtract the smaller real rate from the larger one.',
+        explanation: '1) 6% − 2% = 4%. 2) 9% − 7% = 2%. 3) 4 − 2 = 2 points. Financial capital tends to flow toward the United States, so demand for dollars rises and the dollar appreciates against the peso.'
       }
     }
   ]

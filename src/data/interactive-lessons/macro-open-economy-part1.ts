@@ -64,7 +64,7 @@ This is called the **"twin deficits"** phenomenon: budget deficits can lead to t
 |---|---|---|
 | 1 | AD-AS | AD shifts right → ↑ output, ↑ price level |
 | 2 | Loanable funds | Deficit → ↑ demand for LF → ↑ real interest rate |
-| 3 | Forex market | Higher rates → foreign $ inflow → ↑ demand for dollars → dollar appreciates |
+| 3 | Forex market | Higher rates → foreign \\$ inflow → ↑ demand for dollars → dollar appreciates |
 | 4 | Trade | Stronger dollar → ↓ exports, ↑ imports → ↓ net exports (partially offsets AD increase) |
 
 ### Expansionary Monetary Policy (Fed buys bonds / ↓ rates)

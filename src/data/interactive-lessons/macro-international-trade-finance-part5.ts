@@ -5,20 +5,46 @@ export const macroInternationalTradeFinancePart5Data = {
       id: 'macroint5-intro',
       type: 'text' as const,
       content: `
-# 📈 International Trade & Finance
+# 🌐 International Trade & Finance
 
-**Part 5 of 7 — Change Over Time**
+**Part 5 of 7 — Forex Shifters and Net Exports**
 
-International Trade & Finance has evolved over time. Understanding historical and contemporary changes helps explain current patterns and predict future trends.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| 📖 What Shifts Currency Demand and Supply |
+| How Policies Reach the Foreign Exchange Market |
+| From the Exchange Rate to Net Exports and AD |
+| Misconceptions Table |
 
-| Concept | Description |
-|---------|-------------|
-| **Continuity** | Aspects of International Trade & Finance that have remained stable over time |
-| **Change** | How International Trade & Finance has transformed due to new forces and conditions |
-| **Trend** | The direction of change in International Trade & Finance over time |
-      `
+> 🔑 **Key Concept:** Changes in **tastes**, **relative incomes**, **relative price levels**, **relative real interest rates** and **expectations** shift the demand for or supply of a currency. The resulting appreciation or depreciation then changes the prices of exports and imports, so it changes **net exports** and **aggregate demand**.
+`
+    },
+    {
+      id: 'macroint5-shifters',
+      type: 'text' as const,
+      content: `
+## 📖 What Shifts Currency Demand and Supply
+
+Each row is for the market for **U.S. dollars** against the euro, with the mirror in the market for **euros**.
+
+| Change | Market for dollars | Dollar | Market for euros | Euro |
+|---|---|---|---|---|
+| **Tastes:** Europeans want more U.S. goods | Demand for \\$ ↑ | Appreciates | Supply of € ↑ | Depreciates |
+| **Relative income:** U.S. incomes rise (Europe unchanged); Americans buy more imports | Supply of \\$ ↑ | Depreciates | Demand for € ↑ | Appreciates |
+| **Relative income:** European incomes rise; Europeans buy more U.S. goods | Demand for \\$ ↑ | Appreciates | Supply of € ↑ | Depreciates |
+| **Relative price level:** U.S. inflation is higher than Europe's | Demand for \\$ ↓ and supply of \\$ ↑ | Depreciates | Supply of € ↓ and demand for € ↑ | Appreciates |
+| **Relative real interest rate:** U.S. real rate rises relative to Europe's | Demand for \\$ ↑ (capital inflow) | Appreciates | Supply of € ↑ | Depreciates |
+| **Expectations:** traders expect the dollar to rise in the future | Demand for \\$ ↑ now | Appreciates | Supply of € ↑ | Depreciates |
+
+### Notes on the rows
+
+- **Relative income** works through imports. When Americans' incomes rise, they buy more of everything, including European goods, so they **supply** more dollars. The dollar depreciates.
+- **Relative price level** shifts **both** curves in the same direction for the currency's value: U.S. goods look expensive to Europeans (less demand for dollars), and European goods look cheap to Americans (more supply of dollars).
+- **Real interest rates** move financial capital; the loanable funds side of that story is in the open economy topic.
+- **Expectations** can be self-fulfilling: buying dollars now, in the hope of a gain, raises the dollar's value now.
+`
     },
     {
       id: 'macroint5-quiz1',
@@ -29,117 +55,142 @@ International Trade & Finance has evolved over time. Understanding historical an
       exercise: {
         questions: [
           {
-            question: 'Studying change over time in International Trade & Finance helps:',
+            question: 'Real incomes rise rapidly in the United States while incomes in Japan are unchanged. What happens in the market for dollars?',
             options: [
-              'Only with history classes',
-              'Explain current patterns and predict future developments',
-              'Nothing',
-              'Memorize dates'
+              'Demand rises as Japanese buy more U.S. goods',
+              'Supply falls as Americans buy fewer imports',
+              'Demand falls as Japan buys fewer U.S. goods',
+              'Supply rises as Americans buy more imports'
             ],
-            correctAnswer: 1,
-            explanation: 'Understanding how things have changed reveals the forces shaping current conditions and likely future trends.'
+            correctAnswer: 3,
+            explanation: 'Higher U.S. incomes raise U.S. spending on imports, so Americans supply more dollars to get yen and the dollar depreciates. Japanese incomes have not changed, so their demand for dollars has not changed.'
           },
           {
-            question: 'Continuity in International Trade & Finance means:',
+            question: 'Inflation in Mexico rises well above inflation in the United States. What happens to the peso against the dollar?',
             options: [
-              'Everything changes',
-              'Some aspects have remained stable despite other changes',
-              'Nothing ever happened',
-              'The topic is boring'
+              'It weakens',
+              'It strengthens',
+              'It does not change',
+              'It moves with Mexico\'s GDP'
+            ],
+            correctAnswer: 0,
+            explanation: 'Mexican goods become relatively expensive, so Americans demand fewer pesos and Mexicans supply more pesos to buy cheaper U.S. goods. Both shifts lower the peso\'s value.'
+          },
+          {
+            question: 'Currency traders come to expect that the euro will appreciate next year. What happens to the euro today?',
+            options: [
+              'It depreciates as traders wait to buy euros',
+              'It appreciates as demand for euros rises',
+              'It appreciates as the supply of euros rises',
+              'It stays unchanged until next year arrives'
             ],
             correctAnswer: 1,
-            explanation: 'Continuity refers to elements that persist even as other aspects change — an important analytical concept.'
+            explanation: 'Traders buy euros now to profit from the expected rise, so demand for euros increases and the euro appreciates today. Waiting would forgo the expected gain, and a rise in supply would lower the euro\'s value.'
           }
         ]
       }
     },
     {
-      id: 'macroint5-content',
+      id: 'macroint5-policies',
       type: 'text' as const,
       content: `
-## Change Over Time — Deeper Dive
+## How Policies Reach the Foreign Exchange Market
 
-### Continuity
-Aspects of International Trade & Finance that have remained stable over time. Understanding this concept is essential for mastering International Trade & Finance in AP Macroeconomics.
+Policies shift currency curves through the same five channels.
 
-### Change
-How International Trade & Finance has transformed due to new forces and conditions. This builds on the previous concept and connects to broader themes in the course.
+| Policy (in the U.S.) | Main channel | Market for dollars | Dollar |
+|---|---|---|---|
+| Contractionary monetary policy (Fed raises IORB, or sells bonds in the limited-reserves model) | Higher U.S. real interest rate → capital inflow | Demand for \\$ ↑ | Appreciates |
+| Expansionary monetary policy (Fed lowers IORB, or buys bonds) | Lower U.S. real interest rate → capital outflow | Supply of \\$ ↑ | Depreciates |
+| Expansionary fiscal policy financed by borrowing | Higher U.S. real interest rate → capital inflow | Demand for \\$ ↑ | Appreciates |
 
-### Trend
-The direction of change in International Trade & Finance over time. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
-      `
+Expansionary fiscal policy also raises U.S. income, which increases imports and the supply of dollars. AP questions about fiscal policy and the exchange rate normally follow the **interest-rate channel**, so the expected answer is that the dollar **appreciates**, unless the question points you to the income effect on imports.
+
+> 🔑 **AP Connection:** When a question gives a policy, trace it to one of the five shifters first, then shift the curve. "The Fed raises the interest rate on reserve balances" → higher U.S. interest rates → capital inflow → demand for dollars increases.
+`
     },
     {
-      id: 'macroint5-input',
-      type: 'input-boxes' as const,
+      id: 'macroint5-nx',
+      type: 'text' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+## From the Exchange Rate to Net Exports and AD
 
-1) What term refers to aspects of International Trade & Finance that have remained stable over time?
+### Worked case: the dollar depreciates against the euro
 
-2) What concept describes how International Trade & Finance has transformed due to new forces and conditions?
+The rate falls from **0.90 euro per dollar** to **0.80 euro per dollar**.
 
-3) Name the term for the direction of change in International Trade & Finance over time.
+| Item | Before | After |
+|---|---|---|
+| \\$50,000 U.S. machine, in euros | 50,000 × 0.90 = €45,000 | 50,000 × 0.80 = **€40,000** |
+| €2.00 bottle of European olive oil, in dollars | 2.00 ÷ 0.90 ≈ \\$2.22 | 2.00 ÷ 0.80 = **\\$2.50** |
 
-Use the exact term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['Continuity', 'Change', 'Trend'],
-        hint1: 'Starts with: C',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: T',
-        explanation: 'Expected answers: Continuity (Aspects of International Trade & Finance that have remained stable over time), Change (How International Trade & Finance has transformed due to new forces and conditions), and Trend (The direction of change in International Trade & Finance over time).'
-      }
+1. U.S. machines are cheaper for Europeans → **U.S. exports rise**.
+2. European olive oil costs more for Americans → **U.S. imports fall**.
+3. **Net exports rise**, so U.S. **AD shifts right**: in the short run, real GDP and the price level rise.
+
+### The general rule
+
+| Currency change | Exports | Imports | Net exports | AD |
+|---|---|---|---|---|
+| Appreciation | ↓ | ↑ | ↓ | Left |
+| Depreciation | ↑ | ↓ | ↑ | Right |
+
+Higher import prices after a depreciation can also raise the domestic price level directly, because imported inputs cost more.
+`
     },
     {
       id: 'macroint5-dropdown',
       type: 'dropdown-select' as const,
       content: `
 **Fill in the Blanks** 🔍
+
+The Bank of England raises its policy rate, so U.K. real interest rates rise relative to U.S. rates. Complete the chain for the United States.
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Aspects of International Trade & Finance that have remained stable over time is called ___',
-            options: ['Continuity', 'Change', 'Trend', 'None of these']
+            label: 'Financial capital flows from the United States ___ the United Kingdom.',
+            options: ['to', 'away from', 'evenly with', 'back into']
           },
           {
-            label: 'How International Trade & Finance has transformed due to new forces and conditions describes ___',
-            options: ['Continuity', 'Change', 'Trend', 'All of these']
+            label: 'In the market for dollars, ___ of dollars increases.',
+            options: ['supply', 'demand', 'the price', 'the quantity demanded']
           },
           {
-            label: 'The direction of change in International Trade & Finance over time is known as ___',
-            options: ['Trend', 'Continuity', 'Change', 'None of these']
+            label: 'The dollar ___ against the pound.',
+            options: ['depreciates', 'appreciates', 'stays fixed', 'rises, then falls']
+          },
+          {
+            label: 'U.S. net exports ___, so U.S. AD shifts right.',
+            options: ['increase', 'decrease', 'stay the same', 'fall, then rise']
           }
         ],
-        correctAnswers: ['Continuity', 'Change', 'Trend'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Continuity — Aspects of International Trade & Finance that have remained stable over time. Change — How International Trade & Finance has transformed due to new forces and conditions. Trend — The direction of change in International Trade & Finance over time.'
+        correctAnswers: ['to', 'supply', 'depreciates', 'increase'],
+        hint1: 'Savers move toward the higher real return.',
+        hint2: 'U.S. investors offer dollars to get pounds.',
+        hint3: 'More dollars offered lowers the dollar\'s price.',
+        explanation: 'Capital flows toward the higher U.K. real rate. U.S. investors supply dollars to buy pounds, so the dollar depreciates. Cheaper U.S. goods abroad and pricier British goods at home raise U.S. net exports.'
       }
     },
     {
-      id: 'macroint5-strategy',
+      id: 'macroint5-misconceptions',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## Misconceptions Table
 
-### Misconceptions to Avoid
-- Don\'t confuse **Continuity** with **Change** — while related, they address different aspects of International Trade & Finance.
-- **Trend** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about change over time, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect change over time to broader themes in AP Macroeconomics for higher scores.
-      `
+| Misconception | Correction |
+|---|---|
+| "A strong dollar helps U.S. exporters." | An appreciation makes U.S. goods **more** expensive abroad; exports fall. |
+| "Higher U.S. inflation strengthens the dollar." | Higher relative inflation makes U.S. goods less attractive; the dollar **depreciates**. |
+| "When Americans buy more imports, demand for dollars falls." | Americans buying imports **supply** dollars; demand for dollars comes from foreigners. |
+| "Faster U.S. income growth raises demand for dollars." | Through the import channel the AP exam tests, higher U.S. income raises the **supply** of dollars, and the dollar depreciates. Growth that raises U.S. real interest rates works through capital flows instead. |
+| "A change in the exchange rate shifts the demand curve." | The exchange rate is the price; a change in it moves **along** the curves. |
+| "If the dollar appreciates against the yen, the yen might too." | Against each other, the two currencies always move in **opposite** directions. |
+| "A higher nominal interest rate always attracts capital." | Capital chases higher **real** rates relative to other countries. |
+`
     },
     {
-      id: 'macroint5-applied',
+      id: 'macroint5-quiz2',
       type: 'multiple-choice' as const,
       content: `
 **Applied Scenarios** 🎯
@@ -147,26 +198,26 @@ Use the exact term from this part.
       exercise: {
         questions: [
           {
-            question: 'An AP question asks how International Trade & Finance has changed in the last 50 years. A strong answer would:',
+            question: 'Canadian consumers develop a strong preference for U.S.-made trucks. What happens to the U.S. dollar against the Canadian dollar?',
             options: [
-              'Say nothing has changed',
-              'Identify specific changes, explain their causes, and note what has remained constant',
-              'Only list dates',
-              'Make up information'
+              'It depreciates, as the supply of U.S. dollars rises',
+              'It appreciates, as the supply of U.S. dollars rises',
+              'It appreciates, as demand for U.S. dollars rises',
+              'It depreciates, as demand for U.S. dollars falls'
             ],
-            correctAnswer: 1,
-            explanation: 'Strong AP answers address both change AND continuity, explaining causes and consequences of transformation.'
+            correctAnswer: 2,
+            explanation: 'Canadians need U.S. dollars to buy the trucks, so demand for U.S. dollars increases and the U.S. dollar appreciates. A rise in the supply of U.S. dollars would lower its value instead.'
           },
           {
-            question: 'A trend in International Trade & Finance shows acceleration in recent decades. The most likely explanation is:',
+            question: 'The Fed lowers the interest rate on reserve balances during a recession. How does the exchange rate channel affect U.S. aggregate demand?',
             options: [
-              'Random chance',
-              'New technologies, policies, or conditions intensifying existing processes',
-              'The data is wrong',
-              'Nothing has changed'
+              'The dollar appreciates, so NX fall and AD shifts left',
+              'The dollar depreciates, so NX fall and AD shifts left',
+              'The dollar appreciates, so NX rise and AD shifts right',
+              'The dollar depreciates, so NX rise and AD shifts right'
             ],
-            correctAnswer: 1,
-            explanation: 'Accelerating trends are typically driven by new forces (technology, policy, globalization) intensifying existing processes.'
+            correctAnswer: 3,
+            explanation: 'Lower U.S. interest rates send financial capital abroad, the dollar depreciates, and cheaper U.S. goods raise net exports, adding to AD. This reinforces the policy\'s effect on investment.'
           }
         ]
       }

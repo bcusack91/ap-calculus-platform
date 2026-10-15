@@ -15,27 +15,36 @@ export const macroMonetaryPolicyPart1Data = {
 | How Monetary Policy Works |
 | Limitations of Monetary Policy |
 
-> 🔑 **Key Concept:** Monetary policy is conducted by the **Federal Reserve** (the Fed) to control the **money supply** and **interest rates**. The AP exam tests the three main tools and the **chain of causation** from Fed action → interest rates → investment → AD → output & price level.
+> 🔑 **Key Concept:** Monetary policy is conducted by the **Federal Reserve** (the Fed) to control the **money supply** and **interest rates**. The AP exam tests the Fed's tools in two frameworks (**ample reserves** and **limited reserves**) and the **chain of causation** from Fed action → interest rates → investment → AD → output & price level.
 `},
     {id:'macromone1-fed',type:'text' as const,content:`
 ## 📖 The Federal Reserve System
 
 ### Structure
 - **Board of Governors** — 7 members, 14-year terms, appointed by the president (confirmed by Senate)
-- **Chair of the Fed** — 4-year term; most powerful economic policymaker (currently Jerome Powell)
+- **Chair of the Fed** — 4-year term as chair; leads the Board and the FOMC
 - **12 Regional Federal Reserve Banks** — serve as the "bankers' bank"
 - **Federal Open Market Committee (FOMC)** — makes monetary policy decisions; meets ~8 times per year
 
 ### Tools of Monetary Policy
 
+The **federal funds rate** is the interest rate banks charge each other for overnight loans of reserves. The FOMC sets a **target range** for it. It is the Fed's **target**, not a tool: the tools below are how the Fed moves it.
+
+**Ample-reserves framework (how the Fed operates today).** Banks hold far more reserves than they need, so the Fed steers rates with an **administered rate**:
+
 | Tool | Description | Expansionary (↓ rates) | Contractionary (↑ rates) |
 |---|---|---|---|
-| **Open Market Operations (OMO)** | Buying/selling government bonds (most common tool) | **Buy bonds** → injects money into banking system | **Sell bonds** → removes money from banking system |
-| **Federal Funds Rate (target)** | Interest rate banks charge each other for overnight loans | **Lower** the target rate | **Raise** the target rate |
-| **Discount Rate** | Interest rate the Fed charges banks for direct loans | **Lower** the discount rate | **Raise** the discount rate |
-| **Reserve Requirement** | % of deposits banks must hold in reserve (rarely changed) | **Lower** the reserve ratio → banks can lend more | **Raise** the reserve ratio → banks must hold more |
+| **Interest on reserve balances (IORB)** — the main tool | The rate the Fed pays banks on reserves they hold at the Fed. Banks will not lend reserves for much less than IORB, so the federal funds rate stays near it | **Lower** IORB → federal funds rate falls into a lower target range | **Raise** IORB → federal funds rate rises into a higher target range |
 
-### Open Market Operations — How They Work
+**Limited-reserves model (reserves are scarce).** The Fed changes the quantity of reserves and the money supply:
+
+| Tool | Description | Expansionary (↓ rates) | Contractionary (↑ rates) |
+|---|---|---|---|
+| **Open Market Operations (OMO)** | Buying/selling government bonds | **Buy bonds** → injects reserves into the banking system | **Sell bonds** → removes reserves from the banking system |
+| **Discount Rate** | Interest rate the Fed charges banks for direct loans | **Lower** the discount rate | **Raise** the discount rate |
+| **Reserve Requirement** | % of deposits banks must hold in reserve (**0% since March 2020**, so not an active tool today) | **Lower** the reserve ratio → banks can lend more | **Raise** the reserve ratio → banks must hold more |
+
+### Open Market Operations in the Limited-Reserves Model — How They Work
 
 **Fed BUYS bonds (expansionary):**
 1. Fed purchases government bonds from banks/public
@@ -47,11 +56,11 @@ export const macroMonetaryPolicyPart1Data = {
 **Fed SELLS bonds (contractionary):**
 The reverse — money flows OUT of the banking system → fewer reserves → less lending → money supply decreases → interest rates rise → AD shifts left
 
-> 🔑 **AP Connection:** OMO is the Fed's **primary tool**. "Buy bonds" = expansionary = lower rates. "Sell bonds" = contractionary = higher rates. The AP exam tests this chain of causation in nearly every FRQ set.
+> 🔑 **AP Connection:** Know both frameworks. Ample reserves: **lower IORB** = expansionary, **raise IORB** = contractionary. Limited reserves: "buy bonds" = expansionary = lower rates; "sell bonds" = contractionary = higher rates. Either way, never call the federal funds rate a tool: it is the target that the tools move.
 `},
     {id:'macromone1-quiz1',type:'multiple-choice' as const,content:`**Concept Check** 🎯`,exercise:{questions:[
       {question:'If the Federal Reserve wants to combat a recession, which action should it take?',options:['Sell government bonds on the open market to remove money from the banking system','Buy government bonds on the open market to increase bank reserves, expand the money supply, and lower interest rates','Raise the federal funds rate target to discourage excessive borrowing and spending','Increase the reserve requirement so banks hold more deposits and lend less'],correctAnswer:1,explanation:'To fight a recession, the Fed uses expansionary monetary policy. Buying bonds injects money into the banking system → bank reserves increase → banks can lend more → money supply grows → interest rates fall → businesses and consumers borrow and spend more → AD shifts right → output increases and unemployment falls. Selling bonds, raising rates, or increasing reserve requirements would all be contractionary — making the recession worse.'},
-      {question:'What is the "federal funds rate" and why is it important for monetary policy?',options:['The interest rate the federal government pays on the national debt, which determines total government borrowing costs','The interest rate banks charge each other for overnight loans of reserves — it is the Fed\'s primary interest rate target and influences all other interest rates in the economy','The rate of return on U.S. Treasury bonds sold to foreign governments and sovereign wealth funds','The interest rate charged to consumers on federal student loans and FHA mortgages'],correctAnswer:1,explanation:'The federal funds rate is the rate banks charge each other for overnight lending of reserves. The FOMC sets a target for this rate and uses open market operations to achieve it. The federal funds rate is crucial because it serves as the benchmark for all other interest rates in the economy — when it changes, rates on mortgages, auto loans, business loans, and credit cards adjust accordingly.'}
+      {question:'In the ample-reserves framework, what role does the federal funds rate play in monetary policy?',options:['It is the Fed\'s main tool, set directly by the FOMC at each meeting','It is the target the Fed moves by changing IORB','It is the rate the Fed charges banks that borrow at the discount window','It is the rate the Treasury pays when it sells new bonds to the public'],correctAnswer:1,explanation:'The federal funds rate is the overnight rate banks charge each other for reserves, and the FOMC sets a target range for it. The Fed hits that target mainly by changing the interest rate on reserve balances, so the rate is a target rather than a tool; the discount rate and Treasury yields are different rates.'}
     ]}},
     {id:'macromone1-limits',type:'text' as const,content:`
 ## 📖 Limitations of Monetary Policy
@@ -69,7 +78,7 @@ The reverse — money flows OUT of the banking system → fewer reserves → les
 | Feature | Monetary Policy | Fiscal Policy |
 |---|---|---|
 | **Who** | Federal Reserve (independent) | Congress + President |
-| **Tools** | OMO, interest rates, reserve req. | Taxes, spending |
+| **Tools** | IORB (ample reserves); OMO, discount rate, reserve req. (limited reserves) | Taxes, spending |
 | **Speed of action** | FOMC can act quickly | Slow (legislative process, debate) |
 | **Time to take effect** | 6–18 month lag | Variable — spending faster than tax changes |
 | **Political pressure** | Insulated (14-year terms) | Highly political |
