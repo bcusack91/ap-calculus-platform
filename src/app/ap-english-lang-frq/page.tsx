@@ -11,7 +11,9 @@ import rehypeKatex from 'rehype-katex'
 import {
   getApEngLangFRQs,
   generateFullExamFRQs,
+  ENG_LANG_FRQ_TYPES,
   type EngLangFRQ,
+  type EngLangFRQType,
   type FRQRubricItem,
 } from '@/data/ap-english-lang-frq/questions'
 import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
@@ -22,9 +24,18 @@ function gradeResponse(
   response: string,
   rubric: FRQRubricItem[]
 ): { pointsEarned: number; breakdown: { earned: boolean; item: FRQRubricItem }[] } {
-  const lower = response.toLowerCase().replace(/\s+/g, ' ')
+  const lower = response.toLowerCase().replace(/\s+/g, ' ') + ' '
+  // A keyword may list alternatives separated by "|"; minMatches counts distinct keywords.
+  const meets = (keywords: string[], min = 1) =>
+    keywords.filter((kw) => kw.toLowerCase().split('|').some((alt) => lower.includes(alt))).length >= min
+  // Essay rubrics: Row B points are cumulative, so each needs the Row B point before it.
+  let previousRowB = true
   const breakdown = rubric.map((item) => {
-    const earned = item.keywords.some((kw) => lower.includes(kw.toLowerCase()))
+    let earned = meets(item.keywords, item.minMatches ?? 1) && (item.requiresAll ?? []).every((g) => meets(g.keywords, g.minMatches ?? 1))
+    if (item.row === 'B') {
+      earned = earned && previousRowB
+      previousRowB = earned
+    }
     return { earned, item }
   })
   return {
@@ -40,7 +51,21 @@ function formatTime(seconds: number): string {
 }
 
 type Mode = 'menu' | 'practice' | 'timed' | 'results'
-type Filter = 'all' | 'long' | 'short'
+type Filter = 'all' | EngLangFRQType
+
+const TYPE_META = Object.fromEntries(ENG_LANG_FRQ_TYPES.map((t) => [t.type, t])) as Record<EngLangFRQType, (typeof ENG_LANG_FRQ_TYPES)[number]>
+
+const TYPE_STYLE: Record<EngLangFRQType, { icon: string; gradient: string; badge: string; headerBadge: string; blurb: string }> = {
+  synthesis: { icon: '📚', gradient: 'from-teal-500 to-cyan-500', badge: 'bg-teal-100 dark:bg-teal-900/30 text-teal-700', headerBadge: 'bg-teal-800', blurb: 'Read 6–7 sources, including a data or visual source, and argue a position using at least three of them.' },
+  'rhetorical-analysis': { icon: '🔍', gradient: 'from-purple-500 to-pink-500', badge: 'bg-purple-100 dark:bg-purple-900/30 text-purple-700', headerBadge: 'bg-purple-700', blurb: 'Analyze how a writer\'s rhetorical choices serve a purpose with a specific audience (Douglass, Roosevelt).' },
+  argument: { icon: '⚖️', gradient: 'from-amber-500 to-orange-500', badge: 'bg-amber-100 dark:bg-amber-900/30 text-amber-700', headerBadge: 'bg-amber-700', blurb: 'Defend, challenge, or qualify a claim (Mill, Emerson) with your own specific evidence.' },
+}
+
+/** Only current-format essays; an older content-store copy (long/short parts) falls back to the static pool. */
+function currentFormat(frqs: unknown): EngLangFRQ[] {
+  if (!Array.isArray(frqs)) return []
+  return frqs.filter((q): q is EngLangFRQ => typeof q?.type === 'string' && q.type in TYPE_META)
+}
 
 function APEngLangFRQPageInner() {
   const { status } = useSession()
@@ -69,7 +94,10 @@ function APEngLangFRQPageInner() {
     let active = true
     fetch('/api/frq/ap-english-lang')
       .then((r) => (r.ok ? r.json() : null))
-      .then((data) => { if (active && Array.isArray(data?.frqs) && data.frqs.length > 0) setAllFrqs(data.frqs) })
+      .then((data) => {
+        const fresh = currentFormat(data?.frqs)
+        if (active && fresh.length > 0) setAllFrqs(fresh)
+      })
       .catch(() => {})
     return () => { active = false }
   }, [])
@@ -92,7 +120,7 @@ function APEngLangFRQPageInner() {
 
   const startPractice = useCallback((f: Filter) => {
     setFilter(f)
-    const pool = f === 'long' ? allFrqs.filter(q => q.type === 'long') : f === 'short' ? allFrqs.filter(q => q.type === 'short') : allFrqs
+    const pool = f === 'all' ? allFrqs : allFrqs.filter((q) => q.type === f)
     setFrqs(pool)
     setCurrentIdx(0)
     setResponses({})
@@ -103,14 +131,14 @@ function APEngLangFRQPageInner() {
   }, [allFrqs])
 
   const startTimedExam = useCallback(() => {
-    const { long, short } = generateFullExamFRQs(allFrqs)
-    setFrqs([...long, ...short])
+    const { questions, totalMinutes } = generateFullExamFRQs(allFrqs)
+    setFrqs(questions)
     setCurrentIdx(0)
     setResponses({})
     setResults({})
     setShowSample({})
     setShowRubric({})
-    setTimeRemaining(135 * 60)
+    setTimeRemaining(totalMinutes * 60)
     setMode('timed')
   }, [allFrqs])
 
@@ -183,8 +211,8 @@ function APEngLangFRQPageInner() {
               </span>
             </h1>
             <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Practice with AP English Language free-response questions. Each question includes a scoring
-              rubric and sample response.
+              Practice with AP English Language essay prompts, built to the real exam. Each essay includes the 6-point
+              rubric and an annotated sample essay.
             </p>
           </div>
 
@@ -194,55 +222,46 @@ function APEngLangFRQPageInner() {
               <div>
                 <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">Section II Structure</h4>
                 <ul className="space-y-1">
-                  <li>• 3 essays in 135 minutes, including a 15-minute reading period</li>
-                  <li>• Synthesis, Rhetorical Analysis, Argument (6 points each)</li>
-                  <li>• Rubric-based scoring</li>
+                  <li>• 3 essays in 2 h 15 min, including a 15-minute reading period</li>
+                  <li>• Q1 Synthesis, Q2 Rhetorical Analysis, Q3 Argument</li>
+                  <li>• Each essay scored out of 6: thesis 1, evidence and commentary 4, sophistication 1</li>
                 </ul>
               </div>
               <div>
                 <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">What&apos;s Tested</h4>
                 <ul className="space-y-1">
-                  <li>• Applying AP English Language concepts</li>
-                  <li>• Analyzing data and evidence</li>
-                  <li>• Making evidence-based arguments</li>
-                  <li>• Connecting ideas across units</li>
+                  <li>• Writing a defensible thesis that sets up a line of reasoning</li>
+                  <li>• Using sources and evidence, with commentary that explains them</li>
+                  <li>• Analyzing rhetorical choices in light of purpose and audience</li>
+                  <li>• Building a complex, nuanced argument</li>
                 </ul>
               </div>
             </div>
           </div>
 
           <div className="grid sm:grid-cols-2 gap-4 mb-8">
-            <button onClick={() => startPractice('long')} className="group rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 text-left hover:shadow-lg transition">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="h-12 w-12 flex items-center justify-center rounded-xl bg-gradient-to-r from-teal-500 to-cyan-500 text-white text-xl">📄</div>
-                <div>
-                  <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400">Long FRQs</h3>
-                  <p className="text-xs text-gray-500">7 points · ~25 min each</p>
+            {ENG_LANG_FRQ_TYPES.map((t) => (
+              <button key={t.type} onClick={() => startPractice(t.type)} className="group rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 text-left hover:shadow-lg transition">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className={`h-12 w-12 flex items-center justify-center rounded-xl bg-gradient-to-r ${TYPE_STYLE[t.type].gradient} text-white text-xl`}>{TYPE_STYLE[t.type].icon}</div>
+                  <div>
+                    <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400">{t.short}: {t.label}</h3>
+                    <p className="text-xs text-gray-500">{t.points} points · ~{t.minutes} min · {allFrqs.filter((q) => q.type === t.type).length} essays</p>
+                  </div>
                 </div>
-              </div>
-              <p className="text-sm text-gray-600 dark:text-gray-400">Multi-part problems covering key topics in AP English Language.</p>
-            </button>
-
-            <button onClick={() => startPractice('short')} className="group rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 text-left hover:shadow-lg transition">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="h-12 w-12 flex items-center justify-center rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xl">📝</div>
-                <div>
-                  <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400">Short FRQs</h3>
-                  <p className="text-xs text-gray-500">4 points · ~12 min each</p>
-                </div>
-              </div>
-              <p className="text-sm text-gray-600 dark:text-gray-400">Focused questions on specific topics in AP English Language.</p>
-            </button>
+                <p className="text-sm text-gray-600 dark:text-gray-400">{TYPE_STYLE[t.type].blurb}</p>
+              </button>
+            ))}
 
             <button onClick={() => startPractice('all')} className="group rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 text-left hover:shadow-lg transition">
               <div className="flex items-center gap-3 mb-3">
                 <div className="h-12 w-12 flex items-center justify-center rounded-xl bg-gradient-to-r from-teal-500 to-cyan-500 text-white text-xl">📚</div>
                 <div>
                   <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400">All FRQs</h3>
-                  <p className="text-xs text-gray-500">{allFrqs.length} questions · Untimed</p>
+                  <p className="text-xs text-gray-500">{allFrqs.length} essays · Untimed</p>
                 </div>
               </div>
-              <p className="text-sm text-gray-600 dark:text-gray-400">Browse and practice all available FRQ questions at your own pace.</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Browse and practice all six essay prompts at your own pace.</p>
             </button>
 
             <button onClick={startTimedExam} className="group rounded-2xl border-2 border-teal-300 dark:border-teal-600 bg-white dark:bg-gray-800 p-6 text-left hover:shadow-lg transition">
@@ -250,7 +269,7 @@ function APEngLangFRQPageInner() {
                 <div className="h-12 w-12 flex items-center justify-center rounded-xl bg-gradient-to-r from-red-500 to-orange-500 text-white text-xl">⏱️</div>
                 <div>
                   <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-red-600 dark:group-hover:text-red-400">Timed Exam Simulation</h3>
-                  <p className="text-xs text-gray-500">135 min</p>
+                  <p className="text-xs text-gray-500">Synthesis + Rhetorical Analysis + Argument · 18 points · 2 h 15 min</p>
                 </div>
               </div>
               <p className="text-sm text-gray-600 dark:text-gray-400">Simulate the real AP English Language Section II under exam conditions with a countdown timer.</p>
@@ -262,27 +281,27 @@ function APEngLangFRQPageInner() {
             <ul className="grid sm:grid-cols-2 gap-2 text-sm text-teal-700 dark:text-teal-400">
               <li className="flex items-start gap-2">
                 <span className="text-teal-500 mt-0.5">✓</span>
-                Use specific AP English Language vocabulary and terminology
+                Make the thesis a claim someone could disagree with, not a restatement
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-teal-500 mt-0.5">✓</span>
-                Define key terms before applying them
+                Synthesis: cite at least three sources by letter, e.g. (Source C)
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-teal-500 mt-0.5">✓</span>
-                Reference specific examples, data, or cases
+                Follow every quotation with commentary that explains how it supports your claim
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-teal-500 mt-0.5">✓</span>
-                For explanation questions, state the mechanism not just the outcome
+                Rhetorical analysis: name the choice, quote it, and explain its effect on this audience
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-teal-500 mt-0.5">✓</span>
-                Connect your answer to broader themes in AP English Language
+                Earn sophistication across the essay: explore a tension, not one tacked-on concession
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-teal-500 mt-0.5">✓</span>
-                Budget your time according to point values
+                Budget: 15 min reading + 40 min synthesis, then ~40 min for each other essay
               </li>
             </ul>
           </div>
@@ -313,7 +332,7 @@ function APEngLangFRQPageInner() {
                 <div key={frq.id} className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4">
                   <div className="flex items-center justify-between">
                     <div>
-                      <span className={`text-xs font-bold px-2 py-0.5 rounded ${frq.type === 'long' ? 'bg-teal-100 dark:bg-teal-900/30 text-teal-600' : 'bg-purple-100 dark:bg-purple-900/30 text-purple-600'}`}>{frq.type === 'long' ? 'Long FRQ' : 'Short FRQ'}</span>
+                      <span className={`text-xs font-bold px-2 py-0.5 rounded ${TYPE_STYLE[frq.type]?.badge ?? ''}`}>{TYPE_META[frq.type]?.short ?? 'FRQ'}</span>
                       <span className="ml-2 text-sm font-medium text-gray-900 dark:text-white">{frq.title}</span>
                     </div>
                     <span className={`font-bold ${frqTotal >= frq.totalPoints * 0.7 ? 'text-green-600' : frqTotal >= frq.totalPoints * 0.4 ? 'text-yellow-600' : 'text-red-600'}`}>{frqTotal}/{frq.totalPoints}</span>
@@ -339,7 +358,7 @@ function APEngLangFRQPageInner() {
         <div className="flex items-center justify-between mb-6 flex-wrap gap-3">
           <div>
             <button onClick={() => setMode('menu')} className="text-sm text-teal-600 dark:text-teal-400 hover:underline mb-1">&larr; Back to Menu</button>
-            <h1 className="text-xl font-bold text-gray-900 dark:text-white">{mode === 'timed' ? 'Timed FRQ Exam' : `FRQ Practice (${filter})`}</h1>
+            <h1 className="text-xl font-bold text-gray-900 dark:text-white">{mode === 'timed' ? 'Timed FRQ Exam' : `FRQ Practice: ${filter === 'all' ? 'All Essays' : TYPE_META[filter].label}`}</h1>
           </div>
           <div className="flex items-center gap-4">
             {mode === 'timed' && (
@@ -357,7 +376,7 @@ function APEngLangFRQPageInner() {
           <div className="bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-6 py-4">
             <div className="flex items-center justify-between flex-wrap gap-2">
               <div>
-                <span className={`text-xs font-bold px-2 py-0.5 rounded mr-2 ${currentFRQ.type === 'long' ? 'bg-teal-800' : 'bg-purple-700'}`}>{currentFRQ.type === 'long' ? 'Long FRQ' : 'Short FRQ'}</span>
+                <span className={`text-xs font-bold px-2 py-0.5 rounded mr-2 ${TYPE_STYLE[currentFRQ.type]?.headerBadge ?? ''}`}>{TYPE_META[currentFRQ.type]?.label ?? 'FRQ'}</span>
                 <h2 className="text-lg font-bold mt-1">{currentFRQ.title}</h2>
               </div>
               <div className="flex items-center gap-3 text-sm">
@@ -382,15 +401,15 @@ function APEngLangFRQPageInner() {
                   <div key={part.label} className="border border-gray-200 dark:border-gray-700 rounded-xl p-5">
                     <div className="flex items-center justify-between mb-3">
                       <div className="flex items-center gap-2">
-                        <span className="bg-teal-600 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold">{part.label}</span>
+                        <span className={`bg-teal-600 text-white h-8 rounded-full flex items-center justify-center text-sm font-bold ${part.label.length > 3 ? 'px-3' : 'w-8'}`}>{part.label}</span>
                         <span className="text-sm text-teal-600 dark:text-teal-400 font-medium">({part.maxPoints} {part.maxPoints === 1 ? 'point' : 'points'})</span>
                       </div>
                       {result && <span className={`font-bold text-sm ${result.pointsEarned === part.maxPoints ? 'text-green-600' : result.pointsEarned > 0 ? 'text-yellow-600' : 'text-red-600'}`}>{result.pointsEarned}/{part.maxPoints}</span>}
                     </div>
                     <div className="mb-3 prose prose-sm max-w-none dark:prose-invert"><ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>{escapeCurrencyMath(part.prompt)}</ReactMarkdown></div>
-                    <textarea value={responses[key] || ''} onChange={(ev) => setResponses((prev) => ({ ...prev, [key]: ev.target.value }))} placeholder="Write your response here..." className="w-full h-36 p-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-gray-100 resize-y text-sm focus:ring-2 focus:ring-teal-500 focus:border-teal-500" disabled={!!result} maxLength={2000} />
+                    <textarea value={responses[key] || ''} onChange={(ev) => setResponses((prev) => ({ ...prev, [key]: ev.target.value }))} placeholder="Write your essay here..." className="w-full h-96 p-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-gray-100 resize-y text-sm focus:ring-2 focus:ring-teal-500 focus:border-teal-500" disabled={!!result} maxLength={15000} />
                     {!result ? (
-                      <div className="mt-3"><button onClick={() => handleGrade(currentFRQ.id, part.label, part.rubric)} className="px-4 py-2 text-sm bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors disabled:opacity-50 font-medium" disabled={!(responses[key] || '').trim()}>Grade Part {part.label}</button></div>
+                      <div className="mt-3"><button onClick={() => handleGrade(currentFRQ.id, part.label, part.rubric)} className="px-4 py-2 text-sm bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors disabled:opacity-50 font-medium" disabled={!(responses[key] || '').trim()}>{part.label === 'Essay' ? 'Grade Essay' : `Grade Part ${part.label}`}</button></div>
                     ) : (
                       <div className="mt-3 space-y-3">
                         <div className="space-y-1">
@@ -403,7 +422,7 @@ function APEngLangFRQPageInner() {
                         </div>
                         <div className="flex gap-3">
                           <button onClick={() => setShowRubric((prev) => ({ ...prev, [key]: !prev[key] }))} className="text-xs px-3 py-1.5 rounded-lg bg-teal-100 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300 hover:bg-teal-200 transition font-medium">{showRubric[key] ? 'Hide' : 'Show'} Full Rubric</button>
-                          <button onClick={() => setShowSample((prev) => ({ ...prev, [key]: !prev[key] }))} className="text-xs px-3 py-1.5 rounded-lg bg-cyan-100 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-300 hover:bg-cyan-200 transition font-medium">{showSample[key] ? 'Hide' : 'Show'} Sample Answer</button>
+                          <button onClick={() => setShowSample((prev) => ({ ...prev, [key]: !prev[key] }))} className="text-xs px-3 py-1.5 rounded-lg bg-cyan-100 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-300 hover:bg-cyan-200 transition font-medium">{showSample[key] ? 'Hide' : 'Show'} Annotated Sample Essay</button>
                         </div>
                         {showRubric[key] && (
                           <div className="bg-teal-50 dark:bg-teal-900/20 rounded-lg p-4 border border-teal-200 dark:border-teal-700">
@@ -413,7 +432,7 @@ function APEngLangFRQPageInner() {
                         )}
                         {showSample[key] && (
                           <div className="bg-cyan-50 dark:bg-cyan-900/20 rounded-lg p-4 border border-cyan-200 dark:border-cyan-700">
-                            <h5 className="font-semibold text-cyan-800 dark:text-cyan-300 mb-2 text-xs">Sample Response:</h5>
+                            <h5 className="font-semibold text-cyan-800 dark:text-cyan-300 mb-2 text-xs">Annotated Sample Essay:</h5>
                             <div className="prose prose-sm max-w-none dark:prose-invert text-xs"><ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>{escapeCurrencyMath(part.sampleAnswer)}</ReactMarkdown></div>
                           </div>
                         )}
