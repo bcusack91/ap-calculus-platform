@@ -11,7 +11,9 @@ import rehypeKatex from 'rehype-katex'
 import {
   getStatsFRQs,
   generateFullExamFRQs,
+  STATS_FRQ_TYPES,
   type StatsFRQ,
+  type StatsFRQType,
   type FRQRubricItem,
 } from '@/data/ap-stats-frq/questions'
 import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
@@ -40,7 +42,22 @@ function formatTime(seconds: number): string {
 }
 
 type Mode = 'menu' | 'practice' | 'timed' | 'results'
-type Filter = 'all' | 'long' | 'short'
+type Filter = 'all' | StatsFRQType
+
+const TYPE_META = Object.fromEntries(STATS_FRQ_TYPES.map((t) => [t.type, t])) as Record<StatsFRQType, (typeof STATS_FRQ_TYPES)[number]>
+
+const TYPE_STYLE: Record<StatsFRQType, { icon: string; gradient: string; badge: string; headerBadge: string; blurb: string }> = {
+  'practices-1-2': { icon: '🧪', gradient: 'from-teal-500 to-cyan-500', badge: 'bg-teal-100 dark:bg-teal-900/30 text-teal-600', headerBadge: 'bg-teal-800', blurb: 'Formulate an investigative question and plan the data collection: sampling methods, bias, and experimental design.' },
+  'practices-3-4': { icon: '📊', gradient: 'from-purple-500 to-pink-500', badge: 'bg-purple-100 dark:bg-purple-900/30 text-purple-600', headerBadge: 'bg-purple-700', blurb: 'Analyze data and interpret results: distributions, outliers, z-scores, and least-squares regression.' },
+  inference: { icon: '🎯', gradient: 'from-sky-500 to-blue-500', badge: 'bg-sky-100 dark:bg-sky-900/30 text-sky-600', headerBadge: 'bg-sky-700', blurb: 'A complete significance test or confidence interval: variables, procedure, conditions, calculations, and a conclusion in context.' },
+  'practices-2-3-4': { icon: '🧩', gradient: 'from-amber-500 to-orange-500', badge: 'bg-amber-100 dark:bg-amber-900/30 text-amber-600', headerBadge: 'bg-amber-700', blurb: 'Several content areas in one question: probability, the binomial and normal models, and sampling distributions.' },
+}
+
+/** Only current-format items (the four 2027 types); an older content-store copy falls back to the static pool. */
+function currentFormat(frqs: unknown): StatsFRQ[] {
+  if (!Array.isArray(frqs)) return []
+  return frqs.filter((q): q is StatsFRQ => typeof q?.type === 'string' && q.type in TYPE_META)
+}
 
 function APStatsFRQPageInner() {
   const { status } = useSession()
@@ -69,7 +86,10 @@ function APStatsFRQPageInner() {
     let active = true
     fetch('/api/frq/ap-stats')
       .then((r) => (r.ok ? r.json() : null))
-      .then((data) => { if (active && Array.isArray(data?.frqs) && data.frqs.length > 0) setAllFrqs(data.frqs) })
+      .then((data) => {
+        const fresh = currentFormat(data?.frqs)
+        if (active && fresh.length > 0) setAllFrqs(fresh)
+      })
       .catch(() => {})
     return () => { active = false }
   }, [])
@@ -92,7 +112,7 @@ function APStatsFRQPageInner() {
 
   const startPractice = useCallback((f: Filter) => {
     setFilter(f)
-    const pool = f === 'long' ? allFrqs.filter(q => q.type === 'long') : f === 'short' ? allFrqs.filter(q => q.type === 'short') : allFrqs
+    const pool = f === 'all' ? allFrqs : allFrqs.filter((q) => q.type === f)
     setFrqs(pool)
     setCurrentIdx(0)
     setResponses({})
@@ -103,14 +123,14 @@ function APStatsFRQPageInner() {
   }, [allFrqs])
 
   const startTimedExam = useCallback(() => {
-    const { long, short } = generateFullExamFRQs()
-    setFrqs([...long, ...short])
+    const { questions, totalMinutes } = generateFullExamFRQs()
+    setFrqs(questions)
     setCurrentIdx(0)
     setResponses({})
     setResults({})
     setShowSample({})
     setShowRubric({})
-    setTimeRemaining(90 * 60)
+    setTimeRemaining(totalMinutes * 60)
     setMode('timed')
   }, [])
 
@@ -197,7 +217,7 @@ function APStatsFRQPageInner() {
                 </h4>
                 <ul className="space-y-1">
                   <li>• 4 free-response questions (10 pts each, 12.5% of the score each)</li>
-                  <li>• Practices 1 &amp; 2; Practices 3 &amp; 4; Inference; Practices 2, 3 &amp; 4 (no investigative task from May 2027)</li>
+                  <li>• Q1 Practices 1 &amp; 2; Q2 Practices 3 &amp; 4; Q3 Inference; Q4 Practices 2, 3 &amp; 4 (no investigative task from May 2027)</li>
                   <li>• Total: 40 points in 90 minutes</li>
                   <li>• Graphing calculator + built-in Desmos</li>
                 </ul>
@@ -207,57 +227,38 @@ function APStatsFRQPageInner() {
                   What&apos;s Tested
                 </h4>
                 <ul className="space-y-1">
-                  <li>• Exploring data & describing distributions</li>
-                  <li>• Sampling, experimentation & anticipating patterns</li>
-                  <li>• Probability models & simulation</li>
-                  <li>• Inference — confidence intervals & hypothesis tests</li>
+                  <li>• Investigative questions, sampling & experimental design</li>
+                  <li>• Describing distributions & least-squares regression</li>
+                  <li>• Probability, the binomial & normal models, sampling distributions</li>
+                  <li>• Inference for proportions & means: intervals and tests</li>
                 </ul>
               </div>
             </div>
           </div>
 
           <div className="grid sm:grid-cols-2 gap-4 mb-8">
-            <button
-              onClick={() => startPractice('long')}
-              className="group rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 text-left hover:shadow-lg transition"
-            >
-              <div className="flex items-center gap-3 mb-3">
-                <div className="h-12 w-12 flex items-center justify-center rounded-xl bg-gradient-to-r from-teal-500 to-cyan-500 text-white text-xl">
-                  📄
+            {STATS_FRQ_TYPES.map((t) => (
+              <button
+                key={t.type}
+                onClick={() => startPractice(t.type)}
+                className="group rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 text-left hover:shadow-lg transition"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <div className={`h-12 w-12 flex items-center justify-center rounded-xl bg-gradient-to-r ${TYPE_STYLE[t.type].gradient} text-white text-xl`}>
+                    {TYPE_STYLE[t.type].icon}
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400">
+                      {t.short}: {t.label}
+                    </h3>
+                    <p className="text-xs text-gray-500">
+                      {t.points} points · ~{t.minutes} min · {allFrqs.filter((q) => q.type === t.type).length} questions
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400">
-                    Long FRQs (Investigative Tasks)
-                  </h3>
-                  <p className="text-xs text-gray-500">4 points · ~25 min each</p>
-                </div>
-              </div>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                Extended multi-step analysis involving regression, simulation, or experimental
-                reasoning across multiple statistical concepts.
-              </p>
-            </button>
-
-            <button
-              onClick={() => startPractice('short')}
-              className="group rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 text-left hover:shadow-lg transition"
-            >
-              <div className="flex items-center gap-3 mb-3">
-                <div className="h-12 w-12 flex items-center justify-center rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xl">
-                  📝
-                </div>
-                <div>
-                  <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400">
-                    Short FRQs
-                  </h3>
-                  <p className="text-xs text-gray-500">4 points · ~13 min each</p>
-                </div>
-              </div>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                Focused problems on distributions, experimental design, probability, confidence
-                intervals, hypothesis tests, and chi-square.
-              </p>
-            </button>
+                <p className="text-sm text-gray-600 dark:text-gray-400">{TYPE_STYLE[t.type].blurb}</p>
+              </button>
+            ))}
 
             <button
               onClick={() => startPractice('all')}
@@ -293,7 +294,7 @@ function APStatsFRQPageInner() {
                   <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-red-600 dark:group-hover:text-red-400">
                     Timed Exam Simulation
                   </h3>
-                  <p className="text-xs text-gray-500">1 long + 5 short · 90 min</p>
+                  <p className="text-xs text-gray-500">Q1–Q4, 1 of each type · 40 points · 90 min</p>
                 </div>
               </div>
               <p className="text-sm text-gray-600 dark:text-gray-400">
@@ -321,15 +322,15 @@ function APStatsFRQPageInner() {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-teal-500 mt-0.5">✓</span>
-                Show calculator steps for test statistics and p-values
+                On Q3, identify and classify the variables, then name the procedure before you compute
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-teal-500 mt-0.5">✓</span>
-                For experimental design, explain randomization, treatments, and response variable
+                A valid investigative question names the variables, the parameter with a direction, and the population
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-teal-500 mt-0.5">✓</span>
-                Budget: ~13 min per short FRQ, ~25 min for the investigative task
+                Budget: about 22 minutes per question (4 questions, 10 points each)
               </li>
             </ul>
           </div>
@@ -384,9 +385,9 @@ function APStatsFRQPageInner() {
                   <div className="flex items-center justify-between">
                     <div>
                       <span
-                        className={`text-xs font-bold px-2 py-0.5 rounded ${frq.type === 'long' ? 'bg-teal-100 dark:bg-teal-900/30 text-teal-600' : 'bg-purple-100 dark:bg-purple-900/30 text-purple-600'}`}
+                        className={`text-xs font-bold px-2 py-0.5 rounded ${TYPE_STYLE[frq.type]?.badge ?? ''}`}
                       >
-                        {frq.type === 'long' ? 'Investigative Task' : 'Short FRQ'}
+                        {TYPE_META[frq.type]?.short ?? 'FRQ'}
                       </span>
                       <span className="ml-2 text-sm font-medium text-gray-900 dark:text-white">
                         {frq.title}
@@ -442,7 +443,7 @@ function APStatsFRQPageInner() {
               ← Back to Menu
             </button>
             <h1 className="text-xl font-bold text-gray-900 dark:text-white">
-              {mode === 'timed' ? 'Timed FRQ Exam' : `FRQ Practice (${filter})`}
+              {mode === 'timed' ? 'Timed FRQ Exam' : `FRQ Practice: ${filter === 'all' ? 'All FRQs' : TYPE_META[filter].label}`}
             </h1>
           </div>
           <div className="flex items-center gap-4">
@@ -471,9 +472,9 @@ function APStatsFRQPageInner() {
             <div className="flex items-center justify-between flex-wrap gap-2">
               <div>
                 <span
-                  className={`text-xs font-bold px-2 py-0.5 rounded mr-2 ${currentFRQ.type === 'long' ? 'bg-teal-800' : 'bg-purple-700'}`}
+                  className={`text-xs font-bold px-2 py-0.5 rounded mr-2 ${TYPE_STYLE[currentFRQ.type]?.headerBadge ?? ''}`}
                 >
-                  {currentFRQ.type === 'long' ? 'Investigative Task' : 'Short FRQ'}
+                  {TYPE_META[currentFRQ.type] ? `${TYPE_META[currentFRQ.type].short} · ${TYPE_META[currentFRQ.type].label}` : 'FRQ'}
                 </span>
                 <span className="text-xs text-teal-200">Unit {currentFRQ.unit}</span>
                 <h2 className="text-lg font-bold mt-1">{currentFRQ.title}</h2>

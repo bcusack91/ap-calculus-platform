@@ -11,7 +11,9 @@ import rehypeKatex from 'rehype-katex'
 import {
   getPrecalcFRQs,
   generateFullExamFRQs,
+  PRECALC_FRQ_TYPES,
   type PrecalcFRQ,
+  type PrecalcFRQType,
   type FRQRubricItem,
 } from '@/data/ap-precalc-frq/questions'
 import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
@@ -40,7 +42,22 @@ function formatTime(seconds: number): string {
 }
 
 type Mode = 'menu' | 'practice' | 'timed' | 'results'
-type Filter = 'all' | 'long' | 'short'
+type Filter = 'all' | PrecalcFRQType
+
+const TYPE_META = Object.fromEntries(PRECALC_FRQ_TYPES.map((t) => [t.type, t])) as Record<PrecalcFRQType, (typeof PRECALC_FRQ_TYPES)[number]>
+
+const TYPE_STYLE: Record<PrecalcFRQType, { icon: string; gradient: string; badge: string; headerBadge: string; blurb: string }> = {
+  'function-concepts': { icon: '🔁', gradient: 'from-emerald-500 to-green-500', badge: 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600', headerBadge: 'bg-emerald-800', blurb: 'Compositions, inverses, zeros, and limits from a table and a formula, then identify a function type from its rates of change.' },
+  'non-periodic-modeling': { icon: '📈', gradient: 'from-sky-500 to-blue-500', badge: 'bg-sky-100 dark:bg-sky-900/30 text-sky-600', headerBadge: 'bg-sky-700', blurb: 'Build an exponential or logarithmic model from data, interpret an average rate of change, and justify a domain restriction.' },
+  'periodic-modeling': { icon: '🌊', gradient: 'from-purple-500 to-pink-500', badge: 'bg-purple-100 dark:bg-purple-900/30 text-purple-600', headerBadge: 'bg-purple-700', blurb: 'Key points of a sinusoidal graph, the constants a, b, c, d, and behavior, concavity, and rate of change on an interval.' },
+  'symbolic-manipulations': { icon: '✏️', gradient: 'from-amber-500 to-orange-500', badge: 'bg-amber-100 dark:bg-amber-900/30 text-amber-600', headerBadge: 'bg-amber-700', blurb: 'Rewrite log and trig expressions, solve log, exponential, and trig equations, and find every solution.' },
+}
+
+/** Only current-format items (the four exam types); an older content-store copy falls back to the static pool. */
+function currentFormat(frqs: unknown): PrecalcFRQ[] {
+  if (!Array.isArray(frqs)) return []
+  return frqs.filter((q): q is PrecalcFRQ => typeof q?.type === 'string' && q.type in TYPE_META)
+}
 
 function APPrecalcFRQPageInner() {
   const { status } = useSession()
@@ -57,6 +74,8 @@ function APPrecalcFRQPageInner() {
   const [showSample, setShowSample] = useState<Record<string, boolean>>({})
   const [showRubric, setShowRubric] = useState<Record<string, boolean>>({})
   const [timeRemaining, setTimeRemaining] = useState(0)
+  // Timed exam: Part A (calculator) questions first, then Part B (no calculator), 35 minutes each.
+  const [examSplit, setExamSplit] = useState<{ partACount: number; partBSeconds: number } | null>(null)
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
 
   useEffect(() => {
@@ -69,7 +88,10 @@ function APPrecalcFRQPageInner() {
     let active = true
     fetch('/api/frq/ap-precalc')
       .then((r) => (r.ok ? r.json() : null))
-      .then((data) => { if (active && Array.isArray(data?.frqs) && data.frqs.length > 0) setAllFrqs(data.frqs) })
+      .then((data) => {
+        const fresh = currentFormat(data?.frqs)
+        if (active && fresh.length > 0) setAllFrqs(fresh)
+      })
       .catch(() => {})
     return () => { active = false }
   }, [])
@@ -92,7 +114,7 @@ function APPrecalcFRQPageInner() {
 
   const startPractice = useCallback((f: Filter) => {
     setFilter(f)
-    const pool = f === 'long' ? allFrqs.filter(q => q.type === 'long') : f === 'short' ? allFrqs.filter(q => q.type === 'short') : allFrqs
+    const pool = f === 'all' ? allFrqs : allFrqs.filter((q) => q.type === f)
     setFrqs(pool)
     setCurrentIdx(0)
     setResponses({})
@@ -103,14 +125,15 @@ function APPrecalcFRQPageInner() {
   }, [allFrqs])
 
   const startTimedExam = useCallback(() => {
-    const { long, short } = generateFullExamFRQs()
-    setFrqs([...long, ...short])
+    const { questions, totalMinutes, partACount, partBMinutes } = generateFullExamFRQs()
+    setFrqs(questions)
+    setExamSplit({ partACount, partBSeconds: partBMinutes * 60 })
     setCurrentIdx(0)
     setResponses({})
     setResults({})
     setShowSample({})
     setShowRubric({})
-    setTimeRemaining(60 * 60)
+    setTimeRemaining(totalMinutes * 60)
     setMode('timed')
   }, [])
 
@@ -138,6 +161,16 @@ function APPrecalcFRQPageInner() {
   }
 
   const currentFRQ = frqs[currentIdx]
+
+  // Part A runs until the clock reaches Part B's 35 minutes; Part B questions stay locked until then.
+  const inPartA = mode === 'timed' && examSplit !== null && timeRemaining > examSplit.partBSeconds
+  const partClock = inPartA && examSplit ? timeRemaining - examSplit.partBSeconds : timeRemaining
+  const isLocked = (i: number) => inPartA && examSplit !== null && i >= examSplit.partACount
+  const startPartB = () => {
+    if (!examSplit) return
+    setTimeRemaining((t) => Math.min(t, examSplit.partBSeconds))
+    setCurrentIdx(examSplit.partACount)
+  }
 
   const totalPossible = frqs.reduce((s, f) => s + f.totalPoints, 0)
   const totalEarned = frqs.reduce((s, f) => {
@@ -198,6 +231,8 @@ function APPrecalcFRQPageInner() {
                 <ul className="space-y-1">
                   <li>• Part A: 2 FRQs with a graphing calculator (35 min)</li>
                   <li>• Part B: 2 FRQs without a calculator (35 min)</li>
+                  <li>• Q1 Function Concepts, Q2 Modeling a Non-Periodic Context (Part A)</li>
+                  <li>• Q3 Modeling a Periodic Context, Q4 Symbolic Manipulations (Part B)</li>
                   <li>• Total: 4 questions (6 pts each) in 70 minutes</li>
                   <li>• ~37.5% of total AP score</li>
                 </ul>
@@ -210,54 +245,35 @@ function APPrecalcFRQPageInner() {
                   <li>• Polynomial and rational functions</li>
                   <li>• Exponential and logarithmic functions</li>
                   <li>• Trigonometric and polar functions</li>
-                  <li>• Functions involving parameters, vectors, and matrices</li>
+                  <li>• Modeling with data, domain restrictions, and rates of change</li>
                 </ul>
               </div>
             </div>
           </div>
 
           <div className="grid sm:grid-cols-2 gap-4 mb-8">
-            <button
-              onClick={() => startPractice('long')}
-              className="group rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 text-left hover:shadow-lg transition"
-            >
-              <div className="flex items-center gap-3 mb-3">
-                <div className="h-12 w-12 flex items-center justify-center rounded-xl bg-gradient-to-r from-emerald-500 to-green-500 text-white text-xl">
-                  📄
+            {PRECALC_FRQ_TYPES.map((t) => (
+              <button
+                key={t.type}
+                onClick={() => startPractice(t.type)}
+                className="group rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 text-left hover:shadow-lg transition"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <div className={`h-12 w-12 flex items-center justify-center rounded-xl bg-gradient-to-r ${TYPE_STYLE[t.type].gradient} text-white text-xl`}>
+                    {TYPE_STYLE[t.type].icon}
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400">
+                      {t.short}: {t.label}
+                    </h3>
+                    <p className="text-xs text-gray-500">
+                      {t.points} points · ~{t.minutes} min · Part {t.part} ({t.calculator ? 'calculator' : 'no calculator'}) · {allFrqs.filter((q) => q.type === t.type).length} questions
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400">
-                    Long FRQs (Modeling)
-                  </h3>
-                  <p className="text-xs text-gray-500">6 points · ~15 min each</p>
-                </div>
-              </div>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                Extended multi-step modeling with exponential, trigonometric, or polynomial functions
-                applied to real-world contexts.
-              </p>
-            </button>
-
-            <button
-              onClick={() => startPractice('short')}
-              className="group rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 text-left hover:shadow-lg transition"
-            >
-              <div className="flex items-center gap-3 mb-3">
-                <div className="h-12 w-12 flex items-center justify-center rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xl">
-                  📝
-                </div>
-                <div>
-                  <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400">
-                    Short FRQs
-                  </h3>
-                  <p className="text-xs text-gray-500">4 points · ~8 min each</p>
-                </div>
-              </div>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                Focused problems on polynomials, logs, inverses, polar coordinates, sequences,
-                and rational functions.
-              </p>
-            </button>
+                <p className="text-sm text-gray-600 dark:text-gray-400">{TYPE_STYLE[t.type].blurb}</p>
+              </button>
+            ))}
 
             <button
               onClick={() => startPractice('all')}
@@ -293,7 +309,7 @@ function APPrecalcFRQPageInner() {
                   <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-red-600 dark:group-hover:text-red-400">
                     Timed Exam Simulation
                   </h3>
-                  <p className="text-xs text-gray-500">2 long + 2 short · 60 min</p>
+                  <p className="text-xs text-gray-500">Part A (calculator) 35 min, then Part B (no calculator) 35 min · 24 points</p>
                 </div>
               </div>
               <p className="text-sm text-gray-600 dark:text-gray-400">
@@ -325,11 +341,11 @@ function APPrecalcFRQPageInner() {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-emerald-500 mt-0.5">✓</span>
-                For polar/parametric, relate back to rectangular if asked
+                Give every solution: one period first, then add multiples of the period
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-emerald-500 mt-0.5">✓</span>
-                Budget: ~15 min calculator FRQs, ~8 min no-calculator FRQs
+                Budget: ~17 min per question (35 min for each part)
               </li>
             </ul>
           </div>
@@ -384,9 +400,9 @@ function APPrecalcFRQPageInner() {
                   <div className="flex items-center justify-between">
                     <div>
                       <span
-                        className={`text-xs font-bold px-2 py-0.5 rounded ${frq.type === 'long' ? 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600' : 'bg-purple-100 dark:bg-purple-900/30 text-purple-600'}`}
+                        className={`text-xs font-bold px-2 py-0.5 rounded ${TYPE_STYLE[frq.type]?.badge ?? ''}`}
                       >
-                        {frq.type === 'long' ? 'Modeling' : 'Short FRQ'}
+                        {TYPE_META[frq.type]?.short ?? 'FRQ'}
                       </span>
                       <span className="ml-2 text-sm font-medium text-gray-900 dark:text-white">
                         {frq.title}
@@ -442,15 +458,15 @@ function APPrecalcFRQPageInner() {
               ← Back to Menu
             </button>
             <h1 className="text-xl font-bold text-gray-900 dark:text-white">
-              {mode === 'timed' ? 'Timed FRQ Exam' : `FRQ Practice (${filter})`}
+              {mode === 'timed' ? 'Timed FRQ Exam' : `FRQ Practice: ${filter === 'all' ? 'All FRQs' : TYPE_META[filter].label}`}
             </h1>
           </div>
           <div className="flex items-center gap-4">
             {mode === 'timed' && (
               <div
-                className={`font-mono text-lg font-bold px-4 py-2 rounded-xl ${timeRemaining <= 300 ? 'bg-red-100 dark:bg-red-900/30 text-red-600 animate-pulse' : 'bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white'}`}
+                className={`font-mono text-lg font-bold px-4 py-2 rounded-xl ${partClock <= 300 ? 'bg-red-100 dark:bg-red-900/30 text-red-600 animate-pulse' : 'bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white'}`}
               >
-                ⏱ {formatTime(timeRemaining)}
+                ⏱ {examSplit ? `Part ${inPartA ? 'A' : 'B'} ` : ''}{formatTime(partClock)}
               </div>
             )}
             <span className="text-sm text-gray-500">
@@ -458,6 +474,14 @@ function APPrecalcFRQPageInner() {
             </span>
           </div>
         </div>
+
+        {mode === 'timed' && examSplit && (
+          <div className={`mb-4 rounded-xl px-4 py-2 text-sm font-medium ${inPartA ? 'bg-emerald-50 dark:bg-emerald-900/20 text-emerald-800 dark:text-emerald-300' : 'bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-300'}`}>
+            {inPartA
+              ? `Part A: graphing calculator required (Questions 1–${examSplit.partACount}). Part B unlocks when Part A time ends or you start it.`
+              : `Part B: no calculator (Questions ${examSplit.partACount + 1}–${frqs.length}).`}
+          </div>
+        )}
 
         <div className="h-2 bg-gray-200 dark:bg-gray-700 rounded-full mb-6 overflow-hidden">
           <div
@@ -471,9 +495,9 @@ function APPrecalcFRQPageInner() {
             <div className="flex items-center justify-between flex-wrap gap-2">
               <div>
                 <span
-                  className={`text-xs font-bold px-2 py-0.5 rounded mr-2 ${currentFRQ.type === 'long' ? 'bg-emerald-800' : 'bg-purple-700'}`}
+                  className={`text-xs font-bold px-2 py-0.5 rounded mr-2 ${TYPE_STYLE[currentFRQ.type]?.headerBadge ?? ''}`}
                 >
-                  {currentFRQ.type === 'long' ? 'Modeling' : 'Short FRQ'}
+                  {TYPE_META[currentFRQ.type] ? `${TYPE_META[currentFRQ.type].short} · ${TYPE_META[currentFRQ.type].label}` : 'FRQ'}
                 </span>
                 <span className="text-xs text-emerald-200">Unit {currentFRQ.unit}</span>
                 <h2 className="text-lg font-bold mt-1">{currentFRQ.title}</h2>
@@ -662,7 +686,8 @@ function APPrecalcFRQPageInner() {
               <button
                 key={i}
                 onClick={() => setCurrentIdx(i)}
-                className={`w-8 h-8 rounded-full text-xs font-bold transition ${
+                disabled={isLocked(i)}
+                className={`w-8 h-8 rounded-full text-xs font-bold transition disabled:opacity-40 ${
                   i === currentIdx
                     ? 'bg-emerald-600 text-white'
                     : frqs[i].parts.every((p) => results[`${frqs[i].id}-${p.label}`])
@@ -675,7 +700,14 @@ function APPrecalcFRQPageInner() {
             ))}
           </div>
 
-          {currentIdx < frqs.length - 1 ? (
+          {isLocked(currentIdx + 1) ? (
+            <button
+              onClick={startPartB}
+              className="px-5 py-2.5 rounded-xl bg-emerald-600 text-white hover:bg-emerald-700 transition font-medium"
+            >
+              Start Part B →
+            </button>
+          ) : currentIdx < frqs.length - 1 ? (
             <button
               onClick={() => setCurrentIdx(currentIdx + 1)}
               className="px-5 py-2.5 rounded-xl bg-emerald-600 text-white hover:bg-emerald-700 transition font-medium"
