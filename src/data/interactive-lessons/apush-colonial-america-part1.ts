@@ -51,26 +51,26 @@ Different European powers established colonies with very different goals and met
       exercise: {
         questions: [
           {
-            question: 'Which European power\'s colonial strategy relied most heavily on the fur trade and maintaining cooperative relationships with Native Americans?',
+            question: 'Which European power\'s colonial strategy relied most heavily on the fur trade and on cooperation with Native Americans?',
             options: [
-              'Spain — which focused on mining and the encomienda system',
-              'France — which built trade alliances and had relatively few settlers',
-              'England — which established large agricultural settlements',
-              'Portugal — which focused on the African slave trade exclusively'
+              'Spain, through mining, missions and the encomienda',
+              'France, through fur posts, missions and alliances',
+              'England, through farms, towns and growing settlements',
+              'Portugal, through sugar mills, ports and Atlantic trade'
             ],
             correctAnswer: 1,
-            explanation: 'France\'s colonial strategy in North America centered on the fur trade, requiring cooperation with Native American trappers and hunters. French colonies had far fewer settlers than English colonies, which contributed to more cooperative (though still unequal) relationships.'
+            explanation: 'New France had few settlers and depended on Native trappers and trading partners for furs, so alliances and intermarriage were central to its strategy. Spain relied on conquest and forced labor, and England on expanding farm settlements that pushed Native peoples off their land.'
           },
           {
-            question: 'The encomienda system in Spanish colonies was significant because it:',
+            question: 'The encomienda system in Spanish colonies was significant because it did which of the following?',
             options: [
-              'Granted colonists the right to force Native Americans to labor on their land',
-              'Established representative assemblies in all Spanish territories',
-              'Created a system of free public education for indigenous peoples',
-              'Prohibited the importation of enslaved Africans to the Americas'
+              'Gave settlers the right to demand labor and tribute from Native people',
+              'Created elected assemblies to make laws for each Spanish territory',
+              'Set up free schools to teach Native children to read and write Spanish',
+              'Banned the importation of enslaved Africans into Spanish America'
             ],
             correctAnswer: 0,
-            explanation: 'The encomienda system granted Spanish colonists (encomenderos) the right to demand tribute and labor from indigenous peoples in exchange for supposed protection and Christian instruction. In practice, it amounted to forced labor and was a major driver of indigenous population decline.'
+            explanation: 'Encomenderos received the right to Native labor and tribute in return for promised protection and Christian instruction, which in practice meant forced labor and contributed to Native population decline. Spain created no elected assemblies and imported many enslaved Africans.'
           }
         ]
       }
@@ -97,7 +97,7 @@ Different European powers established colonies with very different goals and met
 - Founded by the **Virginia Company** (joint-stock company)
 - Nearly failed — "starving time" (winter 1609–10)
 - Saved by **John Rolfe's** cultivation of tobacco (1612)
-- **House of Burgesses** (1619) — first representative assembly in America
+- **House of Burgesses** (1619) — first elected representative assembly in English America
 - First enslaved Africans arrived in 1619
 
 ### Plymouth (1620) & Massachusetts Bay (1630)
@@ -166,26 +166,26 @@ Use the exact historical term.
       exercise: {
         questions: [
           {
-            question: 'Which of the following BEST explains why the Southern Colonies developed a labor system based on enslaved Africans rather than the indentured servant model used earlier?',
+            question: 'Which of the following best explains why Chesapeake planters shifted from indentured servants to enslaved Africans in the late 1600s?',
             options: [
-              'Bacon\'s Rebellion (1676) showed the dangers of a large class of discontented former indentured servants, making enslaved labor seem more controllable to planters',
-              'The English government banned indentured servitude in 1660',
-              'Enslaved Africans arrived in the Southern Colonies before any indentured servants did',
-              'Southern colonists morally preferred slavery to indentured servitude from the beginning'
+              'England outlawed indentured servitude in its colonies after the Restoration',
+              'Enslaved Africans reached Virginia decades before the first English servants',
+              'Tobacco prices rose so high that planters could buy any labor they wanted',
+              'Planters feared more revolts by landless former servants after Bacon\'s Rebellion'
             ],
-            correctAnswer: 0,
-            explanation: 'Bacon\'s Rebellion (1676) — in which poor former indentured servants and enslaved people joined together to rebel against Virginia\'s elite — alarmed planters. They increasingly turned to race-based chattel slavery as a way to create a permanent, legally distinct labor force that could not earn freedom and rebel as citizens.'
+            correctAnswer: 3,
+            explanation: 'Bacon\'s Rebellion (1676) showed planters the danger of a large class of armed, landless freedmen, and enslaved Africans could never complete a term and claim land. Indentured servitude was never outlawed, servants arrived from 1607, and tobacco prices were generally low in this period.'
           },
           {
             question: 'John Winthrop\'s 1630 sermon describing Massachusetts Bay as a "city upon a hill" reflected which of the following beliefs?',
             options: [
-              'That religious diversity should be encouraged in all the colonies',
-              'That the Puritan colony should serve as a model godly community for the world',
-              'That Massachusetts should become the economic center of British North America',
-              'That democratic self-governance was more important than religious purity'
+              'That religious diversity should be welcomed in every English colony',
+              'That Massachusetts should become the trading center of the empire',
+              'That the colony should be a model Christian community for the world',
+              'That self-government mattered more than the purity of the churches'
             ],
-            correctAnswer: 1,
-            explanation: 'Winthrop\'s "city upon a hill" sermon expressed the Puritan belief that their colony should be an exemplary Christian community that the world would watch and emulate. This concept of American exceptionalism has resonated throughout U.S. history and appears frequently on the AP exam.'
+            correctAnswer: 2,
+            explanation: 'Winthrop told the colonists that the world would watch their covenanted community, so it had to be an example of Christian charity and order. Puritan leaders opposed religious diversity and put the purity of the churches first.'
           }
         ]
       }

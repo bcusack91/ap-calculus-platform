@@ -39,12 +39,12 @@ export const apushRevolutionIndependencePart6Data = {
 > **1. Virginia Stamp Act Resolves (1765)**
 > "The General Assembly of this Colony have the only and sole exclusive Right and Power to lay Taxes and Impositions upon the Inhabitants of this Colony."
 
-- **HIPP:** Resolutions adopted by the Virginia House of Burgesses in response to the 1765 Stamp Act; intended audience is Parliament, the Crown, and other colonial assemblies; purpose is to assert that only the Virginia assembly can tax Virginians, framing colonial resistance as a defense of constitutional English liberty rather than rebellion; POV is Virginia colonial elites within the legal-constitutional framework of English subjects.
+- **HIPP:** Resolutions introduced by Patrick Henry in the Virginia House of Burgesses in May 1765 (this fifth resolve passed narrowly and was rescinded the next day, but colonial newspapers printed it anyway); intended audience is Parliament, the Crown, and other colonial assemblies; purpose is to assert that only the Virginia assembly can tax Virginians, framing colonial resistance as a defense of constitutional English liberty rather than rebellion; POV is Virginia colonial elites within the legal-constitutional framework of English subjects.
 
 > **2. Thomas Paine, *Common Sense* (1776)**
 > "Of more worth is one honest man to society, and in the sight of God, than all the crowned ruffians that ever lived."
 
-- **HIPP:** Pamphlet published in Philadelphia in January 1776 in plain accessible English; intended audience is ordinary American colonists (sold ~120,000 copies); purpose is to convert moderate colonists from reconciliation with Britain to outright independence by demolishing the legitimacy of monarchy itself; POV is recently arrived English radical writer with no stake in colonial elite politics, deliberately writing in "a language familiar to common readers."
+- **HIPP:** Pamphlet published in Philadelphia in January 1776 in plain accessible English; intended audience is ordinary American colonists (widely reprinted; Paine claimed about 120,000 copies were sold in the first months, a figure many historians think is inflated); purpose is to convert moderate colonists from reconciliation with Britain to outright independence by demolishing the legitimacy of monarchy itself; POV is recently arrived English radical writer with no stake in colonial elite politics, deliberately writing in plain language for common readers.
 
 > **3. Declaration of Independence (1776)**
 > "We hold these truths to be self-evident, that all men are created equal, that they are endowed by their Creator with certain unalienable Rights."
@@ -63,7 +63,7 @@ export const apushRevolutionIndependencePart6Data = {
 
 ## AP SAQ Structure
 
-For a 1754–1800 SAQ:
+From May 2027 all three SAQs are required and all three are sourced: SAQ 1 uses a secondary text, SAQ 2 a primary text, and SAQ 3 a primary or secondary non-text source (an image, map or chart), each from a different period. A Period 3 SAQ built on one of these documents typically asks you to:
 
 - **A. Identify** one specific event, document, or development
 - **B. Explain** how that event/document/development shaped colonial-British relations or independence
@@ -89,26 +89,26 @@ For a 1754–1800 SAQ:
       exercise: {
         questions: [
           {
-            question: "Which historical context is most essential for sourcing Thomas Paine's *Common Sense* (January 1776)?",
+            question: "Which historical situation is most essential for sourcing Thomas Paine's *Common Sense* (January 1776)?",
             options: [
-              "The pamphlet was published in Philadelphia in January 1776, after Lexington and Concord and the failure of the Olive Branch Petition, when many colonists still favored reconciliation; Paine wrote in plain accessible English to convert ordinary readers from reconciliation to outright independence by attacking monarchy itself",
-              "The pamphlet was published in London in 1763 immediately after the Treaty of Paris ended the French and Indian War, when American colonists were enthusiastic about British imperial victory and there was no significant push for independence in any region",
-              "The pamphlet was published in Boston in 1765 immediately after the Stamp Act, when American colonists were still firmly committed to reconciliation with Britain through constitutional petitions and the Stamp Act Congress in any region of the colonies",
-              "The pamphlet was published in Paris in 1789 immediately after the storming of the Bastille and the beginning of the French Revolution, when American colonists had already won independence in 1783 in any region of the new United States during the period"
+              'Published after fighting began, when many colonists still hoped for reconciliation',
+              'Published after the Stamp Act, when colonists first protested parliamentary taxation',
+              'Published after the Declaration, when Congress needed support for the war effort',
+              'Published after Yorktown, when Americans debated the terms of the peace treaty'
             ],
             correctAnswer: 0,
-            explanation: 'Common Sense Jan 1776: post-Lexington/Concord, reconciliation still in play, plain English to convert moderates to independence by attacking monarchy.'
+            explanation: 'Common Sense appeared nine months after Lexington and Concord and six months before the Declaration, when many colonists and members of Congress still hoped to reconcile with Britain; Paine wrote to change their minds. The other situations come either a decade too early or after independence had already been declared.'
           },
           {
             question: 'Which best identifies the point of view of the 1776 Declaration of Independence?',
             options: [
-              "The Continental Congress representing the political class of thirteen colonies — claiming universal natural rights ('all men are created equal') even as Jefferson held people in slavery and the Congress removed an anti-slave-trade clause to secure southern colonial support",
-              "An organization representing women, enslaved Africans, Indigenous nations, and Loyalists with full and equal participation in the drafting and editing of the document during the entire period from June through July 1776 in any region of the colonies",
-              "An organization representing the British Crown and Parliament with no American colonial participation in the drafting or editing of the document during the entire period from June through July 1776 in any region of British North America during the period",
-              "An organization with no political affiliation, no enslaver participation, and no removal of any anti-slavery clauses during the entire period from June through July 1776 in any region of British North America during the period in any region"
+              'Congress delegates speaking for colonial elites',
+              'Royal officials explaining British policy to European courts',
+              'Ordinary farmers and artisans drafting a petition to the king',
+              'Loyalist exiles defending the empire from abroad in London'
             ],
             correctAnswer: 0,
-            explanation: 'Declaration POV: Continental Congress = political class of thirteen colonies. Universal language coexists with Jefferson\'s slaveholding + Congress removing anti-slave-trade clause.'
+            explanation: 'The Declaration was drafted by Jefferson and revised by the Continental Congress, whose members were mostly wealthy colonial leaders, many of them slaveholders. That point of view helps explain why its universal language coexisted with slavery. It was not a royal, Loyalist or popular petition.'
           }
         ]
       }
@@ -120,19 +120,19 @@ For a 1754–1800 SAQ:
       exercise: {
         questions: [
           {
-            prompt: 'The recently arrived English radical whose January 1776 pamphlet *Common Sense* converted moderate colonists to independence.',
+            question: 'The recently arrived English radical whose January 1776 pamphlet *Common Sense* converted moderate colonists to independence.',
             answer: 'Thomas Paine',
             acceptableAnswers: ['Thomas Paine', 'Paine'],
-            hint: 'Wrote in plain English, sold ~120,000 copies.'
+            hint: 'Wrote in plain English for ordinary readers.'
           },
           {
-            prompt: 'The Massachusetts Patriot wife whose March 1776 letter urged her husband to "Remember the Ladies."',
+            question: 'The Massachusetts Patriot wife whose March 1776 letter urged her husband to "Remember the Ladies."',
             answer: 'Abigail Adams',
             acceptableAnswers: ['Abigail Adams', 'A. Adams'],
             hint: 'Wife of John Adams, who was at the Continental Congress in Philadelphia.'
           },
           {
-            prompt: 'The 1783 peace treaty that formally ended the Revolutionary War and established American independence.',
+            question: 'The 1783 peace treaty that formally ended the Revolutionary War and established American independence.',
             answer: 'Treaty of Paris',
             acceptableAnswers: ['Treaty of Paris', 'Treaty of Paris 1783', 'Treaty of Paris of 1783'],
             hint: 'Negotiated by Franklin, Adams, and Jay with Britain.'
@@ -173,26 +173,26 @@ For a 1754–1800 SAQ:
       exercise: {
         questions: [
           {
-            question: 'An SAQ asks: "Identify ONE event from 1763–1776 that shaped colonial-British relations, and explain how." Which response would score highest?',
+            question: 'An SAQ asks: "Briefly explain ONE way an event from 1763–1776 shaped relations between the colonies and Britain." Which response would earn the point?',
             options: [
-              "The Stamp Act of 1765 imposed direct taxation on colonial printed materials without colonial consent; in response, the Stamp Act Congress (October 1765) issued a unified intercolonial protest, the Sons of Liberty organized boycotts and intimidation of stamp distributors, and Parliament repealed the Act in 1766 — but coupled the repeal with the Declaratory Act asserting parliamentary supremacy, setting the constitutional terms of every subsequent crisis",
-              "Some event happened in some way and shaped colonial-British relations in some way during the period from 1763 through 1776 in some region of British North America during the period in some region of the colonies",
-              "Events in 1763–1776 had no impact on colonial-British relations of any kind during the period from 1763 through 1776 in any region of British North America during the period in any region of the colonies",
-              "There were no events in 1763–1776 of any kind in any region of British North America during the period in any region of the colonies during the entire period from the Treaty of Paris through the Declaration of Independence"
+              'The Stamp Act of 1765 taxed colonists without consent, which led to the Stamp Act Congress and boycotts that forced repeal',
+              'The Stamp Act of 1765 was a British law passed by Parliament, and it was one of the most famous events before the Revolution',
+              'The Stamp Act of 1765 taxed tea imports, which led colonists to dump tea into Boston Harbor in protest',
+              'The Proclamation of 1763 closed western lands, which made colonists in Boston riot against stamp collectors'
             ],
             correctAnswer: 0,
-            explanation: 'AP SAQ rewards specific event (Stamp Act 1765) + specific responses (Stamp Act Congress, Sons of Liberty, boycotts) + specific consequence (Declaratory Act sets constitutional terms).'
+            explanation: 'The strongest response names the event, explains the colonial reaction, and connects it to a change in colonial-British relations. The second only identifies the act, the third confuses the Stamp Act with the Tea Act, and the fourth invents a causal link between the Proclamation and the stamp riots.'
           },
           {
-            question: 'Which short answer best demonstrates AP "complexity" by complicating the standard Patriot narrative of the American Revolution?',
+            question: 'Which short answer best demonstrates AP "complexity" about the American Revolution?',
             options: [
-              "Although the Revolution is often told as a unified colonial uprising, roughly 20% of colonists were Loyalists who faced postwar exile and property confiscation; most Indigenous nations allied with Britain and faced postwar land seizures; tens of thousands of enslaved Africans accepted Lord Dunmore's 1775 offer of freedom for joining British forces; and women like Abigail Adams pressed (mostly unsuccessfully) for legal recognition — showing that Revolutionary 'liberty' was contested, partial, and exclusionary",
-              "The American Revolution was an entirely unified colonial uprising with no Loyalists, no Indigenous British alliances, no enslaved self-emancipation, and no women pressing for legal recognition of any kind during the entire period from 1775 through 1783 in any region of the colonies",
-              "The American Revolution had no exclusions of any kind and immediately granted full legal equality to all Loyalists, Indigenous nations, enslaved Africans, and women in every region of the new United States during the entire period from 1775 through 1783 in any region",
-              "The American Revolution did not occur and there was no Loyalist exile, Indigenous land seizure, enslaved self-emancipation, or women's rights petition of any kind during the entire period from 1775 through 1783 in any region of British North America"
+              'Patriots won independence, yet many Loyalists and Native nations fought against them',
+              'Nearly all colonists united behind independence from the Stamp Act onward',
+              'French intervention alone explains independence, since Patriots lost most battles',
+              'Enslaved people backed the Patriots after independence ended slavery everywhere'
             ],
             correctAnswer: 0,
-            explanation: 'AP complexity: explicitly name Loyalists (20%), Indigenous British alliances, Dunmore 1775 + enslaved self-emancipation, Abigail Adams\'s petition. Revolutionary "liberty" as contested + partial + exclusionary.'
+            explanation: 'The strongest answer pairs the Patriot victory with the many colonists and Native peoples who opposed it, showing that the Revolution was contested. Colonists were not united, French aid was one cause among several, and independence did not end slavery.'
           }
         ]
       }

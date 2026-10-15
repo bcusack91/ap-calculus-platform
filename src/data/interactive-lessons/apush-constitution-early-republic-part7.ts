@@ -45,7 +45,7 @@ export const apushConstitutionEarlyRepublicPart7Data = {
 | 1796 | Washington's Farewell Address | No third term; warning against parties + permanent foreign alliances |
 | 1798 | XYZ Affair / Quasi-War with France | French demand for bribe causes diplomatic crisis |
 | 1798 | Alien and Sedition Acts | Federalist restrictions on speech and immigration |
-| 1798 | Virginia and Kentucky Resolutions | Madison and Jefferson assert state authority to nullify federal laws |
+| 1798 | Virginia and Kentucky Resolutions | Madison and Jefferson (writing secretly) argue the states may judge and resist unconstitutional federal laws; "nullification" appears in Kentucky's 1799 resolution |
 | 1800 | Election of 1800 ("Revolution of 1800") | First peaceful interparty transfer of power |
 
 ## Comparison Framework — Federalist vs. Democratic-Republican
@@ -55,11 +55,11 @@ export const apushConstitutionEarlyRepublicPart7Data = {
 | Constitutional construction | Loose / "implied powers" (necessary and proper) | Strict / "expressed powers" only |
 | Economy | Industry, commerce, finance, credit | Yeoman agriculture, agrarian republic |
 | National bank | Yes (1791) | Unconstitutional |
-| Tariffs | High (protect industry) | Low (favor agriculture) |
+| Tariffs | Protective tariffs and bounties proposed (Report on Manufactures, 1791) | Low (favor agriculture) |
 | Foreign policy | Pro-Britain | Pro-France (until Napoleon) |
 | Standing army | Yes | Suspicious; favor militia |
 | Voter base | New England merchants + professionals | Southern planters + western farmers + urban artisans |
-| Press | National Gazette (Hamilton-leaning) was Federalist-aligned | Aurora and others were Republican-aligned |
+| Press | John Fenno's *Gazette of the United States* (1789) | Philip Freneau's *National Gazette* (1791) and Benjamin Franklin Bache's *Aurora* |
 
 ## CCOT Framework (1787–1800)
 
@@ -68,12 +68,12 @@ export const apushConstitutionEarlyRepublicPart7Data = {
 | Republican government remains the universal commitment | The Federalist-Republican division institutionalizes party politics that Washington had warned against |
 | Slavery remains constitutionally protected through Three-Fifths and Fugitive Slave Clause | Northern states begin gradual emancipation; slavery becomes regionally divided |
 | Indigenous nations remain politically and militarily significant | Federal Indian policy + Treaty of Greenville (1795) accelerate Anglo-American settlement of Northwest Territory |
-| Atlantic trade with Europe remains economically central | The Quasi-War (1798) and embargo politics complicate that trade |
+| Atlantic trade with Europe remains economically central | British seizures (1793–94) and the Quasi-War with France (1798–1800) put that trade at risk |
 | Commitment to peaceful constitutional government | The Election of 1800 demonstrates the durability of that commitment in the first interparty transfer |
 
 ## Sprint Terms (Last-Minute Drill)
 
-- **Articles of Confederation (1781–88)** — Weak national government with no taxing power
+- **Articles of Confederation (1781–1789)** — Weak national government with no taxing power
 - **Shays' Rebellion (1786–87)** — Massachusetts farmer uprising
 - **Constitutional Convention (1787)** — Drafted the Constitution
 - **Great Compromise** — Bicameral Congress (Senate by state, House by population)
@@ -89,7 +89,7 @@ export const apushConstitutionEarlyRepublicPart7Data = {
 - **Washington's Farewell Address (1796)** — Warning against parties and permanent alliances
 - **XYZ Affair (1798)** — French demand for bribe; Quasi-War
 - **Alien and Sedition Acts (1798)** — Federalist speech/immigration restrictions
-- **Virginia and Kentucky Resolutions (1798)** — Madison/Jefferson nullification doctrine
+- **Virginia and Kentucky Resolutions (1798)** — Madison/Jefferson compact theory (interposition; nullification named in 1799)
 - **Revolution of 1800** — First peaceful interparty transfer of power
 
 > 🔑 Key takeaway: If you only memorize ten dates from the early republic, make them: 1786 (Shays'), 1787 (Convention + NW Ordinance), 1788 (ratification), 1789 (Washington inaugurated), 1791 (Bill of Rights + Bank), 1794 (Whiskey + Jay), 1795 (Pinckney + Greenville), 1796 (Farewell Address), 1798 (Alien/Sedition + Va/Ky Resolutions), 1800 (Revolution of 1800).
@@ -102,26 +102,26 @@ export const apushConstitutionEarlyRepublicPart7Data = {
       exercise: {
         questions: [
           {
-            question: "Which best identifies the political division reflected in Hamilton's national bank proposal (1791)?",
+            question: "The cabinet dispute over Hamilton's national bank proposal in 1791 centered on",
             options: [
-              "Hamilton's loose-construction defense of the Bank as constitutional under the 'necessary and proper' clause was opposed by Jefferson and Madison's strict-construction view that the Constitution did not enumerate the power to charter a bank — establishing the loose-vs-strict construction division that defined Federalist-Republican politics through 1800",
-              "Hamilton's national bank proposal in 1791 was supported unanimously by all members of Washington's cabinet with no Jeffersonian opposition, no strict-construction critique, and no Federalist-Republican division of any kind during the entire period in any region",
-              "Hamilton's national bank proposal in 1791 was opposed unanimously by all members of Washington's cabinet including Hamilton himself with no Federalist support of any kind during the entire period in any region of the United States during the period",
-              "Hamilton did not propose a national bank in 1791 and the First Bank of the United States was a private institution with no federal involvement of any kind during the entire period from 1791 through its expiration in any region of the United States"
+              "whether a state could tax a branch of the bank located within its borders",
+              "whether the federal government should take over the war debts of the states",
+              "whether the bank should make loans to the government of revolutionary France",
+              "whether the Necessary and Proper Clause let Congress charter a bank"
             ],
-            correctAnswer: 0,
-            explanation: 'Bank 1791: Hamilton loose-construction (necessary and proper) vs. Jefferson/Madison strict-construction. Established Federalist-Republican loose/strict divide.'
+            correctAnswer: 3,
+            explanation: 'Jefferson read "necessary" strictly and found no power to create a corporation, while Hamilton read it broadly as "useful, or conducive to." State taxation of a bank branch was the issue in McCulloch v. Maryland (1819), and assumption was a separate fight in 1790.'
           },
           {
-            question: 'Which best identifies the constitutional doctrine articulated by the Virginia and Kentucky Resolutions (1798)?',
+            question: 'The Virginia and Kentucky Resolutions (1798) argued that',
             options: [
-              "Madison and Jefferson argued that states had the right to interpose against (Madison) or nullify (Jefferson) federal laws they judged unconstitutional — articulating a compact theory of the Constitution as an agreement among sovereign states and laying groundwork for later nullification and states'-rights doctrines",
-              "Madison and Jefferson argued that the federal government had complete and unlimited authority over the states with no power for any state to interpose, nullify, or otherwise resist federal laws of any kind during the entire period from 1798 through the Civil War in any region",
-              "Madison and Jefferson argued that the British Parliament had ultimate constitutional authority over the United States with no role for any state government and no role for the federal government of any kind during the entire period from 1798 onward in any region",
-              "Madison and Jefferson did not write any resolutions in 1798 and the Virginia and Kentucky Resolutions are a historical myth invented in the twentieth century with no documentary record of any kind during the period in any region of the United States"
+              'the Supreme Court alone could decide whether a federal law was constitutional',
+              'states that were parties to the constitutional compact may judge federal laws',
+              'Congress could limit freedom of the press during an undeclared naval war',
+              'the states should call a second convention to replace the Constitution'
             ],
-            correctAnswer: 0,
-            explanation: 'Va/Ky Resolutions 1798: Madison interposition + Jefferson nullification = compact theory; foundation for later nullification + states\' rights doctrines.'
+            correctAnswer: 1,
+            explanation: 'Jefferson and Madison described the Constitution as a compact among the states, which could judge when the federal government exceeded its powers, as they said the Alien and Sedition Acts did. The northern states that answered them insisted that the federal courts decide such questions.'
           }
         ]
       }
@@ -133,19 +133,19 @@ export const apushConstitutionEarlyRepublicPart7Data = {
       exercise: {
         questions: [
           {
-            prompt: "The 1786–87 Massachusetts farmer uprising that helped convince leaders of the need for a stronger national government.",
+            question: "The 1786–87 Massachusetts farmer uprising that helped convince leaders of the need for a stronger national government.",
             answer: "Shays' Rebellion",
             acceptableAnswers: ["Shays' Rebellion", "Shays Rebellion", "Shay's Rebellion"],
             hint: 'Led by Daniel Shays; centered around debt, taxes, and farm foreclosures in western Massachusetts.'
           },
           {
-            prompt: "The 1791 first national bank chartered as part of Hamilton's financial program.",
+            question: "The 1791 first national bank chartered as part of Hamilton's financial program.",
             answer: 'First Bank of the United States',
             acceptableAnswers: ['First Bank of the United States', 'First Bank of the U.S.', 'First Bank of the US', 'Bank of the United States'],
             hint: 'Twenty-year charter that expired in 1811; Jefferson opposed as unconstitutional.'
           },
           {
-            prompt: 'The 1795 treaty that resolved Indigenous resistance in the Northwest Territory after the Battle of Fallen Timbers.',
+            question: 'The 1795 treaty that resolved Indigenous resistance in the Northwest Territory after the Battle of Fallen Timbers.',
             answer: 'Treaty of Greenville',
             acceptableAnswers: ['Treaty of Greenville', 'Greenville Treaty'],
             hint: 'Twelve Indigenous nations ceded much of present-day Ohio.'
@@ -186,26 +186,26 @@ export const apushConstitutionEarlyRepublicPart7Data = {
       exercise: {
         questions: [
           {
-            question: 'A historian writes: "The early republic between 1787 and 1800 simultaneously stabilized constitutional government and institutionalized partisan division." Which response best supports both halves with AP-quality reasoning?',
+            question: 'A historian writes: "Between 1787 and 1800 the republic both stabilized constitutional government and made partisan division permanent." Which pair of developments best supports BOTH parts of the claim?',
             options: [
-              "Stability: the Constitution (1787), Bill of Rights (1791), Hamilton's financial program (1790–91), the Whiskey Rebellion suppression (1794), and Washington's voluntary departure (1796) established durable constitutional government — culminating in the peaceful Election of 1800. Division: the Federalist-Republican divide hardened over Hamilton's bank, Jay Treaty (1794), Alien and Sedition Acts (1798), and Virginia/Kentucky Resolutions (1798), institutionalizing the party politics Washington had warned against",
-              "The early republic between 1787 and 1800 produced no stability of any kind with no Constitution, no Bill of Rights, no Hamilton financial program, and no Election of 1800 of any kind during the entire period in any region of the United States in the period",
-              "The early republic between 1787 and 1800 produced no division of any kind with no Federalist-Republican divide, no Bank dispute, no Jay Treaty, no Alien and Sedition Acts, and no Virginia/Kentucky Resolutions of any kind during the entire period in any region",
-              "The early republic between 1787 and 1800 produced neither stability nor division and had no political development of any kind during the entire period from 1787 through 1800 in any region of the United States during the period in any region"
+              'Ratification of the Bill of Rights; adoption of the Twelfth Amendment',
+              'Passage of the Sedition Act; publication of the XYZ Affair dispatches',
+              'Suppression of the Whiskey Rebellion; the public fight over the Jay Treaty',
+              'The Treaty of Greenville; the navigation rights won in Pinckney\'s Treaty'
             ],
-            correctAnswer: 0,
-            explanation: 'AP both/and: stability (Constitution + BoR + Hamilton + Whiskey + Washington + 1800) AND division (Bank + Jay + Alien/Sedition + Va/Ky Resolutions).'
+            correctAnswer: 2,
+            explanation: 'Putting down the Whiskey Rebellion showed the new government could enforce its laws, while the Jay Treaty fight organized Federalists and Republicans down to the local level. The other pairs show only stability, only crisis, or only western expansion.'
           },
           {
-            question: 'Which best summarizes the constitutional legacy of the founding in a way an AP reader would credit as a "complexity" claim?',
+            question: 'Which statement best expresses a "complexity" argument about the Constitution\'s legacy by 1800?',
             options: [
-              "The Constitution institutionalized federal authority, separation of powers, and individual rights (through the 1791 Bill of Rights) — but it also institutionalized exclusion through the Three-Fifths Compromise, the Fugitive Slave Clause, and the absence of women's political rights, while leaving open the unresolved tension between federal supremacy (Hamilton) and state interposition (Madison/Jefferson 1798) that would erupt in nullification, secession, and the Civil War",
-              "The Constitution institutionalized only federal authority and individual rights with no exclusion of any kind and no unresolved federal-state tension during the entire period from 1787 through the Civil War in any region of the United States during the period",
-              "The Constitution institutionalized only exclusion with no federal authority, no separation of powers, and no individual rights of any kind during the entire period from 1787 through the Civil War in any region of the United States during the period",
-              "The Constitution had no constitutional legacy of any kind during the entire period from 1787 through the Civil War in any region of the United States with no federal authority, no exclusion, and no federal-state tension of any kind in any region"
+              'It created a lasting federal government and settled the balance of federal and state power for the next century.',
+              'It failed to create a lasting federal government, since most states ignored federal laws throughout the 1790s.',
+              'It created a lasting federal government but also protected slavery and left federal and state power unsettled.',
+              'It created a lasting federal government and set slavery on a path to gradual abolition in every state.'
             ],
-            correctAnswer: 0,
-            explanation: 'AP complexity: name BOTH constitutional achievement (federal authority + separation + Bill of Rights) AND embedded exclusion (3/5 + Fugitive Slave + women) AND unresolved tension (federal supremacy vs. state interposition → nullification → Civil War).'
+            correctAnswer: 2,
+            explanation: 'A complexity argument weighs achievement against limits: the federal government proved durable, but the Constitution protected slavery and the compact theory of 1798 kept the federal-state question open. The other statements claim the question was settled, deny the government\'s durability, or misstate slavery\'s path.'
           }
         ]
       }

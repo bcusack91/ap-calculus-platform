@@ -36,34 +36,34 @@ export const apushNativeSocietiesExplorationPart6Data = {
 
 ## Document Bank
 
-> **1. Christopher Columbus, Journal of the First Voyage (October 12, 1492)**
-> "They are very gentle and without knowledge of evil... they would make excellent servants."
+> **1. Christopher Columbus, Journal of the First Voyage (entry for October 11–12, 1492), adapted from an English translation**
+> "They should be good servants and of quick intelligence... They do not carry arms or know them, for I showed them swords and they took them by the edge and cut themselves out of ignorance."
 
-- **HIPP:** Written days after first contact in the Bahamas; intended audience is Ferdinand and Isabella who funded the voyage; purpose is to justify continued royal investment and to frame the Taíno as easily Christianized AND easily exploited; POV is a Genoese mariner in Spanish royal service who needs to demonstrate the voyage's commercial promise.
+- **HIPP:** Written at the moment of first contact in the Bahamas, and surviving only in an abstract later made by Bartolomé de Las Casas, so some wording is his; intended audience is Ferdinand and Isabella who funded the voyage; purpose is to justify continued royal investment and to frame the Taíno as easily Christianized AND easily exploited; POV is a Genoese mariner in Spanish royal service who needs to demonstrate the voyage's commercial promise.
 
-> **2. Bartolomé de Las Casas, *A Short Account of the Destruction of the Indies* (1542)**
+> **2. Bartolomé de Las Casas, *A Short Account of the Destruction of the Indies* (written 1542, printed 1552), adapted**
 > "The Spaniards have shown not the slightest consideration for these people... they have set out to line their pockets with gold."
 
-- **HIPP:** Polemical report written by a Dominican friar after fifty years of personal experience in the Caribbean and Mexico; intended audience is Charles V and the Spanish royal court; purpose is to influence the Crown to enact protections for Indigenous peoples (the New Laws of 1542); POV is reformist Catholic clergy attacking the encomienda system.
+- **HIPP:** Polemical report written by a former encomendero turned Dominican friar after about four decades in the Caribbean and Mexico; intended audience is Charles V and the Spanish royal court; purpose is to influence the Crown to enact protections for Indigenous peoples (the New Laws of 1542); POV is reformist Catholic clergy attacking the encomienda system.
 
-> **3. Juan Ginés de Sepúlveda, *Democrates Alter* (1547)**
+> **3. Juan Ginés de Sepúlveda, *Democrates Alter* (about 1544–1547), adapted paraphrase**
 > "Native peoples are by nature slavish, and as such are required to serve those of more refined customs."
 
 - **HIPP:** Theological treatise written by a Spanish humanist scholar; intended audience is the Council of the Indies and Spanish elite; purpose is to defend the encomienda and Spanish sovereignty against Las Casas's critique; POV is conservative Aristotelian scholar applying the doctrine of "natural slavery" to Indigenous peoples.
 
-> **4. Florentine Codex, Book 12 (compiled by Bernardino de Sahagún with Nahua informants, 1545–90)**
+> **4. Florentine Codex, Book 12 (compiled by Bernardino de Sahagún with Nahua informants, 1545–90), adapted**
 > "On us they bestowed... grief and torment... There came a great pestilence."
 
 - **HIPP:** Indigenous account of the conquest of Tenochtitlán dictated by elderly Nahua survivors to a Franciscan friar in Nahuatl; intended audience is future generations and the Catholic Church; purpose is to preserve Nahua memory of the conquest from the conquered's perspective; POV is Indigenous noble survivors mediated through a sympathetic Franciscan transcriber.
 
-> **5. John White, Letters from Roanoke (1587)**
-> "I had no sooner come ashore but I found my house ruinous, and the ground covered with weeds."
+> **5. John White, account of his 1590 return voyage to Roanoke (sent to Richard Hakluyt in 1593), adapted**
+> "...we found the houses taken down, and the place very strongly enclosed with a high palisado of great trees... and one of the chief trees or posts at the right side of the entrance had the bark taken off, and five foot from the ground in fair capital letters was graven CROATOAN without any cross or sign of distress."
 
-- **HIPP:** Letters and watercolors by the governor of the second Roanoke colony; intended audience is Sir Walter Raleigh and Elizabeth I; purpose is to plead for resupply and reinforcements; POV is English Protestant colonial leader trying to maintain English claims against Spanish dominance in the Atlantic.
+- **HIPP:** Written by the governor of the 1587 Roanoke colony, who had sailed to England for supplies and could not return until 1590 because of the war with Spain (the Armada year was 1588); intended audience is the promoter Richard Hakluyt and English readers of his travel collections; purpose is to record the colony's disappearance while holding out hope that the colonists had moved to Croatoan Island; POV is a colonial leader whose own daughter and granddaughter, Virginia Dare, were among the missing.
 
 ## AP SAQ Structure
 
-For a 1491–1607 SAQ:
+From May 2027 all three SAQs are required and all three are sourced: SAQ 1 uses a secondary text, SAQ 2 a primary text, and SAQ 3 a primary or secondary non-text source (an image, map or chart), each from a different period. A Period 1 SAQ built on one of these documents typically asks:
 
 - **A. Identify** one specific Native society OR European colonial venture
 - **B. Explain** how that society/venture produced a particular outcome (demographic, economic, cultural)
@@ -89,26 +89,26 @@ For a 1491–1607 SAQ:
       exercise: {
         questions: [
           {
-            question: "Which historical context is most essential for sourcing Bartolomé de Las Casas's 1542 *A Short Account of the Destruction of the Indies*?",
+            question: "Which description of the historical situation is most essential for sourcing Bartolomé de Las Casas's *A Short Account of the Destruction of the Indies* (1542)?",
             options: [
-              "The treatise was written after fifty years of personal experience by a Dominican friar specifically to influence Charles V to enact the New Laws of 1542 protecting Indigenous peoples by curtailing the encomienda system",
-              "The treatise was written before Columbus's first voyage and reflects pre-contact European theological speculation about peoples in lands not yet known to Europeans during the medieval period",
-              "The treatise was written by a Spanish conquistador defending the encomienda system as necessary for Indigenous Christianization across the Spanish Empire during the late sixteenth century",
-              "The treatise was written by an English Protestant pamphleteer attacking Spanish Catholicism as part of the Black Legend tradition of anti-Spanish propaganda during the late sixteenth century in northern Europe"
+              "A friar with decades in the Indies wrote to persuade Charles V to curb the encomienda",
+              "A conquistador wrote to defend the encomienda as needed for converting Native peoples",
+              "An English Protestant wrote to attack Spanish Catholicism and win support for Elizabeth I",
+              "A royal official wrote to report silver revenues from Potosí to the Council of the Indies"
             ],
             correctAnswer: 0,
-            explanation: 'Las Casas: Dominican friar, fifty years of experience, addressed to Charles V, purpose was to influence the New Laws of 1542 curtailing encomienda.'
+            explanation: 'Las Casas, a former encomendero turned Dominican friar, had spent about four decades in the Caribbean and Mexico and wrote to push Charles V toward the reforms of the New Laws. He attacked the encomienda rather than defending it, and he was a Spanish Catholic cleric, not an English Protestant or a treasury official.'
           },
           {
             question: 'Which best identifies the point of view of the Florentine Codex (Book 12) on the conquest of Tenochtitlán?',
             options: [
-              "Indigenous Nahua noble survivors of the conquest dictated their accounts in Nahuatl to the Franciscan friar Bernardino de Sahagún, making the document an Indigenous perspective mediated through a sympathetic Catholic transcriber decades after the events",
-              "The document is a firsthand account written by Hernán Cortés directly to Charles V justifying his actions during the conquest of Tenochtitlán with no Indigenous voice or contribution to its production at any point",
-              "The document is an English Protestant pamphlet attacking Spanish Catholic conquest as part of the Black Legend with no Indigenous contributors and no Catholic clergy involved in its production at any point",
-              "The document is a 19th-century academic reconstruction with no actual sixteenth-century sources or Indigenous informants of any kind contributing to the production of any portion of the text in any language"
+              'Nahua elders whose accounts a Franciscan friar recorded in Nahuatl',
+              'Hernán Cortés reporting his own victories directly to Charles V',
+              'An English Protestant writer collecting stories of Spanish cruelty',
+              'A Spanish soldier recalling the march to Tenochtitlán in old age'
             ],
             correctAnswer: 0,
-            explanation: 'Florentine Codex Book 12 = Nahua noble survivors dictating in Nahuatl to Sahagún. Indigenous perspective filtered through a Franciscan transcriber.'
+            explanation: 'Book 12 preserves Nahua memories of the conquest, recorded in Nahuatl under the direction of the Franciscan Bernardino de Sahagún, so it is an Indigenous perspective mediated by a Catholic compiler. Cortés\'s letters and Bernal Díaz\'s memoir are separate Spanish sources.'
           }
         ]
       }
@@ -120,19 +120,19 @@ For a 1491–1607 SAQ:
       exercise: {
         questions: [
           {
-            prompt: 'The Genoese mariner whose 1492 journal entries about the Taíno mixed admiration with plans for exploitation.',
+            question: 'The Genoese mariner whose 1492 journal entries about the Taíno mixed admiration with plans for exploitation.',
             answer: 'Christopher Columbus',
             acceptableAnswers: ['Christopher Columbus', 'Columbus', 'Cristoforo Colombo', 'Cristobal Colon'],
             hint: 'Sailed under Spanish royal sponsorship.'
           },
           {
-            prompt: 'The Dominican friar whose 1542 polemic helped pass the New Laws restricting the encomienda system.',
+            question: 'The Dominican friar whose 1542 polemic helped pass the New Laws restricting the encomienda system.',
             answer: 'Bartolomé de Las Casas',
             acceptableAnswers: ['Bartolomé de Las Casas', 'Bartolome de Las Casas', 'Las Casas', 'de Las Casas'],
-            hint: 'Spent fifty years in the Caribbean and Mexico defending Indigenous peoples.'
+            hint: 'A former encomendero who became a Dominican friar and spent decades defending Indigenous peoples.'
           },
           {
-            prompt: 'The Franciscan friar who compiled the Florentine Codex with Nahua noble informants between 1545 and 1590.',
+            question: 'The Franciscan friar who compiled the Florentine Codex with Nahua noble informants between 1545 and 1590.',
             answer: 'Bernardino de Sahagún',
             acceptableAnswers: ['Bernardino de Sahagún', 'Bernardino de Sahagun', 'Sahagún', 'Sahagun'],
             hint: 'His twelve-volume codex preserves Nahuatl-language accounts of the conquest.'
@@ -173,26 +173,26 @@ For a 1491–1607 SAQ:
       exercise: {
         questions: [
           {
-            question: 'An SAQ asks: "Identify ONE European colonial venture before 1607, and explain how it shaped relations between Europeans and Indigenous peoples." Which response would score highest?',
+            question: 'An SAQ asks: "Briefly explain ONE way a European colonial venture before 1607 shaped relations between Europeans and Indigenous peoples." Which response would earn the point?',
             options: [
-              "The Spanish encomienda system, established in the Caribbean in the 1490s and expanded after Cortés's conquest of Tenochtitlán in 1521, granted conquistadors the right to extract Indigenous labor and tribute in exchange for nominal Christianization, producing demographic catastrophe and prompting Las Casas's 1542 reform campaign",
-              "Some European colony existed at some point before 1607 in some part of the Americas in some way that produced some kind of relationship with some Indigenous peoples during the period from 1492 through 1607",
-              "European colonization is a famous topic in early American history and its effects on Indigenous peoples are widely recognized as having been significant during the period from 1492 through the founding of Jamestown",
-              "European colonization is a feature of pre-1607 American history and Indigenous peoples experienced it across the period from 1492 through 1607 in a way that is generally well known to historians of the early Americas"
+              'Spanish encomiendas gave conquistadors Native labor and tribute, which drove population collapse and calls for reform',
+              'The encomienda was a Spanish labor system, and it was one of the most important institutions in the early colonial Americas',
+              'The French fur trade of the 1500s forced Native peoples onto encomiendas, which caused long wars with the Haudenosaunee',
+              'Jamestown in 1607 depended on tobacco and indentured servants, which caused conflict with the Powhatan over farmland'
             ],
             correctAnswer: 0,
-            explanation: 'AP SAQ scoring rewards specific venture (encomienda) + specific date/event (1490s, 1521) + specific outcome (demographic collapse) + specific consequence (1542 New Laws). Vague gestures earn no credit.'
+            explanation: 'The encomienda answer names a venture, explains how it worked, and links it to an effect on Native-European relations. The second only identifies a system without explaining an effect, the French answer is inaccurate, and the Jamestown answer falls outside the period the prompt names.'
           },
           {
-            question: 'Which short answer best demonstrates AP "complexity" by complicating a single-cause narrative about the Indigenous demographic collapse?',
+            question: 'Which short answer best demonstrates AP "complexity" about the collapse of Indigenous populations?',
             options: [
-              "Although Old World disease (smallpox, measles, influenza) is correctly identified as the primary cause of Indigenous population collapse, scholars also note that Spanish military conquest, the encomienda's labor demands, the disruption of Indigenous food systems, and forced relocation through *congregaciones* compounded the disease catastrophe",
-              "Old World disease was the only cause of Indigenous population collapse and there were no other contributing factors of any kind from Spanish military conquest, labor demands, or food-system disruption during the period",
-              "Old World disease played no role in Indigenous population collapse and the entire demographic catastrophe was caused entirely by other factors unrelated to disease during the period from 1492 through the seventeenth century",
-              "Indigenous populations did not decline at all during the period from 1492 through 1700 and the entire concept of demographic catastrophe is a historical myth invented in the twentieth century with no basis in evidence of any kind"
+              'Disease caused most deaths, but warfare and forced labor also blocked any recovery',
+              'Smallpox and measles were spread on purpose by the Spanish to break Native resistance',
+              'War caused most deaths, and disease mattered only after Spanish rule was firmly established',
+              'Famine caused most deaths, since European livestock destroyed nearly every Native field'
             ],
             correctAnswer: 0,
-            explanation: 'AP "complexity" rewards complicating the dominant narrative. Naming disease PLUS military conquest PLUS encomienda labor PLUS food disruption PLUS forced relocation is the canonical multi-causal AP move.'
+            explanation: 'The strongest answer keeps disease as the main cause while showing how human actions compounded it, which is a multi-causal argument. Sixteenth-century epidemics were not deliberate, and war or famine alone cannot account for losses on the scale disease produced.'
           }
         ]
       }

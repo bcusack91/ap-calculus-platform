@@ -59,10 +59,10 @@ After the **French and Indian War** (1754–63), Britain faced massive war debt 
           {
             question: 'Why was the Stamp Act (1765) more controversial than earlier taxes like the Sugar Act?',
             options: [
-              'It was the first direct tax imposed on the colonists by Parliament, affecting everyday items like newspapers and legal documents',
-              'It only taxed wealthy merchants and plantation owners',
-              'It was passed by colonial legislatures rather than Parliament',
-              'It reduced taxes on imported goods, angering British merchants'
+              'It taxed everyday paper goods directly to raise revenue for Britain',
+              'It taxed only wealthy merchants and plantation owners in the colonies',
+              'It was passed by colonial legislatures rather than by Parliament',
+              'It reduced taxes on imported goods, which angered British merchants'
             ],
             correctAnswer: 0,
             explanation: 'The Stamp Act was unprecedented because it was a direct (internal) tax rather than an external trade duty. It affected nearly everyone — lawyers, printers, tavern owners — and was imposed by a Parliament in which colonists had no representation, crystallizing the "no taxation without representation" argument.'
@@ -71,9 +71,9 @@ After the **French and Indian War** (1754–63), Britain faced massive war debt 
             question: 'The Intolerable Acts (1774) had the unintended effect of:',
             options: [
               'Convincing most colonists to remain loyal to Britain',
-              'Uniting the colonies in opposition through the First Continental Congress',
+              'Uniting the colonies through the First Continental Congress',
               'Ending the boycott movement and restoring trade with Britain',
-              'Leading France to immediately declare war on Britain'
+              'Leading France to declare war on Britain at once'
             ],
             correctAnswer: 1,
             explanation: 'Britain intended the Intolerable Acts to punish Massachusetts and isolate it from the other colonies. Instead, colonists across all 13 colonies rallied to Massachusetts\' defense, convening the First Continental Congress (1774) — the first unified colonial body to coordinate resistance against British policy.'
@@ -95,7 +95,7 @@ Written primarily by **Thomas Jefferson**, the Declaration drew on **Enlightenme
 |---------|----------|----------------------------------|
 | **John Locke** | Natural rights (life, liberty, property); social contract; right to revolution | "Life, Liberty, and the pursuit of Happiness"; government derives power from "consent of the governed" |
 | **Montesquieu** | Separation of powers | Influenced the later Constitution more than the Declaration |
-| **Rousseau** | Popular sovereignty; general will | "Governments are instituted among Men, deriving their just powers from the consent of the governed" |
+| **Rousseau** | Popular sovereignty; the "general will" (*The Social Contract*, 1762) | Little direct influence on the Declaration; its "consent of the governed" language comes from Locke, not Rousseau |
 
 ### Structure of the Declaration
 
@@ -173,21 +173,21 @@ Use the exact historical term.
           {
             question: 'Which of the following BEST describes the historical significance of the Declaration of Independence?',
             options: [
-              'It established the framework for American government that is still used today',
-              'It articulated Enlightenment principles of natural rights and self-governance that later groups used to advocate for their own inclusion',
-              'It immediately granted equal rights to all people living in the American colonies',
-              'It was primarily a military document outlining strategy for the Revolutionary War'
+              'It set up the framework of the federal government still used today',
+              'It stated natural-rights principles that excluded groups later invoked',
+              'It immediately granted equal rights to all people in the colonies',
+              'It laid out the military strategy for the Revolutionary War'
             ],
             correctAnswer: 1,
             explanation: 'The Declaration\'s greatest long-term significance was its articulation of universal principles ("all men are created equal") that abolitionists, suffragists, civil rights leaders, and others later invoked to argue for extending equality to groups initially excluded. The Constitution (1787), not the Declaration, established the governmental framework.'
           },
           {
-            question: 'A colonial pamphleteer in 1775 writes: "We have petitioned, we have remonstrated, we have boycotted, and still our liberties are trampled. What remains but to take up arms?" This argument MOST directly reflects:',
+            question: 'Suppose a colonial pamphleteer in 1775 wrote (a hypothetical example, not a real quotation): "We have petitioned, we have remonstrated, we have boycotted, and still our liberties are trampled. What remains but to take up arms?" This argument MOST directly reflects:',
             options: [
-              'John Locke\'s theory that people have the right to overthrow a government that fails to protect their natural rights',
-              'Thomas Hobbes\' belief that a strong central authority is necessary to prevent chaos',
-              'Adam Smith\'s argument for free market economics without government intervention',
-              'Montesquieu\'s advocacy for separation of powers within government'
+              "Locke's view that people may overthrow a government violating their rights",
+              "Hobbes's argument that only a strong sovereign can prevent chaos and civil war",
+              "Smith's argument that markets work best without government interference",
+              "Montesquieu's argument that power should be separated among branches"
             ],
             correctAnswer: 0,
             explanation: 'The pamphleteer\'s argument — that peaceful remedies have been exhausted, justifying armed resistance — mirrors Locke\'s social contract theory: when a government violates the natural rights of the people, the people have the right to alter or abolish it. This logic is directly embedded in the Declaration of Independence.'

@@ -44,8 +44,8 @@ Before Europeans arrived, the Americas were home to complex, diverse societies w
 
 | Civilization | Location | Key Features |
 |---|---|---|
-| **Aztec (Mexica)** | Central Mexico | Capital Tenochtitlán (pop. ~200,000); tributary empire; chinampas (floating gardens); human sacrifice |
-| **Maya** | Yucatán / Central America | Advanced writing system; astronomical calendar; city-states; declined before European contact |
+| **Aztec (Mexica)** | Central Mexico | Capital Tenochtitlán (pop. ~200,000); tributary empire; chinampas (raised fields built in the lake, often called "floating gardens"); human sacrifice |
+| **Maya** | Yucatán / Central America | Advanced writing system; astronomical calendar; city-states; the great Classic-era cities declined around 900 CE, but smaller Maya states survived into the Spanish era |
 | **Inca** | Andes (South America) | Largest pre-Columbian empire; quipu record-keeping; extensive road system; terrace farming |
 | **Mississippian** | Eastern North America | Cahokia (near modern St. Louis, pop. ~20,000); mound-building; maize agriculture |
 | **Pueblo (Ancestral)** | American Southwest | Multi-story adobe dwellings; irrigation systems; dry farming techniques |
@@ -73,21 +73,21 @@ The AP exam emphasizes that indigenous peoples adapted to their **environments**
           {
             question: 'Which agricultural technique was used by the Aztecs to farm on the shallow lake beds surrounding Tenochtitlán?',
             options: [
-              'Terrace farming on mountainsides',
-              'Chinampas — floating gardens anchored to the lake floor',
+              'Terraces cut into steep mountain slopes',
+              'Raised beds of piled mud and vegetation',
               'Slash-and-burn clearing of dense forests',
-              'Irrigation canals diverted from the Rio Grande'
+              'Irrigation canals drawn from the Rio Grande'
             ],
             correctAnswer: 1,
-            explanation: 'Chinampas were artificial islands or "floating gardens" created in the shallow lakes around Tenochtitlán. The Aztecs layered mud, vegetation, and soil to create extremely fertile agricultural plots. Terrace farming was an Inca technique used in the Andes.'
+            explanation: 'Chinampas were raised fields built by piling lake mud and vegetation inside staked enclosures in the shallow lakes around Tenochtitlán; they are often called "floating gardens" but were anchored in place. Terrace farming was an Inca technique in the Andes, and the Rio Grande lies far to the north.'
           },
           {
             question: 'The Iroquois Confederacy is historically significant because it:',
             options: [
-              'Was the first Native American group to adopt European farming methods',
-              'United five (later six) nations under a representative governing structure',
-              'Built the largest mound complex in North America at Cahokia',
-              'Controlled the fur trade exclusively with French colonists'
+              'Adopted European farming methods before other nations',
+              'Joined several nations in a council-based alliance',
+              'Built the largest mound complex at Cahokia',
+              'Held a monopoly on the fur trade with the French'
             ],
             correctAnswer: 1,
             explanation: 'The Iroquois (Haudenosaunee) Confederacy united the Mohawk, Oneida, Onondaga, Cayuga, and Seneca nations (the Tuscarora joined later) under the Great Law of Peace — a representative council system. Some historians argue it influenced the framers of the U.S. Constitution.'
@@ -95,10 +95,10 @@ The AP exam emphasizes that indigenous peoples adapted to their **environments**
           {
             question: 'Which of the following best explains why Native American societies in the Pacific Northwest developed differently from those on the Great Plains?',
             options: [
-              'Pacific Northwest peoples had access to abundant salmon and cedar, enabling permanent settlements without agriculture',
-              'Great Plains peoples had larger populations and more complex governments',
-              'Pacific Northwest peoples were isolated from all trade networks',
-              'Great Plains peoples developed writing systems earlier than coastal groups'
+              'Abundant salmon and cedar supported permanent villages without farming',
+              'Great Plains peoples had larger populations and stronger central rulers',
+              'Pacific Northwest peoples were cut off from all regional trade networks',
+              'Great Plains peoples developed writing systems earlier than coastal peoples'
             ],
             correctAnswer: 0,
             explanation: 'The Pacific Northwest\'s abundant natural resources — especially salmon runs and cedar forests — allowed peoples like the Chinook and Tlingit to build permanent settlements and develop complex social hierarchies without relying on farming. Great Plains peoples were more nomadic, following bison herds.'
@@ -201,10 +201,10 @@ Use the exact historical term.
           {
             question: 'A historian argues that the Columbian Exchange was "the most significant ecological event since the end of the Ice Age." Which evidence would BEST support this claim?',
             options: [
-              'European diseases killed an estimated 50–90% of the indigenous population of the Americas within a century',
-              'Christopher Columbus made four voyages to the Americas between 1492 and 1504',
-              'The Spanish established missions throughout California in the 18th century',
-              'The Treaty of Tordesillas divided New World claims between Spain and Portugal'
+              'European diseases killed most of the Native population within a century',
+              'Columbus made four voyages to the Caribbean between 1492 and 1504',
+              'Spanish missionaries built missions along the California coast',
+              'The Treaty of Tordesillas divided newly claimed lands between Spain and Portugal'
             ],
             correctAnswer: 0,
             explanation: 'The massive demographic collapse caused by Old World diseases fundamentally transformed the ecology, economy, and cultures of the entire Western Hemisphere — making it the strongest evidence for the claim about ecological significance. The other options describe important events but don\'t address ecological impact.'
@@ -212,10 +212,10 @@ Use the exact historical term.
           {
             question: 'Which of the following BEST describes the political organization of most Native American societies in North America prior to European contact?',
             options: [
-              'Centralized empires with hereditary monarchs ruling large territories',
-              'Diverse systems ranging from confederacies and chiefdoms to small kin-based bands',
+              'Centralized empires ruled by hereditary monarchs over large territories',
+              'Varied systems from confederacies to small kin-based bands',
               'Democratic republics modeled on ancient Greek city-states',
-              'Theocratic states governed by priestly classes similar to medieval Europe'
+              'Theocratic states governed by a priestly class'
             ],
             correctAnswer: 1,
             explanation: 'North American Native societies were politically diverse — the Iroquois Confederacy was a representative alliance, Mississippian Cahokia was a chiefdom, and Great Basin peoples lived in small family bands. There was no single political model, which is a key AP concept.'

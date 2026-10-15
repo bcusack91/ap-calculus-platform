@@ -48,7 +48,7 @@ export const apushColonialAmericaPart7Data = {
 |---|---|---|---|---|
 | Economy | Mixed: shipping, fishing, small farms | Diverse: grain, commerce, crafts | Tobacco plantations | Rice + indigo plantations |
 | Labor | Family + indentured | Mixed (Quakers, Germans, Scots-Irish) | Indentured → enslaved African (post-1676) | Enslaved African (often majority) |
-| Demography | Family migration; healthy population growth | Most ethnically diverse | Imbalanced sex ratio early; high mortality | Black majority by mid-1700s in SC |
+| Demography | Family migration; healthy population growth | Most ethnically diverse | Imbalanced sex ratio early; high mortality | Black majority in South Carolina by the early 1700s |
 | Religion | Puritan (Congregational), then Baptists, etc. | Quaker, Lutheran, Reformed | Anglican (established) | Anglican (established) |
 | Politics | Town meetings; congregational governance | Assemblies; proprietor disputes | Tidewater elite dominates House of Burgesses | Planter oligarchy |
 
@@ -57,7 +57,7 @@ export const apushColonialAmericaPart7Data = {
 | Continuity | Change |
 |---|---|
 | British colonies remain politically subordinate to Crown | But practice of "salutary neglect" grows colonial assemblies' power |
-| Atlantic trade intensifies | Mercantilism formalized in Navigation Acts (1651, 1660s) |
+| Atlantic trade intensifies | Mercantilism formalized in Navigation Acts (1651, 1660, 1663, 1673, 1696) |
 | Enslaved labor expands across colonies | Shifts from minor part of mixed labor to dominant labor system in Chesapeake and Lower South |
 | Indigenous nations remain politically and militarily significant | But cumulative population loss + land cessions reduce Indigenous power east of the Appalachians |
 | Religious diversity continues | Great Awakening democratizes religious authority and splits denominations |
@@ -70,7 +70,7 @@ export const apushColonialAmericaPart7Data = {
 - **Slave codes** — 1660s+ colonial laws codifying lifetime racial slavery
 - **Salutary neglect** — British policy of loosely enforcing trade laws on colonies
 - **Mercantilism** — Economic system in which colonies serve mother country's wealth
-- **Navigation Acts (1651+)** — Required colonial trade to use English ships and pass through England
+- **Navigation Acts (1651+)** — Required colonial trade to use English or colonial ships and sent enumerated goods such as tobacco only to England or its colonies
 - **House of Burgesses (1619)** — First representative assembly in English colonies
 - **Halfway Covenant (1662)** — Puritan compromise allowing partial church membership
 - **Great Awakening (1730s–40s)** — Evangelical revival; Edwards, Whitefield
@@ -88,20 +88,21 @@ export const apushColonialAmericaPart7Data = {
         questions: [
           {
             question: 'Which year saw both the first arrival of Africans at Point Comfort, Virginia AND the first meeting of the House of Burgesses?',
-            options: ['1607', '1619', '1620', '1676'],
+            options: ['1607', '1619', '1620', '1676'
+            ],
             correctAnswer: 1,
             explanation: '1619: both first Africans (at Point Comfort) and the House of Burgesses convened. (1607 Jamestown founded; 1620 Mayflower; 1676 Bacon\'s Rebellion.)'
           },
           {
-            question: 'Which best identifies the most consequential difference between the New England and Chesapeake colonies during the seventeenth century?',
+            question: 'Which best identifies a major difference between the New England and Chesapeake colonies during the seventeenth century?',
             options: [
-              "New England developed mixed economies (small farms, shipping, fishing) populated by family migration and rooted in Puritan congregational governance, while the Chesapeake developed a tobacco-export plantation economy populated by mostly male migrants and increasingly dependent on enslaved African labor after 1676",
-              "New England and the Chesapeake were identical in economy, labor system, demography, religion, and politics with no meaningful differences of any kind during the period from 1607 through 1700 in any region of British North America",
-              "The Chesapeake developed mixed economies and family migration with Puritan congregational governance, while New England developed plantation tobacco with mostly male migrants and enslaved African labor after 1676 in any region",
-              "Neither New England nor the Chesapeake had any economic activity, family migration, or religious institutions of any kind during the period from 1607 through 1700 across British North America in any region of the colonies"
+              'New England depended on tobacco exports, while the Chesapeake relied on fishing and shipbuilding',
+              'New England grew through family migration, while the Chesapeake drew mostly young single men',
+              'New England established the Church of England, while the Chesapeake welcomed many denominations',
+              'New England built large plantations, while the Chesapeake grew through small farming villages'
             ],
-            correctAnswer: 0,
-            explanation: 'New England = mixed economy + family migration + Puritan congregationalism; Chesapeake = tobacco plantations + male migrants + post-1676 racial slavery.'
+            correctAnswer: 1,
+            explanation: 'Puritans migrated as families into a healthy climate, while Chesapeake planters imported young, mostly male servants to grow tobacco. The other options reverse the regions\' economies, churches and settlement patterns.'
           }
         ]
       }
@@ -113,19 +114,19 @@ export const apushColonialAmericaPart7Data = {
       exercise: {
         questions: [
           {
-            prompt: 'The 1676 Virginia uprising whose suppression accelerated the shift from indentured servitude to racial slavery.',
+            question: 'The 1676 Virginia uprising whose suppression accelerated the shift from indentured servitude to racial slavery.',
             answer: "Bacon's Rebellion",
             acceptableAnswers: ["Bacon's Rebellion", 'Bacons Rebellion', 'Bacon Rebellion'],
             hint: 'Led by Nathaniel Bacon against Governor Berkeley.'
           },
           {
-            prompt: "The British policy of loosely enforcing trade laws on the colonies before the 1760s.",
+            question: "The British policy of loosely enforcing trade laws on the colonies before the 1760s.",
             answer: 'salutary neglect',
             acceptableAnswers: ['salutary neglect', 'Salutary Neglect'],
             hint: 'Allowed colonial assemblies to develop their own political traditions.'
           },
           {
-            prompt: 'The 1730s–40s evangelical revival movement led by figures such as Jonathan Edwards and George Whitefield.',
+            question: 'The 1730s–40s evangelical revival movement led by figures such as Jonathan Edwards and George Whitefield.',
             answer: 'Great Awakening',
             acceptableAnswers: ['Great Awakening', 'First Great Awakening', 'the Great Awakening'],
             hint: 'Democratized religious authority across the colonies.'
@@ -166,26 +167,26 @@ export const apushColonialAmericaPart7Data = {
       exercise: {
         questions: [
           {
-            question: 'A historian writes: "The British colonies between 1607 and 1754 were both deeply divided by region and increasingly bound together by shared institutions." Which response best supports both halves with AP-quality reasoning?',
+            question: 'A historian writes: "The British colonies between 1607 and 1754 were both deeply divided by region and increasingly bound together by shared institutions." Which evidence best supports both parts of this claim?',
             options: [
-              "The four colonial regions developed sharply different economies (mixed in New England, plantation in the Chesapeake and Lower South), labor systems (family + indentured vs. enslaved), and religious establishments (Puritan vs. Quaker vs. Anglican) — but they were also bound together by Atlantic trade, English common law, evolving representative assemblies, and the Great Awakening that crossed colonial borders",
-              "The four colonial regions were entirely identical in economy, labor system, religion, and political institutions across the period from 1607 to 1754 with no shared Atlantic trade or evangelical movement of any kind in any region",
-              "The four colonial regions were entirely separate from each other across the period from 1607 to 1754 with no shared institutions, no Atlantic trade, no English common law, and no Great Awakening of any kind in any region",
-              "The four colonial regions did not exist as distinct regions and there was no British North America with regional differences during the period from 1607 to 1754 in any portion of the Atlantic seaboard in any region"
+              'Regions differed in labor and religion yet shared Atlantic trade, English law and elected assemblies',
+              'Regions differed in whether they allowed elected assemblies yet shared one established church',
+              'Regions differed in export crops yet sent delegates to a single parliament that met in Philadelphia',
+              'Regions shared one plantation economy yet differed in their loyalty to the Protestant British Crown'
             ],
             correctAnswer: 0,
-            explanation: 'Both/and AP framing: regional difference (economy + labor + religion) PLUS shared institutions (trade + common law + assemblies + Great Awakening). High-scoring complexity.'
+            explanation: 'Contrasting labor systems and churches show regional division, while trade, English common law, representative assemblies and the cross-colonial Great Awakening show shared ties. The colonies had no single church, every colony had an assembly, and no intercolonial parliament existed before the Revolution.'
           },
           {
-            question: 'Which best summarizes Period 2 (1607–1754) in a way that an AP reader would credit as a "complexity" claim?',
+            question: 'Which statement about Period 2 (1607–1754) would an AP reader most likely credit as a complex, well-supported claim?',
             options: [
-              "The British North American colonies were neither a uniform 'errand into the wilderness' nor a simple 'extension of England' but a varied set of regional societies (Puritan New England, pluralist Middle, planter Chesapeake, slave-majority Lower South) shaped by distinct economies, labor systems, and Indigenous relations — bound together loosely by Atlantic trade, English law, and evolving representative assemblies",
-              "The British North American colonies were a uniform 'errand into the wilderness' across the entire period from 1607 to 1754 with no regional variation of any kind in economy, labor, or religion in any region of the colonies",
-              "The British North American colonies were a simple 'extension of England' across the entire period from 1607 to 1754 with no regional variation of any kind in economy, labor, or religion in any region of the colonies",
-              "The British North American colonies had no regional variation, no Atlantic trade, no English law, and no representative assemblies of any kind during the period from 1607 to 1754 in any region of British North America"
+              'The colonies became one uniform society that copied English institutions without change',
+              'The colonies became separate nations with little contact with Britain before the 1750s',
+              'The colonies became a Puritan commonwealth that spread from New England to every region',
+              'The colonies became distinct regional societies loosely joined by trade, law and empire'
             ],
-            correctAnswer: 0,
-            explanation: 'AP "complexity" rewards rejecting both polar narratives ("errand into the wilderness" vs. "extension of England") and naming specific regional societies + shared institutions.'
+            correctAnswer: 3,
+            explanation: 'The strongest claim holds regional difference and imperial connection together, which is what the evidence shows. The other statements each flatten the period into one false pattern: uniformity, isolation or Puritan dominance.'
           }
         ]
       }

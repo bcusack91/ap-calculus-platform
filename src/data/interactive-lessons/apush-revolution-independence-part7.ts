@@ -37,7 +37,7 @@ export const apushRevolutionIndependencePart7Data = {
 | 1770 | Boston Massacre | British troops kill 5 colonists; Crispus Attucks among the dead |
 | 1773 | Tea Act + Boston Tea Party | Sons of Liberty dump tea in Boston Harbor |
 | 1774 | Coercive Acts ("Intolerable Acts") + First Continental Congress | British close Boston port; colonies organize unified response |
-| 1775 | Lexington & Concord; Battles of Bunker Hill | Revolutionary War begins |
+| 1775 | Lexington & Concord; Battle of Bunker Hill | Revolutionary War begins |
 | 1776 | *Common Sense* (Jan); Declaration of Independence (July 4) | Independence declared |
 | 1777 | Battles of Saratoga | American victory; secures French alliance |
 | 1781 | Battle of Yorktown | British surrender to Washington and Rochambeau |
@@ -104,26 +104,21 @@ export const apushRevolutionIndependencePart7Data = {
       exercise: {
         questions: [
           {
-            question: 'Which event is most commonly identified as the turning point of the Revolutionary War because it secured the French alliance?',
-            options: [
-              "The American victory at the Battles of Saratoga (1777), which convinced the French government that the American cause was militarily viable and led to the Franco-American Alliance of 1778",
-              "The American victory at the Battle of Yorktown (1781), which preceded any French involvement in the war and led to French recognition only after the British surrender at Yorktown in 1781 in any region of the war",
-              "The American victory at the Battles of Lexington and Concord (1775), which preceded any French involvement in the war and led to French recognition immediately upon receipt of news of the battles in any region",
-              "The American victory at the Boston Tea Party (1773), which preceded any French involvement in the war and led to French recognition immediately upon receipt of news of the tea-dumping in any region of the colonies"
-            ],
+            question: 'Which battle is most commonly identified as the turning point of the Revolutionary War because it secured the French alliance?',
+            options: ['Saratoga (1777)', 'Yorktown (1781)', 'Bunker Hill (1775)', 'Trenton (1776)'],
             correctAnswer: 0,
-            explanation: 'Saratoga 1777 — secured the French alliance (1778). Yorktown 1781 was the war\'s end, not the turning point.'
+            explanation: 'Burgoyne\'s surrender at Saratoga convinced France to sign the Treaty of Alliance in February 1778. Yorktown ended major fighting, Bunker Hill came before independence was declared, and Trenton revived Patriot morale but did not bring in France.'
           },
           {
-            question: "Which best identifies the postwar outcome for Indigenous nations following the Treaty of Paris (1783)?",
+            question: 'Which best describes how the Treaty of Paris (1783) affected Native nations in the trans-Appalachian West?',
             options: [
-              "The treaty transferred British territorial claims west to the Mississippi River to the United States without any consultation with Indigenous nations who had occupied and governed that land — accelerating postwar Anglo-American settlement, land seizures, and Indigenous dispossession in the trans-Appalachian West",
-              "The treaty granted full and permanent sovereignty to all Indigenous nations west of the Appalachians and prohibited any Anglo-American settlement of any kind in any region of the trans-Appalachian West during the entire period after 1783 in any region of the United States during the period",
-              "The treaty restored all Indigenous nations to their pre-1607 territorial control with no Anglo-American settlement of any kind in any region of British North America during the entire period after 1783 in any region of the United States during the period",
-              "The treaty had no effect on Indigenous nations of any kind during the entire period after 1783 with no land transfer, no Anglo-American settlement, and no Indigenous dispossession of any kind in any region of the United States in the period"
+              'Britain ceded land to the Mississippi without consulting the Native nations living there',
+              'Britain kept all land west of the Appalachians as a permanent Native reserve',
+              'The United States recognized Native nations as independent members of the Confederation',
+              'Native nations received seats at the peace talks and vetoed the western boundary'
             ],
             correctAnswer: 0,
-            explanation: 'Treaty of Paris 1783 transferred land to Mississippi without Indigenous consultation; accelerated postwar dispossession.'
+            explanation: 'The treaty drew the U.S. boundary at the Mississippi and never mentioned the Native nations who lived there, which opened the way to postwar conflict over their land. Britain gave up the region rather than reserving it, and no Native nation took part in the negotiations.'
           }
         ]
       }
@@ -135,19 +130,19 @@ export const apushRevolutionIndependencePart7Data = {
       exercise: {
         questions: [
           {
-            prompt: "The 1775 proclamation by the royal governor of Virginia offering freedom to enslaved people who joined British forces.",
+            question: "The 1775 proclamation by the royal governor of Virginia offering freedom to enslaved people who joined British forces.",
             answer: "Lord Dunmore's Proclamation",
             acceptableAnswers: ["Lord Dunmore's Proclamation", "Dunmore's Proclamation", "Dunmore Proclamation", "Dunmores Proclamation"],
             hint: 'Tens of thousands of enslaved people self-emancipated by reaching British lines.'
           },
           {
-            prompt: 'The 1787 ordinance that organized the Northwest Territory and banned slavery in it.',
+            question: 'The 1787 ordinance that organized the Northwest Territory and banned slavery in it.',
             answer: 'Northwest Ordinance',
             acceptableAnswers: ['Northwest Ordinance', 'Northwest Ordinance of 1787', 'Northwest Ordinance 1787'],
             hint: 'Established a path for territories to become states; one of the few major achievements under the Articles.'
           },
           {
-            prompt: 'The 1798 Federalist laws that restricted immigration and criminalized criticism of the federal government.',
+            question: 'The 1798 Federalist laws that restricted immigration and criminalized criticism of the federal government.',
             answer: 'Alien and Sedition Acts',
             acceptableAnswers: ['Alien and Sedition Acts', 'Alien & Sedition Acts'],
             hint: 'Spurred the Virginia and Kentucky Resolutions in response.'
@@ -188,26 +183,26 @@ export const apushRevolutionIndependencePart7Data = {
       exercise: {
         questions: [
           {
-            question: 'A historian writes: "The American Revolution was both a war of independence from Britain and a contested struggle within the colonies over who counted as a citizen of the new republic." Which response best supports both halves with AP-quality reasoning?',
+            question: 'A historian writes: "The American Revolution was both a war of independence from Britain and a contested struggle within the colonies over who counted as a citizen of the new republic." Which evidence best supports both parts of the claim?',
             options: [
-              "The war secured independence by 1783 with French aid (Saratoga 1777, Yorktown 1781), but who counted as a citizen was contested: roughly 20% of colonists were Loyalists who lost property and citizenship; Indigenous nations were excluded from the Treaty of Paris; tens of thousands of enslaved Africans took British offers of freedom; women like Abigail Adams pressed (without success) for legal recognition; and the Constitution of 1787 enshrined the three-fifths compromise — defining citizenship along racial, gendered, and class lines",
-              "The American Revolution was only a war of independence from Britain with no internal contest of any kind over citizenship, with no Loyalists, no Indigenous exclusion, no enslaved self-emancipation, no women's petition, and no three-fifths compromise of any kind during the entire Revolution in any region",
-              "The American Revolution was only an internal contest over citizenship with no war of independence from Britain of any kind during the entire period from 1775 through 1783 in any region of the colonies during the period in any region of British North America during the period",
-              "The American Revolution was neither a war of independence nor an internal contest over citizenship and produced no political, military, or social outcomes of any kind during the entire period from 1775 through 1800 in any region of the new United States during the period"
+              'Yorktown secured independence, while Black Loyalists and women demanded equal rights',
+              'The French alliance secured independence, while all adult white men gained the vote under the Articles',
+              'Saratoga ended the war in 1777, while Loyalists were welcomed into the new state governments',
+              'Lexington and Concord won independence, while enslaved people were freed by the Declaration'
             ],
             correctAnswer: 0,
-            explanation: 'AP both/and: Saratoga 1777 + Yorktown 1781 (independence) AND Loyalists + Indigenous + enslaved + women + 3/5 compromise (contested citizenship).'
+            explanation: 'Yorktown supports the war-of-independence half, and the choices of Black Loyalists and the claims of women such as Abigail Adams support the contested-citizenship half. Voting stayed limited by property, the war continued after Saratoga, and the Declaration freed no one.'
           },
           {
-            question: 'Which best summarizes the political legacy of the Revolution in a way an AP reader would credit as a "complexity" claim?',
+            question: 'Which statement about the political legacy of the Revolution would an AP reader most likely credit as a "complexity" claim?',
             options: [
-              "The Revolution institutionalized natural-rights republicanism in the Declaration (1776), Constitution (1787), and Bill of Rights (1791) — but the new republic also institutionalized exclusion through the three-fifths compromise, the absence of women's political rights, and the systematic dispossession of Indigenous nations through the Treaty of Paris and the Northwest Ordinance — embedding both democratic and exclusionary commitments in the founding documents themselves",
-              "The Revolution institutionalized only natural-rights republicanism with no exclusion of any kind and no three-fifths compromise, no Indigenous dispossession, and no exclusion of women in any founding document during the entire period from 1776 through 1791 in any region",
-              "The Revolution institutionalized only exclusion with no natural-rights republicanism of any kind in the Declaration, Constitution, or Bill of Rights during the entire period from 1776 through 1791 in any region of the United States during the period",
-              "The Revolution had no political legacy of any kind during the entire period from 1776 through 1800 in any region of the United States with no Declaration, no Constitution, no Bill of Rights, and no Indigenous dispossession of any kind in any region"
+              'Founding documents enshrined natural rights yet protected slavery and limited voting',
+              'The Constitution of 1787 guaranteed voting rights to all adult men and women in every state',
+              'The Revolution changed little in politics, since Americans simply copied the British monarchy',
+              'Natural-rights ideas mattered only in France and had no influence on new American governments'
             ],
             correctAnswer: 0,
-            explanation: 'AP complexity: name BOTH natural-rights institutionalization (Declaration + Constitution + Bill of Rights) AND embedded exclusion (3/5 + women + Indigenous dispossession via Treaty of Paris + Northwest Ord).'
+            explanation: 'The strongest claim holds both sides together: the Declaration and later the Constitution and Bill of Rights embedded natural-rights ideals, while the same founding settled for slavery and narrow suffrage. The other statements are each one-sided or inaccurate.'
           }
         ]
       }

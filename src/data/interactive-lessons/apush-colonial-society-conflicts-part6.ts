@@ -36,25 +36,25 @@ export const apushColonialSocietyConflictsPart6Data = {
 
 ## Document Bank
 
-> **1. Antonio de Otermín, Account of the Pueblo Revolt (1680)**
-> "The said cunning and clever Indian Popé... persuaded all the rest of the Indians... that they should rebel."
+> **1. Antonio de Otermín, letters and reports on the Pueblo Revolt (1680–1681)**
+> "...an Indian named Popé... persuaded the other Indians... to rise against the Spaniards." (adapted from Otermín's reports and the sworn declarations he collected)
 
 - **HIPP:** Spanish governor's account of the 1680 Pueblo Revolt in New Mexico, in which Pueblo nations led by Popé expelled Spanish colonists for over a decade; intended audience is the viceroy of New Spain and the Spanish Crown; purpose is to explain the colonial defeat and request resources to reconquer the province; POV is Spanish colonial governor seeking to attribute the revolt to a single charismatic leader rather than systematic missionary abuses, suppression of Pueblo religion, and forced labor.
 
-> **2. Increase Mather, *A Brief History of the War with the Indians in New-England* (1676)**
-> "It hath pleased God in his sovereignty to suffer the heathen to come in upon us... that we should know the worth of liberty by being for a season deprived of it."
+> **2. Increase Mather, *A Brief History of the Warr with the Indians in New-England* (1676)**
+> "God has allowed the heathen to rise against us as a judgment for our sins, so that we might repent and return to Him." (adapted summary of Mather's argument, not his exact words)
 
 - **HIPP:** Puritan minister's published narrative of King Philip's War (1675–76) between New England colonists and the Wampanoag-Narragansett alliance led by Metacom (King Philip); intended audience is the New England Puritan community and the Crown; purpose is to interpret the war as a divine providential test of the Puritan covenant and justify the brutal suppression of Indigenous nations; POV is Puritan minister writing within the providential interpretive framework of New England covenantal theology.
 
-> **3. Cotton Mather, *Wonders of the Invisible World* (1693)**
-> "We have been advised by some Credible Christians... that a Malefactor [witch], accused by his Brother... was kill'd by the Devil's Procurement."
+> **3. Cotton Mather, *The Wonders of the Invisible World* (Boston, 1693 imprint; written in 1692)**
+> "The New-Englanders are a People of God settled in those, which were once the Devil's Territories; and it may easily be supposed that the Devil was exceedingly disturbed, when he perceived such a People here..."
 
-- **HIPP:** Puritan minister's defense of the Salem Witch Trials, published immediately after the trials concluded; intended audience is Puritan readers in New England and skeptical readers in England; purpose is to defend the legitimacy of the trials and the spectral evidence used to convict 19 people; POV is leading Puritan minister with a personal and family stake in defending judicial decisions made by Puritan magistrates.
+- **HIPP:** Puritan minister's defense of the Salem Witch Trials, written in fall 1692 at the request of Governor William Phips as the trials were ending; intended audience is Puritan readers in New England and skeptical readers in England; purpose is to defend the legitimacy of the court that sent 19 people to the gallows, while Mather privately urged caution about spectral evidence; POV is leading Puritan minister with a personal and family stake in defending judicial decisions made by Puritan magistrates.
 
-> **4. Anonymous, "Account of the Stono Rebellion" (1739)**
-> "About 20 of them met... to march to Spanish Florida... having shouted 'Liberty.'"
+> **4. Anonymous, "An Account of the Negroe Insurrection in South Carolina" (1739)**
+> "Some Angola Negroes assembled, to the number of Twenty; and one who was called Jemmy was their Captain... Several Negroes joyned them, they calling out Liberty, marched on with Colours displayed, and two Drums beating..."
 
-- **HIPP:** Anonymous published colonial account of the largest slave uprising in the British North American colonies before the Revolution; intended audience is South Carolina colonial elites and other slave-holding colonies; purpose is to warn other colonies of the danger and justify harsher slave codes (Negro Act of 1740); POV is white South Carolina elite; the absence of any first-person Stono rebel voice is itself a sourcing fact about whose perspective survives.
+- **HIPP:** Anonymous report on the largest slave uprising in the British mainland colonies, probably written in Georgia in October 1739 and sent to the colony's Trustees in London (sometimes attributed to James Oglethorpe); intended audience is the Georgia Trustees and imperial officials; purpose is to report the danger and blame Spanish Florida, whose offer of freedom to runaways drew the rebels south; POV is a white colonial official allied with South Carolina's planters; the absence of any first-person Stono rebel voice is itself a sourcing fact about whose perspective survives.
 
 > **5. Jonathan Edwards, *Sinners in the Hands of an Angry God* (1741)**
 > "The God that holds you over the pit of hell, much as one holds a spider, or some loathsome insect, over the fire... is dreadfully provoked."
@@ -63,11 +63,11 @@ export const apushColonialSocietyConflictsPart6Data = {
 
 ## AP SAQ Structure
 
-For a 1607–1754 conflict SAQ:
+From May 2027, all three SAQs are **required** and all are **sourced**: Q1 uses a secondary text, Q2 a primary text, and Q3 a primary or secondary non-text source (map, image or chart), each from a different period between 1491 and 2001. A conflict document like those above could anchor Q2. Typical tasks:
 
-- **A. Identify** one specific conflict (Pueblo Revolt, King Philip's War, Bacon's Rebellion, Salem, Stono)
-- **B. Explain** how the conflict shaped subsequent colonial policy or society
-- **C. Compare** to a different conflict, OR explain how an Indigenous/enslaved/dissenting perspective complicates the standard colonial narrative
+- **A. Identify or describe** the author's point of view, purpose or argument
+- **B. Explain** how a specific conflict (Pueblo Revolt, King Philip's War, Bacon's Rebellion, Salem, Stono) shaped later colonial policy or society
+- **C. Explain** how an Indigenous, enslaved or dissenting perspective supports or complicates the source's account
 
 ## Common AP Traps
 
@@ -76,7 +76,7 @@ For a 1607–1754 conflict SAQ:
 | Treating Indigenous nations as monolithic | Wampanoag, Narragansett, Pueblo, Iroquois had distinct interests and alliances |
 | Treating the Salem Witch Trials as just superstition | They reflect specific gender, generational, and economic tensions in 1692 Massachusetts |
 | Forgetting the Stono Rebellion | It was the largest pre-Revolutionary slave uprising; led to Negro Act of 1740 |
-| Treating the Pueblo Revolt as a footnote | It was the most successful Indigenous expulsion of European colonists in early American history |
+| Treating the Pueblo Revolt as a footnote | It is often called the most successful Native expulsion of European colonists in early American history: the Spanish stayed out of New Mexico for twelve years |
 | Quoting documents without HIPP | Required for the complexity point |
 
 > 🔑 Key takeaway: Every conflict-era document was written by someone with a stake in the outcome. The Spanish governor, the Puritan minister, the South Carolina elite — they each had reasons to frame the conflict the way they did. HIPP recovers those positions; complexity points require naming them.
@@ -89,26 +89,26 @@ For a 1607–1754 conflict SAQ:
       exercise: {
         questions: [
           {
-            question: "Which historical context is most essential for sourcing Antonio de Otermín's 1680 account of the Pueblo Revolt?",
+            question: "Which best describes the point of view of Antonio de Otermín's reports on the Pueblo Revolt?",
             options: [
-              "The account is by the Spanish governor of New Mexico in the immediate aftermath of the 1680 Pueblo Revolt led by Popé, in which Pueblo nations expelled the Spanish from New Mexico for over a decade in protest of missionary suppression of Pueblo religion and the encomienda labor system",
-              "The account is by an Indigenous Pueblo leader in the immediate aftermath of the 1680 Pueblo Revolt and provides a complete first-person Indigenous perspective on Spanish missionary and labor practices in New Mexico during the late seventeenth century in the region",
-              "The account is by an English Puritan minister in the immediate aftermath of the 1680 King Philip's War in New England and provides a Puritan covenantal interpretation of the war with the Wampanoag-Narragansett alliance during the period in any region",
-              "The account is by a French Jesuit missionary in New France in the immediate aftermath of the 1680 Iroquois wars and provides a French Catholic perspective on the Iroquois Confederacy during the late seventeenth century in any region of North America"
+              "A Pueblo leader explaining to his followers why they should rise against the missions",
+              "A Spanish governor explaining how Pueblo peoples drove out his colonists",
+              "A Puritan minister interpreting a Native war in New England as a judgment from God",
+              "A French Jesuit describing Iroquois raids on the Native missions of New France"
             ],
-            correctAnswer: 0,
-            explanation: 'Otermín = Spanish governor of New Mexico, immediate post-1680 Pueblo Revolt, Popé-led expulsion against missionary suppression and encomienda labor.'
+            correctAnswer: 1,
+            explanation: "Otermín was the Spanish governor who fled Santa Fe in 1680, and his reports to Spanish authorities tended to blame a few leaders such as Popé rather than mission and labor abuses. The other options describe Pueblo, Puritan and French perspectives on different events."
           },
           {
-            question: "The 1739 account of the Stono Rebellion is best sourced as which type of document?",
+            question: "Which best describes the point of view of the 1739 account of the Stono Rebellion?",
             options: [
-              "An anonymous white South Carolina colonial account whose purpose was to warn other slave-holding colonies and justify harsher slave codes (Negro Act of 1740) — and whose silence about any first-person rebel perspective is itself a sourcing fact about whose voice survives in colonial archives",
-              "A first-person enslaved African account written by a Stono rebel that provides a complete Africa-centered perspective on the rebellion's causes, planning, and aftermath in South Carolina during the late 1730s and early 1740s in the region",
-              "A Spanish colonial account from St. Augustine, Florida that provides a Spanish imperial perspective on the rebellion and the Spanish offer of freedom to enslaved people who reached Spanish territory during the period from 1739 onward in the region",
-              "A British parliamentary committee report that provides a London-centered imperial perspective on the rebellion and a comprehensive policy response from the British government during the period from 1739 through the early 1740s in any region"
+              "A colonial official alarmed by the revolt who blamed Spanish Florida for inviting it",
+              "An enslaved rebel explaining the grievances that led him to take up arms that day",
+              "A Spanish officer at St. Augustine celebrating the rebels' attempt to reach freedom",
+              "A London journalist relying only on rumors that reached the city from distant ports"
             ],
             correctAnswer: 0,
-            explanation: 'Stono account: anonymous white SC, purpose was to warn + justify Negro Act 1740. Absence of rebel voice is itself a sourcing fact.'
+            explanation: "The anonymous author wrote from the colonists' side, likely from Georgia for the Trustees, and stressed Spain's offer of freedom to runaways. No rebel's own account survives, which is itself an important sourcing fact."
           }
         ]
       }
@@ -120,19 +120,19 @@ For a 1607–1754 conflict SAQ:
       exercise: {
         questions: [
           {
-            prompt: 'The 1680 Indigenous uprising in New Mexico led by Popé that expelled the Spanish for over a decade.',
+            question: 'The 1680 Indigenous uprising in New Mexico led by Popé that expelled the Spanish for over a decade.',
             answer: 'Pueblo Revolt',
             acceptableAnswers: ['Pueblo Revolt', "Popé's Rebellion", "Pope's Rebellion", 'Pueblo Rebellion'],
-            hint: 'Largest successful Indigenous expulsion of Europeans in early American history.'
+            hint: 'Pueblo peoples held Santa Fe until the Spanish returned under Diego de Vargas in 1692.'
           },
           {
-            prompt: "The 1675–76 New England conflict between colonists and the Wampanoag-Narragansett alliance led by Metacom.",
+            question: "The 1675–76 New England conflict between colonists and the Wampanoag-Narragansett alliance led by Metacom.",
             answer: "King Philip's War",
             acceptableAnswers: ["King Philip's War", "King Philips War", "Metacom's War", "Metacoms War", 'Metacom War'],
             hint: 'English colonists called Metacom "King Philip"; one of the deadliest per-capita wars in American history.'
           },
           {
-            prompt: 'The 1739 South Carolina slave uprising that led to the Negro Act of 1740.',
+            question: 'The 1739 South Carolina slave uprising that led to the Negro Act of 1740.',
             answer: 'Stono Rebellion',
             acceptableAnswers: ['Stono Rebellion', 'Stono Uprising', 'Stono'],
             hint: 'Largest slave rebellion in British North America before the American Revolution.'
@@ -147,22 +147,22 @@ For a 1607–1754 conflict SAQ:
       exercise: {
         dropdowns: [
           {
-            label: "Knowing Cotton Mather's 1693 *Wonders of the Invisible World* was published immediately after the Salem trials concluded is most useful for: ___",
+            label: "Knowing Cotton Mather wrote *The Wonders of the Invisible World* in 1692 as the Salem trials were ending is most useful for: ___",
             options: ['historical context', 'intended audience', 'purpose', 'point of view']
           },
           {
-            label: "Knowing Increase Mather wrote King Philip's War as a Puritan minister within a providential covenantal framework is most useful for: ___",
+            label: "Knowing Increase Mather wrote about King Philip's War as a Puritan minister within a providential covenantal framework is most useful for: ___",
             options: ['historical context', 'intended audience', 'purpose', 'point of view']
           },
           {
-            label: "Knowing the anonymous 1739 Stono account targeted other slave-holding colonies to justify harsher codes is most useful for: ___",
+            label: "Knowing the anonymous 1739 Stono account was written for the Georgia Trustees and officials in London is most useful for: ___",
             options: ['historical context', 'intended audience', 'purpose', 'point of view']
           }
         ],
         correctAnswers: ['historical context', 'point of view', 'intended audience'],
-        hint1: 'Immediately after the trials concluded situates the moment — that is context.',
+        hint1: 'As the trials were ending situates the moment — that is context.',
         hint2: "Puritan minister within providential covenantal framework names the writer's position — that is POV.",
-        hint3: 'Targeting other slave-holding colonies names the rhetorical target — that is audience.',
+        hint3: 'Writing for the Trustees in London names the readers — that is audience.',
         explanation: 'Each HIPP element does different work: situation → context; identity/framework → POV; rhetorical target → audience.'
       }
     },
@@ -173,26 +173,26 @@ For a 1607–1754 conflict SAQ:
       exercise: {
         questions: [
           {
-            question: 'An SAQ asks: "Identify ONE seventeenth-century colonial conflict, and explain how it shaped subsequent colonial policy." Which response would score highest?',
+            question: 'An SAQ asks: "Explain how ONE seventeenth-century colonial conflict affected later colonial policy." Which response would earn the point?',
             options: [
-              "King Philip's War (1675–76) devastated New England's frontier towns and Indigenous communities; in its aftermath, colonial governments tightened Indigenous land restrictions, expanded militia laws, and the Crown moved to consolidate New England under the Dominion of New England (1686), accelerating imperial centralization until the Glorious Revolution",
-              "Some seventeenth-century conflict happened at some point in some way that shaped some kind of subsequent policy in some part of British North America during the period from 1607 through 1700 in some region of the colonies",
-              "Seventeenth-century conflicts existed and colonial policy existed and there is generally a connection between them recognized by historians of British North America during the period from 1607 through 1700 in some region of the colonies",
-              "Seventeenth-century conflicts had no influence on subsequent colonial policy in British North America during the period from 1607 through 1700 in any region of the colonies with no policy effects of any kind in any region"
+              "The Pueblo Revolt (1680) was led by Popé, a Tewa religious leader from Ohkay Owingeh, and began in August with coordinated attacks across the province.",
+              "The Pueblo Revolt (1680) shows that conflicts between Native peoples and Europeans often had important effects on the colonial policies that followed.",
+              "The Pueblo Revolt (1680) convinced Spain to abandon New Mexico for good, so the region remained under Pueblo control until the United States arrived.",
+              "The Pueblo Revolt (1680) drove the Spanish from New Mexico, and after returning in 1692 they eased forced labor and tolerated some Pueblo rituals."
             ],
-            correctAnswer: 0,
-            explanation: 'AP SAQ rewards specific conflict + specific policy effects: tightened land restrictions, militia laws, Dominion of New England 1686.'
+            correctAnswer: 3,
+            explanation: "The winning response links the conflict to a specific later policy: Spanish accommodation after the reconquest. One alternative only describes the revolt, one is too vague to explain anything, and one is false because Spain returned in 1692."
           },
           {
-            question: "Which short answer best demonstrates AP \"complexity\" by complicating the standard colonial narrative of seventeenth-century conflicts?",
+            question: "Which response best adds complexity to colonial accounts that called the Pueblo Revolt, King Philip's War and the Stono Rebellion unprovoked uprisings?",
             options: [
-              "Although colonial-era documents almost always frame conflicts as defensive responses to Indigenous or enslaved 'rebellion,' the Pueblo Revolt (1680), King Philip's War (1675–76), and Stono Rebellion (1739) are better understood as Indigenous and enslaved peoples' organized political responses to specific colonial impositions — missionary suppression of Pueblo religion, encroachment on Wampanoag land and sovereignty, and the brutality of the South Carolina slave regime",
-              "Colonial-era conflicts had no Indigenous or enslaved political agency of any kind and were entirely the product of unprovoked Indigenous and enslaved aggression against colonial settlements during the entire period from 1607 through 1754 in any region",
-              "Colonial-era conflicts had no specific causes of any kind and were entirely random events with no relationship to missionary practices, land encroachment, or slavery during the entire period from 1607 through 1754 in any region of the colonies",
-              "Colonial-era conflicts did not occur and there were no Pueblo Revolt, King Philip's War, or Stono Rebellion of any kind during the entire period from 1607 through 1754 in any region of British North America during the period in any region"
+              "Colonial accounts called these conflicts unprovoked revolts, and the evidence confirms that Native and enslaved rebels attacked without any clear grievances.",
+              "Colonial accounts called these conflicts religious wars, and the evidence shows that each one was fought mainly over differences in Christian doctrine.",
+              "Colonial accounts called these conflicts unprovoked revolts, but the rebels in each case acted against specific abuses such as religious suppression and land loss.",
+              "Colonial accounts called these conflicts minor disturbances, but the evidence shows that each one ended colonial rule in the region where it occurred."
             ],
-            correctAnswer: 0,
-            explanation: 'AP complexity: explicitly reframe conflicts as organized Indigenous/enslaved political responses to specific colonial impositions, naming each one.'
+            correctAnswer: 2,
+            explanation: "Complexity means reading against the colonial sources: Pueblo, Wampanoag and enslaved rebels responded to concrete grievances such as suppression of Pueblo religion, the loss of Wampanoag land and the brutality of slavery. The other responses accept the sources uncritically or make false claims about the conflicts' causes and results."
           }
         ]
       }

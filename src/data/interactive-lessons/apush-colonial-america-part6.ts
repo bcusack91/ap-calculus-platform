@@ -44,10 +44,11 @@ export const apushColonialAmericaPart6Data = {
 > **2. John Winthrop, *A Model of Christian Charity* ("City upon a Hill," 1630)**
 > "We shall be as a city upon a hill, the eyes of all people are upon us."
 
-- **HIPP:** Lay sermon delivered aboard the *Arbella* during the Puritan Great Migration to Massachusetts Bay; intended audience is fellow Puritan colonists about to found a new commonwealth; purpose is to articulate the religious and communal purpose of the colony as a visible model to England and the world; POV is Puritan layman and incoming governor with a covenantal theology.
+- **HIPP:** Lay sermon delivered in 1630 as the Winthrop fleet sailed for Massachusetts Bay (traditionally placed aboard the *Arbella*; some historians think it was given in England just before departure), at the start of the Puritan Great Migration; intended audience is fellow Puritan colonists about to found a new commonwealth; purpose is to articulate the religious and communal purpose of the colony as a visible model to England and the world; POV is Puritan layman and incoming governor with a covenantal theology.
 
-> **3. Nathaniel Bacon, "Declaration of the People of Virginia" (1676)**
-> "Sir William Berkeley... has wronged his Majesty's prerogative and interest by assuming Monopoly of the Beaver Trade."
+> **3. Nathaniel Bacon, "Declaration in the Name of the People" (July 30, 1676)**
+> "For haveing wronged his Majesties prerogative and interest, by assumeing Monopoly of the Beaver trade, and for haveing in that unjust gaine betrayed and sold his Majesties Country and the lives of his loyall subjects, to the barbarous heathen."
+> (One of the charges the Declaration lists against Governor Sir William Berkeley; original spelling.)
 
 - **HIPP:** Published manifesto issued during Bacon's Rebellion against Virginia Governor William Berkeley; intended audience is Virginia colonists, Berkeley's faction, and the Crown; purpose is to justify the armed uprising against the colonial elite by appealing to royal prerogative and frontier grievances; POV is upcountry planter leading a coalition of frontier settlers, indentured servants, and enslaved people against tidewater elites.
 
@@ -57,17 +58,17 @@ export const apushColonialAmericaPart6Data = {
 - **HIPP:** Constitutional document for the new Quaker proprietary colony; intended audience is prospective European settlers (especially Quakers and German Pietists) and the English Crown; purpose is to recruit migrants by promising religious toleration, representative government, and orderly land distribution; POV is Quaker proprietor implementing the religious and political ideals of his sect.
 
 > **5. Phillis Wheatley, "On Being Brought from Africa to America" (1773)**
-> "Some view our sable race with scornful eye... / Remember, Christians, Negroes, black as Cain, / May be refin'd, and join th' angelic train."
+> "Some view our sable race with scornful eye, / 'Their colour is a diabolic die.' / Remember, Christians, Negroes, black as Cain, / May be refin'd, and join th' angelic train."
 
-- **HIPP:** Poem published in *Poems on Various Subjects, Religious and Moral*, the first published book by an African American; intended audience is white Anglo-American readers in Boston and London; purpose is to demonstrate Black literary and spiritual capacity to white skeptics while critiquing racial hierarchy through ironic Christian framing; POV is enslaved African woman in Boston writing under the patronage of the Wheatley family.
+- **HIPP:** Poem published in London in *Poems on Various Subjects, Religious and Moral* (1773), one of the earliest books published by an African American author; intended audience is white Anglo-American readers in Boston and London; purpose is to demonstrate Black literary and spiritual capacity to white skeptics while critiquing racial hierarchy through ironic Christian framing; POV is enslaved African woman in Boston writing under the patronage of the Wheatley family.
 
 ## AP SAQ Structure
 
-For a 1607–1754 SAQ:
+From May 2027, all three SAQs are **required** and all are **sourced**: Q1 uses a secondary text (a historian's argument), Q2 a primary text, and Q3 a primary or secondary non-text source such as a map, image or chart, each from a different period between 1491 and 2001. A colonial document like the ones above could anchor Q2. Each SAQ has three tasks, for example:
 
-- **A. Identify** one specific colony, conflict, or institution
-- **B. Explain** how that colony/conflict/institution shaped a particular outcome
-- **C. Compare** to a different colony/conflict/institution OR explain a contrasting interpretation
+- **A. Identify or describe** something in the source, such as the author's point of view or purpose
+- **B. Explain** how a specific development (a colony, conflict or institution) relates to the source
+- **C. Explain** a further piece of evidence that supports, or a development that complicates, the source's claim
 
 ## Common AP Traps
 
@@ -91,24 +92,24 @@ For a 1607–1754 SAQ:
           {
             question: "Which historical context is most essential for sourcing John Winthrop's 1630 'City upon a Hill' sermon?",
             options: [
-              "The sermon was delivered aboard the Arbella during the Puritan Great Migration to Massachusetts Bay; Winthrop, the incoming governor, used it to articulate the religious and communal purpose of the colony as a visible covenantal model to England",
-              "The sermon was delivered in Plymouth Colony in 1620 by William Bradford as a justification for the Mayflower Compact and the Pilgrims' Separatist break from the Church of England during the early colonial period",
-              "The sermon was delivered in 1776 by John Adams as a justification for American independence and the rejection of British monarchical authority during the Revolutionary period in any region of the colonies",
-              "The sermon was delivered in 1740 by George Whitefield during the Great Awakening as a justification for evangelical revivalism and the rejection of established colonial church authority during the period in any region"
+              "Pilgrim Separatists were preparing to sign the Mayflower Compact off Cape Cod",
+              "Revival preachers were drawing huge crowds during the First Great Awakening",
+              "Puritan families were sailing to found a covenanted colony at Massachusetts Bay",
+              "Patriot leaders were debating whether to declare independence from Britain"
             ],
-            correctAnswer: 0,
-            explanation: 'Winthrop 1630, aboard Arbella, Puritan Great Migration to Massachusetts Bay. Articulating covenantal purpose of the colony.'
+            correctAnswer: 2,
+            explanation: "Winthrop spoke as the Great Migration began, to settlers about to found Massachusetts Bay, and he defined the colony's covenant with God and its duty to be an example. The Mayflower Compact came ten years earlier, and the Awakening and independence debates came over a century later."
           },
           {
-            question: "Which best identifies the point of view of Nathaniel Bacon's 1676 'Declaration of the People of Virginia'?",
+            question: "Which best identifies the point of view of Nathaniel Bacon's 1676 'Declaration in the Name of the People'?",
             options: [
-              "An upcountry Virginia planter leading a coalition of frontier settlers, indentured servants, and enslaved people against the tidewater elite around Governor Berkeley, framing the rebellion as a defense of royal prerogative against colonial corruption",
-              "A tidewater Virginia elite planter writing in defense of Governor Berkeley's policies on Indigenous trade and frontier defense during the period from 1676 through the end of the seventeenth century in Virginia",
-              "An English Crown official writing in defense of royal authority against colonial overreach during the period from 1676 through the end of the seventeenth century in any North American colony in any region",
-              "A Massachusetts Bay Puritan minister writing in defense of religious orthodoxy against colonial dissenters during the period from 1676 through the end of the seventeenth century in New England in any region"
+              "A royal official defending the governor against complaints from the frontier",
+              "A frontier planter attacking the governor and the elite favorites around him",
+              "An enslaved rebel demanding freedom for everyone who joined the uprising",
+              "A Puritan minister warning Virginia colonists against the sin of rebellion"
             ],
-            correctAnswer: 0,
-            explanation: 'Bacon 1676: upcountry Virginia planter leading a coalition of frontier settlers + indentured servants + enslaved people against the tidewater elite.'
+            correctAnswer: 1,
+            explanation: "Bacon wrote as a newly arrived but well-connected planter leading frontier settlers against Governor Berkeley, whom he accused of favoritism, unjust taxes and protecting Native peoples. The Declaration attacks the governor rather than defending him, and it is not the voice of an enslaved person or a minister."
           }
         ]
       }
@@ -120,19 +121,19 @@ For a 1607–1754 SAQ:
       exercise: {
         questions: [
           {
-            prompt: 'The Puritan layman whose 1630 lay sermon aboard the Arbella articulated the "City upon a Hill" vision of Massachusetts Bay.',
+            question: 'The Puritan layman whose 1630 lay sermon to the departing Massachusetts Bay colonists articulated the "City upon a Hill" vision of Massachusetts Bay.',
             answer: 'John Winthrop',
             acceptableAnswers: ['John Winthrop', 'Winthrop', 'Governor Winthrop'],
             hint: 'Served as governor of Massachusetts Bay Colony.'
           },
           {
-            prompt: 'The Quaker proprietor whose 1682 Frame of Government promised religious toleration in his proprietary colony.',
+            question: 'The Quaker proprietor whose 1682 Frame of Government promised religious toleration in his proprietary colony.',
             answer: 'William Penn',
             acceptableAnswers: ['William Penn', 'Penn'],
-            hint: 'His colony was named for him by Charles II in repayment of a royal debt.'
+            hint: 'Charles II granted him the charter in 1681 to settle a debt owed to his father, for whom the colony was named.'
           },
           {
-            prompt: 'The enslaved African woman whose 1773 *Poems on Various Subjects* was the first published book by an African American.',
+            question: 'The enslaved African woman whose 1773 *Poems on Various Subjects, Religious and Moral*, published in London, made her a famous poet on both sides of the Atlantic.',
             answer: 'Phillis Wheatley',
             acceptableAnswers: ['Phillis Wheatley', 'Wheatley'],
             hint: 'Wrote under the patronage of the Wheatley family in Boston.'
@@ -173,26 +174,26 @@ For a 1607–1754 SAQ:
       exercise: {
         questions: [
           {
-            question: 'An SAQ asks: "Identify ONE seventeenth-century colonial conflict, and explain how it shaped the development of slavery in British North America." Which response would score highest?',
+            question: 'An SAQ asks: "Explain how ONE seventeenth-century colonial conflict affected the development of slavery in British North America." Which response would earn the point?',
             options: [
-              "Bacon's Rebellion (1676), in which Nathaniel Bacon's coalition of frontier settlers, indentured servants, and enslaved people threatened Virginia's tidewater elite, prompted planters to shift their labor force from white indentured servants to African slaves to prevent future cross-racial uprisings — accelerating the racialization of slavery in the Chesapeake",
-              "Some seventeenth-century colonial conflict happened at some point in some way that produced some kind of effect on slavery in some part of British North America during the period from 1607 through 1700 in some region",
-              "Seventeenth-century colonial conflicts existed and slavery existed and there is generally a connection between them recognized by historians of British North America during the period from 1607 through 1700 in some region",
-              "Seventeenth-century colonial conflicts had no connection to slavery in British North America during the period from 1607 through 1700 in any region of the colonies with no labor-system effects of any kind in any region"
+              "Bacon's Rebellion (1676) showed planters the danger of armed landless freedmen, so they turned to enslaved Africans who could never become free.",
+              "Bacon's Rebellion (1676) was led by Nathaniel Bacon against Governor William Berkeley, and it collapsed after Bacon died of dysentery that October.",
+              "Bacon's Rebellion (1676) shows that colonial conflicts in the seventeenth century had important effects on the way slavery developed over time.",
+              "Bacon's Rebellion (1676) led Virginia to abolish indentured servitude by law, so planters had to replace all their servants with enslaved Africans."
             ],
             correctAnswer: 0,
-            explanation: 'AP SAQ rewards specific conflict (Bacon\'s Rebellion 1676) + specific outcome (shift from indentured to racial slavery in Chesapeake).'
+            explanation: "The winning response links a specific conflict to a specific mechanism and result: fear of landless freedmen pushed planters toward lifelong racial slavery. One alternative only describes the rebellion, one is too vague to explain anything, and one invents a law that never existed."
           },
           {
-            question: 'Which short answer best demonstrates AP "complexity" by complicating a single-cause narrative about the rise of racial slavery in British North America?',
+            question: 'Which response best adds complexity to the claim that Bacon\'s Rebellion caused the rise of racial slavery in the Chesapeake?',
             options: [
-              "Although Bacon's Rebellion (1676) is correctly identified as a turning point, the rise of racial slavery also reflected the declining supply of English indentured servants as English wages rose, expanded English participation in the African slave trade after the Royal African Company's 1672 charter, and the codification of racial slave status through colonial slave codes from the 1660s onward",
-              "Bacon's Rebellion was the only cause of the rise of racial slavery in British North America and there were no other contributing factors of any kind from labor markets, the slave trade, or slave codes during the period",
-              "Bacon's Rebellion played no role in the rise of racial slavery in British North America and the entire shift was caused entirely by other factors unrelated to the rebellion during the period from 1660 through 1700 in any region",
-              "Racial slavery did not rise in British North America during the period from 1607 through 1700 and the entire concept of a shift from indentured servitude to racial slavery is a historical myth invented in the twentieth century"
+              "Bacon's Rebellion mattered most, because it was the only colonial uprising in which servants and enslaved people ever fought side by side.",
+              "Bacon's Rebellion mattered less than tobacco prices, which collapsed in the 1660s and ended planters' demand for bound labor of any kind.",
+              "Bacon's Rebellion mattered, and it led every other colony from New England to Georgia to adopt plantation slavery within a few years.",
+              "Bacon's Rebellion mattered, but falling English migration and the Royal African Company's growing slave trade also pushed planters toward slavery."
             ],
-            correctAnswer: 0,
-            explanation: 'AP complexity: name Bacon\'s Rebellion AND declining English servant supply AND Royal African Company 1672 AND 1660s slave codes.'
+            correctAnswer: 3,
+            explanation: "Complexity means showing multiple causes: fewer English servants as wages rose at home and more enslaved Africans available after the Royal African Company's 1672 charter worked alongside planters' fears after 1676. The other responses overstate a single factor, rest on false claims about tobacco, or overgeneralize across regions."
           }
         ]
       }

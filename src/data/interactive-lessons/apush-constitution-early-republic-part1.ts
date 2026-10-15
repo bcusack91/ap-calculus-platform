@@ -44,7 +44,7 @@ America's first constitution, the **Articles of Confederation**, created a delib
 
 ### Shays' Rebellion (1786–87)
 - Massachusetts farmers, crushed by debt and taxes, rebelled under **Daniel Shays**
-- State militia had to suppress it (federal government was too weak to act)
+- A Massachusetts militia, paid for largely by Boston merchants, had to suppress it (the national government was too weak to act)
 - **Significance:** Exposed the fatal weakness of the Articles and convinced leaders like Washington, Hamilton, and Madison that a stronger national government was essential
 - Directly spurred the call for the **Constitutional Convention**
       `
@@ -58,26 +58,26 @@ America's first constitution, the **Articles of Confederation**, created a delib
       exercise: {
         questions: [
           {
-            question: 'Shays\' Rebellion (1786–87) was historically significant primarily because it:',
+            question: 'Shays\' Rebellion (1786–87) strengthened the movement for a new constitution chiefly because it',
             options: [
-              'Demonstrated that the Articles of Confederation created a national government too weak to maintain order',
-              'Successfully overthrew the Massachusetts state government',
-              'Led directly to the abolition of slavery in northern states',
-              'Proved that state militias were more effective than a national army'
+              'showed the national government was too weak to keep order',
+              'proved that a state militia could not put down an armed uprising',
+              'forced Massachusetts to cancel the debts of its western farmers',
+              'persuaded the states to let Congress collect a tax on imports'
             ],
             correctAnswer: 0,
-            explanation: 'Shays\' Rebellion shocked the political elite by exposing the national government\'s inability to respond to domestic unrest. The federal government under the Articles couldn\'t raise troops or funds. This crisis was a primary catalyst for calling the Constitutional Convention in Philadelphia in 1787.'
+            explanation: 'Congress under the Articles had no money and no army to answer the uprising, and Massachusetts had to raise a militia paid for largely by Boston merchants. That failure convinced leaders such as Washington and Madison that a stronger national government was needed. A proposed federal import tax never won the unanimous approval of the states.'
           },
           {
-            question: 'Under the Articles of Confederation, which of the following was the MOST significant structural weakness?',
+            question: 'Which of the following was the most serious weakness of the national government under the Articles of Confederation?',
             options: [
-              'Congress could not levy taxes, leaving the government unable to fund itself or pay war debts',
-              'The president had too much executive power over the states',
-              'The Supreme Court could override state laws without consent',
-              'States were required to contribute equal numbers of soldiers to a standing army'
+              'The president could veto acts of Congress with no override',
+              'Congress could not tax and had to request money from the states',
+              'The national courts could strike down laws passed by the states',
+              'Each state\'s votes in Congress were weighted by its population'
             ],
-            correctAnswer: 0,
-            explanation: 'The inability to tax was the Articles\' most crippling weakness. Without revenue, Congress couldn\'t pay Revolutionary War debts, fund a military, or conduct foreign policy effectively. There was no president and no Supreme Court under the Articles.'
+            correctAnswer: 1,
+            explanation: 'Without a taxing power, Congress could not pay the war debt, fund an army or conduct a credible foreign policy. The Articles had no president and no national courts, and each state had one vote.'
           }
         ]
       }
@@ -103,7 +103,7 @@ Fifty-five delegates met in Philadelphia. Key figures: **James Madison** ("Fathe
 
 | | Federalists | Anti-Federalists |
 |---|---|---|
-| **Key Figures** | Hamilton, Madison, Jay | Patrick Henry, George Mason, Samuel Adams |
+| **Key Figures** | Hamilton, Madison, Jay | Patrick Henry, George Mason, Richard Henry Lee |
 | **Position** | Supported ratification of the Constitution | Opposed ratification without a Bill of Rights |
 | **Key Arguments** | Strong central government needed; checks & balances prevent tyranny; *The Federalist Papers* (85 essays) | Constitution gave too much power to federal government; lacked protections for individual liberties |
 | **Result** | Won ratification | Secured the promise of a **Bill of Rights** (first 10 amendments, ratified 1791) |
@@ -169,26 +169,26 @@ Use the exact historical term.
       exercise: {
         questions: [
           {
-            question: 'The Three-Fifths Compromise is BEST understood as evidence that:',
+            question: 'The Three-Fifths Compromise is best understood as evidence that the framers',
             options: [
-              'The Constitution\'s framers prioritized political union over moral consistency on the issue of slavery',
-              'Northern delegates successfully limited slavery\'s expansion into new territories',
-              'Southern delegates agreed to gradually abolish slavery in exchange for representation',
-              'Enslaved people were granted partial citizenship and voting rights under the Constitution'
+              'accepted protections for slavery to keep the southern states in the Union',
+              'agreed to keep slavery out of the territories west of the Appalachians',
+              'planned for the gradual abolition of slavery after the year 1808',
+              'gave enslaved people a partial form of citizenship and voting rights'
             ],
             correctAnswer: 0,
-            explanation: 'The Three-Fifths Compromise was a political bargain that increased Southern representation in Congress without granting enslaved people any rights. It reveals the framers\' willingness to accommodate slavery to achieve ratification — a moral compromise that would haunt the nation until the Civil War.'
+            explanation: 'Counting three-fifths of enslaved people increased southern seats in the House without giving enslaved people any rights. Delegates accepted it, along with the slave-trade and fugitive slave clauses, as the price of a union that included the South.'
           },
           {
-            question: 'Which of the following arguments from The Federalist Papers (No. 10) would Madison MOST likely use to defend the Constitution against Anti-Federalist concerns about tyranny?',
+            question: 'In Federalist No. 10, Madison answered the Anti-Federalist claim that a large republic would fall into tyranny by arguing that',
             options: [
-              'A large republic with diverse interests makes it harder for any single faction to dominate, protecting minority rights',
-              'The president should serve for life to ensure stable governance',
-              'State governments should have no independent authority under the new system',
-              'Direct democracy at the national level is the best safeguard against tyranny'
+              'the states would keep enough power to block abuses by the national government',
+              'a bill of rights would protect minorities from oppression by the majority',
+              'a nation of great size has so many factions that none of them can dominate',
+              'direct votes by all citizens on national laws would check corrupt officials'
             ],
-            correctAnswer: 0,
-            explanation: 'In Federalist No. 10, Madison argued that a large republic (as opposed to a small one) would contain so many competing factions that no single group could gain enough power to tyrannize others. This was his most innovative argument against the Anti-Federalist claim that republics only work in small territories.'
+            correctAnswer: 2,
+            explanation: 'Madison argued that a large republic contains so many competing interests that a single faction would find it hard to form a majority and oppress others. He did not rely on a bill of rights or direct democracy, which he distrusted.'
           }
         ]
       }

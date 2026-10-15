@@ -42,7 +42,7 @@ export const apushConstitutionEarlyRepublicPart6Data = {
 - **HIPP:** Essay published in New York newspapers in 1787 as part of the campaign to ratify the proposed Constitution; intended audience is New York voters and ratifying conventions; purpose is to refute the Anti-Federalist objection that a large republic cannot survive by arguing that an extended republic actually controls factionalism better than a small one; POV is Madison writing under the pseudonym "Publius" alongside Hamilton and Jay.
 
 > **2. James Madison, *Federalist No. 51* (1788)**
-> "If men were angels, no government would be necessary... Ambition must be made to counteract ambition."
+> "Ambition must be made to counteract ambition... If men were angels, no government would be necessary."
 
 - **HIPP:** Companion essay in the Federalist Papers ratification campaign; intended audience is the same New York audience and other ratifiers; purpose is to defend the constitutional structure of separation of powers and checks and balances as the institutional remedy for human ambition; POV is Madison ("Publius") arguing for institutional design as a substitute for civic virtue.
 
@@ -52,7 +52,7 @@ export const apushConstitutionEarlyRepublicPart6Data = {
 - **HIPP:** Anti-Federalist essay published in New York newspapers in 1787 in direct response to the Federalist case for ratification; intended audience is the same New York voters and ratifiers; purpose is to argue that the proposed Constitution would create a consolidated national government too distant from the people to be controlled, drawing on classical republican theory that republics must remain small; POV is an Anti-Federalist drawing on the Whig and classical republican tradition that the Federalists were attacking.
 
 > **4. George Washington, *Farewell Address* (1796)**
-> "The name of American... must always exalt the just pride of patriotism... However combinations or associations of [party]... they... become potent engines, by which cunning, ambitious, and unprincipled men will be enabled to subvert the power of the people."
+> "The name of American, which belongs to you in your national capacity, must always exalt the just pride of patriotism more than any appellation derived from local discriminations... Let me now take a more comprehensive view, and warn you in the most solemn manner against the baneful effects of the spirit of party generally."
 
 - **HIPP:** Open published letter announcing Washington's decision not to seek a third term; intended audience is the American public, future political leaders, and especially partisans on both sides of the emerging Federalist-Republican divide; purpose is to set presidential precedent (no third term) and to warn against political parties and "permanent alliances" with foreign nations; POV is the outgoing Federalist-leaning president attempting to claim a non-partisan stance even as the Federalist-Republican division was hardening.
 
@@ -63,7 +63,7 @@ export const apushConstitutionEarlyRepublicPart6Data = {
 
 ## AP SAQ Structure
 
-For a 1787–1800 SAQ:
+From May 2027 all three SAQs are required and all three are sourced: Q1 gives a secondary text, Q2 a primary text, and Q3 a primary or secondary non-text source, each from a different period. A typical three-part question on a 1787–1800 source asks you to:
 
 - **A. Identify** one specific debate, decision, or document from the early republic
 - **B. Explain** how it shaped the development of American political institutions
@@ -89,26 +89,26 @@ For a 1787–1800 SAQ:
       exercise: {
         questions: [
           {
-            question: "Which historical context is most essential for sourcing Madison's *Federalist No. 10* (1787)?",
+            question: "Which historical situation is most essential for sourcing Madison's *Federalist No. 10* (1787)?",
             options: [
-              "The essay was published in New York newspapers in 1787 as part of the Federalist campaign to ratify the proposed Constitution; Madison wrote under the pseudonym 'Publius' (with Hamilton and Jay) to refute Anti-Federalist arguments that a large republic could not survive, arguing instead that an extended republic better controls factionalism",
-              "The essay was published in London in 1776 as part of the British Crown's campaign against the Declaration of Independence with no connection to the proposed U.S. Constitution of any kind during the entire period from 1776 through 1791 in any region",
-              "The essay was published in Paris in 1791 as part of the French Revolutionary government's campaign for the rights of man with no connection to the proposed U.S. Constitution of any kind during the entire period from 1787 through 1791 in any region",
-              "The essay was published in Boston in 1820 as part of the abolitionist campaign against the three-fifths compromise with no connection to the proposed U.S. Constitution ratification debate of any kind during the period in any region"
+              "It was delivered as a speech to the delegates at the Philadelphia Convention.",
+              "It appeared in New York papers during the fight to ratify the new Constitution.",
+              "It was written to defend the Bill of Rights in the first session of Congress.",
+              "It was printed to rally support for Washington during the Whiskey Rebellion."
             ],
-            correctAnswer: 0,
-            explanation: 'Federalist 10: NY newspapers 1787, Federalist ratification campaign, Madison as "Publius," refuting Anti-Federalist objections to a large republic.'
+            correctAnswer: 1,
+            explanation: 'Madison wrote as "Publius" in New York newspapers in late 1787, answering Anti-Federalists such as Brutus during the ratification campaign. The convention met in secret and published no speeches, and the Bill of Rights and the Whiskey Rebellion came later.'
           },
           {
             question: "Which best identifies the point of view of *Brutus No. 1* (1787)?",
             options: [
-              "An Anti-Federalist (likely Robert Yates) drawing on the classical republican and Whig tradition that republics must remain small to allow for similar 'manners, sentiments, and interests' — directly opposing the Federalist case that an extended republic could control factionalism better than a small one",
-              "A Federalist drawing on the modern commercial-republic tradition supporting a large extended republic with no opposition to the Federalist case for the proposed Constitution of any kind during the entire ratification debate in any region of the United States in the period",
-              "A British Crown loyalist drawing on absolutist monarchical theory with no relationship to the American constitutional ratification debate of any kind during the entire period from 1787 through 1791 in any region of the United States in the period",
-              "A French revolutionary drawing on Enlightenment universalist theory with no relationship to the American constitutional ratification debate of any kind during the entire period from 1787 through 1791 in any region of the United States during the period"
+              "A Federalist who believed an extended republic would best control faction",
+              "A southern planter who objected mainly to the slave-trade compromise",
+              "A former Loyalist who wanted the states to rejoin the British Empire",
+              "An Anti-Federalist who believed a free republic had to be small"
             ],
-            correctAnswer: 0,
-            explanation: 'Brutus 1 POV: Anti-Federalist (likely Yates), classical republican + Whig tradition that republics must be small. Direct counter to Federalist position.'
+            correctAnswer: 3,
+            explanation: 'Brutus drew on classical republican theory: a republic works only when its people share "manners, sentiments, and interests," so a vast consolidated republic would escape popular control. That is the opposite of Madison\'s extended-republic argument.'
           }
         ]
       }
@@ -120,22 +120,22 @@ For a 1787–1800 SAQ:
       exercise: {
         questions: [
           {
-            prompt: 'The pseudonym used by Hamilton, Madison, and Jay in the Federalist Papers.',
+            question: 'The pseudonym used by Hamilton, Madison, and Jay in the Federalist Papers.',
             answer: 'Publius',
             acceptableAnswers: ['Publius'],
             hint: 'Roman name evoking the founder of the Roman Republic, Publius Valerius Publicola.'
           },
           {
-            prompt: 'The 1796 published farewell letter by Washington warning against political parties and permanent foreign alliances.',
+            question: 'The 1796 published farewell letter by Washington warning against political parties and permanent foreign alliances.',
             answer: 'Farewell Address',
             acceptableAnswers: ['Farewell Address', "Washington's Farewell Address", "Washingtons Farewell Address"],
             hint: 'Set the precedent against a third presidential term until FDR in 1940.'
           },
           {
-            prompt: 'The 1798 Federalist laws Jefferson cited as evidence of overreach during his 1801 inaugural.',
+            question: 'The 1798 Federalist laws, passed during the war scare with France, that the Virginia and Kentucky Resolutions condemned.',
             answer: 'Alien and Sedition Acts',
             acceptableAnswers: ['Alien and Sedition Acts', 'Alien & Sedition Acts'],
-            hint: 'Spurred the Virginia and Kentucky Resolutions in response.'
+            hint: 'Four laws: three on immigrants and non-citizens, one on criticism of the government.'
           }
         ]
       }
@@ -173,26 +173,26 @@ For a 1787–1800 SAQ:
       exercise: {
         questions: [
           {
-            question: 'An SAQ asks: "Identify ONE feature of the Constitution that reflected a specific compromise, and explain its consequence." Which response would score highest?',
+            question: 'An SAQ asks: "Identify ONE feature of the Constitution that reflected a compromise, and explain ONE consequence of that feature before 1860." Which response would earn both points?',
             options: [
-              "The Three-Fifths Compromise counted three out of every five enslaved people for purposes of House representation and direct taxation; the consequence was to inflate the political power of southern slave-holding states (giving them additional House seats and electoral votes), shaping every major political contest from Jefferson's election in 1800 to the Civil War",
-              "Some feature of the Constitution reflected some kind of compromise and produced some kind of consequence at some point in some region of the United States during the period from 1787 through 1860 in some region of the United States in some region",
-              "Features of the Constitution reflected no compromises of any kind and produced no consequences of any kind during the entire period from 1787 through 1860 in any region of the United States during the period in any region of the United States",
-              "There were no features of the Constitution that reflected any compromises during the entire period from 1787 through 1860 in any region of the United States during the period in any region of the United States during the period in any region"
+              "The Constitution contained many compromises among the states, and these compromises had important effects on the nation for decades.",
+              "The Great Compromise created a two-house Congress, so every state received the same number of seats in the House of Representatives.",
+              "The Three-Fifths Compromise added southern House seats and electoral votes and so strengthened slaveholding states in national politics.",
+              "The Electoral College was a compromise among the delegates, and it later became controversial after the disputed election of 2000."
             ],
-            correctAnswer: 0,
-            explanation: 'AP SAQ rewards specific feature (3/5 Compromise) + specific consequence (inflated southern political power, House + electoral, from 1800 to Civil War).'
+            correctAnswer: 2,
+            explanation: 'This response names a specific compromise and explains a specific consequence within the time frame. The other responses are vague, misstate the Great Compromise (House seats follow population), or describe a consequence after 1860.'
           },
           {
-            question: 'Which short answer best demonstrates AP "complexity" by complicating the standard Federalist-Anti-Federalist narrative?',
+            question: 'Which statement best complicates the claim that the Anti-Federalists simply lost the ratification debate?',
             options: [
-              "Although Federalists won ratification, Anti-Federalist arguments shaped the new republic in lasting ways: the Bill of Rights (1791) was a direct concession to Anti-Federalist demands; Jeffersonian Democratic-Republicans inherited Anti-Federalist suspicion of consolidated power; the Virginia and Kentucky Resolutions (1798) revived Anti-Federalist arguments against federal overreach; and the strict-construction tradition that ran through Jackson and Calhoun all the way to the Civil War traced its lineage to Brutus and other Anti-Federalists",
-              "Anti-Federalists had no influence on the new republic of any kind once Federalists won ratification, with no Bill of Rights, no Jeffersonian inheritance, no Virginia/Kentucky Resolutions, and no strict-construction tradition of any kind during the period",
-              "Federalists had no influence on the new republic of any kind once Anti-Federalists won ratification with no Constitution, no Federalist Papers, and no Federalist-led administration of any kind during the entire period from 1789 through 1801 in any region",
-              "Neither Federalists nor Anti-Federalists existed during the early republic and there was no political division of any kind during the entire period from 1787 through 1801 in any region of the United States during the period in any region"
+              "Their objections forced the convention to remove the three-fifths clause.",
+              "Their candidates won most of the seats in the First Congress in 1789.",
+              "Their demand for protections of liberty produced the Bill of Rights in 1791.",
+              "Their votes kept Rhode Island out of the Union until after the War of 1812."
             ],
-            correctAnswer: 0,
-            explanation: 'AP complexity: Federalists won ratification BUT Anti-Federalist arguments shaped Bill of Rights (1791), Jeffersonian inheritance, Va/Ky Resolutions (1798), strict-construction tradition through Civil War.'
+            correctAnswer: 2,
+            explanation: 'The Federalists won ratification, but several state conventions ratified only with recommended amendments, and Madison guided the Bill of Rights through Congress to answer Anti-Federalist fears. Federalists dominated the First Congress, and Rhode Island ratified in 1790.'
           }
         ]
       }

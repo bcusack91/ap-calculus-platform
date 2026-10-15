@@ -89,26 +89,26 @@ export const apushColonialSocietyConflictsPart7Data = {
       exercise: {
         questions: [
           {
-            question: 'Which best identifies the conflict often described as the most successful Indigenous expulsion of European colonists in early American history?',
+            question: 'Which conflict drove European colonists out of an entire colony for more than a decade?',
             options: [
-              "The 1680 Pueblo Revolt led by Popé, which expelled Spanish colonists from New Mexico for over a decade in protest of missionary suppression of Pueblo religion and the encomienda labor system",
-              "The 1622 Powhatan Uprising led by Opechancanough, which permanently expelled all English colonists from Virginia for over a century with no Spanish, French, or English return of any kind during the period",
-              "The 1636 Pequot War led by Sassacus, which expelled all English and Dutch colonists from New England for over a decade with no European return of any kind during the period in any region of New England",
-              "The 1715 Yamasee War led by the Yamasee and Creek, which expelled all English colonists from South Carolina permanently with no English return of any kind during the period in any region of the lower South"
+              'The Powhatan attack led by Opechancanough in Virginia in 1622',
+              'The Pueblo Revolt led by Popé in New Mexico in 1680',
+              'The Pequot War fought by the Pequot in Connecticut in 1636',
+              'The Yamasee War fought by the Yamasee in Carolina in 1715'
             ],
-            correctAnswer: 0,
-            explanation: 'Pueblo Revolt (1680) — Popé led expulsion of Spanish from NM for over a decade. The other conflicts had Indigenous resistance but did not produce sustained colonial expulsion.'
+            correctAnswer: 1,
+            explanation: 'Pueblo peoples expelled the Spanish from New Mexico in 1680, and Spain did not return until 1692. The Powhatan attacks, the Pequot War and the Yamasee War inflicted heavy losses but never drove the English out of their colonies.'
           },
           {
-            question: 'Which best identifies the largest slave uprising in British North America before the American Revolution?',
+            question: 'Which was the largest uprising of enslaved people in the British mainland colonies before the American Revolution?',
             options: [
-              "The 1739 Stono Rebellion in South Carolina, in which approximately 20 enslaved Africans (later joined by more) attempted to march to Spanish Florida shouting 'Liberty,' leading to harsher slave codes in the Negro Act of 1740",
-              "The 1622 Powhatan Uprising in Virginia, in which enslaved Africans attempted to march to Spanish Florida and led to the Negro Act of 1740 in South Carolina during the seventeenth century in any region of British North America",
-              "The 1676 Bacon's Rebellion in Virginia, which was an uprising consisting exclusively of enslaved Africans with no participation of any white indentured servants or backcountry farmers of any kind during the period in any region",
-              "The 1692 Salem Witch Trials in Massachusetts, in which enslaved Africans rebelled against Puritan judicial authority and led to the Negro Act of 1740 in South Carolina during the seventeenth century in any region of New England"
+              'The Stono Rebellion near Charleston, South Carolina',
+              'The conspiracy alleged in New York City in 1741',
+              'Bacon\'s Rebellion on the Virginia frontier in 1676',
+              'Gabriel\'s planned rebellion near Richmond, Virginia'
             ],
             correctAnswer: 0,
-            explanation: 'Stono Rebellion 1739 — largest pre-Revolutionary slave uprising; led to Negro Act of 1740.'
+            explanation: 'The Stono Rebellion of 1739 drew perhaps 60 to 100 enslaved people and led to South Carolina\'s Negro Act of 1740. The 1741 New York trials concerned an alleged plot, Bacon\'s Rebellion was led by free colonists, and Gabriel\'s conspiracy came in 1800, after the Revolution.'
           }
         ]
       }
@@ -120,19 +120,19 @@ export const apushColonialSocietyConflictsPart7Data = {
       exercise: {
         questions: [
           {
-            prompt: 'The Pueblo leader who led the 1680 Pueblo Revolt against Spanish colonization in New Mexico.',
+            question: 'The Pueblo leader who led the 1680 Pueblo Revolt against Spanish colonization in New Mexico.',
             answer: 'Popé',
             acceptableAnswers: ['Popé', 'Pope', 'Po\'pay', 'Popay'],
             hint: 'Tewa religious leader from Ohkay Owingeh (San Juan Pueblo).'
           },
           {
-            prompt: "The Wampanoag leader (called 'King Philip' by the English) of the 1675–76 New England war.",
+            question: "The Wampanoag leader (called 'King Philip' by the English) of the 1675–76 New England war.",
             answer: 'Metacom',
             acceptableAnswers: ['Metacom', 'King Philip', 'Metacomet'],
             hint: 'Son of Massasoit; led the Wampanoag-Narragansett alliance against New England colonists.'
           },
           {
-            prompt: 'The 1740 South Carolina law that imposed harsher restrictions on enslaved people in response to the Stono Rebellion.',
+            question: 'The 1740 South Carolina law that imposed harsher restrictions on enslaved people in response to the Stono Rebellion.',
             answer: 'Negro Act of 1740',
             acceptableAnswers: ['Negro Act of 1740', 'Negro Act', 'Negro Act 1740', 'Bill for the Better Ordering and Governing of Negroes and Other Slaves in this Province'],
             hint: 'Restricted enslaved people\'s movement, education, assembly, and ability to earn money.'
@@ -173,26 +173,26 @@ export const apushColonialSocietyConflictsPart7Data = {
       exercise: {
         questions: [
           {
-            question: 'A historian writes: "Conflict in colonial British North America between 1607 and 1754 reflected both the limits of colonial control and the resilience of those colonized." Which response best supports this thesis with AP-quality reasoning?',
+            question: 'A historian writes: "Conflict in colonial British North America between 1607 and 1754 reflected both the limits of colonial control and the resilience of those colonized." Which evidence best supports this claim?',
             options: [
-              "King Philip's War (1675–76) and the Pueblo Revolt (1680) showed that Indigenous nations could mount devastating organized resistance against expanding colonial power; the Stono Rebellion (1739) and the 1741 NYC trials showed that enslaved Africans organized resistance despite the brutality of slavery; and Salem (1692) and Bacon's Rebellion (1676) showed that even within colonial society itself, religious and class tensions repeatedly exposed the fragility of elite authority",
-              "Colonial British North America experienced no conflicts of any kind from any group during the entire period from 1607 to 1754 with no Indigenous resistance, no enslaved resistance, and no internal class or religious tensions of any kind in any region of the colonies",
-              "Colonial British North America experienced only conflicts initiated by colonial elites during the entire period from 1607 to 1754 with no Indigenous, enslaved, or popular agency of any kind in any region of British North America during the period in any region",
-              "Colonial British North America was a single uniform society with no regional variation, no Indigenous nations, and no enslaved population of any kind during the entire period from 1607 to 1754 in any region of British North America during the period in any region"
+              'The Pequot War and the Salem trials showed that colonists faced no serious challenge to their authority',
+              'The Great Awakening and the Halfway Covenant showed Native nations accepting Puritan religious authority',
+              'Bacon\'s Rebellion and the Yamasee War showed colonial elites and Native nations as lasting allies',
+              'King Philip\'s War and the Stono Rebellion showed organized resistance that colonists struggled to put down'
             ],
-            correctAnswer: 0,
-            explanation: 'AP-grade response: cite King Philip\'s + Pueblo + Stono + NYC + Salem + Bacon\'s, and connect each to the limits-of-control / resilience-of-colonized thesis.'
+            correctAnswer: 3,
+            explanation: 'Metacom\'s alliance devastated New England for more than a year, and the Stono rebels fought a pitched battle before being suppressed, showing both colonial vulnerability and the determination of those resisting. The other pairs are misread: Salem was a crisis of authority, the Awakening was not about Native acceptance, and Bacon\'s followers attacked Native peoples.'
           },
           {
-            question: 'Which best summarizes the relationship between conflict and law-making in British North America 1607–1754 in a way an AP reader would credit as a "complexity" claim?',
+            question: 'Which statement about the relationship between conflict and law-making in British North America, 1607–1754, is best supported by the evidence?',
             options: [
-              "Conflicts repeatedly produced legal and institutional change: Bacon's Rebellion (1676) accelerated 1660s+ slave codes that hardened racial slavery; King Philip's War (1675–76) produced tighter Indigenous land restrictions; Salem (1692) discredited spectral evidence; Stono (1739) led directly to the Negro Act of 1740 — showing that in the colonial Atlantic world, law often followed crisis rather than preventing it",
-              "There was no relationship between conflict and law-making in British North America during the period from 1607 to 1754 and no laws of any kind responded to any conflict in any region of British North America during the period in any region",
-              "Conflicts in British North America during the period from 1607 to 1754 produced no legal change of any kind and slave codes, Indigenous restrictions, and judicial reforms were entirely unrelated to any conflict during the period in any region",
-              "Colonial law in British North America during the period from 1607 to 1754 was made entirely without reference to any conflict and slave codes, Indigenous restrictions, and judicial reforms had no connection to any uprising or war in any region"
+              'Crises rarely changed the law, as when Salem left spectral evidence fully accepted in later trials',
+              'Crises mostly weakened slave codes, as when Bacon\'s Rebellion led Virginia to free its slaves',
+              'Crises repeatedly produced new laws, as when the Stono Rebellion led to the Negro Act of 1740',
+              'Crises mostly expanded Native rights, as when King Philip\'s War secured Wampanoag land claims'
             ],
-            correctAnswer: 0,
-            explanation: 'AP "complexity": specifically link each major conflict to a specific legal/institutional response — slave codes, Indigenous restrictions, spectral evidence reform, Negro Act of 1740.'
+            correctAnswer: 2,
+            explanation: 'Colonial law often followed crisis: Stono produced the Negro Act of 1740, and Salem discredited spectral evidence rather than entrenching it. Bacon\'s Rebellion was followed by harsher slave laws, and King Philip\'s War cost the Wampanoag most of their remaining land.'
           }
         ]
       }

@@ -18,7 +18,7 @@ export const apushDemocracyExpansionPart6Data = {
 | AP SAQ structure for 1800–1848 prompts |
 | Common AP traps to avoid |
 
-> 🔑 Key idea: Period 4 documents reflect a republic in motion: Marshall expanding judicial power, Monroe asserting hemispheric reach, Jackson fighting the Bank, the Court restraining (and Jackson defying) Indian Removal, and a French observer trying to make sense of mass democracy.
+> 🔑 Key idea: Period 4 documents reflect a republic in motion: Marshall expanding judicial power, Monroe asserting hemispheric reach, Jackson fighting the Bank, the Court ruling against Georgia (and Jackson declining to enforce the ruling) during Indian Removal, and a French observer trying to make sense of mass democracy.
       `
     },
     {
@@ -54,16 +54,16 @@ export const apushDemocracyExpansionPart6Data = {
 > **4. Chief Justice John Marshall, *Worcester v. Georgia* (1832)**
 > "The Cherokee Nation... is a distinct community, occupying its own territory, with boundaries accurately described, in which the laws of Georgia can have no force."
 
-- **HIPP:** Supreme Court opinion delivered in 1832 in a case brought by missionary Samuel Worcester against Georgia's seizure of Cherokee territory; intended audience is the state of Georgia, the Cherokee Nation, the Jackson administration, and Congress; purpose is to declare Georgia's anti-Cherokee laws unconstitutional and recognize Cherokee national sovereignty within their treaty-defined territory; POV is Federalist-tradition Chief Justice; famously ignored by Jackson, who proceeded with Indian Removal Act enforcement and the Trail of Tears (1838–39).
+- **HIPP:** Supreme Court opinion delivered in 1832 on the appeal of missionary Samuel Worcester, who had been convicted and jailed under a Georgia law requiring white residents of Cherokee territory to hold a state license; intended audience is the state of Georgia, the Cherokee Nation, the Jackson administration, and Congress; purpose is to declare Georgia's anti-Cherokee laws unconstitutional and recognize Cherokee national sovereignty within their treaty-defined territory; POV is Federalist-tradition Chief Justice. Georgia refused to comply and Jackson declined to enforce the ruling; removal went ahead through the Treaty of New Echota (1835) and the Trail of Tears (1838–39). The earlier case, *Cherokee Nation v. Georgia* (1831), had been dismissed for lack of jurisdiction, with the Cherokee called a "domestic dependent nation."
 
-> **5. Alexis de Tocqueville, *Democracy in America* (1835, vol. I)**
-> "I sought there the image of democracy itself... that I might learn what we have to fear or to hope from its progress."
+> **5. Alexis de Tocqueville, *Democracy in America* (vol. I, 1835; Henry Reeve translation)**
+> "I confess that in America I saw more than America; I sought there the image of democracy itself, with its inclinations, its character, its prejudices, and its passions, in order to learn what we have to fear or to hope from its progress."
 
-- **HIPP:** Two-volume work by a French aristocrat who toured the United States in 1831; intended audience is European (especially French) readers grappling with the implications of post-Revolutionary democratic politics; purpose is to use the United States as a laboratory for studying democratic society's strengths (associations, local governance) and dangers (tyranny of the majority, conformism); POV is liberal French aristocrat sympathetic to but worried about democracy, observing American slavery, Indigenous dispossession, and the position of women through the lens of European political theory.
+- **HIPP:** Two-volume work (1835, 1840) by a French aristocrat who toured the United States in 1831–32; intended audience is European (especially French) readers grappling with the implications of post-Revolutionary democratic politics; purpose is to use the United States as a laboratory for studying democratic society's strengths (associations, local governance) and dangers (tyranny of the majority, conformism); POV is liberal French aristocrat sympathetic to but worried about democracy, observing American slavery, Indigenous dispossession, and the position of women through the lens of European political theory.
 
 ## AP SAQ Structure
 
-For an 1800–1848 SAQ:
+From May 2027 all three SAQs are required and all three are sourced: Q1 gives a secondary text, Q2 a primary text, and Q3 a primary or secondary non-text source, each from a different period. A typical three-part question on an 1800–1848 source asks you to:
 
 - **A. Identify** one specific case, doctrine, or movement
 - **B. Explain** how it shaped American politics, economy, or expansion
@@ -75,11 +75,11 @@ For an 1800–1848 SAQ:
 |---|---|
 | Treating "Jacksonian Democracy" as universal | It expanded white male suffrage but coincided with Indian Removal and slavery's expansion |
 | Ignoring the Court's role | Marshall Court (1801–35) shaped federal-state relations, contracts, commerce, and Indigenous sovereignty |
-| Treating Indian Removal as inevitable | The Cherokee won at the Court (Worcester 1832); Jackson chose to defy the Court |
+| Treating Indian Removal as inevitable | The Cherokee won in *Worcester* (1832) after losing on jurisdiction in *Cherokee Nation* (1831); removal followed political choices by Jackson, Georgia and Congress |
 | Treating the market revolution as separate from politics | Bank War, tariff politics, and internal improvements were the political face of economic transformation |
 | Quoting documents without HIPP | Required for the complexity point |
 
-> 🔑 Key takeaway: Each Period 4 document is a political move. Marbury invents judicial review while ducking confrontation; Monroe asserts hemispheric leadership the U.S. could not yet enforce; Jackson's Bank Veto turns banking into populist political theater; Worcester defends Cherokee sovereignty Jackson then ignores; Tocqueville uses America to argue with French politics.
+> 🔑 Key takeaway: Each Period 4 document is a political move. Marbury invents judicial review while ducking confrontation; Monroe asserts hemispheric leadership the U.S. could not yet enforce; Jackson's Bank Veto turns banking into populist political theater; Worcester defends a Cherokee sovereignty that Jackson then declines to enforce; Tocqueville uses America to argue with French politics.
       `
     },
     {
@@ -89,26 +89,26 @@ For an 1800–1848 SAQ:
       exercise: {
         questions: [
           {
-            question: "Which historical context is most essential for sourcing Marshall's *Marbury v. Madison* (1803)?",
+            question: "Which historical situation is most essential for sourcing Marshall's opinion in *Marbury v. Madison* (1803)?",
             options: [
-              "Marshall, a Federalist, was deciding a case brought by one of Adams's last-minute 'midnight judge' appointees against the new Republican Jefferson administration; Marshall used the case to establish judicial review while ruling against Marbury on the commission, avoiding direct confrontation with Jefferson while embedding Federalist constitutional principles",
-              "Marshall, a Republican, was deciding a case brought by Jefferson against the Adams administration in 1803 with no midnight judges, no judicial review, and no Federalist constitutional principles of any kind during the entire period in any region",
-              "Marshall, a British loyalist, was deciding a case brought by the British Crown against the Jefferson administration in 1803 with no judicial review and no Federalist constitutional principles of any kind during the entire period in any region",
-              "Marshall did not decide *Marbury v. Madison* in 1803 and the case was decided by Jefferson in his capacity as president with no Supreme Court involvement of any kind during the entire period in any region of the United States"
+              "A Republican chief justice wanted to protect Jefferson from Federalist critics in Congress.",
+              "A Federalist chief justice faced a new Republican administration hostile to the courts.",
+              "A Supreme Court newly created by the Judiciary Act of 1801 wanted to test its powers.",
+              "A Federalist Congress had asked the Court to review the treaty buying Louisiana."
             ],
-            correctAnswer: 0,
-            explanation: 'Marbury 1803: Federalist Marshall + Adams\'s "midnight judges" + Republican Jefferson admin. Established judicial review while avoiding confrontation by ruling against Marbury.'
+            correctAnswer: 1,
+            explanation: 'Marshall, appointed by Adams, ruled against Marbury on the commission, which avoided a clash with Jefferson\'s administration, while claiming the power of judicial review. The Court was created in 1789, and Republicans controlled Congress in 1803.'
           },
           {
-            question: "Which best identifies the point of view of Jackson's Bank Veto Message (1832)?",
+            question: "Which best describes the point of view of Jackson's Bank Veto message (1832)?",
             options: [
-              "Jacksonian Democratic president framing politics as a contest between 'the people' and entrenched economic privilege; killed the Bank, framed it as unconstitutional 'rich and powerful' tool, and rallied a populist coalition for the 1832 election",
-              "A National Republican (Whig) president defending the Second Bank of the United States as essential to the national economy with no opposition to the Bank of any kind during the entire period from 1832 through the end of the Bank War in any region",
-              "A Federalist Supreme Court justice defending the constitutionality of the Bank under McCulloch v. Maryland with no presidential veto and no Bank War of any kind during the entire period from 1832 onward in any region of the United States",
-              "A British Crown official with no role in American politics during the entire period from 1832 through the end of the Bank War in any region of the United States during the period in any region of the United States during the period"
+              "A National Republican defending the Bank as essential to a growing economy",
+              "A southern nullifier arguing that federal banks violated the rights of states",
+              "A Democratic president casting politics as the people against privilege",
+              "A Whig reformer urging a stronger bank to curb speculation by state banks"
             ],
-            correctAnswer: 0,
-            explanation: 'Bank Veto POV: Jacksonian Democratic president, populist framing of "the people" vs. "rich and powerful," used to rally 1832 coalition.'
+            correctAnswer: 2,
+            explanation: 'Jackson framed the Bank as a monopoly that let "the rich and powerful" bend government to their purposes, setting "the humble members of society" against special privilege. National Republicans such as Clay defended the Bank.'
           }
         ]
       }
@@ -120,22 +120,22 @@ For an 1800–1848 SAQ:
       exercise: {
         questions: [
           {
-            prompt: 'The 1803 Supreme Court case that established judicial review.',
+            question: 'The 1803 Supreme Court case that established judicial review.',
             answer: 'Marbury v. Madison',
             acceptableAnswers: ['Marbury v. Madison', 'Marbury v Madison', 'Marbury vs Madison', 'Marbury vs. Madison'],
             hint: 'Decided by Chief Justice John Marshall.'
           },
           {
-            prompt: 'The 1823 foreign policy doctrine warning against further European colonization in the Americas.',
+            question: 'The 1823 foreign policy doctrine warning against further European colonization in the Americas.',
             answer: 'Monroe Doctrine',
             acceptableAnswers: ['Monroe Doctrine'],
             hint: 'Issued in Monroe\'s annual message to Congress; relied on the British Royal Navy for enforcement.'
           },
           {
-            prompt: 'The 1832 Supreme Court case that recognized Cherokee national sovereignty within their treaty-defined territory.',
+            question: 'The 1832 Supreme Court case that recognized Cherokee national sovereignty within their treaty-defined territory.',
             answer: 'Worcester v. Georgia',
             acceptableAnswers: ['Worcester v. Georgia', 'Worcester v Georgia', 'Worcester vs Georgia', 'Worcester vs. Georgia'],
-            hint: 'Famously ignored by Jackson, who proceeded with Indian Removal Act enforcement.'
+            hint: 'Brought by a jailed missionary; Georgia ignored it and Jackson declined to enforce it.'
           }
         ]
       }
@@ -173,26 +173,26 @@ For an 1800–1848 SAQ:
       exercise: {
         questions: [
           {
-            question: 'An SAQ asks: "Identify ONE Marshall Court decision and explain its significance for federal-state relations." Which response would score highest?',
+            question: 'An SAQ asks: "Identify ONE Marshall Court decision and explain how it affected federal-state relations." Which response would earn both points?',
             options: [
-              "*McCulloch v. Maryland* (1819) upheld the constitutionality of the Second Bank of the United States under the necessary-and-proper clause and prohibited Maryland from taxing it ('the power to tax involves the power to destroy'), establishing both implied federal powers and federal supremacy over state taxation in ways that shaped subsequent commerce-clause and supremacy-clause jurisprudence",
-              "Some Marshall Court decision happened at some point and shaped some kind of federal-state relations in some way during the period from 1801 through 1835 in some region of the United States during the period in some region of the country",
-              "The Marshall Court issued no significant decisions of any kind during the entire period from 1801 through 1835 in any region of the United States during the period in any region of the United States during the period in any region",
-              "The Marshall Court existed but had no impact on federal-state relations of any kind during the entire period from 1801 through 1835 in any region of the United States during the period in any region of the United States in any region"
+              "The Marshall Court made many important decisions from 1801 to 1835, and these decisions changed how the states related to the nation.",
+              "In McCulloch v. Maryland (1819) the Court upheld the national bank and barred Maryland from taxing it, strengthening federal power.",
+              "In Marbury v. Madison (1803) the Court struck down a Maryland law, establishing the power of the states to review federal courts.",
+              "In Dred Scott v. Sandford the Marshall Court ruled that Congress could not ban slavery, so it strengthened the power of the states."
             ],
-            correctAnswer: 0,
-            explanation: 'AP SAQ rewards specific case (McCulloch 1819) + specific doctrine (necessary and proper + power to tax = power to destroy) + specific consequence (implied powers + federal supremacy over state taxation).'
+            correctAnswer: 1,
+            explanation: 'This response names a specific case and explains a specific effect: implied powers and federal supremacy over state taxation. Marbury concerned an act of Congress, and Dred Scott (1857) was decided by Chief Justice Taney, not Marshall.'
           },
           {
-            question: 'Which short answer best demonstrates AP "complexity" by complicating the standard "Age of Jackson = expansion of democracy" narrative?',
+            question: 'Which claim best complicates the view that the "Age of Jackson" expanded democracy?',
             options: [
-              "Although Jacksonian politics expanded white male suffrage by eliminating most property requirements (universal white male suffrage by 1828), the same period saw the Indian Removal Act (1830) and the Trail of Tears (1838–39); the constitutional defiance of Worcester v. Georgia (1832); the entrenchment of slavery via the Gag Rule (1836); and the explicit racial coding of citizenship — making 'expansion of democracy' a story specifically of white male political incorporation alongside Indigenous removal and Black exclusion",
-              "Jacksonian politics expanded democracy universally to all Americans regardless of race, gender, or class with no Indian Removal Act, no Trail of Tears, no Worcester defiance, no Gag Rule, and no racial coding of any kind during the period in any region",
-              "Jacksonian politics did not expand suffrage of any kind during the entire period from 1820 through 1840 with no elimination of property requirements and no growth of white male voting of any kind during the entire period in any region of the United States",
-              "Jacksonian politics had no political impact of any kind during the entire period from 1820 through 1840 in any region of the United States with no Indian Removal Act, no Bank War, and no expansion of suffrage of any kind in any region"
+              "Turnout among white men fell sharply after parties stopped holding rallies and conventions.",
+              "Property requirements for voting returned in most states after the Panic of 1837 began.",
+              "Women won the right to vote in several western states during the 1830s and 1840s.",
+              "White male turnout soared even as removal and Black disfranchisement narrowed who belonged."
             ],
-            correctAnswer: 0,
-            explanation: 'AP complexity: name BOTH white male suffrage expansion AND Indian Removal + Trail of Tears + Worcester defiance + Gag Rule. "Expansion" was racially coded.'
+            correctAnswer: 3,
+            explanation: 'The era combined rising participation for white men with Indian removal and new restrictions on free Black voters, such as Pennsylvania\'s 1838 constitution. Turnout rose rather than fell, property requirements were not restored, and no state let women vote.'
           }
         ]
       }

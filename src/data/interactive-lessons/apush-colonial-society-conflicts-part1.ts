@@ -30,7 +30,7 @@ export const apushColonialSocietyConflictsPart1Data = {
       content: `
 ## 📖 Colonial Social Hierarchy
 
-Colonial America developed a rigid social structure:
+Colonial America developed a clear social hierarchy, though one more open to movement for free white men than England's:
 
 | Social Level | Description |
 |---|---|
@@ -45,12 +45,12 @@ Colonial America developed a rigid social structure:
 
 Key developments in the evolution of colonial slavery:
 
-- **1619:** First enslaved Africans arrive in Virginia (treated initially as indentured servants)
-- **1640s–1660s:** Virginia and Maryland pass **slave codes** making slavery hereditary and race-based
+- **1619:** The first recorded Africans arrive in Virginia; their legal status was not yet fixed, and some later gained freedom and even land
+- **1660s:** Virginia and Maryland pass laws making slavery **lifelong, hereditary and race-based** (Maryland's 1664 law declared enslaved people slaves for life)
 - **1662:** Virginia law: child's status follows the **mother** (*partus sequitur ventrem*) — enslaved women's children are born enslaved
 - **1676:** **Bacon's Rebellion** — accelerates shift from indentured servitude to racial slavery
 - **1705:** Virginia Slave Code — comprehensive legal framework defining enslaved people as property
-- **1739:** **Stono Rebellion** (South Carolina) — largest slave uprising in colonial America; ~100 enslaved people; led to harsher slave codes
+- **1739:** **Stono Rebellion** (South Carolina) — largest slave uprising in the British mainland colonies; about 20 rebels at the start, growing to perhaps 60–100; led to harsher slave codes
 
 > ⚠️ **AP Alert:** The transition from indentured servitude to race-based chattel slavery is one of the most heavily tested topics in Period 2. Know the **causes** (economic incentives, Bacon's Rebellion, racial ideology) and **legal mechanisms** (slave codes, hereditary status).
 
@@ -61,8 +61,9 @@ The **First Great Awakening** was a religious revival that swept the colonies:
 - **George Whitefield** — itinerant preacher; massive outdoor sermons; emotional "new birth" conversion
 - **Jonathan Edwards** — "Sinners in the Hands of an Angry God" (1741)
 - Challenged established church authority; emphasized **individual** religious experience
-- Helped unify colonists across regional boundaries (first mass movement shared by all colonies)
-- Created new denominations: Baptists, Methodists
+- Crossed colonial boundaries: Whitefield preached from Georgia to New England in 1739–41, giving colonists a shared experience
+- **Split** existing churches: "Old Lights" vs. "New Lights" among Congregationalists, "Old Side" vs. "New Side" among Presbyterians
+- Spurred rapid growth of **Baptists**, who were not new (Roger Williams' church in Providence dates to 1638–39, and English Baptists to the early 1600s); Methodism grew mainly after the 1760s
 - Inspired questioning of **all** authority — social, political, and religious
       `
     },
@@ -75,26 +76,26 @@ The **First Great Awakening** was a religious revival that swept the colonies:
       exercise: {
         questions: [
           {
-            question: 'The Virginia law of 1662, which declared that a child\'s enslaved or free status followed the condition of the mother, was significant because it:',
+            question: 'The Virginia law of 1662, which declared that a child\'s enslaved or free status followed the condition of the mother, was significant because it did which of the following?',
             options: [
-              'Ensured that the children of enslaved women would also be enslaved, making slavery a self-perpetuating system',
-              'Granted freedom to all children born in Virginia regardless of parentage',
-              'Applied only to Native American women captured in warfare',
-              'Was immediately repealed after Bacon\'s Rebellion in 1676'
-            ],
-            correctAnswer: 0,
-            explanation: 'The 1662 Virginia law (partus sequitur ventrem) made slavery hereditary through the mother, meaning any child born to an enslaved woman was automatically enslaved. This was a critical legal mechanism that made chattel slavery self-perpetuating and removed any incentive for slaveholders to acknowledge paternity.'
-          },
-          {
-            question: 'The First Great Awakening contributed to the American Revolution MOST directly by:',
-            options: [
-              'Calling for the immediate abolition of slavery in all colonies',
-              'Establishing the principle that individuals could question established authority',
-              'Creating a unified colonial military to fight the French',
-              'Convincing Parliament to grant the colonies religious autonomy'
+              'Freed every child born in Virginia regardless of parentage',
+              'Made every child born to a woman held in slavery a slave for life',
+              'Applied only to Native women captured during frontier wars',
+              'Was repealed by the assembly soon after Bacon\'s Rebellion'
             ],
             correctAnswer: 1,
-            explanation: 'The Great Awakening encouraged individuals to question traditional religious authorities and think for themselves about spiritual matters. This mindset of challenging authority — whether of an established church or a distant king — helped lay the intellectual groundwork for revolutionary thinking decades later.'
+            explanation: 'Under the 1662 law (partus sequitur ventrem), any child born to an enslaved woman was enslaved, which made slavery hereditary and self-reproducing and freed enslavers from acknowledging children they fathered. It reversed the English rule that status followed the father and was never repealed in the colonial era.'
+          },
+          {
+            question: 'The First Great Awakening contributed to the American Revolution most directly by doing which of the following?',
+            options: [
+              'Encouraging people to challenge established religious leaders',
+              'Calling for the immediate abolition of slavery in every colony',
+              'Creating an intercolonial army to fight the French in Canada',
+              'Persuading Parliament to end the Anglican establishment in America'
+            ],
+            correctAnswer: 0,
+            explanation: 'Revivalists told ordinary people they could judge ministers for themselves, and the habit of challenging established authority later carried over into politics. The Awakening did not call for immediate abolition, raise an army, or end Anglican establishment.'
           }
         ]
       }
@@ -109,9 +110,9 @@ The **First Great Awakening** was a religious revival that swept the colonies:
 
 | Conflict | Date | Significance |
 |----------|------|-------------|
-| **King Philip's War** | 1675–78 | Metacom (King Philip) led Wampanoag alliance against New England settlers; deadliest per-capita war in American history; ended major Native resistance in New England |
+| **King Philip's War** | 1675–1676 | Metacom (King Philip) led a Wampanoag-Narragansett alliance against New England settlers; relative to population, among the deadliest wars in American history; broke Native military power in southern New England (fighting in Maine continued to 1678) |
 | **Bacon's Rebellion** | 1676 | Virginia frontier settlers (led by Nathaniel Bacon) rebelled against Governor Berkeley; exposed class tensions; accelerated shift to slave labor |
-| **Stono Rebellion** | 1739 | Largest slave uprising in colonial era; ~100 enslaved people in South Carolina; crushed; led to Negro Act of 1740 restricting enslaved people's movement and assembly |
+| **Stono Rebellion** | 1739 | Largest slave uprising in the British mainland colonies; about 20 rebels growing to perhaps 60–100 in South Carolina; crushed; led to Negro Act of 1740 restricting enslaved people's movement and assembly |
 | **French and Indian War** | 1754–63 | British vs. French (+Native allies); British victory → gained French Canada; massive war debt led to new colonial taxes → Revolution |
 
 ### Mercantilism & Salutary Neglect
@@ -119,9 +120,9 @@ The **First Great Awakening** was a religious revival that swept the colonies:
 **Mercantilism** was the economic theory driving British colonial policy:
 - Colonies exist to benefit the **mother country**
 - Colonies provide raw materials; buy manufactured goods from Britain
-- **Navigation Acts** (1651–1673): Colonial goods must be shipped on British ships; certain goods (tobacco, sugar) shipped only to Britain
+- **Navigation Acts** (1651–1673): Colonial goods must be shipped on English or colonial ships; certain enumerated goods (tobacco, sugar) shipped only to England or its colonies
 
-**Salutary Neglect** — Britain's informal policy of loosely enforcing trade regulations (roughly 1607–1763):
+**Salutary Neglect** — Britain's informal practice of loosely enforcing trade regulations, especially from the 1720s to 1763 under chief minister Robert Walpole and his successors (Edmund Burke named it in 1775):
 - Allowed colonies to develop **self-governing institutions** (colonial assemblies)
 - Colonists grew accustomed to economic and political autonomy
 - When Britain **ended** salutary neglect after 1763 (to pay French and Indian War debts), colonists resisted → path to Revolution
@@ -160,22 +161,22 @@ Use the exact historical term.
         dropdowns: [
           {
             label: 'The economic theory that colonies exist to enrich the mother country is called ___',
-            options: ['Mercantilism', 'Capitalism', 'Feudalism', 'Socialism']
+            options: ['Mercantilism', 'Free trade', 'Feudalism', 'Laissez-faire']
           },
           {
-            label: 'The deadliest per-capita war in American history, fought between New England colonists and a Native American alliance, was ___',
+            label: 'Relative to population, one of the deadliest wars in American history, fought in 1675–1676 between New England colonists and a Native alliance, was ___',
             options: ["King Philip's War", 'The French and Indian War', "Pontiac's Rebellion", "Bacon's Rebellion"]
           },
           {
             label: 'The laws requiring colonial goods to be shipped on British vessels were the ___',
-            options: ['Navigation Acts', 'Intolerable Acts', 'Stamp Act', 'Townsend Acts']
+            options: ['Navigation Acts', 'Intolerable Acts', 'Stamp Act', 'Townshend Acts']
           }
         ],
         correctAnswers: ['Mercantilism', "King Philip's War", 'Navigation Acts'],
         hint1: 'Britain wanted a favorable balance of trade with its colonies',
-        hint2: 'Led by Metacom; 1675–1678; devastated New England',
+        hint2: 'Led by Metacom, whom the English called by a royal nickname; it devastated southern New England',
         hint3: 'Passed between 1651 and 1673 to control colonial trade',
-        explanation: "Mercantilism held that colonies should provide raw materials and markets for the mother country. King Philip's War (1675–78) killed a higher percentage of the population than any other American war. The Navigation Acts regulated colonial trade to benefit Britain."
+        explanation: "Mercantilism held that colonies should provide raw materials and markets for the mother country. King Philip's War (1675–1676) killed a larger share of the population than almost any other American war. The Navigation Acts regulated colonial trade to benefit Britain."
       }
     },
     {
@@ -187,26 +188,26 @@ Use the exact historical term.
       exercise: {
         questions: [
           {
-            question: 'Which of the following BEST describes the long-term significance of salutary neglect for the relationship between Britain and its American colonies?',
+            question: 'Which of the following best describes the long-term significance of salutary neglect for the relationship between Britain and its American colonies?',
             options: [
-              'It allowed colonists to develop traditions of self-governance, making them resistant to later British attempts to impose direct control',
-              'It prevented any economic growth in the colonies until the 1760s',
-              'It ensured that all colonial trade was conducted exclusively with British merchants',
-              'It created a strong sense of loyalty to the Crown that lasted through the Revolution'
+              'Colonial economies stagnated after Britain stopped buying colonial goods',
+              'Foreign trade became fully legal for colonial merchants in every port',
+              'Loyalty to the Crown deepened so that colonists welcomed tighter rule',
+              'Colonists grew used to self-government and resisted later direct control'
             ],
-            correctAnswer: 0,
-            explanation: 'Decades of salutary neglect allowed colonial assemblies to gain real governing power and colonists to develop expectations of autonomy. When Britain tried to reassert control after 1763 (through taxation and tighter enforcement), colonists saw this as a violation of their established rights — a key cause of the Revolution.'
+            correctAnswer: 3,
+            explanation: 'Decades of loose oversight let colonial assemblies gain real power over taxes and officials, so colonists saw Britain\'s tighter rule after 1763 as an attack on established rights. Britain kept buying colonial goods, the trade laws stayed on the books, and tighter rule was resisted rather than welcomed.'
           },
           {
-            question: 'The Stono Rebellion of 1739 and the subsequent Negro Act of 1740 illustrate which broader pattern in colonial American history?',
+            question: 'The Stono Rebellion of 1739 and the Negro Act of 1740 illustrate which broader pattern in colonial American history?',
             options: [
-              'Enslaved people resisted their bondage, and slaveholders responded by tightening legal controls',
-              'Colonial governments consistently worked to improve conditions for enslaved people',
-              'Slave uprisings successfully ended slavery in individual colonies',
-              'Native Americans and enslaved Africans formed lasting military alliances against colonists'
+              'Colonial governments steadily improved living conditions for enslaved people',
+              'Armed uprisings by enslaved people ended slavery in several southern colonies',
+              'Enslaved people resisted bondage, and lawmakers answered with tighter controls',
+              'Native nations and enslaved Africans formed lasting alliances against colonists'
             ],
-            correctAnswer: 0,
-            explanation: 'The pattern of resistance → repression is central to understanding slavery in colonial America. After the Stono Rebellion, South Carolina passed the Negro Act restricting enslaved people\'s ability to assemble, earn money, or learn to read. This cycle repeated throughout American history.'
+            correctAnswer: 2,
+            explanation: 'After Stono, South Carolina\'s Negro Act restricted enslaved people\'s movement, assembly, education and ability to earn money, a cycle of resistance followed by repression. No colonial uprising ended slavery, and colonists often recruited Native allies to hunt down rebels.'
           }
         ]
       }
