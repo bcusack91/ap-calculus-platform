@@ -1463,7 +1463,7 @@ export const registryChunk1: Record<string, InteractiveTopicConfig> = {
       { title: 'Piecewise Continuity', loader: () => import('./precalc-continuity-precalc-part4').then(m => m.precalcContinuityPart4Data) },
       { title: 'Continuity & Limits', loader: () => import('./precalc-continuity-precalc-part5').then(m => m.precalcContinuityPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./precalc-continuity-precalc-part6').then(m => m.precalcContinuityPart6Data) },
-      { title: 'Review & Applications', loader: () => import('./precalc-continuity-precalc-part7').then(m => m.precalcContinuityPart7Data) },
+      { title: 'Synthesis Review and the Bridge to Calculus', loader: () => import('./precalc-continuity-precalc-part7').then(m => m.precalcContinuityPart7Data) },
     ],
   },
   'rates-of-change-precalc': {
