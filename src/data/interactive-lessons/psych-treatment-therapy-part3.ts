@@ -5,184 +5,305 @@ export const psychTreatmentPart3Data = {
       id: 'treatment-therapy-p3-s1-intro',
       type: 'text' as const,
       content: `
-      # 🧠 Treatment and Therapy
+# 🧠 Treatment and Therapy
 
-      **Part 3 of 7 — Humanistic and Psychodynamic Therapies**
+**Part 3 of 7 — Behavior Therapies: Applied Behavior Analysis**
 
-      In this part, you will connect core psychological vocabulary to realistic contexts and AP-style reasoning. Focus on mechanism first, then evidence.
+> 🔑 **Key Concept:** Behavior therapists do not hunt for hidden causes. They assume that maladaptive behaviors, including fears, were **learned**, so they can be **unlearned** or replaced using the same principles of conditioning you studied in Unit 3.
 
-      ### Core Definitions
-      - **therapeutic alliance**: collaborative bond and agreement on goals and tasks
-      - **client-centered therapy**: humanistic approach emphasizing empathy and unconditional positive regard
-      - **psychopharmacology**: use of medication to treat psychological symptoms
+### Applied behavior analysis
 
-      ### Concrete Real-World Example
-      A team is studying depression treatment with behavior activation scheduling. They operationalize variables, compare plausible explanations, and look for the interpretation that best matches observed behavior instead of relying on intuition.
+**Applied behavior analysis (ABA)** involves applying principles of conditioning to address mental disorders and developmental disabilities (CED 5.5.D.3). The CED lists four techniques that employ ABA principles:
 
-      ### Why This Matters
-      Strong AP responses define terms precisely, apply them to evidence, and justify why one interpretation is stronger than alternatives.
+| Technique | Conditioning principle | Core move | Typical target |
+|---|---|---|---|
+| **Exposure therapies**, such as systematic desensitization | Classical conditioning (extinction and counterconditioning) | Face the feared stimulus without escaping, often while relaxed | Phobias, panic, OCD, PTSD |
+| **Aversion therapy** | Classical conditioning (counterconditioning) | Pair an unwanted behavior with an unpleasant stimulus | Unwanted habits, some substance use |
+| **Token economy** | Operant conditioning (positive reinforcement) | Reward target behaviors with tokens exchanged for privileges | Inpatient units, classrooms, residential programs |
+| **Biofeedback** | Operant conditioning (feedback as reinforcement) | Display a body signal so the client can learn to change it | Anxiety-related tension, stress symptoms |
+
+### ABA and developmental disabilities
+
+ABA is widely used to teach skills to people with developmental disabilities, including children with autism spectrum disorder. A therapist breaks a skill, such as requesting a snack with words or a picture card, into small steps and reinforces each successful step. This is **shaping**: reinforcing closer and closer approximations of the target behavior.
+
+> 🔑 **AP Connection:** For each ABA technique, be ready to name **which** kind of conditioning it uses. Exposure and aversion therapies change what a stimulus has come to signal (classical). Token economies and biofeedback change behavior through its consequences (operant).
       `
     },
     {
-      id: 'treatment-therapy-p3-s2-check',
+      id: 'treatment-therapy-p3-s2-exposure',
+      type: 'text' as const,
+      content: `
+## Exposure Therapies
+
+### Why fears persist
+
+A fear can begin through classical conditioning: a neutral stimulus (a dog) is paired with a frightening experience (a bite) and becomes a conditioned stimulus for fear. The fear then **persists** because of operant conditioning. Each time the person avoids dogs, anxiety drops. That relief is **negative reinforcement**: removing an unpleasant feeling strengthens the avoidance. Because the person never stays near a dog long enough to learn that nothing bad happens, the fear never extinguishes.
+
+**Exposure therapies** break this cycle by having the person face the feared stimulus, without escaping, until anxiety falls. Repeated exposure without harm leads to **extinction** of the conditioned fear.
+
+| Exposure type | How it works | Example |
+|---|---|---|
+| **In vivo exposure** | Face the real feared situation | Touching a real dog |
+| **Imaginal exposure** | Vividly imagine the feared situation | Picturing a dog approaching |
+| **Virtual reality exposure** | Face a computer-simulated situation | A headset simulating a plane takeoff |
+| **Flooding** | Intense exposure to a highly feared stimulus at once, until anxiety subsides | Staying in a room with a calm dog for an extended session |
+| **Exposure and response prevention** | Face a trigger and **refrain from the compulsion** | A person with OCD touches a doorknob and does not wash |
+
+### Systematic desensitization
+
+**Systematic desensitization**, developed by Joseph Wolpe, is a gradual exposure therapy that uses **counterconditioning**: replacing a fear response with a response that cannot occur at the same time, relaxation. You cannot be deeply relaxed and highly anxious at once.
+
+It has three steps:
+
+1. **Relaxation training.** The client learns progressive muscle relaxation or slow breathing.
+2. **Build an anxiety hierarchy.** The client and therapist list feared situations and rank them from least to most anxiety-provoking.
+3. **Climb the hierarchy while relaxed.** Starting at the bottom, the client faces each item (in imagination or in real life) while staying relaxed, moving up only when the current step no longer causes much anxiety.
+
+### Worked Example: Building a hierarchy
+
+**Case.** Ana, 22, has a specific phobia of dogs. She crosses the street to avoid them and turned down a job because the office allows pets. She rates her distress on a 0 to 100 scale.
+
+**Step 1: List situations and rate them.**
+
+| Rank | Situation | Ana's distress rating |
+|---|---|---|
+| 1 | Reading the word "dog" in a book | 10 |
+| 2 | Looking at a photo of a small dog | 20 |
+| 3 | Watching a video of a dog playing | 35 |
+| 4 | Standing across the street from a leashed dog | 50 |
+| 5 | Standing in the same room as a calm, leashed dog | 70 |
+| 6 | Petting a calm dog while its owner holds the leash | 90 |
+
+**Step 2: Start at the bottom.** In a relaxed state, Ana reads the word "dog." She repeats it until her rating falls to near zero.
+
+**Step 3: Move up one rung at a time.** If her rating spikes on a step, she returns to relaxation and repeats the step, or drops back one rung. She does not skip steps.
+
+**Step 4: Check the outcome.** By the end, Ana can pet a calm dog with low distress. Relaxation has replaced fear as the response to dogs, and avoidance is no longer being negatively reinforced.
+
+> 🔑 **AP Connection:** Systematic desensitization is gradual and pairs each step with relaxation. Flooding is intense exposure all at once. Both are exposure therapies; the difference is the pace.
+      `
+    },
+    {
+      id: 'treatment-therapy-p3-s3-check',
       type: 'multiple-choice' as const,
       content: `
-      **Concept Check** 🎯
+**Concept Check — Exposure Therapies** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'In a study about depression treatment with behavior activation scheduling, participants change behavior after repeatedly seeing the same cue. Which concept is the best fit?',
+            question: "In systematic desensitization, what is the purpose of teaching the client deep muscle relaxation before she faces feared situations?",
             options: [
-              'SSRI',
-              'psychopharmacology',
-              'therapeutic alliance',
-              'client-centered therapy'
+              "Relaxation lets unconscious memories of the fear surface",
+              "Relaxation serves as a token she can trade for a reward",
+              "Relaxation can replace fear as the response to each step",
+              "Relaxation makes the feared object produce a sense of nausea"
             ],
             correctAnswer: 2,
-            explanation: 'therapeutic alliance is correct because it directly matches this mechanism: collaborative bond and agreement on goals and tasks. The distractors describe related but different processes.'
+            explanation: "Systematic desensitization uses counterconditioning: relaxation is incompatible with anxiety, so it can replace fear as the response to each item in the hierarchy. Uncovering unconscious memories is psychodynamic, tokens belong to a token economy, and nausea is part of aversion therapy."
           },
           {
-            question: 'Researchers report that behavior shifts when participants receive a specific cue and then justify their choices afterward. Which concept best explains that pattern?',
+            question: "Luis has a fear of flying and is building an anxiety hierarchy with his therapist. Which situation most likely belongs at the bottom of his hierarchy?",
             options: [
-              'relapse prevention',
-              'client-centered therapy',
-              'evidence-based practice',
-              'psychopharmacology'
+              "Sitting in a parked plane at the gate",
+              "Taking a short flight with the therapist",
+              "Looking at a photo of a plane on a phone",
+              "Waiting in the boarding line at the airport"
             ],
-            correctAnswer: 0,
-            explanation: 'relapse prevention is the strongest match here (strategies that reduce risk of symptom return). The other options do not explain both the cue-driven shift and the observed response pattern as directly.'
+            correctAnswer: 2,
+            explanation: "A hierarchy starts with the least anxiety-provoking situation, and a photo is the most distant version of the feared stimulus. A short flight would belong near the top, and the gate and boarding line fall in between."
+          },
+          {
+            question: "Each time Ana takes the stairs to avoid riding an elevator, her anxiety drops. In learning terms, that drop in anxiety acts as",
+            options: [
+              "positive punishment of avoidance",
+              "negative reinforcement of avoidance",
+              "extinction of the fear response",
+              "a conditioned stimulus for fear"
+            ],
+            correctAnswer: 1,
+            explanation: "Removing an unpleasant feeling strengthens the behavior that removed it, which is negative reinforcement, and it keeps the avoidance going. Extinction would require Ana to face elevators without harm, which avoidance prevents."
           }
         ]
       }
     },
     {
-      id: 'treatment-therapy-p3-s3-deep',
+      id: 'treatment-therapy-p3-s4-aversion-tokens',
       type: 'text' as const,
       content: `
-      ## Deep Dive: Comparing Explanations with Evidence
+## Aversion Therapy and Token Economies
 
-      When analyzing depression treatment with behavior activation scheduling, the best interpretation ties a clear psychological mechanism to measurable evidence.
+### Aversion therapy
 
-      | Theory / Concept | Core claim | Typical evidence | Common limitation |
-      |---|---|---|---|
-      | therapeutic alliance | collaborative bond and agreement on goals and tasks | experimental manipulation with random assignment | possible demand characteristics |
-      | client-centered therapy | humanistic approach emphasizing empathy and unconditional positive regard | longitudinal trend with repeated measurement | third-variable risk in natural settings |
-      | psychopharmacology | use of medication to treat psychological symptoms | cross-sectional comparison with matched groups | limited generalizability across cultures |
-      | SSRI | selective serotonin reuptake inhibitor commonly used for mood and anxiety disorders | mixed-method evidence combining survey and behavioral indicators | measurement validity depends on construct quality |
+Exposure therapies try to **remove** a negative response to something harmless. **Aversion therapy** does the opposite: it creates a negative response to something harmful that the person finds attractive. It pairs the unwanted behavior or stimulus with an **unpleasant** stimulus, so the behavior comes to trigger discomfort instead of pleasure.
 
-      ### Interpretation Strategy
-      1. Name the mechanism before describing outcomes.
-      2. Match the claim to the strongest available evidence type.
-      3. Acknowledge one limitation and explain whether it changes the conclusion.
+| Unwanted behavior | Aversive pairing | Intended new association |
+|---|---|---|
+| Drinking alcohol | A medication that causes nausea if the person drinks | Alcohol signals sickness |
+| Nail biting | Bitter-tasting nail coating | Biting signals a bad taste |
+| Smoking | Rapid, unpleasant puffing in a clinic setting | Cigarettes signal discomfort |
 
-      This structure helps you earn reasoning points on free-response and avoid vague claims.
+**Limits.** Aversion therapy raises ethical concerns because it deliberately causes discomfort, and its effects may not **generalize** outside the clinic: a person may learn that drinking causes nausea only while taking the medication. Today it is used far less than other behavior therapies and only with informed consent.
+
+### Token economies
+
+A **token economy** applies **operant conditioning**. Clients earn **tokens** (points, chips, stickers) for target behaviors, then exchange them for **backup reinforcers** such as privileges, snacks, or outings.
+
+| Element | Example on an inpatient unit |
+|---|---|
+| Target behaviors | Making one's bed, attending group sessions, taking medication on schedule |
+| Tokens | Points recorded on a card |
+| Backup reinforcers | Extra phone time, a trip to the store, choice of movie |
+| Learning principle | Positive reinforcement; tokens are **secondary (conditioned) reinforcers** because they gain value from what they can buy |
+
+**Strength.** Token economies can build daily-living and social behaviors in hospitals, classrooms, and residential programs.
+
+**Limit.** Behaviors may drop when the tokens stop. Good programs gradually **fade** the tokens and shift to natural reinforcers, such as praise or the satisfaction of a tidy room.
+
+### Worked Example: Classical or operant?
+
+| Scenario | Technique | Classical or operant? | How you know |
+|---|---|---|---|
+| A child with autism spectrum disorder earns a sticker for each word spoken; five stickers buy playground time | Token economy | **Operant** | A consequence after the behavior makes it more likely |
+| A man taking a nausea-producing medication feels sick when he drinks | Aversion therapy | **Classical** | A stimulus (alcohol) becomes paired with an unpleasant response (nausea) |
+| A woman afraid of heights climbs a ladder one rung per session while breathing slowly | Systematic desensitization | **Classical** | Relaxation replaces fear as the response to height cues |
+
+> 🔑 **AP Connection:** "Exchanged for," "earn," and "points" signal a token economy (operant). "Paired with something unpleasant" signals aversion therapy (classical). Distractors often swap these two.
       `
-    },
-    {
-      id: 'treatment-therapy-p3-s4-input',
-      type: 'input-boxes' as const,
-      content: `
-      **Applied Recall (exact term answers)** ✍️
-
-      1) Write the concept that matches: collaborative bond and agreement on goals and tasks
-
-      2) Write the concept that matches: humanistic approach emphasizing empathy and unconditional positive regard
-
-      3) Write the concept that matches: use of medication to treat psychological symptoms
-
-      Use the exact vocabulary term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['therapeutic alliance', 'client-centered therapy', 'psychopharmacology'],
-        hint1: 'Starts with: T',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: P',
-        explanation: 'Expected answers: therapeutic alliance, client-centered therapy, and psychopharmacology. Each response should use the precise term connected to the definition cue.'
-      }
     },
     {
       id: 'treatment-therapy-p3-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Model Matching** 🔎
+**Which Principle?** 🧩
+
+Choose the learning principle each technique relies on most directly.
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Select the concept that best matches: collaborative bond and agreement on goals and tasks',
-            options: ['SSRI', 'evidence-based practice', 'therapeutic alliance', 'psychopharmacology']
+            label: 'Systematic desensitization replaces fear with relaxation through _____.',
+            options: ['operant conditioning', 'classical conditioning', 'observational learning', 'cognitive restructuring']
           },
           {
-            label: 'Select the concept that best matches: humanistic approach emphasizing empathy and unconditional positive regard',
-            options: ['SSRI', 'psychopharmacology', 'client-centered therapy', 'relapse prevention']
+            label: 'A token economy strengthens target behaviors through _____.',
+            options: ['classical conditioning', 'observational learning', 'operant conditioning', 'cognitive restructuring']
           },
           {
-            label: 'Select the concept that best matches: use of medication to treat psychological symptoms',
-            options: ['therapeutic alliance', 'evidence-based practice', 'psychopharmacology', 'client-centered therapy']
+            label: 'Aversion therapy links an unwanted behavior to discomfort through _____.',
+            options: ['observational learning', 'operant conditioning', 'cognitive restructuring', 'classical conditioning']
           }
         ],
-        correctAnswers: ['therapeutic alliance', 'client-centered therapy', 'psychopharmacology'],
-        hint1: 'Start by matching the key mechanism in each prompt to the most specific concept.',
-        hint2: 'Eliminate options that describe a different level of analysis (biological vs cognitive vs social).',
-        hint3: 'Use the definition language from this part to avoid near-miss terms.',
-        explanation: 'Correct matches are therapeutic alliance, client-centered therapy, and psychopharmacology. These choices align with the mechanism-language in each definition, not just broad topic similarity.'
+        correctAnswers: ['classical conditioning', 'operant conditioning', 'classical conditioning'],
+        hint1: 'Ask whether the technique changes what a stimulus signals (classical) or the consequence after a behavior (operant).',
+        hint2: 'Tokens arrive after the behavior, as a consequence.',
+        hint3: 'Pairing alcohol with nausea is a stimulus-stimulus association.',
+        explanation: 'Systematic desensitization and aversion therapy both change the response a stimulus triggers, which is classical counterconditioning. A token economy reinforces behavior with consequences, which is operant conditioning.'
       }
     },
     {
-      id: 'treatment-therapy-p3-s6-strategy',
+      id: 'treatment-therapy-p3-s6-biofeedback',
       type: 'text' as const,
       content: `
-      ## Common Misconceptions and Exam Strategy
+## Biofeedback
 
-      ### Misconceptions to Avoid
-      - Medication and psychotherapy are often complementary rather than mutually exclusive.
-      - Short-term symptom change does not always predict long-term relapse risk.
-      - A strong alliance improves outcomes across many therapy modalities.
-      - Evidence-based practice includes client preferences and context, not only trial averages.
+**Biofeedback** uses principles of conditioning to help clients regulate body systems, such as the **sympathetic** and **parasympathetic** nervous systems, that contribute to feelings of anxiety or depression (CED 5.5.D.3).
 
-      ### AP Strategy Moves
-      - Define the target concept in one precise sentence before giving examples.
-      - In scenario questions about depression treatment with behavior activation scheduling, identify the manipulated variable and measured outcome.
-      - Use one competing explanation and explain why it is weaker.
-      - If data are provided, mention trend direction and at least one design limitation.
+### How it works
 
-      This combination of precision and evidence improves both multiple-choice accuracy and free-response scoring.
+1. **Measure.** Sensors record a body signal the person normally cannot sense well: heart rate, muscle tension, skin temperature, breathing rate, or sweat gland activity.
+2. **Display.** The signal appears as a line on a screen, a tone, or a light, in real time.
+3. **Practice.** The client tries strategies such as slow breathing or relaxing specific muscles.
+4. **Reinforce.** When the signal moves in the desired direction, the display shows it at once. Seeing success **reinforces** the strategy, an operant principle.
+
+### Connecting to Unit 1
+
+| Division of the autonomic nervous system | State | Biofeedback goal for an anxious client |
+|---|---|---|
+| **Sympathetic** | Arousal: faster heart rate, muscle tension, sweating | Reduce this activity |
+| **Parasympathetic** | Calming: slower heart rate, relaxed muscles, digestion resumes | Increase this activity |
+
+### Worked Example
+
+**Case.** Keisha, a college student, gets tension headaches and racing thoughts before exams. In biofeedback sessions, a sensor on her forehead measures muscle tension and plays a tone that rises in pitch as tension increases.
+
+**Step 1: What is measured?** Forehead muscle tension, a sign of sympathetic arousal.
+
+**Step 2: What does she learn?** Which breathing and relaxation strategies lower the tone.
+
+**Step 3: What is the conditioning?** Each drop in pitch is immediate feedback that reinforces the strategy she just used, so she uses it more.
+
+**Step 4: The goal.** Eventually Keisha can relax those muscles before an exam without the equipment, shifting her body toward parasympathetic activity.
+
+### All four ABA techniques side by side
+
+| | Exposure (systematic desensitization) | Aversion therapy | Token economy | Biofeedback |
+|---|---|---|---|---|
+| **Changes** | Fear response to a harmless stimulus | Attraction to a harmful behavior | Frequency of target behaviors | Body arousal |
+| **Uses** | Relaxation plus a hierarchy | An unpleasant stimulus | Tokens exchanged for backup reinforcers | Real-time display of a body signal |
+| **Learning type** | Classical | Classical | Operant | Operant |
+
+> 🔑 **AP Connection:** A biofeedback question will usually describe sensors and a screen or tone. Expect to name the nervous system division involved: the client learns to **decrease sympathetic** and **increase parasympathetic** activity.
       `
     },
     {
       id: 'treatment-therapy-p3-s7-applied',
       type: 'multiple-choice' as const,
       content: `
-      **Applied Scenarios** 🎯
+**Applied Scenarios — Applied Behavior Analysis** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A team investigating depression treatment with behavior activation scheduling finds that participants rely on a persuasive cue when they are distracted, but use argument quality when they are highly focused. Which concept best captures the focused-processing route?',
+            question: "On a psychiatric inpatient unit, residents earn points for making their beds and attending group sessions, and they trade the points for extra phone time. Which technique is the unit using?",
             options: [
-              'client-centered therapy',
-              'SSRI',
-              'therapeutic alliance',
-              'psychopharmacology'
+              "Aversion therapy",
+              "Token economy",
+              "Systematic desensitization",
+              "Biofeedback"
             ],
             correctAnswer: 1,
-            explanation: 'SSRI is best because it reflects this mechanism (selective serotonin reuptake inhibitor commonly used for mood and anxiety disorders). The other options describe different levels of explanation or related constructs.'
+            explanation: "Earning points for target behaviors and exchanging them for privileges is a token economy, an operant technique. Biofeedback displays body signals, and aversion therapy pairs a behavior with an unpleasant stimulus."
           },
           {
-            question: 'After an intervention, scores improve in the treatment group but not in a matched comparison group. Which interpretation is most defensible for the targeted mechanism?',
+            question: "A client with an anxiety disorder watches a screen showing her heart rate and practices slow breathing until the line drops. She is learning to increase activity in which part of the nervous system?",
             options: [
-              'evidence-based practice',
-              'relapse prevention',
-              'psychopharmacology',
-              'client-centered therapy'
+              "The parasympathetic division",
+              "The sympathetic division",
+              "The somatic nervous system",
+              "The central nervous system"
             ],
-            correctAnswer: 1,
-            explanation: 'relapse prevention is the strongest interpretation because it maps to the measured pattern and proposed mechanism: strategies that reduce risk of symptom return. Good AP reasoning also notes alternative explanations and design limits.'
+            correctAnswer: 0,
+            explanation: "Slowing the heart and calming the body is parasympathetic activity, which biofeedback trains the client to increase. The sympathetic division produces arousal, the opposite of the goal."
+          },
+          {
+            question: "A man who wants to stop drinking takes a medication that makes him nauseated whenever he drinks alcohol. This treatment works by",
+            options: [
+              "rewarding sober days with tokens he trades for privileges",
+              "facing drinking cues step by step while he stays relaxed",
+              "uncovering the unconscious roots of his urge to drink",
+              "pairing drinking with an unpleasant bodily response"
+            ],
+            correctAnswer: 3,
+            explanation: "Pairing alcohol with nausea is aversion therapy, which uses classical conditioning so drinking comes to signal sickness. Tokens describe a token economy, and gradual relaxed exposure describes systematic desensitization."
           }
         ]
       }
+    },
+    {
+      id: 'treatment-therapy-p3-s8-wrap',
+      type: 'text' as const,
+      content: `
+## Part 3 Summary
+
+- **ABA** applies conditioning principles to mental disorders and developmental disabilities.
+- **Exposure therapies** extinguish fear by facing the feared stimulus without escape; **systematic desensitization** does it gradually, pairing a hierarchy with relaxation.
+- **Aversion therapy** pairs an unwanted behavior with an unpleasant stimulus.
+- **Token economies** reinforce target behaviors with tokens exchanged for backup reinforcers.
+- **Biofeedback** displays body signals so clients learn to lower sympathetic arousal.
+
+> 🔑 **AP Connection:** Behavior therapies treat the **behavior** as the problem, so they do not need insight into its origin. That contrast with Part 2 is a favorite exam move: "A behavior therapist would most likely..." is answered with a conditioning technique, never with free association or reflection. Part 4 adds the cognitive layer: what if the problem is how a person **thinks** about the situation?
+      `
     }
   ]
 }

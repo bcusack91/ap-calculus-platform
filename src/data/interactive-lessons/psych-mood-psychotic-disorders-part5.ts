@@ -5,181 +5,227 @@ export const psychMoodPsychPart5Data = {
       id: 'mood-psychotic-disorders-p5-s1-intro',
       type: 'text' as const,
       content: `
-      # 🧠 Mood and Psychotic Disorders
+# 🧠 Mood and Psychotic Disorders
 
-      **Part 5 of 7 — Biopsychosocial Risk Models**
+**Part 5 of 7 — Dissociative, Eating, Personality, and Neurodevelopmental Disorders**
 
-      In this part, you will connect core psychological vocabulary to realistic contexts and AP-style reasoning. Focus on mechanism first, then evidence.
+> 🔑 **Key Concept:** The last four categories in Topic 5.4 differ in **when** they begin and **what** they disrupt. Dissociative disorders split off parts of memory or identity, often after trauma. Eating disorders disrupt eating in ways that harm health. Personality disorders are lasting, inflexible patterns that begin by early adulthood. Neurodevelopmental disorders begin in childhood and are judged against what is typical for a person's age.
 
-      ### Core Definitions
-      - **comorbidity**: co-occurrence of two or more disorders
-      - **prodromal phase**: early period of subtle symptoms before full disorder onset
-      - **major depressive disorder**: persistent low mood or loss of interest with functional impairment
+## Dissociative Disorders
 
-      ### Concrete Real-World Example
-      A team is studying family history and stress-load risk assessment. They operationalize variables, compare plausible explanations, and look for the interpretation that best matches observed behavior instead of relying on intuition.
+**Dissociation** is a disconnection among things that are normally integrated: consciousness, memory, identity, emotion, perception, body representation, motor control, and behavior. The framework names two dissociative disorders.
 
-      ### Why This Matters
-      Strong AP responses define terms precisely, apply them to evidence, and justify why one interpretation is stronger than alternatives.
+| Disorder | Core feature | Example |
+|---|---|---|
+| **Dissociative amnesia** | Inability to recall important personal information, usually about a traumatic or stressful event, far beyond ordinary forgetting and not caused by a brain injury or substance | After a violent assault, a woman cannot remember the attack or the days around it |
+| **Dissociative amnesia with fugue** | Amnesia for one's identity or personal history along with **travel or wandering** away from home | A man under severe stress disappears and is found weeks later in another city, unable to say who he is |
+| **Dissociative identity disorder (DID)** | Two or more **distinct personality states** (identities), with recurring gaps in memory for everyday events, personal information, or trauma | A person finds clothes she does not remember buying, and friends describe her acting like a different person |
+
+**Possible causes:** the framework links dissociative disorders to the experience of **trauma or stress**. Many people diagnosed with DID report severe, repeated trauma in childhood, and one interpretation is that dissociation began as a way to escape an inescapable experience. Some researchers argue that cultural expectations and suggestive therapy practices also shape how DID symptoms appear, which is one reason diagnosis rates vary across countries and decades.
+
+> **DID is not schizophrenia.** DID involves separate identities and memory gaps. Schizophrenia involves psychosis (delusions, hallucinations, disorganized speech) and negative symptoms, with one identity.
+
+## Feeding and Eating Disorders
+
+Feeding and eating disorders involve altered eating that impairs **health or psychological functioning**. Two are in AP scope.
+
+| | **Anorexia nervosa** | **Bulimia nervosa** |
+|---|---|---|
+| Eating pattern | Restricting food intake | Recurrent **binge eating** (a large amount in a short time with a sense of lost control) |
+| Compensation | Restriction itself; sometimes excessive exercise | Recurrent compensatory behavior: vomiting, laxatives, fasting, or excessive exercise |
+| Body weight | **Significantly low** for age and health | Usually in or above the typical range |
+| Thinking | Intense fear of gaining weight; distorted experience of body shape or failure to recognize the danger of low weight | Self-evaluation unduly driven by body shape and weight |
+| DSM-5-TR timing | No set duration | Binge eating and compensation each at least once a week for 3 months |
+
+**Possible causes** draw on all the sources the framework lists: **genetic** (eating disorders run in families and show twin-study heritability), **biological** (changes in appetite and reward systems), **social and cultural** (pressure toward a thin ideal, appearance-focused sports and media; rates have risen as Western beauty standards spread), **cognitive** (perfectionism, all-or-nothing thinking, a distorted body image), and **behavioral** (in bulimia, purging relieves the guilt and anxiety after a binge, which negatively reinforces the cycle). Eating disorders are diagnosed most often in adolescent girls and young women, but they occur across genders, body sizes, and backgrounds.
       `
     },
     {
       id: 'mood-psychotic-disorders-p5-s2-check',
       type: 'multiple-choice' as const,
       content: `
-      **Concept Check** 🎯
+**Concept Check — Dissociative and Eating Disorders** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'In a study about family history and stress-load risk assessment, participants change behavior after repeatedly seeing the same cue. Which concept is the best fit?',
+            question: 'Coworkers describe Elena as sometimes speaking in a child\'s voice and calling herself by another name. Elena reports long gaps in her memory for ordinary days. She does not have hallucinations or delusions. Which diagnosis best fits?',
             options: [
-              'prodromal phase',
-              'comorbidity',
-              'persistent depressive disorder',
-              'major depressive disorder'
+              'Schizophrenia',
+              'Dissociative identity disorder',
+              'Bipolar I disorder',
+              'Borderline personality disorder'
             ],
             correctAnswer: 1,
-            explanation: 'comorbidity is correct because it directly matches this mechanism: co-occurrence of two or more disorders. The distractors describe related but different processes.'
+            explanation: 'Distinct identity states with recurring memory gaps define dissociative identity disorder. Schizophrenia would involve psychotic symptoms such as hallucinations or delusions rather than separate identities.'
           },
           {
-            question: 'Researchers report that behavior shifts when participants receive a specific cue and then justify their choices afterward. Which concept best explains that pattern?',
+            question: 'Kayla, 19, regularly eats a very large amount of food in one sitting while feeling unable to stop, and afterward she makes herself vomit. Her weight is in the typical range for her height. Which diagnosis is most consistent with this pattern?',
             options: [
-              'mania',
-              'bipolar disorder',
-              'prodromal phase',
-              'major depressive disorder'
+              'Anorexia nervosa',
+              'Bulimia nervosa',
+              'Hoarding disorder',
+              'Generalized anxiety disorder'
+            ],
+            correctAnswer: 1,
+            explanation: 'Recurrent binge eating followed by compensatory behavior such as vomiting, with weight in the typical range, fits bulimia nervosa. Anorexia nervosa requires a significantly low body weight.'
+          },
+          {
+            question: 'After his business collapses, a man vanishes from his hometown. Police find him a month later working under a new name in another state, with no memory of his earlier life. Which diagnosis best fits?',
+            options: [
+              'Dissociative amnesia with fugue',
+              'Dissociative identity disorder',
+              'Posttraumatic stress disorder',
+              'Major depressive disorder'
             ],
             correctAnswer: 0,
-            explanation: 'mania is the strongest match here (elevated or irritable mood with increased energy and reduced need for sleep). The other options do not explain both the cue-driven shift and the observed response pattern as directly.'
+            explanation: 'Travel away from home combined with amnesia for one\'s identity, following severe stress, is dissociative amnesia with fugue. There is no evidence of multiple identity states, which DID would require.'
           }
         ]
       }
     },
     {
-      id: 'mood-psychotic-disorders-p5-s3-deep',
+      id: 'mood-psychotic-disorders-p5-s3-personality',
       type: 'text' as const,
       content: `
-      ## Deep Dive: Comparing Explanations with Evidence
+## Personality Disorders
 
-      When analyzing family history and stress-load risk assessment, the best interpretation ties a clear psychological mechanism to measurable evidence.
+Everyone has personality traits. A **personality disorder** is an enduring pattern of inner experience and behavior that:
+1. **deviates** markedly from the expectations of the person's culture,
+2. is **pervasive and inflexible** across many situations,
+3. **begins in adolescence or early adulthood**,
+4. is **stable over time**, and
+5. leads to **distress or impairment**.
 
-      | Theory / Concept | Core claim | Typical evidence | Common limitation |
-      |---|---|---|---|
-      | comorbidity | co-occurrence of two or more disorders | experimental manipulation with random assignment | possible demand characteristics |
-      | prodromal phase | early period of subtle symptoms before full disorder onset | longitudinal trend with repeated measurement | third-variable risk in natural settings |
-      | major depressive disorder | persistent low mood or loss of interest with functional impairment | cross-sectional comparison with matched groups | limited generalizability across cultures |
-      | persistent depressive disorder | chronic depressed mood lasting at least two years | mixed-method evidence combining survey and behavioral indicators | measurement validity depends on construct quality |
+This is what separates a personality disorder from an episode-based disorder such as major depression: the pattern is part of how the person usually relates to the world, not a period that comes and goes.
 
-      ### Interpretation Strategy
-      1. Name the mechanism before describing outcomes.
-      2. Match the claim to the strongest available evidence type.
-      3. Acknowledge one limitation and explain whether it changes the conclusion.
+### The three clusters
 
-      This structure helps you earn reasoning points on free-response and avoid vague claims.
+| Cluster | Description | Disorders | Key features |
+|---|---|---|---|
+| **A** | **Odd or eccentric** | **Paranoid** | Pervasive distrust; assumes others intend harm |
+| | | **Schizoid** | Detached from relationships; narrow emotional expression |
+| | | **Schizotypal** | Discomfort with close relationships, odd beliefs and perceptions, eccentric behavior |
+| **B** | **Dramatic, emotional, or erratic** | **Antisocial** | Disregard for and violation of others' rights; deceit and lack of remorse |
+| | | **Histrionic** | Excessive emotionality and attention-seeking |
+| | | **Narcissistic** | Grandiosity, need for admiration, lack of empathy |
+| | | **Borderline** | Unstable relationships, self-image, and emotions; impulsivity; intense fear of abandonment |
+| **C** | **Anxious or fearful** | **Avoidant** | Social inhibition, feelings of inadequacy, hypersensitivity to criticism |
+| | | **Dependent** | Excessive need to be cared for; clinging and fear of separation |
+| | | **Obsessive-compulsive** | Preoccupation with order, perfectionism, and control |
+
+Antisocial personality disorder is diagnosed only in adults (18 or older), with evidence of conduct problems that began before age 15.
+
+**Obsessive-compulsive personality disorder (OCPD) is not OCD.** OCD involves intrusive obsessions and anxiety-reducing compulsions that the person usually wants to stop. OCPD is a lasting **style** of rigid perfectionism and control, with no true obsessions or compulsions, which the person often sees as simply "the right way" to do things.
+
+**Possible causes** (biological, genetic, social, cultural, behavioral, cognitive): personality disorders run in families; antisocial personality disorder has been linked to **low physiological arousal** (little fear or anxiety response to threats or punishment), reduced frontal lobe activity, and childhood abuse or neglect; borderline personality disorder is often explained as an inborn emotional sensitivity combined with a childhood environment that dismissed or punished emotions. Cultural norms matter by definition, because a pattern counts only if it deviates from the person's own culture.
+
+## Neurodevelopmental Disorders
+
+**Neurodevelopmental disorders** begin during the **developmental period**, and symptoms are judged by whether a behavior is **appropriate for the person's age or maturity**.
+
+| | **Attention-deficit/hyperactivity disorder (ADHD)** | **Autism spectrum disorder (ASD)** |
+|---|---|---|
+| Core features | Persistent **inattention** and/or **hyperactivity-impulsivity** that interferes with functioning | Persistent differences in **social communication and interaction**, plus **restricted, repetitive** behaviors, interests, or activities, sometimes with sensory over- or under-reactivity |
+| Onset and settings | Several symptoms present **before age 12**, in **two or more settings** (home, school, work) | Present in early childhood, though it may be recognized later |
+| Range | Mainly inattentive, mainly hyperactive-impulsive, or combined | A **spectrum**: support needs range from low to very high |
+
+**Possible causes:** the framework lists **environmental, physiological, or genetic** sources. Both disorders are highly heritable in twin studies. Environmental factors include prenatal exposure to alcohol or tobacco and very premature birth. Physiological factors include differences in brain development. Vaccines do **not** cause autism; the study that claimed a link was retracted, and large studies have found no connection.
+
+**Language note:** person-first language ("a person with ADHD") is the general standard. Many autistic adults prefer identity-first language ("an autistic person"); respectful practice is to follow the individual's preference.
       `
     },
     {
-      id: 'mood-psychotic-disorders-p5-s4-input',
-      type: 'input-boxes' as const,
-      content: `
-      **Applied Recall (exact term answers)** ✍️
-
-      1) Write the concept that matches: co-occurrence of two or more disorders
-
-      2) Write the concept that matches: early period of subtle symptoms before full disorder onset
-
-      3) Write the concept that matches: persistent low mood or loss of interest with functional impairment
-
-      Use the exact vocabulary term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['comorbidity', 'prodromal phase', 'major depressive disorder'],
-        hint1: 'Starts with: C',
-        hint2: 'Starts with: P',
-        hint3: 'Starts with: M',
-        explanation: 'Expected answers: comorbidity, prodromal phase, and major depressive disorder. Each response should use the precise term connected to the definition cue.'
-      }
-    },
-    {
-      id: 'mood-psychotic-disorders-p5-s5-dropdown',
+      id: 'mood-psychotic-disorders-p5-s4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Model Matching** 🔎
+**Sort by Personality Cluster** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Select the concept that best matches: co-occurrence of two or more disorders',
-            options: ['comorbidity', 'mania', 'prodromal phase', 'persistent depressive disorder']
+            label: 'A man has believed for years that his coworkers secretly plot against him and reads hidden insults into friendly emails. His pattern belongs to Cluster _____.',
+            options: ['A', 'B', 'C', 'none of the clusters']
           },
           {
-            label: 'Select the concept that best matches: early period of subtle symptoms before full disorder onset',
-            options: ['prodromal phase', 'mania', 'persistent depressive disorder', 'major depressive disorder']
+            label: 'A woman longs for friendships but avoids them because she is convinced she will be criticized and rejected. Her pattern belongs to Cluster _____.',
+            options: ['A', 'B', 'C', 'none of the clusters']
           },
           {
-            label: 'Select the concept that best matches: persistent low mood or loss of interest with functional impairment',
-            options: ['major depressive disorder', 'prodromal phase', 'mania', 'persistent depressive disorder']
+            label: 'A man repeatedly lies to and cheats others for profit and feels no remorse when they are hurt. The best-fitting diagnosis is _____ personality disorder.',
+            options: ['narcissistic', 'antisocial', 'paranoid', 'histrionic']
           }
         ],
-        correctAnswers: ['comorbidity', 'prodromal phase', 'major depressive disorder'],
-        hint1: 'Start by matching the key mechanism in each prompt to the most specific concept.',
-        hint2: 'Eliminate options that describe a different level of analysis (biological vs cognitive vs social).',
-        hint3: 'Use the definition language from this part to avoid near-miss terms.',
-        explanation: 'Correct matches are comorbidity, prodromal phase, and major depressive disorder. These choices align with the mechanism-language in each definition, not just broad topic similarity.'
+        correctAnswers: ['A', 'C', 'antisocial'],
+        hint1: 'Pervasive distrust is an odd or eccentric pattern.',
+        hint2: 'Avoidance driven by fear of criticism is in the anxious or fearful cluster.',
+        hint3: 'Violating others\' rights without remorse is the defining feature.',
+        explanation: 'Pervasive suspicion is paranoid personality disorder in Cluster A (odd or eccentric). Avoiding relationships out of fear of rejection is avoidant personality disorder in Cluster C (anxious or fearful). Deceit and lack of remorse define antisocial personality disorder in Cluster B.'
       }
     },
     {
-      id: 'mood-psychotic-disorders-p5-s6-strategy',
-      type: 'text' as const,
+      id: 'mood-psychotic-disorders-p5-s5-input',
+      type: 'input-boxes' as const,
       content: `
-      ## Common Misconceptions and Exam Strategy
-
-      ### Misconceptions to Avoid
-      - Mood changes alone are insufficient for diagnosis without duration and impairment criteria.
-      - Psychotic symptoms can occur in several disorders and must be interpreted in context.
-      - Bipolar disorder is not simply rapid mood swings; episodes have specific patterns.
-      - Treatment planning should address comorbidity and functioning, not only symptom labels.
-
-      ### AP Strategy Moves
-      - Define the target concept in one precise sentence before giving examples.
-      - In scenario questions about family history and stress-load risk assessment, identify the manipulated variable and measured outcome.
-      - Use one competing explanation and explain why it is weaker.
-      - If data are provided, mention trend direction and at least one design limitation.
-
-      This combination of precision and evidence improves both multiple-choice accuracy and free-response scoring.
-      `
-    },
-    {
-      id: 'mood-psychotic-disorders-p5-s7-applied',
-      type: 'multiple-choice' as const,
-      content: `
-      **Applied Scenarios** 🎯
+**Quick Recall** ✍️
       `,
       exercise: {
         questions: [
           {
-            question: 'A team investigating family history and stress-load risk assessment finds that participants rely on a persuasive cue when they are distracted, but use argument quality when they are highly focused. Which concept best captures the focused-processing route?',
-            options: [
-              'comorbidity',
-              'major depressive disorder',
-              'prodromal phase',
-              'persistent depressive disorder'
-            ],
-            correctAnswer: 3,
-            explanation: 'persistent depressive disorder is best because it reflects this mechanism (chronic depressed mood lasting at least two years). The other options describe different levels of explanation or related constructs.'
+            question: 'Narcissistic, histrionic, borderline, and antisocial personality disorders make up which cluster? (one letter)',
+            answer: 'B',
+            acceptableAnswers: ['cluster B'],
+            explanation: 'Cluster B is the dramatic, emotional, or erratic cluster.'
           },
           {
-            question: 'After an intervention, scores improve in the treatment group but not in a matched comparison group. Which interpretation is most defensible for the targeted mechanism?',
+            question: 'For an ADHD diagnosis, several symptoms must be present before what age?',
+            answer: '12',
+            acceptableAnswers: ['twelve', 'age 12'],
+            explanation: 'The DSM-5-TR requires several inattentive or hyperactive-impulsive symptoms before age 12, in two or more settings.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'mood-psychotic-disorders-p5-s6-applied',
+      type: 'multiple-choice' as const,
+      content: `
+**Applied Scenarios — Telling Patterns Apart** 🎯
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'Since high school, Grant has insisted on strict rules and detailed lists at work, redoes coworkers\' tasks to make them perfect, and misses deadlines because nothing feels good enough. He sees nothing wrong with his approach and reports no intrusive thoughts. Which diagnosis best fits?',
             options: [
-              'major depressive disorder',
-              'mania',
-              'prodromal phase',
-              'bipolar disorder'
+              'Obsessive-compulsive disorder',
+              'Obsessive-compulsive disorder with poor insight',
+              'Obsessive-compulsive personality disorder',
+              'Avoidant personality disorder'
+            ],
+            correctAnswer: 2,
+            explanation: 'A lasting style of perfectionism and control that began by early adulthood, with no intrusive obsessions or anxiety-relieving rituals, fits obsessive-compulsive personality disorder. OCD, with or without good insight, would require intrusive obsessions and compulsions, which he does not report.'
+          },
+          {
+            question: 'Which feature most clearly distinguishes a personality disorder from a major depressive episode?',
+            options: [
+              'A pattern that causes the person significant distress',
+              'A rigid pattern lasting from early adulthood onward',
+              'Changes in mood that affect relationships',
+              'Behavior that others notice and comment on'
             ],
             correctAnswer: 1,
-            explanation: 'mania is the strongest interpretation because it maps to the measured pattern and proposed mechanism: elevated or irritable mood with increased energy and reduced need for sleep. Good AP reasoning also notes alternative explanations and design limits.'
+            explanation: 'Personality disorders are enduring, pervasive, inflexible patterns that begin in adolescence or early adulthood and stay stable, while depressive episodes come and go. Distress, mood effects on relationships, and noticeable behavior can occur in both.'
+          },
+          {
+            question: 'A 7-year-old has trouble staying seated, interrupts constantly, and loses his belongings, both at home and at school, far more than his classmates do. Why does the comparison with classmates matter for a diagnosis of ADHD?',
+            options: [
+              'Diagnosis requires that the child be older than his classmates',
+              'Symptoms are judged against what is typical for that age',
+              'Comparison shows the behavior is caused by the school environment',
+              'Comparison shows that the behavior was learned from his classmates'
+            ],
+            correctAnswer: 1,
+            explanation: 'Neurodevelopmental disorders are identified by whether behavior is appropriate for a person\'s age or maturity, so a 7-year-old\'s behavior must be compared with that of other 7-year-olds. Comparison alone does not show that the school or classmates caused the behavior.'
           }
         ]
       }
