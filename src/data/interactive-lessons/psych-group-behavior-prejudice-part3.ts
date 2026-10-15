@@ -5,184 +5,223 @@ export const psychGroupPart3Data = {
       id: 'group-behavior-prejudice-p3-s1-intro',
       type: 'text' as const,
       content: `
-      # 🧠 Group Behavior and Prejudice
+# 🧠 Group Behavior and Prejudice
 
-      **Part 3 of 7 — Stereotypes and Attribution**
+**Part 3 of 7 — Stereotypes, Prejudice, and Discrimination**
 
-      In this part, you will connect core psychological vocabulary to realistic contexts and AP-style reasoning. Focus on mechanism first, then evidence.
+> 🔑 **Key Concept:** A **stereotype** is a belief, **prejudice** is an attitude, and **discrimination** is a behavior. They often travel together, but they are different things, and the exam expects you to keep them apart.
 
-      ### Core Definitions
-      - **fundamental attribution error**: overattributing others' behavior to disposition rather than situation
-      - **stereotype**: a generalized belief about members of a group
-      - **prejudice**: an unjustified negative attitude toward a group
+### Thinking, feeling, acting
 
-      ### Concrete Real-World Example
-      A team is studying jury deliberation with strong authority pressure. They operationalize variables, compare plausible explanations, and look for the interpretation that best matches observed behavior instead of relying on intuition.
+| Term | Component | Definition | Example |
+|---|---|---|---|
+| **Stereotype** | Thinking (cognitive) | A **generalized concept about a group**, applied to its members | "Older workers can't learn new technology." |
+| **Prejudice** | Feeling (affective) | An unjustified, usually **negative attitude** toward a group and its members | Feeling irritated and dismissive whenever an older coworker joins a tech project |
+| **Discrimination** | Acting (behavioral) | Unjustified **negative behavior** toward a group or its members | Never assigning older coworkers to tech projects, whatever their skills |
 
-      ### Why This Matters
-      Strong AP responses define terms precisely, apply them to evidence, and justify why one interpretation is stronger than alternatives.
+### What the CED says about stereotypes
+
+The CED makes three points about stereotypes, and each one can become an exam question.
+
+1. **Stereotypes reduce cognitive load.** Sorting people into categories is a mental shortcut, much like the schemas and heuristics you studied in Unit 2. A shortcut saves effort when judging quickly, but it ignores the wide variation among individual members of any group.
+2. **Stereotypes can be the cause and/or the result of biased perceptions and experiences.** A stereotype can steer what we notice (cause), and a few vivid or one-sided experiences can create a stereotype (result). The two directions feed each other in a loop.
+3. **Stereotypes are frequently the basis of prejudiced attitudes and discriminatory behaviors.** A belief about a group makes negative feelings toward it seem justified, and those feelings can turn into unfair treatment.
+
+### Can one occur without the others?
+
+Yes, which is why the distinction matters.
+
+| Combination | Example |
+|---|---|
+| **Prejudice without discrimination** | A landlord dislikes a group but rents to its members because fair-housing laws forbid refusing them |
+| **Discrimination without conscious prejudice** | A hiring manager with no hostile feelings follows a rule to hire only applicants referred by current staff, which keeps out groups not already represented |
+| **Stereotype without strong prejudice** | Someone believes a group is "good at math" but feels no hostility; this "positive" stereotype still judges individuals by group membership |
       `
     },
     {
       id: 'group-behavior-prejudice-p3-s2-check',
       type: 'multiple-choice' as const,
       content: `
-      **Concept Check** 🎯
+**Concept Check — Belief, Attitude, or Behavior?** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'In a study about jury deliberation with strong authority pressure, participants change behavior after repeatedly seeing the same cue. Which concept is the best fit?',
+            question: 'A store clerk follows customers of one ethnic group around the store more closely than other customers. Which concept does the clerk\'s action illustrate?',
             options: [
-              'fundamental attribution error',
-              'prejudice',
-              'discrimination',
-              'stereotype'
+              'A stereotype',
+              'Discrimination',
+              'Prejudice',
+              'An implicit attitude'
             ],
-            correctAnswer: 0,
-            explanation: 'fundamental attribution error is correct because it directly matches this mechanism: overattributing others\' behavior to disposition rather than situation. The distractors describe related but different processes.'
+            correctAnswer: 1,
+            explanation: 'Following certain customers more closely is unequal treatment, a behavior, so it is discrimination. A stereotype is a belief, prejudice is a feeling, and an implicit attitude is an evaluation that may or may not lead to behavior.'
           },
           {
-            question: 'Researchers report that behavior shifts when participants receive a specific cue and then justify their choices afterward. Which concept best explains that pattern?',
+            question: 'According to the CED, why do people rely on stereotypes even when they are inaccurate?',
             options: [
-              'prejudice',
-              'stereotype',
-              'groupthink',
-              'contact hypothesis'
+              'Stereotypes are learned only from direct personal experience',
+              'Stereotypes reduce the mental effort needed to make quick judgments',
+              'Stereotypes are formed only after careful review of group data',
+              'Stereotypes cannot change once a person reaches adulthood'
             ],
-            correctAnswer: 3,
-            explanation: 'contact hypothesis is the strongest match here (structured intergroup contact can reduce prejudice). The other options do not explain both the cue-driven shift and the observed response pattern as directly.'
+            correctAnswer: 1,
+            explanation: 'Stereotypes act as mental shortcuts that reduce cognitive load, which is why people use them even when they are wrong. They are often learned secondhand, rarely come from careful review of data, and can change.'
+          },
+          {
+            question: 'Ana believes a certain group is lazy. She then notices every time a member of that group arrives late but overlooks the many who arrive on time. This pattern shows that a stereotype can:',
+            options: [
+              'be the cause of biased perception',
+              'only result from personal experience',
+              'reduce prejudice toward the group',
+              'replace all of her other attitudes'
+            ],
+            correctAnswer: 0,
+            explanation: 'Ana\'s existing belief steers what she notices, so the stereotype is causing a biased perception. Stereotypes can also result from experience, but here the belief comes first, and nothing suggests it reduces prejudice or replaces her other attitudes.'
           }
         ]
       }
     },
     {
-      id: 'group-behavior-prejudice-p3-s3-deep',
+      id: 'group-behavior-prejudice-p3-s3-implicit',
       type: 'text' as const,
       content: `
-      ## Deep Dive: Comparing Explanations with Evidence
+## 🕵️ Implicit Attitudes
 
-      When analyzing jury deliberation with strong authority pressure, the best interpretation ties a clear psychological mechanism to measurable evidence.
+**Explicit attitudes** are evaluations people are aware of and can report: "I support equal pay." **Implicit attitudes** are evaluations people hold **but may be unaware of, or may not acknowledge**. A person can sincerely reject a stereotype on a survey and still show a faster, automatic association between a group and negative words.
 
-      | Theory / Concept | Core claim | Typical evidence | Common limitation |
-      |---|---|---|---|
-      | fundamental attribution error | overattributing others' behavior to disposition rather than situation | experimental manipulation with random assignment | possible demand characteristics |
-      | stereotype | a generalized belief about members of a group | longitudinal trend with repeated measurement | third-variable risk in natural settings |
-      | prejudice | an unjustified negative attitude toward a group | cross-sectional comparison with matched groups | limited generalizability across cultures |
-      | discrimination | unequal behavior toward people based on group membership | mixed-method evidence combining survey and behavioral indicators | measurement validity depends on construct quality |
+### How researchers measure implicit attitudes
 
-      ### Interpretation Strategy
-      1. Name the mechanism before describing outcomes.
-      2. Match the claim to the strongest available evidence type.
-      3. Acknowledge one limitation and explain whether it changes the conclusion.
+People will not report an attitude they cannot see in themselves, and some will not report one they are aware of because it is socially unacceptable. So researchers measure **behavior that is hard to control**, especially reaction time.
 
-      This structure helps you earn reasoning points on free-response and avoid vague claims.
+The best-known tool is the **Implicit Association Test (IAT)**, introduced by Anthony Greenwald and colleagues in 1998.
+
+1. On a computer, the participant sorts words and faces into categories as fast as possible by pressing one of two keys.
+2. In one block, a group (say, faces of young people) shares a key with pleasant words. In another block, the same group shares a key with unpleasant words.
+3. If a person sorts much **faster** when the group is paired with pleasant words, the test infers a stronger **automatic association** between that group and "good."
+
+### Strengths and limits
+
+| Strength | Limit |
+|---|---|
+| Hard to fake, since responses happen in fractions of a second | A person's score can change noticeably from one testing session to the next |
+| Detects associations people do not report on surveys | How well scores predict a single person's real-world behavior is debated |
+| Useful for comparing **groups** of people in research | Not designed to diagnose an individual as "prejudiced" |
+
+> 🔑 **AP Connection:** The IAT measures **associations**, not hostile feelings or actions. If an answer choice claims the IAT "proves" a person will discriminate, it overstates what the method shows.
       `
     },
     {
       id: 'group-behavior-prejudice-p3-s4-input',
       type: 'input-boxes' as const,
       content: `
-      **Applied Recall (exact term answers)** ✍️
+**Recall Practice — Key Terms** ✍️
 
-      1) Write the concept that matches: overattributing others' behavior to disposition rather than situation
-
-      2) Write the concept that matches: a generalized belief about members of a group
-
-      3) Write the concept that matches: an unjustified negative attitude toward a group
-
-      Use the exact vocabulary term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['fundamental attribution error', 'stereotype', 'prejudice'],
-        hint1: 'Starts with: F',
-        hint2: 'Starts with: S',
-        hint3: 'Starts with: P',
-        explanation: 'Expected answers: fundamental attribution error, stereotype, and prejudice. Each response should use the precise term connected to the definition cue.'
-      }
-    },
-    {
-      id: 'group-behavior-prejudice-p3-s5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-      **Model Matching** 🔎
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Select the concept that best matches: overattributing others\' behavior to disposition rather than situation',
-            options: ['prejudice', 'stereotype', 'discrimination', 'fundamental attribution error']
-          },
-          {
-            label: 'Select the concept that best matches: a generalized belief about members of a group',
-            options: ['prejudice', 'discrimination', 'fundamental attribution error', 'stereotype']
-          },
-          {
-            label: 'Select the concept that best matches: an unjustified negative attitude toward a group',
-            options: ['prejudice', 'discrimination', 'fundamental attribution error', 'contact hypothesis']
-          }
-        ],
-        correctAnswers: ['fundamental attribution error', 'stereotype', 'prejudice'],
-        hint1: 'Start by matching the key mechanism in each prompt to the most specific concept.',
-        hint2: 'Eliminate options that describe a different level of analysis (biological vs cognitive vs social).',
-        hint3: 'Use the definition language from this part to avoid near-miss terms.',
-        explanation: 'Correct matches are fundamental attribution error, stereotype, and prejudice. These choices align with the mechanism-language in each definition, not just broad topic similarity.'
-      }
-    },
-    {
-      id: 'group-behavior-prejudice-p3-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ## Common Misconceptions and Exam Strategy
-
-      ### Misconceptions to Avoid
-      - Stereotypes can be positive or negative, but both can distort judgment.
-      - Conformity can reflect informational needs, not only fear of rejection.
-      - Reducing prejudice requires sustained structural conditions, not one-time exposure alone.
-      - Group cohesion helps performance until dissent is suppressed.
-
-      ### AP Strategy Moves
-      - Define the target concept in one precise sentence before giving examples.
-      - In scenario questions about jury deliberation with strong authority pressure, identify the manipulated variable and measured outcome.
-      - Use one competing explanation and explain why it is weaker.
-      - If data are provided, mention trend direction and at least one design limitation.
-
-      This combination of precision and evidence improves both multiple-choice accuracy and free-response scoring.
-      `
-    },
-    {
-      id: 'group-behavior-prejudice-p3-s7-applied',
-      type: 'multiple-choice' as const,
-      content: `
-      **Applied Scenarios** 🎯
+Type a single term for each description.
       `,
       exercise: {
         questions: [
           {
-            question: 'A team investigating jury deliberation with strong authority pressure finds that participants rely on a persuasive cue when they are distracted, but use argument quality when they are highly focused. Which concept best captures the focused-processing route?',
-            options: [
-              'prejudice',
-              'fundamental attribution error',
-              'discrimination',
-              'stereotype'
-            ],
-            correctAnswer: 2,
-            explanation: 'discrimination is best because it reflects this mechanism (unequal behavior toward people based on group membership). The other options describe different levels of explanation or related constructs.'
+            question: 'An evaluation a person holds but may be unaware of or may not acknowledge is called an ______ attitude.',
+            answer: 'implicit',
+            acceptableAnswers: ['implicit attitude'],
+            explanation: 'Implicit attitudes operate automatically and may be unknown to the person, unlike explicit attitudes that can be reported.'
           },
           {
-            question: 'After an intervention, scores improve in the treatment group but not in a matched comparison group. Which interpretation is most defensible for the targeted mechanism?',
-            options: [
-              'stereotype',
-              'groupthink',
-              'prejudice',
-              'contact hypothesis'
-            ],
-            correctAnswer: 3,
-            explanation: 'contact hypothesis is the strongest interpretation because it maps to the measured pattern and proposed mechanism: structured intergroup contact can reduce prejudice. Good AP reasoning also notes alternative explanations and design limits.'
+            question: 'The behavioral component of bias, meaning unjustified negative action toward a group or its members, is called ______.',
+            answer: 'discrimination',
+            acceptableAnswers: ['discriminating'],
+            explanation: 'Discrimination is the action; prejudice is the feeling and a stereotype is the belief.'
+          },
+          {
+            question: 'The reaction-time test that measures automatic associations between groups and evaluations is usually abbreviated as the ______.',
+            answer: 'IAT',
+            acceptableAnswers: ['implicit association test', 'the IAT'],
+            explanation: 'The Implicit Association Test (IAT) infers automatic associations from how quickly people sort paired categories.'
           }
         ]
       }
+    },
+    {
+      id: 'group-behavior-prejudice-p3-s5-evidence',
+      type: 'text' as const,
+      content: `
+## 🔬 Measuring Discrimination: Two Classic Studies
+
+### Study 1: The résumé field experiment
+
+In a well-known field experiment published in 2004, economists **Marianne Bertrand and Sendhil Mullainathan** answered real job ads in Boston and Chicago with thousands of fictitious résumés. Each résumé was randomly given a name common among white Americans (such as Emily or Greg) or a name common among Black Americans (such as Lakisha or Jamal). Résumés with white-sounding names received about **50 percent more callbacks** for interviews than otherwise comparable résumés with Black-sounding names.
+
+Read it like an AP study:
+
+| Element | In this study |
+|---|---|
+| **Method** | Experiment (a field experiment, conducted in real hiring rather than a lab) |
+| **Independent variable** | The racial association of the name on the résumé |
+| **Dependent variable** | Whether the employer called back for an interview |
+| **Why random assignment matters** | Names were assigned at random, so résumé quality could not explain the gap |
+| **What it shows** | Discrimination in behavior, whether or not employers held conscious prejudice |
+
+### Study 2: The self-fulfilling interview
+
+In 1974, **Carl Word, Mark Zanna, and Joel Cooper** ran a two-part study at Princeton.
+
+1. **Part one:** white participants interviewed white and Black job applicants (who were actually trained confederates). With Black applicants, interviewers sat farther away, made more speech errors, and ended the interview sooner.
+2. **Part two:** trained interviewers then used either that "cool" style or a warmer style with white applicants. Applicants interviewed in the cool style **performed worse**, as judged by independent raters, and sat farther from the interviewer.
+
+The study links prejudice to the **self-fulfilling prophecy** from Topic 4.1: an expectation changes how we treat someone, and that treatment produces the very behavior we expected.
+
+> 🔑 **AP Connection:** For any study like these, practice naming the method, the operational definition of the dependent variable (for example, "a phone call or email inviting the applicant to interview"), and why random assignment allows a cause-and-effect conclusion.
+      `
+    },
+    {
+      id: 'group-behavior-prejudice-p3-s6-applied',
+      type: 'multiple-choice' as const,
+      content: `
+**Applied Scenarios — Interpreting Evidence on Bias** 🔬
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'In the résumé field experiment, why can researchers draw a cause-and-effect conclusion about callbacks?',
+            options: [
+              'Employers were interviewed afterward and admitted to holding biased beliefs',
+              'Names were randomly assigned to résumés that were otherwise comparable',
+              'The study used a very large sample drawn from employers in two cities',
+              'The callback rates were reported for each industry and job type separately'
+            ],
+            correctAnswer: 1,
+            explanation: 'Random assignment of names to comparable résumés means résumé quality could not differ systematically between conditions, so the name is the only explanation left. A large sample improves precision but does not establish cause by itself.'
+          },
+          {
+            question: 'A participant reports on a survey that she has no preference between two groups, but her IAT results show a strong automatic preference for one group. What is the best interpretation?',
+            options: [
+              'She must have been lying when she filled out the survey',
+              'Her explicit and implicit attitudes may differ from each other',
+              'The IAT shows that she will discriminate against the other group',
+              'Her score means she holds strong conscious hostility toward them'
+            ],
+            correctAnswer: 1,
+            explanation: 'Explicit attitudes are what people can report, while implicit attitudes may be unknown to the person, so the two can differ without anyone lying. The IAT measures automatic associations, not conscious hostility or certain future behavior.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'group-behavior-prejudice-p3-s7-connection',
+      type: 'text' as const,
+      content: `
+### 🎯 AP Connection: Keep the Three Apart
+
+| If the scenario describes… | Name it… |
+|---|---|
+| A belief about what a group is like | **Stereotype** |
+| A negative feeling toward a group | **Prejudice** |
+| Unfair treatment of a group's members | **Discrimination** |
+| An automatic evaluation the person may not recognize | **Implicit attitude** |
+
+**Next up — Part 4:** Why do people favor their own group, see other groups as all alike, and blame victims for their misfortunes? Part 4 names the biases behind prejudice and practices reading the data that measure them.
+      `
     }
   ]
 }

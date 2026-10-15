@@ -5,184 +5,249 @@ export const psychDisordersPart7Data = {
       id: 'psychological-disorders-overview-p7-s1-intro',
       type: 'text' as const,
       content: `
-      # 🧠 Psychological Disorders Overview
+# 🧠 Psychological Disorders Overview
 
-      **Part 7 of 7 — AP Exam Synthesis**
+**Part 7 of 7 — Synthesis Review**
 
-      In this part, you will connect core psychological vocabulary to realistic contexts and AP-style reasoning. Focus on mechanism first, then evidence.
+> 🔑 **Key Concept:** This topic answers five linked questions. **What** counts as a disorder? **How** is it classified? **Why** does it develop, according to each perspective? **How do causes combine?** And **what happens** to a person once a label is applied?
 
-      ### Core Definitions
-      - **validity**: extent to which a diagnosis captures a distinct clinical condition
-      - **anxiety disorder**: disorder characterized by excessive fear or anxiety and related behaviors
-      - **PTSD**: trauma-related disorder involving intrusion, avoidance, and hyperarousal patterns
+## 🗺️ Concept Map
 
-      ### Concrete Real-World Example
-      A team is studying AP-style analysis of diagnostic dilemmas. They operationalize variables, compare plausible explanations, and look for the interpretation that best matches observed behavior instead of relying on intuition.
+| Big question | Core ideas | CED | Where it connects |
+|---|---|---|---|
+| **What counts as a disorder?** | Dysfunction, distress, deviation from social norms; no single factor is enough; culture and era shape norms; continuum view | 5.3.A.1 | Deviation links to **cultural norms** and bias (Part 5) |
+| **How is it classified?** | DSM (American Psychiatric Association) and ICD (World Health Organization); specialized training; evidence-based tools; reliability and validity; regular updates | 5.3.A.3 | Revisions respond to **research**, as when homosexuality was removed in 1973 |
+| **Why does it develop?** | Behavioral, psychodynamic, humanistic, cognitive, evolutionary, sociocultural, biological explanations; eclectic approach | 5.3.B | The perspectives feed the three families of the **biopsychosocial model** |
+| **How do causes combine?** | Biopsychosocial model; diathesis-stress model (genetic vulnerability × stressful experience); interaction in data | 5.3.C | **Discrimination** adds to the stress side of the model |
+| **What does a label do?** | Positive consequences (treatment, services, relief) and negative ones (stigma, discrimination, misdiagnosis); racism, sexism, ageism, cultural norms | 5.3.A.2 | Stigma lowers help-seeking; bias distorts **reliability and validity** |
 
-      ### Why This Matters
-      Strong AP responses define terms precisely, apply them to evidence, and justify why one interpretation is stronger than alternatives.
+## 🔗 Five Connections Students Often Miss
+
+1. **Deviation and bias are the same problem viewed twice.** Judging deviation requires a set of norms. When a clinician uses the wrong culture's norms, the "deviation" factor becomes a source of **cultural bias**.
+2. **A reliable system can still be biased.** If clinicians share the same stereotype, they may **agree** (high reliability) on a diagnosis that is **inaccurate** for a group (low validity).
+3. **Perspectives are not rivals in practice.** The **eclectic approach** and the **biopsychosocial model** both say the same thing from different angles: real cases need more than one lens.
+4. **Diathesis-stress explains variation within families.** Two siblings can share a vulnerability; the one who meets more stress is at higher risk.
+5. **The DSM describes; the perspectives explain.** A diagnosis names a pattern. It does not tell you which perspective's cause is correct for that person.
+
+## 🧾 Vocabulary at a Glance
+
+| Term | One-line meaning |
+|---|---|
+| Dysfunction | The pattern interferes with daily life |
+| Distress | The person experiences the pattern as painful |
+| Deviation | The pattern departs from the person's cultural norms |
+| DSM | American Psychiatric Association's descriptive manual of mental disorders |
+| ICD | World Health Organization's international classification |
+| Reliability (diagnosis) | Different clinicians agree |
+| Validity (diagnosis) | The category is accurate and meaningful |
+| Eclectic approach | Using more than one perspective with a client |
+| Biopsychosocial model | Biological + psychological + sociocultural factors |
+| Diathesis-stress model | Genetic vulnerability + stressful life experiences |
+| Public / self / structural stigma | Society's stereotypes / a person's own internalized stereotype / stigma built into laws and institutions |
       `
     },
     {
       id: 'psychological-disorders-overview-p7-s2-check',
       type: 'multiple-choice' as const,
       content: `
-      **Concept Check** 🎯
+**Integrated Check — Linking the Ideas** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'In a study about AP-style analysis of diagnostic dilemmas, participants change behavior after repeatedly seeing the same cue. Which concept is the best fit?',
+            question: 'Several clinicians share the same stereotype about a group and consistently give its members the same incorrect diagnosis. How should this diagnosis be described?',
             options: [
-              'obsession',
-              'anxiety disorder',
-              'validity',
-              'PTSD'
+              'Valid but not reliable',
+              'Both reliable and valid for that group',
+              'Reliable but not valid',
+              'Neither reliable nor valid for anyone'
             ],
             correctAnswer: 2,
-            explanation: 'validity is correct because it directly matches this mechanism: extent to which a diagnosis captures a distinct clinical condition. The distractors describe related but different processes.'
+            explanation: 'The clinicians agree with each other, so the diagnosis is reliable, but it is wrong, so it is not valid. Shared bias can produce consistent errors, which is why agreement alone does not prove accuracy.'
           },
           {
-            question: 'Researchers report that behavior shifts when participants receive a specific cue and then justify their choices afterward. Which concept best explains that pattern?',
+            question: 'Which pairing correctly matches a part of this topic to the question it answers?',
             options: [
-              'compulsion',
-              'dissociation',
-              'PTSD',
-              'anxiety disorder'
+              'The three Ds: if a pattern is a disorder',
+              'Diathesis-stress model: who publishes the DSM',
+              'Eclectic approach: how stigma affects patients',
+              'Biopsychosocial model: what deviation means'
             ],
             correctAnswer: 0,
-            explanation: 'compulsion is the strongest match here (repetitive behavior performed to reduce distress or prevent feared outcomes). The other options do not explain both the cue-driven shift and the observed response pattern as directly.'
+            explanation: 'Dysfunction, distress, and deviation are the factors used to decide whether a pattern counts as a disorder. The diathesis-stress model explains how causes combine, the eclectic approach concerns using several perspectives, and the biopsychosocial model groups causes into three families.'
+          },
+          {
+            question: 'A news report says that a diagnostic manual "proves" a disorder is caused by brain chemistry because the disorder is listed in it. What is the best correction?',
+            options: [
+              'Manuals list only disorders whose biological causes are fully known',
+              'Manuals list disorders by their causes in childhood experiences',
+              'Manuals include disorders only after brain-imaging studies confirm them',
+              'Manuals describe symptom patterns without committing to one cause'
+            ],
+            correctAnswer: 3,
+            explanation: 'The DSM is descriptive: it names patterns of symptoms without endorsing a single cause, so being listed says nothing about whether the cause is biological. Listing does not require known biological causes, childhood explanations, or brain-imaging confirmation.'
           }
         ]
       }
     },
     {
-      id: 'psychological-disorders-overview-p7-s3-deep',
+      id: 'psychological-disorders-overview-p7-s3-case',
       type: 'text' as const,
       content: `
-      ## Deep Dive: Comparing Explanations with Evidence
+## 🔍 Worked Example: One Case Through the Whole Topic
 
-      When analyzing AP-style analysis of diagnostic dilemmas, the best interpretation ties a clear psychological mechanism to measurable evidence.
+**Case (hypothetical).** Marcus, 68, retired last year and moved to a new town after his wife died. For six months he has barely left the house, skipped meals, and stopped answering calls from his children. He says he feels "empty and useless." His sister and father both had long periods of similar low mood. At a checkup, his doctor tells him he is "just adjusting to old age."
 
-      | Theory / Concept | Core claim | Typical evidence | Common limitation |
-      |---|---|---|---|
-      | validity | extent to which a diagnosis captures a distinct clinical condition | experimental manipulation with random assignment | possible demand characteristics |
-      | anxiety disorder | disorder characterized by excessive fear or anxiety and related behaviors | longitudinal trend with repeated measurement | third-variable risk in natural settings |
-      | PTSD | trauma-related disorder involving intrusion, avoidance, and hyperarousal patterns | cross-sectional comparison with matched groups | limited generalizability across cultures |
-      | obsession | intrusive, unwanted thought that causes distress | mixed-method evidence combining survey and behavioral indicators | measurement validity depends on construct quality |
+### Step 1 — Is this a disorder? (Part 1)
 
-      ### Interpretation Strategy
-      1. Name the mechanism before describing outcomes.
-      2. Match the claim to the strongest available evidence type.
-      3. Acknowledge one limitation and explain whether it changes the conclusion.
+| Factor | Evidence |
+|---|---|
+| Dysfunction | Skips meals, has stopped leaving home, avoids his children |
+| Distress | Feels "empty and useless" |
+| Deviation | Six months of withdrawal goes well beyond typical grief and adjustment in his culture |
 
-      This structure helps you earn reasoning points on free-response and avoid vague claims.
+All three factors are present and the pattern has lasted months, so a professional evaluation is warranted.
+
+### Step 2 — How should it be diagnosed? (Part 2)
+
+A trained clinician should use **evidence-based tools**: a structured clinical interview, a standardized rating scale, information from his children (with permission), and a medical evaluation to rule out physical causes. A passing comment at a checkup is not a diagnosis.
+
+### Step 3 — Why might it have developed? (Part 3)
+
+| Perspective | Possible explanation |
+|---|---|
+| Biological | Family history suggests a genetic predisposition |
+| Cognitive | The belief that he is "useless" without work deepens his low mood |
+| Humanistic | Loss of his wife and his work leaves him without support or a sense of purpose |
+| Sociocultural | Isolation in a new town |
+| Behavioral | Fewer rewarding activities, and withdrawal reinforced by avoiding painful reminders |
+
+An **eclectic** clinician would combine several of these.
+
+### Step 4 — How do causes combine? (Part 4)
+
+**Diathesis:** the family history. **Stress:** bereavement, retirement, and a move in the same year. The diathesis-stress model predicts sharply raised risk when these occur together. The **biopsychosocial** model adds his thinking pattern and his social isolation.
+
+### Step 5 — What are the consequences of diagnosis? (Part 5)
+
+- **Ageism** nearly caused **underdiagnosis**: his doctor attributed his symptoms to "old age."
+- A diagnosis could bring **positive** consequences: access to evidence-based help and an explanation that is not "just getting old."
+- It could bring **negative** ones: Marcus may hold **self-stigma** if he sees a diagnosis as weakness.
       `
     },
     {
-      id: 'psychological-disorders-overview-p7-s4-input',
-      type: 'input-boxes' as const,
-      content: `
-      **Applied Recall (exact term answers)** ✍️
-
-      1) Write the concept that matches: extent to which a diagnosis captures a distinct clinical condition
-
-      2) Write the concept that matches: disorder characterized by excessive fear or anxiety and related behaviors
-
-      3) Write the concept that matches: trauma-related disorder involving intrusion, avoidance, and hyperarousal patterns
-
-      Use the exact vocabulary term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['validity', 'anxiety disorder', 'PTSD'],
-        hint1: 'Starts with: V',
-        hint2: 'Starts with: A',
-        hint3: 'Starts with: P',
-        explanation: 'Expected answers: validity, anxiety disorder, and PTSD. Each response should use the precise term connected to the definition cue.'
-      }
-    },
-    {
-      id: 'psychological-disorders-overview-p7-s5-dropdown',
+      id: 'psychological-disorders-overview-p7-s4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Model Matching** 🔎
+**Tag the Evidence in Marcus's Case** 🔎
+
+Choose the concept each detail best illustrates.
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Select the concept that best matches: extent to which a diagnosis captures a distinct clinical condition',
-            options: ['obsession', 'anxiety disorder', 'PTSD', 'validity']
+            label: 'His doctor dismisses six months of withdrawal as "just adjusting to old age." This illustrates _____.',
+            options: ['ageism', 'self-stigma', 'reliability', 'deviation']
           },
           {
-            label: 'Select the concept that best matches: disorder characterized by excessive fear or anxiety and related behaviors',
-            options: ['anxiety disorder', 'PTSD', 'compulsion', 'obsession']
+            label: 'His sister and father both had long periods of similar low mood, suggesting a genetic _____.',
+            options: ['stressor', 'diathesis', 'norm', 'perspective']
           },
           {
-            label: 'Select the concept that best matches: trauma-related disorder involving intrusion, avoidance, and hyperarousal patterns',
-            options: ['compulsion', 'anxiety disorder', 'obsession', 'PTSD']
+            label: 'A clinician who considers his family history, his belief that he is useless, and his isolation is using an _____ approach.',
+            options: ['evolutionary', 'eclectic', 'experimental', 'operational']
           }
         ],
-        correctAnswers: ['validity', 'anxiety disorder', 'PTSD'],
-        hint1: 'Start by matching the key mechanism in each prompt to the most specific concept.',
-        hint2: 'Eliminate options that describe a different level of analysis (biological vs cognitive vs social).',
-        hint3: 'Use the definition language from this part to avoid near-miss terms.',
-        explanation: 'Correct matches are validity, anxiety disorder, and PTSD. These choices align with the mechanism-language in each definition, not just broad topic similarity.'
+        correctAnswers: ['ageism', 'diathesis', 'eclectic'],
+        hint1: 'The doctor\'s comment is based on Marcus\'s age.',
+        hint2: 'In the diathesis-stress model, the genetic side of risk has a specific name.',
+        hint3: 'Combining more than one perspective has its own term.',
+        explanation: 'Dismissing symptoms as normal aging is ageism. A family history points to a genetic vulnerability, the diathesis. Combining biological, cognitive, and sociocultural lenses for one client is the eclectic approach.'
       }
     },
     {
-      id: 'psychological-disorders-overview-p7-s6-strategy',
+      id: 'psychological-disorders-overview-p7-s5-frq',
       type: 'text' as const,
       content: `
-      ## Common Misconceptions and Exam Strategy
+## ✍️ Writing About This Topic on the Exam
 
-      ### Misconceptions to Avoid
-      - A diagnosis requires distress or impairment, not just occasional symptoms.
-      - Diagnostic categories guide treatment but do not capture every individual nuance.
-      - Cultural context shapes symptom interpretation and help-seeking behavior.
-      - Comorbidity is common and should influence case formulation.
+The concepts in this topic show up in both free-response questions:
 
-      ### AP Strategy Moves
-      - Define the target concept in one precise sentence before giving examples.
-      - In scenario questions about AP-style analysis of diagnostic dilemmas, identify the manipulated variable and measured outcome.
-      - Use one competing explanation and explain why it is weaker.
-      - If data are provided, mention trend direction and at least one design limitation.
+| Concept | AAQ use | EBQ use |
+|---|---|---|
+| Three Ds | Operationally defining a variable such as "impairment" (for example, days of work missed) | Explaining why a finding shows a pattern is or is not a disorder |
+| Reliability and validity | Evaluating a study's diagnostic measure | Explaining why a diagnostic tool's evidence is trustworthy |
+| Perspectives | Explaining a finding from one perspective | Using one perspective in Part B and a different one in Part C |
+| Interaction models | Explaining how a result supports a hypothesis about vulnerability and stress | A strong concept for explaining evidence about combined causes |
+| Stigma and bias | Generalizability when a sample comes from one culture or age group | Explaining evidence about labeling, help-seeking, or discrimination |
 
-      This combination of precision and evidence improves both multiple-choice accuracy and free-response scoring.
+### Three sentence frames
+
+- **Applying a factor:** "This pattern shows **dysfunction** because [specific evidence of impaired daily functioning]."
+- **Applying a perspective:** "The **[perspective]** perspective would explain this as [the CED's cause for that perspective] because [specific evidence]."
+- **Applying an interaction model:** "This supports the **diathesis-stress model** because [group with vulnerability] developed the disorder mainly when [stress condition], while [group without vulnerability] did not."
+
+> 🔑 **AP Connection:** Generic answers ("it's biological") rarely earn credit. Name the concept, then tie it to a **specific detail** from the scenario or source.
       `
     },
     {
-      id: 'psychological-disorders-overview-p7-s7-applied',
+      id: 'psychological-disorders-overview-p7-s6-applied',
       type: 'multiple-choice' as const,
       content: `
-      **Applied Scenarios** 🎯
+**Mixed Review — Across All Seven Parts** 🔬
       `,
       exercise: {
         questions: [
           {
-            question: 'A team investigating AP-style analysis of diagnostic dilemmas finds that participants rely on a persuasive cue when they are distracted, but use argument quality when they are highly focused. Which concept best captures the focused-processing route?',
+            question: 'In Marcus\'s case, which piece of evidence most directly shows dysfunction?',
             options: [
-              'PTSD',
-              'anxiety disorder',
-              'validity',
-              'obsession'
-            ],
-            correctAnswer: 3,
-            explanation: 'obsession is best because it reflects this mechanism (intrusive, unwanted thought that causes distress). The other options describe different levels of explanation or related constructs.'
-          },
-          {
-            question: 'After an intervention, scores improve in the treatment group but not in a matched comparison group. Which interpretation is most defensible for the targeted mechanism?',
-            options: [
-              'anxiety disorder',
-              'compulsion',
-              'dissociation',
-              'PTSD'
+              'He feels "empty and useless" most days',
+              'He skips meals',
+              'His father had a similar pattern of low mood',
+              'His doctor attributes it to normal aging'
             ],
             correctAnswer: 1,
-            explanation: 'compulsion is the strongest interpretation because it maps to the measured pattern and proposed mechanism: repetitive behavior performed to reduce distress or prevent feared outcomes. Good AP reasoning also notes alternative explanations and design limits.'
+            explanation: 'Skipping meals is a breakdown in basic self-care, which is impaired daily functioning. Feeling empty is distress, the father\'s history is a possible diathesis, and the doctor\'s comment reflects ageism.'
+          },
+          {
+            question: 'A researcher finds that major life events raise the rate of a disorder sharply in people with a family history but barely at all in people without one. Which two ideas from this topic does the finding connect?',
+            options: [
+              'Structural stigma and the three Ds',
+              'Reliability and the eclectic approach',
+              'Validity and the psychodynamic view',
+              'Interaction and diathesis-stress'
+            ],
+            correctAnswer: 3,
+            explanation: 'The effect of stress depends on vulnerability, which is an interaction in the data and the central prediction of the diathesis-stress model. The other pairings do not describe how vulnerability and stress combine.'
+          },
+          {
+            question: 'A school counselor argues that the school should avoid ever diagnosing students, since labels only cause harm. Which response best reflects the CED?',
+            options: [
+              'Labels always help, since they lead directly to effective treatment',
+              'Labels only harm adults, since students are protected from stigma',
+              'Labels can help or harm, depending on the person and the setting',
+              'Labels never matter, since peers rarely learn about a diagnosis'
+            ],
+            correctAnswer: 2,
+            explanation: 'The CED says diagnosis has positive and negative consequences depending on the disorder, the individual, and norms, stigma, and discrimination. Each of the other responses claims the effect is always one-sided or absent.'
           }
         ]
       }
+    },
+    {
+      id: 'psychological-disorders-overview-p7-s7-wrap',
+      type: 'text' as const,
+      content: `
+### 🎯 Topic Wrap-Up
+
+- **Define:** weigh **dysfunction, distress, and deviation** together, in cultural context.
+- **Classify:** the **DSM** (American Psychiatric Association) and **ICD** (World Health Organization), applied by **trained professionals** with **evidence-based tools**, revised as research advances.
+- **Explain:** seven perspectives, each with its CED-defined cause; most psychologists are **eclectic**.
+- **Combine:** the **biopsychosocial** model (three families of factors) and the **diathesis-stress** model (genetic vulnerability × stress).
+- **Consequences:** diagnosis can help or harm, shaped by the disorder, the person, and **norms, stigma, racism, sexism, ageism, and discrimination**.
+
+**Where this leads:** the next topics apply these tools to specific categories of disorders, and then to treatment and therapy.
+      `
     }
   ]
 }

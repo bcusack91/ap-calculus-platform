@@ -5,184 +5,246 @@ export const psychDisordersPart3Data = {
       id: 'psychological-disorders-overview-p3-s1-intro',
       type: 'text' as const,
       content: `
-      # 🧠 Psychological Disorders Overview
+# 🧠 Psychological Disorders Overview
 
-      **Part 3 of 7 — Obsessive-Compulsive and Related Disorders**
+**Part 3 of 7 — Perspectives on Disorders and the Eclectic Approach**
 
-      In this part, you will connect core psychological vocabulary to realistic contexts and AP-style reasoning. Focus on mechanism first, then evidence.
+> 🔑 **Key Concept:** Each major psychological perspective points to a different kind of cause for psychological disorders. Most psychologists use an **eclectic approach**, drawing on more than one perspective when they diagnose and treat clients.
 
-      ### Core Definitions
-      - **PTSD**: trauma-related disorder involving intrusion, avoidance, and hyperarousal patterns
-      - **obsession**: intrusive, unwanted thought that causes distress
-      - **compulsion**: repetitive behavior performed to reduce distress or prevent feared outcomes
+### Seven lenses on the same problem
 
-      ### Concrete Real-World Example
-      A team is studying treatment planning for OCD symptom cycles. They operationalize variables, compare plausible explanations, and look for the interpretation that best matches observed behavior instead of relying on intuition.
+The DSM (Part 2) describes *what* a disorder looks like. The perspectives explain *why* it develops. The AP CED gives a specific framing for each one; learn these framings closely, because exam questions are built on them.
 
-      ### Why This Matters
-      Strong AP responses define terms precisely, apply them to evidence, and justify why one interpretation is stronger than alternatives.
+| Perspective | The CED says causes of disorders focus on… | Key ideas and names to connect |
+|---|---|---|
+| **Behavioral** | **maladaptive learned associations** between or among responses to stimuli | Classical conditioning (a fear linked to a place), operant conditioning (avoidance that is reinforced because it brings relief) |
+| **Psychodynamic** | **unconscious thoughts and experiences**, often developed during **childhood** | Freud; unresolved conflicts and early relationships that operate outside awareness |
+| **Humanistic** | a **lack of social support** and being **unable to fulfill one's potential** | Rogers (conditions of worth, need for unconditional positive regard); self-actualization, meaning growth toward one's full potential |
+| **Cognitive** | **maladaptive thoughts, beliefs, attitudes, or emotions** | Beck, Ellis; distorted interpretations such as "one mistake means I am a total failure" |
+| **Evolutionary** | behaviors and mental processes that **reduce the likelihood of survival** | Natural selection; a response that once helped survival can misfire in a way that harms it |
+| **Sociocultural** | **maladaptive social and cultural relationships and dynamics** | Poverty, discrimination, family conflict, isolation, cultural pressures |
+| **Biological** | **physiological or genetic issues** | Neurotransmitters, brain structure and activity, hormones, heredity |
+
+### How to tell them apart
+
+The fastest way to identify a perspective in a question is to ask **where the explanation locates the cause**:
+
+- In **what was learned** from experiences with stimuli and consequences? → behavioral
+- In the **unconscious** and **childhood**? → psychodynamic
+- In **unmet needs** for support, acceptance, and growth? → humanistic
+- In **how the person thinks** and interprets events? → cognitive
+- In what does or does not help the organism **survive**? → evolutionary
+- In **relationships, communities, and culture**? → sociocultural
+- In the **brain, body, and genes**? → biological
+
+### Two traps
+
+- **Cognitive versus behavioral.** Both can involve learning, but the cognitive perspective is about the *content of thoughts and beliefs* ("I am worthless"), while the behavioral perspective is about *associations and consequences* (the dog bit me, so dogs now trigger fear).
+- **Humanistic versus sociocultural.** Both mention other people. The humanistic perspective focuses on the individual's **unmet need** for support and growth; the sociocultural perspective focuses on **broader social and cultural dynamics** such as poverty, discrimination, or family systems.
       `
     },
     {
       id: 'psychological-disorders-overview-p3-s2-check',
       type: 'multiple-choice' as const,
       content: `
-      **Concept Check** 🎯
+**Concept Check — Which Perspective?** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'In a study about treatment planning for OCD symptom cycles, participants change behavior after repeatedly seeing the same cue. Which concept is the best fit?',
+            question: 'A psychologist explains a client\'s intense fear of elevators by pointing out that he was once trapped in one for hours, and that every time he avoids elevators now, his anxiety drops. Which perspective does this explanation reflect?',
             options: [
-              'PTSD',
-              'obsession',
-              'dissociation',
-              'compulsion'
+              'Cognitive',
+              'Psychodynamic',
+              'Behavioral',
+              'Evolutionary'
             ],
-            correctAnswer: 0,
-            explanation: 'PTSD is correct because it directly matches this mechanism: trauma-related disorder involving intrusion, avoidance, and hyperarousal patterns. The distractors describe related but different processes.'
+            correctAnswer: 2,
+            explanation: 'The explanation rests on a learned association (elevator paired with a frightening experience) and on avoidance being reinforced by relief, which is the behavioral perspective. A cognitive explanation would focus on his beliefs about elevators instead.'
           },
           {
-            question: 'Researchers report that behavior shifts when participants receive a specific cue and then justify their choices afterward. Which concept best explains that pattern?',
+            question: 'Which explanation of a client\'s persistent hopelessness best reflects the cognitive perspective?',
             options: [
-              'biopsychosocial model',
-              'stigma',
-              'compulsion',
-              'obsession'
+              'She interprets every setback as proof that she will always fail',
+              'She grew up without warmth and acceptance from her parents',
+              'She has inherited a strong family tendency toward low mood',
+              'She lives in a community with few jobs and high crime rates'
             ],
             correctAnswer: 0,
-            explanation: 'biopsychosocial model is the strongest match here (framework integrating biological, psychological, and social influences). The other options do not explain both the cue-driven shift and the observed response pattern as directly.'
+            explanation: 'The cognitive perspective locates the cause in maladaptive thoughts and beliefs, such as reading every setback as proof of permanent failure. A lack of acceptance fits humanistic or psychodynamic views, inheritance is biological, and community conditions are sociocultural.'
+          },
+          {
+            question: 'According to the AP CED, the humanistic perspective proposes that the causes of disorders focus on what?',
+            options: [
+              'Unconscious conflicts that began in early childhood',
+              'Learned links between stimuli and responses',
+              'Cultural dynamics such as poverty and discrimination',
+              'Weak social support and blocked personal growth'
+            ],
+            correctAnswer: 3,
+            explanation: 'The CED states that the humanistic perspective focuses on a lack of social support and being unable to fulfill one\'s potential. Unconscious childhood conflicts are psychodynamic, learned links are behavioral, and poverty and discrimination are sociocultural dynamics.'
           }
         ]
       }
     },
     {
-      id: 'psychological-disorders-overview-p3-s3-deep',
+      id: 'psychological-disorders-overview-p3-s3-case',
       type: 'text' as const,
       content: `
-      ## Deep Dive: Comparing Explanations with Evidence
+## 🔍 Worked Example: One Case, Seven Explanations
 
-      When analyzing treatment planning for OCD symptom cycles, the best interpretation ties a clear psychological mechanism to measurable evidence.
+**The case (hypothetical).** Jordan, 22, moved across the country for a job eight months ago. Since then, he has felt persistently sad and hopeless, has stopped calling friends, and sleeps until noon on weekends. He was laid off two months ago. His mother and an uncle have both been treated for similar long periods of low mood. Jordan says, "Nothing I do ever works out. I'm just not good enough."
 
-      | Theory / Concept | Core claim | Typical evidence | Common limitation |
-      |---|---|---|---|
-      | PTSD | trauma-related disorder involving intrusion, avoidance, and hyperarousal patterns | experimental manipulation with random assignment | possible demand characteristics |
-      | obsession | intrusive, unwanted thought that causes distress | longitudinal trend with repeated measurement | third-variable risk in natural settings |
-      | compulsion | repetitive behavior performed to reduce distress or prevent feared outcomes | cross-sectional comparison with matched groups | limited generalizability across cultures |
-      | dissociation | disruption in integration of consciousness, memory, or identity | mixed-method evidence combining survey and behavioral indicators | measurement validity depends on construct quality |
+Notice that the case contains clues for every perspective. Here is how each one would explain Jordan's pattern.
 
-      ### Interpretation Strategy
-      1. Name the mechanism before describing outcomes.
-      2. Match the claim to the strongest available evidence type.
-      3. Acknowledge one limitation and explain whether it changes the conclusion.
+| Perspective | Explanation of Jordan's pattern | Evidence in the case it relies on |
+|---|---|---|
+| **Biological** | A genetic predisposition and differences in brain chemistry make prolonged low mood more likely | Mother and uncle had similar patterns |
+| **Cognitive** | His belief that "nothing ever works out" and "I'm not good enough" turns ordinary setbacks into proof of failure, which deepens the sadness | His own statement |
+| **Behavioral** | After the move, the activities that used to bring reinforcement (friends, work success) disappeared; staying in bed is reinforced because it avoids discomfort | Stopped calling friends; sleeps late |
+| **Psychodynamic** | The layoff may have stirred unconscious feelings about early experiences of loss or rejection | Would require exploring his childhood history |
+| **Humanistic** | Far from his support network and blocked from a meaningful career, he cannot move toward his potential and feels unaccepted | The move and the layoff |
+| **Sociocultural** | Isolation in a new city, job loss, and economic pressure are social conditions that strain mental health | New city, layoff |
+| **Evolutionary** | Withdrawal and low energy after loss may once have helped conserve resources, but prolonged withdrawal now reduces his chances of thriving and surviving | Withdrawal and low energy |
 
-      This structure helps you earn reasoning points on free-response and avoid vague claims.
+### Step back: what the comparison shows
+
+1. **No single perspective uses all the evidence.** The biological account ignores his beliefs; the cognitive account ignores his family history; the sociocultural account ignores both.
+2. **The explanations are not mutually exclusive.** A genetic predisposition, a pessimistic thinking style, and social isolation can all be true at once.
+3. **Different perspectives suggest different questions to ask.** A biologically minded clinician asks about family history; a cognitive one asks what Jordan tells himself after a setback; a sociocultural one asks about his community and finances.
+
+> 🔑 **AP Connection:** On the exam, a perspective question usually gives one explanation and asks you to name the perspective. Look for the **cause** the explanation emphasizes, not the symptoms. The symptoms (sadness, withdrawal) are the same in every row of the table above.
       `
     },
     {
-      id: 'psychological-disorders-overview-p3-s4-input',
-      type: 'input-boxes' as const,
-      content: `
-      **Applied Recall (exact term answers)** ✍️
-
-      1) Write the concept that matches: trauma-related disorder involving intrusion, avoidance, and hyperarousal patterns
-
-      2) Write the concept that matches: intrusive, unwanted thought that causes distress
-
-      3) Write the concept that matches: repetitive behavior performed to reduce distress or prevent feared outcomes
-
-      Use the exact vocabulary term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['PTSD', 'obsession', 'compulsion'],
-        hint1: 'Starts with: P',
-        hint2: 'Starts with: O',
-        hint3: 'Starts with: C',
-        explanation: 'Expected answers: PTSD, obsession, and compulsion. Each response should use the precise term connected to the definition cue.'
-      }
-    },
-    {
-      id: 'psychological-disorders-overview-p3-s5-dropdown',
+      id: 'psychological-disorders-overview-p3-s4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Model Matching** 🔎
+**Match the Explanation to the Perspective** 🔎
+
+Each sentence gives one explanation of the same pattern of intense, persistent worry. Choose the perspective it reflects.
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Select the concept that best matches: trauma-related disorder involving intrusion, avoidance, and hyperarousal patterns',
-            options: ['compulsion', 'stigma', 'obsession', 'PTSD']
+            label: '"The worry stems from conflicts with a harsh parent that were pushed out of awareness in childhood." This reflects the _____ perspective.',
+            options: ['psychodynamic', 'humanistic', 'cognitive', 'sociocultural']
           },
           {
-            label: 'Select the concept that best matches: intrusive, unwanted thought that causes distress',
-            options: ['biopsychosocial model', 'dissociation', 'obsession', 'stigma']
+            label: '"The worry reflects an imbalance in neurotransmitter activity and an inherited tendency toward anxiety." This reflects the _____ perspective.',
+            options: ['behavioral', 'biological', 'evolutionary', 'cognitive']
           },
           {
-            label: 'Select the concept that best matches: repetitive behavior performed to reduce distress or prevent feared outcomes',
-            options: ['biopsychosocial model', 'obsession', 'PTSD', 'compulsion']
+            label: '"The worry grew as the person faced discrimination at work and pressure from an extended family to succeed." This reflects the _____ perspective.',
+            options: ['humanistic', 'psychodynamic', 'sociocultural', 'behavioral']
           }
         ],
-        correctAnswers: ['PTSD', 'obsession', 'compulsion'],
-        hint1: 'Start by matching the key mechanism in each prompt to the most specific concept.',
-        hint2: 'Eliminate options that describe a different level of analysis (biological vs cognitive vs social).',
-        hint3: 'Use the definition language from this part to avoid near-miss terms.',
-        explanation: 'Correct matches are PTSD, obsession, and compulsion. These choices align with the mechanism-language in each definition, not just broad topic similarity.'
+        correctAnswers: ['psychodynamic', 'biological', 'sociocultural'],
+        hint1: 'Find the word that tells you where the cause is located: awareness, brain and genes, or society.',
+        hint2: 'Conflicts "pushed out of awareness" are unconscious; neurotransmitters and inheritance are physiological and genetic.',
+        hint3: 'Discrimination and family pressure are social and cultural dynamics, not a person\'s individual need for growth.',
+        explanation: 'Unconscious childhood conflicts are psychodynamic. Neurotransmitter activity and inherited tendencies are biological. Discrimination and cultural family pressures are maladaptive social and cultural dynamics, the sociocultural perspective.'
       }
     },
     {
-      id: 'psychological-disorders-overview-p3-s6-strategy',
+      id: 'psychological-disorders-overview-p3-s5-eclectic',
       type: 'text' as const,
       content: `
-      ## Common Misconceptions and Exam Strategy
+## 🧩 The Eclectic Approach
 
-      ### Misconceptions to Avoid
-      - A diagnosis requires distress or impairment, not just occasional symptoms.
-      - Diagnostic categories guide treatment but do not capture every individual nuance.
-      - Cultural context shapes symptom interpretation and help-seeking behavior.
-      - Comorbidity is common and should influence case formulation.
+The CED states that **most psychologists employ an eclectic approach**, meaning they use **more than one psychological perspective** when diagnosing and treating clients.
 
-      ### AP Strategy Moves
-      - Define the target concept in one precise sentence before giving examples.
-      - In scenario questions about treatment planning for OCD symptom cycles, identify the manipulated variable and measured outcome.
-      - Use one competing explanation and explain why it is weaker.
-      - If data are provided, mention trend direction and at least one design limitation.
+### Why eclectic?
 
-      This combination of precision and evidence improves both multiple-choice accuracy and free-response scoring.
+| Reason | Explanation |
+|---|---|
+| **Disorders have multiple causes** | Research rarely finds one cause; genes, thinking patterns, learning history, and social conditions usually combine |
+| **Clients differ** | Two people with the same diagnosis can have very different histories, so the most useful lens differs from person to person |
+| **Each perspective has blind spots** | The biological lens can miss beliefs and relationships; the cognitive lens can miss genetics; combining them covers more |
+| **More options for help** | Treatment plans can draw on several approaches at once (see Treatment and Therapy for the specific methods) |
+
+### Eclectic does not mean "anything goes"
+
+An eclectic psychologist does not pick explanations at random. She chooses the perspectives that **fit the evidence** about a specific client and that are supported by research. In Jordan's case, a clinician might weigh his family history (biological), his self-critical beliefs (cognitive), and his isolation after the move (sociocultural), because the case contains evidence for all three.
+
+### Worked Example: Is this approach eclectic?
+
+**Clinician A** says every disorder comes from a chemical imbalance, so she asks only about family history and sleep.
+→ **Not eclectic.** She relies on one perspective (biological) for every client.
+
+**Clinician B** asks about family history, how the client interprets setbacks, and what support the client has at home and work, then builds an explanation from all three.
+→ **Eclectic.** She combines biological, cognitive, and sociocultural or humanistic lenses.
+
+**Clinician C** explains one client mainly through learning history and another mainly through unconscious conflict, but within each client uses only one lens.
+→ **Partly.** Over many clients she uses several perspectives, but the eclectic approach usually means combining perspectives to understand **the same client**.
+
+> 🔑 **AP Connection:** The eclectic approach (5.3.B.1) leads directly into the **biopsychosocial model** in Part 4, which formally organizes causes into biological, psychological, and sociocultural factors.
       `
     },
     {
-      id: 'psychological-disorders-overview-p3-s7-applied',
+      id: 'psychological-disorders-overview-p3-s6-applied',
       type: 'multiple-choice' as const,
       content: `
-      **Applied Scenarios** 🎯
+**Applied Scenarios — Perspectives in Practice** 🔬
       `,
       exercise: {
         questions: [
           {
-            question: 'A team investigating treatment planning for OCD symptom cycles finds that participants rely on a persuasive cue when they are distracted, but use argument quality when they are highly focused. Which concept best captures the focused-processing route?',
+            question: 'A researcher argues that a tendency to freeze and withdraw under threat once helped humans avoid predators, but that in some people today the same response becomes so extreme that it harms their ability to work, form relationships, and thrive. Which perspective is the researcher using?',
             options: [
-              'compulsion',
-              'PTSD',
-              'dissociation',
-              'obsession'
-            ],
-            correctAnswer: 2,
-            explanation: 'dissociation is best because it reflects this mechanism (disruption in integration of consciousness, memory, or identity). The other options describe different levels of explanation or related constructs.'
-          },
-          {
-            question: 'After an intervention, scores improve in the treatment group but not in a matched comparison group. Which interpretation is most defensible for the targeted mechanism?',
-            options: [
-              'stigma',
-              'biopsychosocial model',
-              'obsession',
-              'compulsion'
+              'Psychodynamic',
+              'Evolutionary',
+              'Biological',
+              'Humanistic'
             ],
             correctAnswer: 1,
-            explanation: 'biopsychosocial model is the strongest interpretation because it maps to the measured pattern and proposed mechanism: framework integrating biological, psychological, and social influences. Good AP reasoning also notes alternative explanations and design limits.'
+            explanation: 'The argument concerns a response shaped by survival pressures that now reduces the person\'s chances of thriving, which matches the evolutionary perspective. A biological account would focus on genes or brain chemistry rather than on survival value.'
+          },
+          {
+            question: 'A therapist asks a new client about her family history, how she interprets stressful events, and how her neighborhood and job affect her. Which term best describes this therapist\'s approach?',
+            options: [
+              'Behavioral',
+              'Psychodynamic',
+              'Biomedical',
+              'Eclectic'
+            ],
+            correctAnswer: 3,
+            explanation: 'Gathering biological, cognitive, and sociocultural information about the same client and combining them is the eclectic approach. Each of the other labels names a single lens that would leave out most of what this therapist asks.'
+          },
+          {
+            question: 'A student claims that the cognitive and behavioral perspectives explain disorders in the same way, since both involve learning. Which response best corrects the student?',
+            options: [
+              'The cognitive view looks at the unconscious, and the behavioral view looks at genes',
+              'The cognitive view looks at culture, and the behavioral view looks at unmet needs',
+              'The cognitive view looks at beliefs, and the behavioral view looks at conditioning',
+              'The cognitive view looks at survival, and the behavioral view looks at brain chemistry'
+            ],
+            correctAnswer: 2,
+            explanation: 'The cognitive perspective focuses on maladaptive thoughts and beliefs, while the behavioral perspective focuses on maladaptive learned associations between responses and stimuli. The other pairings assign each perspective a cause that belongs to a different one.'
           }
         ]
       }
+    },
+    {
+      id: 'psychological-disorders-overview-p3-s7-next',
+      type: 'text' as const,
+      content: `
+### 🎯 Putting It Together
+
+| Perspective | One-line CED framing |
+|---|---|
+| Behavioral | Maladaptive learned associations |
+| Psychodynamic | Unconscious thoughts and experiences, often from childhood |
+| Humanistic | Lack of social support; unable to fulfill potential |
+| Cognitive | Maladaptive thoughts, beliefs, attitudes, or emotions |
+| Evolutionary | Behaviors and mental processes that reduce the likelihood of survival |
+| Sociocultural | Maladaptive social and cultural relationships and dynamics |
+| Biological | Physiological or genetic issues |
+
+Most psychologists combine these in an **eclectic approach**.
+
+**Next up — Part 4:** Two models that formally combine causes, the **biopsychosocial model** and the **diathesis-stress model**, and how to read data that tests them.
+      `
     }
   ]
 }

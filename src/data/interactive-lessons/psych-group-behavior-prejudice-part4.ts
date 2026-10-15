@@ -5,184 +5,223 @@ export const psychGroupPart4Data = {
       id: 'group-behavior-prejudice-p4-s1-intro',
       type: 'text' as const,
       content: `
-      # 🧠 Group Behavior and Prejudice
+# 🧠 Group Behavior and Prejudice
 
-      **Part 4 of 7 — Prejudice Reduction Mechanisms**
+**Part 4 of 7 — Biases Behind Prejudice and Reading the Data**
 
-      In this part, you will connect core psychological vocabulary to realistic contexts and AP-style reasoning. Focus on mechanism first, then evidence.
+> 🔑 **Key Concept:** The CED names four biases that show how implicit attitudes can produce negative evaluations of others: **in-group bias**, **out-group homogeneity bias**, **ethnocentrism**, and the **just-world phenomenon**. Each one distorts judgment in a different way.
 
-      ### Core Definitions
-      - **prejudice**: an unjustified negative attitude toward a group
-      - **discrimination**: unequal behavior toward people based on group membership
-      - **contact hypothesis**: structured intergroup contact can reduce prejudice
+### Us and them
 
-      ### Concrete Real-World Example
-      A team is studying a workplace DEI training using contact-based interventions. They operationalize variables, compare plausible explanations, and look for the interpretation that best matches observed behavior instead of relying on intuition.
+Your **in-group** is any group you see yourself as belonging to ("us"). An **out-group** is a group you see yourself as outside of ("them"). The same person is in-group or out-group depending on the comparison: a classmate from a rival school is out-group at a football game but in-group when your state's students compete nationally.
 
-      ### Why This Matters
-      Strong AP responses define terms precisely, apply them to evidence, and justify why one interpretation is stronger than alternatives.
+### The four biases
+
+| Bias | Definition | Example |
+|---|---|---|
+| **In-group bias** | Favoring members of one's own group in evaluations and rewards | A manager rates proposals from her own department as stronger than equally good proposals from another department |
+| **Out-group homogeneity bias** | Seeing members of an out-group as more alike than members of one's own group | "Those engineering students are all the same, but we psychology majors are really diverse." |
+| **Ethnocentrism** | Judging other cultures by the standards of one's own, and seeing one's own culture as the normal or superior one | A traveler calls a country's customs "backward" because they differ from home |
+| **Just-world phenomenon** | Believing the world is fair, so people get what they deserve and deserve what they get | Assuming a person who lost a job "must have done something wrong" |
+
+### How little it takes: the minimal group studies
+
+How weak can group membership be and still produce in-group bias? In studies published in 1971, **Henri Tajfel** and colleagues assigned British schoolboys to groups on a trivial basis, such as whether they supposedly preferred paintings by the artist Klee or the artist Kandinsky. The boys did not know who else was in their group and never met as a group. Asked to divide rewards between an anonymous in-group member and an anonymous out-group member, the boys **favored their own group**. They often chose options that **maximized the difference** between the groups even when another option would have given their own group more in absolute terms.
+
+The lesson: in-group bias does not require history, hostility, or competition. A meaningless label is enough to start it.
+
+### Why the just-world belief matters
+
+Believing in a just world feels comforting, since it suggests that bad things will not happen to you if you behave well. The cost is **victim blaming**. In experiments by Melvin Lerner and colleagues in the 1960s, observers who watched a person apparently receive painful shocks, and who could do nothing to stop them, tended to **rate the victim less favorably**. Devaluing the victim let observers keep believing the world is fair.
       `
     },
     {
       id: 'group-behavior-prejudice-p4-s2-check',
       type: 'multiple-choice' as const,
       content: `
-      **Concept Check** 🎯
+**Concept Check — Name the Bias** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'In a study about a workplace DEI training using contact-based interventions, participants change behavior after repeatedly seeing the same cue. Which concept is the best fit?',
+            question: 'After a flood destroys a low-income neighborhood, a commenter writes that residents "should have known better than to live there." Which bias does this reasoning best illustrate?',
             options: [
-              'groupthink',
-              'contact hypothesis',
-              'discrimination',
-              'prejudice'
-            ],
-            correctAnswer: 3,
-            explanation: 'prejudice is correct because it directly matches this mechanism: an unjustified negative attitude toward a group. The distractors describe related but different processes.'
-          },
-          {
-            question: 'Researchers report that behavior shifts when participants receive a specific cue and then justify their choices afterward. Which concept best explains that pattern?',
-            options: [
-              'ingroup bias',
-              'social identity',
-              'contact hypothesis',
-              'discrimination'
+              'Out-group homogeneity bias',
+              'The just-world phenomenon',
+              'Ethnocentrism',
+              'In-group bias'
             ],
             correctAnswer: 1,
-            explanation: 'social identity is the strongest match here (part of self-concept derived from group membership). The other options do not explain both the cue-driven shift and the observed response pattern as directly.'
+            explanation: 'Blaming victims for their misfortune protects the belief that people get what they deserve, which is the just-world phenomenon. Nothing in the comment judges another culture, favors the commenter\'s own group, or claims the residents are all alike.'
+          },
+          {
+            question: 'What was most surprising about the results of Tajfel\'s minimal group studies?',
+            options: [
+              'Boys favored their own group even when the groups were meaningless',
+              'Boys shared rewards equally once they learned the groups were random',
+              'Boys gave the out-group extra points to look fair to the researchers',
+              'Boys showed bias only after the two groups competed for valuable prizes'
+            ],
+            correctAnswer: 0,
+            explanation: 'The groups were based on a trivial preference, and the boys never met their group, yet they still favored in-group members. That showed in-group bias does not require competition, history, or real conflict.'
+          },
+          {
+            question: 'A student from a large city says that people from small towns "all think the same way," while people from cities "have every kind of opinion." Which bias is this?',
+            options: [
+              'In-group bias',
+              'Ethnocentrism',
+              'Out-group homogeneity bias',
+              'The false consensus effect'
+            ],
+            correctAnswer: 2,
+            explanation: 'Seeing the out-group as uniform while seeing one\'s own group as varied is out-group homogeneity bias. In-group bias is about favoring one\'s own group, and false consensus is about overestimating agreement with oneself.'
           }
         ]
       }
     },
     {
-      id: 'group-behavior-prejudice-p4-s3-deep',
+      id: 'group-behavior-prejudice-p4-s3-data',
       type: 'text' as const,
       content: `
-      ## Deep Dive: Comparing Explanations with Evidence
+## 📊 Reading the Data: A Practice Minimal-Group Study
 
-      When analyzing a workplace DEI training using contact-based interventions, the best interpretation ties a clear psychological mechanism to measurable evidence.
+The AP exam expects you to calculate and interpret descriptive statistics in a social psychology context. Work through this practice study (a hypothetical study written for practice, not a real publication).
 
-      | Theory / Concept | Core claim | Typical evidence | Common limitation |
-      |---|---|---|---|
-      | prejudice | an unjustified negative attitude toward a group | experimental manipulation with random assignment | possible demand characteristics |
-      | discrimination | unequal behavior toward people based on group membership | longitudinal trend with repeated measurement | third-variable risk in natural settings |
-      | contact hypothesis | structured intergroup contact can reduce prejudice | cross-sectional comparison with matched groups | limited generalizability across cultures |
-      | groupthink | poor group decisions from pressure to maintain consensus | mixed-method evidence combining survey and behavioral indicators | measurement validity depends on construct quality |
+> **Practice study summary.** Twelve high school volunteers were randomly assigned to a "Blue" or "Green" team by coin flip. Each volunteer then privately divided 20 points between one anonymous Blue member and one anonymous Green member. The researchers recorded how many of the 20 points each volunteer gave to a member of their **own** team.
 
-      ### Interpretation Strategy
-      1. Name the mechanism before describing outcomes.
-      2. Match the claim to the strongest available evidence type.
-      3. Acknowledge one limitation and explain whether it changes the conclusion.
+**Points given to the in-group member (out of 20):**
 
-      This structure helps you earn reasoning points on free-response and avoid vague claims.
+| Volunteer | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Points | 12 | 10 | 14 | 11 | 13 | 10 | 15 | 12 | 10 | 14 | 11 | 12 |
+
+### Worked example: describe the data
+
+**Step 1 — Mean.** Add the scores and divide by the number of volunteers.
+
+$$\\bar{x} = \\frac{12+10+14+11+13+10+15+12+10+14+11+12}{12} = \\frac{144}{12} = 12$$
+
+**Step 2 — Median.** Order the scores: 10, 10, 10, 11, 11, 12, 12, 12, 13, 14, 14, 15. With 12 scores, the median is the average of the 6th and 7th values: (12 + 12) ÷ 2 = **12**.
+
+**Step 3 — Mode.** The values 10 and 12 each appear three times, so the data are **bimodal** (modes of 10 and 12).
+
+**Step 4 — Range.** Highest minus lowest: 15 − 10 = **5**.
+
+**Step 5 — Interpret.** An equal split would be 10 points. The mean of 12 shows that, on average, volunteers gave their own team 2 more points than a fair split. No volunteer gave the in-group fewer than 10 points. This pattern is consistent with **in-group bias** created by an arbitrary label.
+
+### What these numbers can and cannot show
+
+| Question | Answer |
+|---|---|
+| Can we say the team label **caused** the bias? | Only with a comparison: a design in which some volunteers had no team labels at all would show whether the labels made the difference. |
+| Does a mean of 12 mean **every** volunteer was biased? | No. A mean describes the group; three volunteers split the points evenly. |
+| Would a larger sample help? | Yes. With only 12 volunteers, one or two unusual scores can shift the mean, and the results are harder to generalize. |
+| Is a 2-point difference **meaningful**? | That is a question of **effect size** (how large the difference is) and **statistical significance** (how unlikely the result would be by chance alone). A tiny difference can be significant in a huge sample and still matter little in practice. |
       `
     },
     {
       id: 'group-behavior-prejudice-p4-s4-input',
       type: 'input-boxes' as const,
       content: `
-      **Applied Recall (exact term answers)** ✍️
+**Calculate It** 🧮
 
-      1) Write the concept that matches: an unjustified negative attitude toward a group
-
-      2) Write the concept that matches: unequal behavior toward people based on group membership
-
-      3) Write the concept that matches: structured intergroup contact can reduce prejudice
-
-      Use the exact vocabulary term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['prejudice', 'discrimination', 'contact hypothesis'],
-        hint1: 'Starts with: P',
-        hint2: 'Starts with: D',
-        hint3: 'Starts with: C',
-        explanation: 'Expected answers: prejudice, discrimination, and contact hypothesis. Each response should use the precise term connected to the definition cue.'
-      }
-    },
-    {
-      id: 'group-behavior-prejudice-p4-s5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-      **Model Matching** 🔎
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Select the concept that best matches: an unjustified negative attitude toward a group',
-            options: ['contact hypothesis', 'social identity', 'groupthink', 'prejudice']
-          },
-          {
-            label: 'Select the concept that best matches: unequal behavior toward people based on group membership',
-            options: ['discrimination', 'ingroup bias', 'social identity', 'contact hypothesis']
-          },
-          {
-            label: 'Select the concept that best matches: structured intergroup contact can reduce prejudice',
-            options: ['contact hypothesis', 'prejudice', 'ingroup bias', 'discrimination']
-          }
-        ],
-        correctAnswers: ['prejudice', 'discrimination', 'contact hypothesis'],
-        hint1: 'Start by matching the key mechanism in each prompt to the most specific concept.',
-        hint2: 'Eliminate options that describe a different level of analysis (biological vs cognitive vs social).',
-        hint3: 'Use the definition language from this part to avoid near-miss terms.',
-        explanation: 'Correct matches are prejudice, discrimination, and contact hypothesis. These choices align with the mechanism-language in each definition, not just broad topic similarity.'
-      }
-    },
-    {
-      id: 'group-behavior-prejudice-p4-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ## Common Misconceptions and Exam Strategy
-
-      ### Misconceptions to Avoid
-      - Stereotypes can be positive or negative, but both can distort judgment.
-      - Conformity can reflect informational needs, not only fear of rejection.
-      - Reducing prejudice requires sustained structural conditions, not one-time exposure alone.
-      - Group cohesion helps performance until dissent is suppressed.
-
-      ### AP Strategy Moves
-      - Define the target concept in one precise sentence before giving examples.
-      - In scenario questions about a workplace DEI training using contact-based interventions, identify the manipulated variable and measured outcome.
-      - Use one competing explanation and explain why it is weaker.
-      - If data are provided, mention trend direction and at least one design limitation.
-
-      This combination of precision and evidence improves both multiple-choice accuracy and free-response scoring.
-      `
-    },
-    {
-      id: 'group-behavior-prejudice-p4-s7-applied',
-      type: 'multiple-choice' as const,
-      content: `
-      **Applied Scenarios** 🎯
+A second practice group of five volunteers gave these numbers of points (out of 20) to an in-group member: **11, 13, 10, 16, 15**.
       `,
       exercise: {
         questions: [
           {
-            question: 'A team investigating a workplace DEI training using contact-based interventions finds that participants rely on a persuasive cue when they are distracted, but use argument quality when they are highly focused. Which concept best captures the focused-processing route?',
-            options: [
-              'contact hypothesis',
-              'prejudice',
-              'groupthink',
-              'discrimination'
-            ],
-            correctAnswer: 2,
-            explanation: 'groupthink is best because it reflects this mechanism (poor group decisions from pressure to maintain consensus). The other options describe different levels of explanation or related constructs.'
+            question: 'What is the mean number of points given to the in-group member?',
+            answer: '13',
+            acceptableAnswers: ['13.0', 'thirteen'],
+            explanation: 'The sum is 11 + 13 + 10 + 16 + 15 = 65, and 65 ÷ 5 = 13.'
           },
           {
-            question: 'After an intervention, scores improve in the treatment group but not in a matched comparison group. Which interpretation is most defensible for the targeted mechanism?',
-            options: [
-              'contact hypothesis',
-              'ingroup bias',
-              'social identity',
-              'discrimination'
-            ],
-            correctAnswer: 2,
-            explanation: 'social identity is the strongest interpretation because it maps to the measured pattern and proposed mechanism: part of self-concept derived from group membership. Good AP reasoning also notes alternative explanations and design limits.'
+            question: 'What is the median?',
+            answer: '13',
+            acceptableAnswers: ['13.0', 'thirteen'],
+            explanation: 'In order the scores are 10, 11, 13, 15, 16, so the middle (third) value is 13.'
+          },
+          {
+            question: 'What is the range?',
+            answer: '6',
+            acceptableAnswers: ['6.0', 'six'],
+            explanation: 'The range is the highest score minus the lowest: 16 − 10 = 6.'
           }
         ]
       }
+    },
+    {
+      id: 'group-behavior-prejudice-p4-s5-correlation',
+      type: 'text' as const,
+      content: `
+## 🔗 Correlation in Prejudice Research
+
+Many studies of prejudice are **correlational**, because researchers cannot randomly assign people to hold a belief for years.
+
+> **Practice survey summary.** A researcher surveyed 400 adults. Each completed a scale measuring belief in a just world and a scale measuring how much they blamed victims in short stories about accidents and crimes. The correlation between the two scores was **r = +0.42**.
+
+### Worked example: interpreting the correlation
+
+1. **Direction:** positive. People with **higher** just-world scores tended to give **higher** victim-blaming scores.
+2. **Strength:** moderate. The points would form a visible upward trend on a scatterplot, but with plenty of scatter.
+3. **What it does not show:** that believing in a just world **causes** victim blaming. The reverse is possible (people who blame victims may adopt just-world beliefs to justify themselves), and a **third variable** could drive both, such as political attitudes or religious beliefs about fate.
+4. **What would test causation:** an experiment that randomly assigns people to read material that strengthens or weakens just-world beliefs and then measures victim blaming.
+
+| Correlation coefficient | What it tells you |
+|---|---|
+| Sign (+ or −) | Direction of the relationship |
+| Size (closer to ±1) | Strength of the relationship |
+| r near 0 | Little or no linear relationship |
+| Any value | Never, by itself, cause and effect |
+      `
+    },
+    {
+      id: 'group-behavior-prejudice-p4-s6-applied',
+      type: 'multiple-choice' as const,
+      content: `
+**Applied Scenarios — Interpreting Prejudice Data** 🔬
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'In the practice survey, belief in a just world and victim blaming correlated at r = +0.42. Which conclusion is best supported?',
+            options: [
+              'Believing in a just world causes people to blame victims',
+              'Those higher in just-world belief tended to blame victims more',
+              'About 42 percent of the adults surveyed blamed the victims',
+              'Victim blaming and just-world belief are almost the same trait'
+            ],
+            correctAnswer: 1,
+            explanation: 'A moderate positive correlation means higher scores on one scale tend to go with higher scores on the other. It does not show causation, it is not a percentage of people, and a value of 0.42 is far from the near-perfect relationship that would suggest one trait.'
+          },
+          {
+            question: 'A researcher wants to know whether arbitrary team labels cause in-group bias. Which addition to the practice minimal-group study would best answer that question?',
+            options: [
+              'A larger sample of volunteers who are all assigned to a team',
+              'A control condition that splits points with no teams formed',
+              'A survey asking volunteers whether they liked their own team',
+              'A second session in which the same volunteers repeat the task'
+            ],
+            correctAnswer: 1,
+            explanation: 'A no-label comparison condition shows what point splits look like without group membership, so a difference between conditions can be attributed to the labels. A larger sample, a liking survey, or a repeated session still lacks a comparison group.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'group-behavior-prejudice-p4-s7-connection',
+      type: 'text' as const,
+      content: `
+### 🎯 AP Connection: Bias Vocabulary Meets Data Skills
+
+On the exam, these biases often appear inside a study summary. Expect to:
+
+1. **Identify the bias** shown by the results (favoring "us" is in-group bias; "they are all alike" is out-group homogeneity).
+2. **Calculate** a mean, median, mode, or range from a small data set.
+3. **Explain what the design allows** you to conclude: experiments with random assignment support causal claims; correlations do not.
+
+**Next up — Part 5:** If labels alone create bias, what happens when groups compete for real prizes, and what can bring them back together? Part 5 covers social traps and superordinate goals.
+      `
     }
   ]
 }

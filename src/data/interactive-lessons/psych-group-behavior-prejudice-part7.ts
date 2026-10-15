@@ -5,184 +5,215 @@ export const psychGroupPart7Data = {
       id: 'group-behavior-prejudice-p7-s1-intro',
       type: 'text' as const,
       content: `
-      # 🧠 Group Behavior and Prejudice
+# 🧠 Group Behavior and Prejudice
 
-      **Part 7 of 7 — AP Exam Synthesis**
+**Part 7 of 7 — Synthesis and EBQ Practice**
 
-      In this part, you will connect core psychological vocabulary to realistic contexts and AP-style reasoning. Focus on mechanism first, then evidence.
+> 🔑 **Key Concept:** The whole topic tells one story. Groups give people norms and identities (Part 1). Groups change effort, restraint, and decisions (Part 2). Group labels feed stereotypes and prejudice (Parts 3 and 4). Competition turns bias into conflict, and shared goals reduce it (Part 5). The same situational forces decide whether people help (Part 6).
 
-      ### Core Definitions
-      - **conformity**: adjusting behavior or beliefs to align with a group
-      - **obedience**: compliance with direct commands from authority
-      - **fundamental attribution error**: overattributing others' behavior to disposition rather than situation
+### Concept map
 
-      ### Concrete Real-World Example
-      A team is studying AP free-response synthesis on prejudice and conformity. They operationalize variables, compare plausible explanations, and look for the interpretation that best matches observed behavior instead of relying on intuition.
+| Idea | Core point | Key evidence | Links to |
+|---|---|---|---|
+| **Social norms and roles** | Shared expectations guide behavior | Norms differ across cultures and eras | Conformity (Social Influence & Conformity) |
+| **Individualism / collectivism / multiculturalism** | Culture shapes the self and what counts as appropriate | Trait-based vs role-based self-descriptions | Social loafing is smaller in collectivist samples |
+| **False consensus effect** | We overestimate how many people agree with us | Sandwich-board study (Ross and colleagues, 1977) | Contrast with out-group homogeneity |
+| **Group effects** | Each has a switch condition | Triplett; shouting study; Halloween study | I/O psychology, bystander effect |
+| **Stereotype → prejudice → discrimination** | Belief, attitude, behavior | Résumé field experiment; self-fulfilling interview | Self-fulfilling prophecy (Topic 4.1) |
+| **Implicit attitudes** | Evaluations people may not recognize | Implicit Association Test | Explicit attitudes can differ |
+| **In-group bias, out-group homogeneity, ethnocentrism, just-world** | Biases that drive negative evaluations | Minimal group studies; Lerner's victim studies | Data analysis: means, correlation |
+| **Social traps** | Self-interest harms the group | Prisoner's dilemma; tragedy of the commons | Diffusion of responsibility |
+| **Superordinate goals** | Shared goals unite rival groups | Robbers Cave; jigsaw classroom | Reducing in-group bias |
+| **Prosocial behavior** | Altruism vs social debt; reciprocity and social responsibility norms | Seizure, smoke, and Good Samaritan studies | Five-step bystander model |
 
-      ### Why This Matters
-      Strong AP responses define terms precisely, apply them to evidence, and justify why one interpretation is stronger than alternatives.
+### The pattern behind the whole topic
+
+Almost every finding in this topic shows the **power of the situation**. The same person loafs or works hard, helps or walks past, cooperates or competes, depending on identifiability, group size, competition, and shared goals. That is why the exam rewards answers that name **the feature of the situation** that produced the behavior.
       `
     },
     {
       id: 'group-behavior-prejudice-p7-s2-check',
       type: 'multiple-choice' as const,
       content: `
-      **Concept Check** 🎯
+**Integrated Check — Connecting the Parts** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'In a study about AP free-response synthesis on prejudice and conformity, participants change behavior after repeatedly seeing the same cue. Which concept is the best fit?',
+            question: 'Diffusion of responsibility helps explain which two findings from this topic?',
             options: [
-              'obedience',
-              'conformity',
-              'stereotype',
-              'fundamental attribution error'
+              'Group polarization and the false consensus effect',
+              'Social loafing and the bystander effect',
+              'Ethnocentrism and out-group homogeneity bias',
+              'Social facilitation and the just-world phenomenon'
             ],
             correctAnswer: 1,
-            explanation: 'conformity is correct because it directly matches this mechanism: adjusting behavior or beliefs to align with a group. The distractors describe related but different processes.'
+            explanation: 'When responsibility is shared, each person feels less accountable, so members exert less effort on pooled tasks and bystanders wait for someone else to help. The other pairs involve opinions, perceptions of groups, arousal, or beliefs about fairness.'
           },
           {
-            question: 'Researchers report that behavior shifts when participants receive a specific cue and then justify their choices afterward. Which concept best explains that pattern?',
+            question: 'The minimal group studies and the Robbers Cave experiment together suggest which conclusion?',
             options: [
-              'fundamental attribution error',
-              'discrimination',
-              'prejudice',
-              'obedience'
+              'Labels can start bias, and competing for scarce prizes deepens it',
+              'Bias appears only after groups have a long history of real conflict',
+              'Simple contact between rival groups is enough to remove their bias',
+              'Bias between groups appears only among adults, not among children'
             ],
-            correctAnswer: 2,
-            explanation: 'prejudice is the strongest match here (an unjustified negative attitude toward a group). The other options do not explain both the cue-driven shift and the observed response pattern as directly.'
+            correctAnswer: 0,
+            explanation: 'Tajfel showed that a trivial label is enough to produce in-group favoritism, and Sherif showed that competition for prizes turned that favoritism into hostility. Robbers Cave also showed that simple contact failed, and both studies involved children.'
           }
         ]
       }
     },
     {
-      id: 'group-behavior-prejudice-p7-s3-deep',
+      id: 'group-behavior-prejudice-p7-s3-ebq',
       type: 'text' as const,
       content: `
-      ## Deep Dive: Comparing Explanations with Evidence
+## 📝 EBQ Practice: Does Cooperation Reduce Prejudice?
 
-      When analyzing AP free-response synthesis on prejudice and conformity, the best interpretation ties a clear psychological mechanism to measurable evidence.
+The **Evidence-Based Question (EBQ)** gives you three short source summaries and asks three parts worth 7 points: **(A)** propose a defensible claim, then **(B)** and **(C)** each support it with specific evidence and explain how that evidence supports the claim using a psychological concept. Part C must use a **different source** and a **different concept** from Part B.
 
-      | Theory / Concept | Core claim | Typical evidence | Common limitation |
-      |---|---|---|---|
-      | conformity | adjusting behavior or beliefs to align with a group | experimental manipulation with random assignment | possible demand characteristics |
-      | obedience | compliance with direct commands from authority | longitudinal trend with repeated measurement | third-variable risk in natural settings |
-      | fundamental attribution error | overattributing others' behavior to disposition rather than situation | cross-sectional comparison with matched groups | limited generalizability across cultures |
-      | stereotype | a generalized belief about members of a group | mixed-method evidence combining survey and behavioral indicators | measurement validity depends on construct quality |
+> **Prompt:** Using the sources, develop and justify an argument about whether cooperation between groups reduces prejudice.
 
-      ### Interpretation Strategy
-      1. Name the mechanism before describing outcomes.
-      2. Match the claim to the strongest available evidence type.
-      3. Acknowledge one limitation and explain whether it changes the conclusion.
+The three summaries below are practice sources written for this lesson, not real publications.
 
-      This structure helps you earn reasoning points on free-response and avoid vague claims.
+> **Source 1 (practice field experiment).** Twenty fifth-grade classrooms were randomly assigned to either cooperative "jigsaw" lessons, in which each student taught one part of the material to a mixed group, or standard lessons for eight weeks. Students listed their friends at the start and end. Friendships across ethnic groups increased by an average of 2.1 nominations per student in jigsaw classrooms and 0.4 in standard classrooms.
+
+> **Source 2 (practice correlational survey).** Six hundred adult employees reported how often they worked on mixed-background teams with shared goals and completed a prejudice scale. More frequent cooperative teamwork was associated with lower prejudice scores (r = −0.35).
+
+> **Source 3 (practice laboratory experiment).** University students were placed in pairs with a member of a different campus group and randomly assigned to either compete for a cash prize or cooperate to earn a shared prize. Afterward, students in the competitive condition rated members of the other group less favorably than before, while students in the cooperative condition rated them more favorably.
+
+### Worked example: building the response
+
+**Part A — Claim.** Write a claim that takes a position the sources can support.
+- ✅ "Cooperation toward a shared goal reduces prejudice between groups."
+- ❌ "Prejudice is a complex issue." (This takes no position, so it cannot be defended.)
+
+**Part B — Evidence and reasoning (Source 1).**
+- *Evidence:* In Source 1, cross-group friendships rose by 2.1 nominations per student in jigsaw classrooms compared with 0.4 in standard classrooms.
+- *Reasoning:* Jigsaw lessons make each student depend on classmates from other groups, which creates a **superordinate goal**. Working toward a goal no student can reach alone redraws the line of "us," reducing in-group bias and prejudice.
+
+**Part C — Evidence and reasoning (a different source, Source 3).**
+- *Evidence:* In Source 3, students assigned to cooperate rated the other group more favorably, while students assigned to compete rated them less favorably.
+- *Reasoning:* This uses a different concept from Part B, **in-group bias**. It matches the Robbers Cave pattern: competition for scarce rewards intensifies in-group bias, while cooperation reduces it. Because conditions were randomly assigned, the difference can be attributed to cooperation itself.
+
+### Why not lead with Source 2?
+
+Source 2 can support the claim, but it is **correlational**. People who are already less prejudiced might choose mixed teams more often, so cooperation may not be the cause. If you use it, describe it as an association.
       `
     },
     {
-      id: 'group-behavior-prejudice-p7-s4-input',
-      type: 'input-boxes' as const,
-      content: `
-      **Applied Recall (exact term answers)** ✍️
-
-      1) Write the concept that matches: adjusting behavior or beliefs to align with a group
-
-      2) Write the concept that matches: compliance with direct commands from authority
-
-      3) Write the concept that matches: overattributing others' behavior to disposition rather than situation
-
-      Use the exact vocabulary term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['conformity', 'obedience', 'fundamental attribution error'],
-        hint1: 'Starts with: C',
-        hint2: 'Starts with: O',
-        hint3: 'Starts with: F',
-        explanation: 'Expected answers: conformity, obedience, and fundamental attribution error. Each response should use the precise term connected to the definition cue.'
-      }
-    },
-    {
-      id: 'group-behavior-prejudice-p7-s5-dropdown',
+      id: 'group-behavior-prejudice-p7-s4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Model Matching** 🔎
+**Build the EBQ Response** 🔎
+
+Choose the best option to complete each statement about the practice sources.
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Select the concept that best matches: adjusting behavior or beliefs to align with a group',
-            options: ['discrimination', 'conformity', 'obedience', 'fundamental attribution error']
+            label: 'Parts B and C must each use evidence from _____.',
+            options: ['the same source', 'a different source', 'the prompt only', 'outside research']
           },
           {
-            label: 'Select the concept that best matches: compliance with direct commands from authority',
-            options: ['obedience', 'conformity', 'stereotype', 'prejudice']
+            label: 'The strongest psychological concept for explaining Source 1 is _____.',
+            options: ['social facilitation', 'superordinate goals', 'the just-world phenomenon', 'false consensus']
           },
           {
-            label: 'Select the concept that best matches: overattributing others\' behavior to disposition rather than situation',
-            options: ['conformity', 'fundamental attribution error', 'discrimination', 'obedience']
+            label: 'Source 2 cannot show that teamwork causes lower prejudice, since it is _____.',
+            options: ['an experiment', 'a case study', 'a correlational study', 'a naturalistic observation']
           }
         ],
-        correctAnswers: ['conformity', 'obedience', 'fundamental attribution error'],
-        hint1: 'Start by matching the key mechanism in each prompt to the most specific concept.',
-        hint2: 'Eliminate options that describe a different level of analysis (biological vs cognitive vs social).',
-        hint3: 'Use the definition language from this part to avoid near-miss terms.',
-        explanation: 'Correct matches are conformity, obedience, and fundamental attribution error. These choices align with the mechanism-language in each definition, not just broad topic similarity.'
+        correctAnswers: ['a different source', 'superordinate goals', 'a correlational study'],
+        hint1: 'The EBQ asks you to draw on more than one source.',
+        hint2: 'The jigsaw method gives a mixed group a goal no member can reach alone.',
+        hint3: 'Source 2 measured two variables without manipulating either.',
+        explanation: 'Each EBQ evidence part must cite a different source. Source 1 is best explained by superordinate goals, since jigsaw lessons make students depend on each other. Source 2 is correlational, so it shows an association but not cause and effect.'
       }
     },
     {
-      id: 'group-behavior-prejudice-p7-s6-strategy',
+      id: 'group-behavior-prejudice-p7-s5-review',
       type: 'text' as const,
       content: `
-      ## Common Misconceptions and Exam Strategy
+## 🔁 Rapid Review: Distinctions the Exam Tests
 
-      ### Misconceptions to Avoid
-      - Stereotypes can be positive or negative, but both can distort judgment.
-      - Conformity can reflect informational needs, not only fear of rejection.
-      - Reducing prejudice requires sustained structural conditions, not one-time exposure alone.
-      - Group cohesion helps performance until dissent is suppressed.
-
-      ### AP Strategy Moves
-      - Define the target concept in one precise sentence before giving examples.
-      - In scenario questions about AP free-response synthesis on prejudice and conformity, identify the manipulated variable and measured outcome.
-      - Use one competing explanation and explain why it is weaker.
-      - If data are provided, mention trend direction and at least one design limitation.
-
-      This combination of precision and evidence improves both multiple-choice accuracy and free-response scoring.
+| Pair | Key difference |
+|---|---|
+| Stereotype vs. prejudice | A belief about a group vs. a negative feeling toward it |
+| Prejudice vs. discrimination | An attitude vs. a behavior |
+| Explicit vs. implicit attitude | Reported and aware vs. automatic and possibly unrecognized |
+| In-group bias vs. out-group homogeneity bias | Favoring "us" vs. seeing "them" as all alike |
+| Ethnocentrism vs. just-world phenomenon | Judging other cultures by one's own standards vs. believing people get what they deserve |
+| False consensus vs. out-group homogeneity | Overestimating agreement with oneself vs. underestimating variety in another group |
+| Social facilitation vs. social loafing | Individual performance watched vs. effort pooled and hidden |
+| Group polarization vs. groupthink | More extreme opinions vs. a faulty, harmony-driven decision process |
+| Social trap vs. superordinate goal | Self-interest harms the group vs. a shared goal unites rival groups |
+| Reciprocity norm vs. social responsibility norm | Repaying help received vs. helping those who need it |
+| Altruism vs. social debt | Selfless helping vs. helping to meet social obligations |
       `
     },
     {
-      id: 'group-behavior-prejudice-p7-s7-applied',
+      id: 'group-behavior-prejudice-p7-s6-applied',
       type: 'multiple-choice' as const,
       content: `
-      **Applied Scenarios** 🎯
+**Mixed Review — Apply the Whole Topic** 🔬
       `,
       exercise: {
         questions: [
           {
-            question: 'A team investigating AP free-response synthesis on prejudice and conformity finds that participants rely on a persuasive cue when they are distracted, but use argument quality when they are highly focused. Which concept best captures the focused-processing route?',
+            question: 'A company notices that employees from two merged firms avoid each other and describe the other firm\'s staff as "all the same." Which action would best address both problems?',
             options: [
-              'obedience',
-              'stereotype',
-              'fundamental attribution error',
-              'conformity'
+              'Hold a training session that explains the definition of stereotypes',
+              'Form mixed teams that can earn a bonus only by completing a joint project',
+              'Let each former firm keep its own office so conflict is avoided',
+              'Hold a contest in which the two former firms compete for a bonus'
             ],
             correctAnswer: 1,
-            explanation: 'stereotype is best because it reflects this mechanism (a generalized belief about members of a group). The other options describe different levels of explanation or related constructs.'
+            explanation: 'A joint project with a shared reward is a superordinate goal, which reduces negative feelings and stereotyping, and close cooperation exposes employees to the variety within the other group. Separation keeps the groups apart, competition deepens bias, and a definition alone does not change contact or goals.'
           },
           {
-            question: 'After an intervention, scores improve in the treatment group but not in a matched comparison group. Which interpretation is most defensible for the targeted mechanism?',
+            question: 'Which finding would be the strongest evidence that the bystander effect is driven by diffusion of responsibility rather than by failing to notice the emergency?',
             options: [
-              'discrimination',
-              'obedience',
-              'fundamental attribution error',
-              'prejudice'
+              'Large groups helped less even when every bystander clearly saw the emergency',
+              'Bystanders who were in a hurry helped less often than bystanders with time to spare',
+              'Bystanders helped less often when the emergency took place in a noisy, crowded area',
+              'Bystanders who were looking at their phones were less likely to see the victim fall'
             ],
-            correctAnswer: 3,
-            explanation: 'prejudice is the strongest interpretation because it maps to the measured pattern and proposed mechanism: an unjustified negative attitude toward a group. Good AP reasoning also notes alternative explanations and design limits.'
+            correctAnswer: 0,
+            explanation: 'If everyone clearly noticed the emergency and larger groups still helped less, the drop cannot be explained by noticing and points to shared responsibility. Hurry, noise, and phones all reduce helping by blocking attention, the first step of the model.'
+          },
+          {
+            question: 'A student argues: "People only help others to pay back favors, so true altruism does not exist." Which concept from the CED does this argument draw on?',
+            options: [
+              'Social debt',
+              'Groupthink',
+              'Ethnocentrism',
+              'Social facilitation'
+            ],
+            correctAnswer: 0,
+            explanation: 'The CED notes that some researchers suggest people act prosocially because of social debt, obligations explained by the reciprocity and social responsibility norms. The other concepts concern decisions, cultural judgment, and performance in front of others.'
           }
         ]
       }
+    },
+    {
+      id: 'group-behavior-prejudice-p7-s7-connection',
+      type: 'text' as const,
+      content: `
+### 🎯 AP Connection: Final Checklist
+
+Before the exam, make sure you can:
+
+- define and tell apart every pair in the rapid-review table;
+- name the **switch condition** for each group effect and a way to change it;
+- explain why **superordinate goals** succeed where simple contact fails;
+- walk the **five-step bystander model** and name the step that failed;
+- calculate a mean, median, mode, and range, and explain why a correlation cannot show cause;
+- answer the six **AAQ** tasks using details from a study summary (Part 6);
+- build an **EBQ** response: a defensible claim, then evidence from two different sources, each explained with a different psychological concept.
+
+**Where to go next:** Social Influence & Conformity covers conformity, obedience, and persuasion, the other half of Topic 4.3.
+      `
     }
   ]
 }
