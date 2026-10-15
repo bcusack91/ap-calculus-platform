@@ -48,10 +48,10 @@ Every program is designed to solve a problem or express a creative idea.
           {
             question: 'Which best describes iterative development?',
             options: [
-              'Writing all code at once and testing only at the end',
+              'Writing all of the code at once and testing it only at the very end',
               'Repeating cycles of designing, prototyping, testing, and refining',
-              'Having one person write the entire program alone',
-              'Copying code from existing programs without changes'
+              'Planning, coding, and testing every feature exactly once, in strict order',
+              'Reusing code from existing programs without adapting or retesting it'
             ],
             correctAnswer: 1,
             explanation: 'Iterative development revisits the design and implementation multiple times. Each cycle adds features, fixes bugs, and improves the product based on feedback.'
@@ -59,10 +59,10 @@ Every program is designed to solve a problem or express a creative idea.
           {
             question: 'What is the "purpose" of a program?',
             options: [
-              'The programming language it is written in',
-              'The number of lines of code it contains',
+              'The programming language and libraries it is written in',
+              'The number of lines of code and procedures it contains',
               'The problem it solves or the creative idea it expresses',
-              'The speed at which it runs'
+              'The speed at which it runs on the user\'s device'
             ],
             correctAnswer: 2,
             explanation: 'A program purpose describes what it is intended to do — the problem it solves for users or the creative expression it enables.'
@@ -186,7 +186,7 @@ When using code written by others (libraries, APIs, open-source), always credit 
               'Linear development',
               'Iterative development',
               'Parallel processing',
-              'Abstraction'
+              'Event-driven programming'
             ],
             correctAnswer: 1,
             explanation: 'Building, getting feedback, redesigning, and releasing again is a textbook example of iterative development — repeating the cycle to improve the product.'
@@ -194,10 +194,10 @@ When using code written by others (libraries, APIs, open-source), always credit 
           {
             question: 'Which is the BEST reason to collaborate on a programming project?',
             options: [
-              'It reduces the total amount of code needed',
-              'Different perspectives help identify problems and generate creative solutions',
-              'It eliminates all bugs in the final product',
-              'It makes the program run faster'
+              'It reduces the total amount of code the team must write and maintain',
+              'Diverse perspectives catch problems and spark creative solutions',
+              'It guarantees the final product will be free of bugs and errors',
+              'It makes the finished program run faster on users\' devices'
             ],
             correctAnswer: 1,
             explanation: 'Diverse perspectives are the primary benefit of collaboration. Different team members bring different experiences, helping catch edge cases and produce more creative solutions.'

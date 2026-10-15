@@ -34,7 +34,7 @@ export const cspCreativeDevelopmentPart4Data = {
             options: [
               "ship the slow version since the algorithm is technically correct.",
               "investigate a more efficient algorithm or restructure the data behind it.",
-              "switch to a different operating system to gain implicit speedups.",
+              "switch to a different operating system to gain implicit speedups for free.",
               "rewrite the same algorithm in a faster language without changing it."
             ],
             correctAnswer: 1,
@@ -44,7 +44,7 @@ export const cspCreativeDevelopmentPart4Data = {
             question: "When a developer chooses what data to collect, this decision ___",
             options: [
               "affects only storage costs and has no real impact on users.",
-              "has direct privacy implications that must be considered carefully.",
+              "has direct privacy implications that must be weighed.",
               "is a purely technical decision unrelated to ethical questions.",
               "is fully dictated by what the database happens to support."
             ],
@@ -112,15 +112,15 @@ Logic errors are most insidious — the program runs but produces wrong output.
         dropdowns: [
           {
             label: "A logic error is best detected by ___",
-            options: ["running tests with known correct outputs", "reading the code aloud", "changing the file extension", "compressing the file"]
+            options: ["running tests with known correct outputs", "checking that the program runs without crashing", "fixing every compiler warning", "reading the error messages the program shows"]
           },
           {
             label: "A syntax error is caught ___",
-            options: ["at parse / compile time, before the program runs", "only after release", "never", "only by users"]
+            options: ["at parse / compile time, before the program runs", "when the faulty line executes at runtime", "when a test case gives the wrong output", "after users report the program crashing"]
           },
           {
             label: "A program's data-collection choice is ___",
-            options: ["both a technical and a privacy/ethics decision", "purely technical", "purely legal", "irrelevant"]
+            options: ["both a technical and a privacy/ethics decision", "only a technical decision about storage and speed", "only a legal matter for the company's lawyers", "only the user's decision once they accept the terms"]
           }
         ],
         correctAnswers: ["running tests with known correct outputs", "at parse / compile time, before the program runs", "both a technical and a privacy/ethics decision"],
@@ -154,9 +154,9 @@ Logic errors are most insidious — the program runs but produces wrong output.
             question: "A function returns the average of a list. It returns the right value for non-empty lists but throws an error for empty lists. The most direct fix is ___",
             options: [
               "ignore the bug since real users rarely send an empty list.",
-              "add a check for empty input that returns 0 or signals an error explicitly.",
+              "add a check for empty input that yields 0 or signals an error explicitly.",
               "remove every call site of the function and inline the math at each one.",
-              "switch the implementation to a different language and recompile."
+              "rewrite it in a different language whose runtime suppresses the error."
             ],
             correctAnswer: 1,
             explanation: "Boundary input handling."
@@ -164,8 +164,8 @@ Logic errors are most insidious — the program runs but produces wrong output.
           {
             question: "A team logs every keystroke users type \"for analytics\". The CSP-aligned concern is ___",
             options: [
-              "logging is purely a performance issue and not a privacy issue.",
-              "capturing every keystroke includes passwords and private content — a privacy and security risk.",
+              "keystroke logging is a performance concern, not a privacy issue.",
+              "it captures passwords and private messages, a serious privacy and security risk.",
               "as long as the logs stay on the company's own servers there is no real risk.",
               "analytics keystroke logs are protected by HTTPS and so cannot be misused."
             ],

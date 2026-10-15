@@ -19,7 +19,7 @@ A computing system processes data using:
 |-----------|------|---------|
 | **Input** | Receives data from users/environment | Keyboard, mouse, microphone, sensor |
 | **Processing** | Executes instructions on data | CPU (Central Processing Unit) |
-| **Storage** | Saves data for later use | Hard drive, SSD, RAM |
+| **Storage / memory** | Storage keeps data long-term; memory (RAM) holds data and instructions temporarily while programs run | Hard drive, SSD (storage); RAM (memory) |
 | **Output** | Presents results | Monitor, speakers, printer |
 
 ### Software Types
@@ -59,10 +59,10 @@ Data is broken into **packets** — small chunks sent independently across the n
           {
             question: 'Why is data sent across the internet in packets rather than as one large file?',
             options: [
-              'Packets are cheaper to send',
-              'Packets can take different routes, improving reliability and efficiency',
-              'Large files cannot be sent electronically',
-              'Packets are encrypted but files are not'
+              'Packets always arrive faster, since smaller units move faster',
+              'Packets can take different routes, so traffic can avoid failures',
+              'Large files cannot be sent electronically in a single piece',
+              'Packets are encrypted automatically, but whole files are not'
             ],
             correctAnswer: 1,
             explanation: 'Packet switching allows different packets to take different routes to the destination. If one path is congested or fails, packets reroute automatically. They are reassembled at the destination.'
@@ -70,10 +70,10 @@ Data is broken into **packets** — small chunks sent independently across the n
           {
             question: 'What is the role of the CPU in a computing system?',
             options: [
-              'Stores data permanently',
-              'Displays information on screen',
+              'Stores data and programs permanently',
+              'Displays processed information on the screen',
               'Processes instructions and performs calculations',
-              'Connects to the internet'
+              'Connects the computer to other devices on the internet'
             ],
             correctAnswer: 2,
             explanation: 'The CPU (Central Processing Unit) is the "brain" of the computer. It fetches, decodes, and executes instructions. Storage is handled by drives, display by monitors, and networking by NICs.'
@@ -145,11 +145,11 @@ The Internet was designed to scale. Key design principles:
         dropdowns: [
           {
             label: 'A school WiFi network covering one building is a ___',
-            options: ['LAN (Local Area Network)', 'WAN (Wide Area Network)', 'DNS', 'The Internet']
+            options: ['LAN (Local Area Network)', 'WAN (Wide Area Network)', 'PAN (Personal Area Network)', 'MAN (Metropolitan Area Network)']
           },
           {
             label: 'The maximum data transfer rate of a connection is called ___',
-            options: ['Bandwidth', 'Latency', 'DNS resolution', 'Packet size']
+            options: ['Bandwidth', 'Latency', 'Round-trip time', 'Packet size']
           },
           {
             label: 'The Internet uses ___ switching, which breaks data into small independent chunks',
@@ -188,10 +188,10 @@ The Internet was designed to scale. Key design principles:
           {
             question: 'Two packets from the same email arrive at the destination in different order. What happens?',
             options: [
-              'The email is lost',
-              'The packets are reassembled in the correct order using sequence numbers in the headers',
-              'The email arrives with the content scrambled',
-              'The sender must resend the email'
+              'The email is discarded, and the sender is notified of the error',
+              'The receiver uses sequence numbers to put the packets back in order',
+              'The email is displayed with its content scrambled out of order',
+              'The sender must resend every packet of the email in order'
             ],
             correctAnswer: 1,
             explanation: 'Each packet has a sequence number in its header. The destination computer uses these numbers to reassemble packets in the correct order, regardless of arrival order.'

@@ -46,10 +46,10 @@ The arrow ← (or = in many languages) is **assignment**, not equality.
           {
             question: "What does **x ← y** do?",
             options: [
-              "Tests whether x is currently equal to y and returns true or false.",
-              "Copies y's value into x; y is left unchanged by the operation.",
-              "Swaps x and y so each takes the value the other previously held.",
-              "Deletes the variable x from memory and frees its storage slot."
+              "Tests whether x equals y and returns true or false.",
+              "Copies y's value into x and leaves y unchanged.",
+              "Swaps x and y so each takes the other's old value.",
+              "Deletes x from memory and frees its storage slot."
             ],
             correctAnswer: 1,
             explanation: "Assignment is one-way: copy y into x."
@@ -139,11 +139,11 @@ This computes the average using sequencing + iteration + variables.
           },
           {
             label: "The expression **(x > 0) AND (x < 10)** is true when ___",
-            options: ["x is strictly between 0 and 10", "x is exactly 0", "x is exactly 10", "x is negative"]
+            options: ["x is strictly between 0 and 10", "x is between 0 and 10, inclusive", "x is greater than 0 or less than 10", "x is less than 0 or greater than 10"]
           },
           {
             label: "A FOR EACH loop is most appropriate when ___",
-            options: ["you want to do something with every item in a list", "you need to repeat exactly 5 times", "you need to wait for an event", "you need to call a procedure"]
+            options: ["you want to do something with every item in a list", "you need to repeat until a condition becomes true", "you need to run a block a fixed number of times", "you want to choose between two different branches"]
           }
         ],
         correctAnswers: ["7", "x is strictly between 0 and 10", "you want to do something with every item in a list"],
@@ -176,9 +176,9 @@ This computes the average using sequencing + iteration + variables.
             question: "A program needs to print all even numbers from 1 to 100. The most appropriate construct is ___",
             options: [
               "no loop — just write 50 separate sequential print statements one per even number.",
-              "iteration with selection inside (loop 1..100, IF n MOD 2 = 0 print n).",
+              "iteration with selection inside, printing n only when n MOD 2 = 0.",
               "recursion only, with each call deciding whether to print and recursing on n+1.",
-              "no selection at all — just iterate 1..100 and print every value."
+              "a loop with no selection, printing every value from 1 to 100."
             ],
             correctAnswer: 1,
             explanation: "Iterate, then test each value with selection."
@@ -189,7 +189,7 @@ This computes the average using sequencing + iteration + variables.
               "true, since one of the two conditions is satisfied by the parent consent.",
               "false, since AND requires both conditions and the age check fails.",
               "undefined, since AND with one false operand cannot be evaluated.",
-              "depends on the parent's mood at the moment the check is performed."
+              "true, since parentConsent overrides any failed age check."
             ],
             correctAnswer: 1,
             explanation: "AND requires both; first condition fails → false."

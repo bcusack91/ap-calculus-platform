@@ -35,10 +35,10 @@ Storage costs have collapsed and bit budgets have grown. The same data that fill
           {
             question: "Why has streaming video become practical?",
             options: [
-              "Bits got smaller.",
-              "Compression algorithms and bandwidth both improved dramatically.",
-              "Video files no longer use bytes.",
-              "Cameras stopped using color."
+              "Video cameras began recording far fewer frames per second.",
+              "Compression algorithms and network bandwidth both improved.",
+              "Video files switched from binary data to analog signals.",
+              "Screens began displaying video using fewer colors per pixel."
             ],
             correctAnswer: 1,
             explanation: "Better codecs (H.264 → H.265 → AV1) plus higher bandwidth made streaming feasible."
@@ -48,8 +48,8 @@ Storage costs have collapsed and bit budgets have grown. The same data that fill
             options: [
               "Lossless compression (e.g., ZIP, PNG).",
               "Lossy compression (e.g., JPEG, MP3).",
-              "No compression.",
-              "Encryption."
+              "No compression (e.g., raw BMP, WAV).",
+              "Encryption (e.g., AES, RSA)."
             ],
             correctAnswer: 1,
             explanation: "Lossy compression discards information humans rarely notice."
@@ -113,15 +113,15 @@ A 24-bit RGB photo: ~6 MB raw, ~600 KB as JPEG (10× smaller, almost identical t
         dropdowns: [
           {
             label: "For a legal contract you should use ___ compression",
-            options: ["lossless", "lossy", "no compression", "JPEG"]
+            options: ["lossless", "lossy", "low-quality lossy", "high-ratio lossy"]
           },
           {
-            label: "For a photograph attached to a casual email, ___ compression is usually fine",
-            options: ["lossy", "lossless", "no compression", "encryption"]
+            label: "To keep a photo attached to a casual email small, the usual choice is ___ compression",
+            options: ["lossy", "lossless", "no compression", "run-length"]
           },
           {
             label: "The reason lossless compression cannot shrink truly random data is the ___ limit",
-            options: ["entropy", "bandwidth", "sampling", "pixel"]
+            options: ["entropy", "bandwidth", "sampling", "storage"]
           }
         ],
         correctAnswers: ["lossless", "lossy", "entropy"],
@@ -155,7 +155,7 @@ A 24-bit RGB photo: ~6 MB raw, ~600 KB as JPEG (10× smaller, almost identical t
             question: "A radiologist needs to share a chest X-ray for diagnosis. Which compression choice is most appropriate?",
             options: [
               "Lossy JPEG compression, because making the image file size as small as possible matters most.",
-              "Lossless compression (e.g., DICOM with lossless coding) so subtle diagnostic features are not lost.",
+              "Lossless compression such as DICOM lossless coding, so no diagnostic detail is lost.",
               "No compression at all, since uncompressed is the only way to preserve diagnostic features in any image.",
               "Lossy MP3 compression, on the grounds that it is the most widely supported lossy format on the internet."
             ],

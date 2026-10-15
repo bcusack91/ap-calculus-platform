@@ -62,13 +62,13 @@ score ← score + 10  // Update score (now 10)
           {
             question: 'What does x ← x + 1 do?',
             options: [
-              'Checks if x equals x + 1',
-              'Creates a new variable called x + 1',
-              'Adds 1 to the current value of x and stores the result back in x',
-              'Causes an error because x cannot equal x + 1'
+              'Checks whether x equals x + 1 and returns false',
+              'Creates a second variable whose name is x + 1',
+              'Adds 1 to the current value of x and stores it in x',
+              'Causes an error, because x can never equal x + 1'
             ],
             correctAnswer: 2,
-            explanation: 'The right side (x + 1) is evaluated first using the current value of x. The result is then stored back in x.This is an update, not an equation.'
+            explanation: 'The right side (x + 1) is evaluated first using the current value of x. The result is then stored back in x. This is an update, not an equation.'
           }
         ]
       }

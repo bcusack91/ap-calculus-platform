@@ -34,10 +34,10 @@ export const cspDataPart3Data = {
           {
             question: "A school registrar wants the number of students per grade. This is most directly an example of ___",
             options: [
-              "encrypting student records before any other process can read them",
-              "aggregation — counting records grouped by a shared attribute",
-              "compressing the underlying student-record file to save disk space",
-              "routing each student record to the correct downstream system"
+              "encryption, since student records must be protected first",
+              "aggregation, since records are counted by a shared attribute",
+              "compression, since the record file is reduced to a summary",
+              "filtering, since only students in one grade are kept"
             ],
             correctAnswer: 1,
             explanation: "Counting by group = aggregation."
@@ -46,9 +46,9 @@ export const cspDataPart3Data = {
             question: "A scatter plot is most useful for ___",
             options: [
               "showing two variables' relationship across many records.",
-              "compressing data so a long file consumes less disk space.",
-              "routing packets between two endpoints across the network.",
-              "encrypting messages so only the intended recipient can read them."
+              "showing how one total splits into parts of a whole.",
+              "showing one variable's change over equally spaced times.",
+              "showing how often values fall into equal-width bins."
             ],
             correctAnswer: 0,
             explanation: "Scatter plots reveal correlations between two numeric variables."
@@ -114,15 +114,15 @@ A correlation in data ≠ causation. Ice-cream sales and drowning correlate (bot
         dropdowns: [
           {
             label: "A line chart is best for ___",
-            options: ["change over time", "comparing 3 categories", "a single value", "compressing data"]
+            options: ["change over time", "comparing 3 categories", "a single value", "parts of a whole"]
           },
           {
             label: "A bar chart is best for ___",
-            options: ["comparing categories", "change over time at high resolution", "showing causation", "encrypting data"]
+            options: ["comparing categories", "change over time at high resolution", "showing causation", "plotting two numeric variables"]
           },
           {
             label: "Linking medical records to voter rolls on (ZIP, birth date, gender) demonstrates ___",
-            options: ["re-identification via quasi-identifiers", "random matching", "compression", "TLS"]
+            options: ["re-identification via quasi-identifiers", "anonymization via removing names", "data cleaning via record deduplication", "encryption via hashing personal fields"]
           }
         ],
         correctAnswers: ["change over time", "comparing categories", "re-identification via quasi-identifiers"],
@@ -156,7 +156,7 @@ A correlation in data ≠ causation. Ice-cream sales and drowning correlate (bot
             options: [
               "a pie chart showing the share each grade level took in the most recent year.",
               "a line chart showing each year's total enrollment over time.",
-              "a histogram of grade levels grouped into uniform-width buckets.",
+              "a histogram of enrollment counts grouped into uniform-width buckets.",
               "a scatter plot whose x-axis is student name and y-axis is grade level."
             ],
             correctAnswer: 1,
@@ -166,9 +166,9 @@ A correlation in data ≠ causation. Ice-cream sales and drowning correlate (bot
             question: "An analyst notices that students who attend tutoring score higher on the SAT and concludes \"tutoring causes higher scores.\" The strongest critique is ___",
             options: [
               "the analysis is sound and the causal claim is well supported by the data.",
-              "students who choose tutoring may differ in motivation or prior achievement — confounders.",
+              "motivated or high-achieving learners may be likelier to seek extra help, a confounder.",
               "the sample is too large for any conclusion to be drawn from it confidently.",
-              "the analysis ignored the network protocol used to transmit the SAT scores."
+              "the scores should have been averaged before comparing the two groups."
             ],
             correctAnswer: 1,
             explanation: "Confounders threaten causal claims from observational data."

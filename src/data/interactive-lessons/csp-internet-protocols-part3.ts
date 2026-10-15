@@ -35,10 +35,10 @@ The same shapes recur across services.
           {
             question: "In a client/server architecture, the role of the server is to ___",
             options: [
-              "initiate connections to clients.",
+              "initiate connections to each client.",
               "wait for client requests and respond.",
-              "route packets between clients.",
-              "compress all data."
+              "route packets between pairs of clients.",
+              "store a copy of every client's files."
             ],
             correctAnswer: 1,
             explanation: "Servers wait; clients initiate."
@@ -46,10 +46,10 @@ The same shapes recur across services.
           {
             question: "Which service most clearly fits the peer-to-peer pattern?",
             options: [
-              "Email between two users via Gmail.",
-              "A web search.",
-              "BitTorrent file distribution where each downloader also uploads.",
-              "A bank login page."
+              "Email between two users sent through Gmail's servers.",
+              "A web search answered by a search engine's data centers.",
+              "BitTorrent, where each downloader also uploads to others.",
+              "A bank login page served from the bank's own servers."
             ],
             correctAnswer: 2,
             explanation: "BitTorrent peers exchange data with each other directly, not through a central server."
@@ -124,15 +124,15 @@ Video streams break the file into small chunks; the player buffers a few seconds
         dropdowns: [
           {
             label: "A 500-series HTTP status indicates ___",
-            options: ["a server-side error", "a client-side error", "a redirect", "success"]
+            options: ["a server-side error", "a client-side error", "a redirect", "a successful response"]
           },
           {
             label: "A push-notification service most closely resembles the ___ pattern",
-            options: ["publish / subscribe", "request / response", "P2P file sharing", "streaming"]
+            options: ["publish / subscribe", "request / response", "P2P file sharing", "polling by the client"]
           },
           {
             label: "For a service that must remain available if any single server fails, a ___ design helps",
-            options: ["distributed / redundant", "single-server", "client-only", "P2P-only"]
+            options: ["distributed / redundant", "single powerful server", "centralized database", "client-side only"]
           }
         ],
         correctAnswers: ["a server-side error", "publish / subscribe", "distributed / redundant"],

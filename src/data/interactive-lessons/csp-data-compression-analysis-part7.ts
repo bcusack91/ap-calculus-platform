@@ -28,7 +28,7 @@ Final review.
             question: "A photograph stored as a JPEG, then decoded back ___",
             options: [
               "equals the original bit-for-bit because JPEG is a lossless format like PNG.",
-              "is approximately the original — JPEG is a lossy format that discards perceptual detail.",
+              "is approximately the original, because JPEG is a lossy format that discards detail.",
               "becomes plain text consisting of the RGB value of every pixel in the image.",
               "is encrypted with a symmetric cipher whose key is embedded in the file header."
             ],
@@ -107,15 +107,15 @@ Final review.
         dropdowns: [
           {
             label: "A 10× size reduction with imperceptible quality loss describes ___",
-            options: ["typical JPEG vs raw RGB", "lossless ZIP on random data", "TLS encryption", "IPv6 routing"]
+            options: ["typical JPEG vs raw RGB", "lossless PNG vs raw RGB", "ZIP on random data", "ZIP on an encrypted file"]
           },
           {
             label: "Adaptive bitrate streaming relies on ___",
-            options: ["precomputing multiple lossy renditions and serving the best fit per viewer", "lossless only", "no compression", "one fixed quality"]
+            options: ["precomputing multiple lossy renditions and serving the best fit per viewer", "sending one lossless master file and letting each device downscale it", "encoding each video once at the highest bitrate the server supports", "re-encoding the video losslessly for each viewer on request"]
           },
           {
             label: "A truly random file ___",
-            options: ["cannot be losslessly compressed below its entropy bound", "always compresses 10×", "compresses to zero bytes", "cannot be encrypted"]
+            options: ["cannot be losslessly compressed below its entropy bound", "compresses well with run-length encoding", "can be losslessly compressed to about half its size", "compresses to a fixed fraction of its size with ZIP"]
           }
         ],
         correctAnswers: ["typical JPEG vs raw RGB", "precomputing multiple lossy renditions and serving the best fit per viewer", "cannot be losslessly compressed below its entropy bound"],
@@ -149,7 +149,7 @@ Final review.
             question: "A user worries that JPEG-saving a photo, opening it, and re-saving it causes \"generation loss\". The most accurate explanation is ___",
             options: [
               "no — JPEG is a lossless format and round-tripping always preserves the original.",
-              "yes — each lossy re-encode discards more detail; edit lossless and export to JPEG once.",
+              "yes — each lossy re-encode discards more detail, so edit losslessly and export once.",
               "yes — JPEG actually adds random visual noise on purpose every time the file is saved.",
               "no — file extensions are immutable so the data inside the JPEG never changes either."
             ],
@@ -159,8 +159,8 @@ Final review.
           {
             question: "A team needs to send 10 TB of mostly-text logs from a remote site to a data center. The most reasonable plan is ___",
             options: [
-              "ship the logs as-is over the network and accept the multi-day transfer time required.",
-              "compress with gzip / zstd before transfer; ship over a reliable channel; verify checksums.",
+              "ship the logs as-is, wait out the multi-day transfer, and spot-check a few files.",
+              "compress with gzip or zstd, send over a reliable channel, and verify checksums.",
               "encrypt the logs first and then compress, accepting that the compressed output is barely smaller.",
               "switch the transport from TCP to UDP without compression to use less server-side memory."
             ],

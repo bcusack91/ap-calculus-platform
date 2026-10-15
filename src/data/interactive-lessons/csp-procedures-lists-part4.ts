@@ -33,9 +33,9 @@ export const cspProceduresListsPart4Data = {
             question: "A unit test typically tests ___",
             options: [
               "the entire program end-to-end with a single integration scenario.",
-              "a single procedure with known inputs and the corresponding expected outputs.",
-              "the network layer's ability to deliver packets reliably under load.",
-              "the encryption module's ability to round-trip arbitrary plaintext blobs."
+              "a single procedure, using known inputs and their expected outputs.",
+              "the program's speed on the largest input it will ever receive.",
+              "every procedure at once, with random inputs and no expected outputs."
             ],
             correctAnswer: 1,
             explanation: "Unit tests target single procedures."
@@ -46,7 +46,7 @@ export const cspProceduresListsPart4Data = {
               "everyone shares one giant function and edits the same lines simultaneously.",
               "features are split into well-defined procedures with clear inputs and outputs.",
               "no procedures exist and every feature is one continuous top-to-bottom script.",
-              "transport-layer encryption is required between every two teammate's commits."
+              "one teammate writes all procedures and the other only reviews the code."
             ],
             correctAnswer: 1,
             explanation: "Procedures are the unit of parallel work."
@@ -114,15 +114,15 @@ This is why pure functions are encouraged in modern code.
         dropdowns: [
           {
             label: "A pure function is easier to ___",
-            options: ["test and reason about because outputs depend only on inputs", "compress", "encrypt", "route"]
+            options: ["test and reason about because outputs depend only on inputs", "change at runtime because it can modify global variables", "speed up because it skips checking its parameter values", "reuse because it displays results instead of returning them"]
           },
           {
             label: "A procedure that returns a NEW list (without modifying the input) is ___",
-            options: ["safer to compose with other procedures", "always slower", "always larger", "always encrypted"]
+            options: ["safer to compose with other procedures", "unable to be called more than one time", "riskier because it changes the caller's list", "required to store results in a global variable"]
           },
           {
             label: "Splitting a feature into 4 named procedures helps ___",
-            options: ["teammates work in parallel and test each piece in isolation", "compression", "TLS", "IPv6"]
+            options: ["teammates work in parallel and test each piece in isolation", "the program run faster because there are fewer total steps", "the program avoid needing any parameters or return values", "teammates skip testing since each part is small and simple"]
           }
         ],
         correctAnswers: ["test and reason about because outputs depend only on inputs", "safer to compose with other procedures", "teammates work in parallel and test each piece in isolation"],
@@ -154,10 +154,10 @@ This is why pure functions are encouraged in modern code.
           {
             question: "A team has one 500-line function. Refactoring it into 6 named procedures most directly improves ___",
             options: [
-              "the compression ratio of the source-code file when it is later archived.",
-              "readability, testability, and the ability for teammates to work in parallel.",
-              "the speed of the TLS handshake the program performs at startup time.",
-              "the routing efficiency of IPv6 packets the program sends across the network."
+              "the speed of the program, since procedure calls run faster than inline code.",
+              "readability, testability, and how easily teammates can work in parallel.",
+              "the memory the program needs, since procedures share one set of variables.",
+              "correctness, security, and speed, since procedures can never contain errors."
             ],
             correctAnswer: 1,
             explanation: "Decomposition into procedures is one of the most universally beneficial refactors."
@@ -166,9 +166,9 @@ This is why pure functions are encouraged in modern code.
             question: "A procedure **shuffleInPlace(list)** reorders the caller's list. The most CSP-aligned best practice is ___",
             options: [
               "leave it; the caller will eventually figure out that the list has been modified.",
-              "document clearly that the input is mutated, OR return a NEW shuffled list instead.",
-              "compress the list before shuffling so the in-place modification fits in less memory.",
-              "encrypt the list before shuffling so the in-place modification cannot be observed."
+              "document that the input is mutated, or return a new shuffled list.",
+              "rename it to shuffle so that callers assume it returns a brand-new list.",
+              "make the list a global variable so every procedure can see the change."
             ],
             correctAnswer: 1,
             explanation: "Make mutation explicit; or return a fresh value."

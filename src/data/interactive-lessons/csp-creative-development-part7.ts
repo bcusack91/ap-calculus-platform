@@ -27,10 +27,10 @@ Final review of dev-process vocabulary.
           {
             question: "AP CSP frames the development process as ___",
             options: [
-              "linear and one-shot.",
-              "iterative — investigate, design, prototype, test, refine, repeat.",
-              "random.",
-              "optional."
+              "linear, with planning, coding, and testing each done once, in strict order.",
+              "iterative, cycling through investigation, design, prototyping, and testing.",
+              "test-driven only, with all tests written before any design work starts.",
+              "open-ended, with no defined phases so developers code as ideas arise."
             ],
             correctAnswer: 1,
             explanation: "The exam emphasizes iterative dev."
@@ -38,10 +38,10 @@ Final review of dev-process vocabulary.
           {
             question: "A logic error means the program ___",
             options: [
-              "fails to parse.",
-              "crashes immediately.",
+              "fails to compile because a keyword is misspelled.",
+              "stops immediately with a runtime crash message.",
               "runs but produces an incorrect result.",
-              "is encrypted."
+              "runs correctly but uses more memory."
             ],
             correctAnswer: 2,
             explanation: "Logic errors run but give wrong output."
@@ -110,15 +110,15 @@ Final review of dev-process vocabulary.
         dropdowns: [
           {
             label: "A team that releases small changes daily with automated tests is using ___",
-            options: ["CI / CD", "waterfall", "no version control", "manual deployment only"]
+            options: ["CI / CD", "the waterfall model", "pair programming", "big-bang integration"]
           },
           {
             label: "A feature documented for users in a \"how to\" guide is part of ___",
-            options: ["user-facing documentation", "malware", "compression", "encryption"]
+            options: ["user-facing documentation", "program code comments", "the commit history", "an API reference for developers"]
           },
           {
             label: "When designing for a target audience, the best validation is ___",
-            options: ["testing with real users from that audience", "testing only with developers", "reading the spec aloud", "checking the file size"]
+            options: ["testing with real users from that audience", "a review by the development team", "positive results on the automated test suite", "a code review by senior engineers"]
           }
         ],
         correctAnswers: ["CI / CD", "user-facing documentation", "testing with real users from that audience"],
@@ -151,10 +151,10 @@ Final review of dev-process vocabulary.
           {
             question: "A startup releases an MVP, gets feedback, and rebuilds key features based on user behavior. Which model best describes this?",
             options: [
-              "Iterative / agile development.",
-              "Pure waterfall.",
-              "No development model at all.",
-              "Encrypted development."
+              "Iterative development.",
+              "Waterfall development.",
+              "Big-bang development.",
+              "Linear, phase-gated development."
             ],
             correctAnswer: 0,
             explanation: "Releasing, gathering feedback, rebuilding = iterative."
@@ -162,9 +162,9 @@ Final review of dev-process vocabulary.
           {
             question: "You inherit code with no comments, no tests, no commit history. The most appropriate FIRST step is ___",
             options: [
-              "rewrite the entire codebase from scratch in a modern style.",
-              "add tests around current behavior and identify the most critical functions before changing anything.",
-              "start refactoring immediately so the code matches your preferred style.",
+              "rewrite the entire codebase from scratch in a cleaner, modern style.",
+              "add tests that capture current behavior before changing anything.",
+              "start refactoring at once and add tests only after the style is fixed.",
               "delete any code whose purpose you cannot quickly understand at a glance."
             ],
             correctAnswer: 1,

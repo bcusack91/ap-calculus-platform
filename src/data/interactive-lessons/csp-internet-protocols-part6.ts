@@ -28,7 +28,7 @@ Apply the layered model and the protocol vocabulary to scenarios.
             question: "A page loads partially: text and CSS arrive but a single image doesn't. The most likely cause is at the ___",
             options: [
               "transport layer for the entire page, since the image's failure means TCP itself stopped working.",
-              "application/HTTP layer for the image's specific request — the other resources arrived, so lower layers worked.",
+              "application/HTTP layer for that one image request, since the other files loaded.",
               "physical layer because the network connection itself is fully down for every resource the page requested.",
               "DNS layer for the entire page, since the failed image lookup blocked every other DNS resolution attempt."
             ],
@@ -115,11 +115,11 @@ If DNS is wrong, the user lands on a wrong server. If the cert doesn't match, TL
         dropdowns: [
           {
             label: "A 503 status code most likely means ___",
-            options: ["the server is temporarily overloaded or down", "the URL is misspelled", "the user is not logged in", "TLS failed"]
+            options: ["the server is temporarily overloaded or down", "the requested page does not exist on the server", "the user must log in before viewing the page", "the request was redirected to a new address"]
           },
           {
             label: "For software updates that must arrive complete, the right transport is ___",
-            options: ["TCP", "UDP", "IP only", "no transport"]
+            options: ["TCP", "UDP", "IP only", "DNS"]
           },
           {
             label: "For audio in a live call, the right transport is usually ___",
@@ -156,7 +156,7 @@ If DNS is wrong, the user lands on a wrong server. If the cert doesn't match, TL
           {
             question: "A school records video lectures and posts them for students to watch later. Which two technologies fit this best?",
             options: [
-              "HTTPS for delivery to each student's browser plus a CDN to serve cached copies near each student.",
+              "HTTPS to deliver to each student's browser and a CDN that caches copies near students.",
               "UDP-only video calls between every student and the school's central origin server, with no caching at all.",
               "Plain HTTP served from a single origin server worldwide, with no encryption and no geographic caching layer.",
               "A peer-to-peer-only design with no central catalog server, where students must discover lectures from each other."
@@ -167,8 +167,8 @@ If DNS is wrong, the user lands on a wrong server. If the cert doesn't match, TL
           {
             question: "A social app must immediately notify followers when a user posts. The most appropriate pattern is ___",
             options: [
-              "publish/subscribe with persistent connections so the central server can push updates to followers immediately.",
-              "have every follower's browser actively poll the central server every 60 seconds for any new posts to display.",
+              "publish/subscribe with persistent connections so the central server can push new posts to followers at once.",
+              "have every follower's browser poll the central server every 60 seconds for new posts.",
               "send each follower an email notification through the school's SMTP mail server every time someone posts.",
               "require every follower to manually refresh their feed page in order to ever see any newly published posts."
             ],

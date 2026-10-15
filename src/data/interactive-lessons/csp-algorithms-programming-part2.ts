@@ -34,8 +34,8 @@ An **algorithm** is a step-by-step plan; a **program** is that plan written in a
           {
             question: "Which is the most precise distinction between an algorithm and a program?",
             options: [
-              "Algorithms are written only in plain English; programs must always be written in compiled code.",
-              "Algorithms are conceptual sequences of steps; programs are algorithms expressed in a runnable language.",
+              "An algorithm must be written in plain English, while a program must always be compiled code.",
+              "Algorithms are conceptual sequences of steps; programs express them in a runnable language.",
               "Algorithms always run faster than programs because algorithms skip the language-translation step.",
               "Programs always contain loops; algorithms by definition never contain any kind of repetition step."
             ],
@@ -132,7 +132,7 @@ The call evaluates each argument **before** entering the procedure. Inside the p
           },
           {
             label: "After RETURN x, the procedure ___",
-            options: ["exits immediately and sends x back", "continues executing the next line", "sets a global named x", "discards x"]
+            options: ["exits immediately and sends x back", "finishes its loop, then sends x back", "displays x and keeps running", "stores x and continues to the next line"]
           }
         ],
         correctAnswers: ["arguments", "parameters", "exits immediately and sends x back"],
@@ -176,10 +176,10 @@ The call evaluates each argument **before** entering the procedure. Inside the p
           {
             question: "A team must convert a working algorithm into a runnable program. Which sequence is most appropriate?",
             options: [
-              "Write the program, ship it, then write the algorithm.",
-              "Translate pseudocode → run on small test inputs → fix bugs → run on representative inputs.",
-              "Translate pseudocode → ship → wait for users to report bugs.",
-              "Skip pseudocode and write directly in production."
+              "Write the program, ship it, and document the algorithm afterward.",
+              "Translate it, test on small inputs, fix bugs, then test on realistic inputs.",
+              "Ship the translated code at once and wait for users to report bugs.",
+              "Skip the pseudocode and write the code directly in production."
             ],
             correctAnswer: 1,
             explanation: "Iterative testing on small inputs first catches translation errors cheaply."

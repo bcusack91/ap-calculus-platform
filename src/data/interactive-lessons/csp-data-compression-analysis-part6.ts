@@ -114,15 +114,15 @@ Apply compression vocabulary to estimation and design problems.
         dropdowns: [
           {
             label: "For a music streaming service prioritizing low data cost, the right choice is ___",
-            options: ["Opus or AAC at moderate bitrate", "lossless FLAC for everyone", "no compression", "JPEG audio"]
+            options: ["Opus or AAC at moderate bitrate", "uncompressed WAV at CD quality", "lossless FLAC for every listener on every plan", "MP3 at the highest bitrate"]
           },
           {
             label: "For an archival scan that must remain identical decades from now, the right choice is ___",
-            options: ["lossless format (PDF/A, TIFF lossless, PNG)", "lossy JPEG at low quality", "no encoding", "MP3"]
+            options: ["lossless format (PDF/A, TIFF lossless, PNG)", "lossy format (JPEG, WebP, HEIC)", "lossy format at maximum quality (JPEG 100)", "proprietary format (the scanner's own)"]
           },
           {
             label: "For a streaming video service, the right choice is ___",
-            options: ["lossy codec (H.264 / H.265 / AV1) with adaptive bitrate", "lossless only", "plain text", "no compression"]
+            options: ["lossy codec (H.264 / H.265 / AV1) with adaptive bitrate", "lossless codec (FFV1 / HuffYUV) at a fixed bitrate", "lossy codec (H.264) at one fixed high bitrate", "uncompressed video (raw RGB frames) for best quality"]
           }
         ],
         correctAnswers: ["Opus or AAC at moderate bitrate", "lossless format (PDF/A, TIFF lossless, PNG)", "lossy codec (H.264 / H.265 / AV1) with adaptive bitrate"],
@@ -154,10 +154,10 @@ Apply compression vocabulary to estimation and design problems.
           {
             question: "A startup serves user photos. Storage is fine but mobile users complain about data usage. The single highest-leverage change is ___",
             options: [
-              "stop serving photos.",
-              "serve responsive, modern (WebP / AVIF) compressed versions appropriate to each device.",
-              "serve only lossless.",
-              "switch to UDP."
+              "serve the full-resolution originals and let phones shrink them on screen.",
+              "serve compressed, device-sized versions in modern formats like WebP.",
+              "serve every photo as a lossless PNG so quality never drops on phones.",
+              "serve photos over UDP instead of TCP to cut the bytes users download."
             ],
             correctAnswer: 1,
             explanation: "Serving smaller modern image formats reduces bandwidth dramatically."
@@ -165,10 +165,10 @@ Apply compression vocabulary to estimation and design problems.
           {
             question: "A school board wants to archive 50 years of student records. The most appropriate combination is ___",
             options: [
-              "lossy JPEG for everything.",
-              "lossless format + standardized container + checksums + planned migration to new formats over time.",
-              "plain text only, no metadata.",
-              "one big encrypted blob with no documentation."
+              "lossy JPEG scans of every record, chosen to minimize storage costs.",
+              "lossless, standardized formats with checksums and a plan to migrate them.",
+              "plain text files only, with no metadata describing what each field means.",
+              "one large encrypted archive whose format and key are left undocumented."
             ],
             correctAnswer: 1,
             explanation: "Long-term archival = lossless + standards + checksums + migration plan."

@@ -27,10 +27,10 @@ Walk through end-to-end problems that combine sequence, selection, iteration, li
           {
             question: "You need to compute the average of a list of test scores, ignoring zeros. Which two patterns must you combine?",
             options: [
-              "Filter (skip zeros) and accumulator (sum + count).",
-              "Map and binary search.",
-              "Two min trackers.",
-              "Sort and count."
+              "A filter that skips zeros and an accumulator for sum and count",
+              "A map that doubles each score and a binary search for zeros",
+              "Two minimum trackers, one for scores and one for zeros",
+              "A sort of the scores and a count of the largest values"
             ],
             correctAnswer: 0,
             explanation: "Skip zeros = filter. Sum + count = accumulator. Average = sum / count."
@@ -38,10 +38,10 @@ Walk through end-to-end problems that combine sequence, selection, iteration, li
           {
             question: "When dividing the running sum by the count, what edge case must you guard against?",
             options: [
-              "The list being sorted.",
-              "The count being 0 (avoid divide-by-zero).",
-              "The sum being negative.",
-              "The list having duplicates."
+              "The list having already been sorted in ascending order",
+              "The count being 0, so no average can be computed",
+              "The sum being negative while the count is positive",
+              "The list containing a great many duplicate scores"
             ],
             correctAnswer: 1,
             explanation: "If every score was zero (or the list was empty), count = 0 and division explodes. Always guard with IF count > 0."
@@ -78,8 +78,10 @@ Walk through end-to-end problems that combine sequence, selection, iteration, li
 Goal: return TRUE if a list contains two consecutive equal elements.
 
     PROCEDURE hasRun(list) {
-      FOR i ← 2 TO LENGTH(list) {
+      i ← 2
+      REPEAT UNTIL (i > LENGTH(list)) {
         IF (list[i] = list[i − 1]) { RETURN TRUE }
+        i ← i + 1
       }
       RETURN FALSE
     }
@@ -159,7 +161,7 @@ Goal: return TRUE if a list contains two consecutive equal elements.
           {
             question: "A function mode(list) returns the most common value. A student writes a doubly-nested loop that for each element counts how many times it appears, tracking the best count. For n = 100,000 inputs the program is far too slow. Which change is most appropriate?",
             options: [
-              "Replace the nested loops with a single loop that uses a frequency map / dictionary keyed by element value.",
+              "Replace the nested loops with one pass that tallies each item in a frequency table.",
               "Add explanatory comments throughout the inner loop describing the comparison logic in clearer English.",
               "Switch the entire program to a different programming language with the same nested-loop structure preserved.",
               "Run the same nested-loop code on more powerful server hardware with faster CPU clock speeds and more RAM."
@@ -170,10 +172,10 @@ Goal: return TRUE if a list contains two consecutive equal elements.
           {
             question: "A procedure should return TRUE if at least one element of list is greater than every element of other. Which structure is most efficient and correct?",
             options: [
-              "Compute max(other) once, then a single loop over list checking x > maxOther.",
-              "Nested loop comparing every list element to every other element.",
-              "Sort both lists, then compare.",
-              "Pick a random element and compare."
+              "Find the maximum of other once, then loop over list checking each x against it.",
+              "Use a nested loop comparing every element of list to every element of other.",
+              "Sort both lists, then compare the first element of list with the first of other.",
+              "Pick one random element of list and compare it to the maximum of other."
             ],
             correctAnswer: 0,
             explanation: "Precomputing the max once is O(n + m); nested comparison is O(n·m)."

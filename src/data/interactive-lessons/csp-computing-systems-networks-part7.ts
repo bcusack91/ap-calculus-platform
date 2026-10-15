@@ -25,10 +25,10 @@ export const cspComputingSystemsNetworksPart7Data = {
           {
             question: "A \"system\" in CSP is ___",
             options: [
-              "only software.",
+              "only the software programs installed on a device.",
               "a collection of components that interact to provide some function.",
-              "only hardware.",
-              "only networks."
+              "only the physical hardware inside a computer's case.",
+              "only the network links that connect separate devices."
             ],
             correctAnswer: 1,
             explanation: "System = interacting components."
@@ -36,10 +36,10 @@ export const cspComputingSystemsNetworksPart7Data = {
           {
             question: "A protocol is ___",
             options: [
-              "random behavior.",
+              "a program that sends data across a network.",
               "an agreed set of rules for how parties communicate.",
-              "a hardware feature only.",
-              "only encryption."
+              "a physical cable standard for linking routers.",
+              "an encryption method that protects transmitted data."
             ],
             correctAnswer: 1,
             explanation: "Protocols = agreed rules."
@@ -105,15 +105,15 @@ export const cspComputingSystemsNetworksPart7Data = {
         dropdowns: [
           {
             label: "High bandwidth ___",
-            options: ["does NOT guarantee low latency", "always means low latency", "is the same as latency", "eliminates congestion"]
+            options: ["does NOT guarantee low latency", "guarantees low latency on every connection", "is just another word for latency", "prevents congestion on busy links"]
           },
           {
             label: "A CDN reduces ___",
-            options: ["latency for users far from origin servers", "all server costs to zero", "bandwidth at the origin to zero", "all bugs"]
+            options: ["latency for users far from origin servers", "the need for any origin servers at all", "the number of packets in each download", "the security risks of using HTTPS"]
           },
           {
             label: "A protocol like HTTP is ___",
-            options: ["an agreed set of rules for client / server communication", "a hardware device", "random data", "a DNS record"]
+            options: ["an agreed set of rules for client / server communication", "a hardware device that forwards packets between networks", "a naming system that maps domain names to IP addresses", "a programming language used to build web pages"]
           }
         ],
         correctAnswers: ["does NOT guarantee low latency", "latency for users far from origin servers", "an agreed set of rules for client / server communication"],
@@ -147,9 +147,9 @@ export const cspComputingSystemsNetworksPart7Data = {
             question: "A library wants to serve students in a low-bandwidth area with educational videos. The most CSP-aligned strategy is ___",
             options: [
               "stream original-quality 4K video to every student regardless of their connection.",
-              "pre-download or cache lower-resolution lossy versions and serve from a community device.",
-              "serve only fully lossless video files so quality is preserved no matter the bandwidth.",
-              "serve videos with no compression at all and rely on the underlying network capacity."
+              "pre-download lower-resolution lossy versions and serve them from a community device.",
+              "serve only lossless video files so quality is preserved for everyone.",
+              "serve uncompressed videos and rely on the network's full capacity."
             ],
             correctAnswer: 1,
             explanation: "Local caching + appropriate bitrate is the standard equity-aware design."
@@ -157,10 +157,10 @@ export const cspComputingSystemsNetworksPart7Data = {
           {
             question: "A team builds an API used by partners worldwide. The single most impactful step to reduce global latency is ___",
             options: [
-              "add a global CDN or geographically distributed edge points-of-presence.",
-              "switch every API endpoint from TCP to UDP and accept whatever packet loss results.",
-              "remove transport-layer security and serve every API response over plain HTTP.",
-              "serve all responses with lossless compression only and never use lossy formats."
+              "add a CDN or edge points-of-presence close to its users.",
+              "switch every API endpoint from TCP to UDP and accept the packet loss.",
+              "remove HTTPS and serve every API response over plain HTTP instead.",
+              "move the API to one larger server in a single central data center."
             ],
             correctAnswer: 0,
             explanation: "CDNs / edge POPs are the standard latency mitigation for global APIs."

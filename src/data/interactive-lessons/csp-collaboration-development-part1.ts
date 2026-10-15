@@ -54,10 +54,10 @@ Testing EVERY possible input is usually impossible. Good testers focus on:
           {
             question: 'Why is it usually impossible to test a program with every possible input?',
             options: [
-              'Testing is too expensive',
-              'The number of possible inputs is often infinite or astronomically large',
-              'Computers cannot run test cases',
-              'Testing only works on small programs'
+              'Testing tools cannot generate inputs for most programs',
+              'The set of inputs is far too large, often unbounded',
+              'Test results usually change each time the same input runs',
+              'Exhaustive testing only works on programs without procedures'
             ],
             correctAnswer: 1,
             explanation: 'For most programs, the number of possible inputs is effectively infinite. A text field alone accepts any combination of characters. Instead, testers select representative test cases including edge cases.'
@@ -65,10 +65,10 @@ Testing EVERY possible input is usually impossible. Good testers focus on:
           {
             question: 'What is a boundary (edge) test case for a function that accepts ages 0-120?',
             options: [
-              'Age = 50',
+              'Age = 50 or Age = 60',
               'Age = 0 or Age = 120',
               'Age = "hello"',
-              'Not providing any input'
+              'Age = 300 or Age = 999'
             ],
             correctAnswer: 1,
             explanation: 'Boundary cases test the limits of valid input. For ages 0-120, the boundaries are exactly 0 and 120. Many bugs occur at boundaries where conditions use < vs <=.'
@@ -177,10 +177,10 @@ Build your program in small pieces, testing each piece before adding more. This 
           {
             question: 'A student writes a program to find the average of a list. The program works for most lists but crashes when the list is empty. This is best described as:',
             options: [
-              'A syntax error',
-              'A logic error',
-              'A runtime error caused by division by zero on empty input',
-              'An overflow error'
+              'A syntax error caught before the program runs',
+              'A logic error that silently returns the wrong average',
+              'A runtime error from dividing by a length of zero',
+              'An overflow error from a sum too large to store'
             ],
             correctAnswer: 2,
             explanation: 'An empty list has 0 elements. Dividing the sum by 0 causes a runtime error. This is why testing with empty/boundary inputs is essential.'
@@ -188,10 +188,10 @@ Build your program in small pieces, testing each piece before adding more. This 
           {
             question: 'Two programmers edit the same line of code in different branches and try to merge. What happens?',
             options: [
-              'The changes are automatically combined',
-              'A merge conflict occurs that must be resolved manually',
-              'Both changes are deleted',
-              'The program crashes'
+              'Git silently keeps whichever change was committed last',
+              'A merge conflict arises that a person must resolve',
+              'Both edits are merged side by side on the same line',
+              'The program crashes the next time it is compiled'
             ],
             correctAnswer: 1,
             explanation: 'When two branches modify the same line, a merge conflict occurs. The version control system cannot automatically decide which change to keep, so a human must resolve it.'

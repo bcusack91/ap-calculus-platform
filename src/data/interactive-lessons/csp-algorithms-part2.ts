@@ -46,13 +46,13 @@ An **algorithm** is a finite, ordered sequence of unambiguous steps. On the AP C
           {
             question: "Which best describes when REPEAT UNTIL (n = 0) stops executing its block?",
             options: [
-              "After exactly n iterations.",
-              "When n equals 0 at the top of an iteration.",
-              "When n equals 0 at the bottom of an iteration, after the block runs.",
-              "When n becomes negative."
+              "After exactly n iterations of the block.",
+              "When n equals 0 after a pass, so the block always runs at least once first.",
+              "When n equals 0 as checked before a pass, so the block may run zero times.",
+              "When n first drops below 0 partway through the block, ending it at once."
             ],
             correctAnswer: 2,
-            explanation: "REPEAT UNTIL is a post-test loop in AP pseudocode: the block runs, then the condition is checked. The loop exits the next time the condition is true."
+            explanation: "On the AP exam reference sheet, REPEAT UNTIL (condition) checks the condition before each pass. If n is already 0, the block runs zero times; otherwise the block repeats until n = 0 is true at a check."
           }
         ]
       }
@@ -139,7 +139,7 @@ DISPLAY shows **10**.
         ],
         correctAnswers: ["3", "before", "3"],
         hint1: "b is a snapshot, not a reference.",
-        hint2: "REPEAT UNTIL is post-test; many other loops are pre-test.",
+        hint2: "On the AP reference sheet, REPEAT UNTIL checks its condition before each pass, so it is a pre-test loop too.",
         hint3: "NOT (x > 5) means x ≤ 5; combined with x ≠ 0.",
         explanation: "Assignments copy values. Pre-test loops evaluate first. For x = 3: NOT (3 > 5) is true, AND (3 ≠ 0) is true."
       }
@@ -152,7 +152,7 @@ DISPLAY shows **10**.
 
 - Trace with a **table**: one column per variable, one row per iteration. This catches off-by-one errors.
 - For **REPEAT N TIMES** the count is **fixed at the start**; modifying the counter inside doesn't change how many times the block runs.
-- For **REPEAT UNTIL (cond)** the block runs **at least once** and exits when cond becomes true *after* a pass.
+- For **REPEAT UNTIL (cond)** the condition is checked **before** each pass: if cond is already true, the block runs **zero** times; otherwise it repeats until cond is true at a check.
 - DeMorgan: NOT (A AND B) = (NOT A) OR (NOT B). The exam tests this.
 - When in doubt, plug in **boundary values** (0, 1, n−1, n) — they are where bugs live.
       `
@@ -168,10 +168,10 @@ DISPLAY shows **10**.
           {
             question: "A loop counts how many list elements equal a target. After tracing, the counter is 0 but you can see the target appears in the list. Which bug is most likely?",
             options: [
-              "The loop iterates through the list correctly but compares index to target instead of element to target.",
-              "Lists are 0-indexed in AP pseudocode and the loop starts at 1.",
-              "REPEAT UNTIL was used instead of REPEAT N TIMES.",
-              "The DISPLAY statement is missing."
+              "It compares each index to the target, not the element at that index.",
+              "AP lists are 0-indexed, so the first element is skipped.",
+              "REPEAT n TIMES cannot visit every element of a list.",
+              "The comparison with the target uses = when it should use ≥."
             ],
             correctAnswer: 0,
             explanation: "The classic mistake is comparing the index variable to the target instead of list[i]. AP pseudocode lists are 1-indexed, ruling out the 0-indexed explanation."
@@ -179,10 +179,10 @@ DISPLAY shows **10**.
           {
             question: "Two algorithms produce the same output for every input. Algorithm A uses one loop and runs in time proportional to n. Algorithm B uses two nested loops and runs in time proportional to $n^{2}$. For n = 1000, which statement is best supported?",
             options: [
-              "Algorithm B is preferred because nested loops are more reliable.",
-              "Algorithm A is more efficient; both are correct, so A should be used.",
-              "Algorithm A is incorrect because it doesn’t use nesting.",
-              "Both have identical efficiency since they produce the same output."
+              "Algorithm B is preferred, because nested loops are more reliable.",
+              "Algorithm A should be used, since both are correct and A is faster.",
+              "Algorithm A is incorrect, because it does not use nested loops.",
+              "Both are equally efficient, since they produce the same output."
             ],
             correctAnswer: 1,
             explanation: "Correctness is equal; efficiency is not. Same output + lower running time means the linear algorithm is preferred."

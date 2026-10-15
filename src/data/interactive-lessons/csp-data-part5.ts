@@ -32,7 +32,7 @@ export const cspDataPart5Data = {
           {
             question: "\"Big data\" most commonly refers to datasets that ___",
             options: [
-              "fit easily on a single floppy disk and can be processed by one program.",
+              "fit easily on one laptop and can be processed by one program.",
               "are too large or too fast for traditional single-machine processing.",
               "are encrypted with strong cryptography before they touch persistent storage.",
               "are written in pure binary rather than human-readable structured text."
@@ -46,7 +46,7 @@ export const cspDataPart5Data = {
               "storing user passwords for the application's authentication system.",
               "storing embeddings used by ML/AI for similarity search.",
               "compressing video streams before they are sent over the network.",
-              "routing IPv6 packets between nearby autonomous systems on the internet."
+              "storing rows in fixed tables joined by matching ID columns."
             ],
             correctAnswer: 1,
             explanation: "Vector DBs power similarity search for AI/ML."
@@ -123,15 +123,15 @@ The dataset is now part of the AI system's ethical surface.
         dropdowns: [
           {
             label: "Cheap storage means ___",
-            options: ["\"keep everything\" is feasible — and risky for privacy", "data must always be deleted", "no concern about retention", "compression is unnecessary"]
+            options: ["\"keep everything\" is feasible — and risky for privacy", "\"keep everything\" is feasible — and free of privacy risk", "\"keep everything\" is required — by data-retention law", "\"compress everything\" is pointless — since disks are cheap"]
           },
           {
             label: "A real-time streaming system processes events ___",
-            options: ["as they arrive, with low latency", "only once per year", "only after compression", "only on weekends"]
+            options: ["as they arrive, with low latency", "in nightly batches, after storage", "once the full dataset is collected", "after a human reviews and approves each one"]
           },
           {
             label: "A model trained on a biased dataset will ___",
-            options: ["likely produce biased outputs", "magically fix the bias", "always be perfectly fair", "have no measurable effect"]
+            options: ["likely produce biased outputs", "correct the bias as it trains on more data", "be fair if the code itself is neutral", "average out the bias across its outputs"]
           }
         ],
         correctAnswers: ["\"keep everything\" is feasible — and risky for privacy", "as they arrive, with low latency", "likely produce biased outputs"],
@@ -163,10 +163,10 @@ The dataset is now part of the AI system's ethical surface.
           {
             question: "A research team scrapes millions of web pages for AI training without considering authors' consent. The most CSP-aligned critique is ___",
             options: [
-              "publicly reachable web pages can be used freely for any downstream purpose.",
-              "data provenance and consent matter; using sources without acknowledgment raises ethical concerns.",
+              "publicly reachable web pages can be used freely for any downstream purpose, including training.",
+              "the writers never gave permission, and using their work uncredited raises ethical issues.",
               "the resulting model will simply turn out to be too small to perform usefully.",
-              "transport-layer protocols make the question of consent essentially irrelevant."
+              "copyright never applies to text that has been published openly on the web."
             ],
             correctAnswer: 1,
             explanation: "Provenance + consent are core dataset-ethics issues."
@@ -174,10 +174,10 @@ The dataset is now part of the AI system's ethical surface.
           {
             question: "A retailer stores every transaction back to 2005. A breach exposes 20 years of purchase history. The most appropriate long-term mitigation is ___",
             options: [
-              "ignore the breach, since transactions over five years old can no longer cause harm.",
-              "adopt data minimization, retention limits, and encryption-at-rest going forward.",
-              "continue keeping every transaction forever and rely on stronger access policies.",
-              "switch the retailer's transport protocol from TCP to UDP for transaction logging."
+              "ignore it, since old transactions can no longer cause harm.",
+              "adopt data minimization and retention limits, with encryption at rest.",
+              "keep everything forever and rely on stronger passwords.",
+              "rely on a firewall, since breaches only come from outside."
             ],
             correctAnswer: 1,
             explanation: "Combine minimization + sunsets + encryption."

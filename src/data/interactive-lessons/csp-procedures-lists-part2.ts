@@ -134,11 +134,11 @@ Now anywhere we need an average, we call **average(myList)**.
         dropdowns: [
           {
             label: "**APPEND(list, x)** ___",
-            options: ["adds x to the end of list, increasing its length by 1", "removes x from list", "sorts list", "replaces list with x"]
+            options: ["adds x to the end of list, increasing its length by 1", "adds x to the front of list, increasing its length by 1", "replaces the last element of list with x", "removes every element of list equal to x"]
           },
           {
             label: "A procedure with a RETURN value is meant to be ___",
-            options: ["used as an expression whose value is the returned value", "called only as a statement", "never called", "called recursively only"]
+            options: ["used as an expression whose value is the returned value", "called only as a statement whose result is discarded", "called once, since its value is then saved permanently", "used only to DISPLAY output instead of passing values"]
           },
           {
             label: "Calling **LENGTH([4, 8, 15])** returns ___",
@@ -174,10 +174,10 @@ Now anywhere we need an average, we call **average(myList)**.
           {
             question: "A program calls **maxOf(grades)** in three different places. The most direct benefit of using a procedure is ___",
             options: [
-              "no benefit — inlining the same code in three places would be equally maintainable.",
-              "a single source of truth for \"find max\" — fix bugs once, change once, test once.",
-              "compression of the program because the procedure header is shorter than the body.",
-              "transport-layer speedups for whatever the program does after computing the max."
+              "no benefit, since copying the code into three places is just as easy to maintain.",
+              "one shared definition, so a bug fix or change is made in only one place.",
+              "faster execution, since calling a procedure skips re-running its loop.",
+              "less memory use, since the list is stored only inside the procedure."
             ],
             correctAnswer: 1,
             explanation: "Procedures consolidate logic."

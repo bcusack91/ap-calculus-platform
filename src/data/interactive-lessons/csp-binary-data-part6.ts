@@ -162,12 +162,12 @@ Practice the calculations and design choices the AP exam asks under a time crunc
             question: "A weather station records temperature once per minute as an 8-bit value. How much storage for one year?",
             options: [
               "~525 KB",
-              "~525 KB but compressed",
+              "~4.2 MB",
               "~525 bytes",
               "~525 GB"
             ],
             correctAnswer: 0,
-            explanation: "60·24·365 = 525,600 samples × 1 byte ≈ 525 KB."
+            explanation: "60·24·365 = 525,600 samples × 1 byte ≈ 525 KB. (~4.2 MB would count each 8-bit sample as 8 bytes instead of 1.)"
           },
           {
             question: "A school stores 24-bit RGB profile photos for 50,000 students at 200 × 200 pixels each, uncompressed. Total storage?",

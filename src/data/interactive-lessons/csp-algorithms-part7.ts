@@ -60,9 +60,9 @@ Cheat sheet for exam day. Match each construct to its AP-pseudocode shape and th
 | Sequence | a; b; c | None — just trace top-down. |
 | IF/ELSE | IF (c) {…} ELSE {…} | Wrong comparison (> vs ≥). |
 | REPEAT N TIMES | block runs exactly N times | Modifying N inside changes nothing. |
-| REPEAT UNTIL | runs at least once, exits when cond true | Forgetting it’s post-test (off by one). |
+| REPEAT UNTIL | checks cond before each pass, exits when cond true | Assuming the block always runs once (it can run zero times). |
 | FOR EACH x IN list | iterates over elements | Treating x as the index. |
-| FOR i ← a TO b | iterates i = a, a+1, …, b | Off-by-one if pairing list[i+1]. |
+| i ← 1, then REPEAT UNTIL (i > LENGTH(list)) | visits i = 1, 2, …, LENGTH(list) when the body ends with i ← i + 1 | Forgetting i ← i + 1 (infinite loop), or reading list[i + 1] past the end. |
 
 ## Quick-Reference: Boolean Logic
 
@@ -86,17 +86,17 @@ Cheat sheet for exam day. Match each construct to its AP-pseudocode shape and th
 
 1) AP pseudocode lists are _______-indexed.
 
-2) A REPEAT UNTIL loop runs the block at least _______ time(s) before checking the condition.
+2) If its condition is already true when it is first checked, a REPEAT UNTIL loop runs the block _______ time(s).
 
 3) $\\log_{2}$(1,048,576) equals approximately _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["1", "1", "20"],
+        correctAnswers: ["1", "0", "20"],
         hint1: "First element is list[1].",
-        hint2: "Post-test loop.",
+        hint2: "The condition is checked before each pass.",
         hint3: "$2^{10}$ ≈ 1024, $2^{20}$ ≈ 1M.",
-        explanation: "1-indexed lists. REPEAT UNTIL is post-test (≥ 1 execution). $2^{20}$ = 1,048,576."
+        explanation: "1-indexed lists. REPEAT UNTIL checks its condition before each pass, so it can run 0 times. $2^{20}$ = 1,048,576."
       }
     },
     {
@@ -109,15 +109,15 @@ Cheat sheet for exam day. Match each construct to its AP-pseudocode shape and th
         dropdowns: [
           {
             label: "Sorted list + need-to-find-one-value → use ___",
-            options: ["binary search", "linear search", "sort first", "random guess"]
+            options: ["binary search", "linear search", "sort first", "selection sort"]
           },
           {
             label: "Two algorithms with identical output but different running times — choose the ___ one",
-            options: ["faster (lower growth rate)", "slower", "shorter source code", "one with more comments"]
+            options: ["faster (lower growth rate)", "shorter (fewer lines of code)", "simpler (fewer procedures used)", "newer (written most recently)"]
           },
           {
             label: "A heuristic is appropriate when ___",
-            options: ["the exact algorithm is unreasonable", "we need a guaranteed optimum", "the input is tiny", "the data is sorted"]
+            options: ["the exact algorithm is unreasonable", "a guaranteed optimal answer is required", "the input is tiny", "the data is sorted"]
           }
         ],
         correctAnswers: ["binary search", "faster (lower growth rate)", "the exact algorithm is unreasonable"],
@@ -134,7 +134,7 @@ Cheat sheet for exam day. Match each construct to its AP-pseudocode shape and th
 ## Final Exam Tips
 
 - Always **trace** loops with a table; don’t eyeball them.
-- Watch the boundaries: > vs ≥, list[1] vs list[0], REPEAT UNTIL post-test.
+- Watch the boundaries: > vs ≥, list[1] vs list[0], REPEAT UNTIL checks before each pass.
 - Distinguish **correctness** (does it produce the right output?) from **efficiency** (how fast / how much memory?).
 - For pseudocode FRQs, write at least one example trace in your scratch space.
 - "Most appropriate" usually means efficient AND correct AND simplest — eliminate options that fail any one.
@@ -151,8 +151,8 @@ Cheat sheet for exam day. Match each construct to its AP-pseudocode shape and th
           {
             question: "A learning app records millions of student responses and must repeatedly answer \"how many responses contain word W?\". Which design improves both correctness and efficiency?",
             options: [
-              "Linearly scan every recorded student response from start to finish on every individual incoming query.",
-              "Precompute, then maintain, a frequency map updated when responses arrive; queries become a single lookup.",
+              "Linearly scan every stored response on every incoming query.",
+              "Maintain a frequency map that is updated as responses arrive, so each query is one lookup.",
               "Sort all of the recorded student responses alphabetically and then run a binary search on every query.",
               "Compress the entire response dataset on disk and decompress the whole archive on every individual query."
             ],
@@ -162,10 +162,10 @@ Cheat sheet for exam day. Match each construct to its AP-pseudocode shape and th
           {
             question: "A class debates which algorithm is \"best\". A is correct and runs in $O(n^{2})$. B is faster (O(n log n)) but produces wrong results on lists with duplicates. The dataset has many duplicates. Which choice is best supported?",
             options: [
-              "Always choose B because it is faster.",
-              "Choose A because correctness is a precondition for considering efficiency.",
-              "Choose B and ignore the duplicate cases.",
-              "Neither — the problem is undecidable."
+              "Choose B, because faster is always better.",
+              "Choose A, because correctness must come before efficiency.",
+              "Choose B and ignore the duplicates.",
+              "Neither, since the problem is undecidable."
             ],
             correctAnswer: 1,
             explanation: "Correctness comes first; efficiency is the tiebreaker among correct algorithms."

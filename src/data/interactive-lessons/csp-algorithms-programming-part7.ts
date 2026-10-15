@@ -27,18 +27,18 @@ Cheat sheet of the patterns most likely to appear on exam day.
           {
             question: "A procedure parameter named n receives a copy of the caller's argument. Modifying n inside the procedure ___",
             options: [
-              "changes the caller's variable.",
+              "changes the caller's variable as well.",
               "does NOT change the caller's variable.",
-              "crashes the program.",
+              "causes an error when the procedure ends.",
               "requires a RETURN to take effect."
             ],
             correctAnswer: 1,
             explanation: "Parameters in AP pseudocode are local; the caller's variable is unaffected."
           },
           {
-            question: "A program reads list = INPUT() and the user provides nothing. After the FOR EACH loop, the accumulator total equals ___",
+            question: "A program reads list ← INPUT() and the user provides nothing. After the FOR EACH loop, the accumulator total equals ___",
             options: [
-              "its initial value (0)",
+              "its initial value, 0",
               "1",
               "undefined",
               "the number of inputs requested"
@@ -113,11 +113,11 @@ Cheat sheet of the patterns most likely to appear on exam day.
         dropdowns: [
           {
             label: "For \"list contains target\" the most efficient structure once n is large is a ___",
-            options: ["set / hash", "sorted list with linear scan", "unsorted list with linear scan", "string"]
+            options: ["set / hash", "sorted list with linear scan", "unsorted list with linear scan", "linked list"]
           },
           {
             label: "A procedure that uses a Boolean flag updated every iteration but no early RETURN is usually ___",
-            options: ["vulnerable to being overwritten by later iterations", "always optimal", "recursive", "object-oriented"]
+            options: ["vulnerable to being overwritten by later iterations", "guaranteed to stop at the first matching element", "faster because it skips the RETURN statement", "equivalent to an early-RETURN version in all cases"]
           },
           {
             label: "For pair-comparison loops over LENGTH n, the outer loop should iterate from 1 to ___",
@@ -157,7 +157,7 @@ Cheat sheet of the patterns most likely to appear on exam day.
             question: "A team supports a global service. A procedure formatPhoneNumber(s) is duplicated in 14 places, each with slightly different rules. Which refactor is most appropriate?",
             options: [
               "Add explanatory comments to all 14 duplicate places without changing any of the underlying duplicate code itself.",
-              "Extract a single well-tested formatPhoneNumber procedure (parameterized for region rules) and replace each duplicate with a call.",
+              "Write one well-tested shared version with a region parameter and call it from all 14 places.",
               "Delete 13 of the 14 duplicates and leave just one of them, regardless of the behavior differences between them.",
               "Convert all 14 of the duplicates into inline machine code so that each call site has its own optimized assembly."
             ],
@@ -167,13 +167,13 @@ Cheat sheet of the patterns most likely to appear on exam day.
           {
             question: "For a stream of 10 million events you must answer the query \"how many distinct user IDs have appeared so far?\". Which design is most appropriate?",
             options: [
-              "Maintain a set of seen IDs as the stream arrives; the query result is simply the current size of that set.",
-              "Re-scan the entire stream from the beginning every time the distinct-count query is asked of the system.",
-              "Sort the entire stream after each new event arrives and then count distinct runs in the freshly sorted result.",
-              "Store every event in a list and divide the list's LENGTH by 2 to estimate the count of distinct user IDs."
+              "Maintain a set of seen IDs as events arrive, and report the size of that set.",
+              "Re-scan the entire stream from the start each time the query is asked.",
+              "Sort the whole stream after every new event, then count distinct runs.",
+              "Divide the total number of events by 2 to estimate the distinct IDs."
             ],
             correctAnswer: 0,
-            explanation: "A maintained set gives O(1) per insert and O(1) per query — the canonical streaming distinct-count pattern."
+            explanation: "Keeping a running collection of the IDs seen so far makes each query a lookup of its size, instead of re-processing millions of events."
           }
         ]
       }

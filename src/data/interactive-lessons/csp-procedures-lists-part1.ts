@@ -183,7 +183,7 @@ list[j] ← temp
           },
           {
             label: 'To process every element in a list without needing the index, use ___',
-            options: ['FOR EACH loop', 'Index-based loop only', 'Binary search', 'REMOVE operation']
+            options: ['FOR EACH loop', 'REPEAT n TIMES loop', 'Binary search', 'REMOVE operation']
           },
           {
             label: 'list ← [1, 2, 3]; REMOVE(list, 2); list is now ___',

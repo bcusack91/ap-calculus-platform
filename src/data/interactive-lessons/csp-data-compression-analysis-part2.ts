@@ -114,15 +114,15 @@ RLE wins on data with long runs and loses on data without them. Compression is *
         dropdowns: [
           {
             label: "Run-length encoding compresses well when data has ___",
-            options: ["many long runs of repeated values", "random values", "encrypted values", "short text"]
+            options: ["many long runs of repeated values", "many distinct values that rarely repeat", "values spread evenly across a wide range", "a large number of unique, unrepeated symbols"]
           },
           {
             label: "JPEG compression discards ___",
-            options: ["color and frequency detail humans rarely notice", "all blue pixels", "every other pixel", "nothing"]
+            options: ["color and frequency detail humans rarely notice", "every other row of pixels to halve the height", "the image's metadata while keeping all pixels", "runs of repeated pixels, storing each run once"]
           },
           {
             label: "A file that has been losslessly compressed and then losslessly decompressed ___",
-            options: ["is bit-for-bit identical to the original", "is approximately the original", "is encrypted", "cannot be opened"]
+            options: ["is bit-for-bit identical to the original", "is close to, but not exactly, the original", "has lost only detail humans rarely notice", "is slightly larger than the original file was"]
           }
         ],
         correctAnswers: ["many long runs of repeated values", "color and frequency detail humans rarely notice", "is bit-for-bit identical to the original"],
@@ -156,7 +156,7 @@ RLE wins on data with long runs and loses on data without them. Compression is *
             question: "A 100 MB log file made of repetitive event lines compresses with ZIP to 5 MB. A 100 MB encrypted random file barely compresses. The most accurate explanation is ___",
             options: [
               "ZIP only works on text files and refuses to operate on binary data.",
-              "lossless compression exploits patterns; encrypted data has none to exploit.",
+              "lossless compression exploits patterns, and encrypted data has none.",
               "the encryption algorithm is broken and is producing fully predictable output.",
               "the random file is corrupted and the compressor refused to process it."
             ],
@@ -167,7 +167,7 @@ RLE wins on data with long runs and loses on data without them. Compression is *
             question: "A web service stores user-uploaded photos. Storage costs are large. The most reasonable design choice is ___",
             options: [
               "store the originals with no compression so quality is always at its maximum.",
-              "store the upload AND a JPEG-compressed thumbnail; deliver per use case.",
+              "keep the original and a smaller JPEG copy, using each where it fits.",
               "silently delete all photos after a fixed number of days to free up disk space.",
               "switch the upload protocol from TCP to UDP to reduce server storage cost."
             ],

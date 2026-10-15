@@ -33,8 +33,8 @@ export const cspVariablesControlPart5Data = {
             question: "TypeScript adds ___ to JavaScript.",
             options: [
               "noticeably faster runtime execution of the same JavaScript program",
-              "optional static types caught at compile time before the program runs",
-              "transport-layer encryption of every value the JavaScript program produces",
+              "optional static typing checked at compile time, before the program runs",
+              "a garbage collector that JavaScript programs previously lacked",
               "automatic source-code compression so the resulting bundle is smaller"
             ],
             correctAnswer: 1,
@@ -43,10 +43,10 @@ export const cspVariablesControlPart5Data = {
           {
             question: "Why are modern languages trending toward immutability by default?",
             options: [
-              "Mutable data is universally faster, so immutability avoids that performance cost.",
-              "Immutable data simplifies reasoning, especially in concurrent or parallel code.",
-              "Mutability adds new bugs to data-compression algorithms operating on lists.",
-              "Mutability requires every variable to be encrypted before assignment is allowed."
+              "Mutable data is always slower, so immutability is a performance fix.",
+              "Immutable data is easier to reason about, especially in parallel code.",
+              "Immutable values use less memory, since copies are never needed.",
+              "Mutable variables cannot be shared between procedures in modern languages."
             ],
             correctAnswer: 1,
             explanation: "Immutability simplifies concurrency and reasoning."
@@ -114,18 +114,18 @@ You won't need to worry about types or memory management on the exam.
         dropdowns: [
           {
             label: "Compile-time type checking helps catch ___",
-            options: ["certain errors before the program runs", "all bugs forever", "TLS errors", "compression bugs"]
+            options: ["certain errors before the program runs", "every logic error in the program's design", "mistakes that only appear with user input", "performance problems during execution"]
           },
           {
             label: "Immutability helps with ___",
-            options: ["easier reasoning, especially in concurrent code", "compression ratio", "TLS handshakes", "IPv6 routing"]
+            options: ["easier reasoning, especially in concurrent code", "faster updates, since values change in place", "lower memory use, since copies are never made", "simpler syntax, especially in nested loops"]
           },
           {
             label: "AP CSP pseudocode is closest in style to ___",
-            options: ["Python-like, with words like FOR EACH and IF / THEN", "low-level assembly", "binary directly", "machine code"]
+            options: ["Python-like, with words like FOR EACH and REPEAT UNTIL", "assembly-like, with registers and jump instructions", "binary-like, with instructions written as 0s and 1s", "HTML-like, with tags that open and close each block"]
           }
         ],
-        correctAnswers: ["certain errors before the program runs", "easier reasoning, especially in concurrent code", "Python-like, with words like FOR EACH and IF / THEN"],
+        correctAnswers: ["certain errors before the program runs", "easier reasoning, especially in concurrent code", "Python-like, with words like FOR EACH and REPEAT UNTIL"],
         hint1: "Pre-runtime safety.",
         hint2: "Concurrency.",
         hint3: "High-level pseudocode.",
@@ -157,7 +157,7 @@ You won't need to worry about types or memory management on the exam.
               "noticeably faster runtime since the TypeScript compiler optimizes the JS output.",
               "catching many type errors at compile time, before the code reaches deployment.",
               "producing smaller bundle files because TypeScript syntax is more compact than JS.",
-              "stronger transport-layer encryption of values that flow between TS modules at runtime."
+              "automatic removal of logic errors, since the compiler checks each program's intent."
             ],
             correctAnswer: 1,
             explanation: "TypeScript catches type errors before runtime."
@@ -165,10 +165,10 @@ You won't need to worry about types or memory management on the exam.
           {
             question: "A concurrent program where two threads update the same shared counter without coordination most often suffers from ___",
             options: [
-              "no issue — concurrent updates to a single shared counter are safe by default.",
-              "race conditions producing wrong counts; needs locking, atomic ops, or immutability.",
-              "compression artifacts in the counter that cause it to shrink between updates.",
-              "transport-layer handshake errors that prevent the counter from being readable."
+              "no issue, since concurrent updates to one counter are safe by default.",
+              "race conditions that produce wrong counts unless updates are synchronized.",
+              "a deadlock, since two threads can never touch the same variable.",
+              "an overflow error, since two threads double the counter's size."
             ],
             correctAnswer: 1,
             explanation: "Unsynchronized shared mutable state = race conditions."

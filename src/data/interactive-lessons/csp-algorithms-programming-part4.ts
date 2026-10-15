@@ -34,10 +34,10 @@ Programming sits at the center of CSP. Procedures connect to **abstraction** (Bi
           {
             question: "Wrapping a 30-line algorithm inside a named PROCEDURE primarily helps because it ___",
             options: [
-              "runs faster.",
-              "lets the caller use the algorithm without understanding its internal steps.",
-              "compresses memory.",
-              "guarantees correctness."
+              "makes the steps run faster, since procedure calls are optimized.",
+              "lets callers use it without knowing its internal steps.",
+              "reduces the memory the 30 lines take up while running.",
+              "guarantees the steps are correct, since procedures are tested."
             ],
             correctAnswer: 1,
             explanation: "Procedures are the canonical abstraction tool — separating \"what\" from \"how\"."
@@ -45,10 +45,10 @@ Programming sits at the center of CSP. Procedures connect to **abstraction** (Bi
           {
             question: "A program reads users' birthdates and computes their ages. Which CSP cross-topic concern is most directly raised when the program rejects 4-digit birth years before 1925?",
             options: [
-              "Big Idea 5: such hard cuts can introduce age-based bias against older users.",
-              "The program is too short.",
-              "The program uses too many procedures.",
-              "The program needs to be sorted."
+              "Such a hard cutoff can introduce age-based bias against older people.",
+              "The program is too short to validate dates reliably.",
+              "The program uses too many procedures to compute an age.",
+              "The program must sort the birthdates before computing ages."
             ],
             correctAnswer: 0,
             explanation: "Boundary choices in code become real-world inclusions/exclusions — an impact-of-computing concern."
@@ -116,15 +116,15 @@ A scheduling program that uses ZIP code as a tiebreaker for hospital appointment
         dropdowns: [
           {
             label: "A procedure that does one well-defined thing is best described as having ___",
-            options: ["high cohesion", "low cohesion", "no parameters", "global scope"]
+            options: ["high cohesion", "low cohesion", "tight coupling", "many parameters"]
           },
           {
             label: "Two procedures that share no state and could be developed independently are ___",
-            options: ["loosely coupled", "tightly coupled", "recursive", "concurrent"]
+            options: ["loosely coupled", "tightly coupled", "mutually dependent", "overloaded"]
           },
           {
             label: "A program whose decisions affect millions of users should be evaluated for ___",
-            options: ["unintended impact on subgroups", "shorter line count", "fewer comments", "more loops"]
+            options: ["unintended impact on subgroups", "speed on the developer's own machine", "number of features shipped", "consistency of its code style"]
           }
         ],
         correctAnswers: ["high cohesion", "loosely coupled", "unintended impact on subgroups"],
@@ -157,10 +157,10 @@ A scheduling program that uses ZIP code as a tiebreaker for hospital appointment
           {
             question: "A team rewrites three nested IF statements as one procedure call categoryFor(score). Which improvement does this primarily realize?",
             options: [
-              "Improved running-time efficiency.",
-              "Improved readability and a single point of update if the categories ever change.",
-              "Reduced data-storage requirements.",
-              "Faster Internet response times."
+              "Improved running-time efficiency for every score that is checked.",
+              "Improved readability and one place to update the categories.",
+              "Reduced storage needed for the scores and their categories.",
+              "Faster response when the program is used over the Internet."
             ],
             correctAnswer: 1,
             explanation: "Extracting a procedure does not change time complexity; it improves readability and centralizes the rule."
@@ -168,10 +168,10 @@ A scheduling program that uses ZIP code as a tiebreaker for hospital appointment
           {
             question: "A loan-decision program denies applicants whose monthly income is below a threshold. After deployment, the team discovers the threshold disproportionately denies applicants from a specific region with lower median wages but equal repayment history. The most defensible response is to ___",
             options: [
-              "leave the threshold; the program ran exactly as designed.",
-              "review the criterion in light of the disparate impact and consult stakeholders before redeploying.",
-              "lower the threshold for that region only without other review.",
-              "remove the income field entirely."
+              "leave the threshold as is, since the program ran exactly as designed.",
+              "review the criterion for disparate impact and consult stakeholders first.",
+              "lower the threshold for that region only, without any further review.",
+              "remove the income field entirely and approve every applicant automatically."
             ],
             correctAnswer: 1,
             explanation: "Disparate impact requires review and stakeholder input — neither blind acceptance nor an ad hoc patch."

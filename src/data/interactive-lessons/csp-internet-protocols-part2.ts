@@ -114,15 +114,15 @@ A router's job is simple: read the destination IP in each packet's header and fo
         dropdowns: [
           {
             label: "TCP guarantees ___",
-            options: ["ordered, reliable delivery", "fastest possible delivery", "encryption", "compression"]
+            options: ["ordered, reliable delivery", "fast, low-latency delivery", "encrypted, private delivery", "a fixed path for every packet"]
           },
           {
             label: "IP's primary job is ___",
-            options: ["routing packets to the destination address", "rendering web pages", "compressing data", "encrypting data"]
+            options: ["routing packets to the destination address", "translating domain names into addresses", "guaranteeing packets arrive in order", "encrypting data before transmission"]
           },
           {
             label: "A web page that fails to load might be a problem at the ___ layer",
-            options: ["any layer of the stack", "physical only", "DNS only", "browser only"]
+            options: ["any layer of the stack", "the physical layer only", "the application layer only", "the DNS lookup step only"]
           }
         ],
         correctAnswers: ["ordered, reliable delivery", "routing packets to the destination address", "any layer of the stack"],
@@ -159,7 +159,7 @@ A router's job is simple: read the destination IP in each packet's header and fo
               "TCP, because reliability is the most important property of any real-time video-call session.",
               "UDP, because real-time apps prefer low latency over the cost of waiting for retransmission.",
               "IP, because the Internet Protocol itself provides the reliability guarantees a video call needs.",
-              "DNS, because the Domain Name System efficiently streams call audio and video as needed."
+              "HTTP, because web requests automatically skip any lost frames so the call keeps running smoothly."
             ],
             correctAnswer: 1,
             explanation: "Real-time A/V uses UDP; a slightly garbled frame is preferable to waiting for retransmits."

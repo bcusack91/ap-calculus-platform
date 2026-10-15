@@ -47,7 +47,7 @@ The Internet has grown from a few thousand devices to tens of billions. The prin
             question: "A Content Delivery Network (CDN) reduces page-load times by ___",
             options: [
               "compressing every byte of traffic at the origin server before it leaves the data center.",
-              "serving cached copies of content from locations geographically near each requesting user.",
+              "serving cached copies from locations geographically near each requesting user.",
               "using only peer-to-peer connections between every requesting user and every other one nearby.",
               "rewriting every requested URL to point at the geographically nearest origin data center directly."
             ],
@@ -115,15 +115,15 @@ In 2015 most web traffic was HTTP. By the 2020s the majority is HTTPS. Browsers 
         dropdowns: [
           {
             label: "IPv6 was created primarily to address ___",
-            options: ["IPv4 address exhaustion", "slow page-load times", "lack of encryption", "too many DNS servers"]
+            options: ["IPv4 address exhaustion", "slow routing between continents", "lack of encryption", "too many DNS servers"]
           },
           {
             label: "Adding many IoT devices to a network primarily increases ___",
-            options: ["the attack surface", "IP address availability", "screen brightness", "bandwidth supply"]
+            options: ["the attack surface", "available IP addresses", "overall network security", "the bandwidth supply"]
           },
           {
             label: "A CDN reduces page-load latency by ___",
-            options: ["serving from a nearby cache", "compressing TCP", "using IPv4 only", "disabling DNS"]
+            options: ["serving from a nearby cache", "upgrading users' bandwidth", "skipping the DNS lookup", "encrypting each request"]
           }
         ],
         correctAnswers: ["IPv4 address exhaustion", "the attack surface", "serving from a nearby cache"],
@@ -156,10 +156,10 @@ In 2015 most web traffic was HTTP. By the 2020s the majority is HTTPS. Browsers 
           {
             question: "A streaming service sees viewers in 80 countries. Page load time is poor for users far from its main data center. The most appropriate scaling response is ___",
             options: [
-              "build one bigger data center near the company headquarters.",
-              "use a CDN with edge servers in many regions.",
-              "switch from TCP to UDP.",
-              "move from IPv6 back to IPv4."
+              "build one bigger data center near the company's headquarters",
+              "use a CDN with edge servers in many regions",
+              "switch all video traffic from TCP to UDP to cut delays",
+              "move every server from IPv6 back to IPv4 for faster routing"
             ],
             correctAnswer: 1,
             explanation: "CDNs reduce latency by serving cached content from regional edge locations."
@@ -167,10 +167,10 @@ In 2015 most web traffic was HTTP. By the 2020s the majority is HTTPS. Browsers 
           {
             question: "An organization adds 2,000 IoT sensors (cameras, thermostats) to its network. The most pressing CSP-aligned concern is ___",
             options: [
-              "the existing organizational network requires no architectural changes to handle the additional 2,000 sensors safely.",
-              "every connected device expands the attack surface and requires patching, credential management, and segmentation.",
-              "IPv6 addressing fundamentally cannot operate with sensor devices the way it operates with conventional computers.",
-              "TCP transport-layer protocol fundamentally cannot carry sensor telemetry the way it carries conventional traffic."
+              "the network needs no changes to handle 2,000 more devices safely.",
+              "every connected device widens the attack surface and must be patched.",
+              "IPv6 addressing cannot work with sensors the way it does with PCs.",
+              "TCP cannot carry sensor data the way it carries ordinary traffic."
             ],
             correctAnswer: 1,
             explanation: "IoT devices commonly ship with weak defaults; managing them is a top security concern."

@@ -47,12 +47,12 @@ You will see the same building blocks again and again. Recognize them and tracin
             question: "You want the COUNT of even numbers in a list. Which line belongs inside the loop?",
             options: [
               "IF (x MOD 2 = 0) { count ← count + 1 }",
-              "count ← count + x",
-              "count ← x MOD 2",
+              "IF (x MOD 2 = 0) { count ← count + x }",
+              "IF (x MOD 2 = 1) { count ← count + 1 }",
               "IF (count MOD 2 = 0) { x ← x + 1 }"
             ],
             correctAnswer: 0,
-            explanation: "A counter increments by 1 only when the condition holds. x MOD 2 = 0 tests even."
+            explanation: "A counter increments by 1 only when the condition holds, and x MOD 2 = 0 tests for even. Adding x would total the even values instead of counting them, and x MOD 2 = 1 tests for odd."
           }
         ]
       }
@@ -83,8 +83,10 @@ Tracking the *position* of the minimum, not just the value.
 
     nums ← [8, 3, 6, 1, 9, 4]
     minIdx ← 1
-    FOR i ← 2 TO LENGTH(nums) {
+    i ← 2
+    REPEAT UNTIL (i > LENGTH(nums)) {
       IF (nums[i] < nums[minIdx]) { minIdx ← i }
+      i ← i + 1
     }
 
 **minIdx** evolves: 1 → 2 (3 < 8) → 4 (1 < 3). Output: **4** (1-indexed position of the smallest value).
@@ -129,7 +131,7 @@ Tracking the *position* of the minimum, not just the value.
           },
           {
             label: "When tracking max, initializing best to list[1] instead of a tiny constant is safer because ___",
-            options: ["it guarantees best is a real list value", "it uses less memory", "it is faster", "it allows nesting"]
+            options: ["it guarantees best is a real list value", "it handles an empty list without error", "it avoids comparing negative numbers", "it sorts the list before the loop runs"]
           }
         ],
         correctAnswers: ["0", "1", "it guarantees best is a real list value"],
@@ -162,10 +164,10 @@ Tracking the *position* of the minimum, not just the value.
           {
             question: "A program is supposed to find the FIRST element greater than 100 in a list. The student writes:\n\nresult ← −1\nFOR EACH x IN list { IF (x > 100) { result ← x } }\n\nWhat is wrong?",
             options: [
-              "Nothing is wrong; the code is correct.",
-              "The loop overwrites result every time a match is found, so it returns the LAST match, not the first.",
-              "The variable result should start at 0, not −1.",
-              "FOR EACH cannot be used with a numeric list."
+              "Nothing is wrong; once result is set, later matches can no longer replace the first one.",
+              "Each match overwrites result, so it ends up holding the last match, not the first.",
+              "result should start at 0, since −1 could be a value in the list.",
+              "FOR EACH cannot be used here, since it does not provide an index."
             ],
             correctAnswer: 1,
             explanation: "Without an early exit (or a flag like IF (result = -1)), every match overwrites the previous one."

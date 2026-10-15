@@ -37,10 +37,10 @@ You revisit any phase at any time — that's what makes it iterative.
           {
             question: "A team finishes a \"final\" version of a program, then a user reports it crashes on empty input. What development phase should follow?",
             options: [
-              "Ship as-is — the user input was invalid anyway.",
+              "Ship: release it as-is, since the input was invalid.",
               "Refine: fix the bug, then re-test the program.",
-              "Skip ahead to the next planned feature first.",
-              "Discard the program and rebuild it from scratch."
+              "Extend: move on to the next planned feature first.",
+              "Restart: discard the program and rebuild from scratch."
             ],
             correctAnswer: 1,
             explanation: "Iterative development means refining based on real-world feedback, then re-testing."
@@ -48,10 +48,10 @@ You revisit any phase at any time — that's what makes it iterative.
           {
             question: "Why do programmers prototype before writing a polished version?",
             options: [
-              "Prototypes always perform faster than the final code.",
+              "Prototypes always run faster than the polished final version of the code.",
               "A small testable slice exposes design problems early, when changes are cheap.",
-              "Prototypes guarantee the program will be free of bugs.",
-              "Prototypes can be shipped directly without further work."
+              "A prototype guarantees the finished program will be free of logic errors.",
+              "Prototypes can be shipped to users directly, without any further testing."
             ],
             correctAnswer: 1,
             explanation: "Early prototypes surface design issues before significant work is invested."
@@ -118,15 +118,15 @@ Programs are for **users**, not coders. Identify the user, their goal, and test 
         dropdowns: [
           {
             label: "A README primarily exists to ___",
-            options: ["help others (or future you) understand and use the program", "pass the AP exam", "increase file size", "replace all comments"]
+            options: ["help others (or future you) understand and use the program", "list each variable's type (and scope) for the interpreter", "replace code comments, which are then unnecessary", "store the test cases the program runs before each release"]
           },
           {
             label: "Testing with real users primarily helps ___",
-            options: ["reveal usability issues the developer never noticed", "guarantee zero bugs", "reduce file size", "eliminate iteration"]
+            options: ["reveal usability issues the developer never noticed", "prove the program is free of logic errors before it ships", "measure the program's running time on the largest possible inputs", "replace the developer's own unit tests for each procedure"]
           },
           {
             label: "Iterative development reduces risk by ___",
-            options: ["shortening feedback loops between assumption and reality", "avoiding all testing", "writing all code first", "never refactoring"]
+            options: ["shortening feedback loops between assumption and reality", "locking the full specification before coding", "testing only once the complete program has been finished", "shipping every planned feature together in one release"]
           }
         ],
         correctAnswers: ["help others (or future you) understand and use the program", "reveal usability issues the developer never noticed", "shortening feedback loops between assumption and reality"],
@@ -158,8 +158,8 @@ Programs are for **users**, not coders. Identify the user, their goal, and test 
           {
             question: "A team builds an app for elderly users but never tests with elderly users. After release, complaints flood in about tiny text. What lesson best captures this?",
             options: [
-              "Picking a bigger default font would have solved every UI complaint.",
-              "User-centered testing with the actual target population would have surfaced this earlier.",
+              "Picking a larger default font would have fixed every complaint.",
+              "Testing with people from the target population would have caught this early.",
               "In-house testing by the developers should have been enough to catch the issue.",
               "Adding more code comments would have prevented the usability complaint."
             ],
@@ -171,7 +171,7 @@ Programs are for **users**, not coders. Identify the user, their goal, and test 
             options: [
               "the product was technically fine and just needed a stronger marketing campaign.",
               "iterative releases would have surfaced the user-need mismatch sooner and at lower cost.",
-              "long single-shot waterfall releases are still the most reliable way to ship software.",
+              "long single-shot waterfall releases are still the most reliable way to ship new software products.",
               "collecting user feedback this late is normal and was unlikely to change the outcome."
             ],
             correctAnswer: 1,

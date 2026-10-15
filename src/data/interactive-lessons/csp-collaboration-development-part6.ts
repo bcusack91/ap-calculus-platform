@@ -28,9 +28,9 @@ Apply collaboration vocabulary to scenarios.
             question: "A team has weekly meetings where one person dominates. The most appropriate adjustment is ___",
             options: [
               "cancel all team meetings and rely entirely on private messaging instead.",
-              "use facilitated turn-taking, written agendas, and silent brainstorming to elevate quieter voices.",
-              "remove the dominant person from the team to restore balance in discussions.",
-              "reduce meeting time so the dominant person has less opportunity to speak."
+              "use facilitated turn-taking and written agendas to draw out quieter voices.",
+              "remove the dominant person from the team to restore balance.",
+              "shorten meetings so the dominant person has less time to speak."
             ],
             correctAnswer: 1,
             explanation: "Facilitation + async patterns elevate quieter voices."
@@ -101,11 +101,11 @@ Month 1: handle a small feature end-to-end with code review.
         dropdowns: [
           {
             label: "A \"first issue\" labeled in a project is for ___",
-            options: ["new contributors to find an approachable starting task", "closing the project", "archiving old code", "compressing data"]
+            options: ["new contributors to find an approachable starting task", "the most urgent bug the maintainers must fix next", "the oldest open issue in the project's tracker", "issues only the project's founder may work on"]
           },
           {
             label: "Silent brainstorming primarily helps ___",
-            options: ["quieter teammates contribute on equal footing with louder ones", "remove all discussion", "accelerate typing speed", "compress files"]
+            options: ["quieter teammates contribute on equal footing with louder ones", "the team reach a decision without discussing ideas", "the leader pick the best idea without input", "eliminate weak ideas before anyone shares them"]
           },
           {
             label: "A 5,000-line PR most likely gets ___",
@@ -141,7 +141,7 @@ Month 1: handle a small feature end-to-end with code review.
             question: "A team merges all changes directly to main with no review. They suffer frequent regressions. The single highest-leverage change is ___",
             options: [
               "stop writing automated tests so the team can move faster overall.",
-              "require pull-request review on every change before it is merged to main.",
+              "require a pull-request approval on every change before it reaches main.",
               "remove the staging environment and ship directly to production every time.",
               "merge changes only on Fridays so all regressions surface on the same day."
             ],
@@ -152,7 +152,7 @@ Month 1: handle a small feature end-to-end with code review.
             question: "A class project group has skills imbalances: one student knows the language, three are beginners. The most CSP-aligned approach is ___",
             options: [
               "have the experienced student write all the code while the others observe.",
-              "use pair programming and code review so beginners learn while contributing real code.",
+              "use pair programming and review so beginners learn while writing real code.",
               "restrict the beginners to writing only documentation and never any code.",
               "have the beginners hand-copy code that the experienced student wrote first."
             ],

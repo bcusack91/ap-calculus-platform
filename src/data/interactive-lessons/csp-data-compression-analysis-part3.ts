@@ -33,8 +33,8 @@ export const cspDataCompressionAnalysisPart3Data = {
           {
             question: "Why does Huffman coding give shorter codes to common values?",
             options: [
-              "Short codes look fancier in a table, so they are reserved for top symbols.",
-              "Total bits = sum of (frequency × code length); minimizing puts short codes on common values.",
+              "Short codes are faster for the decoder to look up, so top symbols get them.",
+              "Total bits shrink most when the most frequent values get the shortest codes.",
               "Rare values are unimportant and can therefore be dropped without affecting the result.",
               "It encrypts the data so that common symbols become unreadable to outside observers."
             ],
@@ -45,7 +45,7 @@ export const cspDataCompressionAnalysisPart3Data = {
             question: "Why does video compression rely on differential encoding between frames?",
             options: [
               "Adjacent video frames are bit-for-bit identical and only the first one needs to be stored.",
-              "Adjacent frames are usually similar; encoding the small delta is far smaller than re-encoding each frame.",
+              "Adjacent frames tend to be similar, so storing only the changes takes far fewer bits.",
               "It encrypts the video stream so that intermediate frames cannot be intercepted.",
               "It is simply easier to write a decoder for differential encoding than for any other scheme."
             ],
@@ -128,15 +128,15 @@ JPEG and MP3 use a math transform (DCT) that turns blocks of pixels (or audio sa
         dropdowns: [
           {
             label: "PNG primarily relies on ___",
-            options: ["lossless dictionary coding (deflate)", "lossy DCT", "no compression", "audio sampling"]
+            options: ["lossless dictionary coding (deflate)", "lossy frequency coding (DCT)", "lossy color reduction (quantization)", "lossless run-length coding (RLE only)"]
           },
           {
             label: "JPEG primarily relies on ___",
-            options: ["lossy frequency-domain (DCT) coding", "lossless RLE only", "audio sampling", "no compression"]
+            options: ["lossy frequency-domain (DCT) coding", "lossless dictionary (deflate) coding", "lossless run-length (RLE) coding", "lossy color-palette (8-bit) reduction"]
           },
           {
             label: "For best results, you should ___",
-            options: ["compress, then encrypt", "encrypt, then compress", "never combine them", "do them in random order"]
+            options: ["compress, then encrypt", "encrypt, then compress", "apply only one of the two", "do both at once in one step"]
           }
         ],
         correctAnswers: ["lossless dictionary coding (deflate)", "lossy frequency-domain (DCT) coding", "compress, then encrypt"],
@@ -169,7 +169,7 @@ JPEG and MP3 use a math transform (DCT) that turns blocks of pixels (or audio sa
           {
             question: "A team encrypts files THEN tries to ZIP them. The compressed size is barely smaller than the encrypted size. The most accurate explanation is ___",
             options: [
-              "ZIP is broken and the team should switch to a different lossless compressor.",
+              "ZIP is broken on encrypted input and the team should switch compressors.",
               "encryption produces nearly random output that has no patterns for ZIP to exploit.",
               "the underlying files are simply too large for the ZIP algorithm to handle well.",
               "the underlying files are simply too small for any compression to be worthwhile."
@@ -180,10 +180,10 @@ JPEG and MP3 use a math transform (DCT) that turns blocks of pixels (or audio sa
           {
             question: "A streaming service serves the same movie to viewers worldwide. The largest single saving in storage / bandwidth comes from ___",
             options: [
-              "serving the original raw uncompressed video file directly to every viewer.",
-              "lossy video codecs (H.264 / H.265 / AV1) using inter-frame coding plus DCT.",
-              "serving a lossless ZIP of the raw video file to every viewer instead of streaming.",
-              "no compression at all; relying entirely on faster modern viewer-side CPUs."
+              "serving the raw uncompressed video file to every viewer.",
+              "lossy video codecs such as H.264 that encode only changes between frames",
+              "serving a lossless ZIP of the raw video to every viewer.",
+              "no compression at all; relying on faster viewer CPUs."
             ],
             correctAnswer: 1,
             explanation: "Modern lossy video codecs deliver dramatic savings vs. raw or lossless."

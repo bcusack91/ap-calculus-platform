@@ -38,10 +38,10 @@ Final cheat sheet of the binary and data-representation facts most tested on the
           {
             question: "To represent each of 1,000 distinct values, the minimum number of bits required is ___",
             options: [
+              "7",
               "8",
-              "9",
               "10",
-              "12"
+              "9"
             ],
             correctAnswer: 2,
             explanation: "$2^{9}$ = 512 < 1000; $2^{10}$ = 1024 ≥ 1000."
@@ -110,21 +110,21 @@ Final cheat sheet of the binary and data-representation facts most tested on the
         dropdowns: [
           {
             label: "PNG is a ___ image format",
-            options: ["lossless", "lossy", "audio-only", "video"]
+            options: ["lossless", "lossy", "vector", "perceptual"]
           },
           {
             label: "JPEG is a ___ image format",
-            options: ["lossy", "lossless", "text", "audio"]
+            options: ["lossy", "lossless", "vector", "uncompressed"]
           },
           {
             label: "Encrypting a file changes its ___",
-            options: ["interpretation, not size (roughly)", "size dramatically", "magic bytes only", "pixel count"]
+            options: ["byte values, not size (roughly)", "size (roughly doubling it)", "file extension (not its bytes)", "metadata only, not its contents"]
           }
         ],
-        correctAnswers: ["lossless", "lossy", "interpretation, not size (roughly)"],
+        correctAnswers: ["lossless", "lossy", "byte values, not size (roughly)"],
         hint1: "PNG round-trips perfectly.",
         hint2: "JPEG sacrifices fidelity for size.",
-        hint3: "Same byte count, different meaning.",
+        hint3: "Same byte count, scrambled byte values.",
         explanation: "PNG = lossless, JPEG = lossy. Encryption preserves roughly the same byte count."
       }
     },
@@ -152,7 +152,7 @@ Final cheat sheet of the binary and data-representation facts most tested on the
           {
             question: "A government agency must archive scanned legal documents and ensure they can be read decades from now. The most appropriate format choice is ___",
             options: [
-              "A widely supported lossless archival format such as PDF/A or TIFF with lossless compression for the scans.",
+              "A widely supported lossless format such as PDF/A, or TIFF with lossless compression.",
               "A high-compression lossy JPEG format optimized for the smallest file size that the human eye still tolerates.",
               "A proprietary single-vendor format whose specification is not publicly documented or supported by other tools.",
               "A plain ASCII text representation of each document, with no embedded image data preserved from the original scan."
@@ -165,7 +165,7 @@ Final cheat sheet of the binary and data-representation facts most tested on the
             options: [
               "8-bit unsigned integers, which allow up to 256 distinct values per record across the entire dataset.",
               "16-bit unsigned integers, which allow up to 65,536 distinct values per record across the entire dataset.",
-              "32-bit unsigned integers, which allow up to about 4.3 billion distinct values across the entire dataset.",
+              "32-bit unsigned integers, which allow up to 4,294,967,296 distinct values across the dataset.",
               "64-bit unsigned integers as the only sufficient option, since smaller widths cannot represent the dataset."
             ],
             correctAnswer: 2,

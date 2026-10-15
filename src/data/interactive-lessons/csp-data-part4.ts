@@ -32,10 +32,10 @@ export const cspDataPart4Data = {
           {
             question: "Choosing between a list and a hash table for a lookup task is primarily an ___ decision.",
             options: [
-              "encryption decision driven by the data's sensitivity",
+              "encryption decision driven by how sensitive the data is",
               "algorithm and data-structure decision driven by performance",
               "network decision driven by the link's bandwidth limits",
-              "compression decision driven by available storage budget"
+              "compression decision driven by the available storage budget"
             ],
             correctAnswer: 1,
             explanation: "Data structure choice impacts algorithm performance."
@@ -44,9 +44,9 @@ export const cspDataPart4Data = {
             question: "A medical study collects identifying data; a researcher loses a laptop with the dataset. The most accurate framing is ___",
             options: [
               "no concern, since the laptop will probably never be powered on again.",
-              "a privacy/security incident; mitigated by encryption-at-rest and minimal collection.",
-              "a hardware concern only — the data on the device is irrelevant to the analysis.",
-              "a routing problem caused by the laptop disconnecting from the school network."
+              "a privacy and security incident that encryption and gathering less data would limit.",
+              "a hardware concern only, since the data on the device is irrelevant to anyone else.",
+              "an accuracy problem, since the study's results can no longer be checked or reproduced."
             ],
             correctAnswer: 1,
             explanation: "Lost device with sensitive data is a privacy/security incident."
@@ -121,15 +121,15 @@ Real datasets have a lifecycle: collect → process → store → share → arch
         dropdowns: [
           {
             label: "A program that needs O(1) average lookup by ID should use ___",
-            options: ["a hash table", "a linear list", "no data structure", "a sorted array"]
+            options: ["a hash table", "a linear list", "a linked list", "a sorted array"]
           },
           {
             label: "Encryption-in-transit is provided by ___",
-            options: ["TLS / HTTPS", "a USB cable", "a printer", "a hard drive"]
+            options: ["TLS / HTTPS", "full-disk encryption", "gzip / Brotli", "DNS / IP"]
           },
           {
             label: "A \"data minimization\" principle says ___",
-            options: ["collect only the data actually needed", "collect everything possible", "never store metadata", "always use lossy compression"]
+            options: ["collect only the data actually needed", "compress data to use minimal storage", "anonymize everything that is collected", "collect everything, then delete what is unused"]
           }
         ],
         correctAnswers: ["a hash table", "TLS / HTTPS", "collect only the data actually needed"],
@@ -162,10 +162,10 @@ Real datasets have a lifecycle: collect → process → store → share → arch
           {
             question: "A streaming service stores 10 years of every user's every click. The most CSP-aligned critique is ___",
             options: [
-              "storage is cheap, so indefinite retention of click logs raises no real concern.",
-              "data minimization: long-retained behavioral data is a privacy and breach risk.",
-              "encryption-at-rest alone fully neutralizes the risk of long-retained click logs.",
-              "switching the streaming protocol to UDP would address the underlying concern."
+              "storage is cheap, so keeping click logs forever is fine.",
+              "keeping behavioral data that long creates privacy and breach risk.",
+              "encryption at rest alone removes all of the risk.",
+              "click logs are anonymous, so keeping them carries no risk."
             ],
             correctAnswer: 1,
             explanation: "Indefinite retention multiplies risk; minimization + sunset is the answer."
@@ -173,7 +173,7 @@ Real datasets have a lifecycle: collect → process → store → share → arch
           {
             question: "A program needs to repeatedly find \"the highest priority task\" from a large set. The most appropriate data structure is ___",
             options: [
-              "a heap (priority queue) supporting efficient extract-max operations",
+              "a priority queue that supports efficient removal of the maximum",
               "a singly linked list scanned linearly on each priority request",
               "a binary file written sequentially with no in-memory index built",
               "a hash table keyed by task ID with no ordering by priority"

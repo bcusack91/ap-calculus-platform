@@ -29,7 +29,7 @@ The protocol facts and architectural ideas most likely to appear on the exam.
             options: [
               "packet",
               "circuit",
-              "wave",
+              "frame",
               "message"
             ],
             correctAnswer: 0,
@@ -113,11 +113,11 @@ The protocol facts and architectural ideas most likely to appear on the exam.
           },
           {
             label: "A 404 status means ___",
-            options: ["the requested resource was not found", "the server is down", "the user is unauthorized", "success"]
+            options: ["the requested resource was not found", "the server is temporarily overloaded or down", "the user is not authorized to view it", "the request was permanently moved to a new URL"]
           },
           {
             label: "Routing decisions on the Internet are made by ___",
-            options: ["routers running routing algorithms", "the application layer", "browsers", "DNS servers"]
+            options: ["routers running routing algorithms", "DNS servers that look up each hop", "web browsers choosing each path", "a central Internet control server"]
           }
         ],
         correctAnswers: ["HTTPS / TLS is in use", "the requested resource was not found", "routers running routing algorithms"],
@@ -152,7 +152,7 @@ The protocol facts and architectural ideas most likely to appear on the exam.
             question: "You receive an email asking you to log in to your bank \"to verify your account\". The link begins with https:// and shows a padlock. The most appropriate response is ___",
             options: [
               "log in to the bank immediately through the link, because the HTTPS padlock guarantees the destination is safe.",
-              "do NOT log in via the link; navigate to the bank manually because HTTPS does not authenticate the email's sender.",
+              "do NOT log in through the link but visit the bank directly, since HTTPS never verifies who sent an email.",
               "reply to the email message with your username and password so the bank's support team can verify your account.",
               "forward the email to several friends so they can also verify their accounts through the same convenient link."
             ],
@@ -164,7 +164,7 @@ The protocol facts and architectural ideas most likely to appear on the exam.
             options: [
               "only the TCP transport-layer protocol for both the real-time voice stream and the reliable file uploads alike.",
               "only the UDP transport-layer protocol for both the real-time voice stream and the reliable file uploads alike.",
-              "UDP (or its cousin RTP) for the real-time voice stream and TCP/HTTPS for the reliable file upload requests.",
+              "UDP for the real-time voice stream and TCP/HTTPS for the reliable file upload requests.",
               "no transport-layer protocol at all; both the real-time voice stream and the file uploads ride on raw IP packets."
             ],
             correctAnswer: 2,

@@ -28,7 +28,7 @@ Apply dev-process vocabulary to AP-style scenarios.
             question: "After two weeks of coding, a team realizes their understanding of the user's problem was wrong. What should they do?",
             options: [
               "Ship the current code anyway and let users adapt to it.",
-              "Re-investigate the problem with users, then redesign or refactor.",
+              "Return to users to re-investigate their needs, then redesign.",
               "Continue building the original plan since the team has already started.",
               "Replace the whole project with a different but vaguely similar one."
             ],
@@ -39,7 +39,7 @@ Apply dev-process vocabulary to AP-style scenarios.
             question: "A program with a missing semicolon ___",
             options: [
               "runs but consistently produces a slightly wrong result.",
-              "fails to parse or compile — a syntax error caught before runtime.",
+              "is rejected at compile time with a syntax error.",
               "crashes intermittently depending on the input it receives.",
               "runs faster because the parser has fewer characters to process."
             ],
@@ -107,15 +107,15 @@ Each piece can be built and tested independently.
         dropdowns: [
           {
             label: "A test that fails because of the bug, then passes after the fix, is called a ___",
-            options: ["regression test", "syntax test", "compression test", "speed test"]
+            options: ["regression test", "stress test", "usability test", "performance test"]
           },
           {
             label: "When estimating iteration length, the trade-off is between feedback frequency and ___",
-            options: ["ceremony / overhead", "file size", "compression ratio", "TCP throughput"]
+            options: ["ceremony / overhead", "test coverage", "team size / headcount", "code readability"]
           },
           {
             label: "Documenting the fix in a commit message benefits ___",
-            options: ["anyone debugging similar issues in the future", "only the original author", "only the customer", "only the compiler"]
+            options: ["anyone debugging similar issues in the future", "only the developer who wrote the fix", "only reviewers who approve the change today", "end users reading the release notes"]
           }
         ],
         correctAnswers: ["regression test", "ceremony / overhead", "anyone debugging similar issues in the future"],
@@ -147,10 +147,10 @@ Each piece can be built and tested independently.
           {
             question: "A team plans a single 6-month \"big bang\" release with no intermediate testing. The most CSP-aligned critique is ___",
             options: [
-              "a six-month release window is too short to fit useful work.",
-              "long cycles with no intermediate feedback hide problems until they are expensive to fix.",
+              "a six-month window is too short to fit any useful work.",
+              "with no feedback until launch, problems stay hidden until costly to fix.",
               "the team just needs to write more in-line code comments to stay on track.",
-              "big single-shot releases are the safest way to ship complex software."
+              "big single-shot releases are the safest way to ship software."
             ],
             correctAnswer: 1,
             explanation: "Long feedback loops hide problems."
@@ -158,9 +158,9 @@ Each piece can be built and tested independently.
           {
             question: "A function consistently fails on input value 0 only. The next best step is ___",
             options: [
-              "ignore the failing case since users rarely pass exactly 0.",
+              "ignore the failing case, since in practice users rarely pass exactly 0 as input.",
               "add a focused test for 0 and adjacent edge cases like -1 and 1, then fix the function.",
-              "rewrite the entire program in a different language to bypass the bug.",
+              "rewrite the entire program in a different language to bypass the bug entirely.",
               "wrap every call to the function in a try/except that silently swallows errors."
             ],
             correctAnswer: 1,

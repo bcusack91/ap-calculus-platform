@@ -34,10 +34,10 @@ Algorithms don’t live in isolation. An efficient sort matters because of **dat
           {
             question: "Which pair of changes is most likely to make a slow program faster?",
             options: [
-              "Switching from a quadratic-time algorithm to a linear-time algorithm.",
-              "Renaming variables for readability.",
-              "Adding more comments.",
-              "Splitting one procedure into two equivalent procedures."
+              "Switching from a quadratic-time algorithm to a linear-time one.",
+              "Renaming variables and procedures so the code is easier to read.",
+              "Adding comments that explain what each loop is meant to do.",
+              "Splitting one procedure into two procedures that do the same work."
             ],
             correctAnswer: 0,
             explanation: "Asymptotic improvement ($n^{2}$ → n) dominates micro-optimizations."
@@ -45,10 +45,10 @@ Algorithms don’t live in isolation. An efficient sort matters because of **dat
           {
             question: "A search algorithm runs over a sorted list. Which fact most clearly enables a faster (logarithmic) search?",
             options: [
-              "The list is short.",
-              "The list is sorted, so binary search is possible.",
-              "The list contains only integers.",
-              "The list has no duplicates."
+              "The list is short, so a search checks few elements.",
+              "The list is in order, so binary search can be used.",
+              "The list holds only integers, so comparisons are fast.",
+              "The list has no duplicates, so each value is unique."
             ],
             correctAnswer: 1,
             explanation: "Binary search requires a sorted ordering. Sortedness is the structural property that lets the algorithm halve the search space each step."
@@ -158,7 +158,7 @@ A recommendation algorithm that always returns the most-clicked content reinforc
               "About 22",
               "About 2,000",
               "About 4,000,000",
-              "Exactly 1"
+              "About 200"
             ],
             correctAnswer: 0,
             explanation: "$2^{22}$ ≈ 4.2M, so $\\log_{2}(4M)$ ≈ 22."
@@ -166,10 +166,10 @@ A recommendation algorithm that always returns the most-clicked content reinforc
           {
             question: "A school adopts an automated scheduling algorithm that consistently assigns students with last names early in the alphabet to better elective slots. Which CSP cross-topic concern is most directly raised?",
             options: [
-              "The algorithm has the wrong running time.",
-              "The algorithm uses too much memory.",
-              "The algorithm produces a biased outcome that disproportionately affects a group.",
-              "The algorithm cannot be expressed as pseudocode."
+              "The algorithm's running time grows too quickly as enrollment rises.",
+              "The algorithm uses more memory than the school's servers provide.",
+              "The algorithm yields a biased outcome that favors one group over others.",
+              "The algorithm cannot be expressed in the AP reference pseudocode."
             ],
             correctAnswer: 2,
             explanation: "Systematic outcome differences across groups are an algorithmic-bias / impact-of-computing concern."

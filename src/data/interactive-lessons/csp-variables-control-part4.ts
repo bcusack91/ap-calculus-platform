@@ -33,9 +33,9 @@ export const cspVariablesControlPart4Data = {
             question: "A variable declared inside a procedure that disappears when the procedure returns is called ___",
             options: [
               "global — visible to every part of the program throughout its run",
-              "local — visible only inside the procedure during a single call",
+              "local — visible only within the procedure during a single call",
               "public — declared visible to other modules that import the procedure",
-              "random — visible at unpredictable points in the program's execution"
+              "static — keeps its value between separate calls to the procedure"
             ],
             correctAnswer: 1,
             explanation: "Local variables exist only during the procedure call."
@@ -45,8 +45,8 @@ export const cspVariablesControlPart4Data = {
             options: [
               "only sequencing of statements that all run once on program startup.",
               "event-driven control flow modifying program state in response to a click.",
-              "unpredictable random behavior unrelated to anything the user does.",
-              "compression of the user's click into a smaller representation in memory."
+              "polling, with a loop that checks the button state on every pass.",
+              "recursion, with the handler calling itself to count each new click."
             ],
             correctAnswer: 1,
             explanation: "Events drive control; handlers modify shared state."
@@ -117,15 +117,15 @@ A side effect = a change to state outside the local scope (writing a file, modif
         dropdowns: [
           {
             label: "A constant should be used when ___",
-            options: ["a value should never change after initialization", "every value can be reassigned", "the value will be deleted", "the value is random"]
+            options: ["a value should never change after initialization", "a value must be updated on every loop pass", "a value is only needed inside one procedure", "a value is read from user input at runtime"]
           },
           {
             label: "Tightly scoped local variables ___",
-            options: ["reduce risk of accidental modification by unrelated code", "increase memory use forever", "cannot be tested", "replace global variables completely"]
+            options: ["reduce risk of accidental modification by unrelated code", "let any procedure read and change them at any time", "keep their values between separate procedure calls", "make the program run faster by sharing memory"]
           },
           {
             label: "A pure function (no side effects) is ___",
-            options: ["easier to reason about and test in isolation", "always slower", "always faster", "always compressed"]
+            options: ["easier to reason about and test in isolation", "harder to test because it returns no output", "only useful when it changes a global variable", "always faster than an equivalent procedure"]
           }
         ],
         correctAnswers: ["a value should never change after initialization", "reduce risk of accidental modification by unrelated code", "easier to reason about and test in isolation"],
@@ -158,9 +158,9 @@ A side effect = a change to state outside the local scope (writing a file, modif
             question: "A function is supposed to compute the average of a list, but it also writes to a global log every time it runs. From a CSP design standpoint, this ___",
             options: [
               "is fine because logging is a useful behavior to keep alongside the computation.",
-              "introduces a side effect that makes the function harder to test and reuse.",
-              "compresses the data so the average can be computed in less memory than before.",
-              "encrypts the data so the global log entries cannot be read by other procedures."
+              "introduces a side effect that makes it harder to test and reuse.",
+              "makes the average more accurate, since every run is recorded in the log.",
+              "has no effect on design, since only the returned value matters to callers."
             ],
             correctAnswer: 1,
             explanation: "Side effects complicate testing and reuse."
@@ -168,10 +168,10 @@ A side effect = a change to state outside the local scope (writing a file, modif
           {
             question: "Two procedures both modify a global counter without coordination. The most likely problem is ___",
             options: [
-              "no problem — simultaneous updates to the same global variable always interleave safely.",
-              "unintended interactions: one procedure's changes affect the other unpredictably.",
-              "compression artifacts in the global counter making it shrink between updates.",
-              "transport-layer issues that prevent the global counter from updating reliably."
+              "no problem, since updates to one global variable always interleave safely.",
+              "unintended interactions, as each procedure's changes affect the other.",
+              "a syntax error, since two procedures cannot name the same variable.",
+              "a slower program, since global variables take longer to read."
             ],
             correctAnswer: 1,
             explanation: "Shared global state = source of bugs."

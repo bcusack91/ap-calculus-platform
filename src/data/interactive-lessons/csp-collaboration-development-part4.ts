@@ -33,7 +33,7 @@ export const cspCollaborationDevelopmentPart4Data = {
             question: "Two developers in different countries co-edit the same file. The technology that prevents their changes from clobbering each other is ___",
             options: [
               "faster local hardware so each save completes before the other starts.",
-              "a version-control system with merging (for example, Git).",
+              "a version-control system such as Git that merges edits.",
               "a real-time chat app that notifies each developer when the file is touched.",
               "a network protocol upgrade such as IPv6 that orders concurrent writes."
             ],
@@ -44,7 +44,7 @@ export const cspCollaborationDevelopmentPart4Data = {
             question: "When new contributors join a project, the most efficient way for them to get up to speed is usually ___",
             options: [
               "start coding immediately and figure things out by trial and error.",
-              "read documentation, study recent PRs, then make a small contribution under review.",
+              "read the docs and recent PRs, then make a small reviewed change.",
               "rewrite the whole codebase in their own style to learn how it works.",
               "avoid asking the rest of the team any questions during onboarding."
             ],
@@ -108,15 +108,15 @@ Principle: grant the **least privilege** needed. Review access regularly. Revoke
         dropdowns: [
           {
             label: "When a teammate leaves the team, their access should be ___",
-            options: ["revoked immediately", "left in place forever", "expanded", "shared with strangers"]
+            options: ["revoked immediately", "kept active until the project ends", "transferred to their replacement", "reduced to read-only access"]
           },
           {
             label: "A version-control merge conflict happens when ___",
-            options: ["two people edited the same lines in different ways", "the network is down", "a file was renamed", "the program won't compile"]
+            options: ["two people edited the same lines in different ways", "two people committed to the same repository on the same day", "a teammate pushes code that fails to compile", "one person edits a file another person has open"]
           },
           {
             label: "A team that loses internet access ___",
-            options: ["can still work locally with Git, then sync later", "cannot do any work at all", "must use only encryption", "must use only UDP"]
+            options: ["can still work locally with Git, then sync later", "must stop committing until the connection returns", "loses every commit not yet pushed to the shared server", "must email changed files to each other to keep working"]
           }
         ],
         correctAnswers: ["revoked immediately", "two people edited the same lines in different ways", "can still work locally with Git, then sync later"],
@@ -149,8 +149,8 @@ Principle: grant the **least privilege** needed. Review access regularly. Revoke
             question: "A team uses a shared admin account where everyone knows the password. The biggest CSP-aligned concerns are ___",
             options: [
               "shared admin accounts are convenient and have no real downside.",
-              "no audit trail of who did what and revocation requires resetting the password for everyone.",
-              "the password is too long for everyone on the team to remember accurately.",
+              "no audit trail of who did what, and no way to revoke one person's access.",
+              "the password is too long for everyone on the team to remember.",
               "shared accounts force the team to use slower transport-layer protocols."
             ],
             correctAnswer: 1,
@@ -160,7 +160,7 @@ Principle: grant the **least privilege** needed. Review access regularly. Revoke
             question: "A junior developer makes their first PR with a small bug. A healthy team response is ___",
             options: [
               "publicly call out the developer in chat so others avoid the same mistake.",
-              "leave constructive review comments, suggest a fix, and approve once corrected.",
+              "leave constructive review comments and approve once the fix is in.",
               "silently revert the commits without explaining what was wrong with them.",
               "block the developer from submitting any further pull requests this quarter."
             ],

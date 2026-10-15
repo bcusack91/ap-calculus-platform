@@ -36,11 +36,11 @@ A computer represents every kind of data — numbers, text, images, sound — us
             options: [
               "8",
               "16",
-              "128",
+              "64",
               "256"
             ],
             correctAnswer: 3,
-            explanation: "$2^{8}$ = 256."
+            explanation: "$2^{8}$ = 256. (8 counts the bits, 16 doubles the bit count, and 64 squares it; none of those is the number of patterns.)"
           },
           {
             question: "What is the decimal value of the 8-bit binary number 00010110?",
@@ -173,10 +173,10 @@ Memorize $2^{8}$ = 256 and $2^{16}$ = 65,536 — both appear constantly on the A
           {
             question: "A school ID system needs to give each of 600 students a unique binary code. What is the minimum number of bits required?",
             options: [
+              "7",
               "8",
-              "9",
               "10",
-              "12"
+              "9"
             ],
             correctAnswer: 2,
             explanation: "$2^{9}$ = 512 < 600; $2^{10}$ = 1024 ≥ 600. So 10 bits."

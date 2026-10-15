@@ -34,7 +34,7 @@ export const cspComputingSystemsNetworksPart5Data = {
           {
             question: "\"Cloud\" computing primarily means ___",
             options: [
-              "weather-dependent computing whose performance varies with atmospheric conditions.",
+              "computing that stores files only on removable drives carried between devices.",
               "on-demand access to remote computing resources delivered over networks.",
               "computing in which all programs run only on each user's local laptop.",
               "computing that runs without any networks between client and any server."
@@ -45,10 +45,10 @@ export const cspComputingSystemsNetworksPart5Data = {
           {
             question: "Edge computing pushes processing ___",
             options: [
-              "toward central data centers only, far from any device that produces the data.",
-              "closer to the data source (sensors, devices) to reduce latency and bandwidth.",
-              "into orbital satellites that handle every workload regardless of physical location.",
-              "into the operating-system kernel only, refusing to run user-space code at all."
+              "toward central data centers, far from the devices that produce the data.",
+              "closer to sensors and other data sources to cut latency and bandwidth use.",
+              "onto users' screens, so each display renders data without any servers.",
+              "into one global server so every request is handled in the same place."
             ],
             correctAnswer: 1,
             explanation: "Edge = nearer data source."
@@ -108,15 +108,15 @@ Modern AI workloads run on GPUs / TPUs / NPUs. The CSP big idea: hardware specia
         dropdowns: [
           {
             label: "A real-time video filter on a phone is best run ___",
-            options: ["on the device or at the network edge — local for low latency", "at a distant central data center only", "on a satellite only", "on a router only"]
+            options: ["on the device or at the network edge — local for low latency", "at a distant central data center — more power for lower latency", "on a satellite relay overhead — wider coverage for lower latency", "on the home Wi-Fi router — its shared hardware for lower latency"]
           },
           {
             label: "5G primarily improves ___",
-            options: ["mobile bandwidth and latency", "lossless ratio", "AES key length", "TCP overhead"]
+            options: ["mobile bandwidth and latency", "encryption strength of data", "battery life of phones", "data compression ratios"]
           },
           {
             label: "GPUs / TPUs are specialized for ___",
-            options: ["parallel matrix / tensor math used by AI workloads", "web browsing only", "hard-drive control", "firmware"]
+            options: ["parallel matrix / tensor math used by AI workloads", "sequential logic used by operating system kernels", "long-term storage of large training datasets", "routing packets between networks on the Internet"]
           }
         ],
         correctAnswers: ["on the device or at the network edge — local for low latency", "mobile bandwidth and latency", "parallel matrix / tensor math used by AI workloads"],
@@ -151,7 +151,7 @@ Modern AI workloads run on GPUs / TPUs / NPUs. The CSP big idea: hardware specia
               "one origin server in one country, serving every user worldwide directly from there.",
               "a CDN with edge nodes globally so static content is served close to each user.",
               "no caching anywhere; rely on the user's browser to fetch every byte every time.",
-              "transport-layer encryption of every static asset before any user can fetch it."
+              "a faster processor in the one origin server so each request finishes sooner."
             ],
             correctAnswer: 1,
             explanation: "CDN edges minimize latency."
@@ -160,9 +160,9 @@ Modern AI workloads run on GPUs / TPUs / NPUs. The CSP big idea: hardware specia
             question: "A medical-imaging team trains AI models on tens of thousands of scans. The most appropriate hardware is ___",
             options: [
               "general-purpose CPUs only, without specialized parallel-math accelerators added.",
-              "GPUs or TPUs designed for the parallel tensor math that AI training requires.",
+              "GPUs or TPUs built for the parallel tensor math these AI workloads need.",
               "a single laptop running a desktop operating system and consumer-grade hardware.",
-              "no special hardware — the team can train the models with pencil and paper instead."
+              "a mainframe from the 1980s, since older machines handle large batch jobs well."
             ],
             correctAnswer: 1,
             explanation: "AI training requires specialized parallel hardware."

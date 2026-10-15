@@ -45,7 +45,7 @@ Data is **information represented in a form a computer can store and process**. 
           {
             question: "Which step usually comes FIRST in the data pipeline?",
             options: [
-              "Visualizing the results in a chart for the audience to interpret.",
+              "Visualizing the results in a chart.",
               "Collecting raw data from a source such as a sensor or survey.",
               "Compressing the file so it fits within the available storage budget.",
               "Encrypting the data at rest so unauthorized users cannot read it."
@@ -125,15 +125,15 @@ A useful analysis depends on clean input. Garbage in → garbage out.
         dropdowns: [
           {
             label: "A spreadsheet with rows = people and columns = attributes is a ___",
-            options: ["table / structured dataset", "graph", "tree", "binary file"]
+            options: ["table / structured dataset", "graph / network of nodes", "tree / hierarchy", "key-value list / dictionary"]
           },
           {
             label: "Heart rate of 500 bpm in a dataset is most likely ___",
-            options: ["an outlier or data-quality issue", "a real reading", "a feature, not a bug", "an algorithm"]
+            options: ["an outlier or data-quality issue", "a valid reading from an athlete at peak effort", "typical data that should be averaged in as-is", "evidence of a strong correlation in the data"]
           },
           {
             label: "Photo metadata that includes GPS coordinates ___",
-            options: ["can identify where a person was, even if the photo is anonymized", "has no privacy implications", "cannot be removed", "replaces the photo"]
+            options: ["can identify where a person was, even if the photo is anonymized", "is harmless, because coordinates cannot be linked to a person", "is stripped automatically whenever the photo is shared online", "only reveals the camera model, not where the photo was taken"]
           }
         ],
         correctAnswers: ["table / structured dataset", "an outlier or data-quality issue", "can identify where a person was, even if the photo is anonymized"],
@@ -166,7 +166,7 @@ A useful analysis depends on clean input. Garbage in → garbage out.
             question: "A class collects screen-time data from 30 students. Five entries are blank. What's the most defensible analysis choice?",
             options: [
               "Silently treat each blank entry as a value of zero hours.",
-              "Decide explicitly: drop those rows OR fill with the mean, and document the choice.",
+              "Choose to drop those rows or fill in the mean, and document the decision.",
               "Ignore the issue and run the analysis on whatever the spreadsheet returns.",
               "Discard the entire dataset and ask the class to fill out the survey again."
             ],
@@ -176,7 +176,7 @@ A useful analysis depends on clean input. Garbage in → garbage out.
           {
             question: "A fitness app shares \"anonymized\" exercise data including GPS routes. The most accurate privacy framing is ___",
             options: [
-              "stripping names from a dataset is enough to make any later use safe.",
+              "stripping names from the routes is enough to make any later use safe.",
               "GPS routes can re-identify users by linking patterns back to home or work.",
               "no metadata is actually being collected by the fitness app in this scenario.",
               "transport-layer encryption automatically protects metadata once it has shipped."

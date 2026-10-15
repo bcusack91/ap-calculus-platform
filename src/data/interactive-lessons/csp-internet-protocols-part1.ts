@@ -57,10 +57,10 @@ The Internet uses layered protocols, each handling a specific job:
           {
             question: 'Why was IPv6 developed?',
             options: [
-              'IPv4 was too slow',
-              'IPv4 does not support wireless connections',
-              'IPv4 addresses (about 4.3 billion) are running out as more devices connect',
-              'IPv4 could not handle video streaming'
+              'IPv4 was too slow for modern broadband connections',
+              'IPv4 does not support wireless or mobile connections',
+              'IPv4\'s roughly 4.3 billion addresses are running out',
+              'IPv4 could not carry video or other streaming media'
             ],
             correctAnswer: 2,
             explanation: 'IPv4 has 32-bit addresses (about 4.3 billion unique addresses). With smartphones, IoT devices, and global growth, this is not enough. IPv6 uses 128-bit addresses, providing virtually unlimited addresses.'
@@ -68,10 +68,10 @@ The Internet uses layered protocols, each handling a specific job:
           {
             question: 'What does TCP guarantee that IP alone does not?',
             options: [
-              'Faster delivery',
-              'Reliable, ordered delivery with retransmission of lost packets',
-              'Encryption of all data',
-              'Wireless connectivity'
+              'Faster delivery by skipping the routing step',
+              'Reliable, ordered delivery with lost packets resent',
+              'Encryption of all data sent between two devices',
+              'A unique address for each device on the network'
             ],
             correctAnswer: 1,
             explanation: 'IP only handles addressing and routing — packets may arrive out of order, be duplicated, or be lost. TCP adds reliability: sequence numbers, acknowledgments, and retransmission of lost packets.'
@@ -98,7 +98,7 @@ When you type a URL in your browser:
 | Protocol | Reliable? | Ordered? | Speed | Use Case |
 |----------|-----------|---------|-------|----------|
 | **TCP** | Yes | Yes | Slower (overhead) | Web, email, file transfer |
-| **UDP** | No | No | Faster (less overhead) | Video streaming, gaming, VoIP |
+| **UDP** | No | No guarantee (packets may arrive in any order) | Faster (less overhead) | Video streaming, gaming, VoIP |
 
 ### Why UDP Sometimes?
 - Video calls: a few dropped frames are better than waiting for retransmission
@@ -185,10 +185,10 @@ When you type a URL in your browser:
           {
             question: 'A user connects to a website using HTTP instead of HTTPS. Which risk does this create?',
             options: [
-              'The website loads slower',
-              'The data is not encrypted, so third parties on the network could read it',
-              'The website cannot display images',
-              'The user cannot log in'
+              'The website loads more slowly than it would over HTTPS',
+              'Data is unencrypted, so others on the network could read it',
+              'The website cannot display images or other media files',
+              'The user cannot log in to any account on the website'
             ],
             correctAnswer: 1,
             explanation: 'HTTP sends data in plaintext. Anyone on the same network (e.g., public WiFi) could intercept and read the data, including passwords and personal information. HTTPS encrypts data in transit.'
@@ -196,10 +196,10 @@ When you type a URL in your browser:
           {
             question: 'Which protocol would be BEST for a live video call?',
             options: [
-              'TCP — because all data must arrive reliably',
-              'UDP — because speed matters more than perfect reliability',
-              'HTTP — because it is used for web content',
-              'DNS — because it resolves addresses'
+              'TCP — because every frame must arrive reliably',
+              'UDP — because low delay matters more than reliability',
+              'HTTP — because it is the protocol used for web content',
+              'DNS — because it resolves the address of the other caller'
             ],
             correctAnswer: 1,
             explanation: 'Live video calls prioritize low latency. A few dropped frames are acceptable, but waiting for retransmission would cause unacceptable delays. UDP provides the speed needed.'

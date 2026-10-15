@@ -40,11 +40,11 @@ Trace and design with vocabulary in hand.
             options: [
               "a ← b; b ← a",
               "temp ← a; a ← b; b ← temp",
-              "a ← b ← a",
-              "no swap needed"
+              "temp ← a; b ← a; a ← temp",
+              "temp ← b; a ← b; b ← temp"
             ],
             correctAnswer: 1,
-            explanation: "Use a temporary variable to preserve a."
+            explanation: "Save a in temp first, copy b into a, then copy the saved value into b. The other orders either overwrite a value before it is saved or copy the same value twice."
           }
         ]
       }
@@ -56,8 +56,12 @@ Trace and design with vocabulary in hand.
 ## Worked: Trace A Loop
 
     sum ← 0
-    FOR i FROM 1 TO 4:
+    i ← 1
+    REPEAT 4 TIMES
+    {
       sum ← sum + i
+      i ← i + 1
+    }
 
 | Iter | i | sum (after) |
 |------|---|-------------|
@@ -70,17 +74,21 @@ Final sum = 10.
 
 ## Worked: Conditions
 
-    IF score ≥ 90 THEN grade ← "A"
-    ELSE IF score ≥ 80 THEN grade ← "B"
-    ELSE IF score ≥ 70 THEN grade ← "C"
-    ELSE grade ← "F"
+    IF (score ≥ 90) { grade ← "A" }
+    ELSE IF (score ≥ 80) { grade ← "B" }
+    ELSE IF (score ≥ 70) { grade ← "C" }
+    ELSE { grade ← "F" }
 
 For score = 85 → grade = "B".
 
 ## Worked: Off-By-One Caution
 
-    FOR i FROM 1 TO LENGTH(list):
+    i ← 1
+    REPEAT UNTIL (i > LENGTH(list))
+    {
       PROCESS(list[i])
+      i ← i + 1
+    }
 
 In a 1-indexed list this is fine; in a 0-indexed language, you'd need 0 to LENGTH(list) - 1. AP pseudocode is **1-indexed**.
       `
@@ -115,23 +123,23 @@ In a 1-indexed list this is fine; in a 0-indexed language, you'd need 0 to LENGT
       exercise: {
         dropdowns: [
           {
-            label: "A loop FOR i FROM 1 TO 5 runs ___ times",
+            label: "A loop that sets i ← 1, repeats UNTIL (i > 5), and ends each pass with i ← i + 1 runs its body ___ times",
             options: ["5", "4", "6", "0"]
           },
           {
             label: "A loop REPEAT UNTIL false would ___",
-            options: ["run forever (infinite loop)", "run zero times", "run once", "compress data"]
+            options: ["run forever (infinite loop)", "run zero times (skipped loop)", "run once (single pass)", "run until an error (crash)"]
           },
           {
             label: "An IF without an ELSE ___",
-            options: ["skips the body when the condition is false", "always runs the body", "always errors", "always loops"]
+            options: ["skips the body when the condition is false", "runs the body once whether or not it is true", "causes an error when the condition is false", "repeats the body until the condition is true"]
           }
         ],
         correctAnswers: ["5", "run forever (infinite loop)", "skips the body when the condition is false"],
         hint1: "Inclusive range.",
         hint2: "Never-true exit.",
         hint3: "No alternate branch.",
-        explanation: "1..5 = 5 iters. UNTIL false = infinite. IF without ELSE just skips."
+        explanation: "The body runs with i = 1, 2, 3, 4, 5; then i > 5 is true, so 5 passes. UNTIL false = infinite. IF without ELSE just skips."
       }
     },
     {
@@ -156,10 +164,10 @@ In a 1-indexed list this is fine; in a 0-indexed language, you'd need 0 to LENGT
           {
             question: "A loop intended to sum 10 numbers actually sums 11 because the index runs 0..10. This is a classic ___",
             options: [
-              "no error — looping over 11 indices to sum 10 values is the standard pattern.",
-              "off-by-one error — common when boundary conditions aren't carefully chosen.",
-              "compression error in which the index variable was inadvertently shrunk by one.",
-              "transport-layer error that caused one extra index to arrive over the network."
+              "syntax error, since an index cannot start at 0.",
+              "off-by-one error, from a loop boundary that was not chosen carefully.",
+              "overflow error, since the sum got too large.",
+              "no error; summing 11 values is the usual pattern."
             ],
             correctAnswer: 1,
             explanation: "Off-by-one is one of the most common bug categories."
@@ -167,10 +175,10 @@ In a 1-indexed list this is fine; in a 0-indexed language, you'd need 0 to LENGT
           {
             question: "A program asks for a number and divides 100 by it. For input 0 it crashes. The most appropriate fix is ___",
             options: [
-              "ignore the crash since users rarely intentionally type zero into the prompt.",
-              "guard with IF input ≠ 0 THEN do the division ELSE inform the user instead.",
-              "switch the program from one programming language to another without other changes.",
-              "compress the program's source so the divide-by-zero check takes fewer characters."
+              "ignore the crash, since users rarely type zero into the prompt on purpose.",
+              "check for 0 before the division and warn the user.",
+              "divide 100 by the absolute value of the input so negatives cannot occur.",
+              "wrap the division in a loop that repeats until the answer is not 0."
             ],
             correctAnswer: 1,
             explanation: "Boundary check = guard clause."

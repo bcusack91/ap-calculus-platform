@@ -36,8 +36,8 @@ The Internet is a **packet-switched** network: data is split into packets, each 
             options: [
               "identical paths every single time, in the order the sender originally produced them.",
               "different paths through the network and arrive in a different order than sent.",
-              "no path at all, since packet switching does not actually move packets through routers.",
-              "only fully encrypted paths reserved for that single conversation by upstream routers."
+              "one fixed circuit reserved for the whole conversation before any data is sent.",
+              "only the path chosen by the sender, in the order the sender picks for them."
             ],
             correctAnswer: 1,
             explanation: "Packet switching allows independent routing."
@@ -46,9 +46,9 @@ The Internet is a **packet-switched** network: data is split into packets, each 
             question: "A router decides where to forward a packet based on ___",
             options: [
               "the packet's payload content, by inspecting the application-layer body in detail.",
-              "the destination address combined with the router's current routing table.",
+              "the destination address and the router's current routing table.",
               "the original sender's preference about which neighboring router to forward through.",
-              "the compression ratio achievable on the packet's payload by a downstream router."
+              "the size of the packet, sending larger packets along faster links."
             ],
             correctAnswer: 1,
             explanation: "Routers use destination addresses + routing tables."
@@ -116,15 +116,15 @@ When you type **example.com**, DNS resolves the name to an IP address. DNS is it
         dropdowns: [
           {
             label: "For a video call where occasional dropped frames are tolerable, the right protocol is ___",
-            options: ["UDP-based (low latency, no retransmission)", "TCP only", "no protocol", "TLS only"]
+            options: ["UDP-based (low latency, no retransmission)", "TCP-based (reliable, resends lost frames)", "DNS-based (a name lookup for each frame)", "HTTP-based (one request per video frame)"]
           },
           {
             label: "For downloading a software update, the right protocol is ___",
-            options: ["TCP (reliable, in-order)", "UDP only", "no protocol", "no transport"]
+            options: ["TCP (reliable, in-order)", "UDP (fast, no resends)", "DNS (name-based lookup)", "IP alone (best-effort)"]
           },
           {
             label: "When DNS fails for a site, users see ___",
-            options: ["the site appears unreachable, even though servers are healthy", "no effect", "TLS errors only", "better routing"]
+            options: ["the site appears unreachable, even though servers are healthy", "the site loads normally, since DNS is only used once", "the browser shows an expired TLS certificate warning", "the site loads slowly, since packets take longer routes"]
           }
         ],
         correctAnswers: ["UDP-based (low latency, no retransmission)", "TCP (reliable, in-order)", "the site appears unreachable, even though servers are healthy"],
@@ -157,8 +157,8 @@ When you type **example.com**, DNS resolves the name to an IP address. DNS is it
             question: "A user notices \"ERR_NAME_NOT_RESOLVED\" when visiting a site. The most likely root cause is ___",
             options: [
               "the site's origin server has crashed and is no longer responding to TCP connections.",
-              "DNS lookup failed; the browser couldn't translate the domain into an IP address.",
-              "the user has no electricity supply, so the browser cannot send any packets at all.",
+              "the DNS lookup failed, so the domain could not be turned into an IP address.",
+              "the user's router blocked outgoing traffic on the port the website uses.",
               "the site's TLS certificate is misconfigured and the browser is refusing to connect."
             ],
             correctAnswer: 1,
@@ -167,10 +167,10 @@ When you type **example.com**, DNS resolves the name to an IP address. DNS is it
           {
             question: "A real-time multiplayer game uses ___ for game-state updates and ___ for chat history.",
             options: [
-              "UDP for state updates because lossy is fine; TCP for chat because reliability matters.",
-              "TCP for state updates because reliability matters; UDP for chat because lossy is fine.",
-              "No transport protocols at all; both kinds of traffic skip the transport layer entirely.",
-              "Only the TLS handshake protocol; both state updates and chat history piggyback on it."
+              "UDP for state, since stale updates can be skipped; TCP for chat, since it must arrive.",
+              "TCP for state, since every update must arrive; UDP for chat, since lost lines are fine.",
+              "Both on UDP, since speed matters more than reliability for every kind of game data.",
+              "TCP for both, since UDP cannot carry data between players in a multiplayer game."
             ],
             correctAnswer: 0,
             explanation: "Game state = low-latency UDP; chat history = reliable TCP."

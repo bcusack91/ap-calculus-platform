@@ -33,8 +33,8 @@ export const cspCollaborationDevelopmentPart5Data = {
           {
             question: "GitHub (and similar platforms) most fundamentally changed software collaboration by ___",
             options: [
-              "making the underlying compilers and runtimes significantly faster.",
-              "making it easy for strangers to collaborate on code with reviews and issue tracking.",
+              "making the compilers and runtimes that run shared code significantly faster.",
+              "letting strangers work on shared code through reviews and issue tracking.",
               "eliminating common categories of programming bugs at the language level.",
               "replacing the need for human developers with automated platform tooling."
             ],
@@ -45,7 +45,7 @@ export const cspCollaborationDevelopmentPart5Data = {
             question: "A \"remote-first\" team optimizes ___",
             options: [
               "for in-office synchronous meetings during traditional business hours.",
-              "for async written communication so different time zones can contribute equally.",
+              "for async written communication so every time zone can contribute.",
               "for never collaborating, since each engineer is supposed to work alone.",
               "for short messaging URLs that fit easily on small mobile-phone screens."
             ],
@@ -112,15 +112,15 @@ Treat AI output like a junior dev's — review before trusting. Don't paste sens
         dropdowns: [
           {
             label: "Documenting key decisions in writing helps remote teams by ___",
-            options: ["making knowledge available across time zones", "forcing everyone to be online at once", "replacing video calls entirely", "compressing files"]
+            options: ["making knowledge available across time zones", "forcing everyone to be online at once", "replacing video calls entirely", "removing the need for code review"]
           },
           {
             label: "A bug in a popular open-source library may affect ___",
-            options: ["millions of dependent applications worldwide", "only that library's author", "no one", "only government apps"]
+            options: ["millions of dependent applications worldwide", "only apps that modified the library's code", "only the project's own maintainers", "only users who downloaded its source"]
           },
           {
             label: "AI-suggested code in a PR should be ___",
-            options: ["reviewed by a human just like any other code", "merged automatically without review", "always rejected", "encrypted before merging"]
+            options: ["reviewed by a human just like any other code", "merged if it passes automated tests alone", "rejected, since AI code cannot be licensed", "accepted once the AI tool rates it correct"]
           }
         ],
         correctAnswers: ["making knowledge available across time zones", "millions of dependent applications worldwide", "reviewed by a human just like any other code"],
@@ -154,12 +154,12 @@ Treat AI output like a junior dev's — review before trusting. Don't paste sens
             question: "A startup uses 200 open-source libraries. A critical bug is found in one of them. The most CSP-aligned response is ___",
             options: [
               "ignore the bug since the library is maintained by someone else.",
-              "audit which apps depend on it, update to the patched version, and report upstream.",
+              "audit which apps depend on it and update to the patched version.",
               "immediately rewrite the entire library in-house to avoid depending on it.",
               "pin every dependency permanently and never accept any future updates."
             ],
             correctAnswer: 1,
-            explanation: "Dependency hygiene + responsible upstream contribution."
+            explanation: "Find what depends on the library and move to the patched release; reporting the bug upstream also helps every other user of the library."
           },
           {
             question: "A globally distributed team is consistently leaving Asia-Pacific teammates out of decisions because all calls happen during US hours. The most CSP-aligned fix is ___",

@@ -93,8 +93,8 @@ Repeatedly divide by 2 and track remainders (read bottom to top):
 
 When a value exceeds the number of bits available:
 - 4 bits can store 0-15
-- If you try to store 16 in 4 bits, it **overflows** back to 0
-- This is like an odometer rolling over from 999 to 000
+- Trying to store 16 in 4 bits causes an **overflow error**: the value needs more bits than are available
+- Some systems silently wrap around to 0 instead, like an odometer rolling over from 999 to 000, which is why overflow causes wrong results
 
 ## Data Units
 

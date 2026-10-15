@@ -34,9 +34,9 @@ export const cspCreativeDevelopmentPart5Data = {
             question: "CI/CD primarily aims to ___",
             options: [
               "archive old commits so the repository stays small.",
-              "integrate code changes frequently and deploy them quickly with automated tests.",
-              "eliminate the need for human developers on the team.",
-              "compress source files in the repository to save disk space."
+              "merge and deploy small changes often, verified by automated tests.",
+              "remove human code review from the process entirely.",
+              "bundle months of changes into one large release."
             ],
             correctAnswer: 1,
             explanation: "CI/CD shortens the loop from change to production with automation."
@@ -44,10 +44,10 @@ export const cspCreativeDevelopmentPart5Data = {
           {
             question: "AI coding assistants change the developer's role mostly by ___",
             options: [
-              "automating typing and boilerplate while shifting human attention to design and review.",
-              "writing perfect bug-free code automatically.",
-              "eliminating the need for testing.",
-              "replacing all developers next year."
+              "automating routine code so humans focus more on design and review.",
+              "writing complete, bug-free programs so human review is no longer needed.",
+              "removing the need to test code, as generated code is already verified.",
+              "replacing human developers entirely within the next year or two."
             ],
             correctAnswer: 0,
             explanation: "AI accelerates routine tasks; humans still design, judge, and review."
@@ -108,15 +108,15 @@ export const cspCreativeDevelopmentPart5Data = {
         dropdowns: [
           {
             label: "AI-generated code should be ___ before being trusted",
-            options: ["reviewed and tested", "pushed directly to production", "deleted", "ignored"]
+            options: ["reviewed and tested", "run once on sample input", "checked only for syntax errors", "copied into the program as-is"]
           },
           {
             label: "A pull request enables ___",
-            options: ["code review by other team members before changes are merged", "pulling files off a server", "instant deployment", "compression"]
+            options: ["code review by other team members before changes are merged", "downloading the latest shared code from a server", "automatic deployment of every commit straight to users", "a teammate to overwrite the main branch without a merge"]
           },
           {
             label: "CI / CD's main benefit is ___",
-            options: ["rapid, low-risk deployment of small changes", "eliminating the need for testing", "reducing the developer headcount", "larger releases"]
+            options: ["rapid, low-risk deployment of small changes", "removing the need for manual or automated tests", "bundling many features into fewer, larger releases", "replacing code review with an automated style checker"]
           }
         ],
         correctAnswers: ["reviewed and tested", "code review by other team members before changes are merged", "rapid, low-risk deployment of small changes"],
@@ -149,10 +149,10 @@ export const cspCreativeDevelopmentPart5Data = {
           {
             question: "A 100-developer team needs to coordinate changes to one codebase without overwriting each other's work. The most appropriate tool category is ___",
             options: [
-              "emailing patched files around as attachments after each edit.",
-              "a version-control system (e.g., Git) with branches, merges, and pull requests.",
-              "a shared network drive where everyone edits the same files in place.",
-              "a spreadsheet that tracks who is allowed to touch each file today."
+              "emailing patched files around as attachments after each person edits",
+              "a version-control system such as Git, with branches and merge reviews",
+              "a shared network drive where everyone edits the same files in place",
+              "a shared spreadsheet that records who is allowed to edit each file that day"
             ],
             correctAnswer: 1,
             explanation: "Git enables parallel work with explicit merge points."
@@ -160,10 +160,10 @@ export const cspCreativeDevelopmentPart5Data = {
           {
             question: "A developer pastes the company's internal authentication code into a public AI assistant for help. The most relevant CSP concern is ___",
             options: [
-              "the AI tool may rewrite the code in a less efficient style.",
-              "proprietary or sensitive code may be retained or exposed by the third-party service.",
-              "the AI tool may flag the code as unreadable and refuse to respond.",
-              "public AI tools always strip code formatting before processing it."
+              "the AI tool may rewrite the code in a less efficient style that runs slower.",
+              "sensitive code may be stored or exposed by the outside service.",
+              "the AI tool may flag the code as unreadable and refuse to answer the question.",
+              "public AI tools always strip comments and formatting before processing code."
             ],
             correctAnswer: 1,
             explanation: "Pasting sensitive code into public AI tools risks confidentiality breaches."

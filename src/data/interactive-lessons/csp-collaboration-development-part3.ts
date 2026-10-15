@@ -34,7 +34,7 @@ export const cspCollaborationDevelopmentPart3Data = {
             question: "In pair programming, the \"navigator\" usually ___",
             options: [
               "types code in a second editor at the same time as the driver.",
-              "thinks about higher-level design and reviews while the driver types.",
+              "plans the design and reviews each line as the driver types.",
               "works on a separate unrelated program to maximize parallelism.",
               "monitors network traffic to make sure the driver stays online."
             ],
@@ -44,7 +44,7 @@ export const cspCollaborationDevelopmentPart3Data = {
           {
             question: "Wikipedia is most accurately described as ___",
             options: [
-              "a centralized corporate product written by a small editorial staff.",
+              "a centralized corporate product written by a small paid editorial staff.",
               "a crowdsourced encyclopedia built by millions of volunteer contributors.",
               "a peer-to-peer file-sharing system for distributing reference works.",
               "a closed-source proprietary program licensed to participating schools."
@@ -106,15 +106,15 @@ Both rely on **clear contribution guidelines** and **maintainers** who curate qu
         dropdowns: [
           {
             label: "Code review is most useful for ___",
-            options: ["catching issues early and sharing knowledge across the team", "slowing the team down for no benefit", "preventing all bugs forever", "compressing files"]
+            options: ["catching issues early and sharing knowledge across the team", "guaranteeing the merged code contains no bugs at all", "letting senior developers rewrite junior developers' code", "measuring how many lines each team member writes"]
           },
           {
             label: "Crowdsourcing relies on ___",
-            options: ["clear guidelines and maintainers to curate quality", "no rules at all", "a single contributor", "closed-source software"]
+            options: ["clear guidelines and maintainers to curate quality", "a single expert writing and approving every contribution", "contributors who are paid employees of the project owner", "keeping the source code closed to outsiders"]
           },
           {
             label: "A pair programming pair should ___",
-            options: ["swap driver / navigator roles regularly", "never swap roles", "work in different rooms", "each write a separate program"]
+            options: ["swap driver / navigator roles regularly", "keep the stronger coder as driver throughout", "split the code and write separate halves", "let the navigator type while the driver reviews"]
           }
         ],
         correctAnswers: ["catching issues early and sharing knowledge across the team", "clear guidelines and maintainers to curate quality", "swap driver / navigator roles regularly"],
@@ -148,7 +148,7 @@ Both rely on **clear contribution guidelines** and **maintainers** who curate qu
             question: "A team adds 5 new developers in one month. Knowledge transfer becomes painful. The most appropriate practice to add is ___",
             options: [
               "silent solo work so each new developer learns by doing alone.",
-              "pair programming and code review so knowledge spreads as work happens.",
+              "pair programming and code review so expertise spreads as work happens.",
               "longer one-shot onboarding lectures from senior staff at month's end.",
               "larger less-frequent commits so reviewers see fewer separate changes."
             ],
@@ -158,9 +158,9 @@ Both rely on **clear contribution guidelines** and **maintainers** who curate qu
           {
             question: "An open-source project receives a wave of low-quality PRs. The most CSP-aligned response is ___",
             options: [
-              "close the project to outside contributions and keep it strictly internal.",
-              "add clearer contribution guidelines, automated checks, and active maintainer review.",
-              "merge every incoming pull request to encourage broader community participation.",
+              "close the project to outsiders, archive it, and keep it strictly internal.",
+              "add contribution guidelines, automated checks, and active maintainer review.",
+              "merge every incoming pull request and thank all contributors.",
               "reject all pull requests for the next 90 days regardless of their quality."
             ],
             correctAnswer: 1,

@@ -35,8 +35,8 @@ export const cspProceduresListsPart5Data = {
             options: [
               "they consistently make the resulting source code longer than equivalent loops.",
               "they express common patterns concisely and enable parallel implementations.",
-              "they replace ordered indexed lists entirely with unordered set collections.",
-              "they automatically encrypt the elements of the list as they are processed."
+              "they replace ordered, indexed lists entirely with unordered set collections.",
+              "they run faster than loops on any input, since they skip the iteration step."
             ],
             correctAnswer: 1,
             explanation: "Functional patterns express intent and parallelize well."
@@ -44,10 +44,10 @@ export const cspProceduresListsPart5Data = {
           {
             question: "A \"lambda\" or \"arrow function\" is ___",
             options: [
-              "a hardware feature built into modern multi-core processors for fast execution.",
-              "an unnamed inline procedure typically passed to a higher-order function as data.",
-              "a network protocol used to transmit anonymous code between distributed services.",
-              "a compression algorithm that shortens function bodies by removing whitespace."
+              "a named procedure that must be defined before the program starts.",
+              "an unnamed inline procedure, often passed to another procedure as data.",
+              "a procedure that calls itself until it reaches a base case.",
+              "a variable that holds the value a procedure returned last."
             ],
             correctAnswer: 1,
             explanation: "Lambdas = anonymous procedures."
@@ -116,15 +116,15 @@ Many modern languages favor **persistent / immutable** lists. Operations return 
         dropdowns: [
           {
             label: "A higher-order function takes a procedure as ___",
-            options: ["an argument (or returns one)", "a network address", "a file", "an encrypted message"]
+            options: ["an argument (or returns one)", "a global variable (not an argument)", "a string (the procedure's name)", "a number (the procedure's ID)"]
           },
           {
             label: "Immutable lists ___",
-            options: ["return new lists from operations instead of modifying the original", "cannot store data", "compress automatically", "encrypt automatically"]
+            options: ["return new lists from operations instead of modifying the original", "can be changed only by the procedure that originally created them", "are copied automatically into every procedure that reads from them", "cannot be passed as arguments to any procedure after creation"]
           },
           {
             label: "\"Procedures as values\" enables ___",
-            options: ["patterns like map / filter where you parameterize the operation", "compression", "TLS", "IPv6"]
+            options: ["patterns like map / filter where you parameterize the operation", "programs that never need to call the same procedure twice", "storing a procedure's return value in a global variable", "lists that can hold only one data type at a time"]
           }
         ],
         correctAnswers: ["an argument (or returns one)", "return new lists from operations instead of modifying the original", "patterns like map / filter where you parameterize the operation"],
@@ -157,9 +157,9 @@ Many modern languages favor **persistent / immutable** lists. Operations return 
             question: "A team writes the same \"loop and accumulate\" code in 8 places. The single best refactor (using modern patterns) is ___",
             options: [
               "leave the duplication and rely on careful copy-paste discipline going forward.",
-              "extract a higher-order REDUCE helper that takes the per-element combiner as a parameter.",
-              "compress the source file so the eight duplicated blocks take less disk space overall.",
-              "encrypt the eight loops so future maintainers cannot accidentally edit one of them."
+              "extract one reduce-style helper that takes the combining step as a parameter.",
+              "merge all eight loops into one long loop at the start of the program.",
+              "add a comment above each copy noting where the other seven copies are."
             ],
             correctAnswer: 1,
             explanation: "A higher-order reducer eliminates the duplication."
@@ -167,13 +167,13 @@ Many modern languages favor **persistent / immutable** lists. Operations return 
           {
             question: "A program needs to test \"is each name in this list unique?\". The most direct collection to use is ___",
             options: [
-              "a list, scanning every prior name linearly each time a new name is examined.",
-              "a set — insert each name; if the set's size grows each time, names are unique.",
-              "a tuple of fixed length holding the names that have already been examined.",
-              "an encrypted blob whose ciphertext length is compared after each insertion."
+              "a list, scanning every earlier name linearly each time a new name arrives.",
+              "a set, since inserting a duplicate name leaves the set's size unchanged.",
+              "a tuple of fixed length that holds the names examined so far.",
+              "a sorted list, since sorting removes repeated names automatically."
             ],
             correctAnswer: 1,
-            explanation: "Sets natively encode uniqueness; building one tells you instantly."
+            explanation: "A set keeps only one copy of each value, so if adding a name does not grow the set, that name was already present. Sorting does not remove repeats, and a linear scan works but repeats the search for every name."
           }
         ]
       }

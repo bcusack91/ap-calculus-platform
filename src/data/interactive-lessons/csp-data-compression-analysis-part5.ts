@@ -45,7 +45,7 @@ export const cspDataCompressionAnalysisPart5Data = {
             question: "Modern video calls use codecs that perform best when ___",
             options: [
               "the camera moves rapidly and the frame content changes constantly between frames.",
-              "the camera is mostly still — most pixels barely change, so differential encoding wins.",
+              "the scene is mostly still, so few pixels change from one frame to the next.",
               "all incoming frames consist of pure random noise rather than recognizable scene content.",
               "the network connection is encrypted by TLS rather than running in plaintext."
             ],
@@ -118,14 +118,14 @@ Even as storage gets cheaper, compression remains crucial because **bandwidth** 
           },
           {
             label: "Open-codec adoption matters because ___",
-            options: ["it avoids licensing fees and locks-in", "it makes compression worse", "it requires payment", "it removes encryption"]
+            options: ["it avoids licensing fees and lock-in", "it guarantees better quality than paid codecs", "it makes every codec lossless by default", "it removes the need for compression altogether"]
           },
           {
             label: "A neural-net learned codec for medical images may ___",
-            options: ["outperform general-purpose codecs but raises bias / reproducibility questions", "always work for every domain", "replace lossless completely", "be the same as MP3"]
+            options: ["outperform general-purpose codecs but raises bias / reproducibility questions", "outperform every codec on every image type, with no added risk to diagnosis", "guarantee lossless results, because a neural network learns the exact image", "perform worse than JPEG, since neural nets cannot learn images"]
           }
         ],
-        correctAnswers: ["halved", "it avoids licensing fees and locks-in", "outperform general-purpose codecs but raises bias / reproducibility questions"],
+        correctAnswers: ["halved", "it avoids licensing fees and lock-in", "outperform general-purpose codecs but raises bias / reproducibility questions"],
         hint1: "~2× efficiency per generation.",
         hint2: "Open = no fees.",
         hint3: "Domain-specific gains.",

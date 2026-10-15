@@ -52,10 +52,10 @@ A photograph has millions of color values. JPEG removes subtle color differences
           {
             question: 'A hospital stores digital X-ray images. Which compression type should they use?',
             options: [
-              'Lossy — to save storage space',
-              'Lossless — medical images cannot lose any detail',
-              'No compression needed',
-              'Either type works equally well'
+              'Lossy — it saves the most storage space',
+              'Lossless — no diagnostic detail can be lost',
+              'None — X-rays are already as small as possible',
+              'Either — both keep enough detail for diagnosis'
             ],
             correctAnswer: 1,
             explanation: 'Medical images require lossless compression because any lost detail could affect diagnosis. Lossy compression removes data permanently, which is unacceptable for medical records.'
@@ -63,10 +63,10 @@ A photograph has millions of color values. JPEG removes subtle color differences
           {
             question: 'A music streaming service wants to minimize bandwidth. Which compression is most appropriate?',
             options: [
-              'Lossless — to preserve perfect audio quality',
-              'Lossy — most listeners cannot hear the removed frequencies, and files are much smaller',
-              'No compression — music must be uncompressed',
-              'Run-length encoding'
+              'Lossless — listeners expect every bit of the studio master',
+              'Lossy — most listeners cannot hear the frequencies removed',
+              'None — compressed audio cannot be streamed in real time',
+              'Run-length encoding — music has long runs of identical samples'
             ],
             correctAnswer: 1,
             explanation: 'Lossy compression (like MP3) removes frequencies most people cannot hear, dramatically reducing file size. For streaming where bandwidth matters, lossy is the standard choice.'
@@ -146,7 +146,7 @@ When working with large datasets, visualization reveals patterns that raw number
           },
           {
             label: 'JPEG images use ___ compression (some color detail permanently removed)',
-            options: ['Lossy', 'Lossless', 'No compression', 'Encrypted']
+            options: ['Lossy', 'Lossless', 'No compression', 'Reversible']
           },
           {
             label: 'A line graph is best for showing ___',
@@ -185,10 +185,10 @@ When working with large datasets, visualization reveals patterns that raw number
           {
             question: 'A file is compressed using lossy compression, then compressed again using lossy compression. What happens to quality?',
             options: [
-              'Quality improves because compression is applied twice',
-              'Quality degrades further because more data is permanently removed in each round',
-              'Quality stays the same after the first compression',
-              'The file returns to its original quality'
+              'Quality improves, because the second pass corrects artifacts',
+              'Quality degrades further, since more data is discarded each round',
+              'Quality stays the same, since all loss happens in the first pass',
+              'The file is restored to its original quality on decompression'
             ],
             correctAnswer: 1,
             explanation: 'Each round of lossy compression removes more data. Compressing an MP3 file again as a lower-bitrate MP3 removes additional frequencies. Quality only goes down, never up. This is called generation loss.'
@@ -196,10 +196,10 @@ When working with large datasets, visualization reveals patterns that raw number
           {
             question: 'Run-length encoding converts "AAAABBCC" to "4A2B2C". Which input would NOT benefit from this technique?',
             options: [
-              'ZZZZZZZZZ (nine Zs)',
-              'ABCDEFGH (all different characters)',
-              'RRRRRGGGGG (repeated characters)',
-              'XXXXXXXXXX (ten Xs)'
+              'ZZZZZZZZZ (nine Zs in a row)',
+              'ABCDEFGH (no repeated characters)',
+              'RRRRRGGGGGBBBBB (three runs of five)',
+              'XXXXXXXXXX (ten Xs in a row)'
             ],
             correctAnswer: 1,
             explanation: 'ABCDEFGH has no repeated consecutive characters. Run-length encoding would produce 1A1B1C1D1E1F1G1H — actually LARGER than the original. RLE works best with long runs of repeated values.'

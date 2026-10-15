@@ -157,7 +157,7 @@ Conceptually: filter (even) → map (square) → reduce (sum).
               "2,000",
               "1,000,000",
               "1000",
-              "0"
+              "1,000,000,000"
             ],
             correctAnswer: 1,
             explanation: "1000 × 1000 = 1,000,000 iterations."
@@ -165,13 +165,13 @@ Conceptually: filter (even) → map (square) → reduce (sum).
           {
             question: "A team needs the average of the top 10 scores in a list of 1,000. The most reasonable approach is ___",
             options: [
-              "no procedure — just inline the sort, slice, and average code at the call site directly.",
-              "topTen ← topK(scores, 10); average ← AVG(topTen) — compose existing procedures.",
-              "compress the list of 1,000 scores first and then average the compressed bytes directly.",
-              "encrypt the list before averaging so the top-K values cannot be observed by other code."
+              "inline the sorting, slicing, and averaging code directly at the call site.",
+              "call existing topK and average procedures in sequence.",
+              "average all 1,000 scores and scale the result up by a fixed bonus.",
+              "write one procedure that sorts, slices, and averages with no inputs."
             ],
             correctAnswer: 1,
-            explanation: "Compose existing procedures."
+            explanation: "Compose existing procedures: one returns the top 10 scores, the other averages them."
           }
         ]
       }

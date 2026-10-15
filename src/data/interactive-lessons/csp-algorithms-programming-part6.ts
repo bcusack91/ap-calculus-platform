@@ -38,7 +38,7 @@ End-to-end FRQ-style problems combining variables, conditionals, loops, lists, a
           {
             question: "You need to compute the median of a list of test scores. Which two-step plan is most appropriate?",
             options: [
-              "Sort the list, then return the middle element (or the average of the two middles for an even-length list).",
+              "Sort the list and return the middle element, or the mean of the two middle ones for an even length.",
               "Return list[1] directly, since the first element of a sorted-by-entry list is treated as the median value.",
               "Sum every element of the list and divide the sum by the length to obtain the median test-score value.",
               "Return the most common (modal) value in the list, since the modal score serves as the median in practice."
@@ -56,8 +56,10 @@ End-to-end FRQ-style problems combining variables, conditionals, loops, lists, a
 ## Worked Problem 1: First Index Greater Than Threshold
 
     PROCEDURE firstGreater(list, threshold) {
-      FOR i ← 1 TO LENGTH(list) {
+      i ← 1
+      REPEAT UNTIL (i > LENGTH(list)) {
         IF (list[i] > threshold) { RETURN i }
+        i ← i + 1
       }
       RETURN −1
     }
@@ -76,7 +78,11 @@ Goal: average the largest n values in list.
     PROCEDURE avgTopN(list, n) {
       sorted ← descendingSort(list)
       total ← 0
-      FOR i ← 1 TO n { total ← total + sorted[i] }
+      i ← 1
+      REPEAT n TIMES {
+        total ← total + sorted[i]
+        i ← i + 1
+      }
       RETURN total / n
     }
 
@@ -89,10 +95,14 @@ Goal: average the largest n values in list.
 ## Worked Problem 3: Detect Duplicates
 
     PROCEDURE hasDuplicate(list) {
-      FOR i ← 1 TO LENGTH(list) − 1 {
-        FOR j ← i + 1 TO LENGTH(list) {
+      i ← 1
+      REPEAT UNTIL (i ≥ LENGTH(list)) {
+        j ← i + 1
+        REPEAT UNTIL (j > LENGTH(list)) {
           IF (list[i] = list[j]) { RETURN TRUE }
+          j ← j + 1
         }
+        i ← i + 1
       }
       RETURN FALSE
     }
@@ -173,24 +183,24 @@ Goal: average the largest n values in list.
           {
             question: "Procedure twoSum(list, target) should return TRUE if any two distinct elements sum to target. Which structure is most appropriate AND most efficient?",
             options: [
-              "For each element x, check if (target − x) is in a set of already-seen values; record x in the set; return TRUE on hit.",
-              "Sort the list in ascending order and then check whether each adjacent pair of elements sums to target.",
-              "Use a triple-nested loop over every possible 3-tuple of list elements and check sums of every triple.",
-              "Use a single loop that adds each pair of consecutive elements and returns TRUE on the first matching sum."
+              "In one pass, check if target − x was already seen and then record x.",
+              "Sort the list, then check whether any adjacent pair sums to target.",
+              "Check every 3-element combination with a triple-nested loop.",
+              "Add each element to the next one and compare that sum to target."
             ],
             correctAnswer: 0,
-            explanation: "The hash-set approach is O(n) and correct for distinct-pair sum."
+            explanation: "Remembering the values already seen lets one pass find a pair: for each x, if target − x was seen earlier, a pair exists. That is far faster than checking every pair with nested loops."
           },
           {
             question: "A procedure mostFrequent(list) returns the element that appears most often. The student writes a doubly-nested loop that for every element counts its occurrences, tracking the max. This is $O(n^{2})$. For n = 100,000 it times out. The most appropriate fix is to ___",
             options: [
-              "replace the nested loop with a single pass that builds a frequency dictionary, then a single pass over the dictionary to find the max.",
-              "switch to a faster computer with a higher clock speed and rerun the same doubly-nested loop on the larger input list.",
-              "sort the list in ascending order and then guess the most frequent element from the sorted output of the data.",
-              "remove half the data from the input list before the doubly-nested loop runs, then rerun on the reduced list."
+              "build a frequency table in one pass, then scan it once for the max.",
+              "rerun the same doubly-nested loop on a computer with a faster clock.",
+              "sort the list and guess the most frequent element from the output.",
+              "remove half the input list before running the doubly-nested loop."
             ],
             correctAnswer: 0,
-            explanation: "Two linear passes (build map, scan map) is O(n) — the canonical algorithmic upgrade."
+            explanation: "Two linear passes (build the frequency table, then scan it for the largest count) replace the $O(n^{2})$ nested loop."
           }
         ]
       }

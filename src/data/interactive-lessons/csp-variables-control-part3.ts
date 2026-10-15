@@ -19,7 +19,7 @@ export const cspVariablesControlPart3Data = {
 | **Accumulator** | total ← 0; FOR EACH x: total ← total + x |
 | **Search** | found ← false; FOR EACH x: IF x = target THEN found ← true |
 | **Filter** | result ← []; FOR EACH x: IF condition(x) THEN APPEND(result, x) |
-| **Max / min** | best ← list[0]; FOR EACH x: IF x > best THEN best ← x |
+| **Max / min** | best ← list[1]; FOR EACH x: IF x > best THEN best ← x |
       `
     },
     {
@@ -33,8 +33,8 @@ export const cspVariablesControlPart3Data = {
           {
             question: "Which pattern is **total ← total + grade** part of?",
             options: [
-              "Counter — incrementing a tally by exactly one each iteration.",
-              "Accumulator — building up a running total from each value.",
+              "Counter — adding exactly one each iteration.",
+              "Accumulator — building up a running sum from each value.",
               "Search — walking the list looking for a target value.",
               "Filter — selecting matching values into a new list."
             ],
@@ -46,7 +46,7 @@ export const cspVariablesControlPart3Data = {
             options: [
               "Search — walking the list to find any single matching item.",
               "Counter — tallying how many items meet a condition.",
-              "Filter — producing a new list of items meeting a condition.",
+              "Filter — keeping only the matching items in a separate list.",
               "Accumulator — collapsing a list into a single summary value."
             ],
             correctAnswer: 2,
@@ -79,10 +79,14 @@ export const cspVariablesControlPart3Data = {
 
 ## Mini-walkthrough: Find Maximum
 
-    best ← scoreList[0]
-    FOR EACH score IN scoreList:
-      IF score > best THEN
+    best ← scoreList[1]
+    FOR EACH score IN scoreList
+    {
+      IF (score > best)
+      {
         best ← score
+      }
+    }
 
 Initialize, then update on each item — the canonical pattern for "best so far".
       `
@@ -118,15 +122,15 @@ Initialize, then update on each item — the canonical pattern for "best so far"
         dropdowns: [
           {
             label: "A loop that visits every (i, j) pair in a grid uses ___",
-            options: ["nested loops", "a single loop", "no loop", "recursion only"]
+            options: ["nested loops", "a single loop", "an IF statement", "a REPEAT UNTIL loop"]
           },
           {
             label: "IF / ELSE IF / ELSE is most appropriate when ___",
-            options: ["multiple ranked conditions partition the cases", "there are exactly two branches", "no condition is needed", "a loop is needed"]
+            options: ["multiple ranked conditions partition the cases", "every condition must be checked independently", "the same block must run a fixed number of times", "there is only one condition with no alternative"]
           },
           {
             label: "A \"guard clause\" pattern handles ___",
-            options: ["edge cases early so the main logic stays clean", "arithmetic only", "list traversal", "compression"]
+            options: ["edge cases early so the main logic stays clean", "the main computation before any input checks", "every list element inside a nested loop", "errors only after the main logic finishes"]
           }
         ],
         correctAnswers: ["nested loops", "multiple ranked conditions partition the cases", "edge cases early so the main logic stays clean"],
@@ -158,21 +162,21 @@ Initialize, then update on each item — the canonical pattern for "best so far"
           {
             question: "A program counts how many items in a list are negative. The right pattern is ___",
             options: [
-              "accumulator with a condition (count ← 0; FOR EACH x: IF x < 0 THEN count ← count + 1).",
-              "no loop — the count of negatives can be read directly off any list value.",
-              "sort the list first, then read the count of negatives from the sorted output.",
-              "compress the list first, then count negative tokens in the compressed bytes."
+              "a conditional counter that adds 1 for each element below 0",
+              "no loop, since the count can be read from any single element",
+              "sorting the list, then reporting the position of its first element",
+              "an accumulator that adds every element's value to a running total"
             ],
             correctAnswer: 0,
-            explanation: "Conditional accumulator (counter)."
+            explanation: "Counting is a conditional counter (an accumulator that adds 1): count ← 0, then FOR EACH x IN list, IF (x < 0) { count ← count + 1 }. Adding each x would total the values instead of counting them."
           },
           {
             question: "A program finds the longest string in a list. The right pattern is ___",
             options: [
-              "\"best so far\" with comparison on LENGTH(string) on each list element.",
+              "a best-so-far tracker that compares each string's LENGTH to the current best",
               "no loop — the longest string can be inferred from the first element directly.",
               "random selection of one element and returning it as the longest candidate.",
-              "encryption of every string and returning the one with the longest ciphertext."
+              "a counter that tallies how many strings are longer than the first one"
             ],
             correctAnswer: 0,
             explanation: "\"Best so far\" pattern, comparing by length."

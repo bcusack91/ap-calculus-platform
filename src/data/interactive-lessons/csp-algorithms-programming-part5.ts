@@ -47,7 +47,7 @@ Programming evolved from machine code → assembly → high-level languages → 
             question: "When AI-assisted code completion is used, who is ultimately responsible for verifying the code is correct?",
             options: [
               "The AI tool itself is solely responsible for the correctness of every suggestion the tool generates.",
-              "The programmer (and the team) who accepts the suggestion and deploys it remain responsible for it.",
+              "The programmer and team who accept and deploy the suggestion remain responsible.",
               "The end user of the running program is solely responsible for verifying the code that produced it.",
               "Nobody actually needs to verify AI-suggested code, since the AI has already statistically validated it."
             ],
@@ -119,15 +119,15 @@ AI-assisted programming (autocomplete, chat-based coding) accelerates writing co
         dropdowns: [
           {
             label: "Using a well-tested library instead of writing the same code yourself usually ___",
-            options: ["reduces bugs and saves time", "always slows the program", "avoids any need for testing", "is discouraged in modern teams"]
+            options: ["reduces bugs and saves time", "slows the program down noticeably", "removes the need to test your code", "makes the code harder to maintain"]
           },
           {
             label: "Code review primarily improves ___",
-            options: ["quality and shared understanding", "compile time", "screen brightness", "memory size"]
+            options: ["quality and shared understanding", "compile speed and build times", "runtime performance on user devices", "the program's memory footprint"]
           },
           {
             label: "AI-generated code that introduces a security flaw is the responsibility of ___",
-            options: ["the developer who accepts and deploys it", "no one", "only the AI vendor", "only the end user"]
+            options: ["the developer who accepts and deploys it", "the company that built the AI model alone", "the end users who choose to run the program", "no one, since no human wrote the code"]
           }
         ],
         correctAnswers: ["reduces bugs and saves time", "quality and shared understanding", "the developer who accepts and deploys it"],
@@ -160,10 +160,10 @@ AI-assisted programming (autocomplete, chat-based coding) accelerates writing co
           {
             question: "A startup must ship a calendar app in 4 weeks. Which approach is most appropriate?",
             options: [
-              "Write a new programming language for the calendar.",
-              "Use existing libraries for date math, UI, and storage; write only the app-specific glue code.",
-              "Implement everything in machine code for speed.",
-              "Skip testing to ship faster."
+              "Design a new programming language built around calendar logic.",
+              "Use existing libraries for dates and storage, writing only app-specific code.",
+              "Implement every component in machine code to maximize speed.",
+              "Skip testing so that every remaining week goes to features."
             ],
             correctAnswer: 1,
             explanation: "Composing libraries is the standard modern path; bespoke implementations of well-solved problems waste time."
@@ -171,10 +171,10 @@ AI-assisted programming (autocomplete, chat-based coding) accelerates writing co
           {
             question: "A developer accepts AI-suggested code that constructs a database query by string concatenation with user input. The code passes a quick visual review and ships. A month later, a security incident traces to SQL injection in this code. What is the best characterization?",
             options: [
-              "The AI is solely responsible.",
-              "The developer/team is responsible — accepted code is the team's code, and security review is part of acceptance.",
-              "The user who exploited the flaw is solely responsible.",
-              "Such incidents cannot be prevented."
+              "The AI tool is solely responsible, since it wrote the vulnerable query.",
+              "The team is responsible, since code it deploys is its own to check.",
+              "The attacker alone is responsible, since the code worked as intended.",
+              "No one is responsible, since injection attacks cannot be prevented."
             ],
             correctAnswer: 1,
             explanation: "Accepting AI output without security review does not transfer responsibility; the team owns deployed code."

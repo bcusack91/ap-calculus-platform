@@ -32,8 +32,8 @@ export const cspDataCompressionAnalysisPart4Data = {
           {
             question: "Why does loading an image-heavy webpage feel faster on modern sites than 10 years ago?",
             options: [
-              "Modern client CPUs are slower, which somehow speeds up the perceived load time.",
-              "Better lossy codecs (WebP, AVIF) deliver smaller files at the same visual quality, often via CDNs.",
+              "Modern sites send uncompressed images that browsers can skip decoding.",
+              "Newer lossy image formats deliver smaller files at the same visual quality.",
               "Modern image files are stored as plain-text RGB tables that browsers render directly.",
               "Browsers stopped using TCP for images and now fetch them over a faster ad-hoc protocol."
             ],
@@ -44,12 +44,12 @@ export const cspDataCompressionAnalysisPart4Data = {
             question: "A program needs to compute the average over a 10 GB JSON log. The most appropriate algorithmic approach is ___",
             options: [
               "load the entire 10 GB file into memory and then iterate over it twice in place.",
-              "stream and compute the average in a single pass — O(n) time, O(1) extra space.",
+              "stream through the file once, keeping only a running sum and count.",
               "sort the file in place first and then compute the average from the sorted output.",
-              "encrypt the file first so the streaming average pass becomes safer to execute."
+              "compress the file first so the whole log fits into memory for one pass."
             ],
             correctAnswer: 1,
-            explanation: "Streaming aggregation handles large data in constant memory."
+            explanation: "A single streaming pass needs only a running sum and a count, so memory use stays small no matter how large the file is."
           }
         ]
       }
@@ -120,16 +120,16 @@ Two warnings:
       exercise: {
         dropdowns: [
           {
-            label: "A 10 GB log requires ___",
-            options: ["a streaming algorithm with O(1) extra memory", "loading the whole file in memory", "no algorithm", "a different network protocol only"]
+            label: "A 10 GB log is best summarized with ___",
+            options: ["a streaming algorithm with O(1) extra memory", "loading the entire file into memory first", "sorting the full file before any processing", "an exponential-time search over all lines"]
           },
           {
             label: "Web servers commonly compress responses with ___",
-            options: ["gzip / Brotli", "JPEG", "TLS only", "IPv6"]
+            options: ["gzip / Brotli", "TLS / HTTPS", "JPEG / PNG", "H.264 / AV1 video"]
           },
           {
             label: "Compression and encryption ___",
-            options: ["serve different goals; both can be applied (compress THEN encrypt)", "are the same thing", "cannot be combined", "are interchangeable"]
+            options: ["serve different goals; both can be applied (compress THEN encrypt)", "serve the same goal of hiding data, so applying both is redundant", "serve different goals; both can be applied (encrypt THEN compress)", "both reduce file size, so combining them doubles the savings"]
           }
         ],
         correctAnswers: ["a streaming algorithm with O(1) extra memory", "gzip / Brotli", "serve different goals; both can be applied (compress THEN encrypt)"],
@@ -162,7 +162,7 @@ Two warnings:
             question: "A streaming service uses adaptive bitrate so users with slow connections get a lower-quality version of the same video. The technique that makes this practical is ___",
             options: [
               "lossless compression of every video, served at the same quality to every viewer.",
-              "precomputing multiple lossy-encoded renditions at different bitrates and serving the best fit.",
+              "precomputing several lossy renditions at different quality levels and serving the best fit.",
               "serving the original raw uncompressed video stream to every viewer regardless of bandwidth.",
               "switching the network layer from IPv4 to IPv6 so packets can self-prioritize the right quality."
             ],
@@ -172,8 +172,8 @@ Two warnings:
           {
             question: "A team plans to encrypt every log line BEFORE shipping it to a server, then ZIP the resulting archive nightly. The compressed nightly archive is barely smaller than the raw daily lines. The most direct fix is ___",
             options: [
-              "ignore the issue and accept the larger archive size as an unavoidable cost.",
-              "reverse the order: compress the logs first, then encrypt the compressed output.",
+              "ignore it, since encrypted archives are always about the same size as the raw logs.",
+              "reverse the order so logs are zipped first and encrypted afterward.",
               "switch the log shipping protocol from TCP to UDP for faster nightly transfers.",
               "switch the archival format from ZIP to a lossy video codec like H.265 instead."
             ],

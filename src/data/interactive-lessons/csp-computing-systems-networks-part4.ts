@@ -32,10 +32,10 @@ export const cspComputingSystemsNetworksPart4Data = {
           {
             question: "An OS scheduler that decides which process runs next is fundamentally implementing an ___",
             options: [
-              "algorithm that ranks ready processes by some scheduling policy",
-              "compression scheme applied to ready processes before they execute",
-              "TLS handshake between the kernel and each ready user process",
-              "router whose forwarding table maps process IDs to CPU cores"
+              "algorithm that picks among ready tasks according to a ranking policy",
+              "data structure that stores each task's memory until it ends",
+              "network protocol the kernel uses to message each task",
+              "hardware circuit that maps each task to a fixed core"
             ],
             correctAnswer: 0,
             explanation: "Schedulers are algorithms."
@@ -43,10 +43,10 @@ export const cspComputingSystemsNetworksPart4Data = {
           {
             question: "A region with no broadband access faces ___",
             options: [
-              "no impact at all on its residents' day-to-day activities or opportunities.",
-              "a digital divide — limited access to education, jobs, and online services.",
-              "consistently lower latency than well-connected urban regions on the same continent.",
-              "consistently better TLS handshake performance because of reduced background traffic."
+              "no real effect on residents, since most daily activities happen offline.",
+              "a digital divide, with fewer chances for online learning and remote jobs.",
+              "lower prices for online services, since providers charge by distance.",
+              "faster internet once it arrives, since newer networks skip old equipment."
             ],
             correctAnswer: 1,
             explanation: "Digital-divide framing."
@@ -113,15 +113,15 @@ These add scale and security challenges (lots of devices, many never patched).
         dropdowns: [
           {
             label: "A trusted hardware module that protects keys even from the OS is part of ___",
-            options: ["layered system trust", "compression", "a routing table", "a DNS resolver"]
+            options: ["layered system trust", "application-level security", "open-source transparency", "network firewall rules"]
           },
           {
             label: "IoT devices that ship without security updates create ___",
-            options: ["large attack surfaces over time", "better latency", "compression gains", "TLS speedups"]
+            options: ["large attack surfaces over time", "stronger security as they age", "fewer targets for attackers", "no new risk once installed"]
           },
           {
             label: "A school in an area with poor connectivity faces ___",
-            options: ["educational disadvantages tied to the digital divide", "no impact", "lower TLS overhead", "cleaner DNS"]
+            options: ["educational disadvantages tied to the digital divide", "no effect, since most lessons can be printed out", "advantages, since students face fewer distractions online", "lower costs that fully offset the slower access"]
           }
         ],
         correctAnswers: ["layered system trust", "large attack surfaces over time", "educational disadvantages tied to the digital divide"],
@@ -154,9 +154,9 @@ These add scale and security challenges (lots of devices, many never patched).
             question: "A smart-home device hasn't received updates in 5 years. The most accurate concern is ___",
             options: [
               "no concern — unpatched IoT devices on a home network are essentially harmless.",
-              "known vulnerabilities accumulate; the device may become a vector for botnets.",
-              "the device's TLS handshake will simply run more slowly than freshly patched devices.",
-              "the device will compress its traffic less efficiently than recently updated devices do."
+              "known vulnerabilities pile up, and the device may be hijacked into a botnet.",
+              "the device's encryption keys expire after five years, so it stops working.",
+              "the device will slow down, since older firmware runs less efficiently."
             ],
             correctAnswer: 1,
             explanation: "Unpatched IoT = compounding risk."
@@ -167,7 +167,7 @@ These add scale and security challenges (lots of devices, many never patched).
               "unnecessary spending of community funds on a service students don't really need.",
               "addressing the digital divide so students can access learning resources online.",
               "wasted electricity that could have been used for other community programs instead.",
-              "extra TLS overhead on the broader internet that slows down other users' traffic."
+              "a security risk, since public Wi-Fi networks are always unsafe for every student."
             ],
             correctAnswer: 1,
             explanation: "Public Wi-Fi as a digital-divide intervention."

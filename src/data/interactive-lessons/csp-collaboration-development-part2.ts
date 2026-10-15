@@ -122,15 +122,15 @@ Effective collaboration requires:
         dropdowns: [
           {
             label: "A team where one person makes all decisions and others stay silent is ___",
-            options: ["not collaborating effectively", "collaborating perfectly", "using version control", "using CI / CD"]
+            options: ["not collaborating effectively", "collaborating efficiently", "using a healthy leadership model", "practicing pair programming"]
           },
           {
             label: "Constructive feedback should focus on ___",
-            options: ["the work itself, not the person", "the person, not the work", "unrelated topics", "private matters"]
+            options: ["the work itself, not the person", "the person, not the work", "praise only, so no one feels criticized", "every flaw at once, so nothing is missed"]
           },
           {
             label: "Async written communication (issue tracker, chat) is best for ___",
-            options: ["decisions of record and status updates", "brainstorming with energy and back-and-forth", "spontaneous laughter", "silent meditation"]
+            options: ["decisions of record and status updates", "brainstorming with energy and back-and-forth", "resolving a heated disagreement quickly", "urgent problems needing an immediate fix"]
           }
         ],
         correctAnswers: ["not collaborating effectively", "the work itself, not the person", "decisions of record and status updates"],
@@ -163,7 +163,7 @@ Effective collaboration requires:
             question: "A class project group has one student writing all the code at the last minute. What's the most CSP-aligned critique?",
             options: [
               "This is an efficient division of labor — playing to the strongest student.",
-              "No real collaboration is happening; the code lacks review and shared understanding.",
+              "No real collaboration occurs, so no one reviews or understands the code.",
               "Splitting the project into more separate files would have solved the problem.",
               "The other students should each write the same code so they all learn it."
             ],
@@ -176,7 +176,7 @@ Effective collaboration requires:
               "a more inclusive product that reaches more users without expensive retrofits later.",
               "a slower product, since accessibility features always reduce app performance.",
               "no measurable change, since fitness needs are essentially the same for everyone.",
-              "a riskier product, since accommodating more users introduces more bugs."
+              "a riskier product, since accommodating more kinds of users always introduces more bugs."
             ],
             correctAnswer: 0,
             explanation: "Inclusive design from the start avoids costly retrofitting."

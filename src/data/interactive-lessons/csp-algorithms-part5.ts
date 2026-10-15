@@ -120,8 +120,8 @@ Some problems can't be solved by *any* algorithm for *all* inputs (e.g., the Hal
             options: ["Reasonable", "Unreasonable", "Linear", "Logarithmic"]
           },
           {
-            label: "A heuristic guarantees ___",
-            options: ["the optimal answer", "a good answer in less time", "no answer", "exponential time"]
+            label: "Unlike an exact algorithm, a heuristic is designed to produce ___",
+            options: ["the optimal answer", "a good answer in less time", "a correct answer on every input", "the shortest possible runtime"]
           },
           {
             label: "Doubling the input of an $O(n^{2})$ algorithm makes it ___ as long",

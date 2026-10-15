@@ -27,7 +27,7 @@ Core data concepts the AP exam tests.
           {
             question: "Data ABOUT data is called ___",
             options: [
-              "scalar data, meaning a single value held in one cell of a spreadsheet",
+              "scalar data, meaning a single value in one cell",
               "metadata, meaning information that describes other information",
               "compressed data, meaning a re-encoded version that fits in fewer bits",
               "lossy data, meaning a copy from which some original detail is missing"
@@ -41,7 +41,7 @@ Core data concepts the AP exam tests.
               "proves that the first variable directly causes changes in the second variable.",
               "does NOT necessarily prove one variable causes the other to change.",
               "is mathematically the same statistical concept as a causal relationship.",
-              "is impossible to interpret unless the dataset is encrypted before analysis."
+              "can only exist when the two variables are measured in the same units."
             ],
             correctAnswer: 1,
             explanation: "Correlation ≠ causation."
@@ -107,15 +107,15 @@ Core data concepts the AP exam tests.
         dropdowns: [
           {
             label: "\"Garbage in, garbage out\" emphasizes ___",
-            options: ["data quality before analysis", "compression", "TLS", "IPv6"]
+            options: ["data quality before analysis", "larger datasets over smaller ones", "faster algorithms over accurate ones", "visualization before cleaning"]
           },
           {
             label: "A bar chart vs. line chart distinction matters because ___",
-            options: ["the choice should match the question being asked", "they look the same", "one is encrypted", "one is faster on the wire"]
+            options: ["the choice should match the question being asked", "bar charts are always more accurate than line charts", "line charts can only show one data series at a time", "the choice changes the underlying values in the data"]
           },
           {
             label: "A \"right to be forgotten\" policy implements ___",
-            options: ["data deletion at user request", "data duplication", "data encryption", "data aggregation"]
+            options: ["data deletion at user request", "data anonymization at user request", "data encryption at user request", "data export at user request"]
           }
         ],
         correctAnswers: ["data quality before analysis", "the choice should match the question being asked", "data deletion at user request"],
@@ -151,7 +151,7 @@ Core data concepts the AP exam tests.
               "email attachments are inherently safe for any kind of educational data.",
               "sensitive data sent unencrypted with weak access controls risks unauthorized disclosure.",
               "the spreadsheet should simply be saved in a different file format before sending.",
-              "the school should switch its mail transport from TCP to UDP for performance."
+              "the attachment should be printed and mailed instead, since paper cannot be copied."
             ],
             correctAnswer: 1,
             explanation: "Sensitive data needs access control + encryption-in-transit."
@@ -160,7 +160,7 @@ Core data concepts the AP exam tests.
             question: "A research team plans to publish a dataset with ages and ZIP codes \"for transparency\". The most appropriate concern is ___",
             options: [
               "publishing aggregate ages and ZIP codes raises no meaningful re-identification risk.",
-              "these quasi-identifiers can re-identify many people; aggregate or coarsen before publishing.",
+              "these quasi-identifiers can re-identify people, so coarsen them before publishing.",
               "the resulting dataset file will be too small for collaborators to download easily.",
               "the resulting dataset file will be too large for collaborators to host inexpensively."
             ],

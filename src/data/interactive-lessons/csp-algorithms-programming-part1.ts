@@ -62,10 +62,10 @@ greet("Bob")      // Output: Hello, Bob
           {
             question: 'What is the main purpose of abstraction in programming?',
             options: [
-              'To make programs run faster',
+              'To make programs run faster on any hardware',
               'To manage complexity by hiding unnecessary details',
-              'To make programs use less memory',
-              'To prevent all bugs'
+              'To make programs use less memory while running',
+              'To catch logic errors before the program runs'
             ],
             correctAnswer: 1,
             explanation: 'Abstraction manages complexity. When you call sort(), you do not need to know whether it uses merge sort or quicksort internally. This lets you focus on WHAT you want to do, not HOW it works internally.'
@@ -73,10 +73,10 @@ greet("Bob")      // Output: Hello, Bob
           {
             question: 'A procedure is called three times in a program. How many times is the procedure code written?',
             options: [
-              'Three times',
-              'Once — it is defined once and called three times',
-              'Zero times if it is built in',
-              'It depends on the programming language'
+              'Three times, once for each place it is called',
+              'Once, since it is defined once and called three times',
+              'Zero times, if the procedure is built into the language',
+              'It depends on which programming language is used'
             ],
             correctAnswer: 1,
             explanation: 'A key benefit of procedures is reusability. The procedure is DEFINED once but can be CALLED as many times as needed. This avoids code duplication.'
@@ -158,7 +158,7 @@ Programs that model real-world processes. Simulations use:
         dropdowns: [
           {
             label: 'Using sort(myList) without knowing the internal algorithm demonstrates ___',
-            options: ['Abstraction', 'Iteration', 'Binary search', 'Data compression']
+            options: ['Abstraction', 'Iteration', 'Decomposition', 'Sequencing']
           },
           {
             label: 'In PROCEDURE add(a, b), a and b are ___',
@@ -212,10 +212,10 @@ Programs that model real-world processes. Simulations use:
           {
             question: 'A student uses a simulation to model the spread of a disease. Which is a limitation of this approach?',
             options: [
-              'Simulations always produce identical results',
-              'The results are only as accurate as the assumptions built into the model',
-              'Simulations take longer than real experiments',
-              'Simulations cannot use random numbers'
+              'Simulations always produce identical results on every run',
+              'Results are only as accurate as the assumptions built in',
+              'Simulations always take longer than real experiments',
+              'Simulations cannot use random numbers to model chance'
             ],
             correctAnswer: 1,
             explanation: 'Simulations simplify reality. If the model assumes the disease spreads at a fixed rate but it actually varies, the results will be inaccurate. Simulations are limited by their assumptions.'

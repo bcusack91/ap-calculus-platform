@@ -47,7 +47,7 @@ export const cspCreativeDevelopmentPart3Data = {
               "Writing the same block of statements at each call site.",
               "Defining a procedure once and calling it from many places.",
               "Replacing functions with a long chain of IF statements.",
-              "Using hardcoded literal values inline at each call site."
+              "Using hardcoded literal values inline at every single call site."
             ],
             correctAnswer: 1,
             explanation: "Procedures let you write logic once and reuse it."
@@ -115,15 +115,15 @@ The program responds to events instead of running top-to-bottom and exiting.
         dropdowns: [
           {
             label: "A procedure that turns a list of strings into a comma-separated string is most useful as ___",
-            options: ["a reusable abstraction called from many places", "a one-line script never reused", "malware", "a hardware driver"]
+            options: ["a reusable abstraction called from many places", "code copied wherever a list is printed", "an event handler tied to one button", "a loop written inline each time"]
           },
           {
             label: "Pseudocode like ON CLICK followed by a block is ___",
-            options: ["event-driven", "recursive", "sequential-only", "binary"]
+            options: ["event-driven", "iterative", "sequential", "conditional selection"]
           },
           {
             label: "Decomposition primarily makes a program easier to ___",
-            options: ["understand, test, and maintain", "compress", "encrypt", "route"]
+            options: ["understand, test, and maintain", "run faster, since procedures skip unneeded steps", "fit in memory, because each procedure is smaller", "secure, because split-up code is harder to read"]
           }
         ],
         correctAnswers: ["a reusable abstraction called from many places", "event-driven", "understand, test, and maintain"],
@@ -169,7 +169,7 @@ The program responds to events instead of running top-to-bottom and exiting.
             options: [
               "One sequential script that runs top-to-bottom and then exits.",
               "Event-driven handlers for mousedown, mousemove, and mouseup events.",
-              "A single while-true loop that polls the mouse on every iteration.",
+              "A single while-true loop that polls the mouse x, y, and button state.",
               "A recursive function that calls itself for every pixel of movement."
             ],
             correctAnswer: 1,

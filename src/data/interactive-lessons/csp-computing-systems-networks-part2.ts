@@ -37,10 +37,10 @@ Each layer **abstracts** the messy details below, letting the next layer up be s
           {
             question: "A web browser does NOT need to know which brand of network card the device uses. The mechanism that hides this detail is ___",
             options: [
-              "encryption applied between the browser and the network card before any send",
-              "abstraction provided by the operating system and its installed device drivers",
-              "compression of the network-card identifier so the browser can't read it",
-              "lossy encoding of card-specific bytes before they reach the application layer"
+              "encryption between the browser and the network card before any send",
+              "abstraction provided by the operating system and its drivers",
+              "a standard that requires every network card to work the same way inside",
+              "the browser itself, which contains code for every brand of card"
             ],
             correctAnswer: 1,
             explanation: "OS + drivers abstract hardware specifics."
@@ -93,7 +93,7 @@ Client-server is easier to administer; P2P is more fault-tolerant and scales dif
 |------|---------|---------|
 | **Bandwidth** | Capacity (bits / second). | Width of a pipe. |
 | **Throughput** | Actual rate achieved. | Water flowing right now. |
-| **Latency** | Time for one packet round trip. | Time for first drop to arrive. |
+| **Latency** | Time for data to travel from sender to receiver (a ping reports the round trip). | Time for first drop to arrive. |
 
 A high-bandwidth, high-latency link (satellite) can move lots of data — slowly.
       `
@@ -108,14 +108,14 @@ A high-bandwidth, high-latency link (satellite) can move lots of data — slowly
 
 2) A model where each node acts as both client and server is called _______-to-_______.
 
-3) The time for a single packet to make a round trip is called _______.
+3) The time it takes data to travel from sender to receiver is called _______.
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ["LAN", "peer/peer", "latency"],
         hint1: "Local area.",
         hint2: "P2P.",
-        hint3: "Round-trip time.",
+        hint3: "It is a delay, not a rate.",
         explanation: "LAN; peer-to-peer; latency."
       }
     },
@@ -129,15 +129,15 @@ A high-bandwidth, high-latency link (satellite) can move lots of data — slowly
         dropdowns: [
           {
             label: "A satellite link with high bandwidth but high latency is best for ___",
-            options: ["bulk file transfers, NOT real-time interactive use", "real-time gaming", "video calls", "live debate"]
+            options: ["bulk file transfers, NOT real-time interactive use", "real-time gaming, since high bandwidth means fast replies", "live video calls, since bandwidth matters more than delay", "remote control of robots, NOT bulk file transfers"]
           },
           {
             label: "A client-server architecture centralizes ___",
-            options: ["control and data on the server", "storage on each peer", "all decisions on clients", "compression on the network"]
+            options: ["control and data on the server", "storage across every client device", "all decisions on the client devices", "routing on each individual peer"]
           },
           {
             label: "A P2P system continues working when ___",
-            options: ["individual nodes leave or join, since no single point is required", "the central server fails (there is none)", "TLS fails", "IPv6 fails"]
+            options: ["individual nodes leave or join, since no single point is required", "the central server stays online, since every peer depends on it", "all peers stay connected at once, since data lives on one node", "every peer holds a full copy, since partial copies cannot be shared"]
           }
         ],
         correctAnswers: ["bulk file transfers, NOT real-time interactive use", "control and data on the server", "individual nodes leave or join, since no single point is required"],
@@ -169,10 +169,10 @@ A high-bandwidth, high-latency link (satellite) can move lots of data — slowly
           {
             question: "A school provides a Wi-Fi network with 1 Gbps total bandwidth shared among 500 simultaneous users. Per-user effective throughput depends on ___",
             options: [
-              "only the underlying link's rated bandwidth, regardless of how busy it currently is.",
-              "how many users are active and how the bandwidth is allocated; congestion lowers each share.",
-              "only the transport-layer security protocol the users' applications happen to be using.",
-              "only whether the network has switched from IPv4 to IPv6 for client addressing."
+              "only the link's rated bandwidth, no matter how busy the network is.",
+              "how many people are active and how the capacity is split between them.",
+              "only the encryption protocol that each person's apps happen to use.",
+              "only the distance between each device and the nearest wireless access point."
             ],
             correctAnswer: 1,
             explanation: "Shared bandwidth = per-user throughput depends on contention."
@@ -182,8 +182,8 @@ A high-bandwidth, high-latency link (satellite) can move lots of data — slowly
             options: [
               "low latency between every player and the central game server",
               "high bandwidth on the link from the central server out to each player",
-              "compression ratio of the game's installer downloaded once at the start",
-              "lossless coding of every texture file shipped inside the game's install bundle"
+              "a large disk cache so that the game's files load quickly at launch",
+              "a high download speed for patches that are installed at the start"
             ],
             correctAnswer: 0,
             explanation: "Real-time interactive needs low latency."

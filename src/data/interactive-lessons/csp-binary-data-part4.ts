@@ -35,10 +35,10 @@ The "everything is bits" idea makes the rest of the course possible.
           {
             question: "A photograph and an audio clip are sent over the same network connection. From the network's perspective, ___",
             options: [
-              "the photograph travels faster.",
-              "both are sequences of bits and travel through the same packets.",
-              "the audio clip is stored as text.",
-              "photographs need a special \"photo channel\"."
+              "the photograph travels faster because image packets get priority.",
+              "each is just a sequence of bits carried in ordinary packets.",
+              "the audio clip is converted to text before it is transmitted.",
+              "photographs need a dedicated channel separate from audio data."
             ],
             correctAnswer: 1,
             explanation: "On the wire, all data is bits packaged into packets."
@@ -46,10 +46,10 @@ The "everything is bits" idea makes the rest of the course possible.
           {
             question: "A 100 KB text file is encrypted into a different 100 KB file. The encrypted bytes ___",
             options: [
-              "no longer need any encoding scheme.",
-              "still represent some bit pattern, just not meaningful as text without the key.",
-              "cannot be sent over the Internet.",
-              "are guaranteed to be smaller."
+              "no longer represent binary data until they are decrypted.",
+              "are still a bit pattern, just meaningless as text without the key.",
+              "cannot be sent over the Internet until they are decrypted first.",
+              "are guaranteed to be smaller than the original plaintext file."
             ],
             correctAnswer: 1,
             explanation: "Encryption is a transformation of bits, not a removal of bits."
@@ -112,15 +112,15 @@ Compression (next part) takes a bit pattern and produces a shorter one that deco
         dropdowns: [
           {
             label: "Encrypting a 1 MB document produces a ciphertext that is approximately ___",
-            options: ["1 MB", "0.5 MB", "2 MB", "0 bytes"]
+            options: ["1 MB", "0.5 MB", "2 MB", "8 MB"]
           },
           {
             label: "A network router primarily reads ___ when forwarding a packet",
-            options: ["the headers (source / destination)", "the file extension", "the encryption key", "the user's name"]
+            options: ["the headers (source / destination)", "the payload (the data being sent)", "the file metadata (name / type)", "the encryption key (sender's / receiver's)"]
           },
           {
             label: "The same 8 bits 01000001 mean \"A\" only when interpreted as ___",
-            options: ["ASCII text", "an audio sample", "a CSS color", "a Wi-Fi password"]
+            options: ["ASCII text", "a grayscale pixel", "a machine instruction", "an audio sample"]
           }
         ],
         correctAnswers: ["1 MB", "the headers (source / destination)", "ASCII text"],
@@ -154,7 +154,7 @@ Compression (next part) takes a bit pattern and produces a shorter one that deco
             question: "A video conferencing app simultaneously sends video frames, audio samples, and chat text. From a network standpoint, ___",
             options: [
               "each of the three media must travel on its own physically separate channel between the endpoints.",
-              "all three are sequences of bits sent in packets, distinguished by metadata in the application protocol.",
+              "every stream is bits in packets, separated by metadata in the application protocol.",
               "the video stream bypasses transport-layer encryption while the audio and chat streams are still encrypted.",
               "the chat text must arrive at the recipient before any of the video frames or audio samples are processed."
             ],
@@ -164,8 +164,8 @@ Compression (next part) takes a bit pattern and produces a shorter one that deco
           {
             question: "A user receives a file labeled \"vacation.jpg\" but the file's magic bytes correspond to a Windows executable. What is the most accurate concern?",
             options: [
-              "The image will simply appear inverted or color-shifted when the user opens it in a normal image viewer.",
-              "The file extension can be misleading; opening the file as an executable may run unexpected code on the device.",
+              "The image will simply appear inverted or color-shifted in a normal viewer.",
+              "The extension may be misleading, and opening the file could run malicious code.",
               "A file's magic bytes are guaranteed by the operating system to always match the file extension on disk.",
               "There is no concern at all, since file extensions on a downloaded file always honestly describe the contents."
             ],

@@ -53,10 +53,10 @@ export const cspDataPart1Data = {
           {
             question: 'Which of the following is an example of metadata for a digital photo?',
             options: [
-              'The colors of the pixels in the image',
-              'The subject of the photo',
+              'The red, green, and blue values of each pixel in the image',
+              'The people and objects shown in the photo',
               'The date, time, and GPS location where the photo was taken',
-              'The artistic style of the photo'
+              'The lighting, mood, and artistic style of the photo'
             ],
             correctAnswer: 2,
             explanation: 'Metadata is data ABOUT the data. The date, time, and GPS location describe properties of the photo file, not the content of the image itself.'
@@ -64,10 +64,10 @@ export const cspDataPart1Data = {
           {
             question: 'What is the difference between data and information?',
             options: [
-              'They are the same thing',
-              'Data is processed and organized; information is raw',
-              'Data is raw facts; information is data that has been processed to be meaningful',
-              'Information is always numerical; data is always text'
+              'They are the same thing; the two words are interchangeable',
+              'Data is processed and organized; information is raw input',
+              'Data is raw facts; information is data processed to be meaningful',
+              'Information is always numeric; data is always stored as text'
             ],
             correctAnswer: 2,
             explanation: 'Data is raw and unorganized (e.g., a list of numbers). Information is data that has been processed, organized, or analyzed to have meaning (e.g., the average of those numbers).'
@@ -137,11 +137,11 @@ Real-world data is often messy. Before analysis, you must:
         dropdowns: [
           {
             label: 'A list of raw test scores with no analysis is ___',
-            options: ['Data (raw, unprocessed)', 'Information (processed)', 'Knowledge (understanding)', 'Metadata']
+            options: ['Data (raw, unprocessed)', 'Information (processed)', 'Knowledge (understanding)', 'Metadata (data about data)']
           },
           {
             label: '"Students who study more tend to score higher" is a statement about ___',
-            options: ['Correlation', 'Causation (proven)', 'Metadata', 'Data cleaning']
+            options: ['Correlation', 'Causation (proven)', 'Sampling bias', 'Data cleaning']
           },
           {
             label: 'The file size and resolution of an image are examples of ___',
@@ -180,10 +180,10 @@ Real-world data is often messy. Before analysis, you must:
           {
             question: 'A study finds that cities with more firefighters also have more fires. What is the best explanation?',
             options: [
-              'Firefighters cause fires',
-              'This is causation — more firefighters lead to more fires',
-              'This is correlation — larger cities have both more firefighters AND more fires',
-              'The data must be wrong'
+              'Firefighters cause fires, so cities should hire fewer of them',
+              'This is causation — adding firefighters leads to more fires',
+              'This is correlation — larger cities have more of both',
+              'The data must be wrong, since the two cannot be related'
             ],
             correctAnswer: 2,
             explanation: 'City size is the confounding variable. Larger cities have more of everything — more firefighters AND more fires. The correlation does not mean firefighters cause fires. This is a classic AP CSP question.'
@@ -191,10 +191,10 @@ Real-world data is often messy. Before analysis, you must:
           {
             question: 'A dataset has 10,000 rows. Some rows have "USA", others "United States", others "US" in the country field. What should be done first?',
             options: [
-              'Analyze the data as-is',
-              'Delete all rows with inconsistent values',
-              'Clean the data by standardizing the country field to one format',
-              'Add more data to fix the inconsistency'
+              'Analyze the data as-is, since all three values mean the same country',
+              'Delete every row whose country value is not spelled USA',
+              'Clean the data by standardizing the country values to one format',
+              'Collect more rows so the inconsistent entries average out'
             ],
             correctAnswer: 2,
             explanation: 'Data cleaning requires standardizing inconsistent formats. All three values refer to the same country so they should be unified to one standard form before analysis.'

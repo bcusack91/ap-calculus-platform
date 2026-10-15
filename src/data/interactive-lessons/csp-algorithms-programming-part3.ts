@@ -34,19 +34,19 @@ Once you can translate algorithms into programs, you'll notice the same shapes r
           {
             question: "A procedure should return 0 immediately if its input list is empty. Which structure is best?",
             options: [
-              "A guard clause: IF (LENGTH(list) = 0) { RETURN 0 } at the very top of the procedure body.",
-              "A nested loop placed at the bottom of the procedure that handles the empty case after the work.",
-              "Skip the empty-list check entirely and let the main loop body crash on the empty input naturally.",
-              "Refuse to handle empty lists in this procedure and require every caller to filter them out first."
+              "IF (LENGTH(list) = 0) { RETURN 0 } as the first statement of the procedure",
+              "IF (LENGTH(list) = 1) { RETURN 0 } as the first statement of the procedure",
+              "No check at all, letting the main loop fail on the empty input",
+              "IF (LENGTH(list) > 0) { RETURN 0 } as the first statement of the procedure"
             ],
             correctAnswer: 0,
-            explanation: "Guard clauses near the top reject bad inputs early so the main code can assume valid data."
+            explanation: "A guard clause at the top, IF (LENGTH(list) = 0) { RETURN 0 }, rejects the empty list before any other work, so the main code can assume valid data. Testing = 1 or > 0 would return 0 for the wrong lists."
           },
           {
             question: "A loop should set a flag found ← TRUE the first time list[i] = target. Which approach guarantees correctness AND avoids unnecessary work?",
             options: [
               "Set found ← TRUE inside the IF and continue iterating through the rest of the list anyway.",
-              "Set found ← TRUE inside the IF and RETURN immediately (or break) once the first match is found.",
+              "Set found ← TRUE inside the IF and RETURN right away once the first match is found.",
               "Initialize found ← TRUE before the loop even starts and let the loop body verify each element.",
               "Set found ← list[i] when found, so the variable holds the matching value rather than a Boolean."
             ],
@@ -129,15 +129,15 @@ The IF inside the loop is the **filter**; total is the **accumulator**. Together
         dropdowns: [
           {
             label: "A \"there exists\" check is implemented by RETURNing TRUE on the first ___",
-            options: ["match", "counter-example", "iteration", "parameter"]
+            options: ["match", "non-match", "counter-example", "comparison"]
           },
           {
             label: "When a helper is reused 5 times across a program, the main benefit is ___",
-            options: ["readability and single-point-of-fix", "speed", "memory savings", "shorter file size"]
+            options: ["readability and single-point-of-fix", "faster execution of each separate call", "lower memory use while the program runs", "fewer instructions executed at runtime"]
           },
           {
             label: "The accumulator pattern initializes the accumulator with the operation's ___ value",
-            options: ["identity", "maximum", "random", "last"]
+            options: ["identity", "inverse", "maximum possible", "average"]
           }
         ],
         correctAnswers: ["match", "readability and single-point-of-fix", "identity"],
@@ -170,10 +170,10 @@ The IF inside the loop is the **filter**; total is the **accumulator**. Together
           {
             question: "A procedure should return TRUE if any element of list is negative. The student writes:\n\nresult ← FALSE\nFOR EACH x IN list { IF (x < 0) { result ← TRUE } ELSE { result ← FALSE } }\nRETURN result\n\nWhat is the bug?",
             options: [
-              "Nothing is wrong.",
-              "The ELSE branch resets result to FALSE, so only the LAST element decides the answer.",
-              "result should be a list, not a Boolean.",
-              "FOR EACH cannot be used on a list."
+              "Nothing is wrong; result correctly reports any negative element.",
+              "The ELSE resets result, so only the last element decides the answer.",
+              "result should start as TRUE, since the loop only sets it to FALSE.",
+              "FOR EACH gives elements, not indexes, so x < 0 never runs."
             ],
             correctAnswer: 1,
             explanation: "The ELSE clobbers prior matches. Either remove the ELSE, or RETURN TRUE on first match."
@@ -181,10 +181,10 @@ The IF inside the loop is the **filter**; total is the **accumulator**. Together
           {
             question: "A team has six places in their codebase that compute \"is this a weekend day?\". Each implements the check inline. They later need to add Friday to the weekend (cultural calendar). Which design choice would have prevented the multi-place fix?",
             options: [
-              "Inlining the check is fine; just edit all six places.",
-              "Extracting an isWeekend(day) helper procedure so all callers update from one fix.",
-              "Renaming the variables.",
-              "Adding more comments to each call site."
+              "Inlining the check, since editing all six places is only a small task.",
+              "Extracting one isWeekend helper procedure that every caller uses.",
+              "Renaming the variables in each copy so the checks are easier to find.",
+              "Adding comments at each call site that point to the other five copies."
             ],
             correctAnswer: 1,
             explanation: "Helper procedures create a single point of change — the central abstraction win."

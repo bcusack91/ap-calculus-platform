@@ -29,8 +29,8 @@ Apply data vocabulary to AP-style scenarios.
             options: [
               "merge duplicates by primary key, deciding how to combine fields.",
               "delete the spreadsheet entirely and ask for a fresh export from the source.",
-              "compress the spreadsheet so duplicate rows take up less disk space overall.",
-              "encrypt the spreadsheet so the duplicate rows can no longer be read directly."
+              "keep every row, since duplicates do not change totals.",
+              "sort the rows alphabetically, which removes duplicate entries automatically."
             ],
             correctAnswer: 0,
             explanation: "Deduplication is part of data cleaning."
@@ -39,9 +39,9 @@ Apply data vocabulary to AP-style scenarios.
             question: "A team finds that two students share the exact same name in different rows. The right way to distinguish them is ___",
             options: [
               "guess which row is which based on the order they appear in the file.",
-              "use a unique ID column (such as student ID), not the name field.",
+              "use a unique ID column such as an enrollment number, not the name.",
               "silently delete one of the two rows so the duplicate apparent name disappears.",
-              "encrypt the name field so the records appear different to downstream code."
+              "add a middle initial to one name so the two rows look different."
             ],
             correctAnswer: 1,
             explanation: "Unique IDs are the standard way to distinguish records."
@@ -120,15 +120,15 @@ This is the standard "group by + aggregate" pattern of data analysis.
         dropdowns: [
           {
             label: "A histogram is best for ___",
-            options: ["showing the distribution of one numeric variable", "comparing categorical sales", "time-series trends", "pie share"]
+            options: ["showing the distribution of one numeric variable", "comparing totals across named categories", "showing how one variable changes over time", "showing each category's share of a whole"]
           },
           {
             label: "When you need to combine \"students\" and \"grades\" tables, you ___",
-            options: ["join on student ID", "concatenate file contents", "compress both", "encrypt both"]
+            options: ["join on student ID", "join on student name", "concatenate file contents", "sort both by grade"]
           },
           {
             label: "Documenting cleaning decisions matters because ___",
-            options: ["it makes the analysis reproducible", "it makes files smaller", "it encrypts data", "it routes packets faster"]
+            options: ["it makes the analysis reproducible", "it removes the need to keep raw data", "it proves the cleaned data is unbiased", "it lets the analysis run on less hardware"]
           }
         ],
         correctAnswers: ["showing the distribution of one numeric variable", "join on student ID", "it makes the analysis reproducible"],
@@ -161,10 +161,10 @@ This is the standard "group by + aggregate" pattern of data analysis.
           {
             question: "A team analyzes survey data and discovers responses from one school count 10x compared to others. The most appropriate response is ___",
             options: [
-              "ignore the imbalance and report the raw aggregate as if sampling were uniform.",
-              "either weight the responses or note the imbalance — uneven sampling distorts conclusions.",
+              "ignore the imbalance and report the raw aggregate, since sampling is close enough to uniform.",
+              "weight the data or report the imbalance, since uneven sampling distorts results.",
               "silently delete the other schools' data so the dataset matches the dominant school.",
-              "encrypt the survey responses so the imbalance cannot be measured downstream."
+              "add more rows from the large school so its share is clearer in the totals."
             ],
             correctAnswer: 1,
             explanation: "Uneven samples distort conclusions; weighting or noting the imbalance is standard."
@@ -173,9 +173,9 @@ This is the standard "group by + aggregate" pattern of data analysis.
             question: "A health app combines step counts with sleep data and shares \"anonymized\" exports for research. A CSP-aligned concern is ___",
             options: [
               "stripping account names removes essentially all re-identification risk from the dataset.",
-              "the combined behavioral pattern (steps + sleep) may uniquely identify individuals.",
-              "the app is now using too little memory because the export reduced what it stored.",
-              "the app should switch from TCP to UDP for transmitting the export to researchers."
+              "linked step and sleep patterns may single out specific individuals.",
+              "sleep data is not personal information, so sharing it raises no concern.",
+              "researchers cannot use exports that contain no names, so the data is useless."
             ],
             correctAnswer: 1,
             explanation: "Combined behavioral patterns are powerful quasi-identifiers."

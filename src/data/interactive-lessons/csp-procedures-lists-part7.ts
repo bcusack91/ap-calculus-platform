@@ -106,7 +106,7 @@ export const cspProceduresListsPart7Data = {
         dropdowns: [
           {
             label: "Decomposing a 500-line function into smaller procedures primarily improves ___",
-            options: ["readability, testability, and reuse", "compression", "TLS speed", "IPv6 routing"]
+            options: ["readability, testability, and reuse", "execution speed and memory efficiency", "the program's compiled file size", "the number of features the program has"]
           },
           {
             label: "A procedure that returns true / false is called a ___",
@@ -114,7 +114,7 @@ export const cspProceduresListsPart7Data = {
           },
           {
             label: "A unit test ideally exercises ___",
-            options: ["a single procedure with known inputs and expected outputs", "the entire program", "the network", "compression"]
+            options: ["a single procedure with known inputs and expected outputs", "the whole program at once, running with real users and live data", "a single procedure with random inputs and no expected outputs", "all procedures together, each called from the main program"]
           }
         ],
         correctAnswers: ["readability, testability, and reuse", "predicate", "a single procedure with known inputs and expected outputs"],
@@ -147,10 +147,10 @@ export const cspProceduresListsPart7Data = {
           {
             question: "A team has one giant function with 12 distinct responsibilities. The CSP-aligned refactor is ___",
             options: [
-              "leave the function alone; consolidating responsibilities is the goal of good design.",
-              "extract each responsibility into a named procedure with a clear input/output, then compose.",
-              "compress the source file so the 12 responsibilities take less disk space when archived.",
-              "encrypt the function body so future maintainers cannot accidentally split the responsibilities."
+              "leave it, since one function is easier to find than twelve.",
+              "extract each responsibility into a named procedure, then compose them.",
+              "split the function every 50 lines, whatever each part does.",
+              "add comments marking where each responsibility begins."
             ],
             correctAnswer: 1,
             explanation: "Decompose into named, single-responsibility procedures."
@@ -158,10 +158,10 @@ export const cspProceduresListsPart7Data = {
           {
             question: "A procedure **removeFirstNegative(list)** modifies the caller's list. A teammate is surprised when their original list changes. The CSP-aligned fix is ___",
             options: [
-              "leave it as-is; teammates should learn to expect mutation in any procedure call.",
-              "document the mutation OR return a fresh modified copy and leave the original untouched.",
-              "compress the caller's list so the in-place removal takes less memory than before.",
-              "encrypt the caller's list so the in-place removal cannot be observed by other code."
+              "leave it; teammates should expect mutation from any procedure.",
+              "document the mutation, or return a changed copy and keep the input intact.",
+              "make the list global so every teammate can see the change as it happens.",
+              "rename the procedure so its name hides that it changes the list."
             ],
             correctAnswer: 1,
             explanation: "Make mutation explicit, or avoid it."

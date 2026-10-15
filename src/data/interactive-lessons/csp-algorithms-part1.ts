@@ -52,7 +52,7 @@ Not all algorithms solve a problem equally fast. Efficiency measures how the num
           {
             question: 'Which three building blocks can express ANY algorithm?',
             options: [
-              'Input, output, and storage',
+              'Input, output, and long-term storage',
               'Sequencing, selection, and iteration',
               'Variables, functions, and classes',
               'Hardware, software, and networking'
@@ -166,7 +166,7 @@ PROCEDURE binarySearch(sortedList, target)
           },
           {
             label: 'An algorithm that checks every possible ordering of n items (n! steps) is ___',
-            options: ['Unreasonable (impractical for large n)', 'Reasonable', 'Optimal', 'Linear']
+            options: ['Unreasonable (impractical for large n)', 'Reasonable (polynomial in n)', 'Linear (grows in proportion to n)', 'Undecidable (no algorithm can ever solve it)']
           }
         ],
         correctAnswers: ['n elements', 'log2(n) elements', 'Unreasonable (impractical for large n)'],
@@ -211,10 +211,10 @@ PROCEDURE binarySearch(sortedList, target)
           {
             question: 'Which problem is undecidable?',
             options: [
-              'Sorting a list of numbers',
-              'Finding the shortest path between two cities',
-              'Determining whether an arbitrary program will eventually stop running',
-              'Searching for a value in a list'
+              'Sorting a list of a billion numbers into order',
+              'Finding the shortest route that visits 50 cities',
+              'Deciding whether any given program will eventually halt',
+              'Searching an unsorted list for a target value'
             ],
             correctAnswer: 2,
             explanation: 'The Halting Problem — determining if any program will halt on any input — is proven undecidable by Alan Turing. No algorithm can solve it for ALL possible programs.'

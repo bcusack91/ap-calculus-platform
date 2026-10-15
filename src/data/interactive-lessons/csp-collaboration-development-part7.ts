@@ -27,8 +27,8 @@ The collaboration concepts the AP exam tests most.
           {
             question: "AP CSP's definition of collaboration includes ___",
             options: [
-              "silent solo work where each person codes their own piece in isolation.",
-              "inclusive practices: many voices, shared knowledge, and constructive feedback.",
+              "silent solo work, where each person codes, tests, and documents alone.",
+              "drawing on many voices, sharing knowledge, and giving constructive feedback.",
               "always working in person, since face-to-face meetings are required for trust.",
               "always working remotely, since in-person work is treated as a failure mode."
             ],
@@ -41,7 +41,7 @@ The collaboration concepts the AP exam tests most.
               "encrypting source code so only project maintainers can read it.",
               "asynchronous code review by teammates before changes are merged.",
               "compressing commit history so the repository takes less disk space.",
-              "generating random review comments to satisfy automated reviewers."
+              "locking files so only one teammate can edit the code at a time."
             ],
             correctAnswer: 1,
             explanation: "PRs = mechanism for async code review."
@@ -108,15 +108,15 @@ The collaboration concepts the AP exam tests most.
         dropdowns: [
           {
             label: "A team's knowledge stays distributed when it ___",
-            options: ["documents decisions and uses code review", "centralizes everything in one person's head", "uses no version control", "avoids meetings entirely"]
+            options: ["documents decisions and uses code review", "centralizes everything in one person's head", "assigns each module to one expert who owns it alone", "keeps decisions in private chats between pairs"]
           },
           {
             label: "A PR description should answer ___",
-            options: ["\"what changed and why\" so reviewers have context", "just \"fixed it\"", "private team gossip", "compression ratios"]
+            options: ["\"what changed and why\" so reviewers have context", "\"how long it took\" so managers can track effort", "\"every line changed\" so reviewers skip the diff", "\"who wrote it\" so blame can be assigned later"]
           },
           {
             label: "When AI suggests code, the team should ___",
-            options: ["review it as carefully as any other change", "merge it automatically", "never use it", "paste it into more AI tools"]
+            options: ["review it as carefully as any other change", "merge it once it passes the automated test suite", "trust it, since AI tools are trained on correct code", "ban it from every part of the codebase"]
           }
         ],
         correctAnswers: ["documents decisions and uses code review", "\"what changed and why\" so reviewers have context", "review it as carefully as any other change"],
@@ -150,7 +150,7 @@ The collaboration concepts the AP exam tests most.
             question: "A school project team is told to \"use collaboration tools\". The most AP-aligned interpretation is ___",
             options: [
               "email each member's changes around at the end of every working day.",
-              "use a version-controlled repo, review each other's changes, and split work into small reviewable pieces.",
+              "use a shared version-controlled repo and review each other's changes.",
               "have one student do all the coding while the others handle non-technical tasks.",
               "share a single account whose credentials are posted in the team chat channel."
             ],

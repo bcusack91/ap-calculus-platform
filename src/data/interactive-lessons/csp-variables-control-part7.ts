@@ -29,8 +29,8 @@ Final review.
             options: [
               "tests if x equals y.",
               "copies y's value into x.",
-              "swaps x and y.",
-              "deletes y."
+              "swaps the values of x and y.",
+              "copies x's value into y."
             ],
             correctAnswer: 1,
             explanation: "Assignment = copy right into left."
@@ -41,7 +41,7 @@ Final review.
               "becomes true.",
               "becomes false.",
               "is initialized.",
-              "is encrypted."
+              "becomes undefined."
             ],
             correctAnswer: 0,
             explanation: "REPEAT UNTIL exits when the condition becomes true."
@@ -109,15 +109,15 @@ Final review.
         dropdowns: [
           {
             label: "IF / ELSE IF / ELSE chains are best when ___",
-            options: ["cases partition into ranked conditions", "a loop is needed", "no decision is needed", "compression is needed"]
+            options: ["cases partition into ranked conditions", "every condition must be tested on its own", "an action repeats a set number of times", "only a single yes-or-no check is needed"]
           },
           {
             label: "Tracing through code with a small variable table is ___",
-            options: ["the standard technique for predicting program output", "illegal", "optional only", "a compression technique"]
+            options: ["the standard technique for predicting program output", "only useful after the program has been compiled", "a substitute for testing the program on real inputs", "a technique that only works for loop-free programs"]
           },
           {
             label: "A pure function without side effects is ___",
-            options: ["easier to test and reason about", "always slower", "cannot be reused", "always encrypted"]
+            options: ["easier to test and reason about", "harder to test since it has no effects", "unable to be reused in other programs", "only able to work with global variables"]
           }
         ],
         correctAnswers: ["cases partition into ranked conditions", "the standard technique for predicting program output", "easier to test and reason about"],
@@ -151,8 +151,8 @@ Final review.
             question: "A program needs to find the SECOND-largest value in a list. The most straightforward approach is ___",
             options: [
               "no loop needed — the second-largest value can be read off any single element.",
-              "two \"best so far\" trackers (largest and secondLargest) updated together as you scan.",
-              "random selection of one element and returning it as the second-largest candidate.",
+              "two \"best so far\" trackers for the largest and second-largest, updated in one scan.",
+              "a single counter that tallies how many values exceed the first element.",
               "sort the list ascending and then take its first element as the second-largest value."
             ],
             correctAnswer: 1,
@@ -161,10 +161,10 @@ Final review.
           {
             question: "A counter variable is incremented from event handlers AND from a timer. Without coordination, the count is sometimes wrong. The most accurate diagnosis is ___",
             options: [
-              "no issue — concurrent increments to the same counter always interleave safely by default.",
-              "a race condition on shared mutable state; needs synchronization or a different design.",
-              "a compression issue that causes the counter to shrink occasionally between updates.",
-              "a transport-layer issue that prevents the counter from updating across the network."
+              "no issue, since concurrent increments to one counter always interleave safely.",
+              "a race condition on shared state that needs synchronization or a redesign.",
+              "an overflow error that occurs whenever two increments happen at once.",
+              "a logic error in the timer, which fires more often than it should."
             ],
             correctAnswer: 1,
             explanation: "Concurrent updates to shared state cause race conditions."

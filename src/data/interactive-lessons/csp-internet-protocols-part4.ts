@@ -34,10 +34,10 @@ The Internet is the substrate everything else runs on.
           {
             question: "Which property of the Internet most directly enables global, low-cost communication?",
             options: [
-              "Centralized control by a single company.",
-              "Open, standardized protocols any device can implement.",
-              "Mandatory encryption at every layer.",
-              "Government-issued IP addresses."
+              "Centralized control of the network by a single company.",
+              "Open, standardized protocols that any device can implement.",
+              "Mandatory encryption at every layer of the network.",
+              "Government-issued IP addresses for every connected device."
             ],
             correctAnswer: 1,
             explanation: "Open standards + interoperability = anyone can join, anyone can build."
@@ -45,10 +45,10 @@ The Internet is the substrate everything else runs on.
           {
             question: "HTTPS adds which property over HTTP?",
             options: [
-              "Faster page loads in all cases.",
-              "Encryption (and authenticated identity of the server) via TLS.",
-              "Compression of every page.",
-              "Lower bandwidth use."
+              "Faster page loads, since TLS compresses every response.",
+              "Encryption and server authentication, provided by TLS.",
+              "Guaranteed delivery of every packet, provided by TLS.",
+              "Lower bandwidth use, since encrypted pages are smaller."
             ],
             correctAnswer: 1,
             explanation: "HTTPS = HTTP over TLS, which encrypts traffic and authenticates the server's certificate."
@@ -125,15 +125,15 @@ Big Idea 5 examines these consequences.
         dropdowns: [
           {
             label: "Inside HTTPS, the encryption itself happens at the ___ layer",
-            options: ["TLS (between transport and application)", "physical", "IP", "DNS"]
+            options: ["TLS (between transport and application)", "IP (the internet / routing layer)", "TCP (the transport layer itself)", "HTTP (the application layer itself)"]
           },
           {
             label: "A \"self-healing\" property of the Internet means ___",
-            options: ["traffic re-routes around failed links", "broken cables fix themselves", "malware is auto-removed", "all packets are encrypted"]
+            options: ["traffic re-routes around failed links", "failed routers restart automatically", "every packet takes a fixed backup path", "lost packets are rebuilt by routers"]
           },
           {
             label: "Open standards make the Internet ___",
-            options: ["interoperable across vendors", "controlled by a single company", "slower", "unencrypted"]
+            options: ["interoperable across vendors", "controlled by a single company", "faster than proprietary networks", "secure by default for all users"]
           }
         ],
         correctAnswers: ["TLS (between transport and application)", "traffic re-routes around failed links", "interoperable across vendors"],
@@ -166,10 +166,10 @@ Big Idea 5 examines these consequences.
           {
             question: "A user visits a banking site. The browser shows a padlock and the URL begins with https://. Which guarantees does this primarily provide?",
             options: [
-              "The site has been verified safe by every government.",
-              "Traffic is encrypted in transit AND the server's certificate has been validated.",
-              "The user's account cannot be hacked.",
-              "The page loads faster than HTTP."
+              "The site has been reviewed and verified safe by a government agency.",
+              "Traffic is encrypted, and the server's certificate was validated.",
+              "The user's account is protected from being hacked by any means.",
+              "The page and its images will load faster than they would over HTTP."
             ],
             correctAnswer: 1,
             explanation: "HTTPS provides encryption and server authentication; it does NOT promise safety of the site's practices or the user's account."
@@ -177,10 +177,10 @@ Big Idea 5 examines these consequences.
           {
             question: "A regional Internet outage causes a major undersea cable to fail. Many websites still load, possibly slower. The most accurate explanation is ___",
             options: [
-              "websites cached themselves locally.",
-              "routing algorithms automatically forward traffic over alternate paths.",
-              "each website has its own private fiber.",
-              "TCP retransmits the cable."
+              "every website keeps a full local copy on each user's device.",
+              "routers automatically send traffic along other available paths.",
+              "each website owns a private fiber line around the cable.",
+              "TCP retransmits packets until the broken cable is repaired."
             ],
             correctAnswer: 1,
             explanation: "Routing protocols redirect packets via remaining paths — the network's self-healing property."

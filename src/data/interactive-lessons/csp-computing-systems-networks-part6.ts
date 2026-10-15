@@ -25,21 +25,21 @@ export const cspComputingSystemsNetworksPart6Data = {
           {
             question: "Two computers in the same room transfer a 10 GB file at 100 Mbps. Approximate transfer time?",
             options: [
-              "8 minutes",
-              "8 seconds",
-              "8 hours",
-              "8 days"
+              "About 13 minutes",
+              "About 100 seconds",
+              "About 2 hours",
+              "About 1 day"
             ],
             correctAnswer: 0,
-            explanation: "10 GB ≈ 80,000 Mb / 100 Mbps = 800 s ≈ 13 min (8–13 min range)."
+            explanation: "10 GB = 80,000 megabits, and 80,000 ÷ 100 Mbps = 800 s, about 13 minutes. Reading 100 Mbps as 100 megabytes per second gives 100 s, the classic bits-versus-bytes mistake."
           },
           {
             question: "A user from New York pings a server in Tokyo and gets ~150 ms RTT. The dominant factor is ___",
             options: [
-              "CPU speed.",
-              "distance / speed of light + intermediate routers.",
-              "TLS handshake only.",
-              "compression."
+              "the CPU speed of the user's own computer.",
+              "the physical distance and the routers along the path.",
+              "the time the Tokyo server takes to encrypt each reply.",
+              "the compression applied to each ping packet."
             ],
             correctAnswer: 1,
             explanation: "Long-distance latency is dominated by physical distance + hops."
@@ -106,15 +106,15 @@ export const cspComputingSystemsNetworksPart6Data = {
         dropdowns: [
           {
             label: "A satellite link with 100 Mbps and 600 ms RTT is best for ___",
-            options: ["large bulk transfers", "real-time first-person shooters", "live debate", "video calls"]
+            options: ["large bulk transfers", "live online gaming", "two-way video calls", "remote desktop control"]
           },
           {
             label: "A region without a nearby CDN node experiences ___",
-            options: ["higher latency to fetch the same content", "free service", "better DNS", "lower TLS overhead"]
+            options: ["higher latency to fetch the same content", "lower latency, since servers are less busy", "no change, since bandwidth is all that matters", "no access at all to content hosted abroad"]
           },
           {
             label: "A multi-tenant cloud server's shared CPU may cause ___",
-            options: ["\"noisy neighbor\" performance variance", "lossy compression", "TLS failure", "IPv6 collapse"]
+            options: ["\"noisy neighbor\" performance variance", "guaranteed fixed performance for each tenant", "automatic data sharing between tenants", "faster speeds than a dedicated server"]
           }
         ],
         correctAnswers: ["large bulk transfers", "higher latency to fetch the same content", "\"noisy neighbor\" performance variance"],
@@ -146,10 +146,10 @@ export const cspComputingSystemsNetworksPart6Data = {
           {
             question: "A team's app feels fast in the US but slow in Asia. The single most useful change is ___",
             options: [
-              "no architectural change — the user-perceived gap will resolve as users adapt over time.",
-              "add a CDN with Asian edge nodes so static content is served closer to users there.",
-              "switch the entire site from TLS 1.3 down to the older TLS 1.0 protocol everywhere.",
-              "switch every endpoint from TCP to UDP and accept whatever packet loss results."
+              "buy a faster processor for the single US server that handles all traffic.",
+              "add a CDN with Asian edge nodes so content is served near users there.",
+              "compress the images further so pages in Asia download fewer bytes.",
+              "increase the bandwidth of the US data center's own connection to the internet."
             ],
             correctAnswer: 1,
             explanation: "Geographic CDN reduces transcontinental latency."
@@ -157,10 +157,10 @@ export const cspComputingSystemsNetworksPart6Data = {
           {
             question: "A user complains about laggy video calls on a Wi-Fi connection with 200 Mbps download. The most likely culprit is ___",
             options: [
-              "raw bandwidth — 200 Mbps is simply not enough capacity to make video calls usable.",
-              "latency, jitter, or packet loss on Wi-Fi or upstream — bandwidth alone isn't enough.",
-              "transport-layer security overhead on every packet exchanged with the call server.",
-              "lossy compression artifacts in the video stream that the call client can't decode."
+              "raw bandwidth, since 200 Mbps is not enough capacity for a video call.",
+              "latency, jitter, or packet loss on the Wi-Fi link, not raw bandwidth.",
+              "encryption, headers, and checksums added to every packet of the call.",
+              "the screen resolution, since high-resolution displays slow decoding."
             ],
             correctAnswer: 1,
             explanation: "Real-time depends on latency / jitter / packet loss, not just bandwidth."
