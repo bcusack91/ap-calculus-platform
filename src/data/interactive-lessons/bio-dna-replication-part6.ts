@@ -40,10 +40,10 @@ A researcher treats E. coli with radioactive thymidine ($^3$H-thymidine) for a b
           {
             question: 'If DNA ligase is mutated (non-functional), what would autoradiography of the replicated DNA reveal?',
             options: [
-              'Normal continuous strands on both sides',
-              'The leading strand would appear normal and continuous; the lagging strand would remain fragmented (Okazaki fragments not joined) because ligase cannot seal the nicks between them',
-              'Both strands would be fragmented',
-              'No replication would occur'
+              'Both strands continuous, because DNA polymerase I seals every nick',
+              'Leading strand intact, lagging strand left as unjoined fragments',
+              'Both strands left in short pieces, since each is built from Okazaki fragments',
+              'No new DNA at all, because replication cannot begin without ligase'
             ],
             correctAnswer: 1,
             explanation: 'The leading strand is synthesized as one continuous piece — no ligation needed (beyond the initial primer replacement). The lagging strand consists of many Okazaki fragments that require ligase to be joined. Without ligase, Okazaki fragments remain separate, and the lagging strand is fragmented.'
@@ -87,10 +87,10 @@ Starting with one double-stranded DNA molecule where BOTH strands are labeled wi
           {
             question: 'After 5 generations of replication in 14N medium (starting from all 15N DNA), how many total DNA molecules are there and how many are intermediate density?',
             options: [
-              '32 total, 16 intermediate',
+              '32 total, 16 intermediate and 16 light',
               '32 total, 2 intermediate and 30 light',
-              '64 total, 2 intermediate',
-              '10 total, 5 intermediate'
+              '64 total, 2 intermediate and 62 light',
+              '10 total, 5 intermediate and 5 light'
             ],
             correctAnswer: 1,
             explanation: 'After 5 generations: $2^{5}$ = 32 total molecules. The two original 15N strands are each paired with a 14N strand = 2 intermediate molecules. The remaining 30 molecules are all-14N (light). The number of intermediate molecules is always exactly 2.'
@@ -132,10 +132,10 @@ Starting with one double-stranded DNA molecule where BOTH strands are labeled wi
           {
             question: 'BrdU (bromodeoxyuridine) is a thymidine analog that is incorporated into newly synthesized DNA and can be detected by antibodies. If cells replicate once in BrdU, then once without BrdU, what pattern of BrdU labeling would be seen in the daughter chromosomes?',
             options: [
-              'All four chromatids would be labeled',
-              'In the second division: each replicated chromosome would have one chromatid labeled (containing the BrdU strand from round 1) and one unlabeled (containing only thymidine), demonstrating semiconservative replication at the chromosomal level',
-              'No chromatids would be labeled — BrdU is diluted out',
-              'Only the leading strand would contain BrdU'
+              'Both chromatids of every chromosome labeled, since BrdU strands persist',
+              'One chromatid of each chromosome labeled and its sister unlabeled',
+              'No chromatids labeled, because BrdU is diluted out in round two',
+              'Only leading-strand DNA labeled, in a stripe along each chromatid'
             ],
             correctAnswer: 1,
             explanation: 'After replication in BrdU (round 1), both daughter molecules have one BrdU strand and one original strand. After replication WITHOUT BrdU (round 2), each of the two chromatids contains either the BrdU strand + unlabeled new strand (labeled chromatid) or the original strand + unlabeled new strand (unlabeled chromatid). This produces a "harlequin" pattern visible by staining.'

@@ -39,7 +39,7 @@ export const bioSpeciationPart1Data = {
               'species defined by reproductive compatibility',
               'speciation following geographic isolation',
               'speciation without geographic separation',
-              'reproductive isolation mechanism before fertilization'
+              'movement of alleles between populations'
             ],
             correctAnswer: 0,
             explanation: 'biological species concept is best matched with: species defined by reproductive compatibility.'
@@ -182,9 +182,9 @@ export const bioSpeciationPart1Data = {
             question: 'In an AP-style free-response about species concepts, the observed pattern is: isolation mechanism reducing hybrid viability or fertility. What term should anchor the explanation?',
             options: [
               'postzygotic barrier',
-              'polyploidy',
+              'allopatric speciation',
               'sympatric speciation',
-              'prezygotic barrier'
+              'convergent evolution'
             ],
             correctAnswer: 0,
             explanation: 'Use postzygotic barrier because it directly maps to the described biological pattern: isolation mechanism reducing hybrid viability or fertility.'

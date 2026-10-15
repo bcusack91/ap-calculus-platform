@@ -140,10 +140,10 @@ The exam loves to juxtapose two things that students blur together. Run these si
           {
             question: 'AP-style mutant prediction: An E. coli strain has the partial-diploid genotype $I^{-}$ $O^{c}$ $Z^{+}$ / $I^{+}$ $O^{+}$ $Z^{-}$. Will functional β-galactosidase be produced in the ABSENCE of inducer?',
             options: [
-              'No — without inducer the operon cannot be expressed',
-              'Yes — the $Z^{+}$ gene sits on the $O^{c}$ (operator-constitutive) operon, which is transcribed regardless of inducer or repressor, so functional enzyme is made constitutively',
+              'No — without inducer, neither operon can be expressed at all',
+              'Yes — $Z^{+}$ is on the $O^{c}$ operon, which no repressor can shut off',
               'No — the $I^{+}$ on the plasmid makes a repressor that shuts off both operons',
-              'Yes — but only because inducer is secretly present'
+              'Yes — but only because some inducer is secretly present in the cell'
             ],
             correctAnswer: 1,
             explanation: 'The functional $Z^{+}$ is linked to $O^{c}$, a cis-acting operator that the repressor cannot bind, so that operon is constitutive and makes β-gal even without inducer. The "$I^{+}$ repressor shuts off both operons" option is the key trap: although $I^{+}$ makes a good repressor, a cis-acting $O^{c}$ cannot be rescued in trans, so the repressor cannot silence the $O^{c}$ $Z^{+}$ operon. The "cannot be expressed without inducer" option ignores constitutivity, and the "inducer is secretly present" option invents an inducer not in the problem.'
@@ -151,10 +151,10 @@ The exam loves to juxtapose two things that students blur together. Run these si
           {
             question: 'A eukaryotic gene becomes heritably silenced in a cell lineage. Researchers find heavy DNA methylation of its promoter CpG island and deacetylated histones, but no change in its nucleotide sequence. Which statement is correct?',
             options: [
-              'This is a mutation, because the gene is now nonfunctional',
-              'This is epigenetic silencing — methylation and histone deacetylation repress the gene and are inherited through mitosis without altering the DNA sequence',
-              'This is operon repression by a corepressor',
-              'This is RNA interference acting on the gene\'s DNA'
+              'This is a mutation, because the gene is now permanently nonfunctional',
+              'This is epigenetic control, passed on through mitosis with intact DNA',
+              'This is operon repression by a corepressor, as in the trp operon',
+              'This is RNA interference acting directly on the gene\'s DNA'
             ],
             correctAnswer: 1,
             explanation: 'Heritable silencing with promoter methylation, deacetylated histones, and an intact sequence is the definition of epigenetic repression. The mutation option is the central trap — epigenetic changes are not mutations (no sequence change). The corepressor option imports the prokaryotic trp operon, which does not apply to a eukaryotic gene. The RNA-interference option misplaces RNAi: RNAi acts on mRNA post-transcriptionally, not on the gene\'s DNA.'
@@ -162,10 +162,10 @@ The exam loves to juxtapose two things that students blur together. Run these si
           {
             question: 'Wild-type E. coli is shifted from glucose-only medium to medium with lactose but no glucose. Which sequence of events best explains the resulting strong induction of the lac operon?',
             options: [
-              'Glucose loss raises cAMP, so CAP-cAMP binds and recruits RNA polymerase; meanwhile allolactose from lactose removes the LacI repressor — both switches now favor ON, giving HIGH transcription',
-              'Lactose lowers cAMP, freeing CAP to repress the operon',
+              'cAMP rises so CAP-cAMP recruits polymerase, and allolactose removes LacI',
+              'Lactose lowers cAMP, which frees CAP to bind and repress the operon',
               'Loss of glucose causes the repressor to fall off the operator directly',
-              'The operon was already maximally expressed on glucose alone'
+              'The operon was already maximally expressed on glucose, so nothing changes'
             ],
             correctAnswer: 0,
             explanation: 'Removing glucose raises cAMP (positive switch: CAP-cAMP recruits polymerase) while lactose-derived allolactose releases LacI (negative switch off) — both conditions for HIGH expression are met. The "lactose lowers cAMP" option inverts the cAMP relationship and miscasts CAP as a repressor. The "repressor falls off when glucose is lost" option wrongly couples glucose to the repressor (glucose acts via cAMP/CAP, lactose acts via the repressor). The "already maximally expressed" option is false: with glucose present, catabolite repression held the operon low.'

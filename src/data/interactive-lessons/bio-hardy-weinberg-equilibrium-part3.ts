@@ -64,10 +64,10 @@ $$p = 1 - q = 1 - 0.02 = 0.98$$
           {
             question: 'Why do we start Hardy-Weinberg calculations with $q^{2}$ rather than $p^{2}$?',
             options: [
-              'Because q is always smaller than p',
-              'Because homozygous recessive is the only genotype identifiable from phenotype alone',
-              'Because the recessive allele is more common',
-              'Because $q^{2}$ is easier to calculate'
+              'Recessive alleles are always rarer than dominant ones',
+              'Only homozygous recessives can be identified by phenotype',
+              'Squaring q gives the carrier frequency directly',
+              'Heterozygotes can be counted directly from phenotype'
             ],
             correctAnswer: 1,
             explanation: 'With complete dominance, individuals with the dominant phenotype can be either homozygous dominant (AA) or heterozygous (Aa) — you cannot distinguish them by looking. Only homozygous recessives (aa) can be identified by phenotype, so $q^{2}$ is the starting point.'
@@ -154,9 +154,9 @@ In a class of 100 students, 36 cannot taste PTC paper (recessive phenotype). Cal
             question: 'A common misconception is that dominant alleles are always more frequent than recessive alleles. Which statement is correct?',
             options: [
               'Dominant alleles always increase in frequency over time',
-              'Recessive alleles are always selected against',
-              'Allele frequency and dominance are independent concepts',
-              'The dominant allele must have frequency > 0.5'
+              'Recessive alleles are always selected against over time',
+              'Dominance and allele frequency are independent',
+              'The dominant allele must have a frequency above 0.5'
             ],
             correctAnswer: 2,
             explanation: 'Dominance describes how alleles interact to produce a phenotype — it says nothing about how common an allele is. A recessive allele can be more frequent than a dominant allele (as in the snapdragon example where q = 0.6 > p = 0.4).'

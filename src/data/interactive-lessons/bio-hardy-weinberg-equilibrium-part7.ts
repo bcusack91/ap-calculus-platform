@@ -60,12 +60,12 @@ This is a general principle: for rare recessive disorders, **most copies of the 
             question: 'What is the probability that a randomly selected healthy person from this population is a PKU carrier?',
             options: [
               '0.0582',
-              '0.0583 / 0.9991 ≈ 0.0584',
-              '0.03',
-              '0.97'
+              '0.0584',
+              '0.0300',
+              '0.9409'
             ],
             correctAnswer: 1,
-            explanation: 'Among healthy individuals (PP + Pp), the probability of being a carrier is 2pq / $(p^{2} + 2pq)$ = 0.0582 / (0.9409 + 0.0582) = 0.0582/0.9991 ≈ 0.0584, or about 1 in 17.'
+            explanation: 'Here $q^{2}$ = 0.0009, so q = 0.03 and p = 0.97. Among healthy individuals (PP + Pp), the probability of being a carrier is 2pq / $(p^{2} + 2pq)$ = 0.0582 / (0.9409 + 0.0582) = 0.0582/0.9991 ≈ 0.0584, or about 1 in 17. The value 0.0582 is the carrier frequency in the WHOLE population (2pq), before restricting to healthy people.'
           }
         ]
       }
@@ -108,10 +108,10 @@ $$q = \\frac{2(115) + 230}{1000} = \\frac{460}{1000} = 0.46$$
       exercise: {
         dropdowns: [
           { label: 'The allele frequency of B changed from ___ to ___ between generations', options: ['0.49 to 0.54', '0.51 to 0.46', '0.24 to 0.31', '0.49 to 0.49'] },
-          { label: 'The most likely evolutionary mechanism is ___', options: ['Genetic drift', 'Directional selection for B allele', 'Gene flow', 'Mutation'] },
-          { label: 'Is this population in Hardy-Weinberg equilibrium?', options: ['Yes — allele frequencies are stable', 'No — allele frequencies changed between generations', 'Cannot determine without a chi-square test', 'Yes — both alleles are still present'] }
+          { label: 'The most likely evolutionary mechanism is ___', options: ['Genetic drift in a small sample', 'Selection favoring the B allele', 'Gene flow from another population', 'Mutation creating new B alleles'] },
+          { label: 'Is this population in Hardy-Weinberg equilibrium?', options: ['Yes — allele frequencies are stable', 'No — allele frequencies changed', 'Cannot determine without a chi-square test', 'Yes — both alleles are still present'] }
         ],
-        correctAnswers: ['0.49 to 0.54', 'Directional selection for B allele', 'No — allele frequencies changed between generations'],
+        correctAnswers: ['0.49 to 0.54', 'Selection favoring the B allele', 'No — allele frequencies changed'],
         hint1: 'Calculate p for each generation using the codominant allele counting method.',
         hint2: 'The B allele is increasing — which mechanism causes consistent directional change?',
         hint3: 'If allele frequencies change between generations, the population is NOT in equilibrium.',
@@ -162,10 +162,10 @@ Three island populations of a lizard species are sampled for a tail-length gene 
           {
             question: 'If gene flow were established between all three islands, what would you predict over many generations?',
             options: [
-              'Each island would maintain its current allele frequencies',
-              'Allele frequencies would converge toward a common value across all islands',
-              'The recessive allele would be eliminated from all islands',
-              'All lizards would become heterozygous'
+              'Each island would keep its current allele frequencies unchanged',
+              'Allele frequencies would converge across the islands',
+              'The recessive allele would be eliminated from every island',
+              'Each island would drift to fixation for a different allele'
             ],
             correctAnswer: 1,
             explanation: 'Gene flow homogenizes allele frequencies between populations. Over time, the three islands would converge toward a common allele frequency (roughly a weighted average of their current frequencies), reducing genetic differences between populations.'
@@ -236,7 +236,7 @@ Since $8.767 > 3.841$, we **reject** $H_0$.
             question: 'In the deer population problem, both homozygote classes are above expected values while heterozygotes are below. This pattern is most consistent with:',
             options: [
               'Directional selection for the C allele',
-              'Heterozygote advantage',
+              'Heterozygote advantage (overdominance)',
               'Inbreeding within the population',
               'High gene flow from nearby populations'
             ],
@@ -246,10 +246,10 @@ Since $8.767 > 3.841$, we **reject** $H_0$.
           {
             question: 'A student claims that because the dominant allele in a population has a frequency of 0.1, dominant traits will eventually disappear. This reasoning is:',
             options: [
-              'Correct — rare alleles always disappear due to drift',
-              'Correct — dominant alleles at low frequency cannot persist',
-              'Incorrect — without selection, allele frequencies remain stable regardless of dominance',
-              'Incorrect — dominant alleles always increase in frequency'
+              'Correct — rare alleles are always lost to genetic drift over time',
+              'Correct — a dominant allele at low frequency cannot persist for long',
+              'Incorrect — dominance does not change allele frequencies',
+              'Incorrect — dominant alleles always rise in frequency until fixed'
             ],
             correctAnswer: 2,
             explanation: 'Hardy-Weinberg equilibrium tells us that without evolutionary forces, allele frequencies remain constant regardless of whether an allele is dominant or recessive. Dominance describes how alleles interact to produce phenotypes, not whether they will increase or decrease in a population. A dominant allele at 0.1 will stay at 0.1 indefinitely in a population at equilibrium.'

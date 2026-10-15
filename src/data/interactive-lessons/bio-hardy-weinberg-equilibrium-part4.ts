@@ -67,8 +67,8 @@ Observed = Expected perfectly → This population is in HW equilibrium for the M
           {
             question: 'Why are codominant traits particularly useful for testing Hardy-Weinberg equilibrium?',
             options: [
-              'Codominant traits evolve faster',
-              'All three genotypes can be distinguished by phenotype',
+              'Codominant traits evolve faster than other traits',
+              'Each of the three genotypes has a distinct phenotype',
               'Codominant alleles are always at equal frequencies',
               'Selection does not act on codominant traits'
             ],
@@ -146,10 +146,10 @@ A population of 400 beetles has two color morphs controlled by a single gene wit
           {
             question: 'A population has MORE heterozygotes than Hardy-Weinberg predicts. Which mechanism could explain this?',
             options: [
-              'Inbreeding',
-              'Heterozygote advantage (balancing selection)',
+              'Inbreeding among close relatives',
+              'Heterozygote advantage',
               'Genetic drift in a small population',
-              'Assortative mating'
+              'Selection against heterozygotes'
             ],
             correctAnswer: 1,
             explanation: 'Heterozygote advantage (overdominance) occurs when heterozygotes have higher fitness than either homozygote. This maintains both alleles and leads to excess heterozygosity compared to HW expectations. Inbreeding and assortative mating would decrease heterozygotes.'
@@ -157,10 +157,10 @@ A population of 400 beetles has two color morphs controlled by a single gene wit
           {
             question: 'A population shows FEWER heterozygotes than expected under HW. Which is the most likely explanation?',
             options: [
-              'Gene flow from a neighboring population',
-              'Disassortative mating',
+              'Gene flow from a nearby population',
+              'Mating between unlike genotypes',
               'Inbreeding or population substructure',
-              'Stabilizing selection'
+              'Heterozygote advantage in fitness'
             ],
             correctAnswer: 2,
             explanation: 'Inbreeding increases homozygosity (and therefore decreases heterozygosity) because relatives share alleles. Population substructure (Wahlund effect) also produces a deficit of heterozygotes when subpopulations with different allele frequencies are pooled.'

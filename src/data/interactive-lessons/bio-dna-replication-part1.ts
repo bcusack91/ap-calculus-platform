@@ -61,15 +61,15 @@ DNA is a polymer of **nucleotides**.  Each nucleotide has three components:
               '10%'
             ],
             correctAnswer: 1,
-            explanation: 'By Chargaff\\u2019s rules: A = T = 30%.  So A + T = 60%.  Since A + T + G + C = 100%, G + C = 40%.  Since G = C, each is 20%.'
+            explanation: 'By Chargaff\u2019s rules: A = T = 30%.  So A + T = 60%.  Since A + T + G + C = 100%, G + C = 40%.  Since G = C, each is 20%.'
           },
           {
             question: 'Why is a G-C base pair more stable than an A-T base pair?',
             options: [
-              'G-C pairs have longer hydrogen bonds',
-              'G-C pairs have 3 hydrogen bonds compared to 2 in A-T pairs, providing more energy to disrupt',
-              'G-C pairs are covalently bonded',
-              'A-T pairs are not real base pairs'
+              'G-C hydrogen bonds are longer, so each single bond is stronger',
+              'G-C pairs share three hydrogen bonds and A-T pairs share two',
+              'G-C pairs are joined by a covalent bond between the two bases',
+              'A-T pairs fit the helix poorly and are not true Watson-Crick pairs'
             ],
             correctAnswer: 1,
             explanation: 'Guanine-cytosine base pairs are held together by three hydrogen bonds, while adenine-thymine pairs have only two. The extra hydrogen bond means more energy is required to separate G-C pairs. DNA rich in G-C content has a higher melting temperature (Tm).'
@@ -77,13 +77,13 @@ DNA is a polymer of **nucleotides**.  Each nucleotide has three components:
           {
             question: 'The two strands of DNA run antiparallel.  What does this mean?',
             options: [
-              'They are identical sequences',
-              'One strand runs 5\\u2019 to 3\\u2019 while the complementary strand runs 3\\u2019 to 5\\u2019 in the opposite direction',
-              'They have different base compositions',
-              'They are wound in opposite rotational directions'
+              'The two strands carry identical base sequences read the same way',
+              'The strands run in opposite 5’-to-3’ directions alongside each other',
+              'The two strands differ in base composition, so A does not equal T',
+              'The two strands coil around the axis in opposite rotational directions'
             ],
             correctAnswer: 1,
-            explanation: 'Antiparallel means the two strands have opposite directionality.  The 5\\u2019 end of one strand is paired with the 3\\u2019 end of the other.  This arrangement is critical for replication and transcription, as enzymes that process DNA have inherent directionality.'
+            explanation: 'Antiparallel means the two strands have opposite directionality.  The 5\u2019 end of one strand is paired with the 3\u2019 end of the other.  This arrangement is critical for replication and transcription, as enzymes that process DNA have inherent directionality.'
           }
         ]
       }
@@ -147,7 +147,7 @@ Human cells contain about **6.4 billion base pairs** of DNA (~2 meters per cell 
             question: 'A double-stranded DNA molecule is 1000 bp long.  How many hydrogen bonds hold the two strands together if the molecule is 40% G-C?',
             options: [
               '2000',
-              '2400 — 400 G-C pairs contribute 3 H-bonds each (1200) and 600 A-T pairs contribute 2 H-bonds each (1200), totaling 2400',
+              '2400',
               '3000',
               '1000'
             ],

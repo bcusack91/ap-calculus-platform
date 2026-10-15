@@ -181,10 +181,10 @@ export const bioSpeciationPart6Data = {
           {
             question: 'In an AP-style free-response about problem-solving workshop, the observed pattern is: species defined by reproductive compatibility. What term should anchor the explanation?',
             options: [
-              'reproductive isolation',
+              'morphological species concept',
               'biological species concept',
-              'macroevolution',
-              'allopatric speciation'
+              'phylogenetic species concept',
+              'evolutionary species concept'
             ],
             correctAnswer: 1,
             explanation: 'Use biological species concept because it directly maps to the described biological pattern: species defined by reproductive compatibility.'

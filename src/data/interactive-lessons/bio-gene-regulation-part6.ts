@@ -159,10 +159,10 @@ A **promoter** mutation, $P^-$, prevents RNA polymerase from binding. Because th
           {
             question: 'Predict β-galactosidase production for the haploid genotype $I^{+}$ $O^{c}$ $Z^{+}$ (functional repressor, operator-constitutive mutation, functional lacZ).',
             options: [
-              'Made only when inducer is present (normal inducible control)',
-              'Made constitutively — both with and without inducer — because the repressor cannot bind the mutant operator',
-              'Never made, because the repressor is permanently bound',
-              'Never made, because the promoter is broken'
+              'Made only when inducer is present, as in normal inducible control',
+              'Made constitutively, since the repressor cannot bind the mutant operator',
+              'Never made, because the repressor stays permanently bound to the operator',
+              'Never made, because the constitutive operator blocks the promoter'
             ],
             correctAnswer: 1,
             explanation: '$O^{c}$ prevents the (perfectly good) repressor from binding, so transcription proceeds whether or not inducer is present — constitutive β-gal. The inducible-only option is the wild-type pattern, but a good repressor that cannot dock cannot impose inducibility. The "repressor is permanently bound" option describes the $I^{s}$ super-repressor phenotype, not $O^{c}$. The broken-promoter option invents a promoter defect not present in the genotype.'
@@ -171,9 +171,9 @@ A **promoter** mutation, $P^-$, prevents RNA polymerase from binding. Because th
             question: 'In the partial diploid $I^{s}$ $O^{+}$ $Z^{+}$ / $I^{+}$ $O^{+}$ $Z^{+}$, what is the expected β-galactosidase phenotype, and what does it reveal about $I^{s}$?',
             options: [
               'Inducible (off without inducer, on with inducer); $I^{s}$ is recessive',
-              'Constitutive (always on); $I^{s}$ destroys all repressors',
-              'Always OFF (no enzyme with or without inducer); $I^{s}$ is dominant and trans-acting because the mutant repressor binds both operators and cannot release',
-              'Always OFF; but only the chromosomal operon is affected'
+              'Constitutive (always on); $I^{s}$ destroys the normal repressors',
+              'Always OFF; $I^{s}$ is dominant and acts in trans',
+              'Always OFF; but only the chromosomal operon is affected by $I^{s}$'
             ],
             correctAnswer: 2,
             explanation: 'The $I^{s}$ super-repressor is a diffusible protein that clamps BOTH operators and cannot be removed by inducer, so the whole cell is OFF — demonstrating $I^{s}$ is dominant and trans. The inducible option wrongly calls it recessive (that is $I^{-}$). The constitutive option inverts the mechanism (a super-repressor silences, it does not destroy repressors). The "only the chromosomal operon" option forgets that a trans-acting protein reaches both operons, not just one.'
@@ -182,9 +182,9 @@ A **promoter** mutation, $P^-$, prevents RNA polymerase from binding. Because th
             question: 'A partial diploid has genotype $I^{+}$ $O^{c}$ $Z^{-}$ / $I^{+}$ $O^{+}$ $Z^{+}$. Will functional β-galactosidase be produced WITHOUT inducer?',
             options: [
               'Yes — the $O^{c}$ operon is constitutive and makes functional enzyme',
-              'No — the constitutive $O^{c}$ operon carries $Z^{-}$ (no functional enzyme), while the functional $Z^{+}$ is on the normally repressed $O^{+}$ operon, which stays off without inducer',
-              'Yes — the repressor cannot bind either operator',
-              'No — both operons are permanently silenced'
+              'No — the $O^{c}$ copy is $Z^{-}$; the $Z^{+}$ copy stays repressed',
+              'Yes — the repressor cannot bind either of the two operators',
+              'No — both operons are silenced; the repressor binds each operator'
             ],
             correctAnswer: 1,
             explanation: 'Track each operon separately. $O^{c}$ is cis-acting, so it makes its own operon constitutive — but that operon has $Z^{-}$, so no functional enzyme. The functional $Z^{+}$ sits on the $O^{+}$ operon, which the good repressor keeps OFF without inducer. Result: no β-gal without inducer. The option claiming the constitutive operon makes functional enzyme forgets the $O^{c}$ copy is $Z^{-}$. The "repressor cannot bind either operator" option is false (repressor binds $O^{+}$ fine; $O^{c}$ is cis-only). The "both permanently silenced" option wrongly claims permanent silencing — the $O^{+}$ $Z^{+}$ operon is inducible.'

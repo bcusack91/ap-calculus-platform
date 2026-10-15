@@ -83,13 +83,13 @@ So $D \\approx 0.64$. Interpretation: there is about a 64% chance that two rando
           {
             question: 'Forest X and Forest Y each contain exactly 5 tree species. In Forest X one species makes up 90% of trees; in Forest Y the five species are nearly equal in abundance. Which has higher Simpson\'s diversity, and why?',
             options: [
-              'Forest X, because it has the same richness and one clearly dominant species',
-              'Forest Y, because higher evenness lowers $\\Sigma (pi)^{2}$ and therefore raises D',
-              'They are identical because richness (5 species) is the same',
-              'Forest X, because Simpson\'s index depends only on species number'
+              'Forest X, because one species clearly dominates',
+              'Forest Y, because greater evenness raises Simpson\'s D',
+              'Neither, because both have the same richness',
+              'Forest X, because Simpson\'s D counts only species'
             ],
             correctAnswer: 1,
-            explanation: 'With equal richness, the more EVEN community (Forest Y) has smaller $\\Sigma (pi)^{2}$ and thus larger D. The trap "they are identical because richness is the same" ignores evenness — Simpson\'s index responds to BOTH components, so a community dominated by one species (Forest X, where one $pi^{2}$ ≈ 0.81 inflates the sum) scores much lower despite equal species counts.'
+            explanation: 'With equal richness, the more EVEN community (Forest Y) has smaller $\\Sigma (pi)^{2}$ and thus larger D. The trap "neither, because both have the same richness" ignores evenness — Simpson\'s index responds to BOTH components, so a community dominated by one species (Forest X, where one $pi^{2}$ ≈ 0.81 inflates the sum) scores much lower despite equal species counts.'
           }
         ]
       }
@@ -142,9 +142,9 @@ The mechanism is sometimes called the **insurance** or **redundancy** effect: wh
           {
             question: 'A retreating glacier exposes bare rock with no soil. Lichens and nitrogen-fixing bacteria colonize first, gradually building soil that later supports shrubs and trees. This sequence is:',
             options: [
-              'Secondary succession, because organisms eventually form a forest',
-              'Primary succession, because it begins on a lifeless substrate that lacks soil',
-              'A trophic cascade initiated by the lichens',
+              'Secondary succession, because a forest eventually forms',
+              'Primary succession, because it begins where no soil exists',
+              'A trophic cascade initiated by the pioneer lichens',
               'Resource partitioning among the pioneer species'
             ],
             correctAnswer: 1,
@@ -153,24 +153,24 @@ The mechanism is sometimes called the **insurance** or **redundancy** effect: wh
           {
             question: 'After a wildfire burns a forest but leaves the soil and seed bank intact, regrowth begins within months with grasses and fast-growing weeds. Compared with succession on new volcanic rock, this secondary succession is:',
             options: [
-              'Slower, because fire sterilizes the soil completely',
-              'Faster, because intact soil and a surviving seed bank let colonizers establish quickly',
-              'Identical in rate, because succession always proceeds at the same pace',
-              'Impossible, because climax communities cannot regrow after fire'
+              'Slower, because fire sterilizes the soil and kills the seed bank',
+              'Faster, because soil and a seed bank are already present',
+              'Equal in rate, because all succession proceeds at a fixed pace',
+              'Slower, because grasses and weeds block tree establishment'
             ],
             correctAnswer: 1,
-            explanation: 'Secondary succession is faster than primary because the soil (and often a seed bank and surviving roots) is already present, so colonizers skip the slow soil-building stage. The trap "slower because fire sterilizes the soil" overstates fire damage — most fires leave soil and seed banks viable, which is exactly WHY secondary succession outpaces primary succession on bare rock.'
+            explanation: 'Secondary succession is faster than primary because the soil (and often a seed bank and surviving roots) is already present, so colonizers skip the slow soil-building stage. The trap "slower because fire sterilizes the soil" overstates fire damage — most fires leave soil and seed banks viable, which is exactly WHY secondary succession outpaces primary succession on bare rock. Early grasses and weeds do not block recovery; they are the first stage of it.'
           },
           {
             question: 'A monoculture plantation of a single tree species and a species-rich natural forest both face a new fungal pathogen specialized on that tree species. Which outcome is most consistent with the diversity-stability relationship?',
             options: [
-              'The diverse forest is completely immune because high diversity guarantees immunity',
-              'The monoculture is more likely to suffer catastrophic loss, while the diverse forest is buffered by functional redundancy',
-              'Both lose the same proportion because diversity does not affect stability',
-              'The monoculture is more stable because one species is easier to manage'
+              'The diverse forest is completely immune to the pathogen',
+              'The monoculture is more likely to suffer catastrophic loss',
+              'Both forests lose the same proportion of their trees',
+              'A monoculture is more stable and loses fewer trees'
             ],
             correctAnswer: 1,
-            explanation: 'A monoculture has no redundancy, so a specialist pathogen can devastate it, whereas a diverse forest is buffered because other species fill functional roles (the insurance effect). The trap "completely immune because diversity guarantees immunity" overstates the relationship — diversity confers greater resistance and resilience as a TENDENCY, not absolute immunity, so "completely immune" is the wrong, overclaiming choice.'
+            explanation: 'A monoculture has no redundancy, so a specialist pathogen can devastate it, whereas a diverse forest is buffered because other species fill functional roles (the insurance effect). The trap "completely immune" overstates the relationship — diversity confers greater resistance and resilience as a TENDENCY, not absolute immunity.'
           }
         ]
       }

@@ -171,8 +171,8 @@ export const bioSpeciationPart2Data = {
             question: 'In geographic barrier formation and divergence, the observed pattern is: isolation mechanism reducing hybrid viability or fertility. What term should anchor the explanation?',
             options: [
               'prezygotic barrier',
-              'allopatric speciation',
-              'sympatric speciation',
+              'adaptive radiation',
+              'polyploidy',
               'postzygotic barrier'
             ],
             correctAnswer: 3,

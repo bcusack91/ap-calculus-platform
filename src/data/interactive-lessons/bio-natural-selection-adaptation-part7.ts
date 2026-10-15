@@ -95,11 +95,11 @@ On the AP exam you must read a short scenario and instantly name the right mecha
           {
             question: 'A population of moths is exposed to a new pesticide. Within a few generations, most of the population is resistant. Which sequence of statements is the MOST accurate evolutionary explanation?',
             options: [
-              'The pesticide caused the moths to develop resistance mutations, which they passed to offspring',
-              'Resistance alleles already existed by random mutation; the pesticide selectively killed susceptible moths, so resistant individuals reproduced more and the resistance allele frequency rose in the population',
+              'The pesticide caused the moths to develop new resistance mutations, which they then passed on to offspring',
+              'Resistance alleles already existed by chance mutation, and the pesticide killed susceptible moths so resistant ones bred more',
               'Individual moths gradually became resistant during their lifetimes and transmitted this acquired resistance',
-              'The moths evolved resistance in order to ensure their species would not go extinct',
-              'Genetic drift randomly increased the resistance allele because the population was large'
+              'The moths evolved resistance in order to ensure that their species would not go extinct under the pesticide',
+              'Genetic drift randomly increased the resistance allele, because drift is strongest in large populations'
             ],
             correctAnswer: 1,
             explanation: 'Resistance variation PRE-EXISTS by random mutation; the pesticide is the selective agent that favors those variants, raising the resistance allele frequency in the POPULATION — the textbook natural-selection narrative. The "pesticide caused the mutations" option and the "acquired during their lifetimes" option are Lamarckian traps; the "in order to" option is teleological; the genetic-drift option misattributes a directional, fitness-based change to random drift and wrongly says drift is strong in large populations.'
@@ -107,14 +107,14 @@ On the AP exam you must read a short scenario and instantly name the right mecha
           {
             question: 'Which of the following correctly pairs an evolutionary force with its effect on a population\'s genetics?',
             options: [
-              'Non-random mating (inbreeding) → decreases the frequency of the recessive allele q',
+              'Natural selection → raises dominant allele frequencies whether or not they are beneficial',
               'Genetic drift → predictably increases the frequency of the most beneficial allele',
-              'Non-random mating (inbreeding) → increases homozygote frequencies while leaving allele frequencies p and q unchanged',
+              'Inbreeding → raises homozygote frequencies but leaves allele frequencies p and q unchanged',
               'Gene flow → makes two interbreeding populations genetically more different from each other',
-              'Mutation → rapidly shifts allele frequencies within a single generation'
+              'Mutation → rapidly shifts allele frequencies within a single generation in large populations'
             ],
             correctAnswer: 2,
-            explanation: 'Inbreeding (non-random mating) increases HOMOZYGOTE frequencies and decreases heterozygotes WITHOUT changing the underlying allele frequencies p and q — the correct pairing. The genetic-drift option is the trap: drift is RANDOM, not predictable, and does not specifically favor beneficial alleles. The gene-flow option reverses gene flow\'s effect (it makes populations MORE similar), and the mutation option overstates mutation, which is far too slow to shift allele frequencies in one generation.'
+            explanation: 'Inbreeding (non-random mating) increases HOMOZYGOTE frequencies and decreases heterozygotes WITHOUT changing the underlying allele frequencies p and q — the correct pairing. The genetic-drift option is the trap: drift is RANDOM, not predictable, and does not specifically favor beneficial alleles. The natural-selection option is wrong because selection favors alleles that raise fitness, not dominant alleles as such; the gene-flow option reverses gene flow\'s effect (it makes populations MORE similar); and the mutation option overstates mutation, which is far too slow to shift allele frequencies in one generation.'
           }
         ]
       }
@@ -141,11 +141,11 @@ On the AP exam you must read a short scenario and instantly name the right mecha
           {
             question: 'A peacock population shows extreme male tail elaboration that lowers male survival but greatly increases mating success. A small subgroup of 8 peacocks then colonizes an isolated island, and by chance the island population has a much higher frequency of the long-tail allele than the mainland, with no difference in survival or mating involved in the change. Which two processes are illustrated by the tail elaboration and by the island shift, respectively?',
             options: [
-              'Natural (survival) selection; gene flow',
+              'Natural (survival) selection; gene flow from the mainland',
               'Sexual selection; founder effect (genetic drift)',
-              'Stabilizing selection; natural selection',
-              'Sexual selection; gene flow',
-              'Genetic drift; sexual selection'
+              'Sexual selection; natural selection on the island colonists',
+              'Sexual selection; gene flow (migration to the island)',
+              'Genetic drift; sexual selection (female mate choice)'
             ],
             correctAnswer: 1,
             explanation: 'The tail trait spreads because it raises MATING success despite a survival cost — that is SEXUAL SELECTION. The island shift happens by CHANCE in a small founding group with no fitness difference — that is the FOUNDER EFFECT, a form of genetic drift. The "sexual selection; gene flow" option is the trap: the island change is NOT gene flow (no ongoing migration of alleles between populations is described) but a one-time chance sampling of founders, which is drift, not gene flow.'
@@ -153,10 +153,10 @@ On the AP exam you must read a short scenario and instantly name the right mecha
           {
             question: 'A population is found to have genotype frequencies of exactly $p^{2}$ , 2pq , and $q^{2}$ that remain unchanged across many generations. A student concludes, "This proves the population can never evolve." What is the BEST evaluation of this conclusion?',
             options: [
-              'Correct, because matching Hardy-Weinberg proportions guarantees the population is permanently non-evolving',
-              'Incorrect, because Hardy-Weinberg equilibrium only indicates no detectable change at this locus under current conditions; it is a null model, and any of the five forces could act in the future',
+              'Correct, because matching Hardy-Weinberg proportions over many generations guarantees the population can never evolve',
+              'Incorrect, because equilibrium shows only that this locus is not evolving now, and any of the five forces could act later',
               'Correct, because allele frequencies in equilibrium are fixed by the equation $p^{2}$ + 2pq + $q^{2}$ = 1',
-              'Incorrect, because a population in equilibrium must have equal allele frequencies'
+              'Incorrect, because a population in equilibrium must have equal allele frequencies, so p must equal q'
             ],
             correctAnswer: 1,
             explanation: 'Hardy-Weinberg equilibrium is a NULL MODEL: it indicates no current detectable evolution at this locus, but it does not prevent future change if selection, drift, gene flow, mutation, or non-random mating begins to act. The "fixed by the equation" option is the trap: the equation $p^{2}$ + 2pq + $q^{2}$ = 1 is just a mathematical identity that always sums to 1 for any p and q — it does not "fix" or guarantee anything about whether the population will evolve.'

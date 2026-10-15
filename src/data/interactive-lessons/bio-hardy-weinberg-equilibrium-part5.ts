@@ -57,10 +57,10 @@ A small number of individuals **colonize a new area**, carrying only a sample of
           {
             question: 'Genetic drift has the greatest effect on allele frequencies in:',
             options: [
-              'Large populations with high genetic diversity',
-              'Small populations regardless of selection pressure',
-              'Populations undergoing strong directional selection',
-              'Populations with high gene flow'
+              'Large, genetically diverse populations',
+              'Small populations',
+              'Populations under strong directional selection',
+              'Populations with high rates of gene flow'
             ],
             correctAnswer: 1,
             explanation: 'Drift is most powerful in small populations because random sampling effects are magnified. In large populations, random fluctuations average out and have little impact on overall allele frequencies.'
@@ -71,7 +71,7 @@ A small number of individuals **colonize a new area**, carrying only a sample of
               'Increased genetic diversity',
               'Allele frequencies identical to the original population',
               'Reduced genetic diversity and altered allele frequencies',
-              'Higher fitness due to selection for survivors'
+              'Higher average fitness because only the fittest individuals survived'
             ],
             correctAnswer: 2,
             explanation: 'A bottleneck randomly eliminates most of the population, reducing genetic diversity. The survivors\' allele frequencies differ from the original population by chance, not because of selection for fitness.'
@@ -167,17 +167,17 @@ If selection favors different alleles in different environments, gene flow can p
         questions: [
           {
             question: 'Which evolutionary force is the ONLY mechanism that consistently leads to adaptation?',
-            options: ['Genetic drift', 'Gene flow', 'Natural selection', 'Mutation'],
+            options: ['Random genetic drift', 'Gene flow between populations', 'Natural selection', 'Mutation that creates new alleles'],
             correctAnswer: 2,
             explanation: 'Natural selection is the only evolutionary force that consistently leads to adaptation because it specifically increases the frequency of alleles that improve fitness. Drift is random, gene flow can counteract adaptation, and mutation is random.'
           },
           {
             question: 'In a scenario where two populations of the same species live in very different environments, high gene flow between them would:',
             options: [
-              'Accelerate local adaptation in both populations',
-              'Prevent local adaptation by mixing alleles between populations',
-              'Have no effect on allele frequencies',
-              'Cause both populations to go extinct'
+              'Speed up local adaptation in both populations',
+              'Hinder local adaptation by mixing the gene pools',
+              'Leave allele frequencies unchanged',
+              'Split the two groups into separate species'
             ],
             correctAnswer: 1,
             explanation: 'High gene flow moves alleles between populations, making them more genetically similar. This can prevent local adaptation by introducing alleles that are adaptive in one environment but maladaptive in another.'

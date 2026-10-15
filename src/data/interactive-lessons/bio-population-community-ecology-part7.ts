@@ -79,7 +79,7 @@ This single scenario touches every concept in the unit, which is exactly how AP 
               'N = 1,200, dN/dt = 240 per year',
               'N = 600, dN/dt = 60 per year',
               'N = 600, dN/dt = 120 per year',
-              'N = 1,200, dN/dt = 0 per year, because the herd is largest'
+              'N = 1,200, dN/dt = 0 per year'
             ],
             correctAnswer: 1,
             explanation: 'Maximum growth is at N = K/2 = 600. There dN/dt = (0.2)(600)(1200-600)/1200 = (0.2)(600)(0.5) = 60/yr. The trap "N = 600, dN/dt = 120" drops the (K-N)/K = 0.5 factor, computing only r_max × N = 0.2 × 600 = 120 (the exponential value, double the truth). The "N = 1,200" options fall for the peak-at-K trap; at K the growth rate is 0, the slowest, not the fastest.'
@@ -98,10 +98,10 @@ This single scenario touches every concept in the unit, which is exactly how AP 
           {
             question: 'Two prairie plots each contain 4 plant species. Plot 1: proportions 0.85, 0.05, 0.05, 0.05. Plot 2: proportions 0.25, 0.25, 0.25, 0.25. Which plot has higher Simpson\'s diversity (D = 1 - $\\Sigma pi^{2}$), and what general principle does the comparison illustrate?',
             options: [
-              'Plot 1, because richness is equal and it has a clear dominant species',
-              'Plot 2, illustrating that greater evenness raises diversity even when richness is equal',
+              'Plot 1, because richness is equal and one species clearly dominates',
+              'Plot 2, showing that greater evenness raises D',
               'They are equal, because both plots contain exactly 4 species',
-              'Plot 1, because Simpson\'s index measures only the number of species'
+              'Plot 1, because Simpson\'s index measures only species number'
             ],
             correctAnswer: 1,
             explanation: 'Plot 1: $\\Sigma pi^{2}$ = 0.7225 + 0.0025×3 = 0.73, so D ≈ 0.27. Plot 2: $\\Sigma pi^{2}$ = 4(0.0625) = 0.25, so D = 0.75. Plot 2 wins because of higher evenness. The trap "they are equal because both have 4 species" is the richness-equals-diversity fallacy — Simpson\'s index responds to evenness too, so the dominated Plot 1 scores far lower despite identical richness.'
@@ -145,8 +145,8 @@ AP ecology free-response questions usually combine a **graph or data table** wit
             question: 'A graph shows a population rising steeply, then leveling into a flat plateau over time. A second graph shows the population GROWTH RATE (dN/dt) versus population size N as a symmetric hump that peaks in the middle and returns to zero at the right edge. Together these graphs are diagnostic of:',
             options: [
               'Exponential growth, because the first graph rises steeply',
-              'Logistic growth, with the growth-rate hump peaking at N = K/2 and reaching 0 at N = K',
-              'A density-independent crash followed by recovery',
+              'Logistic growth, with dN/dt peaking at K/2 and falling to zero at K',
+              'A density-independent crash followed by slow recovery',
               'r-selected boom-and-bust dynamics with no carrying capacity'
             ],
             correctAnswer: 1,
@@ -156,12 +156,12 @@ AP ecology free-response questions usually combine a **graph or data table** wit
             question: 'An ecologist removes a single predatory sea star from a tide pool. Over the next year, one mussel species spreads and the number of other species drops from 15 to 8. Which two concepts BEST explain this result?',
             options: [
               'Density-independent regulation and primary succession',
-              'Keystone species removal and a trophic cascade reducing diversity',
-              'Mutualism breakdown and competitive exclusion of the sea star',
-              'r/K continuum shift and resource partitioning'
+              'Keystone predator removal and a trophic cascade',
+              'Removal of a mutualist and competitive exclusion',
+              'Predator-prey cycling and resource partitioning'
             ],
             correctAnswer: 1,
-            explanation: 'The sea star is a keystone predator; removing it lets a dominant competitor (mussels) monopolize space, and the indirect ripple that lowers other species is a trophic cascade — together collapsing diversity. The trap "mutualism breakdown" misreads the interaction: the sea star and mussels are predator-prey (+/−), not mutualists (+/+), so no mutualism was lost. Loss of a keystone PREDATOR, not a mutualist, drives this classic Paine result.'
+            explanation: 'The sea star is a keystone predator; removing it lets a dominant competitor (mussels) monopolize space, and the indirect ripple that lowers other species is a trophic cascade — together collapsing diversity. The trap "removal of a mutualist" misreads the interaction: the sea star and mussels are predator-prey (+/−), not mutualists (+/+), so no mutualism was lost. Loss of a keystone PREDATOR, not a mutualist, drives this classic Paine result.'
           }
         ]
       }

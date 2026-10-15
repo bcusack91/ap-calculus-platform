@@ -94,10 +94,10 @@ $$\\chi^2 = 0.047 + 0.110 + 0.065 = 0.222$$
           {
             question: 'If the calculated chi-square value is LARGER than the critical value, you should:',
             options: [
-              'Accept the null hypothesis',
-              'Reject the null hypothesis — population is likely NOT in HW equilibrium',
-              'Increase sample size and retest',
-              'Conclude that no evolution has occurred'
+              'Fail to reject the null hypothesis of HW equilibrium',
+              'Reject the null hypothesis of HW equilibrium',
+              'Increase the sample size and retest',
+              'Conclude that no evolution has occurred in the population'
             ],
             correctAnswer: 1,
             explanation: 'When $\\chi^{2}$ > critical value, the probability that the observed deviation from HW expectations occurred by chance is less than 5% (at α = 0.05). We reject $H_{0}$ and conclude the population is likely NOT in HW equilibrium.'
@@ -147,7 +147,7 @@ A biologist tests whether a population of frogs is in HW equilibrium for a color
           { label: 'The $(O-E)^{2}/E$ for GG = ___', options: ['1.0', '2.0', '4.0', '0.5'] },
           { label: 'The $(O-E)^{2}/E$ for Gg = ___', options: ['1.0', '2.0', '4.0', '0.5'] },
           { label: 'Total $\\chi^{2}$ = ___', options: ['3.0', '4.0', '6.0', '8.0'] },
-          { label: 'At α = 0.05, the null hypothesis should be ___', options: ['rejected', 'not rejected', 'accepted', 'restated'] }
+          { label: 'At α = 0.05, the null hypothesis should be ___', options: ['rejected', 'not rejected', 'accepted', 'confirmed'] }
         ],
         correctAnswers: ['2.0', '4.0', '8.0', 'rejected'],
         hint1: 'For GG: $(40 - 50)^{2}/50$ = 100/50',
@@ -165,10 +165,10 @@ A biologist tests whether a population of frogs is in HW equilibrium for a color
           {
             question: 'A researcher calculates $\\chi^{2}$ = 1.85 for a HW test (df = 1, α = 0.05). What should she conclude?',
             options: [
-              'The population is definitely in HW equilibrium',
-              'The population is evolving',
+              'The population has been proven to be in HW equilibrium',
+              'The population is evolving, so HW equilibrium is rejected',
               'There is insufficient evidence to reject HW equilibrium',
-              'The sample size was too small'
+              'The sample was too small to draw any conclusion'
             ],
             correctAnswer: 2,
             explanation: 'Since $\\chi^{2}$ = 1.85 < 3.841 (critical value at α = 0.05, df = 1), we fail to reject the null hypothesis. This means we do not have sufficient statistical evidence to conclude the population deviates from HW equilibrium — but this does NOT prove equilibrium exists.'
@@ -176,10 +176,10 @@ A biologist tests whether a population of frogs is in HW equilibrium for a color
           {
             question: 'In the frog example, the excess of heterozygotes (Gg) compared to HW expectations most likely suggests:',
             options: [
-              'High mutation rate',
+              'Strong selection against heterozygous frogs',
               'Heterozygote advantage or negative assortative mating',
-              'Inbreeding in the population',
-              'A recent population bottleneck'
+              'Inbreeding or positive assortative mating',
+              'A recent bottleneck or founder event'
             ],
             correctAnswer: 1,
             explanation: 'Excess heterozygosity compared to HW predictions typically indicates heterozygote advantage (balancing selection favoring heterozygotes) or negative assortative mating (unlike genotypes preferentially mating). Inbreeding and bottlenecks would decrease heterozygosity.'

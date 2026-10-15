@@ -69,10 +69,10 @@ A "writer → effect" reference table (writers add marks; readers interpret them
           {
             question: 'A tumor-suppressor gene in a cancer cell is completely silent, yet its DNA sequence is perfectly normal — no mutations anywhere in or around the gene. Its promoter CpG island is heavily methylated. The best description of this gene\'s inactivation is:',
             options: [
-              'A point mutation in the promoter',
-              'An epigenetic change: promoter methylation silences the gene without altering the DNA sequence',
-              'A deletion of the gene',
-              'A change in the gene\'s codon reading frame'
+              'A point mutation in the promoter that blocks polymerase binding',
+              'An epigenetic change that switches the gene off without mutating it',
+              'A deletion that removes the gene from one of the chromosomes',
+              'A frameshift that changes the gene\'s codon reading frame'
             ],
             correctAnswer: 1,
             explanation: 'A heritable expression change with an intact sequence and a hypermethylated promoter is epigenetic silencing. The other three options all describe sequence changes (mutation, deletion, frameshift), which the question explicitly rules out — that is the trap, conflating epigenetic silencing with genetic mutation.'
@@ -80,10 +80,10 @@ A "writer → effect" reference table (writers add marks; readers interpret them
           {
             question: 'A drug inhibits histone deacetylases (HDACs). What is the most likely effect on the chromatin and expression of previously silenced genes?',
             options: [
-              'Chromatin condenses further and genes are silenced more strongly',
-              'Histones stay acetylated, chromatin loosens toward euchromatin, and silenced genes tend to be REACTIVATED',
-              'The DNA sequence is mutated to switch genes on',
-              'cAMP rises and CAP activates the genes'
+              'Chromatin condenses further and the genes are silenced more strongly',
+              'Acetyl marks stay on, so chromatin opens and genes reactivate',
+              'The DNA sequence is mutated, so the silenced genes switch back on',
+              'cAMP rises, so CAP binds and turns on the previously silenced genes'
             ],
             correctAnswer: 1,
             explanation: 'HDACs remove activating acetyl marks; inhibiting them leaves histones acetylated, loosening chromatin and reactivating genes. The "chromatin condenses further" option inverts the logic (blocking deacetylation does not condense chromatin). The mutation option confuses an epigenetic effect with mutation. The cAMP/CAP option wrongly imports the bacterial cAMP/CAP system into eukaryotic chromatin regulation.'
@@ -91,10 +91,10 @@ A "writer → effect" reference table (writers add marks; readers interpret them
           {
             question: 'Why are epigenetic marks described as "heritable through mitosis," and what makes this property biologically important?',
             options: [
-              'They change the DNA sequence, which is copied during replication',
-              'Patterns such as DNA methylation are re-established on daughter strands after replication, so a cell\'s expression state is passed to its descendants — preserving cell identity',
-              'They are randomly reset every cell division',
-              'They only exist in gametes, not somatic cells'
+              'They change the DNA sequence, which is then copied during replication',
+              'Methylation patterns are copied after replication, preserving cell identity',
+              'They are randomly reset at every cell division, so each cell starts fresh',
+              'They only exist in gametes, so somatic cells never inherit them'
             ],
             correctAnswer: 1,
             explanation: 'Maintenance methyltransferases copy the methylation pattern onto newly synthesized DNA, so daughter cells inherit the parent\'s expression state — this is how differentiated cells stay differentiated. The "change the DNA sequence" option is the central trap: epigenetic inheritance does NOT involve sequence change. The "randomly reset" option contradicts heritability, and the "only in gametes" option is false because somatic cells carry and transmit epigenetic marks during normal tissue maintenance.'
@@ -158,7 +158,7 @@ Both samples lose the protein, yet only Sample 2 is reversible *in principle* �
             question: 'In a female cat heterozygous for an X-linked coat-color gene, the fur shows distinct patches of two different colors. The best explanation is that:',
             options: [
               'The two color alleles mutated into each other in different patches',
-              'In each cell early in development one X chromosome was epigenetically inactivated (Barr body), and this choice was inherited by all descendant cells, producing clonal patches',
+              'One X was silenced early in each cell, and descendants kept that choice',
               'The cat is a genetic mosaic with different genes in different cells',
               'The color gene is part of an operon expressed differently in each patch'
             ],
@@ -168,10 +168,10 @@ Both samples lose the protein, yet only Sample 2 is reversible *in principle* �
           {
             question: 'Genetically identical mice are fed diets differing only in methyl-donor nutrients. The two groups develop different coat colors and disease risks, with no differences in their DNA sequences. This is best explained by:',
             options: [
-              'New mutations caused by the diet',
-              'Diet-induced differences in DNA methylation altering gene expression — an environment-driven epigenetic effect with no sequence change',
-              'Different alleles inherited from the parents',
-              'Changes in chromosome number'
+              'New DNA mutations caused by the diet\'s methyl-donor chemicals',
+              'Diet-driven methylation changes that alter gene expression',
+              'Different alleles that each group inherited from its parents',
+              'Diet-induced changes in the number of chromosomes per cell'
             ],
             correctAnswer: 1,
             explanation: 'Methyl-donor availability shifts DNA methylation, changing expression without altering the sequence — a textbook environment–epigenome link. The diet-caused-mutation option is the trap (an epigenetic effect mistaken for mutation). The different-alleles and chromosome-number options are excluded because the mice are genetically identical with normal karyotypes; only the epigenetic marks differ.'

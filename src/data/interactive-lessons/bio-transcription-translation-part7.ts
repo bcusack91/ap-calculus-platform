@@ -24,26 +24,26 @@ export const bioTranscriptionPart7Data = {
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Central dogma applications?',
+            question: 'An antibiotic binds the bacterial ribosome. Which step of gene expression does it directly block?',
             options: [
-              'Gene expression regulation points',
-              'codon table practice',
-              'Mutation types and consequences',
-              'Central dogma applications'
+              'Replication of the bacterial chromosome before division',
+              'Transcription of a bacterial gene into messenger RNA',
+              'Splicing of the introns out of a bacterial pre-mRNA',
+              'Translation of messenger RNA into a polypeptide'
             ],
             correctAnswer: 3,
-            explanation: 'Correct — Central dogma applications. The other options describe different concepts from this topic.'
+            explanation: 'Ribosomes carry out translation, so a drug that binds the bacterial ribosome (such as tetracycline or streptomycin) directly blocks protein synthesis. Replication and transcription use polymerases, not ribosomes, and bacteria generally do not splice introns from their mRNA.'
           },
           {
-            question: 'In the context of Transcription & Translation: Synthesis & AP Review, which explains Gene expression regulation points?',
+            question: 'At which points can a eukaryotic cell regulate the expression of a gene?',
             options: [
-              'codon table practice',
-              'Mutation types and consequences',
-              'Gene expression regulation points',
-              'Central dogma applications'
+              'At transcription alone, since mRNA levels set protein levels',
+              'At translation alone, by changing how fast ribosomes move',
+              'At many steps, from chromatin access to protein modification',
+              'At DNA replication, by choosing which genes get copied'
             ],
             correctAnswer: 2,
-            explanation: 'Correct — Gene expression regulation points. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'Eukaryotic gene expression can be regulated at many levels: chromatin accessibility, transcription, RNA processing, mRNA stability and export, translation, and post-translational modification. Transcription is a major control point but not the only one, and DNA replication copies the whole genome rather than selecting genes.'
           }
         ]
       }
@@ -69,15 +69,15 @@ export const bioTranscriptionPart7Data = {
       exercise: {
         questions: [
           {
-            question: 'Which of these accurately represents AP exam?',
+            question: 'An mRNA codon reads 5\'-UGG-3\'. Which tRNA anticodon pairs with it?',
             options: [
-              'codon table practice',
-              'Gene expression regulation points',
-              'Central dogma applications',
-              'Mutation types and consequences'
+              '3\'-ACC-5\'',
+              '3\'-UGG-5\'',
+              '5\'-ACC-3\'',
+              '3\'-ACU-5\''
             ],
             correctAnswer: 0,
-            explanation: 'Correct — AP exam: codon table practice. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: 'The anticodon is complementary and antiparallel to the codon: 5\'-UGG-3\' pairs with 3\'-ACC-5\' (U-A, G-C, G-C). Writing ACC in the 5\'→3\' direction pairs it with a different codon, and 3\'-ACU-5\' pairs with UGA, a stop codon.'
           }
         ]
       }

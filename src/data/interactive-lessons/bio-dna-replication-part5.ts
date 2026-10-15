@@ -47,10 +47,10 @@ Linear chromosomes in eukaryotes face a unique challenge: the **end replication 
           {
             question: 'Why does the end replication problem only affect eukaryotes, not prokaryotes?',
             options: [
-              'Prokaryotes have smaller genomes',
-              'Prokaryotic chromosomes are circular — there are no "ends" where incomplete replication can occur; the lagging strand is eventually completed all the way around',
-              'Prokaryotes do not use Okazaki fragments',
-              'Prokaryotic DNA polymerase can synthesize in both directions'
+              'Prokaryotic genomes are small enough to copy before the ends erode',
+              'Prokaryotic chromosomes are circular, so there are no ends to lose',
+              'Prokaryotes make no Okazaki fragments, so no primer gaps ever form',
+              'Prokaryotic polymerases can build strands in both the 5’-3’ and 3’-5’ directions'
             ],
             correctAnswer: 1,
             explanation: 'Circular chromosomes have no free ends. The last Okazaki fragment on the lagging strand can be completed by extending from the adjacent fragment or by closing the circle. Only linear chromosomes have terminal sequences that cannot be fully replicated.'
@@ -58,10 +58,10 @@ Linear chromosomes in eukaryotes face a unique challenge: the **end replication 
           {
             question: 'What would happen if telomeres were removed from a chromosome?',
             options: [
-              'Nothing — telomeres have no function',
-              'The chromosome ends would be recognized as double-strand breaks, triggering DNA repair (end-to-end fusions via NHEJ) or apoptosis; coding genes at the ends would also be lost during replication',
-              'The chromosome would replicate faster',
-              'The cell would become cancerous immediately'
+              'Nothing, because telomeres carry no genes and serve no function',
+              'Ends would be treated as DNA breaks, causing fusions or cell death',
+              'The chromosome would replicate faster with less DNA to copy',
+              'The cell would become cancerous at once from unchecked division'
             ],
             correctAnswer: 1,
             explanation: 'Without telomeres and their associated shelterin complex, chromosome ends resemble DSBs. The cell tries to "repair" them by fusing chromosomes together (creating dicentric chromosomes) or by triggering checkpoint-mediated apoptosis. Additionally, essential genes near the ends would be eroded.'
@@ -109,10 +109,10 @@ Linear chromosomes in eukaryotes face a unique challenge: the **end replication 
           {
             question: 'Telomerase contains an RNA component (TERC). Why is this RNA essential?',
             options: [
-              'It provides structural stability only',
-              'The RNA serves as a template for synthesizing the telomeric DNA repeat — TERT (the enzyme) uses the RNA template to add TTAGGG repeats to the chromosome end via reverse transcription',
-              'It catalyzes the reaction',
-              'It protects TERT from degradation'
+              'It serves only to stabilize the enzyme and plays no part in the reaction',
+              'It serves as the template that TERT copies into telomeric DNA repeats',
+              'It is the catalytic core that adds new nucleotides to the telomere end',
+              'It shields TERT from protease degradation inside the nucleus'
             ],
             correctAnswer: 1,
             explanation: 'TERC contains a short template sequence (complementary to the telomere repeat) that TERT uses to synthesize new telomeric DNA. This makes telomerase a reverse transcriptase — it copies RNA into DNA. Without TERC, TERT has no template and cannot extend telomeres.'
@@ -120,10 +120,10 @@ Linear chromosomes in eukaryotes face a unique challenge: the **end replication 
           {
             question: 'If telomerase is inhibited in cancer cells, what is the predicted long-term effect?',
             options: [
-              'The cells would die immediately',
-              'Over multiple divisions, telomeres would progressively shorten until they reach critical length, triggering senescence or apoptosis — the cancer cells would eventually stop dividing',
-              'The cells would switch to a different replication mechanism',
-              'Nothing — cancer cells do not need telomerase'
+              'The cells would die at once, as soon as telomerase activity stops',
+              'Telomeres would shorten each division until cells senesce or die',
+              'The cells would switch to conservative replication to protect their ends',
+              'Nothing, because cancer cells never lose DNA from their chromosome ends'
             ],
             correctAnswer: 1,
             explanation: 'Telomerase inhibition does not kill cells immediately. Rather, with each division, telomeres shorten further. After many divisions (depends on initial telomere length), telomeres become critically short, triggering checkpoint-mediated senescence or apoptosis. This is why telomerase inhibitors require prolonged treatment.'
@@ -171,10 +171,10 @@ Linear chromosomes in eukaryotes face a unique challenge: the **end replication 
           {
             question: 'Dolly the sheep (the first mammal cloned from an adult somatic cell) had shortened telomeres compared to age-matched naturally born sheep. Why?',
             options: [
-              'Cloning damages DNA',
-              'The nucleus used for cloning came from an adult cell that had already undergone many divisions and had shortened telomeres; the telomeres were not fully restored during cloning',
-              'Sheep do not have telomerase',
-              'Dolly was genetically different from normal sheep'
+              'Cloning from an adult cell damaged her DNA, and the damaged ends were trimmed',
+              'Her nucleus came from an adult cell whose telomeres had already shortened',
+              'Sheep lack telomerase, so all sheep telomeres shorten with age',
+              'Dolly carried different alleles that encode a shorter telomere repeat'
             ],
             correctAnswer: 1,
             explanation: 'The donor nucleus had the shortened telomeres characteristic of an adult somatic cell. During reprogramming and subsequent development, telomeres were not fully restored to embryonic length. This meant Dolly effectively started life with "older" chromosomes, which may have contributed to her premature aging.'

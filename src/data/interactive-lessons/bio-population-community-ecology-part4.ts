@@ -74,8 +74,8 @@ Species often coexist by **resource partitioning** — dividing a contested reso
             question: 'A tick feeds on a deer\'s blood over several days, weakening the deer but not killing it. Using the sign convention, how should this interaction be classified?',
             options: [
               'Mutualism (+/+), because both organisms obtain something',
-              'Parasitism (+/−), because the tick benefits while the deer is harmed',
-              'Predation (+/−), because the tick consumes the deer',
+              'Parasitism (+/−), because the tick benefits and the deer is harmed',
+              'Predation (+/−), because the tick consumes part of the deer',
               'Commensalism (+/0), because the deer is barely affected'
             ],
             correctAnswer: 1,
@@ -84,7 +84,7 @@ Species often coexist by **resource partitioning** — dividing a contested reso
           {
             question: 'In a lab, two protist species each grow well alone on the same bacterial food source, but when cultured together one species consistently dies out. This result is the clearest demonstration of:',
             options: [
-              'Mutualism between the two protists',
+              'Mutualism between the two protist species',
               'The competitive exclusion principle',
               'Resource partitioning allowing coexistence',
               'A predator-prey relationship between the protists'
@@ -143,10 +143,10 @@ Notice the pattern: the predator's effect "cascades" downward to organisms it ne
           {
             question: 'After sea otters are hunted out of a coastal zone, sea urchin populations explode and graze the kelp forest down to bare rock, eliminating dozens of kelp-dependent species. Which concept set best explains this chain of events?',
             options: [
-              'Commensalism between otters and kelp',
+              'Commensalism between the otters and the kelp',
               'Loss of a keystone predator triggering a trophic cascade',
-              'Density-independent regulation of the urchins',
-              'Resource partitioning between urchins and kelp'
+              'Density-independent regulation of the urchin population',
+              'Resource partitioning between the urchins and kelp'
             ],
             correctAnswer: 1,
             explanation: 'Otters are a keystone predator; removing them releases urchins (their prey), whose overgrazing cascades down to destroy kelp and its dependents — a textbook trophic cascade. The trap "commensalism between otters and kelp" misclassifies the link: otters help kelp only INDIRECTLY (by eating urchins), and commensalism (+/0) describes a direct interaction, which this is not. The effect is an indirect, top-down cascade, not commensalism.'
@@ -154,10 +154,10 @@ Notice the pattern: the predator's effect "cascades" downward to organisms it ne
           {
             question: 'Two warbler species feed on insects in the SAME spruce trees but one forages mainly in the upper canopy and the other in the lower branches, allowing both to persist. This is the clearest example of:',
             options: [
-              'Competitive exclusion eliminating one warbler',
-              'Resource partitioning that reduces niche overlap and permits coexistence',
-              'Mutualism between the two warbler species',
-              'A predator-prey relationship between the warblers'
+              'Competitive exclusion that will soon eliminate one warbler',
+              'Resource partitioning that reduces niche overlap',
+              'Mutualism in which each warbler benefits the other',
+              'A predator-prey relationship between the two warblers'
             ],
             correctAnswer: 1,
             explanation: 'Dividing the same resource (insects in the canopy) by foraging in different zones is resource partitioning, which shrinks niche overlap and lets competitors coexist. The trap "competitive exclusion" predicts the OPPOSITE outcome — one species driven out — but here BOTH persist precisely because partitioning prevented exclusion. Coexistence by niche division is the signature of partitioning, not exclusion.'
@@ -165,13 +165,13 @@ Notice the pattern: the predator's effect "cascades" downward to organisms it ne
           {
             question: 'A relatively rare predatory snail strongly controls the abundance of a competitively dominant barnacle on a rocky shore. If the snail were experimentally removed, the most likely outcome is:',
             options: [
-              'Species richness increases as the barnacle is freed from predation',
+              'Diversity rises as the dominant barnacle escapes predation',
               'Species richness decreases as the dominant barnacle monopolizes space',
               'No change, because the snail is too rare to matter',
               'The snail and barnacle were mutualists, so both decline'
             ],
             correctAnswer: 1,
-            explanation: 'A keystone predator that suppresses a dominant competitor maintains diversity; removing it lets the barnacle monopolize space and crowd others out, lowering richness. The trap "no change because the snail is too rare" misunderstands the keystone concept — keystone influence comes from ECOLOGICAL ROLE, not abundance, so a rare species can have outsized, community-wide effects.'
+            explanation: 'A keystone predator that suppresses a dominant competitor maintains diversity; removing it lets the barnacle monopolize space and crowd others out, lowering richness. The idea that diversity rises once the barnacle escapes predation gets the direction backward — freeing the dominant competitor lets it exclude other species. The trap "no change because the snail is too rare" misunderstands the keystone concept — keystone influence comes from ECOLOGICAL ROLE, not abundance, so a rare species can have outsized, community-wide effects.'
           }
         ]
       }

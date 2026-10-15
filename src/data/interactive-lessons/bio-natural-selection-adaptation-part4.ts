@@ -87,8 +87,8 @@ A population stays in **Hardy-Weinberg equilibrium** (allele frequencies constan
             options: [
               'Directional natural selection favoring blue scales',
               'The bottleneck effect, a form of genetic drift',
-              'Gene flow from a neighboring population',
-              'Stabilizing selection reducing variation'
+              'Gene flow bringing in genetic variation from a nearby population',
+              'Stabilizing selection reducing genetic variation over time'
             ],
             correctAnswer: 1,
             explanation: 'A catastrophic crash in population size that randomly reduces genetic diversity and shifts allele frequencies by CHANCE is the BOTTLENECK EFFECT, a form of genetic drift. The directional-selection option is the trap: the allele is explicitly NEUTRAL and its rise is by CHANCE, so there is no differential fitness — selection requires a fitness difference, which is absent here. Random ≠ adaptive.'
@@ -96,10 +96,10 @@ A population stays in **Hardy-Weinberg equilibrium** (allele frequencies constan
           {
             question: 'A botanist notes that in a particular plant species, self-pollination (a form of inbreeding) has become very common. Over several generations, the proportion of heterozygotes drops sharply while homozygotes increase, yet the overall frequencies of the two alleles (p and q) stay the same. Which force is responsible?',
             options: [
-              'Genetic drift, because allele frequencies are changing randomly',
+              'Genetic drift, because allele frequencies are changing randomly between generations',
               'Non-random mating, which alters genotype frequencies without changing allele frequencies',
-              'Gene flow, because pollen is moving between plants',
-              'Mutation, which is creating new homozygous genotypes'
+              'Gene flow, because pollen is carrying new alleles between separate plant populations',
+              'Mutation, which is creating new homozygous genotypes in each generation'
             ],
             correctAnswer: 1,
             explanation: 'Inbreeding is NON-RANDOM MATING: it redistributes existing alleles into more homozygous genotypes (fewer heterozygotes) WITHOUT changing the underlying allele frequencies p and q. The genetic-drift option is the trap: drift changes ALLELE frequencies by chance, but here the allele frequencies are explicitly UNCHANGED — only the genotype proportions shift, which is the defining signature of non-random mating.'
@@ -205,10 +205,10 @@ $p_{new} = (0.80)(0.30) + (0.20)(0.90) = 0.24 + 0.18 = 0.42$
           {
             question: 'Dolphins (mammals) and sharks (fish) both have streamlined bodies and dorsal fins, yet they are only distantly related and last shared a common ancestor hundreds of millions of years ago. Their similar body forms are an example of:',
             options: [
-              'Homologous structures resulting from divergent evolution',
-              'Analogous structures resulting from convergent evolution under similar selective pressures',
-              'Vestigial structures that have lost their function',
-              'Coevolution between the two species'
+              'Homologous structures resulting from divergent evolution of a similar ancestral body plan',
+              'Analogous structures from convergent evolution under similar selective pressures',
+              'Vestigial structures that have lost their function in both of these lineages',
+              'Coevolution between the two species as they competed for similar prey in the ocean'
             ],
             correctAnswer: 1,
             explanation: 'Similar FUNCTION (efficient swimming) arising INDEPENDENTLY in distantly related lineages under similar selective pressures = ANALOGOUS structures from CONVERGENT evolution. The homologous-structures option is the trap: homologous structures share a common ANATOMICAL ORIGIN (divergent evolution), but dolphin and shark body forms evolved separately from different ancestral structures — they are analogous, not homologous, and do not indicate close relatedness.'
@@ -216,10 +216,10 @@ $p_{new} = (0.80)(0.30) + (0.20)(0.90) = 0.24 + 0.18 = 0.42$
           {
             question: 'A mainland frog population has allele frequencies p = 0.6 and q = 0.4. Five frogs colonize a new pond; by chance their combined genotypes contribute 4 D alleles and 6 d alleles to the new gene pool. What is the d allele frequency in the founding population, and what process does the change illustrate?',
             options: [
-              'q = 0.4; the population is in Hardy-Weinberg equilibrium',
+              'q = 0.4; the founders carried the mainland frequency (no change by chance)',
               'q = 0.6; the founder effect (genetic drift) shifted the frequency by chance',
-              'q = 0.5; natural selection favored the d allele',
-              'q = 0.6; gene flow introduced new d alleles'
+              'q = 0.5; natural selection (not chance) favored the d allele in the founders',
+              'q = 0.6; gene flow (migration) raised the d frequency in the new founding pond'
             ],
             correctAnswer: 1,
             explanation: 'Total alleles = 2N = 10; the d count is 6, so q = 6/10 = 0.6, up from the mainland 0.4 (Δq = +0.2) purely because of the chance composition of the 5 founders — the FOUNDER EFFECT, a form of genetic drift. The natural-selection (q = 0.5) option is the trap: nothing in the scenario indicates a fitness advantage for d, so this is RANDOM drift, not selection; also q = 0.6, not 0.5.'

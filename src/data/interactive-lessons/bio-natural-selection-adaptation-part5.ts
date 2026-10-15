@@ -225,10 +225,10 @@ $p = \\frac{1400}{2000} = 0.70 \\qquad q = \\frac{600}{2000} = 0.30$
           {
             question: 'A biologist samples 200 fish and finds 50 AA, 100 Aa, and 50 aa. To test whether this population is in Hardy-Weinberg equilibrium, what is the correct FIRST step?',
             options: [
-              'Conclude immediately it is NOT in equilibrium because the genotype counts are not all equal',
-              'Calculate the actual allele frequencies (p and q) from the genotype counts by allele-counting, then predict expected genotype counts and compare',
-              'Assume p = q = 0.5 because there are two alleles',
-              'Conclude it IS in equilibrium because heterozygotes are the most common genotype'
+              'Conclude it is NOT in equilibrium, because the three genotype counts are not all equal',
+              'Calculate p and q from the observed genotype counts, then compare observed counts to expected ones',
+              'Assume p = q = 0.5 at the start, because the locus has exactly two alleles',
+              'Conclude it IS in equilibrium, because heterozygotes are the most common genotype'
             ],
             correctAnswer: 1,
             explanation: 'The correct procedure is to compute actual allele frequencies from the data (here p = [2(50)+100]/400 = 0.5, q = 0.5), predict expected counts ($p^{2}\\cdot N$ = 50, 2pq·N = 100, $q^{2}\\cdot N$ = 50), and compare to observed — they match, so it IS in equilibrium. The "counts are not all equal" option is the trap: equilibrium does NOT require equal genotype counts; it requires the observed counts to match the $p^{2}$:2pq:$q^{2}$ prediction, which must be calculated, not assumed from whether categories look "equal."'

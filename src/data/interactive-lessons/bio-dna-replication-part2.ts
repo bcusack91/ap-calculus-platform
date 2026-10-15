@@ -57,7 +57,7 @@ The **Meselson-Stahl experiment** (1958) elegantly determined which model is cor
             question: 'In the Meselson-Stahl experiment, after 3 generations in light (14N) medium starting from all heavy (15N) DNA, what fraction of DNA molecules will have intermediate density?',
             options: [
               '1/2',
-              '1/4 — each generation halves the number of molecules retaining a heavy parental strand',
+              '1/4',
               '3/4',
               '1/8'
             ],
@@ -67,10 +67,10 @@ The **Meselson-Stahl experiment** (1958) elegantly determined which model is cor
           {
             question: 'If replication were conservative, what would Meselson and Stahl have observed after one generation?',
             options: [
-              'One intermediate band',
-              'Two bands — one heavy (the original intact molecule) and one light (the entirely new copy)',
-              'One light band',
-              'Three bands — heavy, intermediate, and light'
+              'A single band at intermediate density',
+              'One heavy band and one light band',
+              'A single band at light density only',
+              'Heavy, intermediate, and light bands'
             ],
             correctAnswer: 1,
             explanation: 'Conservative replication predicts the original double helix stays fully heavy (both parental strands together) and a completely new light copy is made. This would produce two distinct bands — heavy and light — with NO intermediate. Meselson-Stahl observed intermediate, ruling this out.'
@@ -141,10 +141,10 @@ DNA replication begins at specific sequences called **origins of replication**:
           {
             question: 'If a drug blocks the licensing of replication origins, what would be the consequence?',
             options: [
-              'DNA would replicate faster',
-              'Cells would be unable to initiate DNA replication at the blocked origins, preventing complete genome duplication and potentially arresting the cell cycle',
-              'DNA would replicate conservatively instead',
-              'The cell would use RNA instead of DNA'
+              'Helicase would unwind DNA without origins, so replication speeds up',
+              'Origins could not fire, so the genome would not be fully duplicated',
+              'Origins would fire repeatedly, so DNA would be re-replicated in S phase',
+              'Replication would begin, but Okazaki fragments would never be joined'
             ],
             correctAnswer: 1,
             explanation: 'The licensing system ensures that pre-replication complexes are loaded at origins during G1. If licensing is blocked, origins cannot fire during S phase, DNA replication cannot initiate (or is incomplete), and the cell cannot proceed through the cell cycle.'

@@ -153,7 +153,7 @@ Because $N = K/2$, this is the **maximum** growth rate the population will ever 
               '500 turtles'
             ],
             correctAnswer: 1,
-            explanation: 'N = MC/R = (50 × 40)/10 = 2000/10 = 200 turtles. The trap "80 turtles" comes from dividing by C (the second total, 40) instead of by R (the recaptures, 10): 50 × 40 / 40 = 50... or other mis-pairings. Keep the formula straight: marked (M) times second-catch (C) over recaptures (R). Here recaptures = 10 in the denominator gives 200.'
+            explanation: 'N = MC/R = (50 × 40)/10 = 2000/10 = 200 turtles. The trap "80 turtles" just counts the different turtles handled (50 + 40 − 10) instead of scaling up by the recapture ratio, and "500 turtles" multiplies M by R (50 × 10) instead of dividing by R. Keep the formula straight: marked (M) times second-catch (C) over recaptures (R). Here recaptures = 10 in the denominator gives 200.'
           },
           {
             question: 'A population grows logistically with r_max = 0.6 per year and K = 800. Which population size produces the FASTEST growth, and what is that maximum dN/dt?',
@@ -191,10 +191,10 @@ Because $N = K/2$, this is the **maximum** growth rate the population will ever 
           {
             question: 'In a mark-recapture study, many marked animals lose their tags before the second sampling. How does this tag loss bias the population estimate N = MC/R, and why?',
             options: [
-              'It underestimates N, because fewer recaptures (R) makes the numerator smaller',
-              'It overestimates N, because lost tags lower R, and a smaller R in the denominator inflates N = MC/R',
+              'It underestimates N, because fewer recaptures shrink the numerator',
+              'It overestimates N, because a smaller R inflates MC/R',
               'It has no effect, because R appears in both the numerator and denominator',
-              'It overestimates N, because more animals appear unmarked, raising M'
+              'It underestimates N, because tag loss lowers M in the numerator'
             ],
             correctAnswer: 1,
             explanation: 'Tag loss reduces the count of recaptures R. Since R is in the denominator of N = MC/R, a smaller R produces a LARGER (overestimated) N. The trap "underestimates N" misplaces R — it is in the denominator, not the numerator, so fewer recaptures inflates rather than deflates the estimate. This is why "no tag loss" is a key assumption of the method.'

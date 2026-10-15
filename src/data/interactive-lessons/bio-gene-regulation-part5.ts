@@ -74,8 +74,8 @@ This makes RNAi a versatile dimmer switch. A single miRNA can have **many** targ
             question: 'A miRNA represses gene X by binding the 3\' UTR of X\'s mRNA. A mutation causes the cell to OVER-express this miRNA (much more than normal). What is the predicted effect on protein X?',
             options: [
               'Protein X increases, because more miRNA means more transcription of X',
-              'Protein X decreases, because more miRNA-loaded RISC silences more of X\'s mRNA',
-              'Protein X is unchanged, because miRNAs act only on DNA',
+              'Protein X decreases, because more miRNA silences more of X\'s mRNA',
+              'Protein X is unchanged, because miRNAs act only on DNA, not mRNA',
               'Protein X increases, because miRNAs stabilize their target mRNAs'
             ],
             correctAnswer: 1,
@@ -85,9 +85,9 @@ This makes RNAi a versatile dimmer switch. A single miRNA can have **many** targ
             question: 'Conversely, gene Y is normally kept partly repressed by a miRNA. A knockout removes that miRNA entirely. What happens to protein Y, and why?',
             options: [
               'Protein Y decreases, because the miRNA was needed for translation',
-              'Protein Y increases, because removing the repressing miRNA relieves silencing of Y\'s mRNA',
+              'Protein Y increases, because Y\'s mRNA is no longer silenced',
               'Protein Y is unchanged, because the gene sequence is intact',
-              'The Y gene is deleted along with the miRNA'
+              'The Y gene itself is deleted from the genome along with the miRNA'
             ],
             correctAnswer: 1,
             explanation: 'Removing a repressor (here, the miRNA) de-represses its target, so protein Y rises. The "needed for translation" option reverses the relationship (the miRNA represses, it is not required for translation). The "gene sequence is intact" option is a trap: an intact gene can still be repressed or de-repressed — sequence intactness does not fix expression level. The gene-deletion option confuses removing a regulatory RNA with deleting the target gene.'
@@ -95,10 +95,10 @@ This makes RNAi a versatile dimmer switch. A single miRNA can have **many** targ
           {
             question: 'An siRNA shows perfect complementarity to its target mRNA, whereas a particular miRNA shows only partial complementarity to its target. What is the expected difference in outcome?',
             options: [
-              'The siRNA causes mRNA cleavage/degradation; the partially matched miRNA mainly blocks translation — but both reduce protein output',
-              'The siRNA increases protein while the miRNA decreases it',
-              'Only the miRNA reduces protein; the siRNA has no effect',
-              'Both stop transcription of the gene in the nucleus'
+              'siRNA mainly cleaves the mRNA; miRNA mainly blocks translation',
+              'The siRNA increases protein output; the miRNA decreases it',
+              'Only the miRNA reduces protein; the siRNA has no effect at all',
+              'Both act in the nucleus to stop transcription of the gene'
             ],
             correctAnswer: 0,
             explanation: 'Degree of complementarity sets the route: perfect match (siRNA) → cleavage; partial match (miRNA) → translational repression — yet both lower protein. The "siRNA increases protein" option wrongly has siRNA raising protein. The "only the miRNA reduces protein" option wrongly says siRNA does nothing. The "stop transcription" option is the post-transcriptional trap: RNAi acts on mRNA in the cytoplasm, not on transcription in the nucleus.'
@@ -172,9 +172,9 @@ RNAi occupies the **post-transcriptional** slot: the gene has been transcribed, 
             question: 'A researcher introduces a synthetic siRNA targeting gene Z into cultured cells. A Northern blot later shows the level of gene Z\'s mRNA has dropped sharply, while sequencing of gene Z shows no change. What level of regulation has the researcher engineered, and what does the unchanged sequence tell you?',
             options: [
               'Transcriptional regulation; the siRNA mutated the promoter',
-              'Post-transcriptional regulation; the siRNA directed cleavage/degradation of Z\'s mRNA without altering the DNA',
+              'Post-transcriptional regulation; the siRNA led Z\'s mRNA to be cleaved',
               'Translational regulation only; the mRNA level should not have changed',
-              'Epigenetic regulation; the siRNA methylated the gene'
+              'Epigenetic regulation; the siRNA methylated the gene\'s DNA'
             ],
             correctAnswer: 1,
             explanation: 'siRNA with good complementarity triggers mRNA cleavage and degradation — post-transcriptional control — and the intact sequence confirms no mutation occurred. The mutated-promoter option wrongly claims a sequence change. The translational-only option is inconsistent with the observed mRNA drop (pure translational control would leave mRNA level unchanged). The methylation option misattributes the effect to DNA methylation rather than mRNA targeting.'
@@ -182,10 +182,10 @@ RNAi occupies the **post-transcriptional** slot: the gene has been transcribed, 
           {
             question: 'During normal development, a miRNA is needed to keep a certain "stem-cell" gene repressed so cells can differentiate. A mutation inactivates this miRNA. What is the most likely consequence?',
             options: [
-              'The stem-cell gene is silenced even more strongly',
-              'The stem-cell gene is over-expressed because its repressing miRNA is gone, which can interfere with normal differentiation',
-              'The stem-cell gene\'s DNA sequence changes',
-              'Transcription of all genes stops'
+              'The stem-cell gene is silenced even more strongly than before',
+              'The stem-cell gene is over-expressed and may stall tissue maturation',
+              'The stem-cell gene\'s DNA sequence changes to an active allele',
+              'Transcription of all genes in the cell stops until it divides'
             ],
             correctAnswer: 1,
             explanation: 'Losing a repressing miRNA de-represses its target, so the stem-cell gene is over-expressed, potentially blocking differentiation. The "silenced even more strongly" option inverts the effect (removing a repressor cannot increase repression). The DNA-change option confuses regulation with mutation of the target. The "all transcription stops" option wildly overstates the scope — one miRNA loss does not halt all transcription.'

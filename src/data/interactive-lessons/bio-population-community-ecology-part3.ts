@@ -81,7 +81,7 @@ Type I and Type III are near-mirror images: Type I postpones mortality to the en
             question: 'On a survivorship curve, an animal population plots as a straight diagonal line on the standard (logarithmic y-axis) graph. What does this indicate?',
             options: [
               'A constant NUMBER of individuals dies in each time interval',
-              'A constant PROPORTION of individuals dies in each time interval (Type II)',
+              'A constant PROPORTION of individuals dies in each time interval',
               'Most deaths occur in old age, indicating Type I survivorship',
               'Mortality is highest among the youngest individuals'
             ],
@@ -158,9 +158,9 @@ A sea turtle lays **100+ eggs per clutch** with **no parental care** (strongly r
           {
             question: 'A semelparous Pacific salmon migrates upstream once, spawns thousands of eggs in a single massive reproductive event, and then dies. Which life-history trade-off does this "big-bang" reproduction most directly illustrate?',
             options: [
-              'Investing in large body size at the expense of reproduction',
-              'Maximizing one reproductive event at the cost of survival and future reproduction',
-              'Providing extensive parental care to few offspring',
+              'Investing in large body size at the expense of breeding',
+              'Maximizing one bout of breeding at the cost of survival',
+              'Providing extensive parental care to a few offspring',
               'Delaying reproduction to improve competitive ability'
             ],
             correctAnswer: 1,

@@ -44,10 +44,10 @@ This simply means allele frequencies must add up to 100% of the alleles in the g
           {
             question: 'What does "p" represent in the Hardy-Weinberg equations?',
             options: [
-              'The frequency of the homozygous dominant genotype',
+              'The homozygous dominant genotype frequency in the population',
               'The frequency of the dominant allele in the population',
-              'The number of dominant individuals',
-              'The probability of a dominant phenotype'
+              'The proportion of individuals that show the dominant phenotype',
+              'The total count of dominant alleles carried by the population'
             ],
             correctAnswer: 1,
             explanation: 'In Hardy-Weinberg notation, p represents the frequency (proportion) of the dominant allele in the gene pool, not the genotype or phenotype frequency.'
@@ -146,10 +146,10 @@ Think of it like a null hypothesis in statistics: Hardy-Weinberg is the **baseli
           {
             question: 'Hardy-Weinberg equilibrium serves as a:',
             options: [
-              'Proof that populations always evolve',
+              'Proof that populations are always evolving',
               'Null model to detect evolutionary change',
-              'Method to count alleles in a lab',
-              'Way to predict which allele will become dominant'
+              'Measure of selection on each genotype',
+              'Forecast of which allele will become dominant'
             ],
             correctAnswer: 1,
             explanation: 'Hardy-Weinberg equilibrium is a null model — it predicts what frequencies should look like if NO evolution is occurring. Deviations from HW indicate that evolutionary forces are at work.'

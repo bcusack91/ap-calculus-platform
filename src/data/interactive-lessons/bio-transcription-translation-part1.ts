@@ -24,26 +24,26 @@ export const bioTranscriptionPart1Data = {
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes DNA → RNA → Protein?',
+            question: 'Which sequence shows the usual flow of genetic information in a cell?',
             options: [
-              'mRNA → protein',
-              'retroviruses (RNA → DNA via reverse transcriptase)',
+              'RNA → DNA → Protein',
+              'Protein → RNA → DNA',
               'DNA → RNA → Protein',
-              'DNA → mRNA'
+              'DNA → Protein → RNA'
             ],
             correctAnswer: 2,
-            explanation: 'Correct — DNA → RNA → Protein. The other options describe different concepts from this topic.'
+            explanation: 'The central dogma: DNA is transcribed into RNA, and mRNA is translated into protein. Information does not flow from protein back to nucleic acid, and DNA is never translated directly into protein.'
           },
           {
             question: 'Which of the following is true about Translation?',
             options: [
-              'DNA → mRNA',
-              'retroviruses (RNA → DNA via reverse transcriptase)',
-              'DNA → RNA → Protein',
-              'mRNA → protein'
+              'It copies a DNA sequence into a complementary mRNA strand',
+              'It copies an RNA genome into DNA using reverse transcriptase',
+              'It removes introns and joins exons in the pre-mRNA',
+              'It builds a polypeptide by reading mRNA codons at a ribosome'
             ],
             correctAnswer: 3,
-            explanation: 'Correct — Translation: mRNA → protein. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'Translation is the mRNA → protein step: a ribosome reads the mRNA codon by codon and links the amino acids that tRNAs deliver. Copying DNA into mRNA is transcription, copying RNA into DNA is reverse transcription, and intron removal is splicing (RNA processing).'
           }
         ]
       }
@@ -69,15 +69,15 @@ export const bioTranscriptionPart1Data = {
       exercise: {
         questions: [
           {
-            question: 'Which of these accurately represents Exceptions?',
+            question: 'Which process is an exception to the usual DNA → RNA → protein flow of information?',
             options: [
-              'retroviruses (RNA → DNA via reverse transcriptase)',
-              'DNA → RNA → Protein',
-              'mRNA → protein',
-              'DNA → mRNA'
+              'Retroviruses copying their RNA genome into DNA with reverse transcriptase',
+              'Ribosomes translating an mRNA into a polypeptide in the cytoplasm',
+              'RNA polymerase transcribing a gene into pre-mRNA inside the nucleus',
+              'DNA polymerase copying the genome during S phase before cell division'
             ],
             correctAnswer: 0,
-            explanation: 'Correct — Exceptions: retroviruses (RNA → DNA via reverse transcriptase). Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: 'Retroviruses such as HIV carry an RNA genome and use reverse transcriptase to make DNA from it (RNA → DNA), the reverse of transcription. Replication, transcription and translation all follow the usual direction of information flow.'
           }
         ]
       }

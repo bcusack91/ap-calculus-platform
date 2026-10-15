@@ -61,7 +61,7 @@ Types of non-random mating:
         questions: [
           {
             question: 'Which type of non-random mating increases the proportion of homozygotes in a population?',
-            options: ['Disassortative mating', 'Inbreeding', 'Random mating', 'Gene flow'],
+            options: ['Disassortative mating', 'Inbreeding', 'Outbreeding with unrelated mates', 'Sexual selection'],
             correctAnswer: 1,
             explanation: 'Inbreeding (mating between relatives) increases homozygosity because related individuals are more likely to carry the same alleles. This shifts genotype frequencies away from HW expectations by increasing homozygotes and decreasing heterozygotes.'
           },
@@ -160,14 +160,14 @@ Two special cases:
         questions: [
           {
             question: 'Which evolutionary mechanism tends to make two separate populations more genetically similar over time?',
-            options: ['Genetic drift', 'Natural selection', 'Gene flow', 'Mutation'],
+            options: ['Genetic drift', 'Divergent selection', 'Gene flow', 'Founder effect'],
             correctAnswer: 2,
             explanation: 'Gene flow (migration) moves alleles between populations, which tends to homogenize allele frequencies — making the populations more genetically similar.'
           },
           {
             question: 'A small group of birds is blown to a remote island by a storm and establishes a new population. Which HW condition is violated?',
             options: [
-              'No mutation',
+              'No mutation in the population',
               'Random mating',
               'No natural selection',
               'Large population size'

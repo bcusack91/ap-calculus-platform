@@ -24,26 +24,26 @@ export const bioTranscriptionPart5Data = {
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Protein folding (chaperones assist)?',
+            question: 'Which statement about how a new polypeptide folds is correct?',
             options: [
-              'Protein folding (chaperones assist)',
-              'phosphorylation, glycosylation',
-              'Protein targeting and sorting',
-              'Proteolytic cleavage (e.g., insulin from proinsulin)'
+              'A polypeptide folds into its final shape, often helped by chaperones',
+              'A polypeptide\'s shape is set by its ribosome rather than its sequence',
+              'A polypeptide folds only after it has been secreted from the cell',
+              'A polypeptide keeps the same linear shape it had on the ribosome'
             ],
             correctAnswer: 0,
-            explanation: 'Correct — Protein folding (chaperones assist). The other options describe different concepts from this topic.'
+            explanation: 'After (and during) translation, a polypeptide folds into its functional three-dimensional shape, which is determined by its amino acid sequence; chaperone proteins often assist by preventing misfolding. Folding happens inside the cell, and an unfolded linear chain would not be functional.'
           },
           {
-            question: 'Which of the following is true about Proteolytic cleavage (e.g., insulin…?',
+            question: 'Which of the following is an example of proteolytic cleavage after translation?',
             options: [
-              'Protein targeting and sorting',
-              'Protein folding (chaperones assist)',
-              'Proteolytic cleavage (e.g., insulin from proinsulin)',
-              'phosphorylation, glycosylation'
+              'Adding sugar groups to a protein inside the Golgi apparatus',
+              'Adding a phosphate group to a protein to switch on its activity',
+              'Cutting proinsulin to release the active hormone insulin',
+              'Removing introns from a pre-mRNA before it is translated'
             ],
             correctAnswer: 2,
-            explanation: 'Correct — Proteolytic cleavage (e.g., insulin from proinsulin). Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'Proteolytic cleavage activates a protein by cutting it: insulin is made as the inactive precursor proinsulin and is cut into the active hormone. Adding sugars (glycosylation) and phosphates (phosphorylation) are other post-translational modifications, and intron removal acts on RNA, not protein.'
           }
         ]
       }
@@ -71,13 +71,13 @@ export const bioTranscriptionPart5Data = {
           {
             question: 'Which statement about Protein targeting and sorting is correct?',
             options: [
-              'Proteolytic cleavage (e.g., insulin from proinsulin)',
-              'Protein targeting and sorting',
-              'phosphorylation, glycosylation',
-              'Protein folding (chaperones assist)'
+              'Every protein is made on ER-bound ribosomes and is then exported',
+              'Signal sequences send proteins to places such as the ER or nucleus',
+              'Proteins reach their destinations by random diffusion after folding',
+              'Free ribosomes make only the proteins that the cell will secrete'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — Protein targeting and sorting. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: 'Proteins carry signal sequences that direct them to their destinations; for example, a signal peptide sends a protein being made into the ER, and a nuclear localization signal directs it to the nucleus. Secreted proteins are made by ribosomes bound to the rough ER, while free ribosomes make most cytosolic proteins.'
           }
         ]
       }

@@ -24,26 +24,26 @@ export const bioTranscriptionPart4Data = {
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Ribosomes read mRNA codons (triplets of…?',
+            question: 'What does a ribosome read on an mRNA molecule during translation?',
             options: [
-              'AUG (methionine)',
-              'tRNA carries amino acids; anticodon pairs with codon',
-              'Ribosomes read mRNA codons (triplets of nucleotides)',
-              'UAA, UAG, UGA'
+              'Single nucleotides, each one specifying a single amino acid',
+              'Anticodons, three-base sequences found on the tRNA molecules',
+              'Codons, three-nucleotide sequences that each specify an amino acid',
+              'Promoters, DNA sequences where translation begins on the gene'
             ],
             correctAnswer: 2,
-            explanation: 'Correct — Ribosomes read mRNA codons (triplets of nucleotides). The other options describe different concepts from this topic.'
+            explanation: 'Ribosomes read mRNA in codons, consecutive triplets of nucleotides; each codon specifies one amino acid or a stop signal. Anticodons are on tRNAs and pair with the codons, and promoters are DNA sequences that control transcription, not translation.'
           },
           {
             question: 'Which of the following is true about Start codon?',
             options: [
-              'AUG (methionine)',
-              'Ribosomes read mRNA codons (triplets of nucleotides)',
-              'tRNA carries amino acids; anticodon pairs with codon',
-              'UAA, UAG, UGA'
+              'It is AUG and codes for methionine',
+              'It is UAA and codes for no amino acid',
+              'It is AUG and codes for no amino acid',
+              'It is UGA and codes for methionine'
             ],
             correctAnswer: 0,
-            explanation: 'Correct — Start codon: AUG (methionine). Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'The start codon is AUG, which also codes for methionine, so polypeptides begin with methionine (it may be removed later). UAA and UGA are stop codons and do not code for any amino acid.'
           }
         ]
       }
@@ -71,13 +71,13 @@ export const bioTranscriptionPart4Data = {
           {
             question: 'Which of these accurately represents Stop codons?',
             options: [
-              'Ribosomes read mRNA codons (triplets of nucleotides)',
+              'AUG, UAG, UGA',
               'UAA, UAG, UGA',
-              'AUG (methionine)',
-              'tRNA carries amino acids; anticodon pairs with codon'
+              'UAA, AUG, UGG',
+              'UAC, UAG, UGA'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — Stop codons: UAA, UAG, UGA. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: 'The three stop codons are UAA, UAG and UGA; they code for no amino acid and signal release of the polypeptide. AUG is the start codon (methionine), UGG codes for tryptophan, and UAC codes for tyrosine.'
           }
         ]
       }

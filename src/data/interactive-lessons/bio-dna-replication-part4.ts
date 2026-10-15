@@ -47,23 +47,23 @@ DNA replication must be extraordinarily accurate — the error rate is approxima
       exercise: {
         questions: [
           {
-            question: 'A mutant DNA polymerase lacks 3\\u2019 to 5\\u2019 exonuclease activity but retains normal polymerase activity. What is the predicted effect on mutation rates?',
+            question: 'A mutant DNA polymerase lacks 3\u2019 to 5\u2019 exonuclease activity but retains normal polymerase activity. What is the predicted effect on mutation rates?',
             options: [
-              'No effect — other repair systems compensate completely',
-              'The mutation rate increases approximately 100-fold, as the proofreading step is lost; base selection and post-replication repair still function',
-              'DNA replication stops entirely',
-              'The mutation rate decreases because the polymerase works more carefully'
+              'No change in mutation rate, as mismatch repair corrects every slip',
+              'Mutation rate rises sharply, since misincorporated bases are no longer removed',
+              'Replication halts, since polymerase cannot extend a strand without proofreading',
+              'The error rate falls, because the polymerase now adds bases more slowly'
             ],
             correctAnswer: 1,
-            explanation: 'Proofreading (3\\u2019-5\\u2019 exonuclease) typically provides a 100-fold improvement in accuracy. Losing it increases the error rate from ~$1/10^{10}$ to ~$1/10^{8}$ (base selection and mismatch repair still operate). This is a significant increase in mutation rate.'
+            explanation: 'Proofreading (3\u2019-5\u2019 exonuclease) typically provides a 100-fold improvement in accuracy. Losing it increases the error rate from ~$1/10^{10}$ to ~$1/10^{8}$ (base selection and mismatch repair still operate). This is a significant increase in mutation rate.'
           },
           {
             question: 'In mismatch repair, how does the cell distinguish the parental (correct) strand from the daughter (potentially incorrect) strand in E. coli?',
             options: [
-              'The parental strand is longer',
-              'The parental strand is methylated at GATC sequences; the newly synthesized strand is not yet methylated, directing repair to the unmethylated (new) strand',
-              'The parental strand is made of RNA',
-              'The cell cannot distinguish them'
+              'The parental strand is longer because the new strand still lacks its ends',
+              'Only the parental strand is methylated at GATC sites right after replication',
+              'The parental strand still carries RNA primers that mark it as the template',
+              'The new strand is methylated at GATC sites, which flags it for repair'
             ],
             correctAnswer: 1,
             explanation: 'E. coli uses Dam methylase to add methyl groups to GATC sequences. Immediately after replication, only the parental strand is methylated (the new strand has not yet been methylated). Mismatch repair proteins use this asymmetry to determine which strand to repair.'
@@ -109,10 +109,10 @@ Beyond replication errors, DNA is constantly damaged by environmental and metabo
           {
             question: 'A patient with xeroderma pigmentosum develops skin cancer after minimal sun exposure. Which DNA repair pathway is defective?',
             options: [
-              'Mismatch repair',
-              'Nucleotide excision repair (NER) — the pathway that removes UV-induced thymine dimers and other bulky DNA lesions',
-              'Base excision repair',
-              'Homologous recombination'
+              'Mismatch repair, which corrects bases misincorporated during replication',
+              'Nucleotide excision repair, which removes UV-induced thymine dimers',
+              'Base excision repair, which removes single oxidized or deaminated bases',
+              'Homologous recombination, which repairs breaks using the sister chromatid'
             ],
             correctAnswer: 1,
             explanation: 'XP is caused by mutations in genes encoding NER proteins. NER removes thymine dimers caused by UV radiation. Without functional NER, these dimers persist, block replication, and if bypassed by error-prone polymerases, cause mutations that lead to cancer.'
@@ -154,10 +154,10 @@ Beyond replication errors, DNA is constantly damaged by environmental and metabo
           {
             question: 'Why is homologous recombination (HR) a more accurate repair mechanism for double-strand breaks than non-homologous end joining (NHEJ)?',
             options: [
-              'HR is faster than NHEJ',
-              'HR uses the sister chromatid (perfect copy) as a template to restore the original sequence; NHEJ simply ligates broken ends without a template, often losing or adding nucleotides at the junction',
-              'NHEJ only works in prokaryotes',
-              'HR does not require any enzymes'
+              'HR works faster than NHEJ, so fewer breaks stay open long enough to mutate',
+              'HR copies the intact sister chromatid; NHEJ rejoins ends with no template',
+              'NHEJ is limited to prokaryotes; eukaryotes repair breaks only by HR',
+              'HR needs no enzymes, so no enzyme errors can enter the repaired DNA'
             ],
             correctAnswer: 1,
             explanation: 'HR uses the intact sister chromatid as a template for synthesis across the break, restoring the original sequence exactly. NHEJ processes and ligates the broken ends directly, often resulting in small deletions or insertions at the repair site. However, HR is only available in S/G2 phase when a sister chromatid exists.'

@@ -188,10 +188,10 @@ Since $\\chi^2 = 74.2 \\gg 3.84$, we **REJECT** the null hypothesis of Hardy-Wei
           {
             question: 'A student performs a chi-square goodness-of-fit test comparing observed genotype counts to Hardy-Weinberg expectations for a locus with two alleles and three genotypes. The calculated $\\chi^{2}$ = 2.10, and the critical value at df = 1, α = 0.05 is 3.84. What is the correct conclusion?',
             options: [
-              'Reject the null hypothesis; the population is definitely evolving',
-              'Fail to reject the null hypothesis; the deviation is small enough to be due to chance, consistent with Hardy-Weinberg equilibrium',
-              'The test is invalid because $\\chi^{2}$ must be greater than the critical value',
-              'Accept the null hypothesis as proven true'
+              'Reject the null hypothesis; the population is definitely evolving away from Hardy-Weinberg',
+              'Fail to reject the null; the deviation is small enough to be chance, consistent with Hardy-Weinberg',
+              'The test is invalid, because $\\chi^{2}$ must exceed the critical value to be meaningful',
+              'Accept the null hypothesis as proven; the population is in Hardy-Weinberg equilibrium'
             ],
             correctAnswer: 1,
             explanation: 'Because $\\chi^{2}$ = 2.10 < 3.84 (critical value), we FAIL TO REJECT the null hypothesis — the observed counts are close enough to expected that the difference could be chance, consistent with equilibrium. The "accept the null as proven" option is the trap: we never "prove" or "accept" a null hypothesis as true; failing to reject means only that we lack evidence against it. Also note df = 3 genotypes − 2 alleles = 1, which is correct here.'
@@ -199,13 +199,13 @@ Since $\\chi^2 = 74.2 \\gg 3.84$, we **REJECT** the null hypothesis of Hardy-Wei
           {
             question: 'In a Hardy-Weinberg chi-square test with three genotype classes (AA, Aa, aa) where allele frequencies were estimated from the same sample, the correct number of degrees of freedom is:',
             options: [
-              '3 (one per genotype class)',
-              '2 (number of classes minus 1)',
+              '3 (the total number of genotype classes tested)',
+              '2 (three classes minus 1, as in most chi-square tests)',
               '1 (number of classes minus number of alleles)',
-              '0 (no free parameters)'
+              '0 (no free parameters once alleles are estimated)'
             ],
             correctAnswer: 2,
-            explanation: 'For a Hardy-Weinberg goodness-of-fit test, df = (number of genotype classes) − (number of alleles) = 3 − 2 = 1, because estimating the allele frequency from the data costs an extra degree of freedom (p and q are linked by p + q = 1). The "2 (classes minus 1)" option is the trap: the usual "classes minus 1" rule does NOT apply directly here because we additionally estimated an allele frequency from the sample, removing one more degree of freedom.'
+            explanation: 'For a Hardy-Weinberg goodness-of-fit test, df = (number of genotype classes) − (number of alleles) = 3 − 2 = 1, because estimating the allele frequency from the data costs an extra degree of freedom (p and q are linked by p + q = 1). The df = 2 option is the trap: the usual "classes minus 1" rule does NOT apply directly here because we additionally estimated an allele frequency from the sample, removing one more degree of freedom.'
           }
         ]
       }

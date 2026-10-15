@@ -182,9 +182,9 @@ export const bioSpeciationPart4Data = {
             question: 'In an AP-style free-response about reproductive isolation, the observed pattern is: large-scale evolutionary patterns above the species level. What term should anchor the explanation?',
             options: [
               'polyploidy',
-              'adaptive radiation',
+              'hybrid zone',
               'macroevolution',
-              'reproductive isolation'
+              'gene flow'
             ],
             correctAnswer: 2,
             explanation: 'Use macroevolution because it directly maps to the described biological pattern: large-scale evolutionary patterns above the species level.'

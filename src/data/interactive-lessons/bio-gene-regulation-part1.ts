@@ -76,10 +76,10 @@ This distinction is the single most tested concept in operon genetics (Part 6). 
           {
             question: 'A mutation inactivates the gene encoding a trans-acting repressor protein. Compared with a mutation that destroys a single cis-acting operator sequence, the trans-factor mutation is expected to:',
             options: [
-              'Affect only the one gene immediately adjacent to the mutation',
-              'Affect every gene in the cell that the repressor normally binds, because the defective protein diffuses throughout the cell',
+              'Affect only the one gene physically adjacent to the mutated site',
+              'Affect every gene the repressor binds, since it diffuses through the cell',
               'Have no effect because trans-factors are not required for transcription',
-              'Permanently alter the DNA sequence of all target genes'
+              'Permanently alter the DNA sequence of every gene the repressor binds'
             ],
             correctAnswer: 1,
             explanation: 'A trans-acting factor is a diffusible protein, so losing it removes regulation at all of its binding sites genome-wide. The trap (affecting only the one adjacent gene) describes a cis mutation, which is limited to the physically linked gene — exactly the contrast being tested. The "permanently alter the DNA sequence" option confuses regulation with mutation: a missing repressor changes expression, not the sequence of its targets.'
@@ -87,10 +87,10 @@ This distinction is the single most tested concept in operon genetics (Part 6). 
           {
             question: 'Why is transcriptional control described as the most energetically efficient level of gene regulation?',
             options: [
-              'It is the fastest possible way to change protein levels',
-              'Blocking transcription means the cell never invests resources in processing, translating, or degrading an unneeded protein',
-              'It is the only level that can completely silence a gene',
-              'Transcription factors require no ATP to function'
+              'It is the fastest possible way for a cell to change its protein levels',
+              'No resources are spent processing or translating an unneeded mRNA',
+              'It is the only level of control that can completely silence a gene',
+              'Transcription factors need no ATP, so the control itself costs nothing'
             ],
             correctAnswer: 1,
             explanation: 'If the mRNA is never made, none of the downstream costs (splicing, export, ribosomes, amino acids, later degradation) are incurred — that is the efficiency argument. The "fastest possible way" option is a trap: transcriptional control is often slower than post-translational control (e.g., phosphorylating an existing protein acts in seconds), so "fastest" is wrong. Other levels can also silence expression, so the "only level that can completely silence a gene" option overstates the case.'
@@ -161,10 +161,10 @@ Notice what this loop accomplishes: **the genome never changes**, yet the *outpu
           {
             question: 'A neuron and a white blood cell from the same person contain identical genomes yet have completely different shapes, proteins, and functions. The best explanation is that the two cell types:',
             options: [
-              'Carry different genes selected during development',
-              'Express different subsets of the same genes (differential gene expression)',
-              'Have mutated their DNA in different ways',
-              'Differ in the number of chromosomes they contain'
+              'Carry different genes, kept or lost during development',
+              'Express different subsets of the same set of genes',
+              'Have mutated their DNA in different ways as they matured',
+              'Differ in the number of chromosomes each one contains'
             ],
             correctAnswer: 1,
             explanation: 'Differentiation arises from differential gene expression: the same genome, different genes switched on. The "carry different genes" option is the classic trap — cells do not gain or lose genes during normal differentiation; they regulate which ones are active. The mutated-DNA option confuses regulation with mutation, and the chromosome-number option is false (somatic cells of one organism have the same chromosome number).'

@@ -124,12 +124,12 @@ The population is stable. Births balance deaths exactly.
             question: 'During an unusually severe winter, 40% of a songbird population dies regardless of how dense the population was. Which best classifies this limiting factor?',
             options: [
               'Density-dependent, because cold stress increases with crowding',
-              'Density-independent, because the proportional impact is unrelated to population density',
+              'Density-independent, because its impact does not depend on crowding',
               'Density-dependent, because it reduces the population size',
-              'It is the factor that sets carrying capacity for the species'
+              'It is the factor that sets the carrying capacity for this species'
             ],
             correctAnswer: 1,
-            explanation: 'Severe weather kills a fixed proportion regardless of density, so it is density-independent. The trap "density-dependent because it reduces population size" confuses the definitions — ANY factor can reduce population size; what makes a factor density-DEPENDENT is that its per-capita effect intensifies with crowding (e.g., disease, competition). A density-independent event can crash a population but does not, by itself, hold it at K.'
+            explanation: 'Severe weather kills a fixed proportion regardless of density, so it is density-independent. The trap "density-dependent because it reduces the population size" confuses the definitions — ANY factor can reduce population size; what makes a factor density-DEPENDENT is that its per-capita effect intensifies with crowding (e.g., disease, competition). A density-independent event can crash a population but does not, by itself, hold it at K.'
           }
         ]
       }
@@ -192,20 +192,20 @@ Real populations rarely glide smoothly to a flat plateau. Many **overshoot** $K$
           {
             question: 'A population grows logistically with K = 4,000. Ecologists compare the growth rate dN/dt at N = 1,000, N = 2,000, and N = 3,500. Rank these from FASTEST to slowest growth.',
             options: [
-              'N = 3,500 fastest, then 2,000, then 1,000 (bigger is always faster)',
-              'N = 2,000 fastest, then 1,000 and 3,500 roughly tied below it',
-              'N = 1,000 fastest, then 2,000, then 3,500 (smaller is always faster)',
-              'All three are equal because r_max is the same'
+              'N = 3,500 fastest, then 2,000, then 1,000',
+              'N = 2,000 fastest, then 1,000, then 3,500',
+              'N = 1,000 fastest, then 2,000, then 3,500',
+              'All three equal, since r_max is the same'
             ],
             correctAnswer: 1,
-            explanation: 'Growth peaks at N = K/2 = 2,000, so that is fastest. N = 1,000 (well below K/2) and N = 3,500 (well above K/2) both grow more slowly, and by the curve\'s symmetry they fall roughly on either side of the peak. The trap "bigger is always faster" picks N = 3,500, but near K the (K-N)/K factor (here 0.125) chokes growth despite the large population — the hump in dN/dt peaks in the MIDDLE, not at the largest N.'
+            explanation: 'Growth peaks at N = K/2 = 2,000, so that is fastest. For the other two, use dN/dt = r_max × N × (K-N)/K: at N = 1,000 the braking factor is 0.75, giving 750 × r_max; at N = 3,500 it is only 0.125, giving about 438 × r_max. So the order is 2,000, then 1,000, then 3,500. Picking N = 3,500 first assumes bigger is always faster, but near K the (K-N)/K factor chokes growth despite the large population — the hump in dN/dt peaks in the MIDDLE, not at the largest N. Picking N = 1,000 first assumes smaller is always faster, which ignores that a tiny population has few individuals to reproduce.'
           },
           {
             question: 'A logistic model gives a population of N = 6,000 when its carrying capacity is K = 5,000, and the growth rate is observed to be negative. Which interpretation is correct?',
             options: [
               'The model is impossible because N can never exceed K',
-              'The population has overshot K; with N > K the term (K-N) is negative, so dN/dt is negative and the population declines back toward K',
-              'The population is exactly at carrying capacity and stable',
+              'It has overshot K, so N declines back toward carrying capacity',
+              'It is exactly at carrying capacity and therefore stable',
               'r_max must have become negative for this to happen'
             ],
             correctAnswer: 1,

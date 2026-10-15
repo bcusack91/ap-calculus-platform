@@ -61,10 +61,10 @@ The key analytical tools are the **mean** (where the peak of the curve sits) and
           {
             question: 'Human birth weight clusters tightly around ~3.4 kg. Babies that are much lighter or much heavier than this historically had lower survival rates. Across generations the mean birth weight has stayed roughly constant while the distribution remains narrow. This is the clearest example of:',
             options: [
-              'Directional selection, because birth weight is being optimized toward one extreme',
+              'Directional selection, because one extreme of birth weight is steadily favored over the other',
               'Stabilizing selection, because intermediate phenotypes are favored and extremes are selected against',
-              'Disruptive selection, because both very small and very large babies are selected for',
-              'Sexual selection, because parents choose intermediate-sized mates'
+              'Disruptive selection, because both very small and very large babies are favored over average-sized ones',
+              'Sexual selection, because parents tend to choose mates of intermediate body size and weight'
             ],
             correctAnswer: 1,
             explanation: 'Selection AGAINST both extremes while favoring the INTERMEDIATE, with a stable mean and reduced variance, is the definition of STABILIZING selection. The disruptive-selection option is the trap (and the reverse of the truth): disruptive selection favors the extremes and selects against the middle, which would INCREASE the proportion of very small and very large babies — the opposite of what is observed.'
@@ -160,13 +160,13 @@ Because the three modes are defined by their effect on the **mean** and **varian
           {
             question: 'In the same beetle population, directional selection acts so that bb individuals have relative fitness 0.0 (all die before reproducing) while BB and Bb have fitness 1.0. After one round of selection, which best describes the change in the B allele frequency?',
             options: [
-              'It stays exactly the same because Bb heterozygotes still carry b alleles',
-              'It increases, because removing bb individuals eliminates only b alleles, raising the proportion of B',
-              'It decreases, because the population size dropped',
-              'It drops the b allele to zero immediately because all bb individuals are removed'
+              'It stays the same, because Bb heterozygotes still carry and pass on b alleles',
+              'It increases, because removing bb individuals removes only b alleles from the gene pool',
+              'It decreases, because the population size dropped after the bb beetles died',
+              'It reaches 1.0 at once, because every bb individual was removed from the population'
             ],
             correctAnswer: 1,
-            explanation: 'Removing bb individuals removes ONLY b alleles (2 per bb individual), so the proportion of B alleles among survivors INCREASES. The "drops the b allele to zero" option is the trap: complete selection against the recessive homozygote does NOT eliminate b in one generation because heterozygous Bb survivors still carry and transmit b alleles — this is exactly why recessive alleles persist and selection against them slows dramatically as q gets small.'
+            explanation: 'Removing bb individuals removes ONLY b alleles (2 per bb individual), so the proportion of B alleles among survivors INCREASES. The "reaches 1.0 at once" option is the trap: complete selection against the recessive homozygote does NOT eliminate b in one generation because heterozygous Bb survivors still carry and transmit b alleles — this is exactly why recessive alleles persist and selection against them slows dramatically as q gets small.'
           }
         ]
       }
@@ -196,19 +196,19 @@ Directional and stabilizing selection tend to *remove* variation. Yet real popul
           {
             question: 'In a malaria-endemic region, the sickle-cell allele remains common despite causing a serious disease in one homozygous genotype. The best explanation is that:',
             options: [
-              'Directional selection is steadily increasing the sickle-cell allele toward fixation',
-              'Heterozygote advantage (a form of balancing selection) maintains both alleles because heterozygotes resist malaria and have the highest fitness',
-              'Stabilizing selection eliminates both homozygotes equally, leaving only heterozygotes that breed true',
-              'The allele is neutral and its frequency is governed purely by genetic drift'
+              'Directional selection is steadily driving the sickle-cell allele toward fixation, because it protects against malaria',
+              'Heterozygote advantage maintains both alleles, because carriers resist malaria and have the highest fitness',
+              'Stabilizing selection removes both homozygotes equally, leaving heterozygotes that breed true each generation',
+              'The allele is neutral with respect to malaria, so its frequency is governed purely by genetic drift'
             ],
             correctAnswer: 1,
-            explanation: 'Heterozygote advantage (overdominance) means the heterozygote outperforms BOTH homozygotes, so balancing selection actively maintains both alleles at intermediate frequency. The "breed true" option is the trap: although heterozygotes are favored, two heterozygotes (Aa × Aa) do NOT "breed true" — Mendelian segregation regenerates both homozygotes every generation, which is precisely why both alleles, not just the heterozygote, persist in the gene pool.'
+            explanation: 'Heterozygote advantage (overdominance, a form of balancing selection) means the heterozygote outperforms BOTH homozygotes, so balancing selection actively maintains both alleles at intermediate frequency. The "breed true" option is the trap: although heterozygotes are favored, two heterozygotes (Aa × Aa) do NOT "breed true" — Mendelian segregation regenerates both homozygotes every generation, which is precisely why both alleles, not just the heterozygote, persist in the gene pool.'
           },
           {
             question: 'A field of wildflowers is pollinated by bees that learn to recognize and preferentially visit whichever flower color is most abundant, ignoring rare colors. As a result, rare color variants set more seed than common ones. Over time, multiple color variants are maintained. This pattern is BEST described as:',
             options: [
               'Directional selection toward the rarest color',
-              'Stabilizing selection on flower color',
+              'Stabilizing selection on intermediate flower colors',
               'Negative frequency-dependent selection',
               'Disruptive selection producing two fixed color morphs'
             ],

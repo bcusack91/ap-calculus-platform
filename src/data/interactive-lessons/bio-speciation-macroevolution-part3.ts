@@ -37,7 +37,7 @@ export const bioSpeciationPart3Data = {
             question: 'For Sympatric Speciation, what best describes sympatric speciation?',
             options: [
               'isolation mechanism reducing hybrid viability or fertility',
-              'genome duplication that can create instant reproductive isolation',
+              'species defined by shared body form and anatomy',
               'speciation without geographic separation',
               'reproductive isolation mechanism before fertilization'
             ],
@@ -48,9 +48,9 @@ export const bioSpeciationPart3Data = {
             question: 'In this part\'s context, what is the strongest definition of prezygotic barrier?',
             options: [
               'speciation without geographic separation',
-              'isolation mechanism reducing hybrid viability or fertility',
+              'reduced survival or fertility of hybrid offspring',
               'reproductive isolation mechanism before fertilization',
-              'rapid diversification from a common ancestor into niches'
+              'species defined by reproductive compatibility'
             ],
             correctAnswer: 2,
             explanation: 'prezygotic barrier is best matched with: reproductive isolation mechanism before fertilization.'
@@ -168,7 +168,7 @@ export const bioSpeciationPart3Data = {
       exercise: {
         questions: [
           {
-            question: 'In polyploidy-driven divergence in plants, the observed pattern is: genome duplication that can create instant reproductive isolation. What term should anchor the explanation?',
+            question: 'In some plant populations, the observed pattern is: genome duplication that can create instant reproductive isolation. What term should anchor the explanation?',
             options: [
               'sympatric speciation',
               'prezygotic barrier',

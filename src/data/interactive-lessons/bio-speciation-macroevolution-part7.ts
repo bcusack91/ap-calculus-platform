@@ -173,7 +173,7 @@ export const bioSpeciationPart7Data = {
               'adaptive radiation',
               'biological species concept',
               'macroevolution',
-              'reproductive isolation'
+              'phylogenetic species concept'
             ],
             correctAnswer: 1,
             explanation: 'Use biological species concept because it directly maps to the described biological pattern: species defined by reproductive compatibility.'

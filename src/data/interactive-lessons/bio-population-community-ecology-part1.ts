@@ -79,7 +79,7 @@ When $r > 0$ the population grows; when $r = 0$ it is stable (zero population gr
             options: [
               'Clumped dispersion, caused by patchy food resources',
               'Random dispersion, caused by the absence of interactions',
-              'Uniform dispersion, caused by antagonistic territorial interactions',
+              'Uniform dispersion, caused by aggressive spacing behavior',
               'Clumped dispersion, caused by social flocking behavior'
             ],
             correctAnswer: 2,
@@ -170,8 +170,8 @@ So the population doubles roughly every 10 years. If it instead grew at $r_{max}
             question: 'Which set of conditions is REQUIRED for a population to exhibit true exponential (J-shaped) growth?',
             options: [
               'Population near carrying capacity with strong density-dependent regulation',
-              'Unlimited resources and the absence of factors that increase death or lower birth rates',
-              'A stable population where births exactly equal deaths',
+              'Unlimited resources and no density-dependent checks',
+              'A stable population in which births exactly equal deaths',
               'High predation pressure that keeps the population small'
             ],
             correctAnswer: 1,

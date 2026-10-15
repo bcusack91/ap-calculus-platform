@@ -24,26 +24,26 @@ export const bioTranscriptionPart6Data = {
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Using the genetic code table?',
+            question: 'How is the genetic code table used to find the amino acid for a codon?',
             options: [
-              'Predicting effects of mutations on proteins',
-              'Using the genetic code table',
-              'Tracing from DNA to mRNA to protein',
-              'Identifying frameshift vs point mutations'
+              'Read the tRNA anticodon and find its bases in the table\'s rows',
+              'Read the mRNA codon 5\'→3\' and find its bases in order',
+              'Read the DNA template strand directly as if it were the codon',
+              'Read the mRNA codon 3\'→5\' starting from its last base in the table'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — Using the genetic code table. The other options describe different concepts from this topic.'
+            explanation: 'The genetic code table is organized by mRNA codons read 5\'→3\': locate the first base, then the second, then the third to find the amino acid. Anticodons and the DNA template strand are complementary to the codon, so reading them directly gives the wrong amino acid.'
           },
           {
-            question: 'In the context of Transcription & Translation: Problem-Solving Workshop, which explains Tracing from DNA to mRNA to protein?',
+            question: 'A DNA template strand reads 3\'-TAC-5\'. Which amino acid does the matching mRNA codon specify?',
             options: [
-              'Tracing from DNA to mRNA to protein',
-              'Predicting effects of mutations on proteins',
-              'Identifying frameshift vs point mutations',
-              'Using the genetic code table'
+              'Methionine, from the mRNA codon AUG',
+              'Tyrosine, reading the template as UAC',
+              'Valine, from the codon read as GUA',
+              'No amino acid, since AUG is only a start signal'
             ],
             correctAnswer: 0,
-            explanation: 'Correct — Tracing from DNA to mRNA to protein. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'The template 3\'-TAC-5\' is transcribed into the mRNA codon 5\'-AUG-3\', which codes for methionine (and also serves as the start codon). Reading the template bases as the codon gives UAC (tyrosine), and reading the codon backward gives GUA (valine).'
           }
         ]
       }
@@ -69,15 +69,15 @@ export const bioTranscriptionPart6Data = {
       exercise: {
         questions: [
           {
-            question: 'Regarding Transcription & Translation: Problem-Solving Workshop, which correctly describes Identifying frameshift vs point…?',
+            question: 'Which mutation is most likely to change every amino acid after the mutation site?',
             options: [
-              'Predicting effects of mutations on proteins',
-              'Tracing from DNA to mRNA to protein',
-              'Using the genetic code table',
-              'Identifying frameshift vs point mutations'
+              'Substituting one base, which can change a single codon',
+              'Deleting three adjacent bases, which removes one codon',
+              'A silent substitution in the third position of a codon',
+              'Deleting one base, which shifts the reading frame'
             ],
             correctAnswer: 3,
-            explanation: 'Correct — Identifying frameshift vs point mutations. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: 'Deleting a single nucleotide shifts the reading frame, so every codon downstream is read differently (a frameshift). A base substitution changes at most one codon, a silent substitution changes none, and deleting three bases removes one amino acid but keeps the frame.'
           }
         ]
       }

@@ -66,10 +66,10 @@ Cell-type specificity emerges from this: a liver cell and a neuron differ becaus
           {
             question: 'A muscle-specific gene is bound by all of its required activator proteins, yet it is not transcribed in a particular cell. Sequencing shows no mutations in the gene or its enhancers. What is the most likely explanation?',
             options: [
-              'The gene is part of an operon that is switched off',
-              'The gene is located in tightly packed heterochromatin, so the transcription machinery cannot physically access it',
+              'The gene is part of an operon that is switched off in this cell',
+              'The gene lies in tightly packed heterochromatin the machinery cannot reach',
               'The activators are cis-regulatory elements that cannot diffuse',
-              'The gene lacks a promoter'
+              'The gene lacks a functional promoter in this particular cell'
             ],
             correctAnswer: 1,
             explanation: 'In eukaryotes, chromatin state is the first gate: even with activators present, a gene in heterochromatin is inaccessible and stays off. The operon option is a classic trap — eukaryotic genes are NOT in operons. The cis-element option misdefines activators (they are trans-acting diffusible proteins, not cis elements). The missing-promoter option is excluded because the gene is described as having intact enhancers and being normally transcribable elsewhere.'
@@ -77,9 +77,9 @@ Cell-type specificity emerges from this: a liver cell and a neuron differ becaus
           {
             question: 'How can a relatively small number of transcription factors generate thousands of distinct cell-type-specific gene-expression patterns in a human body?',
             options: [
-              'Each cell type contains a different set of genes',
-              'Through combinatorial control: different COMBINATIONS of the shared transcription factors activate different sets of enhancers and genes',
-              'Each transcription factor controls exactly one gene',
+              'Each cell type contains a different set of genes to be activated',
+              'Shared factors act in different combinations in each cell type',
+              'Each transcription factor controls exactly one gene in each cell type',
               'By bundling related genes into operons unique to each cell type'
             ],
             correctAnswer: 1,
@@ -88,10 +88,10 @@ Cell-type specificity emerges from this: a liver cell and a neuron differ becaus
           {
             question: 'An enhancer for a gene is located 20,000 base pairs upstream of that gene\'s promoter. How does an activator bound at this distant enhancer stimulate transcription at the promoter?',
             options: [
-              'The activator slides along the DNA until it reaches the promoter',
-              'The DNA loops so that enhancer-bound activators contact the promoter machinery, with the Mediator complex bridging them',
-              'The enhancer is transcribed into an mRNA that activates the gene',
-              'Distant enhancers cannot affect transcription and must be ignored'
+              'The activator slides along the DNA until it reaches the promoter region',
+              'The DNA loops so the activators contact the promoter machinery',
+              'The enhancer is transcribed into an mRNA that then activates the gene',
+              'Enhancers this far away cannot affect transcription of the gene'
             ],
             correctAnswer: 1,
             explanation: 'DNA looping brings the distant enhancer-bound activators into physical contact with the promoter; Mediator relays the signal to RNA polymerase II and the general transcription factors. The sliding option misdescribes the mechanism (activators do not slide thousands of bp). The enhancer-mRNA option invents enhancer transcription as the mechanism, and the "cannot affect transcription" option contradicts the defining property of enhancers — they act at a distance.'
@@ -167,10 +167,10 @@ The gene fires strongly **only** when **both activators are present and the repr
           {
             question: 'The gene for tropomyosin produces different protein versions in skeletal muscle, smooth muscle, and brain tissue, all from the same DNA sequence. Which mechanism best explains this?',
             options: [
-              'Each tissue has a different copy of the tropomyosin gene',
-              'Alternative splicing includes or excludes different exons in different cell types, yielding distinct protein isoforms from one gene',
-              'The gene is part of a different operon in each tissue',
-              'Point mutations rewrite the gene in each tissue'
+              'Each tissue carries its own different copy of the tropomyosin gene',
+              'Alternative splicing joins different exons in each tissue',
+              'The gene is grouped into a different operon in each of the tissues',
+              'Point mutations rewrite the gene differently in each tissue type'
             ],
             correctAnswer: 1,
             explanation: 'Alternative splicing of one pre-mRNA explains how a single gene yields tissue-specific protein isoforms. The "different copy of the gene" option is the differentiation trap (all tissues carry the same gene). The operon option invokes operons, which are prokaryotic. The point-mutation option confuses regulated splicing with mutation — the DNA sequence is unchanged across tissues.'
@@ -178,10 +178,10 @@ The gene fires strongly **only** when **both activators are present and the repr
           {
             question: 'Two genes are transcribed at exactly the same rate in a cell, yet gene A produces far more protein than gene B. No difference is found in their promoters or splicing. The best explanation is a difference in:',
             options: [
-              'The number of operators upstream of each gene',
-              'mRNA stability — gene A\'s transcript is degraded more slowly, so it is translated many more times before being broken down',
-              'The number of chromosomes carrying each gene',
-              'cAMP levels in the cell'
+              'The number of operators located upstream of each of the genes',
+              'mRNA stability, as A\'s mRNA is degraded more slowly',
+              'The number of chromosomes that carry a copy of each gene',
+              'The cAMP levels that activate CAP at each gene\'s promoter'
             ],
             correctAnswer: 1,
             explanation: 'Equal transcription but unequal protein output points to post-transcriptional control of mRNA stability: a longer-lived transcript is translated more often. The operator-count option invokes operators/operons (prokaryotic) inappropriately. The chromosome-count option is irrelevant to per-mRNA output. The cAMP option imports the bacterial cAMP/CAP system, which does not govern eukaryotic mRNA half-life.'

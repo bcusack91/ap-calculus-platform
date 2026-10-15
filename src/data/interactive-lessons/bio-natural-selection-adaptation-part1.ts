@@ -69,10 +69,10 @@ Consider two implications that trap students:
           {
             question: 'A population of lizards lives on an island with many bird predators. Lizards with longer legs run faster and escape predators more often, surviving to reproduce. Leg length is heritable. Over many generations, average leg length increases. Which of Darwin\'s postulates is being VIOLATED if a scientist claims this is NOT an example of natural selection because "the lizards just learned to run faster during their lives"?',
             options: [
-              'Variation — the claim denies that lizards differ in leg length',
-              'Heritability — the claim attributes the change to within-lifetime learning rather than inherited alleles',
-              'Overproduction — the claim denies that predators limit population size',
-              'Differential reproductive success — the claim denies that faster lizards reproduce more'
+              'Variation — the claim denies that leg length varied among lizards before any learning occurred',
+              'Heritability — the claim attributes the change to within-lifetime learning, not inherited alleles',
+              'Overproduction — the claim denies that more lizards hatch than predators allow to survive',
+              'Differential reproductive success — the claim denies that heritable leg length affected how many offspring lizards had'
             ],
             correctAnswer: 1,
             explanation: 'The "learned during their lives" claim describes a non-heritable, acquired change (like Lamarckian inheritance). Natural selection requires that the advantageous trait be HERITABLE (postulate 2) so it can be passed to offspring. The differential-reproductive-success option is the trap: the scenario explicitly states faster lizards DO reproduce more, so differential reproductive success is satisfied, not violated — the flaw in the skeptic\'s claim is specifically about heritability.'
@@ -80,10 +80,10 @@ Consider two implications that trap students:
           {
             question: 'Two male peacocks live in the same population. Male X is larger, healthier, and lives 3 years longer than Male Y. However, females never choose Male X to mate with, so he fathers no chicks, while Male Y fathers 8 chicks. Which male has higher Darwinian fitness, and why?',
             options: [
-              'Male X, because greater size and longer lifespan indicate he is better adapted to the environment',
-              'Male X, because survival is the primary determinant of fitness',
-              'Male Y, because fitness is measured by contribution of offspring to the next generation',
-              'They have equal fitness because fitness depends only on health, not on reproduction'
+              'Male X, because greater size and longer lifespan show he is better adapted to the environment',
+              'Male X, because surviving longer is the main measure of an organism\'s evolutionary fitness',
+              'Male Y, because fitness is measured by offspring contributed to the next generation',
+              'They are equally fit, because fitness reflects health and survival rather than offspring number'
             ],
             correctAnswer: 2,
             explanation: 'Fitness is RELATIVE REPRODUCTIVE SUCCESS — the number of surviving, reproducing offspring contributed to the next generation. Male Y (8 chicks) vastly outscores Male X (0 chicks). The two "Male X" options embody the classic trap of equating fitness with size, health, or longevity; those traits matter ONLY if they translate into offspring, which they did not for Male X.'
@@ -128,10 +128,10 @@ Evolution is supported by multiple independent lines of evidence that converge o
           {
             question: 'The forelimbs of a human (arm), a bat (wing), and a whale (flipper) all contain the same set of bones (humerus, radius, ulna, carpals) arranged in the same pattern, despite serving very different functions. This is the BEST direct evidence for which concept?',
             options: [
-              'Analogous structures arising from convergent evolution',
+              'Analogous structures arising from convergent evolution in unrelated groups',
               'Homologous structures indicating descent from a common ancestor',
-              'Vestigial structures that have lost their original function',
-              'Sexual selection driving morphological divergence'
+              'Vestigial structures retained after losing their original ancestral function',
+              'Sexual selection driving divergence in limb shape among the three species'
             ],
             correctAnswer: 1,
             explanation: 'Same underlying bone structure with different functions = HOMOLOGOUS structures, the hallmark of DIVERGENT evolution from a common ancestor. The analogous-structures option is the trap: analogous structures have the SAME function but DIFFERENT underlying anatomy (e.g., bird wing vs. insect wing) and indicate convergent, not common, ancestry — the opposite pattern from what is described.'
@@ -139,13 +139,13 @@ Evolution is supported by multiple independent lines of evidence that converge o
           {
             question: 'A patient takes antibiotics, and over the course of treatment the bacterial infection becomes resistant. Which statement correctly describes what happened, consistent with natural selection?',
             options: [
-              'The antibiotic caused the bacteria to mutate so they could survive the drug',
-              'Individual bacteria sensed the antibiotic and developed resistance during their lifetimes',
-              'Rare resistant variants were already present; the antibiotic killed susceptible cells, so the resistance allele frequency rose in the surviving population',
-              'The bacteria evolved resistance in order to ensure the survival of their species'
+              'The antibiotic triggered new resistance mutations in the bacteria so they could survive the drug',
+              'Individual bacteria sensed the antibiotic and gradually built up resistance during their lifetimes',
+              'Resistant variants already present survived the antibiotic and reproduced, so resistance became common',
+              'The bacteria evolved resistance in order to ensure the survival of their species inside the patient'
             ],
             correctAnswer: 2,
-            explanation: 'Variation (resistant mutants) exists BEFORE the antibiotic is applied; selection then favors those pre-existing variants, raising the resistance allele frequency. The "antibiotic caused the mutation" and "developed resistance during their lifetimes" options are the Lamarckian traps (the drug "causes" or bacteria "develop" resistance on demand). The "in order to ensure survival" option is the teleology trap — evolution has no goal or foresight and does not act "in order to" benefit the species.'
+            explanation: 'Variation (resistant mutants) exists BEFORE the antibiotic is applied; selection then favors those pre-existing variants, so the resistance allele frequency rises in the surviving population. The "triggered new resistance mutations" and "built up resistance during their lifetimes" options are the Lamarckian traps (the drug "causes" or bacteria "develop" resistance on demand). The "in order to ensure the survival of their species" option is the teleology trap — evolution has no goal or foresight and does not act "in order to" benefit the species.'
           }
         ]
       }
@@ -179,21 +179,21 @@ An individual giraffe does not stretch its neck and pass on a longer neck. Inste
           {
             question: 'Which of the following statements is the MOST scientifically accurate description of an evolutionary change?',
             options: [
-              'An individual snake grew longer over its lifetime to better catch prey',
-              'Over many generations, the frequency of alleles for venom potency increased in the snake population because more potent individuals reproduced more successfully',
-              'Snakes developed venom because they needed a way to subdue prey',
-              'The strongest snake in each generation passed its acquired hunting skills to its offspring'
+              'Over its lifetime, an individual snake grew steadily longer and stronger so that it could catch larger prey',
+              'Over many generations, venom-potency allele frequencies rose in the population as more potent snakes reproduced more',
+              'Snakes gradually developed more potent venom over many generations because they needed a better way to subdue large prey',
+              'The strongest snake in each generation passed its acquired hunting skills and muscle strength to its offspring'
             ],
             correctAnswer: 1,
-            explanation: 'Evolution is a change in heritable ALLELE FREQUENCIES in a POPULATION over GENERATIONS, driven by differential reproductive success — exactly what the venom-allele-frequency option states. The individual-snake option confuses individual growth with evolution; the "needed a way to subdue prey" option uses goal-directed (teleological) language ("needed"); the acquired-hunting-skills option invokes inheritance of acquired skills (Lamarckism). All three are classic traps.'
+            explanation: 'Evolution is a change in heritable ALLELE FREQUENCIES in a POPULATION over GENERATIONS, driven by differential reproductive success — exactly what the venom-allele-frequency option states. The individual-snake option confuses individual growth with evolution; the "needed a better way to subdue large prey" option uses goal-directed (teleological) language ("needed"); the acquired-hunting-skills option invokes inheritance of acquired traits (Lamarckism). All three are classic traps.'
           },
           {
             question: 'A biologist measures the average wing length in a population of flies before and after a 20-generation experiment and finds it has increased. Before concluding that natural selection occurred, which condition is MOST essential to verify?',
             options: [
-              'That the flies with longer wings lived in a warmer environment',
+              'That the flies with longer wings were raised in a warmer environment than the starting population',
               'That the variation in wing length is heritable rather than caused purely by differences in larval nutrition',
-              'That the flies are physically the strongest in the population',
-              'That every individual fly increased its own wing length over time'
+              'That the longer-winged flies were also the physically strongest individuals in the population',
+              'That each individual fly increased its own wing length during its lifetime over the course of the experiment'
             ],
             correctAnswer: 1,
             explanation: 'Natural selection produces EVOLUTION only when the selected variation is HERITABLE (Darwin\'s second postulate). If long wings resulted purely from better larval nutrition (an environmental, non-heritable cause), the change would not be transmitted genetically and would not constitute evolution. The "every individual fly increased its own wing length" option is the trap — individuals do not change their own wing length; the population mean shifts because of differential reproduction among genetically different individuals.'
