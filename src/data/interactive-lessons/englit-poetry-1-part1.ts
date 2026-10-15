@@ -119,7 +119,7 @@ export const englitPoetry1Part1Data = {
                   "question": "A student identifies tone in a passage but does not explain effect. What is the best revision?",
                   "options": [
                         "Add more plot details",
-                        "Explain how tone shapes tone or theme in that moment",
+                        "Explain how the tone shapes meaning or theme in that moment",
                         "Replace all quotes with summary",
                         "Switch to biographical information only"
                   ],
