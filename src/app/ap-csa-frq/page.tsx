@@ -194,8 +194,8 @@ function APCSAFRQPageInner() {
               <div>
                 <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">Section II Structure</h4>
                 <ul className="space-y-1">
-                  <li>• FRQs in 90 minutes</li>
-                  <li>• Long and short format questions</li>
+                  <li>• 4 FRQs in 90 minutes (45% of the score)</li>
+                  <li>• Methods and Control Structures (7 pts), Class Design (7), Data Analysis with ArrayList (5), 2D Array (6)</li>
                   <li>• Rubric-based scoring</li>
                 </ul>
               </div>

@@ -129,7 +129,7 @@ const features = [
   },
   {
     title: 'Full-Length Practice Exam',
-    description: '40 MCQs + 4 FRQs covering all 7 units (fluids → modern physics). Timed, calculator allowed, with self-graded rubrics.',
+    description: '42 MCQs + 4 FRQs in the May 2027 format, covering all 7 units (fluids → modern physics). Timed, calculator allowed, with self-graded rubrics.',
     href: '/ap-physics2-practice',
     icon: (
       <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -137,7 +137,7 @@ const features = [
       </svg>
     ),
     color: 'from-cyan-500 to-blue-500',
-    stats: '40 MCQ + 4 FRQ · 3 hours · Timed',
+    stats: '42 MCQ + 4 FRQ · 3 hours · Timed',
   },
 ]
 
@@ -226,8 +226,8 @@ export default function APPhysics2Hub() {
             <div>
               <h4 className="mb-2 font-semibold text-gray-800 dark:text-gray-200">Format</h4>
               <ul className="space-y-1">
-                <li>• Section I: 40 MCQs in 90 minutes</li>
-                <li>• Section II: 4 FRQs in 90 minutes</li>
+                <li>• Section I: 42 MCQs in 85 minutes</li>
+                <li>• Section II: 4 FRQs in 95 minutes</li>
                 <li>• Algebra-based (no calculus required)</li>
                 <li>• Total exam time: 3 hours</li>
                 <li>• Calculator allowed</li>

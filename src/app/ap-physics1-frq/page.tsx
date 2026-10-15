@@ -196,9 +196,9 @@ function APPhysics1FRQPageInner() {
                   Section II Structure
                 </h4>
                 <ul className="space-y-1">
-                  <li>• 2 long free-response questions (7 pts each)</li>
-                  <li>• 3 short free-response questions (5 pts each)</li>
-                  <li>• Total: ~29 points in 90 minutes</li>
+                  <li>• 4 FRQs: Mathematical Routines (10 pts), Translation Between Representations (12)</li>
+                  <li>• Experimental Design and Analysis (10), Qualitative/Quantitative Translation (8)</li>
+                  <li>• Total: 40 points in 95 minutes</li>
                   <li>• Calculator allowed for all FRQs</li>
                 </ul>
               </div>
@@ -209,7 +209,7 @@ function APPhysics1FRQPageInner() {
                 <ul className="space-y-1">
                   <li>• Experimental design & data analysis</li>
                   <li>• Quantitative & qualitative reasoning</li>
-                  <li>• Paragraph-length argument with physics principles</li>
+                  <li>• Connecting a qualitative argument to a derivation</li>
                   <li>• Translating between representations (graphs, equations, diagrams)</li>
                 </ul>
               </div>

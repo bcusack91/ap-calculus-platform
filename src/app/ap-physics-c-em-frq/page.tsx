@@ -214,8 +214,8 @@ function APPhysicsCEMFRQPageInner() {
                   Section II Structure
                 </h4>
                 <ul className="space-y-1">
-                  <li>• 3 long free-response questions (15 pts each)</li>
-                  <li>• Total: 45 points in 45 minutes</li>
+                  <li>• 4 FRQs: Mathematical Routines (10 pts), Translation Between Representations (12), Experimental Design and Analysis (10), Qualitative/Quantitative Translation (8)</li>
+                  <li>• Total: 40 points in 95 minutes</li>
                   <li>• Calculator allowed for all FRQs</li>
                   <li>• Equation sheet provided</li>
                 </ul>

@@ -25,3 +25,33 @@ export function estimateApScore(percent: number): ApScore {
   for (const c of AP_SCORE_CUTOFFS) if (percent >= c.minPercent) return c.score
   return 1
 }
+
+/** One graded section of a practice exam, in raw points plus its official share of the composite. */
+export interface ApSectionScore {
+  earned: number
+  possible: number
+  /** Percent of the AP composite this section carries on the real exam (FullExamSection.weight). */
+  weight?: number
+}
+
+/**
+ * Composite percentage (0–100, rounded) of a full-length AP practice exam.
+ *
+ * On the real exam each section carries a fixed share of the composite (Calc
+ * MCQ 50% / FRQ 50%; APUSH MCQ 40 / SAQ 20 / DBQ 25 / LEQ 15), however many
+ * raw points it has. When every section has a weight, this is
+ * Σ(weight × section fraction) ÷ Σ weight. Without weights on every section it
+ * falls back to raw points earned ÷ raw points possible. The server grader
+ * (gradeApExam) and the results screen both call this, so they always agree.
+ */
+export function apCompositePercent(sections: ApSectionScore[]): number {
+  const weighted = sections.length > 0 && sections.every((s) => typeof s.weight === 'number' && s.weight > 0)
+  if (weighted) {
+    const totalWeight = sections.reduce((n, s) => n + (s.weight as number), 0)
+    const sum = sections.reduce((n, s) => n + (s.weight as number) * (s.possible ? s.earned / s.possible : 0), 0)
+    return Math.round((sum / totalWeight) * 100)
+  }
+  const earned = sections.reduce((n, s) => n + s.earned, 0)
+  const possible = sections.reduce((n, s) => n + s.possible, 0)
+  return possible ? Math.round((earned / possible) * 100) : 0
+}

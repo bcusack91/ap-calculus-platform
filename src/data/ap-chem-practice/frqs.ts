@@ -21,19 +21,33 @@ A student prepares 250.0 mL of a 0.100 M acetic acid solution.`,
     parts: [
       {
         prompt: '(a) Write the equilibrium expression ($K_a$) for the dissociation of acetic acid in water.',
-        rubric: '$K_a = \\dfrac{[\\text{H}^+][\\text{CH}_3\\text{COO}^-]}{[\\text{CH}_3\\text{COOH}]} = 1.8 \\times 10^{-5}$. (Award point for correct expression with [$H^{+}$] or [$H_{3}O^{+}$].)',
+        rubric: [
+          { id: 'a1', label: '1 pt — Correct Ka expression', description: '$K_a = \\dfrac{[\\text{H}^+][\\text{CH}_3\\text{COO}^-]}{[\\text{CH}_3\\text{COOH}]}$ (= $1.8 \\times 10^{-5}$). Writing $[\\text{H}_3\\text{O}^+]$ in place of $[\\text{H}^+]$ also earns the point.' },
+        ],
       },
       {
         prompt: '(b) Calculate the pH of the 0.100 M acetic acid solution. Show your work.',
-        rubric: 'ICE table: $K_a = x^2/(0.100 - x) \\approx x^2/0.100$. $x^2 = 1.8 \\times 10^{-6}$, $x = [\\text{H}^+] = 1.34 \\times 10^{-3}$ M. $\\text{pH} = -\\log(1.34 \\times 10^{-3}) = 2.87$. (3 pts: setup, calculation, pH value.)',
+        rubric: [
+          { id: 'b1', label: '1 pt — Equilibrium setup', description: 'ICE table or equivalent: $K_a = \\dfrac{x^2}{0.100 - x} \\approx \\dfrac{x^2}{0.100} = 1.8 \\times 10^{-5}$.' },
+          { id: 'b2', label: '1 pt — Correct [H+]', description: '$x^2 = 1.8 \\times 10^{-6}$, so $x = [\\text{H}^+] = 1.34 \\times 10^{-3}$ M.' },
+          { id: 'b3', label: '1 pt — Correct pH', description: '$\\text{pH} = -\\log(1.34 \\times 10^{-3}) = 2.87$ (consistent with the $[\\text{H}^+]$ calculated).' },
+        ],
       },
       {
         prompt: '(c) The student adds 0.0050 mol of NaOH (no volume change) to the solution. Calculate the resulting pH.',
-        rubric: 'Initial moles HA = 0.025 mol; $OH^{-}$ consumes 0.005 mol HA, forms 0.005 mol $A^{-}$. After: 0.020 mol HA + 0.005 mol $A^{-}$. Henderson-Hasselbalch: pH = pKa + log([$A^{-}$]/[HA]) = 4.74 + log(0.005/0.020) = 4.74 + (-0.60) = 4.14. (3 pts: stoichiometry, ratio, pH.)',
+        rubric: [
+          { id: 'c1', label: '1 pt — Correct reaction stoichiometry', description: 'Initial HA = (0.2500 L)(0.100 M) = 0.025 mol. $\\text{OH}^-$ consumes 0.005 mol HA and forms 0.005 mol $\\text{A}^-$, leaving 0.020 mol HA and 0.005 mol $\\text{A}^-$.' },
+          { id: 'c2', label: '1 pt — Buffer relationship set up correctly', description: 'Henderson-Hasselbalch (or the $K_a$ expression) with $\\text{p}K_a = 4.74$ and the ratio $[\\text{A}^-]/[\\text{HA}] = 0.005/0.020$.' },
+          { id: 'c3', label: '1 pt — Correct pH', description: '$\\text{pH} = 4.74 + \\log(0.25) = 4.74 - 0.60 = 4.14$.' },
+        ],
       },
       {
         prompt: '(d) Sketch the titration curve when 0.100 M NaOH is added to 25.0 mL of the 0.100 M acetic acid. Label: (i) initial pH, (ii) half-equivalence point, (iii) equivalence point pH region (above/below 7).',
-        rubric: '(i) initial pH ≈ 2.87. (ii) half-equiv: pH = pKa = 4.74. (iii) equivalence: pH > 7 (basic, due to acetate hydrolysis; ≈ 8.7). Curve shape S-shaped with steep rise near 25 mL added. (3 pts: 1 per labeled feature.)',
+        rubric: [
+          { id: 'd1', label: '1 pt — Initial pH labeled', description: 'The curve starts at pH ≈ 2.87 (consistent with part (b)).' },
+          { id: 'd2', label: '1 pt — Half-equivalence point labeled', description: 'At 12.5 mL NaOH added, pH = p$K_a$ = 4.74.' },
+          { id: 'd3', label: '1 pt — Equivalence point labeled above pH 7', description: 'Steep rise near 25.0 mL NaOH added; equivalence pH > 7 (about 8.7) because acetate hydrolyzes to make the solution basic.' },
+        ],
       },
     ],
   },
@@ -58,19 +72,33 @@ A student carries out the dissolution of $NH_{4}NO_{3}(s)$ in water in a coffee-
     parts: [
       {
         prompt: '(a) Calculate the heat absorbed by the solution, $q_{soln}$, in J.',
-        rubric: '$\\Delta T = 18.7 - 22.5 = -3.8$ °C. Mass of solution = 100.0 g (water) + 5.0 g ≈ 105.0 g. $q_{soln} = mc\\Delta T = (105.0)(4.18)(-3.8) = -1668$ J. (Sign indicates solution lost heat.) Accept ≈ -1670 J or 1670 J absorbed by $NH_{4}NO_{3}$. 2 pts.',
+        rubric: [
+          { id: 'a1', label: '1 pt — Mass of solution and ΔT', description: 'Mass of solution = 100.0 g water + 5.00 g solute ≈ 105.0 g (100.0 g also accepted); $\\Delta T = 18.7 - 22.5 = -3.8$ °C.' },
+          { id: 'a2', label: '1 pt — Correct value of q', description: '$q = mc\\Delta T = (105.0)(4.18)(-3.8) = -1.67 \\times 10^3$ J; the solution lost about 1670 J, which the dissolving $NH_{4}NO_{3}$ absorbed. Accept ≈ ±1670 J with the meaning stated (≈ 1590 J if 100.0 g was used).' },
+        ],
       },
       {
         prompt: '(b) Calculate the enthalpy of solution, $\\Delta H_{soln}$, in kJ/mol of $NH_{4}NO_{3}$.',
-        rubric: 'Heat absorbed by $NH_{4}NO_{3}$ = +1670 J (endothermic). Moles $NH_{4}NO_{3}$ = 5.00/80.0 = 0.0625 mol. $\\Delta H_{soln} = +1670/0.0625 = +26{,}700$ J/mol = +26.7 kJ/mol. 3 pts.',
+        rubric: [
+          { id: 'b1', label: '1 pt — Heat for the dissolution with the correct sign', description: 'The dissolving $NH_{4}NO_{3}$ absorbs +1670 J, the opposite sign of the heat change of the solution.' },
+          { id: 'b2', label: '1 pt — Correct moles of NH₄NO₃', description: '$5.00 \\text{ g} / 80.0 \\text{ g/mol} = 0.0625$ mol.' },
+          { id: 'b3', label: '1 pt — Correct ΔH(soln) with sign and units', description: '$\\Delta H_{soln} = +1670 \\text{ J} / 0.0625 \\text{ mol} = +2.67 \\times 10^4$ J/mol = +26.7 kJ/mol (consistent with part (a)).' },
+        ],
       },
       {
         prompt: '(c) Is the dissolution endothermic or exothermic? Explain your reasoning using the temperature change.',
-        rubric: 'Endothermic. Temperature of solution decreased ⇒ heat was absorbed by the dissolving $NH_{4}NO_{3}$ from the surroundings (water) ⇒ $\\Delta H > 0$. 2 pts.',
+        rubric: [
+          { id: 'c1', label: '1 pt — Endothermic', description: 'Identifies the dissolution as endothermic ($\\Delta H > 0$).' },
+          { id: 'c2', label: '1 pt — Justification from the temperature change', description: 'The temperature of the solution decreased, so energy flowed from the surroundings (the water) into the dissolving $NH_{4}NO_{3}$.' },
+        ],
       },
       {
         prompt: '(d) Predict the sign of $\\Delta S_{soln}$ for this dissolution and explain. Then predict whether dissolution will be spontaneous at 25°C.',
-        rubric: '$\\Delta S > 0$: solid + liquid → aqueous ions, dispersal of particles increases entropy. Spontaneity: $\\Delta G = \\Delta H - T\\Delta S$ at 298 K. Since $\\Delta H > 0$ but $T\\Delta S$ is positive and likely larger ⇒ $\\Delta G < 0$ ⇒ spontaneous (consistent with $NH_{4}NO_{3}$ dissolving readily in cold packs). 3 pts.',
+        rubric: [
+          { id: 'd1', label: '1 pt — ΔS > 0 with a reason', description: 'A solid dissolving into freely moving aqueous ions increases the dispersal of particles (more possible arrangements), so entropy increases.' },
+          { id: 'd2', label: '1 pt — Spontaneous', description: 'Predicts that the dissolution is spontaneous at 25 °C ($\\Delta G < 0$).' },
+          { id: 'd3', label: '1 pt — Justification with ΔG = ΔH − TΔS', description: '$\\Delta H > 0$ is unfavorable, so the dissolution can be spontaneous only because $T\\Delta S$ is positive and larger than $\\Delta H$ at 298 K, making $\\Delta G < 0$ (consistent with the salt dissolving on its own in cold packs).' },
+        ],
       },
     ],
   },
@@ -91,19 +119,33 @@ The reaction $2\\text{NO}(g) + \\text{O}_2(g) \\to 2\\text{NO}_2(g)$ was studied
     parts: [
       {
         prompt: '(a) Determine the order of reaction with respect to NO and with respect to $O_{2}$. Show your work.',
-        rubric: 'Trials 1→2: [NO] doubles, [$O_{2}$] same; rate × 4 = $2^n \\Rightarrow n = 2$ (second order in NO). Trials 1→3: [NO] same, [$O_{2}$] doubles; rate × 2 = $2^m \\Rightarrow m = 1$ (first order in $O_{2}$). 3 pts.',
+        rubric: [
+          { id: 'a1', label: '1 pt — Second order in NO', description: 'Trials 1 and 2: [NO] doubles with $[\\text{O}_2]$ constant and the rate quadruples, $4 = 2^n$, so $n = 2$.' },
+          { id: 'a2', label: '1 pt — First order in O₂', description: 'Trials 1 and 3: $[\\text{O}_2]$ doubles with [NO] constant and the rate doubles, $2 = 2^m$, so $m = 1$.' },
+          { id: 'a3', label: '1 pt — Work shown: trials compared with the other concentration held constant', description: 'The response names which trials were compared and shows the rate ratio for each comparison (not just stated orders).' },
+        ],
       },
       {
         prompt: '(b) Write the rate law and calculate the rate constant $k$ (with units).',
-        rubric: 'Rate $= k[\\text{NO}]^2[\\text{O}_2]$. Using trial 1: $4.0 \\times 10^{-3} = k(0.020)^2(0.010) = k(4.0 \\times 10^{-6})$. $k = 1.0 \\times 10^3$ $M^{-2}\\cdot s^{-1}$. 3 pts.',
+        rubric: [
+          { id: 'b1', label: '1 pt — Correct rate law', description: 'Rate $= k[\\text{NO}]^2[\\text{O}_2]$ (consistent with part (a)).' },
+          { id: 'b2', label: '1 pt — Correct value of k', description: 'Trial 1: $4.0 \\times 10^{-3} = k(0.020)^2(0.010) = k(4.0 \\times 10^{-6})$, so $k = 1.0 \\times 10^3$.' },
+          { id: 'b3', label: '1 pt — Correct units of k', description: '$M^{-2}\\cdot s^{-1}$ (equivalently $L^{2}\\cdot mol^{-2}\\cdot s^{-1}$).' },
+        ],
       },
       {
         prompt: '(c) Predict the initial rate when [NO]$ {}_{0}$ = 0.030 M and [$O_{2}$]$ {}_{0}$ = 0.015 M.',
-        rubric: 'Rate $= (1.0 \\times 10^3)(0.030)^2(0.015) = (1.0 \\times 10^3)(9.0 \\times 10^{-4})(0.015) = 1.35 \\times 10^{-2}$ M/s. 2 pts.',
+        rubric: [
+          { id: 'c1', label: '1 pt — Correct substitution into the rate law', description: 'Rate $= (1.0 \\times 10^3)(0.030)^2(0.015)$ (consistent with part (b)).' },
+          { id: 'c2', label: '1 pt — Correct rate with units', description: 'Rate $= (1.0 \\times 10^3)(9.0 \\times 10^{-4})(0.015) = 1.35 \\times 10^{-2}$ M/s.' },
+        ],
       },
       {
         prompt: '(d) A proposed mechanism is: (Step 1) $\\text{NO} + \\text{NO} \\rightleftharpoons \\text{N}_2\\text{O}_2$ (fast equilibrium); (Step 2) $\\text{N}_2\\text{O}_2 + \\text{O}_2 \\to 2\\text{NO}_2$ (slow). Show that this mechanism is consistent with the experimental rate law.',
-        rubric: 'Step 2 (slow) gives rate = $k_2[\\text{N}_2\\text{O}_2][\\text{O}_2]$. From step 1 fast equilibrium: $K_1 = [\\text{N}_2\\text{O}_2]/[\\text{NO}]^2 \\Rightarrow [\\text{N}_2\\text{O}_2] = K_1[\\text{NO}]^2$. Substitute: rate $= k_2 K_1[\\text{NO}]^2[\\text{O}_2]$, with effective $k = k_2 K_1$. Matches experimental 2nd order in NO, 1st order in $O_{2}$. 2 pts.',
+        rubric: [
+          { id: 'd1', label: '1 pt — Rate law from the slow step', description: 'The slow step is rate determining: rate $= k_2[\\text{N}_2\\text{O}_2][\\text{O}_2]$.' },
+          { id: 'd2', label: '1 pt — Intermediate eliminated using the fast equilibrium', description: '$K_1 = [\\text{N}_2\\text{O}_2]/[\\text{NO}]^2$, so $[\\text{N}_2\\text{O}_2] = K_1[\\text{NO}]^2$; substituting gives rate $= k_2K_1[\\text{NO}]^2[\\text{O}_2]$, which matches the experimental rate law with $k = k_2K_1$.' },
+        ],
       },
     ],
   },
@@ -121,11 +163,17 @@ A student combines 2.70 g Al (27.0 g/mol) with 100.0 mL of 2.00 M HCl.`,
     parts: [
       {
         prompt: '(a) Identify the limiting reactant. Show your work.',
-        rubric: 'Moles Al = 2.70/27.0 = 0.100 mol; needs (6/2)(0.100) = 0.300 mol HCl. Moles HCl available = (0.100 L)(2.00 M) = 0.200 mol. HCl available (0.200) < required (0.300) ⇒ HCl is limiting. 2 pts.',
+        rubric: [
+          { id: 'a1', label: '1 pt — Correct moles of both reactants', description: 'Al: $2.70/27.0 = 0.100$ mol. HCl: $(0.1000 \\text{ L})(2.00 \\text{ M}) = 0.200$ mol.' },
+          { id: 'a2', label: '1 pt — HCl is limiting, with a stoichiometric comparison', description: '0.100 mol Al would need $(6/2)(0.100) = 0.300$ mol HCl, but only 0.200 mol is available, so HCl is the limiting reactant.' },
+        ],
       },
       {
         prompt: '(b) Calculate the volume of $H_{2}$ produced at STP (22.4 L/mol).',
-        rubric: 'From limiting HCl: moles $H_{2}$ = (3/6)(0.200) = 0.100 mol. Volume = 0.100 × 22.4 = 2.24 L. 2 pts.',
+        rubric: [
+          { id: 'b1', label: '1 pt — Correct moles of H₂ from the limiting reactant', description: '$(3/6)(0.200 \\text{ mol HCl}) = 0.100$ mol $\\text{H}_2$ (consistent with part (a)).' },
+          { id: 'b2', label: '1 pt — Correct volume', description: '$0.100 \\text{ mol} \\times 22.4 \\text{ L/mol} = 2.24$ L at STP.' },
+        ],
       },
     ],
   },
@@ -140,11 +188,17 @@ Consider the molecule $\\text{XeF}_4$.`,
     parts: [
       {
         prompt: '(a) Draw the complete Lewis structure for $XeF_{4}$, including all lone pairs.',
-        rubric: 'Xe central, 4 F bonded (single bonds), 2 lone pairs on Xe. Each F has 3 lone pairs. Total valence $e^{-}$ = 8 + 4(7) = 36. 2 pts.',
+        rubric: [
+          { id: 'a1', label: '1 pt — Correct bonding skeleton', description: 'Xe is central with four Xe–F single bonds; 36 total valence electrons ($8 + 4 \\times 7$).' },
+          { id: 'a2', label: '1 pt — All lone pairs shown', description: 'Two lone pairs on Xe and three lone pairs on each F.' },
+        ],
       },
       {
         prompt: '(b) Identify the electron-domain geometry and the molecular geometry. Justify based on VSEPR.',
-        rubric: '6 electron domains around Xe (4 bonds + 2 lone pairs) ⇒ electron-domain geometry: octahedral. Lone pairs occupy axial positions (180° apart, minimizing lp-lp repulsion) ⇒ molecular geometry: SQUARE PLANAR. 2 pts.',
+        rubric: [
+          { id: 'b1', label: '1 pt — Octahedral electron-domain geometry', description: 'Six electron domains around Xe (4 bonding pairs + 2 lone pairs) give an octahedral electron-domain geometry.' },
+          { id: 'b2', label: '1 pt — Square planar molecular geometry with justification', description: 'The two lone pairs sit 180° apart (opposite each other) to minimize lone pair–lone pair repulsion, leaving the four F atoms in a square plane.' },
+        ],
       },
     ],
   },
@@ -161,11 +215,17 @@ A galvanic cell is constructed using the half-reactions:
     parts: [
       {
         prompt: '(a) Write the balanced overall cell reaction and identify which electrode is the anode.',
-        rubric: '$Ag^{+}$ has higher reduction potential ⇒ $Ag^{+}/Ag$ is cathode (reduction); $Cu/Cu^{2+}$ is ANODE (oxidation). Balanced: $\\text{Cu}(s) + 2\\text{Ag}^+(aq) \\to \\text{Cu}^{2+}(aq) + 2\\text{Ag}(s)$. 2 pts.',
+        rubric: [
+          { id: 'a1', label: '1 pt — Correct balanced overall reaction', description: '$\\text{Cu}(s) + 2\\text{Ag}^+(aq) \\to \\text{Cu}^{2+}(aq) + 2\\text{Ag}(s)$.' },
+          { id: 'a2', label: '1 pt — Cu electrode is the anode', description: '$\\text{Ag}^+$ has the higher reduction potential and is reduced at the cathode, so copper is oxidized at the anode.' },
+        ],
       },
       {
         prompt: '(b) Calculate the standard cell potential, $E°_{cell}$, and indicate whether the reaction is spontaneous.',
-        rubric: '$E°_{cell} = E°_{cathode} - E°_{anode} = 0.80 - 0.34 = +0.46$ V. Positive ⇒ spontaneous (galvanic cell). 2 pts.',
+        rubric: [
+          { id: 'b1', label: '1 pt — Correct E°cell', description: '$E°_{cell} = E°_{cathode} - E°_{anode} = 0.80 - 0.34 = +0.46$ V.' },
+          { id: 'b2', label: '1 pt — Spontaneous, justified by the sign', description: '$E°_{cell} > 0$ (so $\\Delta G° < 0$), so the reaction is spontaneous under standard conditions.' },
+        ],
       },
     ],
   },
@@ -186,11 +246,17 @@ The boiling points of three substances at 1 atm are:
     parts: [
       {
         prompt: '(a) Identify the strongest type of intermolecular force present in each substance.',
-        rubric: '$CH_{4}$: London dispersion forces (LDF) only — nonpolar. $CH_{3}OH$: hydrogen bonding (O-H) plus dipole-dipole and LDF. Butane: LDF only (nonpolar) but larger than $CH_{4}$. 2 pts.',
+        rubric: [
+          { id: 'a1', label: '1 pt — CH₄ and butane: London dispersion forces', description: 'Both are nonpolar, so London dispersion forces are the strongest (and only) intermolecular forces.' },
+          { id: 'a2', label: '1 pt — CH₃OH: hydrogen bonding', description: 'The O–H group lets methanol hydrogen bond (dipole-dipole and dispersion forces are also present).' },
+        ],
       },
       {
         prompt: '(b) Explain why methanol ($CH_{3}OH$, smallest molar mass) has a much higher boiling point than butane (larger molar mass).',
-        rubric: 'Methanol can form HYDROGEN BONDS through its O-H group, which are much stronger than the LDF in butane. Even though butane has a larger molar mass (and thus stronger LDF than methanol\'s LDF alone), the hydrogen bonding in methanol dominates and requires significantly more energy to overcome ⇒ much higher BP. 2 pts.',
+        rubric: [
+          { id: 'b1', label: '1 pt — Identifies the different forces being compared', description: 'Methanol molecules are held together by hydrogen bonds through their O–H groups, while butane molecules have only London dispersion forces.' },
+          { id: 'b2', label: '1 pt — Explains the boiling-point difference', description: 'Butane has a larger, more polarizable electron cloud (stronger dispersion forces than methanol\'s dispersion forces alone), but the hydrogen bonds between methanol molecules are stronger overall, so more energy is required to separate methanol molecules and its boiling point is much higher.' },
+        ],
       },
     ],
   },

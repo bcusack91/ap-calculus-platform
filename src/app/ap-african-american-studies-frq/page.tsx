@@ -196,8 +196,8 @@ function APAASFRQPageInner() {
               <div>
                 <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">Section II Structure</h4>
                 <ul className="space-y-1">
-                  <li>• FRQs in 90 minutes</li>
-                  <li>• Long and short format questions</li>
+                  <li>• 3 SAQs in 40 minutes + 1 DBQ in 45 minutes</li>
+                  <li>• SAQs: one text source, one visual source, one thematic</li>
                   <li>• DBQ: 5 sources, 7-point rubric, 45 min</li>
                   <li>• Rubric-based scoring</li>
                 </ul>

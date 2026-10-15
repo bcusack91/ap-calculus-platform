@@ -22,6 +22,7 @@ export const config: FullLengthExamConfig = {
       description:
         '42 multiple-choice questions across all 8 units (Kinematics, Forces, Energy, Momentum, Rotation, Rotational Energy, Oscillations, Fluids). Calculator allowed.',
       timeLimitMinutes: 85,
+      weight: 50, // May 2027: Section I is 50% of the AP score
       items: MCQS,
     },
     {
@@ -31,6 +32,7 @@ export const config: FullLengthExamConfig = {
       description:
         '4 free-response questions: Q1 Mathematical Routines, Q2 Translation Between Representations, Q3 Experimental Design and Analysis, Q4 Qualitative/Quantitative Translation. Self-graded rubric checklist.',
       timeLimitMinutes: 95,
+      weight: 50, // May 2027: Section II is 50%
       items: FRQS,
     },
   ],

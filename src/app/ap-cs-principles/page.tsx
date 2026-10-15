@@ -245,10 +245,10 @@ export default function ApCsPrinciplesHub() {
             <div>
               <h4 className="mb-2 font-semibold text-gray-800 dark:text-gray-200">Format</h4>
               <ul className="space-y-1">
-                <li>• Create Performance Task: 12 hours (30% of score)</li>
+                <li>• Create Performance Task: 9 hours of class time + 2 written responses (60 min) on exam day (30% of score)</li>
                 <li>• End-of-Course Exam: 70 MCQs in 120 minutes (70% of score)</li>
                 <li>• Single-select and multiple-select questions</li>
-                <li>• Total exam: 2 hours + Create Task</li>
+                <li>• Exam day: 3 hours (2 hours MCQ + 1 hour written response)</li>
               </ul>
             </div>
             <div>

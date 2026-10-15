@@ -203,8 +203,8 @@ function APMacroFRQPageInner() {
               <div>
                 <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">Section II Structure</h4>
                 <ul className="space-y-1">
-                  <li>• FRQs in 60 minutes</li>
-                  <li>• Long and short format questions</li>
+                  <li>• 3 FRQs in 60 minutes, including a 10-minute reading period</li>
+                  <li>• 1 long FRQ (10 pts, half the section) + 2 short FRQs (5 pts each)</li>
                   <li>• Rubric-based scoring</li>
                 </ul>
               </div>

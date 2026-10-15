@@ -3,12 +3,12 @@ import type { SAQItem } from '@/components/FullLengthPracticeExam'
 /**
  * AP Macroeconomics — Free Response.
  * Mirrors official CB exam structure:
- *   FRQ 1 — Long FRQ (multi-part, ~10 pts)
- *   FRQ 2 — Short FRQ (~5 pts)
- *   FRQ 3 — Short FRQ (~5 pts)
+ *   FRQ 1 — Long FRQ, 10 points (A 2, B 1, C 2, D 1, E 1, F 1, G 2)
+ *   FRQ 2 — Short FRQ, 5 points (one per part)
+ *   FRQ 3 — Short FRQ, 5 points (one per part)
  *
- * Modeled as SAQItems with multi-part rubrics. Each part is graded
- * on a 1-point rubric the student checks off after submitting.
+ * Modeled as SAQItems with itemized rubrics. Each rubric line is one point
+ * the student checks off after submitting.
  */
 
 export const FRQS: SAQItem[] = [
@@ -17,7 +17,7 @@ export const FRQS: SAQItem[] = [
     type: 'saq',
     topic: 'unit-3-national-income-price',
     prompt:
-      'FRQ 1 — Long FRQ (10 parts).\n\n' +
+      'FRQ 1 — Long FRQ (10 points).\n\n' +
       'Assume the economy of the country of Westland is currently in a recession with a recessionary output gap. The marginal propensity to consume (MPC) in Westland is 0.75 and the required reserve ratio is 10%. The central bank of Westland (the Reserve Bank) targets the short-term nominal interest rate.\n\n' +
       'Use this scenario to answer parts (A) through (G) below. Where indicated, draw a fully-labeled graph in your response.',
     parts: [
@@ -69,7 +69,8 @@ export const FRQS: SAQItem[] = [
         letter: 'G',
         question: 'Assume Westland\'s real GDP returns to full employment after the Reserve Bank acts. In the long run, what happens to the price level and to long-run aggregate supply (LRAS) compared to the original equilibrium? Explain.',
         rubric: [
-          { id: 'g1', label: '1 pt — Price level rises; LRAS unchanged (vertical at full-employment output)', description: 'Must state that the price level is higher than $PL_{1}$ once AD shifts right to close the gap, and that LRAS itself does not shift (it is determined by potential output, not policy).' },
+          { id: 'g1', label: '1 pt — Price level rises, with explanation', description: 'Must state that the long-run price level is higher than $PL_{1}$ and explain that AD shifted right (from the lower interest rate and higher investment) to close the recessionary gap.' },
+          { id: 'g2', label: '1 pt — LRAS unchanged, with explanation', description: 'Must state that LRAS does not shift (it stays vertical at $Y_{e}$) and explain that it is determined by the economy\'s resources, technology and potential output, not by demand-side policy.' },
         ],
       },
     ],
@@ -88,15 +89,14 @@ export const FRQS: SAQItem[] = [
     type: 'saq',
     topic: 'unit-4-financial-sector',
     prompt:
-      'FRQ 2 — Short (5 parts).\n\n' +
+      'FRQ 2 — Short (5 points).\n\n' +
       'The country of Eastland is operating at full employment. Eastland\'s government decides to permanently increase its deficit-financed government spending in order to expand military programs.',
     parts: [
       {
         letter: 'A',
         question: 'Using a correctly labeled graph of the loanable funds market in Eastland, show the effect of the increased deficit-financed government spending on the real interest rate. Label the original real interest rate $(r_{1})$ and the new real interest rate $(r_{2})$.',
         rubric: [
-          { id: 'a1', label: '1 pt — Correctly labeled loanable funds market (axes: real interest rate; quantity of loanable funds)', description: 'Axes labeled. Demand for loanable funds (D_LF) downward, supply (S_LF) upward.' },
-          { id: 'a2', label: '1 pt — D_LF shifts RIGHT and $r_{2}$ > $r_{1}$', description: 'Higher government borrowing increases demand for loanable funds, raising the real interest rate.' },
+          { id: 'a1', label: '1 pt — Correctly labeled loanable funds graph showing D_LF shifting RIGHT and r₂ > r₁', description: 'Axes labeled (real interest rate; quantity of loanable funds), demand for loanable funds (D_LF) downward sloping, supply (S_LF) upward sloping, AND higher government borrowing shown as a rightward shift of D_LF that raises the real interest rate from $r_{1}$ to $r_{2}$. Both the labeled graph and the shift are needed for the point.' },
         ],
       },
       {
@@ -141,7 +141,7 @@ export const FRQS: SAQItem[] = [
     type: 'saq',
     topic: 'unit-5-long-run-stabilization',
     prompt:
-      'FRQ 3 — Short (5 parts).\n\n' +
+      'FRQ 3 — Short (5 points).\n\n' +
       'The country of Northland is currently in long-run macroeconomic equilibrium. The natural rate of unemployment is 5% and the inflation rate is 2%. The Reserve Bank of Northland conducts an unanticipated, expansionary open-market operation.',
     parts: [
       {
@@ -155,15 +155,14 @@ export const FRQS: SAQItem[] = [
         letter: 'B',
         question: 'Draw a correctly labeled short-run Phillips curve (SRPC) and long-run Phillips curve (LRPC) for Northland. Label the initial equilibrium point as point X.',
         rubric: [
-          { id: 'b1', label: '1 pt — Correctly labeled axes (inflation rate, unemployment rate), downward-sloping SRPC, vertical LRPC at the natural rate of unemployment', description: 'Axes labeled. LRPC vertical at natural rate (5%). SRPC downward-sloping crossing LRPC.' },
-          { id: 'b2', label: '1 pt — Point X shown at the intersection of SRPC and LRPC at 2% inflation and 5% unemployment', description: 'Initial equilibrium correctly placed.' },
+          { id: 'b1', label: '1 pt — Correctly labeled SRPC and LRPC, with point X at their intersection', description: 'Axes labeled (inflation rate, unemployment rate), downward-sloping SRPC, LRPC vertical at the natural rate (5%), AND point X at the intersection of SRPC and LRPC (2% inflation, 5% unemployment). As in the official guidelines, the LRPC and the initial point are scored together.' },
         ],
       },
       {
         letter: 'C',
         question: 'On your graph from part (B), label as point Y the new SHORT-RUN equilibrium after the unanticipated expansionary monetary policy.',
         rubric: [
-          { id: 'c1', label: '1 pt — Point Y is to the LEFT of point X on the SAME SRPC (lower unemployment, higher inflation)', description: 'Movement ALONG the SRPC down and to the left: unemployment below natural rate, inflation above 2%.' },
+          { id: 'c1', label: '1 pt — Point Y is to the LEFT of point X on the SAME SRPC (lower unemployment, higher inflation)', description: 'Movement ALONG the SRPC up and to the left: unemployment below the natural rate, inflation above 2%.' },
         ],
       },
       {
@@ -184,7 +183,7 @@ export const FRQS: SAQItem[] = [
     sampleResponse:
       '(A) The Reserve Bank conducted an open-market PURCHASE of government bonds.\n\n' +
       '(B) Phillips curve graph: axes (inflation rate %, unemployment rate %). Vertical LRPC at u = 5%. Downward-sloping SRPC. Point X is at the intersection (5% unemployment, 2% inflation).\n\n' +
-      '(C) Point Y lies down-and-to-the-left of X along the same SRPC: unemployment below 5% and inflation above 2%.\n\n' +
+      '(C) Point Y lies up-and-to-the-left of X along the same SRPC: unemployment below 5% and inflation above 2%.\n\n' +
       '(D) Once workers and firms revise inflation expectations upward to match the new, higher inflation, the SRPC shifts UP. The economy returns to the LRPC at the natural rate of unemployment (5%) but at a higher long-run inflation rate.\n\n' +
       '(E) There is NO long-run trade-off between inflation and unemployment. The LRPC is vertical at the natural rate, so expansionary monetary policy permanently raises inflation but only temporarily lowers unemployment.',
   },

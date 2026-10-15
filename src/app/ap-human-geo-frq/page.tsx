@@ -195,9 +195,9 @@ function APHumanGeoFRQPageInner() {
                 <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">Section II Structure</h4>
                 <ul className="space-y-1">
                   <li>• 3 free-response questions</li>
-                  <li>• 1 question with 7 parts</li>
-                  <li>• 2 questions with 3 parts each</li>
-                  <li>• Total: ~23 points in 75 minutes</li>
+                  <li>• 7 points each; Q1 no stimulus, Q2 one stimulus, Q3 two stimuli</li>
+                  <li>• Each question has parts A–G</li>
+                  <li>• Total: 21 points in 75 minutes</li>
                   <li>• No calculator needed</li>
                 </ul>
               </div>

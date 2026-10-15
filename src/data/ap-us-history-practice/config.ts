@@ -22,6 +22,7 @@ export const config: FullLengthExamConfig = {
       description:
         '55 stimulus-based multiple-choice questions covering Periods 1–9 (1491–present), with primary and secondary source prompts and balanced distractors.',
       timeLimitMinutes: 55,
+      weight: 40, // May 2027: Section I Part A is 40% of the AP score
       items: MCQS,
     },
     {
@@ -31,6 +32,7 @@ export const config: FullLengthExamConfig = {
       description:
         '3 required short-answer questions, each with a source: 1 secondary text (historians on the American Revolution), 1 primary text (the 1848 Declaration of Sentiments), and 1 non-text source (a 1904 political cartoon). Each part is graded on a 1-point rubric you check off yourself.',
       timeLimitMinutes: 40,
+      weight: 20, // May 2027: Section I Part B, SAQs, is 20%
       items: SAQS,
     },
     {
@@ -40,6 +42,7 @@ export const config: FullLengthExamConfig = {
       description:
         '1 DBQ with 7 historical documents (1945–1965) and a 7-point rubric. Includes 15 minutes of suggested reading time built into the writing window.',
       timeLimitMinutes: 60,
+      weight: 25, // May 2027: Section II DBQ is 25%
       items: [DBQ],
     },
     {
@@ -49,6 +52,7 @@ export const config: FullLengthExamConfig = {
       description:
         '1 required long essay question with a broad prompt covering 1800–1945; you may focus on one or more developments it names. Graded on a 6-point rubric.',
       timeLimitMinutes: 40,
+      weight: 15, // May 2027: Section II LEQ is 15%
       items: [LEQ],
     },
   ],

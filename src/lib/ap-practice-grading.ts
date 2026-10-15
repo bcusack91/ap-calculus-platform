@@ -4,12 +4,14 @@
  * Multiple choice is graded from the option TEXT the student picked against the
  * exam's own key, so the browser can't claim a score. Free-response is
  * self-graded against the rubric on screen; the server only caps each item at
- * its rubric's point count. Options are shuffled exactly as the page shuffles
+ * its rubric's point count. The composite percentage weights each section by
+ * its official share of the AP score (FullExamSection.weight) when every
+ * section has one; earned/possible stay raw points. Options are shuffled exactly as the page shuffles
  * them, so a stored review shows them in the order the student saw.
  */
 import type { ExamItem, FullLengthExamConfig } from '@/components/FullLengthPracticeExam'
 import { shuffleOptions } from '@/lib/shuffle-options'
-import { estimateApScore } from '@/lib/ap-scoring'
+import { apCompositePercent, estimateApScore } from '@/lib/ap-scoring'
 
 export interface ApMcqAnswer { s: number; i: number; chosen: string | null }
 export interface ApFrqAnswer { s: number; i: number; earned: number }
@@ -23,11 +25,13 @@ export function frqPossible(item: ExamItem): number {
 
 export interface GradedApExam {
   subject: string
+  /** Raw points, unweighted. */
   earned: number
   possible: number
+  /** Composite percentage: section-weighted like the real exam when every section has a weight (apCompositePercent). */
   percentage: number
   estimatedAPScore: number
-  perSection: { name: string; earned: number; possible: number; pct: number }[]
+  perSection: { name: string; earned: number; possible: number; pct: number; weight?: number }[]
   mcq: { correct: number; total: number }
   /** In the shape diagnosticReviewItems reads (src/lib/question-sources/diagnostic.ts). */
   review: {
@@ -81,11 +85,17 @@ export function gradeApExam(config: FullLengthExamConfig, mcqIn: unknown, frqIn:
         earned += Math.max(0, Math.min(max, Math.round(frqAnswers.get(`${s}:${i}`) ?? 0)))
       }
     })
-    return { name: sec.shortName, earned, possible, pct: possible ? Math.round((earned / possible) * 100) : 0 }
+    return {
+      name: sec.shortName,
+      earned,
+      possible,
+      pct: possible ? Math.round((earned / possible) * 100) : 0,
+      ...(typeof sec.weight === 'number' ? { weight: sec.weight } : {}),
+    }
   })
   const earned = perSection.reduce((n, x) => n + x.earned, 0)
   const possible = perSection.reduce((n, x) => n + x.possible, 0)
-  const percentage = possible ? Math.round((earned / possible) * 100) : 0
+  const percentage = apCompositePercent(perSection)
   return {
     subject: config.subject,
     earned,

@@ -60,7 +60,7 @@ const features = [
   },
   {
     title: 'Practice Exam',
-    description: 'Full-length 30-question stimulus-based practice exam covering all 9 units, modeled on the official College Board exam.',
+    description: 'Full-length practice exam modeled on the official College Board exam: 55 stimulus-based MCQs, 3 SAQs, 1 DBQ and 1 LEQ across all 9 units, with self-grading rubrics.',
     href: '/ap-world-history-practice',
     icon: (
       <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -291,8 +291,8 @@ export default function ApWorldHistoryHub() {
             <div>
               <h4 className="mb-2 font-semibold text-gray-800 dark:text-gray-200">Format</h4>
               <ul className="space-y-1">
-                <li>• Section I: 55 MCQs + 3 SAQs in 95 minutes</li>
-                <li>• Section II: 1 DBQ + 1 LEQ in 100 minutes</li>
+                <li>• Section I: 55 MCQs (55 min) + 3 required SAQs (40 min)</li>
+                <li>• Section II: 1 DBQ (60 min) + 1 required LEQ (40 min)</li>
                 <li>• DBQ: analyze 7 documents</li>
                 <li>• Total exam time: 3 hours 15 minutes</li>
               </ul>

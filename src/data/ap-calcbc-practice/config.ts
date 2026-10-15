@@ -22,6 +22,7 @@ export const config: FullLengthExamConfig = {
       description:
         '42 multiple-choice questions across all 10 units. Part A (Q1–Q29): NO calculator (62 min). Part B (Q30–Q42): graphing calculator allowed/required (38 min). Equal weight per question.',
       timeLimitMinutes: 100,
+      weight: 50, // May 2027: Section I (Parts A and B together) is 50% of the AP score
       items: MCQS,
     },
     {
@@ -31,6 +32,7 @@ export const config: FullLengthExamConfig = {
       description:
         '6 free-response questions. Part A (Q1, Q2): graphing calculator REQUIRED (~30 min). Part B (Q3–Q6): NO calculator (~60 min). 9 points each. Self-graded rubric checklist after each part.',
       timeLimitMinutes: 90,
+      weight: 50, // May 2027: Section II (Parts A and B together) is 50%
       items: FRQS,
     },
   ],

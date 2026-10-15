@@ -129,7 +129,7 @@ const features = [
   },
   {
     title: 'Full-Length Practice Exam',
-    description: 'Complete AP Statistics exam simulation: 40 MCQ (90 min) + 6 FRQ (90 min, includes Investigative Task) with timed sections and self-graded rubrics.',
+    description: 'Complete AP Statistics exam simulation: 42 MCQ (90 min) + 4 FRQ (90 min) in the revised May 2027 format with timed sections and self-graded rubrics.',
     href: '/ap-stats-practice',
     icon: (
       <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -137,7 +137,7 @@ const features = [
       </svg>
     ),
     color: 'from-amber-500 to-orange-500',
-    stats: '40 MCQ + 6 FRQ · 3 hours · Timed',
+    stats: '42 MCQ + 4 FRQ · 3 hours · Timed',
   },
 ]
 
@@ -224,11 +224,11 @@ export default function APStatisticsHub() {
             <div>
               <h4 className="mb-2 font-semibold text-gray-800 dark:text-gray-200">Format</h4>
               <ul className="space-y-1">
-                <li>• Section I: 40 MCQs in 90 minutes</li>
-                <li>• Section II: 6 FRQs in 90 minutes</li>
-                <li>• 5 short FRQs + 1 investigative task</li>
+                <li>• Section I: 42 MCQs (4 choices) in 90 minutes</li>
+                <li>• Section II: 4 FRQs in 90 minutes</li>
+                <li>• Four 10-point FRQs; no investigative task</li>
                 <li>• Total exam time: 3 hours</li>
-                <li>• Graphing calculator required</li>
+                <li>• Fully digital; graphing calculator + built-in Desmos</li>
               </ul>
             </div>
             <div>

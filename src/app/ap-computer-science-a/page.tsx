@@ -120,7 +120,7 @@ const features = [
   },
   {
     title: 'Practice Exam',
-    description: 'Full-length, timed simulation: 40 Java MCQs (90 min) + 4 FRQs (90 min) modeled on the official AP CSA exam.',
+    description: 'Full-length, timed simulation: 42 Java MCQs (90 min) + 4 FRQs (90 min) modeled on the official AP CSA exam.',
     href: '/ap-csa-practice',
     icon: (
       <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -128,7 +128,7 @@ const features = [
       </svg>
     ),
     color: 'from-blue-500 to-indigo-500',
-    stats: '40 MCQ + 4 FRQ · 3 hours · Timed',
+    stats: '42 MCQ + 4 FRQ · 3 hours · Timed',
   },]
 
 const units = [
@@ -256,9 +256,9 @@ export default function ApComputerScienceAHub() {
             <div>
               <h4 className="mb-2 font-semibold text-gray-800 dark:text-gray-200">Format</h4>
               <ul className="space-y-1">
-                <li>• Section I: 40 MCQs in 90 minutes</li>
+                <li>• Section I: 42 MCQs in 90 minutes</li>
                 <li>• Section II: 4 FRQs in 90 minutes</li>
-                <li>• FRQs: Methods/Control Flow, Class, Array/ArrayList, 2D Array</li>
+                <li>• FRQs: Methods and Control Structures, Class Design, Data Analysis with ArrayList, 2D Array</li>
                 <li>• Total exam time: 3 hours</li>
               </ul>
             </div>

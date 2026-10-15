@@ -22,6 +22,7 @@ export const config: FullLengthExamConfig = {
       description:
         '45 questions across five passages. Sets 1–3 (24 reading questions) are nonfiction passages (commencement address, urban-design essay, postwar journalist\'s letter) testing rhetorical analysis. Sets 4–5 (21 writing questions) are student drafts testing revision and composition skills. 60 minutes.',
       timeLimitMinutes: 60,
+      weight: 45, // May 2027: Section I is 45% of the AP score
       items: MCQS,
     },
     {
@@ -31,6 +32,7 @@ export const config: FullLengthExamConfig = {
       description:
         '3 essays (Synthesis, Rhetorical Analysis, Argument). Suggested 40 minutes per essay, plus a 15-minute reading period. Each essay is scored on a 6-point AP rubric: Thesis (0–1), Evidence & Commentary (0–4), Sophistication (0–1).',
       timeLimitMinutes: 135,
+      weight: 55, // May 2027: Section II is 55%
       items: FRQS,
     },
   ],

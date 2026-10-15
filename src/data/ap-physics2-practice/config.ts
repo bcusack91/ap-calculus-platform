@@ -22,6 +22,7 @@ export const config: FullLengthExamConfig = {
       description:
         '42 multiple-choice questions across all 7 units (Thermodynamics; Electric Force, Field, and Potential; Electric Circuits; Magnetism and Electromagnetism; Geometric Optics; Waves, Sound, and Physical Optics; Modern Physics). Calculator allowed.',
       timeLimitMinutes: 85,
+      weight: 50, // May 2027: Section I is 50% of the AP score
       items: MCQS,
     },
     {
@@ -31,6 +32,7 @@ export const config: FullLengthExamConfig = {
       description:
         '4 free-response questions: Q1 Mathematical Routines (circuits), Q2 Translation Between Representations (PV diagram), Q3 Experimental Design (index of refraction), Q4 Qualitative/Quantitative Translation (EM induction).',
       timeLimitMinutes: 95,
+      weight: 50, // May 2027: Section II is 50%
       items: FRQS,
     },
   ],

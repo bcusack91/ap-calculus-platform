@@ -22,6 +22,7 @@ export const config: FullLengthExamConfig = {
       description:
         '42 calculus-based MCQs covering electrostatics (Coulomb, Gauss\'s law), conductors and capacitors, electric circuits (RC, Kirchhoff), magnetic fields and forces (Biot-Savart, Ampère\'s law), and electromagnetic induction (Faraday, inductors). Calculator allowed.',
       timeLimitMinutes: 85,
+      weight: 50, // May 2027: Section I is 50% of the AP score
       items: MCQS,
     },
     {
@@ -31,6 +32,7 @@ export const config: FullLengthExamConfig = {
       description:
         '4 calculus-based FRQs: Q1 Mathematical Routines, Q2 Translation Between Representations, Q3 Experimental Design, Q4 Qualitative/Quantitative Translation. Self-graded rubric checklist.',
       timeLimitMinutes: 95,
+      weight: 50, // May 2027: Section II is 50%
       items: FRQS,
     },
   ],

@@ -22,6 +22,7 @@ export const config: FullLengthExamConfig = {
       description:
         '42 Java MCQs covering all 4 units (55% of the score). No calculator. AP CSA Java Quick Reference provided.',
       timeLimitMinutes: 90,
+      weight: 55, // May 2027: Section I is 55% of the AP score
       items: MCQS,
     },
     {
@@ -29,8 +30,9 @@ export const config: FullLengthExamConfig = {
       name: 'Section II',
       shortName: 'Free Response',
       description:
-        '4 FRQs (9 points each, 36 total; 45% of the score): Q1 Methods & Control Structures, Q2 Class Design, Q3 Data Analysis with ArrayList, Q4 2D Array. Self-graded rubric checklist.',
+        '4 FRQs (7, 7, 5 and 6 points, 25 total; 45% of the score): Q1 Methods & Control Structures, Q2 Class Design, Q3 Data Analysis with ArrayList, Q4 2D Array. Self-graded rubric checklist.',
       timeLimitMinutes: 90,
+      weight: 45, // May 2027: Section II is 45%
       items: FRQS,
     },
   ],
@@ -42,10 +44,10 @@ export const config: FullLengthExamConfig = {
         items: [
           'Section I: 42 MCQs (90 min, 55%)',
           'Section II: 4 FRQs (90 min, 45%)',
-          '   • Q1 Methods & Control Structures (9 pts)',
-          '   • Q2 Class Design (9 pts)',
-          '   • Q3 Data Analysis with ArrayList (9 pts)',
-          '   • Q4 2D Array (9 pts)',
+          '   • Q1 Methods & Control Structures (7 pts)',
+          '   • Q2 Class Design (7 pts)',
+          '   • Q3 Data Analysis with ArrayList (5 pts)',
+          '   • Q4 2D Array (6 pts)',
           'Total: 3 hours · Java',
         ],
       },

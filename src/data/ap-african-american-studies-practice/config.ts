@@ -23,6 +23,7 @@ export const config: FullLengthExamConfig = {
       description:
         '60 MCQs, most in sets of 3 built around a text excerpt, image description, or data table, covering all four units: Origins of the African Diaspora; Freedom, Enslavement, and Resistance; The Practice of Freedom; and Movements and Debates.',
       timeLimitMinutes: 70,
+      weight: 66.67, // May 2027: official 60% of the AP score; the other 10% (Individual Student Project 8.5% + its exam-day validation question 1.5%) isn't in this exam, so 60/18/12 are rescaled by 100/90
       items: MCQS,
     },
     {
@@ -32,6 +33,7 @@ export const config: FullLengthExamConfig = {
       description:
         '3 short-answer questions: Question 1 uses a text source (Frederick Douglass, 1865; 4 points), Question 2 uses a non-text source (Jacob Lawrence\'s Migration Series; 3 points), and Question 3 has no source (the civil rights movement; 3 points). Each part is graded on a 1-point rubric you check off yourself.',
       timeLimitMinutes: 40,
+      weight: 20, // May 2027: official SAQs 18% of the AP score, rescaled by 100/90 (see MCQ)
       items: SAQS,
     },
     {
@@ -41,6 +43,7 @@ export const config: FullLengthExamConfig = {
       description:
         '1 document-based question with 5 sources on the Harlem Renaissance, graded on the 7-point AP African American Studies rubric (thesis, context, evidence from sources, evidence beyond sources, source use, reasoning).',
       timeLimitMinutes: 45,
+      weight: 13.33, // May 2027: official DBQ 12% of the AP score, rescaled by 100/90 (see MCQ)
       items: [DBQ],
     },
   ],

@@ -22,6 +22,7 @@ export const config: FullLengthExamConfig = {
       description:
         '60 multiple-choice questions across all 9 units (Atomic Structure, Bonding, IMFs, Reactions, Kinetics, Thermodynamics, Equilibrium, Acids/Bases, Applications of Thermodynamics). Calculator allowed.',
       timeLimitMinutes: 90,
+      weight: 50, // May 2027: Section I is 50% of the AP score
       items: MCQS,
     },
     {
@@ -31,6 +32,7 @@ export const config: FullLengthExamConfig = {
       description:
         '7 free-response questions: Q1–Q3 long FRQs (10 pts each) and Q4–Q7 short FRQs (4 pts each). Self-graded rubric checklist.',
       timeLimitMinutes: 105,
+      weight: 50, // May 2027: Section II is 50%
       items: FRQS,
     },
   ],

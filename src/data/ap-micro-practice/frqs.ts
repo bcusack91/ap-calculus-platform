@@ -3,9 +3,11 @@ import type { SAQItem } from '@/components/FullLengthPracticeExam'
 /**
  * AP Microeconomics — Free Response.
  * Mirrors official CB exam structure:
- *   FRQ 1 — Long FRQ (multi-part, ~10 pts)
- *   FRQ 2 — Short FRQ (~5 pts)
- *   FRQ 3 — Short FRQ (~5 pts)
+ *   FRQ 1 — Long FRQ, 10 points (A 1, B 1, C 1, D 1, E 2, F 1, G 3)
+ *   FRQ 2 — Short FRQ, 5 points (one per part)
+ *   FRQ 3 — Short FRQ, 5 points (A 2, B 1, C 1, D 1)
+ *
+ * Each rubric line is one point the student checks off after submitting.
  */
 
 export const FRQS: SAQItem[] = [
@@ -14,7 +16,7 @@ export const FRQS: SAQItem[] = [
     type: 'saq',
     topic: 'unit-4-imperfect-competition',
     prompt:
-      'FRQ 1 — Long FRQ (10 parts).\n\n' +
+      'FRQ 1 — Long FRQ (10 points).\n\n' +
       'CleanWater Inc. is the sole producer of bottled spring water in the small town of Riverdale. The company is a profit-maximizing single-price monopolist. Its marginal cost (MC) is constant at $2 per bottle. Its average total cost (ATC) is also $2 per bottle (no fixed costs). The market demand for bottled water in Riverdale is given by the linear demand schedule below:\n\n' +
       '   Price ($)  Quantity demanded (bottles)\n' +
       '       8                  0\n' +
@@ -78,8 +80,9 @@ export const FRQS: SAQItem[] = [
         question:
           'Now suppose CleanWater is able to perfectly price discriminate (charge each consumer the maximum they are willing to pay). State whether each of the following will increase, decrease, or stay the same compared to the single-price monopoly outcome:\n  (i) Quantity produced.\n  (ii) Consumer surplus.\n  (iii) Deadweight loss.',
         rubric: [
-          { id: 'g1', label: '1 pt — (i) Quantity INCREASES (to allocatively efficient Q = 600); (ii) Consumer surplus DECREASES (to zero); (iii) DWL DECREASES (to zero)', description: 'Perfect price discrimination produces the efficient quantity (P = MC) but extracts ALL consumer surplus as producer profit — DWL is eliminated.' },
-          { id: 'g2', label: '1 pt — Brief correct justification', description: 'Justification must reference perfect price discrimination producing where P = MC and capturing all CS as PS.' },
+          { id: 'g1', label: '1 pt — (i) Quantity INCREASES', description: 'A perfectly price-discriminating monopolist sells every unit for which willingness to pay is at least MC, so output rises from 300 to the allocatively efficient Q = 600 (P = MC on the last unit).' },
+          { id: 'g2', label: '1 pt — (ii) Consumer surplus DECREASES', description: 'Each consumer pays exactly their maximum willingness to pay, so consumer surplus falls to zero; all of it becomes producer surplus.' },
+          { id: 'g3', label: '1 pt — (iii) Deadweight loss DECREASES', description: 'Because the efficient quantity is produced, the deadweight loss is eliminated (falls from $450 to zero).' },
         ],
       },
     ],
@@ -98,7 +101,7 @@ export const FRQS: SAQItem[] = [
     type: 'saq',
     topic: 'unit-3-production-cost-perfect-comp',
     prompt:
-      'FRQ 2 — Short (5 parts).\n\n' +
+      'FRQ 2 — Short (5 points).\n\n' +
       'Assume the market for organic apples is perfectly competitive. A representative apple-grower (Apple Acres) is currently in long-run equilibrium. Then, a sudden increase in consumer demand for organic apples raises the market price.',
     parts: [
       {
@@ -106,8 +109,7 @@ export const FRQS: SAQItem[] = [
         question:
           'Draw side-by-side, correctly labeled graphs of (left) the market for organic apples and (right) Apple Acres in the SHORT RUN after the demand shock. On the firm graph, show: D = MR = P at the new market price, MC, ATC, and the profit-maximizing quantity (q*).',
         rubric: [
-          { id: 'a1', label: '1 pt — Market graph: D shifts RIGHT, equilibrium P rises and Q rises', description: 'Standard rightward demand shift; new equilibrium higher P and Q.' },
-          { id: 'a2', label: '1 pt — Firm graph: horizontal D = MR = P at the new (higher) market price; MC and ATC drawn correctly; q* at MR = MC', description: 'Firm faces horizontal demand at the new market price. q* is at MR = MC.' },
+          { id: 'a1', label: '1 pt — Correctly labeled side-by-side graphs: market D shifts RIGHT; firm\'s horizontal D = MR = P at the new higher price, with q* at MR = MC', description: 'Market graph: rightward demand shift raises equilibrium P and Q. Firm graph: horizontal D = MR = P at the new market price, MC and ATC drawn correctly, and q* where MR = MC. Both graphs are needed for the point.' },
         ],
       },
       {
@@ -156,7 +158,7 @@ export const FRQS: SAQItem[] = [
     type: 'saq',
     topic: 'unit-6-market-failure-government',
     prompt:
-      'FRQ 3 — Short (5 parts).\n\n' +
+      'FRQ 3 — Short (5 points).\n\n' +
       'A steel mill in a competitive industry produces steel and emits pollution into a nearby river. The pollution imposes external costs on a downstream fishing community. The market currently has no government intervention.',
     parts: [
       {
@@ -181,8 +183,7 @@ export const FRQS: SAQItem[] = [
         question:
           'Identify a specific government policy (other than direct regulation or quota) that would internalize the externality and move the market to the socially optimal quantity. Explain how it works.',
         rubric: [
-          { id: 'c1', label: '1 pt — A per-unit Pigouvian TAX on steel equal to the marginal external cost', description: 'The tax shifts MPC up to MSC, internalizing the externality.' },
-          { id: 'c2', label: '1 pt — Explanation: tax raises producers\' costs by exactly the per-unit external damage, so MPC + tax = MSC; equilibrium moves to Q*', description: 'Must connect the tax mechanism to producing the socially optimal quantity.' },
+          { id: 'c1', label: '1 pt — Per-unit Pigouvian TAX equal to the marginal external cost, with explanation', description: 'Identifies a per-unit tax on steel equal to the marginal external cost AND explains that it raises producers\' costs by exactly the per-unit external damage, so MPC + tax = MSC and the equilibrium quantity falls to Q*.' },
         ],
       },
       {
@@ -190,7 +191,7 @@ export const FRQS: SAQItem[] = [
         question:
           'Now suppose another industry generates a POSITIVE production externality (e.g., a research lab whose discoveries benefit other firms). Without intervention, will the free-market quantity be greater than, less than, or equal to the socially optimal quantity? Explain.',
         rubric: [
-          { id: 'd1', label: '1 pt — Free-market quantity is LESS THAN the socially optimal quantity', description: 'Positive externalities cause underproduction; standard correction is a per-unit subsidy equal to the marginal external benefit.' },
+          { id: 'd1', label: '1 pt — Free-market quantity is LESS THAN the socially optimal quantity, with explanation', description: 'Producers ignore the external benefit to other firms (the social benefit exceeds the private benefit), so the market underproduces. (The standard correction is a per-unit subsidy equal to the marginal external benefit.)' },
         ],
       },
     ],

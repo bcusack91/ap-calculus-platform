@@ -23,6 +23,7 @@ export const config: FullLengthExamConfig = {
       description:
         '75 MCQs in 90 minutes covering all five units (15 each): Biological Bases of Behavior, Cognition, Development and Learning, Social Psychology and Personality, and Mental and Physical Health. About a third are science-practice items (research design, ethics, and data interpretation) set within those units.',
       timeLimitMinutes: 90,
+      weight: 66.7, // May 2027: Section I is 66.7% of the AP score
       items: MCQS,
     },
     {
@@ -32,6 +33,7 @@ export const config: FullLengthExamConfig = {
       description:
         '2 FRQs in 70 minutes (14 points total): Q1 Article Analysis Question (AAQ, 7 pts, ~25 min) — analyze a study summary: method, operational definition, a statistic, an ethical guideline, generalizability, and whether the results support a hypothesis; Q2 Evidence-Based Question (EBQ, 7 pts, ~45 min) — make a claim and support it with evidence from two of three sources, each explained with a psychological concept. Self-graded against the rubric.',
       timeLimitMinutes: 70,
+      weight: 33.3, // May 2027: Section II is 33.3% (AAQ and EBQ equally)
       items: FRQS,
     },
   ],

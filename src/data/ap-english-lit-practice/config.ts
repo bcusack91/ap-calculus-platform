@@ -22,6 +22,7 @@ export const config: FullLengthExamConfig = {
       description:
         '55 questions across five literary passages: a domestic lyric, a New England prose excerpt, a meditation on rural land, an ironic London office story, and a contemporary one-act play scene. 60 minutes.',
       timeLimitMinutes: 60,
+      weight: 45, // May 2027: Section I is 45% of the AP score
       items: MCQS,
     },
     {
@@ -31,6 +32,7 @@ export const config: FullLengthExamConfig = {
       description:
         '3 essays: Q1 Poetry Analysis, Q2 Prose Fiction Analysis, Q3 Literary Argument (open question on a work of literary merit). Suggested 40 minutes per essay. Each essay is scored on a 6-point AP rubric: Thesis (0–1), Evidence & Commentary (0–4), Sophistication (0–1).',
       timeLimitMinutes: 120,
+      weight: 55, // May 2027: Section II is 55%
       items: FRQS,
     },
   ],

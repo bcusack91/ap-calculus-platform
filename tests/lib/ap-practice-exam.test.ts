@@ -4,7 +4,9 @@
  */
 import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { config as chem } from '@/data/ap-chem-practice/config'
+import { config as apush } from '@/data/ap-us-history-practice/config'
 import { gradeApExam, frqPossible } from '@/lib/ap-practice-grading'
+import { apCompositePercent } from '@/lib/ap-scoring'
 import { shuffleOptions } from '@/lib/shuffle-options'
 import type { MCQItem } from '@/components/FullLengthPracticeExam'
 
@@ -46,6 +48,41 @@ describe('gradeApExam', () => {
     const frqFull = chem.sections.flatMap((sec, s) => sec.items.map((item, i) => (item.type === 'mcq' ? null : { s, i, earned: frqPossible(item) }))).filter(Boolean)
     expect(gradeApExam(chem, allRight, frqFull)).toMatchObject({ percentage: 100, estimatedAPScore: 5 })
     expect(gradeApExam(chem, [], [])).toMatchObject({ percentage: 0, estimatedAPScore: 1 })
+  })
+  it('weights each section by its official share of the AP score, keeping earned/possible raw', () => {
+    // Chem is MCQ 50% / FRQ 50%. Every MCQ right and no FRQ points is 50%, however many raw points each section has.
+    const allRight = chem.sections.flatMap((sec, s) => sec.items.map((item, i) => {
+      if (item.type !== 'mcq') return null
+      const o = shown(item)
+      return { s, i, chosen: o.options[o.correctIndex] }
+    })).filter(Boolean)
+    const g = gradeApExam(chem, allRight, [])
+    expect(g.earned).toBe(mcqs.length)
+    expect(g.possible).toBe(chem.sections.reduce((n, sec) => n + sec.items.reduce((m, it) => m + (it.type === 'mcq' ? 1 : frqPossible(it)), 0), 0))
+    expect(g.percentage).toBe(50)
+    expect(g.estimatedAPScore).toBe(3)
+    expect(g.perSection.map((x) => x.weight)).toEqual([50, 50])
+
+    // Without weights it falls back to raw earned ÷ possible.
+    const unweighted = { ...chem, sections: chem.sections.map(({ weight: _w, ...sec }) => sec) }
+    expect(gradeApExam(unweighted, allRight, []).percentage).toBe(Math.round((g.earned / g.possible) * 100))
+  })
+
+  it('a full DBQ alone is worth its 25% of the APUSH composite', () => {
+    const dbq = apush.sections.findIndex((sec) => sec.items.some((i) => i.type === 'dbq'))
+    expect(apush.sections.map((sec) => sec.weight)).toEqual([40, 20, 25, 15])
+    const g = gradeApExam(apush, [], [{ s: dbq, i: 0, earned: frqPossible(apush.sections[dbq].items[0]) }])
+    expect(g.percentage).toBe(25)
+  })
+})
+
+describe('apCompositePercent (shared by the server grader and the results screen)', () => {
+  it('weights sections when every one has a weight, else sums raw points', () => {
+    const secs = [{ earned: 42, possible: 42, weight: 50 }, { earned: 0, possible: 54, weight: 50 }]
+    expect(apCompositePercent(secs)).toBe(50)
+    expect(apCompositePercent([{ earned: 42, possible: 42 }, { earned: 0, possible: 54, weight: 50 }])).toBe(44)
+    expect(apCompositePercent([{ earned: 30, possible: 60, weight: 66.67 }, { earned: 20, possible: 20, weight: 33.33 }])).toBe(67)
+    expect(apCompositePercent([])).toBe(0)
   })
 })
 

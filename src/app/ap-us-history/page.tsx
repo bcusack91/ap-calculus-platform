@@ -256,8 +256,8 @@ export default function ApUsHistoryHub() {
             <div>
               <h4 className="mb-2 font-semibold text-gray-800 dark:text-gray-200">Format</h4>
               <ul className="space-y-1">
-                <li>• Section I: 55 MCQs + 3 SAQs in 95 minutes</li>
-                <li>• Section II: 1 DBQ + 1 LEQ in 100 minutes</li>
+                <li>• Section I: 55 MCQs (55 min) + 3 required SAQs (40 min)</li>
+                <li>• Section II: 1 DBQ (60 min) + 1 required LEQ (40 min)</li>
                 <li>• DBQ: analyze 7 documents</li>
                 <li>• Total exam time: 3 hours 15 minutes</li>
               </ul>

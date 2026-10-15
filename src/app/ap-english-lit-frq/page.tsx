@@ -194,8 +194,8 @@ function APEngLitFRQPageInner() {
               <div>
                 <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">Section II Structure</h4>
                 <ul className="space-y-1">
-                  <li>• FRQs in 120 minutes</li>
-                  <li>• Long and short format questions</li>
+                  <li>• 3 essays in 120 minutes</li>
+                  <li>• Poetry Analysis, Prose Fiction Analysis, Literary Argument (6 points each)</li>
                   <li>• Rubric-based scoring</li>
                 </ul>
               </div>

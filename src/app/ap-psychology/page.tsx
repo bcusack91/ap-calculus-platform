@@ -212,9 +212,9 @@ export default function APPsychologyHub() {
             <div>
               <h4 className="mb-2 font-semibold text-gray-800 dark:text-gray-200">Format</h4>
               <ul className="space-y-1">
-                <li>• Section I: 100 MCQs in 70 minutes</li>
-                <li>• Section II: 2 FRQs in 50 minutes</li>
-                <li>• Total exam time: 2 hours</li>
+                <li>• Section I: 75 MCQs in 90 minutes</li>
+                <li>• Section II: 2 FRQs (AAQ + EBQ) in 70 minutes</li>
+                <li>• Total exam time: 2 hours 40 minutes</li>
                 <li>• No calculator allowed</li>
                 <li>• No penalty for guessing</li>
               </ul>

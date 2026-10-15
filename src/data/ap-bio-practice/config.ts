@@ -22,6 +22,7 @@ export const config: FullLengthExamConfig = {
       description:
         '60 multiple-choice questions, many built on data or scenarios, across all 8 units (Chemistry of Life; Cell Structure & Function; Cellular Energetics; Cell Communication & Cell Cycle; Heredity; Gene Expression & Regulation; Natural Selection; Ecology).',
       timeLimitMinutes: 90,
+      weight: 50, // May 2027: Section I is 50% of the AP score
       items: MCQS,
     },
     {
@@ -31,6 +32,7 @@ export const config: FullLengthExamConfig = {
       description:
         '6 free-response questions: 2 long FRQs (~25 min each) and 4 short FRQs (~10 min each). Self-graded rubric checklist after each part.',
       timeLimitMinutes: 90,
+      weight: 50, // May 2027: Section II is 50%
       items: FRQS,
     },
   ],

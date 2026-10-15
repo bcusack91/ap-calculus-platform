@@ -22,6 +22,7 @@ export const config: FullLengthExamConfig = {
       description:
         '42 MCQs covering Units 1–3. Part A (Q1–Q29) is no calculator (65 min); Part B (Q30–Q42) requires a graphing calculator (40 min).',
       timeLimitMinutes: 105,
+      weight: 62.5, // May 2027: Section I is 62.5% of the AP score (Part A 43.75% + Part B 18.75%)
       items: MCQS,
     },
     {
@@ -31,6 +32,7 @@ export const config: FullLengthExamConfig = {
       description:
         '4 FRQs (6 points each, 24 total). Part A, graphing calculator required (35 min): Q1 Function Concepts, Q2 Modeling a Non-Periodic Context. Part B, no calculator (35 min): Q3 Modeling a Periodic Context, Q4 Symbolic Manipulations. Self-graded rubric.',
       timeLimitMinutes: 70,
+      weight: 37.5, // May 2027: Section II is 37.5% (Part A 18.75% + Part B 18.75%)
       items: FRQS,
     },
   ],

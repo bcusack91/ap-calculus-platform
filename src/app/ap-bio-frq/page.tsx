@@ -196,9 +196,9 @@ function APBioFRQPageInner() {
                   Section II Structure
                 </h4>
                 <ul className="space-y-1">
-                  <li>• 2 long free-response questions (8–10 pts each)</li>
+                  <li>• 2 long free-response questions (9 pts each)</li>
                   <li>• 4 short free-response questions (4 pts each)</li>
-                  <li>• Total: ~36 points in 90 minutes</li>
+                  <li>• Total: 34 points in 90 minutes</li>
                   <li>• Calculator allowed for all FRQs</li>
                 </ul>
               </div>

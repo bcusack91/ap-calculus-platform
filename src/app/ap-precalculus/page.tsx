@@ -98,11 +98,11 @@ const features: HubFeature[] = [
   },
   {
     title: 'Full-Length Practice Exam',
-    description: 'Take a complete, timed AP Precalculus practice exam: 40 MCQs (Section I, 120 min) plus 4 FRQs (Section II, 60 min) modeled on the official exam.',
+    description: 'Take a complete, timed AP Precalculus practice exam: 42 MCQs (Section I, 105 min) plus 4 FRQs (Section II, 70 min) modeled on the official exam.',
     href: '/ap-precalc-practice',
     icon: 'fullExam',
     color: 'from-blue-500 to-indigo-500',
-    stats: '40 MCQ + 4 FRQ · 3 hours · Timed',
+    stats: '42 MCQ + 4 FRQ · 2h 55m · Timed',
   },
   {
     title: 'Study schedules',
@@ -157,11 +157,11 @@ export default function APPrecalculusHub() {
             {
               heading: 'Format',
               bullets: [
-                'Section I: 40 MCQs in 2 hours',
-                'Section II: 4 FRQs in 1 hour',
+                'Section I: 42 MCQs in 1 hour 45 minutes (Part A: 29 no-calculator in 65 min; Part B: 13 graphing-calculator in 40 min)',
+                'Section II: 4 FRQs in 1 hour 10 minutes (Part A: 2 with calculator; Part B: 2 without, 35 min each)',
                 '~62% multiple choice · ~38% free response',
-                'Total exam time: 3 hours',
-                'Graphing calculator allowed throughout',
+                'Total exam time: 2 hours 55 minutes',
+                'Graphing calculator required on the calculator parts only',
               ],
             },
             {

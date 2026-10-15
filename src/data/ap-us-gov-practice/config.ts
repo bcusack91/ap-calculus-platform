@@ -22,6 +22,7 @@ export const config: FullLengthExamConfig = {
       description:
         '55 stimulus-based multiple-choice questions across all 5 units, with quotes from foundational documents, scenarios, and quantitative stimuli.',
       timeLimitMinutes: 80,
+      weight: 50, // May 2027: Section I is 50% of the AP score
       items: MCQS,
     },
     {
@@ -31,6 +32,7 @@ export const config: FullLengthExamConfig = {
       description:
         '3 free-response questions: Concept Application (3 points), Quantitative Analysis (4 points), and SCOTUS Comparison (4 points, with part B worth 2). You check off each rubric point yourself after submitting.',
       timeLimitMinutes: 60,
+      weight: 37.5, // May 2027: Section II is 50% and the College Board weights its 4 FRQs equally at 12.5% each, so this part (3 of the 4 FRQs) is split by question count: 3 × 12.5
       items: SAQS,
     },
     {
@@ -40,6 +42,7 @@ export const config: FullLengthExamConfig = {
       description:
         '1 argument essay prompt. Develop a defensible claim supported by evidence from one of the foundational documents listed in the prompt and a second piece of evidence, with reasoning and a response to an opposing perspective. Self-grading rubric checklist (6 points).',
       timeLimitMinutes: 40,
+      weight: 12.5, // May 2027: the Argument Essay is 1 of the 4 equally weighted FRQs: 12.5% (split by question count)
       items: ARGUMENT_ESSAY,
     },
   ],

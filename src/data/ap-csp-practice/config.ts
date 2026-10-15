@@ -22,6 +22,7 @@ export const config: FullLengthExamConfig = {
       description:
         '70 multiple-choice questions in 120 minutes covering all five Big Ideas. Code questions use the AP CSP exam reference sheet pseudocode (lists are 1-indexed). The real exam ends with a few select-two-answers questions; every question here has one answer. The Create performance task and its exam-day written response are not part of this practice section.',
       timeLimitMinutes: 120,
+      weight: 100, // May 2027: MCQ is 70% of the real AP score; the Create performance task (30%) isn't part of this exam, so this section is the whole practice composite
       items: MCQS,
     },
   ],

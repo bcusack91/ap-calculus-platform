@@ -22,6 +22,7 @@ export const config: FullLengthExamConfig = {
       description:
         '55 stimulus-based multiple-choice questions covering Units 1–9, with primary and secondary source prompts and balanced distractors.',
       timeLimitMinutes: 55,
+      weight: 40, // May 2027: Section I Part A is 40% of the AP score
       items: MCQS,
     },
     {
@@ -31,6 +32,7 @@ export const config: FullLengthExamConfig = {
       description:
         '3 required short-answer questions, each with a source: 1 secondary text (land-based empires and industrial competitors), 1 primary text (Hồ Chí Minh, 1945), and 1 non-text source (a data table on the trans-Atlantic slave trade). Each part is graded on a 1-point rubric you check off yourself.',
       timeLimitMinutes: 40,
+      weight: 20, // May 2027: Section I Part B, SAQs, is 20%
       items: SAQS,
     },
     {
@@ -40,6 +42,7 @@ export const config: FullLengthExamConfig = {
       description:
         '1 DBQ with 7 historical documents on industrialization and workers (1750–1900) and a 7-point rubric. Includes 15 minutes of suggested reading time built into the writing window.',
       timeLimitMinutes: 60,
+      weight: 25, // May 2027: Section II DBQ is 25%
       items: [DBQ],
     },
     {
@@ -49,6 +52,7 @@ export const config: FullLengthExamConfig = {
       description:
         '1 required long essay question with a broad prompt covering c. 1200–c. 1750; you may focus on one or more developments it names. Graded on a 6-point rubric.',
       timeLimitMinutes: 40,
+      weight: 15, // May 2027: Section II LEQ is 15%
       items: [LEQ],
     },
   ],

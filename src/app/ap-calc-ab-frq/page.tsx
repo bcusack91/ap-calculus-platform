@@ -196,10 +196,10 @@ function APCalcABFRQPageInner() {
                   Section II Structure
                 </h4>
                 <ul className="space-y-1">
-                  <li>• 2 long free-response questions (~9 pts each)</li>
-                  <li>• 4 short free-response questions (~9 pts each)</li>
-                  <li>• Total: ~54 points in 90 minutes</li>
-                  <li>• Calculator allowed for some FRQs</li>
+                  <li>• Part A: 2 FRQs, graphing calculator required (30 min)</li>
+                  <li>• Part B: 4 FRQs, no calculator (60 min)</li>
+                  <li>• 9 points each; total 54 points in 90 minutes</li>
+                  <li>• 50% of the AP score</li>
                 </ul>
               </div>
               <div>

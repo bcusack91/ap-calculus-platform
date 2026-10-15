@@ -22,6 +22,7 @@ export const config: FullLengthExamConfig = {
       description:
         '42 calculus-based MCQs across all 7 units (Kinematics, Force and Translational Dynamics, Work/Energy/Power, Linear Momentum, Torque and Rotational Dynamics, Energy and Momentum of Rotating Systems, Oscillations), with gravitation and orbits woven in. Calculator allowed.',
       timeLimitMinutes: 85,
+      weight: 50, // May 2027: Section I is 50% of the AP score
       items: MCQS,
     },
     {
@@ -31,6 +32,7 @@ export const config: FullLengthExamConfig = {
       description:
         '4 calculus-based FRQs: Q1 Mathematical Routines, Q2 Translation Between Representations, Q3 Experimental Design, Q4 Qualitative/Quantitative Translation. Self-graded rubric checklist.',
       timeLimitMinutes: 95,
+      weight: 50, // May 2027: Section II is 50%
       items: FRQS,
     },
   ],

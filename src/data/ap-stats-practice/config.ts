@@ -22,6 +22,7 @@ export const config: FullLengthExamConfig = {
       description:
         '42 multiple-choice questions (4 choices each) across all 5 units: One-Variable Data and Collecting Data; Probability, Random Variables, and Probability Distributions; Inference for Proportions (including chi-square); Inference for Means; and Regression Analysis. Includes two 3-question sets that share a scenario. Calculator allowed.',
       timeLimitMinutes: 90,
+      weight: 50, // May 2027: Section I is 50% of the AP score
       items: MCQS,
     },
     {
@@ -31,6 +32,7 @@ export const config: FullLengthExamConfig = {
       description:
         '4 free-response questions, 10 points each (~22 min each): Q1 Multi-Focus on Practices 1 and 2 (formulating questions and collecting data), Q2 Multi-Focus on Practices 3 and 4 (analyzing data and interpreting results), Q3 Inference, and Q4 Multi-Focus on Practices 2, 3, and 4. Self-graded rubric checklist.',
       timeLimitMinutes: 90,
+      weight: 50, // May 2027: Section II is 50% (each FRQ 12.5%)
       items: FRQS,
     },
   ],

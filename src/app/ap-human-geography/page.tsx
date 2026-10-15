@@ -258,7 +258,7 @@ export default function ApHumanGeographyHub() {
               <ul className="space-y-1">
                 <li>• Section I: 60 MCQs in 60 minutes</li>
                 <li>• Section II: 3 FRQs in 75 minutes</li>
-                <li>• 1 FRQ with stimulus, 1 no stimulus, 1 with stimulus</li>
+                <li>• Q1 no stimulus, Q2 one stimulus, Q3 two stimuli</li>
                 <li>• Total exam time: 2 hours 15 minutes</li>
               </ul>
             </div>

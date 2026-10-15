@@ -283,7 +283,7 @@ export default function APBiologyHub() {
                 <li>• Section II: 6 FRQs in 90 minutes</li>
                 <li>• 2 long FRQs + 4 short FRQs</li>
                 <li>• Total exam time: 3 hours</li>
-                <li>• No calculator allowed</li>
+                <li>• Calculator allowed (four-function, scientific or graphing)</li>
               </ul>
             </div>
             <div>

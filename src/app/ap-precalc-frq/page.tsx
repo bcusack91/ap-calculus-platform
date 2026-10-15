@@ -196,9 +196,9 @@ function APPrecalcFRQPageInner() {
                   Section II Structure
                 </h4>
                 <ul className="space-y-1">
-                  <li>• 2 FRQs with calculator (~15 min each)</li>
-                  <li>• 2 FRQs without calculator (~15 min each)</li>
-                  <li>• Total: 4 questions in 60 minutes</li>
+                  <li>• Part A: 2 FRQs with a graphing calculator (35 min)</li>
+                  <li>• Part B: 2 FRQs without a calculator (35 min)</li>
+                  <li>• Total: 4 questions (6 pts each) in 70 minutes</li>
                   <li>• ~37.5% of total AP score</li>
                 </ul>
               </div>

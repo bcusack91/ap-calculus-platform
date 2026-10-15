@@ -196,8 +196,8 @@ function APUSHistoryFRQPageInner() {
               <div>
                 <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">Section II Structure</h4>
                 <ul className="space-y-1">
-                  <li>• FRQs in 100 minutes</li>
-                  <li>• Long and short format questions</li>
+                  <li>• 3 required SAQs (40 min, all sourced) + 1 DBQ (60 min) + 1 required LEQ (40 min)</li>
+                  <li>• LEQ: one broad prompt, no choice between prompts</li>
                   <li>• DBQ: 7 documents, 7-point rubric, 60 min</li>
                   <li>• Rubric-based scoring</li>
                 </ul>

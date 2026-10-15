@@ -120,7 +120,7 @@ const features = [
   },
   {
     title: 'Full-Length Practice Exam',
-    description: '80 MCQs + 3 long FRQs (Design an Investigation, Analyze + Solve) modeled on the official CB exam. Timed sections, self-graded rubrics.',
+    description: '80 MCQs + 3 FRQs (Design an Investigation, Analyze and Interpret Quantitative Data, Analyze an Environmental Problem Doing Calculations) modeled on the official CB exam. Timed sections, self-graded rubrics.',
     href: '/ap-enviro-practice',
     icon: (
       <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -258,7 +258,7 @@ export default function ApEnvironmentalScienceHub() {
               <ul className="space-y-1">
                 <li>• Section I: 80 MCQs in 90 minutes</li>
                 <li>• Section II: 3 FRQs in 70 minutes</li>
-                <li>• 1 Design an Investigation + 2 Analyze an Environmental Problem</li>
+                <li>• Design an Investigation; Analyze and Interpret Quantitative Data; Analyze an Environmental Problem Doing Calculations</li>
                 <li>• Total exam time: 2 hours 40 minutes</li>
               </ul>
             </div>

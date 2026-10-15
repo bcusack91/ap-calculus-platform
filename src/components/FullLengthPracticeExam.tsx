@@ -12,7 +12,7 @@ import { shuffleOptions } from '@/lib/shuffle-options'
 import { psatTotal, projectionRange as psatProjectionRange } from '@/lib/psat-scoring'
 import { actSectionScaled, actComposite, projectionRange as actProjectionRange } from '@/lib/act-scoring'
 import { preloadKatex } from '@/lib/katex-lazy'
-import { estimateApScore } from '@/lib/ap-scoring'
+import { apCompositePercent, estimateApScore } from '@/lib/ap-scoring'
 import { InArticleAd } from '@/components/ad-banner'
 import ShareScoreCard from '@/components/ShareScoreCard'
 import 'katex/dist/katex.min.css'
@@ -120,6 +120,13 @@ export interface FullExamSection {
   timeLimitMinutes: number
   items: ExamItem[]
   instructions?: string
+  /**
+   * Percent of the AP composite this section carries on the real exam (e.g.
+   * Calc MCQ 50 / FRQ 50; APUSH MCQ 40 / SAQ 20 / DBQ 25 / LEQ 15). When every
+   * section has one, the composite % and estimated AP score are section-weighted
+   * (apCompositePercent in @/lib/ap-scoring); otherwise they are raw points.
+   */
+  weight?: number
 }
 
 export interface FullLengthExamConfig {
@@ -339,11 +346,12 @@ function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
           })
         }
       })
-      return { name: sec.shortName, earned, possible, pct: possible ? Math.round((earned / possible) * 100) : 0 }
+      return { name: sec.shortName, earned, possible, pct: possible ? Math.round((earned / possible) * 100) : 0, weight: sec.weight }
     })
     const earned = perSection.reduce((s, x) => s + x.earned, 0)
     const possible = perSection.reduce((s, x) => s + x.possible, 0)
-    return { perSection, earned, possible, pct: possible ? Math.round((earned / possible) * 100) : 0 }
+    // Same function the server grader uses, so the composite here matches the saved result.
+    return { perSection, earned, possible, pct: apCompositePercent(perSection) }
   }, [sections, answers])
 
   /* =================================================================== */
@@ -470,6 +478,9 @@ function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
             <div className="rounded-2xl border border-gray-200 bg-white p-6 text-center dark:border-gray-700 dark:bg-gray-800">
               <p className="text-sm text-gray-500 dark:text-gray-400">Composite</p>
               <p className={`text-4xl font-black ${t.text}`}>{scoring.pct}%</p>
+              {scoring.perSection.every(s => s.weight) && (
+                <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">Sections weighted as on the real exam</p>
+              )}
             </div>
             <div className="rounded-2xl border border-gray-200 bg-white p-6 text-center dark:border-gray-700 dark:bg-gray-800">
               <p className="text-sm text-gray-500 dark:text-gray-400">Points Earned</p>
@@ -537,7 +548,7 @@ function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
             <div className="space-y-2">
               {scoring.perSection.map(s => (
                 <div key={s.name} className="flex items-center justify-between rounded-lg bg-gray-50 px-4 py-2 dark:bg-gray-700/50">
-                  <span className="text-sm font-medium text-gray-800 dark:text-gray-200">{s.name}</span>
+                  <span className="text-sm font-medium text-gray-800 dark:text-gray-200">{s.name}{s.weight ? ` · ${Number(s.weight.toFixed(1))}% of score` : ''}</span>
                   <span className={`text-sm font-bold ${s.pct >= 70 ? 'text-green-600' : s.pct >= 50 ? 'text-amber-600' : 'text-red-500'}`}>{s.earned}/{s.possible} ({s.pct}%)</span>
                 </div>
               ))}

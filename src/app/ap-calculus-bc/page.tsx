@@ -105,7 +105,7 @@ const features = [
   },
   {
     title: 'Full-Length Practice Exam',
-    description: '45 MCQs + 6 FRQs across all 10 units (including parametric/polar and series). Calculator + no-calculator sections, timed, with self-graded rubrics.',
+    description: '42 MCQs + 6 FRQs in the May 2027 format, across all 10 units (including parametric/polar and series). Calculator + no-calculator sections, timed, with self-graded rubrics.',
     href: '/ap-calcbc-practice',
     icon: (
       <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -113,7 +113,7 @@ const features = [
       </svg>
     ),
     color: 'from-purple-500 to-indigo-500',
-    stats: '45 MCQ + 6 FRQ · 3h 15m · Timed',
+    stats: '42 MCQ + 6 FRQ · 3h 10m · Timed',
   },
 ]
 
@@ -200,9 +200,9 @@ export default function APCalculusBCHub() {
             <div>
               <h4 className="mb-2 font-semibold text-gray-800 dark:text-gray-200">Format</h4>
               <ul className="space-y-1">
-                <li>• Section I: 45 MCQs in 105 minutes</li>
-                <li>• Part A: 30 no-calculator (60 min)</li>
-                <li>• Part B: 15 calculator (45 min)</li>
+                <li>• Section I: 42 MCQs in 100 minutes</li>
+                <li>• Part A: 29 no-calculator (62 min)</li>
+                <li>• Part B: 13 graphing calculator (38 min)</li>
                 <li>• Section II: 6 FRQs in 90 minutes</li>
                 <li>• Also receive an AB sub-score</li>
               </ul>

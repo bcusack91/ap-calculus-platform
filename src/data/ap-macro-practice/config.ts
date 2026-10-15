@@ -5,7 +5,7 @@ import { FRQS } from './frqs'
 export const config: FullLengthExamConfig = {
   subject: 'AP Macroeconomics',
   description:
-    'Full-length practice exam modeled on the official College Board AP Macroeconomics exam. 60 stimulus-based MCQs and 3 free-response questions (1 long FRQ + 2 short FRQs) covering all 6 units. Each FRQ part has a 1-point rubric checklist you grade after submitting.',
+    'Full-length practice exam modeled on the official College Board AP Macroeconomics exam. 60 stimulus-based MCQs and 3 free-response questions (1 long FRQ + 2 short FRQs) covering all 6 units. Each FRQ has a rubric checklist of one-point items you grade after submitting.',
   backLink: { href: '/ap-macroeconomics', label: 'AP Macroeconomics' },
   ctaLinks: [
     { href: '/ap-macro-diagnostic', label: 'Diagnostic Test' },
@@ -22,6 +22,7 @@ export const config: FullLengthExamConfig = {
       description:
         '60 stimulus-based multiple-choice questions across all 6 units (Basic Concepts, Indicators & Business Cycle, National Income & Price Determination, Financial Sector, Long-Run Stabilization, Open Economy).',
       timeLimitMinutes: 70,
+      weight: 66.67, // May 2027: College Board prints 66% (two-thirds) of the AP score
       items: MCQS,
     },
     {
@@ -29,8 +30,9 @@ export const config: FullLengthExamConfig = {
       name: 'Section II',
       shortName: 'Free Response',
       description:
-        '3 free-response questions: one long FRQ (10 parts, ~25 minutes recommended planning + writing) and two short FRQs (5 parts each, ~12.5 minutes each). Self-graded rubric checklist after each part.',
+        '3 free-response questions: one long FRQ (10 points, ~25 minutes recommended planning + writing) and two short FRQs (5 points each, ~12.5 minutes each). Self-graded rubric checklist after each part.',
       timeLimitMinutes: 60,
+      weight: 33.33, // May 2027: College Board prints 33% (one-third); within it the long FRQ is half and each short FRQ a quarter, which the 10/5/5 rubric points reproduce
       items: FRQS,
     },
   ],

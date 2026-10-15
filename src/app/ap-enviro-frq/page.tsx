@@ -194,8 +194,8 @@ function APAPESFRQPageInner() {
               <div>
                 <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">Section II Structure</h4>
                 <ul className="space-y-1">
-                  <li>• FRQs in 70 minutes</li>
-                  <li>• Long and short format questions</li>
+                  <li>• 3 FRQs in 70 minutes, 10 points each</li>
+                  <li>• Design an Investigation; Analyze and Interpret Quantitative Data; Analyze an Environmental Problem Doing Calculations</li>
                   <li>• Rubric-based scoring</li>
                 </ul>
               </div>

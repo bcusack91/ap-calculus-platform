@@ -1,13 +1,15 @@
 import type { SAQItem } from '@/components/FullLengthPracticeExam'
 
 /**
- * AP Computer Science A — 4 FRQs in 90 minutes.
+ * AP Computer Science A — 4 FRQs in 90 minutes, scored like the 2025–26 course (25 points total):
  *
- *   Q1 Methods & Control Structures
- *   Q2 Class
- *   Q3 Array/ArrayList
- *   Q4 2D Array
+ *   Q1 Methods & Control Structures — 7 points (a 3, b 3, c 1)
+ *   Q2 Class Design — 7 points (a 4, b 1, c 2)
+ *   Q3 Data Analysis with ArrayList — 5 points (a 2, b 1, c 2)
+ *   Q4 2D Array — 6 points (a 2, b 2, c 2)
  *
+ * Each rubric line is one point, written in the style of the official criteria
+ * (accesses all elements with no bounds errors, algorithm points, returns the correct value).
  * All Java code shown follows the AP Java subset.
  */
 
@@ -16,7 +18,7 @@ export const FRQS: SAQItem[] = [
   {
     type: 'saq',
     topic: 'frq-methods',
-    stimulus: `**FRQ #1 — Methods & Control Structures: Discount Calculator (9 points)**
+    stimulus: `**FRQ #1 — Methods & Control Structures: Discount Calculator (7 points)**
 
 A retail store offers a tiered discount:
 - subtotal < \\$50.00 ⇒ no discount
@@ -28,15 +30,25 @@ Additionally, members of the loyalty program receive an extra 5% off the *alread
     parts: [
       {
         prompt: '(a) Write the complete method `public static double discountRate(double subtotal)` that returns the discount rate (as a decimal) corresponding to the subtotal: 0.0, 0.10, 0.15, or 0.20. (3 pts)',
-        rubric: '```java\npublic static double discountRate(double subtotal) {\n  if (subtotal < 50.00) return 0.0;\n  else if (subtotal < 100.00) return 0.10;\n  else if (subtotal < 250.00) return 0.15;\n  else return 0.20;\n}\n```\n+1 correct method header. +1 correct boundary tests using if/else if (mutually exclusive). +1 correct return values for all four ranges.',
+        rubric: [
+          { id: 'a1', label: '1 pt — Compares subtotal against all three boundaries', description: 'Tests 50.00, 100.00 and 250.00 with the correct inequalities (`<` at each boundary, so 50.00 gets 10% and 250.00 gets 20%).' },
+          { id: 'a2', label: '1 pt — Tiers are mutually exclusive', description: 'Uses if / else if / else (or early returns) so exactly one rate is chosen for any subtotal.' },
+          { id: 'a3', label: '1 pt — Returns the correct rate for every range (algorithm)', description: '```java\npublic static double discountRate(double subtotal) {\n  if (subtotal < 50.00) return 0.0;\n  else if (subtotal < 100.00) return 0.10;\n  else if (subtotal < 250.00) return 0.15;\n  else return 0.20;\n}\n```\nReturns 0.0, 0.10, 0.15 or 0.20; does not print instead of returning.' },
+        ],
       },
       {
-        prompt: '(b) Write the complete method `public static double finalTotal(double subtotal, boolean isMember)` that returns the final amount the customer must pay, including any tier discount, the 5% member discount (if applicable), and 7% sales tax. Your method should call `discountRate`. (4 pts)',
-        rubric: '```java\npublic static double finalTotal(double subtotal, boolean isMember) {\n  double afterTier = subtotal * (1 - discountRate(subtotal));\n  if (isMember) afterTier = afterTier * 0.95;\n  return afterTier * 1.07;\n}\n```\n+1 calls discountRate(subtotal) correctly. +1 applies tier discount to subtotal. +1 applies 5% member discount only when isMember is true (and to the already-discounted total). +1 applies 7% sales tax as the final step.',
+        prompt: '(b) Write the complete method `public static double finalTotal(double subtotal, boolean isMember)` that returns the final amount the customer must pay, including any tier discount, the 5% member discount (if applicable), and 7% sales tax. Your method should call `discountRate`. (3 pts)',
+        rubric: [
+          { id: 'b1', label: '1 pt — Calls discountRate and applies the tier discount', description: 'Calls `discountRate(subtotal)` and computes `subtotal * (1 - rate)` (or subtracts `subtotal * rate`).' },
+          { id: 'b2', label: '1 pt — Member discount applied only when isMember is true', description: 'Multiplies the already-discounted total by 0.95 inside `if (isMember)`; non-members get no extra discount.' },
+          { id: 'b3', label: '1 pt — Applies 7% tax last and returns the correct total (algorithm)', description: '```java\npublic static double finalTotal(double subtotal, boolean isMember) {\n  double afterTier = subtotal * (1 - discountRate(subtotal));\n  if (isMember) afterTier = afterTier * 0.95;\n  return afterTier * 1.07;\n}\n```\nTax is applied after both discounts and the value is returned, not printed.' },
+        ],
       },
       {
-        prompt: '(c) Trace your `finalTotal` method for `finalTotal(120.00, true)`. Show each intermediate value and the final returned amount. (2 pts)',
-        rubric: 'discountRate(120.00) returns 0.15 (since 100 ≤ 120 < 250).\nafterTier = 120.00 × (1 − 0.15) = 120.00 × 0.85 = 102.00.\nMember: afterTier = 102.00 × 0.95 = 96.90.\nReturn: 96.90 × 1.07 = 103.683.\n+1 correct intermediate values. +1 correct final value (≈ 103.68).',
+        prompt: '(c) Trace your `finalTotal` method for `finalTotal(120.00, true)`. Show each intermediate value and the final returned amount. (1 pt)',
+        rubric: [
+          { id: 'c1', label: '1 pt — Correct trace with intermediate values and final value', description: 'discountRate(120.00) returns 0.15 (100 ≤ 120 < 250); afterTier = 120.00 × 0.85 = 102.00; member: 102.00 × 0.95 = 96.90; returned value = 96.90 × 1.07 = 103.683 (≈ 103.68). Every value shown and consistent with the method written in part (b).' },
+        ],
       },
     ],
   },
@@ -45,7 +57,7 @@ Additionally, members of the loyalty program receive an extra 5% off the *alread
   {
     type: 'saq',
     topic: 'frq-class',
-    stimulus: `**FRQ #2 — Class Design: GiftCard (9 points)**
+    stimulus: `**FRQ #2 — Class Design: GiftCard (7 points)**
 
 Design a class \`GiftCard\` that models a prepaid gift card. A GiftCard has:
 - a final \`String code\` (the card identifier),
@@ -59,16 +71,26 @@ The class supports:
 - \`void deactivate()\` — sets active to false. Once deactivated, the card cannot be re-activated and \`charge\` always returns false.`,
     parts: [
       {
-        prompt: '(a) Write the complete class declaration including instance variables and the constructor. (3 pts)',
-        rubric: '```java\npublic class GiftCard {\n  private final String code;\n  private double balance;\n  private boolean active;\n\n  public GiftCard(String code, double initialBalance) {\n    this.code = code;\n    if (initialBalance >= 0) this.balance = initialBalance;\n    else this.balance = 0;\n    this.active = true;\n  }\n}\n```\n+1 class header + correct private instance variables (code is final). +1 constructor signature and assignment of code. +1 conditional initialization of balance + active = true.',
+        prompt: '(a) Write the complete class declaration including instance variables and the constructor. (4 pts)',
+        rubric: [
+          { id: 'a1', label: '1 pt — Declares class header', description: '`public class GiftCard` (no parameters or parentheses in the header).' },
+          { id: 'a2', label: '1 pt — Declares all private instance variables with appropriate types', description: '`private final String code;`, `private double balance;`, `private boolean active;` (none static; all private; declared outside any method).' },
+          { id: 'a3', label: '1 pt — Declares constructor header', description: '`public GiftCard(String code, double initialBalance)` with no return type.' },
+          { id: 'a4', label: '1 pt — Constructor initializes every instance variable correctly', description: '```java\npublic GiftCard(String code, double initialBalance) {\n  this.code = code;\n  if (initialBalance >= 0) this.balance = initialBalance;\n  else this.balance = 0;\n  this.active = true;\n}\n```\nCode from the parameter, balance set to 0 when initialBalance is negative, and active set to true.' },
+        ],
       },
       {
-        prompt: '(b) Write the methods `getBalance()`, `getCode()`, and `deactivate()`. (2 pts)',
-        rubric: '```java\npublic double getBalance() { return balance; }\npublic String getCode()    { return code; }\npublic void deactivate()   { active = false; }\n```\n+1 both accessors correct. +1 deactivate sets active to false (no return value).',
+        prompt: '(b) Write the methods `getBalance()`, `getCode()`, and `deactivate()`. (1 pt)',
+        rubric: [
+          { id: 'b1', label: '1 pt — All three methods correct', description: '```java\npublic double getBalance() { return balance; }\npublic String getCode()    { return code; }\npublic void deactivate()   { active = false; }\n```\nPublic headers with the correct return types; both accessors return the instance variables; deactivate sets active to false and returns nothing.' },
+        ],
       },
       {
-        prompt: '(c) Write the `charge` method. (4 pts)',
-        rubric: '```java\npublic boolean charge(double amount) {\n  if (!active) return false;\n  if (amount <= 0) return false;\n  if (amount > balance) return false;\n  balance -= amount;\n  return true;\n}\n```\n+1 returns false when not active. +1 rejects non-positive amounts. +1 rejects amounts greater than balance. +1 deducts and returns true on valid charge.',
+        prompt: '(c) Write the `charge` method. (2 pts)',
+        rubric: [
+          { id: 'c1', label: '1 pt — Rejects every invalid charge', description: 'Returns false (and leaves balance unchanged) when the card is inactive, when amount ≤ 0, or when amount > balance.' },
+          { id: 'c2', label: '1 pt — Deducts and returns true on a valid charge (algorithm)', description: '```java\npublic boolean charge(double amount) {\n  if (!active) return false;\n  if (amount <= 0) return false;\n  if (amount > balance) return false;\n  balance -= amount;\n  return true;\n}\n```\nBalance is reduced only on a valid charge, so it never goes negative.' },
+        ],
       },
     ],
   },
@@ -77,21 +99,29 @@ The class supports:
   {
     type: 'saq',
     topic: 'frq-array-arraylist',
-    stimulus: `**FRQ #3 — ArrayList: TestScores (9 points)**
+    stimulus: `**FRQ #3 — ArrayList: TestScores (5 points)**
 
 A teacher uses \`ArrayList<Integer>\` to track student test scores (each score is between 0 and 100, inclusive).`,
     parts: [
       {
-        prompt: '(a) Write `public static double mean(ArrayList<Integer> scores)` that returns the arithmetic mean of the scores. If the list is empty, return 0.0. (3 pts)',
-        rubric: '```java\npublic static double mean(ArrayList<Integer> scores) {\n  if (scores.size() == 0) return 0.0;\n  int sum = 0;\n  for (int s : scores) sum += s;\n  return (double) sum / scores.size();\n}\n```\n+1 correct empty-list handling. +1 correct sum loop using enhanced for. +1 returns sum / size as a double (with cast or double division).',
+        prompt: '(a) Write `public static double mean(ArrayList<Integer> scores)` that returns the arithmetic mean of the scores. If the list is empty, return 0.0. (2 pts)',
+        rubric: [
+          { id: 'a1', label: '1 pt — Accesses all elements of scores and accumulates a sum (no bounds errors)', description: 'An enhanced for loop or an indexed loop from 0 to `scores.size() - 1`, using `get(i)` (not `[ ]`), adding each score to a sum.' },
+          { id: 'a2', label: '1 pt — Returns the correct mean as a double, 0.0 for an empty list (algorithm)', description: '```java\npublic static double mean(ArrayList<Integer> scores) {\n  if (scores.size() == 0) return 0.0;\n  int sum = 0;\n  for (int s : scores) sum += s;\n  return (double) sum / scores.size();\n}\n```\nAvoids integer division (cast or double sum) and checks the empty case before dividing.' },
+        ],
       },
       {
-        prompt: '(b) Write `public static int countAbove(ArrayList<Integer> scores, double threshold)` that returns the number of scores strictly greater than threshold. (3 pts)',
-        rubric: '```java\npublic static int countAbove(ArrayList<Integer> scores, double threshold) {\n  int count = 0;\n  for (int s : scores) {\n    if (s > threshold) count++;\n  }\n  return count;\n}\n```\n+1 correct loop. +1 strict-inequality comparison. +1 returns count.',
+        prompt: '(b) Write `public static int countAbove(ArrayList<Integer> scores, double threshold)` that returns the number of scores strictly greater than threshold. (1 pt)',
+        rubric: [
+          { id: 'b1', label: '1 pt — Initializes a count, increments it inside a strict > test in a loop, and returns it', description: '```java\nint count = 0;\nfor (int s : scores) {\n  if (s > threshold) count++;\n}\nreturn count;\n```\nUses `>` (not `>=`); the count is not reset inside the loop.' },
+        ],
       },
       {
-        prompt: '(c) Write `public static void curve(ArrayList<Integer> scores, int bonus)` that adds `bonus` to every score, capping each adjusted score at 100. The method modifies the parameter directly. (3 pts)',
-        rubric: '```java\npublic static void curve(ArrayList<Integer> scores, int bonus) {\n  for (int i = 0; i < scores.size(); i++) {\n    int adjusted = scores.get(i) + bonus;\n    if (adjusted > 100) adjusted = 100;\n    scores.set(i, adjusted);\n  }\n}\n```\n+1 indexed for-loop (enhanced for cannot mutate via .set easily). +1 cap at 100. +1 uses .set(i, value) to update in place.',
+        prompt: '(c) Write `public static void curve(ArrayList<Integer> scores, int bonus)` that adds `bonus` to every score, capping each adjusted score at 100. The method modifies the parameter directly. (2 pts)',
+        rubric: [
+          { id: 'c1', label: '1 pt — Computes each adjusted score capped at 100', description: '`int adjusted = scores.get(i) + bonus; if (adjusted > 100) adjusted = 100;` (or `Math.min(100, scores.get(i) + bonus)`).' },
+          { id: 'c2', label: '1 pt — Updates every element in place (algorithm)', description: '```java\nfor (int i = 0; i < scores.size(); i++) {\n  int adjusted = scores.get(i) + bonus;\n  if (adjusted > 100) adjusted = 100;\n  scores.set(i, adjusted);\n}\n```\nUses `set(i, value)` on every index with no bounds errors; does not add or remove elements, and assigning to an enhanced-for loop variable does not earn the point.' },
+        ],
       },
     ],
   },
@@ -100,7 +130,7 @@ A teacher uses \`ArrayList<Integer>\` to track student test scores (each score i
   {
     type: 'saq',
     topic: 'frq-2d-array',
-    stimulus: `**FRQ #4 — 2D Array: Seating Chart (9 points)**
+    stimulus: `**FRQ #4 — 2D Array: Seating Chart (6 points)**
 
 A theater is represented by a 2D array \`String[][] seats\`, where \`seats[r][c]\` is one of:
 - \`"."\` (empty seat)
@@ -108,16 +138,25 @@ A theater is represented by a 2D array \`String[][] seats\`, where \`seats[r][c]
 - \`"#"\` (broken/unavailable)`,
     parts: [
       {
-        prompt: '(a) Write `public static int countEmpty(String[][] seats)` that returns the total number of "." entries in the array. (3 pts)',
-        rubric: '```java\npublic static int countEmpty(String[][] seats) {\n  int count = 0;\n  for (int r = 0; r < seats.length; r++) {\n    for (int c = 0; c < seats[r].length; c++) {\n      if (seats[r][c].equals(".")) count++;\n    }\n  }\n  return count;\n}\n```\n+1 nested for-loops with correct bounds (seats.length, seats[r].length). +1 .equals comparison (NOT == for String). +1 increment + return.',
+        prompt: '(a) Write `public static int countEmpty(String[][] seats)` that returns the total number of "." entries in the array. (2 pts)',
+        rubric: [
+          { id: 'a1', label: '1 pt — Accesses all elements of seats (no bounds errors)', description: 'Nested loops bounded by `seats.length` and `seats[r].length` (or nested enhanced for loops over rows, then seats).' },
+          { id: 'a2', label: '1 pt — Counts "." with .equals and returns the total (algorithm)', description: '```java\nint count = 0;\nfor (int r = 0; r < seats.length; r++)\n  for (int c = 0; c < seats[r].length; c++)\n    if (seats[r][c].equals(".")) count++;\nreturn count;\n```\nUsing `==` to compare Strings does not earn the point.' },
+        ],
       },
       {
-        prompt: '(b) Write `public static boolean rowFull(String[][] seats, int row)` that returns true if no seat in the given row is "." (every seat is either "X" or "#"). (3 pts)',
-        rubric: '```java\npublic static boolean rowFull(String[][] seats, int row) {\n  for (int c = 0; c < seats[row].length; c++) {\n    if (seats[row][c].equals(".")) return false;\n  }\n  return true;\n}\n```\n+1 single loop over columns of the given row. +1 early-return false on first ".". +1 return true after loop completes.',
+        prompt: '(b) Write `public static boolean rowFull(String[][] seats, int row)` that returns true if no seat in the given row is "." (every seat is either "X" or "#"). (2 pts)',
+        rubric: [
+          { id: 'b1', label: '1 pt — Accesses all elements of seats[row] (no bounds errors)', description: 'A single loop over the columns of the given row only: `for (int c = 0; c < seats[row].length; c++)`.' },
+          { id: 'b2', label: '1 pt — Returns the correct result (algorithm)', description: '```java\nfor (int c = 0; c < seats[row].length; c++) {\n  if (seats[row][c].equals(".")) return false;\n}\nreturn true;\n```\nReturns false on the first "." and true only after the whole row is checked (no early `return true` inside the loop).' },
+        ],
       },
       {
-        prompt: '(c) Write `public static boolean seatGroup(String[][] seats, int row, int n)` that returns true if there exist n consecutive "." seats in the given row (i.e., a group of n adjacent empty seats). (3 pts)',
-        rubric: '```java\npublic static boolean seatGroup(String[][] seats, int row, int n) {\n  int run = 0;\n  for (int c = 0; c < seats[row].length; c++) {\n    if (seats[row][c].equals(".")) {\n      run++;\n      if (run >= n) return true;\n    } else {\n      run = 0;\n    }\n  }\n  return false;\n}\n```\n+1 loop with running counter for current consecutive empties. +1 reset counter when seat is not ".". +1 early-return true when run reaches n; return false after loop.',
+        prompt: '(c) Write `public static boolean seatGroup(String[][] seats, int row, int n)` that returns true if there exist n consecutive "." seats in the given row (i.e., a group of n adjacent empty seats). (2 pts)',
+        rubric: [
+          { id: 'c1', label: '1 pt — Tracks a run of consecutive "." seats, resetting it on any other seat', description: 'A counter increments for each "." and is set back to 0 when a seat is "X" or "#".' },
+          { id: 'c2', label: '1 pt — Returns true when the run reaches n, false otherwise (algorithm)', description: '```java\nint run = 0;\nfor (int c = 0; c < seats[row].length; c++) {\n  if (seats[row][c].equals(".")) {\n    run++;\n    if (run >= n) return true;\n  } else {\n    run = 0;\n  }\n}\nreturn false;\n```\nThe check happens as the run grows (a run ending at the last seat still counts); false is returned only after the loop.' },
+        ],
       },
     ],
   },

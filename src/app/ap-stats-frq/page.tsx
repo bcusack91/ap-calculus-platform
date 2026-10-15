@@ -196,10 +196,10 @@ function APStatsFRQPageInner() {
                   Section II Structure
                 </h4>
                 <ul className="space-y-1">
-                  <li>• 5 short free-response questions (4 pts each)</li>
-                  <li>• 1 investigative task (4 pts, extended analysis)</li>
-                  <li>• Total: ~24 points in 90 minutes</li>
-                  <li>• Calculator allowed</li>
+                  <li>• 4 free-response questions (10 pts each, 12.5% of the score each)</li>
+                  <li>• Practices 1 &amp; 2; Practices 3 &amp; 4; Inference; Practices 2, 3 &amp; 4 (no investigative task from May 2027)</li>
+                  <li>• Total: 40 points in 90 minutes</li>
+                  <li>• Graphing calculator + built-in Desmos</li>
                 </ul>
               </div>
               <div>

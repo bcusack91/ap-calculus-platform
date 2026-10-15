@@ -6,6 +6,10 @@ import type { SAQItem } from '@/components/FullLengthPracticeExam'
  *   Q1 Synthesis        — argue a position using 6 provided sources (we describe sources)
  *   Q2 Rhetorical Analysis — analyze rhetorical choices in a passage
  *   Q3 Argument         — defend, challenge, or qualify a claim
+ *
+ * Each essay is scored out of 6 on the official analytic rubric: Row A Thesis (1 point),
+ * Row B Evidence & Commentary (4 cumulative checkboxes mirroring the official level
+ * descriptors; check 1..4 in order), Row C Sophistication (1 point).
  */
 
 export const FRQS: SAQItem[] = [
@@ -35,7 +39,12 @@ Public libraries in the United States have faced sustained pressure to redefine 
       },
       {
         prompt: '**Evidence & Commentary (4 points):** Select at least 3 sources and use them as evidence. Explain how each source supports your line of reasoning, and accurately attribute each source.',
-        rubric: '0 pts: simple summary or no sources. 1 pt: uses 2 sources but mostly summarizes. 2 pts: uses 3 sources as evidence with minimal commentary. 3 pts: uses 3+ sources with consistent commentary linking evidence to claims. 4 pts: uses 3+ sources with specific evidence AND commentary that consistently and explicitly explains how the evidence supports the line of reasoning. Sources must be properly cited (e.g., "(Source A)" or "according to the Pew survey").',
+        rubric: [
+          { id: 'b1', label: '1 pt — Evidence from at least two sources, mostly summarized', description: 'Provides evidence from or references at least two of the provided sources, but summarizes it without explaining how it supports the argument. Sources must be attributed, e.g., "(Source A)" or "according to the Pew survey."' },
+          { id: 'b2', label: '1 pt — Evidence from at least three sources, with some explanation', description: '(Cumulative: check only if you checked b1.) References at least three of the provided sources and explains how some of the evidence relates to the argument, even if no line of reasoning is established yet or the reasoning is faulty.' },
+          { id: 'b3', label: '1 pt — Specific evidence from at least three sources supports all claims in a line of reasoning', description: '(Cumulative: check only if you checked b1–b2.) Every claim in the line of reasoning is supported by specific evidence from at least three sources, and the essay explains how some of that evidence supports the reasoning.' },
+          { id: 'b4', label: '1 pt — Commentary consistently explains how the evidence supports the line of reasoning', description: '(Cumulative: check only if you checked b1–b3.) Specific evidence from at least three sources supports every claim, AND the commentary consistently and explicitly explains how each piece of evidence advances the line of reasoning (not just that it agrees with the thesis).' },
+        ],
       },
       {
         prompt: '**Sophistication (1 point):** Demonstrate sophistication of thought by qualifying or complicating the argument, situating it in a broader context, articulating implications, or using vivid and persuasive style throughout.',
@@ -68,7 +77,12 @@ The following passage is adapted from a 1962 speech delivered by Rachel Carson, 
       },
       {
         prompt: '**Evidence & Commentary (4 points):** Provide specific evidence from the passage and explain how that evidence supports your thesis. Discuss how the writer\'s rhetorical choices contribute to her purpose.',
-        rubric: 'Possible rhetorical choices to discuss (any 2–3 well-developed):\n• Concessive opening ("It is not my contention…") — preempts the charge of extremism.\n• Diction of "indiscriminately," "ignorant," "without their consent" — frames the harm as a violation of agency.\n• Constitutional appeal (Bill of Rights, "forefathers") — reframes pesticides as a civil-liberties issue, broadening her audience.\n• Direct refutation ("I have been accused…I have not.") — anaphora-like denial that controls the framing of opposition.\n• Asyndetic catalog ("to ourselves, to our children, to wildlife, and to the great and complex web of life") — escalates from individual to planetary stakes.\n• Repetition of "It is not entitled" — parallel structure that draws a measured but firm line at industry\'s rights.\n• Tone: measured, lawyerly, grounded in distinctions — counters the "hysterical" caricature opponents had cultivated.\n4 pts: specific evidence + commentary consistently explains how each choice produces effect; addresses MULTIPLE choices. 3 pts: specific evidence with some commentary. 2 pts: mostly summary with limited analysis. 1 pt: oversimplified or list-like analysis. 0 pts: no relevant evidence.',
+        rubric: [
+          { id: 'b1', label: '1 pt — Evidence is mostly general and summarized', description: 'Provides evidence that is mostly general and summarizes it, without yet explaining how it supports the argument. (An essay with no relevant evidence earns none of the Row B points.)' },
+          { id: 'b2', label: '1 pt — Some specific, relevant evidence, with some explanation', description: '(Cumulative: check only if you checked b1.) Provides some specific, relevant evidence and explains how some of it relates to the argument, even if no line of reasoning is established yet or the reasoning is faulty.' },
+          { id: 'b3', label: '1 pt — Specific evidence supports all claims; at least one rhetorical choice explained', description: '(Cumulative: check only if you checked b1–b2.) Specific evidence supports every claim in a line of reasoning, the essay explains how some of the evidence supports that reasoning, AND it explains how at least one rhetorical choice contributes to Carson\'s argument, purpose, or message.\nPossible rhetorical choices to discuss (any 2–3 well-developed):\n• Concessive opening ("It is not my contention…") — preempts the charge of extremism.\n• Diction of "indiscriminately," "ignorant," "without their consent" — frames the harm as a violation of agency.\n• Constitutional appeal (Bill of Rights, "forefathers") — reframes pesticides as a civil-liberties issue, broadening her audience.\n• Direct refutation ("I have been accused…I have not.") — anaphora-like denial that controls the framing of opposition.\n• Asyndetic catalog ("to ourselves, to our children, to wildlife, and to the great and complex web of life") — escalates from individual to planetary stakes.\n• Repetition of "It is not entitled" — parallel structure that draws a measured but firm line at industry\'s rights.\n• Tone: measured, lawyerly, grounded in distinctions — counters the "hysterical" caricature opponents had cultivated.' },
+          { id: 'b4', label: '1 pt — Consistent commentary; multiple rhetorical choices explained', description: '(Cumulative: check only if you checked b1–b3.) Commentary consistently explains how the evidence supports the line of reasoning, AND explains how multiple rhetorical choices contribute to Carson\'s argument, purpose, or message.' },
+        ],
       },
       {
         prompt: '**Sophistication (1 point):** Demonstrate sophistication of thought.',
@@ -95,7 +109,12 @@ In a well-written essay, take a position on the extent to which you agree or dis
       },
       {
         prompt: '**Evidence & Commentary (4 points):** Provide specific evidence from your reading, observation, or experience and use it to develop a coherent line of reasoning.',
-        rubric: 'Strong responses use 2–3 well-developed examples drawn from literature, history, current events, science, or personal observation. Each example should be specific (named persons, works, events, dates where appropriate) and tied explicitly to the thesis.\n4 pts: specific evidence + commentary that consistently and explicitly explains how each example supports the line of reasoning. 3 pts: specific evidence + some commentary, OR many examples with limited explanation. 2 pts: examples present but mostly summarized. 1 pt: vague evidence or oversimplified reasoning. 0 pts: no relevant evidence or evidence that does not address the prompt.\nAvoid: stacked examples without commentary; broad assertions ("Throughout history…"); examples that contradict the writer\'s own thesis without acknowledgment.',
+        rubric: [
+          { id: 'b1', label: '1 pt — Evidence is mostly general and summarized', description: 'Provides evidence that is mostly general and summarizes it, without yet explaining how it supports the argument. (An essay with no relevant evidence earns none of the Row B points.)' },
+          { id: 'b2', label: '1 pt — Some specific, relevant evidence, with some explanation', description: '(Cumulative: check only if you checked b1.) Provides some specific, relevant evidence and explains how some of it relates to the argument, even if no line of reasoning is established yet or the reasoning is faulty.' },
+          { id: 'b3', label: '1 pt — Specific evidence supports all claims in a line of reasoning', description: '(Cumulative: check only if you checked b1–b2.) Specific evidence supports every claim in a line of reasoning, and the essay explains how some of that evidence supports the reasoning.\nStrong responses use 2–3 well-developed examples drawn from literature, history, current events, science, or personal observation. Each example should be specific (named persons, works, events, dates where appropriate) and tied explicitly to the thesis.' },
+          { id: 'b4', label: '1 pt — Commentary consistently explains how the evidence supports the line of reasoning', description: '(Cumulative: check only if you checked b1–b3.) Specific evidence supports every claim, AND the commentary consistently and explicitly explains how each piece of evidence advances the line of reasoning.\nAvoid: stacked examples without commentary; broad assertions ("Throughout history…"); examples that contradict the writer\'s own thesis without acknowledgment.' },
+        ],
       },
       {
         prompt: '**Sophistication (1 point):** Demonstrate sophistication of thought.',

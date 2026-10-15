@@ -22,6 +22,7 @@ export const config: FullLengthExamConfig = {
       description:
         '60 stimulus-based multiple-choice questions across all 7 units, with maps, charts, descriptions, and source quotations.',
       timeLimitMinutes: 60,
+      weight: 50, // May 2027: Section I is 50% of the AP score
       items: MCQS,
     },
     {
@@ -31,6 +32,7 @@ export const config: FullLengthExamConfig = {
       description:
         '3 free-response questions, each with 7 parts (A–G). FRQ 1 has no stimulus, FRQ 2 has one stimulus, and FRQ 3 has paired stimuli. Each part is graded on a 1-point rubric you check off yourself.',
       timeLimitMinutes: 75,
+      weight: 50, // May 2027: Section II is 50%
       items: FRQS,
     },
   ],

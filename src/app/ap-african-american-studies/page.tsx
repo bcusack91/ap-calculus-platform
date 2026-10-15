@@ -120,7 +120,7 @@ const features = [
   },
   {
     title: 'Full-Length Practice Exam',
-    description: 'Take a complete, timed AP African American Studies practice exam: 40 MCQs across all four units, 2 short-answer questions, and 1 document-based question modeled on the official exam.',
+    description: 'Take a complete, timed AP African American Studies practice exam: 60 MCQs across all four units, 3 short-answer questions, and 1 document-based question modeled on the official exam.',
     href: '/ap-african-american-studies-practice',
     icon: (
       <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -128,7 +128,7 @@ const features = [
       </svg>
     ),
     color: 'from-amber-500 to-orange-500',
-    stats: '40 MCQ + 2 SAQ + 1 DBQ · Timed',
+    stats: '60 MCQ + 3 SAQ + 1 DBQ · Timed',
   },]
 
 const units = [
@@ -256,10 +256,10 @@ export default function ApAfricanAmericanStudiesHub() {
             <div>
               <h4 className="mb-2 font-semibold text-gray-800 dark:text-gray-200">Format</h4>
               <ul className="space-y-1">
-                <li>• Section I: 60 MCQs in 60 minutes</li>
-                <li>• Section II: 3 FRQs in 120 minutes</li>
-                <li>• Source analysis, argument, and research-based FRQs</li>
-                <li>• Total exam time: 3 hours</li>
+                <li>• Section I: 60 MCQs in 70 minutes, plus a 10-minute project validation question</li>
+                <li>• Section II: 3 SAQs (40 min) + 1 DBQ (45 min)</li>
+                <li>• Individual Student Project counts for 8.5% of the score</li>
+                <li>• Total exam time: 2 hours 45 minutes</li>
               </ul>
             </div>
             <div>

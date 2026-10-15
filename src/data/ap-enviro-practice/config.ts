@@ -5,7 +5,7 @@ import { FRQS } from './frqs'
 export const config: FullLengthExamConfig = {
   subject: 'AP Environmental Science',
   description:
-    'Full-length practice exam modeled on the official College Board AP Environmental Science exam. 80 stimulus-based MCQs and 3 long free-response questions covering all 9 units. Each FRQ part has a 1-point rubric checklist you grade after submitting.',
+    'Full-length practice exam modeled on the official College Board AP Environmental Science exam. 80 stimulus-based MCQs and 3 long free-response questions covering all 9 units. Each FRQ has a rubric checklist of one-point items you grade after submitting.',
   backLink: { href: '/ap-environmental-science', label: 'AP Environmental Science' },
   ctaLinks: [
     { href: '/ap-enviro-diagnostic', label: 'Diagnostic Test' },
@@ -22,6 +22,7 @@ export const config: FullLengthExamConfig = {
       description:
         '80 stimulus-based multiple-choice questions across all 9 units (Living World: Ecosystems; Living World: Biodiversity; Populations; Earth Systems & Resources; Land & Water Use; Energy Resources; Atmospheric Pollution; Aquatic & Terrestrial Pollution; Global Change).',
       timeLimitMinutes: 90,
+      weight: 60, // May 2027: Section I is 60% of the AP score
       items: MCQS,
     },
     {
@@ -31,6 +32,7 @@ export const config: FullLengthExamConfig = {
       description:
         '3 long free-response questions (10 points each, ~23 min each), titled as in the 2026–27 course description: Q1 Design an Investigation, Q2 Analyze and Interpret Quantitative Data, Q3 Analyze an Environmental Problem Doing Calculations. Self-graded rubric checklist after each part.',
       timeLimitMinutes: 70,
+      weight: 40, // May 2027: Section II is 40%
       items: FRQS,
     },
   ],
