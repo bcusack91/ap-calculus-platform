@@ -11,7 +11,9 @@ import rehypeKatex from 'rehype-katex'
 import {
   getPhysics2FRQs,
   generateFullExamFRQs,
+  PHYSICS2_FRQ_TYPES,
   type Physics2FRQ,
+  type Physics2FRQType,
   type FRQRubricItem,
 } from '@/data/ap-physics-2-frq/questions'
 import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
@@ -40,7 +42,22 @@ function formatTime(seconds: number): string {
 }
 
 type Mode = 'menu' | 'practice' | 'timed' | 'results'
-type Filter = 'all' | 'long' | 'short'
+type Filter = 'all' | Physics2FRQType
+
+const TYPE_META = Object.fromEntries(PHYSICS2_FRQ_TYPES.map((t) => [t.type, t])) as Record<Physics2FRQType, (typeof PHYSICS2_FRQ_TYPES)[number]>
+
+const TYPE_STYLE: Record<Physics2FRQType, { icon: string; gradient: string; badge: string; headerBadge: string; blurb: string }> = {
+  mr: { icon: '🧮', gradient: 'from-violet-500 to-purple-500', badge: 'bg-violet-100 dark:bg-violet-900/30 text-violet-600', headerBadge: 'bg-violet-800', blurb: 'Multi-step calculations: electric fields and potential, and nuclear decay energetics.' },
+  tbr: { icon: '📈', gradient: 'from-fuchsia-500 to-pink-500', badge: 'bg-fuchsia-100 dark:bg-fuchsia-900/30 text-fuchsia-600', headerBadge: 'bg-fuchsia-700', blurb: 'Move between PV diagrams, ray diagrams, graphs, and equations for gases and lenses.' },
+  lab: { icon: '🔬', gradient: 'from-sky-500 to-blue-500', badge: 'bg-sky-100 dark:bg-sky-900/30 text-sky-600', headerBadge: 'bg-sky-700', blurb: 'Design a procedure, linearize real data, find a best-fit slope, and extract a physical quantity.' },
+  qqt: { icon: '⚖️', gradient: 'from-emerald-500 to-teal-500', badge: 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600', headerBadge: 'bg-emerald-700', blurb: 'Predict and justify in words, derive an equation, then check the two agree for circuits and induction.' },
+}
+
+/** Only current-format items (MR/TBR/LAB/QQT); an older content-store copy falls back to the static pool. */
+function currentFormat(frqs: unknown): Physics2FRQ[] {
+  if (!Array.isArray(frqs)) return []
+  return frqs.filter((q): q is Physics2FRQ => typeof q?.type === 'string' && q.type in TYPE_META)
+}
 
 function APPhysics2FRQPageInner() {
   const { status } = useSession()
@@ -69,7 +86,10 @@ function APPhysics2FRQPageInner() {
     let active = true
     fetch('/api/frq/ap-physics-2')
       .then((r) => (r.ok ? r.json() : null))
-      .then((data) => { if (active && Array.isArray(data?.frqs) && data.frqs.length > 0) setAllFrqs(data.frqs) })
+      .then((data) => {
+        const fresh = currentFormat(data?.frqs)
+        if (active && fresh.length > 0) setAllFrqs(fresh)
+      })
       .catch(() => {})
     return () => { active = false }
   }, [])
@@ -92,8 +112,7 @@ function APPhysics2FRQPageInner() {
 
   const startPractice = useCallback((f: Filter) => {
     setFilter(f)
-    const pool =
-      f === 'long' ? allFrqs.filter(q => q.type === 'long') : f === 'short' ? allFrqs.filter(q => q.type === 'short') : allFrqs
+    const pool = f === 'all' ? allFrqs : allFrqs.filter((q) => q.type === f)
     setFrqs(pool)
     setCurrentIdx(0)
     setResponses({})
@@ -104,14 +123,14 @@ function APPhysics2FRQPageInner() {
   }, [allFrqs])
 
   const startTimedExam = useCallback(() => {
-    const { long, short } = generateFullExamFRQs()
-    setFrqs([...long, ...short])
+    const { questions, totalMinutes } = generateFullExamFRQs()
+    setFrqs(questions)
     setCurrentIdx(0)
     setResponses({})
     setResults({})
     setShowSample({})
     setShowRubric({})
-    setTimeRemaining(90 * 60)
+    setTimeRemaining(totalMinutes * 60)
     setMode('timed')
   }, [])
 
@@ -220,47 +239,28 @@ function APPhysics2FRQPageInner() {
           </div>
 
           <div className="grid sm:grid-cols-2 gap-4 mb-8">
-            <button
-              onClick={() => startPractice('long')}
-              className="group rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 text-left hover:shadow-lg transition"
-            >
-              <div className="flex items-center gap-3 mb-3">
-                <div className="h-12 w-12 flex items-center justify-center rounded-xl bg-gradient-to-r from-violet-500 to-purple-500 text-white text-xl">
-                  📄
+            {PHYSICS2_FRQ_TYPES.map((t) => (
+              <button
+                key={t.type}
+                onClick={() => startPractice(t.type)}
+                className="group rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 text-left hover:shadow-lg transition"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <div className={`h-12 w-12 flex items-center justify-center rounded-xl bg-gradient-to-r ${TYPE_STYLE[t.type].gradient} text-white text-xl`}>
+                    {TYPE_STYLE[t.type].icon}
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-violet-600 dark:group-hover:text-violet-400">
+                      {t.label} ({t.short})
+                    </h3>
+                    <p className="text-xs text-gray-500">
+                      {t.points} points · ~{t.minutes} min · {allFrqs.filter((q) => q.type === t.type).length} questions
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-violet-600 dark:group-hover:text-violet-400">
-                    Long FRQs
-                  </h3>
-                  <p className="text-xs text-gray-500">7 points · ~25 min each</p>
-                </div>
-              </div>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                Multi-part experimental design and analysis covering circuits, electromagnetic
-                induction, fluids, and thermodynamics.
-              </p>
-            </button>
-
-            <button
-              onClick={() => startPractice('short')}
-              className="group rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 text-left hover:shadow-lg transition"
-            >
-              <div className="flex items-center gap-3 mb-3">
-                <div className="h-12 w-12 flex items-center justify-center rounded-xl bg-gradient-to-r from-fuchsia-500 to-pink-500 text-white text-xl">
-                  📝
-                </div>
-                <div>
-                  <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-fuchsia-600 dark:group-hover:text-fuchsia-400">
-                    Short FRQs
-                  </h3>
-                  <p className="text-xs text-gray-500">5 points · ~15 min each</p>
-                </div>
-              </div>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                Focused questions on electric fields, optics, nuclear physics, the photoelectric
-                effect, and RC circuits.
-              </p>
-            </button>
+                <p className="text-sm text-gray-600 dark:text-gray-400">{TYPE_STYLE[t.type].blurb}</p>
+              </button>
+            ))}
 
             <button
               onClick={() => startPractice('all')}
@@ -296,7 +296,7 @@ function APPhysics2FRQPageInner() {
                   <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-red-600 dark:group-hover:text-red-400">
                     Timed Exam Simulation
                   </h3>
-                  <p className="text-xs text-gray-500">2 long + 3 short · 90 min</p>
+                  <p className="text-xs text-gray-500">1 of each type · 40 points · 95 min</p>
                 </div>
               </div>
               <p className="text-sm text-gray-600 dark:text-gray-400">
@@ -330,11 +330,11 @@ function APPhysics2FRQPageInner() {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-violet-500 mt-0.5">✓</span>
-                For paragraph arguments, explicitly connect evidence to the physics model
+                For QQT, tie your prediction to the functional dependence in your derivation
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-violet-500 mt-0.5">✓</span>
-                Budget: ~25 min per long FRQ, ~15 min per short
+                Budget: ~20 min MR, ~25 min TBR, ~30 min LAB, ~20 min QQT
               </li>
             </ul>
           </div>
@@ -389,9 +389,9 @@ function APPhysics2FRQPageInner() {
                   <div className="flex items-center justify-between">
                     <div>
                       <span
-                        className={`text-xs font-bold px-2 py-0.5 rounded ${frq.type === 'long' ? 'bg-violet-100 dark:bg-violet-900/30 text-violet-600' : 'bg-fuchsia-100 dark:bg-fuchsia-900/30 text-fuchsia-600'}`}
+                        className={`text-xs font-bold px-2 py-0.5 rounded ${TYPE_STYLE[frq.type]?.badge ?? ''}`}
                       >
-                        {frq.type === 'long' ? 'Long FRQ' : 'Short FRQ'}
+                        {TYPE_META[frq.type]?.short ?? 'FRQ'}
                       </span>
                       <span className="ml-2 text-sm font-medium text-gray-900 dark:text-white">
                         {frq.title}
@@ -447,7 +447,7 @@ function APPhysics2FRQPageInner() {
               ← Back to Menu
             </button>
             <h1 className="text-xl font-bold text-gray-900 dark:text-white">
-              {mode === 'timed' ? 'Timed FRQ Exam' : `FRQ Practice (${filter})`}
+              {mode === 'timed' ? 'Timed FRQ Exam' : `FRQ Practice: ${filter === 'all' ? 'All FRQs' : TYPE_META[filter].label}`}
             </h1>
           </div>
           <div className="flex items-center gap-4">
@@ -476,9 +476,9 @@ function APPhysics2FRQPageInner() {
             <div className="flex items-center justify-between flex-wrap gap-2">
               <div>
                 <span
-                  className={`text-xs font-bold px-2 py-0.5 rounded mr-2 ${currentFRQ.type === 'long' ? 'bg-violet-800' : 'bg-fuchsia-700'}`}
+                  className={`text-xs font-bold px-2 py-0.5 rounded mr-2 ${TYPE_STYLE[currentFRQ.type]?.headerBadge ?? ''}`}
                 >
-                  {currentFRQ.type === 'long' ? 'Long FRQ' : 'Short FRQ'}
+                  {TYPE_META[currentFRQ.type]?.label ?? 'FRQ'}
                 </span>
                 <span className="text-xs text-violet-200">Unit {currentFRQ.unit}</span>
                 <h2 className="text-lg font-bold mt-1">{currentFRQ.title}</h2>

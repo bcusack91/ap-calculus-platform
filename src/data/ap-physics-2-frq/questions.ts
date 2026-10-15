@@ -1,8 +1,15 @@
-// AP Physics 2 Free Response Questions
-// Covers Units 1-7: Fluids, Thermodynamics, E&M, Circuits, Magnetism, Optics, Quantum/Nuclear
-
+// AP Physics 2: Algebra-Based Free-Response Questions
+// Built to the 2025+ exam: four typed FRQs per exam, 95 minutes, 40 points.
+//   Mathematical Routines (MR) 10 · Translation Between Representations (TBR) 12
+//   Experimental Design and Analysis (LAB) 10 · Qualitative/Quantitative Translation (QQT) 8
+// Two questions per type (two complete exams). Units follow the 2024-25 CED:
+// 9 Thermodynamics, 10 Electric Force, Field, and Potential, 11 Electric Circuits,
+// 12 Magnetism and Electromagnetism, 13 Geometric Optics, 14 Waves, Sound, and
+// Physical Optics, 15 Modern Physics. (Fluids moved to Physics 1 in 2024-25.)
+// Every rubric line is worth one point, as on the official scoring guidelines.
 
 import { shuffleArray } from '@/lib/shuffle-options'
+
 export interface FRQRubricItem {
   points: number
   description: string
@@ -17,9 +24,19 @@ export interface FRQPart {
   sampleAnswer: string
 }
 
+export type Physics2FRQType = 'mr' | 'tbr' | 'lab' | 'qqt'
+
+/** Exam order, labels, points, and suggested minutes for the four real FRQ types. */
+export const PHYSICS2_FRQ_TYPES: { type: Physics2FRQType; label: string; short: string; points: number; minutes: number }[] = [
+  { type: 'mr', label: 'Mathematical Routines', short: 'MR', points: 10, minutes: 20 },
+  { type: 'tbr', label: 'Translation Between Representations', short: 'TBR', points: 12, minutes: 25 },
+  { type: 'lab', label: 'Experimental Design and Analysis', short: 'LAB', points: 10, minutes: 30 },
+  { type: 'qqt', label: 'Qualitative/Quantitative Translation', short: 'QQT', points: 8, minutes: 20 },
+]
+
 export interface Physics2FRQ {
   id: string
-  type: 'long' | 'short'
+  type: Physics2FRQType
   unit: number
   title: string
   prompt: string
@@ -30,683 +47,869 @@ export interface Physics2FRQ {
   dataTableHtml?: string
 }
 
-// ─── LONG FRQ 1: Experimental Design — Circuits (Unit 4) ─────────────────────
-
-const longFRQ1: Physics2FRQ = {
-  id: 'phys2-frq-long-1',
-  type: 'long',
-  unit: 4,
-  title: 'Experimental Design: V-I Relationship of a Non-Ohmic Bulb',
-  prompt:
-    'A student has access to a variable DC power supply (0–12 V), a small incandescent light bulb, an ammeter, a voltmeter, connecting wires, and a switch. The student hypothesizes that the light bulb does not obey Ohm\'s law because its resistance changes as it heats up.',
-  totalPoints: 7,
-  timeRecommendation: '~25 minutes',
-  calculatorAllowed: true,
-  parts: [
-    {
-      label: '(a)',
-      prompt:
-        'Design an experiment to collect voltage and current data for the light bulb. Draw a labeled circuit diagram showing how the ammeter and voltmeter should be connected. Explain why you chose your meter placement.',
-      maxPoints: 2,
-      rubric: [
-        {
-          points: 1,
-          description:
-            'Draws a correct circuit with the ammeter in series with the bulb and the voltmeter in parallel across the bulb, with a variable power supply and switch.',
-          keywords: ['ammeter in series', 'voltmeter in parallel', 'circuit diagram', 'variable power supply'],
-        },
-        {
-          points: 1,
-          description:
-            'Explains that the voltmeter must be across the bulb to measure the potential difference directly, and the ammeter must be in series to measure current through the bulb.',
-          keywords: ['potential difference across', 'current through', 'series ammeter', 'parallel voltmeter'],
-        },
-      ],
-      sampleAnswer:
-        'Connect the variable power supply in series with the switch, ammeter, and light bulb. Connect the voltmeter in parallel directly across the light bulb terminals. The ammeter is placed in series so it measures the current flowing through the bulb, while the voltmeter is placed in parallel so it measures the potential difference across the bulb alone, not across the ammeter.',
-    },
-    {
-      label: '(b)',
-      prompt:
-        'Describe a procedure the student should follow to collect sufficient data. Include what quantities are measured, how the independent variable is changed, and how many data points should be collected.',
-      maxPoints: 2,
-      rubric: [
-        {
-          points: 1,
-          description:
-            'States that the student should vary the voltage in small increments (e.g., 0.5 V or 1.0 V steps) from 0 V to 12 V, recording voltage and current at each step.',
-          keywords: ['vary voltage', 'increments', 'record voltage and current', 'multiple data points'],
-        },
-        {
-          points: 1,
-          description:
-            'Mentions collecting at least 8–10 data points and allowing the bulb to reach thermal equilibrium at each setting before recording, or repeating trials for reliability.',
-          keywords: ['thermal equilibrium', 'steady state', 'multiple trials', 'at least 8 data points'],
-        },
-      ],
-      sampleAnswer:
-        'Set the power supply to 0 V and increase in approximately 1.0 V increments up to 12 V. At each voltage setting, wait several seconds for the bulb filament to reach thermal equilibrium, then record the ammeter reading ($I$) and voltmeter reading ($V$). Collect at least 10 data points. Repeat the entire procedure for at least two trials to improve reliability.',
-    },
-    {
-      label: '(c)',
-      prompt:
-        'The student collects the following data:\n\n| $V$ (V) | 1.0 | 2.0 | 3.0 | 4.0 | 6.0 | 8.0 | 10.0 | 12.0 |\n|---------|-----|-----|-----|-----|-----|-----|------|------|\n| $I$ (A) | 0.20 | 0.33 | 0.43 | 0.50 | 0.60 | 0.67 | 0.71 | 0.75 |\n\nCalculate the resistance of the bulb at $V = 2.0\\,\\text{V}$ and at $V = 12.0\\,\\text{V}$. Use these results to justify whether the bulb is ohmic or non-ohmic.',
-      maxPoints: 2,
-      rubric: [
-        {
-          points: 1,
-          description:
-            'Correctly calculates $R = V/I$ at both voltages: $R(2\\,\\text{V}) = 2.0/0.33 \\approx 6.1\\,\\Omega$ and $R(12\\,\\text{V}) = 12.0/0.75 = 16.0\\,\\Omega$.',
-          keywords: ['R = V/I', '6.1 ohms', '16 ohms', 'resistance calculation'],
-        },
-        {
-          points: 1,
-          description:
-            'States the bulb is non-ohmic because its resistance increases with voltage (or temperature), and a $V$-$I$ graph would be nonlinear / not pass through the origin as a straight line.',
-          keywords: ['non-ohmic', 'resistance increases', 'nonlinear', 'temperature dependent'],
-        },
-      ],
-      sampleAnswer:
-        'At $V = 2.0$ V: $R = V/I = 2.0/0.33 \\approx 6.1\\,\\Omega$. At $V = 12.0$ V: $R = V/I = 12.0/0.75 = 16.0\\,\\Omega$. Since the resistance nearly triples as voltage increases, the bulb does not have constant resistance and is therefore non-ohmic. An ohmic device would have the same resistance at every voltage, producing a linear $V$-$I$ graph.',
-    },
-    {
-      label: '(d)',
-      prompt:
-        'Explain physically why the resistance of the incandescent bulb changes as the applied voltage increases.',
-      maxPoints: 1,
-      rubric: [
-        {
-          points: 1,
-          description:
-            'Explains that as voltage increases, current increases, causing the filament temperature to rise. Higher temperature increases lattice vibrations, which scatter conduction electrons more frequently, increasing resistivity and therefore resistance.',
-          keywords: ['filament temperature', 'lattice vibrations', 'electron scattering', 'resistivity increases'],
-        },
-      ],
-      sampleAnswer:
-        'As the applied voltage increases, more current flows through the tungsten filament, dissipating more power as heat. The filament temperature rises significantly (up to ~3000 K when glowing brightly). At higher temperatures, the metal ions in the crystal lattice vibrate with greater amplitude, scattering the conduction electrons more frequently. This increased scattering raises the resistivity of tungsten, so the overall resistance of the bulb increases with voltage.',
-    },
-  ],
-  dataTableHtml:
-    '<table><tr><th>V (V)</th><td>1.0</td><td>2.0</td><td>3.0</td><td>4.0</td><td>6.0</td><td>8.0</td><td>10.0</td><td>12.0</td></tr><tr><th>I (A)</th><td>0.20</td><td>0.33</td><td>0.43</td><td>0.50</td><td>0.60</td><td>0.67</td><td>0.71</td><td>0.75</td></tr></table>',
-}
-
-// ─── LONG FRQ 2: Electromagnetic Induction (Unit 5) ──────────────────────────
-
-const longFRQ2: Physics2FRQ = {
-  id: 'phys2-frq-long-2',
-  type: 'long',
-  unit: 5,
-  title: 'Quantitative/Qualitative: Electromagnetic Induction and Faraday\'s Law',
-  prompt:
-    'A rectangular conducting loop of width $w = 0.10\\,\\text{m}$ and length $l = 0.20\\,\\text{m}$ has a total resistance of $R = 5.0\\,\\Omega$. The loop is pulled at constant velocity $v = 2.0\\,\\text{m/s}$ to the right, entering a region of uniform magnetic field $B = 0.50\\,\\text{T}$ directed into the page. At time $t = 0$, the right edge of the loop is at the left boundary of the field region. The field region extends a distance $d = 0.40\\,\\text{m}$ to the right.',
-  totalPoints: 7,
-  timeRecommendation: '~25 minutes',
-  calculatorAllowed: true,
-  parts: [
-    {
-      label: '(a)',
-      prompt:
-        'Derive an expression for the magnitude of the induced EMF in the loop while the loop is entering the field region (before it is entirely inside). Calculate the numerical value.',
-      maxPoints: 2,
-      rubric: [
-        {
-          points: 1,
-          description:
-            'Uses Faraday\'s law: $|\\mathcal{E}| = |d\\Phi_B/dt| = B \\cdot w \\cdot v$ and identifies that the flux changes because the area inside the field is increasing at rate $w \\cdot v$.',
-          keywords: ['Faraday\'s law', 'dΦ/dt', 'Bwv', 'changing flux'],
-        },
-        {
-          points: 1,
-          description:
-            'Correctly substitutes: $|\\mathcal{E}| = (0.50)(0.10)(2.0) = 0.10\\,\\text{V}$.',
-          keywords: ['0.10 V', '0.1 V', 'substitution', 'numerical answer'],
-        },
-      ],
-      sampleAnswer:
-        'As the loop enters the field, the magnetic flux through the loop increases. The area of the loop inside the field at time $t$ is $A = w \\cdot v \\cdot t$, so $\\Phi_B = B \\cdot w \\cdot v \\cdot t$. By Faraday\'s law, $|\\mathcal{E}| = |d\\Phi_B/dt| = B w v = (0.50)(0.10)(2.0) = 0.10\\,\\text{V}$.',
-    },
-    {
-      label: '(b)',
-      prompt:
-        'Determine the direction of the induced current in the loop while it is entering the field. Justify your answer using Lenz\'s law.',
-      maxPoints: 2,
-      rubric: [
-        {
-          points: 1,
-          description:
-            'States the induced current flows counterclockwise in the loop (as viewed from above/front).',
-          keywords: ['counterclockwise', 'CCW', 'direction of current'],
-        },
-        {
-          points: 1,
-          description:
-            'Justifies using Lenz\'s law: the flux into the page is increasing, so the induced current must create a magnetic field out of the page inside the loop to oppose the increase, which requires counterclockwise current by the right-hand rule.',
-          keywords: ['Lenz\'s law', 'oppose increase', 'out of the page', 'right-hand rule'],
-        },
-      ],
-      sampleAnswer:
-        'The external magnetic field points into the page, and as the loop enters the field region, the flux into the page through the loop is increasing. By Lenz\'s law, the induced current must oppose this change by creating a magnetic field out of the page inside the loop. Using the right-hand rule, this requires the current to flow counterclockwise around the loop.',
-    },
-    {
-      label: '(c)',
-      prompt:
-        'Calculate the magnitude of the induced current and the power dissipated in the loop while it is entering the field region.',
-      maxPoints: 2,
-      rubric: [
-        {
-          points: 1,
-          description:
-            'Correctly calculates $I = \\mathcal{E}/R = 0.10/5.0 = 0.020\\,\\text{A}$.',
-          keywords: ['I = EMF/R', '0.020 A', '20 mA', 'induced current'],
-        },
-        {
-          points: 1,
-          description:
-            'Correctly calculates power: $P = I^2 R = (0.020)^2(5.0) = 2.0 \\times 10^{-3}\\,\\text{W}$ or equivalently $P = \\mathcal{E}^2/R = 0.01/5 = 2.0\\,\\text{mW}$.',
-          keywords: ['P = I²R', '2.0 mW', '0.002 W', 'power dissipated'],
-        },
-      ],
-      sampleAnswer:
-        '$I = \\mathcal{E}/R = 0.10\\,\\text{V} / 5.0\\,\\Omega = 0.020\\,\\text{A}$. The power dissipated is $P = I^2 R = (0.020)^2 (5.0) = 2.0 \\times 10^{-3}\\,\\text{W} = 2.0\\,\\text{mW}$.',
-    },
-    {
-      label: '(d)',
-      prompt:
-        'After the loop is entirely inside the uniform field region, what is the induced EMF? Explain your reasoning.',
-      maxPoints: 1,
-      rubric: [
-        {
-          points: 1,
-          description:
-            'States the induced EMF is zero because the magnetic flux through the loop is constant (the entire loop is in a uniform field and the area inside the field is not changing), so $d\\Phi_B/dt = 0$.',
-          keywords: ['EMF is zero', 'constant flux', 'no change in flux', 'dΦ/dt = 0'],
-        },
-      ],
-      sampleAnswer:
-        'When the loop is entirely inside the uniform field region, the magnetic flux through it is $\\Phi_B = B \\cdot w \\cdot l$, which is constant because neither $B$ nor the area inside the field is changing. By Faraday\'s law, $\\mathcal{E} = -d\\Phi_B/dt = 0$. No current flows and no power is dissipated.',
-    },
-  ],
-}
-
-// ─── LONG FRQ 3: Fluids & Thermodynamics (Units 1 & 2) ──────────────────────
-
-const longFRQ3: Physics2FRQ = {
-  id: 'phys2-frq-long-3',
-  type: 'long',
-  unit: 1,
-  title: 'Thermodynamics: Ideal Gas States and a Heat Engine Cycle',
-  prompt:
-    'A heat engine operates on n = 0.12 mol of an ideal gas taken around the cycle described below. Use R = 8.31 J/(mol\u00b7K).',
-  totalPoints: 7,
-  timeRecommendation: '~25 minutes',
-  calculatorAllowed: true,
-  parts: [
-    {
-      label: '(a)',
-      prompt:
-        'At the start of the cycle the gas is at pressure $P = 3.0 \\times 10^5\\,\\text{Pa}$ and volume $V_1 = 2.0 \\times 10^{-3}\\,\\text{m}^3$. Use the ideal gas law to calculate the temperature $T_1$ of the gas at this state.',
-      maxPoints: 1,
-      rubric: [
-        {
-          points: 1,
-          description:
-            'Applies $PV = nRT$ and solves: $T_1 = PV_1/(nR) = (3.0 \\times 10^5)(2.0 \\times 10^{-3})/((0.12)(8.31)) \\approx 6.0 \\times 10^2\\,\\text{K}$.',
-          keywords: ['PV = nRT', '600 K', '6.0 × 10² K', 'ideal gas law'],
-        },
-      ],
-      sampleAnswer:
-        '$T_1 = PV_1/(nR) = (3.0 \\times 10^5)(2.0 \\times 10^{-3}) / ((0.12)(8.31)) = 600/0.997 \\approx 6.0 \\times 10^2\\,\\text{K}$.',
-    },
-    {
-      label: '(b)',
-      prompt:
-        'The gas then expands isobarically to $V_2 = 5.0 \\times 10^{-3}\\,\\text{m}^3$. Calculate the temperature $T_2$ at the end of the expansion, and state whether the internal energy of the gas increased or decreased during the expansion. Justify your answer.',
-      maxPoints: 2,
-      rubric: [
-        {
-          points: 1,
-          description:
-            'At constant pressure V/T is constant: $T_2 = T_1(V_2/V_1) = (6.0 \\times 10^2)(2.5) \\approx 1.5 \\times 10^3\\,\\text{K}$.',
-          keywords: ['V/T constant', '1500 K', '1.5 × 10³ K', 'isobaric'],
-        },
-        {
-          points: 1,
-          description:
-            'States internal energy INCREASED because temperature increased (ideal-gas internal energy depends only on temperature).',
-          keywords: ['increased', 'temperature increased', 'internal energy depends on temperature'],
-        },
-      ],
-      sampleAnswer:
-        'At constant pressure, $V_1/T_1 = V_2/T_2$, so $T_2 = T_1(V_2/V_1) = (6.0 \\times 10^2)(5.0/2.0) \\approx 1.5 \\times 10^3\\,\\text{K}$. The internal energy of an ideal gas depends only on temperature; since T rose from about 600 K to about 1500 K, the internal energy INCREASED.',
-    },
-    {
-      label: '(c)',
-      prompt:
-        'An ideal gas undergoes a cyclic process consisting of: (1) isobaric expansion at $P = 3.0 \\times 10^5\\,\\text{Pa}$ from volume $V_1 = 2.0 \\times 10^{-3}\\,\\text{m}^3$ to $V_2 = 5.0 \\times 10^{-3}\\,\\text{m}^3$; (2) isochoric pressure decrease to $P = 1.0 \\times 10^5\\,\\text{Pa}$; (3) isobaric compression back to $V_1$; (4) isochoric pressure increase back to the starting state. Calculate the net work done by the gas per cycle.',
-      maxPoints: 2,
-      rubric: [
-        {
-          points: 1,
-          description:
-            'Identifies that the net work equals the area enclosed by the rectangle on the PV diagram: $W_{\\text{net}} = (P_{\\text{high}} - P_{\\text{low}})(V_2 - V_1)$.',
-          keywords: ['area enclosed', 'PV diagram', 'rectangle', 'net work'],
-        },
-        {
-          points: 1,
-          description:
-            'Correctly calculates $W_{\\text{net}} = (3.0 \\times 10^5 - 1.0 \\times 10^5)(5.0 \\times 10^{-3} - 2.0 \\times 10^{-3}) = (2.0 \\times 10^5)(3.0 \\times 10^{-3}) = 600\\,\\text{J}$.',
-          keywords: ['600 J', 'W = ΔP × ΔV', 'net work calculation'],
-        },
-      ],
-      sampleAnswer:
-        'On a PV diagram, this cycle traces a rectangle. The net work per cycle equals the enclosed area: $W_{\\text{net}} = (P_{\\text{high}} - P_{\\text{low}})(V_2 - V_1) = (3.0 \\times 10^5 - 1.0 \\times 10^5)(5.0 \\times 10^{-3} - 2.0 \\times 10^{-3}) = (2.0 \\times 10^5)(3.0 \\times 10^{-3}) = 600\\,\\text{J}$.',
-    },
-    {
-      label: '(d)',
-      prompt:
-        'If the gas absorbs $Q_H = 2400\\,\\text{J}$ of heat from the hot reservoir per cycle, calculate the efficiency of this engine. Compare it to the Carnot efficiency if the hot reservoir is at $T_H = 600\\,\\text{K}$ and the cold reservoir is at $T_C = 300\\,\\text{K}$.',
-      maxPoints: 2,
-      rubric: [
-        {
-          points: 1,
-          description:
-            'Calculates actual efficiency: $e = W_{\\text{net}}/Q_H = 600/2400 = 0.25 = 25\\%$.',
-          keywords: ['e = W/Q_H', '25%', '0.25', 'actual efficiency'],
-        },
-        {
-          points: 1,
-          description:
-            'Calculates Carnot efficiency $e_C = 1 - T_C/T_H = 1 - 300/600 = 0.50 = 50\\%$ and states the actual efficiency (25%) is less than the Carnot efficiency (50%), consistent with the second law of thermodynamics.',
-          keywords: ['Carnot efficiency', '50%', 'e_C = 1 - T_C/T_H', 'second law'],
-        },
-      ],
-      sampleAnswer:
-        'Actual efficiency: $e = W_{\\text{net}}/Q_H = 600/2400 = 0.25 = 25\\%$. Carnot efficiency: $e_C = 1 - T_C/T_H = 1 - 300/600 = 0.50 = 50\\%$. The actual efficiency of 25% is less than the Carnot limit of 50%, as required by the second law of thermodynamics. No real engine can exceed the Carnot efficiency operating between the same two temperatures.',
-    },
-  ],
-}
-
-// ─── SHORT FRQ 1: Electric Fields and Potential (Unit 3) ─────────────────────
-
-const shortFRQ1: Physics2FRQ = {
-  id: 'phys2-frq-short-1',
-  type: 'short',
-  unit: 3,
-  title: 'Electric Fields, Potential, and Charge Distributions',
-  prompt:
-    'Two point charges are placed on the $x$-axis: $q_1 = +4.0\\,\\mu\\text{C}$ at $x = 0$ and $q_2 = -2.0\\,\\mu\\text{C}$ at $x = 0.30\\,\\text{m}$.',
-  totalPoints: 5,
-  timeRecommendation: '~15 minutes',
-  calculatorAllowed: true,
-  parts: [
-    {
-      label: '(a)',
-      prompt:
-        'Calculate the magnitude and direction of the net electric field at the point $P$ located at $x = 0.10\\,\\text{m}$. Use $k = 9.0 \\times 10^9\\,\\text{N}\\cdot\\text{m}^2/\\text{C}^2$.',
-      maxPoints: 2,
-      rubric: [
-        {
-          points: 1,
-          description:
-            'Correctly calculates the field from each charge at point P: $E_1 = kq_1/r_1^2 = (9.0 \\times 10^9)(4.0 \\times 10^{-6})/(0.10)^2 = 3.6 \\times 10^6\\,\\text{N/C}$ (to the right, away from $q_1$) and $E_2 = kq_2/r_2^2 = (9.0 \\times 10^9)(2.0 \\times 10^{-6})/(0.20)^2 = 4.5 \\times 10^5\\,\\text{N/C}$ (to the right, toward $q_2$).',
-          keywords: ['E = kq/r²', '3.6 × 10⁶ N/C', '4.5 × 10⁵ N/C', 'field from each charge'],
-        },
-        {
-          points: 1,
-          description:
-            'Adds the fields (both point in the $+x$ direction at $P$) to get $E_{\\text{net}} = 3.6 \\times 10^6 + 4.5 \\times 10^5 = 4.05 \\times 10^6\\,\\text{N/C}$ in the $+x$ direction.',
-          keywords: ['4.05 × 10⁶ N/C', 'same direction', '+x direction', 'net field'],
-        },
-      ],
-      sampleAnswer:
-        'At $P$, $r_1 = 0.10$ m from $q_1$ and $r_2 = 0.20$ m from $q_2$. $E_1 = kq_1/r_1^2 = (9.0 \\times 10^9)(4.0 \\times 10^{-6})/(0.01) = 3.6 \\times 10^6$ N/C pointing in the $+x$ direction (away from positive $q_1$). $E_2 = k|q_2|/r_2^2 = (9.0 \\times 10^9)(2.0 \\times 10^{-6})/(0.04) = 4.5 \\times 10^5$ N/C pointing in the $+x$ direction (toward negative $q_2$). Both fields point in the same direction, so $E_{\\text{net}} = 3.6 \\times 10^6 + 4.5 \\times 10^5 = 4.05 \\times 10^6$ N/C in the $+x$ direction.',
-    },
-    {
-      label: '(b)',
-      prompt:
-        'Calculate the electric potential at point $P$ due to both charges.',
-      maxPoints: 2,
-      rubric: [
-        {
-          points: 1,
-          description:
-            'Calculates $V_1 = kq_1/r_1 = (9.0 \\times 10^9)(4.0 \\times 10^{-6})/(0.10) = 3.6 \\times 10^5\\,\\text{V}$ and $V_2 = kq_2/r_2 = (9.0 \\times 10^9)(-2.0 \\times 10^{-6})/(0.20) = -9.0 \\times 10^4\\,\\text{V}$.',
-          keywords: ['V = kq/r', '3.6 × 10⁵ V', '-9.0 × 10⁴ V', 'potential from each'],
-        },
-        {
-          points: 1,
-          description:
-            'Adds potentials algebraically: $V_P = V_1 + V_2 = 3.6 \\times 10^5 - 9.0 \\times 10^4 = 2.7 \\times 10^5\\,\\text{V}$.',
-          keywords: ['2.7 × 10⁵ V', '270000 V', 'scalar sum', 'total potential'],
-        },
-      ],
-      sampleAnswer:
-        'Electric potential is a scalar, so $V_P = V_1 + V_2 = kq_1/r_1 + kq_2/r_2 = (9.0 \\times 10^9)(4.0 \\times 10^{-6})/(0.10) + (9.0 \\times 10^9)(-2.0 \\times 10^{-6})/(0.20) = 3.6 \\times 10^5 + (-9.0 \\times 10^4) = 2.7 \\times 10^5$ V.',
-    },
-    {
-      label: '(c)',
-      prompt:
-        'A small positive test charge is released from rest at point $P$. Describe its subsequent motion and explain your reasoning in terms of the electric field and potential.',
-      maxPoints: 1,
-      rubric: [
-        {
-          points: 1,
-          description:
-            'States the test charge accelerates in the $+x$ direction (direction of the net electric field) because the electric force on a positive charge is in the direction of the field, and it moves from higher to lower potential.',
-          keywords: ['accelerates +x', 'direction of field', 'force on positive charge', 'higher to lower potential'],
-        },
-      ],
-      sampleAnswer:
-        'The net electric field at $P$ points in the $+x$ direction. Since the test charge is positive, the electric force $\\vec{F} = q\\vec{E}$ also points in the $+x$ direction. The charge accelerates to the right, moving from a region of higher potential toward lower potential, as positive charges naturally do when free to move.',
-    },
-  ],
-}
-
-// ─── SHORT FRQ 2: Optics — Lenses and Mirrors (Unit 6) ──────────────────────
-
-const shortFRQ2: Physics2FRQ = {
-  id: 'phys2-frq-short-2',
-  type: 'short',
-  unit: 6,
-  title: 'Geometric Optics: Converging Lens',
-  prompt:
-    'An object of height $h_o = 3.0\\,\\text{cm}$ is placed $d_o = 20.0\\,\\text{cm}$ in front of a converging (convex) lens with focal length $f = 15.0\\,\\text{cm}$.',
-  totalPoints: 5,
-  timeRecommendation: '~15 minutes',
-  calculatorAllowed: true,
-  parts: [
-    {
-      label: '(a)',
-      prompt:
-        'Using the thin lens equation, calculate the image distance $d_i$. State whether the image is real or virtual.',
-      maxPoints: 2,
-      rubric: [
-        {
-          points: 1,
-          description:
-            'Applies the thin lens equation $1/f = 1/d_o + 1/d_i$ and solves: $1/d_i = 1/15.0 - 1/20.0 = (4-3)/60 = 1/60$, so $d_i = 60.0\\,\\text{cm}$.',
-          keywords: ['thin lens equation', '1/f = 1/d_o + 1/d_i', 'd_i = 60 cm', '60.0 cm'],
-        },
-        {
-          points: 1,
-          description:
-            'States the image is real because $d_i$ is positive (image is on the opposite side of the lens from the object).',
-          keywords: ['real image', 'positive d_i', 'opposite side', 'real'],
-        },
-      ],
-      sampleAnswer:
-        'Using $1/f = 1/d_o + 1/d_i$: $1/d_i = 1/f - 1/d_o = 1/15.0 - 1/20.0 = 0.0667 - 0.0500 = 0.0167\\,\\text{cm}^{-1}$, so $d_i = 60.0$ cm. Since $d_i > 0$, the image is real and forms on the opposite side of the lens from the object.',
-    },
-    {
-      label: '(b)',
-      prompt:
-        'Calculate the magnification and the image height. State whether the image is upright or inverted.',
-      maxPoints: 2,
-      rubric: [
-        {
-          points: 1,
-          description:
-            'Calculates magnification $m = -d_i/d_o = -60.0/20.0 = -3.0$.',
-          keywords: ['m = -d_i/d_o', '-3.0', 'magnification', 'magnitude 3'],
-        },
-        {
-          points: 1,
-          description:
-            'Calculates image height $h_i = m \\cdot h_o = (-3.0)(3.0) = -9.0\\,\\text{cm}$ and states the image is inverted because $m < 0$ (or $h_i < 0$).',
-          keywords: ['-9.0 cm', 'inverted', 'negative magnification', 'image height'],
-        },
-      ],
-      sampleAnswer:
-        'Magnification: $m = -d_i/d_o = -60.0/20.0 = -3.0$. Image height: $h_i = m \\cdot h_o = (-3.0)(3.0\\,\\text{cm}) = -9.0\\,\\text{cm}$. The negative sign indicates the image is inverted. The image is real, inverted, magnified by a factor of 3, and located 60 cm from the lens on the far side.',
-    },
-    {
-      label: '(c)',
-      prompt:
-        'If the object is now moved to $d_o = 10.0\\,\\text{cm}$ (inside the focal point), describe the nature of the image formed (real/virtual, upright/inverted, magnified/diminished) without recalculating. Justify your answer.',
-      maxPoints: 1,
-      rubric: [
-        {
-          points: 1,
-          description:
-            'States the image is virtual, upright, and magnified. Justification: when the object is inside the focal point of a converging lens, diverging rays cannot converge on the far side; the image forms on the same side as the object (virtual), appears upright, and is larger than the object (magnifying glass effect).',
-          keywords: ['virtual', 'upright', 'magnified', 'inside focal point'],
-        },
-      ],
-      sampleAnswer:
-        'When the object is placed inside the focal length ($d_o < f$), the converging lens cannot bring the refracted rays to a real focus. Instead, the rays diverge on the far side, and when extended backward, they appear to come from a point on the same side as the object. The image is therefore virtual, upright, and magnified — this is the principle behind a magnifying glass.',
-    },
-  ],
-}
-
-// ─── SHORT FRQ 3: Nuclear Physics (Unit 7) ───────────────────────────────────
-
-const shortFRQ3: Physics2FRQ = {
-  id: 'phys2-frq-short-3',
-  type: 'short',
-  unit: 7,
-  title: 'Nuclear Decay, Half-Life, and Mass-Energy Equivalence',
-  prompt:
-    'A sample of radioactive isotope ${}^{60}_{27}\\text{Co}$ (cobalt-60) has an initial activity of $A_0 = 8.0 \\times 10^{10}\\,\\text{Bq}$. Cobalt-60 undergoes beta-minus decay with a half-life of $t_{1/2} = 5.27\\,\\text{years}$.',
-  totalPoints: 5,
-  timeRecommendation: '~15 minutes',
-  calculatorAllowed: true,
-  parts: [
-    {
-      label: '(a)',
-      prompt:
-        'Write the complete nuclear decay equation for the beta-minus decay of cobalt-60. Identify the daughter nucleus.',
-      maxPoints: 2,
-      rubric: [
-        {
-          points: 1,
-          description:
-            'Writes the correct decay equation: ${}^{60}_{27}\\text{Co} \\to {}^{60}_{28}\\text{Ni} + {}^{\\;\\;0}_{-1}e + \\bar{\\nu}_e$, with conservation of mass number and atomic number.',
-          keywords: ['Co-60', 'Ni-60', 'beta particle', 'antineutrino', 'decay equation'],
-        },
-        {
-          points: 1,
-          description:
-            'Identifies the daughter nucleus as nickel-60 (${}^{60}_{28}\\text{Ni}$) and verifies conservation: mass number $60 = 60 + 0$ and atomic number $27 = 28 + (-1)$.',
-          keywords: ['nickel-60', 'Ni-60', 'conservation of mass number', 'conservation of charge'],
-        },
-      ],
-      sampleAnswer:
-        '${}^{60}_{27}\\text{Co} \\to {}^{60}_{28}\\text{Ni} + {}^{\\;\\;0}_{-1}e + \\bar{\\nu}_e$. The daughter nucleus is nickel-60. A neutron in the cobalt nucleus converts to a proton, emitting a beta particle (electron) and an electron antineutrino. Mass number is conserved: $60 = 60 + 0$. Atomic number is conserved: $27 = 28 + (-1)$.',
-    },
-    {
-      label: '(b)',
-      prompt:
-        'Calculate the activity of the sample after $t = 15.81\\,\\text{years}$ (exactly 3 half-lives).',
-      maxPoints: 1,
-      rubric: [
-        {
-          points: 1,
-          description:
-            'Uses $A = A_0 (1/2)^{t/t_{1/2}} = A_0 (1/2)^3 = (8.0 \\times 10^{10})/8 = 1.0 \\times 10^{10}\\,\\text{Bq}$.',
-          keywords: ['A = A₀(½)^n', '1.0 × 10¹⁰ Bq', 'three half-lives', 'activity after decay'],
-        },
-      ],
-      sampleAnswer:
-        'After 3 half-lives: $A = A_0 \\left(\\frac{1}{2}\\right)^3 = \\frac{8.0 \\times 10^{10}}{8} = 1.0 \\times 10^{10}\\,\\text{Bq}$.',
-    },
-    {
-      label: '(c)',
-      prompt:
-        'The mass of a cobalt-60 nucleus is $59.9338\\,\\text{u}$. The mass of a nickel-60 nucleus is $59.9308\\,\\text{u}$. The mass of an electron is $0.000549\\,\\text{u}$. Calculate the energy released in a single decay in MeV. Use $1\\,\\text{u} = 931.5\\,\\text{MeV/c}^2$.',
-      maxPoints: 2,
-      rubric: [
-        {
-          points: 1,
-          description:
-            'Calculates mass defect: $\\Delta m = m_{\\text{Co}} - m_{\\text{Ni}} - m_e = 59.9338 - 59.9308 - 0.000549 = 0.002451\\,\\text{u}$.',
-          keywords: ['mass defect', 'Δm', '0.00245 u', 'mass difference'],
-        },
-        {
-          points: 1,
-          description:
-            'Converts to energy: $E = \\Delta m \\cdot 931.5\\,\\text{MeV/u} = 0.002451 \\times 931.5 \\approx 2.28\\,\\text{MeV}$.',
-          keywords: ['E = Δmc²', '2.28 MeV', '931.5 MeV/u', 'energy released'],
-        },
-      ],
-      sampleAnswer:
-        'Mass defect: $\\Delta m = 59.9338 - 59.9308 - 0.000549 = 0.002451\\,\\text{u}$. Energy released: $E = \\Delta m \\cdot 931.5\\,\\text{MeV/u} = 0.002451 \\times 931.5 \\approx 2.28\\,\\text{MeV}$. This energy is shared among the kinetic energies of the beta particle, the antineutrino, and the recoiling nickel nucleus.',
-    },
-  ],
-}
-
-// ─── SHORT FRQ 4: Paragraph Argument — Photoelectric Effect (Unit 7) ─────────
-
-const shortFRQ4: Physics2FRQ = {
-  id: 'phys2-frq-short-4',
-  type: 'short',
-  unit: 7,
-  title: 'Paragraph Argument: Photoelectric Effect vs. Wave Model of Light',
-  prompt:
-    'In a photoelectric effect experiment, monochromatic light of various frequencies is directed at a metal surface. The maximum kinetic energy of the ejected photoelectrons is measured as a function of frequency. When the frequency is below a certain threshold $f_0$, no electrons are emitted regardless of the light intensity.',
-  totalPoints: 5,
-  timeRecommendation: '~15 minutes',
-  calculatorAllowed: true,
-  parts: [
-    {
-      label: '(a)',
-      prompt:
-        'In a coherent, well-organized paragraph, explain why the classical wave model of light fails to account for the observed threshold frequency and the immediate emission of electrons. Use the photon model to explain both observations.',
-      maxPoints: 3,
-      rubric: [
-        {
-          points: 1,
-          description:
-            'Identifies the wave model prediction and its failure: the wave model predicts that any frequency of light should eventually eject electrons if the intensity is high enough (because energy is delivered continuously), but experimentally there is a sharp cutoff frequency below which no emission occurs.',
-          keywords: ['wave model fails', 'threshold frequency', 'any frequency should work', 'continuous energy delivery'],
-        },
-        {
-          points: 1,
-          description:
-            'Explains the photon model resolution: light consists of photons each carrying energy $E = hf$. A photon can only eject an electron if $hf \\geq \\phi$ (the work function). Below the threshold frequency, individual photons lack sufficient energy regardless of intensity.',
-          keywords: ['E = hf', 'photon energy', 'work function', 'hf ≥ φ'],
-        },
-        {
-          points: 1,
-          description:
-            'Addresses immediate emission: in the wave model, a dim light should require time for the electron to accumulate enough energy; in the photon model, a single photon delivers all its energy at once, so emission is instantaneous above threshold.',
-          keywords: ['instantaneous emission', 'single photon', 'no time delay', 'immediate ejection'],
-        },
-      ],
-      sampleAnswer:
-        'The classical wave model treats light as a continuous electromagnetic wave whose energy depends on intensity, not frequency. Under this model, any frequency of sufficiently intense light should eventually deliver enough energy to an electron to eject it from the surface, and dim light would simply require a longer time for the electron to absorb enough energy. However, experiments show a sharp threshold frequency $f_0$ below which no electrons are emitted regardless of intensity, and above threshold, emission occurs virtually instantaneously even at very low intensities. The photon model resolves both observations: light consists of discrete packets (photons) each carrying energy $E = hf$. For an electron to escape the metal, a single photon must provide energy at least equal to the work function $\\phi$, so $hf \\geq \\phi$, giving the threshold $f_0 = \\phi / h$. Below this frequency, no individual photon has enough energy to liberate an electron, no matter how many photons arrive. Above threshold, the energy transfer is instantaneous because each photon-electron interaction is a single event — there is no need to accumulate energy over time.',
-    },
-    {
-      label: '(b)',
-      prompt:
-        'The work function of the metal is $\\phi = 4.14\\,\\text{eV}$. Light of frequency $f = 1.5 \\times 10^{15}\\,\\text{Hz}$ strikes the surface. Calculate the maximum kinetic energy of the ejected photoelectrons. Use $h = 4.14 \\times 10^{-15}\\,\\text{eV}\\cdot\\text{s}$.',
-      maxPoints: 2,
-      rubric: [
-        {
-          points: 1,
-          description:
-            'Applies Einstein\'s photoelectric equation: $K_{\\max} = hf - \\phi$.',
-          keywords: ['K_max = hf - φ', 'photoelectric equation', 'Einstein equation'],
-        },
-        {
-          points: 1,
-          description:
-            'Computes $K_{\\max} = (4.14 \\times 10^{-15})(1.5 \\times 10^{15}) - 4.14 = 6.21 - 4.14 = 2.07\\,\\text{eV}$.',
-          keywords: ['2.07 eV', '6.21 eV', 'numerical result', 'kinetic energy'],
-        },
-      ],
-      sampleAnswer:
-        '$K_{\\max} = hf - \\phi = (4.14 \\times 10^{-15}\\,\\text{eV}\\cdot\\text{s})(1.5 \\times 10^{15}\\,\\text{Hz}) - 4.14\\,\\text{eV} = 6.21\\,\\text{eV} - 4.14\\,\\text{eV} = 2.07\\,\\text{eV}$.',
-    },
-  ],
-}
-
-// ─── SHORT FRQ 5: RC Circuits (Unit 4) ───────────────────────────────────────
-
-const shortFRQ5: Physics2FRQ = {
-  id: 'phys2-frq-short-5',
-  type: 'short',
-  unit: 4,
-  title: 'RC Circuits: Charging, Time Constant, and Energy',
-  prompt:
-    'A capacitor with capacitance $C = 20.0\\,\\mu\\text{F}$ is connected in series with a resistor $R = 50.0\\,\\text{k}\\Omega$ and a battery of EMF $\\mathcal{E} = 12.0\\,\\text{V}$. A switch is closed at $t = 0$, beginning the charging process. The capacitor is initially uncharged.',
-  totalPoints: 5,
-  timeRecommendation: '~15 minutes',
-  calculatorAllowed: true,
-  parts: [
-    {
-      label: '(a)',
-      prompt:
-        'Calculate the time constant $\\tau$ of the RC circuit and explain its physical significance.',
-      maxPoints: 2,
-      rubric: [
-        {
-          points: 1,
-          description:
-            'Calculates $\\tau = RC = (50.0 \\times 10^3)(20.0 \\times 10^{-6}) = 1.0\\,\\text{s}$.',
-          keywords: ['τ = RC', '1.0 s', 'time constant', '1.0 second'],
-        },
-        {
-          points: 1,
-          description:
-            'Explains that $\\tau$ is the time for the capacitor voltage to reach approximately $63\\%$ ($1 - 1/e$) of the final voltage, or equivalently for the charging current to drop to $37\\%$ ($1/e$) of the initial current.',
-          keywords: ['63%', '1 - 1/e', '37%', 'physical significance'],
-        },
-      ],
-      sampleAnswer:
-        '$\\tau = RC = (50.0 \\times 10^3\\,\\Omega)(20.0 \\times 10^{-6}\\,\\text{F}) = 1.0\\,\\text{s}$. After one time constant, the voltage across the capacitor has reached about 63% of its maximum value ($\\mathcal{E}$), and the charging current has decreased to about 37% of its initial value. The time constant characterizes how quickly the RC circuit responds.',
-    },
-    {
-      label: '(b)',
-      prompt:
-        'Determine the voltage across the capacitor and the current in the circuit at $t = 2.0\\,\\text{s}$.',
-      maxPoints: 2,
-      rubric: [
-        {
-          points: 1,
-          description:
-            'Calculates $V_C(t) = \\mathcal{E}(1 - e^{-t/\\tau}) = 12.0(1 - e^{-2}) = 12.0(1 - 0.135) = 12.0(0.865) \\approx 10.4\\,\\text{V}$.',
-          keywords: ['V = ε(1 - e^(-t/τ))', '10.4 V', 'capacitor voltage', 'charging equation'],
-        },
-        {
-          points: 1,
-          description:
-            'Calculates $I(t) = (\\mathcal{E}/R)e^{-t/\\tau} = (12.0/50000)e^{-2} = (2.4 \\times 10^{-4})(0.135) \\approx 3.2 \\times 10^{-5}\\,\\text{A} = 32\\,\\mu\\text{A}$.',
-          keywords: ['I = (ε/R)e^(-t/τ)', '32 μA', '3.2 × 10⁻⁵ A', 'charging current'],
-        },
-      ],
-      sampleAnswer:
-        'At $t = 2.0$ s (which is $2\\tau$): $V_C = \\mathcal{E}(1 - e^{-t/\\tau}) = 12.0(1 - e^{-2}) = 12.0(1 - 0.1353) = 12.0 \\times 0.8647 \\approx 10.4$ V. Current: $I = (\\mathcal{E}/R)e^{-t/\\tau} = (12.0/50000)e^{-2} = (2.40 \\times 10^{-4})(0.1353) \\approx 3.25 \\times 10^{-5}$ A $= 32.5\\,\\mu$A.',
-    },
-    {
-      label: '(c)',
-      prompt:
-        'Calculate the total energy stored in the capacitor when it is fully charged.',
-      maxPoints: 1,
-      rubric: [
-        {
-          points: 1,
-          description:
-            'Calculates $U = \\tfrac{1}{2}C\\mathcal{E}^2 = \\tfrac{1}{2}(20.0 \\times 10^{-6})(12.0)^2 = \\tfrac{1}{2}(20.0 \\times 10^{-6})(144) = 1.44 \\times 10^{-3}\\,\\text{J} = 1.44\\,\\text{mJ}$.',
-          keywords: ['U = ½Cε²', '1.44 mJ', '1.44 × 10⁻³ J', 'energy stored'],
-        },
-      ],
-      sampleAnswer:
-        'When fully charged, $V_C = \\mathcal{E} = 12.0$ V. Energy stored: $U = \\tfrac{1}{2}CV^2 = \\tfrac{1}{2}(20.0 \\times 10^{-6})(12.0)^2 = \\tfrac{1}{2}(20.0 \\times 10^{-6})(144) = 1.44 \\times 10^{-3}\\,\\text{J} = 1.44\\,\\text{mJ}$.',
-    },
-  ],
-}
-
-// ─── All Questions ───────────────────────────────────────────────────────────
-
 const allQuestions: Physics2FRQ[] = [
-  longFRQ1,
-  longFRQ2,
-  longFRQ3,
-  shortFRQ1,
-  shortFRQ2,
-  shortFRQ3,
-  shortFRQ4,
-  shortFRQ5,
+  // =========================================================================
+  // MR 1 — Field and potential of two point charges (Unit 10)
+  // =========================================================================
+  {
+    id: 'phys2-frq-mr-1',
+    type: 'mr',
+    unit: 10,
+    title: 'Mathematical Routines: Field and Potential of Two Point Charges',
+    prompt:
+      'Point charge $q_1 = +4.0\\ \\mu\\text{C}$ is fixed at $x = 0$ on the x-axis, and point charge $q_2 = -1.0\\ \\mu\\text{C}$ is fixed at $x = 0.30$ m. Point P is on the x-axis at $x = 0.10$ m. Use $k = 9.0 \\times 10^{9}$ N·m²/C², and take the electric potential to be zero infinitely far from both charges.',
+    totalPoints: 10,
+    timeRecommendation: '~20 minutes',
+    calculatorAllowed: true,
+    parts: [
+      {
+        label: '(a)',
+        prompt: 'Calculate the magnitude and direction of the net electric field at point P.',
+        maxPoints: 3,
+        rubric: [
+          {
+            points: 1,
+            description:
+              'Uses $E = k|q|/r^2$ for each charge with the correct distances (0.10 m from $q_1$, 0.20 m from $q_2$): $E_1 = 3.6 \\times 10^{6}$ N/C and $E_2 = 2.25 \\times 10^{5}$ N/C.',
+            keywords: ['3.6 x 10^6', '3.6x10^6', '3.6×10^6', '3.6 × 10^6', '3.6e6', '2.25 x 10^5', '2.25x10^5', '2.25×10^5', '2.25 × 10^5', '2.25e5', '225,000', '3,600,000', '3600000'],
+          },
+          {
+            points: 1,
+            description:
+              'Both fields point in the $+x$ direction at P (away from the positive $q_1$ and toward the negative $q_2$), so the magnitudes add.',
+            keywords: ['both point', 'both in the +x', 'both +x', 'both to the right', 'same direction', 'magnitudes add'],
+          },
+          {
+            points: 1,
+            description: 'Correct answer: $E \\approx 3.8 \\times 10^{6}$ N/C in the $+x$ direction.',
+            keywords: ['3.8 x 10^6', '3.8x10^6', '3.8×10^6', '3.8 × 10^6', '3.8e6', '3.825', '3.83', '3,825,000', '3,830,000'],
+          },
+        ],
+        sampleAnswer:
+          '$E_1 = \\dfrac{k q_1}{r_1^2} = \\dfrac{(9.0 \\times 10^{9})(4.0 \\times 10^{-6})}{(0.10)^2} = 3.6 \\times 10^{6}$ N/C, pointing away from $q_1$: $+x$.\n\n$E_2 = \\dfrac{k|q_2|}{r_2^2} = \\dfrac{(9.0 \\times 10^{9})(1.0 \\times 10^{-6})}{(0.20)^2} = 2.25 \\times 10^{5}$ N/C, pointing toward $q_2$: also $+x$.\n\n$E_{net} = 3.6 \\times 10^{6} + 0.225 \\times 10^{6} \\approx 3.8 \\times 10^{6}$ N/C in the $+x$ direction.',
+      },
+      {
+        label: '(b)',
+        prompt: 'Calculate the electric potential at point P.',
+        maxPoints: 2,
+        rubric: [
+          {
+            points: 1,
+            description:
+              'Adds the potentials as signed scalars: $V = kq_1/r_1 + kq_2/r_2$, including the negative sign of $q_2$.',
+            keywords: ['scalar', 'kq1/r1 + kq2/r2', 'kq/r', 'negative sign'],
+          },
+          {
+            points: 1,
+            description: 'Correct answer: $V_P = 3.6 \\times 10^{5} - 4.5 \\times 10^{4} \\approx 3.2 \\times 10^{5}$ V.',
+            keywords: ['3.15', '3.2 x 10^5', '3.2x10^5', '3.2×10^5', '3.2 × 10^5', '3.2e5', '315,000', '315000'],
+          },
+        ],
+        sampleAnswer:
+          '$V_P = k\\left(\\dfrac{q_1}{r_1} + \\dfrac{q_2}{r_2}\\right) = (9.0 \\times 10^{9})\\left(\\dfrac{4.0 \\times 10^{-6}}{0.10} + \\dfrac{-1.0 \\times 10^{-6}}{0.20}\\right)$\n\n$V_P = 3.6 \\times 10^{5} - 4.5 \\times 10^{4} = 3.15 \\times 10^{5}$ V.',
+      },
+      {
+        label: '(c)',
+        prompt:
+          'There is one location on the x-axis (other than infinitely far away) where the net electric field is zero. Determine its position.',
+        maxPoints: 3,
+        rubric: [
+          {
+            points: 1,
+            description:
+              'Identifies the region: to the right of $q_2$ ($x > 0.30$ m), because only outside the pair are the two fields opposite, and only on the side of the smaller-magnitude charge can their magnitudes be equal.',
+            keywords: ['right of q2', 'right of q_2', 'x > 0.30', 'beyond q2', 'beyond q_2', 'smaller charge'],
+          },
+          {
+            points: 1,
+            description: 'Sets the magnitudes equal: $\\dfrac{k(4.0\\ \\mu\\text{C})}{x^2} = \\dfrac{k(1.0\\ \\mu\\text{C})}{(x - 0.30)^2}$.',
+            keywords: ['(x - 0.30)', '(x-0.30)', '(x - 0.3)', '(x-0.3)', '2/x'],
+          },
+          {
+            points: 1,
+            description: 'Correct answer: $x = 0.60$ m.',
+            keywords: ['0.60 m', '0.6 m', 'x = 0.60', 'x = 0.6'],
+          },
+        ],
+        sampleAnswer:
+          'Between the charges both fields point $+x$, so they cannot cancel. To the left of $q_1$ the fields are opposite, but every point there is closer to the larger charge, so $E_1 > E_2$. To the right of $q_2$ the fields are opposite and the point is closer to the smaller charge, so they can cancel.\n\n$\\dfrac{4.0}{x^2} = \\dfrac{1.0}{(x - 0.30)^2} \\Rightarrow \\dfrac{2}{x} = \\dfrac{1}{x - 0.30} \\Rightarrow 2x - 0.60 = x \\Rightarrow x = 0.60$ m.',
+      },
+      {
+        label: '(d)',
+        prompt:
+          'A particle with charge $+2.0$ nC is moved from point P to a location very far from both fixed charges. Calculate the work done on the particle by the electric field of the two fixed charges during this move.',
+        maxPoints: 2,
+        rubric: [
+          {
+            points: 1,
+            description: 'Uses $W = -\\Delta U = q(V_P - V_\\infty)$ with $V_\\infty = 0$.',
+            keywords: ['w = qv', 'w = q(v', '-δu', 'q δv', 'qδv', 'change in potential energy'],
+          },
+          {
+            points: 1,
+            description: 'Correct answer: $W = (2.0 \\times 10^{-9})(3.15 \\times 10^{5}) \\approx 6.3 \\times 10^{-4}$ J (positive).',
+            keywords: ['6.3 x 10^-4', '6.3x10^-4', '6.3×10^-4', '6.3 × 10^-4', '6.3e-4', '0.00063', '6.3 x 10-4'],
+          },
+        ],
+        sampleAnswer:
+          '$W_{field} = -\\Delta U = -q(V_\\infty - V_P) = qV_P = (2.0 \\times 10^{-9})(3.15 \\times 10^{5}) \\approx 6.3 \\times 10^{-4}$ J. The work is positive because the positive particle moves from high potential to zero potential. Because the electric field is conservative, this does not depend on the path taken.',
+      },
+    ],
+  },
+
+  // =========================================================================
+  // MR 2 — Alpha decay of polonium-210 (Unit 15)
+  // Replaces the old Co-60 item, which mixed atomic and nuclear masses.
+  // =========================================================================
+  {
+    id: 'phys2-frq-mr-2',
+    type: 'mr',
+    unit: 15,
+    title: 'Mathematical Routines: Alpha Decay of Polonium-210',
+    prompt:
+      'A polonium-210 nucleus at rest undergoes alpha decay into lead-206:\n\n${}^{210}_{84}\\text{Po} \\rightarrow {}^{206}_{82}\\text{Pb} + {}^{4}_{2}\\text{He}$\n\nThe **atomic** masses are: Po-210, 209.982874 u; Pb-206, 205.974465 u; He-4, 4.002603 u. Use $1\\text{ u} = 931.5$ MeV/c² $= 1.66 \\times 10^{-27}$ kg and $1\\text{ MeV} = 1.60 \\times 10^{-13}$ J. The half-life of Po-210 is 138 days. Treat all speeds as nonrelativistic.',
+    totalPoints: 10,
+    timeRecommendation: '~20 minutes',
+    calculatorAllowed: true,
+    parts: [
+      {
+        label: '(a)',
+        prompt: 'Calculate the energy $Q$ released in one decay, in MeV.',
+        maxPoints: 3,
+        rubric: [
+          {
+            points: 1,
+            description:
+              'Mass defect from the atomic masses: $\\Delta m = m_{Po} - m_{Pb} - m_{He}$. The electron masses cancel (84 electrons on each side), so no electron-mass correction is needed.',
+            keywords: ['mass defect', 'δm', 'm_po - m_pb', 'electrons cancel', 'electron masses cancel'],
+          },
+          {
+            points: 1,
+            description: 'Correct mass defect: $\\Delta m = 0.005806$ u.',
+            keywords: ['0.005806', '0.00581', '5.806'],
+          },
+          {
+            points: 1,
+            description: 'Correct energy: $Q = (0.005806)(931.5) \\approx 5.41$ MeV.',
+            keywords: ['5.41', '5.408', '5.4 mev'],
+          },
+        ],
+        sampleAnswer:
+          '$\\Delta m = 209.982874 - 205.974465 - 4.002603 = 0.005806$ u. (Using atomic masses is correct here: the Po atom has 84 electrons, and the Pb and He atoms together also have $82 + 2 = 84$.)\n\n$Q = \\Delta m c^2 = (0.005806)(931.5) \\approx 5.41$ MeV.',
+      },
+      {
+        label: '(b)',
+        prompt:
+          'Assume all of $Q$ becomes kinetic energy of the alpha particle and the lead nucleus. Use masses of 4.00 u and 206 u. Derive an expression for the alpha particle\u2019s kinetic energy $K_\\alpha$ in terms of $Q$, $m_\\alpha$, and $m_{Pb}$, and calculate its value.',
+        maxPoints: 4,
+        rubric: [
+          {
+            points: 1,
+            description:
+              'Momentum conservation: the parent is at rest, so the alpha particle and lead nucleus have momenta of equal magnitude in opposite directions.',
+            keywords: ['equal and opposite', 'equal magnitude', 'momentum is conserved', 'conservation of momentum'],
+          },
+          {
+            points: 1,
+            description: 'Uses $K = p^2/(2m)$ so that $K_\\alpha/K_{Pb} = m_{Pb}/m_\\alpha$.',
+            keywords: ['p^2/2m', 'p²/2m', 'p^2/(2m)', 'p²/(2m)', 'k_α/k_pb'],
+          },
+          {
+            points: 1,
+            description: 'Correct expression: $K_\\alpha = Q\\dfrac{m_{Pb}}{m_\\alpha + m_{Pb}}$.',
+            keywords: ['/(m_α + m_pb)', '/(m_alpha + m_pb)', '206/210', 'q(m_pb', 'q m_pb'],
+          },
+          {
+            points: 1,
+            description: 'Correct value: $K_\\alpha \\approx 5.31$ MeV (the lead nucleus gets about 0.10 MeV).',
+            keywords: ['5.31', '5.30', '5.3 mev'],
+          },
+        ],
+        sampleAnswer:
+          'The nucleus starts at rest, so $p_\\alpha = p_{Pb}$ in magnitude, opposite in direction. With $K = \\dfrac{p^2}{2m}$:\n\n$\\dfrac{K_\\alpha}{K_{Pb}} = \\dfrac{m_{Pb}}{m_\\alpha}$, and $K_\\alpha + K_{Pb} = Q$.\n\n$K_\\alpha = Q\\dfrac{m_{Pb}}{m_\\alpha + m_{Pb}} = (5.41)\\dfrac{206}{210} \\approx 5.31$ MeV. The lead nucleus recoils with about 0.10 MeV.',
+      },
+      {
+        label: '(c)',
+        prompt: 'Calculate the speed of the alpha particle.',
+        maxPoints: 2,
+        rubric: [
+          {
+            points: 1,
+            description:
+              'Converts to SI and uses $K = \\tfrac{1}{2}mv^2$: $K_\\alpha = 8.5 \\times 10^{-13}$ J and $m_\\alpha = 6.64 \\times 10^{-27}$ kg.',
+            keywords: ['8.5 x 10^-13', '8.5x10^-13', '8.5×10^-13', '8.5 × 10^-13', '8.5e-13', '8.49', '8.50', '6.64 x 10^-27', '6.64x10^-27', '6.64×10^-27', '6.64 × 10^-27', '6.64e-27'],
+          },
+          {
+            points: 1,
+            description: 'Correct answer: $v \\approx 1.6 \\times 10^{7}$ m/s.',
+            keywords: ['1.6 x 10^7', '1.6x10^7', '1.6×10^7', '1.6 × 10^7', '1.6e7', '1.60 x 10^7', '1.60x10^7', '1.60×10^7', '1.60 × 10^7', '1.60e7', '16,000,000'],
+          },
+        ],
+        sampleAnswer:
+          '$K_\\alpha = (5.31)(1.60 \\times 10^{-13}) \\approx 8.5 \\times 10^{-13}$ J and $m_\\alpha = (4.00)(1.66 \\times 10^{-27}) = 6.64 \\times 10^{-27}$ kg.\n\n$v = \\sqrt{\\dfrac{2K_\\alpha}{m_\\alpha}} = \\sqrt{\\dfrac{2(8.5 \\times 10^{-13})}{6.64 \\times 10^{-27}}} \\approx 1.6 \\times 10^{7}$ m/s, about 5% of the speed of light, so the nonrelativistic treatment is reasonable.',
+      },
+      {
+        label: '(d)',
+        prompt:
+          'A sample initially contains $N_0$ Po-210 nuclei. Determine the number of Po-210 nuclei remaining after 414 days.',
+        maxPoints: 1,
+        rubric: [
+          {
+            points: 1,
+            description: '414 days is three half-lives, so $N = N_0/8$.',
+            keywords: ['n0/8', 'n_0/8', '1/8', 'one eighth', 'one-eighth', '12.5%'],
+          },
+        ],
+        sampleAnswer:
+          '$414/138 = 3$ half-lives, so $N = N_0\\left(\\tfrac{1}{2}\\right)^3 = N_0/8$.',
+      },
+    ],
+  },
+
+  // =========================================================================
+  // TBR 1 — Ideal-gas cycle on a PV diagram (Unit 9)
+  // =========================================================================
+  {
+    id: 'phys2-frq-tbr-1',
+    type: 'tbr',
+    unit: 9,
+    title: 'Translation Between Representations: A Three-Step Gas Cycle',
+    prompt:
+      'A sample of ideal monatomic gas is taken through a cycle A → B → C → A.\n\n- **State A:** $P_A = 2.0 \\times 10^{5}$ Pa, $V_A = 1.0 \\times 10^{-3}$ m³.\n- **A → B:** the gas expands at constant pressure to $V_B = 3.0 \\times 10^{-3}$ m³.\n- **B → C:** the gas is cooled at constant volume until $P_C = 1.0 \\times 10^{5}$ Pa.\n- **C → A:** the gas returns to state A along a straight line on the PV diagram.\n\nFor a monatomic ideal gas, $U = \\tfrac{3}{2}nRT = \\tfrac{3}{2}PV$. Use the AP sign convention $\\Delta U = Q + W$, where $W$ is the work done **on** the gas.',
+    totalPoints: 12,
+    timeRecommendation: '~25 minutes',
+    calculatorAllowed: true,
+    parts: [
+      {
+        label: '(a)',
+        prompt:
+          'Describe the cycle on a PV diagram (pressure on the vertical axis, volume on the horizontal axis): the shape of each process and the direction in which the cycle is traversed.',
+        maxPoints: 3,
+        rubric: [
+          {
+            points: 1,
+            description: 'A → B: horizontal line at $2.0 \\times 10^{5}$ Pa from $1.0 \\times 10^{-3}$ to $3.0 \\times 10^{-3}$ m³.',
+            keywords: ['horizontal', 'constant pressure'],
+          },
+          {
+            points: 1,
+            description: 'B → C: vertical line at $3.0 \\times 10^{-3}$ m³ down to $1.0 \\times 10^{5}$ Pa.',
+            keywords: ['vertical', 'straight down', 'constant volume'],
+          },
+          {
+            points: 1,
+            description: 'C → A: straight diagonal line back up to A; the cycle runs clockwise.',
+            keywords: ['clockwise', 'diagonal'],
+          },
+        ],
+        sampleAnswer:
+          'A → B is a horizontal line at $P = 2.0 \\times 10^{5}$ Pa from $V = 1.0 \\times 10^{-3}$ m³ to $3.0 \\times 10^{-3}$ m³. B → C is a vertical line at $V = 3.0 \\times 10^{-3}$ m³ dropping to $1.0 \\times 10^{5}$ Pa. C → A is a straight diagonal line back up and to the left to A. The cycle forms a right triangle and is traversed clockwise.',
+      },
+      {
+        label: '(b)',
+        prompt:
+          'For process A → B, calculate the work $W$ done on the gas, the change in internal energy $\\Delta U$, and the energy $Q$ transferred to the gas by heating.',
+        maxPoints: 4,
+        rubric: [
+          {
+            points: 1,
+            description: 'Work done on the gas: $W = -P\\Delta V = -(2.0 \\times 10^{5})(2.0 \\times 10^{-3}) = -400$ J (or 400 J done by the gas).',
+            keywords: ['-400 j', '−400 j', '400 j'],
+          },
+          {
+            points: 1,
+            description: 'Change in internal energy: $\\Delta U = \\tfrac{3}{2}(P_BV_B - P_AV_A) = \\tfrac{3}{2}(600 - 200) = 600$ J.',
+            keywords: ['600 j', 'δu = 600'],
+          },
+          {
+            points: 1,
+            description: 'Applies the first law with consistent signs: $Q = \\Delta U - W$.',
+            keywords: ['first law', 'q = δu - w', 'δu = q + w'],
+          },
+          {
+            points: 1,
+            description: 'Correct answer: $Q = 600 - (-400) = 1000$ J, transferred into the gas.',
+            keywords: ['1000 j', '1,000 j', '1.0 x 10^3', '1.0x10^3', '1.0×10^3', '1.0 × 10^3', '1.0e3', '1 kj'],
+          },
+        ],
+        sampleAnswer:
+          '$W = -P\\Delta V = -(2.0 \\times 10^{5})(3.0 \\times 10^{-3} - 1.0 \\times 10^{-3}) = -400$ J (the gas does 400 J of work on its surroundings).\n\n$\\Delta U = \\tfrac{3}{2}(P_BV_B - P_AV_A) = \\tfrac{3}{2}(600 - 200) = 600$ J.\n\nFirst law: $Q = \\Delta U - W = 600 - (-400) = 1000$ J, so 1000 J enters the gas by heating.',
+      },
+      {
+        label: '(c)',
+        prompt:
+          'For the complete cycle, determine the net work done on the gas and the net energy transferred to the gas by heating. Explain how you used the PV diagram.',
+        maxPoints: 3,
+        rubric: [
+          {
+            points: 1,
+            description:
+              'The magnitude of the net work is the area enclosed by the cycle, a triangle: $\\tfrac{1}{2}(2.0 \\times 10^{-3})(1.0 \\times 10^{5}) = 100$ J.',
+            keywords: ['area', 'enclosed', 'triangle'],
+          },
+          {
+            points: 1,
+            description: 'Sign: the cycle is clockwise, so the gas does net positive work; the net work done on the gas is $-100$ J.',
+            keywords: ['-100 j', '−100 j', 'clockwise'],
+          },
+          {
+            points: 1,
+            description: '$\\Delta U = 0$ over a complete cycle, so $Q_{net} = -W = +100$ J into the gas.',
+            keywords: ['δu = 0', 'returns to', 'same state', '+100 j', '100 j into'],
+          },
+        ],
+        sampleAnswer:
+          'The net work equals the area enclosed by the cycle on the PV diagram, a right triangle with legs $2.0 \\times 10^{-3}$ m³ and $1.0 \\times 10^{5}$ Pa: $\\tfrac{1}{2}(2.0 \\times 10^{-3})(1.0 \\times 10^{5}) = 100$ J.\n\nThe cycle is clockwise, so the gas does more work expanding (A → B, at high pressure) than is done on it while being compressed (C → A). Net work done on the gas: $W = -100$ J.\n\nThe gas returns to state A, so $\\Delta U = 0$ and $Q_{net} = -W = +100$ J: a net 100 J enters the gas by heating.',
+      },
+      {
+        label: '(d)',
+        prompt:
+          'Rank the temperatures $T_A$, $T_B$, and $T_C$ from highest to lowest. Justify the ranking using the PV diagram.',
+        maxPoints: 2,
+        rubric: [
+          {
+            points: 1,
+            description: 'Correct ranking: $T_B > T_C > T_A$.',
+            keywords: ['tb > tc > ta', 't_b > t_c > t_a', 'b > c > a', 'b, c, a'],
+          },
+          {
+            points: 1,
+            description:
+              'Justification: for a fixed amount of ideal gas $T \\propto PV$, and $PV$ = 600 J at B, 300 J at C, 200 J at A.',
+            keywords: ['pv = nrt', 'proportional to pv', 't ∝ pv', '600', '300'],
+          },
+        ],
+        sampleAnswer:
+          'From $PV = nRT$ with $n$ fixed, $T \\propto PV$. $P_BV_B = 600$ J, $P_CV_C = (1.0 \\times 10^{5})(3.0 \\times 10^{-3}) = 300$ J, and $P_AV_A = 200$ J. So $T_B > T_C > T_A$.',
+      },
+    ],
+  },
+
+  // =========================================================================
+  // TBR 2 — Converging lens: ray diagram, equation, graph (Unit 13)
+  // =========================================================================
+  {
+    id: 'phys2-frq-tbr-2',
+    type: 'tbr',
+    unit: 13,
+    title: 'Translation Between Representations: Images From a Converging Lens',
+    prompt:
+      'A thin converging lens has focal length $f = 10$ cm. An object 2.0 cm tall stands upright on the principal axis, 15 cm to the left of the lens. Use the convention that image distances are positive for real images on the opposite side of the lens.',
+    totalPoints: 12,
+    timeRecommendation: '~25 minutes',
+    calculatorAllowed: true,
+    parts: [
+      {
+        label: '(a)',
+        prompt:
+          'Describe a ray diagram that locates the image: trace two principal rays from the top of the object and describe where they meet and what kind of image forms.',
+        maxPoints: 3,
+        rubric: [
+          {
+            points: 1,
+            description: 'A ray parallel to the principal axis refracts through the focal point on the far (right) side of the lens.',
+            keywords: ['parallel', 'through the focal point', 'through the far focal', 'through f'],
+          },
+          {
+            points: 1,
+            description: 'A ray through the center of the lens continues undeflected (or a ray through the near focal point exits parallel).',
+            keywords: ['through the center', 'undeflected', 'straight through', 'exits parallel'],
+          },
+          {
+            points: 1,
+            description: 'The rays cross on the right side beyond $2f$, forming a real, inverted, enlarged image.',
+            keywords: ['real', 'inverted', 'enlarged', 'magnified'],
+          },
+        ],
+        sampleAnswer:
+          'Ray 1 leaves the top of the object parallel to the axis and refracts through the focal point 10 cm to the right of the lens. Ray 2 passes through the center of the lens without bending. The two rays cross to the right of the lens, more than 20 cm away and below the axis, so the image is real, inverted, and larger than the object.',
+      },
+      {
+        label: '(b)',
+        prompt: 'Calculate the image distance and the image height, including sign.',
+        maxPoints: 4,
+        rubric: [
+          {
+            points: 1,
+            description: 'Thin-lens equation: $\\dfrac{1}{s_o} + \\dfrac{1}{s_i} = \\dfrac{1}{f}$.',
+            keywords: ['1/so + 1/si', '1/s_o + 1/s_i', '1/do + 1/di', '1/d_o + 1/d_i', 'thin lens', 'thin-lens'],
+          },
+          {
+            points: 1,
+            description: 'Image distance: $s_i = 30$ cm (real image, right of the lens).',
+            keywords: ['30 cm', 's_i = 30', 'si = 30', 'di = 30'],
+          },
+          {
+            points: 1,
+            description: 'Magnification: $M = -s_i/s_o = -2.0$.',
+            keywords: ['-2', '−2', 'm = -s', 'magnification'],
+          },
+          {
+            points: 1,
+            description: 'Image height: $h_i = -4.0$ cm (4.0 cm tall, inverted).',
+            keywords: ['-4.0 cm', '-4 cm', '−4', '4.0 cm', '4 cm'],
+          },
+        ],
+        sampleAnswer:
+          '$\\dfrac{1}{s_i} = \\dfrac{1}{f} - \\dfrac{1}{s_o} = \\dfrac{1}{10} - \\dfrac{1}{15} = \\dfrac{1}{30}$, so $s_i = 30$ cm (real, to the right of the lens).\n\n$M = -\\dfrac{s_i}{s_o} = -\\dfrac{30}{15} = -2.0$, so $h_i = Mh_o = (-2.0)(2.0) = -4.0$ cm: 4.0 cm tall and inverted.',
+      },
+      {
+        label: '(c)',
+        prompt:
+          'A student moves the object to many positions beyond the focal point and measures each image distance. Describe the graph of $1/s_i$ (vertical axis) versus $1/s_o$ (horizontal axis): its shape, slope, and intercepts. Locate the trial from part (b) on the graph.',
+        maxPoints: 3,
+        rubric: [
+          {
+            points: 1,
+            description: 'A straight line with slope $-1$.',
+            keywords: ['slope of -1', 'slope -1', 'slope = -1', 'slope of −1', 'negative one'],
+          },
+          {
+            points: 1,
+            description: 'Both intercepts equal $1/f = 0.10$ cm⁻¹.',
+            keywords: ['1/f', '0.10', '0.1 cm'],
+          },
+          {
+            points: 1,
+            description: 'The trial from part (b) is the point $(1/15, 1/30) \\approx (0.067, 0.033)$ cm⁻¹, which lies on the line.',
+            keywords: ['0.067', '0.033', '1/15', '1/30'],
+          },
+        ],
+        sampleAnswer:
+          'Rearranging the thin-lens equation, $\\dfrac{1}{s_i} = -\\dfrac{1}{s_o} + \\dfrac{1}{f}$. The graph is a straight line with slope $-1$ and vertical intercept $1/f = 0.10$ cm⁻¹; its horizontal intercept is also 0.10 cm⁻¹. The trial from part (b) is the point $(1/15, 1/30) \\approx (0.067, 0.033)$ cm⁻¹, and $0.067 + 0.033 = 0.10$, so it lies on the line.',
+      },
+      {
+        label: '(d)',
+        prompt:
+          'The object is moved to 5.0 cm from the lens. Describe the new image (location, orientation, and size) and justify your answer with a calculation or with your graph from part (c).',
+        maxPoints: 2,
+        rubric: [
+          {
+            points: 1,
+            description: 'The image is virtual and upright, on the same side as the object, and enlarged.',
+            keywords: ['virtual', 'upright', 'same side'],
+          },
+          {
+            points: 1,
+            description:
+              'Justification: $1/s_i = 1/10 - 1/5 = -1/10$, so $s_i = -10$ cm (negative means virtual), and $M = -s_i/s_o = +2.0$ (image 4.0 cm tall).',
+            keywords: ['-10 cm', '−10 cm', 's_i = -10', 'si = -10', '+2', 'm = 2'],
+          },
+        ],
+        sampleAnswer:
+          '$\\dfrac{1}{s_i} = \\dfrac{1}{10} - \\dfrac{1}{5.0} = -\\dfrac{1}{10}$, so $s_i = -10$ cm. The negative image distance means the image is virtual, 10 cm from the lens on the same side as the object. $M = -s_i/s_o = -(-10)/5.0 = +2.0$, so the image is upright and 4.0 cm tall. (On the graph from part (c), $1/s_o = 0.20$ cm⁻¹ puts the line below the axis, a negative $1/s_i$.)',
+      },
+    ],
+  },
+
+  // =========================================================================
+  // LAB 1 — Resistivity of a wire (Unit 11)
+  // =========================================================================
+  {
+    id: 'phys2-frq-lab-1',
+    type: 'lab',
+    unit: 11,
+    title: 'Experimental Design and Analysis: Resistivity of a Wire',
+    prompt:
+      'Students want to determine the resistivity $\\rho$ of the metal in a long, uniform wire of diameter 0.50 mm. They have the wire stretched along a meterstick, a variable power supply, an ammeter, a voltmeter, connecting leads, and a sliding clip that can make contact with the wire at any point.',
+    totalPoints: 10,
+    timeRecommendation: '~30 minutes',
+    calculatorAllowed: true,
+    dataTableHtml:
+      '<table><tr><th>Length L (m)</th><td>0.20</td><td>0.40</td><td>0.60</td><td>0.80</td><td>1.00</td></tr><tr><th>Potential difference ΔV (V)</th><td>0.51</td><td>1.00</td><td>1.50</td><td>2.02</td><td>2.49</td></tr><tr><th>Current I (A)</th><td>0.50</td><td>0.49</td><td>0.49</td><td>0.50</td><td>0.49</td></tr></table>',
+    parts: [
+      {
+        label: '(a)',
+        prompt:
+          'Describe a procedure, including how the meters are connected, that the students could use to collect the data needed to find $\\rho$.',
+        maxPoints: 2,
+        rubric: [
+          {
+            points: 1,
+            description:
+              'Connects the ammeter in series with the length of wire and the voltmeter in parallel across that length; records $\\Delta V$, $I$, and the length $L$ between the end and the clip.',
+            keywords: ['series', 'parallel', 'across the wire', 'across the length'],
+          },
+          {
+            points: 1,
+            description: 'Varies the length using the sliding clip, collecting several lengths (and/or repeated trials).',
+            keywords: ['different lengths', 'several lengths', 'vary the length', 'move the clip', 'repeat'],
+          },
+        ],
+        sampleAnswer:
+          '1. Connect the power supply, the ammeter, and the wire (from its fixed end to the sliding clip) in series. Connect the voltmeter in parallel across the same section of wire.\n2. Place the clip 0.20 m from the end, measuring the length with the meterstick. Turn on the supply and record the current and the potential difference.\n3. Move the clip to 0.40, 0.60, 0.80, and 1.00 m, recording $L$, $I$, and $\\Delta V$ each time. Keep the current small so the wire does not heat up.\n4. Repeat each length three times and average.',
+      },
+      {
+        label: '(b)',
+        prompt:
+          'Explain how the data can be graphed to produce a straight line, and how $\\rho$ can be found from the slope.',
+        maxPoints: 2,
+        rubric: [
+          {
+            points: 1,
+            description: 'Each resistance is found from $R = \\Delta V/I$.',
+            keywords: ['r = v/i', 'r = δv/i', 'ohm'],
+          },
+          {
+            points: 1,
+            description:
+              'Uses $R = \\rho L/A$: graph $R$ versus $L$, a straight line whose slope is $\\rho/A$, so $\\rho = \\text{slope} \\times A$ with $A = \\pi(d/2)^2$.',
+            keywords: ['ρl/a', 'rho l/a', 'ρ/a', 'rho/a', 'slope × a', 'slope x a', 'slope times a'],
+          },
+        ],
+        sampleAnswer:
+          'Calculate $R = \\Delta V/I$ for each length. Since $R = \\dfrac{\\rho L}{A}$, a graph of $R$ (vertical) versus $L$ (horizontal) is a straight line through the origin with slope $\\rho/A$. Then $\\rho = \\text{slope} \\times A$, where $A = \\pi (d/2)^2$ is the wire\u2019s cross-sectional area.',
+      },
+      {
+        label: '(c)',
+        prompt:
+          'The table shows the students\u2019 data. (i) Calculate the resistance for each length. (ii) Calculate the cross-sectional area of the wire. (iii) Describe the graph of $R$ versus $L$ and determine the slope of the best-fit line.',
+        maxPoints: 4,
+        rubric: [
+          {
+            points: 1,
+            description: 'Resistances: about 1.02, 2.04, 3.06, 4.04, and 5.08 Ω.',
+            keywords: ['1.02', '2.04', '3.06', '4.04', '5.08'],
+          },
+          {
+            points: 1,
+            description: 'Area: $A = \\pi(0.25 \\times 10^{-3}\\text{ m})^2 \\approx 1.96 \\times 10^{-7}$ m².',
+            keywords: ['1.96', '1.963', '1.9635', '2.0 x 10^-7', '2.0x10^-7', '2.0×10^-7', '2.0 × 10^-7', '2.0e-7', '0.196'],
+          },
+          {
+            points: 1,
+            description: 'The points lie close to a straight line through (or very near) the origin with positive slope.',
+            keywords: ['straight line', 'linear', 'through the origin', 'proportional'],
+          },
+          {
+            points: 1,
+            description: 'Slope of the best-fit line between 4.9 and 5.2 Ω/m (least-squares value 5.06 Ω/m).',
+            keywords: ['5.06', '5.1', '5.0 ω/m', '5.0 ohm', '5.05', '5.08 ω/m', '5 ω/m'],
+          },
+        ],
+        sampleAnswer:
+          '(i) $R = \\Delta V/I$: 1.02, 2.04, 3.06, 4.04, 5.08 Ω.\n\n(ii) $A = \\pi\\left(\\dfrac{0.50 \\times 10^{-3}}{2}\\right)^2 = \\pi(2.5 \\times 10^{-4})^2 \\approx 1.96 \\times 10^{-7}$ m².\n\n(iii) Plotting $R$ (Ω) against $L$ (m) gives points that lie close to a straight line through the origin. A best-fit line through about $(0.10\\text{ m}, 0.52\\ \\Omega)$ and $(0.90\\text{ m}, 4.57\\ \\Omega)$ has slope $\\approx 4.05/0.80 \\approx 5.06$ Ω/m.',
+      },
+      {
+        label: '(d)',
+        prompt: 'Calculate the resistivity of the metal.',
+        maxPoints: 2,
+        rubric: [
+          {
+            points: 1,
+            description: 'Uses $\\rho = \\text{slope} \\times A$.',
+            keywords: ['slope × a', 'slope x a', 'slope times a', 'ρ = slope', 'rho = slope'],
+          },
+          {
+            points: 1,
+            description: 'Value between $9.5 \\times 10^{-7}$ and $1.05 \\times 10^{-6}$ Ω·m (about $1.0 \\times 10^{-6}$ Ω·m).',
+            keywords: ['1.0 x 10^-6', '1.0x10^-6', '1.0×10^-6', '1.0 × 10^-6', '1.0e-6', '9.9 x 10^-7', '9.9x10^-7', '9.9×10^-7', '9.9 × 10^-7', '9.9e-7', '9.94', '1e-6'],
+          },
+        ],
+        sampleAnswer:
+          '$\\rho = \\text{slope} \\times A = (5.06\\ \\Omega/\\text{m})(1.96 \\times 10^{-7}\\text{ m}^2) \\approx 9.9 \\times 10^{-7}\\ \\Omega \\cdot \\text{m}$, about $1.0 \\times 10^{-6}$ Ω·m (close to nichrome).',
+      },
+    ],
+  },
+
+  // =========================================================================
+  // LAB 2 — Speed of sound with a resonance tube (Unit 14)
+  // =========================================================================
+  {
+    id: 'phys2-frq-lab-2',
+    type: 'lab',
+    unit: 14,
+    title: 'Experimental Design and Analysis: Speed of Sound in a Resonance Tube',
+    prompt:
+      'Students want to measure the speed of sound in air. They have a set of tuning forks of known frequencies, a long vertical glass tube open at the top, a large container of water whose level inside the tube can be raised and lowered, and a meterstick. The water surface closes the bottom of the air column.',
+    totalPoints: 10,
+    timeRecommendation: '~30 minutes',
+    calculatorAllowed: true,
+    dataTableHtml:
+      '<table><tr><th>Frequency f (Hz)</th><td>256</td><td>320</td><td>384</td><td>480</td><td>512</td></tr><tr><th>Shortest resonant length L (m)</th><td>0.327</td><td>0.258</td><td>0.215</td><td>0.169</td><td>0.159</td></tr></table>',
+    parts: [
+      {
+        label: '(a)',
+        prompt: 'Describe a procedure the students could use to collect the data in the table.',
+        maxPoints: 2,
+        rubric: [
+          {
+            points: 1,
+            description:
+              'Holds a struck tuning fork over the open end, slowly changes the water level from the top down until the sound is loudest (resonance), and measures the length of the air column from the open end to the water surface.',
+            keywords: ['loudest', 'resonance', 'water level', 'air column'],
+          },
+          {
+            points: 1,
+            description: 'Repeats with each tuning fork (and/or repeats each measurement and averages).',
+            keywords: ['each tuning fork', 'each fork', 'different frequencies', 'repeat', 'average'],
+          },
+        ],
+        sampleAnswer:
+          '1. Start with the water level near the top of the tube.\n2. Strike a tuning fork and hold it just above the open end. Slowly lower the water level until the sound is loudest: the first resonance.\n3. Measure the air-column length $L$ from the top of the tube to the water surface.\n4. Repeat three times for this fork and average.\n5. Repeat for each of the other forks.',
+      },
+      {
+        label: '(b)',
+        prompt:
+          'Derive an expression for the shortest resonant length $L$ in terms of the speed of sound $v$ and the frequency $f$, ignoring any end effects.',
+        maxPoints: 2,
+        rubric: [
+          {
+            points: 1,
+            description:
+              'The tube is closed at one end: a displacement node at the water surface and an antinode at the open end, so the shortest resonance is one quarter wavelength, $L = \\lambda/4$.',
+            keywords: ['λ/4', 'lambda/4', 'quarter', 'node at the water', 'antinode at the open'],
+          },
+          {
+            points: 1,
+            description: 'Uses $v = f\\lambda$: $L = \\dfrac{v}{4f}$.',
+            keywords: ['v/4f', 'v/(4f)', 'l = v/4f'],
+          },
+        ],
+        sampleAnswer:
+          'The water surface is a displacement node and the open top is a displacement antinode. The shortest standing wave with a node at one end and an antinode at the other is a quarter wavelength: $L = \\lambda/4$. With $v = f\\lambda$, $L = \\dfrac{v}{4f}$.',
+      },
+      {
+        label: '(c)',
+        prompt:
+          'Using the data in the table: (i) identify quantities that could be graphed to produce a straight line whose slope can be used to find $v$; (ii) calculate those quantities; (iii) determine the slope of the best-fit line.',
+        maxPoints: 3,
+        rubric: [
+          {
+            points: 1,
+            description: 'Graph $L$ versus $1/f$ (or an equivalent linearization), since $L = \\dfrac{v}{4}\\cdot\\dfrac{1}{f}$.',
+            keywords: ['1/f'],
+          },
+          {
+            points: 1,
+            description: 'Correct values of $1/f$: 0.00391, 0.00313, 0.00260, 0.00208, 0.00195 s.',
+            keywords: ['0.0039', '0.00391', '0.00313', '0.0026', '0.00208', '0.00195', '3.91'],
+          },
+          {
+            points: 1,
+            description: 'Slope between about 83 and 89 m/s (least-squares value 86 m/s).',
+            keywords: ['86', '85', '87', '84', '88'],
+          },
+        ],
+        sampleAnswer:
+          'Since $L = \\dfrac{v}{4}\\cdot\\dfrac{1}{f}$, graph $L$ (m) versus $1/f$ (s); the slope is $v/4$.\n\n$1/f$ (s): 0.00391, 0.00313, 0.00260, 0.00208, 0.00195\n\nThe points lie close to a straight line. A best-fit line through about $(0.0020\\text{ s}, 0.163\\text{ m})$ and $(0.0039\\text{ s}, 0.326\\text{ m})$ has slope $\\approx 0.163/0.0019 \\approx 86$ m/s.',
+      },
+      {
+        label: '(d)',
+        prompt: 'Use the slope to calculate the speed of sound.',
+        maxPoints: 2,
+        rubric: [
+          {
+            points: 1,
+            description: 'Relates the slope to the speed: $\\text{slope} = v/4$, so $v = 4 \\times \\text{slope}$.',
+            keywords: ['v = 4', '4 × slope', '4 x slope', '4 times the slope', 'slope = v/4'],
+          },
+          {
+            points: 1,
+            description: 'Value between 330 and 355 m/s (about 344 m/s).',
+            keywords: ['344', '343', '340', '345', '346', '348', '350', '336'],
+          },
+        ],
+        sampleAnswer:
+          '$v = 4 \\times \\text{slope} = 4(86\\text{ m/s}) \\approx 344$ m/s.',
+      },
+      {
+        label: '(e)',
+        prompt:
+          'The best-fit line does not pass through the origin; its vertical intercept is about $-0.01$ m. Explain a physical reason for this, and explain whether it affects the value of $v$ found from the slope.',
+        maxPoints: 1,
+        rubric: [
+          {
+            points: 1,
+            description:
+              'The antinode forms slightly above the open end (end correction), so the measured column is shorter than $\\lambda/4$ by a constant amount at every frequency; a constant offset shifts the intercept but not the slope, so $v$ is unaffected.',
+            keywords: ['end correction', 'above the open end', 'beyond the open end', 'constant offset', 'does not affect the slope', 'slope is unaffected'],
+          },
+        ],
+        sampleAnswer:
+          'The displacement antinode forms slightly outside (above) the open end of the tube, so the effective air column is a little longer than the measured length: $L_{measured} = \\lambda/4 - c$ for a constant end correction $c$ of about 0.01 m. Subtracting the same constant at every frequency shifts the line down without changing its slope, so the value of $v$ from the slope is unaffected.',
+      },
+    ],
+  },
+
+  // =========================================================================
+  // QQT 1 — Terminal voltage and internal resistance (Unit 11)
+  // =========================================================================
+  {
+    id: 'phys2-frq-qqt-1',
+    type: 'qqt',
+    unit: 11,
+    title: 'Qualitative/Quantitative Translation: Adding a Parallel Resistor to a Real Battery',
+    prompt:
+      'A battery has emf $\\varepsilon$ and internal resistance $r$. It is connected to a single resistor of resistance $R$. A voltmeter measures the terminal voltage $V_T$ of the battery (the potential difference across its terminals). A second resistor, also of resistance $R$, is then connected in parallel with the first.',
+    totalPoints: 8,
+    timeRecommendation: '~20 minutes',
+    calculatorAllowed: true,
+    parts: [
+      {
+        label: '(a)',
+        prompt:
+          'Indicate whether the terminal voltage increases, decreases, or stays the same when the second resistor is added. Justify your answer without deriving or manipulating equations.',
+        maxPoints: 3,
+        rubric: [
+          {
+            points: 1,
+            description: 'Indicates that the terminal voltage decreases.',
+            keywords: ['decreases', 'decrease', 'drops', 'goes down'],
+          },
+          {
+            points: 1,
+            description: 'Adding a parallel branch lowers the equivalent external resistance, so the current through the battery increases.',
+            keywords: ['equivalent resistance decreases', 'lower equivalent', 'smaller equivalent', 'current increases', 'more current'],
+          },
+          {
+            points: 1,
+            description:
+              'A larger current means a larger potential drop across the internal resistance, so less of the emf appears across the terminals.',
+            keywords: ['internal resistance', 'drop across the internal', 'potential drop inside'],
+          },
+        ],
+        sampleAnswer:
+          'The terminal voltage decreases. Adding a second resistor in parallel gives the current another path, which lowers the external equivalent resistance and increases the current through the battery. That current also passes through the battery\u2019s internal resistance, so the potential drop inside the battery grows, and less of the emf is left across the terminals.',
+      },
+      {
+        label: '(b)',
+        prompt:
+          'Derive an expression for the terminal voltage $V_T$ after the second resistor is added, in terms of $\\varepsilon$, $r$, and $R$.',
+        maxPoints: 3,
+        rubric: [
+          {
+            points: 1,
+            description: 'Loop rule (conservation of energy) around the circuit: $\\varepsilon - Ir - IR_{eq} = 0$.',
+            keywords: ['loop rule', 'kirchhoff', 'ε - ir', 'emf - ir', 'ε − ir'],
+          },
+          {
+            points: 1,
+            description: 'Uses $R_{eq} = R/2$ for the two parallel resistors, giving $I = \\dfrac{\\varepsilon}{r + R/2}$.',
+            keywords: ['r/2', 'r_eq = r/2', 'req = r/2'],
+          },
+          {
+            points: 1,
+            description: 'Correct expression: $V_T = IR_{eq} = \\dfrac{\\varepsilon R}{R + 2r}$.',
+            keywords: ['εr/(r + 2r)', 'εr/(r+2r)', '(r + 2r)', '(r+2r)', '(2r + r)', '(2r+r)'],
+          },
+        ],
+        sampleAnswer:
+          'Loop rule: $\\varepsilon - Ir - IR_{eq} = 0$, with $R_{eq} = \\left(\\dfrac{1}{R} + \\dfrac{1}{R}\\right)^{-1} = \\dfrac{R}{2}$.\n\n$I = \\dfrac{\\varepsilon}{r + R/2}$, and $V_T = \\varepsilon - Ir = IR_{eq} = \\dfrac{\\varepsilon (R/2)}{r + R/2} = \\dfrac{\\varepsilon R}{R + 2r}$.',
+      },
+      {
+        label: '(c)',
+        prompt:
+          'With only one resistor connected, $V_T = \\dfrac{\\varepsilon R}{R + r}$. Explain how your expression from part (b) is or is not consistent with your answer to part (a).',
+        maxPoints: 2,
+        rubric: [
+          {
+            points: 1,
+            description:
+              'Compares the expressions using functional dependence: the numerators are the same and the denominator $R + 2r$ is larger than $R + r$, so $V_T$ is smaller.',
+            keywords: ['denominator', 'larger denominator', 'r + 2r is larger', 'r + 2r > r + r'],
+          },
+          {
+            points: 1,
+            description: 'Connects to part (a): a smaller terminal voltage is consistent with the prediction that it decreases.',
+            keywords: ['consistent', 'agrees', 'matches'],
+          },
+        ],
+        sampleAnswer:
+          'Both expressions have $\\varepsilon R$ in the numerator, but after the second resistor is added the denominator is $R + 2r$ instead of $R + r$. A larger denominator makes $V_T$ smaller, so the expression is consistent with my prediction in part (a) that the terminal voltage decreases. (If $r = 0$, both reduce to $\\varepsilon$, consistent with the reasoning that the decrease comes from the internal resistance.)',
+      },
+    ],
+  },
+
+  // =========================================================================
+  // QQT 2 — A conducting loop falling out of a magnetic field (Unit 12)
+  // =========================================================================
+  {
+    id: 'phys2-frq-qqt-2',
+    type: 'qqt',
+    unit: 12,
+    title: 'Qualitative/Quantitative Translation: A Loop Falling Out of a Magnetic Field',
+    prompt:
+      'A rectangular loop of wire with mass $m$, resistance $R$, and horizontal width $L$ falls vertically in the plane of the page. Above a horizontal boundary there is a uniform magnetic field of magnitude $B$ directed into the page; below the boundary there is no field. The loop is tall enough that, while it falls through the boundary, its top side stays in the field and its bottom side is below the field. Air resistance is negligible. Loop 1 reaches a constant (terminal) speed while its top side is still in the field. Loop 2 is identical in size, shape, and mass but is made of wire with a greater resistance.',
+    totalPoints: 8,
+    timeRecommendation: '~20 minutes',
+    calculatorAllowed: true,
+    parts: [
+      {
+        label: '(a)',
+        prompt:
+          'Indicate whether the terminal speed of loop 2 is greater than, less than, or equal to that of loop 1. Justify your answer without deriving or manipulating equations.',
+        maxPoints: 3,
+        rubric: [
+          {
+            points: 1,
+            description: 'Indicates that loop 2 has the greater terminal speed.',
+            keywords: ['greater', 'faster', 'larger terminal speed'],
+          },
+          {
+            points: 1,
+            description:
+              'As the loop leaves the field, the magnetic flux through it decreases, inducing an emf; at a given speed the emf is the same for both loops, but the greater resistance means a smaller induced current in loop 2.',
+            keywords: ['flux', 'induced current', 'smaller current', 'less current', 'faraday'],
+          },
+          {
+            points: 1,
+            description:
+              'The upward magnetic force on the current in the top side is smaller for the same speed, so loop 2 must fall faster before the magnetic force balances its weight.',
+            keywords: ['magnetic force', 'upward force', 'balances the weight', 'balance gravity', 'equals the weight', 'lenz'],
+          },
+        ],
+        sampleAnswer:
+          'Loop 2 has the greater terminal speed. As either loop falls out of the field, the flux through it decreases, so an emf is induced. At the same speed, both loops have the same emf, but loop 2 has more resistance, so less current flows in it. The magnetic force on the current in the top side points upward, opposing the motion (Lenz\u2019s law), and it is proportional to the current. To get an upward force large enough to balance its weight, loop 2 needs a larger current, which requires a larger emf and therefore a greater speed.',
+      },
+      {
+        label: '(b)',
+        prompt:
+          'Derive an expression for the terminal speed $v_T$ of a loop in terms of $m$, $g$, $R$, $B$, and $L$.',
+        maxPoints: 3,
+        rubric: [
+          {
+            points: 1,
+            description: 'Faraday\u2019s law for the moving side: $\\varepsilon = BLv$, so $I = BLv/R$.',
+            keywords: ['blv', 'b l v', 'blv/r'],
+          },
+          {
+            points: 1,
+            description: 'Magnetic force on the top side: $F_B = ILB = \\dfrac{B^2L^2v}{R}$, directed upward.',
+            keywords: ['ilb', 'i l b', 'b^2l^2v', 'b²l²v', 'b^2 l^2 v'],
+          },
+          {
+            points: 1,
+            description: 'At terminal speed the forces balance, $mg = \\dfrac{B^2L^2v_T}{R}$, giving $v_T = \\dfrac{mgR}{B^2L^2}$.',
+            keywords: ['mgr/(b^2l^2)', 'mgr/b^2l^2', 'mgr/(b²l²)', 'mgr/b²l²', 'mgr/(b^2 l^2)'],
+          },
+        ],
+        sampleAnswer:
+          'Only the top side is in the field, so the flux changes at the rate $BLv$: $\\varepsilon = BLv$ and $I = \\dfrac{BLv}{R}$.\n\nForce on the top side: $F_B = ILB = \\dfrac{B^2L^2v}{R}$, upward.\n\nAt terminal speed the net force is zero: $mg = \\dfrac{B^2L^2v_T}{R}$, so $v_T = \\dfrac{mgR}{B^2L^2}$.',
+      },
+      {
+        label: '(c)',
+        prompt:
+          'Explain how your expression from part (b) is or is not consistent with your answer to part (a).',
+        maxPoints: 2,
+        rubric: [
+          {
+            points: 1,
+            description:
+              'Uses functional dependence: $v_T$ is directly proportional to $R$ ($R$ is in the numerator), so a larger resistance gives a larger terminal speed.',
+            keywords: ['proportional to r', 'directly proportional', 'numerator', 'increases with r', 'as r increases'],
+          },
+          {
+            points: 1,
+            description: 'Connects to part (a): loop 2 (greater $R$) has the greater terminal speed, consistent with the prediction.',
+            keywords: ['consistent', 'agrees', 'matches'],
+          },
+        ],
+        sampleAnswer:
+          'In $v_T = \\dfrac{mgR}{B^2L^2}$, $R$ is in the numerator, so $v_T$ is directly proportional to the resistance. Loop 2 has the greater resistance and the same $m$, $B$, and $L$, so it has the greater terminal speed, consistent with part (a).',
+      },
+    ],
+  },
 ]
 
 // ─── Export Functions ────────────────────────────────────────────────────────
@@ -715,38 +918,20 @@ export function getPhysics2FRQs(): Physics2FRQ[] {
   return allQuestions
 }
 
-export function getLongFRQs(): Physics2FRQ[] {
-  return allQuestions.filter((q) => q.type === 'long')
+export function getPhysics2FRQsByType(type: Physics2FRQType): Physics2FRQ[] {
+  return allQuestions.filter((q) => q.type === type)
 }
 
-export function getShortFRQs(): Physics2FRQ[] {
-  return allQuestions.filter((q) => q.type === 'short')
-}
-
+/** One FRQ of each real type, in exam order (MR, TBR, LAB, QQT): 40 points in 95 minutes. */
 export function generateFullExamFRQs(): {
-  long: Physics2FRQ[]
-  short: Physics2FRQ[]
+  questions: Physics2FRQ[]
   totalPoints: number
-  totalTime: string
+  totalMinutes: number
 } {
-  const longPool = getLongFRQs()
-  const shortPool = getShortFRQs()
-
-  // Shuffle and pick 2 long + 3 short
-  const shuffledLong = shuffleArray(longPool)
-  const shuffledShort = shuffleArray(shortPool)
-
-  const selectedLong = shuffledLong.slice(0, 2)
-  const selectedShort = shuffledShort.slice(0, 3)
-
-  const totalPoints =
-    selectedLong.reduce((sum, q) => sum + q.totalPoints, 0) +
-    selectedShort.reduce((sum, q) => sum + q.totalPoints, 0)
-
+  const questions = PHYSICS2_FRQ_TYPES.map(({ type }) => shuffleArray(getPhysics2FRQsByType(type))[0])
   return {
-    long: selectedLong,
-    short: selectedShort,
-    totalPoints,
-    totalTime: '~95 minutes',
+    questions,
+    totalPoints: questions.reduce((sum, q) => sum + q.totalPoints, 0),
+    totalMinutes: 95,
   }
 }
