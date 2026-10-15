@@ -55,7 +55,7 @@ $(1 + \\alpha \\Delta T)^3 \\approx 1 + 3\\alpha \\Delta T$ for small $\\alpha \
 | Glass (ordinary) | 27 |
 | Mercury | 182 |
 | Water (at 20°C) | 207 |
-| Ethanol | 1{,}120 |
+| Ethanol | 1,120 |
 | Gasoline | 950 |
 
 > 🔑 Liquids generally have much larger $\\beta$ values than solids. This is why a full gasoline tank can overflow on a hot day!

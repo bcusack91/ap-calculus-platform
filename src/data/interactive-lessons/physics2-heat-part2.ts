@@ -32,9 +32,9 @@ Where:
 
 | Substance | $c$ (J/(kg·°C)) |
 |---|---|
-| Water | 4{,}186 |
-| Ice | 2{,}090 |
-| Steam | 2{,}010 |
+| Water | 4,186 |
+| Ice | 2,090 |
+| Steam | 2,010 |
 | Aluminum | 900 |
 | Iron/Steel | 450 |
 | Copper | 390 |
