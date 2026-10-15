@@ -9,7 +9,9 @@ import type { MCQItem } from '@/components/FullLengthPracticeExam'
  *   Unit 4 — American Political Ideologies & Beliefs (6, 11%; CED 10–15%)
  *   Unit 5 — Political Participation (12, 22%; CED 20–27%)
  * Items that depend on a case or document use only the CED's required
- * Supreme Court cases and foundational documents.
+ * Supreme Court cases and foundational documents, including the four
+ * documents added for 2026–27 (Federalist No. 39, the Gettysburg Address,
+ * the Emancipation Proclamation, and Adam Smith's The Wealth of Nations).
  */
 
 export const MCQS: MCQItem[] = [
@@ -80,17 +82,17 @@ export const MCQS: MCQItem[] = [
     type: 'mcq',
     topic: 'unit-1-foundations',
     stimulus:
-      '"The powers not delegated to the United States by the Constitution, nor prohibited by it to the States, are reserved to the States respectively, or to the people."\n— Tenth Amendment',
-    question: 'The Tenth Amendment most directly reflects which model of government?',
+      '"The proposed Constitution, therefore, is, in strictness, neither a national nor a federal Constitution, but a composition of both. In its foundation it is federal, not national; ... in the operation of these powers, it is national, not federal; in the extent of them, again, it is federal, not national; and, finally, in the authoritative mode of introducing amendments, it is neither wholly federal nor wholly national."\n— Federalist No. 39, James Madison (1788)',
+    question: 'Answering critics who said the Constitution would create one consolidated government, Madison argues in this excerpt that the new system',
     options: [
-      'Unitary government, in which the national authority holds all ultimate power.',
-      'Confederation, in which sovereign states keep final authority over the center.',
-      'Parliamentary government, in which the legislature selects the executive.',
-      'Federalism, in which power is split between national and state governments.',
+      'would act only on the state governments, as the Articles did, and never directly on individual citizens.',
+      'would make the national government supreme in every policy area, leaving the states only as administrative units.',
+      'mixes features based on the states with features based on the people, so it is neither wholly one nor the other.',
+      'would let any single state block a constitutional amendment, so each state keeps its full sovereignty intact.',
     ],
-    correctAnswer: 3,
+    correctAnswer: 2,
     explanation:
-      'By reserving undelegated powers to the states or the people, the Tenth Amendment divides authority between two levels of government, the core of federalism. A confederation also leaves power with the states, but there the states remain sovereign and the central government depends on them, the Articles model the Constitution replaced.',
+      'In Federalist 39, "federal" means resting on the states and "national" means resting on, and acting directly upon, the people; Madison shows the Constitution mixes the two, so power is shared rather than consolidated. Acting only through the state governments was the Articles model, and the excerpt rejects it by calling the operation of the new powers "national, not federal"; amendments need three-fourths of the states, not unanimity.',
   },
   {
     type: 'mcq',
@@ -475,18 +477,17 @@ export const MCQS: MCQItem[] = [
     type: 'mcq',
     topic: 'unit-3-civil-liberties-rights',
     stimulus:
-      '"If there is any fixed star in our constitutional constellation, it is that no official, high or petty, can prescribe what shall be orthodox in politics, nationalism, religion, or other matters of opinion."\n— West Virginia State Board of Education v. Barnette (1943)',
-    question:
-      'The principle in this passage was later extended to protect symbolic student speech in which Supreme Court case?',
+      'Excerpt 1: "Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal."\n— Abraham Lincoln, Gettysburg Address (November 1863)\n\nExcerpt 2: "... all persons held as slaves within any State or designated part of a State, the people whereof shall then be in rebellion against the United States, shall be then, thenceforward, and forever free ..."\n— Abraham Lincoln, Emancipation Proclamation (January 1863)',
+    question: 'Which statement most accurately compares the two excerpts?',
     options: [
-      'Brown v. Board of Education',
-      'Engel v. Vitale',
-      'Tinker v. Des Moines',
-      'Schenck v. United States',
+      'Excerpt 1 had the force of law and ended slavery nationwide, while Excerpt 2 explained the constitutional basis for that step.',
+      'Excerpt 1 echoes the Declaration\'s ideal of equality, while Excerpt 2 used war powers to free enslaved people in rebel areas.',
+      'Excerpt 1 was a war measure issued under the commander-in-chief power, while Excerpt 2 was a speech honoring fallen soldiers.',
+      'Excerpt 1 and Excerpt 2 each freed the enslaved people held in the border states that had remained loyal to the Union.',
     ],
-    correctAnswer: 2,
+    correctAnswer: 1,
     explanation:
-      'Tinker held that students who wore black armbands to protest the Vietnam War were engaged in protected symbolic speech, since students do not "shed their constitutional rights ... at the schoolhouse gate." Engel also involved public schools, but it concerned school-sponsored prayer under the Establishment Clause, not student expression.',
+      'The Gettysburg Address is a speech that recalls the Declaration\'s promise that "all men are created equal," while the Emancipation Proclamation was a war measure, issued under the president\'s commander-in-chief power, that freed enslaved people only in areas still in rebellion. Neither ended slavery nationwide or in the loyal border states; that required the Thirteenth Amendment (1865).',
   },
   {
     type: 'mcq',
@@ -671,17 +672,18 @@ export const MCQS: MCQItem[] = [
   {
     type: 'mcq',
     topic: 'unit-4-ideologies-beliefs',
-    question:
-      'Which set of positions is most consistent with libertarianism in the United States?',
+    stimulus:
+      '"It is not from the benevolence of the butcher, the brewer, or the baker, that we expect our dinner, but from their regard to their own interest."\n— Adam Smith, The Wealth of Nations (1776)',
+    question: 'Which policy position is most consistent with the economic principle expressed in the passage?',
     options: [
-      'Free markets and a minimal government role in personal life.',
-      'Government regulation of business and of personal morality alike.',
-      'Government help for workers along with traditional moral rules.',
-      'Public ownership of major industries and strong labor unions.',
+      'Setting government limits on food prices so that every family can afford the same basic groceries each week',
+      'Placing major food producers under public ownership so that the pursuit of profit does not decide what is produced',
+      'Raising tariffs on imported goods so that domestic producers are shielded from competition with foreign sellers',
+      'Letting prices set by competition among private sellers decide what goods are produced instead of the government',
     ],
-    correctAnswer: 0,
+    correctAnswer: 3,
     explanation:
-      'Libertarians want government to stay out of both the economy and private life, favoring free markets alongside broad personal freedom. Economic help for workers paired with traditional moral rules describes a populist or communitarian outlook, which accepts government involvement that libertarians reject.',
+      'Smith argues that people pursuing their own interest through voluntary exchange end up supplying what others need, the reasoning behind free enterprise and a limited government role in the economy. Protective tariffs may sound pro-business, but Smith criticized such mercantilist trade restrictions because they block the competition his argument relies on.',
   },
   {
     type: 'mcq',

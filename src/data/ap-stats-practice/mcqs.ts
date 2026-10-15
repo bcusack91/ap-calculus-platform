@@ -1,20 +1,167 @@
 import type { MCQItem } from '@/components/FullLengthPracticeExam'
 
 /**
- * AP Statistics — 40 MCQs (Section I, 90 min), spread to the 2025–26 CED weights.
- *   One-variable categorical data (3) · one-variable quantitative data (5)
- *   Two-variable data (3) · Collecting data (6) · Probability & random variables (5)
- *   Sampling distributions (4) · Inference for proportions (6) · Inference for means (5)
- *   Chi-square & inference for slopes (3)
- *
- * Calculator allowed throughout; formulas and tables provided.
+ * AP Statistics — 42 MCQs (Section I, 90 min, 4 choices), built to the revised 2026–27 course
+ * (first exam May 2027) and its five-unit MCQ weights:
+ *   U1 Exploring One-Variable Data and Collecting Data (11) · U2 Probability, Random Variables,
+ *   and Probability Distributions (10) · U3 Inference for Categorical Data: Proportions (9)
+ *   U4 Inference for Quantitative Data: Means (6) · U5 Regression Analysis (6)
+ * Includes two 3-question sets that share a stimulus (binomial distribution; regression).
+ * Removed from the course and not tested: departures from linearity/transformations, combining
+ * random variables (incl. linear transformations of a random variable), the geometric distribution,
+ * chi-square goodness-of-fit, and inference for slope.
+ * Fully digital exam; graphing calculator plus built-in Desmos; formulas and tables provided.
  */
 
 export const MCQS: MCQItem[] = [
-  /* ---- One-variable categorical data (3) ---- */
+  /* ---- Unit 1: Exploring One-Variable Data and Collecting Data (11) ---- */
   {
     type: 'mcq',
-    topic: 'unit-1-categorical-data',
+    topic: 'unit-1-one-variable-data-collecting-data',
+    question: 'A school nurse believes that the proportion of students at her large high school who sleep at least 8 hours on school nights is less than 0.30, the value reported in a national study. She plans to survey a random sample of students at the school. Which of the following gives the appropriate components of the investigative question for her study?',
+    options: [
+      'The parameter is the proportion of the sampled students who sleep at least 8 hours on school nights, and the direction of the alternative hypothesis is less than 0.30.',
+      'The parameter is the proportion of all students at the school who sleep at least 8 hours on school nights, and the direction of the alternative hypothesis is not equal to 0.30.',
+      'The parameter is the proportion of all teenagers in the country who sleep at least 8 hours on school nights, and the direction of the alternative hypothesis is less than 0.30.',
+      'The parameter is the proportion of all students at the school who sleep at least 8 hours on school nights, and the direction of the alternative hypothesis is less than 0.30.',
+    ],
+    correctAnswer: 3,
+    explanation: 'An investigative question for a test must name the parameter, a fixed value describing the population of interest (all students at this school), and the direction of the alternative hypothesis, which matches the nurse\'s belief of "less than 0.30." The proportion of sampled students is a statistic, not a parameter, and a two-sided "not equal to" direction does not match her one-sided belief.',
+  },
+  {
+    type: 'mcq',
+    topic: 'unit-1-one-variable-data-collecting-data',
+    question: 'A researcher recruits 120 volunteers from a fitness club and randomly assigns 60 of them to a high-protein diet and 60 to a standard diet. After 12 weeks, she measures each volunteer\'s change in muscle mass. Which of the following is the most appropriate investigative question for this study?',
+    options: [
+      'Does a high-protein diet cause a greater mean gain in muscle mass than a standard diet for all members of this fitness club?',
+      'Did the 60 volunteers on the high-protein diet gain more muscle mass in the 12 weeks than the 60 volunteers on the standard diet?',
+      'Does a high-protein diet cause a greater mean gain in muscle mass than a standard diet for adults similar to the volunteers?',
+      'Does a high-protein diet cause a greater mean gain in muscle mass than a standard diet for all adults who live in the country?',
+    ],
+    correctAnswer: 2,
+    explanation: 'Random assignment supports a cause-and-effect conclusion, but the subjects were volunteers rather than a random sample, so conclusions apply only to adults similar to those in the study. Extending the conclusion to all club members or all adults would require random selection, and a question only about these 120 people needs no statistical inference at all.',
+  },
+  {
+    type: 'mcq',
+    topic: 'unit-1-one-variable-data-collecting-data',
+    question: 'The annual salaries of the 250 employees at a company are strongly skewed to the right because a few executives earn far more than everyone else. Which pair of summary statistics best describes the center and spread of these salaries?',
+    options: [
+      'Median and standard deviation',
+      'Median and interquartile range',
+      'Mean and standard deviation',
+      'Mean and interquartile range',
+    ],
+    correctAnswer: 1,
+    explanation: 'The median and IQR are resistant, so the few very large executive salaries do not distort them. The mean and standard deviation are both pulled strongly toward the long right tail, so they misrepresent a typical salary.',
+  },
+  {
+    type: 'mcq',
+    topic: 'unit-1-one-variable-data-collecting-data',
+    question: 'The five-number summary of a data set is: minimum 12, $Q_1 = 18$, median 25, $Q_3 = 32$, maximum 50. Using the $1.5 \\times \\text{IQR}$ rule, which conclusion is correct?',
+    options: [
+      'The maximum of 50 is not an outlier, because it lies below the upper fence of 53.',
+      'The maximum of 50 is an outlier, because it lies above $1.5 \\times 32 = 48$.',
+      'The maximum of 50 is not an outlier, because only values above $2 \\times Q_3 = 64$ are outliers.',
+      'The maximum of 50 is an outlier, because it lies above $32 + 14 = 46$.',
+    ],
+    correctAnswer: 0,
+    explanation: 'IQR = 32 − 18 = 14, so the fences are 18 − 1.5(14) = −3 and 32 + 1.5(14) = 53. Every value, including the maximum of 50, falls inside these fences. Adding only one IQR to $Q_3$ (giving 46) uses the wrong multiplier.',
+  },
+  {
+    type: 'mcq',
+    topic: 'unit-1-one-variable-data-collecting-data',
+    question: 'Daily high temperatures in a city for one month have mean 20°C and standard deviation 5°C. The temperatures are converted to Fahrenheit using $F = 1.8C + 32$. What are the mean and standard deviation of the converted temperatures?',
+    options: [
+      'Mean 68°F, standard deviation 41°F',
+      'Mean 36°F, standard deviation 9°F',
+      'Mean 68°F, standard deviation 5°F',
+      'Mean 68°F, standard deviation 9°F',
+    ],
+    correctAnswer: 3,
+    explanation: 'Multiplying by 1.8 and adding 32 changes the mean to 1.8(20) + 32 = 68. Adding a constant does not change spread, so the standard deviation is only multiplied: 1.8(5) = 9. Adding 32 to the standard deviation as well gives the incorrect 41.',
+  },
+  {
+    type: 'mcq',
+    topic: 'unit-1-one-variable-data-collecting-data',
+    question: 'Ana scored 82 on a test where the class mean was 74 and the standard deviation was 4. Ben scored 90 on a different test where the class mean was 80 and the standard deviation was 8. Which student performed better relative to his or her own class?',
+    options: [
+      'Ben, because his score is 10 points above his class mean, while Ana\'s is 8 points above hers.',
+      'Ben, because his z-score of $10/4 = 2.5$ is greater than Ana\'s z-score of 2.0.',
+      'Ana, because her z-score of 2.0 is greater than Ben\'s z-score of 1.25.',
+      'Ben, because his score of 90 is higher than Ana\'s score of 82.',
+    ],
+    correctAnswer: 2,
+    explanation: 'Relative standing is measured by z-scores: Ana\'s is (82 − 74)/4 = 2.0 and Ben\'s is (90 − 80)/8 = 1.25. Comparing raw distances above the mean (10 versus 8 points) ignores that Ben\'s class was twice as spread out, and Ben\'s z-score must use his own class\'s standard deviation of 8, not Ana\'s 4.',
+  },
+  {
+    type: 'mcq',
+    topic: 'unit-1-one-variable-data-collecting-data',
+    question: 'A principal wants to survey 100 students. She obtains separate lists of the 9th, 10th, 11th, and 12th graders and randomly selects 25 students from each list. What type of sample is this?',
+    options: [
+      'A systematic sample',
+      'A stratified random sample',
+      'A cluster sample',
+      'A simple random sample',
+    ],
+    correctAnswer: 1,
+    explanation: 'The population was divided into groups (grade levels) and a random sample was taken within every group, which defines a stratified random sample. It is not a simple random sample because not every set of 100 students is equally likely; for example, a sample of 100 seniors is impossible.',
+  },
+  {
+    type: 'mcq',
+    topic: 'unit-1-one-variable-data-collecting-data',
+    question: 'A news website posts a poll asking readers whether they support a proposed tax on sugary drinks. Of the 4,200 readers who respond, 81% oppose the tax. Which is the most serious source of bias in this estimate of public opinion?',
+    options: [
+      'Voluntary response bias, because readers with strong feelings are the most likely to choose to take part',
+      'Undercoverage bias, because some members of the public do not read this particular news website',
+      'Response bias, because readers may give dishonest answers when they are asked about personal habits',
+      'Sampling variability, because a different sample of readers would give a slightly different percent',
+    ],
+    correctAnswer: 0,
+    explanation: 'Respondents chose themselves, and people who feel strongly (often negatively) are most likely to respond, so the 81% likely overstates opposition. Sampling variability is random rather than a bias, and no sample of self-selected volunteers would fix it.',
+  },
+  {
+    type: 'mcq',
+    topic: 'unit-1-one-variable-data-collecting-data',
+    question: 'A researcher surveyed 500 randomly selected high school students and found that students who eat breakfast daily have higher average GPAs than those who do not. Can the researcher conclude that eating breakfast causes higher GPAs?',
+    options: [
+      'Yes, because the students were randomly selected, so the results can be generalized to all high school students.',
+      'Yes, because a sample of 500 students is large enough to rule out the effect of any other variables on GPA.',
+      'No, because a sample of 500 students is too small to establish a cause-and-effect relationship between the two.',
+      'No, because this is an observational study, so other variables related to both habits could explain the difference.',
+    ],
+    correctAnswer: 3,
+    explanation: 'Without random assignment of the treatment, confounding variables (such as family routines or sleep) could explain the association, so cause and effect cannot be concluded. Random selection supports generalizing to the population, not drawing causal conclusions.',
+  },
+  {
+    type: 'mcq',
+    topic: 'unit-1-one-variable-data-collecting-data',
+    question: 'An agronomist will compare two fertilizers on 20 plots. Ten plots are in full sun and ten are in partial shade, and sunlight is known to affect yield. Which design is best?',
+    options: [
+      'Randomly assign 10 of the 20 plots to each fertilizer, ignoring sunlight.',
+      'Use one fertilizer on all 20 plots this year and the other next year.',
+      'In each sunlight group, randomly assign 5 plots to each fertilizer.',
+      'Use one fertilizer on the sunny plots and the other on the shaded plots.',
+    ],
+    correctAnswer: 2,
+    explanation: 'Blocking by sunlight and then randomizing within each block removes sunlight-related variation from the comparison of fertilizers. Giving one fertilizer to all the sunny plots completely confounds fertilizer with sunlight, and a completely randomized design ignores a known source of variability.',
+  },
+  {
+    type: 'mcq',
+    topic: 'unit-1-one-variable-data-collecting-data',
+    question: 'In a study of a new pain reliever, subjects are randomly assigned to receive either the drug or an identical-looking placebo, and neither the subjects nor the nurses who record pain levels know which treatment each subject received. What is the main purpose of keeping the nurses unaware of the treatments?',
+    options: [
+      'To keep the subjects from figuring out which treatment they received',
+      'To keep expectations from influencing how the outcomes are measured',
+      'To make sure the two treatment groups are similar before the treatment',
+      'To allow the results to be generalized to all patients who have pain',
+    ],
+    correctAnswer: 1,
+    explanation: 'Blinding the people who measure the response prevents their expectations from biasing how they evaluate or record outcomes. Making the groups similar at the start is the job of random assignment, not blinding.',
+  },
+  /* ---- Unit 2: Probability, Random Variables, and Probability Distributions (10) ---- */
+  {
+    type: 'mcq',
+    topic: 'unit-2-probability-distributions',
     stimulus: 'A random sample of 200 students at a high school was asked whether they prefer online or in-person classes. The results, by grade level, are shown below.\n\n| | Online | In-person | Total |\n|---|---|---|---|\n| 9th grade | 36 | 84 | 120 |\n| 12th grade | 48 | 32 | 80 |\n| Total | 84 | 116 | 200 |',
     question: 'What proportion of the 12th graders in the sample prefer online classes?',
     options: [
@@ -28,220 +175,34 @@ export const MCQS: MCQItem[] = [
   },
   {
     type: 'mcq',
-    topic: 'unit-1-categorical-data',
+    topic: 'unit-2-probability-distributions',
     stimulus: 'A random sample of 200 students at a high school was asked whether they prefer online or in-person classes. The results, by grade level, are shown below.\n\n| | Online | In-person | Total |\n|---|---|---|---|\n| 9th grade | 36 | 84 | 120 |\n| 12th grade | 48 | 32 | 80 |\n| Total | 84 | 116 | 200 |',
     question: 'Which statement provides the best evidence of an association between grade level and class preference for these students?',
     options: [
+      'The proportion preferring online is 0.30 for 9th graders but 0.60 for 12th graders.',
       'In the whole sample, the proportion preferring in-person (0.58) exceeds the proportion preferring online (0.42).',
       'More 12th graders (48) than 9th graders (36) said that they prefer the online classes.',
       'The proportion of the sample who are 9th graders (0.60) is greater than for 12th graders (0.40).',
-      'The proportion preferring online is 0.30 for 9th graders but 0.60 for 12th graders.',
     ],
-    correctAnswer: 3,
+    correctAnswer: 0,
     explanation: 'Association between two categorical variables shows up as different conditional distributions: 36/120 = 0.30 of 9th graders versus 48/80 = 0.60 of 12th graders prefer online. Comparing raw counts (48 versus 36) is misleading because the two grades had different sample sizes.',
   },
   {
     type: 'mcq',
-    topic: 'unit-1-categorical-data',
+    topic: 'unit-2-probability-distributions',
     question: 'A relative-frequency segmented bar chart shows, for each of three age groups, the percent of adults who prefer each of four news sources. The four segments have the same heights in all three bars. What can be concluded about these adults?',
     options: [
+      'The same number of adults was surveyed in each of the three age groups.',
       'Each of the four news sources is preferred by 25% of the adults surveyed.',
       'There is no association between age group and preferred news source.',
       'There is a strong association between age group and preferred news source.',
-      'The same number of adults was surveyed in each of the three age groups.',
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     explanation: 'Identical segment heights mean the conditional distribution of news source is the same in every age group, which is what "no association" means. Relative-frequency bars are scaled to 100%, so they say nothing about whether the groups had equal sample sizes.',
   },
-  /* ---- One-variable quantitative data (5) ---- */
   {
     type: 'mcq',
-    topic: 'unit-2-quantitative-data',
-    question: 'The annual salaries of the 250 employees at a company are strongly skewed to the right because a few executives earn far more than everyone else. Which pair of summary statistics best describes the center and spread of these salaries?',
-    options: [
-      'Median and interquartile range',
-      'Mean and standard deviation',
-      'Mean and interquartile range',
-      'Median and standard deviation',
-    ],
-    correctAnswer: 0,
-    explanation: 'The median and IQR are resistant, so the few very large executive salaries do not distort them. The mean and standard deviation are both pulled strongly toward the long right tail, so they misrepresent a typical salary.',
-  },
-  {
-    type: 'mcq',
-    topic: 'unit-2-quantitative-data',
-    question: 'The five-number summary of a data set is: minimum 12, $Q_1 = 18$, median 25, $Q_3 = 32$, maximum 50. Using the $1.5 \\times \\text{IQR}$ rule, which conclusion is correct?',
-    options: [
-      'The maximum of 50 is an outlier, because it lies above $1.5 \\times 32 = 48$.',
-      'The maximum of 50 is an outlier, because $50 - 32 = 18$ exceeds the IQR of 14.',
-      'The maximum of 50 is an outlier, because it lies above $32 + 14 = 46$.',
-      'The maximum of 50 is not an outlier, because it lies below the upper fence of 53.',
-    ],
-    correctAnswer: 3,
-    explanation: 'IQR = 32 − 18 = 14, so the fences are 18 − 1.5(14) = −3 and 32 + 1.5(14) = 53. Every value, including the maximum of 50, falls inside these fences. Adding only one IQR to $Q_3$ (giving 46) uses the wrong multiplier.',
-  },
-  {
-    type: 'mcq',
-    topic: 'unit-2-quantitative-data',
-    question: 'Daily high temperatures in a city for one month have mean 20°C and standard deviation 5°C. The temperatures are converted to Fahrenheit using $F = 1.8C + 32$. What are the mean and standard deviation of the converted temperatures?',
-    options: [
-      'Mean 36°F, standard deviation 9°F',
-      'Mean 68°F, standard deviation 5°F',
-      'Mean 68°F, standard deviation 9°F',
-      'Mean 68°F, standard deviation 41°F',
-    ],
-    correctAnswer: 2,
-    explanation: 'Multiplying by 1.8 and adding 32 changes the mean to 1.8(20) + 32 = 68. Adding a constant does not change spread, so the standard deviation is only multiplied: 1.8(5) = 9. Adding 32 to the standard deviation as well gives the incorrect 41.',
-  },
-  {
-    type: 'mcq',
-    topic: 'unit-2-quantitative-data',
-    question: 'Ana scored 82 on a test where the class mean was 74 and the standard deviation was 4. Ben scored 90 on a different test where the class mean was 80 and the standard deviation was 8. Which student performed better relative to his or her own class?',
-    options: [
-      'Neither, because both students scored above the mean of their own class.',
-      'Ana, because her z-score of 2.0 is greater than Ben\'s z-score of 1.25.',
-      'Ben, because his score of 90 is higher than Ana\'s score of 82.',
-      'Ben, because his score is 10 points above his class mean, while Ana\'s is 8 points above hers.',
-    ],
-    correctAnswer: 1,
-    explanation: 'Relative standing is measured by z-scores: Ana\'s is (82 − 74)/4 = 2.0 and Ben\'s is (90 − 80)/8 = 1.25. Comparing raw distances above the mean (10 versus 8 points) ignores that Ben\'s class was twice as spread out.',
-  },
-  {
-    type: 'mcq',
-    topic: 'unit-2-quantitative-data',
-    question: 'The heights of adult women in a population are approximately normal with mean 64 inches and standard deviation 2.5 inches. Approximately what proportion of these women are taller than 68 inches?',
-    options: [
-      '0.0057',
-      '0.0548',
-      '0.4452',
-      '0.9452',
-    ],
-    correctAnswer: 1,
-    explanation: 'z = (68 − 64)/2.5 = 1.6, and the area to the right of z = 1.6 is about 0.0548. The value 0.9452 is the area to the left, the proportion of women shorter than 68 inches.',
-  },
-  /* ---- Two-variable data (3) ---- */
-  {
-    type: 'mcq',
-    topic: 'unit-3-two-variable-data',
-    question: 'For a sample of students, the least-squares regression line relating test score $y$ (points) to hours studied $x$ is $\\hat{y} = 12.5 + 3.2x$. Which is the correct interpretation of the slope?',
-    options: [
-      'For each additional hour studied, a student\'s test score increases by exactly 3.2 points.',
-      'A student who does not study at all is predicted to score about 3.2 points on the test.',
-      'For each additional point on the test, the predicted hours studied increase by about 3.2.',
-      'For each additional hour studied, the predicted score increases by about 3.2 points.',
-    ],
-    correctAnswer: 3,
-    explanation: 'The slope is the predicted change in $y$ for a one-unit increase in $x$, so it describes predicted (average) scores, not every student\'s exact score. Claiming an exact 3.2-point increase treats the model as deterministic.',
-  },
-  {
-    type: 'mcq',
-    topic: 'unit-3-two-variable-data',
-    question: 'For 30 weeks of data, the correlation between the price of a product and the number of units sold is $r = -0.80$. Which statement is correct?',
-    options: [
-      'Units sold decrease by about 0.80 unit, on average, for each one-dollar increase in the price.',
-      'About 80% of the variation in units sold is explained by the linear relationship with price.',
-      'About 64% of the variation in units sold is explained by the linear model with price.',
-      'About 64% of the weekly sales figures are predicted exactly by the least-squares regression line.',
-    ],
-    correctAnswer: 2,
-    explanation: 'The coefficient of determination is $r^2 = (-0.80)^2 = 0.64$, the fraction of variation in the response explained by the linear model. The correlation itself is not a slope, so it does not give the change in units sold per dollar.',
-  },
-  {
-    type: 'mcq',
-    topic: 'unit-3-two-variable-data',
-    question: 'Using the regression line $\\hat{y} = 12.5 + 3.2x$ for test score versus hours studied, a student who studied 5 hours scored 31 points. Which statement about this student is correct?',
-    options: [
-      'The residual is −2.5, so the line underestimated her score.',
-      'The residual is 2.5, so the line underestimated her score.',
-      'The residual is −2.5, so the line overestimated her score.',
-      'The residual is 2.5, so the line overestimated her score.',
-    ],
-    correctAnswer: 1,
-    explanation: 'The predicted score is 12.5 + 3.2(5) = 28.5, and the residual is actual − predicted = 31 − 28.5 = 2.5. A positive residual means the actual value is above the line, so the line underestimated her score.',
-  },
-  /* ---- Collecting data (6) ---- */
-  {
-    type: 'mcq',
-    topic: 'unit-4-collecting-data',
-    question: 'A principal wants to survey 100 students. She obtains separate lists of the 9th, 10th, 11th, and 12th graders and randomly selects 25 students from each list. What type of sample is this?',
-    options: [
-      'A stratified random sample',
-      'A cluster sample',
-      'A simple random sample',
-      'A systematic sample',
-    ],
-    correctAnswer: 0,
-    explanation: 'The population was divided into groups (grade levels) and a random sample was taken within every group, which defines a stratified random sample. It is not a simple random sample because not every set of 100 students is equally likely; for example, a sample of 100 seniors is impossible.',
-  },
-  {
-    type: 'mcq',
-    topic: 'unit-4-collecting-data',
-    question: 'A news website posts a poll asking readers whether they support a proposed tax on sugary drinks. Of the 4,200 readers who respond, 81% oppose the tax. Which is the most serious source of bias in this estimate of public opinion?',
-    options: [
-      'Undercoverage bias, because some members of the public do not read this particular news website',
-      'Response bias, because readers may give dishonest answers when they are asked about personal habits',
-      'Sampling variability, because a different sample of readers would give a slightly different percent',
-      'Voluntary response bias, because readers with strong feelings are the most likely to choose to take part',
-    ],
-    correctAnswer: 3,
-    explanation: 'Respondents chose themselves, and people who feel strongly (often negatively) are most likely to respond, so the 81% likely overstates opposition. Sampling variability is random rather than a bias, and no sample of self-selected volunteers would fix it.',
-  },
-  {
-    type: 'mcq',
-    topic: 'unit-4-collecting-data',
-    question: 'A researcher surveyed 500 randomly selected high school students and found that students who eat breakfast daily have higher average GPAs than those who do not. Can the researcher conclude that eating breakfast causes higher GPAs?',
-    options: [
-      'Yes, because a sample of 500 students is large enough to rule out the effect of any other variables on GPA.',
-      'No, because a sample of 500 students is too small to establish a cause-and-effect relationship between the two.',
-      'No, because this is an observational study, so other variables related to both habits could explain the difference.',
-      'Yes, because the students were randomly selected, so the results can be generalized to all high school students.',
-    ],
-    correctAnswer: 2,
-    explanation: 'Without random assignment of the treatment, confounding variables (such as family routines or sleep) could explain the association, so cause and effect cannot be concluded. Random selection supports generalizing to the population, not drawing causal conclusions.',
-  },
-  {
-    type: 'mcq',
-    topic: 'unit-4-collecting-data',
-    question: 'An agronomist will compare two fertilizers on 20 plots. Ten plots are in full sun and ten are in partial shade, and sunlight is known to affect yield. Which design is best?',
-    options: [
-      'Use one fertilizer on all 20 plots this year and the other next year.',
-      'In each sunlight group, randomly assign 5 plots to each fertilizer.',
-      'Use one fertilizer on the sunny plots and the other on the shaded plots.',
-      'Randomly assign 10 of the 20 plots to each fertilizer, ignoring sunlight.',
-    ],
-    correctAnswer: 1,
-    explanation: 'Blocking by sunlight and then randomizing within each block removes sunlight-related variation from the comparison of fertilizers. Giving one fertilizer to all the sunny plots completely confounds fertilizer with sunlight, and a completely randomized design ignores a known source of variability.',
-  },
-  {
-    type: 'mcq',
-    topic: 'unit-4-collecting-data',
-    question: 'In a study of a new pain reliever, subjects are randomly assigned to receive either the drug or an identical-looking placebo, and neither the subjects nor the nurses who record pain levels know which treatment each subject received. What is the main purpose of keeping the nurses unaware of the treatments?',
-    options: [
-      'To keep expectations from influencing how the outcomes are measured',
-      'To make sure the two treatment groups are similar before the treatment',
-      'To allow the results to be generalized to all patients who have pain',
-      'To keep the subjects from figuring out which treatment they received',
-    ],
-    correctAnswer: 0,
-    explanation: 'Blinding the people who measure the response prevents their expectations from biasing how they evaluate or record outcomes. Making the groups similar at the start is the job of random assignment, not blinding.',
-  },
-  {
-    type: 'mcq',
-    topic: 'unit-4-collecting-data',
-    question: 'Researchers recruited 60 volunteers and randomly assigned 30 to a new exercise program and 30 to their usual routine. What is the main benefit of the random assignment?',
-    options: [
-      'It allows the results to be generalized to all adults in the population the volunteers came from.',
-      'It guarantees that the two groups will have exactly the same average fitness level at the start.',
-      'It ensures that the subjects do not know whether they are in the program group or the usual group.',
-      'It creates roughly equivalent groups, so a significant difference can be attributed to the program.',
-    ],
-    correctAnswer: 3,
-    explanation: 'Random assignment balances the effects of other variables between groups on average, which is what allows a cause-and-effect conclusion. Generalizing to a population requires random selection, and these subjects were volunteers.',
-  },
-  /* ---- Probability & random variables (5) ---- */
-  {
-    type: 'mcq',
-    topic: 'unit-5-probability-rv',
+    topic: 'unit-2-probability-distributions',
     question: 'Events $A$ and $B$ are independent, with $P(A) = 0.4$ and $P(B) = 0.5$. What is $P(A \\text{ or } B)$?',
     options: [
       '0.20',
@@ -254,7 +215,7 @@ export const MCQS: MCQItem[] = [
   },
   {
     type: 'mcq',
-    topic: 'unit-5-probability-rv',
+    topic: 'unit-2-probability-distributions',
     question: 'A condition affects 2% of a population. A screening test is positive for 90% of people who have the condition and for 5% of people who do not. If a randomly selected person tests positive, what is the probability that the person has the condition?',
     options: [
       '0.018',
@@ -267,33 +228,7 @@ export const MCQS: MCQItem[] = [
   },
   {
     type: 'mcq',
-    topic: 'unit-5-probability-rv',
-    question: 'A random variable $X$ has mean 5 and standard deviation 2. What are the mean and standard deviation of $Y = 3X + 2$?',
-    options: [
-      'Mean 17, standard deviation 6',
-      'Mean 17, standard deviation 8',
-      'Mean 15, standard deviation 6',
-      'Mean 17, standard deviation 36',
-    ],
-    correctAnswer: 0,
-    explanation: 'The mean transforms fully: 3(5) + 2 = 17. The added constant does not affect spread, so the standard deviation is 3(2) = 6. Adding 2 to the standard deviation as well gives the incorrect value 8.',
-  },
-  {
-    type: 'mcq',
-    topic: 'unit-5-probability-rv',
-    question: 'At a store, 20% of customers use a coupon, independently of one another. For a random sample of 10 customers, what is the probability that exactly 3 use a coupon?',
-    options: [
-      '0.002',
-      '0.201',
-      '0.322',
-      '0.879',
-    ],
-    correctAnswer: 1,
-    explanation: 'This is binomial with $n = 10$ and $p = 0.2$: $\\binom{10}{3}(0.2)^3(0.8)^7 \\approx 0.201$. The value 0.879 is $P(X \\le 3)$ and 0.322 is $P(X \\ge 3)$, which answer different questions.',
-  },
-  {
-    type: 'mcq',
-    topic: 'unit-5-probability-rv',
+    topic: 'unit-2-probability-distributions',
     question: 'A carnival game costs \\$2 to play. A player wins \\$5 with probability 0.2, wins \\$1 with probability 0.3, and otherwise wins nothing. What is the expected net gain for a player per game?',
     options: [
       '−\\$0.70',
@@ -304,23 +239,66 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 0,
     explanation: 'Expected winnings are 5(0.2) + 1(0.3) + 0(0.5) = \\$1.30, and subtracting the \\$2 cost gives an expected net gain of −\\$0.70. Reporting \\$1.30 forgets to subtract the cost of playing, and −\\$1.00 leaves out the \\$1 prize.',
   },
-  /* ---- Sampling distributions (4) ---- */
   {
     type: 'mcq',
-    topic: 'unit-6-sampling-distributions',
-    question: 'A population of commute times is strongly skewed to the right, with mean 50 minutes and standard deviation 10 minutes. Random samples of 36 commuters are selected. Which best describes the sampling distribution of the sample mean $\\bar{x}$?',
+    topic: 'unit-2-probability-distributions',
+    question: 'The heights of adult women in a population are approximately normal with mean 64 inches and standard deviation 2.5 inches. Approximately what proportion of these women are taller than 68 inches?',
     options: [
-      'Skewed to the right, with mean 50 and standard deviation 10',
-      'Approximately normal, with mean 50 and standard deviation 1.67',
-      'Skewed to the right, with mean 50 and standard deviation 1.67',
-      'Approximately normal, with mean 50 and standard deviation 10',
+      '0.0057',
+      '0.0548',
+      '0.4452',
+      '0.9452',
     ],
     correctAnswer: 1,
-    explanation: 'With $n = 36$ the central limit theorem makes the distribution of $\\bar{x}$ approximately normal, centered at 50 with standard deviation $10/\\sqrt{36} \\approx 1.67$. The skewness and standard deviation of 10 describe individual commute times, not sample means.',
+    explanation: 'z = (68 − 64)/2.5 = 1.6, and the area to the right of z = 1.6 is about 0.0548. The value 0.9452 is the area to the left, the proportion of women shorter than 68 inches.',
+  },
+  /* ---- Set: Questions on the coupon scenario (3) ---- */
+  {
+    type: 'mcq',
+    topic: 'unit-2-probability-distributions',
+    stimulus: 'At a large store, 20% of customers use a coupon at checkout, independently of one another. A random sample of 10 customers is selected, and $X$ is the number of customers in the sample who use a coupon.',
+    question: 'What is the probability that exactly 3 of the 10 customers in the sample use a coupon?',
+    options: [
+      '0.002',
+      '0.201',
+      '0.322',
+      '0.879',
+    ],
+    correctAnswer: 1,
+    explanation: '$X$ is binomial with $n = 10$ and $p = 0.2$, so $P(X = 3) = \\binom{10}{3}(0.2)^3(0.8)^7 \\approx 0.201$. The value 0.879 is $P(X \\le 3)$ and 0.322 is $P(X \\ge 3)$, which answer different questions.',
   },
   {
     type: 'mcq',
-    topic: 'unit-6-sampling-distributions',
+    topic: 'unit-2-probability-distributions',
+    stimulus: 'At a large store, 20% of customers use a coupon at checkout, independently of one another. A random sample of 10 customers is selected, and $X$ is the number of customers in the sample who use a coupon.',
+    question: 'What is the standard deviation of $X$?',
+    options: [
+      '0.13',
+      '1.26',
+      '1.60',
+      '2.00',
+    ],
+    correctAnswer: 1,
+    explanation: 'For a binomial random variable, $\\sigma_X = \\sqrt{np(1-p)} = \\sqrt{10(0.2)(0.8)} = \\sqrt{1.6} \\approx 1.26$. The value 1.60 is the variance, not the standard deviation, and 2.00 is the mean $np$.',
+  },
+  {
+    type: 'mcq',
+    topic: 'unit-2-probability-distributions',
+    stimulus: 'At a large store, 20% of customers use a coupon at checkout, independently of one another. A random sample of 10 customers is selected, and $X$ is the number of customers in the sample who use a coupon.',
+    question: 'The mean of $X$ is 2. Which of the following is a correct interpretation of this mean?',
+    options: [
+      'If many random samples of 10 customers were taken, most of the samples would contain exactly 2 coupon users.',
+      'Every random sample of 10 customers taken at this store will contain exactly 2 customers who use a coupon.',
+      'For all customers who shop at this store, the average number of coupons used per checkout is about 2.',
+      'If many random samples of 10 customers were taken, the average number of coupon users per sample would be about 2.',
+    ],
+    correctAnswer: 3,
+    explanation: 'The mean of a random variable is its long-run average value over many repetitions of the chance process, here many samples of 10 customers. Individual samples vary; in fact $P(X = 2) \\approx 0.30$, so most samples do not contain exactly 2 coupon users.',
+  },
+  /* ---- Unit 3: Inference for Categorical Data: Proportions (9) ---- */
+  {
+    type: 'mcq',
+    topic: 'unit-3-inference-proportions',
     question: 'In a large city, 30% of residents use public transit. For random samples of 100 residents, approximately what is the probability that the sample proportion who use public transit is greater than 0.36?',
     options: [
       '0.095',
@@ -333,34 +311,7 @@ export const MCQS: MCQItem[] = [
   },
   {
     type: 'mcq',
-    topic: 'unit-6-sampling-distributions',
-    question: 'A researcher plans to take a random sample to estimate a population mean. How would increasing the sample size from 50 to 200 affect the standard deviation of the sampling distribution of $\\bar{x}$?',
-    options: [
-      'It would be one-fourth as large.',
-      'It would stay the same.',
-      'It would be twice as large.',
-      'It would be cut in half.',
-    ],
-    correctAnswer: 3,
-    explanation: 'The standard deviation of $\\bar{x}$ is $\\sigma/\\sqrt{n}$, and multiplying $n$ by 4 divides it by $\\sqrt{4} = 2$. Dividing by 4 would require multiplying the sample size by 16.',
-  },
-  {
-    type: 'mcq',
-    topic: 'unit-6-sampling-distributions',
-    question: 'Two statistics are being considered to estimate a population parameter. Over many samples, statistic A has a mean equal to the parameter and a large standard deviation; statistic B has a mean well above the parameter and a small standard deviation. Which description is correct?',
-    options: [
-      'A is unbiased with low variability; B is biased with high variability.',
-      'A and B are both unbiased, because each one has a single mean value.',
-      'A is unbiased with high variability; B is biased with low variability.',
-      'A is biased with high variability; B is unbiased with low variability.',
-    ],
-    correctAnswer: 2,
-    explanation: 'A statistic is unbiased when its sampling distribution is centered at the parameter, and its variability is measured by the spread of that distribution. Statistic A is centered correctly but spread out, while B is tightly clustered around the wrong value.',
-  },
-  /* ---- Inference for proportions (6) ---- */
-  {
-    type: 'mcq',
-    topic: 'unit-7-inference-proportions',
+    topic: 'unit-3-inference-proportions',
     question: 'A random sample of voters in a district gives a 95% confidence interval of (0.45, 0.55) for the proportion of all voters in the district who support a ballot measure. Which is the correct interpretation of the interval?',
     options: [
       'Between 45% and 55% of the voters in this particular sample support the ballot measure, with 95% certainty.',
@@ -373,7 +324,7 @@ export const MCQS: MCQItem[] = [
   },
   {
     type: 'mcq',
-    topic: 'unit-7-inference-proportions',
+    topic: 'unit-3-inference-proportions',
     question: 'In a random sample of 200 voters, 110 favor Candidate A. Which is a 95% confidence interval for the proportion of all voters who favor Candidate A?',
     options: [
       '(0.481, 0.619)',
@@ -386,7 +337,7 @@ export const MCQS: MCQItem[] = [
   },
   {
     type: 'mcq',
-    topic: 'unit-7-inference-proportions',
+    topic: 'unit-3-inference-proportions',
     question: 'A coin is tested for fairness using $H_0: p = 0.5$ and $H_a: p \\neq 0.5$. In 100 flips, it lands heads 58 times. What is the value of the test statistic?',
     options: [
       'z = 0.80',
@@ -399,7 +350,7 @@ export const MCQS: MCQItem[] = [
   },
   {
     type: 'mcq',
-    topic: 'unit-7-inference-proportions',
+    topic: 'unit-3-inference-proportions',
     question: 'A company tests $H_0$: the new drug is no more effective than the current drug, against $H_a$: the new drug is more effective. Which describes a Type II error in this context?',
     options: [
       'Finding convincing evidence that the new drug is more effective when it actually is',
@@ -412,7 +363,7 @@ export const MCQS: MCQItem[] = [
   },
   {
     type: 'mcq',
-    topic: 'unit-7-inference-proportions',
+    topic: 'unit-3-inference-proportions',
     question: 'A test of $H_0: p = 0.40$ versus $H_a: p > 0.40$, where $p$ is the proportion of customers who prefer a new package design, gives a P-value of 0.03. Which is the correct interpretation of the P-value?',
     options: [
       'If more than 40% of all customers prefer the new design, there is a 0.03 probability of getting a sample proportion this large.',
@@ -425,7 +376,7 @@ export const MCQS: MCQItem[] = [
   },
   {
     type: 'mcq',
-    topic: 'unit-7-inference-proportions',
+    topic: 'unit-3-inference-proportions',
     question: 'A 95% confidence interval for $p_1 - p_2$, the difference between the proportions of adults in two states who own an electric vehicle, is $(-0.03, 0.11)$. Which conclusion is appropriate?',
     options: [
       'Because the interval contains 0, there is not convincing evidence that the two proportions differ.',
@@ -436,76 +387,9 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 0,
     explanation: 'Zero is a plausible value for the difference, so the data do not provide convincing evidence that the proportions differ. Failing to find a difference is not the same as showing the proportions are equal.',
   },
-  /* ---- Inference for means (5) ---- */
   {
     type: 'mcq',
-    topic: 'unit-8-inference-means',
-    question: 'A random sample of 36 bags of chips has mean weight $\\bar{x} = 50$ grams and standard deviation $s = 6$ grams. Using $t^* = 2.030$, which is a 95% confidence interval for the population mean weight?',
-    options: [
-      '(47.97, 52.03)',
-      '(48.04, 51.96)',
-      '(49.66, 50.34)',
-      '(37.82, 62.18)',
-    ],
-    correctAnswer: 0,
-    explanation: '$SE = s/\\sqrt{n} = 6/6 = 1$, so the interval is $50 \\pm 2.030(1) = (47.97, 52.03)$. The interval (37.82, 62.18) uses $s = 6$ as the standard error instead of dividing by $\\sqrt{n}$.',
-  },
-  {
-    type: 'mcq',
-    topic: 'unit-8-inference-means',
-    question: 'To test whether a typing course improves speed, researchers record the typing speed of each of 25 randomly selected students before and after the course. Which inference procedure is most appropriate?',
-    options: [
-      'A one-sample z-test on the mean typing speed after the course',
-      'A two-sample z-test comparing two proportions of improvement',
-      'A paired t-test on the mean of the before-after differences',
-      'A two-sample t-test comparing the before mean with the after mean',
-    ],
-    correctAnswer: 2,
-    explanation: 'Each student is measured twice, so the before and after speeds are dependent and the analysis should use the differences within each student. A two-sample t-test wrongly treats the two sets of measurements as independent samples.',
-  },
-  {
-    type: 'mcq',
-    topic: 'unit-8-inference-means',
-    question: 'A student plans to construct a one-sample t-interval for a population mean from a random sample of 15 observations. Which condition must the student check about the sample data?',
-    options: [
-      'The sample size is at least 30 so the CLT applies.',
-      'The sample data show no strong skew or outliers.',
-      'The sample includes at least 10 successes and 10 failures.',
-      'The population standard deviation is known in advance.',
-    ],
-    correctAnswer: 1,
-    explanation: 'With $n = 15$ the central limit theorem cannot be relied on, so the sample data should show no strong skewness or outliers to make a normal population plausible. The success/failure condition applies to inference for proportions, not means.',
-  },
-  {
-    type: 'mcq',
-    topic: 'unit-8-inference-means',
-    question: 'A two-sample t-test comparing the mean battery lives of two phone models gives a P-value of 0.03. At the $\\alpha = 0.05$ significance level, which conclusion is correct?',
-    options: [
-      'Reject $H_0$; there is convincing evidence that the mean battery lives of the two models differ.',
-      'Reject $H_0$; the test proves that the mean battery lives of the two models are different.',
-      'Fail to reject $H_0$; there is convincing evidence that the two mean battery lives are equal.',
-      'Fail to reject $H_0$, because the P-value of 0.03 is smaller than the significance level.',
-    ],
-    correctAnswer: 0,
-    explanation: 'Because 0.03 < 0.05, the null hypothesis is rejected and the data give convincing evidence of a difference in means. A significance test provides evidence, not proof, so claiming the difference is proven overstates the conclusion.',
-  },
-  {
-    type: 'mcq',
-    topic: 'unit-8-inference-means',
-    question: 'A researcher constructs a 95% confidence interval for a population mean from a random sample of 25 observations. Which change, with everything else held the same, would produce a narrower interval?',
-    options: [
-      'Increasing the confidence level to 99%',
-      'Increasing the sample standard deviation',
-      'Decreasing the sample size to 16',
-      'Increasing the sample size to 100',
-    ],
-    correctAnswer: 3,
-    explanation: 'The margin of error is $t^* \\cdot s/\\sqrt{n}$, so a larger sample shrinks it. Raising the confidence level increases $t^*$ and widens the interval.',
-  },
-  /* ---- Chi-square & inference for slopes (3) ---- */
-  {
-    type: 'mcq',
-    topic: 'unit-9-chi-square-slopes',
+    topic: 'unit-3-inference-proportions',
     question: 'In a chi-square test of independence on a two-way table with 3 rows and 4 columns, the "Freshmen" row total is 60, the "Pizza" column total is 50, the grand total is 200, and 22 freshmen chose pizza. What is the expected count for the Freshmen–Pizza cell?',
     options: [
       '15',
@@ -518,28 +402,176 @@ export const MCQS: MCQItem[] = [
   },
   {
     type: 'mcq',
-    topic: 'unit-9-chi-square-slopes',
+    topic: 'unit-3-inference-proportions',
     question: 'A researcher takes separate random samples of students from three high schools and records each student\'s preferred lunch option (four options). Which test should be used to determine whether the distribution of lunch preferences differs among the schools?',
     options: [
+      'One-sample z-test for a proportion',
       'Two-sample z-test for proportions',
       'Chi-square test for homogeneity',
       'Chi-square test for independence',
-      'Chi-square test of goodness of fit',
+    ],
+    correctAnswer: 2,
+    explanation: 'Separate samples from several populations compared on one categorical variable call for a test of homogeneity. A test of independence uses a single sample classified on two categorical variables.',
+  },
+  /* ---- Unit 4: Inference for Quantitative Data: Means (6) ---- */
+  {
+    type: 'mcq',
+    topic: 'unit-4-inference-means',
+    question: 'A population of commute times is strongly skewed to the right, with mean 50 minutes and standard deviation 10 minutes. Random samples of 36 commuters are selected. Which best describes the sampling distribution of the sample mean $\\bar{x}$?',
+    options: [
+      'Skewed to the right, with mean 50 and standard deviation 10',
+      'Approximately normal, with mean 50 and standard deviation 1.67',
+      'Skewed to the right, with mean 50 and standard deviation 1.67',
+      'Approximately normal, with mean 50 and standard deviation 10',
     ],
     correctAnswer: 1,
-    explanation: 'Separate samples from several populations compared on one categorical variable call for a test of homogeneity. A test of independence uses a single sample classified on two categorical variables.',
+    explanation: 'With $n = 36$ the central limit theorem makes the distribution of $\\bar{x}$ approximately normal, centered at 50 with standard deviation $10/\\sqrt{36} \\approx 1.67$. The skewness and standard deviation of 10 describe individual commute times, not sample means.',
   },
   {
     type: 'mcq',
-    topic: 'unit-9-chi-square-slopes',
-    question: 'Computer output for a least-squares regression of $y$ on $x$ from a random sample of 20 observations gives a slope of 2.4 with a standard error of 0.8. What are the test statistic and degrees of freedom for testing $H_0: \\beta = 0$?',
+    topic: 'unit-4-inference-means',
+    question: 'A random sample of 36 bags of chips has mean weight $\\bar{x} = 50$ grams and standard deviation $s = 6$ grams. Using $t^* = 2.030$, which is a 95% confidence interval for the population mean weight?',
     options: [
-      't = 3.0 with 18 degrees of freedom',
-      't = 3.0 with 19 degrees of freedom',
-      't = 1.92 with 18 degrees of freedom',
-      't = 0.33 with 18 degrees of freedom',
+      '(47.97, 52.03)',
+      '(48.04, 51.96)',
+      '(49.66, 50.34)',
+      '(37.82, 62.18)',
     ],
     correctAnswer: 0,
-    explanation: '$t = (2.4 - 0)/0.8 = 3.0$, and inference for the slope uses $n - 2 = 18$ degrees of freedom. Using $n - 1 = 19$ is the rule for a one-sample t procedure on a mean.',
+    explanation: '$SE = s/\\sqrt{n} = 6/6 = 1$, so the interval is $50 \\pm 2.030(1) = (47.97, 52.03)$. The interval (37.82, 62.18) uses $s = 6$ as the standard error instead of dividing by $\\sqrt{n}$.',
+  },
+  {
+    type: 'mcq',
+    topic: 'unit-4-inference-means',
+    question: 'To test whether a typing course improves speed, researchers record the typing speed of each of 25 randomly selected students before and after the course. Which inference procedure is most appropriate?',
+    options: [
+      'A two-sample t-test comparing the before mean with the after mean',
+      'A one-sample z-test on the mean typing speed after the course',
+      'A two-sample z-test comparing two proportions of improvement',
+      'A paired t-test on the mean of the before-after differences',
+    ],
+    correctAnswer: 3,
+    explanation: 'Each student is measured twice, so the before and after speeds are dependent and the analysis should use the differences within each student. A two-sample t-test wrongly treats the two sets of measurements as independent samples.',
+  },
+  {
+    type: 'mcq',
+    topic: 'unit-4-inference-means',
+    question: 'A student plans to construct a one-sample t-interval for a population mean from a random sample of 15 observations. Which condition must the student check about the sample data?',
+    options: [
+      'The population standard deviation is known in advance.',
+      'The sample size is at least 30 so the CLT applies.',
+      'The sample data show no strong skew or outliers.',
+      'The sample includes at least 10 successes and 10 failures.',
+    ],
+    correctAnswer: 2,
+    explanation: 'With $n = 15$ the central limit theorem cannot be relied on, so the sample data should show no strong skewness or outliers to make a normal population plausible. The success/failure condition applies to inference for proportions, not means.',
+  },
+  {
+    type: 'mcq',
+    topic: 'unit-4-inference-means',
+    question: 'A two-sample t-test comparing the mean battery lives of two phone models gives a P-value of 0.03. At the $\\alpha = 0.05$ significance level, which conclusion is correct?',
+    options: [
+      'Fail to reject $H_0$, because the P-value of 0.03 is smaller than the significance level.',
+      'Reject $H_0$; there is convincing evidence that the mean battery lives of the two models differ.',
+      'Reject $H_0$; the test proves that the mean battery lives of the two models are different.',
+      'Fail to reject $H_0$; there is convincing evidence that the two mean battery lives are equal.',
+    ],
+    correctAnswer: 1,
+    explanation: 'Because 0.03 < 0.05, the null hypothesis is rejected and the data give convincing evidence of a difference in means. A significance test provides evidence, not proof, so claiming the difference is proven overstates the conclusion.',
+  },
+  {
+    type: 'mcq',
+    topic: 'unit-4-inference-means',
+    question: 'A researcher constructs a 95% confidence interval for a population mean from a random sample of 25 observations. Which change, with everything else held the same, would produce a narrower interval?',
+    options: [
+      'Increasing the sample size to 100',
+      'Increasing the confidence level to 99%',
+      'Increasing the sample standard deviation',
+      'Decreasing the sample size to 16',
+    ],
+    correctAnswer: 0,
+    explanation: 'The margin of error is $t^* \\cdot s/\\sqrt{n}$, so a larger sample shrinks it. Raising the confidence level increases $t^*$ and widens the interval.',
+  },
+  /* ---- Unit 5: Regression Analysis (6). Set: Questions on the study-hours scenario (3) ---- */
+  {
+    type: 'mcq',
+    topic: 'unit-5-regression-analysis',
+    stimulus: 'For a random sample of 25 students in a statistics class, the number of hours spent studying for a 50-point test, $x$, ranged from 1 to 10 hours. The least-squares regression line for predicting test score $y$ (points) from hours studied is $\\hat{y} = 12.5 + 3.2x$, with $r = 0.80$ and $r^2 = 0.64$.',
+    question: 'Which of the following is the correct interpretation of the slope of the regression line?',
+    options: [
+      'For each additional hour studied, a student\'s test score increases by exactly 3.2 points.',
+      'A student who does not study at all is predicted to score about 3.2 points on the test.',
+      'For each additional point on the test, the predicted hours studied increase by about 3.2.',
+      'For each additional hour studied, the predicted score increases by about 3.2 points.',
+    ],
+    correctAnswer: 3,
+    explanation: 'The slope is the predicted change in $y$ for a one-unit increase in $x$, so it describes predicted (average) scores, not every student\'s exact score. Claiming an exact 3.2-point increase treats the model as deterministic.',
+  },
+  {
+    type: 'mcq',
+    topic: 'unit-5-regression-analysis',
+    stimulus: 'For a random sample of 25 students in a statistics class, the number of hours spent studying for a 50-point test, $x$, ranged from 1 to 10 hours. The least-squares regression line for predicting test score $y$ (points) from hours studied is $\\hat{y} = 12.5 + 3.2x$, with $r = 0.80$ and $r^2 = 0.64$.',
+    question: 'Which of the following is the correct interpretation of the coefficient of determination?',
+    options: [
+      'About 64% of the variation in hours studied is explained by the linear relationship with test scores.',
+      'About 64% of the students\' test scores are predicted exactly by the least-squares regression line.',
+      'About 64% of the variation in test scores is explained by the linear relationship with hours studied.',
+      'About 80% of the variation in test scores is explained by the linear relationship with hours studied.',
+    ],
+    correctAnswer: 2,
+    explanation: 'The coefficient of determination, $r^2 = 0.64$, is the proportion of the variation in the response variable (test score) explained by the linear relationship with the explanatory variable (hours studied). The value 0.80 is the correlation $r$, not $r^2$.',
+  },
+  {
+    type: 'mcq',
+    topic: 'unit-5-regression-analysis',
+    stimulus: 'For a random sample of 25 students in a statistics class, the number of hours spent studying for a 50-point test, $x$, ranged from 1 to 10 hours. The least-squares regression line for predicting test score $y$ (points) from hours studied is $\\hat{y} = 12.5 + 3.2x$, with $r = 0.80$ and $r^2 = 0.64$.',
+    question: 'A student in the sample who studied 5 hours scored 31 points. Which statement about this student is correct?',
+    options: [
+      'The residual is −2.5, so the line underestimated her score.',
+      'The residual is 2.5, so the line underestimated her score.',
+      'The residual is −2.5, so the line overestimated her score.',
+      'The residual is 2.5, so the line overestimated her score.',
+    ],
+    correctAnswer: 1,
+    explanation: 'The predicted score is 12.5 + 3.2(5) = 28.5, and the residual is actual − predicted = 31 − 28.5 = 2.5. A positive residual means the actual value is above the line, so the line underestimated her score.',
+  },
+  {
+    type: 'mcq',
+    topic: 'unit-5-regression-analysis',
+    question: 'For a sample of 40 used cars, a scatterplot of price versus age has correlation $r = -0.94$. The residual plot for the least-squares regression line shows a clear curved pattern. Which conclusion is most appropriate?',
+    options: [
+      'A linear model is not the most appropriate model, because the residuals show a systematic curvature.',
+      'A linear model is appropriate, because the correlation of −0.94 is very close to −1 in strength.',
+      'A linear model is appropriate, because the residual plot shows points both above and below 0.',
+      'A linear model is not appropriate, because the negative correlation means that there is no association.',
+    ],
+    correctAnswer: 0,
+    explanation: 'Curvature in a residual plot means the linear model misses the true form of the association, so another model would fit better. A correlation close to −1 does not by itself show that a linear model is appropriate; residuals fall both above and below 0 for every least-squares line, so that fact says nothing about fit.',
+  },
+  {
+    type: 'mcq',
+    topic: 'unit-5-regression-analysis',
+    question: 'For a sample of adult men with heights from 64 to 76 inches, the least-squares regression line for predicting weight $y$ (pounds) from height $x$ (inches) is $\\hat{y} = -230 + 5.8x$. Which statement about the $y$-intercept is correct?',
+    options: [
+      'It is the predicted weight for a man of average height, so it describes the typical weight in this sample.',
+      'It means that a man\'s predicted weight decreases by 230 pounds for each additional inch of height in this sample.',
+      'It shows that the linear model is not appropriate, because a negative intercept means the correlation is negative.',
+      'It has no sensible meaning here, because a height of 0 is far outside the range of data used to build the model.',
+    ],
+    correctAnswer: 3,
+    explanation: 'The intercept is the predicted weight when height is 0, which is an extrapolation far outside the 64-to-76-inch heights in the data, and a negative weight is impossible. The change in predicted weight per inch is the slope, 5.8 pounds, not the intercept, and the sign of the intercept says nothing about the direction of the association.',
+  },
+  {
+    type: 'mcq',
+    topic: 'unit-5-regression-analysis',
+    question: 'For a sample of houses, the correlation between living area (square feet) and selling price (dollars) is $r = 0.72$. If every selling price were converted from dollars to thousands of dollars, what would happen to the correlation?',
+    options: [
+      'It would move closer to 1, because the prices would be closer in size to the living areas.',
+      'It would move closer to 0, because the prices would vary much less than they did before.',
+      'It would stay 0.72, because $r$ does not depend on the units in which a variable is measured.',
+      'It would change, although the slope of the least-squares regression line would stay the same.',
+    ],
+    correctAnswer: 2,
+    explanation: 'The correlation coefficient is unit-free, so rescaling either variable by a positive constant leaves $r$ unchanged at 0.72. Dividing the prices by 1,000 shrinks their spread, but each price\'s z-score is unchanged, so the strength of the linear association is the same.',
   },
 ]

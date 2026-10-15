@@ -7,7 +7,9 @@ import type { SAQItem, LEQItem } from '@/components/FullLengthPracticeExam'
  *   FRQ 2 — Quantitative Analysis (4 parts: A, B, C, D)
  *   FRQ 3 — SCOTUS Comparison (3 parts: A, B, C; 4 points, part B is worth 2)
  *   FRQ 4 — Argument Essay (one prompt; the student chooses evidence from a
- *           list of required foundational documents; 6 points)
+ *           list of required foundational documents relevant to the prompt;
+ *           6 points). Federalist No. 39 (added in the 2026–27 CED) fits this
+ *           federalism prompt; the other new documents are used in the MCQs.
  *
  * Points match the real exam: 3 / 4 / 4 / 6. frqPossible() sums rubric
  * entries, so each rubric array carries exactly that many points.
@@ -216,6 +218,7 @@ export const ARGUMENT_ESSAY: LEQItem[] = [
           'Use at least one piece of evidence from one of the following foundational documents:\n' +
           '  • Brutus No. 1\n' +
           '  • Federalist No. 10\n' +
+          '  • Federalist No. 39\n' +
           '  • Federalist No. 51\n\n' +
           'In your response, you should do the following:\n' +
           '  • Respond to the prompt with a defensible claim or thesis that establishes a line of reasoning.\n' +
@@ -243,7 +246,7 @@ export const ARGUMENT_ESSAY: LEQItem[] = [
         id: 'evidence-2',
         label: 'Evidence, 2nd pt — Foundational-document evidence that supports the claim',
         description:
-          'Uses one piece of specific and relevant evidence to SUPPORT the claim or thesis, and that evidence comes from one of the listed foundational documents (Brutus No. 1, Federalist No. 10, or Federalist No. 51). Merely mentioning a document without using it to support the claim does not earn this point.',
+          'Uses one piece of specific and relevant evidence to SUPPORT the claim or thesis, and that evidence comes from one of the listed foundational documents (Brutus No. 1, Federalist No. 10, Federalist No. 39 or Federalist No. 51). Merely mentioning a document without using it to support the claim does not earn this point.',
       },
       {
         id: 'evidence-3',
