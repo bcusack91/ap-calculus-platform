@@ -5,168 +5,200 @@ export const csaArraylistUsagePart7Data = {
       id: 'csaarray7-intro',
       type: 'text' as const,
       content: `
-# 💻 ArrayList Algorithms
+# 📋 ArrayList Algorithms
 
-**Part 7 of 7 — AP Review**
+**Part 7 of 7 — Synthesis Review**
 
-Comprehensive review of ArrayList Algorithms for the AP exam. Focus on key concepts, common question types, and exam strategies.
+---
 
-### Key Concepts
+This part ties the ArrayList algorithms together (CED Topic 4.10). Use the table as a checklist, then test yourself on mixed questions.
 
-| Concept | Description |
-|---------|-------------|
-| **Key vocabulary** | Essential terms and definitions for ArrayList Algorithms |
-| **Common question types** | The most frequent ways ArrayList Algorithms is tested on the AP exam |
-| **Exam strategy** | Approaches for answering ArrayList Algorithms questions effectively |
+### The Topic on One Page
+
+| Idea | Key fact | Typical trap |
+|---|---|---|
+| Removing while traversing (Part 1) | go backward, or do not advance after a removal | skipping the element that slides into i |
+| Searching (Part 2) | no search method on the Quick Reference: write the loop | returning -1 inside the loop |
+| Any / all (Part 2) | early return for the deciding case, default after the loop | an else branch that returns on the first pass |
+| Min and max (Part 2) | keep an index or an object, start from the first element | starting at 0 for values that may be negative |
+| Inserting (Part 3) | skip past an inserted element | a loop that keeps landing on what it inserted |
+| Moving (Part 3) | \`remove\` returns the element it removed | losing the order when moving backward |
+| New lists (Part 4) | create once before the loop, return after it | returning the parameter and calling it a copy |
+| Two lists (Part 4) | one index for parallel lists; guard each get | \`&&\` when the loop should run while either list has elements |
+| Data analysis (Part 5) | getters, equals, and changes made to the field | \`==\` on Strings, private fields, int averages |
+      `
+    },
+    {
+      id: 'csaarray7-worked',
+      type: 'text' as const,
+      content: `
+## Worked Example: Putting It Together
+
+\`\`\`java
+ArrayList<Integer> nums = new ArrayList<Integer>();
+int[] raw = {4, 9, 4, 1};
+for (int r : raw) {
+    insertSorted(nums, r);            // from Part 3
+}
+int i = 1;
+while (i < nums.size()) {
+    int here = nums.get(i);
+    int before = nums.get(i - 1);
+    if (here == before) {
+        nums.remove(i);
+    } else {
+        i++;
+    }
+}
+nums.add(nums.remove(0));
+System.out.println(nums + " " + countIncreases(nums));   // countIncreases from Part 2
+\`\`\`
+
+| Step | What happens | nums afterward |
+|---|---|---|
+| insert 4, 9, 4, 1 | each value goes in sorted position; the second 4 goes before the first | [1, 4, 4, 9] |
+| remove repeats | the second 4 equals the one before it and is removed | [1, 4, 9] |
+| rotate left | \`remove(0)\` returns 1, and \`add\` appends it | [4, 9, 1] |
+| countIncreases | 4 to 9 is an increase; 9 to 1 is not | returns 1 |
+
+**Output**
+\`\`\`
+[4, 9, 1] 1
+\`\`\`
+
+Unboxing each value into an int before comparing makes \`==\` compare values. Comparing \`nums.get(i) == nums.get(i - 1)\` directly would compare two Integer references instead.
       `
     },
     {
       id: 'csaarray7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Mixed Review 1** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'The most important exam strategy for ArrayList Algorithms is:',
+            question: 'In the worked example, the raw values are added with nums.add(r) instead of insertSorted. What does nums hold right after the repeat-removal loop?',
             options: [
-              'Guess randomly',
-              'Know key terms, use specific examples, and connect to course themes',
-              'Skip these questions',
-              'Only memorize definitions'
+              '[4, 9, 4, 1]',
+              '[4, 9, 1]',
+              '[1, 4, 9]',
+              '[9, 4, 1]'
             ],
-            correctAnswer: 1,
-            explanation: 'Effective exam strategy combines vocabulary knowledge, specific examples, and connections to broader themes.'
+            correctAnswer: 0,
+            explanation: 'Without sorting, the two 4s are not next to each other, and the loop only removes a value equal to the one just before it. So nothing is removed.'
           },
           {
-            question: 'AP multiple-choice questions about ArrayList Algorithms often test:',
+            question: 'Which task needs a backward loop or careful index control?',
             options: [
-              'Random trivia',
-              'Application of concepts to new scenarios',
-              'Spelling',
-              'Personal opinions'
+              'Removing every word shorter than 3 letters',
+              'Counting the words shorter than 3 letters',
+              'Building a list of the short words',
+              'Finding the first short word'
             ],
-            correctAnswer: 1,
-            explanation: 'AP multiple-choice questions typically present a new scenario and ask students to apply concepts rather than just recall facts.'
+            correctAnswer: 0,
+            explanation: 'Only removal changes the size and shifts the later elements during the loop. Counting, building a separate list, and searching all leave the list being traversed unchanged.'
+          },
+          {
+            question: 'For the lists of String a = [A, B] and b = [c], what does reversed(interleave(a, b)) return?',
+            options: [
+              '[B, c, A]',
+              '[A, c, B]',
+              '[c, B, A]',
+              '[B, A, c]'
+            ],
+            correctAnswer: 0,
+            explanation: 'interleave takes elements in turn, giving [A, c, B], and then reversed returns them in the opposite order, [B, c, A].'
           }
         ]
       }
     },
     {
-      id: 'csaarray7-content',
+      id: 'csaarray7-choosing',
       type: 'text' as const,
       content: `
-## AP Review — Deeper Dive
+## Choosing the Algorithm
 
-### Key vocabulary
-Essential terms and definitions for ArrayList Algorithms. Understanding this concept is essential for mastering ArrayList Algorithms in AP Computer Science A.
-
-### Common question types
-The most frequent ways ArrayList Algorithms is tested on the AP exam. This builds on the previous concept and connects to broader themes in the course.
-
-### Exam strategy
-Approaches for answering ArrayList Algorithms questions effectively. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+| The task says... | Pattern | Loop |
+|---|---|---|
+| "return the number of..." | count | enhanced for, counter returned after the loop |
+| "return the index of the first..." | search | indexed forward, return i inside, -1 after |
+| "return true if any / all..." | any / all | early return inside, the default after |
+| "remove all..." | removal | indexed backward, or a while loop that advances only when nothing is removed |
+| "insert ... in order" | sorted insert | while loop to find the place, then \`add(i, value)\` |
+| "return a new list of..." | build | create the list before the loop, add, return after |
+| "for each pair of neighbors..." | neighbors | indexed from 1, using \`get(i - 1)\` and \`get(i)\` |
+| "for the elements at the same index in two lists..." | parallel | one index, stopping at the end of the shorter list |
       `
     },
     {
-      id: 'csaarray7-input',
-      type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
-
-1) What term refers to essential terms and definitions for ArrayList Algorithms?
-
-2) What concept describes the most frequent ways ArrayList Algorithms is tested on the AP exam?
-
-3) Name the term for approaches for answering ArrayList Algorithms questions effectively.
-
-Use the exact term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['Key vocabulary', 'Common question types', 'Exam strategy'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: E',
-        explanation: 'Expected answers: Key vocabulary (Essential terms and definitions for ArrayList Algorithms), Common question types (The most frequent ways ArrayList Algorithms is tested on the AP exam), and Exam strategy (Approaches for answering ArrayList Algorithms questions effectively).'
-      }
-    },
-    {
-      id: 'csaarray7-dropdown',
+      id: 'csaarray7-quick',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Quick Fire** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Essential terms and definitions for ArrayList Algorithms is called ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'None of these']
+            label: 'To find the last index of a match, use a ___ traversal that returns at the first match it meets',
+            options: ['backward', 'forward', 'nested', 'enhanced']
           },
           {
-            label: 'The most frequent ways ArrayList Algorithms is tested on the AP exam describes ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'All of these']
+            label: 'A method that returns a new list should create that list ___',
+            options: ['once, before the loop', 'inside the loop body', 'after the loop ends', 'in the return statement']
           },
           {
-            label: 'Approaches for answering ArrayList Algorithms questions effectively is known as ___',
-            options: ['Exam strategy', 'Key vocabulary', 'Common question types', 'None of these']
+            label: 'In a forward loop, right after nums.remove(i), the next unchecked element is at index ___',
+            options: ['i', 'i + 1', 'i - 1', '0']
           }
         ],
-        correctAnswers: ['Key vocabulary', 'Common question types', 'Exam strategy'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key vocabulary — Essential terms and definitions for ArrayList Algorithms. Common question types — The most frequent ways ArrayList Algorithms is tested on the AP exam. Exam strategy — Approaches for answering ArrayList Algorithms questions effectively.'
+        correctAnswers: ['backward', 'once, before the loop', 'i'],
+        hint1: 'The first match met from the end is the last one.',
+        hint2: 'It must exist before anything is added and survive after the loop.',
+        hint3: 'Everything after the removed element moves down one index.',
+        explanation: 'A backward search meets the last match first. The result list is created once before the loop. After a removal, the next element has slid into index i.'
       }
     },
     {
-      id: 'csaarray7-strategy',
-      type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
-
-### Misconceptions to Avoid
-- Don\'t confuse **Key vocabulary** with **Common question types** — while related, they address different aspects of ArrayList Algorithms.
-- **Exam strategy** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about ap review, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect ap review to broader themes in AP Computer Science A for higher scores.
-      `
-    },
-    {
-      id: 'csaarray7-applied',
+      id: 'csaarray7-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**Mixed Review 2** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'On the AP exam, a question presents a scenario you have never seen before about ArrayList Algorithms. You should:',
+            question: 'Which method body returns true exactly when at least one element of nums is negative?',
             options: [
-              'Panic',
-              'Apply the key concepts and processes you learned to analyze the new scenario',
-              'Skip it',
-              'Write about something else'
+              'for (int n : nums) { if (n < 0) { return true; } } return false;',
+              'for (int n : nums) { if (n < 0) { return true; } else { return false; } } return false;',
+              'for (int n : nums) { if (n >= 0) { return false; } } return true;',
+              'for (int n : nums) { if (n < 0) { return false; } } return true;'
             ],
-            correctAnswer: 1,
-            explanation: 'The AP exam tests application — use your knowledge of concepts and processes to analyze unfamiliar scenarios.'
+            correctAnswer: 0,
+            explanation: 'An "any" check returns true at the first match and false only after the whole list has been checked. The version with else decides after one element, and the other two answer different questions.'
           },
           {
-            question: 'For free-response questions on ArrayList Algorithms, the most common mistake is:',
+            question: 'list holds [2, 2, 2]. A forward loop removes every element equal to 2 by calling remove(i) and never adjusting i. What does list hold afterward?',
             options: [
-              'Writing too clearly',
-              'Being too vague and not using specific examples or key vocabulary',
-              'Showing too much knowledge',
-              'Answering the question directly'
+              '[2]',
+              '[]',
+              '[2, 2]',
+              '[2, 2, 2]'
             ],
-            correctAnswer: 1,
-            explanation: 'The most common FRQ mistake is vagueness — AP graders look for specific terms, definitions, and concrete examples.'
+            correctAnswer: 0,
+            explanation: 'Removing at index 0 slides a 2 into index 0, and i moves on to 1, where the next 2 is removed. Then i is 2, which is not less than the size 1, so one 2 is left.'
+          },
+          {
+            question: 'Which of these can be found from the six RainLog readings?',
+            options: [
+              'The station with the most rain over the three days',
+              'The cause of the heavy rain at North on day 2',
+              'The amount of rain at North at noon on day 2',
+              'The amount of rain at North next week'
+            ],
+            correctAnswer: 0,
+            explanation: 'Each reading is a daily total for a station, so totals by station can be compared. The data says nothing about causes, times within a day, or the future.'
           }
         ]
       }

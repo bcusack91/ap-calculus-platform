@@ -91,7 +91,7 @@ public boolean contains(int[][] matrix, int target) {
               '12'
             ],
             correctAnswer: 3,
-            explanation: 'In the worst case (value not found), every element is checked. A 3x4 array has 3 x 4 = 12 elements. Linear search on a 2D array is O(rows x cols).'
+            explanation: 'In the worst case (value not found), every element is checked. A 3x4 array has 3 x 4 = 12 elements. A search that finds nothing checks all rows x cols elements.'
           }
         ]
       }

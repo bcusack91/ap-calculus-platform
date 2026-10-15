@@ -5,19 +5,78 @@ export const csaArraylistPart4Data = {
       id: 'csaarray4-intro',
       type: 'text' as const,
       content: `
-# 💻 ArrayList
+# 📋 ArrayList
 
-**Part 4 of 7 — Connections & Interactions**
+**Part 4 of 7 — Traversing an ArrayList**
 
-ArrayList connects to other topics in AP Computer Science A. Understanding these connections reveals how different processes interact.
+---
 
-### Key Concepts
+A traversal visits the elements of a list one at a time (CED Topic 4.9). The loops are the ones you already know from arrays, with \`size()\` in place of \`length\` and \`get(i)\` in place of \`arr[i]\`. What is new is that a list can change size while you walk through it, and that changes which loop is safe.
 
-| Concept | Description |
-|---------|-------------|
-| **Interconnection** | How ArrayList links to other course topics |
-| **Scale interaction** | How ArrayList operates differently at local, national, and global scales |
-| **Feedback loop** | How outcomes of ArrayList can reinforce or modify the original process |
+| Loop | Index available? | Can replace elements? | Can add or remove? |
+|---|---|---|---|
+| indexed \`for\` with \`i < list.size()\` | yes | yes, with \`set\` | yes, if the index is adjusted |
+| \`while\` with an index you manage | yes | yes, with \`set\` | yes, if the index is adjusted |
+| enhanced \`for\` | no | no | no: it can throw a \`ConcurrentModificationException\` |
+
+> 🔑 **Key Concept:** Use an enhanced for loop only to **read** a list. Use an indexed loop whenever the body calls \`set\`, \`add\` or \`remove\`.
+      `
+    },
+    {
+      id: 'csaarray4-indexed',
+      type: 'text' as const,
+      content: `
+## Indexed Traversals
+
+**Forward, replacing as you go**
+
+\`\`\`java
+// words holds [sun, moonlight, sky, rainbow]
+int longCount = 0;
+for (int i = 0; i < words.size(); i++) {
+    if (words.get(i).length() > 4) {
+        longCount++;
+        words.set(i, words.get(i).substring(0, 4));
+    }
+}
+// longCount is 2; words is [sun, moon, sky, rain]
+\`\`\`
+
+\`set\` replaces an element without changing the size, so the loop runs exactly once per element.
+
+**Backward**
+
+\`\`\`java
+for (int i = words.size() - 1; i >= 0; i--) {
+    System.out.print(words.get(i) + " ");
+}
+// prints: rain sky moon sun
+\`\`\`
+
+The first index is \`size() - 1\`, the last valid index, just as \`length - 1\` is for an array.
+
+## The Test Calls size() Every Time
+
+The condition \`i < list.size()\` is evaluated before **every** pass, so it sees the current size. If the body adds to the end, the target keeps moving:
+
+\`\`\`java
+// v holds [3, 4]
+for (int i = 0; i < v.size(); i++) {
+    if (v.get(i) % 2 == 0) {
+        v.add(v.get(i) + 2);
+    }
+}
+\`\`\`
+
+| i | v.get(i) | Action | v afterward |
+|---|---|---|---|
+| 0 | 3 | odd: nothing | [3, 4] |
+| 1 | 4 | add 6 | [3, 4, 6] |
+| 2 | 6 | add 8 | [3, 4, 6, 8] |
+| 3 | 8 | add 10 | [3, 4, 6, 8, 10] |
+| ... | | every new element is even | the loop never ends |
+
+The fix is to save the original size before the loop, \`int n = v.size();\`, and test \`i < n\`. Then the loop visits only the elements that were there at the start, and v ends as [3, 4, 6].
       `
     },
     {
@@ -25,148 +84,224 @@ ArrayList connects to other topics in AP Computer Science A. Understanding these
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
+
+**Segment A** (nums holds [6, 3, 8, 5])
+\`\`\`java
+for (int i = 0; i < nums.size(); i++) {
+    if (nums.get(i) % 2 == 0) {
+        nums.set(i, nums.get(i) / 2);
+    } else {
+        nums.set(i, nums.get(i) + 1);
+    }
+}
+\`\`\`
+
+**Segment B** (w holds [ant, bee, cat, dog])
+\`\`\`java
+String out = "";
+for (int i = w.size() - 1; i > 0; i -= 2) {
+    out += w.get(i);
+}
+\`\`\`
+
+**Segment C** (v holds [2, 7])
+\`\`\`java
+for (int i = 0; i < v.size(); i++) {
+    if (v.get(i) < 5) {
+        v.add(v.get(i) + 5);
+    }
+}
+\`\`\`
       `,
       exercise: {
         questions: [
           {
-            question: 'ArrayList connects to other course topics through:',
+            question: 'What does nums hold after Segment A runs?',
             options: [
-              'No connections exist',
-              'Shared processes, causes, and outcomes',
-              'Random coincidence',
-              'Administrative categories only'
+              '[3, 4, 4, 6]',
+              '[3, 3, 4, 5]',
+              '[7, 1, 9, 2]',
+              '[3, 1, 4, 2]'
             ],
-            correctAnswer: 1,
-            explanation: 'Topics in AP Computer Science A are interconnected through shared processes, causes, and outcomes.'
+            correctAnswer: 0,
+            explanation: 'Each even element is halved and each odd element goes up by 1: 6 becomes 3, 3 becomes 4, 8 becomes 4 and 5 becomes 6. Every element is visited once because set never changes the size.'
           },
           {
-            question: 'A feedback loop in ArrayList means:',
+            question: 'What is the value of out after Segment B runs?',
             options: [
-              'The process stops',
-              'Outcomes reinforce or modify the original process',
-              'Nothing changes',
-              'The exam skips this topic'
+              'dogbee',
+              'catant',
+              'dogcatbee',
+              'beedog'
             ],
-            correctAnswer: 1,
-            explanation: 'Feedback loops occur when outcomes influence the conditions that created them — either reinforcing or moderating the original process.'
+            correctAnswer: 0,
+            explanation: 'i starts at 3 and goes down by 2, so the body runs for i = 3 and i = 1, appending "dog" and then "bee". At i = -1 the test i > 0 is false.'
+          },
+          {
+            question: 'What happens when Segment C runs?',
+            options: [
+              'v ends as [2, 7, 7]',
+              'v ends as [2, 7]',
+              'v ends as [2, 7, 7, 12]',
+              'The loop never ends'
+            ],
+            correctAnswer: 0,
+            explanation: 'Only the 2 is less than 5, so one element, 7, is added. The new 7 is visited at i = 2, but it is not less than 5, so the loop stops after three passes.'
           }
         ]
       }
     },
     {
-      id: 'csaarray4-content',
+      id: 'csaarray4-enhanced',
       type: 'text' as const,
       content: `
-## Connections & Interactions — Deeper Dive
+## Enhanced for Loops Read the List
 
-### Interconnection
-How ArrayList links to other course topics. Understanding this concept is essential for mastering ArrayList in AP Computer Science A.
+\`\`\`java
+// nums holds [5, 8, 2]
+int total = 0;
+for (int n : nums) {      // each Integer is unboxed into n
+    total += n;
+}
+for (int n : nums) {
+    n = n * 10;           // changes only the copy in n
+}
+System.out.println(total + " " + nums);   // prints 15 [5, 8, 2]
+\`\`\`
 
-### Scale interaction
-How ArrayList operates differently at local, national, and global scales. This builds on the previous concept and connects to broader themes in the course.
+- The loop variable may be \`int\` (each element is unboxed) or \`Integer\`. Either way it is a **copy**: assigning to it never changes the list.
+- There is no index, so the loop cannot call \`set(i, ...)\`, look at a neighbor, or skip elements.
 
-### Feedback loop
-How outcomes of ArrayList can reinforce or modify the original process. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+## Changing the Size Inside an Enhanced for Loop
+
+\`\`\`java
+// words holds [sun, moon, sky, rain]
+for (String w : words) {
+    if (w.length() == 3) {
+        words.add(w + "s");    // changes the size during the loop
+    }
+}
+// throws a ConcurrentModificationException
+\`\`\`
+
+An enhanced for loop over an ArrayList may not add or remove elements. Doing so can throw a \`ConcurrentModificationException\`; on the AP exam, treat it as an error. To add or remove while traversing, use an indexed loop and manage the index yourself.
+
+## A while Loop With a Guard
+
+\`\`\`java
+// words holds [sun, moon, sky, rain]
+int i = 0;
+while (i < words.size() && words.get(i).length() <= 3) {
+    i++;
+}
+// i is 1: the index of the first word longer than 3 letters
+\`\`\`
+
+If no word is longer than 3 letters, \`i\` reaches \`words.size()\`. The \`&&\` short-circuits at that point, so \`words.get(i)\` is never called with an index that is out of bounds. Reversing the two tests would throw an \`IndexOutOfBoundsException\` in that case.
       `
     },
     {
-      id: 'csaarray4-input',
-      type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
-
-1) What term refers to how ArrayList links to other course topics?
-
-2) What concept describes how ArrayList operates differently at local, national, and global scales?
-
-3) Name the term for how outcomes of ArrayList can reinforce or modify the original process.
-
-Use the exact term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['Interconnection', 'Scale interaction', 'Feedback loop'],
-        hint1: 'Starts with: I',
-        hint2: 'Starts with: S',
-        hint3: 'Starts with: F',
-        explanation: 'Expected answers: Interconnection (How ArrayList links to other course topics), Scale interaction (How ArrayList operates differently at local, national, and global scales), and Feedback loop (How outcomes of ArrayList can reinforce or modify the original process).'
-      }
-    },
-    {
-      id: 'csaarray4-dropdown',
+      id: 'csaarray4-choose',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Pick the Right Loop** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'How ArrayList links to other course topics is called ___',
-            options: ['Interconnection', 'Scale interaction', 'Feedback loop', 'None of these']
+            label: 'In for (int v : nums), the statement v = 0; changes ___',
+            options: ['nothing in the list', 'every element to 0', 'the current element', 'only the first element']
           },
           {
-            label: 'How ArrayList operates differently at local, national, and global scales describes ___',
-            options: ['Interconnection', 'Scale interaction', 'Feedback loop', 'All of these']
+            label: 'Calling nums.add(1) inside an enhanced for loop over nums ___',
+            options: ['throws an exception', 'adds after the loop', 'is ignored by the loop', 'does not compile']
           },
           {
-            label: 'How outcomes of ArrayList can reinforce or modify the original process is known as ___',
-            options: ['Feedback loop', 'Interconnection', 'Scale interaction', 'None of these']
+            label: 'To replace each element of a list with its square, use ___',
+            options: ['an indexed for loop with set', 'an enhanced for loop with set', 'an enhanced for loop with add', 'an indexed for loop with add']
           }
         ],
-        correctAnswers: ['Interconnection', 'Scale interaction', 'Feedback loop'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Interconnection — How ArrayList links to other course topics. Scale interaction — How ArrayList operates differently at local, national, and global scales. Feedback loop — How outcomes of ArrayList can reinforce or modify the original process.'
+        correctAnswers: ['nothing in the list', 'throws an exception', 'an indexed for loop with set'],
+        hint1: 'The loop variable is a copy of the element.',
+        hint2: 'Changing the size of a list inside an enhanced for loop over it is not allowed.',
+        hint3: 'Replacing an element needs its index, and set keeps the size the same.',
+        explanation: 'Assigning the loop variable changes only the copy. Adding to the list inside its own enhanced for loop throws a ConcurrentModificationException. Replacing elements needs an index, so an indexed loop with set is the tool.'
       }
     },
     {
-      id: 'csaarray4-strategy',
+      id: 'csaarray4-twolists',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## Traversing Two Lists in Step
 
-### Misconceptions to Avoid
-- Don\'t confuse **Interconnection** with **Scale interaction** — while related, they address different aspects of ArrayList.
-- **Feedback loop** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
+\`\`\`java
+// x holds [1, 2, 3, 4]; y holds [10, 20]
+ArrayList<Integer> sums = new ArrayList<Integer>();
+for (int i = 0; i < x.size() && i < y.size(); i++) {
+    sums.add(x.get(i) + y.get(i));
+}
+// sums is [11, 22]
+\`\`\`
 
-### AP Strategy Moves
-- When you see questions about connections & interactions, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect connections & interactions to broader themes in AP Computer Science A for higher scores.
+The loop stops at the end of the **shorter** list, because \`x.get(i)\` and \`y.get(i)\` both have to be valid. Testing only \`i < x.size()\` would call \`y.get(2)\` and throw.
+
+## Visiting Only the Original Elements
+
+\`\`\`java
+// v holds [1, 2, 3]
+int n = v.size();
+for (int i = 0; i < n; i++) {
+    v.add(v.get(i) * 10);
+}
+// v is [1, 2, 3, 10, 20, 30]
+\`\`\`
+
+Saving the size first makes the loop run 3 times even though the list doubles. The body reads \`v.get(i)\` only for i = 0, 1 and 2, the original elements.
+
+> 📝 **AP Connection:** Multiple-choice items often ask how many times a loop body runs or what a list holds after a loop that adds to it. Check whether the header uses a saved size or calls \`size()\` each time.
       `
     },
     {
-      id: 'csaarray4-applied',
+      id: 'csaarray4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**Apply It** 🎯
+
+**Segment D** (a holds [red, blue, green]; b holds [red, teal])
+\`\`\`java
+int same = 0;
+int i = 0;
+while (i < a.size() && i < b.size()) {
+    if (a.get(i).equals(b.get(i))) {
+        same++;
+    }
+    i++;
+}
+\`\`\`
       `,
       exercise: {
         questions: [
           {
-            question: 'On the AP exam, demonstrating connections between ArrayList and other units earns higher scores because:',
+            question: 'What are the values of same and i after Segment D runs?',
             options: [
-              'The exam is random',
-              'It shows deeper understanding and analytical thinking',
-              'It wastes time',
-              'Connections are never tested'
+              'same is 1 and i is 2',
+              'same is 1 and i is 3',
+              'same is 2 and i is 2',
+              'same is 0 and i is 2'
             ],
-            correctAnswer: 1,
-            explanation: 'The AP exam rewards students who can connect concepts across units — demonstrating synthesis and analytical depth.'
+            correctAnswer: 0,
+            explanation: 'The loop stops when i reaches 2, the size of the shorter list b. Only index 0 holds equal Strings, red and red, so same is 1.'
           },
           {
-            question: 'If ArrayList produces outcomes that further intensify the original process, this is:',
+            question: 'In the example that visits only the original elements, the header is changed to i < v.size(). What is the result?',
             options: [
-              'A negative feedback loop',
-              'A positive feedback loop — outcomes reinforce the process',
-              'An unrelated event',
-              'A one-time occurrence'
+              'The loop keeps adding to v and never ends',
+              'v ends as [1, 2, 3, 10, 20, 30]',
+              'v ends as [10, 20, 30]',
+              'It throws an IndexOutOfBoundsException'
             ],
-            correctAnswer: 1,
-            explanation: 'A positive feedback loop intensifies: the outcome amplifies the original process, creating a cycle.'
+            correctAnswer: 0,
+            explanation: 'Each pass adds one element, so v.size() grows by 1 every time i does, and i never catches up. The saved size is what made the loop stop after 3 passes.'
           }
         ]
       }

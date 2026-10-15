@@ -139,13 +139,21 @@ public ArrayList<Integer> getEvens(ArrayList<Integer> list) {
 public ArrayList<String> removeDups(ArrayList<String> list) {
     ArrayList<String> result = new ArrayList<>();
     for (String s : list) {
-        if (!result.contains(s)) {
+        boolean seen = false;
+        for (String r : result) {
+            if (r.equals(s)) {
+                seen = true;
+            }
+        }
+        if (!seen) {
             result.add(s);
         }
     }
     return result;
 }
 \`\`\`
+
+There is no membership method on the AP Java Quick Reference, so the inner loop does the search by hand: it walks the result list and sets a flag when it finds an equal String.
       `
     },
     {
@@ -158,15 +166,15 @@ public ArrayList<String> removeDups(ArrayList<String> list) {
 
 2) The safest way to remove elements while traversing is to iterate _______.
 
-3) To check if an ArrayList contains a specific value, use the _______ method.
+3) To test whether two String elements of a list hold the same characters, call the _______ method, not ==.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['decrement', 'backward', 'contains'],
+        correctAnswers: ['decrement', 'backward', 'equals'],
         hint1: 'i-- after removal.',
         hint2: 'Start from the end and go down.',
-        hint3: 'Returns true if the value is in the list.',
-        explanation: 'Decrement i after removal. Backward traversal is safest. contains() checks for membership.'
+        hint3: 'The String method that compares characters rather than references.',
+        explanation: 'Decrement i after removal so the shifted element is checked. Backward traversal is safest. equals compares String contents, while == compares references.'
       }
     },
     {
