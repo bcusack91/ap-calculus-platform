@@ -5,53 +5,76 @@ export const psychRetrievalPart1Data = {
       id: 'retrieval-forgetting-p1-s1-intro',
       type: 'text' as const,
       content: `
-      # 🧠 Retrieval and Forgetting
+# 🧠 Retrieval and Forgetting
 
-      **Part 1 of 7 — Retrieval Cues and Context**
+**Part 1 of 7 — Recall, Recognition and Retrieval Cues**
 
-      In this part, you will connect core psychological vocabulary to realistic contexts and AP-style reasoning. Focus on mechanism first, then evidence.
+Try to name all seven dwarfs from *Snow White* right now; most people stall at four or five, yet almost everyone can pick all seven out of a list in seconds.
 
-      ### Core Definitions
-      - **retrieval cue**: stimulus that helps access stored information
-      - **encoding specificity**: retrieval is best when cues match encoding conditions
-      - **state-dependent memory**: recall improves when internal state matches learning state
+### 📚 Where Retrieval Fits
 
-      ### Concrete Real-World Example
-      A team is studying students forgetting formulas between units. They operationalize variables, compare plausible explanations, and look for the interpretation that best matches observed behavior instead of relying on intuition.
+Memory is usually described as three processes. The memory-encoding-storage lessons cover the first two; this topic is about the third, and about what goes wrong.
 
-      ### Why This Matters
-      Strong AP responses define terms precisely, apply them to evidence, and justify why one interpretation is stronger than alternatives.
+| Process | Question it answers | Example |
+|---------|--------------------|---------|
+| **Encoding** | How does information get in? | Reading a definition and linking it to an example |
+| **Storage** | How is it kept over time? | The definition sits in long-term memory for weeks |
+| **Retrieval** | How do we get it back out when we need it? | Producing the definition on a quiz |
+
+Retrieval is the moment memory is actually used. A memory that is stored but cannot be retrieved is, for practical purposes, the same as a memory that was never stored, which is why so much of this topic is about *access* rather than *storage*.
+
+### The Two Ways to Retrieve (CED 2.6.A.1)
+
+The AP Psychology CED defines the two retrieval processes this way:
+
+| Process | CED definition | What you must do | Everyday and test examples |
+|---------|---------------|------------------|---------------------------|
+| **Recall** | Remembering **without cues** | Search memory and *generate* the answer yourself | Essay and short-answer questions, listing the dwarfs, naming every classmate from your first-grade class |
+| **Recognition** | Retrieval that **relies on retrieval cues** | *Identify* the answer when it is presented to you | Multiple-choice and matching questions, choosing the dwarfs from a list, picking a suspect from a lineup |
+
+The dwarfs demonstration shows the core finding: **recognition is usually easier than recall.** In a recognition task, the target itself is presented, so it works as the strongest possible retrieval cue. You only have to judge "Have I seen this before?" In a recall task, you must first *find* the information and then check it, with nothing outside your own head to guide the search.
+
+### A Classic Demonstration
+
+In a well-known study of long-term memory for high school classmates, researchers tested adults who had graduated anywhere from a few months to several decades earlier.
+
+- **Recognition** of classmates' faces and names from yearbook photos stayed remarkably high even decades after graduation.
+- **Free recall** of classmates' names, with no photos or lists, was far lower and dropped off much more steeply with time.
+
+The same people, with the same stored memories, looked like they remembered a lot or very little depending on *how* retrieval was tested.
+
+> **AP Connection:** When a question asks you to "explain" why someone can choose an answer but cannot produce it, the expected reasoning is: the information is stored, the recognition task supplies a retrieval cue, and the recall task does not.
       `
     },
     {
       id: 'retrieval-forgetting-p1-s2-check',
       type: 'multiple-choice' as const,
       content: `
-      **Concept Check** 🎯
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'In a study about students forgetting formulas between units, participants change behavior after repeatedly seeing the same cue. Which concept is the best fit?',
+            question: 'Asked to write down the seven dwarfs from Snow White, Jalen lists only four. Shown a list of fourteen names, he correctly picks all seven. Which conclusion is BEST supported?',
             options: [
-              'state-dependent memory',
-              'retrieval cue',
-              'proactive interference',
-              'encoding specificity'
+              'The three missing names were stored but not accessible without cues',
+              'Those three names were never encoded into long-term memory',
+              'The list caused retroactive interference with his earlier answers',
+              'His written test measured implicit rather than explicit memory'
             ],
-            correctAnswer: 1,
-            explanation: 'retrieval cue is correct because it directly matches this mechanism: stimulus that helps access stored information. The distractors describe related but different processes.'
+            correctAnswer: 0,
+            explanation: 'Jalen could pick all seven when the names were presented, so all seven must have been stored. The written test required recall without cues, and three names were stored but not accessible until the list supplied them as cues.'
           },
           {
-            question: 'Researchers report that behavior shifts when participants receive a specific cue and then justify their choices afterward. Which concept best explains that pattern?',
+            question: 'On which task would a student\'s score depend on recognition rather than recall?',
             options: [
-              'tip-of-the-tongue',
-              'retroactive interference',
-              'state-dependent memory',
-              'encoding specificity'
+              'Writing the definition of each term in a short essay response',
+              'Choosing the correct term from four options on a quiz',
+              'Explaining each term aloud to a classmate from memory',
+              'Listing every term from the unit on a blank sheet of paper'
             ],
             correctAnswer: 1,
-            explanation: 'retroactive interference is the strongest match here (new learning disrupts old memories). The other options do not explain both the cue-driven shift and the observed response pattern as directly.'
+            explanation: 'Choosing among four presented options is recognition, because the correct term is shown and acts as a retrieval cue. Writing definitions, explaining terms aloud and listing terms on a blank page all require generating the answer without cues, which is recall.'
           }
         ]
       }
@@ -60,126 +83,169 @@ export const psychRetrievalPart1Data = {
       id: 'retrieval-forgetting-p1-s3-deep',
       type: 'text' as const,
       content: `
-      ## Deep Dive: Comparing Explanations with Evidence
+### 📚 Retrieval Cues: Getting to What Is Stored
 
-      When analyzing students forgetting formulas between units, the best interpretation ties a clear psychological mechanism to measurable evidence.
+A **retrieval cue** is any stimulus that helps you access a stored memory: a word, a picture, a smell, a song, a place, a question. Psychologists often picture long-term memory as a web of associations. Each memory is linked to other memories, and each link is a possible path back to it. A cue works by activating one part of the web, and that activation spreads along the links to the target.
 
-      | Theory / Concept | Core claim | Typical evidence | Common limitation |
-      |---|---|---|---|
-      | retrieval cue | stimulus that helps access stored information | experimental manipulation with random assignment | possible demand characteristics |
-      | encoding specificity | retrieval is best when cues match encoding conditions | longitudinal trend with repeated measurement | third-variable risk in natural settings |
-      | state-dependent memory | recall improves when internal state matches learning state | cross-sectional comparison with matched groups | limited generalizability across cultures |
-      | proactive interference | old learning disrupts new learning | mixed-method evidence combining survey and behavioral indicators | measurement validity depends on construct quality |
+**Available versus accessible.** A classic experiment had participants study long lists of words drawn from categories (for example, several animals, several fruits and several tools). Later, one group simply wrote down every word they could remember. Another group received the category names as cues. The cued group remembered many more words. The uncued group had not lost those words; the words were **available** (stored) but not **accessible** (retrievable) without the right cue.
 
-      ### Interpretation Strategy
-      1. Name the mechanism before describing outcomes.
-      2. Match the claim to the strongest available evidence type.
-      3. Acknowledge one limitation and explain whether it changes the conclusion.
+| Term | Meaning | Clue in a scenario |
+|------|---------|-------------------|
+| **Available** | The memory is stored in long-term memory | The person later remembers it when given a hint |
+| **Accessible** | The memory can be retrieved right now | The person can produce it on demand |
+| **Retrieval failure** | Stored, but not accessible at the moment | "I know it, I just can't get to it" |
 
-      This structure helps you earn reasoning points on free-response and avoid vague claims.
+### Why Encoding Shapes Retrieval
+
+Cues only work if they connect to something that was encoded with the memory. If you learned "hippocampus" while picturing a seahorse (the word's Greek root), then a seahorse picture later becomes an excellent cue. If you only repeated the word, there are few links to follow. This is why **how you encode** information (covered in the encoding lessons) predicts **how easily you can retrieve it**: richer, more meaningful encoding builds more retrieval routes.
+
+Psychologists summarize this with the idea that a cue is most effective when it matches the way the information was originally encoded. Part 2 of this topic applies that idea to places, physical states and moods.
+
+### Common Retrieval Cues
+
+| Cue type | Example |
+|----------|---------|
+| **Verbal** | A teacher says "It starts with *pro*-..." and you produce "proactive interference" |
+| **Category** | Thinking "fruits" helps you recall the grocery items you forgot |
+| **Sensory** | The smell of sunscreen brings back a specific beach trip |
+| **Contextual** | Walking back into the kitchen reminds you why you went there |
+| **The target itself** | Seeing the correct answer among the options on a multiple-choice item |
+
+> **AP Connection:** The last row is the reason recognition counts as cued retrieval. On a multiple-choice item the key itself is a cue, so a student can recognize a term they could not have recalled. Studying only by recognition (rereading, glancing at flashcard answers) therefore prepares you poorly for recall tasks such as free-response questions.
       `
     },
     {
       id: 'retrieval-forgetting-p1-s4-input',
       type: 'input-boxes' as const,
       content: `
-      **Applied Recall (exact term answers)** ✍️
+**Recall Practice** ✍️
 
-      1) Write the concept that matches: stimulus that helps access stored information
-
-      2) Write the concept that matches: retrieval is best when cues match encoding conditions
-
-      3) Write the concept that matches: recall improves when internal state matches learning state
-
-      Use the exact vocabulary term from this part.
+Type the single standard term for each description. (Yes, this box is a recall task.)
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['retrieval cue', 'encoding specificity', 'state-dependent memory'],
-        hint1: 'Starts with: R',
-        hint2: 'Starts with: E',
-        hint3: 'Starts with: S',
-        explanation: 'Expected answers: retrieval cue, encoding specificity, and state-dependent memory. Each response should use the precise term connected to the definition cue.'
+        questions: [
+          {
+            question: 'Remembering information without any cues, as when answering an essay question, is called _____.',
+            answer: 'recall',
+            acceptableAnswers: ['free recall'],
+            explanation: 'The CED defines recall as remembering without cues: you must generate the information yourself.'
+          },
+          {
+            question: 'Identifying information when it is presented to you, as when choosing a suspect from a lineup, is called _____.',
+            answer: 'recognition',
+            acceptableAnswers: ['recognize'],
+            explanation: 'Recognition relies on retrieval cues; the presented item itself is the cue.'
+          },
+          {
+            question: 'A stimulus such as a smell, a category name or a hint that helps you access a stored memory is called a retrieval _____.',
+            answer: 'cue',
+            acceptableAnswers: ['cues', 'retrieval cue'],
+            explanation: 'Retrieval cues activate associated parts of the memory network and lead you to the target memory.'
+          }
+        ],
+        hint1: 'Think of an essay question: you must produce the answer with nothing to prompt you.',
+        hint2: 'Think of a multiple-choice question: the answer is in front of you and you only have to identify it.',
+        hint3: 'It is the "trigger" that leads you back to the memory. One short word.'
       }
     },
     {
-      id: 'retrieval-forgetting-p1-s5-dropdown',
+      id: 'retrieval-forgetting-p1-s5-methods',
+      type: 'text' as const,
+      content: `
+### 📚 Measuring Retrieval in Research
+
+Because recall and recognition give such different pictures of memory, a study's conclusions depend on which one it uses as the **operational definition** of "memory."
+
+| Measure | Typical operational definition | Strength | Limitation |
+|---------|-------------------------------|----------|------------|
+| **Free recall** | Number of studied words a participant writes down in 2 minutes | Shows what a person can retrieve unaided | Underestimates what is stored |
+| **Recognition** | Number of studied words correctly identified as "old" in a mix of old and new words | Detects weaker memories | Can be inflated by guessing "old" |
+
+**The false-alarm problem.** In a recognition test, some words are new (never studied). Saying "old" to a studied word is a **hit**; saying "old" to a new word is a **false alarm**. A participant who answers "old" to every word gets every hit but also every false alarm. Good recognition studies therefore score performance using both, for example hits minus false alarms, so that guessing does not look like memory.
+
+### Worked Example: Reading a Practice Study
+
+*Practice study (not a real citation):* Forty volunteers studied 30 unrelated words. Every participant then completed both a free-recall test and a recognition test (30 old words mixed with 30 new words). Half took recall first and half took recognition first, assigned at random.
+
+| Measure | Mean result |
+|---------|-------------|
+| Free recall | 11 of 30 words (37%) |
+| Recognition hits | 25 of 30 old words (83%) |
+| Recognition false alarms | 4 of 30 new words (13%) |
+
+**Step 1: Identify the design.** Every participant did both tests, so this is a **within-subjects** (repeated-measures) design. The independent variable is the type of retrieval test; the dependent variable is the number of words remembered.
+
+**Step 2: Explain the counterbalancing.** Taking one test first could change performance on the second (the first test re-exposes the words). Randomly assigning half to each order spreads this order effect evenly across both conditions.
+
+**Step 3: Interpret.** Even after allowing for the false alarms, recognition (83% hits against 13% false alarms) shows far more stored information than recall (37%). The words were available, but many were not accessible without cues.
+
+> **AP Connection:** On an Article Analysis Question you may be asked how a variable was operationally defined. "Memory" alone earns nothing; "the number of studied words correctly written within two minutes" is a complete operational definition.
+      `
+    },
+    {
+      id: 'retrieval-forgetting-p1-s6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Model Matching** 🔎
+**Classify the Retrieval Task** 🔍
+
+For each situation, choose the memory process being measured.
       `,
       exercise: {
         dropdowns: [
-          {
-            label: 'Select the concept that best matches: stimulus that helps access stored information',
-            options: ['proactive interference', 'encoding specificity', 'retrieval cue', 'retroactive interference']
-          },
-          {
-            label: 'Select the concept that best matches: retrieval is best when cues match encoding conditions',
-            options: ['proactive interference', 'encoding specificity', 'state-dependent memory', 'retrieval cue']
-          },
-          {
-            label: 'Select the concept that best matches: recall improves when internal state matches learning state',
-            options: ['state-dependent memory', 'encoding specificity', 'retroactive interference', 'proactive interference']
-          }
+          { label: 'Writing the names of all fifty U.S. states from memory on a blank sheet', options: ['Recognition', 'Recall', 'Relearning', 'Encoding'] },
+          { label: 'Picking the person who stole your bike out of a set of six photographs', options: ['Recall', 'Encoding', 'Recognition', 'Relearning'] },
+          { label: 'Memorizing a poem again in 4 practice runs when it first took 12 runs', options: ['Relearning', 'Recognition', 'Recall', 'Encoding'] },
+          { label: 'Saying "I have definitely seen that face before" when meeting someone at a party', options: ['Encoding', 'Relearning', 'Recall', 'Recognition'] }
         ],
-        correctAnswers: ['retrieval cue', 'encoding specificity', 'state-dependent memory'],
-        hint1: 'Start by matching the key mechanism in each prompt to the most specific concept.',
-        hint2: 'Eliminate options that describe a different level of analysis (biological vs cognitive vs social).',
-        hint3: 'Use the definition language from this part to avoid near-miss terms.',
-        explanation: 'Correct matches are retrieval cue, encoding specificity, and state-dependent memory. These choices align with the mechanism-language in each definition, not just broad topic similarity.'
+        correctAnswers: ['Recall', 'Recognition', 'Relearning', 'Recognition'],
+        hint1: 'Ask: is the target in front of the person, or must they produce it themselves?',
+        hint2: 'The photo set presents the target; the blank sheet does not.',
+        hint3: 'Needing fewer runs the second time shows "savings" from earlier learning.',
+        explanation: 'Writing states on a blank sheet is recall (no cues). Choosing from photographs and judging a face as familiar are recognition (the target is presented). Learning a poem faster the second time is relearning, which reveals memory even when recall and recognition fail; Part 4 uses it to measure forgetting.'
       }
-    },
-    {
-      id: 'retrieval-forgetting-p1-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ## Common Misconceptions and Exam Strategy
-
-      ### Misconceptions to Avoid
-      - Forgetting is not always decay; retrieval competition and cue mismatch are common causes.
-      - Confidence in a memory report does not guarantee accuracy.
-      - Repeated testing can outperform repeated rereading for long-term recall.
-      - Distortion can emerge from normal reconstruction, not intentional lying.
-
-      ### AP Strategy Moves
-      - Define the target concept in one precise sentence before giving examples.
-      - In scenario questions about students forgetting formulas between units, identify the manipulated variable and measured outcome.
-      - Use one competing explanation and explain why it is weaker.
-      - If data are provided, mention trend direction and at least one design limitation.
-
-      This combination of precision and evidence improves both multiple-choice accuracy and free-response scoring.
-      `
     },
     {
       id: 'retrieval-forgetting-p1-s7-applied',
       type: 'multiple-choice' as const,
       content: `
-      **Applied Scenarios** 🎯
+**Applied Scenarios** 🔬
+
+*Practice study (not a real citation):* Participants studied 40 words. Half later took a free-recall test; the other half took a recognition test containing the 40 studied words plus 40 new words.
       `,
       exercise: {
         questions: [
           {
-            question: 'A team investigating students forgetting formulas between units finds that participants rely on a persuasive cue when they are distracted, but use argument quality when they are highly focused. Which concept best captures the focused-processing route?',
+            question: 'In the recognition group, one participant answered "old" to all 80 words. Why should researchers count false alarms when scoring this test?',
             options: [
-              'encoding specificity',
-              'proactive interference',
-              'retrieval cue',
-              'state-dependent memory'
+              'Calling new words "old" shows that guessing can inflate the score',
+              'Saying "old" to new words shows that recall was measured by mistake',
+              'Answering "old" to every word shows the words were never encoded',
+              'Labeling studied words "old" shows that recognition requires no cues'
             ],
-            correctAnswer: 1,
-            explanation: 'proactive interference is best because it reflects this mechanism (old learning disrupts new learning). The other options describe different levels of explanation or related constructs.'
+            correctAnswer: 0,
+            explanation: 'A participant who calls every word "old" gets every studied word right without remembering anything. Counting false alarms to new words separates real recognition from a guessing strategy.'
           },
           {
-            question: 'After an intervention, scores improve in the treatment group but not in a matched comparison group. Which interpretation is most defensible for the targeted mechanism?',
+            question: 'Category names given as cues at test help participants remember words they left out of free recall. This finding BEST supports which idea?',
             options: [
-              'tip-of-the-tongue',
-              'encoding specificity',
-              'state-dependent memory',
-              'retroactive interference'
+              'Forgotten words had faded from storage and were relearned during the test',
+              'Many unrecalled words were stored and became accessible with cues',
+              'Category names caused proactive interference with the earlier words',
+              'Recall and recognition draw on two different long-term memory stores'
             ],
-            correctAnswer: 3,
-            explanation: 'retroactive interference is the strongest interpretation because it maps to the measured pattern and proposed mechanism: new learning disrupts old memories. Good AP reasoning also notes alternative explanations and design limits.'
+            correctAnswer: 1,
+            explanation: 'If the words had faded from storage, a category name could not bring them back. The cue restored access to words that were available but not accessible, which is retrieval failure rather than storage loss.'
+          },
+          {
+            question: 'Priya rereads her notes until every page looks familiar, then blanks on a free-response question asking her to explain the same terms. What BEST explains the gap?',
+            options: [
+              'Rereading strengthened her recall of the terms but weakened her recognition',
+              'Her free-response answers were limited by the capacity of sensory memory',
+              'Rereading built her recognition, but the essay task demanded uncued recall',
+              'Familiar notes produced state-dependent memory that the testing room lacked'
+            ],
+            correctAnswer: 2,
+            explanation: 'Seeing a page and feeling "I know this" is recognition, because the notes themselves are the cue. The free-response question required her to generate the explanations without cues, which is recall, a harder task that rereading did not practice.'
           }
         ]
       }

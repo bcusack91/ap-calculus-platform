@@ -5,181 +5,183 @@ export const psychMemoryEncodePart7Data = {
       id: 'memory-encoding-storage-p7-s1-intro',
       type: 'text' as const,
       content: `
-      # 🧠 Memory Encoding and Storage
+# 🧠 Memory Encoding and Storage
 
-      **Part 7 of 7 — AP Exam Synthesis**
+**Part 7 of 7 — Synthesis Review**
 
-      In this part, you will connect core psychological vocabulary to realistic contexts and AP-style reasoning. Focus on mechanism first, then evidence.
+This part pulls the topic together: one map of how information gets in and stays in, a guide to the terms the exam likes to pair as near-misses, and integrated questions that mix ideas from every part.
 
-      ### Core Definitions
-      - **long-term memory**: relatively enduring store of knowledge, skills, and experiences
-      - **encoding**: transforming input into a storable memory representation
-      - **elaborative rehearsal**: linking new information to meaning and prior knowledge
+### 🗺️ Master Integration Table
 
-      ### Concrete Real-World Example
-      A team is studying AP-style synthesis using memory models. They operationalize variables, compare plausible explanations, and look for the interpretation that best matches observed behavior instead of relying on intuition.
+| Idea | Part | Core claim | Exam cue words |
+|------|-----------|-----------|-----------|
+| Encoding, storage, retrieval | 1 | Memory can fail at any of three steps | "never noticed" (encoding), "faded" (storage), "on the tip of my tongue" (retrieval) |
+| Multi-store model | 1 | Sensory → short-term → long-term, moved by attention and rehearsal | "split second," "a few seconds," "years later" |
+| Automatic vs. effortful processing | 1 | Space, time and frequency are encoded with little effort; new facts need effort | "without trying" vs. "studied" |
+| Levels of processing | 2 | Structural, phonemic, semantic: deeper processing, better memory | letters or case, rhyme or sound, meaning |
+| Maintenance vs. elaborative rehearsal | 2 | Repetition keeps information active; meaning-based rehearsal builds lasting memory | "repeated it over and over" vs. "related it to" |
+| Autobiographical memory | 2, 5 | Information tied to the self is especially memorable; HSAM shows unusual autobiographical storage | "about my own life," "every day since childhood" |
+| Mnemonics, chunking, categories, hierarchies | 3 | Structure and imagery make encoding easier | "pictured each item in a room," "grouped into" |
+| Spacing effect | 3 | Distributed practice beats massed practice for long-term retention | "crammed," "spread over weeks" |
+| Stores compared; working memory model | 4 | Stores differ in duration, capacity and content; working memory = central executive, phonological loop, visuospatial sketchpad | "repeat silently," "picture the layout," "switch tasks" |
+| Serial position effect | 4 | First items (primacy) and last items (recency) are best remembered | "first and last," "middle of the list" |
+| Long-term memory types | 5 | Explicit (episodic, semantic), implicit (procedural), prospective | "remember when," "know that," "know how," "remember to" |
+| LTP and brain structures | 5 | Frequently activated synapses strengthen; hippocampus forms explicit memories; cerebellum supports procedural learning | "stronger response after repeated stimulation" |
+| Storage problems | 5 | Anterograde and retrograde amnesia, Alzheimer's disease, infantile amnesia | "since the accident," "before the accident," "early childhood" |
 
-      ### Why This Matters
-      Strong AP responses define terms precisely, apply them to evidence, and justify why one interpretation is stronger than alternatives.
+### The Big Theme
+
+**What you do while encoding determines what you can store and later retrieve.** Attention gets information in; meaning, structure and spacing make it last; and the brain makes it last by strengthening the synapses involved and consolidating the memory over time, including during sleep.
       `
     },
     {
       id: 'memory-encoding-storage-p7-s2-check',
       type: 'multiple-choice' as const,
       content: `
-      **Concept Check** 🎯
+**Integration Check** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'In a study about AP-style synthesis using memory models, participants change behavior after repeatedly seeing the same cue. Which concept is the best fit?',
+            question: 'A student pictures each of the five stages of a process at a different spot in her kitchen, then reviews the images for ten minutes on four different days. Which two encoding strategies is she combining?',
             options: [
-              'encoding',
-              'elaborative rehearsal',
-              'long-term memory',
-              'chunking'
+              'Chunking and massed practice',
+              'Method of loci and distributed practice',
+              'Maintenance rehearsal and a hierarchy',
+              'Structural processing and chunking'
             ],
-            correctAnswer: 2,
-            explanation: 'long-term memory is correct because it directly matches this mechanism: relatively enduring store of knowledge, skills, and experiences. The distractors describe related but different processes.'
+            correctAnswer: 1,
+            explanation: 'Placing items at familiar locations is the method of loci, and reviewing across several days is distributed practice. Massed practice would put all the review in one session.'
           },
           {
-            question: 'Researchers report that behavior shifts when participants receive a specific cue and then justify their choices afterward. Which concept best explains that pattern?',
+            question: 'Which finding provides the strongest evidence that long-term memory includes separate explicit and implicit systems?',
             options: [
-              'semantic network',
-              'encoding',
-              'consolidation',
-              'elaborative rehearsal'
+              'People recall the first and last items of a list better than the middle items',
+              'A patient improves at a new motor skill each day but cannot recall practicing it',
+              'People remember words better after judging meaning than after judging rhymes',
+              'People remember material better when study sessions are spread over several weeks'
             ],
-            correctAnswer: 2,
-            explanation: 'consolidation is the strongest match here (stabilization of memories over time). The other options do not explain both the cue-driven shift and the observed response pattern as directly.'
+            correctAnswer: 1,
+            explanation: 'A skill that improves while memory of the practice is absent shows that procedural (implicit) memory can work when explicit memory fails, so the two depend on different systems. The other findings concern encoding conditions within one memory system.'
           }
         ]
       }
     },
     {
-      id: 'memory-encoding-storage-p7-s3-deep',
+      id: 'memory-encoding-storage-p7-s3-pairs',
       type: 'text' as const,
       content: `
-      ## Deep Dive: Comparing Explanations with Evidence
+### ⚖️ Near-Miss Pairs: How to Tell Them Apart
 
-      When analyzing AP-style synthesis using memory models, the best interpretation ties a clear psychological mechanism to measurable evidence.
+| Pair | Ask yourself | Quick example |
+|------|-----------|-----------|
+| Iconic vs. echoic memory | Is the brief trace visual or auditory? | Afterimage of a flash (iconic) vs. replaying a half-heard sentence (echoic) |
+| Short-term vs. working memory | Is the information just being held, or held **and** manipulated? | Holding a code (short-term) vs. adding two prices in your head (working) |
+| Maintenance vs. elaborative rehearsal | Is the person repeating, or connecting to meaning? | Repeating a password vs. explaining a term with your own example |
+| Structural vs. phonemic vs. semantic | Appearance, sound or meaning? | Capital letters / rhymes / fits a sentence |
+| Chunking vs. hierarchy | Grouping into a few units, or arranging categories into levels? | 555-0199 vs. Animals → Mammals → Primates |
+| Massed vs. distributed practice | All at once, or spread over time with total time equal? | 3 hours Sunday night vs. 30 minutes on six days |
+| Primacy vs. recency | Beginning or end of the list? Which one disappears after a delay? | Recency disappears after a delay; primacy remains |
+| Episodic vs. semantic | Is a specific time and place part of the memory? | "My first day of high school" vs. "High school has four grades" |
+| Procedural vs. prospective | A skill you can perform, or an action you intend to do later? | Typing vs. remembering to submit an essay at midnight |
+| Anterograde vs. retrograde amnesia | Is the loss for memories formed **after** the damage or **before** it? | Cannot learn new names (anterograde) vs. cannot recall the week before (retrograde) |
 
-      | Theory / Concept | Core claim | Typical evidence | Common limitation |
-      |---|---|---|---|
-      | long-term memory | relatively enduring store of knowledge, skills, and experiences | experimental manipulation with random assignment | possible demand characteristics |
-      | encoding | transforming input into a storable memory representation | longitudinal trend with repeated measurement | third-variable risk in natural settings |
-      | elaborative rehearsal | linking new information to meaning and prior knowledge | cross-sectional comparison with matched groups | limited generalizability across cultures |
-      | chunking | grouping information into manageable units | mixed-method evidence combining survey and behavioral indicators | measurement validity depends on construct quality |
+### 🔗 Cross-Unit Connections
 
-      ### Interpretation Strategy
-      1. Name the mechanism before describing outcomes.
-      2. Match the claim to the strongest available evidence type.
-      3. Acknowledge one limitation and explain whether it changes the conclusion.
-
-      This structure helps you earn reasoning points on free-response and avoid vague claims.
+- **Unit 1 (Biological Bases):** LTP depends on the neurotransmitter glutamate; the hippocampus and amygdala are limbic structures; the cerebellum supports procedural learning; one current theory says sleep consolidates memories; Alzheimer's disease involves loss of acetylcholine-producing neurons.
+- **Unit 3 (Development and Learning):** infantile amnesia reflects brain and language development in early childhood; skills learned through practice are stored as procedural memory.
+- **Next topic (Retrieval and Forgetting):** encoding quality sets up retrieval. Retrieval cues, the forgetting curve, interference and memory construction all build on what you learned here.
       `
     },
     {
       id: 'memory-encoding-storage-p7-s4-input',
       type: 'input-boxes' as const,
       content: `
-      **Applied Recall (exact term answers)** ✍️
-
-      1) Write the concept that matches: relatively enduring store of knowledge, skills, and experiences
-
-      2) Write the concept that matches: transforming input into a storable memory representation
-
-      3) Write the concept that matches: linking new information to meaning and prior knowledge
-
-      Use the exact vocabulary term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['long-term memory', 'encoding', 'elaborative rehearsal'],
-        hint1: 'Starts with: L',
-        hint2: 'Starts with: E',
-        hint3: 'Starts with: E',
-        explanation: 'Expected answers: long-term memory, encoding, and elaborative rehearsal. Each response should use the precise term connected to the definition cue.'
-      }
-    },
-    {
-      id: 'memory-encoding-storage-p7-s5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-      **Model Matching** 🔎
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Select the concept that best matches: relatively enduring store of knowledge, skills, and experiences',
-            options: ['encoding', 'semantic network', 'long-term memory', 'consolidation']
-          },
-          {
-            label: 'Select the concept that best matches: transforming input into a storable memory representation',
-            options: ['semantic network', 'encoding', 'elaborative rehearsal', 'chunking']
-          },
-          {
-            label: 'Select the concept that best matches: linking new information to meaning and prior knowledge',
-            options: ['semantic network', 'long-term memory', 'elaborative rehearsal', 'chunking']
-          }
-        ],
-        correctAnswers: ['long-term memory', 'encoding', 'elaborative rehearsal'],
-        hint1: 'Start by matching the key mechanism in each prompt to the most specific concept.',
-        hint2: 'Eliminate options that describe a different level of analysis (biological vs cognitive vs social).',
-        hint3: 'Use the definition language from this part to avoid near-miss terms.',
-        explanation: 'Correct matches are long-term memory, encoding, and elaborative rehearsal. These choices align with the mechanism-language in each definition, not just broad topic similarity.'
-      }
-    },
-    {
-      id: 'memory-encoding-storage-p7-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ## Common Misconceptions and Exam Strategy
-
-      ### Misconceptions to Avoid
-      - Rereading feels fluent but often produces weaker long-term retention than retrieval practice.
-      - Working memory capacity is limited and context dependent.
-      - Encoding strength matters more than time spent passively reviewing.
-      - Storage and retrieval failures can look similar unless tested carefully.
-
-      ### AP Strategy Moves
-      - Define the target concept in one precise sentence before giving examples.
-      - In scenario questions about AP-style synthesis using memory models, identify the manipulated variable and measured outcome.
-      - Use one competing explanation and explain why it is weaker.
-      - If data are provided, mention trend direction and at least one design limitation.
-
-      This combination of precision and evidence improves both multiple-choice accuracy and free-response scoring.
-      `
-    },
-    {
-      id: 'memory-encoding-storage-p7-s7-applied',
-      type: 'multiple-choice' as const,
-      content: `
-      **Applied Scenarios** 🎯
+**Final Recall** ✍️
       `,
       exercise: {
         questions: [
           {
-            question: 'A team investigating AP-style synthesis using memory models finds that participants rely on a persuasive cue when they are distracted, but use argument quality when they are highly focused. Which concept best captures the focused-processing route?',
-            options: [
-              'elaborative rehearsal',
-              'chunking',
-              'encoding',
-              'long-term memory'
-            ],
-            correctAnswer: 1,
-            explanation: 'chunking is best because it reflects this mechanism (grouping information into manageable units). The other options describe different levels of explanation or related constructs.'
+            question: 'A synapse that responds more strongly after frequent activation shows long-term ___.',
+            answer: 'potentiation',
+            acceptableAnswers: ['potentiation (LTP)', 'LTP'],
+            explanation: 'Long-term potentiation is the strengthening of synaptic connections with frequent activation, a biological process for memory.'
           },
           {
-            question: 'After an intervention, scores improve in the treatment group but not in a matched comparison group. Which interpretation is most defensible for the targeted mechanism?',
+            question: 'Which level of processing, the deepest in the levels of processing model, focuses on meaning?',
+            answer: 'semantic',
+            acceptableAnswers: ['semantic processing', 'semantic level'],
+            explanation: 'Semantic processing, attending to meaning, is the deepest level and produces the strongest memory.'
+          },
+          {
+            question: 'Which brain structure was largely removed in H.M.\'s surgery and is needed to form new explicit memories?',
+            answer: 'hippocampus',
+            acceptableAnswers: ['the hippocampus', 'hippocampi'],
+            explanation: 'Removal of most of the hippocampus on both sides left H.M. unable to form new explicit memories, while his procedural learning continued.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'memory-encoding-storage-p7-s5-case',
+      type: 'text' as const,
+      content: `
+### 🔬 Integrated Case: One Student, Every Concept
+
+**Scenario:** Nadia is preparing for the AP Psychology exam in May. Her teacher reviews 12 memory terms in one lesson.
+
+| What Nadia does | Concept | Effect |
+|------|-----------|-----------|
+| Puts her phone in another room during the lesson | Attention gates sensory memory into short-term memory | More of the lesson is encoded at all |
+| Notices she best remembers the first two and last two terms the teacher covered | Serial position effect | Middle terms need extra review |
+| Groups the 12 terms into "stores," "processes" and "problems" | Categories and hierarchy | Fewer, organized units to encode |
+| Writes an example from her own life for each term | Elaborative rehearsal; self-relevant (autobiographical) encoding | Semantic, deeply processed memories |
+| Reviews for 15 minutes every few days from February to May instead of the weekend before | Distributed practice; spacing effect | Better consolidation and long-term retention |
+| Gets a full night's sleep before the exam | Sleep supports consolidation | Recent learning is stabilized |
+
+> **AP Connection:** Integrated scenarios like this one are common in EBQ sources and in multiple-choice sets. For each behavior, name the concept **and** explain the mechanism in one clause. For example: "Writing her own examples is elaborative rehearsal, which links new terms to existing knowledge and creates more retrieval routes."
+      `
+    },
+    {
+      id: 'memory-encoding-storage-p7-s6-applied',
+      type: 'multiple-choice' as const,
+      content: `
+**Final Applied Set** 🔬
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'A student says, "Short-term memory is what I remember from this morning, and long-term memory is what I remember from childhood." How should a psychologist correct this?',
             options: [
-              'consolidation',
-              'semantic network',
-              'elaborative rehearsal',
-              'encoding'
+              'Short-term storage lasts about a day, so only the childhood memory is long-term',
+              'Short-term storage lasts only seconds, so both are long-term memories',
+              'Short-term storage holds both until they have been retrieved at least once',
+              'Both stay in sensory storage until the hippocampus moves them to long-term'
             ],
-            correctAnswer: 0,
-            explanation: 'consolidation is the strongest interpretation because it maps to the measured pattern and proposed mechanism: stabilization of memories over time. Good AP reasoning also notes alternative explanations and design limits.'
+            correctAnswer: 1,
+            explanation: 'In psychology, short-term memory holds information for only about 15–30 seconds without rehearsal. Anything remembered hours later, including breakfast this morning, has been stored in long-term memory.'
+          },
+          {
+            question: 'Researchers compare students who study a list by repeating each word aloud with students who write a sentence connecting each word to their own lives. Which result does the AP framework predict, and why?',
+            options: [
+              'The first group recalls more, because its rehearsal is faster',
+              'The second group recalls more, because elaboration adds meaning',
+              'Both groups recall the same, because study time is held constant',
+              'The first group recalls more, because sound codes last longer'
+            ],
+            correctAnswer: 1,
+            explanation: 'Writing self-related sentences is elaborative rehearsal with semantic, self-relevant encoding, which promotes retention. Repeating words aloud is maintenance rehearsal, which keeps words active but adds few meaningful links.'
+          },
+          {
+            question: 'A grandmother can still knit complicated patterns and recall her wedding day, but she cannot remember conversations from earlier in the week, and her symptoms are gradually worsening. Which condition best fits this pattern?',
+            options: [
+              'Infantile amnesia',
+              'Retrograde amnesia from a single injury',
+              'Highly superior autobiographical memory',
+              'Early Alzheimer\'s disease'
+            ],
+            correctAnswer: 3,
+            explanation: 'Alzheimer\'s disease is progressive and typically begins with difficulty forming new memories while older memories and well-practiced skills are relatively spared at first. Retrograde amnesia from one injury would affect older memories and would not steadily worsen.'
           }
         ]
       }

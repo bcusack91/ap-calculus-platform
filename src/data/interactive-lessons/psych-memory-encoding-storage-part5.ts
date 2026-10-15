@@ -5,181 +5,196 @@ export const psychMemoryEncodePart5Data = {
       id: 'memory-encoding-storage-p5-s1-intro',
       type: 'text' as const,
       content: `
-      # 🧠 Memory Encoding and Storage
+# 🧠 Memory Encoding and Storage
 
-      **Part 5 of 7 — Biological Bases of Memory**
+**Part 5 of 7 — Long-Term Memory: Types, Biology and Storage Problems**
 
-      In this part, you will connect core psychological vocabulary to realistic contexts and AP-style reasoning. Focus on mechanism first, then evidence.
+Long-term memory is not one warehouse. Remembering your tenth birthday, knowing that Paris is the capital of France, riding a bike and remembering to text your mom after practice are different kinds of memory that the brain handles in different ways.
 
-      ### Core Definitions
-      - **procedural memory**: memory for skills and actions
-      - **spacing effect**: improved retention when practice is distributed over time
-      - **sensory memory**: brief retention of sensory information
+### 📚 Types of Long-Term Memory
 
-      ### Concrete Real-World Example
-      A team is studying neuroscience evidence on hippocampal consolidation. They operationalize variables, compare plausible explanations, and look for the interpretation that best matches observed behavior instead of relying on intuition.
+| Type | Definition | Example | Can you easily explain it to someone? |
+|------|-----------|-----------|-----------|
+| **Explicit (declarative)** | Memory you can consciously recall and describe | | Yes |
+| ↳ **Episodic** | Memory for specific personal experiences tied to a time and place | Remembering what happened at your cousin's wedding last June | Yes |
+| ↳ **Semantic** | Memory for general facts and knowledge, independent of when you learned them | Knowing that the hippocampus is in the temporal lobe | Yes |
+| **Implicit (nondeclarative)** | Memory that shows up in performance rather than in conscious recollection | | Hard to put into words |
+| ↳ **Procedural** | Memory for skills, procedures and processes | Typing, tying shoes, shooting a free throw | Hard to put into words |
+| **Prospective** | Memory for actions you intend to carry out in the future | Remembering to take medication at 8 p.m. or to hand in a permission slip on Friday | Depends on the task |
 
-      ### Why This Matters
-      Strong AP responses define terms precisely, apply them to evidence, and justify why one interpretation is stronger than alternatives.
+**How to tell episodic from semantic:** ask whether the memory includes *you, at a particular time and place*. "I learned about neurons in Mr. Lee's class on a rainy Tuesday" is episodic. "Neurons communicate with neurotransmitters" is semantic. Many semantic facts begin as episodes and lose their time-and-place details over years.
+
+**How to tell explicit from implicit:** ask whether the person can describe the memory. A pianist can tell you the name of a piece (explicit) but often cannot explain exactly how her fingers know where to go (implicit, procedural).
       `
     },
     {
-      id: 'memory-encoding-storage-p5-s2-check',
+      id: 'memory-encoding-storage-p5-s2-dropdown',
+      type: 'dropdown-select' as const,
+      content: `
+**Classify the Memory** 🔍
+      `,
+      exercise: {
+        dropdowns: [
+          {
+            label: 'Remembering the exact moment you found out you made the varsity team',
+            options: ['Semantic memory', 'Episodic memory', 'Procedural memory', 'Prospective memory']
+          },
+          {
+            label: 'Knowing that the AP Psychology exam has two free-response questions',
+            options: ['Episodic memory', 'Procedural memory', 'Semantic memory', 'Prospective memory']
+          },
+          {
+            label: 'Remembering to stop at the store for milk on the way home',
+            options: ['Prospective memory', 'Semantic memory', 'Episodic memory', 'Procedural memory']
+          },
+          {
+            label: 'Shifting gears smoothly in a manual car without thinking about the steps',
+            options: ['Semantic memory', 'Prospective memory', 'Episodic memory', 'Procedural memory']
+          }
+        ],
+        correctAnswers: ['Episodic memory', 'Semantic memory', 'Prospective memory', 'Procedural memory'],
+        hint1: 'A personal experience tied to a specific time and place is one kind of explicit memory.',
+        hint2: 'A general fact, with no memory of when or where you learned it, is the other kind of explicit memory.',
+        hint3: 'One of these is about an action planned for the future; another is a skill shown in performance.',
+        explanation: 'Finding out you made the team is a personal event (episodic). Knowing the exam format is a general fact (semantic). Remembering to buy milk later is prospective memory. Shifting gears automatically is a skill (procedural, a type of implicit memory).'
+      }
+    },
+    {
+      id: 'memory-encoding-storage-p5-s3-biology',
+      type: 'text' as const,
+      content: `
+### 📚 The Biology of Storage
+
+**Long-term potentiation (LTP).** The AP framework describes LTP as a process by which synaptic connections between neurons become **stronger with frequent activation**. After repeated stimulation, the sending neuron's signal produces a larger response in the receiving neuron, so the pathway fires more easily the next time. LTP was first demonstrated in the hippocampus (Bliss and Lømo, 1973), and it depends heavily on the excitatory neurotransmitter **glutamate**. LTP is considered a biological basis for learning and memory: practice and elaboration literally strengthen the connections that represent a memory.
+
+**Brain structures and memory types:**
+
+| Structure | Role in memory |
+|------|-----------|
+| **Hippocampus** (limbic system, in the temporal lobe) | Forms new explicit memories and helps consolidate them into long-term storage |
+| **Cerebellum** | Coordinates movement and supports some forms of procedural learning |
+| **Amygdala** (limbic system) | Strengthens memories of emotionally significant events |
+| **Frontal lobes** | Support working memory and the organized search for stored information |
+
+**Consolidation and sleep.** Newly formed memories are fragile at first and become more stable over time, a process called **consolidation**. One current theory of why we sleep (from the sleep topic in Unit 1) holds that sleep helps organize and consolidate the day's memories.
+
+### 🔬 Case Evidence: Two Patients
+
+| | Henry Molaison ("H.M.") | Clive Wearing |
+|------|-----------|-----------|
+| **Cause** | In 1953, surgeons removed parts of both medial temporal lobes, including most of the hippocampus, to stop severe seizures | In 1985, a viral brain infection damaged his hippocampus and surrounding areas |
+| **Explicit memory** | Could not form new long-term explicit memories; lost some memories from the years before surgery | Cannot form new explicit memories and lost much of his past; experiences each moment as "waking up" |
+| **Implicit memory** | Improved at mirror-drawing over several days while having no memory of practicing | Can still play the piano and conduct music he learned before the illness |
+| **What it shows** | Explicit and implicit memory depend on different brain systems; the hippocampus is needed to form new explicit memories | Procedural memory can survive severe damage to explicit memory |
+
+> **Research methods note:** These are **case studies**, in-depth investigations of one person. They gave psychologists evidence no ethical experiment could produce, but they cannot establish cause and effect on their own, and findings from one unusual brain may not generalize to others.
+      `
+    },
+    {
+      id: 'memory-encoding-storage-p5-s4-check',
       type: 'multiple-choice' as const,
       content: `
-      **Concept Check** 🎯
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'In a study about neuroscience evidence on hippocampal consolidation, participants change behavior after repeatedly seeing the same cue. Which concept is the best fit?',
+            question: 'A rat learns a maze over several days. Recordings show that, across training, the same input produces larger and larger responses in certain hippocampal neurons. Which process does this most directly illustrate?',
             options: [
-              'working memory',
-              'spacing effect',
-              'procedural memory',
-              'sensory memory'
-            ],
-            correctAnswer: 2,
-            explanation: 'procedural memory is correct because it directly matches this mechanism: memory for skills and actions. The distractors describe related but different processes.'
-          },
-          {
-            question: 'Researchers report that behavior shifts when participants receive a specific cue and then justify their choices afterward. Which concept best explains that pattern?',
-            options: [
-              'long-term memory',
-              'sensory memory',
-              'spacing effect',
-              'encoding'
+              'Long-term potentiation',
+              'Echoic memory',
+              'Retrograde amnesia',
+              'Maintenance rehearsal'
             ],
             correctAnswer: 0,
-            explanation: 'long-term memory is the strongest match here (relatively enduring store of knowledge, skills, and experiences). The other options do not explain both the cue-driven shift and the observed response pattern as directly.'
+            explanation: 'A synapse that responds more strongly after repeated activation is showing long-term potentiation, a biological process for memory. Maintenance rehearsal is a behavioral strategy, not a change at the synapse.'
+          },
+          {
+            question: 'After surgery, a patient can learn to solve a new puzzle faster each day but insists each day that he has never seen the puzzle before. What does this pattern indicate?',
+            options: [
+              'His episodic memory is intact while his semantic memory is impaired',
+              'His procedural memory is working while new explicit memory is impaired',
+              'His prospective memory is intact while his working memory is impaired',
+              'His sensory memory is working while new procedural memory is impaired'
+            ],
+            correctAnswer: 1,
+            explanation: 'Getting faster shows the skill is being stored as procedural (implicit) memory, while not remembering the earlier sessions shows he cannot form new explicit memories. This is the pattern seen in H.M.'
           }
         ]
       }
     },
     {
-      id: 'memory-encoding-storage-p5-s3-deep',
+      id: 'memory-encoding-storage-p5-s5-problems',
       type: 'text' as const,
       content: `
-      ## Deep Dive: Comparing Explanations with Evidence
+### 📚 When Storage Goes Right or Wrong
 
-      When analyzing neuroscience evidence on hippocampal consolidation, the best interpretation ties a clear psychological mechanism to measurable evidence.
+The AP framework notes that storage can be unusually strong in some people and weakened by physical impairment or development in others.
 
-      | Theory / Concept | Core claim | Typical evidence | Common limitation |
-      |---|---|---|---|
-      | procedural memory | memory for skills and actions | experimental manipulation with random assignment | possible demand characteristics |
-      | spacing effect | improved retention when practice is distributed over time | longitudinal trend with repeated measurement | third-variable risk in natural settings |
-      | sensory memory | brief retention of sensory information | cross-sectional comparison with matched groups | limited generalizability across cultures |
-      | working memory | active short-term processing system with limited capacity | mixed-method evidence combining survey and behavioral indicators | measurement validity depends on construct quality |
+**Highly superior autobiographical memory (HSAM).** A small number of people can recall the events of nearly every day of their lives, often including the date and day of the week. The first case was described in 2006. On many standard laboratory memory tests, such as memorizing word lists, people with HSAM score about average, so their ability is specific to **autobiographical** memory. Researchers have reported some differences in their brain structure, which suggests there may be biological processes for superior memory storage.
 
-      ### Interpretation Strategy
-      1. Name the mechanism before describing outcomes.
-      2. Match the claim to the strongest available evidence type.
-      3. Acknowledge one limitation and explain whether it changes the conclusion.
+**Storage problems:**
 
-      This structure helps you earn reasoning points on free-response and avoid vague claims.
+| Condition | What is lost | Example |
+|------|-----------|-----------|
+| **Anterograde amnesia** | The ability to form **new** long-term memories after the damage | A patient can describe her childhood but cannot remember a nurse she met an hour ago |
+| **Retrograde amnesia** | Memories from **before** the damage, often the most recent ones | After a concussion, a player cannot remember the plays leading up to the hit |
+| **Alzheimer's disease** | A progressive brain disease that begins with trouble forming new memories and spreads to older memories, language and daily functioning; the hippocampus is among the first areas affected, and acetylcholine-producing neurons are lost | A grandfather repeats the same question several times in a visit, and years later no longer recognizes family members |
+| **Infantile amnesia** | Most adults have few or no memories from before about age 3 to 4 | You cannot remember your second birthday party, even though you were there |
+
+**Why infantile amnesia happens (developmental limitations):** the hippocampus and frontal lobes are still maturing in early childhood, and young children have limited language and a limited sense of self with which to organize autobiographical events.
+
+### ⚠️ Misconceptions to Avoid
+
+| Misconception | Correction |
+|------|-----------|
+| "Memory works like a video recorder." | Memories are encoded selectively and stored as meaning, not as complete recordings |
+| "Short-term memory means anything from earlier today." | In psychology, short-term memory lasts seconds; this morning's breakfast is long-term memory |
+| "Amnesia means forgetting who you are." | Most amnesia affects memory for events and new learning; identity and skills are usually preserved |
+| "People with amnesia cannot learn anything new." | Many can still learn new procedural skills even when explicit learning fails |
+| "Remembering your earliest years is a sign of a great memory." | Infantile amnesia is normal and reflects brain and language development |
       `
     },
     {
-      id: 'memory-encoding-storage-p5-s4-input',
-      type: 'input-boxes' as const,
-      content: `
-      **Applied Recall (exact term answers)** ✍️
-
-      1) Write the concept that matches: memory for skills and actions
-
-      2) Write the concept that matches: improved retention when practice is distributed over time
-
-      3) Write the concept that matches: brief retention of sensory information
-
-      Use the exact vocabulary term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['procedural memory', 'spacing effect', 'sensory memory'],
-        hint1: 'Starts with: P',
-        hint2: 'Starts with: S',
-        hint3: 'Starts with: S',
-        explanation: 'Expected answers: procedural memory, spacing effect, and sensory memory. Each response should use the precise term connected to the definition cue.'
-      }
-    },
-    {
-      id: 'memory-encoding-storage-p5-s5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-      **Model Matching** 🔎
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Select the concept that best matches: memory for skills and actions',
-            options: ['encoding', 'working memory', 'procedural memory', 'sensory memory']
-          },
-          {
-            label: 'Select the concept that best matches: improved retention when practice is distributed over time',
-            options: ['working memory', 'encoding', 'long-term memory', 'spacing effect']
-          },
-          {
-            label: 'Select the concept that best matches: brief retention of sensory information',
-            options: ['working memory', 'sensory memory', 'encoding', 'spacing effect']
-          }
-        ],
-        correctAnswers: ['procedural memory', 'spacing effect', 'sensory memory'],
-        hint1: 'Start by matching the key mechanism in each prompt to the most specific concept.',
-        hint2: 'Eliminate options that describe a different level of analysis (biological vs cognitive vs social).',
-        hint3: 'Use the definition language from this part to avoid near-miss terms.',
-        explanation: 'Correct matches are procedural memory, spacing effect, and sensory memory. These choices align with the mechanism-language in each definition, not just broad topic similarity.'
-      }
-    },
-    {
-      id: 'memory-encoding-storage-p5-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ## Common Misconceptions and Exam Strategy
-
-      ### Misconceptions to Avoid
-      - Rereading feels fluent but often produces weaker long-term retention than retrieval practice.
-      - Working memory capacity is limited and context dependent.
-      - Encoding strength matters more than time spent passively reviewing.
-      - Storage and retrieval failures can look similar unless tested carefully.
-
-      ### AP Strategy Moves
-      - Define the target concept in one precise sentence before giving examples.
-      - In scenario questions about neuroscience evidence on hippocampal consolidation, identify the manipulated variable and measured outcome.
-      - Use one competing explanation and explain why it is weaker.
-      - If data are provided, mention trend direction and at least one design limitation.
-
-      This combination of precision and evidence improves both multiple-choice accuracy and free-response scoring.
-      `
-    },
-    {
-      id: 'memory-encoding-storage-p5-s7-applied',
+      id: 'memory-encoding-storage-p5-s6-applied',
       type: 'multiple-choice' as const,
       content: `
-      **Applied Scenarios** 🎯
+**Applied Scenarios** 🔬
       `,
       exercise: {
         questions: [
           {
-            question: 'A team investigating neuroscience evidence on hippocampal consolidation finds that participants rely on a persuasive cue when they are distracted, but use argument quality when they are highly focused. Which concept best captures the focused-processing route?',
+            question: 'After a car accident, Jordan remembers everything from the hospital stay onward but has no memory of the week before the crash. Which condition does this describe?',
             options: [
-              'sensory memory',
-              'working memory',
-              'spacing effect',
-              'procedural memory'
+              'Anterograde amnesia',
+              'Infantile amnesia',
+              'Retrograde amnesia',
+              'Alzheimer\'s disease'
             ],
-            correctAnswer: 1,
-            explanation: 'working memory is best because it reflects this mechanism (active short-term processing system with limited capacity). The other options describe different levels of explanation or related constructs.'
+            correctAnswer: 2,
+            explanation: 'Losing memories formed before an injury, while still forming new memories normally, is retrograde amnesia. Anterograde amnesia would mean trouble forming memories after the accident.'
           },
           {
-            question: 'After an intervention, scores improve in the treatment group but not in a matched comparison group. Which interpretation is most defensible for the targeted mechanism?',
+            question: 'A researcher writes a detailed report on one woman with highly superior autobiographical memory, based on years of interviews and testing. What is the main limitation of this method?',
             options: [
-              'spacing effect',
-              'sensory memory',
-              'encoding',
-              'long-term memory'
+              'Findings from one unusual person may not generalize to other people',
+              'The researcher cannot measure any memory abilities in a single person',
+              'Interviews are unethical without random assignment to conditions',
+              'A single participant makes the results impossible to describe in detail'
             ],
-            correctAnswer: 3,
-            explanation: 'long-term memory is the strongest interpretation because it maps to the measured pattern and proposed mechanism: relatively enduring store of knowledge, skills, and experiences. Good AP reasoning also notes alternative explanations and design limits.'
+            correctAnswer: 0,
+            explanation: 'A case study gives rich detail about one person, but that person is unusual by definition, so the findings may not apply to others and cannot establish cause and effect. Random assignment is a feature of experiments, not an ethical requirement for interviews.'
+          },
+          {
+            question: 'A 5-year-old can describe her trip to the zoo last month in detail, but as an adult she will probably remember nothing from that trip. Which explanation best fits the AP framework?',
+            options: [
+              'Her memories are stored in iconic memory, which empties as she ages',
+              'Developmental limitations in early childhood weaken long-term storage',
+              'She has retrograde amnesia caused by normal brain growth in childhood',
+              'Her working memory lacks a phonological loop until she learns to read'
+            ],
+            correctAnswer: 1,
+            explanation: 'Infantile amnesia reflects developmental limitations: the brain systems and the language and self-concept that organize autobiographical memory are still maturing, so early memories rarely last into adulthood. Retrograde amnesia refers to memory loss caused by damage, not normal development.'
           }
         ]
       }

@@ -5,184 +5,238 @@ export const psychMotivationPart6Data = {
       id: 'motivation-theories-p6-s1-intro',
       type: 'text' as const,
       content: `
-      # 🧠 Motivation Theories
+# 🧠 Motivation Theories
 
-      **Part 6 of 7 — Applied Performance Cases**
+**Part 6 of 7 — Eating and Belongingness**
 
-      In this part, you will connect core psychological vocabulary to realistic contexts and AP-style reasoning. Focus on mechanism first, then evidence.
+You eat lunch at noon even on days you had a late breakfast, and you keep reaching for chips at a party long after you stopped feeling hungry. Eating is one of the clearest places to see body and mind working together, and the need to belong is one of the strongest motives humans have.
 
-      ### Core Definitions
-      - **drive-reduction theory**: motivation to reduce physiological tension and restore homeostasis
-      - **incentive theory**: motivation shaped by external rewards and consequences
-      - **expectancy-value theory**: motivation depends on expected success and value of outcome
+### 📚 Eating: A Complex Motivated Behavior
 
-      ### Concrete Real-World Example
-      A team is studying interpreting intervention outcomes in motivation research. They operationalize variables, compare plausible explanations, and look for the interpretation that best matches observed behavior instead of relying on intuition.
+The CED describes eating as **a complex motivated behavior that demonstrates how physical and mental processes interact.** Two kinds of influences work together:
 
-      ### Why This Matters
-      Strong AP responses define terms precisely, apply them to evidence, and justify why one interpretation is stronger than alternatives.
+| Influence | What it includes | Theory it connects to |
+|------|-----------|-----------|
+| **Internal (physical) signals** | Hormones that signal hunger and fullness, regulated by the brain | Drive-reduction theory and homeostasis (Part 1) |
+| **External factors** | The presence of food, the time of day, social gatherings around meals | Incentive theory (Part 4) and learning |
+
+### Hunger and Satiety Hormones
+
+The CED names two hormones for eating: **ghrelin** and **leptin**, **regulated by the hypothalamus via the pituitary gland.**
+
+| Hormone | Where it comes from | Main effect | When levels rise |
+|------|-----------|-----------|-----------|
+| **Ghrelin** | Released mainly by the stomach | Increases **hunger**; signals "time to eat" | When the stomach is empty and before usual mealtimes; levels fall after eating |
+| **Leptin** | Released by fat cells | Promotes **satiety** (the feeling of fullness) and reduces appetite over time; signals that the body's energy stores are sufficient | When the body's fat stores increase |
+
+A memory trick: **gh**relin makes you **g**rowl with hunger; **le**ptin helps you **le**ave the table.
+
+### The Hypothalamus and the Pituitary
+
+The **hypothalamus**, a limbic system structure, monitors the body's internal state and regulates hunger, thirst and body temperature. It works with the **pituitary gland**, which it controls, to keep these systems in balance. In drive-reduction terms, these signals create and then reduce the **hunger drive**, keeping energy in **homeostasis**.
+
+### Other Hormones You Know
+
+Only five hormones are in the AP Psychology course. Two others connect to this topic:
+
+| Hormone | Connection to motivation |
+|------|-----------|
+| **Adrenaline** | Raises arousal during challenges (the Yerkes-Dodson law in Part 2) |
+| **Oxytocin** | Associated with social bonding and trust, which links to belongingness below |
+
+*(The fifth, **melatonin**, regulates sleep.)*
       `
     },
     {
       id: 'motivation-theories-p6-s2-check',
       type: 'multiple-choice' as const,
       content: `
-      **Concept Check** 🎯
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'In a study about interpreting intervention outcomes in motivation research, participants change behavior after repeatedly seeing the same cue. Which concept is the best fit?',
+            question: 'Kai has not eaten since breakfast, and it is now late afternoon. His stomach is empty and he feels intensely hungry. Which hormonal change most likely contributes to this feeling?',
             options: [
-              'self-determination theory',
-              'expectancy-value theory',
-              'drive-reduction theory',
-              'incentive theory'
+              'A rise in leptin',
+              'A rise in ghrelin',
+              'A drop in ghrelin',
+              'A rise in melatonin'
             ],
-            correctAnswer: 2,
-            explanation: 'drive-reduction theory is correct because it directly matches this mechanism: motivation to reduce physiological tension and restore homeostasis. The distractors describe related but different processes.'
+            correctAnswer: 1,
+            explanation: 'Ghrelin is released mainly by an empty stomach and increases hunger, so a rise in ghrelin fits Kai\'s situation. Leptin promotes fullness, a drop in ghrelin would reduce hunger and melatonin regulates sleep.'
           },
           {
-            question: 'Researchers report that behavior shifts when participants receive a specific cue and then justify their choices afterward. Which concept best explains that pattern?',
+            question: 'In a laboratory study, mice that cannot produce leptin eat far more than typical mice and become very heavy. Which explanation fits the role of leptin best?',
             options: [
-              'incentive theory',
-              'expectancy-value theory',
-              'extrinsic motivation',
-              'intrinsic motivation'
+              'Without leptin, the brain gets no signal that energy stores are already sufficient',
+              'Without leptin, the stomach releases no hormone that signals it is time to eat',
+              'Without leptin, the body produces too little adrenaline to burn the extra energy',
+              'Without leptin, the brain can no longer tell that it is the usual time for meals'
             ],
-            correctAnswer: 3,
-            explanation: 'intrinsic motivation is the strongest match here (engaging in an activity for inherent interest or enjoyment). The other options do not explain both the cue-driven shift and the observed response pattern as directly.'
+            correctAnswer: 0,
+            explanation: 'Leptin, released by fat cells, signals that the body has enough stored energy and helps reduce appetite. Without that signal, the brain behaves as if stores are low, so the mice keep eating. The stomach hunger signal is ghrelin, not leptin, and adrenaline and mealtime cues are not leptin\'s role.'
           }
         ]
       }
     },
     {
-      id: 'motivation-theories-p6-s3-deep',
+      id: 'motivation-theories-p6-s3-external',
       type: 'text' as const,
       content: `
-      ## Deep Dive: Comparing Explanations with Evidence
+### 📚 External Factors in Eating
 
-      When analyzing interpreting intervention outcomes in motivation research, the best interpretation ties a clear psychological mechanism to measurable evidence.
+The CED states that **external factors like the presence of food, time of day, or social gatherings around meals also influence the behavior of eating.** These factors explain eating that has little to do with an energy need.
 
-      | Theory / Concept | Core claim | Typical evidence | Common limitation |
-      |---|---|---|---|
-      | drive-reduction theory | motivation to reduce physiological tension and restore homeostasis | experimental manipulation with random assignment | possible demand characteristics |
-      | incentive theory | motivation shaped by external rewards and consequences | longitudinal trend with repeated measurement | third-variable risk in natural settings |
-      | expectancy-value theory | motivation depends on expected success and value of outcome | cross-sectional comparison with matched groups | limited generalizability across cultures |
-      | self-determination theory | autonomy, competence, and relatedness support intrinsic motivation | mixed-method evidence combining survey and behavioral indicators | measurement validity depends on construct quality |
+| External factor | How it affects eating | Example |
+|------|-----------|-----------|
+| **Presence of food** | Seeing or smelling food, and having it within reach, prompts eating; larger portions tend to lead people to eat more | Eating more popcorn from a large tub than a small bag at the same movie |
+| **Time of day** | Through learning, regular mealtimes become cues for eating, and people often feel hungry at their usual times | Feeling hungry at noon because that is when lunch usually happens |
+| **Social gatherings** | People tend to eat more, and for longer, when eating with others; meals are woven into family and cultural traditions | Eating a second helping at a holiday dinner because everyone is still at the table |
 
-      ### Interpretation Strategy
-      1. Name the mechanism before describing outcomes.
-      2. Match the claim to the strongest available evidence type.
-      3. Acknowledge one limitation and explain whether it changes the conclusion.
+Learning also shapes **what** people want to eat. Food preferences differ widely across cultures and families, which is more evidence that eating is not driven by biology alone.
 
-      This structure helps you earn reasoning points on free-response and avoid vague claims.
+### Worked Example: One Meal, Two Kinds of Influence
+
+*Scenario: At a family holiday dinner, Ines eats a full plate and feels satisfied. Twenty minutes later, her uncle brings out her favorite pie, everyone starts a second round and she eats a large slice.*
+
+1. **Internal signals:** During the first plate, rising fullness signals and falling hunger signals reduced her hunger drive. By the end of the plate, she had no physical need for more food.
+2. **External factors:** The **presence** of a favorite food and the **social gathering** around the table pulled her to keep eating.
+3. **Theory link:** Drive-reduction theory explains the first plate; incentive theory and external eating cues explain the pie.
+4. **Big idea:** Eating is a clear case of physical and mental processes **interacting**. Neither alone explains everything she ate.
+
+### 📚 Belongingness: The Need to Belong
+
+The CED learning objective asks you to explain how eating **and belongingness** motivate behavior. Psychologists Roy Baumeister and Mark Leary argued that humans have a fundamental **need to belong**: a motive to form and keep close, lasting, positive relationships.
+
+| Evidence or pattern | What it shows |
+|------|-----------|
+| **People form groups easily** | Even strangers placed on arbitrary teams quickly feel loyalty to their group |
+| **Exclusion hurts** | In "Cyberball" experiments, participants who are left out of a simple online ball-tossing game by other "players" (actually a computer program) report lower mood and a weaker sense of belonging, even after a few minutes |
+| **People resist losing relationships** | People often maintain ties even when it is costly or inconvenient |
+| **Loneliness is linked to health** | Chronic social isolation is associated with poorer physical and mental health |
+
+The need to belong helps explain behavior covered elsewhere in the course: **conformity** to fit in with a group, working hard for a team, and the distress of social rejection. **Oxytocin** is associated with social bonding, one biological piece of belonging.
+
+> **AP Connection:** Cyberball studies use **deception**: participants believe they are playing with real people. Ethical guidelines allow deception only when it is necessary and the risk is minimal, and they require a full **debriefing** afterward that explains the deception and helps participants leave in a good state.
       `
     },
     {
-      id: 'motivation-theories-p6-s4-input',
+      id: 'motivation-theories-p6-s4-aaq-data',
       type: 'input-boxes' as const,
       content: `
-      **Applied Recall (exact term answers)** ✍️
+**AAQ Practice Study** 📋
 
-      1) Write the concept that matches: motivation to reduce physiological tension and restore homeostasis
+*Practice study (not a real citation).* Researchers hypothesized that eating with others increases how much people eat. They recruited 80 undergraduates at one large university. Participants were told the study was about "rating the taste of new menu items." Each participant was **randomly assigned** to eat a buffet lunch either **alone** or **at a table with three other participants**. Researchers weighed each plate before and after the meal and converted the food eaten into **calories consumed**.
 
-      2) Write the concept that matches: motivation shaped by external rewards and consequences
+| Condition | Mean calories consumed | Standard deviation |
+|------|------|------|
+| Alone | 620 | 150 |
+| With three others | 780 | 160 |
 
-      3) Write the concept that matches: motivation depends on expected success and value of outcome
-
-      Use the exact vocabulary term from this part.
+All participants gave informed consent, could stop at any time and were told the true purpose of the study after the meal.
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['drive-reduction theory', 'incentive theory', 'expectancy-value theory'],
-        hint1: 'Starts with: D',
-        hint2: 'Starts with: I',
-        hint3: 'Starts with: E',
-        explanation: 'Expected answers: drive-reduction theory, incentive theory, and expectancy-value theory. Each response should use the precise term connected to the definition cue.'
+        questions: [
+          {
+            question: 'By how many calories did the mean for the "with three others" group exceed the mean for the "alone" group?',
+            answer: '160',
+            acceptableAnswers: ['160', '160 calories'],
+            explanation: '780 - 620 = 160 calories. On average, participants who ate with others consumed 160 more calories.'
+          },
+          {
+            question: 'Telling participants the study was about "rating the taste of new menu items" is an example of ___, which ethical guidelines allow only with a debriefing afterward.',
+            answer: 'deception',
+            acceptableAnswers: ['deception', 'deceiving participants'],
+            explanation: 'The cover story hid the true purpose, which is deception. The researchers addressed it by debriefing participants after the meal.'
+          }
+        ]
       }
     },
     {
-      id: 'motivation-theories-p6-s5-dropdown',
-      type: 'dropdown-select' as const,
+      id: 'motivation-theories-p6-s5-aaq',
+      type: 'multiple-choice' as const,
       content: `
-      **Model Matching** 🔎
+**AAQ-Style Questions** 🔬
+
+Answer these questions about the practice study above.
       `,
       exercise: {
-        dropdowns: [
+        questions: [
           {
-            label: 'Select the concept that best matches: motivation to reduce physiological tension and restore homeostasis',
-            options: ['incentive theory', 'drive-reduction theory', 'extrinsic motivation', 'intrinsic motivation']
+            question: 'Which research method did the researchers use?',
+            options: [
+              'A correlational study',
+              'An experiment',
+              'A naturalistic observation',
+              'A case study'
+            ],
+            correctAnswer: 1,
+            explanation: 'The researchers manipulated whether participants ate alone or with others and randomly assigned participants to those conditions, which makes it an experiment. A correlational study or naturalistic observation would measure eating without assigning conditions, and a case study examines one person in depth.'
           },
           {
-            label: 'Select the concept that best matches: motivation shaped by external rewards and consequences',
-            options: ['incentive theory', 'expectancy-value theory', 'drive-reduction theory', 'extrinsic motivation']
+            question: 'How was the dependent variable operationally defined?',
+            options: [
+              'As how hungry participants said they felt before the lunch began',
+              'As whether each participant ate alone or with three other participants',
+              'As calories consumed, based on weighing each plate before and after',
+              'As the taste ratings participants gave to each of the new menu items'
+            ],
+            correctAnswer: 2,
+            explanation: 'The study measured eating as calories consumed, calculated from plate weights before and after the meal. Eating alone vs. with others is the independent variable, and hunger ratings and taste ratings were not the outcome the hypothesis concerned.'
           },
           {
-            label: 'Select the concept that best matches: motivation depends on expected success and value of outcome',
-            options: ['extrinsic motivation', 'incentive theory', 'intrinsic motivation', 'expectancy-value theory']
+            question: 'Which statement best describes a limit on the generalizability of the findings?',
+            options: [
+              'Only undergraduates at a single university eating lunch were studied',
+              'Participants were randomly assigned to one of the two conditions',
+              'The researchers measured calories rather than asking about hunger',
+              'The two groups had similar standard deviations in calories eaten'
+            ],
+            correctAnswer: 0,
+            explanation: 'The sample was limited to undergraduates at one university at a single meal, so the effect may differ for other ages, cultures or meals. Random assignment strengthens the causal conclusion, an objective calorie measure is a strength and similar standard deviations do not limit generalization.'
+          },
+          {
+            question: 'Do the results support or refute the hypothesis, and why?',
+            options: [
+              'They refute it, since the alone group showed less variability in calories eaten',
+              'The data support it, since the group condition ate more calories on average',
+              'The hypothesis is refuted, since the mean difference was smaller than either standard deviation',
+              'Supported, since every participant in a group ate more than every solo eater'
+            ],
+            correctAnswer: 1,
+            explanation: 'The hypothesis predicted more eating with others, and the group condition consumed 160 more calories on average, which supports it. Variability does not test the hypothesis, the difference can be meaningful even when smaller than the standard deviations, and means do not show that every group participant outate every solo participant.'
           }
-        ],
-        correctAnswers: ['drive-reduction theory', 'incentive theory', 'expectancy-value theory'],
-        hint1: 'Start by matching the key mechanism in each prompt to the most specific concept.',
-        hint2: 'Eliminate options that describe a different level of analysis (biological vs cognitive vs social).',
-        hint3: 'Use the definition language from this part to avoid near-miss terms.',
-        explanation: 'Correct matches are drive-reduction theory, incentive theory, and expectancy-value theory. These choices align with the mechanism-language in each definition, not just broad topic similarity.'
+        ]
       }
     },
     {
       id: 'motivation-theories-p6-s6-strategy',
       type: 'text' as const,
       content: `
-      ## Common Misconceptions and Exam Strategy
+### 🎯 AP Strategy: Eating and Belongingness
 
-      ### Misconceptions to Avoid
-      - Extrinsic rewards can help or hurt motivation depending on how they are framed.
-      - High arousal is not always beneficial; task complexity changes the optimal level.
-      - Motivation is dynamic and can change with feedback, context, and goals.
-      - Value without expectancy, or expectancy without value, often yields weak persistence.
+**Quick decision guide**
 
-      ### AP Strategy Moves
-      - Define the target concept in one precise sentence before giving examples.
-      - In scenario questions about interpreting intervention outcomes in motivation research, identify the manipulated variable and measured outcome.
-      - Use one competing explanation and explain why it is weaker.
-      - If data are provided, mention trend direction and at least one design limitation.
+- Empty stomach, hunger before meals → **ghrelin**
+- Fullness, enough stored energy, reduced appetite → **leptin**
+- The brain region that regulates hunger and works through the pituitary → **hypothalamus**
+- Eating because food is there, because it is noon or because everyone else is eating → **external factors**
+- Seeking acceptance, distress at being left out, joining groups → **need to belong**
 
-      This combination of precision and evidence improves both multiple-choice accuracy and free-response scoring.
+**How to write the AAQ parts for a study like the one above**
+
+| AAQ part | What a full-credit answer does | Example from the practice study |
+|------|-----------|-----------|
+| Research method | Names it and gives the reason | Experiment: eating condition was manipulated and participants were randomly assigned |
+| Operational definition | Gives the measurable procedure | Calories consumed, from plate weights before and after the meal |
+| Statistic | Says what the number shows in context | The group condition ate 160 more calories on average |
+| Ethics | Names the guideline and how it was applied | Debriefing: participants were told the true purpose after the meal |
+| Generalizability | Uses the sample or setting as evidence | Only undergraduates at one university, at one lunch |
+| Support or refute | States the direction and cites the result | Supports: the mean was higher with others |
+
+> **AP Connection:** Do not write that a study "proves" a hypothesis. Write that the results **support** it and cite the specific difference.
       `
-    },
-    {
-      id: 'motivation-theories-p6-s7-applied',
-      type: 'multiple-choice' as const,
-      content: `
-      **Applied Scenarios** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A team investigating interpreting intervention outcomes in motivation research finds that participants rely on a persuasive cue when they are distracted, but use argument quality when they are highly focused. Which concept best captures the focused-processing route?',
-            options: [
-              'expectancy-value theory',
-              'self-determination theory',
-              'drive-reduction theory',
-              'incentive theory'
-            ],
-            correctAnswer: 1,
-            explanation: 'self-determination theory is best because it reflects this mechanism (autonomy, competence, and relatedness support intrinsic motivation). The other options describe different levels of explanation or related constructs.'
-          },
-          {
-            question: 'After an intervention, scores improve in the treatment group but not in a matched comparison group. Which interpretation is most defensible for the targeted mechanism?',
-            options: [
-              'incentive theory',
-              'expectancy-value theory',
-              'extrinsic motivation',
-              'intrinsic motivation'
-            ],
-            correctAnswer: 3,
-            explanation: 'intrinsic motivation is the strongest interpretation because it maps to the measured pattern and proposed mechanism: engaging in an activity for inherent interest or enjoyment. Good AP reasoning also notes alternative explanations and design limits.'
-          }
-        ]
-      }
     }
   ]
 }
