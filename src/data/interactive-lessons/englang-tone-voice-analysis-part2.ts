@@ -5,171 +5,232 @@ export const englangToneVoiceAnalysisPart2Data = {
       id: 'englangt2-intro',
       type: 'text' as const,
       content: `
-# ✍️ Tone & Voice Analysis
+# 🎙️ Tone and Voice Analysis
 
-**Part 2 of 7 — Key Processes**
+**Part 2 of 7 — Voice in Depth: Persona, Register, and Stevenson's "An Apology for Idlers"**
 
-Understanding the processes related to Tone & Voice Analysis helps explain how and why patterns develop. This part explores the mechanisms driving key phenomena.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| What a Voice Is Made Of |
+| Persona: The Writer on the Page |
+| 📖 Close Reading: Stevenson, 1877 |
+| How the Voice Serves the Argument |
 
-| Concept | Description |
-|---------|-------------|
-| **Process 1** | The primary mechanism that drives patterns in Tone & Voice Analysis |
-| **Process 2** | A secondary process that shapes outcomes in Tone & Voice Analysis |
-| **Cause and effect** | The relationship between actions and outcomes in Tone & Voice Analysis |
-      `
+> 🔑 **Key Concept:** Part 1 separated **tone** (an attitude at a given moment) from **voice** (the stable personality a text projects). This part takes voice apart. A voice is not a mysterious gift; it is the sum of repeated choices in diction, syntax, address, and humor. Because those choices are deliberate, a voice is also a rhetorical strategy: it shapes how much the audience trusts and listens to the writer.
+`
+    },
+    {
+      id: 'englangt2-components',
+      type: 'text' as const,
+      content: `
+## What a Voice Is Made Of
+
+| Component | Question to ask | What to look for |
+|---|---|---|
+| **Register** | How formal is the language? | Latinate vs plain words, contractions, slang, technical terms |
+| **Sentence habits** | What do the sentences tend to do? | Long and balanced, short and blunt, many qualifications, frequent questions |
+| **Relationship to the reader** | How close does the writer stand to us? | "I," "you," "we"; direct address; confiding asides |
+| **Stance toward opponents** | How does the writer treat other views? | Respectful concession, mockery, silence |
+| **Habitual figures** | Which devices keep returning? | Irony, understatement, aphorism, allusion, exaggeration |
+| **Persona** | Who is the writer presenting himself or herself as? | Expert, witness, friend, rebel, mentor |
+
+### Voice, Tone, and Style
+
+| Term | What it names | Scale |
+|---|---|---|
+| **Style** | The writer's pattern of choices in language | Whole text (the "how") |
+| **Voice** | The personality those choices project | Whole text (the "who") |
+| **Tone** | The attitude toward subject or audience at a given point | Sentence, paragraph, or whole text |
+
+A writer can keep one voice while the tone changes. A wry, conversational voice can be amused in one paragraph and indignant in the next.
+
+## Persona: The Writer on the Page
+
+A **persona** is the version of the self a writer presents to the reader. It is constructed, not simply reported. The same person can write as a cautious expert in a report and as an amused friend in an essay.
+
+| Same claim | Persona | Voice |
+|---|---|---|
+| "Students need unstructured time; overscheduling reduces creativity." | Researcher | Impersonal, formal, compressed |
+| "I learned more in one lazy August than in a year of enrichment classes." | Reminiscing adult | Personal, warm, anecdotal |
+| "Nothing builds character like a fourth after-school club, or so we are told." | Ironist | Dry, mocking, understated |
+
+> 🔑 **AP Connection:** The CED asks you to explain how a writer's choices respond to the **audience**. Persona is one of those choices. A writer arguing an unpopular position often adopts a persona that disarms resistance, such as a modest, amused, or self-mocking one.
+`
     },
     {
       id: 'englangt2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key process in Tone & Voice Analysis?',
+            question: 'A writer uses contractions, addresses the reader as "you," and tells small stories about her own mistakes. These choices most directly create',
             options: [
-              'A random event',
-              'A systematic mechanism that produces predictable patterns',
-              'An unexplainable phenomenon',
-              'A one-time occurrence'
+              'an impersonal voice that keeps the reader at a distance',
+              'a confiding voice that brings the reader near',
+              'a tone shift from detachment to open hostility',
+              'a formal register suited to a specialist audience'
             ],
             correctAnswer: 1,
-            explanation: 'Key processes are systematic mechanisms that produce identifiable, often predictable patterns.'
+            explanation: 'Direct address, contractions, and self-disclosure bring the writer close to the reader, which produces a confiding, conversational voice. Nothing here is impersonal, formal, or hostile.'
           },
           {
-            question: 'Understanding cause and effect in Tone & Voice Analysis helps students:',
+            question: 'Which statement about persona is most accurate?',
             options: [
-              'Memorize dates',
-              'Explain why patterns exist rather than just describing them',
-              'Avoid analysis',
-              'Skip exam questions'
+              'It is a self that the writer constructs to suit a purpose and audience.',
+              'It is the writer\'s actual personality, recorded without any adjustment.',
+              'It appears only in fiction, where a narrator differs from the author.',
+              'It is a synonym for the writer\'s tone in the final paragraph.'
             ],
-            correctAnswer: 1,
-            explanation: 'Cause-and-effect reasoning helps explain WHY patterns exist — a higher-order skill tested on the AP exam.'
+            correctAnswer: 0,
+            explanation: 'A persona is constructed: writers choose which version of themselves to present. Nonfiction writers build personas as much as novelists do, and a persona is a stable presence rather than a single paragraph\'s attitude.'
           }
         ]
       }
     },
     {
-      id: 'englangt2-content',
+      id: 'englangt2-passage',
       type: 'text' as const,
       content: `
-## Key Processes — Deeper Dive
+## 📖 Close Reading: Stevenson, "An Apology for Idlers" (1877)
 
-### Process 1
-The primary mechanism that drives patterns in Tone & Voice Analysis. Understanding this concept is essential for mastering Tone & Voice Analysis in AP English Language.
+### The Situation
 
-### Process 2
-A secondary process that shapes outcomes in Tone & Voice Analysis. This builds on the previous concept and connects to broader themes in the course.
+| Component | Details |
+|---|---|
+| **Writer** | Robert Louis Stevenson, then in his twenties, who had studied engineering and law at Edinburgh before turning to writing |
+| **Publication** | *The Cornhill Magazine*, July 1877; collected in *Virginibus Puerisque* (1881) |
+| **Audience** | Educated Victorian magazine readers who valued industry, diligence, and professional success |
+| **Exigence** | A culture that treats every hour not spent on a "lucrative profession" as wasted |
+| **Purpose** | To defend a kind of "idleness" that is really learning outside schools and offices |
 
-### Cause and effect
-The relationship between actions and outcomes in Tone & Voice Analysis. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
-      `
+An **apology** here means a formal defense (as in Plato's *Apology*), not an expression of regret. Stevenson's title already announces the persona: a cheerful defendant pleading an unpopular case.
+
+> JUST now, when every one is bound, under pain of a decree in absence convicting them of *lèse*-respectability, to enter on some lucrative profession, and labour therein with something not far short of enthusiasm, a cry from the opposite party who are content when they have enough, and like to look on and enjoy in the meanwhile, savours a little of bravado and gasconade.
+>
+> ...
+>
+> Books are good enough in their own way, but they are a mighty bloodless substitute for life.
+>
+> ...
+>
+> If you look back on your own education, I am sure it will not be the full, vivid, instructive hours of truantry that you regret; you would rather cancel some lack-lustre periods between sleep and waking in the class. For my own part, I have attended a good many lectures in my time. I still remember that the spinning of a top is a case of Kinetic Stability. I still remember that Emphyteusis is not a disease, nor Stillicide a crime. But though I would not willingly part with such scraps of science, I do not set the same store by them as by certain other odds and ends that I came by in the open street while I was playing truant.
+>
+> — Robert Louis Stevenson, "An Apology for Idlers," text from *Virginibus Puerisque* (1881)
+`
+    },
+    {
+      id: 'englangt2-reading',
+      type: 'text' as const,
+      content: `
+### Choice 1: Mock-Legal Diction
+
+"Under pain of a decree in absence convicting them of *lèse*-respectability" borrows the language of a courtroom. *Lèse-majesté* is the crime of insulting a monarch; Stevenson coins a crime of insulting respectability. The joke treats the pressure to choose a profession as a tyranny with its own law courts, so the reader laughs at the pressure before the argument has even begun.
+
+### Choice 2: Self-Mockery That Lowers the Reader's Guard
+
+He admits that the idlers' cry "savours a little of bravado and gasconade" (boastful bluster). By conceding that his side can sound like showing off, he sounds fair and unthreatening. A reader who expected a lazy man's excuse meets a writer who laughs at himself first.
+
+### Choice 3: The Aphorism
+
+"Books are good enough in their own way, but they are a mighty bloodless substitute for life." The sentence concedes first ("good enough in their own way"), then turns on "but." The plain, slightly old-fashioned intensifier "mighty" sits next to the startling "bloodless," a word usually used for corpses or the faint-hearted. The voice is relaxed, yet the judgment is sharp.
+
+### Choice 4: Direct Address and Shared Memory
+
+"If you look back on your own education, I am sure..." pulls the reader into the argument as a witness. Stevenson does not prove that classes were dull; he asks readers to remember their own "lack-lustre periods between sleep and waking."
+
+### Choice 5: Mock-Pedantry
+
+| Line | What it is | Effect |
+|---|---|---|
+| "the spinning of a top is a case of Kinetic Stability" | A scrap from a physics lecture | Capital letters make it sound grander than it is |
+| "Emphyteusis is not a disease" | Emphyteusis is a long lease in Roman law | The learned word is remembered only as what it is not |
+| "nor Stillicide a crime" | Stillicide is the right to let rainwater drip from one's eaves onto a neighbor's land | Same pattern, same joke |
+
+The repeated "I still remember" sounds proud while proving the point: years of lectures have left a few odd definitions, one of which he can state only in the negative. The joke **is** the evidence.
+
+## How the Voice Serves the Argument
+
+| Feature of the voice | Rhetorical work it does |
+|---|---|
+| Playful, mock-legal diction | Makes the reigning ideal of industry look pompous |
+| Self-mockery and concession | Disarms readers who distrust "idlers" |
+| Direct address | Turns readers' own memories into evidence |
+| Aphorism | Gives quotable, confident judgments |
+
+A Victorian reader who believed in hard work would bristle at a solemn attack on diligence. A witty, self-aware companion who only says there is "something to be said against it" is much harder to dismiss. The voice is the strategy.
+
+> 🔑 **AP Connection:** On Question 2, avoid sentences like "Stevenson has a humorous voice." Name the choices that build the voice, then explain what the voice **does** for this audience: "By treating professional ambition with mock-legal solemnity, Stevenson invites readers to laugh at the pressure they live under, which makes his defense of idleness sound reasonable rather than lazy."
+`
     },
     {
       id: 'englangt2-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the primary mechanism that drives patterns in Tone & Voice Analysis?
+1) The version of the self that a writer constructs and presents on the page is called a _______.
 
-2) What concept describes a secondary process that shapes outcomes in Tone & Voice Analysis?
+2) The level of formality in a writer's language (formal, informal, technical) is called _______.
 
-3) Name the term for the relationship between actions and outcomes in Tone & Voice Analysis.
-
-Use the exact term from this part.
+3) In Stevenson's title, "apology" means a formal _______ of a position.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Process 1', 'Process 2', 'Cause and effect'],
-        hint1: 'Starts with: P',
-        hint2: 'Starts with: P',
-        hint3: 'Starts with: C',
-        explanation: 'Expected answers: Process 1 (The primary mechanism that drives patterns in Tone & Voice Analysis), Process 2 (A secondary process that shapes outcomes in Tone & Voice Analysis), and Cause and effect (The relationship between actions and outcomes in Tone & Voice Analysis).'
+        correctAnswers: ['persona', 'register', 'defense'],
+        hint1: 'From the Latin word for a mask worn by an actor.',
+        hint2: 'A term borrowed from linguistics and music; it rises or falls.',
+        hint3: 'Think of Socrates speaking at his trial, not someone saying sorry.',
+        explanation: 'A persona is the constructed self of a text, register is its level of formality, and an apology in the classical sense is a defense.'
       }
     },
     {
-      id: 'englangt2-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Fill in the Blanks** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'The primary mechanism that drives patterns in Tone & Voice Analysis is called ___',
-            options: ['Process 1', 'Process 2', 'Cause and effect', 'Coincidence']
-          },
-          {
-            label: 'A secondary process that shapes outcomes in Tone & Voice Analysis describes ___',
-            options: ['Process 1', 'Process 2', 'Cause and effect', 'Coincidence']
-          },
-          {
-            label: 'The relationship between actions and outcomes in Tone & Voice Analysis is known as ___',
-            options: ['Cause and effect', 'Process 1', 'Process 2', 'Coincidence']
-          }
-        ],
-        correctAnswers: ['Process 1', 'Process 2', 'Cause and effect'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Process 1 — The primary mechanism that drives patterns in Tone & Voice Analysis. Process 2 — A secondary process that shapes outcomes in Tone & Voice Analysis. Cause and effect — The relationship between actions and outcomes in Tone & Voice Analysis.'
-      }
-    },
-    {
-      id: 'englangt2-strategy',
-      type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
-
-### Misconceptions to Avoid
-- Don\'t confuse **Process 1** with **Process 2** — while related, they address different aspects of Tone & Voice Analysis.
-- **Cause and effect** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about key processes, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect key processes to broader themes in AP English Language for higher scores.
-      `
-    },
-    {
-      id: 'englangt2-applied',
+      id: 'englangt2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Practice** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student observes a pattern and needs to explain the underlying process. They should:',
+            question: 'The phrase "a decree in absence convicting them of lèse-respectability" contributes to the passage chiefly by',
             options: [
-              'Just describe what they see',
-              'Identify the mechanism causing the pattern and explain how it operates',
-              'Say the pattern is random',
-              'Ignore the pattern'
+              'establishing the writer as a legal expert whose views on education deserve deference',
+              'mocking social pressure toward a profession by casting it as courtroom tyranny',
+              'reporting an actual law that punished young people who refused to choose a career',
+              'shifting from a playful voice to a grave one in order to warn the reader'
             ],
             correctAnswer: 1,
-            explanation: 'Explaining processes requires identifying the underlying mechanism, not just describing the observable pattern.'
+            explanation: 'The invented crime of offending respectability turns a social expectation into mock law, so the pressure looks pompous. No real law is described, the phrase jokes rather than claims expertise, and the voice stays playful.'
           },
           {
-            question: 'On the AP exam, process questions typically require students to:',
+            question: 'The sentence "I still remember that Emphyteusis is not a disease, nor Stillicide a crime" supports Stevenson\'s argument by',
             options: [
-              'List facts',
-              'Explain how a mechanism works and connect it to outcomes',
-              'Draw a picture',
-              'Write a poem'
+              'proving that legal education is more valuable than scientific study',
+              'showing through a comic example how little the lectures left',
+              'admitting that his own idleness caused him to fail his courses',
+              'introducing the technical vocabulary that his audience needs'
             ],
             correctAnswer: 1,
-            explanation: 'AP process questions test whether students understand HOW things work, not just WHAT happens.'
+            explanation: 'He can recall these learned terms only by what they are not, which comically demonstrates his claim that lectures left few lasting gains. He compares no disciplines, mentions no failure, and is not teaching the terms.'
+          },
+          {
+            question: 'Which description best characterizes the voice of the passage?',
+            options: [
+              'Earnest and reverent, deferring to established authority',
+              'Bitter and accusatory, condemning hardworking people',
+              'Witty and self-aware, mocking solemnity lightly',
+              'Clinical and detached, reporting facts without opinion'
+            ],
+            correctAnswer: 2,
+            explanation: 'Mock-legal diction, self-mockery, and comic pedantry create a witty, self-aware voice. Stevenson teases authority rather than deferring to it, never condemns the industrious bitterly, and offers opinion throughout.'
           }
         ]
       }
     }
   ]
-}
+};

@@ -178,7 +178,7 @@ When you identify an appeal, always follow this pattern:
       content: `
 ## AP Exam Strategy: Ethos, Pathos, Logos
 
-- These appear on EVERY rhetorical analysis question — know them deeply
+- The appeals are useful lenses for rhetorical analysis, but the CED and rubric reward explaining choices, not labeling appeals
 - Do not just identify the appeal — explain HOW it works and WHY the writer uses it
 - Look for appeals WORKING TOGETHER, not in isolation
 - Acknowledge when an appeal is weak or when a writer over-relies on one
