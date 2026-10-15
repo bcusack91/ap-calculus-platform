@@ -38,19 +38,21 @@ export const macroMoneyBankingPart1Data = {
 
 | Measure | Includes | Liquidity |
 |---|---|---|
-| **M1** | Currency (coins + paper money) + checkable deposits (demand deposits) + traveler's checks | Most liquid |
-| **M2** | M1 + savings deposits + money market accounts + small time deposits (CDs < \\$100K) | Less liquid |
+| **M1** | Currency in circulation (coins + paper money) + checkable (demand) deposits + other liquid deposits, including savings deposits | Most liquid |
+| **M2** | M1 + small time deposits (CDs under \\$100,000) + retail money market funds | Less liquid |
+
+**Note on savings deposits:** In May 2020 the Federal Reserve moved savings deposits from M2-only into **M1**, because a rule change let people make unlimited withdrawals from them. Older textbooks still list savings deposits in M2 but not M1. Items that are classified the same way under both definitions are the safe ones to know: currency and checking deposits are in M1; CDs and money market funds are in M2 but not M1.
 
 ### Key Distinctions
 - **Money ≠ wealth** — money is a medium of exchange; wealth includes all assets
 - **Money ≠ income** — income is a flow (earned over time); money is a stock (held at a point in time)
 - **Liquidity** = how quickly an asset can be converted to cash without loss of value
-- M1 is more liquid than M2 (checking > savings > CDs)
+- M1 is more liquid than M2 (currency and checking deposits are more liquid than CDs)
 
 > 🔑 **AP Connection:** The AP exam will ask you to classify items as M1, M2, or neither. Key trap: **credit cards are NOT money** — they are a loan (liability), not an asset.
 `},
     {id:'macromoney1-quiz1',type:'multiple-choice' as const,content:`**Concept Check** 🎯`,exercise:{questions:[
-      {question:'Which of the following is included in M1 but NOT in the basic definition of currency?',options:['Savings deposits held in commercial banks and credit unions','Checkable deposits (demand deposits) — funds in checking accounts that can be accessed on demand','Certificates of deposit (CDs) with maturities of less than one year','Corporate bonds and stocks held in brokerage investment accounts'],correctAnswer:1,explanation:'M1 = currency (coins + paper money) + checkable deposits + traveler\'s checks. Checkable deposits (demand deposits) are funds in checking accounts that can be withdrawn or spent at any time via check, debit card, or electronic transfer. They\'re included in M1 because they\'re as liquid as cash — you can spend them immediately. Savings deposits are M2 (less liquid).'},
+      {question:'Which of the following is included in M1 but NOT in the basic definition of currency?',options:['Retail money market fund shares held by households and families','Checkable deposits (demand deposits) — funds in checking accounts that can be accessed on demand','Certificates of deposit (CDs) with maturities of less than one year','Corporate bonds and stocks held in brokerage investment accounts'],correctAnswer:1,explanation:'M1 = currency (coins + paper money) + checkable deposits + other liquid deposits. Checkable deposits (demand deposits) are funds in checking accounts that can be withdrawn or spent at any time via check, debit card, or electronic transfer. They\'re included in M1 because they\'re as liquid as cash — you can spend them immediately. Money market funds and CDs are in M2 but not M1, and stocks and bonds are not money at all.'},
       {question:'Why are credit cards NOT considered money or included in any measure of the money supply?',options:['Credit cards are too new — the Federal Reserve has not updated its classifications since the 1950s','Using a credit card creates a loan (short-term debt), not a payment from an existing stock of money that you own','Credit cards are only accepted by large businesses, not by the general economy','Credit cards are included in M2 but excluded from M1 due to lower liquidity'],correctAnswer:1,explanation:'When you use a credit card, you\'re borrowing from the card issuer — creating a liability (debt). Money must be an ASSET. Credit cards are IOUs, not money. When you pay your credit card bill, THAT payment uses money (from your checking account, part of M1). Debit cards, by contrast, directly access your checking account balance — which IS money.'}
     ]}},
     {id:'macromoney1-multiplier',type:'text' as const,content:`
@@ -76,20 +78,21 @@ export const macroMoneyBankingPart1Data = {
 | **Total** | **\\$10,000** | **\\$1,000** | **\\$9,000** |
 
 - Money multiplier = 1 ÷ 0.10 = **10**
-- A \\$1,000 initial deposit can create up to **\\$10,000** in total money supply
-- **Maximum change in money supply** = Initial deposit × Money multiplier = \\$1,000 × 10 = \\$10,000
-- **Maximum change in LOANS** (new money created) = \\$10,000 − \\$1,000 (original deposit) = **\\$9,000**
+- **Maximum change in demand deposits** = Initial deposit × Money multiplier = \\$1,000 × 10 = **\\$10,000**
+- **Maximum change in LOANS** = Excess reserves × Money multiplier = \\$900 × 10 = **\\$9,000**
+- **Maximum change in the MONEY SUPPLY** = **\\$9,000**. The \\$1,000 deposit was cash that was already counted in the money supply; depositing it only moves it from currency to checking deposits. Only the new loans are new money.
 
 ### Important Caveats
 - This is the **maximum** possible expansion — actual expansion is less if banks hold excess reserves or people hold cash
 - If the Fed changes the reserve requirement, the multiplier changes
 - Lower RRR → larger multiplier → more money creation from each dollar of reserves
+- In practice, the U.S. reserve requirement has been **0%** since March 2020, and the Fed now steers interest rates mainly with the **interest rate on reserve balances**. The money multiplier remains the AP model for how bank lending expands deposits.
 
-> 🔑 **AP Connection:** The money multiplier calculation is tested on EVERY AP exam. Remember: **Total change in money supply** = initial deposit × multiplier. **Total change in LOANS** = total change in money supply − initial deposit.
+> 🔑 **AP Connection:** The money multiplier calculation is tested on EVERY AP exam. For a cash deposit, remember: **maximum change in demand deposits** = deposit × multiplier; **maximum change in loans** = excess reserves × multiplier; **maximum change in the money supply** = the change in loans, because the cash deposited was already money.
 `},
     {id:'macromoney1-quiz2',type:'multiple-choice' as const,content:`**Check Your Understanding** 🎯`,exercise:{questions:[
-      {question:'If the required reserve ratio is 20% and the Federal Reserve buys \\$500 million in government bonds from commercial banks, what is the maximum increase in the money supply?',options:['\\$100 million — the amount banks must hold in required reserves from the bond purchase','\\$2.5 billion — calculated by multiplying the \\$500 million by the money multiplier (1 ÷ 0.20 = 5)','\\$500 million — the money supply increases only by the amount of the bond purchase','\\$10 billion — calculated using a multiplier of 20 (the inverse of 20%)'],correctAnswer:1,explanation:'Money multiplier = 1 ÷ RRR = 1 ÷ 0.20 = 5. \nMaximum increase in money supply = \\$500M × 5 = **\\$2.5 billion**. \nWhen the Fed buys \\$500M in bonds, banks receive \\$500M in new reserves. They lend out 80% (\\$400M), which becomes deposits at other banks, which lend out 80% of that (\\$320M), and so on. The process multiplies the initial injection by the multiplier.'},
-      {question:'What would happen to the money multiplier if the Federal Reserve LOWERED the required reserve ratio from 20% to 10%?',options:['The multiplier would decrease from 5 to 2.5, reducing the banking system\'s ability to create money','The multiplier would stay the same because it depends on the federal funds rate, not the reserve ratio','The multiplier would double from 5 to 10, increasing the maximum amount of money that can be created from each dollar of reserves','The multiplier would become zero because banks would no longer be required to hold any reserves'],correctAnswer:2,explanation:'At RRR = 20%: multiplier = 1 ÷ 0.20 = 5. \nAt RRR = 10%: multiplier = 1 ÷ 0.10 = 10. \nLowering the reserve requirement means banks can lend out a larger fraction of each deposit → more rounds of lending → more money creation. This is why changing the reserve requirement is such a powerful (and rarely used) tool — a small change has enormous effects on the money supply.'}
+      {question:'If the required reserve ratio is 20% and the Federal Reserve buys \\$500 million in government bonds from commercial banks, what is the maximum increase in the money supply?',options:['\\$100 million — the amount banks must hold in required reserves from the bond purchase','\\$2.5 billion — calculated by multiplying the \\$500 million by the money multiplier (1 ÷ 0.20 = 5)','\\$500 million — the money supply increases only by the amount of the bond purchase','\\$10 billion — calculated using a multiplier of 20 (the inverse of 20%)'],correctAnswer:1,explanation:'Money multiplier = 1 ÷ RRR = 1 ÷ 0.20 = 5. \nMaximum increase in money supply = \\$500M × 5 = **\\$2.5 billion**. \nWhen the Fed buys \\$500M in bonds from banks, the banks trade bonds for \\$500M in reserves. No deposits changed, so all \\$500M is excess reserves that can be lent out, and the multiplier applies to the full amount.'},
+      {question:'What would happen to the money multiplier if the Federal Reserve LOWERED the required reserve ratio from 20% to 10%?',options:['The multiplier would decrease from 5 to 2.5, reducing the banking system\'s ability to create money','The multiplier would stay the same because it depends on the federal funds rate, not the reserve ratio','The multiplier would double from 5 to 10, increasing the maximum amount of money that can be created from each dollar of reserves','The multiplier would become zero because banks would no longer be required to hold any reserves'],correctAnswer:2,explanation:'At RRR = 20%: multiplier = 1 ÷ 0.20 = 5. \nAt RRR = 10%: multiplier = 1 ÷ 0.10 = 10. \nLowering the reserve requirement means banks can lend out a larger fraction of each deposit → more rounds of lending → more money creation. In the AP model, this is why a change in the reserve requirement has large effects on the money supply. (In practice, the U.S. reserve requirement has been 0% since March 2020.)'}
     ]}}
   ]
 };
