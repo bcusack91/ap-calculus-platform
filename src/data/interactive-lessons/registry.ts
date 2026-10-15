@@ -233,6 +233,8 @@ const slugAliases: Record<string, string> = {
   // Calculus — generic topic slugs → AB/BC suites (connects orphaned suites)
   'implicit-differentiation': 'implicit-differentiation-calcab',
   'related-rates': 'related-rates-calcab',
+  'derivatives-of-exponential-functions': 'derivatives-exp-log-calcab',
+  'second-derivative-test': 'concavity-inflection-points-calcab',
   'lhopitals-rule': 'lhopitals-advanced-calcbc',
   'mean-value-theorem': 'theorem-applications-calcab',
   'derivatives-of-trig-functions': 'basic-differentiation-rules-calcab',

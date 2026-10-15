@@ -33,17 +33,18 @@ export const LEGACY_TOPIC_REDIRECTS: Record<string, string> = {
       'product-rule': 'basic-differentiation-rules-calcab',
       'quotient-rule': 'basic-differentiation-rules-calcab',
       'chain-rule': 'chain-rule-calcab',
-      'derivatives-of-trig-functions': 'derivatives-exp-log-calcab',
-      'derivatives-of-exponential-functions': 'derivatives-exp-log-calcab',
-      'derivatives-of-logarithmic-functions': 'derivatives-exp-log-calcab',
-      'implicit-differentiation': 'implicit-differentiation-calcab',
-      'related-rates': 'related-rates-calcab',
-      'higher-order-derivatives': 'concavity-inflection-points-calcab',
-      'logarithmic-differentiation-technique': 'derivatives-exp-log-calcab',
+      // implicit-differentiation, related-rates, derivatives-of-exponential-functions
+      // and second-derivative-test are NOT redirected: their Topic rows exist in
+      // production but the calcab-* suites they used to point at have no Topic row,
+      // so the redirect 404'd. They now serve those suites through slugAliases
+      // (interactive-lessons/registry.ts) and EXIT_QUIZ_ALIASES (exit-quizzes/index.ts).
+      'derivatives-of-trig-functions': 'basic-differentiation-rules-calcab',
+      'derivatives-of-logarithmic-functions': 'derivatives-of-exponential-functions',
+      'higher-order-derivatives': 'basic-differentiation-rules-calcab',
+      'logarithmic-differentiation-technique': 'derivatives-of-exponential-functions',
       // AB: Applications of Derivatives
       'critical-points-and-extrema': 'applications-of-derivatives-calcab',
       'first-derivative-test': 'applications-of-derivatives-calcab',
-      'second-derivative-test': 'applications-of-derivatives-calcab',
       'curve-sketching': 'applications-of-derivatives-calcab',
       'lhopitals-rule': 'applications-of-derivatives-calcab',
       'linear-approximation': 'linearization-differentials-calcab',

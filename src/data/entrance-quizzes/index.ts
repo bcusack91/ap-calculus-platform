@@ -148,6 +148,11 @@ const entranceQuizLoaders: Record<string, EntranceQuizLoader> = {
   'implicit-differentiation-calcab': () => import('./implicit-differentiation-calcab'),
   'limits-at-infinity-calcab': () => import('./limits-at-infinity-calcab'),
   'related-rates-calcab': () => import('./related-rates-calcab'),
+  // Calc AB legacy Topic rows that now serve the calcab-* suites (no redirect).
+  'implicit-differentiation': () => import('./implicit-differentiation-calcab'),
+  'related-rates': () => import('./related-rates-calcab'),
+  'derivatives-of-exponential-functions': () => import('./derivatives-exp-log-calcab'),
+  'second-derivative-test': () => import('./concavity-inflection-points-calcab'),
 
   // AP Calculus BC
   'integration-by-parts-calcbc': () => import('./integration-by-parts-calcbc'),

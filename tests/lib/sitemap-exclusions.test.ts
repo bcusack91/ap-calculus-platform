@@ -13,7 +13,9 @@ import fs from 'fs'
 
 describe('legacy topic redirects', () => {
   it('cover the known micro-lesson slugs', () => {
-    expect(Object.keys(LEGACY_TOPIC_REDIRECTS).length).toBeGreaterThanOrEqual(59)
+    // 57 since four Calc AB slugs stopped redirecting (their targets had no
+    // production Topic row); see tests/lib/exit-quiz-aliases.test.ts.
+    expect(Object.keys(LEGACY_TOPIC_REDIRECTS).length).toBeGreaterThanOrEqual(57)
     expect(isLegacyTopicSlug('trig-substitution')).toBe(true)
     expect(isLegacyTopicSlug('advanced-integration-calcbc')).toBe(false)
   })

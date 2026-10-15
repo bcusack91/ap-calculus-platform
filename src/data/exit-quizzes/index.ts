@@ -1108,9 +1108,28 @@ const quizLoaders: Record<string, QuizLoader> = {
 }
 
 /**
+ * Production topic slugs whose exit quiz lives under a different pool slug.
+ * The lesson registry resolves these through its own slugAliases; without the
+ * same mapping here the lesson rendered but finished with no exit quiz.
+ */
+export const EXIT_QUIZ_ALIASES: Record<string, string> = {
+  // Calc AB legacy Topic rows that serve the calcab-* suites (see legacy-topic-redirects.ts).
+  'implicit-differentiation': 'implicit-differentiation-calcab',
+  'related-rates': 'related-rates-calcab',
+  'derivatives-of-exponential-functions': 'derivatives-exp-log-calcab',
+  'second-derivative-test': 'concavity-inflection-points-calcab',
+}
+
+/** The pool slug that holds a topic's exit-quiz items. */
+export function resolveExitQuizSlug(topicSlug: string): string {
+  return EXIT_QUIZ_ALIASES[topicSlug] ?? topicSlug
+}
+
+/**
  * Check whether a topic slug has an exit quiz available (synchronous).
  */
 export function hasExitQuiz(topicSlug: string): boolean {
+  topicSlug = resolveExitQuizSlug(topicSlug)
   if (topicSlug in quizLoaders) return true
   // Core Skills topics draw the easy tier of their base topic's pool (see
   // generateExitQuiz), so they have a quiz whenever the base does. Checking
@@ -1197,6 +1216,7 @@ export async function generateExitQuiz(topicSlug: string, count: number = 10, di
   // 26 adapter entries means the difficulty is forced to 'easy' no matter what
   // the caller passes, so a Core Skills exit quiz can never serve a hard item.
   const requestedSlug = topicSlug
+  topicSlug = resolveExitQuizSlug(topicSlug)
   if (topicSlug.endsWith(CORE_SKILLS_SUFFIX)) {
     const base = topicSlug.slice(0, -CORE_SKILLS_SUFFIX.length)
     if (quizLoaders[base]) {
