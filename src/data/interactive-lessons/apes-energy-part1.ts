@@ -166,7 +166,7 @@ export const apesEnergyPart1Data = {
 - Understand energy efficiency and be able to calculate it (useful output / total input x 100)
 - The **Second Law of Thermodynamics** explains why 100% efficiency is impossible
 - **Cogeneration** is the classic example of improving efficiency
-- Know EROI: high EROI = efficient energy source. Oil used to have EROI of 100:1, now closer to 10:1
+- Know EROI: a higher EROI means more surplus energy for society. Oil's EROI has fallen as the easiest deposits were used up; published estimates vary widely, and unconventional sources such as tar sands return less than conventional oil
 - Environmental justice questions are increasingly common on the AP exam
       `
     },

@@ -19,7 +19,7 @@ export const apesAtmosphereClimatePart1Data = {
 | **Oxygen $(O_{2})$** | 21% | Respiration; product of photosynthesis |
 | **Argon (Ar)** | 0.93% | Inert noble gas |
 | **Carbon dioxide $(CO_{2})$** | 0.042% (420 ppm) | Major greenhouse gas; rising from fossil fuels |
-| **Methane $(CH_{4})$** | Trace (~1.9 ppm) | 80x stronger GHG than $CO_{2}$ over 20 years |
+| **Methane $(CH_{4})$** | Trace (~1.9 ppm) | Per kilogram, traps ~80x as much heat as $CO_{2}$ over 20 years (~30x over 100 years) |
 | **Nitrous oxide $(N_{2}O)$** | Trace (~0.33 ppm) | GHG from agriculture and fossil fuels |
 | **Water vapor $(H_{2}O)$** | Variable (0-4%) | Strongest natural greenhouse gas |
 
@@ -47,7 +47,7 @@ export const apesAtmosphereClimatePart1Data = {
       exercise: {
         questions: [
           {
-            question: 'Which greenhouse gas is the MOST potent per molecule over a 20-year period?',
+            question: 'Which of these gases traps the MOST heat per kilogram over a 20-year period?',
             options: [
               'Carbon dioxide $(CO_{2})$',
               'Methane $(CH_{4})$',
@@ -55,7 +55,7 @@ export const apesAtmosphereClimatePart1Data = {
               'Oxygen $(O_{2})$'
             ],
             correctAnswer: 1,
-            explanation: 'Methane $(CH_{4})$ is approximately 80 times more effective at trapping heat than $CO_{2}$ over 20 years. However, $CO_{2}$ persists much longer in the atmosphere, so it is the primary driver of long-term warming.'
+            explanation: 'Per kilogram, methane $(CH_{4})$ traps about 80 times as much heat as $CO_{2}$ over 20 years (about 30 times over 100 years, because methane breaks down in about a decade). However, $CO_{2}$ persists much longer in the atmosphere, so it is the primary driver of long-term warming.'
           },
           {
             question: 'The greenhouse effect works by:',
