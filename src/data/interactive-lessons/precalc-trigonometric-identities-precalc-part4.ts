@@ -9,15 +9,17 @@ export const precalcTrigIdentitiesPart4Data = {
 
 **Part 4 of 7**
 
-The **sum and difference** identities let you expand $\\sin(A \\pm B)$, $\\cos(A \\pm B)$, and $\\tan(A \\pm B)$ into expressions involving only $\\sin A$, $\\cos A$, $\\sin B$, $\\cos B$.
+The **sum and difference** identities let you expand $\\sin(A \\pm B)$ and $\\cos(A \\pm B)$ into expressions involving only $\\sin A$, $\\cos A$, $\\sin B$, $\\cos B$.
 
-### The Big Six Formulas
+### The Four Formulas
 
 $$\\boxed{\\sin(A \\pm B) = \\sin A\\cos B \\pm \\cos A\\sin B}$$
 
 $$\\boxed{\\cos(A \\pm B) = \\cos A\\cos B \\mp \\sin A\\sin B}$$
 
-$$\\boxed{\\tan(A \\pm B) = \\frac{\\tan A \\pm \\tan B}{1 \\mp \\tan A\\tan B}}$$
+Tangent sum and difference identities are not assessed on the AP Precalculus exam; for $\\tan(A + B)$, compute $\\frac{\\sin(A+B)}{\\cos(A+B)}$.
+
+The difference identities are the sum identities in disguise: replace $B$ with $-B$ and use $\\cos(-B) = \\cos B$ and $\\sin(-B) = -\\sin B$.
 
 ### Sign Pattern Summary
 
@@ -25,7 +27,6 @@ $$\\boxed{\\tan(A \\pm B) = \\frac{\\tan A \\pm \\tan B}{1 \\mp \\tan A\\tan B}}
 |:--------|:------------|:-------------|
 | $\\sin(A \\pm B)$ | same sign ($+$) | same sign ($-$) |
 | $\\cos(A \\pm B)$ | **opposite** sign ($-$) | **opposite** sign ($+$) |
-| $\\tan(A \\pm B)$ | numerator $+$, denominator $-$ | numerator $-$, denominator $+$ |
 
 > **Memory aid for cosine**: "Cosine is contrary" — the sign in the formula is **opposite** the sign in the argument.
       `
@@ -58,9 +59,13 @@ $$\\sin(x + \\pi) = \\sin x\\cos\\pi + \\cos x\\sin\\pi = \\sin x(-1) + \\cos x(
 
 This confirms the identity: shifting by $\\pi$ negates sine.
 
-### Example 4: Find $\\tan 75°$
+### Example 4: Find $\\sin(\\alpha + \\beta)$ from given ratios
 
-$$\\tan(45° + 30°) = \\frac{\\tan 45° + \\tan 30°}{1 - \\tan 45°\\tan 30°} = \\frac{1 + \\frac{\\sqrt{3}}{3}}{1 - \\frac{\\sqrt{3}}{3}} = \\frac{3 + \\sqrt{3}}{3 - \\sqrt{3}} = 2 + \\sqrt{3}$$
+Given $\\sin\\alpha = \\frac{8}{17}$ and $\\cos\\beta = \\frac{3}{5}$, with both angles in Quadrant I.
+
+First use the Pythagorean identity for the missing values: $\\cos\\alpha = \\sqrt{1 - \\frac{64}{289}} = \\frac{15}{17}$ and $\\sin\\beta = \\sqrt{1 - \\frac{9}{25}} = \\frac{4}{5}$ (both positive in Quadrant I).
+
+$$\\sin(\\alpha + \\beta) = \\sin\\alpha\\cos\\beta + \\cos\\alpha\\sin\\beta = \\frac{8}{17}\\cdot\\frac{3}{5} + \\frac{15}{17}\\cdot\\frac{4}{5} = \\frac{24}{85} + \\frac{60}{85} = \\frac{84}{85}$$
       `
     },
     {
@@ -116,7 +121,7 @@ $$\\tan(45° + 30°) = \\frac{\\tan 45° + \\tan 30°}{1 - \\tan 45°\\tan 30°}
               '$\\frac{\\pi}{3} - \\frac{\\pi}{12}$',
               '$\\frac{\\pi}{4} + \\frac{\\pi}{6}$',
               '$\\frac{\\pi}{2} - \\frac{\\pi}{12}$',
-              '$\\frac{\\pi}{6} + \\frac{\\pi}{6}$'
+              '$\\frac{\\pi}{6} + \\frac{\\pi}{12}$'
             ],
             correctAnswer: 1,
             explanation: '$\\frac{\\pi}{4} + \\frac{\\pi}{6} = \\frac{3\\pi}{12} + \\frac{2\\pi}{12} = \\frac{5\\pi}{12}$, and both $\\pi/4$ and $\\pi/6$ have known exact values.'
@@ -199,10 +204,10 @@ $$\\tan(45° + 30°) = \\frac{\\tan 45° + \\tan 30°}{1 - \\tan 45°\\tan 30°}
           {
             question: '$\\cos 40°\\cos 50° - \\sin 40°\\sin 50°$ equals:',
             options: [
-              '$\\cos 10°$',
+              '$\\cos(-10°)$',
               '$\\cos 90°$',
-              '$\\sin 90°$',
-              '$\\sin 10°$'
+              '$\\cos 2000°$',
+              '$\\sin(-10°)$'
             ],
             correctAnswer: 1,
             explanation: 'This matches $\\cos(A+B) = \\cos A\\cos B - \\sin A\\sin B$ with $A=40°, B=50°$. So $\\cos(40°+50°) = \\cos 90° = 0$.'

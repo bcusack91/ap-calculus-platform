@@ -5,164 +5,148 @@ export const precalcSequencesPart5Data = {
       id: 'p5-intro',
       type: 'text' as const,
       content: `
-# 🔁 Recursive Sequences & Special Sequences
+# 🔗 Sequences, Linear Functions & Exponential Functions
 
-**Part 5 of 7**
+**Part 5 of 7 — Sequences and Linear & Exponential Functions**
 
-### Recursive vs. Explicit Formulas
+### Same Structure, Different Inputs
 
-| Type | Definition | Example |
-|:-----|:-----------|:--------|
-| **Explicit** | $a_n$ as a function of $n$ | $a_n = 3n+1$ |
-| **Recursive** | $a_n$ in terms of previous terms | $a_n = a_{n-1}+3$, $a_1=4$ |
+| Sequence | Function | Built from |
+|:---------|:---------|:-----------|
+| Arithmetic: $a_n = a_0 + dn$ | Linear: $f(x) = b + mx$ | an initial value plus **repeated addition** of a constant rate ($d$ or $m$) |
+| Geometric: $g_n = g_0 r^n$ | Exponential: $f(x) = ab^x$ | an initial value times **repeated multiplication** by a constant ratio ($r$ or $b$) |
 
-### The Fibonacci Sequence
+So $a_n = 7 + 3n$ matches $f(x) = 7 + 3x$, and $g_n = 5(2)^n$ matches $f(x) = 5(2)^x$.
 
-$$F_1=1, F_2=1, F_n = F_{n-1}+F_{n-2}$$
+### Point Forms
 
-$1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, \\ldots$
+Just as $a_n = a_k + d(n - k)$ starts from a known term, a function can start from a known point $(x_i, y_i)$:
 
-Each term is the sum of the two preceding terms.
+| Sequence form | Function form |
+|:--------------|:--------------|
+| $a_n = a_k + d(n - k)$ | $f(x) = y_i + m(x - x_i)$ |
+| $g_n = g_k r^{\\,n - k}$ | $f(x) = y_i \\, b^{\\,x - x_i}$ |
 
-> 💡 The ratio of consecutive Fibonacci numbers approaches the **Golden Ratio** $\\phi = \\frac{1+\\sqrt{5}}{2} \\approx 1.618$.
-      `
-    },
-    {
-      id: 'p5-recursive',
-      type: 'text' as const,
-      content: `
-## 📝 Working with Recursive Formulas
+### Different Domains
 
-### Example 1: $a_1=2, a_n=3a_{n-1}-1$
-
-$a_1 = 2$
-$a_2 = 3(2)-1 = 5$
-$a_3 = 3(5)-1 = 14$
-$a_4 = 3(14)-1 = 41$
-
-### Example 2: Converting Recursive → Explicit
-
-Given: $a_1 = 5, a_n = a_{n-1}+4$
-
-This is arithmetic with $d=4$: $a_n = 5+4(n-1) = 4n+1$.
-
-### Example 3: Logistic Growth
-
-$$P_{n+1} = r \\cdot P_n(1-P_n)$$
-
-This recursive formula models population growth with limited resources. Unlike geometric growth, it accounts for carrying capacity.
-      `
-    },
-    {
-      id: 'p5-special',
-      type: 'text' as const,
-      content: `
-## 🌟 Special Sequences
-
-### Triangular Numbers
-$1, 3, 6, 10, 15, 21, \\ldots$ → $T_n = \\frac{n(n+1)}{2}$
-
-### Square Numbers
-$1, 4, 9, 16, 25, \\ldots$ → $S_n = n^2$
-
-### Factorial Sequence
-$1, 1, 2, 6, 24, 120, \\ldots$ → $n! = n(n-1)(n-2)\\cdots 1$
-
-### Powers of 2
-$1, 2, 4, 8, 16, 32, \\ldots$ → $a_n = 2^{n-1}$
-
-### Harmonic Sequence
-$1, \\frac{1}{2}, \\frac{1}{3}, \\frac{1}{4}, \\ldots$ → $a_n = \\frac{1}{n}$
-
-> The harmonic series $\\sum \\frac{1}{n}$ diverges — even though terms go to 0!
+A sequence accepts only whole numbers. Its matching function accepts every real number. For $f(x) = 400(0.5)^x$, the value $f(1.5) \\approx 141.4$ exists, but a sequence has no "term $1.5$".
       `
     },
     {
       id: 'p5-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Recursive Sequences Quiz** 🎯
+**Sequences and Functions Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'If $a_1=1, a_n=2a_{n-1}+1$, find $a_4$:',
-            options: ['$7$', '$9$', '$15$', '$31$'],
-            correctAnswer: 2,
-            explanation: '$a_2=3, a_3=7, a_4=2(7)+1=15$.'
+            question: 'Which function corresponds to the arithmetic sequence $a_n = 7 + 3n$?',
+            options: ['$f(x) = 7 + 3x$', '$f(x) = 7 \\cdot 3^x$', '$f(x) = 3 + 7x$', '$f(x) = 10x$'],
+            correctAnswer: 0,
+            explanation: 'Both start at $7$ and add $3$ for each unit increase in the input. Writing $7 \\cdot 3^x$ multiplies instead of adds, and $3 + 7x$ swaps the initial value and the rate.'
           },
           {
-            question: 'The 10th Fibonacci number is:',
-            options: ['$34$', '$55$', '$89$', '$144$'],
-            correctAnswer: 1,
-            explanation: '$1,1,2,3,5,8,13,21,34,55$. The 10th term is $55$.'
+            question: 'An exponential function $f(x) = ab^x$ passes through $(1, 6)$ and $(3, 54)$. Which is $f$?',
+            options: ['$f(x) = 2 \\cdot 3^x$', '$f(x) = 6 \\cdot 3^x$', '$f(x) = 2 \\cdot 9^x$', '$f(x) = 24x - 18$'],
+            correctAnswer: 0,
+            explanation: 'From $x = 1$ to $x = 3$ the output is multiplied by $\\frac{54}{6} = 9 = b^2$, so $b = 3$. Then $f(x) = 6 \\cdot 3^{x-1} = 2 \\cdot 3^x$. The line $24x - 18$ also passes through both points, but it is linear, not exponential.'
           },
           {
-            question: 'The 6th triangular number is:',
-            options: ['$15$', '$18$', '$21$', '$28$'],
-            correctAnswer: 2,
-            explanation: '$T_6 = \\frac{6(7)}{2} = 21$.'
+            question: 'Over equal-length input intervals, the outputs of $f$ are multiplied by $1.2$ each time. Which type of function is $f$?',
+            options: ['Exponential', 'Linear', 'Quadratic', 'Constant'],
+            correctAnswer: 0,
+            explanation: 'Outputs that change proportionally (by the same factor) over equal-length input intervals mean exponential. A constant difference would mean linear.'
           }
         ]
       }
     },
     {
+      id: 'p5-build',
+      type: 'text' as const,
+      content: `
+## 🛠️ Building a Function from Two Points
+
+Two distinct values determine an arithmetic sequence, a geometric sequence, a linear function, or an exponential function.
+
+### Linear Through $(2, 11)$ and $(6, 31)$
+
+- Slope: $m = \\frac{31 - 11}{6 - 2} = 5$
+- Point form: $f(x) = 11 + 5(x - 2)$
+- Initial value: $f(0) = 11 - 10 = 1$, so $f(x) = 1 + 5x$
+
+### Exponential Through $(2, 12)$ and $(5, 96)$
+
+- Ratio over $3$ units: $\\frac{96}{12} = 8 = b^3$, so $b = 2$
+- Point form: $f(x) = 12 \\cdot 2^{\\,x - 2}$
+- Initial value: $f(0) = 12 \\cdot 2^{-2} = 3$, so $f(x) = 3 \\cdot 2^x$
+
+## 📊 Linear or Exponential from a Table
+
+| $x$ | $0$ | $0.5$ | $1$ | $1.5$ |
+|:--|:--|:--|:--|:--|
+| $f(x)$ | $8$ | $12$ | $18$ | $27$ |
+
+The inputs are equally spaced. The differences $4, 6, 9$ are not constant, but every ratio is $1.5$, so $f$ is **exponential**: its outputs change proportionally. (A ratio of $0$ or $1$ is not allowed for an exponential function.)
+
+> 🔑 Linear functions are based on **addition**; exponential functions are based on **multiplication**.
+      `
+    },
+    {
       id: 'p5-input',
       type: 'input-boxes' as const,
       content: `
-**Recursive Calculations** 🧮
+**Build the Function** 🧮
 
-For $a_1=3, a_n=a_{n-1}^2-2$:
+**1)** A linear function passes through $(2, 11)$ and $(6, 31)$. Its slope $m$ = ?
 
-**1)** $a_2$ = ?
+**2)** For that linear function, $f(0)$ = ?
 
-**2)** $a_3$ = ?
-
-**3)** What is $5!$ (5 factorial)?
+**3)** An exponential function $ab^x$ passes through $(2, 12)$ and $(5, 96)$. Its base $b$ = ?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['7', '47', '120'],
-        hint1: '$a_2 = 3^2-2 = 7$.',
-        hint2: '$a_3 = 7^2-2 = 47$.',
-        hint3: '$5! = 5 \\times 4 \\times 3 \\times 2 \\times 1 = 120$.',
-        explanation: '1) $7$. 2) $47$. 3) $120$.'
+        correctAnswers: ['5', '1', '2'],
+        hint1: 'Change in output over change in input: $\\frac{31 - 11}{6 - 2}$.',
+        hint2: 'Step back $2$ units from $x = 2$: $11 - 2(5)$.',
+        hint3: 'Divide the outputs: $\\frac{96}{12} = b^{5-2}$.',
+        explanation: '1) $\\frac{20}{4} = 5$. 2) $f(0) = 11 - 10 = 1$. 3) $b^3 = 8$, so $b = 2$.'
       }
     },
     {
       id: 'p5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Special Sequences Concepts** 🔽
+**Sequences and Functions** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The Fibonacci sequence is defined:',
-            options: ['Explicitly', 'Recursively', 'By a ratio'],
+            label: '$g_n = 5(2)^n$ and $f(x) = 5(2)^x$ differ in their:',
+            options: ['Initial values', 'Domains', 'Common ratios', 'Outputs at $3$'],
             correctAnswer: 1
           },
           {
-            label: 'The Golden Ratio $\\phi$ approximately equals:',
-            options: ['$1.414$', '$1.618$', '$2.718$', '$3.14$'],
+            label: 'Linear functions are built on repeated:',
+            options: ['Multiplication', 'Exponentiation', 'Addition', 'Subtraction'],
+            correctAnswer: 2
+          },
+          {
+            label: 'In $f(x) = y_i \\, b^{\\,x - x_i}$, the pair $(x_i, y_i)$ is:',
+            options: ['A known point on the graph', 'The horizontal asymptote', 'The point where $f$ is zero', 'The base and the exponent'],
+            correctAnswer: 0
+          },
+          {
+            label: 'How many distinct values determine an exponential function $ab^x$?',
+            options: ['Only one', 'Two', 'Three', 'Four'],
             correctAnswer: 1
-          },
-          {
-            label: 'The harmonic series $\\sum 1/n$:',
-            options: ['Converges to 1', 'Converges to 2', 'Diverges'],
-            correctAnswer: 2
-          },
-          {
-            label: 'An arithmetic sequence can always be defined:',
-            options: ['Only recursively', 'Either way, if $d > 0$', 'Either way'],
-            correctAnswer: 2
           }
         ],
-        correctAnswers: ['Recursively', '$1.618$', 'Diverges', 'Either way'],
-        hint1: 'Fibonacci: $F_n = F_{n-1}+F_{n-2}$ — defined using previous terms.',
-        hint2: '$\\phi = (1+\\sqrt{5})/2 \\approx 1.618$.',
-        hint3: 'The harmonic series diverges despite terms approaching 0.',
-        explanation: 'Fibonacci: recursive. $\\phi \\approx 1.618$. Harmonic series diverges. Arithmetic: both recursive ($a_n = a_{n-1}+d$) and explicit ($a_n = a_1+(n-1)d$).'
+        correctAnswers: ['Domains', 'Addition', 'A known point on the graph', 'Two'],
+        hint1: 'The rules match; ask which inputs each one accepts.',
+        hint2: 'Initial value plus a constant rate, again and again.',
+        hint3: 'The point form starts from a value you already know.',
+        explanation: 'The sequence takes whole-number inputs while the function takes all real numbers. Linear functions add a constant rate. $(x_i, y_i)$ is a known point. Two distinct values fix both $a$ and $b$.'
       }
     },
     {
@@ -174,16 +158,16 @@ For $a_1=3, a_n=a_{n-1}^2-2$:
       exercise: {
         questions: [
           {
-            question: '$a_1=100, a_n=a_{n-1}/2$. What is $a_5$?',
-            options: ['$12.5$', '$6.25$', '$25$', '$50$'],
-            correctAnswer: 1,
-            explanation: '$100, 50, 25, 12.5, 6.25$. This is geometric with $r=1/2$.'
+            question: 'The data $(0, 5)$, $(2, 9)$, $(4, 13)$, $(6, 17)$ fit which model?',
+            options: ['$y = 5 + 2x$', '$y = 5 + 4x$', '$y = 5(1.8)^x$', '$y = 5 \\cdot 2^x$'],
+            correctAnswer: 0,
+            explanation: 'The outputs rise by $4$ every $2$ units of input, a constant rate of $2$ per unit, so the model is linear: $y = 5 + 2x$. Using $4$ as the slope ignores that the inputs step by $2$.'
           },
           {
-            question: 'The recursive formula $a_n = a_{n-1}+d$ defines which type?',
-            options: ['Geometric', 'Arithmetic', 'Fibonacci', 'Harmonic'],
-            correctAnswer: 1,
-            explanation: 'Adding a constant difference $d$ each time is arithmetic.'
+            question: 'For $f(x) = 400(0.5)^x$, what is $f(1.5)$ to the nearest tenth?',
+            options: ['$141.4$', '$150$', '$100$', '$200$'],
+            correctAnswer: 0,
+            explanation: '$400(0.5)^{1.5} \\approx 400(0.35355) \\approx 141.4$. The value $150$ is halfway between $f(1) = 200$ and $f(2) = 100$, which treats the decay as linear.'
           }
         ]
       }

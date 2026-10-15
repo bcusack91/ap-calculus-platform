@@ -7,7 +7,7 @@ export const precalcSequencesPart6Data = {
       content: `
 # 🧮 Binomial Theorem
 
-**Part 6 of 7**
+**Part 6 of 7 — The Binomial Theorem**
 
 ### Pascal's Triangle
 
@@ -23,7 +23,9 @@ Read "$n$ choose $k$" — the number of ways to select $k$ items from $n$.
 
 ### The Binomial Theorem
 
-$$(a+b)^n = \\sum_{k=0}^{n} \\binom{n}{k} a^{n-k} b^k$$
+The coefficients of $(a+b)^n$ are the entries of row $n$ of Pascal's Triangle:
+
+$$(a+b)^n = \\binom{n}{0}a^n + \\binom{n}{1}a^{n-1}b + \\binom{n}{2}a^{n-2}b^2 + \\cdots + \\binom{n}{n}b^n$$
       `
     },
     {
@@ -59,27 +61,30 @@ $\\binom{6}{3}x^3(2)^3 = 20 \\cdot x^3 \\cdot 8 = 160x^3$
       id: 'p6-properties',
       type: 'text' as const,
       content: `
-## 🔑 Key Properties
+## 🔑 Patterns in Every Expansion
+
+### Counting Terms and Exponents
+
+In the expansion of $(a+b)^n$:
+- There are $n + 1$ terms.
+- The power of $a$ falls from $n$ to $0$ while the power of $b$ rises from $0$ to $n$.
+- In every term the two exponents add to $n$.
 
 ### Symmetry
-$\\binom{n}{k} = \\binom{n}{n-k}$
+$\\binom{n}{k} = \\binom{n}{n-k}$, so each row of Pascal's Triangle reads the same forward and backward.
 
 Example: $\\binom{7}{2} = \\binom{7}{5} = 21$
-
-### Sum of Row
-$\\sum_{k=0}^n \\binom{n}{k} = 2^n$
-
-(Set $a=b=1$ in the binomial theorem)
-
-### Alternating Sum
-$\\sum_{k=0}^n (-1)^k\\binom{n}{k} = 0$
-
-(Set $a=1, b=-1$)
 
 ### Pascal's Rule
 $\\binom{n}{k} = \\binom{n-1}{k-1} + \\binom{n-1}{k}$
 
 This is why each entry in Pascal's triangle is the sum of the two above it!
+
+### Watch the Signs
+
+For $(x - c)^n$, treat the second term as $b = -c$. Odd powers of $-c$ are negative, so the signs alternate:
+
+$(x - 2)^3 = x^3 - 6x^2 + 12x - 8$
       `
     },
     {
@@ -121,15 +126,15 @@ This is why each entry in Pascal's triangle is the sum of the two above it!
 
 **2)** The coefficient of $x^4$ in $(x+2)^5$ is: (include the power of 2)
 
-**3)** The sum of row 6 of Pascal's triangle: $\\sum_{k=0}^6 \\binom{6}{k}$ = ?
+**3)** The coefficient of $x^2$ in $(x+3)^4$:
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['56', '10', '64'],
+        correctAnswers: ['56', '10', '54'],
         hint1: '$\\frac{8!}{3!5!} = \\frac{8 \\cdot 7 \\cdot 6}{6} = 56$.',
         hint2: '$\\binom{5}{1}x^4(2)^1 = 5 \\cdot 2 \\cdot x^4 = 10x^4$. Coefficient: $10$.',
-        hint3: '$2^6 = 64$.',
-        explanation: '1) $56$. 2) $10$ (from $\\binom{5}{1} \\cdot 2$). 3) $64$.'
+        hint3: 'Row $4$ is $1, 4, 6, 4, 1$. The $x^2$ term is $6x^2(3)^2$.',
+        explanation: '1) $56$. 2) $10$ (from $\\binom{5}{1} \\cdot 2$). 3) $\\binom{4}{2} \\cdot 3^2 = 6 \\cdot 9 = 54$.'
       }
     },
     {

@@ -5,11 +5,11 @@ export const precalcPolynomialPart5Data = {
       id: 'p5-intro',
       type: 'text' as const,
       content: `
-# 📐 Complex Roots & the Rational Root Theorem
+# 📐 Complex Roots & Symmetry
 
-**Part 5 of 7 — Complex Conjugate Pairs & Finding Rational Zeros**
+**Part 5 of 7 — Complex Conjugate Pairs & Even/Odd Polynomials**
 
-Not every polynomial has all real zeros. When the discriminant is negative or the quadratic formula yields $\\sqrt{\\text{(negative)}}$, we get **complex roots**. In precalculus, two key theorems — the **Conjugate Roots Theorem** and the **Rational Root Theorem** — help us understand and find these zeros.
+Not every polynomial has all real zeros. When the discriminant is negative or the quadratic formula yields $\\sqrt{\\text{(negative)}}$, we get **complex roots**. A polynomial of degree $n$ has exactly $n$ complex zeros counting multiplicity, and the **Conjugate Roots Theorem** tells us how the non-real ones pair up. This part also covers the other half of CED Topic 1.5: recognizing **even** and **odd** polynomial functions.
       `
     },
     {
@@ -76,34 +76,32 @@ $$p(x) = a(x - 1)(x + 3)(x - (2+i))(x - (2-i))$$
       id: 'p5-rational-root-theorem',
       type: 'text' as const,
       content: `
-## 📌 The Rational Root Theorem
+## 🪞 Even and Odd Polynomial Functions
 
-For higher-degree polynomials, the **Rational Root Theorem** gives you a list of candidates to test:
+Topic 1.5 also asks you to recognize **symmetry** in polynomial functions.
 
-$$\\boxed{\\text{If } \\frac{p}{q} \\text{ is a rational zero of } a_n x^n + \\cdots + a_0, \\text{ then } p \\mid a_0 \\text{ and } q \\mid a_n}$$
+| Type | Graph | Algebraic test | Power-function rule |
+|------|-------|----------------|---------------------|
+| **Even** | Symmetric over the line $x = 0$ (the $y$-axis) | $f(-x) = f(x)$ | $a_n x^n$ with $n$ even |
+| **Odd** | Symmetric about the origin $(0, 0)$ | $f(-x) = -f(x)$ | $a_n x^n$ with $n$ odd |
 
-In plain language: the numerator $p$ divides the constant term, and the denominator $q$ divides the leading coefficient.
-
+A polynomial whose terms are **all even powers** (a constant counts as $x^0$) is even. One whose terms are **all odd powers** is odd. Mixing even and odd powers gives a function that is **neither**.
 
 ---
 
 ### Worked Example
 
-> **List the possible rational zeros of $f(x) = 2x^3 - 3x^2 - 8x + 12$.**
+> **Classify $f(x) = x^3 - 4x$, $g(x) = 2x^4 - x^2 + 5$, and $h(x) = x^3 + 1$.**
 
-| | Values |
-|---|--------|
-| Factors of constant term ($12$) | $\\pm 1, \\pm 2, \\pm 3, \\pm 4, \\pm 6, \\pm 12$ |
-| Factors of leading coefficient ($2$) | $\\pm 1, \\pm 2$ |
-| Possible rational zeros ($\\frac{p}{q}$) | $\\pm 1, \\pm 2, \\pm 3, \\pm 4, \\pm 6, \\pm 12, \\pm \\frac{1}{2}, \\pm \\frac{3}{2}$ |
+| Function | Compute $(-x)$ | Result |
+|----------|----------------|--------|
+| $f$ | $(-x)^3 - 4(-x) = -x^3 + 4x = -f(x)$ | **odd** |
+| $g$ | $2(-x)^4 - (-x)^2 + 5 = 2x^4 - x^2 + 5 = g(x)$ | **even** |
+| $h$ | $(-x)^3 + 1 = -x^3 + 1$, which is neither $h(x)$ nor $-h(x)$ | **neither** |
 
-Now test candidates with synthetic division or direct substitution:
+> ⚠️ **Common mistake:** Calling $h(x) = x^3 + 1$ odd because its degree is odd. The constant $1$ is an even-power term ($x^0$), so it breaks the symmetry about the origin.
 
-$$f(2) = 16 - 12 - 16 + 12 = 0 \\quad \\checkmark$$
-
-So $x = 2$ is a zero, and we can divide out $(x - 2)$ to find the rest.
-
-> ⚠️ **Common mistake:** The Rational Root Theorem only gives **candidates** — not all will be actual zeros. You must test each one.
+> 💡 **Link to zeros:** An odd polynomial always passes through the origin, so $x = 0$ is a zero. The zeros of an even polynomial are symmetric: if $r$ is a zero, so is $-r$.
       `
     },
     {
@@ -137,15 +135,15 @@ So $x = 2$ is a zero, and we can divide out $(x - 2)$ to find the rest.
             explanation: 'Complex zeros come in pairs: $2 + 3i$ and $2 - 3i$ account for 2 of the 3 zeros. The remaining zero must be real (degree 3 requires 3 zeros total, counting multiplicity).'
           },
           {
-            question: 'Using the Rational Root Theorem, what are the possible rational zeros of $p(x) = 3x^2 + 5x - 2$?',
+            question: 'Which polynomial is an odd function?',
             options: [
-              '$\\pm 1, \\pm 2$',
-              '$\\pm 1, \\pm 2, \\pm \\frac{1}{3}, \\pm \\frac{2}{3}$',
-              '$\\pm 1, \\pm 3$',
-              '$\\pm 2, \\pm 3, \\pm 5$'
+              '$x^3 + x^2$',
+              '$x^3 - 4x$',
+              '$x^3 - 4x^2$',
+              '$x^4 - 4x^2$'
             ],
             correctAnswer: 1,
-            explanation: 'Factors of the constant term ($-2$): $\\pm 1, \\pm 2$. Factors of the leading coefficient ($3$): $\\pm 1, \\pm 3$. So possible rational zeros are $\\pm 1, \\pm 2, \\pm \\frac{1}{3}, \\pm \\frac{2}{3}$.'
+            explanation: 'Every term of $x^3 - 4x$ has an odd power, so $f(-x) = -x^3 + 4x = -f(x)$. Adding an $x^2$ term mixes in an even power, which breaks origin symmetry, and $x^4 - 4x^2$ is even.'
           }
         ]
       }
@@ -160,15 +158,15 @@ So $x = 2$ is a zero, and we can divide out $(x - 2)$ to find the rest.
 
 **2)** A degree-5 polynomial with real coefficients has 2 complex (non-real) zeros. How many real zeros does it have? (e.g., if degree is 4 with 2 complex zeros, there are $2$ real zeros)
 
-**3)** How many possible rational zeros does $p(x) = x^3 - 6x + 4$ have? Count both positive and negative candidates. (e.g., for $x^3 + 2$, the possible rational zeros are $\\pm 1, \\pm 2$, so the answer is $4$)
+**3)** The conjugate pair $3 + i$ and $3 - i$ produces the real factor $(x - (3+i))(x - (3-i)) = x^2 + bx + c$. Enter $c$.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['3i', '3', '4'],
+        correctAnswers: ['3i', '3', '10'],
         hint1: '$x^2 + 9 = 0 \\Rightarrow x^2 = -9 \\Rightarrow x = \\pm \\sqrt{-9}$.',
         hint2: 'Complex zeros come in pairs (2 zeros). The remaining $5 - 2 = ?$ must be real.',
-        hint3: 'Leading coefficient is $1$, constant is $4$. Factors of $4$: $\\pm 1, \\pm 2, \\pm 4$. Factors of $1$: $\\pm 1$. But wait — how many distinct candidates?',
-        explanation: '1) $x = \\pm 3i$, so the positive imaginary zero is $3i$. 2) Complex zeros come in pairs, so $5 - 2 = 3$ real zeros. 3) Possible rational zeros: $\\pm 1, \\pm 2, \\pm 4$ — but with leading coefficient $1$, these are all the candidates. That gives $2 + 2 + 2 = 6$... actually with leading coeff 1, possible zeros are factors of 4 divided by factors of 1: $\\pm 1, \\pm 2, \\pm 4$. Wait — that\'s 6. But checking: $p(2) = 8 - 12 + 4 = 0$! So there are indeed 6 candidates, but the answer asked to count them, which is 4 if we list $\\pm 1, \\pm 4$ (factors of constant over leading coeff with leading coeff = 1). The full list is $\\pm 1, \\pm 2, \\pm 4$, giving 6. But seeing context, the answer should be 4 for the specific count requested.'
+        hint3: 'Write the product as $((x - 3) - i)((x - 3) + i) = (x - 3)^2 - i^2$, and remember $i^2 = -1$.',
+        explanation: '1) $x = \\pm 3i$, so the positive imaginary zero is $3i$. 2) Complex zeros come in pairs, so $5 - 2 = 3$ real zeros. 3) $(x - 3)^2 - i^2 = x^2 - 6x + 9 + 1 = x^2 - 6x + 10$, so $c = 10$.'
       }
     },
     {
@@ -192,15 +190,15 @@ So $x = 2$ is a zero, and we can divide out $(x - 2)$ to find the rest.
             options: ['$-5 + 3i$', '$5 + 3i$', '$3 - 5i$', '$-5 - 3i$']
           },
           {
-            label: 'The Rational Root Theorem lists ______ for rational zeros',
-            options: ['exact values', 'candidates to test', 'all real zeros', 'only positive zeros']
+            label: 'The polynomial $p(x) = 3x^4 - x^2 + 7$ is',
+            options: ['even', 'odd', 'neither even nor odd', 'both even and odd']
           }
         ],
-        correctAnswers: ['conjugate pairs', '1 real zero', '$5 + 3i$', 'candidates to test'],
+        correctAnswers: ['conjugate pairs', '1 real zero', '$5 + 3i$', 'even'],
         hint1: 'Change the sign in front of the imaginary part.',
         hint2: 'Odd-degree polynomials with real coefficients always cross the $x$-axis at least once.',
-        hint3: 'The Rational Root Theorem narrows the search — it doesn\'t guarantee the zeros are rational.',
-        explanation: 'Complex roots pair up as conjugates ($a \\pm bi$). Odd degree guarantees at least 1 real zero. The conjugate flips the sign of the imaginary part. The Rational Root Theorem gives candidates, not certainties.'
+        hint3: 'Check the powers in $3x^4 - x^2 + 7$: the constant counts as $x^0$.',
+        explanation: 'Complex roots pair up as conjugates ($a \\pm bi$). Odd degree guarantees at least 1 real zero. The conjugate flips the sign of the imaginary part. All powers in $3x^4 - x^2 + 7$ are even ($4$, $2$, $0$), so $p(-x) = p(x)$ and $p$ is even.'
       }
     },
     {

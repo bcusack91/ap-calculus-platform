@@ -20,10 +20,9 @@ This final part combines **every identity type** from Parts 1–6 into mixed pro
 | **Quotient** | $\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}$, $\\cot\\theta = \\frac{\\cos\\theta}{\\sin\\theta}$ |
 | **Even-Odd** | $\\cos(-\\theta) = \\cos\\theta$, $\\sin(-\\theta) = -\\sin\\theta$, $\\tan(-\\theta) = -\\tan\\theta$ |
 | **Cofunction** | $\\sin\\theta = \\cos(90°-\\theta)$, $\\tan\\theta = \\cot(90°-\\theta)$, etc. |
-| **Sum/Difference** | $\\sin(A \\pm B)$, $\\cos(A \\pm B)$, $\\tan(A \\pm B)$ |
-| **Double-Angle** | $\\sin 2\\theta = 2\\sin\\theta\\cos\\theta$, $\\cos 2\\theta = \\cos^2\\theta - \\sin^2\\theta$ |
-| **Half-Angle** | $\\sin\\frac{\\theta}{2} = \\pm\\sqrt{\\frac{1-\\cos\\theta}{2}}$, $\\cos\\frac{\\theta}{2} = \\pm\\sqrt{\\frac{1+\\cos\\theta}{2}}$ |
-| **Power-Reduction** | $\\sin^2\\theta = \\frac{1-\\cos 2\\theta}{2}$, $\\cos^2\\theta = \\frac{1+\\cos 2\\theta}{2}$ |
+| **Sum/Difference** | $\\sin(A \\pm B) = \\sin A\\cos B \\pm \\cos A\\sin B$, $\\cos(A \\pm B) = \\cos A\\cos B \\mp \\sin A\\sin B$ |
+| **Double-Angle** | $\\sin 2\\theta = 2\\sin\\theta\\cos\\theta$, $\\cos 2\\theta = \\cos^2\\theta - \\sin^2\\theta = 2\\cos^2\\theta - 1 = 1 - 2\\sin^2\\theta$ |
+| **$\\cos 2\\theta$ rearranged** | $\\sin^2\\theta = \\frac{1-\\cos 2\\theta}{2}$, $\\cos^2\\theta = \\frac{1+\\cos 2\\theta}{2}$ |
       `
     },
     {
@@ -43,7 +42,7 @@ This final part combines **every identity type** from Parts 1–6 into mixed pro
 | Non-standard angle ($15°, 75°, 105°$…) | Sum/Difference formulas |
 | $\\sin\\theta\\cos\\theta$ product | Double-angle: $= \\frac{1}{2}\\sin 2\\theta$ |
 | $\\cos^2\\theta - \\sin^2\\theta$ | Recognize $= \\cos 2\\theta$ |
-| $1 \\pm \\cos\\theta$ in denominator | Conjugate multiply, or half-angle |
+| $1 \\pm \\cos\\theta$ in denominator | Multiply by the conjugate, then use Pythagorean |
 | Verifying LHS = RHS | Work the complex side only; never cross the $=$ |
 
 ### Multi-Step Strategy
@@ -104,9 +103,9 @@ $$= \\frac{2\\cos^2\\theta - 1 + 2\\sin^2\\theta}{\\cos\\theta} = \\frac{2(\\cos
             question: '$\\cos 20°\\cos 40° - \\sin 20°\\sin 40°$ equals:',
             options: [
               '$\\cos 60°$',
-              '$\\cos 20°$',
-              '$\\sin 60°$',
-              '$\\sin 20°$'
+              '$\\cos(-20°)$',
+              '$\\cos 800°$',
+              '$\\sin(-20°)$'
             ],
             correctAnswer: 0,
             explanation: 'This matches $\\cos(A+B) = \\cos A\\cos B - \\sin A\\sin B$ with $A=20°, B=40°$. So $\\cos(20°+40°) = \\cos 60° = \\frac{1}{2}$.'
@@ -114,10 +113,10 @@ $$= \\frac{2\\cos^2\\theta - 1 + 2\\sin^2\\theta}{\\cos\\theta} = \\frac{2(\\cos
           {
             question: 'Simplify: $\\frac{1 - \\cos 2\\theta}{\\sin 2\\theta}$',
             options: [
-              '$\\cot\\theta$',
+              '$\\cot^2\\theta$',
               '$\\tan\\theta$',
-              '$\\sin\\theta$',
-              '$\\cos\\theta$'
+              '$\\sin^2\\theta$',
+              '$2\\tan\\theta$'
             ],
             correctAnswer: 1,
             explanation: '$\\frac{1 - (1 - 2\\sin^2\\theta)}{2\\sin\\theta\\cos\\theta} = \\frac{2\\sin^2\\theta}{2\\sin\\theta\\cos\\theta} = \\frac{\\sin\\theta}{\\cos\\theta} = \\tan\\theta$.'
@@ -170,7 +169,7 @@ $$= \\frac{2\\cos^2\\theta - 1 + 2\\sin^2\\theta}{\\cos\\theta} = \\frac{2(\\cos
             options: ['Pythagorean identity', 'Double-angle: $\\frac{1}{2}\\sin 2\\theta$', 'Sum formula', 'Even-odd identity']
           },
           {
-            label: 'To find the exact value of $\\tan 15°$, use',
+            label: 'To find the exact value of $\\cos 15°$, use',
             options: ['Pythagorean identity', 'Double-angle formula', 'Sum/Difference formula', 'Cofunction identity']
           },
           {
@@ -184,9 +183,9 @@ $$= \\frac{2\\cos^2\\theta - 1 + 2\\sin^2\\theta}{\\cos\\theta} = \\frac{2(\\cos
         ],
         correctAnswers: ['Double-angle: $\\frac{1}{2}\\sin 2\\theta$', 'Sum/Difference formula', 'Even-odd identities', 'Cofunction identity'],
         hint1: '$\\sin\\theta\\cos\\theta = \\frac{1}{2}(2\\sin\\theta\\cos\\theta) = \\frac{1}{2}\\sin 2\\theta$.',
-        hint2: '$15° = 45° - 30°$, so use the difference formula for tangent.',
+        hint2: '$15° = 45° - 30°$, so use the difference formula for cosine.',
         hint3: 'Cosine is even, cosecant is odd — determine the signs first.',
-        explanation: '$\\sin\\theta\\cos\\theta \\to$ double-angle. $\\tan 15° \\to$ difference formula. Negative angles $\\to$ even-odd. $\\sin 50° = \\cos 40° \\to$ cofunction.'
+        explanation: '$\\sin\\theta\\cos\\theta \\to$ double-angle. $\\cos 15° \\to$ difference formula. Negative angles $\\to$ even-odd. $\\sin 50° = \\cos 40° \\to$ cofunction.'
       }
     },
     {
@@ -213,7 +212,7 @@ $$= \\frac{2\\cos^2\\theta - 1 + 2\\sin^2\\theta}{\\cos\\theta} = \\frac{2(\\cos
             options: [
               'Even-odd → double-angle → cancel',
               'Sum formula → Pythagorean → reciprocal',
-              'Cofunction → half-angle → quotient',
+              'Cofunction → Pythagorean → quotient',
               'Double-angle → cofunction → even-odd'
             ],
             correctAnswer: 0,

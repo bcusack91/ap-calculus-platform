@@ -70,15 +70,17 @@ $y = -3\\sqrt{x+4}+2$: domain $[-4,\\infty)$, range $(-\\infty, 2]$.
       id: 'p7-connect',
       type: 'text' as const,
       content: `
-## 🔗 Connections to Calculus
+## 🔗 Connections Across the Course
 
-### Transformations Preserve Shape
+### Transformations Scale Rates of Change
 
-If $f'(x_0) = m$ (slope at $x_0$), then for $g(x) = af(b(x-h))+k$:
+If $f$ has average rate of change $m$ over an input interval, then $g(x) = af(b(x-h))+k$ has average rate of change $ab \\cdot m$ over the matching interval (the one that $b(x-h)$ maps onto it).
 
-$$g'(x) = ab \\cdot f'(b(x-h))$$
+- The vertical dilation $a$ multiplies every output change by $a$.
+- The horizontal dilation by $\\frac{1}{b}$ squeezes the inputs, so the same output change happens over $\\frac{1}{b}$ as much input: the rate multiplies by $b$.
+- The shifts $h$ and $k$ move the graph without changing any rate.
 
-The derivative scales by $ab$! This is the **chain rule** preview.
+**Example:** $f(x) = x^2$ has average rate of change $\\frac{4 - 0}{2 - 0} = 2$ on $[0, 2]$. For $g(x) = 3f(2x)$, the matching interval is $[0, 1]$, and $\\frac{g(1) - g(0)}{1 - 0} = \\frac{12 - 0}{1} = 12 = 3 \\cdot 2 \\cdot 2$ ✓
 
 ### Domain & Range Transformations
 
@@ -93,7 +95,7 @@ The derivative scales by $ab$! This is the **chain rule** preview.
 
 $g(x) = 2f(x-3)+1$ is really $g = T \\circ f$ where $T(y) = 2y+1$ and the input is shifted.
 
-**Transformations unite algebra, geometry, and calculus!**
+**Transformations connect graphs, equations, and rates of change.**
       `
     },
     {
@@ -161,7 +163,7 @@ $g(x) = 2f(x-3)+1$ is really $g = T \\circ f$ where $T(y) = 2y+1$ and the input 
           },
           {
             label: '$y = f(x-h)+k$ — the vertex/key point is at:',
-            options: ['$(h, k)$', '$(-h, k)$', '$(-h, -k)$', '$(k, h)$'],
+            options: ['$(h, k)$', '$(-h, k)$', '$(-h, -k)$', '$(h, -k)$'],
             correctAnswer: 0
           },
           {

@@ -4,7 +4,7 @@ import type { LessonData } from '../registry'
  * Hand-authored interactive lesson — Piecewise Functions (AP Precalculus).
  * Registry key: 'piecewise-functions' (matches the DB Topic.slug).
  * 7 parts, gold-standard structure: anatomy/notation → evaluation → graphing →
- * continuity → domain/range → absolute-value & step functions → modeling + exit
+ * building piecewise models → domain/range → absolute-value & step functions → modeling + exit
  * quiz. Each part teaches with text and alternates interactive checks
  * (multiple-choice + input-boxes + dropdown). LaTeX uses doubled backslashes
  * (template-literal strings). File lives in extra/, so the registry import is
@@ -101,10 +101,10 @@ $$
             {
               question: 'Why must the conditions of a piecewise function cover every input *without overlapping*?',
               options: [
-                'So each input has exactly one output (the function rule)',
+                'So no $x$ gets two outputs',
                 'To make the graph look smooth',
                 'So the function is always increasing',
-                'It is just a style preference; overlap is allowed',
+                'It is only a style preference, and overlap is fine',
               ],
               correctAnswer: 0,
               explanation: 'A function assigns exactly one output to each input. Overlapping conditions could give two outputs for one input, which would violate the definition of a function.',
@@ -340,11 +340,11 @@ x + 3 & x < 1 \\\\
 \\end{cases}
 $$
 
-**Left piece** $y = x+3$, drawn for $x<1$. As $x \\to 1$ from the left, $y \\to 1+3 = 4$. Since $x<1$ **excludes** $1$, put an **open** dot ○ at $(1, 4)$.
+**Left piece** $y = x+3$, drawn for $x<1$. Plugging the boundary into this rule gives $1+3 = 4$. Since $x<1$ **excludes** $1$, put an **open** dot ○ at $(1, 4)$.
 
 **Right piece** $y=-2x+6$, drawn for $x \\ge 1$. At $x=1$, $y = -2(1)+6 = 4$. Since $x\\ge 1$ **includes** $1$, put a **closed** dot ● at $(1, 4)$.
 
-Here both dots land at $(1,4)$ — the open one is "filled in" by the closed one, so the graph has no hole. We'll call that **continuous** in Part 4.
+Here both dots land at $(1,4)$ — the open one is "filled in" by the closed one, so the two pieces meet and the graph has no gap.
 
 | At $x = 1$ | Left rule $x+3$ | Right rule $-2x+6$ |
 |------------|-----------------|--------------------|
@@ -368,7 +368,7 @@ Here both dots land at $(1,4)$ — the open one is "filled in" by the closed one
               question: 'For $h(x) = \\begin{cases} x+3 & x<1 \\\\ -2x+6 & x\\ge 1 \\end{cases}$, which endpoint at $x=1$ is the *actual* function value $h(1)$?',
               options: ['The closed dot from $-2x+6$', 'The open dot from $x+3$', 'Neither; $h(1)$ is undefined', 'Both are equally valid'],
               correctAnswer: 0,
-              explanation: 'The condition $x\\ge 1$ includes $1$, so $h(1)=-2(1)+6=4$ — the closed dot. The open dot from the left piece is only a limit, not the value.',
+              explanation: 'The condition $x\\ge 1$ includes $1$, so $h(1)=-2(1)+6=4$ — the closed dot. The open dot from the left piece only marks where that piece stops; it is not the value.',
             },
           ],
         },
@@ -412,7 +412,7 @@ At the boundary $x = 2$:
 
 The two endpoints are at **different heights** ($3$ vs. $-1$), so the graph **jumps** down by $4$ at $x=2$. There's a visible break — a hole at $(2,3)$ and a solid point at $(2,-1)$.
 
-> 💡 A jump is perfectly legal: it's still a function (one output per input — $j(2)=-1$, the closed dot). It just isn't *continuous*, which is exactly the idea of Part 4.`,
+> 💡 A jump is perfectly legal: it's still a function (one output per input — $j(2)=-1$, the closed dot). The two pieces simply don't meet at $x = 2$.`,
       },
       {
         id: 'pw3-jump-dropdown',
@@ -445,156 +445,137 @@ For $j(x) = \\begin{cases} x+1 & x<2 \\\\ x-3 & x\\ge 2 \\end{cases}$, describe 
         type: 'text' as const,
         content: `# 🧩 Piecewise Functions
 
-**Part 4 of 7 — Continuity at the Boundaries**
+**Part 4 of 7 — Building Piecewise Models**
 
 ---
 
-> 🔑 **The Big Question:** Does the graph connect at the seam between two pieces? A piecewise function is **continuous** at a boundary $x=c$ when the two pieces meet at the same point — no hole, no jump.`,
+> 🔑 **Why piecewise?** A piecewise-defined function is a set of functions defined over **non-overlapping** intervals of the domain. It is the right model when a data set or a real situation **behaves differently on different intervals**: a flat fee and then a per-unit charge, a tank that fills and then drains, a speed that changes partway through a trip.`,
       },
       {
-        id: 'pw4-test',
+        id: 'pw4-words',
         type: 'text' as const,
-        content: `## The Continuity Test at a Boundary
+        content: `## From Words to a Piecewise Rule
 
-At a boundary $x = c$, compute three things:
+**Scenario:** A phone plan costs \\$30 per month and includes up to $5$ GB of data. Each GB over $5$ costs \\$10.
 
-1. The value the **left** piece approaches as $x \\to c$ (plug $c$ into the left rule).
-2. The value the **right** piece approaches as $x \\to c$ (plug $c$ into the right rule).
-3. The actual value $f(c)$ (use the piece whose condition includes $c$).
+**Step 1 — Find the intervals.** The rule changes at $g = 5$ GB. "Up to $5$ GB" includes $5$, so the first interval is $0 \\le g \\le 5$ and the second is $g > 5$.
 
-The function is **continuous at $c$** exactly when **all three are equal**:
-
-$$\\text{(left value)} = \\text{(right value)} = f(c)$$
-
-If the left and right values **differ**, you get a **jump discontinuity**. If they agree with each other but the defined value $f(c)$ sits somewhere else, you get a **removable discontinuity** (a hole).
-
-> 💡 Shortcut for "two-rule" boundaries: just set the two rules **equal at $c$**. If the left rule and right rule give the *same number* at $x=c$, the pieces connect.`,
-      },
-      {
-        id: 'pw4-worked',
-        type: 'text' as const,
-        content: `## Worked Example: Is It Continuous?
+**Step 2 — Write a rule for each interval.**
+- For $0 \\le g \\le 5$: the cost is the flat \\$30.
+- For $g > 5$: \\$30 plus \\$10 for each GB **over** $5$, which is $30 + 10(g - 5)$.
 
 $$
-f(x) = \\begin{cases}
-x^2 & x \\le 2 \\\\
-3x - 2 & x > 2
+C(g) = \\begin{cases}
+30 & 0 \\le g \\le 5 \\\\
+30 + 10(g - 5) & g > 5
 \\end{cases}
 $$
 
-**At the boundary $x = 2$:**
-- Left rule $x^2$ at $2$: $2^2 = 4$.
-- Right rule $3x-2$ at $2$: $3(2) - 2 = 4$.
-- Defined value: $x \\le 2$ includes $2$, so $f(2) = 2^2 = 4$.
+**Step 3 — Check.** Using $8$ GB is $3$ GB over, so $C(8) = 30 + 10(3) = 60$, or \\$60.
 
-All three equal $4$, so $f$ is **continuous at $x=2$**. The parabola hands off smoothly to the line. ✓
+### Boundary Words → Inequality Signs
 
-### Now change one number
+| Wording | Sign | Boundary value is… |
+|---------|------|--------------------|
+| "at most", "up to and including", "no more than" | $\\le$ | included |
+| "less than", "under", "below" | $<$ | excluded |
+| "at least", "or more" | $\\ge$ | included |
+| "more than", "over", "above" | $>$ | excluded |
 
-$$
-g(x) = \\begin{cases}
-x^2 & x \\le 2 \\\\
-3x - 5 & x > 2
-\\end{cases}
-$$
-
-- Left at $2$: $2^2 = 4$.
-- Right at $2$: $3(2) - 5 = 1$.
-
-Now $4 \\ne 1$, so $g$ has a **jump discontinuity** at $x=2$ — the graph leaps from $4$ down to $1$.
-
-> ⚠️ "Continuous" is about the boundary values matching, **not** about whether the pieces have the same shape. A parabola and a line can absolutely meet continuously.`,
+> ⚠️ Writing $(g - 5)$ instead of $g$ matters: the \\$10 charge applies only to the GB **beyond** the threshold.`,
       },
       {
-        id: 'pw4-cont-mc',
+        id: 'pw4-model-mc',
         type: 'multiple-choice' as const,
         content: `**Concept Check** 🎯`,
         exercise: {
           questions: [
             {
-              question: 'A piecewise function is continuous at a boundary $x=c$ when:',
-              options: [
-                'The two pieces give the same value at $x=c$',
-                'Both pieces are lines',
-                'The left piece is always below the right piece',
-                'The domain has no gaps',
-              ],
+              question: 'Shipping costs \\$8 for packages under $2$ lb, and \\$8 plus \\$3 per pound over $2$ lb for packages of $2$ lb or more. Which condition belongs with the flat \\$8 piece?',
+              options: ['$0 < w < 2$', '$0 < w \\le 2$', '$w \\ge 2$', '$w > 2$'],
               correctAnswer: 0,
-              explanation: 'Continuity at the seam means the pieces meet: the left value, the right value, and $f(c)$ all agree. The shapes of the pieces do not matter.',
+              explanation: '"Under $2$ lb" excludes $2$, so the flat piece uses $0 < w < 2$. A package of exactly $2$ lb falls under "$2$ lb or more," the second piece.',
             },
             {
-              question: 'For $f(x) = \\begin{cases} x^2 & x\\le 2 \\\\ 3x-5 & x>2 \\end{cases}$, what happens at $x=2$?',
+              question: 'A taxi charges \\$3 for any trip up to and including $1$ mile, plus \\$2 for each mile beyond the first. Which rule models the cost $C(m)$?',
               options: [
-                'A jump discontinuity (values $4$ and $1$ differ)',
-                'It is continuous (both give $4$)',
-                'A removable hole at $(2,4)$',
-                'The function is undefined at $2$',
+                '$C(m) = \\begin{cases} 3 & 0 < m \\le 1 \\\\ 3 + 2(m - 1) & m > 1 \\end{cases}$',
+                '$C(m) = \\begin{cases} 3 & 0 < m \\le 1 \\\\ 3 + 2m & m > 1 \\end{cases}$',
+                '$C(m) = \\begin{cases} 3 & 0 < m \\le 1 \\\\ 2(m - 1) & m > 1 \\end{cases}$',
+                '$C(m) = \\begin{cases} 3m & 0 < m \\le 1 \\\\ 2m & m > 1 \\end{cases}$',
               ],
               correctAnswer: 0,
-              explanation: 'Left: $2^2=4$. Right: $3(2)-5=1$. Since $4\\ne 1$, the graph jumps — a jump discontinuity. (The defined value is $f(2)=4$ from the $\\le$ piece.)',
+              explanation: 'Beyond $1$ mile the rider pays the \\$3 base plus \\$2 for each mile past the first, $3 + 2(m - 1)$. Using $2m$ charges for the first mile twice, and $2(m - 1)$ drops the base fare.',
             },
           ],
         },
       },
       {
-        id: 'pw4-solve-k',
+        id: 'pw4-data',
         type: 'text' as const,
-        content: `## Solving for a Value That Makes It Continuous
+        content: `## From Data to a Piecewise Model
 
-A favorite AP-style question: *find the constant that forces continuity.*
+A tank's volume $V(t)$, in liters, is recorded every $5$ minutes:
+
+| $t$ (min) | $0$ | $5$ | $10$ | $15$ | $20$ |
+|-----------|-----|-----|------|------|------|
+| $V(t)$ | $50$ | $150$ | $250$ | $210$ | $170$ |
+
+The data change behavior at $t = 10$: the volume **rises** $100$ liters every $5$ minutes, then **falls** $40$ liters every $5$ minutes. Model each interval separately.
+
+**Piece 1, $0 \\le t \\le 10$:** rate $\\frac{100}{5} = 20$ L/min, starting at $50$: $V = 50 + 20t$.
+
+**Piece 2, $10 < t \\le 20$:** rate $\\frac{-40}{5} = -8$ L/min, starting from $250$ at $t = 10$: $V = 250 - 8(t - 10)$.
 
 $$
-f(x) = \\begin{cases}
-2x + k & x < 3 \\\\
-x^2 & x \\ge 3
+V(t) = \\begin{cases}
+50 + 20t & 0 \\le t \\le 10 \\\\
+250 - 8(t - 10) & 10 < t \\le 20
 \\end{cases}
 $$
 
-For continuity at $x=3$, set the two rules **equal at $3$**:
+### Assumptions and Restrictions
 
-$$2(3) + k = 3^2$$
-$$6 + k = 9$$
-$$k = 3$$
-
-So $k = 3$ makes the pieces meet at $(3, 9)$, and the graph connects with no jump.
-
-> ✅ **Check:** With $k=3$, left value $=2(3)+3 = 9$ and right value $=3^2=9$. Equal. ✓`,
+- **Domain from context:** the data cover $0 \\le t \\le 20$, so the model is restricted to that interval.
+- **Agreement at the switch:** a tank's volume cannot change instantly, so both rules should give $250$ at $t = 10$. They do: $50 + 20(10) = 250$.
+- **Other function types:** a piece does not have to be linear. Each piece can be built with whatever technique fits its interval: a line, a quadratic, a constant, or a regression.`,
       },
       {
-        id: 'pw4-k-drill',
+        id: 'pw4-model-drill',
         type: 'input-boxes' as const,
-        content: `**Make It Continuous** 🧮
+        content: `**Use the Tank Model** 🧮
 
-Find the constant that makes each function continuous at its boundary.
+$V(t) = \\begin{cases} 50 + 20t & 0 \\le t \\le 10 \\\\ 250 - 8(t - 10) & 10 < t \\le 20 \\end{cases}$
 
-**1)** $f(x) = \\begin{cases} x + k & x < 4 \\\\ 3x & x \\ge 4 \\end{cases}$ continuous at $x=4$: $k = \\,?$
-**2)** $g(x) = \\begin{cases} 5 & x \\le 1 \\\\ ax + 2 & x > 1 \\end{cases}$ continuous at $x=1$: $a = \\,?$`,
+**1)** $V(4) = \\,?$
+**2)** $V(16) = \\,?$
+**3)** The rate of change of $V$ on the second piece, in L/min:`,
         exercise: {
-          boxes: 2,
-          correctAnswers: ['8', '3'],
-          hint1: 'Set the rules equal at $x=4$: $4 + k = 3(4) = 12$, so $k = 8$.',
-          hint2: 'Set the rules equal at $x=1$: $5 = a(1)+2 = a+2$, so $a = 3$.',
-          hint3: 'The trick both times: at the boundary, force "left rule value = right rule value", then solve the one-variable equation.',
-          explanation: '1) $4+k=12 \\Rightarrow k=8$. 2) $5 = a+2 \\Rightarrow a=3$. In each case we force the two boundary values to match.',
+          boxes: 3,
+          correctAnswers: ['130', '202', '-8'],
+          hint1: '$4$ is in $0 \\le t \\le 10$, so use $50 + 20t$.',
+          hint2: '$16$ is in $10 < t \\le 20$, so use $250 - 8(16 - 10)$.',
+          hint3: 'The second piece loses $40$ liters every $5$ minutes.',
+          explanation: '1) $50 + 80 = 130$ liters.  2) $250 - 48 = 202$ liters.  3) $\\frac{-40}{5} = -8$ L/min: the tank drains $8$ liters per minute.',
         },
       },
       {
-        id: 'pw4-classify-dropdown',
+        id: 'pw4-words-dropdown',
         type: 'dropdown-select' as const,
-        content: `**Continuous or Not?** 🔽
+        content: `**Words to Conditions** 🔽
 
-For each pair of pieces, plug the boundary into both rules and decide.`,
+Turn each phrase into the condition for its piece.`,
         exercise: {
           dropdowns: [
-            { label: '$\\begin{cases} x+4 & x<2 \\\\ 3x & x\\ge 2 \\end{cases}$ at $x=2$ is:', options: ['continuous', 'a jump'] },
-            { label: '$\\begin{cases} x^2 & x\\le 1 \\\\ 2x & x>1 \\end{cases}$ at $x=1$ is:', options: ['a jump', 'continuous'] },
-            { label: '$\\begin{cases} 4 & x<0 \\\\ x+1 & x\\ge 0 \\end{cases}$ at $x=0$ is:', options: ['a jump', 'continuous'] },
+            { label: '"At most $5$ GB" of data $g$:', options: ['$g \\le 5$', '$g < 5$', '$g \\ge 5$', '$g > 5$'] },
+            { label: '"Under $2$ lb" for weight $w$:', options: ['$w < 2$', '$w \\le 2$', '$w > 2$', '$w \\ge 2$'] },
+            { label: '"Age $18$ or older" for age $a$:', options: ['$a \\ge 18$', '$a > 18$', '$a < 18$', '$a \\le 18$'] },
           ],
-          correctAnswers: ['continuous', 'a jump', 'a jump'],
-          hint1: 'First: left $2+4=6$, right $3(2)=6$. Equal → continuous.',
-          hint2: 'Second: left $1^2=1$, right $2(1)=2$. $1\\ne 2$ → jump.',
-          hint3: 'Third: left approaches $4$, right gives $0+1=1$. $4\\ne 1$ → jump.',
-          explanation: 'A: $6=6$, continuous. B: $1\\ne 2$, jump. C: $4\\ne 1$, jump. Always compare the two boundary values.',
+          correctAnswers: ['$g \\le 5$', '$w < 2$', '$a \\ge 18$'],
+          hint1: '"At most" means the value can equal $5$ but not exceed it.',
+          hint2: '"Under" excludes the boundary itself.',
+          hint3: '"Or older" includes $18$.',
+          explanation: '"At most" → $\\le$. "Under" → $<$. "Or older" → $\\ge$. Included boundaries use $\\le$ or $\\ge$; excluded ones use $<$ or $>$.',
         },
       },
     ],
@@ -650,7 +631,7 @@ x + 1 & 0 \\le x \\le 3
 \\end{cases}
 $$
 
-**Piece 1, $x^2$ on $[-2, 0)$:** As $x$ runs from $-2$ up to (but not including) $0$, $x^2$ runs from $(-2)^2=4$ down toward $0^2=0$. At $x=-2$ (included) we get $4$; as $x\\to 0$ (excluded) we approach $0$ but don't reach it. Outputs: $(0, 4]$.
+**Piece 1, $x^2$ on $[-2, 0)$:** As $x$ runs from $-2$ up to (but not including) $0$, $x^2$ runs from $(-2)^2=4$ down toward $0^2=0$. At $x=-2$ (included) we get $4$; for inputs just left of $0$ (which is excluded), $x^2$ gets close to $0$ but never reaches it. Outputs: $(0, 4]$.
 
 **Piece 2, $x+1$ on $[0, 3]$:** Linear and increasing, from $0+1=1$ to $3+1=4$. Outputs: $[1, 4]$.
 
@@ -685,14 +666,14 @@ Use $f(x) = \\begin{cases} \\sqrt{x} & 0 \\le x \\le 4 \\\\ x - 2 & x > 4 \\end{
           questions: [
             {
               question: 'For $f(x) = \\begin{cases} 4 & x < 0 \\\\ x+4 & 0 \\le x \\le 2 \\end{cases}$, what is the range?',
-              options: ['$\\{4\\} \\cup [4, 6] = [4, 6]$', '$[0, 6]$', '$(-\\infty, 6]$', '$\\{4, 6\\}$'],
+              options: ['$[4, 6]$', '$[0, 6]$', '$(-\\infty, 6]$', '$\\{4, 6\\}$'],
               correctAnswer: 0,
               explanation: 'The top piece outputs only $4$. The bottom piece $x+4$ on $[0,2]$ outputs $[4,6]$. Union: $\\{4\\}\\cup[4,6]=[4,6]$.',
             },
             {
               question: 'To find the *domain* of a piecewise function, you should:',
               options: [
-                'Take the union of all the condition-intervals (the inputs each piece allows)',
+                'Combine the intervals named in the conditions',
                 'Take the union of all the output values',
                 'Use only the first piece',
                 'Always answer "all real numbers"',
@@ -721,7 +702,7 @@ For the piece $x^2$ defined on $-2 \\le x < 0$:
           correctAnswers: ['1', '4', '4'],
           hint1: 'At $x=0$: $0+1=1$. The line is increasing, so this is the smallest.',
           hint2: 'At $x=3$: $3+1=4$. This is the largest output of that piece.',
-          hint3: 'At $x=-2$: $(-2)^2=4$. As $x\\to 0$, $x^2\\to 0$, so $x^2$ ranges over $(0,4]$ — largest is $4$.',
+          hint3: 'At $x=-2$: $(-2)^2=4$. For inputs near $0$, $x^2$ is near $0$, so $x^2$ ranges over $(0,4]$ — largest is $4$.',
           explanation: '1) $0+1=1$. 2) $3+1=4$. 3) $(-2)^2=4$. The line $x+1$ on $[0,3]$ outputs $[1,4]$; the parabola $x^2$ on $[-2,0)$ outputs $(0,4]$.',
         },
       },
@@ -868,7 +849,7 @@ Evaluate the greatest-integer function $\\lfloor x \\rfloor$ (round down to the 
 
 ---
 
-You can read brace notation, evaluate carefully at boundaries, graph with open/closed dots, test continuity, find domain and range, and decode absolute-value and step functions. Now let's use it on a real model — then prove your mastery.`,
+You can read brace notation, evaluate carefully at boundaries, graph with open/closed dots, build piecewise models from words and data, find domain and range, and decode absolute-value and step functions. Now let's use it on a real model — then prove your mastery.`,
       },
       {
         id: 'pw7-model',
@@ -894,7 +875,7 @@ $$T(25000) = 1000 + 0.20(25000 - 10000) = 1000 + 0.20(15000) = 1000 + 3000 = 400
 
 So the tax is \\$4000.
 
-> 💡 **Continuity matters here too.** At $x=10000$: top gives $0.10(10000)=1000$; bottom gives $1000+0.20(0)=1000$. They match, so the tax has no sudden jump at the bracket edge — exactly how real brackets are designed.`,
+> 💡 **The brackets agree at the boundary.** At $x=10000$: top gives $0.10(10000)=1000$; bottom gives $1000+0.20(0)=1000$. They match, so earning one more dollar never causes a sudden leap in tax — exactly how real brackets are designed.`,
       },
       {
         id: 'pw7-model-drill',
@@ -923,15 +904,15 @@ Use $T(x) = \\begin{cases} 0.10\\,x & 0 \\le x \\le 10000 \\\\ 1000 + 0.20(x - 1
           questions: [
             {
               question: 'For $f(x) = \\begin{cases} x^2 - 1 & x < 0 \\\\ 2x + 1 & x \\ge 0 \\end{cases}$, find $f(-2) + f(3)$.',
-              options: ['$10$', '$8$', '$11$', '$6$'],
+              options: ['$10$', '$8$', '$4$', '$6$'],
               correctAnswer: 0,
-              explanation: '$f(-2)$: $-2<0$ → $(-2)^2-1 = 4-1 = 3$. $f(3)$: $3\\ge 0$ → $2(3)+1 = 7$. Sum $= 3+7 = 10$.',
+              explanation: '$f(-2)$: $-2<0$ → $(-2)^2-1 = 4-1 = 3$. $f(3)$: $3\\ge 0$ → $2(3)+1 = 7$. Sum $= 3+7 = 10$. Using $2x+1$ at $x=-2$ instead gives $-3 + 7 = 4$.',
             },
             {
-              question: 'For what value of $b$ is $f(x) = \\begin{cases} bx + 1 & x \\le 2 \\\\ x^2 & x > 2 \\end{cases}$ continuous at $x=2$?',
-              options: ['$b = \\tfrac{3}{2}$', '$b = 2$', '$b = 4$', '$b = \\tfrac{1}{2}$'],
+              question: 'A gym charges \\$40 per month for up to $8$ classes and \\$5 for each class beyond $8$. What is the monthly cost for $11$ classes?',
+              options: ['\\$55', '\\$95', '\\$40', '\\$15'],
               correctAnswer: 0,
-              explanation: 'Set the rules equal at $x=2$: $b(2)+1 = 2^2 \\Rightarrow 2b+1=4 \\Rightarrow 2b=3 \\Rightarrow b=\\tfrac{3}{2}$.',
+              explanation: '$11 > 8$, so use the second piece, $40 + 5(c - 8)$: $40 + 5(3) = 55$. Charging \\$5 for all $11$ classes gives \\$95, and \\$15 leaves out the base fee.',
             },
           ],
         },
@@ -946,7 +927,7 @@ Use $T(x) = \\begin{cases} 0.10\\,x & 0 \\le x \\le 10000 \\\\ 1000 + 0.20(x - 1
 | Evaluate $f(a)$ | Find the **one** condition $a$ satisfies; plug into that rule |
 | Boundary value | $\\le, \\ge$ **include** the endpoint; $<, >$ **exclude** it |
 | Graph a piece | Draw the rule, keep it over its interval, ● if included / ○ if excluded |
-| Continuous at $c$ | Left value $=$ right value $= f(c)$ (set the two rules equal at $c$) |
+| Build a model | One rule per interval; "at most" → $\\le$, "more than" → $>$; restrict the domain to the context |
 | Domain | Union of all condition-intervals (allowed inputs) |
 | Range | Union of each piece's output set over its interval |
 | $\\lfloor x \\rfloor$ | Round **down** toward $-\\infty$ (watch negatives!) |
@@ -968,21 +949,21 @@ Answer all three to finish the lesson.`,
               explanation: 'The condition $x\\ge 1$ includes $1$, so use $x^2$: $f(1)=1^2=1$. (The top piece needs $x<1$ strictly, so it does not apply at $1$.)',
             },
             {
-              question: 'A piecewise function has a *jump discontinuity* at $x=c$ when:',
-              options: [
-                'The left and right pieces give different values at $x=c$',
-                'Both pieces are continuous everywhere',
-                'The domain includes $c$',
-                'The two pieces have the same slope',
-              ],
+              question: 'A garage charges \\$6 for parking up to $2$ hours, plus \\$4 for each hour after the first $2$. Which rule gives the cost for $t > 2$ hours?',
+              options: ['$6 + 4(t - 2)$', '$6 + 4t$', '$4(t - 2)$', '$6t + 4$'],
               correctAnswer: 0,
-              explanation: 'A jump happens precisely when the two pieces approach different heights at the boundary, leaving a visible vertical gap.',
+              explanation: 'The \\$4 charge applies only to the hours beyond $2$, which is $t - 2$, on top of the \\$6 base. The rule $6 + 4t$ also charges for the first $2$ hours, and $4(t - 2)$ drops the base fee.',
             },
             {
-              question: 'Find $k$ so that $f(x) = \\begin{cases} 2x + k & x < 1 \\\\ 5x & x \\ge 1 \\end{cases}$ is continuous at $x=1$.',
-              options: ['$k = 3$', '$k = 5$', '$k = 7$', '$k = -3$'],
+              question: 'Data: $(0, 2)$, $(2, 8)$, $(4, 14)$, $(6, 14)$, $(8, 14)$. Which piecewise model fits all five points?',
+              options: [
+                '$\\begin{cases} 2 + 3x & 0 \\le x \\le 4 \\\\ 14 & 4 < x \\le 8 \\end{cases}$',
+                '$\\begin{cases} 3x & 0 \\le x \\le 4 \\\\ 14 & 4 < x \\le 8 \\end{cases}$',
+                '$\\begin{cases} 2 + 6x & 0 \\le x \\le 4 \\\\ 14 & 4 < x \\le 8 \\end{cases}$',
+                '$\\begin{cases} 2 + 3x & 0 \\le x \\le 4 \\\\ 14x & 4 < x \\le 8 \\end{cases}$',
+              ],
               correctAnswer: 0,
-              explanation: 'Set the rules equal at $x=1$: $2(1)+k = 5(1) \\Rightarrow 2+k=5 \\Rightarrow k=3$.',
+              explanation: 'From $x = 0$ to $4$ the outputs rise $6$ every $2$ units, a rate of $3$ starting at $2$: $2 + 3x$. After $x = 4$ they stay at $14$, a constant piece. Using $6$ as the slope ignores the input step of $2$, and $14x$ would keep growing.',
             },
           ],
         },

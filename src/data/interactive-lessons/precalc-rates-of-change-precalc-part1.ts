@@ -7,7 +7,7 @@ export const precalcRatesOfChangePart1Data = {
       content: `
 # 📈 Average Rate of Change
 
-**Part 1 of 7**
+**Part 1 of 7 — Average Rate of Change**
 
 ### What Is a Rate of Change?
 
@@ -113,10 +113,10 @@ The rate itself is increasing — the function curves upward faster and faster.
             explanation: '$\\frac{25- 4}{5-2} = \\frac{21}{3} = 7$. Adding the outputs instead of subtracting gives $29/3$, subtracting in the wrong order only on top gives $-7$, and forgetting to divide by $3$ leaves $21$.'
           },
           {
-            question: 'The average rate of change is the slope of:',
-            options: ['Tangent line at the left endpoint', 'Secant line', 'Normal line to the curve', 'Horizontal line'],
+            question: 'The average rate of change of $f$ on $[a, b]$ is the slope of:',
+            options: ['The line through $(a, 0)$ and $(b, 0)$', 'The secant line through $(a, f(a))$ and $(b, f(b))$', 'The line from the origin to $(b, f(b))$', 'The horizontal line $y = f(a)$'],
             correctAnswer: 1,
-            explanation: 'AROC = slope of secant line connecting two points on the curve. A tangent line at one endpoint gives the instantaneous rate there, not the average.'
+            explanation: 'The average rate of change is $\\frac{f(b)-f(a)}{b-a}$, the slope of the secant line joining the two endpoints of the graph. A line through the origin or along the $x$-axis ignores one or both output values.'
           },
           {
             question: 'For a linear function, the AROC on any interval is:',
@@ -141,7 +141,7 @@ The rate itself is increasing — the function curves upward faster and faster.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['3', '8/3', '-1/4'],
+        correctAnswers: ['3', '3', '-1/4'],
         hint1: 'Linear: AROC = slope = 3.',
         hint2: '$f(3) = 8, f(0) = -1$. $\\frac{8-(-1)}{3} = 3$.',
         hint3: '$f(4) = 1/4, f(1) = 1$. $\\frac{1/4-1}{3} = \\frac{-3/4}{3}$.',

@@ -43,7 +43,7 @@ $x^n \\leftrightarrow \\sqrt[n]{x}$, $e^x \\leftrightarrow \\ln x$, $a^x \\leftr
 3. Solve for $y$
 4. Verify with $f(f^{-1}(x)) = x$
 
-### Decomposition (for Calculus prep)
+### Decomposition
 - Identify the "last operation" → outer function
 - Everything inside → inner function
 - Practice: $h(x) = e^{\\sin(x^2)} \\to$ outer $e^u$, middle $\\sin v$, inner $x^2$
@@ -147,16 +147,16 @@ $f^{-1}(x) = e^{x-2}+3$
             correctAnswer: 1
           },
           {
-            label: 'The key connection to calculus is:',
-            options: ['The Chain Rule uses composition', 'All derivatives use inverses', 'Inverses are not used in calculus'],
+            label: 'The graph of $f^{-1}$ is the graph of $f$ reflected over:',
+            options: ['the line $y = x$', 'the line $y = -x$', 'the line $y = 0$'],
             correctAnswer: 0
           }
         ],
-        correctAnswers: ['Associative', '$\\{x \\in \\text{dom}(g) : g(x) \\in \\text{dom}(f)\\}$', 'Decreasing', 'The Chain Rule uses composition'],
+        correctAnswers: ['Associative', '$\\{x \\in \\text{dom}(g) : g(x) \\in \\text{dom}(f)\\}$', 'Decreasing', 'the line $y = x$'],
         hint1: '$f \\circ (g \\circ h) = (f \\circ g) \\circ h$, but $f \\circ g \\neq g \\circ f$.',
         hint2: '$x$ must be in domain of $g$, and $g(x)$ must be in domain of $f$.',
         hint3: 'Decreasing functions have decreasing inverses.',
-        explanation: 'Composition: associative but not commutative. Domain: both conditions needed. Decreasing → decreasing inverse. Chain Rule = calculus composition.'
+        explanation: 'Composition: associative but not commutative. Domain: both conditions needed. Decreasing → decreasing inverse. Swapping inputs and outputs reflects the graph over $y = x$.'
       }
     },
     {

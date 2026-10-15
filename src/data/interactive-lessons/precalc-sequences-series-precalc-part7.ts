@@ -5,26 +5,31 @@ export const precalcSequencesPart7Data = {
       id: 'p7-intro',
       type: 'text' as const,
       content: `
-# 🎯 Sequences & Series — Full Synthesis
+# 🎯 Sequences — Full Synthesis
 
-**Part 7 of 7**
+**Part 7 of 7 — Review & Applications**
 
 ### Master Summary
 
-| Type | $n$th Term | Sum Formula | Convergence |
-|:-----|:-----------|:------------|:------------|
-| Arithmetic | $a_1+(n-1)d$ | $\\frac{n}{2}(a_1+a_n)$ | Always diverges |
-| Geometric | $a_1 r^{n-1}$ | $a_1\\frac{1-r^n}{1-r}$ | $|r|<1 \\to \\frac{a_1}{1-r}$ |
+| | Arithmetic | Geometric |
+|:--|:-----------|:----------|
+| Step | add $d$ | multiply by $r$ |
+| Type of change | constant rate of change | constant proportional change |
+| From $a_0$ | $a_n = a_0 + dn$ | $g_n = g_0 r^n$ |
+| From $a_1$ | $a_n = a_1 + (n-1)d$ | $g_n = g_1 r^{n-1}$ |
+| From any term | $a_n = a_k + d(n-k)$ | $g_n = g_k r^{n-k}$ |
+| Matching function | linear $f(x) = b + mx$ | exponential $f(x) = ab^x$ |
+| Increasing growth | same amount each step | larger amount each step |
 
 ### Key Decision Tree
 
-**Is there a common difference?** → Arithmetic
+**Constant differences?** → Arithmetic, matches a linear function
 
-**Is there a common ratio?** → Geometric
+**Constant ratios?** → Geometric, matches an exponential function
 
-**Is it defined by previous terms?** → Recursive
+**Neither?** → Some other kind of sequence
 
-**Does it involve $\\binom{n}{k}$?** → Binomial expansion
+**Expanding $(a+b)^n$?** → Use row $n$ of Pascal's Triangle
       `
     },
     {
@@ -34,16 +39,18 @@ export const precalcSequencesPart7Data = {
 ## 🗺️ Problem-Solving Strategies
 
 ### Finding the Pattern
-1. Compute differences: $a_2-a_1, a_3-a_2, \\ldots$ → constant? → arithmetic
-2. Compute ratios: $a_2/a_1, a_3/a_2, \\ldots$ → constant? → geometric
-3. Check second differences → constant? → quadratic sequence
+1. Compute differences $a_2 - a_1, a_3 - a_2, \\ldots$. Constant → arithmetic.
+2. Compute ratios $\\frac{a_2}{a_1}, \\frac{a_3}{a_2}, \\ldots$. Constant → geometric.
+3. Check where the count starts: $a_0$ or $a_1$.
+
+### Two Known Terms
+- Arithmetic: $d = \\frac{a_n - a_k}{n - k}$
+- Geometric: $r^{\\,n-k} = \\frac{g_n}{g_k}$
 
 ### AP Exam Tips
-- Know both sum formulas cold
-- Practice converting between recursive and explicit
-- For convergence questions: only geometric with $|r|<1$
-- Telescoping sums: try partial fractions
-- Binomial: know how to find a specific term without expanding everything
+- Read percent language as a ratio: "$6\\%$ growth" means $r = 1.06$, and "$6\\%$ decay" means $r = 0.94$.
+- A sequence has whole-number inputs; its matching function accepts all real inputs.
+- For a binomial term, the exponents add to $n$ and the coefficient comes from Pascal's Triangle.
       `
     },
     {
@@ -55,23 +62,20 @@ export const precalcSequencesPart7Data = {
 ### Problem 1
 Sequence: $2, 6, 18, 54, \\ldots$
 
-Ratios: $6/2=3$ → Geometric, $r=3$. $a_n = 2(3)^{n-1}$.
+Ratios: $6/2 = 3$ → Geometric, $r = 3$. $a_n = 2(3)^{n-1}$, or $g_n = 2(3)^n$ if the count starts at $n = 0$.
 
 ### Problem 2
-$\\sum_{k=1}^{\\infty} \\frac{4}{5^k}$
+A gym has $120$ members in month $0$ and gains $15$ members per month. Which month first has at least $300$ members?
 
-$a_1 = 4/5, r = 1/5$. $S = \\frac{4/5}{1-1/5} = \\frac{4/5}{4/5} = 1$.
+$120 + 15n \\geq 300 \\implies n \\geq 12$. Month $12$.
 
 ### Problem 3
-Find the coefficient of $x^2y^3$ in $(x+y)^5$:
-
-$\\binom{5}{3} = 10$.
+A culture of $500$ bacteria triples every $4$ hours. As a function of hours: $f(t) = 500 \\cdot 3^{t/4}$. After $8$ hours: $500 \\cdot 3^2 = 4500$.
 
 ### Problem 4
-Find the sum: $1 + 3 + 5 + \\cdots + 99$
+Find the coefficient of $x^2y^3$ in $(x+y)^5$:
 
-Arithmetic: $a_1=1, d=2, a_n=99$. $n = 50$.
-$S_{50} = \\frac{50}{2}(1+99) = 2500$.
+Row $5$ is $1, 5, 10, 10, 5, 1$, and the $y^3$ term uses $\\binom{5}{3} = 10$.
       `
     },
     {
@@ -89,10 +93,10 @@ $S_{50} = \\frac{50}{2}(1+99) = 2500$.
             explanation: 'Constant difference $7-3 = 4$ → arithmetic with $d = 4$ (subtracting in the wrong order gives $-4$). The ratios $7/3$ and $11/7$ differ, so it is not geometric.'
           },
           {
-            question: '$\\sum_{n=0}^{\\infty} (-0.8)^n$ equals:',
-            options: ['$5/9$', '$5$', '$5/3$', 'Diverges'],
+            question: 'A geometric sequence has $g_0 = 3$ and $g_4 = 48$, with positive terms. Which exponential function matches it?',
+            options: ['$f(x) = 3 \\cdot 2^x$', '$f(x) = 3 \\cdot 4^x$', '$f(x) = 3 + 11.25x$', '$f(x) = 48 \\cdot 2^x$'],
             correctAnswer: 0,
-            explanation: '$|r|=0.8<1$. $S = \\frac{1}{1+0.8} = \\frac{1}{1.8} = \\frac{5}{9}$.'
+            explanation: '$r^4 = \\frac{48}{3} = 16$, so $r = 2$ and $f(x) = 3 \\cdot 2^x$. Dividing $16$ by $4$ instead of taking a fourth root gives base $4$, and $3 + 11.25x$ is the linear function through the same two points.'
           },
           {
             question: 'The coefficient of $x^7$ in $(x+1)^{10}$ is:',
@@ -109,19 +113,19 @@ $S_{50} = \\frac{50}{2}(1+99) = 2500$.
       content: `
 **Mixed Calculations** 🧮
 
-**1)** Sum of first 20 terms of $5, 8, 11, 14, \\ldots$:
+**1)** The $20$th term of $5, 8, 11, 14, \\ldots$ (with $a_1 = 5$):
 
-**2)** $\\sum_{n=1}^{\\infty} 10(0.1)^n$ = ? (Enter as a fraction)
+**2)** A geometric sequence has $g_3 = 40$ and $r = 0.5$. Find $g_6$:
 
 **3)** $\\binom{7}{3}$ = ?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['670', '10/9', '35'],
-        hint1: '$a_1=5, d=3$. $S_{20} = \\frac{20}{2}[2(5)+19(3)] = 10(67) = 670$.',
-        hint2: '$a_1=1, r=0.1$. $S = 1/(1-0.1) = 10/9$.',
+        correctAnswers: ['62', '5', '35'],
+        hint1: '$a_{20} = 5 + 19(3)$.',
+        hint2: '$g_6 = 40 \\cdot 0.5^{6-3}$.',
         hint3: '$\\frac{7!}{3!4!} = \\frac{210}{6} = 35$.',
-        explanation: '1) $670$. 2) $10/9$. 3) $35$.'
+        explanation: '1) $5 + 57 = 62$. 2) $40 \\cdot 0.125 = 5$. 3) $35$.'
       }
     },
     {
@@ -138,26 +142,26 @@ $S_{50} = \\frac{50}{2}(1+99) = 2500$.
             correctAnswer: 2
           },
           {
-            label: 'An arithmetic series (infinite) always:',
-            options: ['Converges', 'Diverges', 'Depends on $d$'],
+            label: '"Loses $20\\%$ of its value each year" gives a common ratio of:',
+            options: ['$0.2$', '$0.8$', '$1.2$', '$-0.2$'],
             correctAnswer: 1
           },
           {
-            label: '$0.\\overline{142857}$ as a fraction is:',
-            options: ['$1/7$', '$1/6$', '$1/9$', '$1/11$'],
+            label: 'An arithmetic sequence corresponds to a:',
+            options: ['Linear function', 'Exponential function', 'Quadratic function', 'Logarithmic function'],
             correctAnswer: 0
           },
           {
-            label: 'The sum of row $n$ of Pascals triangle is:',
-            options: ['$n!$', '$n^2$', '$2^n$', '$\\binom{2n}{n}$'],
-            correctAnswer: 2
+            label: 'The expansion of $(a+b)^6$ has this many terms:',
+            options: ['$6$', '$7$', '$12$', '$5$'],
+            correctAnswer: 1
           }
         ],
-        correctAnswers: ['Neither', 'Diverges', '$1/7$', '$2^n$'],
+        correctAnswers: ['Neither', '$0.8$', 'Linear function', '$7$'],
         hint1: 'Differences are $3,5,7,9\\ldots$ — not constant, so not arithmetic.',
-        hint2: 'Arithmetic sums grow without bound.',
-        hint3: '$142857/999999 = 1/7$.',
-        explanation: 'Square numbers: neither arithmetic nor geometric. Arithmetic series diverge. $0.\\overline{142857} = 1/7$. Row sum = $2^n$.'
+        hint2: 'Keeping $80\\%$ each year means multiplying by $0.8$.',
+        hint3: 'Constant difference ↔ constant rate of change.',
+        explanation: 'Square numbers: neither arithmetic nor geometric. A $20\\%$ loss leaves $80\\%$, so $r = 0.8$. Arithmetic sequences match linear functions. $(a+b)^n$ has $n + 1$ terms.'
       }
     },
     {
@@ -169,10 +173,10 @@ $S_{50} = \\frac{50}{2}(1+99) = 2500$.
       exercise: {
         questions: [
           {
-            question: 'Which infinite series converges?',
-            options: ['$\\sum n$', '$\\sum 1/n$', '$\\sum (3/4)^n$', '$\\sum (-1)^n$'],
-            correctAnswer: 2,
-            explanation: 'Geometric with $|r|=3/4<1$ converges. $\\sum n$ and $\\sum 1/n$ diverge; $\\sum(-1)^n$ oscillates.'
+            question: 'Which situation is modeled by a geometric sequence?',
+            options: ['A balance that earns $3\\%$ interest each year', 'A tank that loses $40$ gallons each day', 'A ladder whose rungs are $30$ cm apart', 'A runner who adds $2$ km to each weekly run'],
+            correctAnswer: 0,
+            explanation: 'Earning $3\\%$ multiplies the balance by $1.03$ each year, a constant ratio. The other three change by a fixed amount each step, so they are arithmetic.'
           },
           {
             question: 'In the expansion of $(2x-1)^4$, the constant term is:',

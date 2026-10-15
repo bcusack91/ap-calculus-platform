@@ -318,7 +318,7 @@ $$(3 + 4i)(3 - 4i) = 3^2 + 4^2 = 9 + 16 = 25$$
           questions: [
             {
               question: 'What is the conjugate of $-2 + 7i$?',
-              options: ['$-2 - 7i$', '$2 - 7i$', '$2 + 7i$', '$-2 + 7i$'],
+              options: ['$-2 - 7i$', '$2 - 7i$', '$2 + 7i$', '$7i - 2$'],
               correctAnswer: 0,
               explanation: 'Keep the real part, flip the sign of the imaginary part: $-2 + 7i \\to -2 - 7i$.',
             },
@@ -480,7 +480,7 @@ $$\\lvert z\\rvert = \\sqrt{(-5)^2 + 12^2} = \\sqrt{25 + 144} = \\sqrt{169} = 13
             },
             {
               question: 'Find $\\lvert -2i\\rvert$.',
-              options: ['$2$', '$-2$', '$4$', '$\\sqrt{2}$'],
+              options: ['$2$', '$-2$', '$2i$', '$\\sqrt{2}$'],
               correctAnswer: 0,
               explanation: '$-2i = 0 - 2i$, so $\\lvert -2i\\rvert = \\sqrt{0^2 + (-2)^2} = \\sqrt{4} = 2$.',
             },
@@ -522,7 +522,7 @@ Each of these gives a whole-number answer. Enter the modulus.
 
 ---
 
-> 🔑 **A second address for every complex number.** Instead of "go right $a$, up $b$," polar form says "go out a distance $r$ at an angle $\\theta$." This view makes **multiplication and powers** of complex numbers far easier.`,
+> 🔑 **A second address for every complex number.** Instead of "go right $a$, up $b$," polar form says "go out a distance $r$ at an angle $\\theta$." This is the same polar-coordinate idea you use for points in the plane (CED Topic 3.13).`,
       },
       {
         id: 'cn5-polar',
@@ -589,35 +589,43 @@ $$z = 2\\left(\\cos 60^\\circ + i\\sin 60^\\circ\\right)$$
       {
         id: 'cn5-multiply-polar',
         type: 'text' as const,
-        content: `## Why Polar Form Is Powerful
+        content: `## Polar Form in Radians (How the AP Exam Writes It)
 
-To **multiply** in polar form: **multiply the moduli, add the angles**.
+AP Precalculus measures angles in **radians**. A complex number $a + bi$ sits at the point $(a, b)$ in the complex plane, and its polar coordinates $(r, \\theta)$ give
 
-$$r_1(\\cos\\theta_1 + i\\sin\\theta_1)\\cdot r_2(\\cos\\theta_2 + i\\sin\\theta_2) = r_1 r_2\\big(\\cos(\\theta_1 + \\theta_2) + i\\sin(\\theta_1 + \\theta_2)\\big)$$
+$$a + bi = (r\\cos\\theta) + i\\,(r\\sin\\theta)$$
 
-### Example
+To find $\\theta$ from $(a, b)$, use the arctangent and fix the quadrant:
 
-$$\\big[2(\\cos 30^\\circ + i\\sin 30^\\circ)\\big]\\cdot\\big[3(\\cos 40^\\circ + i\\sin 40^\\circ)\\big] = 6\\big(\\cos 70^\\circ + i\\sin 70^\\circ\\big)$$
+| Where the point is | Angle |
+|--------------------|-------|
+| $a > 0$ (right half) | $\\theta = \\arctan\\left(\\dfrac{b}{a}\\right)$ |
+| $a < 0$ (left half) | $\\theta = \\arctan\\left(\\dfrac{b}{a}\\right) + \\pi$ |
 
-Moduli $2\\cdot 3 = 6$; angles $30^\\circ + 40^\\circ = 70^\\circ$.
+### Example: $z = -1 + i$
 
-> 🔑 This pattern is why polar form matters: repeated multiplication (powers) becomes *repeated angle addition*, which is the heart of **De Moivre's Theorem** in later courses.`,
+- $r = \\sqrt{(-1)^2 + 1^2} = \\sqrt{2}$
+- $a < 0$, so $\\theta = \\arctan\\left(\\dfrac{1}{-1}\\right) + \\pi = -\\dfrac{\\pi}{4} + \\pi = \\dfrac{3\\pi}{4}$
+
+$$-1 + i = \\sqrt{2}\\cos\\tfrac{3\\pi}{4} + i\\,\\sqrt{2}\\sin\\tfrac{3\\pi}{4}$$
+
+> ⚠️ Using $\\arctan(b/a)$ alone gives $-\\frac{\\pi}{4}$, which points to $1 - i$ in Quadrant IV. Always check which quadrant the point is in. Multiplying or raising complex numbers to powers in polar form is not assessed on the AP Precalculus exam.`,
       },
       {
         id: 'cn5-polar-dropdown',
         type: 'dropdown-select' as const,
-        content: `**Polar Operations** 🔽`,
+        content: `**Polar Coordinates of Complex Numbers** 🔽`,
         exercise: {
           dropdowns: [
             { label: 'Modulus of $z = a + bi$:', options: ['$\\sqrt{a^2 + b^2}$', '$a^2 + b^2$', '$a + b$', '$\\sqrt{a^2 - b^2}$'] },
-            { label: 'To multiply two complex numbers in polar form, the angles are:', options: ['added', 'multiplied', 'subtracted', 'left unchanged'] },
-            { label: '$5(\\cos 20^\\circ + i\\sin 20^\\circ)\\cdot 2(\\cos 50^\\circ + i\\sin 50^\\circ) =$', options: ['$10(\\cos 70^\\circ + i\\sin 70^\\circ)$', '$7(\\cos 70^\\circ + i\\sin 70^\\circ)$', '$10(\\cos 1000^\\circ + i\\sin 1000^\\circ)$', '$10(\\cos 30^\\circ + i\\sin 30^\\circ)$'] },
+            { label: 'For $z = -\\sqrt{3} + i$, the angle $\\theta$ in $[0, 2\\pi)$ is:', options: ['$\\frac{5\\pi}{6}$', '$-\\frac{\\pi}{6}$', '$\\frac{\\pi}{6}$', '$\\frac{7\\pi}{6}$'] },
+            { label: '$2\\left(\\cos\\frac{\\pi}{2} + i\\sin\\frac{\\pi}{2}\\right)$ in rectangular form is:', options: ['$2i$', '$2$', '$-2i$', '$2 + 2i$'] },
           ],
-          correctAnswers: ['$\\sqrt{a^2 + b^2}$', 'added', '$10(\\cos 70^\\circ + i\\sin 70^\\circ)$'],
+          correctAnswers: ['$\\sqrt{a^2 + b^2}$', '$\\frac{5\\pi}{6}$', '$2i$'],
           hint1: 'Modulus comes from the Pythagorean theorem: $\\sqrt{a^2 + b^2}$.',
-          hint2: 'Multiply moduli, ADD angles.',
-          hint3: 'Moduli: $5\\cdot 2 = 10$. Angles: $20^\\circ + 50^\\circ = 70^\\circ$.',
-          explanation: 'Modulus $= \\sqrt{a^2+b^2}$. Multiplying multiplies moduli and ADDS angles: $5\\cdot 2 = 10$, $20^\\circ + 50^\\circ = 70^\\circ$.',
+          hint2: '$a < 0$, so add $\\pi$: $\\arctan\\left(\\frac{1}{-\\sqrt{3}}\\right) + \\pi = -\\frac{\\pi}{6} + \\pi$.',
+          hint3: '$\\cos\\frac{\\pi}{2} = 0$ and $\\sin\\frac{\\pi}{2} = 1$.',
+          explanation: 'Modulus $= \\sqrt{a^2+b^2}$. For $-\\sqrt{3} + i$ the point is in Quadrant II, so $\\theta = -\\frac{\\pi}{6} + \\pi = \\frac{5\\pi}{6}$. Finally $2(0 + i \\cdot 1) = 2i$.',
         },
       },
       {
@@ -626,15 +634,15 @@ Moduli $2\\cdot 3 = 6$; angles $30^\\circ + 40^\\circ = 70^\\circ$.
         content: `**Polar Form Practice** 🧮
 
 **1)** The modulus $r$ of $z = -4 + 3i$ is $\\,?$  *(whole number)*
-**2)** Multiply $3(\\cos 25^\\circ + i\\sin 25^\\circ)\\cdot 4(\\cos 35^\\circ + i\\sin 35^\\circ)$. The new modulus is $\\,?$
-**3)** …and the new angle (in degrees, without the degree symbol) is $\\,?$`,
+**2)** For $z = 3(\\cos\\pi + i\\sin\\pi)$, the real part $a$ is $\\,?$
+**3)** The number $z = -5i$ has angle $\\theta = \\dfrac{k\\pi}{2}$ in $[0, 2\\pi)$. Enter $k$: $\\,?$`,
         exercise: {
           boxes: 3,
-          correctAnswers: ['5', '12', '60'],
+          correctAnswers: ['5', '-3', '3'],
           hint1: '$r = \\sqrt{(-4)^2 + 3^2} = \\sqrt{16 + 9} = \\sqrt{25} = 5$.',
-          hint2: 'Multiply the moduli: $3 \\cdot 4 = 12$.',
-          hint3: 'Add the angles: $25^\\circ + 35^\\circ = 60^\\circ$.',
-          explanation: '1) $r = \\sqrt{16+9} = 5$.  2) Moduli multiply: $3\\cdot 4 = 12$.  3) Angles add: $25^\\circ + 35^\\circ = 60^\\circ$.',
+          hint2: '$a = r\\cos\\theta = 3\\cos\\pi = 3(-1)$.',
+          hint3: '$-5i$ is the point $(0, -5)$, straight down the imaginary axis: three quarter-turns from the positive real axis.',
+          explanation: '1) $r = \\sqrt{16+9} = 5$.  2) $a = 3\\cos\\pi = -3$.  3) $(0, -5)$ lies at $\\theta = \\frac{3\\pi}{2}$, so $k = 3$.',
         },
       },
     ],
@@ -688,7 +696,7 @@ The **discriminant** $\\Delta = b^2 - 4ac$ decides the type of roots:
             },
             {
               question: 'If a quadratic with real coefficients has $3 - 2i$ as one root, the other root must be:',
-              options: ['$3 + 2i$', '$-3 + 2i$', '$3 - 2i$', '$2 - 3i$'],
+              options: ['$3 + 2i$', '$-3 + 2i$', '$-(3 - 2i)$', '$-3 - 2i$'],
               correctAnswer: 0,
               explanation: 'Complex roots of a real-coefficient polynomial come in conjugate pairs, so the partner of $3 - 2i$ is $3 + 2i$.',
             },

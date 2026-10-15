@@ -66,7 +66,7 @@ $\\text{dom}(f/g) = \\text{dom}(f) \\cap \\text{dom}(g) \\setminus \\{x: g(x)=0\
 
 Breaking a complex function into simpler pieces:
 
-### Chain Decomposition (for Calculus)
+### Decomposing a Composite Function
 
 | Complex Function | Inner $g(x)$ | Outer $f(u)$ |
 |:----------------|:-------------|:-------------|
@@ -76,7 +76,7 @@ Breaking a complex function into simpler pieces:
 | $e^{-x^2}$ | $-x^2$ | $e^u$ |
 | $\\ln(\\cos x)$ | $\\cos x$ | $\\ln u$ |
 
-> 💡 This decomposition is the foundation of the **Chain Rule** in calculus: $\\frac{d}{dx}f(g(x)) = f'(g(x)) \\cdot g'(x)$.
+> 💡 Decomposing a function this way tells you its domain (the inner output must be a legal input for the outer function) and the order for building an inverse: undo the outer layer first.
       `
     },
     {
@@ -89,7 +89,7 @@ Breaking a complex function into simpler pieces:
         questions: [
           {
             question: 'If $f(x)=\\sqrt{x}$ and $g(x)=x-4$, find $(fg)(8)$:',
-            options: ['$4\\sqrt{2}$', '$8\\sqrt{2}$', '$2\\sqrt{2}$', '$-4\\sqrt{8}$'],
+            options: ['$2\\sqrt{2} + 4$', '$8\\sqrt{2}$', '$2\\sqrt{2} - 4$', '$-4\\sqrt{8}$'],
             correctAnswer: 1,
             explanation: '$(fg)(8) = f(8) \\cdot g(8) = \\sqrt{8} \\cdot 4 = 2\\sqrt{2} \\cdot 4 = 8\\sqrt{2}$.'
           },

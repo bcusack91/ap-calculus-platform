@@ -7,7 +7,7 @@ export const precalcSequencesPart2Data = {
       content: `
 # 📊 Geometric Sequences
 
-**Part 2 of 7**
+**Part 2 of 7 — Geometric Sequences**
 
 ### Definition
 
@@ -30,20 +30,28 @@ where $r = \\frac{a_{n+1}}{a_n}$ is the **common ratio**.
       `
     },
     {
-      id: 'p2-sums',
+      id: 'p2-percent',
       type: 'text' as const,
       content: `
-## 📝 Finite Geometric Series
+## 📝 Percent Change and Missing Terms
 
-$$S_n = a_1 \\cdot \\frac{1-r^n}{1-r} \\quad (r \\neq 1)$$
+### Percent Growth and Decay
 
-### Example: Find $S_8$ for $a_1=3, r=2$
+A quantity that changes by the same **percent** each step is geometric:
 
-$$S_8 = 3 \\cdot \\frac{1-2^8}{1-2} = 3 \\cdot \\frac{1-256}{-1} = 3 \\cdot 255 = 765$$
+| Situation | Common ratio $r$ |
+|:----------|:-----------------|
+| grows $5\\%$ per step | $1 + 0.05 = 1.05$ |
+| shrinks $15\\%$ per step | $1 - 0.15 = 0.85$ |
+| doubles each step | $2$ |
+
+**Example**: A car worth \\$24,000 in year $1$ loses $15\\%$ of its value each year, so $a_n = 24000(0.85)^{n-1}$.
+
+$a_4 = 24000(0.85)^3 = 24000(0.614125) = 14739$, i.e. \\$14,739 in year $4$.
 
 ### Geometric Mean
 
-The geometric mean of positive $a$ and $b$ is $\\sqrt{ab}$.
+The geometric mean of positive $a$ and $b$ is $\\sqrt{ab}$. It is the missing middle term of a geometric sequence.
 
 Insert a geometric mean between 4 and 16:
 $\\sqrt{4 \\cdot 16} = \\sqrt{64} = 8$
@@ -61,7 +69,6 @@ Sequence: $4, 8, 16$ with $r = 2$.
 |:--------|:-----------|:----------|
 | Pattern | Add constant $d$ | Multiply by constant $r$ |
 | Formula | $a_n = a_1+(n-1)d$ | $a_n = a_1 \\cdot r^{n-1}$ |
-| Sum | $\\frac{n}{2}(a_1+a_n)$ | $a_1\\frac{1-r^n}{1-r}$ |
 | Growth | Linear | Exponential |
 | Graph | Straight line | Exponential curve |
 
@@ -93,10 +100,10 @@ Geometric sequences grow by **multiplication** → exponential growth (or decay 
             explanation: '$r = 32/64 = 1/2$. Subtracting ($32 - 64 = -32$) gives a common difference, not a ratio, and $2$ is the ratio upside down.'
           },
           {
-            question: '$S_5$ for $a_1=1, r=-2$:',
-            options: ['$11$', '$-11$', '$-33$', '$-\\frac{31}{3}$'],
+            question: 'A town of $5000$ people grows $4\\%$ per year. Which rule gives the population in year $n$, with year $1$ at $5000$?',
+            options: ['$a_n = 5000(1.04)^{n-1}$', '$a_n = 5000(0.04)^{n-1}$', '$a_n = 5000 + 0.04(n-1)$', '$a_n = 5000(1.4)^{n-1}$'],
             correctAnswer: 0,
-            explanation: '$S_5=1\\cdot\\frac{1-(-2)^5}{1-(-2)}=\\frac{1+32}{3}=\\frac{33}{3}=11$. Treating $(-2)^5$ as $+32$ gives $-\\frac{31}{3}$; writing the denominator as $1-2$ gives $-33$.'
+            explanation: 'Growing $4\\%$ multiplies by $1 + 0.04 = 1.04$ each year. Using $0.04$ as the ratio would shrink the town, adding $0.04$ makes it arithmetic, and $1.4$ is $40\\%$ growth.'
           }
         ]
       }
@@ -111,15 +118,15 @@ Geometric sequences grow by **multiplication** → exponential growth (or decay 
 
 **2)** $a_1=1000, r=\\frac{1}{2}$. Find $a_5$:
 
-**3)** $S_4$ for $a_1=3, r=4$: (use the sum formula)
+**3)** A car worth $24000$ in year $1$ loses $15\\%$ per year ($r = 0.85$). Its value in year $4$:
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['640', '62.5', '255'],
+        correctAnswers: ['640', '62.5', '14739'],
         hint1: '$a_8 = 5 \\cdot 2^7 = 5(128) = 640$.',
         hint2: '$a_5 = 1000(1/2)^4 = 1000/16 = 62.5$.',
-        hint3: '$S_4 = 3 \\cdot \\frac{1-256}{1-4} = 3 \\cdot \\frac{-255}{-3} = 255$.',
-        explanation: '1) $640$. 2) $62.5$. 3) $255$.'
+        hint3: '$a_4 = 24000(0.85)^3$.',
+        explanation: '1) $640$. 2) $62.5$. 3) $24000(0.614125) = 14739$.'
       }
     },
     {
@@ -147,7 +154,7 @@ Geometric sequences grow by **multiplication** → exponential growth (or decay 
           },
           {
             label: 'Compound interest creates a:',
-            options: ['Arithmetic sequence', 'Geometric sequence', 'Fibonacci sequence'],
+            options: ['Arithmetic sequence', 'Geometric sequence', 'Constant sequence'],
             correctAnswer: 1
           }
         ],
@@ -155,7 +162,7 @@ Geometric sequences grow by **multiplication** → exponential growth (or decay 
         hint1: '$|r|>1$ means each term is larger in magnitude.',
         hint2: '$\\sqrt{3 \\cdot 27} = \\sqrt{81} = 9$.',
         hint3: 'Multiplying by a negative flips the sign.',
-        explanation: '$|r|>1$: diverges. GM of 3 and 27: $9$. Negative $r$: alternating signs. Compound interest: multiply by $(1+r)$ each period → geometric.'
+        explanation: '$|r|>1$: the terms grow without bound in size. GM of 3 and 27: $9$. Negative $r$: alternating signs. Compound interest: multiply by $(1+r)$ each period → geometric.'
       }
     },
     {

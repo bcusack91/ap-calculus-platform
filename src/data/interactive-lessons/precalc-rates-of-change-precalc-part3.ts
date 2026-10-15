@@ -5,171 +5,170 @@ export const precalcRatesOfChangePart3Data = {
       id: 'p3-intro',
       type: 'text' as const,
       content: `
-# 📐 Secant Lines to Tangent Lines
+# 🎯 Rate of Change at a Point
 
-**Part 3 of 7**
+**Part 3 of 7 — Rate of Change at a Point**
 
-### The Visual Story
+### One Point, Not an Interval
 
-As the two points on a curve get **closer together**, the secant line **rotates** toward the tangent line:
+An average rate of change needs an interval. The **rate of change at a point** describes how fast the output would change if the input changed right at that point.
 
-1. Secant through $(a, f(a))$ and $(b, f(b))$ — wide interval
-2. Move $b$ closer to $a$ — secant rotates
-3. In the **limit** as $b \\to a$ — secant BECOMES the tangent
+You estimate it with what you already know: compute **average rates of change over small intervals containing the point**. The smaller the interval, the better the estimate (when such values exist).
 
-$$\\text{Tangent slope} = \\lim_{h \\to 0}\\frac{f(a+h) - f(a)}{h}$$
+> 💡 Calculus later gives this idea a formal definition. On the AP Precalculus exam you estimate it from numbers, tables, and graphs.
 
-### Why This Matters
+### What the Sign Tells You
 
-The tangent line gives the **best linear approximation** to the curve at a point. It tells you:
-- The **direction** the curve is heading
-- The **instantaneous rate** of change
-- Whether the function is **increasing or decreasing** at that point
+- **Positive** rate at a point: as the input increases through that point, the output **increases**
+- **Negative** rate at a point: as the input increases through that point, the output **decreases**
       `
     },
     {
-      id: 'p3-tangent',
+      id: 'p3-shrink',
       type: 'text' as const,
       content: `
-## Finding Tangent Lines
+## Worked Example: $f(x) = x^2$ at $x = 3$
 
-### Process
+### Intervals Starting at 3
 
-1. Compute $f'(a) = \\lim_{h \\to 0}\\frac{f(a+h)-f(a)}{h}$ (the slope)
-2. Use point-slope form: $y - f(a) = f'(a)(x - a)$
+| Interval | Average rate of change |
+|:---------|:-----------------------|
+| $[3, 4]$ | $\\frac{16 - 9}{1} = 7$ |
+| $[3, 3.1]$ | $\\frac{9.61 - 9}{0.1} = 6.1$ |
+| $[3, 3.01]$ | $\\frac{9.0601 - 9}{0.01} = 6.01$ |
 
-### Example: Tangent to $f(x)=x^2$ at $x=3$
+### Intervals Ending at 3
 
-**Slope**: From the difference quotient, $f'(x) = 2x$, so $f'(3) = 6$.
+| Interval | Average rate of change |
+|:---------|:-----------------------|
+| $[2, 3]$ | $\\frac{9 - 4}{1} = 5$ |
+| $[2.9, 3]$ | $\\frac{9 - 8.41}{0.1} = 5.9$ |
+| $[2.99, 3]$ | $\\frac{9 - 8.9401}{0.01} = 5.99$ |
 
-**Point**: $(3, 9)$.
+The values from the right sit just above $6$ and the values from the left sit just below $6$. An interval with $3$ in its middle lands right on it:
 
-**Tangent**: $y - 9 = 6(x - 3) \\Rightarrow y = 6x - 9$
+$$[2.9, 3.1]: \\quad \\frac{9.61 - 8.41}{0.2} = \\frac{1.2}{0.2} = 6$$
 
-### Example: Tangent to $f(x)=\\sqrt{x}$ at $x=4$
-
-DQ: $\\frac{\\sqrt{x+h}-\\sqrt{x}}{h} \\cdot \\frac{\\sqrt{x+h}+\\sqrt{x}}{\\sqrt{x+h}+\\sqrt{x}} = \\frac{1}{\\sqrt{x+h}+\\sqrt{x}}$
-
-As $h \\to 0$: slope $= \\frac{1}{2\\sqrt{x}}$. At $x=4$: slope $= \\frac{1}{4}$.
-
-**Tangent**: $y - 2 = \\frac{1}{4}(x-4) \\Rightarrow y = \\frac{x}{4} + 1$
-      `
-    },
-    {
-      id: 'p3-approx',
-      type: 'text' as const,
-      content: `
-## Linear Approximation Preview
-
-### Using the Tangent Line to Estimate
-
-Near $x = a$, the tangent line approximates $f$:
-
-$$f(x) \\approx f(a) + f'(a)(x - a)$$
-
-### Example
-
-Estimate $\\sqrt{4.1}$ using tangent to $\\sqrt{x}$ at $x=4$:
-
-$$\\sqrt{4.1} \\approx 2 + \\frac{1}{4}(4.1 - 4) = 2 + 0.025 = 2.025$$
-
-Actual: $\\sqrt{4.1} = 2.02485...$  Error: $0.00015$!
-
-### Secant Line Approximation (Less Accurate)
-
-Using the secant through $(4,2)$ and $(9,3)$:
-
-$$\\text{slope} = \\frac{3-2}{9-4} = 0.2$$
-
-Estimate: $2 + 0.2(0.1) = 2.02$ — less accurate than the tangent estimate.
-
-This is why **instantaneous** rates beat **average** rates for local estimation.
+**Estimate:** the rate of change of $f$ at $x = 3$ is about $6$. Near $x = 3$, the output grows about $6$ units for each $1$ unit of input.
       `
     },
     {
       id: 'p3-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Secant → Tangent Quiz** 🎯
+**Rate at a Point Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'The tangent line at $x=a$ is the limit of:',
-            options: ['Horizontal lines at $a$', 'Vertical lines', 'Secant lines as second point → $a$', 'Normal lines at nearby points'],
-            correctAnswer: 2,
-            explanation: 'As the second point approaches $a$, the secant becomes the tangent.'
+            question: 'Which interval gives the best estimate of the rate of change of $f$ at $x = 5$?',
+            options: ['$[4.9, 5.1]$', '$[4, 6.5]$', '$[5, 5.5]$', '$[2, 8]$'],
+            correctAnswer: 0,
+            explanation: 'The best estimate comes from the smallest interval that contains $x = 5$. The interval $[4.9, 5.1]$ has width $0.2$ and is centered on $5$; the others are wider or reach farther from the point.'
           },
           {
-            question: 'Tangent to $f(x)=x^2$ at $x=1$ has slope:',
-            options: ['$1$', '$2$', '$3$', '$0$'],
-            correctAnswer: 1,
-            explanation: 'DQ limit gives $f\'(x) = 2x$. At $x=1$: slope = $2$.'
+            question: 'A temperature $T(t)$ in °C has $T(2.9) = 18.4$, $T(3) = 18.8$, and $T(3.1) = 19.1$, with $t$ in hours. Using $[2.9, 3.1]$, the rate of change at $t = 3$ is about:',
+            options: ['$3.5$ °C per hour', '$0.7$ °C per hour', '$4$ °C per hour', '$3$ °C per hour'],
+            correctAnswer: 0,
+            explanation: '$\\frac{19.1 - 18.4}{3.1 - 2.9} = \\frac{0.7}{0.2} = 3.5$ °C per hour. The value $0.7$ forgets to divide by the interval width, while $4$ and $3$ use only one side of the point.'
           },
           {
-            question: 'The tangent at a maximum has slope:',
-            options: ['Positive', 'Negative', '$0$', 'Undefined'],
-            correctAnswer: 2,
-            explanation: 'At a local max, the function momentarily stops increasing — tangent is horizontal (slope 0).'
+            question: 'The rate of change of $g$ at $x = 2$ is negative. What does this tell you?',
+            options: [
+              'As $x$ increases through $2$, $g(x)$ decreases',
+              'As $x$ increases through $2$, $g(x)$ increases',
+              'The output $g(x)$ is negative for $x$ near $2$',
+              'The function $g$ has a minimum at $x = 2$'
+            ],
+            correctAnswer: 0,
+            explanation: 'A negative rate of change means the two quantities move in opposite directions: as the input increases, the output decreases. The sign of the rate says nothing about the sign of the output itself.'
           }
         ]
       }
     },
     {
+      id: 'p3-compare',
+      type: 'text' as const,
+      content: `
+## Comparing Rates at Two Points
+
+To compare the rates of change at two points, estimate each one with a small interval containing that point, then compare the estimates.
+
+### Example: $f(x) = 2^x$ at $x = 1$ and $x = 3$
+
+| Point | Interval | Average rate of change |
+|:------|:---------|:-----------------------|
+| $x = 1$ | $[0.9, 1.1]$ | $\\frac{2^{1.1} - 2^{0.9}}{0.2} \\approx 1.39$ |
+| $x = 3$ | $[2.9, 3.1]$ | $\\frac{2^{3.1} - 2^{2.9}}{0.2} \\approx 5.55$ |
+
+Both rates are positive, so $f$ is increasing at both points. The rate at $x = 3$ is about $4$ times the rate at $x = 1$, so the graph is much steeper at $x = 3$.
+
+### Reading a Rate in Context
+
+If the rate of change of $T$ at $t = 3$ hours is about $3.5$ °C per hour, then:
+
+> "At $t = 3$ hours, the temperature is increasing at about $3.5$ degrees Celsius per hour."
+
+Over the next $0.1$ hour, that predicts a rise of about $3.5 \\times 0.1 = 0.35$ °C.
+      `
+    },
+    {
       id: 'p3-input',
       type: 'input-boxes' as const,
       content: `
-**Find tangent line components:**
+**Estimate the Rate** 🧮
 
-**1)** $f(x) = x^2$, at $x = 5$. Tangent slope = ?
+For $f(x) = x^2$ near $x = 4$:
 
-**2)** $f(x) = x^3$, at $x = 1$. Tangent slope (DQ limit: $3x^2$) = ?
+**1)** Average rate of change on $[4, 4.1]$:
 
-**3)** Using tangent to $x^2$ at $x=3$: estimate $f(3.1)$ ≈ ?
+**2)** Average rate of change on $[3.9, 4]$:
+
+**3)** Your best estimate of the rate of change at $x = 4$:
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['10', '3', '9.6'],
-        hint1: 'Slope = $2x = 2(5) = 10$.',
-        hint2: 'Slope = $3x^2 = 3(1) = 3$.',
-        hint3: '$f(3)=9$, slope=$6$: $9 + 6(0.1) = 9.6$.',
-        explanation: '(1) $2(5) = 10$. (2) $3(1)^2 = 3$. (3) $f(3) + f\'(3)(0.1) = 9 + 0.6 = 9.6$.'
+        correctAnswers: ['8.1', '7.9', '8'],
+        hint1: '$f(4.1) = 16.81$ and $f(4) = 16$. Divide the difference by $0.1$.',
+        hint2: '$f(3.9) = 15.21$. Compute $\\frac{16 - 15.21}{0.1}$.',
+        hint3: 'One estimate is just above and one is just below the same value.',
+        explanation: '(1) $\\frac{0.81}{0.1} = 8.1$. (2) $\\frac{0.79}{0.1} = 7.9$. (3) The interval $[3.9, 4.1]$ gives $\\frac{16.81 - 15.21}{0.2} = 8$, between the one-sided values.'
       }
     },
     {
       id: 'p3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Tangent Concepts** 🔽
+**Rate at a Point Concepts** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Tangent line touches the curve at:',
-            options: ['Two nearby points', 'One point, locally', 'No points at all', 'All points'],
+            label: 'The rate of change at a point is estimated using:',
+            options: ['Average rates on small intervals around it', 'The output value at that point', 'One average rate over the whole domain', 'The $y$-intercept of the graph'],
+            correctAnswer: 0
+          },
+          {
+            label: 'Average rates on $[3, 3.1]$, $[3, 3.01]$, $[3, 3.001]$ are $6.1$, $6.01$, $6.001$. The rate at $x = 3$ is about:',
+            options: ['$6$', '$6.1$', '$0.001$', '$12$'],
+            correctAnswer: 0
+          },
+          {
+            label: 'A positive rate at a point means that as the input increases, the output:',
+            options: ['Decreases', 'Increases', 'Stays the same', 'Becomes negative'],
             correctAnswer: 1
           },
           {
-            label: 'If tangent slope > 0, the function is locally:',
-            options: ['Decreasing', 'Increasing', 'Constant', 'Undefined'],
-            correctAnswer: 1
-          },
-          {
-            label: 'Linear approximation is most accurate:',
-            options: ['Far away from the tangent point', 'Close to the tangent point', 'Where the curve is steepest', 'Near a discontinuity of $f$'],
-            correctAnswer: 1
-          },
-          {
-            label: 'The tangent to a linear function is:',
-            options: ['A point', 'The function itself', 'Perpendicular', 'Undefined'],
+            label: 'At $t = 3$ the rate is $3.5$ °C per hour. Over the next $0.1$ hour the temperature rises by about:',
+            options: ['$3.5$ °C', '$0.35$ °C', '$35$ °C', '$0.035$ °C'],
             correctAnswer: 1
           }
         ],
-        correctAnswers: ['One point, locally', 'Increasing', 'Close to the tangent point', 'The function itself'],
-        hint1: 'Locally, the tangent just "touches."',
-        hint2: 'Positive slope = going up.',
-        hint3: 'Tangent approximation degrades with distance.',
-        explanation: 'Tangent touches locally at one point. Positive slope → increasing. Near point → good approximation. Line\'s tangent = itself.'
+        correctAnswers: ['Average rates on small intervals around it', '$6$', 'Increases', '$0.35$ °C'],
+        hint1: 'Shrink the interval around the point.',
+        hint2: 'The average rates are closing in on one value.',
+        hint3: 'Change in output is about rate times change in input.',
+        explanation: 'Rates at a point are estimated from average rates over small intervals containing the point. The values $6.1, 6.01, 6.001$ close in on $6$. A positive rate means the output increases with the input. $3.5 \\times 0.1 = 0.35$ °C.'
       }
     },
     {
@@ -181,16 +180,16 @@ This is why **instantaneous** rates beat **average** rates for local estimation.
       exercise: {
         questions: [
           {
-            question: 'Tangent to $f(x) = x^2 + 1$ at $x=2$: equation?',
-            options: ['$y = 4x - 3$', '$y = 4x + 1$', '$y = 2x + 1$', '$y = 4x - 5$'],
+            question: 'For $g(x) = x^3$, the average rate on $[0.9, 1.1]$ is $3.01$ and on $[1.9, 2.1]$ is $12.01$. How does the rate of change at $x = 2$ compare with the rate at $x = 1$?',
+            options: ['About $4$ times as large', 'About $2$ times as large', 'About the same', 'About $8$ times as large'],
             correctAnswer: 0,
-            explanation: '$f(2) = 5, f\'(2) = 4$. $y - 5 = 4(x-2) \\Rightarrow y = 4x - 3$.'
+            explanation: '$12.01 \\div 3.01 \\approx 4$, so the rate at $x = 2$ is about $4$ times the rate at $x = 1$. Comparing the outputs $g(2) = 8$ and $g(1) = 1$ instead of the rates gives $8$.'
           },
           {
-            question: 'What does a steeper tangent line indicate?',
-            options: ['Slower change', 'Faster rate of change', 'A larger $y$-value', 'A discontinuity'],
-            correctAnswer: 1,
-            explanation: 'Steeper tangent = larger |slope| = faster instantaneous rate of change. Steepness describes the slope, not the height of the graph.'
+            question: 'A car\'s position is $s(t)$ miles at $t$ hours, with $s(0) = 0$, $s(1.95) = 97.2$, $s(2) = 100$, and $s(2.05) = 103.4$. The car\'s speed at $t = 2$ is about:',
+            options: ['$62$ mph', '$6.2$ mph', '$50$ mph', '$100$ mph'],
+            correctAnswer: 0,
+            explanation: 'Use the small interval $[1.95, 2.05]$: $\\frac{103.4 - 97.2}{0.1} = \\frac{6.2}{0.1} = 62$ mph. The value $50$ mph is the average over the whole first $2$ hours, and $6.2$ forgets to divide by $0.1$.'
           }
         ]
       }

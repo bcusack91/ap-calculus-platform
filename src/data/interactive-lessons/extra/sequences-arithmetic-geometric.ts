@@ -3,10 +3,11 @@ import type { LessonData } from '../registry'
 /**
  * Hand-authored interactive lesson — Arithmetic & Geometric Sequences (AP Precalculus).
  * Registry key: 'sequences-arithmetic-geometric' (matches the DB Topic.slug).
- * 7 parts, gold-standard structure: foundations → arithmetic → geometric →
- * recursive vs. explicit → series (partial sums) → infinite geometric series →
- * mixed mastery + exit quiz. AP Precalc framing: sequences as functions on the
- * integers; constant difference ↔ linear, constant ratio ↔ exponential.
+ * 7 parts, scoped to AP Precalculus CED 2.1-2.2: foundations → arithmetic →
+ * geometric → recursive vs. explicit → any-term rules & comparing growth →
+ * sequences vs. linear/exponential functions → mixed mastery + exit quiz. AP
+ * Precalc framing: sequences as functions on the whole numbers; constant
+ * difference ↔ linear, constant ratio ↔ exponential. Series are outside the CED.
  * LaTeX uses doubled backslashes (template-literal strings). File lives in
  * extra/, so the registry import is '../registry'.
  */
@@ -32,7 +33,7 @@ export const parts: LessonData[] = [
 | Terms, Index, and Notation |
 | Two Patterns That Rule Them All |
 
-> 🔑 **Key Concept:** A **sequence** is just a function whose inputs are the counting numbers $1, 2, 3, \\dots$ and whose outputs are the **terms** $a_1, a_2, a_3, \\dots$. Everything in AP Precalculus about sequences comes from asking *"how does each term grow from the one before it?"*`,
+> 🔑 **Key Concept:** A **sequence** is just a function whose inputs are whole numbers (counting from $0$ or from $1$) and whose outputs are the **terms** $a_1, a_2, a_3, \\dots$. Everything in AP Precalculus about sequences comes from asking *"how does each term grow from the one before it?"*`,
       },
       {
         id: 'seq1-what',
@@ -51,7 +52,7 @@ Each number is a **term**. We label terms by their position $n$ (the **index**):
 
 So $a_1 = 2$, $a_3 = 8$, and $a_5 = 14$. The subscript is the input; the value is the output.
 
-> 💡 **AP framing:** Because the inputs are the integers $1, 2, 3, \\dots$, a sequence is a **function** $a$ with $a(n) = a_n$. This is why sequences behave like the discrete cousins of the lines and exponentials you already know.`,
+> 💡 **AP framing:** Because the inputs are whole numbers, a sequence is a **function** $a$ with $a(n) = a_n$, and its graph is a set of separate points. This is why sequences behave like the discrete cousins of the lines and exponentials you already know.`,
       },
       {
         id: 'seq1-notation',
@@ -70,7 +71,7 @@ So $a_1 = 2$, $a_3 = 8$, and $a_5 = 14$. The subscript is the input; the value i
               options: [
                 'The value of the term itself',
                 'The number of terms total',
-                'The position (index) of the term in the list',
+                'The position of the term in the list',
                 'The difference between terms',
               ],
               correctAnswer: 2,
@@ -144,7 +145,8 @@ You can now spot the two families. The rest of the lesson gives each family its 
 
 - **Part 2–3:** Formulas for the $n$-th term of arithmetic and geometric sequences.
 - **Part 4:** Recursive vs. explicit rules — two languages for the same pattern.
-- **Part 5–6:** Adding the terms up — **series** and the famous infinite sum.
+- **Part 5:** Rules from any known term, and how the two families grow differently.
+- **Part 6:** Connecting sequences to linear and exponential functions.
 - **Part 7:** Mixed mastery and an exit quiz.
 
 > 💡 Keep the mantra: **add → arithmetic → linear**, **multiply → geometric → exponential**.`,
@@ -217,7 +219,7 @@ This is $y = mx + b$ in disguise. The common difference $d$ **is the slope** —
           questions: [
             {
               question: 'For the sequence $-5,\\; -2,\\; 1,\\; 4,\\; \\dots$, what is the common difference $d$?',
-              options: ['$-3$', '$3$', '$-5$', '$7$'],
+              options: ['$-3$', '$3$', '$-5$', '$-7$'],
               correctAnswer: 1,
               explanation: '$d = a_2 - a_1 = -2 - (-5) = 3$. Check: $1 - (-2) = 3$. ✓',
             },
@@ -225,9 +227,9 @@ This is $y = mx + b$ in disguise. The common difference $d$ **is the slope** —
               question: 'Which formula gives the $n$-th term of an arithmetic sequence with first term $a_1$ and common difference $d$?',
               options: [
                 '$a_n = a_1 \\cdot d^{\\,n-1}$',
-                '$a_n = a_1 + n\\,d$',
+                '$a_n = a_1 + n \\cdot d$',
                 '$a_n = a_1 + (n-1)d$',
-                '$a_n = a_1 \\cdot d \\cdot n$',
+                '$a_n = a_1 \\cdot d(n-1)$',
               ],
               correctAnswer: 2,
               explanation: 'You add $d$ a total of $(n-1)$ times to get from $a_1$ to $a_n$: $a_n = a_1 + (n-1)d$. The multiply version is geometric.',
@@ -353,7 +355,7 @@ The ratio $r$ controls the behavior:
                 'They grow without bound',
                 'They alternate in sign',
                 'They decay toward $0$',
-                'They stay constant',
+                'They stay the same size',
               ],
               correctAnswer: 2,
               explanation: 'Since $0 < r = 0.8 < 1$, each term is $80\\%$ of the previous one, so the terms shrink toward $0$: $100, 80, 64, \\dots$',
@@ -534,49 +536,38 @@ $$3,\\; 6,\\; 12,\\; 24,\\; \\dots \\qquad a_4 = 3 \\cdot 2^{3} = 24$$
         type: 'text' as const,
         content: `# 🔢 Arithmetic & Geometric Sequences
 
-**Part 5 of 7 — Series: Adding the Terms Up**
+**Part 5 of 7 — Any-Term Rules & Comparing Growth**
 
 ---
 
-> 🔑 **A series is a sum of a sequence's terms.** Listing and adding by hand is hopeless for many terms — so each family has a closed-form sum formula that does it in one step.`,
+> 🔑 **Two upgrades:** You can write a rule starting from **any** known term, not just the first one. And you can predict how an arithmetic sequence and a geometric sequence grow differently, step by step.`,
       },
       {
-        id: 'seq5-arith-sum',
+        id: 'seq5-anyterm',
         type: 'text' as const,
-        content: `## Arithmetic Series
+        content: `## Rules from Any Known Term
 
-The sum of the first $n$ terms of an arithmetic sequence is the **average of the first and last term, times the number of terms**:
+The AP Precalculus course often calls the initial value **term $0$**, so the basic rules are
 
-$$S_n = \\frac{n}{2}\\,(a_1 + a_n)$$
+$$a_n = a_0 + dn \\qquad\\qquad g_n = g_0\\, r^{\\,n}$$
 
-If you do not yet know $a_n$, substitute $a_n = a_1 + (n-1)d$ to get the equivalent form:
+If instead you know term $k$, count the steps $n - k$ from it:
 
-$$S_n = \\frac{n}{2}\\,\\bigl(2a_1 + (n-1)d\\bigr)$$
+$$a_n = a_k + d\\,(n - k) \\qquad\\qquad g_n = g_k\\, r^{\\,n - k}$$
 
-### Worked Example: $3 + 7 + 11 + \\dots$ (first $20$ terms)
+### Arithmetic: $a_7 = 50$ and $d = 4$
 
-Here $a_1 = 3$, $d = 4$, $n = 20$:
+- Rule: $a_n = 50 + 4(n - 7)$
+- $a_{12} = 50 + 4(5) = 70$
+- $a_0 = 50 + 4(-7) = 22$
 
-$$S_{20} = \\frac{20}{2}\\bigl(2(3) + (20-1)(4)\\bigr) = 10\\,(6 + 76) = 10 \\cdot 82 = 820$$
+### Geometric: $g_3 = 40$ and $r = 0.5$
 
-> 💡 **Why the average works:** pair the first term with the last, the second with the second-to-last — each pair sums to the same total $a_1 + a_n$. There are $\\frac{n}{2}$ such pairs.`,
-      },
-      {
-        id: 'seq5-geo-sum',
-        type: 'text' as const,
-        content: `## Geometric Series (finite)
+- Rule: $g_n = 40\\,(0.5)^{\\,n - 3}$
+- $g_6 = 40\\,(0.5)^3 = 5$
+- $g_0 = 40\\,(0.5)^{-3} = 40 \\cdot 8 = 320$
 
-The sum of the first $n$ terms of a geometric sequence is:
-
-$$S_n = a_1 \\cdot \\frac{1 - r^{\\,n}}{1 - r} \\qquad (r \\ne 1)$$
-
-### Worked Example: $4 + 12 + 36 + \\dots$ (first $5$ terms)
-
-Here $a_1 = 4$, $r = 3$, $n = 5$:
-
-$$S_5 = 4 \\cdot \\frac{1 - 3^{5}}{1 - 3} = 4 \\cdot \\frac{1 - 243}{-2} = 4 \\cdot \\frac{-242}{-2} = 4 \\cdot 121 = 484$$
-
-> ⚠️ **Use the right formula for the right family.** Arithmetic uses $\\frac{n}{2}(a_1 + a_n)$; geometric uses $a_1\\frac{1-r^n}{1-r}$. Mixing them up is a classic exam slip.`,
+> 💡 A negative step count $n - k$ just means you are walking **backward** from the known term.`,
       },
       {
         id: 'seq5-mc',
@@ -585,59 +576,77 @@ $$S_5 = 4 \\cdot \\frac{1 - 3^{5}}{1 - 3} = 4 \\cdot \\frac{1 - 243}{-2} = 4 \\c
         exercise: {
           questions: [
             {
-              question: 'Which formula sums the first $n$ terms of an *arithmetic* series?',
-              options: [
-                '$S_n = a_1 \\dfrac{1 - r^n}{1 - r}$',
-                '$S_n = \\dfrac{n}{2}(a_1 + a_n)$',
-                '$S_n = a_1 + (n-1)d$',
-                '$S_n = \\dfrac{a_1}{1 - r}$',
-              ],
-              correctAnswer: 1,
-              explanation: 'The arithmetic sum is the number of terms times the average of the first and last: $\\frac{n}{2}(a_1+a_n)$. The $r$-formulas are geometric.',
+              question: 'An arithmetic sequence has $a_7 = 50$ and $d = 4$. Which rule gives $a_n$?',
+              options: ['$a_n = 50 + 4(n - 7)$', '$a_n = 50 + 4n$', '$a_n = 4 + 50(n - 7)$', '$a_n = 50 + 4(n + 7)$'],
+              correctAnswer: 0,
+              explanation: 'Start from the known term and add $d$ once per step: $a_n = a_7 + 4(n - 7)$. The rule $50 + 4n$ puts $50$ at $n = 0$ instead of $n = 7$.',
             },
             {
-              question: 'The first $10$ terms of $4, 8, 12, \\dots, 40$ sum to $S_{10}$. Using $S_n = \\frac{n}{2}(a_1+a_n)$, this is:',
-              options: ['$200$', '$440$', '$220$', '$110$'],
-              correctAnswer: 2,
-              explanation: '$S_{10} = \\frac{10}{2}(4 + 40) = 5 \\cdot 44 = 220$.',
+              question: 'A geometric sequence has $g_3 = 40$ and $r = 0.5$. What is $g_0$?',
+              options: ['$320$', '$5$', '$80$', '$20$'],
+              correctAnswer: 0,
+              explanation: 'Walking back $3$ steps divides by $0.5$ three times: $g_0 = 40 \\cdot 2^3 = 320$. The value $5$ is $g_6$, three steps forward, $20$ is $g_4$, one step forward, and $80$ stops after one step back.',
             },
           ],
         },
       },
       {
-        id: 'seq5-drill-arith',
-        type: 'input-boxes' as const,
-        content: `**Sum an Arithmetic Series** 🧮
+        id: 'seq5-growth',
+        type: 'text' as const,
+        content: `## Equal Steps vs. Growing Steps
 
-Use $S_n = \\dfrac{n}{2}\\bigl(2a_1 + (n-1)d\\bigr)$.
+Both sequences below start at $20$ and gain $10$ on the first step.
 
-**1)** $a_1 = -5,\\; d = 3$. Find $S_{15}$.
-**2)** $a_1 = 3,\\; d = 4$. Find $S_{20}$.`,
+| $n$ | $0$ | $1$ | $2$ | $3$ | $4$ |
+|---|---|---|---|---|---|
+| $a_n = 20 + 10n$ | $20$ | $30$ | $40$ | $50$ | $60$ |
+| $g_n = 20(1.5)^n$ | $20$ | $30$ | $45$ | $67.5$ | $101.25$ |
+
+- The **arithmetic** sequence gains $10$, $10$, $10$, $10$: it increases **equally** with each step.
+- The **geometric** sequence gains $10$, $15$, $22.5$, $33.75$: with positive terms and $r > 1$, it increases by a **larger amount** with each successive step.
+
+| Wording | Family | Constant |
+|---------|--------|----------|
+| "grows by $6$ units each year" | arithmetic | $d = 6$ |
+| "grows by $6\\%$ each year" | geometric | $r = 1.06$ |
+| "loses a quarter of its value each year" | geometric | $r = 0.75$ |
+
+> ⚠️ A decreasing geometric sequence of positive terms ($0 < r < 1$) drops by **smaller and smaller** amounts, while a decreasing arithmetic sequence drops by the same amount every step.`,
+      },
+      {
+        id: 'seq5-dropdown',
+        type: 'dropdown-select' as const,
+        content: `**How Do They Grow?** 🔽`,
         exercise: {
-          boxes: 2,
-          correctAnswers: ['240', '820'],
-          hint1: '$S_{15} = \\frac{15}{2}(2(-5) + 14(3)) = \\frac{15}{2}(-10 + 42)$.',
-          hint2: '$S_{20} = \\frac{20}{2}(2(3) + 19(4)) = 10(6 + 76)$.',
-          hint3: 'Multiply $\\frac{15}{2} \\cdot 32 = 240$ for #1; $10 \\cdot 82 = 820$ for #2.',
-          explanation: '1) $S_{15} = \\frac{15}{2}(32) = 240$.  2) $S_{20} = 10(82) = 820$.',
+          dropdowns: [
+            { label: 'An increasing arithmetic sequence increases by:', options: ['the same amount each step', 'a larger amount each step', 'a smaller amount each step'] },
+            { label: 'An increasing geometric sequence of positive terms increases by:', options: ['a larger amount each step', 'the same amount each step', 'a smaller amount each step'] },
+            { label: '"Grows by $6\\%$ each year" describes:', options: ['geometric, $r = 1.06$', 'arithmetic, $d = 6$', 'geometric, $r = 0.06$', 'arithmetic, $d = 0.06$'] },
+          ],
+          correctAnswers: ['the same amount each step', 'a larger amount each step', 'geometric, $r = 1.06$'],
+          hint1: 'Arithmetic means a common difference: the same amount is added every time.',
+          hint2: 'Multiplying a bigger term by the same $r > 1$ adds more than before.',
+          hint3: 'A percent increase keeps $100\\%$ and adds $6\\%$: multiply by $1.06$.',
+          explanation: 'Arithmetic sequences change by equal amounts. Increasing geometric sequences of positive terms change by larger amounts each step. A $6\\%$ yearly increase is geometric with $r = 1.06$.',
         },
       },
       {
-        id: 'seq5-drill-geo',
+        id: 'seq5-drill',
         type: 'input-boxes' as const,
-        content: `**Sum a Geometric Series** 🧮
+        content: `**Compare the Growth** 🧮
 
-Use $S_n = a_1 \\dfrac{1 - r^{\\,n}}{1 - r}$.
+Use $a_n = 20 + 10n$ and $g_n = 20(1.5)^n$.
 
-**1)** $a_1 = 6,\\; r = 2,\\; n = 4$. Find $S_4$.
-**2)** $a_1 = 4,\\; r = 3,\\; n = 5$. Find $S_5$.`,
+**1)** $a_6$
+**2)** $g_4$
+**3)** How much $g$ gains from $n = 3$ to $n = 4$`,
         exercise: {
-          boxes: 2,
-          correctAnswers: ['90', '484'],
-          hint1: '$S_4 = 6 \\cdot \\frac{1 - 2^4}{1 - 2} = 6 \\cdot \\frac{1 - 16}{-1}$.',
-          hint2: '$S_5 = 4 \\cdot \\frac{1 - 3^5}{1 - 3} = 4 \\cdot \\frac{1 - 243}{-2}$.',
-          hint3: '#1: $6 \\cdot \\frac{-15}{-1} = 6 \\cdot 15 = 90$. #2: $4 \\cdot \\frac{-242}{-2} = 4 \\cdot 121 = 484$.',
-          explanation: '1) $S_4 = 6 \\cdot 15 = 90$.  2) $S_5 = 4 \\cdot 121 = 484$.',
+          boxes: 3,
+          correctAnswers: ['80', '101.25', '33.75'],
+          hint1: '$a_6 = 20 + 10(6)$.',
+          hint2: '$g_4 = 20(1.5)^4 = 20(5.0625)$.',
+          hint3: '$g_3 = 67.5$. Subtract it from $g_4$.',
+          explanation: '1) $a_6 = 80$.  2) $g_4 = 101.25$.  3) $101.25 - 67.5 = 33.75$, more than three times the arithmetic gain of $10$.',
         },
       },
     ],
@@ -652,109 +661,109 @@ Use $S_n = a_1 \\dfrac{1 - r^{\\,n}}{1 - r}$.
         type: 'text' as const,
         content: `# 🔢 Arithmetic & Geometric Sequences
 
-**Part 6 of 7 — Infinite Geometric Series**
+**Part 6 of 7 — From Sequences to Linear & Exponential Functions**
 
 ---
 
-> 🔑 **The surprise:** Adding *infinitely* many positive numbers can still give a **finite** total — but only for a geometric series whose terms shrink fast enough toward $0$.`,
+> 🔑 **Same structure, bigger domain.** A linear function is an arithmetic sequence that accepts every real input; an exponential function is a geometric sequence that does the same. Both kinds of function can be built from a known point, just like the any-term rules.`,
       },
       {
-        id: 'seq6-converge',
+        id: 'seq6-forms',
         type: 'text' as const,
-        content: `## When Does an Infinite Sum Settle Down?
+        content: `## Matching Forms
 
-For a geometric series $a_1 + a_1 r + a_1 r^2 + \\dots$, look back at the finite formula $S_n = a_1\\dfrac{1 - r^n}{1 - r}$.
+| Sequence | Function | Built from |
+|----------|----------|------------|
+| $a_n = a_0 + dn$ | $f(x) = b + mx$ | initial value plus repeated **addition** |
+| $a_n = a_k + d(n - k)$ | $f(x) = y_i + m(x - x_i)$ | a known point and a constant rate |
+| $g_n = g_0\\, r^{\\,n}$ | $f(x) = a\\, b^{\\,x}$ | initial value times repeated **multiplication** |
+| $g_n = g_k\\, r^{\\,n - k}$ | $f(x) = y_i\\, b^{\\,x - x_i}$ | a known point and a constant ratio |
 
-- If $|r| < 1$, then $r^n \\to 0$ as $n \\to \\infty$, so $S_n$ approaches a fixed number — the series **converges**.
-- If $|r| \\ge 1$, the terms do **not** shrink to $0$, the partial sums run off to infinity (or oscillate) — the series **diverges**.
+### Building a Linear Function from Two Points: $(3, 14)$ and $(7, 30)$
 
-When $|r| < 1$, dropping the vanishing $r^n$ gives the infinite-sum formula:
+$$m = \\frac{30 - 14}{7 - 3} = 4 \\qquad f(x) = 14 + 4(x - 3) = 2 + 4x$$
 
-$$S_\\infty = \\frac{a_1}{1 - r} \\qquad \\text{(only when } |r| < 1\\text{)}$$
+### Building an Exponential Function from Two Points: $(0, 50)$ and $(2, 72)$
 
-> ⚠️ **The condition $|r| < 1$ is not optional.** If $|r| \\ge 1$ there is **no finite sum**, and plugging into the formula gives a meaningless answer.`,
-      },
-      {
-        id: 'seq6-worked',
-        type: 'text' as const,
-        content: `## Worked Examples
+$$b^{2} = \\frac{72}{50} = 1.44 \\;\\Rightarrow\\; b = 1.2 \\qquad f(x) = 50\\,(1.2)^{x}$$
 
-### Example: $8 + 4 + 2 + 1 + \\dots$
-
-Here $a_1 = 8$ and $r = \\dfrac{1}{2}$. Since $|r| < 1$:
-
-$$S_\\infty = \\frac{8}{1 - \\frac{1}{2}} = \\frac{8}{\\frac{1}{2}} = 16$$
-
-### Example: $12 + 4 + \\tfrac{4}{3} + \\dots$
-
-Here $a_1 = 12$ and $r = \\dfrac{1}{3}$:
-
-$$S_\\infty = \\frac{12}{1 - \\frac{1}{3}} = \\frac{12}{\\frac{2}{3}} = 12 \\cdot \\frac{3}{2} = 18$$
-
-> 💡 **Sanity check:** the total must be *bigger* than $a_1$ (you keep adding positive terms) but not by an unbounded amount. $16 > 8$ ✓ and $18 > 12$ ✓.`,
+> 💡 Two distinct values always determine an arithmetic sequence, a geometric sequence, a linear function, or an exponential function.`,
       },
       {
         id: 'seq6-mc',
         type: 'multiple-choice' as const,
-        content: `**Concept Check — Converge or Diverge?** 🎯`,
+        content: `**Concept Check** 🎯`,
         exercise: {
           questions: [
             {
-              question: 'Which infinite geometric series has a finite sum?',
-              options: [
-                '$2 + 6 + 18 + \\dots\\;(r = 3)$',
-                '$5 + 5 + 5 + \\dots\\;(r = 1)$',
-                '$9 + 3 + 1 + \\dots\\;(r = \\frac{1}{3})$',
-                '$1 + 2 + 4 + \\dots\\;(r = 2)$',
-              ],
-              correctAnswer: 2,
-              explanation: 'A finite sum requires $|r| < 1$. Only $r = \\frac{1}{3}$ satisfies that; the others have $|r| \\ge 1$ and diverge.',
+              question: 'Which linear function passes through $(3, 14)$ and $(7, 30)$?',
+              options: ['$f(x) = 14 + 4(x - 3)$', '$f(x) = 14 + 4x$', '$f(x) = 3 + 4(x - 14)$', '$f(x) = 14 + 16(x - 3)$'],
+              correctAnswer: 0,
+              explanation: 'The slope is $\\frac{30 - 14}{7 - 3} = 4$, and the point form starts from $(3, 14)$. Using $16$ as the slope forgets to divide by the change in input.',
             },
             {
-              question: 'For $16 + 8 + 4 + \\dots$ the infinite sum $S_\\infty$ is:',
-              options: ['$24$', '$32$', '$16$', '$\\infty$'],
-              correctAnswer: 1,
-              explanation: '$a_1 = 16,\\ r = \\frac{1}{2}$, so $S_\\infty = \\dfrac{16}{1 - \\frac{1}{2}} = \\dfrac{16}{\\frac{1}{2}} = 32$.',
+              question: 'Which exponential function passes through $(0, 50)$ and $(2, 72)$?',
+              options: ['$f(x) = 50(1.2)^x$', '$f(x) = 50(1.44)^x$', '$f(x) = 50 + 11x$', '$f(x) = 50(0.2)^x$'],
+              correctAnswer: 0,
+              explanation: 'Over $2$ units the output is multiplied by $1.44$, so $b^2 = 1.44$ and $b = 1.2$. Base $1.44$ is the two-step factor, and $50 + 11x$ is the line through the same two points.',
             },
           ],
         },
       },
       {
+        id: 'seq6-table',
+        type: 'text' as const,
+        content: `## Linear or Exponential? Check Equal Input Steps
+
+When the inputs are equally spaced:
+
+- outputs change by a **constant amount** → **linear**
+- outputs change by a **constant factor** → **exponential** (the factor cannot be $0$ or $1$)
+
+| $x$ | $0$ | $3$ | $6$ | $9$ |
+|---|---|---|---|---|
+| Model A | $200$ | $170$ | $140$ | $110$ |
+| Model B | $200$ | $160$ | $128$ | $102.4$ |
+
+- **Model A** drops $30$ every $3$ units: linear, slope $-10$, so $A(x) = 200 - 10x$.
+- **Model B** is multiplied by $0.8$ every $3$ units: exponential.
+
+### Different Domains
+
+The sequence $g_n = 200(0.8)^n$ only has whole-number inputs. The function $f(x) = 200(0.8)^x$ also has values like $f(4.5)$, so it can describe what happens **between** the whole-number steps.`,
+      },
+      {
         id: 'seq6-dropdown',
         type: 'dropdown-select' as const,
-        content: `**Build the Infinite Sum** 🔽
-
-Evaluate $S_\\infty$ for $3 + 2 + \\tfrac{4}{3} + \\dots$`,
+        content: `**Pick the Model** 🔽`,
         exercise: {
           dropdowns: [
-            { label: 'First term $a_1 = $', options: ['$3$', '$2$', '$\\frac{4}{3}$', '$1$'] },
-            { label: 'Common ratio $r = $', options: ['$\\frac{2}{3}$', '$\\frac{3}{2}$', '$\\frac{1}{3}$', '$2$'] },
-            { label: 'Does it converge?', options: ['Yes, $|r| < 1$', 'No, $|r| \\ge 1$'] },
-            { label: 'Therefore $S_\\infty = $', options: ['$9$', '$6$', '$4.5$', '$\\infty$'] },
+            { label: 'Outputs drop by $30$ every $3$ units of input. The model is:', options: ['linear', 'exponential', 'neither'] },
+            { label: 'Outputs are multiplied by $0.8$ every $3$ units of input. The model is:', options: ['exponential', 'linear', 'neither'] },
+            { label: 'Domains of $g_n = 200(0.8)^n$ and $f(x) = 200(0.8)^x$:', options: ['whole numbers vs. all real numbers', 'all real numbers vs. whole numbers', 'the same for both'] },
           ],
-          correctAnswers: ['$3$', '$\\frac{2}{3}$', 'Yes, $|r| < 1$', '$9$'],
-          hint1: 'The first term written is $a_1 = 3$.',
-          hint2: '$r = \\dfrac{a_2}{a_1} = \\dfrac{2}{3}$, and $\\frac{2}{3} < 1$, so it converges.',
-          hint3: '$S_\\infty = \\dfrac{3}{1 - \\frac{2}{3}} = \\dfrac{3}{\\frac{1}{3}} = 9$.',
-          explanation: '$a_1 = 3$, $r = \\frac{2}{3}$ (with $|r|<1$ → converges), so $S_\\infty = \\frac{3}{1 - 2/3} = \\frac{3}{1/3} = 9$.',
+          correctAnswers: ['linear', 'exponential', 'whole numbers vs. all real numbers'],
+          hint1: 'A constant amount of change over equal input steps means a constant rate.',
+          hint2: 'A constant factor over equal input steps means proportional change.',
+          hint3: 'A sequence is a function of the whole numbers.',
+          explanation: 'Equal amounts over equal steps: linear. Equal factors over equal steps: exponential. The sequence takes whole-number inputs while the function takes all real inputs.',
         },
       },
       {
         id: 'seq6-drill',
         type: 'input-boxes' as const,
-        content: `**Infinite Sums** 🧮
+        content: `**Build the Function** 🧮
 
-Use $S_\\infty = \\dfrac{a_1}{1 - r}$ (only valid when $|r| < 1$).
-
-**1)** $a_1 = 10,\\; r = \\frac{1}{2}$. Find $S_\\infty$.
-**2)** $a_1 = 18,\\; r = \\frac{1}{3}$. Find $S_\\infty$.`,
+**1)** Slope of the line through $(3, 14)$ and $(7, 30)$
+**2)** That line's value at $x = 0$
+**3)** The base $b$ of the exponential function through $(0, 50)$ and $(2, 72)$`,
         exercise: {
-          boxes: 2,
-          correctAnswers: ['20', '27'],
-          hint1: '$S_\\infty = \\dfrac{10}{1 - \\frac{1}{2}} = \\dfrac{10}{\\frac{1}{2}}$.',
-          hint2: '$S_\\infty = \\dfrac{18}{1 - \\frac{1}{3}} = \\dfrac{18}{\\frac{2}{3}} = 18 \\cdot \\frac{3}{2}$.',
-          hint3: 'Dividing by $\\frac{1}{2}$ doubles; dividing by $\\frac{2}{3}$ multiplies by $\\frac{3}{2}$.',
-          explanation: '1) $S_\\infty = 10 \\div \\frac{1}{2} = 20$.  2) $S_\\infty = 18 \\cdot \\frac{3}{2} = 27$.',
+          boxes: 3,
+          correctAnswers: ['4', '2', '1.2'],
+          hint1: '$\\frac{30 - 14}{7 - 3}$.',
+          hint2: 'Step back $3$ units from $(3, 14)$: $14 - 3(4)$.',
+          hint3: '$b^2 = \\frac{72}{50} = 1.44$, so take the positive square root.',
+          explanation: '1) $\\frac{16}{4} = 4$.  2) $14 - 12 = 2$.  3) $b = \\sqrt{1.44} = 1.2$.',
         },
       },
     ],
@@ -773,7 +782,7 @@ Use $S_\\infty = \\dfrac{a_1}{1 - r}$ (only valid when $|r| < 1$).
 
 ---
 
-You now own both families end-to-end: classify, find any term, switch between recursive and explicit, and sum (finite or infinite). Let's apply it and then test it.`,
+You now own both families end-to-end: classify, find any term from any known term, switch between recursive and explicit, compare their growth, and match them to linear and exponential functions. Let's apply it and then test it.`,
       },
       {
         id: 'seq7-reference',
@@ -784,12 +793,12 @@ You now own both families end-to-end: classify, find any term, switch between re
 |------|----------------------|------------------------------|
 | Find the step | $d = a_2 - a_1$ | $r = \\dfrac{a_2}{a_1}$ |
 | $n$-th term | $a_n = a_1 + (n-1)d$ | $a_n = a_1 \\cdot r^{\\,n-1}$ |
+| From any term $k$ | $a_n = a_k + d(n-k)$ | $a_n = a_k \\cdot r^{\\,n-k}$ |
 | Recursive | $a_n = a_{n-1} + d$ | $a_n = r\\,a_{n-1}$ |
+| Growth per step | same amount | larger amount (positive terms, $r > 1$) |
 | Function type | linear | exponential |
-| Finite sum | $\\dfrac{n}{2}(a_1 + a_n)$ | $a_1\\dfrac{1-r^n}{1-r}$ |
-| Infinite sum | none (diverges) | $\\dfrac{a_1}{1-r}$, only if $|r|<1$ |
 
-> ⚠️ **Three traps:** use $n-1$ (not $n$) in the term formulas; pick the sum formula that matches the family; and only use $S_\\infty$ when $|r| < 1$.`,
+> ⚠️ **Three traps:** use $n-1$ (not $n$) when counting from $a_1$; check whether the count starts at $0$ or $1$; and read percent language as a ratio ($5\\%$ growth means $r = 1.05$).`,
       },
       {
         id: 'seq7-application',
@@ -800,9 +809,7 @@ You now own both families end-to-end: classify, find any term, switch between re
 
 $$a_{10} = 40000 + (10-1)(2500) = 40000 + 22500 = 62500$$
 
-Total earned over $10$ years (an arithmetic series):
-
-$$S_{10} = \\frac{10}{2}(a_1 + a_{10}) = 5\\,(40000 + 62500) = 5 \\cdot 102500 = 512500$$
+Compare a $5\\%$ raise each year instead, which is geometric with $r = 1.05$: year $10$ pays $40000(1.05)^9 \\approx 62053$, still a little less, but year $11$ pays $40000(1.05)^{10} \\approx 65156$ against the flat plan's \\$65,000. The percent raise grows by more each year, so it pulls ahead and stays ahead.
 
 **Geometric — a quantity that changes by a fixed percent.** A population multiplies by $r = 1.05$ ($5\\%$ growth) each year. After $3$ years of growth from $1000$:
 
@@ -823,15 +830,10 @@ $$a_4 = 1000 \\cdot (1.05)^{3} \\approx 1157.63$$
               explanation: 'Arithmetic: $a_1 = 300,\\ d = 50$, so $a_{12} = 300 + (12-1)(50) = 300 + 550 = 850$.',
             },
             {
-              question: 'A ball is dropped and each bounce reaches $\\frac{1}{2}$ the previous height, starting at $20$ ft. The peak heights $20, 10, 5, \\dots$ form which type of series, and what is their infinite sum?',
-              options: [
-                'Arithmetic; sum is infinite',
-                'Geometric; sum $= 20$ ft',
-                'Geometric; sum $= 40$ ft',
-                'Geometric; sum $= 10$ ft',
-              ],
-              correctAnswer: 2,
-              explanation: 'Heights multiply by $r=\\frac{1}{2}$ (geometric, $|r|<1$). $S_\\infty = \\dfrac{20}{1-\\frac{1}{2}} = \\dfrac{20}{\\frac{1}{2}} = 40$ ft.',
+              question: 'A ball is dropped and each bounce reaches $\\frac{1}{2}$ the previous height. The peak heights are $20, 10, 5, \\dots$ ft. What is the height of the $5$th peak?',
+              options: ['$1.25$ ft', '$2.5$ ft', '$0.625$ ft', '$-20$ ft'],
+              correctAnswer: 0,
+              explanation: 'The heights form a geometric sequence with $a_1 = 20$ and $r = \\frac{1}{2}$, so $a_5 = 20 \\cdot (\\frac{1}{2})^4 = 1.25$ ft. Subtracting $10$ ft each bounce treats it as arithmetic and gives $-20$ ft, which is impossible.',
             },
           ],
         },
@@ -841,18 +843,18 @@ $$a_4 = 1000 \\cdot (1.05)^{3} \\approx 1157.63$$
         type: 'dropdown-select' as const,
         content: `**Choose the Right Tool** 🔽
 
-For each task, pick the formula you'd use.`,
+For each task, pick the form you'd use.`,
         exercise: {
           dropdowns: [
-            { label: 'Find the $50$th term of $2,5,8,\\dots$', options: ['$a_1 + (n-1)d$', '$a_1 \\cdot r^{n-1}$', '$\\frac{n}{2}(a_1+a_n)$', '$\\frac{a_1}{1-r}$'] },
-            { label: 'Add the first $50$ terms of $2,5,8,\\dots$', options: ['$\\frac{n}{2}(a_1+a_n)$', '$a_1 \\cdot r^{n-1}$', '$\\frac{a_1}{1-r}$', '$a_1 + (n-1)d$'] },
-            { label: 'Add $1 + \\frac{1}{2} + \\frac{1}{4} + \\dots$ forever', options: ['$\\frac{a_1}{1-r}$', '$\\frac{n}{2}(a_1+a_n)$', '$a_1 + (n-1)d$', '$a_1\\frac{1-r^n}{1-r}$'] },
+            { label: 'Find the $50$th term of $2,5,8,\\dots$', options: ['$a_1 + (n-1)d$', '$a_1 \\cdot r^{n-1}$', '$g_k \\cdot r^{n-k}$', '$a\\,b^{x}$'] },
+            { label: 'Find $g_9$ when you know $g_4$ and $r$', options: ['$g_k \\cdot r^{n-k}$', '$a_1 + (n-1)d$', '$a\\,b^{x}$', '$a_k + d(n-k)$'] },
+            { label: 'Model a value growing $3\\%$ per year at any time $x$, including between whole years', options: ['$a\\,b^{x}$', '$a_k + d(n-k)$', '$a_1 + (n-1)d$', '$g_k \\cdot r^{n-k}$'] },
           ],
-          correctAnswers: ['$a_1 + (n-1)d$', '$\\frac{n}{2}(a_1+a_n)$', '$\\frac{a_1}{1-r}$'],
-          hint1: '$2,5,8,\\dots$ adds $3$, so it is arithmetic — use the arithmetic tools.',
-          hint2: 'A single term uses the $n$-th-term formula; a sum of many terms uses a series formula.',
-          hint3: '$1 + \\frac{1}{2} + \\frac{1}{4} + \\dots$ is infinite geometric with $|r|=\\frac{1}{2}<1$, so use $\\frac{a_1}{1-r}$.',
-          explanation: 'One term of an arithmetic sequence → $a_1+(n-1)d$. A finite arithmetic sum → $\\frac{n}{2}(a_1+a_n)$. An infinite geometric sum → $\\frac{a_1}{1-r}$.',
+          correctAnswers: ['$a_1 + (n-1)d$', '$g_k \\cdot r^{n-k}$', '$a\\,b^{x}$'],
+          hint1: '$2,5,8,\\dots$ adds $3$, so it is arithmetic — use the arithmetic term rule.',
+          hint2: 'You know a term other than the first, so start from $g_k$ and count $n - k$ steps.',
+          hint3: 'Inputs between whole years call for a function of all real numbers, and percent growth is exponential.',
+          explanation: 'One term of an arithmetic sequence → $a_1+(n-1)d$. A geometric term from a known term $g_k$ → $g_k \\cdot r^{n-k}$. Percent growth at any real time → the exponential function $a\\,b^x$.',
         },
       },
       {
@@ -870,21 +872,16 @@ Answer all three to finish the lesson.`,
               explanation: '$a_1 = 2,\\ r = 3$, so $a_7 = 2 \\cdot 3^{6} = 2 \\cdot 729 = 1458$.',
             },
             {
-              question: 'The sum of the first $20$ terms of the arithmetic series $3 + 7 + 11 + \\dots$ is:',
-              options: ['$800$', '$410$', '$820$', '$1640$'],
-              correctAnswer: 2,
-              explanation: '$a_1 = 3,\\ d = 4$, so $S_{20} = \\frac{20}{2}(2(3) + 19(4)) = 10(6 + 76) = 820$.',
+              question: 'An arithmetic sequence has $a_0 = 3$ and $d = 4$. Which linear function matches it?',
+              options: ['$f(x) = 3 + 4x$', '$f(x) = 4 + 3x$', '$f(x) = 3 \\cdot 4^x$', '$f(x) = 3 + 4(x - 1)$'],
+              correctAnswer: 0,
+              explanation: 'Both start at $3$ when the input is $0$ and add $4$ per unit of input. The form $3 + 4(x - 1)$ would put $3$ at $x = 1$, and $3 \\cdot 4^x$ multiplies instead of adds.',
             },
             {
-              question: 'Which infinite geometric series converges, and to what sum?',
-              options: [
-                '$24 + 8 + \\tfrac{8}{3} + \\dots \\to 48$',
-                '$24 + 8 + \\tfrac{8}{3} + \\dots \\to 36$',
-                '$3 + 6 + 12 + \\dots \\to 24$',
-                '$24 + 8 + \\tfrac{8}{3} + \\dots$ diverges',
-              ],
-              correctAnswer: 1,
-              explanation: '$a_1 = 24,\\ r = \\frac{1}{3}$ with $|r| < 1$, so it converges to $S_\\infty = \\dfrac{24}{1 - \\frac{1}{3}} = \\dfrac{24}{\\frac{2}{3}} = 36$.',
+              question: 'A geometric sequence with positive terms has $g_2 = 24$ and $g_4 = 96$. What is $g_0$?',
+              options: ['$6$', '$12$', '$1.5$', '$-48$'],
+              correctAnswer: 0,
+              explanation: '$r^2 = \\frac{96}{24} = 4$, so $r = 2$, and $g_0 = 24 \\cdot 2^{-2} = 6$. The value $12$ is $g_1$, $1.5$ divides by $2^4$ instead of $2^2$, and $-48$ treats the sequence as arithmetic with $d = 36$.',
             },
           ],
         },

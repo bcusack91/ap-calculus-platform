@@ -5,19 +5,17 @@ export const precalcTrigIdentitiesPart5Data = {
       id: 'p5-intro',
       type: 'text' as const,
       content: `
-# ✖️ Trigonometric Identities — Double-Angle & Half-Angle Formulas
+# ✖️ Trigonometric Identities — Double-Angle Formulas
 
-**Part 5 of 7**
+**Part 5 of 7 — Double-Angle Identities**
 
-**Double-angle** formulas express $\\sin 2\\theta$, $\\cos 2\\theta$, and $\\tan 2\\theta$ in terms of functions of $\\theta$. **Half-angle** formulas go the other direction: expressing $\\sin\\frac{\\theta}{2}$, etc., in terms of $\\cos\\theta$.
+**Double-angle** identities express $\\sin 2\\theta$ and $\\cos 2\\theta$ in terms of $\\sin\\theta$ and $\\cos\\theta$. They let you evaluate, simplify, and solve when an expression mixes $2\\theta$ with $\\theta$.
 
 ### Double-Angle Identities
 
 $$\\boxed{\\sin 2\\theta = 2\\sin\\theta\\cos\\theta}$$
 
 $$\\boxed{\\cos 2\\theta = \\cos^2\\theta - \\sin^2\\theta = 2\\cos^2\\theta - 1 = 1 - 2\\sin^2\\theta}$$
-
-$$\\boxed{\\tan 2\\theta = \\frac{2\\tan\\theta}{1 - \\tan^2\\theta}}$$
 
 > **Why three forms for $\\cos 2\\theta$?** Each is best in different situations:
 
@@ -27,13 +25,7 @@ $$\\boxed{\\tan 2\\theta = \\frac{2\\tan\\theta}{1 - \\tan^2\\theta}}$$
 | $2\\cos^2\\theta - 1$ | Only $\\cos\\theta$ |
 | $1 - 2\\sin^2\\theta$ | Only $\\sin\\theta$ |
 
-### Half-Angle Identities
-
-$$\\boxed{\\sin\\frac{\\theta}{2} = \\pm\\sqrt{\\frac{1 - \\cos\\theta}{2}}} \\qquad \\boxed{\\cos\\frac{\\theta}{2} = \\pm\\sqrt{\\frac{1 + \\cos\\theta}{2}}}$$
-
-$$\\boxed{\\tan\\frac{\\theta}{2} = \\frac{1 - \\cos\\theta}{\\sin\\theta} = \\frac{\\sin\\theta}{1 + \\cos\\theta}}$$
-
-> The $\\pm$ depends on the quadrant of $\\frac{\\theta}{2}$, not of $\\theta$!
+> Half-angle identities and the tangent double-angle identity are not assessed on the AP Precalculus exam.
       `
     },
     {
@@ -54,21 +46,24 @@ Use the form that only needs $\\cos\\theta$:
 
 $$\\cos 2\\theta = 2\\cos^2\\theta - 1 = 2\\left(\\frac{1}{9}\\right) - 1 = \\frac{2}{9} - 1 = -\\frac{7}{9}$$
 
-### Example 3: Find the exact value of $\\sin 15°$ using the half-angle formula
+### Example 3: Solve $\\sin 2\\theta = \\sin\\theta$ on $[0, 2\\pi)$
 
-$15° = \\frac{30°}{2}$, so $\\theta = 30°$ and $\\cos 30° = \\frac{\\sqrt{3}}{2}$.
+Rewrite so every term uses the same angle, then factor. Never divide by $\\sin\\theta$, because that loses the solutions where $\\sin\\theta = 0$.
 
-$$\\sin 15° = +\\sqrt{\\frac{1 - \\frac{\\sqrt{3}}{2}}{2}} = \\sqrt{\\frac{2 - \\sqrt{3}}{4}} = \\frac{\\sqrt{2 - \\sqrt{3}}}{2}$$
+$$2\\sin\\theta\\cos\\theta - \\sin\\theta = 0 \\implies \\sin\\theta\\,(2\\cos\\theta - 1) = 0$$
 
-($+$ because $15°$ is in QI)
+- $\\sin\\theta = 0$: $\\theta = 0, \\pi$
+- $\\cos\\theta = \\frac{1}{2}$: $\\theta = \\frac{\\pi}{3}, \\frac{5\\pi}{3}$
 
-### Example 4: Power-Reduction Formula
+**Solutions:** $\\theta = 0, \\frac{\\pi}{3}, \\pi, \\frac{5\\pi}{3}$
 
-The $\\cos 2\\theta$ identity rearranges to eliminate squares:
+### Example 4: Rewriting $\\sin^2 x$ as a sinusoid
 
-$$\\sin^2\\theta = \\frac{1 - \\cos 2\\theta}{2} \\qquad \\cos^2\\theta = \\frac{1 + \\cos 2\\theta}{2}$$
+Solve $\\cos 2x = 1 - 2\\sin^2 x$ for $\\sin^2 x$:
 
-These are essential for calculus integration of $\\sin^2 x$ and $\\cos^2 x$.
+$$\\sin^2 x = \\frac{1 - \\cos 2x}{2} = \\frac{1}{2} - \\frac{1}{2}\\cos 2x$$
+
+This equivalent form shows that $y = \\sin^2 x$ is a sinusoid with midline $y = \\frac{1}{2}$, amplitude $\\frac{1}{2}$, and period $\\pi$. In the same way, $\\cos^2 x = \\frac{1}{2} + \\frac{1}{2}\\cos 2x$.
       `
     },
     {
@@ -87,11 +82,12 @@ $$\\cos(A + A) = \\cos A\\cos A - \\sin A\\sin A = \\cos^2 A - \\sin^2 A$$
 
 | I see … | I should … |
 |:--------|:-----------|
-| $\\sin\\theta\\cos\\theta$ | Use $\\sin 2\\theta = 2\\sin\\theta\\cos\\theta$ |
-| $\\cos^2\\theta$ or $\\sin^2\\theta$ alone | Use power-reduction to lower the degree |
-| $\\cos^2\\theta - \\sin^2\\theta$ | Recognize as $\\cos 2\\theta$ |
-| $\\sin(\\theta/2)$ or $\\cos(\\theta/2)$ | Use half-angle with correct $\\pm$ sign |
-| $1 \\pm \\cos\\theta$ in a numerator | Likely a half-angle setup |
+| $\\sin\\theta\\cos\\theta$ | Use $\\sin\\theta\\cos\\theta = \\frac{1}{2}\\sin 2\\theta$ |
+| $\\cos^2\\theta$ or $\\sin^2\\theta$ alone | Rearrange a $\\cos 2\\theta$ form to remove the square |
+| $\\cos^2\\theta - \\sin^2\\theta$, $2\\cos^2\\theta - 1$, or $1 - 2\\sin^2\\theta$ | Recognize as $\\cos 2\\theta$ |
+| Equation with $\\sin 2\\theta$ and $\\sin\\theta$ or $\\cos\\theta$ | Expand $\\sin 2\\theta$, move everything to one side, factor |
+| Equation with $\\cos 2\\theta$ and $\\sin\\theta$ | Use $1 - 2\\sin^2\\theta$ to get a quadratic in $\\sin\\theta$ |
+| Equation with $\\cos 2\\theta$ and $\\cos\\theta$ | Use $2\\cos^2\\theta - 1$ to get a quadratic in $\\cos\\theta$ |
       `
     },
     {
@@ -108,13 +104,13 @@ $$\\cos(A + A) = \\cos A\\cos A - \\sin A\\sin A = \\cos^2 A - \\sin^2 A$$
               '$\\cos^2\\theta - \\sin^2\\theta$',
               '$2\\cos^2\\theta - 1$',
               '$1 - 2\\sin^2\\theta$',
-              '$\\frac{1 - \\tan^2\\theta}{1 + \\tan^2\\theta}$'
+              '$1 - 2\\cos^2\\theta$'
             ],
             correctAnswer: 2,
             explanation: '$1 - 2\\sin^2\\theta$ uses only $\\sin\\theta$, so it is the best choice when $\\cos\\theta$ is unknown.'
           },
           {
-            question: 'The power-reduction identity $\\cos^2\\theta$ equals:',
+            question: 'Solving $\\cos 2\\theta = 2\\cos^2\\theta - 1$ for $\\cos^2\\theta$ gives:',
             options: [
               '$\\frac{1 - \\cos 2\\theta}{2}$',
               '$\\frac{1 + \\cos 2\\theta}{2}$',
@@ -125,15 +121,15 @@ $$\\cos(A + A) = \\cos A\\cos A - \\sin A\\sin A = \\cos^2 A - \\sin^2 A$$
             explanation: 'From $\\cos 2\\theta = 2\\cos^2\\theta - 1$, solve for $\\cos^2\\theta$: $\\cos^2\\theta = \\frac{1 + \\cos 2\\theta}{2}$.'
           },
           {
-            question: 'In the half-angle formula $\\sin\\frac{\\theta}{2} = \\pm\\sqrt{\\frac{1 - \\cos\\theta}{2}}$, the sign is determined by:',
+            question: 'To solve $\\cos 2\\theta + \\sin\\theta = 0$, which replacement for $\\cos 2\\theta$ produces a quadratic in $\\sin\\theta$?',
             options: [
-              'The sign of $\\cos\\theta$',
-              'The quadrant of $\\theta$',
-              'The quadrant of $\\frac{\\theta}{2}$',
-              'It is always positive'
+              '$2\\cos^2\\theta - 1$',
+              '$\\cos^2\\theta - \\sin^2\\theta$',
+              '$1 - 2\\sin^2\\theta$',
+              '$2\\sin\\theta\\cos\\theta$'
             ],
             correctAnswer: 2,
-            explanation: 'The $\\pm$ depends on the quadrant of the half-angle $\\frac{\\theta}{2}$, not the original angle $\\theta$.'
+            explanation: 'Replacing $\\cos 2\\theta$ with $1 - 2\\sin^2\\theta$ gives $-2\\sin^2\\theta + \\sin\\theta + 1 = 0$, an equation in $\\sin\\theta$ alone. The other forms leave a cosine in the equation or are not equal to $\\cos 2\\theta$.'
           }
         ]
       }
@@ -148,15 +144,15 @@ $$\\cos(A + A) = \\cos A\\cos A - \\sin A\\sin A = \\cos^2 A - \\sin^2 A$$
 
 **2)** Find $\\cos 2\\theta$ if $\\sin\\theta = \\frac{1}{4}$. Write as a fraction. (e.g., $\\cos 2\\theta = 1 - 2(3/5)^2 = 1 - 18/25 = 7/25$)
 
-**3)** If $\\cos\\theta = \\frac{3}{5}$ and $\\sin\\theta = \\frac{4}{5}$, find $\\tan 2\\theta$. Write as a fraction. (e.g., with $\\tan\\theta = 1$, $\\tan 2\\theta = \\frac{2(1)}{1-1^2}$ is undefined)
+**3)** If $\\cos\\theta = \\frac{3}{5}$ and $\\sin\\theta = \\frac{4}{5}$, find $\\cos 2\\theta$. Write as a fraction. (e.g., with $\\cos\\theta = \\frac{12}{13}$ and $\\sin\\theta = \\frac{5}{13}$, $\\cos 2\\theta = \\frac{144}{169} - \\frac{25}{169} = \\frac{119}{169}$)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['120/169', '7/8', '-24/7'],
+        correctAnswers: ['120/169', '7/8', '-7/25'],
         hint1: '$\\sin 2\\theta = 2\\sin\\theta\\cos\\theta = 2 \\cdot \\frac{5}{13} \\cdot \\frac{12}{13}$.',
         hint2: 'Use $\\cos 2\\theta = 1 - 2\\sin^2\\theta = 1 - 2(1/4)^2 = 1 - 2/16 = 1 - 1/8$.',
-        hint3: '$\\tan\\theta = \\frac{4/5}{3/5} = \\frac{4}{3}$. Then $\\tan 2\\theta = \\frac{2(4/3)}{1 - (4/3)^2} = \\frac{8/3}{1 - 16/9} = \\frac{8/3}{-7/9}$.',
-        explanation: '1) $2(5/13)(12/13) = 120/169$. 2) $1 - 2(1/16) = 1 - 1/8 = 7/8$. 3) $\\tan\\theta = 4/3$, so $\\frac{8/3}{-7/9} = \\frac{8}{3} \\cdot \\frac{-9}{7} = -24/7$.'
+        hint3: 'You know both values, so use $\\cos 2\\theta = \\cos^2\\theta - \\sin^2\\theta = \\frac{9}{25} - \\frac{16}{25}$.',
+        explanation: '1) $2(5/13)(12/13) = 120/169$. 2) $1 - 2(1/16) = 1 - 1/8 = 7/8$. 3) $\\frac{9}{25} - \\frac{16}{25} = -\\frac{7}{25}$.'
       }
     },
     {
@@ -169,26 +165,26 @@ $$\\cos(A + A) = \\cos A\\cos A - \\sin A\\sin A = \\cos^2 A - \\sin^2 A$$
         dropdowns: [
           {
             label: '$2\\sin\\theta\\cos\\theta$ is the double-angle formula for',
-            options: ['$\\sin 2\\theta$', '$\\cos 2\\theta$', '$\\tan 2\\theta$', '$\\sin\\theta$']
+            options: ['$\\sin 2\\theta$', '$\\cos 2\\theta$', '$2\\sin\\theta$', '$\\sin\\theta$']
           },
           {
             label: '$\\cos^2\\theta - \\sin^2\\theta$ is equivalent to',
-            options: ['$\\sin 2\\theta$', '$\\cos 2\\theta$', '$\\tan 2\\theta$', '$1$']
+            options: ['$\\sin 2\\theta$', '$\\cos 2\\theta$', '$2\\cos\\theta$', '$1$']
           },
           {
-            label: 'The power-reduction for $\\sin^2\\theta$ is',
+            label: 'Solving $\\cos 2\\theta = 1 - 2\\sin^2\\theta$ for $\\sin^2\\theta$ gives',
             options: ['$\\frac{1+\\cos 2\\theta}{2}$', '$\\frac{1-\\cos 2\\theta}{2}$', '$\\frac{\\sin 2\\theta}{2}$', '$1 - \\cos\\theta$']
           },
           {
-            label: 'To determine the $\\pm$ sign in a half-angle formula, check the quadrant of',
-            options: ['$\\theta$', '$2\\theta$', '$\\theta/2$', '$\\pi - \\theta$']
+            label: 'On $[0, 2\\pi)$, the equation $\\sin 2\\theta = \\sin\\theta$ has this many solutions:',
+            options: ['$2$', '$3$', '$4$', '$6$']
           }
         ],
-        correctAnswers: ['$\\sin 2\\theta$', '$\\cos 2\\theta$', '$\\frac{1-\\cos 2\\theta}{2}$', '$\\theta/2$'],
+        correctAnswers: ['$\\sin 2\\theta$', '$\\cos 2\\theta$', '$\\frac{1-\\cos 2\\theta}{2}$', '$4$'],
         hint1: '$\\sin 2\\theta = 2\\sin\\theta\\cos\\theta$ by definition.',
         hint2: 'All three forms of $\\cos 2\\theta$ are equivalent; this one uses both sin and cos.',
         hint3: '$\\sin^2\\theta = \\frac{1 - \\cos 2\\theta}{2}$ (the minus goes with sine).',
-        explanation: '$2\\sin\\theta\\cos\\theta = \\sin 2\\theta$. $\\cos^2\\theta - \\sin^2\\theta = \\cos 2\\theta$. $\\sin^2\\theta = (1-\\cos 2\\theta)/2$. Half-angle sign depends on the quadrant of $\\theta/2$.'
+        explanation: '$2\\sin\\theta\\cos\\theta = \\sin 2\\theta$. $\\cos^2\\theta - \\sin^2\\theta = \\cos 2\\theta$. $\\sin^2\\theta = (1-\\cos 2\\theta)/2$. $\\sin\\theta(2\\cos\\theta - 1) = 0$ gives $0, \\frac{\\pi}{3}, \\pi, \\frac{5\\pi}{3}$: four solutions.'
       }
     },
     {

@@ -66,17 +66,15 @@ More frequent compounding always gives a **higher** return, but with diminishing
       content: `
 ## ♾️ Continuous Compounding & the Number $e$
 
-As $n \\to \\infty$, the compound interest formula approaches:
+As the number of compounding periods $n$ grows larger and larger, the balance levels off at:
 
 $$\\boxed{A = Pe^{rt}}$$
 
-where $e \\approx 2.71828...$
+where $e \\approx 2.718$ is the **natural base**.
 
 ### Why $e$?
 
-$$\\lim_{n \\to \\infty}\\left(1 + \\frac{1}{n}\\right)^n = e$$
-
-This limit is the foundation of continuous growth.
+Try $\\$1$ at $100\\%$ interest for one year: annually gives $\\$2$, monthly gives $(1 + \\tfrac{1}{12})^{12} \\approx \\$2.613$, daily gives $\\approx \\$2.715$. The values creep up toward $e \\approx 2.718$ and never pass it. That is why $e$ is the base of choice for models of continuous growth or decay.
 
 ### Worked Example
 

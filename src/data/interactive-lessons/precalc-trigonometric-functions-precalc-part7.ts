@@ -20,7 +20,7 @@ This final part ties together everything from Parts 1–6: radian measure, the u
 | Find missing trig value | Pythagorean identity ($\\sin^2 + \\cos^2 = 1$ family) |
 | Read graph parameters | $a$ → amplitude, $b$ → period, $c$ → phase, $d$ → midline |
 | Write equation from data | Identify max/min → compute $a, d, b, c$ → choose sin or cos |
-| Find arc length / sector area | $s = r\\theta$, $A = \\frac{1}{2}r^2\\theta$ (radians only!) |
+| Find arc length or angle | $s = r\\theta$, $\\theta = \\frac{s}{r}$ (radians only!) |
       `
     },
     {
@@ -56,7 +56,7 @@ This final part ties together everything from Parts 1–6: radian measure, the u
 | Quantity | Formula |
 |:---------|:--------|
 | Arc length | $s = r\\theta$ |
-| Sector area | $A = \\frac{1}{2}r^2\\theta$ |
+| Point on circle of radius $r$ | $(r\\cos\\theta, r\\sin\\theta)$ |
 | Amplitude | $|a| = \\frac{\\text{max} - \\text{min}}{2}$ |
 | Midline | $d = \\frac{\\text{max} + \\text{min}}{2}$ |
       `
@@ -117,8 +117,8 @@ From trigonometry: $x = 200\\tan\\theta = 200\\tan\\left(\\frac{\\pi}{5}t\\right
             options: [
               '$y = 4\\sin(\\frac{\\pi}{3}(x - 1)) + 3$',
               '$y = 4\\sin(6(x - 1)) + 3$',
-              '$y = 3\\sin(\\frac{\\pi}{3}(x - 1)) + 4$',
-              '$y = 4\\sin(\\frac{2\\pi}{3}(x - 1)) + 3$'
+              '$y = 3\\sin(\\frac{\\pi}{3}x - 1) + 4$',
+              '$y = 4\\sin(12(x - 1)) + 3$'
             ],
             correctAnswer: 0,
             explanation: '$b = \\frac{2\\pi}{6} = \\frac{\\pi}{3}$. With $a = 4$, $c = 1$, $d = 3$: $y = 4\\sin(\\frac{\\pi}{3}(x-1)) + 3$.'

@@ -19,7 +19,7 @@ This final part combines every skill from the Polynomial Functions unit: degree 
 | Zeros & Factored Form (2) | $p(r) = 0 \\iff (x - r)$ is a factor | Factor to find all zeros |
 | Multiplicity (3) | Even mult → bounce, odd mult → cross | Sum of multiplicities = degree |
 | Division (4) | Long / synthetic division, Remainder Thm | $p(c) = $ remainder when dividing by $(x - c)$ |
-| Complex Roots (5) | Conjugate pairs, Rational Root Thm | Non-real zeros come in pairs |
+| Complex Roots & Symmetry (5) | Conjugate pairs, even/odd functions | Non-real zeros come in pairs |
 | Building from Zeros (6) | $p(x) = a\\prod(x - r_i)^{m_i}$ | Need one extra point for $a$ |
       `
     },
@@ -89,26 +89,26 @@ $$\\boxed{p(x) = 2(x + 2)^2(x - 1)(x - 3)}$$
       id: 'p7-division-integration',
       type: 'text' as const,
       content: `
-## 🔗 Integrating Division & The Rational Root Theorem
+## 🔗 Integrating Division & Complex Zeros
 
-Multi-step problems often start in standard form and require you to factor completely.
+Multi-step problems often start in standard form, hand you some zeros, and ask you to factor completely.
 
 ### Example: Complete Factorization
 
-> **Factor $p(x) = 2x^4 - 3x^3 - 13x^2 + 37x - 15$ completely.**
+> **Given that $x = \\frac{1}{2}$ and $x = -3$ are zeros, factor $p(x) = 2x^4 - 3x^3 - 13x^2 + 37x - 15$ completely and find all four zeros.**
 
-**Step 1 — Rational Root Theorem:** Possible rational roots: $\\pm\\frac{\\text{factors of } 15}{\\text{factors of } 2} = \\pm 1, \\pm 3, \\pm 5, \\pm 15, \\pm\\frac{1}{2}, \\pm\\frac{3}{2}, \\pm\\frac{5}{2}, \\pm\\frac{15}{2}$
+**Step 1 — Verify a given zero:**
+$p\\!\\left(\\frac{1}{2}\\right) = \\frac{1}{8} - \\frac{3}{8} - \\frac{13}{4} + \\frac{37}{2} - 15 = 0$ ✔
 
-**Step 2 — Test candidates:**
-$p(1) = 2 - 3 - 13 + 37 - 15 = 8 \\neq 0$
-$p(3) = 162 - 81 - 117 + 111 - 15 = 60 \\neq 0$
-$p\\!\\left(\\frac{1}{2}\\right) = 2\\!\\left(\\frac{1}{16}\\right) - 3\\!\\left(\\frac{1}{8}\\right) - 13\\!\\left(\\frac{1}{4}\\right) + 37\\!\\left(\\frac{1}{2}\\right) - 15 = \\frac{1}{8} - \\frac{3}{8} - \\frac{13}{4} + \\frac{37}{2} - 15 = 0$ ✔
+**Step 2 — Divide by $\\left(x - \\frac{1}{2}\\right)$:** the quotient is $2x^3 - 2x^2 - 14x + 30 = 2(x^3 - x^2 - 7x + 15)$.
 
-**Step 3 — Synthetic division by $\\left(x - \\frac{1}{2}\\right)$** yields $2x^3 - 2x^2 - 14x + 30$
+**Step 3 — Divide the cubic by $(x + 3)$:** $x^3 - x^2 - 7x + 15 = (x + 3)(x^2 - 4x + 5)$.
 
-**Step 4 — Factor out 2:** $2(x^3 - x^2 - 7x + 15)$. Continue testing on the cubic.
+**Step 4 — Finish the quadratic:** $x^2 - 4x + 5$ has discriminant $16 - 20 = -4 < 0$, so its zeros are $x = \\frac{4 \\pm 2i}{2} = 2 \\pm i$, a conjugate pair.
 
-> This process uses the Rational Root Theorem (Part 5), synthetic division (Part 4), and factored form (Part 2) together.
+$$p(x) = (2x - 1)(x + 3)(x^2 - 4x + 5), \\qquad \\text{zeros: } \\tfrac{1}{2},\\ -3,\\ 2 + i,\\ 2 - i$$
+
+> This process uses division (Part 4), factored form (Part 2), and conjugate pairs (Part 5) together. Four zeros for a degree-$4$ polynomial, exactly as the Fundamental Theorem of Algebra promises.
       `
     },
     {
@@ -120,26 +120,26 @@ $p\\!\\left(\\frac{1}{2}\\right) = 2\\!\\left(\\frac{1}{16}\\right) - 3\\!\\left
       exercise: {
         questions: [
           {
-            question: 'A degree-5 polynomial with a negative leading coefficient has three distinct real zeros, one of which has multiplicity 2. How does the graph behave?',
+            question: 'A degree-4 polynomial with a negative leading coefficient has exactly three distinct real zeros, one of which has multiplicity 2. How does the graph behave?',
             options: [
-              'Rises left, falls right; crosses at 2 zeros and bounces at 1',
-              'Falls left, rises right; crosses at 2 zeros and bounces at 1',
-              'Rises left, falls right; crosses at 3 zeros',
-              'Falls left, falls right; crosses at 2 zeros and bounces at 1'
+              'Falls on both ends; crosses at 2 zeros and bounces at 1',
+              'Rises on both ends; crosses at 2 zeros and bounces at 1',
+              'Falls on both ends; crosses at all 3 zeros',
+              'Rises left, falls right; crosses at 2 and bounces at 1'
             ],
             correctAnswer: 0,
-            explanation: 'Degree 5 (odd) with negative lead: rises left, falls right. Three distinct zeros with one having multiplicity 2 means 2 crossings + 1 bounce. Degree check: $1 + 1 + 2 = 4 < 5$, so one crossing zero has multiplicity 3 or there\'s another zero. If the mult-2 zero and two mult-1 zeros give $2+1+1=4$, we need one more. But the question says degree 5, so one zero must be mult 3 (crosses with inflection) or there are additional zeros. Given the options, crosses at 2 and bounces at 1 is correct for the described real zeros.'
+            explanation: 'Degree 4 (even) with a negative leading coefficient falls on both ends. The multiplicities $2 + 1 + 1 = 4$ match the degree, so the multiplicity-2 zero is a bounce and the other two are crossings.'
           },
           {
-            question: 'You know that $p(x)$ is degree 4 with real coefficients, $p(2) = 0$, and $p(i) = 0$. What is the minimum number of additional data points needed to determine $p(x)$ uniquely?',
+            question: 'A polynomial $p$ has degree 4, real coefficients, leading coefficient 1, $p(2) = 0$, and $p(i) = 0$. How many more facts (a zero or a point) are needed to determine $p$?',
             options: [
-              '0 — it\'s already determined',
-              '1 — one more zero or point',
-              '2 — one zero and one point',
-              '3 — need all coefficients'
+              '0, since it is already determined',
+              '1, either one more zero or one point',
+              '2, both one more zero and one point',
+              '3, one fact per unknown coefficient'
             ],
             correctAnswer: 1,
-            explanation: 'Known zeros: $2, i, -i$ (conjugate pair). That\'s 3 zeros for a degree-4 polynomial, so there\'s one unknown zero and the leading coefficient $a$. One more condition (like $p(0) = k$ or another zero) gives one equation, but we have two unknowns ($a$ and the 4th root). We actually need at least 1 more data point: if we know the 4th zero, $a$ remains unknown; if we know a point value, we can write $p(x) = a(x-2)(x^2+1)(x-r)$ and the point gives one equation in two unknowns. So we need 2 pieces of info... but if we\'re told the leading coefficient is 1, then just 1. The answer depends on interpretation — 1 additional point if we also know the 4th zero is real.'
+            explanation: 'Real coefficients force $-i$ to be a zero too, so $p(x) = (x - 2)(x^2 + 1)(x - r)$ with only the fourth zero $r$ unknown. One more fact, either $r$ itself or one point such as $p(0)$, pins it down; the leading coefficient is already given.'
           },
           {
             question: 'After dividing $p(x) = x^3 + 2x^2 - 5x - 6$ by $(x + 3)$ using synthetic division, the quotient is $x^2 - x - 2$. What are ALL the zeros of $p(x)$?',
@@ -186,7 +186,7 @@ $p\\!\\left(\\frac{1}{2}\\right) = 2\\!\\left(\\frac{1}{16}\\right) - 3\\!\\left
         dropdowns: [
           {
             label: 'Given a polynomial in standard form and asked to find all zeros, your FIRST step should be:',
-            options: ['Graph end behavior', 'Use the Rational Root Theorem to list candidates', 'Factor out the GCF', 'Try synthetic division with random values']
+            options: ['Graph the end behavior', 'Guess and check integer values', 'Factor out the GCF', 'Divide by a random linear factor']
           },
           {
             label: 'The graph touches but does not cross the $x$-axis at $x = 4$. This means $x = 4$ has',
@@ -198,14 +198,14 @@ $p\\!\\left(\\frac{1}{2}\\right) = 2\\!\\left(\\frac{1}{16}\\right) - 3\\!\\left
           },
           {
             label: 'After confirming $x = 2$ is a zero, the most efficient next step is',
-            options: ['Try other rational roots on the original polynomial', 'Perform synthetic division by $(x - 2)$ to reduce the degree', 'Expand the polynomial to check', 'Graph the polynomial']
+            options: ['Test more values on the original polynomial', 'Divide by $(x - 2)$ to reduce the degree', 'Expand the polynomial to check it', 'Sketch the end behavior again']
           }
         ],
-        correctAnswers: ['Use the Rational Root Theorem to list candidates', 'even multiplicity', '$3 + 2i$', 'Perform synthetic division by $(x - 2)$ to reduce the degree'],
-        hint1: 'Before testing roots, you need a systematic list of what to test.',
+        correctAnswers: ['Factor out the GCF', 'even multiplicity', '$3 + 2i$', 'Divide by $(x - 2)$ to reduce the degree'],
+        hint1: 'Always simplify first: a common factor shrinks every later step.',
         hint2: 'Touch-but-no-cross = bounce = even multiplicity.',
         hint3: 'Complex zeros of real-coefficient polynomials come in conjugate pairs.',
-        explanation: 'Start with RRT for systematic candidate listing. Touching without crossing means even multiplicity. Complex conjugate of $3-2i$ is $3+2i$. After finding a zero, divide it out to work with a simpler polynomial.'
+        explanation: 'Start by factoring out any GCF. Touching without crossing means even multiplicity. The complex conjugate of $3-2i$ is $3+2i$. After finding a zero, divide it out to work with a simpler polynomial.'
       }
     },
     {

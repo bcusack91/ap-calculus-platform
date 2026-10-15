@@ -79,15 +79,8 @@ $$y = \\lfloor x \\rfloor$$
 $$f(x) = \\begin{cases} x^2 & x < 0 \\\\ 2x+1 & x \\geq 0 \\end{cases}$$
 
 - Different rules for different intervals
-- Check continuity at boundary points
-
-### Logistic Function
-
-$$y = \\frac{L}{1 + e^{-k(x-x_0)}}$$
-
-- S-shaped (sigmoid)
-- Models population growth, learning curves
-- Horizontal asymptotes at $y=0$ and $y=L$
+- At a boundary point, use the piece whose interval includes it (here $f(0) = 2(0)+1 = 1$)
+- Transform a piecewise function piece by piece: $f(x) + 3$ shifts every piece up $3$
 
 **Recognizing parent functions is the FIRST step** in any transformation problem!
       `
@@ -108,13 +101,13 @@ $$y = \\frac{L}{1 + e^{-k(x-x_0)}}$$
           },
           {
             question: 'Which parent function has two asymptotes?',
-            options: ['$y = \\log x$', '$y = 2^x$', '$y = 1/x$', '$y = \\tan x$'],
+            options: ['$y = \\log x$', '$y = 2^x + 1$', '$y = 1/x$', '$y = \\tan x$'],
             correctAnswer: 2,
             explanation: '$y = 1/x$ has asymptotes $x=0$ (vertical) and $y=0$ (horizontal).'
           },
           {
             question: 'Which function is both even AND has range $[0, \\infty)$?',
-            options: ['$y = x^3$', '$y = x^2$', '$y = -|x|$', '$y = x^2 - 1$'],
+            options: ['$y = x^3 + 1$', '$y = x^2$', '$y = -|x|$', '$y = x^2 - 1$'],
             correctAnswer: 1,
             explanation: '$y=x^2$ is even with range $[0,\\infty)$; $y=-|x|$ has range $(-\\infty,0]$ and $y=x^2-1$ has range $[-1,\\infty)$.'
           }
@@ -157,7 +150,7 @@ $$y = \\frac{L}{1 + e^{-k(x-x_0)}}$$
           },
           {
             label: 'Horizontal asymptote at $y = 0$, passes through $(0,1)$:',
-            options: ['$y = 2^x$', '$y = \\log x$', '$y = 1/x$', '$y = x^2$'],
+            options: ['$y = 2^x$', '$y = \\log x$', '$y = \\frac{1}{x}$', '$y = x^2 + 1$'],
             correctAnswer: 0
           },
           {

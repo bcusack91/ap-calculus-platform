@@ -5,9 +5,9 @@ export const precalcSequencesPart1Data = {
       id: 'p1-intro',
       type: 'text' as const,
       content: `
-# 📊 Sequences & Series — Arithmetic Sequences
+# 📊 Sequences — Arithmetic Sequences
 
-**Part 1 of 7**
+**Part 1 of 7 — Arithmetic Sequences**
 
 ### What Is a Sequence?
 
@@ -34,7 +34,7 @@ where $d = a_{n+1} - a_n$ is the **common difference**.
       id: 'p1-formulas',
       type: 'text' as const,
       content: `
-## 📝 Finding Terms and Sums
+## 📝 Finding Terms and Positions
 
 ### The $n$th Term Formula
 
@@ -44,17 +44,21 @@ $$a_n = a_1 + (n-1)d$$
 
 $a_{20} = 3 + 19(4) = 79$
 
-### Arithmetic Series (Sum)
+### Which Term Is It?
 
-$$S_n = \\frac{n}{2}(a_1 + a_n) = \\frac{n}{2}[2a_1 + (n-1)d]$$
+Which term of $7, 11, 15, \\ldots$ equals $99$?
 
-**Example**: Sum the first $100$ positive integers.
+$99 = 7 + (n-1)(4) \\implies 92 = 4(n-1) \\implies n - 1 = 23 \\implies n = 24$
 
-$a_1 = 1, a_{100} = 100, n = 100$
+So $99$ is $a_{24}$.
 
-$$S_{100} = \\frac{100}{2}(1+100) = 50 \\cdot 101 = 5050$$
+### In Context
 
-> 💡 This is Gauss's famous result! He supposedly computed this as a schoolboy.
+A theater's first row has $20$ seats and each row after it has $2$ more. Row $15$ has
+
+$a_{15} = 20 + 14(2) = 48$ seats.
+
+> 💡 Adding up the terms of a sequence (a series) is not on the AP Precalculus exam. The exam asks for terms, rates of change, and the functions that sequences resemble.
       `
     },
     {
@@ -100,15 +104,15 @@ Sequence: $2, 5, 8, 11, 14$.
           },
           {
             question: 'The common difference of $10, 6, 2, -2, \\ldots$ is:',
-            options: ['$4$', '$-4$', '$6$', '$-6$'],
+            options: ['$4$', '$-4$', '$6$', '$8$'],
             correctAnswer: 1,
             explanation: '$d = 6-10 = -4$.'
           },
           {
-            question: 'Find $S_{20}$ for $a_1=2, d=3$:',
-            options: ['$610$', '$590$', '$620$', '$600$'],
+            question: 'Which term of $7, 11, 15, \\ldots$ equals $99$?',
+            options: ['$a_{24}$', '$a_{23}$', '$a_{25}$', '$a_{22}$'],
             correctAnswer: 0,
-            explanation: '$S_{20} = \\frac{20}{2}[2(2)+19(3)] = 10(4+57) = 10(61) = 610$.'
+            explanation: '$99 = 7 + 4(n-1)$ gives $n - 1 = 23$, so $n = 24$. Stopping at $n - 1 = 23$ gives $a_{23}$, which is $95$.'
           }
         ]
       }
@@ -121,17 +125,17 @@ Sequence: $2, 5, 8, 11, 14$.
 
 **1)** $a_1=5, d=7$. Find $a_{10}$:
 
-**2)** Sum of first $50$ positive integers: $S_{50}$ = ?
+**2)** A theater's first row has $20$ seats and each later row has $2$ more. Seats in row $15$:
 
 **3)** $a_3=11, a_7=23$. Find $d$:
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['68', '1275', '3'],
+        correctAnswers: ['68', '48', '3'],
         hint1: '$a_{10} = 5+9(7) = 68$.',
-        hint2: '$S_{50} = \\frac{50}{2}(1+50) = 25 \\cdot 51 = 1275$.',
+        hint2: '$a_{15} = 20 + (15-1)(2)$.',
         hint3: '$23-11 = 4d \\implies d = 3$.',
-        explanation: '1) $68$. 2) $1275$. 3) $d = 3$.'
+        explanation: '1) $5 + 63 = 68$. 2) $20 + 28 = 48$ seats. 3) Four steps from $a_3$ to $a_7$ add $12$, so $d = 3$.'
       }
     },
     {
@@ -148,9 +152,9 @@ Sequence: $2, 5, 8, 11, 14$.
             correctAnswer: 1
           },
           {
-            label: 'The sum formula $S_n = \\frac{n}{2}(a_1+a_n)$ averages:',
-            options: ['First and last terms', 'Every term, one at a time', 'The first term and $d$'],
-            correctAnswer: 0
+            label: 'To get from $a_1$ to $a_{20}$, you add $d$ this many times:',
+            options: ['$20$', '$19$', '$21$'],
+            correctAnswer: 1
           },
           {
             label: 'If $d < 0$, the sequence is:',
@@ -163,11 +167,11 @@ Sequence: $2, 5, 8, 11, 14$.
             correctAnswer: 1
           }
         ],
-        correctAnswers: ['Common difference', 'First and last terms', 'Decreasing', '$1000$'],
+        correctAnswers: ['Common difference', '$19$', 'Decreasing', '$1000$'],
         hint1: 'Arithmetic = constant difference between terms.',
-        hint2: 'Average of first and last, times number of terms.',
+        hint2: 'The first term takes zero steps, so count the steps from $1$ to $20$.',
         hint3: 'Negative $d$ means each term is smaller.',
-        explanation: 'Arithmetic: common difference. Sum: average of endpoints × count. Negative $d$: decreasing. $a_{1000}=1+999(1)=1000$.'
+        explanation: 'Arithmetic: common difference. From $a_1$ to $a_{20}$ is $19$ steps. Negative $d$: decreasing. $a_{1000}=1+999(1)=1000$.'
       }
     },
     {
@@ -185,10 +189,10 @@ Sequence: $2, 5, 8, 11, 14$.
             explanation: '$a_n = 100-7(n-1) < 0 \\implies 7(n-1) > 100 \\implies n-1 > 14.28 \\implies n \\geq 16$. $a_{16} = 100-105 = -5$.'
           },
           {
-            question: 'The sum $5+10+15+\\cdots+500$ equals:',
-            options: ['$24750$', '$25000$', '$25250$', '$50500$'],
-            correctAnswer: 2,
-            explanation: '$n = 100$ terms, $S = \\frac{100}{2}(5+500) = 50(505) = 25250$.'
+            question: 'A savings jar holds \\$35 after week $1$, and \\$5 is added every week after that. In which week does it first hold \\$100?',
+            options: ['Week $13$', 'Week $14$', 'Week $15$', 'Week $20$'],
+            correctAnswer: 1,
+            explanation: '$a_n = 35 + 5(n-1) = 100$ gives $n - 1 = 13$, so $n = 14$. Week $13$ holds only \\$95, and dividing \\$100 by \\$5 gives $20$, which ignores the starting \\$35.'
           }
         ]
       }

@@ -4,7 +4,8 @@ import type { LessonData } from '../registry'
  * Hand-authored interactive lesson — The Fundamental Theorem of Algebra and Factoring (AP Precalculus).
  * Registry key / DB Topic.slug: 'fundamental-theorem-algebra'.
  * 7 parts, gold-standard structure: zeros & the factor connection → core factoring
- * techniques → the Rational Root Theorem → synthetic division to peel off factors →
+ * techniques (CED 1.5 scope: common factors + quadratic rules) → zeros from graphs,
+ * tables and given factors → synthetic division to peel off factors →
  * the Fundamental Theorem of Algebra (counting roots with multiplicity & complex zeros) →
  * complex-conjugate pairs + building polynomials from their roots → mixed practice + exit quiz.
  * LaTeX uses doubled backslashes (these are JS template-literal strings).
@@ -149,8 +150,8 @@ Everything ahead is about turning a polynomial into a **product of factors**, be
 
 $$p(x) = a(x - r_1)(x - r_2)\\cdots(x - r_n) \\quad\\Longrightarrow\\quad \\text{zeros } r_1, r_2, \\dots, r_n$$
 
-- **Part 2** builds your factoring toolkit (GCF, grouping, quadratic patterns).
-- **Parts 3–4** find zeros you *can't* spot by eye, using the Rational Root Theorem and division.
+- **Part 2** builds your factoring toolkit (GCF and the quadratic patterns).
+- **Parts 3–4** find the remaining zeros once a graph, a table, or a known factor gives you one, then divide that factor out.
 - **Parts 5–6** count every zero — real *and* complex — using the **Fundamental Theorem of Algebra**.
 
 Let's stock the toolbox.`,
@@ -171,7 +172,7 @@ Let's stock the toolbox.`,
 
 ---
 
-> 🔑 **Strategy:** Before any fancy theorem, *always* try these in order: (1) pull out a **GCF**, (2) recognize a **special pattern**, (3) factor a **trinomial**, (4) try **grouping**. This part trains all four.`,
+> 🔑 **Strategy:** *Always* try these in order: (1) pull out a **GCF**, (2) recognize a **special pattern**, (3) factor a **trinomial**, (4) spot a **quadratic in disguise**. On the AP Precalculus exam, factoring by hand is limited to common factors and the rules for quadratics, and these four steps cover exactly that.`,
       },
       {
         id: 'fta2-gcf',
@@ -190,8 +191,7 @@ The GCF of $6x^3$ and $9x^2$ is $3x^2$ (largest coefficient $3$, lowest power $x
 |---------|---------------|
 | Difference of squares: $a^2 - b^2$ | $(a - b)(a + b)$ |
 | Perfect square: $a^2 + 2ab + b^2$ | $(a + b)^2$ |
-| Sum of cubes: $a^3 + b^3$ | $(a + b)(a^2 - ab + b^2)$ |
-| Difference of cubes: $a^3 - b^3$ | $(a - b)(a^2 + ab + b^2)$ |
+| Perfect square: $a^2 - 2ab + b^2$ | $(a - b)^2$ |
 
 ### Example (difference of squares)
 
@@ -242,21 +242,25 @@ Choose the correct factored form for each expression.`,
       {
         id: 'fta2-grouping',
         type: 'text' as const,
-        content: `## Step 4 — Factoring by Grouping
+        content: `## Step 4 — Quadratics in Disguise
 
-For **four-term** polynomials, group in pairs and pull a GCF from each:
+Some higher-degree polynomials are really quadratics once you pull out a GCF or rename a power. The quadratic rules then finish the job.
 
-### Example: $x^3 + 3x^2 + 2x + 6$
+### Example 1: GCF first, then a trinomial
 
-$$\\underbrace{x^3 + 3x^2}_{x^2(x + 3)} + \\underbrace{2x + 6}_{2(x + 3)} = x^2(x + 3) + 2(x + 3)$$
+$$x^3 - x^2 - 12x = x(x^2 - x - 12) = x(x - 4)(x + 3)$$
 
-Both pieces share $(x + 3)$, so factor it out:
+Zeros: $x = 0,\\ 4,\\ -3$.
 
-$$= (x + 3)(x^2 + 2)$$
+### Example 2: quadratic form
 
-> ✅ **Check:** $(x+3)(x^2+2) = x^3 + 2x + 3x^2 + 6 = x^3 + 3x^2 + 2x + 6 \\;\\checkmark$
+In $x^4 - 13x^2 + 36$, let $u = x^2$. Then it reads $u^2 - 13u + 36 = (u - 4)(u - 9)$, so
 
-The key signal that grouping worked: **both** groups leave the *same* binomial behind.`,
+$$x^4 - 13x^2 + 36 = (x^2 - 4)(x^2 - 9) = (x - 2)(x + 2)(x - 3)(x + 3)$$
+
+> ✅ **Check:** the four zeros $\\pm 2, \\pm 3$ match the degree, $4$.
+
+The signal to look for: the exponents are $2k$ and $k$ (like $x^4$ and $x^2$), or every term shares a power of $x$.`,
       },
       {
         id: 'fta2-grouping-check',
@@ -265,16 +269,16 @@ The key signal that grouping worked: **both** groups leave the *same* binomial b
         exercise: {
           questions: [
             {
-              question: 'Factor by grouping: $x^3 - 4x^2 + 3x - 12$.',
-              options: ['$(x - 4)(x^2 + 3)$', '$(x + 4)(x^2 - 3)$', '$(x - 4)(x^2 - 3)$', '$(x^2 - 4)(x + 3)$'],
+              question: 'What is the complete factorization of $x^4 - 5x^2 + 4$?',
+              options: ['$(x - 1)(x + 1)(x - 2)(x + 2)$', '$(x - 1)(x - 4)(x^2 + 1)$', '$(x^2 - 1)(x + 2)^2$', '$(x - 1)^2(x - 2)^2$'],
               correctAnswer: 0,
-              explanation: '$x^2(x - 4) + 3(x - 4) = (x - 4)(x^2 + 3)$. Both groups leave $(x-4)$, and the leftover terms form $x^2 + 3$.',
+              explanation: 'With $u = x^2$, the expression is $u^2 - 5u + 4 = (u - 1)(u - 4) = (x^2 - 1)(x^2 - 4)$. Each factor is a difference of squares, so the result is $(x-1)(x+1)(x-2)(x+2)$.',
             },
             {
               question: 'Which expression does NOT factor over the real numbers?',
-              options: ['$x^2 - 16$', '$x^2 + 16$', '$x^2 - 7x + 12$', '$x^2 + 8x + 16$'],
+              options: ['$x^2 - 16x + 64$', '$x^2 + 16$', '$x^2 - 7x + 12$', '$x^2 + 8x + 16$'],
               correctAnswer: 1,
-              explanation: '$x^2 + 16$ is a SUM of squares — it has no real factorization (its zeros are $\\pm 4i$). The other three factor as $(x-4)(x+4)$, $(x-3)(x-4)$, and $(x+4)^2$.',
+              explanation: '$x^2 + 16$ is a SUM of squares, so it has no real factorization (its zeros are $\\pm 4i$). The other three factor as $(x-8)^2$, $(x-3)(x-4)$, and $(x+4)^2$.',
             },
           ],
         },
@@ -310,50 +314,53 @@ Factor each. Enter the answer with **no spaces**, in the exact form shown.
         type: 'text' as const,
         content: `# 🧩 The Fundamental Theorem of Algebra & Factoring
 
-**Part 3 of 7 — The Rational Root Theorem**
+**Part 3 of 7 — Zeros from Graphs, Tables & a Known Factor**
 
 ---
 
-> 🔑 **The Problem:** A cubic like $2x^3 - 3x^2 - 11x + 6$ won't factor by inspection. The **Rational Root Theorem** hands you a short list of *candidate* rational zeros to test — turning guessing into a finite search.`,
+> 🔑 **The Problem:** A cubic like $2x^3 - 3x^2 - 11x + 6$ won't factor by inspection. On the AP exam you are never asked to hunt for its zeros blind. Instead, the question hands you a foothold: a **graph**, a **table of values**, or **one zero or factor**. Your job is to turn that foothold into the full factorization.
+
+Special root-hunting rules such as the Rational Root Theorem and Descartes' Rule of Signs belong to Algebra 2 and are not assessed on the AP Precalculus exam.`,
       },
       {
         id: 'fta3-statement',
         type: 'text' as const,
-        content: `## The Rational Root Theorem
+        content: `## Foothold 1 — A Graph
 
-For a polynomial with **integer** coefficients
+Every real zero $a$ of $p$ puts an $x$-intercept at $(a, 0)$. So a graph lets you **read** real zeros and turn them straight into factors with the Factor Theorem.
 
-$$p(x) = a_n x^n + \\dots + a_1 x + a_0,$$
+### Example
 
-every **rational** zero has the form
+The graph of a cubic $p$ with leading coefficient $1$ crosses the $x$-axis at $x = -2$, $x = 1$ and $x = 3$, and nowhere else.
 
-$$\\frac{p}{q} \\quad\\text{where}\\quad p \\mid a_0 \\;(\\text{the constant}) \\quad\\text{and}\\quad q \\mid a_n \\;(\\text{the leading coefficient}).$$
+- Zeros $-2, 1, 3$ give factors $(x + 2)$, $(x - 1)$, $(x - 3)$.
+- A cubic has exactly $3$ zeros counting multiplicity, so these are all of them.
+- The leading coefficient is $1$, so
 
-In words: $p$ is a factor of the **constant term**, and $q$ is a factor of the **leading coefficient**.
+$$p(x) = (x + 2)(x - 1)(x - 3)$$
 
-> ⚠️ This lists every *possible* rational zero. It does **not** guarantee any of them actually work — you still have to test. And it says nothing about irrational or complex zeros.`,
+> ⚠️ A graph alone cannot show the leading coefficient: $2(x+2)(x-1)(x-3)$ has the same intercepts. Use one more point, such as the $y$-intercept, to pin it down. Here $p(0) = (2)(-1)(-3) = 6$.`,
       },
       {
         id: 'fta3-build-list',
         type: 'text' as const,
-        content: `## Building the Candidate List
+        content: `## Foothold 2 — A Table or a Given Zero
 
-### Example: $p(x) = 2x^3 - 3x^2 - 11x + 6$
+A table entry with output $0$ is a zero: if a table shows $p(3) = 0$, then $(x - 3)$ is a factor. A problem may also simply state one zero. Either way, **verify** it by substitution before you rely on it.
 
-- Constant term $a_0 = 6$ → factors $p$: $\\pm 1, \\pm 2, \\pm 3, \\pm 6$
-- Leading coefficient $a_n = 2$ → factors $q$: $\\pm 1, \\pm 2$
+### Example: $p(x) = 2x^3 - 3x^2 - 11x + 6$, given that $p(3) = 0$
 
-Form every $\\dfrac{p}{q}$:
-
-$$\\pm 1,\\; \\pm 2,\\; \\pm 3,\\; \\pm 6,\\; \\pm \\tfrac{1}{2},\\; \\pm \\tfrac{3}{2}$$
-
-That's the **complete** candidate list. Now test one — try $x = 3$:
+Check the given zero:
 
 $$p(3) = 2(27) - 3(9) - 11(3) + 6 = 54 - 27 - 33 + 6 = 0 \\;\\checkmark$$
 
-So $x = 3$ is a genuine zero, and $(x - 3)$ is a factor.
+So $(x - 3)$ is a factor, and
 
-> 💡 Test the small integers ($\\pm 1, \\pm 2$) first — they're the easiest to evaluate and often work.`,
+$$2x^3 - 3x^2 - 11x + 6 = (x - 3)(\\text{a quadratic})$$
+
+Part 4 shows how to divide out $(x - 3)$ to find that quadratic: $2x^2 + 3x - 2 = (2x - 1)(x + 2)$. The three zeros are $3$, $\\tfrac{1}{2}$ and $-2$.
+
+> 💡 Matching degrees is a quick sanity check: a cubic divided by a linear factor must leave a quadratic.`,
       },
       {
         id: 'fta3-candidate-check',
@@ -362,21 +369,21 @@ So $x = 3$ is a genuine zero, and $(x - 3)$ is a factor.
         exercise: {
           questions: [
             {
-              question: 'For $p(x) = x^3 + 2x^2 - 5x - 6$, which is the COMPLETE list of possible rational zeros?',
+              question: 'The graph of a cubic $q$ with leading coefficient $1$ has $x$-intercepts only at $x = -4$, $x = 0$ and $x = 2$. Which is $q(x)$?',
               options: [
-                '$\\pm 1, \\pm 2, \\pm 3, \\pm 6$',
-                '$\\pm 1, \\pm 6$',
-                '$\\pm 1, \\pm 2, \\pm 3$',
-                '$1, 2, 3, 6$',
+                '$x(x + 4)(x - 2)$',
+                '$-x(x - 4)(x + 2)$',
+                '$x^2(x + 4)(x - 2)$',
+                '$(x - 4)(x + 2)x^2$',
               ],
               correctAnswer: 0,
-              explanation: 'Leading coefficient is $1$, so $q = \\pm 1$. Constant is $-6$, so $p = \\pm 1, \\pm 2, \\pm 3, \\pm 6$. Each $p/q$ is just $\\pm 1, \\pm 2, \\pm 3, \\pm 6$. Both signs must be included.',
+              explanation: 'Each intercept $a$ gives a factor $(x - a)$: $-4 \\to (x+4)$, $0 \\to x$, $2 \\to (x-2)$. Squaring the factor $x$ makes the graph touch, not cross, at the origin, and flipping the signs puts the zeros at $4$ and $-2$ instead.',
             },
             {
-              question: 'For $p(x) = 3x^2 + x - 2$, which fraction is a possible rational zero that is NOT an integer?',
-              options: ['$\\frac{1}{2}$', '$\\frac{2}{3}$', '$\\frac{1}{4}$', '$\\frac{3}{2}$'],
-              correctAnswer: 1,
-              explanation: 'Constant $-2$ gives $p \\in \\{\\pm1, \\pm2\\}$; leading $3$ gives $q \\in \\{\\pm1, \\pm3\\}$. Non-integer candidates are $\\pm\\frac{1}{3}, \\pm\\frac{2}{3}$. Only $\\frac{2}{3}$ appears in the options.',
+              question: 'A table for a polynomial $p$ shows $p(-1) = 0$, $p(0) = -6$ and $p(1) = -8$. Which must be a factor of $p(x)$?',
+              options: ['$(x + 1)$', '$(x - 1)$', '$(x + 6)$', '$(x - 8)$'],
+              correctAnswer: 0,
+              explanation: 'Only an output of $0$ marks a zero. Since $p(-1) = 0$, the Factor Theorem gives the factor $(x - (-1)) = (x + 1)$. The values $-6$ and $-8$ are outputs, not zeros.',
             },
           ],
         },
@@ -384,28 +391,28 @@ So $x = 3$ is a genuine zero, and $(x - 3)$ is a factor.
       {
         id: 'fta3-list-drill',
         type: 'input-boxes' as const,
-        content: `**Identify $p$ and $q$** 🧮
+        content: `**Pin Down the Polynomial** 🧮
 
-For $p(x) = 4x^3 + x^2 - 7x + 5$, the rational-zero candidates are $\\dfrac{p}{q}$.
+A cubic $p$ has zeros $x = -1$, $x = 2$ and $x = 5$ (each with multiplicity $1$), so $p(x) = a(x + 1)(x - 2)(x - 5)$ for some constant $a$. Its graph passes through $(0, 20)$.
 
-**1)** The values of $p$ are the positive factors of the constant term. The constant term is: $\\,?$
-**2)** The values of $q$ are the positive factors of the leading coefficient. The leading coefficient is: $\\,?$
-**3)** The largest possible *denominator* $q$ in any candidate $\\frac{p}{q}$ is: $\\,?$`,
+**1)** Compute $(0 + 1)(0 - 2)(0 - 5)$: $\\,?$
+**2)** Use $p(0) = 20$ to find the leading coefficient $a$: $\\,?$
+**3)** Evaluate $p(1)$ for this polynomial: $\\,?$`,
         exercise: {
           boxes: 3,
-          correctAnswers: ['5', '4', '4'],
-          hint1: 'The constant term is the term with no $x$: that is $+5$.',
-          hint2: 'The leading coefficient multiplies the highest power $x^3$: that is $4$.',
-          hint3: '$q$ is a factor of the leading coefficient $4$. Its factors are $1, 2, 4$ — the largest is $4$.',
-          explanation: 'Constant $= 5$ (so $p \\in \\{1,5\\}$); leading coefficient $= 4$ (so $q \\in \\{1,2,4\\}$); the largest denominator is $4$, giving candidates like $\\pm\\frac{1}{4}, \\pm\\frac{5}{4}$.',
+          correctAnswers: ['10', '2', '16'],
+          hint1: '$(1)(-2)(-5) = 10$.',
+          hint2: '$p(0) = a \\cdot 10 = 20$, so $a = 2$.',
+          hint3: '$p(1) = 2(1 + 1)(1 - 2)(1 - 5) = 2(2)(-1)(-4)$.',
+          explanation: 'The product at $x = 0$ is $10$, so $10a = 20$ gives $a = 2$. Then $p(1) = 2(2)(-1)(-4) = 16$.',
         },
       },
       {
         id: 'fta3-test-dropdown',
         type: 'dropdown-select' as const,
-        content: `**Test the Candidates** 🔽
+        content: `**Check the Claimed Zeros** 🔽
 
-For $p(x) = x^3 + 2x^2 - 5x - 6$, evaluate $p$ at each candidate to decide if it's an actual zero.`,
+A classmate claims three zeros for $p(x) = x^3 + 2x^2 - 5x - 6$. Evaluate $p$ at each to decide whether the claim holds.`,
         exercise: {
           dropdowns: [
             { label: 'Is $x = -1$ a zero?', options: ['Yes', 'No'] },
@@ -424,9 +431,9 @@ For $p(x) = x^3 + 2x^2 - 5x - 6$, evaluate $p$ at each candidate to decide if it
         type: 'text' as const,
         content: `## Where This Leads
 
-The Rational Root Theorem gives you a **zero** to test. Once you confirm a zero $c$, the Factor Theorem says $(x - c)$ divides $p(x)$ evenly. But dividing it out by hand is slow.
+A graph, a table, or a stated zero gives you **one factor** $(x - c)$. The Factor Theorem guarantees that $(x - c)$ divides $p(x)$ with remainder $0$, but you still need the quotient.
 
-In **Part 4** you'll learn **synthetic division** — a fast way to divide out $(x - c)$ and collapse the polynomial to a smaller, easier one. Chaining these tools lets you fully factor cubics and quartics.`,
+In **Part 4** you'll divide out $(x - c)$ to collapse the polynomial to a smaller one you can finish with the quadratic rules. When a problem gives no foothold and the zeros are not visible by inspection, that is a graphing-calculator question (Part B of the exam).`,
       },
     ],
   },
@@ -496,7 +503,7 @@ $$x^3 - 6x^2 + 11x - 6 = (x - 1)(x - 2)(x - 3),$$
 
 with zeros $x = 1, 2, 3$.
 
-> 💡 **The full pipeline:** Rational Root Theorem finds a zero → synthetic division peels off its factor → factor (or repeat on) the smaller quotient.`,
+> 💡 **The full pipeline:** a graph, table, or given zero supplies a factor → division peels it off → factor (or repeat on) the smaller quotient. Polynomial long division (Topic 1.11) gives the same quotient; synthetic division is just a faster layout for dividing by $(x - c)$.`,
       },
       {
         id: 'fta4-remainder-check',
@@ -633,7 +640,7 @@ $$p(x) = (x - 2)^3(x + 5)$$
           questions: [
             {
               question: 'Counting multiplicity, how many roots does a degree-$5$ polynomial have over the complex numbers?',
-              options: ['At most $5$', 'Exactly $5$', 'Exactly $4$', 'It depends on the coefficients'],
+              options: ['At most $5$, possibly fewer', 'Exactly $5$', 'Exactly $4$, one less than the degree', 'It depends on the coefficients'],
               correctAnswer: 1,
               explanation: 'By the FTA, a degree-$n$ polynomial has exactly $n$ complex roots counted with multiplicity. For $n = 5$, that is exactly $5$.',
             },
@@ -763,7 +770,7 @@ The imaginary parts cancel, leaving **real** coefficients — exactly why conjug
           questions: [
             {
               question: 'A polynomial with real coefficients has $2 - 5i$ as a root. Which value MUST also be a root?',
-              options: ['$2 + 5i$', '$-2 + 5i$', '$5 - 2i$', '$-2 - 5i$'],
+              options: ['$2 + 5i$', '$-2 + 5i$', '$-(2 - 5i)$', '$-2 - 5i$'],
               correctAnswer: 0,
               explanation: 'The Complex Conjugate Root Theorem says the conjugate $2 + 5i$ must also be a root (keep the real part, flip the sign of the imaginary part).',
             },
@@ -826,7 +833,7 @@ Each polynomial has real coefficients. Match the given non-real root to its requ
 
 You can now account for **every** root of a real polynomial:
 
-1. **Real rational** roots — found via the Rational Root Theorem + synthetic division (Parts 3–4).
+1. **Real** roots you are given or can read from a graph or table, divided out with synthetic division (Parts 3–4).
 2. **Real irrational** roots — e.g. from the quadratic formula on a leftover quadratic.
 3. **Complex** roots — always in conjugate pairs (this part).
 
@@ -848,7 +855,7 @@ Total count always equals the **degree**, exactly as the Fundamental Theorem of 
 
 ---
 
-You've built the full machine: zeros ↔ factors, a factoring toolkit, the Rational Root Theorem, synthetic division, the Fundamental Theorem of Algebra, and conjugate pairs. Time to put it together.`,
+You've built the full machine: zeros ↔ factors, a factoring toolkit, zeros from graphs and tables, synthetic division, the Fundamental Theorem of Algebra, and conjugate pairs. Time to put it together.`,
       },
       {
         id: 'fta7-summary',
@@ -858,13 +865,13 @@ You've built the full machine: zeros ↔ factors, a factoring toolkit, the Ratio
 | Tool | What it does |
 |------|--------------|
 | **Factor Theorem** | $(x - c)$ is a factor $\\iff p(c) = 0$ |
-| **Rational Root Theorem** | Rational zeros are $\\frac{p}{q}$, $p \\mid$ constant, $q \\mid$ leading coeff. |
+| **Graph / table** | An $x$-intercept $(a, 0)$ or a table output $p(a) = 0$ gives the factor $(x - a)$ |
 | **Remainder Theorem** | Remainder of $p(x) \\div (x-c)$ equals $p(c)$ |
 | **Synthetic Division** | Quickly divides out a known factor $(x - c)$ |
 | **Fundamental Theorem of Algebra** | Degree $n$ → exactly $n$ complex roots (with multiplicity) |
 | **Conjugate Root Theorem** | Real coeffs: $a+bi$ is a root $\\Rightarrow a-bi$ is too |
 
-> ⚠️ **Strategy reminder:** GCF first → special patterns / trinomials → for higher degree, find a zero (RRT), divide it out (synthetic), repeat until you reach a quadratic you can finish.`,
+> ⚠️ **Strategy reminder:** GCF first → special patterns / trinomials / quadratic form → for higher degree, take the zero the graph, table, or problem gives you, divide it out, and repeat until you reach a quadratic you can finish.`,
       },
       {
         id: 'fta7-mixed',
@@ -914,7 +921,7 @@ Answer all three to finish the lesson.`,
           questions: [
             {
               question: 'By the Factor Theorem, if $(x - 6)$ is a factor of $p(x)$, then which statement is true?',
-              options: ['$p(6) = 0$', '$p(-6) = 0$', '$p(0) = 6$', '$p(6) = 6$'],
+              options: ['$p(6) = 0$', '$p(-6) = 0$', '$p(0) = -6$', '$p(6) \\ne 0$'],
               correctAnswer: 0,
               explanation: '$(x - c)$ is a factor exactly when $p(c) = 0$. Here $c = 6$, so $p(6) = 0$.',
             },
@@ -930,15 +937,15 @@ Answer all three to finish the lesson.`,
               explanation: 'Degree $4$ means exactly $4$ roots. Two are $\\pm 3i$, leaving $2$ more. Since complex roots pair up, the remaining two are either a real pair or another conjugate pair — "two real roots" is possible.',
             },
             {
-              question: 'For $p(x) = 2x^3 + x^2 - 8x - 4$, which is the complete list of possible RATIONAL zeros from the Rational Root Theorem?',
+              question: 'For $p(x) = 2x^3 + x^2 - 8x - 4$, you are told that $p(2) = 0$. Dividing by $(x - 2)$ leaves $2x^2 + 5x + 2$. What are all the zeros of $p$?',
               options: [
-                '$\\pm 1, \\pm 2, \\pm 4, \\pm \\frac{1}{2}$',
-                '$\\pm 1, \\pm 2, \\pm 4$',
-                '$\\pm 1, \\pm 4, \\pm \\frac{1}{2}$',
-                '$\\pm 2, \\pm 4$',
+                '$2,\\ -2,\\ -\\frac{1}{2}$',
+                '$2,\\ 2,\\ \\frac{1}{2}$',
+                '$-2,\\ 2,\\ \\frac{1}{2}$',
+                '$2,\\ -1,\\ -2$',
               ],
               correctAnswer: 0,
-              explanation: 'Constant $-4$ gives $p \\in \\{\\pm1, \\pm2, \\pm4\\}$; leading coeff $2$ gives $q \\in \\{\\pm1, \\pm2\\}$. The candidates $p/q$ are $\\pm1, \\pm2, \\pm4, \\pm\\frac{1}{2}$ (note $\\frac{2}{2}=1$ and $\\frac{4}{2}=2$ are already listed).',
+              explanation: 'The quotient factors as $2x^2 + 5x + 2 = (2x + 1)(x + 2)$, giving zeros $-\\frac{1}{2}$ and $-2$, plus the given zero $2$. Taking $x = \\frac{1}{2}$ from the factor $(2x + 1)$ flips its sign, and repeating $2$ ignores the quotient entirely.',
             },
           ],
         },

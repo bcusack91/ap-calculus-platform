@@ -4,7 +4,7 @@ import type { LessonData } from '../registry'
  * Hand-authored interactive lesson — Sum and Difference Identities (AP Precalculus).
  * Registry key: 'sum-difference-identities' (matches the DB Topic.slug, no alias needed).
  * 7 parts, gold-standard structure: why exact values need identities → cosine
- * formulas → sine formulas → tangent formula → exact-value technique → proving
+ * formulas → sine formulas → one-sinusoid rewriting → exact-value technique → proving
  * & simplifying identities → applications + mixed practice + exit quiz.
  * Interactive practice mixes multiple-choice + input-boxes + dropdown each part.
  * LaTeX uses doubled backslashes (template-literal strings).
@@ -74,7 +74,7 @@ The two columns disagree ($0.866 \\ne 1$), so the "distribute" rule is false.
             },
             {
               question: 'Using $A = B = 45^\\circ$, which equals $\\sin(45^\\circ + 45^\\circ)$?',
-              options: ['$1$', '$\\sqrt{2}$', '$\\dfrac{\\sqrt{2}}{2}$', '$0$'],
+              options: ['$1$', '$\\sqrt{2}$', '$\\dfrac{\\sqrt{2}}{2}$', '$\\dfrac{1}{2}$'],
               correctAnswer: 0,
               explanation: '$\\sin(45^\\circ+45^\\circ) = \\sin 90^\\circ = 1$. Note $\\sin 45^\\circ + \\sin 45^\\circ = \\tfrac{\\sqrt2}{2}+\\tfrac{\\sqrt2}{2} = \\sqrt2 \\approx 1.414$ — a different (wrong) answer.',
             },
@@ -128,13 +128,13 @@ Express each angle as a **sum or difference of two special angles** ($30^\\circ,
 
 By the end of this lesson you'll be able to:
 
-1. Find **exact values** like $\\cos 15^\\circ$ and $\\tan 75^\\circ$ (no calculator).
+1. Find **exact values** like $\\cos 15^\\circ$ and $\\sin 75^\\circ$ (no calculator).
 2. **Simplify** messy expressions such as $\\sin x \\cos 2x + \\cos x \\sin 2x$ into a single term.
 3. **Prove** new identities and evaluate composite expressions like $\\sin(\\arcsin a + \\arccos b)$.
 
-There are six core formulas — two each for cosine, sine, and tangent. We'll build them one family at a time, starting with **cosine** in Part 2.
+There are four core formulas — two each for cosine and sine. We'll build them one family at a time, starting with **cosine** in Part 2.
 
-> 🔑 **Roadmap:** cosine first (Part 2), because the sine and tangent formulas are *derived from it*.`,
+> 🔑 **Roadmap:** cosine first (Part 2), because the sine formulas are *derived from it*. Part 4 then uses the sine sum formula to rewrite $a\\sin x + b\\cos x$ as a single sinusoid.`,
       },
       {
         id: 'sdi1-motivation-check',
@@ -145,7 +145,7 @@ There are six core formulas — two each for cosine, sine, and tangent. We'll bu
             {
               question: 'Why can we find $\\cos 15^\\circ$ exactly with these identities, but $\\cos 13^\\circ$ is left to a calculator?',
               options: [
-                '$15^\\circ$ splits into special angles ($45^\\circ - 30^\\circ$); $13^\\circ$ does not',
+                'Only $15^\\circ$ is a sum or difference of special angles',
                 '$15^\\circ$ is smaller than $13^\\circ$',
                 '$13^\\circ$ is negative on the unit circle',
                 'Cosine is undefined at $13^\\circ$',
@@ -157,7 +157,7 @@ There are six core formulas — two each for cosine, sine, and tangent. We'll bu
               question: 'Which task will the sum and difference identities NOT directly help with?',
               options: [
                 'Approximating $\\sin 41.7^\\circ$ to 6 decimals by hand',
-                'Finding the exact value of $\\tan 75^\\circ$',
+                'Finding the exact value of $\\sin 75^\\circ$',
                 'Simplifying $\\sin x\\cos 2x + \\cos x\\sin 2x$',
                 'Proving $\\sin\\!\\left(x + \\tfrac{\\pi}{2}\\right) = \\cos x$',
               ],
@@ -220,7 +220,7 @@ $$\\cos(A \\pm B) = \\cos A \\cos B \\;\\mp\\; \\sin A \\sin B$$
                 '$\\cos A \\cos B - \\sin A \\sin B$',
                 '$\\cos A \\cos B + \\sin A \\sin B$',
                 '$\\sin A \\cos B + \\cos A \\sin B$',
-                '$\\cos A + \\cos B$',
+                '$\\cos A - \\cos B$',
               ],
               correctAnswer: 0,
               explanation: 'For cosine, a PLUS inside flips to a MINUS in the formula: $\\cos(A+B) = \\cos A\\cos B - \\sin A\\sin B$.',
@@ -249,8 +249,8 @@ You don't need to memorize the proof, but seeing it builds trust. Place points $
 **By the distance formula:**
 $$PQ^2 = (\\cos A - \\cos B)^2 + (\\sin A - \\sin B)^2 = 2 - 2(\\cos A\\cos B + \\sin A\\sin B)$$
 
-**By the Law of Cosines** (angle between them is $A - B$):
-$$PQ^2 = 1^2 + 1^2 - 2(1)(1)\\cos(A - B) = 2 - 2\\cos(A - B)$$
+**By rotating the picture:** rotate both points clockwise by angle $B$. Rotation does not change distances, $Q$ lands on $(1, 0)$, and $P$ lands on $(\\cos(A - B), \\sin(A - B))$. So
+$$PQ^2 = (\\cos(A - B) - 1)^2 + \\sin^2(A - B) = 2 - 2\\cos(A - B)$$
 
 Setting the two equal and cancelling:
 
@@ -375,7 +375,7 @@ Sine is the "**mixed**, **same-sign**" formula:
                 'Use mixed products and keep the inside sign',
                 'Use matched products and flip the sign',
                 'Have no sign at all',
-                'Are exactly identical to the cosine formulas',
+                'Are identical to the cosine formulas',
               ],
               correctAnswer: 0,
               explanation: 'Sine uses MIXED products ($\\sin\\cos$, $\\cos\\sin$) and KEEPS the sign; cosine uses MATCHED products and FLIPS the sign.',
@@ -458,117 +458,129 @@ Each exact value has the form $\\dfrac{\\sqrt6 \\;\\square\\; \\sqrt2}{4}$. Ente
         type: 'text' as const,
         content: `# 🔺 Sum and Difference Identities
 
-**Part 4 of 7 — The Tangent Formulas**
+**Part 4 of 7 — Combining Sine and Cosine Into One Sinusoid**
 
 ---
 
-> 🔑 **The two tangent identities:**
-> $$\\tan(A + B) = \\frac{\\tan A + \\tan B}{1 - \\tan A\\tan B}$$
-> $$\\tan(A - B) = \\frac{\\tan A - \\tan B}{1 + \\tan A\\tan B}$$`,
+> 🔑 **Key Concept:** Read the sine **sum** identity backwards and an expression like $a\\sin x + b\\cos x$ becomes a **single sinusoid** $R\\sin(x + C)$. That equivalent form shows the amplitude and phase shift at a glance and turns hard equations into easy ones.
+
+Tangent sum and difference identities are not assessed on the AP Precalculus exam, so this lesson uses only the sine and cosine identities.`,
       },
       {
-        id: 'sdi4-derive',
+        id: 'sdi4-expand',
         type: 'text' as const,
-        content: `## Where It Comes From
+        content: `## Forward First: Expand a Shifted Sine
 
-Since $\\tan = \\dfrac{\\sin}{\\cos}$, divide the sine sum formula by the cosine sum formula:
+Expand $2\\sin\\!\\left(x + \\dfrac{\\pi}{6}\\right)$ with the sine sum identity:
 
-$$\\tan(A+B) = \\frac{\\sin A\\cos B + \\cos A\\sin B}{\\cos A\\cos B - \\sin A\\sin B}$$
+$$2\\sin\\!\\left(x + \\frac{\\pi}{6}\\right) = 2\\left(\\sin x\\cos\\frac{\\pi}{6} + \\cos x\\sin\\frac{\\pi}{6}\\right) = 2\\left(\\frac{\\sqrt3}{2}\\sin x + \\frac{1}{2}\\cos x\\right) = \\sqrt3\\sin x + \\cos x$$
 
-Now divide **every term** (top and bottom) by $\\cos A\\cos B$:
+So $\\sqrt3\\sin x + \\cos x$ is really a sine wave with **amplitude $2$**, shifted **left $\\frac{\\pi}{6}$**.
 
-$$= \\frac{\\dfrac{\\sin A}{\\cos A} + \\dfrac{\\sin B}{\\cos B}}{1 - \\dfrac{\\sin A}{\\cos A}\\cdot\\dfrac{\\sin B}{\\cos B}} = \\frac{\\tan A + \\tan B}{1 - \\tan A\\tan B}$$
+## Backward: Match the Coefficients
 
-> ⚠️ **Sign pattern (note the swap):** the **numerator** sign matches the inside, but the **denominator** sign is the **opposite**. So $\\tan(A+B)$ has $+$ on top and $-$ on the bottom; $\\tan(A-B)$ has $-$ on top and $+$ on the bottom.`,
+In general,
+
+$$R\\sin(x + C) = (R\\cos C)\\sin x + (R\\sin C)\\cos x$$
+
+To write $a\\sin x + b\\cos x$ in this form, match $a = R\\cos C$ and $b = R\\sin C$:
+
+| Unknown | How to find it | Why |
+|---------|----------------|-----|
+| $R$ | $R = \\sqrt{a^2 + b^2}$ | $a^2 + b^2 = R^2(\\cos^2 C + \\sin^2 C) = R^2$ |
+| $C$ | $\\cos C = \\dfrac{a}{R}$ and $\\sin C = \\dfrac{b}{R}$ | use **both** signs to pick the quadrant of $C$ |`,
       },
       {
-        id: 'sdi4-sign-check',
+        id: 'sdi4-expand-mc',
         type: 'multiple-choice' as const,
         content: `**Concept Check** 🎯`,
         exercise: {
           questions: [
             {
-              question: 'The denominator of $\\tan(A + B)$ is:',
-              options: ['$1 - \\tan A\\tan B$', '$1 + \\tan A\\tan B$', '$\\tan A - \\tan B$', '$\\cos A\\cos B$'],
+              question: 'Expanding $2\\sin\\!\\left(x + \\dfrac{\\pi}{3}\\right)$ gives:',
+              options: ['$\\sin x + \\sqrt3\\cos x$', '$\\sqrt3\\sin x + \\cos x$', '$2\\sin x + \\sqrt3\\cos x$', '$\\sin x - \\sqrt3\\cos x$'],
               correctAnswer: 0,
-              explanation: 'For a SUM, the numerator is $\\tan A + \\tan B$ and the denominator flips to $1 - \\tan A\\tan B$. The denominator sign is always opposite the inside sign.',
+              explanation: '$2\\left(\\sin x\\cos\\frac{\\pi}{3} + \\cos x\\sin\\frac{\\pi}{3}\\right) = 2\\left(\\frac12\\sin x + \\frac{\\sqrt3}{2}\\cos x\\right) = \\sin x + \\sqrt3\\cos x$.',
             },
             {
-              question: 'Which correctly shows $\\tan(A - B)$?',
-              options: [
-                '$\\dfrac{\\tan A - \\tan B}{1 + \\tan A\\tan B}$',
-                '$\\dfrac{\\tan A - \\tan B}{1 - \\tan A\\tan B}$',
-                '$\\dfrac{\\tan A + \\tan B}{1 - \\tan A\\tan B}$',
-                '$\\tan A - \\tan B$',
-              ],
-              correctAnswer: 0,
-              explanation: 'Difference: numerator $\\tan A - \\tan B$ (matches inside), denominator $1 + \\tan A\\tan B$ (opposite of inside).',
+              question: 'When $\\sin x + \\cos x$ is written as $R\\sin(x + C)$, what is $R$?',
+              options: ['$2$', '$\\sqrt2$', '$1$', '$\\tfrac{\\sqrt2}{2}$'],
+              correctAnswer: 1,
+              explanation: 'Here $a = 1$ and $b = 1$, so $R = \\sqrt{1^2 + 1^2} = \\sqrt2$. The amplitude of $\\sin x + \\cos x$ is $\\sqrt2$, not $2$.',
             },
           ],
         },
       },
       {
-        id: 'sdi4-worked-tan15',
+        id: 'sdi4-worked',
         type: 'text' as const,
-        content: `## Worked Example: $\\tan 15^\\circ$
+        content: `## Worked Example: Rewrite, Then Solve
 
-Write $15^\\circ = 45^\\circ - 30^\\circ$. Recall $\\tan 45^\\circ = 1$ and $\\tan 30^\\circ = \\dfrac{1}{\\sqrt3} = \\dfrac{\\sqrt3}{3}$.
+**Solve** $\\sin x + \\sqrt3\\cos x = 1$ on $[0, 2\\pi)$.
 
-$$\\tan 15^\\circ = \\frac{\\tan 45^\\circ - \\tan 30^\\circ}{1 + \\tan 45^\\circ\\tan 30^\\circ} = \\frac{1 - \\frac{1}{\\sqrt3}}{1 + 1\\cdot\\frac{1}{\\sqrt3}} = \\frac{\\;\\frac{\\sqrt3 - 1}{\\sqrt3}\\;}{\\;\\frac{\\sqrt3 + 1}{\\sqrt3}\\;} = \\frac{\\sqrt3 - 1}{\\sqrt3 + 1}$$
+**Step 1 — Rewrite.** $a = 1$, $b = \\sqrt3$, so $R = \\sqrt{1 + 3} = 2$. Then $\\cos C = \\frac12$ and $\\sin C = \\frac{\\sqrt3}{2}$, so $C = \\frac{\\pi}{3}$:
 
-**Rationalize** by multiplying top and bottom by $(\\sqrt3 - 1)$:
+$$\\sin x + \\sqrt3\\cos x = 2\\sin\\!\\left(x + \\frac{\\pi}{3}\\right)$$
 
-$$= \\frac{(\\sqrt3 - 1)^2}{(\\sqrt3 + 1)(\\sqrt3 - 1)} = \\frac{3 - 2\\sqrt3 + 1}{3 - 1} = \\frac{4 - 2\\sqrt3}{2} = 2 - \\sqrt3$$
+**Step 2 — Solve the simpler equation.** $2\\sin\\!\\left(x + \\frac{\\pi}{3}\\right) = 1$ means $\\sin u = \\frac12$ with $u = x + \\frac{\\pi}{3}$. Since $0 \\le x < 2\\pi$, the new angle runs over $\\frac{\\pi}{3} \\le u < \\frac{7\\pi}{3}$. In that window, $\\sin u = \\frac12$ at $u = \\frac{5\\pi}{6}$ and $u = \\frac{13\\pi}{6}$.
 
-> ✅ **Check:** $2 - \\sqrt3 \\approx 2 - 1.732 = 0.268$, and $\\tan 15^\\circ \\approx 0.268$. ✓`,
+**Step 3 — Undo the shift.** $x = u - \\frac{\\pi}{3}$:
+
+$$x = \\frac{5\\pi}{6} - \\frac{\\pi}{3} = \\frac{\\pi}{2} \\qquad x = \\frac{13\\pi}{6} - \\frac{\\pi}{3} = \\frac{11\\pi}{6}$$
+
+> ✅ **Check:** at $x = \\frac{\\pi}{2}$, $1 + \\sqrt3\\cdot 0 = 1$ ✓. At $x = \\frac{11\\pi}{6}$, $-\\frac12 + \\sqrt3\\cdot\\frac{\\sqrt3}{2} = -\\frac12 + \\frac32 = 1$ ✓.
+
+> ⚠️ Shift the **interval** along with the angle. Solving $\\sin u = \\frac12$ on $[0, 2\\pi)$ instead would give $u = \\frac{\\pi}{6}$, which leads to $x = -\\frac{\\pi}{6}$, outside the interval.`,
       },
       {
-        id: 'sdi4-tan-drill',
+        id: 'sdi4-features-dropdown',
         type: 'dropdown-select' as const,
-        content: `**Build the Tangent Formula** 🔽
+        content: `**Read the Features** 🔽
 
-You are expanding $\\tan(60^\\circ + 45^\\circ)$ to find $\\tan 105^\\circ$. Choose each piece.`,
+Use $y = \\sin x + \\sqrt3\\cos x = 2\\sin\\!\\left(x + \\dfrac{\\pi}{3}\\right)$.`,
         exercise: {
           dropdowns: [
-            { label: 'Numerator:', options: ['$\\tan 60^\\circ + \\tan 45^\\circ$', '$\\tan 60^\\circ - \\tan 45^\\circ$', '$1 + \\tan 60^\\circ\\tan 45^\\circ$', '$\\tan 60^\\circ\\tan 45^\\circ$'] },
-            { label: 'Denominator:', options: ['$1 - \\tan 60^\\circ\\tan 45^\\circ$', '$1 + \\tan 60^\\circ\\tan 45^\\circ$', '$\\tan 60^\\circ - \\tan 45^\\circ$', '$\\tan 60^\\circ + \\tan 45^\\circ$'] },
+            { label: 'Amplitude:', options: ['$2$', '$1 + \\sqrt3$', '$\\sqrt3$', '$2\\sqrt3$'], correctAnswer: 0 },
+            { label: 'Period:', options: ['$2\\pi$', '$\\pi$', '$\\tfrac{2\\pi}{3}$', '$4\\pi$'], correctAnswer: 0 },
+            { label: 'First maximum for $x \\ge 0$ occurs at $x =$', options: ['$\\tfrac{\\pi}{6}$', '$\\tfrac{\\pi}{2}$', '$\\tfrac{\\pi}{3}$', '$0$'], correctAnswer: 0 },
           ],
-          correctAnswers: ['$\\tan 60^\\circ + \\tan 45^\\circ$', '$1 - \\tan 60^\\circ\\tan 45^\\circ$'],
-          hint1: 'This is a SUM, so the numerator adds the two tangents.',
-          hint2: 'For a sum, the denominator sign is the opposite: $1 - \\dots$',
-          hint3: '$\\tan(A+B) = \\dfrac{\\tan A + \\tan B}{1 - \\tan A\\tan B}$.',
-          explanation: '$\\tan 105^\\circ = \\dfrac{\\tan 60^\\circ + \\tan 45^\\circ}{1 - \\tan 60^\\circ\\tan 45^\\circ} = \\dfrac{\\sqrt3 + 1}{1 - \\sqrt3}$, which simplifies to $-(2+\\sqrt3)$. (Negative makes sense — $105^\\circ$ is in Quadrant II.)',
+          correctAnswers: ['$2$', '$2\\pi$', '$\\tfrac{\\pi}{6}$'],
+          hint1: 'The amplitude is $R = \\sqrt{a^2 + b^2}$, not $a + b$.',
+          hint2: 'The coefficient of $x$ inside the sine is $1$, so the period matches $\\sin x$.',
+          hint3: 'The maximum happens when $x + \\frac{\\pi}{3} = \\frac{\\pi}{2}$.',
+          explanation: 'Amplitude $2$, period $2\\pi$, and the first maximum is at $x = \\frac{\\pi}{2} - \\frac{\\pi}{3} = \\frac{\\pi}{6}$, where $y = \\frac12 + \\sqrt3\\cdot\\frac{\\sqrt3}{2} = 2$.',
         },
       },
       {
-        id: 'sdi4-recap',
+        id: 'sdi4-signs',
         type: 'text' as const,
-        content: `## Two Tangents Worth Memorizing
+        content: `## When a Coefficient Is Negative
 
-The two most common tangent results from this method are clean:
+Rewrite $\\sin x - \\cos x$. Here $a = 1$, $b = -1$, so $R = \\sqrt2$, $\\cos C = \\frac{1}{\\sqrt2}$, and $\\sin C = -\\frac{1}{\\sqrt2}$. Cosine positive and sine negative puts $C$ in Quadrant IV: $C = -\\frac{\\pi}{4}$.
 
-$$\\tan 15^\\circ = 2 - \\sqrt3 \\qquad \\tan 75^\\circ = 2 + \\sqrt3$$
+$$\\sin x - \\cos x = \\sqrt2\\sin\\!\\left(x - \\frac{\\pi}{4}\\right)$$
 
-They are **reciprocals** of each other, since $15^\\circ$ and $75^\\circ$ are complementary and $\\tan(90^\\circ - \\theta) = \\cot\\theta = \\dfrac{1}{\\tan\\theta}$.
+**Verify by expanding:** $\\sqrt2\\left(\\sin x\\cos\\frac{\\pi}{4} - \\cos x\\sin\\frac{\\pi}{4}\\right) = \\sqrt2\\left(\\frac{\\sqrt2}{2}\\sin x - \\frac{\\sqrt2}{2}\\cos x\\right) = \\sin x - \\cos x$ ✓
 
-> 💡 Indeed $(2-\\sqrt3)(2+\\sqrt3) = 4 - 3 = 1$, confirming they multiply to $1$.`,
+> 💡 Always confirm a rewrite by expanding it with the sum or difference identity. It takes one line and catches sign errors in $C$.`,
       },
       {
-        id: 'sdi4-tan-decimal-drill',
+        id: 'sdi4-drill',
         type: 'input-boxes' as const,
-        content: `**Decimal Check** 🧮
+        content: `**Rewrite and Solve** 🧮
 
-Use $\\tan 45^\\circ = 1$, $\\tan 30^\\circ = \\frac{1}{\\sqrt3} \\approx 0.577$, and $\\tan 60^\\circ = \\sqrt3 \\approx 1.732$.
+Write $\\sqrt3\\sin x - \\cos x$ as $R\\sin(x + C)$.
 
-**1)** $\\tan 15^\\circ = 2 - \\sqrt3 = \\,?$  *(3 decimals)*
-**2)** $\\tan 75^\\circ = 2 + \\sqrt3 = \\,?$  *(3 decimals)*`,
+**1)** $R = \\,?$
+**2)** The maximum value of $y = \\sqrt3\\sin x - \\cos x$ is $\\,?$
+**3)** Solve $\\sqrt3\\sin x - \\cos x = 2$ on $[0, 2\\pi)$. Enter $x$ as a multiple of pi, like \`3pi/4\`.`,
         exercise: {
-          boxes: 2,
-          correctAnswers: ['0.268', '3.732'],
-          hint1: '$\\sqrt3 \\approx 1.732$.',
-          hint2: '$\\tan 15^\\circ = 2 - 1.732 = 0.268$. $\\tan 75^\\circ = 2 + 1.732 = 3.732$.',
-          hint3: 'Note $\\tan 15^\\circ$ and $\\tan 75^\\circ$ are reciprocals ($0.268 \\times 3.732 \\approx 1$) — they are complementary angles.',
-          explanation: '$\\tan 15^\\circ = 2 - \\sqrt3 \\approx 0.268$ and $\\tan 75^\\circ = 2 + \\sqrt3 \\approx 3.732$. As complementary angles, $\\tan 75^\\circ = \\cot 15^\\circ = 1/\\tan 15^\\circ$. ✓',
+          boxes: 3,
+          correctAnswers: ['2', '2', '2pi/3'],
+          hint1: '$R = \\sqrt{(\\sqrt3)^2 + (-1)^2} = \\sqrt{4}$.',
+          hint2: '$\\cos C = \\frac{\\sqrt3}{2}$ and $\\sin C = -\\frac12$, so $C = -\\frac{\\pi}{6}$ and $y = 2\\sin\\left(x - \\frac{\\pi}{6}\\right)$, whose largest value is $R$.',
+          hint3: '$2\\sin\\left(x - \\frac{\\pi}{6}\\right) = 2$ means $x - \\frac{\\pi}{6} = \\frac{\\pi}{2}$.',
+          explanation: '1) $R = 2$.  2) The maximum is $2$.  3) $x = \\frac{\\pi}{2} + \\frac{\\pi}{6} = \\frac{2\\pi}{3}$. Check: $\\sqrt3\\cdot\\frac{\\sqrt3}{2} - \\left(-\\frac12\\right) = \\frac32 + \\frac12 = 2$ ✓',
         },
       },
     ],
@@ -589,9 +601,9 @@ Use $\\tan 45^\\circ = 1$, $\\tan 30^\\circ = \\frac{1}{\\sqrt3} \\approx 0.577$
 
 > 🔑 **The 4-step recipe** for any "find the exact value" problem:
 > 1. **Decompose** the angle into two special angles (sum or difference).
-> 2. **Pick** the right family (sin/cos/tan) and write the formula.
+> 2. **Pick** the right family (sin or cos) and write the formula.
 > 3. **Substitute** unit-circle values.
-> 4. **Simplify** (and rationalize if it's a tangent).`,
+> 4. **Simplify**, then check the sign against the quadrant.`,
       },
       {
         id: 'sdi5-cos105',
@@ -622,11 +634,11 @@ $$\\cos 105^\\circ = \\frac{\\sqrt2 - \\sqrt6}{4}$$
               options: [
                 '$\\cos(45^\\circ + 30^\\circ)$',
                 '$\\cos(70^\\circ + 5^\\circ)$',
-                '$\\cos(40^\\circ + 35^\\circ)$',
+                '$\\cos(72^\\circ + 3^\\circ)$',
                 '$\\cos(80^\\circ - 5^\\circ)$',
               ],
               correctAnswer: 0,
-              explanation: 'Only $45^\\circ$ and $30^\\circ$ are special angles with known exact values. The others ($5^\\circ, 35^\\circ$, etc.) are not on the unit circle.',
+              explanation: 'Only $45^\\circ$ and $30^\\circ$ are special angles with known exact values. Angles such as $5^\\circ$, $3^\\circ$, and $72^\\circ$ are not special angles, so the unit circle does not supply their sines and cosines.',
             },
             {
               question: 'After expanding, $\\cos 75^\\circ = \\cos 45^\\circ\\cos 30^\\circ - \\sin 45^\\circ\\sin 30^\\circ$ equals:',
@@ -664,14 +676,14 @@ Compute each exact value, then enter its **decimal** rounded to **3 decimal plac
 
 **1)** $\\cos 105^\\circ = \\dfrac{\\sqrt2 - \\sqrt6}{4} = \\,?$
 **2)** $\\sin 15^\\circ = \\dfrac{\\sqrt6 - \\sqrt2}{4} = \\,?$
-**3)** $\\tan 15^\\circ = 2 - \\sqrt3 = \\,?$`,
+**3)** $\\cos 15^\\circ = \\dfrac{\\sqrt6 + \\sqrt2}{4} = \\,?$`,
         exercise: {
           boxes: 3,
-          correctAnswers: ['-0.259', '0.259', '0.268'],
+          correctAnswers: ['-0.259', '0.259', '0.966'],
           hint1: '$\\sqrt2 \\approx 1.414$, $\\sqrt3 \\approx 1.732$, $\\sqrt6 \\approx 2.449$.',
           hint2: '$\\cos 105^\\circ = \\frac{1.414 - 2.449}{4} = \\frac{-1.035}{4}$. Quadrant II → negative.',
-          hint3: '$\\sin 15^\\circ = \\frac{2.449 - 1.414}{4} = \\frac{1.035}{4} \\approx 0.259$. $\\;2 - 1.732 = 0.268$.',
-          explanation: '1) $\\frac{1.414-2.449}{4} \\approx -0.259$.  2) $\\frac{2.449-1.414}{4} \\approx 0.259$.  3) $2 - 1.732 \\approx 0.268$.',
+          hint3: '$\\sin 15^\\circ = \\frac{2.449 - 1.414}{4} = \\frac{1.035}{4} \\approx 0.259$. $\\;\\cos 15^\\circ = \\frac{2.449 + 1.414}{4} = \\frac{3.863}{4}$.',
+          explanation: '1) $\\frac{1.414-2.449}{4} \\approx -0.259$.  2) $\\frac{2.449-1.414}{4} \\approx 0.259$.  3) $\\frac{2.449+1.414}{4} \\approx 0.966$.',
         },
       },
       {
@@ -760,7 +772,7 @@ $$\\sin 50^\\circ\\cos 20^\\circ - \\cos 50^\\circ\\sin 20^\\circ = \\sin(50^\\c
             },
             {
               question: '$\\sin 3x\\cos x + \\cos 3x\\sin x$ simplifies to:',
-              options: ['$\\sin 4x$', '$\\sin 2x$', '$\\cos 4x$', '$\\sin 3x$'],
+              options: ['$\\sin 4x$', '$\\sin(-2x)$', '$\\cos(-2x)$', '$\\sin(3x^2)$'],
               correctAnswer: 0,
               explanation: 'Mixed products with a PLUS is the $\\sin(A+B)$ pattern: $\\sin(3x + x) = \\sin 4x$.',
             },
@@ -899,13 +911,12 @@ Use $\\sin A = \\dfrac{3}{5}$ ($A$ in QI) and $\\cos B = \\dfrac{5}{13}$ ($B$ in
 | $\\sin(A - B)$ | $\\sin A\\cos B - \\cos A\\sin B$ |
 | $\\cos(A + B)$ | $\\cos A\\cos B - \\sin A\\sin B$ |
 | $\\cos(A - B)$ | $\\cos A\\cos B + \\sin A\\sin B$ |
-| $\\tan(A + B)$ | $\\dfrac{\\tan A + \\tan B}{1 - \\tan A\\tan B}$ |
-| $\\tan(A - B)$ | $\\dfrac{\\tan A - \\tan B}{1 + \\tan A\\tan B}$ |
+| $a\\sin x + b\\cos x$ | $R\\sin(x + C)$ with $R = \\sqrt{a^2 + b^2}$ |
 
 > 🔑 **Three rules to never forget:**
 > 1. **Cosine flips** the sign; **sine keeps** it.
 > 2. Cosine uses **matched** products; sine uses **mixed**.
-> 3. Tangent's **denominator** sign is **opposite** the inside sign.`,
+> 3. Assign each missing sine or cosine its sign from the **quadrant** before you multiply.`,
       },
       {
         id: 'sdi7-mixed',
@@ -921,7 +932,7 @@ Use $\\sin A = \\dfrac{3}{5}$ ($A$ in QI) and $\\cos B = \\dfrac{5}{13}$ ($B$ in
             },
             {
               question: 'If $\\sin A = \\frac35$ ($A$ in QI) and $\\cos A = \\frac45$, then $\\sin(A + A) = \\sin 2A$ equals:',
-              options: ['$\\dfrac{24}{25}$', '$\\dfrac{7}{25}$', '$\\dfrac{6}{5}$', '$\\dfrac{12}{25}$'],
+              options: ['$\\dfrac{24}{25}$', '$\\dfrac{7}{25}$', '$\\dfrac{6}{5}$', '$\\dfrac{3}{5}$'],
               correctAnswer: 0,
               explanation: '$\\sin(A+A) = \\sin A\\cos A + \\cos A\\sin A = 2\\sin A\\cos A = 2\\cdot\\frac35\\cdot\\frac45 = \\frac{24}{25}$.',
             },
@@ -942,7 +953,7 @@ Answer all three to finish the lesson.`,
                 '$\\cos A\\cos B - \\sin A\\sin B$',
                 '$\\cos A\\cos B + \\sin A\\sin B$',
                 '$\\sin A\\cos B + \\cos A\\sin B$',
-                '$\\cos A + \\cos B$',
+                '$\\cos A - \\cos B$',
               ],
               correctAnswer: 0,
               explanation: 'Cosine flips the sign: a PLUS inside becomes a MINUS. Matched products give $\\cos A\\cos B - \\sin A\\sin B$.',
@@ -960,7 +971,7 @@ Answer all three to finish the lesson.`,
             },
             {
               question: '$\\sin 80^\\circ\\cos 20^\\circ - \\cos 80^\\circ\\sin 20^\\circ$ equals:',
-              options: ['$\\dfrac{\\sqrt3}{2}$', '$\\dfrac12$', '$\\dfrac{\\sqrt2}{2}$', '$1$'],
+              options: ['$\\dfrac{\\sqrt3}{2}$', '$\\dfrac12$', '$\\sin 100^\\circ$', '$1$'],
               correctAnswer: 0,
               explanation: 'This is the $\\sin(A-B)$ pattern: $\\sin(80^\\circ - 20^\\circ) = \\sin 60^\\circ = \\frac{\\sqrt3}{2}$.',
             },

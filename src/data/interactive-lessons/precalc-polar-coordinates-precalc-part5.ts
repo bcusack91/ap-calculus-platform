@@ -5,159 +5,143 @@ export const precalcPolarPart5Data = {
       id: 'p5-intro',
       type: 'text' as const,
       content: `
-# 📐 Area in Polar Coordinates
+# 📈 Polar Function Graphs — Reading $r = f(\\theta)$
 
-**Part 5 of 7**
+**Part 5 of 7 — Polar Function Graphs and Domain Restrictions**
 
-### The Polar Area Formula
+A **polar function** $r = f(\\theta)$ takes an **angle** as its input and returns a **signed radius** as its output. Its graph in the polar plane is the set of points $(f(\\theta), \\theta)$.
 
-To find the area enclosed by a polar curve $r = f(\\theta)$ from $\\theta = \\alpha$ to $\\theta = \\beta$:
+### Two Pictures of the Same Function
 
-$$A = \\frac{1}{2}\\int_{\\alpha}^{\\beta} r^2 \\, d\\theta = \\frac{1}{2}\\int_{\\alpha}^{\\beta} [f(\\theta)]^2 \\, d\\theta$$
+The same function can be drawn two ways:
 
-### Why $\\frac{1}{2}r^2$?
+| Picture | Horizontal / input | Vertical / output |
+|:--------|:-------------------|:------------------|
+| Rectangular graph of $r = f(\\theta)$ | $\\theta$ on the horizontal axis | $r$ on the vertical axis |
+| Polar graph of $r = f(\\theta)$ | $\\theta$ is a **rotation** from the polar axis | $r$ is a **signed distance** along that ray |
 
-Think of thin "pie slices" of angle $d\\theta$. Each slice is approximately a sector of a circle with area $\\frac{1}{2}r^2 d\\theta$.
+A change in the input rotates you around the pole. A change in the output moves you along the line through the pole at that angle: outward on the terminal ray when $r > 0$, and outward on the **opposite** ray when $r < 0$.
 
-### Key Setup Steps
+### Translating Features
 
-1. **Identify the limits** $\\alpha$ and $\\beta$ carefully
-2. **For a full curve**, determine the period (e.g., a rose may complete in $[0, \\pi]$ or $[0, 2\\pi]$)
-3. **Use symmetry** to simplify: compute part and multiply
+| On the rectangular graph of $r = f(\\theta)$ | On the polar graph |
+|:---------------------------------------------|:-------------------|
+| $f(\\theta) = 0$ (a $\\theta$-intercept) | The curve passes through the pole |
+| $f(\\theta) > 0$ | The point lies on the terminal ray of $\\theta$ |
+| $f(\\theta) < 0$ | The point lies on the ray opposite $\\theta$ (rotated by $\\pi$) |
+| Largest value of $|f(\\theta)|$ | The point farthest from the pole |
+
+> 💡 The rectangular graph is a roadmap. Sketch it first, mark where $r$ is zero, positive and negative, then rotate around the pole to draw the polar curve.
       `
     },
     {
       id: 'p5-example',
       type: 'text' as const,
       content: `
-## 📝 Example: Area Inside a Cardioid $r = 1 + \\cos\\theta$
+## 📝 Worked Example: $r = 1 + 2\\cos\\theta$
 
-The full cardioid is traced from $\\theta = 0$ to $\\theta = 2\\pi$.
+### Step 1: Key values
 
-$$A = \\frac{1}{2}\\int_0^{2\\pi}(1+\\cos\\theta)^2\\,d\\theta$$
+| $\\theta$ | $0$ | $\\frac{\\pi}{2}$ | $\\frac{2\\pi}{3}$ | $\\pi$ | $\\frac{4\\pi}{3}$ | $\\frac{3\\pi}{2}$ | $2\\pi$ |
+|:--|:--|:--|:--|:--|:--|:--|:--|
+| $r$ | $3$ | $1$ | $0$ | $-1$ | $0$ | $1$ | $3$ |
 
-Expand: $(1+\\cos\\theta)^2 = 1 + 2\\cos\\theta + \\cos^2\\theta$
+$r = 0$ when $\\cos\\theta = -\\frac{1}{2}$, so at $\\theta = \\frac{2\\pi}{3}$ and $\\theta = \\frac{4\\pi}{3}$.
 
-Use $\\cos^2\\theta = \\frac{1+\\cos 2\\theta}{2}$:
+### Step 2: Read the rectangular graph interval by interval
 
-$$= 1 + 2\\cos\\theta + \\frac{1}{2} + \\frac{\\cos 2\\theta}{2} = \\frac{3}{2} + 2\\cos\\theta + \\frac{\\cos 2\\theta}{2}$$
+| Interval of $\\theta$ | Sign of $r$ | Angles point into | Points are plotted in |
+|:----------------------|:------------|:------------------|:----------------------|
+| $0 \\le \\theta \\le \\frac{\\pi}{2}$ | positive, $3 \\to 1$ | Quadrant I | Quadrant I |
+| $\\frac{\\pi}{2} \\le \\theta \\le \\frac{2\\pi}{3}$ | positive, $1 \\to 0$ | Quadrant II | Quadrant II |
+| $\\frac{2\\pi}{3} \\le \\theta \\le \\pi$ | negative, $0 \\to -1$ | Quadrant II | Quadrant IV |
+| $\\pi \\le \\theta \\le \\frac{4\\pi}{3}$ | negative, $-1 \\to 0$ | Quadrant III | Quadrant I |
+| $\\frac{4\\pi}{3} \\le \\theta \\le 2\\pi$ | positive, $0 \\to 3$ | Quadrants III, IV | Quadrants III, IV |
 
-$$A = \\frac{1}{2}\\int_0^{2\\pi}\\left(\\frac{3}{2} + 2\\cos\\theta + \\frac{\\cos 2\\theta}{2}\\right)d\\theta$$
+### Step 3: Draw
 
-$$= \\frac{1}{2}\\left[\\frac{3}{2}\\theta + 2\\sin\\theta + \\frac{\\sin 2\\theta}{4}\\right]_0^{2\\pi} = \\frac{1}{2}\\left(\\frac{3}{2}\\cdot 2\\pi\\right) = \\frac{3\\pi}{2}$$
-
-> **Shortcut**: By symmetry about the polar axis, we could compute $2 \\cdot \\frac{1}{2}\\int_0^{\\pi}(1+\\cos\\theta)^2\\,d\\theta$, getting the same answer.
-      `
-    },
-    {
-      id: 'p5-between',
-      type: 'text' as const,
-      content: `
-## 🔄 Area Between Polar Curves
-
-For the area inside $r_1 = f(\\theta)$ and outside $r_2 = g(\\theta)$ (where $f(\\theta) \\geq g(\\theta)$):
-
-$$A = \\frac{1}{2}\\int_{\\alpha}^{\\beta}\\left([f(\\theta)]^2 - [g(\\theta)]^2\\right)d\\theta$$
-
-**Example**: Area inside $r = 2$ but outside $r = 2(1 - \\cos\\theta)$.
-
-Find intersections: $2 = 2(1-\\cos\\theta) \\implies \\cos\\theta = 0 \\implies \\theta = \\pm\\frac{\\pi}{2}$
-
-By symmetry (both curves are symmetric about polar axis):
-
-$$A = 2 \\cdot \\frac{1}{2}\\int_0^{\\pi/2}\\left(4 - 4(1-\\cos\\theta)^2\\right)d\\theta$$
-
-Carefully evaluate: $4 - 4(1-2\\cos\\theta+\\cos^2\\theta) = 8\\cos\\theta - 4\\cos^2\\theta$
-
-This yields $A = 8 - \\pi$ after integration.
-
-> ⚠️ **Common Mistake**: Always check which curve is "outer" vs "inner" on the integration interval!
+The positive pieces form the large outer loop. The negative pieces, from $\\theta = \\frac{2\\pi}{3}$ to $\\theta = \\frac{4\\pi}{3}$, are flipped through the pole into Quadrants IV and I, forming the **inner loop**. That inner loop is exactly the part of the curve where $r < 0$.
       `
     },
     {
       id: 'p5-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Area Quiz** 🎯
+**Reading Polar Function Graphs** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'The area enclosed by the circle $r = 3$ is:',
-            options: ['$\\frac{9\\pi}{2}$', '$9\\pi$', '$3\\pi$', '$6\\pi$'],
+            question: 'A polar function has $f\\left(\\frac{5\\pi}{6}\\right) = -2$. Where is the point $\\left(f\\left(\\frac{5\\pi}{6}\\right), \\frac{5\\pi}{6}\\right)$ located?',
+            options: ['Quadrant IV, 2 units from the pole', 'Quadrant II, 2 units from the pole', 'Quadrant III, 2 units from the pole', 'Quadrant I, 2 units from the pole'],
+            correctAnswer: 0,
+            explanation: 'The angle $\\frac{5\\pi}{6}$ points into Quadrant II, but $r < 0$ sends the point 2 units along the opposite ray, into Quadrant IV.'
+          },
+          {
+            question: 'The rectangular graph of $r = f(\\theta)$ crosses the $\\theta$-axis at $\\theta = \\frac{\\pi}{3}$. What happens on the polar graph at that angle?',
+            options: ['The curve crosses the horizontal axis', 'The curve passes through the pole', 'The curve is farthest from the pole', 'The curve crosses the line $\\theta = \\frac{\\pi}{2}$'],
             correctAnswer: 1,
-            explanation: '$A = \\frac{1}{2}\\int_0^{2\\pi}9\\,d\\theta = \\frac{9}{2}(2\\pi) = 9\\pi$.'
+            explanation: 'A $\\theta$-intercept means $f\\left(\\frac{\\pi}{3}\\right) = 0$, and a radius of 0 puts the point at the pole.'
           },
           {
-            question: 'The area of one petal of $r = \\sin(2\\theta)$ uses limits:',
-            options: ['$[0, 2\\pi]$', '$[0, \\pi]$', '$[0, \\frac{\\pi}{2}]$', '$[0, \\frac{\\pi}{4}]$'],
+            question: 'On which interval is $r = 1 + 2\\cos\\theta$ negative, tracing the inner loop?',
+            options: ['$\\frac{\\pi}{2} < \\theta < \\frac{3\\pi}{2}$', '$\\frac{\\pi}{3} < \\theta < \\frac{5\\pi}{3}$', '$\\frac{2\\pi}{3} < \\theta < \\frac{4\\pi}{3}$', '$\\pi < \\theta < 2\\pi$'],
             correctAnswer: 2,
-            explanation: 'One petal of $r = \\sin(2\\theta)$ is traced from $\\theta = 0$ to $\\theta = \\frac{\\pi}{2}$ (when $\\sin(2\\theta)$ goes from $0$ back to $0$).'
-          },
-          {
-            question: 'To find the area inside $r = 2\\cos\\theta$, the correct integral is:',
-            options: ['$\\frac{1}{2}\\int_0^{2\\pi}4\\cos^2\\theta\\,d\\theta$', '$\\frac{1}{2}\\int_0^{\\pi}4\\cos^2\\theta\\,d\\theta$', '$\\frac{1}{2}\\int_{-\\pi/2}^{\\pi/2}4\\cos^2\\theta\\,d\\theta$', '$\\int_0^{\\pi}2\\cos\\theta\\,d\\theta$'],
-            correctAnswer: 2,
-            explanation: 'The circle $r = 2\\cos\\theta$ is traced for $\\theta \\in [-\\frac{\\pi}{2}, \\frac{\\pi}{2}]$ (where $r \\geq 0$).'
+            explanation: '$1 + 2\\cos\\theta < 0$ when $\\cos\\theta < -\\frac{1}{2}$, which happens strictly between $\\frac{2\\pi}{3}$ and $\\frac{4\\pi}{3}$.'
           }
         ]
       }
     },
     {
+      id: 'p5-domain',
+      type: 'text' as const,
+      content: `
+## ✂️ Restricting the Domain
+
+Often you want only **part** of a polar curve: one petal, the inner loop, or half of a circle. Choose the starting and ending angles so the graph begins and ends at the points you want.
+
+### Example 1: One petal of $r = 4\\sin(2\\theta)$
+
+$r = 0$ at $\\theta = 0$ and again at $\\theta = \\frac{\\pi}{2}$, and $r > 0$ in between. Every angle in between points into Quadrant I, so
+
+$$0 \\le \\theta \\le \\frac{\\pi}{2}$$
+
+draws exactly the Quadrant I petal, reaching $r = 4$ at $\\theta = \\frac{\\pi}{4}$.
+
+### Example 2: The inner loop of $r = 1 + 2\\cos\\theta$
+
+The inner loop starts and ends at the pole, where $r = 0$:
+
+$$\\frac{2\\pi}{3} \\le \\theta \\le \\frac{4\\pi}{3}$$
+
+### Example 3: The upper half of $r = 4\\cos\\theta$
+
+The full circle is traced once on $0 \\le \\theta \\le \\pi$. On $0 \\le \\theta \\le \\frac{\\pi}{2}$, $r \\ge 0$ and the angles point into Quadrant I, so $y = r\\sin\\theta \\ge 0$: that is the **upper** half. On $\\frac{\\pi}{2} \\le \\theta \\le \\pi$, $r \\le 0$ and the points land in Quadrant IV: the **lower** half.
+
+> ⚠️ Pick endpoints by checking **both** the angle and the sign of $r$. An interval of angles in Quadrant II can draw points in Quadrant IV when $r$ is negative.
+      `
+    },
+    {
       id: 'p5-input',
       type: 'input-boxes' as const,
       content: `
-**Set Up Area Integrals** 🧮
+**Signed Radius Practice** 🧮
 
-**1)** Area inside $r = 4\\sin\\theta$. This is a circle of diameter 4. Its area = ? (Enter as a multiple of $\\pi$, like "4pi")
+For $r = 2 + 4\\cos\\theta$:
 
-**2)** One petal of $r = 3\\cos(3\\theta)$: first petal from $\\theta = 0$ to $\\theta = $ ? (Enter as a fraction of pi, like "pi/3")
+**1)** What is $r$ at $\\theta = \\pi$? (e.g., for $r = 1 + 3\\cos\\theta$ at $\\theta = \\pi$: $r = 1 - 3 = -2$)
 
-**3)** Area of one petal of $r = 2\\sin(2\\theta)$: $A = \\frac{1}{2}\\int_0^{\\pi/2} 4\\sin^2(2\\theta)\\,d\\theta = $ ? (Enter as a multiple of $\\pi$, like "pi/2")
+**2)** How far from the pole is the point at $\\theta = \\pi$? (Distance is never negative.)
+
+**3)** How many times does the graph pass through the pole for $0 \\le \\theta < 2\\pi$?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['4pi', 'pi/6', 'pi/2'],
-        hint1: '$r = 4\\sin\\theta$ is a circle with diameter 4, so radius 2, area $\\pi(2)^2 = 4\\pi$.',
-        hint2: 'Rose $r = a\\cos(n\\theta)$ with odd $n$: petals occur in intervals of $\\frac{\\pi}{n}$. First petal: $[-\\frac{\\pi}{6}, \\frac{\\pi}{6}]$, so half-width is $\\frac{\\pi}{6}$.',
-        hint3: '$\\frac{1}{2}\\int_0^{\\pi/2}4\\sin^2(2\\theta)\\,d\\theta = 2\\int_0^{\\pi/2}\\frac{1-\\cos(4\\theta)}{2}\\,d\\theta = \\int_0^{\\pi/2}(1-\\cos 4\\theta)\\,d\\theta = \\frac{\\pi}{2}$.',
-        explanation: '1) Circle area $= 4\\pi$. 2) First petal ends at $\\theta = \\frac{\\pi}{6}$. 3) $A = \\frac{\\pi}{2}$.'
-      }
-    },
-    {
-      id: 'p5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Area Concepts** 🔽
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'The polar area element is:',
-            options: ['$r\\,dr\\,d\\theta$', '$\\frac{1}{2}r^2\\,d\\theta$', '$r\\,d\\theta$', '$\\pi r^2\\,d\\theta$'],
-            correctAnswer: 1
-          },
-          {
-            label: 'For a rose $r = a\\sin(n\\theta)$ with even $n$, total area =',
-            options: ['$n \\times$ (one petal area)', '$2n \\times$ (one petal area)', '$\\frac{\\pi a^2}{4}$'],
-            correctAnswer: 1
-          },
-          {
-            label: 'The circle $r = 6\\cos\\theta$ has center at:',
-            options: ['$(3, 0)$', '$(0, 3)$', '$(6, 0)$', 'Origin'],
-            correctAnswer: 0
-          },
-          {
-            label: 'To find enclosed area, $r$ must be:',
-            options: ['Always positive', 'Squared (so sign does not matter)', 'Always increasing'],
-            correctAnswer: 1
-          }
-        ],
-        correctAnswers: ['$\\frac{1}{2}r^2\\,d\\theta$', '$2n \\times$ (one petal area)', '$(3, 0)$', 'Squared (so sign does not matter)'],
-        hint1: 'Sector of a circle: $\\frac{1}{2}r^2 \\Delta\\theta$.',
-        hint2: 'Even $n$ gives $2n$ petals.',
-        hint3: '$r = 6\\cos\\theta \\implies x^2+y^2 = 6x \\implies (x-3)^2+y^2 = 9$.',
-        explanation: 'Area element: $\\frac{1}{2}r^2 d\\theta$. Even $n$ roses have $2n$ petals. Circle $r = 6\\cos\\theta$ centered at $(3,0)$. Squaring $r$ makes sign irrelevant.'
+        correctAnswers: ['-2', '2', '2'],
+        hint1: '$\\cos\\pi = -1$, so $r = 2 + 4(-1)$.',
+        hint2: 'Distance from the pole is $|r|$.',
+        hint3: 'Solve $2 + 4\\cos\\theta = 0$: $\\cos\\theta = -\\frac{1}{2}$ at $\\theta = \\frac{2\\pi}{3}$ and $\\frac{4\\pi}{3}$.',
+        explanation: '1) $r = -2$. 2) The distance is $|-2| = 2$; the point is plotted at $(2, 0)$ in rectangular coordinates. 3) $r = 0$ at $\\theta = \\frac{2\\pi}{3}$ and $\\frac{4\\pi}{3}$, so 2 times.'
       }
     },
     {
@@ -169,16 +153,16 @@ This yields $A = 8 - \\pi$ after integration.
       exercise: {
         questions: [
           {
-            question: 'The total area enclosed by $r = \\sin(2\\theta)$ (all 4 petals) is:',
-            options: ['$\\frac{\\pi}{8}$', '$\\frac{\\pi}{4}$', '$\\frac{\\pi}{2}$', '$\\pi$'],
-            correctAnswer: 2,
-            explanation: 'One petal: $\\frac{1}{2}\\int_0^{\\pi/2}\\sin^2(2\\theta)\\,d\\theta = \\frac{\\pi}{8}$. Four petals: $4 \\cdot \\frac{\\pi}{8} = \\frac{\\pi}{2}$.'
+            question: 'Which restriction draws only the upper half of the circle $r = 6\\cos\\theta$?',
+            options: ['$0 \\le \\theta \\le \\frac{3\\pi}{2}$', '$0 \\le \\theta \\le \\frac{\\pi}{2}$', '$\\frac{\\pi}{2} \\le \\theta \\le \\pi$', '$-\\frac{\\pi}{2} \\le \\theta \\le 0$'],
+            correctAnswer: 1,
+            explanation: 'On $0 \\le \\theta \\le \\frac{\\pi}{2}$, $r \\ge 0$ and the angles point into Quadrant I, so every point has $y \\ge 0$. On $\\frac{\\pi}{2} \\le \\theta \\le \\pi$ the radius is negative and the points fall below the axis.'
           },
           {
-            question: 'In the formula $A = \\frac{1}{2}\\int_{\\alpha}^{\\beta}(r_1^2 - r_2^2)\\,d\\theta$, $r_1$ represents:',
-            options: ['The inner curve', 'The outer curve', 'The leftmost curve', 'Either curve'],
+            question: 'For $\\frac{\\pi}{2} < \\theta < \\pi$, a polar function has $f(\\theta) < 0$. Where are those points of the graph?',
+            options: ['In Quadrant II, along each ray', 'In Quadrant IV, opposite each ray', 'In Quadrant III, below each ray', 'On the polar axis, at the pole'],
             correctAnswer: 1,
-            explanation: '$r_1$ is the outer (farther from origin) curve, $r_2$ is the inner curve.'
+            explanation: 'Angles between $\\frac{\\pi}{2}$ and $\\pi$ point into Quadrant II; a negative radius sends each point along the opposite ray, into Quadrant IV.'
           }
         ]
       }

@@ -1,7 +1,9 @@
 import type { LessonData } from '../registry'
 
 /**
- * Hand-authored interactive lesson — Double Angle and Half Angle Identities (AP Precalculus).
+ * Hand-authored interactive lesson — Double-Angle Identities (AP Precalculus, topic 3.12).
+ * Half-angle and tangent double-angle identities were removed in the Oct 2026 off-exam trim
+ * (CED 3.12: not assessed); the registry key keeps its historical name.
  * Registry key: 'double-half-angle-identities' (matches the DB Topic.slug, no alias needed).
  * 7 parts, gold-standard structure: teach → worked examples → interactive practice
  * (multiple-choice + input-boxes + dropdown) → exit quiz. LaTeX uses doubled
@@ -15,7 +17,7 @@ export const parts: LessonData[] = [
       {
         id: 'dha1-intro',
         type: 'text' as const,
-        content: `# 🔁 Double Angle & Half Angle Identities
+        content: `# 🔁 Double-Angle Identities
 
 **Part 1 of 7 — Where the Double-Angle Formulas Come From**
 
@@ -29,7 +31,7 @@ export const parts: LessonData[] = [
 | Deriving $\\sin(2\\theta)$ and $\\cos(2\\theta)$ |
 | The Three Faces of $\\cos(2\\theta)$ |
 
-> 🔑 **Key Concept:** A "double angle" formula rewrites $\\sin(2\\theta)$, $\\cos(2\\theta)$, or $\\tan(2\\theta)$ in terms of $\\sin\\theta$, $\\cos\\theta$, and $\\tan\\theta$ alone. Every one of them is just an **angle-sum formula with both angles equal**.`,
+> 🔑 **Key Concept:** A "double angle" formula rewrites $\\sin(2\\theta)$ or $\\cos(2\\theta)$ in terms of $\\sin\\theta$ and $\\cos\\theta$ alone. Each one is just an **angle-sum formula with both angles equal**.`,
       },
       {
         id: 'dha1-sum',
@@ -134,7 +136,7 @@ Suppose $\\sin\\theta = \\tfrac{3}{5}$ and $\\cos\\theta = \\tfrac{4}{5}$.
 $$\\boxed{\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta}$$
 $$\\boxed{\\cos(2\\theta) = \\cos^2\\theta - \\sin^2\\theta = 2\\cos^2\\theta - 1 = 1 - 2\\sin^2\\theta}$$
 
-In **Part 2** we add the tangent double angle and start *using* these to compute exact values. The whole rest of the lesson rests on the boxed formulas above — make sure they feel automatic.`,
+In **Part 2** we start *using* these to compute exact values from a single given ratio. The whole rest of the lesson rests on the boxed formulas above — make sure they feel automatic.`,
       },
     ],
   },
@@ -146,46 +148,61 @@ In **Part 2** we add the tangent double angle and start *using* these to compute
       {
         id: 'dha2-intro',
         type: 'text' as const,
-        content: `# 🔁 Double Angle & Half Angle Identities
+        content: `# 🔁 Double-Angle Identities
 
-**Part 2 of 7 — Tangent & Evaluating From a Given Ratio**
+**Part 2 of 7 — Evaluating Double Angles From a Given Ratio**
 
 ---
 
-> 🔑 **The Idea:** If you know $\\sin\\theta$ and $\\cos\\theta$ (or can find them from one), you can compute $\\sin(2\\theta)$, $\\cos(2\\theta)$, and $\\tan(2\\theta)$ exactly — no calculator, no decimals.`,
+> 🔑 **The Idea:** If you know $\\sin\\theta$ and $\\cos\\theta$ (or can find one from the other), you can compute $\\sin(2\\theta)$ and $\\cos(2\\theta)$ exactly: no calculator, no decimals.
+
+> Half-angle identities and the tangent double-angle identity are not assessed on the AP Precalculus exam.`,
       },
       {
-        id: 'dha2-tan',
+        id: 'dha2-ratio',
         type: 'text' as const,
-        content: `## The Tangent Double Angle
+        content: `## Step Zero: Find the Missing Ratio
 
-Divide $\\sin(2\\theta)$ by $\\cos(2\\theta)$ (or set $A=B=\\theta$ in the tangent-sum formula) to get:
+Double-angle formulas need **both** $\\sin\\theta$ and $\\cos\\theta$ (unless you choose a one-function form of $\\cos(2\\theta)$). When only one is given, use the Pythagorean identity and the quadrant:
 
-$$\\boxed{\\tan(2\\theta) = \\dfrac{2\\tan\\theta}{1 - \\tan^2\\theta}}$$
+$$\\sin^2\\theta + \\cos^2\\theta = 1 \\;\\Rightarrow\\; \\cos\\theta = \\pm\\sqrt{1 - \\sin^2\\theta}$$
 
-### Quick Example: $\\tan\\theta = \\tfrac{1}{2}$
+| Quadrant of $\\theta$ | Sign of $\\sin\\theta$ | Sign of $\\cos\\theta$ |
+|---------------------|----------------------|----------------------|
+| I | $+$ | $+$ |
+| II | $+$ | $-$ |
+| III | $-$ | $-$ |
+| IV | $-$ | $+$ |
 
-$$\\tan(2\\theta) = \\frac{2\\cdot\\frac{1}{2}}{1 - \\left(\\frac{1}{2}\\right)^2} = \\frac{1}{1 - \\frac{1}{4}} = \\frac{1}{\\frac{3}{4}} = \\frac{4}{3}$$
+### Quick Example: $\\sin\\theta = \\tfrac{5}{13}$, $\\theta$ in Quadrant II
 
-> ⚠️ **Watch the denominator.** The $1 - \\tan^2\\theta$ is undefined when $\\tan\\theta = \\pm 1$ (i.e. $\\theta = 45^\\circ$), which makes sense: $\\tan(90^\\circ)$ is undefined.`,
+$$\\cos\\theta = -\\sqrt{1 - \\tfrac{25}{169}} = -\\sqrt{\\tfrac{144}{169}} = -\\tfrac{12}{13}$$
+
+The negative sign comes from the quadrant, not from the arithmetic.
+
+### Where Does $2\\theta$ Land?
+
+Once you have $\\sin(2\\theta)$ and $\\cos(2\\theta)$, their **signs** locate $2\\theta$. With the values above, $\\sin(2\\theta) = 2\\cdot\\tfrac{5}{13}\\cdot\\left(-\\tfrac{12}{13}\\right) = -\\tfrac{120}{169}$ and $\\cos(2\\theta) = 1 - 2\\cdot\\tfrac{25}{169} = \\tfrac{119}{169}$. Sine negative and cosine positive puts $2\\theta$ in **Quadrant IV**.
+
+> ⚠️ Doubling an angle can move it to a different quadrant. Never assume $2\\theta$ shares the quadrant of $\\theta$.`,
       },
       {
-        id: 'dha2-tan-drill',
+        id: 'dha2-ratio-drill',
         type: 'input-boxes' as const,
-        content: `**Tangent Double Angle** 🧮
+        content: `**Missing Ratio, Then Double** 🧮
 
-Use $\\tan(2\\theta) = \\dfrac{2\\tan\\theta}{1 - \\tan^2\\theta}$. Enter each answer as a fraction like \`8/15\`.
+Given $\\cos\\theta = \\tfrac{8}{17}$ with $\\theta$ in **Quadrant IV**. Enter each answer as a fraction like \`8/15\`.
 
-**1)** $\\tan\\theta = \\tfrac{1}{3} \\;\\Rightarrow\\; \\tan(2\\theta) = \\,?$
-**2)** $\\tan\\theta = 2 \\;\\Rightarrow\\; \\tan(2\\theta) = \\,?$
-**3)** $\\tan\\theta = \\tfrac{3}{4} \\;\\Rightarrow\\; \\tan(2\\theta) = \\,?$`,
+**1)** $\\sin\\theta = \\,?$
+**2)** $\\sin(2\\theta) = \\,?$
+**3)** $\\cos(2\\theta) = \\,?$`,
         exercise: {
           boxes: 3,
-          correctAnswers: ['3/4', '-4/3', '24/7'],
-          hint1: '$\\dfrac{2\\cdot\\frac{1}{3}}{1 - \\frac{1}{9}} = \\dfrac{2/3}{8/9} = \\dfrac{2}{3}\\cdot\\dfrac{9}{8} = \\dfrac{3}{4}$.',
-          hint2: '$\\dfrac{2\\cdot 2}{1 - 4} = \\dfrac{4}{-3} = -\\dfrac{4}{3}$. A negative result is fine.',
-          hint3: '$\\dfrac{2\\cdot\\frac{3}{4}}{1 - \\frac{9}{16}} = \\dfrac{3/2}{7/16} = \\dfrac{3}{2}\\cdot\\dfrac{16}{7} = \\dfrac{24}{7}$.',
-          explanation: '1) $\\tan(2\\theta) = \\frac{3}{4}$.  2) $\\tan(2\\theta) = -\\frac{4}{3}$.  3) $\\tan(2\\theta) = \\frac{24}{7}$.',
+          correctAnswers: ['-15/17', '-240/289', '-161/289'],
+          hint1: '$\\sin\\theta = \\pm\\sqrt{1 - \\tfrac{64}{289}} = \\pm\\tfrac{15}{17}$, and sine is negative in Quadrant IV.',
+          hint2: '$\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta = 2\\cdot\\left(-\\tfrac{15}{17}\\right)\\cdot\\tfrac{8}{17}$.',
+          hint3: 'You were given cosine, so use $\\cos(2\\theta) = 2\\cos^2\\theta - 1 = 2\\cdot\\tfrac{64}{289} - 1$.',
+          explanation: '1) $\\sin\\theta = -\\tfrac{15}{17}$.  2) $\\sin(2\\theta) = -\\tfrac{240}{289}$.  3) $\\cos(2\\theta) = \\tfrac{128}{289} - \\tfrac{289}{289} = -\\tfrac{161}{289}$. Both are negative, so $2\\theta$ is in Quadrant III.',
         },
       },
       {
@@ -193,7 +210,7 @@ Use $\\tan(2\\theta) = \\dfrac{2\\tan\\theta}{1 - \\tan^2\\theta}$. Enter each a
         type: 'text' as const,
         content: `## Worked Example: Build Everything From One Ratio
 
-> **Given:** $\\sin\\theta = \\dfrac{3}{5}$ with $\\theta$ in **Quadrant I**. Find $\\sin(2\\theta)$, $\\cos(2\\theta)$, and $\\tan(2\\theta)$.
+> **Given:** $\\sin\\theta = \\dfrac{3}{5}$ with $\\theta$ in **Quadrant I**. Find $\\sin(2\\theta)$ and $\\cos(2\\theta)$, then locate $2\\theta$.
 
 **Step 1 — Find $\\cos\\theta$.** Since $\\theta$ is in QI, cosine is positive:
 $$\\cos\\theta = \\sqrt{1 - \\left(\\tfrac{3}{5}\\right)^2} = \\sqrt{1 - \\tfrac{9}{25}} = \\sqrt{\\tfrac{16}{25}} = \\frac{4}{5}$$
@@ -201,7 +218,8 @@ $$\\cos\\theta = \\sqrt{1 - \\left(\\tfrac{3}{5}\\right)^2} = \\sqrt{1 - \\tfrac
 **Step 2 — Double angles.**
 $$\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta = 2\\cdot\\tfrac{3}{5}\\cdot\\tfrac{4}{5} = \\frac{24}{25}$$
 $$\\cos(2\\theta) = 1 - 2\\sin^2\\theta = 1 - 2\\cdot\\tfrac{9}{25} = 1 - \\tfrac{18}{25} = \\frac{7}{25}$$
-$$\\tan(2\\theta) = \\frac{\\sin(2\\theta)}{\\cos(2\\theta)} = \\frac{24/25}{7/25} = \\frac{24}{7}$$
+
+**Step 3 — Locate $2\\theta$.** Both values are positive, so $2\\theta$ is in Quadrant I. (Check: $\\theta \\approx 36.9^\\circ$, so $2\\theta \\approx 73.7^\\circ$.)
 
 > ✅ **Sanity check:** $\\left(\\tfrac{24}{25}\\right)^2 + \\left(\\tfrac{7}{25}\\right)^2 = \\tfrac{576 + 49}{625} = \\tfrac{625}{625} = 1$ ✓`,
       },
@@ -254,7 +272,7 @@ Given $\\cos\\theta = -\\dfrac{3}{5}$ with $\\theta$ in **Quadrant II** (so $\\s
       {
         id: 'dha3-intro',
         type: 'text' as const,
-        content: `# 🔁 Double Angle & Half Angle Identities
+        content: `# 🔁 Double-Angle Identities
 
 **Part 3 of 7 — Reading Double Angles Backwards (Recognition)**
 
@@ -275,7 +293,7 @@ Read each formula **right-to-left**. The angle inside doubles.
 | $\\cos^2\\alpha - \\sin^2\\alpha$ | $\\cos(2\\alpha)$ | first form of $\\cos(2\\theta)$ |
 | $1 - 2\\sin^2\\alpha$ | $\\cos(2\\alpha)$ | third form of $\\cos(2\\theta)$ |
 | $2\\cos^2\\alpha - 1$ | $\\cos(2\\alpha)$ | second form of $\\cos(2\\theta)$ |
-| $\\dfrac{2\\tan\\alpha}{1-\\tan^2\\alpha}$ | $\\tan(2\\alpha)$ | the tangent pattern |
+| $\\sin\\alpha\\cos\\alpha$ | $\\tfrac{1}{2}\\sin(2\\alpha)$ | half of the $\\sin(2\\theta)$ pattern |
 
 ### Example
 
@@ -299,15 +317,15 @@ Here $\\alpha = 3x$, so $2\\alpha = 6x$.
             },
             {
               question: 'Simplify $1 - 2\\sin^2(4\\theta)$.',
-              options: ['$\\cos(8\\theta)$', '$\\sin(8\\theta)$', '$\\cos(4\\theta)$', '$-\\cos(4\\theta)$'],
+              options: ['$\\cos(8\\theta)$', '$\\cos(16\\theta)$', '$-\\cos(8\\theta)$', '$-\\cos(4\\theta)$'],
               correctAnswer: 0,
               explanation: '$1 - 2\\sin^2\\alpha = \\cos(2\\alpha)$ with $\\alpha = 4\\theta$, giving $\\cos(8\\theta)$.',
             },
             {
-              question: 'Simplify $\\dfrac{2\\tan(x)}{1 - \\tan^2(x)}$.',
-              options: ['$\\tan(2x)$', '$\\tan^2(x)$', '$2\\tan(x)$', '$\\cot(2x)$'],
+              question: 'Simplify $2\\cos^2\\left(\\tfrac{x}{2}\\right) - 1$.',
+              options: ['$\\cos(x)$', '$\\cos(2x)$', '$\\cos\\left(\\tfrac{x}{4}\\right)$', '$\\sin(2x)$'],
               correctAnswer: 0,
-              explanation: 'This is exactly the tangent double-angle formula, so it equals $\\tan(2x)$.',
+              explanation: '$2\\cos^2\\alpha - 1 = \\cos(2\\alpha)$ with $\\alpha = \\tfrac{x}{2}$, so the angle doubles to $x$ and the expression equals $\\cos(x)$.',
             },
           ],
         },
@@ -379,7 +397,7 @@ Recognition is a two-step habit:
 1. **Factor** out whatever constant the formula requires (a $2$ for $\\cos$/$\\sin$ patterns).
 2. **Match** the structure and **double** the inside angle.
 
-> 🔑 Reading identities *backwards* is exactly the move you'll need when **integrating** $\\sin^2 x$ or $\\cos^2 x$ in calculus — which is where Part 5's power-reduction formulas come in.`,
+> 🔑 Reading identities *backwards* turns a product into a single sinusoid. For example, $y = \\sin x\\cos x = \\tfrac{1}{2}\\sin(2x)$ has amplitude $\\tfrac{1}{2}$ and period $\\pi$, facts that are hidden in the product form.`,
       },
     ],
   },
@@ -391,9 +409,9 @@ Recognition is a two-step habit:
       {
         id: 'dha4-intro',
         type: 'text' as const,
-        content: `# 🔁 Double Angle & Half Angle Identities
+        content: `# 🔁 Double-Angle Identities
 
-**Part 4 of 7 — The Half-Angle Formulas**
+**Part 4 of 7 — Verifying Identities with Double Angles**
 
 ---
 
@@ -401,118 +419,119 @@ Recognition is a two-step habit:
 
 | Section |
 |---------|
-| Solving $\\cos(2\\theta)$ for $\\sin^2$ and $\\cos^2$ |
-| The Half-Angle Formulas |
-| Choosing the $\\pm$ Sign |
+| A Verification Game Plan |
+| Choosing the Form of $\\cos(2\\theta)$ That Cancels |
+| Combining Sum and Double-Angle Identities |
 
-> 🔑 **Key Concept:** Half-angle formulas come from running the cosine double angle **in reverse**. They let you find $\\sin\\left(\\tfrac{\\theta}{2}\\right)$ from $\\cos\\theta$ — perfect for exact values like $\\sin 15^\\circ$.`,
+> 🔑 **Key Concept:** To **verify** an identity, you transform one side, step by step, until it matches the other side. Double-angle identities are often the first move, because they turn every angle into the same angle.`,
       },
       {
-        id: 'dha4-derive',
+        id: 'dha4-plan',
         type: 'text' as const,
-        content: `## Deriving the Half-Angle Formulas
+        content: `## A Verification Game Plan
 
-Start with two faces of the cosine double angle and **solve for the squared term**:
+1. **Start with the more complicated side.** It has more to simplify.
+2. **Make every angle the same.** Expand $\\sin(2\\theta)$ and $\\cos(2\\theta)$ into functions of $\\theta$.
+3. **Pick the $\\cos(2\\theta)$ form that cancels a constant.** $1 + \\cos(2\\theta) = 2\\cos^2\\theta$ and $1 - \\cos(2\\theta) = 2\\sin^2\\theta$.
+4. **Use the Pythagorean identity** whenever $\\sin^2\\theta + \\cos^2\\theta$ appears.
+5. **Never move terms across the equals sign.** You are showing the two sides are equal, so you may not assume it.
 
-$$\\cos(2\\theta) = 1 - 2\\sin^2\\theta \\;\\Rightarrow\\; \\sin^2\\theta = \\frac{1 - \\cos(2\\theta)}{2}$$
-$$\\cos(2\\theta) = 2\\cos^2\\theta - 1 \\;\\Rightarrow\\; \\cos^2\\theta = \\frac{1 + \\cos(2\\theta)}{2}$$
+### Worked Example 1: Verify $(\\sin\\theta + \\cos\\theta)^2 = 1 + \\sin(2\\theta)$
 
-Now replace $\\theta$ with $\\tfrac{\\theta}{2}$ (so $2\\theta$ becomes $\\theta$) and take a square root:
+Start with the left side and expand the square:
 
-$$\\boxed{\\sin\\!\\left(\\tfrac{\\theta}{2}\\right) = \\pm\\sqrt{\\dfrac{1 - \\cos\\theta}{2}}}$$
-$$\\boxed{\\cos\\!\\left(\\tfrac{\\theta}{2}\\right) = \\pm\\sqrt{\\dfrac{1 + \\cos\\theta}{2}}}$$
-$$\\boxed{\\tan\\!\\left(\\tfrac{\\theta}{2}\\right) = \\dfrac{1 - \\cos\\theta}{\\sin\\theta} = \\dfrac{\\sin\\theta}{1 + \\cos\\theta}}$$
+$$(\\sin\\theta + \\cos\\theta)^2 = \\sin^2\\theta + 2\\sin\\theta\\cos\\theta + \\cos^2\\theta$$
 
-> 💡 **Memory hook:** **s**ine goes with **s**ubtraction ($1 - \\cos\\theta$); **c**osine goes with… the **+** ($1 + \\cos\\theta$). The two $\\tan$ forms are always positive-or-negative *without* a $\\pm$ to choose — the sign comes out automatically.`,
+Group the squares and recognize the double angle:
+
+$$= (\\sin^2\\theta + \\cos^2\\theta) + 2\\sin\\theta\\cos\\theta = 1 + \\sin(2\\theta) \\;\\checkmark$$`,
       },
       {
-        id: 'dha4-sign-text',
-        type: 'text' as const,
-        content: `## Choosing the $\\pm$ Sign
-
-The square root forces a decision: **is the half-angle's sine (or cosine) positive or negative?**
-
-The answer depends on the quadrant of $\\tfrac{\\theta}{2}$ — **not** the quadrant of $\\theta$.
-
-### Example: $\\theta = 300^\\circ$
-
-Then $\\tfrac{\\theta}{2} = 150^\\circ$, which lands in **Quadrant II**. In QII:
-- $\\sin\\left(\\tfrac{\\theta}{2}\\right) > 0$  → choose **+**
-- $\\cos\\left(\\tfrac{\\theta}{2}\\right) < 0$  → choose **−**
-
-> ⚠️ **The #1 mistake** is copying the sign from $\\theta$. Always **halve the angle first**, locate *that* quadrant, then pick the sign.`,
-      },
-      {
-        id: 'dha4-sign-dropdown',
-        type: 'dropdown-select' as const,
-        content: `**Pick the Sign** 🔽
-
-For each $\\theta$, decide the quadrant of $\\tfrac{\\theta}{2}$ and the sign of $\\sin\\left(\\tfrac{\\theta}{2}\\right)$.`,
-        exercise: {
-          dropdowns: [
-            { label: '$\\theta = 80^\\circ \\Rightarrow \\tfrac{\\theta}{2} = 40^\\circ$ is in:', options: ['Quadrant I', 'Quadrant II', 'Quadrant III', 'Quadrant IV'] },
-            { label: 'So $\\sin\\left(\\tfrac{\\theta}{2}\\right)$ is:', options: ['positive', 'negative'] },
-            { label: '$\\theta = 200^\\circ \\Rightarrow \\tfrac{\\theta}{2} = 100^\\circ$, so $\\sin\\left(\\tfrac{\\theta}{2}\\right)$ is:', options: ['positive', 'negative'] },
-          ],
-          correctAnswers: ['Quadrant I', 'positive', 'positive'],
-          hint1: '$40^\\circ$ is between $0^\\circ$ and $90^\\circ$ → Quadrant I.',
-          hint2: 'In Quadrant I every trig function is positive.',
-          hint3: '$100^\\circ$ is in Quadrant II, where sine is still positive.',
-          explanation: '$40^\\circ$ is in QI (all positive), so $\\sin(40^\\circ) > 0$. $100^\\circ$ is in QII, where sine is also positive. Always test the *halved* angle.',
-        },
-      },
-      {
-        id: 'dha4-worked',
-        type: 'text' as const,
-        content: `## Worked Example: Exact Value of $\\sin 15^\\circ$
-
-Notice $15^\\circ = \\tfrac{30^\\circ}{2}$, and we know $\\cos 30^\\circ = \\tfrac{\\sqrt{3}}{2}$.
-
-**Step 1 — Pick the sign.** $15^\\circ$ is in Quadrant I, so $\\sin 15^\\circ > 0$ → use **+**.
-
-**Step 2 — Apply the formula.**
-$$\\sin 15^\\circ = \\sqrt{\\frac{1 - \\cos 30^\\circ}{2}} = \\sqrt{\\frac{1 - \\frac{\\sqrt{3}}{2}}{2}} = \\sqrt{\\frac{\\frac{2 - \\sqrt{3}}{2}}{2}} = \\sqrt{\\frac{2 - \\sqrt{3}}{4}} = \\frac{\\sqrt{2 - \\sqrt{3}}}{2}$$
-
-> ✅ **Check:** $\\dfrac{\\sqrt{2 - \\sqrt{3}}}{2} \\approx 0.2588$, and a calculator gives $\\sin 15^\\circ \\approx 0.2588$ ✓. (This also equals the "nested-radical-free" form $\\tfrac{\\sqrt{6} - \\sqrt{2}}{4}$.)`,
-      },
-      {
-        id: 'dha4-worked-check',
+        id: 'dha4-plan-mc',
         type: 'multiple-choice' as const,
         content: `**Concept Check** 🎯`,
         exercise: {
           questions: [
             {
-              question: 'Which half-angle formula correctly gives $\\cos\\left(\\tfrac{\\theta}{2}\\right)$?',
-              options: ['$\\pm\\sqrt{\\dfrac{1 + \\cos\\theta}{2}}$', '$\\pm\\sqrt{\\dfrac{1 - \\cos\\theta}{2}}$', '$\\pm\\sqrt{\\dfrac{1 + \\sin\\theta}{2}}$', '$\\dfrac{1 + \\cos\\theta}{2}$'],
+              question: 'To verify $\\dfrac{1 - \\cos(2\\theta)}{\\sin(2\\theta)} = \\tan\\theta$, which replacement for $\\cos(2\\theta)$ makes the numerator collapse to a single term?',
+              options: ['$1 - 2\\sin^2\\theta$', '$2\\cos^2\\theta - 1$', '$\\cos^2\\theta - \\sin^2\\theta$', '$2\\sin\\theta\\cos\\theta$'],
               correctAnswer: 0,
-              explanation: 'Cosine pairs with the **+** sign: $\\cos\\left(\\tfrac{\\theta}{2}\\right) = \\pm\\sqrt{\\tfrac{1 + \\cos\\theta}{2}}$. (Sine uses $1 - \\cos\\theta$.)',
+              explanation: 'With $1 - 2\\sin^2\\theta$, the numerator becomes $1 - (1 - 2\\sin^2\\theta) = 2\\sin^2\\theta$. Dividing by $2\\sin\\theta\\cos\\theta$ leaves $\\tfrac{\\sin\\theta}{\\cos\\theta} = \\tan\\theta$.',
             },
             {
-              question: 'To find $\\sin 15^\\circ$ exactly, which double angle $\\theta$ do you feed into the half-angle formula?',
-              options: ['$\\theta = 30^\\circ$', '$\\theta = 15^\\circ$', '$\\theta = 45^\\circ$', '$\\theta = 60^\\circ$'],
-              correctAnswer: 0,
-              explanation: 'Since $15^\\circ = \\tfrac{30^\\circ}{2}$, you use $\\theta = 30^\\circ$ so that $\\tfrac{\\theta}{2} = 15^\\circ$ and you can plug in the known $\\cos 30^\\circ = \\tfrac{\\sqrt{3}}{2}$.',
+              question: 'Which expression is equal to $1 + \\cos(2\\theta)$?',
+              options: ['$2\\sin^2\\theta$', '$2\\cos^2\\theta$', '$1 + 2\\cos^2\\theta$', '$\\cos^2\\theta$'],
+              correctAnswer: 1,
+              explanation: 'Using $\\cos(2\\theta) = 2\\cos^2\\theta - 1$, the sum is $1 + 2\\cos^2\\theta - 1 = 2\\cos^2\\theta$.',
             },
           ],
         },
       },
       {
-        id: 'dha4-half-drill',
+        id: 'dha4-worked',
+        type: 'text' as const,
+        content: `## Worked Example 2: Verify $\\cos^4\\theta - \\sin^4\\theta = \\cos(2\\theta)$
+
+The left side is a **difference of squares**:
+
+$$\\cos^4\\theta - \\sin^4\\theta = (\\cos^2\\theta - \\sin^2\\theta)(\\cos^2\\theta + \\sin^2\\theta)$$
+
+The second factor is $1$ by the Pythagorean identity, and the first factor is a form of $\\cos(2\\theta)$:
+
+$$= \\cos(2\\theta)\\cdot 1 = \\cos(2\\theta) \\;\\checkmark$$
+
+## Worked Example 3: Verify $\\sin(3\\theta) = 3\\sin\\theta - 4\\sin^3\\theta$
+
+Write $3\\theta = 2\\theta + \\theta$ and use the **sum identity** for sine:
+
+$$\\sin(2\\theta + \\theta) = \\sin(2\\theta)\\cos\\theta + \\cos(2\\theta)\\sin\\theta$$
+
+Expand both double angles, choosing the sine-only form of $\\cos(2\\theta)$:
+
+$$= (2\\sin\\theta\\cos\\theta)\\cos\\theta + (1 - 2\\sin^2\\theta)\\sin\\theta = 2\\sin\\theta\\cos^2\\theta + \\sin\\theta - 2\\sin^3\\theta$$
+
+Replace $\\cos^2\\theta$ with $1 - \\sin^2\\theta$:
+
+$$= 2\\sin\\theta - 2\\sin^3\\theta + \\sin\\theta - 2\\sin^3\\theta = 3\\sin\\theta - 4\\sin^3\\theta \\;\\checkmark$$
+
+> 💡 **Check with a value:** at $\\theta = 30^\\circ$, the left side is $\\sin 90^\\circ = 1$ and the right side is $3\\cdot\\tfrac{1}{2} - 4\\cdot\\tfrac{1}{8} = 1$. A numerical check cannot prove an identity, but it catches sign errors fast.`,
+      },
+      {
+        id: 'dha4-steps-dropdown',
+        type: 'dropdown-select' as const,
+        content: `**Choose the Next Step** 🔽
+
+Pick the move that makes progress in each verification.`,
+        exercise: {
+          dropdowns: [
+            { label: 'To verify $\\dfrac{\\sin(2\\theta)}{\\sin\\theta} = 2\\cos\\theta$, first:', options: ['Expand $\\sin(2\\theta)$ as $2\\sin\\theta\\cos\\theta$', 'Multiply both sides by $\\sin\\theta$', 'Square both sides of the equation', 'Replace $\\sin(2\\theta)$ with $2\\sin\\theta$'], correctAnswer: 0 },
+            { label: '$\\cos^4\\theta - \\sin^4\\theta$ factors as $(\\cos^2\\theta - \\sin^2\\theta)$ times:', options: ['$(\\cos^2\\theta + \\sin^2\\theta)$', '$(\\cos^2\\theta - \\sin^2\\theta)$', '$(\\cos\\theta + \\sin\\theta)$', '$(\\cos\\theta - \\sin\\theta)$'], correctAnswer: 0 },
+            { label: '$\\sin(2\\theta + \\theta)$ expands to:', options: ['$\\sin(2\\theta)\\cos\\theta + \\cos(2\\theta)\\sin\\theta$', '$\\sin(2\\theta)\\cos\\theta - \\cos(2\\theta)\\sin\\theta$', '$\\sin(2\\theta)\\sin\\theta + \\cos(2\\theta)\\cos\\theta$', '$\\sin(2\\theta) + \\sin\\theta$'], correctAnswer: 0 },
+          ],
+          correctAnswers: ['Expand $\\sin(2\\theta)$ as $2\\sin\\theta\\cos\\theta$', '$(\\cos^2\\theta + \\sin^2\\theta)$', '$\\sin(2\\theta)\\cos\\theta + \\cos(2\\theta)\\sin\\theta$'],
+          hint1: 'Work on one side only, and make every angle the same first.',
+          hint2: '$a^2 - b^2 = (a - b)(a + b)$ with $a = \\cos^2\\theta$ and $b = \\sin^2\\theta$.',
+          hint3: 'The sine sum identity is $\\sin(A + B) = \\sin A\\cos B + \\cos A\\sin B$.',
+          explanation: 'Expanding $\\sin(2\\theta)$ lets the $\\sin\\theta$ cancel; a difference of fourth powers factors with $\\cos^2\\theta + \\sin^2\\theta = 1$; and $\\sin(2\\theta + \\theta)$ follows the sine sum identity with $A = 2\\theta$, $B = \\theta$.',
+        },
+      },
+      {
+        id: 'dha4-verify-drill',
         type: 'input-boxes' as const,
-        content: `**Half-Angle Setup** 🧮
+        content: `**Use the Verified Identities** 🧮
 
-Given $\\cos\\theta = \\dfrac{7}{25}$ with $\\theta$ in **Quadrant I** (so $\\tfrac{\\theta}{2}$ is also in QI — all positive):
+Each value follows from an identity verified above.
 
-**1)** Inside the sine formula, $\\dfrac{1 - \\cos\\theta}{2} = \\,?$  *(enter as a fraction)*
-**2)** Therefore $\\sin\\left(\\tfrac{\\theta}{2}\\right) = \\,?$  *(enter as a fraction)*
-**3)** And $\\cos\\left(\\tfrac{\\theta}{2}\\right) = \\,?$  *(enter as a fraction)*`,
+**1)** If $\\sin\\theta + \\cos\\theta = 1.2$, then $\\sin(2\\theta) = \\,?$  *(enter a decimal)*
+**2)** If $\\cos\\theta = 0.6$, then $\\cos^4\\theta - \\sin^4\\theta = \\,?$  *(enter a decimal)*
+**3)** If $\\sin\\theta = \\tfrac{1}{2}$, then $\\sin(3\\theta) = \\,?$`,
         exercise: {
           boxes: 3,
-          correctAnswers: ['9/25', '3/5', '4/5'],
-          hint1: '$\\dfrac{1 - \\frac{7}{25}}{2} = \\dfrac{18/25}{2} = \\dfrac{18}{50} = \\dfrac{9}{25}$.',
-          hint2: '$\\sin\\left(\\tfrac{\\theta}{2}\\right) = \\sqrt{\\tfrac{9}{25}} = \\tfrac{3}{5}$ (positive, since $\\tfrac{\\theta}{2}$ is in QI).',
-          hint3: '$\\cos\\left(\\tfrac{\\theta}{2}\\right) = \\sqrt{\\dfrac{1 + \\frac{7}{25}}{2}} = \\sqrt{\\dfrac{32/25}{2}} = \\sqrt{\\tfrac{16}{25}} = \\tfrac{4}{5}$.',
-          explanation: '$\\dfrac{1-\\frac{7}{25}}{2} = \\tfrac{9}{25}$, so $\\sin\\left(\\tfrac{\\theta}{2}\\right) = \\tfrac{3}{5}$ and $\\cos\\left(\\tfrac{\\theta}{2}\\right) = \\tfrac{4}{5}$. A rare case where the half-angle is itself a clean ratio.',
+          correctAnswers: ['0.44', '-0.28', '1'],
+          hint1: 'Square both sides: $(\\sin\\theta + \\cos\\theta)^2 = 1 + \\sin(2\\theta)$, so $1.44 = 1 + \\sin(2\\theta)$.',
+          hint2: '$\\cos^4\\theta - \\sin^4\\theta = \\cos(2\\theta) = 2\\cos^2\\theta - 1 = 2(0.36) - 1$.',
+          hint3: '$\\sin(3\\theta) = 3\\sin\\theta - 4\\sin^3\\theta = 3\\cdot\\tfrac{1}{2} - 4\\cdot\\tfrac{1}{8}$.',
+          explanation: '1) $1.44 - 1 = 0.44$.  2) $0.72 - 1 = -0.28$.  3) $1.5 - 0.5 = 1$. Each identity turns an awkward expression into one you can evaluate directly.',
         },
       },
     ],
@@ -525,20 +544,25 @@ Given $\\cos\\theta = \\dfrac{7}{25}$ with $\\theta$ in **Quadrant I** (so $\\tf
       {
         id: 'dha5-intro',
         type: 'text' as const,
-        content: `# 🔁 Double Angle & Half Angle Identities
+        content: `# 🔁 Double-Angle Identities
 
-**Part 5 of 7 — Power-Reduction Formulas**
+**Part 5 of 7 — Squared Sines and Cosines as Sinusoids**
 
 ---
 
-> 🔑 **The Idea:** The same algebra that built the half-angle formulas gives the **power-reduction** formulas, which trade a *squared* trig function for a *first-power* one. This is the single most important identity for integrating in Calculus BC.`,
+> 🔑 **The Idea:** Solving the cosine double-angle identity for the squared term trades a *squared* trig function for a *first-power* one. The result, sometimes called a **power-reduction** form, shows that $\\sin^2\\theta$ and $\\cos^2\\theta$ are sinusoids in disguise.`,
       },
       {
         id: 'dha5-power',
         type: 'text' as const,
         content: `## The Power-Reduction Formulas
 
-Stopping one step *before* the square root in Part 4's derivation leaves:
+Start with two forms of the cosine double angle and **solve for the squared term**:
+
+$$\\cos(2\\theta) = 1 - 2\\sin^2\\theta \\;\\Rightarrow\\; 2\\sin^2\\theta = 1 - \\cos(2\\theta)$$
+$$\\cos(2\\theta) = 2\\cos^2\\theta - 1 \\;\\Rightarrow\\; 2\\cos^2\\theta = 1 + \\cos(2\\theta)$$
+
+Divide by $2$:
 
 $$\\boxed{\\sin^2\\theta = \\frac{1 - \\cos(2\\theta)}{2}}$$
 $$\\boxed{\\cos^2\\theta = \\frac{1 + \\cos(2\\theta)}{2}}$$
@@ -547,9 +571,9 @@ The exponent $2$ on the left becomes a $2$ **inside** the cosine on the right �
 
 ### Why this is useful
 
-A squared function oscillates in a way that's hard to work with, but $\\cos(2\\theta)$ is a single, clean wave. For example, the *average value* of $\\sin^2\\theta$ over a full period is $\\tfrac{1}{2}$, which you can read straight off the formula (the $\\cos(2\\theta)$ term averages to $0$).
+A squared function is hard to read, but $\\cos(2\\theta)$ is a single, clean wave. Written as $\\sin^2\\theta = \\tfrac{1}{2} - \\tfrac{1}{2}\\cos(2\\theta)$, the function is a sinusoid with **midline** $y = \\tfrac{1}{2}$, so its *average value* over a full period is $\\tfrac{1}{2}$ (the $\\cos(2\\theta)$ term averages to $0$).
 
-> 💡 In calculus you can't integrate $\\sin^2 x$ directly, but you **can** integrate $\\tfrac{1}{2} - \\tfrac{1}{2}\\cos(2x)$. That swap is this formula.`,
+> 💡 Both forms describe the same function. The squared form is compact; the reduced form shows the midline, amplitude, and period directly.`,
       },
       {
         id: 'dha5-power-mc',
@@ -573,19 +597,32 @@ A squared function oscillates in a way that's hard to work with, but $\\cos(2\\t
         },
       },
       {
-        id: 'dha5-fourth',
+        id: 'dha5-features',
         type: 'text' as const,
-        content: `## Reducing Higher Powers
+        content: `## Reading Sinusoid Features From the Reduced Form
 
-For a fourth power, apply power reduction **twice**. Reduce $\\sin^4\\theta = (\\sin^2\\theta)^2$:
+Rewrite, then read the features as you would for any $y = a\\cos(bx) + d$.
 
-$$\\sin^4\\theta = \\left(\\frac{1 - \\cos(2\\theta)}{2}\\right)^2 = \\frac{1 - 2\\cos(2\\theta) + \\cos^2(2\\theta)}{4}$$
+### Example: $y = \\sin^2 x$
 
-Now reduce the leftover $\\cos^2(2\\theta) = \\tfrac{1 + \\cos(4\\theta)}{2}$ and combine:
+$$\\sin^2 x = \\frac{1}{2} - \\frac{1}{2}\\cos(2x)$$
 
-$$\\sin^4\\theta = \\frac{3 - 4\\cos(2\\theta) + \\cos(4\\theta)}{8}$$
+| Feature | Value | Reason |
+|---------|-------|--------|
+| Midline | $y = \\tfrac{1}{2}$ | the constant term |
+| Amplitude | $\\tfrac{1}{2}$ | $\\left\\lvert -\\tfrac{1}{2}\\right\\rvert$ |
+| Period | $\\pi$ | $\\tfrac{2\\pi}{2}$ |
+| Range | $0 \\le y \\le 1$ | midline $\\pm$ amplitude |
 
-> ⚠️ Each pass **doubles the angle** ($2\\theta$, then $4\\theta$). Track those carefully — a missed doubling is the usual error here.`,
+The period is $\\pi$, **half** the period of $\\sin x$: squaring makes every negative value positive, so the graph repeats twice as often.
+
+### Example: $y = 6\\cos^2(3x)$
+
+$$6\\cos^2(3x) = 6\\cdot\\frac{1 + \\cos(6x)}{2} = 3 + 3\\cos(6x)$$
+
+Midline $y = 3$, amplitude $3$, period $\\tfrac{2\\pi}{6} = \\tfrac{\\pi}{3}$, range $0 \\le y \\le 6$.
+
+> ⚠️ The inside angle **doubles** ($3x$ becomes $6x$). Forgetting the doubling gives the wrong period, which is the usual error here.`,
       },
       {
         id: 'dha5-power-drill',
@@ -594,16 +631,16 @@ $$\\sin^4\\theta = \\frac{3 - 4\\cos(2\\theta) + \\cos(4\\theta)}{8}$$
 
 Use $\\sin^2\\theta = \\dfrac{1-\\cos(2\\theta)}{2}$ and $\\cos^2\\theta = \\dfrac{1+\\cos(2\\theta)}{2}$.
 
-**1)** The average value of $\\cos^2\\theta$ over one full period equals $\\,?$  *(enter as a fraction or decimal)*
+**1)** The midline of $y = \\cos^2\\theta$ is $y = \\,?$  *(enter as a fraction or decimal)*
 **2)** In $\\sin^2(5\\theta) = \\dfrac{1 - \\cos(k\\theta)}{2}$, the value of $k$ is $\\,?$
 **3)** In the reduced form of $\\cos^2(2\\theta)$, the angle inside the cosine term is $k\\theta$. Find $k$.`,
         exercise: {
           boxes: 3,
           correctAnswers: ['1/2', '10', '4'],
-          hint1: 'The $\\cos(2\\theta)$ term averages to $0$ over a period, leaving the constant $\\tfrac{1}{2}$.',
+          hint1: '$\\cos^2\\theta = \\tfrac{1}{2} + \\tfrac{1}{2}\\cos(2\\theta)$; the constant term is the midline.',
           hint2: 'The angle doubles: $\\sin^2(5\\theta)$ produces $\\cos(2\\cdot 5\\theta) = \\cos(10\\theta)$.',
           hint3: '$\\cos^2(2\\theta) = \\tfrac{1 + \\cos(2\\cdot 2\\theta)}{2} = \\tfrac{1 + \\cos(4\\theta)}{2}$.',
-          explanation: '1) Average $= \\tfrac{1}{2}$.  2) $k = 10$.  3) $k = 4$. In every case the inside angle is **double** the original.',
+          explanation: '1) Midline $y = \\tfrac{1}{2}$.  2) $k = 10$.  3) $k = 4$. In every case the inside angle is **double** the original.',
         },
       },
       {
@@ -616,13 +653,13 @@ Choose the correct power-reduction rewrite for each expression.`,
           dropdowns: [
             { label: '$\\sin^2(2x) = $', options: ['$\\dfrac{1 - \\cos(4x)}{2}$', '$\\dfrac{1 + \\cos(4x)}{2}$', '$\\dfrac{1 - \\cos(2x)}{2}$', '$\\dfrac{1 - \\sin(4x)}{2}$'] },
             { label: '$\\cos^2(7x) = $', options: ['$\\dfrac{1 + \\cos(14x)}{2}$', '$\\dfrac{1 - \\cos(14x)}{2}$', '$\\dfrac{1 + \\cos(7x)}{2}$', '$\\dfrac{1 + \\sin(14x)}{2}$'] },
-            { label: 'The average value of $\\sin^2\\theta$ over a full period:', options: ['$\\tfrac{1}{2}$', '$1$', '$0$', '$\\tfrac{1}{4}$'] },
+            { label: 'The period of $y = \\sin^2(2x)$:', options: ['$\\tfrac{\\pi}{2}$', '$\\pi$', '$2\\pi$', '$\\tfrac{\\pi}{4}$'] },
           ],
-          correctAnswers: ['$\\dfrac{1 - \\cos(4x)}{2}$', '$\\dfrac{1 + \\cos(14x)}{2}$', '$\\tfrac{1}{2}$'],
+          correctAnswers: ['$\\dfrac{1 - \\cos(4x)}{2}$', '$\\dfrac{1 + \\cos(14x)}{2}$', '$\\tfrac{\\pi}{2}$'],
           hint1: 'Sine pairs with subtraction and the inside angle doubles: $\\sin^2(2x) = \\tfrac{1 - \\cos(4x)}{2}$.',
           hint2: 'Cosine pairs with addition: $\\cos^2(7x) = \\tfrac{1 + \\cos(14x)}{2}$.',
-          hint3: 'The $\\cos(2\\theta)$ term averages to $0$, leaving the constant $\\tfrac{1}{2}$.',
-          explanation: 'Sine uses $1 - \\cos$, cosine uses $1 + \\cos$, the inside angle always doubles, and the oscillating cosine term averages to $0$ so $\\sin^2\\theta$ averages to $\\tfrac{1}{2}$.',
+          hint3: '$\\sin^2(2x) = \\tfrac{1}{2} - \\tfrac{1}{2}\\cos(4x)$, and $\\cos(4x)$ has period $\\tfrac{2\\pi}{4}$.',
+          explanation: 'Sine uses $1 - \\cos$, cosine uses $1 + \\cos$, and the inside angle always doubles, so $\\sin^2(2x)$ becomes a sinusoid in $\\cos(4x)$ with period $\\tfrac{\\pi}{2}$.',
         },
       },
       {
@@ -648,7 +685,7 @@ Choose the correct power-reduction rewrite for each expression.`,
       {
         id: 'dha6-intro',
         type: 'text' as const,
-        content: `# 🔁 Double Angle & Half Angle Identities
+        content: `# 🔁 Double-Angle Identities
 
 **Part 6 of 7 — Solving Equations & Real Applications**
 
@@ -758,13 +795,13 @@ Solve on $[0, 2\\pi)$. Give answers as multiples of $\\pi$ where asked.
       {
         id: 'dha7-intro',
         type: 'text' as const,
-        content: `# 🔁 Double Angle & Half Angle Identities
+        content: `# 🔁 Double-Angle Identities
 
 **Part 7 of 7 — Mixed Mastery & Exit Quiz**
 
 ---
 
-You can now (1) derive and apply the double-angle formulas, (2) recognize them backwards, (3) use the half-angle formulas with the right sign, (4) reduce powers, and (5) solve equations. Let's pull it all together.`,
+You can now (1) derive and apply the double-angle formulas, (2) recognize them backwards, (3) verify identities with them, (4) rewrite squared sines and cosines as sinusoids, and (5) solve equations. Let's pull it all together.`,
       },
       {
         id: 'dha7-reference',
@@ -775,13 +812,12 @@ You can now (1) derive and apply the double-angle formulas, (2) recognize them b
 |----------|---------|
 | $\\sin(2\\theta)$ | $2\\sin\\theta\\cos\\theta$ |
 | $\\cos(2\\theta)$ | $\\cos^2\\theta - \\sin^2\\theta = 2\\cos^2\\theta - 1 = 1 - 2\\sin^2\\theta$ |
-| $\\tan(2\\theta)$ | $\\dfrac{2\\tan\\theta}{1 - \\tan^2\\theta}$ |
-| $\\sin\\left(\\tfrac{\\theta}{2}\\right)$ | $\\pm\\sqrt{\\dfrac{1 - \\cos\\theta}{2}}$ |
-| $\\cos\\left(\\tfrac{\\theta}{2}\\right)$ | $\\pm\\sqrt{\\dfrac{1 + \\cos\\theta}{2}}$ |
+| $1 + \\cos(2\\theta)$ | $2\\cos^2\\theta$ |
+| $1 - \\cos(2\\theta)$ | $2\\sin^2\\theta$ |
 | $\\sin^2\\theta$ | $\\dfrac{1 - \\cos(2\\theta)}{2}$ |
 | $\\cos^2\\theta$ | $\\dfrac{1 + \\cos(2\\theta)}{2}$ |
 
-> ⚠️ **Three habits that save points:** match the $\\cos(2\\theta)$ form to what you're given; halve the angle *before* picking a $\\pm$ sign; and factor (never divide) when solving equations.`,
+> ⚠️ **Three habits that save points:** match the $\\cos(2\\theta)$ form to what you're given; double the inside angle when you rewrite a square; and factor (never divide) when solving equations.`,
       },
       {
         id: 'dha7-mixed-dropdown',
@@ -793,13 +829,13 @@ One quick item from each skill before the quiz.`,
           dropdowns: [
             { label: '$2\\sin(7x)\\cos(7x) = $', options: ['$\\sin(14x)$', '$\\cos(14x)$', '$\\sin(7x)$', '$2\\sin(7x)$'] },
             { label: '$\\dfrac{1 + \\cos(8x)}{2} = $', options: ['$\\cos^2(4x)$', '$\\sin^2(4x)$', '$\\cos^2(8x)$', '$\\cos(4x)$'] },
-            { label: 'For $\\theta = 250^\\circ$, $\\tfrac{\\theta}{2} = 125^\\circ$, so $\\cos\\left(\\tfrac{\\theta}{2}\\right)$ is:', options: ['negative', 'positive', 'zero', 'undefined'] },
+            { label: '$\\cos^4 x - \\sin^4 x = $', options: ['$\\cos(2x)$', '$\\sin(2x)$', '$1$', '$\\cos^2(2x)$'] },
           ],
-          correctAnswers: ['$\\sin(14x)$', '$\\cos^2(4x)$', 'negative'],
+          correctAnswers: ['$\\sin(14x)$', '$\\cos^2(4x)$', '$\\cos(2x)$'],
           hint1: '$2\\sin\\alpha\\cos\\alpha = \\sin(2\\alpha)$ with $\\alpha = 7x$.',
           hint2: '$\\tfrac{1 + \\cos(2\\alpha)}{2} = \\cos^2\\alpha$; here $2\\alpha = 8x$ so $\\alpha = 4x$.',
-          hint3: '$125^\\circ$ is in Quadrant II, where cosine is negative.',
-          explanation: 'These are the double-angle, power-reduction, and half-angle-sign skills in one line: $\\sin(14x)$, $\\cos^2(4x)$, and a negative cosine for an angle in QII.',
+          hint3: 'Factor as a difference of squares: $(\\cos^2 x - \\sin^2 x)(\\cos^2 x + \\sin^2 x)$.',
+          explanation: 'Recognition, squared-term rewriting, and verification in one line: $\\sin(14x)$, $\\cos^2(4x)$, and $\\cos(2x)\\cdot 1 = \\cos(2x)$.',
         },
       },
       {
@@ -844,10 +880,10 @@ Answer all three to finish the lesson.`,
               explanation: 'One of the three faces of the cosine double angle is $\\cos(2\\theta) = 1 - 2\\sin^2\\theta$. (The option $2\\sin^2\\theta - 1$ is its negative, $-\\cos(2\\theta)$.)',
             },
             {
-              question: 'Power reduction rewrites $\\sin^2\\theta$ as:',
-              options: ['$\\dfrac{1 - \\cos(2\\theta)}{2}$', '$\\dfrac{1 + \\cos(2\\theta)}{2}$', '$\\dfrac{1 - \\sin(2\\theta)}{2}$', '$2\\sin\\theta\\cos\\theta$'],
+              question: 'Which expression is equal to $\\cos^2(5x)$?',
+              options: ['$\\dfrac{1 + \\cos(10x)}{2}$', '$\\dfrac{1 - \\cos(10x)}{2}$', '$\\dfrac{1 + \\cos(5x)}{2}$', '$2\\cos^2(10x) - 1$'],
               correctAnswer: 0,
-              explanation: 'Sine pairs with subtraction: $\\sin^2\\theta = \\tfrac{1 - \\cos(2\\theta)}{2}$. This is the identity that makes $\\sin^2\\theta$ integrable in calculus.',
+              explanation: 'Solve $\\cos(2\\alpha) = 2\\cos^2\\alpha - 1$ for $\\cos^2\\alpha$ with $\\alpha = 5x$: $\\cos^2(5x) = \\tfrac{1 + \\cos(10x)}{2}$, a sinusoid with midline $y = \\tfrac{1}{2}$ and period $\\tfrac{\\pi}{5}$.',
             },
           ],
         },

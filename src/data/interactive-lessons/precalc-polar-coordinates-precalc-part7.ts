@@ -18,9 +18,10 @@ This final part combines all polar coordinate skills:
 | Conversions | $x = r\\cos\\theta, \\; y = r\\sin\\theta, \\; r^2 = x^2+y^2$ |
 | Polar curves | Roses, cardioids, limaçons, lemniscates, spirals |
 | Symmetry | Test $-\\theta$ (polar axis), $\\pi-\\theta$ (vertical), $-r$ (origin) |
-| Area | $A = \\frac{1}{2}\\int r^2\\,d\\theta$ |
-| Conics | $r = \\frac{ed}{1 \\pm e\\cos\\theta}$ or $\\frac{ed}{1 \\pm e\\sin\\theta}$ |
-| Between curves | $A = \\frac{1}{2}\\int(r_1^2 - r_2^2)\\,d\\theta$ |
+| Reading $r = f(\\theta)$ | $r > 0$: on the ray of $\\theta$; $r < 0$: on the opposite ray; $r = 0$: at the pole |
+| Domain restriction | Choose $\\alpha \\le \\theta \\le \\beta$ so the curve starts and ends where you want |
+| Distance from origin | $|r|$; increasing when $r$ is positive and increasing or negative and decreasing |
+| Average rate of change | $\\frac{f(\\theta_2) - f(\\theta_1)}{\\theta_2 - \\theta_1}$, in radius units per radian |
       `
     },
     {
@@ -42,12 +43,18 @@ Flowchart:
    - $n$ odd: $n$ petals
    - $n$ even: $2n$ petals
 5. **$r^2 = a^2\\cos(2\\theta)$ or $r^2 = a^2\\sin(2\\theta)$** → Lemniscate (figure-8)
-6. **$r = \\frac{ed}{1 \\pm e\\cos\\theta}$** → Conic
+
+### Describing How a Polar Graph Behaves
+
+1. **Sign of $r$**: tells you which ray each point sits on
+2. **$r$ increasing or decreasing**: combine with the sign to decide whether the curve moves away from or toward the origin
+3. **Relative extrema of $r$**: points relatively closest to or farthest from the origin
+4. **Average rate of change of $r$**: change in signed radius per radian, which also gives estimates of $r$ inside an interval
 
 ### Common Errors to Avoid
 
-- **Forgetting squaring** in area formula: it's $r^2$, not $r$
-- **Wrong limits**: always find where $r = 0$ or where curves intersect
+- **Ignoring the sign of $r$**: a decreasing $r$ moves the curve away from the origin when $r$ is negative
+- **Wrong domain restriction**: find where $r = 0$ so a petal or loop starts and ends at the pole
 - **Negative $r$**: polar curves can overlap themselves when $r < 0$
 - **Rectangular conversion**: $\\tan\\theta = \\frac{y}{x}$ only in the correct quadrant
       `
@@ -73,10 +80,10 @@ Flowchart:
             explanation: '$a = 3 > b = 2$ (but $a < 2b$), so it is a dimpled limaçon. Since $a > b$, it has no inner loop.'
           },
           {
-            question: 'The area inside the lemniscate $r^2 = 8\\cos(2\\theta)$ (entire curve) is:',
-            options: ['$4$', '$8$', '$4\\pi$', '$8\\pi$'],
+            question: 'For $r = 2 - 4\\cos\\theta$, on which interval is the distance from the origin increasing?',
+            options: ['$0 < \\theta < \\frac{\\pi}{3}$', '$\\frac{\\pi}{3} < \\theta < \\pi$', '$\\pi < \\theta < \\frac{5\\pi}{3}$', '$\\pi < \\theta < 2\\pi$'],
             correctAnswer: 1,
-            explanation: 'The right half: $\\theta \\in [-\\frac{\\pi}{4}, \\frac{\\pi}{4}]$. $A = 2 \\cdot \\frac{1}{2}\\int_{-\\pi/4}^{\\pi/4}8\\cos(2\\theta)\\,d\\theta = 8[\\frac{\\sin(2\\theta)}{2}]_{-\\pi/4}^{\\pi/4} = 8$.'
+            explanation: 'On $\\left(\\frac{\\pi}{3}, \\pi\\right)$, $r$ is positive and increasing from $0$ to $6$. On $\\left(0, \\frac{\\pi}{3}\\right)$, $r$ is negative and increasing from $-2$ to $0$, so the distance there is decreasing. On $(\\pi, 2\\pi)$, $r$ falls from $6$ to $-2$, so the distance first shrinks to $0$ and then grows.'
           }
         ]
       }
@@ -89,17 +96,17 @@ Flowchart:
 
 **1)** Convert $(x, y) = (-3, 3)$ to polar. What is $r$? (Enter exact value like "3sqrt2")
 
-**2)** For $r = \\frac{10}{5-3\\cos\\theta}$, what is the eccentricity? (Enter as a fraction)
+**2)** For $r = 4 + 2\\sin\\theta$, what is the average rate of change of $r$ on $\\left[0, \\frac{\\pi}{2}\\right]$? (Enter in terms of pi, like "6/pi")
 
 **3)** How many petals does $r = 4\\sin(5\\theta)$ have?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['3sqrt2', '3/5', '5'],
+        correctAnswers: ['3sqrt2', '4/pi', '5'],
         hint1: '$r = \\sqrt{(-3)^2+3^2} = \\sqrt{18} = 3\\sqrt{2}$.',
-        hint2: 'Standard form: $r = \\frac{10/5}{1-\\frac{3}{5}\\cos\\theta} = \\frac{2}{1-\\frac{3}{5}\\cos\\theta}$. So $e = \\frac{3}{5}$.',
+        hint2: '$r(0) = 4$ and $r\\left(\\frac{\\pi}{2}\\right) = 6$. Divide the change in $r$ by $\\frac{\\pi}{2}$.',
         hint3: '$r = a\\sin(n\\theta)$ with odd $n$ has exactly $n$ petals.',
-        explanation: '1) $r = 3\\sqrt{2}$. 2) $e = \\frac{3}{5}$ (ellipse). 3) $n = 5$ (odd) gives 5 petals.'
+        explanation: '1) $r = 3\\sqrt{2}$. 2) $\\frac{6 - 4}{\\pi/2} = \\frac{4}{\\pi}$ per radian. 3) $n = 5$ (odd) gives 5 petals.'
       }
     },
     {
@@ -112,7 +119,7 @@ Flowchart:
         dropdowns: [
           {
             label: '$r = 2 - 4\\cos\\theta$: this is a',
-            options: ['Cardioid', 'Limaçon with inner loop', 'Dimpled limaçon', 'Convex limaçon'],
+            options: ['Cardioid through the pole', 'Limaçon with inner loop', 'Dimpled limaçon without a loop', 'Convex limaçon with no dimple'],
             correctAnswer: 1
           },
           {
@@ -121,21 +128,21 @@ Flowchart:
             correctAnswer: 0
           },
           {
-            label: 'A conic with $e = 1.5$ is a:',
-            options: ['Ellipse', 'Parabola', 'Hyperbola'],
-            correctAnswer: 2
+            label: 'If $r = f(\\theta)$ is negative and decreasing, the distance from the origin is',
+            options: ['Increasing', 'Decreasing', 'Constant', 'Zero'],
+            correctAnswer: 0
           },
           {
-            label: 'The area of the cardioid $r = a(1+\\cos\\theta)$ is:',
-            options: ['$\\pi a^2$', '$\\frac{3\\pi a^2}{2}$', '$2\\pi a^2$', '$\\frac{\\pi a^2}{2}$'],
-            correctAnswer: 1
+            label: 'The domain restriction that draws one petal of $r = 5\\sin(3\\theta)$ is',
+            options: ['$0 \\le \\theta \\le \\frac{\\pi}{3}$', '$0 \\le \\theta \\le \\frac{\\pi}{6}$', '$0 \\le \\theta \\le \\frac{2\\pi}{3}$', '$0 \\le \\theta \\le \\pi$'],
+            correctAnswer: 0
           }
         ],
-        correctAnswers: ['Limaçon with inner loop', '$r = 5\\sin\\theta$', 'Hyperbola', '$\\frac{3\\pi a^2}{2}$'],
+        correctAnswers: ['Limaçon with inner loop', '$r = 5\\sin\\theta$', 'Increasing', '$0 \\le \\theta \\le \\frac{\\pi}{3}$'],
         hint1: '$a = 2 < b = 4$, so inner loop.',
         hint2: '$x^2+y^2 = 5y \\implies r^2 = 5r\\sin\\theta \\implies r = 5\\sin\\theta$.',
-        hint3: '$e = 1.5 > 1$ means hyperbola.',
-        explanation: '$a < b$: inner loop. $r^2 = 5r\\sin\\theta \\implies r = 5\\sin\\theta$. $e > 1$: hyperbola. Cardioid area: $\\frac{3\\pi a^2}{2}$.'
+        hint3: 'A negative $r$ that keeps decreasing gets larger in absolute value. For the petal, find the first positive $\\theta$ where $\\sin(3\\theta) = 0$.',
+        explanation: '$a < b$: inner loop. $r^2 = 5r\\sin\\theta \\implies r = 5\\sin\\theta$. Negative and decreasing means $|r|$ grows, so the distance increases. $r = 0$ at $\\theta = 0$ and $\\theta = \\frac{\\pi}{3}$ with $r > 0$ between, so that interval draws one petal.'
       }
     },
     {
@@ -153,10 +160,10 @@ Flowchart:
             explanation: '$2 = 4\\cos\\theta \\implies \\cos\\theta = \\frac{1}{2} \\implies \\theta = \\pm\\frac{\\pi}{3}$.'
           },
           {
-            question: 'To find the area inside both $r = 1$ and $r = 2\\sin\\theta$, you need to:',
-            options: ['Integrate $\\frac{1}{2}\\int r^2\\,d\\theta$ with $r = \\min(1, 2\\sin\\theta)$', 'Find intersections, split the integral into regions using the inner curve in each', 'Subtract the two areas', 'Multiply the two areas'],
+            question: 'A polar function has $f(0) = 1$ and $f\\left(\\frac{\\pi}{2}\\right) = 4$. Using the average rate of change on $\\left[0, \\frac{\\pi}{2}\\right]$, what is the estimate of $f\\left(\\frac{\\pi}{6}\\right)$?',
+            options: ['$1.5$', '$2$', '$2.5$', '$3.5$'],
             correctAnswer: 1,
-            explanation: 'For area inside both curves, find where they intersect, then integrate using whichever curve is closer to the origin on each sub-interval.'
+            explanation: 'The average rate of change is $\\frac{4 - 1}{\\pi/2} = \\frac{6}{\\pi}$ per radian, so $f\\left(\\frac{\\pi}{6}\\right) \\approx 1 + \\frac{6}{\\pi}\\cdot\\frac{\\pi}{6} = 2$.'
           }
         ]
       }

@@ -83,7 +83,7 @@ Why $360$? The number is convenient — it's divisible by $2, 3, 4, 5, 6, 8, 9, 
             },
             {
               question: 'What fraction of a full turn is $45^\\circ$?',
-              options: ['$\\frac{1}{4}$', '$\\frac{1}{6}$', '$\\frac{1}{8}$', '$\\frac{1}{45}$'],
+              options: ['$\\frac{1}{12}$', '$\\frac{1}{16}$', '$\\frac{1}{8}$', '$\\frac{1}{45}$'],
               correctAnswer: 2,
               explanation: '$\\dfrac{45}{360} = \\dfrac{1}{8}$. A $45^\\circ$ angle is exactly one-eighth of a complete revolution.',
             },
@@ -138,8 +138,8 @@ $$\\boxed{\\,2\\pi \\text{ rad} = 360^\\circ \\quad\\Longleftrightarrow\\quad \\
 If degrees already work, why bother? Because radians are the *natural* unit for circles, and they make later mathematics far cleaner:
 
 - **Arc length** is just $s = r\\theta$ — no messy constants — *only* when $\\theta$ is in radians.
-- **Calculus** of $\\sin$ and $\\cos$ behaves nicely (e.g. $\\frac{d}{dx}\\sin x = \\cos x$) **only** in radians.
-- The **unit circle**, which you'll use all through trigonometry and calculus, is built on radians.
+- **Periodic functions** like $\\sin x$ and $\\cos x$ take radians as inputs, which is why the period of $\\sin x$ is $2\\pi$.
+- The **unit circle**, which you'll use all through trigonometry, is built on radians: there, arc length and angle are the same number.
 
 > ⚠️ **Heads up:** From here on, when an angle is written with *no degree symbol* — like $\\frac{\\pi}{3}$ or $2$ — it is in **radians**. A bare number means radians; only the little $^\\circ$ means degrees.
 
@@ -234,7 +234,7 @@ $$\\frac{5\\pi}{6} \\cdot \\frac{180^\\circ}{\\pi} = \\frac{5 \\cdot 180^\\circ}
             },
             {
               question: 'Convert $\\dfrac{2\\pi}{3}$ to degrees.',
-              options: ['$60^\\circ$', '$90^\\circ$', '$120^\\circ$', '$150^\\circ$'],
+              options: ['$60^\\circ$', '$90^\\circ$', '$120^\\circ$', '$30^\\circ$'],
               correctAnswer: 2,
               explanation: '$\\dfrac{2\\pi}{3} \\cdot \\dfrac{180^\\circ}{\\pi} = \\dfrac{2 \\cdot 180^\\circ}{3} = \\dfrac{360^\\circ}{3} = 120^\\circ$.',
             },
@@ -301,7 +301,7 @@ Convert each to degrees. Enter just the number (no degree symbol).
 
 ---
 
-> 🔑 **Why this matters:** A handful of angles appear constantly in trig and calculus. Knowing their degree *and* radian forms by heart — without converting each time — is the single biggest time-saver in the whole subject.`,
+> 🔑 **Why this matters:** A handful of angles appear constantly in trigonometry and in every periodic model. Knowing their degree *and* radian forms by heart — without converting each time — is the single biggest time-saver in the whole subject.`,
       },
       {
         id: 'dr3-table',
@@ -538,7 +538,7 @@ Give the **smallest positive** coterminal angle.
         type: 'text' as const,
         content: `# 📐 Degrees and Radians
 
-**Part 5 of 7 — Arc Length & Sector Area**
+**Part 5 of 7 — Arc Length and the Meaning of a Radian**
 
 ---
 
@@ -592,7 +592,7 @@ $$s = r\\theta = 12 \\cdot \\frac{\\pi}{2} = 6\\pi \\approx 18.85 \\text{ in}$$
             },
             {
               question: 'Before using $s = r\\theta$, the angle $\\theta$ must be in:',
-              options: ['degrees', 'radians', 'either one', 'revolutions'],
+              options: ['decimal degrees', 'radians', 'either unit', 'revolutions'],
               correctAnswer: 1,
               explanation: 'The formula $s = r\\theta$ holds only for $\\theta$ in radians. Degrees must be converted first, or the formula gives a meaningless number.',
             },
@@ -600,62 +600,68 @@ $$s = r\\theta = 12 \\cdot \\frac{\\pi}{2} = 6\\pi \\approx 18.85 \\text{ in}$$
         },
       },
       {
-        id: 'dr5-sector',
+        id: 'dr5-ratio',
         type: 'text' as const,
-        content: `## Sector Area
+        content: `## A Radian Is a Ratio
 
-A **sector** is the "pizza slice" between two radii. Its area, with $\\theta$ in radians, is
+Solve $s = r\\theta$ for $\\theta$ and you get the **definition** of radian measure:
 
-$$\\boxed{\\,A = \\frac{1}{2} r^2 \\theta\\,}$$
+$$\\boxed{\\,\\theta = \\frac{s}{r}\\,} \\qquad \\text{(arc length divided by radius)}$$
 
-This is just the fraction $\\dfrac{\\theta}{2\\pi}$ of the whole circle's area $\\pi r^2$:
+- **One radian** is the angle whose arc is exactly one radius long.
+- On the **unit circle** ($r = 1$), the arc length and the radian measure are the same number.
+- A full turn has arc $2\\pi r$, so it measures $\\dfrac{2\\pi r}{r} = 2\\pi$ radians, on **any** circle.
 
-$$A = \\frac{\\theta}{2\\pi}\\cdot \\pi r^2 = \\frac{1}{2}r^2\\theta$$
+### Worked Example 1: Find the angle
 
-### Worked Example
+An arc of length $10$ cm sits on a circle of radius $4$ cm.
 
-Radius $r = 6$, central angle $\\theta = \\dfrac{\\pi}{4}$:
+$$\\theta = \\frac{s}{r} = \\frac{10}{4} = 2.5 \\text{ radians} \\approx 143.2^\\circ$$
 
-$$A = \\frac{1}{2}(6)^2\\cdot\\frac{\\pi}{4} = \\frac{1}{2}\\cdot 36 \\cdot \\frac{\\pi}{4} = \\frac{36\\pi}{8} = \\frac{9\\pi}{2} \\approx 14.14$$
+### Worked Example 2: Find the radius
 
-> 💡 Notice both formulas need **radians**. That's the whole reason precalculus pivots to radians before calculus.`,
+An arc of length $6\\pi$ subtends a central angle of $\\dfrac{2\\pi}{3}$.
+
+$$r = \\frac{s}{\\theta} = \\frac{6\\pi}{2\\pi/3} = 6\\pi\\cdot\\frac{3}{2\\pi} = 9$$
+
+> 💡 Because a radian is length divided by length, it has **no units**. That is why a bare number like $2.5$ can be an angle.`,
       },
       {
         id: 'dr5-dropdown',
         type: 'dropdown-select' as const,
         content: `**Pick the Right Result** 🔽
 
-Use $s = r\\theta$ and $A = \\frac{1}{2}r^2\\theta$ with $\\theta$ in radians.`,
+Use $s = r\\theta$ and $\\theta = \\frac{s}{r}$ with $\\theta$ in radians.`,
         exercise: {
           dropdowns: [
-            { label: '$r = 2,\\ \\theta = \\frac{\\pi}{2}$. Arc length $s =$', options: ['$\\pi$', '$2\\pi$', '$\\frac{\\pi}{2}$', '$4\\pi$'] },
-            { label: '$r = 6,\\ \\theta = \\frac{\\pi}{3}$. Arc length $s =$', options: ['$2\\pi$', '$3\\pi$', '$6\\pi$', '$\\frac{\\pi}{3}$'] },
-            { label: '$r = 2,\\ \\theta = \\pi$. Sector area $A =$', options: ['$\\pi$', '$2\\pi$', '$4\\pi$', '$\\frac{\\pi}{2}$'] },
+            { label: '$r = 2,\\ \\theta = \\frac{\\pi}{2}$. Arc length $s =$', options: ['$\\pi$', '$2\\pi$', '$\\frac{\\pi}{2}$', '$4\\pi$'], correctAnswer: 0 },
+            { label: '$r = 6,\\ \\theta = \\frac{\\pi}{3}$. Arc length $s =$', options: ['$2\\pi$', '$3\\pi$', '$6\\pi$', '$\\frac{\\pi}{3}$'], correctAnswer: 0 },
+            { label: '$r = 5,\\ s = 10$. Angle $\\theta =$', options: ['$2$', '$\\frac{1}{2}$', '$50$', '$2\\pi$'], correctAnswer: 0 },
           ],
-          correctAnswers: ['$\\pi$', '$2\\pi$', '$2\\pi$'],
+          correctAnswers: ['$\\pi$', '$2\\pi$', '$2$'],
           hint1: '$s = 2\\cdot\\frac{\\pi}{2} = \\pi$.',
           hint2: '$s = 6\\cdot\\frac{\\pi}{3} = \\frac{6\\pi}{3} = 2\\pi$.',
-          hint3: '$A = \\frac{1}{2}(2)^2\\cdot\\pi = \\frac{1}{2}\\cdot 4\\cdot\\pi = 2\\pi$.',
-          explanation: '$s = 2\\cdot\\frac{\\pi}{2} = \\pi$;  $s = 6\\cdot\\frac{\\pi}{3} = 2\\pi$;  $A = \\frac{1}{2}\\cdot 4\\cdot\\pi = 2\\pi$.',
+          hint3: '$\\theta = \\frac{s}{r} = \\frac{10}{5}$ radians.',
+          explanation: '$s = 2\\cdot\\frac{\\pi}{2} = \\pi$;  $s = 6\\cdot\\frac{\\pi}{3} = 2\\pi$;  $\\theta = \\frac{10}{5} = 2$ radians (about $114.6^\\circ$).',
         },
       },
       {
         id: 'dr5-drill',
         type: 'input-boxes' as const,
-        content: `**Arc & Sector Drill** 🧮
+        content: `**Arc & Angle Drill** 🧮
 
-Use $s = r\\theta$ and $A = \\frac{1}{2}r^2\\theta$ with $\\theta$ in radians. Give exact answers as a multiple of $\\pi$ (form like \`6pi\` or \`9pi/2\`).
+Use $s = r\\theta$ and $\\theta = \\frac{s}{r}$ with $\\theta$ in radians. Give exact answers as a multiple of $\\pi$ (form like \`6pi\` or \`9pi/2\`).
 
 **1)** $r = 3$, $\\theta = \\dfrac{2\\pi}{3}$. Arc length $s = \\,?$
 **2)** $r = 10$, $\\theta = \\dfrac{\\pi}{5}$. Arc length $s = \\,?$
-**3)** $r = 4$, $\\theta = \\dfrac{\\pi}{2}$. Sector area $A = \\,?$`,
+**3)** $s = 6\\pi$, $r = 9$. Angle $\\theta = \\,?$`,
         exercise: {
           boxes: 3,
-          correctAnswers: ['2pi', '2pi', '4pi'],
+          correctAnswers: ['2pi', '2pi', '2pi/3'],
           hint1: '$s = 3 \\cdot \\frac{2\\pi}{3} = \\frac{6\\pi}{3} = 2\\pi$.',
           hint2: '$s = 10 \\cdot \\frac{\\pi}{5} = \\frac{10\\pi}{5} = 2\\pi$.',
-          hint3: '$A = \\frac{1}{2}(4)^2\\cdot\\frac{\\pi}{2} = \\frac{1}{2}\\cdot 16 \\cdot \\frac{\\pi}{2} = \\frac{16\\pi}{4} = 4\\pi$.',
-          explanation: '1) $3\\cdot\\frac{2\\pi}{3} = 2\\pi$.  2) $10\\cdot\\frac{\\pi}{5} = 2\\pi$.  3) $\\frac{1}{2}\\cdot16\\cdot\\frac{\\pi}{2} = 4\\pi$.',
+          hint3: '$\\theta = \\frac{s}{r} = \\frac{6\\pi}{9}$, then reduce the fraction.',
+          explanation: '1) $3\\cdot\\frac{2\\pi}{3} = 2\\pi$.  2) $10\\cdot\\frac{\\pi}{5} = 2\\pi$.  3) $\\frac{6\\pi}{9} = \\frac{2\\pi}{3}$.',
         },
       },
     ],
@@ -670,52 +676,32 @@ Use $s = r\\theta$ and $A = \\frac{1}{2}r^2\\theta$ with $\\theta$ in radians. G
         type: 'text' as const,
         content: `# 📐 Degrees and Radians
 
-**Part 6 of 7 — Angular Speed & Real-World Rotation**
+**Part 6 of 7 — Points on a Circle of Radius r**
 
 ---
 
-> 🔑 **Where this shows up:** wheels, gears, turntables, ceiling fans, and orbits all rotate. **Angular speed** measures how fast an angle changes; **linear speed** measures how fast a point on the rim moves. Radians tie them together.`,
+> 🔑 **Big idea:** An angle $\\theta$ in standard position and a circle of radius $r$ centered at the origin pin down exactly one point $P$: where the terminal ray crosses the circle. Its coordinates are
+> $$P = (r\\cos\\theta,\\; r\\sin\\theta)$$
+> With $\\theta$ in radians, the arc from $(r, 0)$ to $P$ also has a simple length: $s = r\\theta$.`,
       },
       {
-        id: 'dr6-angular',
+        id: 'dr6-coords',
         type: 'text' as const,
-        content: `## Angular Speed
+        content: `## From Angle to Coordinates
 
-**Angular speed** $\\omega$ (omega) is the angle swept per unit time:
+On the **unit circle** ($r = 1$), the terminal ray of $\\theta$ meets the circle at $(\\cos\\theta, \\sin\\theta)$. A circle of radius $r$ is the unit circle scaled by $r$, so every coordinate scales by $r$:
 
-$$\\omega = \\frac{\\theta}{t} \\quad\\text{(radians per unit time)}$$
-
-### Useful conversions
-
-- $1$ revolution $= 2\\pi$ radians $= 360^\\circ$.
-- "Revolutions per minute" (RPM) becomes radians per minute by multiplying by $2\\pi$.
+$$x = r\\cos\\theta \\qquad y = r\\sin\\theta$$
 
 ### Worked Example
 
-A wheel spins at $3$ revolutions per second. Its angular speed is
+Find the point where the terminal ray of $\\theta = \\dfrac{2\\pi}{3}$ meets the circle of radius $6$ centered at the origin.
 
-$$\\omega = 3 \\cdot 2\\pi = 6\\pi \\text{ rad/s} \\approx 18.85 \\text{ rad/s}$$
+$$x = 6\\cos\\frac{2\\pi}{3} = 6\\left(-\\frac12\\right) = -3 \\qquad y = 6\\sin\\frac{2\\pi}{3} = 6\\cdot\\frac{\\sqrt3}{2} = 3\\sqrt3$$
 
-> 💡 Each revolution is one full $2\\pi$ "lap" of angle, so multiply revolutions by $2\\pi$ to get radians.`,
-      },
-      {
-        id: 'dr6-linear',
-        type: 'text' as const,
-        content: `## Linear Speed from Angular Speed
+So $P = (-3, 3\\sqrt3)$, in Quadrant II as expected for $\\frac{2\\pi}{3}$ (that is, $120^\\circ$). The counterclockwise arc from $(6, 0)$ to $P$ has length $s = 6\\cdot\\frac{2\\pi}{3} = 4\\pi$.
 
-A point on the rim, distance $r$ from the center, moves at **linear speed**
-
-$$\\boxed{\\,v = r\\omega\\,}$$
-
-This is the time-rate version of $s = r\\theta$: divide $s = r\\theta$ by time $t$ to get $\\dfrac{s}{t} = r\\dfrac{\\theta}{t}$, i.e. $v = r\\omega$ (with $\\omega$ in **radians** per unit time).
-
-### Worked Example
-
-A bicycle wheel of radius $r = 0.35$ m turns at $\\omega = 10$ rad/s. The bike's speed is
-
-$$v = r\\omega = 0.35 \\cdot 10 = 3.5 \\text{ m/s}$$
-
-> ⚠️ $v = r\\omega$ requires $\\omega$ in **radians** per unit time. If you're given RPM, convert to rad/s first.`,
+> ✅ **Check:** $(-3)^2 + (3\\sqrt3)^2 = 9 + 27 = 36 = 6^2$, so $P$ really is on the circle.`,
       },
       {
         id: 'dr6-mc',
@@ -724,55 +710,81 @@ $$v = r\\omega = 0.35 \\cdot 10 = 3.5 \\text{ m/s}$$
         exercise: {
           questions: [
             {
-              question: 'A turntable spins at $1$ revolution per second. What is its angular speed in rad/s?',
-              options: ['$\\pi$', '$2\\pi$', '$\\frac{\\pi}{2}$', '$1$'],
-              correctAnswer: 1,
-              explanation: 'One revolution is $2\\pi$ radians, so $1$ rev/s $= 2\\pi$ rad/s.',
+              question: 'Where does the terminal ray of $\\theta = \\dfrac{7\\pi}{6}$ meet the circle of radius $4$ centered at the origin?',
+              options: ['$(-2\\sqrt3, -2)$', '$(-2, 2\\sqrt3)$', '$(2\\sqrt3, -2)$', '$(-2\\sqrt3, 2)$'],
+              correctAnswer: 0,
+              explanation: '$x = 4\\cos\\frac{7\\pi}{6} = 4\\left(-\\frac{\\sqrt3}{2}\\right) = -2\\sqrt3$ and $y = 4\\sin\\frac{7\\pi}{6} = 4\\left(-\\frac12\\right) = -2$. Both are negative, matching Quadrant III.',
             },
             {
-              question: 'The formula linking linear speed $v$, radius $r$, and angular speed $\\omega$ is:',
-              options: ['$v = \\frac{\\omega}{r}$', '$v = r\\omega$', '$v = r + \\omega$', '$v = \\frac{r}{\\omega}$'],
-              correctAnswer: 1,
-              explanation: '$v = r\\omega$, the time-rate version of $s = r\\theta$. A bigger radius or faster spin both increase rim speed.',
+              question: 'A point on the circle of radius $10$ centered at the origin is at angle $\\theta = -\\dfrac{\\pi}{2}$. What are its coordinates?',
+              options: ['$(0, 10)$', '$(-10, 0)$', '$(0, -10)$', '$(10, 0)$'],
+              correctAnswer: 2,
+              explanation: 'A negative angle turns clockwise, so $-\\frac{\\pi}{2}$ points straight down: $(10\\cos(-\\frac{\\pi}{2}), 10\\sin(-\\frac{\\pi}{2})) = (0, -10)$.',
             },
           ],
         },
       },
       {
+        id: 'dr6-reverse',
+        type: 'text' as const,
+        content: `## From Distance Traveled to Position
+
+Radians also run the other way. If you travel a distance $s$ along a circle of radius $r$, starting at $(r, 0)$, the angle you have turned through is
+
+$$\\theta = \\frac{s}{r} \\quad\\text{radians}$$
+
+Counterclockwise travel gives a positive angle; clockwise travel gives a negative one. Then $P = (r\\cos\\theta, r\\sin\\theta)$ gives your position.
+
+### Worked Example 1
+
+Start at $(6, 0)$ and walk $3\\pi$ units counterclockwise around the circle of radius $6$.
+
+$$\\theta = \\frac{3\\pi}{6} = \\frac{\\pi}{2} \\;\\Rightarrow\\; P = \\left(6\\cos\\frac{\\pi}{2}, 6\\sin\\frac{\\pi}{2}\\right) = (0, 6)$$
+
+### Worked Example 2
+
+Start at $(3, 0)$ and walk $\\frac{5\\pi}{2}$ units **clockwise** around the circle of radius $3$.
+
+$$\\theta = -\\frac{5\\pi/2}{3} = -\\frac{5\\pi}{6} \\;\\Rightarrow\\; P = \\left(3\\cos\\left(-\\frac{5\\pi}{6}\\right), 3\\sin\\left(-\\frac{5\\pi}{6}\\right)\\right) = \\left(-\\frac{3\\sqrt3}{2}, -\\frac32\\right)$$
+
+> 💡 A radian is not tied to $\\pi$. An angle of $2$ radians is about $114.6^\\circ$, so its terminal ray lies in Quadrant II. Comparing a radian value with $\\frac{\\pi}{2} \\approx 1.57$, $\\pi \\approx 3.14$, and $\\frac{3\\pi}{2} \\approx 4.71$ tells you the quadrant.`,
+      },
+      {
         id: 'dr6-dropdown',
         type: 'dropdown-select' as const,
-        content: `**Set Up the Rotation Problem** 🔽
+        content: `**Locate the Point** 🔽
 
-A fan blade tip is $r = 0.5$ m from the center and the fan spins at $2$ rev/s.`,
+Use $P = (r\\cos\\theta, r\\sin\\theta)$ and $\\theta = \\dfrac{s}{r}$.`,
         exercise: {
           dropdowns: [
-            { label: 'Angular speed $\\omega =$', options: ['$2$ rad/s', '$2\\pi$ rad/s', '$4\\pi$ rad/s', '$\\pi$ rad/s'] },
-            { label: 'Linear speed $v = r\\omega =$', options: ['$2\\pi$ m/s', '$4\\pi$ m/s', '$\\pi$ m/s', '$0.5\\pi$ m/s'] },
+            { label: 'Circle of radius $8$, $\\theta = \\frac{\\pi}{4}$: the $x$-coordinate of $P$ is', options: ['$4\\sqrt2$', '$4$', '$8\\sqrt2$', '$2\\sqrt2$'] },
+            { label: 'Walk $2\\pi$ units counterclockwise on a circle of radius $4$ from $(4, 0)$: you turn through', options: ['$\\frac{\\pi}{2}$', '$\\frac{\\pi}{4}$', '$2\\pi$', '$8\\pi$'] },
+            { label: 'The terminal ray of $\\theta = 5$ radians lies in', options: ['Quadrant IV', 'Quadrant III', 'Quadrant II', 'Quadrant I'] },
           ],
-          correctAnswers: ['$4\\pi$ rad/s', '$2\\pi$ m/s'],
-          hint1: '$2$ rev/s $\\times 2\\pi = 4\\pi$ rad/s.',
-          hint2: '$v = r\\omega = 0.5 \\times 4\\pi$.',
-          hint3: '$0.5 \\cdot 4\\pi = 2\\pi$ m/s.',
-          explanation: '$\\omega = 2\\cdot 2\\pi = 4\\pi$ rad/s, then $v = r\\omega = 0.5\\cdot 4\\pi = 2\\pi \\approx 6.28$ m/s.',
+          correctAnswers: ['$4\\sqrt2$', '$\\frac{\\pi}{2}$', 'Quadrant IV'],
+          hint1: '$x = 8\\cos\\frac{\\pi}{4} = 8\\cdot\\frac{\\sqrt2}{2}$.',
+          hint2: '$\\theta = \\frac{s}{r} = \\frac{2\\pi}{4}$.',
+          hint3: '$\\frac{3\\pi}{2} \\approx 4.71 < 5 < 2\\pi \\approx 6.28$.',
+          explanation: '$x = 8\\cdot\\frac{\\sqrt2}{2} = 4\\sqrt2$; $\\theta = \\frac{2\\pi}{4} = \\frac{\\pi}{2}$; and $5$ radians (about $286.5^\\circ$) lies between $\\frac{3\\pi}{2}$ and $2\\pi$, in Quadrant IV.',
         },
       },
       {
         id: 'dr6-drill',
         type: 'input-boxes' as const,
-        content: `**Rotation Drill** 🧮
+        content: `**Coordinates Drill** 🧮
 
-Give exact answers as a multiple of $\\pi$ (form like \`6pi\`) unless told otherwise.
+The terminal ray of $\\theta = \\dfrac{5\\pi}{3}$ meets the circle of radius $10$ centered at the origin at $P$.
 
-**1)** A gear turns at $4$ rev/s. Angular speed in rad/s $= \\,?$
-**2)** $r = 2$ m, $\\omega = 3$ rad/s. Linear speed $v = r\\omega = \\,?$ (plain number, m/s)
-**3)** A wheel spins at $\\frac{1}{2}$ rev/s. Angular speed in rad/s $= \\,?$`,
+**1)** The $x$-coordinate of $P$ $= \\,?$
+**2)** The $y$-coordinate of $P$ $= \\,?$ (form like \`-4sqrt3\`)
+**3)** The counterclockwise arc length from $(10, 0)$ to $P$ $= \\,?$ (form like \`20pi/3\`)`,
         exercise: {
           boxes: 3,
-          correctAnswers: ['8pi', '6', 'pi'],
-          hint1: '$4 \\cdot 2\\pi = 8\\pi$ rad/s.',
-          hint2: '$v = r\\omega = 2\\cdot 3 = 6$ m/s (no $\\pi$ here — $\\omega$ already has none).',
-          hint3: '$\\frac{1}{2}\\cdot 2\\pi = \\pi$ rad/s.',
-          explanation: '1) $4\\cdot 2\\pi = 8\\pi$.  2) $2\\cdot 3 = 6$ m/s.  3) $\\frac{1}{2}\\cdot 2\\pi = \\pi$.',
+          correctAnswers: ['5', '-5sqrt3', '50pi/3'],
+          hint1: '$\\cos\\frac{5\\pi}{3} = \\frac12$, so $x = 10\\cdot\\frac12$.',
+          hint2: '$\\sin\\frac{5\\pi}{3} = -\\frac{\\sqrt3}{2}$ (Quadrant IV), so $y = 10\\cdot\\left(-\\frac{\\sqrt3}{2}\\right)$.',
+          hint3: '$s = r\\theta = 10\\cdot\\frac{5\\pi}{3}$.',
+          explanation: '1) $x = 5$.  2) $y = -5\\sqrt3$.  3) $s = \\frac{50\\pi}{3}$. Check: $5^2 + (5\\sqrt3)^2 = 25 + 75 = 100 = 10^2$.',
         },
       },
     ],
@@ -791,7 +803,7 @@ Give exact answers as a multiple of $\\pi$ (form like \`6pi\`) unless told other
 
 ---
 
-You can now (1) explain both unit systems, (2) convert fluently, (3) recall the special angles, (4) find coterminal angles, (5) compute arc length and sector area, and (6) handle angular and linear speed. Let's lock it in.`,
+You can now (1) explain both unit systems, (2) convert fluently, (3) recall the special angles, (4) find coterminal angles, (5) use arc length and the radian as a ratio, and (6) locate points on a circle of radius $r$. Let's lock it in.`,
       },
       {
         id: 'dr7-summary',
@@ -805,11 +817,11 @@ You can now (1) explain both unit systems, (2) convert fluently, (3) recall the 
 | Master link | $\\pi$ rad $= 180^\\circ$ |
 | Coterminal angle | add/subtract $360^\\circ$ or $2\\pi$ |
 | Arc length | $s = r\\theta$ (radians) |
-| Sector area | $A = \\frac{1}{2}r^2\\theta$ (radians) |
-| Linear from angular speed | $v = r\\omega$ (radians/time) |
+| Angle from arc | $\\theta = \\dfrac{s}{r}$ (radians) |
+| Point on a circle of radius $r$ | $(r\\cos\\theta, r\\sin\\theta)$ |
 | Revolutions → radians | multiply by $2\\pi$ |
 
-> ⚠️ **The #1 trap:** using degrees in $s=r\\theta$, $A=\\frac{1}{2}r^2\\theta$, or $v=r\\omega$. Those three demand **radians** every time.`,
+> ⚠️ **The #1 trap:** using degrees in $s = r\\theta$ or $\\theta = \\frac{s}{r}$. Both demand **radians** every time.`,
       },
       {
         id: 'dr7-mixed',
@@ -837,17 +849,17 @@ You can now (1) explain both unit systems, (2) convert fluently, (3) recall the 
         type: 'dropdown-select' as const,
         content: `**Final Setup Check** 🔽
 
-A disc of radius $r = 0.2$ m spins at $5$ revolutions per second.`,
+A point starts at $(5, 0)$ and travels $\\frac{5\\pi}{3}$ units counterclockwise around the circle of radius $5$ centered at the origin.`,
         exercise: {
           dropdowns: [
-            { label: 'Convert $5$ rev/s to rad/s:', options: ['$5$', '$10\\pi$', '$2\\pi$', '$\\frac{5}{2\\pi}$'] },
-            { label: 'Then linear speed $v = r\\omega =$', options: ['$2\\pi$ m/s', '$\\pi$ m/s', '$10\\pi$ m/s', '$0.2\\pi$ m/s'] },
+            { label: 'The angle it turns through is $\\theta =$', options: ['$\\frac{\\pi}{3}$', '$\\frac{5\\pi}{3}$', '$\\frac{\\pi}{15}$', '$\\frac{25\\pi}{3}$'], correctAnswer: 0 },
+            { label: 'Its position is $P =$', options: ['$\\left(\\frac52, \\frac{5\\sqrt3}{2}\\right)$', '$\\left(\\frac{5\\sqrt3}{2}, \\frac52\\right)$', '$\\left(\\frac52, -\\frac{5\\sqrt3}{2}\\right)$', '$\\left(5, \\frac{\\pi}{3}\\right)$'], correctAnswer: 0 },
           ],
-          correctAnswers: ['$10\\pi$', '$2\\pi$ m/s'],
-          hint1: '$5 \\times 2\\pi = 10\\pi$ rad/s.',
-          hint2: '$v = 0.2 \\times 10\\pi$.',
-          hint3: '$0.2 \\cdot 10\\pi = 2\\pi$ m/s.',
-          explanation: '$\\omega = 5\\cdot 2\\pi = 10\\pi$ rad/s, then $v = r\\omega = 0.2\\cdot 10\\pi = 2\\pi \\approx 6.28$ m/s.',
+          correctAnswers: ['$\\frac{\\pi}{3}$', '$\\left(\\frac52, \\frac{5\\sqrt3}{2}\\right)$'],
+          hint1: '$\\theta = \\frac{s}{r} = \\frac{5\\pi/3}{5}$.',
+          hint2: '$P = (5\\cos\\theta, 5\\sin\\theta)$ with $\\theta = \\frac{\\pi}{3}$.',
+          hint3: '$\\cos\\frac{\\pi}{3} = \\frac12$ and $\\sin\\frac{\\pi}{3} = \\frac{\\sqrt3}{2}$.',
+          explanation: '$\\theta = \\frac{5\\pi/3}{5} = \\frac{\\pi}{3}$, so $P = \\left(5\\cdot\\frac12, 5\\cdot\\frac{\\sqrt3}{2}\\right) = \\left(\\frac52, \\frac{5\\sqrt3}{2}\\right)$.',
         },
       },
       {
@@ -857,14 +869,14 @@ A disc of radius $r = 0.2$ m spins at $5$ revolutions per second.`,
 
 **1)** Convert $240^\\circ$ to radians (form like \`4pi/3\`) $= \\,?$
 **2)** Smallest positive angle coterminal with $-\\dfrac{\\pi}{4}$ (form like \`7pi/4\`) $= \\,?$
-**3)** $r = 5$, $\\theta = \\dfrac{\\pi}{2}$. Sector area $A = \\frac{1}{2}r^2\\theta = \\,?$ (form like \`25pi/4\`)`,
+**3)** An arc of length $3\\pi$ on a circle of radius $4$. Angle $\\theta = \\dfrac{s}{r} = \\,?$ (form like \`5pi/6\`)`,
         exercise: {
           boxes: 3,
-          correctAnswers: ['4pi/3', '7pi/4', '25pi/4'],
+          correctAnswers: ['4pi/3', '7pi/4', '3pi/4'],
           hint1: '$240/180 = 4/3$, so $240^\\circ = \\frac{4\\pi}{3}$.',
           hint2: '$-\\frac{\\pi}{4} + 2\\pi = -\\frac{\\pi}{4} + \\frac{8\\pi}{4} = \\frac{7\\pi}{4}$.',
-          hint3: '$A = \\frac{1}{2}(5)^2\\cdot\\frac{\\pi}{2} = \\frac{1}{2}\\cdot 25 \\cdot \\frac{\\pi}{2} = \\frac{25\\pi}{4}$.',
-          explanation: '1) $\\frac{4\\pi}{3}$.  2) $\\frac{7\\pi}{4}$.  3) $\\frac{1}{2}\\cdot25\\cdot\\frac{\\pi}{2} = \\frac{25\\pi}{4}$.',
+          hint3: '$\\theta = \\frac{3\\pi}{4}$: divide the arc length by the radius.',
+          explanation: '1) $\\frac{4\\pi}{3}$.  2) $\\frac{7\\pi}{4}$.  3) $\\frac{3\\pi}{4}$.',
         },
       },
       {
@@ -893,10 +905,10 @@ Answer all three to finish the lesson.`,
               explanation: '$\\dfrac{5\\pi}{6}\\cdot\\dfrac{180^\\circ}{\\pi} = \\dfrac{5\\cdot180^\\circ}{6} = \\dfrac{900^\\circ}{6} = 150^\\circ$.',
             },
             {
-              question: 'A circle of radius $6$ has a sector with central angle $\\dfrac{\\pi}{3}$. Its area is:',
-              options: ['$6\\pi$', '$3\\pi$', '$12\\pi$', '$2\\pi$'],
+              question: 'Where does the terminal ray of $\\theta = \\dfrac{\\pi}{3}$ meet the circle of radius $6$ centered at the origin?',
+              options: ['$(3, 3\\sqrt3)$', '$(3\\sqrt3, 3)$', '$(6, 3\\sqrt3)$', '$(3, 6)$'],
               correctAnswer: 0,
-              explanation: '$A = \\frac{1}{2}r^2\\theta = \\frac{1}{2}(36)\\cdot\\frac{\\pi}{3} = 18\\cdot\\frac{\\pi}{3} = 6\\pi$.',
+              explanation: '$(6\\cos\\frac{\\pi}{3}, 6\\sin\\frac{\\pi}{3}) = \\left(6\\cdot\\frac12, 6\\cdot\\frac{\\sqrt3}{2}\\right) = (3, 3\\sqrt3)$.',
             },
           ],
         },

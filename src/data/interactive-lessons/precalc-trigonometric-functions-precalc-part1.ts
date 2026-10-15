@@ -9,7 +9,7 @@ export const precalcTrigFunctionsPart1Data = {
 
 **Part 1 of 7**
 
-Trigonometry begins with measuring angles. The **radian** is the natural unit for angles in calculus and higher math.
+Trigonometry begins with measuring angles. The **radian** is the natural unit for angles in trigonometry and periodic functions.
 
 ### Degree ↔ Radian Conversion
 
@@ -73,13 +73,13 @@ $\\frac{7\\pi}{6} \\times \\frac{180}{\\pi} = \\frac{7 \\times 180}{6} = \\frac{
 
 $s = r\\theta = 10 \\cdot \\frac{2\\pi}{3} = \\frac{20\\pi}{3} \\approx 20.94\\text{ cm}$
 
-### Example 4: Sector Area
+### Example 4: Angle From Arc Length
 
-The area of a sector with angle $\\theta$ (radians):
+Radian measure **is** the ratio of arc length to radius:
 
-$$\\boxed{A = \\frac{1}{2}r^2\\theta}$$
+$$\\boxed{\\theta = \\frac{s}{r}}$$
 
-For $r = 6$ and $\\theta = \\frac{\\pi}{4}$: $A = \\frac{1}{2}(36)\\left(\\frac{\\pi}{4}\\right) = \\frac{9\\pi}{2} \\approx 14.14\\text{ sq units}$
+An arc of length $14$ cm on a circle of radius $4$ cm subtends $\\theta = \\frac{14}{4} = 3.5$ radians, a little more than $\\pi \\approx 3.14$, so the terminal ray lies just past the negative $x$-axis, in Quadrant III.
       `
     },
     {
@@ -115,10 +115,10 @@ For $r = 6$ and $\\theta = \\frac{\\pi}{4}$: $A = \\frac{1}{2}(36)\\left(\\frac{
           {
             question: 'How many radians is $1$ complete revolution plus a quarter turn?',
             options: [
-              '$\\frac{3\\pi}{2}$',
+              '$2\\pi$',
               '$\\frac{5\\pi}{2}$',
               '$3\\pi$',
-              '$\\frac{9\\pi}{4}$'
+              '$\\frac{\\pi}{2}$'
             ],
             correctAnswer: 1,
             explanation: 'Full revolution $= 2\\pi$, quarter $= \\frac{\\pi}{2}$. Total $= 2\\pi + \\frac{\\pi}{2} = \\frac{5\\pi}{2}$.'
@@ -136,15 +136,15 @@ For $r = 6$ and $\\theta = \\frac{\\pi}{4}$: $A = \\frac{1}{2}(36)\\left(\\frac{
 
 **2)** A circle has radius $12$ cm. Find the arc length for a central angle of $\\frac{\\pi}{3}$ radians. Write the answer in terms of $\\pi$ as a number (e.g., if $s = 5\\pi$, write $5$). (e.g., $r = 10$, $\\theta = \\pi/2$: $s = 10 \\cdot \\pi/2 = 5\\pi$, so answer: $5$)
 
-**3)** Find the area of a sector with $r = 4$ and $\\theta = \\frac{\\pi}{2}$. Write the answer in terms of $\\pi$ as a number. (e.g., $r = 6$, $\\theta = \\pi/3$: $A = \\frac{1}{2}(36)(\\pi/3) = 6\\pi$, so answer: $6$)
+**3)** An arc of length $15$ cm lies on a circle of radius $6$ cm. Find the central angle in radians as a decimal. (e.g., $s = 9$, $r = 6$: $\\theta = 9/6 = 1.5$)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['7/4', '4', '4'],
+        correctAnswers: ['7/4', '4', '2.5'],
         hint1: '$315/180 = 7/4$.',
         hint2: '$s = r\\theta = 12 \\cdot \\frac{\\pi}{3} = 4\\pi$.',
-        hint3: '$A = \\frac{1}{2}r^2\\theta = \\frac{1}{2}(16)(\\frac{\\pi}{2}) = \\frac{16\\pi}{4} = 4\\pi$.',
-        explanation: '1) $315/180 = 7/4$, so $315° = \\frac{7\\pi}{4}$. 2) $s = 12 \\cdot \\frac{\\pi}{3} = 4\\pi$, coefficient is $4$. 3) $A = \\frac{1}{2}(4^2)(\\frac{\\pi}{2}) = \\frac{1}{2}(16)(\\frac{\\pi}{2}) = \\frac{16\\pi}{4} = 4\\pi$, coefficient is $4$.'
+        hint3: '$\\theta = \\frac{s}{r} = \\frac{15}{6}$.',
+        explanation: '1) $315/180 = 7/4$, so $315° = \\frac{7\\pi}{4}$. 2) $s = 12 \\cdot \\frac{\\pi}{3} = 4\\pi$, coefficient is $4$. 3) $\\theta = \\frac{15}{6} = 2.5$ radians.'
       }
     },
     {
@@ -199,15 +199,15 @@ For $r = 6$ and $\\theta = \\frac{\\pi}{4}$: $A = \\frac{1}{2}(36)\\left(\\frac{
             explanation: '$s = r\\theta = 0.5 \\times 4\\pi = 2\\pi \\approx 6.28\\text{ m}$. Note: $4\\pi$ radians $= 2$ full revolutions.'
           },
           {
-            question: 'The sector area of a pizza slice with radius $9$ inches and central angle $40°$ is:',
+            question: 'An arc of length $6$ cm lies on a circle of radius $4$ cm. What is the central angle?',
             options: [
-              '$9\\pi$ sq in',
-              '$\\frac{9\\pi}{2}$ sq in',
-              '$18\\pi$ sq in',
-              '$\\frac{81}{2}$ sq in'
+              '$1.5$ radians',
+              '$24$ radians',
+              '$\\frac{2}{3}$ radians',
+              '$1.5$ degrees'
             ],
             correctAnswer: 0,
-            explanation: 'Convert: $40° = \\frac{2\\pi}{9}$. Area $= \\frac{1}{2}r^2\\theta = \\frac{1}{2}(81)(\\frac{2\\pi}{9}) = \\frac{162\\pi}{18} = 9\\pi$ sq in.'
+            explanation: 'Radian measure is arc length divided by radius: $\\theta = \\frac{6}{4} = 1.5$ radians (about $85.9°$). Multiplying gives $24$, and the ratio is in radians, not degrees.'
           }
         ]
       }

@@ -4,7 +4,7 @@ import type { LessonData } from '../registry'
  * Hand-authored interactive lesson — Polynomial Division and the Remainder Theorem (AP Precalculus).
  * Registry key / DB Topic.slug: 'polynomial-division-remainder-theorem'.
  * 7 parts, gold-standard structure: long division → synthetic division → Remainder
- * Theorem → Factor Theorem → finding all zeros → applications (rational roots,
+ * Theorem → Factor Theorem → finding all zeros → applications (rewriting rational functions,
  * slant asymptotes) → mixed practice + exit quiz. Teaching alternates with
  * interactive checks (multiple-choice + input-boxes + dropdown). LaTeX uses
  * doubled backslashes (template-literal strings).
@@ -539,7 +539,7 @@ For $p(x) = x^3 - 7x + 6$, evaluate to test each candidate. Enter the value.
 
 To find all zeros of a polynomial $p(x)$:
 
-1. **Find one zero** $c$ — test small integers ($\\pm 1, \\pm 2, \\dots$) until $p(c) = 0$.
+1. **Get one zero** $c$ — from a graph, a table, a given factor, or a value the problem asks you to check. Confirm it with $p(c) = 0$.
 2. **Divide** $p(x)$ by $(x - c)$ using synthetic division. The quotient has degree one lower.
 3. **Repeat** on the quotient. Once it's a quadratic, factor it or use the quadratic formula.
 
@@ -568,7 +568,7 @@ So $p(x) = (x+1)(x^2 - 5x + 6) = (x+1)(x-2)(x-3)$.
           questions: [
             {
               question: 'After dividing a cubic $p(x)$ by a known factor $(x - c)$, the quotient is $x^2 - 5x + 6$. The remaining zeros are:',
-              options: ['$x = 2$ and $x = 3$', '$x = -2$ and $x = -3$', '$x = 5$ and $x = 6$', '$x = 1$ and $x = 6$'],
+              options: ['$x = 2$ and $x = 3$', '$x = -2$ and $x = -3$', '$x = -5$ and $x = 6$', '$x = -1$ and $x = 6$'],
               correctAnswer: 0,
               explanation: '$x^2 - 5x + 6 = (x-2)(x-3)$, so its zeros are $2$ and $3$. Setting each factor to $0$ gives the roots.',
             },
@@ -604,7 +604,7 @@ $$2x - 1 = 0 \\Rightarrow x = \\tfrac{1}{2}, \\qquad x + 3 = 0 \\Rightarrow x = 
 
 **The zeros are $x = 2,\\; \\tfrac{1}{2},\\; -3$.**
 
-> 💡 Not every zero is an integer. The factor $(2x - 1)$ produces the fractional zero $x = \\tfrac{1}{2}$ — Part 6's Rational Root Theorem tells you exactly which fractions to test.`,
+> 💡 Not every zero is an integer. The factor $(2x - 1)$ produces the fractional zero $x = \\tfrac{1}{2}$, which you only see after dividing out the zero you were given.`,
       },
       {
         id: 'pdr5-zeros-dropdown',
@@ -654,35 +654,37 @@ A polynomial fully factors as $p(x) = (x + 1)(x - 2)(2x - 1)$.`,
         type: 'text' as const,
         content: `# ➗ Polynomial Division & the Remainder Theorem
 
-**Part 6 of 7 — Rational Roots & Slant Asymptotes**
+**Part 6 of 7 — Division, Rational Functions & Slant Asymptotes**
 
 ---
 
-> 🔑 **Two payoffs:** The **Rational Root Theorem** narrows your zero hunt to a short list of fractions, and polynomial division reveals the **slant (oblique) asymptote** of a rational function.`,
+> 🔑 **Two payoffs:** Division rewrites a rational function as **polynomial + leftover fraction**, and that rewritten form exposes the function's **end behavior**, including any **slant (oblique) asymptote**.`,
       },
       {
         id: 'pdr6-rrt',
         type: 'text' as const,
-        content: `## The Rational Root Theorem
+        content: `## Rewriting a Rational Function by Division
 
-If a polynomial with integer coefficients
-$$p(x) = a_n x^n + \\cdots + a_0$$
-has a rational zero $\\dfrac{p}{q}$ (in lowest terms), then:
+If the polynomial $f$ is divided by the polynomial $g$, then
 
-- $p$ (the numerator) divides the **constant term** $a_0$, and
-- $q$ (the denominator) divides the **leading coefficient** $a_n$.
+$$f(x) = g(x)\\,q(x) + r(x), \\qquad \\deg r < \\deg g,$$
 
-So every possible rational zero looks like $\\pm\\dfrac{\\text{factor of } a_0}{\\text{factor of } a_n}$.
+where $q$ is the **quotient** and $r$ the **remainder**. Dividing both sides by $g(x)$ rewrites the rational function:
 
-### Example: $p(x) = 2x^3 + 3x^2 - 8x + 3$
+$$\\frac{f(x)}{g(x)} = q(x) + \\frac{r(x)}{g(x)}$$
 
-- Factors of constant $a_0 = 3$: $\\;\\pm 1, \\pm 3$
-- Factors of leading $a_n = 2$: $\\;\\pm 1, \\pm 2$
-- Candidates $\\dfrac{p}{q}$: $\\;\\pm 1,\\; \\pm 3,\\; \\pm\\dfrac{1}{2},\\; \\pm\\dfrac{3}{2}$
+### Example: a quadratic divisor (long division required)
 
-Testing finds the actual zeros $x = 1,\\; \\tfrac{1}{2},\\; -3$ (matching Part 2's factorization $(x+3)(2x-1)(x-1)$).
+Divide $2x^3 + x^2 - 3$ by $x^2 + 1$. Synthetic division only handles divisors $x - c$, so use long division:
 
-> 💡 The theorem doesn't say a rational zero *exists* — it just gives you the **only fractions worth testing** before reaching for the quadratic formula or technology.`,
+- $2x^3 \\div x^2 = 2x$; subtract $2x(x^2 + 1) = 2x^3 + 2x$ to leave $x^2 - 2x - 3$.
+- $x^2 \\div x^2 = 1$; subtract $1(x^2 + 1)$ to leave $-2x - 4$.
+
+The remainder $-2x - 4$ has degree $1 < 2$, so stop:
+
+$$\\frac{2x^3 + x^2 - 3}{x^2 + 1} = 2x + 1 + \\frac{-2x - 4}{x^2 + 1}$$
+
+> 💡 **Why it matters:** the leftover fraction has a smaller-degree numerator, so it shrinks toward $0$ as $x \\to \\pm\\infty$. The quotient $q(x)$ therefore controls the end behavior. Here the graph approaches the line $y = 2x + 1$.`,
       },
       {
         id: 'pdr6-rrt-check',
@@ -691,16 +693,26 @@ Testing finds the actual zeros $x = 1,\\; \\tfrac{1}{2},\\; -3$ (matching Part 2
         exercise: {
           questions: [
             {
-              question: 'For $p(x) = 3x^3 + 2x - 4$, which is NOT a candidate rational zero?',
-              options: ['$\\frac{2}{4}$', '$\\frac{4}{3}$', '$2$', '$\\frac{1}{3}$'],
+              question: 'Which expression is equivalent to $\\dfrac{x^2 - 4x + 7}{x - 2}$ for $x \\ne 2$?',
+              options: [
+                '$x - 2 + \\dfrac{3}{x - 2}$',
+                '$x - 2 + \\dfrac{7}{x - 2}$',
+                '$x + 2 + \\dfrac{3}{x - 2}$',
+                '$x - 6 + \\dfrac{3}{x - 2}$',
+              ],
               correctAnswer: 0,
-              explanation: 'Candidates are $\\frac{\\text{factor of }4}{\\text{factor of }3}$. The numerator must divide $4$ and the denominator must divide $3$. $\\frac{2}{4}=\\frac{1}{2}$ has denominator $2$, which does NOT divide the leading coefficient $3$ — so it is not a candidate. The others are all valid.',
+              explanation: 'Long division gives quotient $x - 2$, since $(x - 2)(x - 2) = x^2 - 4x + 4$, and the remainder is $7 - 4 = 3$. Keeping the original constant $7$ skips the subtraction, and a quotient of $x + 2$ or $x - 6$ comes from sign errors in the first step.',
             },
             {
-              question: 'The Rational Root Theorem guarantees that a polynomial:',
-              options: ['has these as the only possible *rational* zeros', 'definitely has a rational zero', 'has no irrational zeros', 'has exactly $n$ rational zeros'],
+              question: 'Division gives $\\dfrac{x^3 + 1}{x - 1} = x^2 + x + 1 + \\dfrac{2}{x - 1}$. Which describes the end behavior of the graph?',
+              options: [
+                'Like $y = x^2 + x + 1$: up on both ends',
+                'Like $y = x + 1$: a slanted line on both ends',
+                'Like $y = 1$: leveling off at one height on both ends',
+                'Like $y = x^3$: falling on the left, rising on the right',
+              ],
               correctAnswer: 0,
-              explanation: 'It only limits *which* rationals could be zeros. A polynomial might have only irrational or complex zeros — the theorem just rules out every rational outside the candidate list.',
+              explanation: 'The fraction $\\frac{2}{x-1}$ shrinks to $0$, so the graph follows the quotient $x^2 + x + 1$, an upward parabola that rises on both ends. A slant line needs a linear quotient, a level line needs a constant quotient, and the cubic numerator alone ignores the division by $x - 1$.',
             },
           ],
         },
@@ -708,20 +720,20 @@ Testing finds the actual zeros $x = 1,\\; \\tfrac{1}{2},\\; -3$ (matching Part 2
       {
         id: 'pdr6-rrt-drill',
         type: 'input-boxes' as const,
-        content: `**Rational Root Drill** 🧮
+        content: `**Division Drill** 🧮
 
-For $p(x) = 2x^3 + 3x^2 - 8x + 3$ (constant $3$, leading coefficient $2$):
+Dividing $2x^2 + 3x + 4$ by $x - 1$ gives $\\dfrac{2x^2 + 3x + 4}{x - 1} = ax + b + \\dfrac{c}{x - 1}$.
 
-**1)** How many factors does the constant $3$ have (positive only: count $1$ and $3$)?
-**2)** Test $x = 1$: enter $p(1)$.
-**3)** Test $x = -3$: enter $p(-3)$.`,
+**1)** Enter $a$, the coefficient of $x$ in the quotient.
+**2)** Enter $b$, the constant in the quotient.
+**3)** Enter the remainder $c$.`,
         exercise: {
           boxes: 3,
-          correctAnswers: ['2', '0', '0'],
-          hint1: 'The positive factors of $3$ are $1$ and $3$ — that is $2$ of them.',
-          hint2: '$p(1) = 2 + 3 - 8 + 3 = 0$.',
-          hint3: '$p(-3) = 2(-27) + 3(9) - 8(-3) + 3 = -54 + 27 + 24 + 3 = 0$.',
-          explanation: '1) constant $3$ has positive factors $1, 3$ → $2$.  2) $p(1)=0$, so $x-1$ is a factor.  3) $p(-3)=-54+27+24+3=0$, so $x+3$ is a factor.',
+          correctAnswers: ['2', '5', '9'],
+          hint1: '$2x^2 \\div x = 2x$, so $a = 2$.',
+          hint2: 'Subtract $2x(x - 1) = 2x^2 - 2x$ to leave $5x + 4$; then $5x \\div x = 5$.',
+          hint3: 'Subtract $5(x - 1) = 5x - 5$ from $5x + 4$ to get $9$. Check with the Remainder Theorem: $2 + 3 + 4 = 9$.',
+          explanation: 'The quotient is $2x + 5$ and the remainder is $9$, since $(x - 1)(2x + 5) + 9 = 2x^2 + 3x + 4$. The slant asymptote is $y = 2x + 5$.',
         },
       },
       {
@@ -775,7 +787,7 @@ Each rational function is rewritten as quotient $+ \\dfrac{\\text{remainder}}{\\
 
 ---
 
-You can now (1) divide polynomials long-hand and synthetically, (2) apply the Remainder Theorem, (3) apply the Factor Theorem, (4) find every zero, and (5) read off rational-root candidates and slant asymptotes. Let's put it all together.`,
+You can now (1) divide polynomials long-hand and synthetically, (2) apply the Remainder Theorem, (3) apply the Factor Theorem, (4) find every zero once one is known, and (5) rewrite rational functions to read off end behavior and slant asymptotes. Let's put it all together.`,
       },
       {
         id: 'pdr7-summary',
@@ -788,7 +800,7 @@ You can now (1) divide polynomials long-hand and synthetically, (2) apply the Re
 | Evaluate $p(c)$ | remainder on division by $x-c$ (Remainder Thm) |
 | Test if $(x-c)$ is a factor | check whether $p(c) = 0$ (Factor Thm) |
 | Factor $(x-c)$ ↔ zero | factor $(x-c)$ ⇔ zero $x = c$ |
-| List rational-zero candidates | $\\pm\\dfrac{\\text{factor of }a_0}{\\text{factor of }a_n}$ |
+| Rewrite $\\dfrac{f}{g}$ | $q(x) + \\dfrac{r(x)}{g(x)}$ from $f = gq + r$ |
 | Find a slant asymptote | the polynomial quotient |
 
 > ⚠️ **Three habits that prevent most errors:** use $0$ placeholders for missing powers, flip the sign of $c$ (divisor $x+3 \\Rightarrow c=-3$), and remember a factor $(x-c)$ matches the zero $x = +c$.`,
@@ -806,10 +818,10 @@ You can now (1) divide polynomials long-hand and synthetically, (2) apply the Re
               explanation: 'By the Remainder Theorem the remainder is $p(2) = 8 + 8 - 10 - 6 = 0$. So $x-2$ is also a factor.',
             },
             {
-              question: 'Which is a valid rational-zero candidate for $p(x) = 4x^3 - x + 6$?',
-              options: ['$\\frac{3}{2}$', '$\\frac{6}{5}$', '$\\frac{1}{8}$', '$5$'],
+              question: 'When $x^3 - 2x + 5$ is divided by $x^2 + 1$, what are the quotient and remainder?',
+              options: ['$q = x,\\ r = -3x + 5$', '$q = x + 1,\\ r = -3x + 4$', '$q = x - 2,\\ r = -x + 7$', '$q = x^2,\\ r = -2x + 4$'],
               correctAnswer: 0,
-              explanation: 'Candidates are $\\frac{\\text{factor of }6}{\\text{factor of }4}$. Numerator must divide $6$ and denominator must divide $4$. $\\frac{3}{2}$ qualifies ($3\\mid 6$, $2\\mid 4$). $\\frac{6}{5}$ fails ($5\\nmid 4$), $\\frac{1}{8}$ fails ($8\\nmid 4$), and $5\\nmid 6$.',
+              explanation: '$x^3 \\div x^2 = x$, and subtracting $x(x^2 + 1) = x^3 + x$ leaves $-3x + 5$, whose degree is below $2$, so division stops. Check any pair with $f = gq + r$: only $(x^2 + 1)(x) + (-3x + 5) = x^3 - 2x + 5$ works. A quotient of $x^2$ is impossible because a cubic divided by a quadratic leaves a linear quotient.',
             },
           ],
         },
@@ -849,9 +861,9 @@ Answer all three to finish the lesson.`,
             },
             {
               question: 'For $p(x) = x^3 - 2x^2 - 5x + 6$, which factor is confirmed by evaluating $p$?',
-              options: ['$(x - 1)$, since $p(1) = 0$', '$(x + 1)$, since $p(-1) = 0$', '$(x - 2)$, since $p(2) = 0$', '$(x + 6)$, since $p(-6) = 0$'],
+              options: ['$(x - 1)$, since $p(1) = 0$', '$(x + 1)$, since $p(-1) = 0$', '$(x - 2)$, since $p(-2) = 0$', '$(x + 6)$, since $p(-6) = 0$'],
               correctAnswer: 0,
-              explanation: '$p(1) = 1 - 2 - 5 + 6 = 0$, so by the Factor Theorem $(x-1)$ is a factor. Checking $p(-1) = -1 - 2 + 5 + 6 = 8 \\ne 0$, so $(x+1)$ is not.',
+              explanation: '$p(1) = 1 - 2 - 5 + 6 = 0$, so by the Factor Theorem $(x-1)$ is a factor. Checking $p(-1) = -1 - 2 + 5 + 6 = 8 \\ne 0$, so $(x+1)$ is not, and a zero at $-2$ would give the factor $(x+2)$, not $(x-2)$.',
             },
             {
               question: 'A rational function $f(x) = \\dfrac{N(x)}{D(x)}$ is rewritten by division as $f(x) = 3x - 1 + \\dfrac{5}{x-2}$. Its slant asymptote is:',

@@ -5,175 +5,143 @@ export const precalcPolarPart6Data = {
       id: 'p6-intro',
       type: 'text' as const,
       content: `
-# 🪐 Conic Sections in Polar Form
+# 📏 Polar Rates of Change and Distance from the Origin
 
-**Part 6 of 7**
+**Part 6 of 7 — Polar Rates of Change and Distance from the Origin**
 
-### The Focus-Directrix Form
+For a polar function $r = f(\\theta)$, the distance from the point $(f(\\theta), \\theta)$ to the origin is $|f(\\theta)|$. So whether the curve is moving **away from** or **toward** the origin depends on two things at once: the **sign** of $r$ and whether $r$ is **increasing or decreasing**.
 
-Any conic section (ellipse, parabola, hyperbola) with one focus at the origin can be written:
+### The Four Cases
 
-$$r = \\frac{ed}{1 \\pm e\\cos\\theta} \\quad \\text{or} \\quad r = \\frac{ed}{1 \\pm e\\sin\\theta}$$
+| $r = f(\\theta)$ is | and is | so $|r|$ is | Distance from the origin is |
+|:--------------------|:-------|:------------|:----------------------------|
+| positive | increasing | growing | **increasing** |
+| positive | decreasing | shrinking | **decreasing** |
+| negative | decreasing | growing (e.g. $-1 \\to -3$) | **increasing** |
+| negative | increasing | shrinking (e.g. $-3 \\to -1$) | **decreasing** |
 
-where:
-- **$e$** = eccentricity (determines shape)
-- **$d$** = distance from focus to directrix
+$$\\boxed{\\text{Same direction (positive and increasing, or negative and decreasing)} \\implies \\text{moving away from the origin}}$$
 
-### Classification by Eccentricity
+$$\\boxed{\\text{Opposite direction (positive and decreasing, or negative and increasing)} \\implies \\text{moving toward the origin}}$$
 
-| Eccentricity | Conic Type |
-|:-------------|:-----------|
-| $e = 0$ | Circle |
-| $0 < e < 1$ | Ellipse |
-| $e = 1$ | Parabola |
-| $e > 1$ | Hyperbola |
+### Relative Extrema
 
-### Orientation
-
-- $1 + e\\cos\\theta$: directrix to the **right** of focus
-- $1 - e\\cos\\theta$: directrix to the **left** of focus
-- $1 + e\\sin\\theta$: directrix **above** focus
-- $1 - e\\sin\\theta$: directrix **below** focus
+If $r = f(\\theta)$ changes from increasing to decreasing (or from decreasing to increasing) on an interval, then $f$ has a **relative extremum** there, and that point is **relatively closest to or farthest from** the origin. A relative minimum with a **negative** value, such as $r = -3$, is a farthest point, because its distance is $3$.
       `
     },
     {
       id: 'p6-example',
       type: 'text' as const,
       content: `
-## 📝 Example: Identify and Analyze $r = \\frac{6}{2 + \\cos\\theta}$
+## 📝 Worked Example: $r = 3\\sin(2\\theta)$ on $0 \\le \\theta \\le \\pi$
 
-### Step 1: Standard Form
+### Step 1: Key values
 
-Divide numerator and denominator by 2: $r = \\frac{3}{1 + \\frac{1}{2}\\cos\\theta}$
+| $\\theta$ | $0$ | $\\frac{\\pi}{4}$ | $\\frac{\\pi}{2}$ | $\\frac{3\\pi}{4}$ | $\\pi$ |
+|:--|:--|:--|:--|:--|:--|
+| $r$ | $0$ | $3$ | $0$ | $-3$ | $0$ |
 
-So $e = \\frac{1}{2}$ and $ed = 3 \\implies d = 6$.
+### Step 2: Classify each interval
 
-### Step 2: Classify
+| Interval | $r$ is | Distance from the origin |
+|:---------|:-------|:-------------------------|
+| $0 < \\theta < \\frac{\\pi}{4}$ | positive and increasing ($0 \\to 3$) | increasing |
+| $\\frac{\\pi}{4} < \\theta < \\frac{\\pi}{2}$ | positive and decreasing ($3 \\to 0$) | decreasing |
+| $\\frac{\\pi}{2} < \\theta < \\frac{3\\pi}{4}$ | negative and decreasing ($0 \\to -3$) | increasing |
+| $\\frac{3\\pi}{4} < \\theta < \\pi$ | negative and increasing ($-3 \\to 0$) | decreasing |
 
-$e = \\frac{1}{2} < 1$ → **Ellipse**
+### Step 3: Interpret the extrema
 
-### Step 3: Key Points
+- At $\\theta = \\frac{\\pi}{4}$, $r$ has a relative **maximum** of $3$: the tip of the Quadrant I petal, a point farthest from the origin.
+- At $\\theta = \\frac{3\\pi}{4}$, $r$ has a relative **minimum** of $-3$: also a point farthest from the origin (distance $3$). It is plotted in Quadrant IV, the tip of another petal.
+- At $\\theta = \\frac{\\pi}{2}$, $r = 0$: the curve is at the origin, its closest possible point.
 
-- At $\\theta = 0$: $r = \\frac{6}{2+1} = 2$ (closest to directrix)
-- At $\\theta = \\pi$: $r = \\frac{6}{2-1} = 6$ (farthest)
-- At $\\theta = \\frac{\\pi}{2}$: $r = \\frac{6}{2} = 3$
-
-### Step 4: Semi-major axis
-
-$a = \\frac{r_{\\min}+r_{\\max}}{2} = \\frac{2+6}{2} = 4$
-
-Center is at distance $ae = 4 \\cdot \\frac{1}{2} = 2$ from the focus (origin).
-      `
-    },
-    {
-      id: 'p6-parabola',
-      type: 'text' as const,
-      content: `
-## 🎯 Special Case: Parabola ($e = 1$)
-
-$$r = \\frac{d}{1 + \\cos\\theta}$$
-
-- At $\\theta = 0$: $r = \\frac{d}{2}$ (vertex)
-- At $\\theta = \\frac{\\pi}{2}$: $r = d$ (end of latus rectum)
-- At $\\theta = \\pi$: **undefined** (approaches infinity — the curve opens left)
-
-**Latus rectum**: The chord through the focus perpendicular to the axis has length $2d$.
-
-### Converting to Rectangular
-
-$r = \\frac{d}{1+\\cos\\theta} \\implies r(1+\\cos\\theta) = d \\implies r + x = d$
-
-$\\sqrt{x^2+y^2} = d - x \\implies x^2+y^2 = d^2 - 2dx + x^2 \\implies y^2 = -2dx + d^2$
-
-This is a parabola opening leftward!
+> 💡 Notice that $r$ is **decreasing** on the whole interval $\\frac{\\pi}{4} < \\theta < \\frac{3\\pi}{4}$, yet the distance first shrinks and then grows. The sign change of $r$ at $\\frac{\\pi}{2}$ is what flips the behavior.
       `
     },
     {
       id: 'p6-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Conic Classification** 🎯
+**Distance from the Origin** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: '$r = \\frac{4}{1 + 2\\sin\\theta}$ is a:',
-            options: ['Circle', 'Ellipse', 'Parabola', 'Hyperbola'],
-            correctAnswer: 3,
-            explanation: '$e = 2 > 1$, so this is a hyperbola.'
-          },
-          {
-            question: '$r = \\frac{3}{1 - \\sin\\theta}$: the directrix is located:',
-            options: ['To the right of the focus', 'To the left of the focus', 'Above the focus', 'Below the focus'],
-            correctAnswer: 3,
-            explanation: 'The form $1 - \\sin\\theta$ means the directrix is below the focus.'
-          },
-          {
-            question: 'For $r = \\frac{10}{2 + 2\\cos\\theta}$ (simplified: $r = \\frac{5}{1+\\cos\\theta}$), the eccentricity is:',
-            options: ['$\\frac{1}{2}$', '$1$', '$2$', '$5$'],
+            question: 'For $r = 3\\sin(2\\theta)$, what happens to the points of the graph as $\\theta$ increases from $\\frac{\\pi}{2}$ to $\\frac{3\\pi}{4}$?',
+            options: ['Their distance from the origin shrinks', 'Their distance from the origin grows', 'Their distance from the origin stays at 3', 'They stay on the polar axis the whole time'],
             correctAnswer: 1,
-            explanation: 'Standard form $\\frac{5}{1+1\\cdot\\cos\\theta}$, so $e = 1$. This is a parabola.'
+            explanation: 'On that interval $r$ is negative and decreasing, from $0$ to $-3$, so $|r|$ grows from $0$ to $3$ and the points move away from the origin.'
+          },
+          {
+            question: 'A polar function $r = f(\\theta)$ has a relative minimum at $\\theta = \\frac{3\\pi}{2}$ with $f\\left(\\frac{3\\pi}{2}\\right) = -4$. What does this point represent?',
+            options: ['A point that is relatively closest to the origin', 'A point where the curve passes through the pole', 'A point that is relatively farthest from the origin', 'A point where the curve meets the polar axis'],
+            correctAnswer: 2,
+            explanation: 'A relative extremum of $f$ is a relatively closest or farthest point. Here $|r| = 4$, and nearby values of $r$ are slightly greater than $-4$, so their distances are less than 4: this is a farthest point.'
+          },
+          {
+            question: 'On an interval, $r = f(\\theta)$ is positive and decreasing. Which statement is true?',
+            options: ['The distance from the origin is decreasing', 'The distance from the origin is growing', 'The curve is passing through the pole', 'The angle $\\theta$ is decreasing'],
+            correctAnswer: 0,
+            explanation: 'When $r > 0$, the distance from the origin is $r$ itself, so a decreasing $r$ means the points are moving toward the origin.'
           }
         ]
       }
     },
     {
+      id: 'p6-aroc',
+      type: 'text' as const,
+      content: `
+## 📐 Average Rate of Change of $r$
+
+The **average rate of change** of $r$ with respect to $\\theta$ on $[\\theta_1, \\theta_2]$ is
+
+$$\\frac{f(\\theta_2) - f(\\theta_1)}{\\theta_2 - \\theta_1}$$
+
+It is the change in the **signed** radius divided by the change in angle, so its units are "radius units **per radian**."
+
+### Example 1: From a formula
+
+For $r = 3\\sin(2\\theta)$ on $\\left[0, \\frac{\\pi}{4}\\right]$:
+
+$$\\frac{3 - 0}{\\frac{\\pi}{4} - 0} = \\frac{12}{\\pi} \\approx 3.82$$
+
+On average, the signed radius grows by about $3.82$ units for each radian of rotation.
+
+### Example 2: Estimating from a table
+
+| $\\theta$ | $0$ | $\\frac{\\pi}{2}$ | $\\pi$ |
+|:--|:--|:--|:--|
+| $r = f(\\theta)$ | $2$ | $5$ | $3$ |
+
+On $\\left[0, \\frac{\\pi}{2}\\right]$, the average rate of change is $\\frac{5 - 2}{\\frac{\\pi}{2}} = \\frac{6}{\\pi}$ per radian. To **estimate** $f\\left(\\frac{\\pi}{3}\\right)$, start at $\\theta = 0$ and apply that rate for $\\frac{\\pi}{3}$ radians:
+
+$$f\\left(\\frac{\\pi}{3}\\right) \\approx 2 + \\frac{6}{\\pi}\\cdot\\frac{\\pi}{3} = 2 + 2 = 4$$
+
+> ⚠️ This is an estimate, not an exact value: it assumes $r$ changes at a constant rate across the interval. A negative average rate of change means the **signed** radius is decreasing; it does not by itself say the curve is moving toward the origin. Check the sign of $r$ too.
+      `
+    },
+    {
       id: 'p6-input',
       type: 'input-boxes' as const,
       content: `
-**Analyze Conics** 🧮
+**Average Rate of Change Practice** 🧮
 
-For $r = \\frac{12}{3 + \\cos\\theta}$:
+A polar function has $f\\left(\\frac{\\pi}{4}\\right) = 5$ and $f\\left(\\frac{\\pi}{2}\\right) = 2$.
 
-**1)** Divide to standard form. The eccentricity $e$ = ? (Enter as a fraction like "1/3")
+**1)** What is the change in $r$ from $\\theta = \\frac{\\pi}{4}$ to $\\theta = \\frac{\\pi}{2}$?
 
-**2)** What is $r$ at $\\theta = 0$? (Enter a whole number)
+**2)** What is the average rate of change of $r$ on $\\left[\\frac{\\pi}{4}, \\frac{\\pi}{2}\\right]$? (Enter in terms of pi, like "-8/pi")
 
-**3)** What is $r$ at $\\theta = \\pi$? (Enter a whole number)
+**3)** Use that rate to estimate $f\\left(\\frac{3\\pi}{8}\\right)$. (Enter a decimal)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1/3', '3', '6'],
-        hint1: '$r = \\frac{12/3}{1 + \\frac{1}{3}\\cos\\theta} = \\frac{4}{1+\\frac{1}{3}\\cos\\theta}$. So $e = \\frac{1}{3}$.',
-        hint2: 'At $\\theta = 0$: $r = \\frac{12}{3+1} = \\frac{12}{4} = 3$.',
-        hint3: 'At $\\theta = \\pi$: $r = \\frac{12}{3-1} = \\frac{12}{2} = 6$.',
-        explanation: '1) $e = \\frac{1}{3}$ (ellipse). 2) $r(0) = 3$. 3) $r(\\pi) = 6$.'
-      }
-    },
-    {
-      id: 'p6-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Conic Properties** 🔽
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'An eccentricity of $e = 0.8$ gives a:',
-            options: ['Circle', 'Ellipse', 'Parabola', 'Hyperbola'],
-            correctAnswer: 1
-          },
-          {
-            label: 'A parabola in polar form has $r \\to \\infty$ at:',
-            options: ['$\\theta = 0$', '$\\theta = \\pi$', 'Depends on form', 'Never'],
-            correctAnswer: 2
-          },
-          {
-            label: 'In $r = \\frac{ed}{1+e\\cos\\theta}$, the vertex (closest point) is at:',
-            options: ['$\\theta = 0$', '$\\theta = \\pi$', '$\\theta = \\frac{\\pi}{2}$'],
-            correctAnswer: 0
-          },
-          {
-            label: 'For an ellipse with $e = \\frac{1}{2}$, $r_{\\max}/r_{\\min}$ equals:',
-            options: ['$2$', '$3$', '$\\frac{3}{2}$'],
-            correctAnswer: 1
-          }
-        ],
-        correctAnswers: ['Ellipse', 'Depends on form', '$\\theta = 0$', '$3$'],
-        hint1: '$0 < 0.8 < 1$, so ellipse.',
-        hint2: 'For $1+e\\cos\\theta$: $r \\to \\infty$ at $\\theta = \\pi$; for $1-e\\cos\\theta$: at $\\theta = 0$; etc.',
-        hint3: '$r_{\\min}$ at $\\theta = 0$: $r = \\frac{ed}{1+e}$. $r_{\\max}$ at $\\theta = \\pi$: $r = \\frac{ed}{1-e}$. Ratio: $\\frac{1+e}{1-e} = \\frac{3/2}{1/2} = 3$.',
-        explanation: '$e = 0.8$: ellipse. Asymptotic $\\theta$ depends on the $\\pm$ form. Closest at $\\theta = 0$ for $+\\cos$ form. Ratio $= \\frac{1+e}{1-e} = 3$.'
+        correctAnswers: ['-3', '-12/pi', '3.5'],
+        hint1: 'Change in $r$ = $f\\left(\\frac{\\pi}{2}\\right) - f\\left(\\frac{\\pi}{4}\\right)$.',
+        hint2: 'Divide the change in $r$ by the change in $\\theta$, which is $\\frac{\\pi}{2} - \\frac{\\pi}{4} = \\frac{\\pi}{4}$.',
+        hint3: '$\\frac{3\\pi}{8}$ is $\\frac{\\pi}{8}$ past $\\frac{\\pi}{4}$, so the estimate is $5 + \\left(-\\frac{12}{\\pi}\\right)\\cdot\\frac{\\pi}{8}$.',
+        explanation: '1) $2 - 5 = -3$. 2) $\\frac{-3}{\\pi/4} = -\\frac{12}{\\pi}$ per radian. 3) $5 - \\frac{12}{\\pi}\\cdot\\frac{\\pi}{8} = 5 - 1.5 = 3.5$.'
       }
     },
     {
@@ -185,16 +153,16 @@ For $r = \\frac{12}{3 + \\cos\\theta}$:
       exercise: {
         questions: [
           {
-            question: 'Which polar equation represents a circle?',
-            options: ['$r = \\frac{4}{1+\\cos\\theta}$', '$r = \\frac{4}{2+\\cos\\theta}$', '$r = 4$', '$r = \\frac{4}{1+2\\cos\\theta}$'],
-            correctAnswer: 2,
-            explanation: '$r = 4$ is a circle of radius 4 centered at the origin. (The others are parabola, ellipse, and hyperbola.)'
+            question: 'On an interval, $r = f(\\theta)$ is negative and increasing. What is happening to the distance between the graph and the origin?',
+            options: ['It is getting larger', 'It is decreasing', 'It stays the same', 'It increases, then decreases'],
+            correctAnswer: 1,
+            explanation: 'A negative $r$ that is increasing moves toward zero, for example from $-3$ to $-1$, so $|r|$ shrinks and the points approach the origin.'
           },
           {
-            question: 'For $r = \\frac{6}{2-2\\sin\\theta}$, simplified to $r = \\frac{3}{1-\\sin\\theta}$, the conic is:',
-            options: ['Ellipse', 'Parabola', 'Hyperbola', 'Circle'],
+            question: 'For $r = 2 + \\cos\\theta$, what is the average rate of change of $r$ on $[0, \\pi]$?',
+            options: ['$-\\frac{1}{\\pi}$', '$-\\frac{2}{\\pi}$', '$\\frac{2}{\\pi}$', '$-2\\pi$'],
             correctAnswer: 1,
-            explanation: '$e = 1$, so it is a parabola opening downward (directrix below focus).'
+            explanation: '$f(0) = 3$ and $f(\\pi) = 1$, so the average rate of change is $\\frac{1 - 3}{\\pi - 0} = -\\frac{2}{\\pi}$ per radian.'
           }
         ]
       }

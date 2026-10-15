@@ -5,178 +5,155 @@ export const precalcRatesOfChangePart6Data = {
       id: 'p6-intro',
       type: 'text' as const,
       content: `
-# 📊 Real-World Rate Applications
+# ⛰️ Extrema and Points of Inflection
 
-**Part 6 of 7**
+**Part 6 of 7 — Extrema & Inflection Points**
 
-### Rates of Change in Context
+### Where a Function Turns
 
-Rate of change applies to **any** quantity that varies:
+Where a polynomial switches between **increasing** and **decreasing**, it has a **local (relative) extremum**:
 
-| Application | Function | Rate measures |
-|:-----------|:---------|:-------------|
-| Economics | Revenue $R(x)$ | Marginal revenue |
-| Biology | Population $P(t)$ | Growth rate |
-| Chemistry | Concentration $[A](t)$ | Reaction rate |
-| Physics | Temperature $T(t)$ | Cooling/heating rate |
-| Medicine | Drug level $D(t)$ | Absorption/elimination rate |
+| Switch | Result | Rate of change |
+|:-------|:-------|:---------------|
+| increasing → decreasing | local maximum | positive → negative |
+| decreasing → increasing | local minimum | negative → positive |
 
-### Marginal Analysis (Economics)
+An **included endpoint** of a polynomial on a restricted domain also gives a local maximum or minimum.
 
-If $C(x)$ = total cost of producing $x$ items:
+### Local vs. Global
 
-$$\\text{Marginal cost} \\approx C'(x) = \\text{IROC of cost}$$
+- A **global (absolute) maximum** is a local maximum that is greater than every other output value.
+- A **global (absolute) minimum** is a local minimum that is less than every other output value.
 
-This is the cost of producing **one more item**. Similarly for revenue and profit.
-      `
-    },
-    {
-      id: 'p6-examples',
-      type: 'text' as const,
-      content: `
-## Worked Examples
+### Three Facts About Polynomials
 
-### Example 1: Population Growth
-
-$P(t) = 500e^{0.03t}$ (bacteria), $t$ in hours.
-
-AROC from $t=0$ to $t=10$:
-$$\\frac{P(10)-P(0)}{10} = \\frac{500e^{0.3}-500}{10} = \\frac{500(1.3499-1)}{10} = \\frac{174.9}{10} \\approx 17.5 \\text{ bacteria/hr}$$
-
-### Example 2: Cooling
-
-A cup of coffee cools: $T(t) = 70 + 130e^{-0.05t}$ (°F).
-
-- $T(0) = 200°$F (initial)
-- $T(10) = 70 + 130e^{-0.5} \\approx 70 + 78.9 = 148.9°$F
-
-AROC: $\\frac{148.9 - 200}{10} = -5.11°$F/min (cooling at 5.1°/min average)
-
-### Example 3: Profit
-
-$P(x) = -0.5x^2 + 100x - 500$ dollars for $x$ units.
-
-AROC from $x=50$ to $x=60$:
-$$\\frac{P(60)-P(50)}{10} = \\frac{(4700)-(3250)}{10} = \\frac{1450}{10} = 145 \\text{ \\$/unit}$$
-      `
-    },
-    {
-      id: 'p6-interpret',
-      type: 'text' as const,
-      content: `
-## Interpreting Rates in Context
-
-### Units Matter!
-
-Rate units = $\\frac{\\text{output units}}{\\text{input units}}$
-
-| If $f$ measures... | And input is... | Rate units are... |
-|:-------------------|:---------------|:-----------------|
-| Meters | Seconds | m/s |
-| Dollars | Items | \\$/item |
-| Bacteria | Hours | bacteria/hr |
-| Gallons | Minutes | gal/min |
-
-### Answering Rate Questions
-
-Always include:
-1. **Value**: the numerical rate
-2. **Units**: output/input
-3. **Context**: what it means practically
-
-**Good answer**: "At $t=5$ minutes, the tank is draining at approximately 12 gallons per minute."
-
-**Bad answer**: "The rate is 12." ❌ (no units, no context)
-
-### Related Rates Preview
-
-If $A = \\pi r^2$ and $r$ changes over time, then $A$ also changes. The rate $dA/dt$ depends on $dr/dt$ — this is **related rates** in calculus.
+1. Between every two distinct real zeros there is **at least one** local maximum or minimum.
+2. An **even-degree** polynomial has either a global maximum or a global minimum.
+3. For a **quadratic**, the global maximum or minimum is at the **vertex**.
       `
     },
     {
       id: 'p6-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Applications Quiz** 🎯
+**Extrema Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'If $C(x) = 500 + 3x + 0.01x^2$ and AROC from $x=100$ to $x=101$ is $\\$5.01$, this represents:',
-            options: ['Total cost of 101 items', 'Approximate cost of 101st item', 'Profit on the 101st item', 'Average cost per item'],
-            correctAnswer: 1,
-            explanation: '$C(101) - C(100) = 3 + 0.01(10201 - 10000) = 5.01$. The AROC of cost for one additional unit ≈ marginal cost = cost of the next item, not the total or average cost, and cost alone says nothing about profit.'
+            question: 'A polynomial $f$ increases for $x < 2$ and decreases for $x > 2$. Then $f(2)$ is:',
+            options: ['A local maximum', 'A local minimum', 'A zero of $f$', 'A point of inflection'],
+            correctAnswer: 0,
+            explanation: 'Switching from increasing to decreasing produces a local maximum: the rate of change goes from positive to negative. Nothing here says the output at $x = 2$ is zero.'
           },
           {
-            question: 'Rate units for temperature (°F) vs time (min):',
-            options: ['min/°F', 'min', '°F/min', '°F·min'],
-            correctAnswer: 2,
-            explanation: 'Rate = output/input = °F/min.'
+            question: 'A degree-$4$ polynomial has a positive leading coefficient. Which must be true?',
+            options: [
+              'It has a global minimum but no global maximum',
+              'It has a global maximum but no global minimum',
+              'It has both a global maximum and a global minimum',
+              'It has neither a global maximum nor a global minimum'
+            ],
+            correctAnswer: 0,
+            explanation: 'Even degree with a positive leading coefficient means both ends rise without bound, so there is no global maximum. An even-degree polynomial has a global maximum or a global minimum, so here it is a global minimum.'
           },
           {
-            question: 'Negative rate of change for population means:',
-            options: ['Growing', 'Declining', 'Stable', 'Negative'],
-            correctAnswer: 1,
-            explanation: 'Negative rate = quantity decreasing = population declining. The population itself stays positive; only its change is negative.'
+            question: 'A polynomial has real zeros at $x = -2$ and $x = 5$ and no zeros between them. What must it have?',
+            options: [
+              'A local maximum or minimum between $-2$ and $5$',
+              'A point of inflection at exactly $x = 1.5$',
+              'A global maximum between $-2$ and $5$',
+              'No other real zeros anywhere'
+            ],
+            correctAnswer: 0,
+            explanation: 'Between two distinct real zeros a nonconstant polynomial must turn around at least once, giving a local maximum or minimum. Nothing forces that extremum to be global, an inflection point to sit at the midpoint, or the zeros to be the only ones.'
           }
         ]
       }
     },
     {
+      id: 'p6-table',
+      type: 'text' as const,
+      content: `
+## Reading Extrema and Inflection from a Table
+
+$p(x) = x^3 - 6x^2 + 9x + 1$:
+
+| $x$ | $0$ | $1$ | $2$ | $3$ | $4$ | $5$ |
+|:--|:--|:--|:--|:--|:--|:--|
+| $p(x)$ | $1$ | $5$ | $3$ | $1$ | $5$ | $21$ |
+
+Unit-interval average rates: $4, -2, -2, 4, 16$.
+
+- **Local maximum** at $x = 1$: the outputs rise to $5$ and then fall. The rates switch from positive to negative.
+- **Local minimum** at $x = 3$: the outputs fall to $1$ and then rise. The rates switch from negative to positive.
+- **Point of inflection** at $x = 2$: the rates decrease until about $x = 2$ and then increase, so the graph changes from concave down to concave up. The rate of change is most negative near there.
+- **No global extrema:** $p$ has odd degree, so its outputs eventually exceed $5$ and drop below $1$.
+
+### Restricted Domains
+
+On $[0, 4]$, the quadratic $f(x) = x^2 - 2x$ has its global minimum $-1$ at the vertex $x = 1$. Its global maximum is $f(4) = 8$, at the included endpoint $x = 4$.
+      `
+    },
+    {
       id: 'p6-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Rates:**
+**Use the Table for $p(x) = x^3 - 6x^2 + 9x + 1$** 🧮
 
-**1)** Revenue $R(x) = 50x - 0.1x^2$. AROC from $x=100$ to $x=200$:
+| $x$ | $0$ | $1$ | $2$ | $3$ | $4$ | $5$ |
+|:--|:--|:--|:--|:--|:--|:--|
+| $p(x)$ | $1$ | $5$ | $3$ | $1$ | $5$ | $21$ |
 
-**2)** Tank drains: $V(t)= 1000 - 5t^2$ gallons. AROC from $t=0$ to $t=10$:
+**1)** The local maximum value of $p$:
 
-**3)** If answer to (2) is your rate, what are its units? Enter "gal/min" or "min/gal":
+**2)** The $x$-value of the local minimum:
+
+**3)** The average rate of change of $p$ on $[1, 3]$:
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['20', '-50', 'gal/min'],
-        hint1: '$R(200)=10000-4000=6000$, $R(100)=5000-1000=4000$. $\\frac{2000}{100}$.',
-        hint2: '$V(10)=1000-500=500$. $\\frac{500-1000}{10}$.',
-        hint3: 'Output (gallons) over input (minutes).',
-        explanation: '(1) $\\frac{6000-4000}{100}=20$. (2) $\\frac{500-1000}{10}=-50$ gal/min. (3) gal/min.'
+        correctAnswers: ['5', '3', '-2'],
+        hint1: 'Find where the outputs rise and then fall.',
+        hint2: 'Find where the outputs fall and then rise.',
+        hint3: '$\\frac{p(3) - p(1)}{3 - 1} = \\frac{1 - 5}{2}$.',
+        explanation: '(1) The outputs rise to $5$ at $x = 1$ and then fall, so the local maximum value is $5$. (2) They fall to $1$ at $x = 3$ and then rise. (3) $\\frac{1 - 5}{2} = -2$.'
       }
     },
     {
       id: 'p6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Rate Contexts** 🔽
+**Extrema Concepts** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Marginal cost is approximately:',
-            options: ['Total cost of all items', 'Average cost of all items', 'Cost of the next item', 'Fixed cost of production'],
+            label: 'Where a polynomial switches from decreasing to increasing, it has a:',
+            options: ['Local maximum', 'Local minimum', 'Point of inflection', 'Zero'],
+            correctAnswer: 1
+          },
+          {
+            label: 'For $y = -2(x - 1)^2 + 7$, the global maximum is:',
+            options: ['$-7$ at $x = 1$', '$-2$ at $x = 1$', '$7$ at $x = 1$', '$7$ at $x = -1$'],
             correctAnswer: 2
           },
           {
-            label: 'Newton\'s Law of Cooling has rate proportional to:',
-            options: ['The object\'s own temperature', 'Its difference from room temp', 'Time since cooling began', 'The room\'s temperature alone'],
+            label: 'A cubic with a positive leading coefficient has:',
+            options: ['A global minimum only', 'No global extrema', 'A global maximum only', 'Both global extrema'],
             correctAnswer: 1
           },
           {
-            label: 'If a population doubles every 3 hours, its rate is:',
-            options: ['Constant, as for a line', 'Increasing', 'Decreasing over time', 'Zero between doublings'],
-            correctAnswer: 1
-          },
-          {
-            label: 'A good rate-of-change answer always includes:',
-            options: ['Just the number', 'Number and units', 'Number, units, and context', 'A graph'],
+            label: 'For $p$ in the table, the rate of change is most negative near:',
+            options: ['$x = 1$', '$x = 3$', '$x = 2$', '$x = 0$'],
             correctAnswer: 2
           }
         ],
-        correctAnswers: ['Cost of the next item', 'Its difference from room temp', 'Increasing', 'Number, units, and context'],
-        hint1: 'Marginal = rate = derivative of cost.',
-        hint2: 'Cooling is faster when temp difference is larger.',
-        hint3: 'Doubling = exponential growth → increasing rate.',
-        explanation: 'Marginal cost ≈ C\'(x). Cooling ∝ ΔT. Doubling → the rate keeps increasing (exponential). Include value + units + context.'
+        correctAnswers: ['Local minimum', '$7$ at $x = 1$', 'No global extrema', '$x = 2$'],
+        hint1: 'Falling then rising makes a valley.',
+        hint2: 'A downward parabola peaks at its vertex $(h, k)$.',
+        hint3: 'Odd degree: one end falls without bound and the other rises without bound.',
+        explanation: 'Decreasing then increasing gives a local minimum. The vertex $(1, 7)$ of a downward parabola is its global maximum. A cubic has no global extrema. The rates of $p$ are smallest near the inflection point $x = 2$.'
       }
     },
     {
@@ -188,16 +165,21 @@ If $A = \\pi r^2$ and $r$ changes over time, then $A$ also changes. The rate $dA
       exercise: {
         questions: [
           {
-            question: '$P(t)=200(1.05)^t$. AROC from $t=0$ to $t=2$:',
-            options: ['$10.25$', '$20.50$', '$10$', '$110.25$'],
+            question: 'On the restricted domain $[0, 4]$, where does $f(x) = x^2 - 2x$ reach its global maximum?',
+            options: ['$x = 4$', '$x = 1$', '$x = 0$', '$x = 2$'],
             correctAnswer: 0,
-            explanation: '$P(0)=200, P(2)=200(1.1025)=220.5$. $\\frac{220.5-200}{2}=10.25$. Treating the growth as simple interest ($5\\%$ of $200$ per year) gives $10$, and forgetting to subtract $P(0)$ gives $220.5/2 = 110.25$.'
+            explanation: '$f(0) = 0$, $f(1) = -1$ and $f(4) = 8$. The vertex $x = 1$ gives the global minimum, and the included endpoint $x = 4$ gives the global maximum.'
           },
           {
-            question: 'When a rate decreases toward zero, the function is:',
-            options: ['Leveling off', 'Increasing faster', 'Becoming negative', 'Starting to decrease'],
+            question: 'At a point of inflection of a polynomial, which of these switches?',
+            options: [
+              'Whether the rate of change is increasing or decreasing',
+              'Whether the function is increasing or decreasing',
+              'Whether the output values are positive or negative',
+              'Whether the input values are positive or negative'
+            ],
             correctAnswer: 0,
-            explanation: 'Decreasing positive rate → function still increasing but slowing down → leveling off.'
+            explanation: 'Points of inflection occur where the rate of change switches between increasing and decreasing, which is where concavity changes. A switch in whether the function itself increases marks a local extremum.'
           }
         ]
       }

@@ -69,7 +69,7 @@ A point's polar coordinates $(r, \\theta)$ answer two questions:
             {
               question: 'In the polar coordinate $(r, \\theta)$, what does $r$ represent?',
               options: [
-                'The directed distance from the pole (origin)',
+                'The directed distance from the pole',
                 'The angle measured from the positive $x$-axis',
                 'The horizontal distance only',
                 'The slope of the line to the point',
@@ -134,8 +134,8 @@ A polar grid is a set of **concentric circles** (constant $r$) crossed by **rays
             {
               question: 'Which statement about the polar grid is TRUE?',
               options: [
-                'Concentric circles are constant-$r$; rays from the pole are constant-$\\theta$.',
-                'Concentric circles are constant-$\\theta$; rays are constant-$r$.',
+                'Circles fix $r$ and rays fix $\\theta$.',
+                'Circles fix $\\theta$ and rays from the pole fix $r$.',
                 'The grid is made of horizontal and vertical lines like Cartesian paper.',
                 'Every point has exactly one polar name.',
               ],
@@ -260,14 +260,14 @@ Rewrite each point with $r > 0$ and $0 \\le \\theta < 2\\pi$.`,
           questions: [
             {
               question: 'How many distinct polar coordinate pairs name a single point (other than the pole)?',
-              options: ['Infinitely many', 'Exactly one', 'Exactly two', 'Exactly four'],
+              options: ['Infinitely many', 'Exactly one pair', 'Exactly two pairs', 'Exactly four pairs'],
               correctAnswer: 0,
               explanation: 'You can add any multiple of $2\\pi$ to $\\theta$, and you can use $\\pm r$ — infinitely many names.',
             },
             {
               question: 'At the pole, the radius is $r = 0$. What can we say about $\\theta$?',
               options: [
-                '$\\theta$ can be anything — the pole has every angle',
+                '$\\theta$ can be any angle at all',
                 '$\\theta$ must be $0$',
                 '$\\theta$ is undefined and the point does not exist',
                 '$\\theta$ must be $\\pi$',
@@ -496,7 +496,7 @@ Facing $\\dfrac{\\pi}{2}$ (up) with $r = -3$ plots the point **down**, at $\\lef
             {
               question: 'For $r = 4\\sin\\theta$, what is $r$ when $\\theta = \\dfrac{\\pi}{2}$, and what curve is this?',
               options: [
-                '$r = 4$; a circle on the $y$-axis (through the pole and $(0,4)$)',
+                '$r = 4$; a circle of diameter $4$ on the $y$-axis',
                 '$r = 0$; a circle on the $x$-axis',
                 '$r = 4$; a cardioid',
                 '$r = -4$; a line',
@@ -507,8 +507,8 @@ Facing $\\dfrac{\\pi}{2}$ (up) with $r = -3$ plots the point **down**, at $\\lef
             {
               question: 'While graphing $r = f(\\theta)$, you compute $r = -2$ at $\\theta = \\dfrac{\\pi}{4}$. Where do you plot it?',
               options: [
-                'At $\\left(2, \\dfrac{5\\pi}{4}\\right)$ — opposite direction, across the pole',
-                'At $\\left(2, \\dfrac{\\pi}{4}\\right)$ — same direction, distance $2$',
+                'At $\\left(2, \\dfrac{5\\pi}{4}\\right)$',
+                'At $\\left(2, \\dfrac{\\pi}{4}\\right)$, in the same direction',
                 'You skip it because $r$ cannot be negative',
                 'At $\\left(-2, \\dfrac{3\\pi}{4}\\right)$',
               ],
@@ -565,7 +565,7 @@ Match each polar equation to its circle.`,
 | $r = a$ | **Circle** (pole-centered) | radius $a$ |
 | $r = a\\cos\\theta$ or $a\\sin\\theta$ | **Circle** (off-center) | diameter $a$ |
 | $r = a \\pm a\\cos\\theta$ | **Cardioid** | heart shape; reaches pole once |
-| $r = a \\pm b\\cos\\theta$ | **Limaçon** | inner loop if $a < b$; dimple if $a < b < 2a$ |
+| $r = a \\pm b\\cos\\theta$ | **Limaçon** | inner loop if $a < b$; dimple if $b < a < 2b$ |
 | $r = a\\cos(n\\theta)$ or $a\\sin(n\\theta)$ | **Rose** | petals! |
 
 ### Counting Rose Petals
@@ -665,15 +665,15 @@ Use the ratio $\\dfrac{a}{b}$ (for $r = a \\pm b\\cos\\theta$ or $\\sin$).`,
                 '$r = 3 + 3\\sin\\theta$',
               ],
               correctAnswer: 0,
-              explanation: '$n = 2$ is even, so the rose has $2n = 4$ petals. ($n=4$ gives $8$; $n=3$ gives $3$; the last is a cardioid.)',
+              explanation: '$n = 2$ is even, so the rose has $2n = 4$ petals. ($n=4$ gives $8$; $n=3$ gives $3$; and $r = 3 + 3\\sin\\theta$ is a cardioid.)',
             },
             {
               question: 'The graph of $r = 4 + 4\\cos\\theta$ is best described as a:',
               options: [
-                'Cardioid that reaches the pole at $\\theta = \\pi$',
-                'Limaçon with an inner loop',
-                'Four-petal rose',
-                'Circle centered at the pole',
+                'A cardioid',
+                'A limaçon with an inner loop',
+                'A four-petal rose',
+                'A circle centered at the pole',
               ],
               correctAnswer: 0,
               explanation: '$a = b = 4$ ⟹ cardioid. At $\\theta = \\pi$, $r = 4 + 4(-1) = 0$, so it touches the pole there.',

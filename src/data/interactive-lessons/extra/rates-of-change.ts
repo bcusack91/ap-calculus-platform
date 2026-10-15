@@ -3,14 +3,13 @@ import type { LessonData } from '../registry'
 /**
  * Hand-authored interactive lesson — Average and Instantaneous Rates of Change (AP Precalculus).
  * Registry key / DB Topic.slug: 'rates-of-change'.
- * 7 parts, gold-standard structure: average rate of change as secant slope →
- * units & interpretation → instantaneous rate as a limit of secant slopes →
- * estimating IROC from tables (forward/backward/symmetric difference) →
- * estimating IROC from graphs (tangent lines) → how rate of change itself changes
- * (increasing/decreasing rates & concavity) → mixed applications + exit quiz.
- * LaTeX uses doubled backslashes (these are JS template-literal strings).
- * Every average-rate, difference-quotient, and limit value was verified numerically
- * before authoring.
+ * 7 parts, scoped to AP Precalculus CED 1.2-1.4: average rate of change as secant
+ * slope → units & interpretation → rate at a point estimated from shrinking
+ * intervals → estimating the rate at a point from tables (one-sided and centered
+ * intervals) → comparing rates at two points from a graph → how rate of change
+ * itself changes (increasing/decreasing rates & concavity) → mixed applications +
+ * exit quiz. LaTeX uses doubled backslashes (these are JS template-literal strings).
+ * Every average-rate value was verified numerically before authoring.
  */
 export const parts: LessonData[] = [
   // ───────────────────────── PART 1 ─────────────────────────
@@ -83,7 +82,7 @@ So these three phrases all mean the **same number**:
               question: 'The average rate of change of a function on $[a, b]$ is the slope of which line?',
               options: [
                 'The secant line through the two endpoints',
-                'The tangent line at the midpoint',
+                'The line from the origin to $(b, f(b))$',
                 'A horizontal line at the average height',
                 'The vertical line $x = a$',
               ],
@@ -92,7 +91,7 @@ So these three phrases all mean the **same number**:
             },
             {
               question: 'For $g(x) = 2x + 1$, the average rate of change on $[0, 5]$ is:',
-              options: ['$2$', '$5$', '$11$', '$1$'],
+              options: ['$2$', '$0.5$', '$11$', '$10$'],
               correctAnswer: 0,
               explanation: '$g(5)=11$, $g(0)=1$, so AROC $=\\frac{11-1}{5-0}=\\frac{10}{5}=2$. For a line, the average rate of change always equals its slope, no matter the interval.',
             },
@@ -211,7 +210,7 @@ A balloon's height is $H(t)$ meters after $t$ seconds. Its average rate of chang
               question: 'The average rate of change of $f(x)=x^2$ on $[-3, 3]$ is $0$. What does this tell you?',
               options: [
                 'The endpoints have equal heights, $f(-3)=f(3)=9$',
-                'The function is constant on the whole interval',
+                'The function is constant: $f(x) = 9$ on the whole interval',
                 'The function never changes value',
                 'The function has no graph on that interval',
               ],
@@ -239,54 +238,55 @@ A balloon's height is $H(t)$ meters after $t$ seconds. Its average rate of chang
         type: 'text' as const,
         content: `# 📈 Average & Instantaneous Rates of Change
 
-**Part 3 of 7 — Instantaneous Rate as a Limit of Secants**
+**Part 3 of 7 — Rate at a Point from Shrinking Intervals**
 
 ---
 
-> 🔑 **The Big Leap:** The **instantaneous rate of change (IROC)** is the rate at a *single instant* — the slope of the **tangent line**. We reach it by shrinking the interval: take average rates over smaller and smaller intervals and watch where they head.`,
+> 🔑 **The Big Leap:** The **rate of change at a point** (often called the *instantaneous* rate of change) describes how fast the output would change if the input changed right at that point. You estimate it with average rates of change over **smaller and smaller intervals containing the point**.`,
       },
       {
         id: 'roc3-idea',
         type: 'text' as const,
-        content: `## From Average to Instantaneous
+        content: `## From Average to "At a Point"
 
-Average rate needs **two** points. Instantaneous rate is about **one** point — so we sneak up on it.
+An average rate of change needs **two** points. A rate at a point is about **one** point, so you sneak up on it with intervals that contain the point and keep getting narrower.
 
-Fix a point $x = a$ and let the second point be $x = a + h$, where $h$ is a small step. The average rate over $[a, a+h]$ is the **difference quotient**:
+To estimate the rate of change of $f$ at $x = a$, compute the average rate of change on intervals like:
 
-$$\\frac{f(a+h) - f(a)}{h}$$
+| Interval type | Example near $a = 2$ |
+|---------------|----------------------|
+| Starting at $a$ | $[2, 2.1]$, then $[2, 2.01]$ |
+| Ending at $a$ | $[1.9, 2]$, then $[1.99, 2]$ |
+| Centered on $a$ | $[1.9, 2.1]$, then $[1.99, 2.01]$ |
 
-As $h \\to 0$, the second point slides toward the first, the **secant turns into the tangent**, and the average rate becomes the instantaneous rate:
+As the intervals shrink, the average rates settle on one value. That value is your estimate of the rate of change at $x = a$.
 
-$$\\text{IROC at } a = \\lim_{h \\to 0} \\frac{f(a+h) - f(a)}{h}$$
-
-> 💡 Picture two dots on a curve. Slide the right dot toward the left dot. The connecting line pivots until it just kisses the curve — that final line is the **tangent**, and its slope is the instantaneous rate.`,
+> 💡 Calculus later makes this idea exact. AP Precalculus asks you to **estimate** it from formulas, tables, and graphs, and to **compare** rates at different points.`,
       },
       {
         id: 'roc3-worked',
         type: 'text' as const,
         content: `## Worked Example: $f(x) = x^2$ at $x = 2$
 
-Build the difference quotient at $a = 2$:
+### Shrinking From the Right
 
-$$\\frac{f(2+h) - f(2)}{h} = \\frac{(2+h)^2 - 4}{h} = \\frac{4 + 4h + h^2 - 4}{h} = \\frac{4h + h^2}{h} = 4 + h$$
+| Interval | Average rate of change |
+|----------|------------------------|
+| $[2, 3]$ | $\\dfrac{9 - 4}{1} = 5$ |
+| $[2, 2.5]$ | $\\dfrac{6.25 - 4}{0.5} = 4.5$ |
+| $[2, 2.1]$ | $\\dfrac{4.41 - 4}{0.1} = 4.1$ |
+| $[2, 2.01]$ | $\\dfrac{4.0401 - 4}{0.01} = 4.01$ |
 
-Now let $h \\to 0$:
+### Shrinking From the Left
 
-$$\\lim_{h \\to 0} (4 + h) = 4$$
+| Interval | Average rate of change |
+|----------|------------------------|
+| $[1.9, 2]$ | $\\dfrac{4 - 3.61}{0.1} = 3.9$ |
+| $[1.99, 2]$ | $\\dfrac{4 - 3.9601}{0.01} = 3.99$ |
 
-So the **instantaneous rate of change of $x^2$ at $x = 2$ is $4$** — the tangent line there has slope $4$.
+The right-hand values sit just above $4$ and the left-hand values just below it. The centered interval $[1.9, 2.1]$ gives $\\dfrac{4.41 - 3.61}{0.2} = 4$.
 
-### Watch It Converge
-
-| Interval $[2, 2+h]$ | $h$ | Average rate $=4+h$ |
-|---------------------|-----|---------------------|
-| $[2, 3]$ | $1$ | $5$ |
-| $[2, 2.5]$ | $0.5$ | $4.5$ |
-| $[2, 2.1]$ | $0.1$ | $4.1$ |
-| $[2, 2.01]$ | $0.01$ | $4.01$ |
-
-The average rates close in on $4$. That target value is the instantaneous rate.`,
+So the **rate of change of $x^2$ at $x = 2$ is about $4$**: near $x = 2$, the output grows about $4$ units per unit of input.`,
       },
       {
         id: 'roc3-mc',
@@ -295,21 +295,16 @@ The average rates close in on $4$. That target value is the instantaneous rate.`
         exercise: {
           questions: [
             {
-              question: 'The instantaneous rate of change at a point is the slope of the:',
-              options: ['tangent line at that point', 'secant line through two far-apart points', 'horizontal axis', 'longest chord of the curve'],
+              question: 'The rate of change of $f$ at $x = a$ is best estimated by the average rate of change over:',
+              options: ['a small interval containing $a$', 'the interval from $0$ to $a$', 'the widest interval in the domain', 'the interval from $a$ to $2a$'],
               correctAnswer: 0,
-              explanation: 'As the interval shrinks to a single point, the secant line becomes the tangent line. The instantaneous rate is the slope of that tangent.',
+              explanation: 'A rate at a point is approximated by average rates over small intervals containing that point. Wide intervals, or ones stretching far from $a$, average in behavior from other inputs.',
             },
             {
-              question: 'Which limit gives the instantaneous rate of change of $f$ at $x=a$?',
-              options: [
-                '$\\lim_{h\\to 0}\\dfrac{f(a+h)-f(a)}{h}$',
-                '$\\dfrac{f(b)-f(a)}{b-a}$',
-                '$\\lim_{h\\to 0}\\,[f(a+h)-f(a)]$',
-                '$\\dfrac{f(a)}{a}$',
-              ],
+              question: 'The average rates of $f$ on $[5, 5.1]$, $[5, 5.01]$ and $[5, 5.001]$ are $2.31$, $2.301$ and $2.3001$. The rate of change of $f$ at $x = 5$ is about:',
+              options: ['$2.3$', '$2.31$', '$0.0001$', '$5$'],
               correctAnswer: 0,
-              explanation: 'The instantaneous rate is the limit of the difference quotient $\\frac{f(a+h)-f(a)}{h}$ as $h\\to 0$. The second option is an average rate (fixed interval), not instantaneous.',
+              explanation: 'As the intervals shrink, the average rates settle on $2.3$. The value $2.31$ comes from the widest interval, and $0.0001$ tracks how much the estimates differ rather than the rate itself.',
             },
           ],
         },
@@ -319,18 +314,18 @@ The average rates close in on $4$. That target value is the instantaneous rate.`
         type: 'input-boxes' as const,
         content: `**Shrinking Intervals** 🧮
 
-For $f(x) = x^2$, the average rate on $[3, 3+h]$ simplifies to $6 + h$.
+Let $f(x) = x^2 + x$.
 
-**1)** Average rate on $[3, 4]$  *(use $h=1$)*
-**2)** Average rate on $[3, 3.1]$  *(use $h=0.1$)*
-**3)** The instantaneous rate at $x = 3$  *(let $h \\to 0$)*`,
+**1)** Average rate on $[3, 4]$
+**2)** Average rate on $[3, 3.1]$
+**3)** Your estimate of the rate of change at $x = 3$ (a whole number)`,
         exercise: {
           boxes: 3,
-          correctAnswers: ['7', '6.1', '6'],
-          hint1: '$6 + h$ with $h=1$ gives $7$.',
-          hint2: '$6 + h$ with $h=0.1$ gives $6.1$.',
-          hint3: 'As $h\\to 0$, $6+h \\to 6$. So the tangent slope at $x=3$ is $6$.',
-          explanation: '$\\frac{(3+h)^2-9}{h}=\\frac{6h+h^2}{h}=6+h$. Plug $h=1\\Rightarrow 7$; $h=0.1\\Rightarrow 6.1$; $h\\to 0\\Rightarrow 6$.',
+          correctAnswers: ['8', '7.1', '7'],
+          hint1: '$f(4) = 20$ and $f(3) = 12$, so the average rate is $\\frac{20 - 12}{1}$.',
+          hint2: '$f(3.1) = 9.61 + 3.1 = 12.71$, so the average rate is $\\frac{12.71 - 12}{0.1}$.',
+          hint3: 'Try $[3, 3.01]$: $f(3.01) = 12.0701$, giving $7.01$. The values settle on a whole number.',
+          explanation: '1) $\\frac{8}{1} = 8$. 2) $\\frac{0.71}{0.1} = 7.1$. 3) On $[3, 3.01]$ the average rate is $7.01$, so the rate at $x = 3$ is about $7$.',
         },
       },
     ],
@@ -345,16 +340,16 @@ For $f(x) = x^2$, the average rate on $[3, 3+h]$ simplifies to $6 + h$.
         type: 'text' as const,
         content: `# 📈 Average & Instantaneous Rates of Change
 
-**Part 4 of 7 — Estimating IROC from a Table**
+**Part 4 of 7 — Estimating the Rate at a Point from a Table**
 
 ---
 
-> 🔑 **The Idea:** On the AP exam you often get a **table of values**, not a formula. You can't take a true limit, so you **estimate** the instantaneous rate using the average rate over the *smallest interval available* around the point.`,
+> 🔑 **The Idea:** On the AP exam you often get a **table of values**, not a formula. You can't shrink the interval past the data you have, so you **estimate** the rate of change at a point using the average rate over the *smallest interval available* around the point.`,
       },
       {
         id: 'roc4-methods',
         type: 'text' as const,
-        content: `## Three Ways to Estimate IROC at $x = a$
+        content: `## Three Ways to Estimate the Rate at $x = a$
 
 | Method | Formula | When to use |
 |--------|---------|-------------|
@@ -375,11 +370,11 @@ A function $P(t)$ (a population, in thousands) is sampled:
 |-------------|-----|-----|-----|-----|
 | $P(t)$ | $10$ | $18$ | $30$ | $50$ |
 
-**Estimate the instantaneous rate of change at $t = 4$.**
+**Estimate the rate of change of $P$ at $t = 4$.**
 
 Use the **symmetric** difference with the neighbors $t=2$ and $t=6$:
 
-$$P'(4) \\approx \\frac{P(6) - P(2)}{6 - 2} = \\frac{30 - 10}{4} = \\frac{20}{4} = 5$$
+$$\\text{rate at } t = 4 \\approx \\frac{P(6) - P(2)}{6 - 2} = \\frac{30 - 10}{4} = \\frac{20}{4} = 5$$
 
 So the population is growing at about **$5$ thousand people per year** at $t = 4$.
 
@@ -396,15 +391,15 @@ Using the same table:
 |-----|-----|-----|-----|-----|
 | $P(t)$ | $10$ | $18$ | $30$ | $50$ |
 
-**1)** Symmetric-difference estimate of $P'(6)$  *(use $t=4$ and $t=8$)*
-**2)** Forward-difference estimate of $P'(2)$  *(use $t=2$ and $t=4$)*
-**3)** Backward-difference estimate of $P'(8)$  *(use $t=6$ and $t=8$)*`,
+**1)** Symmetric-difference estimate of the rate at $t = 6$  *(use $t=4$ and $t=8$)*
+**2)** Forward-difference estimate of the rate at $t = 2$  *(use $t=2$ and $t=4$)*
+**3)** Backward-difference estimate of the rate at $t = 8$  *(use $t=6$ and $t=8$)*`,
         exercise: {
           boxes: 3,
           correctAnswers: ['8', '4', '10'],
-          hint1: '$P\'(6)\\approx\\frac{P(8)-P(4)}{8-4}=\\frac{50-18}{4}$.',
-          hint2: '$P\'(2)\\approx\\frac{P(4)-P(2)}{4-2}=\\frac{18-10}{2}$.',
-          hint3: '$P\'(8)\\approx\\frac{P(8)-P(6)}{8-6}=\\frac{50-30}{2}$.',
+          hint1: 'Rate at $t=6$: $\\frac{P(8)-P(4)}{8-4}=\\frac{50-18}{4}$.',
+          hint2: 'Rate at $t=2$: $\\frac{P(4)-P(2)}{4-2}=\\frac{18-10}{2}$.',
+          hint3: 'Rate at $t=8$: $\\frac{P(8)-P(6)}{8-6}=\\frac{50-30}{2}$.',
           explanation: '1) $\\frac{50-18}{4}=\\frac{32}{4}=8$.  2) $\\frac{18-10}{2}=\\frac{8}{2}=4$.  3) $\\frac{50-30}{2}=\\frac{20}{2}=10$.',
         },
       },
@@ -413,7 +408,7 @@ Using the same table:
         type: 'dropdown-select' as const,
         content: `**Pick the Right Method** 🔽
 
-For each situation, choose the best difference method to estimate the instantaneous rate at $x = a$.`,
+For each situation, choose the best difference method to estimate the rate of change at $x = a$.`,
         exercise: {
           dropdowns: [
             { label: 'You have data points on both sides of $a$:', options: ['symmetric difference', 'forward difference only', 'backward difference only', 'no estimate possible'] },
@@ -439,47 +434,49 @@ For each situation, choose the best difference method to estimate the instantane
         type: 'text' as const,
         content: `# 📈 Average & Instantaneous Rates of Change
 
-**Part 5 of 7 — Estimating IROC from a Graph**
+**Part 5 of 7 — Comparing Rates at Two Points from a Graph**
 
 ---
 
-> 🔑 **The Idea:** Given a curve, the instantaneous rate at a point is the **slope of the tangent line** drawn at that point. Estimate it by reading "rise over run" off two clear points the tangent passes through.`,
+> 🔑 **The Idea:** On a graph, the rate of change at a point shows up as **steepness** there. To estimate it, read two points on the graph just to the left and right of the point and compute the slope between them. To compare rates at two points, do the same at each point.`,
       },
       {
-        id: 'roc5-tangent',
+        id: 'roc5-read',
         type: 'text' as const,
-        content: `## Reading a Tangent Slope
+        content: `## Reading a Rate off a Graph
 
-To estimate the instantaneous rate of change at a point on a graph:
+To estimate the rate of change at $x = a$ from a graph:
 
-1. **Draw the tangent line** that just touches the curve at that point.
-2. **Pick two points the tangent line passes through** — ideally where it crosses gridline intersections.
-3. **Compute the slope** $\\dfrac{\\Delta y}{\\Delta x}$ between those two points.
+1. **Read two points on the graph** close to $a$, one on each side, ideally where the curve crosses gridlines.
+2. **Compute the slope** $\\dfrac{\\Delta y}{\\Delta x}$ between them. That is the average rate on a small interval containing $a$.
+3. **Repeat at the second point** if you are comparing, using an interval of the same width.
 
 ### Example
 
-Suppose the tangent line drawn at $x = 3$ passes through $(1, 2)$ and $(5, 10)$. Then:
+A graph of $f$ passes through these points:
 
-$$\\text{IROC at } x = 3 \\approx \\frac{10 - 2}{5 - 1} = \\frac{8}{4} = 2$$
+| Near $x = 3$ | Near $x = 6$ |
+|--------------|--------------|
+| $(2.5,\\ 3.1)$ and $(3.5,\\ 4.9)$ | $(5.5,\\ 7.0)$ and $(6.5,\\ 7.4)$ |
 
-> 💡 You don't need the tangent's two points to be *on* the curve — they only need to be on the **tangent line**. Use whichever lattice points the line passes through cleanly.`,
+$$\\text{rate at } x = 3 \\approx \\frac{4.9 - 3.1}{3.5 - 2.5} = 1.8 \\qquad \\text{rate at } x = 6 \\approx \\frac{7.4 - 7.0}{6.5 - 5.5} = 0.4$$
+
+Both rates are positive, so $f$ is increasing at both points, but it rises much faster near $x = 3$: about $4.5$ times as fast.`,
       },
       {
         id: 'roc5-shape',
         type: 'text' as const,
-        content: `## Slope Tells You the Shape
+        content: `## Steepness Tells You the Shape
 
-The sign and size of the instantaneous rate describe the curve at that instant:
+| Graph near the point | Rate of change there |
+|----------------------|----------------------|
+| Rising | positive |
+| Falling | negative |
+| Steep | large in size: changing fast |
+| Nearly flat | small in size: changing slowly |
+| Top of a hill or bottom of a valley | about $0$, switching sign |
 
-| Tangent slope at a point | The curve there is… |
-|--------------------------|---------------------|
-| Positive | rising (increasing) |
-| Negative | falling (decreasing) |
-| Zero | momentarily flat — a peak, valley, or pause |
-| Steep (large $|\\text{slope}|$) | changing fast |
-| Shallow (small $|\\text{slope}|$) | changing slowly |
-
-> ⚠️ A **horizontal tangent** (slope $0$) marks a spot where the function instantaneously stops increasing or decreasing — like the top of a thrown ball's path, where its vertical velocity is momentarily $0$.`,
+> ⚠️ At a **peak**, average rates just to the left are positive and just to the right are negative, so a small interval centered on the peak gives a rate near $0$. That is why the rate of change is $0$ at the top of a thrown ball's path.`,
       },
       {
         id: 'roc5-mc',
@@ -488,16 +485,16 @@ The sign and size of the instantaneous rate describe the curve at that instant:
         exercise: {
           questions: [
             {
-              question: 'A tangent line drawn to a curve at $x = 4$ passes through $(2, 1)$ and $(6, 9)$. The instantaneous rate of change at $x=4$ is about:',
-              options: ['$2$', '$4$', '$8$', '$\\frac{1}{2}$'],
+              question: 'A graph passes through $(3.8,\\ 5.6)$ and $(4.2,\\ 7.2)$. The rate of change at $x = 4$ is about:',
+              options: ['$4$', '$1.6$', '$0.4$', '$1.8$'],
               correctAnswer: 0,
-              explanation: 'Slope of the tangent $=\\frac{9-1}{6-2}=\\frac{8}{4}=2$. That tangent slope is the instantaneous rate at $x=4$.',
+              explanation: 'Slope between the two nearby points: $\\frac{7.2 - 5.6}{4.2 - 3.8} = \\frac{1.6}{0.4} = 4$. Stopping at the change in output gives $1.6$, and dividing $7.2$ by $4$ gives $1.8$.',
             },
             {
-              question: 'At the highest point of a parabola that opens downward, the instantaneous rate of change is:',
+              question: 'At the highest point of a parabola that opens downward, the rate of change is:',
               options: ['zero', 'positive', 'negative', 'undefined'],
               correctAnswer: 0,
-              explanation: 'At a peak the tangent line is horizontal, so its slope — the instantaneous rate of change — is $0$. The function is neither rising nor falling at that instant.',
+              explanation: 'Just left of the peak the graph rises and just right of it the graph falls, so a small interval centered on the peak has an average rate near $0$. The function is neither rising nor falling there.',
             },
           ],
         },
@@ -505,20 +502,20 @@ The sign and size of the instantaneous rate describe the curve at that instant:
       {
         id: 'roc5-dropdown',
         type: 'dropdown-select' as const,
-        content: `**Compare Tangent Slopes** 🔽
+        content: `**Compare Rates on a Graph** 🔽
 
-On a single curve, the tangent at point $A$ is steep and rising, the tangent at point $B$ is shallow and rising, and the tangent at point $C$ is horizontal.`,
+On a single curve, the graph is steep and rising near point $A$, shallow and rising near point $B$, and it peaks at point $C$.`,
         exercise: {
           dropdowns: [
             { label: 'The function is increasing fastest at:', options: ['$A$', '$B$', '$C$', 'they are equal'] },
-            { label: 'The instantaneous rate of change is zero at:', options: ['$C$', '$A$', '$B$', 'none of them'] },
+            { label: 'The rate of change is about zero at:', options: ['$C$', '$A$', '$B$', 'none of them'] },
             { label: 'Comparing the rates: $A$ is ___ than $B$:', options: ['greater', 'less', 'equal', 'negative'] },
           ],
           correctAnswers: ['$A$', '$C$', 'greater'],
-          hint1: 'A steeper rising tangent means a larger positive rate of change.',
-          hint2: 'A horizontal tangent has slope $0$.',
-          hint3: 'Steep beats shallow: $A$\'s rate is greater than $B$\'s.',
-          explanation: 'Steepness of the tangent = magnitude of the rate. $A$ (steep) > $B$ (shallow) > $C$ (flat, rate $=0$).',
+          hint1: 'A steeper rising graph means a larger positive rate of change.',
+          hint2: 'At a peak, the rates switch from positive to negative.',
+          hint3: 'Steep beats shallow: the rate at $A$ is greater than the rate at $B$.',
+          explanation: 'Steepness near a point shows the size of the rate. $A$ (steep) > $B$ (shallow) > $C$ (the peak, rate about $0$).',
         },
       },
     ],
@@ -599,15 +596,15 @@ A function's average rates of change over consecutive equal intervals are $12,\\
               explanation: 'The balance is going up (increasing) and the yearly gain is getting larger each year (increasing rate). That is "increasing at an increasing rate," a concave-up pattern.',
             },
             {
-              question: 'A cup of hot coffee cools quickly at first, then more and more slowly. Its temperature is:',
+              question: 'A cup of hot coffee cools quickly at first, then more and more slowly. Its temperature graph is:',
               options: [
-                'decreasing at a decreasing rate',
-                'decreasing at an increasing rate',
-                'increasing at a decreasing rate',
-                'changing at a constant rate',
+                'decreasing and concave up',
+                'decreasing and concave down',
+                'decreasing and linear',
+                'increasing and concave down',
               ],
               correctAnswer: 0,
-              explanation: 'Temperature falls (decreasing), but the size of each drop shrinks over time (the rate of decrease is shrinking), so it is "decreasing at a decreasing rate."',
+              explanation: 'The temperature falls, so it is decreasing. The drops shrink, so the signed rates (such as $-10$, then $-6$, then $-3$ degrees per minute) are increasing toward $0$, which makes the graph concave up.',
             },
             {
               question: 'A function has equal average rates of change of $3$ over every consecutive interval. The function is:',
@@ -638,7 +635,7 @@ Compute the average rate of change on each consecutive interval.
           hint1: '$\\frac{16-20}{2-0}=\\frac{-4}{2}=-2$.',
           hint2: '$\\frac{14-16}{4-2}=\\frac{-2}{2}=-1$.',
           hint3: '$\\frac{13-14}{6-4}=\\frac{-1}{2}=-0.5$.',
-          explanation: 'Rates: $-2, -1, -0.5$. All negative (decreasing) but moving toward $0$ — the magnitude shrinks, so $g$ decreases at a decreasing rate (concave up).',
+          explanation: 'Rates: $-2, -1, -0.5$. All negative, so $g$ is decreasing. As signed numbers the rates increase toward $0$, so $g$ is decreasing with an increasing rate of change, and its graph is concave up.',
         },
       },
     ],
@@ -657,7 +654,7 @@ Compute the average rate of change on each consecutive interval.
 
 ---
 
-You can now (1) compute average rates of change as secant slopes, (2) interpret their units and signs, (3) understand instantaneous rate as a limit of secants, (4) estimate IROC from tables and (5) graphs, and (6) describe how a rate of change itself changes. Time to put it all together.`,
+You can now (1) compute average rates of change as secant slopes, (2) interpret their units and signs, (3) estimate a rate at a point from shrinking intervals, (4) estimate it from tables and (5) compare rates on graphs, and (6) describe how a rate of change itself changes. Time to put it all together.`,
       },
       {
         id: 'roc7-summary',
@@ -667,13 +664,13 @@ You can now (1) compute average rates of change as secant slopes, (2) interpret 
 | Goal | Key move |
 |------|----------|
 | Average rate of change on $[a,b]$ | $\\dfrac{f(b)-f(a)}{b-a}$ (secant slope) |
-| Instantaneous rate at $a$ | $\\lim_{h\\to 0}\\dfrac{f(a+h)-f(a)}{h}$ (tangent slope) |
-| Estimate IROC from a table | symmetric difference $\\dfrac{f(a+h)-f(a-h)}{2h}$ |
-| Estimate IROC from a graph | slope of the drawn tangent line |
+| Rate of change at $a$ | average rates on smaller and smaller intervals containing $a$ |
+| Estimate the rate from a table | symmetric difference $\\dfrac{f(a+h)-f(a-h)}{2h}$ using the nearest data |
+| Compare rates on a graph | slope between nearby graph points on each side of each point |
 | Units of any rate | $y$-units per $x$-unit |
 | Increasing/decreasing rate | watch whether successive AROCs grow or shrink |
 
-> ⚠️ **Don't confuse the two rates.** Average rate uses a fixed interval (two points); instantaneous rate is the limit at a single point. And a zero *average* rate only means the endpoints match — not that nothing happened in between.`,
+> ⚠️ **Don't confuse the two rates.** Average rate uses a fixed interval (two points); a rate at a point is estimated from small intervals around one point. And a zero *average* rate only means the endpoints match — not that nothing happened in between.`,
       },
       {
         id: 'roc7-mixed',
@@ -683,12 +680,12 @@ You can now (1) compute average rates of change as secant slopes, (2) interpret 
           questions: [
             {
               question: 'A drone\'s altitude is $A(t) = t^2 + 3t$ meters at time $t$ seconds. The average rate of change on $[1, 4]$ is:',
-              options: ['$8$ m/s', '$5$ m/s', '$28$ m/s', '$12$ m/s'],
+              options: ['$8$ m/s', '$24$ m/s', '$28$ m/s', '$12$ m/s'],
               correctAnswer: 0,
               explanation: '$A(4)=16+12=28$, $A(1)=1+3=4$. AROC $=\\frac{28-4}{4-1}=\\frac{24}{3}=8$ meters per second.',
             },
             {
-              question: 'Using the table below, the best estimate of the instantaneous rate of change at $x=5$ is:\n\n| $x$ | $3$ | $5$ | $7$ |\n|---|---|---|---|\n| $f(x)$ | $4$ | $10$ | $20$ |',
+              question: 'Using the table below, the best estimate of the rate of change at $x=5$ is:\n\n| $x$ | $3$ | $5$ | $7$ |\n|---|---|---|---|\n| $f(x)$ | $4$ | $10$ | $20$ |',
               options: ['$4$', '$3$', '$5$', '$8$'],
               correctAnswer: 0,
               explanation: 'Symmetric difference: $\\frac{f(7)-f(3)}{7-3}=\\frac{20-4}{4}=\\frac{16}{4}=4$. This centered estimate uses the neighbors on both sides of $x=5$.',
@@ -701,18 +698,18 @@ You can now (1) compute average rates of change as secant slopes, (2) interpret 
         type: 'input-boxes' as const,
         content: `**Applied Computation** 🧮
 
-The position of a particle is $s(t) = t^2$ meters at time $t$ seconds. (Recall: for $s(t)=t^2$, the average rate on $[a, a+h]$ simplifies to $2a + h$.)
+The position of a particle is $s(t) = t^2$ meters at time $t$ seconds.
 
 **1)** Average velocity on $[1, 3]$  *(in m/s)*
-**2)** Instantaneous velocity at $t = 1$  *(let $h\\to 0$ in $2a+h$ with $a=1$)*
-**3)** Instantaneous velocity at $t = 5$`,
+**2)** Estimate the velocity at $t = 1$ using $[0.9, 1.1]$
+**3)** Estimate the velocity at $t = 5$ using $[4.9, 5.1]$`,
         exercise: {
           boxes: 3,
           correctAnswers: ['4', '2', '10'],
           hint1: 'Average velocity $=\\frac{s(3)-s(1)}{3-1}=\\frac{9-1}{2}=\\frac{8}{2}$.',
-          hint2: 'At $a=1$, $2a+h=2+h\\to 2$ as $h\\to 0$.',
-          hint3: 'At $a=5$, $2a+h=10+h\\to 10$ as $h\\to 0$.',
-          explanation: '1) $\\frac{9-1}{2}=4$ m/s (average).  2) IROC at $t=1$ is $2(1)=2$ m/s.  3) IROC at $t=5$ is $2(5)=10$ m/s.',
+          hint2: '$s(1.1)=1.21$ and $s(0.9)=0.81$, so compute $\\frac{1.21-0.81}{0.2}$.',
+          hint3: '$s(5.1)=26.01$ and $s(4.9)=24.01$, so compute $\\frac{26.01-24.01}{0.2}$.',
+          explanation: '1) $\\frac{9-1}{2}=4$ m/s (average).  2) $\\frac{0.4}{0.2}=2$ m/s at $t=1$.  3) $\\frac{2}{0.2}=10$ m/s at $t=5$.',
         },
       },
       {
@@ -730,10 +727,10 @@ Answer all three to finish the lesson.`,
               explanation: '$f(4)=16-8=8$, $f(0)=0$. AROC $=\\frac{8-0}{4-0}=\\frac{8}{4}=2$.',
             },
             {
-              question: 'As $h\\to 0$, the difference quotient $\\frac{f(a+h)-f(a)}{h}$ approaches the slope of the:',
-              options: ['tangent line at $x=a$', 'secant line on $[0,a]$', '$x$-axis', 'line through the origin'],
+              question: 'Which interval gives the most accurate estimate of the rate of change of $f$ at $x = a$?',
+              options: ['$[a - 0.01,\\ a + 0.01]$', '$[a - 1,\\ a + 1]$', '$[a,\\ a + 1]$', '$[0,\\ a]$'],
               correctAnswer: 0,
-              explanation: 'Shrinking $h$ slides the second point into $x=a$; the secant becomes the tangent. Its slope is the instantaneous rate of change at $x=a$.',
+              explanation: 'The narrowest interval containing $x = a$ gives the best estimate, because it averages over inputs closest to $a$. The interval $[0, a]$ gives the average rate over a long stretch, not the rate at $a$.',
             },
             {
               question: 'A function increases over an interval but its rate of increase is shrinking. The graph is:',
@@ -741,7 +738,7 @@ Answer all three to finish the lesson.`,
                 'increasing and concave down',
                 'increasing and concave up',
                 'decreasing and concave down',
-                'a straight line',
+                'increasing and linear',
               ],
               correctAnswer: 0,
               explanation: 'Outputs rising ⇒ increasing. A shrinking positive rate ⇒ the curve flattens as it rises ⇒ concave down. This is "increasing at a decreasing rate."',

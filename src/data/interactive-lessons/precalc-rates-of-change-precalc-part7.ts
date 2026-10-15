@@ -7,34 +7,33 @@ export const precalcRatesOfChangePart7Data = {
       content: `
 # 🏆 Rates of Change — Complete Synthesis
 
-**Part 7 of 7**
+**Part 7 of 7 — Review & Applications**
 
 ### Everything Connected
 
 \`\`\`
 Rates of Change Master Map
 │
-├─ Average Rate (AROC)
+├─ Average Rate of Change
 │   ├─ Formula: [f(b)-f(a)]/(b-a)
-│   ├─ Geometry: Secant line slope
-│   └─ Physics: Average velocity
+│   ├─ Geometry: slope of the secant line
+│   └─ Motion: average velocity
 │
-├─ Difference Quotient
-│   ├─ Formula: [f(x+h)-f(x)]/h
-│   ├─ Algebraic simplification
-│   └─ Must cancel h from denominator
+├─ Rate of Change at a Point
+│   ├─ Estimate: average rates on small intervals containing the point
+│   ├─ Sign: positive -> output increasing, negative -> decreasing
+│   └─ Compare two points with matching small intervals
 │
-├─ Instantaneous Rate (IROC)
-│   ├─ = lim(h→0) of DQ
-│   ├─ Geometry: Tangent line slope
-│   ├─ Physics: Instantaneous velocity
-│   └─ THIS IS THE DERIVATIVE
+├─ Changing Rates
+│   ├─ Linear: equal-interval rates are constant
+│   ├─ Quadratic: equal-interval rates change at a constant rate
+│   ├─ Rates increasing -> concave up
+│   └─ Rates decreasing -> concave down
 │
-└─ Applications
-    ├─ Motion: position → velocity → acceleration
-    ├─ Economics: cost → marginal cost
-    ├─ Biology: population → growth rate
-    └─ Always include units and context
+└─ Key Points
+    ├─ Local max/min: function switches increasing <-> decreasing
+    ├─ Point of inflection: rate switches increasing <-> decreasing
+    └─ Always report units and the interval or point
 \`\`\`
       `
     },
@@ -42,57 +41,32 @@ Rates of Change Master Map
       id: 'p7-review',
       type: 'text' as const,
       content: `
-## Key Formulas Reference
+## Key Ideas Reference
 
-### The Core Three
+| Task | Method |
+|:-----|:-------|
+| Average rate of change on $[a, b]$ | $\\frac{f(b) - f(a)}{b - a}$ |
+| Secant line on $[a, b]$ | $y = f(a) + \\frac{f(b)-f(a)}{b-a}(x - a)$ |
+| Rate of change at $x = c$ | Average rate on a small interval containing $c$, such as $[c - 0.1, c + 0.1]$ |
+| Linear or quadratic? | Check consecutive equal-interval average rates: constant means linear; changing by a constant amount means quadratic |
+| Concavity | Rates increasing: concave up. Rates decreasing: concave down |
+| Local extremum | Rate of change switches sign |
+| Point of inflection | Rate of change switches between increasing and decreasing |
+| Global extremum of a quadratic | At the vertex |
 
-$$\\text{AROC} = \\frac{f(b)-f(a)}{b-a} \\quad \\text{(secant slope)}$$
+> 💡 Derivatives, tangent-line equations and limit definitions of rate are calculus topics and are not on the AP Precalculus exam.
 
-$$\\text{DQ} = \\frac{f(x+h)-f(x)}{h} \\quad \\text{(general secant)}$$
+### Worked Example
 
-$$\\text{IROC} = f'(a) = \\lim_{h \\to 0}\\frac{f(a+h)-f(a)}{h} \\quad \\text{(tangent slope)}$$
+$h(t)$ is a plant's height in cm after $t$ weeks:
 
-### Known DQ Results
+| $t$ | $0$ | $1$ | $2$ | $3$ | $4$ |
+|:--|:--|:--|:--|:--|:--|
+| $h(t)$ | $2$ | $7$ | $10$ | $11$ | $10$ |
 
-| $f(x)$ | DQ simplified | Limit ($f'(x)$) |
-|:--------|:-------------|:----------------|
-| $mx + b$ | $m$ | $m$ |
-| $x^2$ | $2x + h$ | $2x$ |
-| $x^3$ | $3x^2 + 3xh + h^2$ | $3x^2$ |
-| $1/x$ | $-1/[x(x+h)]$ | $-1/x^2$ |
-| $\\sqrt{x}$ | $1/(\\sqrt{x+h}+\\sqrt{x})$ | $1/(2\\sqrt{x})$ |
-
-### Tangent Line Formula
-
-$$y = f(a) + f'(a)(x - a)$$
-      `
-    },
-    {
-      id: 'p7-bridge',
-      type: 'text' as const,
-      content: `
-## Bridge to Calculus
-
-### What Calculus Adds
-
-In calculus, you'll learn **shortcut rules** so you don't need the limit process each time:
-
-- **Power Rule**: $\\frac{d}{dx}[x^n] = nx^{n-1}$
-- **Product Rule**: $(fg)' = f'g + fg'$
-- **Chain Rule**: $[f(g(x))]' = f'(g(x)) \\cdot g'(x)$
-
-But the **limit definition** is where it all starts. Everything builds from here.
-
-### The Precalculus → Calculus Pipeline
-
-1. ✅ Functions & graphs (completed)
-2. ✅ Limits (computed and understood)
-3. ✅ Rates of change (AROC → IROC)
-4. ➡️ **Next**: Derivatives (formalized IROC)
-5. ➡️ **Then**: Integrals (reverse of derivatives)
-6. ➡️ **Finally**: FTC (connects derivatives & integrals)
-
-You now have the conceptual foundation for ALL of calculus!
+- Weekly average rates: $5, 3, 1, -1$ cm per week
+- The rates decrease, so $h$ is concave down on $[0, 4]$
+- The rates switch from positive to negative around $t = 3$, so $h$ has a local maximum near $t = 3$
       `
     },
     {
@@ -104,22 +78,27 @@ You now have the conceptual foundation for ALL of calculus!
       exercise: {
         questions: [
           {
-            question: 'DQ of $f(x) = x^2 + 5x - 2$ simplifies to:',
-            options: ['$2x + h + 5$', '$2x + 5$', '$2x + h - 2$', '$x^2 + 5$'],
+            question: 'The average rate of change of $f(x) = x^2 + 5x$ on $[1, 3]$ is:',
+            options: ['$9$', '$18$', '$12$', '$4.5$'],
             correctAnswer: 0,
-            explanation: 'Expand $(x+h)^2 + 5(x+h) - 2 - x^2 - 5x + 2 = 2xh + h^2 + 5h$. Divide by $h$: $2x+h+5$.'
+            explanation: '$f(3) = 24$ and $f(1) = 6$, so $\\frac{24 - 6}{3 - 1} = 9$. Forgetting to divide by $2$ gives $18$, and dividing by $4$ instead gives $4.5$.'
           },
           {
-            question: 'The tangent line to $f(x)=x^3$ at $x=2$ passes through:',
-            options: ['$(2, 8)$ with slope $12$', '$(2, 8)$ with slope $6$', '$(2, 4)$ with slope $12$', '$(2, 8)$ with slope $8$'],
+            question: 'Using the plant table $h = 2, 7, 10, 11, 10$ at $t = 0, 1, 2, 3, 4$, which describes $h$ on $[0, 4]$?',
+            options: [
+              'Concave down, with a local maximum near $t = 3$',
+              'Concave up, with a local maximum near $t = 3$',
+              'Concave down, with a local minimum near $t = 3$',
+              'Concave down, with no local extremum'
+            ],
             correctAnswer: 0,
-            explanation: '$f(2) = 8$, $f\'(2) = 3(4) = 12$. Point $(2,8)$ with slope $12$.'
+            explanation: 'The weekly rates $5, 3, 1, -1$ decrease, so the graph is concave down. The outputs rise to $11$ and then fall, so there is a local maximum near $t = 3$.'
           },
           {
-            question: 'Ball at $s(t)=-16t^2+96t$. Maximum height occurs at:',
+            question: 'A ball\'s height is $s(t) = -16t^2 + 96t$ feet. Its maximum height occurs at:',
             options: ['$t = 2$', '$t = 3$', '$t = 4$', '$t = 6$'],
             correctAnswer: 1,
-            explanation: '$v(t) = -32t + 96 = 0 \\Rightarrow t = 3$ seconds.'
+            explanation: 'A quadratic has its global maximum at the vertex, $t = -\\frac{96}{2(-16)} = 3$ seconds. The ball lands at $t = 6$, which is a zero, not the peak.'
           }
         ]
       }
@@ -130,19 +109,19 @@ You now have the conceptual foundation for ALL of calculus!
       content: `
 **Mixed Practice:**
 
-**1)** AROC of $f(x) = x^2$ on $[1,5]$:
+**1)** Average rate of change of $f(x) = x^2$ on $[1, 5]$:
 
-**2)** IROC of $f(x) = x^2$ at $x = 3$ (use $f'(x)=2x$):
+**2)** Estimate the rate of change of $f(x) = x^2$ at $x = 3$ using $[2.9, 3.1]$:
 
-**3)** Tangent to $f(x)=x^2$ at $x=3$: $y = 6x - ?$
+**3)** A quadratic has average rates $4, 7, 10$ over consecutive equal intervals. What is the next one?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['6', '6', '9'],
-        hint1: '$\\frac{25-1}{4} = 6$.',
-        hint2: '$f\'(3) = 2(3) = 6$.',
-        hint3: '$y - 9 = 6(x-3) \\Rightarrow y = 6x - 9$.',
-        explanation: '(1) $(25-1)/4 = 6$. (2) $2(3) = 6$. (3) $y = 6x - 9$, so the blank is $9$.'
+        correctAnswers: ['6', '6', '13'],
+        hint1: '$\\frac{25 - 1}{5 - 1}$.',
+        hint2: '$f(3.1) = 9.61$ and $f(2.9) = 8.41$. Divide the difference by $0.2$.',
+        hint3: 'Quadratic rates change by the same amount every interval.',
+        explanation: '(1) $\\frac{24}{4} = 6$. (2) $\\frac{9.61 - 8.41}{0.2} = 6$. (3) The rates rise by $3$ each time, so the next is $13$.'
       }
     },
     {
@@ -154,31 +133,31 @@ You now have the conceptual foundation for ALL of calculus!
       exercise: {
         dropdowns: [
           {
-            label: 'AROC is to secant as IROC is to:',
-            options: ['Chord', 'Tangent', 'Normal', 'Asymptote'],
+            label: 'The rate of change at a point is estimated by:',
+            options: ['The output value at that point', 'Average rates on small intervals around it', 'The average of all the outputs', 'The slope from the origin to the point'],
             correctAnswer: 1
           },
           {
-            label: 'Power Rule for $x^4$ gives $f\'(x)$ =',
-            options: ['$x^3$', '$4x^3$', '$4x^4$', '$3x^4$'],
-            correctAnswer: 1
-          },
-          {
-            label: 'The derivative of a constant is:',
-            options: ['The constant', 'The constant times $x$', '$0$', 'Undefined'],
+            label: 'Equal average rates over consecutive equal intervals indicate a:',
+            options: ['Quadratic function', 'Concave up graph', 'Linear function', 'Point of inflection'],
             correctAnswer: 2
           },
           {
-            label: 'The precalculus foundation for calculus is:',
-            options: ['Geometry and proof', 'Limits and rates of change', 'Statistics and data', 'Number theory'],
+            label: 'An increasing function whose rates keep shrinking has a graph that is:',
+            options: ['Concave up', 'Concave down', 'Linear', 'Decreasing'],
             correctAnswer: 1
+          },
+          {
+            label: 'The units of a rate of change are:',
+            options: ['Input units per output unit', 'Output units times input units', 'Output units per input unit', 'Output units only'],
+            correctAnswer: 2
           }
         ],
-        correctAnswers: ['Tangent', '$4x^3$', '$0$', 'Limits and rates of change'],
-        hint1: 'IROC = tangent slope.',
-        hint2: 'Power Rule: $nx^{n-1}$, so $4x^3$.',
-        hint3: 'Constants don\'t change → rate = 0.',
-        explanation: 'AROC:secant :: IROC:tangent. Power Rule: $4x^3$. Constant\' = 0. Calc built on limits & rates.'
+        correctAnswers: ['Average rates on small intervals around it', 'Linear function', 'Concave down', 'Output units per input unit'],
+        hint1: 'Shrink the interval around the point.',
+        hint2: 'A constant rate of change means a line.',
+        hint3: 'Rising but flattening out.',
+        explanation: 'Rates at a point come from small-interval average rates. Constant equal-interval rates mean linear. Shrinking positive rates mean concave down. Rates are output units per input unit.'
       }
     },
     {
@@ -190,16 +169,16 @@ You now have the conceptual foundation for ALL of calculus!
       exercise: {
         questions: [
           {
-            question: 'Use the tangent at $x=4$ ($f(x)=\\sqrt{x}$, $f\'(x)=1/(2\\sqrt{x})$) to estimate $\\sqrt{4.04}$:',
-            options: ['$2.01$', '$2.02$', '$2.1$', '$2.001$'],
+            question: 'The average rate of change of $g(x) = x^3 - 3x$ on $[-1, 1]$ is:',
+            options: ['$-2$', '$2$', '$0$', '$4$'],
             correctAnswer: 0,
-            explanation: '$f(4)=2, f\'(4)=1/4$. $\\sqrt{4.04} \\approx 2 + (1/4)(0.04) = 2 + 0.01 = 2.01$.'
+            explanation: '$g(1) = -2$ and $g(-1) = 2$, so $\\frac{-2 - 2}{1 - (-1)} = \\frac{-4}{2} = -2$. Subtracting in mismatched order gives $2$.'
           },
           {
-            question: 'The single most important idea bridging precalculus to calculus:',
-            options: ['Factoring polynomials', 'The limit', 'Quadratic formula', 'Unit circle'],
-            correctAnswer: 1,
-            explanation: 'The limit is THE bridge. Derivatives = limits. Integrals = limits. Continuity = limits. It all starts here.'
+            question: 'An increasing quantity has average rates $12, 9, 6, 3$ over successive equal intervals and follows a quadratic model. The next average rate is:',
+            options: ['$0$', '$-6$', '$-3$', '$1.5$'],
+            correctAnswer: 0,
+            explanation: 'Quadratic rates change by a constant amount, here $-3$ per interval, so the next rate is $3 - 3 = 0$. Halving each rate would describe a different model.'
           }
         ]
       }

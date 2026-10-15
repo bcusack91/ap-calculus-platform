@@ -233,7 +233,7 @@ Yes! Since $p(3) = 0$, $(x - 3)$ is a factor. No long division needed.
             question: 'You need to find all zeros of $p(x) = x^3 - 6x^2 + 11x - 6$. You discover $p(1) = 0$. What should your next step be?',
             options: [
               'Use synthetic division to divide by $(x - 1)$ and factor the quotient',
-              'Plug in $x = 1$ into the derivative',
+              'Evaluate $p(-1)$ to find a second factor',
               'Use long division to divide by $(x^2 - 1)$',
               'Conclude that all zeros are $x = 1$'
             ],

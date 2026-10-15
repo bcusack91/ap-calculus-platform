@@ -73,12 +73,6 @@ Examples:
 If $h = f \\circ g$, then $h^{-1} = g^{-1} \\circ f^{-1}$
 
 > 💡 The inverse of a composition reverses the order — like undoing layers. Remove the outer layer first!
-
-### Derivative Preview
-
-The slope of $f^{-1}$ at a point is the **reciprocal** of the slope of $f$:
-
-If $f'(a) = m$, then $(f^{-1})'(f(a)) = \\frac{1}{m}$
       `
     },
     {
@@ -97,7 +91,7 @@ If $f'(a) = m$, then $(f^{-1})'(f(a)) = \\frac{1}{m}$
           },
           {
             question: 'Which is a self-inverse (involution)?',
-            options: ['$f(x) = x^2$', '$f(x) = 1/x$', '$f(x) = x+1$', '$f(x) = \\ln x$'],
+            options: ['$f(x) = x^2$', '$f(x) = 1/x$', '$f(x) = x + 1$', '$f(x) = \\ln x$'],
             correctAnswer: 1,
             explanation: '$f(f(x)) = 1/(1/x) = x$.'
           },
@@ -184,10 +178,10 @@ $f(x)=2x+5, g(x)=\\frac{x-5}{2}$
             explanation: '$f(g(x))=(\\sqrt[3]{x-1})^3+1=x-1+1=x$. $g(f(x))=\\sqrt[3]{x^3}=x$. Both hold.'
           },
           {
-            question: 'If $f$ has slope $4$ at $x=1$ and $f(1)=3$, then $(f^{-1})$ has what slope at $x=3$?',
-            options: ['$4$', '$-4$', '$1/4$', '$-1/4$'],
-            correctAnswer: 2,
-            explanation: 'Slope of inverse = $1/m = 1/4$.'
+            question: 'If $f(1) = 3$ and $f(5) = 11$, what is the average rate of change of $f^{-1}$ on the interval $[3, 11]$?',
+            options: ['$\\frac{1}{2}$', '$-\\frac{1}{2}$', '$\\frac{11 - 3}{5 - 1}$', '$-\\frac{5 - 1}{11 - 3}$'],
+            correctAnswer: 0,
+            explanation: 'Swapping inputs and outputs gives $f^{-1}(3) = 1$ and $f^{-1}(11) = 5$, so the rate is $\\frac{5 - 1}{11 - 3} = \\frac{1}{2}$, the reciprocal of the rate of $f$, which is $2$. The fraction $\\frac{11-3}{5-1} = 2$ is the rate of $f$ itself, not of its inverse.'
           }
         ]
       }
