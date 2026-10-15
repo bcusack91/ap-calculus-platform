@@ -5,184 +5,244 @@ export const psychGeneticsPart5Data = {
       id: 'genetics-behavior-p5-s1-intro',
       type: 'text' as const,
       content: `
-      # 🧠 Genetics and Behavior
+# 🧠 Genetics and Behavior
 
-      **Part 5 of 7 — Epigenetics and Development**
+**Part 5 of 7 — Heritability and Its Misreadings**
 
-      In this part, you will connect core psychological vocabulary to realistic contexts and AP-style reasoning. Focus on mechanism first, then evidence.
+> 🔑 **Key Concept:** **Heritability** is an estimate of how much of the **variation** (the differences) in a trait **among people in a particular population** can be attributed to **genetic differences** among them, in that population's range of environments. It describes a group, not a person.
 
-      ### Core Definitions
-      - **adoption study**: design comparing adoptees to biological and adoptive relatives
-      - **nonshared environment**: experiences that make siblings different from one another
-      - **heritability**: the proportion of trait variation in a population attributable to genetic differences
+### Where the number comes from
 
-      ### Concrete Real-World Example
-      A team is studying stress exposure and epigenetic markers across adolescence. They operationalize variables, compare plausible explanations, and look for the interpretation that best matches observed behavior instead of relying on intuition.
+Heritability is a summary of the comparisons you practiced in Part 4:
 
-      ### Why This Matters
-      Strong AP responses define terms precisely, apply them to evidence, and justify why one interpretation is stronger than alternatives.
+| Pattern in twin and adoption data | Heritability estimate |
+|---|---|
+| Identical twins much more similar than fraternal twins; separated identical twins still alike | **Higher** |
+| Identical and fraternal twins about equally similar; adoptive relatives alike | **Lower** |
+
+Heritability is reported from **0 to 1** (or 0% to 100%).
+
+- **Near 0:** in this population, people's differences on the trait are mostly not tied to genetic differences.
+- **Near 1:** in this population, people's differences on the trait are mostly tied to genetic differences.
+
+### Approximate estimates you may see
+
+| Trait | Approximate heritability | Note |
+|---|---|---|
+| Height (well-nourished populations) | about 0.80 | Lower where nutrition varies widely |
+| Intelligence test scores | about 0.50 | Rises from childhood into adulthood; varies by population |
+| Big Five personality traits | about 0.40 to 0.50 | Unique experiences account for much of the rest |
+
+These are rough figures drawn from many studies. The exact value depends on the age, place, and environments of the people studied, which is the first clue to how heritability is misread.
+
+### Read the definition word by word
+
+| Phrase in the definition | What it rules out |
+|---|---|
+| "**variation** among people" | It says nothing about how a trait develops inside one person |
+| "in a **particular population**" | It cannot be carried over to other populations or eras |
+| "in that population's **range of environments**" | It changes when environments change |
+| "**attributed to** genetic differences" | It is a statistical estimate, not a list of genes or a mechanism |
       `
     },
     {
       id: 'genetics-behavior-p5-s2-check',
       type: 'multiple-choice' as const,
       content: `
-      **Concept Check** 🎯
+**Concept Check — What the Number Says** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'In a study about stress exposure and epigenetic markers across adolescence, participants change behavior after repeatedly seeing the same cue. Which concept is the best fit?',
+            question: 'A textbook reports that the heritability of intelligence test scores is about 0.50. Which statement is a correct interpretation?',
             options: [
-              'adoption study',
-              'heritability',
-              'genotype',
-              'nonshared environment'
-            ],
-            correctAnswer: 0,
-            explanation: 'adoption study is correct because it directly matches this mechanism: design comparing adoptees to biological and adoptive relatives. The distractors describe related but different processes.'
-          },
-          {
-            question: 'Researchers report that behavior shifts when participants receive a specific cue and then justify their choices afterward. Which concept best explains that pattern?',
-            options: [
-              'nonshared environment',
-              'polygenic',
-              'heritability',
-              'phenotype'
+              'Half of each person\'s intelligence comes from genes and the other half from the environment',
+              'Any child will score within half of a parent\'s score by the time of adulthood',
+              'Intelligence is half fixed at birth and half open to change through education',
+              'About half of the score differences among people studied are tied to genetic differences'
             ],
             correctAnswer: 3,
-            explanation: 'phenotype is the strongest match here (observable characteristics produced by genes and environment). The other options do not explain both the cue-driven shift and the observed response pattern as directly.'
+            explanation: 'Heritability describes the share of differences among people in a population that is linked to genetic differences. It cannot be split inside one person, and it does not say how much of a trait is fixed.'
+          },
+          {
+            question: 'Researchers estimate the heritability of a trait from twin data. Which result would lead to the highest estimate?',
+            options: [
+              'Identical twins are far more alike than fraternal twins are',
+              'Identical and fraternal twins raised together are equally similar',
+              'Adoptive siblings are as alike as biological siblings',
+              'Fraternal twins are more alike than identical twins are'
+            ],
+            correctAnswer: 0,
+            explanation: 'A large gap between identical-twin and fraternal-twin similarity means extra genetic similarity brings extra trait similarity, which raises the heritability estimate. Equal similarity across twin types points to environment.'
           }
         ]
       }
     },
     {
-      id: 'genetics-behavior-p5-s3-deep',
+      id: 'genetics-behavior-p5-s3-misreadings',
       type: 'text' as const,
       content: `
-      ## Deep Dive: Comparing Explanations with Evidence
+## 🚫 Four Misreadings of Heritability
 
-      When analyzing stress exposure and epigenetic markers across adolescence, the best interpretation ties a clear psychological mechanism to measurable evidence.
+### Misreading 1: "Heritability applies to me."
 
-      | Theory / Concept | Core claim | Typical evidence | Common limitation |
-      |---|---|---|---|
-      | adoption study | design comparing adoptees to biological and adoptive relatives | experimental manipulation with random assignment | possible demand characteristics |
-      | nonshared environment | experiences that make siblings different from one another | longitudinal trend with repeated measurement | third-variable risk in natural settings |
-      | heritability | the proportion of trait variation in a population attributable to genetic differences | cross-sectional comparison with matched groups | limited generalizability across cultures |
-      | genotype | an organism's genetic makeup | mixed-method evidence combining survey and behavioral indicators | measurement validity depends on construct quality |
+A heritability of 0.50 for intelligence does **not** mean half of your intelligence came from your genes. Within one person, genes and experience are intertwined from conception on; there is no way to split a single person's trait into percentages, just as you cannot say how much of a rectangle's area comes from its length and how much from its width.
 
-      ### Interpretation Strategy
-      1. Name the mechanism before describing outcomes.
-      2. Match the claim to the strongest available evidence type.
-      3. Acknowledge one limitation and explain whether it changes the conclusion.
+### Misreading 2: "Heritability is a fixed property of a trait."
 
-      This structure helps you earn reasoning points on free-response and avoid vague claims.
+Heritability depends on how much the **environment varies** in the population studied.
+
+- If everyone receives nearly the **same** environment (excellent schools, nutrition, and health care for all), environmental differences shrink, so the differences that remain are more tied to genes. **Heritability goes up.**
+- If environments vary **enormously** (some children are malnourished or never attend school), environment creates large differences. **Heritability goes down.**
+
+**Real example:** In a 2003 study of twins, **Eric Turkheimer** and colleagues found that the heritability of children's IQ scores was close to zero in the poorest families and much higher in affluent families. In impoverished environments, differences in opportunity swamped genetic differences. (The pattern has appeared in several U.S. samples but less consistently in other countries.)
+
+> 💡 **Counterintuitive consequence:** making society **fairer**, by giving everyone similar opportunities, would make the heritability of school achievement **higher**, not lower.
+
+### Misreading 3: "High heritability means the trait cannot change."
+
+Heritability is about **differences among people**, not about the **average level** of a trait.
+
+- **Height** is highly heritable in well-nourished populations, yet average height rose substantially across the 20th century in many countries as nutrition and health improved.
+- **Intelligence test scores** rose across generations during the 20th century in many countries (the **Flynn effect**), far too quickly for genetic change to explain.
+- **PKU** (Part 1) is entirely inherited, yet a diet prevents its effects.
+
+### Misreading 4: "Heritability within groups explains differences between groups."
+
+Biologist **Richard Lewontin** offered a famous analogy:
+
+| | Pot A | Pot B |
+|---|---|---|
+| Seeds | A random handful from one genetically varied sack | Another random handful from the same sack |
+| Soil | Rich, fully nourished | Poor, lacking nutrients |
+| Within the pot | Height differences reflect genetic differences, since all plants share the same soil | Same: heritability is high within this pot too |
+| Between the pots | Pot A's plants are taller on average | The **entire** difference between pots is caused by the soil |
+
+Heritability can be high **within** each group while the difference **between** groups is entirely environmental. So a high heritability for test scores within a population says nothing about the cause of average differences between groups that live in different conditions.
+
+### A bonus puzzle: low heritability does not mean "not genetic"
+
+Nearly every human is born with ten fingers because of the genes all humans share. Among people who have fewer, the cause is usually an accident or a prenatal problem, not a genetic difference. So the heritability of finger number is **low**, even though building fingers is completely genetic. Heritability tracks **differences**, not development.
       `
     },
     {
-      id: 'genetics-behavior-p5-s4-input',
-      type: 'input-boxes' as const,
-      content: `
-      **Applied Recall (exact term answers)** ✍️
-
-      1) Write the concept that matches: design comparing adoptees to biological and adoptive relatives
-
-      2) Write the concept that matches: experiences that make siblings different from one another
-
-      3) Write the concept that matches: the proportion of trait variation in a population attributable to genetic differences
-
-      Use the exact vocabulary term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['adoption study', 'nonshared environment', 'heritability'],
-        hint1: 'Starts with: A',
-        hint2: 'Starts with: N',
-        hint3: 'Starts with: H',
-        explanation: 'Expected answers: adoption study, nonshared environment, and heritability. Each response should use the precise term connected to the definition cue.'
-      }
-    },
-    {
-      id: 'genetics-behavior-p5-s5-dropdown',
+      id: 'genetics-behavior-p5-s4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Model Matching** 🔎
+**Predict the Change in Heritability** 🔎
+
+Choose the outcome that completes each sentence.
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Select the concept that best matches: design comparing adoptees to biological and adoptive relatives',
-            options: ['genotype', 'adoption study', 'phenotype', 'polygenic']
+            label: 'A country gives every child the same high-quality schooling and nutrition. The heritability of reading scores in that country would most likely _____.',
+            options: ['increase', 'decrease', 'stay exactly the same', 'fall to zero']
           },
           {
-            label: 'Select the concept that best matches: experiences that make siblings different from one another',
-            options: ['nonshared environment', 'genotype', 'adoption study', 'phenotype']
+            label: 'A study shifts from a wealthy suburb to a region where some children attend school and others cannot. The heritability of test scores in the new sample would most likely _____.',
+            options: ['increase', 'decrease', 'stay exactly the same', 'rise to one']
           },
           {
-            label: 'Select the concept that best matches: the proportion of trait variation in a population attributable to genetic differences',
-            options: ['heritability', 'genotype', 'adoption study', 'nonshared environment']
+            label: 'Lewontin\'s seed analogy shows that a high heritability within each pot tells us _____ about why the two pots differ on average.',
+            options: ['everything', 'nothing', 'the genetic share', 'the exact cause']
           }
         ],
-        correctAnswers: ['adoption study', 'nonshared environment', 'heritability'],
-        hint1: 'Start by matching the key mechanism in each prompt to the most specific concept.',
-        hint2: 'Eliminate options that describe a different level of analysis (biological vs cognitive vs social).',
-        hint3: 'Use the definition language from this part to avoid near-miss terms.',
-        explanation: 'Correct matches are adoption study, nonshared environment, and heritability. These choices align with the mechanism-language in each definition, not just broad topic similarity.'
+        correctAnswers: ['increase', 'decrease', 'nothing'],
+        hint1: 'If environments become more alike, which source of differences is left?',
+        hint2: 'Large differences in opportunity create large environmental differences.',
+        hint3: 'In the analogy, the soil, not the seeds, produced the gap between pots.',
+        explanation: 'Equalizing environments shrinks environmental variation, so heritability rises; widening environmental differences lowers it. Heritability within groups says nothing about the causes of average differences between groups, which in the seed analogy are entirely environmental.'
       }
     },
     {
-      id: 'genetics-behavior-p5-s6-strategy',
+      id: 'genetics-behavior-p5-s5-misconceptions',
       type: 'text' as const,
       content: `
-      ## Common Misconceptions and Exam Strategy
+## 🧭 Topic-Wide Misconceptions Table
 
-      ### Misconceptions to Avoid
-      - High heritability does not mean a trait is fixed or unchangeable.
-      - Heritability applies to populations, not to an individual person.
-      - Genes set probabilities, not precise destinies, for complex behavior.
-      - Shared family context does not explain all sibling similarity.
+These are the errors that AP questions on heredity and environment are built to catch.
 
-      ### AP Strategy Moves
-      - Define the target concept in one precise sentence before giving examples.
-      - In scenario questions about stress exposure and epigenetic markers across adolescence, identify the manipulated variable and measured outcome.
-      - Use one competing explanation and explain why it is weaker.
-      - If data are provided, mention trend direction and at least one design limitation.
+| Misconception | Reality |
+|---|---|
+| "Nature **or** nurture" — one has to win | They **interact**; each changes the effect of the other (Part 1) |
+| Genetic means unchangeable | PKU, height, and rising test scores show environments change genetic outcomes |
+| A trait is "X% genetic" for a person | Heritability describes **variation in a population**, never one individual |
+| Heritability is a fixed number for a trait | It changes with the population and the range of environments |
+| High heritability within groups explains gaps between groups | Lewontin's seeds: between-group gaps can be fully environmental |
+| Family resemblance proves genetic influence | Families share homes as well as genes; you need twin or adoption designs |
+| Identical twins prove everything | Even identical twins raised together differ; unique experiences matter |
+| "It evolved, so it is natural and right" | Explaining an origin does not justify a behavior or make it fixed (Part 2) |
 
-      This combination of precision and evidence improves both multiple-choice accuracy and free-response scoring.
+### The eugenics connection
+
+The eugenics movement (Part 2) made the same mistakes this part warns against:
+
+1. It treated **group** averages as proof of **individual** worth.
+2. It assumed inherited traits were **fixed** regardless of environment.
+3. It explained **between-group** differences with heredity while ignoring vast differences in schooling, language, and poverty.
+
+> 🔑 **AP Connection:** Expect at least one question that offers a tempting misreading of heritability as an answer choice. The safe test: does the statement talk about **differences among people in a population**? If it talks about one person, a fixed trait, or a gap between groups, it is a misreading.
       `
     },
     {
-      id: 'genetics-behavior-p5-s7-applied',
+      id: 'genetics-behavior-p5-s6-applied',
       type: 'multiple-choice' as const,
       content: `
-      **Applied Scenarios** 🎯
+**Applied Scenarios — Catch the Misreading** 🔬
       `,
       exercise: {
         questions: [
           {
-            question: 'A team investigating stress exposure and epigenetic markers across adolescence finds that participants rely on a persuasive cue when they are distracted, but use argument quality when they are highly focused. Which concept best captures the focused-processing route?',
+            question: 'A politician argues: "Studies show that intelligence is highly heritable, so spending money on early-childhood education is a waste." Which response best identifies the flaw?',
             options: [
-              'genotype',
-              'adoption study',
-              'heritability',
-              'nonshared environment'
-            ],
-            correctAnswer: 0,
-            explanation: 'genotype is best because it reflects this mechanism (an organism\'s genetic makeup). The other options describe different levels of explanation or related constructs.'
-          },
-          {
-            question: 'After an intervention, scores improve in the treatment group but not in a matched comparison group. Which interpretation is most defensible for the targeted mechanism?',
-            options: [
-              'nonshared environment',
-              'polygenic',
-              'phenotype',
-              'heritability'
+              'Heritability is too low for intelligence to be studied in any population',
+              'Education can change a person\'s genes, so spending would raise intelligence',
+              'High heritability does not mean a trait\'s level is unaffected by environment',
+              'Intelligence is not heritable at all, so only education affects intelligence'
             ],
             correctAnswer: 2,
-            explanation: 'phenotype is the strongest interpretation because it maps to the measured pattern and proposed mechanism: observable characteristics produced by genes and environment. Good AP reasoning also notes alternative explanations and design limits.'
+            explanation: 'Heritability describes differences among people in current environments; it does not show that improving environments cannot raise the trait, as rising test scores and heights across generations demonstrate.'
+          },
+          {
+            question: 'Two populations differ in average test scores, and within each population the heritability of the scores is high. What can be concluded about the cause of the gap between the populations?',
+            options: [
+              'The gap must stem from genetic causes',
+              'The gap must be largely caused by genes',
+              'The gap must be partly caused by genes',
+              'The cause is not shown by these data'
+            ],
+            correctAnswer: 3,
+            explanation: 'High heritability within each group says nothing about why two groups differ; as in Lewontin\'s seed analogy, a between-group gap can be entirely environmental even when within-group heritability is high.'
+          },
+          {
+            question: 'In a practice study, the heritability of a reading skill is 0.30 in one country and 0.70 in another. Which explanation best fits this difference?',
+            options: [
+              'Schooling varies more in the first country, so environment adds more variation',
+              'Children in the second country inherited more reading genes from parents',
+              'The first country\'s children learned to read before their genes took effect',
+              'Reading skill is genetic in one country but environmental in the other one'
+            ],
+            correctAnswer: 0,
+            explanation: 'Heritability falls when environments vary widely, because environmental differences then account for more of the differences between children. The estimate describes each population and its environments, not a fixed property of reading or of anyone\'s genes.'
           }
         ]
       }
+    },
+    {
+      id: 'genetics-behavior-p5-s7-connection',
+      type: 'text' as const,
+      content: `
+### 🎯 AP Connection: Writing About Heritability
+
+When you use heritability in a response, keep three words in your sentence: **differences**, **population**, and **environment**.
+
+> "A high heritability estimate means that, in the population studied and its range of environments, a large share of the **differences** among people in the trait is linked to genetic differences."
+
+Never write that a trait is "70% genetic in a person," and never use heritability to explain gaps between groups.
+
+**Next up — Part 6:** Put Parts 1 to 5 to work on AP-style AAQ and EBQ practice.
+      `
     }
   ]
 }
