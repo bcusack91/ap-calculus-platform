@@ -225,14 +225,14 @@ $$K = e^{85.66} = \\boxed{1.6 \\times 10^{37}}$$
           },
           {
             label: 'For a spontaneous cell, K is',
-            options: ['less than 1', 'equal to 1', 'greater than 1', 'zero']
+            options: ['less than 1', 'equal to 1', 'greater than 1', 'negative']
           },
           {
             label: 'The $n$ in $\\Delta G^\\circ = -nFE^\\circ$ represents',
-            options: ['moles of reactant', 'moles of electrons transferred', 'moles of product', 'Avogadro\'s number']
+            options: ['moles of reactant', 'moles of electrons', 'moles of product', 'Avogadro\'s number']
           }
         ],
-        correctAnswers: ['negative', 'positive', 'greater than 1', 'moles of electrons transferred'],
+        correctAnswers: ['negative', 'positive', 'greater than 1', 'moles of electrons'],
         hint1: 'Spontaneous = thermodynamically favorable = $\\Delta G < 0$.',
         hint2: 'Galvanic cells produce positive voltage.',
         hint3: 'Products favored → $K > 1$.',
@@ -250,19 +250,19 @@ $$K = e^{85.66} = \\boxed{1.6 \\times 10^{37}}$$
           {
             question: 'A cell has $E^\\circ = 0.00$ V. What can you conclude?',
             options: [
-              '$\\Delta G^\\circ = 0$ and $K = 1$ — the system is at equilibrium under standard conditions',
-              'The cell is broken',
+              '$\\Delta G^\\circ = 0$ and $K = 1$; no direction is favored',
+              '$\\Delta G^\\circ = 0$ and $K = 0$',
               '$\\Delta G^\\circ < 0$ and $K > 1$',
               '$\\Delta G^\\circ > 0$ and $K < 1$'
             ],
             correctAnswer: 0,
-            explanation: '$E^\\circ = 0 \\Rightarrow \\Delta G^\\circ = -nF(0) = 0 \\Rightarrow K = 1$. The reaction is at equilibrium under standard conditions — neither direction is favored.'
+            explanation: '$E^\\circ = 0 \\Rightarrow \\Delta G^\\circ = -nF(0) = 0 \\Rightarrow K = 1$. The reaction is at equilibrium under standard conditions — neither direction is favored. $K = 0$ would require $\\Delta G^\\circ = +\\infty$, and nonzero $\\Delta G^\\circ$ values would need a nonzero $E^\\circ$.'
           },
           {
             question: 'Why does multiplying a half-reaction by 2 NOT change $E^\\circ$ but DOES change $\\Delta G^\\circ$?',
             options: [
               '$E^\\circ$ is intensive; $\\Delta G^\\circ$ is extensive',
-              '$E^\\circ$ depends on concentration; $\\Delta G^\\circ$ does not',
+              '$\\Delta G^\\circ$ is fixed; only $E^\\circ$ scales',
               'Both change equally',
               'Neither changes'
             ],

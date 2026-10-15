@@ -118,12 +118,11 @@ For the cell: Fe(s) | $Fe^{2+}(aq)$ || $Cu^{2+}(aq)$ | Cu(s)
 **3)** $\\Delta G^\\circ = ?$ (in kJ, to nearest whole number)
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['0.78', '2', '-150'],
+        questions: [{ question: '(1)', answer: '0.78', acceptableAnswers: ['0.78'] }, { question: '(2)', answer: '2', acceptableAnswers: ['2'] }, { question: '(3)', answer: '-151', acceptableAnswers: ['-151', '-150.5'] }],
         hint1: '$E^\\circ_{\\text{cell}} = 0.34 - (-0.44)$',
         hint2: 'Both Fe → $Fe^{2+}$ and $Cu^{2+}$ → Cu involve 2 electrons.',
         hint3: '$\\Delta G^\\circ = -(2)(96485)(0.78)$. Convert to kJ.',
-        explanation: '1) $E^\\circ = 0.34 - (-0.44) = 0.78$ V. 2) $n = 2$. 3) $\\Delta G^\\circ = -(2)(96485)(0.78) = -150{,}517$ J $\\approx -150$ kJ (actually -151 kJ, but -150 is accepted).'
+        explanation: '1) $E^\\circ = 0.34 - (-0.44) = 0.78$ V. 2) $n = 2$. 3) $\\Delta G^\\circ = -(2)(96485)(0.78) = -150{,}517$ J $\\approx -151$ kJ.'
       }
     },
     {

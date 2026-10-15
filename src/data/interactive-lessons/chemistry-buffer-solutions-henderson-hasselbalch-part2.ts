@@ -124,13 +124,13 @@ Without the buffer, adding 0.020 mol $HCl$ to 1.0 L water would give pH = $-\\lo
           {
             question: 'In the Henderson-Hasselbalch equation, moles can be used instead of concentrations because:',
             options: [
-              'Moles are always more accurate',
-              'Both species share the same solution volume, which cancels',
-              'Concentrations are not needed for buffers',
-              'The equation only works with moles'
+              'Moles are always more accurate than molar concentrations',
+              'The shared volume cancels in the ratio',
+              'Concentrations are not needed once a buffer has formed',
+              'The Henderson-Hasselbalch equation is defined in moles'
             ],
             correctAnswer: 1,
-            explanation: '$\\log([A^-]/[HA]) = \\log((n_{A^-}/V)/(n_{HA}/V)) = \\log(n_{A^-}/n_{HA})$. The volume $V$ cancels when taking the ratio.'
+            explanation: '$\\log([A^-]/[HA]) = \\log((n_{A^-}/V)/(n_{HA}/V)) = \\log(n_{A^-}/n_{HA})$. Both species are in the same solution, so the volume $V$ cancels when taking the ratio. The equation itself is written in concentrations; moles work only because of this cancellation.'
           }
         ]
       }
@@ -184,7 +184,7 @@ A buffer has 0.20 mol $HF$ and 0.20 mol $NaF$ in 1.0 L. ($pK_a = 3.17$)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['3.17', '0.15', '3.05'],
+        correctAnswers: ['3.17', '0.15', '2.95'],
         hint1: '$pH = pK_a + \\log(0.20/0.20) = pK_a + 0$.',
         hint2: '$F^- + H^+ \\rightarrow HF$: 0.20 - 0.050 = 0.15 mol $F^-$.',
         hint3: '$pH = 3.17 + \\log(0.15/0.25)$.',
@@ -227,18 +227,18 @@ After destruction, treat as a simple strong acid or base problem!
         dropdowns: [
           {
             label: 'Adding $H^+$ to a buffer converts',
-            options: ['HA to $A^{-}$', '$A^{-}$ to HA', '$H_{2}O$ to $OH^{-}$', 'nothing']
+            options: ['HA to $A^{-}$', '$A^{-}$ to HA', '$H_{2}O$ to $OH^{-}$', 'HA to $H_{2}A^{+}$']
           },
           {
             label: 'The pH of a buffer where $[A^-] > [HA]$ is',
-            options: ['less than $pK_{a}$', 'equal to $pK_{a}$', 'greater than $pK_{a}$', 'always 7']
+            options: ['less than $pK_{a}$', 'equal to $pK_{a}$', 'greater than $pK_{a}$', 'equal to $pK_{b}$']
           },
           {
             label: 'A buffer is destroyed when',
-            options: ['any acid is added', 'one component is completely consumed', 'pH changes at all', 'water is added']
+            options: ['any strong acid is added', 'one component is used up', 'the pH changes at all', 'it is diluted with water']
           }
         ],
-        correctAnswers: ['$A^{-}$ to HA', 'greater than $pK_{a}$', 'one component is completely consumed'],
+        correctAnswers: ['$A^{-}$ to HA', 'greater than $pK_{a}$', 'one component is used up'],
         hint1: '$A^- + H^+ \\rightarrow HA$.',
         hint2: '$\\log([A^-]/[HA]) > 0$ when $[A^-] > [HA]$.',
         hint3: 'The buffer needs both components to function.',
@@ -259,10 +259,10 @@ After destruction, treat as a simple strong acid or base problem!
               'A buffer with pH slightly above $pK_a$',
               'A buffer with pH slightly below $pK_a$',
               'Not a buffer — excess $OH^-$ present',
-              'Pure water'
+              'A neutral solution — all acid neutralized'
             ],
             correctAnswer: 2,
-            explanation: '$HA + OH^- \\rightarrow A^- + H_2O$. Only 0.10 mol $HA$ is available, so 0.10 mol $OH^-$ reacts and 0.02 mol $OH^-$ is excess. The buffer is destroyed — treat as an excess strong base problem.'
+            explanation: '$HA + OH^- \\rightarrow A^- + H_2O$. Only 0.10 mol $HA$ is available, so 0.10 mol $OH^-$ reacts and 0.02 mol $OH^-$ is excess. The buffer is destroyed — treat as an excess strong base problem. With excess $OH^-$ present the solution is basic, not neutral.'
           },
           {
             question: 'Adding 0.01 mol $NaOH$ to a buffer with 0.50 mol $HA$ and 0.50 mol $A^-$ changes the $[A^-]/[HA]$ ratio from 1.00 to:',

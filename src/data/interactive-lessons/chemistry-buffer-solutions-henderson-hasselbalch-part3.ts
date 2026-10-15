@@ -131,13 +131,13 @@ This is a critically important result: **the pH of a buffer with equal concentra
           {
             question: 'At what ratio of $[A^-]/[HA]$ does pH = $pK_a$?',
             options: [
-              '0',
+              '0 (no conjugate base)',
               '1 (equal concentrations)',
-              '10',
-              '100'
+              '10 (base in excess)',
+              '0.1 (acid in excess)'
             ],
             correctAnswer: 1,
-            explanation: 'When $[A^-] = [HA]$, the ratio is 1, $\\log(1) = 0$, and $pH = pK_a + 0 = pK_a$.'
+            explanation: 'When $[A^-] = [HA]$, the ratio is 1, $\\log(1) = 0$, and $pH = pK_a + 0 = pK_a$. A ratio of 10 gives $pH = pK_a + 1$, a ratio of 0.1 gives $pH = pK_a - 1$, and with no conjugate base at all the solution is not a buffer.'
           },
           {
             question: 'Which buffer has the lowest pH?',
@@ -145,10 +145,10 @@ This is a critically important result: **the pH of a buffer with equal concentra
               '$pK_a = 4.74$, $[A^-]/[HA] = 0.10$',
               '$pK_a = 4.74$, $[A^-]/[HA] = 1.0$',
               '$pK_a = 4.74$, $[A^-]/[HA] = 10$',
-              '$pK_a = 6.35$, $[A^-]/[HA] = 1.0$'
+              '$pK_a = 6.35$, $[A^-]/[HA] = 0.10$'
             ],
             correctAnswer: 0,
-            explanation: '$pH = 4.74 + \\log(0.10) = 4.74 + (-1.00) = 3.74$. This is the lowest. The other values: 4.74, 5.74, and 6.35.'
+            explanation: '$pH = 4.74 + \\log(0.10) = 4.74 + (-1.00) = 3.74$. This is the lowest. The other values: 4.74, 5.74, and $6.35 - 1.00 = 5.35$.'
           }
         ]
       }
@@ -166,8 +166,7 @@ This is a critically important result: **the pH of a buffer with equal concentra
 **3)** For a buffer with $pK_a = 4.74$ at pH = 5.50, what is $[A^-]/[HA]$? (1 decimal place)
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['3.35', '8.95', '5.8'],
+        questions: [{ question: '(1)', answer: '3.35', acceptableAnswers: ['3.35'] }, { question: '(2)', answer: '8.95', acceptableAnswers: ['8.95'] }, { question: '(3)', answer: '5.8', acceptableAnswers: ['5.8', '5.75', '5.754'] }],
         hint1: '$pH = 3.17 + \\log(0.60/0.40)$.',
         hint2: 'For $NH_3/NH_4^+$ buffer: $pH = pK_a(NH_4^+) + \\log([NH_3]/[NH_4^+])$.',
         hint3: '$5.50 = 4.74 + \\log(x)$; solve for $x = 10^{0.76}$.',
@@ -217,7 +216,7 @@ Both methods give the same answer. Method 1 is usually preferred for consistency
           },
           {
             label: 'The Henderson-Hasselbalch equation assumes',
-            options: ['strong acid dissociation', 'equilibrium has been reached', 'complete neutralization', 'pH = 7']
+            options: ['strong acid dissociation', 'equilibrium has been reached', 'complete neutralization', 'no common-ion effect']
           }
         ],
         correctAnswers: ['1', 'increase pH', 'equilibrium has been reached'],
@@ -238,13 +237,13 @@ Both methods give the same answer. Method 1 is usually preferred for consistency
           {
             question: 'A buffer is made by mixing 0.20 mol $NH_3$ and 0.30 mol $NH_4Cl$ in 1.0 L. ($pK_b = 4.74$) The pH is:',
             options: [
-              '8.90',
+              '4.56',
               '9.07',
               '9.25',
               '9.43'
             ],
             correctAnswer: 1,
-            explanation: '$pK_a(NH_4^+) = 14 - 4.74 = 9.25$. $pH = 9.25 + \\log(0.20/0.30) = 9.25 + \\log(0.667) = 9.25 + (-0.18) = 9.07$.'
+            explanation: '$pK_a(NH_4^+) = 14 - pK_b = 9.25$ ($K_b = 1.8 \\times 10^{-5}$ gives $pK_b = 4.745$, shown rounded as 4.74). $pH = 9.25 + \\log(0.20/0.30) = 9.25 + \\log(0.667) = 9.25 + (-0.18) = 9.07$. Using $pK_b$ in place of $pK_a$ gives 4.56, ignoring the ratio gives 9.25, and inverting the ratio ($\\log(0.30/0.20) = +0.18$) gives 9.43.'
           },
           {
             question: 'For an acetic acid buffer ($pK_a = 4.74$) to have pH = 4.74, you need:',

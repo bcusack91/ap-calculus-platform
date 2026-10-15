@@ -190,11 +190,11 @@ Use $F = 96{,}485$ C/mol, $M_{\\text{Ag}} = 107.87$ g/mol
         dropdowns: [
           {
             label: 'Faraday\'s constant F equals',
-            options: ['96,485 J/mol', '96,485 C/mol $e^{-}$', '96,485 V', '96,485 A']
+            options: ['96,485 J/mol $e^{-}$', '96,485 C/mol $e^{-}$', '96,485 V', '96,485 A']
           },
           {
             label: 'Doubling the current while keeping time constant will',
-            options: ['deposit half the mass', 'deposit the same mass', 'deposit double the mass', 'deposit no mass']
+            options: ['deposit half the mass', 'deposit the same mass', 'deposit double the mass', 'deposit four times the mass']
           },
           {
             label: 'For $Cu^{2+}$ + $2e^{-}$ → Cu, depositing 1 mol Cu requires',
@@ -223,13 +223,13 @@ Use $F = 96{,}485$ C/mol, $M_{\\text{Ag}} = 107.87$ g/mol
           {
             question: 'A current of 10.0 A runs for 30.0 min through a solution of $AuCl_{3}$. How many grams of Au deposit? ($Au^{3+}$ + $3e^{-}$ → Au, M_Au = 197.0 g/mol)',
             options: [
-              '12.2 g',
-              '36.7 g',
-              '6.1 g',
-              '1.2 g'
+              '12.3 g',
+              '36.8 g',
+              '18.4 g',
+              '0.204 g'
             ],
             correctAnswer: 0,
-            explanation: '$q = (10.0)(1800) = 18{,}000$ C. mol $e^- = 18{,}000/96{,}485 = 0.1866$. mol Au = $0.1866/3 = 0.0622$. $m = 0.0622 \\times 197.0 = 12.2$ g.'
+            explanation: '$q = (10.0)(1800) = 18{,}000$ C. mol $e^- = 18{,}000/96{,}485 = 0.1866$. mol Au = $0.1866/3 = 0.06219$. $m = 0.06219 \\times 197.0 = 12.3$ g. Using $n = 1$ gives 36.8 g, using $n = 2$ gives 18.4 g, and using $t = 30.0$ s instead of 1800 s gives 0.204 g.'
           },
           {
             question: 'Two cells are connected in series. Cell A deposits Ag (n=1) and Cell B deposits Cu (n=2). If 0.10 mol of Ag deposits, how much Cu deposits?',

@@ -82,13 +82,13 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
           {
             question: 'A cell has E° = 0.20 V and n = 1. K at 25°C is approximately:',
             options: [
-              '$10^{3}\\cdot^{4}$ ≈ 2500',
-              '$10^{6}\\cdot^{8}$ ≈ $6 \\times 10^{6}$',
-              '$10^{1}\\cdot^{7}$ ≈ 50',
-              '$10^{0}\\cdot^{2}$ ≈ 1.6'
+              '$10^{3.4} \\approx 2400$',
+              '$10^{6.8} \\approx 6 \\times 10^{6}$',
+              '$10^{1.7} \\approx 50$',
+              '$10^{0.2} \\approx 1.6$'
             ],
             correctAnswer: 0,
-            explanation: '$\\log K = (1)(0.20)/0.0592 = 3.38$. $K = 10^{3.38} \\approx 2400 \\approx 2500$.'
+            explanation: '$\\log K = (1)(0.20)/0.0592 = 3.38$. $K = 10^{3.38} \\approx 2400$. Using $n = 2$ doubles the exponent to 6.8, dividing by $2 \\times 0.0592$ halves it to 1.7, and skipping the division by 0.0592 leaves $10^{0.2}$.'
           }
         ]
       }

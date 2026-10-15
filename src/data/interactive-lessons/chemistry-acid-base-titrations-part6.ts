@@ -82,7 +82,7 @@ Same titration: 50.0 mL of 0.200 M $CH_3COOH$ with 0.200 M $NaOH$ ($pK_a = 4.74$
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['4.22', '5.36', '12.96'],
+        correctAnswers: ['4.14', '5.34', '12.26'],
         hint1: 'Mol $HA = 0.010 - 0.002 = 0.008$; mol $A^- = 0.002$. $pH = 4.74 + \\log(0.002/0.008)$.',
         hint2: 'Mol $HA = 0.010 - 0.008 = 0.002$; mol $A^- = 0.008$. $pH = 4.74 + \\log(0.008/0.002)$.',
         hint3: 'Excess $NaOH = 0.012 - 0.010 = 0.002$ mol in 110 mL. Find $[OH^-]$, then pH.',
@@ -101,8 +101,8 @@ A monoprotic weak acid $HA$ (25.0 mL, 0.100 M) is titrated with 0.100 M $NaOH$. 
 |--------------------|----|
 | 0.0 | 2.37 |
 | 12.5 | 3.75 |
-| 25.0 | 8.26 |
-| 37.5 | 12.52 |
+| 25.0 | 8.22 |
+| 37.5 | 12.30 |
 
 
 ---
@@ -112,7 +112,7 @@ A monoprotic weak acid $HA$ (25.0 mL, 0.100 M) is titrated with 0.100 M $NaOH$. 
 - **Equivalence point** is at 25.0 mL (equal $M$ and $V$)
 - **Half-equivalence** is at 12.5 mL → $pH = pK_a = 3.75$
 - $K_a = 10^{-3.75} = 1.8 \\times 10^{-4}$
-- **Equivalence pH = 8.26** (> 7, confirms weak acid)
+- **Equivalence pH = 8.22** (> 7, confirms weak acid)
 
 The acid is likely **formic acid** ($HCOOH$, $K_a = 1.8 \\times 10^{-4}$).
 
@@ -139,15 +139,15 @@ The acid is likely **formic acid** ($HCOOH$, $K_a = 1.8 \\times 10^{-4}$).
             explanation: '$pK_a = 4.74$ means $K_a = 10^{-4.74} = 1.8 \\times 10^{-5}$. This matches acetic acid. Formic acid has $pK_a = 3.75$, and $HCl$ is a strong acid (no $pK_a$ in this range).'
           },
           {
-            question: 'At point 37.5 mL in the table above, the pH = 12.52. This is because:',
+            question: 'At point 37.5 mL in the table above, the pH = 12.30. This is because:',
             options: [
-              'A buffer is present',
-              'The conjugate base is hydrolyzing',
-              'Excess $NaOH$ is present (12.5 mL past equivalence)',
-              'The acid was actually strong'
+              'A buffer of $HA$ and $A^-$ is still present',
+              '$A^-$ is hydrolyzing to produce $OH^-$',
+              'Excess $NaOH$ is present past equivalence',
+              'The acid was actually strong, not weak'
             ],
             correctAnswer: 2,
-            explanation: 'At 37.5 mL, we are 12.5 mL past the equivalence point (25.0 mL). The excess $NaOH$ dominates: $[OH^-] = 0.00125/0.0625 = 0.020$ M. $pOH = 1.70$. $pH = 12.30$. The high pH is due to excess strong base.'
+            explanation: 'At 37.5 mL, we are 12.5 mL past the equivalence point (25.0 mL). The excess $NaOH$ dominates: $[OH^-] = 0.00125/0.0625 = 0.020$ M. $pOH = 1.70$. $pH = 12.30$. Hydrolysis of $A^-$ contributes far less $OH^-$ than the excess strong base, and no $HA$ remains to form a buffer.'
           }
         ]
       }
@@ -185,11 +185,11 @@ A weak acid $HA$ ($pK_a = 6.50$) is titrated with $NaOH$.
         dropdowns: [
           {
             label: 'At the start of a weak acid titration, calculate pH using',
-            options: ['Henderson-Hasselbalch', 'ICE table with $K_{a}$', 'excess $OH^{-}$ method', 'pH = 7']
+            options: ['Henderson-Hasselbalch', 'ICE table with $K_{a}$', 'excess $OH^{-}$ method', 'ICE table with K_b']
           },
           {
             label: 'In the buffer region, calculate pH using',
-            options: ['Henderson-Hasselbalch', 'ICE table with $K_{a}$', 'excess $OH^{-}$ method', 'pH = 7']
+            options: ['Henderson-Hasselbalch', 'ICE table with $K_{a}$', 'excess $OH^{-}$ method', 'ICE table with K_b']
           },
           {
             label: 'At the equivalence point, calculate pH using',
@@ -197,7 +197,7 @@ A weak acid $HA$ ($pK_a = 6.50$) is titrated with $NaOH$.
           },
           {
             label: 'After the equivalence point, calculate pH using',
-            options: ['Henderson-Hasselbalch', 'ICE table with $K_{a}$', 'excess $OH^{-}$ method', 'pH = 7']
+            options: ['Henderson-Hasselbalch', 'ICE table with $K_{a}$', 'excess $OH^{-}$ method', 'ICE table with K_b']
           }
         ],
         correctAnswers: ['ICE table with $K_{a}$', 'Henderson-Hasselbalch', 'ICE table with K_b', 'excess $OH^{-}$ method'],
@@ -229,10 +229,10 @@ A weak acid $HA$ ($pK_a = 6.50$) is titrated with $NaOH$.
           {
             question: 'The AP exam asks: "Sketch the titration curve for a weak base titrated with a strong acid." The curve should:',
             options: [
-              'Start at low pH and increase to pH 7',
+              'Start at low pH and rise, with equivalence point above pH 7',
               'Start at high pH and decrease, with equivalence point below pH 7',
-              'Start at pH 7 and decrease',
-              'Look identical to a strong acid-strong base titration'
+              'Start at high pH and decrease, with equivalence point at pH 7',
+              'Start near pH 7 and decrease, with equivalence point below pH 7'
             ],
             correctAnswer: 1,
             explanation: 'Weak base starts at high pH. Adding strong acid decreases pH. At equivalence, only the conjugate acid ($BH^+$) remains — it hydrolyzes to give pH < 7. The curve is an inverted S-shape.'

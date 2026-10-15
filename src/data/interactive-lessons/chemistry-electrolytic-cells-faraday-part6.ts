@@ -77,12 +77,12 @@ This combines all steps into one equation.
             question: 'A current of 3.00 A flows through $CuSO_{4}$ solution for 2.00 hours. How many grams of Cu deposit? ($Cu^{2+}$ + $2e^{-}$ → Cu, M = 63.55 g/mol)',
             options: [
               '3.56 g',
-              '7.12 g',
-              '1.78 g',
+              '7.11 g',
+              '0.119 g',
               '14.2 g'
             ],
             correctAnswer: 1,
-            explanation: '$q = 3.00 \\times 7200 = 21{,}600$ C. $m = ItM/(nF) = 21{,}600 \\times 63.55/(2 \\times 96{,}485) = 1{,}372{,}680/192{,}970 = 7.11$ g $\\approx 7.12$ g.'
+            explanation: '$q = 3.00 \\times 7200 = 21{,}600$ C. $m = ItM/(nF) = 21{,}600 \\times 63.55/(2 \\times 96{,}485) = 1{,}372{,}680/192{,}970 = 7.11$ g. Using 1.00 h (3600 s) gives 3.56 g, using $n = 1$ gives 14.2 g, and entering $t = 120$ (minutes treated as seconds) gives 0.119 g.'
           },
           {
             question: 'In the electrolysis of aqueous KBr, the products are:',
@@ -100,11 +100,11 @@ This combines all steps into one equation.
             options: [
               '14.9 min',
               '29.8 min',
-              '44.7 min',
-              '7.5 min'
+              '59.6 min',
+              '0.497 min'
             ],
             correctAnswer: 1,
-            explanation: 'mol Ag = $10.0/107.87 = 0.09270$. mol $e^- = 0.09270$ (n = 1). $q = 0.09270 \\times 96{,}485 = 8{,}944$ C. $t = q/I = 8{,}944/5.00 = 1{,}789$ s $= 29.8$ min.'
+            explanation: 'mol Ag = $10.0/107.87 = 0.09270$. mol $e^- = 0.09270$ (n = 1). $q = 0.09270 \\times 96{,}485 = 8{,}944$ C. $t = q/I = 8{,}944/5.00 = 1{,}789$ s $= 29.8$ min. Treating Ag as $n = 2$ gives 59.6 min, halving the charge gives 14.9 min, and dividing by 60 twice gives 0.497 min.'
           }
         ]
       }
@@ -144,7 +144,7 @@ This combines all steps into one equation.
           },
           {
             label: 'To find the mass deposited, the one-step formula is',
-            options: ['m = It/nF', 'm = ItM/(nF)', 'm = nF/It', 'm = ItF/M']
+            options: ['m = It/(nF)', 'm = ItM/(nF)', 'm = nFM/(It)', 'm = ItF/(nM)']
           },
           {
             label: 'Two cells in series receive the same',
@@ -185,12 +185,12 @@ This combines all steps into one equation.
             question: 'To deposit the same mass of metal, which requires more charge: depositing Cu (n=2) or Al (n=3)?',
             options: [
               'Cu — because it has a higher molar mass',
-              'Al — because n=3 means 3 electrons per atom',
+              'Al — it has larger n and more atoms per gram',
               'They require the same charge',
-              'Cannot be determined without knowing the current'
+              'Cannot tell without the current'
             ],
             correctAnswer: 1,
-            explanation: 'For the same mass, Al requires more charge because $n = 3$ (3 electrons per Al atom) vs $n = 2$ for Cu. Even though Al is lighter, each atom needs 50% more electrons.'
+            explanation: 'Charge per gram is proportional to $n/M$. Cu: $2/63.55 = 0.031$ mol $e^-$ per gram. Al: $3/26.98 = 0.111$ mol $e^-$ per gram. Al needs about 3.5 times as much charge, both because each atom takes 3 electrons and because its lower molar mass means more atoms per gram. The current only changes how long it takes, not how much charge is needed.'
           }
         ]
       }

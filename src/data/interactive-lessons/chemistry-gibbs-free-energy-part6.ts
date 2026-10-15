@@ -69,10 +69,10 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
               '−229.8 kJ',
               '−170.2 kJ',
               '−200.0 kJ',
-              '+29,600 kJ'
+              '−30,000 kJ'
             ],
             correctAnswer: 0,
-            explanation: '$\\Delta G° = \\Delta H° - T\\Delta S° = -200 - (298)(0.100) = -200 - 29.8 = -229.8$ kJ. Remember to convert ΔS to kJ/K! Adding the $T\\Delta S$ term gives −170.2 kJ, ignoring entropy gives −200.0 kJ, and leaving ΔS in J/K gives +29,600 kJ.'
+            explanation: '$\\Delta G° = \\Delta H° - T\\Delta S° = -200 - (298)(0.100) = -200 - 29.8 = -229.8$ kJ. Remember to convert ΔS to kJ/K! Adding the $T\\Delta S$ term gives −170.2 kJ, ignoring entropy gives −200.0 kJ, and leaving ΔS in J/K gives $-200 - 29{,}800 \\approx -30{,}000$ kJ.'
           },
           {
             question: 'A reaction has K = $2.5 \\times 10^{-4}$ at 298 K. ΔG° is:',

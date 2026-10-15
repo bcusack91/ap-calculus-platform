@@ -116,7 +116,7 @@ Notice: pH jumps from ~4 to ~10 in just 0.2 mL! That\'s the dramatic equivalence
             options: [
               'Excess $H^+$',
               'Excess $OH^-$',
-              'A conjugate acid-base pair',
+              'An $HA/A^-$ buffer',
               'A neutral salt and water'
             ],
             correctAnswer: 3,
@@ -125,13 +125,13 @@ Notice: pH jumps from ~4 to ~10 in just 0.2 mL! That\'s the dramatic equivalence
           {
             question: 'Why does pH change so rapidly near the equivalence point?',
             options: [
-              'The indicator causes rapid change',
-              'Very little excess $H^+$ or $OH^-$ remains, so each drop of titrant has a large effect',
-              'The temperature changes rapidly',
-              'The reaction reverses direction'
+              'The indicator reacts with the titrant and speeds up the change',
+              'Little excess $H^+$ or $OH^-$ remains, so each drop matters',
+              'Heat released by neutralization raises the temperature sharply',
+              'The neutralization reaction reverses direction at that point'
             ],
             correctAnswer: 1,
-            explanation: 'Near equivalence, only tiny amounts of excess acid or base remain. Adding a single drop of titrant can change the $[H^+]$ by orders of magnitude, causing a dramatic pH jump.'
+            explanation: 'Near equivalence, only tiny amounts of excess acid or base remain. Adding a single drop of titrant can change the $[H^+]$ by orders of magnitude, causing a dramatic pH jump. The indicator only signals the change; it is present in amounts far too small to cause it.'
           }
         ]
       }
@@ -152,7 +152,7 @@ Titrating 25.0 mL of 0.200 M $HCl$ with 0.200 M $NaOH$:
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.70', '25.0', '12.76'],
+        correctAnswers: ['0.70', '25.0', '12.26'],
         hint1: '$pH = -\\log(0.200)$.',
         hint2: 'Equal concentrations, so equal volumes needed.',
         hint3: 'Excess $NaOH$: $0.006 - 0.005 = 0.001$ mol in 55.0 mL total.',
@@ -204,7 +204,7 @@ Higher concentrations → steeper jump at equivalence, but equivalence point is 
           },
           {
             label: 'Doubling the concentration of both acid and base will',
-            options: ['move equivalence to pH 14', 'make the steep region steeper', 'change equivalence pH', 'have no effect']
+            options: ['move equivalence to pH 14', 'make the steep region steeper', 'change equivalence pH', 'have no effect on the curve']
           },
           {
             label: 'After the equivalence point, the pH is determined by',
@@ -244,13 +244,13 @@ Higher concentrations → steeper jump at equivalence, but equivalence point is 
           {
             question: 'At the midpoint of a strong acid-strong base titration (half the volume to equivalence), the solution is:',
             options: [
-              'A buffer',
-              'At pH 7',
+              'A buffer, since half the acid is neutralized',
+              'At pH 7, because half the acid is gone',
               'Still acidic with excess $H^+$',
-              'At the equivalence point'
+              'At the equivalence point, by definition'
             ],
             correctAnswer: 2,
-            explanation: 'At the midpoint, half the acid has been neutralized. The other half remains as excess strong acid. Since $HCl$ is strong (not weak), this is NOT a buffer — it\'s simply a dilute strong acid solution.'
+            explanation: 'At the midpoint, half the acid has been neutralized. The other half remains as excess strong acid, so the solution is still acidic. Since $HCl$ is strong (not weak), this is NOT a buffer — it\'s simply a dilute strong acid solution; pH 7 is reached only at the equivalence point, which needs twice this volume.'
           }
         ]
       }

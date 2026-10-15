@@ -116,21 +116,21 @@ The weak acid **consumes** the added $OH^-$, converting it to conjugate base. Ag
           {
             question: 'Which of the following is a buffer solution?',
             options: [
-              '0.10 M $HCl$ and 0.10 M $NaCl$',
+              '0.10 M $HNO_3$ and 0.10 M $NaNO_3$',
               '0.10 M $CH_3COOH$ and 0.10 M $NaCH_3COO$',
-              '0.10 M $NaOH$ and 0.10 M $NaCl$',
-              '0.10 M $HCl$ and 0.10 M $NaOH$'
+              '0.10 M $CH_3COOH$ and 0.10 M $HCOOH$',
+              '0.10 M $NH_3$ and 0.10 M $NaOH$'
             ],
             correctAnswer: 1,
-            explanation: 'A buffer requires a weak acid and its conjugate base (or weak base and conjugate acid). $CH_3COOH/NaCH_3COO$ is a weak acid/conjugate base pair. $HCl$ is a strong acid — it cannot form a buffer.'
+            explanation: 'A buffer requires a weak acid and its conjugate base (or a weak base and its conjugate acid). $CH_3COOH/NaCH_3COO$ is a weak acid/conjugate base pair. $HNO_3/NaNO_3$ is a conjugate pair, but $HNO_3$ is a strong acid, so $NO_3^-$ is too weak a base to absorb added $H^+$. Two weak acids ($CH_3COOH$ and $HCOOH$) provide no base to absorb added $H^+$, and $NH_3/NaOH$ has no conjugate acid to absorb added $OH^-$.'
           },
           {
             question: 'When $H^+$ is added to an acetate buffer, which species reacts with it?',
             options: [
-              '$CH_3COOH$ (acetic acid)',
+              '$CH_3COOH$ (the acetic acid molecule)',
               '$CH_3COO^-$ (acetate ion)',
-              '$H_2O$ (water)',
-              '$Na^+$ (sodium ion)'
+              '$H_2O$ (the solvent water molecules)',
+              '$Na^+$ (the sodium spectator ion)'
             ],
             correctAnswer: 1,
             explanation: 'The conjugate base $CH_3COO^-$ reacts with added $H^+$: $CH_3COO^- + H^+ \\rightarrow CH_3COOH$. This consumes the acid and prevents a large pH change.'
@@ -138,13 +138,13 @@ The weak acid **consumes** the added $OH^-$, converting it to conjugate base. Ag
           {
             question: 'Why can\'t a strong acid and strong base mixture act as a buffer?',
             options: [
-              'They don\'t dissolve in water',
-              'They react completely — no equilibrium reservoir remains',
-              'They have the same pH',
-              'They don\'t contain ions'
+              'Their ions ($Na^+$, $Cl^-$) react too strongly with water to stay put',
+              'They react completely, leaving no weak acid–base pair',
+              'Mixing them always gives pH 7, whatever amounts are combined',
+              'They dissolve too slowly to respond to a small addition of acid'
             ],
             correctAnswer: 1,
-            explanation: 'Strong acid + strong base react completely (neutralization). After reaction, you have either excess strong acid, excess strong base, or a neutral salt — none of which can buffer.'
+            explanation: 'Strong acid + strong base react completely (neutralization). After reaction, you have either excess strong acid, excess strong base, or a neutral salt — none of which can buffer. $Na^+$ and $Cl^-$ barely react with water at all, and the pH after mixing depends on which reactant is in excess, so it is 7 only when the amounts match exactly.'
           }
         ]
       }
@@ -190,11 +190,11 @@ The weak acid **consumes** the added $OH^-$, converting it to conjugate base. Ag
           },
           {
             label: 'The blood buffer system uses',
-            options: ['HCl/NaCl', '$H_{2}CO_{3}/HCO_{3}^{-}$', 'NaOH/NaCl', '$H_{2}SO_{4}/NaHSO_{4}$']
+            options: ['$NH_{4}^{+}/NH_{3}$', '$H_{2}CO_{3}/HCO_{3}^{-}$', '$CH_{3}COOH/CH_{3}COO^{-}$', '$H_{2}SO_{4}/NaHSO_{4}$']
           },
           {
             label: 'A buffer works best when $[HA]$ and $[A^-]$ are',
-            options: ['very different', 'approximately equal', 'both very small', 'both zero']
+            options: ['very different in size', 'approximately equal', 'both very small', 'in a 10:1 ratio']
           }
         ],
         correctAnswers: ['buffer', 'weak acid', '$H_{2}CO_{3}/HCO_{3}^{-}$', 'approximately equal'],
@@ -238,10 +238,10 @@ For each buffer, identify the missing component:
           {
             question: 'A student mixes 0.10 M $NH_3$ with 0.10 M $NH_4Cl$. This solution:',
             options: [
-              'Is not a buffer — $NH_3$ is a weak base',
+              'Is not a buffer — $NH_3$ is a base, not an acid',
               'Is a buffer — it contains a weak base and its conjugate acid',
-              'Is a neutral solution',
-              'Will have pH = 7'
+              'Is neutral, since the base and its salt cancel',
+              'Will have pH = 7 because equal concentrations were mixed'
             ],
             correctAnswer: 1,
             explanation: '$NH_3$ (weak base) + $NH_4^+$ (conjugate acid from $NH_4Cl$) forms a buffer. Buffers can be made from either weak acid/conjugate base OR weak base/conjugate acid pairs.'
@@ -249,13 +249,13 @@ For each buffer, identify the missing component:
           {
             question: 'If 0.001 mol $HCl$ is added to 1.0 L of a buffer containing 0.10 mol $CH_3COOH$ and 0.10 mol $CH_3COO^-$, the pH will:',
             options: [
-              'Decrease dramatically',
-              'Increase dramatically',
+              'Decrease sharply, by about 4 units',
+              'Increase, since acetate is a base',
               'Decrease only slightly',
-              'Not change at all'
+              'Stay exactly the same as before'
             ],
             correctAnswer: 2,
-            explanation: 'The $CH_3COO^-$ reacts with $H^+$: 0.10 mol becomes 0.099 mol, while $CH_3COOH$ goes from 0.10 to 0.101 mol. The ratio changes very little, so pH changes very slightly.'
+            explanation: 'The $CH_3COO^-$ reacts with $H^+$: 0.10 mol becomes 0.099 mol, while $CH_3COOH$ goes from 0.10 to 0.101 mol. The ratio changes very little, so the pH drops slightly (by about 0.009 units). A 4-unit drop is what the same $HCl$ would do in pure water; the pH cannot rise when an acid is added, and it cannot stay exactly the same because the ratio does change a little.'
           }
         ]
       }

@@ -105,13 +105,13 @@ $$\\boxed{E^{\\circ} = \\frac{0.0592}{n}\\log K \\quad (\\text{at } 25°\\text{C
           {
             question: 'In the cell notation Pt | $H_{2}(g)$ | $H^{+}(aq)$ || $Cu^{2+}(aq)$ | Cu(s), the Pt electrode is:',
             options: [
-              'The cathode where $Cu^{2+}$ is reduced',
-              'The anode — an inert electrode for the hydrogen half-reaction',
-              'The salt bridge',
-              'Not needed'
+              'The cathode, where $Cu^{2+}$ is reduced',
+              'The anode, an inert surface for $H_2$ oxidation',
+              'The cathode, where $H^+$ is reduced',
+              'The anode, which is itself oxidized'
             ],
             correctAnswer: 1,
-            explanation: 'Pt is on the left (anode). It provides an inert surface for the oxidation of $H_{2}$: $\\text{H}_2 \\rightarrow 2\\text{H}^+ + 2e^-$.'
+            explanation: 'Pt is on the left (anode). It provides an inert surface for the oxidation of $H_{2}$: $\\text{H}_2 \\rightarrow 2\\text{H}^+ + 2e^-$. Pt itself is not oxidized, and $Cu^{2+}$ is reduced at the Cu cathode on the right.'
           }
         ]
       }
@@ -155,7 +155,7 @@ $$\\boxed{E^{\\circ} = \\frac{0.0592}{n}\\log K \\quad (\\text{at } 25°\\text{C
           },
           {
             label: 'In galvanic cell notation, the cathode is on the',
-            options: ['left', 'right', 'top', 'bottom']
+            options: ['left', 'right', 'middle', 'either side']
           },
           {
             label: 'F = 96,485 C/mol represents the charge of',
@@ -180,13 +180,13 @@ $$\\boxed{E^{\\circ} = \\frac{0.0592}{n}\\log K \\quad (\\text{at } 25°\\text{C
           {
             question: 'A student builds a cell with Zn and Ag electrodes but connects the wire backward (Ag to the terminal where Zn should connect). What happens?',
             options: [
-              'The cell works normally — wire direction doesn\'t matter',
-              'No current flows — the cell potential opposes the wiring',
-              'The cell runs in reverse, plating Zn onto Ag',
-              'Current flows from Zn to Ag regardless of wiring, producing +1.56 V'
+              'Electrons flow from Ag to Zn instead',
+              'No current flows, since the wiring is reversed',
+              'The cell runs in reverse, plating Zn onto the Ag',
+              'Electrons still flow from Zn to Ag, giving +1.56 V'
             ],
             correctAnswer: 3,
-            explanation: 'Electrons naturally flow from the more reactive metal (Zn, lower $E^\\circ$) to the less reactive (Ag, higher $E^\\circ$). The thermodynamic driving force determines the direction of current, not how the wire is connected. The cell produces +1.56 V.'
+            explanation: 'A wire has no built-in direction. Electrons flow from Zn (anode, lower $E^\\circ$) to Ag (cathode, higher $E^\\circ$) because the thermodynamic driving force sets the direction, not how the wire is attached, so the cell still produces +1.56 V. Only an external power source above 1.56 V could force the reaction to run in reverse.'
           },
           {
             question: 'Which statement about galvanic cells is FALSE?',

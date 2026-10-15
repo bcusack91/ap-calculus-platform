@@ -130,19 +130,19 @@ Copper gains 2 electrons — oxidation number changes from $+2$ to $0$.
             options: [
               'Cathode',
               'Anode',
-              'Both',
+              'Both electrodes',
               'Neither — oxidation occurs in solution'
             ],
             correctAnswer: 1,
-            explanation: 'Oxidation always occurs at the **anode** (AN OX). Reduction occurs at the cathode (RED CAT).'
+            explanation: 'Oxidation always occurs at the **anode** (AN OX). Reduction occurs at the cathode (RED CAT). Each electrode hosts only one of the two half-reactions, and the electron transfer happens at the electrode surfaces, not in the bulk solution.'
           },
           {
             question: 'In the half-reaction $Ag^{+}(aq)$ + $e^{-}$ → Ag(s), silver is being:',
             options: [
-              'Oxidized (losing electrons)',
+              'Oxidized (losing an electron)',
               'Reduced (gaining electrons)',
               'Neither oxidized nor reduced',
-              'Both oxidized and reduced'
+              'Both oxidized and reduced at once'
             ],
             correctAnswer: 1,
             explanation: 'Silver gains an electron ($\\text{Ag}^+ \\rightarrow \\text{Ag}^0$), so it is being **reduced**. The oxidation number decreases from +1 to 0.'
@@ -195,7 +195,7 @@ Determine the oxidation state of the underlined element:
           },
           {
             label: 'In a balanced redox reaction, the number of electrons lost must',
-            options: ['be greater than electrons gained', 'be less than electrons gained', 'equal the electrons gained', 'be zero']
+            options: ['be greater than electrons gained', 'be less than electrons gained', 'equal the electrons gained', 'be twice the electrons gained']
           }
         ],
         correctAnswers: ['reducing agent', 'anode to cathode', 'anode = oxidation', 'equal the electrons gained'],

@@ -96,7 +96,7 @@ $$q = It \\quad \\text{mol } e^- = \\frac{q}{F} \\quad \\text{mol substance} = \
           {
             question: 'In ALL electrochemical cells, reduction occurs at the:',
             options: [
-              'Anode',
+              'Anode compartment',
               'Cathode',
               'Salt bridge',
               'External circuit'
@@ -107,13 +107,13 @@ $$q = It \\quad \\text{mol } e^- = \\frac{q}{F} \\quad \\text{mol substance} = \
           {
             question: 'A current of 1.50 A deposits 1.00 g of a metal (M = 63.55 g/mol, n = 2). How long did it take?',
             options: [
+              '16.9 min',
               '33.7 min',
-              '16.8 min',
-              '67.4 min',
+              '67.5 min',
               '50.6 min'
             ],
             correctAnswer: 1,
-            explanation: 'mol = $1.00/63.55 = 0.01573$. mol $e^- = 0.01573 \\times 2 = 0.03147$. $q = 0.03147 \\times 96{,}485 = 3036$ C. $t = 3036/1.50 = 2024$ s $= 33.7$ min. Wait — let me recalculate: $t = 2024$ s $= 33.7$ min. Hmm, checking: 2024/60 = 33.7 min.'
+            explanation: 'mol metal $= 1.00/63.55 = 0.01574$. mol $e^- = 0.01574 \\times 2 = 0.03147$. $q = 0.03147 \\times 96{,}485 = 3036$ C. $t = 3036/1.50 = 2024$ s $= 33.7$ min. Forgetting the factor $n = 2$ gives 16.9 min, and using $n = 3$ or $n = 4$ gives 50.6 or 67.5 min.'
           }
         ]
       }
@@ -163,7 +163,7 @@ $$q = It \\quad \\text{mol } e^- = \\frac{q}{F} \\quad \\text{mol substance} = \
           },
           {
             label: 'To electroplate an object with gold, the object should be the',
-            options: ['anode', 'cathode', 'electrolyte', 'power supply']
+            options: ['anode', 'cathode', 'electrolyte', 'salt bridge']
           }
         ],
         correctAnswers: ['all electrochemical cells', 'one mole of electrons', 'electrolytic', 'cathode'],
@@ -195,13 +195,13 @@ $$q = It \\quad \\text{mol } e^- = \\frac{q}{F} \\quad \\text{mol substance} = \
           {
             question: 'Which best summarizes the relationship between galvanic and electrolytic cells?',
             options: [
-              'They are completely different processes with no connection',
+              'They are completely separate processes with no connection at all',
               'They are the same process viewed from different perspectives',
-              'Galvanic cells produce electricity from spontaneous reactions; electrolytic cells use electricity to drive non-spontaneous reactions',
+              'Galvanic cells run spontaneously; electrolytic cells need power',
               'Galvanic cells require a power source; electrolytic cells do not'
             ],
             correctAnswer: 2,
-            explanation: 'Galvanic: spontaneous → produces electricity. Electrolytic: uses electricity → forces non-spontaneous reactions. They are complementary processes — a rechargeable battery switches between both modes!'
+            explanation: 'Galvanic cells produce electricity from spontaneous reactions; electrolytic cells use electricity to force non-spontaneous reactions. They are complementary, not identical or unrelated — a rechargeable battery switches between both modes! It is the electrolytic cell, not the galvanic one, that needs a power source.'
           }
         ]
       }

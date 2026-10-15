@@ -76,10 +76,10 @@ $$\\boxed{\\text{Choose an indicator whose } pK_{In} \\text{ is close to the equ
           {
             question: 'Which titration curve feature allows you to determine $K_a$ of a weak acid?',
             options: [
-              'The initial pH',
+              'The initial pH, before any base',
               'The pH at the half-equivalence point',
               'The pH at the equivalence point',
-              'The final pH'
+              'The final pH, well past equivalence'
             ],
             correctAnswer: 1,
             explanation: 'At the half-equivalence point: $[HA] = [A^-]$, so $pH = pK_a$. Reading this pH directly gives $pK_a$, and $K_a = 10^{-pK_a}$.'
@@ -88,12 +88,12 @@ $$\\boxed{\\text{Choose an indicator whose } pK_{In} \\text{ is close to the equ
             question: 'A titration of 0.10 M $HF$ ($K_a = 6.6 \\times 10^{-4}$) with 0.10 M $NaOH$ reaches equivalence. The equivalence pH will be closest to:',
             options: [
               '7.0',
-              '5.5',
-              '8.1',
-              '11.0'
+              '6.1',
+              '7.9',
+              '8.1'
             ],
             correctAnswer: 2,
-            explanation: 'Weak acid + strong base → equivalence pH > 7. At equivalence, $F^-$ hydrolyzes: $K_b = K_w/K_a = 1.5 \\times 10^{-11}$. Assuming 0.050 M $F^-$: $x = \\sqrt{1.5 \\times 10^{-11} \\times 0.050} = 8.7 \\times 10^{-7}$. $pOH = 6.06$. $pH = 7.94 \\approx 8.1$.'
+            explanation: 'Weak acid + strong base → equivalence pH > 7. At equivalence, $F^-$ hydrolyzes: $K_b = K_w/K_a = 1.5 \\times 10^{-11}$. Equal volumes were mixed, so $[F^-] = 0.050$ M: $x = \\sqrt{1.5 \\times 10^{-11} \\times 0.050} = 8.7 \\times 10^{-7}$. $pOH = 6.06$. $pH = 7.94 \\approx 7.9$. Forgetting the dilution (using 0.10 M) gives 8.1, reporting the pOH as the pH gives 6.1, and 7.0 would be a strong acid–strong base titration.'
           },
           {
             question: 'Which indicator is best for the $HF/NaOH$ titration (equivalence ≈ pH 8)?',
@@ -143,9 +143,9 @@ $$\\boxed{\\text{Choose an indicator whose } pK_{In} \\text{ is close to the equ
           {
             question: 'Two titration curves are shown on the same graph. Curve A starts at pH 1 and has an equivalence point at pH 7. Curve B starts at pH 3 and has an equivalence point at pH 9. Which is correct?',
             options: [
-              'Curve A: strong acid + strong base; Curve B: weak acid + strong base',
+              'A: strong acid + strong base; B: weak acid + strong base',
               'Both are strong acid + strong base',
-              'Curve A: weak acid; Curve B: strong acid',
+              'A: weak acid; B: strong acid',
               'Both are weak acid + strong base'
             ],
             correctAnswer: 0,
@@ -179,18 +179,18 @@ $$\\boxed{\\text{Choose an indicator whose } pK_{In} \\text{ is close to the equ
           },
           {
             label: 'At the equivalence point of weak acid + strong base, the species in solution is',
-            options: ['HA only', '$A^{-}$ only (conjugate base)', 'equal HA and $A^{-}$', 'pure water']
+            options: ['HA only', '$A^{-}$ only', 'equal HA and $A^{-}$', '$A^{-}$ and excess $OH^{-}$']
           },
           {
             label: 'The buffer region of a titration curve is flattest near',
-            options: ['the start', 'the half-equivalence point', 'the equivalence point', 'the end']
+            options: ['the very start', 'the half-equivalence point', 'the equivalence point', 'the first drop of base']
           },
           {
             label: 'Phenolphthalein turns pink when pH is approximately',
             options: ['3', '5', '7', '8-10']
           }
         ],
-        correctAnswers: ['equivalence point', '$A^{-}$ only (conjugate base)', 'the half-equivalence point', '8-10'],
+        correctAnswers: ['equivalence point', '$A^{-}$ only', 'the half-equivalence point', '8-10'],
         hint1: 'The sharp S-curve jump happens at equivalence.',
         hint2: 'All $HA$ has been converted to $A^-$ at this point.',
         hint3: 'Maximum buffer capacity = $[HA] = [A^-]$ = half-equivalence.',
@@ -241,10 +241,10 @@ $$\\boxed{\\text{Choose an indicator whose } pK_{In} \\text{ is close to the equ
           {
             question: 'The AP Chemistry exam most frequently tests titration by asking students to:',
             options: [
-              'Memorize indicator colors',
-              'Calculate pH at specific points and sketch/interpret titration curves',
-              'Derive the Henderson-Hasselbalch equation',
-              'Calculate molar masses'
+              'Memorize the exact colors of every common acid–base indicator',
+              'Calculate pH at key points and interpret titration curves',
+              'Derive the Henderson-Hasselbalch equation from the $K_a$ expression',
+              'Calculate the molar mass of an acid from a titration alone'
             ],
             correctAnswer: 1,
             explanation: 'AP Chemistry emphasizes calculating pH at the initial, half-equivalence, equivalence, and post-equivalence points, then using these to sketch or interpret titration curves. This tests multiple equilibrium concepts simultaneously.'

@@ -112,24 +112,24 @@ The curve goes from **high pH to low pH** — a mirror image of the weak acid cu
           {
             question: 'How do you find $K_a$ from a titration curve of a weak acid with strong base?',
             options: [
-              'Read the pH at the equivalence point and convert',
+              'Read the pH at the equivalence point; $K_a = 10^{-pH}$ there',
               'Read the pH at the half-equivalence point; $K_a = 10^{-pH}$',
-              'Read the initial pH and convert',
-              'It cannot be determined from a titration curve'
+              'Read the initial pH; that $[H^+]$ equals $K_a$ for any weak acid',
+              'Read the volume at equivalence; $K_a$ is moles over that volume'
             ],
             correctAnswer: 1,
-            explanation: 'At the half-equivalence point: $[HA] = [A^-]$, so $pH = pK_a$. Therefore $K_a = 10^{-pH}$ at the half-equivalence point.'
+            explanation: 'At the half-equivalence point: $[HA] = [A^-]$, so $pH = pK_a$. Therefore $K_a = 10^{-pH}$ at the half-equivalence point. At equivalence only $A^-$ remains, the initial $[H^+]$ equals $\\sqrt{K_a C}$ rather than $K_a$, and the equivalence volume gives the acid\'s moles, not $K_a$.'
           },
           {
             question: 'For the titration of $NH_3$ with $HCl$, the half-equivalence point pH equals:',
             options: [
               '$pK_b$ of $NH_3$',
               '$pK_a$ of $NH_4^+$',
-              '7.00',
-              '14.00'
+              '7.00 (neutral)',
+              'The initial pH of the $NH_3$'
             ],
             correctAnswer: 1,
-            explanation: 'At the half-equivalence point of a weak base titration: $[B] = [BH^+]$, and $pH = pK_a$ of the conjugate acid. For $NH_4^+$: $pK_a = 14 - 4.74 = 9.25$.'
+            explanation: 'At the half-equivalence point of a weak base titration: $[B] = [BH^+]$, and $pH = pK_a$ of the conjugate acid. For $NH_4^+$: $pK_a = 14 - 4.74 = 9.26$ (9.25 with the unrounded $pK_b = 4.745$). $pK_b$ (4.74) gives the pOH there, not the pH, and the initial pH of 0.10 M $NH_3$ is about 11.1.'
           }
         ]
       }
@@ -250,10 +250,10 @@ Three equivalence points (three protons):
               '6.35',
               '8.34',
               '10.33',
-              '7.00'
+              '16.68'
             ],
             correctAnswer: 2,
-            explanation: 'At the midpoint between equivalences, $[H_2CO_3] \\approx 0$ and $[CO_3^{2-}] \\approx 0$, so $[HCO_3^-]$ dominates. The pH $= pK_{a2} = 10.33$. This is the second half-equivalence point.'
+            explanation: 'Halfway between the first and second equivalence points, half of the $HCO_3^-$ has been converted to $CO_3^{2-}$, so $[HCO_3^-] = [CO_3^{2-}]$ and $pH = pK_{a2} = 10.33$ — this is the second half-equivalence point. 6.35 is the pH at the first half-equivalence point, 8.34 is the average of the two $pK_a$ values (the pH at the first equivalence point, where $HCO_3^-$ dominates), and 16.68 is their sum without halving.'
           }
         ]
       }

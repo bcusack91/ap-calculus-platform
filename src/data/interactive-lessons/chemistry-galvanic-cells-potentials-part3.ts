@@ -182,11 +182,11 @@ $$\\boxed{E^\\circ_{\\text{cell}} = (+0.34) - (-0.76) = +1.10 \\text{ V}}$$
         dropdowns: [
           {
             label: 'The reference electrode for standard reduction potentials is',
-            options: ['silver-silver chloride', 'standard hydrogen electrode (SHE)', 'copper electrode', 'lithium electrode']
+            options: ['silver-silver chloride', 'standard hydrogen electrode (SHE)', 'copper electrode', 'saturated calomel electrode']
           },
           {
             label: 'A more positive E° means the species is a stronger',
-            options: ['reducing agent', 'oxidizing agent', 'acid', 'base']
+            options: ['reducing agent', 'oxidizing agent', 'Brønsted acid', 'electron donor']
           },
           {
             label: 'E° values are NOT multiplied by coefficients because E° is',
@@ -216,12 +216,12 @@ $$\\boxed{E^\\circ_{\\text{cell}} = (+0.34) - (-0.76) = +1.10 \\text{ V}}$$
             question: 'Can $\\text{Ag}^+$ ($E^\\circ = +0.80$ V) spontaneously oxidize Cu ($E^\\circ = +0.34$ V)?',
             options: [
               'No — Ag has a higher $E^\\circ$',
-              'Yes — $E^\\circ_{\\text{cell}} = 0.80 - 0.34 = +0.46$ V (spontaneous)',
+              'Yes — $E^\\circ_{\\text{cell}} = 0.80 - 0.34 = +0.46$ V',
               'No — both $E^\\circ$ values are positive',
-              'Yes — $E^\\circ_{\\text{cell}} = 0.34 - 0.80 = -0.46$ V (spontaneous)'
+              'No — $E^\\circ_{\\text{cell}} = 0.34 - 0.80 = -0.46$ V'
             ],
             correctAnswer: 1,
-            explanation: '$Ag^{+}$ is reduced (cathode, $E^\\circ = +0.80$ V) and Cu is oxidized (anode, $E^\\circ = +0.34$ V). $E^\\circ_{\\text{cell}} = 0.80 - 0.34 = +0.46$ V. Positive, so YES, it is spontaneous.'
+            explanation: '$Ag^{+}$ is reduced (cathode, $E^\\circ = +0.80$ V) and Cu is oxidized (anode, $E^\\circ = +0.34$ V). $E^\\circ_{\\text{cell}} = 0.80 - 0.34 = +0.46$ V. Positive, so YES, it is spontaneous. Getting $-0.46$ V comes from treating Cu as the cathode, which is the reverse reaction.'
           },
           {
             question: 'Which pair produces the largest $E^\\circ_{\\text{cell}}$? Use: $\\text{Au}^{3+}/\\text{Au} = +1.50$ V, $\\text{Li}^+/\\text{Li} = -3.04$ V, $\\text{Cu}^{2+}/\\text{Cu} = +0.34$ V',
@@ -229,10 +229,10 @@ $$\\boxed{E^\\circ_{\\text{cell}} = (+0.34) - (-0.76) = +1.10 \\text{ V}}$$
               'Au cathode, Cu anode: $E^\\circ_{\\text{cell}} = 1.16$ V',
               'Au cathode, Li anode: $E^\\circ_{\\text{cell}} = 4.54$ V',
               'Cu cathode, Li anode: $E^\\circ_{\\text{cell}} = 3.38$ V',
-              'Au cathode, Li anode: $E^\\circ_{\\text{cell}} = 1.54$ V'
+              'Li cathode, Au anode: $E^\\circ_{\\text{cell}} = 4.54$ V'
             ],
             correctAnswer: 1,
-            explanation: '$E^\\circ_{\\text{cell}} = E^\\circ_{\\text{cathode}} - E^\\circ_{\\text{anode}} = 1.50 - (-3.04) = 4.54$ V. This is the largest possible cell voltage from these three — pairing the strongest oxidizing agent $(Au^{3+})$ with the strongest reducing agent (Li).'
+            explanation: '$E^\\circ_{\\text{cell}} = E^\\circ_{\\text{cathode}} - E^\\circ_{\\text{anode}} = 1.50 - (-3.04) = 4.54$ V. This is the largest possible cell voltage from these three — pairing the strongest oxidizing agent $(Au^{3+})$ with the strongest reducing agent (Li). Making Li the cathode reverses the roles: $-3.04 - 1.50 = -4.54$ V, which is not spontaneous.'
           }
         ]
       }

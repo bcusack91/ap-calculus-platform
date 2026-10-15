@@ -190,11 +190,11 @@ Water's oxidation potential is $E° = +1.23$ V.
             options: [
               '$H_{2}$ gas (water is reduced)',
               'Cu metal ($Cu^{2+}$ is reduced)',
-              '$O_{2}$ gas',
-              '$SO_{2}$ gas'
+              '$O_{2}$ gas (water is oxidized)',
+              '$SO_{2}$ gas ($SO_4^{2-}$ is reduced)'
             ],
             correctAnswer: 1,
-            explanation: '$Cu^{2+}$ has $E° = +0.34$ V, which is more positive than water ($-0.83$ V). $Cu^{2+}$ is preferentially reduced: $Cu^{2+}$ + $2e^{-}$ → Cu. Copper metal deposits on the cathode.'
+            explanation: '$Cu^{2+}$ has $E° = +0.34$ V, which is more positive than water ($-0.83$ V). $Cu^{2+}$ is preferentially reduced: $Cu^{2+}$ + $2e^{-}$ → Cu. Copper metal deposits on the cathode. Oxidation of water to $O_2$ happens at the anode, and sulfate is not reduced under these conditions.'
           }
         ]
       }
@@ -282,21 +282,21 @@ What gas or metal is produced at the cathode during electrolysis of:
           {
             question: 'Why can sodium metal be produced from molten NaCl but NOT from aqueous NaCl?',
             options: [
-              'NaCl does not dissolve in water',
-              'In aqueous solution, water is reduced instead of $Na^{+}$ (water has higher E°)',
-              'Sodium reacts with chlorine in water',
-              'The salt bridge prevents it'
+              'NaCl does not dissolve well enough in water to react',
+              'Water is reduced in preference to $Na^{+}$ in solution',
+              'Sodium formed reacts with $Cl_2$ to remake NaCl',
+              '$Na^{+}$ is too hydrated to reach the cathode'
             ],
             correctAnswer: 1,
-            explanation: '$Na^{+}$ has $E° = -2.71$ V, far below water\'s $E° = -0.83$ V. Water is preferentially reduced in aqueous solution, producing $H_{2}$ gas instead of Na metal. In molten NaCl, there is no water to compete.'
+            explanation: '$Na^{+}$ has $E° = -2.71$ V, far below water\'s $E° = -0.83$ V. Water is preferentially reduced in aqueous solution, producing $H_{2}$ gas instead of Na metal. In molten NaCl, there is no water to compete. NaCl dissolves readily, $Na^{+}$ ions do reach the cathode, and $Cl_2$ forms at the anode, not where sodium would deposit.'
           },
           {
             question: 'In aqueous electrolysis, when does $O_{2}$ form at the anode instead of the anion?',
             options: [
               'When the anion is a simple halide ($Cl^{-}$, $Br^{-}$, $I^{-}$)',
               'When the anion is an oxyanion ($SO_{4}^{2-}$, $NO_{3}^{-}$) or $F^{-}$',
-              '$O_{2}$ always forms at the anode',
-              '$O_{2}$ never forms — only the anion is oxidized'
+              '$O_{2}$ always forms at the anode in water',
+              '$O_{2}$ never forms; the anion is always oxidized'
             ],
             correctAnswer: 1,
             explanation: 'Oxyanions ($SO_{4}^{2-}$, $NO_{3}^{-}$) and $F^{-}$ are very difficult to oxidize. Water is oxidized instead: $2H_{2}O$ → $O_{2}$ + $4H^{+}$ + $4e^{-}$. Simple halides ($Cl^{-}$, $Br^{-}$, $I^{-}$) are oxidized preferentially.'

@@ -119,7 +119,7 @@ $$[A^-] = 1.82(0.071) = 0.129 \\text{ M}$$
             options: [
               'Acetic acid/acetate ($pK_a = 4.74$)',
               'Phosphate ($pK_a = 7.21$)',
-              'Ammonia/ammonium ($pK_a = 9.25$)',
+              'Ammonia/ammonium chloride ($pK_a = 9.25$)',
               'Formic acid/formate ($pK_a = 3.75$)'
             ],
             correctAnswer: 2,
@@ -190,8 +190,7 @@ $$NH_3 + H^+ \\rightarrow NH_4^+$$
 **3)** To prepare 500 mL of pH 9.55 buffer from $NH_4Cl$ and $NH_3$ ($pK_a = 9.25$), with total concentration 0.40 M, how many moles of $NH_3$ are needed? (3 decimal places)
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['0.18', '0.15', '0.133'],
+        questions: [{ question: '(1)', answer: '0.18', acceptableAnswers: ['0.18', '0.182'] }, { question: '(2)', answer: '0.15', acceptableAnswers: ['0.15'] }, { question: '(3)', answer: '0.133', acceptableAnswers: ['0.133'] }],
         hint1: '$[A^-]/[HA] = 10^{(4.00 - 4.74)} = 10^{-0.74}$.',
         hint2: 'For $pH = pK_a$, you need equal moles of $HA$ and $A^-$. Add enough $NaOH$ to convert half the acid.',
         hint3: 'Ratio $= 10^{(9.55-9.25)} = 10^{0.30} = 2.00$. $[NH_3] = 2[NH_4^+]$. Total = $3[NH_4^+] = 0.40$ M.',
@@ -212,11 +211,11 @@ $$NH_3 + H^+ \\rightarrow NH_4^+$$
           },
           {
             label: 'Adding NaOH to excess weak acid creates a buffer because',
-            options: ['NaOH is a buffer', 'it partially converts HA to $A^{-}$', 'it neutralizes all the acid', 'it changes $K_{a}$']
+            options: ['$Na^{+}$ acts as a weak acid', 'it partially converts HA to $A^{-}$', 'it neutralizes all the acid', 'it changes $K_{a}$']
           },
           {
             label: 'To increase both the pH and capacity of an acetate buffer, you should add',
-            options: ['more $CH_{3}COOH$', 'more $NaCH_{3}COO$', 'water', 'HCl']
+            options: ['more $CH_{3}COOH$', 'more $NaCH_{3}COO$', 'more NaCl', 'more HCl']
           }
         ],
         correctAnswers: ['1:1', 'it partially converts HA to $A^{-}$', 'more $NaCH_{3}COO$'],
@@ -238,23 +237,23 @@ $$NH_3 + H^+ \\rightarrow NH_4^+$$
             question: 'A student needs to prepare a buffer at pH 7.40 for a biology experiment. The best choice is:',
             options: [
               'Acetic acid/sodium acetate ($pK_a = 4.74$)',
-              'Sodium dihydrogen phosphate/sodium hydrogen phosphate ($pK_a = 7.21$)',
+              'Monosodium/disodium phosphate ($pK_a = 7.21$)',
               'Ammonia/ammonium chloride ($pK_a = 9.25$)',
-              'Hydrochloric acid/sodium chloride'
+              'Carbonic acid/sodium hydrogen carbonate ($pK_a = 6.35$)'
             ],
             correctAnswer: 1,
-            explanation: '$pK_a = 7.21$ is closest to 7.40, and 7.40 is within the range $7.21 \\pm 1$. The phosphate buffer is the best choice for near-neutral pH. $HCl/NaCl$ is NOT a buffer.'
+            explanation: '$pK_a = 7.21$ is closest to 7.40, and 7.40 is within the range $7.21 \\pm 1$. The phosphate buffer ($NaH_2PO_4/Na_2HPO_4$) is the best choice for near-neutral pH. Carbonic acid/hydrogen carbonate ($pK_a = 6.35$) is 1.05 units away, just outside its effective range.'
           },
           {
             question: 'To make 1.0 L of 0.10 M total phosphate buffer at pH 7.21, you need:',
             options: [
-              '0.10 mol $NaH_2PO_4$ only',
-              '0.10 mol $Na_2HPO_4$ only',
+              '0.10 mol $NaH_2PO_4$ and 0.10 mol $Na_2HPO_4$',
+              '0.025 mol $NaH_2PO_4$ and 0.075 mol $Na_2HPO_4$',
               '0.050 mol $NaH_2PO_4$ and 0.050 mol $Na_2HPO_4$',
-              '0.10 mol $H_3PO_4$'
+              '0.050 mol $H_3PO_4$ and 0.050 mol $NaH_2PO_4$'
             ],
             correctAnswer: 2,
-            explanation: 'At $pH = pK_a = 7.21$, the ratio is 1:1. Total = 0.10 M, so each component = 0.050 M. In 1.0 L, that\'s 0.050 mol of each.'
+            explanation: 'At $pH = pK_a = 7.21$, the ratio is 1:1. Total = 0.10 M, so each component = 0.050 M. In 1.0 L, that\'s 0.050 mol of each. Using 0.10 mol of each doubles the total to 0.20 M, a 1:3 mix gives $pH = 7.21 + \\log 3 = 7.69$, and $H_3PO_4/H_2PO_4^-$ is the pair for $pK_{a1} = 2.15$, not 7.21.'
           }
         ]
       }

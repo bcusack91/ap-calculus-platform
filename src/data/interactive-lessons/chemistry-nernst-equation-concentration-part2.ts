@@ -110,13 +110,13 @@ Remember: solids and pure liquids are excluded from Q!
           {
             question: 'The constant 0.0592 V in the simplified Nernst equation applies at:',
             options: [
-              'Any temperature',
-              '0°C only',
+              'Any temperature, since it is a constant',
+              '0°C (273 K), the STP temperature',
               '25°C (298 K) only',
-              '100°C only'
+              '37°C (310 K), body temperature'
             ],
             correctAnswer: 2,
-            explanation: '0.0592 V comes from $RT/F \\times 2.303$ evaluated at $T = 298$ K. At other temperatures, you must use the full Nernst equation with the actual $T$.'
+            explanation: '0.0592 V comes from $2.303RT/F$ evaluated at $T = 298$ K. Because it contains $T$, it is not a universal constant, and the 0°C of STP is not the thermodynamic standard temperature. At other temperatures, you must use the full Nernst equation with the actual $T$.'
           },
           {
             question: 'For a 1-electron cell (n = 1), increasing Q by a factor of 10 changes E by:',
@@ -176,7 +176,7 @@ All at 25°C. Use $E = E° - (0.0592/n)\\log Q$.
         dropdowns: [
           {
             label: 'The simplified Nernst equation uses log (base 10) instead of ln because',
-            options: ['it is more accurate', 'the conversion factor 2.303 is absorbed into 0.0592', 'base 10 applies to all temperatures', 'AP Chemistry requires it']
+            options: ['base-10 logs are more accurate', 'the factor 2.303 is folded into 0.0592', 'base 10 applies to all temperatures', 'AP Chemistry requires base 10']
           },
           {
             label: 'For a 2-electron process, each 10× increase in Q decreases E by',
@@ -184,14 +184,14 @@ All at 25°C. Use $E = E° - (0.0592/n)\\log Q$.
           },
           {
             label: 'If Q < 1 (excess reactants), then E is',
-            options: ['less than E°', 'equal to E°', 'greater than E°', 'zero']
+            options: ['less than E°', 'equal to E°', 'greater than E°', 'negative']
           },
           {
             label: 'Solids and pure liquids are excluded from Q because',
             options: ['they have zero concentration', 'their activities are defined as 1', 'they don\'t participate', 'they are at standard state']
           }
         ],
-        correctAnswers: ['the conversion factor 2.303 is absorbed into 0.0592', '0.0296 V', 'greater than E°', 'their activities are defined as 1'],
+        correctAnswers: ['the factor 2.303 is folded into 0.0592', '0.0296 V', 'greater than E°', 'their activities are defined as 1'],
         hint1: '$0.0592 = 0.02569 \\times 2.303$.',
         hint2: '$0.0592/2 = 0.0296$ V per decade for $n = 2$.',
         hint3: '$Q < 1 \\Rightarrow \\log Q < 0$, so the subtracted term is negative → E increases.',
@@ -222,11 +222,11 @@ All at 25°C. Use $E = E° - (0.0592/n)\\log Q$.
             options: [
               'Yes — the formula works at all temperatures',
               'No — you must use E = E° − (RT/nF) ln Q with T = 323 K',
-              'Yes — but divide 0.0592 by 2',
+              'Yes — temperature affects only E°, not the log term',
               'No — the Nernst equation only applies at 25°C'
             ],
             correctAnswer: 1,
-            explanation: '0.0592 V is specific to 298 K. At 323 K, use the full Nernst equation: $E = E° - (RT/nF)\\ln Q = E° - (8.314 \\times 323)/(nF) \\times \\ln Q$.'
+            explanation: '0.0592 V is specific to 298 K, because the $RT/F$ factor in the log term contains $T$. At 323 K, use the full Nernst equation: $E = E° - (RT/nF)\\ln Q = E° - (8.314 \\times 323)/(nF) \\times \\ln Q$. The Nernst equation itself holds at any temperature; only the 0.0592 shortcut is tied to 25°C.'
           }
         ]
       }

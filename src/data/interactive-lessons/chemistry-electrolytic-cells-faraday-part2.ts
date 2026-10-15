@@ -129,7 +129,7 @@ $$2\\text{PbSO}_4(s) + 2\\text{H}_2\\text{O}(l) \\rightarrow \\text{Pb}(s) + \\t
             question: 'Which statement is true for BOTH galvanic and electrolytic cells?',
             options: [
               'The anode is positive',
-              'The cell produces electrical energy',
+              'The cell makes electricity',
               'Oxidation occurs at the anode',
               'The reaction is spontaneous'
             ],
@@ -150,13 +150,13 @@ $$2\\text{PbSO}_4(s) + 2\\text{H}_2\\text{O}(l) \\rightarrow \\text{Pb}(s) + \\t
           {
             question: 'When a rechargeable battery is being charged:',
             options: [
-              'It operates as a galvanic cell',
+              'It operates as a galvanic cell, releasing energy',
               'It operates as an electrolytic cell',
-              'No electrochemistry occurs',
-              'The salt bridge is removed'
+              'It stores charge physically, with no redox reaction',
+              'It runs as a concentration cell until both sides match'
             ],
             correctAnswer: 1,
-            explanation: 'Charging forces the non-spontaneous reverse reaction to occur — this is electrolysis. The charger provides the external voltage needed.'
+            explanation: 'Charging forces the non-spontaneous reverse reaction to occur — this is electrolysis. The charger provides the external voltage needed, and energy is stored chemically in the regenerated reactants, not as static charge.'
           }
         ]
       }
@@ -171,11 +171,11 @@ $$2\\text{PbSO}_4(s) + 2\\text{H}_2\\text{O}(l) \\rightarrow \\text{Pb}(s) + \\t
         dropdowns: [
           {
             label: 'In a galvanic cell, the anode is the',
-            options: ['positive terminal', 'negative terminal', 'neutral', 'not present']
+            options: ['positive terminal', 'negative terminal', 'neutral (no charge)', 'set by the salt bridge']
           },
           {
             label: 'In an electrolytic cell, the anode is the',
-            options: ['positive terminal', 'negative terminal', 'neutral', 'not present']
+            options: ['positive terminal', 'negative terminal', 'neutral (no charge)', 'set by the salt bridge']
           },
           {
             label: 'In BOTH cell types, electrons flow from',
@@ -183,11 +183,11 @@ $$2\\text{PbSO}_4(s) + 2\\text{H}_2\\text{O}(l) \\rightarrow \\text{Pb}(s) + \\t
           },
           {
             label: 'A galvanic cell converts',
-            options: ['electrical → chemical energy', 'chemical → electrical energy', 'heat → light energy', 'nuclear → chemical energy']
+            options: ['electrical → chemical energy', 'chemical → electrical energy', 'chemical → thermal energy', 'thermal → electrical energy']
           },
           {
             label: 'An electrolytic cell converts',
-            options: ['electrical → chemical energy', 'chemical → electrical energy', 'heat → light energy', 'nuclear → chemical energy']
+            options: ['electrical → chemical energy', 'chemical → electrical energy', 'chemical → thermal energy', 'thermal → electrical energy']
           }
         ],
         correctAnswers: ['negative terminal', 'positive terminal', 'anode to cathode', 'chemical → electrical energy', 'electrical → chemical energy'],
@@ -231,10 +231,10 @@ Answer with "galvanic" or "electrolytic":
           {
             question: 'A student says: "In electrolytic cells, reduction occurs at the anode." Is this correct?',
             options: [
-              'Yes — electrolytic cells reverse the electrode assignments',
+              'Yes — electrolytic cells swap the electrode roles',
               'No — reduction ALWAYS occurs at the cathode in all cells',
               'Yes — but only for molten salt electrolysis',
-              'No — neither oxidation nor reduction occurs in electrolytic cells'
+              'No — electrolytic cells involve no redox at all'
             ],
             correctAnswer: 1,
             explanation: 'Reduction at the cathode (RED CAT) is a universal rule. It applies to galvanic cells, electrolytic cells, and all other electrochemical cells. Only the sign of the electrodes changes.'
@@ -245,10 +245,10 @@ Answer with "galvanic" or "electrolytic":
               'Still the anode',
               'The cathode',
               'Neither — it is inert during charging',
-              'The salt bridge'
+              'The positive electrode'
             ],
             correctAnswer: 1,
-            explanation: 'During charging, the reaction reverses: $PbSO_{4}$ is reduced back to Pb. Since reduction occurs at the cathode, the Pb electrode becomes the cathode during charging.'
+            explanation: 'During charging, the reaction reverses: $PbSO_{4}$ is reduced back to Pb. Since reduction occurs at the cathode, the Pb electrode becomes the cathode during charging, and in an electrolytic cell the cathode is the negative electrode.'
           }
         ]
       }

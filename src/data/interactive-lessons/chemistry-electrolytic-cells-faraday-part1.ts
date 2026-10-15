@@ -119,21 +119,21 @@ $$2\\text{H}_2\\text{O}(l) \\rightarrow 2\\text{H}_2(g) + \\text{O}_2(g)$$
           {
             question: 'In an electrolytic cell, the external power source:',
             options: [
-              'Is not needed — the reaction is spontaneous',
-              'Pushes electrons from cathode to anode',
+              'Is not needed, because electrolysis reactions are spontaneous',
+              'Pushes electrons from the cathode back to the anode through the wire',
               'Forces electrons from anode to cathode against natural flow',
-              'Only heats the solution'
+              'Only heats the solution so that the ions can move more freely'
             ],
             correctAnswer: 2,
-            explanation: 'The power source forces a non-spontaneous reaction by pushing electrons in the direction they would not naturally flow. It drives the reaction "uphill" energetically.'
+            explanation: 'The power source forces a non-spontaneous reaction by pulling electrons from the anode and pushing them to the cathode, the direction they would not naturally flow. It drives the reaction "uphill" energetically; without it, nothing happens, and its role is electrical, not heating.'
           },
           {
             question: 'In an electrolytic cell, the anode is:',
             options: [
-              'Negative (like in a galvanic cell)',
-              'Positive (connected to the + terminal of the power source)',
-              'Neutral',
-              'Not present'
+              'Negative, just as the anode is in a galvanic cell',
+              'Positive (wired to the + terminal of the source)',
+              'Negative (wired to the − terminal of the battery)',
+              'Neutral, since only the cathode is connected to power'
             ],
             correctAnswer: 1,
             explanation: 'In an electrolytic cell, the anode is connected to the positive terminal of the power source, making it positive. This is OPPOSITE to a galvanic cell where the anode is negative.'
@@ -143,11 +143,11 @@ $$2\\text{H}_2\\text{O}(l) \\rightarrow 2\\text{H}_2(g) + \\text{O}_2(g)$$
             options: [
               'Generating electricity from chemical reactions',
               'Driving non-spontaneous chemical reactions using electricity',
-              'Measuring equilibrium constants',
-              'Calculating enthalpy changes'
+              'Measuring the equilibrium constant of a reaction',
+              'Finding the enthalpy change of a reaction'
             ],
             correctAnswer: 1,
-            explanation: 'Electrolysis uses electrical energy to drive reactions that would not occur spontaneously. This is the reverse of a galvanic cell.'
+            explanation: 'Electrolysis uses electrical energy to drive reactions that would not occur spontaneously. This is the reverse of a galvanic cell, which generates electricity; equilibrium constants and enthalpy changes are found by other methods.'
           }
         ]
       }
@@ -170,14 +170,14 @@ $$2\\text{H}_2\\text{O}(l) \\rightarrow 2\\text{H}_2(g) + \\text{O}_2(g)$$
           },
           {
             label: 'The minimum voltage needed for electrolysis equals',
-            options: ['E°_cell (which is positive)', '|E°_cell| (the absolute value of the negative E°)', 'zero', 'any voltage works']
+            options: ['E°_cell (a negative number)', '|E°_cell| (its absolute value)', 'twice |E°_cell|', 'any small voltage']
           },
           {
             label: 'Overpotential is',
-            options: ['the extra voltage needed beyond the thermodynamic minimum', 'the voltage of the galvanic cell', 'always zero', 'the voltage of the salt bridge']
+            options: ['extra voltage beyond the minimum', 'the voltage of the galvanic cell', 'the minimum voltage itself', 'the voltage of the salt bridge']
           }
         ],
-        correctAnswers: ['anode', 'positive', '|E°_cell| (the absolute value of the negative E°)', 'the extra voltage needed beyond the thermodynamic minimum'],
+        correctAnswers: ['anode', 'positive', '|E°_cell| (its absolute value)', 'extra voltage beyond the minimum'],
         hint1: 'AN OX applies to all electrochemical cells.',
         hint2: 'Non-spontaneous reaction = ΔG > 0.',
         hint3: 'The applied voltage must overcome the unfavorable cell potential.',
@@ -218,7 +218,7 @@ $$2\\text{H}_2\\text{O}(l) \\rightarrow 2\\text{H}_2(g) + \\text{O}_2(g)$$
           {
             question: 'The anode sign is different in galvanic vs electrolytic cells because:',
             options: [
-              'Oxidation and reduction switch between the two cell types',
+              'Oxidation and reduction switch places',
               'The external power source reverses the electrode polarity',
               'The anode sign is always the same in both cells',
               'Different metals are used'

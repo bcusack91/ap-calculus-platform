@@ -87,23 +87,23 @@ export const chemBufferSolutionsHendersonHasselbalchPart7Data = {
             question: 'Adding 0.001 mol $HCl$ to 1.0 L of pure water changes pH from 7.0 to 3.0 (Δ = 4.0). Adding the same amount to the buffer above changes pH by approximately:',
             options: [
               '4.0 units',
-              '0.005 units',
-              '0.50 units',
-              '0 units'
+              '0.004 units',
+              '0.040 units',
+              '0.17 units'
             ],
             correctAnswer: 1,
-            explanation: 'In the buffer: $A^- + H^+ \\rightarrow HA$. New: $A^- = 0.299$, $HA = 0.201$. $pH = 4.74 + \\log(0.299/0.201) = 4.74 + 0.173 = 4.913$. Change = $4.92 - 4.91 = 0.01$ ≈ 0.005 units. The buffer absorbs it!'
+            explanation: 'In the buffer: $A^- + H^+ \\rightarrow HA$. New: $A^- = 0.299$ mol, $HA = 0.201$ mol. $pH = 4.74 + \\log(0.299/0.201) = 4.74 + 0.1725 = 4.9125$, compared with $4.74 + \\log(1.50) = 4.9161$ before. Change $\\approx 0.004$ units, about a thousandth of the 4.0-unit change in pure water. 0.17 is $\\log(1.50)$ itself, not a change in pH.'
           },
           {
-            question: 'The blood buffer ($H_2CO_3/HCO_3^-$, $pK_a = 6.35$) maintains pH 7.40. The $[HCO_3^-]/[H_2CO_3]$ ratio is closest to:',
+            question: 'The blood buffer ($H_2CO_3/HCO_3^-$, $pK_a = 6.10$ at body temperature) maintains pH 7.40. The $[HCO_3^-]/[H_2CO_3]$ ratio is closest to:',
             options: [
-              '1.0',
-              '5.0',
-              '11',
+              '1.3',
+              '0.050',
+              '13',
               '20'
             ],
             correctAnswer: 3,
-            explanation: '$7.40 = 6.35 + \\log(r)$. $\\log(r) = 1.05$. $r = 10^{1.05} = 11.2 \\approx 11$. Actually closer to 20 considering $pK_a = 6.1$ for dissolved $CO_2$. At the standard $pK_a = 6.35$: ratio ≈ 11. The answer 20 uses the physiological $pK_a$.'
+            explanation: '$7.40 = 6.10 + \\log(r)$. $\\log(r) = 1.30$. $r = 10^{1.30} = 20$. Stopping at $\\log(r)$ gives 1.3, inverting the ratio gives $1/20 = 0.050$, and multiplying 1.30 by 10 instead of taking $10^{1.30}$ gives 13. (The effective $pK_a$ of 6.10 treats dissolved $CO_2$ as the acid; with the 25 °C value of 6.35 the ratio would be about 11.)'
           }
         ]
       }
@@ -122,7 +122,7 @@ export const chemBufferSolutionsHendersonHasselbalchPart7Data = {
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2.0', '5.01', '8.25'],
+        correctAnswers: ['2.0', '4.98', '8.25'],
         hint1: '$\\log(r) = 4.05 - 3.75 = 0.30$; $r = 10^{0.30}$.',
         hint2: 'Moles: $HA = 0.075 - 0.020 = 0.055$; $A^- = 0.075 + 0.020 = 0.095$.',
         hint3: 'Lower limit = $pK_a - 1$.',
@@ -142,7 +142,7 @@ export const chemBufferSolutionsHendersonHasselbalchPart7Data = {
             options: [
               'At the start (before any base is added)',
               'Between the start and the equivalence point',
-              'At the equivalence point',
+              'At the equivalence point itself',
               'After the equivalence point'
             ],
             correctAnswer: 1,
@@ -172,7 +172,7 @@ export const chemBufferSolutionsHendersonHasselbalchPart7Data = {
         dropdowns: [
           {
             label: 'The Henderson-Hasselbalch equation is derived from',
-            options: ['the K_w expression', 'the $K_{a}$ expression', 'the K_b expression only', 'the ideal gas law']
+            options: ['the K_w expression', 'the $K_{a}$ expression', 'the K_b expression only', 'the $K_{sp}$ expression']
           },
           {
             label: 'A buffer with $[A^-] = 10[HA]$ has pH =',
@@ -180,7 +180,7 @@ export const chemBufferSolutionsHendersonHasselbalchPart7Data = {
           },
           {
             label: 'The best buffer has a $pK_a$ that is',
-            options: ['as far from the target pH as possible', 'exactly equal to the target pH', 'always 7', 'always 14']
+            options: ['as far from the target pH as possible', 'exactly equal to the target pH', 'about 2 units from the target', 'about 1 unit below the target']
           },
           {
             label: 'Diluting a buffer changes its',
@@ -217,12 +217,12 @@ export const chemBufferSolutionsHendersonHasselbalchPart7Data = {
             question: 'On the AP exam, which is the MOST common buffer calculation error?',
             options: [
               'Forgetting to do the stoichiometry step first',
-              'Using the wrong $K_a$ value',
-              'Using concentrations instead of moles',
-              'Forgetting to use a calculator'
+              'Using $pK_b$ in place of $pK_a$ for a base buffer',
+              'Using initial concentrations instead of mole amounts',
+              'Inverting the ratio to $[HA]/[A^-]$ inside the log'
             ],
             correctAnswer: 0,
-            explanation: 'The most common error is jumping directly to Henderson-Hasselbalch without first doing the stoichiometry step (reacting the added strong acid/base). Always do stoichiometry FIRST, then use the new amounts in H-H.'
+            explanation: 'The most common error is jumping directly to Henderson-Hasselbalch without first doing the stoichiometry step (reacting the added strong acid/base). Always do stoichiometry FIRST, then use the new amounts in H-H. Using $pK_b$ or inverting the ratio are real slips too, and concentrations work as well as moles because the volume cancels.'
           }
         ]
       }

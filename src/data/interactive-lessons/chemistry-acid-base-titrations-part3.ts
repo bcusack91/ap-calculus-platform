@@ -126,7 +126,7 @@ For acetic acid: $pH = pK_a = 4.74$ at the half-equivalence point.
               'Exactly 7',
               'Less than 7',
               'Greater than 7',
-              'Equal to $pK_a$'
+              'At $pK_a$'
             ],
             correctAnswer: 2,
             explanation: 'At equivalence, all $HA$ has been converted to $A^-$ (a weak base). $A^-$ hydrolyzes with water to produce $OH^-$, making the solution basic (pH > 7).'
@@ -145,13 +145,13 @@ For acetic acid: $pH = pK_a = 4.74$ at the half-equivalence point.
           {
             question: 'The buffer region of a weak acid titration curve is:',
             options: [
-              'Only at the half-equivalence point',
+              'Only at the half-equivalence point, where pH = $pK_a$',
               'Between the start and the equivalence point',
-              'At the equivalence point',
-              'After the equivalence point'
+              'At the equivalence point, where only $A^-$ remains',
+              'After the equivalence point, where $OH^-$ is in excess'
             ],
             correctAnswer: 1,
-            explanation: 'Between the start and equivalence, both $HA$ and $A^-$ are present. This entire region acts as a buffer, with maximum buffering capacity at the half-equivalence point.'
+            explanation: 'Between the start and equivalence, both $HA$ and $A^-$ are present. This entire region acts as a buffer, with maximum buffering capacity at the half-equivalence point — so the half-equivalence point is the center of the region, not the whole of it. At and after equivalence there is no $HA$ left to react with added $OH^-$.'
           }
         ]
       }
@@ -229,14 +229,14 @@ Titrating 40.0 mL of 0.150 M $HCOOH$ ($pK_a = 3.75$) with 0.150 M $NaOH$:
           },
           {
             label: 'At equivalence, the solution contains',
-            options: ['excess HA', 'excess NaOH', 'only the conjugate base $A^{-}$ and $Na^{+}$', 'pure water']
+            options: ['excess HA and $Na^{+}$', 'excess NaOH and $A^{-}$', '$A^{-}$ and $Na^{+}$ only', 'equal HA and $A^{-}$']
           },
           {
             label: 'A suitable indicator for this titration changes color near pH',
             options: ['4', '7', '9', '1']
           }
         ],
-        correctAnswers: ['weak acids partially ionize', 'buffer region', 'only the conjugate base $A^{-}$ and $Na^{+}$', '9'],
+        correctAnswers: ['weak acids partially ionize', 'buffer region', '$A^{-}$ and $Na^{+}$ only', '9'],
         hint1: 'Weak acids don\'t fully dissociate — less $H^+$ → higher pH.',
         hint2: 'Both $HA$ and $A^-$ are present — classic buffer.',
         hint3: 'At equivalence, all $HA \\rightarrow A^-$.',
@@ -254,24 +254,24 @@ Titrating 40.0 mL of 0.150 M $HCOOH$ ($pK_a = 3.75$) with 0.150 M $NaOH$:
           {
             question: 'Comparing strong acid and weak acid titrations with $NaOH$ (same concentration and volume), which statement is TRUE?',
             options: [
-              'Both have equivalence points at pH 7',
+              'Both reach equivalence at pH 7, since both acids are neutralized',
               'Both require the same volume of $NaOH$ to reach equivalence',
-              'The weak acid curve has a shorter steep region',
-              'The strong acid requires more $NaOH$'
+              'The weak acid curve has a longer, steeper jump at equivalence',
+              'The strong acid needs more $NaOH$ because it is fully ionized'
             ],
             correctAnswer: 1,
-            explanation: 'Both have the same number of moles of acid (same $M$ and $V$), so both need the same moles of $NaOH$. However, the equivalence pH differs (7 vs >7), and the weak acid curve is less steep at equivalence.'
+            explanation: 'Both have the same number of moles of acid (same $M$ and $V$), so both need the same moles of $NaOH$. However, the equivalence pH differs (7 vs >7), and the weak acid curve has a shorter, less steep jump at equivalence. Ionization does not change how many moles of acid must be neutralized.'
           },
           {
             question: 'A titration curve shows pH = 5.40 at the half-equivalence point. The $K_a$ of the acid is:',
             options: [
-              '$5.40$',
+              '$10^{-8.60} = 2.5 \\times 10^{-9}$',
               '$10^{-5.40} = 4.0 \\times 10^{-6}$',
-              '$10^{5.40}$',
-              'Cannot be determined'
+              '$10^{5.40} = 2.5 \\times 10^{5}$',
+              '$e^{-5.40} = 4.5 \\times 10^{-3}$'
             ],
             correctAnswer: 1,
-            explanation: 'At half-equivalence: $pH = pK_a = 5.40$. Therefore $K_a = 10^{-5.40} = 4.0 \\times 10^{-6}$.'
+            explanation: 'At half-equivalence: $pH = pK_a = 5.40$. Therefore $K_a = 10^{-5.40} = 4.0 \\times 10^{-6}$. Using $14 - 5.40 = 8.60$ gives a $K_b$-style value, dropping the negative sign gives $10^{5.40}$, and using $e$ instead of 10 gives $e^{-5.40}$.'
           }
         ]
       }

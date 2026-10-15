@@ -74,8 +74,7 @@ First, 0.08 mol $NaOH$ is added. Then, 0.05 mol $HCl$ is added.
 **3)** After then adding $HCl$, what is the final pH? (2 decimal places)
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['0.33', '5.01', '4.88'],
+        questions: [{ question: '(1)', answer: '0.33', acceptableAnswers: ['0.33'] }, { question: '(2)', answer: '5.03', acceptableAnswers: ['5.03'] }, { question: '(3)', answer: '4.84', acceptableAnswers: ['4.84', '4.85'] }],
         hint1: '$CH_3COOH + OH^- \\rightarrow CH_3COO^-$. New $CH_3COO^- = 0.25 + 0.08$.',
         hint2: '$pH = 4.74 + \\log(0.33/0.17)$.',
         hint3: '$CH_3COO^- + H^+ \\rightarrow CH_3COOH$. New values: $A^- = 0.33 - 0.05$, $HA = 0.17 + 0.05$.',
@@ -122,10 +121,10 @@ $HCl$ is a strong acid. ❌ **Not a buffer** (no weak acid/base pair)
           {
             question: 'Mixing 100 mL of 0.30 M $NH_3$ with 50 mL of 0.30 M $HCl$ produces:',
             options: [
-              'A buffer with excess $NH_3$ and $NH_4^+$ formed',
-              'A neutral solution',
-              'An acidic solution with excess $HCl$',
-              'Not a buffer — $NH_3$ is a weak base'
+              'A buffer of equal $NH_3$ and $NH_4^+$',
+              'A neutral $NH_4Cl$ solution — all base reacted',
+              'An acidic solution with excess $HCl$ left over',
+              'Not a buffer — $NH_3$ is a base, not an acid'
             ],
             correctAnswer: 0,
             explanation: 'Mol $NH_3 = 0.030$, mol $HCl = 0.015$. $NH_3 + H^+ \\rightarrow NH_4^+$. After: $NH_3 = 0.015$ mol, $NH_4^+ = 0.015$ mol. Both components present → buffer!'
@@ -136,10 +135,10 @@ $HCl$ is a strong acid. ❌ **Not a buffer** (no weak acid/base pair)
               '100 mL of 0.10 M $HA$ + 100 mL of 0.10 M $NaOH$',
               '100 mL of 0.10 M $HA$ + 50 mL of 0.10 M $NaOH$',
               '100 mL of 0.10 M $HA$ + 200 mL of 0.10 M $NaOH$',
-              '100 mL of 0.10 M $HA$ + 100 mL of 0.10 M $HCl$'
+              '100 mL of 0.10 M $HA$ + 100 mL of 0.10 M $NaCl$'
             ],
             correctAnswer: 1,
-            explanation: 'Mol $HA = 0.010$, mol $OH^- = 0.005$. Half the acid is neutralized: $HA = 0.005$, $A^- = 0.005$. Equal amounts → $pH = pK_a$. This is the **half-equivalence point** concept from titrations!'
+            explanation: 'Mol $HA = 0.010$, mol $OH^- = 0.005$. Half the acid is neutralized: $HA = 0.005$, $A^- = 0.005$. Equal amounts → $pH = pK_a$. This is the **half-equivalence point** concept from titrations! Equal moles of $NaOH$ convert all the acid (no $HA$ left), twice as much leaves excess $OH^-$, and $NaCl$ supplies no conjugate base at all.'
           }
         ]
       }
@@ -159,8 +158,7 @@ Design a 500 mL phosphate buffer at pH 7.40 ($pK_a = 7.21$, total phosphate = 0.
 **3)** How many moles of $Na_2HPO_4$ are needed for 500 mL? (3 decimal places)
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['1.55', '0.078', '0.061'],
+        questions: [{ question: '(1)', answer: '1.55', acceptableAnswers: ['1.55'] }, { question: '(2)', answer: '0.078', acceptableAnswers: ['0.078', '0.0785'] }, { question: '(3)', answer: '0.061', acceptableAnswers: ['0.061', '0.0608'] }],
         hint1: '$[A^-]/[HA] = 10^{(7.40 - 7.21)} = 10^{0.19}$.',
         hint2: 'Let $[H_2PO_4^-] = x$; then $[HPO_4^{2-}] = 1.55x$; $x + 1.55x = 0.20$.',
         hint3: 'Moles = concentration × volume in liters.',
@@ -177,7 +175,7 @@ Design a 500 mL phosphate buffer at pH 7.40 ($pK_a = 7.21$, total phosphate = 0.
         dropdowns: [
           {
             label: 'Adding exactly half the moles of strong base to a weak acid creates a buffer at',
-            options: ['pH = 7', 'pH = $pK_{a}$', 'pH = pK_b', 'pH = 0']
+            options: ['pH = 7', 'pH = $pK_{a}$', 'pH = $pK_{b}$', 'pH = $pK_{a}$ + 1']
           },
           {
             label: 'The Henderson-Hasselbalch equation CANNOT be used when',
@@ -185,10 +183,10 @@ Design a 500 mL phosphate buffer at pH 7.40 ($pK_a = 7.21$, total phosphate = 0.
           },
           {
             label: 'In an AP free-response buffer problem, always show',
-            options: ['only the final pH', 'the stoichiometry table then Henderson-Hasselbalch', 'just the formula', 'a diagram']
+            options: ['only the final pH, to save time', 'the stoichiometry step, then H-H', 'just the formula with no numbers', 'a titration curve sketch']
           }
         ],
-        correctAnswers: ['pH = $pK_{a}$', 'the buffer is destroyed', 'the stoichiometry table then Henderson-Hasselbalch'],
+        correctAnswers: ['pH = $pK_{a}$', 'the buffer is destroyed', 'the stoichiometry step, then H-H'],
         hint1: 'Half neutralization gives 1:1 ratio.',
         hint2: 'A destroyed buffer has only one component — it\'s no longer a buffer.',
         hint3: 'AP graders want to see your work: stoichiometry first, then equilibrium.',
@@ -207,23 +205,23 @@ Design a 500 mL phosphate buffer at pH 7.40 ($pK_a = 7.21$, total phosphate = 0.
             question: 'A buffer contains 0.40 mol $HA$ and 0.40 mol $A^-$ in 1.0 L ($pK_a = 5.00$). After adding 0.40 mol $NaOH$, the pH is:',
             options: [
               '5.00',
-              '6.00',
-              'Very high (≈13) — buffer destroyed, excess $OH^-$',
-              '14.00'
+              '7.00',
+              '9.45',
+              '13.90'
             ],
             correctAnswer: 2,
-            explanation: '0.40 mol $NaOH$ consumes ALL 0.40 mol $HA$ → buffer destroyed. Result: 0.80 mol $A^-$ (a weak base) in 1.0 L. Use $K_b = K_w/K_a$ with ICE table — pH will be basic, though not extremely high since $A^-$ is a weak base.'
+            explanation: '0.40 mol $NaOH$ consumes ALL 0.40 mol $HA$, so the buffer is destroyed and 0.80 mol $A^-$ (0.80 M, a weak base) remains with no excess $OH^-$. $K_b = K_w/K_a = 1.0 \\times 10^{-14}/1.0 \\times 10^{-5} = 1.0 \\times 10^{-9}$. $[OH^-] = \\sqrt{(1.0 \\times 10^{-9})(0.80)} = 2.8 \\times 10^{-5}$ M, $pOH = 4.55$, $pH = 9.45$. Treating 0.80 M $A^-$ as if it were 0.80 M $OH^-$ gives 13.90; assuming the neutralized solution is neutral gives 7.00; skipping the reaction step gives 5.00.'
           },
           {
             question: '100 mL of 0.50 M $CH_3COOH$ is mixed with 100 mL of 0.25 M $NaOH$. The resulting solution is:',
             options: [
               'A buffer — half the acid was neutralized',
-              'Neutral — everything reacted',
-              'Acidic — excess strong acid',
-              'Basic — excess NaOH'
+              'Neutral — the acid and base neutralized each other',
+              'Acidic but unbuffered — only $CH_3COOH$ remains',
+              'Basic — excess $NaOH$ remains after the reaction'
             ],
             correctAnswer: 0,
-            explanation: 'Mol $HA = 0.050$, mol $OH^- = 0.025$. After reaction: $HA = 0.025$ mol, $A^- = 0.025$ mol. Both components present → buffer at $pH = pK_a = 4.74$!'
+            explanation: 'Mol $HA = 0.050$, mol $OH^- = 0.025$. After reaction: $HA = 0.025$ mol, $A^- = 0.025$ mol. Both components present → buffer at $pH = pK_a = 4.74$! $NaOH$ is the limiting reagent, so none is left over, and the acid was only half neutralized.'
           }
         ]
       }

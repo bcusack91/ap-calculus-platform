@@ -126,35 +126,35 @@ The salt bridge maintains **electrical neutrality** by allowing ion migration be
           {
             question: 'In a galvanic cell, electrons flow through the:',
             options: [
-              'Salt bridge',
+              'Salt bridge, between half-cells',
               'Electrolyte solution',
               'External wire',
               'Electrode interior only'
             ],
             correctAnswer: 2,
-            explanation: 'Electrons flow through the **external wire** from anode to cathode. Ions (not electrons) flow through the salt bridge and solution.'
+            explanation: 'Electrons flow through the **external wire** from anode to cathode. Ions (not electrons) flow through the salt bridge and solution, and electrons pass through the electrodes only on their way to or from the wire.'
           },
           {
             question: 'The salt bridge in a galvanic cell:',
             options: [
               'Allows electrons to flow between half-cells',
               'Maintains electrical neutrality by allowing ion migration',
-              'Increases the voltage of the cell',
-              'Prevents the reaction from occurring'
+              'Raises the cell voltage by adding ions',
+              'Stops the half-cells from exchanging any ions'
             ],
             correctAnswer: 1,
-            explanation: 'The salt bridge allows ions to migrate between half-cells to maintain electrical neutrality. Without it, charge buildup would halt the cell.'
+            explanation: 'The salt bridge allows ions to migrate between half-cells to maintain electrical neutrality. Without it, charge buildup would halt the cell. Electrons travel through the external wire, not the bridge, and the bridge does not change $E^\\circ_{\\text{cell}}$.'
           },
           {
             question: 'In a Daniell cell, the Zn electrode is the:',
             options: [
               'Cathode (positive terminal)',
               'Anode (negative terminal)',
-              'Salt bridge',
-              'Inert electrode'
+              'Anode (positive terminal)',
+              'Cathode (negative terminal)'
             ],
             correctAnswer: 1,
-            explanation: 'Zinc is oxidized ($\\text{Zn} \\rightarrow \\text{Zn}^{2+} + 2e^-$), so it is the anode. In a galvanic cell, the anode is the negative terminal.'
+            explanation: 'Zinc is oxidized ($\\text{Zn} \\rightarrow \\text{Zn}^{2+} + 2e^-$), so it is the anode. In a galvanic cell, the anode is the negative terminal because it releases electrons into the wire; the positive terminal is the anode only in an electrolytic cell.'
           }
         ]
       }
@@ -169,7 +169,7 @@ The salt bridge maintains **electrical neutrality** by allowing ion migration be
         dropdowns: [
           {
             label: 'Oxidation occurs at the',
-            options: ['cathode', 'anode', 'salt bridge', 'voltmeter']
+            options: ['cathode', 'anode', 'salt bridge', 'external wire']
           },
           {
             label: 'In a galvanic cell, the anode has a charge of',
@@ -177,15 +177,15 @@ The salt bridge maintains **electrical neutrality** by allowing ion migration be
           },
           {
             label: 'Cations in the salt bridge migrate toward the',
-            options: ['anode', 'cathode', 'external wire', 'voltmeter']
+            options: ['anode', 'cathode', 'external wire', 'neither electrode']
           },
           {
             label: 'As a galvanic cell operates, the mass of the anode',
-            options: ['increases', 'decreases', 'stays the same', 'oscillates']
+            options: ['increases', 'decreases', 'stays the same', 'depends on the salt bridge']
           },
           {
             label: 'As a galvanic cell operates, the mass of the cathode',
-            options: ['increases', 'decreases', 'stays the same', 'oscillates']
+            options: ['increases', 'decreases', 'stays the same', 'depends on the salt bridge']
           }
         ],
         correctAnswers: ['anode', 'negative (−)', 'cathode', 'decreases', 'increases'],
@@ -241,7 +241,7 @@ $\\text{Mg}(s) + \\text{Fe}^{2+}(aq) \\rightarrow \\text{Mg}^{2+}(aq) + \\text{F
           {
             question: 'In a galvanic cell, anions from the salt bridge flow toward the:',
             options: [
-              'Cathode (to balance consumed cations)',
+              'Cathode (to replace lost cations)',
               'Anode (to balance produced cations)',
               'External wire',
               'They don\'t flow at all'

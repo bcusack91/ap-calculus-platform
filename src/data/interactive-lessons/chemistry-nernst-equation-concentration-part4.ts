@@ -125,10 +125,10 @@ All three quantities are interconnected:
               '$10^{10}$',
               '$10^{5}$',
               '$10^{2}$',
-              '$10^{1}$'
+              '$10^{20}$'
             ],
             correctAnswer: 0,
-            explanation: '$\\log K = (2)(0.30)/0.0592 = 0.60/0.0592 = 10.1$. So $K = 10^{10.1} \\approx 10^{10}$.'
+            explanation: '$\\log K = (2)(0.30)/0.0592 = 0.60/0.0592 = 10.1$. So $K = 10^{10.1} \\approx 10^{10}$. Leaving out $n$ gives $10^{5}$, and multiplying by $n$ twice gives $10^{20}$.'
           },
           {
             question: 'A reaction with K = 1 has E° equal to:',
@@ -145,12 +145,12 @@ All three quantities are interconnected:
             question: 'Even a small positive E° (like 0.10 V) gives a large K because:',
             options: [
               'K is linear with E°',
-              'K is exponential with E° (K = 10^{nE°/0.0592})',
+              'K depends exponentially on E°',
               'K does not depend on E°',
               'The Faraday constant is very large'
             ],
             correctAnswer: 1,
-            explanation: '$K = 10^{nE°/0.0592}$ is an exponential relationship. The exponent $nE°/0.0592$ grows rapidly even for moderate $E°$ values.'
+            explanation: '$K = 10^{nE°/0.0592}$ is an exponential relationship. The exponent $nE°/0.0592$ grows rapidly even for moderate $E°$ values: 0.10 V with $n = 2$ already gives $K \\approx 10^{3.4}$. The size of $F$ is already folded into the 0.0592 term.'
           }
         ]
       }
@@ -192,11 +192,11 @@ At 25°C:
           },
           {
             label: 'The E°-K relationship is derived by setting E = 0 because',
-            options: ['the cell is broken', 'E° is always zero', 'the cell is at equilibrium', 'Q = 0 at equilibrium']
+            options: ['the cell is fully charged', 'E° is always zero', 'the cell is at equilibrium', 'Q = 0 at equilibrium']
           },
           {
             label: 'Doubling n in E° = (0.0592/n) log K means',
-            options: ['K doubles', 'E° doubles', 'the same E° corresponds to $K^{2}$', 'K is halved']
+            options: ['the same E° corresponds to 2K', 'the same E° corresponds to K/2', 'the same E° corresponds to $K^{2}$', 'the same E° corresponds to $\\sqrt{K}$']
           },
           {
             label: 'The three interconnected quantities are ΔG°, E°, and',
@@ -232,7 +232,7 @@ At 25°C:
           {
             question: 'Two cells have E° = 0.50 V but different n values ($n_{1}$ = 1, $n_{2}$ = 2). Which has the larger K?',
             options: [
-              'Cell 1 (n = 1) — fewer electrons means larger K',
+              'Cell 1 (n = 1) — fewer electrons, larger K',
               'Cell 2 (n = 2) — more electrons means larger K',
               'They have the same K because E° is the same',
               'Cannot be determined without ΔG°'

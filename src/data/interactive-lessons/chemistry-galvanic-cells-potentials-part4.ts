@@ -125,8 +125,8 @@ For reactions involving gases, the gas contacts the Pt electrode and is separate
             options: [
               'On the right side',
               'On the left side',
-              'In the middle',
-              'Above the salt bridge'
+              'In the middle, by the salt bridge',
+              'Directly after the double line'
             ],
             correctAnswer: 1,
             explanation: 'By convention, the anode (oxidation) is always written on the **left** side of cell notation, and the cathode (reduction) on the right.'
@@ -147,11 +147,11 @@ For reactions involving gases, the gas contacts the Pt electrode and is separate
             options: [
               'Pt is always required in galvanic cells',
               'There is no solid metal for the $Fe^{2+}/Fe^{3+}$ half-reaction',
-              'Pt provides the voltage',
-              'Pt acts as the salt bridge'
+              'Pt is oxidized and supplies the electrons',
+              'Pt catalyzes the $Fe^{2+}$ oxidation'
             ],
             correctAnswer: 1,
-            explanation: 'The $Fe^{2+}/Fe^{3+}$ half-reaction involves only aqueous ions — no solid metal to serve as an electrode. An inert conductor (Pt) provides a surface for electron transfer without participating in the reaction.'
+            explanation: 'The $Fe^{2+}/Fe^{3+}$ half-reaction involves only aqueous ions — no solid metal to serve as an electrode. An inert conductor (Pt) provides a surface for electron transfer without participating in the reaction, so it is neither oxidized nor needed as a catalyst.'
           }
         ]
       }
@@ -197,14 +197,14 @@ For the cell: $\\text{Al}(s) \\mid \\text{Al}^{3+}(aq) \\| \\text{Ni}^{2+}(aq) \
           },
           {
             label: 'An inert electrode is needed when',
-            options: ['the reaction is slow', 'no solid metal participates in the half-reaction', 'the cell voltage is low', 'two gases react']
+            options: ['the reaction is too slow to measure', 'no solid metal is in the half-reaction', 'the cell voltage is very low', 'the salt bridge is missing']
           },
           {
             label: 'A comma in cell notation separates species that are in the',
             options: ['different phases', 'same phase', 'different half-cells', 'the salt bridge']
           }
         ],
-        correctAnswers: ['phase boundary', 'Sn(s)', 'no solid metal participates in the half-reaction', 'same phase'],
+        correctAnswers: ['phase boundary', 'Sn(s)', 'no solid metal is in the half-reaction', 'same phase'],
         hint1: 'Single line = phase change, double line = salt bridge.',
         hint2: 'The left side is the anode where oxidation occurs.',
         hint3: 'When all species in a half-reaction are dissolved ions, we need Pt or C.',
@@ -235,11 +235,11 @@ For the cell: $\\text{Al}(s) \\mid \\text{Al}^{3+}(aq) \\| \\text{Ni}^{2+}(aq) \
             options: [
               'Cathode — reduction occurs there',
               'Anode — oxidation occurs there',
-              'Salt bridge',
-              'Spectator'
+              'Cathode — $MnO_4^-$ is reduced there',
+              'Anode — reduction of $Cl_2$ occurs there'
             ],
             correctAnswer: 1,
-            explanation: 'The left side is always the anode. $Cl_{2}$ is being produced from $Cl^{-}$ (oxidation). Pt provides the electrode surface since the reactant is a gas/solution.'
+            explanation: 'The left side is always the anode, and oxidation always occurs at the anode: $Cl^{-}$ is oxidized to $Cl_{2}$. $MnO_4^-$ is reduced at the right-hand Pt, which is the cathode. Pt provides the electrode surface since the reactant is a gas/solution.'
           }
         ]
       }

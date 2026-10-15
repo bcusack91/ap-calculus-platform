@@ -119,29 +119,29 @@ Outside this range, one component is less than 10% of the other. There\'s not en
               'All have equal capacity'
             ],
             correctAnswer: 1,
-            explanation: 'Capacity against added acid depends on moles of $A^-$ (the species that reacts with $H^+$). Buffer B has the most $A^-$ (0.50 M), so it has the greatest capacity against acid.'
+            explanation: 'Capacity against added acid depends on moles of $A^-$ (the species that reacts with $H^+$). The 0.10 M $HA$ / 0.50 M $A^-$ buffer has the most $A^-$ (0.50 M), so it has the greatest capacity against acid.'
           },
           {
             question: 'The effective buffer range of a system with $pK_a = 7.20$ is:',
             options: [
               'pH 6.20 – 8.20',
-              'pH 0 – 14',
+              'pH 6.70 – 7.70',
               'pH 7.00 – 7.40',
               'pH 5.20 – 9.20'
             ],
             correctAnswer: 0,
-            explanation: 'Effective range = $pK_a \\pm 1 = 7.20 \\pm 1 = 6.20$ to $8.20$.'
+            explanation: 'Effective range = $pK_a \\pm 1 = 7.20 \\pm 1 = 6.20$ to $8.20$. The ±0.5 and ±0.2 windows are too narrow, and ±2 is too wide: outside ±1 one component is less than a tenth of the other.'
           },
           {
             question: 'Doubling the concentration of both buffer components will:',
             options: [
-              'Change the pH',
+              'Raise the pH because more conjugate base is present',
               'Double the buffer capacity without changing pH',
-              'Halve the buffer capacity',
-              'Change the $K_a$'
+              'Leave the capacity unchanged because the ratio is unchanged',
+              'Shift $K_a$ because the acid concentration has doubled'
             ],
             correctAnswer: 1,
-            explanation: 'Doubling both $[HA]$ and $[A^-]$ doubles the moles available but keeps the ratio the same. Since $pH = pK_a + \\log([A^-]/[HA])$, the pH doesn\'t change, but the capacity doubles.'
+            explanation: 'Doubling both $[HA]$ and $[A^-]$ doubles the moles available but keeps the ratio the same. Since $pH = pK_a + \\log([A^-]/[HA])$, the pH doesn\'t change, but the capacity doubles. $K_a$ depends only on temperature, and capacity depends on amounts, not just the ratio.'
           }
         ]
       }
@@ -162,7 +162,7 @@ A buffer contains 0.40 mol $CH_3COOH$ and 0.60 mol $CH_3COO^-$ in 2.0 L. ($pK_a 
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.60', '0.40', '5.62'],
+        correctAnswers: ['0.60', '0.40', '5.69'],
         hint1: 'Max acid = moles of $A^-$ available.',
         hint2: 'Max base = moles of $HA$ available.',
         hint3: 'After adding 0.30 mol $NaOH$: $HA = 0.40 - 0.30 = 0.10$; $A^- = 0.60 + 0.30 = 0.90$.',
@@ -216,14 +216,14 @@ But now there\'s half the buffering capacity.
           },
           {
             label: 'A buffer with $[A^-]/[HA] = 100$ is',
-            options: ['very effective', 'outside effective range', 'at its best', 'neutral']
+            options: ['very effective', 'outside effective range', 'at maximum capacity', 'at pH = $pK_{a}$']
           },
           {
             label: 'To increase buffer capacity without changing pH, you should',
-            options: ['add more HA only', 'add more $A^{-}$ only', 'add equal moles of both HA and $A^{-}$', 'add water']
+            options: ['add more HA only', 'add more $A^{-}$ only', 'add more HA and $A^{-}$ equally', 'dilute it with water']
           }
         ],
-        correctAnswers: ['9', 'not change pH', 'outside effective range', 'add equal moles of both HA and $A^{-}$'],
+        correctAnswers: ['9', 'not change pH', 'outside effective range', 'add more HA and $A^{-}$ equally'],
         hint1: 'Effective range is $pK_a \\pm 1$; choose $pK_a \\approx$ target pH.',
         hint2: 'Dilution maintains the ratio.',
         hint3: 'Ratio = 100 means $\\log(100) = 2$, so pH = $pK_a + 2$ — outside $pK_a \\pm 1$.',
@@ -244,10 +244,10 @@ But now there\'s half the buffering capacity.
               '1.00',
               '0.333',
               '3.00',
-              '0.50'
+              '0.500'
             ],
             correctAnswer: 1,
-            explanation: '$A^- + H^+ \\rightarrow HA$. $A^-$: $0.10 - 0.05 = 0.05$ mol. $HA$: $0.10 + 0.05 = 0.15$ mol. Ratio = $0.05/0.15 = 0.333$.'
+            explanation: '$A^- + H^+ \\rightarrow HA$. $A^-$: $0.10 - 0.05 = 0.05$ mol. $HA$: $0.10 + 0.05 = 0.15$ mol. Ratio = $0.05/0.15 = 0.333$. Forgetting to add the 0.05 mol to $HA$ gives $0.05/0.10 = 0.500$, and inverting the ratio gives 3.00.'
           },
           {
             question: 'Which would be the best buffer for maintaining pH near 7?',
@@ -255,10 +255,10 @@ But now there\'s half the buffering capacity.
               '$CH_3COOH/CH_3COO^-$ ($pK_a = 4.74$)',
               '$H_2PO_4^-/HPO_4^{2-}$ ($pK_a = 7.21$)',
               '$NH_4^+/NH_3$ ($pK_a = 9.25$)',
-              '$HCl/NaCl$'
+              '$H_2CO_3/HCO_3^-$ ($pK_a = 6.35$)'
             ],
             correctAnswer: 1,
-            explanation: 'Choose a buffer with $pK_a$ closest to the target pH. $H_2PO_4^-/HPO_4^{2-}$ has $pK_a = 7.21$, closest to pH 7. $HCl/NaCl$ is NOT a buffer (HCl is a strong acid).'
+            explanation: 'Choose a buffer with $pK_a$ closest to the target pH. $H_2PO_4^-/HPO_4^{2-}$ has $pK_a = 7.21$, only 0.21 from pH 7. $H_2CO_3/HCO_3^-$ (6.35) also works but is 0.65 away, so its components are less balanced at pH 7; acetate (4.74) and ammonium (9.25) are more than 2 units away.'
           }
         ]
       }

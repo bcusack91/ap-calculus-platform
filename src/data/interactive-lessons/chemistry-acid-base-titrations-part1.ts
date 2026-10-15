@@ -118,13 +118,13 @@ $$[OH^-] = \\frac{\\text{mol } OH^- - \\text{mol } H^+}{\\text{total volume}}$$
           {
             question: 'At the equivalence point of a strong acid–strong base titration:',
             options: [
-              'pH < 7',
+              'pH < 7, since $Cl^-$ is acidic',
               'pH = 7',
-              'pH > 7',
+              'pH > 7, since $Na^+$ is basic',
               'pH cannot be determined'
             ],
             correctAnswer: 1,
-            explanation: 'At the equivalence point of a strong acid–strong base titration, all $H^+$ and $OH^-$ have reacted. The resulting salt ($NaCl$) does not hydrolyze, so $pH = 7.00$.'
+            explanation: 'At the equivalence point of a strong acid–strong base titration, all $H^+$ and $OH^-$ have reacted. The resulting salt ($NaCl$) does not hydrolyze — neither $Na^+$ nor $Cl^-$ is acidic or basic in water — so $pH = 7.00$.'
           },
           {
             question: '25.0 mL of 0.100 M $HCl$ is titrated with 0.100 M $NaOH$. The equivalence point is reached after adding:',
@@ -140,13 +140,13 @@ $$[OH^-] = \\frac{\\text{mol } OH^- - \\text{mol } H^+}{\\text{total volume}}$$
           {
             question: 'The difference between the equivalence point and end point is:',
             options: [
-              'They are the same thing',
-              'Equivalence point is theoretical stoichiometry; end point is the observed indicator change',
-              'End point always occurs before equivalence point',
-              'Equivalence point only applies to strong acids'
+              'They are the same point; the two terms are fully interchangeable',
+              'Equivalence is stoichiometric; end point is the color change',
+              'The end point always comes before the equivalence point is reached',
+              'The equivalence point applies only to strong acid–strong base titrations'
             ],
             correctAnswer: 1,
-            explanation: 'The equivalence point is the exact stoichiometric point. The end point is where the indicator changes color. A good indicator is chosen so these occur as close together as possible.'
+            explanation: 'The equivalence point is the exact stoichiometric point, where moles of titrant equal the moles required by the balanced equation. The end point is where the indicator changes color. They are different points, and a good indicator is chosen so these occur as close together as possible; every titration (weak or strong) has an equivalence point, and the end point can fall slightly before or after it.'
           }
         ]
       }
@@ -185,7 +185,7 @@ $$[HCl] = \\frac{2.775 \\times 10^{-3}}{0.0250} = 0.111 \\text{ M}$$
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['60.0', '1.48', '12.80'],
+        correctAnswers: ['60.0', '1.48', '11.80'],
         hint1: '$M_a V_a = M_b V_b$: $0.100 \\times V = 0.200 \\times 30.0$.',
         hint2: 'Excess $H^+$: mol $H^+ = 0.004 - 0.002 = 0.002$. Total volume = 60.0 mL.',
         hint3: 'Excess $OH^-$: $0.0005$ mol in 80.0 mL. Find $pOH$, then $pH = 14 - pOH$.',
@@ -210,7 +210,7 @@ $$[HCl] = \\frac{2.775 \\times 10^{-3}}{0.0250} = 0.111 \\text{ M}$$
           },
           {
             label: 'At the equivalence point, moles of acid equals',
-            options: ['zero', 'moles of base added', 'twice the moles of base', 'moles of indicator']
+            options: ['zero', 'moles of base added', 'twice the moles of base', 'half the moles of base']
           }
         ],
         correctAnswers: ['titrant', 'acidic', 'moles of base added'],
@@ -242,13 +242,13 @@ $$[HCl] = \\frac{2.775 \\times 10^{-3}}{0.0250} = 0.111 \\text{ M}$$
           {
             question: 'Which best describes the pH during a strong acid-strong base titration?',
             options: [
-              'pH remains constant throughout',
-              'pH changes slowly at first, then rapidly near equivalence, then slowly again',
-              'pH increases linearly',
-              'pH decreases throughout'
+              'pH stays constant until equivalence, then jumps to its final value',
+              'pH changes slowly, then sharply near equivalence, then slowly',
+              'pH increases linearly in proportion to the volume of base added',
+              'pH changes rapidly at first, then levels off well before equivalence'
             ],
             correctAnswer: 1,
-            explanation: 'The titration curve has an S-shape: pH changes slowly when excess acid/base dominates, but changes very rapidly near the equivalence point where the buffering effect is minimal.'
+            explanation: 'The titration curve has an S-shape: pH changes slowly when excess acid/base dominates, but changes very rapidly near the equivalence point where the buffering effect is minimal. Because pH is logarithmic, it neither stays constant nor rises in proportion to the volume added.'
           }
         ]
       }

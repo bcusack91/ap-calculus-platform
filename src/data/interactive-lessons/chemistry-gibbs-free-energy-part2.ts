@@ -113,10 +113,10 @@ $$\\boxed{T_{\\text{crossover}} = \\frac{\\Delta H}{\\Delta S}}$$
 
 ### Case 1 (Always Spontaneous): Combustion
 
-$$\\text{CH}_4(g) + 2\\text{O}_2(g) \\rightarrow \\text{CO}_2(g) + 2\\text{H}_2\\text{O}(g)$$
+$$\\text{C}_3\\text{H}_8(g) + 5\\text{O}_2(g) \\rightarrow 3\\text{CO}_2(g) + 4\\text{H}_2\\text{O}(g)$$
 
 - $\\Delta H < 0$ (releases heat)
-- $\\Delta S > 0$ ($\\Delta n_{\\text{gas}} = 3 - 3 = 0$, but products are more complex — actually $\\Delta S$ can be slightly negative for this specific reaction at standard conditions)
+- $\\Delta S > 0$ ($\\Delta n_{\\text{gas}} = 7 - 6 = +1$: more moles of gas)
 
 
 ---

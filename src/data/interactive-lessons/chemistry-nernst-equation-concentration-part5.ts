@@ -171,22 +171,22 @@ A fuel cell is a galvanic cell where the reactants are **continuously supplied**
             options: [
               'Primary batteries use metals; secondary use nonmetals',
               'Primary batteries cannot be recharged; secondary can',
-              'Primary batteries have higher voltage',
-              'Primary batteries use fuel cells'
+              'Primary batteries always deliver a higher voltage than secondary ones',
+              'Primary batteries are fuel cells fed by an outside supply'
             ],
             correctAnswer: 1,
-            explanation: 'Primary batteries involve irreversible reactions (non-rechargeable). Secondary batteries have reversible reactions that can be driven backward by applying external voltage.'
+            explanation: 'Primary batteries involve irreversible reactions (non-rechargeable). Secondary batteries have reversible reactions that can be driven backward by applying external voltage. Both types use metals and nonmetals, voltages overlap, and a fuel cell is a separate category with externally supplied reactants.'
           },
           {
             question: 'A fuel cell differs from a battery because:',
             options: [
               'It produces electricity from chemical reactions',
               'Its reactants are continuously supplied from outside',
-              'It has a higher voltage',
-              'It does not use electrodes'
+              'It delivers a higher voltage than any battery',
+              'It works without electrodes or an electrolyte'
             ],
             correctAnswer: 1,
-            explanation: 'A fuel cell\'s reactants (e.g., $H_{2}$ and $O_{2}$) are continuously fed in from external tanks, unlike a battery where reactants are sealed inside.'
+            explanation: 'A fuel cell\'s reactants (e.g., $H_{2}$ and $O_{2}$) are continuously fed in from external tanks, unlike a battery where reactants are sealed inside. Both produce electricity from redox reactions, both need electrodes and an electrolyte, and a single $H_2/O_2$ fuel cell gives only about 1.2 V.'
           },
           {
             question: 'A 12 V car battery contains how many lead-acid cells in series?',
@@ -220,7 +220,7 @@ A fuel cell is a galvanic cell where the reactants are **continuously supplied**
           },
           {
             label: 'In a lithium-ion battery, $Li^{+}$ ions move by',
-            options: ['melting', 'intercalation', 'precipitation', 'sublimation']
+            options: ['electroplating', 'intercalation', 'precipitation', 'dissolving']
           },
           {
             label: 'Recharging a secondary battery involves',
@@ -245,9 +245,9 @@ A fuel cell is a galvanic cell where the reactants are **continuously supplied**
           {
             question: 'As a lead-acid car battery discharges, what happens to the sulfuric acid concentration?',
             options: [
-              'It increases',
-              'It decreases (both reactions consume $SO_{4}^{2-}$)',
-              'It stays the same',
+              'It increases, as $PbSO_{4}$ dissolves',
+              'It decreases, as both electrodes consume $SO_{4}^{2-}$',
+              'It stays the same, as no acid reacts',
               'It increases at the anode, decreases at the cathode'
             ],
             correctAnswer: 1,
@@ -257,12 +257,12 @@ A fuel cell is a galvanic cell where the reactants are **continuously supplied**
             question: 'Why are fuel cells considered more environmentally friendly than combustion engines?',
             options: [
               'They produce more energy per gram of fuel',
-              'They produce water as the main product $(no CO_{2})$',
+              'Their only product at the point of use is water',
               'They operate at higher temperatures',
               'They use cheaper materials'
             ],
             correctAnswer: 1,
-            explanation: 'Hydrogen fuel cells produce only water: $2\\text{H}_2 + \\text{O}_2 \\rightarrow 2\\text{H}_2\\text{O}$. No carbon dioxide, no pollutants — only clean water.'
+            explanation: 'Hydrogen fuel cells produce only water: $2\\text{H}_2 + \\text{O}_2 \\rightarrow 2\\text{H}_2\\text{O}$. No carbon dioxide or other combustion pollutants are released where the cell runs (although making the $H_2$ can release $CO_2$ elsewhere).'
           }
         ]
       }

@@ -270,21 +270,21 @@ For a cell with $E° = +0.80$ V and $n = 2$ at 298 K:
               'E increases because there are more products',
               'E decreases because Q increases',
               'E stays the same because E° does not change',
-              'E becomes negative'
+              'E becomes negative at once, reversing the cell'
             ],
             correctAnswer: 1,
-            explanation: 'Increasing products increases $Q$. From the Nernst equation, larger $Q$ → larger $\\ln Q$ → more is subtracted from $E°$ → lower $E$.'
+            explanation: 'Increasing products increases $Q$. From the Nernst equation, larger $Q$ → larger $\\ln Q$ → more is subtracted from $E°$ → lower $E$. $E°$ itself does not change, and $E$ turns negative only if $Q$ is pushed past $K$, which a modest increase in products does not do.'
           },
           {
             question: 'Why does the voltage of a battery decrease as it discharges?',
             options: [
-              'The electrodes wear out',
-              'The temperature decreases',
+              'The electrodes wear out and lose surface area',
+              'The cell cools as it runs, lowering E',
               'Q approaches K, and the Nernst equation shows E → 0',
-              'E° changes over time'
+              '$E°$ itself drifts lower as the cell is used'
             ],
             correctAnswer: 2,
-            explanation: 'As the cell operates, reactants are consumed and products accumulate, so $Q$ increases toward $K$. The Nernst equation shows that as $Q \\rightarrow K$, $E \\rightarrow 0$.'
+            explanation: 'As the cell operates, reactants are consumed and products accumulate, so $Q$ increases toward $K$. The Nernst equation shows that as $Q \\rightarrow K$, $E \\rightarrow 0$. $E°$ is a fixed constant for the reaction, and electrode area affects current, not voltage.'
           }
         ]
       }

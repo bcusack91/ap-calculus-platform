@@ -137,22 +137,22 @@ $$2\\text{NaCl}(aq) + 2\\text{H}_2\\text{O}(l) \\rightarrow \\text{Cl}_2(g) + \\
             options: [
               'Anode (where metal dissolves)',
               'Cathode (where metal deposits)',
-              'Salt bridge',
-              'In the electrolyte solution'
+              'Salt bridge (where ions flow)',
+              'Electrolyte (in solution)'
             ],
             correctAnswer: 1,
-            explanation: 'The object to be plated is the cathode — metal ions from solution are reduced and deposited onto its surface.'
+            explanation: 'The object to be plated is the cathode — metal ions from solution are reduced and deposited onto its surface. At the anode, metal is oxidized and dissolves, which would remove metal from the object instead of coating it.'
           },
           {
             question: 'In electrorefining of copper, impure Cu is the:',
             options: [
               'Cathode — impure Cu is purified by reduction',
               'Anode — impure Cu dissolves and pure Cu deposits at cathode',
-              'Electrolyte',
-              'Salt bridge'
+              'Anode — impure Cu is reduced and plates out there',
+              'Cathode — impurities dissolve and pure Cu stays behind'
             ],
             correctAnswer: 1,
-            explanation: 'Impure Cu is the anode: it dissolves (oxidizes) into solution. $Cu^{2+}$ ions then deposit as pure Cu on the cathode. Noble metal impurities fall as "anode mud."'
+            explanation: 'Impure Cu is the anode: it dissolves (oxidizes) into solution. $Cu^{2+}$ ions then deposit as pure Cu on the cathode. Noble metal impurities fall as "anode mud." Reduction never happens at the anode, and placing impure Cu at the cathode would only add more copper onto it.'
           },
           {
             question: 'The Hall-Héroult process produces aluminum from:',
@@ -214,7 +214,7 @@ $\\text{Ag}^+ + e^- \\rightarrow \\text{Ag}$, $n = 1$, $M_{\\text{Ag}} = 107.87$
           },
           {
             label: 'In copper electrorefining, the anode mud contains',
-            options: ['copper oxide', 'aluminum', 'precious metals (Ag, Au, Pt)', 'salt']
+            options: ['copper oxide', 'aluminum', 'precious metals (Ag, Au, Pt)', 'unreacted $CuSO_{4}$']
           }
         ],
         correctAnswers: ['the plating metal', 'aqueous NaCl (brine)', 'water would be reduced instead of $Al^{3+}$', 'precious metals (Ag, Au, Pt)'],
@@ -235,24 +235,24 @@ $\\text{Ag}^+ + e^- \\rightarrow \\text{Ag}$, $n = 1$, $M_{\\text{Ag}} = 107.87$
           {
             question: 'To increase the thickness of an electroplated coating, a technician should:',
             options: [
-              'Use a stronger electrolyte',
+              'Use a more concentrated electrolyte',
               'Increase current and/or time',
-              'Decrease the voltage',
-              'Use a smaller cathode'
+              'Lower the voltage so the metal deposits slowly',
+              'Switch to a cathode made of a less reactive metal'
             ],
             correctAnswer: 1,
-            explanation: 'By Faraday\'s law ($m = ItM/nF$), the mass deposited depends on current ($I$) and time ($t$). Increasing either deposits more metal and creates a thicker coating.'
+            explanation: 'By Faraday\'s law ($m = ItM/nF$), the mass deposited depends on current ($I$) and time ($t$). Increasing either deposits more metal and creates a thicker coating. Electrolyte concentration and the cathode\'s own metal do not appear in Faraday\'s law, and lowering the voltage reduces the current.'
           },
           {
             question: 'Why does the Hall-Héroult process use carbon anodes?',
             options: [
-              'Carbon is the cheapest conductor',
+              'Carbon is inert and is never consumed in the process',
               'Carbon reacts with $O^{2-}$ ions, reducing the required voltage',
-              'Carbon does not conduct electricity',
-              'Carbon is required for Al production'
+              'Carbon reduces $Al^{3+}$ to Al directly at the anode',
+              'Carbon raises the melting point of the cryolite bath'
             ],
             correctAnswer: 1,
-            explanation: 'Carbon anodes react with $O^{2-}$ to form $CO_{2}$, which is less energy-intensive than producing pure $O_{2}$. This reduces the overall voltage needed, saving energy. The carbon anodes are consumed and must be replaced.'
+            explanation: 'Carbon anodes react with $O^{2-}$ to form $CO_{2}$, which is less energy-intensive than producing pure $O_{2}$. This reduces the overall voltage needed, saving energy. The carbon anodes are consumed and must be replaced. $Al^{3+}$ is reduced at the cathode, and cryolite is added to lower the melting point, not raise it.'
           }
         ]
       }

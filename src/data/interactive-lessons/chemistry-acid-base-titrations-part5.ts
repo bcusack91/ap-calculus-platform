@@ -131,13 +131,13 @@ The indicator changes color over approximately **2 pH units** centered on its $p
           {
             question: 'Why would phenolphthalein be a poor choice for titrating $NH_3$ with $HCl$?',
             options: [
-              'It is too expensive',
-              'Its color change range (8.2-10.0) doesn\'t match the equivalence pH (~5)',
-              'It only works with strong acids',
-              'It changes color too slowly'
+              'Its range (8.2–10.0) is below the equivalence pH, which is near 11',
+              'Its range (8.2–10.0) is far above the equivalence pH (~5)',
+              'It works only for strong acid–strong base titrations, never weak bases',
+              'It changes color too slowly to mark a sharp equivalence point'
             ],
             correctAnswer: 1,
-            explanation: 'The equivalence point of $NH_3 + HCl$ is at pH ≈ 5 (acidic — $NH_4^+$ hydrolyzes). Phenolphthalein changes at pH 8-10, far from the equivalence point. Methyl red or methyl orange would be better.'
+            explanation: 'The equivalence point of $NH_3 + HCl$ is at pH ≈ 5 (acidic — $NH_4^+$ hydrolyzes). Phenolphthalein changes at pH 8.2–10.0, far above the equivalence point, so it would change color early. Methyl red or methyl orange would be better. The equivalence pH of a weak base–strong acid titration is below 7, not near 11.'
           }
         ]
       }
@@ -242,10 +242,10 @@ Alternatively, plot the **first derivative** ($\\Delta pH/\\Delta V$ vs. $V$). T
           {
             question: 'A student titrates a weak acid with $NaOH$ using methyl orange (range 3.1-4.4). The color changes before the equivalence point is reached. This means:',
             options: [
-              'The indicator was appropriate',
-              'The indicator changed too early — the equivalence pH is higher than 4.4',
-              'The acid was actually a strong acid',
-              'More indicator should have been added'
+              'The indicator was appropriate, since any color change marks equivalence',
+              'It changed too early, since equivalence is well above pH 4.4',
+              'The acid must have been strong, which reaches equivalence earlier',
+              'More indicator was needed to shift the color change to equivalence'
             ],
             correctAnswer: 1,
             explanation: 'For weak acid + strong base, equivalence pH > 7. Methyl orange changes at pH 3-4, which is in the buffer region (before equivalence). The student would underestimate the volume needed. Phenolphthalein would be more appropriate.'
@@ -253,13 +253,13 @@ Alternatively, plot the **first derivative** ($\\Delta pH/\\Delta V$ vs. $V$). T
           {
             question: 'At the endpoint when using phenolphthalein, the solution has just turned faint pink. This means:',
             options: [
-              'pH is approximately 8.2 (entering the transition range)',
-              'pH is exactly 7',
-              'pH is approximately 14',
-              'The indicator has decomposed'
+              'pH is about 8.2, the bottom of its range',
+              'pH is exactly 7, the equivalence point',
+              'pH is about 14, as all acid is gone',
+              'pH is about 10, the top of its range'
             ],
             correctAnswer: 0,
-            explanation: 'Phenolphthalein is colorless below pH ≈ 8.2 and turns pink above it. The first appearance of faint pink indicates the pH has just entered the transition range at about pH 8.2.'
+            explanation: 'Phenolphthalein is colorless below pH ≈ 8.2 and turns pink above it. The first appearance of faint pink indicates the pH has just entered the transition range at about pH 8.2; by pH 10 the solution is deep pink.'
           }
         ]
       }

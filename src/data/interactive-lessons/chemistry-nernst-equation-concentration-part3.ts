@@ -149,10 +149,10 @@ $$\\boxed{E = +0.0592 \\text{ V} = 59.2 \\text{ mV}}$$
           {
             question: 'In a concentration cell, which side is the anode?',
             options: [
-              'The side with higher concentration',
+              'The more concentrated side',
               'The side with lower concentration',
               'Either side — it doesn\'t matter',
-              'The side with the larger electrode'
+              'The side with more metal'
             ],
             correctAnswer: 1,
             explanation: 'The dilute side is the anode: the metal dissolves to increase the ion concentration toward equilibrium. The concentrated side is the cathode where ions plate out.'
@@ -216,10 +216,10 @@ At 25°C:
           },
           {
             label: 'Concentration cells are used in practice as',
-            options: ['high-voltage batteries', 'sensors for measuring ion concentrations', 'fuel cells', 'electrolytic cells']
+            options: ['high-voltage batteries', 'sensors for ion concentration', 'hydrogen fuel cells', 'electrolytic cells']
           }
         ],
-        correctAnswers: ['the concentration gradient', 'more equal', '0.0592 V', 'sensors for measuring ion concentrations'],
+        correctAnswers: ['the concentration gradient', 'more equal', '0.0592 V', 'sensors for ion concentration'],
         hint1: 'E° = 0, so all voltage comes from ΔC.',
         hint2: 'The cell equalizes concentrations (approaches equilibrium).',
         hint3: '$E = (0.0592/2)\\log(100) = 0.0296 \\times 2 = 0.0592$ V.',
@@ -251,10 +251,10 @@ At 25°C:
               'Lower than 0.01 M',
               'Higher than 0.01 M',
               'Exactly 0.01 M',
-              'Zero'
+              'Near zero'
             ],
             correctAnswer: 1,
-            explanation: 'At the anode, Ag dissolves: Ag → $Ag^{+}$ + $e^{-}$. This increases [$Ag^{+}$] in the dilute compartment. The cell drives both compartments toward equal concentration.'
+            explanation: 'At the anode, Ag dissolves: Ag → $Ag^{+}$ + $e^{-}$. This increases [$Ag^{+}$] in the dilute compartment, so it never falls toward zero. The cell drives both compartments toward equal concentration; $Ag^{+}$ plates out at the cathode (the concentrated side), not at the anode.'
           }
         ]
       }

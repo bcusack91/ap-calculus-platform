@@ -71,13 +71,13 @@ $$\\Delta G° \\xleftrightarrow{-nF} E° \\xleftrightarrow{0.0592/n} \\log K \\x
           {
             question: 'The Nernst equation shows that cell voltage depends on:',
             options: [
-              'Temperature only',
-              'Concentration only',
+              'Temperature and E° only',
+              'Concentration (Q) only',
               'Temperature, concentration (Q), and E°',
-              'E° only'
+              'E° and n only'
             ],
             correctAnswer: 2,
-            explanation: '$E = E° - (RT/nF)\\ln Q$ depends on all three: the standard potential ($E°$), the temperature ($T$), and the reaction quotient ($Q$, which reflects concentrations).'
+            explanation: '$E = E° - (RT/nF)\\ln Q$ depends on all three: the standard potential ($E°$), the temperature ($T$), and the reaction quotient ($Q$, which reflects concentrations). Leaving out $Q$ or $T$ misses one of the variables in the equation.'
           },
           {
             question: 'A galvanic cell has E° = 0.50 V and n = 2. What is ΔG°?',
@@ -137,7 +137,7 @@ $$\\Delta G° \\xleftrightarrow{-nF} E° \\xleftrightarrow{0.0592/n} \\log K \\x
         dropdowns: [
           {
             label: 'As a battery discharges, E',
-            options: ['increases', 'decreases toward 0', 'stays constant', 'oscillates']
+            options: ['increases', 'decreases toward 0', 'stays constant', 'becomes negative']
           },
           {
             label: 'A concentration cell produces voltage because of',
@@ -149,7 +149,7 @@ $$\\Delta G° \\xleftrightarrow{-nF} E° \\xleftrightarrow{0.0592/n} \\log K \\x
           },
           {
             label: 'The largest K comes from the cell with the',
-            options: ['smallest E°', 'largest E° and largest n', 'E° = 0', 'smallest n']
+            options: ['smallest E° and largest n', 'largest E° and largest n', 'E° = 0 and largest n', 'largest E° and smallest n']
           }
         ],
         correctAnswers: ['decreases toward 0', 'different concentrations', '25°C', 'largest E° and largest n'],
@@ -170,13 +170,13 @@ $$\\Delta G° \\xleftrightarrow{-nF} E° \\xleftrightarrow{0.0592/n} \\log K \\x
           {
             question: 'A student measures a cell potential of 0.00 V for a Zn-Cu cell (E° = 1.10 V, n = 2). The student can conclude:',
             options: [
-              'The electrodes are disconnected',
-              'The cell has reached equilibrium (Q = K)',
+              '$E°$ itself has dropped to zero as the cell aged',
+              'The cell is at equilibrium, with Q = K',
               'There is an error — Zn-Cu always produces voltage',
-              'The salt bridge is broken'
+              'The reverse reaction is now favored, since Q > K'
             ],
             correctAnswer: 1,
-            explanation: '$E = 0$ means $Q = K$ — the cell has reached equilibrium. All the reactants have been consumed to the point where the forward and reverse reactions are balanced.'
+            explanation: '$E = 0$ means $Q = K$ — the cell has reached equilibrium, so there is no net driving force in either direction. $E°$ is a fixed 1.10 V for this reaction, and $Q > K$ would give a negative $E$, not zero.'
           },
           {
             question: 'Which change would make a concentration cell produce MORE voltage?',
