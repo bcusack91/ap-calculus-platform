@@ -5,168 +5,255 @@ export const englitNarrativeComplexityPart5Data = {
       id: 'englitna5-intro',
       type: 'text' as const,
       content: `
-# 📖 Narrative Complexity
+# 🧠 Narrative Complexity
 
-**Part 5 of 7 — Change Over Time**
+**Part 5 of 7 — Sustained Ambiguity and Contradiction**
 
-Narrative Complexity has evolved over time. Understanding historical and contemporary changes helps explain current patterns and predict future trends.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| 📖 Ambiguity Built Into a Whole Work |
+| The Turn of the Screw: Two Stories in One |
+| Heart of Darkness: The Man Who Hates Lies |
+| Complexity or Confusion? |
+| Common Misconceptions |
 
-| Concept | Description |
-|---------|-------------|
-| **Continuity** | Aspects of Narrative Complexity that have remained stable over time |
-| **Change** | How Narrative Complexity has transformed due to new forces and conditions |
-| **Trend** | The direction of change in Narrative Complexity over time |
-      `
+> 🔑 **Key Concept:** Part 1 defined ambiguity as a text supporting more than one plausible reading. Unit 7's short-story lessons practiced qualifying a claim about a brief parable. Here the ambiguity is *structural*: it is produced by who narrates, what the frame withholds and where the work ends, and it lasts for a whole book. This matters for skills **3.F** (conflicting values), **4.C** (the narrator's perspective) and **7.B** (a thesis with a line of reasoning that can hold complexity).
+`
+    },
+    {
+      id: 'englitna5-terms',
+      type: 'text' as const,
+      content: `
+## 📖 Ambiguity Built Into a Whole Work
+
+| Source of ambiguity | How it works | Where you saw it |
+|---|---|---|
+| **A single, limited narrator** | We see only what one mind reports, and no one confirms or denies it | The governess in *The Turn of the Screw* |
+| **An unclosed frame** | No outer voice returns to judge the inner story | James's fireside never comes back (Part 3) |
+| **A charged word with two meanings** | One word supports two incompatible readings | "dispossessed" (below) |
+| **A contradiction in a character** | A character acts against stated principles | Marlow's lie |
+| **A contradiction between documents** | Two parts of the text make incompatible claims | *Dracula*'s opening and closing notes (Part 4) |
+
+**Ambiguity is not the same as vagueness.** A vague text gives you too little to decide. An ambiguous text gives you strong evidence for two or more readings and will not let you throw either away.
+`
+    },
+    {
+      id: 'englitna5-james',
+      type: 'text' as const,
+      content: `
+## The Turn of the Screw: Two Stories in One
+
+A young governess takes charge of two orphaned children, Miles and Flora, at a country house called Bly. She sees two figures she comes to believe are the ghosts of former servants, Peter Quint and Miss Jessel, and becomes convinced they are after the children. Critics have long divided over the book. In "The Ambiguity of Henry James" (1934), Edmund Wilson argued that the ghosts are the governess's hallucinations. Many later readers argue that James built the story so that neither reading can be ruled out.
+
+### Evidence for the Ghosts
+
+The governess has never seen Quint, who died before she came to Bly. She describes the stranger she saw to the housekeeper, Mrs. Grose:
+
+> "He has red hair, very red, close-curling, and a pale face, long in shape, with straight, good features and little, rather queer whiskers that are as red as his hair."
+
+Mrs. Grose recognizes him at once:
+
+> She faltered but a second. "Quint!" she cried.
+
+How could the governess describe a dead valet she never saw, unless she really saw him?
+
+### Evidence for the Governess's Mind
+
+At the lake, the governess sees Miss Jessel and points. Mrs. Grose sees nothing:
+
+> "What a dreadful turn, to be sure, miss! Where on earth do you see anything?"
+
+Flora also denies it:
+
+> "I don't know what you mean. I see nobody. I see nothing. I never *have*."
+
+No one but the governess ever reports seeing a ghost, and she reads every silence as proof. Look again at the Quint scene, too. The governess admits "I saw the way to help her," and her leading questions ("But he *is* handsome?" "Remarkably!") help shape the identification.
+
+### The Ending: One Word, Two Meanings
+
+The governess forces Miles to name the presence at the window. He cries out "Peter Quint—you devil!" (is "you devil" addressed to Quint or to her?), and then he dies in her arms:
+
+> We were alone with the quiet day, and his little heart, dispossessed, had stopped.
+>
+> — Henry James, *The Turn of the Screw*, 1898
+
+| Reading | What "dispossessed" means | What the ending becomes |
+|---|---|---|
+| The ghosts are real | Freed from possession by an evil spirit | A rescue that costs the boy his life |
+| The ghosts are the governess's projection | Deprived of his own self, of life | A child terrified to death by his protector |
+
+The book never decides. A strong essay does not either; it explains *how* James makes both readings available.
+`
     },
     {
       id: 'englitna5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**Check Your Understanding** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Studying change over time in Narrative Complexity helps:',
+            question: `Mrs. Grose's identification of Quint from the governess's description is most often cited as evidence that`,
             options: [
-              'Only with history classes',
-              'Explain current patterns and predict future developments',
-              'Nothing',
-              'Memorize dates'
+              `Mrs. Grose secretly invented the ghosts to frighten the new governess`,
+              `the governess saw a real figure she could not have known in advance`,
+              `the children had described Quint to the governess before she arrived`,
+              `Quint and the governess had met in London before she came to Bly`
             ],
             correctAnswer: 1,
-            explanation: 'Understanding how things have changed reveals the forces shaping current conditions and likely future trends.'
+            explanation: `The governess gives a detailed picture of a man she never met, and Mrs. Grose names him, which supports the reading that the apparitions are real. The other options invent events the text does not report.`
           },
           {
-            question: 'Continuity in Narrative Complexity means:',
+            question: `In the final sentence, the word "dispossessed" is ambiguous chiefly because it can mean both`,
             options: [
-              'Everything changes',
-              'Some aspects have remained stable despite other changes',
-              'Nothing ever happened',
-              'The topic is boring'
+              `that Miles has inherited the house and that he has lost his fortune`,
+              `that Miles has escaped Bly and that he has been sent back to school`,
+              `that Quint has been banished and that Miss Jessel has returned to Bly`,
+              `that Miles is freed from a spirit and that he is robbed of life`
             ],
-            correctAnswer: 1,
-            explanation: 'Continuity refers to elements that persist even as other aspects change — an important analytical concept.'
+            correctAnswer: 3,
+            explanation: `"Dispossessed" can describe a soul released from possession or a person stripped of what was his own, here life itself, so it fits both readings of the ghosts. The other pairs are not senses the word carries in context.`
           }
         ]
       }
     },
     {
-      id: 'englitna5-content',
+      id: 'englitna5-conrad',
       type: 'text' as const,
       content: `
-## Change Over Time — Deeper Dive
+## Heart of Darkness: The Man Who Hates Lies
 
-### Continuity
-Aspects of Narrative Complexity that have remained stable over time. Understanding this concept is essential for mastering Narrative Complexity in AP English Literature.
+Early in his tale, Marlow tells his listeners:
 
-### Change
-How Narrative Complexity has transformed due to new forces and conditions. This builds on the previous concept and connects to broader themes in the course.
+> You know I hate, detest, and can't bear a lie, not because I am straighter than the rest of us, but simply because it appalls me. There is a taint of death, a flavour of mortality in lies...
 
-### Trend
-The direction of change in Narrative Complexity over time. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
-      `
-    },
-    {
-      id: 'englitna5-input',
-      type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
+At the end, he visits Kurtz's fiancée, called only "the Intended." He knows Kurtz died crying "The horror! The horror!" She begs for his last words:
 
-1) What term refers to aspects of Narrative Complexity that have remained stable over time?
+> "I pulled myself together and spoke slowly.
+>
+> "'The last word he pronounced was—your name.'"
+>
+> — Joseph Conrad, *Heart of Darkness*, 1899
 
-2) What concept describes how Narrative Complexity has transformed due to new forces and conditions?
+### A Contradiction You Must Account For
 
-3) Name the term for the direction of change in Narrative Complexity over time.
+| Reading of the lie | Evidence | What it suggests |
+|---|---|---|
+| **An act of mercy** | "It would have been too dark—too dark altogether...." | Some truths would destroy the hearer; compassion outweighs principle |
+| **A surrender to the "taint of death"** | His own words: lies have "a flavour of mortality" | Marlow becomes complicit in the false story Europe tells about Kurtz |
+| **A protection of illusions** | Earlier he says the women "should be out of it" | His motive is also condescension: he keeps a woman inside a "beautiful world" that hides empire's violence |
 
-Use the exact term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['Continuity', 'Change', 'Trend'],
-        hint1: 'Starts with: C',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: T',
-        explanation: 'Expected answers: Continuity (Aspects of Narrative Complexity that have remained stable over time), Change (How Narrative Complexity has transformed due to new forces and conditions), and Trend (The direction of change in Narrative Complexity over time).'
-      }
+**Kurtz's cry is ambiguous as well.** Marlow calls "The horror!" "an affirmation, a moral victory." Yet the words do not say what the horror is: Kurtz's own crimes, the darkness in all people, the cruelty of the trading company, or death itself. Each choice produces a different novella.
+`
     },
     {
       id: 'englitna5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Sort the Evidence** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Aspects of Narrative Complexity that have remained stable over time is called ___',
-            options: ['Continuity', 'Change', 'Trend', 'None of these']
+            label: `Flora's "I see nobody. I see nothing." supports the reading that the ghosts are ___`,
+            options: ['the governess\'s projection', 'real apparitions', 'Mrs. Grose\'s invention', 'the children\'s game']
           },
           {
-            label: 'How Narrative Complexity has transformed due to new forces and conditions describes ___',
-            options: ['Continuity', 'Change', 'Trend', 'All of these']
+            label: `Mrs. Grose crying "Quint!" after hearing the description supports the reading that the ghosts are ___`,
+            options: ['real apparitions', 'the governess\'s projection', 'Mrs. Grose\'s invention', 'the children\'s game']
           },
           {
-            label: 'The direction of change in Narrative Complexity over time is known as ___',
-            options: ['Trend', 'Continuity', 'Change', 'None of these']
+            label: `Marlow, who says he hates lies, lies to the Intended. This is best described as a ___`,
+            options: ['contradiction in a character', 'contradiction between documents', 'flashback', 'frame narrative']
           }
         ],
-        correctAnswers: ['Continuity', 'Change', 'Trend'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Continuity — Aspects of Narrative Complexity that have remained stable over time. Change — How Narrative Complexity has transformed due to new forces and conditions. Trend — The direction of change in Narrative Complexity over time.'
+        correctAnswers: ['the governess\'s projection', 'real apparitions', 'contradiction in a character'],
+        hint1: 'If only the governess sees the figure, where might it come from?',
+        hint2: 'Someone confirms a detail the governess could not have known.',
+        hint3: 'One person acts against his own stated principle.',
+        explanation: 'Flora\'s denial supports the psychological reading, Mrs. Grose\'s identification supports the apparitional one, and Marlow\'s lie contradicts his own stated hatred of lies.'
       }
     },
     {
-      id: 'englitna5-strategy',
+      id: 'englitna5-complexity',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## Complexity or Confusion?
 
-### Misconceptions to Avoid
-- Don\'t confuse **Continuity** with **Change** — while related, they address different aspects of Narrative Complexity.
-- **Trend** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
+| Productive ambiguity | Reader confusion |
+|---|---|
+| Both readings rest on specific textual evidence | One reading rests on a misread detail |
+| The author has placed the competing evidence | The "ambiguity" disappears once the passage is reread |
+| The uncertainty is part of the meaning (about perception, truth, testimony) | The uncertainty has no bearing on meaning |
+| A thesis can explain *why* the work stays open | A thesis can only say "it could be either" |
 
-### AP Strategy Moves
-- When you see questions about change over time, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect change over time to broader themes in AP English Literature for higher scores.
-      `
+### Turning Ambiguity Into a Thesis
+
+| Weak | Strong |
+|---|---|
+| "The ghosts might be real or might not be." | "By filtering every apparition through a governess whom no one else can confirm, James turns a ghost story into a study of how certainty itself can become a danger to a child." |
+| "Marlow lies at the end." | "Marlow's lie to the Intended, told by a man who says a lie 'appalls' him, shows that the darkness he found in the Congo has followed him home to a European drawing room." |
+
+Notice that the strong versions do not pick a side and stop. They name the *effect* of the unresolved tension.
+
+> 🔑 **AP Connection:** The rubric's Row C (sophistication) can be earned by "exploring complexities or tensions" or "accounting for alternative interpretations." Ambiguous works make this natural. Show that you see both readings, then argue what the work achieves by refusing to choose.
+`
     },
     {
-      id: 'englitna5-applied',
+      id: 'englitna5-misconceptions',
+      type: 'text' as const,
+      content: `
+## Common Misconceptions
+
+- **"If a work is ambiguous, any reading is fine."** Ambiguity has limits. The governess may or may not see ghosts, but no evidence supports reading Miles as the villain who invents the ghosts to frighten her.
+- **"I have to decide which reading is right."** You may argue for one, but a strong essay acknowledges the evidence on the other side and explains it.
+- **"Ambiguity means the author was unsure."** The competing evidence is placed with care: the identification scene, the lake scene and the final word all keep both readings alive.
+- **"A contradiction is a flaw in the text."** Marlow's lie is not an authorial slip. It is the moral pressure point of the ending.
+`
+    },
+    {
+      id: 'englitna5-quiz2',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**Apply It** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'An AP question asks how Narrative Complexity has changed in the last 50 years. A strong answer would:',
+            question: `Which thesis best handles the ambiguity of *The Turn of the Screw*?`,
             options: [
-              'Say nothing has changed',
-              'Identify specific changes, explain their causes, and note what has remained constant',
-              'Only list dates',
-              'Make up information'
+              `James proves beyond doubt that the ghosts are real, since Mrs. Grose recognizes Quint.`,
+              `The governess is plainly insane, so the ghosts can be dismissed as unimportant.`,
+              `The novella is a ghost story that teaches children to obey their elders.`,
+              `By never confirming the apparitions, James makes the governess's certainty the real danger.`
             ],
-            correctAnswer: 1,
-            explanation: 'Strong AP answers address both change AND continuity, explaining causes and consequences of transformation.'
+            correctAnswer: 3,
+            explanation: `This thesis explains what the unresolved evidence achieves instead of deciding the question by fiat. The other options settle the ambiguity by ignoring half the evidence or reduce the story to a moral it does not teach.`
           },
           {
-            question: 'A trend in Narrative Complexity shows acceleration in recent decades. The most likely explanation is:',
+            question: `Marlow's remark that the truth "would have been too dark—too dark altogether" most directly suggests that he`,
             options: [
-              'Random chance',
-              'New technologies, policies, or conditions intensifying existing processes',
-              'The data is wrong',
-              'Nothing has changed'
+              `has forgotten what Kurtz's last words actually were`,
+              `thinks the facts would be unbearable for her`,
+              `wants his listeners on the *Nellie* to doubt the whole tale`,
+              `believes the Intended already knows about Kurtz's crimes`
             ],
             correctAnswer: 1,
-            explanation: 'Accelerating trends are typically driven by new forces (technology, policy, globalization) intensifying existing processes.'
+            explanation: `The line explains his lie as a mercy: the truth would be too much for her to bear. He remembers the words vividly (the dusk "repeating them"), and nothing suggests she knows what Kurtz did.`
+          },
+          {
+            question: `Which of the following is the best example of productive ambiguity rather than reader confusion?`,
+            options: [
+              `a reader unsure whether Marlow's boat is on the Thames or the Congo in a scene that names the Thames`,
+              `a reader who has not decided whether "The horror!" refers to Kurtz's crimes or to human nature`,
+              `a reader who forgets which narrator wrote which section of *The Moonstone* and mixes them up`,
+              `a reader who thinks the Intended is Kurtz's sister because the word "Intended" is unfamiliar`
+            ],
+            correctAnswer: 1,
+            explanation: `The meaning of Kurtz's cry is left open by the text itself, and several readings have strong support. The other examples are errors of reading that disappear once the passage is checked or a word is looked up.`
           }
         ]
       }
