@@ -5,8 +5,12 @@ import type { SAQItem, LEQItem } from '@/components/FullLengthPracticeExam'
  * Mirrors official CB exam structure:
  *   FRQ 1 — Concept Application (3 parts: A, B, C)
  *   FRQ 2 — Quantitative Analysis (4 parts: A, B, C, D)
- *   FRQ 3 — SCOTUS Comparison (3 parts: A, B, C)
- *   FRQ 4 — Argument Essay (LEQ-style, student picks among prompt options)
+ *   FRQ 3 — SCOTUS Comparison (3 parts: A, B, C; 4 points, part B is worth 2)
+ *   FRQ 4 — Argument Essay (one prompt; the student chooses evidence from a
+ *           list of required foundational documents; 6 points)
+ *
+ * Points match the real exam: 3 / 4 / 4 / 6. frqPossible() sums rubric
+ * entries, so each rubric array carries exactly that many points.
  */
 
 export const SAQS: SAQItem[] = [
@@ -72,8 +76,8 @@ export const SAQS: SAQItem[] = [
     prompt:
       'FRQ 2 — Quantitative Analysis (4 parts).\n\n' +
       'Stimulus (described): A two-line graph titled "U.S. Voter Turnout in Federal Elections, 1980–2020." The x-axis shows election years (1980, 1984, ..., 2020). The y-axis shows percentage of eligible voters who voted (from 30% to 70%).\n\n' +
-      '  • The PRESIDENTIAL-year line: hovers between 51%–58% from 1980 to 2000, climbs to 60–62% in 2004, 2008, 2012, and 2016, then peaks at 66.8% in 2020.\n' +
-      '  • The MIDTERM-year line: hovers between 36%–41% from 1982 to 2014, then jumps to 50.0% in 2018 — the highest midterm turnout since the 1910s.\n\n' +
+      '  • The PRESIDENTIAL-year line: hovers between 51%–58% from 1980 to 2000, rises to between 58% and 62% from 2004 through 2016, then peaks at 66.8% in 2020.\n' +
+      '  • The MIDTERM-year line: hovers between 36%–42% from 1982 to 2014, then jumps to 50.0% in 2018 — the highest midterm turnout since the 1910s.\n\n' +
       'Source: U.S. Elections Project, McDonald (2024).',
     parts: [
       {
@@ -141,7 +145,7 @@ export const SAQS: SAQItem[] = [
     type: 'saq',
     topic: 'unit-3-civil-liberties-rights',
     prompt:
-      'FRQ 3 — SCOTUS Comparison (3 parts).\n\n' +
+      'FRQ 3 — SCOTUS Comparison (3 parts, 4 points).\n\n' +
       'Required case: Tinker v. Des Moines Independent Community School District (1969). In Tinker, the Supreme Court held 7–2 that public-school students wearing black armbands to silently protest the Vietnam War were engaged in symbolic speech protected by the First Amendment, because their conduct did not "materially and substantially interfere" with school operation.\n\n' +
       'Non-required case (described): Morse v. Frederick (2007). A high-school principal suspended a student for unfurling a banner reading "BONG HiTS 4 JESUS" during a school-supervised event. The Supreme Court held 5–4 that the suspension did NOT violate the First Amendment because public schools may restrict student speech that is reasonably viewed as promoting illegal drug use.',
     parts: [
@@ -161,13 +165,19 @@ export const SAQS: SAQItem[] = [
       {
         letter: 'B',
         question:
-          'Explain how the facts of Morse v. Frederick led the Supreme Court to a different outcome than the Court reached in Tinker v. Des Moines.',
+          'Based on the constitutional clause identified in part A, explain why the facts of Morse v. Frederick led to a different holding than the holding in Tinker v. Des Moines.',
         rubric: [
           {
             id: 'b1',
-            label: '1 pt — Distinguishes the two cases on facts/reasoning',
+            label: '1 pt — Describes the relevant facts or holding of Tinker',
             description:
-              'Must explain that the speech in Tinker (silent armbands protesting a war) was viewpoint expression that did not materially disrupt school operations, while the banner in Morse was reasonably interpreted as promoting illegal drug use, and the Court has long allowed schools to restrict such speech in the educational setting.',
+              'Must accurately describe the facts of Tinker or its holding as they relate to free speech: students silently wore black armbands to protest the Vietnam War, and the Court held that this political expression was protected because it did not materially and substantially disrupt the school.',
+          },
+          {
+            id: 'b2',
+            label: '1 pt — Explains why Morse\'s facts produced a different holding',
+            description:
+              'Must explain why the facts of Morse led to a different result: the banner was displayed at a school-supervised event and could reasonably be read as promoting illegal drug use, which the Court held schools may restrict because of their interest in deterring student drug use, whereas the armbands in Tinker were political speech that caused no substantial disruption.',
           },
         ],
       },
@@ -196,83 +206,60 @@ export const SAQS: SAQItem[] = [
 export const ARGUMENT_ESSAY: LEQItem[] = [
   {
     type: 'leq',
+    title: 'Argument Essay',
     topic: 'unit-1-foundations',
     promptOptions: [
       {
         label: 'A',
         prompt:
           'Develop an argument that explains whether the Constitution\'s system of FEDERALISM or its system of SEPARATION OF POWERS more effectively protects individual liberty.\n\n' +
-          'In your essay, you must:\n' +
-          '  • Articulate a defensible claim or thesis that responds to the prompt and establishes a line of reasoning.\n' +
-          '  • Support your claim with at least TWO pieces of accurate and relevant information:\n' +
-          '       – At least ONE piece of evidence must come from one of the following foundational documents:\n' +
-          '            (a) The Constitution\n' +
-          '            (b) Federalist No. 10\n' +
-          '            (c) Federalist No. 51\n' +
-          '            (d) Brutus No. 1\n' +
-          '       – A second piece of evidence may come from any other foundational document listed above OR from your knowledge of U.S. government and politics.\n' +
-          '  • Use reasoning to explain how your evidence supports your claim.\n' +
-          '  • Respond to an opposing or alternative perspective.',
-      },
-      {
-        label: 'B',
-        prompt:
-          'Develop an argument that explains whether INTEREST GROUPS or POLITICAL PARTIES are more effective in representing the policy preferences of ordinary Americans.\n\n' +
-          'In your essay, you must:\n' +
-          '  • Articulate a defensible claim or thesis that responds to the prompt and establishes a line of reasoning.\n' +
-          '  • Support your claim with at least TWO pieces of accurate and relevant information:\n' +
-          '       – At least ONE piece of evidence must come from one of the following foundational documents:\n' +
-          '            (a) Federalist No. 10\n' +
-          '            (b) The Letter from a Birmingham Jail\n' +
-          '            (c) The Constitution\n' +
-          '       – A second piece of evidence may come from any other foundational document above OR from your knowledge of U.S. government and politics.\n' +
-          '  • Use reasoning to explain how your evidence supports your claim.\n' +
-          '  • Respond to an opposing or alternative perspective.',
-      },
-      {
-        label: 'C',
-        prompt:
-          'Develop an argument that explains whether the JUDICIAL BRANCH or the LEGISLATIVE BRANCH has been more effective at protecting the civil rights of marginalized groups in the United States since 1950.\n\n' +
-          'In your essay, you must:\n' +
-          '  • Articulate a defensible claim or thesis that responds to the prompt and establishes a line of reasoning.\n' +
-          '  • Support your claim with at least TWO pieces of accurate and relevant information:\n' +
-          '       – At least ONE piece of evidence must come from one of the following foundational documents:\n' +
-          '            (a) The Letter from a Birmingham Jail\n' +
-          '            (b) The Constitution\n' +
-          '            (c) Federalist No. 78\n' +
-          '       – A second piece of evidence may come from any other foundational document above OR from your knowledge of U.S. government and politics.\n' +
-          '  • Use reasoning to explain how your evidence supports your claim.\n' +
-          '  • Respond to an opposing or alternative perspective.',
+          'Use at least one piece of evidence from one of the following foundational documents:\n' +
+          '  • Brutus No. 1\n' +
+          '  • Federalist No. 10\n' +
+          '  • Federalist No. 51\n\n' +
+          'In your response, you should do the following:\n' +
+          '  • Respond to the prompt with a defensible claim or thesis that establishes a line of reasoning.\n' +
+          '  • Support your claim with at least TWO pieces of specific and relevant evidence.\n' +
+          '       – One piece of evidence must come from one of the foundational documents listed above.\n' +
+          '       – A second piece of evidence can come from any other foundational document not used as your first piece of evidence, or it may be from your knowledge of course concepts.\n' +
+          '  • Use reasoning to explain why your evidence supports your claim or thesis.\n' +
+          '  • Respond to an opposing or alternate perspective using refutation, concession, or rebuttal.',
       },
     ],
     rubric: [
       {
         id: 'thesis',
-        label: '1 pt — Defensible thesis/claim',
+        label: 'Claim — Defensible thesis',
         description:
           'Responds to the prompt with a defensible claim or thesis that establishes a line of reasoning. Must take a clear position (NOT restate the prompt).',
       },
       {
         id: 'evidence-1',
-        label: '1 pt — Evidence from a required foundational document',
+        label: 'Evidence, 1st pt — Relevant evidence',
         description:
-          'Provides specific and relevant evidence from at least ONE of the listed required foundational documents (e.g., Federalist 10, Federalist 51, Federalist 78, Brutus 1, the Constitution, the Letter from a Birmingham Jail).',
+          'Provides at least one piece of specific evidence that is relevant to the topic of the prompt (federalism, separation of powers, or the protection of liberty).',
       },
       {
         id: 'evidence-2',
-        label: '1 pt — Second piece of accurate evidence',
+        label: 'Evidence, 2nd pt — Foundational-document evidence that supports the claim',
         description:
-          'Provides a SECOND piece of accurate and relevant evidence — either another foundational document or specific outside knowledge (e.g., a Supreme Court case, a federal statute, a historical example).',
+          'Uses one piece of specific and relevant evidence to SUPPORT the claim or thesis, and that evidence comes from one of the listed foundational documents (Brutus No. 1, Federalist No. 10, or Federalist No. 51). Merely mentioning a document without using it to support the claim does not earn this point.',
+      },
+      {
+        id: 'evidence-3',
+        label: 'Evidence, 3rd pt — Second piece of supporting evidence',
+        description:
+          'Uses a SECOND piece of specific and relevant evidence to support the claim or thesis: another foundational document not used as the first piece of evidence, or course knowledge such as a Supreme Court case, a federal statute, or a specific political example.',
       },
       {
         id: 'reasoning',
-        label: '1 pt — Reasoning that ties evidence to thesis',
+        label: 'Reasoning — Explains how the evidence supports the claim',
         description:
           'Uses reasoning to EXPLAIN how the evidence supports the thesis. Cannot simply list facts — must show the logical connection.',
       },
       {
         id: 'rebuttal',
-        label: '1 pt — Responds to opposing/alternative perspective',
+        label: 'Alternative perspective — Responds with refutation, concession, or rebuttal',
         description:
           'Identifies AND responds to (refutes, concedes, or rebuts) an opposing or alternative perspective. A simple acknowledgement is not enough.',
       },

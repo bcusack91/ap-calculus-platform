@@ -5,7 +5,7 @@ import { SAQS, ARGUMENT_ESSAY } from './frqs'
 export const config: FullLengthExamConfig = {
   subject: 'AP US Government & Politics',
   description:
-    'Full-length practice exam modeled on the official College Board AP US Government & Politics exam. 55 stimulus-based MCQs and 4 free-response questions: Concept Application, Quantitative Analysis, SCOTUS Comparison, and an Argument Essay (LEQ-style with prompt choice). Self-grading rubric checklist after each FRQ.',
+    'Full-length practice exam modeled on the official College Board AP US Government & Politics exam. 55 stimulus-based MCQs and 4 free-response questions: Concept Application, Quantitative Analysis, SCOTUS Comparison, and an Argument Essay that draws on the required foundational documents. Self-grading rubric checklist after each FRQ.',
   backLink: { href: '/ap-us-government', label: 'AP US Government & Politics' },
   ctaLinks: [
     { href: '/ap-us-gov-diagnostic', label: 'Diagnostic Test' },
@@ -29,7 +29,7 @@ export const config: FullLengthExamConfig = {
       name: 'Section II — Free Response (Concept App, Quant, SCOTUS)',
       shortName: 'Short FRQs',
       description:
-        '3 free-response questions: Concept Application (3 parts), Quantitative Analysis (4 parts), and SCOTUS Comparison (3 parts). Each part is graded on a 1-point rubric you check off after submitting.',
+        '3 free-response questions: Concept Application (3 points), Quantitative Analysis (4 points), and SCOTUS Comparison (4 points, with part B worth 2). You check off each rubric point yourself after submitting.',
       timeLimitMinutes: 60,
       items: SAQS,
     },
@@ -38,7 +38,7 @@ export const config: FullLengthExamConfig = {
       name: 'Section II — Argument Essay',
       shortName: 'Argument Essay',
       description:
-        'Choose ONE of the three argument-essay prompts. Develop a defensible thesis supported by at least one required foundational document and a second piece of evidence, with explicit reasoning and a response to an opposing perspective. Self-grading rubric checklist (5 points).',
+        '1 argument essay prompt. Develop a defensible claim supported by evidence from one of the foundational documents listed in the prompt and a second piece of evidence, with reasoning and a response to an opposing perspective. Self-grading rubric checklist (6 points).',
       timeLimitMinutes: 40,
       items: ARGUMENT_ESSAY,
     },
@@ -53,7 +53,7 @@ export const config: FullLengthExamConfig = {
           'Section II: 4 FRQs (100 min, 50%)',
           '   • Concept Application (3 pts)',
           '   • Quantitative Analysis (4 pts)',
-          '   • SCOTUS Comparison (3 pts)',
+          '   • SCOTUS Comparison (4 pts)',
           '   • Argument Essay (6 pts)',
         ],
       },
