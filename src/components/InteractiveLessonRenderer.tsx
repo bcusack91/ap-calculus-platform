@@ -186,12 +186,13 @@ function FormatElectronConfig({ text }: { text: string }): React.ReactElement {
 }
 
 // Smart numeric answer comparison for sig fig tolerance
-// (typed answers treat −, – and — as a hyphen-minus, so "−0.75" matches "-0.75")
+// (typed answers treat −, – and — as a hyphen-minus, so "−0.75" matches "-0.75",
+// and ignore thousands commas, so "1,800" matches "1800")
 // Handles trailing zeros, scientific notation, and minor rounding differences
 function isAnswerMatch(studentAnswer: string, correctAnswer: string): boolean {
   if (!studentAnswer || !correctAnswer) return false
-  const sa = normalizeSuperscripts(studentAnswer).trim().toLowerCase().replace(/\s+/g, '').replace(/[\u2212\u2013\u2014]/g, '-')
-  const ca = normalizeSuperscripts(correctAnswer).trim().toLowerCase().replace(/\s+/g, '').replace(/[\u2212\u2013\u2014]/g, '-')
+  const sa = normalizeSuperscripts(studentAnswer).trim().toLowerCase().replace(/\s+/g, '').replace(/[\u2212\u2013\u2014]/g, '-').replace(/(\d),(?=\d{3}(?!\d))/g, '$1')
+  const ca = normalizeSuperscripts(correctAnswer).trim().toLowerCase().replace(/\s+/g, '').replace(/[\u2212\u2013\u2014]/g, '-').replace(/(\d),(?=\d{3}(?!\d))/g, '$1')
 
   // Exact string match
   if (sa === ca) return true
@@ -2401,14 +2402,14 @@ function UnitCircleGame({ onComplete }: { onComplete?: () => void }) {
   }
 
   const handleBlur = (key: string) => {
-    const userAnswer = answers[key].trim().toLowerCase().replace(/\s+/g, '').replace(/[\u2212\u2013\u2014]/g, '-')
+    const userAnswer = answers[key].trim().toLowerCase().replace(/\s+/g, '').replace(/[\u2212\u2013\u2014]/g, '-').replace(/(\d),(?=\d{3}(?!\d))/g, '$1')
     if (userAnswer === '') {
       setChecked({ ...checked, [key]: null })
       return
     }
 
     const isCorrect = correctAnswers[key].some(correct => 
-      userAnswer === correct.toLowerCase().replace(/\s+/g, '').replace(/[\u2212\u2013\u2014]/g, '-')
+      userAnswer === correct.toLowerCase().replace(/\s+/g, '').replace(/[\u2212\u2013\u2014]/g, '-').replace(/(\d),(?=\d{3}(?!\d))/g, '$1')
     )
     
     setChecked({ ...checked, [key]: isCorrect })
@@ -2418,9 +2419,9 @@ function UnitCircleGame({ onComplete }: { onComplete?: () => void }) {
     const allAnswered = allKeys.every(k => answers[k].trim() !== '')
     if (allAnswered) {
       const allRight = allKeys.every(k => {
-        const uAnswer = answers[k].trim().toLowerCase().replace(/\s+/g, '').replace(/[\u2212\u2013\u2014]/g, '-')
+        const uAnswer = answers[k].trim().toLowerCase().replace(/\s+/g, '').replace(/[\u2212\u2013\u2014]/g, '-').replace(/(\d),(?=\d{3}(?!\d))/g, '$1')
         return correctAnswers[k].some(correct => 
-          uAnswer === correct.toLowerCase().replace(/\s+/g, '').replace(/[\u2212\u2013\u2014]/g, '-')
+          uAnswer === correct.toLowerCase().replace(/\s+/g, '').replace(/[\u2212\u2013\u2014]/g, '-').replace(/(\d),(?=\d{3}(?!\d))/g, '$1')
         )
       })
       if (allRight) {
@@ -2751,14 +2752,14 @@ function FullUnitCircleGame({ onComplete }: { onComplete?: () => void }) {
   }
 
   const handleBlur = (key: string) => {
-    const userAnswer = answers[key].trim().toLowerCase().replace(/\s+/g, '').replace(/[\u2212\u2013\u2014]/g, '-')
+    const userAnswer = answers[key].trim().toLowerCase().replace(/\s+/g, '').replace(/[\u2212\u2013\u2014]/g, '-').replace(/(\d),(?=\d{3}(?!\d))/g, '$1')
     if (userAnswer === '') {
       setChecked({ ...checked, [key]: null })
       return
     }
 
     const isCorrect = correctAnswers[key].some(
-      (correct) => userAnswer === correct.toLowerCase().replace(/\s+/g, '').replace(/[\u2212\u2013\u2014]/g, '-')
+      (correct) => userAnswer === correct.toLowerCase().replace(/\s+/g, '').replace(/[\u2212\u2013\u2014]/g, '-').replace(/(\d),(?=\d{3}(?!\d))/g, '$1')
     )
     setChecked({ ...checked, [key]: isCorrect })
 
@@ -2768,8 +2769,8 @@ function FullUnitCircleGame({ onComplete }: { onComplete?: () => void }) {
     
     if (allAnswered) {
       const allRight = allKeys.every((k) => {
-        const uAnswer = answers[k].trim().toLowerCase().replace(/\s+/g, '').replace(/[\u2212\u2013\u2014]/g, '-')
-        return correctAnswers[k].some((correct) => uAnswer === correct.toLowerCase().replace(/\s+/g, '').replace(/[\u2212\u2013\u2014]/g, '-'))
+        const uAnswer = answers[k].trim().toLowerCase().replace(/\s+/g, '').replace(/[\u2212\u2013\u2014]/g, '-').replace(/(\d),(?=\d{3}(?!\d))/g, '$1')
+        return correctAnswers[k].some((correct) => uAnswer === correct.toLowerCase().replace(/\s+/g, '').replace(/[\u2212\u2013\u2014]/g, '-').replace(/(\d),(?=\d{3}(?!\d))/g, '$1'))
       })
       if (allRight) {
         setAllCorrect(true)
