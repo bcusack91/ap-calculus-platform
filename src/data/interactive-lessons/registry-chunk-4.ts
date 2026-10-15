@@ -731,8 +731,8 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
       { title: 'Kinds of Conflict and Layered Conflicts', loader: () => import('./englit-plot-conflict-theme-part3').then(m => m.englitPlotConflictThemePart3Data) },
       { title: 'From Conflict to Theme: What Resolution Says', loader: () => import('./englit-plot-conflict-theme-part4').then(m => m.englitPlotConflictThemePart4Data) },
       { title: 'Stated vs. Implied Theme, and Competing Themes', loader: () => import('./englit-plot-conflict-theme-part5').then(m => m.englitPlotConflictThemePart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./englit-plot-conflict-theme-part6').then(m => m.englitPlotConflictThemePart6Data) },
-      { title: 'AP Review', loader: () => import('./englit-plot-conflict-theme-part7').then(m => m.englitPlotConflictThemePart7Data) }
+      { title: 'Plot, Conflict and Theme on the Exam', loader: () => import('./englit-plot-conflict-theme-part6').then(m => m.englitPlotConflictThemePart6Data) },
+      { title: 'Plot, Conflict and Theme Synthesis', loader: () => import('./englit-plot-conflict-theme-part7').then(m => m.englitPlotConflictThemePart7Data) }
     ],
   },
   'englit-social-commentary-drama': {
@@ -742,8 +742,8 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
       { title: 'How a Play Argues: The Problem Play and Social Realism', loader: () => import('./englit-social-commentary-drama-part2').then(m => m.englitSocialCommentaryDramaPart2Data) },
       { title: 'Patterns & Examples', loader: () => import('./englit-social-commentary-drama-part3').then(m => m.englitSocialCommentaryDramaPart3Data) },
       { title: 'Satire on Stage: Target, Norm and Method', loader: () => import('./englit-social-commentary-drama-part4').then(m => m.englitSocialCommentaryDramaPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./englit-social-commentary-drama-part5').then(m => m.englitSocialCommentaryDramaPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./englit-social-commentary-drama-part6').then(m => m.englitSocialCommentaryDramaPart6Data) },
+      { title: 'Indirect Commentary: Subtext, Chekhov and Common Misconceptions', loader: () => import('./englit-social-commentary-drama-part5').then(m => m.englitSocialCommentaryDramaPart5Data) },
+      { title: 'Social Commentary on the Exam', loader: () => import('./englit-social-commentary-drama-part6').then(m => m.englitSocialCommentaryDramaPart6Data) },
       { title: 'AP Review', loader: () => import('./englit-social-commentary-drama-part7').then(m => m.englitSocialCommentaryDramaPart7Data) }
     ],
   },
@@ -971,8 +971,8 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
       { title: 'Writing to an Angry Audience: Washington at Newburgh, 1783', loader: () => import('./englang-writing-for-audience-part3').then(m => m.englangWritingForAudiencePart3Data) },
       { title: 'Writing for Distant Readers: Chief Joseph (1879) and Stanton (1892)', loader: () => import('./englang-writing-for-audience-part4').then(m => m.englangWritingForAudiencePart4Data) },
       { title: 'One Argument, Three Audiences: Adapting Your Own Writing', loader: () => import('./englang-writing-for-audience-part5').then(m => m.englangWritingForAudiencePart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./englang-writing-for-audience-part6').then(m => m.englangWritingForAudiencePart6Data) },
-      { title: 'AP Review', loader: () => import('./englang-writing-for-audience-part7').then(m => m.englangWritingForAudiencePart7Data) }
+      { title: 'Exam Practice: Audience Revisions and an Argument Essay', loader: () => import('./englang-writing-for-audience-part6').then(m => m.englangWritingForAudiencePart6Data) },
+      { title: 'Review: Choosing the Right Move for the Reader in Front of You', loader: () => import('./englang-writing-for-audience-part7').then(m => m.englangWritingForAudiencePart7Data) }
     ],
   },
   'apes-ecosystem-structure': {
