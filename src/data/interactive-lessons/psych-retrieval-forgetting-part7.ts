@@ -88,7 +88,7 @@ The EBQ gives three sources and asks you to: **(A)** propose a specific, defensi
 
 **Source A** (summary of a classic experiment): College students watched films of car accidents and estimated the cars' speed. Students asked how fast the cars were going when they "smashed" gave higher estimates than students asked with milder verbs such as "contacted." In a follow-up, students given the "smashed" question were more likely to report a week later that they had seen broken glass, although none appeared in the film.
 
-**Source B** (practice source, not a real citation): Volunteers watched a staged theft. Before viewing a lineup, half looked through photos that included an innocent bystander from the video's background. In the lineup (which did not contain the thief), the photo group picked the bystander about three times as often as the comparison group, and most who did so were confident.
+**Source B** (practice source, not a real citation): Adult participants watched a staged theft. Before viewing a lineup, half looked through photos that included an innocent volunteer who did not appear in the video. In the lineup (which did not contain the thief), the photo group picked the volunteer about three times as often as the comparison group, and most who did so were confident.
 
 **Source C** (practice source, not a real citation): Witnesses to a staged event were interviewed a week later. Those asked first to picture the room, the sounds and how they felt during the event recalled more correct details than witnesses asked standard questions, with no increase in incorrect details.
 
@@ -104,7 +104,7 @@ The EBQ gives three sources and asks you to: **(A)** propose a specific, defensi
 
 **(C)(ii) Explanation:** This reflects **context-dependent memory** (and mood-congruent memory): reinstating the external context and emotional state of encoding provides retrieval cues that match the original memory, so accuracy improves when interviews are designed around how retrieval works.
 
-**Why this earns the points:** each explanation names a **different** concept, ties it to the specific evidence, and links back to the claim. Source B could support the claim instead through **source amnesia**: the bystander's face felt familiar, but witnesses misattributed the familiarity to the crime instead of the photos.
+**Why this earns the points:** each explanation names a **different** concept, ties it to the specific evidence, and links back to the claim. Source B could support the claim instead through **source amnesia**: the volunteer's face felt familiar, but witnesses misattributed the familiarity to the crime instead of the photos.
 
 | Weak response | Why it loses the point |
 |---------------|-----------------------|
@@ -125,7 +125,7 @@ Use Sources A to C above.
       exercise: {
         dropdowns: [
           { label: 'Source A: "smashed" leads to reports of broken glass', options: ['Source amnesia', 'Misinformation effect', 'Context-dependent memory', 'Encoding failure'] },
-          { label: 'Source B: picking the bystander seen in the photo set', options: ['Misinformation effect', 'Retroactive interference', 'Source amnesia', 'Testing effect'] },
+          { label: 'Source B: picking the volunteer seen in the photo set', options: ['Misinformation effect', 'Retroactive interference', 'Source amnesia', 'Testing effect'] },
           { label: 'Source C: picturing the room improves correct recall', options: ['Context-dependent memory', 'Imagination inflation', 'Misinformation effect', 'Source amnesia'] }
         ],
         correctAnswers: ['Misinformation effect', 'Source amnesia', 'Context-dependent memory'],
@@ -159,7 +159,7 @@ Follow one student through the topic and name the concept at each step.
 |-----------|------|
 | **Topic 1.5 (sleep)** | Consolidation during sleep stabilizes memories; sleeping after learning reduces retroactive interference |
 | **Topic 2.3 to 2.5 (encoding and storage)** | Deeper, more meaningful encoding builds more retrieval cues; amnesia is a storage impairment, not everyday forgetting |
-| **Unit 0 skills (research methods)** | Misinformation, testing-effect and context studies are model experiments: random assignment, operational definitions, controls |
+| **Science practices (research methods, all units)** | Misinformation, testing-effect and context studies are model experiments: random assignment, operational definitions, controls |
 | **Psychodynamic perspective (Unit 4 and Unit 5)** | Repression is the psychodynamic account of forgetting; it remains contested by cognitive research |
 | **Social psychology (Unit 4)** | Leading questions and confirming feedback from authority figures shape what witnesses report |
 
@@ -195,13 +195,13 @@ Follow one student through the topic and name the concept at each step.
           {
             question: 'A student uses Source B for part (C)(i). Which explanation for (C)(ii) BEST connects the evidence to a claim that eyewitness memory is unreliable?',
             options: [
-              'Viewing the bystander photos caused encoding failure, so the thief was never stored',
-              'Seeing the bystander again worked as a retrieval cue that improved accuracy',
-              'The bystander was familiar, but witnesses misattributed where they saw him',
+              'Viewing the volunteer photos caused encoding failure, so the thief was never stored',
+              'Seeing the volunteer again worked as a retrieval cue that improved accuracy',
+              'The volunteer was familiar, but witnesses misattributed where they saw him',
               'Viewing the photos was retrieval practice, which strengthens memory for faces'
             ],
             correctAnswer: 2,
-            explanation: 'Witnesses had seen the bystander, but in the photos, not committing the crime; misattributing the familiar face to the crime is source amnesia. That explains why confident witnesses chose an innocent person, supporting the claim of unreliability.'
+            explanation: 'Witnesses had seen the volunteer, but in the photos, not committing the crime; misattributing the familiar face to the crime is source amnesia. That explains why confident witnesses chose an innocent person, supporting the claim of unreliability.'
           },
           {
             question: 'Which finding would MOST strongly challenge the claim that "forgetting is mostly retrieval failure rather than loss of stored information"?',

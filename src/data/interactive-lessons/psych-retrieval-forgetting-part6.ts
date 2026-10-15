@@ -169,7 +169,7 @@ The AAQ gives you a summary of one study and asks six parts: **(A)** identify th
 
 *Hypothesis:* Witnesses who receive misleading information after an event will report the false detail more often than witnesses who do not.
 
-*Participants:* 120 undergraduate volunteers at one university, each paid with course credit.
+*Participants:* 120 undergraduate volunteers at one university, each receiving course credit.
 
 *Method:* All participants watched the same 2-minute video of a shoplifting. They were then randomly assigned to read one of two written summaries. The **misleading** summary said the thief wore a baseball cap (she did not); the **accurate** summary did not mention headwear. Two days later, participants answered 20 questions about the video, including "Was the thief wearing a hat?" and rated their confidence from 1 (guessing) to 7 (certain).
 
@@ -187,10 +187,10 @@ The difference in "yes" answers was statistically significant (p < .05).
 **Model answers:**
 - **(A) Method:** An experiment. The researchers manipulated the summary type and randomly assigned participants to conditions.
 - **(B) Operational definition:** The dependent variable, false memory, was measured as answering "yes" to "Was the thief wearing a hat?"
-- **(C) Statistic:** The significant difference means participants given misleading information were far more likely (38% vs 9%) to report the false hat than chance alone would likely produce.
+- **(C) Statistic:** Participants given misleading information reported the false hat far more often (38% vs. 9%), and because the difference is statistically significant, it is unlikely to be due to chance alone.
 - **(D) Ethics:** Debriefing: because participants were deceived about the summary, researchers explained the true purpose and the false detail at the end.
 - **(E) Generalizability:** Limited. All participants were undergraduates at one university watching a short video with nothing at stake, unlike real witnesses to a stressful crime, so the results may not generalize to real eyewitnesses.
-- **(F) Support:** Participants who read the misleading summary reported the hat four times as often, which supports the hypothesis.
+- **(F) Support:** Participants who read the misleading summary reported the hat about four times as often, which supports the hypothesis.
       `
     },
     {

@@ -199,13 +199,13 @@ Answer these questions about the practice study above.
           {
             question: 'Do the results support or refute the hypothesis, and why?',
             options: [
-              'They refute it, since the alone group showed less variability in calories eaten',
-              'The data support it, since the group condition ate more calories on average',
-              'The hypothesis is refuted, since the mean difference was smaller than either standard deviation',
-              'Supported, since every participant in a group ate more than every solo eater'
+              'Refute it, because the solo group showed less variability in calories',
+              'Support it, because the group condition ate more calories on average',
+              'Refute it, because the difference was no larger than one standard deviation',
+              'Support it, because every group eater ate more than every solo eater'
             ],
             correctAnswer: 1,
-            explanation: 'The hypothesis predicted more eating with others, and the group condition consumed 160 more calories on average, which supports it. Variability does not test the hypothesis, the difference can be meaningful even when smaller than the standard deviations, and means do not show that every group participant outate every solo participant.'
+            explanation: 'The hypothesis predicted more eating with others, and the group condition consumed 160 more calories on average, which supports it. Variability does not test the hypothesis, a difference about the size of one standard deviation is a large effect rather than a reason to reject it, and means do not show that every group participant outate every solo participant.'
           }
         ]
       }

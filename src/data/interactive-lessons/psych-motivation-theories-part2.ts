@@ -196,7 +196,7 @@ Arousal theory also predicts that the optimal level is **not the same for everyo
             options: [
               'The audience helps the scales and the new piece equally, since arousal improves any rehearsed playing',
               'The audience tends to help the scales but tends to hurt the new piece',
-              'The audience hurts the scales and the new piece equally, since high arousal harms any playing',
+              'The audience tends to hurt the scales and the new piece equally, since high arousal harms playing',
               'The audience helps the new piece more than the scales, since unfamiliar music needs extra energy'
             ],
             correctAnswer: 1,

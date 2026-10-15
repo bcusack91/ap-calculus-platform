@@ -142,7 +142,7 @@ The CED describes mood-congruent memory as better retrieval when your mood match
 
 ### Methods Spotlight: Manipulating Mood
 
-Mood cannot be randomly assigned the way a coffee can, so researchers **induce** it: participants watch a sad or happy film clip, listen to music, or recall a past emotional event. Two design issues follow:
+Researchers cannot hand out a mood the way they hand out a coffee, so they **induce** it: participants are randomly assigned to watch a sad or happy film clip, listen to music, or recall a past emotional event. Two design issues follow:
 
 - **Manipulation check.** Researchers measure mood after the induction (for example, a 1 to 7 self-rating) to confirm the sad group actually felt sadder. Without it, a null result could simply mean the induction failed.
 - **Ethics.** Inducing sadness is a mild risk of harm. Researchers obtain **informed consent**, keep the induction brief and mild, let participants withdraw, and end with a **debriefing** and often a positive-mood activity so no one leaves feeling worse.

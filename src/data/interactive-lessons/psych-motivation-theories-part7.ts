@@ -15,7 +15,7 @@ No single theory explains everything a person does in a day. This part ties the 
 
 | Theory or concept | Mechanism in one line | Biological link (Unit 1) | Learning or social link (Units 3 and 4) |
 |------|-----------|-----------|-----------|
-| **Instincts** | Innate, fixed, stimulus-triggered patterns in non-human animals; not seen in humans | Species-typical behavior | **Instinctive drift** limits operant shaping |
+| **Instincts** | Innate, fixed, stimulus-triggered patterns in non-human animals; humans do not seem to show them | Species-typical behavior | **Instinctive drift** limits operant shaping |
 | **Drive-reduction theory** | Needs create drives; behavior restores homeostasis | **Hypothalamus** monitors hunger, thirst, temperature | Eating to end hunger, drinking to end thirst |
 | **Arousal theory** | Seek an optimal arousal level; Yerkes-Dodson inverted U | **Reticular activating system**, **adrenaline** | **Social facilitation**: others raise arousal |
 | **Sensation-seeking theory** | People differ in need for varied, novel experiences | Linked to the **dopamine** reward system | Risky choices with friends; healthy thrill outlets |

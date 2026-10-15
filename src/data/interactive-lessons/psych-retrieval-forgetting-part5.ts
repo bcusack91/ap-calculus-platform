@@ -118,7 +118,7 @@ In a small early study, participants learned nonsense syllables and then either 
       `,
       exercise: {
         dropdowns: [
-          { label: 'You cannot say which side of a stop sign\'s border is red, although you have seen thousands of stop signs', options: ['Proactive interference', 'Encoding failure', 'Retroactive interference', 'Tip-of-the-tongue phenomenon'] },
+          { label: 'You cannot sketch where the buttons are on the microwave you use every day', options: ['Proactive interference', 'Encoding failure', 'Retroactive interference', 'Tip-of-the-tongue phenomenon'] },
           { label: 'After memorizing this year\'s locker combination, you cannot recall last year\'s combination', options: ['Retroactive interference', 'Proactive interference', 'Encoding failure', 'Tip-of-the-tongue phenomenon'] },
           { label: 'You know an actor\'s name starts with "M" and has three syllables, but it will not come until you see the movie poster', options: ['Encoding failure', 'Retroactive interference', 'Proactive interference', 'Tip-of-the-tongue phenomenon'] },
           { label: 'In January you keep writing last year\'s date on your homework', options: ['Encoding failure', 'Tip-of-the-tongue phenomenon', 'Proactive interference', 'Retroactive interference'] }
@@ -127,7 +127,7 @@ In a small early study, participants learned nonsense syllables and then either 
         hint1: 'Was the detail ever attended to and stored?',
         hint2: 'Which memory are you trying to retrieve: the newer or the older combination?',
         hint3: 'Partial information plus later success with a cue is the signature of inadequate retrieval.',
-        explanation: 'The stop-sign detail was never encoded. A new combination blocking an old one is retroactive interference, while an old year blocking the new year is proactive interference. Knowing the first letter and syllable count, then retrieving the name with a cue, is the tip-of-the-tongue phenomenon.'
+        explanation: 'The microwave button layout was never encoded. A new combination blocking an old one is retroactive interference, while an old year blocking the new year is proactive interference. Knowing the first letter and syllable count, then retrieving the name with a cue, is the tip-of-the-tongue phenomenon.'
       }
     },
     {
@@ -136,7 +136,7 @@ In a small early study, participants learned nonsense syllables and then either 
       content: `
 ### 📚 Inadequate Retrieval: The Tip-of-the-Tongue Phenomenon
 
-The **tip-of-the-tongue (TOT) phenomenon** is the feeling of being sure you know something while being temporarily unable to retrieve it. In a classic study, researchers read people definitions of rare words (such as "a small boat used in the harbors of China and Japan," which is a *sampan*). People in a TOT state often could report the word's **first letter** and **number of syllables**, and they produced similar-sounding words ("Siam," "sarong").
+The **tip-of-the-tongue (TOT) phenomenon** is the feeling of being sure you know something while being temporarily unable to retrieve it. In a classic study, researchers read people definitions of rare words (for example, the definition of a small flat-bottomed boat used in East Asian harbors, which is a *sampan*). People in a TOT state often could report the word's **first letter** and **number of syllables**, and they produced similar-sounding words ("Siam," "sarong").
 
 What TOT shows:
 - The memory is **stored**; retrieval failed because the available cues were inadequate.
@@ -160,7 +160,7 @@ How the AP exam treats repression:
 |--------------|-----------|
 | "Forgetting means the memory has been erased." | Much forgetting is retrieval failure: cues, recognition tests and relearning savings reveal memories that recall missed. |
 | "Proactive means the new thing interferes." | Proactive = **old** disrupts **new**. Retroactive = **new** disrupts **old**. |
-| "If I saw it, I remember it." | Seeing is not encoding. Unattended details (the penny, the stop sign) are often never stored. |
+| "If I saw it, I remember it." | Seeing is not encoding. Unattended details (the penny, the microwave buttons) are often never stored. |
 | "Forgetting happens at a steady rate." | Forgetting is rapid at first and then levels off (Part 4). |
 | "Repression is a well-established fact about trauma." | It is a psychodynamic belief; research finds traumatic events are often remembered vividly. |
 | "Amnesia is the same thing as everyday forgetting." | Amnesia (retrograde, anterograde) is a storage impairment from brain injury or disease, covered in the memory-encoding-storage lessons; everyday forgetting happens in healthy brains. |
@@ -199,7 +199,7 @@ How the AP exam treats repression:
           {
             question: 'A client in therapy cannot recall a frightening event from childhood that family members describe in detail. A psychodynamic therapist would MOST likely explain this as:',
             options: [
-              'Proactive interference from the many memories formed after the event',
+              'Retroactive interference from the many memories formed after the event',
               'Encoding failure caused by the young age at which the event happened',
               'Repression of a threatening memory to protect the ego from distress',
               'Inadequate retrieval caused by a lack of cues from the original setting'
