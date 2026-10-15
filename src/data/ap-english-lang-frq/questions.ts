@@ -88,68 +88,80 @@ const REASONING = [
 
 const SOPHISTICATION = [
   'tension', 'paradox', 'complex', 'complicat', 'irony', 'ironic', 'ambigu', 'implication',
-  'broader', 'larger', 'at the same time', 'nuance', 'contradict', 'trade-off', 'tradeoff',
-  'limits of', 'cuts both ways', 'double',
+  'at the same time', 'nuance', 'contradict', 'trade-off', 'tradeoff',
+  'limits of', 'cuts both ways',
   'qualif', 'distinction', 'distinguish', 'on the other hand', 'underlying', 'deeper',
 ]
 
 const RHETORICAL_CHOICES = [
   'diction', 'syntax', 'rhetorical question', 'repetition', 'anaphora', 'parallel', 'antithesis',
   'metaphor', 'imagery', 'allusion', 'juxtapos', 'tone', 'irony', 'ironic', 'concession',
-  'catalog', 'list', 'asyndeton', 'second person', 'pronoun', 'contrast', 'exclamation',
+  'catalog|a list of|listing', 'asyndeton', 'second person', 'pronoun', 'contrast', 'exclamation',
   'hyperbole', 'sarcasm', 'figurative', 'personification', 'shift', 'appeal to', 'periodic sentence',
 ]
 
 const EXAMPLE_MARKERS = [
-  'for example', 'for instance', 'such as', 'consider', 'in 18', 'in 19', 'in 20', 'when i',
+  'for example', 'for instance', 'such as', 'consider', 'in 18', 'in 19', 'in 20', 'when i |when i,',
   'when my', 'during', 'case of', 'take the',
 ]
 
-/** "(Source A)" style citations, one alternatives-group per source so minMatches counts SOURCES. */
-const SOURCE_CITES = ['a', 'b', 'c', 'd', 'e', 'f', 'g'].map((l) =>
-  [`(source ${l})`, `source ${l} `, `source ${l},`, `source ${l}.`, `source ${l};`, `source ${l})`, `source ${l}:`].join('|'),
-)
+const SOURCE_LETTERS = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+
+/**
+ * "(Source A)" style citations, one alternatives-group per source so minMatches counts SOURCES.
+ * Covers plurals ("Sources C and F") and, when given, each source's description (the official
+ * prompt lets students cite "by using the description in parentheses").
+ */
+function sourceCites(names: string[] = []): string[] {
+  return SOURCE_LETTERS.map((l, i) => {
+    const alts = [`(source ${l})`, `source ${l} `, `source ${l},`, `source ${l}.`, `source ${l};`, `source ${l})`, `source ${l}:`, `sources ${l} `, `sources ${l},`, ` and ${l})`]
+    if (l !== 'a') alts.push(` and ${l} `, ` and ${l},`, ` and ${l}.`)
+    if (names[i]) alts.push(names[i])
+    return alts.join('|')
+  })
+}
 
 const SYNTH_B = [
   'Row B — Evidence and Commentary, point 1 of 4: provides evidence from or references at least TWO of the provided sources, but mostly summarizes the evidence without explaining how it supports the argument.',
   'Row B — Evidence and Commentary, point 2 of 4 (cumulative): provides evidence from or references at least THREE of the provided sources and explains how some of the evidence relates to the argument, even if no line of reasoning is established or the reasoning is faulty.',
   'Row B — Evidence and Commentary, point 3 of 4 (cumulative): provides specific evidence from at least three of the provided sources to support all claims in a line of reasoning, and explains how some of the evidence supports that line of reasoning.',
-  'Row B — Evidence and Commentary, point 4 of 4 (cumulative): provides specific evidence from at least three sources to support all claims in a line of reasoning, AND consistently explains how the evidence supports the line of reasoning (commentary on every source used, not just a quotation dropped in).',
+  'Row B — Evidence and Commentary, point 4 of 4 (cumulative): provides specific evidence from at least three of the provided sources to support all claims in a line of reasoning, AND consistently explains how the evidence supports a line of reasoning. Writing that suffers from grammatical and/or mechanical errors that interfere with communication cannot earn the fourth point in this row.',
 ]
 
 const RA_B = [
   'Row B — Evidence and Commentary, point 1 of 4: provides evidence from the passage that is mostly general, and mostly summarizes it rather than explaining how it supports the argument.',
   'Row B — Evidence and Commentary, point 2 of 4 (cumulative): provides some specific, relevant evidence from the passage and explains how some of it relates to the argument, even if no line of reasoning is established or the reasoning is faulty.',
   'Row B — Evidence and Commentary, point 3 of 4 (cumulative): provides specific evidence to support all claims in a line of reasoning, explains how some of the evidence supports that line of reasoning, AND explains how at least one rhetorical choice in the passage contributes to the writer\'s argument, purpose, or message.',
-  'Row B — Evidence and Commentary, point 4 of 4 (cumulative): provides specific evidence to support all claims, consistently explains how the evidence supports the line of reasoning, AND explains how MULTIPLE rhetorical choices in the passage contribute to the writer\'s argument, purpose, or message.',
+  'Row B — Evidence and Commentary, point 4 of 4 (cumulative): provides specific evidence to support all claims, consistently explains how the evidence supports the line of reasoning, AND explains how MULTIPLE rhetorical choices in the passage contribute to the writer\'s argument, purpose, or message. Writing that suffers from grammatical and/or mechanical errors that interfere with communication cannot earn the fourth point in this row.',
 ]
 
 const ARG_B = [
   'Row B — Evidence and Commentary, point 1 of 4: provides evidence that is mostly general, and mostly summarizes it rather than explaining how it supports the argument.',
   'Row B — Evidence and Commentary, point 2 of 4 (cumulative): provides some specific, relevant evidence and explains how some of it relates to the argument, even if no line of reasoning is established or the reasoning is faulty.',
   'Row B — Evidence and Commentary, point 3 of 4 (cumulative): provides specific evidence to support all claims in a line of reasoning and explains how some of the evidence supports that line of reasoning.',
-  'Row B — Evidence and Commentary, point 4 of 4 (cumulative): provides specific evidence to support all claims in a line of reasoning AND consistently explains how the evidence supports the line of reasoning.',
+  'Row B — Evidence and Commentary, point 4 of 4 (cumulative): provides specific evidence to support all claims in a line of reasoning AND consistently explains how the evidence supports the line of reasoning. Writing that suffers from grammatical and/or mechanical errors that interfere with communication cannot earn the fourth point in this row.',
 ]
 
-function synthesisRubric(spec: { thesis: string[]; topic: string[]; specifics: string[]; sophistication: string }): FRQRubricItem[] {
+function synthesisRubric(spec: { thesis: string[]; topic: string[]; specifics: string[]; sourceNames: string[]; sophistication: string }): FRQRubricItem[] {
+  const cites = sourceCites(spec.sourceNames)
   return [
     {
       row: 'A',
       points: 1,
-      description: 'Row A — Thesis (0–1): responds to the prompt with a thesis that presents a defensible position. A thesis that only restates the prompt, summarizes the issue with no clear claim, or does not respond to the prompt earns 0.',
+      description: 'Row A — Thesis (0–1): responds to the prompt with a thesis that presents a defensible position. Earns 0 for any of the following: there is no defensible thesis; the intended thesis only restates the prompt; the intended thesis provides a summary of the issue with no apparent or coherent claim; or there is a thesis, but it does not respond to the prompt.',
       keywords: spec.thesis,
       requiresAll: [{ keywords: spec.topic }],
     },
-    { row: 'B', points: 1, description: SYNTH_B[0], keywords: SOURCE_CITES, minMatches: 2 },
-    { row: 'B', points: 1, description: SYNTH_B[1], keywords: SOURCE_CITES, minMatches: 3, requiresAll: [{ keywords: COMMENTARY }] },
-    { row: 'B', points: 1, description: SYNTH_B[2], keywords: spec.specifics, minMatches: 4, requiresAll: [{ keywords: SOURCE_CITES, minMatches: 3 }, { keywords: COMMENTARY, minMatches: 3 }, { keywords: REASONING }] },
-    { row: 'B', points: 1, description: SYNTH_B[3], keywords: COMMENTARY, minMatches: 5, requiresAll: [{ keywords: REASONING, minMatches: 2 }, { keywords: SOURCE_CITES, minMatches: 4 }] },
+    { row: 'B', points: 1, description: SYNTH_B[0], keywords: cites, minMatches: 2 },
+    { row: 'B', points: 1, description: SYNTH_B[1], keywords: cites, minMatches: 3, requiresAll: [{ keywords: COMMENTARY }, { keywords: spec.specifics, minMatches: 2 }] },
+    { row: 'B', points: 1, description: SYNTH_B[2], keywords: spec.specifics, minMatches: 4, requiresAll: [{ keywords: cites, minMatches: 3 }, { keywords: COMMENTARY, minMatches: 3 }, { keywords: REASONING }] },
+    { row: 'B', points: 1, description: SYNTH_B[3], keywords: COMMENTARY, minMatches: 5, requiresAll: [{ keywords: REASONING, minMatches: 2 }, { keywords: cites, minMatches: 4 }] },
     {
       row: 'C',
       points: 1,
       description: `Row C — Sophistication (0–1): demonstrates sophistication of thought and/or a complex understanding of the rhetorical situation, sustained across the essay, not in a single sentence. Ways to earn it: crafting a nuanced argument that consistently identifies and explores complexities or tensions across the sources; articulating the implications or limitations of the argument by situating it in a broader context; making effective rhetorical choices that strengthen the argument; or a style that is consistently vivid and persuasive. For this prompt: ${spec.sophistication}`,
       keywords: SOPHISTICATION,
-      minMatches: 2,
+      minMatches: 3,
     },
   ]
 }
@@ -159,7 +171,7 @@ function rhetoricalRubric(spec: { thesis: string[]; specifics: string[]; sophist
     {
       row: 'A',
       points: 1,
-      description: 'Row A — Thesis (0–1): responds to the prompt with a thesis that analyzes the writer\'s rhetorical choices. A thesis that only restates the prompt, merely lists devices ("ethos, pathos, logos") without connecting them to a purpose, or summarizes the passage earns 0.',
+      description: 'Row A — Thesis (0–1): responds to the prompt with a thesis that analyzes the writer\'s rhetorical choices. A thesis that only restates the prompt, fails to address the rhetorical choices the writer makes, or describes or repeats the passage rather than making a claim that requires a defense earns 0.',
       keywords: RHETORICAL_CHOICES,
       requiresAll: [{ keywords: spec.thesis }],
     },
@@ -172,7 +184,7 @@ function rhetoricalRubric(spec: { thesis: string[]; specifics: string[]; sophist
       points: 1,
       description: `Row C — Sophistication (0–1): demonstrates sophistication of thought and/or a complex understanding of the rhetorical situation, sustained across the essay. Ways to earn it: explaining the significance or relevance of the writer\'s rhetorical choices given the rhetorical situation; explaining a purpose or function of the passage\'s complexities or tensions; or a style that is consistently vivid and persuasive. For this passage: ${spec.sophistication}`,
       keywords: SOPHISTICATION,
-      minMatches: 2,
+      minMatches: 3,
     },
   ]
 }
@@ -182,27 +194,27 @@ function argumentRubric(spec: { thesis: string[]; topic: string[]; sophisticatio
     {
       row: 'A',
       points: 1,
-      description: 'Row A — Thesis (0–1): responds to the prompt with a thesis that presents a defensible position. Agreeing, disagreeing, or qualifying all work; restating the prompt, giving no clear position, or hedging without a claim earns 0.',
+      description: 'Row A — Thesis (0–1): responds to the prompt with a thesis that presents a defensible position (agreeing, disagreeing, or qualifying). Earns 0 for any of the following: there is no defensible thesis; the intended thesis only restates the prompt; the intended thesis provides a summary of the issue with no apparent or coherent claim; or there is a thesis, but it does not respond to the prompt.',
       keywords: spec.thesis,
       requiresAll: [{ keywords: spec.topic }],
     },
     { row: 'B', points: 1, description: ARG_B[0], keywords: EXAMPLE_MARKERS },
-    { row: 'B', points: 1, description: ARG_B[1], keywords: EXAMPLE_MARKERS, requiresAll: [{ keywords: COMMENTARY }] },
-    { row: 'B', points: 1, description: ARG_B[2], keywords: EXAMPLE_MARKERS, minMatches: 2, requiresAll: [{ keywords: COMMENTARY, minMatches: 3 }, { keywords: spec.topic, minMatches: 2 }, { keywords: REASONING }] },
-    { row: 'B', points: 1, description: ARG_B[3], keywords: COMMENTARY, minMatches: 5, requiresAll: [{ keywords: REASONING, minMatches: 2 }] },
+    { row: 'B', points: 1, description: ARG_B[1], keywords: EXAMPLE_MARKERS, requiresAll: [{ keywords: COMMENTARY }, { keywords: spec.topic, minMatches: 3 }] },
+    { row: 'B', points: 1, description: ARG_B[2], keywords: EXAMPLE_MARKERS, minMatches: 2, requiresAll: [{ keywords: COMMENTARY, minMatches: 3 }, { keywords: spec.topic, minMatches: 3 }, { keywords: REASONING }] },
+    { row: 'B', points: 1, description: ARG_B[3], keywords: COMMENTARY, minMatches: 5, requiresAll: [{ keywords: REASONING, minMatches: 2 }, { keywords: spec.topic, minMatches: 4 }, { keywords: EXAMPLE_MARKERS, minMatches: 3 }] },
     {
       row: 'C',
       points: 1,
       description: `Row C — Sophistication (0–1): demonstrates sophistication of thought and/or a complex understanding of the rhetorical situation, sustained across the essay. Ways to earn it: crafting a nuanced argument that consistently identifies and explores complexities or tensions; articulating the implications or limitations of the argument by situating it in a broader context; making effective rhetorical choices that strengthen the argument; or a style that is consistently vivid and persuasive. A single concession tacked onto the conclusion does not earn the point. For this prompt: ${spec.sophistication}`,
       keywords: SOPHISTICATION,
-      minMatches: 2,
+      minMatches: 3,
     },
   ]
 }
 
 const ESSAY_PART_PROMPT = 'Write your essay in response to the prompt above. When you grade it, check it against each row of the 6-point rubric: Row A (thesis, 1 point), Row B (evidence and commentary, 4 cumulative points), Row C (sophistication, 1 point).'
 
-const SYNTHESIS_DIRECTIONS = `**Directions:** The following prompt is based on the accompanying sources. This question requires you to integrate a variety of sources into a coherent, well-written essay. Refer to the sources to support your position; avoid mere paraphrase or summary. Your argument should be central; the sources should support this argument. Suggested time: 15 minutes for reading the sources and 40 minutes for writing.
+const SYNTHESIS_DIRECTIONS = `**Directions:** The following prompt is based on the accompanying sources. This question requires you to integrate a variety of sources into a coherent, well-written essay. Refer to the sources to support your position; avoid mere paraphrase or summary. Your argument should be central; the sources should support this argument. Remember to attribute both direct and indirect citations. Suggested time: 15 minutes for reading the sources and 40 minutes for writing.
 
 **Note on the sources:** sources marked *adapted* summarize real documents; sources marked *practice source* were written for this practice question and are not real publications.`
 
@@ -313,6 +325,7 @@ From an interview in a regional sports magazine:
         rubric: synthesisRubric({
           thesis: ['should', 'ought', 'must', 'outweigh', 'worth', 'better'],
           topic: ['start', 'bell', 'school day', '8:30', 'later'],
+          sourceNames: ['pediatric|aap', 'california|sb 328|senate bill', 'budget director', 'survey', 'council president|student testimony', 'elementary|letter to the editor|parent', 'athletic director'],
           specifics: ['8:30', '8.5', '9.5', 'pediatric', 'puberty', 'two hours', 'california', 'rural', '1.4 million', 'thirty', 'buses', '6.9', '7.4', '27%', '42%', 'tardies', '210', '120', 'practice', 'dinner', 'shifts', 'jobs', 'second grader', 'in the dark', '7:40', 'patchwork', 'league', 'drowsy'],
           sophistication: 'treating the question as one of HOW to schedule rather than whether sleep matters (the bus-tier problem in Sources C and F means a later high school start can simply move the burden to younger children); noticing that Source D\'s gains are real but modest; seeing that Source B and Source G together suggest coordinated, statewide change answers objections that a single district cannot.',
         }),
@@ -322,13 +335,13 @@ Every school schedule is a decision about whose mornings matter. For decades, Am
 
 The medical case for later starts is strong because it rests on biology rather than preference. The American Academy of Pediatrics explains that the sleep cycle shifts as much as two hours later at puberty, yet teenagers still need 8.5 to 9.5 hours of sleep (Source A). An adolescent who boards a bus at 6:45 is therefore not lazy; he is being asked to run on a clock his body does not keep. This matters because the AAP connects that chronic shortfall to depressed mood and drowsy-driving crashes, harms that justify public spending in a way that mere comfort would not. **[Row B: specific evidence from Source A with commentary that explains why it supports the claim.]**
 
-The evidence from schools that have changed confirms that the biology translates into results, though more modestly than advocates sometimes promise. In the survey in Source D, average sleep rose from 6.9 to 7.4 hours and first-period tardies fell from 210 to 120 a week after the bell moved to 8:30. Half an hour of sleep is not a miracle, and a two-point rise in first-period grades is not a revolution; however, the tardy figure suggests that a later bell changes behavior across a whole building, not only in a few motivated students. The student council president in Source E reports the same pattern from the inside: she is "not falling asleep in chemistry anymore." **[Row B: a second and third source used as specific evidence; the commentary weighs the data instead of just reporting it.]**
+The evidence from schools that have changed confirms that the biology translates into results, though more modestly than advocates sometimes promise. In the survey in Source D, average sleep rose from 6.9 to 7.4 hours and first-period tardies fell from 210 to 120 a week after the bell moved to 8:30. Half an hour of sleep is not a miracle, and a two-point rise in first-period grades is not a revolution; however, the tardy figure suggests that a later bell changes behavior across a whole building, not only in a few motivated students. The student council president in Source E reports the same pattern from the inside: the student is "not falling asleep in chemistry anymore." **[Row B: a second and third source used as specific evidence; the commentary weighs the data instead of just reporting it.]**
 
 Yet the strongest objection to later start times is not that they fail but that someone else pays for them. The budget director in Source C notes that buses run in tiers, so starting the high school later either costs about 1.4 million dollars a year in new buses or pushes the youngest children earlier. Source F shows the second outcome: a second grader now "waits at the bus stop in the dark." This is the real trade-off, and it explains why my position is conditional. A reform that protects the sleep of sixteen-year-olds by waking seven-year-olds has not solved the sleep problem; it has moved it down the age ladder. **[Row B: the commentary consistently links each source back to the line of reasoning; Row C begins: the essay explores a tension between sources instead of dismissing the opposing side.]**
 
 Consequently, the decision should be made at a scale larger than one district. California's law requires most high schools to start no earlier than 8:30 (Source B), which means neighboring districts move together. That answers the athletic director's complaint in Source G, who says that a "patchwork" of schedules is what he "can't manage" but that he would have "no problem" if the whole league moved together. Statewide or regional timing also lets districts redesign bus routes jointly and phase in new costs, rather than forcing a single district to choose between Source C's budget and Source F's dark bus stop. Moreover, the rural exemption in California's law shows that a well-designed mandate can bend for places where long bus routes make the math impossible. **[Row B: Sources B and G are tied to the claim, completing a line of reasoning across five sources.]**
 
-The broader implication is that "later start times" is the wrong unit of debate. The question is not whether teenagers should sleep, which Source A settles, but whether communities will treat the morning schedule as shared public infrastructure. When they do, the benefits that Sources D and E describe become available without the hidden costs that Sources C and F expose. **[Row C: the conclusion situates the argument in a broader context (school schedules as shared infrastructure); combined with the sustained treatment of the trade-off, this earns sophistication.]**
+The broader implication is that "later start times" is the wrong unit of debate. The real tension is not over whether teenagers should sleep, which Source A settles, but over whether communities will treat the morning schedule as shared public infrastructure. When they do, the benefits that Sources D and E describe become available without the hidden costs that Sources C and F expose. **[Row C: the conclusion situates the argument in a broader context (school schedules as shared infrastructure); combined with the sustained treatment of the trade-off, this earns sophistication.]**
 
 **How this essay scores:**
 - **Row A (1/1):** the thesis takes a clear, defensible position and qualifies it with a condition the essay goes on to prove.
@@ -419,6 +432,7 @@ After Congress lengthened daylight saving time by about four weeks beginning in 
         rubric: synthesisRubric({
           thesis: ['should', 'ought', 'must', 'better', 'outweigh'],
           topic: ['standard time', 'daylight saving', 'clock', 'permanent'],
+          sourceNames: ['sunshine protection|senate', 'sleep medicine|aasm', '1974', 'sunrise|table|detroit', 'restaurant', 'bus driver', 'department of energy|doe'],
           specifics: ['unanimous', 'senate', '2022', 'circadian', 'morning light', 'sleep medicine', '1974', 'energy crisis', 'experiment', 'detroit', '7:58', '8:58', '6:02', '5:02', '9:12', '8:12', 'patio', 'soccer', 'evening light', '6:50', 'bus', 'in the dark', '1.3', '0.5 percent', '0.03', 'energy'],
           sophistication: 'recognizing that "ending the clock change" is popular while the choice of WHICH time divides people (Source A\'s unanimous vote vs. Source C\'s 1974 reversal); weighing morning light for biology and safety against evening light for commerce and recreation; noticing that geography matters (Source D shows the western edge of a time zone); using Source G to show that the energy rationale that started DST is now marginal.',
         }),
@@ -428,13 +442,13 @@ Americans agree on surprisingly little, but they come close to agreeing that cha
 
 The strongest reason to prefer standard time is biological. The American Academy of Sleep Medicine argues that standard time fits human circadian biology best, because morning light sets the body's internal clock (Source B). This matters because the clock on the wall can be moved by Congress, but the clock in the body cannot; permanent daylight time would, in effect, put the whole nation on a schedule one hour out of step with the sun every winter. The point is not that people would sleep less on one Sunday in March, but that they would wake in darkness for months. **[Row B: specific evidence from Source B with commentary that explains its significance.]**
 
-Source D turns that abstraction into a schedule. In Detroit, on the shortest day of the year, permanent daylight time would push sunrise to about 8:58 a.m. Students who board a bus near 7:00 would travel, sit through first period, and begin second period before the sun rises. A bus driver in Source F describes exactly this fear, noting that her first pickup at 6:50 a.m. is already dark in December and would stay dark "until almost nine." Her letter is anecdotal, but the table proves that her worry is accurate arithmetic, not exaggeration. **[Row B: the quantitative source and a practice source are linked so each strengthens the other; the commentary explains how.]**
+Source D turns that abstraction into a schedule. In Detroit, on the shortest day of the year, permanent daylight time would push sunrise to about 8:58 a.m. Students who board a bus near 7:00 would travel, sit through first period, and begin second period before the sun rises. A bus driver in Source F describes exactly this fear, noting that the first pickup at 6:50 a.m. is already dark in December and would stay dark "until almost nine." The letter is anecdotal, but the table proves that the driver's worry is accurate arithmetic, not exaggeration. **[Row B: the quantitative source and a practice source are linked so each strengthens the other; the commentary explains how.]**
 
-History confirms the arithmetic. In 1974, Congress adopted year-round daylight time as a two-year experiment, yet dark winter mornings and concern for schoolchildren led Congress to restore winter standard time that October (Source C). The lesson is not that Americans love changing clocks; it is that the appeal of permanent daylight time lasts only until people experience the mornings it creates. Therefore, the unanimous Senate vote in Source A tells us that the country wants to stop switching, not that it has thought through which time to keep. That is the central tension of the whole debate: a broad agreement about the problem hides a deep disagreement about the solution. **[Row B: commentary consistently explains how each source advances the line of reasoning; Row C develops: the essay distinguishes what the public wants (no switching) from what it would tolerate (dark mornings).]**
+History confirms the arithmetic. In January 1974, Congress put the country on year-round daylight time as a two-year experiment, yet dark winter mornings and concern for schoolchildren led Congress to restore winter standard time that October (Source C). The lesson is not that Americans love changing clocks; it is that the appeal of permanent daylight time lasts only until people experience the mornings it creates. Therefore, the unanimous Senate vote in Source A tells us that the country wants to stop switching, not that it has thought through which time to keep. That is the central tension of the whole debate: a broad agreement about the problem hides a deep disagreement about the solution. **[Row B: commentary consistently explains how each source advances the line of reasoning; Row C develops: the essay distinguishes what the public wants (no switching) from what it would tolerate (dark mornings).]**
 
 Supporters of permanent daylight time make a real case, and it deserves an answer rather than dismissal. The restaurant association in Source E is right that evening light brings "patio dining, youth soccer, and walks," and those are genuine goods. But the case for daylight time on energy grounds, the original justification for it, has largely evaporated: the Department of Energy found that adding four weeks of daylight time saved only about 0.03 percent of annual electricity use (Source G). Without an energy rationale, the argument for daylight time rests mainly on leisure, and leisure cannot outweigh the safety of children waiting for buses in the dark. Moreover, under permanent standard time Detroit would still see the sun set after 8:00 p.m. in late June (Source D), so summer evenings would remain long. **[Row B: the counterargument is answered with specific evidence from two more sources.]**
 
-The broader lesson of this debate is that "more daylight" is an illusion; Congress cannot create sunlight, only decide who gets it. Permanent standard time gives it to the people who need it most, the children and workers who start their days early, at a modest cost to evening leisure that summer already repays. **[Row C: the essay articulates the implication of its argument in a broader frame, completing a sustained, nuanced treatment of the trade-off.]**
+The deeper implication of this debate is that "more daylight" is an illusion; Congress cannot create sunlight, only decide who gets it. Permanent standard time gives it to the people who need it most, the children and workers who start their days early, at a modest cost to evening leisure that summer already repays. **[Row C: the essay articulates the implication of its argument in a broader frame, completing a sustained, nuanced treatment of the trade-off.]**
 
 **How this essay scores:**
 - **Row A (1/1):** the thesis chooses one of the three positions and gives a defensible reason.
@@ -483,7 +497,7 @@ ${RA_BULLETS}
         prompt: ESSAY_PART_PROMPT,
         maxPoints: 6,
         rubric: rhetoricalRubric({
-          thesis: ['to expose', 'to force', 'to convince', 'to persuade', 'to confront', 'to shame', 'to awaken', 'to rouse', 'to convey', 'to make his audience', 'to challenge'],
+          thesis: ['expos', 'forc', 'convinc', 'persua', 'confront', 'shame', 'awaken', 'rous', 'convey', 'indict', 'challeng', 'in order to', 'purpose'],
           specifics: ['fellow-citizens', 'why am i called', 'national altar', 'not included', 'immeasurable distance', 'yours, not mine', 'stripes and death', 'sunlight', 'fetters', 'temple of liberty', 'sacrilegious irony', 'scorching irony', 'not light that is needed, but fire', 'thunder', 'earthquake', 'must be roused', 'sham', 'hollow mockery', 'brass-fronted', 'swelling vanity', 'thin veil', 'at this very hour', 'your celebration'],
           sophistication: 'explaining why Douglass attacks a SYMPATHETIC audience (he must shake abolitionists out of a comfortable, self-congratulatory holiday); exploring the tension between "Fellow-Citizens" and "your" independence, through which Douglass claims a citizen\'s standing to indict the nation while dramatizing his exclusion; noting that the speech openly announces its own method ("scorching irony, not convincing argument, is needed") and then performs it.',
         }),
@@ -493,13 +507,13 @@ An audience of white abolitionists in Rochester in 1852 already believed slavery
 
 Douglass opens not with gratitude, the expected note for an Independence Day speaker, but with a string of rhetorical questions: "why am I called upon to speak here to-day? What have I, or those I represent, to do with your national independence?" The questions turn the occasion itself into the problem. Because his hosts invited a formerly enslaved man to celebrate independence, his question about why he was "called upon" exposes the awkward assumption behind the invitation: that the Declaration's "great principles of political freedom" already reach him. By asking whether he must "bring our humble offering to the national altar," he casts the holiday as a religious rite and himself as a worshipper compelled to thank a god that has not blessed him. The questions thus let the audience reach the uncomfortable answer themselves, which is more unsettling than if he had simply stated it. **[Row B: specific evidence with commentary explaining how the rhetorical choice serves the purpose.]**
 
-Douglass then answers his own questions through a pattern of pronouns and antitheses that divides the room. "This Fourth of July is *yours*, not mine. You may rejoice, I must mourn." The short, balanced clauses separate speaker from audience as sharply as the grammar allows. Moreover, the image of "the sunlight that brought life and healing to you" bringing "stripes and death to me" shows that the same national history produced opposite results depending on which side of the color line one stood. This antithesis matters because his listeners, as abolitionists, may have imagined themselves on his side of that line; the pronouns politely but firmly place them on the side of those who benefit. **[Row B: a second rhetorical choice (pronouns and antithesis), with commentary on its effect on this particular audience.]**
+Douglass then answers his own questions through a pattern of pronouns and antitheses that divides the room. "This Fourth of July is *yours*, not mine. You may rejoice, I must mourn." The short, balanced clauses separate speaker from audience as sharply as the grammar allows. Moreover, the image of "the sunlight that brought life and healing to you" bringing "stripes and death to me" shows that the same national history produced opposite results depending on which side of the color line one stood. This antithesis matters because his listeners, as abolitionists, may have imagined themselves on his side of that line; the pronouns pointedly place them on the side of those who benefit. **[Row B: a second rhetorical choice (pronouns and antithesis), with commentary on its effect on this particular audience.]**
 
-At the center of the passage, Douglass announces a change in method: "At a time like this, scorching irony, not convincing argument, is needed." The metaphors that follow, "not light that is needed, but fire; it is not the gentle shower, but thunder," escalate from the mild to the violent, which suggests that reasoned persuasion has already failed. The anaphoric series that follows ("the feeling of the nation must be quickened; the conscience of the nation must be roused") assigns the audience a task as well as a feeling. In this way Douglass justifies, in advance, the harshness of what comes next, so that his listeners hear his anger as necessary rather than intemperate. **[Row B: a third choice explained; the essay consistently explains how each piece of evidence advances the line of reasoning.]**
+At the center of the passage, Douglass announces a change in method: "At a time like this, scorching irony, not convincing argument, is needed." The metaphors that follow, "not light that is needed, but fire; it is not the gentle shower, but thunder," escalate from the mild to the violent, which suggests that reasoned persuasion has already failed. The parallel series that follows ("the feeling of the nation must be quickened; the conscience of the nation must be roused") uses passive verbs that name no agent, which leaves his listeners to recognize themselves as the ones who must do the rousing. In this way Douglass justifies, in advance, the harshness of what comes next, so that his listeners hear his anger as necessary rather than intemperate. **[Row B: a third choice explained; the essay consistently explains how each piece of evidence advances the line of reasoning.]**
 
 The final paragraph delivers that fire. Douglass returns to his opening question, "What to the American slave is your Fourth of July?", and answers it with a catalog in which each patriotic ideal is named and then renamed: "your celebration is a sham; your boasted liberty, an unholy license." The repeated "your" turns the audience's own vocabulary of patriotism into a list of charges, and the series grows longer and more severe until even "your prayers and hymns" become "hypocrisy." Therefore, by the passage's end, the holiday that began as an occasion for gratitude has become evidence against the nation "at this very hour." **[Row B: multiple rhetorical choices (catalog, repetition, the return to the opening question) explained in relation to the message.]**
 
-What makes this strategy so effective is its tension with Douglass's opening words. He begins by calling his listeners "Fellow-Citizens," claiming a citizen's standing, and then insists that their independence is not his. That paradox is his argument in miniature: a man with the full moral authority of a citizen is denied the rights of one. Ironically, his exclusion gives him the standing to indict the nation from within, and his sympathetic audience cannot dismiss him as an outsider when he has just addressed them as equals. **[Row C: the essay explains a central tension in the passage and its function given the rhetorical situation, sustained across the essay's argument.]**
+What makes this strategy so effective is its tension with Douglass's opening words. He begins by calling his listeners "Fellow-Citizens," claiming a citizen's standing, and then insists that their independence is not his. That paradox is his argument in miniature: a man with the full moral authority of a citizen is denied the rights of one. Ironically, the very exclusion he describes is what gives his indictment its authority, and because he has just addressed his listeners as fellow citizens, they cannot dismiss him as an outsider. **[Row C: the essay explains a central tension in the passage and its function given the rhetorical situation, sustained across the essay's argument.]**
 
 **How this essay scores:**
 - **Row A (1/1):** a thesis that analyzes specific rhetorical choices and connects them to purpose and audience.
@@ -539,7 +553,7 @@ ${RA_BULLETS}
         prompt: ESSAY_PART_PROMPT,
         maxPoints: 6,
         rubric: rhetoricalRubric({
-          thesis: ['to convince', 'to persuade', 'to urge', 'to challenge', 'to inspire', 'to shame', 'to warn', 'to move', 'to convey', 'to make his audience'],
+          thesis: ['convinc', 'persua', 'urg', 'challeng', 'inspir', 'shame', 'warn', 'convey', 'in order to', 'purpose'],
           specifics: ['special advantages', 'much has been given', 'much should be expected', 'man of learning', 'lettered leisure', 'cynic', 'with a sneer', 'twisted pride', 'dare not even attempt', 'not the critic who counts', 'in the arena', 'dust and sweat and blood', 'strives valiantly', 'errs', 'daring greatly', 'cold and timid souls', 'know neither victory nor defeat', 'cultivated taste', 'fastidiousness', 'workaday'],
           sophistication: 'explaining the risk and the strategy of telling scholars that "it is not the critic who counts" while standing in one of the world\'s great universities (Roosevelt first flatters, then warns, then inspires); noticing that the speech itself is an act of criticism, which Roosevelt manages by praising failure honestly suffered; situating the passage in Roosevelt\'s position as a recently retired president defending a life of action.',
         }),
@@ -551,11 +565,11 @@ Roosevelt begins by honoring his listeners rather than attacking them. The paral
 
 Next, Roosevelt sketches a figure his audience would recognize and not want to become: "the man of learning, the man of lettered leisure" who is tempted "to pose ... as the cynic." His diction is pointed: the temptation is "queer and cheap," and the cynic's pride is "twisted." The aphorism "The poorest way to face life is to face it with a sneer" compresses the warning into a memorable line. By describing cynicism as a "pose" rather than a conviction, Roosevelt suggests that detached criticism is a kind of vanity, which matters because it lets him criticize the habit without insulting any particular listener. **[Row B: a second choice (diction and aphorism) with commentary connecting it to the line of reasoning.]**
 
-The passage then reaches its famous metaphor. The doer is "the man who is actually in the arena, whose face is marred by dust and sweat and blood." The physical, almost violent imagery makes action concrete and costly, in contrast to the clean hands of the critic who merely "points out how the strong man stumbles." Moreover, the long chain of "who" clauses ("who strives valiantly; who errs, and comes short again and again") builds momentum, so the sentence itself seems to struggle forward like the man it describes. Strikingly, Roosevelt praises error: there is "no effort without error and shortcoming." This choice is essential for a scholarly audience trained to detect mistakes, because it redefines mistakes as evidence of effort rather than failure. **[Row B: multiple rhetorical choices (metaphor, imagery, anaphora of "who," syntax) explained in relation to the purpose.]**
+The passage then reaches its famous metaphor. The doer is "the man who is actually in the arena, whose face is marred by dust and sweat and blood." The physical, almost violent imagery makes action concrete and costly, in contrast to the critic, who risks nothing and merely "points out how the strong man stumbles." Moreover, the long chain of "who" clauses ("who strives valiantly; who errs, and comes short again and again") builds momentum, so the sentence itself seems to struggle forward like the man it describes. Strikingly, Roosevelt dignifies error: there is "no effort without error and shortcoming." This choice is essential for a scholarly audience trained to detect mistakes, because it redefines mistakes as evidence of effort rather than failure. **[Row B: multiple rhetorical choices (metaphor, imagery, anaphora of "who," syntax) explained in relation to the purpose.]**
 
-The sentence ends with an antithesis that leaves no comfortable middle ground. The doer who fails at least "fails while daring greatly," while the "cold and timid souls who know neither victory nor defeat." The temperature words matter: the doer is covered in sweat and blood, the critic is "cold." Therefore, the final rebuke, "Shame on the man of cultivated taste," lands with full force; Roosevelt has redefined "cultivated taste," the very quality his audience values, as a possible weakness. **[Row B: commentary consistently ties each piece of evidence back to the thesis.]**
+The sentence ends with an antithesis that leaves no comfortable middle ground. The doer who fails at least "fails while daring greatly," while the "cold and timid souls who know neither victory nor defeat." The imagery of heat matters: the doer is sweating and bleeding, while the timid souls are "cold." Therefore, the final rebuke, "Shame on the man of cultivated taste," lands with full force; Roosevelt has redefined "cultivated taste," the very quality his audience values, as a possible weakness. **[Row B: commentary consistently ties each piece of evidence back to the thesis.]**
 
-What gives the passage its power is the tension in Roosevelt's own position. He is a critic of critics, delivering a lecture in praise of action to people who spend their lives lecturing. He resolves the paradox by speaking as a man who has been "in the arena" himself, a recent president whose policies drew constant criticism. His audience would have known this, so his praise of the bloodied doer also works as a quiet defense of his own career. **[Row C: the essay explains the complexity of the rhetorical situation (a famous man of action addressing scholars) and the function of the passage's central tension.]**
+What gives the passage its power is the tension in Roosevelt's own position. The irony is that he is a critic of critics, delivering a lecture in praise of action to people who spend their lives lecturing. He resolves the paradox by speaking as a man who has been "in the arena" himself, a recent president whose policies drew constant criticism. His audience would have known this, so his praise of the bloodied doer also works as a quiet defense of his own career. **[Row C: the essay explains the complexity of the rhetorical situation (a famous man of action addressing scholars) and the function of the passage's central tension.]**
 
 **How this essay scores:**
 - **Row A (1/1):** a thesis that analyzes Roosevelt's choices and links them to his purpose with a specific audience.
@@ -594,23 +608,23 @@ ${ARG_BULLETS}`,
         prompt: ESSAY_PART_PROMPT,
         maxPoints: 6,
         rubric: argumentRubric({
-          thesis: ['mill is right', 'mill is wrong', 'mill is largely', 'mill is mostly', 'valid', 'agree', 'disagree', 'to the extent', 'largely', 'only when', 'mostly', 'although', 'while'],
-          topic: ['mill', 'opposing', 'other side', 'own side', 'understand', 'opponent', 'argument', 'refute'],
+          thesis: ['mill is right', 'mill is wrong', 'mill is largely', 'mill is mostly', 'valid', 'agree', 'disagree', 'to the extent', 'only when'],
+          topic: ['mill', 'opposing', 'other side', 'own side', 'opponent', 'refute'],
           sophistication: 'qualifying Mill\'s claim (it applies to genuine disagreements argued in good faith, not to settled facts) while showing that even the qualification depends on someone having done the engagement Mill demands; exploring why understanding an opponent is different from conceding to one; situating the claim in present-day contexts such as debate training, courts, or online echo chambers.',
         }),
         sampleAnswer: `*Annotated sample (scores 6/6). Rubric rows are marked in brackets.*
 
 Most people defend their opinions the way they defend their hometown sports team: with loyalty, not knowledge. John Stuart Mill argues that a belief held this way is barely a belief at all, since "he who knows only his own side of the case, knows little of that." **Mill is largely right: a position that has never faced its strongest opposition is held as a habit rather than understood as a conclusion. His claim needs one qualification, however, because the duty to master the other side applies to genuine disagreements argued in good faith, not to every denial of established fact.** **[Row A: a defensible position that qualifies the claim and sets up the line of reasoning.]**
 
-The clearest evidence for Mill comes from institutions built on his principle. For centuries, when the Catholic Church considered declaring someone a saint, it appointed an official popularly called the "devil's advocate," whose job was to argue against the candidate. The office was weakened in 1983, and critics noted that canonizations then became far more frequent. The example suggests that an institution that stops hearing the other side does not become more certain of its judgments; it simply stops testing them. Mill's claim, in other words, is not only about individual minds but about any system that needs to reach reliable conclusions. **[Row B: specific evidence with commentary that explains how it supports the claim.]**
+The clearest evidence for Mill comes from institutions built on his principle. For centuries, when the Catholic Church considered declaring someone a saint, it appointed an official popularly called the "devil's advocate," whose job was to argue against the candidate. The office was weakened in 1983, and critics noted that canonizations then became far more frequent, though other reforms also played a part. The example suggests that an institution that stops hearing the other side does not become more certain of its judgments; it simply stops testing them. Mill's claim, in other words, is not only about individual minds but about any system that needs to reach reliable conclusions. **[Row B: specific evidence with commentary that explains how it supports the claim.]**
 
 The same principle operates in individual reasoning, as my own experience shows. When my debate coach assigned me to argue for a school cell-phone ban, a policy I opposed, I had to read the research on classroom distraction that I had been ignoring. I discovered that my original position rested on convenience, not evidence. My final view, which supported limits rather than a total ban, was stronger because it had absorbed the other side's best data. This demonstrates exactly what Mill means by knowing "little" of one's own side: until I could state the case for the ban, I could not explain why I opposed it; I merely felt that I did. **[Row B: a second piece of specific evidence; the commentary connects it to Mill's words and to the line of reasoning.]**
 
-History offers a third case in which understanding the opposition proved decisive. Before the Lincoln–Douglas debates of 1858, Abraham Lincoln studied Stephen Douglas's doctrine of popular sovereignty so closely that he could restate it fairly and then expose its weakness: if each territory could vote for slavery, then the nation had no principle against it. Lincoln did not adopt Douglas's view; he understood it well enough to defeat it. As a result, his own position against the expansion of slavery became sharper. Therefore, the three examples together show a single pattern: engaging the strongest version of the other side turns an opinion into an argument. **[Row B: commentary consistently explains how each example advances the line of reasoning and ties the examples together.]**
+History offers a third case in which understanding the opposition proved decisive. Before the Lincoln–Douglas debates of 1858, Abraham Lincoln studied Stephen Douglas's doctrine of popular sovereignty so closely that he could restate it fairly and then expose its weakness: if each territory could vote for slavery, then the nation had no principle against it. Lincoln did not adopt Douglas's view; he understood it well enough to dismantle it in argument, even though Douglas kept his Senate seat. As a result, his own position against the expansion of slavery became sharper. Therefore, the three examples together show a single pattern: engaging the strongest version of the other side turns an opinion into an argument. Douglas's position, unlike a denial of fact, was a genuine disagreement argued in good faith by a serious opponent, which is exactly the kind of case in which Mill's demand applies. **[Row B: commentary consistently explains how each example advances the line of reasoning and ties the examples together.]**
 
 The strongest objection is that some questions do not have two legitimate sides. No one should have to master the arguments of people who deny that the earth is round before rejecting them. I accept this, which is why my thesis limits Mill's claim to genuine disagreements. Yet the objection is less damaging than it seems. We can safely dismiss a flat-earth argument only because geographers, sailors, and astronomers already did the work of testing and refuting such claims. The confidence we inherit was earned through exactly the engagement Mill demands; we simply did not have to do it ourselves. **[Row C: the essay explores a complexity in the claim rather than tacking on a concession.]**
 
-Mill's claim matters more now than in 1859. Social media lets people choose news feeds that never show them a serious opposing argument, which makes it easy to feel informed while knowing only one side. The implication of Mill's principle is uncomfortable but useful: the measure of how well we understand our own beliefs is how fairly we can state the beliefs we reject. **[Row C: the conclusion situates the argument in a broader present-day context, completing a sustained, nuanced argument.]**
+Mill's claim matters more now than in 1859. Social media lets people choose news feeds that never show them a serious opposing argument, which makes it easy to feel informed while knowing only one side, a contradiction Mill would have recognized at once. The implication of Mill's principle is uncomfortable but useful: the measure of how well we understand our own beliefs is how fairly we can state the beliefs we reject. **[Row C: the conclusion situates the argument in a broader present-day context, completing a sustained, nuanced argument.]**
 
 **How this essay scores:**
 - **Row A (1/1):** a defensible, qualified position.
@@ -642,21 +656,21 @@ ${ARG_BULLETS}`,
         prompt: ESSAY_PART_PROMPT,
         maxPoints: 6,
         rubric: argumentRubric({
-          thesis: ['emerson is right', 'emerson is wrong', 'valid', 'agree', 'disagree', 'to the extent', 'only when', 'although', 'while', 'virtue', 'weakness', 'value'],
+          thesis: ['emerson is right', 'emerson is wrong', 'valid', 'agree', 'disagree', 'to the extent', 'only when', 'virtue', 'weakness'],
           topic: ['consisten', 'change', 'changing', 'mind', 'emerson', 'contradict', 'promise', 'belief'],
           sophistication: 'distinguishing consistency of BELIEF (which should yield to evidence) from consistency of CHARACTER or commitment (keeping promises, applying principles evenly), and noticing that Emerson\'s own word "foolish" already limits his claim; weighing the costs of inconsistency in leaders and institutions (trust, law) against the costs of stubbornness; situating the question in present-day politics, where changing one\'s mind is often attacked as weakness.',
         }),
         sampleAnswer: `*Annotated sample (scores 6/6). Rubric rows are marked in brackets.*
 
-Politicians fear few insults more than "flip-flopper." The charge assumes that a person who changes position must have been either wrong before or dishonest now. Ralph Waldo Emerson rejected that assumption in 1841 when he called "a foolish consistency" the "hobgoblin of little minds." **Emerson is right that consistency of belief is no virtue, because beliefs should answer to evidence rather than to one's earlier statements; but consistency of character, keeping promises and applying principles evenly, remains essential, and the word "foolish" shows that Emerson himself attacked only the first kind.** **[Row A: a defensible, qualified position that sets up the line of reasoning.]**
+Politicians fear few insults more than "flip-flopper." The charge assumes that a person who changes position must have been either wrong before or dishonest now. Ralph Waldo Emerson rejected that assumption in 1841 when he called "a foolish consistency" the "hobgoblin of little minds." **Emerson is right that consistency of belief is no virtue, because beliefs should answer to evidence rather than to one's earlier statements; but consistency of character, keeping promises and applying principles evenly, remains essential, and the word "foolish" suggests that Emerson's target was the first kind.** **[Row A: a defensible, qualified position that sets up the line of reasoning.]**
 
-Science shows why consistency of belief can be a vice. In 1912 the German scientist Alfred Wegener proposed that the continents had once been joined and had drifted apart. Many geologists rejected the idea for decades, partly because Wegener could not explain what force moved the continents. When evidence from the ocean floor in the 1950s and 1960s revealed seafloor spreading, the profession changed its mind and adopted plate tectonics. This demonstrates that the geologists who held out longest were not admirably consistent; they were loyal to a theory instead of to the evidence. Consequently, science advances precisely because it rewards the willingness Emerson describes: to "speak what to-morrow thinks" even when it contradicts yesterday. **[Row B: specific evidence with commentary explaining how it supports the claim.]**
+Science, for example, shows why consistency of belief can be a vice. In 1912 the German scientist Alfred Wegener proposed that the continents had once been joined and had drifted apart. Many geologists rejected the idea for decades, partly because Wegener could not explain what force moved the continents. When evidence from the ocean floor in the 1950s and 1960s revealed seafloor spreading, the profession changed its mind and adopted plate tectonics. This demonstrates that the geologists who held out longest were not admirably consistent; they were loyal to a theory instead of to the evidence. Consequently, science advances precisely because it rewards the willingness Emerson describes: to "speak what to-morrow thinks" even when it contradicts yesterday. **[Row B: specific evidence with commentary explaining how it supports the claim.]**
 
-Political history makes the same point with higher stakes. In August 1862, Abraham Lincoln wrote to the editor Horace Greeley that if he "could save the Union without freeing any slave" he would do it. Within months, he issued the Emancipation Proclamation, which took effect on January 1, 1863. A strictly consistent Lincoln would have kept emancipation off the table. Instead, the war's demands and his own moral development changed his policy, and the change is now regarded as one of his greatest acts. The example suggests that leaders who refuse to revise their positions in a crisis confuse stubbornness with principle. **[Row B: a second specific example; the commentary consistently connects it to the thesis.]**
+Political history makes the same point with higher stakes, and it also shows exactly which consistency matters. In August 1862, Abraham Lincoln wrote to the editor Horace Greeley that his "paramount object" was to save the Union, and that if he "could save the Union without freeing any slave" he would do it, but that he would free all or some of them if that would save it instead. A month later he announced the Emancipation Proclamation, which took effect on January 1, 1863. Lincoln's policy on slavery moved dramatically as the war's demands and his own moral development changed, yet the letter shows that the policy was always a means to a goal he never abandoned. The example suggests that leaders who refuse to revise their methods in a crisis confuse stubbornness with principle. **[Row B: a second specific example; the commentary consistently connects it to the thesis.]**
 
-However, Lincoln's example also shows what kind of consistency does matter. His policy changed, but his commitment to preserving the Union and his oath to the Constitution did not. People trust a leader, a friend, or a business because they can predict how that person will act when it is inconvenient. A friend who keeps a promise after his feelings change, or a court that applies the same rule to rich and poor defendants, shows consistency of character, and that kind of consistency is the foundation of trust. If we treated promises the way Emerson treats opinions, contracts and friendships would collapse. Therefore, the line of reasoning in this essay depends on a distinction: beliefs should be revised as evidence changes, while commitments should be kept even as feelings change. **[Row B: commentary develops the line of reasoning; Row C: the essay explores a tension within the evidence instead of ignoring it.]**
+Lincoln's example therefore shows what kind of consistency does matter: his policy changed, but his commitment to preserving the Union did not. People trust a leader, a friend, or a business because they can predict how that person will act when it is inconvenient. A friend who keeps a promise after his feelings change, or a court that applies the same rule to rich and poor defendants, shows consistency of character, and that kind of consistency is the foundation of trust. If we treated promises the way Emerson treats opinions, contracts and friendships would collapse. Therefore, the line of reasoning in this essay depends on a distinction: beliefs should be revised as evidence changes, while commitments should be kept even as feelings change. **[Row B: commentary develops the line of reasoning; Row C: the essay explores a tension within the evidence instead of ignoring it.]**
 
-Read carefully, Emerson's sentence already contains this distinction. He condemns a *foolish* consistency, not consistency as such, and he directs his scorn at "little statesmen and philosophers and divines" who treat their past statements as more important than the truth. The implication for our own politics is clear: the "flip-flopper" charge should be reserved for people who change their commitments, not their conclusions. A society that punishes leaders for learning will get leaders who stop learning. **[Row C: a nuanced close reading of the prompt itself and a broader implication, sustained across the essay.]**
+Read carefully, Emerson's sentence already contains this distinction. He condemns a *foolish* consistency, not consistency as such, and he directs his scorn at "little statesmen and philosophers and divines" who treat their past statements as more important than the truth. Even his blunter line, that a great soul has "simply nothing to do" with consistency, is aimed at those who treat past statements as more important than the truth. The implication for our own politics is clear: the "flip-flopper" charge should be reserved for people who change their commitments, not their conclusions. A society that punishes leaders for learning will get leaders who stop learning. **[Row C: a nuanced close reading of the prompt itself and a broader implication, sustained across the essay.]**
 
 **How this essay scores:**
 - **Row A (1/1):** a clear, qualified position that establishes the distinction the essay develops.

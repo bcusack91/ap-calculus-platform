@@ -36,6 +36,8 @@ function gradeResponse(
       earned = earned && previousRowB
       previousRowB = earned
     }
+    // Row C (sophistication) is only awarded on top of the full Row B.
+    if (item.row === 'C') earned = earned && previousRowB
     return { earned, item }
   })
   return {

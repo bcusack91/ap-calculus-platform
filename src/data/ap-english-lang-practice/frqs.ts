@@ -73,7 +73,7 @@ The following passage is adapted from a 1962 speech delivered by Rachel Carson, 
     parts: [
       {
         prompt: '**Thesis (1 point):** State a defensible thesis that analyzes the writer\'s rhetorical choices.',
-        rubric: '1 pt: thesis identifies AT LEAST TWO specific rhetorical choices and links them to a purpose or effect. Examples: "Carson uses qualified concession and an appeal to constitutional values to portray her position as moderate and patriotic." Mere description ("Carson uses ethos, pathos, and logos") without linking to purpose = 0 pts.',
+        rubric: '1 pt: responds to the prompt with a defensible thesis that analyzes the writer\'s rhetorical choices. Examples: "Carson uses qualified concession and an appeal to constitutional values to portray her position as moderate and patriotic." Mere description ("Carson uses ethos, pathos, and logos") without linking to purpose = 0 pts.',
       },
       {
         prompt: '**Evidence & Commentary (4 points):** Provide specific evidence from the passage and explain how that evidence supports your thesis. Discuss how the writer\'s rhetorical choices contribute to her purpose.',

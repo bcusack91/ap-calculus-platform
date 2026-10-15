@@ -86,22 +86,22 @@ const REASONING = [
 
 const SOPHISTICATION = [
   'tension', 'paradox', 'complex', 'complicat', 'irony', 'ironic', 'ambigu', 'implication',
-  'broader', 'larger', 'at the same time', 'nuance', 'contradict', 'double', 'both',
+  'at the same time', 'nuance', 'contradict',
   'alternative interpretation', 'another reading',
   'qualif', 'distinction', 'distinguish', 'on the other hand', 'underlying', 'deeper',
 ]
 
 const LITERARY_TECHNIQUES = [
   'imagery', 'image', 'diction', 'syntax', 'metaphor', 'simile', 'personification', 'symbol',
-  'tone', 'irony', 'ironic', 'repetition', 'anaphora', 'rhyme', 'meter', 'enjambment', 'caesura',
+  ' tone|tone ', 'irony', 'ironic', 'repetition', 'anaphora', 'rhyme', ' meter', 'enjambment', 'caesura',
   'stanza', 'juxtapos', 'contrast', 'point of view', 'narrator', 'characterization', 'structure',
   'shift', 'alliteration', 'oxymoron', 'paradox', 'free indirect', 'dialogue', 'setting',
   'antithesis', 'parallel', 'hyperbole', 'synesthesia', 'figurative', 'dash', 'capitaliz',
 ]
 
 const WORK_EVIDENCE = [
-  'when ', 'scene', 'chapter', 'at the end', 'at the beginning', 'early in', 'later', 'the novel',
-  'the play', 'the narrator', 'the final', 'the opening', 'climax', 'act ',
+  'scene', 'chapter', 'at the end', 'at the beginning', 'early in', 'the novel',
+  'the play', 'the narrator', 'the final', 'the opening', 'climax', ' act |act i|act ii|act iii|act iv|act v',
 ]
 
 const POETRY_PROSE_B = [
@@ -115,7 +115,7 @@ const ARGUMENT_B = [
   'Row B — Evidence and Commentary, point 1 of 4: provides evidence from the chosen work that is mostly general (plot summary), without explaining how it supports the interpretation.',
   'Row B — Evidence and Commentary, point 2 of 4 (cumulative): provides some specific, relevant evidence from the work and explains how some of it relates to the argument, even if no line of reasoning is established or the reasoning is faulty.',
   'Row B — Evidence and Commentary, point 3 of 4 (cumulative): provides specific evidence to support all claims in a line of reasoning and explains how some of the evidence supports that line of reasoning.',
-  'Row B — Evidence and Commentary, point 4 of 4 (cumulative): provides specific evidence to support all claims in a line of reasoning AND consistently explains how the evidence supports the line of reasoning and an interpretation of the work as a whole.',
+  'Row B — Evidence and Commentary, point 4 of 4 (cumulative): provides specific evidence to support all claims in a line of reasoning AND consistently explains how the evidence supports the line of reasoning.',
 ]
 
 const SOPHISTICATION_DESC =
@@ -126,7 +126,7 @@ function analysisRubric(kind: 'poem' | 'passage', spec: { thesis: string[]; spec
     {
       row: 'A',
       points: 1,
-      description: `Row A — Thesis (0–1): responds to the prompt with a thesis that presents a defensible interpretation of the ${kind}. A thesis that only restates the prompt, paraphrases the ${kind}, or names a single simple emotion without an interpretation earns 0.`,
+      description: `Row A — Thesis (0–1): responds to the prompt with a thesis that presents a defensible interpretation of the ${kind}. A thesis that only restates the prompt, fails to offer an interpretation of the ${kind}, or describes or repeats the ${kind} rather than making a claim that requires a defense earns 0.`,
       keywords: spec.thesis,
       requiresAll: [{ keywords: LITERARY_TECHNIQUES }],
     },
@@ -134,7 +134,7 @@ function analysisRubric(kind: 'poem' | 'passage', spec: { thesis: string[]; spec
     { row: 'B', points: 1, description: POETRY_PROSE_B[1], keywords: spec.specifics, minMatches: 2, requiresAll: [{ keywords: COMMENTARY }] },
     { row: 'B', points: 1, description: POETRY_PROSE_B[2], keywords: spec.specifics, minMatches: 4, requiresAll: [{ keywords: COMMENTARY, minMatches: 3 }, { keywords: LITERARY_TECHNIQUES }, { keywords: REASONING }] },
     { row: 'B', points: 1, description: POETRY_PROSE_B[3], keywords: LITERARY_TECHNIQUES, minMatches: 3, requiresAll: [{ keywords: COMMENTARY, minMatches: 5 }, { keywords: REASONING, minMatches: 2 }, { keywords: spec.specifics, minMatches: 6 }] },
-    { row: 'C', points: 1, description: `${SOPHISTICATION_DESC} For this ${kind}: ${spec.sophistication}`, keywords: SOPHISTICATION, minMatches: 2 },
+    { row: 'C', points: 1, description: `${SOPHISTICATION_DESC} For this ${kind}: ${spec.sophistication}`, keywords: SOPHISTICATION, minMatches: 3 },
   ]
 }
 
@@ -143,15 +143,15 @@ function literaryArgumentRubric(spec: { thesis: string[]; topic: string[]; sophi
     {
       row: 'A',
       points: 1,
-      description: 'Row A — Thesis (0–1): responds to the prompt with a thesis that presents a defensible interpretation of the chosen work as it relates to the prompt. A thesis that only names a work, restates the prompt, or summarizes the plot earns 0.',
+      description: 'Row A — Thesis (0–1): responds to the prompt with a thesis that presents a defensible interpretation. Earns 0 for any of the following: there is no defensible thesis; the intended thesis only restates the prompt; the intended thesis provides a summary of the issue with no apparent or coherent claim; or there is a thesis, but it does not respond to the prompt.',
       keywords: spec.thesis,
       requiresAll: [{ keywords: spec.topic }],
     },
-    { row: 'B', points: 1, description: ARGUMENT_B[0], keywords: WORK_EVIDENCE },
+    { row: 'B', points: 1, description: ARGUMENT_B[0], keywords: WORK_EVIDENCE, minMatches: 2, requiresAll: [{ keywords: spec.topic, minMatches: 2 }] },
     { row: 'B', points: 1, description: ARGUMENT_B[1], keywords: WORK_EVIDENCE, requiresAll: [{ keywords: COMMENTARY }] },
-    { row: 'B', points: 1, description: ARGUMENT_B[2], keywords: WORK_EVIDENCE, minMatches: 2, requiresAll: [{ keywords: COMMENTARY, minMatches: 3 }, { keywords: spec.topic, minMatches: 2 }, { keywords: REASONING }] },
-    { row: 'B', points: 1, description: ARGUMENT_B[3], keywords: COMMENTARY, minMatches: 5, requiresAll: [{ keywords: REASONING, minMatches: 2 }, { keywords: ['as a whole', 'the work', 'the novel', 'the play', 'theme', 'meaning'] }] },
-    { row: 'C', points: 1, description: `${SOPHISTICATION_DESC} For this prompt: ${spec.sophistication}`, keywords: SOPHISTICATION, minMatches: 2 },
+    { row: 'B', points: 1, description: ARGUMENT_B[2], keywords: WORK_EVIDENCE, minMatches: 2, requiresAll: [{ keywords: COMMENTARY, minMatches: 3 }, { keywords: spec.topic, minMatches: 3 }, { keywords: REASONING }] },
+    { row: 'B', points: 1, description: ARGUMENT_B[3], keywords: COMMENTARY, minMatches: 5, requiresAll: [{ keywords: REASONING, minMatches: 2 }, { keywords: spec.topic, minMatches: 4 }, { keywords: ['as a whole', 'the work', 'the novel', 'the play', 'theme', 'meaning'] }] },
+    { row: 'C', points: 1, description: `${SOPHISTICATION_DESC} For this prompt: ${spec.sophistication}`, keywords: SOPHISTICATION, minMatches: 3 },
   ]
 }
 
@@ -230,7 +230,7 @@ The first stanza establishes that the city's misery is not accidental but owned.
 
 The second stanza widens this observation through anaphora. "In every cry of every Man, / In every Infant's cry of fear, / In every voice, in every ban" piles up "every" until no one is exempt, from adult to infant. The stanza then lands on its most striking phrase: "The mind-forg'd manacles I hear." This shows that the chains are not only external laws but habits of thought, forged in minds, which explains why the suffering is so total. Moreover, the speaker *hears* the manacles, a synesthetic touch that suggests the chains rattle in every sound the city makes. **[Row B: a second technique (anaphora, metaphor, synesthesia) explained in relation to the attitude.]**
 
-In the third stanza, the speaker's compassion becomes accusation. "How the Chimney-sweeper's cry / Every black'ning Church appalls" lets the child's cry darken the church, both with soot and with shame, because the church that should protect children instead tolerates their labor. Similarly, "the hapless Soldier's sigh / Runs in blood down Palace walls": a sigh, which is nearly silent, becomes blood visibly running down the palace. The image assigns guilt to the institution that sends soldiers to die. Therefore, the structure of these lines places each victim next to the power responsible for him. **[Row B: commentary consistently explains how imagery and juxtaposition advance the line of reasoning.]**
+In the third stanza, the speaker's compassion becomes accusation. "How the Chimney-sweeper's cry / Every black'ning Church appalls" pictures a church already blackened by soot and by its own guilt, and "appalls" carries both senses: the cry horrifies the church and, through the word's root, makes it pale or drapes it in a funeral pall, because the church that should protect children instead tolerates their labor. Similarly, "the hapless Soldier's sigh / Runs in blood down Palace walls": a sigh, which is nearly silent, becomes blood visibly running down the palace. The image assigns guilt to the institution that sends soldiers to die. Therefore, the structure of these lines places each victim next to the power responsible for him. **[Row B: commentary consistently explains how imagery and juxtaposition advance the line of reasoning.]**
 
 The final stanza moves to "midnight streets," the darkest point of the speaker's walk, and to the poem's most compressed image. "The youthful Harlot's curse / Blasts the new born Infant's tear, / And blights with plagues the Marriage hearse." Her curse is both her oath and the disease she carries, which travels from the street into respectable marriages and onto newborn children. The oxymoron "Marriage hearse" fuses the institution meant to create life with the vehicle that carries the dead. As a result, the poem ends by showing that respectable society and the exploitation it condemns are one system: the curse that society creates by tolerating prostitution returns to infect society itself. **[Row B: multiple techniques (structure, oxymoron, double meaning) explained in relation to meaning.]**
 
@@ -298,11 +298,11 @@ The first stanza gives the light a physical burden. It "oppresses, like the weig
 
 The second stanza names the effect directly with an oxymoron: "Heavenly hurt it gives us." The alliteration of "heavenly hurt" binds the two words so that the blessing and the injury cannot be separated. Moreover, the hurt leaves "no scar, / But internal difference / Where the meanings are." Because the wound is invisible, it cannot be shown, treated, or explained to someone else; it changes the inner place where people make sense of the world. This explains why the speaker's response is so complex: she cannot dismiss the light as mere melancholy, because it has altered what things mean. **[Row B: a second technique (oxymoron, alliteration) connected to the line of reasoning.]**
 
-The third stanza adds the language of authority. "None may teach it anything," the speaker says, and the light is "the seal, despair,— / An imperial affliction / Sent us of the air." A seal marks an official document or a royal command; an "imperial" affliction comes from an emperor. Therefore, the speaker presents despair not as a mood she chooses but as a decree she must accept. The dash after "despair" creates a pause, as if the speaker must gather herself before naming the affliction. **[Row B: commentary consistently explains how diction and punctuation advance the interpretation.]**
+The third stanza adds the language of authority. "None may teach it anything," the speaker says, and the light is "the seal, despair,— / An imperial affliction / Sent us of the air." A seal marks an official document or a royal command; an "imperial" affliction comes from an emperor. Therefore, the speaker presents despair not as a mood she chooses but as a decree she must accept. In this edition, the dash after "despair" creates a pause, as if the speaker must gather herself before naming the affliction. **[Row B: commentary consistently explains how diction and punctuation advance the interpretation.]**
 
 The final stanza shifts from the speaker's inner experience to the whole landscape. "When it comes, the landscape listens, / Shadows hold their breath." The personification makes the entire world behave like an audience before a king or a congregation before a priest, so the speaker's dread becomes universal. Yet the light's departure brings no relief: "When it goes, 't is like the distance / On the look of death." The image suggests the vacant gaze of a dying face, and the parallel structure of "When it comes" and "When it goes" shows that both arrival and departure are frightening. **[Row B: multiple techniques (personification, parallel structure, imagery) explain the poem's meaning.]**
 
-The poem's deepest complexity is that the speaker never wishes the light away. The hurt is "heavenly," the music is from a "cathedral," and the affliction is "imperial." These words grant the light dignity even as they record its pain. The light therefore does not simply cause despair; it reveals a despair that was already present in human life, and the speaker reveres it for its honesty. A reader might take the poem as a description of seasonal depression, but that reading misses the religious language that makes the experience feel like a revelation as well as a wound. **[Row C: the essay explores a tension and accounts for an alternative interpretation.]**
+The poem's deepest complexity, and its central paradox, is that the speaker never wishes the light away. The hurt is "heavenly," the music is from a "cathedral," and the affliction is "imperial." These words grant the light dignity even as they record its pain. The light therefore does not simply cause despair; it reveals a despair already present in human life, and the speaker's awe treats that knowledge as a revelation rather than a mere injury. A reader could hear the same religious words as bitter instead: an "imperial affliction" sent by a God who wounds without explanation, and a "seal" that, like the seals of Revelation, announces judgment. The poem sustains both readings, and that ambiguity is why the speaker's response can be neither simple worship nor simple complaint. **[Row C: the essay explores a tension and accounts for an alternative interpretation.]**
 
 **How this essay scores:**
 - **Row A (1/1):** a thesis that interprets a complex response (reverence and dread), not a single emotion.
@@ -359,9 +359,9 @@ Austen introduces Mr. Collins with a verdict before a description: he "was not a
 
 The first sentence reads like a report from a court that has already reached its decision. The narrator states that "the deficiency of nature had been but little assisted by education or society," a phrasing that sounds almost scientific. The calm, formal syntax makes the insult more devastating, because it presents Collins's foolishness as a measured fact rather than an opinion. Yet the narrator also explains it: his father was "illiterate and miserly," and at university Collins "merely kept the necessary terms without forming at it any useful acquaintance." This suggests that Collins is the product of neglect as well as of nature, which complicates the mockery. **[Row B: specific evidence with commentary on diction and syntax.]**
 
-The paragraph's final sentence explains why Collins is both humble and proud, through careful balance. His "respect" for Lady Catherine's "high rank," "mingling with a very good opinion of himself," makes him "altogether a mixture of pride and obsequiousness, self-importance and humility." The antitheses are paired so neatly that each quality seems to cause its opposite: he is servile toward those above him and self-important toward those below. Moreover, the word "veneration," a religious term, is directed at a wealthy patroness rather than at God. This irony shows that the clergyman worships rank, which is why Austen's attitude toward him becomes satire rather than mere amusement. **[Row B: a second technique (antithesis, ironic diction) explained in relation to characterization.]**
+The paragraph's final sentence explains why Collins is both humble and proud, through careful balance. His "respect" for Lady Catherine's "high rank," "mingling with a very good opinion of himself," makes him "altogether a mixture of pride and obsequiousness, self-importance and humility." The antitheses are paired so neatly that each quality seems to cause its opposite: he is servile toward rank and self-important about his own authority. Moreover, the word "veneration," a religious term, is directed at a wealthy patroness rather than at God. This irony shows that the clergyman worships rank, which is why Austen's attitude toward him becomes satire rather than mere amusement. **[Row B: a second technique (antithesis, ironic diction) explained in relation to characterization.]**
 
-In the second paragraph, the narrator slips into Collins's own perspective. He considers his marriage scheme "an excellent one, full of eligibility and suitableness, and excessively generous and disinterested on his own part." These are Collins's words, not the narrator's, and the free indirect style lets the reader hear how pompous they sound. The phrase "plan of amends—of atonement" is especially ironic: the religious language of atonement is applied to a plan that costs Collins nothing and gains him a wife. Therefore, the narrator does not need to criticize Collins here; his own vocabulary does it for her. **[Row B: commentary consistently explains how point of view and diction advance the line of reasoning.]**
+In the second paragraph, the narrator slips into Collins's own perspective. He considers his marriage scheme "an excellent one, full of eligibility and suitableness, and excessively generous and disinterested on his own part." These are Collins's words, not the narrator's, and the free indirect style lets the reader hear how pompous they sound. The phrase "plan of amends—of atonement" is especially ironic: the religious language of atonement is applied to a plan that costs Collins nothing and gains him a wife. Therefore, the narrator does not need to criticize Collins here; his own vocabulary does it for the narrator. **[Row B: commentary consistently explains how point of view and diction advance the line of reasoning.]**
 
 The final paragraphs turn this vanity into plot. Jane is Collins's "settled choice" for exactly one evening, until Mrs. Bennet's hint, delivered in breathless dashes, redirects him. The narrator reports that the change was "soon done—done while Mrs. Bennet was stirring the fire," and that Elizabeth "succeeded her of course." The repeated "done" and the domestic detail of the fire show how little feeling is involved: Collins changes his future wife in the time it takes to tend a fireplace. "Of course" mimics Collins's logic, in which daughters are interchangeable as long as they rank "equally next to Jane in birth and beauty." **[Row B: multiple techniques (structure, repetition, detail, tone) explained; the line of reasoning moves from character to consequence.]**
 
@@ -421,7 +421,7 @@ ${ANALYSIS_BULLETS}
         prompt: ESSAY_PART_PROMPT,
         maxPoints: 6,
         rubric: analysisRubric('passage', {
-          thesis: ['impression', 'fascinat', 'horror', 'fear', 'awe', 'dread', 'attract', 'repel', 'wonder', 'conveys', 'pity'],
+          thesis: ['impression', 'fascinat', 'horror', 'fear', 'awe', 'dread', 'attract', 'repel', 'wonder', 'conveys', 'pity', 'afraid', 'terrif'],
           specifics: ['wax candles', 'no glimpse of daylight', 'strangest lady', 'all of white', 'her hair was white', 'bridal flowers', 'one shoe', 'half arranged', 'half-packed', 'confusedly heaped', 'prayer-book', 'faded and yellow', 'withered', 'sunken eyes', 'skin and bone', 'waxwork', 'skeleton', 'cried out', 'come to play', 'twenty minutes to nine', 'stopped', 'never seen the sun', 'enormous lie'],
           sophistication: 'the double perspective of the adult narrator recalling the child (the comic understatement of "I regret to state" and the "enormous lie" shows the older Pip judging the frightened boy); the tension between splendor and decay, which makes Miss Havisham both glamorous and ghastly and foreshadows how wealth will both attract and corrupt Pip; the stopped clocks as an image of a life frozen by a single wound, which suggests pity as well as fear.',
         }),
@@ -435,9 +435,9 @@ The description of Miss Havisham herself begins with splendor. She wears "rich m
 
 The fourth paragraph then turns the white into decay. Its anaphora of "I saw that" marks the stages of Pip's understanding: he sees that everything white "had lost its lustre and was faded and yellow," that "the bride within the bridal dress had withered," and that the figure had "shrunk to skin and bone." Moreover, the parallel phrasing "withered like the dress, and like the flowers" makes the woman one more object in the room, fading along with her possessions. The only brightness left is "the brightness of her sunken eyes," so her eyes become the most frightening detail. **[Row B: commentary consistently explains how repetition, simile, and imagery develop the line of reasoning.]**
 
-Pip's two memories intensify the horror by comparison. He recalls "some ghastly waxwork at the Fair" and "a skeleton in the ashes of a rich dress," and then joins them: "Now, waxwork and skeleton seemed to have dark eyes that moved and looked at me." The child's mind can make sense of Miss Havisham only by comparing her to the dead and the artificial, and the moving eyes make those images suddenly alive. As a result, the impression shifts from wonder to terror; he "should have cried out, if I could." The stopped watch and clock, both at "twenty minutes to nine," then give the terror a cause: time itself has stopped in this room. **[Row B: multiple techniques (simile, allusion to memory, symbolism of the stopped clocks) explained.]**
+Pip's two memories intensify the horror by comparison. He recalls "some ghastly waxwork at the Fair" and "a skeleton in the ashes of a rich dress," and then joins them: "Now, waxwork and skeleton seemed to have dark eyes that moved and looked at me." The child's mind can make sense of Miss Havisham only by comparing her to the dead and the artificial, and the moving eyes make those images suddenly alive. As a result, the impression shifts from wonder to terror; he "should have cried out, if I could." The stopped watch and clock, both at "twenty minutes to nine," then give the terror its meaning: time itself has stopped in this room. **[Row B: multiple techniques (comparison to the waxwork and skeleton, imagery, the stopped clocks as symbol) explained.]**
 
-The passage's complexity lies in its two voices. The child is terrified, but the adult narrator tells the story with a wry, controlled humor: "I regret to state that I was not afraid of telling the enormous lie comprehended in the answer 'No.'" The formal phrasing gently mocks the boy's fear, yet it also suggests the older Pip's regret about a life that this house would shape. Read with the stopped clocks in mind, Miss Havisham is not only a monster; she is a woman frozen by a wound, which invites pity as well as fear. The scene thus foreshadows the novel's larger tension, in which Pip will be drawn to wealth and refinement even as they distort him. **[Row C: the essay explores the narrator's double perspective and situates the scene in the novel's broader concerns, sustained across the essay.]**
+The passage's complexity lies in its two voices. The child is terrified, but the adult narrator tells the story with a wry, controlled humor: "I regret to state that I was not afraid of telling the enormous lie comprehended in the answer 'No.'" The ironic formality of the phrasing gently mocks the boy's fear, yet it also suggests the older Pip's regret about a life that this house would shape. Read with the stopped clocks in mind, Miss Havisham is not only a monster; she is a woman frozen by a wound, which invites pity as well as fear. The scene thus foreshadows the novel's larger tension, in which Pip will be drawn to wealth and refinement even as they distort him. **[Row C: the essay explores the narrator's double perspective and situates the scene in the novel's broader concerns, sustained across the essay.]**
 
 **How this essay scores:**
 - **Row A (1/1):** a thesis that interprets a complex impression (dazzling and horrifying) and names the techniques that create it.
@@ -469,8 +469,6 @@ Either from your own reading or from the following list, choose a work of fictio
 
 ${ARGUMENT_BULLETS}
 
-You may select a work from the list below or another work of comparable literary merit.
-
 *Atonement* · *Beloved* · *Bleak House* · *Crime and Punishment* · *A Doll's House* · *Fences* · *Frankenstein* · *The Great Gatsby* · *Great Expectations* · *Hamlet* · *Jane Eyre* · *The Kite Runner* · *Never Let Me Go* · *Oedipus Rex* · *Passing* · *The Remains of the Day* · *The Scarlet Letter* · *The Strange Case of Dr. Jekyll and Mr. Hyde*`,
     parts: [
       {
@@ -479,7 +477,7 @@ You may select a work from the list below or another work of comparable literary
         maxPoints: 6,
         rubric: literaryArgumentRubric({
           thesis: ['reveals', 'suggests', 'argues', 'shows', 'illustrates', 'conveys', 'exposes', 'critique'],
-          topic: ['secret', 'conceal', 'hidden', 'hide', 'reveal', 'confess', 'guilt'],
+          topic: ['secret', 'conceal', 'hidden', 'hide', 'revelation', 'confess', 'guilt'],
           sophistication: 'arguing that the secret matters less for what it hides than for what concealment does to the character or community (Dimmesdale\'s hidden guilt destroys him while Hester\'s public shame transforms her); accounting for an alternative reading (the ambiguous "A" on Dimmesdale\'s chest); situating the work in a broader context, such as the Puritan culture of public punishment or Hawthorne\'s own nineteenth-century view of it.',
         }),
         sampleAnswer: `*Annotated sample (scores 6/6). Rubric rows are marked in brackets. This sample uses Nathaniel Hawthorne's* The Scarlet Letter *(1850).*
@@ -490,7 +488,7 @@ Dimmesdale's secret first shows its effects on his body and mind. Hawthorne reve
 
 The midnight scaffold scene in "The Minister's Vigil" dramatizes this trap. Dimmesdale climbs the same scaffold where Hester was publicly shamed, but he does so at night, when no one can see him. He even calls Hester and Pearl to stand beside him, yet he refuses Pearl's request to stand with them "to-morrow noontide." The scene shows that he wants the relief of confession without its cost. Consequently, the scaffold, a symbol of public justice, becomes for him a stage for a private performance of guilt that changes nothing. **[Row B: a second specific scene, with commentary connecting it to the line of reasoning.]**
 
-Hester's path shows the opposite outcome. Forced to wear the letter in public, she builds a life of quiet service, nursing the sick and helping the poor. Over time, Hawthorne writes, "many people refused to interpret the scarlet A by its original signification. They said that it meant Able." The meaning of the letter changes because Hester's sin is known; she cannot hide it, so she must live through it. Similarly, Dimmesdale finds peace only when he confesses on the scaffold in daylight, and he dies in the act. In other words, the revelation that frees him also kills him, because he waited until the secret had consumed him. **[Row B: commentary consistently explains how the contrast develops the interpretation of the work as a whole.]**
+Hester's path shows the opposite outcome. Forced to wear the letter in public, she builds a life of quiet service, nursing the sick and helping the poor. Over time, Hawthorne writes, "many people refused to interpret the scarlet A by its original signification. They said that it meant Able." The meaning of the letter changes because Hester's sin is known; she cannot hide it, so she must live through it. Dimmesdale, by contrast, finds peace only when he finally confesses on the scaffold in daylight, and he dies in the act. In other words, the revelation that frees him also kills him, because he waited until the secret had consumed him. **[Row B: commentary consistently explains how the contrast develops the interpretation of the work as a whole.]**
 
 The novel's conclusion makes the moral explicit: "Be true! Be true! Be true! Show freely to the world, if not your worst, yet some trait whereby the worst may be inferred!" Yet Hawthorne complicates even this lesson. After Dimmesdale's death, witnesses disagree about whether a scarlet letter appeared on his chest, and some deny that he confessed anything at all. This ambiguity suggests that a community committed to public punishment cannot even agree on what it saw, and that the Puritan obsession with the outward sign was always less important than inward truth. **[Row C: the essay accounts for the novel's ambiguity and an alternative reading.]**
 
@@ -519,8 +517,6 @@ Either from your own reading or from the following list, choose a work of fictio
 
 ${ARGUMENT_BULLETS}
 
-You may select a work from the list below or another work of comparable literary merit.
-
 *The Age of Innocence* · *Antigone* · *The Awakening* · *Death of a Salesman* · *A Doll's House* · *Ethan Frome* · *Fences* · *Hamlet* · *The House of Mirth* · *Invisible Man* · *Jane Eyre* · *The Joy Luck Club* · *Middlemarch* · *Pride and Prejudice* · *A Raisin in the Sun* · *The Remains of the Day* · *Their Eyes Were Watching God* · *Things Fall Apart*`,
     parts: [
       {
@@ -542,9 +538,9 @@ The novel also shows that the role is reinforced by the men who benefit from it.
 
 Edna's clearest statement of resistance comes in her argument with Adèle Ratignolle, the perfect mother-woman. Edna says she "would give up the unessential; I would give my money, I would give my life for my children; but I wouldn't give myself." The distinction is striking because it accepts the most extreme sacrifice, life itself, while refusing the everyday sacrifice that the role demands: the surrender of the self. Adèle cannot understand it, which suggests that the culture has no language for what Edna wants. As a result, Edna's resistance isolates her even from the women who love her. **[Row B: commentary consistently explains how each piece of evidence advances the interpretation of the novel as a whole.]**
 
-The ending brings the conflict to its crisis. Before she swims out, Edna thinks that her children "appeared before her like antagonists who had overcome her; who had overpowered and sought to drag her into the soul's slavery." As she walks to the water, she sees "a bird with a broken wing" circling "disabled down, down to the water." The image recalls Mademoiselle Reisz's warning that the artist "must possess the courageous soul that dares and defies," and the broken wing suggests that Edna has dared without the strength, or the support, to fly. **[Row B: specific evidence and commentary on symbolism, completing a line of reasoning across the novel.]**
+The ending brings the conflict to its crisis. Before she swims out, Edna thinks that her children "appeared before her like antagonists who had overcome her; who had overpowered and sought to drag her into the soul's slavery." As she walks to the water, she sees "a bird with a broken wing" circling "disabled down, down to the water." The image recalls Mademoiselle Reisz's warning that the artist "must possess the courageous soul that dares and defies," and the broken wing suggests that Edna has dared without the strength, or the support, to fly. It also recalls Mademoiselle Reisz's earlier warning that "the bird that would soar above the level plain of tradition and prejudice must have strong wings." **[Row B: specific evidence and commentary on symbolism, completing a line of reasoning across the novel.]**
 
-Readers have long disagreed about whether Edna's final swim is a defeat or a liberation, and the novel supports both readings. She dies, but she also stands "naked in the open air" for "the first time in her life" and feels "like some new-born creature." The ambiguity is the point: Chopin refuses to reward Edna's awakening with a happy ending, because in 1899 there was no social role for a woman who would not "give herself." The novel was attacked by many reviewers when it appeared, which suggests that its critique of the mother-woman ideal touched a nerve. Ultimately, Edna's response to her role is both heroic and tragic, and the novel's meaning lies in that tension. **[Row C: the essay accounts for alternative interpretations and situates the work in a broader historical context, sustained across the essay.]**
+Readers have long disagreed about whether Edna's final swim is a defeat or a liberation, and the novel supports both readings. She dies, but she also stands "naked in the open air" for "the first time in her life" and feels "like some new-born creature." The ambiguity is the point: Chopin refuses to reward Edna's awakening with a happy ending, because in 1899 there was no social role for a woman who would not "give herself." The novel was attacked by many reviewers when it appeared, which suggests that its critique of the mother-woman ideal touched a nerve. Ultimately, Edna's resistance to her role is both heroic and tragic: her search for freedom ends in the only escape her society leaves her, and the novel's meaning lies in that tension. **[Row C: the essay accounts for alternative interpretations and situates the work in a broader historical context, sustained across the essay.]**
 
 **How this essay scores:**
 - **Row A (1/1):** a defensible interpretation of the work as a whole, connected to the prompt's idea of an expected role.
