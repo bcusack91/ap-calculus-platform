@@ -5,189 +5,195 @@ export const bioCellCompartmentPart5Data = {
       id: 'bio-cell-compartmentalization-p5-s1-intro',
       type: 'text' as const,
       content: `
-      ## Cell Compartmentalization: Endosymbiotic Theory
-      
-      **Part 5 of 7**
-      
-      In this lesson, you will connect mechanism-level biology to exam-ready reasoning through evidence for organelle evolutionary origin.
-      
-      ### Worked biological example
-      A student team investigates evidence for organelle evolutionary origin. Their first interpretation step is to identify how **vesicle budding** and **signal peptide** work together in the same pathway.
-      
-      - They classify the primary signal using **vesicle budding**: pinches off a membrane packet for cargo transport.
-      - They trace the downstream response using **signal peptide**: short amino acid sequence directing protein destination.
-      - They then compare outcomes with **proton gradient** and **endosymbiosis** to separate mechanism from correlation.
-      
-      ### Key terms for this part
-      - **vesicle budding**
-      - **signal peptide**
-      - **proton gradient**
-      - **endosymbiosis**
+## Prokaryotes and the Origin of Organelles
+
+**Part 5 of 7 — Prokaryotes and the Origin of Organelles**
+
+CED Topic 2.11 (Origins of Cell Compartmentalization) asks you to compare how prokaryotic and eukaryotic cells are organized inside and to explain where mitochondria and chloroplasts came from. Its essential knowledge makes three points:
+
+1. Membrane-bound organelles **evolved from previously free-living prokaryotic cells via endosymbiosis**.
+2. Prokaryotes **generally lack internal membrane-bound organelles** but have internal regions with specialized structures and functions.
+3. Eukaryotic cells **maintain internal membranes that partition the cell** into specialized regions.
+
+### How a prokaryote organizes its interior
+
+"No organelles" does not mean "no organization." A typical bacterial cell has:
+
+| Region or structure | What it does |
+|---|---|
+| **Nucleoid** | A region where the circular chromosome is concentrated; it is not surrounded by a membrane |
+| **Ribosomes** | Make proteins throughout the cytoplasm; smaller than eukaryotic cytoplasmic ribosomes |
+| **Plasmids** | Small circular DNA molecules that often carry genes such as antibiotic resistance |
+| **Plasma membrane** | Site of the electron transport chain and ATP synthase, and of many transport proteins |
+| **Internal membranes in some groups** | Cyanobacteria have thylakoid membranes that hold their photosynthetic machinery |
+| **Protein-shelled compartments in some groups** | Some photosynthetic bacteria enclose the carbon-fixing enzyme rubisco in a protein shell (not a membrane) that concentrates $\\text{CO}_2$ around it |
+
+The last row is a useful reminder: the *benefits* of compartmentalization (concentrating reactants, separating reactions) can be achieved without a lipid membrane.
       `
     },
     {
-      id: 'bio-cell-compartmentalization-p5-s2-mcq-core',
+      id: 'bio-cell-compartmentalization-p5-s2-compare',
+      type: 'text' as const,
+      content: `
+### Why small cells can manage without internal membranes
+
+Prokaryotic cells are usually about 1 to 5 μm across, while many eukaryotic cells are 10 to 100 μm. A small cell has a high surface-area-to-volume ratio, so its plasma membrane offers enough area for respiration and transport, and diffusion moves molecules across the whole cell quickly. A larger eukaryotic cell relies on internal membranes to supply working surface and to keep its many processes from interfering.
+
+| Feature | Prokaryotic cell | Eukaryotic cell |
+|---|---|---|
+| DNA location | Nucleoid region, no membrane | Nucleus enclosed by a double-membrane envelope |
+| Transcription and translation | Can occur at the same time in the cytoplasm | Separated in space and time by the nuclear envelope |
+| ATP synthesis by chemiosmosis | Plasma membrane | Inner mitochondrial membrane (and thylakoids in plants and algae) |
+| Protein processing and secretion | Proteins made in the cytoplasm and secreted directly across the plasma membrane | ER, Golgi and vesicles form a dedicated route |
+| Digestion of macromolecules | Enzymes secreted outside the cell | Lysosomes (and food vacuoles) inside the cell |
+      `
+    },
+    {
+      id: 'bio-cell-compartmentalization-p5-s3-mcq-compare',
       type: 'multiple-choice' as const,
       content: `
-      **Checkpoint MCQ (2 questions)**
+### Checkpoint — Prokaryotic Organization
       `,
       exercise: {
         questions: [
           {
-            question: 'For Endosymbiotic Theory, what best describes vesicle budding?',
+            question: 'A newly described microbe has a circular chromosome concentrated in one region of the cytoplasm with no surrounding membrane, and makes ATP using proteins in its plasma membrane. Which conclusion is best supported?',
             options: [
-              'origin model where mitochondria and chloroplasts derive from bacteria',
-              'pinches off a membrane packet for cargo transport',
-              'difference in proton concentration across a membrane',
-              'short amino acid sequence directing protein destination'
+              'It is a prokaryote whose DNA lies in a nucleoid',
+              'It is a eukaryote whose nuclear envelope was lost in preparation',
+              'It is a eukaryote that keeps its mitochondria near the membrane',
+              'It is a prokaryote that has lost its ability to make ribosomes'
             ],
-            correctAnswer: 1,
-            explanation: 'vesicle budding is best matched with: pinches off a membrane packet for cargo transport.'
+            correctAnswer: 0,
+            explanation: 'A membrane-free region of concentrated circular DNA is a nucleoid, and ATP synthesis at the plasma membrane is the prokaryotic arrangement. Nothing in the description suggests missing ribosomes.'
           },
           {
-            question: 'In this part\'s context, what is the strongest definition of signal peptide?',
+            question: 'Some bacteria surround the enzyme rubisco with a protein shell that keeps $\\text{CO}_2$ concentrated around the enzyme. Which statement best describes this structure?',
             options: [
-              'difference in proton concentration across a membrane',
-              'delivery of molecules to correct intracellular compartment',
-              'short amino acid sequence directing protein destination',
-              'pinches off a membrane packet for cargo transport'
+              'It is an organelle with a membrane of its own',
+              'It shows compartment benefits without a membrane',
+              'It is a chloroplast that lost its outer membrane',
+              'It shows that bacteria have a full endomembrane system'
             ],
-            correctAnswer: 2,
-            explanation: 'signal peptide is best matched with: short amino acid sequence directing protein destination.'
+            correctAnswer: 1,
+            explanation: 'The protein shell concentrates a substrate around an enzyme, a benefit of compartmentalization, without a lipid bilayer. It is not membrane-bound and does not come from a chloroplast.'
           }
         ]
       }
     },
     {
-      id: 'bio-cell-compartmentalization-p5-s3-deep-dive',
+      id: 'bio-cell-compartmentalization-p5-s4-endosymbiosis',
       type: 'text' as const,
       content: `
-      ### Deep-Dive Map: Endosymbiotic Theory
-      
-      Use this diagram-style summary to track causation and evidence.
-      
-      #### Flow logic
-      - **Signal/Input** → vesicle budding
-      - **Immediate processing** → signal peptide
-      - **System-level consequence** → proton gradient
-      - **Measured readout** → endosymbiosis
-      
-      #### Mechanism table
-      | Component | Biological role | Typical evidence pattern |
-      |---|---|---|
-      | vesicle budding | pinches off a membrane packet for cargo transport | Early shift in the primary variable |
-      | signal peptide | short amino acid sequence directing protein destination | Mid-pathway change in process rate |
-      | proton gradient | difference in proton concentration across a membrane | Downstream phenotype trend |
-      | endosymbiosis | origin model where mitochondria and chloroplasts derive from bacteria | Quantifiable endpoint in data summary |
-      
-      #### Reasoning checkpoints
-      1. Name the mechanism before describing the trend line.
-      2. Separate proximate mechanism from ecological or historical context.
-      3. Verify that each claim is tied to a measurable biological readout.
+### The endosymbiont model
+
+**Endosymbiosis** is a relationship in which one organism lives inside the cells of another. The endosymbiont model explains mitochondria and chloroplasts in three steps:
+
+1. **Mitochondria.** An ancestral host cell took in an aerobic bacterium. Instead of being digested, the bacterium survived and divided inside the host. The host gained a highly efficient way to make ATP using oxygen; the bacterium gained a protected, nutrient-rich home.
+2. **Gene transfer.** Over a very long time, most of the endosymbiont's genes moved to the host nucleus or were lost. The partner became an organelle that can no longer live on its own.
+3. **Chloroplasts.** Later, in a lineage that **already had mitochondria**, a cell took in a photosynthetic **cyanobacterium**, which became the chloroplast.
+
+The order follows from the distribution of organelles today: essentially all eukaryotes have mitochondria or organelles derived from them, but only plants, algae and a few other groups have chloroplasts.
+
+### The evidence
+
+| Observation about mitochondria and chloroplasts | Why it supports the model |
+|---|---|
+| Two membranes surround each organelle | Fits engulfment of a cell by another; the inner membrane resembles a bacterial plasma membrane in its enzymes and transport systems |
+| Each has its own **circular DNA** | Bacterial chromosomes are circular; nuclear chromosomes are linear |
+| Each has its own **ribosomes**, similar to bacterial ribosomes | Some antibiotics that block bacterial ribosomes also block these organelle ribosomes |
+| They divide by a fission-like process | Bacteria reproduce by binary fission; cells cannot build these organelles from scratch |
+| Their DNA sequences group with specific bacteria | Mitochondrial genes are most similar to one group of bacteria; chloroplast genes are most similar to cyanobacteria |
+
+The sequence evidence is especially useful because it does more than show "bacteria-like" features: it identifies *which* bacteria the organelles are related to.
       `
-    },
-    {
-      id: 'bio-cell-compartmentalization-p5-s4-input',
-      type: 'input-boxes' as const,
-      content: `
-      **Input Practice — concrete vocabulary retrieval**
-      
-      Fill in each blank with the exact biological term.
-      
-      1) Term for this definition: **pinches off a membrane packet for cargo transport**
-
-      2) Term for this definition: **short amino acid sequence directing protein destination**
-
-      3) Term for this definition: **difference in proton concentration across a membrane**
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['vesicle budding', 'signal peptide', 'proton gradient'],
-        hint1: 'Start with the first item: it is the mechanism term used when a process is described as \'pinches off a membrane packet for cargo transport\'.',
-        hint2: 'Second blank points to signal peptide; think about the role \'short amino acid sequence directing protein destination\'.',
-        hint3: 'Third blank is proton gradient; connect it to \'difference in proton concentration across a membrane\'.',
-        explanation: 'Correct set: vesicle budding, signal peptide, proton gradient. These three terms define the core mechanism chain for Endosymbiotic Theory.'
-      }
     },
     {
       id: 'bio-cell-compartmentalization-p5-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown matching (3 prompts)**
+### Does the observation support the endosymbiont model?
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'vesicle budding',
-            options: ['difference in proton concentration across a membrane', 'pinches off a membrane packet for cargo transport', 'short amino acid sequence directing protein destination', 'origin model where mitochondria and chloroplasts derive from bacteria']
+            label: 'Chloroplast ribosomes are blocked by an antibiotic that targets bacterial ribosomes',
+            options: ['Supports the model', 'Does not bear on it', 'Argues against it', 'Supports only for mitochondria']
           },
           {
-            label: 'signal peptide',
-            options: ['origin model where mitochondria and chloroplasts derive from bacteria', 'short amino acid sequence directing protein destination', 'delivery of molecules to correct intracellular compartment', 'difference in proton concentration across a membrane']
+            label: 'Mitochondria are abundant in muscle cells that use a lot of ATP',
+            options: ['Supports the model', 'Argues against it', 'Does not bear on it', 'Supports only for mitochondria']
           },
           {
-            label: 'proton gradient',
-            options: ['origin model where mitochondria and chloroplasts derive from bacteria', 'difference in proton concentration across a membrane', 'separates cellular processes into distinct membrane-bound regions', 'delivery of molecules to correct intracellular compartment']
+            label: 'New mitochondria arise only from the division of existing mitochondria',
+            options: ['Argues against it', 'Supports the model', 'Does not bear on it', 'Supports only for mitochondria']
           }
         ],
-        correctAnswers: ['pinches off a membrane packet for cargo transport', 'short amino acid sequence directing protein destination', 'difference in proton concentration across a membrane'],
-        hint1: 'Match each term to the definition that captures mechanism, not just keywords.',
-        hint2: 'If two definitions feel close, choose the one with the exact process direction.',
-        hint3: 'Read each label out loud, then pick the option that completes a causal sentence.',
-        explanation: 'vesicle budding, signal peptide, and proton gradient should map to their exact mechanistic definitions. When options look similar, anchor your choice to process direction and biological scale.'
+        correctAnswers: ['Supports the model', 'Does not bear on it', 'Supports the model'],
+        hint1: 'Ask whether the observation links the organelle to bacteria specifically.',
+        hint2: 'How many mitochondria a cell has reflects its energy demand, not its ancestry.',
+        hint3: 'Bacteria arise only from other bacteria by division.',
+        explanation: 'Antibiotic sensitivity and division from preexisting organelles both match bacterial traits, so they support the model. Mitochondrial abundance in active tissue reflects function, not origin, so it does not bear on the model.'
       }
     },
     {
-      id: 'bio-cell-compartmentalization-p5-s6-strategy',
+      id: 'bio-cell-compartmentalization-p5-s6-nuance',
       type: 'text' as const,
       content: `
-      ### ACT/AP strategy and misconception repair
-      
-      On ACT/AP style prompts, score gains come from linking vocabulary to evidence, not from isolated memorization.
-      
-      #### Strategy sequence
-      1. **Name the mechanism first**: identify whether the item is asking for process, structure, regulation, or population effect.
-      2. **Use a causation sentence**: "Because vesicle budding pinches off a membrane packet for cargo transport, we expect ...".
-      3. **Audit units and scale**: molecular claims, cellular claims, and ecosystem claims should not be mixed.
-      
-      #### Common misconceptions to avoid
-      - Organelles are dynamic and interactive, not isolated static containers.
-      - Not every protein enters the secretory pathway; destination depends on targeting signals.
-      - Compartmentalization improves efficiency by reducing interference, not by making diffusion faster everywhere.
-      
-      #### Exam execution tip
-      When two answer choices sound plausible, prefer the one that includes a direct mechanism and a measurable biological consequence.
+### Nuance and common misconceptions
+
+- **"Mitochondria are bacteria living in our cells."** They are descended from bacteria, but most of the genes they need are now in the nucleus. A mitochondrion cannot be grown outside a cell.
+- **"Endosymbiosis explains the nucleus too."** The CED's examples are mitochondria and chloroplasts. How the nucleus and the endomembrane system arose is a separate question; a common textbook model has them forming from infoldings of the plasma membrane. You will not be tested on that model's details.
+- **"Chloroplasts came first."** Chloroplasts were acquired by cells that already had mitochondria, which is why every plant cell has both.
+- **"Circular DNA alone proves the model."** Each line of evidence is consistent with the model; the case is strong because the independent lines agree.
+
+#### Worked reasoning — why antibiotics can harm human cells
+
+Some antibiotics work by blocking bacterial ribosomes, and they are useful because human cytoplasmic ribosomes are different. But mitochondrial ribosomes resemble bacterial ones. **Prediction:** at high doses, such a drug could reduce protein synthesis inside human mitochondria, lowering production of the few respiratory proteins encoded by mitochondrial DNA. This is a direct, testable consequence of the evolutionary origin of the organelle.
+
+> **AP Connection:** Expect "describe a similarity or difference" items comparing prokaryotic and eukaryotic compartmentalization, and "justify" items that ask which observation supports endosymbiosis. A justification must tie the observation to a bacterial trait, not just state it.
       `
     },
     {
       id: 'bio-cell-compartmentalization-p5-s7-mcq-final',
       type: 'multiple-choice' as const,
       content: `
-      **Final application MCQ (2 questions)**
+### Checkpoint — Evaluating the Evidence
       `,
       exercise: {
         questions: [
           {
-            question: 'In evidence for organelle evolutionary origin, the observed pattern is: origin model where mitochondria and chloroplasts derive from bacteria. What term should anchor the explanation?',
+            question: 'Which observation most specifically supports the claim that chloroplasts descended from cyanobacteria rather than from some other bacterial group?',
             options: [
-              'proton gradient',
-              'signal peptide',
-              'endosymbiosis',
-              'vesicle budding'
+              'They have their own circular DNA and their own ribosomes',
+              'Their gene sequences are closest to those of that lineage',
+              'They are enclosed by two membranes, as engulfed cells are',
+              'They divide by a fission-like process, as bacteria often do'
             ],
-            correctAnswer: 2,
-            explanation: 'Use endosymbiosis because it directly maps to the described biological pattern: origin model where mitochondria and chloroplasts derive from bacteria.'
+            correctAnswer: 1,
+            explanation: 'Own DNA, double membranes and fission point to a bacterial origin in general, but only the sequence comparison picks out cyanobacteria as the closest relatives.'
           },
           {
-            question: 'In an AP-style free-response about endosymbiotic theory, the observed pattern is: delivery of molecules to correct intracellular compartment. What term should anchor the explanation?',
+            question: 'Nearly every eukaryotic lineage has mitochondria or organelles derived from them, but only some lineages have chloroplasts. What does this pattern best support?',
             options: [
-              'proton gradient',
-              'endosymbiosis',
-              'organelle targeting',
-              'compartmentalization'
+              'Chloroplasts arose first and were later lost by animals and fungi',
+              'Mitochondria were acquired before the major groups diverged',
+              'Mitochondria and chloroplasts arose together in a single engulfment',
+              'Chloroplasts formed from mitochondria that gained photosynthesis'
             ],
-            correctAnswer: 2,
-            explanation: 'Use organelle targeting because it directly maps to the described biological pattern: delivery of molecules to correct intracellular compartment.'
+            correctAnswer: 1,
+            explanation: 'A feature shared by nearly all eukaryotic lineages was most likely present in their common ancestor, while chloroplasts were acquired later in only some lineages. Chloroplasts descend from cyanobacteria, not from mitochondria.'
+          },
+          {
+            question: 'An antibiotic that targets bacterial ribosomes is added to cultured human cells at a high dose. Which effect is most consistent with the endosymbiont model?',
+            options: [
+              'Slower synthesis of proteins inside mitochondria',
+              'Faster synthesis of proteins on the rough ER',
+              'No effect at all, since human cells lack bacteria',
+              'Loss of the nuclear envelope in dividing cells'
+            ],
+            correctAnswer: 0,
+            explanation: 'Mitochondrial ribosomes resemble bacterial ribosomes, so a drug that blocks bacterial ribosomes can also slow protein synthesis inside mitochondria. Cytoplasmic ribosomes on the rough ER are a different type.'
           }
         ]
       }

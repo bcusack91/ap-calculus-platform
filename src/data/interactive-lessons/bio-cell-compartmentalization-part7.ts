@@ -5,189 +5,170 @@ export const bioCellCompartmentPart7Data = {
       id: 'bio-cell-compartmentalization-p7-s1-intro',
       type: 'text' as const,
       content: `
-      ## Cell Compartmentalization: AP Review
-      
-      **Part 7 of 7**
-      
-      In this lesson, you will connect mechanism-level biology to exam-ready reasoning through cross-unit synthesis on compartment logic.
-      
-      ### Worked biological example
-      A student team investigates cross-unit synthesis on compartment logic. Their first interpretation step is to identify how **proton gradient** and **endosymbiosis** work together in the same pathway.
-      
-      - They classify the primary signal using **proton gradient**: difference in proton concentration across a membrane.
-      - They trace the downstream response using **endosymbiosis**: origin model where mitochondria and chloroplasts derive from bacteria.
-      - They then compare outcomes with **organelle targeting** and **compartmentalization** to separate mechanism from correlation.
-      
-      ### Key terms for this part
-      - **proton gradient**
-      - **endosymbiosis**
-      - **organelle targeting**
-      - **compartmentalization**
+## Synthesis Review
+
+**Part 7 of 7 — Synthesis Review**
+
+This review ties the six parts into one picture. Use the map below to check that you can explain each idea in a sentence and give an example.
+
+| Part | Big idea | One-sentence version | Example to cite |
+|---|---|---|---|
+| 1 | Why compartments | Membranes separate competing reactions, hold distinct conditions and concentrate reactants | Lysosome near pH 5; nuclear envelope delaying translation until mRNA is processed |
+| 2 | Membranes as surfaces | Embedded enzymes scale with membrane area, and sealed membranes hold gradients | Cristae; thylakoids; uncoupling in brown fat |
+| 3 | Case studies | Ask what a membrane keeps apart and what happens if separation fails | Tay-Sachs; calcium stores in muscle; central vacuole; the secretory route |
+| 4 | Data | Locate enzymes by the fraction with most activity; latency shows enclosure | Fractionation tables; detergent experiments; pH-activity curves |
+| 5 | Origins | Prokaryotes organize without organelles; mitochondria and chloroplasts came from endosymbiosis | Nucleoid; cyanobacterial thylakoids; circular organelle DNA |
+| 6 | Exam practice | Predict with direction and comparison; justify with a mechanism | Isolated mitochondria data set |
+
+### Links to other units
+
+| Unit | Connection to compartmentalization |
+|---|---|
+| Unit 3 (Cellular Energetics) | Chemiosmosis needs a sealed inner mitochondrial membrane or thylakoid membrane |
+| Unit 4 (Cell Communication) | Calcium released from the ER acts as an intracellular signal |
+| Unit 6 (Gene Expression) | The nuclear envelope allows pre-mRNA processing before translation |
+| Unit 7 (Natural Selection) | Endosymbiosis is an example of how complex cells evolved from simpler ancestors |
       `
     },
     {
-      id: 'bio-cell-compartmentalization-p7-s2-mcq-core',
+      id: 'bio-cell-compartmentalization-p7-s2-story',
+      type: 'text' as const,
+      content: `
+### One cell, every idea
+
+Follow a single pancreatic cell that makes a digestive enzyme.
+
+1. **Nucleus.** The enzyme's gene is transcribed and the pre-mRNA is capped, tailed and spliced *inside the nuclear envelope*, so no ribosome can translate an unfinished message (Part 1).
+2. **Rough ER.** Ribosomes on the ER make the enzyme directly into the ER lumen. The cell's large area of rough ER membrane sets how much enzyme it can make (Part 2).
+3. **Golgi and vesicles.** The enzyme is modified and shipped in vesicles. It never crosses another membrane and never touches the cytosol, so it cannot digest the cell that made it (Part 3).
+4. **Mitochondria.** The energy for all this comes from ATP made by chemiosmosis across the folded inner membrane, a structure inherited from a bacterial ancestor (Parts 2 and 5).
+5. **Lysosomes.** Worn-out parts of the cell are digested in an acidic compartment, and the building blocks are recycled (Parts 1 and 3).
+
+If you can tell this story and name the benefit at each step, you have the topic.
+      `
+    },
+    {
+      id: 'bio-cell-compartmentalization-p7-s3-mcq-mixed',
       type: 'multiple-choice' as const,
       content: `
-      **Checkpoint MCQ (2 questions)**
+### Review Set 1
       `,
       exercise: {
         questions: [
           {
-            question: 'For AP Review, what best describes proton gradient?',
+            question: 'Which pairing of a structure with the benefit of compartmentalization it best illustrates is correct?',
             options: [
-              'difference in proton concentration across a membrane',
-              'origin model where mitochondria and chloroplasts derive from bacteria',
-              'membrane protein that pumps protons into a compartment',
-              'separates cellular processes into distinct membrane-bound regions'
+              'Cristae: adding surface area for embedded enzymes',
+              'Nucleoid: separating transcription from translation',
+              'Lysosome: increasing membrane area for synthesis',
+              'Ribosome: holding an acidic internal environment'
             ],
             correctAnswer: 0,
-            explanation: 'proton gradient is best matched with: difference in proton concentration across a membrane.'
+            explanation: 'Cristae fold the inner membrane to hold more electron transport proteins and ATP synthase. A nucleoid has no membrane, so it cannot separate transcription from translation, and ribosomes are not enclosed compartments.'
           },
           {
-            question: 'In this part\'s context, what is the strongest definition of endosymbiosis?',
+            question: 'Cells from two tissues are compared. Tissue 1 cells have lysosomes with an interior pH of 4.8; tissue 2 cells carry a mutation that raises lysosomal pH to 6.5. Which difference is most likely?',
             options: [
-              'difference in proton concentration across a membrane',
-              'origin model where mitochondria and chloroplasts derive from bacteria',
-              'contains hydrolytic enzymes for intracellular digestion',
-              'delivery of molecules to correct intracellular compartment'
+              'Tissue 2 cells digest delivered macromolecules more slowly',
+              'Tissue 2 cells lose their lysosomal membranes',
+              'Tissue 1 cells release hydrolases into the cytosol',
+              'Tissue 1 cells cannot recycle amino acids'
+            ],
+            correctAnswer: 0,
+            explanation: 'Lysosomal hydrolases have acidic pH optima, so raising the pH slows digestion inside intact lysosomes. Nothing in the description damages the membrane.'
+          },
+          {
+            question: 'Which observation would most weaken the claim that a newly discovered organelle originated by endosymbiosis?',
+            options: [
+              'It has its own circular DNA and small ribosomes',
+              'It forms from scratch out of ER membrane',
+              'It is enclosed by a double membrane',
+              'It divides by a fission-like process'
             ],
             correctAnswer: 1,
-            explanation: 'endosymbiosis is best matched with: origin model where mitochondria and chloroplasts derive from bacteria.'
+            explanation: 'Organelles descended from endosymbionts arise only from existing organelles by division, the way bacteria arise only from bacteria. An organelle built from scratch out of ER membrane points to an origin within the cell.'
           }
         ]
       }
     },
     {
-      id: 'bio-cell-compartmentalization-p7-s3-deep-dive',
+      id: 'bio-cell-compartmentalization-p7-s4-traps',
       type: 'text' as const,
       content: `
-      ### Deep-Dive Map: AP Review
-      
-      Use this diagram-style summary to track causation and evidence.
-      
-      #### Flow logic
-      - **Signal/Input** → proton gradient
-      - **Immediate processing** → endosymbiosis
-      - **System-level consequence** → organelle targeting
-      - **Measured readout** → compartmentalization
-      
-      #### Mechanism table
-      | Component | Biological role | Typical evidence pattern |
-      |---|---|---|
-      | proton gradient | difference in proton concentration across a membrane | Early shift in the primary variable |
-      | endosymbiosis | origin model where mitochondria and chloroplasts derive from bacteria | Mid-pathway change in process rate |
-      | organelle targeting | delivery of molecules to correct intracellular compartment | Downstream phenotype trend |
-      | compartmentalization | separates cellular processes into distinct membrane-bound regions | Quantifiable endpoint in data summary |
-      
-      #### Reasoning checkpoints
-      1. Name the mechanism before describing the trend line.
-      2. Separate proximate mechanism from ecological or historical context.
-      3. Verify that each claim is tied to a measurable biological readout.
+### Trap table
+
+| Trap | Correct idea |
+|---|---|
+| "Prokaryotes have no internal organization." | They have a nucleoid, ribosomes, plasmids and, in some groups, internal membranes or protein-shelled compartments. |
+| "Cristae increase the volume of the mitochondrion." | Cristae increase membrane area, not volume. |
+| "A leaky inner membrane stops electron transport." | Electron transport and oxygen use can rise; ATP synthesis is what falls. |
+| "Fractionation shows an enzyme in two places, so it works in both." | Small amounts outside the peak fraction usually reflect broken organelles. |
+| "The proton gradient is stored ATP." | The gradient is stored potential energy that ATP synthase converts into ATP. |
+| "Mitochondria could live outside the cell." | Most of their genes moved to the nucleus; they depend on the host. |
+| "Secreted proteins pass through the cytosol on the way out." | They stay inside the ER, Golgi and vesicles until exocytosis. |
       `
     },
     {
-      id: 'bio-cell-compartmentalization-p7-s4-input',
+      id: 'bio-cell-compartmentalization-p7-s5-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — concrete vocabulary retrieval**
-      
-      Fill in each blank with the exact biological term.
-      
-      1) Term for this definition: **difference in proton concentration across a membrane**
+### Quick recall
 
-      2) Term for this definition: **origin model where mitochondria and chloroplasts derive from bacteria**
+1) Name the folds of the inner mitochondrial membrane. (one word)
 
-      3) Term for this definition: **delivery of molecules to correct intracellular compartment**
+2) Name the membrane-free region of a prokaryotic cell where the chromosome is concentrated. (one word)
+
+3) A model inner membrane has 7 μm² of area when smooth and 42 μm² with folds. By what factor do the folds increase its area?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['proton gradient', 'endosymbiosis', 'organelle targeting'],
-        hint1: 'Start with the first item: it is the mechanism term used when a process is described as \'difference in proton concentration across a membrane\'.',
-        hint2: 'Second blank points to endosymbiosis; think about the role \'origin model where mitochondria and chloroplasts derive from bacteria\'.',
-        hint3: 'Third blank is organelle targeting; connect it to \'delivery of molecules to correct intracellular compartment\'.',
-        explanation: 'Correct set: proton gradient, endosymbiosis, organelle targeting. These three terms define the core mechanism chain for AP Review.'
+        correctAnswers: ['cristae', 'nucleoid', '6'],
+        hint1: 'The word comes from the Latin for "crests."',
+        hint2: 'The name means "nucleus-like."',
+        hint3: 'Divide the folded area by the smooth area.',
+        explanation: 'The folds are cristae; the bacterial chromosome sits in the nucleoid; and 42 ÷ 7 = 6, so folding gives six times as much membrane for embedded enzymes.'
       }
     },
     {
-      id: 'bio-cell-compartmentalization-p7-s5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-      **Dropdown matching (3 prompts)**
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'proton gradient',
-            options: ['origin model where mitochondria and chloroplasts derive from bacteria', 'delivery of molecules to correct intracellular compartment', 'difference in proton concentration across a membrane', 'separates cellular processes into distinct membrane-bound regions']
-          },
-          {
-            label: 'endosymbiosis',
-            options: ['contains hydrolytic enzymes for intracellular digestion', 'separates cellular processes into distinct membrane-bound regions', 'origin model where mitochondria and chloroplasts derive from bacteria', 'delivery of molecules to correct intracellular compartment']
-          },
-          {
-            label: 'organelle targeting',
-            options: ['delivery of molecules to correct intracellular compartment', 'modifies, sorts, and packages proteins and lipids', 'contains hydrolytic enzymes for intracellular digestion', 'separates cellular processes into distinct membrane-bound regions']
-          }
-        ],
-        correctAnswers: ['difference in proton concentration across a membrane', 'origin model where mitochondria and chloroplasts derive from bacteria', 'delivery of molecules to correct intracellular compartment'],
-        hint1: 'Match each term to the definition that captures mechanism, not just keywords.',
-        hint2: 'If two definitions feel close, choose the one with the exact process direction.',
-        hint3: 'Read each label out loud, then pick the option that completes a causal sentence.',
-        explanation: 'proton gradient, endosymbiosis, and organelle targeting should map to their exact mechanistic definitions. When options look similar, anchor your choice to process direction and biological scale.'
-      }
-    },
-    {
-      id: 'bio-cell-compartmentalization-p7-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### ACT/AP strategy and misconception repair
-      
-      On ACT/AP style prompts, score gains come from linking vocabulary to evidence, not from isolated memorization.
-      
-      #### Strategy sequence
-      1. **Name the mechanism first**: identify whether the item is asking for process, structure, regulation, or population effect.
-      2. **Use a causation sentence**: "Because proton gradient difference in proton concentration across a membrane, we expect ...".
-      3. **Audit units and scale**: molecular claims, cellular claims, and ecosystem claims should not be mixed.
-      
-      #### Common misconceptions to avoid
-      - Compartmentalization improves efficiency by reducing interference, not by making diffusion faster everywhere.
-      - Endosymbiosis is supported by multiple lines of evidence, not just one observation.
-      - Organelles are dynamic and interactive, not isolated static containers.
-      
-      #### Exam execution tip
-      When two answer choices sound plausible, prefer the one that includes a direct mechanism and a measurable biological consequence.
-      `
-    },
-    {
-      id: 'bio-cell-compartmentalization-p7-s7-mcq-final',
+      id: 'bio-cell-compartmentalization-p7-s6-mcq-final',
       type: 'multiple-choice' as const,
       content: `
-      **Final application MCQ (2 questions)**
+### Review Set 2
       `,
       exercise: {
         questions: [
           {
-            question: 'In cross-unit synthesis on compartment logic, the observed pattern is: separates cellular processes into distinct membrane-bound regions. What term should anchor the explanation?',
+            question: 'A eukaryotic cell and a prokaryotic cell are both exposed to a drug that makes all cell membranes permeable to protons. Chemiosmotic ATP production is reduced in which cells?',
             options: [
-              'compartment-specific pH',
-              'compartmentalization',
-              'organelle targeting',
-              'proton gradient'
+              'The eukaryote alone, since only it contains mitochondria',
+              'Each of the two, since each runs ATP synthase on a gradient',
+              'The prokaryote alone, since its gradient sits at the cell surface',
+              'Neither of the two, since glycolysis supplies all of their ATP'
             ],
             correctAnswer: 1,
-            explanation: 'Use compartmentalization because it directly maps to the described biological pattern: separates cellular processes into distinct membrane-bound regions.'
+            explanation: 'The prokaryote builds its gradient across the plasma membrane and the eukaryote across the inner mitochondrial membrane, so making membranes leaky to protons collapses both. Glycolysis still makes some ATP, but far less than chemiosmosis.'
           },
           {
-            question: 'In an AP-style free-response about ap review, the observed pattern is: contains hydrolytic enzymes for intracellular digestion. What term should anchor the explanation?',
+            question: 'Which statement best explains why eukaryotic cells benefit more from internal membranes than small prokaryotic cells do?',
             options: [
-              'lysosome',
-              'compartmentalization',
-              'organelle targeting',
-              'Golgi apparatus'
+              'Large cells have a lower ratio of surface area to volume',
+              'Prokaryotic cells need no enzymes for respiration at all',
+              'Eukaryotic cells lack a plasma membrane able to hold enzymes',
+              'Prokaryotic cells carry out far fewer kinds of chemical reactions'
             ],
             correctAnswer: 0,
-            explanation: 'Use lysosome because it directly maps to the described biological pattern: contains hydrolytic enzymes for intracellular digestion.'
+            explanation: 'As a cell grows, its volume increases faster than its surface, so the plasma membrane alone cannot supply enough working area. Internal membranes add surface and separate the many processes of a large cell.'
+          },
+          {
+            question: 'A researcher finds that an enzyme from a plant cell is most active at pH 5 and is recovered mainly with large membrane-bound sacs. In which compartment does the enzyme most likely work?',
+            options: [
+              'The stroma of the chloroplast',
+              'The central vacuole',
+              'The cytosol around the nucleus',
+              'The matrix of the mitochondrion'
+            ],
+            correctAnswer: 1,
+            explanation: 'The plant central vacuole is acidic and functions much like a lysosome, so an acid-optimal enzyme recovered with large sacs most likely works there. The stroma, cytosol and matrix are all near neutral or slightly alkaline.'
           }
         ]
       }

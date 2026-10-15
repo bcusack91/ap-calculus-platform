@@ -5,189 +5,201 @@ export const bioCellCompartmentPart3Data = {
       id: 'bio-cell-compartmentalization-p3-s1-intro',
       type: 'text' as const,
       content: `
-      ## Cell Compartmentalization: Membrane Surfaces
-      
-      **Part 3 of 7**
-      
-      In this lesson, you will connect mechanism-level biology to exam-ready reasoning through membrane microenvironments with distinct pH.
-      
-      ### Worked biological example
-      A student team investigates membrane microenvironments with distinct pH. Their first interpretation step is to identify how **Golgi apparatus** and **ER lumen** work together in the same pathway.
-      
-      - They classify the primary signal using **Golgi apparatus**: modifies, sorts, and packages proteins and lipids.
-      - They trace the downstream response using **ER lumen**: internal ER space where folding and processing occur.
-      - They then compare outcomes with **vesicle budding** and **signal peptide** to separate mechanism from correlation.
-      
-      ### Key terms for this part
-      - **Golgi apparatus**
-      - **ER lumen**
-      - **vesicle budding**
-      - **signal peptide**
+## Compartments at Work: Case Studies
+
+**Part 3 of 7 — Compartments at Work: Case Studies**
+
+The fastest way to understand a compartment is to ask two questions about it:
+
+1. **What does this membrane keep apart?**
+2. **What would happen if the separation failed?**
+
+This part works through five cases. Each one shows a different benefit from Parts 1 and 2, and each ends with a prediction you could be asked to make on the exam.
+
+| Case | Compartment | What it keeps apart | Benefit shown |
+|---|---|---|---|
+| A | Lysosome | Hydrolases and their substrates from the cytosol | Separation and distinct pH |
+| B | Smooth ER of muscle (sarcoplasmic reticulum) | A stored supply of $\\text{Ca}^{2+}$ from the cytosol | Ion storage for signaling |
+| C | Plant central vacuole | Water, ions, pigments and defensive compounds from the cytosol | Storage and turgor |
+| D | ER, Golgi and secretory vesicles | Proteins bound for export from the cytosol | A sealed route out of the cell |
+| E | Mitochondrion | The proton gradient from the rest of the cell | Gradient for ATP synthesis |
       `
     },
     {
-      id: 'bio-cell-compartmentalization-p3-s2-mcq-core',
+      id: 'bio-cell-compartmentalization-p3-s2-cases-ab',
+      type: 'text' as const,
+      content: `
+### Case A — When a lysosome cannot finish its job
+
+Lysosomes receive worn-out organelles and macromolecules and break them down with hydrolytic enzymes. The building blocks (amino acids, sugars, nucleotides, fatty acids) are transported back to the cytosol for reuse. The CED lists three lysosome roles: intracellular digestion, recycling of the cell's organic materials, and programmed cell death (apoptosis).
+
+In **Tay-Sachs disease**, an inherited mutation leaves lysosomes without one working enzyme that breaks down a specific membrane lipid. The steps of the problem:
+
+1. The lipid is delivered to lysosomes in nerve cells as usual.
+2. Without the enzyme, it cannot be broken into pieces small enough to be transported out.
+3. Because the lysosomal membrane keeps undigested material inside, the lipid **accumulates in the lysosomes**, which swell.
+4. Swollen lysosomes crowd and damage neurons, which are long-lived cells that cannot dilute the build-up by dividing.
+
+**Lesson:** the membrane that keeps hydrolases away from the cytosol also traps whatever the hydrolases fail to digest. The defect stays inside the compartment, so symptoms appear in the cells that rely most on that compartment.
+
+### Case B — A compartment as a signal reservoir
+
+Muscle cells store calcium inside a specialized smooth ER called the **sarcoplasmic reticulum**. When a nerve signal arrives, channels open and $\\text{Ca}^{2+}$ floods into the cytosol, triggering contraction. Pumps in the membrane then use ATP to move $\\text{Ca}^{2+}$ back inside, and the muscle relaxes.
+
+The compartment works like a charged battery: because the cytosol is kept almost free of calcium, a brief release produces a large, fast change in cytosolic concentration. **Prediction:** if the calcium pumps fail, cytosolic calcium stays high and relaxation is delayed.
+      `
+    },
+    {
+      id: 'bio-cell-compartmentalization-p3-s3-mcq-ab',
       type: 'multiple-choice' as const,
       content: `
-      **Checkpoint MCQ (2 questions)**
+### Checkpoint — Lysosomes and Calcium Stores
       `,
       exercise: {
         questions: [
           {
-            question: 'For Membrane Surfaces, what best describes Golgi apparatus?',
+            question: 'In a lysosomal storage disease, one lysosomal hydrolase is missing. Where would undigested substrate most likely build up?',
             options: [
-              'modifies and sorts proteins and lipids, then packages them',
-              'internal ER space where folding and processing occur',
-              'pinches off a membrane packet for cargo transport',
-              'short amino acid sequence directing protein destination'
+              'Inside lysosomes, where it swells the sacs',
+              'In the cytosol, after leaking out of lysosomes',
+              'In the Golgi, where hydrolases are first made',
+              'In the nucleus, where the material blocks transcription'
             ],
             correctAnswer: 0,
-            explanation: 'Golgi apparatus is best matched with: modifies and sorts proteins and lipids, then packages them.'
+            explanation: 'The substrate is delivered into lysosomes but cannot be broken into pieces small enough to be transported out, so it accumulates there. Hydrolases are made on the rough ER, not in the Golgi.'
           },
           {
-            question: 'In this part\'s context, what is the strongest definition of ER lumen?',
+            question: 'A toxin blocks the ATP-powered pumps that move calcium from the cytosol back into the sarcoplasmic reticulum of a muscle cell. Which result is most likely?',
             options: [
-              'modifies, sorts, and packages proteins and lipids',
-              'pinches off a membrane packet for cargo transport',
-              'difference in proton concentration across a membrane',
-              'internal ER space where folding and processing occur'
+              'Contraction cannot begin because no calcium can be released',
+              'Calcium stays high in the cytosol and relaxation is delayed',
+              'The sarcoplasmic reticulum fills with excess calcium ions',
+              'The cytosol becomes acidic as protons replace the calcium'
             ],
-            correctAnswer: 3,
-            explanation: 'ER lumen is best matched with: internal ER space where folding and processing occur.'
+            correctAnswer: 1,
+            explanation: 'Release through channels does not need the pumps, but returning calcium to storage does, so cytosolic calcium stays elevated and the muscle stays contracted longer. The store would gradually empty, not fill.'
           }
         ]
       }
     },
     {
-      id: 'bio-cell-compartmentalization-p3-s3-deep-dive',
+      id: 'bio-cell-compartmentalization-p3-s4-cases-cde',
       type: 'text' as const,
       content: `
-      ### Deep-Dive Map: Membrane Surfaces
-      
-      Use this diagram-style summary to track causation and evidence.
-      
-      #### Flow logic
-      - **Signal/Input** → Golgi apparatus
-      - **Immediate processing** → ER lumen
-      - **System-level consequence** → vesicle budding
-      - **Measured readout** → signal peptide
-      
-      #### Mechanism table
-      | Component | Biological role | Typical evidence pattern |
-      |---|---|---|
-      | Golgi apparatus | modifies, sorts, and packages proteins and lipids | Early shift in the primary variable |
-      | ER lumen | internal ER space where folding and processing occur | Mid-pathway change in process rate |
-      | vesicle budding | pinches off a membrane packet for cargo transport | Downstream phenotype trend |
-      | signal peptide | short amino acid sequence directing protein destination | Quantifiable endpoint in data summary |
-      
-      #### Reasoning checkpoints
-      1. Name the mechanism before describing the trend line.
-      2. Separate proximate mechanism from ecological or historical context.
-      3. Verify that each claim is tied to a measurable biological readout.
+### Case C — The plant central vacuole
+
+In a mature plant cell, the central vacuole can take up most of the cell's volume. The CED describes vacuoles as compartments for the **storage and release of macromolecules and waste**, and notes that the plant central vacuole **retains water, producing turgor pressure**. The tonoplast (vacuole membrane) lets the cell:
+
+- Store water so that the vacuole presses the cytoplasm against the cell wall and keeps soft tissues firm.
+- Hold ions, sugars and pigments at concentrations that would disrupt enzymes in the cytosol.
+- Sequester bitter or toxic compounds that deter herbivores without poisoning the cell's own metabolism.
+
+**Prediction:** if a plant loses water so that its vacuoles shrink, turgor pressure falls and the plant wilts.
+
+### Case D — A sealed route out of the cell
+
+A protein destined for secretion, such as a digestive enzyme or the hormone insulin, enters the **ER lumen** while it is being made on a ribosome attached to the rough ER. From then on:
+
+1. It travels in vesicles from the ER to the Golgi.
+2. It is modified and sorted in the Golgi.
+3. It leaves in a secretory vesicle that fuses with the plasma membrane (exocytosis).
+
+At no point after entering the ER does the protein cross another membrane. Vesicles bud off and fuse, so the inside of the ER, Golgi and vesicles is continuous with the **outside of the cell**. A digestive enzyme made in the pancreas therefore never touches the cytosol of the cell that made it.
+
+### Case E — The mitochondrion revisited
+
+Part 2 showed that the inner mitochondrial membrane holds a proton gradient. Here the case question is *what the compartment keeps apart*: protons concentrated in the intermembrane space are kept from the matrix except through ATP synthase.
       `
-    },
-    {
-      id: 'bio-cell-compartmentalization-p3-s4-input',
-      type: 'input-boxes' as const,
-      content: `
-      **Input Practice — concrete vocabulary retrieval**
-      
-      Fill in each blank with the exact biological term.
-      
-      1) Term for this definition: **modifies, sorts, and packages proteins and lipids**
-
-      2) Term for this definition: **internal ER space where folding and processing occur**
-
-      3) Term for this definition: **pinches off a membrane packet for cargo transport**
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['Golgi apparatus', 'ER lumen', 'vesicle budding'],
-        hint1: 'Start with the first item: it is the mechanism term used when a process is described as \'modifies, sorts, and packages proteins and lipids\'.',
-        hint2: 'Second blank points to ER lumen; think about the role \'internal ER space where folding and processing occur\'.',
-        hint3: 'Third blank is vesicle budding; connect it to \'pinches off a membrane packet for cargo transport\'.',
-        explanation: 'Correct set: Golgi apparatus, ER lumen, vesicle budding. These three terms define the core mechanism chain for Membrane Surfaces.'
-      }
     },
     {
       id: 'bio-cell-compartmentalization-p3-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown matching (3 prompts)**
+### Diagnose the failed compartment
+
+Match each observation to the compartment whose separation has most likely failed.
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Golgi apparatus',
-            options: ['modifies, sorts, and packages proteins and lipids', 'short amino acid sequence directing protein destination', 'pinches off a membrane packet for cargo transport', 'internal ER space where folding and processing occur']
+            label: 'Leaves droop even though the cell walls are intact and the soil was dry for a week',
+            options: ['Central vacuole', 'Lysosome', 'Sarcoplasmic reticulum', 'Inner mitochondrial membrane']
           },
           {
-            label: 'ER lumen',
-            options: ['short amino acid sequence directing protein destination', 'difference in proton concentration across a membrane', 'internal ER space where folding and processing occur', 'pinches off a membrane packet for cargo transport']
+            label: 'Oxygen use continues but ATP output falls sharply and the cells warm up',
+            options: ['Lysosome', 'Inner mitochondrial membrane', 'Central vacuole', 'Sarcoplasmic reticulum']
           },
           {
-            label: 'vesicle budding',
-            options: ['short amino acid sequence directing protein destination', 'origin model where mitochondria and chloroplasts derive from bacteria', 'difference in proton concentration across a membrane', 'pinches off a membrane packet for cargo transport']
+            label: 'Neurons fill with swollen sacs packed with an undigested lipid',
+            options: ['Sarcoplasmic reticulum', 'Central vacuole', 'Lysosome', 'Inner mitochondrial membrane']
           }
         ],
-        correctAnswers: ['modifies, sorts, and packages proteins and lipids', 'internal ER space where folding and processing occur', 'pinches off a membrane packet for cargo transport'],
-        hint1: 'Match each term to the definition that captures mechanism, not just keywords.',
-        hint2: 'If two definitions feel close, choose the one with the exact process direction.',
-        hint3: 'Read each label out loud, then pick the option that completes a causal sentence.',
-        explanation: 'Golgi apparatus, ER lumen, and vesicle budding should map to their exact mechanistic definitions. When options look similar, anchor your choice to process direction and biological scale.'
+        correctAnswers: ['Central vacuole', 'Inner mitochondrial membrane', 'Lysosome'],
+        hint1: 'Wilting is a loss of turgor pressure.',
+        hint2: 'Fuel is still being oxidized, but the energy is not captured as ATP.',
+        hint3: 'Undigested material collects in the compartment that normally digests it.',
+        explanation: 'Wilting reflects shrunken central vacuoles and lost turgor; continued oxygen use with less ATP and more heat means a leaky inner mitochondrial membrane; swollen sacs of undigested lipid point to lysosomes missing an enzyme.'
       }
     },
     {
-      id: 'bio-cell-compartmentalization-p3-s6-strategy',
+      id: 'bio-cell-compartmentalization-p3-s6-pattern',
       type: 'text' as const,
       content: `
-      ### ACT/AP strategy and misconception repair
-      
-      On ACT/AP style prompts, score gains come from linking vocabulary to evidence, not from isolated memorization.
-      
-      #### Strategy sequence
-      1. **Name the mechanism first**: identify whether the item is asking for process, structure, regulation, or population effect.
-      2. **Use a causation sentence**: "Because Golgi apparatus modifies, sorts, and packages proteins and lipids, we expect ...".
-      3. **Audit units and scale**: molecular claims, cellular claims, and ecosystem claims should not be mixed.
-      
-      #### Common misconceptions to avoid
-      - Compartmentalization improves efficiency by reducing interference, not by making diffusion faster everywhere.
-      - Endosymbiosis is supported by multiple lines of evidence, not just one observation.
-      - Organelles are dynamic and interactive, not isolated static containers.
-      
-      #### Exam execution tip
-      When two answer choices sound plausible, prefer the one that includes a direct mechanism and a measurable biological consequence.
+### The pattern across the cases
+
+| Case | If separation fails... | Type of failure |
+|---|---|---|
+| Lysosome missing an enzyme | Undigested material is trapped and builds up | Process inside the compartment stops |
+| Calcium pumps blocked | Signal cannot be turned off | Gradient cannot be restored |
+| Vacuole loses water | Turgor falls and tissues wilt | Stored contents are lost |
+| Secretory route bypassed | Enzymes or hormones could act on the cytosol | Products reach the wrong space |
+| Inner membrane leaky | Energy released as heat, little ATP | Gradient collapses |
+
+Two kinds of failure appear again and again: **the process inside the compartment stops**, or **the barrier between compartments leaks**. When an exam stem describes a defect, decide which kind it is before predicting the result.
+
+> **AP Connection:** Many multiple-choice sets describe a patient or a mutant cell and ask you to identify the organelle involved or predict the effect of a drug. Look for clues about what is accumulating, what is missing, and where it ends up.
       `
     },
     {
       id: 'bio-cell-compartmentalization-p3-s7-mcq-final',
       type: 'multiple-choice' as const,
       content: `
-      **Final application MCQ (2 questions)**
+### Checkpoint — Applying the Cases
       `,
       exercise: {
         questions: [
           {
-            question: 'In membrane microenvironments with distinct pH, the observed pattern is: short amino acid sequence directing protein destination. What term should anchor the explanation?',
+            question: 'Insulin is made on ribosomes of the rough ER and released by exocytosis. After the growing insulin chain enters the ER lumen, how many membranes does it cross before reaching the blood?',
             options: [
-              'signal peptide',
-              'vesicle budding',
-              'ER lumen',
-              'Golgi apparatus'
+              'Zero membranes',
+              'One membrane',
+              'Two membranes',
+              'Four membranes'
             ],
             correctAnswer: 0,
-            explanation: 'Use signal peptide because it directly maps to the described biological pattern: short amino acid sequence directing protein destination.'
+            explanation: 'Insulin moves from ER to Golgi to secretory vesicle by budding and fusion, and exocytosis releases it when the vesicle fuses with the plasma membrane. The protein itself never passes through a bilayer again.'
           },
           {
-            question: 'In an AP-style free-response about membrane surfaces, the observed pattern is: difference in proton concentration across a membrane. What term should anchor the explanation?',
+            question: 'Some plants store compounds in their central vacuoles that are toxic to the plant\'s own enzymes. Which benefit of compartmentalization does this storage best show?',
             options: [
-              'vesicle budding',
-              'signal peptide',
-              'proton gradient',
-              'proton pump'
+              'Concentrating reactants so that the compounds can be built faster',
+              'Separating harmful molecules from the metabolism they would disrupt',
+              'Increasing membrane surface area for the enzymes that make them',
+              'Holding a proton gradient that powers transport of the compounds'
             ],
-            correctAnswer: 2,
-            explanation: 'Use proton gradient because it directly maps to the described biological pattern: difference in proton concentration across a membrane.'
+            correctAnswer: 1,
+            explanation: 'Keeping a defensive toxin inside the vacuole separates it from the cytosolic enzymes it would damage, while it remains available to deter herbivores. The other benefits are real but do not explain why a toxin is stored apart.'
+          },
+          {
+            question: 'Two cell types are compared. Cell P has abundant rough ER and Golgi and many secretory vesicles. Cell Q has abundant smooth ER and few secretory vesicles. Which cell is more likely to export large amounts of protein?',
+            options: [
+              'Cell P, because its membranes form the export route',
+              'Cell Q, because smooth ER packages proteins for export',
+              'Cell P, because smooth ER would digest exported proteins',
+              'Cell Q, because fewer vesicles means faster exocytosis'
+            ],
+            correctAnswer: 0,
+            explanation: 'Rough ER, Golgi and secretory vesicles are the compartments of the secretory route, so a cell rich in them is built to export protein. Smooth ER handles lipid synthesis and detoxification, not protein packaging.'
           }
         ]
       }

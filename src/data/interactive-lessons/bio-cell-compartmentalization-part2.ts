@@ -5,189 +5,194 @@ export const bioCellCompartmentPart2Data = {
       id: 'bio-cell-compartmentalization-p2-s1-intro',
       type: 'text' as const,
       content: `
-      ## Cell Compartmentalization: Organelle Functions
-      
-      **Part 2 of 7**
-      
-      In this lesson, you will connect mechanism-level biology to exam-ready reasoning through specialized organelles in hepatocytes.
-      
-      ### Worked biological example
-      A student team investigates specialized organelles in hepatocytes. Their first interpretation step is to identify how **lysosome** and **Golgi apparatus** work together in the same pathway.
-      
-      - They classify the primary signal using **lysosome**: contains hydrolytic enzymes for intracellular digestion.
-      - They trace the downstream response using **Golgi apparatus**: modifies, sorts, and packages proteins and lipids.
-      - They then compare outcomes with **ER lumen** and **vesicle budding** to separate mechanism from correlation.
-      
-      ### Key terms for this part
-      - **lysosome**
-      - **Golgi apparatus**
-      - **ER lumen**
-      - **vesicle budding**
+## Internal Membranes as Work Surfaces
+
+**Part 2 of 7 — Internal Membranes as Work Surfaces**
+
+Part 1 showed that membranes separate reactions. This part covers the second half of the CED statement: internal membranes **increase the surface area where reactions can occur**.
+
+Many of the cell's most important enzymes are not dissolved in a fluid. They are **membrane proteins**, embedded in a lipid bilayer, so the amount of membrane limits how many of them a cell can hold.
+
+| Membrane | Proteins embedded in it | Process it supports |
+|---|---|---|
+| Inner mitochondrial membrane | Electron transport chain proteins and ATP synthase | Oxidative phosphorylation (ATP from cellular respiration) |
+| Thylakoid membrane (chloroplast) | Photosystems I and II, electron carriers, ATP synthase | Light-dependent reactions of photosynthesis |
+| Smooth ER membrane | Enzymes of lipid synthesis and detoxification | Building phospholipids and steroids; modifying drugs and toxins |
+| Rough ER membrane | Docking sites for ribosomes and protein channels | Making proteins that are secreted or placed in membranes |
+| Plasma membrane of a prokaryote | Electron transport chain proteins and ATP synthase | Respiration in cells that lack mitochondria |
+
+The pattern is the same in every row: **more membrane means more copies of the embedded proteins, which means more capacity for the process.**
       `
     },
     {
-      id: 'bio-cell-compartmentalization-p2-s2-mcq-core',
+      id: 'bio-cell-compartmentalization-p2-s2-folding',
+      type: 'text' as const,
+      content: `
+### Folding adds area without adding much volume
+
+A membrane can gain area by folding. The inner mitochondrial membrane folds into **cristae**, and the thylakoid membranes stack into **grana**. Folding packs a large area of membrane into a small organelle.
+
+#### Worked example — counting ATP synthase
+
+A model mitochondrion has an inner membrane that would cover **6 μm²** if it were smooth. Its cristae raise the inner membrane area to **30 μm²**. Assume each square micrometer carries the same density of ATP synthase, **1,500 complexes per μm²**.
+
+1. **Area gain from folding:** 30 ÷ 6 = **5 times** as much membrane.
+2. **ATP synthase without folds:** 6 × 1,500 = **9,000** complexes.
+3. **ATP synthase with cristae:** 30 × 1,500 = **45,000** complexes.
+4. **Interpretation:** the organelle's volume barely changes, but its capacity for oxidative phosphorylation rises fivefold because the number of embedded enzymes scales with membrane area.
+
+(These numbers are a teaching model, not measured values.)
+
+#### Structure tracks demand
+
+Real cells show the same logic. Mitochondria in heart muscle, which works without rest, have **more densely packed cristae** than mitochondria in liver cells. Cells that make large amounts of secreted protein, such as cells of the pancreas that release digestive enzymes, are packed with **rough ER**. When a question describes a cell with an unusually large amount of one membrane, infer that the cell relies heavily on the process that membrane supports.
+      `
+    },
+    {
+      id: 'bio-cell-compartmentalization-p2-s3-mcq-surface',
       type: 'multiple-choice' as const,
       content: `
-      **Checkpoint MCQ (2 questions)**
+### Checkpoint — Surface Area and Capacity
       `,
       exercise: {
         questions: [
           {
-            question: 'For Organelle Functions, what best describes lysosome?',
+            question: 'Mitochondria from tissue X have about three times as much cristae membrane per mitochondrion as mitochondria from tissue Y. Which prediction is best supported?',
             options: [
-              'internal ER space where folding and processing occur',
-              'modifies, sorts, and packages proteins and lipids',
-              'pinches off a membrane packet for cargo transport',
-              'contains hydrolytic enzymes for intracellular digestion'
-            ],
-            correctAnswer: 3,
-            explanation: 'lysosome is best matched with: contains hydrolytic enzymes for intracellular digestion.'
-          },
-          {
-            question: 'In this part\'s context, what is the strongest definition of Golgi apparatus?',
-            options: [
-              'modifies and sorts proteins and lipids, then packages them',
-              'short amino acid sequence directing protein destination',
-              'internal ER space where folding and processing occur',
-              'contains hydrolytic enzymes for intracellular digestion'
+              'Tissue X has a higher capacity for ATP production per mitochondrion',
+              'Tissue X mitochondria hold a larger volume of matrix fluid',
+              'Tissue Y depends more on oxidative phosphorylation for ATP',
+              'Tissue Y mitochondria contain more copies of their own DNA'
             ],
             correctAnswer: 0,
-            explanation: 'Golgi apparatus is best matched with: modifies and sorts proteins and lipids, then packages them.'
+            explanation: 'Electron transport proteins and ATP synthase sit in the inner membrane, so more cristae membrane means more of them and more ATP-making capacity. Folding adds membrane area, not matrix volume.'
+          },
+          {
+            question: 'Why does folding the inner mitochondrial membrane increase the rate of oxidative phosphorylation more effectively than enlarging the matrix would?',
+            options: [
+              'The matrix enzymes need a folded membrane to stay active',
+              'The key proteins are embedded in the membrane itself',
+              'A larger matrix would dilute oxygen below its usable level',
+              'Folds trap glucose near the respiration enzymes'
+            ],
+            correctAnswer: 1,
+            explanation: 'The electron transport chain and ATP synthase are membrane proteins, so their number depends on membrane area. Glucose is not used inside mitochondria; it is broken down to pyruvate in the cytosol first.'
           }
         ]
       }
     },
     {
-      id: 'bio-cell-compartmentalization-p2-s3-deep-dive',
+      id: 'bio-cell-compartmentalization-p2-s4-gradients',
       type: 'text' as const,
       content: `
-      ### Deep-Dive Map: Organelle Functions
-      
-      Use this diagram-style summary to track causation and evidence.
-      
-      #### Flow logic
-      - **Signal/Input** → lysosome
-      - **Immediate processing** → Golgi apparatus
-      - **System-level consequence** → ER lumen
-      - **Measured readout** → vesicle budding
-      
-      #### Mechanism table
-      | Component | Biological role | Typical evidence pattern |
-      |---|---|---|
-      | lysosome | contains hydrolytic enzymes for intracellular digestion | Early shift in the primary variable |
-      | Golgi apparatus | modifies, sorts, and packages proteins and lipids | Mid-pathway change in process rate |
-      | ER lumen | internal ER space where folding and processing occur | Downstream phenotype trend |
-      | vesicle budding | pinches off a membrane packet for cargo transport | Quantifiable endpoint in data summary |
-      
-      #### Reasoning checkpoints
-      1. Name the mechanism before describing the trend line.
-      2. Separate proximate mechanism from ecological or historical context.
-      3. Verify that each claim is tied to a measurable biological readout.
+### A sealed compartment can hold a gradient
+
+Surface area is only half the story. The inner mitochondrial membrane and the thylakoid membrane each **enclose a space**, and that enclosure is what makes chemiosmosis possible.
+
+| | Mitochondrion | Chloroplast |
+|---|---|---|
+| Protons pumped **from** | Matrix | Stroma |
+| Protons pumped **into** | Intermembrane space | Thylakoid space (lumen) |
+| Energy source for pumping | Electrons from NADH and $\\text{FADH}_2$ | Electrons excited by light |
+| Protons flow back through | ATP synthase in the inner membrane | ATP synthase in the thylakoid membrane |
+| ATP is made in | Matrix | Stroma |
+
+The proton gradient stores energy only because the membrane is **nearly impermeable to protons**. Protons can return to the other side only by passing through ATP synthase, which harnesses their flow to make ATP.
+
+#### Worked example — what a leaky membrane does
+
+**Setup:** A compound makes the inner mitochondrial membrane permeable to protons.
+
+1. **Pumping continues.** Electron transport still runs and still pumps protons into the intermembrane space.
+2. **The gradient collapses.** Protons leak back into the matrix through the bilayer instead of through ATP synthase.
+3. **ATP output falls.** Less proton flow passes through ATP synthase, so less ATP is made per unit of fuel.
+4. **Energy becomes heat.** The energy of the gradient is released as heat. Brown fat uses this same "uncoupling" on purpose to generate body heat, a link the CED makes to thermoregulation.
+
+**Conclusion:** the membrane's value is not just the proteins it holds but the sealed compartment it forms.
       `
     },
     {
-      id: 'bio-cell-compartmentalization-p2-s4-input',
+      id: 'bio-cell-compartmentalization-p2-s5-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — concrete vocabulary retrieval**
-      
-      Fill in each blank with the exact biological term.
-      
-      1) Term for this definition: **contains hydrolytic enzymes for intracellular digestion**
+### Calculate and name
 
-      2) Term for this definition: **modifies, sorts, and packages proteins and lipids**
+A model chloroplast with no thylakoids would have only its inner envelope membrane, about **4 μm²**, to hold light-capturing proteins. Its stacked thylakoid membranes instead provide **48 μm²**. Each μm² holds **200** photosystem II complexes.
 
-      3) Term for this definition: **internal ER space where folding and processing occur**
+1) By what factor do the thylakoids increase the membrane area available?
+
+2) How many photosystem II complexes does the stacked chloroplast hold?
+
+3) Into which chloroplast space are protons pumped during the light reactions? (one word)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['lysosome', 'Golgi apparatus', 'ER lumen'],
-        hint1: 'Start with the first item: it is the mechanism term used when a process is described as \'contains hydrolytic enzymes for intracellular digestion\'.',
-        hint2: 'Second blank points to Golgi apparatus; think about the role \'modifies, sorts, and packages proteins and lipids\'.',
-        hint3: 'Third blank is ER lumen; connect it to \'internal ER space where folding and processing occur\'.',
-        explanation: 'Correct set: lysosome, Golgi apparatus, ER lumen. These three terms define the core mechanism chain for Organelle Functions.'
+        correctAnswers: ['12', '9600', 'thylakoid'],
+        hint1: 'Divide the thylakoid area by the envelope area.',
+        hint2: 'Multiply the stacked area by the number of complexes per square micrometer.',
+        hint3: 'Protons build up inside the membrane sacs, not in the surrounding stroma.',
+        explanation: 'The thylakoids give 48 ÷ 4 = 12 times the area, and 48 × 200 = 9,600 photosystem II complexes. Protons are pumped from the stroma into the thylakoid space, then flow back out through ATP synthase.'
       }
     },
     {
-      id: 'bio-cell-compartmentalization-p2-s5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-      **Dropdown matching (3 prompts)**
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'lysosome',
-            options: ['modifies, sorts, and packages proteins and lipids', 'pinches off a membrane packet for cargo transport', 'internal ER space where folding and processing occur', 'contains hydrolytic enzymes for intracellular digestion']
-          },
-          {
-            label: 'Golgi apparatus',
-            options: ['short amino acid sequence directing protein destination', 'internal ER space where folding and processing occur', 'pinches off a membrane packet for cargo transport', 'modifies, sorts, and packages proteins and lipids']
-          },
-          {
-            label: 'ER lumen',
-            options: ['pinches off a membrane packet for cargo transport', 'short amino acid sequence directing protein destination', 'internal ER space where folding and processing occur', 'difference in proton concentration across a membrane']
-          }
-        ],
-        correctAnswers: ['contains hydrolytic enzymes for intracellular digestion', 'modifies, sorts, and packages proteins and lipids', 'internal ER space where folding and processing occur'],
-        hint1: 'Match each term to the definition that captures mechanism, not just keywords.',
-        hint2: 'If two definitions feel close, choose the one with the exact process direction.',
-        hint3: 'Read each label out loud, then pick the option that completes a causal sentence.',
-        explanation: 'lysosome, Golgi apparatus, and ER lumen should map to their exact mechanistic definitions. When options look similar, anchor your choice to process direction and biological scale.'
-      }
-    },
-    {
-      id: 'bio-cell-compartmentalization-p2-s6-strategy',
+      id: 'bio-cell-compartmentalization-p2-s6-prokaryotes',
       type: 'text' as const,
       content: `
-      ### ACT/AP strategy and misconception repair
-      
-      On ACT/AP style prompts, score gains come from linking vocabulary to evidence, not from isolated memorization.
-      
-      #### Strategy sequence
-      1. **Name the mechanism first**: identify whether the item is asking for process, structure, regulation, or population effect.
-      2. **Use a causation sentence**: "Because lysosome contains hydrolytic enzymes for intracellular digestion, we expect ...".
-      3. **Audit units and scale**: molecular claims, cellular claims, and ecosystem claims should not be mixed.
-      
-      #### Common misconceptions to avoid
-      - Not every protein enters the secretory pathway; destination depends on targeting signals.
-      - Compartmentalization improves efficiency by reducing interference, not by making diffusion faster everywhere.
-      - Endosymbiosis is supported by multiple lines of evidence, not just one observation.
-      
-      #### Exam execution tip
-      When two answer choices sound plausible, prefer the one that includes a direct mechanism and a measurable biological consequence.
+### The prokaryotic version
+
+Prokaryotes lack mitochondria and chloroplasts, yet many respire aerobically and some photosynthesize. They use the **plasma membrane** as their work surface: electron transport proteins in the plasma membrane pump protons **out of the cell**, and ATP synthase in the same membrane lets them flow back in. The "sealed compartment" is the whole cell. Cyanobacteria go further and have internal **thylakoid membranes**, which is one reason they are the accepted relatives of chloroplasts (Part 5).
+
+A larger cell cannot simply rely on its plasma membrane, because surface area grows more slowly than volume. Internal membranes give eukaryotic cells extra working surface that does not depend on the cell's outer surface.
+
+### Common misconceptions
+
+- **"Cristae make the mitochondrion bigger."** Folding adds membrane area, not significant volume.
+- **"The proton gradient is a store of ATP."** The gradient stores potential energy; ATP is made only when protons flow through ATP synthase.
+- **"Membranes are simply barriers."** In these organelles the membrane is the machine: it holds the enzymes in sequence and seals the gradient they build.
+
+> **AP Connection:** Expect model-analysis questions that show a diagram of a mitochondrion or chloroplast and ask what happens if the membrane becomes leaky, if folding is reduced, or if ATP synthase is blocked. Tie every answer to the proton gradient and to membrane area.
       `
     },
     {
       id: 'bio-cell-compartmentalization-p2-s7-mcq-final',
       type: 'multiple-choice' as const,
       content: `
-      **Final application MCQ (2 questions)**
+### Checkpoint — Gradients and Membranes
       `,
       exercise: {
         questions: [
           {
-            question: 'In specialized organelles in hepatocytes, the observed pattern is: pinches off a membrane packet for cargo transport. What term should anchor the explanation?',
+            question: 'A chemical makes thylakoid membranes freely permeable to protons, but the photosystems still absorb light and pass electrons. Which outcome is most likely?',
             options: [
-              'lysosome',
-              'vesicle budding',
-              'ER lumen',
-              'Golgi apparatus'
+              'ATP output rises as protons cross the membrane more easily',
+              'ATP output falls as no proton gradient can form',
+              'ATP output holds steady since electron flow still continues',
+              'Oxygen release stops since water can no longer be split'
             ],
             correctAnswer: 1,
-            explanation: 'Use vesicle budding because it directly maps to the described biological pattern: pinches off a membrane packet for cargo transport.'
+            explanation: 'Electron flow continues, but protons leak out of the thylakoid space instead of passing through ATP synthase, so the gradient that drives ATP synthesis collapses. Water splitting depends on light and electron flow, which still occur.'
           },
           {
-            question: 'In an AP-style free-response about organelle functions, the observed pattern is: short amino acid sequence directing protein destination. What term should anchor the explanation?',
+            question: 'An aerobic bacterium has no mitochondria. Where are its electron transport chain and ATP synthase located?',
             options: [
-              'signal peptide',
-              'vesicle budding',
-              'ER lumen',
-              'proton gradient'
+              'In its plasma membrane',
+              'In its nucleoid region',
+              'In its ribosome subunits',
+              'In its cell wall layer'
             ],
             correctAnswer: 0,
-            explanation: 'Use signal peptide because it directly maps to the described biological pattern: short amino acid sequence directing protein destination.'
+            explanation: 'Prokaryotes carry out oxidative phosphorylation in the plasma membrane, pumping protons out of the cell and letting them flow back through ATP synthase. The cell wall lies outside the membrane and cannot hold a sealed gradient.'
+          },
+          {
+            question: 'Brown fat cells contain a protein that lets protons leak across the inner mitochondrial membrane. Compared with other cells using the same amount of fuel, brown fat cells most likely produce:',
+            options: [
+              'More ATP and less heat',
+              'Less ATP and more heat',
+              'Less ATP and equal heat',
+              'Less ATP and less heat'
+            ],
+            correctAnswer: 1,
+            explanation: 'Protons that leak back through the bilayer bypass ATP synthase, so less ATP is made and the energy of the gradient is released as heat. This uncoupling helps maintain body temperature.'
           }
         ]
       }

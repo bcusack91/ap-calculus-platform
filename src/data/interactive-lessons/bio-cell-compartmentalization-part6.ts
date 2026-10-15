@@ -5,192 +5,178 @@ export const bioCellCompartmentPart6Data = {
       id: 'bio-cell-compartmentalization-p6-s1-intro',
       type: 'text' as const,
       content: `
-      ## Cell Compartmentalization: Problem-Solving Workshop
-      
-      **Part 6 of 7**
-      
-      In this lesson, you will connect mechanism-level biology to exam-ready reasoning through organelle dysfunction case studies.
-      
-      ### Worked biological example
-      A student team investigates organelle dysfunction case studies. Their first interpretation step is to identify how **signal peptide** and **proton gradient** work together in the same pathway.
-      
-      - They classify the primary signal using **signal peptide**: short amino acid sequence directing protein destination.
-      - They trace the downstream response using **proton gradient**: difference in proton concentration across a membrane.
-      - They then compare outcomes with **endosymbiosis** and **organelle targeting** to separate mechanism from correlation.
-      
-      ### Key terms for this part
-      - **signal peptide**
-      - **proton gradient**
-      - **endosymbiosis**
-      - **organelle targeting**
+## AP Exam Practice
+
+**Part 6 of 7 — AP Exam Practice**
+
+Compartmentalization rarely appears as a stand-alone vocabulary question. It shows up inside data sets, experiments and models, often mixed with respiration, photosynthesis or gene expression. This part practices the three formats you are most likely to see.
+
+| Exam format | What it asks | How compartmentalization appears |
+|---|---|---|
+| Multiple-choice sets of 4 to 5 questions | Interpret one data table or diagram several ways | Fractionation tables, membrane-damage experiments, organelle comparisons |
+| Short free response: conceptual analysis or model analysis (4 points each) | Describe, explain, predict with a short justification | "Explain how the folding of the inner membrane affects ATP production" |
+| Long free response: interpreting experimental results (9 points) | Identify variables and controls, analyze data, make and justify predictions | Experiments that disrupt a membrane or change a compartment's pH |
+
+### Task verbs and what earns the point
+
+- **Describe:** state the relevant feature or relationship. "Lysosomes keep their interior acidic."
+- **Explain:** give the *how* or *why*. "Proton pumps move $\\text{H}^+$ into the lysosome, and the membrane limits leakage, so the interior stays near pH 5."
+- **Predict:** state the specific outcome, with direction. "Hydrolase activity inside the lysosome will decrease."
+- **Justify:** connect the prediction to evidence or to a principle. "...because the enzymes have an acidic pH optimum."
       `
     },
     {
-      id: 'bio-cell-compartmentalization-p6-s2-mcq-core',
+      id: 'bio-cell-compartmentalization-p6-s2-frq-design',
+      type: 'text' as const,
+      content: `
+### Practice free response 1 — scientific investigation
+
+**Prompt (adapted, AP style):** Researchers hypothesize that the acidic interior of lysosomes is required for the digestion of proteins delivered to them. They grow two sets of cultured cells and feed both sets a labeled protein that is taken in and delivered to lysosomes. One set is treated with a drug that blocks the lysosomal proton pumps; the other set is not. After two hours, they measure the percentage of labeled protein that has been broken down.
+
+(a) **Identify** the independent variable.
+(b) **Identify** an appropriate control group.
+(c) **Predict** the result if the hypothesis is correct.
+(d) **Justify** your prediction.
+
+#### Model answer
+
+(a) Whether the lysosomal proton pumps are blocked (presence or absence of the drug).
+
+(b) Cells fed the same labeled protein for the same time **without** the drug. A stronger design also includes cells given only the drug's solvent, to rule out effects of the solvent itself.
+
+(c) The treated cells will break down a **smaller percentage** of the labeled protein than the control cells.
+
+(d) Without proton pumping, the lysosome interior becomes less acidic. Lysosomal hydrolases have an acidic pH optimum, so their activity drops and less protein is digested.
+
+#### Where students lose points
+
+- Naming "the drug" as the independent variable without saying what it changes (pump activity and therefore pH).
+- Predicting "the protein will not be digested" without a comparison to the control.
+- Justifying with "the lysosome is broken" when the membrane is intact and only the pH has changed.
+      `
+    },
+    {
+      id: 'bio-cell-compartmentalization-p6-s3-mcq-set',
       type: 'multiple-choice' as const,
       content: `
-      **Checkpoint MCQ (2 questions)**
+### Question set — isolated mitochondria
+
+Researchers isolate mitochondria and supply them with pyruvate, ADP, phosphate and oxygen. They measure ATP production (relative units) under four conditions.
+
+| Condition | ATP production | $\\text{O}_2$ use |
+|---|---|---|
+| I. Intact mitochondria | 100 | 100 |
+| II. Outer membrane removed, inner membrane intact | 94 | 98 |
+| III. Inner membrane made permeable to protons | 7 | 135 |
+| IV. Intact mitochondria + ATP synthase inhibitor | 4 | 22 |
       `,
       exercise: {
         questions: [
           {
-            question: 'For Problem-Solving Workshop, what best describes signal peptide?',
+            question: 'Comparing conditions I and II, what can be concluded about the outer mitochondrial membrane?',
             options: [
-              'delivery of molecules to correct intracellular compartment',
-              'origin model where mitochondria and chloroplasts derive from bacteria',
-              'difference in proton concentration across a membrane',
-              'short amino acid sequence directing protein destination'
+              'It is needed to hold the proton gradient that powers ATP synthase',
+              'It is not required for most of the ATP these organelles make',
+              'It contains the electron transport proteins that consume oxygen',
+              'It is the site where pyruvate is broken down for the cell'
             ],
-            correctAnswer: 3,
-            explanation: 'signal peptide is best matched with: short amino acid sequence directing protein destination.'
+            correctAnswer: 1,
+            explanation: 'Removing the outer membrane barely changes ATP output or oxygen use, so the machinery and the gradient depend on the inner membrane. The electron transport chain sits in the inner membrane, not the outer one.'
           },
           {
-            question: 'In this part\'s context, what is the strongest definition of proton gradient?',
+            question: 'In condition III, oxygen use rises while ATP production collapses. Which explanation best accounts for both results?',
             options: [
-              'difference in proton concentration across a membrane',
-              'short amino acid sequence directing protein destination',
-              'origin model where mitochondria and chloroplasts derive from bacteria',
-              'membrane protein that pumps protons into a compartment'
+              'Pumping speeds up with no gradient to oppose it, but protons skip ATP synthase',
+              'Electron transport stops because the inner membrane has been destroyed',
+              'ATP synthase runs in reverse and consumes the extra oxygen supplied',
+              'Pyruvate cannot enter, so the oxygen is used up without any fuel'
             ],
             correctAnswer: 0,
-            explanation: 'proton gradient is best matched with: difference in proton concentration across a membrane.'
+            explanation: 'With a leaky inner membrane, the gradient never builds up, so the pumps work faster and consume more oxygen; but protons return through the bilayer rather than through ATP synthase, so little ATP is made.'
+          },
+          {
+            question: 'In condition IV, oxygen use falls to 22 even though the membranes are intact. Which statement best explains this result?',
+            options: [
+              'Protons pile up with no way back, and the steep gradient slows more pumping',
+              'The inhibitor makes the inner membrane leaky, so protons cannot be pumped',
+              'The inhibitor blocks oxygen from entering the mitochondrial matrix',
+              'Without ATP, the electron transport proteins cannot start working'
+            ],
+            correctAnswer: 0,
+            explanation: 'When protons cannot flow back through ATP synthase, they pile up in the intermembrane space; the steep gradient resists further pumping, so electron transport and oxygen use slow. Electron transport does not require ATP to run.'
           }
         ]
       }
     },
     {
-      id: 'bio-cell-compartmentalization-p6-s3-deep-dive',
+      id: 'bio-cell-compartmentalization-p6-s4-frq-model',
       type: 'text' as const,
       content: `
-      ### Deep-Dive Map: Problem-Solving Workshop
-      
-      Use this diagram-style summary to track causation and evidence.
-      
-      #### Flow logic
-      - **Signal/Input** → signal peptide
-      - **Immediate processing** → proton gradient
-      - **System-level consequence** → endosymbiosis
-      - **Measured readout** → organelle targeting
-      
-      #### Mechanism table
-      | Component | Biological role | Typical evidence pattern |
-      |---|---|---|
-      | signal peptide | short amino acid sequence directing protein destination | Early shift in the primary variable |
-      | proton gradient | difference in proton concentration across a membrane | Mid-pathway change in process rate |
-      | endosymbiosis | origin model where mitochondria and chloroplasts derive from bacteria | Downstream phenotype trend |
-      | organelle targeting | delivery of molecules to correct intracellular compartment | Quantifiable endpoint in data summary |
-      
-      #### Reasoning checkpoints
-      1. Name the mechanism before describing the trend line.
-      2. Separate proximate mechanism from ecological or historical context.
-      3. Verify that each claim is tied to a measurable biological readout.
+### Practice free response 2 — analysis of a model
+
+**Prompt (adapted, AP style):** A diagram shows a eukaryotic cell with a nucleus, rough ER, Golgi, lysosomes and mitochondria, and beside it a bacterial cell with a nucleoid, ribosomes and a plasma membrane.
+
+(a) **Describe** one difference in how the two cells compartmentalize ATP synthesis.
+(b) **Explain** how internal membranes allow the eukaryotic cell to carry out digestion and protein synthesis in the same cell without interference.
+(c) A student proposes that mitochondria descended from free-living bacteria. **Identify** one feature of mitochondria that the diagram could be extended to show as evidence, and **justify** why it supports the proposal.
+
+#### Model answer
+
+(a) The bacterium makes ATP by chemiosmosis across its **plasma membrane**; the eukaryotic cell does so across the **inner mitochondrial membrane**.
+
+(b) Hydrolytic enzymes are enclosed in lysosomes, whose membrane separates them from the cytosol and lets the interior stay acidic, while proteins are made by ribosomes in the cytosol and on the rough ER. The membrane keeps the enzymes from digesting newly made proteins.
+
+(c) Mitochondria contain their own **circular DNA**. Bacterial chromosomes are circular, unlike the linear chromosomes of the eukaryotic nucleus, so circular DNA fits descent from a bacterium. (Other acceptable features: bacteria-like ribosomes, a double membrane, division by fission.)
+
+**Scoring note:** In part (c), naming the feature earns the identification point, but the justification point requires the link to a bacterial trait.
       `
     },
     {
-      id: 'bio-cell-compartmentalization-p6-s4-input',
-      type: 'input-boxes' as const,
-      content: `
-      **Input Practice — concrete vocabulary retrieval**
-      
-      Fill in each blank with the exact biological term.
-      
-      1) Term for this definition: **short amino acid sequence directing protein destination**
-
-      2) Term for this definition: **difference in proton concentration across a membrane**
-
-      3) Term for this definition: **origin model where mitochondria and chloroplasts derive from bacteria**
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['signal peptide', 'proton gradient', 'endosymbiosis'],
-        hint1: 'Start with the first item: it is the mechanism term used when a process is described as \'short amino acid sequence directing protein destination\'.',
-        hint2: 'Second blank points to proton gradient; think about the role \'difference in proton concentration across a membrane\'.',
-        hint3: 'Third blank is endosymbiosis; connect it to \'origin model where mitochondria and chloroplasts derive from bacteria\'.',
-        explanation: 'Correct set: signal peptide, proton gradient, endosymbiosis. These three terms define the core mechanism chain for Problem-Solving Workshop.'
-      }
-    },
-    {
-      id: 'bio-cell-compartmentalization-p6-s5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-      **Dropdown matching (3 prompts)**
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'signal peptide',
-            options: ['difference in proton concentration across a membrane', 'origin model where mitochondria and chloroplasts derive from bacteria', 'short amino acid sequence directing protein destination', 'delivery of molecules to correct intracellular compartment']
-          },
-          {
-            label: 'proton gradient',
-            options: ['delivery of molecules to correct intracellular compartment', 'separates cellular processes into distinct membrane-bound regions', 'difference in proton concentration across a membrane', 'origin model where mitochondria and chloroplasts derive from bacteria']
-          },
-          {
-            label: 'endosymbiosis',
-            options: ['contains hydrolytic enzymes for intracellular digestion', 'separates cellular processes into distinct membrane-bound regions', 'origin model where mitochondria and chloroplasts derive from bacteria', 'delivery of molecules to correct intracellular compartment']
-          }
-        ],
-        correctAnswers: ['short amino acid sequence directing protein destination', 'difference in proton concentration across a membrane', 'origin model where mitochondria and chloroplasts derive from bacteria'],
-        hint1: 'Match each term to the definition that captures mechanism, not just keywords.',
-        hint2: 'If two definitions feel close, choose the one with the exact process direction.',
-        hint3: 'Read each label out loud, then pick the option that completes a causal sentence.',
-        explanation: 'signal peptide, proton gradient, and endosymbiosis should map to their exact mechanistic definitions. When options look similar, anchor your choice to process direction and biological scale.'
-      }
-    },
-    {
-      id: 'bio-cell-compartmentalization-p6-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### ACT/AP strategy and misconception repair
-      
-      On ACT/AP style prompts, score gains come from linking vocabulary to evidence, not from isolated memorization.
-      
-      #### Strategy sequence
-      1. **Name the mechanism first**: identify whether the item is asking for process, structure, regulation, or population effect.
-      2. **Use a causation sentence**: "Because signal peptide short amino acid sequence directing protein destination, we expect ...".
-      3. **Audit units and scale**: molecular claims, cellular claims, and ecosystem claims should not be mixed.
-      
-      #### Common misconceptions to avoid
-      - Not every protein enters the secretory pathway; destination depends on targeting signals.
-      - Compartmentalization improves efficiency by reducing interference, not by making diffusion faster everywhere.
-      - Endosymbiosis is supported by multiple lines of evidence, not just one observation.
-      
-      #### Exam execution tip
-      When two answer choices sound plausible, prefer the one that includes a direct mechanism and a measurable biological consequence.
-      `
-    },
-    {
-      id: 'bio-cell-compartmentalization-p6-s7-mcq-final',
+      id: 'bio-cell-compartmentalization-p6-s5-mcq-model',
       type: 'multiple-choice' as const,
       content: `
-      **Final application MCQ (2 questions)**
+### Question set — reasoning from models
       `,
       exercise: {
         questions: [
           {
-            question: 'In organelle dysfunction case studies, the observed pattern is: delivery of molecules to correct intracellular compartment. What term should anchor the explanation?',
+            question: 'A student writes: "The lysosome is important because it keeps the cell organized." Which revision would best turn this into an explanation that earns credit?',
             options: [
-              'organelle targeting',
-              'proton gradient',
-              'signal peptide',
-              'organelle biogenesis'
+              'The lysosome stores enzymes that the cell will need at a later time',
+              'The lysosome membrane holds acid hydrolases apart from cytosol molecules',
+              'The lysosome is found in animal cells but not in most plant cells',
+              'The lysosome is made by the Golgi and is packed with many enzymes'
             ],
-            correctAnswer: 0,
-            explanation: 'Use organelle targeting because it directly maps to the described biological pattern: delivery of molecules to correct intracellular compartment.'
+            correctAnswer: 1,
+            explanation: 'Credit requires a mechanism: what the membrane separates and what that allows. The other revisions add true or partly true facts but still do not explain how the compartment benefits the cell.'
           },
           {
-            question: 'In an AP-style free-response about problem-solving workshop, the observed pattern is: separates cellular processes into distinct membrane-bound regions. What term should anchor the explanation?',
+            question: 'A model shows a pancreatic cell that secretes large amounts of digestive enzyme. If the cell\'s rough ER area were cut in half while everything else stayed the same, which prediction is best supported?',
             options: [
-              'organelle targeting',
-              'lysosome',
-              'compartmentalization',
-              'endosymbiosis'
+              'Secretion would fall because fewer ribosomes could feed proteins into the ER',
+              'Secretion would rise because the Golgi would then receive its proteins faster',
+              'Secretion would hold steady because the Golgi sets the rate of output',
+              'Secretion would shift to release enzymes directly from the cytosol'
             ],
-            correctAnswer: 2,
-            explanation: 'Use compartmentalization because it directly maps to the described biological pattern: separates cellular processes into distinct membrane-bound regions.'
+            correctAnswer: 0,
+            explanation: 'Secreted proteins are made by ribosomes attached to the rough ER, so less ER membrane means fewer docking sites and less enzyme entering the secretory route. Proteins made in the cytosol do not enter the secretory route.'
           }
         ]
       }
+    },
+    {
+      id: 'bio-cell-compartmentalization-p6-s6-checklist',
+      type: 'text' as const,
+      content: `
+### Final checklist for compartment questions
+
+1. **Locate the process.** Which compartment or membrane is involved: lysosome, ER, Golgi, mitochondrion, chloroplast, nucleus, or the prokaryotic plasma membrane?
+2. **Name the benefit.** Separation, distinct conditions, concentration, or surface area.
+3. **Find the failure type.** Has the process inside stopped, or has the barrier leaked?
+4. **Predict with direction and comparison.** "Lower than the control," "higher than in condition I."
+5. **Justify with a mechanism.** Proton gradients, pH optima, membrane-embedded enzymes, or the secretory route.
+6. **For origins, link to bacteria.** Circular DNA, bacteria-like ribosomes, double membranes, division by fission, sequence similarity.
+      `
     }
   ]
 };

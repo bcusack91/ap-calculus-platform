@@ -5,189 +5,197 @@ export const bioEcologyPart7Data = {
       id: 'bio-ecology-ecosystems-p7-s1-intro',
       type: 'text' as const,
       content: `
-      ## Ecology and Ecosystems: AP Review
-      
-      **Part 7 of 7**
-      
-      In this lesson, you will connect mechanism-level biology to exam-ready reasoning through full AP ecology synthesis scenarios.
-      
-      ### Worked biological example
-      A student team investigates full AP ecology synthesis scenarios. Their first interpretation step is to identify how **competition** and **succession** work together in the same pathway.
-      
-      - They classify the primary signal using **competition**: interaction where species reduce each other's resource access.
-      - They trace the downstream response using **succession**: directional change in community composition over time.
-      - They then compare outcomes with **keystone species** and **biotic factor** to separate mechanism from correlation.
-      
-      ### Key terms for this part
-      - **competition**
-      - **succession**
-      - **keystone species**
-      - **biotic factor**
+## Synthesis Review
+
+**Part 7 of 7 — Synthesis Review**
+
+This part ties the topic together. Every question about an ecosystem under change comes down to four things: **what the ecosystem is built from**, **how diverse it is**, **which component changed**, and **how large and how fast the change was**.
+
+### The topic on one page
+
+| Part | Big idea | What you should be able to do |
+|---|---|---|
+| 1. Structure and components | An ecosystem is a community plus its abiotic environment; limiting factors and tolerance ranges decide who can live there | Classify factors as biotic or abiotic; find the limiting factor in an addition experiment |
+| 2. Biodiversity and resilience | Genetic, species and ecosystem diversity make ecosystems more resistant and more resilient | Separate resistance from resilience; explain redundancy, response diversity and the portfolio effect |
+| 3. Adding or removing components | Producers, keystone species, foundation species and engineers hold structure together | Predict short-term (direct) and long-term (indirect) effects of a change |
+| 4. Invasive species and disease | Invaders succeed through enemy release, open niches and naive natives | Trace an invasion from arrival to impact |
+| 5. Human and natural disruption | Habitat loss, fragmentation and climate change speed up change; geological and weather events also restructure ecosystems | Calculate edge effects; link a disruption to selection on existing variation |
+| 6. Analyzing data | Spread curves, the coefficient of variation and BACI designs turn observations into evidence | Compute effects and justify controls |
+
+### The response to a change depends on four questions
+
+1. **Which component changed?** Removing a producer or foundation species reaches every level. Removing one of several redundant species may change little.
+2. **How much diversity is there?** More species, genotypes and habitats mean more ways to absorb the change.
+3. **How big and how fast is the change?** A sudden, large change (an asteroid impact, a new pathogen) leaves no time to adapt.
+4. **Is there variation to select on?** Survivors come from variation that already existed before the change.
       `
     },
     {
-      id: 'bio-ecology-ecosystems-p7-s2-mcq-core',
+      id: 'bio-ecology-ecosystems-p7-s2-chains',
+      type: 'text' as const,
+      content: `
+### Three cases that use the whole topic
+
+#### Guam: one invader, many layers
+
+- **Part 4:** the brown tree snake arrived in cargo and faced native birds with no evolved defenses against snakes.
+- **Part 5:** an island community is small and isolated, so its species are especially vulnerable.
+- **Part 3:** most native forest bird species disappeared from the wild. Many trees lost their seed dispersers, a long-term, indirect effect on forest structure.
+- **Part 1:** the change is visible at the ecosystem level, not just the population level, because a whole function (seed dispersal) was lost.
+
+#### Coral reefs: a foundation species under climate stress
+
+- **Part 3:** reef-building corals are foundation species and engineers.
+- **Part 5:** heat waves break down the coral-algae mutualism (bleaching), and acidification slows skeleton building.
+- **Part 5 again:** colonies that host heat-tolerant algae bleach less, so a heat wave selects among existing variants.
+- **Part 3 again:** if enough coral dies, the reef can shift to a seaweed-dominated state that does not return on its own.
+
+#### Potatoes and prairies: two levels of diversity
+
+- **Part 2:** the Irish potato crop was a field of near-clones, so *Phytophthora infestans* met almost no resistance. Low **genetic** diversity made an artificial ecosystem fragile.
+- **Part 2:** in the Minnesota grassland study, plots with more **species** kept more of their biomass through drought and recovered more fully.
+- **Part 6:** the same idea appears in data as a lower coefficient of variation in species-rich plots.
+      `
+    },
+    {
+      id: 'bio-ecology-ecosystems-p7-s3-mcq-cases',
       type: 'multiple-choice' as const,
       content: `
-      **Checkpoint MCQ (2 questions)**
+### Checkpoint — Connecting the Cases
       `,
       exercise: {
         questions: [
           {
-            question: 'For AP Review, what best describes competition?',
+            question: 'Which ecosystem is predicted to be least resilient to a newly arriving plant pathogen?',
             options: [
-              'species with disproportionately large community impact',
-              'interaction where species reduce each other\'s resource access',
-              'living component that influences ecosystem dynamics',
-              'directional change in community composition over time'
+              'A mixed forest of many native tree species',
+              'A meadow with high species evenness',
+              'An orchard of one clonal tree variety',
+              'A wetland with diverse grass genotypes'
             ],
-            correctAnswer: 1,
-            explanation: 'competition is best matched with: interaction where species reduce each other\'s resource access.'
+            correctAnswer: 2,
+            explanation: 'A clonal orchard has almost no genetic or species diversity, so a pathogen that infects one tree can infect them all. The forest, meadow and wetland each contain variation that makes it likely some plants will resist.'
           },
           {
-            question: 'In this part\'s context, what is the strongest definition of succession?',
+            question: 'On Guam, the loss of most native forest birds to the brown tree snake was followed by reduced seed dispersal for many tree species. How is the change in seed dispersal best classified?',
             options: [
-              'directional change in community composition over time',
-              'nonliving environmental variable such as light or pH',
-              'species with disproportionately large community impact',
-              'interaction where species reduce each other\'s resource access'
+              'A direct effect of snakes on trees',
+              'An abiotic effect of the snake invasion',
+              'An indirect effect on trees',
+              'A density-independent effect on trees'
             ],
-            correctAnswer: 0,
-            explanation: 'succession is best matched with: directional change in community composition over time.'
+            correctAnswer: 2,
+            explanation: 'The snakes did not act on the trees themselves; they removed the birds that carried the seeds, so the trees were affected indirectly through the food web. The change involves living dispersers, not an abiotic factor, and it depends on bird numbers.'
+          },
+          {
+            question: 'Two reefs experience the same marine heat wave. Corals on reef A host a mix of algae types, some of them heat-tolerant; corals on reef B all host one heat-sensitive type. Which prediction is best supported?',
+            options: [
+              'Reef B loses fewer corals, because its algae are all the same type',
+              'Reef A loses fewer corals, because some colonies withstand the heat',
+              'Reef A loses more corals, because mixed algae compete with each other',
+              'Both reefs lose the same share, because the heat wave is identical'
+            ],
+            correctAnswer: 1,
+            explanation: 'The heat wave selects among variation that already exists, and only reef A has heat-tolerant variants. Uniform heat-sensitive algae on reef B give the heat wave nothing to spare.'
           }
         ]
       }
     },
     {
-      id: 'bio-ecology-ecosystems-p7-s3-deep-dive',
+      id: 'bio-ecology-ecosystems-p7-s4-misconceptions',
       type: 'text' as const,
       content: `
-      ### Deep-Dive Map: AP Review
-      
-      Use this diagram-style summary to track causation and evidence.
-      
-      #### Flow logic
-      - **Signal/Input** → competition
-      - **Immediate processing** → succession
-      - **System-level consequence** → keystone species
-      - **Measured readout** → biotic factor
-      
-      #### Mechanism table
-      | Component | Biological role | Typical evidence pattern |
-      |---|---|---|
-      | competition | interaction where species reduce each other's resource access | Early shift in the primary variable |
-      | succession | directional change in community composition over time | Mid-pathway change in process rate |
-      | keystone species | species with disproportionately large community impact | Downstream phenotype trend |
-      | biotic factor | living component that influences ecosystem dynamics | Quantifiable endpoint in data summary |
-      
-      #### Reasoning checkpoints
-      1. Name the mechanism before describing the trend line.
-      2. Separate proximate mechanism from ecological or historical context.
-      3. Verify that each claim is tied to a measurable biological readout.
+### Misconceptions to fix before the exam
+
+| Misconception | Correction |
+|---|---|
+| "A diverse ecosystem cannot be harmed." | Diversity *tends* to increase resistance and resilience. Diverse ecosystems can still be damaged by fire, drought or invaders. |
+| "Every non-native species is invasive." | Invasive means an introduced species that spreads and causes harm. Most introduced species never do. |
+| "The keystone species is the most abundant one." | That describes a dominant or foundation species. A keystone species has an effect out of proportion to its abundance. |
+| "The disruption creates the trait needed to survive it." | Selection acts on variation already present. A population with no suitable variants declines. |
+| "The short-term effect is the whole story." | Direct effects come first; indirect effects through other species and abiotic factors often matter more over decades. |
+| "Natural disruptions are always slow." | Many are, but an asteroid impact or an eruption is sudden. What makes current human-driven change unusual is how fast and widespread it is. |
+| "An ecosystem always returns to its old state." | Some shift to a different stable state, such as an urchin barren replacing a kelp forest. |
+
+### Exam-day checklist for ecosystem questions
+
+- **Name the level.** Population, community or ecosystem? Bring in abiotic factors only at the ecosystem level.
+- **Name the component.** Producer, keystone, foundation species, engineer or abiotic factor?
+- **Use the precise term.** Resistance or resilience, not "stability." Invasive, not just "new."
+- **Trace two steps.** Give the direct effect, then at least one indirect effect.
+- **Tie claims to data.** Quote a number from the graph or table and say what it shows.
       `
-    },
-    {
-      id: 'bio-ecology-ecosystems-p7-s4-input',
-      type: 'input-boxes' as const,
-      content: `
-      **Input Practice — concrete vocabulary retrieval**
-      
-      Fill in each blank with the exact biological term.
-      
-      1) Term for this definition: **interaction where species reduce each other's resource access**
-
-      2) Term for this definition: **directional change in community composition over time**
-
-      3) Term for this definition: **species with disproportionately large community impact**
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['competition', 'succession', 'keystone species'],
-        hint1: 'Start with the first item: it is the mechanism term used when a process is described as \'interaction where species reduce each other\'s resource access\'.',
-        hint2: 'Second blank points to succession; think about the role \'directional change in community composition over time\'.',
-        hint3: 'Third blank is keystone species; connect it to \'species with disproportionately large community impact\'.',
-        explanation: 'Correct set: competition, succession, keystone species. These three terms define the core mechanism chain for AP Review.'
-      }
     },
     {
       id: 'bio-ecology-ecosystems-p7-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown matching (3 prompts)**
+### Practice — Classify the Disruption
+
+Choose the category that best describes each change.
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'competition',
-            options: ['species with disproportionately large community impact', 'interaction where species reduce each other\'s resource access', 'living component that influences ecosystem dynamics', 'directional change in community composition over time']
+            label: 'A new highway splits a large forest into two separated patches',
+            options: ['introduced disease', 'meteorological event', 'habitat fragmentation', 'ecosystem engineering']
           },
           {
-            label: 'succession',
-            options: ['species with disproportionately large community impact', 'directional change in community composition over time', 'living component that influences ecosystem dynamics', 'nonliving environmental variable such as light or pH']
+            label: 'Warm Pacific surface water weakens the upwelling of nutrients off Peru',
+            options: ['meteorological event', 'habitat fragmentation', 'ecosystem engineering', 'introduced disease']
           },
           {
-            label: 'keystone species',
-            options: ['species with disproportionately large community impact', 'living component that influences ecosystem dynamics', 'position in feeding hierarchy based on energy source', 'nonliving environmental variable such as light or pH']
+            label: 'A fungus carried from Asia kills most of the American chestnut trees',
+            options: ['habitat fragmentation', 'introduced disease', 'meteorological event', 'ecosystem engineering']
           }
         ],
-        correctAnswers: ['interaction where species reduce each other\'s resource access', 'directional change in community composition over time', 'species with disproportionately large community impact'],
-        hint1: 'Match each term to the definition that captures mechanism, not just keywords.',
-        hint2: 'If two definitions feel close, choose the one with the exact process direction.',
-        hint3: 'Read each label out loud, then pick the option that completes a causal sentence.',
-        explanation: 'competition, succession, and keystone species should map to their exact mechanistic definitions. When options look similar, anchor your choice to process direction and biological scale.'
+        correctAnswers: ['habitat fragmentation', 'meteorological event', 'introduced disease'],
+        hint1: 'A road usually removes little area but cuts what remains into pieces.',
+        hint2: 'El Niño is a change in ocean and atmosphere conditions, not something people cause directly.',
+        hint3: 'A pathogen moved by people to hosts that never met it is an introduced disease.',
+        explanation: 'The highway fragments habitat. The El Niño warming is a meteorological event. The chestnut blight is an introduced disease acting on hosts with no evolved resistance.'
       }
     },
     {
-      id: 'bio-ecology-ecosystems-p7-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### ACT/AP strategy and misconception repair
-      
-      On ACT/AP style prompts, score gains come from linking vocabulary to evidence, not from isolated memorization.
-      
-      #### Strategy sequence
-      1. **Name the mechanism first**: identify whether the item is asking for process, structure, regulation, or population effect.
-      2. **Use a causation sentence**: "Because competition interaction where species reduce each other's resource access, we expect ...".
-      3. **Audit units and scale**: molecular claims, cellular claims, and ecosystem claims should not be mixed.
-      
-      #### Common misconceptions to avoid
-      - Succession does not imply a fixed endpoint in every environment.
-      - Species interactions can shift with context, season, and disturbance.
-      - Energy flows one way through ecosystems; nutrients cycle repeatedly.
-      
-      #### Exam execution tip
-      When two answer choices sound plausible, prefer the one that includes a direct mechanism and a measurable biological consequence.
-      `
-    },
-    {
-      id: 'bio-ecology-ecosystems-p7-s7-mcq-final',
+      id: 'bio-ecology-ecosystems-p7-s6-mcq-final',
       type: 'multiple-choice' as const,
       content: `
-      **Final application MCQ (2 questions)**
+### Final Review — Mixed Questions
       `,
       exercise: {
         questions: [
           {
-            question: 'In full AP ecology synthesis scenarios, the observed pattern is: living component that influences ecosystem dynamics. What term should anchor the explanation?',
+            question: 'About 66 million years ago, an asteroid impact filled the atmosphere with debris and blocked sunlight for an extended period. Why did this event cause extinctions across so many food webs at once?',
             options: [
-              'competition',
-              'biotic factor',
-              'succession',
-              'keystone species'
+              'The impact released toxins that poisoned only large land animals',
+              'Photosynthesis collapsed, cutting off the energy source at the base of most food webs',
+              'Predators multiplied after the impact and overhunted their prey',
+              'Cold temperatures froze every freshwater ecosystem on the planet'
             ],
             correctAnswer: 1,
-            explanation: 'Use biotic factor because it directly maps to the described biological pattern: living component that influences ecosystem dynamics.'
+            explanation: 'With sunlight blocked, producers could not photosynthesize, so the energy supply for consumers at every level collapsed. That is why the K-Pg extinction struck marine and land food webs alike rather than a single group.'
           },
           {
-            question: 'In an AP-style free-response about ap review, the observed pattern is: nonliving environmental variable such as light or pH. What term should anchor the explanation?',
+            question: 'A student says, "This forest is very diverse, so an invasive insect cannot harm it." Which response best corrects the student?',
             options: [
-              'trophic level',
-              'biotic factor',
-              'keystone species',
-              'abiotic factor'
+              'Diversity has no effect on how ecosystems respond to invaders',
+              'Diverse forests are easier to invade, because they have more open niches',
+              'Diversity tends to buffer change, but it does not make a forest immune',
+              'An invader can only harm a forest that has no predators of its own'
             ],
-            correctAnswer: 3,
-            explanation: 'Use abiotic factor because it directly maps to the described biological pattern: nonliving environmental variable such as light or pH.'
+            correctAnswer: 2,
+            explanation: 'Greater diversity tends to make an ecosystem more resistant and resilient, but diverse ecosystems can still be damaged. Saying diversity has no effect goes too far in the other direction.'
+          },
+          {
+            question: 'Which change would most likely raise ecosystem diversity in a stream valley over several decades?',
+            options: [
+              'A dam that ends the yearly spring floods',
+              'A highway built along the valley floor',
+              'Beavers return and build a chain of dams',
+              'A clonal willow planted along both banks'
+            ],
+            correctAnswer: 2,
+            explanation: 'Beaver dams create ponds, marshes and meadows alongside the flowing stream, so the valley holds more kinds of habitat. Ending floods, building a highway and planting one clonal willow all simplify the valley.'
           }
         ]
       }
