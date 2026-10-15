@@ -1,864 +1,936 @@
 import type { MCQItem } from '@/components/FullLengthPracticeExam'
 
 /**
- * 55 stimulus-based AP US History MCQs modeled on the College Board
- * AP US History Course and Exam Description practice exam.
+ * 55 AP US History MCQs in 20 source-based sets of 2–4 questions, modeled on
+ * Section I, Part A of the College Board AP US History exam.
  *
- * Distribution roughly matches CB period weightings:
- *   Period 1 (1491–1607)   3 questions
- *   Period 2 (1607–1754)   5 questions
- *   Period 3 (1754–1800)   8 questions
- *   Period 4 (1800–1848)   8 questions
- *   Period 5 (1844–1877)   8 questions
- *   Period 6 (1865–1898)   7 questions
- *   Period 7 (1890–1945)   8 questions
- *   Period 8 (1945–1980)   6 questions
- *   Period 9 (1980–present) 2 questions
+ * Sets (stimulus type → periods):
+ *   1  Bernal Díaz on Tenochtitlan (primary)            P1 ×3
+ *   2  Winthrop, "A Model of Christian Charity" (primary) P2 ×2
+ *   3  Bacon, "Declaration in the Name of the People"  P2 ×2
+ *   4  Stamp Act Congress resolutions (primary)         P3 ×3
+ *   5  Madison, Federalist No. 51 (primary)             P3 ×3
+ *   6  Washington, Farewell Address (primary)           P3 ×2
+ *   7  Erie Canal freight costs (data)                  P4 ×3
+ *   8  Declaration of Sentiments (primary)              P4 ×3
+ *   9  Jackson, Second Annual Message (primary)         P4 ×2
+ *  10  O'Sullivan, "Annexation" (primary)               P5 ×3
+ *  11  Douglass, Fourth of July speech (primary)        P5 ×2
+ *  12  Historian's view of Reconstruction (secondary)   P5 ×3
+ *  13  Keppler, "The Bosses of the Senate" (image)      P6 ×3
+ *  14  People's Party Omaha Platform (primary)          P6 ×3, P7 ×1
+ *  15  Immigrant origins, 1880s vs 1900s (data)         P6 ×1, P7 ×2
+ *  16  Wilson, war message (primary)                    P7 ×3
+ *  17  F. D. Roosevelt, First Inaugural (primary)       P7 ×2
+ *  18  Kennan, "The Sources of Soviet Conduct" (primary) P8 ×3
+ *  19  King, "Letter from Birmingham Jail" (primary)    P8 ×3
+ *  20  Reagan, First Inaugural (primary)                P9 ×3
  *
- * Each question references a brief primary or secondary source; distractors
- * are matched in length and use plausible historical content.
+ * Period totals follow the CED weightings: P1 3, P2 4, P3 8, P4 8, P5 8,
+ * P6 7, P7 8, P8 6, P9 3.
  */
+
+const DIAZ =
+  '"When we saw so many cities and villages built in the water and other great towns on dry land and that straight and level causeway going towards Mexico, we were amazed and said that it was like the enchantments they tell of in the legend of Amadis, on account of the great towers and cues and buildings rising from the water, and all built of masonry."\n\n— Bernal Díaz del Castillo, a soldier with Hernán Cortés, The True History of the Conquest of New Spain, written c. 1568, recalling the Spanish approach to the Mexica capital of Tenochtitlan in 1519 ("cues" were temples)'
+
+const WINTHROP =
+  '"For we must consider that we shall be as a city upon a hill. The eyes of all people are upon us. So that if we shall deal falsely with our God in this work we have undertaken . . . we shall be made a story and a by-word through the world."\n\n— John Winthrop, "A Model of Christian Charity," sermon delivered to colonists sailing to Massachusetts Bay, 1630'
+
+const BACON =
+  '"For having, upon specious pretences of public works, raised great unjust taxes upon the commonalty for the advancement of private favourites . . . For having protected, favoured, and emboldened the Indians against His Majesty\'s loyal subjects, never contriving, requiring, or appointing any due or proper means of satisfaction for their many invasions, robberies, and murders committed upon us . . ."\n\n— Adapted from Nathaniel Bacon, "Declaration in the Name of the People," charges against Governor William Berkeley, Virginia, 1676'
+
+const STAMP_ACT_CONGRESS =
+  '"That it is inseparably essential to the freedom of a people, and the undoubted right of Englishmen, that no taxes be imposed on them, but with their own consent, given personally, or by their representatives.\n\nThat the people of these colonies are not, and from their local circumstances cannot be, represented in the House of Commons in Great Britain."\n\n— Adapted from the Declaration of Rights and Grievances, adopted by delegates from nine colonies at the Stamp Act Congress, New York, October 1765'
+
+const FEDERALIST_51 =
+  '"If men were angels, no government would be necessary. If angels were to govern men, neither external nor internal controls on government would be necessary. In framing a government which is to be administered by men over men, the great difficulty lies in this: you must first enable the government to control the governed; and in the next place oblige it to control itself."\n\n— James Madison, The Federalist No. 51, published in New York newspapers, February 1788'
+
+const FAREWELL =
+  '"It is our true policy to steer clear of permanent alliances with any portion of the foreign world . . .\n\nLet me now . . . warn you in the most solemn manner against the baneful effects of the spirit of party generally."\n\n— George Washington, Farewell Address, published September 1796'
+
+const ERIE_CANAL =
+  'Approximate cost of shipping one ton of freight from Buffalo to New York City\n\n• 1817, by wagon road: about \\$100 per ton\n• 1825, by the newly opened Erie Canal: about \\$10 per ton\n\nData adapted from nineteenth-century estimates cited in histories of the Erie Canal, which the state of New York financed and built between 1817 and 1825'
+
+const SENECA_FALLS =
+  '"The history of mankind is a history of repeated injuries and usurpations on the part of man toward woman, having in direct object the establishment of an absolute tyranny over her. To prove this, let facts be submitted to a candid world. He has never permitted her to exercise her inalienable right to the elective franchise."\n\n— Declaration of Sentiments, adopted at the women\'s rights convention at Seneca Falls, New York, July 1848'
+
+const JACKSON_1830 =
+  '"It will separate the Indians from immediate contact with settlements of whites; free them from the power of the States; enable them to pursue happiness in their own way and under their own rude institutions; will retard the progress of decay, which is lessening their numbers, and perhaps cause them gradually, under the protection of the Government and through the influence of good counsels, to cast off their savage habits and become an interesting, civilized, and Christian community."\n\n— Adapted from President Andrew Jackson, Second Annual Message to Congress, December 1830'
+
+const OSULLIVAN =
+  '"Other nations have undertaken to intrude themselves . . . for the avowed object of thwarting our policy and hampering our power, limiting our greatness and checking the fulfilment of our manifest destiny to overspread the continent allotted by Providence for the free development of our yearly multiplying millions."\n\n— John L. O\'Sullivan, "Annexation," United States Magazine and Democratic Review, July–August 1845'
+
+const DOUGLASS =
+  '"What, to the American slave, is your 4th of July? I answer: a day that reveals to him, more than all other days in the year, the gross injustice and cruelty to which he is the constant victim. To him, your celebration is a sham; your boasted liberty, an unholy license."\n\n— Frederick Douglass, speech to the Rochester Ladies\' Anti-Slavery Society, Rochester, New York, July 5, 1852'
+
+const RECONSTRUCTION_HISTORIAN =
+  '"Reconstruction remade the nation\'s founding law. The Fourteenth and Fifteenth Amendments wrote the principle of equal citizenship regardless of race into the Constitution, and for a time Black men voted, served on juries, and held office across the South. Yet within a generation the national government had abandoned enforcement of those guarantees, and much of what Reconstruction promised was deferred for nearly a century."\n\n— Adapted from a historian\'s interpretation of Reconstruction'
+
+const BOSSES_OF_THE_SENATE =
+  'The image described below is a political cartoon by Joseph Keppler, "The Bosses of the Senate," published in Puck magazine in January 1889.\n\nEnormous, bloated figures shaped like bags of money, each labeled with the name of a trust (among them the "Standard Oil Trust," the "Steel Beam Trust," the "Copper Trust," and the "Sugar Trust"), crowd the back of the U.S. Senate chamber and loom over the much smaller senators seated at their desks. A sign on the wall declares that this is a Senate "of the Monopolists, by the Monopolists and for the Monopolists!" The gallery door marked "People\'s Entrance" is shut and barred, while the "Entrance for Monopolists" stands open.'
+
+const OMAHA_PLATFORM =
+  '"We meet in the midst of a nation brought to the verge of moral, political, and material ruin. Corruption dominates the ballot-box, the Legislatures, the Congress, and touches even the ermine of the bench. . . . The fruits of the toil of millions are boldly stolen to build up colossal fortunes for a few, unprecedented in the history of mankind."\n\n— Preamble to the platform of the People\'s (Populist) Party, adopted at its national convention in Omaha, Nebraska, July 1892'
+
+const IMMIGRANT_ORIGINS =
+  'Origins of immigrants arriving in the United States (approximate share of all arrivals in each decade)\n\n• 1881–1890: northern and western Europe 72%; southern and eastern Europe 18%; all other regions 10%\n• 1901–1910: northern and western Europe 22%; southern and eastern Europe 71%; all other regions 7%\n\nData adapted from U.S. Bureau of the Census, Historical Statistics of the United States'
+
+const WILSON_1917 =
+  '"The world must be made safe for democracy. Its peace must be planted upon the tested foundations of political liberty. We have no selfish ends to serve. We desire no conquest, no dominion. We seek no indemnities for ourselves, no material compensation for the sacrifices we shall freely make."\n\n— President Woodrow Wilson, address to Congress asking for a declaration of war against Germany, April 2, 1917'
+
+const FDR_1933 =
+  '"This great Nation will endure as it has endured, will revive and will prosper. So, first of all, let me assert my firm belief that the only thing we have to fear is fear itself . . . Our greatest primary task is to put people to work. This is no unsolvable problem if we face it wisely and courageously."\n\n— President Franklin D. Roosevelt, First Inaugural Address, March 4, 1933'
+
+const KENNAN =
+  '"In these circumstances it is clear that the main element of any United States policy toward the Soviet Union must be that of a long-term, patient but firm and vigilant containment of Russian expansive tendencies."\n\n— George F. Kennan, State Department official, writing as "X," "The Sources of Soviet Conduct," Foreign Affairs, July 1947'
+
+const KING_1963 =
+  '"We know through painful experience that freedom is never voluntarily given by the oppressor; it must be demanded by the oppressed. Frankly, I have yet to engage in a direct-action campaign that was \'well timed\' in the view of those who have not suffered unduly from the disease of segregation."\n\n— Martin Luther King Jr., "Letter from Birmingham Jail," written while he was jailed for leading protests in Birmingham, Alabama, April 1963'
+
+const REAGAN_1981 =
+  '"In this present crisis, government is not the solution to our problem; government is the problem. . . . It is my intention to curb the size and influence of the Federal establishment."\n\n— President Ronald Reagan, First Inaugural Address, January 20, 1981'
+
 export const MCQS: MCQItem[] = [
-  /* ============== PERIOD 1: 1491–1607 ============== */
+  /* ============== SET 1 — PERIOD 1: 1491–1607 ============== */
   {
     type: 'mcq',
-    question:
-      '"There were among them many wise men and many sorcerers, of whom no one knows the number, so much they were given to making idols and the worship of them. They had their books of figures and characters by which they preserved an account of their history."\n— Bartolomé de las Casas, Apologetic History of the Indies, c. 1561, describing pre-contact Mesoamerican societies\n\nThe passage best supports which of the following claims about the Americas before European contact?',
+    stimulus: DIAZ,
+    question: 'The passage best supports which of the following claims about the Americas before European contact?',
     options: [
-      'The major societies of the Americas had developed sophisticated religious, political, and recordkeeping institutions.',
-      'Indigenous American societies before 1492 lacked any system of writing or quantitative recordkeeping.',
-      'The peoples of the Americas had largely abandoned settled agriculture in favor of nomadic foraging.',
-      'Most American societies in 1491 were small, egalitarian bands without specialized priests or scribes.',
+      'Most Native societies were mobile hunting bands with few permanent settlements.',
+      'Some Native societies had built large cities sustained by intensive agriculture.',
+      'Native societies had developed few political institutions above the village level.',
+      'Native peoples of Mesoamerica relied mainly on herding large domesticated animals.',
     ],
-    correctAnswer: 0,
+    correctAnswer: 1,
     explanation:
-      'Las Casas describes the priestly and codex-keeping institutions of complex Mesoamerican societies (Aztec, Maya). The other options contradict the archaeological and ethnohistorical record of pre-contact urban civilizations like Tenochtitlán and the Maya city-states.',
+      'Díaz describes a city of causeways, towers, and masonry temples, evidence of an urban society fed by intensive maize farming such as the Mexica chinampas. Mobile hunting bands did exist in parts of North America, but they cannot account for the large, permanent city the passage describes.',
     topic: 'period-1-1491-1607',
   },
   {
     type: 'mcq',
-    question:
-      'Within roughly a century of 1492, the indigenous population of the Americas declined by an estimated 80–90 percent, while maize, potatoes, and tobacco spread across Eurasia and Africa.\n\nThe developments described above are best understood as part of which of the following?',
+    stimulus: DIAZ,
+    question: 'Which of the following most directly helped a small Spanish force conquer the society Díaz describes within two years of 1519?',
     options: [
-      'The Columbian Exchange of biological and agricultural materials between the Old and New Worlds.',
-      'The success of Spanish missionary efforts in introducing European agriculture to indigenous farmers.',
-      'A coordinated indigenous trade policy that exported Andean and Mesoamerican crops to Eurasia.',
-      'The rise of an Atlantic free-trade zone in which European powers renounced colonial monopolies.',
+      'Mexica leaders\' surrender to a Spaniard they took to be a returning god',
+      'Large reinforcements of soldiers shipped directly from Spain to Mexico',
+      'A Mexica civil war over succession like the one that divided the Inca',
+      'Epidemic disease and alliances with Native enemies of the Mexica',
     ],
-    correctAnswer: 0,
+    correctAnswer: 3,
     explanation:
-      'Disease-driven demographic collapse plus crop diffusion is the canonical Columbian Exchange. Spanish missions did not drive crop exchange; indigenous polities did not coordinate Eurasian trade; mercantilist colonial monopolies expanded, not contracted.',
+      'Smallpox devastated Tenochtitlan in 1520, and tens of thousands of Tlaxcalan and other Native allies who resented Mexica tribute demands fought alongside Cortés. The story that the Mexica surrendered to Cortés as a returning god comes from later colonial accounts, and in fact the Mexica fought on and the city fell only after a long siege in 1521.',
     topic: 'period-1-1491-1607',
   },
   {
     type: 'mcq',
-    question:
-      'The Spanish encomienda system granted conquistadors the right to demand tribute and labor from indigenous communities in exchange for instructing them in Christianity and providing nominal protection.\n\nThe encomienda system best illustrates which of the following early Spanish colonial strategies?',
+    stimulus: DIAZ,
+    question: 'In the decades after the events Díaz describes, Spanish colonizers in Mexico most commonly obtained labor through',
     options: [
-      'The use of coerced indigenous labor and Christian conversion as twin pillars of imperial extraction.',
-      'A reliance on free-wage indigenous labor regulated by elected representative town councils.',
-      'A policy of strict racial separation barring Spanish settlers from any contact with native peoples.',
-      'The replacement of indigenous tributary obligations by trans-Atlantic shipments of African gold.',
+      'indentured servitude, which brought laborers from Spain on fixed contracts',
+      'the encomienda system, which required Native communities to provide tribute and labor',
+      'free wage labor, in which Native workers bargained with employers for pay',
+      'the headright system, which granted land to colonists who imported workers',
     ],
-    correctAnswer: 0,
+    correctAnswer: 1,
     explanation:
-      'Encomienda combined coerced labor with mandated religious instruction — the "two republics" model justified imperial extraction. The other options describe systems Spain did not implement in this period.',
+      'The encomienda granted Spanish colonists the tribute and labor of Native communities in return for nominal protection and Christian instruction. The headright system belonged to English Virginia, where it rewarded planters with land for paying the passage of indentured servants.',
     topic: 'period-1-1491-1607',
   },
 
-  /* ============== PERIOD 2: 1607–1754 ============== */
+  /* ============== SETS 2–3 — PERIOD 2: 1607–1754 ============== */
   {
     type: 'mcq',
-    question:
-      '"We shall be as a city upon a hill. The eyes of all people are upon us, so that if we shall deal falsely with our God in this work we have undertaken, we shall shame the faces of many of God\'s worthy servants."\n— John Winthrop, "A Model of Christian Charity," 1630\n\nWinthrop\'s sermon is best understood as evidence of which of the following?',
+    stimulus: WINTHROP,
+    question: 'Winthrop\'s sermon most directly reflects which of the following?',
     options: [
-      'Puritan migrants understood their settlement of Massachusetts Bay as a religious mission with broader spiritual stakes.',
-      'New England settlers explicitly rejected any religious motivation in favor of secular commercial goals at Plymouth.',
-      'Anglican royal officials in 1630 commissioned Puritan colonization to spread the established Church of England.',
-      'Massachusetts Bay was founded primarily as a refuge for Catholics fleeing persecution in Stuart England.',
+      'A Quaker commitment to religious toleration and peaceful relations with Native peoples',
+      'An Anglican effort to extend the established Church of England to the new colonies',
+      'A Puritan aim to build a model community bound by a covenant with God',
+      'A Chesapeake focus on growing staple crops for profit in the Atlantic market',
     ],
-    correctAnswer: 0,
+    correctAnswer: 2,
     explanation:
-      'Winthrop\'s sermon expresses the Puritan idea of a covenanted religious community modeling reformed Christianity for the world. The other options invert the actual religious history of Puritan New England.',
+      'Winthrop casts Massachusetts Bay as a community in covenant with God whose success or failure the world would watch. Quaker toleration shaped Pennsylvania half a century later, whereas Puritan leaders in Massachusetts enforced religious conformity.',
     topic: 'period-2-1607-1754',
   },
   {
     type: 'mcq',
-    question:
-      'Bacon\'s Rebellion (1676) saw frontier farmers, indentured servants, and enslaved Africans together attack both Native Americans and the Virginia colonial government before being suppressed.\n\nThe rebellion contributed most directly to which of the following developments?',
+    stimulus: WINTHROP,
+    question: 'Compared with the Chesapeake colonies in the 1600s, the colony Winthrop helped found was distinctive in that it',
     options: [
-      'A shift by Chesapeake planters from English indentured servants to enslaved African labor.',
-      'The immediate abolition of slavery throughout the British North American mainland colonies.',
-      'The political union of Virginia and Maryland into a single Catholic-led proprietary colony.',
-      'The withdrawal of Native American populations from all of the Virginia colony by the year 1690.',
+      'depended more heavily on enslaved African labor for its farming',
+      'drew migrants in family groups and had a balanced sex ratio',
+      'granted wide religious freedom to dissenters such as Anne Hutchinson',
+      'was governed directly by royal officials appointed from London',
     ],
-    correctAnswer: 0,
+    correctAnswer: 1,
     explanation:
-      'After the multiracial rebellion, Chesapeake elites accelerated the transition from servitude to chattel slavery to prevent future cross-racial alliances among the laboring poor. The other options did not occur.',
+      'Puritans migrated largely as families, so New England had a balanced sex ratio and stable households, unlike the young, male, servant-heavy Chesapeake. Massachusetts banished dissenters such as Anne Hutchinson and Roger Williams rather than tolerating them.',
     topic: 'period-2-1607-1754',
   },
   {
     type: 'mcq',
-    question:
-      'Between roughly 1700 and 1750, the Atlantic slave trade brought hundreds of thousands of enslaved Africans to the British North American colonies, with the largest concentrations on Chesapeake tobacco plantations and South Carolina rice plantations.\n\nThe pattern described best supports which of the following claims about the colonial labor system by 1750?',
+    stimulus: BACON,
+    question: 'Bacon\'s charges most directly reflected tensions over which of the following?',
     options: [
-      'The colonial economy of the southern colonies depended fundamentally on enslaved African labor.',
-      'Indentured servitude continued to provide the majority of agricultural labor in the southern colonies.',
-      'The northern colonies in this period contained no enslaved African population of any kind.',
-      'British policy banned the further importation of enslaved Africans into all mainland colonies.',
+      'Parliament\'s efforts to tax the colonies without their own consent',
+      'Access to frontier land and the colony\'s policy toward Native peoples',
+      'Religious conflict between Puritan and Anglican settlers in the Virginia colony',
+      'Competition between English and French traders for the fur trade',
     ],
-    correctAnswer: 0,
+    correctAnswer: 1,
     explanation:
-      'By the mid-1700s southern plantation economies were structurally dependent on slavery. Indentured servitude was declining; the northern colonies had smaller but real enslaved populations; and Britain encouraged, not banned, the trade.',
+      'Bacon\'s followers, many of them landless former servants on the frontier, accused Governor Berkeley of protecting Native peoples to preserve his allies\' trade and of blocking their access to land. Parliamentary taxation became the central colonial grievance only after 1763, nearly a century later.',
     topic: 'period-2-1607-1754',
   },
   {
     type: 'mcq',
-    question:
-      'The First Great Awakening of the 1730s and 1740s drew large crowds to outdoor sermons by ministers such as George Whitefield and Jonathan Edwards.\n\nThe Great Awakening contributed most directly to which of the following long-term developments?',
+    stimulus: BACON,
+    question: 'Which of the following was a significant long-term effect of the rebellion Bacon led?',
     options: [
-      'The growth of religious pluralism and a tradition of voluntary, emotional, mass-audience evangelicalism.',
-      'The voluntary unification of all British North American congregations under the Anglican Church.',
-      'The decline of religious affiliation in the colonies and the rise of state-sponsored deism by 1760.',
-      'The complete suppression of itinerant preaching by colonial assemblies after 1745 in every colony.',
+      'The English Crown revoked Virginia\'s charter and made it a royal colony.',
+      'Planters came to rely more on enslaved Africans than on servants.',
+      'Virginia\'s assembly ended the use of indentured servitude by statute.',
+      'Virginia\'s leaders abandoned tobacco in favor of wheat and other grains.',
     ],
-    correctAnswer: 0,
+    correctAnswer: 1,
     explanation:
-      'The Awakening fragmented established churches, empowered itinerant preachers, and produced lasting evangelical Protestant traditions. The other options invert what happened.',
-    topic: 'period-2-1607-1754',
-  },
-  {
-    type: 'mcq',
-    question:
-      'New England colonies relied on shipbuilding, fishing, and trade with the West Indies; Middle colonies exported wheat and other grains; Southern colonies produced tobacco, rice, and indigo on plantations.\n\nThe regional pattern described above best illustrates which of the following features of colonial British North America by 1750?',
-    options: [
-      'Distinct regional economies shaped by climate, soil, and labor systems within a shared imperial trade framework.',
-      'A single homogeneous economy in which all colonies produced identical staple crops by the mid-1700s.',
-      'A general absence of overseas trade because British navigation laws barred all colonial export shipping.',
-      'The dominance of subsistence agriculture in every colony, with virtually no commodity exports to Britain.',
-    ],
-    correctAnswer: 0,
-    explanation:
-      'The regional-specialization pattern within the Atlantic mercantilist system is the canonical structure of British North America by 1750. The other options contradict it.',
+      'An armed alliance of poor whites, servants, and some enslaved people alarmed Chesapeake elites, who accelerated the shift to racial slavery and sharpened legal lines between Black and white laborers. Virginia had become a royal colony in 1624, half a century before the rebellion.',
     topic: 'period-2-1607-1754',
   },
 
-  /* ============== PERIOD 3: 1754–1800 ============== */
+  /* ============== SETS 4–6 — PERIOD 3: 1754–1800 ============== */
   {
     type: 'mcq',
-    question:
-      'The Proclamation of 1763, the Stamp Act of 1765, and the Townshend Acts of 1767 were all enacted in the years immediately following the British victory in the Seven Years\' War.\n\nThe legislation listed best illustrates which of the following British strategies after 1763?',
+    stimulus: STAMP_ACT_CONGRESS,
+    question: 'The resolutions were most directly a response to which of the following?',
     options: [
-      'An attempt to consolidate imperial control and recover war debts by tightening administration of the colonies.',
-      'A deliberate policy of granting greater self-government to mainland North American colonial assemblies.',
-      'A British effort to extend the same trade privileges to French Canadian merchants as to British settlers.',
-      'A general British retreat from North American affairs after the cession of Canada by France in 1763.',
-            ],
+      'British efforts to raise revenue from the colonies after the Seven Years\' War',
+      'British limits on colonial settlement west of the Appalachian Mountains',
+      'British laws requiring colonial trade to pass through English ports',
+      'British decisions to station troops in Boston to enforce customs laws',
+    ],
     correctAnswer: 0,
     explanation:
-      'After 1763 Britain tried to recover the costs of the Seven Years\' War and police a much larger empire — the proximate cause of colonial protest. The other options invert post-war British policy.',
+      'The Stamp Act of 1765 was part of Britain\'s effort to make the colonies help pay war debts and the costs of imperial defense, and the delegates denied Parliament\'s right to tax them directly. The Proclamation of 1763 also angered colonists, but it restricted settlement and is not about the taxation and consent these resolutions address.',
     topic: 'period-3-1754-1800',
   },
   {
     type: 'mcq',
-    question:
-      '"We hold these truths to be self-evident, that all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty and the pursuit of Happiness."\n— Declaration of Independence, 1776\n\nThe principles expressed in the passage drew most directly upon which of the following intellectual traditions?',
+    stimulus: STAMP_ACT_CONGRESS,
+    question: 'The delegates\' argument drew most directly on which of the following?',
     options: [
-      'Enlightenment theories of natural rights and popular sovereignty associated with John Locke and similar thinkers.',
-      'Anglican doctrines of divine-right monarchy reaffirmed by the Stuart kings of seventeenth-century England.',
-      'Mercantilist arguments about the productive value of colonial settlers to the British imperial treasury.',
-      'Iroquois Confederacy traditions of consensus government, which Jefferson and Adams explicitly cited as their primary source.',
+      'Mercantilist ideas about the economic value of colonies to the home country',
+      'English constitutional traditions linking taxation to representation',
+      'Puritan beliefs about the covenant between rulers and the ruled',
+      'Iroquois Confederacy practices of decision-making by consensus',
     ],
-    correctAnswer: 0,
+    correctAnswer: 1,
     explanation:
-      'Lockean natural rights and popular-sovereignty arguments structure the Declaration. Divine-right and mercantilist frameworks are exactly what the document rejects, and Iroquois influence (while debated) was not the explicit framework cited by the Continental Congress.',
+      'The delegates claim "the undoubted right of Englishmen" to be taxed only by their own representatives, a principle rooted in Magna Carta and the English Bill of Rights. Mercantilism justified regulating colonial trade for the empire\'s benefit and offered no basis for limiting Parliament\'s power to tax.',
     topic: 'period-3-1754-1800',
   },
   {
     type: 'mcq',
-    question:
-      'Under the Articles of Confederation (1781–1789), the national government could not levy taxes, regulate interstate commerce, or compel state compliance with treaties it signed.\n\nThe weaknesses described above contributed most directly to which of the following developments?',
+    stimulus: STAMP_ACT_CONGRESS,
+    question: 'Which of the following was an immediate response by many colonists to the law the delegates protested?',
     options: [
-      'The drafting of the U.S. Constitution at the Philadelphia Convention of 1787 to create a stronger central government.',
-      'The peaceful dissolution of the United States into thirteen separate independent republics by 1789.',
-      'A successful national tax program that retired the Revolutionary War debt within five years of independence.',
-      'The voluntary surrender of state sovereignty to a restored British colonial administration in the 1780s.',
+      'Forming a Continental Army under the command of George Washington',
+      'Petitioning Parliament for colonial seats in the House of Commons',
+      'Declaring independence through the Continental Congress',
+      'Organizing boycotts of British goods through nonimportation agreements',
     ],
-    correctAnswer: 0,
+    correctAnswer: 3,
     explanation:
-      'Shays\' Rebellion and fiscal paralysis under the Articles spurred the 1787 Convention. The other options describe outcomes that did not occur.',
+      'Merchants signed nonimportation agreements and groups such as the Sons of Liberty enforced them, helping force repeal of the Stamp Act in 1766. Colonists did not seek seats in Parliament; the second resolution argues that the colonies could not be represented there at all.',
     topic: 'period-3-1754-1800',
   },
   {
     type: 'mcq',
-    question:
-      'The Three-Fifths Compromise, the Connecticut (Great) Compromise, and the Compromise on the Slave Trade were all reached during the drafting of the U.S. Constitution in 1787.\n\nThe agreements described above best support which of the following claims about the Constitutional Convention?',
+    stimulus: FEDERALIST_51,
+    question: 'Madison\'s argument best supports which of the following features of the Constitution?',
     options: [
-      'The framers\' agreement on a stronger national government required substantial concessions to slaveholding states and small states alike.',
-      'The framers achieved consensus on national policy without making any concessions to sectional or state-size interests.',
-      'The Constitution explicitly prohibited slavery in all states north of the Ohio River starting in the year 1787.',
-      'The framers gave slaveholding states the same number of representatives as their free-population counts alone.',
+      'A national government whose powers match those of the Articles',
+      'A written list of individual rights that government may not violate',
+      'Equal representation of the states in both houses of Congress',
+      'Separate branches, each with the means to check the others',
     ],
-    correctAnswer: 0,
+    correctAnswer: 3,
     explanation:
-      'The Constitution was a compromise document accommodating both small/large state and free/slave state interests. The other options contradict the historical record.',
+      'Madison argues that government must be designed to "control itself," which the Constitution achieves by giving each branch tools such as the veto, Senate confirmation, and judicial independence to resist the others. A bill of rights was added later, in 1791, largely at the urging of the Constitution\'s critics.',
     topic: 'period-3-1754-1800',
   },
   {
     type: 'mcq',
-    question:
-      '"If men were angels, no government would be necessary. If angels were to govern men, neither external nor internal controls on government would be necessary. In framing a government which is to be administered by men over men, the great difficulty lies in this: you must first enable the government to control the governed; and in the next place oblige it to control itself."\n— James Madison, Federalist No. 51, 1788\n\nMadison\'s argument best supports which of the following constitutional principles?',
+    stimulus: FEDERALIST_51,
+    question: 'Antifederalists who opposed ratification of the Constitution most commonly argued that',
     options: [
-      'A separation of powers and system of checks and balances designed to limit the abuse of governmental authority.',
-      'The concentration of all federal authority in a single executive branch led by a hereditary monarch.',
-      'The grant of unchecked legislative authority to a single national parliament without judicial review.',
-      'The complete elimination of state governments in favor of a unitary national administrative state.',
+      'a strong central government without a bill of rights would endanger liberty',
+      'the proposed government would still be too weak to collect taxes',
+      'the states should be merged into one consolidated national government',
+      'the new Constitution should abolish slavery throughout the United States',
     ],
     correctAnswer: 0,
     explanation:
-      'Federalist 51 is the classical defense of separation of powers and checks and balances. The other options describe constitutional arrangements Madison explicitly opposed.',
+      'Antifederalists feared that a distant, powerful national government would threaten individual liberty and the states, and they demanded a bill of rights. The claim that the government would be too weak to tax was the Federalists\' complaint about the Articles, not an Antifederalist objection to the Constitution.',
     topic: 'period-3-1754-1800',
   },
   {
     type: 'mcq',
-    question:
-      'Alexander Hamilton\'s financial program in the early 1790s included federal assumption of state Revolutionary War debts, the chartering of a national bank, and the imposition of a federal excise tax on whiskey.\n\nHamilton\'s program is best understood as an effort to:',
+    stimulus: FEDERALIST_51,
+    question: 'The debate in which Madison wrote this essay arose most directly from',
     options: [
-      'Strengthen the new federal government by tying the interests of wealthy creditors to its long-term success.',
-      'Devolve as much economic authority as possible from the federal government to the individual states.',
-      'Pay off the Revolutionary War debt by selling western public lands cheaply to subsistence farmers.',
-      'Establish a strict gold-standard currency by forbidding all federal paper money issuance after 1791.',
+      'concern that the Confederation Congress had grown too powerful over the states',
+      'concern that the Northwest Ordinance would let slavery spread north of the Ohio',
+      'concern that the French alliance would drag the nation into European wars',
+      'concern that the Articles of Confederation had left Congress too weak',
     ],
-    correctAnswer: 0,
+    correctAnswer: 3,
     explanation:
-      'Hamilton\'s program centralized fiscal authority and aligned creditor interests with federal stability — the central Federalist project. The other options invert his actual policies.',
+      'Congress\'s inability to tax or regulate trade under the Articles, along with unrest such as Shays\' Rebellion, led to the Philadelphia Convention and the ratification debate of 1787–1788. Critics of the Articles complained that Congress was too weak, not too strong; it could not tax, regulate trade, or compel the states to comply.',
     topic: 'period-3-1754-1800',
   },
   {
     type: 'mcq',
-    question:
-      'In his 1796 Farewell Address, George Washington warned Americans against "permanent alliances with any portion of the foreign world" and against the dangers of intense partisan faction at home.\n\nWashington\'s warnings most directly anticipated which of the following early national developments?',
+    stimulus: FAREWELL,
+    question: 'Washington\'s warnings most directly reflected which of the following?',
     options: [
-      'The intensification of partisan conflict between Federalists and Democratic-Republicans over both foreign and domestic policy.',
-      'The voluntary dissolution of all U.S. political parties in the years immediately following 1796.',
-      'The annexation of large parts of Mexico by the United States during the John Adams administration.',
-      'The formal alliance of the U.S. with revolutionary France against Britain throughout the 1790s.',
+      'Partisan conflict between Federalists and Democratic-Republicans over Britain and France',
+      'Sectional conflict between the North and the South over slavery in the western territories',
+      'Colonial resentment of the trade restrictions Britain imposed after the war with France',
+      'Disputes between Congress and the states over taxation under the Articles of Confederation',
     ],
     correctAnswer: 0,
     explanation:
-      'Washington spoke as the first party system was already forming around Hamilton and Jefferson — and the Quasi-War with France soon tested his foreign-policy advice. The other options describe events that did not occur.',
+      'By 1796 Federalists and Democratic-Republicans were bitterly divided over the French Revolution and the Jay Treaty with Britain, which is why Washington paired foreign alliances with the dangers of party. Sectional conflict over slavery in the West became the dominant national issue later, beginning with the Missouri crisis of 1819–1820.',
     topic: 'period-3-1754-1800',
   },
   {
     type: 'mcq',
-    question:
-      'The Alien and Sedition Acts of 1798 made it a federal crime to publish "false, scandalous, and malicious" criticism of the federal government and lengthened the residency requirement for naturalization.\n\nThe acts provoked which of the following responses from Thomas Jefferson and James Madison?',
+    stimulus: FAREWELL,
+    question: 'Washington\'s foreign-policy advice was most directly shaped by which experience of his presidency?',
     options: [
-      'The Virginia and Kentucky Resolutions, which articulated the doctrine that states could oppose unconstitutional federal laws.',
-      'The Hartford Convention, which proposed New England\'s secession from the United States in protest of the laws.',
-      'The Whiskey Rebellion, which led the federal government to repeal both the Alien and Sedition Acts in 1799.',
-      'A constitutional amendment immediately ratified by all sixteen states banning future federal sedition statutes.',
+      'Spain\'s closing of the lower Mississippi River to American shipping',
+      'Pressure to aid France under the 1778 alliance once France went to war with Britain',
+      'Native resistance in the Northwest Territory led by Little Turtle',
+      'Western farmers\' armed protest against the federal excise tax on whiskey',
     ],
-    correctAnswer: 0,
+    correctAnswer: 1,
     explanation:
-      'Jefferson and Madison wrote the Virginia and Kentucky Resolutions, which became foundational texts for later doctrines of state interposition and nullification. The Hartford Convention came in 1814; the Whiskey Rebellion was 1794; and no such amendment was ratified.',
+      'When revolutionary France went to war with Britain in 1793, supporters of France expected help under the 1778 treaty, but Washington proclaimed neutrality and the French envoy Edmond Genêt campaigned against him. Spain\'s closing of the Mississippi was a serious diplomatic problem, but it concerned navigation rights and was settled by treaty in 1795, not by an alliance.',
     topic: 'period-3-1754-1800',
   },
 
-  /* ============== PERIOD 4: 1800–1848 ============== */
+  /* ============== SETS 7–9 — PERIOD 4: 1800–1848 ============== */
   {
     type: 'mcq',
-    question:
-      'In Marbury v. Madison (1803), Chief Justice John Marshall held that "it is emphatically the province and duty of the judicial department to say what the law is."\n\nThe decision is most significant for establishing which of the following constitutional principles?',
+    stimulus: ERIE_CANAL,
+    question: 'The change shown in the data most directly contributed to which of the following?',
     options: [
-      'The power of the federal judiciary to declare acts of Congress unconstitutional, known as judicial review.',
-      'The unlimited authority of the federal executive branch to ignore Supreme Court rulings it disagreed with.',
-      'The right of state legislatures to nullify any act of Congress within their respective state borders.',
-      'The replacement of the Supreme Court by an elected congressional committee on constitutional matters.',
+      'Stronger trade links between the cotton South and the textile mills of Britain',
+      'Closer economic ties between the Northeast and the farms of the Old Northwest',
+      'A decline in New York City\'s population as commerce shifted to western towns',
+      'Greater reliance on the Mississippi River to ship western grain to the East',
     ],
-    correctAnswer: 0,
+    correctAnswer: 1,
     explanation:
-      'Marbury established judicial review, the foundational power of the federal courts. The other options describe principles Marshall specifically rejected or that no court adopted.',
+      'Cheap canal shipping let farmers in the Great Lakes region send grain east and buy northeastern goods, binding the Old Northwest to the Northeast and making New York City the nation\'s leading port. Cotton exports to Britain did grow in this period, but they moved through southern ports and owed nothing to a canal across New York.',
     topic: 'period-4-1800-1848',
   },
   {
     type: 'mcq',
-    question:
-      'Through the Louisiana Purchase of 1803, the United States acquired roughly 828,000 square miles from France, doubling the size of the country.\n\nThe Louisiana Purchase is best understood in the context of which of the following early-nineteenth-century developments?',
+    stimulus: ERIE_CANAL,
+    question: 'The data best illustrate which of the following developments of the early nineteenth century?',
     options: [
-      'The expansion of U.S. territorial control westward across the North American continent.',
-      'A Federalist Party project to limit western settlement in favor of New England commercial growth.',
-      'The voluntary cession of French Caribbean colonies in exchange for U.S. recognition of Haitian independence.',
-      'A coordinated multinational treaty by which Britain, Spain, and France divided the Mississippi watershed.',
+      'A transportation revolution that lowered the cost of moving goods to market',
+      'An agricultural decline that pushed northeastern farm families into factories',
+      'A rise in federal spending on roads and canals under the American System',
+      'A shift of the economy toward exports of finished manufactured goods',
     ],
     correctAnswer: 0,
     explanation:
-      'The purchase is the foundational act of nineteenth-century westward expansion. Federalists actually opposed it, the U.S. did not recognize Haiti for decades, and no such multinational treaty existed.',
+      'Canals, steamboats, and later railroads cut freight costs sharply and drew farmers into a national market economy. The Erie Canal was financed by New York State, not Congress, and federal internal-improvement bills were repeatedly vetoed, so it does not illustrate federal spending under the American System.',
     topic: 'period-4-1800-1848',
   },
   {
     type: 'mcq',
-    question:
-      '"The American System will… by the establishment of a home market, give to our agriculturists a vent for their surplus produce; will provide a home demand for the products of the farmer, and will protect the manufacturer from foreign competition."\n— Henry Clay, speech in Congress, 1824\n\nClay\'s American System included all of the following EXCEPT:',
+    stimulus: ERIE_CANAL,
+    question: 'Politicians who championed projects like the one reflected in the data were most likely to also support',
     options: [
-      'A federal program to gradually emancipate enslaved laborers across the southern states.',
-      'A protective tariff to shield American manufacturing from British imports.',
-      'Federal funding for internal improvements such as roads and canals.',
-      'Rechartering and use of a national bank to stabilize credit and currency.',
+      'holding federal spending to the levels of the Jefferson years',
+      'a protective tariff and a national bank to promote development',
+      'the rapid expansion of slavery into the western territories',
+      'leaving banking and road-building policy to the individual states',
     ],
-    correctAnswer: 0,
+    correctAnswer: 1,
     explanation:
-      'Clay\'s American System combined a tariff, internal improvements, and the Bank — but not emancipation. The other three were its three explicit pillars.',
+      'Advocates of internal improvements such as Henry Clay and later the Whig Party combined them with a protective tariff and a national bank in the American System. Leaving such matters to the states was the position of their Jacksonian opponents, who distrusted federal economic programs.',
     topic: 'period-4-1800-1848',
   },
   {
     type: 'mcq',
-    question:
-      'Andrew Jackson\'s presidency (1829–1837) saw the Indian Removal Act of 1830, the destruction of the Second Bank of the United States, and a sharp rise in voter participation by white men.\n\nThe developments described above best illustrate which of the following features of "Jacksonian Democracy"?',
+    stimulus: SENECA_FALLS,
+    question: 'The document\'s structure and language most directly draw on which of the following?',
     options: [
-      'Expanded political participation for white men paired with intensified federal policies of expansion and forced removal of Native peoples.',
-      'A general extension of voting rights to women, Native Americans, and free African Americans throughout the southern states.',
-      'A consistent commitment by the Jackson administration to the constitutional sovereignty of the Cherokee Nation in Georgia.',
-      'A voluntary withdrawal of the federal government from regulation of national banking, currency, and tariff policy.',
+      'The Bill of Rights',
+      'The Declaration of Independence',
+      'The Federalist essays',
+      'The Articles of Confederation',
     ],
-    correctAnswer: 0,
+    correctAnswer: 1,
     explanation:
-      'Jacksonian "democracy" combined wider white-male suffrage with hostility to the Bank and to indigenous sovereignty (Worcester v. Georgia notwithstanding). The other options invert the record.',
+      'The Declaration of Sentiments copies the 1776 Declaration\'s form, listing a "history of repeated injuries and usurpations" and submitting "facts . . . to a candid world," with "man" in place of King George III. The Bill of Rights protects individual liberties but does not share this structure of grievances against a tyrant.',
     topic: 'period-4-1800-1848',
   },
   {
     type: 'mcq',
-    question:
-      '"The injuries and usurpations on the part of man toward woman… have as their direct object the establishment of an absolute tyranny over her. To prove this, let facts be submitted to a candid world."\n— Declaration of Sentiments, Seneca Falls Convention, 1848\n\nThe document\'s rhetorical structure most directly draws on which of the following?',
+    stimulus: SENECA_FALLS,
+    question: 'The Seneca Falls convention is best understood in the context of which of the following?',
     options: [
-      'The U.S. Declaration of Independence, repurposed to frame women\'s grievances as parallel to those of the colonies in 1776.',
-      'A papal encyclical of the early nineteenth century calling for the legal subordination of married Catholic women.',
-      'The Federalist Papers, particularly the essays of Alexander Hamilton on standing armies and judicial review.',
-      'British common-law doctrines of coverture, which the Seneca Falls organizers explicitly endorsed in 1848.',
+      'Labor movements in northern factory towns seeking a ten-hour workday',
+      'Reform movements inspired by the religious revivals of the Second Great Awakening',
+      'Nativist movements opposing Catholic immigration from Ireland and Germany',
+      'Expansionist movements calling for the annexation of Texas and Oregon',
     ],
-    correctAnswer: 0,
+    correctAnswer: 1,
     explanation:
-      'The Declaration of Sentiments deliberately mirrors the 1776 Declaration of Independence. The Seneca Falls organizers attacked, not endorsed, coverture, and the document drew nothing from papal documents or the Federalist Papers.',
+      'Revivalists of the Second Great Awakening taught that individuals could perfect themselves and society, inspiring the abolition, temperance, and women\'s rights crusades. Labor movements were active in the 1840s too, but the Seneca Falls organizers were middle-class reformers seeking legal and political equality, not factory workers seeking shorter hours.',
     topic: 'period-4-1800-1848',
   },
   {
     type: 'mcq',
-    question:
-      'Between 1820 and 1850, evangelical revivalism, abolitionism, temperance societies, women\'s rights conventions, and asylum reform all expanded across the northern United States.\n\nThe pattern described above is best understood as part of which of the following?',
+    stimulus: SENECA_FALLS,
+    question: 'Many organizers of the Seneca Falls convention had gained experience in which of the following?',
     options: [
-      'A broad antebellum reform movement linking evangelical religion to social and moral improvement.',
-      'A Catholic Counter-Reformation initiative to restore traditional sacramental practice in the U.S. South.',
-      'A federal program funded by the Jackson administration to rebuild urban communities in the Northeast.',
-      'A coordinated reform program led by southern planters to extend slavery into northern free states.',
+      'The nativist movement',
+      'The Anti-Masonic movement',
+      'The Brook Farm community',
+      'The abolitionist movement',
     ],
-    correctAnswer: 0,
+    correctAnswer: 3,
     explanation:
-      'These movements form the antebellum reform tradition rooted in the Second Great Awakening. The other options misidentify the actors and the religious context.',
+      'Elizabeth Cady Stanton and Lucretia Mott met at the World Anti-Slavery Convention in London in 1840, where women delegates were barred from the floor, and Frederick Douglass attended Seneca Falls. Nativism, by contrast, targeted Catholic immigrants and drew few of the convention\'s organizers, who came largely from Quaker and antislavery circles.',
     topic: 'period-4-1800-1848',
   },
   {
     type: 'mcq',
-    question:
-      'The Erie Canal (opened 1825), the spread of textile mills in Lowell and other New England towns, and the construction of state-funded turnpikes are all examples of:',
+    stimulus: JACKSON_1830,
+    question: 'Jackson\'s message was most directly intended to justify',
     options: [
-      'The early-nineteenth-century market revolution that integrated regional economies and transformed American labor.',
-      'A southern plantation initiative to expand cotton exports through canals along the Mississippi River system.',
-      'A Jacksonian program to abolish federal funding for any infrastructure crossing state boundaries after 1828.',
-      'A coordinated effort by Native nations of the Northeast to reclaim land lost in the eighteenth century.',
+      'the allotment of reservation lands to individual Native families',
+      'the confinement of Plains nations to reservations after the Civil War',
+      'the removal of southeastern Native nations to the West',
+      'the creation of boarding schools to assimilate Native children',
     ],
-    correctAnswer: 0,
+    correctAnswer: 2,
     explanation:
-      'The "market revolution" of the early 1800s integrated regional economies through transport infrastructure and factory production. The other options misidentify the actors and outcomes.',
+      'Jackson defended the Indian Removal Act of 1830, which led to the forced relocation of the Cherokee, Creek, Choctaw, Chickasaw, and Seminole nations. Allotment of reservation land came later, under the Dawes Act of 1887.',
     topic: 'period-4-1800-1848',
   },
   {
     type: 'mcq',
-    question:
-      'Between 1830 and 1850, more than a million Irish and German immigrants arrived in the United States, settling especially in northeastern cities and in the Old Northwest.\n\nThe immigration described above contributed most directly to which of the following?',
+    stimulus: JACKSON_1830,
+    question: 'The Cherokee Nation\'s response to the policy Jackson defends differed from that of some other Native nations in that the Cherokee',
     options: [
-      'The rise of nativist political movements such as the Know-Nothing Party in the 1850s.',
-      'A widespread political consensus welcoming Catholic immigration to the U.S. during the early 1850s.',
-      'The collapse of the U.S. urban manufacturing economy due to insufficient industrial labor supply.',
-      'The mass migration of Irish and German settlers to the South to work on cotton plantations.',
+      'fought a prolonged war in the Florida swamps under the leader Osceola',
+      'joined Tecumseh\'s confederacy and allied with Britain in the War of 1812',
+      'ceded most of present-day Ohio to the United States in the Treaty of Greenville',
+      'took their case to the Supreme Court and won a ruling in Worcester v. Georgia',
     ],
-    correctAnswer: 0,
+    correctAnswer: 3,
     explanation:
-      'Irish and German Catholic immigration spurred Protestant nativism, expressed through the American (Know-Nothing) Party. The other options contradict the historical pattern.',
+      'The Cherokee, who had adopted a written constitution, pursued legal resistance, and in Worcester v. Georgia (1832) the Court held that Georgia law had no force in Cherokee territory, a ruling Jackson declined to enforce. Armed resistance under Osceola was the Seminole response in the Second Seminole War.',
     topic: 'period-4-1800-1848',
   },
 
-  /* ============== PERIOD 5: 1844–1877 ============== */
+  /* ============== SETS 10–12 — PERIOD 5: 1844–1877 ============== */
   {
     type: 'mcq',
-    question:
-      '"Our manifest destiny is to overspread the continent allotted by Providence for the free development of our yearly multiplying millions."\n— John L. O\'Sullivan, United States Magazine and Democratic Review, 1845\n\nO\'Sullivan\'s argument was used most directly to justify which of the following?',
+    stimulus: OSULLIVAN,
+    question: 'O\'Sullivan\'s argument was used most directly to justify',
     options: [
-      'U.S. territorial expansion across North America, including the annexation of Texas and war with Mexico.',
-      'A federal program to gradually emancipate enslaved laborers in the territory acquired from Mexico by 1850.',
-      'The voluntary withdrawal of U.S. claims to Oregon Country in favor of joint British-Russian administration.',
-      'A constitutional amendment limiting U.S. territorial growth to lands east of the Mississippi River.',
+      'the purchase of Alaska from Russia',
+      'the annexation of Texas and war with Mexico',
+      'the removal of Native nations from the Southeast',
+      'the acquisition of Florida from Spain',
     ],
-    correctAnswer: 0,
+    correctAnswer: 1,
     explanation:
-      '"Manifest Destiny" became the ideological frame for annexation of Texas (1845) and the U.S.-Mexican War (1846–48). The other options invert the historical record.',
+      'O\'Sullivan wrote as Texas was being annexed in 1845, and "manifest destiny" became the rallying cry for the war with Mexico in 1846–1848. Indian removal also cleared land for white settlement, but it took place in the 1830s, before the phrase was coined.',
     topic: 'period-5-1844-1877',
   },
   {
     type: 'mcq',
-    question:
-      'The Compromise of 1850 admitted California as a free state, organized New Mexico and Utah territories under "popular sovereignty," abolished the slave trade in Washington, D.C., and enacted a stronger Fugitive Slave Act.\n\nThe Fugitive Slave Act provision is best understood as:',
+    stimulus: OSULLIVAN,
+    question: 'The territorial expansion O\'Sullivan promoted most directly led to which of the following?',
     options: [
-      'A concession to slaveholding states that intensified northern opposition to the institution of slavery in the 1850s.',
-      'A guarantee that no enslaved person would ever be returned to a southern enslaver against their will.',
-      'A recognition of the personal-liberty laws passed by northern states protecting fugitives from rendition.',
-      'A general consensus that ended sectional conflict over slavery for more than a generation.',
+      'Renewed conflict with Britain over territory in Canada',
+      'Renewed debate over rechartering a national bank',
+      'Renewed conflict over slavery in the new territories',
+      'Renewed conflict between states and Congress over tariffs',
     ],
-    correctAnswer: 0,
+    correctAnswer: 2,
     explanation:
-      'The 1850 Fugitive Slave Act radicalized northern opinion (e.g., Uncle Tom\'s Cabin, the Anthony Burns case) and accelerated, rather than ended, the sectional crisis. The other options contradict its actual provisions and effects.',
+      'The Mexican Cession reopened the question of slavery\'s expansion, producing the Wilmot Proviso, the Compromise of 1850, and the sectional crisis that followed. The fight over a national bank peaked during Jackson\'s war on the Second Bank in the 1830s.',
     topic: 'period-5-1844-1877',
   },
   {
     type: 'mcq',
-    question:
-      'In the Dred Scott v. Sandford decision (1857), the U.S. Supreme Court held that African Americans could not be U.S. citizens and that Congress had no constitutional authority to prohibit slavery in federal territories.\n\nThe Dred Scott decision contributed most directly to which of the following?',
+    stimulus: OSULLIVAN,
+    question: 'Which of the following groups most strongly opposed the war that O\'Sullivan\'s argument was used to support?',
     options: [
-      'The collapse of any remaining sectional compromise on slavery and the rise of the Republican Party as a national force.',
-      'The voluntary emancipation of enslaved people throughout the southern United States by the end of 1858.',
-      'A constitutional amendment passed in 1858 immediately overturning the decision and enfranchising Black Americans.',
-      'A formal alliance between the Republican and Democratic parties to defend the Missouri Compromise of 1820.',
+      'Southern Democrats seeking new land for cotton cultivation',
+      'Western farmers hoping to settle along the Pacific coast',
+      'Northern Democrats loyal to President James K. Polk',
+      'Whigs and abolitionists who saw a plot to expand slavery',
     ],
-    correctAnswer: 0,
+    correctAnswer: 3,
     explanation:
-      'Dred Scott invalidated the Missouri Compromise framework and accelerated the breakdown of national parties — directly fueling the Republican rise that elected Lincoln in 1860. The other options describe outcomes that did not occur.',
+      'Whigs such as Abraham Lincoln and abolitionists warned that the war was a scheme by the "Slave Power" to add slave territory. Northern Democrats loyal to Polk largely backed the war, though some later supported the Wilmot Proviso to keep slavery out of the new lands.',
     topic: 'period-5-1844-1877',
   },
   {
     type: 'mcq',
-    question:
-      '"The Union is older than any of the States, and, in fact, it created them as States… No State, upon its own mere motion, can lawfully get out of the Union."\n— Abraham Lincoln, First Inaugural Address, March 4, 1861\n\nLincoln\'s argument is best understood as a response to which of the following?',
+    stimulus: DOUGLASS,
+    question: 'Douglass\'s speech is best understood in the context of which of the following?',
     options: [
-      'The secession of seven southern states between December 1860 and February 1861 in response to Lincoln\'s election.',
-      'A British proposal to recognize the Confederacy as an independent state under the Treaty of Ghent in 1861.',
-      'The voluntary readmission of the Confederate states to the Union under the Crittenden Compromise of 1861.',
-      'A Supreme Court ruling in 1861 that explicitly authorized the secession of any U.S. state by majority vote.',
+      'Growing abolitionist activism after the Fugitive Slave Act of 1850',
+      'Growing temperance activism for state laws banning the sale of alcohol',
+      'Growing support for resettling freed African Americans in Africa',
+      'Growing labor activism against the spread of factory wage work',
     ],
     correctAnswer: 0,
     explanation:
-      'Lincoln\'s First Inaugural denied the constitutional legitimacy of secession after South Carolina, Mississippi, Florida, Alabama, Georgia, Louisiana, and Texas had seceded. The other options describe events that did not happen.',
+      'The Fugitive Slave Act of 1850 forced northerners to assist in capturing people who had escaped slavery, radicalizing antislavery opinion and sharpening speeches like this one. Douglass opposed colonization schemes, insisting that African Americans were Americans entitled to freedom in the United States.',
     topic: 'period-5-1844-1877',
   },
   {
     type: 'mcq',
-    question:
-      'During the Civil War, the Union government issued paper "greenback" currency, levied the first federal income tax, established a national banking system, and conscripted soldiers through a federal draft.\n\nThese measures best illustrate which of the following developments?',
+    stimulus: DOUGLASS,
+    question: 'Douglass\'s argument relies most directly on which of the following strategies?',
     options: [
-      'A wartime expansion of federal authority that significantly enlarged the powers of the national government.',
-      'A general retreat of federal authority over the economy in favor of state-level Confederate-style decentralization.',
-      'A successful Union effort to abolish the federal income tax and the national banking system within five years.',
-      'A continuation of the limited antebellum federal state, with no significant change in federal capacity.',
+      'Rejecting the Constitution as a proslavery pact that abolitionists should renounce',
+      'Contrasting the nation\'s professed ideals of liberty with the reality of slavery',
+      'Arguing that slave labor was economically less efficient than free labor',
+      'Urging enslaved people to rise up in armed rebellion against their enslavers',
     ],
-    correctAnswer: 0,
+    correctAnswer: 1,
     explanation:
-      'The Civil War created a sharply more powerful federal state (Greenbacks, income tax, National Banking Acts, the draft) — a precondition for Reconstruction and later federal action. The other options invert the record.',
+      'Douglass turns the Fourth of July against his audience, calling its celebration of liberty a "sham" while millions remained enslaved. The economic case against slave labor belonged to free-soil writers, not to this speech, which makes a moral argument about hypocrisy.',
     topic: 'period-5-1844-1877',
   },
   {
     type: 'mcq',
-    question:
-      'The Thirteenth Amendment (1865), Fourteenth Amendment (1868), and Fifteenth Amendment (1870) abolished slavery, granted birthright citizenship and equal protection, and protected the right to vote regardless of race.\n\nThe Reconstruction amendments are best understood as:',
+    stimulus: RECONSTRUCTION_HISTORIAN,
+    question: 'Which of the following would best support the historian\'s claim that Reconstruction expanded equal citizenship?',
     options: [
-      'A constitutional foundation for federal civil rights enforcement that was sharply contested in subsequent decades.',
-      'An explicit constitutional guarantee that women throughout the Union would have full voting rights by 1870.',
-      'A rollback of federal authority that allowed southern states to define citizenship on their own terms after 1868.',
-      'A set of treaty agreements between the United States and the Confederate States ratified in 1865.',
+      'The passage of Black Codes by southern legislatures in 1865 and 1866',
+      'The return of confiscated plantation lands to their former owners',
+      'The election of Black men to Congress and state legislatures',
+      'The spread of sharecropping and crop liens across the cotton South',
     ],
-    correctAnswer: 0,
+    correctAnswer: 2,
     explanation:
-      'The Reconstruction amendments expanded federal authority over civil rights, although their enforcement was undermined for nearly a century. They did not enfranchise women, did not return authority to states, and were constitutional amendments, not treaties.',
+      'During Radical Reconstruction, Black men voted in large numbers, and more than 1,500 held public office, including Hiram Revels and Blanche K. Bruce in the U.S. Senate. The Black Codes restricted freedpeople\'s rights and so would undercut, not support, the claim.',
     topic: 'period-5-1844-1877',
   },
   {
     type: 'mcq',
-    question:
-      'The Compromise of 1877 resolved the disputed presidential election of 1876 in favor of Republican Rutherford B. Hayes in exchange for the withdrawal of remaining federal troops from the South.\n\nThe Compromise of 1877 is most directly significant for:',
+    stimulus: RECONSTRUCTION_HISTORIAN,
+    question: 'Which of the following most directly reflects the abandonment of enforcement the historian describes?',
     options: [
-      'Marking the end of Reconstruction and the beginning of southern "Redemption" by Democratic state governments.',
-      'Producing a long-term Republican Party majority in southern state legislatures into the 1890s.',
-      'Establishing a federal commission to enforce voting rights for Black southerners until the early 1900s.',
-      'Inaugurating direct federal occupation of Texas and Louisiana for the next twenty-five years.',
+      'The withdrawal of the last federal troops from the South after the 1876 election',
+      'The ratification of the Fifteenth Amendment barring racial voting discrimination',
+      'The creation of the Freedmen\'s Bureau to aid formerly enslaved people',
+      'The passage of the Enforcement Acts to suppress the Ku Klux Klan',
     ],
     correctAnswer: 0,
     explanation:
-      'The 1877 Compromise effectively ended Reconstruction and allowed the rise of one-party Democratic "Redeemer" rule in the South. The other options invert the actual outcome.',
+      'Under the Compromise of 1877, the remaining federal troops were withdrawn and "Redeemer" Democrats took full control of southern governments. The Enforcement Acts of 1870–1871 were an effort to enforce Reconstruction, not an abandonment of it.',
     topic: 'period-5-1844-1877',
   },
   {
     type: 'mcq',
-    question:
-      'The sharecropping system that emerged in the post-Civil War South tied formerly enslaved African Americans (and many poor whites) to landowners through perpetual debt for tools, seed, and supplies.\n\nThe sharecropping system is best understood as:',
+    stimulus: RECONSTRUCTION_HISTORIAN,
+    question: 'The historian\'s statement that Reconstruction\'s promise was "deferred for nearly a century" refers most directly to the fact that',
     options: [
-      'A coercive labor arrangement that, while not slavery, sharply constrained the economic mobility of southern Black workers.',
-      'A system of independent yeoman farming on land granted to formerly enslaved people by the Freedmen\'s Bureau.',
-      'A return to large-scale gang labor on plantations identical in legal structure to antebellum slavery.',
-      'A system of high-wage industrial employment in southern textile mills owned by formerly enslaved workers.',
+      'women\'s suffrage, debated during Reconstruction, was not won until 1920',
+      'sharecropping persisted until cotton picking was mechanized in the 1950s',
+      'courts applied the Fourteenth Amendment to protect corporations instead',
+      'federal enforcement of civil rights in the South resumed only in the 1950s and 1960s',
     ],
-    correctAnswer: 0,
+    correctAnswer: 3,
     explanation:
-      'Sharecropping was an exploitative crop-lien system that constrained but did not legally enslave Black laborers. The other options misrepresent its structure.',
+      'The Reconstruction amendments stayed in the Constitution but went largely unenforced until Brown v. Board of Education, the Civil Rights Act of 1964, and the Voting Rights Act of 1965. Sharecropping did last into the mid-twentieth century, but it was an economic arrangement, whereas the historian refers to constitutional guarantees of equal citizenship that went unenforced.',
     topic: 'period-5-1844-1877',
   },
 
-  /* ============== PERIOD 6: 1865–1898 ============== */
+  /* ============== SETS 13–15 — PERIOD 6: 1865–1898 ============== */
   {
     type: 'mcq',
-    question:
-      'Between 1865 and 1900, U.S. industrial output rose more than fivefold, the rail network grew from roughly 35,000 miles to nearly 200,000 miles, and corporations such as Standard Oil and Carnegie Steel achieved unprecedented size.\n\nThe developments described are best understood in the context of which of the following?',
+    stimulus: BOSSES_OF_THE_SENATE,
+    question: 'The cartoonist\'s main point is that',
     options: [
-      'The Gilded Age expansion of large-scale industrial capitalism and corporate consolidation in the United States.',
-      'A federal program of nationalization that placed the railroads and major industrial firms under public ownership.',
-      'The decline of U.S. manufacturing in the face of large-scale British industrial imports from 1865 onward.',
-      'A general retreat of corporations from interstate commerce in favor of small-scale artisanal production.',
+      'organized labor unions dominated the members of the Senate',
+      'federal regulation was stifling the growth of American industry',
+      'wealthy trusts held undue influence in the Senate',
+      'immigrant political machines chose the members of the Senate',
     ],
-    correctAnswer: 0,
+    correctAnswer: 2,
     explanation:
-      'The Gilded Age was defined by industrial expansion, corporate consolidation, and the rise of the modern corporation. The other options contradict the basic economic record.',
+      'The trusts tower over the senators while the people\'s entrance is barred, suggesting that corporate wealth, not voters, controlled the Senate. Labor unions are absent from the image, and in this era they had little influence in Congress.',
     topic: 'period-6-1865-1898',
   },
   {
     type: 'mcq',
-    question:
-      'Between 1880 and 1920, more than 20 million immigrants entered the United States, with growing numbers from southern and eastern Europe joining earlier flows from Ireland, Germany, and Scandinavia.\n\nThe pattern described above contributed most directly to which of the following?',
+    stimulus: BOSSES_OF_THE_SENATE,
+    question: 'The cartoon is best understood in the context of which of the following?',
     options: [
-      'A significant transformation of urban demography accompanied by nativist political backlash and new restrictionist legislation.',
-      'A general legal welcome of all European immigrants into U.S. cities under federally guaranteed citizenship by 1900.',
-      'The voluntary departure of most U.S.-born city dwellers to rural areas in response to the new immigration.',
-      'A sharp decline of urban industrial employment because the new immigrants refused to take factory jobs.',
+      'The consolidation of industries such as oil and sugar into giant combinations',
+      'The expansion of federal regulatory agencies under the New Deal',
+      'The breakup of large firms by Progressive Era trust-busting presidents',
+      'The shift of the national economy from industry back to agriculture',
     ],
     correctAnswer: 0,
     explanation:
-      'Late-19th-century immigration transformed U.S. cities and produced lasting nativist responses (e.g., Chinese Exclusion 1882; literacy tests; ultimately the 1924 quotas). The other options contradict the historical record.',
+      'In the 1880s firms such as Standard Oil used trusts and horizontal integration to dominate whole industries, and state legislatures, which then chose senators, were open to their influence. Progressive trust-busting under Theodore Roosevelt began only after 1901, more than a decade after the cartoon.',
     topic: 'period-6-1865-1898',
   },
   {
     type: 'mcq',
-    question:
-      'The Knights of Labor, the American Federation of Labor, and the Populist Party all emerged in the late nineteenth century in response to:',
+    stimulus: BOSSES_OF_THE_SENATE,
+    question: 'Which of the following was a federal response to the concerns the cartoon expresses?',
     options: [
-      'The economic and political consequences of industrialization, including low wages, long hours, and corporate political power.',
-      'A general decline in U.S. industrial output that left most factory workers permanently unemployed by 1885.',
-      'A federal program of mandatory eight-hour workdays adopted by Congress in 1880 and applied nationwide.',
-      'A consensus among industrial leaders that organized labor should set national wage levels by the late 1880s.',
+      'The Pendleton Act, which created a civil service based on merit',
+      'The Sherman Antitrust Act, which outlawed combinations in restraint of trade',
+      'The Dawes Act, which divided reservation lands into individual allotments',
+      'The Homestead Act, which offered western land to settlers who farmed it',
     ],
-    correctAnswer: 0,
+    correctAnswer: 1,
     explanation:
-      'These organizations responded to industrial-era labor and political grievances. The other options invert the historical record (industrial output rose; the federal eight-hour day was not adopted; industrialists overwhelmingly opposed labor power).',
+      'Congress passed the Sherman Antitrust Act in 1890 in response to public anger at the trusts, though courts enforced it weakly at first. The Pendleton Act of 1883 addressed the spoils system in federal hiring, not the power of corporations.',
     topic: 'period-6-1865-1898',
   },
   {
     type: 'mcq',
-    question:
-      'In the 1880s and 1890s, southern state governments enacted poll taxes, literacy tests, and "grandfather clauses" that effectively disenfranchised most Black voters; the Supreme Court in Plessy v. Ferguson (1896) upheld racially segregated public facilities under the doctrine of "separate but equal."\n\nThe developments described above are best understood as part of which of the following?',
+    stimulus: OMAHA_PLATFORM,
+    question: 'The grievances in the platform most directly reflected the experiences of which of the following groups?',
     options: [
-      'The post-Reconstruction consolidation of legalized racial segregation and Black disenfranchisement, often called the Jim Crow system.',
-      'A federal program of equal protection that effectively guaranteed Black voting rights across the South after 1890.',
-      'A southern state-level expansion of Reconstruction-era civil rights that included integrated public schooling by 1896.',
-      'A general extension of voting rights to women and immigrants without regard to race throughout the South.',
+      'Northeastern factory owners facing stiff competition from British imports',
+      'Southern and western farmers burdened by debt and falling crop prices',
+      'Urban reformers seeking to end machine control of city governments',
+      'Immigrant workers seeking protection from nativist restrictions',
     ],
-    correctAnswer: 0,
+    correctAnswer: 1,
     explanation:
-      'Post-Reconstruction southern states built the Jim Crow system, codified by Plessy. The other options invert the actual record.',
+      'The People\'s Party grew out of the Farmers\' Alliances, whose members blamed railroads, banks, and a tight money supply for falling crop prices and mounting debt. Urban reformers attacking political machines became prominent in the Progressive Era and were not the base of the Populist movement.',
     topic: 'period-6-1865-1898',
   },
   {
     type: 'mcq',
-    question:
-      'The Dawes Severalty Act of 1887 broke up communal Native American reservations into individual allotments and opened "surplus" land to white settlement.\n\nThe Dawes Act is best understood as:',
+    stimulus: OMAHA_PLATFORM,
+    question: 'Which of the following demands was most closely associated with the movement that produced the platform?',
     options: [
-      'A federal effort to dissolve tribal landholding and assimilate Native Americans into Anglo-American property norms.',
-      'A federal guarantee of permanent communal Native landholding free from any further white encroachment.',
-      'A treaty among the Plains nations that voluntarily redistributed lands to white settlers after 1887.',
-      'A successful program that restored to Native nations roughly two-thirds of the lands they had lost since 1850.',
+      'A strict gold standard to protect the value of the dollar',
+      'Civil service exams to replace patronage in federal jobs',
+      'A nationwide ban on the sale of alcoholic beverages',
+      'The free coinage of silver to expand the money supply',
     ],
-    correctAnswer: 0,
+    correctAnswer: 3,
     explanation:
-      'Dawes was an assimilationist statute that resulted in the loss of roughly two-thirds of remaining tribal land by the 1930s. The other options invert its actual effect.',
+      'Populists demanded free coinage of silver to inflate the currency and ease farmers\' debts, along with government ownership of the railroads and a graduated income tax. The gold standard was the position of eastern bankers and the Republican Party, which the Populists opposed.',
     topic: 'period-6-1865-1898',
   },
   {
     type: 'mcq',
-    question:
-      '"You shall not press down upon the brow of labor this crown of thorns; you shall not crucify mankind upon a cross of gold."\n— William Jennings Bryan, "Cross of Gold" speech, Democratic National Convention, 1896\n\nBryan\'s speech most directly advocated which of the following positions?',
+    stimulus: OMAHA_PLATFORM,
+    question: 'In the presidential election of 1896, the movement that produced the platform',
     options: [
-      'The free coinage of silver to expand the money supply on behalf of debtors and farmers.',
-      'A return to a strict gold-only monetary standard supported by eastern banking interests.',
-      'The federal nationalization of all U.S. railroads under government ownership by the year 1900.',
-      'The withdrawal of the United States from any international trade treaties signed before 1896.',
+      'ran James B. Weaver again as an independent candidate',
+      'allied with eastern Republicans to elect William McKinley',
+      'endorsed the Democratic nominee, William Jennings Bryan',
+      'joined the Socialists in backing Eugene V. Debs',
     ],
-    correctAnswer: 0,
+    correctAnswer: 2,
     explanation:
-      'Bryan\'s speech demanded bimetallism (free silver) to inflate the money supply on behalf of indebted farmers. The other options misrepresent his platform.',
+      'After the Democrats adopted free silver and nominated Bryan, the Populists endorsed him too, and the movement faded after McKinley\'s victory. McKinley was the Republican, gold-standard candidate whom the Populists opposed.',
     topic: 'period-6-1865-1898',
   },
   {
     type: 'mcq',
-    question:
-      'In 1898, the United States went to war with Spain following the explosion of the U.S.S. Maine in Havana harbor, and at the war\'s end annexed Puerto Rico, Guam, and the Philippines.\n\nThe Spanish-American War is best understood as a turning point because:',
+    stimulus: OMAHA_PLATFORM,
+    question: 'Which of the following Progressive Era reforms fulfilled a demand of the movement that produced the platform?',
     options: [
-      'It marked the U.S. emergence as an overseas imperial power with possessions outside the North American continent.',
-      'It ended permanent U.S. interest in territorial acquisition outside the original thirteen colonies.',
-      'It established a constitutional amendment requiring all future overseas annexations to be approved by referendum.',
-      'It produced an immediate U.S. withdrawal from the Caribbean and Pacific that lasted into the 1940s.',
+      'The Eighteenth Amendment prohibiting the manufacture and sale of alcoholic beverages',
+      'The Seventeenth Amendment providing for the direct election of senators',
+      'The Nineteenth Amendment barring sex discrimination in voting',
+      'The Pure Food and Drug Act requiring accurate labeling of medicines',
+    ],
+    correctAnswer: 1,
+    explanation:
+      'The Omaha Platform called for the popular election of senators, which the Seventeenth Amendment achieved in 1913, and for a graduated income tax, which the Sixteenth achieved the same year. Prohibition was the goal of the temperance movement and the Anti-Saloon League, not a Populist demand.',
+    topic: 'period-7-1890-1945',
+  },
+  {
+    type: 'mcq',
+    stimulus: IMMIGRANT_ORIGINS,
+    question: 'Which of the following most directly contributed to the change shown in the data?',
+    options: [
+      'Rural poverty and religious persecution in southern and eastern Europe',
+      'The repeal of Chinese exclusion, which reopened immigration across the Pacific',
+      'The Irish potato famine, which drove millions to seek work in American cities',
+      'Federal quotas that gave preference to southern and eastern Europeans',
     ],
     correctAnswer: 0,
     explanation:
-      'The 1898 war marked U.S. entry into formal overseas empire. The other options invert the historical outcome.',
+      'Land shortages in Italy and the Austro-Hungarian Empire and anti-Jewish pogroms in the Russian Empire pushed millions to emigrate, while cheap steamship travel and industrial jobs pulled them to America. The Irish famine of the 1840s produced an earlier wave of immigration from northern and western Europe.',
     topic: 'period-6-1865-1898',
   },
-
-  /* ============== PERIOD 7: 1890–1945 ============== */
   {
     type: 'mcq',
-    question:
-      'Between 1900 and 1917, Progressive Era reformers secured federal regulation of food and drugs (Pure Food and Drug Act, 1906), the breakup of major industrial trusts, the direct election of U.S. senators (Seventeenth Amendment, 1913), and a federal income tax (Sixteenth Amendment, 1913).\n\nThe pattern described above is best understood as evidence of:',
+    stimulus: IMMIGRANT_ORIGINS,
+    question: 'Which of the following was a common response by Progressive reformers to the immigration shown in the data?',
     options: [
-      'An expansion of federal regulatory authority in response to industrial-era inequalities and corporate concentration.',
-      'A general retreat of federal authority over the economy in favor of complete state-level deregulation.',
-      'A consensus among industrial leaders that the federal government should nationalize railroads, banks, and steel.',
-      'A successful effort by southern Democrats to secure full voting rights for African American men by 1917.',
+      'Federal programs that paid immigrants to return to their home countries',
+      'Settlement houses offering immigrants English classes and social services',
+      'Laws granting immigrants the right to vote on the day they arrived',
+      'Campaigns by the American Federation of Labor to recruit unskilled immigrants',
     ],
-    correctAnswer: 0,
+    correctAnswer: 1,
     explanation:
-      'Progressivism expanded federal regulatory capacity. The other options invert the historical record (Black voting rights were stripped, not extended, in this period).',
+      'Reformers such as Jane Addams at Hull House offered English classes, kindergartens, and other services in immigrant neighborhoods. The American Federation of Labor organized mainly skilled, native-born craft workers and often supported restricting immigration.',
     topic: 'period-7-1890-1945',
   },
   {
     type: 'mcq',
-    question:
-      '"The world must be made safe for democracy. Its peace must be planted upon the tested foundations of political liberty."\n— Woodrow Wilson, war message to Congress, April 1917\n\nWilson\'s argument is best understood as:',
+    stimulus: IMMIGRANT_ORIGINS,
+    question: 'The trend shown in the data contributed most directly to which of the following in the 1920s?',
     options: [
-      'An effort to frame U.S. entry into World War I as a moral and ideological crusade rather than a narrow national interest.',
-      'A request that Congress declare U.S. neutrality in the European conflict and refuse to enter the war.',
-      'A treaty proposal that would unite the U.S. with the Central Powers against Britain, France, and Russia.',
-      'A constitutional amendment proposal to abolish the U.S. armed forces by the end of 1917.',
+      'Laws ending long-standing restrictions on immigration from China and Japan',
+      'Laws setting national-origin quotas that favored northern Europeans',
+      'Laws giving priority to refugees from the war-torn nations of eastern Europe',
+      'Laws giving priority to the spouses and relatives of naturalized citizens',
     ],
-    correctAnswer: 0,
+    correctAnswer: 1,
     explanation:
-      'Wilson framed U.S. belligerency in idealist terms — democracy, self-determination, the League of Nations. The other options invert his actual position.',
-    topic: 'period-7-1890-1945',
-  },
-  {
-    type: 'mcq',
-    question:
-      'The Eighteenth Amendment (1919) prohibited the manufacture, sale, and transportation of alcoholic beverages; the Nineteenth Amendment (1920) prohibited the denial of voting rights on the basis of sex.\n\nThe two amendments together best illustrate which of the following features of early-twentieth-century American politics?',
-    options: [
-      'The success of long-running Progressive Era reform movements at securing constitutional change at the national level.',
-      'A general decline of organized political activism among American women between 1900 and 1920.',
-      'A federal commitment to the regulation of personal morality that endured uninterrupted until the year 2000.',
-      'An effort by southern state legislatures to extend the vote to African American women throughout the South.',
-    ],
-    correctAnswer: 0,
-    explanation:
-      'Both amendments capped decades of organized reform activism (temperance and suffrage). Prohibition was repealed in 1933, and Jim Crow continued to disenfranchise Black women in the South — qualifying the optimism of the era.',
-    topic: 'period-7-1890-1945',
-  },
-  {
-    type: 'mcq',
-    question:
-      'The Great Migration brought roughly six million African Americans from the rural South to northern and western cities between 1910 and 1970.\n\nWhich of the following best explains the pattern described above?',
-    options: [
-      'A combination of southern racial violence, sharecropping debt, and northern industrial wartime labor demand.',
-      'A federal program initiated by President Wilson in 1916 to relocate Black agricultural workers to northern cities.',
-      'A successful campaign by southern state governments to attract Black migrants from the urban North after 1910.',
-      'The voluntary return of Black Americans to West Africa under the auspices of the American Colonization Society.',
-    ],
-    correctAnswer: 0,
-    explanation:
-      'Push factors (Jim Crow, lynching, debt peonage) combined with pull factors (WWI/WWII industrial labor demand) drove the Great Migration. The other options misidentify both the actors and the direction.',
-    topic: 'period-7-1890-1945',
-  },
-  {
-    type: 'mcq',
-    question:
-      'Between 1929 and 1933 U.S. unemployment rose from roughly 3 percent to nearly 25 percent, and U.S. GDP fell by roughly a quarter.\n\nThe federal response under Franklin Roosevelt\'s New Deal (1933–1939) is best characterized as:',
-    options: [
-      'A significant expansion of federal authority over the economy through relief, recovery, and reform programs.',
-      'A complete withdrawal of federal involvement in the economy in favor of state-level laissez-faire policies.',
-      'A federal program that explicitly nationalized all U.S. banks, railroads, and steel mills by 1935.',
-      'A return to the Hamiltonian financial program of the 1790s, including a strict bullionist gold-only currency.',
-    ],
-    correctAnswer: 0,
-    explanation:
-      'The New Deal expanded federal authority through agencies like the WPA, CCC, SEC, NLRB, and Social Security — without nationalizing major industries. The other options misrepresent its scope.',
-    topic: 'period-7-1890-1945',
-  },
-  {
-    type: 'mcq',
-    question:
-      'During World War II, the U.S. federal government built more than two million units of war housing, contracted directly with industrial firms to produce more than 300,000 aircraft, conscripted more than 10 million soldiers, and interned roughly 120,000 people of Japanese descent on the West Coast.\n\nThe wartime developments listed above best illustrate which of the following?',
-    options: [
-      'A dramatic expansion of federal mobilization, economic management, and authority over civil liberties during total war.',
-      'A general withdrawal of federal authority during wartime in favor of state-level industrial planning boards.',
-      'A federal program of voluntary military service that filled the U.S. armed forces without any draft after 1941.',
-      'A federal commitment to civil liberties that prevented any restriction on the rights of any U.S. resident during wartime.',
-    ],
-    correctAnswer: 0,
-    explanation:
-      'WWII marked an enormous expansion of federal capacity — and, in the case of Japanese internment, a sweeping wartime restriction of civil liberties. The other options invert the record.',
-    topic: 'period-7-1890-1945',
-  },
-  {
-    type: 'mcq',
-    question:
-      'In August 1945 the United States dropped atomic bombs on Hiroshima and Nagasaki, killing more than 100,000 civilians and prompting Japan\'s surrender within days.\n\nThe long-term world-historical significance of these events is best understood as:',
-    options: [
-      'The opening of the nuclear age, which subsequently structured U.S. strategic competition with the Soviet Union.',
-      'The voluntary renunciation of nuclear weapons by all wartime belligerents under the United Nations Charter.',
-      'The end of all interstate warfare between major powers from 1945 to the present in any region of the globe.',
-      'The conversion of Imperial Japan into a permanent member of the United Nations Security Council in 1945.',
-    ],
-    correctAnswer: 0,
-    explanation:
-      'The 1945 atomic bombings opened the nuclear age and shaped Cold War strategy. The UN Charter did not renounce nuclear weapons; major-power proxy wars continued; and Japan was not given a UNSC permanent seat.',
-    topic: 'period-7-1890-1945',
-  },
-  {
-    type: 'mcq',
-    question:
-      '"As the Negro is here, and here to stay, it is for us to adjust ourselves to his presence… in all things that are purely social we can be as separate as the fingers, yet one as the hand in all things essential to mutual progress."\n— Booker T. Washington, Atlanta Compromise speech, 1895\n\nW. E. B. Du Bois\'s critique of Washington\'s position is best summarized as:',
-    options: [
-      'An insistence that African Americans had to demand full civil and political rights immediately, not accept gradualist accommodation.',
-      'An argument that African Americans should permanently abandon any pursuit of higher education or skilled trades.',
-      'A defense of literacy tests and poll taxes as legitimate prerequisites for Black voting rights in the South.',
-      'A proposal that African Americans return to West Africa under federal auspices in the early twentieth century.',
-    ],
-    correctAnswer: 0,
-    explanation:
-      'Du Bois (in The Souls of Black Folk and through the NAACP) demanded immediate civil and political equality and the cultivation of a "Talented Tenth" — explicitly opposing Washington\'s gradualist accommodation.',
+      'The Immigration Act of 1924 set quotas based on the 1890 census, sharply cutting arrivals from southern and eastern Europe and barring most Asian immigrants. Preference for the relatives of citizens came with the Immigration and Nationality Act of 1965, which abolished the national-origin quotas.',
     topic: 'period-7-1890-1945',
   },
 
-  /* ============== PERIOD 8: 1945–1980 ============== */
+  /* ============== SETS 16–17 — PERIOD 7: 1890–1945 ============== */
   {
     type: 'mcq',
-    question:
-      'Between 1947 and 1989, the United States and the Soviet Union avoided direct military confrontation but supplied opposing sides in Korea, Vietnam, Angola, and Afghanistan, while the U.S. organized NATO and the Warsaw Pact organized eastern Europe.\n\nThe pattern described best illustrates which of the following Cold War features?',
+    stimulus: WILSON_1917,
+    question: 'Wilson\'s argument is best understood as',
     options: [
-      'The use of alliances and proxy wars to pursue superpower competition without direct nuclear escalation.',
-      'A general U.S. withdrawal from European and Asian security commitments after the end of WWII.',
-      'A consistent willingness of both superpowers to deploy strategic nuclear weapons in regional conflicts.',
-      'The successful neutrality of the United Nations in containing all major regional conflicts after 1945.',
+      'a call for the United States to remain neutral toward the warring powers',
+      'a justification for war that framed American aims as defending democracy',
+      'a demand that the United States receive territory in a peace settlement',
+      'a defense of American investments in Latin America against German threats',
+    ],
+    correctAnswer: 1,
+    explanation:
+      'Wilson presented entry into World War I as an idealistic cause, disclaiming conquest and indemnities in favor of a world "safe for democracy." He had urged neutrality from 1914 to 1917, but this address asked Congress to declare war.',
+    topic: 'period-7-1890-1945',
+  },
+  {
+    type: 'mcq',
+    stimulus: WILSON_1917,
+    question: 'Which of the following was a domestic consequence of the decision Wilson asked Congress to make?',
+    options: [
+      'Prosecution of war critics under the Espionage and Sedition Acts',
+      'A sharp fall in northern factory jobs as war orders dried up',
+      'Internment of more than 100,000 German Americans in camps',
+      'A halt to African American migration from the South to the North',
     ],
     correctAnswer: 0,
     explanation:
-      'Cold War strategy combined alliance-building with proxy warfare under the constraint of mutually assured destruction. The other options invert the record.',
+      'The Espionage Act of 1917 and the Sedition Act of 1918 were used to imprison war critics such as Eugene Debs. Several thousand German nationals were interned as enemy aliens, but mass internment on the scale of 100,000 people happened to Japanese Americans in World War II, not to German Americans in World War I.',
+    topic: 'period-7-1890-1945',
+  },
+  {
+    type: 'mcq',
+    stimulus: WILSON_1917,
+    question: 'The Senate\'s refusal to ratify the Treaty of Versailles after the war most directly reflected',
+    options: [
+      'anger that the treaty treated defeated Germany too leniently',
+      'fear that the treaty would make the United States pay reparations',
+      'objections that the treaty denied the United States new colonies',
+      'concern that the League of Nations would limit Congress\'s war powers',
+    ],
+    correctAnswer: 3,
+    explanation:
+      'Senators led by Henry Cabot Lodge objected that Article X of the League Covenant could commit the United States to war without congressional approval. Germany, not the United States, was required to pay reparations under the treaty.',
+    topic: 'period-7-1890-1945',
+  },
+  {
+    type: 'mcq',
+    stimulus: FDR_1933,
+    question: 'Roosevelt\'s address is best understood in the context of which of the following?',
+    options: [
+      'Labor shortages and inflation during mobilization for World War I',
+      'Social tension and nativism during the Red Scare after World War I',
+      'Consumer spending and stock speculation during the boom of the 1920s',
+      'Mass unemployment and bank failures during the Great Depression',
+    ],
+    correctAnswer: 3,
+    explanation:
+      'Roosevelt took office with unemployment near 25 percent and the banking system collapsing, so "to put people to work" was his first task. The speculation of the 1920s helped cause the 1929 crash, but by 1933 the boom had long since ended.',
+    topic: 'period-7-1890-1945',
+  },
+  {
+    type: 'mcq',
+    stimulus: FDR_1933,
+    question: 'The policies that followed the address differed from those of the preceding administration chiefly in that they',
+    options: [
+      'relied on voluntary cooperation by business instead of federal rules',
+      'cut federal spending to balance the budget and reassure investors',
+      'used direct federal spending to provide relief and create jobs',
+      'placed the major banks and industries under government ownership',
+    ],
+    correctAnswer: 2,
+    explanation:
+      'Programs such as the Civilian Conservation Corps and the Works Progress Administration hired millions directly, a break from Hoover\'s reliance on voluntarism and local relief. Reliance on voluntary business cooperation describes Hoover\'s approach, the one the New Deal moved away from.',
+    topic: 'period-7-1890-1945',
+  },
+
+  /* ============== SETS 18–19 — PERIOD 8: 1945–1980 ============== */
+  {
+    type: 'mcq',
+    stimulus: KENNAN,
+    question: 'The policy Kennan describes is most clearly consistent with which of the following?',
+    options: [
+      'The Neutrality Acts\' limits on loans and arms sales to nations at war',
+      'The Good Neighbor policy\'s pledge not to intervene in Latin America',
+      'The Open Door notes\' call for equal trading rights in China',
+      'The Truman Doctrine\'s aid to governments resisting communist pressure',
+    ],
+    correctAnswer: 3,
+    explanation:
+      'In March 1947 Truman asked Congress for aid to Greece and Turkey, pledging to support "free peoples" resisting subjugation, the same containment strategy Kennan had urged inside the government since 1946 and explained publicly that July. The Neutrality Acts of the 1930s aimed to keep the United States out of foreign wars, the opposite of an active global strategy.',
     topic: 'period-8-1945-1980',
   },
   {
     type: 'mcq',
-    question:
-      'The Servicemen\'s Readjustment Act ("GI Bill," 1944), the Federal-Aid Highway Act of 1956, and the Federal Housing Administration\'s mortgage insurance programs together contributed most directly to which of the following postwar trends?',
+    stimulus: KENNAN,
+    question: 'Which of the following was a domestic development associated with the policy Kennan recommended?',
     options: [
-      'The growth of suburban housing, automobile commuting, and a federally subsidized middle class — predominantly white in the early decades.',
-      'A federal program that integrated suburban housing across racial lines beginning immediately after World War II.',
-      'A general decline of urban populations because federal subsidies favored rural agricultural housing throughout the 1950s.',
-      'The mass migration of suburban families back to inner cities under direct federal relocation orders in the 1960s.',
+      'Steep and lasting cuts to the military budget after the end of the Korean War',
+      'Investigations of alleged communist influence in government and Hollywood',
+      'Federal internment of Americans of German and Italian ancestry',
+      'Reductions in federal spending on science and higher education',
     ],
-    correctAnswer: 0,
+    correctAnswer: 1,
     explanation:
-      'GI Bill, FHA mortgage insurance, and the interstate highway program built the postwar suburbs — and through redlining and FHA underwriting practices, those subsidies disproportionately benefited white families. The other options invert the record.',
+      'Cold War fears fueled the Second Red Scare, including loyalty reviews, the House Un-American Activities Committee\'s Hollywood hearings, and McCarthyism. Federal spending on science and education rose rather than fell, especially through the National Defense Education Act of 1958 after Sputnik.',
     topic: 'period-8-1945-1980',
   },
   {
     type: 'mcq',
-    question:
-      'In Brown v. Board of Education (1954), the Supreme Court unanimously held that "in the field of public education, the doctrine of \'separate but equal\' has no place."\n\nBrown is best understood as:',
+    stimulus: KENNAN,
+    question: 'Critics in the 1960s and 1970s argued that applying containment in Southeast Asia',
     options: [
-      'A constitutional repudiation of Plessy v. Ferguson that became a cornerstone of the modern civil rights movement.',
-      'An affirmation of the 1896 Plessy doctrine that public schools could be segregated by race if facilities were equal.',
-      'A federal program guaranteeing equal funding to all U.S. public school districts regardless of race or geography.',
-      'A constitutional amendment ratified by all 48 states in 1954 outlawing school segregation in every state.',
+      'mistook a Vietnamese nationalist struggle for Soviet-directed expansion',
+      'failed because it relied on economic aid rather than on military force',
+      'neglected Southeast Asia in order to concentrate on defending Europe',
+      'succeeded in Vietnam but drained funds from the space program',
     ],
     correctAnswer: 0,
     explanation:
-      'Brown overturned Plessy in the public-school context and became the legal foundation of the modern civil rights movement. It was a Supreme Court decision, not an amendment, and it did not equalize school funding.',
+      'Critics such as Senator J. William Fulbright, and later Kennan himself, argued that Vietnam\'s conflict was rooted in anticolonial nationalism and that treating it as Soviet expansion led to a costly, unwinnable war. The war was fought with more than 500,000 American troops at its peak, so it did not fail for lack of military force.',
     topic: 'period-8-1945-1980',
   },
   {
     type: 'mcq',
-    question:
-      '"I have a dream that one day on the red hills of Georgia the sons of former slaves and the sons of former slave owners will be able to sit down together at the table of brotherhood."\n— Martin Luther King Jr., March on Washington, August 1963\n\nThe march and speech contributed most directly to which of the following?',
+    stimulus: KING_1963,
+    question: 'King\'s letter most directly defends which of the following strategies?',
     options: [
-      'The political momentum behind passage of the Civil Rights Act of 1964 and the Voting Rights Act of 1965.',
-      'The voluntary repeal of all southern Jim Crow laws by state legislatures within six months of August 1963.',
-      'A constitutional amendment ratified in 1963 that abolished the U.S. Supreme Court\'s judicial-review power.',
-      'A federal program of mandatory racial segregation in all public accommodations south of the Mason-Dixon line.',
+      'Patient negotiation with white officials while avoiding public protest',
+      'Armed self-defense by Black communities against segregationist violence',
+      'Nonviolent protest designed to force a response from those in power',
+      'Reliance on federal lawsuits rather than mass action to end segregation',
     ],
-    correctAnswer: 0,
+    correctAnswer: 2,
     explanation:
-      'The march and King\'s speech mobilized the political pressure that helped pass the 1964 Civil Rights Act and the 1965 Voting Rights Act. The other options describe outcomes that did not occur.',
+      'King answers clergymen who called the Birmingham demonstrations "untimely," arguing that nonviolent direct action creates a crisis that forces negotiation. He rejects waiting for officials to act, insisting that freedom "must be demanded by the oppressed."',
     topic: 'period-8-1945-1980',
   },
   {
     type: 'mcq',
-    question:
-      'Between 1965 and 1973, the United States deployed more than 500,000 troops to South Vietnam, dropped more bombs on Indochina than were used in all of World War II, and sustained more than 58,000 American military deaths.\n\nThe long-term political consequences of the Vietnam War in the United States most directly included:',
+    stimulus: KING_1963,
+    question: 'The Birmingham campaign contributed most directly to',
     options: [
-      'A profound decline of public trust in the federal government and reform of the executive\'s war-making powers.',
-      'A consensus among the American public that future U.S. wars in Asia should be even larger and longer.',
-      'A general renewal of public confidence in the U.S. presidency that endured uninterrupted into the 21st century.',
-      'A successful U.S. diplomatic settlement that produced a unified non-communist government in Vietnam by 1976.',
+      'the Supreme Court\'s ruling in Brown v. Board of Education',
+      'President Truman\'s order desegregating the armed forces',
+      'the passage of the Civil Rights Act of 1964',
+      'the Montgomery bus boycott\'s victory over bus segregation',
     ],
-    correctAnswer: 0,
+    correctAnswer: 2,
     explanation:
-      'Vietnam shattered public trust and produced the War Powers Resolution of 1973. Saigon fell to the North in 1975, unifying Vietnam under communist rule, and U.S. confidence in the presidency was further undermined by Watergate.',
+      'Televised images of police using dogs and fire hoses on young marchers in Birmingham led President Kennedy to propose the civil rights bill that became the Civil Rights Act of 1964. The Montgomery bus boycott ended in victory in 1956, seven years before the Birmingham campaign.',
     topic: 'period-8-1945-1980',
   },
   {
     type: 'mcq',
-    question:
-      'The "Second Wave" feminist movement of the 1960s and 1970s organized around publications such as Betty Friedan\'s The Feminine Mystique (1963), the founding of the National Organization for Women (1966), and Title IX of the Education Amendments of 1972.\n\nWhich of the following best describes one significant outcome of this movement?',
+    stimulus: KING_1963,
+    question: 'Later in the 1960s, many advocates of Black Power differed from King chiefly in that they',
     options: [
-      'A substantial expansion of women\'s legal protections in employment and education, even though the Equal Rights Amendment fell short of ratification.',
-      'A successful ratification of the Equal Rights Amendment by all 50 states by the federal deadline in 1982.',
-      'A general consensus among American religious denominations that ordained women as clergy beginning in 1965.',
-      'A federal program that achieved full pay parity between men and women for equivalent work by the year 1980.',
+      'emphasized racial pride and self-defense over integration',
+      'opposed mass demonstrations in favor of lawsuits in federal court',
+      'worked mainly through the southern leadership of the Democratic Party',
+      'focused on desegregating public schools in the rural South',
     ],
     correctAnswer: 0,
     explanation:
-      'Second Wave feminism produced major statutory and judicial gains (Title IX, Roe v. Wade, EEOC enforcement) — but the ERA was not ratified, and pay parity has not been achieved. The other options overstate the outcomes.',
+      'Leaders such as Stokely Carmichael and the Black Panthers stressed Black pride, community control, and armed self-defense, questioning integration and strict nonviolence. Reliance on federal lawsuits was the NAACP\'s long-standing approach, not a feature of Black Power.',
     topic: 'period-8-1945-1980',
   },
 
-  /* ============== PERIOD 9: 1980–PRESENT ============== */
+  /* ============== SET 20 — PERIOD 9: 1980–PRESENT ============== */
   {
     type: 'mcq',
-    question:
-      'Between 1981 and 1989, President Ronald Reagan reduced the top federal income-tax rate from 70 percent to 28 percent, deregulated several major industries, and increased federal defense spending sharply.\n\nReagan\'s domestic program is best understood as:',
+    stimulus: REAGAN_1981,
+    question: 'Reagan\'s statement is best understood in the context of which of the following?',
     options: [
-      'A conservative effort to reduce direct federal regulation while reorienting federal spending toward defense.',
-      'A continuation of New Deal–style federal expansion of welfare and labor regulation throughout the 1980s.',
-      'A successful federal program that fully balanced the U.S. budget by the end of the 1980s.',
-      'A constitutional amendment ratified in 1981 that abolished federal income taxation in the United States.',
+      'Rising public confidence in federal economic management during the 1970s',
+      'Strong economic growth and low inflation in the late 1970s',
+      'Stagflation and declining public trust in government during the 1970s',
+      'Broad public support for expanding the Great Society in the 1970s',
     ],
-    correctAnswer: 0,
+    correctAnswer: 2,
     explanation:
-      'Reaganomics combined tax cuts, deregulation, and a defense build-up, while running large deficits. The other options invert the record.',
+      'High inflation combined with unemployment, the energy crises, and the shocks of Vietnam and Watergate left many Americans skeptical of government, which helped Reagan win in 1980. The late 1970s brought double-digit inflation and slow growth, not the strong economy and low inflation that would have made his message less appealing.',
     topic: 'period-9-1980-present',
   },
   {
     type: 'mcq',
-    question:
-      'The 2008 financial crisis triggered the deepest U.S. recession since the Great Depression, the bipartisan TARP bailout of major financial institutions, and the federal stimulus package of 2009.\n\nThe federal response to the crisis is best understood as:',
+    stimulus: REAGAN_1981,
+    question: 'Which of the following policies of the 1980s most directly reflected the goal Reagan stated?',
     options: [
-      'An expansion of federal economic intervention to stabilize the financial system and the broader macroeconomy.',
-      'A consistent application of strict laissez-faire policy that allowed major U.S. banks to fail without intervention.',
-      'A federal commitment to the gold standard restored by congressional statute in late 2008.',
-      'A successful program that prevented the U.S. unemployment rate from rising at all between 2008 and 2010.',
+      'An expansion of federal antipoverty programs modeled on the Great Society',
+      'Cuts in defense spending to shrink the growing federal budget deficit',
+      'Federal controls on wages and prices to bring down high inflation',
+      'Reductions in income tax rates and in federal regulation of industry',
     ],
-    correctAnswer: 0,
+    correctAnswer: 3,
     explanation:
-      'The 2008–2009 response (TARP, the Recovery Act, Federal Reserve interventions) was a major expansion of federal economic action. The other options contradict the record.',
+      'The Economic Recovery Tax Act of 1981 and later reforms cut income tax rates sharply, and the administration loosened regulation of industries such as energy and banking. Defense spending rose under Reagan, so a defense cut would contradict his record.',
+    topic: 'period-9-1980-present',
+  },
+  {
+    type: 'mcq',
+    stimulus: REAGAN_1981,
+    question: 'Which of the following later developments most directly continued the ideas Reagan expressed?',
+    options: [
+      'The 2010 Affordable Care Act expanding federal health insurance subsidies',
+      'The 1990 Americans with Disabilities Act imposing new rules on employers',
+      'The 2003 law adding a prescription drug benefit to Medicare',
+      'The 1996 welfare reform law adding work requirements and time limits',
+    ],
+    correctAnswer: 3,
+    explanation:
+      'The 1996 Personal Responsibility and Work Opportunity Reconciliation Act, signed by President Clinton, replaced open-ended welfare entitlements with time-limited aid tied to work. The Affordable Care Act, the Americans with Disabilities Act, and the Medicare drug benefit all enlarged federal programs or federal regulation, the opposite of curbing "the size and influence of the Federal establishment."',
     topic: 'period-9-1980-present',
   },
 ]
