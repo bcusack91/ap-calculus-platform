@@ -355,48 +355,48 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./aas-african-kingdoms-part1').then(m => m.aasAfricanKingdomsPart1Data) },
-      { title: 'Key Processes', loader: () => import('./aas-african-kingdoms-part2').then(m => m.aasAfricanKingdomsPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./aas-african-kingdoms-part3').then(m => m.aasAfricanKingdomsPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./aas-african-kingdoms-part4').then(m => m.aasAfricanKingdomsPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./aas-african-kingdoms-part5').then(m => m.aasAfricanKingdomsPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./aas-african-kingdoms-part6').then(m => m.aasAfricanKingdomsPart6Data) },
-      { title: 'AP Review', loader: () => import('./aas-african-kingdoms-part7').then(m => m.aasAfricanKingdomsPart7Data) }
+      { title: 'Geography, Gold and Salt: How the Sahel Empires Rose and Fell', loader: () => import('./aas-african-kingdoms-part2').then(m => m.aasAfricanKingdomsPart2Data) },
+      { title: 'Beyond the Sahel: Aksum, the Swahili Coast, Great Zimbabwe, Benin and Kongo', loader: () => import('./aas-african-kingdoms-part3').then(m => m.aasAfricanKingdomsPart3Data) },
+      { title: 'Source Workshop: Travelers, Chroniclers, Griots and Mapmakers', loader: () => import('./aas-african-kingdoms-part4').then(m => m.aasAfricanKingdomsPart4Data) },
+      { title: 'Nuance, Misconceptions and Connections', loader: () => import('./aas-african-kingdoms-part5').then(m => m.aasAfricanKingdomsPart5Data) },
+      { title: 'AP Exam Practice: Source Sets and Short Answers', loader: () => import('./aas-african-kingdoms-part6').then(m => m.aasAfricanKingdomsPart6Data) },
+      { title: 'Synthesis Review: States, Networks and Legacies', loader: () => import('./aas-african-kingdoms-part7').then(m => m.aasAfricanKingdomsPart7Data) }
     ],
   },
   'aas-origins-diaspora': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./aas-origins-diaspora-part1').then(m => m.aasOriginsDiasporaPart1Data) },
-      { title: 'Key Processes', loader: () => import('./aas-origins-diaspora-part2').then(m => m.aasOriginsDiasporaPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./aas-origins-diaspora-part3').then(m => m.aasOriginsDiasporaPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./aas-origins-diaspora-part4').then(m => m.aasOriginsDiasporaPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./aas-origins-diaspora-part5').then(m => m.aasOriginsDiasporaPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./aas-origins-diaspora-part6').then(m => m.aasOriginsDiasporaPart6Data) },
-      { title: 'AP Review', loader: () => import('./aas-origins-diaspora-part7').then(m => m.aasOriginsDiasporaPart7Data) }
+      { title: 'Africans in the Early Atlantic World, 1441–1619', loader: () => import('./aas-origins-diaspora-part2').then(m => m.aasOriginsDiasporaPart2Data) },
+      { title: 'Mapping the Diaspora: Regions of Origin, Destinations and Numbers', loader: () => import('./aas-origins-diaspora-part3').then(m => m.aasOriginsDiasporaPart3Data) },
+      { title: 'Retention and Creolization in Practice', loader: () => import('./aas-origins-diaspora-part4').then(m => m.aasOriginsDiasporaPart4Data) },
+      { title: 'Maroons and the Revolutionary Diaspora', loader: () => import('./aas-origins-diaspora-part5').then(m => m.aasOriginsDiasporaPart5Data) },
+      { title: 'Source Workshop: Voices of the Black Atlantic', loader: () => import('./aas-origins-diaspora-part6').then(m => m.aasOriginsDiasporaPart6Data) },
+      { title: 'Synthesis and AP Review', loader: () => import('./aas-origins-diaspora-part7').then(m => m.aasOriginsDiasporaPart7Data) }
     ],
   },
   'aas-transatlantic-slave-trade': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./aas-transatlantic-slave-trade-part1').then(m => m.aasTransatlanticSlaveTradePart1Data) },
-      { title: 'Key Processes', loader: () => import('./aas-transatlantic-slave-trade-part2').then(m => m.aasTransatlanticSlaveTradePart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./aas-transatlantic-slave-trade-part3').then(m => m.aasTransatlanticSlaveTradePart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./aas-transatlantic-slave-trade-part4').then(m => m.aasTransatlanticSlaveTradePart4Data) },
-      { title: 'Change Over Time', loader: () => import('./aas-transatlantic-slave-trade-part5').then(m => m.aasTransatlanticSlaveTradePart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./aas-transatlantic-slave-trade-part6').then(m => m.aasTransatlanticSlaveTradePart6Data) },
-      { title: 'AP Review', loader: () => import('./aas-transatlantic-slave-trade-part7').then(m => m.aasTransatlanticSlaveTradePart7Data) }
+      { title: 'How the Trade Worked: From Capture to the Coast', loader: () => import('./aas-transatlantic-slave-trade-part2').then(m => m.aasTransatlanticSlaveTradePart2Data) },
+      { title: 'The Middle Passage: Conditions and Shipboard Resistance', loader: () => import('./aas-transatlantic-slave-trade-part3').then(m => m.aasTransatlanticSlaveTradePart3Data) },
+      { title: 'Reading the Data: Volume, Carriers and Change Over Time', loader: () => import('./aas-transatlantic-slave-trade-part4').then(m => m.aasTransatlanticSlaveTradePart4Data) },
+      { title: 'Ending the Trade: Abolitionists, Laws and the Illegal Trade', loader: () => import('./aas-transatlantic-slave-trade-part5').then(m => m.aasTransatlanticSlaveTradePart5Data) },
+      { title: 'Source Workshop: Witnesses to the Trade', loader: () => import('./aas-transatlantic-slave-trade-part6').then(m => m.aasTransatlanticSlaveTradePart6Data) },
+      { title: 'Synthesis and AP Review', loader: () => import('./aas-transatlantic-slave-trade-part7').then(m => m.aasTransatlanticSlaveTradePart7Data) }
     ],
   },
   'aas-slavery-in-america': {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./aas-slavery-in-america-part1').then(m => m.aasSlaveryInAmericaPart1Data) },
-      { title: 'Key Processes', loader: () => import('./aas-slavery-in-america-part2').then(m => m.aasSlaveryInAmericaPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./aas-slavery-in-america-part3').then(m => m.aasSlaveryInAmericaPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./aas-slavery-in-america-part4').then(m => m.aasSlaveryInAmericaPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./aas-slavery-in-america-part5').then(m => m.aasSlaveryInAmericaPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./aas-slavery-in-america-part6').then(m => m.aasSlaveryInAmericaPart6Data) },
-      { title: 'AP Review', loader: () => import('./aas-slavery-in-america-part7').then(m => m.aasSlaveryInAmericaPart7Data) }
+      { title: 'Making Slavery Hereditary and Racial: Colonial Law, 1619–1740', loader: () => import('./aas-slavery-in-america-part2').then(m => m.aasSlaveryInAmericaPart2Data) },
+      { title: 'Labor and Regions: Tobacco, Rice, Sugar and Cotton', loader: () => import('./aas-slavery-in-america-part3').then(m => m.aasSlaveryInAmericaPart3Data) },
+      { title: 'Numbers and the Cotton Economy: Reading Census Data', loader: () => import('./aas-slavery-in-america-part4').then(m => m.aasSlaveryInAmericaPart4Data) },
+      { title: 'Family, Faith and Community under Slavery', loader: () => import('./aas-slavery-in-america-part5').then(m => m.aasSlaveryInAmericaPart5Data) },
+      { title: 'Source Workshop: Narratives and the Constitution', loader: () => import('./aas-slavery-in-america-part6').then(m => m.aasSlaveryInAmericaPart6Data) },
+      { title: 'Synthesis and AP Review', loader: () => import('./aas-slavery-in-america-part7').then(m => m.aasSlaveryInAmericaPart7Data) }
     ],
   },
   'aas-resistance-abolition': {
