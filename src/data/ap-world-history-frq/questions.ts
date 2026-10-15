@@ -4,6 +4,10 @@
  *
  * Format mirrors College Board AP World History exam: long source-/scenario-based prompts
  * (~25 min, 7 pts) and shorter source/data prompts (~12 min, 4 pts).
+ *
+ * Document-based questions (type 'dbq') are hand-written (not generated): 7
+ * documents and the College Board 7-point DBQ rubric. Documents are real
+ * public-domain sources; any excerpt not quoted verbatim is labelled "adapted".
  */
 
 export interface FRQRubricItem {
@@ -22,7 +26,7 @@ export interface FRQPart {
 
 export interface WorldHistoryFRQ {
   id: string
-  type: 'long' | 'short'
+  type: 'long' | 'short' | 'dbq'
   unit: number
   title: string
   prompt: string
@@ -435,7 +439,327 @@ const shortFRQs: WorldHistoryFRQ[] = [
 ]
 
 
-export const apWorldHistoryFRQs: WorldHistoryFRQ[] = [...longFRQs, ...shortFRQs]
+/* ------------------------------------------------------------------ */
+/*  Document-based questions — 7 documents, 7-point rubric             */
+/* ------------------------------------------------------------------ */
+
+const DBQ_DIRECTIONS =
+  '**Directions:** The question is based on the accompanying documents. The documents have been edited for the purpose of this exercise. Suggested time: 60 minutes, including a 15-minute reading period.\n\n' +
+  'In your response you should do the following:\n\n' +
+  '- Respond to the prompt with a historically defensible thesis or claim that establishes a line of reasoning.\n' +
+  '- Describe a broader historical context relevant to the prompt.\n' +
+  '- Support an argument in response to the prompt using at least four documents.\n' +
+  '- Use at least one additional piece of specific historical evidence (beyond that found in the documents) relevant to an argument about the prompt.\n' +
+  '- For at least two documents, explain how or why the document\'s point of view, purpose, historical situation, and/or audience is relevant to an argument.\n' +
+  '- Use evidence to corroborate, qualify, or modify an argument that addresses the prompt.'
+
+const DOC_KEYWORDS = ['document 1', 'document 2', 'document 3', 'document 4', 'document 5', 'document 6', 'document 7', 'doc 1', 'doc 2', 'doc 3', 'doc 4', 'doc 5', 'doc 6', 'doc 7', 'doc. 1', 'doc. 2', 'doc. 3', 'doc. 4', 'doc. 5', 'doc. 6', 'doc. 7']
+
+/** The College Board AP World History: Modern DBQ rubric (7 points), with prompt-specific examples. */
+function dbqRubric(spec: {
+  thesisKeywords: string[]
+  context: string
+  contextKeywords: string[]
+  outside: string
+  outsideKeywords: string[]
+  complexity: string
+}): FRQRubricItem[] {
+  return [
+    { points: 1, description: 'A. Thesis/Claim — Responds to the prompt with a historically defensible thesis or claim that establishes a line of reasoning (in the introduction or conclusion; more than a restatement of the prompt).', keywords: spec.thesisKeywords },
+    { points: 1, description: `B. Contextualization — Describes a broader historical context relevant to the prompt, in more than a phrase or passing reference. Examples: ${spec.context}`, keywords: spec.contextKeywords },
+    { points: 1, description: 'C. Evidence from the documents (1 of 2) — Uses the content of at least THREE documents to address the topic of the prompt (describes, not just quotes, what each says).', keywords: DOC_KEYWORDS },
+    { points: 1, description: 'C. Evidence from the documents (2 of 2) — Supports an argument in response to the prompt using at least FOUR documents.', keywords: DOC_KEYWORDS },
+    { points: 1, description: `C. Evidence beyond the documents — Uses at least one additional piece of specific historical evidence, not found in the documents, relevant to an argument about the prompt. Examples: ${spec.outside}`, keywords: spec.outsideKeywords },
+    { points: 1, description: 'D. Analysis and reasoning: sourcing — For at least TWO documents, explains how or why the document\'s point of view, purpose, historical situation, and/or audience is relevant to an argument (identifying the author alone does not earn the point).', keywords: ['point of view', 'purpose', 'audience', 'historical situation', 'intended', 'written to', 'because he was', 'because she was', 'as a', 'reliab', 'bias'] },
+    { points: 1, description: `D. Analysis and reasoning: complexity — Demonstrates a complex understanding of the historical development that is the focus of the prompt, using evidence to corroborate, qualify, or modify an argument. Examples: ${spec.complexity}`, keywords: ['however', 'although', 'while', 'yet', 'on the other hand', 'qualif', 'corroborat', 'nevertheless', 'at the same time', 'continuity'] },
+  ]
+}
+
+const dbqFRQs: WorldHistoryFRQ[] = [
+  {
+    id: 'wh-dbq-1',
+    type: 'dbq' as const,
+    unit: 4,
+    title: 'DBQ: Economic Motives and Iberian Expansion, 1492–1650',
+    prompt: DBQ_DIRECTIONS + `
+
+**Question:** Evaluate the extent to which economic motives shaped European interactions with the peoples of the Americas and West Central Africa in the period from 1492 to 1650.
+
+---
+
+**Document 1**
+
+*Source: Christopher Columbus, letter to Luis de Santángel, an official of the Spanish court who helped finance the voyage, written on the return voyage in February 1493 and printed in Spain that year (adapted from an English translation).*
+
+> "They are so guileless and so generous with all they possess, that no one would believe it who has not seen it. . . . [Their Highnesses] may see that I shall give them as much gold as they need . . . and slaves, as many as they shall order to be shipped, and these shall be from the idolaters."
+
+---
+
+**Document 2**
+
+*Source: The* Requerimiento *("Requirement"), a statement drafted for the Spanish Crown by the jurist Juan López de Palacios Rubios in 1513 and read aloud, in Spanish, by conquistadors to Indigenous peoples before battle (English translation).*
+
+> "But if you do not do this, and maliciously make delay in it, I certify to you that, with the help of God, we shall powerfully enter into your country, and shall make war against you in all ways and manners that we can, and shall subject you to the yoke and obedience of the Church and of their Highnesses; we shall take you and your wives and your children, and shall make slaves of them . . . and we shall take away your goods . . ."
+
+---
+
+**Document 3**
+
+*Source: Afonso I (Nzinga Mbemba), Christian king of Kongo, letter to King João III of Portugal, July 6, 1526 (adapted from an English translation).*
+
+> "Each day the traders are kidnapping our people—children of this country, sons of our nobles and vassals, even people of our own family. . . . This corruption and depravity are so widespread that our land is entirely depopulated. . . . It is our will that in these Kingdoms there should not be any trade of slaves nor outlet for them."
+
+---
+
+**Document 4**
+
+*Source: Bartolomé de las Casas, Spanish Dominican friar and former* encomendero, *A Short Account of the Destruction of the Indies, written in 1542 for the future King Philip II and published in 1552 (adapted).*
+
+> "The reason the Christians have killed and destroyed such an infinite number of souls is solely that they have made gold their ultimate aim, seeking to grow rich in a very short time and to rise to high positions out of all proportion to their station."
+
+---
+
+**Document 5**
+
+*Source: The New Laws, issued by King Charles I of Spain (Holy Roman Emperor Charles V), 1542 (adapted from an English translation).*
+
+> "We order and command that from now on, for no cause of war or any other, even that of rebellion, nor by ransom nor in any other manner, can an Indian be made a slave, and we wish that they be treated as our vassals of the Crown of Castile, since they are such."
+
+---
+
+**Document 6**
+
+*Source: Juan Ginés de Sepúlveda, Spanish humanist scholar and royal chronicler, arguing against Las Casas in* Democrates Alter, *written c. 1544 and debated at Valladolid in 1550–1551 (adapted from an English translation).*
+
+> "The Spanish have a perfect right to rule these barbarians of the New World and the adjacent islands, who in prudence, skill, virtues, and humanity are as inferior to the Spanish as children to adults, or women to men."
+
+---
+
+**Document 7**
+
+*Source: Felipe Guaman Poma de Ayala, Andean nobleman, summary of his* First New Chronicle and Good Government, *a nearly 1,200-page illustrated letter addressed to King Philip III of Spain, completed around 1615 (adapted).*
+
+> Guaman Poma complained to the king that Spanish colonial magistrates (*corregidores*), priests, and *encomenderos* seized Andean people's goods, forced them into unpaid labor, and sent them to the mines under the *mita* labor draft, from which many never returned, so that the Indigenous towns of Peru were being emptied of people.`,
+    parts: [
+      {
+        label: 'Essay',
+        prompt: 'Write your DBQ essay in response to the question above. When you grade it, check your essay against each row of the 7-point rubric.',
+        maxPoints: 7,
+        rubric: dbqRubric({
+          thesisKeywords: ['although', 'while', 'economic', 'religious', 'gold', 'extent', 'primarily', 'but'],
+          context: 'the Reconquista (completed 1492) and Iberian traditions of crusading conquest; Portuguese voyages along the West African coast after 1415 in search of gold and a sea route to Asian spices; Ottoman control of eastern Mediterranean trade routes; new maritime technology (caravel, astrolabe) and state-sponsored exploration.',
+          contextKeywords: ['Reconquista', '1492', 'Henry the Navigator', 'Portugal', 'Portuguese', 'spice', 'Ottoman', 'caravel', 'astrolabe', 'mercantilism'],
+          outside: 'the encomienda system; the mita at Potosí (silver discovered 1545); Spanish silver flowing to Ming China through Manila (founded 1571); sugar plantations in Brazil and the Atlantic islands; the Columbian Exchange and smallpox epidemics; the Treaty of Tordesillas (1494); Cortés and the conquest of Tenochtitlan (1521); Queen Nzinga of Ndongo and Matamba resisting Portugal.',
+          outsideKeywords: ['encomienda', 'Potosí', 'Potosi', 'silver', 'Manila', 'sugar', 'Brazil', 'Columbian Exchange', 'smallpox', 'Tordesillas', 'Cortés', 'Cortes', 'Tenochtitlan', 'Nzinga', 'mercantilism'],
+          complexity: 'weighing economic motives against religious and political ones and showing how they reinforced each other; contrasting Crown policy (Doc 5) with practice in the colonies (Doc 7); comparing the Americas with Kongo, where an African state set the terms of trade for a time.',
+        }),
+        sampleAnswer: `**Thesis:** Between 1492 and 1650, the search for gold, silver, and enslaved labor was the main force behind European interactions with the Americas and West Central Africa. Religious and legal arguments sometimes restrained that drive, but more often they served to justify it, and Crown reforms meant to protect Indigenous people were overwhelmed by the profits of mining and the slave trade.
+
+**Contextualization:** Iberian expansion grew out of the Reconquista, which ended with the fall of Granada in 1492 and combined religious war with the reward of conquered land. From the 1420s, Portuguese voyages along the West African coast searched for gold and a sea route to Asian spices, partly to bypass Muslim and Venetian middlemen in the eastern Mediterranean. New ships and navigational tools let monarchs sponsor these ventures in the hope of quick returns.
+
+**Economic motives:** From the first voyage, profit framed European views of other peoples. Columbus (Doc 1) followed his praise of the Taínos' generosity with a promise of "as much gold as they need" and "slaves." Because he was writing to Santángel, an official who had helped pay for the voyage, his purpose was to prove the venture would pay off, which explains why he stressed gold. Las Casas (Doc 4), a former *encomendero* himself, concluded that the destruction of Indigenous peoples came "solely" from the colonists' desire for gold. In Africa, Afonso of Kongo (Doc 3) complained that Portuguese traders were "kidnapping our people" so fast that his kingdom was being depopulated. Beyond the documents, the discovery of silver at Potosí in 1545 made the Andes the center of a global silver trade that reached Ming China through Manila after 1571. Guaman Poma (Doc 7) shows the human cost of that wealth: the *mita* labor draft emptied Andean towns to supply the mines.
+
+**Religious and legal justifications:** Economic aims were wrapped in religious and legal language. The *Requerimiento* (Doc 2) threatened to enslave anyone who refused the Church, making conversion the legal pretext for seizing people and "goods." Sepúlveda (Doc 6), a royal chronicler arguing at Valladolid, used Aristotle's idea of natural inferiority to defend Spanish rule. As a scholar writing for an elite audience of jurists and theologians, he gave colonists an intellectual defense of the labor systems they already relied on.
+
+**Complexity:** Economic motives did not go unchallenged. The New Laws of 1542 (Doc 5) banned the enslavement of Indians, showing that the Crown, influenced by critics like Las Casas, sometimes put religious duty and royal control ahead of colonists' profits. In practice, though, colonists revolted against the New Laws in Peru, and the Crown later relied on the *mita* for its own silver revenue, as Doc 7 shows. Kongo's experience also qualifies the argument. Afonso was a Christian ally who welcomed Portuguese priests and teachers, and although this letter asks for an end to the slave trade, he later accepted its continuation under royal inspection. African rulers like him tried to set the terms of the trade even as it damaged their kingdoms. Profit was the dominant motive, but it worked through religious ideas and political negotiation rather than replacing them.`,
+      },
+    ],
+    totalPoints: 7,
+    timeRecommendation: '60 minutes (incl. 15-min reading period)',
+    calculatorAllowed: false,
+  },
+  {
+    id: 'wh-dbq-2',
+    type: 'dbq' as const,
+    unit: 5,
+    title: 'DBQ: Revolutions and the Expansion of Rights, 1789–1830',
+    prompt: DBQ_DIRECTIONS + `
+
+**Question:** Evaluate the extent to which the revolutions in the Atlantic world expanded political rights in the period from 1789 to 1830.
+
+---
+
+**Document 1**
+
+*Source: Declaration of the Rights of Man and of the Citizen, adopted by the French National Assembly, August 26, 1789 (English translation).*
+
+> "Article 1. Men are born and remain free and equal in rights. Social distinctions may be founded only upon the general good. . . .
+>
+> Article 6. Law is the expression of the general will. Every citizen has a right to participate personally, or through his representative, in its foundation."
+
+---
+
+**Document 2**
+
+*Source: Summary of the voting rules in the French Constitution of 1791, written by the National Assembly.*
+
+> The Constitution divided adult men into "active citizens," who could vote, and "passive citizens," who could not. To be an active citizen, a man had to be at least 25 years old, live in the same place for at least a year, not work as a household servant, and pay a direct tax equal to at least three days' wages. Women could not vote.
+
+---
+
+**Document 3**
+
+*Source: Olympe de Gouges, French playwright, Declaration of the Rights of Woman and the Female Citizen, a pamphlet addressed to Queen Marie Antoinette, 1791 (English translation).*
+
+> "Article 1. Woman is born free and lives equal to man in her rights. Social distinctions can be based only on the common utility. . . .
+>
+> Article 10. . . . [W]oman has the right to mount the scaffold; she must equally have the right to mount the rostrum."
+
+---
+
+**Document 4**
+
+*Source: Decree of the French National Convention, February 4, 1794 (16 Pluviôse, Year II), passed after delegates elected in Saint-Domingue, including the formerly enslaved Jean-Baptiste Belley, took their seats (English translation).*
+
+> "The National Convention declares that the slavery of Negroes in all the colonies is abolished; consequently it decrees that all men, without distinction of color, domiciled in the colonies, are French citizens and will enjoy all the rights assured by the constitution."
+
+---
+
+**Document 5**
+
+*Source: Constitution of the French colony of Saint-Domingue, issued under the authority of Toussaint Louverture, the colony's formerly enslaved governor and military commander, 1801 (adapted from an English translation).*
+
+> "Article 3. There can be no slaves on this territory; servitude has been forever abolished. All men are born, live and die there free and French."
+
+---
+
+**Document 6**
+
+*Source: French Civil Code (the Napoleonic Code), promulgated by First Consul Napoleon Bonaparte, 1804 (English translation).*
+
+> "Article 213. The husband owes protection to his wife, the wife obedience to her husband."
+
+---
+
+**Document 7**
+
+*Source: Simón Bolívar, leader of independence movements in South America, letter written in exile in Kingston, Jamaica, to a British resident of the island, September 6, 1815 (English translation).*
+
+> "We are, moreover, neither Indian nor European, but a species midway between the legitimate proprietors of this country and the Spanish usurpers. In short, though Americans by birth we derive our rights from Europe, and we have to assert these rights against the rights of the natives, and at the same time we must defend ourselves against the invaders."`,
+    parts: [
+      {
+        label: 'Essay',
+        prompt: 'Write your DBQ essay in response to the question above. When you grade it, check your essay against each row of the 7-point rubric.',
+        maxPoints: 7,
+        rubric: dbqRubric({
+          thesisKeywords: ['although', 'while', 'expanded', 'limited', 'excluded', 'extent', 'elite', 'but'],
+          context: 'Enlightenment ideas of natural rights, popular sovereignty, and social contract (Locke, Rousseau, Montesquieu); the American Revolution (1775–1783) as a model; the French monarchy\'s debt crisis and the Estates-General of 1789; Atlantic plantation economies built on slavery; the rigid casta system and peninsular privilege in Spanish America.',
+          contextKeywords: ['Enlightenment', 'Locke', 'Rousseau', 'Montesquieu', 'social contract', 'natural rights', 'American Revolution', '1776', 'Estates-General', 'debt', 'casta', 'peninsular'],
+          outside: 'the Haitian Revolution and Haitian independence (1804); Napoleon\'s restoration of slavery in the French colonies (1802); the Reign of Terror and the execution of Olympe de Gouges (1793); Mary Wollstonecraft\'s A Vindication of the Rights of Woman (1792); the Congress of Vienna (1815); Hidalgo\'s revolt in Mexico (1810); creole elites keeping power in independent Latin America; Brazil\'s independence under Pedro I (1822).',
+          outsideKeywords: ['Haiti', 'Haitian', '1804', '1802', 'Terror', 'Robespierre', 'Wollstonecraft', 'Congress of Vienna', '1815', 'Hidalgo', 'creole', 'criollo', 'Brazil', 'Pedro', 'Dessalines'],
+          complexity: 'distinguishing the expansion of rights in principle (Docs 1, 4) from limits in practice (Docs 2, 6); showing that rights expanded and then contracted, as with slavery\'s abolition (1794) and restoration (1802); comparing how class, gender, and race shaped who gained rights in France, Haiti, and Spanish America.',
+        }),
+        sampleAnswer: `**Thesis:** The Atlantic revolutions of 1789–1830 expanded political rights in principle more than in practice. They declared rights to be universal and, in Saint-Domingue, ended slavery, but property qualifications, the exclusion of women, and the dominance of creole elites meant that most new rights went to propertied men of European descent.
+
+**Contextualization:** Enlightenment writers such as Locke and Rousseau argued that legitimate government rests on natural rights and the consent of the governed, and the American Revolution showed that a colony could win independence on those grounds. In France, the monarchy's debt crisis forced Louis XVI to call the Estates-General in 1789, opening the way to revolution. Across the Atlantic, plantation colonies depended on enslaved labor, and Spanish America was ruled by a racial hierarchy that placed peninsular Spaniards above American-born creoles.
+
+**Expansion in principle:** The Declaration of the Rights of Man (Doc 1) proclaimed that men are "born and remain free and equal in rights" and that every citizen may take part in making law. Enslaved and free people of color pushed these principles further than the National Assembly intended. The Convention's 1794 decree (Doc 4) abolished slavery and made all men in the colonies citizens. Its historical situation matters: it came after the Saint-Domingue uprising of 1791 and after Jean-Baptiste Belley, a formerly enslaved deputy, took his seat, so abolition was forced by revolt as much as granted by principle. Toussaint Louverture's 1801 constitution (Doc 5) wrote that abolition into the colony's fundamental law. Beyond the documents, Haiti declared independence in 1804, the first state founded by formerly enslaved people.
+
+**Limits in practice:** Political rights were narrower than the rhetoric. The Constitution of 1791 (Doc 2) excluded "passive citizens," servants, the poor, and all women from voting. Olympe de Gouges (Doc 3) used the language of Doc 1 to demand equal rights for women, pointing out that women could be executed but not heard. As a woman with no vote of her own, writing for a public that had just heard the Assembly's promises, she turned the language of Doc 1 against its authors; she was guillotined in 1793. Napoleon's Civil Code (Doc 6) then wrote wives' "obedience" into law, and in 1802 he restored slavery in the French colonies. In Spanish America, Bolívar (Doc 7) described creoles as "neither Indian nor European." As a creole leader writing in exile to a British reader, his purpose was to justify independence and attract British support, but his words also show that the creoles' main dispute was with Spain over who would rule, not over extending rights to Indigenous and African-descended people.
+
+**Complexity:** Rights expanded in waves and then contracted: slavery was abolished in 1794 and restored in 1802, and the universal language of 1789 gave way to the order of the Napoleonic Code. Yet the documents' principles outlived their authors' limits. Groups excluded in 1791, including women, the enslaved, and the poor, used the same language in later struggles, which makes this period a lasting expansion of the idea of rights even where it did not expand the vote.`,
+      },
+    ],
+    totalPoints: 7,
+    timeRecommendation: '60 minutes (incl. 15-min reading period)',
+    calculatorAllowed: false,
+  },
+  {
+    id: 'wh-dbq-3',
+    type: 'dbq' as const,
+    unit: 7,
+    title: 'DBQ: The First World War and Colonized Peoples, 1914–1923',
+    prompt: DBQ_DIRECTIONS + `
+
+**Question:** Evaluate the extent to which the First World War and the peace settlement that followed changed the relationship between imperial powers and colonized or semi-colonized peoples in the period from 1914 to 1923.
+
+---
+
+**Document 1**
+
+*Source: Arthur James Balfour, British foreign secretary, letter to Lord Rothschild, a leader of the British Jewish community, November 2, 1917 (the Balfour Declaration).*
+
+> "His Majesty's Government view with favour the establishment in Palestine of a national home for the Jewish people, and will use their best endeavours to facilitate the achievement of this object, it being clearly understood that nothing shall be done which may prejudice the civil and religious rights of existing non-Jewish communities in Palestine, or the rights and political status enjoyed by Jews in any other country."
+
+---
+
+**Document 2**
+
+*Source: President Woodrow Wilson, address to a joint session of the U.S. Congress (the Fourteen Points), January 8, 1918, Point V.*
+
+> "A free, open-minded, and absolutely impartial adjustment of all colonial claims, based upon a strict observance of the principle that in determining all such questions of sovereignty the interests of the populations concerned must have equal weight with the equitable claims of the government whose title is to be determined."
+
+---
+
+**Document 3**
+
+*Source: Emir Faisal, son of Sharif Hussein of Mecca and commander of the Arab Revolt against the Ottoman Empire, memorandum to the Paris Peace Conference, January 1, 1919 (adapted).*
+
+> "The aim of the Arab nationalist movements . . . is to unite the Arabs eventually into one nation. . . . In our opinion, if our independence be conceded and our local competence established, the natural influences of race, language, and interest will soon draw us together into one people."
+
+---
+
+**Document 4**
+
+*Source: Declaration of Independence read by Korean religious and civic leaders in Seoul, March 1, 1919, beginning the March First Movement against Japanese rule (English translation).*
+
+> "We herewith proclaim the independence of Korea and the liberty of the Korean people. We tell it to the world in witness of the equality of all nations and we pass it on to our posterity as their inherent right."
+
+---
+
+**Document 5**
+
+*Source: Manifesto distributed by students in Beijing, May 4, 1919, after news that the Paris Peace Conference would give Germany's rights in Shandong province to Japan (adapted from an English translation).*
+
+> "Japan's demand for the possession of Qingdao and other rights in Shandong is now going to be acceded to in the Paris Peace Conference. . . . China's territory may be conquered, but it cannot be given away! The Chinese people may be massacred, but they will not surrender!"
+
+---
+
+**Document 6**
+
+*Source: Covenant of the League of Nations, Article 22, part of the Treaty of Versailles, signed June 28, 1919.*
+
+> "To those colonies and territories which as a consequence of the late war have ceased to be under the sovereignty of the States which formerly governed them and which are inhabited by peoples not yet able to stand by themselves under the strenuous conditions of the modern world, there should be applied the principle that the well-being and development of such peoples form a sacred trust of civilisation . . . [and] the tutelage of such peoples should be entrusted to advanced nations . . ."
+
+---
+
+**Document 7**
+
+*Source: Summary of "Demands of the Annamite People," a petition delivered to the Paris Peace Conference in June 1919 by a group of Vietnamese nationalists in France and signed "Nguyen Ai Quoc," a name later associated with Ho Chi Minh (summary).*
+
+> The petition did not ask for independence. It asked France for an amnesty for Vietnamese political prisoners, equal legal rights for Vietnamese and Europeans in Indochina, freedom of the press and of association, freedom to emigrate and travel abroad, freedom of education with technical and professional schools in every province, rule by law rather than by decree, and permanent Vietnamese representation in the French parliament.`,
+    parts: [
+      {
+        label: 'Essay',
+        prompt: 'Write your DBQ essay in response to the question above. When you grade it, check your essay against each row of the 7-point rubric.',
+        maxPoints: 7,
+        rubric: dbqRubric({
+          thesisKeywords: ['although', 'while', 'self-determination', 'mandate', 'nationalism', 'extent', 'disillusion', 'but'],
+          context: 'the "New Imperialism" of the late 1800s (the Berlin Conference, 1884–1885; spheres of influence in China); rising anticolonial nationalism before 1914 (the Indian National Congress, 1885; the 1911 Chinese revolution); the war\'s global reach, including the mobilization of colonial soldiers and laborers; the collapse of the Ottoman, Russian, Austro-Hungarian, and German empires.',
+          contextKeywords: ['New Imperialism', 'Berlin Conference', '1884', 'spheres of influence', 'Indian National Congress', 'nationalism', 'colonial soldiers', 'Ottoman', 'collapse', 'total war', 'Russian Revolution', 'Lenin'],
+          outside: 'the Sykes–Picot Agreement (1916); more than a million Indian soldiers serving Britain; the Amritsar massacre (April 1919); Gandhi\'s non-cooperation movement (1920–1922); the Egyptian revolution of 1919; Japan\'s rejected racial equality proposal at Paris (1919); the Pan-African Congress (1919); French and British mandates in Syria, Lebanon, Iraq, and Palestine; the Turkish War of Independence and the Treaty of Lausanne (1923); the founding of the Chinese Communist Party (1921).',
+          outsideKeywords: ['Sykes', 'Picot', 'Amritsar', 'Gandhi', 'non-cooperation', 'Egypt', 'Zaghloul', 'racial equality', 'Pan-African', 'Du Bois', 'mandate', 'Lausanne', 'Atatürk', 'Ataturk', 'Kemal', 'Chinese Communist', 'sepoy', 'Indian soldiers'],
+          complexity: 'distinguishing the rhetoric of self-determination (Doc 2) from the mandate system that extended imperial control (Doc 6); comparing responses across East Asia, the Middle East, and Southeast Asia; showing that the settlement failed to change formal empire in the short run but changed the political aims and methods of colonized peoples in the long run.',
+        }),
+        sampleAnswer: `**Thesis:** The First World War and the peace settlement did little to change the formal structure of empire. Britain and France gained new territory through the mandate system, and the promise of self-determination was applied only in Europe. They did, however, change colonized peoples' expectations and methods, setting off mass nationalist movements that would challenge imperial rule for the rest of the century.
+
+**Contextualization:** By 1914, European powers had divided Africa after the Berlin Conference and carved spheres of influence in China, while Japan had annexed Korea in 1910. Educated nationalist movements were already growing, such as the Indian National Congress, founded in 1885. The war mobilized empires totally, drawing on colonial soldiers and laborers, and it destroyed the Ottoman, Russian, Austro-Hungarian, and German empires, leaving their lands open for the victors to divide.
+
+**Rising expectations:** Wartime diplomacy raised hopes. Wilson's Fourteen Points (Doc 2) said the "interests of the populations concerned" must count in colonial settlements. Because Wilson was speaking to Congress in early 1918, his purpose was to give the war a liberal aim and to answer the Bolsheviks' call for self-determination, not to dismantle the British and French empires. Colonized peoples took him at his word anyway. Faisal (Doc 3), who had led the Arab Revolt with British support, asked the conference to recognize Arab independence. Korean leaders (Doc 4) proclaimed independence "in witness of the equality of all nations," echoing Wilson's language, and the Vietnamese petitioners of 1919 (Doc 7) asked for equal rights within the French empire.
+
+**Continuity of empire:** The settlement largely ignored these demands. Article 22 of the League Covenant (Doc 6) described former Ottoman and German territories as inhabited by peoples "not yet able to stand by themselves" and placed them under the "tutelage" of "advanced nations," which gave colonial rule a new legal form. Beyond the documents, the secret Sykes–Picot Agreement of 1916 had already divided the Arab lands between Britain and France, and in 1920 France drove Faisal from Damascus. The Balfour Declaration (Doc 1), written while Britain was fighting the Ottomans and seeking Jewish support for the war, promised Palestine to two peoples at once and planted a lasting conflict. Japan kept Korea and crushed the March First Movement, and the conference gave Germany's rights in Shandong to Japan rather than to China.
+
+**Complexity:** This disappointment itself changed the relationship between empires and their subjects. The Beijing students (Doc 5), writing for a domestic audience, turned anger at Paris into the May Fourth Movement, which helped give rise to the Chinese Communist Party in 1921. The Vietnamese petitioner later known as Ho Chi Minh moved from asking for reform to demanding independence, and in India the Amritsar massacre of 1919 led Gandhi to launch mass non-cooperation. Formal empire survived and even expanded after 1919, but colonized peoples lost faith that the imperial powers would reform themselves, and anticolonial nationalism became a mass movement.`,
+      },
+    ],
+    totalPoints: 7,
+    timeRecommendation: '60 minutes (incl. 15-min reading period)',
+    calculatorAllowed: false,
+  },
+]
+
+
+export const apWorldHistoryFRQs: WorldHistoryFRQ[] = [...longFRQs, ...shortFRQs, ...dbqFRQs]
 
 export function getApWorldHistoryFRQs(): WorldHistoryFRQ[] {
   return apWorldHistoryFRQs
@@ -447,6 +771,10 @@ export function getLongFRQs(): WorldHistoryFRQ[] {
 
 export function getShortFRQs(): WorldHistoryFRQ[] {
   return shortFRQs
+}
+
+export function getDBQs(): WorldHistoryFRQ[] {
+  return dbqFRQs
 }
 
 export function generateFullExamFRQs(pool: WorldHistoryFRQ[] = apWorldHistoryFRQs): {

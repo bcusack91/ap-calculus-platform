@@ -40,7 +40,9 @@ function formatTime(seconds: number): string {
 }
 
 type Mode = 'menu' | 'practice' | 'timed' | 'results'
-type Filter = 'all' | 'long' | 'short'
+type Filter = 'all' | 'long' | 'short' | 'dbq'
+
+const TYPE_LABEL: Record<string, string> = { long: 'Long FRQ', short: 'Short FRQ', dbq: 'DBQ' }
 
 function APWorldHistoryFRQPageInner() {
   const { status } = useSession()
@@ -92,7 +94,7 @@ function APWorldHistoryFRQPageInner() {
 
   const startPractice = useCallback((f: Filter) => {
     setFilter(f)
-    const pool = f === 'long' ? allFrqs.filter(q => q.type === 'long') : f === 'short' ? allFrqs.filter(q => q.type === 'short') : allFrqs
+    const pool = f === 'all' ? allFrqs : allFrqs.filter(q => q.type === f)
     setFrqs(pool)
     setCurrentIdx(0)
     setResponses({})
@@ -196,6 +198,7 @@ function APWorldHistoryFRQPageInner() {
                 <ul className="space-y-1">
                   <li>• FRQs in 100 minutes</li>
                   <li>• Long and short format questions</li>
+                  <li>• DBQ: 7 documents, 7-point rubric, 60 min</li>
                   <li>• Rubric-based scoring</li>
                 </ul>
               </div>
@@ -212,6 +215,17 @@ function APWorldHistoryFRQPageInner() {
           </div>
 
           <div className="grid sm:grid-cols-2 gap-4 mb-8">
+            <button onClick={() => startPractice('dbq')} className="group rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 text-left hover:shadow-lg transition">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="h-12 w-12 flex items-center justify-center rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xl">🗂️</div>
+                <div>
+                  <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400">Document-Based Questions (DBQ)</h3>
+                  <p className="text-xs text-gray-500">7 documents · 7 points · 60 min</p>
+                </div>
+              </div>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Document-based essays with 7 primary sources, scored on the official 7-point DBQ rubric.</p>
+            </button>
+
             <button onClick={() => startPractice('long')} className="group rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 text-left hover:shadow-lg transition">
               <div className="flex items-center gap-3 mb-3">
                 <div className="h-12 w-12 flex items-center justify-center rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xl">📄</div>
@@ -245,7 +259,7 @@ function APWorldHistoryFRQPageInner() {
               <p className="text-sm text-gray-600 dark:text-gray-400">Browse and practice all available FRQ questions at your own pace.</p>
             </button>
 
-            <button onClick={startTimedExam} className="group rounded-2xl border-2 border-amber-300 dark:border-amber-600 bg-white dark:bg-gray-800 p-6 text-left hover:shadow-lg transition">
+            <button onClick={startTimedExam} className="sm:col-span-2 group rounded-2xl border-2 border-amber-300 dark:border-amber-600 bg-white dark:bg-gray-800 p-6 text-left hover:shadow-lg transition">
               <div className="flex items-center gap-3 mb-3">
                 <div className="h-12 w-12 flex items-center justify-center rounded-xl bg-gradient-to-r from-red-500 to-orange-500 text-white text-xl">⏱️</div>
                 <div>
@@ -313,7 +327,7 @@ function APWorldHistoryFRQPageInner() {
                 <div key={frq.id} className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4">
                   <div className="flex items-center justify-between">
                     <div>
-                      <span className={`text-xs font-bold px-2 py-0.5 rounded ${frq.type === 'long' ? 'bg-amber-100 dark:bg-amber-900/30 text-amber-600' : 'bg-purple-100 dark:bg-purple-900/30 text-purple-600'}`}>{frq.type === 'long' ? 'Long FRQ' : 'Short FRQ'}</span>
+                      <span className={`text-xs font-bold px-2 py-0.5 rounded ${frq.type === 'long' ? 'bg-amber-100 dark:bg-amber-900/30 text-amber-600' : frq.type === 'dbq' ? 'bg-teal-100 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300' : 'bg-purple-100 dark:bg-purple-900/30 text-purple-600'}`}>{TYPE_LABEL[frq.type] ?? 'FRQ'}</span>
                       <span className="ml-2 text-sm font-medium text-gray-900 dark:text-white">{frq.title}</span>
                     </div>
                     <span className={`font-bold ${frqTotal >= frq.totalPoints * 0.7 ? 'text-green-600' : frqTotal >= frq.totalPoints * 0.4 ? 'text-yellow-600' : 'text-red-600'}`}>{frqTotal}/{frq.totalPoints}</span>
@@ -339,7 +353,7 @@ function APWorldHistoryFRQPageInner() {
         <div className="flex items-center justify-between mb-6 flex-wrap gap-3">
           <div>
             <button onClick={() => setMode('menu')} className="text-sm text-amber-600 dark:text-amber-400 hover:underline mb-1">&larr; Back to Menu</button>
-            <h1 className="text-xl font-bold text-gray-900 dark:text-white">{mode === 'timed' ? 'Timed FRQ Exam' : `FRQ Practice (${filter})`}</h1>
+            <h1 className="text-xl font-bold text-gray-900 dark:text-white">{mode === 'timed' ? 'Timed FRQ Exam' : filter === 'dbq' ? 'DBQ Practice' : `FRQ Practice (${filter})`}</h1>
           </div>
           <div className="flex items-center gap-4">
             {mode === 'timed' && (
@@ -357,7 +371,7 @@ function APWorldHistoryFRQPageInner() {
           <div className="bg-gradient-to-r from-amber-600 to-orange-600 text-white px-6 py-4">
             <div className="flex items-center justify-between flex-wrap gap-2">
               <div>
-                <span className={`text-xs font-bold px-2 py-0.5 rounded mr-2 ${currentFRQ.type === 'long' ? 'bg-amber-800' : 'bg-purple-700'}`}>{currentFRQ.type === 'long' ? 'Long FRQ' : 'Short FRQ'}</span>
+                <span className={`text-xs font-bold px-2 py-0.5 rounded mr-2 ${currentFRQ.type === 'long' ? 'bg-amber-800' : currentFRQ.type === 'dbq' ? 'bg-teal-700' : 'bg-purple-700'}`}>{TYPE_LABEL[currentFRQ.type] ?? 'FRQ'}</span>
                 <h2 className="text-lg font-bold mt-1">{currentFRQ.title}</h2>
               </div>
               <div className="flex items-center gap-3 text-sm">
@@ -382,15 +396,15 @@ function APWorldHistoryFRQPageInner() {
                   <div key={part.label} className="border border-gray-200 dark:border-gray-700 rounded-xl p-5">
                     <div className="flex items-center justify-between mb-3">
                       <div className="flex items-center gap-2">
-                        <span className="bg-amber-600 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold">{part.label}</span>
+                        <span className={`bg-amber-600 text-white h-8 rounded-full flex items-center justify-center text-sm font-bold ${part.label.length > 3 ? 'px-3' : 'w-8'}`}>{part.label}</span>
                         <span className="text-sm text-amber-600 dark:text-amber-400 font-medium">({part.maxPoints} {part.maxPoints === 1 ? 'point' : 'points'})</span>
                       </div>
                       {result && <span className={`font-bold text-sm ${result.pointsEarned === part.maxPoints ? 'text-green-600' : result.pointsEarned > 0 ? 'text-yellow-600' : 'text-red-600'}`}>{result.pointsEarned}/{part.maxPoints}</span>}
                     </div>
                     <div className="mb-3 prose prose-sm max-w-none dark:prose-invert"><ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>{escapeCurrencyMath(part.prompt)}</ReactMarkdown></div>
-                    <textarea value={responses[key] || ''} onChange={(ev) => setResponses((prev) => ({ ...prev, [key]: ev.target.value }))} placeholder="Write your response here..." className="w-full h-36 p-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-gray-100 resize-y text-sm focus:ring-2 focus:ring-amber-500 focus:border-amber-500" disabled={!!result} maxLength={2000} />
+                    <textarea value={responses[key] || ''} onChange={(ev) => setResponses((prev) => ({ ...prev, [key]: ev.target.value }))} placeholder={currentFRQ.type === 'dbq' ? 'Write your essay here...' : 'Write your response here...'} className={`w-full ${currentFRQ.type === 'dbq' ? 'h-96' : 'h-36'} p-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-gray-100 resize-y text-sm focus:ring-2 focus:ring-amber-500 focus:border-amber-500`} disabled={!!result} maxLength={currentFRQ.type === 'dbq' ? 12000 : 2000} />
                     {!result ? (
-                      <div className="mt-3"><button onClick={() => handleGrade(currentFRQ.id, part.label, part.rubric)} className="px-4 py-2 text-sm bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors disabled:opacity-50 font-medium" disabled={!(responses[key] || '').trim()}>Grade Part {part.label}</button></div>
+                      <div className="mt-3"><button onClick={() => handleGrade(currentFRQ.id, part.label, part.rubric)} className="px-4 py-2 text-sm bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors disabled:opacity-50 font-medium" disabled={!(responses[key] || '').trim()}>{currentFRQ.type === 'dbq' ? 'Grade Essay' : `Grade Part ${part.label}`}</button></div>
                     ) : (
                       <div className="mt-3 space-y-3">
                         <div className="space-y-1">

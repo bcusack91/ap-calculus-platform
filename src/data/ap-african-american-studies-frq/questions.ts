@@ -4,6 +4,11 @@
  *
  * Format mirrors College Board AP AAS exam: long source-based prompts (~25 min, 7 pts)
  * and shorter source/data prompts (~12 min, 4 pts), each with 4 parts (a)–(d).
+ *
+ * Document-based questions (type 'dbq') are hand-written (not generated): 5
+ * sources and the College Board AP African American Studies 7-point DBQ rubric
+ * (thesis, context, evidence from sources x2, evidence beyond sources, source
+ * use, reasoning). Sources are public-domain; summaries are labelled "adapted".
  */
 
 export interface FRQRubricItem {
@@ -22,7 +27,7 @@ export interface FRQPart {
 
 export interface AASFRQ {
   id: string
-  type: 'long' | 'short'
+  type: 'long' | 'short' | 'dbq'
   unit: number
   title: string
   prompt: string
@@ -435,7 +440,277 @@ const shortFRQs: AASFRQ[] = [
 ]
 
 
-export const apAASFRQs: AASFRQ[] = [...longFRQs, ...shortFRQs]
+/* ------------------------------------------------------------------ */
+/*  Document-based questions — 5 sources, 7-point AP AAS rubric        */
+/* ------------------------------------------------------------------ */
+
+const DBQ_DIRECTIONS =
+  '**Directions:** The question is based on the accompanying sources. The sources have been edited for the purpose of this exercise. Suggested time: 45 minutes.\n\n' +
+  'In your response you should do the following:\n\n' +
+  '- Respond to the prompt with a defensible thesis or claim that establishes a line of reasoning.\n' +
+  '- Describe a broader historical context relevant to the topic of the prompt.\n' +
+  '- Support an argument in response to the prompt using at least three sources.\n' +
+  '- Use at least one additional piece of specific evidence (beyond that found in the sources) relevant to an argument about the prompt.\n' +
+  '- For at least two sources, explain how or why the source\'s perspective, purpose, context, and/or audience is relevant to an argument.\n' +
+  '- Use reasoning (for example, causation, comparison, or change and continuity across time or geography) to set up an argument that addresses the prompt.'
+
+const SOURCE_KEYWORDS = ['source 1', 'source 2', 'source 3', 'source 4', 'source 5', 'document 1', 'document 2', 'document 3', 'document 4', 'document 5', 'doc 1', 'doc 2', 'doc 3', 'doc 4', 'doc 5']
+
+/** The College Board AP African American Studies DBQ rubric (7 points), with prompt-specific examples. */
+function dbqRubric(spec: {
+  thesisKeywords: string[]
+  context: string
+  contextKeywords: string[]
+  outside: string
+  outsideKeywords: string[]
+  reasoning: string
+}): FRQRubricItem[] {
+  return [
+    { points: 1, description: 'A. Thesis/Claim — Responds to the prompt with a defensible thesis/claim that establishes a line of reasoning (in one place, in the introduction or conclusion; more than a restatement of the prompt).', keywords: spec.thesisKeywords },
+    { points: 1, description: `B. Context — Describes a broader historical context relevant to the topic of the prompt, in more than a phrase or passing reference. Examples: ${spec.context}`, keywords: spec.contextKeywords },
+    { points: 1, description: 'C. Evidence from sources (1 of 2) — Uses the content of at least TWO sources to address the topic of the prompt (accurately describes, rather than simply quotes, each source).', keywords: SOURCE_KEYWORDS },
+    { points: 1, description: 'C. Evidence from sources (2 of 2) — Supports an argument in response to the prompt using at least THREE sources.', keywords: SOURCE_KEYWORDS },
+    { points: 1, description: `C. Evidence beyond sources — Uses at least one additional piece of specific evidence, not found in the sources, relevant to an argument in response to the prompt. Examples: ${spec.outside}`, keywords: spec.outsideKeywords },
+    { points: 1, description: 'D. Source use — For at least TWO sources, explains how or why the source\'s perspective, purpose, context, and/or audience is relevant to an argument (identifying the author alone does not earn the point).', keywords: ['perspective', 'point of view', 'purpose', 'audience', 'context', 'intended', 'written to', 'because he was', 'because she was', 'as a'] },
+    { points: 1, description: `E. Reasoning — Uses reasoning (for example, causation, comparison, or change and continuity across time or geography) to set up an argument that addresses the prompt. Examples: ${spec.reasoning}`, keywords: ['because', 'led to', 'as a result', 'in contrast', 'compared', 'similarly', 'continuity', 'changed', 'whereas'] },
+  ]
+}
+
+const dbqFRQs: AASFRQ[] = [
+  {
+    id: 'aas-dbq-1',
+    type: 'dbq' as const,
+    unit: 2,
+    title: 'DBQ: Strategies of Resistance to Slavery, 1829–1861',
+    prompt: DBQ_DIRECTIONS + `
+
+**Question:** Explain the extent to which African American resistance to slavery in the period from 1829 to 1861 relied on direct action rather than moral persuasion.
+
+---
+
+**Source 1**
+
+*Source: David Walker, free Black clothing dealer in Boston, Appeal to the Coloured Citizens of the World, 1829. Several Southern states passed laws against circulating the pamphlet.*
+
+> "...we, (coloured people of these United States of America) are the most wretched, degraded and abject set of beings that ever lived since the world began . . . America is more our country, than it is the whites—we have enriched it with our blood and tears."
+
+---
+
+**Source 2**
+
+*Source: Henry Highland Garnet, Black Presbyterian minister who had escaped slavery as a child, "An Address to the Slaves of the United States of America," delivered at the National Convention of Colored Citizens in Buffalo, New York, August 1843. The convention narrowly voted not to endorse the address.*
+
+> "Brethren, arise, arise! Strike for your lives and liberties. Now is the day and the hour. . . . Let your motto be resistance! resistance! RESISTANCE! No oppressed people have ever secured their liberty without resistance."
+
+---
+
+**Source 3**
+
+*Source: Frederick Douglass,* Narrative of the Life of Frederick Douglass, an American Slave, Written by Himself, *published by the Boston Anti-Slavery Office, 1845. Douglass describes his fight with Edward Covey, a "slave breaker," when Douglass was sixteen.*
+
+> "You have seen how a man was made a slave; you shall see how a slave was made a man. . . . It was a glorious resurrection, from the tomb of slavery, to the heaven of freedom."
+
+---
+
+**Source 4**
+
+*Source: Broadside (public poster) posted in Boston on April 24, 1851, after the Fugitive Slave Act of 1850; its text is attributed to the abolitionist minister Theodore Parker. The poster uses large capital letters of different sizes.*
+
+> "CAUTION!! COLORED PEOPLE OF BOSTON, ONE & ALL, You are hereby respectfully CAUTIONED and advised, to avoid conversing with the Watchmen and Police Officers of Boston, For since the recent ORDER OF THE MAYOR & ALDERMEN, they are empowered to act as KIDNAPPERS AND Slave Catchers . . . Keep a Sharp Look Out for KIDNAPPERS, and have TOP EYE open."
+
+---
+
+**Source 5**
+
+*Source: Harriet Jacobs, writing under the name Linda Brent,* Incidents in the Life of a Slave Girl, *1861. Jacobs hid for nearly seven years in a crawl space in her grandmother's house before escaping to the North.*
+
+> "Slavery is terrible for men; but it is far more terrible for women. . . . Reader, my story ends with freedom; not in the usual way, with marriage."`,
+    parts: [
+      {
+        label: 'Essay',
+        prompt: 'Write your DBQ essay in response to the question above. When you grade it, check your essay against each row of the 7-point rubric.',
+        maxPoints: 7,
+        rubric: dbqRubric({
+          thesisKeywords: ['although', 'while', 'direct action', 'moral persuasion', 'both', 'extent', 'resistance', 'but'],
+          context: 'the growth of the cotton economy and the domestic slave trade after the invention of the cotton gin (1793); the rise of immediate abolitionism (William Lloyd Garrison\'s The Liberator, 1831); Nat Turner\'s rebellion (1831) and the harsher slave codes that followed; the Fugitive Slave Act of 1850 and the Dred Scott decision (1857).',
+          contextKeywords: ['cotton', 'cotton gin', 'domestic slave trade', 'Garrison', 'Liberator', 'Nat Turner', '1831', 'slave codes', 'Fugitive Slave Act', '1850', 'Dred Scott', '1857'],
+          outside: 'Nat Turner\'s rebellion (1831); Harriet Tubman\'s rescues on the Underground Railroad; the Christiana resistance (1851); the rescue of Shadrach Minkins in Boston (1851); Anthony Burns (1854); the Amistad revolt (1839); everyday resistance such as work slowdowns, sabotage, and maroon communities; Sojourner Truth\'s speeches; Douglass\'s newspaper The North Star (1847).',
+          outsideKeywords: ['Nat Turner', 'Tubman', 'Underground Railroad', 'Christiana', 'Shadrach', 'Minkins', 'Anthony Burns', 'Amistad', 'maroon', 'Sojourner Truth', 'North Star', 'slowdown', 'sabotage'],
+          reasoning: 'arguing that the Fugitive Slave Act of 1850 caused a shift toward community self-defense (causation); comparing the audiences of Walker and Jacobs (comparison); showing that persuasion and direct action continued side by side across the period (continuity and change).',
+        }),
+        sampleAnswer: `**Thesis:** Between 1829 and 1861, African American resistance relied on both direct action and moral persuasion, and the two were closely linked. Writers such as Douglass and Jacobs used accounts of their own defiance to persuade Northern readers, while the Fugitive Slave Act of 1850 pushed Black communities toward organized self-defense.
+
+**Context:** After the cotton gin, cotton production in the Deep South soared, and the domestic slave trade forcibly moved about a million enslaved people from the Upper South to the Deep South. In 1831, William Lloyd Garrison began publishing *The Liberator*, calling for immediate abolition, and Nat Turner led a rebellion in Virginia that killed about 60 white people. Southern states responded with harsher slave codes and bans on teaching enslaved people to read, so both armed revolt and antislavery writing became more dangerous.
+
+**Direct action:** Calls for direct resistance were present from the start of the period. Walker (Source 1) insisted that America belonged to Black people who had "enriched it with our blood and tears" and urged them to resist their oppressors. His audience was Black readers across the nation, which is why Southern states passed laws to stop the pamphlet from circulating. Garnet (Source 2) told the enslaved, "Let your motto be resistance!" The convention's narrow refusal to endorse his address shows that many Black abolitionists, Douglass among them at the time, still favored moral persuasion. After 1850, direct action became a community strategy: the Boston broadside (Source 4) warned that police were acting as "KIDNAPPERS." Beyond the sources, Boston activists rescued Shadrach Minkins from a federal courtroom in February 1851, two months before the broadside appeared.
+
+**Moral persuasion:** Slave narratives turned individual resistance into arguments aimed at the North. Douglass (Source 3) presents his fight with Covey as the moment "a slave was made a man." Because the book was published by the Boston Anti-Slavery Office, it was meant both to prove that he had really been enslaved and to win white readers to abolition. Jacobs (Source 5) addressed Northern white women directly ("Reader"), and her statement that slavery is "far more terrible for women" was designed to appeal to her readers' ideas about womanhood and family.
+
+**Reasoning (change over time):** Before 1850, most organized Black abolitionism relied on persuasion, and calls for revolt like Garnet's were controversial. The Fugitive Slave Act changed that balance by bringing slavery's enforcement into Northern cities, which led free Black communities to organize vigilance committees and rescues. Even then, persuasion did not disappear: Jacobs published her narrative in 1861. Resistance therefore shifted toward direct action over time, but throughout the period the two strategies reinforced each other.`,
+      },
+    ],
+    totalPoints: 7,
+    timeRecommendation: '45 minutes',
+    calculatorAllowed: false,
+  },
+  {
+    id: 'aas-dbq-2',
+    type: 'dbq' as const,
+    unit: 3,
+    title: 'DBQ: Debating the Path to Advancement, 1890–1925',
+    prompt: DBQ_DIRECTIONS + `
+
+**Question:** Explain the extent to which African American leaders agreed about strategies for racial advancement in the period from 1890 to 1925.
+
+---
+
+**Source 1**
+
+*Source: Ida B. Wells, journalist and co-owner of the Memphis* Free Speech, Southern Horrors: Lynch Law in All Its Phases, *1892. Wells wrote the pamphlet in New York after a mob destroyed her newspaper's office in Memphis.*
+
+> "[A] Winchester rifle should have a place of honor in every black home, and it should be used for that protection which the law refuses to give. . . . The more the Afro-American yields and cringes and begs, the more he has to do so, the more he is insulted, outraged and lynched."
+
+---
+
+**Source 2**
+
+*Source: Booker T. Washington, principal of the Tuskegee Institute, address at the Cotton States and International Exposition in Atlanta, September 18, 1895, to a mostly white audience.*
+
+> "To those of my race who depend on bettering their condition in a foreign land . . . I would say: 'Cast down your bucket where you are' . . . In all things that are purely social we can be as separate as the fingers, yet one as the hand in all things essential to mutual progress."
+
+---
+
+**Source 3**
+
+*Source: W. E. B. Du Bois, sociologist at Atlanta University, "Of Mr. Booker T. Washington and Others," in* The Souls of Black Folk, *1903.*
+
+> "Mr. Washington represents in Negro thought the old attitude of adjustment and submission . . . [and his] programme practically accepts the alleged inferiority of the Negro races."
+
+---
+
+**Source 4**
+
+*Source: Declaration of Principles of the Niagara Movement, adopted by Du Bois and other Black leaders meeting at Fort Erie, Ontario, near Niagara Falls, July 1905.*
+
+> "We believe that this class of American citizens should protest emphatically and continually against the curtailment of their political rights. . . . Persistent manly agitation is the way to liberty . . ."
+
+---
+
+**Source 5**
+
+*Source: Universal Negro Improvement Association (UNIA), led by Marcus Garvey, Declaration of Rights of the Negro Peoples of the World, adopted at the UNIA convention in New York City, August 13, 1920.*
+
+> "We believe in the freedom of Africa for the Negro people of the world, and by the principle of Europe for the Europeans and Asia for the Asiatics; we also demand Africa for the Africans at home and abroad."`,
+    parts: [
+      {
+        label: 'Essay',
+        prompt: 'Write your DBQ essay in response to the question above. When you grade it, check your essay against each row of the 7-point rubric.',
+        maxPoints: 7,
+        rubric: dbqRubric({
+          thesisKeywords: ['although', 'while', 'disagreed', 'agreed', 'accommodation', 'agitation', 'extent', 'but'],
+          context: 'the end of Reconstruction (1877) and the "nadir" of race relations; disfranchisement through poll taxes, literacy tests, and grandfather clauses; Jim Crow segregation upheld in Plessy v. Ferguson (1896); the peak of lynching in the 1890s; the beginning of the Great Migration during World War I.',
+          contextKeywords: ['Reconstruction', 'nadir', 'disfranchise', 'poll tax', 'literacy test', 'grandfather clause', 'Jim Crow', 'Plessy', '1896', 'lynching', 'Great Migration'],
+          outside: 'the founding of the NAACP (1909) and its magazine The Crisis; the National Association of Colored Women (1896) and Mary Church Terrell; Guinn v. United States (1915); the Red Summer of 1919; Garvey\'s Black Star Line (1919); the Tuskegee Institute and the National Negro Business League (1900); Du Bois\'s "The Talented Tenth" (1903); Washington\'s private funding of lawsuits against segregation.',
+          outsideKeywords: ['NAACP', '1909', 'Crisis', 'National Association of Colored Women', 'Terrell', 'Guinn', 'Red Summer', '1919', 'Black Star Line', 'Negro Business League', 'Talented Tenth', 'Tuskegee'],
+          reasoning: 'comparing accommodation, protest, and Pan-Africanism; explaining how the violence of the 1890s caused different responses; showing change from Washington\'s dominance before 1905 to the rise of the NAACP and the UNIA after 1909.',
+        }),
+        sampleAnswer: `**Thesis:** African American leaders between 1890 and 1925 agreed on the goal of racial advancement and self-respect but disagreed sharply about strategy. Washington favored economic accommodation, Wells and Du Bois favored protest for full civil and political rights, and Garvey's movement looked beyond the United States to a Pan-African nation.
+
+**Context:** After Reconstruction ended in 1877, Southern states used poll taxes, literacy tests, and grandfather clauses to strip Black men of the vote, and the Supreme Court approved "separate but equal" segregation in *Plessy v. Ferguson* (1896). Lynching peaked in the early 1890s. Historians call this period the "nadir" of African American life after slavery, and every leader in the sources was responding to it.
+
+**Accommodation:** Washington (Source 2) told Black Southerners to "cast down your bucket where you are," and he accepted social separation, "as separate as the fingers." His audience explains his tone: speaking to white Southern business leaders at an exposition meant to attract investment, he offered racial peace in exchange for economic opportunity and support for schools like Tuskegee.
+
+**Protest:** Others rejected that bargain. Wells (Source 1) argued that yielding only invited more violence and urged armed self-defense. Her context matters: a mob destroyed her newspaper after her editorials denouncing lynching, a campaign that began with the murder of three Black grocers in Memphis, so she knew firsthand that the law would not protect Black citizens who spoke out. Du Bois (Source 3) accused Washington of "adjustment and submission," and the Niagara Movement (Source 4) called for "persistent manly agitation" for political rights. Beyond the sources, the Niagara activists helped found the NAACP in 1909, which won *Guinn v. United States* (1915), striking down Oklahoma's grandfather clause.
+
+**Pan-Africanism:** Garvey's UNIA (Source 5) went further, demanding "Africa for the Africans at home and abroad." It drew on the disillusionment of Black veterans and migrants after the Red Summer of 1919 and built a mass following that the NAACP's mostly middle-class membership could not match.
+
+**Reasoning (comparison):** These leaders shared more than their debates suggest. All valued self-help, education, and racial pride, and Washington quietly funded legal challenges to disfranchisement even while publicly accepting segregation. Their main disagreements were over whether to demand political rights immediately and whether Black Americans' future lay within the United States. The movement was therefore united in purpose but divided in strategy.`,
+      },
+    ],
+    totalPoints: 7,
+    timeRecommendation: '45 minutes',
+    calculatorAllowed: false,
+  },
+  {
+    id: 'aas-dbq-3',
+    type: 'dbq' as const,
+    unit: 4,
+    title: 'DBQ: Federal Action and the Black Freedom Movement, 1964–1968',
+    prompt: DBQ_DIRECTIONS + `
+
+**Question:** Explain the extent to which federal action in the 1960s addressed the goals of the Black freedom movement.
+
+---
+
+**Source 1**
+
+*Source: Civil Rights Act of 1964, Title II, signed into law by President Lyndon B. Johnson, July 2, 1964.*
+
+> "All persons shall be entitled to the full and equal enjoyment of the goods, services, facilities, and privileges, advantages, and accommodations of any place of public accommodation, as defined in this section, without discrimination or segregation on the ground of race, color, religion, or national origin."
+
+---
+
+**Source 2**
+
+*Source: Voting Rights Act of 1965, Section 2, signed into law by President Johnson, August 6, 1965, five months after state troopers attacked marchers on the Edmund Pettus Bridge in Selma, Alabama.*
+
+> "No voting qualification or prerequisite to voting, or standard, practice, or procedure shall be imposed or applied by any State or political subdivision to deny or abridge the right of any citizen of the United States to vote on account of race or color."
+
+---
+
+**Source 3**
+
+*Source: President Lyndon B. Johnson, commencement address at Howard University, a historically Black university in Washington, D.C., June 4, 1965.*
+
+> "You do not take a person who, for years, has been hobbled by chains and liberate him, bring him up to the starting line of a race and then say, 'you are free to compete with all the others,' and still justly believe that you have been completely fair. . . . We seek not just freedom but opportunity. We seek not just legal equity but human ability, not just equality as a right and a theory but equality as a fact and equality as a result."
+
+---
+
+**Source 4**
+
+*Source: Black Panther Party for Self-Defense, founded by Huey P. Newton and Bobby Seale in Oakland, California, "What We Want, What We Believe" (the Ten-Point Program), October 1966 (summary adapted from the program).*
+
+> The program's first point demanded freedom and the power for the Black community to determine its own destiny. Other points demanded full employment, decent housing, education that taught Black people's true history, exemption of Black men from military service, and an immediate end to police brutality against Black people.
+
+---
+
+**Source 5**
+
+*Source: Report of the National Advisory Commission on Civil Disorders (the Kerner Commission), appointed by President Johnson after urban uprisings in 1967, released February 29, 1968.*
+
+> "This is our basic conclusion: Our Nation is moving toward two societies, one black, one white—separate and unequal. . . . What white Americans have never fully understood—but what the Negro can never forget—is that white society is deeply implicated in the ghetto. White institutions created it, white institutions maintain it, and white society condones it."`,
+    parts: [
+      {
+        label: 'Essay',
+        prompt: 'Write your DBQ essay in response to the question above. When you grade it, check your essay against each row of the 7-point rubric.',
+        maxPoints: 7,
+        rubric: dbqRubric({
+          thesisKeywords: ['although', 'while', 'legal', 'economic', 'de jure', 'de facto', 'extent', 'but'],
+          context: 'Jim Crow segregation and disfranchisement in the South; the Great Migration and housing discrimination in Northern and Western cities (redlining, restrictive covenants); Brown v. Board of Education (1954) and massive resistance; grassroots campaigns such as the Montgomery bus boycott, the sit-ins, the Freedom Rides, and the Birmingham campaign; Cold War pressure on U.S. racial policy.',
+          contextKeywords: ['Jim Crow', 'disfranchise', 'Great Migration', 'redlining', 'covenant', 'Brown', '1954', 'Montgomery', 'sit-in', 'Freedom Rides', 'Birmingham', 'Cold War'],
+          outside: 'the March on Washington (1963); Freedom Summer (1964) and the Mississippi Freedom Democratic Party; Stokely Carmichael\'s call for "Black Power" (1966); the Watts uprising (1965); the Fair Housing Act (1968); affirmative action under Executive Order 11246 (1965); the assassination of Martin Luther King Jr. (1968); the Poor People\'s Campaign (1968); the sharp rise in Black voter registration in Mississippi after 1965.',
+          outsideKeywords: ['March on Washington', '1963', 'Freedom Summer', 'Freedom Democratic', 'Hamer', 'Carmichael', 'Black Power', 'Watts', 'Fair Housing', '11246', 'affirmative action', 'Poor People', 'Mississippi', 'registration'],
+          reasoning: 'comparing legal goals that federal action met with economic goals it did not; explaining how grassroots pressure caused federal action; showing change in the movement\'s goals from desegregation (early 1960s) to economic power and self-determination (after 1965).',
+        }),
+        sampleAnswer: `**Thesis:** Federal action in the 1960s largely met the movement's legal goals of ending segregation and disfranchisement, but it fell short of its economic and political goals of jobs, housing, safety from police violence, and community power. As the movement's goals broadened after 1965, the gap between them and federal policy widened.
+
+**Context:** For decades, Jim Crow laws had segregated Southern public life, and poll taxes, literacy tests, and violence kept most Black Southerners from voting. In Northern and Western cities, Black migrants faced redlining, restrictive covenants, and job discrimination. After *Brown v. Board of Education* (1954), grassroots campaigns such as the Montgomery bus boycott, the sit-ins, and the Birmingham campaign of 1963 pressured the federal government to act.
+
+**Legal goals met:** The Civil Rights Act (Source 1) outlawed segregation in public accommodations, achieving a central aim of the sit-ins and Freedom Rides. The Voting Rights Act (Source 2) banned any practice that denied the vote "on account of race or color." Its context shows that federal action followed grassroots pressure: Johnson signed it five months after state troopers attacked marchers in Selma. Beyond the sources, Black voter registration in Mississippi rose from under 7 percent in 1964 to about 60 percent by 1968.
+
+**Economic goals unmet:** Johnson himself (Source 3) admitted that legal equality was not enough and promised "equality as a fact and equality as a result." Because he was speaking to graduates of a historically Black university, he was promising the movement's next stage directly to its future leaders. Federal programs did not deliver on that promise. The Black Panther Party's Ten-Point Program (Source 4) demanded jobs, housing, and an end to police brutality, issues that the 1964 and 1965 laws did not address. The Kerner Commission (Source 5), appointed by Johnson himself, concluded in 1968 that the nation was "moving toward two societies." Because it was a federal commission rather than an activist group, its conclusion that "white institutions created" the ghetto carried unusual weight as an admission of federal failure.
+
+**Reasoning (change over time):** Federal action caught up with the movement's early goals but not its later ones. Early campaigns sought to end legal segregation in the South, and Congress responded in 1964 and 1965. After the Watts uprising of 1965 and the call for "Black Power" in 1966, activists focused on economic inequality and community control in cities across the country. The Fair Housing Act of 1968 passed only after King's assassination, and it did little to change housing patterns, so federal action addressed the movement's legal goals far more fully than its economic ones.`,
+      },
+    ],
+    totalPoints: 7,
+    timeRecommendation: '45 minutes',
+    calculatorAllowed: false,
+  },
+]
+
+
+export const apAASFRQs: AASFRQ[] = [...longFRQs, ...shortFRQs, ...dbqFRQs]
 
 export function getApAASFRQs(): AASFRQ[] {
   return apAASFRQs
@@ -447,6 +722,10 @@ export function getLongFRQs(): AASFRQ[] {
 
 export function getShortFRQs(): AASFRQ[] {
   return shortFRQs
+}
+
+export function getDBQs(): AASFRQ[] {
+  return dbqFRQs
 }
 
 export function generateFullExamFRQs(pool: AASFRQ[] = apAASFRQs): {

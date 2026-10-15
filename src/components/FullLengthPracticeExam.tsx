@@ -728,7 +728,7 @@ function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
               value={ans.response}
               onChange={e => updateAnswer(a => a.type === 'dbq' ? { ...a, response: e.target.value } : a)}
               disabled={ans.submitted}
-              placeholder="Write your DBQ essay. Aim for a clear thesis, contextualization, evidence from at least 6 documents, evidence beyond the documents, sourcing analysis, and a complex argument."
+              placeholder="Write your DBQ essay. Aim for a defensible thesis, contextualization, evidence from most of the documents, evidence beyond them, sourcing analysis, and well-developed reasoning."
               className="min-h-[300px] w-full rounded-lg border border-gray-300 bg-white p-3 text-sm text-gray-800 focus:border-amber-400 focus:outline-none disabled:bg-gray-50 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-200"
             />
             <p className="mt-1 text-xs text-gray-500">{ans.response.split(/\s+/).filter(Boolean).length} words</p>

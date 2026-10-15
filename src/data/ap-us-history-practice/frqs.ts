@@ -1,8 +1,8 @@
 import type { SAQItem, DBQItem, LEQItem } from '@/components/FullLengthPracticeExam'
 
 /* ============================================================== */
-/*  SAQs — 3 questions: 1 secondary-source, 1 primary-source,
-    1 no-stimulus student-choice (pick A or B)                     */
+/*  SAQs — 3 required questions, all with sources (May 2027+ exam):
+    1 secondary text, 1 primary text, 1 non-text source            */
 /* ============================================================== */
 
 export const SAQS: SAQItem[] = [
@@ -13,9 +13,9 @@ export const SAQS: SAQItem[] = [
     prompt:
       'SAQ 1 — Required. Use the passage to answer parts (a), (b), and (c).\n\n' +
       '"The American Revolution was, on its political side, a struggle for power between two systems of government — the older system of imperial control… and the newer system of self-government that had grown up in the colonies. The Revolution did not so much create the political institutions of the United States as it ratified institutions that had already developed in the colonies during the previous century and a half."\n' +
-      '— Charles M. Andrews, historian, The Colonial Background of the American Revolution, 1924\n\n' +
+      '— Charles M. Andrews, historian, The Colonial Background of the American Revolution, 1924 (adapted)\n\n' +
       '"The Revolution made America\'s society democratic. It made the interests and prosperity of ordinary people — their pursuits of happiness — the goal of society and government… It transformed monarchical Americans, taught to be subjects of a king, into republican citizens, conscious of their equal rights."\n' +
-      '— Gordon S. Wood, historian, The Radicalism of the American Revolution, 1991',
+      '— Gordon S. Wood, historian, The Radicalism of the American Revolution, 1991 (adapted)',
     parts: [
       {
         letter: 'a',
@@ -60,16 +60,71 @@ export const SAQS: SAQItem[] = [
     sampleResponse:
       '(a) Andrews argues the Revolution mostly ratified self-governing institutions that already existed in the colonies, framing it as political continuity. Wood argues the Revolution was radically transformative because it democratized American society and converted subjects into republican citizens.\n\n' +
       '(b) The Articles of Confederation (1781) preserved the dominance of state legislatures — institutions that had matured during the colonial period — supporting Andrews\'s view that independence ratified rather than created American political institutions. Lower-house assemblies in Virginia, Massachusetts, and Pennsylvania simply continued to govern after 1776, exercising powers they had already claimed by the 1760s.\n\n' +
-      '(c) Pennsylvania\'s 1776 state constitution abolished property requirements for voting among free white men and created a single unicameral legislature, replacing the colonial governor and council with a plural executive. This was a dramatic break from colonial-era hierarchies and supports Wood\'s claim that the Revolution made American society democratic.',
+      '(c) Pennsylvania\'s 1776 state constitution replaced the property qualification for voting with a taxpaying qualification, enfranchising most adult free men, and created a single unicameral legislature, replacing the colonial governor and council with a plural executive. This was a dramatic break from colonial-era hierarchies and supports Wood\'s claim that the Revolution made American society democratic.',
   },
 
-  /* ---------- SAQ 2 (Primary source — required) ---------- */
+  /* ---------- SAQ 2 (Primary text source — required) ---------- */
+  {
+    type: 'saq',
+    topic: 'period-4-1800-1848',
+    prompt:
+      'SAQ 2 — Required. Use the excerpt to answer parts (a), (b), and (c).\n\n' +
+      '"We hold these truths to be self-evident: that all men and women are created equal; that they are endowed by their Creator with certain inalienable rights; that among these are life, liberty, and the pursuit of happiness. . . . The history of mankind is a history of repeated injuries and usurpations on the part of man toward woman, having in direct object the establishment of an absolute tyranny over her. . . . He has never permitted her to exercise her inalienable right to the elective franchise."\n' +
+      '— Declaration of Sentiments, drafted chiefly by Elizabeth Cady Stanton and adopted at the women\'s rights convention in Seneca Falls, New York, July 1848',
+    parts: [
+      {
+        letter: 'a',
+        question:
+          'Briefly describe ONE argument the authors make in the excerpt about the status of women in the United States.',
+        rubric: [
+          {
+            id: 'a1',
+            label: '1 pt — Describe an argument in the excerpt',
+            description:
+              'Acceptable: women are equal to men and possess the same natural rights the Declaration of Independence promised; men have deliberately kept women subordinate ("absolute tyranny"); denying women the vote violates their inalienable rights. Must describe what the excerpt argues, not just quote it.',
+          },
+        ],
+      },
+      {
+        letter: 'b',
+        question:
+          'Briefly explain ONE specific historical development from the period 1800–1848 that contributed to the reform movement that produced the Declaration.',
+        rubric: [
+          {
+            id: 'b1',
+            label: '1 pt — Explain a contributing development',
+            description:
+              'Acceptable: the Second Great Awakening encouraging perfectionism and reform; women\'s work in the abolitionist and temperance movements (for example, women delegates such as Lucretia Mott being excluded from the 1840 World Anti-Slavery Convention in London, where Stanton met Mott); the market revolution and the ideology of separate spheres, or "cult of domesticity"; women wage workers in the Lowell mills. Must EXPLAIN how it led to organized women\'s rights activism.',
+          },
+        ],
+      },
+      {
+        letter: 'c',
+        question:
+          'Briefly explain ONE way the movement for women\'s rights changed OR remained the same in the period from 1848 to 1920.',
+        rubric: [
+          {
+            id: 'c1',
+            label: '1 pt — Explain a change or continuity',
+            description:
+              'Change: the movement split in 1869 over the Fifteenth Amendment (NWSA and AWSA) and reunited as NAWSA in 1890; western territories and states such as Wyoming (1869) granted women the vote; Progressive Era activists and Alice Paul\'s National Woman\'s Party used new mass tactics; the Nineteenth Amendment (1920) achieved suffrage. Continuity: the focus on the vote as the key to equality; the exclusion or marginalization of Black women within major suffrage organizations. Must EXPLAIN the change or continuity.',
+          },
+        ],
+      },
+    ],
+    sampleResponse:
+      '(a) The authors argue that women have the same natural rights as men, and they deliberately echo the Declaration of Independence ("all men and women are created equal") to show that American principles had been denied to half the population, most obviously by refusing women the vote.\n\n' +
+      '(b) Many of the convention\'s leaders gained their organizing experience in abolitionism. When Lucretia Mott and other American women delegates were refused seats at the World Anti-Slavery Convention in London in 1840, Mott and Elizabeth Cady Stanton resolved to hold a convention on women\'s rights, which became the Seneca Falls meeting of 1848.\n\n' +
+      '(c) The movement changed after the Civil War when it split over the Fifteenth Amendment, which enfranchised Black men but not women. Stanton and Susan B. Anthony formed the National Woman Suffrage Association in 1869 to push for a federal amendment, a goal achieved when the Nineteenth Amendment was ratified in 1920.',
+  },
+
+  /* ---------- SAQ 3 (Non-text source — required) ---------- */
   {
     type: 'saq',
     topic: 'period-7-1890-1945',
     prompt:
-      'SAQ 2 — Required. Use the cartoon description to answer parts (a), (b), and (c).\n\n' +
-      'Image (described): A 1904 American political cartoon by Joseph Keppler titled "Next!" depicts a Standard Oil Company storage tank as an enormous octopus. Its tentacles wrap tightly around the U.S. Capitol, a state house, the U.S. Treasury, and several copper, steel, and shipping companies. One free tentacle is reaching toward the White House.',
+      'SAQ 3 — Required. Use the image to answer parts (a), (b), and (c).\n\n' +
+      'Image (described): Udo J. Keppler, "Next!," a political cartoon published in Puck magazine, September 7, 1904. A Standard Oil Company storage tank is drawn as an enormous octopus. Its tentacles wrap around the U.S. Capitol, a state house, and copper, steel, and shipping industries, and one free tentacle reaches toward the White House.',
     parts: [
       {
         letter: 'a',
@@ -114,66 +169,7 @@ export const SAQS: SAQItem[] = [
     sampleResponse:
       '(a) The cartoon expresses the perspective that monopolistic corporations like Standard Oil had grown so powerful that they could control state and federal governments along with other industries — threatening the independence of democratic institutions.\n\n' +
       '(b) Ida Tarbell\'s muckraking History of the Standard Oil Company (1902–04) exposed John D. Rockefeller\'s use of secret rebates and predatory pricing to monopolize American oil refining. Tarbell\'s reporting helped convince the public that Standard Oil and similar trusts were corrupting both markets and politics — exactly the concern the cartoon dramatizes.\n\n' +
-      '(c) In 1911 the federal government, under the Sherman Antitrust Act, won a Supreme Court ruling (Standard Oil Co. v. United States) that broke Standard Oil into 34 separate companies. This action directly responded to the perception shown in the cartoon by using federal antitrust authority to dismantle a monopoly that had captured both economic and political power.',
-  },
-
-  /* ---------- SAQ 3 (Student choice: A or B) — no stimulus ---------- */
-  {
-    type: 'saq',
-    topic: 'period-8-1945-1980-or-period-3-1754-1800',
-    prompt:
-      'SAQ 3 — Student choice. Answer EITHER Question 3 OR Question 4. Below is presented as ONE question with three parts; in your response, indicate clearly whether you are answering Option A (1763–1815) or Option B (1945–1980).\n\n' +
-      'Option A — Answer (a), (b), and (c) about the period 1763 to 1815.\n' +
-      'Option B — Answer (a), (b), and (c) about the period 1945 to 1980.',
-    parts: [
-      {
-        letter: 'a',
-        question:
-          'Option A: Briefly describe ONE specific historical effect of British imperial policy on the American colonies between 1763 and 1776.\n\n' +
-          'Option B: Briefly describe ONE specific historical effect of the Cold War on U.S. domestic politics between 1945 and 1980.',
-        rubric: [
-          {
-            id: 'a1',
-            label: '1 pt — Specific effect',
-            description:
-              'Option A acceptable: Proclamation of 1763 limiting western settlement; Stamp Act / Townshend duties triggering colonial protest; Coercive Acts uniting the colonies in the First Continental Congress.\n\nOption B acceptable: rise of McCarthyism / Second Red Scare; expansion of the federal national-security state (NSC, CIA, NSA); growth of the military-industrial complex; civil-defense and loyalty programs; bipartisan containment consensus.',
-          },
-        ],
-      },
-      {
-        letter: 'b',
-        question:
-          'Option A: Briefly explain ONE specific way colonial resistance changed American political ideology between 1763 and 1776.\n\n' +
-          'Option B: Briefly explain ONE specific way Cold War foreign policy shaped U.S. civil rights or social movements between 1945 and 1980.',
-        rubric: [
-          {
-            id: 'b1',
-            label: '1 pt — Explanation of ideological / movement effect',
-            description:
-              'Option A acceptable: shift from petitions for English liberties to natural-rights arguments (Declaration of Independence); spread of republican ideology emphasizing virtue and resistance to corruption; rejection of monarchy in favor of popular sovereignty.\n\nOption B acceptable: Cold War competition for "the loyalty of the world" pressured the federal government to support civil rights legislation (e.g., Truman desegregating the armed forces 1948; LBJ\'s Civil Rights Act, 1964); anti-communism narrowed acceptable left-wing dissent and weakened labor radicalism.',
-          },
-        ],
-      },
-      {
-        letter: 'c',
-        question:
-          'Option A: Briefly explain ONE specific way the new United States addressed problems left by British imperial policy in the years 1781 to 1815.\n\n' +
-          'Option B: Briefly explain ONE specific way Cold War tensions shaped U.S. economic policy or government spending between 1945 and 1980.',
-        rubric: [
-          {
-            id: 'c1',
-            label: '1 pt — Explanation of subsequent response',
-            description:
-              'Option A acceptable: Treaty of Paris (1783) and later Jay\'s Treaty (1794) negotiating outstanding boundary, debt, and trade disputes with Britain; Northwest Ordinance (1787) organizing the territory Britain ceded; War of 1812 reasserting maritime sovereignty.\n\nOption B acceptable: massive defense budgets sustained by the Korean and Vietnam wars; the Federal Highway Act of 1956 framed as national defense; the National Defense Education Act (1958) following Sputnik; federal investment in the space program after 1961.',
-          },
-        ],
-      },
-    ],
-    sampleResponse:
-      'Sample answer (Option B):\n\n' +
-      '(a) The Cold War expanded the federal national-security state. Through the National Security Act of 1947 the U.S. created the CIA, the National Security Council, and a unified Department of Defense — permanent peacetime institutions that had not existed before 1945.\n\n' +
-      '(b) Cold War competition with the Soviet Union for influence in newly decolonizing Asia and Africa pressured the federal government to address segregation at home, because Jim Crow undermined U.S. claims to lead the "free world." This argument helped move the Truman administration to desegregate the armed forces in 1948 and shaped Justice Department briefs in Brown v. Board of Education (1954).\n\n' +
-      '(c) Cold War tensions sustained extraordinary federal defense spending throughout the postwar decades. The Federal-Aid Highway Act of 1956, justified in part as "national defense" infrastructure, and the National Defense Education Act (1958), which funded science and language education in response to Sputnik, both routed Cold War priorities into long-term federal economic policy.',
+      '(c) In 1911 the federal government, under the Sherman Antitrust Act, won a Supreme Court ruling (Standard Oil Co. of New Jersey v. United States) that broke Standard Oil into 34 separate companies. This action directly responded to the perception shown in the cartoon by using federal antitrust authority to dismantle a monopoly that had captured both economic and political power.',
   },
 ]
 
@@ -189,9 +185,9 @@ export const DBQ: DBQItem = {
     'In your response you should do the following:\n' +
     '• Respond to the prompt with a historically defensible thesis or claim that establishes a line of reasoning.\n' +
     '• Describe a broader historical context relevant to the prompt.\n' +
-    '• Support an argument in response to the prompt using at least six documents.\n' +
+    '• Support an argument in response to the prompt using at least four documents.\n' +
     '• Use at least one additional piece of specific historical evidence (beyond that found in the documents) relevant to an argument about the prompt.\n' +
-    '• For at least three documents, explain how or why the document\'s point of view, purpose, historical situation, and/or audience is relevant to an argument.\n' +
+    '• For at least two documents, explain how or why the document\'s point of view, purpose, historical situation, and/or audience is relevant to an argument.\n' +
     '• Demonstrate a complex understanding of the historical development that is the focus of the prompt, using evidence to corroborate, qualify, or modify an argument that addresses the question.',
   documents: [
     {
@@ -199,7 +195,7 @@ export const DBQ: DBQItem = {
       source:
         'Source: President Harry S. Truman, Executive Order 9981, July 26, 1948.',
       content:
-        '"It is hereby declared to be the policy of the President that there shall be equality of treatment and opportunity for all persons in the armed services without regard to race, color, religion, or national origin. This policy shall be put into effect as rapidly as possible, having due regard to the time required to effectuate any necessary changes."',
+        '"It is hereby declared to be the policy of the President that there shall be equality of treatment and opportunity for all persons in the armed services without regard to race, color, religion, or national origin. This policy shall be put into effect as rapidly as possible, having due regard to the time required to effectuate any necessary changes…"',
     },
     {
       number: 2,
@@ -211,16 +207,16 @@ export const DBQ: DBQItem = {
     {
       number: 3,
       source:
-        'Source: Senator Strom Thurmond and 18 other Southern senators, "Declaration of Constitutional Principles" ("Southern Manifesto"), March 12, 1956.',
+        'Source: "Declaration of Constitutional Principles" (the "Southern Manifesto"), read into the Congressional Record on March 12, 1956, and ultimately signed by 19 senators and 82 representatives from Southern states.',
       content:
-        '"We regard the [Brown] decision of the Supreme Court in the school cases as a clear abuse of judicial power. It climaxes a trend in the Federal judiciary undertaking to legislate, in derogation of the authority of Congress, and to encroach upon the reserved rights of the States and the people. We pledge ourselves to use all lawful means to bring about a reversal of this decision which is contrary to the Constitution and to prevent the use of force in its implementation."',
+        '"We regard the decisions of the Supreme Court in the school cases as a clear abuse of judicial power. It climaxes a trend in the Federal Judiciary undertaking to legislate, in derogation of the authority of Congress, and to encroach upon the reserved rights of the States and the people… We pledge ourselves to use all lawful means to bring about a reversal of this decision which is contrary to the Constitution and to prevent the use of force in its implementation."',
     },
     {
       number: 4,
       source:
         'Source: President Dwight D. Eisenhower, radio and television address to the American people on the situation in Little Rock, Arkansas, September 24, 1957.',
       content:
-        '"This morning the mob… forcibly prevented the carrying out of [a] plan [of court-ordered school integration]… I have today issued an Executive Order directing the use of troops under Federal authority to aid in the execution of Federal law at Little Rock, Arkansas. This became necessary when my Proclamation of yesterday was not observed, and the obstruction of justice still continues."',
+        '"This morning the mob again gathered in front of the Central High School of Little Rock, obviously for the purpose of again preventing the carrying out of the Court\'s order relating to the admission of Negro children to that school… I have today issued an Executive Order directing the use of troops under Federal authority to aid in the execution of Federal law at Little Rock, Arkansas. This became necessary when my Proclamation of yesterday was not observed, and the obstruction of justice still continues."',
     },
     {
       number: 5,
@@ -234,14 +230,14 @@ export const DBQ: DBQItem = {
       source:
         'Source: Civil Rights Act of 1964, signed into law by President Lyndon B. Johnson, July 2, 1964.',
       content:
-        '"All persons shall be entitled to the full and equal enjoyment of the goods, services, facilities, privileges, advantages, and accommodations of any place of public accommodation, as defined in this section, without discrimination or segregation on the ground of race, color, religion, or national origin… No employer shall fail or refuse to hire or… discriminate against any individual… because of such individual\'s race, color, religion, sex, or national origin."',
+        '"All persons shall be entitled to the full and equal enjoyment of the goods, services, facilities, and privileges, advantages, and accommodations of any place of public accommodation, as defined in this section, without discrimination or segregation on the ground of race, color, religion, or national origin… It shall be an unlawful employment practice for an employer— (1) to fail or refuse to hire or to discharge any individual, or otherwise to discriminate against any individual… because of such individual\'s race, color, religion, sex, or national origin."',
     },
     {
       number: 7,
       source:
         'Source: Fannie Lou Hamer, testimony before the Credentials Committee of the Democratic National Convention on behalf of the Mississippi Freedom Democratic Party, August 22, 1964.',
       content:
-        '"All of this is on account of we want to register, to become first-class citizens, and if the Freedom Democratic Party is not seated now, I question America. Is this America, the land of the free and the home of the brave, where we have to sleep with our telephones off the hooks because our lives be threatened daily, because we want to live as decent human beings, in America?"',
+        '"All of this is on account of we want to register, to become first-class citizens. And if the Freedom Democratic Party is not seated now, I question America. Is this America, the land of the free and the home of the brave, where we have to sleep with our telephones off the hooks because our lives be threatened daily, because we want to live as decent human beings, in America?"',
     },
   ],
   rubric: [
@@ -259,27 +255,27 @@ export const DBQ: DBQItem = {
     },
     {
       id: 'use-3',
-      label: 'C: Evidence — Use 3 documents (1 pt)',
+      label: 'C: Evidence from the Documents — 3 documents (1 pt)',
       description:
-        'Accurately uses the content of at least three documents to address the prompt.',
+        'Accurately uses the content of at least three documents to address the topic of the prompt.',
     },
     {
-      id: 'use-6',
-      label: 'C: Evidence — Use 6 documents (additional 1 pt)',
+      id: 'use-4',
+      label: 'C: Evidence from the Documents — support an argument with 4 documents (2nd pt)',
       description:
-        'Supports an argument in response to the prompt by accurately using the content of at least six of the seven documents (must build on the 3-doc point above for a total of 2 evidence points).',
+        'Supports an argument in response to the prompt by accurately using the content of at least four documents (builds on the 3-document point above for a total of 2 evidence points).',
     },
     {
       id: 'outside-evidence',
       label: 'D: Outside Evidence (1 pt)',
       description:
-        'Uses at least one specific piece of historical evidence beyond the documents that is relevant to an argument about the prompt. Acceptable: Montgomery Bus Boycott (1955–56); SNCC and the sit-in movement (1960); Freedom Rides (1961); March on Washington (1963); Voting Rights Act of 1965; Selma march (1965); Loving v. Virginia (1967).',
+        'Uses at least one specific piece of historical evidence beyond the documents that is relevant to an argument about the prompt. Acceptable: Montgomery Bus Boycott (1955–56); SNCC and the sit-in movement (1960); Freedom Rides (1961); March on Washington (1963); Voting Rights Act of 1965; Selma march (1965); the Civil Rights Act of 1957; the Twenty-fourth Amendment (1964).',
     },
     {
       id: 'sourcing',
-      label: 'E: Sourcing — POV / Purpose / Audience / Situation for 3 docs (1 pt)',
+      label: 'E: Sourcing — POV / Purpose / Audience / Situation for 2 docs (1 pt)',
       description:
-        'For at least three documents, explains how or why the document\'s point of view, purpose, historical situation, and/or audience is relevant to an argument. (Just naming the author is not enough; you must explain the relevance.)',
+        'For at least two documents, explains how or why the document\'s point of view, purpose, historical situation, and/or audience is relevant to an argument. (Just naming the author is not enough; you must explain the relevance.)',
     },
     {
       id: 'complexity',
@@ -297,7 +293,7 @@ export const DBQ: DBQItem = {
 }
 
 /* ============================================================== */
-/*  LEQ — three prompt choices spanning early/middle/modern periods */
+/*  LEQ — one required broad prompt (May 2027+ exam format)        */
 /* ============================================================== */
 
 export const LEQ: LEQItem = {
@@ -305,19 +301,9 @@ export const LEQ: LEQItem = {
   topic: 'leq-choice',
   promptOptions: [
     {
-      label: 'Question 3 (1754–1800)',
+      label: 'Long Essay Question (1800–1945)',
       prompt:
-        'Evaluate the extent to which the American Revolution changed the political and social structures of the British North American colonies in the period from 1754 to 1800.',
-    },
-    {
-      label: 'Question 4 (1800–1898)',
-      prompt:
-        'Evaluate the extent to which industrialization and the market revolution transformed the United States economy and society in the period from 1800 to 1898.',
-    },
-    {
-      label: 'Question 5 (1890–1980)',
-      prompt:
-        'Evaluate the extent to which the role of the federal government in regulating the U.S. economy changed in the period from 1890 to 1980.',
+        'In the period from 1800 to 1945, the United States changed from a largely agricultural nation into the world\'s leading industrial economy, reshaping how Americans worked, where they lived, and how they organized politically. Evaluate the extent to which industrialization transformed American economic and social life in the period from 1800 to 1945. (You may focus on one or more of the developments referenced in the prompt; you are not expected to address the entire period.)',
     },
   ],
   rubric: [
@@ -360,39 +346,16 @@ export const LEQ: LEQItem = {
   ],
   sampleResponses: [
     {
-      promptLabel: 'Question 3 (1754–1800)',
+      promptLabel: 'Long Essay Question (1800–1945)',
       response:
-        'Sample thesis: "Although the Revolution preserved colonial elites in power and left enslavement intact, it transformed political structures by replacing monarchical sovereignty with written republican constitutions and by expanding the political role of ordinary white men."\n\n' +
-        'Contextualization: Half a century of growing colonial self-government in the lower houses of assembly (Virginia House of Burgesses, Massachusetts General Court) had already created an Anglo-American political class accustomed to legislative authority before the imperial crisis after 1763.\n\n' +
-        'Argument with evidence + reasoning (causation + continuity & change):\n' +
-        '• CHANGE — political: state constitutions written between 1776 and 1780 (Virginia, Pennsylvania, Massachusetts) and the federal Constitution of 1787 replaced unwritten royal authority with codified popular sovereignty, separation of powers, and bills of rights.\n' +
-        '• CHANGE — social: the Northwest Ordinance (1787) banned slavery in the new northwestern territory; northern states adopted gradual emancipation laws; primogeniture and entail were abolished in many states; religious establishments were dismantled in Virginia (Statute for Religious Freedom, 1786).\n' +
-        '• CONTINUITY: enslaved labor expanded in the Lower South; women remained legally subordinated under coverture; political authority remained concentrated among white propertied men; the Constitution\'s three-fifths and fugitive-slave clauses entrenched slavery in national law.\n\n' +
-        'Complexity: The Revolution was therefore radical politically and rhetorically (it ended monarchy and created the world\'s first large-scale republican constitution) but limited socially — its language of natural equality opened the door to later abolitionist and women\'s-rights movements, but those expansions were not yet realized in 1800.',
-    },
-    {
-      promptLabel: 'Question 4 (1800–1898)',
-      response:
-        'Sample thesis: "Between 1800 and 1898 industrialization and the market revolution fundamentally transformed the United States from a predominantly agrarian society into the world\'s largest industrial economy, restructuring labor, geography, and class relations — though plantation agriculture and rural life persisted, and benefits were unequally distributed by race and region."\n\n' +
-        'Contextualization: Early-republic improvements such as the Erie Canal (1825) and federally funded turnpikes had already begun integrating regional markets; British technology transfer (Samuel Slater\'s Pawtucket mill, 1790) provided the template for the Lowell mills of the 1820s.\n\n' +
+        'Sample thesis (focused on the nineteenth century, which the broad prompt allows): "Between 1800 and 1898 industrialization and the market revolution fundamentally transformed the United States from a predominantly agrarian society into the world\'s largest industrial economy, restructuring labor, geography, and class relations — though plantation agriculture and rural life persisted, and benefits were unequally distributed by race and region."\n\n' +
+        'Contextualization: The United States industrialized in the wake of Britain\'s Industrial Revolution, which began in British textile manufacturing in the late 1700s. Britain tried to keep its machine designs secret, but Samuel Slater carried them to America and opened a water-powered spinning mill in Pawtucket, Rhode Island, in 1790, and Alexander Hamilton\'s Report on Manufactures (1791) soon urged federal support for American industry.\n\n' +
         'Argument with evidence + reasoning (continuity and change + causation):\n' +
         '• CHANGE — labor: New England textile mills employed wage-earning women in the 1820s–30s, displacing household production; by the late 1800s, mass immigration from Ireland, Germany, southern, and eastern Europe filled industrial cities; the Knights of Labor and AFL organized industrial workers in response.\n' +
-        '• CHANGE — capital and corporate form: railroads (200,000 miles by 1900), Carnegie Steel, and Standard Oil illustrate the rise of vertically and horizontally integrated corporations on a national scale, supported by federal land grants and protective tariffs.\n' +
+        '• CHANGE — capital and corporate form: railroads (nearly 200,000 miles of track by 1900), Carnegie Steel, and Standard Oil illustrate the rise of vertically and horizontally integrated corporations on a national scale, supported by federal land grants and protective tariffs.\n' +
         '• CHANGE — geography: Chicago, Pittsburgh, and New York grew into vast industrial cities; the South became economically dependent on northern capital while sharecropping replaced slavery as the dominant agricultural labor system.\n' +
         '• CONTINUITY: cotton remained the dominant southern crop; rural and small-town life predominated demographically until the 1920 census; Native dispossession via the Dawes Act (1887) opened additional land for white settlers but left tribal sovereignty curtailed.\n\n' +
         'Complexity: Industrialization\'s benefits were unequally distributed — the Gilded Age combined enormous corporate wealth with extreme working-class poverty (Homestead Strike, 1892; Pullman Strike, 1894), prompting the Populist movement and setting the stage for Progressive reform after 1900.',
-    },
-    {
-      promptLabel: 'Question 5 (1890–1980)',
-      response:
-        'Sample thesis: "Between 1890 and 1980 the federal role in regulating the U.S. economy expanded enormously — from limited late-19th-century antitrust action to the New Deal regulatory state and the Great Society — though that expansion proceeded in fits and starts and was significantly contested by 1980."\n\n' +
-        'Contextualization: The late-19th-century rise of national corporations such as Standard Oil and the Pennsylvania Railroad created economic power on a scale the antebellum federal state had never confronted.\n\n' +
-        'Argument with evidence + reasoning (continuity and change + comparison):\n' +
-        '• EARLY EXPANSION: Sherman Antitrust Act (1890), Interstate Commerce Act (1887), Pure Food and Drug Act (1906), Federal Reserve Act (1913), Clayton Act (1914), Sixteenth Amendment income tax (1913).\n' +
-        '• MAJOR EXPANSION — New Deal: SEC (1934), NLRB (1935), Social Security Act (1935), Fair Labor Standards Act (1938) creating the minimum wage, AAA crop subsidies, FDIC bank insurance — institutional infrastructure that survived into the late 20th century.\n' +
-        '• CONTINUED EXPANSION — Great Society / 1960s–70s: Medicare and Medicaid (1965), Civil Rights Act (1964) regulating private employment, EPA (1970), OSHA (1970), Clean Air Act amendments (1970, 1977).\n' +
-        '• PUSHBACK: by the late 1970s, stagflation, deregulation of airlines and trucking under Carter, and the rise of conservative critiques (Reagan elected 1980) signaled a turn — but did not undo the New Deal/Great Society regulatory framework.\n\n' +
-        'Complexity: Federal regulation expanded across this period, but its scope was unevenly distributed — financial and labor regulation grew dramatically under the New Deal, while social-rights regulation (civil rights, environmental, occupational safety) only fully emerged in the 1960s and 1970s. By 1980 the regulatory state was a permanent feature of the American economy, even as its political legitimacy was newly contested.',
     },
   ],
 }

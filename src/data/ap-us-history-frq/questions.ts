@@ -4,6 +4,10 @@
  *
  * Format mirrors College Board APUSH exam: long source-/scenario-based prompts
  * (~25 min, 7 pts) and shorter source/data prompts (~12 min, 4 pts).
+ *
+ * Document-based questions (type 'dbq') are hand-written (not generated): 7
+ * documents and the College Board 7-point DBQ rubric. Documents are real
+ * public-domain sources; any excerpt not quoted verbatim is labelled "adapted".
  */
 
 export interface FRQRubricItem {
@@ -22,7 +26,7 @@ export interface FRQPart {
 
 export interface USHistoryFRQ {
   id: string
-  type: 'long' | 'short'
+  type: 'long' | 'short' | 'dbq'
   unit: number
   title: string
   prompt: string
@@ -435,7 +439,330 @@ const shortFRQs: USHistoryFRQ[] = [
 ]
 
 
-export const apUSHistoryFRQs: USHistoryFRQ[] = [...longFRQs, ...shortFRQs]
+/* ------------------------------------------------------------------ */
+/*  Document-based questions — 7 documents, 7-point rubric             */
+/* ------------------------------------------------------------------ */
+
+const DBQ_DIRECTIONS =
+  '**Directions:** The question is based on the accompanying documents. The documents have been edited for the purpose of this exercise. Suggested time: 60 minutes, including a 15-minute reading period.\n\n' +
+  'In your response you should do the following:\n\n' +
+  '- Respond to the prompt with a historically defensible thesis or claim that establishes a line of reasoning.\n' +
+  '- Describe a broader historical context relevant to the prompt.\n' +
+  '- Support an argument in response to the prompt using at least four documents.\n' +
+  '- Use at least one additional piece of specific historical evidence (beyond that found in the documents) relevant to an argument about the prompt.\n' +
+  '- For at least two documents, explain how or why the document\'s point of view, purpose, historical situation, and/or audience is relevant to an argument.\n' +
+  '- Use evidence to corroborate, qualify, or modify an argument that addresses the prompt.'
+
+const DOC_KEYWORDS = ['document 1', 'document 2', 'document 3', 'document 4', 'document 5', 'document 6', 'document 7', 'doc 1', 'doc 2', 'doc 3', 'doc 4', 'doc 5', 'doc 6', 'doc 7', 'doc. 1', 'doc. 2', 'doc. 3', 'doc. 4', 'doc. 5', 'doc. 6', 'doc. 7']
+
+/** The College Board AP U.S. History DBQ rubric (7 points), with prompt-specific examples. */
+function dbqRubric(spec: {
+  thesisKeywords: string[]
+  context: string
+  contextKeywords: string[]
+  outside: string
+  outsideKeywords: string[]
+  complexity: string
+}): FRQRubricItem[] {
+  return [
+    { points: 1, description: 'A. Thesis/Claim — Responds to the prompt with a historically defensible thesis or claim that establishes a line of reasoning (in the introduction or conclusion; more than a restatement of the prompt).', keywords: spec.thesisKeywords },
+    { points: 1, description: `B. Contextualization — Describes a broader historical context relevant to the prompt, in more than a phrase or passing reference. Examples: ${spec.context}`, keywords: spec.contextKeywords },
+    { points: 1, description: 'C. Evidence from the documents (1 of 2) — Uses the content of at least THREE documents to address the topic of the prompt (describes, not just quotes, what each says).', keywords: DOC_KEYWORDS },
+    { points: 1, description: 'C. Evidence from the documents (2 of 2) — Supports an argument in response to the prompt using at least FOUR documents.', keywords: DOC_KEYWORDS },
+    { points: 1, description: `C. Evidence beyond the documents — Uses at least one additional piece of specific historical evidence, not found in the documents, relevant to an argument about the prompt. Examples: ${spec.outside}`, keywords: spec.outsideKeywords },
+    { points: 1, description: 'D. Analysis and reasoning: sourcing — For at least TWO documents, explains how or why the document\'s point of view, purpose, historical situation, and/or audience is relevant to an argument (identifying the author alone does not earn the point).', keywords: ['point of view', 'purpose', 'audience', 'historical situation', 'intended', 'written to', 'because he was', 'because she was', 'as a', 'reliab', 'bias'] },
+    { points: 1, description: `D. Analysis and reasoning: complexity — Demonstrates a complex understanding of the historical development that is the focus of the prompt, using evidence to corroborate, qualify, or modify an argument. Examples: ${spec.complexity}`, keywords: ['however', 'although', 'while', 'yet', 'on the other hand', 'qualif', 'corroborat', 'nevertheless', 'at the same time', 'continuity'] },
+  ]
+}
+
+const dbqFRQs: USHistoryFRQ[] = [
+  {
+    id: 'apush-dbq-1',
+    type: 'dbq' as const,
+    unit: 3,
+    title: 'DBQ: The American Revolution and Social Hierarchy, 1775–1800',
+    prompt: DBQ_DIRECTIONS + `
+
+**Question:** Evaluate the extent to which the American Revolution challenged existing social hierarchies in the period from 1775 to 1800.
+
+---
+
+**Document 1**
+
+*Source: John Murray, Earl of Dunmore, royal governor of Virginia, proclamation issued on board the ship* William *off Norfolk, November 7, 1775.*
+
+> "I do hereby further declare all indented servants, Negroes, or others, (appertaining to Rebels,) free, that are able and willing to bear arms, they joining His Majesty's Troops, as soon as may be, for the more speedily reducing this Colony to a proper sense of their duty, to His Majesty's crown and dignity."
+
+---
+
+**Document 2**
+
+*Source: Abigail Adams, letter to her husband, John Adams, a delegate to the Continental Congress, March 31, 1776.*
+
+> "I long to hear that you have declared an independency—and by the way in the new Code of Laws which I suppose it will be necessary for you to make I desire you would Remember the Ladies, and be more generous and favourable to them than your ancestors. Do not put such unlimited power into the hands of the Husbands. Remember all Men would be tyrants if they could."
+
+---
+
+**Document 3**
+
+*Source: John Adams, reply to Abigail Adams, April 14, 1776.*
+
+> "As to your extraordinary Code of Laws, I cannot but laugh. We have been told that our Struggle has loosened the bands of Government every where. That Children and Apprentices were disobedient—that schools and Colledges were grown turbulent—that Indians slighted their Guardians and Negroes grew insolent to their Masters. But your Letter was the first Intimation that another Tribe more numerous and powerfull than all the rest were grown discontented."
+
+---
+
+**Document 4**
+
+*Source: Petition of Prince Hall and other Black residents of Boston to the Massachusetts General Court (legislature), January 13, 1777. Spelling modernized.*
+
+> "The petition of a great number of Blacks detained in a state of slavery in the bowels of a free and Christian country humbly shows that your petitioners apprehend that they have in common with all other men a natural and unalienable right to that freedom which the Great Parent of the Universe hath bestowed equally on all mankind and which they have never forfeited by any compact or agreement whatever."
+
+---
+
+**Document 5**
+
+*Source: Constitution of the Commonwealth of Massachusetts, Declaration of Rights, Article I, drafted chiefly by John Adams and ratified in 1780.*
+
+> "All men are born free and equal, and have certain natural, essential, and unalienable rights; among which may be reckoned the right of enjoying and defending their lives and liberties; that of acquiring, possessing, and protecting property; in fine, that of seeking and obtaining their safety and happiness."
+
+---
+
+**Document 6**
+
+*Source: Virginia Statute for Religious Freedom, drafted by Thomas Jefferson in 1777 and enacted by the Virginia General Assembly in January 1786.*
+
+> "...no man shall be compelled to frequent or support any religious worship, place, or ministry whatsoever, nor shall be enforced, restrained, molested, or burthened in his body or goods, nor shall otherwise suffer on account of his religious opinions or belief; but that all men shall be free to profess, and by argument to maintain, their opinions in matters of religion..."
+
+---
+
+**Document 7**
+
+*Source: Constitution of the United States, Article IV, Section 2, written at the Philadelphia Convention, 1787.*
+
+> "No Person held to Service or Labour in one State, under the Laws thereof, escaping into another, shall, in Consequence of any Law or Regulation therein, be discharged from such Service or Labour, but shall be delivered up on Claim of the Party to whom such Service or Labour may be due."`,
+    parts: [
+      {
+        label: 'Essay',
+        prompt: 'Write your DBQ essay in response to the question above. When you grade it, check your essay against each row of the 7-point rubric.',
+        maxPoints: 7,
+        rubric: dbqRubric({
+          thesisKeywords: ['although', 'while', 'challenged', 'reinforced', 'limited', 'extent', 'but'],
+          context: 'the colonial social order of deference to gentry, established churches, coverture, and slavery legal in all thirteen colonies; Enlightenment natural-rights ideas (Locke); the imperial crisis after 1763 (Stamp Act, Townshend duties) that spread "liberty" rhetoric; the First Great Awakening\'s challenge to clerical authority.',
+          contextKeywords: ['Locke', 'Enlightenment', 'natural rights', 'Great Awakening', 'Stamp Act', '1763', '1765', 'deference', 'gentry', 'established church', 'Anglican'],
+          outside: 'Pennsylvania\'s Act for the Gradual Abolition of Slavery (1780); Vermont\'s 1777 constitution limiting slavery; the Quock Walker cases (1781–1783) ending slavery in Massachusetts; New Jersey women voting under its 1776 constitution until 1807; Republican Motherhood; the Treaty of Paris (1783) ignoring Native nations; Shays\' Rebellion (1786–87); the three-fifths clause.',
+          outsideKeywords: ['Quock Walker', 'gradual abolition', 'Gradual Abolition', 'Pennsylvania', 'Vermont', 'New Jersey', 'Republican Motherhood', 'Shays', 'three-fifths', 'Treaty of Paris', '1783', 'manumission'],
+          complexity: 'distinguishing changes in religious and political hierarchy (Docs 5–6) from the persistence of racial and gender hierarchy (Docs 3, 7); showing that revolutionary ideology had unintended consequences that later movements used; comparing outcomes in the North and the South.',
+        }),
+        sampleAnswer: `**Thesis:** The American Revolution seriously challenged hierarchies of religion and inherited political privilege, and its natural-rights language gave enslaved people and women new arguments against their subordination — but the founding generation chose to preserve the hierarchies of race and gender, writing slavery into the Constitution and leaving women under coverture.
+
+**Contextualization:** Colonial society before 1775 rested on deference to a landed gentry, on established churches such as the Church of England in Virginia, on coverture, which merged a married woman's legal identity into her husband's, and on slavery, which was legal in all thirteen colonies. During the imperial crisis that followed the Stamp Act of 1765, colonial leaders borrowed Enlightenment ideas — especially Locke's argument that people possess natural rights and consent to government — to resist Parliament. That rhetoric could not easily be confined to quarrels with Britain.
+
+**Challenges to hierarchy:** The new state governments dismantled some old hierarchies outright. Massachusetts declared in 1780 that "all men are born free and equal" (Doc 5), and Virginia's Statute for Religious Freedom (Doc 6) guaranteed that no one could be compelled to support any church, completing the disestablishment of the Anglican church and placing dissenting Baptists and Presbyterians on equal footing with the old gentry church. Black Bostonians immediately turned revolutionary language against slavery: the 1777 petition (Doc 4) echoes the Declaration of Independence's language of "unalienable" rights. Because its audience was the same legislature that was justifying a war for liberty, the petitioners' purpose was to expose the contradiction and shame lawmakers into acting. Beyond the documents, the Quock Walker cases (1781–1783) used Article I of the 1780 constitution to end slavery in Massachusetts, and Pennsylvania passed a gradual abolition act in 1780.
+
+**Limits:** Yet the Revolution's leaders treated these challenges as threats. John Adams's reply to Abigail (Doc 3) lists apprentices, students, Native people, enslaved people, and now women as groups "grown discontented" — evidence that the struggle loosened hierarchy, but also that he meant to keep it. Because he wrote privately to his wife rather than to the public, his mocking tone ("I cannot but laugh") is a candid view of how a leading patriot saw the limits of revolution. Abigail herself (Doc 2) asked only that husbands be "more generous," not that coverture end. The sharpest challenge to slavery came from the British, not the patriots: Dunmore's proclamation (Doc 1) freed enslaved people who fought for the king, but his purpose was military — to cripple Virginia's rebel planters — and it applied only to people owned by rebels. Finally, the Constitution's fugitive slave clause (Doc 7) committed the whole nation to returning people who escaped slavery.
+
+**Complexity:** The Revolution's effects therefore split along regional and social lines. Northern states moved toward gradual emancipation while Southern states entrenched slavery, and women gained a new civic role as "republican mothers" without gaining legal equality. Even so, the language of Documents 4 and 5 outlived the compromises of Document 7 and was taken up later by abolitionists and by the women at Seneca Falls in 1848, which shows that the Revolution's challenge to hierarchy was real but long delayed.`,
+      },
+    ],
+    totalPoints: 7,
+    timeRecommendation: '60 minutes (incl. 15-min reading period)',
+    calculatorAllowed: false,
+  },
+  {
+    id: 'apush-dbq-2',
+    type: 'dbq' as const,
+    unit: 6,
+    title: 'DBQ: Limiting the Power of Big Business, 1877–1900',
+    prompt: DBQ_DIRECTIONS + `
+
+**Question:** Evaluate the extent to which reformers and the federal government limited the power of big business in the period from 1877 to 1900.
+
+---
+
+**Document 1**
+
+*Source: Preamble to the constitution of the Knights of Labor, adopted at the order's general assembly in Reading, Pennsylvania, 1878 (adapted).*
+
+> "The recent alarming development and aggression of aggregated wealth, which, unless checked, will invariably lead to the pauperization and hopeless degradation of the toiling masses, render it imperative, if we desire to enjoy the blessings of life, that a check should be placed upon its power and upon unjust accumulation..."
+
+---
+
+**Document 2**
+
+*Source: Interstate Commerce Act, passed by Congress and signed by President Grover Cleveland, February 4, 1887, Section 1.*
+
+> "All charges made for any service rendered or to be rendered in the transportation of passengers or property . . . shall be reasonable and just; and every unjust and unreasonable charge for such service is prohibited and declared to be unlawful."
+
+---
+
+**Document 3**
+
+*Source: Andrew Carnegie, steel manufacturer, "Wealth," published in the* North American Review, *June 1889.*
+
+> "The problem of our age is the proper administration of wealth, so that the ties of brotherhood may still bind together the rich and poor in harmonious relationship. . . . [W]hile the law [of competition] may be sometimes hard for the individual, it is best for the race, because it insures the survival of the fittest in every department. . . . The man who dies thus rich dies disgraced."
+
+---
+
+**Document 4**
+
+*Source: Sherman Antitrust Act, passed by Congress and signed by President Benjamin Harrison, July 2, 1890, Section 1.*
+
+> "Every contract, combination in the form of trust or otherwise, or conspiracy, in restraint of trade or commerce among the several States, or with foreign nations, is hereby declared to be illegal."
+
+---
+
+**Document 5**
+
+*Source: Platform of the People's (Populist) Party, adopted at its national convention in Omaha, Nebraska, July 4, 1892.*
+
+> "We meet in the midst of a nation brought to the verge of moral, political, and material ruin. Corruption dominates the ballot-box, the Legislatures, the Congress, and touches even the ermine of the bench. . . . The fruits of the toil of millions are boldly stolen to build up colossal fortunes for a few, unprecedented in the history of mankind; and the possessors of these, in turn despise the Republic and endanger liberty."
+
+---
+
+**Document 6**
+
+*Source: Chief Justice Melville Fuller, majority opinion in* United States v. E. C. Knight Company, *1895. The American Sugar Refining Company had acquired competing refineries and controlled nearly all sugar refining in the United States.*
+
+> "Doubtless the power to control the manufacture of a given thing involves, in a certain sense, the control of its disposition, but this is a secondary, and not the primary, sense; and, although the exercise of that power may result in bringing the operation of commerce into play, it does not control it, and affects it only incidentally and indirectly. Commerce succeeds to manufacture, and is not a part of it."
+
+---
+
+**Document 7**
+
+*Source: William Jennings Bryan, speech to the Democratic National Convention in Chicago, July 9, 1896.*
+
+> "You come to us and tell us that the great cities are in favor of the gold standard; we reply that the great cities rest upon our broad and fertile prairies. Burn down your cities and leave our farms, and your cities will spring up again as if by magic; but destroy our farms and the grass will grow in the streets of every city in the country. . . . You shall not press down upon the brow of labor this crown of thorns, you shall not crucify mankind upon a cross of gold."`,
+    parts: [
+      {
+        label: 'Essay',
+        prompt: 'Write your DBQ essay in response to the question above. When you grade it, check your essay against each row of the 7-point rubric.',
+        maxPoints: 7,
+        rubric: dbqRubric({
+          thesisKeywords: ['although', 'while', 'limited', 'failed', 'ineffective', 'extent', 'symbolic', 'but'],
+          context: 'the Second Industrial Revolution and the rise of national corporations (railroads, Standard Oil, Carnegie Steel); horizontal and vertical integration; laissez-faire ideology and Social Darwinism; the depression of 1873; falling crop prices and farm debt; mass immigration supplying industrial labor.',
+          contextKeywords: ['industrial', 'Industrial Revolution', 'railroad', 'Standard Oil', 'Rockefeller', 'laissez-faire', 'Social Darwinism', 'integration', '1873', 'Gilded Age'],
+          outside: 'the Granger laws and Munn v. Illinois (1877); Wabash v. Illinois (1886); the Great Railroad Strike of 1877; the Haymarket affair (1886); the Homestead strike (1892); the Pullman strike and In re Debs (1895); Pollock v. Farmers\' Loan and Trust (1895) striking down the income tax; the Grange and Farmers\' Alliances; McKinley\'s victory in 1896.',
+          outsideKeywords: ['Munn', 'Wabash', 'Granger', 'Grange', 'Haymarket', 'Homestead', 'Pullman', 'Debs', 'Pollock', 'income tax', '1877', 'Farmers\' Alliance', 'McKinley'],
+          complexity: 'showing that laws passed (Docs 2, 4) were weakened by courts and weak enforcement (Doc 6); distinguishing reform\'s political achievements (a national debate, later Progressive laws) from its limited economic results; comparing labor and agrarian strategies.',
+        }),
+        sampleAnswer: `**Thesis:** Between 1877 and 1900, reformers succeeded in putting the power of big business on the national agenda and won the first federal regulatory laws, but those laws were weak, the courts narrowed them, and the defeat of the Populist challenge in 1896 left corporate power largely unchecked until the Progressive Era.
+
+**Contextualization:** After the Civil War, railroads and manufacturing combinations such as Standard Oil and Carnegie Steel used horizontal and vertical integration to dominate national markets. Laissez-faire thinking and Social Darwinism taught that government should not interfere with competition. Meanwhile, farmers faced falling crop prices and high railroad rates, and industrial workers faced long hours and wage cuts, as the violent Great Railroad Strike of 1877 showed.
+
+**Pressure for reform:** Workers and farmers produced the sharpest critiques. The Knights of Labor (Doc 1) warned that "aggregated wealth" would lead to the "pauperization" of workers and demanded "a check" on its power. The Populists (Doc 5) went further, saying corruption reached "even the ermine of the bench." Because the platform was written for a convention of indebted farmers on the Fourth of July, its purpose was to recast economic grievances as a threat to the republic itself. Bryan's "cross of gold" speech (Doc 7) brought these grievances into a major party, but his audience — Democratic delegates in 1896 — explains why he focused on free silver rather than on direct control of corporations.
+
+**Federal action and its limits:** Congress did respond. The Interstate Commerce Act (Doc 2) required railroad rates to be "reasonable and just," and the Sherman Act (Doc 4) declared every combination "in restraint of trade" illegal. Both laws were vague, however, and that vagueness let the courts empty them. In *E. C. Knight* (Doc 6), Chief Justice Fuller ruled that manufacturing "is not a part of" commerce, so a sugar trust controlling nearly all refining was beyond the Sherman Act's reach. Beyond the documents, the same courts applied the Sherman Act against labor: in *In re Debs* (1895) the Supreme Court upheld the injunction that broke the Pullman strike. Carnegie's essay (Doc 3) shows why reformers struggled. As one of the richest industrialists, writing for the educated readers of the *North American Review*, he had good reason to present competition as "best for the race" and private philanthropy as the answer to inequality, an argument many middle-class Americans accepted.
+
+**Complexity:** The reform record was therefore mixed. In the short run, the laws of 1887 and 1890 were largely symbolic, and McKinley's 1896 victory confirmed business dominance. In the long run, however, they created the tools that Theodore Roosevelt used to dissolve the Northern Securities Company in 1904, and Populist demands such as the graduated income tax and the direct election of senators became law in 1913. The reformers' main achievement was to change the terms of political debate, not to break corporate power in their own time.`,
+      },
+    ],
+    totalPoints: 7,
+    timeRecommendation: '60 minutes (incl. 15-min reading period)',
+    calculatorAllowed: false,
+  },
+  {
+    id: 'apush-dbq-3',
+    type: 'dbq' as const,
+    unit: 7,
+    title: 'DBQ: Overseas Expansion and American Foreign Policy, 1898–1904',
+    prompt: DBQ_DIRECTIONS + `
+
+**Question:** Evaluate the extent to which the expansion of United States power overseas in the period from 1898 to 1904 marked a change in American foreign policy.
+
+---
+
+**Document 1**
+
+*Source: Teller Amendment to the joint resolution of Congress authorizing war with Spain, April 20, 1898.*
+
+> "That the United States hereby disclaims any disposition or intention to exercise sovereignty, jurisdiction, or control over said island [Cuba] except for the pacification thereof, and asserts its determination, when that is accomplished, to leave the government and control of the island to its people."
+
+---
+
+**Document 2**
+
+*Source: Albert J. Beveridge, Indianapolis lawyer and Republican campaign speaker, elected to the U.S. Senate by the Indiana legislature in January 1899, speech known as "The March of the Flag," Indianapolis, September 16, 1898.*
+
+> "The Opposition tells us that we ought not to govern a people without their consent. I answer, The rule of liberty that all just government derives its authority from the consent of the governed, applies only to those who are capable of self-government. We govern the Indians without their consent, we govern our territories without their consent, we govern our children without their consent."
+
+---
+
+**Document 3**
+
+*Source: Rudyard Kipling, British poet, "The White Man's Burden: The United States and the Philippine Islands," published in* McClure's Magazine, *February 1899.*
+
+> Take up the White Man's burden—  
+> Send forth the best ye breed—  
+> Go bind your sons to exile  
+> To serve your captives' need;  
+> To wait in heavy harness,  
+> On fluttered folk and wild—  
+> Your new-caught, sullen peoples,  
+> Half-devil and half-child.
+
+---
+
+**Document 4**
+
+*Source: Platform of the American Anti-Imperialist League, adopted in Chicago, October 17, 1899.*
+
+> "We hold that the policy known as imperialism is hostile to liberty and tends toward militarism, an evil from which it has been our glory to be free. We regret that it has become necessary in the land of Washington and Lincoln to reaffirm that all men, of whatever race or color, are entitled to life, liberty, and the pursuit of happiness. We maintain that governments derive their just powers from the consent of the governed."
+
+---
+
+**Document 5**
+
+*Source: President William McKinley, remarks to a delegation of Methodist church leaders at the White House, November 21, 1899, as recalled by delegation member James F. Rusling and published in* The Christian Advocate *in 1903.*
+
+> "(1) That we could not give them [the Philippines] back to Spain—that would be cowardly and dishonorable; (2) that we could not turn them over to France and Germany—our commercial rivals in the Orient—that would be bad business and discreditable; (3) that we could not leave them to themselves—they were unfit for self-government . . . and (4) that there was nothing left for us to do but to take them all, and to educate the Filipinos, and uplift and civilize and Christianize them . . ."
+
+---
+
+**Document 6**
+
+*Source: Platt Amendment, Article III, attached to the Army Appropriations Act of 1901; Cuba was required to add its terms to its constitution.*
+
+> "That the government of Cuba consents that the United States may exercise the right to intervene for the preservation of Cuban independence, the maintenance of a government adequate for the protection of life, property, and individual liberty . . ."
+
+---
+
+**Document 7**
+
+*Source: President Theodore Roosevelt, annual message to Congress, December 6, 1904.*
+
+> "Chronic wrongdoing, or an impotence which results in a general loosening of the ties of civilized society, may in America, as elsewhere, ultimately require intervention by some civilized nation, and in the Western Hemisphere the adherence of the United States to the Monroe Doctrine may force the United States, however reluctantly, in flagrant cases of such wrongdoing or impotence, to the exercise of an international police power."`,
+    parts: [
+      {
+        label: 'Essay',
+        prompt: 'Write your DBQ essay in response to the question above. When you grade it, check your essay against each row of the 7-point rubric.',
+        maxPoints: 7,
+        rubric: dbqRubric({
+          thesisKeywords: ['although', 'while', 'change', 'continuity', 'departure', 'extension', 'extent', 'but'],
+          context: 'the closing of the frontier (1890 census) and Frederick Jackson Turner\'s frontier thesis; Alfred Thayer Mahan\'s call for naval power and coaling stations (1890); the search for overseas markets after the depression of 1893; European and Japanese imperial competition in Africa and Asia; Social Darwinism and Anglo-Saxonism.',
+          contextKeywords: ['frontier', 'Turner', 'Mahan', 'navy', 'markets', '1893', 'Berlin Conference', 'European imperialism', 'Social Darwinism', 'scramble'],
+          outside: 'the Philippine–American War (1899–1902) and Emilio Aguinaldo; annexation of Hawaii (1898); the Insular Cases such as Downes v. Bidwell (1901); the Open Door Notes (1899–1900); the Panama Canal treaty (1903); the Monroe Doctrine (1823); Manifest Destiny and the Mexican–American War (1846–48); the sinking of the USS Maine and yellow journalism.',
+          outsideKeywords: ['Philippine-American War', 'Philippine–American War', 'Aguinaldo', 'Hawaii', 'Insular Cases', 'Downes', 'Open Door', 'Panama', 'Monroe Doctrine', '1823', 'Manifest Destiny', 'Mexican', 'Maine', 'yellow journalism', 'Hearst', 'Pulitzer'],
+          complexity: 'arguing that overseas empire was new in form (colonies without promise of statehood) but continuous with continental expansion and the Monroe Doctrine; explaining the tension between anti-colonial ideals and the conduct of the Philippine–American War; weighing economic, strategic, and racial motives.',
+        }),
+        sampleAnswer: `**Thesis:** U.S. expansion between 1898 and 1904 changed American foreign policy by creating overseas colonies and a declared right to intervene in neighboring countries, yet it grew out of older traditions of continental expansion, the Monroe Doctrine, and racial hierarchy, so it extended earlier policy into a new form more than it broke from it.
+
+**Contextualization:** By the 1890s, the census had declared the frontier closed, and the depression of 1893 convinced many business leaders that the United States needed overseas markets. Alfred Thayer Mahan argued in 1890 that national greatness required a modern navy and coaling stations. These arguments grew more urgent as European powers and Japan divided Africa and pressed into China.
+
+**Change:** The documents show a real shift from the anti-colonial promises of 1898. The Teller Amendment (Doc 1) disclaimed any intention to control Cuba, but by 1901 the Platt Amendment (Doc 6) forced Cuba to accept a U.S. "right to intervene." In the Philippines, McKinley (Doc 5) concluded there was "nothing left for us to do but to take them all." That account should be read with care: it was recalled by a sympathetic Methodist listener and published four years later, and its religious framing ("Christianize," although most Filipinos were already Catholic) suited a church audience. Still, its reference to "commercial rivals in the Orient" shows the economic motive behind annexation. Beyond the documents, the United States fought the Philippine–American War (1899–1902) against Emilio Aguinaldo's independence movement, an overseas colonial war with no precedent in American history. Roosevelt's Corollary (Doc 7) then turned the defensive Monroe Doctrine into a claim to "international police power."
+
+**Continuity:** Supporters of empire justified it with familiar arguments. Beveridge (Doc 2) pointed out that "we govern the Indians without their consent," linking overseas rule to a century of continental conquest. Because he was a Republican campaign speaker addressing a rally during the 1898 elections, his purpose was to make empire sound like a natural continuation of American history. Kipling (Doc 3), writing as a British imperialist, urged Americans to join an Anglo-Saxon civilizing mission, which shows that U.S. expansion was also part of a transatlantic imperial culture. The Anti-Imperialist League (Doc 4) also appealed to tradition, invoking "the land of Washington and Lincoln" and the consent of the governed. In other words, both sides claimed that the past was on their side.
+
+**Complexity:** The real change lay in method rather than motive. Earlier expansion had added territories that were expected to become states, while the Insular Cases (1901) ruled that the Constitution did not fully apply to the new possessions. The shift from settlement and statehood to colonial rule and intervention marks 1898–1904 as a turning point, even though the drive for land, markets, and security was continuous with the past.`,
+      },
+    ],
+    totalPoints: 7,
+    timeRecommendation: '60 minutes (incl. 15-min reading period)',
+    calculatorAllowed: false,
+  },
+]
+
+
+export const apUSHistoryFRQs: USHistoryFRQ[] = [...longFRQs, ...shortFRQs, ...dbqFRQs]
 
 export function getApUSHistoryFRQs(): USHistoryFRQ[] {
   return apUSHistoryFRQs
@@ -447,6 +774,10 @@ export function getLongFRQs(): USHistoryFRQ[] {
 
 export function getShortFRQs(): USHistoryFRQ[] {
   return shortFRQs
+}
+
+export function getDBQs(): USHistoryFRQ[] {
+  return dbqFRQs
 }
 
 export function generateFullExamFRQs(pool: USHistoryFRQ[] = apUSHistoryFRQs): {

@@ -1,11 +1,11 @@
 import type { FullLengthExamConfig } from '@/components/FullLengthPracticeExam'
 import { MCQS } from './mcqs'
-import { FRQS } from './frqs'
+import { SAQS, DBQ } from './frqs'
 
 export const config: FullLengthExamConfig = {
   subject: 'AP African American Studies',
   description:
-    'Full-length practice exam modeled on the official College Board AP African American Studies exam: 60 multiple-choice questions, mostly in source-based sets, across all 4 units (Section I, 70 min), plus 2 short-answer questions and 1 document-based question (free response, 60 min).',
+    'Full-length practice exam modeled on the official College Board AP African American Studies exam: 60 multiple-choice questions, mostly in source-based sets, across all 4 units (Section I, 70 min), plus 3 short-answer questions (40 min) and 1 document-based question with 5 sources (45 min).',
   backLink: { href: '/ap-african-american-studies', label: 'AP African American Studies' },
   ctaLinks: [
     { href: '/ap-african-american-studies-diagnostic', label: 'Diagnostic Test' },
@@ -14,7 +14,7 @@ export const config: FullLengthExamConfig = {
     { href: '/ap-african-american-studies-study-plans', label: 'Study Plans' },
   ],
   accent: 'amber',
-  totalTimeMinutes: 130,
+  totalTimeMinutes: 155, // 70 + 40 + 45; the 10-min Exam Day Validation (project) question is not included
   sections: [
     {
       id: 'mcq',
@@ -27,12 +27,21 @@ export const config: FullLengthExamConfig = {
     },
     {
       id: 'saq',
-      name: 'Section II',
-      shortName: 'Short Answer + DBQ',
+      name: 'Section II, Part A',
+      shortName: 'Short Answer',
       description:
-        '2 short-answer questions (one source-based on Reconstruction, one non-source-based on the civil rights movement) plus a 6-document DBQ on 20th-century African American cultural and intellectual movements. Self-graded rubric.',
-      timeLimitMinutes: 60,
-      items: FRQS,
+        '3 short-answer questions: Question 1 uses a text source (Frederick Douglass, 1865; 4 points), Question 2 uses a non-text source (Jacob Lawrence\'s Migration Series; 3 points), and Question 3 has no source (the civil rights movement; 3 points). Each part is graded on a 1-point rubric you check off yourself.',
+      timeLimitMinutes: 40,
+      items: SAQS,
+    },
+    {
+      id: 'dbq',
+      name: 'Section II, Part B',
+      shortName: 'Document-Based Question',
+      description:
+        '1 document-based question with 5 sources on the Harlem Renaissance, graded on the 7-point AP African American Studies rubric (thesis, context, evidence from sources, evidence beyond sources, source use, reasoning).',
+      timeLimitMinutes: 45,
+      items: [DBQ],
     },
   ],
   aboutInfo: {
@@ -45,7 +54,7 @@ export const config: FullLengthExamConfig = {
           'Project validation question: 1 written response (10 min, 1.5%)',
           'Section II: 3 SAQs (40 min, 18%) + 1 DBQ with 5 documents (45 min, 12%)',
           'Individual Student Project (3-week in-class project, 8.5%)',
-          'Practice version: full 60 MCQs + 2 SAQs + 1 DBQ',
+          'Practice version: full 60 MCQs + 3 SAQs + 1 DBQ with 5 sources (no project validation question)',
         ],
       },
       {
