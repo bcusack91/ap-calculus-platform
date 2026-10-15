@@ -5,191 +5,219 @@ export const bioFeedbackPart7Data = {
       id: 'bio-feedback-mechanisms-p7-s1-intro',
       type: 'text' as const,
       content: `
-      ## Feedback Mechanisms: AP Review
-      
-      **Part 7 of 7**
-      
-      In this lesson, you will connect mechanism-level biology to exam-ready reasoning through AP free-response control-system synthesis.
-      
-      ### Worked biological example
-      A student team investigates AP free-response control-system synthesis. Their first interpretation step is to identify how **insulin** and **glucagon** work together in the same pathway.
-      
-      - They classify the primary signal using **insulin**: hormone lowering blood glucose by promoting uptake/storage.
-      - They trace the downstream response using **glucagon**: hormone raising blood glucose by mobilizing reserves.
-      - They then compare outcomes with **thermoregulation** and **positive feedback** to separate mechanism from correlation.
-      
-      ### Key terms for this part
-      - **insulin**
-      - **glucagon**
-      - **thermoregulation**
-      - **positive feedback**
+## Feedback Mechanisms: Synthesis Review
+
+**Part 7 of 7 — Synthesis Review**
+
+This part pulls the whole topic together. Use the master table as a one-page review sheet: every row is a loop you have traced in Parts 1–6.
+
+### Master table of feedback loops
+
+| Loop | Regulated variable | Sensor / control center | Signal | Effector | Type | How it ends or fails |
+|---|---|---|---|---|---|---|
+| Thermoregulation (endotherm) | Core temperature | Thermoreceptors / hypothalamus | Nerve impulses | Sweat glands, skin arterioles, skeletal muscle | Negative | Fever moves the set point; heat stroke overwhelms it |
+| Thermoregulation (ectotherm) | Body temperature | Thermoreceptors / brain | Nerve impulses | Behavior (basking, seeking shade) | Negative | Limited when no warm or cool refuge exists |
+| Blood glucose | Glucose concentration | Pancreatic islet cells | Insulin, glucagon | Liver, muscle, fat cells | Negative | Type 1: signal missing; type 2: effectors unresponsive |
+| Water balance | Blood concentration | Osmoreceptors / hypothalamus | ADH | Kidney collecting ducts | Negative | Low ADH → dehydration |
+| Thyroid axis | T₃/T₄ level | Hypothalamus, pituitary | TRH, TSH | Thyroid | Negative | Graves': antibodies stimulate the thyroid without control |
+| Plant water loss | Leaf water status | Leaf and root cells | ABA | Guard cells | Negative | ABA-deficient or ABA-insensitive mutants wilt |
+| Labor | Cervical stretch | Stretch receptors / hypothalamus | Oxytocin | Uterine muscle | Positive | Ends at birth |
+| Lactation | Suckling | Nipple nerve endings / hypothalamus | Oxytocin, prolactin | Milk glands | Positive | Ends when suckling stops |
+| Fruit ripening | Ethylene level | Fruit cells | Ethylene | Fruit cells | Positive | Ends when fruit is ripe |
+| Clotting | Platelet activation | Platelets at the injury | Platelet chemicals, thrombin | Platelets, fibrin | Positive | Ends when sealed; hemophilia stalls it |
+| Population regulation | Population size | (Built into individuals) | Resource shortage, disease | Birth and death rates | Negative | Holds N near K |
+| Eutrophication | Dissolved oxygen | (None) | Decomposition | Bacteria, dying animals | Positive | Spirals into a dead zone |
       `
     },
     {
-      id: 'bio-feedback-mechanisms-p7-s2-mcq-core',
+      id: 'bio-feedback-mechanisms-p7-s2-method',
+      type: 'text' as const,
+      content: `
+### The four-question method for any feedback item
+
+1. **What is the regulated variable?** Name the quantity, not the hormone.
+2. **Does the response oppose or reinforce the change?** Oppose = negative; reinforce = positive.
+3. **What ends the loop?** Negative loops shut themselves off as the variable is corrected. Positive loops need an outside event.
+4. **If something is altered, where is the break?** Sensor, signal, receptor/effector, an uncontrolled signal, or a moved set point. Then trace the consequence around the loop.
+
+### Sentence frames that earn FRQ points
+
+- **Describe:** "When [variable] rises above the set point, [effector] [action], which lowers [variable]."
+- **Explain negative feedback:** "The response opposes the stimulus, returning [variable] toward its set point and maintaining homeostasis."
+- **Explain positive feedback:** "The response increases the stimulus, which triggers a larger response, amplifying the process until [endpoint]."
+- **Predict an alteration:** "Because [component] cannot [function], [variable] will remain [high/low], so the organism will [observable outcome]."
+
+### Mixed practice
+      `
+    },
+    {
+      id: 'bio-feedback-mechanisms-p7-s3-mcq-mixed',
       type: 'multiple-choice' as const,
       content: `
-      **Checkpoint MCQ (2 questions)**
+**Mixed Review — Set 1**
       `,
       exercise: {
         questions: [
           {
-            question: 'For AP Review, what best describes insulin?',
+            question: 'Which pair contains one negative-feedback process and one positive-feedback process?',
             options: [
-              'hormone raising blood glucose by mobilizing reserves',
-              'hormone lowering blood glucose by excreting it in urine',
-              'hormone lowering blood glucose by burning it in the liver',
-              'hormone lowering blood glucose by promoting uptake/storage'
-            ],
-            correctAnswer: 3,
-            explanation: 'insulin is best matched with: hormone lowering blood glucose by promoting uptake/storage.'
-          },
-          {
-            question: 'In this part\'s context, what is the strongest definition of glucagon?',
-            options: [
-              'hormone lowering blood glucose by promoting uptake/storage',
-              'hormone raising blood glucose by blocking insulin receptors',
-              'hormone raising blood glucose by mobilizing reserves',
-              'hormone raising blood glucose by stimulating sugar absorption'
+              'Sweating during exercise and shivering in the cold',
+              'Glucagon release overnight and stomatal closure in drought',
+              'ADH release when dehydrated and oxytocin release in labor',
+              'Platelet recruitment at a cut and ethylene release in ripening fruit'
             ],
             correctAnswer: 2,
-            explanation: 'glucagon is best matched with: hormone raising blood glucose by mobilizing reserves.'
+            explanation: 'ADH release restores water balance (negative), while oxytocin release during labor amplifies contractions (positive). Sweating, shivering, glucagon release and stomatal closure are all negative; platelet recruitment and ethylene release are both positive.'
+          },
+          {
+            question: 'A mouse is engineered so that its pancreatic alpha cells cannot release glucagon. Which outcome is most likely after the mouse fasts overnight?',
+            options: [
+              'Glucose falls lower than in normal mice',
+              'Glucose climbs above the level in normal mice',
+              'Insulin release increases to raise blood glucose',
+              'The liver stores more glycogen than in normal mice'
+            ],
+            correctAnswer: 0,
+            explanation: 'Glucagon is the signal that makes the liver break down glycogen and release glucose when levels are low; without it, glucose falls further during a fast. Insulin lowers glucose rather than raising it.'
+          },
+          {
+            question: 'Why is positive feedback well suited to childbirth but poorly suited to regulating body temperature?',
+            options: [
+              'Childbirth needs a rapid push to completion, while temperature must stay stable',
+              'Childbirth uses nerves, while temperature control uses only hormones',
+              'Childbirth happens in the uterus, which lacks any sensory receptors',
+              'Temperature changes too slowly for any feedback loop to detect'
+            ],
+            correctAnswer: 0,
+            explanation: 'Positive feedback drives a process to an endpoint quickly, which suits birth; applied to temperature, it would push the body farther from 37 °C. Both processes involve nerves and hormones, and the cervix has stretch receptors.'
           }
         ]
       }
     },
     {
-      id: 'bio-feedback-mechanisms-p7-s3-deep-dive',
+      id: 'bio-feedback-mechanisms-p7-s4-scales',
       type: 'text' as const,
       content: `
-      ### Deep-Dive Map: AP Review
-      
-      Use this diagram-style summary to track causation and evidence.
-      
-      #### Flow logic
-      - **Signal/Input** → insulin
-      - **Immediate processing** → glucagon
-      - **System-level consequence** → thermoregulation
-      - **Measured readout** → positive feedback
-      
-      #### Mechanism table
-      | Component | Biological role | Typical evidence pattern |
-      |---|---|---|
-      | insulin | hormone lowering blood glucose by promoting uptake/storage | Early shift in the primary variable |
-      | glucagon | hormone raising blood glucose by mobilizing reserves | Mid-pathway change in process rate |
-      | thermoregulation | physiological control of body temperature | Downstream phenotype trend |
-      | positive feedback | response amplifies the initial stimulus | Quantifiable endpoint in data summary |
-      
-      #### Reasoning checkpoints
-      1. Name the mechanism before describing the trend line.
-      2. Separate proximate mechanism from ecological or historical context.
-      3. Verify that each claim is tied to a measurable biological readout.
+### The same logic at every scale
+
+Feedback is a theme that connects units across the course, not just a Unit 4 fact.
+
+| Scale | Negative-feedback example | Positive-feedback example |
+|---|---|---|
+| **Molecule** | **Feedback inhibition:** the end product of a metabolic pathway binds an allosteric site on an early enzyme and slows its own production (for example, isoleucine inhibits the first enzyme of its synthesis pathway) | Thrombin activating clotting factors that increase thrombin production |
+| **Gene** | In *E. coli*, tryptophan binds the trp repressor, which then shuts off transcription of the genes for making more tryptophan | (Rare at this level in the AP course) |
+| **Organism** | Thermoregulation, glucose, water balance, ABA and stomata | Labor, lactation, fruit ripening |
+| **Population** | Density-dependent regulation toward K | (Seen mainly when control breaks down) |
+| **Ecosystem** | Predator–prey regulation | Eutrophication, ice-albedo, permafrost thaw |
+
+**Big idea:** most biological systems are held stable by negative feedback, and positive feedback is used for short, decisive events or appears when a system is pushed past its normal limits.
       `
-    },
-    {
-      id: 'bio-feedback-mechanisms-p7-s4-input',
-      type: 'input-boxes' as const,
-      content: `
-      **Input Practice — concrete vocabulary retrieval**
-      
-      Fill in each blank with the exact biological term.
-      
-      1) Term for this definition: **hormone lowering blood glucose by promoting uptake/storage**
-
-      2) Term for this definition: **hormone raising blood glucose by mobilizing reserves**
-
-      3) Term for this definition: **physiological control of body temperature**
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['insulin', 'glucagon', 'thermoregulation'],
-        hint1: 'Start with the first item: it is the mechanism term used when a process is described as \'hormone lowering blood glucose by promoting uptake/storage\'.',
-        hint2: 'Second blank points to glucagon; think about the role \'hormone raising blood glucose by mobilizing reserves\'.',
-        hint3: 'Third blank is thermoregulation; connect it to \'physiological control of body temperature\'.',
-        explanation: 'Correct set: insulin, glucagon, thermoregulation. These three terms define the core mechanism chain for AP Review.'
-      }
     },
     {
       id: 'bio-feedback-mechanisms-p7-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown matching (3 prompts)**
+### Final Classification Round
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'insulin',
-            options: ['response amplifies the initial stimulus', 'physiological control of body temperature', 'hormone raising blood glucose by mobilizing reserves', 'hormone lowering blood glucose by promoting uptake/storage']
+            label: 'An end product binds the first enzyme of its pathway and slows it',
+            options: ['negative feedback', 'positive feedback', 'set point moved', 'no feedback']
           },
           {
-            label: 'glucagon',
-            options: ['physiological control of body temperature', 'response amplifies the initial stimulus', 'response counteracts change to restore set point', 'hormone raising blood glucose by mobilizing reserves']
+            label: 'Activated platelets release chemicals that activate more platelets',
+            options: ['no feedback', 'negative feedback', 'positive feedback', 'set point moved']
           },
           {
-            label: 'thermoregulation',
-            options: ['physiological control of body temperature', 'response counteracts change to restore set point', 'dynamic maintenance of internal stability', 'response amplifies the initial stimulus']
+            label: 'Pyrogens make the hypothalamus defend 39 °C instead of 37 °C',
+            options: ['positive feedback', 'set point moved', 'no feedback', 'negative feedback']
+          },
+          {
+            label: 'Crowded yeast accumulate ethanol, and their growth slows',
+            options: ['set point moved', 'no feedback', 'negative feedback', 'positive feedback']
           }
         ],
-        correctAnswers: ['hormone lowering blood glucose by promoting uptake/storage', 'hormone raising blood glucose by mobilizing reserves', 'physiological control of body temperature'],
-        hint1: 'Match each term to the definition that captures mechanism, not just keywords.',
-        hint2: 'If two definitions feel close, choose the one with the exact process direction.',
-        hint3: 'Read each label out loud, then pick the option that completes a causal sentence.',
-        explanation: 'insulin, glucagon, and thermoregulation should map to their exact mechanistic definitions. When options look similar, anchor your choice to process direction and biological scale.'
+        correctAnswers: ['negative feedback', 'positive feedback', 'set point moved', 'negative feedback'],
+        hint1: 'An end product that slows its own production is opposing the change.',
+        hint2: 'Platelet activation that recruits more platelets reinforces itself.',
+        hint3: 'In fever, the loop still works but its target is different.',
+        explanation: 'Feedback inhibition and density-dependent waste buildup oppose the change (negative feedback), platelet recruitment amplifies itself (positive feedback), and fever is a moved set point defended by negative feedback.'
       }
     },
     {
-      id: 'bio-feedback-mechanisms-p7-s6-strategy',
+      id: 'bio-feedback-mechanisms-p7-s6-frq',
       type: 'text' as const,
       content: `
-      ### ACT/AP strategy and misconception repair
-      
-      On ACT/AP style prompts, score gains come from linking vocabulary to evidence, not from isolated memorization.
-      
-      #### Strategy sequence
-      1. **Name the mechanism first**: identify whether the item is asking for process, structure, regulation, or population effect.
-      2. **Use a causation sentence**: "Because insulin hormone lowering blood glucose by promoting uptake/storage, we expect ...".
-      3. **Audit units and scale**: molecular claims, cellular claims, and ecosystem claims should not be mixed.
-      
-      #### Common misconceptions to avoid
-      - Hormone concentration alone does not predict effect without receptor context.
-      - Feedback loops can be nested and interact across organ systems.
-      - Positive feedback is not inherently harmful; context determines usefulness.
-      
-      #### Exam execution tip
-      When two answer choices sound plausible, prefer the one that includes a direct mechanism and a measurable biological consequence.
+### Worked short FRQ: conceptual analysis
+
+**Prompt.** In mammals, the hormone calcitonin lowers blood calcium, and parathyroid hormone (PTH) raises it.
+(a) **Describe** what happens to PTH release when blood calcium falls.
+(b) **Explain** how the two hormones together maintain homeostasis.
+(c) A tumor causes the parathyroid glands to release PTH continuously. **Predict** the effect on blood calcium.
+(d) **Justify** your prediction.
+
+**Model answers.**
+(a) PTH release increases when blood calcium falls.
+(b) The hormones are antagonistic: when calcium is high, calcitonin lowers it; when calcium is low, PTH raises it. Each response opposes the change, so calcium is held within a narrow range by negative feedback.
+(c) Blood calcium will stay abnormally high.
+(d) The tumor releases PTH regardless of calcium level, so the signal is uncontrolled: the negative feedback that would normally reduce PTH when calcium rises no longer works, and PTH keeps raising calcium.
+
+**Scoring notes:** (a) needs a direction; (b) needs the word "oppose" or an equivalent plus both hormones; (c) needs a direction; (d) needs the reason the loop cannot correct itself. A response that only restates the prediction in (d) earns no point.
       `
     },
     {
       id: 'bio-feedback-mechanisms-p7-s7-mcq-final',
       type: 'multiple-choice' as const,
       content: `
-      **Final application MCQ (2 questions)**
+**Mixed Review — Set 2**
       `,
       exercise: {
         questions: [
           {
-            question: 'In AP free-response control-system synthesis, the observed pattern is: response amplifies the initial stimulus. What term should anchor the explanation?',
+            question: 'A graph shows a variable that rises sharply, then falls back past its starting value, then settles near that value after two smaller swings. Which process does the graph most likely show?',
             options: [
-              'homeostasis',
-              'set point',
-              'negative feedback',
-              'positive feedback'
+              'A positive-feedback loop that continued until an outside event ended it',
+              'A negative-feedback loop correcting a disturbance with a short time lag',
+              'A density-independent factor acting on a population at random',
+              'A broken feedback loop that can no longer correct the variable'
             ],
-            correctAnswer: 3,
-            explanation: 'Use positive feedback because it directly maps to the described biological pattern: response amplifies the initial stimulus.'
+            correctAnswer: 1,
+            explanation: 'Overshooting and then settling in smaller and smaller swings is the signature of negative feedback with a delay between sensing and responding. Positive feedback would keep moving away from the start, and a broken loop would not return to baseline.'
           },
           {
-            question: 'In an AP-style free-response about ap review, the observed pattern is: response counteracts change to restore set point. What term should anchor the explanation?',
+            question: 'Isoleucine binds an allosteric site on threonine deaminase, the first enzyme in the pathway that makes isoleucine. As isoleucine accumulates, what happens?',
             options: [
-              'negative feedback',
-              'positive feedback',
-              'homeostasis',
-              'thermoregulation'
+              'Its synthesis slows, an example of negative feedback',
+              'Production speeds up, an example of positive feedback',
+              'The enzyme is digested, and the pathway is permanently lost',
+              'The active site of the enzyme is filled by isoleucine'
             ],
             correctAnswer: 0,
-            explanation: 'Use negative feedback because it directly maps to the described biological pattern: response counteracts change to restore set point.'
+            explanation: 'Isoleucine acts as an allosteric inhibitor of the first enzyme, so its own production slows as it builds up: feedback inhibition, a molecular form of negative feedback. The binding is reversible and occurs at an allosteric site, not the active site.'
           }
         ]
+      }
+    },
+    {
+      id: 'bio-feedback-mechanisms-p7-s8-input',
+      type: 'input-boxes' as const,
+      content: `
+### Final Recall
+
+1) Type of feedback that returns a variable toward its set point (one word):
+
+2) Type of feedback that amplifies the original change (one word):
+
+3) The hormone that raises blood calcium (abbreviation):
+      `,
+      exercise: {
+        boxes: 3,
+        correctAnswers: ['negative', 'positive', 'PTH'],
+        hint1: 'This type is responsible for most homeostasis.',
+        hint2: 'Labor and fruit ripening use this type.',
+        hint3: 'It is made by the parathyroid glands.',
+        explanation: 'Negative feedback stabilizes, positive feedback amplifies, and parathyroid hormone (PTH) raises blood calcium.'
       }
     }
   ]

@@ -5,189 +5,229 @@ export const bioFeedbackPart6Data = {
       id: 'bio-feedback-mechanisms-p6-s1-intro',
       type: 'text' as const,
       content: `
-      ## Feedback Mechanisms: Problem-Solving Workshop
-      
-      **Part 6 of 7**
-      
-      In this lesson, you will connect mechanism-level biology to exam-ready reasoning through feedback loop diagnosis from data tables.
-      
-      ### Worked biological example
-      A student team investigates feedback loop diagnosis from data tables. Their first interpretation step is to identify how **effector** and **insulin** work together in the same pathway.
-      
-      - They classify the primary signal using **effector**: component that carries out corrective response.
-      - They trace the downstream response using **insulin**: hormone lowering blood glucose by promoting uptake/storage.
-      - They then compare outcomes with **glucagon** and **thermoregulation** to separate mechanism from correlation.
-      
-      ### Key terms for this part
-      - **effector**
-      - **insulin**
-      - **glucagon**
-      - **thermoregulation**
+## Feedback Mechanisms: Reading Feedback Data and FRQ Practice
+
+**Part 6 of 7 — Reading Feedback Data and FRQ Practice**
+
+Half of the AP Biology exam score comes from six free-response questions, and two of them (worth 9 points each) ask you to interpret experimental results, one with a graph you must build. Feedback mechanisms are a favorite context because the data have recognizable **shapes**.
+
+### What feedback looks like on a graph
+
+| Shape of a variable over time | Most likely loop | Example |
+|---|---|---|
+| Rises after a disturbance, overshoots slightly, settles back to the starting level | Negative feedback | Blood glucose after a meal |
+| Regular rises and falls that never settle, with one curve lagging another | Negative feedback with a time lag | Lynx and hare numbers |
+| Accelerating rise that ends abruptly at an event | Positive feedback with an off switch | Oxytocin and contraction strength during labor |
+| Stays far from normal and does not return | Broken feedback | Glucose in untreated diabetes |
+
+### Task verbs and what they require
+
+| Verb | What a full-credit answer contains |
+|---|---|
+| **Identify** | A specific name or value, no explanation needed |
+| **Describe** | The relevant characteristics, such as the direction and size of a change |
+| **Explain** | A cause-and-effect link: how or why |
+| **Predict** | The expected outcome, stated as a direction or value |
+| **Justify** | Evidence or a biological principle that supports a claim or prediction |
       `
     },
     {
-      id: 'bio-feedback-mechanisms-p6-s2-mcq-core',
+      id: 'bio-feedback-mechanisms-p6-s2-gtt',
+      type: 'text' as const,
+      content: `
+### Data set 1: an oral glucose tolerance test
+
+Two adults fasted overnight, drank a solution containing 75 g of glucose, and had their blood glucose measured every 30 minutes. (Hypothetical data; the clinical cutoffs below are real.)
+
+| Time (min) | Subject A (mg/dL) | Subject B (mg/dL) |
+|---|---|---|
+| 0 | 85 | 130 |
+| 30 | 140 | 220 |
+| 60 | 120 | 260 |
+| 90 | 100 | 245 |
+| 120 | 90 | 230 |
+
+**Clinical reference values:** a fasting value of 126 mg/dL or higher, or a 2-hour value of 200 mg/dL or higher, is consistent with diabetes. A normal 2-hour value is below 140 mg/dL.
+
+**Reading the data:**
+- **Subject A** peaks at 30 minutes and returns almost to the fasting level by 120 minutes. The loop detects the rise and reverses it: intact negative feedback.
+- **Subject B** starts high (130 mg/dL fasting), rises later and higher (peak 260 mg/dL at 60 minutes) and is still at 230 mg/dL at 2 hours. The corrective response is weak or absent: the pattern of diabetes.
+- The data alone cannot tell type 1 from type 2. To distinguish them, you would also measure **blood insulin**: low insulin points to type 1 (signal missing), and normal or high insulin with high glucose points to type 2 (target cells unresponsive).
+      `
+    },
+    {
+      id: 'bio-feedback-mechanisms-p6-s3-mcq-gtt',
       type: 'multiple-choice' as const,
       content: `
-      **Checkpoint MCQ (2 questions)**
+### Checkpoint — Interpreting the Glucose Data
       `,
       exercise: {
         questions: [
           {
-            question: 'For Problem-Solving Workshop, what best describes effector?',
+            question: 'Based on the glucose tolerance data, which statement about Subject A is best supported?',
             options: [
-              'component that detects a change in a regulated variable',
-              'center that compares sensor input with the set point',
-              'component that carries out corrective response',
-              'component that transports hormones from a gland to targets'
+              'Subject A\'s glucose never rose, so insulin was not needed',
+              'Glucose rose, then fell near baseline within 2 hours',
+              'Subject A\'s glucose kept climbing, showing positive feedback',
+              'Subject A\'s 2-hour value meets the cutoff for diabetes'
             ],
-            correctAnswer: 2,
-            explanation: 'effector is best matched with: component that carries out corrective response.'
+            correctAnswer: 1,
+            explanation: 'Subject A rose from 85 to 140 mg/dL and was back to 90 mg/dL at 120 minutes, the signature of intact negative feedback. The 2-hour value of 90 mg/dL is well below the 200 mg/dL diabetes cutoff.'
           },
           {
-            question: 'In this part\'s context, what is the strongest definition of insulin?',
+            question: 'A researcher wants to determine whether Subject B has type 1 or type 2 diabetes. Which additional measurement would be most useful?',
             options: [
-              'hormone raising blood glucose by mobilizing reserves',
-              'hormone lowering blood glucose by blocking its absorption',
-              'hormone lowering blood glucose by promoting uptake/storage',
-              'hormone lowering blood glucose by excreting it in the urine'
+              'Insulin level during the test',
+              'Body temperature at each time point',
+              'Heart rate before and after the drink',
+              'Volume of the glucose drink consumed'
             ],
-            correctAnswer: 2,
-            explanation: 'insulin is best matched with: hormone lowering blood glucose by promoting uptake/storage.'
+            correctAnswer: 0,
+            explanation: 'Insulin level separates the two: low insulin indicates loss of the signal (type 1), while normal or high insulin with high glucose indicates insulin resistance (type 2). Temperature and heart rate do not reveal which part of the glucose loop has failed, and the drink volume was the same for both subjects.'
+          },
+          {
+            question: 'By how much did Subject B\'s blood glucose fall between its peak and the 120-minute reading?',
+            options: [
+              '15 mg/dL',
+              '30 mg/dL',
+              '40 mg/dL',
+              '100 mg/dL'
+            ],
+            correctAnswer: 1,
+            explanation: 'Subject B peaked at 260 mg/dL (60 minutes) and was at 230 mg/dL at 120 minutes, a fall of 30 mg/dL. Subtracting from the 245 mg/dL reading or from the fasting value gives the other numbers.'
           }
         ]
       }
     },
     {
-      id: 'bio-feedback-mechanisms-p6-s3-deep-dive',
+      id: 'bio-feedback-mechanisms-p6-s4-thyroid',
       type: 'text' as const,
       content: `
-      ### Deep-Dive Map: Problem-Solving Workshop
-      
-      Use this diagram-style summary to track causation and evidence.
-      
-      #### Flow logic
-      - **Signal/Input** → effector
-      - **Immediate processing** → insulin
-      - **System-level consequence** → glucagon
-      - **Measured readout** → thermoregulation
-      
-      #### Mechanism table
-      | Component | Biological role | Typical evidence pattern |
-      |---|---|---|
-      | effector | component that carries out corrective response | Early shift in the primary variable |
-      | insulin | hormone lowering blood glucose by promoting uptake/storage | Mid-pathway change in process rate |
-      | glucagon | hormone raising blood glucose by mobilizing reserves | Downstream phenotype trend |
-      | thermoregulation | physiological control of body temperature | Quantifiable endpoint in data summary |
-      
-      #### Reasoning checkpoints
-      1. Name the mechanism before describing the trend line.
-      2. Separate proximate mechanism from ecological or historical context.
-      3. Verify that each claim is tied to a measurable biological readout.
+### Data set 2: reading paired hormone levels
+
+In a hormone axis, measuring **both** the stimulating hormone and the final hormone tells you where the problem is, because negative feedback links them.
+
+Recall the thyroid axis: the hypothalamus releases TRH → the anterior pituitary releases TSH → the thyroid releases T₄ (and T₃) → high T₄ inhibits TRH and TSH release.
+
+| Pattern | Interpretation | Reasoning |
+|---|---|---|
+| TSH normal, T₄ normal | Healthy axis | Loop in balance |
+| TSH **high**, T₄ **low** | The thyroid itself is failing | The pituitary is trying harder because T₄ is low, but the thyroid cannot respond |
+| TSH **low**, T₄ **high** | The thyroid is overactive on its own (for example, Graves' disease) | Feedback has correctly shut TSH down, but the thyroid is driven by something else |
+| TSH **low**, T₄ **low** | The pituitary is failing | Without TSH, the thyroid is not stimulated |
+
+**General rule:** when the two hormones move in **opposite** directions, the problem is usually at the **final gland**, and the upstream hormone is responding correctly through feedback. When they move in the **same** direction, the problem is usually **upstream**.
       `
-    },
-    {
-      id: 'bio-feedback-mechanisms-p6-s4-input',
-      type: 'input-boxes' as const,
-      content: `
-      **Input Practice — concrete vocabulary retrieval**
-      
-      Fill in each blank with the exact biological term.
-      
-      1) Term for this definition: **component that carries out corrective response**
-
-      2) Term for this definition: **hormone lowering blood glucose by promoting uptake/storage**
-
-      3) Term for this definition: **hormone raising blood glucose by mobilizing reserves**
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['effector', 'insulin', 'glucagon'],
-        hint1: 'Start with the first item: it is the mechanism term used when a process is described as \'component that carries out corrective response\'.',
-        hint2: 'Second blank points to insulin; think about the role \'hormone lowering blood glucose by promoting uptake/storage\'.',
-        hint3: 'Third blank is glucagon; connect it to \'hormone raising blood glucose by mobilizing reserves\'.',
-        explanation: 'Correct set: effector, insulin, glucagon. These three terms define the core mechanism chain for Problem-Solving Workshop.'
-      }
     },
     {
       id: 'bio-feedback-mechanisms-p6-s5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown matching (3 prompts)**
+### Diagnose From the Hormone Pair
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'effector',
-            options: ['hormone raising blood glucose by mobilizing reserves', 'physiological control of body temperature', 'component that carries out corrective response', 'hormone lowering blood glucose by promoting uptake/storage']
+            label: 'Patient 1: TSH high, T₄ low',
+            options: ['thyroid failing', 'pituitary failing', 'thyroid overactive', 'healthy axis']
           },
           {
-            label: 'insulin',
-            options: ['hormone raising blood glucose by mobilizing reserves', 'response amplifies the initial stimulus', 'hormone lowering blood glucose by promoting uptake/storage', 'physiological control of body temperature']
+            label: 'Patient 2: TSH low, T₄ high',
+            options: ['healthy axis', 'thyroid overactive', 'pituitary failing', 'thyroid failing']
           },
           {
-            label: 'glucagon',
-            options: ['response counteracts change to restore set point', 'physiological control of body temperature', 'hormone raising blood glucose by mobilizing reserves', 'response amplifies the initial stimulus']
+            label: 'Patient 3: TSH low, T₄ low',
+            options: ['thyroid overactive', 'thyroid failing', 'healthy axis', 'pituitary failing']
           }
         ],
-        correctAnswers: ['component that carries out corrective response', 'hormone lowering blood glucose by promoting uptake/storage', 'hormone raising blood glucose by mobilizing reserves'],
-        hint1: 'Match each term to the definition that captures mechanism, not just keywords.',
-        hint2: 'If two definitions feel close, choose the one with the exact process direction.',
-        hint3: 'Read each label out loud, then pick the option that completes a causal sentence.',
-        explanation: 'effector, insulin, and glucagon should map to their exact mechanistic definitions. When options look similar, anchor your choice to process direction and biological scale.'
+        correctAnswers: ['thyroid failing', 'thyroid overactive', 'pituitary failing'],
+        hint1: 'Opposite directions usually mean the final gland is the problem.',
+        hint2: 'If T₄ is high, a healthy pituitary should lower TSH.',
+        hint3: 'If both are low, the thyroid is not being told to work.',
+        explanation: 'High TSH with low T₄ means the thyroid cannot respond; low TSH with high T₄ means the thyroid is overactive on its own; low TSH with low T₄ points to the pituitary.'
       }
     },
     {
-      id: 'bio-feedback-mechanisms-p6-s6-strategy',
+      id: 'bio-feedback-mechanisms-p6-s6-frq',
       type: 'text' as const,
       content: `
-      ### ACT/AP strategy and misconception repair
-      
-      On ACT/AP style prompts, score gains come from linking vocabulary to evidence, not from isolated memorization.
-      
-      #### Strategy sequence
-      1. **Name the mechanism first**: identify whether the item is asking for process, structure, regulation, or population effect.
-      2. **Use a causation sentence**: "Because effector component that carries out corrective response, we expect ...".
-      3. **Audit units and scale**: molecular claims, cellular claims, and ecosystem claims should not be mixed.
-      
-      #### Common misconceptions to avoid
-      - Homeostasis permits fluctuation within ranges rather than fixed constants.
-      - Hormone concentration alone does not predict effect without receptor context.
-      - Feedback loops can be nested and interact across organ systems.
-      
-      #### Exam execution tip
-      When two answer choices sound plausible, prefer the one that includes a direct mechanism and a measurable biological consequence.
+### Worked FRQ: stomata, ABA and drought
+
+**Scenario.** Researchers compared wild-type tomato plants with an ABA-deficient mutant (tomato mutants of this kind, such as *flacca*, wilt easily). They measured stomatal conductance, a measure of how open the stomata are, in well-watered plants and again after watering was stopped for 3 days. Each group had 10 plants. (Hypothetical data.)
+
+| Group | Watered (mmol m⁻² s⁻¹) | After 3 days without water (mmol m⁻² s⁻¹) |
+|---|---|---|
+| Wild type | 400 | 120 |
+| ABA-deficient mutant | 400 | 360 |
+
+**(a) Identify the independent variable and the control group.**
+*Answer:* The independent variable is plant genotype (and water treatment); the wild-type plants are the control for the mutant, and the well-watered measurements are the control for the drought treatment.
+
+**(b) Calculate the percent change in stomatal conductance for each group.**
+*Answer:* Wild type: (120 − 400) ÷ 400 × 100 = **−70%**. Mutant: (360 − 400) ÷ 400 × 100 = **−10%**.
+
+**(c) Explain the difference between the groups using the feedback loop.**
+*Answer:* In the wild type, drought raises ABA, which causes guard cells to lose turgor and close the stomata, reducing water loss: negative feedback. The mutant makes little ABA, so the signal is missing and the stomata stay mostly open.
+
+**(d) Predict the result of spraying the mutant with ABA during the drought, and justify the prediction.**
+*Answer:* Conductance in the mutant would fall toward the wild-type value, because its guard cells are normal and only the signal is missing; supplying ABA restores the loop.
+
+**(e) State a null hypothesis for the experiment.**
+*Answer:* There is no difference in the change in stomatal conductance between wild-type and ABA-deficient plants during drought.
+
+> **AP Connection:** Part (d) is a classic "rescue" prediction. If adding back the missing signal restores the response, the defect is in the signal, not the effector. If it does not, the effector (here, the guard cells) must be altered.
       `
     },
     {
-      id: 'bio-feedback-mechanisms-p6-s7-mcq-final',
+      id: 'bio-feedback-mechanisms-p6-s7-input',
+      type: 'input-boxes' as const,
+      content: `
+### Calculate From the FRQ Data
+
+1) Percent decrease in stomatal conductance for the wild type (number only):
+
+2) Percent decrease for the ABA-deficient mutant (number only):
+
+3) Difference, in mmol m⁻² s⁻¹, between the two groups after 3 days without water (number only):
+      `,
+      exercise: {
+        boxes: 3,
+        correctAnswers: ['70', '10', '240'],
+        hint1: 'Wild type: (400 − 120) ÷ 400 × 100.',
+        hint2: 'Mutant: (400 − 360) ÷ 400 × 100.',
+        hint3: 'Subtract the wild-type drought value from the mutant drought value: 360 − 120.',
+        explanation: 'The wild type fell 70% (400 to 120), the mutant fell only 10% (400 to 360), and the mutant\'s drought value is 240 mmol m⁻² s⁻¹ higher.'
+      }
+    },
+    {
+      id: 'bio-feedback-mechanisms-p6-s8-mcq-final',
       type: 'multiple-choice' as const,
       content: `
-      **Final application MCQ (2 questions)**
+### Exit Check — Experimental Reasoning
       `,
       exercise: {
         questions: [
           {
-            question: 'In feedback loop diagnosis from data tables, the observed pattern is: physiological control of body temperature. What term should anchor the explanation?',
+            question: 'In the stomata experiment, the mutant was sprayed with ABA during drought, and its stomatal conductance did not change. What does this result suggest?',
             options: [
-              'osmoregulation',
-              'positive feedback',
-              'thermoregulation',
-              'set point'
+              'It makes so much ABA that extra spray adds nothing',
+              'Its guard cells are unable to respond to the ABA signal',
+              'Drought has no effect on stomatal conductance in tomatoes',
+              'Stomatal closure depends on light rather than on water'
             ],
-            correctAnswer: 2,
-            explanation: 'Use thermoregulation because it directly maps to the described biological pattern: physiological control of body temperature.'
+            correctAnswer: 1,
+            explanation: 'If supplying the signal fails to rescue the response, the defect lies in the effector, so the guard cells must be unable to respond to ABA. The wild-type data already show that drought lowers conductance.'
           },
           {
-            question: 'In an AP-style free-response about problem-solving workshop, the observed pattern is: response amplifies the initial stimulus. What term should anchor the explanation?',
+            question: 'Which change to the stomata experiment would most improve confidence in the conclusion that ABA causes stomatal closure?',
             options: [
-              'set point',
-              'homeostasis',
-              'osmoregulation',
-              'positive feedback'
+              'Measuring only the wild-type plants so fewer variables are involved',
+              'Using more plants per group and reporting variation within each group',
+              'Watering the mutant plants more often than the wild-type plants',
+              'Recording stomatal conductance once rather than before and after'
             ],
-            correctAnswer: 3,
-            explanation: 'Use positive feedback because it directly maps to the described biological pattern: response amplifies the initial stimulus.'
+            correctAnswer: 1,
+            explanation: 'Larger samples and a measure of variation, such as error bars, show whether the difference between groups is greater than chance variation. Dropping the mutant, treating groups differently or removing the baseline would weaken the comparison.'
           }
         ]
       }
