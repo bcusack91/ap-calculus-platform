@@ -106,13 +106,13 @@ So about 58% of offspring will display at least one recessive trait.
           {
             question: 'A couple are both carriers for cystic fibrosis (Cc × Cc, where cc is affected). They plan to have 3 children. What is the probability that AT LEAST ONE child is affected (cc)?',
             options: [
-              '$\\frac{1}{4}$',
-              '$\\frac{3}{4}$',
+              '$1 - \\left(\\frac{1}{4}\\right)^3 = \\frac{63}{64}$',
+              '$\\left(\\frac{3}{4}\\right)^3 = \\frac{27}{64}$',
               '$1 - \\left(\\frac{3}{4}\\right)^3 = \\frac{37}{64}$',
-              '$3 \\times \\frac{1}{4} = \\frac{3}{4}$'
+              '$3 \\times \\frac{1}{4} \\times \\frac{3}{4} = \\frac{9}{16}$'
             ],
             correctAnswer: 2,
-            explanation: 'Use the complement: P(at least one affected) = 1 − P(no affected children). Each child has P(unaffected) = 3/4, and the three children are independent, so P(none affected) = $(3/4)^{3}$ = 27/64. Thus the answer is 1 − 27/64 = 37/64. The 3 × 1/4 option is invalid: you cannot simply multiply or add a per-child probability by the number of children — that ignores the cases of two or three affected and can even exceed 1 in other setups.'
+            explanation: 'Use the complement: P(at least one affected) = 1 − P(no affected children). Each child has P(unaffected) = 3/4, and the three children are independent, so P(none affected) = $(3/4)^{3}$ = 27/64. Thus the answer is 1 − 27/64 = 37/64. The 27/64 option stops at P(none affected) and forgets to subtract from 1; the 63/64 option is the chance that at least one child is UNaffected. Multiplying a per-child probability by the number of children is invalid: it ignores the cases of two or three affected and can even exceed 1 in other setups.'
           }
         ]
       }
@@ -170,21 +170,21 @@ So $P(\\text{exactly 2 of 3 affected}) = \\frac{9}{64} \\approx 0.14$.
           {
             question: 'Two parents heterozygous for albinism (Aa × Aa; aa = albino) have 4 children. What is the probability that exactly 1 of the 4 children is albino?',
             options: [
-              '$\\left(\\frac{1}{4}\\right)^1 = \\frac{1}{4}$',
+              '$\\left(\\frac{1}{4}\\right)^1\\left(\\frac{3}{4}\\right)^3 = \\frac{27}{256}$',
               '$\\binom{4}{1}\\left(\\frac{1}{4}\\right)^1\\left(\\frac{3}{4}\\right)^3 = \\frac{108}{256} = \\frac{27}{64}$',
-              '$\\binom{4}{1}\\left(\\frac{1}{4}\\right)^1\\left(\\frac{3}{4}\\right)^1 = \\frac{3}{4}$',
-              '$\\left(\\frac{3}{4}\\right)^4 = \\frac{81}{256}$'
+              '$\\binom{4}{1}\\left(\\frac{1}{4}\\right)^1\\left(\\frac{3}{4}\\right)^1 = \\frac{12}{16} = \\frac{3}{4}$',
+              '$\\binom{4}{1}\\left(\\frac{1}{4}\\right)^3\\left(\\frac{3}{4}\\right)^1 = \\frac{3}{64}$'
             ],
             correctAnswer: 1,
-            explanation: 'This is binomial with p = 1/4 (albino), q = 3/4, n = 4, k = 1: P = C(4,1)$(1/4)^{1}(3/4)^{3}$ = 4 × (1/4) × (27/64) = 108/256 = 27/64. The bare 1/4 option forgets both the C(4,1) coefficient AND the $(3/4)^{3}$ term for the three unaffected children. The $(3/4)^{4}$ option is the probability that NONE of the four children is albino — a different question.'
+            explanation: 'This is binomial with p = 1/4 (albino), q = 3/4, n = 4, k = 1: P = C(4,1)$(1/4)^{1}(3/4)^{3}$ = 4 × (1/4) × (27/64) = 108/256 = 27/64. The 27/256 option leaves out the C(4,1) coefficient, so it counts only ONE birth order for the albino child instead of all four. The 3/4 option uses an exponent of 1 for the unaffected children, ignoring two of the three unaffected births, and the 3/64 option swaps the exponents, giving the probability of exactly THREE albino children.'
           },
           {
             question: 'A geneticist computes the probability of "exactly 2 affected out of 3 children" and gets the same numeric answer whether she uses the binomial formula or lists every birth order by hand and adds them. Why must these two methods always agree?',
             options: [
-              'They only agree by coincidence for n = 3',
-              'The binomial coefficient C(n,k) is exactly the number of distinct birth orders, and each order has the same probability $p^{k}$ $q^{n-k}$, so the formula is a compact sum over those orders',
-              'The sum rule does not apply to offspring',
-              'Listing orders double-counts, so it should give twice the binomial answer'
+              'They agree only by coincidence when n = 3, since in larger families the orders stop having equal probabilities',
+              'The coefficient counts the distinct birth orders, and the formula adds their equal probabilities',
+              'The sum rule does not apply to offspring, so hand enumeration is just an approximation that lands near the formula',
+              'Listing birth orders double-counts each outcome, so the hand method gives twice the binomial answer unless halved'
             ],
             correctAnswer: 1,
             explanation: 'Each specific birth order with k affected and (n−k) unaffected has identical probability $p^{k}$ $q^{n-k}$ (product rule). The number of such orders is exactly C(n,k). Adding the equal probabilities of all those mutually exclusive orders (sum rule) gives C(n,k) × $p^{k}$ $q^{n-k}$ — which IS the binomial formula. So the two approaches are the same computation, just written differently. The double-counting option is wrong: enumerating distinct orders does not double-count, since each order is a unique, mutually exclusive sequence.'
@@ -240,13 +240,13 @@ $P(\\text{homozygous at A}) = \\frac{1}{2}\\times 1 = \\frac{1}{2}$
           {
             question: 'From the cross AaBb × AaBb, what is the probability of an offspring that is recessive for trait A (aa) OR recessive for trait B (bb)? (Hint: these events overlap, since an offspring could be both aabb.)',
             options: [
-              '$\\frac{1}{4} + \\frac{1}{4} = \\frac{1}{2}$',
+              '$\\frac{1}{4} + \\frac{1}{4} + \\frac{1}{16} = \\frac{9}{16}$',
               '$\\frac{1}{4} + \\frac{1}{4} - \\frac{1}{16} = \\frac{7}{16}$',
               '$\\frac{1}{4} \\times \\frac{1}{4} = \\frac{1}{16}$',
               '$\\frac{1}{4} + \\frac{1}{4} - \\frac{2}{16} = \\frac{3}{8}$'
             ],
             correctAnswer: 1,
-            explanation: 'Because "aa" and "bb" can occur together (aabb), they are NOT mutually exclusive, so a naive sum double-counts the overlap. Use inclusion-exclusion: P(aa or bb) = P(aa) + P(bb) − P(aa and bb) = 1/4 + 1/4 − 1/16 = 7/16. Check with the complement: P(dominant for both) = 3/4 × 3/4 = 9/16, and 1 − 9/16 = 7/16. The plain 1/4 + 1/4 sum forgets to subtract the overlap, subtracting 2/16 removes the overlap twice instead of once, and 1/4 × 1/4 = 1/16 is only the aabb overlap itself.'
+            explanation: 'Because "aa" and "bb" can occur together (aabb), they are NOT mutually exclusive, so a naive sum double-counts the overlap. Use inclusion-exclusion: P(aa or bb) = P(aa) + P(bb) − P(aa and bb) = 1/4 + 1/4 − 1/16 = 7/16. Check with the complement: P(dominant for both) = 3/4 × 3/4 = 9/16, and 1 − 9/16 = 7/16. Adding the 1/16 overlap instead of subtracting it counts aabb three times, subtracting 2/16 removes the overlap twice instead of once, and 1/4 × 1/4 = 1/16 is only the aabb overlap itself.'
           }
         ]
       }

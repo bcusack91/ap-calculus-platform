@@ -71,10 +71,10 @@ NADPH is produced on the **stroma** side of the membrane, where it will be used 
           {
             question: 'P680+ (oxidized P680) is described as the strongest biological oxidizing agent. Why is this biologically significant?',
             options: [
-              'It allows P680 to absorb more photons',
-              'It has a sufficiently high oxidizing potential to extract electrons from water, enabling oxygenic photosynthesis',
-              'It prevents photorespiration',
-              'It activates the Calvin cycle enzymes'
+              'It lets P680 absorb far-red photons that P700 cannot capture',
+              'It can pull electrons from water, making oxygenic photosynthesis possible',
+              'It blocks the oxygenase activity of RuBisCO, preventing photorespiration',
+              'It lets P680 donate electrons directly to NADP+ to form NADPH'
             ],
             correctAnswer: 1,
             explanation: 'Water is an extremely stable molecule and difficult to oxidize. P680+ has such a strong affinity for electrons (high reduction potential) that it can pull them from water via the oxygen-evolving complex. This capability is what makes oxygenic photosynthesis possible.'
@@ -82,10 +82,10 @@ NADPH is produced on the **stroma** side of the membrane, where it will be used 
           {
             question: 'The electrons used to reduce NADP+ to NADPH in PSI originally came from:',
             options: [
-              'CO2',
-              'Glucose',
-              'Water (via PSII)',
-              'ATP'
+              'CO2 fixed in the stroma',
+              'ATP from ATP synthase',
+              'Water split at PSII',
+              'Glucose from the Calvin cycle'
             ],
             correctAnswer: 2,
             explanation: 'In linear electron flow, electrons originate from water splitting at PSII, travel through the ETC, are re-energized at PSI, and ultimately reduce NADP+ to NADPH. The entire chain traces electrons from H2O to NADPH.'
@@ -93,10 +93,10 @@ NADPH is produced on the **stroma** side of the membrane, where it will be used 
           {
             question: 'What is the role of the antenna complex in each photosystem?',
             options: [
-              'To split water molecules',
-              'To synthesize ATP',
-              'To absorb photons across a range of wavelengths and funnel energy to the reaction center',
-              'To reduce NADP+ to NADPH'
+              'To split water and pass its electrons to the reaction center',
+              'To pump H+ into the lumen using the energy of absorbed light',
+              'To absorb photons and funnel their energy to the reaction center',
+              'To reduce NADP+ to NADPH using electrons from the reaction center'
             ],
             correctAnswer: 2,
             explanation: 'The antenna complex (light-harvesting complex) contains hundreds of pigment molecules that collectively absorb photons from a broad range of wavelengths. They transfer the absorbed energy via resonance energy transfer to the reaction center chlorophyll, concentrating light energy.'
@@ -143,10 +143,10 @@ It also plays a role in **photoprotection** — under high light conditions, cyc
           {
             question: 'Cyclic electron flow produces ____ but NOT ____.',
             options: [
-              'NADPH; ATP',
+              'NADPH; ATP or O2',
               'ATP; NADPH or O2',
-              'O2; ATP',
-              'Glucose; NADPH'
+              'O2; ATP or NADPH',
+              'ATP and O2; NADPH'
             ],
             correctAnswer: 1,
             explanation: 'Cyclic electron flow only involves PSI. Electrons cycle from PSI to ferredoxin to cytochrome b6f and back to PSI. This pumps protons for ATP production but does not produce NADPH (electrons do not go to NADP+) or O2 (no water splitting since PSII is not involved).'
@@ -154,10 +154,10 @@ It also plays a role in **photoprotection** — under high light conditions, cyc
           {
             question: 'Why does the cell sometimes switch to cyclic electron flow instead of using only linear flow?',
             options: [
-              'To produce more NADPH when stocks are low',
-              'To generate additional ATP to maintain the 3:2 ATP:NADPH ratio needed by the Calvin cycle',
-              'To produce O2 more efficiently',
-              'Because cyclic flow is more energy-efficient overall'
+              'To make extra NADPH when the Calvin cycle\'s NADPH stocks run low',
+              'To make extra ATP, matching the Calvin cycle\'s 3:2 ATP:NADPH demand',
+              'To release more O2 by splitting water at PSI as well as PSII',
+              'Because cyclic flow yields more ATP and NADPH per photon absorbed'
             ],
             correctAnswer: 1,
             explanation: 'The Calvin cycle uses 3 ATP per 2 NADPH. Linear electron flow alone does not produce enough ATP relative to NADPH. Cyclic electron flow generates additional ATP (without NADPH) to maintain the proper ratio for carbon fixation.'
@@ -205,10 +205,10 @@ It also plays a role in **photoprotection** — under high light conditions, cyc
           {
             question: 'A researcher discovers a mutant plant that cannot perform cyclic electron flow. Which of the following would you predict?',
             options: [
-              'The plant could not produce any ATP from photosynthesis',
-              'The Calvin cycle would be limited by insufficient ATP relative to NADPH',
-              'The plant could not produce O2',
-              'NADPH production would increase dramatically'
+              'The chloroplast could not make any ATP by chemiosmosis at all',
+              'The Calvin cycle would run short of ATP relative to NADPH',
+              'Water splitting at PSII would stop, so no O2 would be released',
+              'NADPH production would stop because PSI would be shut down'
             ],
             correctAnswer: 1,
             explanation: 'Without cyclic electron flow, the plant would rely solely on linear electron flow for ATP. Since linear flow produces roughly equal amounts of ATP and NADPH, but the Calvin cycle needs a 3:2 ratio, the plant would not have enough ATP to fully utilize the NADPH produced.'
@@ -216,10 +216,10 @@ It also plays a role in **photoprotection** — under high light conditions, cyc
           {
             question: 'Which of the following correctly traces the path of electrons during linear electron flow?',
             options: [
-              'NADPH -> PSI -> PSII -> H2O',
+              'H2O -> PSI -> PC -> Cyt b6f -> PQ -> PSII -> Fd -> NADP+',
               'H2O -> PSII -> PQ -> Cyt b6f -> PC -> PSI -> Fd -> NADP+',
-              'PSI -> PSII -> PQ -> PC -> NADP+',
-              'CO2 -> PSII -> PSI -> O2'
+              'NADP+ -> Fd -> PSI -> PC -> Cyt b6f -> PQ -> PSII -> H2O',
+              'H2O -> PSII -> PC -> Cyt b6f -> PQ -> PSI -> Fd -> NADP+'
             ],
             correctAnswer: 1,
             explanation: 'Linear electron flow begins with water splitting at PSII (providing electrons), proceeds through plastoquinone (PQ), cytochrome b6f, plastocyanin (PC), PSI (re-energization), ferredoxin (Fd), and finally NADP+ reductase (producing NADPH).'

@@ -24,26 +24,26 @@ export const bioMeiosisPart6Data = {
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Chromosome counting through meiosis…?',
+            question: 'A cell with 2n = 12 is in metaphase II. How many chromosomes and chromatids does it contain?',
             options: [
-              'Chromosome counting through meiosis stages',
-              'Predicting gamete genotypes',
-              'Comparing mitosis and meiosis',
-              'Nondisjunction and its consequences'
+              '6 chromosomes, 12 chromatids',
+              '12 chromosomes, 24 chromatids',
+              '6 chromosomes, 6 chromatids',
+              '12 chromosomes, 12 chromatids'
             ],
             correctAnswer: 0,
-            explanation: 'Correct — Chromosome counting through meiosis stages. The other options describe different concepts from this topic.'
+            explanation: 'Meiosis I halves the chromosome number, so a cell in metaphase II has n = 6 chromosomes. Sister chromatids have not yet separated, so each chromosome still has two chromatids: 12 chromatids in total.'
           },
           {
-            question: 'Which of the following is true about Comparing mitosis and meiosis?',
+            question: 'Which feature is found in meiosis but not in mitosis?',
             options: [
-              'Chromosome counting through meiosis stages',
-              'Nondisjunction and its consequences',
-              'Comparing mitosis and meiosis',
-              'Predicting gamete genotypes'
+              'Separation of sister chromatids at anaphase',
+              'Formation of a spindle from microtubules',
+              'Pairing of homologous chromosomes in prophase',
+              'Replication of DNA in the preceding S phase'
             ],
             correctAnswer: 2,
-            explanation: 'Correct — Comparing mitosis and meiosis. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'Homologous chromosomes pair (synapsis) only in prophase I of meiosis. Sister chromatid separation, spindle formation, and DNA replication in the preceding S phase occur in both mitosis and meiosis.'
           }
         ]
       }
@@ -69,15 +69,15 @@ export const bioMeiosisPart6Data = {
       exercise: {
         questions: [
           {
-            question: 'Which of these accurately represents Nondisjunction and its consequences?',
+            question: 'The two copies of chromosome 21 fail to separate in meiosis I in one parent. If a gamete with the extra copy fertilizes a normal gamete, the zygote will be:',
             options: [
-              'Comparing mitosis and meiosis',
-              'Nondisjunction and its consequences',
-              'Chromosome counting through meiosis stages',
-              'Predicting gamete genotypes'
+              'monosomic, with 45 chromosomes',
+              'trisomic, with 47 chromosomes',
+              'triploid, with 69 chromosomes',
+              'normal, with 46 chromosomes'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — Nondisjunction and its consequences. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: 'Nondisjunction leaves one gamete with 24 chromosomes (two copies of chromosome 21). Fusing with a normal 23-chromosome gamete gives a zygote with 47 chromosomes and three copies of chromosome 21, a trisomy that causes Down syndrome.'
           }
         ]
       }

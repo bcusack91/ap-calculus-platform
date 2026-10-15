@@ -26,24 +26,24 @@ export const bioNonMendelianPart4Data = {
           {
             question: 'Which of the following correctly describes X-linked traits?',
             options: [
-              'Males (XY) express all X-linked alleles (hemizygous)',
-              'genes on X chromosome',
-              'Females (XX) can be carriers of recessive X-linked traits',
-              'color blindness, hemophilia, Duchenne muscular dystrophy'
+              'Traits coded by genes found only on the Y chromosome',
+              'Traits controlled by genes carried on the X chromosome',
+              'Traits expressed in only one sex but coded by autosomal genes',
+              'Traits set by mitochondrial genes inherited from the mother'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — X-linked traits: genes on X chromosome. The other options describe different concepts from this topic.'
+            explanation: 'X-linked traits are controlled by genes located on the X chromosome, so their inheritance differs between the sexes (males have one X and are hemizygous). Y-linked genes pass father to son, sex-limited traits are autosomal genes expressed in one sex, and mitochondrial genes are inherited maternally but are not on the X.'
           },
           {
             question: 'In the context of Sex-Linked Traits, which explains Females (XX) can be carriers of…?',
             options: [
-              'Females (XX) can be carriers of recessive X-linked traits',
-              'genes on X chromosome',
-              'Males (XY) express all X-linked alleles (hemizygous)',
-              'color blindness, hemophilia, Duchenne muscular dystrophy'
+              'Females have two X chromosomes, so a normal allele on one X can mask a recessive allele on the other',
+              'Females receive X-linked alleles only from their mothers, so they seldom inherit a recessive copy',
+              'Females are hemizygous for the X, so they express every recessive X-linked allele they inherit',
+              'Females store recessive X-linked alleles on autosomes, where those alleles are never expressed'
             ],
             correctAnswer: 0,
-            explanation: 'Correct — Females (XX) can be carriers of recessive X-linked traits. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'A female (XX) has two copies of every X-linked gene, so she can be heterozygous: a normal allele on one X masks a recessive allele on the other, making her an unaffected carrier. Males are the hemizygous sex, with a single X, and females receive one X from each parent.'
           }
         ]
       }
@@ -71,13 +71,13 @@ export const bioNonMendelianPart4Data = {
           {
             question: 'Which statement about Examples is correct?',
             options: [
-              'Females (XX) can be carriers of recessive X-linked traits',
-              'genes on X chromosome',
-              'Males (XY) express all X-linked alleles (hemizygous)',
-              'color blindness, hemophilia, Duchenne muscular dystrophy'
+              'X-linked examples: cystic fibrosis, sickle-cell disease and Tay-Sachs disease',
+              'X-linked examples: Huntington\'s disease, achondroplasia and Marfan syndrome',
+              'X-linked examples: Down syndrome, Turner syndrome and Klinefelter syndrome (XXY)',
+              'X-linked examples: red-green color blindness, hemophilia and Duchenne dystrophy'
             ],
             correctAnswer: 3,
-            explanation: 'Correct — Examples: color blindness, hemophilia, Duchenne muscular dystrophy. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: 'Red-green color blindness, hemophilia and Duchenne muscular dystrophy are caused by recessive alleles on the X chromosome, which is why they are far more common in males. Cystic fibrosis, sickle-cell and Tay-Sachs are autosomal recessive, Huntington\'s and Marfan are autosomal dominant, and Turner and Klinefelter syndromes are aneuploidies (changes in chromosome number), not single-gene X-linked traits.'
           }
         ]
       }

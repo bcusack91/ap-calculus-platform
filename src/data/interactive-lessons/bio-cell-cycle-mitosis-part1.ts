@@ -52,10 +52,10 @@ The cell cycle consists of two major periods:
           {
             question: 'A student observes cells under a microscope and finds that 90% of the cells appear to be in interphase. What can be concluded?',
             options: [
-              'Most cells are dead',
-              'Interphase is the longest phase of the cell cycle, so at any given moment, the majority of dividing cells will be in interphase',
-              'The cells have stopped dividing',
-              'The microscope is not powerful enough to see mitotic cells'
+              'Most of the cells are dead, so they can no longer enter mitosis',
+              'Interphase takes up most of the time in the cell cycle',
+              'The cells have stopped dividing and permanently exited the cell cycle',
+              'The stain used labels only nuclei that are in interphase, not dividing ones'
             ],
             correctAnswer: 1,
             explanation: 'Interphase occupies approximately 90% of the cell cycle. Since the proportion of cells in each phase reflects the relative duration of that phase, ~90% of dividing cells observed at any instant will be in interphase.'
@@ -74,10 +74,10 @@ The cell cycle consists of two major periods:
           {
             question: 'A mature neuron in the human brain is in which phase?',
             options: [
-              'G1, actively preparing to divide',
-              'S phase, replicating its DNA',
-              'G0 — a quiescent state where the cell no longer divides',
-              'M phase'
+              'G1 — growing and preparing to replicate its DNA',
+              'S — continuously replicating its DNA for repair',
+              'G0 — a nondividing state outside the active cycle',
+              'M — dividing slowly to replace lost brain neurons'
             ],
             correctAnswer: 2,
             explanation: 'Most neurons are terminally differentiated and have exited the cell cycle into G0. They remain metabolically active (conducting nerve impulses) but do not divide. This is why brain and spinal cord injuries are often permanent.'
@@ -209,10 +209,10 @@ Understanding chromosome structure throughout the cell cycle is critical:
           {
             question: 'A researcher adds a drug that blocks DNA polymerase (the enzyme that copies DNA). In which phase would cells accumulate?',
             options: [
-              'G1 — cells cannot prepare for division',
-              'S phase — cells enter S but cannot replicate their DNA, so they stall in S',
-              'G2 — cells cannot check their DNA',
-              'M phase — cells cannot divide'
+              'G1 — cells cannot make the proteins they need to grow',
+              'S — cells begin replication but cannot finish copying DNA',
+              'G2 — cells cannot check their replicated DNA for errors',
+              'M — cells cannot separate their sister chromatids'
             ],
             correctAnswer: 1,
             explanation: 'DNA polymerase is required during S phase to replicate DNA. Blocking it would cause cells to enter S phase but fail to complete DNA synthesis. Cells would accumulate (arrest) in S phase.'

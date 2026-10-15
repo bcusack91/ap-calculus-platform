@@ -38,7 +38,7 @@ export const bioFitnessPart1Data = {
             options: [
               'relative reproductive success in a specific environment',
               'benefit in one function paired with cost in another',
-              'ability of one genotype to produce different phenotypes',
+              'favors intermediate phenotypes',
               'heritable trait improving performance under selection'
             ],
             correctAnswer: 0,

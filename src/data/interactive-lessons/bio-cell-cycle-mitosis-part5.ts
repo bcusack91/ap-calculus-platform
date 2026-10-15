@@ -75,10 +75,10 @@ Loss of cell cycle control is the fundamental basis of **cancer**.
           {
             question: 'If a cell has a mutation that makes Rb constitutively active (always bound to E2F, even when phosphorylated), what would happen?',
             options: [
-              'The cell would divide uncontrollably',
-              'The cell would be permanently arrested in G1 because E2F could never activate S-phase genes',
-              'DNA replication would proceed normally',
-              'The cell would skip directly to M phase'
+              'The cell would divide uncontrollably because E2F would stay active',
+              'The cell would stay arrested in G1 because E2F could never be released',
+              'The cell would replicate its DNA normally but fail to enter mitosis',
+              'The cell would skip S phase and enter M phase with unreplicated DNA'
             ],
             correctAnswer: 1,
             explanation: 'If Rb cannot be inactivated by phosphorylation, it permanently sequesters E2F. Without E2F activity, the genes needed for DNA replication are never transcribed, and the cell cannot enter S phase. The cell is permanently stuck in G1.'
@@ -86,10 +86,10 @@ Loss of cell cycle control is the fundamental basis of **cancer**.
           {
             question: 'Cyclin B levels rise throughout G2 and peak at the onset of mitosis, then drop sharply during anaphase.  What causes the drop?',
             options: [
-              'Cyclin B is diluted as the cell divides',
-              'The APC/C (Anaphase-Promoting Complex) ubiquitinates Cyclin B, targeting it for proteasomal degradation',
-              'Cyclin B spontaneously degrades at high concentrations',
-              'Cdk1 destroys its own cyclin partner'
+              'Cyclin B is diluted as the cytoplasm divides into two daughter cells',
+              'APC/C tags Cyclin B with ubiquitin for proteasomal degradation',
+              'Cyclin B degrades spontaneously once it reaches high concentrations',
+              'Active Cdk1 phosphorylates its own cyclin partner, triggering its breakdown'
             ],
             correctAnswer: 1,
             explanation: 'The APC/C is a ubiquitin ligase activated during mitosis. It tags Cyclin B (and securin) with ubiquitin chains, marking them for destruction by the 26S proteasome. This drops Cdk1 activity and allows the cell to exit mitosis.'
@@ -136,10 +136,10 @@ Cancer results from the accumulation of mutations in genes that regulate the cel
           {
             question: 'A patient has a mutation in ONE copy of the p53 gene. According to the two-hit hypothesis, this person:',
             options: [
-              'Will definitely develop cancer',
-              'Has an increased cancer risk because only one more mutation (second hit) is needed to eliminate p53 function; however, the remaining functional copy still provides protection',
-              'Is completely protected because one copy is sufficient',
-              'Has cancer already'
+              'Will certainly develop cancer, because one mutant copy disables p53',
+              'Has a higher cancer risk, because only one more mutation would eliminate p53 function',
+              'Is fully protected, because one working copy of p53 is always sufficient',
+              'Already has cancer, because any p53 mutation causes tumor formation'
             ],
             correctAnswer: 1,
             explanation: 'Tumor suppressor genes typically require inactivation of both alleles (two hits). Having one mutant copy increases cancer risk significantly because only one more mutation event is needed. However, the person does not automatically develop cancer — additional mutations and factors are required.'
@@ -147,10 +147,10 @@ Cancer results from the accumulation of mutations in genes that regulate the cel
           {
             question: 'Many chemotherapy drugs target rapidly dividing cells. Why does this approach also damage healthy tissues like bone marrow, hair follicles, and intestinal lining?',
             options: [
-              'These tissues are cancerous too',
-              'These normal tissues have high cell division rates, so they are also susceptible to drugs that target dividing cells — causing side effects like immunosuppression, hair loss, and GI problems',
-              'Chemotherapy drugs are not specific to dividing cells',
-              'These tissues lack p53'
+              'These tissues also contain cancer cells that the drugs are designed to target',
+              'These normal tissues also divide rapidly, so the drugs hit them too',
+              'Chemotherapy drugs kill all cells equally, whether dividing rapidly or not',
+              'These tissues lack p53, so they cannot survive DNA damage from the drugs'
             ],
             correctAnswer: 1,
             explanation: 'Chemotherapy drugs target rapidly dividing cells (e.g., by disrupting DNA replication or microtubule function). Normal tissues with high proliferation rates — bone marrow (blood cells), hair follicles, and GI epithelium — are collateral damage, causing the classic side effects of chemotherapy.'
@@ -198,10 +198,10 @@ Cancer results from the accumulation of mutations in genes that regulate the cel
           {
             question: 'A cancer cell is found to have a mutation that causes overproduction of Cyclin D. What is the expected effect?',
             options: [
-              'The cell would arrest in G1',
-              'Excess Cyclin D would constitutively activate Cdk4/6, hyperphosphorylate Rb, release E2F, and drive continuous entry into S phase — promoting uncontrolled proliferation',
-              'DNA replication would be blocked',
-              'The cell would undergo apoptosis'
+              'The cell would arrest in G1 because Cdk4/6 would be inhibited',
+              'Rb would stay phosphorylated, freeing E2F to drive repeated S-phase entry',
+              'DNA replication would be blocked because Rb would bind E2F even more tightly',
+              'The cell would undergo apoptosis as p53 detects the excess cyclin'
             ],
             correctAnswer: 1,
             explanation: 'Cyclin D activates Cdk4/6, which phosphorylates Rb. Rb releases E2F, driving S phase entry. Overproduction of Cyclin D means Rb is constantly inactivated, and the cell bypasses the G1/S checkpoint repeatedly — a common mechanism in cancer (Cyclin D is encoded by the CCND1 gene, amplified in many cancers).'

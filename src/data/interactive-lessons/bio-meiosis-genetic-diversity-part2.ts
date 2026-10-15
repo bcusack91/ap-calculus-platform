@@ -24,26 +24,26 @@ export const bioMeiosisPart2Data = {
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Homologous chromosomes pair up…?',
+            question: 'During prophase I, what happens that does NOT happen in prophase of mitosis?',
             options: [
-              'Crossing over occurs during prophase I',
-              'Homologous pairs separate in anaphase I (reductional division)',
-              'Homologous chromosomes pair up (synapsis)',
-              'Homologs align at metaphase plate (random orientation)'
+              'Sister chromatids separate and move toward opposite poles',
+              'The DNA in each chromosome is replicated for the first time',
+              'Homologous chromosomes pair up closely in a process called synapsis',
+              'The nuclear envelope breaks down and spindle fibers begin to form'
             ],
             correctAnswer: 2,
-            explanation: 'Correct — Homologous chromosomes pair up (synapsis). The other options describe different concepts from this topic.'
+            explanation: 'Synapsis, the close pairing of homologous chromosomes, happens only in prophase I of meiosis and allows crossing over. Nuclear envelope breakdown and spindle formation occur in both mitosis and meiosis, DNA was already replicated in S phase, and sister chromatids do not separate until anaphase.'
           },
           {
-            question: 'In the context of Meiosis I, which explains Homologs align at metaphase plate…?',
+            question: 'At metaphase I, how are the chromosomes arranged at the cell\'s equator?',
             options: [
-              'Homologous chromosomes pair up (synapsis)',
-              'Homologs align at metaphase plate (random orientation)',
-              'Crossing over occurs during prophase I',
-              'Homologous pairs separate in anaphase I (reductional division)'
+              'Replicated chromosomes line up singly, just as they do in mitosis',
+              'Homologous pairs line up, each pair oriented randomly toward the poles',
+              'Homologous pairs line up with all maternal homologs facing one pole',
+              'Homologous pairs line up with sister chromatids facing opposite poles'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — Homologs align at metaphase plate (random orientation). Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'In metaphase I, homologous pairs (not single chromosomes) line up at the metaphase plate. Each pair\'s orientation is random and independent of the other pairs, which is the basis of independent assortment. Single chromosomes line up individually only in mitosis and meiosis II.'
           }
         ]
       }
@@ -69,15 +69,15 @@ export const bioMeiosisPart2Data = {
       exercise: {
         questions: [
           {
-            question: 'Which statement about Homologous pairs separate in anaphase I… is correct?',
+            question: 'Which event makes meiosis I a reductional division?',
             options: [
-              'Homologous chromosomes pair up (synapsis)',
-              'Homologous pairs separate in anaphase I (reductional division)',
-              'Homologs align at metaphase plate (random orientation)',
-              'Crossing over occurs during prophase I'
+              'Sister chromatids separate as cohesin at the centromere is cleaved',
+              'Homologous chromosomes separate and move to opposite poles',
+              'Crossing over removes chromosome segments from each homolog',
+              'The cytoplasm divides unevenly, so one cell receives fewer chromosomes'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — Homologous pairs separate in anaphase I (reductional division). Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: 'In anaphase I, homologous chromosomes separate, so each daughter cell receives only one member of each pair and the chromosome number is halved (2n to n). Sister chromatids stay together until meiosis II, and crossing over swaps segments without removing them.'
           }
         ]
       }

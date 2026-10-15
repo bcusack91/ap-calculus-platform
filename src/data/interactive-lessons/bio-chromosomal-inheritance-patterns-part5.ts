@@ -64,9 +64,9 @@ A **duplication** occurs when a chromosomal segment is copied, resulting in extr
             question: 'Pseudodominance occurs when:',
             options: [
               'A deletion on one homolog unmasks a recessive allele on the other homolog',
-              'A dominant allele is duplicated',
-              'Two recessive alleles are present',
-              'A translocation creates a new dominant allele'
+              'A duplicated dominant allele masks a recessive allele on the other homolog',
+              'Two recessive alleles are present, so the recessive trait is expressed normally',
+              'A translocation creates a new dominant allele that masks the normal homolog'
             ],
             correctAnswer: 0,
             explanation: 'Pseudodominance happens when a deletion removes the dominant allele from one homolog, allowing the recessive allele on the other homolog to be expressed. The individual appears to have a dominant trait but actually has only one (recessive) allele.'
@@ -74,10 +74,10 @@ A **duplication** occurs when a chromosomal segment is copied, resulting in extr
           {
             question: 'Gene duplications are evolutionarily important because:',
             options: [
-              'Duplicated genes can diverge and acquire new functions over time',
-              'They always cause harmful dosage effects',
-              'They reduce genetic variation',
-              'They prevent crossing over'
+              'Extra gene copies can diverge and acquire new functions over time',
+              'They always cause harmful dosage effects that selection removes',
+              'They reduce genetic variation by making genomes more uniform',
+              'They prevent crossing over and keep favorable alleles together'
             ],
             correctAnswer: 0,
             explanation: 'Gene duplication creates redundant copies. One copy can maintain the original function while the other is free to accumulate mutations and potentially develop new functions (neofunctionalization) — a major source of evolutionary novelty.'
@@ -174,13 +174,13 @@ A **translocation** is the transfer of a chromosomal segment to a non-homologous
           {
             question: 'Why might inversions be considered "crossover suppressors"?',
             options: [
-              'Recombinant gametes from crossovers within the inversion are usually inviable, effectively preserving the original allele combination',
-              'Inversions physically prevent crossing over from occurring',
-              'Inversions eliminate the synaptonemal complex',
-              'Inversions convert crossing over into gene conversion'
+              'Recombinants from crossovers in the inversion are unbalanced and rarely viable, so allele combinations persist',
+              'Inversions physically block homologs from pairing, so no crossing over can occur along the inverted segment',
+              'Inversions eliminate the synaptonemal complex, so chiasmata can never form within the inverted region',
+              'Inversions convert each crossover into gene conversion, so alleles are copied but never actually exchanged'
             ],
             correctAnswer: 0,
-            explanation: 'Crossing over CAN occur within inversions, but the resulting recombinant chromosomes are usually unbalanced (containing deletions and duplications) and produce inviable gametes. This effectively suppresses recombination, keeping allele combinations together.'
+            explanation: 'Crossing over CAN occur within inversions (homologs pair by forming an inversion loop), but the resulting recombinant chromosomes are usually unbalanced (containing deletions and duplications) and produce inviable gametes. This effectively suppresses recombination among surviving offspring, keeping allele combinations together.'
           }
         ]
       }

@@ -26,24 +26,24 @@ export const bioNonMendelianPart6Data = {
           {
             question: 'Which of the following correctly describes Identifying inheritance patterns from…?',
             options: [
-              'Identifying inheritance patterns from crosses',
-              'Distinguishing codominance from incomplete dominance',
-              'Solving X-linked inheritance problems',
-              'Analyzing polygenic trait distributions'
+              'Infer the inheritance mode by comparing observed offspring ratios with predicted ones',
+              'Infer the inheritance mode from the parents\' phenotypes alone, without the offspring',
+              'Infer the inheritance mode by assuming the most common phenotype is the dominant one',
+              'Infer the inheritance mode by assuming any trait seen mostly in males must be Y-linked'
             ],
             correctAnswer: 0,
-            explanation: 'Correct — Identifying inheritance patterns from crosses. The other options describe different concepts from this topic.'
+            explanation: 'To identify an inheritance pattern, compare the offspring ratios you observe (1:2:1, 9:3:4, sex-biased ratios and so on) with those each model predicts, often checking the fit with a chi-square test. Parental phenotypes alone are not enough, the most common phenotype need not be dominant, and a male bias usually signals X-linked recessive inheritance rather than Y-linkage.'
           },
           {
             question: 'In the context of Non-Mendelian Genetics: Problem-Solving Workshop, which explains Distinguishing codominance from…?',
             options: [
-              'Analyzing polygenic trait distributions',
-              'Solving X-linked inheritance problems',
-              'Identifying inheritance patterns from crosses',
-              'Distinguishing codominance from incomplete dominance'
+              'In codominance the heterozygote is intermediate; in incomplete dominance it shows both parental traits',
+              'In codominance the F2 ratio is 3:1; in incomplete dominance the F2 ratio is 1:2:1 for every cross',
+              'In codominance the alleles blend permanently; in incomplete dominance they stay separate in gametes',
+              'Codominant heterozygotes show both parental traits; incompletely dominant ones are intermediate'
             ],
             correctAnswer: 3,
-            explanation: 'Correct — Distinguishing codominance from incomplete dominance. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'Both patterns give a 1:2:1 F2 ratio, so the heterozygote\'s phenotype is what distinguishes them: codominant heterozygotes express both alleles fully (AB blood, roan cattle), while incompletely dominant heterozygotes are intermediate (pink snapdragons). In neither case do the alleles blend permanently.'
           }
         ]
       }
@@ -71,13 +71,13 @@ export const bioNonMendelianPart6Data = {
           {
             question: 'Regarding Non-Mendelian Genetics: Problem-Solving Workshop, which correctly describes Analyzing polygenic trait distributions?',
             options: [
-              'Distinguishing codominance from incomplete dominance',
-              'Analyzing polygenic trait distributions',
-              'Solving X-linked inheritance problems',
-              'Identifying inheritance patterns from crosses'
+              'Expect a few discrete classes in a 9:3:3:1 ratio, because each gene acts independently',
+              'Expect a bell-shaped spread, with extremes rarest because they need many alleles of one kind',
+              'Expect a U-shaped spread, with extremes most common because each gene\'s alleles pair up',
+              'Expect every offspring to match the midparent value, because the many genes blend evenly'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — Analyzing polygenic trait distributions. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: 'With many additive genes, most offspring inherit a mix of "plus" and "minus" alleles and fall near the middle, while extreme phenotypes require many alleles of the same kind and are rare — producing a bell-shaped (normal) distribution. Discrete 9:3:3:1 classes come from two genes with clear dominance, and offspring vary around the parental mean rather than all matching it.'
           }
         ]
       }

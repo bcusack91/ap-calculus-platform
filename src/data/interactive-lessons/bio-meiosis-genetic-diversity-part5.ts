@@ -24,26 +24,26 @@ export const bioMeiosisPart5Data = {
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Independent assortment?',
+            question: 'An organism has n = 3 pairs of chromosomes. Ignoring crossing over, how many genetically different gametes can independent assortment produce?',
             options: [
-              '$2^{23}$ × $2^{23}$ = ~70 trillion possible combinations (without crossing over)',
-              'creates new allele combinations',
-              '$2^{n}$ possible combinations (n = # of chromosome pairs)',
-              'any sperm + any egg'
+              '3',
+              '6',
+              '8',
+              '9'
             ],
             correctAnswer: 2,
-            explanation: 'Correct — Independent assortment: $2^{n}$ possible combinations (n = # of chromosome pairs). The other options describe different concepts from this topic.'
+            explanation: 'Each homologous pair orients independently at metaphase I, so the number of combinations is $2^{n}$. With n = 3, that is 2 × 2 × 2 = 8 different gametes.'
           },
           {
-            question: 'Which of the following is true about Random fertilization?',
+            question: 'Two siblings with the same parents are genetically different. Which source of variation acts at the moment the zygote forms?',
             options: [
-              '$2^{n}$ possible combinations (n = # of chromosome pairs)',
-              'creates new allele combinations',
-              '$2^{23}$ × $2^{23}$ = ~70 trillion possible combinations (without crossing over)',
-              'any sperm + any egg'
+              'Independent assortment',
+              'Crossing over',
+              'Gene duplication',
+              'Random fertilization'
             ],
             correctAnswer: 3,
-            explanation: 'Correct — Random fertilization: any sperm + any egg. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'Random fertilization means any sperm can fuse with any egg, and it acts when the zygote forms. Independent assortment and crossing over act earlier, during meiosis, when each parent\'s gametes are made.'
           }
         ]
       }
@@ -69,15 +69,15 @@ export const bioMeiosisPart5Data = {
       exercise: {
         questions: [
           {
-            question: 'Which statement about Humans is correct?',
+            question: 'Humans have 23 chromosome pairs. Ignoring crossing over, about how many genetically different zygotes can one couple produce?',
             options: [
-              '$2^{23}$ × $2^{23}$ = ~70 trillion possible combinations (without crossing over)',
-              '$2^{n}$ possible combinations (n = # of chromosome pairs)',
-              'creates new allele combinations',
-              'any sperm + any egg'
+              'About 70 trillion',
+              'About 8.4 million',
+              'About 16.8 million',
+              'About 529'
             ],
             correctAnswer: 0,
-            explanation: 'Correct — Humans: $2^{23}$ × $2^{23}$ = ~70 trillion possible combinations (without crossing over). Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: 'Each parent can make $2^{23}$ (about 8.4 million) different gametes by independent assortment. Random fertilization multiplies the two: $2^{23}$ × $2^{23}$ = about 70 trillion combinations, even before crossing over adds more.'
           }
         ]
       }

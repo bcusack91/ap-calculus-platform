@@ -171,9 +171,9 @@ where *O* is the observed count and *E* the expected count for each class. A lar
           {
             question: 'A father is affected by an X-linked recessive disorder $(X^{a} Y)$ and the mother is a non-carrier $(X^{A} X^{A})$. What is true of their children?',
             options: [
-              'All sons will be affected',
-              'All daughters will be affected',
-              'Half the sons and half the daughters will be affected',
+              'All sons will be affected, since the father\'s X-linked allele passes to all his children',
+              'All daughters will be affected, since each receives the father\'s recessive allele',
+              'Half the sons and half the daughters will be affected, as in a carrier × affected cross',
               'No children will be affected, but all daughters will be carriers'
             ],
             correctAnswer: 3,
@@ -235,10 +235,10 @@ Beyond the big three, AP pedigrees occasionally feature two less common modes. K
           {
             question: 'A trait is observed only in males across four generations, and every affected man\'s sons are ALL affected while his daughters are never affected. What is the inheritance pattern, and what is the key reasoning?',
             options: [
-              'X-linked recessive, because only males are affected',
+              'X-linked recessive, because only males are affected and fathers pass their X to sons',
               'Y-linked, because the trait passes strictly father-to-son and never appears in females',
-              'Autosomal dominant, because it appears in every generation',
-              'X-linked dominant, because all sons are affected'
+              'Autosomal dominant, because it appears in every generation and passes parent to child',
+              'X-linked dominant, because every son of an affected father inherits the trait'
             ],
             correctAnswer: 1,
             explanation: 'Strict father-to-son transmission with zero affected females is the unique signature of Y-linked (holandric) inheritance — the Y chromosome is passed from father to every son and never to a daughter. The X-linked recessive option is wrong because X-linked recessive traits CAN appear in females $(X^{a} X^{a})$ and are inherited through carrier mothers, not strictly father-to-son. The all-sons-affected, no-daughters pattern specifically rules in the Y chromosome.'

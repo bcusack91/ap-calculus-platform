@@ -36,9 +36,9 @@ export const bioFeedbackPart3Data = {
           {
             question: 'For Homeostasis, what best describes homeostasis?',
             options: [
-              'component that carries out corrective response',
-              'component that detects a change in a regulated variable',
-              'target value around which a variable is regulated',
+              'keeping each internal variable perfectly constant',
+              'matching internal conditions to the outside environment',
+              'amplifying any change until a process is complete',
               'dynamic maintenance of internal stability'
             ],
             correctAnswer: 3,
@@ -47,9 +47,9 @@ export const bioFeedbackPart3Data = {
           {
             question: 'In this part\'s context, what is the strongest definition of set point?',
             options: [
-              'hormone lowering blood glucose by promoting uptake/storage',
-              'dynamic maintenance of internal stability',
               'component that detects a change in a regulated variable',
+              'highest value at which a variable starts to damage cells',
+              'average of all values measured over a day',
               'target value around which a variable is regulated'
             ],
             correctAnswer: 3,

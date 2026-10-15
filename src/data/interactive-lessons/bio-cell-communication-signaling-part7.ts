@@ -26,24 +26,24 @@ export const bioCellCommPart7Data = {
           {
             question: 'Which of the following correctly describes Signal transduction in homeostasis?',
             options: [
-              'pathway analysis',
-              'Evolution of signaling pathways',
-              'Signaling errors and disease',
-              'Signal transduction in homeostasis'
+              'Pathways respond to signals only during embryonic growth',
+              'Homeostasis is maintained without any cell signaling',
+              'Signals act only to raise a variable, never to lower it',
+              'Pathways trigger responses that return a variable to its set point'
             ],
             correctAnswer: 3,
-            explanation: 'Correct — Signal transduction in homeostasis. The other options describe different concepts from this topic.'
+            explanation: 'In homeostasis, signal transduction pathways (for example, insulin and glucagon signaling) trigger responses that return a variable such as blood glucose toward its set point.'
           },
           {
             question: 'Select the statement that correctly describes Evolution of signaling pathways:',
             options: [
-              'Signaling errors and disease',
-              'Signal transduction in homeostasis',
-              'pathway analysis',
-              'Evolution of signaling pathways'
+              'Each species evolved its own, entirely unrelated pathways',
+              'Signaling pathways appeared only after animals evolved',
+              'Similar pathways in many species show they share no ancestors',
+              'Shared pathway parts across species point to common ancestry'
             ],
             correctAnswer: 3,
-            explanation: 'Correct — Evolution of signaling pathways. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'Many signaling components (such as G protein-coupled receptors and kinase cascades) are shared by yeast, plants, and animals, evidence that these pathways evolved early and were conserved from common ancestors.'
           }
         ]
       }
@@ -71,13 +71,13 @@ export const bioCellCommPart7Data = {
           {
             question: 'Which of these accurately represents AP free-response?',
             options: [
-              'pathway analysis',
-              'Signal transduction in homeostasis',
-              'Signaling errors and disease',
-              'Evolution of signaling pathways'
+              'Predicting how a change at one step alters the output',
+              'Reciting signaling molecules without explaining their roles',
+              'Describing the stages in any order, without linking them',
+              'Drawing the full 3D structure of each receptor protein'
             ],
             correctAnswer: 0,
-            explanation: 'Correct — AP free-response: pathway analysis. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: 'AP free-response questions on signaling usually ask for pathway analysis: predicting and justifying how a mutation, drug, or blocked step changes the pathway\'s output and the cell\'s response.'
           }
         ]
       }

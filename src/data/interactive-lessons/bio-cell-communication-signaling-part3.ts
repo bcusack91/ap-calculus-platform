@@ -26,24 +26,24 @@ export const bioCellCommPart3Data = {
           {
             question: 'Which of the following correctly describes Membrane receptors?',
             options: [
-              'for lipid-soluble signals (steroids)',
-              'Ligand binding causes conformational change',
-              'Receptor specificity determines which cells respond',
-              'G-protein coupled, receptor tyrosine kinases, ion channels'
+              'They bind steroids, thyroid hormone, and other lipid-soluble signals',
+              'They work without changing shape when ligands bind the receptor',
+              'They are found in every cell type in equal numbers',
+              'They include G protein-coupled receptors, RTKs, and ion channels'
             ],
             correctAnswer: 3,
-            explanation: 'Correct — Membrane receptors: G-protein coupled, receptor tyrosine kinases, ion channels. The other options describe different concepts from this topic.'
+            explanation: 'Membrane receptors bind hydrophilic ligands at the cell surface; major classes are G protein-coupled receptors, receptor tyrosine kinases (RTKs), and ligand-gated ion channels. Lipid-soluble signals such as steroids cross the membrane and bind intracellular receptors.'
           },
           {
             question: 'Select the statement that correctly describes Ligand binding causes conformational…:',
             options: [
-              'G-protein coupled, receptor tyrosine kinases, ion channels',
-              'Ligand binding causes conformational change',
-              'for lipid-soluble signals (steroids)',
-              'Receptor specificity determines which cells respond'
+              'Ligand binding permanently inactivates the receptor protein it binds',
+              'Ligand binding changes the receptor\'s shape, starting transduction',
+              'Ligand binding carries the ligand into the nucleus every time',
+              'Ligand binding adds a phosphate group to the ligand itself'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — Ligand binding causes conformational change. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'When a ligand binds, the receptor changes conformation (shape). That shape change activates the receptor and starts the transduction pathway inside the cell.'
           }
         ]
       }
@@ -71,13 +71,13 @@ export const bioCellCommPart3Data = {
           {
             question: 'Which statement about Receptor specificity determines which… is correct?',
             options: [
-              'Receptor specificity determines which cells respond',
-              'G-protein coupled, receptor tyrosine kinases, ion channels',
-              'Ligand binding causes conformational change',
-              'for lipid-soluble signals (steroids)'
+              'Cells respond only if they carry the matching receptor',
+              'Cells respond to any ligand reaching their surface receptors',
+              'Cells respond only if the ligand enters their nucleus',
+              'Cells respond only to signals they produced themselves'
             ],
             correctAnswer: 0,
-            explanation: 'Correct — Receptor specificity determines which cells respond. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: 'Receptor specificity determines which cells respond: a ligand affects only cells that express a receptor whose binding site fits it.'
           }
         ]
       }

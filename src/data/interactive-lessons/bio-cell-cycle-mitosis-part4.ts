@@ -67,10 +67,10 @@ Plant cells cannot form a cleavage furrow because of their rigid **cell wall**. 
           {
             question: 'What would happen if an animal cell were treated with a drug that inhibits actin polymerization during telophase?',
             options: [
-              'Mitosis would be blocked at metaphase',
-              'The cell would complete nuclear division but fail to form a cleavage furrow, resulting in a binucleate cell',
-              'DNA replication would be blocked',
-              'The cell would undergo apoptosis before reaching telophase'
+              'Mitosis would arrest at metaphase because the spindle could not form',
+              'Nuclear division would finish but no cleavage furrow would form, leaving a binucleate cell',
+              'The chromosomes would fail to decondense, so the nuclei could not re-form',
+              'The cell would undergo apoptosis before it could finish telophase'
             ],
             correctAnswer: 1,
             explanation: 'The cleavage furrow depends on a contractile ring made of actin and myosin. Blocking actin polymerization prevents ring formation, so the cytoplasm cannot divide. The nuclei divide normally (mitosis is microtubule-dependent, not actin-dependent), producing a binucleate cell.'
@@ -78,10 +78,10 @@ Plant cells cannot form a cleavage furrow because of their rigid **cell wall**. 
           {
             question: 'In plant cell cytokinesis, the cell plate forms:',
             options: [
-              'By constriction of the cell wall from outside to inside',
-              'By fusion of Golgi-derived vesicles at the center of the cell, growing outward until it reaches the existing cell wall',
-              'By dissolution of the existing cell wall',
-              'By invagination of the plasma membrane'
+              'By the cell wall constricting inward from the outside toward the center',
+              'By Golgi vesicles fusing at the center and growing outward',
+              'By the old cell wall dissolving and being rebuilt between the nuclei',
+              'By the plasma membrane pinching inward along an actin-myosin ring'
             ],
             correctAnswer: 1,
             explanation: 'Plant cell cytokinesis builds a new partition from the inside out. Golgi vesicles carrying cell wall precursors are guided to the cell center by phragmoplast microtubules, fuse into a cell plate, and expand outward until they merge with the existing cell wall.'
@@ -154,10 +154,10 @@ Prokaryotes (bacteria and archaea) do not undergo mitosis.  They reproduce by **
           {
             question: 'FtsZ in bacteria is considered a homolog of eukaryotic tubulin. What does this suggest about the evolution of cell division?',
             options: [
-              'Bacteria evolved from eukaryotes',
-              'The fundamental mechanisms of cell division are ancient, with FtsZ and tubulin likely sharing a common ancestor — evidence for the evolutionary relationship between prokaryotic and eukaryotic division',
-              'Tubulin was acquired by horizontal gene transfer from bacteria',
-              'FtsZ and tubulin have no functional similarity'
+              'Bacteria evolved from early eukaryotes that later lost their nucleus',
+              'Cell division machinery is ancient, inherited from a shared ancestor',
+              'Eukaryotes acquired tubulin from bacteria by horizontal gene transfer',
+              'FtsZ and tubulin arose independently in two unrelated division systems'
             ],
             correctAnswer: 1,
             explanation: 'FtsZ and tubulin share structural and functional similarities despite billions of years of divergence. Both polymerize into filaments and are essential for cell division. Their homology suggests that the basic molecular machinery for cell division was present in the last common ancestor of prokaryotes and eukaryotes.'
@@ -165,10 +165,10 @@ Prokaryotes (bacteria and archaea) do not undergo mitosis.  They reproduce by **
           {
             question: 'A mutation disrupts the signaling pathway that positions the cleavage furrow in an animal cell.  The furrow forms, but at a random position instead of the cell equator.  What is the likely outcome?',
             options: [
-              'Normal division — position does not matter',
-              'Daughter cells of unequal size, with one potentially receiving both nuclei or neither nucleus — asymmetric and likely abnormal division',
-              'The cell will switch to plant-type cytokinesis',
-              'The furrow will self-correct automatically'
+              'Normal division, since furrow position does not affect the daughter cells',
+              'Unequal daughter cells, one possibly getting both nuclei or neither',
+              'The cell will switch to building a cell plate from Golgi vesicles instead',
+              'The furrow will slide back to the equator before the cell finishes dividing'
             ],
             correctAnswer: 1,
             explanation: 'The cleavage furrow must form at the cell equator to ensure each daughter cell receives one nucleus. If positioned randomly, one daughter cell might get both nuclei (or no nucleus), and the cells would be unequal in size. Proper spindle-to-cortex signaling is essential for accurate division.'

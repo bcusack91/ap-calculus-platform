@@ -26,24 +26,24 @@ export const bioNonMendelianPart3Data = {
           {
             question: 'Which of the following correctly describes One gene masks the expression of another?',
             options: [
-              'One gene masks the expression of another',
-              '9:3:4, 12:3:1, 9:7',
-              'coat color in Labrador retrievers (E gene masks B gene)',
-              'Different from dominance (which is within one gene)'
+              'Epistasis, as when Labrador gene E blocks pigment from gene B',
+              'Pleiotropy, as when one sickle-cell allele affects blood, joints and spleen',
+              'Codominance, as when both Iᴬ and Iᴮ are expressed in type AB blood',
+              'Dominance, as when allele T masks allele t of the same pea height gene'
             ],
             correctAnswer: 0,
-            explanation: 'Correct — One gene masks the expression of another. The other options describe different concepts from this topic.'
+            explanation: 'One gene masking the expression of a DIFFERENT gene is epistasis: in Labrador retrievers, ee dogs are yellow whatever alleles they carry at the B (black/brown) gene. Dominance is masking between alleles of the SAME gene, codominance is both alleles of one gene expressed, and pleiotropy is one gene affecting several traits.'
           },
           {
             question: 'In the context of Epistasis, which explains Modified dihybrid ratios?',
             options: [
-              'coat color in Labrador retrievers (E gene masks B gene)',
-              'Different from dominance (which is within one gene)',
-              '9:3:4, 12:3:1, 9:7',
-              'One gene masks the expression of another'
+              'Linkage of the two genes merges classes, turning 9:3:3:1 into ratios like 1:2:1',
+              'Masking makes the two genes blend, turning 9:3:3:1 into a continuous bell curve',
+              'Masking merges phenotype classes, turning 9:3:3:1 into ratios like 9:3:4 or 9:7',
+              'Masking stops one gene from segregating, turning 9:3:3:1 into a simple 3:1'
             ],
             correctAnswer: 2,
-            explanation: 'Correct — Modified dihybrid ratios: 9:3:4, 12:3:1, 9:7. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'Epistasis does not change how alleles segregate or assort; all 16 genotype combinations still occur. Because one gene hides the other\'s phenotype, some of the four dihybrid classes look alike and merge — giving 9:3:4 (recessive epistasis, as in Labradors), 12:3:1 (dominant epistasis) or 9:7 (complementary genes). The genes do not blend, and linked genes distort ratios by changing gamete frequencies, not by masking.'
           }
         ]
       }
@@ -71,13 +71,13 @@ export const bioNonMendelianPart3Data = {
           {
             question: 'Regarding Epistasis, which correctly describes Different from dominance (which is…?',
             options: [
-              '9:3:4, 12:3:1, 9:7',
-              'Different from dominance (which is within one gene)',
-              'One gene masks the expression of another',
-              'coat color in Labrador retrievers (E gene masks B gene)'
+              'Epistasis acts between alleles of one gene, while dominance acts between different genes',
+              'Epistasis acts between different genes, while dominance acts between alleles of one gene',
+              'Epistasis acts between linked genes, while dominance acts between unlinked genes',
+              'Epistasis acts only in heterozygotes, while dominance acts only in homozygotes'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — Different from dominance (which is within one gene). Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: 'Dominance is an interaction between two alleles of the SAME gene (T masks t). Epistasis is an interaction between DIFFERENT genes: the genotype at one locus masks the phenotype set by another (Labrador E masks B). Neither depends on linkage, and epistasis often works through a homozygous recessive genotype such as ee.'
           }
         ]
       }

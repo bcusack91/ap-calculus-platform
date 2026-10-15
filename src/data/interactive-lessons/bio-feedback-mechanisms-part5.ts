@@ -36,10 +36,10 @@ export const bioFeedbackPart5Data = {
           {
             question: 'For Thermoregulation, what best describes sensor?',
             options: [
-              'hormone raising blood glucose by mobilizing reserves',
-              'component that detects a change in a regulated variable',
               'component that carries out corrective response',
-              'hormone lowering blood glucose by promoting uptake/storage'
+              'component that detects a change in a regulated variable',
+              'component that compares input to the set point and responds',
+              'target value around which the variable is held'
             ],
             correctAnswer: 1,
             explanation: 'sensor is best matched with: component that detects a change in a regulated variable.'
@@ -47,10 +47,10 @@ export const bioFeedbackPart5Data = {
           {
             question: 'In this part\'s context, what is the strongest definition of effector?',
             options: [
-              'physiological control of body temperature',
-              'hormone lowering blood glucose by promoting uptake/storage',
+              'component that detects the change',
+              'signal released by the control center',
               'component that carries out corrective response',
-              'component that detects a change in a regulated variable'
+              'component that sets the target value'
             ],
             correctAnswer: 2,
             explanation: 'effector is best matched with: component that carries out corrective response.'
@@ -168,7 +168,7 @@ export const bioFeedbackPart5Data = {
       exercise: {
         questions: [
           {
-            question: 'In temperature regulation under heat stress, the observed pattern is: hormone raising blood glucose by mobilizing reserves. What term should anchor the explanation?',
+            question: 'In blood glucose regulation during fasting, the observed pattern is: hormone raising blood glucose by mobilizing reserves. What term should anchor the explanation?',
             options: [
               'insulin',
               'sensor',
@@ -181,9 +181,9 @@ export const bioFeedbackPart5Data = {
           {
             question: 'In an AP-style free-response about thermoregulation, the observed pattern is: physiological control of body temperature. What term should anchor the explanation?',
             options: [
-              'positive feedback',
-              'glucagon',
-              'insulin',
+              'thermoreceptor',
+              'osmoregulation',
+              'set point',
               'thermoregulation'
             ],
             correctAnswer: 3,

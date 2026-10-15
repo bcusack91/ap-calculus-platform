@@ -37,8 +37,8 @@ export const bioFeedbackPart4Data = {
             question: 'For Hormonal Regulation, what best describes set point?',
             options: [
               'target value around which a variable is regulated',
-              'component that detects a change in a regulated variable',
-              'hormone lowering blood glucose by promoting uptake/storage',
+              'level at which regulation stops',
+              'signal the sensor sends to the control center',
               'component that carries out corrective response'
             ],
             correctAnswer: 0,
@@ -47,10 +47,10 @@ export const bioFeedbackPart4Data = {
           {
             question: 'In this part\'s context, what is the strongest definition of sensor?',
             options: [
-              'target value around which a variable is regulated',
+              'component that compares input to the set point and decides',
               'component that detects a change in a regulated variable',
-              'hormone raising blood glucose by mobilizing reserves',
-              'component that carries out corrective response'
+              'component that carries out the response to restore balance',
+              'hormone that travels in the blood to signal the target cells'
             ],
             correctAnswer: 1,
             explanation: 'sensor is best matched with: component that detects a change in a regulated variable.'
@@ -184,7 +184,7 @@ export const bioFeedbackPart4Data = {
               'insulin',
               'effector',
               'glucagon',
-              'thermoregulation'
+              'set point'
             ],
             correctAnswer: 2,
             explanation: 'Use glucagon because it directly maps to the described biological pattern: hormone raising blood glucose by mobilizing reserves.'

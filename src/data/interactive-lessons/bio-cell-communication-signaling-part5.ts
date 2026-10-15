@@ -26,24 +26,24 @@ export const bioCellCommPart5Data = {
           {
             question: 'Which of the following correctly describes Gene expression changes?',
             options: [
-              'programmed cell death',
-              'transcription factors activated',
-              'Enzyme activation/deactivation',
-              'Cell division stimulation or inhibition'
+              'The signal triggers programmed cell death in every target cell',
+              'The pathway activates transcription factors for target genes',
+              'The signal rewrites the DNA sequence of the target gene itself',
+              'The signal splices the introns out of DNA inside the nucleus'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — Gene expression changes: transcription factors activated. The other options describe different concepts from this topic.'
+            explanation: 'Many pathways end by activating transcription factors, which turn specific genes on or off; the DNA sequence itself is not changed.'
           },
           {
             question: 'Select the statement that correctly describes Cell division stimulation or inhibition:',
             options: [
-              'programmed cell death',
-              'transcription factors activated',
-              'Enzyme activation/deactivation',
-              'Cell division stimulation or inhibition'
+              'Signals affect division only by destroying chromosomes',
+              'Growth factors stop the cell cycle in every cell they reach',
+              'Division is set only by internal timers, never by signals',
+              'Signals such as growth factors can start or block cell division'
             ],
             correctAnswer: 3,
-            explanation: 'Correct — Cell division stimulation or inhibition. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'Signals can stimulate cell division (growth factors pushing cells past the G1 checkpoint) or inhibit it (contact inhibition, anti-growth signals); faulty division signaling can lead to cancer.'
           }
         ]
       }
@@ -71,13 +71,13 @@ export const bioCellCommPart5Data = {
           {
             question: 'Regarding Cellular Responses, which correctly describes Apoptosis?',
             options: [
-              'Enzyme activation/deactivation',
-              'transcription factors activated',
-              'programmed cell death',
-              'Cell division stimulation or inhibition'
+              'Uncontrolled bursting of a cell caused by injury',
+              'Division of a damaged cell into two healthy new cells',
+              'Programmed, orderly cell death triggered by signals',
+              'Fusion of a damaged cell with a neighboring cell'
             ],
             correctAnswer: 2,
-            explanation: 'Correct — Apoptosis: programmed cell death. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: 'Apoptosis is programmed cell death: signals activate enzymes (caspases) that dismantle the cell in an orderly way, unlike necrosis, which is uncontrolled death from injury.'
           }
         ]
       }

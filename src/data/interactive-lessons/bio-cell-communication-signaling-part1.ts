@@ -26,24 +26,24 @@ export const bioCellCommPart1Data = {
           {
             question: 'Which of the following correctly describes Cells communicate through chemical…?',
             options: [
-              'reception, transduction, response',
-              'hormones, neurotransmitters, growth factors',
-              'Cells communicate through chemical signals',
-              'only target cells with correct receptors respond'
+              'Cells communicate only through chemicals that freely enter every cell',
+              'Cells communicate only through direct electrical contact',
+              'Cells communicate through chemical signals detected by receptors',
+              'Cells communicate by exchanging chromosomes with neighbors'
             ],
             correctAnswer: 2,
-            explanation: 'Correct — Cells communicate through chemical signals. The other options describe different concepts from this topic.'
+            explanation: 'Cells communicate through chemical signals (ligands) that bind specific receptors on or in target cells; only cells with the right receptor respond.'
           },
           {
             question: 'Which of the following is true about Signal molecules?',
             options: [
-              'only target cells with correct receptors respond',
-              'hormones, neurotransmitters, growth factors',
-              'reception, transduction, response',
-              'Cells communicate through chemical signals'
+              'They include ribosomes, chromosomes, and other organelles',
+              'They include hormones, neurotransmitters, and growth factors',
+              'They act on every cell in the body equally, regardless of receptors',
+              'They include starch and glycogen used as fuel by target cells'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — Signal molecules: hormones, neurotransmitters, growth factors. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'Signal molecules (ligands) include hormones, neurotransmitters, and growth factors. They carry information rather than energy, and only cells with matching receptors respond.'
           }
         ]
       }
@@ -71,13 +71,13 @@ export const bioCellCommPart1Data = {
           {
             question: 'Which of these accurately represents Specificity?',
             options: [
-              'only target cells with correct receptors respond',
-              'hormones, neurotransmitters, growth factors',
-              'Cells communicate through chemical signals',
-              'reception, transduction, response'
+              'Only target cells with the matching receptor respond',
+              'Every cell exposed to a signal responds in the same way',
+              'A single ligand can bind any receptor it happens to touch',
+              'Each cell responds to a signal according to its unique genome'
             ],
             correctAnswer: 0,
-            explanation: 'Correct — Specificity: only target cells with correct receptors respond. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: 'Specificity comes from receptors: only cells that express the receptor that fits a ligand respond to it. Body cells share the same genome but express different receptors.'
           }
         ]
       }

@@ -26,24 +26,24 @@ export const bioCellCommPart6Data = {
           {
             question: 'Which of the following correctly describes Tracing a signal from reception to…?',
             options: [
-              'Tracing a signal from reception to response',
-              'Analyzing signal amplification',
-              'Predicting effects of pathway mutations',
-              'Connecting signaling to disease (cancer)'
+              'Follow the signal from receptor through transduction to response',
+              'Start at the response and assume the receptor plays no role',
+              'Track only the second messenger and ignore the receptor',
+              'Trace the ligand into the nucleus, where every signal acts'
             ],
             correctAnswer: 0,
-            explanation: 'Correct — Tracing a signal from reception to response. The other options describe different concepts from this topic.'
+            explanation: 'Tracing a pathway means following the three stages in order: reception (ligand binds receptor), transduction (relay molecules, often a phosphorylation cascade), and response (a change in gene expression or enzyme activity).'
           },
           {
             question: 'Select the statement that correctly describes Analyzing signal amplification:',
             options: [
-              'Tracing a signal from reception to response',
-              'Predicting effects of pathway mutations',
-              'Connecting signaling to disease (cancer)',
-              'Analyzing signal amplification'
+              'Each step passes the signal on to exactly one molecule',
+              'Amplification happens only at the receptor, not in the cascade',
+              'Amplification means the cell makes copies of the ligand',
+              'Each enzyme step activates many molecules of the next one'
             ],
             correctAnswer: 3,
-            explanation: 'Correct — Analyzing signal amplification. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'To analyze amplification, note that each activated enzyme (such as adenylyl cyclase or a kinase) activates many molecules at the next step, so the number of activated molecules multiplies down the pathway.'
           }
         ]
       }
@@ -71,13 +71,13 @@ export const bioCellCommPart6Data = {
           {
             question: 'Which statement about Connecting signaling to disease (cancer) is correct?',
             options: [
-              'Connecting signaling to disease (cancer)',
-              'Predicting effects of pathway mutations',
-              'Tracing a signal from reception to response',
-              'Analyzing signal amplification'
+              'Mutations that leave a pathway stuck on can drive cancer',
+              'Cancer arises only when cells stop making signal molecules',
+              'Pathway mutations cannot cause disease, as cells have backups',
+              'Cancer comes from extra receptors that block growth signals'
             ],
             correctAnswer: 0,
-            explanation: 'Correct — Connecting signaling to disease (cancer). Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: 'Mutations that lock a growth pathway in the \'on\' state (for example, a Ras protein that cannot hydrolyze GTP) or disable inhibitory signals can cause uncontrolled division, linking faulty signaling to cancer.'
           }
         ]
       }

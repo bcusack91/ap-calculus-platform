@@ -43,10 +43,10 @@ This experiment demonstrated that:
           {
             question: 'In the Hill reaction experiment, why does Tube C (boiled chloroplasts) not produce O2 or decolorize DCPIP?',
             options: [
-              'Boiling removes CO2 from the solution',
-              'Boiling denatures the photosystem proteins and enzymes required for the light reactions',
-              'Boiling destroys the chlorophyll pigments completely (they photobleach)',
-              'Boiling prevents DCPIP from accepting electrons'
+              'Boiling removes dissolved CO2, which the light reactions need',
+              'Boiling denatures the photosystem proteins and light-reaction enzymes',
+              'Boiling destroys all the chlorophyll, so no light is absorbed',
+              'Boiling alters DCPIP so it can no longer accept electrons'
             ],
             correctAnswer: 1,
             explanation: 'Boiling denatures proteins, including the photosystem complexes, electron transport chain components, and the oxygen-evolving complex. Without functional proteins, the light reactions cannot proceed, even though chlorophyll pigments may still be present.'
@@ -54,10 +54,10 @@ This experiment demonstrated that:
           {
             question: 'The Hill reaction showed that O2 production does not require CO2. What does this tell us about the source of O2 in photosynthesis?',
             options: [
-              'O2 comes from the breakdown of CO2',
-              'O2 comes from the splitting of water molecules, which does not require CO2',
-              'O2 comes from decarboxylation reactions',
-              'O2 is released from the DCPIP dye'
+              'O2 comes from CO2 stored earlier in the leaf',
+              'O2 comes from splitting water, not from CO2',
+              'O2 comes from decarboxylation in the Calvin cycle',
+              'O2 comes from the DCPIP dye as it is reduced'
             ],
             correctAnswer: 1,
             explanation: 'Since O2 is produced without CO2, the oxygen cannot come from CO2. Instead, it comes from the photolysis (splitting) of water at PSII. This was later confirmed by isotope tracing experiments using 18-O labeled water.'
@@ -98,9 +98,9 @@ This experiment mapped out the complete Calvin cycle and earned Calvin the 1961 
             question: 'In the Calvin-Benson experiment, why was 3-PGA the first molecule to become radioactively labeled?',
             options: [
               'Because 3-PGA is the most abundant molecule in the chloroplast',
-              'Because 3-PGA is the first stable product of CO2 fixation by RuBisCO',
+              'Because 3-PGA is the first stable product of CO2 fixation',
               'Because 3-PGA directly absorbs 14C from the atmosphere',
-              'Because RuBisCO converts 3-PGA into RuBP'
+              'Because RuBisCO converts 3-PGA into RuBP during fixation'
             ],
             correctAnswer: 1,
             explanation: 'When 14CO2 enters the Calvin cycle, RuBisCO attaches the 14C to RuBP (5C), forming an unstable 6C intermediate that immediately splits into two 3-PGA molecules. Since this is the first stable product, 3-PGA is the first to contain the radioactive label.'
@@ -108,10 +108,10 @@ This experiment mapped out the complete Calvin cycle and earned Calvin the 1961 
           {
             question: 'If the light is suddenly turned OFF while 14CO2 is being supplied, what would happen to the levels of 3-PGA and RuBP?',
             options: [
-              'Both would increase',
-              '3-PGA would increase (cannot be reduced without NADPH); RuBP would decrease (consumed but not regenerated)',
-              'Both would decrease',
-              '3-PGA would decrease; RuBP would increase'
+              'Both rise, because the Calvin cycle stops using either one',
+              '3-PGA rises (cannot be reduced); RuBP falls (not regenerated)',
+              'Both fall, because RuBisCO stops working when light is off',
+              '3-PGA falls (not formed without ATP); RuBP rises (not used)'
             ],
             correctAnswer: 1,
             explanation: 'Without light, the light reactions stop producing ATP and NADPH. 3-PGA cannot be reduced to G3P (needs NADPH and ATP), so it accumulates. RuBP cannot be regenerated (needs ATP), so it is consumed but not replaced, and its level drops.'
@@ -148,10 +148,10 @@ Researchers measure net photosynthesis rates in a C3 grass and a C4 grass under 
           {
             question: 'At 30 °C, C3 net photosynthesis drops from its peak, but C4 continues to increase. What explains this difference?',
             options: [
-              'C4 plants have more chloroplasts',
-              'C3 plants experience increasing photorespiration at higher temperatures, while C4 plants concentrate CO2 around RuBisCO, avoiding this problem',
-              'C4 plants use a completely different form of RuBisCO',
-              'C3 plants cannot absorb light at high temperatures'
+              'C4 leaves have more chloroplasts; they absorb more light in heat',
+              'C3 photorespiration rises with heat; C4 plants concentrate CO2',
+              'C4 plants use a heat-stable form of RuBisCO that C3 plants lack',
+              'C3 plants stop absorbing light once leaves pass about 25 °C'
             ],
             correctAnswer: 1,
             explanation: 'At higher temperatures, RuBisCO in C3 plants increasingly fixes O2 instead of CO2 (photorespiration), reducing net carbon gain. C4 plants pump CO2 into bundle-sheath cells via PEP carboxylase, maintaining high CO2 around RuBisCO and virtually eliminating photorespiration.'
@@ -159,10 +159,10 @@ Researchers measure net photosynthesis rates in a C3 grass and a C4 grass under 
           {
             question: 'At 10 °C, the C3 grass outperforms the C4 grass. Why?',
             options: [
-              'C3 plants have antifreeze proteins',
-              'At low temperatures, photorespiration is minimal (C4 advantage disappears), and the extra ATP cost of the C4 pathway is wasteful',
-              'C4 plants cannot perform photosynthesis below 15 °C',
-              'The Calvin cycle only works in C3 plants at low temperatures'
+              'C3 grasses make antifreeze proteins that protect their thylakoids',
+              'Photorespiration is low in the cold, so the C4 ATP cost is wasted',
+              'C4 plants cannot carry out photosynthesis at all below 15 °C',
+              'Only C3 plants can run the Calvin cycle at low temperatures'
             ],
             correctAnswer: 1,
             explanation: 'At cool temperatures, the ratio of CO2:O2 fixation by RuBisCO favors CO2, so photorespiration is low in C3 plants. The C4 carbon-concentrating mechanism (which costs 2 extra ATP per CO2) becomes an unnecessary expense, putting C4 plants at a net energy disadvantage.'
@@ -205,9 +205,9 @@ Researchers measure net photosynthesis rates in a C3 grass and a C4 grass under 
             question: 'A researcher adds DCMU (a herbicide that blocks electron flow from PSII to plastoquinone) to illuminated chloroplasts. What will happen?',
             options: [
               'O2 production continues but NADPH production stops',
-              'Both O2 production and NADPH production stop; the proton gradient collapses; no ATP or NADPH for the Calvin cycle',
-              'The Calvin cycle speeds up to compensate',
-              'Cyclic electron flow around PSI stops'
+              'O2 evolution and NADPH production both stop',
+              'The Calvin cycle speeds up to use stored NADPH',
+              'Cyclic electron flow around PSI stops at once'
             ],
             correctAnswer: 1,
             explanation: 'DCMU blocks electron flow from PSII. Without electron flow, water splitting stops (no O2), no electrons reach PSI or NADP+ (no NADPH), and proton pumping by cytochrome b6f stops (reduced ATP). The Calvin cycle loses both ATP and NADPH and shuts down.'

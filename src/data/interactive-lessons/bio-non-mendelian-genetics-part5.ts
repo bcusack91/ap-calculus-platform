@@ -26,24 +26,24 @@ export const bioNonMendelianPart5Data = {
           {
             question: 'Which of the following correctly describes Phenotype = genotype + environment?',
             options: [
-              'Nutrition affects height (polygenic)',
-              'Siamese cats',
-              'environmental factors affect gene expression',
-              'Phenotype = genotype + environment'
+              'An organism\'s traits are fixed entirely by its genes, whatever its surroundings',
+              'An organism\'s traits are set entirely by its surroundings, whatever its genes',
+              'An organism\'s traits acquired from its surroundings pass directly to its offspring',
+              'An organism\'s traits result from its genes interacting with its own surroundings'
             ],
             correctAnswer: 3,
-            explanation: 'Correct — Phenotype = genotype + environment. The other options describe different concepts from this topic.'
+            explanation: 'Phenotype depends on both genotype and environment: genes set the possible range, and conditions such as temperature, nutrition or soil pH influence where in that range the organism falls (Siamese cat coat color and hydrangea flower color are classic examples). Neither genes nor environment alone determines most traits, and traits acquired from the environment are not passed on through the DNA sequence.'
           },
           {
             question: 'In the context of Environmental Effects on Phenotype, which explains Nutrition affects height (polygenic)?',
             options: [
-              'environmental factors affect gene expression',
-              'Siamese cats',
-              'Nutrition affects height (polygenic)',
-              'Phenotype = genotype + environment'
+              'Diet rewrites the DNA sequence of height genes, so well-fed parents pass on taller genes',
+              'Height is set by one gene whose dominant allele is switched on only by good nutrition',
+              'Many genes set a range of possible heights, and diet influences where a person falls in it',
+              'Nutrition replaces genetic control of height, so siblings fed alike always grow equally tall'
             ],
             correctAnswer: 2,
-            explanation: 'Correct — Nutrition affects height (polygenic). Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'Height is polygenic: many genes together set a person\'s potential height range, and nutrition (an environmental factor) influences how much of that potential is reached. Diet does not change the DNA sequence passed to offspring, height is not a single-gene trait, and genes still matter — siblings on the same diet can differ in height.'
           }
         ]
       }
@@ -71,13 +71,13 @@ export const bioNonMendelianPart5Data = {
           {
             question: 'Which of these accurately represents Epigenetics?',
             options: [
-              'environmental factors affect gene expression',
-              'Phenotype = genotype + environment',
-              'Siamese cats',
-              'Nutrition affects height (polygenic)'
+              'Reversible changes in gene expression (such as DNA methylation) that leave the DNA sequence unchanged',
+              'Permanent changes in the DNA base sequence caused by mutagens (such as ultraviolet light)',
+              'Changes in gene expression caused by moving genes onto new chromosomes during crossing over',
+              'Changes in phenotype caused solely by the environment, with no change in gene expression at all'
             ],
             correctAnswer: 0,
-            explanation: 'Correct — Epigenetics: environmental factors affect gene expression. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: 'Epigenetic changes — such as DNA methylation and histone modification — alter whether genes are expressed without changing the base sequence, and environmental factors such as diet or stress can trigger them. Mutations change the sequence itself, crossing over exchanges segments between homologs rather than regulating expression, and environmental effects on phenotype typically act THROUGH gene expression.'
           }
         ]
       }

@@ -199,10 +199,10 @@ Integrated problems fail not because any single step is hard, but because a smal
               '$\\frac{9}{16}$',
               '$\\frac{81}{256}$',
               '$\\frac{7}{16}$',
-              '$\\frac{18}{16}$'
+              '$\\frac{49}{256}$'
             ],
             correctAnswer: 1,
-            explanation: 'One child is disorder-free (A_ B_) with probability 3/4 × 3/4 = 9/16. Because the two children are independent, multiply: P(both free) = 9/16 × 9/16 = 81/256. The 9/16 option is the probability for just ONE child — it forgets to apply the product rule across the two children. The 18/16 option is impossible, since a probability can never exceed 1.'
+            explanation: 'One child is disorder-free (A_ B_) with probability 3/4 × 3/4 = 9/16. Because the two children are independent, multiply: P(both free) = 9/16 × 9/16 = 81/256. The 9/16 option is the probability for just ONE child — it forgets to apply the product rule across the two children. The 49/256 option squares 7/16, which is the chance that a child HAS at least one disorder, not that it is free of both.'
           }
         ]
       }

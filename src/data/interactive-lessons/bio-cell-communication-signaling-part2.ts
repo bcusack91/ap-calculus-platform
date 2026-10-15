@@ -26,24 +26,24 @@ export const bioCellCommPart2Data = {
           {
             question: 'Which of the following correctly describes Endocrine?',
             options: [
-              'gap junctions, plasmodesmata',
-              'long-distance via bloodstream (hormones)',
-              'cell signals itself',
-              'local signaling to nearby cells'
+              'Signals pass between touching cells via gap junctions or plasmodesmata',
+              'Hormones travel long distances through the bloodstream',
+              'A cell secretes a signal that binds receptors on itself',
+              'Signals diffuse only to nearby cells a short distance away'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — Endocrine: long-distance via bloodstream (hormones). The other options describe different concepts from this topic.'
+            explanation: 'Endocrine signaling uses hormones carried long distances in the bloodstream to target cells. Direct contact uses gap junctions or plasmodesmata, autocrine signals act on the secreting cell, and paracrine signals act locally.'
           },
           {
             question: 'Which of the following is true about Autocrine?',
             options: [
-              'gap junctions, plasmodesmata',
-              'long-distance via bloodstream (hormones)',
-              'cell signals itself',
-              'local signaling to nearby cells'
+              'Signals pass between touching cells via gap junctions or plasmodesmata',
+              'Hormones travel long distances through the bloodstream',
+              'A cell secretes a signal that binds receptors on itself',
+              'Signals diffuse only to nearby cells a short distance away'
             ],
             correctAnswer: 2,
-            explanation: 'Correct — Autocrine: cell signals itself. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'Autocrine signaling occurs when a cell secretes a signal that binds receptors on its own surface, as some immune and cancer cells do.'
           }
         ]
       }
@@ -71,13 +71,13 @@ export const bioCellCommPart2Data = {
           {
             question: 'Regarding Types of Signaling, which correctly describes Direct contact?',
             options: [
-              'local signaling to nearby cells',
-              'long-distance via bloodstream (hormones)',
-              'gap junctions, plasmodesmata',
-              'cell signals itself'
+              'Signals diffuse only to nearby cells a short distance away',
+              'Hormones travel long distances through the bloodstream',
+              'Signals pass between touching cells via gap junctions or plasmodesmata',
+              'A cell secretes a signal that binds receptors on itself'
             ],
             correctAnswer: 2,
-            explanation: 'Correct — Direct contact: gap junctions, plasmodesmata. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: 'Direct-contact signaling passes signals between adjacent cells through gap junctions (animals) or plasmodesmata (plants), or by surface molecules touching.'
           }
         ]
       }

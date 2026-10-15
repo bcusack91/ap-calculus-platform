@@ -106,10 +106,10 @@ The shortest phase of mitosis, but the most dramatic:
           {
             question: 'The drug colchicine binds to tubulin and prevents microtubule polymerization. If added to dividing cells, at which stage would cells arrest?',
             options: [
-              'G1 phase — cells cannot grow',
-              'S phase — DNA replication is blocked',
-              'Metaphase — without functional spindle microtubules, kinetochores are unattached, the spindle assembly checkpoint is activated, and the cell arrests',
-              'Telophase — nuclear envelope cannot reform'
+              'G1 — cells cannot grow without an intact microtubule cytoskeleton',
+              'S phase — replication forks need microtubules to move along the DNA',
+              'Metaphase — no spindle forms, so the checkpoint blocks anaphase',
+              'Telophase — the nuclear envelope cannot re-form around the chromosomes'
             ],
             correctAnswer: 2,
             explanation: 'Colchicine prevents spindle formation. Without proper kinetochore-microtubule attachment, the spindle assembly checkpoint (Mad2/APC pathway) is activated and the cell cannot enter anaphase. Cells accumulate in metaphase. This is why colchicine is used to prepare karyotypes.'
@@ -117,10 +117,10 @@ The shortest phase of mitosis, but the most dramatic:
           {
             question: 'What triggers the separation of sister chromatids at the onset of anaphase?',
             options: [
-              'Condensin cleaves the centromere',
-              'The APC/C ubiquitin ligase degrades securin, releasing active separase, which cleaves cohesin proteins holding sister chromatids together',
-              'Kinetochore microtubules physically tear the chromatids apart',
-              'DNA between the chromatids is enzymatically digested'
+              'Condensin cleaves the centromere once all chromosomes are aligned',
+              'APC/C marks securin for destruction, freeing separase to cleave cohesin',
+              'Kinetochore microtubules pull hard enough to tear the chromatids apart',
+              'A nuclease digests the DNA linking the sister chromatids so they separate'
             ],
             correctAnswer: 1,
             explanation: 'The Anaphase-Promoting Complex/Cyclosome (APC/C) tags securin for proteasomal degradation. Securin normally inhibits separase. When securin is destroyed, separase is freed to cleave the cohesin molecules at the centromere, allowing sister chromatids to separate.'

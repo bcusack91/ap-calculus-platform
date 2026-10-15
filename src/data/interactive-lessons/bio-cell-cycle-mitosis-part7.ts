@@ -39,7 +39,7 @@ Comprehensive AP-exam-style questions integrating all cell cycle and mitosis con
             options: [
               '4',
               '8',
-              '16 — each of the 8 chromosomes has been replicated (sister chromatids), so there are 16 DNA molecules',
+              '16',
               '32'
             ],
             correctAnswer: 2,
@@ -48,10 +48,10 @@ Comprehensive AP-exam-style questions integrating all cell cycle and mitosis con
           {
             question: 'HPV (Human Papillomavirus) produces the E7 protein, which binds and inactivates Rb. How does this contribute to cervical cancer?',
             options: [
-              'E7 directly damages DNA',
-              'E7 inactivates Rb, releasing E2F to constitutively activate S-phase genes — the cell bypasses the G1/S checkpoint and proliferates without growth factor signals',
-              'E7 prevents cytokinesis',
-              'E7 blocks apoptosis only'
+              'E7 directly breaks DNA strands, causing mutations in growth genes',
+              'E7 frees E2F from Rb, so S-phase genes turn on without growth signals',
+              'E7 blocks cytokinesis, producing large polyploid cells that become cancerous',
+              'E7 blocks apoptosis but leaves the G1/S checkpoint fully intact'
             ],
             correctAnswer: 1,
             explanation: 'By binding and inactivating Rb, the viral E7 protein mimics the effect of Rb phosphorylation. E2F is free to activate S-phase genes regardless of growth signals or cell cycle status. Combined with E6 (which degrades p53), HPV effectively disables both major tumor suppressor pathways.'
@@ -59,13 +59,13 @@ Comprehensive AP-exam-style questions integrating all cell cycle and mitosis con
           {
             question: 'Taxol (paclitaxel) is a chemotherapy drug that stabilizes microtubules and prevents their depolymerization. How does this kill cancer cells?',
             options: [
-              'It prevents DNA replication',
-              'It blocks chromosome condensation',
-              'It prevents sister chromatid separation — stabilized kinetochore microtubules cannot shorten during anaphase, activating the spindle assembly checkpoint and arresting cells in mitosis, eventually triggering apoptosis',
-              'It prevents cytokinesis only'
+              'It blocks DNA polymerase, so cancer cells cannot replicate their DNA',
+              'It prevents chromosomes from condensing at the start of prophase',
+              'It freezes the spindle, so cells stall in mitosis and then die',
+              'It prevents only cytokinesis, producing binucleate cells that keep dividing'
             ],
             correctAnswer: 2,
-            explanation: 'Taxol locks microtubules in a polymerized state. During anaphase A, kinetochore microtubules must depolymerize to pull chromatids to the poles. With stabilized microtubules, proper separation fails, the SAC is chronically activated, and prolonged mitotic arrest eventually triggers apoptosis.'
+            explanation: 'Taxol locks microtubules in a polymerized state. Spindle microtubules must grow and shrink to capture chromosomes and move them, so the spindle cannot function properly. The spindle assembly checkpoint stays active, anaphase never begins, and the prolonged mitotic arrest eventually triggers apoptosis.'
           }
         ]
       }
@@ -81,10 +81,10 @@ Comprehensive AP-exam-style questions integrating all cell cycle and mitosis con
           {
             question: 'Stem cells can divide asymmetrically — producing one daughter cell that remains a stem cell and one that differentiates. What must be differently distributed during this division?',
             options: [
-              'DNA — one cell gets more chromosomes',
-              'Regulatory molecules (transcription factors, signaling proteins) must be asymmetrically partitioned so that the two daughter cells receive different developmental signals despite having identical genomes',
-              'Mitochondria — one cell gets all the mitochondria',
-              'The two cells receive different chromosomes'
+              'DNA — one daughter receives extra copies of the chromosomes',
+              'Fate determinants — regulatory proteins are split unequally',
+              'Mitochondria — one daughter receives all of the mitochondria',
+              'Chromosomes — each daughter receives a different set of genes'
             ],
             correctAnswer: 1,
             explanation: 'Both daughter cells receive identical chromosomes through mitosis. Asymmetric division depends on the unequal distribution of cell-fate determinants (transcription factors, mRNAs, signaling molecules) during cytokinesis. The daughter that inherits "stemness" factors remains a stem cell; the other differentiates.'
@@ -92,10 +92,10 @@ Comprehensive AP-exam-style questions integrating all cell cycle and mitosis con
           {
             question: 'The unicellular organism Caulobacter crescentus divides asymmetrically into a stalked cell and a swarmer cell, despite having identical DNA. This best illustrates:',
             options: [
-              'Mutation during cell division',
-              'Differential gene expression — the same genome can produce different cell types by expressing different sets of genes, regulated by asymmetrically distributed transcription factors',
-              'Different DNA sequences in the two cells',
-              'Random variation with no regulatory basis'
+              'Mutation during division that alters one daughter\'s genome',
+              'Differential gene expression from one genome in two cell types',
+              'Different DNA sequences being passed to the two daughter cells',
+              'Random variation in cell shape with no regulatory basis'
             ],
             correctAnswer: 1,
             explanation: 'Both daughter cells have identical genomes, but asymmetric distribution of regulatory proteins (like CtrA in Caulobacter) during division causes different sets of genes to be expressed in each cell. This is a fundamental principle of developmental biology — identical genomes, different gene expression.'
@@ -105,7 +105,7 @@ Comprehensive AP-exam-style questions integrating all cell cycle and mitosis con
             options: [
               '23',
               '46',
-              '92 — the first division without cytokinesis doubles the chromosome number to 92 in a single cell; the second mitosis distributes these equally, giving each daughter 92 chromosomes',
+              '92',
               '184'
             ],
             correctAnswer: 2,
@@ -134,8 +134,8 @@ Comprehensive AP-exam-style questions integrating all cell cycle and mitosis con
           },
           {
             question: 'Cyclin B-Cdk1 (MPF) triggers entry into this phase:',
-            options: ['G1 phase', 'S phase', 'G2 phase', 'M phase (mitosis)', 'G0'],
-            correctAnswer: 'M phase (mitosis)'
+            options: ['G1 phase', 'S phase', 'G2 phase', 'M phase', 'G0'],
+            correctAnswer: 'M phase'
           },
           {
             question: 'The Rb protein blocks E2F to prevent progression into:',
@@ -184,10 +184,10 @@ Comprehensive AP-exam-style questions integrating all cell cycle and mitosis con
           {
             question: 'Integration question: A cancer cell has three mutations — Ras is constitutively active, p53 is non-functional, and telomerase is overexpressed. Explain how EACH mutation contributes to the cancer phenotype.',
             options: [
-              'Only one mutation is needed for cancer',
-              'Ras constitutively active → continuous growth signaling without growth factors; p53 non-functional → no G1/S arrest or apoptosis in response to DNA damage; telomerase overexpressed → unlimited replication capacity by maintaining telomere length (normally, somatic cells have a Hayflick limit)',
-              'All three mutations have the same effect',
-              'These mutations only cause cancer if inherited'
+              'All three have one shared effect, blocking apoptosis, so damaged cells survive',
+              'Ras signals without growth factors, p53 loss removes damage arrest, and telomerase permits endless division',
+              'Only the Ras mutation matters; p53 loss and telomerase overexpression are neutral passengers',
+              'These mutations can cause cancer only if all three were inherited through the germ line'
             ],
             correctAnswer: 1,
             explanation: 'Cancer typically requires multiple mutations affecting different regulatory pathways: (1) Ras (oncogene) provides constant proliferative signaling. (2) p53 (tumor suppressor) loss eliminates DNA damage checkpoints and apoptosis. (3) Telomerase (normally silent in somatic cells) allows indefinite replication by preventing telomere shortening. Together, these create an immortal, uncontrollably dividing, damage-tolerant cell.'

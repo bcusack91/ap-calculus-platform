@@ -69,13 +69,13 @@ These two syndromes beautifully illustrate genomic imprinting — both involve t
           {
             question: 'Genomic imprinting differs from standard Mendelian inheritance because:',
             options: [
-              'Gene expression depends on which parent transmitted the allele',
-              'It involves changes to the DNA sequence',
-              'Both parental alleles are always expressed equally',
-              'It only affects sex-linked genes'
+              'Gene expression depends on the parent that transmitted the allele',
+              'It changes the DNA sequence of the allele inherited from one parent',
+              'Both parental alleles are always expressed equally, whatever their origin',
+              'It only affects sex-linked genes, so its effects are seen mainly in males'
             ],
             correctAnswer: 0,
-            explanation: 'In genomic imprinting, the same allele can be expressed or silenced depending on whether it came from the mother or father. This parent-of-origin effect is epigenetic — the DNA sequence is unchanged, but methylation patterns differ.'
+            explanation: 'In genomic imprinting, the same allele can be expressed or silenced depending on whether it came from the mother or father. This parent-of-origin effect is epigenetic — the DNA sequence is unchanged, but methylation patterns differ. Imprinted genes are mostly autosomal (for example, the 15q11-13 region), and imprinting means the two parental alleles are NOT expressed equally.'
           }
         ]
       }
@@ -159,10 +159,10 @@ Some genes are located outside the nucleus — in **mitochondria** and **chlorop
           {
             question: 'A woman with a mitochondrial disease has children with an unaffected man. What proportion of their children could be affected?',
             options: [
-              'All children of both sexes may be affected',
-              'Only daughters will be affected',
-              'Only sons will be affected',
-              '25% of children will be affected'
+              'Sons and daughters alike may be affected',
+              'Only her daughters can be affected',
+              'Only her sons can be affected',
+              '25% of her children will be affected'
             ],
             correctAnswer: 0,
             explanation: 'Mitochondria are inherited from the mother only. ALL children (sons and daughters) receive their mitochondria from their mother, so all may be affected. The severity may vary due to heteroplasmy and the random distribution of mitochondria during cell division.'
@@ -171,12 +171,12 @@ Some genes are located outside the nucleus — in **mitochondria** and **chlorop
             question: 'A Dd snail (maternal effect gene, D = dextral dominant) mates with a dd snail. If the mother is Dd, the offspring will be:',
             options: [
               'All dextral (right-coiling), regardless of offspring genotype',
-              'Half dextral, half sinistral',
-              'All sinistral (left-coiling)',
-              'Dextral only if they inherit D'
+              'Half dextral, half sinistral, matching their own genotypes',
+              'All sinistral (left-coiling), because the father is dd',
+              'Dextral only for offspring that inherit D'
             ],
             correctAnswer: 0,
-            explanation: 'In maternal effect inheritance, the MOTHER\'s genotype determines offspring phenotype. Since the mother is Dd (heterozygous with dominant D), she produces mRNA for dextral coiling → all her offspring will be dextral, regardless of their own genotypes.'
+            explanation: 'In maternal effect inheritance, the MOTHER\'s genotype determines offspring phenotype. Since the mother is Dd (heterozygous with dominant D), she produces mRNA for dextral coiling → all her offspring will be dextral, regardless of their own genotypes or the father\'s genotype.'
           }
         ]
       }

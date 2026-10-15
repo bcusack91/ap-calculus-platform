@@ -24,26 +24,26 @@ export const bioMeiosisPart4Data = {
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Nonsister chromatids exchange segments?',
+            question: 'Which description of crossing over is accurate?',
             options: [
-              'Increases genetic variation in offspring',
-              'Creates recombinant chromosomes',
-              'Occurs at chiasmata during prophase I',
-              'Nonsister chromatids exchange segments'
+              'Sister chromatids of one chromosome trade identical segments',
+              'Two nonhomologous chromosomes swap pieces during metaphase I',
+              'Homologous chromosomes trade whole chromosomes during anaphase II',
+              'Nonsister chromatids of homologs exchange segments in prophase I'
             ],
             correctAnswer: 3,
-            explanation: 'Correct — Nonsister chromatids exchange segments. The other options describe different concepts from this topic.'
+            explanation: 'Crossing over occurs in prophase I, when nonsister chromatids of paired homologs exchange corresponding segments at chiasmata. Exchange between sister chromatids would produce no new combinations, and a swap between nonhomologous chromosomes is a translocation, a chromosomal mutation.'
           },
           {
-            question: 'Which of the following is true about Creates recombinant chromosomes?',
+            question: 'After crossing over between homologs, some chromatids carry:',
             options: [
-              'Occurs at chiasmata during prophase I',
-              'Increases genetic variation in offspring',
-              'Nonsister chromatids exchange segments',
-              'Creates recombinant chromosomes'
+              'new mutations created where the DNA strands were cut and rejoined',
+              'two copies of every allele present in the original homologs',
+              'only the alleles from the parent that provided the larger homolog',
+              'a new combination of maternal and paternal alleles'
             ],
             correctAnswer: 3,
-            explanation: 'Correct — Creates recombinant chromosomes. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'Crossing over produces recombinant chromatids: segments from the maternal and paternal homologs are joined, so one chromatid carries a combination of alleles not found on either original chromosome. It reshuffles existing alleles rather than creating new mutations.'
           }
         ]
       }
@@ -69,15 +69,15 @@ export const bioMeiosisPart4Data = {
       exercise: {
         questions: [
           {
-            question: 'Regarding Crossing Over & Recombination, which correctly describes Increases genetic variation in offspring?',
+            question: 'What is the main evolutionary significance of crossing over?',
             options: [
-              'Creates recombinant chromosomes',
-              'Nonsister chromatids exchange segments',
-              'Occurs at chiasmata during prophase I',
-              'Increases genetic variation in offspring'
+              'It repairs mutations so offspring inherit only functional alleles',
+              'It ensures every gamete carries exactly the same set of alleles',
+              'It doubles the number of genes carried by each gamete',
+              'It increases genetic variation among the offspring of the same parents'
             ],
             correctAnswer: 3,
-            explanation: 'Correct — Increases genetic variation in offspring. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: 'By creating recombinant chromosomes, crossing over increases genetic variation among offspring. That variation is the raw material natural selection acts on. It does not repair mutations, make gametes identical, or change the number of genes per gamete.'
           }
         ]
       }

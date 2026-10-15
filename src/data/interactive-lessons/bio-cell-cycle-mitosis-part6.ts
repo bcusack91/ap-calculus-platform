@@ -51,10 +51,10 @@ The mitotic index tells us the proportion of cells actively dividing.  A higher 
           {
             question: 'A tumor sample has a mitotic index of 42%, while normal tissue from the same organ has a mitotic index of 5%.  What does this indicate?',
             options: [
-              'The tumor cells are dying faster than normal cells',
-              'The tumor cells are dividing much more rapidly than normal cells — consistent with unregulated cell proliferation in cancer',
-              'The normal tissue is growing faster',
-              'The tumor sample was contaminated'
+              'The tumor cells are dying faster than the normal cells in the same organ',
+              'The tumor cells are dividing far more often, consistent with lost cycle control',
+              'The normal tissue is growing faster, since fewer of its cells are in mitosis',
+              'The tumor sample was likely contaminated with cells from another organ'
             ],
             correctAnswer: 1,
             explanation: 'A significantly elevated mitotic index in the tumor (42% vs. 5%) indicates that a much larger proportion of tumor cells are in active division at any given time. This reflects the loss of normal cell cycle control — a hallmark of cancer.'
@@ -62,10 +62,10 @@ The mitotic index tells us the proportion of cells actively dividing.  A higher 
           {
             question: 'In the onion root tip data, anaphase has the fewest cells (4/200). What does this indicate about anaphase?',
             options: [
-              'Anaphase cells are difficult to identify',
-              'Anaphase is the shortest phase of mitosis — cells spend less time in anaphase, so fewer are caught in that stage at any observation point',
-              'Anaphase does not occur in onion cells',
-              'The student miscounted'
+              'Anaphase cells are hard to tell apart from metaphase cells on stained slides',
+              'Anaphase is the shortest phase, so few cells are caught in it',
+              'Anaphase is skipped in most onion root cells, which divide directly',
+              'The student most likely miscounted the cells in the anaphase category'
             ],
             correctAnswer: 1,
             explanation: 'The number of cells observed in each phase is proportional to the duration of that phase. Since very few cells are in anaphase relative to other stages, anaphase must be the shortest. This is confirmed biochemically — once sister chromatids separate, they move to poles quickly.'
@@ -107,10 +107,10 @@ Researchers fuse cells in different phases and observe the results:
           {
             question: 'Why does fusing an M-phase cell with an S-phase cell produce pulverized (fragmented) chromosomes?',
             options: [
-              'The chromosomes are incompatible between the two cells',
-              'MPF from the M-phase cell forces chromosome condensation in the S-phase nucleus, but the DNA is only partially replicated — condensing partially replicated DNA at active replication forks causes breaks',
-              'The S-phase cell digests the M-phase chromosomes',
-              'DNA polymerase cuts the chromosomes'
+              'The chromosomes from the two cells are genetically incompatible and fragment',
+              'MPF forces S-phase DNA to condense mid-replication, breaking it at the forks',
+              'Enzymes in the S-phase cell digest the condensed M-phase chromosomes',
+              'DNA polymerase from the S-phase cell cuts the M-phase chromosomes apart'
             ],
             correctAnswer: 1,
             explanation: 'During S phase, DNA is being actively copied at thousands of replication forks. Forcing condensation (via MPF) on this partially replicated DNA creates enormous mechanical stress at replication forks, causing DNA breakage and chromosomal fragmentation.'
@@ -118,10 +118,10 @@ Researchers fuse cells in different phases and observe the results:
           {
             question: 'These cell fusion experiments provide evidence that:',
             options: [
-              'The nucleus controls the cell cycle independently',
-              'Diffusible cytoplasmic factors (cyclins and Cdks) regulate cell cycle progression and can override the phase of a foreign nucleus',
-              'Only membrane-bound signals regulate the cell cycle',
-              'Cell cycle phases cannot be accelerated artificially'
+              'The nucleus controls its own cycle independently of the surrounding cytoplasm',
+              'Diffusible factors in the cytoplasm can push a foreign nucleus into a new phase',
+              'Only signals bound to the plasma membrane are able to regulate cell cycle progression',
+              'Cell cycle phases are fixed in length and cannot be accelerated artificially'
             ],
             correctAnswer: 1,
             explanation: 'The experiments show that factors in the cytoplasm (MPF, S-phase kinases) can cross into a foreign nucleus and trigger phase-specific events. This was pivotal in establishing that cell cycle control is mediated by diffusible, enzymatically active protein complexes.'
@@ -163,13 +163,13 @@ Researchers fuse cells in different phases and observe the results:
           {
             question: 'A researcher treats cells with a drug that prevents Cyclin B degradation.  What stage will the cells arrest in?',
             options: [
-              'G1 — they cannot enter S phase',
-              'S phase — DNA replication is blocked',
-              'Late mitosis / metaphase-to-anaphase transition — persistent Cdk1 activity (due to undegraded Cyclin B) prevents anaphase onset and mitotic exit',
-              'Cytokinesis — the cell cannot divide'
+              'G1 — the cells cannot pass the restriction point into S phase',
+              'S phase — the cells cannot finish replicating their DNA',
+              'Mitosis — persistent Cdk1 activity blocks exit from mitosis',
+              'Cytokinesis — the contractile ring forms but cannot constrict'
             ],
             correctAnswer: 2,
-            explanation: 'Cyclin B degradation by APC/C is required for anaphase progression and exit from mitosis. If Cyclin B cannot be degraded, Cdk1 remains active, which prevents chromosome decondensation, nuclear envelope reformation, and cytokinesis. The cells arrest in mitosis.'
+            explanation: 'Cyclin B degradation by APC/C is required to exit mitosis. If Cyclin B cannot be degraded, Cdk1 remains active, which prevents chromosome decondensation, nuclear envelope reformation, and cytokinesis. The cells arrest in mitosis.'
           }
         ]
       }

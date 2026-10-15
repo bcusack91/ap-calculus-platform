@@ -36,10 +36,10 @@ export const bioFeedbackPart6Data = {
           {
             question: 'For Problem-Solving Workshop, what best describes effector?',
             options: [
-              'hormone lowering blood glucose by promoting uptake/storage',
-              'hormone raising blood glucose by mobilizing reserves',
+              'component that detects a change in a regulated variable',
+              'center that compares sensor input with the set point',
               'component that carries out corrective response',
-              'physiological control of body temperature'
+              'component that transports hormones from a gland to targets'
             ],
             correctAnswer: 2,
             explanation: 'effector is best matched with: component that carries out corrective response.'
@@ -48,9 +48,9 @@ export const bioFeedbackPart6Data = {
             question: 'In this part\'s context, what is the strongest definition of insulin?',
             options: [
               'hormone raising blood glucose by mobilizing reserves',
-              'component that carries out corrective response',
+              'hormone lowering blood glucose by blocking its absorption',
               'hormone lowering blood glucose by promoting uptake/storage',
-              'response amplifies the initial stimulus'
+              'hormone lowering blood glucose by excreting it in the urine'
             ],
             correctAnswer: 2,
             explanation: 'insulin is best matched with: hormone lowering blood glucose by promoting uptake/storage.'
@@ -170,10 +170,10 @@ export const bioFeedbackPart6Data = {
           {
             question: 'In feedback loop diagnosis from data tables, the observed pattern is: physiological control of body temperature. What term should anchor the explanation?',
             options: [
-              'glucagon',
-              'effector',
+              'osmoregulation',
+              'positive feedback',
               'thermoregulation',
-              'insulin'
+              'set point'
             ],
             correctAnswer: 2,
             explanation: 'Use thermoregulation because it directly maps to the described biological pattern: physiological control of body temperature.'
@@ -181,9 +181,9 @@ export const bioFeedbackPart6Data = {
           {
             question: 'In an AP-style free-response about problem-solving workshop, the observed pattern is: response amplifies the initial stimulus. What term should anchor the explanation?',
             options: [
-              'negative feedback',
-              'thermoregulation',
-              'glucagon',
+              'set point',
+              'homeostasis',
+              'osmoregulation',
               'positive feedback'
             ],
             correctAnswer: 3,

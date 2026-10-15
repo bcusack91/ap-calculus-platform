@@ -53,10 +53,10 @@ The chloroplast is a double-membrane organelle with its own DNA (evidence of end
           {
             question: 'Where in the chloroplast do the light-dependent reactions take place?',
             options: [
-              'Stroma',
-              'Outer membrane',
+              'Stroma of the chloroplast',
+              'Inner chloroplast membrane',
               'Thylakoid membrane',
-              'Cytoplasm'
+              'Cytosol of the leaf cell'
             ],
             correctAnswer: 2,
             explanation: 'The light-dependent reactions require the photosystems, electron transport chain, and ATP synthase, all of which are embedded in the thylakoid membrane.'
@@ -64,10 +64,10 @@ The chloroplast is a double-membrane organelle with its own DNA (evidence of end
           {
             question: 'Grana (stacks of thylakoids) increase the surface area available for:',
             options: [
-              'CO2 fixation by RuBisCO',
-              'Glucose storage',
-              'Light absorption and the light-dependent reactions',
-              'Starch synthesis'
+              'CO2 fixation by RuBisCO and the Calvin cycle',
+              'Storage of sugar as starch granules',
+              'Light capture and the light reactions',
+              'Gas exchange with the air spaces'
             ],
             correctAnswer: 2,
             explanation: 'Grana provide increased thylakoid membrane surface area, allowing more photosystem complexes to be embedded and increasing the capacity for light capture and the light reactions.'
@@ -110,10 +110,10 @@ The **absorption spectrum** shows which wavelengths a pigment absorbs.  The **ac
           {
             question: 'Why do plants appear green?',
             options: [
-              'Chlorophyll absorbs green light and uses it for photosynthesis',
-              'Chlorophyll reflects (and transmits) green wavelengths while absorbing blue and red light',
-              'Green light has the most energy in the visible spectrum',
-              'Carotenoids produce green pigment'
+              'Chlorophyll absorbs green light most strongly and uses it to drive photosynthesis',
+              'Chlorophyll reflects green light and absorbs mostly blue and red light',
+              'Green light carries the most energy, so leaves emit the excess as green',
+              'Carotenoids are green pigments that mask the chlorophyll in leaves'
             ],
             correctAnswer: 1,
             explanation: 'Chlorophyll absorbs strongly in the blue-violet (430 nm) and red (660-680 nm) regions but reflects green wavelengths, which is why leaves appear green to our eyes.'
@@ -121,10 +121,10 @@ The **absorption spectrum** shows which wavelengths a pigment absorbs.  The **ac
           {
             question: 'What is the functional difference between the absorption spectrum and the action spectrum?',
             options: [
-              'They are identical measurements',
-              'The absorption spectrum shows which wavelengths are absorbed by pigments; the action spectrum shows the rate of photosynthesis at each wavelength',
-              'The absorption spectrum measures O2 output; the action spectrum measures CO2 input',
-              'The action spectrum only applies to chlorophyll a'
+              'Absorption spectrum: light reflected by pigments; action spectrum: light absorbed by chlorophyll a only',
+              'Absorption spectrum: light absorbed by pigments; action spectrum: photosynthetic rate at each wavelength',
+              'Absorption spectrum: O2 released at each wavelength; action spectrum: CO2 taken up at each wavelength',
+              'Absorption spectrum: photosynthetic rate at each wavelength; action spectrum: light absorbed by pigments'
             ],
             correctAnswer: 1,
             explanation: 'The absorption spectrum is a physical measurement of light absorbed. The action spectrum is a biological measurement of photosynthetic rate. Their close correspondence was key evidence that light absorption by pigments drives photosynthesis.'
@@ -132,10 +132,10 @@ The **absorption spectrum** shows which wavelengths a pigment absorbs.  The **ac
           {
             question: 'In the antenna complex, energy is transferred from accessory pigments to the reaction center by:',
             options: [
-              'Direct electron transfer through the membrane',
-              'Resonance energy transfer (inductive coupling between neighboring pigments)',
-              'Diffusion of pigment molecules through the stroma',
-              'ATP-driven transport'
+              'Direct electron transfer from pigment to pigment across the membrane',
+              'Resonance energy transfer between neighboring pigments',
+              'Diffusion of excited pigment molecules through the stroma',
+              'ATP-driven pumping of energy toward the reaction center'
             ],
             correctAnswer: 1,
             explanation: 'In the antenna complex (light-harvesting complex), absorbed light energy is passed from pigment to pigment by resonance energy transfer — the excited-state energy of one molecule induces excitation in an adjacent molecule, funneling energy toward the reaction center.'
@@ -215,8 +215,8 @@ As H$^+$ accumulates in the thylakoid lumen (from water splitting and proton pum
           },
           {
             question: 'Pumps H+ into the thylakoid lumen as electrons pass through:',
-            options: ['Photosystem I', 'Photosystem II', 'ATP synthase', 'Cytochrome b6f complex'],
-            correctAnswer: 'Cytochrome b6f complex'
+            options: ['Photosystem I', 'Photosystem II', 'ATP synthase', 'Cytochrome b6f'],
+            correctAnswer: 'Cytochrome b6f'
           },
           {
             question: 'Uses the proton gradient to phosphorylate ADP in the stroma:',
@@ -242,21 +242,21 @@ As H$^+$ accumulates in the thylakoid lumen (from water splitting and proton pum
           {
             question: 'If a plant is given water labeled with 18-O (heavy oxygen), where will the 18-O end up?',
             options: [
-              'In glucose (C6H12O6)',
-              'In molecular oxygen (O2) released as a byproduct',
-              'In CO2',
-              'In NADPH'
+              'In glucose made by the Calvin cycle',
+              'In the O2 released as a byproduct',
+              'In the CO2 released by respiration',
+              'In the NADPH made at photosystem I'
             ],
             correctAnswer: 1,
-            explanation: 'The O2 released during photosynthesis comes from the splitting of water (photolysis) at PSII. This was demonstrated by van Niel and confirmed by Ruben and Kamen using heavy oxygen isotopes. The oxygen in glucose comes from CO2.'
+            explanation: 'The O2 released during photosynthesis comes from the splitting of water (photolysis) at PSII. This was proposed by van Niel and confirmed by Ruben and Kamen using heavy oxygen isotopes. The oxygen in glucose comes from CO2.'
           },
           {
             question: 'During linear electron flow, electrons travel from _____ to _____.',
             options: [
-              'PSI to PSII',
-              'NADPH to H2O',
+              'NADP+ (via PSI) to H2O (via PSII)',
+              'Ferredoxin (via PSI) to PQ (via PSII)',
               'H2O (via PSII) to NADP+ (via PSI)',
-              'ATP synthase to cytochrome b6f'
+              'CO2 (via RuBisCO) to O2 (via PSII)'
             ],
             correctAnswer: 2,
             explanation: 'In linear (noncyclic) electron flow, electrons originate from water (split at PSII), pass through the ETC (PQ, Cyt b6f, PC), are re-energized at PSI, and ultimately reduce NADP+ to NADPH.'

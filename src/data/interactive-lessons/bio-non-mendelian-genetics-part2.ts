@@ -26,24 +26,24 @@ export const bioNonMendelianPart2Data = {
           {
             question: 'Which of the following correctly describes Multiple alleles?',
             options: [
-              'Polygenic traits show continuous variation (bell curve)',
-              'skin color, height, eye color',
-              'more than 2 alleles in population (ABO blood type: Iᴬ, Iᴮ, i)',
-              'multiple genes affect one trait'
+              'Several genes at different loci each add a small effect to one trait (height)',
+              'One gene affects several unrelated traits at the same time (sickle-cell disease)',
+              'More than two alleles of one gene exist in the population (ABO\'s Iᴬ, Iᴮ and i)',
+              'Each diploid person carries three or more alleles of one gene (ABO blood type)'
             ],
             correctAnswer: 2,
-            explanation: 'Correct — Multiple alleles: more than 2 alleles in population (ABO blood type: Iᴬ, Iᴮ, i). The other options describe different concepts from this topic.'
+            explanation: 'Multiple alleles means a gene has more than two allele versions in the POPULATION — ABO has Iᴬ, Iᴮ and i — but each diploid individual still carries only two of them. Many genes adding to one trait is polygenic inheritance, and one gene affecting several traits is pleiotropy.'
           },
           {
             question: 'Select the statement that correctly describes Examples:',
             options: [
-              'Polygenic traits show continuous variation (bell curve)',
-              'skin color, height, eye color',
-              'multiple genes affect one trait',
-              'more than 2 alleles in population (ABO blood type: Iᴬ, Iᴮ, i)'
+              'Polygenic examples: ABO blood type, cystic fibrosis and Huntington\'s disease',
+              'Polygenic examples: skin color, height and eye color',
+              'Polygenic examples: hemophilia, color blindness and Duchenne dystrophy',
+              'Polygenic examples: pea flower color, seed shape and pod color'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — Examples: skin color, height, eye color. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'Skin color, height and eye color vary over a wide range because several genes contribute to each. ABO, cystic fibrosis and Huntington\'s are single-gene traits, hemophilia and color blindness are single X-linked genes, and Mendel\'s pea traits are each controlled by one gene.'
           }
         ]
       }
@@ -71,13 +71,13 @@ export const bioNonMendelianPart2Data = {
           {
             question: 'Which of these accurately represents Polygenic traits show continuous…?',
             options: [
-              'more than 2 alleles in population (ABO blood type: Iᴬ, Iᴮ, i)',
-              'Polygenic traits show continuous variation (bell curve)',
-              'multiple genes affect one trait',
-              'skin color, height, eye color'
+              'Polygenic traits fall into a few discrete classes (a 3:1 ratio)',
+              'Polygenic traits form a smooth range of values (a bell curve)',
+              'Polygenic traits show two separate peaks (a bimodal curve)',
+              'Polygenic traits ignore the environment (fixed, inborn values)'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — Polygenic traits show continuous variation (bell curve). Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: 'Because many genes each add a small effect — and the environment adds more — polygenic traits produce a smooth, continuous range of phenotypes that forms a bell-shaped curve, not a few discrete Mendelian classes. Environment often shifts them further, as nutrition does for height.'
           }
         ]
       }

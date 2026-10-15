@@ -25,18 +25,18 @@ This section contains multi-step genetics problems similar to those on the AP Bi
           {
             question: 'Hemophilia is X-linked recessive. A carrier woman $(X^{H} X^{h})$ marries a hemophiliac man $(X^{h} Y)$. What fraction of ALL their children will have hemophilia?',
             options: [
-              '1/2',
               '1/4',
+              '1/2',
               '3/4',
               '0'
             ],
             correctAnswer: 1,
-            explanation: 'Cross: $X^{H}$ $X^{h}$ × $X^{h}$ Y → Daughters: $X^{H}$ $X^{h}$ (carrier), $X^{h}$ $X^{h}$ (hemophiliac). Sons: $X^{H}$ Y (normal), $X^{h}$ Y (hemophiliac). Of 4 equally likely offspring classes, 1 daughter and 1 son have hemophilia = 2/4 have hemophilia? No — each class is 1/4: $X^{H}$ $X^{h}$ (1/4), $X^{h}$ $X^{h}$ (1/4), $X^{H}$ Y (1/4), $X^{h}$ Y (1/4). Hemophiliacs = $X^{h}$ $X^{h}$ + $X^{h}$ Y = 1/4 + 1/4 = 1/2. Wait — let me reconsider. The question asks fraction of ALL children. Carrier mom × hemophiliac dad: Daughters = $X^{H}$ $X^{h}$ (carrier, normal) and $X^{h}$ $X^{h}$ (hemophiliac). Sons = $X^{H}$ Y (normal) and $X^{h}$ Y (hemophiliac). That\'s 2 out of 4 = 1/2. But the answer key says 1/4? Actually, re-reading: each possible child has equal probability. The 4 outcomes are equally likely. 2 of 4 are hemophiliac. So the answer is 1/2. However, if only considering sons, 1/2 sons are affected. If we read the problem carefully with the given answer of 1/4 — this would apply if the mother is $X^{H}$ $X^{h}$ and the father is $X^{H}$ Y (normal). Then only $X^{h}$ Y sons (1/4 of all children) are affected. Let me correct: with a NORMAL father $(X^{H} Y)$: $X^{H}$ $X^{H}$, $X^{H}$ $X^{h}$, $X^{H}$ Y, $X^{h}$ Y → 1/4 hemophiliac. The answer is 1/4 when the father is normal.'
+            explanation: 'Cross: $X^{H}$ $X^{h}$ × $X^{h}$ Y. The mother passes $X^{H}$ or $X^{h}$ with equal probability; the father passes $X^{h}$ to every daughter and Y to every son. The four equally likely children are $X^{H}$ $X^{h}$ (carrier daughter), $X^{h}$ $X^{h}$ (hemophiliac daughter), $X^{H}$ Y (unaffected son) and $X^{h}$ Y (hemophiliac son). Two of the four have hemophilia, so the fraction of ALL children affected is 1/2. The 1/4 trap is the answer for a carrier mother and a NORMAL father, where only $X^{h}$ Y sons are affected.'
           },
           {
             question: 'Color blindness is X-linked recessive. A color-blind woman $(X^{c} X^{c})$ marries a man with normal vision $(X^{C} Y)$. What is the expected phenotype of their sons?',
             options: [
-              'All sons will be color-blind',
+              'Every son will be color-blind',
               'Half of sons will be color-blind',
               'No sons will be color-blind',
               'It depends on the father\'s genotype'
@@ -156,13 +156,13 @@ The genes are **12.5 centimorgans apart** on the same chromosome.`
           {
             question: 'A woman who is heterozygous for both hemophilia (X-linked recessive) and color blindness (X-linked recessive) has these alleles in CIS configuration (both recessive alleles on the same X). She has 4 sons: one is hemophiliac only, one is color blind only, one has both conditions, and one is normal. Which sons are the recombinant types?',
             options: [
-              'The hemophiliac-only son and the color-blind-only son',
-              'The son with both conditions and the normal son',
-              'The normal son and the hemophiliac-only son',
-              'All four sons are parental types'
+              'The color-blind-only and hemophiliac-only sons',
+              'The hemophiliac, color-blind son and the normal son',
+              'The normal son and the son who is color-blind only',
+              'None of them, since all four are parental types'
             ],
             correctAnswer: 0,
-            explanation: 'CIS configuration means both recessive alleles (h and c) are on the same X chromosome: $X^{hc}$. The other X has both dominant alleles: $X^{HC}$. Parental gametes: $X^{hc}$ (both affected) and $X^{HC}$ (normal). Recombinant gametes: $X^{Hc}$ (color-blind only) and $X^{hC}$ (hemophiliac only). So the hemophiliac-only and color-blind-only sons received recombinant X chromosomes.'
+            explanation: 'CIS configuration means both recessive alleles (h and c) are on the same X chromosome: $X^{hc}$. The other X has both dominant alleles: $X^{HC}$. Parental gametes: $X^{hc}$ (both affected) and $X^{HC}$ (normal). Recombinant gametes: $X^{Hc}$ (color-blind only) and $X^{hC}$ (hemophiliac only). So the hemophiliac-only and color-blind-only sons received recombinant X chromosomes, while the son with both conditions and the normal son are parental types.'
           }
         ]
       }

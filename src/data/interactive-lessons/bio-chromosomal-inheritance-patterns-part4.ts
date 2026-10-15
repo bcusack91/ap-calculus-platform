@@ -38,9 +38,9 @@ After fertilization with a normal gamete:
             question: 'Nondisjunction during meiosis I differs from nondisjunction during meiosis II in that:',
             options: [
               'Meiosis I nondisjunction produces 4 abnormal gametes; meiosis II produces 2 abnormal and 2 normal',
-              'Meiosis I nondisjunction affects only autosomes; meiosis II affects sex chromosomes',
-              'Meiosis I nondisjunction is not heritable',
-              'There is no difference in outcome'
+              'Meiosis I nondisjunction affects only autosomes; meiosis II affects only sex chromosomes',
+              'Meiosis I nondisjunction produces 2 abnormal gametes; meiosis II produces 4 abnormal ones',
+              'Meiosis I nondisjunction is not heritable; only meiosis II errors reach the offspring'
             ],
             correctAnswer: 0,
             explanation: 'In meiosis I nondisjunction, homologs fail to separate, so all 4 resulting gametes are abnormal (2 have an extra chromosome, 2 are missing one). In meiosis II, sister chromatids fail to separate in one cell, producing 2 normal and 2 abnormal gametes.'
@@ -170,12 +170,12 @@ After fertilization with a normal gamete:
             question: 'Which of the following is the best explanation for why sex chromosome aneuploidies are generally less severe than autosomal aneuploidies?',
             options: [
               'X-inactivation compensates for extra X chromosomes, and the Y carries few essential genes',
-              'Sex chromosomes contain no essential genes',
-              'Sex chromosome aneuploidies never cause phenotypic effects',
-              'The immune system compensates for sex chromosome imbalances'
+              'Sex chromosomes carry no essential genes at all, so gaining or losing one has little effect',
+              'Sex chromosome aneuploidies never cause phenotypic effects, since sex is set only by hormones',
+              'The immune system destroys cells with extra sex chromosomes, restoring the normal chromosome number'
             ],
             correctAnswer: 0,
-            explanation: 'X-inactivation silences extra X chromosomes (forming Barr bodies), minimizing gene dosage problems. The Y chromosome has relatively few genes. Together, these factors make sex chromosome aneuploidies more survivable than autosomal trisomies or monosomies.'
+            explanation: 'X-inactivation silences extra X chromosomes (forming Barr bodies), minimizing gene dosage problems. The Y chromosome has relatively few genes. Together, these factors make sex chromosome aneuploidies more survivable than autosomal trisomies or monosomies. They still cause phenotypes (Turner and Klinefelter syndromes), and the X carries many essential genes — a person cannot survive with no X at all.'
           }
         ]
       }

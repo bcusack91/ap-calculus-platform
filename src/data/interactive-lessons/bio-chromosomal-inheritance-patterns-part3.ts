@@ -33,21 +33,21 @@ If a parent has alleles **AB** on one chromosome and **ab** on the homolog:
           {
             question: 'In a test cross, a fly heterozygous for two linked genes (AaBb, with A and B on the same chromosome) is crossed with aabb. If the genes are completely linked (no crossing over), the offspring ratio will be:',
             options: [
-              '1 AaBb : 1 aabb (parental types only)',
+              '1 AaBb : 1 aabb',
               '1 AaBb : 1 Aabb : 1 aaBb : 1 aabb',
-              'All AaBb',
-              '3 dominant : 1 recessive'
+              '1 Aabb : 1 aaBb',
+              '3 AaBb : 1 aabb'
             ],
             correctAnswer: 0,
-            explanation: 'With complete linkage and no crossing over, the heterozygous parent produces only parental gametes (AB and ab). Crossed with ab, this gives AaBb and aabb in a 1:1 ratio — only parental phenotype classes.'
+            explanation: 'With complete linkage and no crossing over, the heterozygous parent produces only parental gametes (AB and ab). Crossed with ab, this gives AaBb and aabb in a 1:1 ratio — only parental phenotype classes. Aabb and aaBb are recombinant classes, which require crossing over, and the 1:1:1:1 ratio is what unlinked genes give.'
           },
           {
             question: 'How can you distinguish linked genes from unlinked genes in a test cross?',
             options: [
               'Linked genes produce an unequal ratio with more parental types than recombinant types',
-              'Linked genes always produce a 9:3:3:1 ratio',
-              'Unlinked genes produce more parental types',
-              'There is no way to distinguish them experimentally'
+              'Linked genes give a 1:1:1:1 ratio, the same as genes on different chromosomes',
+              'Unlinked genes give an unequal ratio with more parental types than recombinants',
+              'Linked genes give only recombinant types, since crossing over always separates them'
             ],
             correctAnswer: 0,
             explanation: 'Unlinked genes produce a 1:1:1:1 test cross ratio. Linked genes produce an excess of parental types and a deficit of recombinant types. The further apart linked genes are, the closer the ratio approaches 1:1:1:1.'
@@ -174,8 +174,8 @@ $$\\text{Interference (I)} = 1 - \\text{c.o.c.}$$
             question: 'If the coefficient of coincidence is 0.6, the interference is:',
             options: [
               '0.4 (positive interference)',
-              '0.6',
-              '1.4',
+              '0.6 (positive interference)',
+              '1.4 (negative interference)',
               '0 (no interference)'
             ],
             correctAnswer: 0,

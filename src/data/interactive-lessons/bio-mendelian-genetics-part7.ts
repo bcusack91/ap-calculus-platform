@@ -55,21 +55,21 @@ This final part synthesizes the unit, names the misconceptions that cost student
           {
             question: 'In a certain plant, flower color is controlled by one gene with simple dominance. A cross between two plants yields 148 purple and 52 white offspring. A student concludes the parents were both heterozygous. Which statement best evaluates this conclusion?',
             options: [
-              'The conclusion is wrong; a 148:52 ratio indicates codominance',
-              'The conclusion is reasonable; 148:52 is close to the 3:1 ratio expected from a heterozygous × heterozygous cross',
-              'The conclusion is wrong; the parents must have been purple × white',
-              'The conclusion is wrong; a true 3:1 ratio would require exactly 150:50'
+              'Wrong; a 148:52 ratio points to codominance, since the white class is too large for simple dominance',
+              'Reasonable; 148:52 is close to the 3:1 ratio a heterozygous × heterozygous cross predicts',
+              'Wrong; that many white offspring means one parent was white, as in a heterozygous × recessive test cross',
+              'Wrong; a true 3:1 ratio from 200 offspring would require exactly 150 purple and 50 white plants'
             ],
             correctAnswer: 1,
-            explanation: 'A heterozygous × heterozygous monohybrid cross predicts a 3:1 phenotypic ratio. Out of 200 offspring, 3:1 predicts 150 purple : 50 white, and the observed 148:52 is essentially that — small deviations are expected from random sampling. The "exactly 150:50" option reflects a key misconception: real data are NEVER required to hit the expected ratio exactly; a chi-square test would confirm 148:52 is statistically consistent with 3:1.'
+            explanation: 'A heterozygous × heterozygous monohybrid cross predicts a 3:1 phenotypic ratio. Out of 200 offspring, 3:1 predicts 150 purple : 50 white, and the observed 148:52 is essentially that — small deviations are expected from random sampling. The "exactly 150 purple and 50 white" option reflects a key misconception: real data are NEVER required to hit the expected ratio exactly; a chi-square test would confirm 148:52 is statistically consistent with 3:1. A purple × white test cross would give about 1:1, not 3:1.'
           },
           {
             question: 'In dihybrid pea crosses, Mendel obtained the 9:3:3:1 ratio. A different pair of genes, studied later, consistently gave offspring in roughly a 3:1:1:3 pattern instead, with a large excess of parental phenotype combinations. What is the most likely explanation?',
             options: [
-              'One of the genes underwent a high mutation rate',
-              'The two genes are linked (close together on the same chromosome), so they do not assort independently',
-              'The traits are controlled by the environment, not genetics',
-              'The parents were not true-breeding'
+              'One of the genes has a high mutation rate, converting recombinant offspring back into parental types',
+              'The two genes lie close together on the same chromosome, so they are linked and do not assort independently',
+              'The traits are set by the environment, so offspring raised like their parents match parental phenotypes',
+              'The parents were not true-breeding, so the F1 were not all dihybrids and the F2 ratio shifted'
             ],
             correctAnswer: 1,
             explanation: 'The 9:3:3:1 ratio depends on independent assortment. When two genes are LINKED (physically close on the same chromosome), they tend to be inherited together, inflating the parental-type combinations and depleting the recombinant types — exactly the distortion described. The high-mutation-rate option is wrong because mutation is far too rare to shift whole-population ratios this way; linkage, not mutation, explains a systematic excess of parental types.'
@@ -123,21 +123,21 @@ $\\chi^2 = 0.667 + 2.000 = 2.667$
           {
             question: 'A researcher tests a 9:3:3:1 prediction in a dihybrid cross and calculates $\\chi^{2}$ = 9.10. The cross has 4 phenotype classes (df = 3), and the critical value at p = 0.05 for df = 3 is 7.81. What should the researcher conclude?',
             options: [
-              'Fail to reject the null; the data fit the 9:3:3:1 ratio well',
-              'Reject the null; the deviation from 9:3:3:1 is larger than expected by chance, suggesting the model may be wrong',
-              'The $\\chi^{2}$ value is too small to interpret',
-              'The genes must be assorting independently'
+              'Fail to reject the null; a $\\chi^{2}$ above the critical value means the data fit 9:3:3:1 well',
+              'Reject the null; the deviation from 9:3:3:1 is too large to attribute to chance alone',
+              'Fail to reject the null; with df = 3, a $\\chi^{2}$ of 9.10 is still within the range of chance',
+              'Reject the null; the large $\\chi^{2}$ value proves the two genes assort independently as predicted'
             ],
             correctAnswer: 1,
-            explanation: 'Because $\\chi^{2}$ = 9.10 EXCEEDS the critical value of 7.81 (for df = 3), the deviation from the expected 9:3:3:1 ratio is too large to attribute to chance, so the researcher rejects the null hypothesis. The "fail to reject" option has the decision rule backwards: you fail to reject only when $\\chi^{2}$ is BELOW the critical value. Here the large $\\chi^{2}$ signals the data do NOT fit the simple independent-assortment model (linkage or another factor may be involved).'
+            explanation: 'Because $\\chi^{2}$ = 9.10 EXCEEDS the critical value of 7.81 (for df = 3), the deviation from the expected 9:3:3:1 ratio is too large to attribute to chance, so the researcher rejects the null hypothesis. The "fail to reject" options have the decision rule backwards: you fail to reject only when $\\chi^{2}$ is BELOW the critical value. Rejecting the null also cannot "prove" independent assortment — the large $\\chi^{2}$ signals the data do NOT fit the simple independent-assortment model (linkage or another factor may be involved).'
           },
           {
             question: 'A pedigree shows a rare trait appearing in every generation, transmitted from affected parents to roughly half their children, with males and females affected equally. The trait never skips a generation. Which conclusion is best supported, and which common misconception does it correct?',
             options: [
-              'Autosomal recessive; the trait is rare so it must be recessive',
-              'Autosomal dominant; appearing in every generation without skipping and affecting both sexes equally indicates dominance, and "rare" does not imply "recessive"',
-              'X-linked recessive; rare traits are usually sex-linked',
-              'The data are insufficient to determine inheritance mode'
+              'Autosomal recessive; a rare trait must be recessive, and carriers in each generation keep it from skipping',
+              'Autosomal dominant; no skipped generations and no sex bias point to dominance, and rarity does not imply recessiveness',
+              'X-linked recessive; rare traits are usually sex-linked, and passing to half the children fits a carrier mother',
+              'Undetermined; a pedigree cannot separate dominant from recessive modes unless parental genotypes are known'
             ],
             correctAnswer: 1,
             explanation: 'A trait in every generation (no skipping), passed from affected parent to about half the offspring, with equal sex ratios, is the signature of autosomal dominant inheritance. Crucially, rarity has nothing to do with whether an allele is dominant or recessive — that is the misconception in the autosomal-recessive and X-linked-recessive options. Many dominant disorders (e.g., Huntington\'s) are rare; frequency is governed by population genetics, not by the dominance relationship.'
@@ -145,10 +145,10 @@ $\\chi^2 = 0.667 + 2.000 = 2.667$
           {
             question: 'Two parents heterozygous for an autosomal recessive disorder (Aa × Aa) have four children, and the disorder appears in NONE of them. A relative concludes "the gene must not be in this family after all." Which statement best corrects this reasoning?',
             options: [
-              'The relative is correct; four unaffected children prove neither parent carries the allele',
-              'Each child independently had a 3/4 chance of being unaffected, and $(3/4)^{4}$ ≈ 0.32 — so four unaffected children is fairly likely even though both parents are carriers',
-              'The disorder must have changed to dominant',
-              'The expected 3:1 ratio guarantees exactly one of four children is affected'
+              'The relative is correct; four unaffected children in a row prove that neither parent actually carries the allele',
+              'Each child is independently 3/4 likely to be unaffected, so four in a row happens about 32% of the time',
+              'The allele was probably lost by mutation in the parents\' gametes, so the children could not have inherited it at all',
+              'The expected 3:1 ratio guarantees exactly one affected child in four, so the parents\' carrier tests must be wrong'
             ],
             correctAnswer: 1,
             explanation: 'Each child of an Aa × Aa cross has a 1/4 chance of being affected and 3/4 unaffected, independently. The probability that all four are unaffected is $(3/4)^{4}$ ≈ 0.32 — about a 1-in-3 outcome, entirely consistent with both parents being carriers. The "guarantees exactly one affected" option embodies the core misconception: the 3:1 ratio is a long-run expectation over many offspring, NOT a guarantee that a small sibship of four contains exactly one affected child. Small samples deviate from expected ratios all the time.'

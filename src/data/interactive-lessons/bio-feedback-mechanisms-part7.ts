@@ -36,9 +36,9 @@ export const bioFeedbackPart7Data = {
           {
             question: 'For AP Review, what best describes insulin?',
             options: [
-              'response amplifies the initial stimulus',
-              'physiological control of body temperature',
               'hormone raising blood glucose by mobilizing reserves',
+              'hormone lowering blood glucose by excreting it in urine',
+              'hormone lowering blood glucose by burning it in the liver',
               'hormone lowering blood glucose by promoting uptake/storage'
             ],
             correctAnswer: 3,
@@ -48,9 +48,9 @@ export const bioFeedbackPart7Data = {
             question: 'In this part\'s context, what is the strongest definition of glucagon?',
             options: [
               'hormone lowering blood glucose by promoting uptake/storage',
-              'physiological control of body temperature',
+              'hormone raising blood glucose by blocking insulin receptors',
               'hormone raising blood glucose by mobilizing reserves',
-              'response counteracts change to restore set point'
+              'hormone raising blood glucose by stimulating sugar absorption'
             ],
             correctAnswer: 2,
             explanation: 'glucagon is best matched with: hormone raising blood glucose by mobilizing reserves.'
@@ -170,9 +170,9 @@ export const bioFeedbackPart7Data = {
           {
             question: 'In AP free-response control-system synthesis, the observed pattern is: response amplifies the initial stimulus. What term should anchor the explanation?',
             options: [
-              'thermoregulation',
-              'glucagon',
-              'insulin',
+              'homeostasis',
+              'set point',
+              'negative feedback',
               'positive feedback'
             ],
             correctAnswer: 3,

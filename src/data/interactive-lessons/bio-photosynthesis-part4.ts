@@ -81,10 +81,10 @@ C4 plants (e.g., corn/maize, sugarcane, sorghum, crabgrass) have evolved a two-s
           {
             question: 'What is the key advantage of PEP carboxylase over RuBisCO for initial CO2 fixation?',
             options: [
-              'PEP carboxylase produces more ATP',
-              'PEP carboxylase has a high affinity for CO2 and does not bind O2, preventing photorespiration',
-              'PEP carboxylase directly produces glucose',
-              'PEP carboxylase does not require energy'
+              'PEP carboxylase makes ATP as it fixes CO2 in the mesophyll',
+              'PEP carboxylase has a high CO2 affinity and does not bind O2',
+              'PEP carboxylase makes glucose directly, bypassing the Calvin cycle',
+              'PEP carboxylase fixes CO2 without needing any energy input'
             ],
             correctAnswer: 1,
             explanation: 'PEP carboxylase binds CO2 effectively even at low concentrations and lacks the oxygenase activity that plagues RuBisCO. This allows C4 plants to capture CO2 efficiently in the mesophyll and deliver it at high concentrations to RuBisCO in the bundle-sheath cells.'
@@ -92,10 +92,10 @@ C4 plants (e.g., corn/maize, sugarcane, sorghum, crabgrass) have evolved a two-s
           {
             question: 'C4 photosynthesis requires 2 additional ATP per CO2 compared to C3. Under what conditions is this extra cost worthwhile?',
             options: [
-              'In cold, shady environments where light is limiting',
-              'In hot, sunny environments where photorespiration would otherwise waste even more energy',
-              'Underwater where CO2 diffusion is slow',
-              'At night when the Calvin cycle is inactive'
+              'In cool, shady places where light rather than CO2 limits growth',
+              'In hot, sunny places where photorespiration would waste more',
+              'In wet, cloudy climates where stomata can stay open all day',
+              'At night, when the Calvin cycle in C3 plants is inactive'
             ],
             correctAnswer: 1,
             explanation: 'The extra 2 ATP per CO2 is a worthwhile investment only when photorespiration would otherwise consume more energy than the C4 "pump" costs. In hot, bright conditions, photorespiration can waste 25-50% of fixed carbon in C3 plants, far exceeding the 2 ATP cost of C4.'
@@ -145,10 +145,10 @@ C4 plants (e.g., corn/maize, sugarcane, sorghum, crabgrass) have evolved a two-s
           {
             question: 'CAM plants open their stomata at night and close them during the day. What is the primary advantage of this strategy?',
             options: [
-              'It allows the plant to photosynthesize at night',
-              'It minimizes water loss by keeping stomata closed during the hottest part of the day while still allowing CO2 uptake at cooler nighttime temperatures',
-              'It prevents O2 from entering the leaf',
-              'It increases the rate of the Calvin cycle'
+              'It lets the plant run the light reactions at night',
+              'It cuts water loss by taking in CO2 during the cooler night',
+              'It keeps O2 out of the leaf so RuBisCO can never bind O2',
+              'It speeds the Calvin cycle by supplying CO2 around the clock'
             ],
             correctAnswer: 1,
             explanation: 'Opening stomata at night (when temperatures are lower and humidity is higher) dramatically reduces water loss through transpiration. CO2 is stored as malic acid overnight and released for the Calvin cycle during the day when light is available.'
@@ -156,10 +156,10 @@ C4 plants (e.g., corn/maize, sugarcane, sorghum, crabgrass) have evolved a two-s
           {
             question: 'Both C4 and CAM plants use PEP carboxylase for initial CO2 fixation. The key difference between the two strategies is:',
             options: [
-              'C4 plants use RuBisCO; CAM plants do not',
+              'C4 separates fixation temporally (day vs. night); CAM separates it spatially (different cells)',
               'C4 separates fixation spatially (different cells); CAM separates fixation temporally (day vs. night)',
-              'CAM plants do not perform the Calvin cycle',
-              'C4 plants store malate in vacuoles; CAM plants do not'
+              'CAM plants skip the Calvin cycle entirely; C4 plants run it in their bundle-sheath cells',
+              'C4 plants store malate in vacuoles overnight; CAM plants send it to bundle-sheath cells'
             ],
             correctAnswer: 1,
             explanation: 'Both rely on PEP carboxylase for initial fixation and RuBisCO for the Calvin cycle. C4 achieves separation in different cell types (mesophyll vs. bundle-sheath). CAM achieves separation at different times (night for fixation, day for Calvin cycle).'
@@ -209,10 +209,10 @@ C4 plants (e.g., corn/maize, sugarcane, sorghum, crabgrass) have evolved a two-s
           {
             question: 'Global warming is increasing both temperature and atmospheric CO2 levels. How might this affect the competitive advantage of C4 plants over C3 plants?',
             options: [
-              'C4 advantage would increase because temperatures are rising',
-              'C4 advantage would decrease because higher CO2 levels reduce photorespiration in C3 plants, partially offsetting the temperature effect',
-              'There would be no change',
-              'Both C3 and C4 would be replaced by CAM plants'
+              'It would grow, because rising heat favors C4 plants in every habitat',
+              'It would shrink, as more CO2 cuts photorespiration in C3 plants',
+              'It would not change, because CO2 levels do not affect RuBisCO',
+              'It would vanish, as CAM plants replace both C3 and C4 plants'
             ],
             correctAnswer: 1,
             explanation: 'Rising CO2 levels benefit C3 plants by providing more CO2 relative to O2 at the RuBisCO active site, reducing photorespiration. This "CO2 fertilization effect" partially offsets the increased photorespiration from higher temperatures, potentially narrowing the C4 advantage in some environments.'
@@ -223,7 +223,7 @@ C4 plants (e.g., corn/maize, sugarcane, sorghum, crabgrass) have evolved a two-s
               'C3 photosynthesis',
               'C4 photosynthesis',
               'CAM photosynthesis',
-              'Chemosynthesis'
+              'Anoxygenic photosynthesis'
             ],
             correctAnswer: 2,
             explanation: 'Night CO2 fixation, desert habitat, fleshy leaves, and large vacuoles (for storing malic acid) are all hallmarks of CAM plants. The plant opens stomata at night to fix CO2 via PEP carboxylase, stores malate in vacuoles, and runs the Calvin cycle during the day with stomata closed.'

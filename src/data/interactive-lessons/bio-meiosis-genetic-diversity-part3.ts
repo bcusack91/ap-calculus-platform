@@ -24,26 +24,26 @@ export const bioMeiosisPart3Data = {
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Similar to mitosis?',
+            question: 'Meiosis II is most similar to mitosis because in both processes:',
             options: [
-              'Similar to mitosis',
-              'No DNA replication between meiosis I and II',
-              'Four haploid cells produced',
-              'Sister chromatids separate'
+              'sister chromatids separate and move to opposite poles',
+              'homologous chromosomes pair up and exchange segments',
+              'the chromosome number is reduced from diploid to haploid',
+              'DNA is replicated just before the division begins'
             ],
             correctAnswer: 0,
-            explanation: 'Correct — Similar to mitosis. The other options describe different concepts from this topic.'
+            explanation: 'Like mitosis, meiosis II separates sister chromatids at anaphase. Homolog pairing and crossing over happen only in meiosis I, the reduction to haploid happens in meiosis I, and no DNA replication precedes meiosis II.'
           },
           {
-            question: 'Which of the following is true about No DNA replication between meiosis I…?',
+            question: 'A cell has just completed meiosis I. Before meiosis II begins, the cell:',
             options: [
-              'Four haploid cells produced',
-              'Sister chromatids separate',
-              'Similar to mitosis',
-              'No DNA replication between meiosis I and II'
+              'replicates its DNA so each chromosome again has two chromatids',
+              'pairs its homologous chromosomes again to allow more crossing over',
+              'separates its sister chromatids so that each cell becomes haploid',
+              'skips DNA replication and goes directly into prophase II'
             ],
             correctAnswer: 3,
-            explanation: 'Correct — No DNA replication between meiosis I and II. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'There is no S phase between meiosis I and meiosis II. Each chromosome still consists of two sister chromatids from the original replication, so the cell proceeds to meiosis II without copying its DNA again. Sister chromatids separate during anaphase II, not before it.'
           }
         ]
       }
@@ -69,15 +69,15 @@ export const bioMeiosisPart3Data = {
       exercise: {
         questions: [
           {
-            question: 'Which of these accurately represents Four haploid cells produced?',
+            question: 'A cell with 2n = 8 completes meiosis II. How many cells form, and how many chromosomes does each contain?',
             options: [
-              'No DNA replication between meiosis I and II',
-              'Four haploid cells produced',
-              'Similar to mitosis',
-              'Sister chromatids separate'
+              'Two cells, each with 8 chromosomes',
+              'Four cells, each with 4 chromosomes',
+              'Four cells, each with 8 chromosomes',
+              'Two cells, each with 4 chromosomes'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — Four haploid cells produced. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: 'Meiosis produces four haploid cells. With 2n = 8, each cell receives n = 4 chromosomes. Two cells with 4 chromosomes each describes the result after meiosis I only.'
           }
         ]
       }

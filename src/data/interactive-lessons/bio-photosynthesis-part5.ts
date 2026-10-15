@@ -81,17 +81,17 @@ This is why C4 plants (which circumvent photorespiration) dominate in tropical g
         questions: [
           {
             question: 'A graph shows photosynthetic rate vs. light intensity reaching a plateau. What could you do to increase the rate beyond the plateau?',
-            options: ['Increase light intensity further', 'Increase CO2 concentration or reduce O2 around the plant', 'Lower the temperature well below the optimum', 'Move the plant into shade to prevent photoinhibition'],
+            options: ['Increase the light intensity well beyond the saturation point', 'Increase CO2 concentration or reduce O2 around the plant', 'Lower the temperature well below the enzyme optimum', 'Move the plant into shade to prevent photoinhibition'],
             correctAnswer: 1,
             explanation: 'At the light-saturation plateau, light is no longer limiting. Increasing CO2 would accelerate the Calvin cycle, and decreasing O2 would reduce photorespiration — both would increase the net rate. Increasing light further would not help and might cause photoinhibition.'
           },
           {
             question: 'The compensation point is the light intensity at which:',
             options: [
-              'Photosynthesis reaches its maximum rate',
-              'The rate of photosynthesis equals the rate of cellular respiration',
-              'Photorespiration begins',
-              'Stomata close completely'
+              'Photosynthesis reaches its maximum, light-saturated rate',
+              'Photosynthesis and respiration run at equal rates',
+              'Photorespiration starts to outpace carbon fixation',
+              'Stomata close fully to prevent any further water loss'
             ],
             correctAnswer: 1,
             explanation: 'At the compensation point, the rate of O2 production by photosynthesis equals the rate of O2 consumption by respiration. Net gas exchange is zero. Below this point, the plant is a net consumer of O2 and producer of CO2.'
@@ -99,10 +99,10 @@ This is why C4 plants (which circumvent photorespiration) dominate in tropical g
           {
             question: 'Why are C3 plants more responsive to CO2 enrichment than C4 plants?',
             options: [
-              'C3 plants have more chloroplasts',
-              'In C3 plants, RuBisCO is not saturated at current atmospheric CO2 levels, while C4 plants already concentrate CO2 around RuBisCO',
-              'C4 plants do not use the Calvin cycle',
-              'C3 plants have more stomata'
+              'C3 leaves have more chloroplasts per cell than C4 leaves have',
+              'C3 RuBisCO is not CO2-saturated today; C4 RuBisCO already is',
+              'C4 plants lack a Calvin cycle; extra CO2 cannot raise their rate',
+              'C3 leaves have more stomata, so extra CO2 enters them faster'
             ],
             correctAnswer: 1,
             explanation: 'At current atmospheric CO2 (~420 ppm), RuBisCO in C3 plants is below its saturation point — more CO2 directly increases fixation. C4 plants use PEP carboxylase to concentrate CO2 around RuBisCO, which is already saturated, so additional atmospheric CO2 provides little benefit.'
@@ -168,10 +168,10 @@ In real ecosystems, multiple factors interact:
           {
             question: 'A researcher measures O2 production from an aquatic plant at different temperatures while keeping light and CO2 constant. At 45 °C, O2 production drops to near zero. What is the most likely explanation?',
             options: [
-              'The water evaporated',
-              'Enzymes involved in photosynthesis (especially RuBisCO and those in the light reactions) are denaturing at this high temperature',
-              'The plant switched to CAM photosynthesis',
-              'All the CO2 was consumed'
+              'The plant switched to CAM photosynthesis to conserve water',
+              'Photosynthetic enzymes such as RuBisCO are denaturing',
+              'All the dissolved CO2 was used up, so carbon fixation stopped',
+              'Heat bleached the chlorophyll so it no longer absorbs light'
             ],
             correctAnswer: 1,
             explanation: 'At 45 °C, proteins begin to denature (lose their 3D shape). Since all stages of photosynthesis depend on enzyme catalysis, denaturation of key enzymes (RuBisCO, photosystem proteins, Calvin cycle enzymes) halts photosynthesis.'
@@ -180,9 +180,9 @@ In real ecosystems, multiple factors interact:
             question: 'Greenhouse growers often add CO2 to the air and provide supplemental lighting. After both are optimized, what typically becomes the next limiting factor?',
             options: [
               'Water availability',
-              'Temperature (enzyme kinetics)',
+              'Temperature',
               'Oxygen concentration',
-              'Nitrogen in the soil'
+              'Soil nitrogen'
             ],
             correctAnswer: 1,
             explanation: 'After light and CO2 are optimized, the biochemical reaction rates become limited by temperature (enzyme kinetics). Greenhouses therefore also control temperature to maintain optimal enzyme function and maximize photosynthetic rate.'

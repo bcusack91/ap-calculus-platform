@@ -47,7 +47,7 @@ export const bioFitnessPart5Data = {
           {
             question: 'In this part\'s context, what is the strongest definition of stabilizing selection?',
             options: [
-              'favors one phenotypic extreme',
+              'favors multiple extremes over intermediates',
               'direction and strength of selection on a trait',
               'population evolves traits tuned to local conditions',
               'favors intermediate phenotypes'

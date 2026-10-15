@@ -93,10 +93,10 @@ G$_2$ is the final preparation period before mitosis:
           {
             question: 'Why is the G1/S checkpoint considered the most critical decision point in the cell cycle?',
             options: [
-              'It determines the speed of DNA replication',
-              'Once a cell passes this checkpoint, it is committed to completing the cell cycle and dividing; before this point, the cell can exit to G0',
-              'It controls the separation of sister chromatids',
-              'It regulates cytokinesis'
+              'It sets the rate at which DNA polymerase copies the genome in each cycle',
+              'Passing it commits the cell to completing the cycle and dividing',
+              'It controls when cohesin is cleaved so sister chromatids can separate',
+              'It regulates the contractile ring that pinches the cell in two at cytokinesis'
             ],
             correctAnswer: 1,
             explanation: 'The G1/S checkpoint (also called the restriction point in mammalian cells) is the commitment point. Before it, the cell can pause or exit the cycle. After it, the cell proceeds through S, G2, and M without needing further external signals. This is why it is a frequent target of mutations in cancer.'
@@ -104,10 +104,10 @@ G$_2$ is the final preparation period before mitosis:
           {
             question: 'After S phase, a cell has the same number of chromosomes as before S phase. How is this possible if all the DNA was replicated?',
             options: [
-              'Some DNA was degraded during replication',
-              'Each replicated chromosome consists of two sister chromatids joined at the centromere — it counts as ONE chromosome. The chromosome number (counted by centromeres) is unchanged.',
-              'Only half the chromosomes were replicated',
-              'The extra DNA is stored in the nucleus as free fragments'
+              'Half of the newly copied DNA is degraded, so total DNA content stays the same',
+              'Sister chromatids stay joined at one centromere, so each pair counts as one chromosome',
+              'Only half of the chromosomes are replicated in each S phase, keeping the count stable',
+              'The extra DNA is stored in the nucleus as free fragments until the next division'
             ],
             correctAnswer: 1,
             explanation: 'Chromosome number counts centromeres. After replication, each chromosome has two copies (sister chromatids) linked at one centromere. So the number of chromosomes remains 2n = 46 in humans, but the DNA content doubles from 2C to 4C.'
@@ -115,10 +115,10 @@ G$_2$ is the final preparation period before mitosis:
           {
             question: 'A mutation in ATM kinase prevents the cell from detecting DNA damage at the G2/M checkpoint. What is the likely consequence?',
             options: [
-              'The cell will be unable to replicate its DNA',
-              'Cells with damaged DNA will proceed into mitosis, potentially propagating mutations and contributing to genomic instability',
-              'All cells will immediately undergo apoptosis',
-              'DNA repair will become more efficient'
+              'The cell will be unable to begin replicating its DNA during S phase',
+              'Cells with damaged DNA will enter mitosis and pass mutations to daughter cells',
+              'All cells will undergo apoptosis as soon as they reach the G2 phase',
+              'DNA damage will be repaired more efficiently, lowering the mutation rate'
             ],
             correctAnswer: 1,
             explanation: 'ATM kinase is a key sensor for DNA double-strand breaks. Without it, the G2/M checkpoint cannot detect damage, and cells with broken or improperly replicated DNA enter mitosis. This leads to genomic instability — a hallmark of cancer.'
@@ -166,10 +166,10 @@ G$_2$ is the final preparation period before mitosis:
           {
             question: 'A researcher measures the DNA content per cell in a population and obtains a histogram. Most cells show 2C DNA content, with a smaller peak at 4C.  What interpretation is correct?',
             options: [
-              'The 4C cells are haploid',
-              'Most cells are in G1 (or G0) with unreplicated DNA (2C); the smaller 4C peak represents cells in G2 or M phase that have completed DNA replication',
-              'The 2C cells have completed mitosis and the 4C cells are about to undergo meiosis',
-              'All cells are in S phase'
+              'The 4C cells are haploid gametes, and the 2C cells are diploid somatic cells',
+              'Most cells are in G1 with unreplicated DNA, and the 4C cells are in G2 or M phase',
+              'The 2C cells have completed mitosis, and the 4C cells are preparing for meiosis',
+              'All cells are in S phase, and the 4C cells have doubled their chromosome number'
             ],
             correctAnswer: 1,
             explanation: 'In a dividing population, cells in G1 (or G0) have 2C DNA content. After S phase, DNA content doubles to 4C (G2 and M). Since G1 is the longest phase, more cells are found at 2C. Cells in the process of S phase would show intermediate values between 2C and 4C.'

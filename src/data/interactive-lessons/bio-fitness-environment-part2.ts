@@ -39,7 +39,7 @@ export const bioFitnessPart2Data = {
               'heritable trait improving performance under selection',
               'direction and strength of selection on a trait',
               'benefit in one function paired with cost in another',
-              'ability of one genotype to produce different phenotypes'
+              'favors one phenotypic extreme'
             ],
             correctAnswer: 0,
             explanation: 'adaptation is best matched with: heritable trait improving performance under selection.'

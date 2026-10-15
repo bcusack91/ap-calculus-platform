@@ -35,9 +35,9 @@ The Sutton-Boveri hypothesis proposed that chromosomes are the physical carriers
             question: 'The chromosome theory of inheritance states that:',
             options: [
               'Genes are located on chromosomes and chromosome behavior explains Mendelian inheritance',
-              'Chromosomes are made entirely of protein',
-              'All genes assort independently regardless of chromosome location',
-              'Inheritance is determined by cytoplasmic factors only'
+              'Genes reside in the cytoplasm and are copied onto chromosomes during meiosis',
+              'Genes lie on chromosomes, but all genes assort independently wherever they are',
+              'Cytoplasmic factors determine inheritance, and chromosomes serve only as scaffolds'
             ],
             correctAnswer: 0,
             explanation: 'The chromosome theory states that genes reside at specific loci on chromosomes, and the segregation and independent assortment of chromosomes during meiosis explain Mendel\'s laws.'
@@ -47,7 +47,7 @@ The Sutton-Boveri hypothesis proposed that chromosomes are the physical carriers
             options: [
               'Walter Sutton and Theodor Boveri',
               'Gregor Mendel and Charles Darwin',
-              'Watson and Crick',
+              'James Watson and Francis Crick',
               'Thomas Morgan and Alfred Sturtevant'
             ],
             correctAnswer: 0,
@@ -154,8 +154,8 @@ This was the **first gene mapped to a specific chromosome**, directly supporting
             options: [
               'All male',
               'All female',
-              'Both male and female in equal numbers',
-              'Only found in the $F_{3}$ generation'
+              'Half male, half female',
+              'Not seen until the $F_{3}$'
             ],
             correctAnswer: 0,
             explanation: 'Because the white-eye allele is X-linked recessive, only males $(X^{w}Y)$ expressed the white-eye phenotype in the $F_{2}$ generation. $F_{2}$ females were either homozygous red $(X^{+}X^{+})$ or heterozygous carriers $(X^{+}X^{w})$.'
@@ -164,12 +164,12 @@ This was the **first gene mapped to a specific chromosome**, directly supporting
             question: 'Why is Drosophila melanogaster an ideal organism for genetics research?',
             options: [
               'Short generation time, many offspring, few chromosomes, and visible mutations',
-              'It has the largest genome of any insect',
-              'It reproduces only once per year allowing careful observation',
-              'It has no sex chromosomes'
+              'Largest insect genome, many chromosomes, and slow, carefully controlled breeding',
+              'Breeds once a year and lives for years, so each cross can be followed closely',
+              'Has no sex chromosomes, so inheritance is identical in males and females'
             ],
             correctAnswer: 0,
-            explanation: 'Drosophila has a 2-week generation time, produces hundreds of offspring, has only 4 chromosome pairs, and displays many easily observable mutations — all ideal traits for genetic studies.'
+            explanation: 'Drosophila has a 2-week generation time, produces hundreds of offspring, has only 4 chromosome pairs, and displays many easily observable mutations — all ideal traits for genetic studies. Its genome is small, it breeds continuously rather than once a year, and it has X and Y sex chromosomes (Morgan\'s white-eye discovery depended on them).'
           }
         ]
       }

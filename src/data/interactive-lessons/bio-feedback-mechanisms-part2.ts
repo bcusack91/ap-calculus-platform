@@ -36,10 +36,10 @@ export const bioFeedbackPart2Data = {
           {
             question: 'For Negative Feedback, what best describes negative feedback?',
             options: [
-              'component that detects a change in a regulated variable',
+              'response raises the set point to a higher value',
               'response counteracts change to restore set point',
-              'dynamic maintenance of internal stability',
-              'target value around which a variable is regulated'
+              'response that removes the sensor from the loop',
+              'response amplifies the initial stimulus'
             ],
             correctAnswer: 1,
             explanation: 'negative feedback is best matched with: response counteracts change to restore set point.'
@@ -47,10 +47,10 @@ export const bioFeedbackPart2Data = {
           {
             question: 'In this part\'s context, what is the strongest definition of homeostasis?',
             options: [
-              'response counteracts change to restore set point',
-              'target value around which a variable is regulated',
+              'keeping every internal variable perfectly constant',
+              'response amplifies the initial stimulus',
               'dynamic maintenance of internal stability',
-              'component that carries out corrective response'
+              'matching internal conditions to the external environment'
             ],
             correctAnswer: 2,
             explanation: 'homeostasis is best matched with: dynamic maintenance of internal stability.'
@@ -171,8 +171,8 @@ export const bioFeedbackPart2Data = {
             question: 'In blood glucose stabilization loops, the observed pattern is: component that detects a change in a regulated variable. What term should anchor the explanation?',
             options: [
               'set point',
-              'negative feedback',
-              'homeostasis',
+              'control center',
+              'effector',
               'sensor'
             ],
             correctAnswer: 3,
@@ -181,10 +181,10 @@ export const bioFeedbackPart2Data = {
           {
             question: 'In an AP-style free-response about negative feedback, the observed pattern is: component that carries out corrective response. What term should anchor the explanation?',
             options: [
-              'insulin',
-              'set point',
+              'glucose',
+              'sensor',
               'effector',
-              'sensor'
+              'insulin'
             ],
             correctAnswer: 2,
             explanation: 'Use effector because it directly maps to the described biological pattern: component that carries out corrective response.'

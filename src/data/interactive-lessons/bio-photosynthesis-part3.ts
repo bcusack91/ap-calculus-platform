@@ -71,7 +71,7 @@ Two net G3P molecules (from 6 turns / 6 CO$_2$) can be combined to make one gluc
               'G3P (glyceraldehyde-3-phosphate)',
               '3-PGA (3-phosphoglycerate)',
               'RuBP (ribulose-1,5-bisphosphate)',
-              'Glucose'
+              'PEP (phosphoenolpyruvate)'
             ],
             correctAnswer: 2,
             explanation: 'RuBisCO (ribulose-1,5-bisphosphate carboxylase/oxygenase) catalyzes the carboxylation of RuBP (5C) with CO2, producing an unstable 6C intermediate that immediately splits into two molecules of 3-PGA (3C).'
@@ -90,10 +90,10 @@ Two net G3P molecules (from 6 turns / 6 CO$_2$) can be combined to make one gluc
           {
             question: 'In which phase of the Calvin cycle are ATP and NADPH consumed?',
             options: [
-              'Carbon fixation only',
+              'Carbon fixation (ATP only) and reduction (NADPH only)',
               'Reduction (both ATP and NADPH) and regeneration (ATP only)',
-              'Reduction only',
-              'Carbon fixation and regeneration'
+              'Reduction (NADPH only) and regeneration (ATP and NADPH)',
+              'Carbon fixation (both) and regeneration (ATP only)'
             ],
             correctAnswer: 1,
             explanation: 'ATP and NADPH are both consumed in the reduction phase (converting 3-PGA to G3P). Additional ATP is consumed in the regeneration phase (phosphorylating the 5C sugars to regenerate RuBP). Carbon fixation itself does not require ATP or NADPH.'
@@ -133,10 +133,10 @@ Phosphoglycolate is toxic and must be recycled in a complex pathway involving th
           {
             question: 'Photorespiration is problematic for plants because:',
             options: [
-              'It produces too much ATP',
-              'It fixes CO2 too efficiently',
-              'It consumes ATP and releases CO2 without producing useful organic molecules',
-              'It generates too much NADPH'
+              'It produces excess ATP that shuts down the light reactions',
+              'It fixes CO2 so fast that the supply of RuBP is used up',
+              'It spends ATP and releases fixed CO2 without making sugar',
+              'It produces excess NADPH that damages photosystem II'
             ],
             correctAnswer: 2,
             explanation: 'Photorespiration wastes energy: RuBisCO binds O2 instead of CO2, producing phosphoglycolate that must be recycled at the cost of ATP, and CO2 is released without any net carbon fixation. It is a drain on photosynthetic efficiency.'
@@ -144,10 +144,10 @@ Phosphoglycolate is toxic and must be recycled in a complex pathway involving th
           {
             question: 'Under which conditions is photorespiration most likely to be a significant problem?',
             options: [
-              'Cool temperatures with high CO2',
-              'Hot, dry conditions where stomata are closed (high O2:CO2 ratio inside the leaf)',
-              'Underwater where O2 is limited',
-              'At night when light is absent'
+              'Cool, humid days when stomata stay open and CO2 stays high',
+              'Hot, dry days when stomata close and O2 builds up in the leaf',
+              'Underwater, where dissolved O2 around the leaf is scarce',
+              'At night, when the light reactions stop releasing O2'
             ],
             correctAnswer: 1,
             explanation: 'When stomata close to prevent water loss (hot, dry conditions), CO2 cannot enter and O2 from photosynthesis accumulates. The rising O2:CO2 ratio favors photorespiration. High temperatures also reduce the CO2 affinity of RuBisCO.'
@@ -195,10 +195,10 @@ Phosphoglycolate is toxic and must be recycled in a complex pathway involving th
           {
             question: 'The Calvin cycle is sometimes called "light-independent" but it typically stops in the dark. Why?',
             options: [
-              'It directly requires photons to activate RuBisCO',
-              'Without the light reactions, there is no ATP or NADPH to drive the reduction and regeneration phases',
-              'CO2 is only available during the day',
-              'RuBisCO is denatured in the dark'
+              'RuBisCO must absorb photons directly before it can fix any CO2',
+              'The light reactions stop, so no ATP or NADPH reaches the cycle',
+              'Stomata admit CO2 only in light, so the cycle runs out of CO2',
+              'RuBisCO is denatured in the dark and must be rebuilt each morning'
             ],
             correctAnswer: 1,
             explanation: 'The Calvin cycle itself does not use light directly, but it depends entirely on the ATP and NADPH produced by the light-dependent reactions. Without these energy inputs, the reduction and regeneration phases cannot proceed, and the cycle stalls.'
@@ -212,7 +212,7 @@ Phosphoglycolate is toxic and must be recycled in a complex pathway involving th
               '1'
             ],
             correctAnswer: 1,
-            explanation: 'Each turn of the Calvin cycle fixes 1 CO2 and produces a net of 1/2 G3P (3C). A glucose molecule (6C) requires 2 G3P, so 6 turns (6 CO2) are needed. This consumes 18 ATP and 12 NADPH.'
+            explanation: 'Each turn of the Calvin cycle fixes 1 CO2 and produces a net of 1/3 G3P (3C). A glucose molecule (6C) requires 2 G3P, so 6 turns (6 CO2) are needed. This consumes 18 ATP and 12 NADPH.'
           }
         ]
       }

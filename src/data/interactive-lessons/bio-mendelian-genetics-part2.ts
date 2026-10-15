@@ -94,10 +94,10 @@ These two ratios describe the *same* offspring but answer *different* questions.
               '3 black : 1 brown',
               '1 BB : 2 Bb : 1 bb',
               '1 black : 1 brown',
-              'All Bb'
+              '1 Bb : 1 bb'
             ],
             correctAnswer: 1,
-            explanation: 'A Bb × Bb cross yields genotypes in a 1:2:1 ratio (1 BB : 2 Bb : 1 bb). The 3 black : 1 brown option is the trap: that is the PHENOTYPIC ratio (3 black : 1 brown). The question explicitly asks for genotypes, so the three-class 1:2:1 answer is required, not the two-class phenotype ratio.'
+            explanation: 'A Bb × Bb cross yields genotypes in a 1:2:1 ratio (1 BB : 2 Bb : 1 bb). The 3 black : 1 brown option is the trap: that is the PHENOTYPIC ratio. The 1 Bb : 1 bb option is the genotype ratio of a test cross (Bb × bb), not of two heterozygotes. The question explicitly asks for genotypes, so the three-class 1:2:1 answer is required.'
           },
           {
             question: 'A monohybrid cross produces offspring in an approximate 1:1 phenotypic ratio (half dominant, half recessive). Which parental cross would produce this result?',
@@ -180,21 +180,21 @@ A **back-cross** is any cross of an offspring back to one of its *parents* (or t
           {
             question: 'A farmer has a black bull (black, B, is dominant to red, b) and wants to know if it is homozygous or heterozygous. He crosses it with 25 red (bb) cows. ALL 25 calves are black. What is the most justified conclusion?',
             options: [
-              'The bull is definitely heterozygous (Bb)',
-              'The bull is most likely homozygous (BB), because a heterozygote would be expected to produce roughly half red calves',
-              'The bull must carry a hidden red allele that was destroyed',
-              'No conclusion is possible from a test cross'
+              'Definitely heterozygous Bb, since black calves from red cows show he carries both alleles',
+              'Most likely homozygous BB, since a Bb bull should give about half red calves',
+              'Certainly homozygous BB, since 25 black calves prove beyond doubt that he has no b allele',
+              'No conclusion is possible, since a test cross only works when the unknown parent is recessive'
             ],
             correctAnswer: 1,
-            explanation: 'In a test cross (× bb), a heterozygous Bb bull would be expected to produce about 50% red calves. Getting 25 black calves and zero red is overwhelmingly unlikely if the bull were Bb (it would require the recessive allele to lose the coin-flip 25 times in a row), so the bull is almost certainly homozygous BB. The "definitely heterozygous" option is backwards — heterozygosity is what is ruled OUT by the absence of red calves.'
+            explanation: 'In a test cross (× bb), a heterozygous Bb bull would be expected to produce about 50% red calves. Getting 25 black calves and zero red is overwhelmingly unlikely if the bull were Bb (it would require the recessive allele to lose the coin-flip 25 times in a row), so the bull is almost certainly homozygous BB. The "definitely heterozygous" option is backwards — heterozygosity is what is ruled OUT by the absence of red calves. The "certainly" option overstates the evidence: a finite sample makes BB very probable, not proven.'
           },
           {
             question: 'In guinea pigs, short hair (S) is dominant to long hair (s). A short-haired guinea pig is crossed with a long-haired one, producing 6 short-haired and 5 long-haired offspring. Which statement is correct?',
             options: [
-              'The short-haired parent is homozygous (SS) and this is not a true test cross',
+              'The short-haired parent is homozygous (SS), and the long-haired offspring arose from new mutations',
               'The short-haired parent is heterozygous (Ss), as shown by the appearance of long-haired (ss) offspring',
-              'Both parents must be heterozygous',
-              'Long hair is actually the dominant trait'
+              'Both parents are heterozygous (Ss), as shown by the near 1:1 split of short- and long-haired pups',
+              'The short-hair allele is actually recessive, as shown by long-haired pups making up almost half'
             ],
             correctAnswer: 1,
             explanation: 'The long-haired parent is ss, so this IS a test cross. Long-haired (ss) offspring appeared, which means each received an s allele from BOTH parents — so the short-haired parent must carry s and is therefore Ss. The roughly 1:1 ratio (6:5) confirms a Ss × ss cross. The homozygous (SS) option is wrong because an SS parent could never produce long-haired offspring in this cross.'

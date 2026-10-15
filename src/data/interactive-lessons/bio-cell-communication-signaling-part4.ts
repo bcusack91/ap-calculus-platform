@@ -26,24 +26,24 @@ export const bioCellCommPart4Data = {
           {
             question: 'Which of the following correctly describes Phosphorylation cascades?',
             options: [
-              'cAMP, $Ca^{2+}$, $IP_{3}$',
-              'one signal → many responses',
-              'kinases add phosphate groups',
-              'α subunit activates adenylyl cyclase → cAMP'
+              'Phosphatases add a phosphate group to each protein in turn',
+              'Kinases strip a phosphate group from each protein in turn',
+              'Each kinase adds a phosphate group to the next protein',
+              'Second messengers add phosphate groups directly to the DNA'
             ],
             correctAnswer: 2,
-            explanation: 'Correct — Phosphorylation cascades: kinases add phosphate groups. The other options describe different concepts from this topic.'
+            explanation: 'In a phosphorylation cascade, each protein kinase activates the next protein by adding a phosphate group (from ATP). Phosphatases remove phosphates to switch the pathway off.'
           },
           {
             question: 'Select the statement that correctly describes Signal amplification:',
             options: [
-              'cAMP, $Ca^{2+}$, $IP_{3}$',
-              'α subunit activates adenylyl cyclase → cAMP',
-              'one signal → many responses',
-              'kinases add phosphate groups'
+              'Each ligand activates exactly one target protein',
+              'The cell copies the ligand so more of it reaches receptors',
+              'One ligand can lead to many activated relay molecules',
+              'Amplification adds receptors to every cell in the body'
             ],
             correctAnswer: 2,
-            explanation: 'Correct — Signal amplification: one signal → many responses. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'In amplification, each activated enzyme in a pathway acts on many molecules, so one ligand-receptor event can produce thousands of activated molecules and a large response.'
           }
         ]
       }
@@ -71,13 +71,13 @@ export const bioCellCommPart4Data = {
           {
             question: 'Which of these accurately represents G-protein linked?',
             options: [
-              'cAMP, $Ca^{2+}$, $IP_{3}$',
-              'α subunit activates adenylyl cyclase → cAMP',
-              'kinases add phosphate groups',
-              'one signal → many responses'
+              'The G protein binds GDP to switch on adenylyl cyclase',
+              'The activated α subunit turns on adenylyl cyclase to make cAMP',
+              'The receptor itself phosphorylates tyrosines on its tails',
+              'The ligand enters the cell and binds a receptor in the nucleus'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — G-protein linked: α subunit activates adenylyl cyclase → cAMP. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: 'In G protein-coupled signaling, the activated receptor causes the G protein\'s α subunit to exchange GDP for GTP; the α subunit then activates adenylyl cyclase, which makes the second messenger cAMP.'
           }
         ]
       }

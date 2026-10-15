@@ -24,26 +24,26 @@ export const bioMeiosisPart7Data = {
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Meiosis as the basis for Mendel\'s laws?',
+            question: 'Which meiotic event is the physical basis of Mendel\'s law of segregation?',
             options: [
-              'nondisjunction, trisomy',
-              'Meiosis as the basis for Mendel\'s laws',
-              'comparing mitosis and meiosis',
-              'Connection to evolution (genetic variation)'
+              'Crossing over between nonsister chromatids in prophase I',
+              'Separation of homologous chromosomes in anaphase I',
+              'Random fusion of a sperm and an egg at fertilization',
+              'Replication of every chromosome during the earlier S phase'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — Meiosis as the basis for Mendel\'s laws. The other options describe different concepts from this topic.'
+            explanation: 'The law of segregation states that the two alleles of a gene separate into different gametes. That happens when homologous chromosomes, which carry the two alleles, separate in anaphase I. Independent orientation of different homologous pairs at metaphase I is the basis of the law of independent assortment.'
           },
           {
-            question: 'Which of the following is true about Errors in meiosis?',
+            question: 'Which error during meiosis can produce a trisomy such as Down syndrome?',
             options: [
-              'nondisjunction, trisomy',
-              'Meiosis as the basis for Mendel\'s laws',
-              'Connection to evolution (genetic variation)',
-              'comparing mitosis and meiosis'
+              'Nondisjunction',
+              'Crossing over',
+              'Independent assortment',
+              'Synapsis'
             ],
             correctAnswer: 0,
-            explanation: 'Correct — Errors in meiosis: nondisjunction, trisomy. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'Nondisjunction is the failure of homologs (in meiosis I) or sister chromatids (in meiosis II) to separate. It produces gametes with an extra or missing chromosome, and fertilization of a gamete with an extra copy gives a trisomy. Crossing over, independent assortment, and synapsis are normal parts of meiosis.'
           }
         ]
       }
@@ -69,15 +69,15 @@ export const bioMeiosisPart7Data = {
       exercise: {
         questions: [
           {
-            question: 'Regarding Meiosis: Synthesis & AP Review, which correctly describes AP exam?',
+            question: 'A free-response question asks how mitosis and meiosis differ in outcome. Which comparison is accurate?',
             options: [
-              'Meiosis as the basis for Mendel\'s laws',
-              'nondisjunction, trisomy',
-              'comparing mitosis and meiosis',
-              'Connection to evolution (genetic variation)'
+              'Mitosis makes four haploid cells; meiosis makes two diploid cells',
+              'Both make genetically identical cells but differ in cell number',
+              'Mitosis makes identical diploid cells; meiosis makes varied haploid cells',
+              'Mitosis makes gametes only; meiosis makes body cells for growth'
             ],
             correctAnswer: 2,
-            explanation: 'Correct — AP exam: comparing mitosis and meiosis. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: 'Mitosis produces two genetically identical diploid cells for growth and repair. Meiosis produces four genetically different haploid gametes. In animals, meiosis, not mitosis, is the division that makes gametes.'
           }
         ]
       }

@@ -24,26 +24,26 @@ export const bioMeiosisPart1Data = {
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Meiosis produces gametes (sex cells)?',
+            question: 'What is the main function of meiosis in sexually reproducing animals?',
             options: [
-              'meiosis I and meiosis II',
-              'Meiosis produces gametes (sex cells)',
-              'Results in 4 haploid daughter cells',
-              'Reduces chromosome number by half (2n → n)'
+              'Producing genetically identical body cells for growth and tissue repair',
+              'Producing haploid gametes that fuse at fertilization',
+              'Replacing damaged cells by copying the parent cell\'s chromosomes exactly',
+              'Doubling the chromosome number so that offspring receive extra copies'
             ],
             correctAnswer: 1,
-            explanation: 'Correct — Meiosis produces gametes (sex cells). The other options describe different concepts from this topic.'
+            explanation: 'Meiosis produces haploid gametes (sex cells). Growth and tissue repair rely on mitosis, which makes genetically identical diploid cells. Meiosis halves the chromosome number so that fertilization restores the diploid number.'
           },
           {
-            question: 'In the context of Meiosis Overview, which explains Two divisions?',
+            question: 'How many nuclear divisions occur during meiosis, and how many times is the DNA replicated?',
             options: [
-              'Meiosis produces gametes (sex cells)',
-              'Results in 4 haploid daughter cells',
-              'meiosis I and meiosis II',
-              'Reduces chromosome number by half (2n → n)'
+              'One division, after one round of DNA replication',
+              'Two divisions, with DNA replicated before each one',
+              'Two divisions, after one round of DNA replication',
+              'Two divisions, after two rounds of DNA replication'
             ],
             correctAnswer: 2,
-            explanation: 'Correct — Two divisions: meiosis I and meiosis II. Be careful to distinguish between the different concepts in this topic.'
+            explanation: 'Meiosis has two divisions, meiosis I and meiosis II, but the DNA is replicated only once, during the S phase before meiosis I. One replication followed by two divisions is what halves the chromosome number.'
           }
         ]
       }
@@ -69,15 +69,15 @@ export const bioMeiosisPart1Data = {
       exercise: {
         questions: [
           {
-            question: 'Regarding Meiosis Overview, which correctly describes Results in 4 haploid daughter cells?',
+            question: 'A diploid germ cell completes meiosis I and meiosis II. What is the result?',
             options: [
-              'meiosis I and meiosis II',
-              'Meiosis produces gametes (sex cells)',
-              'Reduces chromosome number by half (2n → n)',
-              'Results in 4 haploid daughter cells'
+              'Two diploid cells, each genetically identical to the parent cell',
+              'Two haploid cells, each with one chromosome from every homologous pair',
+              'Four diploid cells, each carrying both members of every homologous pair',
+              'Four haploid cells, each genetically different from the parent cell'
             ],
             correctAnswer: 3,
-            explanation: 'Correct — Results in 4 haploid daughter cells. Each option describes a real concept from this topic, so pay attention to the specific details.'
+            explanation: 'Meiosis I separates homologs and meiosis II separates sister chromatids, giving four haploid cells. Crossing over and independent assortment make each of them genetically different from the parent cell and from one another. Two haploid cells is the state after meiosis I only.'
           }
         ]
       }

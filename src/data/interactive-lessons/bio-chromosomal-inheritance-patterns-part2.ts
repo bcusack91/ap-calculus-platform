@@ -78,12 +78,12 @@ X-linked recessive traits are the most commonly tested sex-linked pattern on the
             question: 'A color-blind man $(X^{c} Y)$ marries a woman with normal vision who is NOT a carrier $(X^{C} X^{C})$. Which statement is correct about their children?',
             options: [
               'All daughters will be carriers; no sons will be color-blind',
-              'Half of all children will be color-blind',
-              'All sons will be color-blind',
-              'No children will carry the color-blindness allele'
+              'Half of the daughters will be carriers; half of the sons will be color-blind',
+              'All sons will be color-blind, since they inherit their father\'s allele',
+              'No children will carry the allele, since the mother has two normal copies'
             ],
             correctAnswer: 0,
-            explanation: 'The father passes his $X^{c}$ to all daughters (making them $X^{C}$ $X^{c}$ carriers) and his Y to all sons. The mother contributes $X^{C}$ to all children. So daughters are all carriers, and sons are all $X^{C}$ Y (normal vision).'
+            explanation: 'The father passes his $X^{c}$ to all daughters (making them $X^{C}$ $X^{c}$ carriers) and his Y to all sons. The mother contributes $X^{C}$ to all children. So daughters are all carriers, and sons are all $X^{C}$ Y (normal vision) — sons never receive their father\'s X.'
           }
         ]
       }
@@ -168,13 +168,13 @@ Genes on the **Y chromosome** that have no counterpart on the X:
           {
             question: 'Which pedigree pattern is most consistent with X-linked recessive inheritance?',
             options: [
-              'Trait skips generations, appears mostly in males, affected males have carrier mothers',
-              'Every generation affected, males and females equally affected',
-              'Only males are affected, every son of an affected male is affected',
-              'All children of affected mothers are affected'
+              'Trait skips generations, males far outnumber females, affected males have carrier mothers',
+              'Trait in every generation, sexes equally affected, affected children have an affected parent',
+              'Only males are affected, every son of an affected male is affected, and females never show it',
+              'Skips generations, both sexes equally affected, affected children have two carrier parents'
             ],
             correctAnswer: 0,
-            explanation: 'X-linked recessive traits characteristically skip generations (carrier females pass to affected sons), appear predominantly in males, and affected males receive the allele from their carrier mothers.'
+            explanation: 'X-linked recessive traits characteristically skip generations (carrier females pass to affected sons), appear predominantly in males, and affected males receive the allele from their carrier mothers. Every-generation transmission with equal sexes fits autosomal dominant, strict father-to-son transmission fits Y-linkage, and skipping with equal sexes fits autosomal recessive.'
           }
         ]
       }

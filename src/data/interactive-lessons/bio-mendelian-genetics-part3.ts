@@ -96,13 +96,13 @@ The four products are $\\frac{9}{16}, \\frac{3}{16}, \\frac{3}{16}, \\frac{1}{16
           {
             question: 'A pea plant with genotype RrYy is allowed to self-pollinate. How many genetically distinct types of gametes can this plant produce, and what are they?',
             options: [
-              '2 types: RY and ry',
+              '4 types: RR, rr, YY, yy',
               '4 types: RY, Ry, rY, ry',
               '8 types, one for each cell of half the grid',
               '16 types, one for each Punnett square cell'
             ],
             correctAnswer: 1,
-            explanation: 'RrYy is heterozygous for 2 genes, so it makes $2^{2}$ = 4 gamete types: RY, Ry, rY, ry (each allele of gene 1 combined with each allele of gene 2). The "2 types" option lists only the two "parental" combinations and misses the recombinant gametes Ry and rY, which independent assortment specifically produces. The 16 in the "16 types" option is the number of grid CELLS (offspring outcomes), not gamete types.'
+            explanation: 'RrYy is heterozygous for 2 genes, so it makes $2^{2}$ = 4 gamete types: RY, Ry, rY, ry (each allele of gene 1 combined with each allele of gene 2). The RR, rr, YY, yy option puts two alleles of the SAME gene into one gamete, but segregation gives every gamete exactly one allele of each gene. The 16 in the "16 types" option is the number of grid CELLS (offspring outcomes), not gamete types.'
           },
           {
             question: 'In a RrYy × RrYy dihybrid cross, what fraction of the offspring are expected to show BOTH recessive phenotypes (wrinkled AND green)?',
@@ -156,7 +156,7 @@ Both methods agree: $\\frac{1}{8}$.
             question: 'Two pea plants, both RrYy, are crossed. What is the probability that an offspring is round and yellow but HETEROZYGOUS for both genes (genotype RrYy)?',
             options: [
               '$\\frac{9}{16}$',
-              '$\\frac{4}{16}$ (i.e. $\\frac{1}{4}$)',
+              '$\\frac{1}{4}$',
               '$\\frac{1}{16}$',
               '$\\frac{1}{2}$'
             ],
@@ -166,7 +166,7 @@ Both methods agree: $\\frac{1}{8}$.
           {
             question: 'A dihybrid cross AaBb × AaBb is performed. A student needs to find the probability of offspring that are dominant for trait A but recessive for trait B (phenotype A_ bb). What is the fastest correct approach, and the answer?',
             options: [
-              'Draw the full 16-box grid; the answer is $\\frac{1}{16}$',
+              'Draw the full 16-box grid and count the AAbb boxes; the answer is $\\frac{1}{16}$',
               'Multiply P(A dominant) × P(bb) = $\\frac{3}{4} \\times \\frac{1}{4} = \\frac{3}{16}$',
               'Add P(A dominant) + P(bb) = $\\frac{3}{4} + \\frac{1}{4} = 1$',
               'Multiply P(AA) × P(bb) = $\\frac{1}{4} \\times \\frac{1}{4} = \\frac{1}{16}$'
@@ -219,11 +219,11 @@ That single multiplication replaces hunting through 64 boxes. The whole trihybri
             options: [
               '8 gamete types; 64 cells',
               '16 gamete types; 256 cells',
-              '4 gamete types; 16 cells',
+              '32 gamete types; 1024 cells',
               '16 gamete types; 16 cells'
             ],
             correctAnswer: 1,
-            explanation: 'There are 4 heterozygous gene pairs, so gamete types = $2^{4}$ = 16, and the full grid is 16 × 16 = 256 cells. The 8-gamete-types, 64-cells option is the trihybrid answer (n = 3) — a common off-by-one error when you miscount the number of heterozygous genes. The grid size is always $(gamete types)^{2}$, i.e. $4^{n}$, which is why hand-drawing it becomes hopeless past n = 2.'
+            explanation: 'There are 4 heterozygous gene pairs, so gamete types = $2^{4}$ = 16, and the full grid is 16 × 16 = 256 cells. The 8-gamete-types, 64-cells option is the trihybrid answer (n = 3), and the 32-gamete-types option is the n = 5 answer — common off-by-one errors when you miscount the number of heterozygous genes. The grid size is always $(gamete types)^{2}$, i.e. $4^{n}$, which is why hand-drawing it becomes hopeless past n = 2.'
           },
           {
             question: 'From the trihybrid cross AaBbCc × AaBbCc, what is the probability of an offspring that is homozygous dominant for ALL three genes (AABBCC)?',

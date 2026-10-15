@@ -36,9 +36,9 @@ export const bioFeedbackPart1Data = {
           {
             question: 'For Positive Feedback, what best describes positive feedback?',
             options: [
-              'dynamic maintenance of internal stability',
-              'response counteracts change to restore set point',
-              'target value around which a variable is regulated',
+              'response reverses the stimulus to return to set point',
+              'response keeps a variable within a narrow fixed range',
+              'response that shuts off as soon as the stimulus is sensed',
               'response amplifies the initial stimulus'
             ],
             correctAnswer: 3,
@@ -49,8 +49,8 @@ export const bioFeedbackPart1Data = {
             options: [
               'response amplifies the initial stimulus',
               'response counteracts change to restore set point',
-              'component that detects a change in a regulated variable',
-              'dynamic maintenance of internal stability'
+              'response holds a variable at one exact, unchanging value',
+              'response that only occurs during disease or injury'
             ],
             correctAnswer: 1,
             explanation: 'negative feedback is best matched with: response counteracts change to restore set point.'
@@ -168,12 +168,12 @@ export const bioFeedbackPart1Data = {
       exercise: {
         questions: [
           {
-            question: 'In blood clotting amplification, the observed pattern is: target value around which a variable is regulated. What term should anchor the explanation?',
+            question: 'In blood glucose regulation, the observed pattern is: target value around which a variable is regulated. What term should anchor the explanation?',
             options: [
               'set point',
+              'stimulus',
               'homeostasis',
-              'positive feedback',
-              'negative feedback'
+              'control center'
             ],
             correctAnswer: 0,
             explanation: 'Use set point because it directly maps to the described biological pattern: target value around which a variable is regulated.'
@@ -181,10 +181,10 @@ export const bioFeedbackPart1Data = {
           {
             question: 'In an AP-style free-response about positive feedback, the observed pattern is: component that detects a change in a regulated variable. What term should anchor the explanation?',
             options: [
-              'homeostasis',
               'set point',
+              'effector',
               'sensor',
-              'effector'
+              'control center'
             ],
             correctAnswer: 2,
             explanation: 'Use sensor because it directly maps to the described biological pattern: component that detects a change in a regulated variable.'
