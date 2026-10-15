@@ -54,26 +54,26 @@ export const apushCivilWarPart1Data = {
       exercise: {
         questions: [
           {
-            question: 'The Kansas-Nebraska Act (1854) was most controversial because it:',
+            question: 'The Kansas-Nebraska Act (1854) was most controversial because it',
             options: [
-              'Effectively repealed the Missouri Compromise by allowing popular sovereignty on slavery in territories north of the 36°30\' line',
-              'Banned slavery in all new territories acquired from Mexico',
-              'Required all states to accept fugitive slave laws',
-              'Granted citizenship to all free Black people in the United States'
+              'opened land north of the old Missouri Compromise line to slavery',
+              'banned slavery in all of the land acquired from Mexico in 1848',
+              'required every free state to pass its own fugitive slave law',
+              'gave citizenship to free Black settlers in the new territories'
             ],
             correctAnswer: 0,
-            explanation: 'Stephen Douglas\'s Kansas-Nebraska Act allowed settlers in Kansas and Nebraska to vote on whether to allow slavery — even though both territories were north of the Missouri Compromise line (36°30\'), where slavery had been banned since 1820. This effectively destroyed the compromise and led to violent conflict in Kansas.'
+            explanation: 'Kansas and Nebraska lay north of 36°30\', where slavery had been barred since 1820, and popular sovereignty let settlers vote to allow it. The act concerned the Louisiana Purchase lands, not the Mexican Cession, and it said nothing about state fugitive laws or Black citizenship.'
           },
           {
-            question: 'The Dred Scott decision (1857) intensified the sectional crisis MOST directly by:',
+            question: 'The Dred Scott decision (1857) intensified the sectional crisis most directly by',
             options: [
-              'Ruling that Congress had no power to ban slavery in any territory, eliminating the possibility of legislative compromise',
-              'Granting citizenship to all African Americans in the United States',
-              'Ordering the immediate emancipation of all enslaved people in border states',
-              'Upholding the constitutionality of the Missouri Compromise'
+              'ruling that free Black Americans were citizens entitled to equal rights',
+              'ruling that enslaved people in the border states were free at once',
+              'ruling that Congress could not bar slavery from any federal territory',
+              'ruling that the Missouri Compromise line bound all future new states'
             ],
-            correctAnswer: 0,
-            explanation: 'Chief Justice Taney\'s ruling declared that enslaved people were property protected by the Fifth Amendment, Congress could not restrict slavery in territories, and Black people (free or enslaved) could never be U.S. citizens. By removing Congress\'s ability to compromise on slavery\'s expansion, the decision pushed the nation closer to war.'
+            correctAnswer: 2,
+            explanation: 'Chief Justice Taney held that Congress had no power to exclude slavery from the territories, which made the Republican platform look unconstitutional and ended hope of a legislative compromise. The Court denied Black citizenship, freed no one, and struck down the Missouri Compromise rather than upholding it.'
           }
         ]
       }
@@ -173,26 +173,26 @@ Use the exact historical term.
       exercise: {
         questions: [
           {
-            question: 'Lincoln delayed issuing the Emancipation Proclamation until after the Battle of Antietam primarily because:',
+            question: 'Lincoln waited until after the Battle of Antietam to announce the Emancipation Proclamation mainly because he',
             options: [
-              'He needed a Union military success so the Proclamation would appear as a position of strength rather than desperation',
-              'The Constitution required congressional approval before any executive order could take effect',
-              'He was waiting for the Confederate states to voluntarily abolish slavery',
-              'The border states had already agreed to gradual emancipation'
+              'needed Congress to vote its approval before any proclamation took effect',
+              'hoped Confederate states would abolish slavery on their own during 1862',
+              'wanted emancipation to look like a move from strength, not desperation',
+              'expected the border states to adopt gradual emancipation plans that fall'
             ],
-            correctAnswer: 0,
-            explanation: 'Lincoln had drafted the Proclamation in July 1862 but his advisors cautioned that issuing it after Union defeats would look desperate. Antietam — while not a clear victory — stopped Lee\'s invasion and gave Lincoln the political credibility to reframe the war as a fight against slavery.'
+            correctAnswer: 2,
+            explanation: 'Lincoln drafted the Proclamation in July 1862, but Seward warned that issuing it after Union defeats would look like a cry of desperation, and Antietam stopped Lee\'s invasion. The Proclamation rested on the president\'s war powers, and neither the Confederacy nor the border states were about to end slavery themselves.'
           },
           {
-            question: 'Which statement BEST captures the historical significance of the Civil War?',
+            question: 'Which statement best describes the long-term significance of the Civil War?',
             options: [
-              'It resolved the question of whether states could secede, destroyed slavery, and established the supremacy of the federal government over the states',
-              'It had no lasting impact because Reconstruction quickly reversed all wartime gains',
-              'It was primarily a conflict over tariff policy between industrial and agricultural regions',
-              'It demonstrated that compromise was always possible between the North and South'
+              'Tariff disputes between industry and agriculture were settled for good',
+              'Reconstruction quickly reversed the war\'s results, leaving little change',
+              'Sectional disputes were shown to be solvable by legislative compromise',
+              'Slavery was abolished and secession was settled as not a lawful option'
             ],
-            correctAnswer: 0,
-            explanation: 'The Civil War permanently settled three fundamental questions: (1) secession is unconstitutional, (2) slavery is abolished (13th Amendment), and (3) federal authority supersedes state authority. These outcomes reshaped American government and society, though the promises of equality remained unfulfilled for another century.'
+            correctAnswer: 3,
+            explanation: 'The Union victory and the 13th Amendment ended slavery and established that states could not leave the Union, greatly strengthening federal authority. Tariffs remained contested, the constitutional changes of the war era endured, and the war itself showed the failure of compromise.'
           }
         ]
       }

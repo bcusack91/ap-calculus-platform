@@ -5,7 +5,7 @@ export const apushCivilWarPart6Data = {
       id: 'apushciv6-intro',
       type: 'text' as const,
       content: `
-# ⚔️ Sectional Crisis & Civil War (1850–1865)
+# 🇺🇸 The Civil War
 
 **Part 6 of 7 — Problem-Solving Workshop**
 
@@ -36,8 +36,8 @@ export const apushCivilWarPart6Data = {
 
 ## Document Bank
 
-> **1. John C. Calhoun, Final Senate Speech (March 4, 1850, read by Senator Mason as Calhoun was dying)**
-> "The cords which bind these States together in one common Union are far too numerous and powerful for one common sentiment to break."
+> **1. John C. Calhoun, Last Major Senate Speech (March 4, 1850, read by Senator Mason as Calhoun was dying)**
+> "It is a great mistake to suppose that disunion can be effected by a single blow. The cords which bind these States together in one common Union are far too numerous and powerful for that. Disunion must be the work of time."
 
 - **HIPP:** Calhoun's last major Senate speech, delivered as he was dying, during the Compromise of 1850 debate; intended audience is the U.S. Senate, the Southern political class, and the Northern political class; purpose is to warn that the Union will dissolve unless the North accepts equal Southern rights in the territories, ends antislavery agitation, returns fugitive slaves, and accepts a constitutional amendment restoring sectional balance; POV is the leading constitutional theorist of state rights and slavery defense, who had been refining nullification and minority-protection doctrine for two decades.
 
@@ -54,7 +54,7 @@ export const apushCivilWarPart6Data = {
 > **4. Abraham Lincoln, Emancipation Proclamation (issued September 22, 1862; effective January 1, 1863)**
 > "All persons held as slaves within any State... in rebellion against the United States, shall be then, thenceforward, and forever free."
 
-- **HIPP:** Executive proclamation issued under Lincoln's war powers as commander-in-chief, after the strategic Union victory at Antietam (September 17, 1862); intended audience is the Confederate states (and their enslaved population), the U.S. military, the Northern public, the border slave states (Maryland, Kentucky, Missouri, Delaware — explicitly exempted), and especially European powers (Britain and France) considering recognition of the Confederacy; purpose is to redefine war aims to include emancipation, undermine the Confederate labor base, authorize Black military enlistment, and make European recognition politically toxic; POV is wartime president acting through military authority on the only legal basis available pre-13th Amendment.
+- **HIPP:** Executive proclamation issued under Lincoln's war powers as commander-in-chief, after the strategic Union victory at Antietam (September 17, 1862); intended audience is the Confederate states (and their enslaved population), the U.S. military, the Northern public, the border slave states (Maryland, Kentucky, Missouri, Delaware — left out because they were not in rebellion), and especially European powers (Britain and France) considering recognition of the Confederacy; purpose is to redefine war aims to include emancipation, undermine the Confederate labor base, authorize Black military enlistment, and make European recognition politically toxic; POV is wartime president acting through military authority on the only legal basis available pre-13th Amendment.
 
 > **5. Abraham Lincoln, Gettysburg Address (November 19, 1863)**
 > "Government of the people, by the people, for the people, shall not perish from the earth."
@@ -63,9 +63,9 @@ export const apushCivilWarPart6Data = {
 
 ## AP SAQ Structure
 
-For an 1850–1865 SAQ:
+From May 2027 all three SAQs are required and all three are sourced: SAQ 1 uses a secondary text, SAQ 2 a primary text, and SAQ 3 a primary or secondary non-text source (a map, chart or image), each from a different period between 1491 and 2001. An 1850–1865 SAQ built on a source like these typically asks you to:
 
-- **A. Identify** one specific event, document, or actor
+- **A. Identify** or describe one specific event, document, or actor (often one the source refers to)
 - **B. Explain** how it sharpened the sectional crisis or transformed the Union war effort
 - **C. Compare** to a different event/document, OR explain the perspective of an excluded group (enslaved people, free Black northerners, women, Native nations during the war)
 
@@ -89,26 +89,26 @@ For an 1850–1865 SAQ:
       exercise: {
         questions: [
           {
-            question: "Which historical context is most essential for sourcing the Emancipation Proclamation (issued September 1862, effective January 1863)?",
+            question: 'Which piece of historical context matters most when sourcing the Emancipation Proclamation?',
             options: [
-              "Lincoln issued the Proclamation under his war powers as commander-in-chief, only after the strategic Union victory at Antietam (September 17, 1862) gave the announcement credibility; the document deliberately exempted the loyal border slave states (Maryland, Kentucky, Missouri, Delaware) and Union-occupied Confederate areas, freeing only enslaved people in still-rebellious territory — and it transformed war aims to include emancipation, authorized Black military enlistment, and helped block European recognition of the Confederacy",
-              "Lincoln issued the Proclamation under his peacetime constitutional authority before any Union military victory, with no Antietam connection, no border-state exemption, no impact on war aims, and no European recognition implications of any kind during the entire period in any region",
-              "Lincoln issued the Proclamation in 1865 after the Civil War ended with no Antietam connection, no border-state exemption, no Black enlistment authorization, and no European recognition implications of any kind during the entire period in any region",
-              "There was no Emancipation Proclamation issued during the Civil War of any kind in any region of the United States during the entire period from 1861 through 1865 with no border-state exemptions and no Black enlistment authorization of any kind during the period"
+              'It was announced after Antietam, using the president\'s war powers',
+              'It was issued after Congress had passed the 13th Amendment in 1864',
+              'It was drafted after Britain had recognized the Confederacy in 1862',
+              'It was published after the border states ended slavery on their own'
             ],
             correctAnswer: 0,
-            explanation: 'Emancipation Proclamation: war powers + after Antietam Sept 1862 + exempted loyal border states + transformed war aims + Black enlistment + blocked European recognition.'
+            explanation: 'Lincoln announced the preliminary Proclamation five days after Antietam and justified it as a war measure, which explains why it covered only areas in rebellion. The 13th Amendment passed Congress in 1865, Britain never recognized the Confederacy, and the border states had not abolished slavery.'
           },
           {
-            question: "Which best identifies the point of view of Lincoln's First Inaugural Address (March 4, 1861)?",
+            question: 'Which best identifies the point of view of Lincoln\'s First Inaugural Address (March 4, 1861)?',
             options: [
-              "Newly inaugurated Republican president working to keep the Upper South in the Union by denying secession's legality, pledging non-aggression unless attacked, defending federal authority over federal property (foreshadowing the Sumter crisis), reassuring on noninterference with existing slavery in the states where it existed, and appealing to 'the better angels of our nature'",
-              "Confederate president justifying secession with no denial of secession's legality, no pledge of non-aggression, no defense of federal authority, and no reassurance on noninterference with existing slavery of any kind during the entire period in any region",
-              "Outgoing Democratic president James Buchanan defending his administration's response to secession with no Upper South retention strategy, no Sumter foreshadowing, and no 'better angels' appeal of any kind during the entire period in any region",
-              "British Crown official commenting on the American secession crisis with no relationship to American constitutional law or the Sumter crisis of any kind during the entire period in any region of the United States during the period in any region"
+              'A departing president defending his handling of the secession winter',
+              'A Republican president hoping to keep the Upper South in the Union',
+              'A Confederate leader explaining why the Lower South had seceded',
+              'An abolitionist president promising to free all enslaved people'
             ],
-            correctAnswer: 0,
-            explanation: 'First Inaugural POV: newly inaugurated Republican president, Upper South retention focus, denied secession\'s legality + Sumter foreshadowing + reassured on existing slavery + "better angels" appeal.'
+            correctAnswer: 1,
+            explanation: 'Lincoln spoke after seven states had seceded but before Fort Sumter, and he denied that secession was legal while promising not to interfere with slavery where it existed, an appeal aimed at the Upper South. He was the incoming, not departing, president, and he made no promise of general emancipation.'
           }
         ]
       }
@@ -120,19 +120,19 @@ For an 1850–1865 SAQ:
       exercise: {
         questions: [
           {
-            prompt: 'The 1858 speech in which Lincoln declared that a house divided against itself cannot stand.',
+            question: 'The 1858 speech in which Lincoln declared that a house divided against itself cannot stand.',
             answer: 'House Divided',
             acceptableAnswers: ['House Divided', 'House Divided Speech'],
             hint: 'Delivered accepting the Illinois Republican Senate nomination.'
           },
           {
-            prompt: 'The proclamation issued September 1862 that took effect January 1, 1863.',
+            question: 'The proclamation issued September 1862 that took effect January 1, 1863.',
             answer: 'Emancipation Proclamation',
             acceptableAnswers: ['Emancipation Proclamation'],
             hint: 'Issued under Lincoln\'s war powers after Antietam.'
           },
           {
-            prompt: 'The November 1863 speech that recast the war as a test of whether democratic government can survive.',
+            question: 'The November 1863 speech that recast the war as a test of whether democratic government can survive.',
             answer: 'Gettysburg Address',
             acceptableAnswers: ['Gettysburg Address'],
             hint: 'Delivered at the dedication of the Soldiers\' National Cemetery.'
@@ -173,26 +173,26 @@ For an 1850–1865 SAQ:
       exercise: {
         questions: [
           {
-            question: 'An SAQ asks: "Identify ONE event between 1850 and 1861 that increased sectional tension and explain how it did so." Which response would score highest?',
+            question: 'An SAQ asks: "Briefly explain ONE way an event between 1850 and 1861 increased sectional tension." Which response would earn the point?',
             options: [
-              "The Kansas-Nebraska Act (1854), drafted by Stephen Douglas, repealed the Missouri Compromise's 36°30' line and applied 'popular sovereignty' to Kansas and Nebraska territories; it triggered 'Bleeding Kansas' (a low-grade civil war over slavery in Kansas, including the Pottawatomie massacre and the sack of Lawrence), shattered the Whig Party, accelerated the founding of the Republican Party (1854), and transformed slavery's expansion from a Southern demand into a constitutional crisis the Northern public could no longer ignore",
-              "Some event happened at some point and increased some kind of sectional tension during the period from 1850 through 1861 in some region of the United States during the period in some region of the country during the period",
-              "There were no events that increased sectional tension during the entire period from 1850 through 1861 in any region of the United States with no Kansas-Nebraska, no Bleeding Kansas, no Republican Party, and no Whig collapse of any kind during the period",
-              "The Kansas-Nebraska Act decreased sectional tension and stabilized the Missouri Compromise of 1820 with no Bleeding Kansas, no Whig collapse, and no Republican Party founding of any kind during the entire period from 1854 through 1860 in any region"
+              'The Kansas-Nebraska Act let settlers vote on slavery north of 36°30\', which led to violence in Kansas and the founding of the Republican Party',
+              'The Kansas-Nebraska Act was passed in 1854 and was written by Stephen Douglas, and it was one of the most famous laws of the decade',
+              'The Kansas-Nebraska Act banned slavery in Kansas and Nebraska, which calmed sectional conflict until the Dred Scott decision of 1857',
+              'The Kansas-Nebraska Act was passed after John Brown\'s raid, which convinced Southern leaders to demand popular sovereignty in the West'
             ],
             correctAnswer: 0,
-            explanation: 'AP SAQ rewards specific event (Kansas-Nebraska 1854) + specific mechanism (repealed 36°30\' + popular sovereignty) + specific consequences (Bleeding Kansas + Whig collapse + Republican Party 1854).'
+            explanation: 'The strongest response names the event, states what it did, and explains how it raised tension. The second only identifies the act, the third reverses what the act did, and the fourth gets the order wrong, since Brown\'s raid came in 1859.'
           },
           {
-            question: 'Which short answer best demonstrates AP "complexity" by complicating the standard "Lincoln freed the slaves" narrative?',
+            question: 'Which short answer best shows AP "complexity" about the claim that "Lincoln freed the slaves"?',
             options: [
-              "Although Lincoln issued the Emancipation Proclamation (1862–63), enslaved people drove the policy from below: from the war's first days, enslaved people fled to Union lines (treated as 'contraband' under General Butler's 1861 ruling), forcing Congress to pass the Confiscation Acts (1861, 1862), and creating the political and military pressure that made emancipation feasible; ultimately ~180,000 Black men served in the U.S. Colored Troops, and the 13th Amendment (1865) provided the constitutional basis Lincoln's military proclamation could not — making emancipation an interactive process between Lincoln, Congress, and self-emancipating Black Americans",
-              "Lincoln single-handedly freed all enslaved people in 1862 with no Black agency, no contraband flight, no Confiscation Acts, no U.S. Colored Troops, and no 13th Amendment of any kind during the entire period in any region",
-              "There was no emancipation of any kind during the entire Civil War period from 1861 through 1865 in any region of the United States with no Lincoln, no Proclamation, no Black soldiers, and no 13th Amendment of any kind during the period",
-              "Black agency was irrelevant to emancipation and enslaved people did not flee to Union lines, did not serve in the Union army, and did not pressure Congress in any way during the entire Civil War period from 1861 through 1865 in any region"
+              'Lincoln freed every enslaved person at once when he issued his proclamation',
+              'Enslaved people who fled to Union lines pushed the Union toward emancipation',
+              'Congress abolished slavery in 1861 over the objections of a reluctant Lincoln',
+              'Slavery ended when Britain and France demanded it as the price of neutrality'
             ],
-            correctAnswer: 0,
-            explanation: 'AP complexity: complicate "Lincoln freed the slaves" with self-emancipation (contraband flight) + Confiscation Acts 1861-62 + USCT (~180K) + 13th Amendment 1865 = interactive process, not Lincoln alone.'
+            correctAnswer: 1,
+            explanation: 'The strongest answer complicates the claim by showing that people who fled to Union lines forced the issue before Lincoln acted, which led to the Confiscation Acts, Black enlistment and finally the Proclamation. The Proclamation did not free everyone, Congress did not abolish slavery in 1861, and European powers made no such demand.'
           }
         ]
       }

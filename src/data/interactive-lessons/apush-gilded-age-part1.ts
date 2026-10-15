@@ -19,7 +19,7 @@ export const apushGildedAgePart1Data = {
 | 📌 Political Machines & Corruption |
 | Farmers' Populist Movement |
 
-> 🔑 **Key Concept:** Mark Twain coined "Gilded Age" — glittering on the surface but corrupt underneath. The AP exam focuses on the **tension between rapid economic growth and extreme inequality**, and how workers, farmers, and immigrants responded.
+> 🔑 **Key Concept:** The era takes its name from *The Gilded Age* (1873), a satirical novel by Mark Twain and Charles Dudley Warner: glittering on the surface but corrupt underneath. The AP exam focuses on the **tension between rapid economic growth and extreme inequality**, and how workers, farmers, and immigrants responded.
       `
     },
     {
@@ -65,26 +65,26 @@ export const apushGildedAgePart1Data = {
       exercise: {
         questions: [
           {
-            question: 'The key difference between vertical and horizontal integration is:',
+            question: 'Which of the following best describes the difference between vertical and horizontal integration?',
             options: [
-              'Vertical integration controls all stages of production, while horizontal integration eliminates competitors at the same stage',
-              'Vertical integration is legal while horizontal integration is always illegal',
-              'Vertical integration applies only to agriculture while horizontal applies to manufacturing',
-              'Vertical integration reduces costs while horizontal integration always increases them'
+              'Vertical integration was legal, but horizontal integration was banned by statute',
+              'Vertical integration served agriculture, but horizontal integration served industry',
+              'Vertical integration absorbed suppliers, but horizontal integration absorbed rivals',
+              'Vertical integration raised prices, but horizontal integration always lowered them'
             ],
-            correctAnswer: 0,
-            explanation: 'Carnegie\'s vertical integration meant owning everything from iron ore mines to steel mills to railroads that shipped the product. Rockefeller\'s horizontal integration meant buying out all other oil refineries until Standard Oil had a near-monopoly. Both strategies concentrated economic power but in different ways.'
+            correctAnswer: 2,
+            explanation: 'Carnegie bought the mines, ships and railroads that supplied his mills, while Rockefeller bought competing refineries. Both forms were legal until antitrust law began to be enforced, both appeared in manufacturing, and neither had a fixed effect on prices.'
           },
           {
-            question: 'Social Darwinism was used during the Gilded Age primarily to:',
+            question: 'Gilded Age writers most often used social Darwinism to',
             options: [
-              'Justify extreme wealth inequality by arguing that economic success reflected natural superiority',
-              'Promote government regulation of monopolies and trusts',
-              'Support labor unions\' demands for higher wages and shorter hours',
-              'Advocate for immigration restrictions based on scientific evidence'
+              'defend great fortunes as the reward of natural fitness',
+              'support federal regulation of large monopolies and trusts',
+              'back labor unions seeking higher wages and shorter hours',
+              'argue for public aid to families thrown out of work'
             ],
             correctAnswer: 0,
-            explanation: 'Social Darwinists like Herbert Spencer and William Graham Sumner applied Darwin\'s evolution theory to society, arguing that the wealthy were "naturally" superior and the poor were "unfit." This ideology was used to oppose government regulation, labor protections, and social welfare programs — claiming they interfered with natural selection.'
+            explanation: 'Herbert Spencer and William Graham Sumner applied "survival of the fittest" to society, so success seemed to prove merit and government aid seemed to interfere with nature. That reasoning was used against regulation, unions and relief, not for them.'
           }
         ]
       }
@@ -110,13 +110,13 @@ export const apushGildedAgePart1Data = {
 - **Old immigrants** (pre-1880): Northern/Western Europe (Britain, Germany, Ireland, Scandinavia)
 - **New immigrants** (1880s+): Southern/Eastern Europe (Italy, Poland, Russia, Greece) + China, Japan
 - Settled in **ethnic urban neighborhoods** (Little Italy, Chinatown)
-- Faced **nativism**: Chinese Exclusion Act (1882) — first law banning immigration by nationality
+- Faced **nativism**: Chinese Exclusion Act (1882) — the first major federal law to bar immigrant laborers of a specific nationality
 - **Ellis Island** (New York, 1892) — processing center for European immigrants
-- **Angel Island** (San Francisco) — harsh processing for Asian immigrants
+- **Angel Island** (San Francisco Bay, opened 1910) — harsh processing and long detentions for Asian immigrants
 
 ### Political Machines
 
-- **Tammany Hall** (New York City) — led by **Boss Tweed**
+- **Tammany Hall** (New York City) — Democratic machine led in the late 1860s by William M. "Boss" Tweed
 - Provided services to immigrants (jobs, housing, food) in exchange for **votes**
 - Rampant corruption — graft, kickbacks, election fraud
 - **Thomas Nast** — political cartoonist who exposed Tammany Hall corruption
@@ -130,7 +130,7 @@ export const apushGildedAgePart1Data = {
 
 1) What business strategy did John D. Rockefeller use to control 90% of oil refining by buying out all competitors?
 
-2) What 1882 law was the first federal law to ban immigration based on nationality?
+2) What 1882 law suspended the immigration of Chinese laborers for ten years?
 
 3) What labor organization led by Samuel Gompers focused on practical "bread and butter" gains for skilled workers?
 
@@ -140,9 +140,9 @@ Use the exact historical term.
         boxes: 3,
         correctAnswers: ['horizontal integration', 'Chinese Exclusion Act', 'American Federation of Labor'],
         hint1: 'Buying competitors at the same level of production — ___ integration',
-        hint2: 'Banned immigration from a specific country',
+        hint2: 'It named one nationality in its title and was renewed in 1892 and 1902',
         hint3: 'AFL — American ___ of ___',
-        explanation: 'Horizontal integration eliminated competitors at the same stage of production (Rockefeller bought rival refineries). The Chinese Exclusion Act (1882) reflected growing nativism and remained in effect until 1943. The AFL (founded 1886) focused on achievable goals for skilled craft workers.'
+        explanation: 'Horizontal integration eliminated competitors at the same stage of production (Rockefeller bought rival refineries). The Chinese Exclusion Act (1882) reflected growing nativism; it was made permanent in 1902 and repealed in 1943. The AFL (founded 1886) focused on achievable goals for skilled craft workers.'
       }
     },
     {
@@ -155,7 +155,7 @@ Use the exact historical term.
         dropdowns: [
           {
             label: 'Andrew Carnegie\'s essay arguing the wealthy must use their fortunes for public good was called the ___',
-            options: ['Gospel of Wealth', 'Social Darwinism', 'Communist Manifesto', 'Wealth of Nations']
+            options: ['Gospel of Wealth', 'Social Gospel', 'Acres of Diamonds', 'Progress and Poverty']
           },
           {
             label: 'The 1894 railroad strike led by Eugene V. Debs was the ___',
@@ -163,14 +163,14 @@ Use the exact historical term.
           },
           {
             label: 'The corrupt New York City political machine exposed by Thomas Nast was ___',
-            options: ['Tammany Hall', 'Pendleton Hall', 'Carnegie Hall', 'Faneuil Hall']
+            options: ['Tammany Hall', 'Hull-House', 'the Stalwarts', 'the Mugwumps']
           }
         ],
         correctAnswers: ['Gospel of Wealth', 'Pullman Strike', 'Tammany Hall'],
         hint1: 'Carnegie donated \\$350 million to libraries, universities, and parks',
         hint2: 'Federal troops and a court injunction were used to break this strike',
         hint3: 'Led by Boss Tweed; controlled NYC politics through patronage and graft',
-        explanation: 'Carnegie\'s Gospel of Wealth (1889) argued philanthropy was the rich\'s duty — critics called it hypocritical given his brutal labor practices. The Pullman Strike (1894) showed the federal government would side with business against labor. Tammany Hall exemplified Gilded Age political corruption.'
+        explanation: 'Carnegie\'s Gospel of Wealth (1889) argued philanthropy was the duty of the rich; critics called it hypocritical given the wage cuts and union-breaking at his mills. Social Gospel ministers, Russell Conwell\'s Acres of Diamonds sermon and Henry George\'s Progress and Poverty were different responses to wealth. The Pullman Strike (1894) showed the federal government would side with business against labor. Tammany Hall exemplified Gilded Age political corruption, while Hull-House was a settlement house and the Stalwarts and Mugwumps were Republican factions.'
       }
     },
     {
@@ -182,26 +182,26 @@ Use the exact historical term.
       exercise: {
         questions: [
           {
-            question: 'Which of the following BEST explains why the federal government generally sided with business over labor during the Gilded Age?',
+            question: 'Which of the following best explains why the federal government usually sided with employers in major Gilded Age strikes?',
             options: [
-              'Courts used injunctions and the Sherman Antitrust Act against unions (not monopolies), and politicians depended on industrial donors for campaign funding',
-              'Constitutional amendments explicitly prohibited labor unions',
-              'Workers voluntarily chose not to organize because wages were rising rapidly',
-              'The federal government had no legal authority to intervene in labor disputes'
+              'A constitutional amendment had outlawed unions in industries that crossed state lines',
+              'Most industrial workers refused to join unions during a long period of rising wages',
+              'Congress had passed laws giving employers sole authority to settle labor disputes',
+              'Officials and judges treated work stoppages as threats to property and to commerce'
             ],
-            correctAnswer: 0,
-            explanation: 'Ironically, the Sherman Antitrust Act (1890), intended to break up monopolies, was initially used more against labor unions (as "conspiracies in restraint of trade") than against corporations. Politicians depended on wealthy industrialists for campaign support, and the prevailing ideology of laissez-faire economics discouraged government intervention on workers\' behalf.'
+            correctAnswer: 3,
+            explanation: 'Presidents sent troops in 1877 and 1894, and courts issued injunctions, sometimes under the Sherman Antitrust Act, on the ground that strikes obstructed commerce and the mails. No amendment outlawed unions, many workers did organize, and Congress passed no such law.'
           },
           {
-            question: 'A historian comparing the "old" immigration (pre-1880) with the "new" immigration (1880s–1920s) would note that the MOST significant difference was:',
+            question: 'Which of the following was a major difference between the "new" immigration after 1880 and earlier immigration?',
             options: [
-              'New immigrants came predominantly from Southern and Eastern Europe, faced greater nativist hostility, and were more likely to settle in urban ethnic enclaves',
-              'Old immigrants settled exclusively in rural areas while new immigrants all became factory workers',
-              'New immigrants were primarily Protestant while old immigrants were Catholic',
-              'Old immigrants faced no discrimination while new immigrants were universally welcomed'
+              'Earlier immigrants settled almost entirely on Western farms',
+              'Most new arrivals came from southern and eastern Europe',
+              'Newcomers after 1880 were mostly Protestants from Britain',
+              'Earlier groups met no religious or ethnic hostility from natives'
             ],
-            correctAnswer: 0,
-            explanation: 'The "new" immigrants from Italy, Poland, Russia, and other Southern/Eastern European nations faced intense prejudice due to their Catholic or Jewish faith, unfamiliar languages, and perceived cultural differences. They concentrated in cities, forming ethnic neighborhoods, and organizations like the American Protective Association campaigned against them — a nativism that culminated in the restrictive Immigration Acts of the 1920s.'
+            correctAnswer: 1,
+            explanation: 'After 1880 most immigrants came from Italy, the Russian Empire, Austria-Hungary and Greece, and many were Catholic, Orthodox or Jewish. Earlier Irish and German immigrants also settled in cities and faced nativist hostility, as the Know-Nothings of the 1850s showed.'
           }
         ]
       }

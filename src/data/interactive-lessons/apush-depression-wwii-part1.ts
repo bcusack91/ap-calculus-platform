@@ -34,7 +34,7 @@ export const apushDepressionWwiiPart1Data = {
 |-------|---------|
 | **Stock market speculation** | Buying on margin (borrowing to invest); stock prices inflated far beyond real value |
 | **Overproduction** | Factories and farms produced more than consumers could buy |
-| **Unequal wealth** | Top 1% held ~33% of wealth; workers couldn't afford goods they produced |
+| **Unequal income** | In 1929 the richest 5% of Americans received about one-third of all personal income; workers couldn't afford the goods they produced |
 | **Bank failures** | No FDIC insurance; bank runs wiped out savings; ~9,000 banks failed by 1933 |
 | **Tariffs** | Hawley-Smoot Tariff (1930) raised rates → trade wars → global depression deepened |
 | **Federal Reserve** | Failed to expand money supply or rescue failing banks |
@@ -44,7 +44,7 @@ export const apushDepressionWwiiPart1Data = {
 - **Unemployment:** 25% by 1933 (12–15 million workers)
 - **Homelessness:** "Hoovervilles" — shantytowns named mockingly after President Hoover
 - **Dust Bowl:** Severe drought + over-farming on Great Plains → massive soil erosion; Okies migrated to California
-- **Hoover's response:** Believed in "rugged individualism" and voluntary cooperation; too slow to act; Bonus Army (1932) — WWI veterans demanded early payment of bonuses; Hoover ordered army to disperse them with tear gas
+- **Hoover's response:** Believed in "rugged individualism" and voluntary cooperation; too slow to act; Bonus Army (1932) — WWI veterans demanded early payment of bonuses; Hoover ordered the army to clear them, and troops under General MacArthur used tear gas and burned their camp
 
 > ⚠️ **AP Alert:** The AP exam contrasts Hoover's philosophy (limited government; voluntary action) with FDR's approach (active federal intervention). This is a key ideological divide that still shapes American politics.
       `
@@ -58,26 +58,26 @@ export const apushDepressionWwiiPart1Data = {
       exercise: {
         questions: [
           {
-            question: 'Which of the following was the MOST fundamental cause of the Great Depression?',
+            question: 'Which of the following best explains why the stock market crash of 1929 led to a long depression rather than a brief downturn?',
             options: [
-              'Structural overproduction combined with extreme wealth inequality meant consumers couldn\'t purchase what the economy produced',
-              'The stock market crash of 1929 destroyed the entire American economy overnight',
-              'European nations deliberately caused a global depression to weaken the United States',
-              'Federal government spending was too high during the 1920s, creating unsustainable debt'
+              'A single day of panic selling wiped out the savings of most American families',
+              'Unequal incomes and a fragile, unregulated banking system weakened demand',
+              'European nations deliberately stopped buying American goods to hurt the U.S.',
+              'Heavy federal spending in the 1920s had left the government deeply in debt'
             ],
-            correctAnswer: 0,
-            explanation: 'While the stock market crash triggered the crisis, the underlying cause was systemic: factories and farms overproduced while wages remained stagnant and wealth concentrated at the top. Workers and farmers simply couldn\'t buy enough goods to sustain the economy. The crash exposed this instability but didn\'t cause it alone.'
+            correctAnswer: 1,
+            explanation: 'The crash was a trigger; weak consumer demand, overproduction and thousands of bank failures turned it into a depression. Most families owned no stock, European buying fell because of the global slump rather than a plot, and the federal government ran surpluses in the 1920s.'
           },
           {
-            question: 'President Hoover\'s response to the Depression was criticized primarily because:',
+            question: 'President Hoover\'s response to the Depression was criticized mainly because he',
             options: [
-              'His belief in limited government and voluntary action led to inadequate federal intervention as millions suffered',
-              'He immediately raised taxes and cut government spending, worsening the crisis',
-              'He nationalized all major industries and banks, alarming business leaders',
-              'He refused to run for reelection, leaving the country without leadership'
+              'nationalized the largest banks and railroads, alarming business leaders',
+              'relied on voluntary action and rejected direct federal relief to individuals',
+              'ended all federal aid to farmers and abolished the Federal Farm Board',
+              'declined to run for reelection and left the country without leadership'
             ],
-            correctAnswer: 0,
-            explanation: 'Hoover\'s philosophy of "rugged individualism" led him to rely on voluntary cooperation from businesses and charities rather than direct federal relief. While he did create the Reconstruction Finance Corporation (1932), his actions were widely seen as too little, too late. The Bonus Army incident (1932) further damaged his image.'
+            correctAnswer: 1,
+            explanation: 'Hoover believed federal handouts would undermine self-reliance, so he lent money to banks and businesses through the RFC but resisted direct relief to the unemployed. He nationalized nothing, created rather than abolished the Farm Board, and ran for reelection in 1932.'
           }
         ]
       }
@@ -153,20 +153,50 @@ Use the exact historical term or abbreviation.
             options: ['Dust Bowl', 'Great Migration', 'Bonus March', 'Gold Rush']
           },
           {
-            label: 'FDR\'s strategy of categorizing New Deal programs by their purpose is remembered as the ___',
-            options: ['Three Rs (Relief, Recovery, Reform)', 'Fair Deal', 'Square Deal', 'New Frontier']
+            label: 'Senator Huey Long\'s plan to cap large fortunes and guarantee every family a minimum income was called ___',
+            options: ['Old Age Revolving Pensions', 'Share Our Wealth', 'the Fair Deal', 'the Square Deal']
           },
           {
             label: 'The 1935 law that guaranteed workers the right to organize unions and collectively bargain was the ___',
             options: ['Wagner Act', 'Taft-Hartley Act', 'Sherman Act', 'Clayton Act']
           }
         ],
-        correctAnswers: ['Dust Bowl', 'Three Rs (Relief, Recovery, Reform)', 'Wagner Act'],
+        correctAnswers: ['Dust Bowl', 'Share Our Wealth', 'Wagner Act'],
         hint1: 'Drove "Okies" to California; chronicled by John Steinbeck in The Grapes of Wrath',
-        hint2: 'Relief = immediate help; Recovery = economic restart; Reform = prevent future crises',
+        hint2: 'Its motto was "Every man a king."',
         hint3: 'Also called the National Labor Relations Act (NLRA)',
-        explanation: 'The Dust Bowl (1930s) was an ecological disaster caused by drought and over-farming. The Three Rs organized New Deal programs by purpose. The Wagner Act (1935) was the most important labor law in American history, establishing the NLRB and collective bargaining rights.'
+        explanation: 'The Dust Bowl (1930s) was an ecological disaster caused by drought and over-farming. Long\'s Share Our Wealth movement pressured FDR from the left (Old Age Revolving Pensions was Dr. Townsend\'s plan). The Wagner Act (1935) became the foundation of modern American labor law, establishing the NLRB and collective bargaining rights.'
       }
+    },
+    {
+      id: 'apushdep1-wwii',
+      type: 'text' as const,
+      content: `
+## 📌 World War II: Causes & U.S. Entry (1931–1941)
+
+| Cause | Details |
+|-------|---------|
+| **Aggression by the Axis powers** | Japan seized Manchuria (1931) and invaded China (1937); Italy conquered Ethiopia (1935–1936); Germany remilitarized the Rhineland (1936), annexed Austria (1938) and invaded Poland (September 1939) |
+| **The Depression** | Economic collapse helped fascist and militarist movements win power in Germany and Japan |
+| **Appeasement** | Britain and France let Hitler take the Sudetenland at Munich (1938), hoping to avoid war |
+| **American isolationism** | The Neutrality Acts (1935–1937) kept the U.S. out of foreign quarrels and treated aggressors and victims alike |
+
+### The U.S. Path to War
+
+**Neutrality Acts** (1935–1937) → **cash-and-carry** arms sales (1939) → **Destroyers-for-Bases** deal and first peacetime draft (1940) → **Lend-Lease** (March 1941) → oil cut off to Japan (July 1941) → **Atlantic Charter** (August 1941) → **Pearl Harbor** (December 7, 1941) → war with Japan, Germany and Italy
+
+## The Home Front (1941–1945)
+
+| Group or Area | Wartime Change |
+|---|---|
+| **Economy** | War spending ended the Depression; unemployment fell to 1.2% by 1944; rationing, war bonds and wage-price controls |
+| **Women** | About 6 million more women took paid jobs ("Rosie the Riveter"); about 350,000 served in uniform |
+| **African Americans** | A. Philip Randolph's threatened march won Executive Order 8802 (1941) against defense-job discrimination; the "Double V" campaign; segregated units such as the Tuskegee Airmen |
+| **Mexican Americans** | The Bracero Program (1942) brought farmworkers from Mexico; the Zoot Suit Riots (1943) targeted Mexican American youths |
+| **Japanese Americans** | Executive Order 9066 (1942) forced about 120,000 people, two-thirds of them citizens, into camps; upheld in *Korematsu v. United States* (1944) |
+
+> 🔑 **AP Connection:** Parts 4 and 5 develop the road to war and the home front in depth. For now, remember the CED's two big claims: most Americans opposed entering the war until Pearl Harbor, and wartime mobilization both ended the Depression and opened new, though unequal, opportunities.
+      `
     },
     {
       id: 'apushdep1-applied',
@@ -177,26 +207,37 @@ Use the exact historical term or abbreviation.
       exercise: {
         questions: [
           {
-            question: 'The New Deal is BEST understood as:',
+            question: 'The New Deal is best understood as',
             options: [
-              'A fundamental expansion of the federal government\'s role in the economy and social welfare that created lasting institutions while falling short of ending the Depression itself',
-              'A socialist revolution that permanently eliminated capitalism in the United States',
-              'A conservative program that reduced government involvement in the economy',
-              'A temporary emergency program that was completely dismantled after World War II'
+              'a socialist program that placed most major industries under state ownership',
+              'a conservative program that reduced federal involvement in the economy',
+              'a lasting expansion of federal power that did not end the Depression',
+              'a temporary emergency program that was fully dismantled after World War II'
             ],
-            correctAnswer: 0,
-            explanation: 'The New Deal permanently transformed American governance — Social Security, FDIC, SEC, labor rights, and federal economic management all endure today. However, the Depression only fully ended with WWII military spending. The New Deal was neither revolutionary enough for the left (didn\'t redistribute wealth) nor limited enough for the right (expanded federal power dramatically).'
+            correctAnswer: 2,
+            explanation: 'Social Security, the FDIC, the SEC and federal labor law all endure, yet unemployment stayed above 14 percent until wartime spending. The New Deal regulated private industry rather than owning it, it greatly increased federal involvement, and its core programs survived the war.'
           },
           {
-            question: 'Which of the following MOST directly connects the New Deal to earlier Progressive Era reforms?',
+            question: 'Which of the following most directly connects the New Deal to the Progressive Era?',
             options: [
-              'Both movements expanded federal regulation of the economy and social conditions in response to the failures of laissez-faire policies',
-              'Both movements reduced the size of the federal government and promoted states\' rights',
-              'Both movements primarily benefited wealthy industrialists and corporations',
-              'Both movements were led by Republican presidents who opposed business interests'
+              'Both reduced the size of the federal government in favor of states\' rights',
+              'Both were designed mainly to benefit large industrial corporations',
+              'Both expanded federal regulation in response to laissez-faire failures',
+              'Both were led by Republican presidents who broke with their own party'
             ],
-            correctAnswer: 0,
-            explanation: 'The New Deal built on Progressive Era foundations — both rejected laissez-faire economics and argued the government must actively regulate the economy and protect citizens. The Pure Food and Drug Act (1906) parallels the SEC (1934); the income tax (16th Amendment, 1913) funded New Deal spending. FDR\'s programs dramatically expanded what Progressives had started.'
+            correctAnswer: 2,
+            explanation: 'Progressives created the Federal Reserve, the FTC and food and drug regulation, and the New Deal extended that regulatory approach to banking, securities and labor. Both enlarged federal power, both aimed to curb corporate abuses, and Franklin Roosevelt was a Democrat.'
+          },
+          {
+            question: 'Japan\'s decision to attack Pearl Harbor in December 1941 was most directly a response to which American action?',
+            options: [
+              'Lend-Lease shipments of weapons to Germany and Italy',
+              'A naval blockade of the Japanese home islands',
+              'An embargo that cut off Japan\'s supply of oil from the U.S.',
+              'Recognition of Manchukuo as an independent state'
+            ],
+            correctAnswer: 2,
+            explanation: 'After Japan occupied southern Indochina in July 1941, Roosevelt froze Japanese assets, cutting off the American oil Japan depended on, and Japan chose war to seize resources elsewhere. Lend-Lease aided Britain and the Soviet Union, there was no blockade before the war, and the U.S. refused to recognize Manchukuo.'
           }
         ]
       }

@@ -5,7 +5,7 @@ export const apushReformMovementsPart6Data = {
       id: 'apushref6-intro',
       type: 'text' as const,
       content: `
-# ⛪ Antebellum Reform Movements (1820–1860)
+# 🇺🇸 Reform Movements
 
 **Part 6 of 7 — Problem-Solving Workshop**
 
@@ -51,19 +51,20 @@ export const apushReformMovementsPart6Data = {
 
 - **HIPP:** Convention manifesto adopted at the Seneca Falls Women's Rights Convention in July 1848; intended audience is American women and male allies, with the document deliberately modeled on the Declaration of Independence to claim continuity with revolutionary republican principles; purpose is to organize a women's rights movement around legal, political, educational, and religious grievances (including the demand for suffrage); POV is white, middle-class women active in abolitionism (especially Stanton and Lucretia Mott, whose exclusion from the 1840 World Anti-Slavery Convention motivated organizing).
 
-> **4. Sojourner Truth, "Ain't I a Woman?" (delivered 1851 at Akron Women's Rights Convention)**
-> "I have ploughed and planted, and gathered into barns... and ain't I a woman?"
+> **4. Sojourner Truth, speech at the Akron Women's Rights Convention (May 1851), as reported by Marius Robinson in the *Anti-Slavery Bugle* (June 21, 1851)**
+> "I am a woman's rights. I have as much muscle as any man, and can do as much work as any man. I have plowed and reaped and husked and chopped and mowed, and can any man do more than that?"
 
-- **HIPP:** Speech delivered extemporaneously at the 1851 Akron Women's Rights Convention by Sojourner Truth, a formerly enslaved Black abolitionist and women's rights advocate; intended audience is the convention floor (largely white middle-class women) and the wider women's rights and abolitionist movements; purpose is to insist that the category "woman" be expanded to include enslaved and laboring Black women, refuting the "delicate woman" arguments used by anti-suffrage opponents; POV is formerly enslaved Black woman whose lived experience (manual labor, separation from her children) destabilizes white-middle-class definitions of womanhood.
+- **HIPP:** Speech delivered without notes at the 1851 Akron Women's Rights Convention by Sojourner Truth, a formerly enslaved Black abolitionist and women's rights advocate, and printed weeks later by Robinson, editor of an Ohio antislavery paper who attended the convention; intended audience is the convention floor (largely white middle-class women and some hostile men) and the wider women's rights and abolitionist movements; purpose is to answer the claim that women were too weak for equal rights by pointing to the hard labor Black women performed, insisting that "woman" include enslaved and laboring Black women; POV is a formerly enslaved Black woman whose lived experience (field labor, separation from her children) destabilizes white middle-class definitions of womanhood.
+- **Sourcing warning:** The better-known version, with the refrain "Ain't I a Woman?", was published by Frances Dana Gage in 1863, twelve years later, and puts a Southern dialect in the mouth of a woman raised in New York who spoke Dutch as her first language. Historians treat Robinson's 1851 report as closer to what Truth said. Comparing the two versions is itself a sourcing exercise: Gage wrote during the Civil War for a different audience and purpose.
 
-> **5. Charles Grandison Finney, *Lectures on Revivals of Religion* (1835)**
-> "A revival is not a miracle... it consists entirely in the right exercise of the powers of nature."
+> **5. Charles Grandison Finney, *Lectures on Revivals of Religion* (1835), Lecture I, on what a revival is (wording of the revised 1868 edition)**
+> "It is not a miracle, or dependent on a miracle, in any sense. It is a purely philosophical result of the right use of the constituted means--as much so as any other effect produced by the application of means."
 
 - **HIPP:** Theological lectures by the leading Second Great Awakening revivalist Charles Grandison Finney, published in 1835 at the height of revival activity in the "burned-over district" of upstate New York; intended audience is evangelical ministers and the revival-minded laity; purpose is to defend new-measure revivalism (anxious bench, protracted meetings, women praying in public, direct emotional appeal) and articulate a perfectionist theology that human action could bring about both individual conversion and the social Kingdom of God; POV is leading evangelical Presbyterian-Congregationalist revivalist whose perfectionism fueled abolitionism, temperance, and women's rights.
 
 ## AP SAQ Structure
 
-For an antebellum-reform SAQ:
+From May 2027 all three SAQs are required and all three are sourced: SAQ 1 uses a secondary text (a historian's argument), SAQ 2 a primary text, and SAQ 3 a primary or secondary non-text source (an image, map or chart), each from a different period between 1491 and 2001. A reform SAQ built on one of these documents typically asks you to:
 
 - **A. Identify** one specific reform movement, document, or leader
 - **B. Explain** how it shaped American politics, religion, or society
@@ -89,26 +90,26 @@ For an antebellum-reform SAQ:
       exercise: {
         questions: [
           {
-            question: "Which historical context is most essential for sourcing Garrison's opening editorial of *The Liberator* (January 1831)?",
+            question: 'Which historical context is most useful for sourcing Garrison\'s opening editorial in The Liberator (January 1831)?',
             options: [
-              "Published in Boston in January 1831, the editorial marked Garrison's rejection of gradualism and colonization (then the dominant antislavery stance among white northerners) in favor of immediatist abolition; appeared months before Nat Turner's Rebellion (August 1831), which would harden Southern slave laws and make Garrison's name notorious in the South",
-              "Published in London in 1807 after British abolition of the slave trade with no rejection of gradualism, no colonization debate, and no connection to Nat Turner's Rebellion of any kind during the entire period in any region",
-              "Published in Charleston in 1850 in support of the Fugitive Slave Act with no rejection of gradualism, no immediatism, and no connection to Nat Turner's Rebellion of any kind during the entire period in any region",
-              "There was no *Liberator* and no Garrison editorial of any kind during the entire period from 1830 through 1860 in any region of the United States during the period in any region of the United States during the period"
+              'It appeared after Nat Turner\'s revolt had already alarmed the slaveholding South',
+              'It appeared just after Congress passed a stronger law for recapturing fugitives',
+              'It appeared when most white antislavery Northerners favored colonization',
+              'It appeared as Parliament first debated ending the British Atlantic slave trade'
             ],
-            correctAnswer: 0,
-            explanation: 'Liberator Jan 1831 context: Boston + rejection of gradualism/colonization for immediatism + months before Nat Turner Aug 1831 → Southern crackdown + Garrison\'s notoriety.'
+            correctAnswer: 2,
+            explanation: 'Garrison\'s vow not to "equivocate" announced a break with the gradualism and colonization that most white antislavery Northerners still supported. Nat Turner\'s revolt came seven months later, the Fugitive Slave Act in 1850, and Britain had abolished its slave trade in 1807.'
           },
           {
-            question: "Which best identifies the point of view of the Seneca Falls Declaration of Sentiments (1848)?",
+            question: 'Which best identifies the point of view of the authors of the Declaration of Sentiments (1848)?',
             options: [
-              "White, middle-class women active in abolitionism (especially Stanton and Mott, whose exclusion from the 1840 World Anti-Slavery Convention had motivated organizing); deliberately modeled on the Declaration of Independence to claim continuity with revolutionary republican principles and to embarrass a polity that excluded half its adult population from political life",
-              "Working-class immigrant women with no abolitionist organizing background and no connection to the World Anti-Slavery Convention of any kind during the entire period from 1840 through 1848 in any region of the United States",
-              "Southern white planters' wives with no abolitionist organizing background, no connection to revolutionary republican principles, and no demand for women's suffrage of any kind during the entire period in any region",
-              "British women's-rights advocates with no relationship to American abolitionism, no Stanton or Mott involvement, and no Declaration of Independence model of any kind during the entire period from 1840 through 1848 in any region"
+              'Lowell mill workers seeking a ten-hour day from the state legislature',
+              'Middle-class white women who had learned to organize in antislavery work',
+              'Wives of Southern planters defending the household order of slavery',
+              'British reformers who had organized the World Anti-Slavery Convention'
             ],
-            correctAnswer: 0,
-            explanation: 'Seneca Falls POV: white middle-class women + abolitionist roots (Stanton, Mott) + 1840 London exclusion + Declaration of Independence model.'
+            correctAnswer: 1,
+            explanation: 'Stanton, Mott and most signers were middle-class white women whose abolitionist work, and their exclusion from the 1840 London convention, shaped their demands. Lowell workers organized separately around wages and hours, Southern planters\' wives were not involved, and the British convention organizers had refused to seat women.'
           }
         ]
       }
@@ -132,10 +133,10 @@ For an antebellum-reform SAQ:
             hint: 'Drafted at Seneca Falls by Stanton and Mott.'
           },
           {
-            prompt: 'The 1851 speech at the Akron Women\'s Rights Convention that destabilized white-middle-class definitions of "woman."',
-            answer: "Ain't I a Woman?",
-            acceptableAnswers: ["Ain't I a Woman?", "Ain't I a Woman", "Aint I a Woman", "Aint I a Woman?"],
-            hint: 'Delivered by Sojourner Truth.'
+            prompt: 'The formerly enslaved abolitionist whose 1851 speech at the Akron Women\'s Rights Convention challenged white middle-class definitions of "woman."',
+            answer: 'Sojourner Truth',
+            acceptableAnswers: ['Sojourner Truth', 'Truth'],
+            hint: 'She took this name in 1843; her birth name was Isabella.'
           }
         ]
       }
@@ -173,26 +174,26 @@ For an antebellum-reform SAQ:
       exercise: {
         questions: [
           {
-            question: 'An SAQ asks: "Identify ONE reform movement of the antebellum period and explain its connection to the Second Great Awakening." Which response would score highest?',
+            question: 'An SAQ asks: "Briefly explain ONE way the Second Great Awakening influenced a reform movement in the period 1820–1860." Which response would earn the point?',
             options: [
-              "The temperance movement, organized in groups such as the American Temperance Society (1826) and the Washingtonians (1840), drew directly on Charles Grandison Finney's perfectionist theology that human action could perfect both individual souls and society; revival converts (especially in upstate New York's burned-over district) viewed alcohol as both individual sin and social cause of family poverty and labor disorder, treating temperance as a sacred duty inseparable from personal salvation",
-              "Some reform movement happened at some point and had some connection to some kind of religious revival during the period from 1820 through 1860 in some region of the United States during the period in some region of the country during the period",
-              "There were no reform movements during the entire period from 1820 through 1860 with no Second Great Awakening, no temperance, no Finney, and no revivalism of any kind during the entire period in any region of the United States",
-              "The temperance movement existed but had no connection to the Second Great Awakening and no Finney involvement of any kind during the entire period from 1820 through 1860 in any region of the United States during the period"
+              'The temperance movement was a major reform of the period, and it became one of the largest and best-known movements of the 1830s',
+              'Revival converts treated drinking as a sin to be removed from society, so they built temperance societies and pledged total abstinence',
+              'Revival preachers formed temperance societies after Congress banned the sale of whiskey in 1826, and the law led to many conversions',
+              'Catholic bishops led revivals in the Burned-Over District, so converts built public common schools across the state of New York'
             ],
-            correctAnswer: 0,
-            explanation: 'AP SAQ rewards specific movement (temperance/American Temperance Society 1826/Washingtonians 1840) + specific religious connection (Finney perfectionism + burned-over district + alcohol as sin AND social cause).'
+            correctAnswer: 1,
+            explanation: 'The strongest response links a religious idea (sin can and must be removed) to a specific reform and the action reformers took. The first only identifies the movement, the third invents a federal whiskey ban, and the fourth credits Catholic bishops with a Protestant revival.'
           },
           {
-            question: 'Which short answer best demonstrates AP "complexity" by complicating the standard "abolitionist movement = white northern reformers" narrative?',
+            question: 'Which short answer best demonstrates complexity by challenging the view that abolitionism was led by white Northerners?',
             options: [
-              "Although white northern abolitionists like Garrison are often centered, the abolitionist movement was fundamentally shaped by Black activism: David Walker's *Appeal* (1829), Frederick Douglass's *North Star* (1847) and post-1851 break with Garrisonian moral suasion, Sojourner Truth's speeches, Harriet Tubman's Underground Railroad work, the AME Church's organizational support, and the free-Black communities that hosted antislavery meetings — making the movement an interracial coalition rather than a white-led campaign with Black participants",
-              "The abolitionist movement was entirely white-led with no Black participation of any kind, no Walker, no Douglass, no Truth, no Tubman, no AME Church, and no free-Black communities of any kind during the entire period in any region",
-              "There was no abolitionist movement of any kind during the entire period from 1820 through 1860 with no Garrison, no Walker, no Douglass, no Truth, and no Tubman of any kind during the entire period in any region of the United States",
-              "The abolitionist movement was led entirely by southern white planters with no northern white reformers and no Black activism of any kind during the entire period from 1820 through 1860 in any region of the United States during the period"
+              'White reformers such as Garrison and the Tappans led the movement, and Black Americans mostly benefited from their work',
+              'Southern reformers such as the Grimké sisters led the movement, and most of its leaders came from slaveholding families',
+              'Political leaders such as Clay and Calhoun shaped the movement, and it worked mainly through Congress, not moral suasion',
+              'Black activists such as Walker and Douglass shaped its demands, and it was an interracial effort, not a white-led cause'
             ],
-            correctAnswer: 0,
-            explanation: 'AP complexity: complicate "white northern" narrative with Walker 1829 + Douglass *North Star* 1847 + Truth + Tubman + AME Church + free-Black communities → interracial coalition, not white-led with Black participants.'
+            correctAnswer: 3,
+            explanation: 'Walker attacked colonization before most white reformers did, and Black writers, speakers, churches and Underground Railroad networks shaped the movement throughout. The first restates the view being challenged, the Grimkés were exceptions rather than typical leaders, and Clay and Calhoun were not abolitionists.'
           }
         ]
       }

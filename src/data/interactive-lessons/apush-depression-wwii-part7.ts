@@ -5,7 +5,7 @@ export const apushDepressionWwiiPart7Data = {
       id: 'apushdep7-intro',
       type: 'text' as const,
       content: `
-# 🌪️ The Great Depression and World War II (1920–1945)
+# 🇺🇸 The Great Depression & World War II
 
 **Part 7 of 7 — AP Review**
 
@@ -55,14 +55,14 @@ export const apushDepressionWwiiPart7Data = {
 | 1942 | Manhattan Project officially begins | Atomic-weapons development |
 | 1943 | Italy surrenders (Sept); Tehran Conference | Allied coordination |
 | 1944 (Jun) | D-Day (Normandy invasion) | European turning point |
-| 1944 (Nov) | FDR fourth term; *Korematsu* upholds internment | Wartime presidency; civil-liberties failure |
+| 1944 (Nov–Dec) | FDR fourth term (Nov); *Korematsu* upholds the exclusion order (Dec) | Wartime presidency; civil-liberties failure |
 | 1945 (Feb) | Yalta Conference (FDR, Churchill, Stalin) | Postwar planning |
 | 1945 (Apr) | FDR dies; Truman becomes president | Transition |
 | 1945 (May 8) | V-E Day (Germany surrenders) | European war ends |
 | 1945 (Jul) | Potsdam Conference; Trinity test of atomic bomb | Beginning Cold War; bomb ready |
 | 1945 (Aug 6) | Hiroshima | First combat use of nuclear weapon |
-| 1945 (Aug 9) | Nagasaki; Soviet Union declares war on Japan | Second nuclear weapon; Soviet entry |
-| 1945 (Aug 15) | V-J Day (Japan accepts surrender) | WWII ends |
+| 1945 (Aug 8–9) | Soviet Union declares war on Japan (Aug 8) and invades Manchuria; Nagasaki (Aug 9) | Soviet entry; second nuclear weapon |
+| 1945 (Aug 14–15) | V-J Day: Japan announces it accepts Allied terms (Aug 14 in the U.S., Aug 15 in Japan) | WWII ends |
 | 1945 (Sep 2) | Formal Japanese surrender (USS *Missouri*) | War formally over |
 
 ## First New Deal (1933) vs. Second New Deal (1935)
@@ -88,7 +88,7 @@ export const apushDepressionWwiiPart7Data = {
 | **Sacco and Vanzetti** | Italian immigrant anarchists executed 1927 |
 | **Teapot Dome (1922–24)** | Harding administration oil-lease scandal |
 | **Stock Market Crash (Oct 1929)** | Beginning of Great Depression |
-| **Smoot-Hawley Tariff (1930)** | Highest U.S. tariffs in history; worsened Depression |
+| **Smoot-Hawley Tariff (1930)** | Raised many duties to near-record levels; foreign retaliation worsened the Depression |
 | **Hoovervilles** | Shantytowns; named ironically for Hoover |
 | **Bonus Army (1932)** | WWI veterans demanding early bonus payment; dispersed by MacArthur |
 | **Bank Holiday (March 1933)** | FDR closed all banks for inspection |
@@ -114,19 +114,19 @@ export const apushDepressionWwiiPart7Data = {
 | **Atlantic Charter (Aug 1941)** | FDR-Churchill war-aims declaration |
 | **Pearl Harbor (Dec 7, 1941)** | Japanese attack on Hawaii |
 | **EO 9066 (Feb 1942)** | Authorized Japanese internment |
-| **Korematsu v. United States (1944)** | Upheld internment |
+| **Korematsu v. United States (1944)** | Upheld the exclusion of Japanese Americans from the West Coast |
 | **Bracero Program (1942–64)** | Mexican agricultural labor |
 | **WAACs/WAVES** | Women in military auxiliaries |
 | **Rosie the Riveter** | Women in war industries |
 | **Double V Campaign** | Black wartime campaign: victory abroad + at home |
 | **A. Philip Randolph** | March on Washington threat (1941) → FDR\'s EO 8802 banning defense-industry discrimination + creating FEPC |
-| **Manhattan Project** | Atomic-bomb development; ~$2 billion; Oppenheimer + Groves |
+| **Manhattan Project** | Atomic-bomb development; ~\\$2 billion; Oppenheimer + Groves |
 | **D-Day (June 6, 1944)** | Allied invasion of Normandy |
 | **Yalta (Feb 1945)** | FDR/Churchill/Stalin; postwar Europe |
 | **Potsdam (Jul 1945)** | Truman/Stalin/Churchill→Attlee; Cold War tensions emerge |
 | **Hiroshima (Aug 6, 1945)** | "Little Boy"; ~140,000 dead by year-end |
 | **Nagasaki (Aug 9, 1945)** | "Fat Man"; ~70,000 dead by year-end |
-| **V-J Day (Aug 15, 1945)** | Japan accepts Allied terms |
+| **V-J Day (Aug 14–15, 1945)** | Japan accepts Allied terms; formal surrender Sept 2 |
 
 ## AP Free-Response Strategy
 
@@ -141,6 +141,8 @@ export const apushDepressionWwiiPart7Data = {
 4. **Analysis (sourcing):** Use HIPP on at least 3 documents.
 5. **Complexity (the elusive 7th point):** Argue that the New Deal\'s racial limits (Social Security exclusions; FHA redlining; segregated CCC; Southern Democratic veto on anti-lynching) and its constitutional contestation (court-packing fight) reveal it as a partial, racially-stratified, and politically negotiated social-democratic settlement — but one whose institutional legacies (Social Security, NLRB, FDIC, SEC, federal regulatory state) define 20th-century American political economy and would be expanded in the Great Society (1964–65).
 
+**May 2027 exam format:** all three SAQs are required and all are sourced (SAQ 1 a secondary text, SAQ 2 a primary text, SAQ 3 a primary or secondary non-text source such as a Depression photograph or wartime poster), and there is one required LEQ with a broad prompt that spans several periods. Be ready to connect the New Deal backward to Progressive reform and forward to the Great Society.
+
 > 🔑 Key takeaway: 1920–1945 created the modern American state (regulatory + welfare) and the modern American international position (global military + economic preeminence) — the institutional matrix within which the rest of the 20th century would unfold.
       `
     },
@@ -151,26 +153,26 @@ export const apushDepressionWwiiPart7Data = {
       exercise: {
         questions: [
           {
-            question: 'Which best contrasts the First New Deal (1933) and the Second New Deal (1935+)?',
+            question: 'Which best contrasts the First New Deal (1933) with the Second New Deal (1935 and after)?',
             options: [
-              "The First New Deal (1933) focused on immediate economic recovery and relief through business-government cooperation (NIRA codes of fair competition, AAA acreage payments, CCC conservation jobs, Glass-Steagall banking reform); the Second New Deal (1935+) focused on long-term economic security, labor rights, and federal regulation of business through the Wagner Act (NLRB), Social Security Act, WPA, Rural Electrification Administration, and Banking Act of 1935; the First New Deal\'s industry-self-regulation approach was struck down (*Schechter* 1935 NIRA, *Butler* 1936 AAA) while the Second New Deal\'s regulatory and welfare approach survived after the 1937 'switch in time'",
-              'The First and Second New Deals were entirely identical in focus, programs, and constitutional fate with no meaningful differences of any kind during the entire period from 1933 through 1939 in any region of the United States',
-              'The First New Deal focused on labor rights and Social Security while the Second New Deal focused on business-government cooperation through NIRA codes during the entire period from 1933 through 1939 in any region of the United States',
-              'Neither the First nor the Second New Deal existed during the entire period from 1933 through 1939 in any region of the United States with no NIRA, no AAA, no Wagner Act, no Social Security, no Schechter, and no Butler of any kind during the period'
+              'The first stressed labor rights and security, and the second leaned on business codes',
+              'The first leaned on business codes, and the second stressed labor rights and security',
+              'The first relied on state governments, and the second ended all federal relief programs',
+              'The first was struck down by Congress, and the second was struck down by the Court'
             ],
-            correctAnswer: 0,
-            explanation: 'First New Deal (1933): recovery + relief + business-gov cooperation (NIRA codes + AAA + CCC + Glass-Steagall). Second New Deal (1935+): security + labor + federal regulation (Wagner/NLRB + Social Security + WPA + REA + 1935 Banking). First struck down (Schechter NIRA 1935, Butler AAA 1936); Second survived post-1937 switch.'
+            correctAnswer: 1,
+            explanation: 'The First New Deal relied on planning with business through the NIRA codes and the AAA, while the Second New Deal produced the Wagner Act, Social Security and the WPA. The first choice reverses the two, federal relief expanded in 1935, and Congress passed rather than struck down the early programs.'
           },
           {
-            question: 'Which best describes the relationship between EO 9066 (Feb 1942), *Korematsu v. United States* (Dec 1944), and the Civil Liberties Act of 1988?',
+            question: 'Which best describes the relationship among Executive Order 9066 (1942), Korematsu v. United States (1944) and the Civil Liberties Act of 1988?',
             options: [
-              "EO 9066 (Feb 19, 1942) authorized the Secretary of War to designate 'military areas' from which 'any or all persons may be excluded'; under this authority approximately 120,000 Japanese Americans (two-thirds U.S. citizens) were forcibly removed from the West Coast to inland concentration camps; *Korematsu v. United States* (December 1944, 6-3) upheld the constitutionality of the exclusion as a wartime national-security measure (with Justices Murphy, Roberts, and Jackson dissenting); the Civil Liberties Act of 1988 (signed by President Reagan) issued a formal apology and $20,000 reparations to surviving internees; *Korematsu* was repudiated in dicta by Chief Justice Roberts in *Trump v. Hawaii* (2018)",
-              'EO 9066, *Korematsu*, and the Civil Liberties Act of 1988 had no relationship of any kind with no Japanese internment, no Supreme Court decision, no formal apology, no reparations, and no *Trump v. Hawaii* repudiation of any kind during the entire period in any region',
-              'EO 9066 protected Japanese Americans from internment and *Korematsu* struck down internment as unconstitutional with no Civil Liberties Act of 1988 of any kind during the entire period from 1942 through 1988 in any region of the United States',
-              "There was no EO 9066, no *Korematsu*, and no Civil Liberties Act of 1988 of any kind during the entire period from 1942 through 1988 in any region of the United States with no Japanese internment of any kind during the entire period"
+              'An order authorized removal that the Court struck down and Congress then repealed',
+              'An order protected Japanese Americans, which the Court upheld and Congress expanded',
+              'An order applied only to noncitizens, and Congress made it permanent in 1988',
+              'An order authorized removal that the Court upheld and Congress later apologized for'
             ],
-            correctAnswer: 0,
-            explanation: 'EO 9066 (Feb 19, 1942) → ~120K Japanese Americans interned (2/3 US citizens) → Korematsu (Dec 1944, 6-3, Murphy/Roberts/Jackson dissent) upholds → Civil Liberties Act 1988 (Reagan): apology + $20K reparations → Korematsu repudiated in dicta in Trump v. Hawaii (2018, Roberts).'
+            correctAnswer: 3,
+            explanation: 'Executive Order 9066 led to the forced removal of about 120,000 Japanese Americans, Korematsu upheld the exclusion in a 6–3 decision, and the Civil Liberties Act of 1988 apologized and paid reparations to survivors. The Court did not strike the order down, it targeted citizens and noncitizens alike, and nothing in 1988 made it permanent.'
           }
         ]
       }
@@ -235,26 +237,26 @@ export const apushDepressionWwiiPart7Data = {
       exercise: {
         questions: [
           {
-            question: "DBQ prompt: 'Evaluate the extent to which the New Deal (1933–1939) transformed the relationship between the federal government and the American people.' Which thesis is most defensible?",
+            question: 'DBQ prompt: "Evaluate the extent to which the New Deal (1933–1939) transformed the relationship between the federal government and the American people." Which thesis is most defensible?',
             options: [
-              "The New Deal (1933–1939) fundamentally transformed the federal-citizen relationship by establishing federal responsibility for economic security (Social Security Act 1935), labor rights (Wagner Act 1935 + NLRB), banking stability (FDIC 1933, Glass-Steagall 1933), securities regulation (SEC 1934), and minimum labor standards (FLSA 1938) — but the transformation was selective by race, region, and sector (farmworkers and domestic workers excluded from Social Security; FHA redlining; AAA payments often to white landlords; segregated CCC; Southern Democratic veto on anti-lynching) and contested constitutionally until the 1937 'switch in time' reset the Court\'s relationship to the activist federal regulatory state",
-              "The New Deal had no impact on the federal-citizen relationship of any kind with no Social Security, no Wagner Act, no FDIC, no Glass-Steagall, no SEC, no FLSA, and no constitutional contestation of any kind during the entire period in any region",
-              "The New Deal completely transformed the federal-citizen relationship without any racial, regional, or sectoral selectivity and without any constitutional contestation of any kind during the entire period from 1933 through 1939 in any region of the United States",
-              "There was no New Deal of any kind during the entire period from 1933 through 1939 in any region of the United States with no Social Security, no Wagner Act, no FDIC, no Glass-Steagall, no SEC, no FLSA, no court-packing plan, and no 'switch in time' of any kind during the entire period in any region"
+              'The New Deal transformed the relationship in every way, giving all Americans equal benefits and facing no serious constitutional challenge',
+              'The New Deal changed almost nothing, because the Supreme Court struck down nearly every program it created before 1939',
+              'The New Deal lastingly expanded Washington\'s duty for economic security, but racial exclusions and court battles limited how far it reached',
+              'The New Deal included many programs, such as the CCC, the WPA and Social Security, that affected people in different ways'
             ],
-            correctAnswer: 0,
-            explanation: 'Defensible thesis: federal responsibility transformations (Social Security + Wagner/NLRB + FDIC + Glass-Steagall + SEC + FLSA) AND racial/regional/sectoral selectivity (Soc Sec exclusions + FHA redlining + AAA → white landlords + segregated CCC + Southern Dem anti-lynching veto) AND constitutional contestation (until 1937 switch). Earns thesis + complexity.'
+            correctAnswer: 2,
+            explanation: 'This thesis makes a claim about extent and qualifies it, which also sets up the complexity point. The first and second overstate in opposite directions, and the fourth lists programs without arguing how much the relationship changed.'
           },
           {
-            question: 'Which short answer best demonstrates the AP "outside evidence" point for a 1920–1945 prompt?',
+            question: 'Which piece of outside evidence would best support an argument that the New Deal strengthened organized labor?',
             options: [
-              "The Wagner Act (National Labor Relations Act, July 5, 1935) established the right of private-sector workers to organize, form unions, and engage in collective bargaining; created the National Labor Relations Board (NLRB) to enforce these rights and to investigate unfair labor practices by employers (such as firing union organizers, refusing to bargain, or company-union sponsorship); was upheld by the Supreme Court in *NLRB v. Jones & Laughlin Steel Corp.* (April 1937) — the post-'switch in time' Court accepting an expansive interstate-commerce reading; produced the surge of CIO industrial unionism that brought the steel, automobile, and rubber industries under union contract by ~1941; and remained the foundation of U.S. labor law (with Taft-Hartley 1947 modifications) until the present",
-              "Some labor law happened at some point during the New Deal in some region of the United States during the period from 1933 through 1939 in some region of the country during the period in some region of the country",
-              "There was no Wagner Act, no NLRB, no *NLRB v. Jones & Laughlin*, and no CIO industrial unionism of any kind during the entire period from 1933 through 1947 in any region of the United States with no labor-law foundation of any kind during the entire period",
-              "The Wagner Act eliminated the right to organize and bargain collectively with no NLRB, no *NLRB v. Jones & Laughlin*, and no CIO industrial unionism of any kind during the entire period from 1935 through 1947 in any region of the United States during the period"
+              'The Taft-Hartley Act of 1947 restricted unions, showing that labor had grown steadily stronger through the 1920s',
+              'Schechter v. United States (1935) upheld the NIRA, and its industry codes stayed in force for the rest of the decade',
+              'NLRB v. Jones & Laughlin Steel (1937) upheld the Wagner Act, and union membership soared as the CIO enrolled steel and auto workers',
+              'The Sherman Antitrust Act of 1890 protected unions from court injunctions and became the basis of New Deal labor law'
             ],
-            correctAnswer: 0,
-            explanation: 'Outside evidence: Wagner Act (NLRA, July 5, 1935) → right to organize/form unions/collective bargaining + NLRB enforces against unfair employer practices → upheld in NLRB v. Jones & Laughlin Steel (April 1937, post-switch) → CIO industrial unionism in steel/auto/rubber by ~1941 → US labor-law foundation (with Taft-Hartley 1947 mods).'
+            correctAnswer: 2,
+            explanation: 'Jones & Laughlin confirmed the Wagner Act\'s protections, and union membership roughly tripled between 1933 and 1940 as the CIO organized mass-production industries. Taft-Hartley came after the war and unions were weak in the 1920s, Schechter struck down the NIRA, and courts used the Sherman Act against unions.'
           }
         ]
       }

@@ -5,7 +5,7 @@ export const apushGildedAgePart6Data = {
       id: 'apushgil6-intro',
       type: 'text' as const,
       content: `
-# 🏭 The Gilded Age (1865–1898)
+# 🇺🇸 The Gilded Age
 
 **Part 6 of 7 — Problem-Solving Workshop**
 
@@ -37,11 +37,11 @@ export const apushGildedAgePart6Data = {
 ## Document Bank
 
 > **1. Andrew Carnegie, "Wealth" (1889) — later "The Gospel of Wealth"**
-> "The man who dies thus rich dies disgraced... It is the duty of the man of wealth... to consider all surplus revenues which come to him simply as trust funds, which he is called upon to administer."
+> "This, then, is held to be the duty of the man of Wealth: ... to consider all surplus revenues which come to him simply as trust funds, which he is called upon to administer.... Of such as these the public verdict will then be: 'The man who dies thus rich dies disgraced.'"
 
 - **HIPP:** Essay published in 1889 in the *North American Review* by the founder of Carnegie Steel (which J.P. Morgan would buy in 1901 to form U.S. Steel); intended audience is the late-19th-century wealthy industrial class and the broader reading public; purpose is to defend concentrated industrial wealth as the natural and beneficial outcome of competition while urging the wealthy to use their fortunes for public benefit (libraries, universities, peace endowments) during their lifetimes; POV is the era's most prominent steel industrialist articulating a stewardship justification for industrial capitalism in an era of growing labor unrest (the Homestead Strike of 1892 broke out three years later at a Carnegie plant).
 
-> **2. John D. Rockefeller, Senate testimony on Standard Oil**
+> **2. Standard Oil's methods (a summary for sourcing practice, not a quotation)**
 > Standard Oil (founded 1870) used horizontal integration, the trust device (1882), railroad rebates, and predatory pricing to control ~90% of U.S. oil refining by the 1880s.
 
 - **HIPP:** Standard Oil's business practices, defended by Rockefeller and his allies; intended audience is investors, courts, and Congress; purpose is to justify horizontal integration and the trust as efficient organization of a chaotic industry; POV is the dominant oil industrialist of the era; context includes the Sherman Antitrust Act (1890), *United States v. E.C. Knight* (1895, weakening Sherman by exempting "manufacturing"), and the eventual breakup of Standard Oil in *Standard Oil Co. v. United States* (1911).
@@ -54,7 +54,7 @@ export const apushGildedAgePart6Data = {
 > **4. Populist (People's) Party, Omaha Platform (July 1892)**
 > "The fruits of the toil of millions are boldly stolen to build up colossal fortunes for a few... Corruption dominates the ballot-box, the Legislatures, the Congress, and touches even the ermine of the bench."
 
-- **HIPP:** Founding platform of the People's Party adopted at the Omaha convention in July 1892; intended audience is small farmers (especially in the South and Plains), debt-burdened by deflation and high railroad rates, plus urban workers and reform-minded voters; purpose is to demand sweeping economic reform: free coinage of silver (16:1 silver-to-gold ratio), a graduated income tax, government ownership of railroads/telegraphs/telephones, direct election of senators, the secret ballot, and the eight-hour workday; POV is the agrarian-led producer-class coalition that would peak with William Jennings Bryan's 1896 "Cross of Gold" speech and 1896 Democratic-Populist fusion candidacy, ultimately defeated by William McKinley but later validated by Progressive-era reforms.
+- **HIPP:** Founding platform of the People's Party adopted at the Omaha convention in July 1892; intended audience is small farmers (especially in the South and Plains), debt-burdened by deflation and high railroad rates, plus urban workers and reform-minded voters; purpose is to demand sweeping economic reform: free coinage of silver (16:1 silver-to-gold ratio), a graduated income tax, government ownership of railroads/telegraphs/telephones, direct election of senators, the secret ballot, and the eight-hour workday; POV is the agrarian-led producer-class coalition that would peak with William Jennings Bryan's 1896 "Cross of Gold" speech and 1896 Democratic-Populist fusion candidacy, defeated by William McKinley but partly vindicated when Progressive-era reforms adopted the income tax and direct election of senators.
 
 > **5. Justice Henry Billings Brown, *Plessy v. Ferguson* (1896, majority); Justice John Marshall Harlan dissent**
 > Brown: "Legislation is powerless to eradicate racial instincts."  
@@ -62,13 +62,15 @@ export const apushGildedAgePart6Data = {
 
 - **HIPP:** Supreme Court decision (1896) upholding Louisiana's law requiring "separate but equal" railway cars; intended audience is state legislatures, federal courts, and the post-Reconstruction political order; purpose of the majority is to ratify state-imposed racial segregation under a narrow reading of the 14th Amendment's equal-protection clause; purpose of Harlan's dissent is to insist that the Constitution is "color-blind" and to reject segregation as a violation of equal protection; POV of majority is post-Reconstruction Court accommodating Southern white-supremacist politics; POV of Harlan is a former slaveholder turned reluctant defender of constitutional equality whose dissent foreshadowed *Brown v. Board* (1954).
 
-## AP SAQ Structure
+## AP SAQ Structure (May 2027 Exam)
 
-For a Gilded Age SAQ:
+From May 2027 all **three SAQs are required** (40 minutes, 20 percent of the score), and **every SAQ is built on a source**: Question 1 on a secondary text (a historian), Question 2 on a primary text, and Question 3 on a primary or secondary non-text source such as a cartoon, photograph, map or chart. Each comes from a different period between 1491 and 2001. Each SAQ has three parts (a, b, c), typically asking you to:
 
-- **A. Identify** one specific Gilded Age development (industrial, labor, agrarian, racial, or political)
-- **B. Explain** how it shaped American economic, political, or social life
-- **C. Compare** to a different development OR explain a perspective (industrialist, worker, farmer, immigrant, freedperson, Indigenous nation)
+- **Describe** the source's claim or a development it shows (for example, Sumner's view of the poor, or a Thomas Nast cartoon of Tammany Hall)
+- **Explain** a specific piece of historical evidence that supports or challenges the source
+- **Explain** a cause, effect, or comparison connected to it (industrialist, worker, farmer, immigrant, Black Southerner, Native nation)
+
+The other sections: 55 multiple-choice questions in 55 minutes (40 percent), one DBQ in 60 minutes including a 15-minute reading period (25 percent), and one required LEQ prompt in 40 minutes (15 percent).
 
 ## Common AP Traps
 
@@ -77,9 +79,9 @@ For a Gilded Age SAQ:
 | Treating "robber barons" and "captains of industry" as opposites | They are competing interpretations of the same figures (Carnegie, Rockefeller, Vanderbilt, Morgan) |
 | Treating labor as monolithic | Knights of Labor (1869, broad inclusive), AFL (1886, skilled craft, Gompers), Pullman/ARU (1894, Debs) had very different strategies |
 | Ignoring immigration | "New Immigration" (1880s+ from Southern/Eastern Europe) shaped urbanization, labor markets, and nativism |
-| Treating Populism as a Southern movement only | Populism was strongest in the South AND the Plains; Bryan's 1896 fusion campaign nearly won |
+| Treating Populism as a Southern movement only | Populism was strongest in the South AND the Plains; Bryan's 1896 fusion campaign won about 47 percent of the popular vote |
 | Ignoring Indigenous dispossession | Dawes Severalty Act (1887) and Wounded Knee Massacre (1890) overlap with industrialization |
-| Quoting documents without HIPP | Required for the complexity point |
+| Quoting documents without HIPP | The DBQ sourcing point requires explaining HIPP for at least two documents |
 
 > 🔑 Key takeaway: Gilded Age documents stage a battle between concentrated industrial wealth and its critics. HIPP forces you to identify whose voice you\'re reading and what economic moment they\'re writing in.
       `
@@ -91,26 +93,26 @@ For a Gilded Age SAQ:
       exercise: {
         questions: [
           {
-            question: 'Which historical context is most essential for sourcing Andrew Carnegie\'s "Wealth" / "Gospel of Wealth" (1889)?',
+            question: 'Which of the following best describes the historical situation in which Carnegie published "Wealth" in 1889?',
             options: [
-              "The essay was published in 1889 by the founder of Carnegie Steel during a period of intense industrial concentration and growing labor unrest; intended audience was the late-19th-century wealthy industrial class and the reading public; purpose was to defend concentrated industrial wealth as the natural outcome of competition while urging stewardship through philanthropy; POV is the era\'s most prominent steel industrialist articulating a stewardship justification for industrial capitalism — three years before the Homestead Strike (1892) at Carnegie\'s own plant violently exposed the gap between his stewardship rhetoric and his labor practices",
-              "The essay was published in 1789 by a Founding Father with no relationship to industrial wealth, Carnegie Steel, the Homestead Strike, or industrial capitalism of any kind during the entire period in any region of the United States",
-              "The essay was published in 1965 by a labor leader denouncing industrial wealth with no Carnegie Steel authorship, no philanthropy defense, and no Homestead Strike relevance of any kind during the entire period in any region",
-              "There was no Andrew Carnegie \"Gospel of Wealth\" essay of any kind during the entire period from 1865 through 1900 in any region of the United States with no Carnegie Steel, no Homestead Strike, and no industrial wealth defense of any kind during the period in any region"
+              'Congress had just broken up the largest industrial trusts',
+              'A long depression had wiped out most large American fortunes',
+              'Industrial fortunes were growing as labor conflict intensified',
+              'Unions had won the eight-hour day across most heavy industries'
             ],
-            correctAnswer: 0,
-            explanation: 'Carnegie 1889 context: founder of Carnegie Steel + industrial concentration era + growing labor unrest + stewardship justification for wealth + Homestead Strike (1892) at his own plant 3 years later exposes the gap.'
+            correctAnswer: 2,
+            explanation: 'Carnegie wrote three years after the Haymarket affair and three years before the Homestead Strike at his own plant, when industrial wealth and labor conflict were both rising. The Sherman Act came in 1890 and broke up no trusts at first, the next depression began in 1893, and the eight-hour day was not won in heavy industry.'
           },
           {
-            question: 'Which best identifies the purpose of the Populist Omaha Platform (July 1892)?',
+            question: 'Which of the following best describes the purpose of the Populist Omaha Platform of 1892?',
             options: [
-              "To demand sweeping economic reform addressing the grievances of small farmers (debt-burdened by deflation and high railroad rates) and urban workers: free coinage of silver at 16:1, a graduated income tax, government ownership of railroads/telegraphs/telephones, direct election of senators, the secret ballot, and the eight-hour workday — building a producer-class coalition that would peak with Bryan's 1896 fusion candidacy and whose specific demands were largely realized through later Progressive-era reforms",
-              "To defend the gold standard, oppose the income tax, and protect railroad corporations with no free silver, no graduated income tax, no government ownership, and no eight-hour workday demands of any kind during the entire period in any region",
-              "To demand the abolition of slavery and the passage of Reconstruction Amendments with no free silver, no graduated income tax, and no agrarian or labor reform of any kind during the entire period from 1892 through 1896 in any region",
-              "There was no Populist Omaha Platform in 1892 and no Populist Party of any kind during the entire period from 1892 through 1896 in any region of the United States with no free silver, no graduated income tax, and no government ownership demands of any kind during the entire period"
+              'To demand federal action against the power of banks and railroads',
+              'To defend the gold standard against inflationary currency plans',
+              'To call for federal troops to return to the former Confederate states',
+              'To seek lower tariffs that would help American factories sell abroad'
             ],
             correctAnswer: 0,
-            explanation: 'Omaha Platform 1892 purpose: agrarian + labor demands → free silver 16:1 + graduated income tax + gov ownership of RR/telegraph/telephone + direct election senators + secret ballot + 8-hour day → Bryan 1896 → later realized in Progressive Era.'
+            explanation: 'The platform demanded free silver, a graduated income tax and government ownership of railroads and telegraphs to curb the power of bankers and railroad corporations over farmers and workers. Populists opposed the gold standard, did not call for Reconstruction-style occupation, and the tariff was not their central demand.'
           }
         ]
       }
@@ -175,26 +177,26 @@ For a Gilded Age SAQ:
       exercise: {
         questions: [
           {
-            question: 'An SAQ asks: "Identify ONE Gilded Age labor conflict and explain how it shaped subsequent labor organizing." Which response would score highest?',
+            question: 'An SAQ asks: "Explain how ONE Gilded Age labor conflict affected labor organizing." Which response would best earn the point?',
             options: [
-              "The Pullman Strike (1894) began when the Pullman Palace Car Company cut wages without reducing rents in the company town of Pullman, Illinois; Eugene V. Debs's American Railway Union (ARU) launched a sympathy boycott that paralyzed western rail traffic; President Grover Cleveland sent federal troops, citing interference with the U.S. mail, and federal courts issued injunctions under the Sherman Antitrust Act (turned against unions); the strike collapsed, Debs went to prison and emerged a socialist who founded the Socialist Party of America (1901), and the use of federal injunctions against labor became a defining anti-union tool until the Norris-LaGuardia Act (1932)",
-              "Some labor strike happened at some point in the late 19th century during some period from 1865 through 1900 in some region of the United States during the period in some region of the country during the period",
-              "The Pullman Strike (1894) was a complete victory for the American Railway Union and Eugene V. Debs with no federal troops, no Sherman Antitrust injunction, no Debs imprisonment, and no Socialist Party of any kind during the entire period in any region",
-              "There were no Gilded Age labor conflicts of any kind during the entire period from 1865 through 1900 in any region of the United States with no Pullman Strike, no Debs, no ARU, and no Sherman Antitrust injunction of any kind during the entire period in any region"
+              'The Pullman Strike succeeded, so the American Railway Union grew into the AFL',
+              'The Homestead Strike led Congress to guarantee the right to bargain collectively',
+              'The Haymarket bombing made the Knights of Labor the largest union of the 1890s',
+              'Troops and an injunction broke the Pullman Strike, and Debs turned to socialism'
             ],
-            correctAnswer: 0,
-            explanation: 'AP SAQ rewards specific event (Pullman 1894) + specific mechanism (wage cut + ARU sympathy boycott + Cleveland federal troops + Sherman Antitrust injunction) + specific consequences (Debs → Socialist Party 1901 + federal injunction precedent until Norris-LaGuardia 1932).'
+            correctAnswer: 3,
+            explanation: 'Federal troops and a court injunction crushed the American Railway Union in 1894, and Debs left prison a socialist, a clear effect on labor organizing. The strike failed, collective bargaining was not guaranteed until the Wagner Act of 1935, and Haymarket hastened the decline of the Knights.'
           },
           {
-            question: 'Which short answer best demonstrates AP "complexity" by complicating the standard "Gilded Age = laissez-faire" narrative?',
+            question: 'Which of the following would best complicate the claim that the federal government followed a laissez-faire policy in the Gilded Age?',
             options: [
-              "Although Gilded Age courts and ideology championed laissez-faire (Sumner's social Darwinism, Lochner-style 'liberty of contract' developing toward 1905, narrow readings of the Sherman Act in *E.C. Knight* 1895), the federal government in fact actively intervened in the economy on the side of capital: high protective tariffs (McKinley 1890, Dingley 1897) shielded domestic industry; federal land grants subsidized transcontinental railroads; federal troops broke labor strikes (Great Railroad Strike 1877, Pullman 1894); the Sherman Antitrust Act was applied more often against unions than trusts; and federal Indian policy (Dawes Act 1887) opened reservation land for white capitalist development",
-              "The Gilded Age government had no economic interventions of any kind with no tariffs, no land grants, no federal troops against strikes, no Sherman Antitrust use against unions, and no Dawes Act of any kind during the entire period in any region",
-              "There was no Gilded Age government of any kind during the entire period from 1865 through 1900 in any region of the United States with no McKinley Tariff, no Dingley Tariff, no railroad land grants, and no Dawes Act of any kind during the period",
-              "The Gilded Age government followed pure laissez-faire with no tariffs, no land grants, no federal troops against strikes, and no Dawes Act of any kind during the entire period from 1865 through 1900 in any region of the United States"
+              'Congress passed no laws at all regulating railroad rates',
+              'Congress raised tariffs and granted land to railroads',
+              'Presidents refused to send troops into any labor dispute',
+              'Federal courts struck down most state antitrust statutes'
             ],
-            correctAnswer: 0,
-            explanation: 'AP complexity: complicate "laissez-faire" narrative — gov actively intervened FOR capital: tariffs (McKinley 1890, Dingley 1897) + RR land grants + federal troops vs strikes (1877 + Pullman 1894) + Sherman Act vs unions + Dawes Act 1887.'
+            correctAnswer: 1,
+            explanation: 'High tariffs and railroad land grants were active government support for business, which complicates the laissez-faire label. Congress did regulate railroads in 1887, presidents sent troops in 1877 and 1894, and rulings against state antitrust laws would not show government aid to business in any case.'
           }
         ]
       }

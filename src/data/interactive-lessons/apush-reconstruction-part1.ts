@@ -55,26 +55,26 @@ export const apushReconstructionPart1Data = {
       exercise: {
         questions: [
           {
-            question: 'Why did Radical Republicans reject President Johnson\'s Reconstruction plan?',
+            question: 'Why did Republicans in Congress reject President Johnson\'s Reconstruction plan in 1865–1866?',
             options: [
-              'Johnson pardoned most Confederates and allowed Southern states to pass Black Codes that effectively re-enslaved freed people',
-              'Johnson\'s plan was too harsh on the South and prevented economic recovery',
-              'Johnson demanded that the South ratify the 14th Amendment before rejoining the Union',
-              'Johnson\'s plan granted full citizenship and voting rights to all African Americans'
+              'Johnson\'s plan punished the South so harshly that its recovery stalled',
+              'Johnson\'s governments elected ex-Confederates and passed Black Codes',
+              'Johnson\'s plan made the South ratify the 14th Amendment before readmission',
+              'Johnson\'s plan gave full voting rights to all Black men in the South'
             ],
-            correctAnswer: 0,
-            explanation: 'Johnson\'s lenient plan allowed former Confederate leaders to regain power. Southern states passed Black Codes — laws that restricted African Americans\' freedom of movement, labor, and rights — essentially recreating slavery by another name. Radical Republicans saw this as a betrayal of the war\'s purpose and took control of Reconstruction.'
+            correctAnswer: 1,
+            explanation: 'Under Johnson\'s lenient terms, Southern states sent former Confederate leaders to Congress and passed Black Codes that restricted freedpeople\'s labor and movement. Johnson\'s plan was mild, not harsh, required only the 13th Amendment, and gave Black men no vote.'
           },
           {
-            question: 'The 14th Amendment is historically significant primarily because it:',
+            question: 'The 14th Amendment (1868) is historically significant mainly because it',
             options: [
-              'Established birthright citizenship and guaranteed equal protection under the law, becoming the constitutional foundation for civil rights',
-              'Abolished slavery throughout the United States',
-              'Granted women the right to vote in federal elections',
-              'Created the Electoral College system for presidential elections'
+              'abolished slavery and involuntary servitude throughout the nation',
+              'barred the states from denying the vote on account of sex',
+              'defined birthright citizenship and promised equal protection',
+              'guaranteed Black men the right to vote in every federal election'
             ],
-            correctAnswer: 0,
-            explanation: 'The 14th Amendment (1868) defined citizenship for the first time ("all persons born or naturalized in the United States"), overturning Dred Scott. Its equal protection and due process clauses have been used in virtually every major civil rights case since. The 13th Amendment abolished slavery; the 19th granted women\'s suffrage.'
+            correctAnswer: 2,
+            explanation: 'The 14th Amendment made all persons born or naturalized in the United States citizens, overturning Dred Scott, and its equal protection and due process clauses became the basis of later civil rights law. The 13th abolished slavery, the 15th barred racial discrimination in voting, and the 19th addressed sex.'
           }
         ]
       }
@@ -168,26 +168,26 @@ Use the exact historical term.
       exercise: {
         questions: [
           {
-            question: 'Which of the following BEST explains why Reconstruction is often characterized as an "unfinished revolution"?',
+            question: 'Which of the following best explains why historians often call Reconstruction an "unfinished revolution"?',
             options: [
-              'The Reconstruction Amendments established legal equality, but the withdrawal of federal enforcement allowed Southern states to systematically deny those rights for nearly a century',
-              'Reconstruction successfully achieved full racial equality, which was then maintained continuously',
-              'The Reconstruction Amendments were never ratified by enough states to take effect',
-              'Reconstruction only addressed economic inequality and ignored political or social rights'
+              'Full racial equality was achieved and then kept in place for decades',
+              'The new amendments were never ratified by enough states to take effect',
+              'Constitutional equality was won, but federal enforcement was abandoned',
+              'Reconstruction addressed economic rights but ignored political rights'
             ],
-            correctAnswer: 0,
-            explanation: 'Reconstruction produced transformative legal changes (13th, 14th, 15th Amendments) but lacked sustained political will for enforcement. The Compromise of 1877 effectively abandoned freed people to sharecropping, Jim Crow, and disenfranchisement. The "revolution" was real but incomplete — its promises wouldn\'t be pursued again until the Civil Rights Movement.'
+            correctAnswer: 2,
+            explanation: 'The 13th, 14th and 15th Amendments established legal equality, but after federal enforcement ended in 1877 Southern states denied those rights for nearly a century. The amendments were ratified, equality was not achieved, and political rights were central to Reconstruction.'
           },
           {
-            question: 'A historian argues: "Sharecropping was slavery by another name." Which evidence BEST supports this interpretation?',
+            question: 'A historian argues that "sharecropping was slavery by another name." Which evidence best supports this interpretation?',
             options: [
-              'Sharecroppers remained economically dependent on white landowners, were trapped by debt, and had limited freedom to leave — echoing key features of slavery',
-              'Sharecroppers received wages equal to those of factory workers in the North',
-              'The 13th Amendment explicitly permitted sharecropping as equivalent to slavery',
-              'Sharecropping only existed in Northern states where slavery had been abolished earlier'
+              'Debts to landowners and merchants kept many families from leaving',
+              'Sharecroppers earned wages equal to those of Northern factory workers',
+              'The 13th Amendment named sharecropping as a lawful form of servitude',
+              'Sharecropping was found mainly in Northern states after the war ended'
             ],
             correctAnswer: 0,
-            explanation: 'While sharecroppers were legally free, the system\'s structure — working someone else\'s land, perpetual debt to the landowner\'s store, inability to leave until debts were paid — created conditions of economic bondage that closely resembled slavery. This continuity of exploitation is a key AP concept about the limits of Reconstruction.'
+            explanation: 'Crop liens and store debts tied families to the land year after year, recreating the economic dependence of slavery even though sharecroppers were legally free. Sharecroppers were paid in shares, not wages, the amendment never mentions sharecropping, and the system was Southern.'
           }
         ]
       }

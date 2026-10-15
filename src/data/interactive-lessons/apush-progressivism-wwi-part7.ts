@@ -5,7 +5,7 @@ export const apushProgressivismWwiPart7Data = {
       id: 'apushpro7-intro',
       type: 'text' as const,
       content: `
-# 🌐 Progressivism, Imperialism, and World War I (1898–1920)
+# 🇺🇸 Progressivism & World War I
 
 **Part 7 of 7 — AP Review**
 
@@ -29,14 +29,14 @@ export const apushProgressivismWwiPart7Data = {
 
 | Year | Event | AP Significance |
 |---|---|---|
-| 1898 | Spanish-American War; *USS Maine*; Treaty of Paris (Cuba, Philippines, Puerto Rico, Guam); Anti-Imperialist League | U.S. emerges as overseas empire |
-| 1899–1902 | Philippine-American War | Brutal counter-insurgency; ~200,000+ Filipino dead |
+| 1898 | Spanish-American War; *USS Maine*; Hawaii annexed (July); Treaty of Paris (Spain relinquishes Cuba; cedes Puerto Rico, Guam and the Philippines); Anti-Imperialist League | U.S. emerges as overseas empire |
+| 1899–1902 | Philippine-American War | Brutal counter-insurgency; as many as 200,000 Filipino civilians dead |
 | 1899 | First Open Door Note (Hay) | U.S. demands trade access to China |
-| 1900 | Boxer Rebellion; Hawaii formally annexed | U.S. military intervention in China |
+| 1900 | Boxer Rebellion; second Open Door Note; Hawaii organized as a territory | U.S. military intervention in China |
 | 1901 | McKinley assassinated → Theodore Roosevelt becomes president | Era of Progressive activism begins |
 | 1902 | Anthracite Coal Strike (TR mediates) | "Square Deal" — labor not crushed |
-| 1903 | Panama Canal Zone acquired | TR's "I took the Canal" |
-| 1904 | Northern Securities broken up; *Roosevelt Corollary* to Monroe Doctrine | First successful trust-busting; U.S. as Western Hemisphere police |
+| 1903 | Panama Canal Zone acquired | TR later boasted that he took the Isthmus |
+| 1904 | Northern Securities broken up; *Roosevelt Corollary* to Monroe Doctrine | Landmark antitrust victory; U.S. as Western Hemisphere police |
 | 1906 | Pure Food and Drug Act; Meat Inspection Act; *The Jungle* | Federal consumer regulation |
 | 1908 | *Muller v. Oregon* (Brandeis brief) | Upheld 10-hour day for women |
 | 1909 | NAACP founded (Du Bois et al.) | Beginning of legal challenge to Jim Crow |
@@ -67,16 +67,16 @@ export const apushProgressivismWwiPart7Data = {
 | **Tariff** | Did not push reform | Payne-Aldrich (1909) — failed to lower significantly | Underwood (1913) — lowered tariff |
 | **Banking** | No major reform | No major reform | Federal Reserve Act (1913) |
 | **Labor** | Mediated 1902 coal strike | Continued cautious labor policy | Adamson Act (1916, 8-hour railroad day); Clayton Act exempts unions |
-| **Conservation** | National Parks; ~230 million acres protected | Continued conservation | Less emphasis |
-| **Race** | Booker T. Washington dinner at White House (1901) generated white outrage | Deferential to Southern Democrats | Resegregated federal civil service (1913); endorsed *Birth of a Nation* (1915) |
+| **Conservation** | National Parks; ~230 million acres protected | Continued conservation; fired Gifford Pinchot in the Ballinger-Pinchot controversy (1910) | Signed the act creating the National Park Service (1916) |
+| **Race** | Booker T. Washington dinner at White House (1901) generated white outrage | Deferential to Southern Democrats | Resegregated federal civil service (1913); screened *Birth of a Nation* at the White House (1915) |
 | **Foreign policy** | "Big Stick" — Panama Canal (1903), Roosevelt Corollary (1904), Russo-Japanese mediation (1905, Nobel Peace Prize) | "Dollar Diplomacy" — finance over force | "Moral Diplomacy" → WWI; Fourteen Points; League of Nations |
 
 ## Sprint Terms
 
 | Term | Definition |
 |---|---|
-| **Spanish-American War (1898)** | War with Spain; *Maine* explosion; Treaty of Paris ceded Cuba, Philippines, Puerto Rico, Guam |
-| **Anti-Imperialist League** | Opposed annexation of Philippines (Twain, Carnegie, Bryan) |
+| **Spanish-American War (1898)** | War with Spain; *Maine* explosion; Treaty of Paris: Spain relinquished Cuba (U.S. occupation, then the Platt Amendment) and ceded Puerto Rico, Guam and the Philippines (for \\$20 million) |
+| **Anti-Imperialist League** | Opposed annexation of Philippines (Twain, Carnegie, Addams, Gompers) |
 | **Open Door Notes (1899, 1900)** | Hay's diplomatic notes demanding trade access to China |
 | **Roosevelt Corollary (1904)** | Extension of Monroe Doctrine: U.S. as Western Hemisphere police |
 | **"Big Stick" diplomacy** | TR's policy: speak softly + carry credible military threat |
@@ -86,7 +86,7 @@ export const apushProgressivismWwiPart7Data = {
 | **"Square Deal"** | TR's domestic program |
 | **"New Nationalism"** | TR's 1910 speech / 1912 Bull Moose platform — strong federal regulation |
 | **"New Freedom"** | Wilson's 1912 platform — break up trusts, restore competition |
-| **Pure Food and Drug Act (1906)** | First federal food/drug regulation |
+| **Pure Food and Drug Act (1906)** | Banned adulterated and mislabeled food and drugs in interstate commerce |
 | **Meat Inspection Act (1906)** | Federal meat inspection |
 | **16th Amendment (1913)** | Federal income tax |
 | **17th Amendment (1913)** | Direct election of senators |
@@ -104,7 +104,7 @@ export const apushProgressivismWwiPart7Data = {
 | **Zimmermann Telegram (1917)** | German offer to Mexico to recover Texas/NM/AZ |
 | **Espionage Act (1917) / Sedition Act (1918)** | Wartime speech restriction |
 | **Schenck v. United States (1919)** | "Clear and present danger" test |
-| **Eugene V. Debs** | Imprisoned 1918 for anti-war speech; 1920 Socialist presidential vote ~900,000 from cell |
+| **Eugene V. Debs** | Convicted 1918 for antiwar speech, imprisoned 1919; 1920 Socialist presidential vote ~900,000 from his cell |
 | **Great Migration (1916+)** | Black Southerners moving north for war-industry jobs |
 | **Fourteen Points (Jan 1918)** | Wilson's liberal-internationalist war aims |
 | **Treaty of Versailles (1919)** | Postwar peace; Senate rejected |
@@ -124,7 +124,7 @@ export const apushProgressivismWwiPart7Data = {
 1. **Thesis (defensible claim):** Progressive reforms (1900–1920) addressed many problems created by Gilded Age industrialization — antitrust enforcement (Clayton Act 1914, FTC 1914), consumer protection (Pure Food and Drug Act 1906), banking reform (Federal Reserve Act 1913), labor regulation (Adamson Act 1916), and democratization (16th, 17th, 19th Amendments) — but they failed to address racial inequality (Wilson resegregation 1913; Plessy left intact), restricted civil liberties during WWI (Espionage Act 1917, Sedition Act 1918, Schenck 1919), and yielded to nativism and isolationism (1924 Quota Act, Senate rejection of the League).
 2. **Contextualization:** Connect to Gilded Age industrial concentration, labor unrest (Pullman 1894), agrarian Populism (Omaha Platform 1892, Bryan 1896), and muckraking exposés (Riis 1890, Tarbell 1904, Sinclair 1906).
 3. **Evidence (specific):** Pure Food and Drug Act (1906), Meat Inspection Act (1906), 16th–19th Amendments, Federal Reserve Act (1913), Clayton Antitrust Act (1914), FTC Act (1914), Adamson Act (1916), Triangle Shirtwaist Fire (1911), NAACP (1909), Espionage Act (1917), Schenck (1919).
-4. **Analysis (sourcing):** Use HIPP on at least 3 documents.
+4. **Analysis (sourcing):** Explain how or why HIPP matters to your argument for at least two documents (the rubric minimum; doing more is insurance).
 5. **Complexity (the elusive 7th point):** Argue that Progressive reform was selective by race, region, and political viewpoint — democratizing white politics through the 17th and 19th Amendments while resegregating the federal civil service and consolidating Southern Black disfranchisement, and restricting wartime speech under the Espionage and Sedition Acts; the era\'s reform agenda would resume in the New Deal (1933+) but its racial limits would persist until the Civil Rights Movement.
 
 > 🔑 Key takeaway: Progressivism is best understood as a partial, contradictory, and racially limited reform of industrial capitalism — but its institutional legacies (Federal Reserve, FTC, federal income tax, women\'s suffrage) define 20th-century American political economy.
@@ -137,26 +137,26 @@ export const apushProgressivismWwiPart7Data = {
       exercise: {
         questions: [
           {
-            question: "Which best contrasts Theodore Roosevelt\'s \"New Nationalism\" (1910/1912 platform) and Woodrow Wilson\'s \"New Freedom\" (1912 platform)?",
+            question: 'Which of the following best contrasts Theodore Roosevelt\'s New Nationalism with Woodrow Wilson\'s New Freedom in 1912?',
             options: [
-              "TR\'s 'New Nationalism' accepted large corporations as a permanent fact of industrial life and called for strong federal regulation through expert agencies (along with social-welfare measures: 8-hour day, women\'s suffrage, conservation, graduated income tax); Wilson\'s 'New Freedom' instead promised to break up trusts and restore small-business competition through aggressive antitrust enforcement and tariff and banking reform — though in office Wilson\'s actual program (Federal Reserve, Clayton Act, FTC) moved closer to TR\'s regulatory approach, and the two visions converged in the New Deal generation",
-              "TR\'s 'New Nationalism' and Wilson\'s 'New Freedom' were entirely identical with no meaningful differences in their approach to corporations, regulation, or trusts of any kind during the entire period from 1910 through 1916 in any region of the United States",
-              "TR\'s 'New Nationalism' promised to break up trusts and restore competition while Wilson\'s 'New Freedom' accepted large corporations and called for federal regulation during the entire period from 1910 through 1916 in any region of the United States",
-              "Neither 'New Nationalism' nor 'New Freedom' existed during the Progressive Era from 1900 through 1920 in any region of the United States with no TR, no Wilson, and no 1912 election of any kind during the entire period in any region of the country"
+              'Roosevelt would break up all trusts, but Wilson would accept big firms',
+              'Roosevelt would regulate big firms, but Wilson would restore competition',
+              'Roosevelt would end the income tax, but Wilson would raise the tariff',
+              'Roosevelt would cut federal power, but Wilson would nationalize banks'
             ],
-            correctAnswer: 0,
-            explanation: 'New Nationalism (TR): accept large corps + strong federal regulation via expert agencies + social-welfare. New Freedom (Wilson): break up trusts + restore competition + tariff/banking reform. In office Wilson moved closer to TR (Fed Reserve + Clayton + FTC). Converged in New Deal.'
+            correctAnswer: 1,
+            explanation: 'Roosevelt accepted large corporations as permanent and wanted expert federal regulation, while Wilson promised to restore competition by attacking monopoly. In office Wilson moved toward regulation with the Federal Reserve, the FTC and the Clayton Act. Wilson lowered the tariff, and neither candidate proposed nationalizing banks.'
           },
           {
-            question: 'Which best describes the relationship between U.S. entry into WWI (April 1917), the Espionage Act (1917) and Sedition Act (1918), and the First Red Scare (1919–20)?',
+            question: 'Which of the following best describes the relationship between World War I and the Red Scare of 1919–1920?',
             options: [
-              "U.S. entry into WWI (April 1917) was followed by the Espionage Act (June 1917, criminalizing interference with military operations or recruitment) and Sedition Act (May 1918, criminalizing 'disloyal, profane, scurrilous, or abusive language' about the U.S. government); these statutes were used to prosecute over 2,000 anti-war activists, socialists, and labor organizers (most famously Eugene V. Debs, sentenced to 10 years in 1918); after the November 1918 armistice and the November 1917 Bolshevik Revolution, the same political infrastructure was redirected against suspected anarchists and Bolsheviks in the Palmer Raids (1919–20), in which thousands were arrested and ~500 deported under the Anarchist Exclusion Act and Immigration Act of 1918",
-              "U.S. entry into WWI, the Espionage Act, the Sedition Act, and the First Red Scare had no relationship of any kind with no anti-war prosecution, no Debs imprisonment, no Palmer Raids, and no deportations of any kind during the entire period from 1917 through 1920 in any region",
-              "The Espionage Act and Sedition Act were used to protect speech and prevent prosecution of anti-war activists with no Debs imprisonment, no Palmer Raids, and no First Red Scare of any kind during the entire period from 1917 through 1920 in any region of the United States",
-              "There was no U.S. entry into WWI, no Espionage Act, no Sedition Act, and no First Red Scare of any kind during the entire period from 1917 through 1920 in any region of the United States with no anti-war prosecution and no Palmer Raids of any kind during the period"
+              'The Red Scare ended when the Sedition Act was passed in 1918',
+              'Wartime laws protected socialists from prosecution until 1920',
+              'Courts struck down the Espionage Act before the Palmer Raids',
+              'Wartime limits on dissent set patterns later used against radicals'
             ],
-            correctAnswer: 0,
-            explanation: 'Entry → Espionage 1917 + Sedition 1918 → 2,000+ prosecutions (Debs 10 yrs 1918) → after armistice (Nov 1918) + Bolshevik Revolution (Nov 1917) → Palmer Raids 1919-20 → ~500 deported under Anarchist Exclusion + Immigration Act 1918.'
+            correctAnswer: 3,
+            explanation: 'The Espionage and Sedition Acts and the wartime habit of equating dissent with disloyalty carried over into the Palmer Raids and deportations of 1919–1920. The Red Scare followed the Sedition Act, socialists such as Debs were prosecuted during the war, and the courts upheld the Espionage Act.'
           }
         ]
       }
@@ -221,26 +221,26 @@ export const apushProgressivismWwiPart7Data = {
       exercise: {
         questions: [
           {
-            question: "DBQ prompt: 'Evaluate the extent to which Progressive reforms (1900–1920) addressed the problems created by Gilded Age industrialization.' Which thesis is most defensible?",
+            question: 'DBQ prompt: "Evaluate the extent to which Progressive reforms (1900–1920) addressed the problems created by Gilded Age industrialization." Which of the following is the most defensible thesis?',
             options: [
-              "Progressive reforms (1900–1920) addressed many of the economic and political problems created by Gilded Age industrialization — federal antitrust enforcement (Clayton Act 1914, FTC 1914), consumer protection (Pure Food and Drug Act 1906), banking reform (Federal Reserve Act 1913), labor regulation (Adamson Act 1916), and democratization (16th, 17th, 18th, 19th Amendments) — but they failed to address racial inequality (Wilson\'s 1913 resegregation of the federal civil service; Plessy left intact; Birth of a Nation 1915 endorsed), restricted civil liberties during WWI (Espionage Act 1917, Sedition Act 1918, Schenck 1919), and yielded to nativism and isolationism (Senate rejection of the League 1919–20, Quota Acts 1921 and 1924)",
-              "Progressive reforms had no impact on the problems created by Gilded Age industrialization with no antitrust enforcement, no consumer protection, no banking reform, no labor regulation, and no democratization of any kind during the entire period in any region",
-              "Progressive reforms completely solved all problems created by Gilded Age industrialization with no racial inequality remaining, no civil-liberties restriction, and no nativism or isolationism of any kind during the entire period from 1900 through 1920 in any region",
-              "There were no Progressive reforms of any kind from 1900 through 1920 in any region of the United States with no Clayton Act, no FTC, no Pure Food and Drug Act, no Federal Reserve Act, no constitutional amendments, and no Espionage Act of any kind during the entire period in any region"
+              'Progressives curbed some abuses of industry but left racial inequality intact',
+              'Progressive reforms solved every problem created by industrialization by 1920',
+              'Progressive reforms had no effect because courts struck down every new law',
+              'Progressive reforms mainly helped farmers and ignored problems in the cities'
             ],
             correctAnswer: 0,
-            explanation: 'Defensible thesis: Progressive successes (Clayton + FTC + Pure Food/Drug + Fed Reserve + Adamson + 16/17/18/19) AND failures (Wilson resegregation 1913 + Plessy intact + Birth of a Nation endorsed + Espionage 1917/Sedition 1918/Schenck 1919 + League rejection + Quota Acts 1921/1924). Earns thesis + complexity.'
+            explanation: 'This thesis takes a position on extent and sets up evidence on both sides: regulation, consumer protection and the Federal Reserve against segregation, disfranchisement and wartime limits on speech. Not every problem was solved, courts upheld many reforms such as the Muller decision, and much Progressive activity centered on cities.'
           },
           {
-            question: 'Which short answer best demonstrates the AP "outside evidence" point for a Progressive-era / WWI prompt?',
+            question: 'Which of the following is accurate evidence a student could use, beyond the documents, in an essay on Progressive labor reform?',
             options: [
-              "The Triangle Shirtwaist Factory Fire (March 25, 1911) killed 146 garment workers — mostly young immigrant women — when fire broke out on the upper floors of a New York City building whose exit doors had been locked to prevent worker theft and unauthorized breaks; the disaster spurred New York to pass dozens of factory-safety, building-code, and worker-protection laws over the next several years (under Frances Perkins, who would later serve as FDR\'s Secretary of Labor and shape New Deal labor policy), making New York a model that other states copied — and demonstrating how a single industrial catastrophe could mobilize Progressive-era state-level reform across the country",
-              "Some factory fire happened at some point during the Progressive Era in some region of the United States during the period from 1900 through 1920 in some region of the country during the period in some region of the country",
-              "There was no Triangle Shirtwaist Factory Fire of any kind during the entire period from 1900 through 1920 in any region of the United States with no Frances Perkins, no factory-safety laws, and no Progressive-era state-level reform of any kind during the entire period",
-              "The Triangle Shirtwaist Factory Fire (1911) had no impact on factory-safety legislation, no connection to Frances Perkins or the New Deal, and no influence on Progressive-era state-level reform of any kind during the entire period in any region of the United States"
+              'The Triangle fire of 1911 led Congress to pass a national minimum wage',
+              'The Triangle fire of 1911 had no effect on later labor legislation',
+              'The Triangle fire of 1911 led New York to pass new factory safety laws',
+              'The Triangle fire of 1911 led New York to ban women from factory work'
             ],
-            correctAnswer: 0,
-            explanation: 'Outside evidence: Triangle Shirtwaist Fire (March 25, 1911) → 146 deaths (immigrant women + locked doors) → NY factory-safety/building-code/worker-protection laws → Frances Perkins → later FDR Sec of Labor → New Deal labor policy. Single catastrophe mobilizing state-level Progressive reform.'
+            correctAnswer: 2,
+            explanation: 'After 146 garment workers died behind locked doors, New York\'s Factory Investigating Commission produced dozens of safety and labor laws, and investigator Frances Perkins later became Franklin Roosevelt\'s Secretary of Labor. The federal minimum wage came in 1938, and New York did not bar women from factories.'
           }
         ]
       }

@@ -66,26 +66,26 @@ export const apushProgressivismWwiPart1Data = {
       exercise: {
         questions: [
           {
-            question: 'Upton Sinclair wrote The Jungle (1906) primarily to expose:',
+            question: 'Upton Sinclair wrote The Jungle (1906) mainly to expose',
             options: [
-              'The exploitation of immigrant workers in the meatpacking industry, though the public response focused on food safety',
-              'The political corruption of Tammany Hall in New York City',
-              'The environmental destruction caused by the railroad industry',
-              'The unfair labor practices of Andrew Carnegie\'s steel mills'
+              'the corruption of Tammany Hall politicians in New York City',
+              'the destruction of forests by lumber companies in the Northwest',
+              'the exploitation of immigrant workers in Chicago meatpacking',
+              'the labor practices at Carnegie\'s Pennsylvania steel mills'
             ],
-            correctAnswer: 0,
-            explanation: 'Sinclair intended to expose the terrible working conditions and exploitation of immigrant laborers. However, the public was most shocked by his descriptions of unsanitary food processing — leading to the Meat Inspection Act and Pure Food and Drug Act (1906). Sinclair famously said: "I aimed at the public\'s heart, and by accident I hit it in the stomach."'
+            correctAnswer: 2,
+            explanation: 'Sinclair, a socialist, wanted readers to sympathize with immigrant packinghouse workers, but the public reacted mostly to his descriptions of contaminated meat, which led to the Meat Inspection Act and the Pure Food and Drug Act in 1906. He later complained that he had aimed at the public\'s heart and hit its stomach instead.'
           },
           {
-            question: 'The 17th Amendment (1913) was a Progressive reform because it:',
+            question: 'The 17th Amendment (1913) is considered a Progressive reform mainly because',
             options: [
-              'Took the power to choose Senators away from state legislatures and gave it directly to voters, making government more democratic',
-              'Established a federal income tax to fund social welfare programs',
-              'Prohibited the manufacture and sale of alcoholic beverages',
-              'Extended voting rights to women for the first time'
+              'it let voters rather than legislatures elect senators',
+              'it created a federal tax on incomes to pay for reforms',
+              'it banned the manufacture and sale of alcoholic drinks',
+              'it gave women the right to vote in all federal elections'
             ],
             correctAnswer: 0,
-            explanation: 'Before the 17th Amendment, U.S. Senators were chosen by state legislatures, which were often controlled by political machines and corporate interests. Direct election of senators was a key Progressive goal to make government more responsive to the people rather than to special interests.'
+            explanation: 'Before 1913 state legislatures, often influenced by machines and corporations, chose senators; direct election made the Senate answer to voters. The income tax was the 16th Amendment, Prohibition the 18th and woman suffrage the 19th.'
           }
         ]
       }
@@ -156,11 +156,11 @@ Use the exact historical term.
         dropdowns: [
           {
             label: 'The president known as a "trust-buster" who championed conservation and the Square Deal was ___',
-            options: ['Theodore Roosevelt', 'Woodrow Wilson', 'William H. Taft', 'Andrew Jackson']
+            options: ['Theodore Roosevelt', 'Woodrow Wilson', 'William H. Taft', 'William McKinley']
           },
           {
             label: 'The Progressive reform that allowed citizens to directly propose legislation was the ___',
-            options: ['Initiative', 'Referendum', 'Recall', 'Filibuster']
+            options: ['Initiative', 'Referendum', 'Recall', 'Direct primary']
           },
           {
             label: 'The 1913 act that created the U.S. central banking system was the ___',
@@ -171,7 +171,7 @@ Use the exact historical term.
         hint1: 'Filed suit against Northern Securities; established national parks',
         hint2: 'Citizens "initiate" new laws rather than waiting for legislators',
         hint3: 'Created the "Fed" — still the central bank today',
-        explanation: 'TR was the first Progressive president, using executive power aggressively to regulate business and protect the environment. The initiative gave citizens direct legislative power. The Federal Reserve Act (1913) created the central banking system that still manages U.S. monetary policy.'
+        explanation: 'TR used executive power aggressively to regulate business and protect natural resources. The initiative gave citizens direct legislative power, while the referendum let them vote on laws, the recall let them remove officials, and the direct primary let them choose party nominees. The Federal Reserve Act (1913) created the central banking system that still manages U.S. monetary policy.'
       }
     },
     {
@@ -183,26 +183,26 @@ Use the exact historical term.
       exercise: {
         questions: [
           {
-            question: 'Which of the following BEST explains why the U.S. Senate rejected the Treaty of Versailles and membership in the League of Nations?',
+            question: 'Which of the following best explains why the Senate refused to ratify the Treaty of Versailles?',
             options: [
-              'Senators feared that League membership would commit the U.S. to foreign wars without congressional approval, threatening national sovereignty',
-              'The treaty was too lenient toward Germany and senators demanded harsher terms',
-              'Wilson refused to submit the treaty to the Senate for ratification',
-              'The American public overwhelmingly supported isolationism and opposed any involvement in European affairs'
+              'Anger that the treaty was too lenient toward defeated Germany',
+              'Wilson\'s refusal to submit the treaty to the Senate at all',
+              'Public demand that the nation leave all European affairs',
+              'Fear that Article X would commit troops without a vote of Congress'
             ],
-            correctAnswer: 0,
-            explanation: 'Senator Henry Cabot Lodge and the "Reservationists" objected primarily to Article X of the League Covenant, which they feared would obligate the U.S. to defend other nations militarily without congressional approval. Wilson refused to compromise, and the treaty failed to achieve the two-thirds Senate majority needed for ratification.'
+            correctAnswer: 3,
+            explanation: 'Henry Cabot Lodge and the Reservationists objected that Article X of the League Covenant could commit the nation to war without congressional approval, and Wilson refused to accept their reservations, so no version won two-thirds. Senators did not want harsher terms, Wilson did submit the treaty, and many Americans supported some form of the League.'
           },
           {
-            question: 'The Espionage Act (1917) and Sedition Act (1918) demonstrated that:',
+            question: 'The Espionage Act (1917) and Sedition Act (1918) are best understood as evidence that',
             options: [
-              'During wartime, the federal government was willing to restrict civil liberties in the name of national security — a recurring pattern in American history',
-              'The U.S. Constitution\'s First Amendment protections have always been absolute',
-              'Progressive reformers consistently protected individual rights against government overreach',
-              'World War I had no impact on domestic policy or civil liberties within the United States'
+              'First Amendment protections had always been treated as absolute',
+              'wartime fears led the government to limit criticism of its policies',
+              'Progressive reformers consistently defended the rights of dissenters',
+              'the war had little effect on civil liberties inside the country'
             ],
-            correctAnswer: 0,
-            explanation: 'These acts criminalized criticism of the government, military, or war effort — leading to ~2,000 prosecutions including socialist leader Eugene Debs. This tension between security and liberty is a recurring AP theme that appears in every era: the Alien and Sedition Acts (1798), Civil War suspensions of habeas corpus, McCarthyism, and the post-9/11 Patriot Act.'
+            correctAnswer: 1,
+            explanation: 'The acts made obstructing the war and "disloyal" speech crimes, leading to about 2,000 prosecutions, including that of Eugene Debs. The same tension between security and liberty appears in the Alien and Sedition Acts (1798), the Civil War, the McCarthy era and after 9/11.'
           }
         ]
       }

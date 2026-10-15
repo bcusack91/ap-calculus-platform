@@ -5,7 +5,7 @@ export const apushCivilWarPart7Data = {
       id: 'apushciv7-intro',
       type: 'text' as const,
       content: `
-# ⚔️ Sectional Crisis & Civil War (1850–1865)
+# 🇺🇸 The Civil War
 
 **Part 7 of 7 — AP Review**
 
@@ -48,7 +48,7 @@ export const apushCivilWarPart7Data = {
 
 | Factor | Union | Confederacy |
 |---|---|---|
-| Population | ~22 million (incl. ~4 million enslaved) | ~9 million (incl. ~3.5 million enslaved) |
+| Population | ~22 million (incl. about 430,000 enslaved people in the loyal border states) | ~9 million (incl. ~3.5 million enslaved) |
 | Industry | ~90% of national industrial output | ~10% of national industrial output |
 | Railroads | ~70% of national mileage | ~30% of national mileage |
 | Naval power | Existing U.S. Navy + new construction | Almost none; depended on commerce raiders & blockade runners |
@@ -104,6 +104,8 @@ export const apushCivilWarPart7Data = {
 4. **Analysis (sourcing for documents in DBQ):** Use HIPP on at least 3 documents.
 5. **Complexity (the elusive 7th point):** Argue that the Proclamation depended on factors outside Lincoln's control: Union military success (without Antietam, no Proclamation; without Vicksburg/Gettysburg, the Proclamation might have been undone), self-emancipating enslaved people (whose flight to Union lines made emancipation a fact before it was a policy), and Congressional action via the 13th Amendment (which was constitutionally necessary because the Proclamation was a war-powers measure).
 
+> 📝 **May 2027 format:** The DBQ (60 minutes, including a 15-minute reading period) uses this same thesis-contextualization-evidence-sourcing-complexity structure. The LEQ is now one required prompt with no choice, so practice a causation or CCOT essay on this period without documents, and remember that all three SAQs now come with a source.
+
 > 🔑 Key takeaway: The Civil War destroyed slavery, preserved the Union, and reshaped federal-state relations. The Reconstruction Amendments (13, 14, 15) constitutionalized those gains — but their enforcement remained politically contested.
       `
     },
@@ -114,26 +116,26 @@ export const apushCivilWarPart7Data = {
       exercise: {
         questions: [
           {
-            question: 'Which best contrasts Union and Confederate diplomatic strategy in 1862?',
+            question: 'Which of the following best explains why Confederate "King Cotton" diplomacy failed?',
             options: [
-              "The Confederacy pursued 'King Cotton diplomacy,' hoping that British and French textile dependence on Southern cotton would force European recognition; but Britain found alternative suppliers (Egypt, India) and Lincoln's Emancipation Proclamation (announced after Antietam, September 1862) made it politically toxic for European powers to recognize a slave-holding republic; Union diplomacy under Secretary of State William Seward, including resolving the Trent Affair (1861) without war, kept European powers from intervening",
-              'Union and Confederate diplomatic strategy were entirely identical in 1862 with no King Cotton diplomacy, no Emancipation Proclamation impact on recognition, no Trent Affair, and no Seward involvement of any kind during the entire period in any region',
-              'The Confederacy successfully won British and French recognition in 1862 with no European search for alternative cotton suppliers, no Emancipation Proclamation impact, and no Union diplomatic intervention of any kind during the entire period in any region',
-              'Neither Union nor Confederate diplomacy operated in 1862 and there was no King Cotton diplomacy, no Trent Affair, and no Emancipation impact of any kind during the entire Civil War period from 1861 through 1865 in any region'
+              'Britain drew on stored cotton and new supplies from Egypt and India',
+              'France joined the Union blockade of Southern ports in early 1862',
+              'The Confederacy refused to sell cotton to any European buyers at all',
+              'Congress banned all trade between Britain and the United States'
             ],
             correctAnswer: 0,
-            explanation: 'Confederate: King Cotton diplomacy → blocked by Egyptian/Indian cotton + Emancipation Proclamation made recognition toxic. Union: Seward + resolved Trent Affair without war.'
+            explanation: 'British mills had large stocks from the 1860 crop and turned to Egyptian and Indian cotton, and after the Emancipation Proclamation recognizing a slaveholding Confederacy became politically difficult. France never joined the blockade, and Congress did not cut off trade with Britain.'
           },
           {
-            question: 'Which best describes the relationship between Antietam (September 1862), the Emancipation Proclamation (January 1863), and the U.S. Colored Troops?',
+            question: 'Which sequence correctly connects Antietam, emancipation and Black military service?',
             options: [
-              "The strategic Union victory at Antietam (September 17, 1862) gave Lincoln the political credibility to issue the preliminary Emancipation Proclamation five days later (September 22) and the final Proclamation on January 1, 1863; the Proclamation explicitly authorized Black military enlistment, leading to the formation of the U.S. Colored Troops, which by war's end included approximately 180,000 Black men (about 10 percent of the Union army), transforming the war into one for both Union and emancipation",
-              'Antietam, the Emancipation Proclamation, and the U.S. Colored Troops had no connection of any kind, with no political credibility transfer, no preliminary proclamation, no Black enlistment authorization, and no USCT of any kind during the entire period in any region',
-              'The Emancipation Proclamation preceded Antietam and the U.S. Colored Troops were formed before the Civil War with no Antietam connection, no political credibility transfer, and no Lincoln involvement of any kind during the entire period in any region',
-              "There was no Antietam, no Emancipation Proclamation, and no U.S. Colored Troops of any kind during the entire Civil War period from 1861 through 1865 in any region of the United States during the period in any region of the country"
+              'Black regiments won Antietam, which then led Congress to pass the 13th Amendment',
+              'Antietam allowed a proclamation that opened the Union army to Black enlistment',
+              'The Proclamation came first, and it led Lee to invade Maryland at Antietam',
+              'Black enlistment began in 1861, and Antietam ended it until the war was over'
             ],
-            correctAnswer: 0,
-            explanation: 'Antietam (Sept 17, 1862) → preliminary Proc (Sept 22) → final Proc (Jan 1, 1863) → USCT authorized → ~180,000 Black soldiers (~10% of Union army) → war for Union AND emancipation.'
+            correctAnswer: 1,
+            explanation: 'Antietam (September 17, 1862) gave Lincoln the success he wanted, the preliminary Proclamation followed on September 22, and the final Proclamation of January 1, 1863 opened the army to Black men. Black regiments did not fight at Antietam, and the Proclamation came after the battle.'
           }
         ]
       }
@@ -145,19 +147,19 @@ export const apushCivilWarPart7Data = {
       exercise: {
         questions: [
           {
-            prompt: 'Year of the Kansas-Nebraska Act AND the founding of the Republican Party.',
+            question: 'Year of the Kansas-Nebraska Act AND the founding of the Republican Party.',
             answer: '1854',
             acceptableAnswers: ['1854'],
             hint: 'Same year, two huge events.'
           },
           {
-            prompt: 'Year of *Dred Scott v. Sandford*.',
+            question: 'Year of *Dred Scott v. Sandford*.',
             answer: '1857',
             acceptableAnswers: ['1857'],
             hint: 'A year before the Lincoln-Douglas debates.'
           },
           {
-            prompt: 'Year of Antietam AND the preliminary Emancipation Proclamation.',
+            question: 'Year of Antietam AND the preliminary Emancipation Proclamation.',
             answer: '1862',
             acceptableAnswers: ['1862'],
             hint: 'Antietam: September; preliminary Proclamation: 5 days later.'
@@ -198,26 +200,26 @@ export const apushCivilWarPart7Data = {
       exercise: {
         questions: [
           {
-            question: "DBQ prompt: 'Evaluate the extent to which the Emancipation Proclamation (1863) transformed the Civil War.' Which thesis is most defensible?",
+            question: 'DBQ prompt: "Evaluate the extent to which the Emancipation Proclamation (1863) transformed the Civil War." Which thesis is most defensible?',
             options: [
-              "The Emancipation Proclamation transformed the Civil War from a war for the Union alone into a war for both the Union and emancipation by redefining war aims, authorizing the U.S. Colored Troops, and making European recognition politically toxic; but the Proclamation depended on prior conditions Lincoln did not fully control — the strategic Union victory at Antietam (September 1862) that gave it credibility, the actions of self-emancipating Black Americans who fled to Union lines from 1861 onward, and the eventual 13th Amendment (December 1865), which provided the constitutional permanence the war-powers proclamation could not",
-              'The Emancipation Proclamation had no transformative effect on the Civil War of any kind with no redefinition of war aims, no USCT authorization, no European recognition impact, and no constitutional successor amendment of any kind during the entire period in any region',
-              'The Emancipation Proclamation transformed the Civil War entirely on its own with no Antietam credibility, no self-emancipation pressure, no European recognition consideration, and no need for a successor 13th Amendment of any kind during the entire period in any region',
-              'There was no Emancipation Proclamation in 1862 or 1863 in any region of the United States with no transformation of the Civil War of any kind during the entire period from 1861 through 1865 in any region of the United States during the period'
+              'The Proclamation turned the war into a fight against slavery, though its effect relied on Union victories and on enslaved people who fled',
+              'The Proclamation changed nothing, because it freed no one and was ignored by the Union army for the rest of the war',
+              'The Proclamation ended slavery throughout the United States at once and made a later constitutional amendment unnecessary',
+              'The Proclamation was issued in 1861 to keep the border states loyal, and it had little to do with the war\'s purpose'
             ],
             correctAnswer: 0,
-            explanation: 'Defensible thesis: Proclamation transformed war (war aims + USCT + European recognition) AND depended on Antietam credibility + self-emancipation + 13th Amendment. Earns thesis + complexity.'
+            explanation: 'A defensible thesis makes a claim and sets limits on it: the Proclamation changed the war\'s purpose and opened the army to Black soldiers, but it depended on military success and self-emancipation. The other options are either factually wrong or too absolute to defend.'
           },
           {
-            question: 'Which short answer best demonstrates the AP "outside evidence" point for a Civil War prompt?',
+            question: 'Which example would best serve as outside evidence of opposition to the war within the Union?',
             options: [
-              "The New York City Draft Riots (July 1863) erupted just after the Battle of Gettysburg in protest against the federal Conscription Act of March 1863, which allowed wealthy men to pay $300 commutation to avoid service; rioters — predominantly Irish-American working-class men — attacked draft offices, Republican institutions, and especially Black New Yorkers (lynching at least 11), killing approximately 120 people total; the riots illustrated the intersection of class resentment, anti-Black violence, and anti-draft politics within the Union itself",
-              "Some riots happened at some point in some city during the Civil War in some region of the United States during the period from 1861 through 1865 in some region of the country during the period in some region of the country",
-              "There were no draft riots of any kind during the entire Civil War period from 1861 through 1865 in any region of the United States with no New York City Draft Riots, no Conscription Act, and no anti-Black violence of any kind during the period",
-              "The New York City Draft Riots involved no anti-Black violence of any kind and did not target Black New Yorkers in any way during the entire Civil War period from 1861 through 1865 in any region of the United States during the period"
+              'The Richmond bread riot, in which women in the Confederate capital demanded food',
+              'The New York City draft riots, in which mobs attacked draft offices and Black residents',
+              'The Sand Creek Massacre, in which Colorado volunteers attacked a peaceful Cheyenne camp',
+              'The assault on Fort Wagner, in which the 54th Massachusetts lost nearly half its men'
             ],
-            correctAnswer: 0,
-            explanation: 'Outside evidence: NYC Draft Riots July 1863 + post-Gettysburg + Conscription Act March 1863 + $300 commutation + Irish working-class + ~120 killed including 11+ Black New Yorkers lynched = class + race + anti-draft.'
+            correctAnswer: 1,
+            explanation: 'The July 1863 draft riots in New York, fueled by anger at conscription and the \\$300 commutation fee, show class and racial opposition to the war in the North. The bread riot happened in the Confederacy, and Sand Creek and Fort Wagner are not examples of Northern opposition to the war.'
           }
         ]
       }
