@@ -111,17 +111,17 @@ $$600 - 120 - 4F = 0 \\Rightarrow F = 120 \\text{ N}$$
 
 1) A see-saw is 8 m long with the fulcrum at the center. A 70 kg person sits at the left end. How far from the center (in m) should an 80 kg person sit on the right to balance?
 
-2) A 10 m uniform beam (weight 200 N) has its fulcrum 3 m from the left end. A 500 N weight hangs at the left end. What upward force (in N) is needed at the right end to balance? (Round to nearest whole number)
+2) A 10 m uniform beam (weight 200 N) has its fulcrum 3 m from the left end. A 500 N weight hangs at the left end. What downward force (in N) is needed at the right end to balance? (Round to nearest whole number)
 
 3) Two children sit on a see-saw: 30 kg at 2 m left and 20 kg at 3 m right. What is the net torque about the fulcrum? (in N·m, use $g = 10$ $m/s^{2}$, positive = CCW)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['3.5', '186', '0'],
+        correctAnswers: ['3.5', '157', '0'],
         hint1: '$(70)(4) = (80)(d)$',
         hint2: 'Torques about fulcrum: $500(3) = 200(2) + F(7)$. Beam center is 5 m from left = 2 m right of fulcrum.',
         hint3: 'Left: $(30)(10)(2) = 600$ N·m CCW. Right: $(20)(10)(3) = 600$ N·m CW.',
-        explanation: '1) $(70)(4) = (80)(d) \\Rightarrow d = 280/80 = 3.5$ m. 2) Torques about fulcrum: $500(3) = 200(2) + F(7)$, $1500 = 400 + 7F$, $F = 1100/7 \\approx 157$ N. Hmm, let me recheck. Beam center is 5 m from left end. Fulcrum is 3 m from left. Beam center is 2 m to the RIGHT of fulcrum. So beam weight gives CW torque: $200(2) = 400$. $500(3) = F(7) + 200(2)$, $1500 = 7F + 400$, $F = 1100/7 \\approx 157$ N. 3) $(300)(2) - (200)(3) = 600 - 600 = 0$ N·m — balanced!'
+        explanation: '1) $(70)(4) = (80)(d) \\Rightarrow d = 280/80 = 3.5$ m. 2) The fulcrum is 3 m from the left end, so the 500 N weight is 3 m to its left, the beam\'s center (5 m from the left end) is 2 m to its right, and the right end is 7 m to its right. The 500 N weight\'s torque ($500 \\times 3 = 1500$ N·m) is larger than the beam\'s ($200 \\times 2 = 400$ N·m), so the force at the right end must push down: $1500 = 400 + 7F$, $F = 1100/7 \\approx 157$ N. 3) $(300)(2) - (200)(3) = 600 - 600 = 0$ N·m, so the see-saw is balanced.'
       }
     },
     {
@@ -134,19 +134,19 @@ $$600 - 120 - 4F = 0 \\Rightarrow F = 120 \\text{ N}$$
         dropdowns: [
           {
             label: 'To balance a see-saw, a heavier person must sit:',
-            options: ['closer to the fulcrum', 'farther from the fulcrum', 'at the same distance', 'it is impossible to balance'],
+            options: ['closer to the fulcrum', 'farther away', 'at the same distance', 'it cannot balance'],
             correctIndex: 0,
             explanation: 'A heavier person must sit closer: $m_1 d_1 = m_2 d_2 \\Rightarrow d \\propto 1/m$.'
           },
           {
             label: 'The weight of a uniform beam acts:',
-            options: ['at the fulcrum', 'at the geometric center', 'at the heavier end', 'nowhere — it is distributed'],
+            options: ['at the fulcrum', 'at the geometric center', 'at the heavier end', 'nowhere in particular'],
             correctIndex: 1,
             explanation: 'A uniform beam\'s weight acts at its geometric center (center of mass).'
           },
           {
             label: 'If a person moves twice as far from the fulcrum, what happens to the torque?',
-            options: ['the torque doubles', 'the torque halves', 'the torque stays the same', 'the torque becomes zero'],
+            options: ['the torque doubles', 'it halves', 'it stays the same', 'it drops to zero'],
             correctIndex: 0,
             explanation: 'Moving twice as far from the fulcrum doubles the lever arm and thus doubles the torque.'
           }
@@ -162,26 +162,26 @@ $$600 - 120 - 4F = 0 \\Rightarrow F = 120 \\text{ N}$$
       exercise: {
         questions: [
           {
-            question: 'A 12 m uniform plank (weight 300 N) extends 4 m beyond a cliff edge. How far (from the edge, on the cliff side) can a 600 N person walk before the plank tips?',
+            question: 'A 12 m uniform plank (weight 300 N) extends 4 m beyond a cliff edge. How far beyond the edge can a 600 N person walk out on the plank before it tips?',
             options: [
-              '2 m',
-              '4 m',
-              '6 m',
-              '8 m'
+              '2.0 m',
+              '1.0 m',
+              '3.0 m',
+              '4.0 m'
             ],
             correctAnswer: 1,
-            explanation: 'The pivot is at the cliff edge. The plank\'s center of mass is 2 m from the edge (on the cliff side). For tipping: person\'s CW torque = plank\'s CCW torque about the edge. Plank provides CCW torque: $300 \\times 2 = 600$ N·m. Person at distance $d$ beyond edge: $600 \\times d = 600$, $d = 1$ m. Actually, the plank extends 4 m beyond and 8 m on the cliff. The center is at 6 m from the cliff end = 2 m from the edge on the cliff side. Wait — the plank center is at 6 m from the end on the cliff, which is 8 - 6 = 2 m from the edge. Torque about edge from plank weight: $300(2) = 600$ N·m (CCW). Person walks distance $x$ beyond edge: $600x = 600$, $x = 1$ m beyond edge. But the question asks how far from the edge on the cliff side — if person is on the plank on the cliff side, they add CCW torque. The person can walk to the very end (4 m beyond) when the net CW torque exceeds CCW. Rethinking: taking the pivot at the edge, person at distance $d$ beyond edge gives CW torque $600d$. To tip: $600d > 300(2)$, $d > 1$ m. So the person can walk 1 m beyond the edge. The answer is closest to 2 m from the options.'
+            explanation: 'Take the cliff edge as the pivot. The plank\'s center is 6 m from either end, so it sits 2 m back from the edge on the cliff side and gives a torque of $300 \\times 2 = 600$ N·m holding the plank down. A person $d$ beyond the edge gives $600d$ the other way. Tipping starts when $600d = 600$, so $d = 1.0$ m. (Placing the center at the middle of the 8 m on-cliff part gives 2.0 m; measuring 6 m from the far end gives 3.0 m; 4.0 m assumes the person can reach the tip.)'
           },
           {
             question: 'Three weights hang from a horizontal rod: 10 N at 1 m, 20 N at 3 m, and 30 N at 5 m from the left end. Where should a single support be placed for balance? (measured from the left end)',
             options: [
-              '2.0 m',
+              '2.5 m',
               '3.0 m',
-              '3.5 m',
+              '3.7 m',
               '4.0 m'
             ],
             correctAnswer: 2,
-            explanation: 'The center of mass position: $x = \\frac{(10)(1) + (20)(3) + (30)(5)}{10 + 20 + 30} = \\frac{10 + 60 + 150}{60} = \\frac{220}{60} = 3.67$ m. Closest to 3.5 m.'
+            explanation: 'The support goes under the center of mass: $x = \\frac{(10)(1) + (20)(3) + (30)(5)}{10 + 20 + 30} = \\frac{220}{60} = 3.67 \\approx 3.7$ m. The unweighted average of the positions gives 3.0 m, and the middle of the 5 m span gives 2.5 m.'
           }
         ]
       }

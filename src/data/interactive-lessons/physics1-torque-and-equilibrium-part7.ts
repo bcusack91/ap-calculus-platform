@@ -57,7 +57,7 @@ $$\\sum F_x = 0, \\quad \\sum F_y = 0, \\quad \\sum \\tau = 0$$
             explanation: 'The torque needed is the same: $\\tau = Fw = F\'(w/2)$. So $F\' = 2F$. Applying the force at half the distance requires twice the force.'
           },
           {
-            question: 'A uniform meter stick is balanced on a fulcrum at the 40 cm mark. A 2 N weight is placed at the 10 cm mark. Where should a 3 N weight be placed for balance?',
+            question: 'A meter stick of negligible mass is balanced on a fulcrum at the 40 cm mark. A 2 N weight is placed at the 10 cm mark. Where should a 3 N weight be placed for balance?',
             options: [
               '50 cm mark',
               '60 cm mark',
@@ -65,7 +65,7 @@ $$\\sum F_x = 0, \\quad \\sum F_y = 0, \\quad \\sum \\tau = 0$$
               '80 cm mark'
             ],
             correctAnswer: 1,
-            explanation: 'The stick weighs $W$ and its center is at 50 cm = 10 cm right of fulcrum. Taking torques about the fulcrum (40 cm): $2(30) = 3(d - 40) + W(10)$. For a standard problem where stick weight is negligible: $2(30) = 3(d - 40)$, $60 = 3d - 120$, $d = 60$ cm.'
+            explanation: 'Take torques about the fulcrum (40 cm). The 2 N weight is 30 cm to the left: $2(30) = 3(d - 40)$, so $60 = 3d - 120$ and $d = 60$ cm. The 3 N weight sits 20 cm to the right of the fulcrum.'
           },
           {
             question: 'Two forces of equal magnitude act on a rod. One pushes up at the left end; the other pushes down at the right end. This pair of forces is called a:',
@@ -95,7 +95,7 @@ $$\\sum F_x = 0, \\quad \\sum F_y = 0, \\quad \\sum \\tau = 0$$
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['187', '200', '480'],
+        correctAnswers: ['173', '200', '460'],
         hint1: 'Torques about hinge: $T(1.5) = 80(0.75) + 200(1.0)$',
         hint2: '$\\tau = rF \\Rightarrow F = \\tau/r = 50/0.25$',
         hint3: 'Torques about right end: $L(5) = 600(3) + 200(2.5)$',
@@ -118,19 +118,19 @@ $$\\sum F_x = 0, \\quad \\sum F_y = 0, \\quad \\sum \\tau = 0$$
           },
           {
             label: 'If you choose a different pivot point, the result of an equilibrium analysis:',
-            options: ['increases', 'decreases', 'stays the same', 'becomes zero'],
+            options: ['increases if the new pivot is farther out', 'decreases if the new pivot is closer in', 'stays the same', 'changes, since every lever arm changes'],
             correctIndex: 2,
             explanation: 'Since $\\sum \\tau = 0$ is valid for ANY choice of pivot, the physical result is the same regardless of which pivot you choose.'
           },
           {
             label: 'Complete static equilibrium requires:',
-            options: ['zero net force', 'zero net torque', 'zero net force AND zero net torque', 'zero velocity'],
+            options: ['zero net force, whatever the torque', 'zero net torque, whatever the force', 'zero net force and torque', 'zero net work done on the object'],
             correctIndex: 2,
             explanation: 'Static equilibrium requires both conditions: $\\sum F = 0$ and $\\sum \\tau = 0$.'
           },
           {
             label: 'Torque is maximized when the force is applied:',
-            options: ['perpendicular to the lever arm', 'parallel to the lever arm', 'at 45° to the lever arm', 'toward the pivot'],
+            options: ['perpendicular to the lever arm', 'parallel to the lever arm, pulling outward', 'at 45° to the lever arm, for both components', 'directly toward the pivot point'],
             correctIndex: 0,
             explanation: 'Torque is maximized when the force is perpendicular to the position vector ($\\sin 90° = 1$).'
           }
@@ -149,12 +149,12 @@ $$\\sum F_x = 0, \\quad \\sum F_y = 0, \\quad \\sum \\tau = 0$$
             question: 'A uniform rod is hinged at one end and held horizontal by a string attached to the other end at 30° above the rod. If the rod\'s weight is $W$, the string tension is:',
             options: [
               '$W/2$',
-              '$W$',
+              '$W/(2\\cos 30°)$',
               '$W/\\sin 30°$',
               '$W/(2\\sin 30°)$'
             ],
             correctAnswer: 3,
-            explanation: 'Torques about hinge: $T\\sin 30° \\cdot L = W \\cdot L/2$. $T(0.5) = W/2$. $T = W/(2 \\times 0.5) = W$. Actually: $T \\sin 30° \\cdot L = W(L/2)$, $T = W/(2\\sin 30°)$.'
+            explanation: 'Torques about the hinge: the string\'s perpendicular component acts at $L$ and the weight acts at $L/2$, so $T\\sin 30° \\cdot L = W(L/2)$ and $T = W/(2\\sin 30°)$, which equals $W$ since $\\sin 30° = 0.5$. Using $\\cos 30°$ swaps sine and cosine; $W/\\sin 30°$ puts the weight at the far end; $W/2$ ignores the angle.'
           },
           {
             question: 'A couple consists of two 10 N forces separated by 0.5 m. The net torque produced by the couple is:',

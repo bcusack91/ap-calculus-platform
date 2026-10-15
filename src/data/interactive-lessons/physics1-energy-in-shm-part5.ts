@@ -80,10 +80,10 @@ On the AP exam, you mostly need to recognize underdamped motion and understand t
           {
             question: 'In an underdamped oscillation, the amplitude:',
             options: [
-              'Increases with each cycle',
+              'Grows each cycle',
               'Stays constant',
               'Decreases with each cycle',
-              'Increases then decreases'
+              'Rises, then falls'
             ],
             correctAnswer: 2,
             explanation: 'Underdamped means the system oscillates, but friction causes the amplitude to decrease with each successive cycle.'
@@ -91,10 +91,10 @@ On the AP exam, you mostly need to recognize underdamped motion and understand t
           {
             question: 'When a real pendulum gradually comes to rest, the total mechanical energy has been converted to:',
             options: [
-              'Potential energy',
-              'Kinetic energy',
-              'Thermal energy (heat)',
-              'Nuclear energy'
+              'Gravitational potential energy',
+              'Kinetic energy of the swinging bob',
+              'Thermal energy',
+              'Elastic energy stored in the string'
             ],
             correctAnswer: 2,
             explanation: 'Friction and air resistance convert mechanical energy into thermal energy. The total energy is conserved, but it is no longer in a useful mechanical form.'
@@ -102,10 +102,10 @@ On the AP exam, you mostly need to recognize underdamped motion and understand t
           {
             question: 'For lightly damped oscillations, the period:',
             options: [
-              'Increases significantly',
-              'Decreases significantly',
+              'Increases steadily as the swings shrink',
+              'Decreases steadily as the amplitude drops',
               'Remains approximately the same',
-              'Becomes zero'
+              'Drops to zero once the motion fades'
             ],
             correctAnswer: 2,
             explanation: 'Light damping reduces the amplitude but has very little effect on the period. The frequency is still approximately $\\omega = \\sqrt{k/m}$.'
@@ -186,7 +186,7 @@ A damped oscillator starts with amplitude $A_0 = 0.20$ m and loses 10% of its en
           },
           {
             label: 'The total energy of an SHM system is proportional to:',
-            options: ['amplitude$ {}^{2}$', 'amplitude', '1/amplitude', '$1/amplitude^{2}$'],
+            options: ['the square of the amplitude', 'the amplitude itself', 'the reciprocal of the amplitude', 'half the amplitude'],
             correctIndex: 0,
             explanation: 'Energy is proportional to amplitude squared: $E = \\frac{1}{2}kA^2$. So if $A$ halves, $E$ drops to one quarter.'
           }

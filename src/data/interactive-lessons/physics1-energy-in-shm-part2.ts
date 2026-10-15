@@ -142,13 +142,13 @@ $$h_{\\text{max}} = L(1 - \\cos\\theta_{\\text{max}}) \\approx \\frac{L\\theta_{
         dropdowns: [
           {
             label: 'The total mechanical energy of a mass-spring system in SHM depends on:',
-            options: ['amplitude only', 'spring constant only', 'both amplitude and spring constant', 'mass and amplitude'],
+            options: ['amplitude only', 'spring constant only', 'both amplitude and spring constant', 'both mass and amplitude'],
             correctIndex: 2,
             explanation: '$E = \\frac{1}{2}kA^2$. Total energy depends on both the spring constant and the amplitude.'
           },
           {
             label: 'If the amplitude of oscillation is doubled, the total energy:',
-            options: ['quadruples', 'doubles', 'stays the same', 'halves'],
+            options: ['quadruples', 'doubles, in proportion to the amplitude', 'stays the same', 'halves'],
             correctIndex: 0,
             explanation: 'Since $E \\propto A^2$, doubling the amplitude quadruples the total energy.'
           },

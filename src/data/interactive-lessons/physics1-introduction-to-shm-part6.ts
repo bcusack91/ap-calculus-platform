@@ -83,8 +83,7 @@ A pendulum clock keeps perfect time on Earth ($g = 9.8$ $m/s^{2}$). It is taken 
 3) Will the clock run fast or slow on the new planet? (type "fast" or "slow")
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['1.41', '1.41', 'slow'],
+        questions: [{ question: '1) Period factor', answer: '1.41', acceptableAnswers: ['1.41', '1.414', 'sqrt(2)', '√2'] }, { question: '2) New period (s)', answer: '1.41', acceptableAnswers: ['1.41', '1.414', '1.41 s'] }, { question: '3) Fast or slow?', answer: 'slow', acceptableAnswers: ['slow', 'runs slow', 'it runs slow', 'the clock runs slow', 'slower', 'loses time'] }],
         hint1: '$T \\propto 1/\\sqrt{g}$. Factor $= \\sqrt{g_{\\text{Earth}}/g_{\\text{planet}}} = \\sqrt{9.8/4.9}$',
         hint2: '$T_{\\text{new}} = 1.00 \\times \\sqrt{2}$',
         hint3: 'If each swing takes longer, does the clock run fast or slow?',
@@ -184,11 +183,11 @@ A 2.0 kg mass hangs from a vertical spring and stretches it 0.10 m to a new equi
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['196', '0.63', '0.50'],
+        correctAnswers: ['196', '0.635', '0.495'],
         hint1: 'At equilibrium: $kx = mg \\Rightarrow k = mg/x = 2.0(9.8)/0.10$',
         hint2: '$T = 2\\pi\\sqrt{m/k} = 2\\pi\\sqrt{2.0/196}$',
         hint3: '$v_{\\text{max}} = A\\omega$ where $A = 0.05$ m and $\\omega = 2\\pi/T$',
-        explanation: '1) $k = mg/x = 2.0(9.8)/0.10 = 196$ N/m. 2) $T = 2\\pi\\sqrt{2.0/196} = 2\\pi\\sqrt{0.01020} = 2\\pi(0.1010) = 0.635 \\approx 0.63$ s. 3) $\\omega = 2\\pi/0.635 = 9.90$ rad/s. $v_{\\text{max}} = 0.05(9.90) = 0.495 \\approx 0.50$ m/s.'
+        explanation: '1) $k = mg/x = 2.0(9.8)/0.10 = 196$ N/m. 2) $T = 2\\pi\\sqrt{2.0/196} = 2\\pi\\sqrt{0.01020} = 2\\pi(0.1010) = 0.635$ s. 3) $\\omega = 2\\pi/0.635 = 9.90$ rad/s. $v_{\\text{max}} = 0.05(9.90) = 0.495$ m/s.'
       }
     },
     {
@@ -202,7 +201,7 @@ A 2.0 kg mass hangs from a vertical spring and stretches it 0.10 m to a new equi
           {
             question: 'A mass-spring system has $m = 1.0$ kg and $k = 100$ N/m. If the amplitude is tripled from 0.05 m to 0.15 m, what happens to the period?',
             options: [
-              'Triples',
+              'Triples, since the block covers three times the distance',
               'Increases by $\\sqrt{3}$',
               'Remains the same',
               'Decreases by $\\sqrt{3}$'

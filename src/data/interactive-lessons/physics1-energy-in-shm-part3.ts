@@ -132,8 +132,7 @@ A 2.0 kg block on a spring ($k = 200$ N/m) oscillates with amplitude $A = 0.20$ 
 *Round all answers to 3 significant figures.*
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['4.0', '1.6', '0.17'],
+        questions: [{ question: '1) Total energy (J)', answer: '4.0', acceptableAnswers: ['4.0', '4', '4.00'] }, { question: '2) Speed at x = 0.12 m (m/s)', answer: '1.6', acceptableAnswers: ['1.6', '1.60'] }, { question: '3) Displacement where v = 1.0 m/s (m)', answer: '0.173', acceptableAnswers: ['0.173', '0.17', '0.1732'] }],
         hint1: '$E = \\frac{1}{2}kA^2 = \\frac{1}{2}(200)(0.20)^2$',
         hint2: '$v = \\sqrt{(k/m)(A^2 - x^2)} = \\sqrt{(200/2.0)(0.04 - 0.0144)}$',
         hint3: '$KE = \\frac{1}{2}mv^2 = 1.0$ J. $PE = E - KE = 3.0$ J. $x = \\sqrt{2(3.0)/200}$',
@@ -150,19 +149,19 @@ A 2.0 kg block on a spring ($k = 200$ N/m) oscillates with amplitude $A = 0.20$ 
         dropdowns: [
           {
             label: 'The correct energy conservation equation at any position x in SHM is:',
-            options: ['$\\tfrac{1}{2} kA^{2}$ = $\\tfrac{1}{2} kx^{2}$ + $\\tfrac{1}{2} mv^{2}$', '$\\tfrac{1}{2} kA^{2}$ = $\\tfrac{1}{2} mv^{2}$', '$\\tfrac{1}{2} kx^{2}$ = $\\tfrac{1}{2} mv^{2}$', 'kA = mv'],
+            options: ['$\\tfrac{1}{2} kA^{2}$ = $\\tfrac{1}{2} kx^{2}$ + $\\tfrac{1}{2} mv^{2}$', '$\\tfrac{1}{2} kA^{2}$ = $\\tfrac{1}{2} mv^{2}$', '$\\tfrac{1}{2} kx^{2}$ = $\\tfrac{1}{2} mv^{2}$', '$\\tfrac{1}{2} kA^{2}$ = $\\tfrac{1}{2} kx^{2}$'],
             correctIndex: 0,
             explanation: 'The energy conservation equation at any position is $\\frac{1}{2}kA^2 = \\frac{1}{2}kx^2 + \\frac{1}{2}mv^2$.'
           },
           {
             label: 'The kinetic energy equals the potential energy at a displacement of:',
-            options: ['x = A/2', 'x = $A/\\sqrt{2}$', 'x = $A\\sqrt{3}/2$', 'x = 0'],
+            options: ['$x = A/2$', '$x = A/\\sqrt{2}$', '$x = A\\sqrt{3}/2$', '$x = 0$'],
             correctIndex: 1,
             explanation: 'KE = PE when $\\frac{1}{2}kx^2 = \\frac{1}{2}k(A^2 - x^2)$, giving $x = A/\\sqrt{2}$.'
           },
           {
             label: 'As displacement from equilibrium increases, the potential energy:',
-            options: ['decreases linearly', 'increases linearly', 'decreases as $x^{2}$', 'increases as $x^{2}$'],
+            options: ['decreases linearly with $x$', 'increases linearly with $x$', 'decreases in proportion to $x^{2}$', 'increases as $x^{2}$'],
             correctIndex: 3,
             explanation: 'The PE increases as $x^2$: $PE = \\frac{1}{2}kx^2$, which is a parabolic (quadratic) increase.'
           }

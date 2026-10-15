@@ -148,7 +148,7 @@ This is why the contact point has zero velocity — it's the condition for no sl
           },
           {
             label: 'When rolling without slipping, which point on the wheel is instantaneously at rest?',
-            options: ['the center', 'the top', 'the contact point', 'all points have the same speed'],
+            options: ['the center', 'the top', 'the contact point', 'all points'],
             correctIndex: 2,
             explanation: 'The contact point is instantaneously at rest (zero velocity) when rolling without slipping.'
           },

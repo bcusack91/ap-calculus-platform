@@ -94,7 +94,7 @@ Each turn contributes the same flux, so we multiply by $N$.
               'Tesla (T)',
               'Weber (Wb)',
               'Henry (H)',
-              'Volt (V)'
+              'Tesla-meter (T·m)'
             ],
             correctAnswer: 1,
             explanation: 'Magnetic flux is measured in Webers: 1 Wb = 1 $T\\cdot m^{2}$.'
@@ -104,11 +104,11 @@ Each turn contributes the same flux, so we multiply by $N$.
             options: [
               '0 Wb',
               '0.015 Wb',
-              '0.15 Wb',
+              '0.167 Wb',
               '6.0 Wb'
             ],
             correctAnswer: 1,
-            explanation: 'Field perpendicular to the plane means $\\vec{B}$ is parallel to $\\hat{n}$, so $\\theta = 0°$. $\\Phi = BA\\cos 0° = (0.3)(0.05)(1) = 0.015$ Wb.'
+            explanation: 'Field perpendicular to the plane means $\\vec{B}$ is parallel to $\\hat{n}$, so $\\theta = 0°$. $\\Phi = BA\\cos 0° = (0.3)(0.05)(1) = 0.015$ Wb. Dividing instead of multiplying gives 6.0 ($B/A$) or 0.167 ($A/B$); 0 Wb comes from using $\\theta = 90°$.'
           },
           {
             question: 'If you rotate the loop so that the magnetic field is parallel to the plane of the loop, the flux becomes:',
@@ -197,7 +197,7 @@ A rectangular loop has dimensions 20 cm × 30 cm and sits in a uniform magnetic 
             question: 'Which of the following will NOT change the magnetic flux through a loop?',
             options: [
               'Rotating the loop in the field',
-              'Moving the loop parallel to a uniform field (without leaving it)',
+              'Sliding the loop through a uniform field without leaving it',
               'Increasing the magnetic field strength',
               'Stretching the loop to increase its area'
             ],

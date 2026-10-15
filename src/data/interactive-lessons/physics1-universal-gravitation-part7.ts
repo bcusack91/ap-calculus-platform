@@ -90,10 +90,10 @@ On the AP exam, most gravitation questions test **proportional reasoning** — n
               '1/3',
               '1',
               '3',
-              '9'
+              '1/9'
             ],
             correctAnswer: 0,
-            explanation: '$g = GM/R^2$. $g_X/g_E = (3M_E/(3R_E)^2)/(M_E/R_E^2) = 3M_E/(9R_E^2) \\times R_E^2/M_E = 3/9 = 1/3$.'
+            explanation: '$g = GM/R^2$. $g_X/g_E = (3M_E/(3R_E)^2)/(M_E/R_E^2) = 3/9 = 1/3$. Ignoring the mass increase gives 1/9; forgetting to square the radius gives 1.'
           },
           {
             question: 'A satellite orbits Earth in 4 hours. If its orbital radius were doubled, its new period would be:',
@@ -109,13 +109,13 @@ On the AP exam, most gravitation questions test **proportional reasoning** — n
           {
             question: 'The gravitational force between Earth and a 1 kg object at Earth\'s surface is about 10 N. The gravitational force between Earth and the Moon ($7.35 \\times 10^{22}$ kg, distance $3.84 \\times 10^8$ m) is about $2 \\times 10^{20}$ N. This means the gravitational field at the Moon\'s location is approximately:',
             options: [
-              '$2 \\times 10^{20}$ N/kg',
-              '$0.003$ N/kg',
-              '$10$ N/kg',
+              '$2.0 \\times 10^{20}$ N/kg',
+              '$1.7 \\times 10^{-1}$ N/kg',
+              '$9.8$ N/kg',
               '$2.7 \\times 10^{-3}$ N/kg'
             ],
             correctAnswer: 3,
-            explanation: '$g = F/m = 2 \\times 10^{20}/(7.35 \\times 10^{22}) = 2.72 \\times 10^{-3}$ N/kg. Earth\'s gravitational field at the Moon\'s distance is very weak.'
+            explanation: '$g = F/m = 2 \\times 10^{20}/(7.35 \\times 10^{22}) = 2.7 \\times 10^{-3}$ N/kg. Earth\'s gravitational field at the Moon\'s distance (60 Earth radii) is very weak: about $10/60^2$. Scaling the surface value by $1/r$ instead of $1/r^2$ gives $10/60 \\approx 1.7 \\times 10^{-1}$; $9.8$ N/kg is the surface value; $2.0 \\times 10^{20}$ is the force, not the field.'
           }
         ]
       }
@@ -165,11 +165,11 @@ No. The moon\'s mass cancels in the derivation (Step 2 above). Orbital propertie
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['5.7', '1.58', '2.52'],
+        correctAnswers: ['5.66', '1.58', '2.52'],
         hint1: 'Use $M = 4\\pi^2 r^3/(GT^2)$. Don\'t forget to convert $T$ from days to seconds first.',
         hint2: 'Escape velocity scales as $v_{esc} \\propto \\sqrt{M/R}$. Write the ratio $v_P/v_E$ in terms of $M_E$ and $R_E$.',
         hint3: 'Kepler\'s Third Law gives you the ratio of orbital radii from the ratio of periods: $r_B/r_A = (T_B/T_A)^{2/3}$.',
-        explanation: '1) $T = 15.95 \\times 86400 = 1.378 \\times 10^6$ s. $M = 4\\pi^2(1.22 \\times 10^9)^3/(6.67 \\times 10^{-11}(1.378 \\times 10^6)^2) = 39.48 \\times 1.816 \\times 10^{27}/(6.67 \\times 10^{-11} \\times 1.899 \\times 10^{12}) = 7.17 \\times 10^{28}/1.267 \\times 10^{2} = 5.66 \\times 10^{26}$. $X = 5.7$. 2) $v_{esc} \\propto \\sqrt{M/R}$. $v_P/v_E = \\sqrt{5M_E/(2R_E) \\times R_E/M_E} = \\sqrt{5/2} = \\sqrt{2.5} = 1.581 \\approx 1.58$. 3) $r_B/r_A = (24/6)^{2/3} = 4^{2/3} = (2^2)^{2/3} = 2^{4/3} = 2.52$.'
+        explanation: '1) $T = 15.95 \\times 86400 = 1.378 \\times 10^6$ s. $M = 4\\pi^2(1.22 \\times 10^9)^3/(6.67 \\times 10^{-11}(1.378 \\times 10^6)^2) = 39.48 \\times 1.816 \\times 10^{27}/(6.67 \\times 10^{-11} \\times 1.899 \\times 10^{12}) = 7.17 \\times 10^{28}/1.267 \\times 10^{2} = 5.66 \\times 10^{26}$ kg. $X = 5.66$. 2) $v_{esc} \\propto \\sqrt{M/R}$. $v_P/v_E = \\sqrt{5M_E/(2R_E) \\times R_E/M_E} = \\sqrt{5/2} = \\sqrt{2.5} = 1.581 \\approx 1.58$. 3) $r_B/r_A = (24/6)^{2/3} = 4^{2/3} = (2^2)^{2/3} = 2^{4/3} = 2.52$.'
       }
     },
     {
@@ -182,19 +182,19 @@ No. The moon\'s mass cancels in the derivation (Step 2 above). Orbital propertie
         dropdowns: [
           {
             label: 'If Earth\'s mass were somehow doubled but its radius stayed the same, the orbital speed of the Moon would:',
-            options: ['Double', 'Increase by $\\sqrt{2}$', 'Stay the same', 'Halve'],
+            options: ['Increase by a factor of 2', 'Increase by a factor of $\\sqrt{2}$', 'Stay the same', 'Decrease by $\\sqrt{2}$'],
             correctIndex: 1,
-            explanation: '$v = \\sqrt{GM/r}$. Doubling $M$: $v\' = \\sqrt{2}v$.'
+            explanation: '$v = \\sqrt{GM/r}$. Doubling $M$: $v\' = \\sqrt{2}v$. The Moon\'s own mass cancels out, so it plays no role; forgetting the square root gives a factor of 2.'
           },
           {
             label: 'An astronaut in orbit is "weightless" because:',
-            options: ['There is no gravity in space', 'The astronaut and station are in free fall together', 'Centrifugal force cancels gravity', 'They are too far from Earth'],
+            options: ['There is no gravity in space', 'They and the station are in free fall together', 'Centrifugal force cancels gravity', 'They are too far from Earth'],
             correctIndex: 1,
             explanation: 'Both the astronaut and station accelerate toward Earth at the same rate ($g$ at that altitude). There\'s no relative acceleration → no normal force → no sensation of weight.'
           },
           {
             label: 'Plotting $T^2$ vs $r^3$ for Jupiter\'s moons compared to Saturn\'s moons would give:',
-            options: ['The same line', 'Two different straight lines through the origin', 'A single curve', 'Parallel lines'],
+            options: ['One shared straight line for both moon systems', 'Two different straight lines through the origin', 'Two curves that bend upward at large radii', 'Two parallel lines'],
             correctIndex: 1,
             explanation: 'Both are linear ($T^2 = (4\\pi^2/GM)r^3$), but the slopes differ because Jupiter and Saturn have different masses. Jupiter\'s line has a shallower slope (larger $M$, so smaller $4\\pi^2/(GM)$).'
           }
@@ -212,10 +212,10 @@ No. The moon\'s mass cancels in the derivation (Step 2 above). Orbital propertie
           {
             question: 'Which statement best summarizes the relationship between gravity and circular orbits?',
             options: [
-              'Gravity pushes satellites into orbit',
+              'Satellites stay up because their engines\' forward thrust balances gravity at all times',
               'Gravity provides the centripetal force that keeps satellites in circular orbits',
-              'Satellites orbit because they are beyond Earth\'s gravitational field',
-              'Gravity and centripetal force are two separate forces acting on a satellite'
+              'Satellites orbit because at their altitude they are beyond Earth\'s gravitational field',
+              'Gravity and the centripetal force are two separate forces that balance on a satellite'
             ],
             correctAnswer: 1,
             explanation: 'Gravity is the centripetal force for orbiting objects. It pulls the satellite toward the center of its orbit (toward the planet), providing the exact centripetal acceleration needed for circular motion.'

@@ -108,10 +108,10 @@ This is exactly how an **AC generator** works (covered in Part 5).
           {
             question: 'Doubling the number of turns in a coil while keeping everything else the same will:',
             options: [
-              'Double the flux through each turn',
+              'More flux per turn',
               'Double the induced EMF',
               'Halve the induced EMF',
-              'Have no effect on the EMF'
+              'No effect on EMF'
             ],
             correctAnswer: 1,
             explanation: '$\\varepsilon = -N(d\\Phi_B/dt)$. Doubling $N$ doubles the EMF. The flux through each individual turn remains the same.'
@@ -187,10 +187,10 @@ A square coil has 80 turns, each with side length 10 cm. The coil sits in a unif
           {
             question: 'A loop is in a uniform magnetic field. Which scenario produces the LARGEST induced EMF?',
             options: [
-              'Flux changes by 2 Wb in 4 s',
-              'Flux changes by 1 Wb in 0.5 s',
+              'Flux changes by 2.0 Wb in 4.0 s',
+              'Flux changes by 1.0 Wb in 0.5 s',
               'Flux changes by 0.5 Wb in 0.1 s',
-              'Flux changes by 3 Wb in 10 s'
+              'Flux changes by 3.0 Wb in 10 s'
             ],
             correctAnswer: 2,
             explanation: 'EMF = $|\\Delta\\Phi/\\Delta t|$. 2 Wb in 4 s: 0.5 V; 1 Wb in 0.5 s: 2 V; 0.5 Wb in 0.1 s: 5 V; 3 Wb in 10 s: 0.3 V. The 0.5 Wb in 0.1 s change gives the largest EMF because the flux changes most rapidly.'

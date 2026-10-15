@@ -79,8 +79,8 @@ This is analogous to $P = Fv$ in linear motion.
           {
             question: 'A spinning flywheel has its angular velocity doubled. Its rotational kinetic energy:',
             options: [
-              'Doubles',
-              'Triples',
+              'Doubles, since KE grows in step with $\\omega$',
+              'Increases by a factor of 8',
               'Quadruples',
               'Stays the same'
             ],
@@ -101,7 +101,7 @@ This is analogous to $P = Fv$ in linear motion.
           {
             question: 'A hoop and a disk of equal mass and radius roll at the same speed. Which has more total kinetic energy?',
             options: [
-              'The disk',
+              'The disk, because its mass is closer to the axis',
               'The hoop',
               'They are equal',
               'Cannot determine'
@@ -126,11 +126,11 @@ This is analogous to $P = Fv$ in linear motion.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['200', '0.48', '200'],
+        correctAnswers: ['200', '2.40', '200'],
         hint1: '$KE = \\frac{1}{2}I\\omega^2 = \\frac{1}{2}(4)(100)$',
         hint2: '$I = \\frac{2}{5}MR^2 = \\frac{2}{5}(3)(0.01) = 0.012$ $kg\\cdot m^{2}$. $KE = \\frac{1}{2}(0.012)(400)$',
         hint3: '$W = \\tau\\theta = (8)(25)$',
-        explanation: '1) $KE = \\frac{1}{2}(4)(100) = 200$ J. 2) $I = 0.012$ $kg\\cdot m^{2}$. $KE = \\frac{1}{2}(0.012)(400) = 2.4$ J. Hmm, let me recalculate: $I = \\frac{2}{5}(3)(0.01) = 0.012$. $KE = \\frac{1}{2}(0.012)(400) = 2.4$ J. Actually the answer should be 2.40, let me re-examine. $\\frac{2}{5}(3)(0.01) = 0.012$. $\\frac{1}{2}(0.012)(400) = 2.4$ J. The answer is 2.40. 3) $W = 200$ J.'
+        explanation: '1) $KE = \\frac{1}{2}(4)(100) = 200$ J. 2) $I = \\frac{2}{5}MR^2 = \\frac{2}{5}(3)(0.1)^2 = 0.012$ $kg\\cdot m^{2}$. $KE = \\frac{1}{2}(0.012)(20)^2 = \\frac{1}{2}(0.012)(400) = 2.40$ J. 3) $W = 200$ J.'
       }
     },
     {
@@ -143,7 +143,7 @@ This is analogous to $P = Fv$ in linear motion.
         dropdowns: [
           {
             label: 'The formula for rotational kinetic energy is:',
-            options: ['$\\tfrac{1}{2} mv^{2}$', '$\\tfrac{1}{2} I\\omega^{2}$', 'Iω', 'τθ'],
+            options: ['$\\tfrac{1}{2} mv^{2}$', '$\\tfrac{1}{2} I\\omega^{2}$', '$I\\omega$', '$\\tau\\theta$'],
             correctIndex: 1,
             explanation: 'Rotational kinetic energy is $\\frac{1}{2}I\\omega^2$.'
           },

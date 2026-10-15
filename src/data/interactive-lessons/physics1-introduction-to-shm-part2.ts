@@ -79,9 +79,9 @@ The equilibrium point just shifts downward by $x_0$. The oscillation about this 
           {
             question: 'Doubling the mass on a spring changes the period by a factor of:',
             options: [
-              '2',
+              '$2$',
               '$\\sqrt{2}$',
-              '4',
+              '$4$',
               '$1/\\sqrt{2}$'
             ],
             correctAnswer: 1,
@@ -90,10 +90,10 @@ The equilibrium point just shifts downward by $x_0$. The oscillation about this 
           {
             question: 'Doubling the amplitude of a mass-spring oscillation:',
             options: [
-              'Doubles the period',
-              'Halves the period',
+              'Doubles the period, since the path is twice as long',
+              'Halves the period, since the restoring force doubles',
               'Has no effect on the period',
-              'Doubles the frequency'
+              'Increases the period by a factor of $\\sqrt{2}$'
             ],
             correctAnswer: 2,
             explanation: 'The period of a mass-spring system depends only on $m$ and $k$, NOT on amplitude. $T = 2\\pi\\sqrt{m/k}$.'
@@ -126,11 +126,11 @@ The equilibrium point just shifts downward by $x_0$. The oscillation about this 
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.31', '0.81', '0.44'],
+        correctAnswers: ['0.314', '0.811', '0.444'],
         hint1: '$T = 2\\pi\\sqrt{m/k} = 2\\pi\\sqrt{0.5/200}$',
         hint2: '$T = 2\\pi\\sqrt{m/k} \\Rightarrow m = kT^2/(4\\pi^2)$',
         hint3: '$k_{\\text{eff}} = k_1 + k_2 = 400$ N/m. $T = 2\\pi\\sqrt{2/400}$',
-        explanation: '1) $T = 2\\pi\\sqrt{0.5/200} = 2\\pi\\sqrt{0.0025} = 2\\pi(0.05) = 0.314 \\approx 0.31$ s. 2) $m = 50(0.64)/(4\\pi^2) = 32/39.48 = 0.810 \\approx 0.81$ kg. 3) $k_{\\text{eff}} = 400$. $T = 2\\pi\\sqrt{2/400} = 2\\pi\\sqrt{0.005} = 2\\pi(0.0707) = 0.444 \\approx 0.44$ s.'
+        explanation: '1) $T = 2\\pi\\sqrt{0.5/200} = 2\\pi\\sqrt{0.0025} = 2\\pi(0.05) = 0.314$ s. 2) $m = 50(0.64)/(4\\pi^2) = 32/39.48 = 0.811$ kg. 3) $k_{\\text{eff}} = 400$. $T = 2\\pi\\sqrt{2/400} = 2\\pi\\sqrt{0.005} = 2\\pi(0.0707) = 0.444$ s.'
       }
     },
     {
@@ -143,13 +143,13 @@ The equilibrium point just shifts downward by $x_0$. The oscillation about this 
         dropdowns: [
           {
             label: 'If you increase the mass on a spring, the period:',
-            options: ['increases', 'decreases', 'stays the same', 'becomes zero'],
+            options: ['increases', 'decreases, since a heavier mass stretches the spring more', 'stays the same', 'depends on the amplitude of the motion'],
             correctIndex: 0,
             explanation: 'Increasing mass increases the period: $T \\propto \\sqrt{m}$. More mass → slower oscillation.'
           },
           {
             label: 'If you use a stiffer spring (larger $k$), the period:',
-            options: ['increases', 'decreases', 'stays the same', 'becomes infinite'],
+            options: ['increases', 'decreases', 'stays the same', 'increases in proportion to $k$'],
             correctIndex: 1,
             explanation: 'A stiffer spring (larger $k$) decreases the period: $T \\propto 1/\\sqrt{k}$. Stiffer → faster oscillation.'
           },
@@ -184,10 +184,10 @@ The equilibrium point just shifts downward by $x_0$. The oscillation about this 
           {
             question: 'On the Moon ($g_{\\text{Moon}} = g/6$), a mass-spring system will oscillate with a period that is:',
             options: [
-              '6 times longer',
+              '6 times longer, because gravity is weaker',
               '$\\sqrt{6}$ times longer',
               'The same as on Earth',
-              '6 times shorter'
+              '$1/6$ as long, since the mass weighs less'
             ],
             correctAnswer: 2,
             explanation: 'The period of a mass-spring system ($T = 2\\pi\\sqrt{m/k}$) does not depend on $g$. It oscillates with the same period on the Moon.'

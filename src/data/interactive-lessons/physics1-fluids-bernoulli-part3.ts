@@ -67,7 +67,7 @@ Bernoulli tells you HOW the pressure responds (energy).
             options: [
               'Highest',
               'Lowest',
-              'Zero',
+              'Zero, since all energy is kinetic',
               'Equal to atmospheric'
             ],
             correctAnswer: 1,
@@ -76,10 +76,10 @@ Bernoulli tells you HOW the pressure responds (energy).
           {
             question: 'Why does an airplane wing generate lift (in the simplified Bernoulli explanation)?',
             options: [
-              'Air moves faster over the top → lower pressure above the wing',
-              'Air pushes the wing upward by friction',
-              'The wing is lighter than air',
-              'Engine thrust supplies all the lift'
+              'Faster air over the top lowers the pressure above the wing',
+              'Air friction along the underside drags the wing upward',
+              'The wing\'s hollow interior makes it buoyant in air',
+              'Engine thrust, tilted upward, supplies all of the lift'
             ],
             correctAnswer: 0,
             explanation: 'Faster top-side flow ⇒ lower top pressure ⇒ net upward pressure force.'
@@ -87,13 +87,13 @@ Bernoulli tells you HOW the pressure responds (energy).
           {
             question: 'A shower curtain is pulled INWARD when the water is on. The reason is:',
             options: [
-              'Water pulls the curtain by adhesion',
-              'Faster moving air inside has lower pressure; outside higher pressure pushes curtain in',
-              'Steam rises and pushes the curtain',
-              'Surface tension'
+              'Water droplets pull it in by adhesion',
+              'Moving air inside lowers the pressure there',
+              'Rising steam pushes the curtain inward',
+              'Surface tension in the spray'
             ],
             correctAnswer: 1,
-            explanation: 'Bernoulli effect: low pressure inside the shower from accelerated air.'
+            explanation: 'Bernoulli effect: the spray drags air into motion, the faster-moving air inside has lower pressure, and the higher pressure of the still air outside pushes the curtain in.'
           }
         ]
       }
@@ -135,19 +135,19 @@ Bernoulli tells you HOW the pressure responds (energy).
           },
           {
             label: 'Two boats moving in parallel on a calm river drift TOWARD each other because:',
-            options: ['Surface tension pulls them together', 'Faster water between them lowers pressure; outside pressure pushes them together', 'Magnetism', 'Wind'],
+            options: ['Surface tension pulls the two hulls together', 'Faster water between them lowers the pressure there', 'Gravitational attraction between the hulls', 'Wind deflected off one hull pushes the other'],
             correctIndex: 1,
-            explanation: 'Bernoulli effect — water squeezes between boats, accelerates, drops pressure.'
+            explanation: 'Bernoulli effect: water squeezed between the hulls speeds up, its pressure drops, and the higher pressure of the slower water on the outer sides pushes the boats together.'
           },
           {
             label: 'A strong wind blows across a roof. The roof tends to:',
-            options: ['Be pushed down', 'Be lifted up', 'Stay still', 'Be pushed sideways'],
+            options: ['Be pushed down', 'Be lifted up', 'Stay still, held by its weight', 'Be pushed sideways'],
             correctIndex: 1,
             explanation: 'Fast air on top → low pressure above → roof lifted by higher pressure inside.'
           },
           {
             label: 'The Bernoulli effect requires:',
-            options: ['Two points on the same streamline of an ideal fluid', 'A pump', 'A vacuum', 'Surface tension'],
+            options: ['Two points on the same streamline of an ideal fluid', 'A pump that keeps the fluid moving', 'A vacuum on one side of the fluid', 'Surface tension at the fluid\'s surface'],
             correctIndex: 0,
             explanation: 'Bernoulli\'s equation applies along a streamline.'
           }
@@ -168,21 +168,21 @@ Bernoulli tells you HOW the pressure responds (energy).
               '$164$ kPa',
               '$200$ kPa',
               '$236$ kPa',
-              '$280$ kPa'
+              '$182$ kPa'
             ],
             correctAnswer: 0,
-            explanation: '$\\Delta P = \\tfrac{1}{2}(1000)(9 - 81) = -36$ kPa. $P_2 = 164$ kPa.'
+            explanation: '$\\Delta P = \\tfrac{1}{2}(1000)(3^2 - 9^2) = \\tfrac{1}{2}(1000)(9 - 81) = -36$ kPa. $P_2 = 200 - 36 = 164$ kPa. A sign slip gives 236 kPa; using $(v_2 - v_1)^2$ instead of $v_2^2 - v_1^2$ gives a drop of only 18 kPa (182 kPa).'
           },
           {
-            question: 'Air ($\\rho = 1.2$ $kg/m^{3}$) blows past one face of a building at 30 m/s; on the leeward face the air is essentially still. The pressure difference (windward minus leeward face) at the same height is approximately:',
+            question: 'Air ($\\rho = 1.2$ $kg/m^{3}$) streams along one face of a building at 30 m/s; along the opposite face the air is essentially still. The pressure difference (fast-air face minus still-air face) at the same height is approximately:',
             options: [
               '$+540$ Pa',
               '$-540$ Pa',
-              '$+1800$ Pa',
-              '$-1800$ Pa'
+              '$+1080$ Pa',
+              '$-1080$ Pa'
             ],
             correctAnswer: 1,
-            explanation: 'Fast side has LOWER $P$. $\\Delta P_{wind - lee} = -\\tfrac{1}{2}(1.2)(900) = -540$ Pa.'
+            explanation: 'The fast-air face has LOWER $P$. $\\Delta P = -\\tfrac{1}{2}\\rho v^2 = -\\tfrac{1}{2}(1.2)(30^2) = -540$ Pa. Forgetting the ½ gives 1080 Pa; dropping the minus sign gives +540 Pa.'
           }
         ]
       }

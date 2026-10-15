@@ -65,10 +65,10 @@ If the hole is at height $H$ above the ground, the jet exits horizontally at spe
               '$gh$',
               '$\\sqrt{gh}$',
               '$\\sqrt{2gh}$',
-              '$2gh$'
+              '$2\\sqrt{gh}$'
             ],
             correctAnswer: 2,
-            explanation: '$v = \\sqrt{2gh}$ — same form as a freely falling object.'
+            explanation: '$v = \\sqrt{2gh}$ — the same as an object falling freely from rest through height $h$. ($2\\sqrt{hH}$ is the jet\'s horizontal range, a different formula.)'
           },
           {
             question: 'The exit speed from a hole in a large open tank does NOT depend on:',
@@ -76,18 +76,18 @@ If the hole is at height $H$ above the ground, the jet exits horizontally at spe
               'The depth of the hole below the surface',
               'The fluid\'s density',
               'The acceleration due to gravity',
-              'The total height of water column above the hole'
+              'Whether the surface and the hole are both open to air'
             ],
             correctAnswer: 1,
-            explanation: '$v = \\sqrt{2gh}$ — no $\\rho$ in the formula!'
+            explanation: '$v = \\sqrt{2gh}$ — no $\\rho$ in the formula. It does depend on the depth $h$, on $g$, and on both the surface and the hole being at the same (atmospheric) pressure.'
           },
           {
             question: 'For the "large tank" approximation in Torricelli\'s Theorem, we assume:',
             options: [
-              'The hole is huge',
+              'The hole is large, so the tank drains fast',
               'The surface speed $v_1$ is approximately zero',
-              'Pressure inside the tank is zero',
-              'The fluid is compressible'
+              'Pressure at the hole is zero',
+              'The fluid is compressible near the hole'
             ],
             correctAnswer: 1,
             explanation: 'If the tank is much wider than the hole, the surface drops very slowly ⇒ $v_1 \\approx 0$.'
@@ -126,27 +126,27 @@ If the hole is at height $H$ above the ground, the jet exits horizontally at spe
         dropdowns: [
           {
             label: 'Two large open tanks of different fluids (water, oil) are filled to the same depth $h$. Both have a small hole at the bottom. Exit speeds are:',
-            options: ['Greater for water', 'Greater for oil', 'Equal — depends only on $h$', 'Zero for oil'],
+            options: ['Greater for water, being denser', 'Greater for oil, being lighter', 'Equal, since $v$ depends only on $h$', 'Zero for oil, which floats'],
             correctIndex: 2,
             explanation: '$v = \\sqrt{2gh}$ — no density dependence.'
           },
           {
             label: 'If the depth $h$ above a Torricelli hole is doubled, the exit speed becomes:',
-            options: ['Doubled', 'Quadrupled', '$\\sqrt{2}$ times the original', 'Halved'],
+            options: ['Twice as large', 'Four times as large', '$\\sqrt{2}$ times as large', 'The same as before'],
             correctIndex: 2,
-            explanation: '$v \\propto \\sqrt{h}$.'
+            explanation: '$v = \\sqrt{2gh} \\propto \\sqrt{h}$, so doubling $h$ multiplies $v$ by $\\sqrt{2}$. "Twice" treats $v \\propto h$, and "four times" treats $v \\propto h^2$.'
           },
           {
             label: 'A jet exits horizontally from a hole height $H$ above the floor. Doubling $H$ multiplies the horizontal range $R = 2\\sqrt{hH}$ by:',
-            options: ['1', '$\\sqrt{2}$', '2', '4'],
+            options: ['$\\tfrac{1}{\\sqrt{2}}$', '$\\sqrt{2}$', '$2$', '$4$'],
             correctIndex: 1,
-            explanation: '$R \\propto \\sqrt{H}$ — doubles $H$, $R$ scales by $\\sqrt{2}$.'
+            explanation: '$R = 2\\sqrt{hH} \\propto \\sqrt{H}$ (with $h$ fixed), so doubling $H$ scales $R$ by $\\sqrt{2}$. Doubling would need $R \\propto H$; $1/\\sqrt{2}$ inverts the scaling.'
           },
           {
             label: 'For a tank of total height $L$ filled to the brim, the hole that maximizes horizontal range is at:',
-            options: ['Top', 'Middle ($H = L/2$)', 'Bottom', '1/4 from bottom'],
+            options: ['At the very top', 'Halfway up the tank, at $H = L/2$', 'At the very bottom', 'One-quarter of the way up'],
             correctIndex: 1,
-            explanation: 'Maximize $R^2 = 4hH$ with $h + H = L$ ⇒ $h = H = L/2$.'
+            explanation: 'Maximize $R^2 = 4hH$ with $h + H = L$ ⇒ $h = H = L/2$. A hole at the top has $h = 0$ (no speed); a hole at the bottom has $H = 0$ (no fall time).'
           }
         ]
       }
@@ -162,24 +162,24 @@ If the hole is at height $H$ above the ground, the jet exits horizontally at spe
           {
             question: 'A large open tank has a small hole 3.2 m below the water surface. Exit speed of the water (g = 10 $m/s^{2}$)?',
             options: [
-              '$4$ m/s',
-              '$6$ m/s',
+              '$5.7$ m/s',
+              '$32$ m/s',
               '$8$ m/s',
-              '$32$ m/s'
+              '$64$ m/s'
             ],
             correctAnswer: 2,
-            explanation: '$v = \\sqrt{2(10)(3.2)} = \\sqrt{64} = 8$ m/s.'
+            explanation: '$v = \\sqrt{2gh} = \\sqrt{2(10)(3.2)} = \\sqrt{64} = 8$ m/s. Dropping the 2 gives $\\sqrt{32} ≈ 5.7$ m/s; forgetting the square root gives 64 m/s; $gh$ alone gives 32 m/s.'
           },
           {
             question: 'A jet exits horizontally from a tank with $h = 0.8$ m of water above the hole, which is $H = 0.2$ m above the floor. Horizontal range $R$?',
             options: [
               '$0.4$ m',
               '$0.8$ m',
-              '$1.6$ m',
-              '$3.2$ m'
+              '$0.32$ m',
+              '$0.64$ m'
             ],
             correctAnswer: 1,
-            explanation: '$R = 2\\sqrt{hH} = 2\\sqrt{0.16} = 2(0.4) = 0.8$ m.'
+            explanation: '$R = 2\\sqrt{hH} = 2\\sqrt{(0.8)(0.2)} = 2\\sqrt{0.16} = 2(0.4) = 0.8$ m. Dropping the 2 gives 0.4 m; forgetting the square root gives $2hH = 0.32$ m or $4hH = 0.64$ m.'
           }
         ]
       }

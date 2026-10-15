@@ -103,7 +103,7 @@ A massive, slowly spinning flywheel can have the same $L$ as a tiny, rapidly spi
           {
             question: 'Which has greater angular momentum: a hoop ($I = MR^2$) or a disk ($I = \\frac{1}{2}MR^2$) with the same $M$, $R$, and $\\omega$?',
             options: [
-              'The disk',
+              'The disk, since its mass fills its whole face',
               'The hoop',
               'They are equal',
               'Cannot determine'
@@ -145,7 +145,7 @@ A massive, slowly spinning flywheel can have the same $L$ as a tiny, rapidly spi
         dropdowns: [
           {
             label: 'The SI units of angular momentum are:',
-            options: ['kg·m/s', '$kg\\cdot m^{2}/s$', 'N·m', '$kg\\cdot m^{2}/s^{2}$'],
+            options: ['kg·m/s', '$kg\\cdot m^{2}/s$', 'N·m', '$kg\\cdot m/s^{2}$'],
             correctIndex: 1,
             explanation: 'Angular momentum has units of $kg\\cdot m^{2}/s$ (rotational inertia × angular velocity).'
           },
@@ -157,7 +157,7 @@ A massive, slowly spinning flywheel can have the same $L$ as a tiny, rapidly spi
           },
           {
             label: 'Angular momentum depends on which two quantities?',
-            options: ['mass and velocity', 'rotational inertia and angular velocity', 'force and distance', 'torque and time'],
+            options: ['mass and the linear speed of the center of mass', 'rotational inertia and angular velocity', 'applied force and its perpendicular lever-arm distance', 'net torque and the time interval over which it acts'],
             correctIndex: 1,
             explanation: 'Angular momentum depends on rotational inertia $I$ and angular velocity $\\omega$: $L = I\\omega$.'
           }

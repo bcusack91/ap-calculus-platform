@@ -68,8 +68,8 @@ So water = 1.00 $g/cm^{3}$ = 1000 $kg/m^{3}$.
             options: [
               'How heavy an object feels',
               'Mass per unit volume',
-              'Weight per unit area',
-              'Force per unit time'
+              'Weight per unit of surface area',
+              'Total mass divided by surface area'
             ],
             correctAnswer: 1,
             explanation: '$\\rho = m/V$ — mass per unit volume. Heaviness depends on weight ($W = mg$), not density alone.'
@@ -132,13 +132,13 @@ Use SI units throughout.
         dropdowns: [
           {
             label: 'A 1 kg block of feathers and a 1 kg block of iron — which has greater density?',
-            options: ['Feathers', 'Iron', 'Same', 'Cannot tell'],
+            options: ['Feathers', 'Iron', 'They are equal', 'Cannot tell'],
             correctIndex: 1,
             explanation: 'Same mass; iron occupies far less volume → much greater density (~7800 vs ~80 $kg/m^{3}$).'
           },
           {
             label: 'Ice $(917 kg/m^{3})$ is placed in fresh water $(1000 kg/m^{3})$. It will:',
-            options: ['Sink immediately', 'Float partially submerged', 'Float fully out of water', 'Dissolve'],
+            options: ['Sink immediately', 'Float partially submerged', 'Float fully out of water', 'Sink slowly'],
             correctIndex: 1,
             explanation: 'Ice is less dense than water → floats. About 92% submerged (since 917/1000 ≈ 0.92).'
           },
@@ -177,7 +177,7 @@ Use SI units throughout.
             explanation: '$\\rho = m/V = 4 / 5.0\\times10^{-3} = 800$ $kg/m^{3}$ (typical for soft wood).'
           },
           {
-            question: 'A piece of brass $(density 8500 kg/m^{3})$ has mass 1.7 kg. Its volume is:',
+            question: 'A piece of brass (density 8500 $kg/m^{3}$) has mass 1.7 kg. Its volume is:',
             options: [
               '$2.0\\times10^{-4}$ $m^{3}$',
               '$5.0\\times10^{-4}$ $m^{3}$',

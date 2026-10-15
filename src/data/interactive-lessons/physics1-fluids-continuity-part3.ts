@@ -64,7 +64,7 @@ A 25× speed boost from a 5× radius reduction. (We've ignored Bernoulli effects
             explanation: '$A \\propto r^2$ → halving $r$ quarters $A$ → speed × 4.'
           },
           {
-            question: 'A pipe widens by 10×. Speed in the wider section:',
+            question: 'A pipe\'s DIAMETER increases by a factor of 10. Speed in the wider section:',
             options: [
               '× 100',
               '× 10',
@@ -120,13 +120,13 @@ A 25× speed boost from a 5× radius reduction. (We've ignored Bernoulli effects
           },
           {
             label: 'A nozzle on a hose creates a fast jet because:',
-            options: ['Pressure inside increases dramatically', 'Continuity: smaller $A$ → larger $v$', 'Hose pumps harder', 'Air is forced in'],
+            options: ['Pressure inside increases dramatically', 'A smaller opening $A$ forces a larger $v$', 'The hose\'s pump pushes harder', 'Air drawn in speeds the water'],
             correctIndex: 1,
-            explanation: 'Volume flow rate is constant; reducing $A$ at the nozzle forces $v$ to grow.'
+            explanation: 'Continuity: the volume flow rate $Q = Av$ is fixed by the supply, so shrinking $A$ at the nozzle forces $v$ to grow.'
           },
           {
             label: 'For a faucet flowing freely, the cross-section of the falling stream:',
-            options: ['Stays constant', 'Grows downward', 'Shrinks downward (gravity speeds it up)', 'Oscillates'],
+            options: ['Stays constant, since water is rigid', 'Grows as the stream spreads out', 'Shrinks, since gravity speeds the water up', 'Swells and narrows in a regular pattern'],
             correctIndex: 2,
             explanation: 'Speed grows due to gravity → continuity demands smaller $A$.'
           },
@@ -161,13 +161,13 @@ A 25× speed boost from a 5× radius reduction. (We've ignored Bernoulli effects
           {
             question: 'A pipe carries 0.030 $m^{3}/s$ of water. In a section of radius 5 cm, the speed is approximately:',
             options: [
-              '0.038 m/s',
+              '0.95 m/s',
               '3.8 m/s',
-              '38 m/s',
-              '380 m/s'
+              '12 m/s',
+              '0.19 m/s'
             ],
             correctAnswer: 1,
-            explanation: '$A = \\pi (0.05)^2 ≈ 7.85\\times10^{-3}$ $m^{2}$. $v = Q/A = 0.030/7.85\\times10^{-3} ≈ 3.8$ m/s.'
+            explanation: '$A = \\pi (0.05)^2 ≈ 7.85\\times10^{-3}$ $m^{2}$. $v = Q/A = 0.030/7.85\\times10^{-3} ≈ 3.8$ m/s. Dropping $\\pi$ gives 12 m/s, forgetting to square $r$ gives 0.19 m/s, and using the diameter as the radius gives 0.95 m/s.'
           }
         ]
       }

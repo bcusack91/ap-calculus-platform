@@ -185,8 +185,8 @@ A conducting rod of length 0.8 m slides at 5 m/s along rails connected to a 4 Ω
             options: [
               'The magnetic field',
               'The kinetic energy of the rod',
-              'The work done by the external force maintaining constant velocity',
-              'The gravitational potential energy of the rod'
+              'Work done by the external force on the rod',
+              'The rod\'s gravitational potential energy'
             ],
             correctAnswer: 2,
             explanation: 'The external force does work on the rod to maintain constant velocity. This mechanical work is converted to electrical energy (EMF drives current) and then to heat in the resistor. The magnetic field does no net work — it merely mediates the energy transfer.'
@@ -194,9 +194,9 @@ A conducting rod of length 0.8 m slides at 5 m/s along rails connected to a 4 Ω
           {
             question: 'If the rails have no resistor (open circuit), a rod pushed along them will:',
             options: [
-              'Slow down due to magnetic braking',
-              'Speed up due to the induced EMF',
-              'Continue at constant velocity (no current, no force)',
+              'Slow down from braking',
+              'Speed up from the EMF',
+              'Keep moving at constant velocity',
               'Oscillate back and forth'
             ],
             correctAnswer: 2,

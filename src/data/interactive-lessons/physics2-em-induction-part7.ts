@@ -226,10 +226,10 @@ Test your understanding of the entire electromagnetic induction unit.
           {
             question: 'Which of the following is NOT a valid way to induce an EMF in a loop?',
             options: [
-              'Move the loop through a uniform magnetic field at constant velocity (loop stays entirely within the field)',
-              'Rotate the loop in a uniform magnetic field',
-              'Change the magnetic field strength while the loop is stationary',
-              'Pull the loop partially out of a magnetic field region'
+              'Moving the loop at constant velocity entirely within a uniform field',
+              'Rotating the loop about an axis perpendicular to a uniform field',
+              'Changing the magnetic field strength while the loop is held stationary',
+              'Pulling the loop partway out of the region where the field exists'
             ],
             correctAnswer: 0,
             explanation: 'Moving a loop through a uniform field without changing $B$, $A$, or $\\theta$ does NOT change the flux — so no EMF is induced. All other options change at least one factor in $\\Phi = BA\\cos\\theta$.'

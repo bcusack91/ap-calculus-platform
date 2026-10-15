@@ -63,21 +63,21 @@ It's just **energy conservation per unit volume** of fluid.
           {
             question: 'Bernoulli\'s equation is essentially:',
             options: [
-              'Newton\'s 2nd law for fluids',
+              'Conservation of momentum for fluids',
               'Conservation of energy per unit volume',
-              'Conservation of mass',
-              'Definition of pressure'
+              'Conservation of mass in a pipe',
+              'The definition of pressure'
             ],
             correctAnswer: 1,
-            explanation: 'Each term has units of Pa = $J/m^{3}$ = energy per unit volume. Sum is constant along a streamline.'
+            explanation: 'Each term has units of Pa = $J/m^{3}$ = energy per unit volume, and the sum is constant along a streamline. (Conservation of mass in a pipe is the continuity equation.)'
           },
           {
             question: 'Bernoulli\'s equation requires the fluid to be:',
             options: [
-              'Compressible',
-              'Viscous',
+              'Compressible and viscous',
+              'Viscous but incompressible',
               'Incompressible and non-viscous',
-              'Turbulent'
+              'Turbulent and compressible'
             ],
             correctAnswer: 2,
             explanation: 'Bernoulli assumes incompressible (constant $\\rho$) and non-viscous (no friction) flow.'
@@ -85,10 +85,10 @@ It's just **energy conservation per unit volume** of fluid.
           {
             question: 'In Bernoulli, the term $\\rho g y$ represents:',
             options: [
-              'Pressure inside the fluid',
+              'Pressure the fluid exerts on the walls',
               'Gravitational potential energy per unit volume',
               'Kinetic energy per unit volume',
-              'Total energy'
+              'Total mechanical energy of the fluid'
             ],
             correctAnswer: 1,
             explanation: '$\\rho g y$ is the analog of $mgy$ but per unit volume.'
@@ -135,9 +135,9 @@ Calculate each TERM of Bernoulli at the given point — answer in pascals.
           },
           {
             label: 'For Bernoulli to apply, the flow must be:',
-            options: ['Highly viscous', 'Compressible', 'Steady, non-viscous, incompressible', 'Turbulent'],
+            options: ['Steady, viscous, and compressible', 'Turbulent, non-viscous, compressible', 'Steady, non-viscous, incompressible', 'Unsteady, viscous, incompressible'],
             correctIndex: 2,
-            explanation: 'Standard idealizations of Bernoulli.'
+            explanation: 'The standard idealizations of Bernoulli: steady flow of a non-viscous, incompressible fluid along a streamline.'
           },
           {
             label: 'A reservoir surface open to air has $P =$:',
@@ -147,9 +147,9 @@ Calculate each TERM of Bernoulli at the given point — answer in pascals.
           },
           {
             label: 'Bernoulli\'s equation conserves which physical quantity?',
-            options: ['Mass', 'Momentum', 'Energy per unit volume', 'Charge'],
+            options: ['Mass per second', 'Momentum per second', 'Energy per unit volume', 'Pressure alone'],
             correctIndex: 2,
-            explanation: 'Sum of pressure + KE/V + PE/V = constant along a streamline.'
+            explanation: 'The sum $P + \\tfrac{1}{2}\\rho v^2 + \\rho g y$ (pressure-work + KE/V + PE/V) is constant along a streamline. Pressure alone can rise or fall; mass flow per second is the continuity idea.'
           }
         ]
       }
@@ -174,15 +174,15 @@ Calculate each TERM of Bernoulli at the given point — answer in pascals.
             explanation: '$P_1 + \\rho g y_1 = P_2 + \\tfrac{1}{2}\\rho v_2^2$. $100{,}000 + 50{,}000 = P_2 + 8000$. $P_2 = 142{,}000$ Pa = 142 kPa.'
           },
           {
-            question: 'Which term in Bernoulli\'s equation has the largest value for water at the surface of a 20-m-deep open lake (with $v$ ≈ 0 at surface)?',
+            question: 'At the surface of a still, 20-m-deep open lake, take $y = 0$ at the surface and $v \\approx 0$. Which term in Bernoulli\'s equation has the largest value there?',
             options: [
-              'Static pressure $P_{atm}$',
-              'Dynamic $\\tfrac{1}{2}\\rho v^2$',
-              'Gravitational $\\rho g y$ (depending on reference frame)',
-              'They are equal'
+              'The pressure term, $P = P_{atm}$',
+              'The kinetic term, $\\tfrac{1}{2}\\rho v^2$',
+              'The gravitational term, $\\rho g y$',
+              'All three terms are equal'
             ],
             correctAnswer: 0,
-            explanation: 'At the surface of a still lake $v ≈ 0$, $y$ measures from the chosen origin, but $P_{atm}$ ≈ 100 kPa is dominant for the typical chosen origin at the surface.'
+            explanation: 'With $y = 0$ at the surface, $\\rho g y = 0$, and with $v \\approx 0$, $\\tfrac{1}{2}\\rho v^2 \\approx 0$. The pressure term is $P_{atm} ≈ 1.0\\times10^{5}$ Pa, so it dominates. (If you put $y = 0$ at the lake bottom instead, $\\rho g y = 200$ kPa would be largest; the sum is what matters, not the choice of origin.)'
           }
         ]
       }

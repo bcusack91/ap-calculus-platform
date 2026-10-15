@@ -55,10 +55,10 @@ This workshop combines volume flow rate, pipe narrowing, branching, and mass flo
               '1.5 m/s',
               '6 m/s',
               '12 m/s',
-              '24 m/s'
+              '0.75 m/s'
             ],
             correctAnswer: 2,
-            explanation: 'Diameter ÷ 2 → area ÷ 4 → speed × 4 = 12 m/s.'
+            explanation: 'Diameter ÷ 2 → area ÷ 4 → speed × 4 = 12 m/s. Forgetting to square gives 6 m/s; inverting the ratio gives 1.5 or 0.75 m/s.'
           },
           {
             question: 'A river enters a narrow gorge. Width: 60 m → 20 m. Depth: 4 m → 6 m. Speed in the wide part is 1.0 m/s. Speed in the gorge?',
@@ -66,10 +66,10 @@ This workshop combines volume flow rate, pipe narrowing, branching, and mass flo
               '0.5 m/s',
               '1.0 m/s',
               '2.0 m/s',
-              '4.0 m/s'
+              '3.0 m/s'
             ],
             correctAnswer: 2,
-            explanation: '$A_1 = 240$ $m^{2}$, $A_2 = 120$ $m^{2}$. $v_2 = v_1 (A_1/A_2) = 1.0 \\times 2 = 2.0$ m/s.'
+            explanation: '$A_1 = 60 \\times 4 = 240$ $m^{2}$, $A_2 = 20 \\times 6 = 120$ $m^{2}$. $v_2 = v_1 (A_1/A_2) = 1.0 \\times 2 = 2.0$ m/s. Using the widths alone gives 3.0 m/s; inverting gives 0.5 m/s.'
           }
         ]
       }
@@ -105,25 +105,25 @@ This workshop combines volume flow rate, pipe narrowing, branching, and mass flo
         dropdowns: [
           {
             label: 'Splitting one main pipe into 4 equal branches each with $A = A_{main}/4$. Speed in each branch (vs main):',
-            options: ['Same as main', '× 4 main', '÷ 4 main', '÷ 16 main'],
+            options: ['Same speed as the main', 'Four times the main speed', 'One-fourth the main speed', 'One-sixteenth the main speed'],
             correctIndex: 0,
             explanation: 'Each branch carries 1/4 of $Q$. Each branch area is also 1/4 → $v_{branch} = (Q/4)/(A/4) = Q/A = v_{main}$.'
           },
           {
             label: 'Splitting one main pipe into 4 equal branches each with $A = A_{main}$. Speed in each branch:',
-            options: ['Same as main', '× 4 main', '÷ 4 main', '÷ 16 main'],
+            options: ['Same speed as the main', 'Four times the main speed', 'One-fourth the main speed', 'One-sixteenth the main speed'],
             correctIndex: 2,
             explanation: '$v_{branch} = (Q/4)/A_{main} = v_{main}/4$.'
           },
           {
             label: 'Mass flow rate of water in a pipe is 5 kg/s. Volume flow rate $(m^{3}/s)$:',
-            options: ['0.005', '0.05', '0.5', '5'],
+            options: ['0.005', '5', '5000', '0.0005'],
             correctIndex: 0,
-            explanation: '$Q = \\dot m / \\rho = 5/1000 = 0.005$ $m^{3}/s$.'
+            explanation: '$Q = \\dot m / \\rho = 5/1000 = 0.005$ $m^{3}/s$. Forgetting $\\rho$ gives 5, multiplying by $\\rho$ gives 5000, and also dividing by $g$ gives 0.0005.'
           },
           {
             label: 'A river slows down where it widens. The cross-sectional area:',
-            options: ['Decreases', 'Stays the same', 'Increases', 'Becomes zero'],
+            options: ['Decreases, since slower water takes up less room', 'Stays the same, since the flow rate is constant', 'Increases, so that $Q = Av$ stays the same as upstream', 'Decreases, since the riverbed gets shallower'],
             correctIndex: 2,
             explanation: 'Continuity: lower speed ⇒ larger area to keep $Q$ constant.'
           }
@@ -152,13 +152,13 @@ This workshop combines volume flow rate, pipe narrowing, branching, and mass flo
           {
             question: 'A pipe of radius 5.0 cm carries water at speed $v$. The mass flow rate is 31.4 kg/s. Find $v$.',
             options: [
-              '0.4 m/s',
-              '4 m/s',
-              '40 m/s',
-              '400 m/s'
+              '0.2 m/s',
+              '4.0 m/s',
+              '1.0 m/s',
+              '4000 m/s'
             ],
             correctAnswer: 1,
-            explanation: '$A = \\pi (0.05)^2 ≈ 7.85\\times10^{-3}$ $m^{2}$. $v = \\dot m/(\\rho A) = 31.4/(1000 \\times 7.85\\times10^{-3}) = 4.0$ m/s.'
+            explanation: '$A = \\pi (0.05)^2 ≈ 7.85\\times10^{-3}$ $m^{2}$. $v = \\dot m/(\\rho A) = 31.4/(1000 \\times 7.85\\times10^{-3}) = 4.0$ m/s. Forgetting to square $r$ gives 0.2 m/s, using the diameter as the radius gives 1.0 m/s, and forgetting $\\rho$ gives 4000 m/s.'
           }
         ]
       }

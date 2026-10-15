@@ -75,10 +75,10 @@ $$2T = 200 \\Rightarrow T = 100 \\text{ N}$$
           {
             question: 'For an object to be in static equilibrium, which conditions must be met?',
             options: [
-              'Only $\\sum F = 0$',
-              'Only $\\sum \\tau = 0$',
+              'Only $\\sum F = 0$; torques then balance on their own',
+              'Only $\\sum \\tau = 0$; forces then cancel on their own',
               'Both $\\sum F = 0$ and $\\sum \\tau = 0$',
-              'The object must have zero velocity and zero angular velocity'
+              'Only that the object is momentarily at rest'
             ],
             correctAnswer: 2,
             explanation: 'Static equilibrium requires both translational equilibrium ($\\sum F = 0$) and rotational equilibrium ($\\sum \\tau = 0$).'
@@ -86,10 +86,10 @@ $$2T = 200 \\Rightarrow T = 100 \\text{ N}$$
           {
             question: 'A ladder leans against a frictionless wall. The ladder is in static equilibrium. How many unknown forces are there?',
             options: [
-              '1 (normal force from wall)',
-              '2 (normal forces from wall and floor)',
-              '3 (normal forces from wall and floor, plus friction from floor)',
-              '4'
+              '1: only the normal force from the wall',
+              '2: normal forces from wall and floor',
+              '3: both normal forces plus floor friction',
+              '4: both normal forces plus wall friction'
             ],
             correctAnswer: 2,
             explanation: 'The forces are: weight of ladder (known), normal force from wall (horizontal), normal force from floor (vertical), and friction from the floor (horizontal). The wall is frictionless, so there are 3 unknowns.'
@@ -97,7 +97,7 @@ $$2T = 200 \\Rightarrow T = 100 \\text{ N}$$
           {
             question: 'A uniform beam is supported at two points. Increasing the weight on the beam closer to support A will:',
             options: [
-              'Increase the force on both supports equally',
+              'Increase both support forces equally',
               'Increase the force on A more than on B',
               'Decrease the force on A',
               'Have no effect on the support forces'
@@ -114,7 +114,7 @@ $$2T = 200 \\Rightarrow T = 100 \\text{ N}$$
       content: `
 **Static Equilibrium Problems** 🧮
 
-1) A 3 m uniform beam (weight 120 N) is supported at the left end (A) and the right end (B). A 200 N load sits 1 m from A. Find the reaction force at A. (in N, round to nearest whole number)
+1) A 3 m uniform beam (weight 120 N) is supported at its left end, A, and its right end, B. A 200 N load sits 1 m from A. Find the reaction force at A. (in N, round to nearest whole number)
 
 2) Find the reaction force at B for the beam in problem 1. (in N, round to nearest whole number)
 
@@ -122,11 +122,11 @@ $$2T = 200 \\Rightarrow T = 100 \\text{ N}$$
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['187', '133', '400'],
+        correctAnswers: ['193', '127', '400'],
         hint1: 'Take torques about B: $A(3) = 120(1.5) + 200(2)$',
         hint2: '$\\sum F_y = 0$: $A + B = 120 + 200 = 320$ N',
         hint3: 'Take torques about the hinge: $T(5) = 400(5)$',
-        explanation: '1) Torques about B: $A(3) = 120(1.5) + 200(2) = 180 + 400 = 580 \\Rightarrow A = 193$ N. Wait — let me recalculate. Distance from load to B = 2 m. $A(3) = 120(1.5) + 200(2) = 180 + 400 = 580$, $A = 193$ N. Hmm, let me recheck: load is 1 m from A, so 2 m from B. Beam weight acts at center = 1.5 m from either end. Torques about B: $A(3) - 120(1.5) - 200(2) = 0$, $3A = 180 + 400 = 580$, $A \\approx 193$ N. Actually I need to reconsider. Taking torques about B: CW torques from weights at distances from B. Load is 2 m from B. Beam weight is 1.5 m from B. $A(3) = 200(2) + 120(1.5) = 400 + 180 = 580$, $A = 193.3$ N. So $B = 320 - 193.3 = 126.7$ N. Let me adjust the answers to 193 and 127. Actually, the correct answers should be 187 and 133 if the problem setup is right. Rechecking with torques about A: $B(3) = 120(1.5) + 200(1) = 180 + 200 = 380$, $B = 126.7$ N, $A = 320 - 127 = 193$ N.'
+        explanation: '1) Take torques about B. The load is 2 m from B and the beam\'s weight acts at its center, 1.5 m from B: $A(3) = 120(1.5) + 200(2) = 180 + 400 = 580$, so $A = 193.3 \\approx 193$ N. 2) $\\sum F_y = 0$: $B = 320 - 193.3 = 126.7 \\approx 127$ N. Check with torques about A: $B(3) = 120(1.5) + 200(1) = 380$, $B = 126.7$ N. 3) Torques about the hinge: $T(5) = 400(5)$, so $T = 400$ N.'
       }
     },
     {
@@ -139,19 +139,19 @@ $$2T = 200 \\Rightarrow T = 100 \\text{ N}$$
         dropdowns: [
           {
             label: 'Static equilibrium requires zero:',
-            options: ['net force only', 'net torque only', 'both net force and net torque', 'velocity'],
+            options: ['net force only, not net torque', 'net torque only, not net force', 'both net force and net torque', 'net work only, not force or torque'],
             correctIndex: 2,
             explanation: 'Static equilibrium requires both $\\sum F = 0$ (no translation) and $\\sum \\tau = 0$ (no rotation).'
           },
           {
             label: 'When solving equilibrium problems, where should you place the pivot?',
-            options: ['at the center of mass', 'where an unknown force acts', 'at the heaviest object', 'it does not matter — choose strategically'],
+            options: ['at the center of mass', 'only at a support or hinge', 'only under the heaviest load', 'anywhere, chosen strategically'],
             correctIndex: 3,
-            explanation: 'Any pivot works, but choosing wisely (e.g., where an unknown acts) simplifies the math.'
+            explanation: 'Any pivot works, because $\\sum \\tau = 0$ holds about every point. Choosing it wisely (for example, where an unknown force acts) simplifies the math.'
           },
           {
             label: 'In 2D static equilibrium, how many independent equations do you have?',
-            options: ['one equation', 'two equations', 'three equations', 'four equations'],
+            options: ['1 equation', '2 equations', '3 equations', '4 equations'],
             correctIndex: 2,
             explanation: 'In 2D static equilibrium: $\\sum F_x = 0$, $\\sum F_y = 0$, and $\\sum \\tau = 0$ — three equations total.'
           }
@@ -169,21 +169,21 @@ $$2T = 200 \\Rightarrow T = 100 \\text{ N}$$
           {
             question: 'A painter (700 N) stands 1 m from the left end of a 4 m scaffold (200 N). The scaffold is supported by cables at each end. The tension in the left cable is:',
             options: [
-              '225 N',
+              '275 N',
+              '525 N',
               '625 N',
-              '675 N',
               '900 N'
             ],
             correctAnswer: 2,
-            explanation: 'Torques about right end: $T_L(4) = 700(3) + 200(2) = 2100 + 400 = 2500$. $T_L = 625$ N. Wait: painter is 1 m from left = 3 m from right. $T_L(4) = 700(3) + 200(2) = 2500$, $T_L = 625$ N. The answer is 625 N.'
+            explanation: 'Take torques about the right end. The painter is 3 m from the right end and the scaffold\'s weight acts at its center, 2 m from the right end: $T_L(4) = 700(3) + 200(2) = 2100 + 400 = 2500$, so $T_L = 625$ N. (275 N is the right cable\'s tension; 525 N ignores the scaffold\'s weight; 900 N is the total load.)'
           },
           {
             question: 'A system is in translational equilibrium but NOT rotational equilibrium. This means:',
             options: [
-              'The object is at rest',
-              'The object accelerates linearly',
-              'The object has angular acceleration but no linear acceleration of its center of mass',
-              'This situation is impossible'
+              'It must be at rest, since the forces on it balance',
+              'Its center of mass accelerates, but it does not spin',
+              'It has angular but no center-of-mass acceleration',
+              'This is impossible: zero net force means zero torque'
             ],
             correctAnswer: 2,
             explanation: '$\\sum F = 0$ ensures no linear acceleration of the center of mass. But $\\sum \\tau \\neq 0$ means there is angular acceleration — the object will start to rotate.'

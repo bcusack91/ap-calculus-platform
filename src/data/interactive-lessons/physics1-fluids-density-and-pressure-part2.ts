@@ -68,9 +68,9 @@ In a static fluid, pressure acts in **all directions** at every point — not ju
             question: 'Two equal forces are applied to two surfaces. The smaller surface experiences:',
             options: [
               'Less pressure',
-              'The same pressure',
+              'Same pressure',
               'Greater pressure',
-              'No pressure'
+              'Less force'
             ],
             correctAnswer: 2,
             explanation: 'Same $F$, smaller $A$ → larger $P = F/A$. (Why a sharp blade cuts more easily than a dull one.)'
@@ -120,15 +120,15 @@ In a static fluid, pressure acts in **all directions** at every point — not ju
         dropdowns: [
           {
             label: 'A skier on snow vs the same skier on a single ski tip pressing into snow. Compared to standing on both skis, the tip exerts:',
-            options: ['Less pressure', 'Same pressure', 'Greater pressure', 'No pressure'],
+            options: ['Less pressure, since less of the ski touches snow', 'Same pressure, since the skier\'s weight is unchanged', 'Greater pressure', 'Pressure that depends only on the snow depth'],
             correctIndex: 2,
             explanation: 'Same weight (force), much smaller contact area → much greater pressure. That\'s why ski tips dig in.'
           },
           {
             label: '1 atm equals approximately:',
-            options: ['10 Pa', '1000 Pa', '$1.0\\times10^{5}$ Pa', '$1.0\\times10^{7}$ Pa'],
+            options: ['$1.0\\times10^{2}$ Pa', '$1.0\\times10^{4}$ Pa', '$1.0\\times10^{5}$ Pa', '$1.0\\times10^{7}$ Pa'],
             correctIndex: 2,
-            explanation: '1 atm = 101,325 Pa ≈ $1.0\\times10^{5}$ Pa.'
+            explanation: '1 atm = 101,325 Pa ≈ $1.0\\times10^{5}$ Pa, about 101 kPa. Reading 101 kPa as 101 Pa (about $10^{2}$ Pa) is the common slip.'
           },
           {
             label: 'A 1 m × 2 m board has a 100 N force on it. The pressure is:',

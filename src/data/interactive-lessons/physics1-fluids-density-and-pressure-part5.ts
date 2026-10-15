@@ -63,19 +63,19 @@ You trade distance for force, exactly like a lever or pulley system.
           {
             question: 'A hydraulic press multiplies:',
             options: [
-              'Force AND energy',
+              'Both force and energy',
               'Force, not energy',
-              'Energy, not force',
-              'Neither (just transmits)'
+              'Energy, but not force',
+              'Neither; it only transmits force'
             ],
             correctAnswer: 1,
             explanation: 'Force scales with area ratio. Energy is conserved (you push farther for less force).'
           },
           {
             question: 'A hydraulic lift has $A_2/A_1 = 50$. To lift a 5000 N car, the input force needed is:',
-            options: ['100 N', '250 N', '5000 N', '250,000 N'],
+            options: ['100 N', '2.0 N', '5000 N', '250,000 N'],
             correctAnswer: 0,
-            explanation: '$F_1 = F_2 (A_1/A_2) = 5000/50 = 100$ N.'
+            explanation: '$F_1 = F_2 (A_1/A_2) = 5000/50 = 100$ N. Multiplying by the ratio instead of dividing gives 250,000 N, and dividing by $50^2$ (treating 50 as a radius ratio) gives 2.0 N.'
           },
           {
             question: 'In a hydraulic system, the input piston moves down 30 cm and the output rises 1.5 cm. The area ratio $A_2/A_1$ is:',
@@ -123,9 +123,9 @@ You trade distance for force, exactly like a lever or pulley system.
           },
           {
             label: 'In a hydraulic brake, fluid is used because it is:',
-            options: ['Compressible (cushions force)', 'Incompressible (transmits pressure)', 'Lightweight', 'Magnetic'],
+            options: ['Compressible, so it cushions the pedal force', 'Nearly incompressible', 'Lightweight, so it flows quickly through the lines', 'Able to multiply energy as well as force'],
             correctIndex: 1,
-            explanation: 'Incompressibility ensures the entire pressure change reaches the brake calipers without loss.'
+            explanation: 'A nearly incompressible fluid transmits a pressure change undiminished to every part of the system (Pascal\'s principle), so the full pressure reaches the brake calipers.'
           },
           {
             label: 'Pascal\'s Principle applies to:',

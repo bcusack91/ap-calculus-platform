@@ -66,10 +66,10 @@ This is **the buoyant force**.
           {
             question: 'Buoyant force depends on:',
             options: [
-              'The object\'s mass only',
+              'The object\'s mass and how deep it sits',
               'The fluid\'s density and the displaced volume',
-              'The container\'s shape',
-              'The object\'s color'
+              'The container\'s shape and the fluid depth',
+              'The object\'s own density and its weight'
             ],
             correctAnswer: 1,
             explanation: '$F_b = \\rho_{fluid}\\, g\\, V_{disp}$ — fluid density and displaced volume only.'
@@ -77,13 +77,13 @@ This is **the buoyant force**.
           {
             question: 'A steel ball and a hollow ball of the same volume are submerged at the same depth. The buoyant forces are:',
             options: [
-              'Greater on the steel ball (heavier)',
-              'Greater on the hollow ball',
-              'Equal (same displaced volume)',
-              'Zero on the hollow ball'
+              'Greater on the steel ball, which is heavier',
+              'Greater on the hollow ball, which is lighter',
+              'Equal on the two balls',
+              'Zero on the hollow ball, which is mostly air'
             ],
             correctAnswer: 2,
-            explanation: 'Same displaced volume × same fluid density → same $F_b$. Object weight differs, but buoyancy doesn\'t.'
+            explanation: 'Same displaced volume × same fluid density → same $F_b$. The balls\' weights differ, but the buoyant force does not depend on what is inside the object.'
           }
         ]
       }
@@ -119,27 +119,27 @@ This is **the buoyant force**.
         dropdowns: [
           {
             label: 'A fully submerged object floats up if:',
-            options: ['$\\rho_{obj} > \\rho_{fluid}$', '$\\rho_{obj} = \\rho_{fluid}$', '$\\rho_{obj} < \\rho_{fluid}$', 'It has color'],
+            options: ['$\\rho_{obj} > \\rho_{fluid}$', '$\\rho_{obj} = \\rho_{fluid}$', '$\\rho_{obj} < \\rho_{fluid}$', '$W_{obj} < W_{fluid\\ in\\ tank}$'],
             correctIndex: 2,
-            explanation: 'Less dense than fluid → $F_b > W$ → net upward → rises.'
+            explanation: 'Less dense than the fluid → $F_b > W$ → net upward force → it rises. Comparing the object\'s weight with the weight of ALL the fluid in the tank is a common mix-up; only the displaced fluid matters.'
           },
           {
             label: 'A submerged object\'s buoyant force is independent of:',
-            options: ['Fluid density', 'Object volume', 'Object density', 'Acceleration of gravity'],
+            options: ['The density of the fluid', 'The volume of the object', 'The object\'s density', 'The strength of gravity, $g$'],
             correctIndex: 2,
             explanation: 'Buoyancy depends on fluid density and displaced volume — NOT object density.'
           },
           {
             label: 'In a vacuum (no fluid around), the buoyant force on an object is:',
-            options: ['Equal to weight', 'Half the weight', 'Zero', 'Infinite'],
+            options: ['Equal to its weight', 'Half its weight', 'Zero', 'The same as it would be in air'],
             correctIndex: 2,
-            explanation: 'No fluid → no displaced volume → $F_b = 0$.'
+            explanation: 'No fluid → no displaced fluid → $F_b = 0$. Buoyancy is a force exerted by a fluid, not a property the object carries with it.'
           },
           {
             label: 'If you replace water with denser saltwater, the buoyant force on the same submerged object:',
-            options: ['Decreases', 'Stays the same', 'Increases', 'Becomes zero'],
+            options: ['Decreases, since denser water resists more', 'Stays the same, since the volume is unchanged', 'Increases, since the displaced fluid is now heavier', 'Decreases, as saltwater presses down harder'],
             correctIndex: 2,
-            explanation: '$F_b = \\rho_{fluid} g V$ — denser fluid → more buoyancy. (Why it\'s easier to float in the ocean than a pool.)'
+            explanation: '$F_b = \\rho_{fluid} g V$: same displaced volume, denser fluid → more buoyancy. (Why it\'s easier to float in the ocean than in a pool.)'
           }
         ]
       }

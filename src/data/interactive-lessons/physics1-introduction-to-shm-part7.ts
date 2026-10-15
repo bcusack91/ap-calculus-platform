@@ -74,8 +74,8 @@ $$a = -\\omega^2 x$$
           {
             question: 'A horizontal mass-spring system oscillates on a frictionless surface. If taken to the Moon (where $g$ is less), the period will:',
             options: [
-              'Increase',
-              'Decrease',
+              'Increase, because the block\'s weight is smaller',
+              'Decrease, since less gravity resists the motion',
               'Stay the same',
               'Depend on the amplitude'
             ],
@@ -138,7 +138,7 @@ $$a = -\\omega^2 x$$
         dropdowns: [
           {
             label: 'For simple harmonic motion to occur, the restoring force must be:',
-            options: ['proportional to displacement', 'constant', 'proportional to velocity', 'random'],
+            options: ['proportional to displacement', 'constant', 'proportional to velocity', 'proportional to $x^{2}$'],
             correctIndex: 0,
             explanation: 'SHM requires a restoring force proportional to displacement: $F = -kx$.'
           },
@@ -156,7 +156,7 @@ $$a = -\\omega^2 x$$
           },
           {
             label: 'If the amplitude of an ideal SHM system is increased, the period:',
-            options: ['increases', 'decreases', 'stays the same', 'becomes infinite'],
+            options: ['increases, since the path is longer', 'decreases, since the restoring force grows', 'stays the same', 'increases in proportion to the amplitude'],
             correctIndex: 2,
             explanation: 'Changing the amplitude does not affect the period of an ideal SHM system.'
           }

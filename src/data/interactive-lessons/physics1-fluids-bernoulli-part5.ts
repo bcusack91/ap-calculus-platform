@@ -63,9 +63,9 @@ $F_{lift} \\approx \\Delta P \\cdot A = \\tfrac{1}{2}\\rho_{air}(v_{top}^2 - v_{
             question: 'A Pitot tube measures airspeed. The principle relies on:',
             options: [
               'Pressure difference between a stagnation port and a static port',
-              'Magnetic induction',
-              'Sound waves',
-              'Doppler effect on light'
+              'Magnetic induction in the moving air stream',
+              'Sound waves reflected off the aircraft\'s nose',
+              'The Doppler shift of light scattered by the air'
             ],
             correctAnswer: 0,
             explanation: '$P_{stag} - P_{static} = \\tfrac{1}{2}\\rho v^2$.'
@@ -74,12 +74,12 @@ $F_{lift} \\approx \\Delta P \\cdot A = \\tfrac{1}{2}\\rho_{air}(v_{top}^2 - v_{
             question: 'A perfume atomizer works because:',
             options: [
               'Surface tension lifts the liquid',
-              'Fast air over the tube top creates low pressure; atmospheric pressure pushes liquid up',
-              'Heat vaporizes the perfume',
-              'Capillary action'
+              'Fast air over the tube lowers pressure there',
+              'Heat vaporizes the perfume inside',
+              'Capillary action draws the liquid up'
             ],
             correctAnswer: 1,
-            explanation: 'Bernoulli effect at the tube tip + atmospheric push from the bottle.'
+            explanation: 'Bernoulli effect: fast air across the top of the tube lowers the pressure there, and atmospheric pressure on the liquid in the bottle pushes it up the tube into the airstream.'
           },
           {
             question: 'In a Venturi meter, the location of LOWEST pressure is:',
@@ -87,7 +87,7 @@ $F_{lift} \\approx \\Delta P \\cdot A = \\tfrac{1}{2}\\rho_{air}(v_{top}^2 - v_{
               'In the wide upstream section',
               'In the narrow throat',
               'In the wide downstream section',
-              'Outside the pipe'
+              'Outside the pipe, in the open air'
             ],
             correctAnswer: 1,
             explanation: 'Continuity: throat has highest $v$. Bernoulli: highest $v$ ⇒ lowest $P$.'
@@ -125,22 +125,22 @@ $F_{lift} \\approx \\Delta P \\cdot A = \\tfrac{1}{2}\\rho_{air}(v_{top}^2 - v_{
       exercise: {
         dropdowns: [
           {
-            label: 'A house in a hurricane has a closed door. The wind blows past the windward wall fast and the leeward wall is in still air. The door tends to be:',
-            options: ['Pushed inward (toward the leeward side)', 'Pulled toward the windward side', 'Unaffected', 'Pulled upward'],
+            label: 'In a storm, wind streams rapidly along the outside of a wall that has a closed door, while the air inside the house is still. The door tends to be:',
+            options: ['Pushed outward, away from the house', 'Pushed inward by the fast-moving wind', 'Unaffected, since the wind blows parallel to it', 'Pushed inward, since moving air has higher pressure'],
             correctIndex: 0,
-            explanation: 'Higher pressure on the leeward side (still air) pushes the door toward the low-pressure windward side. Wait — actually the WINDWARD side is FACING the wind. The wind on the WINDWARD WALL\'S OUTSIDE moves FAST → low pressure outside → indoor pressure pushes the wall outward. The DOOR (on, say, the leeward side) sees still air outside and indoor pressure inside; if indoor air slowed, then the OUTSIDE high pressure pushes the door INWARD.'
+            explanation: 'Bernoulli: the fast-moving air outside has LOWER pressure than the still air inside. The higher indoor pressure pushes the door outward, the same effect that lifts roofs and blows windows out in storms. Wind streaming parallel to the wall does not push the door in.'
           },
           {
             label: 'A spinning baseball curves because of:',
-            options: ['Gravity', 'Coriolis force', 'Magnus effect (Bernoulli)', 'Friction with the catcher'],
+            options: ['Gravity pulling unevenly on the spinning ball', 'The Coriolis force from Earth\'s rotation', 'The Magnus effect', 'Uneven weight from the raised stitching'],
             correctIndex: 2,
-            explanation: 'Spin creates asymmetric speed → asymmetric $P$ → side force.'
+            explanation: 'Magnus effect: the spin drags air faster past one side of the ball than the other, so the pressure is lower on the fast side and the ball is pushed sideways. (Bernoulli-style reasoning; the Magnus effect itself is not named in the AP Physics 1 CED.)'
           },
           {
             label: 'A chimney pulls smoke upward more strongly on a windy day because:',
-            options: ['Wind directly carries smoke', 'Wind across the top lowers pressure there → draws smoke up', 'Air gets denser', 'Cold air sinks faster'],
+            options: ['Windy air is denser, so smoke rises faster', 'Wind across the top lowers the pressure there', 'Cold air sinks in the flue, lifting smoke', 'Wind raises the pressure at the chimney top'],
             correctIndex: 1,
-            explanation: 'Bernoulli effect at the chimney top.'
+            explanation: 'Bernoulli effect at the chimney top: fast wind lowers the pressure above the flue, so the higher pressure below pushes smoke up and out.'
           },
           {
             label: 'Which application does NOT depend on the Bernoulli effect?',
@@ -162,24 +162,24 @@ $F_{lift} \\approx \\Delta P \\cdot A = \\tfrac{1}{2}\\rho_{air}(v_{top}^2 - v_{
           {
             question: 'An airfoil with surface area $A = 10$ $m^{2}$ has air speeds $v_{top} = 100$ m/s and $v_{bot} = 90$ m/s ($\\rho_{air} = 1.2$). Approximate lift force?',
             options: [
-              '$570$ N',
+              '$600$ N',
               '$1140$ N',
               '$11400$ N',
-              '$57000$ N'
+              '$22800$ N'
             ],
             correctAnswer: 2,
-            explanation: '$\\Delta P = \\tfrac{1}{2}(1.2)(10000 - 8100) = 0.6(1900) = 1140$ Pa. $F = 1140 \\times 10 = 11{,}400$ N.'
+            explanation: '$\\Delta P = \\tfrac{1}{2}(1.2)(100^2 - 90^2) = 0.6(1900) = 1140$ Pa. $F = \\Delta P \\cdot A = 1140 \\times 10 = 11{,}400$ N. Stopping at $\\Delta P$ gives 1140; forgetting the ½ gives 22,800 N; using $(v_{top} - v_{bot})^2$ gives only 600 N.'
           },
           {
             question: 'A Pitot tube on a small plane shows $P_{stag} - P_{static} = 1500$ Pa. The airspeed ($\\rho_{air} = 1.2$ $kg/m^{3}$)?',
             options: [
-              '$25$ m/s',
+              '$35$ m/s',
               '$50$ m/s',
               '$1250$ m/s',
               '$2500$ m/s'
             ],
             correctAnswer: 1,
-            explanation: '$v = \\sqrt{2(1500)/1.2} = \\sqrt{2500} = 50$ m/s.'
+            explanation: '$v = \\sqrt{2\\Delta P/\\rho} = \\sqrt{2(1500)/1.2} = \\sqrt{2500} = 50$ m/s. Dropping the 2 gives $\\sqrt{1250} ≈ 35$ m/s; forgetting the square root gives 2500 (or 1250 without the 2).'
           }
         ]
       }

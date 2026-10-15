@@ -96,10 +96,10 @@ For a pendulum, $PE = mgh$ where $h$ is the height above the lowest point:
           {
             question: 'In a swinging pendulum, the potential energy is maximum when:',
             options: [
-              'The bob is at the lowest point',
+              'The bob is at the lowest point of its swing',
               'The bob is at the highest point',
-              'The bob is moving fastest',
-              'The period is longest'
+              'The bob is moving at its greatest speed',
+              'The bob is halfway between the bottom and the top'
             ],
             correctAnswer: 1,
             explanation: 'At the highest points of the swing, the bob is momentarily at rest ($KE = 0$) and all energy is gravitational PE.'
@@ -181,7 +181,7 @@ A 0.40 kg block on a spring ($k = 160$ N/m) oscillates with amplitude $A = 0.10$
           {
             question: 'If the amplitude of oscillation is doubled, the total energy:',
             options: [
-              'Doubles',
+              'Doubles, in step with the amplitude',
               'Quadruples',
               'Stays the same',
               'Halves'

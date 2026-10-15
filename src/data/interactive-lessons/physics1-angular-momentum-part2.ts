@@ -97,7 +97,7 @@ Combined with $mg - T = ma$, you can solve for both $a$ and $T$.
               '$\\tau = I\\omega$',
               '$\\tau = dL/dt$',
               '$\\tau = L\\alpha$',
-              '$L = I\\alpha$'
+              '$L = \\tau\\theta$'
             ],
             correctAnswer: 1,
             explanation: '$\\tau = dL/dt$: net torque equals the rate of change of angular momentum, just as net force equals the rate of change of linear momentum.'
@@ -150,7 +150,7 @@ Combined with $mg - T = ma$, you can solve for both $a$ and $T$.
           },
           {
             label: 'The SI units of angular acceleration α are:',
-            options: ['N·m', '$kg\\cdot m^{2}/s$', '$rad/s^{2}$', '$kg\\cdot m^{2}$'],
+            options: ['N·m', '$rad/s$', '$rad/s^{2}$', '$m/s^{2}$'],
             correctIndex: 2,
             explanation: 'Angular acceleration $\\alpha$ has units of $rad/s^{2}$, computed from $\\alpha = \\tau/I$.'
           }

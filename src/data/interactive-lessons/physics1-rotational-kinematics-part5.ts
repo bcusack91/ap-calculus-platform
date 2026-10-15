@@ -91,10 +91,10 @@ This lets you find $I$ about any axis that is parallel to one through the center
           {
             question: 'A figure skater pulls her arms in during a spin. Her rotational inertia:',
             options: [
-              'Increases',
+              'Increases, since she spins faster',
               'Decreases',
               'Stays the same',
-              'Becomes zero'
+              'Depends on her speed'
             ],
             correctAnswer: 1,
             explanation: 'Pulling arms in moves mass closer to the rotation axis, reducing $r$ in $I = \\sum mr^2$, so $I$ decreases.'
@@ -105,10 +105,10 @@ This lets you find $I$ about any axis that is parallel to one through the center
               '$\\frac{1}{3}ML^2$',
               '$\\frac{1}{6}ML^2$',
               '$\\frac{1}{12}ML^2$',
-              '$\\frac{1}{4}ML^2$'
+              '$\\frac{7}{12}ML^2$'
             ],
             correctAnswer: 2,
-            explanation: 'About the center: $I = \\frac{1}{12}ML^2$. This is less than $\\frac{1}{3}ML^2$ because rotating about the center keeps mass closer to the axis on average.'
+            explanation: 'About the center: $I = \\frac{1}{12}ML^2$. By the parallel-axis theorem, $I_{end} = I_{cm} + M(L/2)^2 = \\frac{1}{12}ML^2 + \\frac{1}{4}ML^2 = \\frac{1}{3}ML^2$, so going from the end to the center subtracts $\\frac{1}{4}ML^2$. Adding it instead gives $\\frac{7}{12}ML^2$. The center value is smaller because the mass sits closer to the axis on average.'
           }
         ]
       }
@@ -144,13 +144,13 @@ This lets you find $I$ about any axis that is parallel to one through the center
         dropdowns: [
           {
             label: 'Rotational inertia depends on:',
-            options: ['mass only', 'radius only', 'mass and its distribution from the axis', 'angular velocity'],
+            options: ['the total mass only', 'the outer radius only', 'mass and its distribution from the axis', 'how fast it spins'],
             correctIndex: 2,
             explanation: 'Rotational inertia depends on both the total mass AND how that mass is distributed relative to the rotation axis.'
           },
           {
             label: 'The rotational inertia of a solid disk about its central axis is:',
-            options: ['$MR^{2}$', '$\\tfrac{1}{2} MR^{2}$', '⅖$MR^{2}$', '$\\tfrac{2}{3} MR^{2}$'],
+            options: ['$MR^{2}$', '$\\tfrac{1}{2} MR^{2}$', '$\\tfrac{2}{5} MR^{2}$', '$\\tfrac{2}{3} MR^{2}$'],
             correctIndex: 1,
             explanation: 'A solid disk (or cylinder) has $I = \\frac{1}{2}MR^2$ about its central axis.'
           },
@@ -174,10 +174,10 @@ This lets you find $I$ about any axis that is parallel to one through the center
           {
             question: 'A solid sphere and a hollow sphere of the same mass and radius roll down a hill. Which reaches the bottom first?',
             options: [
-              'Hollow sphere (larger $I$ → more energy in rotation)',
-              'Solid sphere (smaller $I$ → less energy in rotation → more translational speed)',
-              'They arrive at the same time',
-              'Cannot determine without knowing the mass'
+              'Hollow sphere: its mass is farther out',
+              'Solid sphere: smaller $I$ leaves more energy for translation',
+              'They arrive together: same mass and radius',
+              'It depends on the mass, which is not given'
             ],
             correctAnswer: 1,
             explanation: 'The solid sphere has $I = \\frac{2}{5}MR^2$ vs. hollow sphere $I = \\frac{2}{3}MR^2$. Less rotational inertia means more gravitational PE converts to translational KE, so the solid sphere is faster.'

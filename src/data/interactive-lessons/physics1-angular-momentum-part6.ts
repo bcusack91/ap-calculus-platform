@@ -53,13 +53,13 @@ Time to work through challenging problems involving angular momentum, rotational
           {
             question: 'An Atwood machine uses a solid disk pulley ($M = 4$ kg, $R = 0.2$ m). Masses of 3 kg and 5 kg hang on either side. The acceleration of the system is closest to:',
             options: [
-              '$1.5$ $m/s^{2}$',
-              '$1.8$ $m/s^{2}$',
+              '$1.6$ $m/s^{2}$',
+              '$7.8$ $m/s^{2}$',
               '$2.0$ $m/s^{2}$',
               '$2.5$ $m/s^{2}$'
             ],
-            correctAnswer: 1,
-            explanation: '$a = \\frac{(m_2 - m_1)g}{m_1 + m_2 + M/2} = \\frac{(5-3)(10)}{3 + 5 + 2} = \\frac{20}{10} = 2.0$ $m/s^{2}$. With exact $g = 9.8$: $a = 19.6/10 = 1.96 \\approx 2.0$. But with the pulley contributing $M/2$: $a = (2)(9.8)/(3+5+2) = 19.6/10 = 1.96$. Closest to 2.0 $m/s^{2}$.'
+            correctAnswer: 2,
+            explanation: 'The disk pulley adds $\\frac{1}{2}M = 2$ kg of effective inertia: $a = \\frac{(m_2 - m_1)g}{m_1 + m_2 + \\frac{1}{2}M} = \\frac{(5 - 3)(9.8)}{3 + 5 + 2} = \\frac{19.6}{10} = 1.96 \\approx 2.0$ $m/s^{2}$. Ignoring the pulley gives $19.6/8 = 2.45 \\approx 2.5$ $m/s^{2}$, treating it as a hoop (adding all 4 kg) gives $19.6/12 \\approx 1.6$ $m/s^{2}$; adding the hanging masses in the numerator gives $(8)(9.8)/10 \\approx 7.8$ $m/s^{2}$.'
           }
         ]
       }
@@ -78,11 +78,11 @@ Time to work through challenging problems involving angular momentum, rotational
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['3.6', '8.6', '0.20'],
+        correctAnswers: ['3.60', '8.64', '0.300'],
         hint1: 'Use conservation of angular momentum: $I_1 \\omega_1 = (I_1 + I_2)\\omega_f$.',
         hint2: 'Find $KE_i$ and $KE_f$ using $\\frac{1}{2}I\\omega^2$, then subtract to find the loss.',
         hint3: '$L_{\\text{total}} = 0$ initially. The person and turntable must have equal and opposite angular momenta. Find $I_{\\text{turntable}}$ for a uniform disk.',
-        explanation: '1) $(1.2)(6) = 2.0 \\omega_f$. $\\omega_f = 7.2/2.0 = 3.6$ rad/s. 2) $KE_i = \\frac{1}{2}(1.2)(36) = 21.6$ J. $KE_f = \\frac{1}{2}(2.0)(12.96) = 12.96$ J. Loss $= 21.6 - 12.96 = 8.64 \\approx 8.6$ J. 3) $L_{\\text{total}} = 0$. $mvr - I\\omega_t = 0$. $270 = 900\\omega_t$. $\\omega_t = 0.30$ rad/s.'
+        explanation: '1) $(1.2)(6) = 2.0 \\omega_f$. $\\omega_f = 7.2/2.0 = 3.6$ rad/s. 2) $KE_i = \\frac{1}{2}(1.2)(36) = 21.6$ J. $KE_f = \\frac{1}{2}(2.0)(12.96) = 12.96$ J. Loss $= 21.6 - 12.96 = 8.64$ J. 3) Turntable: $I = \\frac{1}{2}MR^2 = \\frac{1}{2}(200)(3)^2 = 900$ $kg\\cdot m^{2}$. Person: $L = mvr = 60(1.5)(3) = 270$ $kg\\cdot m^{2}/s$. $L_{\\text{total}} = 0$, so $900\\omega_t = 270$ and $\\omega_t = 0.300$ rad/s (opposite to the direction the person walks).'
       }
     },
     {
@@ -95,19 +95,19 @@ Time to work through challenging problems involving angular momentum, rotational
         dropdowns: [
           {
             label: 'When an object drops onto a spinning platform, the best approach is:',
-            options: ['conservation of L', 'τ = Iα', 'F = ma', 'conservation of energy'],
+            options: ['conservation of $L$', 'Newton\'s second law for rotation, $\\tau = I\\alpha$', 'Newton\'s second law, $F = ma$, for the object', 'conservation of kinetic energy'],
             correctIndex: 0,
             explanation: 'When an object drops onto a rotating platform with no external torques, use conservation of angular momentum.'
           },
           {
             label: 'In an inelastic rotational collision where objects stick together, kinetic energy:',
-            options: ['is also conserved', 'increases', 'decreases', 'depends on the collision'],
+            options: ['is also conserved', 'increases, since the objects lock together', 'decreases', 'depends on the collision'],
             correctIndex: 2,
             explanation: 'When two objects stick together (inelastic rotational collision), kinetic energy always decreases.'
           },
           {
             label: 'The total kinetic energy of a rolling object is:',
-            options: ['$\\tfrac{1}{2} I\\omega^{2}$', 'Iω', 'τθ', '$\\tfrac{1}{2} mv^{2}$ + $\\tfrac{1}{2} I\\omega^{2}$'],
+            options: ['$\\tfrac{1}{2} I\\omega^{2}$ only', '$\\tfrac{1}{2} mv^{2}$ only', '$\\tfrac{1}{2} mv^{2}$ + $I\\omega^{2}$', '$\\tfrac{1}{2} mv^{2}$ + $\\tfrac{1}{2} I\\omega^{2}$'],
             correctIndex: 3,
             explanation: 'For a rolling object, total KE includes both translational ($\\frac{1}{2}mv^2$) and rotational ($\\frac{1}{2}I\\omega^2$) components.'
           }
@@ -125,13 +125,13 @@ Time to work through challenging problems involving angular momentum, rotational
           {
             question: 'A solid ball and a hollow ball of equal mass and radius start at the top of a ramp and roll without slipping. At the bottom:',
             options: [
-              'The solid ball is faster (less energy in rotation)',
-              'The hollow ball is faster (more energy in rotation)',
-              'They have the same speed',
+              'The solid ball is faster',
+              'The hollow ball is faster, since its mass sits farther out',
+              'They have the same speed, since their masses are equal',
               'Cannot determine without knowing the ramp angle'
             ],
             correctAnswer: 0,
-            explanation: 'The solid ball has smaller $I$ ($\\frac{2}{5}MR^2$ vs $\\frac{2}{3}MR^2$). Less energy goes to rotation → more goes to translation → faster speed.'
+            explanation: 'The solid ball has the smaller $I$ ($\\frac{2}{5}MR^2$ vs $\\frac{2}{3}MR^2$), so less of its energy goes into rotation and more into translation, giving it the greater speed at the bottom. Mass and ramp angle cancel out of the final speed.'
           },
           {
             question: 'A record player turntable ($I_1 = 0.1$ $kg\\cdot m^{2}$) spins at $33\\frac{1}{3}$ RPM. A second identical turntable (not spinning) is dropped on top. The final RPM is:',

@@ -79,9 +79,9 @@ These components are always perpendicular, so we use the Pythagorean theorem.
           {
             question: 'Two points on a spinning disk — one at the rim and one halfway to the center — have:',
             options: [
-              'The same tangential velocity',
+              'Equal tangential velocities',
               'The same angular velocity but different tangential velocities',
-              'Different angular velocities but the same tangential velocity',
+              'Different angular velocities, same tangential velocity',
               'Different angular and tangential velocities'
             ],
             correctAnswer: 1,
@@ -149,7 +149,7 @@ These components are always perpendicular, so we use the Pythagorean theorem.
           },
           {
             label: 'Centripetal acceleration points:',
-            options: ['tangent to the path', 'toward the center', 'away from the center', 'along the radius'],
+            options: ['tangent to the path', 'toward the center', 'away from the center', 'in the direction of motion'],
             correctIndex: 1,
             explanation: 'Centripetal acceleration always points toward the center of the circular path.'
           },
@@ -174,12 +174,12 @@ These components are always perpendicular, so we use the Pythagorean theorem.
             question: 'A bicycle wheel (radius 0.35 m) has $\\omega = 10$ rad/s and $\\alpha = 2$ $rad/s^{2}$. The total acceleration of a point on the rim is closest to:',
             options: [
               '0.7 $m/s^{2}$',
-              '35 $m/s^{2}$',
-              '35.01 $m/s^{2}$',
-              '37 $m/s^{2}$'
+              '3.5 $m/s^{2}$',
+              '35.0 $m/s^{2}$',
+              '35.7 $m/s^{2}$'
             ],
             correctAnswer: 2,
-            explanation: '$a_t = r\\alpha = (0.35)(2) = 0.7$ $m/s^{2}$. $a_c = r\\omega^2 = (0.35)(100) = 35$ $m/s^{2}$. $a = \\sqrt{0.7^2 + 35^2} = \\sqrt{0.49 + 1225} = \\sqrt{1225.49} \\approx 35.01$ $m/s^{2}$.'
+            explanation: '$a_t = r\\alpha = (0.35)(2) = 0.7$ $m/s^{2}$ and $a_c = r\\omega^2 = (0.35)(100) = 35$ $m/s^{2}$. These are perpendicular, so $a = \\sqrt{0.7^2 + 35^2} = \\sqrt{1225.49} \\approx 35.0$ $m/s^{2}$. Adding the two magnitudes directly gives 35.7; using $r\\omega$ instead of $r\\omega^2$ gives 3.5; 0.7 is the tangential part alone.'
           },
           {
             question: 'Two gears are meshed together. Gear A (radius 10 cm) drives Gear B (radius 20 cm). If Gear A rotates at 100 rad/s, Gear B rotates at:',

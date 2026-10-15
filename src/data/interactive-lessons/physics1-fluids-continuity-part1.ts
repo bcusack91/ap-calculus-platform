@@ -70,15 +70,15 @@ $$Q = \\frac{\\Delta V}{\\Delta t} = A v$$
           },
           {
             question: 'If you double the cross-sectional area at constant speed:',
-            options: ['$Q$ halves', '$Q$ doubles', '$Q$ unchanged', '$Q$ becomes zero'],
+            options: ['$Q$ halves', '$Q$ doubles', '$Q$ unchanged', '$Q$ quadruples'],
             correctAnswer: 1,
-            explanation: '$Q = Av$. Doubling $A$ doubles $Q$.'
+            explanation: '$Q = Av$. Doubling $A$ at the same $v$ doubles $Q$. (Quadrupling would apply if the RADIUS doubled, since $A \\propto r^2$.)'
           },
           {
             question: 'A pipe carries water at 0.5 $m^{3}/s$ with $A = 0.10$ $m^{2}$. Flow speed?',
-            options: ['0.05 m/s', '0.5 m/s', '5 m/s', '50 m/s'],
+            options: ['0.05 m/s', '0.5 m/s', '5 m/s', '0.2 m/s'],
             correctAnswer: 2,
-            explanation: '$v = Q/A = 0.5/0.10 = 5$ m/s.'
+            explanation: '$v = Q/A = 0.5/0.10 = 5$ m/s. Multiplying instead ($QA$) gives 0.05 m/s, dividing the wrong way ($A/Q$) gives 0.2 m/s, and 0.5 m/s just copies $Q$.'
           }
         ]
       }
@@ -114,7 +114,7 @@ $$Q = \\frac{\\Delta V}{\\Delta t} = A v$$
         dropdowns: [
           {
             label: 'Same fluid moves through pipes A and B with $v_A = v_B$ but $A_A < A_B$. The flow rate $Q$ is:',
-            options: ['Greater in A', 'Greater in B', 'Equal', 'Zero in B'],
+            options: ['Greater in A', 'Greater in B', 'Equal', 'Cannot tell without $\\rho$'],
             correctIndex: 1,
             explanation: '$Q = Av$, larger area at same speed → larger $Q$.'
           },
@@ -126,15 +126,15 @@ $$Q = \\frac{\\Delta V}{\\Delta t} = A v$$
           },
           {
             label: 'A river is 100 m wide and 5 m deep, flowing at 2 m/s. Volume flow rate is:',
-            options: ['10 $m^{3}/s$', '500 $m^{3}/s$', '1000 $m^{3}/s$', '5000 $m^{3}/s$'],
+            options: ['200 $m^{3}/s$', '500 $m^{3}/s$', '1000 $m^{3}/s$', '250 $m^{3}/s$'],
             correctIndex: 2,
-            explanation: '$A = 500$ $m^{2}$, $Q = 500 \\times 2 = 1000$ $m^{3}/s$.'
+            explanation: '$A = 100 \\times 5 = 500$ $m^{2}$, $Q = Av = 500 \\times 2 = 1000$ $m^{3}/s$. Leaving out the speed gives 500, leaving out the depth gives 200, and dividing by the speed gives 250.'
           },
           {
             label: 'A garden hose with $A = 1.0\\times10^{-4}$ $m^{2}$ carries 0.5 L/s. Speed of water?',
-            options: ['0.5 m/s', '5 m/s', '50 m/s', '500 m/s'],
+            options: ['0.5 m/s', '5 m/s', '0.2 m/s', '5000 m/s'],
             correctIndex: 1,
-            explanation: '$Q = 5\\times10^{-4}$ $m^{3}/s$. $v = Q/A = 5\\times10^{-4}/10^{-4} = 5$ m/s.'
+            explanation: '$Q = 0.5$ L/s $= 5\\times10^{-4}$ $m^{3}/s$. $v = Q/A = 5\\times10^{-4}/10^{-4} = 5$ m/s. Skipping the litre conversion gives 5000 m/s; $A/Q$ gives 0.2 m/s.'
           }
         ]
       }
@@ -149,15 +149,15 @@ $$Q = \\frac{\\Delta V}{\\Delta t} = A v$$
         questions: [
           {
             question: 'A pump delivers 0.012 $m^{3}/s$ of water through a pipe of cross-section $4.0\\times10^{-4}$ $m^{2}$. Flow speed?',
-            options: ['3 m/s', '12 m/s', '30 m/s', '300 m/s'],
+            options: ['3 m/s', '0.033 m/s', '30 m/s', '300 m/s'],
             correctAnswer: 2,
-            explanation: '$v = Q/A = 0.012/(4.0\\times10^{-4}) = 30$ m/s.'
+            explanation: '$v = Q/A = 0.012/(4.0\\times10^{-4}) = 30$ m/s. Inverting the ratio gives 0.033 m/s; 3 and 300 m/s are power-of-ten slips with $10^{-4}$.'
           },
           {
             question: 'A spillway 8 m wide × 1.5 m deep carries water at 2.5 m/s. Flow rate $(m^{3}/s)$?',
-            options: ['12', '20', '30', '60'],
+            options: ['12', '20', '30', '4.8'],
             correctAnswer: 2,
-            explanation: '$A = 12$ $m^{2}$. $Q = Av = 12 \\times 2.5 = 30$ $m^{3}/s$.'
+            explanation: '$A = 8 \\times 1.5 = 12$ $m^{2}$. $Q = Av = 12 \\times 2.5 = 30$ $m^{3}/s$. (12 stops at the area, 20 forgets the depth, 4.8 divides by the speed.)'
           }
         ]
       }

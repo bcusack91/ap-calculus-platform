@@ -143,7 +143,7 @@ A grinding wheel starts from rest and reaches $50$ rad/s in $10$ s.
           },
           {
             label: 'The equation ω = $\\omega_{0}$ + αt does not involve which variable?',
-            options: ['angular displacement', 'final angular velocity', 'angular acceleration', 'time'],
+            options: ['angular displacement', 'final velocity ω', 'acceleration α', 'time'],
             correctIndex: 0,
             explanation: '$\\omega = \\omega_0 + \\alpha t$ does not involve angular displacement $\\theta$. Use this when $\\theta$ is not needed or given.'
           },

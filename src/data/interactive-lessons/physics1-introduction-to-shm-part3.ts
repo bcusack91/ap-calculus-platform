@@ -81,9 +81,9 @@ where $I$ is the rotational inertia about the pivot and $d$ is the distance from
           {
             question: 'Doubling the length of a simple pendulum changes the period by a factor of:',
             options: [
-              '2',
+              '$2$',
               '$\\sqrt{2}$',
-              '4',
+              '$4$',
               '$1/\\sqrt{2}$'
             ],
             correctAnswer: 1,
@@ -103,10 +103,10 @@ where $I$ is the rotational inertia about the pivot and $d$ is the distance from
           {
             question: 'Replacing the pendulum bob with a heavier mass (same length):',
             options: [
-              'Increases the period',
-              'Decreases the period',
+              'Increases the period, since a heavier bob is harder to accelerate',
+              'Decreases the period, since gravity pulls a heavier bob harder',
               'Has no effect on the period',
-              'Stops the oscillation'
+              'Makes the period depend on the amplitude'
             ],
             correctAnswer: 2,
             explanation: 'The period $T = 2\\pi\\sqrt{L/g}$ does not depend on mass. Heavier or lighter, the period is the same.'
@@ -128,11 +128,11 @@ where $I$ is the rotational inertia about the pivot and $d$ is the distance from
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2.01', '2.24', '4.0'],
+        correctAnswers: ['2.01', '2.23', '4.0'],
         hint1: '$T = 2\\pi\\sqrt{1.0/9.8}$',
         hint2: '$T = 2\\pi\\sqrt{L/g} \\Rightarrow L = gT^2/(4\\pi^2) = 9.8(9)/(4\\pi^2)$',
         hint3: '$T_2/T_1 = \\sqrt{g_1/g_2} = \\sqrt{9.8/2.45} = \\sqrt{4} = 2$. $T_2 = 2 \\times 2.0$',
-        explanation: '1) $T = 2\\pi\\sqrt{1/9.8} = 2\\pi(0.3194) = 2.007 \\approx 2.01$ s. 2) $L = 9.8(9)/(39.48) = 88.2/39.48 = 2.234 \\approx 2.24$ m. 3) $T_2 = 2.0 \\times \\sqrt{9.8/2.45} = 2.0 \\times 2 = 4.0$ s.'
+        explanation: '1) $T = 2\\pi\\sqrt{1/9.8} = 2\\pi(0.3194) = 2.007 \\approx 2.01$ s. 2) $L = 9.8(9)/(39.48) = 88.2/39.48 = 2.234 \\approx 2.23$ m. 3) $T_2 = 2.0 \\times \\sqrt{9.8/2.45} = 2.0 \\times 2 = 4.0$ s.'
       }
     },
     {
@@ -145,13 +145,13 @@ where $I$ is the rotational inertia about the pivot and $d$ is the distance from
         dropdowns: [
           {
             label: 'The period of a simple pendulum depends on:',
-            options: ['mass and length', 'length and gravity', 'mass and gravity', 'amplitude and length'],
+            options: ['mass of the bob and length', 'length and gravity', 'mass of the bob and gravity', 'amplitude and length'],
             correctIndex: 1,
             explanation: 'The pendulum period $T = 2\\pi\\sqrt{L/g}$ depends on length and gravity only.'
           },
           {
             label: 'If the mass of a pendulum bob is doubled, the period:',
-            options: ['increases', 'decreases', 'stays the same', 'becomes zero'],
+            options: ['increases', 'decreases', 'stays the same', 'doubles'],
             correctIndex: 2,
             explanation: 'Doubling the mass has no effect on the pendulum period since mass cancels out.'
           },

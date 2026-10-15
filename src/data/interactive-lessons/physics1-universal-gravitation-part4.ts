@@ -79,13 +79,13 @@ $T^2/r^3 = 4\\pi^2/(GM)$ depends on $M$ — the mass of the body being orbited. 
           {
             question: 'If a planet\'s orbital period doubles, its orbital radius increases by a factor of:',
             options: [
-              '$2$',
+              '$\\sqrt{2} \\approx 1.41$',
               '$\\sqrt[3]{4} \\approx 1.59$',
-              '$4$',
-              '$8$'
+              '$2^{3/2} \\approx 2.83$',
+              '$\\sqrt[3]{2} \\approx 1.26$'
             ],
             correctAnswer: 1,
-            explanation: '$T^2 \\propto r^3$. $(2T)^2 = kr^{\\prime 3}$. $4T^2 = kr^{\\prime 3}$. $r^{\\prime 3} = 4r^3$. $r\' = r \\cdot 4^{1/3} = r \\cdot \\sqrt[3]{4} \\approx 1.587r$.'
+            explanation: '$T^2 \\propto r^3$, so $r \\propto T^{2/3}$. $r\'/r = 2^{2/3} = \\sqrt[3]{4} \\approx 1.587$. Using $T^{3/2}$ instead gives 2.83; taking the cube root of 2 without squaring the period ratio gives 1.26.'
           },
           {
             question: 'Mars and Jupiter both orbit the Sun. If Mars orbits at 1.52 AU with period 1.88 years, and Jupiter orbits at 5.20 AU, Jupiter\'s period is about:',
@@ -115,11 +115,11 @@ $T^2/r^3 = 4\\pi^2/(GM)$ depends on $M$ — the mass of the body being orbited. 
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['4.0', '28.3', '3.55'],
+        correctAnswers: ['3.95', '28.3', '3.55'],
         hint1: '$T^2 = r^3$ in AU/years. $T = (2.5)^{3/2}$.',
         hint2: '$T_2^2/T_1^2 = (2r/r)^3 = 8$. $T_2 = T_1\\sqrt{8}$.',
         hint3: '$T_2/T_1 = (r_2/r_1)^{3/2}$.',
-        explanation: '1) $T = (2.5)^{3/2} = 2.5 \\times \\sqrt{2.5} = 2.5 \\times 1.581 = 3.95 \\approx 4.0$ years. 2) $T_2 = 10\\sqrt{8} = 10 \\times 2.828 = 28.28 \\approx 28.3$ days. 3) $T_2 = 1.77 \\times (6.71/4.22)^{3/2} = 1.77 \\times (1.590)^{3/2} = 1.77 \\times 2.004 = 3.547 \\approx 3.55$ days.'
+        explanation: '1) $T = (2.5)^{3/2} = 2.5 \\times \\sqrt{2.5} = 2.5 \\times 1.581 = 3.95$ years. 2) $T_2 = 10\\sqrt{8} = 10 \\times 2.828 = 28.28 \\approx 28.3$ days. 3) $T_2 = 1.77 \\times (6.71/4.22)^{3/2} = 1.77 \\times (1.590)^{3/2} = 1.77 \\times 2.004 = 3.547 \\approx 3.55$ days.'
       }
     },
     {
@@ -132,13 +132,13 @@ $T^2/r^3 = 4\\pi^2/(GM)$ depends on $M$ — the mass of the body being orbited. 
         dropdowns: [
           {
             label: 'A graph of $T^2$ vs $r^3$ for planets in our solar system would be:',
-            options: ['A curve', 'A straight line through the origin', 'A parabola', 'A horizontal line'],
+            options: ['A curve that levels off at large radii', 'A straight line through the origin', 'A parabola opening upward, since $T^2$ is squared', 'A horizontal line, since $T^2/r^3$ is constant'],
             correctIndex: 1,
             explanation: '$T^2 = (4\\pi^2/GM_{Sun}) r^3$. This is $y = kx$ where $y = T^2$, $x = r^3$, and $k = 4\\pi^2/(GM_{Sun})$. A straight line through the origin!'
           },
           {
             label: 'The slope of a $T^2$ vs $r^3$ graph for objects orbiting Earth would be:',
-            options: ['The same as for objects orbiting the Sun', 'Different — it depends on the central body\'s mass', 'Always equal to 1', 'Infinite'],
+            options: ['The same as for the Sun, since $T^2 \\propto r^3$ is universal', 'Different for each central body\'s mass', 'Equal to 1 for any central body, using years and AU', 'Different, because it depends on each satellite\'s mass'],
             correctIndex: 1,
             explanation: 'Slope $= 4\\pi^2/(GM)$. Different central masses give different slopes. Earth\'s slope would be much steeper than the Sun\'s (since $M_E \\ll M_{Sun}$).'
           },
@@ -173,13 +173,13 @@ $T^2/r^3 = 4\\pi^2/(GM)$ depends on $M$ — the mass of the body being orbited. 
           {
             question: 'Kepler\'s Third Law can be used to determine:',
             options: [
-              'The mass of an orbiting satellite',
+              'The mass of the orbiting satellite',
               'The mass of the central body being orbited',
-              'The color of a planet',
-              'The shape of an orbit'
+              'The shape of a planet\'s orbit',
+              'A planet\'s speed at each point'
             ],
             correctAnswer: 1,
-            explanation: '$T^2 = 4\\pi^2 r^3/(GM)$. If you know $T$ and $r$, you can solve for $M$ — the mass of the central body. This is how we "weigh" stars and planets!'
+            explanation: '$T^2 = 4\\pi^2 r^3/(GM)$. If you know $T$ and $r$, you can solve for $M$, the mass of the central body. This is how we "weigh" stars and planets. The orbiting body\'s mass cancels out, so it cannot be found this way.'
           }
         ]
       }

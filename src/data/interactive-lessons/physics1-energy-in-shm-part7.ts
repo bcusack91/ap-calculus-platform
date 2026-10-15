@@ -114,7 +114,7 @@ $$v = \\omega\\sqrt{A^2 - x^2} \\qquad v_{\\text{max}} = A\\omega$$
 
 1) A spring ($k = 800$ N/m) stores 4.0 J of energy when compressed. What is the compression distance? (in m)
 
-2) A 0.20 kg block oscillates with $k = 80$ N/m and $A = 0.05$ m. What is the speed at $x = 0.03$ m? (in m)
+2) A 0.20 kg block oscillates with $k = 80$ N/m and $A = 0.05$ m. What is the speed at $x = 0.03$ m? (in m/s)
 
 3) A damped oscillator starts with $A_0 = 0.30$ m and amplitude decreases to $0.15$ m. What fraction of the original energy remains? (as a decimal)
 
@@ -139,19 +139,19 @@ $$v = \\omega\\sqrt{A^2 - x^2} \\qquad v_{\\text{max}} = A\\omega$$
         dropdowns: [
           {
             label: 'The total energy of a mass-spring system in SHM is given by E =',
-            options: ['$\\tfrac{1}{2} kA^{2}$', '½kA', '$kA^{2}$', '$2kA^{2}$'],
+            options: ['$\\tfrac{1}{2} kA^{2}$', '$\\tfrac{1}{2} kA$', '$kA^{2}$', '$2kA^{2}$'],
             correctIndex: 0,
             explanation: 'The total energy in a mass-spring SHM system is $E = \\frac{1}{2}kA^2$.'
           },
           {
             label: 'The displacement at which kinetic energy equals potential energy is:',
-            options: ['x = A/2', 'x = $A/\\sqrt{2}$', 'x = A/3', 'x = A/4'],
+            options: ['$x = A/2$', '$x = A/\\sqrt{2}$', '$x = A/3$', '$x = A/4$'],
             correctIndex: 1,
             explanation: 'KE = PE at $x = A/\\sqrt{2}$, where $PE = \\frac{1}{2}k(A/\\sqrt{2})^2 = \\frac{1}{4}kA^2 = E/2$.'
           },
           {
             label: 'In damped oscillations, mechanical energy is primarily converted to:',
-            options: ['thermal energy', 'nuclear energy', 'chemical energy', 'light energy'],
+            options: ['thermal energy', 'gravitational potential energy', 'elastic potential energy of the spring', 'rotational kinetic energy'],
             correctIndex: 0,
             explanation: 'In damped oscillations, mechanical energy is converted to thermal energy through friction and air resistance.'
           },
@@ -175,13 +175,13 @@ $$v = \\omega\\sqrt{A^2 - x^2} \\qquad v_{\\text{max}} = A\\omega$$
           {
             question: 'A vertical spring supports a 0.50 kg mass at equilibrium. When displaced 0.10 m and released, it oscillates with $T = 0.50$ s. The total energy is closest to:',
             options: [
+              '$0.39$ J',
               '$0.79$ J',
-              '$1.58$ J',
               '$3.95$ J',
-              '$7.90$ J'
+              '$0.010$ J'
             ],
             correctAnswer: 0,
-            explanation: '$\\omega = 2\\pi/0.50 = 4\\pi$. $E = \\frac{1}{2}m\\omega^2 A^2 = \\frac{1}{2}(0.50)(4\\pi)^2(0.10)^2 = \\frac{1}{2}(0.50)(157.9)(0.01) = 0.395 \\times 2 = 0.79$ J.'
+            explanation: '$\\omega = 2\\pi/T = 2\\pi/0.50 = 4\\pi$ rad/s. The oscillation energy about equilibrium is $E = \\frac{1}{2}m\\omega^2 A^2 = \\frac{1}{2}(0.50)(4\\pi)^2(0.10)^2 = \\frac{1}{2}(0.50)(157.9)(0.010) \\approx 0.39$ J. Dropping the $\\frac{1}{2}$ gives 0.79 J, forgetting to square $A$ gives 3.95 J, and using $f = 2$ Hz in place of $\\omega$ gives 0.010 J.'
           },
           {
             question: 'Two identical springs are connected in parallel to a mass. Compared to a single spring with the same amplitude, the total energy is:',
@@ -199,7 +199,7 @@ $$v = \\omega\\sqrt{A^2 - x^2} \\qquad v_{\\text{max}} = A\\omega$$
             options: [
               'Constant horizontal line',
               'Decreasing curve approaching zero',
-              'Oscillating curve with constant amplitude',
+              'Steady oscillation',
               'Increasing curve'
             ],
             correctAnswer: 1,

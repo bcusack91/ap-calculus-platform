@@ -112,10 +112,10 @@ By Lenz's Law, eddy currents always create forces that **oppose the relative mot
           {
             question: 'Why does Lenz\'s Law follow from conservation of energy?',
             options: [
-              'Because magnetic fields store energy',
-              'Because opposing the change requires energy input, preventing perpetual motion',
-              'Because currents always dissipate energy as heat',
-              'Because magnetic flux is a conserved quantity'
+              'Because the magnetic field itself stores the energy that drives the current',
+              'Because opposing the change requires work, ruling out perpetual motion',
+              'Because induced currents always dissipate their energy as heat in the loop',
+              'Because magnetic flux is conserved, so the induced field must cancel it'
             ],
             correctAnswer: 1,
             explanation: 'If the induced current aided the change (e.g., attracted an approaching magnet), the system would accelerate and generate ever more current — creating energy from nothing. Lenz\'s Law ensures you must do work to change the flux.'
@@ -170,8 +170,8 @@ For each scenario, determine the direction of the induced current (as viewed fro
             options: [
               'Speed up the plate',
               'Heat the plate and slow it down',
-              'Have no effect on the plate\'s motion',
-              'Create a uniform magnetic field'
+              'Leave its motion unchanged',
+              'Create a uniform field'
             ],
             correctAnswer: 1,
             explanation: 'By Lenz\'s Law, eddy currents oppose the relative motion → they slow the plate down. The currents also dissipate energy as heat in the plate (resistive heating).'
@@ -179,13 +179,13 @@ For each scenario, determine the direction of the induced current (as viewed fro
           {
             question: 'A conducting loop sits on a table. A magnet above it, with the N pole pointing down, is dropped toward the loop. Before the magnet reaches the loop, the loop will:',
             options: [
-              'Experience a downward force',
-              'Experience an upward force',
-              'Experience a repulsive force (pushed away from the magnet)',
-              'Experience no force'
+              'Experience an upward force that pulls it toward the magnet',
+              'Experience a sideways force that slides it along the table',
+              'Experience a downward, repulsive force',
+              'Experience no force until the magnet actually touches it'
             ],
             correctAnswer: 2,
-            explanation: 'The approaching N pole increases downward flux → induced current opposes → creates an upward-pointing field → loop acts as a N pole on top → repels the falling magnet. By Newton\'s 3rd law, the loop is pushed away too — but since it\'s on a table, it actually feels a net repulsive force.'
+            explanation: 'The approaching N pole increases the downward flux through the loop. The induced current opposes this by making an upward field, so the loop\'s top face acts as a N pole and repels the falling magnet. By Newton\'s 3rd law the magnet pushes the loop away from itself, which is downward, pressing it into the table. The force exists before contact because the flux is already changing.'
           }
         ]
       }

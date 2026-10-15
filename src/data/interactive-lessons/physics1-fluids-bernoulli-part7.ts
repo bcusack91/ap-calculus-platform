@@ -77,8 +77,8 @@ You've completed the full AP Physics 1 fluids progression: density, pressure, bu
             question: 'Torricelli\'s Theorem $v = \\sqrt{2gh}$ depends on which assumption?',
             options: [
               'Tank cross-section ≫ hole cross-section',
-              'Fluid is compressible',
-              'Hole is at the top of the tank',
+              'The fluid is compressible enough to expand',
+              'The hole is drilled at the very top of the tank',
               'External pressure differs at surface vs. hole'
             ],
             correctAnswer: 0,
@@ -87,10 +87,10 @@ You've completed the full AP Physics 1 fluids progression: density, pressure, bu
           {
             question: 'Bernoulli\'s equation conserves which quantity along a streamline?',
             options: [
-              'Mass',
+              'Mass per unit volume',
               'Energy per unit volume',
-              'Momentum',
-              'Pressure alone'
+              'Momentum per unit volume',
+              'Pressure at each point'
             ],
             correctAnswer: 1,
             explanation: 'Bernoulli is energy density conservation.'
@@ -134,16 +134,16 @@ You've completed the full AP Physics 1 fluids progression: density, pressure, bu
             explanation: 'Bernoulli requires non-viscous, steady, incompressible flow.'
           },
           {
-            label: 'A water tower 20 m tall feeds a horizontal pipe at ground level. Static pressure at the pipe (with $v$ small) is approximately ($\\rho_w g h$):',
-            options: ['$2$ kPa', '$20$ kPa', '$200$ kPa', '$2000$ kPa'],
+            label: 'A water tower holds water 20 m above a horizontal pipe at ground level. The GAUGE pressure in the pipe (with $v$ small) is approximately ($\\rho_w g h$):',
+            options: ['$20$ kPa', '$100$ kPa', '$200$ kPa', '$300$ kPa'],
             correctIndex: 2,
-            explanation: '$\\rho g h = 1000(10)(20) = 200$ kPa.'
+            explanation: 'Gauge pressure $= \\rho g h = 1000(10)(20) = 200$ kPa. Leaving out $g$ gives 20 kPa; adding $P_{atm}$ gives the ABSOLUTE pressure, 300 kPa; 100 kPa is $P_{atm}$ alone.'
           },
           {
             label: 'A rooftop air-conditioner exhaust faces the wind (windward). On a windy day, the airflow at the exhaust port has $\\tfrac{1}{2}\\rho v^2$ ≈:',
-            options: ['$0$', 'A small Pa value (~10s of Pa for moderate wind)', 'Comparable to atmospheric pressure', 'Negative'],
+            options: ['Exactly zero', 'A few tens of pascals', 'About 100 kPa', 'A negative value'],
             correctIndex: 1,
-            explanation: 'Even 10 m/s wind gives $\\tfrac{1}{2}(1.2)(100) = 60$ Pa, much smaller than $P_{atm}$ but enough to matter.'
+            explanation: 'Even a 10 m/s wind gives $\\tfrac{1}{2}(1.2)(10^2) = 60$ Pa: tiny next to $P_{atm} ≈ 100$ kPa, but enough to matter for airflow. A kinetic term $\\tfrac{1}{2}\\rho v^2$ can never be negative.'
           },
           {
             label: 'For most AP fluids problems involving moving fluids in pipes, the strategy is:',
@@ -165,13 +165,13 @@ You've completed the full AP Physics 1 fluids progression: density, pressure, bu
           {
             question: 'A large open tank has water 1.25 m above a small hole; the hole is 0.45 m above the floor. The horizontal range $R$ where the jet hits the floor (g = 10)?',
             options: [
-              '$0.5$ m',
-              '$1.0$ m',
+              '$0.75$ m',
+              '$1.13$ m',
               '$1.5$ m',
-              '$2.0$ m'
+              '$2.25$ m'
             ],
             correctAnswer: 2,
-            explanation: '$R = 2\\sqrt{hH} = 2\\sqrt{1.25 \\times 0.45} = 2\\sqrt{0.5625} = 2(0.75) = 1.5$ m.'
+            explanation: '$R = 2\\sqrt{hH} = 2\\sqrt{1.25 \\times 0.45} = 2\\sqrt{0.5625} = 2(0.75) = 1.5$ m. Dropping the 2 gives 0.75 m; forgetting the square root gives $2hH ≈ 1.13$ m or $4hH = 2.25$ m.'
           },
           {
             question: 'Water flows in a horizontal pipe from $A_1 = 0.04$ $m^{2}$ to $A_2 = 0.01$ $m^{2}$. If $v_1 = 2$ m/s and $P_1 = 250$ kPa, the pressure $P_2$ at the narrow end is:',

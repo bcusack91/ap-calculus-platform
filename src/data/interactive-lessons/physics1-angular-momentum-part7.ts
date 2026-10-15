@@ -47,9 +47,9 @@ $$\\text{If } \\tau_{\\text{net, ext}} = 0: \\quad I_i\\omega_i = I_f\\omega_f$$
           {
             question: 'A student sits on a freely rotating stool holding a spinning bicycle wheel with its angular momentum pointing up. She flips the wheel so its angular momentum points down. The student and stool will:',
             options: [
-              'Not rotate (angular momentum is always conserved)',
+              'Not rotate, since no external torque acts',
               'Rotate in the direction the wheel originally spun',
-              'Rotate opposite to the wheel\'s original direction',
+              'Rotate opposite to the wheel\'s original spin',
               'Oscillate back and forth'
             ],
             correctAnswer: 1,
@@ -58,7 +58,7 @@ $$\\text{If } \\tau_{\\text{net, ext}} = 0: \\quad I_i\\omega_i = I_f\\omega_f$$
           {
             question: 'A point mass $m$ moves in a straight line with velocity $v$ at a perpendicular distance $d$ from a point P. Its angular momentum about P is:',
             options: [
-              '0',
+              'Zero, since it moves in a straight line',
               '$mvd$',
               '$mv/d$',
               '$md^2v$'
@@ -72,7 +72,7 @@ $$\\text{If } \\tau_{\\text{net, ext}} = 0: \\quad I_i\\omega_i = I_f\\omega_f$$
               'Angular momentum is not conserved',
               'Gravity exerts a torque that reduces the spin',
               'Friction at the tip exerts a torque that reduces angular momentum',
-              'The top loses mass as it spins'
+              'Its rotational inertia grows as it tilts'
             ],
             correctAnswer: 2,
             explanation: 'Friction at the tip exerts a torque that gradually reduces the spin angular momentum. When $L$ becomes too small, gravity\'s torque causes the top to precess and eventually fall.'
@@ -94,11 +94,11 @@ $$\\text{If } \\tau_{\\text{net, ext}} = 0: \\quad I_i\\omega_i = I_f\\omega_f$$
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['20', '18', '0.86'],
+        correctAnswers: ['20', '18', '0.750'],
         hint1: '$\\tau = \\Delta L/\\Delta t \\Rightarrow \\Delta L = \\tau \\cdot t = 4(5)$',
         hint2: 'For a hoop rolling: $KE = mv^2$ (translational + rotational both equal $\\frac{1}{2}mv^2$)',
         hint3: '$L_i = mvR = 30(4)(2) = 240$. $I_f = \\frac{1}{2}(100)(4) + 30(4) = 200 + 120 = 320$. $\\omega_f = L/I_f$.',
-        explanation: '1) $\\Delta L = \\tau t = 4(5) = 20$ $kg\\cdot m^{2}/s$. 2) Hoop: $KE = \\frac{1}{2}mv^2 + \\frac{1}{2}(mR^2)(v/R)^2 = \\frac{1}{2}mv^2 + \\frac{1}{2}mv^2 = mv^2 = 2(9) = 18$ J. 3) $L_i = 240$ $kg\\cdot m^{2}/s$. $I_f = 200 + 120 = 320$ $kg\\cdot m^{2}$. $\\omega_f = 240/320 = 0.75$ rad/s.'
+        explanation: '1) $\\Delta L = \\tau t = 4(5) = 20$ $kg\\cdot m^{2}/s$. 2) Hoop: $KE = \\frac{1}{2}mv^2 + \\frac{1}{2}(mR^2)(v/R)^2 = \\frac{1}{2}mv^2 + \\frac{1}{2}mv^2 = mv^2 = 2(9) = 18$ J. 3) $L_i = 240$ $kg\\cdot m^{2}/s$. $I_f = 200 + 120 = 320$ $kg\\cdot m^{2}$. $\\omega_f = 240/320 = 0.750$ rad/s.'
       }
     },
     {
@@ -111,19 +111,19 @@ $$\\text{If } \\tau_{\\text{net, ext}} = 0: \\quad I_i\\omega_i = I_f\\omega_f$$
         dropdowns: [
           {
             label: 'The expression for angular momentum L is:',
-            options: ['Iω', 'Iα', 'τθ', '$\\tfrac{1}{2} I\\omega^{2}$'],
+            options: ['$I\\omega$', '$I\\alpha$', '$\\tau\\theta$', '$\\tfrac{1}{2} I\\omega^{2}$'],
             correctIndex: 0,
             explanation: 'Angular momentum is $L = I\\omega$.'
           },
           {
             label: 'Angular momentum is conserved when there is:',
-            options: ['zero net external force', 'zero net external torque', 'zero angular velocity', 'constant rotational inertia'],
+            options: ['no net external force on the system', 'zero net external torque', 'zero angular velocity about the axis', 'constant rotational inertia'],
             correctIndex: 1,
             explanation: 'Conservation of angular momentum requires zero net external torque.'
           },
           {
             label: 'When rotational inertia decreases and angular momentum is conserved, kinetic energy:',
-            options: ['increases', 'decreases', 'stays the same', 'depends on the details'],
+            options: ['increases', 'decreases, since the inward pull does negative work', 'stays the same', 'depends on the details'],
             correctIndex: 0,
             explanation: 'When $I$ decreases and $L$ is conserved, $KE = L^2/(2I)$ increases.'
           },

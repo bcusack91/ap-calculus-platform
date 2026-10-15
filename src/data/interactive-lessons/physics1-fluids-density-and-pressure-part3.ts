@@ -66,10 +66,10 @@ Pressure at depth $h$ is the same whether you're at the bottom of a thin tube or
           {
             question: 'In a static fluid, pressure depends on:',
             options: [
-              'Container shape',
-              'Total fluid mass',
-              'Depth below the surface (and density)',
-              'Surface area at the bottom'
+              'The shape of the container',
+              'The total mass of fluid in the container',
+              'Depth and density',
+              'The surface area at the bottom'
             ],
             correctAnswer: 2,
             explanation: '$P = \\rho g h$ depends only on density and depth — not shape, not volume, not bottom area.'
@@ -136,7 +136,7 @@ Pressure at depth $h$ is the same whether you're at the bottom of a thin tube or
           },
           {
             label: 'Doubling the depth in a fluid doubles the:',
-            options: ['Density', 'Gauge pressure', 'Absolute pressure', 'Atmospheric pressure'],
+            options: ['Density of the fluid', 'Gauge pressure', 'Absolute pressure', 'Atmospheric pressure'],
             correctIndex: 1,
             explanation: '$P_{gauge} = \\rho g h$ is linear in $h$. Absolute = $P_0 + \\rho g h$ doesn\'t double because $P_0$ is fixed.'
           },

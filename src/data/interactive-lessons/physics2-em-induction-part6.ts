@@ -86,7 +86,7 @@ More turns, larger area, shorter length → higher inductance.
             options: [
               'Doubles',
               'Quadruples',
-              'Stays the same',
+              'Unchanged',
               'Halves'
             ],
             correctAnswer: 1,

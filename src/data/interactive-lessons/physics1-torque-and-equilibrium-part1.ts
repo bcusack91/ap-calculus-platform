@@ -80,7 +80,7 @@ The negative sign indicates **clockwise** rotation.
             question: 'Which of the following increases the torque produced by a force?',
             options: [
               'Applying the force closer to the pivot',
-              'Applying the force at a smaller angle to the lever arm',
+              'Applying the force at a smaller angle',
               'Applying the force farther from the pivot',
               'Reducing the magnitude of the force'
             ],
@@ -143,7 +143,7 @@ The negative sign indicates **clockwise** rotation.
         dropdowns: [
           {
             label: 'The rotational analogue of force is:',
-            options: ['energy', 'torque', 'linear momentum', 'power'],
+            options: ['kinetic energy', 'torque', 'linear momentum', 'angular velocity'],
             correctIndex: 1,
             explanation: 'Torque is the rotational analogue of force — it causes angular acceleration just as force causes linear acceleration.'
           },
@@ -155,7 +155,7 @@ The negative sign indicates **clockwise** rotation.
           },
           {
             label: 'By convention, counterclockwise torque is considered:',
-            options: ['positive', 'negative', 'zero', 'infinite'],
+            options: ['positive', 'negative', 'zero', 'undefined'],
             correctIndex: 0,
             explanation: 'By convention, counterclockwise rotation is positive and clockwise rotation is negative.'
           }

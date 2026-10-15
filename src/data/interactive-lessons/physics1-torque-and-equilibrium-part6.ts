@@ -61,7 +61,7 @@ A 5 m ladder (weight 200 N) leans against a smooth (frictionless) wall at 60° f
           {
             question: 'The friction force at the base of the ladder is:',
             options: [
-              '58 N (equal to wall normal force)',
+              '58 N',
               '100 N',
               '200 N',
               '0 N'
@@ -95,15 +95,15 @@ A uniform horizontal beam (length 4 m, weight 300 N) is attached to a wall by a 
 
 2) What is the horizontal component of the hinge force? (in N, round to nearest whole number)
 
-3) What is the vertical component of the hinge force? (in N, round to nearest whole number)
+3) What is the vertical component of the hinge force? (in N, round to nearest whole number; take upward as positive)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['733', '635', '433'],
+        correctAnswers: ['1733', '1501', '-67'],
         hint1: 'Torques about hinge: $T\\sin 30°(3) = 300(2) + 500(4)$',
         hint2: '$\\sum F_x = 0$: $H_x = T\\cos 30°$',
         hint3: '$\\sum F_y = 0$: $H_y + T\\sin 30° = 300 + 500$',
-        explanation: '1) $T(3)\\sin 30° = 300(2) + 500(4)$, $1.5T = 600 + 2000 = 2600$, $T = 1733$ N. Hmm, let me reconsider: $T\\sin 30° \\times 3 = 1.5T = 2600$, $T \\approx 1733$ N. Actually: $T(3)(\\sin 30°) = T(3)(0.5) = 1.5T = 600 + 2000 = 2600$, $T = 1733$ N. 2) $H_x = T\\cos 30° = 1733(0.866) = 1501$ N. 3) $H_y = 800 - T\\sin 30° = 800 - 867 = -67$ N (downward).'
+        explanation: '1) Torques about the hinge: the cable\'s perpendicular component acts 3 m out, the beam\'s weight 2 m out and the load 4 m out. $T\\sin 30°(3) = 300(2) + 500(4)$, so $1.5T = 2600$ and $T = 1733$ N. 2) $H_x = T\\cos 30° = 1733(0.866) = 1501$ N. 3) $H_y = 800 - T\\sin 30° = 800 - 867 = -67$ N: the hinge pulls the beam slightly downward.'
       }
     },
     {
@@ -116,13 +116,13 @@ A uniform horizontal beam (length 4 m, weight 300 N) is attached to a wall by a 
         dropdowns: [
           {
             label: 'To eliminate an unknown force from the torque equation, you should place the pivot:',
-            options: ['at the center of mass', 'at the point of the unknown force', 'at the end of the beam', 'at a random point'],
+            options: ['at the center of mass of the object', 'at the point of the unknown force', 'at the end farthest from the unknown force', 'at the point where the largest known force acts'],
             correctIndex: 1,
             explanation: 'Choosing the pivot where an unknown force acts eliminates that force from the torque equation, reducing the number of unknowns.'
           },
           {
             label: 'When calculating torque, which component of the force contributes?',
-            options: ['only its perpendicular component', 'only its parallel component', 'the full force magnitude', 'neither component'],
+            options: ['only its perpendicular component', 'its component along the position vector', 'the full force magnitude, whatever its direction', 'neither; only the lever length matters'],
             correctIndex: 0,
             explanation: 'Only the perpendicular component of a force (relative to the position vector) produces torque. $\\tau = rF\\sin\\theta = rF_{\\perp}$.'
           },

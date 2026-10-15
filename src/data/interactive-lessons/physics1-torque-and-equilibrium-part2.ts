@@ -83,10 +83,10 @@ Choose whichever is easiest for the given problem!
           {
             question: 'The lever arm is defined as:',
             options: [
-              'The total length of the beam',
-              'The distance from the pivot to where the force is applied',
-              'The perpendicular distance from the pivot to the line of action of the force',
-              'The horizontal component of the distance'
+              'The full length of the beam, from the pivot to its far end',
+              'The straight-line distance from the pivot to the force',
+              'The perpendicular distance from the pivot to the force\'s line of action',
+              'The horizontal distance from the pivot to the force'
             ],
             correctAnswer: 2,
             explanation: 'The lever arm (moment arm) is the perpendicular distance from the axis of rotation to the line of action of the force.'
@@ -94,9 +94,9 @@ Choose whichever is easiest for the given problem!
           {
             question: 'A force is applied at distance $r$ from the pivot at angle $\\theta$ to the position vector. Which component of the force contributes to torque?',
             options: [
-              '$F\\cos\\theta$ (parallel component)',
+              '$F\\cos\\theta$ (the parallel component)',
               '$F\\sin\\theta$ (perpendicular component)',
-              'Both components equally',
+              'Both components, each weighted equally',
               'Neither — only the full force matters'
             ],
             correctAnswer: 1,
@@ -153,13 +153,13 @@ Choose whichever is easiest for the given problem!
           },
           {
             label: 'If you move the point of force application twice as far from the pivot, what happens?',
-            options: ['the force doubles', 'the lever arm doubles', 'the torque quadruples', 'nothing changes'],
+            options: ['the force doubles', 'the lever arm doubles', 'the torque triples', 'nothing changes'],
             correctIndex: 1,
             explanation: 'Moving the point of application twice as far from the pivot doubles the lever arm and thus doubles the torque (for the same force).'
           },
           {
             label: 'To maximize torque, the force should be applied:',
-            options: ['along the lever arm', 'perpendicular to the lever arm', 'at 45° to the lever arm', 'toward the pivot'],
+            options: ['parallel to the lever arm, pulling outward', 'perpendicular to the lever arm', 'at 45°, splitting it between components', 'directly toward the pivot point'],
             correctIndex: 1,
             explanation: 'When the force is perpendicular to the position vector, $\\sin\\theta = 1$ and the lever arm equals $r$ — giving maximum torque.'
           }
@@ -188,13 +188,13 @@ Choose whichever is easiest for the given problem!
           {
             question: 'A door handle is 0.8 m from the hinge. You push with 25 N perpendicular to the door. Your friend pushes with 50 N at a point 0.4 m from the hinge, also perpendicular. Who creates more torque?',
             options: [
-              'You (20 N·m vs 20 N·m — they are equal)',
-              'Your friend (25 N·m vs 20 N·m)',
-              'You (20 N·m vs 15 N·m)',
-              'Your friend (40 N·m vs 20 N·m)'
+              'Neither: 20 N·m each, so they are equal',
+              'Your friend: 50 N is twice your 25 N',
+              'You: 0.8 m is twice your friend\'s 0.4 m',
+              'Your friend: 40 N·m vs your 20 N·m'
             ],
             correctAnswer: 0,
-            explanation: 'You: $\\tau = (0.8)(25) = 20$ N·m. Friend: $\\tau = (0.4)(50) = 20$ N·m. They are equal! Torque depends on both force AND distance.'
+            explanation: 'You: $\\tau = (0.8)(25) = 20$ N·m. Friend: $\\tau = (0.4)(50) = 20$ N·m. The torques are equal. Comparing only the forces or only the distances misses that torque depends on both; 40 N·m comes from pairing the friend\'s 50 N with your 0.8 m.'
           }
         ]
       }

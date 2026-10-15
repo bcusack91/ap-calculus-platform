@@ -61,11 +61,11 @@ Use $G = 6.67 \\times 10^{-11}$, $M_E = 6.0 \\times 10^{24}$ kg, $R_E = 6.4 \\ti
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2.5', '5600', '5.7'],
+        correctAnswers: ['2.44', '5600', '4.00'],
         hint1: '$g = GM/(2R_E)^2 = GM/(4R_E^2) = g_0/4$.',
         hint2: '$v = \\sqrt{GM/r} = \\sqrt{GM/(2R_E)}$.',
         hint3: '$T = 2\\pi r/v$. Convert to hours.',
-        explanation: '1) $g = 10/4 = 2.5$ $m/s^{2}$. 2) $v = \\sqrt{6.67 \\times 10^{-11} \\times 6.0 \\times 10^{24}/(1.28 \\times 10^7)} = \\sqrt{4.0 \\times 10^{14}/1.28 \\times 10^7} = \\sqrt{3.125 \\times 10^7} = 5590 \\approx 5600$ m/s. 3) $T = 2\\pi(1.28 \\times 10^7)/5590 = 8.04 \\times 10^7/5590 = 14{,}384$ s $/3600 = 4.0$ hours. Hmm, let me recalculate: $2\\pi \\times 1.28 \\times 10^7 = 8.04 \\times 10^7$. $T = 8.04 \\times 10^7/5590 = 14{,}383$ s $= 4.0$ h. That seems low — actually the ISS at $r = R_E$ would be about 84 min, so at $2R_E$: $T \\propto r^{3/2}$, $T = 84 \\times 2^{3/2} = 84 \\times 2.83 = 238$ min $= 3.96$ h. So about 4.0 h. Let me recalculate: $2R_E = 1.28 \\times 10^7$. $v = \\sqrt{4 \\times 10^{14}/1.28 \\times 10^7} = \\sqrt{3.125 \\times 10^7} = 5590$. $T = 2\\pi(1.28 \\times 10^7)/5590 = 14383$ s $= 4.0$ hours.'
+        explanation: '1) $g = GM_E/(2R_E)^2 = (6.67 \\times 10^{-11})(6.0 \\times 10^{24})/(1.28 \\times 10^7)^2 = 4.0 \\times 10^{14}/1.64 \\times 10^{14} = 2.44$ $m/s^{2}$, one quarter of the surface value. 2) $v = \\sqrt{GM_E/r} = \\sqrt{4.0 \\times 10^{14}/1.28 \\times 10^7} = \\sqrt{3.125 \\times 10^7} = 5590 \\approx 5600$ m/s. 3) $T = 2\\pi r/v = 2\\pi(1.28 \\times 10^7)/5590 = 8.04 \\times 10^7/5590 = 14{,}380$ s $= 4.00$ hours. Check: $T \\propto r^{3/2}$, and a low orbit near $r = R_E$ takes about 85 min, so $85 \\times 2^{3/2} \\approx 240$ min $= 4.0$ h.'
       }
     },
     {
@@ -79,13 +79,13 @@ Use $G = 6.67 \\times 10^{-11}$, $M_E = 6.0 \\times 10^{24}$ kg, $R_E = 6.4 \\ti
           {
             question: 'A moon orbits a planet at $r = 5 \\times 10^8$ m with $T = 20$ days. The mass of the planet is approximately:',
             options: [
-              '$1 \\times 10^{24}$ kg',
-              '$5 \\times 10^{24}$ kg',
-              '$1 \\times 10^{25}$ kg',
-              '$5 \\times 10^{25}$ kg'
+              '$6.3 \\times 10^{23}$ kg',
+              '$2.5 \\times 10^{25}$ kg',
+              '$2.5 \\times 10^{24}$ kg',
+              '$3.2 \\times 10^{32}$ kg'
             ],
             correctAnswer: 1,
-            explanation: '$M = 4\\pi^2 r^3/(GT^2)$. $T = 20 \\times 86400 = 1.728 \\times 10^6$ s. $r^3 = 1.25 \\times 10^{26}$. $M = 4\\pi^2(1.25 \\times 10^{26})/(6.67 \\times 10^{-11} \\times 2.986 \\times 10^{12}) = 4.93 \\times 10^{27}/1.99 \\times 10^2 = 4.93 \\times 10^{27}/199 \\approx 2.5 \\times 10^{25}$. Hmm, let me recalculate. $T^2 = (1.728 \\times 10^6)^2 = 2.986 \\times 10^{12}$. $M = 39.48 \\times 1.25 \\times 10^{26}/(6.67 \\times 10^{-11} \\times 2.986 \\times 10^{12}) = 4.935 \\times 10^{27}/(1.992 \\times 10^2) = 2.48 \\times 10^{25}$. Closest: $\\approx 5 \\times 10^{24}$ to $10^{25}$ kg range.'
+            explanation: '$M = 4\\pi^2 r^3/(GT^2)$. $T = 20 \\times 86400 = 1.728 \\times 10^6$ s, so $T^2 = 2.986 \\times 10^{12}$ $s^{2}$. $r^3 = 1.25 \\times 10^{26}$ $m^{3}$. $M = (39.48)(1.25 \\times 10^{26})/[(6.67 \\times 10^{-11})(2.986 \\times 10^{12})] = 4.935 \\times 10^{27}/199.2 \\approx 2.5 \\times 10^{25}$ kg. Dropping the $\\pi^2$ gives $2.5 \\times 10^{24}$ kg; dropping $4\\pi^2$ entirely gives $6.3 \\times 10^{23}$ kg; leaving $T$ in hours gives $3.2 \\times 10^{32}$ kg.'
           },
           {
             question: 'Satellite A has orbital radius $r$ and satellite B has orbital radius $3r$ around the same planet. The ratio of their speeds $v_A/v_B$ is:',
@@ -101,13 +101,13 @@ Use $G = 6.67 \\times 10^{-11}$, $M_E = 6.0 \\times 10^{24}$ kg, $R_E = 6.4 \\ti
           {
             question: 'Two stars have equal mass $M$ and orbit their common center of mass at distance $d$ apart. The orbital period depends on:',
             options: [
-              '$d$ and $M$ only',
-              '$d$ only',
-              '$M$ only',
-              '$d$, $M$, and $G$'
+              '$d$ only (mass cancels, as for satellites)',
+              '$M$ only, not on the separation',
+              'Neither $d$ nor $M$',
+              '$d$ and $M$'
             ],
             correctAnswer: 3,
-            explanation: 'Each star orbits at radius $d/2$. Gravity: $GM^2/d^2 = M(2\\pi/(T))^2(d/2)$. $T = 2\\pi\\sqrt{d^3/(2GM)}$. Period depends on $d$, $M$, and $G$.'
+            explanation: 'Each star orbits at radius $d/2$. Gravity supplies the centripetal force: $GM^2/d^2 = M(2\\pi/T)^2(d/2)$, so $T = 2\\pi\\sqrt{d^3/(2GM)}$. The period depends on both $d$ and $M$ ($G$ is a fixed constant). Unlike a light satellite, the stars\' masses do not cancel because each star is also the attracting body.'
           }
         ]
       }
@@ -128,11 +128,11 @@ Use $G = 6.67 \\times 10^{-11}$.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1.92', '17.9', '4.0'],
+        correctAnswers: ['1.92', '17.9', '3.12'],
         hint1: '$M = gR^2/G$.',
         hint2: '$v_{esc} = \\sqrt{2gR}$.',
         hint3: '$T = 2\\pi\\sqrt{(2R)^3/(GM)}$.',
-        explanation: '1) $M = 20(8 \\times 10^6)^2/(6.67 \\times 10^{-11}) = 20 \\times 6.4 \\times 10^{13}/6.67 \\times 10^{-11} = 1.28 \\times 10^{15}/6.67 \\times 10^{-11} = 1.919 \\times 10^{25}$. $X = 1.92$. 2) $v_{esc} = \\sqrt{2 \\times 20 \\times 8 \\times 10^6} = \\sqrt{3.2 \\times 10^8} = 17{,}889$ m/s $= 17.9$ km/s. 3) $T = 2\\pi\\sqrt{(1.6 \\times 10^7)^3/(6.67 \\times 10^{-11} \\times 1.92 \\times 10^{25})} = 2\\pi\\sqrt{4.096 \\times 10^{21}/1.281 \\times 10^{15}} = 2\\pi\\sqrt{3.198 \\times 10^6} = 2\\pi(1788) = 11{,}236$ s $= 3.12$ h. Hmm, let me recalculate more carefully: $(2R)^3 = (1.6 \\times 10^7)^3 = 4.096 \\times 10^{21}$. $GM = 6.67 \\times 10^{-11} \\times 1.92 \\times 10^{25} = 1.281 \\times 10^{15}$. $r^3/(GM) = 3.198 \\times 10^{6}$. $T = 2\\pi\\sqrt{3.198 \\times 10^6} = 2\\pi(1788) = 11236$ s $= 3.1$ h. About 3.1 hours.'
+        explanation: '1) $M = gR^2/G = 20(8 \\times 10^6)^2/(6.67 \\times 10^{-11}) = 1.28 \\times 10^{15}/6.67 \\times 10^{-11} = 1.92 \\times 10^{25}$ kg, so $X = 1.92$. 2) $v_{esc} = \\sqrt{2gR} = \\sqrt{2 \\times 20 \\times 8 \\times 10^6} = \\sqrt{3.2 \\times 10^8} = 17{,}890$ m/s $= 17.9$ km/s. 3) $GM = gR^2 = 1.28 \\times 10^{15}$ and $(2R)^3 = (1.6 \\times 10^7)^3 = 4.096 \\times 10^{21}$. $T = 2\\pi\\sqrt{4.096 \\times 10^{21}/1.28 \\times 10^{15}} = 2\\pi\\sqrt{3.20 \\times 10^6} = 2\\pi(1789) = 11{,}240$ s $= 3.12$ h.'
       }
     },
     {
@@ -145,13 +145,13 @@ Use $G = 6.67 \\times 10^{-11}$.
         dropdowns: [
           {
             label: 'To find the mass of a planet, you need to know:',
-            options: ['The planet\'s radius only', 'The orbital period and radius of a satellite', 'The planet\'s color and temperature', 'The planet\'s distance from Earth'],
+            options: ['The planet\'s radius only', 'The orbital period and radius of a satellite', 'A satellite\'s mass and speed', 'The planet\'s distance from Earth'],
             correctIndex: 1,
             explanation: '$M = 4\\pi^2 r^3/(GT^2)$. Observing a moon or satellite gives you $T$ and $r$, from which you can calculate $M$.'
           },
           {
             label: 'When solving gravitation problems, the most common error is:',
-            options: ['Using the wrong value of G', 'Confusing r (center-to-center) with altitude above surface', 'Forgetting to square the speed', 'Using degrees instead of radians'],
+            options: ['Using the wrong value of $G$', 'Using altitude where center-to-center $r$ belongs', 'Forgetting to square the speed', 'Mixing up degrees and radians'],
             correctIndex: 1,
             explanation: '$r$ in all gravitation formulas is measured from the CENTER of the planet/star, not from the surface. Always add the radius: $r = R + h$.'
           },
@@ -186,7 +186,7 @@ Use $G = 6.67 \\times 10^{-11}$.
           {
             question: 'An object is launched upward from Earth\'s surface at exactly escape velocity. At very large distance from Earth, its speed approaches:',
             options: [
-              'Infinity',
+              'Half the launch speed',
               'The same escape velocity',
               'Zero',
               'Orbital velocity'

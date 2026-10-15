@@ -64,8 +64,8 @@ Time to combine everything: density, hydrostatic pressure, gauge vs absolute, an
             options: [
               '$\\rho g h = 4\\times10^{4}$ Pa',
               '$\\rho g h /2 = 2\\times10^{4}$ Pa',
-              'Atmospheric only',
-              'Zero (force balance)'
+              'Atmospheric pressure only',
+              'Zero, by force balance'
             ],
             correctAnswer: 1,
             explanation: 'Pressure varies linearly from 0 at top to $\\rho g h$ at bottom; average = $\\rho g h /2$.'
@@ -104,13 +104,13 @@ Time to combine everything: density, hydrostatic pressure, gauge vs absolute, an
         dropdowns: [
           {
             label: 'A submerged plate is moved deeper. The force on it from the water:',
-            options: ['Decreases', 'Stays the same', 'Increases (more pressure with depth)', 'Becomes zero'],
+            options: ['Decreases, because water pressure spreads out with depth', 'Stays the same, since the plate is already fully submerged', 'Increases', 'Depends only on the plate\'s own weight'],
             correctIndex: 2,
-            explanation: '$F = P A = (\\rho g h) A$. Greater depth → greater force on the same plate.'
+            explanation: '$F = PA = (\\rho g h)A$. Greater depth means greater pressure, so the force on the same plate increases.'
           },
           {
             label: 'A box completely submerged in water — atmospheric pressure on the surface:',
-            options: ['Doubles the force on the bottom', 'Acts equally on all surfaces (cancels)', 'Pushes the box down', 'Makes water lighter'],
+            options: ['Doubles the force on the bottom', 'Acts equally on every surface, so it cancels', 'Pushes the box down toward the floor', 'Makes the water less dense'],
             correctIndex: 1,
             explanation: 'Atmospheric pressure transmits to all depths via the water and acts on every face of the box → net cancellation.'
           },
@@ -122,7 +122,7 @@ Time to combine everything: density, hydrostatic pressure, gauge vs absolute, an
           },
           {
             label: 'Pressure at depth $h$ in two fluids of different densities — the denser fluid yields:',
-            options: ['Less pressure', 'Same pressure', 'More pressure', 'No pressure'],
+            options: ['Less pressure', 'Same pressure', 'More pressure', 'Pressure set by the container shape'],
             correctIndex: 2,
             explanation: '$P = \\rho g h$ — denser fluid means greater pressure at the same depth.'
           }

@@ -99,8 +99,8 @@ So $\\omega = a_{\\text{max}}/v_{\\text{max}}$ — a useful relationship for AP 
           {
             question: 'If both the amplitude and frequency are doubled, $v_{\\text{max}}$:',
             options: [
-              'Doubles',
-              'Triples',
+              'Doubles, since only the amplitude matters',
+              'Increases by a factor of 8',
               'Quadruples',
               'Stays the same'
             ],
@@ -160,7 +160,7 @@ So $\\omega = a_{\\text{max}}/v_{\\text{max}}$ — a useful relationship for AP 
           },
           {
             label: 'The maximum speed of an object in SHM is given by v_max =',
-            options: ['Aω', '$A\\omega^{2}$', 'A/ω', '$\\tfrac{1}{2} A\\omega^{2}$'],
+            options: ['$A\\omega$', '$A\\omega^{2}$', '$A/\\omega$', '$\\tfrac{1}{2} A\\omega^{2}$'],
             correctIndex: 0,
             explanation: '$v_{\\text{max}} = A\\omega$. This combines the amplitude and angular frequency.'
           },

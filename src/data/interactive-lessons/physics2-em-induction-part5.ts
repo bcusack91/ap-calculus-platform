@@ -59,7 +59,7 @@ $$\\varepsilon(t) = \\varepsilon_0 \\sin(\\omega t)$$
           {
             question: 'In an AC generator, the EMF is maximum when:',
             options: [
-              'The coil is perpendicular to $\\vec{B}$ (flux is maximum)',
+              'The coil is perpendicular to $\\vec{B}$ (max flux)',
               'The coil is parallel to $\\vec{B}$ (flux is zero)',
               'The coil is at 45° to $\\vec{B}$',
               'The coil has stopped rotating'
@@ -205,7 +205,7 @@ Only **0.004%** lost! This is why we use high-voltage power lines.
             question: 'Transformers work with AC but NOT with DC because:',
             options: [
               'DC has too much current',
-              'DC produces a constant flux, so $d\\Phi/dt = 0$ and no EMF is induced in the secondary',
+              'DC gives a constant flux, so no EMF is induced in the secondary',
               'DC would melt the iron core',
               'DC cannot flow through a coil'
             ],

@@ -60,13 +60,13 @@ Continuity is about **volume** flow rate. If density changes (e.g., compressible
           {
             question: 'For an incompressible fluid in a pipe, $A_1 v_1 = A_2 v_2$ states:',
             options: [
-              'Mass is conserved',
+              'Energy per unit volume is constant along the pipe',
               'Volume flow rate is the same at every cross-section',
-              'Pressure is conserved',
-              'Speed is the same everywhere'
+              'Pressure is the same at every cross-section',
+              'Speed is the same at every cross-section'
             ],
             correctAnswer: 1,
-            explanation: 'Continuity = constant volume flow rate, since fluid neither piles up nor disappears.'
+            explanation: 'Continuity = constant volume flow rate $Q = Av$, since an incompressible fluid neither piles up nor disappears. (Constant energy per unit volume is Bernoulli\'s equation, not continuity.)'
           },
           {
             question: 'A pipe narrows from $A_1$ to $A_2 = A_1/3$. Speed in the narrow part:',
@@ -120,21 +120,21 @@ Continuity is about **volume** flow rate. If density changes (e.g., compressible
           },
           {
             label: 'A vertical falling stream from a faucet narrows as it falls because:',
-            options: ['Surface tension', 'Continuity: $v$ increases due to gravity, so $A$ shrinks', 'Compression', 'Air resistance'],
+            options: ['Surface tension pulls the stream tighter as it falls', 'Its speed rises, so its area must shrink', 'Air pressure compresses the water as it speeds up', 'Air resistance strips water from the stream\'s edges'],
             correctIndex: 1,
-            explanation: '$Q$ is constant. As $v$ grows from gravity, $A$ must decrease.'
+            explanation: '$Q = Av$ is constant down the stream. Gravity increases $v$, so $A$ must decrease. Water is essentially incompressible, so it is not being squeezed.'
           },
           {
             label: 'Two parallel pipes merge into one. The total $Q_{out}$ equals:',
-            options: ['$Q_1$ only', '$Q_2$ only', '$Q_1 + Q_2$', '$Q_1 \\cdot Q_2$'],
+            options: ['$Q_1$ only', '$Q_2$ only', '$Q_1 + Q_2$', '$(Q_1 + Q_2)/2$'],
             correctIndex: 2,
             explanation: 'Conservation of volume: $Q_{out} = Q_1 + Q_2$.'
           },
           {
             label: 'In a horizontal pipe with constant area, the speed of incompressible fluid:',
-            options: ['Increases', 'Decreases', 'Stays constant', 'Becomes zero'],
+            options: ['Increases as the fluid is pushed along', 'Decreases, since pressure drops along it', 'Stays constant, since $Q = Av$ and $A$ is fixed', 'Drops to zero at the far end'],
             correctIndex: 2,
-            explanation: 'Constant $A$ → constant $v$ (assuming no leaks).'
+            explanation: 'Continuity: $Q = Av$ is the same everywhere, so constant $A$ means constant $v$ (assuming no leaks).'
           }
         ]
       }
@@ -161,13 +161,13 @@ Continuity is about **volume** flow rate. If density changes (e.g., compressible
           {
             question: 'Two pipes of areas 0.01 $m^{2}$ and 0.02 $m^{2}$ merge into a single pipe of area 0.015 $m^{2}$. Speeds in the inlets are 3 m/s and 1 m/s. Speed in the outlet?',
             options: [
-              '$\\dfrac{1}{3}$ m/s',
-              '1 m/s',
+              '$\\dfrac{3}{10}$ m/s',
+              '2 m/s',
               '$\\dfrac{10}{3}$ m/s',
-              '5 m/s'
+              '4 m/s'
             ],
             correctAnswer: 2,
-            explanation: '$Q_{total} = 0.01(3) + 0.02(1) = 0.05$ $m^{3}/s$. $v_{out} = 0.05/0.015 = 10/3 ≈ 3.33$ m/s.'
+            explanation: '$Q_{total} = 0.01(3) + 0.02(1) = 0.05$ $m^{3}/s$. $v_{out} = 0.05/0.015 = 10/3 ≈ 3.33$ m/s. Adding the speeds gives 4 m/s, averaging them gives 2 m/s, and $A/Q$ gives 3/10 m/s.'
           }
         ]
       }

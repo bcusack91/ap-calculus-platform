@@ -72,9 +72,9 @@ For a **uniform** beam, the weight acts at the **center of mass** (geometric cen
           {
             question: 'An object is in rotational equilibrium when:',
             options: [
-              'No forces act on it',
+              'No external forces act on it at all',
               'The net torque about any axis is zero',
-              'It is not moving',
+              'It is at rest and not rotating',
               'All forces are equal in magnitude'
             ],
             correctAnswer: 1,
@@ -83,24 +83,24 @@ For a **uniform** beam, the weight acts at the **center of mass** (geometric cen
           {
             question: 'When solving a rotational equilibrium problem, you should choose the pivot at:',
             options: [
-              'The center of the object only',
-              'The point where the heaviest weight acts',
-              'Any convenient point — often where an unknown force acts',
-              'The leftmost point only'
+              'The center of mass of the object',
+              'Where the heaviest weight acts',
+              'Any point, often where an unknown force acts',
+              'The leftmost end of the object'
             ],
             correctAnswer: 2,
             explanation: 'You can choose any point as the pivot. Choosing a point where an unknown force acts eliminates that force from the torque equation (since $r = 0$).'
           },
           {
-            question: 'A uniform beam balanced at its center has a 30 N weight at one end. To balance it, a 15 N weight must be placed:',
+            question: 'A uniform beam is balanced at its center. A 30 N weight hangs partway out on one side. To balance it, a 15 N weight must be placed:',
             options: [
-              'At the opposite end',
+              'At the same distance on the opposite side',
               'Twice as far from center as the 30 N weight',
-              'At the center',
+              'Half as far from center as the 30 N weight',
               'At the same position as the 30 N weight'
             ],
             correctAnswer: 1,
-            explanation: 'For balance: $(30)(L/2) = (15)(d)$, giving $d = L$ from the center. The 30 N weight is at $L/2$ from center (at the end), so the 15 N weight must be at $L$ from center — that is, **twice as far** as the 30 N weight. A lighter weight must sit farther from the fulcrum to create the same torque.'
+            explanation: 'The uniform beam\'s own weight acts at the pivot, so it adds no torque. For balance: $(30)(d_{30}) = (15)(d)$, giving $d = 2d_{30}$: the 15 N weight must sit **twice as far** from the center as the 30 N weight, on the other side. A lighter weight must sit farther from the fulcrum to create the same torque; putting it at the same distance leaves the 30 N side down.'
           }
         ]
       }
@@ -136,19 +136,19 @@ For a **uniform** beam, the weight acts at the **center of mass** (geometric cen
         dropdowns: [
           {
             label: 'Rotational equilibrium requires that:',
-            options: ['net force is zero', 'net torque is zero', 'the object is stationary', 'all forces are balanced'],
+            options: ['net force is zero', 'net torque is zero', 'it is at rest', 'forces balance'],
             correctIndex: 1,
             explanation: 'Rotational equilibrium specifically requires $\\sum \\tau = 0$. Net force being zero is translational equilibrium.'
           },
           {
             label: 'The best place to choose a pivot for torque calculations is:',
-            options: ['at the center of mass', 'at one end', 'at a point where an unknown force acts', 'wherever the largest known force acts'],
+            options: ['at the center of mass', 'at one end of the object', 'at a point where an unknown force acts', 'wherever the largest known force acts'],
             correctIndex: 2,
             explanation: 'Any pivot gives the same physical result, but placing it where an unknown force acts removes that force from the torque equation, which makes the algebra easiest.'
           },
           {
             label: 'To balance a lighter person on a see-saw, a heavier person must sit:',
-            options: ['closer to the fulcrum', 'farther from the fulcrum', 'at the same distance', 'it cannot balance'],
+            options: ['closer to the fulcrum', 'farther out', 'at the same distance', 'it cannot balance'],
             correctIndex: 0,
             explanation: 'A heavier person must sit closer to the fulcrum to balance a lighter person: $m_1 r_1 = m_2 r_2$.'
           }
@@ -164,7 +164,7 @@ For a **uniform** beam, the weight acts at the **center of mass** (geometric cen
       exercise: {
         questions: [
           {
-            question: 'A 5 m uniform beam weighing 200 N is supported at one end (A) and at a point 3 m from A. The beam is in equilibrium. The support force at the 3 m point is closest to:',
+            question: 'A 5 m uniform beam weighing 200 N is supported at one end, point A, and at a point 3 m from A. The beam is in equilibrium. The support force at the 3 m point is closest to:',
             options: [
               '100 N',
               '167 N',

@@ -82,13 +82,13 @@ $$g(h) = \\frac{GM_E}{(R_E + h)^2} = g_0 \\left(\\frac{R_E}{R_E + h}\\right)^2$$
           {
             question: 'At what altitude above Earth (in terms of $R_E$) is the gravitational field half its surface value?',
             options: [
-              '$R_E/2$',
-              '$R_E$',
-              '$(\\sqrt{2} - 1)R_E \\approx 0.41R_E$',
-              '$2R_E$'
+              '$\\approx 0.50R_E$',
+              '$\\approx 1.00R_E$',
+              '$\\approx 0.41R_E$',
+              '$\\approx 1.41R_E$'
             ],
             correctAnswer: 2,
-            explanation: '$g/2 = GM/(R_E + h)^2$. Also $g = GM/R_E^2$. So $(R_E + h)^2 = 2R_E^2$. $R_E + h = R_E\\sqrt{2}$. $h = (\\sqrt{2} - 1)R_E \\approx 0.414R_E \\approx 2640$ km.'
+            explanation: '$g/2 = GM/(R_E + h)^2$ and $g = GM/R_E^2$, so $(R_E + h)^2 = 2R_E^2$ and $R_E + h = \\sqrt{2}R_E$. The altitude is $h = (\\sqrt{2} - 1)R_E \\approx 0.414R_E \\approx 2640$ km. $1.41R_E$ is the distance from Earth\'s center, not the altitude; $1.00R_E$ (doubling the distance) quarters the field rather than halving it; $0.50R_E$ assumes $g$ falls off linearly.'
           },
           {
             question: 'An astronaut on the ISS (altitude ~400 km, $R_E \\approx 6400$ km) experiences a gravitational field approximately:',
@@ -120,11 +120,11 @@ Use $G = 6.67 \\times 10^{-11}$ $N\\cdot m^{2}/kg^{2}$, $g_E = 10$ $m/s^{2}$, $R
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2.5', '3.7', '3.2'],
+        correctAnswers: ['2.5', '3.73', '3.16'],
         hint1: '$g \\propto 1/r^2$. At $2R_E$: $g = g_E/4$.',
         hint2: '$g = GM/R^2$.',
         hint3: '$g/g_E = (R_E/r)^2 \\Rightarrow r/R_E = \\sqrt{g_E/g}$.',
-        explanation: '1) $g = 10/4 = 2.5$ $m/s^{2}$. 2) $g = 6.67 \\times 10^{-11}(6.42 \\times 10^{23})/(3.39 \\times 10^6)^2 = 4.28 \\times 10^{13}/1.15 \\times 10^{13} = 3.72 \\approx 3.7$ $m/s^{2}$. 3) $r/R_E = \\sqrt{10/1} = \\sqrt{10} = 3.162 \\approx 3.2$.'
+        explanation: '1) $g = 10/4 = 2.5$ $m/s^{2}$. 2) $g = 6.67 \\times 10^{-11}(6.42 \\times 10^{23})/(3.39 \\times 10^6)^2 = 4.28 \\times 10^{13}/1.15 \\times 10^{13} = 3.73$ $m/s^{2}$ (3 significant figures). 3) $r/R_E = \\sqrt{10/1} = \\sqrt{10} = 3.162 \\approx 3.16$.'
       }
     },
     {
@@ -137,13 +137,13 @@ Use $G = 6.67 \\times 10^{-11}$ $N\\cdot m^{2}/kg^{2}$, $g_E = 10$ $m/s^{2}$, $R
         dropdowns: [
           {
             label: 'The gravitational field inside a uniform spherical shell is:',
-            options: ['Equal to surface gravity', 'Half of surface gravity', 'Zero', 'Infinite'],
+            options: ['Equal to surface gravity', 'Half of surface gravity', 'Zero', 'Greatest just inside the shell wall'],
             correctIndex: 2,
             explanation: 'Inside a uniform spherical shell, the gravitational field is exactly zero (Shell Theorem). All the gravitational pulls from different parts of the shell cancel.'
           },
           {
             label: 'The units N/kg and $m/s^{2}$ are:',
-            options: ['Completely different', 'Equivalent — same physical dimension', 'Similar but not interchangeable', 'Only equal on Earth'],
+            options: ['Completely different', 'The same unit, written two ways', 'Similar but not interchangeable', 'Only equal on Earth'],
             correctIndex: 1,
             explanation: '1 N = 1 $kg\\cdot m/s^{2}$, so 1 N/kg = 1 $(kg\\cdot m/s^{2})/kg$ = 1 $m/s^{2}$. They are exactly the same unit.'
           },
@@ -178,13 +178,13 @@ Use $G = 6.67 \\times 10^{-11}$ $N\\cdot m^{2}/kg^{2}$, $g_E = 10$ $m/s^{2}$, $R
           {
             question: 'Two planets have the same surface gravity. Planet A has twice the mass of Planet B. The ratio of their radii $R_A/R_B$ is:',
             options: [
-              '$1$',
+              '$1/\\sqrt{2}$',
               '$\\sqrt{2}$',
               '$2$',
-              '$4$'
+              '$1/2$'
             ],
             correctAnswer: 1,
-            explanation: '$g = GM/R^2$. Same $g$: $GM_A/R_A^2 = GM_B/R_B^2$. $M_A/R_A^2 = M_B/R_B^2$. $2M_B/R_A^2 = M_B/R_B^2$. $R_A^2 = 2R_B^2$. $R_A = \\sqrt{2}R_B$.'
+            explanation: '$g = GM/R^2$. Same $g$: $M_A/R_A^2 = M_B/R_B^2$, so $2M_B/R_A^2 = M_B/R_B^2$ and $R_A^2 = 2R_B^2$. $R_A = \\sqrt{2}R_B$. Forgetting the square root gives 2; inverting the ratio gives $1/\\sqrt{2}$ (or $1/2$ without the root).'
           }
         ]
       }

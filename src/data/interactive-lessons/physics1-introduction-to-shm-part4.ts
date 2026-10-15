@@ -83,7 +83,7 @@ Notice: when $|x|$ is maximum, $|a|$ is maximum and $v = 0$. When $x = 0$, $|v|$
               'Maximum positive',
               'Zero',
               'Maximum negative',
-              'Equal to velocity'
+              'Positive but decreasing'
             ],
             correctAnswer: 2,
             explanation: 'Since $a = -\\omega^2 x$, when $x = +A$ (max positive), $a = -\\omega^2 A$ (max negative). The acceleration always opposes the displacement.'
@@ -104,8 +104,8 @@ Notice: when $|x|$ is maximum, $|a|$ is maximum and $v = 0$. When $x = 0$, $|v|$
             options: [
               'They reach their maxima at the same time',
               'When one is maximum, the other is zero',
-              'They are always equal',
-              'They always have the same sign'
+              'They are always equal in size at every instant',
+              'They always point in the same direction'
             ],
             correctAnswer: 1,
             explanation: 'Quantities that are 90° out of phase reach their peaks at different times — when one is at its maximum, the other is zero.'
@@ -129,11 +129,11 @@ A mass oscillates with amplitude $A = 0.20$ m and period $T = 4.0$ s.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1.57', '0.31', '0.49'],
+        correctAnswers: ['1.57', '0.314', '0.493'],
         hint1: '$\\omega = 2\\pi/T = 2\\pi/4.0$',
         hint2: '$v_{\\text{max}} = A\\omega = 0.20 \\times 1.57$',
         hint3: '$a_{\\text{max}} = A\\omega^2 = 0.20 \\times (1.57)^2$',
-        explanation: '1) $\\omega = 2\\pi/4.0 = \\pi/2 \\approx 1.57$ rad/s. 2) $v_{\\text{max}} = 0.20(1.57) = 0.314 \\approx 0.31$ m/s. 3) $a_{\\text{max}} = 0.20(1.57)^2 = 0.20(2.47) = 0.493 \\approx 0.49$ $m/s^{2}$.'
+        explanation: '1) $\\omega = 2\\pi/4.0 = \\pi/2 \\approx 1.57$ rad/s. 2) $v_{\\text{max}} = 0.20(1.57) = 0.314$ m/s. 3) $a_{\\text{max}} = 0.20(1.57)^2 = 0.20(2.467) = 0.493$ $m/s^{2}$.'
       }
     },
     {
@@ -152,7 +152,7 @@ A mass oscillates with amplitude $A = 0.20$ m and period $T = 4.0$ s.
           },
           {
             label: 'In SHM, the acceleration is always:',
-            options: ['in phase with', '90° ahead of', '180° out of phase with', '90° behind'],
+            options: ['in phase with the displacement', '90° ahead of the displacement', '180° out of phase with the displacement', '90° behind the displacement'],
             correctIndex: 2,
             explanation: 'Since $a = -\\omega^2 x$, the acceleration is exactly 180° out of phase with the position — always opposite in sign.'
           },

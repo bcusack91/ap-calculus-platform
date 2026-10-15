@@ -64,7 +64,7 @@ Escape velocity = $\\sqrt{2}$ × orbital velocity at the same radius. A satellit
               'The mass of the escaping object',
               'The mass and radius of the planet',
               'Only the mass of the planet',
-              'The temperature of the atmosphere'
+              'The direction of launch'
             ],
             correctAnswer: 1,
             explanation: '$v_{esc} = \\sqrt{2GM/R}$. It depends on the planet\'s mass $M$ and radius $R$ (or the distance $r$ from the center). The escaping object\'s mass cancels out.'
@@ -72,10 +72,10 @@ Escape velocity = $\\sqrt{2}$ × orbital velocity at the same radius. A satellit
           {
             question: 'A satellite is moved from a low orbit to a higher orbit. Which statement is true?',
             options: [
-              'Both speed and total energy increase',
-              'Speed increases, total energy decreases',
-              'Speed decreases, total energy increases (becomes less negative)',
-              'Both speed and total energy decrease'
+              'Both speed and total energy increase together',
+              'Speed increases while total energy decreases',
+              'Speed decreases, total energy increases',
+              'Both speed and total energy decrease together'
             ],
             correctAnswer: 2,
             explanation: 'Higher orbit: $v = \\sqrt{GM/r}$ decreases. Total energy $E = -GMm/(2r)$ becomes less negative (increases). You need to ADD energy to move to a higher orbit, even though you slow down!'
@@ -83,13 +83,13 @@ Escape velocity = $\\sqrt{2}$ × orbital velocity at the same radius. A satellit
           {
             question: 'If Earth\'s radius were halved (same mass), the escape velocity from the surface would:',
             options: [
-              'Halve',
-              'Increase by $\\sqrt{2}$',
-              'Double',
+              'Decrease by $\\sqrt{2}$',
+              'Increase by a factor of $\\sqrt{2}$',
+              'Increase by a factor of 2',
               'Stay the same'
             ],
             correctAnswer: 1,
-            explanation: '$v_{esc} = \\sqrt{2GM/R}$. Halving $R$: $v_{esc}\' = \\sqrt{2GM/(R/2)} = \\sqrt{2} \\cdot v_{esc}$. Increase by factor $\\sqrt{2}$.'
+            explanation: '$v_{esc} = \\sqrt{2GM/R}$. Halving $R$: $v_{esc}\' = \\sqrt{2GM/(R/2)} = \\sqrt{2} \\cdot v_{esc}$. Forgetting the square root gives a factor of 2.'
           }
         ]
       }
@@ -109,12 +109,11 @@ Use $g = 10$ $m/s^{2}$, $R_E = 6.4 \\times 10^6$ m, $M_E = 6.0 \\times 10^{24}$ 
 3) The Moon orbits at $r = 3.84 \\times 10^8$ m. What is the Moon's orbital speed (in m/s, round to nearest 10)?
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['7800', '11.2', '1020'],
+        questions: [{ question: '1) Orbital speed at h = 200 km (m/s, nearest 100)', answer: '7800', acceptableAnswers: ['7800', '7790'] }, { question: '2) Escape speed from Earth\'s surface (km/s, 3 s.f.)', answer: '11.3', acceptableAnswers: ['11.3', '11.2'] }, { question: '3) The Moon\'s orbital speed (m/s, nearest 10)', answer: '1020', acceptableAnswers: ['1020', '1021'] }],
         hint1: '$r = R_E + h = 6.6 \\times 10^6$ m. $v = \\sqrt{GM/r}$.',
         hint2: '$v_{esc} = \\sqrt{2gR_E}$. Convert to km/s.',
         hint3: '$v = \\sqrt{GM_E/r}$.',
-        explanation: '1) $r = 6.6 \\times 10^6$ m. $v = \\sqrt{6.67 \\times 10^{-11} \\times 6.0 \\times 10^{24}/6.6 \\times 10^6} = \\sqrt{4.0 \\times 10^{14}/6.6 \\times 10^6} = \\sqrt{6.06 \\times 10^7} = 7786 \\approx 7800$ m/s. 2) $v_{esc} = \\sqrt{2 \\times 10 \\times 6.4 \\times 10^6} = \\sqrt{1.28 \\times 10^8} = 11{,}314$ m/s $= 11.3 \\approx 11.2$ km/s (with more precise values). 3) $v = \\sqrt{4.0 \\times 10^{14}/3.84 \\times 10^8} = \\sqrt{1.042 \\times 10^6} = 1021 \\approx 1020$ m/s.'
+        explanation: '1) $r = 6.6 \\times 10^6$ m. $v = \\sqrt{6.67 \\times 10^{-11} \\times 6.0 \\times 10^{24}/6.6 \\times 10^6} = \\sqrt{4.0 \\times 10^{14}/6.6 \\times 10^6} = \\sqrt{6.06 \\times 10^7} = 7786 \\approx 7800$ m/s. 2) $v_{esc} = \\sqrt{2 \\times 10 \\times 6.4 \\times 10^6} = \\sqrt{1.28 \\times 10^8} = 11{,}314$ m/s $\\approx 11.3$ km/s. (Using $\\sqrt{2GM_E/R_E}$ with the given $M_E$ instead gives 11.2 km/s; either is accepted.) 3) $v = \\sqrt{4.0 \\times 10^{14}/3.84 \\times 10^8} = \\sqrt{1.042 \\times 10^6} = 1021 \\approx 1020$ m/s.'
       }
     },
     {
@@ -158,7 +157,7 @@ The binding energy equals the kinetic energy! You need to add exactly one more K
         dropdowns: [
           {
             label: 'To move a satellite to a higher orbit, you must:',
-            options: ['Remove energy from it', 'Add energy to it', 'Keep the same energy', 'Reduce its mass'],
+            options: ['Remove energy from it, since it slows down', 'Add energy to it', 'Keep its total energy the same', 'Reduce its mass so gravity pulls less'],
             correctIndex: 1,
             explanation: 'Higher orbit has $E = -GMm/(2r)$ — less negative (more total energy). You must add energy, even though the satellite ends up moving slower.'
           },
@@ -200,12 +199,12 @@ The binding energy equals the kinetic energy! You need to add exactly one more K
             question: 'The ratio of escape velocity to orbital velocity at the same distance from a planet is:',
             options: [
               '$1$',
-              '$\\sqrt{2} \\approx 1.41$',
+              '$\\sqrt{2}$',
               '$2$',
-              '$\\pi$'
+              '$1/\\sqrt{2}$'
             ],
             correctAnswer: 1,
-            explanation: '$v_{esc} = \\sqrt{2GM/r}$ and $v_{orbit} = \\sqrt{GM/r}$. $v_{esc}/v_{orbit} = \\sqrt{2}$.'
+            explanation: '$v_{esc} = \\sqrt{2GM/r}$ and $v_{orbit} = \\sqrt{GM/r}$, so $v_{esc}/v_{orbit} = \\sqrt{2} \\approx 1.41$. Forgetting the square root gives 2; inverting the ratio gives $1/\\sqrt{2}$.'
           }
         ]
       }

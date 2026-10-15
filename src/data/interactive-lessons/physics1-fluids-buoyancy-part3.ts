@@ -86,13 +86,13 @@ A coin (solid steel) has no air → density = 7800 → sinks.
           {
             question: 'A hollow sphere weighing 5 N has volume 0.001 $m^{3}$. In water (g = 10):',
             options: [
-              'It sinks',
-              'It floats half-submerged',
-              'It floats fully submerged just below surface',
+              'It sinks, since its density is 5000 $kg/m^{3}$',
+              'It hovers fully submerged at whatever depth it is released',
+              'It floats with $V_{sub} = 0.00005$ $m^{3}$',
               'It floats with $V_{sub} = 0.0005$ $m^{3}$'
             ],
             correctAnswer: 3,
-            explanation: '$\\rho_{avg} = m/V = 0.5/0.001 = 500$ $kg/m^{3}$ < 1000. Floats. Submerged fraction = 0.5 → $V_{sub} = 0.0005$ $m^{3}$.'
+            explanation: 'Mass $= 5/10 = 0.5$ kg, so $\\rho_{avg} = 0.5/0.001 = 500$ $kg/m^{3}$ < 1000 → it floats. $V_{sub} = W/(\\rho_w g) = 5/(1000 \\cdot 10) = 0.0005$ $m^{3}$ (half its volume). Using 5 N as the mass gives 5000 $kg/m^{3}$; dividing by $g$ a second time gives 0.00005 $m^{3}$.'
           }
         ]
       }
@@ -128,9 +128,9 @@ A coin (solid steel) has no air → density = 7800 → sinks.
         dropdowns: [
           {
             label: 'A solid steel cube and a steel ship of equal mass — in water:',
-            options: ['Both float', 'Both sink', 'Cube sinks; ship floats (ship has trapped air → lower avg density)', 'Cube floats; ship sinks'],
+            options: ['Both float, since equal masses get equal buoyancy', 'Both sink, since both are made of the same steel', 'Cube sinks; ship floats, since its hull holds air', 'Cube floats; ship sinks under its larger area'],
             correctIndex: 2,
-            explanation: 'A ship\'s hull encloses air, dropping its avg density below water. A solid cube has nowhere to lower its density.'
+            explanation: 'A ship\'s hull encloses air, so its AVERAGE density (steel + air) is below water\'s and it can displace its own weight of water. A solid cube has steel\'s full density (about 7800 $kg/m^{3}$), so it sinks.'
           },
           {
             label: 'When you carry a block from fresh water to denser saltwater, the FRACTION submerged:',
@@ -140,13 +140,13 @@ A coin (solid steel) has no air → density = 7800 → sinks.
           },
           {
             label: 'A submarine that hovers at constant depth has average density:',
-            options: ['Less than water', 'Equal to water', 'Greater than water', 'Zero'],
+            options: ['Less than water', 'Equal to water', 'Greater than water', 'Slightly greater than water'],
             correctIndex: 1,
             explanation: 'Neutral buoyancy: $\\rho_{avg} = \\rho_{fluid}$. (Submarines adjust this by flooding/blowing ballast tanks.)'
           },
           {
             label: 'An object\'s fraction submerged is exactly 1.0 when:',
-            options: ['It floats with top barely submerged', 'It is barely above the surface', 'It is fully submerged but neutrally buoyant', 'It is hollow'],
+            options: ['It floats with half its volume above the surface', 'It floats with its top just above the surface', 'It is fully submerged but neutrally buoyant', 'It is hollow, whatever its average density is'],
             correctIndex: 2,
             explanation: '$V_{sub}/V_{obj} = 1$ means fully submerged. With $F_b = W$, this is neutral buoyancy ($\\rho_{obj} = \\rho_{fluid}$).'
           }
@@ -173,12 +173,12 @@ A coin (solid steel) has no air → density = 7800 → sinks.
             explanation: 'Fraction submerged = $\\rho_{obj}/\\rho_{fluid}$ → $\\rho_{obj} = 0.65 \\times 1000 = 650$ $kg/m^{3}$.'
           },
           {
-            question: 'In which fluid will the SAME wooden block $(density 700 kg/m^{3})$ sit highest above the water line?',
+            question: 'In which fluid will the SAME wooden block (density 700 $kg/m^{3}$) sit highest above the surface?',
             options: [
-              'Fresh water $(1000 kg/m^{3})$',
-              'Sea water $(1030 kg/m^{3})$',
-              'Mercury (13,600 $kg/m^{3}$)',
-              'Cooking oil $(920 kg/m^{3})$'
+              'Fresh water (1000 $kg/m^{3}$)',
+              'Sea water (1030 $kg/m^{3}$)',
+              'Mercury (13600 $kg/m^{3}$)',
+              'Cooking oil (920 $kg/m^{3}$)'
             ],
             correctAnswer: 2,
             explanation: 'Highest above = smallest fraction submerged = largest $\\rho_{fluid}$. Mercury wins by a huge margin (700/13600 ≈ 5%).'

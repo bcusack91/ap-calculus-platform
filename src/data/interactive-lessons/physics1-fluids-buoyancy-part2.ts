@@ -60,7 +60,7 @@ If only half a block is underwater, only that half displaces water. The portion 
           {
             question: 'Archimedes\' Principle states the buoyant force equals:',
             options: [
-              'The weight of the object',
+              'The object\'s own weight',
               'The weight of the displaced fluid',
               'The volume of the object',
               'Atmospheric pressure × cross-section'
@@ -85,10 +85,10 @@ If only half a block is underwater, only that half displaces water. The portion 
               '0.030 $m^{3}$',
               '0.070 $m^{3}$',
               '0.10 $m^{3}$',
-              '0.13 $m^{3}$'
+              '0.33 $m^{3}$'
             ],
             correctAnswer: 0,
-            explanation: 'Only the submerged 30% displaces water: $V_{disp} = 0.30 \\times 0.10 = 0.030$ $m^{3}$.'
+            explanation: 'Only the submerged 30% displaces water: $V_{disp} = 0.30 \\times 0.10 = 0.030$ $m^{3}$. (0.070 uses the part above water, 0.10 assumes full submersion, and 0.33 divides by 0.30 instead of multiplying.)'
           }
         ]
       }
@@ -124,21 +124,21 @@ If only half a block is underwater, only that half displaces water. The portion 
         dropdowns: [
           {
             label: 'A block placed in oil ($\\rho = 800$) vs water ($\\rho = 1000$). The buoyant force in oil (compared to water) is:',
-            options: ['Greater', 'Less', 'Same', 'Zero'],
+            options: ['Greater', 'Less', 'The same', 'Greater by 25%'],
             correctIndex: 1,
-            explanation: 'Same $V_{disp}$, smaller $\\rho_{fluid}$ → smaller $F_b$.'
+            explanation: 'Same $V_{disp}$, smaller $\\rho_{fluid}$ → smaller $F_b$ (in fact 800/1000 = 80% of the value in water). "Greater by 25%" comes from flipping the ratio to 1000/800.'
           },
           {
             label: 'Replacing fresh water with mercury ($\\rho ≈ 13600$) for the same submerged volume gives buoyancy:',
-            options: ['Same', '13.6× less', '13.6× more', 'Negative'],
+            options: ['Same', '13.6× less', '13.6× more', '1.36× more'],
             correctIndex: 2,
-            explanation: '$F_b$ is proportional to $\\rho_{fluid}$.'
+            explanation: '$F_b$ is proportional to $\\rho_{fluid}$: $13600/1000 = 13.6$, so the buoyant force is 13.6× larger. (13.6× less inverts the ratio; 1.36× more slips a factor of 10.)'
           },
           {
             label: 'A submerged 1 kg lead ball and 1 kg cork ball (different volumes!) — buoyancy is:',
-            options: ['Same on both', 'Greater on lead (denser)', 'Greater on cork (larger volume)', 'Zero on cork'],
+            options: ['Same on both, since the masses match', 'Greater on lead, which is denser', 'Greater on cork, which displaces more water', 'Zero on cork, since cork floats'],
             correctIndex: 2,
-            explanation: 'Cork has much larger volume → much larger $V_{disp}$ → much larger $F_b$. Mass doesn\'t matter.'
+            explanation: 'Cork has much larger volume → much larger $V_{disp}$ → much larger $F_b$. Mass and object density don\'t enter $F_b = \\rho_{fluid} g V_{disp}$.'
           },
           {
             label: 'A floating object\'s buoyant force equals its:',
@@ -160,24 +160,24 @@ If only half a block is underwater, only that half displaces water. The portion 
           {
             question: 'A fully submerged 5.0-kg object displaces $2.0\\times10^{-3}$ $m^{3}$ of water. Buoyant force on it (g = 10) is:',
             options: [
-              '0.20 N',
+              '2.0 N',
               '20 N',
               '50 N',
-              '200 N'
+              '30 N'
             ],
             correctAnswer: 1,
-            explanation: '$F_b = 1000(10)(2.0\\times10^{-3}) = 20$ N. (Object weight = $50$ N — net 30 N down → it sinks.)'
+            explanation: '$F_b = \\rho g V = 1000(10)(2.0\\times10^{-3}) = 20$ N. Leaving out $g$ gives 2.0 N; 50 N is the object\'s weight, not the buoyant force; 30 N is the net downward force $W - F_b$ (so it sinks).'
           },
           {
             question: 'A floating boat with a total weight of 12,000 N displaces what volume of fresh water? (g = 10)',
             options: [
-              '0.12 $m^{3}$',
+              '1200 $m^{3}$',
               '1.2 $m^{3}$',
               '12 $m^{3}$',
               '120 $m^{3}$'
             ],
             correctAnswer: 1,
-            explanation: 'Floating ⇒ $W = F_b = \\rho g V_{disp}$. $V_{disp} = 12000/(1000 \\cdot 10) = 1.2$ $m^{3}$.'
+            explanation: 'Floating ⇒ $W = F_b = \\rho g V_{disp}$. $V_{disp} = 12000/(1000 \\cdot 10) = 1.2$ $m^{3}$. Dropping $g$ gives 12 $m^{3}$, dropping $\\rho$ gives 1200 $m^{3}$, and multiplying by $g$ instead of dividing gives 120 $m^{3}$.'
           }
         ]
       }

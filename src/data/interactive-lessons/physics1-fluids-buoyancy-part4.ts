@@ -67,20 +67,20 @@ If $W < F_b$ → impossible to rest (would float up).
           },
           {
             question: 'A buoy of density 200 $kg/m^{3}$ is tied to the bottom of a 10 m deep pool. The rope tension points:',
-            options: ['Up (toward the buoy)', 'Down (toward the bottom)', 'Sideways', 'Zero'],
+            options: ['Up, since the buoy is trying to rise', 'Down, toward the anchor', 'Sideways, along the pool floor', 'Nowhere; the tension is zero'],
             correctAnswer: 1,
             explanation: 'The buoy wants to rise (low density). The rope pulls DOWN on the buoy (and up on the bottom anchor) to keep it submerged.'
           },
           {
             question: 'For a submerged stone resting on a pool bottom, the normal force from the floor is:',
             options: [
-              '$W$ (just weight)',
-              '$W + F_b$ (weight plus buoyancy)',
-              '$W - F_b$ (weight minus buoyancy)',
-              'Zero'
+              '$W$',
+              '$W + F_b$',
+              '$W - F_b$',
+              '$F_b$'
             ],
             correctAnswer: 2,
-            explanation: 'Vertical equilibrium: $N + F_b = W \\Rightarrow N = W - F_b$.'
+            explanation: 'Vertical equilibrium: $N + F_b = W \\Rightarrow N = W - F_b$. Buoyancy acts on the stone even while it rests on the bottom, so the floor supports less than the full weight.'
           }
         ]
       }
@@ -122,21 +122,21 @@ If $W < F_b$ → impossible to rest (would float up).
           },
           {
             label: 'Underwater, a steel anchor weighs APPARENTLY:',
-            options: ['Same as in air', 'Slightly less than in air', 'Slightly more than in air', 'Zero'],
+            options: ['Same as in air', 'Slightly less than in air', 'Slightly more than in air', 'Zero, since the water supports it'],
             correctIndex: 1,
             explanation: 'Buoyancy reduces apparent weight by $\\rho_w g V$ — a small but nonzero amount.'
           },
           {
             label: 'A balloon released underwater accelerates upward because:',
-            options: ['Air is heavy', '$F_b > W$', '$W > F_b$', 'Tension pulls it'],
+            options: ['Water pressure on its top exceeds that on its bottom', '$F_b > W$', '$W > F_b$', 'Surface tension pulls it toward the surface'],
             correctIndex: 1,
-            explanation: 'Air-filled balloon has very low avg density → $F_b \\gg W$ → strong net upward force.'
+            explanation: 'An air-filled balloon has very low average density → $F_b \\gg W$ → strong net upward force. Pressure is GREATER on its bottom (deeper), which is exactly where the upward buoyant force comes from.'
           },
           {
             label: 'A 1 kg block fully submerged with $V = 0.001$ $m^{3}$ in water — its apparent weight (g = 10):',
-            options: ['Zero (neutral)', '5 N', '10 N', '20 N'],
+            options: ['0 N', '9 N', '10 N', '20 N'],
             correctIndex: 0,
-            explanation: '$W = 10$ N. $F_b = 1000(10)(0.001) = 10$ N. $W_{app} = 0$. Density matches water exactly → neutrally buoyant.'
+            explanation: '$W = mg = 10$ N. $F_b = 1000(10)(0.001) = 10$ N. $W_{app} = W - F_b = 0$: its density matches water exactly → neutrally buoyant. 10 N ignores buoyancy, 20 N adds it, and 9 N comes from leaving $g$ out of $F_b$.'
           }
         ]
       }

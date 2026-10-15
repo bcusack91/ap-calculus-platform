@@ -73,7 +73,7 @@ Total energy is **negative** (bound orbit) and equals half the PE.
           {
             question: 'A satellite\'s orbital speed does not depend on:',
             options: [
-              'The mass of the planet it orbits',
+              'The mass of the planet',
               'The orbital radius',
               'The mass of the satellite itself',
               'The gravitational constant $G$'
@@ -84,7 +84,7 @@ Total energy is **negative** (bound orbit) and equals half the PE.
           {
             question: 'If a satellite moves to a higher orbit, its orbital speed:',
             options: [
-              'Increases',
+              'Increases, as the orbit gets bigger',
               'Decreases',
               'Stays the same',
               'Depends on the satellite\'s mass'
@@ -95,8 +95,8 @@ Total energy is **negative** (bound orbit) and equals half the PE.
           {
             question: 'A satellite is in circular orbit. If its speed were suddenly doubled (by a rocket), it would:',
             options: [
-              'Stay in the same circular orbit',
-              'Move to a higher circular orbit',
+              'Stay in the same orbit',
+              'Settle into a higher orbit',
               'Escape the planet\'s gravity',
               'Crash into the planet'
             ],
@@ -122,11 +122,11 @@ Use $G = 6.67 \\times 10^{-11}$ $N\\cdot m^{2}/kg^{2}$, $M_E = 5.97 \\times 10^{
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['7700', '92', '6.6'],
+        correctAnswers: ['7700', '92', '6.63'],
         hint1: '$r = 6.37 \\times 10^6 + 0.4 \\times 10^6 = 6.77 \\times 10^6$ m. $v = \\sqrt{GM/r}$.',
         hint2: '$T = 2\\pi r/v$. Convert to minutes.',
         hint3: 'From $T = 2\\pi\\sqrt{r^3/(GM)}$, solve for $r$. $T = 86400$ s.',
-        explanation: '1) $r = 6.77 \\times 10^6$ m. $v = \\sqrt{6.67 \\times 10^{-11} \\times 5.97 \\times 10^{24}/6.77 \\times 10^6} = \\sqrt{3.98 \\times 10^{14}/6.77 \\times 10^6} = \\sqrt{5.88 \\times 10^7} = 7668 \\approx 7700$ m/s. 2) $T = 2\\pi(6.77 \\times 10^6)/7668 = 4.254 \\times 10^7/7668 = 5547$ s $= 92.5 \\approx 92$ min. 3) $r^3 = GMT^2/(4\\pi^2) = 3.98 \\times 10^{14}(86400)^2/(39.48) = 3.98 \\times 10^{14} \\times 7.46 \\times 10^9/39.48 = 7.52 \\times 10^{22}$. $r = (7.52 \\times 10^{22})^{1/3} = 4.22 \\times 10^7$ m. $r/R_E = 4.22 \\times 10^7/6.37 \\times 10^6 = 6.63 \\approx 6.6$.'
+        explanation: '1) $r = 6.77 \\times 10^6$ m. $v = \\sqrt{6.67 \\times 10^{-11} \\times 5.97 \\times 10^{24}/6.77 \\times 10^6} = \\sqrt{3.98 \\times 10^{14}/6.77 \\times 10^6} = \\sqrt{5.88 \\times 10^7} = 7668 \\approx 7700$ m/s. 2) $T = 2\\pi(6.77 \\times 10^6)/7668 = 4.254 \\times 10^7/7668 = 5547$ s $= 92.4 \\approx 92$ min. 3) $r^3 = GMT^2/(4\\pi^2) = 3.98 \\times 10^{14}(86400)^2/(39.48) = 3.98 \\times 10^{14} \\times 7.46 \\times 10^9/39.48 = 7.52 \\times 10^{22}$. $r = (7.52 \\times 10^{22})^{1/3} = 4.22 \\times 10^7$ m. $r/R_E = 4.22 \\times 10^7/6.37 \\times 10^6 = 6.63$.'
       }
     },
     {
@@ -139,9 +139,9 @@ Use $G = 6.67 \\times 10^{-11}$ $N\\cdot m^{2}/kg^{2}$, $M_E = 5.97 \\times 10^{
         dropdowns: [
           {
             label: 'A geosynchronous satellite appears to hover over one spot because:',
-            options: ['It has zero orbital velocity', 'Its orbital period equals Earth\'s rotation period (24 h)', 'It is outside Earth\'s gravitational field', 'It is held up by atmospheric pressure'],
+            options: ['It has zero orbital velocity relative to the stars', 'Its orbital period matches Earth\'s 24 h rotation', 'It is far enough out that Earth\'s gravity is negligible', 'Upper-atmosphere pressure holds it at a fixed height'],
             correctIndex: 1,
-            explanation: 'A geosynchronous satellite orbits with $T = 24$ hours, matching Earth\'s rotation. It appears stationary from the ground.'
+            explanation: 'A geosynchronous satellite orbits with $T = 24$ hours, matching Earth\'s rotation period, so it appears stationary from the ground. It is still moving fast (about 3 km/s) and is held in orbit by gravity.'
           },
           {
             label: 'Two satellites orbit the same planet. Satellite A has orbital radius $r$ and Satellite B has radius $4r$. The ratio $v_A/v_B$ is:',
@@ -151,9 +151,9 @@ Use $G = 6.67 \\times 10^{-11}$ $N\\cdot m^{2}/kg^{2}$, $M_E = 5.97 \\times 10^{
           },
           {
             label: 'An astronaut throws a wrench while in orbit. The wrench will:',
-            options: ['Fall to Earth', 'Float away into space', 'Also orbit (at nearly the same orbital parameters)', 'Stop moving immediately'],
+            options: ['Fall straight down to Earth, since it is no longer held', 'Float off in a straight line into deep space', 'Keep orbiting alongside the station', 'Stop and hang motionless where it was released'],
             correctIndex: 2,
-            explanation: 'The wrench is already in orbit at the right speed for that radius. A gentle throw barely changes its velocity, so it continues orbiting alongside the station.'
+            explanation: 'The wrench is already in orbit at the right speed for that radius. A gentle throw barely changes its velocity, so it keeps orbiting with nearly the same orbital parameters as the station.'
           }
         ]
       }
@@ -181,12 +181,12 @@ Use $G = 6.67 \\times 10^{-11}$ $N\\cdot m^{2}/kg^{2}$, $M_E = 5.97 \\times 10^{
             question: 'If the Sun\'s mass suddenly doubled (hypothetically), Earth\'s required orbital speed to maintain the same orbit would:',
             options: [
               'Stay the same',
-              'Increase by factor $\\sqrt{2}$',
-              'Double',
-              'Decrease'
+              'Increase by a factor of $\\sqrt{2}$',
+              'Increase by a factor of 2',
+              'Decrease by $\\sqrt{2}$'
             ],
             correctAnswer: 1,
-            explanation: '$v = \\sqrt{GM/r}$. Doubling $M$: $v\' = \\sqrt{2GM/r} = \\sqrt{2} \\cdot v$. Speed increases by $\\sqrt{2} \\approx 1.41$.'
+            explanation: '$v = \\sqrt{GM/r}$. Doubling $M$: $v\' = \\sqrt{2GM/r} = \\sqrt{2} \\cdot v \\approx 1.41v$. The speed is independent of the satellite\'s (Earth\'s) mass, but not of the central mass. Forgetting the square root gives a factor of 2.'
           }
         ]
       }

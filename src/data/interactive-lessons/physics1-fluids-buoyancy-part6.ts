@@ -53,11 +53,11 @@ Where $T_{net}$ is positive if the extra force pushes UP, negative if DOWN. In s
             options: [
               '0.87 $m^{3}$',
               '0.90 $m^{3}$',
-              '9.0 $m^{3}$',
+              '8.7 $m^{3}$',
               '90 $m^{3}$'
             ],
             correctAnswer: 0,
-            explanation: '$V_{disp} = W/(\\rho_{sw} g) = 9000/(1030 \\cdot 10) ≈ 0.874$ $m^{3}$.'
+            explanation: '$V_{disp} = W/(\\rho_{sw} g) = 9000/(1030 \\cdot 10) ≈ 0.874$ $m^{3}$. Using fresh-water density gives 0.90 $m^{3}$; leaving out $g$ gives 8.7 $m^{3}$; multiplying by $g$ gives about 90 $m^{3}$.'
           },
           {
             question: 'A 200 N stone is fully submerged in water and rests on a scale at the pool bottom. Buoyancy on it is 25 N. Scale reading?',
@@ -81,9 +81,9 @@ Where $T_{net}$ is positive if the extra force pushes UP, negative if DOWN. In s
 
 1) A 12 kg block of volume $5.0\\times10^{-3}$ $m^{3}$ is fully submerged. Apparent weight on a scale (N)?
 
-2) A 2.0 kg piece of foam $(volume 0.020 m^{3})$ is held UNDER water by a string. String tension (N)?
+2) A 2.0 kg piece of foam (volume 0.020 $m^{3}$) is held UNDER water by a string. String tension (N)?
 
-3) A 1.5 kg wooden block $(density 750 kg/m^{3})$ floats. Volume submerged $(m^{3})$?
+3) A 1.5 kg wooden block (density 750 $kg/m^{3}$) floats. Volume submerged $(m^{3})$?
       `,
       exercise: {
         boxes: 3,
@@ -104,25 +104,25 @@ Where $T_{net}$ is positive if the extra force pushes UP, negative if DOWN. In s
         dropdowns: [
           {
             label: 'A submerged scale shows the apparent weight of a brick is 80% of its true weight. The brick\'s density is approximately:',
-            options: ['200 $kg/m^{3}$', '500 $kg/m^{3}$', '5000 $kg/m^{3}$', '8000 $kg/m^{3}$'],
+            options: ['1250 $kg/m^{3}$', '200 $kg/m^{3}$', '5000 $kg/m^{3}$', '800 $kg/m^{3}$'],
             correctIndex: 2,
-            explanation: '$W_{app}/W = 1 - \\rho_w/\\rho_{obj} = 0.80 \\Rightarrow \\rho_{obj}/\\rho_w = 5 \\Rightarrow \\rho_{obj} = 5000$ $kg/m^{3}$.'
+            explanation: '$W_{app}/W = 1 - \\rho_w/\\rho_{obj} = 0.80 \\Rightarrow \\rho_w/\\rho_{obj} = 0.20 \\Rightarrow \\rho_{obj} = 5000$ $kg/m^{3}$. 800 treats 80% like a floating fraction, 1250 is 1000/0.80, and 200 inverts the final ratio.'
           },
           {
             label: 'A balloon at the bottom of a pool, released, accelerates upward. As it rises, the buoyant force on it (assume rigid balloon, constant volume):',
-            options: ['Increases', 'Stays the same', 'Decreases', 'Becomes zero'],
+            options: ['Increases, since the pressure drops as it rises', 'Stays the same, since $\\rho_w$ and $V$ don\'t change', 'Decreases, since less water is above it', 'Increases, since it speeds up as it rises'],
             correctIndex: 1,
-            explanation: 'Constant fluid density and constant volume → constant $F_b = \\rho_w g V$. (Real balloons expand → $F_b$ actually grows.)'
+            explanation: 'Constant fluid density and constant volume → constant $F_b = \\rho_w g V$; depth and speed do not enter. A real, flexible balloon would expand as the pressure drops, and then its $F_b$ would grow.'
           },
           {
-            label: 'A swimmer in fresh water vs salt water — buoyancy is greater in:',
-            options: ['Fresh water', 'Salt water', 'Same in both', 'Depends on swimmer'],
+            label: 'A swimmer holds her breath fully underwater, first in fresh water and then in salt water. The buoyant force on her is greater in:',
+            options: ['Fresh water', 'Salt water', 'Same in both', 'Depends on how deep she is'],
             correctIndex: 1,
-            explanation: 'Higher fluid density → higher buoyancy on the same submerged volume.'
+            explanation: 'Fully submerged, she displaces the same volume either way; salt water is denser, so $F_b = \\rho_{fluid} g V$ is larger. (If she were floating at the surface instead, $F_b$ would equal her weight in both.)'
           },
           {
             label: 'A boat carrying a stone is floating in a pond. If the stone is dropped overboard and sinks, the pond level:',
-            options: ['Rises', 'Falls', 'Stays same', 'Becomes zero'],
+            options: ['Rises, since the stone now adds its volume to the pond', 'Falls', 'Stays the same, since the total mass is unchanged', 'Rises, as the sinking stone pushes water upward'],
             correctIndex: 1,
             explanation: 'In the boat the stone displaced water equal to its WEIGHT. Once sunk it displaces only its own VOLUME (much less since stone is denser than water) → level falls.'
           }
@@ -154,10 +154,10 @@ Where $T_{net}$ is positive if the extra force pushes UP, negative if DOWN. In s
               '400 $kg/m^{3}$',
               '600 $kg/m^{3}$',
               '1000 $kg/m^{3}$',
-              '1400 $kg/m^{3}$'
+              '1667 $kg/m^{3}$'
             ],
             correctAnswer: 1,
-            explanation: '40% above ⇒ 60% submerged. Density = $0.60 \\times 1000 = 600$ $kg/m^{3}$.'
+            explanation: '40% above ⇒ 60% submerged. Density = $0.60 \\times 1000 = 600$ $kg/m^{3}$. (400 uses the fraction above water; 1667 is 1000/0.60, the ratio inverted.)'
           }
         ]
       }

@@ -78,10 +78,10 @@ You've mastered volume flow rate, single-pipe continuity, branching, and mass fl
               '0.0002 m/s',
               '0.5 m/s',
               '2 m/s',
-              '50 m/s'
+              '0.020 m/s'
             ],
             correctAnswer: 2,
-            explanation: '$v = Q/A = 0.020/0.010 = 2$ m/s.'
+            explanation: '$v = Q/A = 0.020/0.010 = 2$ m/s. Multiplying gives 0.0002 m/s, inverting gives 0.5 m/s, and 0.020 m/s just copies $Q$.'
           }
         ]
       }
@@ -123,19 +123,19 @@ You've mastered volume flow rate, single-pipe continuity, branching, and mass fl
           },
           {
             label: 'In a venturi tube (a constriction in a horizontal pipe), the water moves FASTEST in the:',
-            options: ['Wide section', 'Narrow section', 'Middle of the wide section only', 'Outside the pipe'],
+            options: ['Wide section, where there is more water', 'Narrow section, where the area is smallest', 'Same speed in every section', 'Exit, after the narrow section'],
             correctIndex: 1,
             explanation: 'Continuity: smallest area ⇒ fastest speed.'
           },
           {
             label: 'A river flowing at constant $Q$ slows down where it deepens. This is consistent with:',
-            options: ['Newton\'s 2nd law', 'Pascal\'s Principle', 'Continuity', 'Buoyancy'],
+            options: ['Newton\'s 2nd law', 'Pascal\'s Principle', 'Continuity', 'Archimedes\' Principle'],
             correctIndex: 2,
             explanation: 'Larger cross-section ⇒ slower flow at constant $Q$.'
           },
           {
             label: 'For incompressible flow, $\\dot m$ and $Q$ differ by a factor of:',
-            options: ['$g$', '$\\rho$', '$\\mu$', '$P$'],
+            options: ['$g$, the acceleration due to gravity', '$\\rho$, the fluid density', '$A$, the cross-sectional area', '$P$, the pressure in the pipe'],
             correctIndex: 1,
             explanation: '$\\dot m = \\rho Q$.'
           }
@@ -165,12 +165,12 @@ You've mastered volume flow rate, single-pipe continuity, branching, and mass fl
             question: 'A water main of diameter 30 cm carries water at 2 m/s. It feeds a building through 5 equal pipes of diameter 6 cm each. Speed in each smaller pipe?',
             options: [
               '2 m/s',
-              '5 m/s',
+              '50 m/s',
               '10 m/s',
-              '20 m/s'
+              '0.4 m/s'
             ],
             correctAnswer: 2,
-            explanation: '$Q_{main} = \\pi (0.15)^2 (2) ≈ 0.1414$ $m^{3}/s$. Each pipe: $Q_{main}/5 ≈ 0.0283$ $m^{3}/s$. $A_{small} = \\pi(0.03)^2 ≈ 2.83\\times10^{-3}$ $m^{2}$. $v = 0.0283/2.83\\times10^{-3} = 10$ m/s.'
+            explanation: '$Q_{main} = \\pi (0.15)^2 (2) ≈ 0.1414$ $m^{3}/s$. Each pipe: $Q_{main}/5 ≈ 0.0283$ $m^{3}/s$. $A_{small} = \\pi(0.03)^2 ≈ 2.83\\times10^{-3}$ $m^{2}$. $v = 0.0283/2.83\\times10^{-3} = 10$ m/s. Forgetting to split among 5 pipes gives 50 m/s; forgetting to square the diameter ratio gives 2 m/s; inverting the area ratio gives 0.4 m/s.'
           }
         ]
       }

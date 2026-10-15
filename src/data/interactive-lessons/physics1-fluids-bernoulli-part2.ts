@@ -71,10 +71,10 @@ $$P_1 + \\tfrac{1}{2}\\rho v_1^2 + \\rho g y_1 = P_2 + \\tfrac{1}{2}\\rho v_2^2 
           {
             question: 'Bernoulli\'s equation, multiplied through by volume, gives:',
             options: [
-              'Conservation of momentum',
+              'Conservation of momentum for a fluid parcel',
               'Conservation of mechanical energy for a fluid parcel',
-              'Conservation of mass',
-              'Pascal\'s Principle'
+              'Conservation of mass along a streamline',
+              'Pascal\'s principle for a confined fluid'
             ],
             correctAnswer: 1,
             explanation: 'Each term × $V$ → $PV$ (flow work) + $\\tfrac{1}{2}mv^2$ (KE) + $mgy$ (PE). Total energy conserved.'
@@ -83,9 +83,9 @@ $$P_1 + \\tfrac{1}{2}\\rho v_1^2 + \\rho g y_1 = P_2 + \\tfrac{1}{2}\\rho v_2^2 
             question: 'The "$P$" in Bernoulli\'s equation represents:',
             options: [
               'Pressure-work per unit volume',
-              'Density',
-              'Velocity squared',
-              'Temperature'
+              'Density of the fluid',
+              'Square of the flow speed',
+              'Temperature of the fluid'
             ],
             correctAnswer: 0,
             explanation: 'Pressure × volume = work done by neighboring fluid as the parcel flows. Per unit volume, that\'s just $P$.'
@@ -135,27 +135,27 @@ $$P_1 + \\tfrac{1}{2}\\rho v_1^2 + \\rho g y_1 = P_2 + \\tfrac{1}{2}\\rho v_2^2 
         dropdowns: [
           {
             label: 'In Bernoulli, the analog of mechanical KE is:',
-            options: ['$\\rho g y$', '$\\tfrac{1}{2}\\rho v^2$', '$P$', 'Constant'],
+            options: ['$\\rho g y$', '$\\tfrac{1}{2}\\rho v^2$', '$\\rho v^2$', '$P + \\tfrac{1}{2}\\rho v^2$'],
             correctIndex: 1,
-            explanation: '$\\tfrac{1}{2}\\rho v^2$ is KE/V — same form as $\\tfrac{1}{2}mv^2$ divided by $V$.'
+            explanation: '$\\tfrac{1}{2}\\rho v^2$ is KE/V — the same form as $\\tfrac{1}{2}mv^2$ divided by $V$ (so $m/V = \\rho$). Dropping the ½ gives $\\rho v^2$; adding $P$ mixes in the pressure-work term.'
           },
           {
             label: 'For a fluid moving HORIZONTALLY along a streamline, Bernoulli simplifies to:',
-            options: ['$P_1 = P_2$ always', '$P_1 + \\tfrac{1}{2}\\rho v_1^2 = P_2 + \\tfrac{1}{2}\\rho v_2^2$', '$P_1 = \\rho g h$', '$v_1 = v_2$'],
+            options: ['$P_1 + \\rho g y_1 = P_2 + \\rho g y_2$', '$P_1 + \\tfrac{1}{2}\\rho v_1^2 = P_2 + \\tfrac{1}{2}\\rho v_2^2$', '$P_1 - \\tfrac{1}{2}\\rho v_1^2 = P_2 - \\tfrac{1}{2}\\rho v_2^2$', '$P_1 + \\rho v_1^2 = P_2 + \\rho v_2^2$'],
             correctIndex: 1,
-            explanation: 'No height change → drop the $\\rho g y$ terms.'
+            explanation: 'No height change → drop the $\\rho g y$ terms and keep pressure and kinetic terms with the same sign: $P_1 + \\tfrac{1}{2}\\rho v_1^2 = P_2 + \\tfrac{1}{2}\\rho v_2^2$.'
           },
           {
             label: 'A fluid in a pipe gains height. To preserve energy, the speed-pressure combination must:',
-            options: ['Both increase', 'Stay the same', 'At least one decreases', 'Both go to zero'],
+            options: ['Both increase together', 'Both stay the same', 'At least one of them decreases', 'Both drop to zero'],
             correctIndex: 2,
             explanation: 'Since $\\rho g y$ grows, $P + \\tfrac{1}{2}\\rho v^2$ must decrease.'
           },
           {
             label: 'Each Bernoulli term has units of:',
-            options: ['m/s', '$kg/m^{3}$', '$J/m^{3}$ (= Pa)', 'N/s'],
+            options: ['$J$', '$N/m$', '$J/m^{3}$', '$kg/m^{3}$'],
             correctIndex: 2,
-            explanation: 'Energy per unit volume — confirmed by dimensional analysis.'
+            explanation: 'Energy per unit volume, $J/m^{3}$, which is the same as N/$m^{2}$ = Pa. Confirmed by dimensional analysis.'
           }
         ]
       }
@@ -185,7 +185,7 @@ $$P_1 + \\tfrac{1}{2}\\rho v_1^2 + \\rho g y_1 = P_2 + \\tfrac{1}{2}\\rho v_2^2 
               'Increasing',
               'Decreasing',
               'Constant',
-              'Zero'
+              'Zero at every point'
             ],
             correctAnswer: 2,
             explanation: 'Energy conservation along a streamline ⇒ sum constant.'

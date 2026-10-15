@@ -62,9 +62,9 @@ A pipe carries water from $A_1 = 0.04$ $m^{2}$, $v_1 = 1$ m/s, $y_1 = 0$, $P_1 =
             question: 'In a horizontal Venturi tube, the pressure drop from the wide section to the narrow throat depends MOST directly on:',
             options: [
               'The fluid density and the difference in $v^2$',
-              'The pipe length',
-              'The fluid temperature',
-              'Atmospheric pressure'
+              'The length of pipe between the sections',
+              'The temperature of the fluid',
+              'The atmospheric pressure outside'
             ],
             correctAnswer: 0,
             explanation: '$\\Delta P = \\tfrac{1}{2}\\rho(v_2^2 - v_1^2)$.'
@@ -83,10 +83,10 @@ A pipe carries water from $A_1 = 0.04$ $m^{2}$, $v_1 = 1$ m/s, $y_1 = 0$, $P_1 =
           {
             question: 'For a pipe with both area and elevation changes, you must apply:',
             options: [
-              'Only Bernoulli',
-              'Only Continuity',
-              'Both — Continuity first, then Bernoulli',
-              'Newton\'s 2nd law'
+              'Bernoulli alone',
+              'Continuity alone',
+              'Continuity first, then Bernoulli',
+              'Newton\'s 2nd law alone'
             ],
             correctAnswer: 2,
             explanation: 'Use continuity for unknown speed, then Bernoulli for pressure.'
@@ -125,9 +125,9 @@ A pipe carries water from $A_1 = 0.04$ $m^{2}$, $v_1 = 1$ m/s, $y_1 = 0$, $P_1 =
         dropdowns: [
           {
             label: 'For a horizontal pipe that narrows from $A$ to $A/2$, applying continuity then Bernoulli, the pressure at the narrow end:',
-            options: ['Increases by $\\tfrac{1}{2}\\rho v^2$', 'Decreases by $\\tfrac{3}{2}\\rho v^2$', 'Stays the same', 'Doubles'],
+            options: ['Increases by $\\tfrac{3}{2}\\rho v^2$', 'Decreases by $\\tfrac{3}{2}\\rho v^2$', 'Decreases by $2\\rho v^2$', 'Decreases by $\\tfrac{1}{2}\\rho v^2$'],
             correctIndex: 1,
-            explanation: '$v_2 = 2v_1$. $\\Delta P = \\tfrac{1}{2}\\rho(v_1^2 - 4v_1^2) = -\\tfrac{3}{2}\\rho v_1^2$.'
+            explanation: 'Continuity: $v_2 = 2v$. Bernoulli: $\\Delta P = \\tfrac{1}{2}\\rho(v^2 - 4v^2) = -\\tfrac{3}{2}\\rho v^2$. Ignoring the wide-section speed gives $2\\rho v^2$; using $(v_2 - v_1)^2$ gives $\\tfrac{1}{2}\\rho v^2$; flipping the sign makes it an increase.'
           },
           {
             label: 'A pipe of the same area carries water UP a height $h$. Bernoulli gives the pressure decrease:',
@@ -143,7 +143,7 @@ A pipe carries water from $A_1 = 0.04$ $m^{2}$, $v_1 = 1$ m/s, $y_1 = 0$, $P_1 =
           },
           {
             label: 'When solving combined problems, the FIRST equation you usually apply is:',
-            options: ['Bernoulli', 'Continuity (to get the unknown speed)', 'Newton\'s 2nd law', 'Pascal\'s Principle'],
+            options: ['Bernoulli, to get the pressure', 'Continuity, to get the unknown speed', 'Newton\'s 2nd law, to get forces', 'Pascal\'s Principle, for pressure'],
             correctIndex: 1,
             explanation: 'Find the unknown speed from continuity first, then plug into Bernoulli.'
           }
@@ -164,10 +164,10 @@ A pipe carries water from $A_1 = 0.04$ $m^{2}$, $v_1 = 1$ m/s, $y_1 = 0$, $P_1 =
               '$292.5$ kPa',
               '$300$ kPa',
               '$307.5$ kPa',
-              '$312$ kPa'
+              '$285$ kPa'
             ],
             correctAnswer: 0,
-            explanation: '$v_2 = 4$ m/s. $\\Delta P = \\tfrac{1}{2}(1000)(1-16) = -7500$ Pa. $P_2 = 292.5$ kPa.'
+            explanation: '$v_2 = v_1 (A_1/A_2) = 1 \\times 4 = 4$ m/s. $\\Delta P = \\tfrac{1}{2}(1000)(1^2 - 4^2) = -7500$ Pa. $P_2 = 300 - 7.5 = 292.5$ kPa. Forgetting the ½ gives 285 kPa; a sign slip gives 307.5 kPa.'
           },
           {
             question: 'A pipe of constant cross-section ($A_1 = A_2$) goes from ground level ($P_1 = 500$ kPa) up to height $y_2 = 20$ m. The pressure at the top?',

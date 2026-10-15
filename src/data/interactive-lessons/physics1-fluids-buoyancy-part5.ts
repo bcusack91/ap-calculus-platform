@@ -63,9 +63,9 @@ where $V_{hull}$ is the hull's displaceable internal volume.
             question: 'For an object floating in equilibrium:',
             options: [
               '$F_b = W_{disp\\ fluid} = W_{object}$',
-              '$F_b > W_{object}$',
-              '$F_b < W_{object}$',
-              '$F_b = 0$'
+              '$F_b > W_{object}$, to keep it up',
+              '$F_b < W_{object}$, as part sticks out',
+              '$F_b = 0$ above the waterline'
             ],
             correctAnswer: 0,
             explanation: 'Equilibrium ⇒ buoyant force balances weight ⇒ weight of displaced fluid = weight of object.'
@@ -73,13 +73,13 @@ where $V_{hull}$ is the hull's displaceable internal volume.
           {
             question: 'Adding cargo to a floating boat causes it to:',
             options: [
-              'Float higher',
-              'Sink lower (more $V_{sub}$)',
-              'Stay at the same depth',
-              'Become neutrally buoyant'
+              'Float higher, since its average density falls',
+              'Sink lower, since it must push aside more water',
+              'Stay at the same depth as before',
+              'Become neutrally buoyant and hover'
             ],
             correctAnswer: 1,
-            explanation: 'Heavier total weight requires more buoyancy → more displaced volume → sinks deeper.'
+            explanation: 'Heavier total weight requires more buoyancy → more displaced volume ($V_{sub}$ grows) → the boat sinks deeper.'
           },
           {
             question: 'A flat-bottomed barge floats with submerged depth 0.5 m in fresh water. Moved to seawater (denser), the depth becomes:',
@@ -105,7 +105,7 @@ where $V_{hull}$ is the hull's displaceable internal volume.
 
 2) Same barge in seawater. Draft depth (m, 4 decimal places)?
 
-3) A wooden raft $(density 600 kg/m^{3})$ is shaped as a $2\\text{ m} \\times 2\\text{ m} \\times 0.30\\text{ m}$ slab. Submerged depth in water (m)?
+3) A wooden raft (density 600 $kg/m^{3}$) is shaped as a $2\\text{ m} \\times 2\\text{ m} \\times 0.30\\text{ m}$ slab. Submerged depth in water (m)?
       `,
       exercise: {
         boxes: 3,
@@ -126,27 +126,27 @@ where $V_{hull}$ is the hull's displaceable internal volume.
         dropdowns: [
           {
             label: 'A floating ice cube melts. The water level in its glass:',
-            options: ['Rises', 'Falls', 'Stays the same', 'Cannot tell'],
+            options: ['Rises, since the melted ice adds water to the glass', 'Falls, since ice shrinks as it melts into water', 'Stays the same, as the meltwater fills the displaced volume', 'Depends on the size of the ice cube'],
             correctIndex: 2,
             explanation: 'The ice was displacing exactly its mass of water. When melted, that same mass occupies the same volume → no change in level.'
           },
           {
             label: 'A boat with cargo on top sinks lower. If cargo is then thrown OVERBOARD into the water:',
-            options: ['Boat sinks even lower', 'Boat rises (less mass)', 'No change', 'Boat tips over'],
+            options: ['The boat sinks lower, since the water rises', 'The boat rises, since it now carries less mass', 'The boat stays at the same level', 'The boat tips toward the thrown side'],
             correctIndex: 1,
-            explanation: 'Boat now floats higher (less mass to support). Whether overall water level rises depends on whether cargo floats or sinks.'
+            explanation: 'The boat now has less mass to support, so it needs less $V_{sub}$ and floats higher. (Whether the pond\'s water level rises or falls depends on whether the cargo floats or sinks.)'
           },
           {
             label: 'A boat barely floats with the waterline at the gunwale (top edge). One more passenger steps on. The boat:',
-            options: ['Floats higher', 'Stays the same', 'Sinks (overflows)', 'Speeds up'],
+            options: ['Floats higher than before', 'Stays level with the gunwale', 'Takes on water over the gunwale and sinks', 'Floats lower but stays afloat'],
             correctIndex: 2,
-            explanation: 'Already at maximum displacement; extra weight cannot be balanced → water spills in → sinks.'
+            explanation: 'It is already at maximum displacement; the extra weight cannot be balanced by more buoyancy → water spills over the gunwale → it sinks.'
           },
           {
             label: 'A floating buoy of mass 5 kg in water (g = 10) — buoyant force on it is:',
-            options: ['5 N', '10 N', '50 N', '500 N'],
+            options: ['0.5 N', '5 N', '50 N', '0 N'],
             correctIndex: 2,
-            explanation: 'Floating ⇒ $F_b = mg = 5(10) = 50$ N.'
+            explanation: 'Floating ⇒ $F_b = mg = 5(10) = 50$ N. 5 N is the mass with $g$ left out, 0.5 N divides by $g$ instead of multiplying, and 0 N wrongly assumes floating objects feel no buoyancy.'
           }
         ]
       }
@@ -165,21 +165,21 @@ where $V_{hull}$ is the hull's displaceable internal volume.
               '0.020 m',
               '0.30 m',
               '0.32 m',
-              '3.20 m'
+              '1.28 m'
             ],
             correctAnswer: 2,
-            explanation: 'Total mass = 1280 kg. $d = 1280/(1000 \\cdot 4.0) = 0.32$ m.'
+            explanation: 'Total mass = 1280 kg. $d = m/(\\rho A) = 1280/(1000 \\cdot 4.0) = 0.32$ m. Leaving out the boat\'s 80 kg gives 0.30 m, using only the boat gives 0.020 m, and forgetting the hull area gives 1.28 m.'
           },
           {
             question: 'A wooden raft of volume 1.0 $m^{3}$ and density 700 $kg/m^{3}$ floats in fresh water. How much additional cargo (in kg) can be loaded before the raft is fully submerged?',
             options: [
-              '70 kg',
+              '1700 kg',
               '300 kg',
               '700 kg',
               '1000 kg'
             ],
             correctAnswer: 1,
-            explanation: 'Max $V_{sub} = 1.0$ $m^{3}$ ⇒ max total mass = 1000 kg. Raft mass = 700 kg. Cargo allowance = 1000 − 700 = 300 kg.'
+            explanation: 'Max $V_{sub} = 1.0$ $m^{3}$ ⇒ max total mass = $\\rho_w V = 1000$ kg. Raft mass = 700 kg. Cargo allowance = 1000 − 700 = 300 kg. (1000 kg forgets to subtract the raft; 1700 kg adds instead of subtracting.)'
           }
         ]
       }

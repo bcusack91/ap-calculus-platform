@@ -62,15 +62,15 @@ You've worked through density, pressure definitions, hydrostatic depth dependenc
             explanation: '$P = \\rho g h$ — pressure depends only on depth and density, not on bottom area or volume.'
           },
           {
-            question: 'Two fluids of densities $\\rho$ and $2\\rho$ in identical open containers, both filled to depth $h$. The bottom pressure ratio (denser : less dense) is:',
+            question: 'Two fluids of densities $\\rho$ and $2\\rho$ in identical open containers, both filled to depth $h$. The bottom gauge pressure ratio (denser : less dense) is:',
             options: [
               '1:1',
               '2:1',
               '4:1',
-              'Cannot tell without atmospheric'
+              'Cannot tell without knowing $P_{atm}$'
             ],
             correctAnswer: 1,
-            explanation: 'Gauge pressure ratio = $\\rho_2 / \\rho_1 = 2:1$. (Including $P_{atm}$ both gain the same constant.)'
+            explanation: 'Gauge pressure $= \\rho g h$, so the ratio is $\\rho_2/\\rho_1 = 2:1$. Atmospheric pressure does not enter gauge pressure. (Absolute pressures would each gain the same $P_{atm}$, so their ratio would be less than 2:1.)'
           },
           {
             question: 'A hydraulic press with output area 25× the input area and a 200 N input force lifts:',
@@ -123,13 +123,13 @@ You've worked through density, pressure definitions, hydrostatic depth dependenc
           },
           {
             label: 'A water tank with vertical sides — pressure on the side wall increases:',
-            options: ['Stays constant', 'Linearly with depth', 'Quadratically with depth', 'Decreases with depth'],
+            options: ['Exponentially with depth', 'Linearly with depth', 'Quadratically with depth', 'In proportion to the wall\'s area'],
             correctIndex: 1,
             explanation: '$P = \\rho g h$ — strictly linear in $h$.'
           },
           {
             label: 'Which assumption underlies $P = \\rho g h$?',
-            options: ['Compressible fluid', 'Constant density and uniform $g$', 'Moving fluid', 'High temperature'],
+            options: ['A compressible fluid whose density rises with depth', 'Constant density and uniform $g$', 'A fluid flowing steadily through the container', 'A container with vertical, parallel walls'],
             correctIndex: 1,
             explanation: 'Hydrostatic pressure assumes incompressible fluid (constant $\\rho$) and uniform gravity.'
           },
@@ -153,13 +153,13 @@ You've worked through density, pressure definitions, hydrostatic depth dependenc
           {
             question: 'Three open containers (cylinder, cone, hourglass) all hold water filled to height $h = 1.0$ m. The pressure at the bottom of each is:',
             options: [
-              'Different in each',
-              'Same in all (depends only on $h$ and $\\rho$)',
+              'Different in each, depending on the volume',
+              'The same in all three',
               'Greater in the wider container',
               'Greater in the narrower container'
             ],
             correctAnswer: 1,
-            explanation: 'Hydrostatic paradox: gauge pressure depends only on depth, not shape or amount.'
+            explanation: 'Hydrostatic paradox: the pressure at the bottom depends only on $h$ and $\\rho$ ($P = P_0 + \\rho g h$), not on the shape or amount of water, so it is the same in all three.'
           },
           {
             question: 'A 5 kg metal cube of side 0.10 m is placed on a table. The pressure under the cube on the table (g = 10) is:',

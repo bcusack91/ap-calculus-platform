@@ -90,18 +90,18 @@ Note: KE is NOT conserved (this is an inelastic rotational "collision").
               '3 rad/s',
               '5 rad/s',
               '8.3 rad/s',
-              '12 rad/s'
+              '6.5 rad/s'
             ],
             correctAnswer: 2,
-            explanation: '$I_i\\omega_i = I_f\\omega_f$: $(10)(5) = (6)\\omega_f$. $\\omega_f = 50/6 = 8.33$ rad/s.'
+            explanation: '$I_i\\omega_i = I_f\\omega_f$: $(10)(5) = (6)\\omega_f$, so $\\omega_f = 50/6 = 8.33$ rad/s. Assuming kinetic energy is conserved instead gives $5\\sqrt{10/6} \\approx 6.5$ rad/s, and inverting the ratio gives 3 rad/s.'
           },
           {
             question: 'When a figure skater pulls in her arms and spins faster, her kinetic energy:',
             options: [
-              'Decreases',
+              'Decreases, since her muscles absorb energy',
               'Stays the same',
               'Increases',
-              'Becomes zero'
+              'Is converted into angular momentum'
             ],
             correctAnswer: 2,
             explanation: '$KE_f = \\frac{I_i}{I_f} KE_i$. Since $I_f < I_i$, $KE_f > KE_i$. The extra KE comes from the work done by her muscles pulling her arms in.'
@@ -123,11 +123,11 @@ Note: KE is NOT conserved (this is an inelastic rotational "collision").
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['5.97', '16', '2.7'],
+        correctAnswers: ['5.88', '16', '2.67'],
         hint1: '$I_{\\text{clay}} = mr^2 = 2(0.09) = 0.18$ $kg\\cdot m^{2}$. $(0.5)(8) = (0.5 + 0.18)\\omega_f$',
         hint2: '$(4)(6) = (1.5)\\omega_f$',
         hint3: '$KE_f/KE_i = I_i/I_f = 4/1.5$',
-        explanation: '1) $(0.5)(8) = (0.68)\\omega_f$. $\\omega_f = 4/0.68 \\approx 5.88$ rad/s. Actually: $I_{\\text{clay}} = 2(0.3)^2 = 0.18$. $I_f = 0.5 + 0.18 = 0.68$. $\\omega_f = 4.0/0.68 = 5.88$. Let me re-examine: $0.5 \\times 8 = 4.0$. $4.0/0.68 = 5.88$. Answer should be 5.88 but let me recheck. $(0.5)(8) = 4$. $(0.68)\\omega_f = 4$. $\\omega_f = 5.88$. 2) $\\omega_f = 24/1.5 = 16$ rad/s. 3) $KE_f/KE_i = 4/1.5 = 2.67 \\approx 2.7$.'
+        explanation: '1) $I_{\\text{clay}} = mr^2 = 2(0.3)^2 = 0.18$ $kg\\cdot m^{2}$, so $I_f = 0.5 + 0.18 = 0.68$ $kg\\cdot m^{2}$. $(0.5)(8) = (0.68)\\omega_f$, so $\\omega_f = 4.0/0.68 = 5.88$ rad/s. 2) $\\omega_f = 24/1.5 = 16$ rad/s. 3) $KE_f/KE_i = I_i/I_f = 4/1.5 = 2.67$.'
       }
     },
     {
@@ -140,19 +140,19 @@ Note: KE is NOT conserved (this is an inelastic rotational "collision").
         dropdowns: [
           {
             label: 'When a spinning skater pulls their arms in, angular velocity:',
-            options: ['increases', 'decreases', 'stays the same', 'becomes zero'],
+            options: ['increases', 'decreases', 'stays the same', 'reverses direction'],
             correctIndex: 0,
             explanation: 'When $I$ decreases (arms pulled in), $\\omega$ must increase to keep $L = I\\omega$ constant.'
           },
           {
             label: 'When angular momentum is conserved but rotational inertia changes, kinetic energy:',
-            options: ['is also conserved', 'increases', 'decreases', 'may increase or decrease'],
+            options: ['is also conserved along with $L$', 'always increases whenever $I$ changes', 'always decreases whenever $I$ changes', 'may increase or decrease'],
             correctIndex: 3,
             explanation: 'KE is not necessarily conserved when $I$ changes. It increases when $I$ decreases and vice versa.'
           },
           {
             label: 'Conservation of angular momentum requires:',
-            options: ['zero net external force', 'zero net external torque', 'constant velocity', 'constant angular velocity'],
+            options: ['no net external force on the system', 'zero net external torque', 'constant velocity', 'constant angular velocity'],
             correctIndex: 1,
             explanation: 'Conservation of angular momentum requires zero net external torque, not zero force.'
           }
@@ -171,20 +171,20 @@ Note: KE is NOT conserved (this is an inelastic rotational "collision").
             question: 'Two disks ($I_1 = 3$ $kg\\cdot m^{2}$, $\\omega_1 = 8$ rad/s and $I_2 = 5$ $kg\\cdot m^{2}$, $\\omega_2 = -2$ rad/s) are pressed together. Their final common $\\omega$ is:',
             options: [
               '1.75 rad/s',
-              '2.0 rad/s',
-              '3.0 rad/s',
-              '5.0 rad/s'
+              '4.25 rad/s',
+              '4.67 rad/s',
+              '3.0 rad/s'
             ],
             correctAnswer: 0,
-            explanation: '$L_i = (3)(8) + (5)(-2) = 24 - 10 = 14$ $kg\\cdot m^{2}/s$. $L_f = (3 + 5)\\omega_f = 8\\omega_f$. $\\omega_f = 14/8 = 1.75$ rad/s.'
+            explanation: '$L_i = (3)(8) + (5)(-2) = 24 - 10 = 14$ $kg\\cdot m^{2}/s$. $L_f = (3 + 5)\\omega_f = 8\\omega_f$, so $\\omega_f = 14/8 = 1.75$ rad/s. Dropping the minus sign on disk 2 gives $34/8 = 4.25$ rad/s; dividing by $I_1$ alone gives $14/3 = 4.67$ rad/s; averaging the two angular velocities gives 3.0 rad/s.'
           },
           {
             question: 'A child stands at the edge of a spinning merry-go-round and walks to the center. The merry-go-round:',
             options: [
-              'Slows down',
+              'Slows down, since its rotational inertia decreases',
               'Speeds up',
               'Maintains the same angular velocity',
-              'Stops'
+              'Speeds up briefly, then returns to its original rate'
             ],
             correctAnswer: 1,
             explanation: 'Walking to the center reduces $I$ (less mass at large $r$). By conservation of $L$, $\\omega$ increases.'

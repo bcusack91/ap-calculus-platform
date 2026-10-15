@@ -66,9 +66,9 @@ A tire gauge reads zero when tire pressure equals atmospheric pressure (a flat t
           {
             question: 'Gauge pressure equals zero when:',
             options: [
-              'There is no air at all',
-              'Pressure equals atmospheric pressure',
-              'Pressure is half of atmospheric',
+              'There is no air at all inside the container',
+              'Absolute pressure equals atmospheric',
+              'The pressure is half of atmospheric pressure',
               'Pressure is exactly one bar above atmospheric'
             ],
             correctAnswer: 1,
@@ -77,10 +77,10 @@ A tire gauge reads zero when tire pressure equals atmospheric pressure (a flat t
           {
             question: 'A tire reads "30 psi gauge." Its absolute pressure is approximately:',
             options: [
-              '30 psi (same)',
-              '15 psi (half)',
-              '45 psi (gauge + 1 atm)',
-              '60 psi (double)'
+              '30 psi, the same as the gauge reading',
+              '15 psi, the gauge reading minus 1 atm',
+              '45 psi, the gauge reading plus 1 atm',
+              '60 psi, double the gauge reading'
             ],
             correctAnswer: 2,
             explanation: '$P_{abs} = P_{atm} + P_{gauge}$. With $P_{atm}$ ≈ 14.7 psi, $P_{abs} \\approx 30 + 15 = 45$ psi.'
@@ -88,10 +88,10 @@ A tire gauge reads zero when tire pressure equals atmospheric pressure (a flat t
           {
             question: 'If a problem asks for the NET force atmospheric pressure exerts on an open beaker\'s sides, the answer is:',
             options: [
-              'Very large (atmospheric weight)',
-              'Half of atmospheric',
-              'Zero (atmospheric force on outside cancels on inside)',
-              'Equal to the fluid weight'
+              'Very large, equal to the weight of the air above it',
+              'Half of atmospheric pressure times the wall area',
+              'Zero, because the inside and outside pushes cancel',
+              'Equal to the weight of the fluid in the beaker'
             ],
             correctAnswer: 2,
             explanation: 'Atmospheric pressure pushes equally on both sides of any open container wall — net = 0. Use gauge in such problems.'
@@ -136,13 +136,13 @@ A tire gauge reads zero when tire pressure equals atmospheric pressure (a flat t
           },
           {
             label: 'For a fully submerged closed scuba tank, atmospheric pressure on the outside:',
-            options: ['Adds to fluid pressure significantly', 'Is replaced by water pressure entirely', 'Acts the same on all sides — cancels in net force', 'Does not exist underwater'],
+            options: ['Adds to fluid pressure significantly', 'Is replaced by water pressure entirely', 'Acts the same on all sides, so it cancels in the net force', 'Does not exist underwater'],
             correctIndex: 2,
             explanation: 'Pressure differences (not absolute) determine net force. The atmospheric component is uniform → cancels.'
           },
           {
             label: 'A "negative gauge pressure" means:',
-            options: ['Negative force', 'Pressure below atmospheric', 'Vacuum (zero absolute)', 'A measurement error'],
+            options: ['A force that pulls on the walls instead of pushing', 'Pressure below atmospheric', 'A perfect vacuum, with zero absolute pressure', 'A reading error, since pressure cannot be negative'],
             correctIndex: 1,
             explanation: 'Gauge can be negative when $P_{abs} < P_{atm}$ (e.g., suction cup, drinking straw).'
           },
@@ -177,10 +177,10 @@ A tire gauge reads zero when tire pressure equals atmospheric pressure (a flat t
           {
             question: 'A drinking straw — when you sip, your mouth creates:',
             options: [
-              'Positive gauge pressure inside the straw',
-              'Negative gauge pressure inside the straw, allowing atmospheric pressure to push liquid up',
-              'Suction force unrelated to pressure',
-              'Zero pressure (a vacuum)'
+              'Positive gauge pressure inside the straw that lifts the liquid',
+              'Negative gauge pressure, so atmospheric pressure pushes liquid up',
+              'A suction force that pulls the liquid up, unrelated to air pressure',
+              'A perfect vacuum with zero absolute pressure'
             ],
             correctAnswer: 1,
             explanation: 'Reducing $P$ above the liquid in the straw creates negative gauge pressure. Atmospheric pressure on the cup pushes liquid up to equalize.'

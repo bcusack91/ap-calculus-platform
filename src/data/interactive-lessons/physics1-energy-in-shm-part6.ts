@@ -95,11 +95,11 @@ A pendulum bob ($m = 0.50$ kg) swings through its lowest point with a speed of 1
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.36', '0.073', '0.36'],
+        correctAnswers: ['0.360', '0.0735', '0.360'],
         hint1: '$KE = \\frac{1}{2}mv^2 = \\frac{1}{2}(0.50)(1.2)^2$',
         hint2: 'At max height: all KE converts to PE. $mgh = \\frac{1}{2}mv^2 \\Rightarrow h = v^2/(2g)$',
         hint3: 'At the lowest point, $PE = 0$, so $E = KE$',
-        explanation: '1) $KE = \\frac{1}{2}(0.50)(1.44) = 0.36$ J. 2) $h = v^2/(2g) = 1.44/(19.6) = 0.0735 \\approx 0.073$ m. 3) At the bottom, $PE = 0$ so $E = KE = 0.36$ J.'
+        explanation: '1) $KE = \\frac{1}{2}(0.50)(1.44) = 0.36$ J. 2) $h = v^2/(2g) = 1.44/(19.6) = 0.0735$ m. 3) At the bottom, $PE = 0$ so $E = KE = 0.36$ J.'
       }
     },
     {
@@ -118,10 +118,10 @@ A block on a spring oscillates with amplitude $A$ and total energy $E$.
               '$x = A/2$',
               '$x = A/4$',
               '$x = A/\\sqrt{2}$',
-              '$x = A/\\sqrt{4}$'
+              '$x = A\\sqrt{3}/2$'
             ],
             correctAnswer: 0,
-            explanation: '$KE = 3PE$ and $KE + PE = E$, so $3PE + PE = E$, $PE = E/4$. $\\frac{1}{2}kx^2 = \\frac{1}{4} \\cdot \\frac{1}{2}kA^2$, $x^2 = A^2/4$, $x = A/2$.'
+            explanation: '$KE = 3PE$ and $KE + PE = E$, so $3PE + PE = E$ and $PE = E/4$. Then $\\frac{1}{2}kx^2 = \\frac{1}{4} \\cdot \\frac{1}{2}kA^2$, so $x^2 = A^2/4$ and $x = A/2$. ($x = A\\sqrt{3}/2$ is the reverse case, where $PE = 3KE$.)'
           },
           {
             question: 'At $x = A/3$, what fraction of the total energy is kinetic?',
@@ -155,13 +155,13 @@ A mass-spring system oscillates on a frictionless surface with energy $E$ and am
           },
           {
             label: 'If the mass is replaced with a heavier one (same k and A), the total energy is:',
-            options: ['the same', 'halved', 'doubled', 'quadrupled'],
+            options: ['the same', 'halved, since the block moves more slowly', 'doubled, in proportion to the mass', 'quadrupled'],
             correctIndex: 0,
             explanation: 'Replacing the mass does not change the total energy. $E = \\frac{1}{2}kA^2$ does not depend on mass. (But $v_{\\text{max}}$ changes.)'
           },
           {
             label: 'When the mass is doubled (same k and A), the maximum speed:',
-            options: ['increases', 'decreases', 'stays the same', 'becomes zero'],
+            options: ['increases, since a heavier mass carries more energy', 'decreases', 'stays the same', 'increases by a factor of $\\sqrt{2}$'],
             correctIndex: 1,
             explanation: 'Doubling the mass with same $k$ and $A$: $v_{\\text{max}} = A\\sqrt{k/m}$. With $2m$: $v_{\\text{max}} = A\\sqrt{k/(2m)}$, which is smaller by $\\sqrt{2}$.'
           }
@@ -184,11 +184,11 @@ A 1.0 kg mass on a spring ($k = 400$ N/m) has total energy $E = 8.0$ J.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.2', '0.13', '0.115'],
+        correctAnswers: ['0.2', '0.132', '0.115'],
         hint1: '$A = \\sqrt{2E/k} = \\sqrt{2(8.0)/400}$',
         hint2: '$KE = \\frac{1}{2}(1.0)(9.0) = 4.5$ J. $PE = 8.0 - 4.5 = 3.5$ J. $x = \\sqrt{2(3.5)/400}$',
         hint3: '$KE = 2PE$ and $KE + PE = E$, so $PE = E/3$. $\\frac{1}{2}kx^2 = E/3$. $x = \\sqrt{2E/(3k)}$',
-        explanation: '1) $A = \\sqrt{16/400} = \\sqrt{0.04} = 0.2$ m. 2) $PE = 8.0 - 4.5 = 3.5$ J. $x = \\sqrt{7.0/400} = \\sqrt{0.0175} = 0.132 \\approx 0.13$ m. 3) $PE = 8.0/3 = 2.667$ J. $x = \\sqrt{5.333/400} = \\sqrt{0.01333} = 0.1155 \\approx 0.115$ m.'
+        explanation: '1) $A = \\sqrt{16/400} = \\sqrt{0.04} = 0.2$ m. 2) $PE = 8.0 - 4.5 = 3.5$ J. $x = \\sqrt{7.0/400} = \\sqrt{0.0175} = 0.132$ m. 3) $PE = 8.0/3 = 2.667$ J. $x = \\sqrt{5.333/400} = \\sqrt{0.01333} = 0.1155 \\approx 0.115$ m.'
       }
     },
     {

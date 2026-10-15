@@ -104,10 +104,10 @@ The acceleration is **proportional to displacement** and always directed toward 
           {
             question: 'Which of the following is NOT an example of SHM?',
             options: [
-              'A mass bouncing on a spring',
+              'A mass bouncing up and down on a spring',
               'A pendulum swinging at small angles',
               'A ball bouncing off a hard floor',
-              'A vibrating tuning fork'
+              'A tuning fork vibrating after it is struck'
             ],
             correctAnswer: 2,
             explanation: 'A ball bouncing off a floor does not have a restoring force proportional to displacement. The force is impulsive (sudden) at the bounce and gravitational in between.'
@@ -148,19 +148,19 @@ The acceleration is **proportional to displacement** and always directed toward 
         dropdowns: [
           {
             label: 'The restoring force in simple harmonic motion is described by:',
-            options: ['F = kx', 'F = -kx', 'F = $kx^{2}$', 'F = -kv'],
+            options: ['$F = kx$', '$F = -kx$', '$F = -kx^{2}$', '$F = -kv$'],
             correctIndex: 1,
             explanation: 'SHM requires $F = -kx$: a restoring force proportional to displacement with the negative sign indicating it opposes the displacement.'
           },
           {
             label: 'The restoring force and acceleration in SHM are greatest:',
-            options: ['at equilibrium', 'at maximum displacement', 'halfway between', 'it is constant'],
+            options: ['at equilibrium, where the speed is greatest', 'at maximum displacement', 'halfway between equilibrium and an endpoint', 'nowhere; they are constant throughout'],
             correctIndex: 1,
             explanation: 'Force and acceleration are maximum at maximum displacement (amplitude), where $|F| = kA$.'
           },
           {
             label: 'The position as a function of time in SHM is:',
-            options: ['constant', 'sinusoidal', 'linear in time', 'random'],
+            options: ['constant', 'sinusoidal', 'linear', 'parabolic'],
             correctIndex: 1,
             explanation: 'The motion in SHM is sinusoidal — described by sine and cosine functions of time.'
           }

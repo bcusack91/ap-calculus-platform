@@ -62,15 +62,15 @@ Let's apply all the rotational kinematics tools to solve challenging problems sy
             explanation: '$v = R\\omega = (0.3)(100) = 30$ m/s (rolling without slipping).'
           },
           {
-            question: 'A grinding wheel ($I = 0.5$ $kg\\cdot m^{2}$) requires 10 N·m of torque to achieve $\\alpha = 20$ $rad/s^{2}$. What is its actual $\\alpha$?',
+            question: 'A grinding wheel ($I = 0.5$ $kg\\cdot m^{2}$) has a net torque of 10 N·m applied to it. What is its angular acceleration?',
             options: [
               '10 $rad/s^{2}$',
               '20 $rad/s^{2}$',
               '5 $rad/s^{2}$',
-              '40 $rad/s^{2}$'
+              '0.05 $rad/s^{2}$'
             ],
             correctAnswer: 1,
-            explanation: '$\\tau = I\\alpha \\Rightarrow \\alpha = \\tau/I = 10/0.5 = 20$ $rad/s^{2}$. The question confirms the calculation.'
+            explanation: '$\\tau = I\\alpha \\Rightarrow \\alpha = \\tau/I = 10/0.5 = 20$ $rad/s^{2}$. Multiplying instead of dividing gives 5; dividing the wrong way ($I/\\tau$) gives 0.05; 10 just repeats the torque.'
           }
         ]
       }
@@ -89,11 +89,11 @@ Let's apply all the rotational kinematics tools to solve challenging problems sy
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['8.0', '20', '-9.5'],
+        correctAnswers: ['7.96', '20', '-9.55'],
         hint1: '$\\theta = \\frac{1}{2}(\\omega_0 + \\omega)t = \\frac{1}{2}(0 + 50)(2) = 50$ rad. Rev $= 50/(2\\pi)$',
         hint2: '$\\omega = v/R = 4/0.2$',
         hint3: '$\\omega^2 = \\omega_0^2 + 2\\alpha\\theta$. $\\theta = 50 \\times 2\\pi = 100\\pi$ rad.',
-        explanation: '1) $\\theta = 50$ rad. Rev $= 50/(2\\pi) \\approx 7.96 \\approx 8.0$. 2) $\\omega = 4/0.2 = 20$ rad/s. 3) $20^2 = 80^2 + 2\\alpha(100\\pi)$. $400 - 6400 = 200\\pi\\alpha$. $-6000 = 628.3\\alpha$. $\\alpha = -9.55 \\approx -9.5$ $rad/s^{2}$.'
+        explanation: '1) $\\theta = 50$ rad. Rev $= 50/(2\\pi) \\approx 7.96$. 2) $\\omega = 4/0.2 = 20$ rad/s. 3) $20^2 = 80^2 + 2\\alpha(100\\pi)$. $400 - 6400 = 200\\pi\\alpha$. $-6000 = 628.3\\alpha$. $\\alpha = -9.55$ $rad/s^{2}$.'
       }
     },
     {
@@ -112,13 +112,13 @@ Let's apply all the rotational kinematics tools to solve challenging problems sy
           },
           {
             label: 'Which equation connects translational and rotational motion for rolling without slipping?',
-            options: ['v = Rω (rolling condition)', 'v = Rα', 'ω = R/v', 'a = Rω'],
+            options: ['v = Rω', 'v = Rα', 'ω = R/v', 'a = Rω'],
             correctIndex: 0,
-            explanation: 'The rolling without slipping condition connects translational and rotational motion: $v_{\\text{cm}} = R\\omega$.'
+            explanation: 'The rolling-without-slipping condition connects translational and rotational motion: $v_{\\text{cm}} = R\\omega$. ($a = R\\alpha$ is its derivative; $v = R\\alpha$ and $a = R\\omega$ mix up the quantities.)'
           },
           {
             label: 'Which type of acceleration is always present in circular motion and points toward the center?',
-            options: ['tangential acceleration', 'centripetal acceleration', 'angular acceleration', 'gravitational acceleration'],
+            options: ['tangential acceleration', 'centripetal acceleration', 'angular acceleration', 'net acceleration'],
             correctIndex: 1,
             explanation: 'Centripetal acceleration ($a_c = v^2/r = r\\omega^2$) is always present in circular motion, pointing toward the center.'
           }
@@ -138,22 +138,22 @@ Let's apply all the rotational kinematics tools to solve challenging problems sy
             options: [
               '$\\sqrt{2gh}$',
               '$\\sqrt{10gh/7}$',
-              '$\\sqrt{5gh/3}$',
-              '$\\sqrt{gh}$'
+              '$\\sqrt{6gh/5}$',
+              '$\\sqrt{20gh/9}$'
             ],
             correctAnswer: 1,
-            explanation: '$mgh = \\frac{1}{2}mv^2 + \\frac{1}{2}I\\omega^2 = \\frac{1}{2}mv^2 + \\frac{1}{2}(\\frac{2}{5}mr^2)(v/r)^2 = \\frac{1}{2}mv^2 + \\frac{1}{5}mv^2 = \\frac{7}{10}mv^2$. $v = \\sqrt{10gh/7}$.'
+            explanation: '$mgh = \\frac{1}{2}mv^2 + \\frac{1}{2}I\\omega^2 = \\frac{1}{2}mv^2 + \\frac{1}{2}(\\frac{2}{5}mr^2)(v/r)^2 = \\frac{1}{2}mv^2 + \\frac{1}{5}mv^2 = \\frac{7}{10}mv^2$, so $v = \\sqrt{10gh/7}$. Ignoring rotation gives $\\sqrt{2gh}$; using the hollow-sphere $I = \\frac{2}{3}mr^2$ gives $\\sqrt{6gh/5}$; dropping the $\\frac{1}{2}$ on the rotational term gives $\\sqrt{20gh/9}$.'
           },
           {
             question: 'Two wheels start from rest and rotate through the same angle. Wheel A has twice the angular acceleration of Wheel B. The ratio of their final angular velocities ($\\omega_A/\\omega_B$) is:',
             options: [
-              '2',
+              '$2$',
               '$\\sqrt{2}$',
-              '4',
-              '1'
+              '$4$',
+              '$1/\\sqrt{2}$'
             ],
             correctAnswer: 1,
-            explanation: '$\\omega^2 = 2\\alpha\\theta$. $\\omega_A^2/\\omega_B^2 = \\alpha_A/\\alpha_B = 2$. So $\\omega_A/\\omega_B = \\sqrt{2}$.'
+            explanation: '$\\omega^2 = 2\\alpha\\theta$, so $\\omega_A^2/\\omega_B^2 = \\alpha_A/\\alpha_B = 2$ and $\\omega_A/\\omega_B = \\sqrt{2}$. Forgetting the square root gives 2; squaring instead gives 4; inverting gives $1/\\sqrt{2}$.'
           }
         ]
       }
@@ -169,13 +169,13 @@ Let's apply all the rotational kinematics tools to solve challenging problems sy
           {
             question: 'A wheel accelerates from 5 rad/s to 15 rad/s in 4 seconds. The number of revolutions made is:',
             options: [
-              '5.1',
+              '3.2',
               '6.4',
-              '10.2',
-              '20.4'
+              '12.7',
+              '40'
             ],
             correctAnswer: 1,
-            explanation: '$\\theta = \\frac{1}{2}(\\omega_0 + \\omega)t = \\frac{1}{2}(5 + 15)(4) = 40$ rad. Rev $= 40/(2\\pi) \\approx 6.37 \\approx 6.4$.'
+            explanation: '$\\theta = \\frac{1}{2}(\\omega_0 + \\omega)t = \\frac{1}{2}(5 + 15)(4) = 40$ rad. Revolutions $= 40/(2\\pi) \\approx 6.37 \\approx 6.4$. Dividing by $\\pi$ instead of $2\\pi$ gives 12.7; dividing by $4\\pi$ gives 3.2; 40 is the angle in radians, not revolutions.'
           }
         ]
       }

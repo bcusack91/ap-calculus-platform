@@ -76,13 +76,13 @@ The huge total capillary area means very slow flow — perfect for nutrient/gas 
           {
             question: 'Blood flow is slowest in capillaries because:',
             options: [
-              'Heart pumps slower',
-              'Capillaries have small area',
+              'The heart pumps more weakly far away',
+              'Each capillary is very narrow',
               'Combined capillary cross-section is huge',
-              'Blood is thicker'
+              'Blood thickens in narrow vessels'
             ],
             correctAnswer: 2,
-            explanation: 'Total cross-section of all capillaries combined is ~1000× the aorta, so $v$ is ~1000× smaller.'
+            explanation: 'One capillary is narrow, but there are billions of them: their COMBINED cross-section is roughly 1000× the aorta\'s, so the same $Q$ moves about 1000× slower. (A single narrow tube alone would make the blood faster, not slower.)'
           },
           {
             question: 'A pipe splits into two equal branches. If main speed is $v$ and branches have HALF the main\'s area, branch speed is:',
@@ -130,21 +130,21 @@ The huge total capillary area means very slow flow — perfect for nutrient/gas 
           },
           {
             label: 'A river fed by two equal tributaries — the river\'s flow rate is:',
-            options: ['Same as one tributary', 'Twice one tributary', 'Half a tributary', 'Zero'],
+            options: ['Same as one tributary', 'Twice one tributary', 'Half a tributary', 'Four times one tributary'],
             correctIndex: 1,
             explanation: 'Conservation: $Q_{river} = Q_1 + Q_2 = 2 Q$.'
           },
           {
             label: 'Blood travels through capillaries SLOWLY because the COMBINED capillary area is:',
-            options: ['Smaller than the aorta', 'Equal to the aorta', 'Much larger than the aorta', 'Zero'],
+            options: ['Smaller than the aorta', 'Equal to the aorta', 'Much larger than the aorta', 'Slightly smaller than the aorta'],
             correctIndex: 2,
             explanation: 'Same Q, much larger $A_{total}$ → much smaller $v$.'
           },
           {
             label: 'Two pipes carry $Q_1 = 5$ L/s and $Q_2 = 3$ L/s into a third pipe. Outlet $Q_3$ is:',
-            options: ['8 L/s', '5 L/s', '3 L/s', '2 L/s'],
+            options: ['8 L/s', '5 L/s', '4 L/s', '2 L/s'],
             correctIndex: 0,
-            explanation: '$Q_3 = Q_1 + Q_2 = 8$ L/s.'
+            explanation: '$Q_3 = Q_1 + Q_2 = 8$ L/s. (5 L/s counts only one inlet, averaging gives 4 L/s, and subtracting gives 2 L/s.)'
           }
         ]
       }
@@ -163,10 +163,10 @@ The huge total capillary area means very slow flow — perfect for nutrient/gas 
               '2 m/s',
               '4 m/s',
               '6 m/s',
-              '10 m/s'
+              '3 m/s'
             ],
             correctAnswer: 1,
-            explanation: '$Q_a = 0.005(4) = 0.020$ $m^{3}/s$. $Q_b = 0.060 - 0.020 = 0.040$ $m^{3}/s$. $v_b = 0.040/0.010 = 4$ m/s.'
+            explanation: '$Q_a = 0.005(4) = 0.020$ $m^{3}/s$. $Q_b = 0.060 - 0.020 = 0.040$ $m^{3}/s$. $v_b = 0.040/0.010 = 4$ m/s. Forgetting to subtract $Q_a$ gives 6 m/s; 3 m/s is the main-pipe speed; 2 m/s divides branch a\'s flow by branch b\'s area.'
           },
           {
             question: 'In the human cardiovascular system, the speed of blood in the AORTA vs the COMBINED capillary network is approximately:',
@@ -174,7 +174,7 @@ The huge total capillary area means very slow flow — perfect for nutrient/gas 
               '1000× slower in aorta',
               'Same speed',
               '1000× faster in aorta',
-              'Aorta has zero flow'
+              'About 10× faster in aorta'
             ],
             correctAnswer: 2,
             explanation: 'Total capillary area ≈ 1000× aorta area; same $Q$ → blood is ~1000× slower in capillaries.'

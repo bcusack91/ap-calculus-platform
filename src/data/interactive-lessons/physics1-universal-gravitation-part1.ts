@@ -65,10 +65,10 @@ $G$ is incredibly small: $6.67 \\times 10^{-11}$. Two 100 kg people standing 1 m
           {
             question: 'Earth pulls on the Moon with gravitational force $F$. The Moon pulls on Earth with force:',
             options: [
-              'Much less than $F$ (Moon is smaller)',
-              'Much more than $F$ (Earth is bigger)',
+              'Much less than $F$ (the Moon has far less mass)',
+              'Much more than $F$ (Earth has far more mass)',
               'Exactly $F$ (Newton\'s 3rd Law)',
-              'Zero (Moon is in free fall)'
+              'Zero (the Moon is in free fall toward Earth)'
             ],
             correctAnswer: 2,
             explanation: 'Newton\'s 3rd Law: the gravitational force is an interaction between two objects. Earth pulls Moon with force $F$, and Moon pulls Earth with the same force $F$ in the opposite direction.'
@@ -161,13 +161,13 @@ Use $G = 6.67 \\times 10^{-11}$ $N\\cdot m^{2}/kg^{2}$.
           {
             question: 'A 50 kg astronaut is on the surface of a planet with mass $0.1 M_E$ and radius $0.5 R_E$. The astronaut\'s weight compared to their Earth weight is:',
             options: [
-              'Half',
+              '0.2 times',
               '0.4 times',
-              'Same',
-              'Double'
+              '0.1 times',
+              '0.025 times'
             ],
             correctAnswer: 1,
-            explanation: '$g_{planet} = G(0.1M_E)/(0.5R_E)^2 = 0.1/(0.25) \\times GM_E/R_E^2 = 0.4g_E$. Weight = $0.4 \\times$ Earth weight.'
+            explanation: '$g_{planet} = G(0.1M_E)/(0.5R_E)^2 = 0.1/(0.25) \\times GM_E/R_E^2 = 0.4g_E$, so the weight is $0.4 \\times$ the Earth weight. Forgetting to square the radius gives 0.2; ignoring the radius gives 0.1; multiplying by $R^2$ instead of dividing gives 0.025.'
           },
           {
             question: 'The gravitational constant $G$ is:',

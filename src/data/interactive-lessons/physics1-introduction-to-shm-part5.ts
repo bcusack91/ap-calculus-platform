@@ -104,7 +104,7 @@ $$a_{\\text{max}} = A\\omega^2 = 4\\pi^2 f^2 A = \\frac{4\\pi^2 A}{T^2}$$
               'Double the maximum velocity',
               'Quadruple the maximum velocity',
               'Not change the maximum velocity',
-              'Halve the maximum velocity'
+              'Increase the maximum velocity by a factor of $\\sqrt{2}$'
             ],
             correctAnswer: 0,
             explanation: '$v_{\\text{max}} = A\\omega$. If $A \\to 2A$ and $\\omega$ stays the same, then $v_{\\text{max}} \\to 2A\\omega$, which is double.'
@@ -155,9 +155,9 @@ $$a_{\\text{max}} = A\\omega^2 = 4\\pi^2 f^2 A = \\frac{4\\pi^2 A}{T^2}$$
           },
           {
             label: 'If the angular frequency ω is doubled (same amplitude), the maximum acceleration is:',
-            options: ['halved', 'doubled', 'quadrupled', 'unchanged'],
+            options: ['doubled, like the maximum speed', 'unchanged, since the amplitude is fixed', 'quadrupled', 'increased by a factor of 8'],
             correctIndex: 2,
-            explanation: '$a_{\\text{max}} = A\\omega^2$. Doubling both $A$ and $\\omega$: $a_{\\text{max}} \\to (2A)(2\\omega)^2 = (2A)(4\\omega^2) = 8A\\omega^2$... but doubling $A$ alone: $2A\\omega^2$, that is doubled. Doubling $\\omega$ alone: $A(2\\omega)^2 = 4A\\omega^2$ — quadrupled.'
+            explanation: '$a_{\\text{max}} = A\\omega^2$. With $A$ fixed, doubling $\\omega$ gives $A(2\\omega)^2 = 4A\\omega^2$, so the maximum acceleration is quadrupled. The maximum speed $A\\omega$ only doubles.'
           }
         ]
       }
@@ -186,8 +186,8 @@ $$a_{\\text{max}} = A\\omega^2 = 4\\pi^2 f^2 A = \\frac{4\\pi^2 A}{T^2}$$
             options: [
               'Triples',
               'Is unchanged',
-              'Increases by 9',
-              'Decreases by 3'
+              'Increases by a factor of 9',
+              'Decreases by a factor of 3'
             ],
             correctAnswer: 0,
             explanation: '$v_{\\text{max}} = A\\omega = A(2\\pi f)$. Tripling $f$: $v_{\\text{max}} \\to A(2\\pi)(3f) = 3A\\omega$. The max speed triples.'
