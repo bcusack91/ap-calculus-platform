@@ -842,13 +842,13 @@ export const registryChunk1: Record<string, InteractiveTopicConfig> = {
   'prenatal-childhood-development': {
     completionDestination: 'competitive',
     parts: [
-      { title: 'Prenatal Development', loader: () => import('./psych-prenatal-childhood-development-part1').then(m => m.psychPrenatalPart1Data) },
-      { title: 'Piaget\'s Theory', loader: () => import('./psych-prenatal-childhood-development-part2').then(m => m.psychPrenatalPart2Data) },
-      { title: 'Attachment', loader: () => import('./psych-prenatal-childhood-development-part3').then(m => m.psychPrenatalPart3Data) },
-      { title: 'Parenting Styles', loader: () => import('./psych-prenatal-childhood-development-part4').then(m => m.psychPrenatalPart4Data) },
-      { title: 'Moral Development', loader: () => import('./psych-prenatal-childhood-development-part5').then(m => m.psychPrenatalPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./psych-prenatal-childhood-development-part6').then(m => m.psychPrenatalPart6Data) },
-      { title: 'AP Review', loader: () => import('./psych-prenatal-childhood-development-part7').then(m => m.psychPrenatalPart7Data) },
+      { title: 'Before Birth: Teratogens and Other Prenatal Influences', loader: () => import('./psych-prenatal-childhood-development-part1').then(m => m.psychPrenatalPart1Data) },
+      { title: 'Infancy and Childhood: Reflexes, Depth Perception, and Motor Skills', loader: () => import('./psych-prenatal-childhood-development-part2').then(m => m.psychPrenatalPart2Data) },
+      { title: 'Critical Periods, Imprinting, and How Development Is Studied', loader: () => import('./psych-prenatal-childhood-development-part3').then(m => m.psychPrenatalPart3Data) },
+      { title: 'Piaget\'s Theory of Cognitive Development', loader: () => import('./psych-prenatal-childhood-development-part4').then(m => m.psychPrenatalPart4Data) },
+      { title: 'Learning in Context: Vygotsky, Theory of Mind, Play, and Ecological Systems', loader: () => import('./psych-prenatal-childhood-development-part5').then(m => m.psychPrenatalPart5Data) },
+      { title: 'Attachment, Temperament, Parenting, and Early Social-Emotional Growth', loader: () => import('./psych-prenatal-childhood-development-part6').then(m => m.psychPrenatalPart6Data) },
+      { title: 'AP Practice and Synthesis Review', loader: () => import('./psych-prenatal-childhood-development-part7').then(m => m.psychPrenatalPart7Data) },
     ],
   },
   'adolescence-adulthood': {
@@ -890,13 +890,13 @@ export const registryChunk1: Record<string, InteractiveTopicConfig> = {
   'personality-theories': {
     completionDestination: 'competitive',
     parts: [
-      { title: 'Psychoanalytic Theory', loader: () => import('./psych-personality-theories-part1').then(m => m.psychPersonalityPart1Data) },
-      { title: 'Trait Theories', loader: () => import('./psych-personality-theories-part2').then(m => m.psychPersonalityPart2Data) },
-      { title: 'Humanistic Theories', loader: () => import('./psych-personality-theories-part3').then(m => m.psychPersonalityPart3Data) },
-      { title: 'Social-Cognitive Theory', loader: () => import('./psych-personality-theories-part4').then(m => m.psychPersonalityPart4Data) },
-      { title: 'Personality Assessment', loader: () => import('./psych-personality-theories-part5').then(m => m.psychPersonalityPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./psych-personality-theories-part6').then(m => m.psychPersonalityPart6Data) },
-      { title: 'AP Review', loader: () => import('./psych-personality-theories-part7').then(m => m.psychPersonalityPart7Data) },
+      { title: 'Psychodynamic Theory: The Unconscious Mind and Projective Tests', loader: () => import('./psych-personality-theories-part1').then(m => m.psychPersonalityPart1Data) },
+      { title: 'Ego Defense Mechanisms', loader: () => import('./psych-personality-theories-part2').then(m => m.psychPersonalityPart2Data) },
+      { title: 'Humanistic Theory: Unconditional Regard and the Self-Actualizing Tendency', loader: () => import('./psych-personality-theories-part3').then(m => m.psychPersonalityPart3Data) },
+      { title: 'Social-Cognitive Theory: Reciprocal Determinism, Self-Efficacy, and Self-Esteem', loader: () => import('./psych-personality-theories-part4').then(m => m.psychPersonalityPart4Data) },
+      { title: 'Trait Theory: The Big Five and Personality Inventories', loader: () => import('./psych-personality-theories-part5').then(m => m.psychPersonalityPart5Data) },
+      { title: 'AP Exam Practice: Personality Research on the AAQ and EBQ', loader: () => import('./psych-personality-theories-part6').then(m => m.psychPersonalityPart6Data) },
+      { title: 'Synthesis Review: Four Perspectives Compared', loader: () => import('./psych-personality-theories-part7').then(m => m.psychPersonalityPart7Data) },
     ],
   },
   'psychological-disorders-overview': {
@@ -950,13 +950,13 @@ export const registryChunk1: Record<string, InteractiveTopicConfig> = {
   'attitudes-persuasion': {
     completionDestination: 'competitive',
     parts: [
-      { title: 'Attitude Formation', loader: () => import('./psych-attitudes-persuasion-part1').then(m => m.psychAttitudesPart1Data) },
-      { title: 'Cognitive Dissonance', loader: () => import('./psych-attitudes-persuasion-part2').then(m => m.psychAttitudesPart2Data) },
-      { title: 'Persuasion Techniques', loader: () => import('./psych-attitudes-persuasion-part3').then(m => m.psychAttitudesPart3Data) },
-      { title: 'Central vs Peripheral', loader: () => import('./psych-attitudes-persuasion-part4').then(m => m.psychAttitudesPart4Data) },
-      { title: 'Attitude Change', loader: () => import('./psych-attitudes-persuasion-part5').then(m => m.psychAttitudesPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./psych-attitudes-persuasion-part6').then(m => m.psychAttitudesPart6Data) },
-      { title: 'AP Review', loader: () => import('./psych-attitudes-persuasion-part7').then(m => m.psychAttitudesPart7Data) },
+      { title: 'What Attitudes Are and How They Form', loader: () => import('./psych-attitudes-persuasion-part1').then(m => m.psychAttitudesPart1Data) },
+      { title: 'Explaining Behavior: Explanatory Style and Locus of Control', loader: () => import('./psych-attitudes-persuasion-part2').then(m => m.psychAttitudesPart2Data) },
+      { title: 'Person Perception: Mere Exposure, Self-Fulfilling Prophecy, and Social Comparison', loader: () => import('./psych-attitudes-persuasion-part3').then(m => m.psychAttitudesPart3Data) },
+      { title: 'Holding On and Changing Our Minds: Belief Perseverance, Confirmation Bias, and Cognitive Dissonance', loader: () => import('./psych-attitudes-persuasion-part4').then(m => m.psychAttitudesPart4Data) },
+      { title: 'Persuasion in Depth: Routes, the Halo Effect, and Sequential Requests', loader: () => import('./psych-attitudes-persuasion-part5').then(m => m.psychAttitudesPart5Data) },
+      { title: 'AP Exam Practice: Analyzing Attitude Research', loader: () => import('./psych-attitudes-persuasion-part6').then(m => m.psychAttitudesPart6Data) },
+      { title: 'Synthesis Review: From Perception to Persuasion', loader: () => import('./psych-attitudes-persuasion-part7').then(m => m.psychAttitudesPart7Data) },
     ],
   },
   'group-behavior-prejudice': {
